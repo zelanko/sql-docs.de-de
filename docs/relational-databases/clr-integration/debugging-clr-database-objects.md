@@ -16,18 +16,18 @@ ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1594b912a8914e253cc89ce236fd26ad7a1c32c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6811dc26bf473d5b720f843735f5f2f2ef3bab0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693858"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670629"
 ---
 # <a name="debugging-clr-database-objects"></a>Debuggen von CLR-Datenbankobjekten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt das Debuggen von [!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR (Common Language Runtime)-Objekten in der Datenbank. Die Hauptaspekte des Debuggens in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind die leichte Einrichtung und Handhabung und die Integration des SQL Server-Debuggers in den Microsoft Visual Studio-Debugger. Darüber hinaus ist das Debuggen sprachübergreifend. Benutzer können Einzelschritte in CLR-Objekte aus [!INCLUDE[tsql](../../includes/tsql-md.md)] und umgekehrt ausführen. Der Transact-SQL-Debugger in SQL Server Management Studio kann nicht verwendet werden, um Datenbankobjekte zu debuggen, aber Sie können die Objekte debuggen, indem Sie die Debugger in Visual Studio verwenden. Das Debuggen verwalteter Datenbankobjekte in Visual Studio unterstützt alle gängigen Debugfunktionen, wie z. B. „Einzelschritt“- und „Prozedurschritt“-Anweisungen innerhalb von Routinen, die auf dem Server ausgeführt werden. Debugger können während des Debuggens Breakpoints festlegen, Aufruflisten prüfen, Variablen prüfen und Variablenwerte ändern. Beachten Sie, dass Visual Studio .NET 2003 nicht für CLR-Integrationsprogrammierung oder das Debuggen verwendet werden kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beinhaltet ein vorinstalliertes .NET Framework, und Visual Studio .NET 2003 kann nicht die .NET Framework 2.0-Assemblys verwenden.  
   
- Weitere Informationen zum Debuggen von verwalteten Codes mithilfe von Visual Studio finden Sie unter der "[Debuggen von verwaltetem Code](http://go.microsoft.com/fwlink/?LinkId=120377)" Thema in der Visual Studio-Dokumentation.  
+ Weitere Informationen zum Debuggen von verwalteten Codes mithilfe von Visual Studio finden Sie unter der "[Debuggen von verwaltetem Code](https://go.microsoft.com/fwlink/?LinkId=120377)" Thema in der Visual Studio-Dokumentation.  
   
 ## <a name="debugging-permissions-and-restrictions"></a>Debuggen von Berechtigungen und Einschränkungen  
  Debuggen ist ein Vorgang mit hohen Berechtigungen, und nur von Mitgliedern der der **Sysadmin** festen Serverrolle dürfen Sie daher in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "47693858"
 ## <a name="overview-of-debugging-managed-database-objects"></a>Übersicht über das Debuggen von verwalteten Datenbankobjekten  
  Das Debuggen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfolgt nach einem Pro-Verbindungsmodell. Ein Debugger kann nur Aktivitäten zu einer Clientverbindung erkennen und debuggen, mit der er verknüpft ist. Da die Funktionalität eines Debuggers nicht durch den Verbindungstyp eingeschränkt wird, können sowohl TDS- (Tabular Data Stream) als auch HTTP-Verbindungen gedebuggt werden. Allerdings ermöglicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht das Debuggen vorhandener Verbindungen. Das Debuggen unterstützt alle üblichen Debugfunktionen innerhalb von Routinen, die auf dem Server ausgeführt werden. Die Interaktion zwischen einem Debugger und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geschieht durch DCOM (Distributed Component Object Model).  
   
- Weitere Informationen und Szenarien über das Debuggen verwalteter, gespeicherter Prozeduren, Funktionen, Trigger, benutzerdefinierte Typen und Aggregate finden Sie in der "[SQL Server CLR-Integration Datenbankdebugging](http://go.microsoft.com/fwlink/?LinkId=120378)" Thema in der Visual Studio Dokumentation.  
+ Weitere Informationen und Szenarien über das Debuggen verwalteter, gespeicherter Prozeduren, Funktionen, Trigger, benutzerdefinierte Typen und Aggregate finden Sie in der "[SQL Server CLR-Integration Datenbankdebugging](https://go.microsoft.com/fwlink/?LinkId=120378)" Thema in der Visual Studio Dokumentation.  
   
  Das TCP/IP-Netzwerkprotokoll muss in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aktiviert werden, damit Visual Studio von einem Remotecomputer aus zum Entwickeln, Debuggen und Bereitstellen verwendet werden kann. Weitere Informationen zum Aktivieren des TCP/IP-Protokolls auf dem Server finden Sie unter [Konfigurieren von Clientprotokollen](../../database-engine/configure-windows/configure-client-protocols.md).  
   

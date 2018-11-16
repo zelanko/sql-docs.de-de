@@ -14,12 +14,12 @@ ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbfede87cf23da5e8867d33f4b8bad35b6af9c50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679668"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677249"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Erste Schritte mit SSMA für MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) for MySQL können Sie schnell Konvertieren von MySQL-Datenbankschemas in SQL Server oder Azure SQL-Datenbank-Schemas, die resultierenden Schemas in SQL Server oder Azure SQL-Datenbank hochzuladen und Migrieren von Daten aus MySQL nach SQL Server oder Azure SQL-Datenbank.  
@@ -73,7 +73,7 @@ SQL Server oder Azure SQL-DB-Metadaten-Explorer zeigt Informationen zu einer Ins
   
 Sie können dieser Metadaten-Explorer, wählen Sie die konvertierten Objekte der MySQL-Datenbank verwenden und diese Objekte dann mit der Instanz von SQL Server oder Azure SQL-Datenbank synchronisieren.  
   
-Weitere Informationen finden Sie unter [Synchronisierung (MySQL zu SQL Server / Azure SQL-Datenbank)](http://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+Weitere Informationen finden Sie unter [Synchronisierung (MySQL zu SQL Server / Azure SQL-Datenbank)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### <a name="metadata"></a>Metadaten  
 Befinden sich rechts neben jeder Metadaten-Explorer Registerkarten, die das ausgewählte Objekt zu beschreiben. Beispielsweise wenn Sie eine Tabelle in der MySQL-Metadaten-Explorer auswählen, neun Registerkarten werden angezeigt: **Tabelle**, **SQL**, **Type Mapping**, **Daten**,  **Einstellungen**, **Charset-Zuordnung**, **SQL-Modi**, **Eigenschaften**, und **Bericht**. Die **Bericht** Registerkarte enthält Informationen, nachdem Sie einen Bericht erstellen, die das ausgewählte Objekt enthält. Wenn Sie eine Tabelle in SQL Server-Metadaten-Explorer auswählen, werden die drei Registerkarten angezeigt: **Tabelle**, **SQL** und **Daten**.  

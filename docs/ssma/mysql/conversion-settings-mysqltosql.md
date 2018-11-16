@@ -10,12 +10,12 @@ ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4ff1a1a9f5b8ba216a2d14d186f2ade20e5eb3dc
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7026828bff099b131556dbffd3d990c695bd5ff2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100111"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662479"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Konvertierungseinstellungen (MySqlToSql)
 Die **"Einstellungen"** Registerkarte kann der Benutzer knoteneinstellungen festlegen. Die Registerkarte wird in der folgenden Metabase-Knoten verfügbar sein:  
@@ -76,5 +76,5 @@ Diese Einstellungen werden basierend auf den Typ des Metabase-Knotens. Beispiels
     3.  Die vom Benutzer vorgenommenen Einstellungen werden in kaskadierenden Einstellungsdatei durch Klicken auf gespeichert **übernehmen** Schaltfläche.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Project Settings (Conversion) (MySQL zu SQL)](http://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
+[Project Settings (Conversion) (MySQL zu SQL)](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   

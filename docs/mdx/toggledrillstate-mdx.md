@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 652afb0595634d7fb4474ed9042edda26f83a52a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 58acac77e4826855997791476b0602699452b7b8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147305"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701898"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 
@@ -48,7 +48,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
   
  Abfrage der XMLA-Eigenschaft MdpropMdxDrillFunctions können Sie das Maß an Unterstützung, die der Server die drillingfunktionen bereitgestellt; finden Sie unter [unterstützte XMLA-Eigenschaften &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) Details.  
   
- Finden Sie unter [Datenbankjournal: Festlegen der MDX-Funktionen: The ToggleDrillState() Funktion](http://go.microsoft.com/fwlink/?LinkId=517759) für Szenarien und Beispiele, die im Zusammenhang mit dieser Funktion.  
+ Finden Sie unter [Datenbankjournal: Festlegen der MDX-Funktionen: The ToggleDrillState() Funktion](https://go.microsoft.com/fwlink/?LinkId=517759) für Szenarien und Beispiele, die im Zusammenhang mit dieser Funktion.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Drilldown für das Australia-Element der ersten Menge und ein Drillup für das United States-Element der ersten Menge ausgeführt.  

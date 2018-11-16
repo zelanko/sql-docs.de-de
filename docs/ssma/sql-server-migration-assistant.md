@@ -10,12 +10,12 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 89998a328aa400958d8cd406f412bf7f91b4884e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a90d7bd53433bd0db027787cdcd83f53b8227804
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845786"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668400"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) ist ein Tool zur Automatisierung der Datenbankmigration zu SQL Server aus Microsoft Access, DB2, MySQL, Oracle und SAP ASE.  
@@ -49,11 +49,11 @@ Die folgende Zielversionen werden für SSMA unterstützt.
 ** Dieses Ziel wird nur von SSMA für Oracle unterstützt.
  
 ## <a name="downloads"></a>Downloads
-- [SSMA für Access](http://aka.ms/ssmaforaccess)
-- [SSMA für DB2](http://aka.ms/ssmafordb2)
-- [SSMA für MySql](http://aka.ms/ssmaformysql)
-- [SSMA für die Oracle](http://aka.ms/ssmafororacle)
-- [SSMA für SAP ASE](http://aka.ms/ssmaforsybase)
+- [SSMA für Access](https://aka.ms/ssmaforaccess)
+- [SSMA für DB2](https://aka.ms/ssmafordb2)
+- [SSMA für MySql](https://aka.ms/ssmaformysql)
+- [SSMA für die Oracle](https://aka.ms/ssmafororacle)
+- [SSMA für SAP ASE](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>SSMA-Support anfordern  
 **Hilfe und Support für Microsoft SQL Server Migration Assistant (SSMA):**  
@@ -62,9 +62,9 @@ Die folgende Zielversionen werden für SSMA unterstützt.
   
 -   **SQL Server-Community-Foren** – in der SQL Server-Community eine Frage stellen  
   
-    -   [SQL Server-Community](http://go.microsoft.com/fwlink/?LinkId=42455) -Newsgroups und Foren, die von der SQL Server-Community überwacht werden. Auf dieser Seite sind auch Community-Informationsquellen aufgeführt, z. B. Blogs und Websites.  
+    -   [SQL Server-Community](https://go.microsoft.com/fwlink/?LinkId=42455) -Newsgroups und Foren, die von der SQL Server-Community überwacht werden. Auf dieser Seite sind auch Community-Informationsquellen aufgeführt, z. B. Blogs und Websites.  
   
-    -   [SQL Server Developer Center-Community](http://go.microsoft.com/fwlink/?LinkId=42456) -Newsgroups, Foren und Communityressourcen, die für SQL Server-Entwickler nützlich sind.  
+    -   [SQL Server Developer Center-Community](https://go.microsoft.com/fwlink/?LinkId=42456) -Newsgroups, Foren und Communityressourcen, die für SQL Server-Entwickler nützlich sind.  
   
 -   Persönlicher Support - wechseln Sie zu [ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) und suchen Sie nach "SQL Server Migration Assistant".  Wählen Sie Ihre Version, und wählen Sie die "Anfrage starten".  Persönlicher Support ist in der SQL Server Migration Assistant-Tool enthalten.  
   

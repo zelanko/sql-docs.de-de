@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eecf2a1f9ce383e6fe79f3736aa571d0f49eabef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 314c2379994655f985ce31adf9c427ece9377bb1
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735238"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269943"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ SERVERPROPERTY ( 'propertyname' )
 |IsHadrEnabled|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ist für diese Serverinstanz aktiviert.<br /><br /> 0 = Die [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Funktion ist deaktiviert.<br /><br /> 1 = Die [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Funktion ist aktiviert.<br /><br /> NULL = Eingabe ist ungültig, ein Fehler oder nicht anwendbar.<br /><br /> Basisdatentyp: **int**<br /><br /> Damit Verfügbarkeitsreplikate in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und ausgeführt werden können, muss [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] auf der Serverinstanz aktiviert sein. Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren von Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Hinweis:** Die Eigenschaft „IsHadrEnabled“ bezieht sich nur auf [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Auf andere Hochverfügbarkeitsfunktionen oder Funktionen für die Wiederherstellung im Notfall, z. B. Datenbankspiegelung oder Protokollversand, hat diese Servereigenschaft keine Auswirkung.|  
 |IsIntegratedSecurityOnly|Gibt an, ob der Server sich im integrierten Sicherheitsmodus befindet.<br /><br /> 1 = Integrierte Sicherheit (Windows-Authentifizierung)<br /><br /> 0 = Keine integrierte Sicherheit. (Sowohl Windows-Authentifizierung als auch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung.)<br /><br /> NULL = Eingabe ist ungültig, ein Fehler oder nicht anwendbar.<br /><br /> Basisdatentyp: **int**|  
 |IsLocalDB|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Server ist eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB.<br /><br /> NULL = Eingabe ist ungültig, ein Fehler oder nicht anwendbar.|  
-|IsPolybaseInstalled|**Gilt für**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt zurück, ob das PolyBase-Feature für die Serverinstanz installiert wurde.<br /><br /> 0 = PolyBase ist nicht installiert.<br /><br /> 1 = PolyBase ist installiert.<br /><br /> Basisdatentyp: **int**|  
+|IsPolyBaseInstalled|**Gilt für**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt zurück, ob das PolyBase-Feature für die Serverinstanz installiert wurde.<br /><br /> 0 = PolyBase ist nicht installiert.<br /><br /> 1 = PolyBase ist installiert.<br /><br /> Basisdatentyp: **int**|  
 |IsSingleUser|Gibt an, ob der Server sich im Einzelbenutzermodus befindet.<br /><br /> 1 = Einzelbenutzermodus.<br /><br /> 0 = Kein Einzelbenutzermodus<br /><br /> NULL = Eingabe ist ungültig, ein Fehler oder nicht anwendbar.<br /><br /> Basisdatentyp: **int**|  
 |IsXTPSupported|**Gilt für:** SQL Server ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> Server unterstützt In-Memory OLTP.<br /><br /> 1= Server unterstützt In-Memory OLTP.<br /><br /> 0= Server unterstützt In-Memory OLTP nicht.<br /><br /> NULL = Eingabe ist ungültig, ein Fehler oder nicht anwendbar.<br /><br /> Basisdatentyp: **int**|  
 |LCID|Windows-Gebietsschemabezeichner (LCID, Locale Identifier) der Sortierung.<br /><br /> Basisdatentyp: **int**|  

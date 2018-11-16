@@ -10,23 +10,23 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c828c2345bf87461ba924cbdd23eb262336d1dcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715458"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670819"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Konfigurieren Sie die RHEL-Cluster für SQL Server-Verfügbarkeitsgruppe
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieses Dokument erläutert, wie Sie einen Gruppe-Cluster mit drei Knoten Verfügbarkeit für SQL Server unter Red Hat Enterprise Linux zu erstellen. Für hohe Verfügbarkeit, eine verfügbarkeitsgruppe für Linux erfordert drei Knoten – Siehe [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Die clustering-Ebene basiert auf Red Hat Enterprise Linux (RHEL) [HA-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) baut auf [Pacemaker](http://clusterlabs.org/). 
+Dieses Dokument erläutert, wie Sie einen Gruppe-Cluster mit drei Knoten Verfügbarkeit für SQL Server unter Red Hat Enterprise Linux zu erstellen. Für hohe Verfügbarkeit, eine verfügbarkeitsgruppe für Linux erfordert drei Knoten – Siehe [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Die clustering-Ebene basiert auf Red Hat Enterprise Linux (RHEL) [HA-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) baut auf [Pacemaker](https://clusterlabs.org/). 
 
 > [!NOTE] 
 > Zugriff auf die vollständige Dokumentation für Red Hat muss es sich um ein gültiges Abonnement. 
 
-Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Management finden Sie unter [RHEL-Referenzdokumentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Management finden Sie unter [RHEL-Referenzdokumentation](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
 > SQL Server ist mit Pacemaker unter Linux nicht so stark integriert, wie mit Windows Server-Failoverclustering. SQL Server-Instanz ist nicht über den Cluster. Pacemaker ermöglicht eine Cluster-Resource-Orchestrierung. Darüber hinaus Name des virtuellen Netzwerks bezieht sich auf Windows Server Failover-Clusterunterstützung – es gibt keine Entsprechung in Pacemaker. Verfügbarkeit Gruppe dynamische Verwaltungssichten (DMVs), die Clusterinformationen Abfragen geben eine leere Zeilen auf Pacemaker-Cluster zurück. Zum Erstellen eines Listeners für das transparente erneute Verbindung nach einem Failover manuell registrieren der verfügbarkeitsgruppenlistener-Namen im DNS mit der IP-Adresse verwendet, um die virtuelle IP-Ressource zu erstellen. 
@@ -58,7 +58,7 @@ Um hochverfügbarkeit für RHEL konfigurieren möchten, aktivieren Sie das Abonn
 
 ### <a name="enable-the-high-availability-subscription-for-rhel"></a>Aktivieren Sie die hohe Verfügbarkeit-Abonnement für RHEL
 
-Jeder Knoten im Cluster muss ein entsprechendes Abonnement für RHEL und hoher Verfügbarkeit hinzufügen verfügen. Überprüfen Sie die Anforderungen an [zum Installieren von clusterpakete für hohe Verfügbarkeit in Red Hat Enterprise Linux](http://access.redhat.com/solutions/45930). Um das Abonnement und Repositorys zu konfigurieren, gehen Sie wie folgt vor:
+Jeder Knoten im Cluster muss ein entsprechendes Abonnement für RHEL und hoher Verfügbarkeit hinzufügen verfügen. Überprüfen Sie die Anforderungen an [zum Installieren von clusterpakete für hohe Verfügbarkeit in Red Hat Enterprise Linux](https://access.redhat.com/solutions/45930). Um das Abonnement und Repositorys zu konfigurieren, gehen Sie wie folgt vor:
 
 1. Registrieren Sie das System an.
 
@@ -88,7 +88,7 @@ Jeder Knoten im Cluster muss ein entsprechendes Abonnement für RHEL und hoher V
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-Weitere Informationen finden Sie unter [Pacemaker – die Open-Source-Cluster mit hoher Verfügbarkeit](http://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+Weitere Informationen finden Sie unter [Pacemaker – die Open-Source-Cluster mit hoher Verfügbarkeit](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
 
 Nachdem Sie das Abonnement konfiguriert haben, führen Sie die folgenden Schritte aus, um Pacemaker zu konfigurieren:
 
@@ -110,9 +110,9 @@ Ebene Umgrenzung Knoten wird sichergestellt, dass alle Ressourcen von ein Knoten
 
 Informationen zu STONITH und Umgrenzung finden Sie unter den folgenden Artikeln:
 
-* [Pacemaker-Cluster von Grund auf neu](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
-* [Umgrenzung und STONITH](http://clusterlabs.org/doc/crm_fencing.html)
-* [Red Hat Hochverfügbarkeit-Add-On mit Pacemaker: für das Umgrenzen der](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [Pacemaker-Cluster von Grund auf neu](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [Umgrenzung und STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+* [Red Hat Hochverfügbarkeit-Add-On mit Pacemaker: für das Umgrenzen der](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 Da die Ebene des Knotens für das umgrenzen der Konfiguration in Ihrer Umgebung stark abhängig ist, deaktivieren Sie ihn für dieses Tutorial (sie kann später konfiguriert werden). Das folgende Skript wird die Ebene Umgrenzung Knoten deaktiviert:
 
@@ -149,7 +149,7 @@ pcs resource update ag1 meta failure-timeout=60s
 ```
 
 
-Weitere Informationen zu den Eigenschaften der Pacemaker-Cluster finden Sie unter [Pacemaker-Cluster Eigenschaften](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
+Weitere Informationen zu den Eigenschaften der Pacemaker-Cluster finden Sie unter [Pacemaker-Cluster Eigenschaften](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Erstellen Sie eine SQL Server-Anmeldung für Pacemaker
 

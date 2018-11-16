@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3fc2230d22131da80ee1250c08b19fc16e4aa651
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 62fefedaa417e73820a7e14df9bf90f6215b9161
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909741"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702448"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 Microsoft Analytics Platform System (APS) ist eine Datenplattform, die für Data Warehousing und Big Data-Analysen entwickelt wurde. Sie bietet nahtlose Datenintegration, schnelle Abfrageverarbeitung, hochgradig skalierbaren Speicher sowie eine unkomplizierte Wartung für End-to-End-Lösungen für Business Intelligence.  
@@ -51,6 +51,6 @@ PDW ermöglicht nicht nur eine noch nie da gewesene Abfrageleistung, sondern auc
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu den Vorteilen von Parallel Data Warehouse finden Sie im Whitepaper [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions (Eine revolutionäre Plattform für Data Warehousing und Big Data-Lösungen der nächsten Generation)](http://msdn.microsoft.com/library/dn520808.aspx) auf MSDN.  
+Weitere Informationen zu den Vorteilen von Parallel Data Warehouse finden Sie im Whitepaper [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions (Eine revolutionäre Plattform für Data Warehousing und Big Data-Lösungen der nächsten Generation)](https://msdn.microsoft.com/library/dn520808.aspx) auf MSDN.  
   
 

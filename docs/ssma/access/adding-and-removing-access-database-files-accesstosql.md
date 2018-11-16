@@ -29,12 +29,12 @@ ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2ec65ffa5ee5df74d48de5280fedb825da8607aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8de9b27a58d277191a4d40da6b34dbcbbd43e497
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598160"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655639"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Hinzufügen und Entfernen von Access-Datenbankdateien (AccessToSQL)
 Migrieren von Access-Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, müssen Sie mindestens eine Access-Datenbanken in der SSMA-Projekt hinzufügen. Diese Datenbanken müssen Access 97 oder höher sein. Wenn Sie Datenbanken aus einer früheren Version von Zugriff haben, müssen Sie die Datenbanken auf eine neuere Version konvertieren. Hierzu öffnen und speichern die Datenbanken in Access 97 oder höher, bevor Sie sie SSMA hinzufügen.  
@@ -129,7 +129,7 @@ Sie können eine Access-Datenbank aus einem Projekt entfernen, indem Sie diese S
 2.  Mit der rechten Maustaste in der Datenbank, und wählen Sie dann **Remove Database**.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Der nächste Schritt des Migrationsvorgangs besteht darin [Verbinden mit SQL Server](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
+Der nächste Schritt des Migrationsvorgangs besteht darin [Verbinden mit SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
   
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Access-Datenbanken zu SQLServer](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +13,16 @@ ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a8c6e3b1d74cb122a94cc643a9eb94d5dbb6c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 729daea7fe719f33ec8931424143c3fedc5ac86f
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772718"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558327"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Markieren von Geschäftsobjekten als sicher für das Skripting
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Um eine sichere Umgebung für die Internet gewährleisten, müssen Sie Geschäftsobjekte mit instanziiert markieren die [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) des Objekts [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) Methode als "sicher für Skripting". Sie müssen sicherstellen, dass sie als solche gekennzeichnet werden im Bereich "Lizenz" von der Registrierung des Systems, bevor sie in DCOM verwendet werden können.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "47772718"
   
  Erstellen Sie eine Textdatei mit der Erweiterung REG, die den folgenden Text enthält, um das Geschäftsobjekt als sicher für Skripting manuell zu markieren. In diesem Beispiel \< *MyActiveXGUID*> ist die GUID-Hexadezimalzahl Ihres Business-Objekts. Die folgenden zwei Zahlen wird das sichere Skripting-Feature aktivieren:  
   
-```  
+```console
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   
 Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}]  
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   

@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 179bc0379e508954c93464b6f1075334756dd250
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: bbeeff135edbc333b6ce8b3e20cf5235710f2dc1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085486"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677679"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Konfigurieren Sie Red Hat Enterprise Linux Cluster mit freigegebenen Datenträgern werden für SQL Server.
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieses Handbuch enthält Anweisungen, um einen Cluster mit zwei Knoten freigegebenen Datenträgern für SQL Server unter Red Hat Enterprise Linux zu erstellen. Die clustering-Ebene basiert auf Red Hat Enterprise Linux (RHEL) [HA-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) baut auf [Pacemaker](http://clusterlabs.org/). SQL Server-Instanz ist auf einem Knoten oder die andere aktiv.
+Dieses Handbuch enthält Anweisungen, um einen Cluster mit zwei Knoten freigegebenen Datenträgern für SQL Server unter Red Hat Enterprise Linux zu erstellen. Die clustering-Ebene basiert auf Red Hat Enterprise Linux (RHEL) [HA-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) baut auf [Pacemaker](https://clusterlabs.org/). SQL Server-Instanz ist auf einem Knoten oder die andere aktiv.
 
 > [!NOTE] 
 > Zugriff auf Red Hat-HA-Add-On und Dokumentation erfordert ein Abonnement. 
@@ -30,7 +30,7 @@ Wie das folgende Diagramm zeigt, wird der Speicher auf zwei Servern angezeigt. C
 
 ![Red Hat Enterprise Linux 7 freigegebene Datenträgercluster für SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Management finden Sie unter [RHEL-Referenzdokumentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Management finden Sie unter [RHEL-Referenzdokumentation](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 
 > [!NOTE] 
@@ -201,8 +201,8 @@ Führen Sie die folgenden Schritte aus, auf allen Clusterknoten.
 
 Weitere Informationen zur Verwendung von NFS finden Sie unter den folgenden Ressourcen:
 
-* [NFS-Servern und Firewalld | Stack Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
-* [Bereitstellen von einem NFS-Volume | Linux-Netzwerk – Administratorhandbuch](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
+* [NFS-Servern und Firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
+* [Bereitstellen von einem NFS-Volume | Linux-Netzwerk – Administratorhandbuch](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
 * [NFS-Serverkonfiguration](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Bereitstellen der Datenbank-Dateiverzeichnis auf dem freigegebenen Speicher verweisen
@@ -389,7 +389,7 @@ An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
-* [Clustern von Grund auf Neu](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Leitfaden für Pacemaker
+* [Clustern von Grund auf Neu](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Leitfaden für Pacemaker
 
 ## <a name="next-steps"></a>Nächste Schritte
 

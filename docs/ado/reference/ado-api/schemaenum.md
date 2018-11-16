@@ -16,26 +16,26 @@ ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4dd7edb2f5969f7ec8ded931c5e562c0c1992768
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c95ec9525fe0890d241fd6a99a6c298f6ef7568e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749228"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603662"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Gibt den Typ des Schemas **Recordset** , die die [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) Methode abgerufen.  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen über die Funktion und die Spalten zurückgegeben, für jede Konstante ADO Sie in Themen finden [Anhang B: Schemarowsets](http://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) von der OLE DB Programmer's Reference. Der Name jedes Themas ist in Klammern in den Abschnitt "Beschreibung" der folgenden Tabelle aufgeführt.  
+ Weitere Informationen über die Funktion und die Spalten zurückgegeben, für jede Konstante ADO Sie in Themen finden [Anhang B: Schemarowsets](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) von der OLE DB Programmer's Reference. Der Name jedes Themas ist in Klammern in den Abschnitt "Beschreibung" der folgenden Tabelle aufgeführt.  
   
- Weitere Informationen über die Funktion und die Spalten zurückgegeben, für jede ADO MD-Konstante Sie in Themen finden [OLE DB für OLAP-Objekten und Schemarowsets](http://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) in der OLE DB für Online Analytical Processing (OLAP)-Dokumentation. Der Name jedes Themas ist in Klammern in der Spalte "Beschreibung" in der folgenden Tabelle aufgeführt.  
+ Weitere Informationen über die Funktion und die Spalten zurückgegeben, für jede ADO MD-Konstante Sie in Themen finden [OLE DB für OLAP-Objekten und Schemarowsets](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) in der OLE DB für Online Analytical Processing (OLAP)-Dokumentation. Der Name jedes Themas ist in Klammern in der Spalte "Beschreibung" in der folgenden Tabelle aufgeführt.  
   
  Sie können die Datentypen der Spalten in der OLE DB-Dokumentation, ADO-Datentypen finden Sie in der Spalte "Beschreibung" von der ADO übersetzen [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) Thema. Z. B. dem OLE DB-Datentyp **DBTYPE_WSTR** ist gleichbedeutend mit dem ADO-Datentyp **AdWChar**.  
   
- ADO-Schema-ähnliche-Ergebnisse für die Konstanten, generiert **AdSchemaDBInfoKeywords** und **AdSchemaDBInfoLiterals**. ADO erstellt eine **Recordset**, und füllt dann jede Zeile, mit der jeweils vom zurückgegebenen Werte den **IDBInfo:: GetKeywords** und **:: GetLiteralInfo** Methoden. Weitere Informationen zu diesen Methoden finden Sie der [IDBInfo](http://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) Teil der OLE DB Programmer's Reference.  
+ ADO-Schema-ähnliche-Ergebnisse für die Konstanten, generiert **AdSchemaDBInfoKeywords** und **AdSchemaDBInfoLiterals**. ADO erstellt eine **Recordset**, und füllt dann jede Zeile, mit der jeweils vom zurückgegebenen Werte den **IDBInfo:: GetKeywords** und **:: GetLiteralInfo** Methoden. Weitere Informationen zu diesen Methoden finden Sie der [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) Teil der OLE DB Programmer's Reference.  
   
-|Konstante|value|Description|Einschränkungsspalten|  
+|Konstante|Wert|Description|Einschränkungsspalten|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Gibt die im Katalog definierten Assertionen, die von einem bestimmten Benutzer gehören.<br /><br /> (ASSERTIONEN Rowset)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|Gibt die zugegriffen werden kann, aus dem DBMS Katalogen zugeordneten physischen Attribute zurück.<br /><br /> (Kataloge Rowset)|CATALOG_NAME|  

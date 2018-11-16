@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eefb9269a3eb0dc7a6b95e84accb4c68c6737a13
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b7e80f8a9dfb82f13350b94b310690a081fae1de
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063950"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606640"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ IsTestCase()
  Um Fälle zurückzugeben, die Teil des trainingsdatasets sind, verwenden Sie die Funktion [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md).  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die `Targeted Mailing` Mining-Struktur, die in erstellt haben, wird die [Lernprogramm zu Data Mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Die Abfrage gibt alle Fälle der Struktur zurück, die für Tests verwendet werden.  
+ Im folgenden Beispiel wird die `Targeted Mailing` Mining-Struktur, die in erstellt haben, wird die [Lernprogramm zu Data Mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Die Abfrage gibt alle Fälle der Struktur zurück, die für Tests verwendet werden.  
   
 ```  
 SELECT *  
@@ -54,7 +54,7 @@ WHERE IsTestCase()
   
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Datamining-Abfragen](../analysis-services/data-mining/data-mining-queries.md)   
+ [Data Mining-Abfrage](../analysis-services/data-mining/data-mining-queries.md)   
  [Trainings- und Testdatasets](../analysis-services/data-mining/training-and-testing-data-sets.md)  
   
   

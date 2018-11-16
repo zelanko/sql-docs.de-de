@@ -18,12 +18,12 @@ ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9662333176616c9596bda7cc9950a314e7171b01
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 021d213ac83c02be7811fa3b5ea1ec470dfd527e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217618"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664330"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>CInstance-Klasse – SetDefaults-Methode
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,6 +52,6 @@ object.SetDefaults(OverwriteAll)
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Clientprotokollen](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

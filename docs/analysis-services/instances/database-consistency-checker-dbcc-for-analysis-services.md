@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147865"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697010"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Datenbankkonsistenzprüfung (DBCC) für Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ Der Befehl verwendet eine Objektdefinition und gibt ein leeres Resultset oder au
  DBCC für Analysis Services kann für eine Analysis Services-Datenbank mit jedem Kompatibilitätsgrad ausgeführt, solange die Datenbank auf einer SQL Server 2016-Instanz ausgeführt wird. Achten Sie darauf, dass Sie die richtige Befehlssyntax für die einzelnen Datenbanktypen verwenden.  
   
 > [!NOTE]  
->  Wenn Sie mit [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md) vertraut sind, werden Sie schnell feststellen, dass DBCC in Analysis Services einen wesentlich geringeren Umfang hat. DBCC in Analysis Services ist ein einzelner Befehl, der ausschließlich Datenbeschädigungen in der gesamten Datenbank oder für einzelne Objekte angibt. Wenn Sie noch andere Aufgaben ausführen möchten, z. B. das Sammeln von Informationen, verwenden Sie stattdessen AMO PowerShell- oder XMLA-Skripts. Links zu weiteren Informationen finden Sie unter [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md) .  
+>  Wenn Sie mit [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md) vertraut sind, werden Sie schnell feststellen, dass DBCC in Analysis Services einen wesentlich geringeren Umfang hat. DBCC in Analysis Services ist ein einzelner Befehl, der ausschließlich Datenbeschädigungen in der gesamten Datenbank oder für einzelne Objekte angibt. Wenn Sie noch andere Aufgaben ausführen möchten, z. B. das Sammeln von Informationen, verwenden Sie stattdessen AMO PowerShell- oder XMLA-Skripts.
   
 ## <a name="permission-requirements"></a>Berechtigungsanforderungen  
  Sie müssen Datenbank- oder Serveradministrator für Analysis Services (Mitglied der Serverrolle) sein, um den Befehl auszuführen. Anweisungen finden Sie unter [Erteilen von Datenbankberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) oder [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
@@ -299,7 +299,6 @@ Execution complete
 ## <a name="see-also"></a>Siehe auch  
  [Verarbeiten von Datenbank, Tabelle oder Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   

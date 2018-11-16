@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f30d22725e7d0fd099cf2976af42d74d08a93b22
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400613"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699444"
 ---
 # <a name="transparent-data-encryption"></a>Transparente Datenverschlüsselung
 Sie können verschiedene Vorsichtsmaßnahmen treffen, um eine Datenbank abzusichern, beispielsweise ein sicheres System entwerfen, vertrauliche Datenbestände verschlüsseln oder eine Firewall für die Datenbankserver einrichten. Allerdings für ein Szenario, in dem die physischen Medien (z. B. Festplatten oder Sicherungsbänder) gestohlen werden, kann eine böswillige Partei nur wiederherstellen oder Anfügen der Datenbank und die Daten durchsuchen. Eine Lösung dieses Problems besteht darin, die sensiblen Daten in der Datenbank zu verschlüsseln, und den für die Verschlüsselung der Daten verwendeten Schlüssel mit einem Zertifikat zu schützen. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  
@@ -207,7 +207,7 @@ Die Datenbank-Verschlüsselungsschlüssels (DEK) ist durch die Zertifikate, die 
   
 Das System kann die Schlüssel zugreifen, ohne dass menschliches Eingreifen erforderlich (z. B. die Angabe eines Kennworts). Wenn das Zertifikat nicht verfügbar ist, gibt das System einen Fehler mit der Meldung, dass es sich bei der DEK nicht entschlüsselt werden kann, bis das richtige Zertifikat verfügbar ist.  
   
-Beim Verschieben einer Datenbank von einer Appliance in ein anderes, das Zertifikat zum Schützen der "DEK muss zuerst auf dem Zielserver wiederhergestellt werden. Klicken Sie dann kann die Datenbank wie gewohnt wiederhergestellt werden. Weitere Informationen finden Sie in der standardmäßigen SQL Server-Dokumentation unter [Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL Server](http://technet.microsoft.com/library/ff773063.aspx).  
+Beim Verschieben einer Datenbank von einer Appliance in ein anderes, das Zertifikat zum Schützen der "DEK muss zuerst auf dem Zielserver wiederhergestellt werden. Klicken Sie dann kann die Datenbank wie gewohnt wiederhergestellt werden. Weitere Informationen finden Sie in der standardmäßigen SQL Server-Dokumentation unter [Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL Server](https://technet.microsoft.com/library/ff773063.aspx).  
   
 Zertifikate, die zum Verschlüsseln des DEKs sollte beibehalten werden, solange es datenbanksicherungen, die diese verwenden. Sicherungen des Zertifikats müssen dem privaten Schlüssel des Zertifikats enthalten, da ohne den privaten Schlüssel ein Zertifikats für die Wiederherstellung der Datenbank verwendet werden kann. Dieser private Schlüssel der Sicherung von Zertifikaten werden in einer separaten Datei gespeichert, geschützt durch ein Kennwort, die für die Zertifikat-Wiederherstellung bereitgestellt werden müssen.  
   

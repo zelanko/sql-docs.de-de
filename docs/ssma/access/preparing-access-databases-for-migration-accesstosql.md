@@ -21,18 +21,18 @@ ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: e78d5226a4ab726718eb7725640de22dd811a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9495ff7a58da124255cc6bf5674d92ebeef4c2b0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764408"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677669"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Vorbereiten der Access-Datenbanken für die Migration (AccessToSQL)
 Bevor Sie die Access-Datenbanken migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Sie müssen bestimmen, welche Datenbanken migrieren, und stellen Sie sicher, dass diese Datenbanken für die Migration bereit sind.  
   
 ## <a name="determining-when-to-migrate-to-sql-server"></a>Wann müssen die Migration zu SQL Server  
-Der Jet-Datenbank-Engine, das als die Datenbank-Engine für den Zugriff verwendet wird, ist eine flexible, einfach zu bedienende Lösung für die datenverwaltung. Allerdings stellen viele Benutzer als größeren Datenbanken und weitere unternehmenskritische, bessere Leistung, Sicherheit oder Verfügbarkeit erfordern. Für Anwendungen, die eine robustere Datenplattform erfordern, sollten Sie das Verschieben der zugrunde liegenden Datenbanken für diese Anwendungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen zu entscheiden, wann zu migrieren, finden Sie unter den [Informationsseite für die Migration](http://go.microsoft.com/fwlink/?LinkId=68571) auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Website.  
+Der Jet-Datenbank-Engine, das als die Datenbank-Engine für den Zugriff verwendet wird, ist eine flexible, einfach zu bedienende Lösung für die datenverwaltung. Allerdings stellen viele Benutzer als größeren Datenbanken und weitere unternehmenskritische, bessere Leistung, Sicherheit oder Verfügbarkeit erfordern. Für Anwendungen, die eine robustere Datenplattform erfordern, sollten Sie das Verschieben der zugrunde liegenden Datenbanken für diese Anwendungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen zu entscheiden, wann zu migrieren, finden Sie unter den [Informationsseite für die Migration](https://go.microsoft.com/fwlink/?LinkId=68571) auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Website.  
   
 Nach dem Migrieren von Datenbanken, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], können Sie weiterhin Zugriff zu verwenden, indem Sie verknüpfte Tabellen, oder Sie können manuell migrieren Ihrer Anwendungen in [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework-basierten Code, der direkt mit interagiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

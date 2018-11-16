@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: afcacd5a19920a396141284103db93e60a4f0646
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ee6581bca5dac6331571d1b1b71957cc3df7eac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829560"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661309"
 ---
 # <a name="use-a-statement-odbc"></a>Verwenden einer Anweisung (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,21 +28,21 @@ ms.locfileid: "47829560"
     
 ### <a name="to-use-a-statement"></a>So verwenden Sie eine Anweisung  
   
-1.  Rufen Sie [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) mit einem *HandleType* von SQL_HANDLE_STMT auf, um ein Anweisungshandle zuzuweisen.  
+1.  Rufen Sie [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) mit einem *HandleType* von SQL_HANDLE_STMT auf, um ein Anweisungshandle zuzuweisen.  
   
 2.  Rufen Sie optional [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) auf, um Anweisungsoptionen festzulegen, oder [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md), um Anweisungsattribute abzurufen.  
   
      Um Servercursor zu verwenden, müssen Sie die Cursorattribute auf Werte setzen, die von den Standardwerten abweichen.  
   
-3.  Bereiten Sie optional die Anweisung mit der [SQLPrepare-Funktion](http://go.microsoft.com/fwlink/?LinkId=59360)auf die Ausführung vor, wenn die Anweisung mehrmals ausgeführt wird.  
+3.  Bereiten Sie optional die Anweisung mit der [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360)auf die Ausführung vor, wenn die Anweisung mehrmals ausgeführt wird.  
   
-4.  Binden Sie optional mit [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)die Parametermarkierungen an Programmvariablen, wenn die Anweisung über gebundene Parametermarkierungen verfügt. Wenn die Anweisung vorbereitet wurde, können Sie [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) und [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) to find the number und characteristics of the parameters.  
+4.  Binden Sie optional mit [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)die Parametermarkierungen an Programmvariablen, wenn die Anweisung über gebundene Parametermarkierungen verfügt. Wenn die Anweisung vorbereitet wurde, können Sie [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) und [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) to find the number und characteristics of the parameters.  
   
 5.  Führen Sie eine Anweisung direkt mit SQLExecDirect aus.  
   
      \- oder –  
   
-     Wenn die Anweisung vorbereitet wurde, führen Sie sie mehrmals mit [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)aus.  
+     Wenn die Anweisung vorbereitet wurde, führen Sie sie mehrmals mit [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)aus.  
   
      \- oder –  
   

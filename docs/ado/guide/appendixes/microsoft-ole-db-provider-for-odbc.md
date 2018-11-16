@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 565217e494b753ee22c2fa3715f17108a9fab5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be6edd514530acca7ac79cebf959a09d20562ac5
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638308"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350644"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB-Anbieter für ODBC-Übersicht
 Ein ADO- oder RDS-Programmierer wäre eine ideale Welt eine Datenquelle in dem jeder eine OLE DB-Schnittstelle verfügbar macht, damit ADO direkt in der Datenquelle aufgerufen werden kann. Obwohl Datenbankanbieter zunehmend OLE DB-Schnittstellen implementieren, werden einige Datenquellen nicht noch auf diese Weise verfügbar gemacht. Allerdings können die meisten DBMS-Systeme heutzutage über ODBC zugegriffen werden.
@@ -227,7 +227,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="dynamic-properties"></a>Dynamische Eigenschaften
  Microsoft OLE DB-Anbieter für ODBC fügt verschiedene Eigenschaften in der **Eigenschaften** Auflistung von nicht geöffneten [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), und [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekte.
 
- Die folgenden Tabellen sind ein Cross-Index der ADO und OLE DB-Namen für jede dynamische Eigenschaft. Der OLE DB Programmer's Reference bezieht sich auf den Namen einer ADO-Eigenschaft, wird der Begriff "Description". Weitere Informationen zu diesen Eigenschaften finden Sie in der OLE DB Programmer's Reference. Suchen Sie nach den Namen des OLE DB-Eigenschaft im Index oder finden Sie unter [Anhang C: OLE DB-Eigenschaften](http://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ Die folgenden Tabellen sind ein Cross-Index der ADO und OLE DB-Namen für jede dynamische Eigenschaft. Der OLE DB Programmer's Reference bezieht sich auf den Namen einer ADO-Eigenschaft, wird der Begriff "Description". Weitere Informationen zu diesen Eigenschaften finden Sie in der OLE DB Programmer's Reference. Suchen Sie nach den Namen des OLE DB-Eigenschaft im Index oder finden Sie unter [Anhang C: OLE DB-Eigenschaften](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## <a name="connection-dynamic-properties"></a>Dynamische Eigenschaften der Verbindung
  Die folgenden Eigenschaften werden hinzugefügt, um die **Verbindung** des Objekts **Eigenschaften** Auflistung.
@@ -429,7 +429,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Aktualisierbarkeit|DBPROP_UPDATABILITY|
 |Verwenden von Lesezeichen|DBPROP_BOOKMARKS|
 
- Details zur Implementierung und funktionalen Informationen zu den Microsoft OLE DB-Anbieter für ODBC, finden Sie unter den [OLE DB-Programmierreferenz](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) oder finden Sie auf der Website-Datenzugriff und Storage Developer Center auf MSDN.
+ Details zur Implementierung und funktionalen Informationen zu den Microsoft OLE DB-Anbieter für ODBC, finden Sie unter den [OLE DB-Programmierreferenz](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) oder finden Sie auf der Website-Datenzugriff und Storage Developer Center auf MSDN.
 
 ## <a name="see-also"></a>Siehe auch
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [CommandText-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [ConnectionString-Eigenschaft (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [ausführen Methode (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Parameters-Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Provider-Eigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [unterstützt-Methode](../../../ado/reference/ado-api/supports-method.md)

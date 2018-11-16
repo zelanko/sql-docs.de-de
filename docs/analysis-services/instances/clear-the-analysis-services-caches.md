@@ -1,5 +1,5 @@
 ---
-title: Löschen der Analysis Services Caches | Microsoft Docs
+title: Löschen der Analysis Services Caches | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4ed87e37ca9b13af696977a86eeccd34eec81e87
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0b9276d0a8684023d8e6dba1a890b5f1698a017a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016557"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700328"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Löschen des Zwischenspeichers von Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,15 +22,15 @@ ms.locfileid: "34016557"
   
  **Löschen des Zwischenspeichers für mehrdimensionale Modelle**  
   
- Für mehrdimensionale Datenbanken erstellen Analysis Services Zwischenspeicher im Formelmodul bei der Auswertung einer Berechnung und im Speichermodul für die Ergebnisse von Dimensionsabfragen und Measuregruppenabfragen. Measuregruppenabfragen treten auf, wenn die Formelmodulanforderungen Daten für eine Zellenkoordinate oder einen Teilcube abmessen. Beim Abfragen von unnatürlichen Hierarchien treten Dimensionsabfragen auf und beim Anwenden von Autoexist-Funktionen.  
+ Für mehrdimensionale Datenbanken erstellen Analysis Services Zwischenspeicher in der Formular-Engine bei der Auswertung einer Berechnung und in der Speicher-Engine für die Ergebnisse von Dimensionsabfragen und Measuregruppenabfragen. Measuregruppenabfragen treten auf, wenn die Formel-Engine-Anforderungen Daten für eine Zellenkoordinate oder einen Teilcube abmessen. Beim Abfragen von unnatürlichen Hierarchien treten Dimensionsabfragen auf und beim Anwenden von Autoexist-Funktionen.  
   
  Beim Durchführen von Leistungstests empfiehlt es sich, den Zwischenspeicher zu löschen. Durch das Löschen des Zwischenspeichers zwischen Testläufen wird sichergestellt, dass das Zwischenspeichern die Testergebnisse nicht verzerrt, die die Auswirkungen auf eine Abfrageentwurfsänderung messen.  
   
  **Löschen des Zwischenspeichers für tabellarische Modelle**  
   
- Tabellarische Modelle werden im Allgemeinen im Arbeitsspeicher gespeichert, wo Aggregationen und andere Berechnungen beim Ausführen einer Abfrage ausgeführt werden. Der ClearCache-Befehl hat nur eingeschränkte Auswirkungen auf tabellarische Modelle. Bei einem tabellarischen Modell werden Daten möglicherweise dem Analysis Services-Zwischenspeicher hinzugefügt, wenn MDX-Abfragen ausgeführt werden. DAX-Measures (verwiesen durch MDX) und Autoexists-Vorgänge können im Einzelnen Ergebnisse im Formular- bzw. Dimensionszwischenspeicher zwischenspeichern. Beachten Sie jedoch, dass unnatürliche Hierarchien und Measuregruppenabfragen im Speichermodul keine Ergebnisse zwischenspeichern. Darüber hinaus ist es wichtig zu wissen, dass DAX-Abfragen die Ergebnisse nicht im Formular- bzw. im Speichermodul zwischenspeichern. Falls Caches als Ergebnis von MDX-Abfragen vorhanden sind, werden durch das Ausführen von ClearCache auf ein tabellarisches Modell alle zwischengespeicherten Daten vom System ungültig.  
+ Tabellarische Modelle werden im Allgemeinen im Arbeitsspeicher gespeichert, wo Aggregationen und andere Berechnungen beim Ausführen einer Abfrage ausgeführt werden. Der ClearCache-Befehl hat nur eingeschränkte Auswirkungen auf tabellarische Modelle. Bei einem tabellarischen Modell werden Daten möglicherweise dem Analysis Services-Zwischenspeicher hinzugefügt, wenn MDX-Abfragen ausgeführt werden. DAX-Measures (verwiesen durch MDX) und Autoexists-Vorgänge können im Einzelnen Ergebnisse im Formular- bzw. Dimensionszwischenspeicher zwischenspeichern. Beachten Sie jedoch, dass unnatürliche Hierarchien und Measuregruppenabfragen in der Speicher-Engine keine Ergebnisse zwischenspeichern. Darüber hinaus ist es wichtig zu wissen, dass DAX-Abfragen die Ergebnisse nicht im Formular- bzw. in der Speicher-Engine zwischenspeichern. Falls Caches als Ergebnis von MDX-Abfragen vorhanden sind, werden durch das Ausführen von ClearCache auf ein tabellarisches Modell alle zwischengespeicherten Daten vom System ungültig.  
   
- Durch das Ausführen von ClearCache wird auch der speicherinterne Cache im xVelocity-Modul für Datenanalyse im Arbeitsspeicher (VertiPaq) gelöscht. Das xVelocity-Modul behält einen kleinen Satz zwischengespeicherter Ergebnisse bei. Durch das Ausführen von ClearCache werden diese Zwischenspeicher in der xVelocity-Engine ungültig.  
+ Durch das Ausführen von ClearCache wird auch der speicherinterne Cache in der xVelocity-Engine für Datenanalyse im Arbeitsspeicher (VertiPaq) gelöscht. Die xVelocity-Engine behält einen kleinen Satz zwischengespeicherter Ergebnisse bei. Durch das Ausführen von ClearCache werden diese Zwischenspeicher in der xVelocity-Engine ungültig.  
   
  Schließlich werden durch das Ausführen von ClearCache auch restliche Daten entfernt, die im Arbeitsspeicher übrig sind, wenn ein tabellarisches Modell für den **DirectQuery** -Modus neu konfiguriert wird. Dies ist besonders wichtig, wenn das Modell sensible Daten enthält, die engen Kontrollen unterliegen. In diesem Fall ist das Ausführen von ClearCache eine vorbeugende Aktion, die Sie ergreifen können, um sicherzustellen, dass sensible Daten nur dort vorhanden sind, wo Sie sie erwarten. Das manuelle Löschen des Zwischenspeichers ist notwendig, wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwenden, um das Modell bereitzustellen und den Abfragemodus zu ändern. Demgegenüber wird durch die Verwendung von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zur Bestimmung von **DirectQuery** auf dem Modell der Zwischenspeicher durch die Partitionen automatisch gelöscht, wenn Sie das Modell umschalten, um diesen Abfragemodus zu verwenden.  
   
@@ -87,7 +87,6 @@ ms.locfileid: "34016557"
     </return>  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Überwachen einer Instanz von Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+
   
   

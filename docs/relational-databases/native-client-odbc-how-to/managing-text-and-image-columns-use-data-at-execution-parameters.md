@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ec5799c1454a9f904ed49fd6cd41e71162f4886
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55feda84f7c64b4d33229ac6fe58b6b2d782b7a9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831278"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671144"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Verwalten von Text- und Image-Spalten: Verwenden von Data-at-Execution-Parametern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,20 +34,20 @@ ms.locfileid: "47831278"
   
     -   Verwenden Sie einen **rgbValue** -Parameter (8. Parameter) eines programmdefinierten Parameterbezeichners.  
   
-2.  Durch Aufrufen von [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) oder [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) wird SQL_NEED_DATA zurückgegeben. Dies bedeutet, dass Data-at-Execution-Parameter für die Verarbeitung bereit sind.  
+2.  Durch Aufrufen von [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) oder [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) wird SQL_NEED_DATA zurückgegeben. Dies bedeutet, dass Data-at-Execution-Parameter für die Verarbeitung bereit sind.  
   
 3.  Für jeden Data-at-Execution-Parameter:  
   
-    -   Rufen Sie [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) auf, um die programmdefinierte Parameter-ID zu erhalten. Es wird SQL_NEED_DATA zurückgegeben, wenn ein anderer Data-at-Execution-Parameter vorhanden ist.  
+    -   Rufen Sie [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) auf, um die programmdefinierte Parameter-ID zu erhalten. Es wird SQL_NEED_DATA zurückgegeben, wenn ein anderer Data-at-Execution-Parameter vorhanden ist.  
   
     -   Rufen Sie zum Senden der Parameterdaten [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) mindestens einmal auf, bis die gesamte Länge gesendet wurde.  
   
-4.  Rufen Sie [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) auf, um anzugeben, dass alle Daten für den letzten Data-at-Execution-Parameter gesendet wurden. Es wird kein SQL_NEED_DATA zurückgegeben.  
+4.  Rufen Sie [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) auf, um anzugeben, dass alle Daten für den letzten Data-at-Execution-Parameter gesendet wurden. Es wird kein SQL_NEED_DATA zurückgegeben.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie mithilfe von SQLParamData und SQLPutData SQL_LONG-Zeichendaten variabler Länge gelesen werden. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
- Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Homepage [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treibername lautet "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
+ Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treibername lautet "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
@@ -227,6 +227,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwalten von Text- und Image-Spalten Gewusst-wie-Themen &#40;ODBC&#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [Verwalten von Text- und Image-Spalten Gewusst-wie-Themen &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

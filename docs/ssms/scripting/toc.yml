@@ -1,0 +1,170 @@
+items:
+- name: Übersicht
+  href: database-engine-scripting.md
+- name: Abfrage- und Text-Editoren (SQL Server Management Studio)
+  href: query-and-text-editors-sql-server-management-studio.md
+- name: Abfrage-Editor der Datenbank-Engine (SQL Server Management Studio)
+  href: database-engine-query-editor-sql-server-management-studio.md
+- name: XML-Editor (SQL Server Management Studio)
+  href: xml-editor-sql-server-management-studio.md
+- name: Konfigurieren von Editoren (SQL Server Management Studio)
+  href: configure-editors-sql-server-management-studio.md
+  items:
+  - name: Zuordnen von Dateierweiterungen zu einem Code-Editor
+    href: associate-file-extensions-to-a-code-editor.md
+  - name: Ändern von Schriftfarbe, Schriftgrad und Schriftschnitt
+    href: change-font-color-size-and-style.md
+  - name: Verwenden des Eigenschaftenfensters in Management Studio
+    href: use-the-properties-window-in-management-studio.md
+- name: Öffnen eines Editors (SQL Server Management Studio)
+  href: open-an-editor-sql-server-management-studio.md
+- name: Verwalten des Editors und des Ansichtsmodus
+  href: manage-the-editor-and-view-mode.md
+- name: Verwalten der Codeformatierung
+  href: manage-code-formatting.md
+- name: Navigieren in Code und Text
+  href: navigate-code-and-text.md
+- name: Farbcodierung im Abfrage-Editor
+  href: color-coding-in-query-editors.md
+- name: Codegliederung
+  href: code-outlining.md
+- name: Verschieben von Text mit Drag und Drop
+  href: drag-and-drop-text.md
+- name: Suchen und Ersetzen
+  href: search-and-replace.md
+  items:
+  - name: Inkrementelles Durchsuchen eines aktiven Dokuments
+    href: search-an-active-document-incrementally.md
+  - name: Interaktives Durchsuchen von Dokumenten
+    href: search-documents-interactively.md
+  - name: Durchsuchen von Dokumenten mithilfe von Ergebnislisten
+    href: search-documents-using-results-lists.md
+  - name: Suchen von Text mit Platzhaltern
+    href: search-text-with-wildcards.md
+  - name: Suchen von Text mit regulären Ausdrücken
+    href: search-text-with-regular-expressions.md
+  - name: Suchen und Ersetzen
+    href: find-and-replace.md
+  - name: In Dateien suchen
+    href: find-in-files.md
+  - name: Fenster Suchergebnisse
+    href: find-results-windows.md
+  - name: In Dateien ersetzen
+    href: replace-in-files.md
+- name: Verwalten von Lesezeichen
+  href: manage-bookmarks.md
+  items:
+  - name: Lesezeichen (F1-Hilfe)
+    href: bookmarks-f1-help.md
+- name: Drucken von Code und Ergebnissen
+  href: print-code-and-results.md
+- name: Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor
+  href: edit-sqlcmd-scripts-with-query-editor.md
+- name: IntelliSense (SQL Server Management Studio)
+  href: intellisense-sql-server-management-studio.md
+  items:
+  - name: Konfigurieren von IntelliSense (SQL Server Management Studio)
+    href: configure-intellisense-sql-server-management-studio.md
+  - name: Parameterinfo (IntelliSense)
+    href: parameter-info-intellisense.md
+  - name: QuickInfo (IntelliSense)
+    href: quick-info-intellisense.md
+  - name: Wort vervollständigen (IntelliSense)
+    href: complete-word-intellisense.md
+  - name: Automatischer Vergleich von Syntaxpaaren
+    href: automatic-matching-of-syntax-pairs.md
+  - name: Problembehandlung von IntelliSense (SSMS)
+    href: troubleshooting-intellisense.md
+  - name: Von IntelliSense unterstützte Transact-SQL-Syntax
+    href: transact-sql-syntax-supported-by-intellisense.md
+- name: Transact-SQL-Codeausschnitte
+  href: transact-sql-code-snippets.md
+  items:
+  - name: Einfügen von Transact-SQL-Ausschnitten
+    href: insert-transact-sql-snippets.md
+  - name: Einfügen von Transact-SQL-Umschließungsausschnitten
+    href: insert-surround-with-transact-sql-snippets.md
+  - name: Abschließen von Transact-SQL-Ausschnitten
+    href: complete-transact-sql-snippets.md
+  - name: Hinzufügen von Transact-SQL-Ausschnitten
+    href: add-transact-sql-snippets.md
+- name: Transact-SQL-Debugger
+  href: transact-sql-debugger.md
+  items:
+  - name: Konfigurieren von Firewallregeln vor dem Ausführen des TSQL-Debuggers
+    href: configure-firewall-rules-before-running-the-tsql-debugger.md
+  - name: Ausführen des Transact-SQL-Debuggers
+    href: run-the-transact-sql-debugger.md
+  - name: Schrittweises Durchlaufen von Transact-SQL-Code
+    href: step-through-transact-sql-code.md
+  - name: Transact-SQL-Breakpoints
+    href: transact-sql-breakpoints.md
+    items:
+    - name: Ein- und Ausschalten eines Breakpoints
+      href: toggle-a-breakpoint.md
+    - name: Aktivieren, Deaktivieren und Löschen von Breakpoints
+      href: enable-disable-and-delete-breakpoints.md
+    - name: Angeben einer Breakpointbedingung
+      href: specify-a-breakpoint-condition.md
+    - name: Angeben einer Trefferanzahl
+      href: specify-a-hit-count.md
+    - name: Angeben eines Breakpointfilters
+      href: specify-a-breakpoint-filter.md
+    - name: Angeben einer Breakpointaktion
+      href: specify-a-breakpoint-action.md
+    - name: Bearbeiten einer Breakpointposition
+      href: edit-a-breakpoint-location.md
+  - name: Transact-SQL-Debuggerinformationen
+    href: transact-sql-debugger-information.md
+    items:
+    - name: Transact-SQL-Debugger – Fenster „Fehlerliste“
+      href: transact-sql-debugger-error-list-window.md
+    - name: Transact-SQL-Debugger – Fenster „Breakpoints“
+      href: transact-sql-debugger-breakpoints-window.md
+    - name: Transact-SQL-Debugger – Fenster „Aufrufliste“
+      href: transact-sql-debugger-call-stack-window.md
+    - name: Transact-SQL-Debugger – Fenster „Lokal“
+      href: transact-sql-debugger-locals-window.md
+    - name: Transact-SQL-Debugger – Fenster „Threads“
+      href: transact-sql-debugger-threads-window.md
+    - name: Transact-SQL-Debugger – Befehlsfenster
+      href: transact-sql-debugger-command-window.md
+    - name: Transact-SQL Debugger – Ausgabefenster
+      href: transact-sql-debugger-output-window.md
+    - name: Transact-SQL-Debugger – Überwachung (Fenster)
+      href: transact-sql-debugger-watch-window.md
+    - name: Transact-SQL-Debugger – Dialogfeld „Schnellüberwachung“
+      href: transact-sql-debugger-quickwatch-dialog-box.md
+  - name: Statusleiste (Abfrage-Editor der Datenbank-Engine)
+    href: status-bar-database-engine-query-editor.md
+  - name: Anzeigen räumlicher Daten im Objekt-Explorer
+    href: view-spatial-data-in-object-explorer.md
+    items:
+    - name: Fenster "Räumliche Ergebnisse"
+      href: spatial-results-window.md
+- name: sqlcmd
+  items:
+  - name: Starten des Hilfsprogramms
+    href: sqlcmd-start-the-utility.md
+  - name: Verwenden des Hilfsprogramms
+    href: sqlcmd-use-the-utility.md
+  - name: Herstellen einer Verbindung mit der Datenbank-Engine
+    href: sqlcmd-connect-to-the-database-engine.md
+  - name: Ausführen von Transact-SQL-Skriptdateien
+    href: sqlcmd-run-transact-sql-script-files.md
+  - name: Verwenden mit Skriptvariablen
+    href: sqlcmd-use-with-scripting-variables.md
+- name: Erstellen von Skripts (SQL Server Management Studio)
+  href: generate-scripts-sql-server-management-studio.md
+  items:
+  - name: Assistenten zum Generieren und Veröffentlichen von Skripts
+    href: generate-and-publish-scripts-wizard.md
+    items:
+    - name: Vom Assistenten zum Generieren von Skripts unterstützte Objekte
+      href: objects-supported-by-the-generate-scripts-wizard.md
+ms.openlocfilehash: 0af0621ecb4c4a69879cee63196222748c2824b0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642504"

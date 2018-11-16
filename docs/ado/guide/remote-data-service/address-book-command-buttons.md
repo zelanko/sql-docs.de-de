@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64570b9a6f2052fdc3f9e5544a442853110587b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e3b29fd5f4fab7e487be5be18752ac7de892537
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613148"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560297"
 ---
 # <a name="address-book-command-buttons"></a>Adress Book-Befehlsschaltflächen
 Das Adressbuch-App umfasst die folgenden Schaltflächen:  
@@ -33,7 +33,7 @@ Das Adressbuch-App umfasst die folgenden Schaltflächen:
 -   Ein **Änderungen Abbrechen** Schaltfläche, um die Änderungen zu verwerfen.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="find-button"></a>Schaltfläche "Suchen"  
  Klicken auf die **finden** Schaltfläche aktiviert wird, die VBScript-Find_OnClick-Sub-Prozedur, die erstellt und sendet die SQL-Abfrage. Auf diese Schaltfläche klicken, füllt das Datenraster.  
@@ -45,7 +45,7 @@ Das Adressbuch-App umfasst die folgenden Schaltflächen:
   
  Z. B. wenn die **Nachname** Feld enthalten den Eintrag "Berge" und die **Titel** Feld enthalten den Eintrag "Programm-Manager" der SQL-Anweisung (Wert des `myQuery`) liest:  
   
-```  
+```sql
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
 ```  
   
@@ -54,7 +54,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
 ## <a name="preparing-and-sending-the-query"></a>Vorbereiten und das Senden der Abfrage  
  Der letzte Teil der Find_OnClick Sub-Prozedur besteht aus zwei Anweisungen. Die erste Anweisung weist die [SQL](../../../ado/reference/rds-api/sql-property.md) Eigenschaft der [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt gleich der dynamisch erstellten SQL-Abfrage. Die zweite Anweisung bewirkt, dass die **RDS. DataControl** Objekt (`DC1`) auf die Datenbank abzufragen, und klicken Sie dann die neuen Ergebnisse der Abfrage im Raster angezeigt.  
   
-```  
+```vb
 Sub Find_OnClick  
    '...  
    DC1.SQL = myQuery  
@@ -65,7 +65,7 @@ End Sub
 ## <a name="update-profile-button"></a>Aktualisieren Sie die Schaltfläche "Profil"  
  Klicken auf die **Profil aktualisieren** Schaltfläche aktiviert wird, die VBScript Update_OnClick Sub-Prozedur, führt die [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) des Objekts (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) und [aktualisieren](../../../ado/reference/rds-api/refresh-method-rds.md) Methoden.  
   
-```  
+```vb
 Sub Update_OnClick  
    DC1.SubmitChanges  
    DC1.Refresh  
@@ -77,7 +77,7 @@ End Sub
 ## <a name="cancel-changes-button"></a>Abbrechen-Schaltfläche "Änderungen"  
  Auf **Änderungen Abbrechen** aktiviert die VBScript Cancel_OnClick Sub-Prozedur, führt die [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) des Objekts (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) Methode.  
   
-```  
+```vb
 Sub Cancel_OnClick  
    DC1.CancelUpdate  
 End Sub  

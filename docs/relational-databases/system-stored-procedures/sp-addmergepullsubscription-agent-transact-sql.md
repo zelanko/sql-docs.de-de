@@ -17,12 +17,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da16887ff7debf09e69fc72cf464f5838cf6ddc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abd4893368069217003ca9fa5a6f4dca9e4229de
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749740"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681368"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -169,7 +169,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_type =** ] *Frequency_type*  
  Die Häufigkeit für die Zeitplanung des Merge-Agents. *Frequency_type* ist **Int**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**2**|Bedarfsgesteuert|  
@@ -187,7 +187,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_interval =** ] *Frequency_interval*  
  Die Tage, an denen der Merge-Agent ausgeführt wird. *Frequency_interval* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|Sonntag|  
 |**2**|Montag|  
@@ -204,7 +204,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_relative_interval =** ] *Frequency_relative_interval*  
  Das Datum des Merge-Agents. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|Erster|  
 |**2**|Zweimal|  
@@ -219,7 +219,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_subday =** ] *Frequency_subday*  
  Die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**2**|Zweimal|  
@@ -294,13 +294,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Der Name eines vorhandenen Agentauftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter wird nur angegeben, wenn das Abonnement mithilfe eines vorhandenen Auftrags statt mit einem neu erstellten Auftrag (Standard) synchronisiert wird. Wenn Sie nicht Mitglied der sind die **Sysadmin** festen Serverrolle an, Sie müssen angeben, *Job_login* und *Job_password* beim Angeben von *Job_name*.  
   
  [  **@dynamic_snapshot_location =** ] **"***Dynamic_snapshot_location***"** ]  
- Entspricht dem Pfad zum Ordner, aus dem die Momentaufnahmedateien gelesen werden, wenn eine gefilterte Datenmomentaufnahme zu verwenden ist. *Dynamic_snapshot_location* ist **nvarchar(260)**, hat den Standardwert NULL. Weitere Informationen finden Sie unter [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Entspricht dem Pfad zum Ordner, aus dem die Momentaufnahmedateien gelesen werden, wenn eine gefilterte Datenmomentaufnahme zu verwenden ist. *Dynamic_snapshot_location* ist **nvarchar(260)**, hat den Standardwert NULL. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  [  **@use_web_sync =** ] *Use_web_sync*  
  Gibt an, dass die Websynchronisierung aktiviert wird. *Use_web_sync* ist **Bit**, hat den Standardwert 0. **1** gibt an, dass das Pullabonnement mithilfe von HTTP über das Internet synchronisiert werden kann.  
   
  [  **@internet_url =** ] **"***Internet_url***"**  
- Entspricht dem Speicherort der Replikationsüberwachung (REPLISAPI.DLL) zur Websynchronisierung. *Internet_url* ist **nvarchar(260)**, hat den Standardwert NULL. *Internet_url* ist eine vollqualifizierte URL im Format `http://server.domain.com/directory/replisapi.dll`. Wenn der Server so konfiguriert ist, dass er einen anderen Port als Port 80 überwacht, muss auch die Portnummer im Format `http://server.domain.com:portnumber/directory/replisapi.dll` angegeben werden, wobei `portnumber` den Port darstellt.  
+ Entspricht dem Speicherort der Replikationsüberwachung (REPLISAPI.DLL) zur Websynchronisierung. *Internet_url* ist **nvarchar(260)**, hat den Standardwert NULL. *Internet_url* ist eine vollqualifizierte URL im Format `https://server.domain.com/directory/replisapi.dll`. Wenn der Server so konfiguriert ist, dass er einen anderen Port als Port 80 überwacht, muss auch die Portnummer im Format `https://server.domain.com:portnumber/directory/replisapi.dll` angegeben werden, wobei `portnumber` den Port darstellt.  
   
  [  **@internet_login =** ] **"***sich***"**  
  Entspricht der Anmeldung, über die der Merge-Agent mithilfe der HTTP-Standardauthentifizierung die Verbindung mit dem Webserver herstellt, der die Websynchronisierung hostet. *sich* ist **Sysname**, hat den Standardwert NULL.  
@@ -314,7 +314,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@internet_security_mode =** ] *Internet_security_mode*  
  Entspricht der vom Merge-Agent verwendeten Authentifizierungsmethode zur Herstellung der Verbindung mit dem Webserver über HTTPS während der Websynchronisierung. *Internet_security_mode* ist **Int** und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**0**|Die Standardauthentifizierung wird verwendet.|  
 |**1** (Standard)|Die integrierte Windows-Authentifizierung wird verwendet.|  
@@ -353,7 +353,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 ## <a name="see-also"></a>Siehe auch  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
  [Sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [Sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
  [Sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   

@@ -14,12 +14,12 @@ ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 526c3ec119e2ccf397fee2217b696900a47ea621
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4415f3e0a6ebf773a3a781a5547a50a578d9d4f9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791628"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671989"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR-Integrationsarchitektur: Leistung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47791628"
  Der Kompilierungsprozess erzeugt einen Funktionszeiger, der zur Laufzeit über systemeigenen Code aufgerufen werden kann. Bei benutzerdefinierten Skalarwertfunktionen erfolgt dieser Funktionsaufruf auf Zeilenbasis. Um die Kosten für den Übergang zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und CLR zu minimieren, verfügen Anweisungen, die verwaltete Aufrufe beinhalten, über einen Startschritt zur Identifizierung der Zielanwendungsdomäne. Dieser Identifizierungsschritt reduziert die Kosten für den Übergang der einzelnen Zeilen.  
   
 ## <a name="performance-considerations"></a>Überlegungen zur Leistung  
- Im Folgenden werden Informationen über Leistungsaspekte in Bezug auf die CLR-Integration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gegeben. Ausführlichere Informationen finden Sie "[mithilfe von CLR-Integration in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=50332)" auf der MSDN-Website. Allgemeine Informationen über die Leistungsfähigkeit von verwaltetem Code finden Sie im "[Improving .NET Application Performance und Skalierbarkeit](http://go.microsoft.com/fwlink/?LinkId=50333)" auf der MSDN-Website.  
+ Im Folgenden werden Informationen über Leistungsaspekte in Bezug auf die CLR-Integration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gegeben. Ausführlichere Informationen finden Sie "[mithilfe von CLR-Integration in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)" auf der MSDN-Website. Allgemeine Informationen über die Leistungsfähigkeit von verwaltetem Code finden Sie im "[Improving .NET Application Performance und Skalierbarkeit](https://go.microsoft.com/fwlink/?LinkId=50333)" auf der MSDN-Website.  
   
 ### <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen  
  CLR-Funktionen profitieren im Vergleich zu benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen von einem schnelleren Aufrufpfad. Zudem bietet verwalteter Code im Vergleich zu [!INCLUDE[tsql](../../includes/tsql-md.md)] deutliche Leistungsvorteile in Bezug auf den prozeduralen Code, die Berechnung und die Zeichenfolgenbearbeitung. Rechenintensive CLR-Funktionen, die keinen Datenzugriff ausführen, sollten bevorzugt in verwaltetem Code geschrieben werden. [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen führen Datenzugriffe jedoch effizienter aus als die CLR-Integration.  

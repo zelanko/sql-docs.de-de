@@ -1,5 +1,5 @@
 ---
-title: ALTER CUBE-Anweisung (MDX) | Microsoft Docs
+title: ALTER CUBE-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3b21466e1f8af33faa49a217038fee78ddf9fcc6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f9a15108875c7e519948f0e73e0a87d08b70c975
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741569"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698298"
 ---
-# <a name="mdx-data-definition---alter-cube"></a>MDX - Datendefinition: ALTER CUBE
+# <a name="mdx-data-definition---alter-cube"></a>MDX-Datendefinition – ALTER CUBE
 
 
-  Ändert die Struktur eines angegebenen Cubes, der normalerweise verwendet wird, um das Rückschreiben von Dimensionen zu unterstützen. Weitere Informationen zur Verwendung des Rückschreibens in einer Anwendung finden Sie in diesem Blogbeitrag: [Erstellen einer Rückschreibeanwendung mit Analysis Services (Blog)](http://go.microsoft.com/fwlink/?LinkId=394977)  
+  Ändert die Struktur eines angegebenen Cubes, der normalerweise verwendet wird, um das Rückschreiben von Dimensionen zu unterstützen. Weitere Informationen zur Verwendung des Rückschreibens in einer Anwendung finden Sie unter folgendem Blogbeitrag: [Erstellen einer Rückschreibeanwendung mit Analysis Services (Blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  Gleichzeitige Rückschreibevorgänge für Dimensionen können zu einem Deadlock führen. Dabei wird die erste Rückschreibung aufgrund der durch die zweite Rückschreibung aufrechterhaltene gemeinsame Sperre für ein Commit blockiert. In diesem Fall wird zwar kein Fehler generiert, allerdings kann keiner der Vorgänge fortgesetzt werden. Schließlich tritt für beide Rückschreibevorgänge ein Timeout auf, und es wird ein Rollback der Änderungen ausgeführt.  
   
@@ -98,7 +98,7 @@ CELL CALCULATION Calculation_Name
  *Key_Value*  
  Ein gültiger Skalarausdruck, der den Schlüsselwert des neuen Dimensionselements definiert.  
   
- *Eigenschaftsname*  
+ *Property_name*  
  Ein gültiger MDX-Bezeichner (Multidimensional Expressions), der eine Elementeigenschaft darstellt.  
   
  *Property_Value*  
@@ -118,7 +118,7 @@ CELL CALCULATION Calculation_Name
  Wenn die WITH DESCENDANTS-Klausel nicht verwendet wird, werden aus den untergeordneten Elementen eines gelöschten Elements untergeordnete Elemente des diesem übergeordneten Elements. Wenn die WITH DESCENDANTS-Klausel verwendet wird, werden alle nachfolgenden Werte einschließlich ihrer Zeilen in der Dimensionstabelle ebenfalls gelöscht.  
   
 > [!NOTE]  
->  Informationen zum Löschen von berechneten Elementen, benannten Mengen, Aktionen und zellenberechnungen finden Sie unter [DROP MEMBER-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [SET-Anweisung DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), und [DROP CELL CALCULATION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  Informationen zum Löschen von berechneten Elemente, benannten Mengen, Aktionen und zellenberechnungen finden Sie unter [DROP MEMBER-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [DROP SET-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), und [DROP CELL CALCULATION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="updating-the-default-dimension-member"></a>Aktualisieren des Standardelements einer Dimension  
  Diese Klausel aktualisiert das Standardelement eines Cubes und wird im MDX-Berechnungsskript zum Definieren eines Standardelements verwendet. Das Standardelement kann für die Datenbankdimension, eine Cubedimension oder einen Anmeldenamen angegeben werden. Das Standardelement kann auch während einer Sitzung geändert werden.  

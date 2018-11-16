@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0647d1e0f7dd082b3ce3aab668d8af8d5673efb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795768"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661560"
 ---
 # <a name="creating-user-defined-types---coding"></a>Erstellen benutzerdefinierter Typen: Codieren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -621,7 +621,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  Durch die Auffüllung wird gewährleistet, dass die Länderangabe vollständig vom Währungsbetrag getrennt ist, sodass beim Vergleich zweier UDT-Werte im [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code jeweils die Bytes mit den Länderangaben und die Bytes mit den Währungsbeträgen miteinander verglichen werden.  
   
- Für die vollständige codeauflistung für die **Währung** UDT, führen Sie die Anweisungen zur Installation der CLR-Beispiele in [Beispiele für SQL Server-Datenbank-Engine](http://msftengprodsamples.codeplex.com/).  
+ Für die vollständige codeauflistung für die **Währung** UDT, führen Sie die Anweisungen zur Installation der CLR-Beispiele in [Beispiele für SQL Server-Datenbank-Engine](https://msftengprodsamples.codeplex.com/).  
   
 ### <a name="currency-attributes"></a>Currency-Attribute  
  Die **Währung** UDT mit den folgenden Attributen definiert ist.  
@@ -745,7 +745,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- Für die vollständige codeauflistung für die **Währung** UDT, finden Sie unter [Beispiele für SQL Server-Datenbank-Engine](http://msftengprodsamples.codeplex.com/).  
+ Für die vollständige codeauflistung für die **Währung** UDT, finden Sie unter [Beispiele für SQL Server-Datenbank-Engine](https://msftengprodsamples.codeplex.com/).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen eines benutzerdefinierten Typs](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  

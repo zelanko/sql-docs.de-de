@@ -16,12 +16,12 @@ ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: add581048739a6ba12dc046d2f9362816b661687
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77ad00d9c21a7f7558f8f5cafc66464c1ffc54f7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680614"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600180"
 ---
 # <a name="server-property-rds"></a>Servereigenschaft (RDS)
 Gibt das Protokoll (Internet Information Services, IIS), Namen und die Kommunikation an.  
@@ -29,7 +29,7 @@ Gibt das Protokoll (Internet Information Services, IIS), Namen und die Kommunika
  Sie können festlegen, die **Server** Eigenschaft zur Entwurfszeit in den Objekt-Tags, der die[RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt oder zur Laufzeit im Skriptcode.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Syntax  
  **HTTP**  
@@ -49,7 +49,7 @@ Gibt das Protokoll (Internet Information Services, IIS), Namen und die Kommunika
 ```  
   
 DataControl  
-.Server="http://  
+.Server="https://  
 awebsrvr:port  
 "  
   

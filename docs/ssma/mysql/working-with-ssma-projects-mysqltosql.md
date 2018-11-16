@@ -15,12 +15,12 @@ ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f29b13b47c6f52522606bb8bc4a1aeff6b642145
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 518f899118d5a7d2dce4f56d185fce9d5b1e47df
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641668"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661669"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Arbeiten mit SSMA-Projekten (MySqlToSql)
 Um MySQL-Datenbanken zu SQL Server oder SQL Azure zu migrieren, müssen Sie zuerst ein SSMA-Projekt erstellen. Das Projekt ist eine Datei mit den folgenden Informationen an:  
@@ -54,7 +54,7 @@ SSMA enthält verschiedene Einstellungen für konvertieren und laden die Datenba
   
 -   Weitere Informationen zu den Einstellungen für die Synchronisierung mit SQL Server finden Sie unter [Projekteinstellungen &#40;Synchronisierung&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md).  
   
--   Weitere Informationen zu den GUI-Einstellungen finden Sie unter [Project Settings (GUI) (häufig SSMA)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+-   Weitere Informationen zu den GUI-Einstellungen finden Sie unter [Project Settings (GUI) (häufig SSMA)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   
 -   Weitere Informationen zu den Einstellungen der Zuordnung von Datentypen finden Sie unter [Projekteinstellungen &#40;Typzuordnung&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
   

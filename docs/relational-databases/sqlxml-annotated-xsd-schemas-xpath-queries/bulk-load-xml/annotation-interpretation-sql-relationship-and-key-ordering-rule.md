@@ -16,21 +16,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e247e2bf49c9fcf0c6eb211bd9c83b6444118f17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab60a5cae291c307b0717b2d90409e26b835327f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808158"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675299"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>Interpretation von Anmerkungen – sql:relationship und Schlüsselsortierregel
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Da XML-Massenladen Datensätze generiert, wenn ihre Knoten in den Bereich gelangen, und die Datensätze an Microsoft sendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wie ihre Knoten den Bereich verlassen, müssen die Daten für den Datensatz innerhalb des Bereichs des Knotens vorhanden sein.  
+  Da das XML-Massenladen Datensätze generiert, wenn ihre Knoten in den Bereich gelangen, und diese Datensätze an Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sendet, wenn ihre Knoten den Bereich verlassen, müssen die Daten für den Datensatz im Bereich des Knotens vorhanden sein.  
   
  Betrachten Sie das folgende XSD-Schema, in dem die 1: n Beziehung zwischen  **\<Kunden >** und  **\<Reihenfolge >** -Elementen (ein Kunde kann viele Aufträge vergeben) ist. angegeben unter Verwendung der  **\<SQL: Relationship >** Element:  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"<>   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -106,7 +106,7 @@ ms.locfileid: "47808158"
     </ROOT>  
     ```  
   
-3.  Um XML-Massenladen auszuführen, speichern, und führen Sie den folgenden [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) Beispiel mysample.vbs:  
+3.  Speichern Sie folgendes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript)-Beispiel unter dem Dateinamen MySample.vbs, und führen Sie es aus, um das XML-Massenladen auszuführen:  
   
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  

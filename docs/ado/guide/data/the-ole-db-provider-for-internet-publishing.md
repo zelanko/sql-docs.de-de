@@ -17,12 +17,12 @@ ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f70970ec872d3c921fa10e3eacb1c54d7c4de2d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3acf5ed94993d50c3c81813cd9ea09db2c231a08
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632208"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600020"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Der OLE DB-Anbieter für die Veröffentlichung im Internet
 Das ADO [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) und [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekte können verwendet werden mit der Microsoft OLE DB-Anbieter für Internet Publishing (Internet-Publishing-Anbieter) aufrufen und Bearbeiten von Ressourcen, z. B. Web-Ordner oder Dateien von Microsoft FrontPage bedient. Bei ADO können Sie geben die Quelle für eine **Datensatz**, **Stream**, oder [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) eine URL sein. Sie können dann hochladen, herunterladen, verschieben, kopieren und Löschen von Ressourcen oder Ressourceneigenschaften direkt bearbeiten.  
@@ -36,20 +36,20 @@ Das ADO [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) und [St
 -   Geben Sie "URL =" in der Verbindungszeichenfolge. Zum Beispiel:  
   
     ```  
-    objConn.Open "URL=http://servername"  
+    objConn.Open "URL=https://servername"  
     ```  
   
 -   Geben Sie Msdaipp.dso für die *Anbieter* -Schlüsselwort der Verbindungszeichenfolge. Zum Beispiel:  
   
     ```  
-    objConn.Open "provider=MSDAIPP.DSO;data source=http://servername"  
+    objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
 -   Geben Sie Msdaipp.dso für die [Anbieter](../../../ado/reference/ado-api/provider-property-ado.md) Eigenschaft der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt. Zum Beispiel:  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  
-    objConn.Open "http://servername"  
+    objConn.Open "https://servername"  
     ```  
   
 > [!NOTE]

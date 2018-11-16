@@ -21,12 +21,12 @@ ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b55828992f748579351120bebe4e2043d377b9ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e3bd8688a2e9b66eab7187720d96d823f8d943c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699478"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668670"
 ---
 # <a name="sysavailabilitygroups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "47699478"
 ## <a name="failure-condition-level--values"></a>Fehler-Bedingung Ebenenwerte  
  Die folgende Tabelle beschreibt die möglichen fehlerbedingungsebenen für die **Failure_condition_level** Spalte.  
   
-|value|Fehlerbedingung|  
+|Wert|Fehlerbedingung|  
 |-----------|-----------------------|  
-|1|Gibt an, dass in einem der folgenden Fälle ein automatisches Failover initiiert werden muss:<br /><br /> <br /><br /> – Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst ist nicht verfügbar.<br /><br /> – Die Lesedauer der verfügbarkeitsgruppe für die Verbindung mit WSFC-Failovercluster läuft ab, da keine ACK-Meldung von der Serverinstanz empfangen wird. Weitere Informationen finden Sie unter [How It Works: SQL Server AlwaysOn Lease Timeout](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
+|1|Gibt an, dass in einem der folgenden Fälle ein automatisches Failover initiiert werden muss:<br /><br /> <br /><br /> – Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst ist nicht verfügbar.<br /><br /> – Die Lesedauer der verfügbarkeitsgruppe für die Verbindung mit WSFC-Failovercluster läuft ab, da keine ACK-Meldung von der Serverinstanz empfangen wird. Weitere Informationen finden Sie unter [How It Works: SQL Server AlwaysOn Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
 |2|Gibt an, dass in einem der folgenden Fälle ein automatisches Failover initiiert werden muss:<br /><br /> <br /><br /> – Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Verbindung zu Cluster und der vom Benutzer angegebene **Health_check_timeout** -Schwellenwert der verfügbarkeitsgruppe wurde überschritten.<br /><br /> – Das verfügbarkeitsreplikat ist in einem fehlerhaften Zustand.|  
 |3|Gibt an, dass ein automatisches Failover bei kritischen internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlern initiiert werden soll, z. B. verwaisten Spinlocks, schwerwiegenden Schreibzugriffsverletzungen oder zu vielen Sicherungen.<br /><br /> Dies ist der Standardwert.|  
 |4|Gibt an, dass ein automatisches Failover bei mittelschweren internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlern initiiert werden soll, z. B. bei dauerhaft unzureichendem Arbeitsspeicher im internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcenpool.|  

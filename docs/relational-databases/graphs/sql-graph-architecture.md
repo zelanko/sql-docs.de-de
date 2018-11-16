@@ -5,8 +5,7 @@ ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcff6266a24602b0ce1f17818d1c4b0451b1adaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830648"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512805"
 ---
 # <a name="sql-graph-architecture"></a>SQL-Graph-Architektur  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ Erfahren Sie, wie SQL-Graph entworfen wird. Das Grundwissen wird anderen SQL-Gra
 Benutzer können einem Diagramm pro Datenbank erstellen. Ein Diagramm ist eine Auflistung von Knoten und Edge-Tabellen. Knoten-oder edgetabellen können unter jedem Schema in der Datenbank erstellt werden, aber sie alle zu einem logischen Diagramm gehören. Eine Knotentabelle handelt es sich um Auflistung von ähnlichen Typ von Knoten. So enthält z. B. eine Knotentabelle alle Knoten der Person, die zu einem Diagramm gehören. Auf ähnliche Weise wird eine edgetabelle eine Auflistung von ähnlichen Typ mit Ränder. So enthält z. B. eine edgetabelle für Freunde alle Ränder, die eine Person mit einer anderen Person zu verbinden. Da Knoten und Kanten in Tabellen gespeichert werden, werden die meisten Vorgänge für reguläre Tabellen unterstützt auf Knoten-oder edgetabellen unterstützt. 
  
  
-![SQL-Graph-Architektur](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql-Graph-Datenbankarchitektur")   
+![SQL-Graph-Architektur](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql-Graph-Datenbankarchitektur")   
 
 Abbildung 1: SQL-Graph-Datenbankarchitektur
  
@@ -57,7 +56,7 @@ Die Knoten, die eine bestimmte Kante eine Verbindung herstellen, kann im eingef�
 
 Abbildung 2 zeigt, wie Knoten und Edge-Tabellen in der Datenbank gespeichert werden. 
 
-![Person-Freunde-Tables](../../relational-databases/graphs/media/person-friends-tables.png "Person-Knoten und Freunde edge-Tabellen")   
+![Person-Freunde-Tables](../../relational-databases/graphs/media/person-friends-tables.png "Person-Knoten und Freunde edge-Tabellen")   
 
 Abbildung 2: Und Rahmentabellen tabellendarstellung
 
@@ -110,10 +109,10 @@ Impliziten Spalten in eine edgetabelle
 |graph_id_\<hex_string> |bigint |1  |interne `graph_id` Spalte  |
 |$edge_id_\<hex_string> |NVARCHAR   |0  |externe `edge_id` Spalte  |
 |from_obj_id_\<hex_string>  |INT    |1  |interne von Knoten `object_id`  |
-|from_id_\<hex_string>  |bigint |1  |Intern von Knoten `graph_id`  |
+|from_id_\<hex_string>  |bigint |1  |interne von Knoten `graph_id`  |
 |$from_id_\<hex_string> |NVARCHAR   |0  |externe von Knoten `node_id`  |
 |To_obj_id_\<Hex_string >    |INT    |1  |interne Knoten `object_id`  |
-|to_id_\<hex_string>    |bigint |1  |Intern auf Knoten `graph_id`  |
+|to_id_\<hex_string>    |bigint |1  |interne Knoten `graph_id`  |
 |$to_id_\<hex_string>   |NVARCHAR   |0  |außerhalb von Knoten `node_id`  |
  
 ### <a name="system-functions"></a>Systemfunktionen
@@ -140,14 +139,14 @@ Erfahren Sie, den [!INCLUDE[tsql-md](../../includes/tsql-md.md)] -Erweiterungen 
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Und Rahmentabellen können geändert werden, die gleiche Weise wie eine relationale Tabelle ist, verwendet der `ALTER TABLE`. Benutzer können hinzufügen oder Ändern von benutzerdefinierten Spalten, Indizes oder Einschränkungen. Allerdings wie ändern die interne Diagrammspalten, `$node_id` oder `$edge_id`, führt zu einem Fehler.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Benutzer können Indizes auf Pseudo-Spalten und benutzerdefinierte Spalten und Rahmentabellen erstellen. Alle Typen von Indizes werden unterstützt, einschließlich gruppierten und nicht gruppierten columnstore-Indizes.  |
 |ERSTELLEN VON EDGEEINSCHRÄNKUNGEN    |[EDGEEINSCHRÄNKUNGEN &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Benutzer können jetzt erstellen edgeeinschränkungen auf Edge-Tabellen, um bestimmte Semantik zu erzwingen und Datenintegrität zu gewährleisten  |
-|DROP TABLE |[TABELLENLÖSCHUNG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Und Rahmentabellen können gelöscht werden, die gleiche Weise wie eine relationale Tabelle ist, verwendet der `DROP TABLE`. In dieser Version gibt jedoch keine Einschränkungen, um sicherzustellen, dass keine Ränder zeigen Sie auf ein gelöschter Knoten und kaskadierten Löschung Ränder, nach dem Löschen eines Knotens oder einer Knotentabelle wird nicht unterstützt. Es wird empfohlen, wenn eine Knotentabelle gelöscht wird, Benutzer keinem Rand verbunden, auf die Knoten in dieser Knotentabelle manuell, um die Integrität des Diagramms gewährleisten ablegen.  |
+|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Und Rahmentabellen können gelöscht werden, die gleiche Weise wie eine relationale Tabelle ist, verwendet der `DROP TABLE`. In dieser Version gibt jedoch keine Einschränkungen, um sicherzustellen, dass keine Ränder zeigen Sie auf ein gelöschter Knoten und kaskadierten Löschung Ränder, nach dem Löschen eines Knotens oder einer Knotentabelle wird nicht unterstützt. Es wird empfohlen, wenn eine Knotentabelle gelöscht wird, Benutzer keinem Rand verbunden, auf die Knoten in dieser Knotentabelle manuell, um die Integrität des Diagramms gewährleisten ablegen.  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Anweisungen der Data Manipulation Language (DML)
 |Task   |Verwandte Artikel  |Hinweise
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Einfügen in eine Knotentabelle ist unterscheidet sich nicht in eine relationale Tabelle einzufügen. Die Werte für `$node_id` Spalte wird automatisch generiert. Versuch zum Einfügen eines Werts in `$node_id` oder `$edge_id` Spalte führt zu einem Fehler. Benutzer müssen Geben Sie Werte für `$from_id` und `$to_id` Spalten während des Einfügens in eine edgetabelle. `$from_id` und `$to_id` sind die `$node_id` Werte der Knoten, die eine bestimmte Kante verbindet.  |
-|Delete | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Daten aus einer Knoten-oder edgetabellen können auf gleiche Weise gelöscht werden, wie sie vom relationalen Tabellen gelöscht werden. In dieser Version gibt jedoch keine Einschränkungen, um sicherzustellen, dass keine Ränder zeigen Sie auf ein gelöschter Knoten und kaskadierten Löschung Ränder, nach dem Löschen eines Knotens wird nicht unterstützt. Es wird empfohlen, dass wenn ein Knoten gelöscht wurde, die verbindenden Rändern auf diesen Knoten ebenfalls gelöscht werden, um die Integrität des Diagramms zu gewährleisten.  |
+|DELETE | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Daten aus einer Knoten-oder edgetabellen können auf gleiche Weise gelöscht werden, wie sie vom relationalen Tabellen gelöscht werden. In dieser Version gibt jedoch keine Einschränkungen, um sicherzustellen, dass keine Ränder zeigen Sie auf ein gelöschter Knoten und kaskadierten Löschung Ränder, nach dem Löschen eines Knotens wird nicht unterstützt. Es wird empfohlen, dass wenn ein Knoten gelöscht wurde, die verbindenden Rändern auf diesen Knoten ebenfalls gelöscht werden, um die Integrität des Diagramms zu gewährleisten.  |
 |UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |Werte in den benutzerdefinierten Spalten können mithilfe der UPDATE-Anweisung aktualisiert werden. Aktualisieren die interne Diagrammspalten `$node_id`, `$edge_id`, `$from_id` und `$to_id` ist nicht zulässig.  |
 |MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` Anweisung wird für eine Knoten- oder edgetabelle Tabelle unterstützt.  |
 

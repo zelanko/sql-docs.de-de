@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;Modell&gt;. FÄLLE (DMX) | Microsoft Docs
+title: SELECT FROM &lt;Modell&gt;. FÄLLEN (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bba9e354eb1925ed4175f720f8008550364dc1a5
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 4f65aa4dc64e795235286eccd9f3283216ba6f4f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842803"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604232"
 ---
-# <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;Modell&gt;. FÄLLE (DMX)
+# <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;Modell&gt;. FÄLLEN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Unterstützt Drillthrough und gibt die Fälle zurück, mit denen das Modell trainiert wurde. Sie können auch Strukturspalten zurückgeben, die nicht im Modell enthalten sind, wenn Drillthrough sowohl für die Miningstruktur als auch für das Miningmodell aktiviert wurde und wenn Sie über die entsprechenden Berechtigungen verfügen.  
@@ -40,7 +40,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *n*  
  Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
- *Liste der Ausdrücke*  
+ *Liste mit Ausdrücken*  
  Eine Liste von Ausdrücken, die durch Trennzeichen voneinander getrennt sind. Ein Ausdruck kann u. a. Spaltenbezeichner, benutzerdefinierte Funktionen und VBA-Funktionen einschließen.  
   
  Um eine Strukturspalte einzuschließen, die nicht im Miningmodell enthalten ist, verwenden Sie die Funktion `StructureColumn('<structure column name>')`.  
@@ -55,14 +55,14 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie Drillthrough sowohl für das Miningmodell als auch für die Miningstruktur aktivieren, können Benutzer, die Mitglied einer Rolle mit Drillthroughberechtigungen für das Miningmodell und die Miningstruktur sind, auf Spalten in der Miningstruktur zugreifen, die nicht Teil des Miningmodells sind. Aus diesem Grund zum Schutz sensibler oder persönlicher Informationen sollten, erstellen Sie die Datenquellensicht aus, um persönliche Informationen verborgen sind, und gewähren **AllowDrillthrough** -Berechtigung für eine Miningstruktur nur bei Bedarf.  
+ Wenn Sie Drillthrough sowohl für das Miningmodell als auch für die Miningstruktur aktivieren, können Benutzer, die Mitglied einer Rolle mit Drillthroughberechtigungen für das Miningmodell und die Miningstruktur sind, auf Spalten in der Miningstruktur zugreifen, die nicht Teil des Miningmodells sind. Aus diesem Grund zum Schutz sensibler oder persönlicher Informationen sollten, erstellen Sie die Datenquellensicht so einrichten, persönliche Informationen verborgen sind, und **AllowDrillthrough** -Berechtigung für eine Miningstruktur nur bei Bedarf.  
   
- Die [Lag &#40;DMX&#41; ](../dmx/lag-dmx.md) Funktion kann zum zurückgeben, oder Filtern die zeitverzögerung zwischen jedem Fall und der Anfangszeit mit zeitreihenmodellen verwendet werden.  
+ Die [Lag &#40;DMX&#41; ](../dmx/lag-dmx.md) Funktion kann mit zeitreihenmodellen verwendet werden, um oder filtern Sie nach die zeitverzögerung zwischen jedem Fall und der Anfangszeit zurückzugeben.  
   
- Mithilfe der [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md) -Funktion in der **, in denen** -Klausel nur Fälle zurückgegeben, die dem Knoten zugeordnet sind, durch die NODE_UNIQUE_NAME-Spalte des Schemarowsets angegeben ist.  
+ Mithilfe der [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md) Funktion in der **, in denen** Klausel nur Fälle zurückgegeben, die dem Knoten zugeordnet sind, die durch die NODE_UNIQUE_NAME-Spalte des Schemarowsets angegeben ist.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele beruhen auf der Miningstruktur Targeted Mailing, die basierend auf den [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]Datenbank und den zugeordneten Miningmodellen. Weitere Informationen finden Sie unter [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Die folgenden Beispiele basieren auf der Miningstruktur Targeted Mailing, die basierend auf den [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]-Datenbank und den zugeordneten Miningmodellen. Weitere Informationen finden Sie unter [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Beispiel 1: Drillthrough zu Modellfällen und Strukturspalten  
  Im folgenden Beispiel werden die Spalten für alle Fälle zurückgegeben, die zum Testen des Target Mailing-Modells verwendet wurden. Wenn die Miningstruktur, auf der das Modell aufbaut, kein Zurückhaltungstestdataset enthält, werden bei dieser Abfrage 0 Fälle zurückgegeben. Sie können die Ausdrucksliste dazu verwenden, nur die benötigten Spalten zurückzugeben.  
@@ -89,7 +89,7 @@ AND IsInNode('002')
   
 ## <a name="see-also"></a>Siehe auch  
  [WÄHLEN SIE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   

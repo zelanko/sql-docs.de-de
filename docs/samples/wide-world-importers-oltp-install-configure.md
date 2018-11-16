@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3860eae1663b512af1835a0e1268145a742d161a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701458"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673479"
 ---
 # <a name="installation-and-configuration"></a>Installation und Konfiguration
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -23,14 +23,14 @@ Wide World Importers-OLTP-Datenbank Installations- und konfigurationsanweisungen
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (oder höher) oder [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/). Verwenden Sie für die vollständige Version des Beispiels SQL Server-Evaluierung, Developer, Enterprise Edition ein.
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (oder höher) oder [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/). Verwenden Sie für die vollständige Version des Beispiels SQL Server-Evaluierung, Developer, Enterprise Edition ein.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Für die besten Ergebnisse verwenden Sie das Release vom Juni 2016 oder höher.
 
 ## <a name="download"></a>Herunterladen
 
 Die neueste Version des Beispiels:
 
-[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 Herunterladen Sie die Beispiel "wideworldimporters" Datenbank sichern/bacpac-Datei, die entspricht Ihrer Version von SQL Server oder Azure SQL-Datenbank.
 
@@ -90,5 +90,5 @@ Gilt für: Azure SQL-Datenbank
 
 Sicherheit auf Zeilenebene ist standardmäßig in der bacpac-Datei-Download von "wideworldimporters" nicht aktiviert. Um die Sicherheit auf Zeilenebene in der Datenbank zu aktivieren, führen Sie die folgende gespeicherte Prozedur aus:
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 

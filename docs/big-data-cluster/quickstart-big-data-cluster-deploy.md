@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: efa3d06feb138445c3e55e5d2ea3da7e60f3da20
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: c25474a30ace6ed6e1ab0560f1b3746a071690ef
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269555"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697038"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
@@ -56,7 +56,7 @@ Festlegen der Umgebungsvariablen, die für die Bereitstellung von big Data-Clust
 
 Beachten Sie bevor Sie fortfahren die folgenden wichtigen Richtlinien:
 
-- In der [Befehlsfenster](http://docs.microsoft.com/visualstudio/ide/reference/command-window), Anführungszeichen sind in den Umgebungsvariablen enthalten. Wenn Sie Anführungszeichen verwenden, um ein Kennwort zu umschließen, sind die Anführungszeichen im Kennwort enthalten.
+- In der [Befehlsfenster](https://docs.microsoft.com/visualstudio/ide/reference/command-window), Anführungszeichen sind in den Umgebungsvariablen enthalten. Wenn Sie Anführungszeichen verwenden, um ein Kennwort zu umschließen, sind die Anführungszeichen im Kennwort enthalten.
 - In bash bleibt sind die Anführungszeichen in der Variablen nicht enthalten. Unseren Beispielen verwenden Sie doppelte Anführungszeichen `"`.
 - Sie können das Kennwort Umgebungsvariablen festlegen, um einen beliebigen Namen, aber stellen Sie sicher, dass sie ausreichend komplex sind und verwenden Sie nicht die `!`, `&`, oder `'` Zeichen.
 - Ändern Sie bei der Version CTP 2.1 nicht die Standardports.

@@ -19,12 +19,12 @@ ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c67f85b2a98b950b9614bfeb712c4d47d03d943b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9aa68c8c0dbc702b7f0db3e3186c7ddb56266dbc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795028"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664965"
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,8 +63,8 @@ ms.locfileid: "47795028"
 |**max_cmds_in_tran**|**int**|Maximale Anzahl von Befehlen in einer logischen Transaktion, wie vom Protokolllese-Agent angegeben.|  
 |**begin_time**|**datetime**|Zeitpunkt, zu dem die Transaktion begonnen wurde.|  
 |**commit_time**|**datetime**|Zeitpunkt, zu dem ein Commit der Transaktion ausgeführt wurde.|  
-|**session_id**|**int**|ID der Protokollscansitzung für Change Data Capture. Diese Spalte wird die **Session_id** Spalte [dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md).|  
-|**session_phase**|**int**|Zahl, die die Phase angibt, in der sich die Sitzung beim Auftreten des Fehlers befand. Diese Spalte wird die **Phase_number** Spalte [Sys. dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).|  
+|**session_id**|**int**|ID der Protokollscansitzung für Change Data Capture. Diese Spalte wird der Spalte **session_id** in [sys.dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)zugeordnet.|  
+|**session_phase**|**int**|Zahl, die die Phase angibt, in der sich die Sitzung beim Auftreten des Fehlers befand. Diese Spalte wird der Spalte **phase_number** in [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)zugeordnet.|  
 |**is_known_cdc_tran**|**bit**|Gibt an, dass die Transaktion von Change Data Capture verfolgt wird.<br /><br /> 0 = Transaktionsreplikationstransaktion.<br /><br /> 1 = Change Data Capture-Transaktion.|  
 |**error_count**|**int**|Anzahl der aufgetretenen Fehler.|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "47795028"
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Replikation verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
- [Dynamische Verwaltungssichten in Bezug auf Change Data Capture &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [Dynamische Verwaltungssichten in Bezug auf Change Data Capture &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
 

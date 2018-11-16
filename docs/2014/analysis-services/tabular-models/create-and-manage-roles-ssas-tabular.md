@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d715fd65da1b89efd02368564d2f82cac278d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5d789812cb8dc3b6c880c4e2234aedbba3cc25bb
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168490"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558507"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>Erstellen und Verwalten von Rollen (SSAS – tabellarisch)
   Mit Rollen werden in tabellarischen Modellen Elementberechtigungen für ein Modell definiert. Rollen für ein Modellprojekt werden in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Dialogfeld Rollen-Manager definiert. Nach der Bereitstellung eines Modells können die Rollen vom Datenbankadministrator in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwaltet werden.  
@@ -67,7 +67,7 @@ ms.locfileid: "48168490"
 ## <a name="see-also"></a>Siehe auch  
  [Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md)   
  [Perspektiven &#40;SSAS – tabellarisch&#41;](perspectives-ssas-tabular.md)   
- [In Excel analysieren &#40;SSAS – tabellarisch&#41;](analyze-in-excel-ssas-tabular.md)   
+ [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](analyze-in-excel-ssas-tabular.md)   
  [USERNAME-Funktion &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [CUSTOMDATA-Funktion &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   

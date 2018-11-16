@@ -13,16 +13,16 @@ ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 65dea5ebf2813267ef7e7bb83f2f37209ee2114f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be7123595b823434dd6b9f4a369115d83c0d68ec
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720878"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558497"
 ---
 # <a name="basic-rds-programming-model"></a>Grundlegendes RDS-Programmiermodell
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  RDS Adressen Anwendungen, die in der folgenden Umgebung vorhanden sind: eine Clientanwendung gibt an, ein Programm, das auf einem Server und die Parameter erforderlich, um die gewünschten Informationen zurückzugeben ausgeführt wird. Das Programm aufgerufen wird, auf dem Server verschafft sich Zugriff auf die angegebene Datenquelle, ruft die Informationen ab, optional verarbeitet die Daten, und klicken Sie dann die resultierende Informationen an die Clientanwendung in ein Formular, das einfach zu verwendenden zurückgegeben. RDS bietet das bedeutet, dass Sie die folgende Sequenz von Aktionen ausführen:  
   

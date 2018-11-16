@@ -20,12 +20,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d71b277f3717a0406f2f91fbce596ea90389b8da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5bf53045abe0f93e2ff1e07ec17d31f7d58248b
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067060"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814073"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrieren einer Datenbank als eine DAC
   Verwenden Sie entweder die **Datenebenen-Assistenten zum Registrieren von** oder ein Windows PowerShell-Skript, um eine Definition der von datenebenenanwendungen (DACs) zu erstellen, die die Objekte in einer vorhandenen Datenbank beschreibt, und registrieren die DAC-Definition in der `msdb` -Systemdatenbank (**master** in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
@@ -76,7 +76,7 @@ ms.locfileid: "48067060"
 ##  <a name="Set_properties"></a> Seite "Eigenschaften festlegen"  
  Verwenden Sie diese Seite, um Eigenschaften auf DAC-Ebene anzugeben, z. B. den Anwendungsnamen und die Version.  
   
- **Anwendungsname** – Eine Zeichenfolge mit dem Namen, der die DAC-Definition identifiziert. Das Feld enthält den Namen der Datenbank.  
+ **Anwendungsname** – Eine Zeichenfolge mit dem Namen zum Identifizieren der DAC-Definition, das Feld wird mit dem Namen der aufgefüllt wurde.  
   
  **Version** – Ein numerischer Wert, der die Version der DAC identifiziert. Die DAC-Version wird in Visual Studio verwendet, um die Version der DAC zu identifizieren, an der die Entwickler arbeiten. Wenn Sie eine DAC bereitstellen möchten, befindet sich die Version in der `msdb` Datenbank und kann später unter angezeigt werden die **Data-Tier-Anwendungen** Knoten im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

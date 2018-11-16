@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8a870ed2fb711599556178132e133039098f3051
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909820"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696429"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Installieren von SQL Server Operations Manager (SCOM) Management Packs für Analytics Platform System
 Führen Sie diese Schritte zum Herunterladen und installieren die System Center Operations Manager (SCOM) Management Packs für SQL Server PDW. Die Management Packs sind zum Überwachen von SQL Server PDW von SCOM erforderlich.  
@@ -25,13 +25,13 @@ Führen Sie diese Schritte zum Herunterladen und installieren die System Center 
 System Center Operations Manager muss installiert und ausgeführt werden. SQL Server PDW 2012 erfordert System Center Operations Manager 2007 R2, System Center Operations Manager 2012 oder System Center Operations Manager 2012 Servicepack 1.  
   
 ## <a name="Step1"></a>Schritt 1: Herunterladen der Management Packs  
-Herunterladen der APS-PDW-arbeitsauslastung, die [System Center Management Pack für Microsoft Analytics Platform System](http://go.microsoft.com/fwlink/?LinkId=396857).  
+Herunterladen der APS-PDW-arbeitsauslastung, die [System Center Management Pack für Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=396857).  
   
-Herunterladen für die Verwaltung des Geräts, das [Base Management Pack für SQL Server-Appliance](http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11436).  
+Herunterladen für die Verwaltung des Geräts, das [Base Management Pack für SQL Server-Appliance](https://www.microsoft.com/download/details.aspx?displaylang=en&id=11436).  
   
-Bei älteren Versionen von PDW ohne APS Herunterladen der[System Center Monitoring Pack für Microsoft SQL Server 2012 Parallel Data Warehouse-Anwendung](http://go.microsoft.com/fwlink/p/?LinkId=282661).  
+Bei älteren Versionen von PDW ohne APS Herunterladen der[System Center Monitoring Pack für Microsoft SQL Server 2012 Parallel Data Warehouse-Anwendung](https://go.microsoft.com/fwlink/p/?LinkId=282661).  
   
-<!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](http://go.microsoft.com/fwlink/?LinkId=390208).  -->
+<!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
 ## <a name="Step2"></a>Schritt 2: Installieren Sie die Management Packs  
   

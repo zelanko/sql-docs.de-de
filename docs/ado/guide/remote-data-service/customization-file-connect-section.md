@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04850440b9dd1a5da9270b7782c07dca93bbab54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb493378240f8c536b0af1c1b0ff5cf3bc93c042
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757798"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558537"
 ---
 # <a name="customization-file-connect-section"></a>Connect-Abschnitt der Anpassungsdatei
 Das Standardverhalten des ereignishandlers ist, alle Verbindungen zu verweigern. Die **verbinden** Abschnitt gibt Ausnahmen, um dieses Verhalten. Z. B., wenn alle der **verbinden** Abschnitte wurden, fehlt oder ist leer, und dann in der Standardeinstellung keine Verbindungen hergestellt werden konnte.  
@@ -31,12 +31,12 @@ Das Standardverhalten des ereignishandlers ist, alle Verbindungen zu verweigern.
 -   Eine neue Verbindungszeichenfolge, die die Client-Verbindungszeichenfolge ersetzt.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Syntax  
  Ein Zugriffseintrag hat das Format:  
   
-```  
+```console
   
 Access=  
 accessRight  
@@ -45,7 +45,7 @@ accessRight
   
  Ein Ersatz-Verbindungszeichenfolgeneintrag hat folgendes Format:  
   
-```  
+```console
   
 Connect=  
 connectionString  

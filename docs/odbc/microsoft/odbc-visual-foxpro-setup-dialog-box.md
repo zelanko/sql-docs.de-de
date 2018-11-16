@@ -15,17 +15,17 @@ ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37ec2a9f033c124ab70db996f11179797877c09b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e2d83f77f8bb9227daab996e425d1880d1bfabd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686438"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674414"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Einrichten von ODBC-Visual FoxPro (Dialogfeld)
 Die **ODBC-Visual FoxPro-Setup** Dialogfeld können Sie zum Hinzufügen oder Ändern einer Visual FoxPro-Datenquelle.  
   
- Informationen zum Herunterladen des Treibers finden Sie unter [der Visual FoxPro-ODBC-Treiber-Download-Site](http://go.microsoft.com/fwlink/?LinkId=121318).  
+ Informationen zum Herunterladen des Treibers finden Sie unter [der Visual FoxPro-ODBC-Treiber-Download-Site](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
 ## <a name="dialog-box-options"></a>Dialogfeld "Optionen"  
  **Datenquellenname**  

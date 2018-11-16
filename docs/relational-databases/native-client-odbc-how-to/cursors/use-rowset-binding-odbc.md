@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1277b565ccb60aaa7972f98ec731675b5a9bb7cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b755c59a23a9b937c1de96236795cd1e01052842
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813478"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658577"
 ---
 # <a name="use-rowset-binding-odbc"></a>Verwenden der Rowsetbindung (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "47813478"
   
     -   Weisen Sie optional ein Array von R (oder mehr) Spaltenpuffern zum Speichern von Datenlängen zu.  
   
-    -   Rufen Sie [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) die Datenwert und die datenlängenarrays an die Spalte des Rowsets zu binden.  
+    -   Rufen Sie [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) auf, um die Spaltendatenwert- und die Datenlängenarrays an die Spalte des Rowsets zu binden.  
   
-2.  Rufen Sie [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) , die folgenden Attribute festzulegen:  
+2.  Rufen Sie [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) auf, um die folgenden Attribute festzulegen:  
   
     -   Stellen Sie SQL_ATTR_ROW_ARRAY_SIZE auf die Anzahl der Zeilen im Rowset ein (R).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47813478"
   
 3.  Ausführen der Anweisung.  
   
-4.  Jeder Aufruf von [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) oder [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) ruft R-Zeilen ab und überträgt die Daten in die gebundenen Spalten.  
+4.  Jeder Aufruf von [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) oder [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) ruft R-Zeilen ab und überträgt die Daten in die gebundenen Spalten.  
   
 ### <a name="to-use-row-wise-binding"></a>So verwenden Sie zeilenbezogene Bindungen  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47813478"
   
     -   Der zweite Teil ist eine SQLINTEGER-Variable zum Speichern des Spaltenstatusindikators.  
   
-2.  Rufen Sie [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) , die folgenden Attribute festzulegen:  
+2.  Rufen Sie [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) auf, um die folgenden Attribute festzulegen:  
   
     -   Stellen Sie SQL_ATTR_ROW_ARRAY_SIZE auf die Anzahl der Zeilen im Rowset ein (R).  
   
@@ -68,11 +68,11 @@ ms.locfileid: "47813478"
   
     -   Lassen Sie SQL_ATTR_PARAMS_STATUS_PTR auf ein Array[R] von SQLUSSMALLINT-Variablen verweisen, die die Zeilenstatusindikatoren enthalten.  
   
-3.  Rufen Sie für jede Spalte im Resultset [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) , zeigen Sie den Datenwert- und den datenlängenzeigern der Spalte auf die Variablen im ersten Element des Arrays mit Strukturen, die in Schritt 1 zugewiesen wurden.  
+3.  Rufen Sie für jede Spalte im Resultset [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) auf, um mit den Datenwert- und den Datenlängenzeigern der Spalte auf die Variablen im ersten Element des Arrays mit Strukturen zu zeigen, die in Schritt 1 zugewiesen wurden.  
   
 4.  Ausführen der Anweisung.  
   
-5.  Jeder Aufruf von [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) oder [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) ruft R-Zeilen ab und überträgt die Daten in die gebundenen Spalten.  
+5.  Jeder Aufruf von [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) oder [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) ruft R-Zeilen ab und überträgt die Daten in die gebundenen Spalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von Cursorn Gewusst-wie-Themen &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   

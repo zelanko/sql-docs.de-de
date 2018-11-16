@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie eine einfache Simulation (SQL und R deep Dive) | Microsoft Docs
+title: Erstellen einer einfachen Simulation (SQL und R tieferer) | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,27 +7,27 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7c93d91324233b05541c09e037f5043f2d9e376f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b0db5fdfd177f1303432659f7a96b0fbf111c000
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202882"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698238"
 ---
-# <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>Erstellen Sie eine einfache Simulation (SQL und R deep Dive)
+# <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>Erstellen einer einfachen Simulation (SQL und R tieferer)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel wird der letzte Schritt im Lernprogramm zur Verwendung von Data Science Deep Dive ["revoscaler"](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+In diesem Artikel ist der letzte Schritt im Tutorial zur Verwendung von Data Science Deep Dive [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-Bis jetzt haben wurde Verwendung von R-Funktionen, die entwickelt wurden speziell für das Verschieben von Daten zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ein lokalen computekontext. Angenommen jedoch, Sie schreiben eine eigene benutzerdefinierte R-Funktion und möchten sie im Serverkontext ausführen.
+Bis jetzt Sie verwende R-Funktionen, die entwickelt wurden speziell für das Verschieben von Daten zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem lokalen computekontext. Angenommen jedoch, Sie schreiben eine eigene benutzerdefinierte R-Funktion und möchten sie im Serverkontext ausführen.
 
-Sie können eine beliebige Funktion im Kontext des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computers aufrufen, indem Sie die [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) -Funktion verwenden. Sie können auch **RxExec** zur Verteilung von Arbeit explizit über Kerne in einem einzelnen Server.
+Sie können eine beliebige Funktion im Kontext des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computers aufrufen, indem Sie die [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) -Funktion verwenden. Sie können auch **RxExec** um explizit Arbeit über die Kerne in einem einzelnen Server zu verteilen.
 
-In dieser Lektion verwenden Sie die Remoteserver, um eine einfache Simulation erstellen. Die Simulation erfordert keinerlei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten. Das Beispiel demonstriert nur, wie Sie eine benutzerdefinierte Funktion entwerfen und sie anschließend mithilfe von **rxExec** aufrufen.
+In dieser Lektion verwenden Sie den Remoteserver, um einer einfachen Simulation zu erstellen. Die Simulation erfordert keinerlei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten. Das Beispiel demonstriert nur, wie Sie eine benutzerdefinierte Funktion entwerfen und sie anschließend mithilfe von **rxExec** aufrufen.
 
-Ein komplexeres Beispiel der Verwendung von **RxExec**, finden Sie im Artikel: [grobe Granularität Parallelität mit Foreach und RxExec](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+Ein komplexeres Beispiel der Verwendung von **RxExec**, finden Sie im Artikel: [grob differenzierte Parallelität mit Foreach und RxExec](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
 
-## <a name="create-the-custom-function"></a>Erstellen Sie die benutzerdefinierte Funktion
+## <a name="create-the-custom-function"></a>Die benutzerdefinierte Funktion erstellen
 
 Ein bekanntes Spiel im Casino ist das Würfeln mit folgenden Regeln:
 
@@ -65,7 +65,7 @@ Das Spiel wird in R einfach simuliert, indem Sie eine benutzerdefinierte Funktio
     }
     ```
   
-2.  Führen Sie die Funktion, um ein einzelnes Spiel Würfel zu simulieren.
+2.  Um ein einzelnes würfelspiel zu simulieren, führen Sie die Funktion ein.
   
     ```R
     rollDice()
@@ -73,11 +73,11 @@ Das Spiel wird in R einfach simuliert, indem Sie eine benutzerdefinierte Funktio
   
     Haben Sie gewonnen oder verloren?
   
-Jetzt sehen wir, wie Sie verwenden können **RxExec** die Funktion mehrmals ausführen, um eine Simulation zu erstellen, die der Bestimmung der Wahrscheinlichkeit der Gewinn Identifikation.
+Jetzt sehen wir uns an, wie Sie verwenden können **RxExec** die Funktion mehrmals ausführen, um eine Simulation zu erstellen, die dabei hilft, die Wahrscheinlichkeit eines Gewinns zu bestimmen.
 
-## <a name="create-the-simulation"></a>Erstellen Sie die simulation
+## <a name="create-the-simulation"></a>Erstellen der simulation
 
-Um eine beliebige Funktion im Kontext des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computers auszuführen, rufen Sie die **rxExec** -Funktion auf. Obwohl **RxExec** auch unterstützt verteilte Ausführung einer Funktion parallel auf Knoten oder Kerne er führt die benutzerdefinierte Funktion auf dem SQL Server-Computer in einem Serverkontext hier.
+Um eine beliebige Funktion im Kontext des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computers auszuführen, rufen Sie die **rxExec** -Funktion auf. Obwohl **RxExec** auch unterstützt verteilte Ausführung einer Funktion parallel auf Knoten oder Kerne es führt die benutzerdefinierte Funktion auf dem SQL Server-Computer in einem Serverkontext, hier.
 
 1. Rufen Sie die benutzerdefinierte Funktion als Argument an **RxExec**zusammen mit anderen Parametern, die die Simulation zu ändern.
   
@@ -102,7 +102,7 @@ Um eine beliebige Funktion im Kontext des [!INCLUDE[ssNoVersion](../../includes/
   
     Ihre Ergebnisse sollten in etwa wie folgt aussehen:
   
-     *Verlust Win* *12 8*
+     *Verlust – Gewinn* *12 8*
 
 ## <a name="conclusions"></a>Schlussfolgerungen
 
@@ -115,19 +115,19 @@ In diesem Tutorial haben Sie die folgenden Aufgaben geübt:
 -   Übergeben von Modellen, Daten und Diagrammen zwischen Ihrer Arbeitsstation und dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Server
   
 
-Wenn Sie mit diesen Verfahren unter Verwendung eines größeren Datasets von 10 Millionen von Beobachtungen experimentieren möchten, stehen die Datendateien von der Website von Revolution Analytics: [Index des Datasets](http://packages.revolutionanalytics.com/datasets)
+Wenn Sie mit diesen Techniken mithilfe eines größeren Datensatzes von 10 Millionen Beobachtungen experimentieren möchten, stehen die Datendateien von der Website von Revolution Analytics: [Index des Datasets](https://packages.revolutionanalytics.com/datasets)
 
-Um dieser exemplarischen Vorgehensweise mit den größeren Data-Dateien erneut zu verwenden, die Daten herunter, und ändern Sie jede der Datenquellen wie folgt:
+Um in dieser exemplarischen Vorgehensweise mit den umfangreicheren Datendateien erneut zu verwenden, die Daten herunter, und ändern Sie jede der Datenquellen wie folgt:
 
-1. Ändern Sie die Variablen `ccFraudCsv` und `ccScoreCsv` , zeigen Sie auf die neue Datendateien
-2. Ändern Sie den Namen der Tabelle verwiesen wird, im *SqlFraudTable* an `ccFraud10`
-3. Ändern Sie den Namen der Tabelle verwiesen wird, im *SqlScoreTable* an `ccFraudScore10`
+1. Ändern Sie die Variablen `ccFraudCsv` und `ccScoreCsv` um auf die neuen Datendateien zu verweisen
+2. Ändern Sie den Namen der Tabelle verwiesen wird, im *SqlFraudTable* auf `ccFraud10`
+3. Ändern Sie den Namen der Tabelle verwiesen wird, im *SqlScoreTable* auf `ccFraudScore10`
 
 ## <a name="additional-samples"></a>Zusätzliche Beispiele
 
-Nun, da Sie die Verwendung von rechenkontexte und RevoScaler-Funktionen übergeben und Transformieren von Daten verwaltet haben, sehen Sie sich mit diesen Lernprogrammen:
+Nun, da Sie die Verwendung von berechneten Kontexten und RevoScaler-Funktionen übergeben und Transformieren von Daten verwaltet haben, sehen Sie sich diese Tutorials:
 
-[R-Lernprogramme für Machine Learning-Dienste](machine-learning-services-tutorials.md)
+[R-Tutorials für Machine Learning-Dienste](machine-learning-services-tutorials.md)
 ## <a name="previous-step"></a>Vorherigen Schritt
 
 [Verschieben von Daten zwischen SQL Server und einer XDF-Datei](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)

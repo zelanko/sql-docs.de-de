@@ -10,12 +10,12 @@ ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9371a82366f31c2d8221834a1bd29f9cfd9cc0d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cc06db0cf02a5d2e85b4e49a778f5484446b9be
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049040"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640757"
 ---
 # <a name="modify-a-partition-function"></a>Ändern einer Partitionsfunktion
   Sie können Tabellen- oder Indexpartitionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ändern, indem Sie mit [!INCLUDE[tsql](../../includes/tsql-md.md)]die angegebene Partitionsanzahl in Einerschritten in der Partitionsfunktion der partitionierten Tabelle bzw. des Indexes hinzufügen oder abziehen. Beim Hinzufügen einer Partition "teilen" Sie eine vorhandene Partition "auf" und definieren die Partitionsbegrenzungen erneut. Wenn Sie eine Partition löschen, "führen" Sie die Begrenzungen von zwei Partitionen "zusammen". Diese Aktion füllt eine Partition neu und belässt die andere Partition ohne Zuordnung.  
@@ -37,7 +37,7 @@ ms.locfileid: "48049040"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48049040"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird die Replikation beim Ändern einer Partitionsfunktion nicht unterstützt. Wenn Sie Änderungen an Partitionsfunktionen in der Veröffentlichungsdatenbank vornehmen möchten, müssen Sie diese manuell in der Abonnementdatenbank durchführen.  
   
--   Alle von ALTER PARTITION FUNCTION betroffenen Dateigruppen müssen online sein.  
+-   Alle Dateigruppen, die von ALTER PARTITION FUNCTION betroffenen müssen online sein.  
   
 ###  <a name="Security"></a> Sicherheit  
   

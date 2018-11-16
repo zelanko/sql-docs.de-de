@@ -44,8 +44,8 @@ Bevor Sie die Verfügbarkeitsgruppe erstellen, müssen Sie:
    In folgendem Beispiel wird `/etc/hosts` auf **node1** mit Ergänzungen für **node1**, **node2** und **node3** veranschaulicht. In diesem Dokument **node1** bezieht sich auf dem Server, der das primäre Replikat hostet. Und **node2** und **node3** finden Sie in Server, die die sekundären Replikate hosten.
 
     ```
-    127.0.0.1   localhost localhost4 localhost4.localdomain4
-    ::1       localhost localhost6 localhost6.localdomain6
+    127.0.0.1   localhost localhost4 localhost4.localdomain4
+    ::1       localhost localhost6 localhost6.localdomain6
     10.128.18.12 node1
     10.128.16.77 node2
     10.128.15.33 node3
@@ -77,7 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-Weitere Informationen zu dieser XE-Sitzung, finden Sie unter [AlwaysOn erweiterte Ereignisse](http://msdn.microsoft.com/library/dn135324.aspx).
+Weitere Informationen zu dieser XE-Sitzung, finden Sie unter [AlwaysOn erweiterte Ereignisse](https://msdn.microsoft.com/library/dn135324.aspx).
 
 ## <a name="create-a-certificate"></a>Erstellen eines Zertifikats
 
@@ -166,6 +166,6 @@ Der TCP-Port in der Firewall muss für den Listenerport geöffnet sein.
 >[!IMPORTANT]
 >Für die SQL Server 2017-Version ist die einzige Authentifizierungsmethode für den datenbankspiegelungs-Endpunkt unterstützt `CERTIFICATE`. Die `WINDOWS` Option wird in einer zukünftigen Version aktiviert.
 
-Weitere Informationen finden Sie unter [Der Datenbankspiegelungs-Endpunkt (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+Weitere Informationen finden Sie unter [Der Datenbankspiegelungs-Endpunkt (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx).
 
 

@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 61558536574750e7588124afb75cf26ee580b22a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701508"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668529"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Verknüpfen von Access-Anwendungen zu SQL Server – Azure SQL-Datenbank (AccessToSQL)
 Wenn Sie möchten, verwenden Sie die vorhandenen Access-Anwendungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Sie können die ursprünglichen Access-Tabellen verknüpfen, um die migrierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Tabellen. Verknüpfen die Access-Datenbank ändert, sodass Ihre Abfragen, Formulare, Berichte und Data Access-Seiten verwenden Sie die Daten in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbank anstelle der Daten in der Access-Datenbank.  
@@ -56,7 +56,7 @@ Wenn Sie eine Tabelle in Access öffnen, werden die Daten über ein Keyset-Curso
   
 > [!IMPORTANT]  
 > Zum Zugreifen auf Tabellen mit einer Azure-Datenbank zu verknüpfen, die Sie benötigen SQL Server Native Client(SNAC) Version 10.5 oder höher.   
-> Sie erhalten die neueste Version von SNAC aus [Microsoft® SQL Server® 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=196940).  
+> Sie erhalten die neueste Version von SNAC aus [Microsoft® SQL Server® 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=196940).  
   
 ## <a name="unlinking-access-tables"></a>Die Verknüpfung Access-Tabellen  
 Wenn Sie die Verknüpfung aufheben einer Access-Tabelle aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Tabelle SSMA stellt die ursprünglichen Access-Tabelle und die Daten wieder her.  

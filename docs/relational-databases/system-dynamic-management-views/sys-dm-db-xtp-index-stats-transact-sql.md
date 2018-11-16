@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 809ef57500a849b041692d50f7e1d8844dcacf2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b80ba01b73dff6810ee9fcfdc08a904ff6ad4697
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646418"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674269"
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Enthält Statistiken, die seit dem letzten Neustart der Datenbank erfasst wurden.  
   
- Weitere Informationen finden Sie unter [In-Memory OLTP &#40;In-Memory-Optimierung&#41; ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) und [Richtlinien zum Verwenden von Indizes für Speicheroptimierte Tabellen](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
+ Weitere Informationen finden Sie unter [In-Memory OLTP &#40;In-Memory-Optimierung&#41; ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) und [Richtlinien zum Verwenden von Indizes für Speicheroptimierte Tabellen](https://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
 
   
 |Spaltenname|Datentyp|Description|  

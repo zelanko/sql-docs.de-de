@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 07ee0ac0db742eca9a55decfcd78cb76b75e0160
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
-ms.translationtype: HT
+ms.openlocfilehash: 0eda19b4a241a066771afff1cfb682fa7234f81e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221656"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700384"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Konfigurieren von Azure Kubernetes Service für Bereitstellungen von SQL Server-2019 (Vorschau)
 
@@ -27,11 +27,13 @@ Dieser Artikel beschreibt die Schritte zum Bereitstellen von Kubernetes in AKS m
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Für eine Umgebung mit AKS für eine optimale Leistung beim Überprüfen von grundlegenden Szenarien empfehlen wir mindestens drei Agent-VMs (zusätzlich zum Master), mit mindestens 4 vCPUs und 32 GB Arbeitsspeicher, die jeder. Azure-Infrastruktur bietet mehrere Optionen für die Größe für virtuelle Computer, finden Sie unter [hier](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) für die Auswahl in der Region, die Sie bereitstellen möchten.
+- Für eine Umgebung mit AKS für eine optimale Leistung beim Überprüfen von grundlegenden Szenarien empfehlen wir mindestens drei Agent-VMs (zusätzlich zum Master), mit mindestens 4 vCPUs und 32 GB Arbeitsspeicher, die jeder. Azure-Infrastruktur bietet mehrere Optionen für die Größe für virtuelle Computer, finden Sie unter [hier](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) für die Auswahl in der Region, die Sie bereitstellen möchten.
   
 - In diesem Abschnitt erfordert, dass Sie der Azure CLI Version 2.0.4 oder höher. Bei Bedarf installieren oder aktualisieren, finden Sie unter [Installieren der Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Führen Sie `az --version` auf die Version zu ermitteln, bei Bedarf.
 
-- Installieren Sie ["kubectl"](https://kubernetes.io/docs/tasks/tools/install-kubectl/) mindestens mit Version 1.10 für Server und Client. Wenn Sie eine bestimmte Version auf "kubectl"-Client installieren möchten, finden Sie unter [Installieren von Kubectl über Curl binäre](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Für AKS, müssen Sie `--kubernetes-version` Parameter, um eine andere als die standardmäßige Version anzugeben.
+- Installieren Sie ["kubectl"](https://kubernetes.io/docs/tasks/tools/install-kubectl/) mindestens mit Version 1.10. Wenn Sie eine bestimmte Version auf "kubectl"-Client installieren möchten, finden Sie unter [Installieren von Kubectl über Curl binäre](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
+
+- Minimale Version der gleichen 1,10 gilt für Kubernetes-Server. Für AKS, müssen Sie `--kubernetes-version` Parameter, um eine andere als die standardmäßige Version anzugeben.
 
 > [!NOTE]
 Beachten Sie, die die Client/Server-Version, Verzerren wird +/-1 Nebenversion unterstützt. Die Kubernetes-Dokumentation gibt an, dass "ein Client Schiefe nicht mehr als eine Nebenversion aus dem Master-muss, aber bis zu einer Nebenversion den Master führen kann. Z. B. v1. 3 Master sollte funktionieren mit v1. 1, v1. 2 und v1. 3-Knoten, und sollte mit Version 1.2, v1. 3 und v1. 4-Clients funktionieren." Weitere Informationen finden Sie unter [Kubernetes unterstützte Versionen und Komponenten, die datenschiefe](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -82,7 +84,7 @@ Eine Azure-Ressourcengruppe ist eine logische Gruppe, in dem, die Azure Ressourc
     --kubernetes-version 1.10.8
     ```
 
-    Sie können erhöhen oder verringern Sie die Anzahl der Standard-Agents durch Ändern der `--node-count <n>` , in denen `<n>` ist die Anzahl von Agent-Knoten, die Sie möchten.
+    Sie können erhöhen oder verringern Sie die Anzahl von Kubernetes-Agent-Knoten durch Ändern der `--node-count <n>` , in denen `<n>` ist die Anzahl von Agent-Knoten, die Sie möchten, welche It enthält keine den Masterknoten des Kubernetes. Also im obigen Beispiel wird **4** virtuelle Computer der Größe **Standard_E4s_v3** für den AKS-Cluster verwendet: **1** für den Master und **3** für die Agent-Knoten.
 
     Nach einigen Minuten ist der Befehl abgeschlossen ist, und gibt Informationen zum Cluster im JSON-Format.
 

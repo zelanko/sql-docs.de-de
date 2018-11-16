@@ -13,12 +13,12 @@ ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb51c9ec57e20ecd641a06964624987e636a6c40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef5ec59980d267a8ead0f69aedb12c6eca5508dc
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164390"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639867"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partitionen (Dialogfeld Datenbank wiederherstellen) (Analysis Services – Mehrdimensionale Daten)
   Auf der Seite **Partitionen** des Dialogfelds **Datenbank wiederherstellen** können Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] den Speicherort zum Wiederherstellen der lokalen Partitionen angeben. Darüber hinaus können Sie angeben, ob Remotepartitionen wiederhergestellt werden sollen und welche Remotesicherungsdateien beim Wiederherstellen der Remotepartitionen verwendet werden sollen.  
@@ -29,11 +29,11 @@ ms.locfileid: "48164390"
 > [!NOTE]  
 >  Nach dem Wiederherstellen einer vorhandenen Datenbank verliert der Benutzer, der die Datenbank wiederhergestellt hat, möglicherweise den Zugriff auf diese Datenbank. Dies ist u. U. der Fall, wenn der Benutzer zum Zeitpunkt der Sicherung kein Mitglied der Serverrolle oder der Datenbankrolle mit der Berechtigung "Vollzugriff (Administrator)" war.  
   
- **Um die Seite Partitionen im Dialogfeld Wiederherstellungsdatenbank anzuzeigen.**  
+ **Zum Anzeigen der Seite "Partitionen" im Dialogfeld Wiederherstellungsdatenbank**  
   
 -   Klicken Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste entweder auf den Ordner **Datenbanken** einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz oder auf eine Datenbank im **Objekt-Explorer**, klicken Sie auf **Wiederherstellen**, und klicken Sie anschließend unter **Seite auswählen**auf **Partitionen**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Skript**  
  Erstellt ein Wiederherstellungsskript, das auf den im Dialogfeld aktivierten Optionen basiert. Das Wiederherstellungsskript wird in der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Skriptsprache (ASSL) geschrieben.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48164390"
 |**...**|Klicken Sie auf diese Schaltfläche, um das Dialogfeld **Remotepartitionen – Erweiterte Einstellungen** anzuzeigen und erweiterte Optionen wie die Verbindungszeichenfolge für die Datenquelle zum Wiederherstellen der Remotepartition zu ändern. Weitere Informationen zum Dialogfeld **Remotepartitionen – Erweiterte Einstellungen** finden Sie unter [Dialogfeld „Remote-Partitionen – Erweiterte Einstellungen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dialogfeld Datenbank wiederherstellen &#40;Analysis Services – mehrdimensionale Daten&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Dialogfeld Datenbank wiederherstellen &#40;Analysis Services – Mehrdimensionale Daten&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Allgemeine &#40;Dialogfeld Datenbank wiederherstellen&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Sichern und Wiederherstellen von Analysis Services-Datenbanken](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

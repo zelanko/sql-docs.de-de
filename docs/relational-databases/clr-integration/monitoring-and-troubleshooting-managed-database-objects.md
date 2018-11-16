@@ -14,12 +14,12 @@ ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7a335ef626d161782c7cfef96bb40be9cf591871
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f355e7fcb46c12e34b23d332cf10da536697ac3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609648"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663780"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Überwachung und Problembehandlung von verwalteten Datenbankobjekten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47609648"
   
 |Ereignis|Description|  
 |-----------|-----------------|  
-|[Assembly Load-Ereignisklasse](http://msdn.microsoft.com/library/cfb0b69d-4ce0-4067-a3df-d82775e57886)|Wird verwendet, um Assembly-Ladeanforderungen (Erfolg und Fehler) zu überwachen.|  
+|[Assembly Load-Ereignisklasse](https://msdn.microsoft.com/library/cfb0b69d-4ce0-4067-a3df-d82775e57886)|Wird verwendet, um Assembly-Ladeanforderungen (Erfolg und Fehler) zu überwachen.|  
 |[SQL: BatchStarting-Ereignisklasse](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [SQL: BatchCompleted-Ereignisklasse](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Stellt Informationen über [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches bereit, die gestartet oder beendet wurden.|  
 |[SP: Starting-Ereignisklasse](../../relational-databases/event-classes/sp-starting-event-class.md), [SP: Completed (Ereignisklasse)](../../relational-databases/event-classes/sp-completed-event-class.md)|Wird verwendet, um die Ausführung von gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren zu überwachen.|  
 |[SQL: StmtStarting-Ereignisklasse](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [SQL: StmtCompleted-Ereignisklasse](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Wird verwendet, um die Ausführung von CLR- und [!INCLUDE[tsql](../../includes/tsql-md.md)]-Routinen zu überwachen.|  

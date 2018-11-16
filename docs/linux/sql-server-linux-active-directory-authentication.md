@@ -11,12 +11,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 85684fdb257dea2d4b3c06537c59e4c1a997aaaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c641b6ee84ffd13e17bc540b3272ba9a95d74648
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631590"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658495"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Verwenden von Active Directory-Authentifizierung mit SQL Server unter Linux
 
@@ -163,7 +163,7 @@ Verwenden Sie die folgenden Schritte aus, um das Verknüpfen einer [!INCLUDE[ssN
    
    > SQL Server verwendet SSSD und NSS für die Zuordnung von Benutzerkonten und-Gruppen zu Sicherheits-IDs (SIDS). SSSD muss konfiguriert und wird ausgeführt, damit SQL Server zum erfolgreichen Erstellen von AD-Anmeldungen. Realmd in der Regel wird automatisch als Teil der Domäne beizutreten, aber in einigen Fällen müssen Sie diese separat.
    >
-   > Sehen Sie sich die folgende Einstellung [SSSD manuell](https://access.redhat.com/articles/3023951), und [Konfigurieren des NSS mit SSSD arbeiten](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
+   > Sehen Sie sich die folgende Einstellung [SSSD manuell](https://access.redhat.com/articles/3023951), und [Konfigurieren des NSS mit SSSD arbeiten](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
   
 5. Stellen Sie sicher, dass Sie jetzt Informationen zu einem Benutzer in der Domäne erfasst werden können und Sie ein Kerberos-Ticket als dieser Benutzer abrufen können.

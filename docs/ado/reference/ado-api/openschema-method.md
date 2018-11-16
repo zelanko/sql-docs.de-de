@@ -17,12 +17,12 @@ ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3481d9b7c186f3492e403b6881f4ffafbe90912b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2b4df18cf783e23792b51fb2c437b82c6a8ec52
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787281"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606210"
 ---
 # <a name="openschema-method"></a>OpenSchema-Methode
 Ruft Informationen über das Datenbankschema vom Anbieter ab.  
@@ -62,7 +62,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 >  **Remote Datendienstnutzung** der **OpenSchema** Methode ist nicht verfügbar für eine clientseitige [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt.  
   
 > [!NOTE]
->  In Spalten, die eine vier-Byte-Ganzzahl ohne Vorzeichen (DBTYPE UI4) in Visual Basic die **Recordset** zurückgegeben, die von der **OpenSchema** Methode für die **Verbindung** Objekt kann nicht verglichen Sie mit anderen Variablen werden. Weitere Informationen zu OLE DB-Datentypen, finden Sie unter [Datentypen in OLE DB (OLE DB)](http://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) und [Anhang A: Datentypen](http://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) in der Microsoft OLE DB Programmer's Reference.  
+>  In Spalten, die eine vier-Byte-Ganzzahl ohne Vorzeichen (DBTYPE UI4) in Visual Basic die **Recordset** zurückgegeben, die von der **OpenSchema** Methode für die **Verbindung** Objekt kann nicht verglichen Sie mit anderen Variablen werden. Weitere Informationen zu OLE DB-Datentypen, finden Sie unter [Datentypen in OLE DB (OLE DB)](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) und [Anhang A: Datentypen](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) in der Microsoft OLE DB Programmer's Reference.  
   
 > [!NOTE]
 >  **Visual C/C++-Benutzer** clientseitigen Cursorn nicht verwendet werden soll, Abrufen von "ORDINAL_POSITION" eines Spalte-Schemas in ADO gibt eine Variante des Typs VT_R8 in MDAC 2.7, MDAC 2.8 und Windows Data Access Components (Windows DAC) 6.0, während mit MDAC zurück 2.6 ist VT_I4. Programme für MDAC 2.6 geschrieben, die nur für eine Variante aussehen zurückgegebene des Typs VT_I4 erhalten würde, eine 0 (null) für jede Ordnungszahl, wenn unter MDAC 2.7, MDAC 2.8 und Windows DAC 6.0 ohne Änderungen ausgeführt. Diese Änderung wurde vorgenommen, da der Datentyp, den OLE DB gibt DBTYPE_UI4 ist, und in den Typ mit Vorzeichen VT_I4 ist nicht genügend Platz für alle möglichen Werte ungekürzt möglicherweise auftreten, und wodurch ein Verlust von Daten enthalten.  

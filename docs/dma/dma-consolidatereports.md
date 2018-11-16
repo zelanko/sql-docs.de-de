@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: b7212118f018b616b1f82f3ed91aced97482e9c6
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: f748189446ca3d5cfd49c748fa058cf8dbef7fe7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960784"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601820"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten mit DMA
 
@@ -31,7 +31,7 @@ Die folgenden schrittweisen Anweisungen helfen Ihnen die im Data Migration Assis
 - Geben Sie einen Tools-Computer in Ihrem Netzwerk aus dem DMA initiiert wird. Stellen Sie sicher, dass es sich bei diesem Computer Verbindungen mit Ihrem SQL Server-Ziele vorhanden sind.
 - Herunterladen und installieren:
     - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) Version 3.6 oder höher.
-    - [PowerShell](http://aka.ms/wmf5download) V5. 0 oder höher.
+    - [PowerShell](https://aka.ms/wmf5download) V5. 0 oder höher.
     - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v4. 5 oder höher.
     - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 oder höher.
     - [Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).

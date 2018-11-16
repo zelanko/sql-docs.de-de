@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ae4979d02f92ef95364cc264c1a89c83b49a48d2
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 2ea71a918ab9ceb1afba41e5af0148212f33044b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148045"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607140"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -127,7 +127,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 ## <a name="remarks"></a>Hinweise  
  Wenn Sie ein Modell mit einem integrierten Testdataset erstellen möchten, sollten Sie die Anweisung CREATE MINING STRUCTURE gefolgt von ALTER MINING STRUCTURE verwenden. Jedoch unterstützen nicht alle Modelltypen ein zurückgehaltenes Dataset. Weitere Informationen finden Sie unter [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
- Eine exemplarische Vorgehensweise zum Erstellen eines Miningmodells mit der CREATEMODEL-Anweisung finden Sie unter [DMX-Lernprogramm für Zeitreihenvorhersagen](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Eine exemplarische Vorgehensweise zum Erstellen eines Miningmodells mit der CREATEMODEL-Anweisung finden Sie unter [DMX-Lernprogramm für Zeitreihenvorhersagen](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 ## <a name="naive-bayes-example"></a>Beispiel für Naive Bayes-Algorithmus  
  Im folgenden Beispiel wird der [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes-Algorithmus verwendet, um ein neues Miningmodell zu erstellen. Die Bike Buyer-Spalte ist als das vorhersagbare Attribut definiert.  

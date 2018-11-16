@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e3dac6aefb8db2dbd1c651f0a2cf27b0f29559c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46f48aa117c18bcc7af28cdf7c676cf195b553f6
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735006"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350064"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft Data Shaping Service für OLE DB-Übersicht
 > [!IMPORTANT]
@@ -30,7 +30,7 @@ ms.locfileid: "47735006"
 ## <a name="provider-keyword"></a>Anbieterschlüsselwort
  Um den Data Shaping Service für OLE DB aufzurufen, geben Sie das folgende Schlüsselwort und Wert in der Verbindungszeichenfolge ein.
 
-```
+```vb
 "Provider=MSDataShape"
 ```
 
@@ -44,14 +44,14 @@ ms.locfileid: "47735006"
 
  Sie können auch beschreibbare dynamische Eigenschaften festlegen, durch deren Namen als Schlüsselwörter in der Verbindungszeichenfolge angeben. In Microsoft Visual Basic, z. B. Festlegen der **Datenanbieter** dynamische Eigenschaft auf "MSDASQL", indem Sie angeben:
 
-```
+```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
  Sie können auch festlegen oder Abrufen eine dynamische Eigenschaft durch Angabe seines Namens als Index für die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Eigenschaft. Beispielsweise das folgende Codebeispiel ruft ab und gibt den aktuellen Wert des der **Datenanbieter** dynamische Eigenschaft, klicken Sie dann ein neuer Wert festgelegt, wenn Cn. "DataProvider" auf "MSDataShape" festgelegt wurde (entweder direkt oder indirekt über die Verbindungszeichenfolge) und die Verbindung nicht geöffnet wurde:
 
-```
+```vb
 Debug.Print cn.Properties("Data Provider")
 cn.Properties("Data Provider") = "MSDASQL"
 ```

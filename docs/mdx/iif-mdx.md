@@ -1,5 +1,5 @@
 ---
-title: IIf (MDX) | Microsoft Docs
+title: IIf (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ff85ddef47099462a8c38031141120d02bfd1019
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740679"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700778"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -29,15 +29,15 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Die IIf-Funktion akzeptiert drei Argumente: Iif (\<Bedingung >, \<dann branch >, \<else Branch >).  
+ Die IIf-Funktion akzeptiert drei Argumente: Iif (\<Bedingung >, \<danach >, \<#else-Branch >).  
   
  *Logical_Expression*  
- Eine Bedingung, die ergibt **"true"** (1) oder **"false"** (0). Es muss sich um einen gültigen logischen Multidimensional Expressions (MDX)-Ausdruck handeln.  
+ Eine Bedingung, die sich ergibt **"true"** (1) oder **"false"** (0). Es muss sich um einen gültigen logischen Multidimensional Expressions (MDX)-Ausdruck handeln.  
   
- *Expression1 Hinweis [Eager | Strict | Verzögerte]]*  
+ *Expression1 Hinweis [Eager | Strenge | Verzögerte]]*  
  Verwendet, wenn der logische Ausdruck ergibt **"true"**. Expression1 muss ein gültiger Multidimensional Expressions (MDX)-Ausdruck sein.  
   
- *Expression2 Hinweis [Eager | Strict | Verzögerte]]*  
+ *Expression2 Hinweis [Eager | Strenge | Verzögerte]]*  
  Verwendet, wenn der logische Ausdruck ergibt **"false"**. Expression2 muss ein gültiger Multidimensional Expressions (MDX)-Ausdruck sein.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -47,7 +47,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  Die angegebene Ausdrücke können Werte oder MDX-Objekte zurückgeben. Ferner muss der Typ der angegebenen Ausdrücke nicht übereinstimmen.  
   
- Die **IIf** Funktion wird zum Erstellen einer Menge von Elementen basierend auf Suchkriterien nicht empfohlen. Verwenden Sie stattdessen die [Filter](../mdx/filter-mdx.md) Funktion auf jedes Element in einer angegebenen Menge mit einem logischen Ausdruck auszuwerten und eine Teilmenge von Elementen zurückzugeben.  
+ Die **IIf** Funktion wird zum Erstellen einer Menge von Elementen, die basierend auf Suchkriterien nicht empfohlen. Verwenden Sie stattdessen die [Filter](../mdx/filter-mdx.md) Funktion, um jedes Element in einer angegebenen Menge mit einem logischen Ausdruck auswerten und eine Teilmenge von Elementen zurückzugeben.  
   
 > [!NOTE]  
 >  Wenn die Auswertung einer der beiden Ausdrücke NULL ergibt, ist das Resultset NULL, wenn diese Bedingung erfüllt wird.  
@@ -64,10 +64,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  EAGER und STRICT schließen sich im Tipp gegenseitig aus. Sie können in IIF(,,) für verschiedene Ausdrücke verwendet werden.  
   
- Weitere Informationen finden Sie unter [if Funktionsabfragehinweise in SQL Server Analysis Services 2008](http://go.microsoft.com/fwlink/?LinkId=269540) und [Ausführungspläne und Planhinweise für MDX IIF-Funktion und CASE-Anweisung](http://go.microsoft.com/fwlink/?LinkId=269565).  
+ Weitere Informationen finden Sie unter [if Funktionsabfragehinweise in SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540) und [Ausführungspläne und Planhinweise für MDX IIF-Funktion und CASE-Anweisung](https://go.microsoft.com/fwlink/?LinkId=269565).  
   
 ## <a name="examples"></a>Beispiele  
- Die folgende Abfrage zeigt eine einfache Verwendung von **IIF** in einem berechneten Measure zur Rückgabe zweier unterschiedlicher Zeichenfolgen, wenn das Measure Internet Sales Amount größer oder kleiner als 10.000 $beträgt:  
+ Die folgende Abfrage zeigt eine einfache Verwendung von **IIF** in einem berechneten Measure zur Rückgabe zweier unterschiedlicher Zeichenfolgen, bei der Internet Sales Amount-Measure größer oder kleiner als 10.000 $beträgt:  
   
  `WITH MEMBER MEASURES.IIFDEMO AS`  
   
@@ -131,7 +131,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  `WHERE([Product].[Product Categories].[Subcategory].&[26])`  
   
- Im folgenden ist ein Beispiel für **IIF** Zurückgeben einer von zwei Mengen innerhalb der Generate-Funktion, um einen komplexen Satz von Tupeln auf Zeilen zu erstellen:  
+ Folgendes ist ein Beispiel für **IIF** Zurückgeben einer von zwei Mengen innerhalb der Generate-Funktion, um einen komplexen Satz von Tupeln in Zeilen zu erstellen:  
   
  `SELECT {[Measures].[Internet Sales Amount]} ON 0,`  
   

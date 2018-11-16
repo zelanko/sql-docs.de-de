@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3078fa2406bfbc4e45ed2b68e2119927590c4a42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24ddc42ecfe8b9fa84822d476f5ac4b5e555141b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723418"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677179"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47723418"
   
  In der Referenz zum ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sind nicht sämtliche ODBC-Funktionsaufrufe dokumentiert. Es werden nur diejenigen Funktionen besprochen, die über treiberspezifische Parameter verfügen oder ein treiberspezifisches Verhalten zeigen, wenn sie mit dem ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verwendet werden.  
   
- Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client entspricht der Spezifikation für ODBC 3.51. Eine umfassende Referenz zu ODBC 3.51 benötigen, laden Sie das Microsoft Data Access Components SDK vom die [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173), oder zeigen Sie die [ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45250) online.  
+ Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client entspricht der Spezifikation für ODBC 3.51. Eine umfassende Referenz zu ODBC 3.51 benötigen, laden Sie das Microsoft Data Access Components SDK vom die [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173), oder zeigen Sie die [ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45250) online.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47723418"
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;ODBC&#41; Verweis](http://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
+ [SQL Server Native Client &#40;ODBC&#41; Verweis](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
  [Erstellen von Anwendungen mit SQL Server Native Client](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

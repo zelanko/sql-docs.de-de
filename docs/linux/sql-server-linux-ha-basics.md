@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b33acbcf74857cd6a2def74f3596e3dda2a034a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 880ccf036a12d5cc8e7e2bd56aa3bbcc58a2984f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720868"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665673"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>SQL Server-Verfügbarkeitsgrundlagen für Linux-Bereitstellungen
 
@@ -77,7 +77,7 @@ Samba, der die Linux-Variante von Server Message Block (SMB) ist, kann auch verw
 
 Windows-basierten SMB-Freigaben können auch verwendet werden. SMB-Freigaben müssen sich nicht auf Linux-basiert, werden so lange der Teil des Samba Clients ordnungsgemäß, auf dem Linux läuft konfiguriert ist [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] und die Freigabe hat die richtige Zugriffsrechte. Für diejenigen in einer gemischten Umgebung, wäre dies eine Möglichkeit zum Nutzen der vorhandenen Infrastruktur für Linux-basierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Bereitstellungen.
 
-Eine Sache, die wichtig ist, dass die Version der bereitgestellten Samba SMB 3.0-kompatibel sein soll. Wenn die Unterstützung von SMB in hinzugefügt wurde [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], es erforderlich, dass alle Freigaben zur Unterstützung von SMB 3.0. Wenn Samba für die Freigabe und nicht auf Windows Server verwenden möchten, sollten die Freigabe Samba-basierte Samba 4.0 oder höher, und im Idealfall 4.3 oder höher, verwenden die SMB 3.1.1 unterstützt. Ist eine gute Quelle für Informationen zu SMB und Linux [SMB3 in Samba](http://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
+Eine Sache, die wichtig ist, dass die Version der bereitgestellten Samba SMB 3.0-kompatibel sein soll. Wenn die Unterstützung von SMB in hinzugefügt wurde [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], es erforderlich, dass alle Freigaben zur Unterstützung von SMB 3.0. Wenn Samba für die Freigabe und nicht auf Windows Server verwenden möchten, sollten die Freigabe Samba-basierte Samba 4.0 oder höher, und im Idealfall 4.3 oder höher, verwenden die SMB 3.1.1 unterstützt. Ist eine gute Quelle für Informationen zu SMB und Linux [SMB3 in Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
 
 Schließlich ist die Verwendung einer Dateifreigabe im Netzwerk-System (NFS) eine Option. Verwenden Sie stattdessen NFS ist die Option nicht auf Windows-basierten Bereitstellungen von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], und kann nur für Linux-basierten Bereitstellungen verwendet werden.
 
@@ -117,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **Dokumentation der Firewall:**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Installieren Sie [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -Pakete für Verfügbarkeit
@@ -156,7 +156,7 @@ Die vollständige Dokumentation für Pacemaker einschließlich eine tiefer greif
 
 Eine Anleitung für die Verfügbarkeit keinen Ubuntu.
 
-Weitere Informationen zu den gesamten Stapel, auch finden Sie auf der offiziellen [Pacemaker-Dokumentationsseite](http://clusterlabs.org/doc/) auf der Website Clusterlabs.
+Weitere Informationen zu den gesamten Stapel, auch finden Sie auf der offiziellen [Pacemaker-Dokumentationsseite](https://clusterlabs.org/doc/) auf der Website Clusterlabs.
 
 ### <a name="pacemaker-concepts-and-terminology"></a>Pacemaker-Konzepte und Terminologie
 In diesem Abschnitt dokumentiert die allgemeinen Konzepte und Terminologie für eine Implementierung von Pacemaker.
@@ -208,13 +208,13 @@ Um den Standardspeicherort für die Protokollierung zu ändern, ändern `corosyn
 Dieser Abschnitt beschreibt die Planung wichtigen Punkte für einen Pacemaker-Cluster.
 
 ### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Virtualisierenden Linux-basierten Pacemaker-Cluster für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-Mithilfe von virtuellen Computern zum Bereitstellen von Linux-basierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Bereitstellungen für Verfügbarkeitsgruppen und FCIs wird durch die gleichen Regeln wie für ihren Windows-basierten äquivalenten abgedeckt. Es gibt ein grundlegender Satz von Regeln für die Unterstützung von virtualisierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Bereitstellungen von Microsoft bereitgestellten [Microsoft Support-KB-956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Andere Hypervisoren wie von Microsoft Hyper-V und VMware ESXi möglicherweise unterschiedliche Varianzen auf, aufgrund von Unterschieden bei den Plattformen selbst.
+Mithilfe von virtuellen Computern zum Bereitstellen von Linux-basierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Bereitstellungen für Verfügbarkeitsgruppen und FCIs wird durch die gleichen Regeln wie für ihren Windows-basierten äquivalenten abgedeckt. Es gibt ein grundlegender Satz von Regeln für die Unterstützung von virtualisierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Bereitstellungen von Microsoft bereitgestellten [Microsoft Support-KB-956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Andere Hypervisoren wie von Microsoft Hyper-V und VMware ESXi möglicherweise unterschiedliche Varianzen auf, aufgrund von Unterschieden bei den Plattformen selbst.
 
 Bei Verfügbarkeitsgruppen und FCIs unter Virtualisierung, stellen Sie sicher, dass Anti-Affinität für die Knoten eines bestimmten Pacemaker-Clusters festgelegt wird. Wenn für hohe Verfügbarkeit in einer Verfügbarkeitsgruppe oder einer FCI-Konfiguration konfiguriert die virtuellen Computer hostet [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sollte nie auf demselben hypervisorhost ausgeführt werden. Z. B. wenn eine FCI zwei Knoten bereitgestellt wird, es müssten werden *mindestens* drei Hypervisor-Hosts, die es gibt also an einer beliebigen Stelle für eine der virtuellen Computer einen Knoten hostet zu Ausfall eines Hosts insbesondere dann, wenn Funktionen wie Live Migration oder vMotion.
 
 Weitere Informationen finden Sie in:
 -   Hyper-V-Dokumentation – [Verwenden von Gastclustering für hohe Verfügbarkeit](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   Whitepaper (geschrieben für Windows-basierten Bereitstellungen, aber die meisten Konzepte, die noch anwenden) – [planen hoher Verfügbarkeit, unternehmenskritische kritische SQL Server-Bereitstellungen mit VMware vSphere](http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+-   Whitepaper (geschrieben für Windows-basierten Bereitstellungen, aber die meisten Konzepte, die noch anwenden) – [planen hoher Verfügbarkeit, unternehmenskritische kritische SQL Server-Bereitstellungen mit VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
 >RHEL mit einen Pacemaker-Cluster mit STONITH wird von Hyper-V noch nicht unterstützt. Bis dies, um weitere Informationen und Updates unterstützt wird, wenden Sie sich an [Supportrichtlinien für RHEL High Availability Cluster](https://access.redhat.com/articles/29440#3physical_host_mixing).

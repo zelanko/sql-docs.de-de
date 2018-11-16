@@ -10,12 +10,12 @@ ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: aa858ed572260ffa89baa5dabf735e838cf1b083
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 283fc57046e2c6e6acbdbe0504d44c6692afdc5e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099232"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672579"
 ---
 # <a name="appendix---1-mysqltosql"></a>Anhang – 1 (MySqlToSql)
 Schnelle Übersicht über die Befehlszeilenoptionen von SSMA-Konsole:  
@@ -32,5 +32,5 @@ Schnelle Übersicht über die Befehlszeilenoptionen von SSMA-Konsole:
 |8|-?|nein|Nicht zutreffend|Nicht zutreffend|  
   
 ## <a name="see-also"></a>Siehe auch  
-[Executing the SSMA Console ausführen (MySQL)](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[Executing the SSMA Console ausführen (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

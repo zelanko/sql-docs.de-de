@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 59897cbe6abc13b9842dc148ef8c2de4413926d0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050894"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702955"
 ---
 # <a name="run-python-using-t-sql"></a>Ausführen von Python mit T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +139,7 @@ In der Standardeinstellung [Sp_execute_external_script](../../relational-databas
 
 Andere Arten von Eingaben, die als SQL-Variablen übergeben werden können: beispielsweise, Sie können übergeben ein trainiertes Modells als Variable mithilfe einer Serialisierungsfunktion wie [Pickle](https://docs.python.org/3.0/library/pickle.html) oder [Rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) , schreiben das Modell ein binäres Format.
 
-Die gespeicherte Prozedur gibt ein einzelnen Python [Pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) Datenrahmen als Ausgabe, aber Sie können auch skalare und Modelle als Variablen ausgeben. Sie können z. B. die Ausgabe eines trainierten Modells als binäre Variable und übergeben, um eine T-SQL INSERT-Anweisung, um das Modell in einer Tabelle zu schreiben. Sie können auch Diagramme (im binären Format) oder skalare generieren (einzelne Werte, z. B. Datum und Uhrzeit, die verstrichene Zeit zum Trainieren des Modells und so weiter).
+Die gespeicherte Prozedur gibt ein einzelnen Python [Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) Datenrahmen als Ausgabe, aber Sie können auch skalare und Modelle als Variablen ausgeben. Sie können z. B. die Ausgabe eines trainierten Modells als binäre Variable und übergeben, um eine T-SQL INSERT-Anweisung, um das Modell in einer Tabelle zu schreiben. Sie können auch Diagramme (im binären Format) oder skalare generieren (einzelne Werte, z. B. Datum und Uhrzeit, die verstrichene Zeit zum Trainieren des Modells und so weiter).
 
 Jetzt sehen wir uns nur um die Standardeinstellung Eingabe- und Variablen von Sp_execute_external_script: `InputDataSet` und `OutputDataSet`. 
 
@@ -313,7 +313,7 @@ Wie würden Sie das einzelne Ergebnis einer Berechnung als Datenrahmen, verfügb
 
 Konvertiert unsere skalare mathematischen Ergebnisse müssen zu einer tabellarischen Struktur, müssen wir sie in ein Format zu konvertieren, die SQL Server verarbeiten kann. 
 
-1. Um eine Reihe in eine data.frame zu konvertieren, rufen Sie die Pandas [DataFrame](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) Methode.
+1. Um eine Reihe in eine data.frame zu konvertieren, rufen Sie die Pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) Methode.
 
     ```sql
     execute sp_execute_external_script 

@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0e6c33529219e73b4d517dc23fc933b0bf31f1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eca03339745d8e8459eba438389f3c8e6000871
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814178"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660528"
 ---
 # <a name="using-xml-schemas"></a>Verwenden von XML-Schemas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47814178"
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-an-xml-schema-in-visual-basic"></a>Erstellen eines XML-Schemas in Visual Basic  
- In diesem Codebeispiel wird veranschaulicht, wie zum Erstellen eines XML-Schemas mit der <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection> Objekt. Die <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection.Text%2A>-Eigenschaft, die die XML-Schemaauflistung definiert, enthält mehrere doppelte Anführungszeichen. Diese werden durch die `chr(34)` -Zeichenfolge ersetzt.  
+ Dieses Codebeispiel zeigt, wie ein XML-Schema mithilfe des <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection>-Objekts erstellt wird. Die <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection.Text%2A>-Eigenschaft, die die XML-Schemaauflistung definiert, enthält mehrere doppelte Anführungszeichen. Diese werden durch die `chr(34)`-Zeichenfolge ersetzt.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -44,13 +44,13 @@ db = srv.Databases("AdventureWorks2012")
 'Define an XmlSchemaCollection object by supplying the parent database and name arguments in the constructor.
 Dim xsc As XmlSchemaCollection
 xsc = New XmlSchemaCollection(db, "MySampleCollection")
-xsc.Text = "\<schema xmlns=" + Chr(34) + "http://www.w3.org/2001/XMLSchema" + Chr(34) + "  xmlns:ns=" + Chr(34) + "http://ns" + Chr(34) + ">\<element name=" + Chr(34) + "e" + Chr(34) + " type=" + Chr(34) + "dateTime" + Chr(34) + "/></schema>"
+xsc.Text = "\<schema xmlns=" + Chr(34) + "https://www.w3.org/2001/XMLSchema" + Chr(34) + "  xmlns:ns=" + Chr(34) + "https://ns" + Chr(34) + ">\<element name=" + Chr(34) + "e" + Chr(34) + " type=" + Chr(34) + "dateTime" + Chr(34) + "/></schema>"
 'Create the XML schema collection on the instance of SQL Server.
 xsc.Create()
 ```
   
 ## <a name="creating-an-xml-schema-in-visual-c"></a>Erstellen eines XML-Schemas in Visual C#  
- In diesem Codebeispiel wird veranschaulicht, wie zum Erstellen eines XML-Schemas mit der <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection> Objekt. Die <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection.Text%2A>-Eigenschaft, die die XML-Schemaauflistung definiert, enthält mehrere doppelte Anführungszeichen. Diese werden durch die `chr(34)` -Zeichenfolge ersetzt.  
+ Dieses Codebeispiel zeigt, wie ein XML-Schema mithilfe des <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection>-Objekts erstellt wird. Die <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection.Text%2A>-Eigenschaft, die die XML-Schemaauflistung definiert, enthält mehrere doppelte Anführungszeichen. Diese werden durch die `chr(34)` -Zeichenfolge ersetzt.  
   
 ```csharp  
 {  
@@ -64,14 +64,14 @@ xsc.Create()
             // database and name arguments in the constructor.   
             XmlSchemaCollection xsc = default(XmlSchemaCollection);  
             xsc = new XmlSchemaCollection(db, "MySampleCollection");  
-            xsc.Text = "\<schema xmlns=" + Strings.Chr(34) + "http://www.w3.org/2001/XMLSchema" + Strings.Chr(34) + " xmlns:ns=" + Strings.Chr(34) + "http://ns" + Strings.Chr(34) + ">\<element name=" + Strings.Chr(34) + "e" + Strings.Chr(34) + " type=" + Strings.Chr(34) + "dateTime" + Strings.Chr(34) + "/></schema>";  
+            xsc.Text = "\<schema xmlns=" + Strings.Chr(34) + "https://www.w3.org/2001/XMLSchema" + Strings.Chr(34) + " xmlns:ns=" + Strings.Chr(34) + "https://ns" + Strings.Chr(34) + ">\<element name=" + Strings.Chr(34) + "e" + Strings.Chr(34) + " type=" + Strings.Chr(34) + "dateTime" + Strings.Chr(34) + "/></schema>";  
             //Create the XML schema collection on the instance of SQL Server.   
             xsc.Create();  
         }  
 ```  
   
 ## <a name="creating-an-xml-schema-in-powershell"></a>Erstellen eines XML-Schemas in PowerShell  
- In diesem Codebeispiel wird veranschaulicht, wie zum Erstellen eines XML-Schemas mit der <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection> Objekt. Die <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection.Text%2A>-Eigenschaft, die die XML-Schemaauflistung definiert, enthält mehrere doppelte Anführungszeichen. Diese werden durch die `chr(34)` -Zeichenfolge ersetzt.  
+ Dieses Codebeispiel zeigt, wie ein XML-Schema mithilfe des <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection>-Objekts erstellt wird. Die <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection.Text%2A>-Eigenschaft, die die XML-Schemaauflistung definiert, enthält mehrere doppelte Anführungszeichen. Diese werden durch die `chr(34)` -Zeichenfolge ersetzt.  
   
 ```powershell   
 #Get a server object which corresponds to the default instance replace LocalMachine with the physical server  
@@ -87,8 +87,8 @@ $xsc = New-Object -TypeName Microsoft.SqlServer.Management.SMO.XmlSchemaCollecti
   
 #Add the xml  
 $dq = '"' # the double quote character  
-$xsc.Text = "<schema xmlns=" + $dq + "http://www.w3.org/2001/XMLSchema" + $dq + `  
-"  xmlns:ns=" + $dq + "http://ns" + $dq + "><element name=" + $dq + "e" + $dq +`  
+$xsc.Text = "<schema xmlns=" + $dq + "https://www.w3.org/2001/XMLSchema" + $dq + `  
+"  xmlns:ns=" + $dq + "https://ns" + $dq + "><element name=" + $dq + "e" + $dq +`  
  " type=" + $dq + "dateTime" + $dq + "/></schema>"  
   
 #Create the XML schema collection on the instance of SQL Server.  

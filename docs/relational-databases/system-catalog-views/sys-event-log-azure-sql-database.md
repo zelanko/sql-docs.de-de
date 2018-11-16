@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 29ef6eaf427a0ab8ee2a3b040f2a4255079eecdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c762c5ebb679460686dbf38958d097de687b1052
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826348"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673529"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47826348"
 > [!CAUTION]  
 >  Für Installationen mit einer großen Anzahl von Datenbanken oder hohe Anzahl von Anmeldungen kann Aktivitäten in Sys. event_log dazu führen, dass Einschränkungen in Bezug auf Leistung, hohe CPU-Auslastung, und möglicherweise Anmeldefehler führen. Abfragen von Sys. event_log können für das Problem beitragen. Microsoft arbeitet daran, um dieses Problem zu beheben. In der Zwischenzeit um die Auswirkungen dieses Problem zu verringern, beschränken Sie Abfragen von Sys. event_log an. Sollten Benutzer die NewRelic SQL Server-Plug-Ins finden Sie unter [-Plug-in "Microsoft Azure SQL-Datenbank" die Anpassungen für Optimierung und Leistung](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729) Konfigurationsinformationen.  
   
- Die `sys.event_log` -Ansicht enthält die folgenden Spalten.  
+ Die `sys.event_log`-Sicht enthält die folgenden Spalten.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -75,12 +75,12 @@ ms.locfileid: "47826348"
 |**Konnektivität**|**connection_failed**|9|**Neukonfiguration**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Verbindungsfehler, da die Datenbank zu diesem Zeitpunkt eine Neukonfiguration durchlaufen hat.|  
 |**Konnektivität**|**connection_terminated**|0|**idle_connection_timeout**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Verbindung ist länger im Leerlauf, als der vom System definierte Schwellenwert angibt.|  
 |**Konnektivität**|**connection_terminated**|1|**Neukonfiguration**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wurde aufgrund einer Neukonfiguration der Datenbank beendet.|  
-|**Konnektivität**|**Drosselung**|*\<Ursachencode: >*|**reason_code**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Anforderung wird gedrosselt.  Ursachencode für Drosselung:  *\<Ursachencode >*. Weitere Informationen finden Sie unter [Moduleinschränkung](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
-|**Konnektivität**|**throttling_long_transaction**|40549|**long_transaction**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wird aufgrund einer Transaktion mit langer Laufzeit beendet. Verkürzen Sie die Transaktion. Weitere Informationen finden Sie unter [Ressourceneinschränkungen](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**Konnektivität**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wurde beendet, da zu viele Sperren abgerufen wurden. Reduzieren Sie die Anzahl der in einer einzelnen Transaktion gelesenen oder geänderten Zeilen. Weitere Informationen finden Sie unter [Ressourceneinschränkungen](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**Konnektivität**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wurde aufgrund übermäßiger TEMPDB-Auslastung beendet. Ändern Sie die Abfrage, um die Verwendung des temporären Tabellenbereichs zu verringern. Weitere Informationen finden Sie unter [Ressourceneinschränkungen](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**Konnektivität**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wurde aufgrund übermäßiger Verwendung des Speicherplatzes für das Transaktionsprotokoll beendet. Reduzieren Sie die Anzahl der in einer einzelnen Transaktion geänderten Zeilen. Weitere Informationen finden Sie unter [Ressourceneinschränkungen](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**Konnektivität**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wurde aufgrund übermäßiger Speicherauslastung beendet. Ändern Sie die Abfrage, damit weniger Zeilen verarbeitet werden. Weitere Informationen finden Sie unter [Ressourceneinschränkungen](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**Konnektivität**|**Drosselung**|*\<Ursachencode: >*|**reason_code**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Anforderung wird gedrosselt.  Ursachencode für Drosselung:  *\<Ursachencode >*. Weitere Informationen finden Sie unter [Moduleinschränkung](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**Konnektivität**|**throttling_long_transaction**|40549|**long_transaction**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wird aufgrund einer Transaktion mit langer Laufzeit beendet. Verkürzen Sie die Transaktion. Weitere Informationen finden Sie unter [Ressourceneinschränkungen](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**Konnektivität**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wurde beendet, da zu viele Sperren abgerufen wurden. Reduzieren Sie die Anzahl der in einer einzelnen Transaktion gelesenen oder geänderten Zeilen. Weitere Informationen finden Sie unter [Ressourceneinschränkungen](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**Konnektivität**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wurde aufgrund übermäßiger TEMPDB-Auslastung beendet. Ändern Sie die Abfrage, um die Verwendung des temporären Tabellenbereichs zu verringern. Weitere Informationen finden Sie unter [Ressourceneinschränkungen](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**Konnektivität**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wurde aufgrund übermäßiger Verwendung des Speicherplatzes für das Transaktionsprotokoll beendet. Reduzieren Sie die Anzahl der in einer einzelnen Transaktion geänderten Zeilen. Weitere Informationen finden Sie unter [Ressourceneinschränkungen](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**Konnektivität**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wurde aufgrund übermäßiger Speicherauslastung beendet. Ändern Sie die Abfrage, damit weniger Zeilen verarbeitet werden. Weitere Informationen finden Sie unter [Ressourceneinschränkungen](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**Engine**|**Deadlock**|0|**Deadlock**|2|Deadlock ist aufgetreten.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -224,6 +224,6 @@ SELECT * FROM CTE2;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erweiterte Ereignisse in Azure SQL-Datenbank](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Erweiterte Ereignisse in Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
   
   

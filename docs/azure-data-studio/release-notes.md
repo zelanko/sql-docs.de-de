@@ -2,7 +2,7 @@
 title: Versionshinweise zu Azure Data Studio | Microsoft-Dokumentation
 description: Versionshinweise zu Azure Data Studio
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -10,16 +10,41 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34b8f3f1e3f7ca3396b32c6dad99ef721542fd48
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 9723a51154d0098271f8d3206c7f7a7470598422
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237066"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289920"
 ---
 # <a name="azure-data-studio-release-notes"></a>Versionshinweise zu Azure Data Studio
 
-**[Laden Sie die Oktober-Version herunter!](download.md)**
+**[Laden Sie die November-Version herunter!](download.md)**
+
+## <a name="november-2018-november-release"></a>November 2018 (Version November)
+
+Veröffentlichungsdatum: 6 November 2018  
+Version: 1.2.4
+
+- Aktualisieren Sie auf die [2019-Vorschau von SQL Server-Erweiterung](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- Einführung in fügen Sie der Plans-Erweiterung
+- Einführung in High Color Abfragen Erweiterungen, einschließlich SSMS-Editor-Design
+- Fehlerbehebungen in SQL Server-Agent, Profiler und Import-Erweiterungen
+- Beheben von.NET Core Socket KeepAlive Problem verursacht, inaktive Verbindungen auf MacOS gelöscht
+- Upgrade SQL Tools-Diensts zur.NET Core-2.2-Preview 3 (für "Eventual" AAD-Unterstützung)
+
+### <a name="bug-fixes"></a>Fehlerbehebungen
+- Beheben Sie [Problem #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): die Verbindung wurde getrennt, um die Azure SQL-Datenbank
+- Beheben Sie [Problem #2914](https://github.com/Microsoft/azuredatastudio/issues/2914): Erweitern der Datenbankknoten OE "Ungültiges Argument"-Ausnahme
+- Beheben Sie [Problem #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): mehrzeilige Nachrichten richtig angezeigt, in den Abfrageergebnissen
+- Beheben Sie [Problem #2906](https://github.com/Microsoft/azuredatastudio/pull/2906): Dokumentname beheben Daten bearbeiten, wenn Tabellennamen Sonderzeichen enthält.
+- Beheben Sie [Problem #2929](https://github.com/Microsoft/azuredatastudio/issues/2929): erstellt in der Erweiterung Änderungsprotokoll sagt, um den Anmerkungen zur Version von VSCode für die Änderungen zu überprüfen
+- Beheben Sie [Problem #2719](https://github.com/Microsoft/azuredatastudio/issues/2719): Design mit hohem Kontrast Doubles/Tripeln Symbole
+- Beheben Sie [Problem #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Fügen Sie eine Befehlszeilenschnittstelle für die Verbindung mit einer SQL Server
+- Beheben Sie [Problem #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): Abfrage-Plan-Design-Unterstützung hinzufügen
+- ...
+
+Ausführliche Informationen finden Sie unter den [Änderungsprotokoll](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), und [Versionen](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="october-2018-october-release"></a>Oktober 2018 (Oktober-Version)
 
@@ -58,7 +83,7 @@ Allgemein verfügbare Version von Azure Data Studio (früher SQL Operations Stud
     - Verwenden Sie die PROSE Code Accelerator-Bibliotheken in Ihrem Notebook, um Dateitypen Format und die Daten für schnelle datenvorbereitung erfahren.
   - Azure-Ressourcen-Explorer
     - Die Azure-Ressourcen-Explorer-Ansicht können Sie datenbezogene Endpunkte für Ihre Azure-Konten durchsuchen, und erstellen im Objekt-Explorer-Verbindungen für sie. In dieser Version werden die Azure SQL-Datenbanken und Servern unterstützt.
-  - SQL Server-Polybase Erstellen externer Tabellen-Assistent
+  - SQL Server-PolyBase Erstellen externer Tabellen-Assistent
     - Erstellen Sie eine externe Tabelle und die unterstützenden Systemmetadaten-Strukturen mit einer benutzerfreundlichen Assistenten an. In dieser Version werden die SQL Server- und Oracle-Remoteserver unterstützt.
 - Fragen Sie Ergebnisraster Verbesserungen der Leistung und UX für große Anzahl von Resultsets.
 - Visual Studio Code-Quellcode Aktualisieren von "1,23", um 1.26.1 mit Rasterlayout und verbesserte-Einstellungs-Editor (Vorschau).

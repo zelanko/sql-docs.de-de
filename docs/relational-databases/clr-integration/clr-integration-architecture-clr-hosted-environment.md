@@ -27,12 +27,12 @@ ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 10eaa071ed8fa57bb648e5ece87dc91bb4cb62e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 455b7b8e5b12f330a970589b04844d3a62f983b8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779188"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661299"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR-Integrationsarchitektur: Von CLR gehostete Umgebung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47779188"
  Als typsicherer Code wird Code bezeichnet, der nur auf genau definierte Weise auf Arbeitsspeicherstrukturen zugreift. Bei typsicherem Code ist z. B. bei einem gültigen Objektverweis der Speicherzugriff an festen Offsets möglich, die tatsächlichen Feldmembern entsprechen. Wenn der Code jedoch auf den Speicher an beliebigen Offsets innerhalb oder außerhalb des Gültigkeitsbereichs des Speichers zugreift, der zu dem Objekt gehört, ist er nicht typsicher. Wenn Assemblys in die CLR geladen werden, bevor die MSIL mithilfe der JIT-Kompilierung (Just-In-Time) kompiliert wurde, führt die Laufzeit eine Überprüfungsphase aus, die den Code hinsichtlich seiner Typsicherheit untersucht. Code, der diese Überprüfung erfolgreich besteht, wird nachweisbar typsicherer Code genannt.  
   
 ###### <a name="application-domains"></a>Anwendungsdomänen  
- Die CLR unterstützt die Definition von Anwendungsdomänen als Ausführungszonen in einem Hostprozess, bei dem verwaltete Codeassemblys geladen und ausgeführt werden können. Die Anwendungsdomänengrenze bietet Isolierung zwischen Assemblys. Die Assemblys werden hinsichtlich der Sichtbarkeit von statischen Variablen und Datenelementen und der Möglichkeit, Code dynamisch aufzurufen, isoliert. Anwendungsdomänen sind auch der Mechanismus zum Laden und Entladen von Code. Code kann aus dem Arbeitsspeicher durch das Entladen der Anwendungsdomäne entfernt werden. Weitere Informationen finden Sie unter [Anwendungsdomänen und Sicherheit der CLR-Integration](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
+ Die CLR unterstützt die Definition von Anwendungsdomänen als Ausführungszonen in einem Hostprozess, bei dem verwaltete Codeassemblys geladen und ausgeführt werden können. Die Anwendungsdomänengrenze bietet Isolierung zwischen Assemblys. Die Assemblys werden hinsichtlich der Sichtbarkeit von statischen Variablen und Datenelementen und der Möglichkeit, Code dynamisch aufzurufen, isoliert. Anwendungsdomänen sind auch der Mechanismus zum Laden und Entladen von Code. Code kann aus dem Arbeitsspeicher durch das Entladen der Anwendungsdomäne entfernt werden. Weitere Informationen finden Sie unter [Anwendungsdomänen und Sicherheit der CLR-Integration](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
   
 ###### <a name="code-access-security-cas"></a>Codezugriffssicherheit (Code Access Security, CAS)  
  Das CLR-Sicherheitssystem bietet eine Methode zum Steuern der Vorgangstypen, die von verwaltetem Code ausgeführt werden können, indem dem Code Berechtigungen zugewiesen werden. Codezugriffsberechtigungen werden auf der Grundlage der Identität des Codes (z. B. die Signatur der Assembly oder die Quelle des Codes) zugewiesen.  

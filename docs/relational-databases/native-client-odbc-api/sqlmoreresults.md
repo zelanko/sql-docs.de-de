@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 297b9cad27440f98f905c07fa39541a1705cd9e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c7c0a26e3960921ab0c97191538f721cd71d31f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839928"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674969"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLMoreResults** ermöglicht es der Anwendung, mehrere Ergebniszeilensätze abzurufen. Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung, die eine COMPUTE-Klausel enthält, oder ein übermittelter Batch ODBC- oder [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen veranlasst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber, mehrere Resultsets zu generieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt das Erstellen eines Servercursors zur Verarbeitung der Ergebnisse in beiden Fällen nicht. Deshalb muss der Entwickler sicherstellen, dass die ODBC-Anweisung blockierend wirkt. Der Entwickler muss die zurückgegebenen Daten vollständig nutzen oder die ODBC-Anweisung abbrechen, bevor Daten aus anderen aktiven Anweisungen für die Verbindung verarbeitet werden.  
+  **SQLMoreResults** ermöglicht es der Anwendung, mehrere Ergebniszeilensätze abzurufen. Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung, die eine COMPUTE-Klausel enthält, oder ein übermittelter Batch ODBC- oder [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen veranlasst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber, mehrere Resultsets zu generieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt das Erstellen eines Servercursors zum Verarbeiten der Ergebnisse keinesfalls zu. Deshalb muss der Entwickler sicherstellen, dass die ODBC-Anweisung blockierend wirkt. Der Entwickler muss die zurückgegebenen Daten vollständig nutzen oder die ODBC-Anweisung abbrechen, bevor Daten aus anderen aktiven Anweisungen für die Verbindung verarbeitet werden.  
   
 > [!NOTE]  
 >  Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung, die eine COMPUTE-Klausel enthält, wird nur beim Herstellen einer Verbindung zu einer Serverversion vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]unterstützt.  
@@ -165,7 +165,7 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLMoreResults-Funktion](http://go.microsoft.com/fwlink/?LinkId=59357)   
+ [SQLMoreResults-Funktion](https://go.microsoft.com/fwlink/?LinkId=59357)   
  [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

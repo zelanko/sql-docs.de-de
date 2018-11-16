@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 019d3d1491425854b681a5c1e8dd08e5228af2ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 003fc3496a68f0437dc2c7d313179da1f37a9c7b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623719"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669059"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Feedback von Kunden für SQLServer unter Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "47623719"
 
 Microsoft SQL Server erfasst standardmäßig Informationen darüber, wie Kunden die Anwendung verwenden. Dies bedeutet, dass SQL Server Informationen zur Installationserfahrung, Nutzung und Leistung sammelt. Mit diesen Informationen kann Microsoft besser an die Bedürfnisse der Kunden anpassen. Microsoft erfasst z.B. Informationen zu Fehlercodes von Kunden, sodass wir damit verknüpfte Probleme beheben, die Dokumentation zu SQL Server verbessern und bestimmen können, ob wir dem Produkt weitere Funktionen hinzufügen müssen, um die Benutzererfahrung zu optimieren.
 
-Dieses Dokument enthält Informationen darüber, welche Arten von Informationen gesammelt werden und Informationen zum Konfigurieren von Microsoft SQL Server unter Linux zum Senden von diesem gesammelten Informationen an Microsoft. SQL Server 2017 beinhaltet eine datenschutzerklärung, die Informationen erläutert, wir und keine von Benutzern sammeln. Weitere Informationen finden Sie unter den [Datenschutzbestimmungen](http://go.microsoft.com/fwlink/?LinkID=868444).
+Dieses Dokument enthält Informationen darüber, welche Arten von Informationen gesammelt werden und Informationen zum Konfigurieren von Microsoft SQL Server unter Linux zum Senden von diesem gesammelten Informationen an Microsoft. SQL Server 2017 beinhaltet eine datenschutzerklärung, die Informationen erläutert, wir und keine von Benutzern sammeln. Weitere Informationen finden Sie unter den [Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkID=868444).
 
 Microsoft sendet nicht die folgenden Informationen mit diesem Mechanismus:
 

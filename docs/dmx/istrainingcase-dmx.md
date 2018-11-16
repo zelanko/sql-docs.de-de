@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 00344eeb38f3aae5cae7ac25c1b65b403cc85cb9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6c42ecb976884573e313c06adc4241e202e123df
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37994472"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599931"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ IsTrainingCase()
  Um Fälle zurückzugeben, die Teil des testdatasets sind, verwenden Sie die Funktion [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md).  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird das clustering Datamining-Modell aus der targeted mailing-Szenario, in der [Lernprogramm zu Data Mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Die Abfrage gibt nur die Fälle zurück, die zum Trainieren des Miningmodells verwendet wurden. Darüber hinaus werden die Trainingsfälle auf Kunden unter 40 eingeschränkt.  
+ Im folgenden Beispiel wird das clustering Datamining-Modell aus der targeted mailing-Szenario, in der [Lernprogramm zu Data Mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Die Abfrage gibt nur die Fälle zurück, die zum Trainieren des Miningmodells verwendet wurden. Darüber hinaus werden die Trainingsfälle auf Kunden unter 40 eingeschränkt.  
   
 ```  
 SELECT *  

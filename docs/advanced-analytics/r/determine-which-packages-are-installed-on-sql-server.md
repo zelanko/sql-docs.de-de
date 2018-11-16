@@ -1,31 +1,31 @@
 ---
-title: Abrufen von Informationen von R und Python-Paket für SQL Server-Machine Learning | Microsoft Docs
-description: R und Python-Paketversion ermitteln, überprüfen Sie die Installation und eine Liste der installierten Pakete auf SQL Server R Services "oder" Machine Learning Services abzurufen.
+title: Abrufen von Informationen von R und Python-Paket in SQL Server Machine Learning | Microsoft-Dokumentation
+description: R und Python-Paket-Version zu ermitteln, Überprüfen der Installation und Abrufen einer Liste der installierten Pakete auf SQL Server R Services oder Machine Learning-Dienste.
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 11/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 85ea4658ca8b60fc24d7e4f7849de1655eab6082
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 96cda599e260982b26e6c565bd38c5097fc01763
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707888"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291536"
 ---
-#  <a name="get-r-and-python-package-information"></a>Abrufen von Informationen für R und Python-Paket
+#  <a name="get-r-and-python-package-information"></a>Abrufen von Informationen von R und Python-Paket
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Auch müssen wenn Sie mit mehreren Umgebungen oder Installationen von R oder Python arbeiten, Sie sicherstellen, dass der Code, den Sie ausführen, die erwartete Umgebung für Python oder den Arbeitsbereich "richtige" für r verwendet wird Upgrade von Machine learning-Komponenten über beispielsweise [Bindung](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md), möglicherweise der Pfad zum R-Bibliothek in einem anderen Ordner als den Standardwert. Wenn Sie R-Client oder eine Instanz des eigenständigen Servers installieren, müssen Sie außerdem möglicherweise mehrere R-Bibliotheken auf Ihrem Computer.
+In einigen Fällen müssen wenn Sie mit mehreren Umgebungen oder Installationen von R oder Python arbeiten, Sie sicherstellen, dass der Code, den Sie ausführen, die erwartete Umgebung für Python oder dem richtigen Arbeitsbereich für r verwendet wird Angenommen, Sie aktualisiert haben, die Machine learning-Komponenten über [Bindung](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md), der Pfad zu der R-Bibliothek möglicherweise einen anderen Ordner als den Standardwert. Auch wenn Sie R-Client oder eine Instanz von dem eigenständigen Server installieren, müssen Sie mehrere R-Bibliotheken auf Ihrem Computer möglicherweise.
 
-R und Python-Skript-Beispiele in diesem Artikel veranschaulichen das Abrufen der Pfad und die Version von Paketen, die von SQL Server verwendet.
+R und Python-Skript-Beispiele in diesem Artikel veranschaulichen um den Pfad und die Version von SQL Server verwendete Pakete zu erhalten.
 
-## <a name="get-the-r-library-location"></a>Abrufen des Standorts der R-Bibliothek
+## <a name="get-the-r-library-location"></a>Erhalten Sie den Speicherort der R-Bibliothek
 
-Für alle Versionen von SQL Server, führen Sie die folgende Anweisung zum Überprüfen der [Standardbibliothek R-Paket](installing-and-managing-r-packages.md) für die aktuelle Instanz:
+Für alle Versionen von SQL Server, führen Sie die folgende Anweisung aus, um zu überprüfen die [Standard R-paketbibliothek](installing-and-managing-r-packages.md) für die aktuelle Instanz:
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -35,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-Optional können Sie [RxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) in neueren Versionen von "revoscaler" in SQL Server 2017 Machine Learning Services oder [R Services aktualisierten R auf mindestens "revoscaler" 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). Diese gespeicherte Prozedur gibt den Pfad der Instanz-Bibliothek und die Version von "revoscaler" von SQL Server verwendet:
+Optional können Sie [RxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) in neueren Versionen von RevoScaleR in SQL Server 2017-Machine Learning Services oder [R Services aktualisiert R, um mindestens RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). Diese gespeicherte Prozedur gibt den Pfad der Instanz-Bibliothek und die Version von RevoScaleR, die von SQL Server verwendet:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -48,7 +48,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE]
-> Die [RxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) Funktion kann nur auf dem lokalen Computer ausgeführt werden. Die Funktion kann nicht für Remoteverbindungen Bibliothekspfade zurück.
+> Die [RxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) Funktion kann nur auf dem lokalen Computer ausgeführt werden. Die Funktion kann nicht für Remoteverbindungen Library-Pfade zurück.
 
 **Ergebnisse**
 
@@ -60,7 +60,7 @@ STDOUT message(s) from external script:
 
 ## <a name="get-the-python-library-location"></a>Abrufen des Standorts der Python-Bibliothek
 
-Für **Python** in SQL Server-2017, führen Sie die folgende Anweisung aus, um zu überprüfen, ob die Standardbibliothek für die aktuelle Instanz. In diesem Beispiel gibt die Liste der Ordner für die Python `sys.path` Variable. Die Liste enthält das aktuelle Verzeichnis und den Pfad der Standardbibliothek.
+Für **Python** in SQL Server 2017, führen Sie die folgende Anweisung aus, um zu überprüfen, ob die Standardbibliothek für die aktuelle Instanz. In diesem Beispiel gibt die Liste der Ordner für die Python `sys.path` Variable. Die Liste enthält das aktuelle Verzeichnis und den Pfad für die standard-Bibliothek.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -83,15 +83,15 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\setuptools-27.2.0-py3.5.egg
 ```
 
-Weitere Informationen zu den Variablen `sys.path` und wie sie zum Festlegen der Interpreter Suchpfad für Module verwendet wird, finden Sie unter der [Python-Dokumentation](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
+Weitere Informationen zur Variablen `sys.path` und wie es zum Festlegen des Interpreters Suchpfad für Module verwendet wird, finden Sie unter den [Python-Dokumentation](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
 
 ## <a name="list-all-packages"></a>Liste aller Pakete
 
-Es gibt mehrere Möglichkeiten, die Sie eine vollständige Liste der installierten Pakete abrufen können. Ein Vorteil der ausgeführten Paket List-Befehle aus Sp_execute_external_script ist, dass Sie sichergestellt, dass werden Pakete, die in der Bibliothek für die Instanz installiert.
+Es gibt mehrere Möglichkeiten, die Sie eine vollständige Liste der derzeit installierten Pakete abrufen können. Ein Vorteil der Liste der Paketbefehle sp_execute_external_script ausgeführt wird, dass Sie garantiert in der Bibliothek der Instanz installierten Pakete abzurufen.
 
 ### <a name="r"></a>R
 
-Im folgenden Beispiel wird die R-Funktion `installed.packages()` in einem [!INCLUDE [tsql](..\..\includes\tsql-md.md)] gespeicherte Prozedur, eine Matrix aus Paketen abzurufen, die in der Bibliothek R_SERVICES für die aktuelle Instanz installiert wurden. Dieses Skript paketfelder aus Name und Version in der DESCRIPTION-Datei zurückgibt, wird nur der Name zurückgegeben.
+Im folgenden Beispiel wird die R-Funktion `installed.packages()` in einem [!INCLUDE [tsql](..\..\includes\tsql-md.md)] gespeicherte Prozedur, um eine Matrix aus Paketen abzurufen, die in der Bibliothek R_SERVICES für die aktuelle Instanz installiert wurden. Dieses Skript paketfelder aus Name und Version in der DESCRIPTION-Datei zurückgibt, wird nur der Name zurückgegeben werden.
 
 ```SQL
 EXECUTE sp_execute_external_script
@@ -105,11 +105,11 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-Weitere Informationen zu den optionalen und Standardfelder für das Beschreibungsfeld der R-Paket finden Sie unter [ https://cran.r-project.org ](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file).
+Weitere Informationen zu den optionalen und Standardfelder für das Beschreibungsfeld der R-Pakets, finden Sie unter [ https://cran.r-project.org ](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file).
 
 ### <a name="python"></a>Python
 
-Die `pip` Modul wird standardmäßig installiert, und unterstützt viele Vorgänge zum Auflisten installiert Pakete, zusätzlich zu den vom standard Python unterstützt. Sie können ausführen `pip` aus einem Python Eingabeaufforderung natürlich, aber Sie können auch einige Pip-Funktionen aufrufen von `sp_execute_external_script`.
+Die `pip` Modul wird standardmäßig installiert, und unterstützt viele Vorgänge zum Auflisten der installierten Pakete, zusätzlich zu den von der Standardversion von Python unterstützt. Sie können ausführen `pip` aus einem Python-Eingabeaufforderung, natürlich, aber Sie können auch einige Pip-Funktionen aufrufen aus `sp_execute_external_script`.
 
 ```sql
 EXECUTE sp_execute_external_script 
@@ -125,15 +125,15 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS (( PackageVersion nvarchar (150) ))
 ```
 
-Beim Ausführen `pip` über die Befehlszeile stehen viele weitere Funktionen: `pip list` Ruft alle Pakete, die installiert werden, wohingegen `pip freeze` Listet die Pakete installiert, indem Sie `pip`, und nicht auflisten von Paketen, die selbst pip hängt ab. Sie können auch `pip freeze` um eine Abhängigkeitsdatei zu generieren.
+Bei der Ausführung `pip` über die Befehlszeile, es gibt viele weitere Funktionen: `pip list` ruft Sie alle Pakete, die installiert werden, während `pip freeze` Listet die Pakete installiert, indem Sie `pip`, und nicht-Pakete, die selbst pip auflisten hängt ab. Sie können auch `pip freeze` zum Generieren einer Abhängigkeitsdatei.
 
 ## <a name="find-a-single-package"></a>Suchen eines einzelnen Pakets
 
-Wenn Sie ein Paket installiert haben und möchten sicherstellen, dass er für eine bestimmte SQL Server-Instanz verfügbar ist, können Sie durch Ausführen der folgenden Aufruf der gespeicherten Prozedur, laden Sie das Paket und nur Nachrichten zurück.
+Wenn Sie ein Paket installiert haben und möchten sicherstellen, dass er für eine bestimmte SQL Server-Instanz verfügbar ist, können Sie durch Ausführen der folgenden Aufruf der gespeicherten Prozedur zum Laden Sie das Paket, und nur diejenigen Nachrichten zurück.
 
 ### <a name="r"></a>R
 
-In diesem Beispiel sucht und lädt die Bibliothek "revoscaler" aus, falls verfügbar.
+In diesem Beispiel sucht und lädt die RevoScaleR-Bibliothek, falls verfügbar.
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -142,13 +142,13 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-+ Wenn das Paket gefunden wird, wird eine Meldung zurückgegeben: "Befehle wurde erfolgreich abgeschlossen."
++ Wenn das Paket gefunden wird, wird eine Meldung zurückgegeben: "Befehle erfolgreich abgeschlossen."
 
-+ Wenn das Paket gespeichert oder geladen werden kann, erhalten Sie eine Fehlermeldung, die mit dem Text: "ist kein Paket namens"MissingPackageName""
++ Wenn das Paket gespeichert oder geladen werden kann nicht, erhalten Sie eine Fehlermeldung, die mit dem Text: "ist kein Paket namens"MissingPackageName""
 
 ### <a name="python"></a>Python
 
-Das entsprechende Kontrollkästchen für Python ausgeführt werden kann, aus der Python-shell, mit `conda` oder `pip` Befehle. Führen Sie stattdessen diese Anweisung in einer gespeicherten Prozedur an:
+Das entsprechende Kontrollkästchen für Python kann ausgeführt werden, aus der Python-shell, mit `conda` oder `pip` Befehle. Alternativ führen Sie diese Anweisung in einer gespeicherten Prozedur:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -162,63 +162,39 @@ EXECUTE sp_execute_external_script
   print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")'
 ```
 
-## <a name="get-package-information-in-r-and-python-tools"></a>Abrufen von Paketinformationen in R und Python-tools
+<a name="get-package-vers"></a>
 
-Allen vorherigen Anweisungen wird davon ausgegangen, dass Sie eine SQL Server-Tool wie Management Studio (SSMS) verwenden. Wenn Sie mithilfe von R und Python-Tools lieber, erläutert in den folgenden Anweisungen und Informationen über eine Befehlszeile R oder Python zu erhalten.
+## <a name="get-package-version"></a>Erste Version des Pakets
 
-### <a name="r-commands"></a>R-Befehle
+Sie können R und Python-Paket Versionsinformationen, die mithilfe von Management Studio.
 
-Die Instanz-Bibliothek für R ist \Programme\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library.
+### <a name="r-package-version"></a>Die Version der R-Pakets
 
-Starten Sie den standard-R-Tools von diesen Speicherorten aus, um sicherzustellen, dass Pakete aus der Bibliothek Instanz verwendet werden:
+Diese Anweisung gibt die RevoScaleR-Paket-Version und die Basis-R-Version zurück.
 
-+ \MSSQL14. MSSQLSERVER\R_SERVICES\bin\R.exe für eine R-Eingabeaufforderung
-+ \MSSQL14. MSSQLSERVER\R_SERVICES\bin\x64\Rgui.exe für ein R-Konsolen-app
+```sql
+EXECUTE sp_execute_external_script
+  @language = N'R',
+  @script = N'
+print(packageDescription("RevoScaleR"))
+print(packageDescription("base"))
+'
+```
 
-Sie können R-Standardbefehle oder "revoscaler"-Befehle verwenden, Paketinformationen abgerufen. Die RevoScaleR-Paket wird automatisch geladen. 
+### <a name="python-package-version"></a>Die Version der Python-Pakets
 
-Rückgabeinformationen Sie RevoScaleR-Paket:
+Diese Anweisung gibt die Revoscalepy-Paketversion und den Python-Version zurück.
 
-    > print(Revo.version)
-
-Eine Liste aller installierten Pakete zurück:
-
-    > installed.packages()
-
-Die Version von r zurückgegeben
-
-    > packageDescription("base")
-
-### <a name="python-commands"></a>Python-Befehle
-
-Unterstützung der Python ist nur in SQL Server-2017. Die Instanz-Bibliothek für Python ist \Programme\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\.
-
-Öffnen Sie die Python-Befehlsfenster, von diesem Speicherort aus, um sicherzustellen, dass Pakete aus der Bibliothek Instanz verwendet werden:
-
-+ \MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Python.exe
-
-Öffnen Sie die interaktive Hilfe:
-
-    > help()
-
-Geben Sie einen Modulnamen ein Hilfe zum Abrufen der Paketinhalt, Version und Dateispeicherort:
-
-    help> revoscalepy
-
-<a name="pip-conda"></a>
-
-### <a name="python-package-managers-pip-and-conda"></a>Python Paket-Manager (Pip und Conda)
-
-Anaconda enthält Python-Tools zum Verwalten von Paketen. In einer standardmäßigen werden Instanz, Pip Conda und anderen Tools im Ordner \Programme\Microsoft SQL Server\MSSQL14 gefunden. MSSQLSERVER\PYTHON_SERVICES\Scripts.
-
-SQL Server-Setup ist nicht hinzugefügt werden, dass Pip oder Conda zum Systempfad und auf einer Produktionsinstanz von SQL Server beibehalten unbedeutende ausführbaren Dateien aus dem Pfad eine bewährte Methode ist. Allerdings können für Entwicklungs- und testumgebungen, Sie den Ordner "Skripts" System PATH-Umgebungsvariable Pip und Conda auf Befehl von jedem Standort ausgeführt hinzufügen.
-
-1. Wechseln Sie zu C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Scripts
-
-1. Mit der rechten Maustaste **conda.exe** > **als Administrator ausführen**, und geben Sie `conda list` zurückzugebenden eine Liste der Pakete, die in der aktuellen Umgebung installiert.
-
-1. Auf ähnliche Weise mit der rechten Maustaste **pip.exe** > **als Administrator ausführen**, und geben Sie `pip list` auf die gleichen Informationen zurückzugeben. 
-
+```sql
+EXECUTE sp_execute_external_script
+  @language = N'Python',
+  @script = N'
+import revoscalepy
+import sys
+print(revoscalepy.__version__)
+print(sys.version)
+'
+```
 
 ## <a name="next-steps"></a>Nächste Schritte
 

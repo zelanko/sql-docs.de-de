@@ -23,12 +23,12 @@ ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 366c93b8110f8e9f0a9ef5bb418638c841585d5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f7ff454dd4464fab5173c4d0022bd94543c1dad
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164660"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814043"
 ---
 # <a name="group-attribute-members-discretization"></a>Gruppieren von Attributelementen (Diskretisierung)
   Eine Elementgruppe ist eine vom System generierte Auflistung von aufeinander folgenden Dimensionselementen. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können die Elemente eines Attributs in eine Anzahl von Elementgruppen mithilfe des so genannten Diskretisierungsprozesses gruppiert werden. In der Ebene einer Hierarchie sind entweder nur Elementgruppen oder nur Elemente enthalten. Wenn geschäftliche Benutzer eine Ebene durchsuchen, die Elementgruppen enthält, werden die Namen und Zellwerte der Elementgruppen angezeigt. Die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Unterstützung von Elementgruppen generierten Elemente werden als Gruppierungselemente bezeichnet und ähneln gewöhnlichen Elementen.  
@@ -38,15 +38,15 @@ ms.locfileid: "48164660"
 |`DiscretizationMethod`-Einstellung|Description|  
 |--------------------------------------|-----------------|  
 |`None`|Zeigt die Elemente an.|  
-|`Automatic`|Wählt die Methode, die Daten am besten darstellt: entweder die `EqualAreas` Methode oder der `Clusters` Methode.|  
+|`Automatic`|Wählt die Methode aus, welche die Daten besser darstellt: entweder die `EqualAreas`- oder `Clusters`-Methode.|  
 |`EqualAreas`|Versucht, die Elemente des Attributs in Gruppen mit der gleichen Anzahl von Elementen zu unterteilen.|  
 |`Clusters`|Versucht, die Elemente des Attributs in Gruppen zu unterteilen, wobei Stichproben der Trainingsdaten entnommen werden, diese als Initialisierungswerte einer Reihe von zufällig gewählten Punkten verwendet werden und mehrere Iterationen des Clusteringalgorithmus anhand der EM-Clusteringmethode (Expectation Maximization) ausgeführt werden.<br /><br /> Diese Methode ist nützlich, weil sie für jede Verteilungskurve verwendet werden kann. Sie ist jedoch aufwändiger, da sie mehr Verarbeitungszeit beansprucht.|  
   
  Die `DiscretizationNumber`-Eigenschaft von Attributen gibt die Anzahl von anzuzeigenden Gruppen an. Wenn die Eigenschaft auf den Standardwert 0 festgelegt ist, wird in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Anzahl von Gruppen bestimmt, indem abhängig von der `DiscretizationMethod`-Einstellung Stichproben der Daten entnommen oder die Daten gelesen werden.  
   
- Die Sortierreihenfolge der Elemente in den Elementgruppen wird gesteuert durch Verwendung der `OrderBy` -Eigenschaft des Attributs. Die Elemente einer Elementgruppe werden auf Basis dieser Sortierreihenfolge fortlaufend sortiert.  
+ Die Sortierreihenfolge der Elemente in den Elementgruppen wird mithilfe der `OrderBy`-Eigenschaft des Attributs gesteuert. Die Elemente einer Elementgruppe werden auf Basis dieser Sortierreihenfolge fortlaufend sortiert.  
   
- Mit Elementgruppen wird üblicherweise ein Drilldown von einer Ebene mit wenigen Elementen zu einer Ebene mit mehreren Elementen durchgeführt. Damit die Benutzer einen Drilldown zwischen Ebenen durchführen können, ändern Sie die `DiscretizationMethod`-Eigenschaft des Attributs für die Ebene, die zahlreiche Elemente enthält, von `None` in eine der in der vorigen Tabelle beschriebenen Diskretisierungsmethoden. Beispielsweise enthält eine Client-Dimension eine Client Name-Attributhierarchie mit 500.000 Elementen. Sie können dieses Attribut in Client Groups umbenennen und Festlegen der `DiscretizationMethod` Eigenschaft, um `Automatic` , die Elementgruppen auf der Elementebene der Attributhierarchie anzuzeigen.  
+ Mit Elementgruppen wird üblicherweise ein Drilldown von einer Ebene mit wenigen Elementen zu einer Ebene mit mehreren Elementen durchgeführt. Damit die Benutzer einen Drilldown zwischen Ebenen durchführen können, ändern Sie die `DiscretizationMethod`-Eigenschaft des Attributs für die Ebene, die zahlreiche Elemente enthält, von `None` in eine der in der vorigen Tabelle beschriebenen Diskretisierungsmethoden. Beispielsweise enthält eine Client-Dimension eine Client Name-Attributhierarchie mit 500.000 Elementen. Sie können dieses Attribut in Client Groups umbenennen und die `DiscretizationMethod`-Eigenschaft auf `Automatic` festlegen, um die Elementgruppen auf der Elementebene der Attributhierarchie anzuzeigen.  
   
  Sie können eine weitere Hierarchie für das Client Name-Attribut mit Bindung an dieselbe Tabellenspalte erstellen, um einen Drilldown auf einzelne Clients der jeweiligen Gruppe durchzuführen. Erstellen Sie dann eine neue Benutzerhierarchie auf Basis der beiden Attribute. Die oberste Ebene basiert dann auf dem Client Groups-Attribut, und die untere Ebene basiert auf dem Client Name-Attribut. Die `IsAggregatable`-Eigenschaft hat für beide Attribute den Wert `True`. Somit kann der Benutzer in der Hierarchie die (Alle)-Ebene zum Anzeigen der Gruppenelemente erweitern bzw. die Gruppenelemente zum Anzeigen der Blattelemente der Hierarchie. Sie haben die Möglichkeit, die `AttributeHierarchyVisible`-Eigenschaft im entsprechenden Attribut auf `False` festzulegen, um die Gruppen- bzw. Clientebene auszublenden.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "48164660"
   
  `<First definition> ::= <Name expression>`  
   
- `<Intermediate defintion> ::= <Name expression>`  
+ `<Intermediate definition> ::= <Name expression>`  
   
  `<Last definition> ::= <Name expression>`  
   
- Der `<First definition>` -Parameter wird nur auf die erste bzw. auf die einzige von der Diskretisierungsmethode generierte Elementgruppe angewendet. Wenn die optionalen `<Intermediate definition>` - und `<Last definition>` -Parameter nicht bereitgestellt werden, wird der `<First definition>` -Parameter für alle für dieses Attribut generierten Measuregruppen verwendet.  
+ Der `<First definition>`-Parameter wird nur auf die erste bzw. auf die einzige von der Diskretisierungsmethode generierte Elementgruppe angewendet. Wenn die optionalen `<Intermediate definition>` - und `<Last definition>` -Parameter nicht bereitgestellt werden, wird der `<First definition>` -Parameter für alle für dieses Attribut generierten Measuregruppen verwendet.  
   
  Der `<Last definition>` -Parameter wird nur auf die letzte von der Diskretisierungsmethode generierte Elementgruppe angewendet.  
   

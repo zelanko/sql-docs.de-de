@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/09/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: d772ba3ad5c40437ca819ae7992a717057c066bb
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: f3a15d63b38ac92a6dcdba7363d1fa5ccd05534b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051032"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700728"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Wiederherstellen einer Datenbank in SQL Server big Data-Cluster master-Instanz
 
@@ -25,7 +25,7 @@ Sichern Sie zunächst Ihre vorhandenen SQL Server-Datenbank über entweder SQL S
 In diesem Artikel zeigt, wie Sie die AdventureWorks-Datenbank wiederherstellen, jedoch können Sie datenbanksicherung. 
 
 > [!TIP]
-> Sie können die AdventureWorks-Sicherung [hier](https://www.microsoft.com/en-us/download/details.aspx?id=49502).
+> Sie können die AdventureWorks-Sicherung [hier](https://www.microsoft.com/download/details.aspx?id=49502).
 
 ## <a name="copy-the-backup-file"></a>Kopieren der Sicherungsdatei
 

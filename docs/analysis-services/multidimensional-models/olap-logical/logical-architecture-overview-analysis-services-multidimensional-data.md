@@ -1,5 +1,5 @@
 ---
-title: Übersicht über logische Architektur (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Übersicht über logische Architektur (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b6c563dcbd00157f05115975c8e4e2da2ee64184
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 83e91607dfc46bfb60bbc4874fd06c6ae0fd23e9
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024517"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559385"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Analysis Services wird in einem Serverbereitstellungsmodus ausgeführt, durch den die von den unterschiedlichen Analysis Services-Modelltypen verwendete Arbeitsspeicherarchitektur und Laufzeitumgebung bestimmt wird. Der Servermodus wird während der Installation bestimmt. **Mehrdimensionale und Data Mining-Modus** herkömmliches OLAP und Datamining unterstützt. **Tabellenmodus** tabellarische Modelle unterstützt. **Im integrierten SharePoint-Modus** bezieht sich auf einer Instanz von Analysis Services, die als installiert wurde [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint, zum Laden und Abfragen von Excel oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Datenmodellen innerhalb einer Arbeitsmappe.  
+  Analysis Services wird in einem Serverbereitstellungsmodus ausgeführt, durch den die von den unterschiedlichen Analysis Services-Modelltypen verwendete Arbeitsspeicherarchitektur und Laufzeitumgebung bestimmt wird. Der Servermodus wird während der Installation bestimmt. **Mehrdimensionaler und Data Mining-Modus** unterstützt herkömmliches OLAP und Datamining. **Im tabellarischen Modus** unterstützt tabellarische Modelle. **Integrierten SharePoint-Modus** bezieht sich auf eine Instanz von Analysis Services, die als installiert wurde [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint verwendet werden, zum Laden und Abfragen von Excel oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Datenmodelle in einer Arbeitsmappe.  
   
  In diesem Thema wird die grundlegende Architektur von Analysis Services bei der Ausführung im mehrdimensionalen und Data Mining-Modus erläutert. Weitere Informationen zu anderen Modi finden Sie unter [Tabellenmodellierung ](../../../analysis-services/tabular-models/tabular-models-ssas.md) und [Vergleichen von tabellarischen und mehrdimensionalen Lösungen ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
 ## <a name="basic-architecture"></a>Grundlegende Architektur  
- Eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz kann mehrere Datenbanken enthalten, und eine Datenbank kann gleichzeitig OLAP-Objekte und Data Mining-Objekte enthalten. Anwendungen stellen eine Verbindung mit einer angegebenen Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und einer angegebenen Datenbank her. Ein Servercomputer kann mehrere Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] hosten. Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] heißen "\<ServerName >\\< InstanceName\>". Die folgende Abbildung zeigt alle genannten Beziehungen zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekte.  
+ Eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz kann mehrere Datenbanken enthalten, und eine Datenbank kann gleichzeitig OLAP-Objekte und Data Mining-Objekte enthalten. Anwendungen stellen eine Verbindung mit einer angegebenen Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und einer angegebenen Datenbank her. Ein Servercomputer kann mehrere Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] hosten. Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ihre Namen lauten "\<ServerName >\\< InstanceName\>". Die folgende Abbildung zeigt alle genannten Beziehungen zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekte.  
   
  ![AMO ausgeführte objektbeziehungen](../../../analysis-services/multidimensional-models/olap-logical/media/amo-runningobjects.gif "AMO ausgeführte objektbeziehungen")  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34024517"
   
  Wenn dies nicht ausdrücklich überschrieben wird, erbt ein Element die Details dieser wiederkehrenden Elementgruppe von der höheren Ebene. Z. B. die **Übersetzungen** für eine **CubeDimension** sind identisch mit der **Übersetzungen** für sein Vorgängerelement **Cube**.  
   
- Um die von einem Objekt einer höheren Ebene geerbten Eigenschaften explizit zu überschreiben, muss das Objekt nicht explizit die gesamte Struktur und die gesamten Eigenschaften des Objekts der höheren Ebene wiederholen. Die einzigen Eigenschaften, die von einem Objekt explizit angegeben werden müssen, sind die Eigenschaften, die von dem Objekt überschrieben werden sollen. Z. B. eine **CubeDimension** listet möglicherweise nur die **Hierarchien** , die in deaktiviert werden, müssen die **Cube**, für die die Sichtbarkeit geändert werden muss, oder für die einige **Ebene** Details wurden nicht bereitgestellt wurde, an die **Dimension** Ebene.  
+ Um die von einem Objekt einer höheren Ebene geerbten Eigenschaften explizit zu überschreiben, muss das Objekt nicht explizit die gesamte Struktur und die gesamten Eigenschaften des Objekts der höheren Ebene wiederholen. Die einzigen Eigenschaften, die von einem Objekt explizit angegeben werden müssen, sind die Eigenschaften, die von dem Objekt überschrieben werden sollen. Z. B. eine **CubeDimension** kann nur die Liste **Hierarchien** verwenden müssen, um in deaktiviert werden, die **Cube**, für die die Sichtbarkeit geändert werden muss, oder für die einige **Ebene** Details wurden nicht bereitgestellt wurde, auf die **Dimension** Ebene.  
   
  Einige auf einem Objekt angegebene Eigenschaften stellen Standardwerte für die gleiche Eigenschaft auf einem untergeordneten oder nachfolgenden Objekt bereit. Beispielsweise stellt **Cube.StorageMode** den Standardwert für **Partition.StorageMode**bereit. ASSL wendet folgende Regeln auf geerbte Standardwerte an:  
   
@@ -63,15 +63,15 @@ ms.locfileid: "34024517"
  Die kleineren alphanumerischen Werte um den Cube herum stellen die Elemente der Dimension dar. Beispiele für Elemente sind ground (Element der Route-Dimension), Africa (Element der Source-Dimension) und 1st quarter (Element der Time-Dimension).  
   
 ### <a name="measures"></a>Measures  
- Die Werte innerhalb der Cubezellen stellen die beiden Measures Packages und Last dar. Das Packages-Measure stellt die Anzahl importierter Pakete an, und die **Summe** Funktion wird zum Aggregieren der measurefakten verwendet. Die Last-Measure gibt das Datum des Empfangs, und die **Max** Funktion wird zum Aggregieren der measurefakten verwendet.  
+ Die Werte innerhalb der Cubezellen stellen die beiden Measures Packages und Last dar. Das Packages-Measure darstellt, die Anzahl importierter Pakete an, und die **Summe** Funktion wird zum Aggregieren der measurefakten verwendet. Die Last-Measure gibt das Datum der Bestätigung, und die **Max** Funktion wird zum Aggregieren der measurefakten verwendet.  
   
 ### <a name="dimensions"></a>Dimensionen  
  Die Route-Dimension stellt dar, auf welchem Weg die Importwaren ihr Ziel erreichen. Zu den Elementen dieser Dimension gehören ground, nonground, air, sea, road und rail. Die Source-Dimension gibt die Orte an, an denen die Importe produziert werden, z. B. Africa oder Asia. Die Time-Dimension stellt die Quartale und Halbjahre eines einzelnen Jahres dar.  
   
 ### <a name="aggregates"></a>Aggregate  
- Anwender des Produkts im geschäftlichen Bereich, die einen Cube verwenden, können beliebige Measurewerte für jedes Element in jeder Dimension bestimmen, unabhängig von der Ebene des Elements innerhalb der Dimension, da Werte von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] auf höheren Ebenen als erforderlich aggregiert werden. So können z. B. die Measurewerte der vorangegangenen Abbildung gemäß einer Standardkalenderhierarchie mithilfe der Calendar Time-Hierarchie in der Time-Dimension, wie im folgenden Diagramm dargestellt, aggregiert werden.  
+ Anwender des Produkts im geschäftlichen Bereich, die einen Cube verwenden, können beliebige Measurewerte für jedes Element in jeder Dimension bestimmen, unabhängig von der Ebene des Elements innerhalb der Dimension, da Werte von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] auf höheren Ebenen als erforderlich aggregiert werden. Beispielsweise können die Measure-Werte in der vorherigen Abbildung gemäß einer Hierarchie aggregiert werden, mithilfe der Calendar Time-Hierarchie in der Time-Dimension, wie im folgenden Diagramm dargestellt.  
   
- ![Diagramm mit Measures entlang der Time-Dimension organisiert](../../../analysis-services/multidimensional-models/olap-logical/media/cubeintro2.gif "Diagramm mit Measures organisiert Time-Dimension")  
+ ![Diagramm mit Measures auf der Zeitdimension organisiert](../../../analysis-services/multidimensional-models/olap-logical/media/cubeintro2.gif "Diagramm mit Measures organisiert Time-Dimension")  
   
  Ergänzend zur Aggregation von Measures mithilfe einer einzigen Dimension können Sie Measures mithilfe von Kombinationen von Elementen unterschiedlicher Dimensionen aggregieren. Auf diese Weise ist es Anwendern des Produkts im geschäftlichen Bereich möglich, in mehreren Dimensionen gleichzeitig Measures auszuwerten. Wenn ein Anwender des Produkts im geschäftlichen Bereich z. B. die Quartalsimporte analysieren möchte, die per Luftfracht aus der östlichen und der westlichen Hemisphäre eingetroffen sind, kann der Anwender eine Abfrage an den Cube eingeben, um das folgende Dataset abzurufen.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "34024517"
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Zuordnen von Measures, Attributen und Hierarchien  
  Die Measures, Attribute und Hierarchien des Cubes in dem Beispiel werden aus den folgenden Spalten in den Fakten- und Dimensionstabellen des Cubes abgeleitet.  
   
-|Measure oder Attribut (Ebene)|Element|Quelltabelle|Quellspalte|Beispielspaltenwert|  
+|Measure oder Attribut (Ebene)|Member|Quelltabelle|Quellspalte|Beispielspaltenwert|  
 |------------------------------------|-------------|------------------|-------------------|-------------------------|  
 |Packages-Measure|Nicht verfügbar|ImportsFactTable|Pakete|12|  
 |Last-Measure|Nicht verfügbar|ImportsFactTable|Letzter|May-03-99|  
@@ -102,7 +102,7 @@ ms.locfileid: "34024517"
 |Half-Attribut in Time-Dimension|1st half, 2nd half|TimeDimensionTable|Half|2nd half|  
 |Quarter-Attribut in Time-Dimension|1st quarter, 2nd quarter, 3rd quarter, 4th quarter|TimeDimensionTable|Quarter|3rd quarter|  
   
- Daten in einer einzelnen Cubezelle werden normalerweise aus mehreren Zeilen in der Faktentabelle abgeleitet. Beispielsweise enthält die Cubezelle am Schnittpunkt von Air-Element, Africa-Element und 1st Quarter-Element einen Wert, der durch Aggregieren der folgenden Zeilen in abgeleitet wird die **ImportsFactTable** -Faktentabelle verknüpft werden sollen.  
+ Daten in einer einzelnen Cubezelle werden normalerweise aus mehreren Zeilen in der Faktentabelle abgeleitet. Die Cubezelle am Schnittpunkt von Air-Element, Africa-Element und 1st Quarter-Element enthält beispielsweise einen Wert, der durch Aggregieren der folgenden Zeilen in abgeleitet ist die **ImportsFactTable** Faktentabelle.  
   
 |||||||  
 |-|-|-|-|-|-|  
@@ -114,7 +114,7 @@ ms.locfileid: "34024517"
 |3645541|1|6|1|20|09.02.1999|  
 |3674906|1|6|1|36|17.02.1999|  
   
- In der vorangegangenen Tabelle weist jede Zeile die gleichen Werte für die **RouteKey**, **SourceKey**, und **TimeKey** Spalten, die angibt, dass diese Zeilen zur selben Cubezelle beitragen.  
+ In der obigen Tabelle weist jede Zeile die gleichen Werte für die **RouteKey**, **SourceKey**, und **TimeKey** Spalten, die angibt, dass diese Zeilen zur selben Cubezelle beitragen.  
   
  In dem hier dargestellten Beispiel geht es um einen sehr einfachen Cube, der nur eine einzige Measuregruppe enthält und bei dem alle Dimensionstabellen in einem Sternschema mit der Faktentabelle verknüpft sind. In weiteres häufiges Schema ist das Schneeflockenschema, in dem mindestens eine Dimensionstabelle mit einer anderen Dimensionstabelle und nicht direkt mit der Faktentabelle verknüpft wird. **Verwandtes Thema:**[Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
