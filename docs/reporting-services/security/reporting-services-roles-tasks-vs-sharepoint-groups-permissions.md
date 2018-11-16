@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee3a8e9576b38ee49dc5b562384d51c45f58c3fd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 64339c62cfe6d37e1117febd797ae43d6d43bdc2
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020254"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813296"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services-Rollen/Tasks im Vergleich zu SharePoint-Gruppen/Berechtigungen
   In diesem Thema werden rollen- und taskbasierte Autorisierungsfunktionen im einheitlichen Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mit den Sicherheitsfunktionen in SharePoint-Produkten verglichen. In diesem Thema werden die Terminologie und Merkmale von Rollen, Tasks, SharePoint-Gruppen, Berechtigungsstufen und Berechtigungen verglichen.  
@@ -51,7 +51,7 @@ ms.locfileid: "50020254"
 |---|**Berechtigungsstufe der Gruppe:** Beispielsweise "Nur anzeigen" für die Gruppe "Anzeigende Benutzer".|  
 |**Tasks:** Beispielsweise "Berichte verwalten".|**Berechtigungen:** Die Gruppe "Nur anzeigen" enthält beispielsweise listenbezogene Berechtigungen für die Elemente, Versionen und Anwendungsseiten von Sichten.|  
   
- Weitere Informationen zu SharePoint-Berechtigungen finden Sie unter [Berechtigungsstufen und Berechtigungen](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) und [Bestimmen von Berechtigungsstufen und Gruppen in SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
+ Weitere Informationen zu SharePoint-Berechtigungen finden Sie unter [Berechtigungsstufen und Berechtigungen](https://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) und [Bestimmen von Berechtigungsstufen und Gruppen in SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
 ##  <a name="bkmk_compare_roles_groups"></a> Vergleich zwischen Rollen im einheitlichen Modus und SharePoint-Gruppen  
  Die folgende Tabelle enthält eine Gegenüberstellung der vordefinierten Rollendefinitionen in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus und der SharePoint-Standardgruppen. Wenn die SharePoint-Gruppen nicht mit der von Ihnen gewünschten Rolle übereinstimmen, können Sie eine benutzerdefinierte Gruppe erstellen und in SharePoint Berechtigungsstufen zuweisen.  

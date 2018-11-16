@@ -17,12 +17,12 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: afcf64474e58e0e34226506bed10c78fd810e0ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60fe77867a37e76aeef6594524ad3cbea8246554
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595938"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638437"
 ---
 # <a name="integration-services-user-interface"></a>SQL Server Integration Services-Benutzeroberfläche
   Neben den Entwurfsoberflächen auf den Registerkarten des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers stellt die Benutzeroberfläche den Zugriff auf die folgenden Fenster und Dialogfelder bereit, um Paketen Funktionen hinzuzufügen und die Eigenschaften von Paketobjekten zu konfigurieren:  
@@ -56,11 +56,11 @@ ms.locfileid: "47595938"
   
  `- <SamplesSites>`  
   
- `<GettingStartedSamples>http://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
+ `<GettingStartedSamples>https://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
   
  `- <ToolboxSamples>`  
   
- `<Site>http://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
+ `<Site>https://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
   
  `</ToolboxSamples>`  
   

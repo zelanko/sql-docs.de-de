@@ -18,12 +18,12 @@ ms.assetid: b5da398c-9697-4f67-b4c8-3fdd56a404ec
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 85db3676880fd9a91702fb5aa936a1beaf226c7d
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 2815a756470b9833b6cddaf2df01f263f3ecd877
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216928"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676610"
 ---
 # <a name="instancename-property-serversettingsgeneralflag-class"></a>InstanceName-Eigenschaft (ServerSettingsGeneralFlag-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,6 +46,6 @@ object.InstanceName [= value]
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

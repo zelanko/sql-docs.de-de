@@ -17,24 +17,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 856f26ac921a1bbe4f467cd11b785ee3868eeac2
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ee44e6c7a4ff8befc21b461feab44a07a8658a2f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643888"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696728"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar und nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Dieser Artikel beschreibt Zeichendatentypen, die entweder über eine feste Länge – **nchar** – oder über eine variable Länge – **nvarchar** – verfügen. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] gilt Folgendes: Wenn eine Sortierung mit aktivierten [zusätzlichen Zeichen](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) verwendet wird, speichern diese Datentypen den gesamten Bereich der [Unicodezeichendaten](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) und verwenden die Zeichencodierung [UTF-16](http://www.wikipedia.org/wiki/UTF-16). Wenn eine Sortierung ohne aktivierte zusätzliche Zeichen angegeben ist, speichern diese Datentypen nur die Teilmenge der Zeichendaten, die von der [UCS-2](http://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms)-Zeichencodierung unterstützt werden.
+Dieser Artikel beschreibt Zeichendatentypen, die entweder über eine feste Länge – **nchar** – oder über eine variable Länge – **nvarchar** – verfügen. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] gilt Folgendes: Wenn eine Sortierung mit aktivierten [zusätzlichen Zeichen](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) verwendet wird, speichern diese Datentypen den gesamten Bereich der [Unicodezeichendaten](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) und verwenden die Zeichencodierung [UTF-16](https://www.wikipedia.org/wiki/UTF-16). Wenn eine Sortierung ohne aktivierte zusätzliche Zeichen angegeben ist, speichern diese Datentypen nur die Teilmenge der Zeichendaten, die von der [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms)-Zeichencodierung unterstützt werden.
   
 ## <a name="arguments"></a>Argumente  
 **nchar** [ ( n ) ]  
-Zeichenfolgendaten mit fester Länge. *n* definiert die Zeichenfolgenlänge in Bytepaaren und muss ein Wert zwischen 1 bis 4.000 sein. Die Speichergröße beträgt zweimal *n* Byte. Für die [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF)-Codierung beträgt die Speichergröße zweimal *n* Byte, und die Anzahl von Zeichen, die gespeichert werden können, ist ebenfalls *n*. Für die UTF-16-Codierung ist die Speichergröße noch zweimal *n* Byte, aber die Anzahl von Zeichen, die gespeichert werden können, ist ggf. kleiner als *n*, da zusätzliche Zeichen zwei Bytepaare verwenden (auch [Ersatzzeichenpaar](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF) genannt). Die ISO-Synonyme für **nchar** lauten **national char** und **national character**.
+Zeichenfolgendaten mit fester Länge. *n* definiert die Zeichenfolgenlänge in Bytepaaren und muss ein Wert zwischen 1 bis 4.000 sein. Die Speichergröße beträgt zweimal *n* Byte. Für die [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF)-Codierung beträgt die Speichergröße zweimal *n* Byte, und die Anzahl von Zeichen, die gespeichert werden können, ist ebenfalls *n*. Für die UTF-16-Codierung ist die Speichergröße noch zweimal *n* Byte, aber die Anzahl von Zeichen, die gespeichert werden können, ist ggf. kleiner als *n*, da zusätzliche Zeichen zwei Bytepaare verwenden (auch [Ersatzzeichenpaar](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF) genannt). Die ISO-Synonyme für **nchar** lauten **national char** und **national character**.
   
 **nvarchar** [ ( n | **max** ) ]  
-Zeichenfolgendaten mit variabler Länge. *n* definiert die Zeichenfolgenlänge in Bytepaaren und ist ein Wert zwischen 1 bis 4.000. **max** gibt an, dass die maximale Speichergröße 2^30-1 Zeichen (2 GB) beträgt. Die Speichergröße beträgt zweimal *n* Byte + 2 Byte. Für die [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF)-Codierung beträgt die Speichergröße zweimal *n* Byte + 2 Byte, und die Anzahl von Zeichen, die gespeichert werden können, ist ebenfalls *n*. Für die UTF-16-Codierung ist die Speichergröße noch zweimal *n* Byte + 2 Byte, aber die Anzahl von Zeichen, die gespeichert werden können, ist ggf. kleiner als *n*, da zusätzliche Zeichen zwei Bytepaare verwenden (auch [Ersatzzeichenpaar](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF) genannt). Die ISO-Synonyme für **nvarchar** lauten **national char varying** und **national character varying**.
+Zeichenfolgendaten mit variabler Länge. *n* definiert die Zeichenfolgenlänge in Bytepaaren und ist ein Wert zwischen 1 bis 4.000. **max** gibt an, dass die maximale Speichergröße 2^30-1 Zeichen (2 GB) beträgt. Die Speichergröße beträgt zweimal *n* Byte + 2 Byte. Für die [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF)-Codierung beträgt die Speichergröße zweimal *n* Byte + 2 Byte, und die Anzahl von Zeichen, die gespeichert werden können, ist ebenfalls *n*. Für die UTF-16-Codierung ist die Speichergröße noch zweimal *n* Byte + 2 Byte, aber die Anzahl von Zeichen, die gespeichert werden können, ist ggf. kleiner als *n*, da zusätzliche Zeichen zwei Bytepaare verwenden (auch [Ersatzzeichenpaar](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF) genannt). Die ISO-Synonyme für **nvarchar** lauten **national char varying** und **national character varying**.
   
 ## <a name="remarks"></a>Remarks  
 Wenn *n* in einer Datendefinitions- oder Variablendeklarationsanweisung nicht angegeben ist, beträgt die Standardlänge 1. Wenn *n* in der CAST-Funktion nicht angegeben ist, beträgt die Standardlänge 30.
@@ -64,7 +64,7 @@ Informationen zum Konvertieren von Zeichendaten finden Sie unter [char und varch
 ## <a name="see-also"></a>Siehe auch
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  

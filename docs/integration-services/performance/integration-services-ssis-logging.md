@@ -30,12 +30,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7a00dbd30f8cee08cb1667627c4b20c64eaef79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9be97427a20f7277088422734f0108d999a7302d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799107"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641257"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services-Protokollierung (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Protokollanbieter, mit denen Sie die Protokollierung in Paketen, Containern und Tasks implementieren können. Mit der Protokollierung können Sie Laufzeitinformationen zu einem Paket aufzeichnen, damit Sie ein Paket bei jeder Ausführung überwachen und Probleme behandeln können. Beispielsweise können in einem Protokoll der Name des Operators, der das Paket ausgeführt hat, und der Zeitpunkt, zu dem die Paketausführung begann und endete, aufgezeichnet werden.  
@@ -679,4 +679,4 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 -   [Durch ein Integration Services-Paket protokollierte Ereignisse](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [DTLoggedExec-Tool für vollständige und Detailprotokollierung (CodePlex-Projekt)](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [DTLoggedExec-Tool für vollständige und Detailprotokollierung (CodePlex-Projekt)](https://go.microsoft.com/fwlink/?LinkId=150579)  

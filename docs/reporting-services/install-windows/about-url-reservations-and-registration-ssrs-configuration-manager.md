@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d034b7a930de907e0868271b175cabd5507ad07c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0e835d14bfb2684685f95f65dd1a16e7e4edb55e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031829"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814113"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Informationen zu URL-Reservierungen und Registrierungen (SSRS-Konfigurations-Manager)
   Anwendungen für URLs für Reporting Services werden als URL-Reservierungen in HTTP.SYS definiert. Eine URL-Reservierung definiert die Syntax eines URL-Endpunkts für eine Webanwendung. URL-Reservierungen werden sowohl für den Berichtsserver-Webdienst als auch für den Berichts-Manager beim Konfigurieren der Anwendungen auf dem Berichtsserver definiert. Beim Konfigurieren von URLs mit Setup oder mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool werden URL-Reservierungen automatisch für Sie erstellt:  
@@ -57,8 +57,8 @@ ms.locfileid: "50031829"
   
 |URL-Reservierung in HTTP.SYS|URL|Erklärung|  
 |---------------------------------|---------|-----------------|  
-|`http://+:80/reportserver`|`http://<computername>/reportserver`<br /><br /> `http://<IPAddress>/reportserver`<br /><br /> `http://localhost/reportserver`|Die URL-Reservierung gibt ein Platzhalterzeichen (+) für Port 80 an. Dadurch werden alle eingehenden Anforderungen, die einen Host für die Auflösung zum Berichtsservercomputer auf Port 80 angeben, in der Berichtsserverwarteschlange abgelegt. Mit dieser URL-Reservierung kann eine beliebige Anzahl von URLs für den Zugriff auf den Berichtsserver verwendet werden.<br /><br /> Dies ist die Standard-URL-Reservierung für einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver für die meisten Betriebssysteme.|  
-|`http://123.45.67.0:80/reportserver`|`http://123.45.67.0/reportserver`|Diese URL-Reservierung gibt eine IP-Adresse an und ist viel restriktiver als die Platzhalter-URL-Reservierung. Nur mit URLs, die eine IP-Adresse enthalten, kann eine Verbindung mit dem Berichtsserver hergestellt werden. Aufgrund dieser URL-Reservierung würde eine Anforderung an einen Berichtsserver in `http://<computername>/reportserver` oder `http://localhost/reportserver` einen Fehler auslösen.|  
+|`https://+:80/reportserver`|`https://<computername>/reportserver`<br /><br /> `https://<IPAddress>/reportserver`<br /><br /> `https://localhost/reportserver`|Die URL-Reservierung gibt ein Platzhalterzeichen (+) für Port 80 an. Dadurch werden alle eingehenden Anforderungen, die einen Host für die Auflösung zum Berichtsservercomputer auf Port 80 angeben, in der Berichtsserverwarteschlange abgelegt. Mit dieser URL-Reservierung kann eine beliebige Anzahl von URLs für den Zugriff auf den Berichtsserver verwendet werden.<br /><br /> Dies ist die Standard-URL-Reservierung für einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver für die meisten Betriebssysteme.|  
+|`https://123.45.67.0:80/reportserver`|`https://123.45.67.0/reportserver`|Diese URL-Reservierung gibt eine IP-Adresse an und ist viel restriktiver als die Platzhalter-URL-Reservierung. Nur mit URLs, die eine IP-Adresse enthalten, kann eine Verbindung mit dem Berichtsserver hergestellt werden. Aufgrund dieser URL-Reservierung würde eine Anforderung an einen Berichtsserver in `https://<computername>/reportserver` oder `https://localhost/reportserver` einen Fehler auslösen.|  
   
 ##  <a name="DefaultURLs"></a> Standard-URLs  
  Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der Standardkonfiguration installieren, reserviert Setup URLs für den Berichtsserver-Webdienst und das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Sie können diese Standardwerte auch für URL-Reservierungen im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool verwenden. Wenn Sie [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] installieren oder wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] als benannte Instanz installieren, enthalten Standard-URLs einen Instanznamen.  
@@ -82,12 +82,12 @@ ms.locfileid: "50031829"
   
 |Instanztyp|Application|Standard-URL|Tatsächliche URL-Reservierung in HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|Standardinstanz|Report Server-Webdienst|`http://\<servername>/reportserver`|`http://<servername>:80/reportserver`|  
-|Standardinstanz|Webportal|`http://<servername>/reportserver`|`http://<servername>:80/reportserver`|  
-|Benannte Instanz|Report Server-Webdienst|`http://<servername>/reportserver_<instancename>`|`http://<servername>:80/reportserver_<instancename>`|  
-|Benannte Instanz|Webportal|`http://<servername>/reports_<instancename>`|`http://<servername>:80/reports_<instancename>`|  
-|SQL Server Express|Report Server-Webdienst|`http://<servername>/reportserver_SQLExpress`|`http://<servername>:80/reportserver_SQLExpress`|  
-|SQL Server Express|Webportal|`http://<servername>/reports_SQLExpress`|`http://<servername>:80/reports_SQLExpress`|  
+|Standardinstanz|Report Server-Webdienst|`https://\<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Standardinstanz|Webportal|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Benannte Instanz|Report Server-Webdienst|`https://<servername>/reportserver_<instancename>`|`https://<servername>:80/reportserver_<instancename>`|  
+|Benannte Instanz|Webportal|`https://<servername>/reports_<instancename>`|`https://<servername>:80/reports_<instancename>`|  
+|SQL Server Express|Report Server-Webdienst|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  
+|SQL Server Express|Webportal|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Authentifizierung und Dienstidentität für Reporting Services-URLs  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL-Reservierungen geben das Dienstkonto für den Berichtsserver-Dienst an. Das Konto, unter dem der Dienst ausgeführt wird, wird für alle URLs verwendet, die für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen erstellt werden, die in der gleichen Instanz ausgeführt werden. Die Dienstidentität der Berichtsserverinstanz wird in der Datei RSReportServer.config gespeichert.  
@@ -97,9 +97,9 @@ ms.locfileid: "50031829"
  Der anonyme Zugriff ist aufgrund der Standardsicherheitseinstellung **RSWindowsNegotiate**deaktiviert. Berichtsserver-URLs verwenden Netzwerkcomputernamen für den Intranetzugriff. Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] für Internetverbindungen konfigurieren möchten, müssen Sie andere Einstellungen verwenden. Weitere Informationen finden Sie in der [-Onlinedokumentation unter](../../reporting-services/security/authentication-with-the-report-server.md) Authentifizierung beim Berichtsserver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="URLlocalAdmin"></a> URLs für die lokale Verwaltung  
- Sie können `http://localhost/reportserver` oder `http://localhost/reports` verwenden, wenn Sie einen starken oder einen schwachen Platzhalter für die URL-Reservierung angegeben haben.  
+ Sie können `https://localhost/reportserver` oder `https://localhost/reports` verwenden, wenn Sie einen starken oder einen schwachen Platzhalter für die URL-Reservierung angegeben haben.  
   
- Die URL `http://localhost` wird wie `http://127.0.0.1` interpretiert. Wenn Sie die URL-Reservierung mit einem Computernamen oder einer einzelnen IP-Adresse verbunden haben, können Sie localhost nicht verwenden, es sei denn, Sie erstellen eine zusätzliche Reservierung für 127.0.0.1 auf dem lokalen Computer. Analog dazu gilt, dass Sie die URL nicht verwenden können, wenn Sie localhost oder 127.0.0.1 auf Ihrem Computer deaktiviert haben.  
+ Die URL `https://localhost` wird wie `https://127.0.0.1` interpretiert. Wenn Sie die URL-Reservierung mit einem Computernamen oder einer einzelnen IP-Adresse verbunden haben, können Sie localhost nicht verwenden, es sei denn, Sie erstellen eine zusätzliche Reservierung für 127.0.0.1 auf dem lokalen Computer. Analog dazu gilt, dass Sie die URL nicht verwenden können, wenn Sie localhost oder 127.0.0.1 auf Ihrem Computer deaktiviert haben.  
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] und höher enthalten neue Sicherheitsfunktionen, um das Risiko einer versehentlichen Ausführung von Programmen mit erweiterten Berechtigungen zu minimieren. Zur Aktivierung der lokalen Verwaltung für diese Betriebssysteme müssen zusätzliche Schritte ausgeführt werden. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   

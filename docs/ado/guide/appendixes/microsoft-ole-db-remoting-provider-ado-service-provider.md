@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,23 +15,23 @@ ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0c58d6c90b67369f969a37cc2ad7e03cc6cad82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65ed1ab997566c44aa67da44c8d14418304eecd0
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624608"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600660"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Übersicht über die Microsoft OLE DB Remoting-Anbieter
 Der Microsoft OLE DB-Anbieter für Remoting können einen lokalen Benutzer auf einem Clientcomputer, um Datenanbieter auf einem Remotecomputer aufzurufen. Geben Sie die Data-Anbieter-Parameter für den Remotecomputer, wie Sie tun würden, würden Sie einen lokalen Benutzer auf dem Remotecomputer. Geben Sie dann die Parameter, die den Remoting-Anbieter für den Remotecomputer zugreifen. Sie können dann den Remotecomputer zugreifen, als wären Sie ein lokaler Benutzer.
 
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).
 
 ## <a name="provider-keyword"></a>Anbieterschlüsselwort
  Um den OLE DB-Anbieter für Remoting aufzurufen, geben Sie das folgende Schlüsselwort und Wert in der Verbindungszeichenfolge ein. (Beachten Sie den leeren Bereich in der Name des Anbieters ein.)
 
-```
+```vb
 "Provider=MS Remote"
 ```
 
@@ -58,14 +58,14 @@ Der Microsoft OLE DB-Anbieter für Remoting können einen lokalen Benutzer auf e
 
  Sie können auch beschreibbare dynamische Eigenschaften festlegen, durch deren Namen als Schlüsselwörter in der Verbindungszeichenfolge angeben. Legen Sie z. B. die **Internet-Zeitüberschreitung** dynamische Eigenschaft auf fünf Sekunden, indem Sie angeben:
 
-```
+```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MS Remote;Internet Timeout=5000"
 ```
 
  Sie können auch festlegen oder Abrufen eine dynamische Eigenschaft durch Angabe seines Namens als Index für die **Eigenschaften** Eigenschaft. Das folgende Beispiel zeigt das Abrufen und drucken den aktuellen Wert des der **Internet-Zeitüberschreitung** dynamische Eigenschaft, und legen Sie dann einen neuen Wert:
 
-```
+```vb
 Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
@@ -80,16 +80,16 @@ cn.Properties("Internet Timeout") = 5000
 ## <a name="example"></a>Beispiel
  In diesem Beispiel führt eine Abfrage für die **Autoren** Tabelle mit den **Pubs** Datenbank auf einem Server mit dem Namen *Ihr Server*. Die Namen der remote-Datenquelle und Remoteserver finden Sie in der [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) -Methode der der[Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt, und die SQL-Abfrage wird angegeben, der[öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode der der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt. Ein **Recordset** Objekt zurückgegeben, bearbeitet und zum Aktualisieren der Datenquelle verwendet wird.
 
-```
+```vb
 Dim rs as New ADODB.Recordset
 Dim cn as New ADODB.Connection
-cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
-         "Remote Server=http://YourServer"
+cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
+         "Remote Server=https://YourServer"
 rs.Open "SELECT * FROM authors", cn
-...                'Edit the recordset
-rs.UpdateBatch     'Equivalent of RDS SubmitChanges
+...                'Edit the recordset
+rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 
 ## <a name="see-also"></a>Siehe auch
- [Übersicht über die OLE DB Remoting-Anbieter](http://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)
+ [Übersicht über die OLE DB Remoting-Anbieter](https://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)

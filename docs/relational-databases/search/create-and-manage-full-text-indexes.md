@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 512c91ac9e8c089b0154f5b021eaf86d98095599
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba2842966623d1f820bcb0d8df969634922da57d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683898"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669019"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Erstellen und Verwalten von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,8 +74,8 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
   
     |Seite|und Beschreibung|  
     |----------|-----------------|  
-    |**Allgemein**|Ändert die grundlegenden Eigenschaften des Volltextindex. Beinhaltet mehrere änderbare Eigenschaften und eine Reihe von nicht änderbaren Eigenschaften, wie z. B. Datenbankname, Tabellenname und den Namen der Volltextschlüsselspalte. Die änderbaren Eigenschaften lauten:<br /><br /> **Volltextindex-Stoppliste**<br /><br /> **Volltextindizierung aktiviert**<br /><br /> **Änderungsnachverfolgung**<br /><br /> **Sucheigenschaftenliste**<br /><br />Weitere Informationen finden Sie unter [Volltextindex-Eigenschaften &#40;Seite Allgemein&#41;](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
-    |**Spalten**|Zeigt die Tabellenspalten an, die für die Volltextindizierung verfügbar sind. Die ausgewählte Spalte bzw. die Spalten werden volltextindiziert. Sie können beliebig viele verfügbare Spalten auswählen und in den Volltextindex aufnehmen. Weitere Informationen finden Sie unter [Volltextindex-Eigenschaften &#40;Seite „Spalten“&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
+    |**Allgemein**|Ändert die grundlegenden Eigenschaften des Volltextindex. Beinhaltet mehrere änderbare Eigenschaften und eine Reihe von nicht änderbaren Eigenschaften, wie z. B. Datenbankname, Tabellenname und den Namen der Volltextschlüsselspalte. Die änderbaren Eigenschaften lauten:<br /><br /> **Volltextindex-Stoppliste**<br /><br /> **Volltextindizierung aktiviert**<br /><br /> **Änderungsnachverfolgung**<br /><br /> **Sucheigenschaftenliste**<br /><br />Weitere Informationen finden Sie unter [Volltextindex-Eigenschaften &#40;Seite Allgemein&#41;](https://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
+    |**Spalten**|Zeigt die Tabellenspalten an, die für die Volltextindizierung verfügbar sind. Die ausgewählte Spalte bzw. die Spalten werden volltextindiziert. Sie können beliebig viele verfügbare Spalten auswählen und in den Volltextindex aufnehmen. Weitere Informationen finden Sie unter [Volltextindex-Eigenschaften &#40;Seite „Spalten“&#41;](https://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
     |**Zeitpläne**|Verwenden Sie diese Seite, um Zeitpläne für einen SQL Server-Agent-Auftrag zu erstellen oder zu verwalten, der eine inkrementelle Tabellenauffüllung für die Auffüllungen des Volltextindexes beginnt. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Hinweis: Sobald Sie das Dialogfeld **Volltextindexeigenschaften** schließen, werden alle neu erstellten Zeitpläne einem SQL Server-Agent-Auftrag zugeordnet (Start Incremental Table Population on *Datenbankname*.*Tabellenname*).|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] um vorgenommene Änderungen zu speichern und das Dialogfeld **Volltextindexeigenschaften** zu schließen.  

@@ -13,12 +13,12 @@ ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1e92d38237d5d951b85f006a7ea02f79a619896a
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: cc4056c3db21534e45d1b679d6289ddaeb4cea12
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033107"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672739"
 ---
 # <a name="database-engine-extended-stored-procedures---reference"></a>Datenbank-Engine: Erweiterte gespeicherten Prozeduren – Referenz
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51033107"
  Mit dem Erscheinen neuerer und leistungsfähigerer Technologien wie beispielsweise der CLR-Integration ist der Bedarf an erweiterten gespeicherten Prozeduren weitgehend verschwunden.  
   
 > [!IMPORTANT]  
->  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

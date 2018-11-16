@@ -17,12 +17,12 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd726cfefd1a1e80ba5b96f651e3a1b13057c174
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b63ddac2aa39095703b1428deab61232837ed9e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821623"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638397"
 ---
 # <a name="comparing-string-data"></a>Vergleichen von Zeichenfolgendaten
   Zeichenfolgendaten sind ein wichtiger Bestandteil vieler Transformationen, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ausgeführt werden, und Zeichenfolgenvergleiche werden auch bei der Auswertung von Ausdrücken in Variablen und Eigenschaftsausdrücken verwendet. Beispielsweise vergleicht die Transformation zum Sortieren Werte in einem Dataset, um Daten in auf- und absteigender Reihenfolge zu sortieren.  
@@ -83,7 +83,7 @@ ms.locfileid: "47821623"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Integration Services-Datentypen](../../integration-services/data-flow/integration-services-data-types.md)   
- [Schnelle Analyse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
- [Standardanalyse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
+ [Schnelle Analyse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [Standardanalyse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
   
   

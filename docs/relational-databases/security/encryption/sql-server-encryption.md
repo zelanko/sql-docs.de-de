@@ -16,12 +16,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a961db30963ded59af447ad1a1cc916d663628e
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 7a6db30cca46d752e8f6f350d780863cfaa7452c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643928"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669099"
 ---
 # <a name="sql-server-encryption"></a>SQL Server-Verschlüsselung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Sie können in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verb
  [Sichern von SQL Server](../../../relational-databases/security/securing-sql-server.md)  
  Überblick über die Absicherung der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Plattform und die Arbeit mit Benutzern und sicherungsfähigen Objekten.  
 
-[Überblick über die Sicherheitsfunktionen der Azure SQL-Datenbank](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-security-overview)
+[Überblick über die Sicherheitsfunktionen der Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview)
 </br>Überblick über die Sicherheit der Azure SQL Datenbank zum Schutz von Daten, zur Steuerung des Zugriffs und zur proaktiven Überwachung.
   
  [Kryptografiefunktionen &#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
@@ -80,7 +80,7 @@ Sie können in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verb
  Informationen dazu, wie ein Zertifikat zur Verschlüsselung von Daten verwendet wird.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 – Sicherheit und Schutz](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 – Sicherheit und Schutz](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  Aktuelle Informationen über die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sicherheit.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

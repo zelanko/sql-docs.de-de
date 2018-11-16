@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00f555c060c348573eb6af8b98e90d506b8179ea
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 829af3ab6638b0334b574aff84770acfa4b6e81b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221736"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702338"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Hardware- und Softwareanforderungen für die Installation von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -66,9 +66,9 @@ In diesem Artikel sind die Mindestanforderungen an die Hardware und Software auf
   
 **Probieren Sie es aus:**  
   
--   Download von SQL Server aus dem [**Evaluierungscenter**.](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
+-   Download von SQL Server aus dem [**Evaluierungscenter**.](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 
   
--   Starten eines virtuellen Computers mit vorinstalliertem [**SQL Server 2016**](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) .  
+-   Starten eines virtuellen Computers mit vorinstalliertem [**SQL Server 2016**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) .  
   
 **Die folgenden Überlegungen betreffen alle Editionen:**  
   
@@ -86,14 +86,14 @@ In diesem Artikel sind die Mindestanforderungen an die Hardware und Software auf
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setuphilfsdateien  
   
--   Die Mindestanforderungen an die Version zum Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter [!INCLUDE[win8srv](../../includes/win8srv-md.md)] oder [!INCLUDE[win8](../../includes/win8-md.md)]finden Sie unter [Installieren von SQL Server unter Windows Server 2012 oder Windows 8](http://support.microsoft.com/kb/2681562) (http://support.microsoft.com/kb/2681562)).  
+-   Die Mindestanforderungen an die Version zum Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter [!INCLUDE[win8srv](../../includes/win8srv-md.md)] oder [!INCLUDE[win8](../../includes/win8-md.md)]finden Sie unter [Installieren von SQL Server unter Windows Server 2012 oder Windows 8](https://support.microsoft.com/kb/2681562) (https://support.microsoft.com/kb/2681562)).  
   
 ##  <a name="hwswr"></a> Hardware- und Softwareanforderungen  
 Die folgenden Anforderungen gelten für alle Installationen:  
   
 |Komponente|Anforderung|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 und höher erfordern [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 für die Datenbank-Engine, die Master Data Services oder die Replikation. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]-Setup installiert automatisch [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Sie können [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auch manuell von der Seite [Microsoft .NET Framework 4.6 (Web Installer) für Windows](http://support.microsoft.com/kb/3045560)aus installieren.<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] erfordert .NET Framework 4.6.2. .NET Framework ist im [Download Center](http://www.microsoft.com/download/details.aspx?id=53344) verfügbar.<br/><br/> Weitere Informationen, Empfehlungen und Anleitungen zu [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 finden Sie unter [Handbuch für die Bereitstellung von .NET Framework für Entwickler](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]und [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] erfordern [KB2919355](http://support.microsoft.com/kb/2919355) vor der Installation von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 und höher erfordern [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 für die Datenbank-Engine, die Master Data Services oder die Replikation. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]-Setup installiert automatisch [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Sie können [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auch manuell von der Seite [Microsoft .NET Framework 4.6 (Web Installer) für Windows](https://support.microsoft.com/kb/3045560)aus installieren.<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] erfordert .NET Framework 4.6.2. .NET Framework ist im [Download Center](https://www.microsoft.com/download/details.aspx?id=53344) verfügbar.<br/><br/> Weitere Informationen, Empfehlungen und Anleitungen zu [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 finden Sie unter [Handbuch für die Bereitstellung von .NET Framework für Entwickler](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]und [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] erfordern [KB2919355](https://support.microsoft.com/kb/2919355) vor der Installation von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
 |Netzwerksoftware|Die unterstützten Betriebssysteme für [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] verfügen über integrierte Netzwerksoftware. Benannte und Standardinstanzen einer eigenständigen Installation unterstützen die folgenden Netzwerkprotokolle: Shared Memory, Named Pipes, TCP/IP und VIA.<br/><br/> **Hinweis:** Das VIA-Protokoll wird auf Failoverclustern nicht unterstützt. Clients oder Anwendungen, die auf demselben Knoten des Failoverclusters wie die SQL Server-Instanz ausgeführt werden, können das Shared Memory-Protokoll verwenden, um eine Verbindung zum SQL Server über dessen lokale Pipeadresse herzustellen. Diese Art der Verbindung ist jedoch nicht clusterfähig und schlägt nach einem Failover der Instanz fehl. Deswegen wird sie nicht empfohlen und sollte nur in sehr speziellen Szenarien verwendet werden.<br/><br/> **Wichtig:** Das VIA-Protokoll ist veraltet. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> Weitere Informationen zu Netzwerkprotokollen und Netzwerkbibliotheken finden Sie unter [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
 |Festplatte|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] erfordert mindestens 6 GB verfügbaren Festplattenspeicher.<br/><br/> Der erforderliche freie Festplattenspeicher ist von den installierten [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] -Komponenten abhängig. Weitere Informationen finden Sie unter [Anforderungen an den Festplattenspeicherplatz](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) weiter unten in diesem Artikel. Informationen zu unterstützten Speichertypen für Datendateien finden Sie unter [Speichertypen für Datendateien](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
 |Laufwerk|Ein DVD-Laufwerk ist erforderlich, falls die Installation von einem DVD-Medium erfolgt.|  
@@ -251,6 +251,6 @@ Die folgenden Anforderungen gelten für alle Installationen:
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
- [Produktspezifikationen für SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
+ [Produktspezifikationen für SQL Server 2016](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
   
   

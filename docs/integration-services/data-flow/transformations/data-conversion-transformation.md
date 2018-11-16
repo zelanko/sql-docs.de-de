@@ -18,12 +18,12 @@ ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 136cc16c9a28fbaddeb0ebe655db016697ef3c1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0940bc5266111c55437a5d45ad64595787eace40
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821158"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642277"
 ---
 # <a name="data-conversion-transformation"></a>Transformation für Datenkonvertierung
   Die Transformation für Datenkonvertierung konvertiert die Daten in einer Eingabespalte in einen anderen Datentyp und kopiert sie dann in eine neue Ausgabespalte. Beispielsweise kann ein Paket Daten aus mehreren Quellen extrahieren und anschließend mithilfe dieser Transformation Spalten in den für den Zieldatenspeicher erforderlichen Datentyp konvertieren. Für eine einzelne Eingabespalte können mehrere Konvertierungen ausgeführt werden.  
@@ -47,10 +47,10 @@ ms.locfileid: "47821158"
  Diese Transformation weist eine Eingabe, eine Ausgabe und eine Fehlerausgabe auf.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- Eigenschaften können Sie mit dem [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen. Weitere Informationen zum Verwenden der Transformation für Datenkonvertierung im SSIS-Designer finden Sie unter [Konvertieren von Daten in einen anderen Datentyp mithilfe der Transformation für Datenkonvertierung](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md). Weitere Informationen zum programmgesteuerten Festlegen der Eigenschaften dieser Transformation finden Sie unter [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) und [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+ Eigenschaften können Sie mit dem [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen. Weitere Informationen zum Verwenden der Transformation für Datenkonvertierung im SSIS-Designer finden Sie unter [Konvertieren von Daten in einen anderen Datentyp mithilfe der Transformation für Datenkonvertierung](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md). Weitere Informationen zum programmgesteuerten Festlegen der Eigenschaften dieser Transformation finden Sie unter [Allgemeine Eigenschaften](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) und [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823), auf blogs.msdn.com.  
+ Blogeintrag, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), auf blogs.msdn.com.  
   
 ## <a name="data-conversion-transformation-editor"></a>Transformations-Editor für Datenkonvertierung
   Im Dialogfeld **Transformations-Editor für Datenkonvertierung** können Sie die zu konvertierenden Spalten und den Datentyp, in den die Spalte konvertiert werden soll, auswählen und Konvertierungsattribute festlegen.  
@@ -84,10 +84,10 @@ ms.locfileid: "47821158"
  Wählen Sie die geeignete Codepage für Spalten vom Typ DT_STR aus.  
   
  **Fehlerausgabe konfigurieren**  
- Geben Sie mithilfe des Dialogfelds [Fehlerausgabe konfigurieren](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) an, wie Fehler auf Zeilenebene behandelt werden sollen.  
+ Geben Sie mithilfe des Dialogfelds [Fehlerausgabe konfigurieren](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) an, wie Fehler auf Zeilenebene behandelt werden sollen.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Schnelle Analyse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [Schnelle Analyse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

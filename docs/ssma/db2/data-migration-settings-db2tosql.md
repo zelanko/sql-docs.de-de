@@ -10,19 +10,19 @@ ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 295aca6d94eb7ec1ce2deb97d7f77e23999d7e13
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dbdee734d6d8a1dac825ad8f502c5851f746f42
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759588"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681078"
 ---
 # <a name="data-migration-settings-db2tosql"></a>Data Migration Settings (DB2ToSQL)
   
 ## <a name="data-migration-settings"></a>Einstellungen für die Datenmigration  
 **Data Migration Settings** ermöglicht dem Benutzer, benutzerdefinierte Abfragen für die Datenmigration zu schreiben.  
   
--   Diese Registerkarte ist verfügbar, wenn **erweiterte Optionen für die Migration von Daten** nastaven NA hodnotu **anzeigen** und wird ausgeblendet, wenn die Einstellung, um festgelegt ist **ausblenden** in den Projekteinstellungen. Weitere Informationen zu Projekteinstellungen für die Migration, finden Sie unter [Project Settings (Migration)](http://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) .  
+-   Diese Registerkarte ist verfügbar, wenn **erweiterte Optionen für die Migration von Daten** nastaven NA hodnotu **anzeigen** und wird ausgeblendet, wenn die Einstellung, um festgelegt ist **ausblenden** in den Projekteinstellungen. Weitere Informationen zu Projekteinstellungen für die Migration, finden Sie unter [Project Settings (Migration)](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) .  
   
 -   Analysieren von benutzerdefinierten SQL-Anweisungen in implementiert **Data Migration Settings** Registerkarte der Tabelle.  
   
@@ -53,5 +53,5 @@ Es befinden sich zwei Schaltflächen, die vorhanden viz.:
 -   **Abbrechen:** klicken Sie auf **Abbrechen** vorhanden wiederhergestellt, bevor die Änderungen durchgeführt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von DB2-Daten in SQLServer](http://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
+[Migrieren von DB2-Daten in SQLServer](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
   

@@ -11,12 +11,12 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab479625b40665749111a7d3e0851a029c706edb
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3f03dfa50d19496b95a1c9ee4e3bf31e0c70cd79
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032657"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702908"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Optionen (Umgebung – Seite „Schriftarten und Farben“)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,5 +84,5 @@ Zeigt ein Beispiel für den Schriftschnitt, den Schriftgrad und das Farbschema f
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Farbcodierung in Code-Editoren](../../relational-databases/scripting/color-coding-in-query-editors.md)  
-[Optionen (Texteditor/Registerkarte 'Editor' und Statusleiste)](http://msdn.microsoft.com/e4815678-7885-4631-878f-c6a2b857ee05)  
+[Optionen (Texteditor/Registerkarte 'Editor' und Statusleiste)](https://msdn.microsoft.com/e4815678-7885-4631-878f-c6a2b857ee05)  
   

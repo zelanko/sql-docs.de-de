@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af97fe48532d87f252cb9d86934d536611a33198
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bcb77ea92b255b15698596f73064404581c34b76
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021795"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813153"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer XML-Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ "XML" basiert. Dieser integrierte Datenquellentyp basiert auf der XML-Datenerweiterung. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit XML-Dokumenten, Webdiensten oder in die Abfrage eingebetteten XML-Daten herzustellen und Daten abzurufen.  
@@ -29,8 +29,8 @@ ms.locfileid: "50021795"
   
 |XML-Dokumenttyp|Beispiel für Verbindungszeichenfolge|  
 |-----------------------|-------------------------------|  
-|Webdienst|`http://adventure-works.com/results.aspx`|  
-|XML-Dokument|`http://localhost/XML/Customers.xml`|  
+|Webdienst|`https://adventure-works.com/results.aspx`|  
+|XML-Dokument|`https://localhost/XML/Customers.xml`|  
 |Eingebettetes XML-Dokument|*Leer*|  
   
  Weitere Informationen sowie Beispiele für Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  

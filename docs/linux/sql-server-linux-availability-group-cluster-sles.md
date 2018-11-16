@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3fb1b2646e399e5fe96dcc66f60aa92b4f009116
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383735"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670619"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Konfigurieren Sie SLES-Cluster für SQL Server-Verfügbarkeitsgruppe
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieses Handbuch enthält Anweisungen, um einen Cluster mit drei Knoten für SQL Server unter SUSE Linux Enterprise Server (SLES) 12 SP2 zu erstellen. Für hohe Verfügbarkeit, eine verfügbarkeitsgruppe für Linux erfordert drei Knoten – Siehe [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Die clustering-Ebene basiert darauf, dass SUSE [hohe Verfügbarkeit-Erweiterung (HAE)](https://www.suse.com/products/highavailability) baut auf [Pacemaker](http://clusterlabs.org/). 
+Dieses Handbuch enthält Anweisungen, um einen Cluster mit drei Knoten für SQL Server unter SUSE Linux Enterprise Server (SLES) 12 SP2 zu erstellen. Für hohe Verfügbarkeit, eine verfügbarkeitsgruppe für Linux erfordert drei Knoten – Siehe [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Die clustering-Ebene basiert darauf, dass SUSE [hohe Verfügbarkeit-Erweiterung (HAE)](https://www.suse.com/products/highavailability) baut auf [Pacemaker](https://clusterlabs.org/). 
 
 Weitere Informationen für die Clusterkonfiguration, Ressourcenoptionen-Agent, Management, bewährte Methoden und Empfehlungen finden Sie unter [SUSE Linux Enterprise hohe Verfügbarkeit Erweiterung 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
@@ -79,7 +79,7 @@ Der erste Schritt ist das Betriebssystem auf den Clusterknoten zu konfigurieren.
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   Weitere Informationen finden Sie unter den [SLES-Administratorhandbuch - Abschnitt Sonstiges](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
+   Weitere Informationen finden Sie unter den [SLES-Administratorhandbuch - Abschnitt Sonstiges](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
 
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Erstellen Sie eine SQL Server-Anmeldung für Pacemaker
@@ -104,7 +104,7 @@ Konfigurieren Sie auf Linux-Servern die verfügbarkeitsgruppe, und konfigurieren
 
 ## <a name="set-up-the-first-node"></a>Richten Sie den ersten Knoten
 
-   Finden Sie unter [SLES-installationsanweisungen](http://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
+   Finden Sie unter [SLES-installationsanweisungen](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
 
 1. Melden Sie sich als `root` auf dem physischen oder virtuellen Computer, die Sie als Clusterknoten verwenden möchten.
 2. Starten Sie das bootstrap-Skript, indem Sie Ausführung:
@@ -220,7 +220,7 @@ Ressource Ebene Umgrenzung hauptsächlich wird sichergestellt, dass es keine dat
 
 Ebene Umgrenzung Knoten wird sichergestellt, dass alle Ressourcen von ein Knoten nicht ausgeführt werden kann. Dies erfolgt durch das Zurücksetzen des Knotens, und die Implementierung dieser Pacemaker STONITH (das steht für "den anderen Knoten im Kopf dafür") aufgerufen. Pacemaker unterstützt eine Vielzahl von Geräten, z. B. eine unterbrechungsfreie bereitstellen oder die Verwaltung Netzwerkschnittstellenkarten für Server für das umgrenzen.
 
-Weitere Informationen finden Sie unter [Pacemaker-Cluster von Grund auf Neu](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [Umgrenzung und Stonith](http://clusterlabs.org/doc/crm_fencing.html) und [SUSE-HA-Dokumentation: Umgrenzung und STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Weitere Informationen finden Sie unter [Pacemaker-Cluster von Grund auf Neu](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [Umgrenzung und Stonith](https://clusterlabs.org/doc/crm_fencing.html) und [SUSE-HA-Dokumentation: Umgrenzung und STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 STONITH wird zum Zeitpunkt der Initialisierung deaktiviert, wenn keine Konfiguration erkannt wird. Es kann mit dem folgenden Befehl später aktiviert werden:
 

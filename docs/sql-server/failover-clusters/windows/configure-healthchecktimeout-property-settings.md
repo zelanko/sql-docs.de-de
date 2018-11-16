@@ -10,12 +10,12 @@ ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4de76b94a97cb654f82d417fd707b10217100f59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bdb182e2861675cd42d295bd9004cd62198f7687
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698753"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702378"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Konfigurieren der HealthCheckTimeout-Eigenschafteneinstellungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47698753"
   
 -   **So konfigurieren Sie die HeathCheckTimeout-Einstellung mit**  [PowerShell](#PowerShellProcedure), [Failovercluster-Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Limits"></a> Einschränkungen  
  Der Standardwert für diese Eigenschaft ist 30.000 Millisekunden (30 Sekunden). Der Mindestwert ist 15.000 Millisekunden (15 Sekunden).  
@@ -61,11 +61,11 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ### <a name="related-content-powershell"></a>Verwandte Inhalte (PowerShell)  
   
--   [Clustering and High-Availability](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Clustering und hohe Verfügbarkeit) (Failoverclustering und Netzwerklastenausgleichs-Teamblog)  
+-   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Clustering und hohe Verfügbarkeit) (Failoverclustering und Netzwerklastenausgleichs-Teamblog)  
   
--   [Erste Schritte mit Windows PowerShell auf einem Failovercluster](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [Erste Schritte mit Windows PowerShell auf einem Failovercluster](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Clusterressourcenbefehle und entsprechende Windows PowerShell-Cmdlets](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Clusterressourcenbefehle und entsprechende Windows PowerShell-Cmdlets](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ##  <a name="WSFC"></a> Verwenden des Failovercluster-Manager-Snap-Ins  
  **So konfigurieren Sie die HealthCheckTimeout-Einstellung**  

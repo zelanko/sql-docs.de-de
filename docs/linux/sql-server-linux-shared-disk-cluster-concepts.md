@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: bc689b96be7fbfcf348ec6d55e27abcceb2024d6
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 668bf72f2673b123ce5a238dbbf5cd7af43604d4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032667"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676529"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Failovercluster-Instanzen – SQLServer unter Linux
 
@@ -35,7 +35,7 @@ Zum Erstellen einer SQL Server-FCI unter Linux finden Sie unter [Konfigurieren v
 
     Weitere Informationen für die Clusterkonfiguration, Ressourcenoptionen-Agent, Management, bewährte Methoden und Empfehlungen finden Sie unter [SUSE Linux Enterprise hohe Verfügbarkeit Erweiterung 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-Sowohl für das RHEL-HA-Add-On als auch für die SUSE HAE basieren auf [Pacemaker](http://clusterlabs.org/).
+Sowohl für das RHEL-HA-Add-On als auch für die SUSE HAE basieren auf [Pacemaker](https://clusterlabs.org/).
 
 Wie das folgende Diagramm zeigt, wird der Speicher auf zwei Servern angezeigt. Clustering Komponenten - Corosync und Pacemaker - Kommunikation und ressourcenverwaltung zu koordinieren. Einer der Server hat die aktive Verbindung mit dem Storage-Ressourcen und der SQL Server. Wenn Pacemaker ein Fehler erkannt wird verwalten die Clusterkomponenten an, die Ressourcen auf dem anderen Knoten verschieben.  
 

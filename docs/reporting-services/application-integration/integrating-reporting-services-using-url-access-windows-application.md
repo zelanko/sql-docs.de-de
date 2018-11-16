@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1928122dd8ca4c4ab5043a57ddc29cc82b8d42c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d225f20cae31e9f462d7f7c85c7109a3cecf43d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615468"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812962"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>Integrieren von Reporting Services mithilfe des URL-Zugriffs: Windows-Anwendung
   Obwohl der URL-Zugriff auf einen Berichtsserver für eine Webumgebung optimiert ist, können Sie mit dem URL-Zugriff auch [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichte in eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendung integrieren. Aber der URL-Zugriff, der auch Windows Forms umfasst, erfordert trotzdem die Verwendung der Webbrowsertechnologie. Sie können folgende Integrationsszenarien mit dem URL-Zugriff und Windows Forms verwenden:  
@@ -98,14 +98,14 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
  Sie leiten das <xref:System.Windows.Forms.WebBrowser>-Steuerelement an eine URL weiter, indem Sie seine **Navigate**-Methode aufrufen. Sie können dem <xref:System.Windows.Forms.WebBrowser>-Steuerelement zur Laufzeit eine bestimmte URL-Zugriffszeichenfolge zuordnen, wie in folgendem Beispiel gezeigt.  
   
 ```vb  
-Dim url As String = "http://localhost/reportserver?/" & _  
+Dim url As String = "https://localhost/reportserver?/" & _  
                     "AdventureWorks2012 Sample Reports/" & _  
                     "Company Sales&rs:Command=Render"  
 WebBrowser1.Navigate(url)  
 ```  
   
 ```csharp  
-string url = "http://localhost/reportserver?/" +  
+string url = "https://localhost/reportserver?/" +  
              "AdventureWorks2012 Sample Reports/" +  
              "Company Sales&rs:Command=Render";  
 webBrowser1.Navigate(url);  

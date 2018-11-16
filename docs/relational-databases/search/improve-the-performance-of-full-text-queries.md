@@ -12,12 +12,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d5e0cbabfc66d7a6da51d69b1290594f03c7cb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bff25614ff82a274e5c98bc62cc25a6f1003a1b5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701378"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677359"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Verbessern der Leistung von Volltextabfragen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47701378"
 -   Bei Anwendungen, die Prädikate mit selektiver Beziehung enthalten, funktionieren Abfragen, die selektive relationale Prädikate und nicht selektive Volltextprädikate verwenden, ggf. am besten, wenn sie für die Verwendung des Abfrageoptimierers geschrieben werden. Dann kann der Abfrageoptimierer entscheiden, ob ein Prädikats- oder Bereichs-Pushdown verwendet werden kann, um einen effektiven Abfrageplan aufzustellen. Dieser Ansatz ist einfacher und häufig auch effizienter als das Indizieren von relationalen Daten als Volltextdaten.  
   
 ## <a name="related-resources"></a>Verwandte Ressourcen  
- [SQL Server 2008-Volltextsuche: Internes und Erweiterungen](http://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008-Volltextsuche: Internes und Erweiterungen](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   

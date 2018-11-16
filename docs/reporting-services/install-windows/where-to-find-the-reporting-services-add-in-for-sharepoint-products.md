@@ -10,12 +10,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: be6ca2af39fecd2ad56f894b18f820137b2e6769
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 1302c9dac8533496582415dd4326a0c1c6f7de23
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051082"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813333"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte
 
@@ -51,7 +51,7 @@ Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
   
  Anweisungen zum Herunterladen und Installieren des Add-Ins finden Sie im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center:  
   
--   **SP1-Add-In:** [Microsoft® SQL Server® 2012 SP1 Reporting Services-Add-In für Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
+-   **SP1-Add-In:** [Microsoft® SQL Server® 2012 SP1 Reporting Services-Add-In für Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583).  
   
 -   **SP1:** [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906).  
 
@@ -62,6 +62,6 @@ Das Add-In kann im SQL Server 2016-Release als Teil des SQL Server-Installations
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[Nach der Deinstallation des Reporting Services-Add-Ins können Sie keine SharePoint-Seiten in der nicht standardmäßigen Zone durchsuchen.](http://support.microsoft.com/kb/2009212)  
+[Nach der Deinstallation des Reporting Services-Add-Ins können Sie keine SharePoint-Seiten in der nicht standardmäßigen Zone durchsuchen.](https://support.microsoft.com/kb/2009212)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

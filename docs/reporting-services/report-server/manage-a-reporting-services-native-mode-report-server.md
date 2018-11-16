@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3b8b5baec563f2c5c99a08a730204581b6abdc7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f8f0b048d540647c41deff629dec5495c91d7e76
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021594"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812703"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus
   In diesem Abschnitt finden Sie Verfahren zum Konfigurieren einer Berichtsserverinstanz im einheitlichen Modus mithilfe des Reporting Services-Konfigurations-Managers.  
@@ -52,7 +52,7 @@ ms.locfileid: "50021594"
  Erklärt, wie für eingehende Anforderungen und ausgehende Antworten von einem Berichtsserver verwendete Ports geöffnet werden.  
   
  [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- Beschreibt zusätzliche Schritte, die erforderlich sind, um über `http://localhost` eine Verbindung mit dem Berichts-Manager oder einem Berichtsserver herzustellen.  
+ Beschreibt zusätzliche Schritte, die erforderlich sind, um über `https://localhost` eine Verbindung mit dem Berichts-Manager oder einem Berichtsserver herzustellen.  
   
  [Configure a Report Server for Remote Administration (Konfigurieren eines Berichtsservers für die Remoteverwaltung)](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  Erläutert, wie eine Remote-Berichtsserverinstanz so konfiguriert werden kann, dass Sie mit ihr eine Verbindung herstellen und sie über einen anderen Computer konfigurieren können.  

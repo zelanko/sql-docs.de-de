@@ -13,12 +13,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c8198ea6c27b78125ac9b7c77989bf59fd57e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 921e2883985eed8b3640ef7da9e874b74b30c55f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856108"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638007"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services-Paketen
   In der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]kann die SQL-Anweisung in einem Task „SQL ausführen“ eine MERGE-Anweisung enthalten. Diese MERGE-Anweisung ermöglicht es Ihnen, in einer einzelnen Anweisung mehrere INSERT-, UPDATE- und DELETE-Vorgänge auszuführen.  
@@ -34,7 +34,7 @@ ms.locfileid: "47856108"
     > [!NOTE]  
     >  Obwohl eine MERGE-Anweisung in diesem Szenario normalerweise eine Stagingtabelle erfordert, übersteigt die Leistung der MERGE-Anweisung normalerweise die Leistung der von der Transformation für Suche ausgeführten zeilenweisen Suche. Die MERGE-Anweisung ist außerdem nützlich, wenn die Größe einer Suchtabelle den Speicher testen würde, der der Transformation für Suche zum Zwischenspeichern der entsprechenden Verweistabelle zur Verfügung steht.  
   
- Ein Beispiel für eine Zielkomponente, die die Verwendung der MERGE-Anweisung unterstützt, finden Sie im CodePlex-Communitybeispiel [MERGE Destination](http://go.microsoft.com/fwlink/?LinkId=141215).  
+ Ein Beispiel für eine Zielkomponente, die die Verwendung der MERGE-Anweisung unterstützt, finden Sie im CodePlex-Communitybeispiel [MERGE Destination](https://go.microsoft.com/fwlink/?LinkId=141215).  
   
 ## <a name="using-merge"></a>Verwenden von MERGE  
  In der Regel verwenden Sie die MERGE-Anweisung, wenn Sie Änderungen, die Einfügungen, Updates und Löschungen umfassen, von einer Tabelle in die andere Tabelle übernehmen möchten. Vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]erforderte dieser Prozess sowohl eine Transformation für Suche als auch mehrere Transformationen für OLE DB-Befehl. Die Transformation für Suche hat eine zeilenweise Suche ausgeführt, um zu bestimmen, ob jede Zeile neu war oder geändert wurde. Die Transformationen für OLE DB-Befehl haben anschließend die notwendigen INSERT-, UPDATE- und DELETE-Vorgänge ausgeführt. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]kann eine einzelne MERGE-Anweisung sowohl die Transformation für Suche als auch die entsprechenden Transformationen für OLE DB-Befehl ersetzen.  

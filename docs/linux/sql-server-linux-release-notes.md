@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: d1163c58933ab4d2b6d7faa8b643a3401d87d530
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 4760c70f71b798fb31d96c6b36fb91afe6de9667
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270133"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666019"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Anmerkungen zu dieser Version von SQL Server 2017 unter Linux
 
@@ -78,7 +78,7 @@ Wenn Sie vorhandene SQL Server-Pakete aktualisieren, führen Sie den entsprechen
 
 ## <a id="CU12"></a> CU12 (Oktober 2018)
 
-Dies ist die Kumulatives Update 12 (CU12) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3045.24. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4464082 ](https://support.microsoft.com/en-us/help/4464082).
+Dies ist die Kumulatives Update 12 (CU12) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3045.24. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4464082 ](https://support.microsoft.com/help/4464082).
 
 ### <a name="package-details"></a>Paketdetails
 
@@ -92,7 +92,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 
 ## <a id="CU11"></a> CU11 (September 2018)
 
-Dies ist das kumulative Update 11 (CU11) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3038.14. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4462262 ](https://support.microsoft.com/en-us/help/4462262).
+Dies ist das kumulative Update 11 (CU11) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3038.14. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4462262 ](https://support.microsoft.com/help/4462262).
 
 ### <a name="package-details"></a>Paketdetails
 
@@ -106,7 +106,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 
 ## <a id="CU10"></a> CU10 (August 2018)
 
-Dies ist die Kumulatives Update 10 (CU10) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3037.1. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4342123 ](https://support.microsoft.com/en-us/help/4342123).
+Dies ist die Kumulatives Update 10 (CU10) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3037.1. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4342123 ](https://support.microsoft.com/help/4342123).
 
 ### <a name="package-details"></a>Paketdetails
 
@@ -120,7 +120,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 
 ## <a id="CU9-GDR2"></a> CU9-GDR2 (August 2018)
 
-Dies ist ein Sicherheitsupdate ausgeführt, die auch die zuvor veröffentlichte CU (CU9) für SQL Server 2017 enthält. SQL Server-Engine-Version für diese Version ist 14.0.3035.2. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4293805 ](https://support.microsoft.com/en-us/help/4293805).
+Dies ist ein Sicherheitsupdate ausgeführt, die auch die zuvor veröffentlichte CU (CU9) für SQL Server 2017 enthält. SQL Server-Engine-Version für diese Version ist 14.0.3035.2. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4293805 ](https://support.microsoft.com/help/4293805).
 
 ### <a name="package-details"></a>Paketdetails
 
@@ -134,7 +134,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 
 ## <a id="GDR2"></a> GDR2 (August 2018)
 
-Dies ist ein Sicherheitsupdate ausgeführt, der nur die Sicherheitskorrekturen GDR2 (und GDR1) für SQL Server 2017 enthält.  SQL Server-Engine-Version für diese Version ist 14.0.2002.14. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4293803 ](https://support.microsoft.com/en-us/help/4293803).
+Dies ist ein Sicherheitsupdate ausgeführt, der nur die Sicherheitskorrekturen GDR2 (und GDR1) für SQL Server 2017 enthält.  SQL Server-Engine-Version für diese Version ist 14.0.2002.14. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4293803 ](https://support.microsoft.com/help/4293803).
 
 ### <a name="package-details"></a>Paketdetails
 
@@ -148,7 +148,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 
 ## <a id="CU9"></a> CU9 (Juli 2018)
 
-Dies ist die kumulativen Update 9 (CU9) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3030.27. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4341265 ](https://support.microsoft.com/en-us/help/4341265).
+Dies ist die kumulativen Update 9 (CU9) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3030.27. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4341265 ](https://support.microsoft.com/help/4341265).
 
 ### <a name="package-details"></a>Paketdetails
 
@@ -162,7 +162,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 
 ## <a id="CU8"></a> CU8 (Juni 2018)
 
-Dies ist das kumulative Update 8 (CU8) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3029.16. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4338363 ](https://support.microsoft.com/en-us/help/4338363).
+Dies ist das kumulative Update 8 (CU8) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3029.16. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4338363 ](https://support.microsoft.com/help/4338363).
 
 ### <a name="package-details"></a>Paketdetails
 
@@ -176,7 +176,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 
 ## <a id="CU7"></a> CU7 (Mai 2018)
 
-Dies ist die Cumulative Update 7 (CU7) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3026.27. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4229789 ](https://support.microsoft.com/en-us/help/4229789).
+Dies ist die Cumulative Update 7 (CU7) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3026.27. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4229789 ](https://support.microsoft.com/help/4229789).
 
 ### <a name="package-details"></a>Paketdetails
 
@@ -236,7 +236,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 
 ## <a id="CU4"></a> CU4 (Februar 2018)
 
-Dies ist die kumulativen Update 4 (CU4) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3022.28. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4056498 ](https://support.microsoft.com/en-us/help/4056498).
+Dies ist die kumulativen Update 4 (CU4) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3022.28. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4056498 ](https://support.microsoft.com/help/4056498).
 
 ### <a name="package-details"></a>Paketdetails
 
@@ -253,7 +253,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 
 ## <a id="GDR1"></a> GDR1 (Januar 2018)
 
-Dies ist ein Sicherheitsupdate ausgeführt, die nur die GDR1 für SQL Server 2017 Sicherheitsfixes. SQL Server-Engine-Version für diese Version ist 14.0.2000.63. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4057122 ](https://support.microsoft.com/en-us/help/4057122).
+Dies ist ein Sicherheitsupdate ausgeführt, die nur die GDR1 für SQL Server 2017 Sicherheitsfixes. SQL Server-Engine-Version für diese Version ist 14.0.2000.63. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4057122 ](https://support.microsoft.com/help/4057122).
 
 ### <a name="package-details"></a>Paketdetails
 
@@ -267,7 +267,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 
 ## <a id="CU3"></a> CU3 (Januar 2018)
 
-Dies ist das kumulative Update 3 (CU3) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3015.40. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4052987 ](https://support.microsoft.com/en-us/help/4052987).
+Dies ist das kumulative Update 3 (CU3) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3015.40. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4052987 ](https://support.microsoft.com/help/4052987).
 
 ### <a name="package-details"></a>Paketdetails
 

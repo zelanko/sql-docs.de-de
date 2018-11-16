@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 83cb62f98da8022ee1d0eced56e03d20b2569a11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a12d08348a88529efdd84fd1ae5dab3c64d7d1c1
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614328"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814183"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Verwenden des RSClientPrint-Steuerelements in benutzerdefinierten Anwendungen
   Das [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-ActiveX-Steuerelement **RSPrintClient** sorgt für clientseitigen Druck von Berichten, die in einem HTML-Viewer angezeigt werden. Es enthält das Dialogfeld **Drucken**, mit dessen Hilfe ein Benutzer Druckaufträge initiieren, Berichte in der Vorschau anzeigen, Seiten zum Drucken angeben und Ränder ändern kann. Während eines clientseitigen Druckvorgangs rendert der Berichtsserver den Bericht mithilfe der Bildrenderingerweiterung (EMF) und verwendet die Druckfunktionen des Betriebssystems zum Erstellen des Druckauftrags und zum Senden des Auftrags an einen Drucker.  
@@ -131,7 +131,7 @@ ms.locfileid: "47614328"
   
  `RSClientPrint.UICulture = 9;`  
   
- `RSClientPrint.Print('http://localhost/rtm', '%2fEmployee_Sales_Summary&ReportMonth=6&ReportYear=2004&EmpID=20', 'Employee_Sales_Summary')`  
+ `RSClientPrint.Print('https://localhost/rtm', '%2fEmployee_Sales_Summary&ReportMonth=6&ReportYear=2004&EmpID=20', 'Employee_Sales_Summary')`  
   
  `}`  
   

@@ -12,12 +12,12 @@ ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2db5804b0ac8af0648a38e862bb81adedd9ef016
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c32d42292c9d16984fe37b72741da7941852ff8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669668"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699679"
 ---
 # <a name="install-data-quality-services"></a>Installieren von Data Quality Services
 
@@ -53,7 +53,7 @@ ms.locfileid: "47669668"
   
 |DQS-Komponente|Mindestsystemanforderungen|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Arbeitsspeicher (RAM): Minimum: 2 GB/empfohlen: 4 GB oder mehr<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Database Engine (Datenbankmodul). Weitere Informationen finden Sie unter [Installieren der SQL Server-Datenbank-Engine](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Arbeitsspeicher (RAM): Minimum: 2 GB/empfohlen: 4 GB oder mehr<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Datenbank-Engine. Weitere Informationen finden Sie unter [Installieren der SQL Server-Datenbank-Engine](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (wird mit dem [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] installiert, sofern nicht bereits installiert)<br /><br /> Internet Explorer 6.0 SP1 oder höher|  
   
 > [!IMPORTANT]  
@@ -117,7 +117,7 @@ ms.locfileid: "47669668"
                     [Zugriff auf Daten für DQS-Vorgänge](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Video: Installieren und Konfigurieren von DQS](http://go.microsoft.com/fwlink/?LinkId=238241)   
+ [Video: Installieren und Konfigurieren von DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [Aktualisieren der SQLCLR-Assemblys nach dem Aktualisieren von .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Export und Importieren von DQS-Wissensdatenbanken mit DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Aktualisieren von Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
@@ -125,6 +125,6 @@ ms.locfileid: "47669668"
  [Installieren von SQL Server Business Intelligence-Funktionen](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
  [Deinstallieren von SQL Server](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../../data-quality-services/data-quality-services.md)   
- [Behandeln von Installations- und Konfigurationsproblemen in DQS](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
+ [Behandeln von Installations- und Konfigurationsproblemen in DQS](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   
