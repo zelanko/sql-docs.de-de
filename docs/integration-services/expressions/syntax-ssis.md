@@ -14,12 +14,12 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7539196c5babc739de529b6241f3f85890ffbce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aff448a0d571ecd5d0eb3ce4ffa60e5a2c5440b5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692708"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638199"
 ---
 # <a name="syntax-ssis"></a>Syntax (SSIS)
   Die Ausdruckssyntax von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ähnelt der von den Sprachen C und C# verwendeten Syntax. Ausdrücke schließen Elemente ein, wie z. B. Bezeichner (Spalten und Variablen), Literale, Operatoren und Funktionen. Dieses Thema enthält eine Zusammenfassung der speziellen Anforderungen der Ausdrucksauswertungssyntax für die verschiedenen Ausdruckselemente.  
@@ -77,12 +77,12 @@ ms.locfileid: "47692708"
  Weitere Informationen finden Sie unter [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Verwenden eines Ausdrucks in einer Datenflusskomponente](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Verwenden eines Ausdrucks in einer Datenflusskomponente](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Technischer Artikel, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), auf pragmaticworks.com  
+-   Technischer Artikel, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), auf pragmaticworks.com  
   
--   Technischer Artikel, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
+-   Technischer Artikel, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
   
   

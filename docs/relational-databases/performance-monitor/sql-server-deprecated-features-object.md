@@ -16,12 +16,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12e9df07ba16f7fd2bfe1ec13f6bdc85167d53db
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 179829be2e7aed6e6e71d31c5baadc57bfeb1e38
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033707"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665409"
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -285,7 +285,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
  [Deprecation Announcement-Ereignisklasse](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support (Ereignisklasse)](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Nicht mehr unterstützte Funktionen der Volltextsuche in SQL Server 2016](http://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
+ [Nicht mehr unterstützte Funktionen der Volltextsuche in SQL Server 2016](https://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
  [Verwenden von SQL Server-Objekten](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   

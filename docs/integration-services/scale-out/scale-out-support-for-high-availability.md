@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 53fc11dc3735f1a27401164044c452a038c9c0ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9572368002a0aef7b02d615701baefb0fd6708b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594769"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638145"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out-Unterstützung für Hochverfügbarkeit
 
@@ -29,7 +29,7 @@ Alternativ kann die Hochverfügbarkeit auf Scale Out-Masterseite mithilfe einer 
 Führen Sie die folgenden Schritte aus, um die Hochverfügbarkeit auf der Scale Out-Masterseite mit Always On für den SSIS-Katalog einzurichten:
 
 ## <a name="1-prerequisites"></a>1. Voraussetzungen
-Erstellen Sie einen Windows-Failovercluster. Weitere Anweisungen finden Sie im Blogbeitrag [Installing the Failover Cluster Feature and Tools for Windows Server 2012 (Installation des Failoverclusterfeatures und des Tools für Windows Server 2012)](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Installieren Sie die Funktion und die Tools auf allen Clusterknoten.
+Erstellen Sie einen Windows-Failovercluster. Weitere Anweisungen finden Sie im Blogbeitrag [Installing the Failover Cluster Feature and Tools for Windows Server 2012 (Installation des Failoverclusterfeatures und des Tools für Windows Server 2012)](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Installieren Sie die Funktion und die Tools auf allen Clusterknoten.
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Installieren des Scale Out-Masters auf dem Primärknoten
 Installieren Sie SQL Server Database Engine Services, Integration Services und den Scale Out-Master auf dem Primärknoten für den Scale Out-Master. 

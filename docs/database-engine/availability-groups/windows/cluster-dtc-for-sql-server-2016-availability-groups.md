@@ -11,18 +11,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cdb63eb4a44b3035010336a8143b8bb34e0da8fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd433b33fcf62afd16b27f368507fc2794768fae
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703728"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601380"
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>Cluster-DTC für SQL Server 2016-Verfügbarkeitsgruppen
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Thema werden die Anforderungen und Schritte zum Gruppieren des Microsoft DTC-Diensts (Distributed Transaction Coordinator) für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] beschrieben. Weitere Informationen zu verteilten Transaktionen und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
+In diesem Thema werden die Anforderungen und Schritte zum Gruppieren des Microsoft DTC-Diensts (Distributed Transaction Coordinator) für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] beschrieben. Weitere Informationen zu verteilten Transaktionen und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 
  ## <a name="checklist-preliminary-requirements"></a>Prüfliste: Vorbereitende Anforderungen
 ||Task|Verweis|  
@@ -48,7 +48,7 @@ Nachdem Sie Ihre Verfügbarkeitsgruppenressource erstellt haben, erstellen Sie e
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Beenden und deaktivieren Sie den lokalen DTC-Dienst.|[Konfigurieren des Startvorgangs für einen Dienst](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Durchlaufen Sie den SQL Server-Dienst für jede Instanz in der Verfügbarkeitsgruppe.  Führen Sie bei Bedarf einen Failover für die Verfügbarkeitsgruppe aus.|[Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
-- Wenn es sich bei dem Betriebssystem um Windows Server 2012 R2 handelt, benötigen Sie unbedingt [KB 3030373](http://support.microsoft.com/kb/3090973) .
+- Wenn es sich bei dem Betriebssystem um Windows Server 2012 R2 handelt, benötigen Sie unbedingt [KB 3030373](https://support.microsoft.com/kb/3090973) .
 
 - Bereiten Sie die Server gemäß der Prüflisten unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md) für Verfügbarkeitsgruppen vor.
 
@@ -64,6 +64,6 @@ Nachdem Sie Ihre Verfügbarkeitsgruppenressource erstellt haben, erstellen Sie e
 [Schritt-für-Schritt-Anleitung zum Erstellen von Verfügbarkeitsgruppen](create-an-availability-group-transact-sql.md)
 
 
-[SQL Server 2016 DTC-Unterstützung in Verfügbarkeitsgruppen](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
+[SQL Server 2016 DTC-Unterstützung in Verfügbarkeitsgruppen](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
 
-[Externer Link: Konfigurieren von DTC für eine Clusterinstanz von SQL Server mit Windows Server 2008 R2](http://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
+[Externer Link: Konfigurieren von DTC für eine Clusterinstanz von SQL Server mit Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

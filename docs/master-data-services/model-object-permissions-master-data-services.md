@@ -15,12 +15,12 @@ ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9d2289a199ec54eacb42a5fce175f91872ab8133
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74ed9891af2905f8f45716c64b5f3ed9ac241905
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848864"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700404"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Berechtigungen für Modellobjekte (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "47848864"
  Im Allgemeinen sollten Sie dem Modellobjekt die Berechtigung **ALLE** zuweisen und anschließend untergeordneten Objekten die Berechtigung explizit zuweisen.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogbeitrag [Sicherheitsverbesserungen](http://go.microsoft.com/fwlink/p/?LinkId=615376), auf msdn.com.  
+ Blogbeitrag [Sicherheitsverbesserungen](https://go.microsoft.com/fwlink/p/?LinkId=615376), auf msdn.com.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   

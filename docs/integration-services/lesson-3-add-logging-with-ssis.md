@@ -11,12 +11,12 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c09af6785d83c0e7e953dac6f6fa53120489cc9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 981c573c05b299a1022ac6615dae5de0036c3571
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650338"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638157"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>Lektion 3: Hinzufügen der Protokollierung mit SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] umfasst Protokollierungsfunktionen für die Problembehandlung und das Überwachen der Paketausführung mithilfe einer Reihe von Task- und Containerereignissen. Die Protokollierungsfunktionen sind flexibel und können auf der Ebene des Pakets oder für einzelne Tasks und Container innerhalb des Pakets aktiviert werden. Sie können dann auswählen, welche Ereignisse protokolliert werden sollen, und mehrere Protokolle für ein einzelnes Paket erstellen.  
@@ -36,7 +36,7 @@ Die Protokollierung wird von einem Protokollanbieter zur Verfügung gestellt. Je
 In dieser Lektion erstellen Sie eine Kopie des Pakets, das Sie in [Lesson 2: Adding Looping with SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)(Lektion 2: Hinzufügen von Schleifen mit SSIS) erstellt haben. Beim Arbeiten mit diesem neuen Paket fügen Sie dann die Protokollierung hinzu und konfigurieren sie, um bestimmte Ereignisse während der Paketausführung zu überwachen. Wenn Sie keine der vorherigen Lektionen abgeschlossen haben, können Sie auch das abgeschlossene Paket aus Lektion 2, das im Lernprogramm enthalten ist, kopieren.  
   
 > [!IMPORTANT]  
-> Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zum Installieren und Bereitstellen von **AdventureWorksDW2012**, [Reporting Services Product Samples](http://go.microsoft.com/fwlink/p/?LinkID=526910)(Reporting Services-Produktbeispiele) auf CodePlex  
+> Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zum Installieren und Bereitstellen von **AdventureWorksDW2012**finden Sie unter [Reporting Services Product Samples ](https://go.microsoft.com/fwlink/p/?LinkID=526910) (Reporting Services-Produktbeispiele) auf CodePlex  
   
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
 Diese Lektion enthält die folgenden Aufgaben:  

@@ -26,12 +26,12 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee1e6771bc2d4a10ff7c43bfc1d13bec7855529c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbcf4fb0fb88ef90b234938252fa7cb48391d861
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681898"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642217"
 ---
 # <a name="dtutil-utility"></a>dtutil Utility
   Das Eingabeaufforderungs-Hilfsprogramm **dtutil** dient zum Verwalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. Mit dem Hilfsprogramm kann ein Paket kopiert, verschoben oder gelöscht und das Vorhandensein eines Pakets überprüft werden. Diese Aktionen können für jedes [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paket ausgeführt werden, das sich an einem der drei folgenden Speicherorte befindet: in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank, im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem. Falls das Hilfsprogramm auf ein Paket zugreift, das in **msdb**gespeichert ist, werden Sie möglicherweise zur Eingabe eines Benutzernamens und eines Kennworts aufgefordert. Wenn die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwendet, ist sowohl ein Benutzername als auch ein Kennwort erforderlich. Falls der Benutzername fehlt, versucht **dtutil** sich bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der Windows-Authentifizierung anzumelden. Der Speichertyp des Pakets wird durch die Optionen **/SQL**, **/FILE**und **/DTS** identifiziert.  
@@ -264,7 +264,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  Bei dem in diesem Beispiel verwendeten Hash handelt es sich nicht um einen echten Hash.  
   
- Weitere Informationen finden Sie im Abschnitt „CertMgr“ unter [Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)(Signieren und Überprüfen von Code mit Authenticode).  
+ Weitere Informationen finden Sie im Abschnitt „CertMgr“ unter [Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)(Signieren und Überprüfen von Code mit Authenticode).  
   
 ### <a name="encrypt-examples"></a>Beispiele für Verschlüsselungsvorgänge  
  Im folgenden Beispiel wird das dateibasierte Paket PackageToEncrypt.dtsx mithilfe der vollständigen Paketverschlüsselung mit einem Kennwort verschlüsselt. Das Ergebnis ist das dateibasierte Paket EncryptedPackage.dtsx. Das für die Verschlüsselung verwendete Kennwort lautet *EncPswd*.  

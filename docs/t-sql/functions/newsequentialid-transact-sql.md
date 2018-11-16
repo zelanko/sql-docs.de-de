@@ -19,12 +19,12 @@ ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c7ece007386a9048db3ec33322d7da0cab332cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3181a92340ae591167aa2b9e667c3af79d32f9b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855810"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698278"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47855810"
 > [!IMPORTANT]  
 >  Falls Datenschutz eine wichtige Überlegung ist, sollten Sie diese Funktion nicht verwenden. Der Wert der als Nächstes erstellten GUID ist vorhersagbar, daher ist auch der Zugriff auf Daten möglich, die mit dieser GUID verknüpft sind.  
   
- NEWSEQUENTIALID ist ein Wrapper über die Windows-Funktion [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) mit [angewendeter Byte-Mischung](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
+ NEWSEQUENTIALID ist ein Wrapper über die Windows-Funktion [UuidCreateSequential](https://go.microsoft.com/fwlink/?LinkId=164027) mit [angewendeter Byte-Mischung](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
   
 > [!WARNING]  
 >  Die UuidCreateSequential-Funktion verfügt über Hardwareabhängigkeiten. Auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Cluster von sequenziellen Werten entstehen, wenn Datenbanken (z.B. eigenständige Datenbanken) auf andere Computer verschoben werden. Bei der Verwendung von Always On und auf [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] können Cluster von sequenziellen Werten entstehen, wenn die Datenbank ein Failover auf einen anderen Computer durchführt.  

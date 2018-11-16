@@ -11,12 +11,12 @@ ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0d607699e630ee7107b2ae3460e3b3152bb94bb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0faaa704bb7a160d4a17d80a97efd2bae85b629
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703418"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671243"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sichern einer Datenbank mit speicheroptimierten Tabellen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,6 +70,6 @@ ms.locfileid: "47703418"
  Wenn speicheroptimierte Tabellen einen großen Teil der Datenbank ausmachen, kann die Größe der Datenbanksicherung durch die differenzielle Sicherung erheblich reduziert werden. Bei typischen OLTP-Arbeitsauslastungen fallen differenzielle Sicherungen wesentlich kleiner als vollständige Datenbanksicherungen aus.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Sichern und Wiederherstellen speicheroptimierter Tabellen](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+ [Sichern und Wiederherstellen speicheroptimierter Tabellen](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

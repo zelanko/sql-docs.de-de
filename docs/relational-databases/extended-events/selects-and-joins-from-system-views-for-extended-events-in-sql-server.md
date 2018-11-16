@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9a99cfe0941bd96ed8d523ed85587f64c482791
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3c4ed3aff940dd68614fd5534302fdfb65d3c59b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906150"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666829"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ Die folgende Berichtigung ist notwendig, um SELECT für Systemsichten ausführen
 
 Dieser Abschnitt stimmt mit drei verschiedenen technologischen Perspektiven auf der gleichen definierten Ereignissitzung überein und bezieht sich auf sie. Die Sitzung wurde definiert und kann im **Objekt-Explorer** von SQL Server Management Studio (SSMS.exe) angezeigt werden. Diese Sitzung wird derzeit jedoch nicht ausgeführt.
 
-Es wird empfohlen, jeden Monat [das neueste Update von SSMS zu installieren](http://msdn.microsoft.com/library/mt238290.aspx), um unerwartete Fehler zu vermeiden.
+Es wird empfohlen, jeden Monat [das neueste Update von SSMS zu installieren](https://msdn.microsoft.com/library/mt238290.aspx), um unerwartete Fehler zu vermeiden.
 
 
 Die Referenzdokumentation zu den Katalogsichten für erweiterte Ereignisse finden Sie unter [Katalogsichten für erweiterte Ereignisse (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md).

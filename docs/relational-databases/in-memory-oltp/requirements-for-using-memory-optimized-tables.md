@@ -11,17 +11,17 @@ ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7ae9cbd530432ac43daca81c82bd477603c6ecbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9cdcd3edf5e766e5d6805331f0453f65ab765322
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854568"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672639"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Anforderungen für die Verwendung von speicheroptimierten Tabellen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Informationen zum Verwenden von In-Memory-OLTP in Azure-Datenbanken finden Sie unter [Erste Schritte mit In-Memory in SQL-Datenbanken](http://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
+  Informationen zum Verwenden von In-Memory-OLTP in Azure-Datenbanken finden Sie unter [Erste Schritte mit In-Memory in SQL-Datenbanken](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
   
  Zusätzlich zu den [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) gilt für die Verwendung von In-Memory-OLTP Folgendes:  
   

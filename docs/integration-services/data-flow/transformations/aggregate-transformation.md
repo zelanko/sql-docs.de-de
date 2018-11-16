@@ -20,12 +20,12 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11ba7ca730a99631270911f6b6f3e66a4ab5b14e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42ed9609e1c2b9337e0c7f98b27c533144f8213d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607338"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638927"
 ---
 # <a name="aggregate-transformation"></a>Transformation für das Aggregieren
   Die Transformation für das Aggregieren wendet Aggregatfunktionen, wie z.B. Average, auf Spaltenwerte an und kopiert die Ergebnisse in die Transformationsausgabe. Neben Aggregatfunktionen stellt diese Transformation die GROUP BY-Klausel bereit, mit der Sie Gruppen für das Aggregieren angeben können.  
@@ -115,7 +115,7 @@ ms.locfileid: "47607338"
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Allgemeine Eigenschaften](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

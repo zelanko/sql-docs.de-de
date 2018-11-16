@@ -15,12 +15,12 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 371b83be04f64c8f71b642e6cc95f71aacc897f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8f64fb29a90f38d777d0963b9f985bb65e2e2a8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636058"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701340"
 ---
 # <a name="save-as"></a>Speichern unter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ Suchen Sie den vorhandenen Projektordner aus dieser Dropdownliste aus. Nach der 
 Mithilfe dieser Option können Sie den aktuellen Dateinamen anzeigen, den Dateinamen ändern sowie die angezeigten Dateien und Ordner filtern. Zum Filtern der angezeigten Dateien und Ordner geben Sie einen vollständigen oder teilweisen Dateinamen als Filterkriterium ein. Sie können das Sternchen (`*`) als Platzhalter verwenden.  
   
 > [!TIP]  
-> Um Dateien an Speicherorten im Web oder Netzwerk anzuzeigen, geben Sie eine URL oder Netzwerkpfad in das Feld **Dateiname** ein. Beispielsweise werden mit http://mywebsite alle Dateien angezeigt, die unter der Webadresse „mywebsite“ verfügbar sind, während mit „\\\myserver\myshare“ alle Dateien angezeigt werden, die im Ordner „myshare“ des Servers „myserver“ gespeichert sind.  
+> Um Dateien an Speicherorten im Web oder Netzwerk anzuzeigen, geben Sie eine URL oder Netzwerkpfad in das Feld **Dateiname** ein. Beispielsweise werden mit https://mywebsite alle Dateien angezeigt, die unter der Webadresse „mywebsite“ verfügbar sind, während mit „\\\myserver\myshare“ alle Dateien angezeigt werden, die im Ordner „myshare“ des Servers „myserver“ gespeichert sind.  
   
 **Dateityp**  
 Mithilfe dieser Option wählen Sie einen neuen Dateityp für das ausgewählte Element aus. Die angezeigten Dateitypen beinhalten alle verfügbaren Dateitypen, in die das ausgewählte Element konvertiert werden kann.  

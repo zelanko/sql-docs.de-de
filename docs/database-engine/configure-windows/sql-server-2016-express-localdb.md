@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: adc3db5b6930cbbc9e3af95aaa2a1245bb40c25a
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: a4d7fa27844de363c2a703a95e20df11277309fa
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383935"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606910"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Microsoft SQL Server 2016 Express **LocalDB** ist ein Feature von [SQL Server Ex
  
  ## <a name="try-it-out"></a>Probieren Sie es aus. 
   
--   Um SQL Server 2016 Express herunterzuladen und zu installieren, navigieren Sie zu der Seite **[SQL Server Downloads](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB ist eine Funktion, die Sie während der Installation auswählen. Sie ist verfügbar, wenn Sie die Medien herunterladen. Wenn Sie die Medien herunterladen, wählen Sie über den **Visual Studio-Installer** entweder **Express Advanced** oder das **LocalDB**-Paket aus. Im **Visual Studio-Installer** können Sie SQL Server Express LocalDB als Teil der Workload **.NET-Desktopentwicklung** oder als einzelne Komponente installieren.
+-   Um SQL Server 2016 Express herunterzuladen und zu installieren, navigieren Sie zu der Seite **[SQL Server Downloads](https://www.microsoft.com/sql-server/sql-server-downloads)**. LocalDB ist eine Funktion, die Sie während der Installation auswählen. Sie ist verfügbar, wenn Sie die Medien herunterladen. Wenn Sie die Medien herunterladen, wählen Sie über den **Visual Studio-Installer** entweder **Express Advanced** oder das **LocalDB**-Paket aus. Im **Visual Studio-Installer** können Sie SQL Server Express LocalDB als Teil der Workload **.NET-Desktopentwicklung** oder als einzelne Komponente installieren.
 
    > [!TIP]
    > Sie können LocalDB auch als Teil von Visual Studio 2017 installieren. Wählen Sie während der Installation von Visual Studio die Workload **.NET-Desktopentwicklung** aus, in der SQL Server Express LocalDB enthalten ist.
@@ -51,9 +51,9 @@ Wählen Sie während der Installation **LocalDB** auf der Seite **Funktionsauswa
 ## <a name="description"></a>und Beschreibung  
  Das **LocalDB** -Setupprogramm installiert mithilfe des SqlLocalDB.msi-Programms die notwendigen Dateien auf dem Computer. Nach der Installation ist **LocalDB** eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken erstellt und geöffnet werden können. Die Systemdatenbankdateien für die Datenbank werden im lokalen AppData-Pfad des Benutzers gespeichert. Dieser Pfad ist normalerweise verborgen. Beispiel: **C:\Users\\<Benutzer\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. Benutzerdatenbankdateien werden an dem vom Benutzer angegebenen Speicherort gespeichert, in der Regel im Ordner **C:\Users\\<Benutzer\>\Documents\\**.  
   
- Weitere Informationen zum Einbeziehen von **LocalDB** in eine Anwendung finden Sie in der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Dokumentation [Übersicht über lokale Daten](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx) unter [Exemplarische Vorgehensweise: Erstellen einer SQL Server-LocalDB-Datenbank](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) und unter [Exemplarische Vorgehensweise: Herstellen einer Verbindung zu Daten in einer SQL Server-LocalDB-Datenbank (Windows Forms)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
+ Weitere Informationen zum Einbeziehen von **LocalDB** in eine Anwendung finden Sie in der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Dokumentation [Übersicht über lokale Daten](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx) unter [Exemplarische Vorgehensweise: Erstellen einer SQL Server-LocalDB-Datenbank](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) und unter [Exemplarische Vorgehensweise: Herstellen einer Verbindung zu Daten in einer SQL Server-LocalDB-Datenbank (Windows Forms)](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
   
- Weitere Informationen zur **LocalDB** -API finden Sie unter [SQL Server Express LocalDB Instanz-API-Referenz](http://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx) und [LocalDBStartInstance-Funktion](http://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx).  
+ Weitere Informationen zur **LocalDB** -API finden Sie unter [SQL Server Express LocalDB Instanz-API-Referenz](https://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx) und [LocalDBStartInstance-Funktion](https://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx).  
   
  Das Hilfsprogramm SqlLocalDb kann neue Instanzen von **LocalDB**erstellen, eine Instanz von **LocalDB**starten und beenden und enthält Optionen zur Verwaltung von **LocalDB**.  Weitere Informationen zum Hilfsprogramm von SqlLocalDb finden Sie unter [SqlLocalDB-Hilfsprogramm](../../tools/sqllocaldb-utility.md).  
   
@@ -122,7 +122,7 @@ REM Gather information about the instance of LocalDB
  Fügen Sie zum Herstellen einer Verbindung mit einer freigegebenen Instanz von **LocalDB** der Verbindungszeichenfolge **erforderlich ist.\\** (Punkt + umgekehrter Schrägstrich) hinzu, um einen Verweis auf den für die freigegebenen Instanzen reservierten Namespace zu erstellen. Verwenden Sie beispielsweise eine Verbindungszeichenfolge wie als Teil der Verbindungszeichenfolge, um eine Verbindung mit einer freigegeben Instanz von **LocalDB** `AppData` namens `(localdb)\.\AppData` herzustellen. Benutzer, die eine Verbindung mit einer freigegebenen Instanz von **LocalDB** herstellen, die sie nicht besitzen, müssen über eine Windows-Authentifizierung oder über einen Anmeldenamen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verfügen.  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
- Informationen zur Problembehandlung für **LocalDB**finden Sie unter [Problembehandlung SQL Server 2012 Express LocalDB](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
+ Informationen zur Problembehandlung für **LocalDB**finden Sie unter [Problembehandlung SQL Server 2012 Express LocalDB](https://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Eine Instanz von [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]**LocalDB** ist eine von einem Benutzer zur eigenen Verwendung erstellte Instanz. Jeder Benutzer auf dem Computer kann eine Datenbank mithilfe einer **LocalDB**-Instanz erstellen, Dateien unter seinem Benutzerprofil speichern und die gemäß der Anmeldeinformationen erlaubten Prozesse ausführen. Der Zugriff auf die **LocalDB** -Instanz ist standardmäßig auf den Besitzer beschränkt. Die in **LocalDB** enthaltenen Daten sind per Dateisystemzugriff auf die Datenbankdateien geschützt. Wenn die Datenbankdateien eines Benutzers an einem freigegebenen Speicherort gespeichert werden, kann die Datenbank von jedem Benutzer mit Dateisystemzugriff auf diesen Speicherort geöffnet werden, und zwar über die jeweils eigene Instanz von **LocalDB** . Wenn die Datenbankdateien sich an einem geschützten Speicherort befinden, z. B. dem Datenordner des Benutzers, können nur dieser Benutzer und Administratoren mit Zugriffsrechten für diesen Ordner die Datenbank öffnen. Die **LocalDB** -Dateien können jeweils nur von einer **LocalDB** -Instanz geöffnet werden.  

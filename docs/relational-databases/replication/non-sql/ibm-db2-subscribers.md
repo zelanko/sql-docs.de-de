@@ -17,12 +17,12 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2fbcef1433f75be10cd9b0e916d1a49fd545208
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 091bc3b0ab56006e12064f6b873d419b4e0c5a7d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731868"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672379"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47731868"
   
 1.  Installieren Sie die neueste Version des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB-Anbieters für DB2 auf dem Verteiler:  
   
-    -   Wenn Sie [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition verwenden, klicken Sie auf der Webseite [SQL Server Downloads](http://go.microsoft.com/fwlink/?LinkId=149256) (in Englisch) im Abschnitt **Verwandte Downloads** auf den Link zur aktuellen Version des Microsoft SQL Server Feature Packs. Suchen Sie auf der Webseite **Microsoft SQL Server Feature Pack** nach **Microsoft OLE DB-Anbieter für DB2**.  
+    -   Wenn Sie [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition verwenden, klicken Sie auf der Webseite [SQL Server Downloads](https://go.microsoft.com/fwlink/?LinkId=149256) (in Englisch) im Abschnitt **Verwandte Downloads** auf den Link zur aktuellen Version des Microsoft SQL Server Feature Packs. Suchen Sie auf der Webseite **Microsoft SQL Server Feature Pack** nach **Microsoft OLE DB-Anbieter für DB2**.  
   
     -   Wenn Sie [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Standard Edition verwenden, installieren Sie die aktuelle Version von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Server (HIS). Der Anbieter ist in diesem Produkt enthalten.  
   
@@ -170,6 +170,6 @@ ms.locfileid: "47731868"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   

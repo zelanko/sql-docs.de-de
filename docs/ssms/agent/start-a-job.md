@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f5e43f4f9135d2891c772f001e88a6af42e3b062
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 4f3e9780b5eddc14464eb653afcf37770ee7ac86
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099491"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698398"
 ---
 # <a name="start-a-job"></a>Start a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -85,10 +85,10 @@ Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Securit
     GO  
     ```  
   
-Weitere Informationen finden Sie unter [sp_start_job (Transact-SQL)](http://msdn.microsoft.com/8a91df6a-eb84-4512-9a17-4a6e32a9538a).  
+Weitere Informationen finden Sie unter [sp_start_job (Transact-SQL)](https://msdn.microsoft.com/8a91df6a-eb84-4512-9a17-4a6e32a9538a).  
   
 ## <a name="SMO"></a>Verwendung von SQL Server Management Objects  
 **So starten Sie einen Auftrag**  
   
-Rufen Sie die **Start** -Methode der **Job** -Klasse in einer Programmiersprache Ihrer Wahl auf, z. B. Visual Basic, Visual C# oder PowerShell. Weitere Informationen finden Sie unter [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+Rufen Sie die **Start** -Methode der **Job** -Klasse in einer Programmiersprache Ihrer Wahl auf, z. B. Visual Basic, Visual C# oder PowerShell. Weitere Informationen finden Sie unter [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   

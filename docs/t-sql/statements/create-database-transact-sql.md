@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5263a785fff56a2f1c375c7615a725f931582cfe
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 95823c0c63e65532213e1a195b978e98df9d9986
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100521"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701048"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -182,7 +182,7 @@ CREATE DATABASE database_snapshot_name
  Gibt an, dass die zum Speichern der Datenabschnitte der Datenbank (Datendateien) verwendeten Datenträgerdateien explizit definiert sind. ON ist erforderlich, wenn darauf eine Liste von durch Trennzeichen voneinander getrennter \<filespec>-Elemente folgt, die die Datendateien für die primäre Dateigruppe definieren. Auf die Liste der Dateien in der primären Dateigruppe kann eine optionale Liste durch Trennzeichen voneinander getrennter \<filegroup>-Elemente folgen, die Benutzerdateigruppen und deren Dateien definieren.  
   
  PRIMARY  
- Gibt an, dass die zugeordnete \<filespec>-Liste die Primärdatei definiert. Die erste Datei, die im \<filespec>-Eintrag in der primären Dateigruppe angegeben ist, wird zur primären Datei. Eine Datenbank kann nur eine primäre Datei haben. Weitere Informationen finden Sie unter [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
+ Gibt an, dass die zugeordnete \<filespec>-Liste die Primärdatei definiert. Die erste Datei, die im \<filespec>-Eintrag in der primären Dateigruppe angegeben ist, wird zur primären Datei. Eine Datenbank kann nur eine primäre Datei haben. Weitere Informationen finden Sie unter [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md).  
   
  Ist PRIMARY nicht angegeben, wird die erste in der CREATE DATABASE-Anweisung aufgeführte Datei die primäre Datei.  
   
@@ -194,7 +194,7 @@ CREATE DATABASE database_snapshot_name
  COLLATE *collation_name*  
  Gibt die Standardsortierung für die Datenbank an. Als Sortierungsname kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname verwendet werden. Wenn keine Sortierung angegeben ist, wird der Datenbank die Standardsortierung der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugewiesen. In einer Datenbankmomentaufnahme kann kein Sortierungsname angegeben werden.  
   
- Mit den Klauseln FOR ATTACH und FOR ATTACH_REBUILD_LOG kann kein Sortierungsname angegeben werden. Informationen zum Ändern der Sortierung einer angefügten Datenbank finden Sie auf dieser [Microsoft-Website](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
+ Mit den Klauseln FOR ATTACH und FOR ATTACH_REBUILD_LOG kann kein Sortierungsname angegeben werden. Informationen zum Ändern der Sortierung einer angefügten Datenbank finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
   
  Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
@@ -509,7 +509,7 @@ Einige Datenbankfeatures sind von Features oder im Dateisystem enthaltenen Featu
  Jede neue Datenbank erbt die Einstellungen der Datenbankoptionen von der model-Datenbank, es sei denn, FOR ATTACH ist angegeben. Die Datenbankoption „auto shrink“ ist beispielsweise in der Modelldatenbank und in allen neuen, von Ihnen erstellten Datenbanken auf **TRUE** festgelegt. Wenn Sie die Optionen in der model-Datenbank ändern, werden diese neuen Einstellungen in jeder neu erstellten Datenbank verwendet. Änderungen in der model-Datenbank haben jedoch keine Auswirkungen auf vorhandene Datenbanken. Wenn FOR ATTACH in der CREATE DATABASE-Anweisung angegeben ist, erbt die neue Datenbank die Einstellungen der Datenbankoptionen der ursprünglichen Datenbank.  
   
 ## <a name="viewing-database-information"></a>Anzeigen von Datenbankinformationen  
- Sie können Katalogsichten, Systemfunktionen und gespeicherte Systemprozeduren verwenden, um Informationen zu Datenbanken, Dateien und Dateigruppen zurückzugeben. Weitere Informationen finden Sie unter [Systemsichten &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
+ Sie können Katalogsichten, Systemfunktionen und gespeicherte Systemprozeduren verwenden, um Informationen zu Datenbanken, Dateien und Dateigruppen zurückzugeben. Weitere Informationen finden Sie unter [Systemsichten &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Berechtigung CREATE DATABASE, CREATE ANY DATABASE oder ALTER ANY DATABASE.  
@@ -935,13 +935,13 @@ CREATE DATABASE database_name
   
 *database_name* 
  
-Der Name der neuen Datenbank. Dieser Name muss in der SQL Server-Instanz eindeutig sein und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Bezeichner](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+Der Name der neuen Datenbank. Dieser Name muss in der SQL Server-Instanz eindeutig sein und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Bezeichner](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *Collation_name*  
 
 Gibt die Standardsortierung für die Datenbank an. Als Sortierungsname kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname verwendet werden. Wenn keine Angabe erfolgt, wird der Datenbank die Standardsortierung, SQL_Latin1_General_CP1_CI_AS, zugewiesen.  
   
-Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 CATALOG_COLLATION  
 
@@ -1097,7 +1097,7 @@ Die folgende Syntax und die folgenden semantischen Regeln gelten für die Verwen
   
 - Der Quellservername und der Servername für das Kopierziel können identisch oder unterschiedlich sein. Wenn diese identisch sind, ist dieser Parameter optional, und es wird standardmäßig der Serverkontext der aktuellen Sitzung verwendet.  
   
-- Die Namen der Quell- und der Zieldatenbank müssen angegeben werden. Diese Namen müssen eindeutig sein und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Bezeichner](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+- Die Namen der Quell- und der Zieldatenbank müssen angegeben werden. Diese Namen müssen eindeutig sein und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Bezeichner](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 - Die `CREATE DATABASE`-Anweisung muss im Kontext der master-Datenbank des [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Servers ausgeführt werden, auf dem die neue Datenbank erstellt wird. 
 - Nachdem der Kopiervorgang abgeschlossen wurde, muss die Zieldatenbank als unabhängige Datenbank verwaltet werden. Sie können die `ALTER DATABASE`-Anweisung und die `DROP DATABASE`-Anweisung unabhängig von der Quelldatenbank für die neue Datenbank ausführen. Außerdem können Sie die neue Datenbank in eine andere neue Datenbank kopieren.  
@@ -1225,13 +1225,13 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 *database_name* 
  
-Der Name der neuen Datenbank. Dieser Name muss in der SQL Server-Instanz eindeutig sein und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Bezeichner](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+Der Name der neuen Datenbank. Dieser Name muss in der SQL Server-Instanz eindeutig sein und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Bezeichner](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *Collation_name*  
 
 Gibt die Standardsortierung für die Datenbank an. Als Sortierungsname kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname verwendet werden. Wenn keine Angabe erfolgt, wird der Datenbank die Standardsortierung, SQL_Latin1_General_CP1_CI_AS, zugewiesen.  
   
-Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 ## <a name="remarks"></a>Remarks
  
@@ -1307,12 +1307,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 ## <a name="arguments"></a>Argumente  
 *database_name*  
-Der Name der neuen Datenbank. Dieser Name muss auf dem SQL-Server eindeutig sein, der [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]- und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Datenbanken hosten kann, und muss den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Bezeichner](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+Der Name der neuen Datenbank. Dieser Name muss auf dem SQL-Server eindeutig sein, der [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]- und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Datenbanken hosten kann, und muss den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Bezeichner](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *collation_name*  
 Gibt die Standardsortierung für die Datenbank an. Als Sortierungsname kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname verwendet werden. Wenn keine Angabe erfolgt, wird der Datenbank die Standardsortierung „SQL_Latin1_General_CP1_CI_AS“ zugewiesen.  
   
-Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 *EDITION*  
 Gibt die Dienstebene der Datenbank an. Verwenden Sie für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] „datawarehouse“.  

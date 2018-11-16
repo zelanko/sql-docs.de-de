@@ -11,12 +11,12 @@ ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbaaa9635a39ab4a0b8f8fcd1a0a4dc8048d6c2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b5d26b38b4fef4f108a67194e4af775154d32a9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645138"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677879"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>Vorgehensweise: Ausführen von SQL Server-Komponententests
 Sie können einen SQL Server-Komponententest auf verschiedene Weisen ausführen, indem Sie z.B. das Eingabeaufforderungsfenster oder verschiedene andere Fenster verwenden.  
@@ -58,7 +58,7 @@ Durch diesen Schritt werden alle Tests im aktuellen Testlauf ausgeführt. Sobald
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Ausführen von SQL Server-Komponententests](../ssdt/running-sql-server-unit-tests.md)  
-[Gewusst wie: Ausführen von automatisierten Tests in Microsoft Visual Studio 2010](http://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
-[Ausführen von automatisierten Tests in der Befehlszeile (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
-[Testen der Anwendung (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182409.aspx)  
+[Gewusst wie: Ausführen von automatisierten Tests in Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
+[Ausführen von automatisierten Tests in der Befehlszeile (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
+[Testen der Anwendung (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
   

@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce8d405d4ae630f7166389d98086237270333e51
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 7ee293543439436615840e720071d11971aed3dc
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252157"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703668"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE-Anweisungen (Transact-SQL)
 Stellt SQL-Datenbank-Sicherungen wieder her, die mit dem BACKUP-Befehl erstellt wurden. 
@@ -365,7 +365,7 @@ Bei einer vollständigen Wiederherstellung werden Volltextdaten zusammen mit and
 Die RESTORE-Anweisung kann auch für folgende Wiederherstellungen verwendet werden: Wiederherstellungen auf alternativen Speicherorten, differenzielle Wiederherstellungen, Datei- und Dateigruppenwiederherstellungen sowie differenzielle Datei- und Dateigruppenwiederherstellungen von Volltextdaten. Darüber hinaus können mit RESTORE Volltextdateien ohne oder mit Datenbankdaten wiederhergestellt werden.  
   
 > [!NOTE] 
-> Aus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] importierte Volltextkataloge werden immer noch als Datenbankdateien behandelt. Für diese findet weiterhin die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Prozedur zur Sicherung von Volltextkatalogen Anwendung. Das Anhalten und Fortsetzen des Sicherungsvorgangs ist jedoch nicht mehr erforderlich. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Volltextkatalogen](http://go.microsoft.com/fwlink/?LinkId=107381).  
+> Aus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] importierte Volltextkataloge werden immer noch als Datenbankdateien behandelt. Für diese findet weiterhin die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Prozedur zur Sicherung von Volltextkatalogen Anwendung. Das Anhalten und Fortsetzen des Sicherungsvorgangs ist jedoch nicht mehr erforderlich. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Volltextkatalogen](https://go.microsoft.com/fwlink/?LinkId=107381).  
   
 ## <a name="metadata"></a>Metadaten  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält Tabellen mit Sicherungs- und Wiederherstellungsverlauf, in denen die Sicherungs- und Wiederherstellungsaktivität für jede Serverinstanz nachverfolgt wird. Beim Ausführen einer Wiederherstellung werden auch die Tabellen mit Sicherungsverläufen geändert. Informationen zu diesen Tabellen finden Sie unter [Sicherungsverlauf und Headerinformationen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).  
@@ -745,7 +745,7 @@ FROM URL
 Gibt ein oder mehrere Sicherungsmedien an, die mit URLs angegeben sind, die für die Wiederherstellung verwendet werden. Das URL-Format wird zur Wiederherstellung von Sicherungen aus dem Microsoft Azure-Speicherdienst verwendet. 
 
 > [!IMPORTANT]  
-> Wenn Sie eine Wiederherstellung von mehreren Geräten durchführen möchten, müssen Sie Shared Access Signature-Token (SAS) verwenden, wenn Sie die Wiederherstellung über eine URL durchführen. Beispiele für die Erstellung einer Shared Access Signature finden Sie unter [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md) und [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).  
+> Wenn Sie eine Wiederherstellung von mehreren Geräten durchführen möchten, müssen Sie Shared Access Signature-Token (SAS) verwenden, wenn Sie die Wiederherstellung über eine URL durchführen. Beispiele für die Erstellung einer Shared Access Signature finden Sie unter [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md) und [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).  
   
 *n*  
 Ein Platzhalter, der anzeigt, dass in einer durch Trennzeichen getrennten Liste möglicherweise bis zu 64 Sicherungsmedien angegeben werden.  

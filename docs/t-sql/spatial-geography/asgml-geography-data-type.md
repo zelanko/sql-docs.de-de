@@ -20,19 +20,19 @@ ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9868c815189120d7b4612c6691a807729a236817
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6620beb8537a05f766f1f68eb07c0b1cd07d1a6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760388"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701985"
 ---
 #  <a name="asgml---geography-data-type"></a>AsGml (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt die GML (Geography Markup Language)-Darstellung einer **geography** -Instanz zurück.  
   
- Weitere Informationen über Geography Markup Language finden Sie in der OGC (Open Geospatial Consortium)-Spezifikation: [OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ Weitere Informationen über Geography Markup Language finden Sie in der OGC (Open Geospatial Consortium)-Spezifikation: [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,7 +60,7 @@ SELECT @g.AsGml();
  Diese Methode gibt die Beschreibung als `LineString` -Instanz zurück.  
   
 ```  
-<LineString xmlns="http://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>  
+<LineString xmlns="https://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>  
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

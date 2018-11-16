@@ -16,12 +16,12 @@ ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f0e34605946d00228ac3a5fed17e794f5f42abc
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 87bd6d36f7a17f3a5d8e1f9ff26de645353b3fdc
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120128"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699639"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server-Failoverclustering mit SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "49120128"
 >  Weitere Informationen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="instance-level-high-availability-with-always-on-failover-cluster-instances"></a>Hohe Verfügbarkeit auf Instanzebene mit Always On-Failoverclusterinstanzen  
- Eine Always On-*Failoverclusterinstanz* (FCI) ist eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz, die auf mehreren Knoten in einem WSFC installiert wird. Dieser Typ der Instanz hängt von Ressourcen für Speicher und für den virtuellen Netzwerknamen ab. Der Speicher kann Fibre Channel, iSCSI, FCoE oder SAS für freigegebenen Datenträgerspeicher verwenden; alternativ kann er auch lokal angefügten Speicher mit [Storage Spaces Direct (S2D)](http://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview) verwenden. Die Ressource des virtuellen Netzwerknamens hängt von mindestens einer virtuellen IP-Adresse in jeweils unterschiedlichen Subnetzen ab. Der SQL Server-Dienst und der SQL Server-Agent-Dienst sind ebenfalls Ressourcen und von den Ressourcen des Speichers und des virtuellen Netzwerknamens abhängig.  
+ Eine Always On-*Failoverclusterinstanz* (FCI) ist eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz, die auf mehreren Knoten in einem WSFC installiert wird. Dieser Typ der Instanz hängt von Ressourcen für Speicher und für den virtuellen Netzwerknamen ab. Der Speicher kann Fibre Channel, iSCSI, FCoE oder SAS für freigegebenen Datenträgerspeicher verwenden; alternativ kann er auch lokal angefügten Speicher mit [Storage Spaces Direct (S2D)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview) verwenden. Die Ressource des virtuellen Netzwerknamens hängt von mindestens einer virtuellen IP-Adresse in jeweils unterschiedlichen Subnetzen ab. Der SQL Server-Dienst und der SQL Server-Agent-Dienst sind ebenfalls Ressourcen und von den Ressourcen des Speichers und des virtuellen Netzwerknamens abhängig.  
   
  Im Fall eines Failovers überträgt der WSFC-Dienst den Besitz von Ressourcen einer Instanz auf einen festgelegten Failoverknoten. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz wird dann im Failoverknoten neu gestartet, und Datenbanken werden wie gewohnt wiederhergestellt. Nur jeweils ein einzelner Knoten im Cluster kann die FCI und zugrunde liegende Ressourcen hosten.  
   
@@ -173,15 +173,15 @@ ms.locfileid: "49120128"
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Windows Server-Technologien: Failovercluster](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server-Technologien: Failovercluster](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
 
--   [Überblick über direkte Speicherplätze \(S2D\)](http://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
+-   [Überblick über direkte Speicherplätze \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
 
--   [Failovercluster in Windows Server 2008 R2](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
+-   [Failovercluster in Windows Server 2008 R2](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
--   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog-Failovercluster-Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog-Failovercluster-Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [AlwaysOn-Failoverclusterinstanzen (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
@@ -189,5 +189,5 @@ ms.locfileid: "49120128"
  [WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [WSFC-Notfallwiederherstellung durch erzwungenes Quorum (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
- [SQL Server 2016 unterstützt direkte Speicherplätze von Windows Server 2016](http://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/)
+ [SQL Server 2016 unterstützt direkte Speicherplätze von Windows Server 2016](https://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/)
   

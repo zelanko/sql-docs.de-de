@@ -11,12 +11,12 @@ ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 115a6ebf263555e98a321cbe582a663d4fcf7019
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94a34901743b462ea4fd8a4f36d381b789c360f2
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843114"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637877"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Lektion 4: Hinzufügen der Fehlerflussumleitung mit SSIS
 Um mögliche Fehler im Transformationsprozess zu behandeln, können Sie mithilfe von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] auf der Grundlage von Komponenten oder Spalten entscheiden, wie Daten zu handhaben sind, die nicht transformiert werden können. Sie können einen Fehler in bestimmten Spalten ignorieren, die gesamte fehlgeschlagene Zeile umleiten, oder die gesamte Komponente als fehlerhaft behandeln. Standardmäßig sind alle Komponenten in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] so konfiguriert, dass sie bei Fehlern fehlschlagen. Das Behandeln einer Komponente als fehlerhaft verursacht wiederum die Behandlung des Pakets als fehlerhaft, und die gesamte nachfolgende Verarbeitung wird beendet.  
@@ -30,7 +30,7 @@ Zur Behandlung von Fehlerdaten fügen Sie ein Flatfileziel hinzu, und konfigurie
 Bevor die Fehlerdaten in die Datei geschrieben werden, greift eine von Ihnen eingefügte Skriptkomponente ein, die mithilfe eines Skripts Fehlerbeschreibungen abruft. Sie konfigurieren dann die Lookup Currency Key-Transformation erneut, um alle Daten, die nicht verarbeitet werden konnten, an die Skripttransformation umzuleiten.  
   
 > [!IMPORTANT]  
-> Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zum Installieren und Bereitstellen von **AdventureWorksDW2012**, [Reporting Services Product Samples](http://go.microsoft.com/fwlink/p/?LinkID=526910)(Reporting Services-Produktbeispiele) auf CodePlex  
+> Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zum Installieren und Bereitstellen von **AdventureWorksDW2012**, [Reporting Services Product Samples](https://go.microsoft.com/fwlink/p/?LinkID=526910)(Reporting Services-Produktbeispiele) auf CodePlex  
   
 ## <a name="tasks-in-lesson"></a>Aufgaben in der Lektion  
 Diese Lektion enthält die folgenden Aufgaben:  

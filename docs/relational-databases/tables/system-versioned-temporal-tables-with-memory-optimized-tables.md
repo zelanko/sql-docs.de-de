@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2ed8247257e6687c71b9f516d68014a475cbc2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614438"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658076"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Temporale Tabellen mit Systemversionsverwaltung für [speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) bieten eine kostengünstige Lösung für Szenarien, in denen zusätzlich zur Datensammlung mit In-Memory-OLTP-Arbeitsauslastungen [Datenüberwachung und Zeitpunktanalyse](http://msdn.microsoft.com/library/mt631669.aspx) erforderlich sind. Sie bieten hohen Transaktionsdurchsatz, sperrenfreie Parallelität und gleichzeitig die Möglichkeit, große Mengen von Verlaufsdaten zu speichern, die leicht abgefragt werden können.  
+  Temporale Tabellen mit Systemversionsverwaltung für [speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) bieten eine kostengünstige Lösung für Szenarien, in denen zusätzlich zur Datensammlung mit In-Memory-OLTP-Arbeitsauslastungen [Datenüberwachung und Zeitpunktanalyse](https://msdn.microsoft.com/library/mt631669.aspx) erforderlich sind. Sie bieten hohen Transaktionsdurchsatz, sperrenfreie Parallelität und gleichzeitig die Möglichkeit, große Mengen von Verlaufsdaten zu speichern, die leicht abgefragt werden können.  
   
 ## <a name="overview"></a>Übersicht  
  Temporale Tabellen mit Systemversionsverwaltung speichern automatisch einen vollständigen Verlauf der Datenänderungen und stellen praktische Transact-SQL-Erweiterungen für die Zeitpunktanalyse zur Verfügung. Normalerweise wird der Datenverlauf für eine sehr lange Zeit beibehalten (mehrere Monate sogar Jahre), auch wenn er nicht regelmäßig abgefragt wird.  

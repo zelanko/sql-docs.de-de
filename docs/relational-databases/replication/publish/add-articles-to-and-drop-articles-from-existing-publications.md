@@ -20,12 +20,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 88a79851dbb95a42ca35be1fb9e82db362564dc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82b71c24dc5aed407a50cfd4758ac13357eb29c2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617709"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673289"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "47617709"
  Wie oben bereits erwähnt, müssen die Abonnements in einigen Fällen nach dem Löschen eines Artikels gelöscht und dann neu erstellt sowie synchronisiert werden. Weitere Informationen finden Sie unter [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md) und [Synchronisieren von Daten](../../../relational-databases/replication/synchronize-data.md).  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)]Service Pack 2** oder höher und **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** oder höher unterstützen das Löschen einer Tabelle mit dem **DROP TABLE**-DLL-Befehl für Artikel, die an einer Transaktionsreplikation beteiligt sind. Wenn eine DROP TABLE-DDL durch die Publikation(en) unterstützt wird, löscht der DROP TABLE-Vorgang die Tabelle aus der Veröffentlichung und der Datenbank. Der Protokollleseagent wird einen Bereinigungsbefehl für die Verteilungsdatenbank für die gelöschte Tabelle posten und die Bereinigung der Metadaten des Verlegers durchführen. Wenn der Protokollleser noch nicht alle Protokolleinträge verarbeitet hat, die auf die gelöschte Tabelle verweisen, wird er neue Befehle ignorieren, die der gelöschten Tabelle zugeordnet sind. Bereits verarbeitete Datensätze werden an die Verteilungsdatenbank übermittelt. Sie können auf die Abonnentendatenbank angewendet werden, wenn der Verteilungs-Agent sie verarbeitet, bevor der Protokollleser veraltete (gelöschte) Artikel bereinigt. Die **Standard**-Einstellung für alle Veröffentlichungen für Transaktionsreplikationen unterstützt keine DROP TABLE-DLL. [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) enthält weitere detaillierte Informationen zu dieser Verbesserung.
+ > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)]Service Pack 2** oder höher und **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** oder höher unterstützen das Löschen einer Tabelle mit dem **DROP TABLE**-DLL-Befehl für Artikel, die an einer Transaktionsreplikation beteiligt sind. Wenn eine DROP TABLE-DDL durch die Publikation(en) unterstützt wird, löscht der DROP TABLE-Vorgang die Tabelle aus der Veröffentlichung und der Datenbank. Der Protokollleseagent wird einen Bereinigungsbefehl für die Verteilungsdatenbank für die gelöschte Tabelle posten und die Bereinigung der Metadaten des Verlegers durchführen. Wenn der Protokollleser noch nicht alle Protokolleinträge verarbeitet hat, die auf die gelöschte Tabelle verweisen, wird er neue Befehle ignorieren, die der gelöschten Tabelle zugeordnet sind. Bereits verarbeitete Datensätze werden an die Verteilungsdatenbank übermittelt. Sie können auf die Abonnentendatenbank angewendet werden, wenn der Verteilungs-Agent sie verarbeitet, bevor der Protokollleser veraltete (gelöschte) Artikel bereinigt. Die **Standard**-Einstellung für alle Veröffentlichungen für Transaktionsreplikationen unterstützt keine DROP TABLE-DLL. [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) enthält weitere detaillierte Informationen zu dieser Verbesserung.
 
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

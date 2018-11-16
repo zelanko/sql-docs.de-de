@@ -14,12 +14,12 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b98b9cd1b4c99ba6fec20d8fe4912013aba1ea6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2ec789b32bb23fbdc2ac48278b16a02588d2580
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664291"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638583"
 ---
 # <a name="parsing-data"></a>Analysieren von Daten
   Mit Datenflüssen in Paketen werden Daten zwischen heterogenen Datenspeichern extrahiert und geladen, die eine Reihe von standardmäßigen und benutzerdefinierten Datentypen verwenden können. In einem Datenfluss werden mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Quellen Daten extrahiert, Zeichenfolgendaten analysiert und Daten in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp konvertiert. Nachfolgende Transformationen können Daten analysieren, um sie in einen anderen Datentyp zu konvertieren oder um Spaltenkopien mit anderen Datentypen zu erstellen. Mit Ausdrücken in Komponenten können außerdem Argumente und Operanden in andere Datentypen umgewandelt werden. Wenn die Daten in einen Datenspeicher geladen werden, kann schließlich das Ziel die Daten analysieren, um sie in einen vom Ziel verwendeten Datentyp zu konvertieren. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -201,5 +201,5 @@ Die Fast Parse-Eigenschaft muss für jede Spalte der Quelle oder Transformation 
 ## <a name="standard-parse"></a>Standard Parse
 Die Standardanalyse enthält gebietsschemabezogene Analyseroutinen, die alle in Oleaut32.dll und Ole2dsip.dll verfügbaren Datentypkonvertierungen der APIs für die automatische Datentypkonvertierung unterstützen. Die Standardanalyse entspricht den OLE DB-Analyse-APIs.  
   
- Die Standardanalyse stellt die Datentypkonvertierung interner Daten bereit und sollte verwendet werden, wenn das Datenformat nicht von der schnellen Analyse unterstützt wird. Weitere Informationen zur API für die automatische Datentypkonvertierung finden Sie unter "Data Type Conversion APIs" in der [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=79427). 
+ Die Standardanalyse stellt die Datentypkonvertierung interner Daten bereit und sollte verwendet werden, wenn das Datenformat nicht von der schnellen Analyse unterstützt wird. Weitere Informationen zur API für die automatische Datentypkonvertierung finden Sie unter "Data Type Conversion APIs" in der [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=79427). 
  

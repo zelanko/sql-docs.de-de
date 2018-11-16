@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3202bef4631477b1dcb25bda412773830f7f0ccc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ffa4178e4e0f5fc26dc7545edce4cf5326c17a5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724888"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671407"
 ---
 # <a name="memory-optimization-advisor"></a>Ratgeber für die Speicheroptimierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47724888"
   
 -   Migrieren von Tabellen und deren Daten in speicheroptimierte Tabellen (sofern diese keine nicht unterstützten Funktionen enthalten)  
     
- Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory-OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)(In-Memory-OLTP − Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration).  
+ Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory-OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(In-Memory-OLTP − Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Exemplarische Vorgehensweise: Ratgeber für die Speicheroptimierung  
  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Tabelle, die Sie konvertieren möchten, und wählen Sie **Ratgeber für die Speicheroptimierung**aus. Daraufhin wird die Willkommensseite für **Ratgeber für die Speicheroptimierung von Tabellen**angezeigt.  
@@ -99,7 +99,7 @@ ms.locfileid: "47724888"
   
  Wenn kein Primärschlüssel vorhanden ist und die Tabelle in eine nicht dauerhafte Tabelle migriert wird, wird dieser Bildschirm nicht angezeigt.  
   
- Bei Textspalten (mit dem Typ **char**, **nchar**, **varchar**und **nvarchar**) müssen Sie eine entsprechende Sortierung auswählen. In-Memory OLTP unterstützt BIN2-Sortierungen nur für Spalten in einer speicheroptimierten Tabelle. Sortierungen mit zusätzlichen Zeichen werden nicht unterstützt. Unter [Collations and Code Pages](http://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) finden Sie Informationen zu den unterstützten Sortierungen und den möglichen Auswirkungen, die eine Änderung der Sortierung mit sich bringen kann.  
+ Bei Textspalten (mit dem Typ **char**, **nchar**, **varchar**und **nvarchar**) müssen Sie eine entsprechende Sortierung auswählen. In-Memory OLTP unterstützt BIN2-Sortierungen nur für Spalten in einer speicheroptimierten Tabelle. Sortierungen mit zusätzlichen Zeichen werden nicht unterstützt. Unter [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) finden Sie Informationen zu den unterstützten Sortierungen und den möglichen Auswirkungen, die eine Änderung der Sortierung mit sich bringen kann.  
   
  Sie können die folgenden Parameter für den Primärschlüssel konfigurieren:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "47724888"
   
 -   Ein NONCLUSTERED-Index. Dieser Indextyp eignet sich am besten für Indizes mit zahlreichen Bereichsabfragen. Sie können die Sortierreihenfolge jeder Spalte in der Liste **Sortierspalte und -reihenfolge** konfigurieren.  
   
- Welcher Indextyp am besten für den Primärschlüssel geeignet ist, erfahren Sie unter [Hashindizes](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
+ Welcher Indextyp am besten für den Primärschlüssel geeignet ist, erfahren Sie unter [Hashindizes](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
   
  Klicken Sie auf **Weiter** , nachdem Sie die Primärschlüsseloptionen ausgewählt haben.  
   

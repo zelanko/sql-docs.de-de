@@ -17,12 +17,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 49c30d7f0d241d61855e50c53a897281b23ff22e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e865ccf2810b9dc701bfe942245d59bcb1ecf9d4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709388"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605490"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ```  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos-Konfigurations-Manager für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ist ein Diagnosetool zur Behebung Kerberos-bezogener Verbindungsprobleme bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Microsoft Kerberos-Konfigurations-Manager für SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos-Konfigurations-Manager für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ist ein Diagnosetool zur Behebung Kerberos-bezogener Verbindungsprobleme bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Microsoft Kerberos-Konfigurations-Manager für SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 ##  <a name="Role"></a> Die Rolle des Dienstprinzipalnamens bei der Authentifizierung  
  Wenn eine Anwendung eine Verbindung öffnet und die Windows-Authentifizierung verwendet, übergibt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computernamen, -Instanznamen und optional einen SPN. Wenn die Verbindung einen Dienstprinzipalnamen übergibt, wird dieser ohne Änderungen verwendet.  
@@ -64,9 +64,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > [!NOTE]  
 >  Wenn die Windows-Domäne zum Ausführen auf einer geringeren Ebene als der [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2-Funktionsebene konfiguriert ist, verfügt das verwaltete Dienstkonto nicht über die notwendigen Berechtigungen zum Registrieren der SPNs für den [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Dienst. Ist die Kerberos-Authentifizierung erforderlich, muss der Domänenadministrator die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -SPNs über das verwaltete Dienstkonto manuell registrieren.  
   
- Der KB-Artikel [Verwenden der Kerberos-Authentifizierung in SQL Server](http://support.microsoft.com/kb/319723)enthält Informationen zum Gewähren von Lese- und Schreibberechtigungen für einen SPN für ein Nicht-Domänenadministratorkonto.  
+ Der KB-Artikel [Verwenden der Kerberos-Authentifizierung in SQL Server](https://support.microsoft.com/kb/319723)enthält Informationen zum Gewähren von Lese- und Schreibberechtigungen für einen SPN für ein Nicht-Domänenadministratorkonto.  
   
- Weitere Informationen sind unter [Implementieren von eingeschränkter Kerberos-Delegierung mit SQL Server 2008](http://technet.microsoft.com/library/ee191523.aspx)verfügbar  
+ Weitere Informationen sind unter [Implementieren von eingeschränkter Kerberos-Delegierung mit SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)verfügbar  
   
 ##  <a name="Formats"></a> SPN-Formate  
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]wurde das SPN-Format geändert, um die Kerberos-Authentifizierung unter TCP/IP, Named Pipes und Shared Memory zu unterstützen. Die folgenden SPN-Formate für benannte und Standardinstanzen werden unterstützt.  
@@ -113,7 +113,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Die Registrierung bzw. die Aufhebung der Registrierung eines SPN muss möglicherweise manuell durchgeführt werden, wenn der Dienst nicht über die Berechtigungen für diese Aktionen verfügt.  
   
 ##  <a name="Manual"></a> Manuelle SPN-Registrierung  
-Um den SPN manuell zu registrieren, muss der Administrator das Setspn.exe-Tool verwenden, das mit den Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] -Supporttools geliefert wird. Weitere Informationen finden Sie im KB-Artikel [Supporttools in Windows Server 2003 Service Pack 1](http://support.microsoft.com/kb/892777) .  
+Um den SPN manuell zu registrieren, muss der Administrator das Setspn.exe-Tool verwenden, das mit den Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] -Supporttools geliefert wird. Weitere Informationen finden Sie im KB-Artikel [Supporttools in Windows Server 2003 Service Pack 1](https://support.microsoft.com/kb/892777) .  
   
 Setspn.exe ist ein Befehlszeilentool, mit dem Sie die SPN-Verzeichniseigenschaft lesen, ändern und löschen können. Mit diesem Tool können Sie auch die aktuellen SPN anzeigen, die Standard-SPN des Kontos zurücksetzen und zusätzliche SPN hinzufügen oder löschen.  
   
@@ -182,6 +182,6 @@ WHERE session_id = @@SPID;
  [Dienstprinzipalnamen (SPN) in Clientverbindungen (OLE DB)](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [Dienstprinzipalnamen (SPN) in Clientverbindungen (ODBC)](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   
  [SQL Server Native Client-Funktionen](../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Behandeln von Problemen mit der Kerberos-Authentifizierung in einer Reporting Services-Umgebung](http://technet.microsoft.com/library/ff679930.aspx)  
+ [Behandeln von Problemen mit der Kerberos-Authentifizierung in einer Reporting Services-Umgebung](https://technet.microsoft.com/library/ff679930.aspx)  
   
   

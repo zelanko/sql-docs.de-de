@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e5ff6d186c4dc724ed344a1fe89ecb2d92bfb5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4498b558e740927f52ab53a0edb8a615a34c0690
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722678"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657779"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Aufrufen von systemintern kompilierten gespeicherten Prozeduren über Datenzugriffsanwendungen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 1.  Erstellen Sie eine Beispieldatenbank mit einer speicheroptimierten Datendateigruppe. Informationen zum Erstellen einer Datenbank mithilfe einer speicheroptimierten Datendateigruppe finden Sie unter [Erstellen einer speicheroptimierten Tabelle und einer nativ kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
-2.  Erstellen Sie eine ODBC-Datenquelle mit dem Namen PrepExecSample, die auf die Datenbank zeigt. Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Treiber. Sie können das Beispiel auch ändern und den [Microsoft ODBC-Treiber für SQL Server](http://msdn.microsoft.com/library/jj730314.aspx)verwenden.  
+2.  Erstellen Sie eine ODBC-Datenquelle mit dem Namen PrepExecSample, die auf die Datenbank zeigt. Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Treiber. Sie können das Beispiel auch ändern und den [Microsoft ODBC-Treiber für SQL Server](https://msdn.microsoft.com/library/jj730314.aspx)verwenden.  
   
 3.  Führen Sie das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript (unten) in der Beispieldatenbank aus.  
   

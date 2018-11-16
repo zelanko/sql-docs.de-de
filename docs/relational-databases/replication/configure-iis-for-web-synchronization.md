@@ -15,22 +15,22 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 707ab28617129f16bd3e3bbf142349dcba6ff49b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684878"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665739"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Konfigurieren von IIS für die Websynchronisierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Die Verfahren in diesem Thema sind der zweite Schritt zur Konfiguration der Websynchronisierung für die Mergereplikation. Sie führen diesen Schritt aus, nachdem Sie die Websynchronisierung für eine Veröffentlichung aktiviert haben. Eine Übersicht über den Konfigurationsprozess bietet [Websynchronisierung konfigurieren](../../relational-databases/replication/configure-web-synchronization.md). Nachdem Sie die Verfahren in diesem Thema ausgeführt haben, fahren Sie mit dem dritten Schritt fort, in dem Sie die Websynchronisierung für ein Abonnement konfigurieren. Dieser dritte Schritt wird in den folgenden Themen beschrieben:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Vorgehensweise: Konfigurieren eines Abonnements für die Websynchronisierung \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Vorgehensweise: Konfigurieren eines Abonnements für die Websynchronisierung \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Replikationsprogrammierung [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Vorgehensweise: Konfigurieren eines Abonnements für die Verwendung der Websynchronisierung (Replikationsprogrammierung mit Transact-SQL)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   Replikationsprogrammierung [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Vorgehensweise: Konfigurieren eines Abonnements für die Verwendung der Websynchronisierung (Replikationsprogrammierung mit Transact-SQL)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [Vorgehensweise: Konfigurieren eines Abonnements für die Websynchronisierung (RMO-Programmierung)](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [Vorgehensweise: Konfigurieren eines Abonnements für die Websynchronisierung (RMO-Programmierung)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Die Websynchronisierung verwendet einen Computer mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS (Internet Information Services), um Pullabonnements mit Mergeveröffentlichungen zu synchronisieren. Die IIS-Versionen 5.0, 6.0 und 7.0 werden unterstützt. Der Assistent zum Konfigurieren der Websynchronisierung wird auf IIS Version 7.0 nicht unterstützt.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47684878"
   
 4.  Klicken Sie auf **OK**.  
   
- Wenn Sie kein Serverzertifikat von einer Zertifizierungsstelle erhalten können, können Sie ein Zertifikat zum Testen angeben. Installieren Sie ein Zertifikat mithilfe des Hilfsprogramms SelfSSL, um IIS 6.0 zum Testen zu konfigurieren. Dieses Hilfsprogramm ist im IIS 6.0 Resource Kit verfügbar. Sie können die Tools auch vom [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=30958)herunterladen. Für IIS&#160;5.0 wechseln Sie zum [Microsoft Hilfe- und Supportcenter](http://go.microsoft.com/fwlink/?LinkId=46229).  
+ Wenn Sie kein Serverzertifikat von einer Zertifizierungsstelle erhalten können, können Sie ein Zertifikat zum Testen angeben. Installieren Sie ein Zertifikat mithilfe des Hilfsprogramms SelfSSL, um IIS 6.0 zum Testen zu konfigurieren. Dieses Hilfsprogramm ist im IIS 6.0 Resource Kit verfügbar. Sie können die Tools auch vom [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=30958)herunterladen. Für IIS&#160;5.0 wechseln Sie zum [Microsoft Hilfe- und Supportcenter](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
 > [!NOTE]  
 >  Ein Zertifikat muss einer Website zugeordnet werden, damit die betreffende Website SSL verwenden kann. SelfSSL ordnet das Zertifikat automatisch der Standardwebsite zu. Wenn Sie bereits über ein Zertifikat verfügen oder später ein Zertifikat von einer Zertifizierungsstelle installieren, müssen Sie dieses Zertifikat explizit der Website zuordnen, die von der Websynchronisierung verwendet wird. Stellen Sie sicher, dass der Website, die zum Synchronisieren von Abonnements verwendet wird, nur ein Zertifikat zugeordnet ist. Wenn mehrere Zertifikate vorhanden sind, verwendet der Abonnent die erste verfügbare Website.  

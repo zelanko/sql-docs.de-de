@@ -5,19 +5,18 @@ ms.date: 10/02/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03d9dd525c06574360782a288faf2dae917f49cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87bc14e323d14ddbf64daae6fb441e2977a3af14
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822198"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675699"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>SQL Server-Datendateien in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ ms.locfileid: "47822198"
 ### <a name="azure-storage-concepts"></a>Azure-Speicherkonzepte  
  Bei Verwendung von SQL Server-Datendateien in Windows Azure müssen Sie ein Speicherkonto und einen Container in Windows Azure erstellen. Anschließend müssen Sie SQL Server-Anmeldeinformationen erstellen, die Informationen zur Containerrichtlinie sowie eine SAS (Shared Access Signature, Signatur für gemeinsamen Zugriff) enthalten, die für den Zugriff auf den Container erforderlich ist.  
   
- In [Microsoft Azure](https://azure.microsoft.com)stellt ein [Azure-Speicherkonto](https://azure.microsoft.com/services/storage/) die höchste Namespaceebene für den BLOB-Zugriff dar. Ein Speicherkonto kann eine unbegrenzte Anzahl von Containern enthalten. Allerdings darf deren Gesamtgröße das Speicherlimit nicht überschreiten. Aktuelle Informationen zu Speichergrößenbeschränkungen finden Sie unter [Azure-Abonnement und Dienstbeschränkungen, Kontingente und Einschränkungen](http://docs.microsoft.com/azure/azure-subscription-service-limits). Ein Container stellt eine Gruppierung eines [BLOB](http://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage)-Satzes bereit. Alle BLOBs müssen sich in einem Container befinden. Ein Konto kann eine unbegrenzte Anzahl von Containern enthalten. Analog dazu kann in einem Container auch eine unbegrenzte Anzahl von BLOBs gespeichert werden. Es gibt zwei Arten von BLOBs, die im Azure-Speicher gespeichert werden können: Blockblobs und Seitenblobs. Diese neue Funktion verwendet Seitenblobs, die effizienter sind, wenn die Bytebereiche in einer Datei häufig geändert werden. Sie können mit folgendem URL-Format auf BLOBs zugreifen: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+ In [Microsoft Azure](https://azure.microsoft.com)stellt ein [Azure-Speicherkonto](https://azure.microsoft.com/services/storage/) die höchste Namespaceebene für den BLOB-Zugriff dar. Ein Speicherkonto kann eine unbegrenzte Anzahl von Containern enthalten. Allerdings darf deren Gesamtgröße das Speicherlimit nicht überschreiten. Aktuelle Informationen zu Speichergrößenbeschränkungen finden Sie unter [Azure-Abonnement und Dienstbeschränkungen, Kontingente und Einschränkungen](https://docs.microsoft.com/azure/azure-subscription-service-limits). Ein Container stellt eine Gruppierung eines [BLOB](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage)-Satzes bereit. Alle BLOBs müssen sich in einem Container befinden. Ein Konto kann eine unbegrenzte Anzahl von Containern enthalten. Analog dazu kann in einem Container auch eine unbegrenzte Anzahl von BLOBs gespeichert werden. Es gibt zwei Arten von BLOBs, die im Azure-Speicher gespeichert werden können: Blockblobs und Seitenblobs. Diese neue Funktion verwendet Seitenblobs, die effizienter sind, wenn die Bytebereiche in einer Datei häufig geändert werden. Sie können mit folgendem URL-Format auf BLOBs zugreifen: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="azure-billing-considerations"></a>Überlegungen zur Abrechnung in Azure  
- Die Schätzung der für die Nutzung der Azure-Dienste anfallenden Kosten ist ein wichtiger Aspekt des Entscheidungs- und Planungsprozesses. Wenn Sie SQL Server-Datendateien im Azure-Speicher speichern, fallen Kosten für die Speicherung und Transaktionen an. Zusätzlich erfordert die Implementierung von SQL Server-Datendateien im Azure-Speicher alle 45 bis 60 Sekunden eine implizite Erneuerung der BLOB-Leasedauer. Auf diese Weise entstehen ebenfalls Transaktionskosten pro Datenbankdatei, z. B. MDF- oder LDF-Datei. Die Informationen auf der [Azure-Preisseite](http://azure.microsoft.com/pricing/) sollen Ihnen dabei helfen, die monatlichen Kosten einzuschätzen, die mit der Nutzung von Azure Storage und Azure Virtual Machines verbunden sind.  
+ Die Schätzung der für die Nutzung der Azure-Dienste anfallenden Kosten ist ein wichtiger Aspekt des Entscheidungs- und Planungsprozesses. Wenn Sie SQL Server-Datendateien im Azure-Speicher speichern, fallen Kosten für die Speicherung und Transaktionen an. Zusätzlich erfordert die Implementierung von SQL Server-Datendateien im Azure-Speicher alle 45 bis 60 Sekunden eine implizite Erneuerung der BLOB-Leasedauer. Auf diese Weise entstehen ebenfalls Transaktionskosten pro Datenbankdatei, z. B. MDF- oder LDF-Datei. Die Informationen auf der [Azure-Preisseite](https://azure.microsoft.com/pricing/) sollen Ihnen dabei helfen, die monatlichen Kosten einzuschätzen, die mit der Nutzung von Azure Storage und Azure Virtual Machines verbunden sind.  
   
 ### <a name="sql-server-concepts"></a>Konzepte von SQL Server  
  Die folgenden Voraussetzungen müssen zur Verwendung der neuen Erweiterung erfüllt sein:  
@@ -64,7 +63,7 @@ ms.locfileid: "47822198"
   
 -   Die Informationen zum Azure-Speichercontainer, der zugehörige Richtlinienname und der SAS-Schlüssel müssen im Anmeldeinformationsspeicher von SQL Server gespeichert werden.  
   
- Im folgenden Beispiel wird vorausgesetzt, dass ein Azure-Speichercontainer sowie eine Richtlinie mit Lese-, Schreib- und Auflistungsrechten erstellt wurde. Beim Erstellen einer Richtlinie für einen Container wird ein SAS-Schlüssel generiert, der gefahrlos unverschlüsselt im Arbeitsspeicher vorgehalten werden kann und von SQL Server für den Zugriff auf die BLOB-Dateien im Container benötigt wird. Ersetzen Sie in den folgenden Codeausschnitt `'<your SAS key>'` mit einem Eintrag, der dem folgenden ähnelt: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. Weitere Informationen finden Sie unter [Verwalten des anonymen Lesezugriffs auf Container und Blobs](http://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources).  
+ Im folgenden Beispiel wird vorausgesetzt, dass ein Azure-Speichercontainer sowie eine Richtlinie mit Lese-, Schreib- und Auflistungsrechten erstellt wurde. Beim Erstellen einer Richtlinie für einen Container wird ein SAS-Schlüssel generiert, der gefahrlos unverschlüsselt im Arbeitsspeicher vorgehalten werden kann und von SQL Server für den Zugriff auf die BLOB-Dateien im Container benötigt wird. Ersetzen Sie in den folgenden Codeausschnitt `'<your SAS key>'` mit einem Eintrag, der dem folgenden ähnelt: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. Weitere Informationen finden Sie unter [Verwalten des anonymen Lesezugriffs auf Container und Blobs](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources).  
   
 ```sql
 CREATE CREDENTIAL [https://testdb.blob.core.windows.net/data]  
@@ -94,9 +93,9 @@ ON
 ### <a name="installation-prerequisites"></a>Installationsvoraussetzungen  
  Die folgenden Installationsvoraussetzungen gelten beim Speichern von SQL Server-Datendateien in Azure.  
   
--   **Lokaler SQL Server:** Dieses Feature ist in SQL Server 2016 und späteren Versionen enthalten. Unter [SQL Server](http://www.microsoft.com/sql-server/sql-server-downloads) finden Sie eine Anleitung zum Download der neuesten Version von SQL Server.  
+-   **Lokaler SQL Server:** Dieses Feature ist in SQL Server 2016 und späteren Versionen enthalten. Unter [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) finden Sie eine Anleitung zum Download der neuesten Version von SQL Server.  
   
--   SQL Server auf einem virtuellen Computer in Azure: Wenn Sie [SQL Server auf einem virtuellen Azure-Computer](http://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)installieren, installieren Sie SQL Server 2016, oder aktualisieren Sie Ihre vorhandene Instanz. Sie können auch einen neuen virtuellen Computer in Azure erstellen, indem Sie ein Plattformimage von SQL Server 2016 verwenden.
+-   SQL Server auf einem virtuellen Computer in Azure: Wenn Sie [SQL Server auf einem virtuellen Azure-Computer](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)installieren, installieren Sie SQL Server 2016, oder aktualisieren Sie Ihre vorhandene Instanz. Sie können auch einen neuen virtuellen Computer in Azure erstellen, indem Sie ein Plattformimage von SQL Server 2016 verwenden.
 
   
 ###  <a name="bkmk_Limitations"></a> Einschränkungen  
@@ -109,7 +108,7 @@ ON
   
 -   Wenn Sie das Feature für SQL Server-Datendateien in Azure nutzen, wird die Georeplikation für Ihr Speicherkonto nicht unterstützt. Wenn für ein Speicherkonto eine Georeplikation ausgeführt wird und ein Geo-Failover auftritt, kann die Datenbank beschädigt werden.  
   
--   Nähere Informationen zu Kapazitätsbeschränkungen finden Sie unter [Einführung in Blob Storage](http://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).  
+-   Nähere Informationen zu Kapazitätsbeschränkungen finden Sie unter [Einführung in Blob Storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).  
   
 -   Es ist nicht möglich, In-Memory OLTP-Daten mithilfe des Features „SQL Server-Datendateien in Azure“ in einem Azure-BLOB zu speichern. Das liegt daran, dass In-Memory-OLTP von **FileStream** abhängig ist und das Speichern von **FileStream** -Daten im Azure-Speicher von dem Feature in der derzeitigen Version nicht unterstützt wird.  
   
@@ -123,7 +122,7 @@ ON
  In diesem Abschnitt werden die Tools und Referenzbibliotheken für die Programmierung beschrieben, die beim Speichern von SQL Server-Datendateien im Azure-Speicher verwendet werden können.  
   
 ### <a name="powershell-support"></a>PowerShell-Unterstützung  
- Verwenden Sie PowerShell-Cmdlets für die Speicherung von SQL Server-Datendateien im Azure-BLOB-Speicherdienst. Dabei wird anstatt auf einen Dateipfad auf den URL-Pfad eines BLOB-Speichers verwiesen. Greifen Sie mit folgendem URL-Format auf BLOBs zu: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+ Verwenden Sie PowerShell-Cmdlets für die Speicherung von SQL Server-Datendateien im Azure-BLOB-Speicherdienst. Dabei wird anstatt auf einen Dateipfad auf den URL-Pfad eines BLOB-Speichers verwiesen. Greifen Sie mit folgendem URL-Format auf BLOBs zu: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>Unterstützung von SQL Server-Objekten und -Leistungsindikatoren  
  In SQL Server 2014 wurde ein neues SQL Server-Objekt eingeführt, das mit SQL Server-Datendateien im Azure-Speicher verwendet werden kann. Das neue SQL Server-Objekt wird als [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) aufgerufen und kann vom Systemmonitor verwendet werden, um Aktivitäten bei der Ausführung von SQL Server mit dem Microsoft Azure-Speicher zu überwachen.  

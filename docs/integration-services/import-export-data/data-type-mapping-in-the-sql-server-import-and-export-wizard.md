@@ -11,12 +11,12 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 826e7ca671272f859cd0d5da7059b34cf4cfedba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee64f342f8ef865d8b264f37c332098b0c2d62cf
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847268"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637624"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Zuordnung von Datentypen mit dem SQL Server-Import/Export-Assistenten
  Im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten können Sie den Namen, den Datentyp und die Datentypeigenschaften von Spalten in neuen Zieltabellen und -dateien festlegen. Allerdings können Sie keine benutzerdefinierten Konvertierungen für Spaltenwerte angeben. Daher ist die integrierte Zuordnung von Datentypen von der Quelle zum Ziel wichtig.  
@@ -32,7 +32,7 @@ Der Assistent verwendet die von [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 Wenn Ihr Unternehmen verschiedene Zuordnungen zwischen Datentypen erfordert, können Sie die Zuordnungsdateien aktualisieren, um die vom Assistenten durchgeführten Zuordnungen zu ändern. Wenn Sie z. B. möchten, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** -Datentyp beim Übertragen von Daten von **in DB2 dem DB2-Datentyp** GRAPHIC **VARin DB2 dem DB2-Datentyp** VARGRAPHIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet wird, ändern Sie die **nchar** -Zuordnung in der Zuordnungsdatei **SqlClientToIBMDB2.xml** so, dass **in DB2 dem DB2-Datentyp** statt **VARin DB2 dem DB2-Datentyp.** verwendet wird.  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>Sie können eine neue Zuordnungsdatei hinzufügen
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert Zuordnungen zwischen vielen häufig verwendeten Kombinationen von Quelle und Ziel. Sie können auch dem Verzeichnis **MappingFiles** neue Zuordnungsdateien hinzufügen, um weitere Quellen und Ziele zu unterstützen. Die neuen Zuordnungsdateien müssen dem veröffentlichten XSD-Schema entsprechen und einer eindeutigen Kombination aus Quelle und Ziel zugeordnet sein. Das Schema für Zuordnungsdateien, **DataTypeMapping.xsd**, ist [hier](http://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd)veröffentlicht.
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert Zuordnungen zwischen vielen häufig verwendeten Kombinationen von Quelle und Ziel. Sie können auch dem Verzeichnis **MappingFiles** neue Zuordnungsdateien hinzufügen, um weitere Quellen und Ziele zu unterstützen. Die neuen Zuordnungsdateien müssen dem veröffentlichten XSD-Schema entsprechen und einer eindeutigen Kombination aus Quelle und Ziel zugeordnet sein. Das Schema für Zuordnungsdateien, **DataTypeMapping.xsd**, ist [hier](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd) veröffentlicht.
  
 ## <a name="sample-mapping-file"></a>Beispielzuordnungsdatei
 Es folgt ein Teil der XML-Zuordnungsdatei, die SQL Server-Datentypen (oder genauer gesagt vom .NET Framework-Datenanbieter für SQL Server verwendete Datentypen) Oracle-Datentypen zuordnet. Beispielsweise können Sie sehen, dass der SQL Server -Datentyp **int** dem Oracle-Datentyp **INTEGER** zugeordnet wird.
@@ -40,8 +40,8 @@ Es folgt ein Teil der XML-Zuordnungsdatei, die SQL Server-Datentypen (oder genau
 ```xml  
   
 <dtm:DataTypeMappings  
-    xmlns:dtm="http://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:dtm="https://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"  
     SourceType="System.Data.SqlClient.SqlConnection"   
     MinSourceVersion="*"   
     MaxSourceVersion="*"   

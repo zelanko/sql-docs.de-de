@@ -12,12 +12,12 @@ ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: adff470aea31f69532c0f12cf72b1baf7d0008f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfc0fecfb813fab9ccc7109a06729bd14abacfbc
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612248"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697193"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Funktionsbereich "Benutzer- und Gruppenberechtigungen" (Master Data Manager)
 
@@ -49,7 +49,7 @@ ms.locfileid: "47612248"
   
  [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
- [Problembehandlung für die Master Data Manager-Sicherheit](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
+ [Problembehandlung für die Master Data Manager-Sicherheit](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Master Data Manager-Webanwendung [Master Data Services]](../master-data-services/master-data-manager-web-application.md)  

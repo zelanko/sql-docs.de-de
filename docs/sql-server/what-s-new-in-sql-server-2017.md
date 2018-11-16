@@ -11,21 +11,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d7ac19ce57b32c550c73b3a5de8d8f7f016afa69
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 5ed1c90d0516761b209382321e160ffb0e83237e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419505"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701377"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017 stellt einen wichtigen Schritt dar, um SQL Server zu einer Plattform zu machen, auf der Sie verschiedene Wahlmöglichkeiten haben: Wählen Sie zwischen verschiedenen Entwicklungssprachen und Datentypen, zwischen lokaler Ausführung oder Ausführung in der Cloud sowie zwischen verschiedenen Betriebssystemen, indem die Leistungsfähigkeit von SQL Server für Linux, Linux-basierte Docker-Container und Windows bereitgestellt wird. Im Folgenden werden die Neuerungen für bestimmte Funktionsbereiche zusammengefasst und Links mit zusätzlichen Details zur Verfügung gestellt. Weitere Informationen zu SQL Server für Linux finden Sie in der Dokumentation zu [SQL Server für Linux](https://docs.microsoft.com/sql/linux/).
 
-[![Download aus dem Evaluierungscenter](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Probieren Sie es aus:** [Laden Sie die aktuellste Version von SQL Server 2017 herunter: Oktober 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
+[![Download aus dem Evaluierungscenter](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Probieren Sie es aus:** [Laden Sie die aktuellste Version von SQL Server 2017 herunter: Oktober 2017](https://go.microsoft.com/fwlink/?LinkID=829477).
 
 > [!NOTE]
-> Zusätzlich zu den nachfolgenden Änderungen werden kumulative Updates in regelmäßigen Abständen nach dem allgemein verfügbaren Release veröffentlicht. Diese kumulativen Updates enthalten viele Verbesserungen und Fehlerbehebungen. Weitere Informationen zu den aktuellen kumulativen Updates finden Sie unter [SQL Server 2017 Cumulative updates (Kumulative Updates für SQL Server 2017)](http://aka.ms/sql2017cu).
+> Zusätzlich zu den nachfolgenden Änderungen werden kumulative Updates in regelmäßigen Abständen nach dem allgemein verfügbaren Release veröffentlicht. Diese kumulativen Updates enthalten viele Verbesserungen und Fehlerbehebungen. Weitere Informationen zu den aktuellen kumulativen Updates finden Sie unter [SQL Server 2017 Cumulative updates (Kumulative Updates für SQL Server 2017)](https://aka.ms/sql2017cu).
 
 ## <a name="sql-server-2017-database-engine"></a>SQL Server 2017-Datenbank-Engine
 

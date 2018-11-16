@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8decfb0a7378ef1acfaf671276f6449cde19ba1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c67e42a98bf6b653b35ead538449d725a6ed9d96
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794608"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662259"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47794608"
  Sie können die GUI auch dazu verwenden, die Optimierungsausgabe anzuzeigen, die vom Befehlszeilen-Hilfsprogramm **dta** generiert wird.  
   
 > [!NOTE]  
->  Falls Sie das Befehlszeilen-Hilfsprogramm **dta** verwenden und mithilfe des Arguments **-ox** angeben, dass die Ausgabe in eine XML-Datei geschrieben wird, können Sie die XML-Ausgabedatei öffnen und anzeigen, indem Sie im Menü **Datei** von **auf** Datei öffnen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]klicken. Weitere Informationen finden Sie unter [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Informationen zum Befehlszeilen-Hilfsprogramm **dta** finden Sie unter [dta (Hilfsprogramm)](../../tools/dta/dta-utility.md).  
+>  Falls Sie das Befehlszeilen-Hilfsprogramm **dta** verwenden und mithilfe des Arguments **-ox** angeben, dass die Ausgabe in eine XML-Datei geschrieben wird, können Sie die XML-Ausgabedatei öffnen und anzeigen, indem Sie im Menü **Datei** von **auf** Datei öffnen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]klicken. Weitere Informationen finden Sie unter [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Informationen zum Befehlszeilen-Hilfsprogramm **dta** finden Sie unter [dta (Hilfsprogramm)](../../tools/dta/dta-utility.md).  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>So zeigen Sie Optimierungsempfehlungen mithilfe der GUI des Datenbankoptimierungsratgebers an  
   
@@ -175,7 +175,7 @@ ms.locfileid: "47794608"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     Das XML-Schema des Datenbankoptimierungsratgebers ist auch online unter [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta) verfügbar.  
+     Das XML-Schema des Datenbankoptimierungsratgebers ist auch online unter [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta) verfügbar.  
   
 6.  Nach dem Erstellen einer Arbeitsauslastung und einer XML-Eingabedatei können Sie die Eingabedatei an das Befehlszeilen-Hilfsprogramm **dta** zur Analyse übergeben. Stellen Sie sicher, dass Sie einen XML-Ausgabedateinamen für das **-ox** -Argument des Hilfsprogramms angeben. Auf diese Weise wird eine XML-Ausgabedatei mit einer empfohlenen Konfiguration erstellt, die im **Configuration** -Element angegeben ist. Wenn Sie den Datenbankoptimierungsratgeber zum Überprüfen einer weiteren, auf der Ausgabe basierenden hypothetischen Konfiguration ausführen möchten, kopieren Sie den **Configuration** -Elementinhalt aus der Ausgabedatei und fügen Sie ihn in eine neue oder in Ihre ursprüngliche XML-Eingabedatei ein. Informationen zum Verwenden einer XML-Eingabedatei mit dem Hilfsprogramm **dta** finden Sie im Abschnitt "Optimieren einer Datenbank mithilfe des dta-Hilfsprogramms" in [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   

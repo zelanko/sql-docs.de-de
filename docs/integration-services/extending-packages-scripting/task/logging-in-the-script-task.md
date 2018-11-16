@@ -22,12 +22,12 @@ ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d3e5480754ecc5f1c8230061500585a7a661fcf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baa0e4e5cc4134b4efbd84ffbba8a422af7f4e8a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720128"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640028"
 ---
 # <a name="logging-in-the-script-task"></a>Protokollieren im Skripttask
   Durch Verwendung der Protokollierung in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Paketen können Sie detaillierte Informationen über Status, Ergebnisse und Probleme der Ausführung aufzeichnen, indem Sie vordefinierte Ereignisse bzw. benutzerdefinierte Meldungen für die spätere Analyse erfassen. Der Skripttask kann die <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>-Methode des **Dts**-Objekts verwenden, um benutzerdefinierte Daten zu protokollieren. Wenn die Protokollierung aktiviert ist und im Dialogfeld **SSIS-Protokolle konfigurieren** auf der Registerkarte **Details** das **ScriptTaskLogEntry**-Ereignis für die Protokollierung ausgewählt ist, dann speichert ein einzelner Aufruf der <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>-Methode die Ereignisinformationen in allen Protokollanbietern, die für den Task konfiguriert wurden.  
@@ -95,7 +95,7 @@ public class ScriptMain
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   Blog-Artikel, [Logging custom events for Integration Services tasks](http://go.microsoft.com/fwlink/?LinkId=165644) (Protokollieren von benutzerdefinierten Ereignissen für Integration Services-Tasks), auf „dougbert.com“  
+-   Blog-Artikel, [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=165644) (Protokollieren von benutzerdefinierten Ereignissen für Integration Services-Tasks), auf „dougbert.com“  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integration Services-Protokollierung &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  

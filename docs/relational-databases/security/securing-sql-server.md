@@ -19,18 +19,18 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c526b7c991f3df5eb33042e2d25f7152ae80887a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 367cc129fdb0f4786c37af5f1cf1fa4bb112fa90
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760798"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663299"
 ---
 # <a name="securing-sql-server"></a>Sichern von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Das Sichern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann als eine Reihe von Schritten betrachtet werden, die vier Bereiche betreffen: die Plattform, die Authentifizierung, die Objekte (einschließlich der Daten) und die Anwendungen, die auf das System zugreifen. In den folgenden Themen werden Sie durch das Erstellen und Implementieren eines effektiven Sicherheitsplans geführt.  
   
- Weitere Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheit finden Sie auf der [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) -Website. Dazu gehören ein Handbuch mit empfohlenen Vorgehensweisen sowie eine Sicherheitsprüfliste. Auf der Site finden Sie außerdem die neuesten Informationen und Downloads zu Service Packs.  
+ Weitere Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheit finden Sie auf der [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) -Website. Dazu gehören ein Handbuch mit empfohlenen Vorgehensweisen sowie eine Sicherheitsprüfliste. Auf der Site finden Sie außerdem die neuesten Informationen und Downloads zu Service Packs.  
   
 ## <a name="platform-and-network-security"></a>Plattform- und Netzwerksicherheit  
  Die Plattform für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält die physische Hardware und die Netzwerksysteme zum Verbinden von Clients mit den Datenbankservern, sowie binäre Dateien zum Verarbeiten von Datenbankanforderungen.  
@@ -78,7 +78,7 @@ ms.locfileid: "47760798"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Programmdateien|[Dateispeicherorte für Standard- und benannte Instanzen von SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Service Packs und Upgrades stellen erweiterte Sicherheit zur Verfügung. Informationen zum Bestimmen des neuesten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbaren Service Packs finden Sie auf der Website von [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Service Packs und Upgrades stellen erweiterte Sicherheit zur Verfügung. Informationen zum Bestimmen des neuesten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbaren Service Packs finden Sie auf der Website von [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) .  
   
  Mithilfe des folgenden Skripts können Sie das auf dem System installierte Service Pack bestimmen:  
   
@@ -125,7 +125,7 @@ GO
   
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
-|Herstellen einer Verbindung mit, Konfigurieren und Steuern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Verwenden von SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
+|Herstellen einer Verbindung mit, Konfigurieren und Steuern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Verwenden von SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
 |Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Ausführen von Abfragen an der Eingabeaufforderung|[sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)|  
 |Netzwerkkonfiguration und Steuerung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server-Konfigurations-Manager](../../relational-databases/sql-server-configuration-manager.md)|  
 |Aktivieren und Deaktivieren von Funktionen mit der richtlinienbasierten Verwaltung|[Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
@@ -143,7 +143,7 @@ GO
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[SQL Server 2012 Security Best Practices - Operational and Administrative Tasks (Bewährte Sicherheitsmethoden in SQL Server 2012 – betriebs- und administrationsbezogene Aufgaben)](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
+[SQL Server 2012 Security Best Practices - Operational and Administrative Tasks (Bewährte Sicherheitsmethoden in SQL Server 2012 – betriebs- und administrationsbezogene Aufgaben)](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
 [SQL Server Security Blog (SQL Server Blog zu Sicherheitsthemen)](https://blogs.msdn.microsoft.com/sqlsecurity/)  
 [Security Best Practice and Label Security Whitepapers (Bewährte Sicherheitsmethoden und Sicherheitswhitepaper)](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
 [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md)   

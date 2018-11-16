@@ -14,12 +14,12 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b2d68a048a1d2767bdbaf5931dd59f9a928e50a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12ad3867a465582aa1362f8607187ed9026c26ca
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623568"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605440"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47623568"
  **Serverinstanz**  
  Zeigt den Namen der Serverinstanz an, die als Host für das Verfügbarkeitsreplikat fungiert.  
   
- Falls eine Serverinstanz, mit der Sie ein sekundäres Replikat hosten möchten, nicht im Raster **Verfügbarkeitsreplikate** aufgeführt ist, klicken Sie auf die Schaltfläche **Replikat hinzufügen**. Wenn Sie eine Verfügbarkeitsgruppe in einer hybriden IT-Umgebung konfigurieren (siehe [Hohe Verfügbarkeit und Notfallwiederherstellung für SQL Server auf virtuellen Azure-Computern](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), können Sie auf die Schaltfläche **Azure-Replikat hinzufügen** klicken, um virtuelle Computer mit sekundären Replikaten in Windows Azure zu erstellen.  
+ Falls eine Serverinstanz, mit der Sie ein sekundäres Replikat hosten möchten, nicht im Raster **Verfügbarkeitsreplikate** aufgeführt ist, klicken Sie auf die Schaltfläche **Replikat hinzufügen**. Wenn Sie eine Verfügbarkeitsgruppe in einer hybriden IT-Umgebung konfigurieren (siehe [Hohe Verfügbarkeit und Notfallwiederherstellung für SQL Server auf virtuellen Azure-Computern](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), können Sie auf die Schaltfläche **Azure-Replikat hinzufügen** klicken, um virtuelle Computer mit sekundären Replikaten in Windows Azure zu erstellen.  
   
  **Anfangsrolle**  
  Gibt die Rolle an, die das neue Replikat anfangs aufweist: **Primär** oder **Sekundär**.  
@@ -67,7 +67,7 @@ ms.locfileid: "47623568"
  Klicken Sie, um ein sekundäres Replikat zur Verfügbarkeitsgruppe hinzuzufügen.  
   
  **Azure-Replikat hinzufügen**  
- Klicken Sie auf diese Option, um einen virtuellen Computer in Windows Azure zu erstellen, auf dem ein sekundäres Replikat in der Verfügbarkeitsgruppe ausgeführt wird. Diese Option ist nur auf eine Verfügbarkeitsgruppe in der hybriden IT-Umgebung anwendbar, die lokale Replikate enthält. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Notfallwiederherstellung für SQL Server auf virtuellen Windows Azure-Computern](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Klicken Sie auf diese Option, um einen virtuellen Computer in Windows Azure zu erstellen, auf dem ein sekundäres Replikat in der Verfügbarkeitsgruppe ausgeführt wird. Diese Option ist nur auf eine Verfügbarkeitsgruppe in der hybriden IT-Umgebung anwendbar, die lokale Replikate enthält. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Notfallwiederherstellung für SQL Server auf virtuellen Windows Azure-Computern](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Replikat entfernen**  
  Klicken Sie, um das ausgewählte sekundäre Replikat aus der Verfügbarkeitsgruppe zu entfernen.  
@@ -123,7 +123,7 @@ ms.locfileid: "47623568"
  Gibt an, dass Sicherungsaufträge die Rolle der Verfügbarkeitsreplikate ignorieren sollen, wenn sie das Replikat zum Durchführen der Sicherungen auswählen. Sicherungsaufträge können andere Faktoren auswerten, wie z. B. die Sicherungspriorität jedes Verfügbarkeitsreplikats in Verbindung mit seinem Betriebszustand und Verbindungsstatus.  
   
 > [!IMPORTANT]  
->  Die Einstellung "backup-preference" wird nicht erzwungen. Die Interpretation dieser Einstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer angegebenen Verfügbarkeitsgruppe integriert haben. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)wichtig sind.  
+>  Die Einstellung "backup-preference" wird nicht erzwungen. Die Interpretation dieser Einstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer angegebenen Verfügbarkeitsgruppe integriert haben. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ### <a name="replica-backup-priorities-grid"></a>Raster "Sicherungsprioritäten für Replikate"  
  Verwenden Sie das Raster **Sicherungsprioritäten für Replikate** , um Sicherungsprioritäten für alle Replikate der Verfügbarkeitsgruppe anzugeben. Dieses Raster enthält die folgenden Spalten:  

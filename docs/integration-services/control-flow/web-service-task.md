@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2d0d31f310ea2a64afe47940ab4d9463fee0a97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757548"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642347"
 ---
 # <a name="web-service-task"></a>Webdienst (Task)
   Der Task "Webdienst" führt eine Webdienstmethode aus. Der Task "Webdienst" kann für folgende Zwecke verwendet werden:  
@@ -38,7 +38,7 @@ ms.locfileid: "47757548"
 > [!IMPORTANT]  
 >  Der HTTP-Verbindungs-Manager unterstützt nur die anonyme Authentifizierung und die Standardauthentifizierung. Er unterstützt keine Windows-Authentifizierung.  
   
- Der HTTP-Verbindungs-Manager kann auf eine Website oder eine WSDL-Datei (Web Service Description Language) zeigen. Die URL des HTTP-Verbindungs-Managers, die auf eine WSDL-Datei zeigt, enthält den `?WSDL` -Parameter: beispielsweise `http://MyServer/MyWebService/MyPage.asmx?WSDL`.  
+ Der HTTP-Verbindungs-Manager kann auf eine Website oder eine WSDL-Datei (Web Service Description Language) zeigen. Die URL des HTTP-Verbindungs-Managers, die auf eine WSDL-Datei zeigt, enthält den `?WSDL` -Parameter: beispielsweise `https://MyServer/MyWebService/MyPage.asmx?WSDL`.  
   
  Die WSDL-Datei muss lokal verfügbar sein, um den Task Webdienst mithilfe des Dialogfelds **Editor für den Task Webdienst** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers zu konfigurieren.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47757548"
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
--   [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Festlegen der Eigenschaften eines Tasks oder Containers](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Programmgesteuerte Konfiguration des Task "Webdienst"  
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften zu erhalten:  
@@ -178,7 +178,7 @@ ms.locfileid: "47757548"
  **Variable**  
  Wählen Sie in der Liste eine Variable aus, oder klicken Sie auf \<**Neue Variable…**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Video [Vorgehensweise: Aufrufen eines Webdiensts mit dem Task 'Webdienst' (SQL Server-Video)](http://go.microsoft.com/fwlink/?LinkId=259642)auf technet.microsoft.com.  
+ Video [Vorgehensweise: Aufrufen eines Webdiensts mit dem Task 'Webdienst' (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=259642)auf technet.microsoft.com.  

@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3ecd041e75644fa726e2dc388c4b5ee34d8cded8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664688"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677299"
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Nach einem Hardwareverlust oder Datenträgerfehler, der sich auf die Datendateie
 Beim Wiederherstellen der einzelnen Protokollsicherungen übernimmt die Datenbank-Engine erneut sämtliche im Protokoll aufgezeichneten Änderungen, um für alle Transaktionen einen Rollforward auszuführen. Sobald die letzte Protokollsicherung wiederhergestellt ist, verwendet die Datenbank-Engine die Protokollinformationen, um für sämtliche Transaktionen einen Rollback auszuführen, die zu diesem Zeitpunkt noch nicht abgeschlossen waren. 
 
 ### <a name="supporting-transactional-replication"></a>Unterstützen der Transaktionsreplikation
-Der Protokolllese-Agent überwacht das Transaktionsprotokoll jeder für die Transaktionsreplikation konfigurierten Datenbank und kopiert die für die Replikation markierten Transaktionen aus dem Transaktionsprotokoll in die Verteilungsdatenbank. Weitere Informationen finden Sie unter [Funktionsweise der Transaktionsreplikation](http://msdn.microsoft.com/library/ms151706.aspx).
+Der Protokolllese-Agent überwacht das Transaktionsprotokoll jeder für die Transaktionsreplikation konfigurierten Datenbank und kopiert die für die Replikation markierten Transaktionen aus dem Transaktionsprotokoll in die Verteilungsdatenbank. Weitere Informationen finden Sie unter [Funktionsweise der Transaktionsreplikation](https://msdn.microsoft.com/library/ms151706.aspx).
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>Unterstützen von Hochverfügbarkeits- und Notfallwiederherstellungslösungen
 Standbyserverlösungen, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], Datenbankspiegelung und Protokollversand hängen in großem Umfang vom Transaktionsprotokoll ab. 
@@ -105,7 +105,7 @@ Um zu vermeiden, dass nur noch wenig Speicherplatz vorhanden ist, erfolgt die K�
 |log_reuse_wait value|log_reuse_wait_desc value|und Beschreibung|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Derzeit ist mindestens eine wiederverwendbare [virtuelle Protokolldatei (Virtual Log File, VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) vorhanden.|  
-|1|CHECKPOINT|Seit der letzten Protokollkürzung ist kein Prüfpunkt aufgetreten, oder der Kopf des Protokolls wurde noch nicht über eine [virtuelle Protokolldatei (Virtual Log File, VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) hinaus verschoben. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger Grund für das verzögerte Kürzen von Protokollen. Weitere Informationen finden Sie unter [Datenbankprüfpunkte &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
+|1|CHECKPOINT|Seit der letzten Protokollkürzung ist kein Prüfpunkt aufgetreten, oder der Kopf des Protokolls wurde noch nicht über eine [virtuelle Protokolldatei (Virtual Log File, VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) hinaus verschoben. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger Grund für das verzögerte Kürzen von Protokollen. Weitere Informationen finden Sie unter [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|Eine Protokollsicherung ist erforderlich, bevor das Transaktionsprotokoll gekürzt werden kann. (nur vollständiges bzw. massenprotokolliertes Wiederherstellungsmodell)<br /><br /> Bei Abschluss der nächsten Protokollsicherung wird möglicherweise ein Teil des Protokollspeicherplatzes zur Wiederverwendung freigegeben.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|Es findet gerade eine Datensicherung oder eine Wiederherstellung statt (alle Wiederherstellungsmodelle).<br /><br /> Verhindert eine Datensicherung die Protokollkürzung, kann das unmittelbare Problem u. U. durch Abbrechen des Sicherungsvorgangs behoben werden.|  
 |4|ACTIVE_TRANSACTION|Eine Transaktion ist aktiv (alle Wiederherstellungsmodelle):<br /><br /> Möglicherweise ist beim Starten der Protokollsicherung eine Transaktion mit langer Ausführungszeit vorhanden. In diesem Fall ist zum Freigeben von Speicherplatz möglicherweise eine weitere Protokollsicherung erforderlich. Hinweis: Transaktionen mit langer Laufzeit verhindern die Protokollkürzung unter allen Wiederherstellungsmodellen, einschließlich des einfachen Wiederherstellungsmodells, unter dem im Allgemeinen das Transaktionsprotokoll an jedem automatischen Prüfpunkt gekürzt wird.<br /><br /> Eine Transaktion wird verzögert. Eine *verzögerte Transaktion* ist tatsächlich eine aktive Transaktion, deren Rollback aufgrund einer nicht verfügbaren Ressource blockiert ist. Weitere Informationen zu den Ursachen für verzögerte Transaktionen und zum Auflösen ihres verzögerten Zustands finden Sie unter [Verzögerte Transaktionen &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).<br /> <br /> Lang andauernde Transaktionen können auch das Transaktionsprotokoll von „tempdb“ füllen. „tempdb“ wird implizit von Benutzertransaktionen für interne Objekte wie z.B. Arbeitstabellen zum Sortieren, Arbeitsdateien für Hashverfahren, Cursorarbeitstabellen und Zeilenversionsverwaltung verwendet. Selbst wenn die Benutzertransaktion nur das Lesen von Daten umfasst (`SELECT`-Abfragen), werden möglicherweise interne Objekte erstellt und unter Benutzertransaktionen verwendet. Anschließend kann das tempdb-Transaktionsprotokoll gefüllt werden.|  
@@ -157,7 +157,7 @@ Wenn die Transaktionsreplikation aktiviert ist, werden SELECT INTO-Vorgänge auc
   
     -   Neuerstellungen neuer Heaps mit [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (falls zutreffend). Aufhebungen von Indexseitenzuordnungen während eines `DROP INDEX`-Vorgangs werden **immer** vollständig protokolliert.
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="RelatedTasks"></a> Related tasks  
  **Verwalten des Transaktionsprotokolls**  
   
 -   [Verwalten der Größe der Transaktionsprotokolldatei](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

@@ -34,18 +34,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7408e6160a6d82779ceb7c470e773db4a128ffa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 851f89487199b1deae2086352a255374621688c6
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782228"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638817"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Transformation für Fuzzysuche
   Die Transformation für Fuzzysuche führt Aufgaben zum Datencleanup durch, wie das Standardisieren von Daten, das Korrigieren von Daten und das Bereitstellen fehlender Werte.  
   
 > [!NOTE]  
->  Ausführliche Informationen über die Transformationen für Fuzzysuche wie Leistungs- und Speicherbeschränkungen finden Sie im Whitepaper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(Fuzzysuche und Fuzzygruppierung in SQL Server Integration Services 2005).  
+>  Ausführliche Informationen über die Transformationen für Fuzzysuche wie Leistungs- und Speicherbeschränkungen finden Sie im Whitepaper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(Fuzzysuche und Fuzzygruppierung in SQL Server Integration Services 2005).  
   
  Die Transformation für Fuzzysuche weicht in ihrer Verwendung der Fuzzyübereinstimmung von der Transformation für Suche ab. Die Transformation für Suche verwendet einen Gleichheitsjoin zum Suchen von übereinstimmenden Datensätzen in der Verweistabelle. Sie gibt Datensätze mit mindestens einem übereinstimmendem Datensatz Datensätze ohne übereinstimmende Datensätze zurück. Im Gegensatz dazu verwendet die Transformation für Fuzzysuche die Fuzzyübereinstimmung, um mindestens eine nahe Übereinstimmung in der Verweistabelle zurückzugeben.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47782228"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Allgemeine Eigenschaften](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -216,7 +216,7 @@ ms.locfileid: "47782228"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transformation für Suche](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Transformation für Fuzzygruppierung](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

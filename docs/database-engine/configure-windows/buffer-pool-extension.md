@@ -11,12 +11,12 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d66f118490cf0a665b94f3b0ae64c43f6179243
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f732c4038940ef2ed5ee511e399f3bcf2efae54f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658198"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606890"
 ---
 # <a name="buffer-pool-extension"></a>Pufferpoolerweiterung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47658198"
  Die folgenden Begriffe sind auf die Pufferpoolerweiterungsfunktion anwendbar.  
   
  Solid State Drive (SSD)  
- Solid State Drives speichern Daten im Arbeitsspeicher (RAM) in einer persistenten Weise. Weitere Informationen finden Sie unter [dieser Definition](http://en.wikipedia.org/wiki/Solid-state_drive).  
+ Solid State Drives speichern Daten im Arbeitsspeicher (RAM) in einer persistenten Weise. Weitere Informationen finden Sie unter [dieser Definition](https://en.wikipedia.org/wiki/Solid-state_drive).  
   
  Puffer  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist ein Puffer eine 8-KB-Seite im Arbeitsspeicher. Dies entspricht der Größe einer Datenseite oder Indexseite. Der Puffercache ist ebenfalls in Seiten von je 8 KB unterteilt. Eine Seite verbleibt im Puffercache, bis der Pufferbereich vom Puffer-Manager zum Laden weiterer Daten benötigt wird. Daten werden nur dann zurück auf den Datenträger geschrieben, wenn sie geändert wurden. Diese geänderten Seiten im Arbeitsspeicher werden als modifizierte Seiten bezeichnet. Eine Seite gilt als nicht modifiziert, wenn sie ihrem Datenbankbild auf dem Datenträger entspricht. Daten im Puffercache können mehrfach geändert werden, bevor sie zurück auf den Datenträger geschrieben werden.  

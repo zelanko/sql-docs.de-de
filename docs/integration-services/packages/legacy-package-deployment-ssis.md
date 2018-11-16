@@ -32,12 +32,12 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df681347fde77f4891ed082b2e75ef15e9f935e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cad877fe1c1431f044f41b6dc7087c8b990cc4c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718268"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639067"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Legacy-Paketbereitstellung (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Tools und Assistenten, mit denen Sie problemlos Pakete vom Entwicklungscomputer auf dem Produktionsserver oder anderen Computern bereitstellen können.  
@@ -102,7 +102,7 @@ ms.locfileid: "47718268"
   
 -   Sie können die Option **/ConfigFile** nicht verwenden, um Konfigurationen zu laden, die die zur Entwurfszeit angegebenen Konfigurationen ersetzen.  
   
- Weitere Informationen zu diesen Optionen und zum Unterschied des Verhaltens dieser Optionen für [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] und frühere Versionen finden Sie unter [Verhaltensänderungen von Integration Services-Features in SQL Server 2016](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+ Weitere Informationen zu diesen Optionen und zum Unterschied des Verhaltens dieser Optionen für [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] und frühere Versionen finden Sie unter [Verhaltensänderungen von Integration Services-Features in SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
 ### <a name="package-configuration-types"></a>Paketkonfigurationstypen  
  Die folgende Tabelle beschreibt die verschiedenen Paketkonfigurationstypen.  
@@ -430,7 +430,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 > [!NOTE]  
 >  Sie können auch Werte an ein untergeordnetes Paket übergeben, indem Sie den Task Paket ausführen konfigurieren, um untergeordneten Paketparametern Variablen oder Parameter für übergeordnete Pakete bzw. Projektparameter zuzuordnen. Weitere Informationen finden Sie unter [Execute Package Task](../../integration-services/control-flow/execute-package-task.md).  
   
- Dabei ist das Erstellen der Variablen im übergeordneten Paket vor dem Erstellen der Paketkonfiguration im untergeordneten Paket nicht erforderlich. Sie können dem übergeordneten Paket jederzeit die Variable hinzufügen. Allerdings müssen Sie in der Paketkonfiguration den genauen Namen der übergeordneten Variablen verwenden. Bevor Sie jedoch eine übergeordnete Variablenkonfiguration erstellen können, muss im untergeordneten Paket bereits eine Variable vorhanden sein, die von der Konfiguration aktualisiert werden kann. Weitere Informationen zum Hinzufügen und Konfigurieren von Variablen finden Sie unter [Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+ Dabei ist das Erstellen der Variablen im übergeordneten Paket vor dem Erstellen der Paketkonfiguration im untergeordneten Paket nicht erforderlich. Sie können dem übergeordneten Paket jederzeit die Variable hinzufügen. Allerdings müssen Sie in der Paketkonfiguration den genauen Namen der übergeordneten Variablen verwenden. Bevor Sie jedoch eine übergeordnete Variablenkonfiguration erstellen können, muss im untergeordneten Paket bereits eine Variable vorhanden sein, die von der Konfiguration aktualisiert werden kann. Weitere Informationen zum Hinzufügen und Konfigurieren von Variablen finden Sie unter [Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
  Der Gültigkeitsbereich der Variablen im übergeordneten Paket, das in einer übergeordneten Variablenkonfiguration verwendet wird, kann auf den Task Paket ausführen, auf den Container, in dem der Task enthalten ist, oder auf das Paket festgelegt werden. Wenn in einem Paket mehrere gleichnamige Variablen vorhanden sind, wird die Variable verwendet, die im Gültigkeitsbereich des Tasks Paket ausführen am nächsten liegt. Der Gültigkeitsbereich, der am nächsten am Task Paket ausführen liegt, ist der Task selbst.  
   

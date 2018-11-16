@@ -5,8 +5,7 @@ ms.date: 01/05/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction log architecture guide
@@ -23,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 738de181911733a5edd7f973a5c43e2503f63a2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 262e55ab61f3e4ee68e905ea264ae15f450b58ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631868"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658070"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +90,7 @@ Es wird empfohlen, den Protokolldateien für eine optimale VLF-Verteilung mithil
 Weitere Informationen zu den Argumenten `FILEGROWTH` und `SIZE` von `ALTER DATABASE` finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP & #40;Transact-SQL& #41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]
-> Informationen darüber, wie Sie die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz sowie die benötigten Wachstumsinkremente zum Erreichen der erforderlichen Größe ermitteln, finden Sie in [diesem Skript](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+> Informationen darüber, wie Sie die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz sowie die benötigten Wachstumsinkremente zum Erreichen der erforderlichen Größe ermitteln, finden Sie in [diesem Skript](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
   
  Das Transaktionsprotokoll ist eine umbrechende Protokolldatei. Nehmen Sie beispielsweise an, eine Datenbank verfügt über eine physische Protokolldatei, die in vier VLFs unterteilt ist. Wenn die Datenbank erstellt wird, beginnt die logische Protokolldatei am Anfang der ersten physischen Protokolldatei. Neue Protokolldatensätze werden am Ende des logischen Protokolls hinzugefügt, das in Richtung des Endes des physischen Protokolls erweitert wird. Beim Abschneiden eines Protokolls werden alle virtuellen Protokolle freigegeben, deren Datensätze sich ohne Ausnahme vor der Mindestwiederherstellungs-Protokollfolgenummer (Minimum Recovery Log Sequence Number, MinLSN) befinden. *MinLSN* ist die Protokollfolgenummer des ältesten Protokolldatensatzes, der für einen erfolgreichen Rollback der gesamten Datenbank benötigt wird. Das Transaktionsprotokoll in der Beispieldatenbank würde in etwa so aussehen wie das Protokoll in der folgenden Abbildung.  
   
@@ -143,12 +142,12 @@ Weitere Informationen zu den Argumenten `FILEGROWTH` und `SIZE` von `ALTER DATAB
  Bevor Sie die erste Protokollsicherung erstellen können, müssen Sie eine vollständige Sicherung erstellen, z. B. eine Datenbanksicherung oder die erste von mehreren Dateisicherungen. Die Wiederherstellung einer Datenbank, für die nur Dateisicherungen verwendet werden, kann komplex werden. Deshalb wird empfohlen, wenn möglich mit einer vollständigen Datenbanksicherung zu beginnen. Anschließend ist das regelmäßige Sichern des Transaktionsprotokolls erforderlich. Dadurch wird nicht nur die Gefahr von Datenverlusten minimiert, sondern es wird auch die Kürzung des Transaktionsprotokolls ermöglicht. Üblicherweise wird das Transaktionsprotokoll nach jeder konventionellen Protokollsicherung abgeschnitten.  
   
 > [!IMPORTANT]
-> Es wird empfohlen, entsprechend Ihren Geschäftsanforderungen ausreichend häufige Protokollsicherungen auszuführen. Die Häufigkeit sollte sich danach richten, inwiefern Sie Datenverlust (beispielsweise durch einen beschädigten Protokollspeicher) tolerieren können. Beim Festlegen einer geeigneten Häufigkeit gilt es, einen Kompromiss aus Ihrer Toleranz gegenüber der Gefahr von Datenverlust und Ihrer Fähigkeit zum Speichern, Verwalten und zum möglichen Wiederherstellen von Protokollsicherungen zu finden. Denken Sie bei der Implementierung Ihrer Wiederherstellungsstrategie an die erforderliche [RTO](http://wikipedia.org/wiki/Recovery_time_objective) und [RPO](http://wikipedia.org/wiki/Recovery_point_objective) und insbesondere an den Zeitplan für die Protokollsicherung.
+> Es wird empfohlen, entsprechend Ihren Geschäftsanforderungen ausreichend häufige Protokollsicherungen auszuführen. Die Häufigkeit sollte sich danach richten, inwiefern Sie Datenverlust (beispielsweise durch einen beschädigten Protokollspeicher) tolerieren können. Beim Festlegen einer geeigneten Häufigkeit gilt es, einen Kompromiss aus Ihrer Toleranz gegenüber der Gefahr von Datenverlust und Ihrer Fähigkeit zum Speichern, Verwalten und zum möglichen Wiederherstellen von Protokollsicherungen zu finden. Denken Sie bei der Implementierung Ihrer Wiederherstellungsstrategie an die erforderliche [RTO](https://wikipedia.org/wiki/Recovery_time_objective) und [RPO](https://wikipedia.org/wiki/Recovery_point_objective) und insbesondere an den Zeitplan für die Protokollsicherung.
 > Es kann ausreichen, alle 15 bis 30 Minuten eine Protokollsicherung auszuführen. Wenn es für Ihr Geschäft erforderlich ist, die Gefahr des Datenverlusts zu minimieren, können Sie Protokollsicherungen häufiger ausführen. Häufigere Protokollsicherungen bieten zusätzlich den Vorteil, dass das Protokoll häufiger abgeschnitten wird, wodurch kleinere Protokolldateien entstehen.  
   
 > [!IMPORTANT]
 > Um die Anzahl der zum Wiederherstellen benötigten Protokollsicherungen zu begrenzen, ist es wichtig, Daten regelmäßig zu sichern. Beispielsweise können Sie eine wöchentliche vollständige Datenbanksicherung und tägliche differenzielle Datenbanksicherungen planen.  
-> Nicht vergessen: Denken Sie bei der Implementierung Ihrer Wiederherstellungsstrategie an die erforderliche [RTO](http://wikipedia.org/wiki/Recovery_time_objective) und [RPO](http://wikipedia.org/wiki/Recovery_point_objective) und insbesondere an den Zeitplan für die vollständige differenzielle Datenbanksicherung.
+> Nicht vergessen: Denken Sie bei der Implementierung Ihrer Wiederherstellungsstrategie an die erforderliche [RTO](https://wikipedia.org/wiki/Recovery_time_objective) und [RPO](https://wikipedia.org/wiki/Recovery_point_objective) und insbesondere an den Zeitplan für die vollständige differenzielle Datenbanksicherung.
 
 Informationen zu Transaktionsprotokollsicherungen finden Sie unter [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).
   
@@ -253,7 +252,7 @@ In den folgenden empfohlenen Artikeln und Büchern finden Sie zusätzliche Infor
 [Konfigurieren der Serverkonfigurationsoption Wiederherstellungsintervall](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-[Erläuterungen zu Protokollierung und Wiederherstellung in SQL Server von Paul Randal](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
-[Verwaltung von SQL Server-Transaktionsprotokollen von Tony Davis und Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
+[Erläuterungen zu Protokollierung und Wiederherstellung in SQL Server von Paul Randal](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[Verwaltung von SQL Server-Transaktionsprotokollen von Tony Davis und Gail Shaw](https://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

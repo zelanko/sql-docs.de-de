@@ -28,19 +28,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a548ec574f6ae81b6e365f8f0e9f68db6357102
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 4603333bce62f363a70c82936dfdbb28478f6a0d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643778"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701938"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Diese Funktion wandelt einen **int**-ASCII-Code in einen Zeichenwert um.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,7 +53,7 @@ CHAR ( integer_expression )
 Eine ganze Zahl zwischen 0 und 255. `CHAR` gibt einen `NULL`-Wert für Ganzzahlausdrücke zurück, wenn sich diese außerhalb dieses Bereichs befinden oder wenn die Ganzzahl nur das erste Byte eines Doppelbytezeichens ausdrückt.
 
 > [!NOTE]
-> Einige außereuropäische Zeichensätze, z.B. [Shift Japanese Industrial Standards](http://www.wikipedia.org/wiki/Shift_JIS), enthalten Zeichen, die in einem Einzelbyte-Codierungsschema dargestellt werden können, aber eine Mehrbytecodierung erfordern. Weitere Informationen zu Zeichensätzen finden Sie unter [Einzelbyte- und Mehrbyte-Zeichensätze](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
+> Einige außereuropäische Zeichensätze, z.B. [Shift Japanese Industrial Standards](https://www.wikipedia.org/wiki/Shift_JIS), enthalten Zeichen, die in einem Einzelbyte-Codierungsschema dargestellt werden können, aber eine Mehrbytecodierung erfordern. Weitere Informationen zu Zeichensätzen finden Sie unter [Einzelbyte- und Mehrbyte-Zeichensätze](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
   
 ## <a name="return-types"></a>Rückgabetypen
 **char(1)**

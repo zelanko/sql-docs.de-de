@@ -16,12 +16,12 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93088a7d39261f014a742b93f7d9e89ea55b52a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad9700e9b1c86b454191e51c6a7e4ee52c393c6b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611028"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606840"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transaktionen: Always On-Verfügbarkeitsgruppen und Datenbankspiegelung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ Weitere Informationen zum Konfigurieren einer Verfügbarkeitsgruppe für verteil
 
 Weitere Informationen finden Sie unter:
 
-- [DTC Administration Guide (DTC-Administratorhandbuch)](http://msdn.microsoft.com/library/ms681291.aspx)
-- [DTC Developers Guide (DTC-Entwicklerhandbuch)](http://msdn.microsoft.com/library/ms679938.aspx)
-- [DTC Programmers Reference (DTC-Referenz für Programmierer)](http://msdn.microsoft.com/library/ms686108.aspx)
+- [DTC Administration Guide (DTC-Administratorhandbuch)](https://msdn.microsoft.com/library/ms681291.aspx)
+- [DTC Developers Guide (DTC-Entwicklerhandbuch)](https://msdn.microsoft.com/library/ms679938.aspx)
+- [DTC Programmers Reference (DTC-Referenz für Programmierer)](https://msdn.microsoft.com/library/ms686108.aspx)
 
 ## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 und früher: Unterstützung für datenbankübergreifende Transaktionen innerhalb derselben SQL Server-Instanz  
 
@@ -60,7 +60,7 @@ Mit der neuen Funktion von SQL Server 2016 können Sie verteilte Transaktionen s
   
  Die folgenden Anforderungen müssen erfüllt sein:  
   
--   Verfügbarkeitsgruppen müssen auf Windows Server 2012 R2 oder höher ausgeführt werden. Für Windows Server 2012 R2 müssen Sie das Update in KB3090973 installieren, das unter [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973) verfügbar ist.  
+-   Verfügbarkeitsgruppen müssen auf Windows Server 2012 R2 oder höher ausgeführt werden. Für Windows Server 2012 R2 müssen Sie das Update in KB3090973 installieren, das unter [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973) verfügbar ist.  
   
 -   Verfügbarkeitsgruppen müssen mit dem Befehl **CREATE AVAILABILITY GROUP** und der Klausel **WITH DTC\_SUPPORT = PER_DB** erstellt werden. Zurzeit können Sie eine vorhandene Verfügbarkeitsgruppe nicht ändern.  
 

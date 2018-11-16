@@ -11,12 +11,12 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6487a55cf1c6c336dc1c02c2fe4000dfc843ff82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06df375e2887a58ed00370989921b654497afa84
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773760"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670139"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Verwenden von MSDeploy mit dem dbSqlPackage-Anbieter
 **dbSqlPackage** ist ein **MSDeploy**-Anbieter, der Ihnen die Interaktion mit SQL Server- oder SQL Azure-Datenbanken ermöglicht. **dbSqlPackage** unterstützt die folgenden Aktionen:  
@@ -29,10 +29,10 @@ ms.locfileid: "47773760"
   
 -   **Script**: Erstellt ein Transact\-SQL-Skript, das dem von der Veröffentlichungsaktion ausgeführten Skript entspricht.  
   
-Weitere Informationen über DACFx finden Sie in der Dokumentation zur verwalteten DACFx-API unter [http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) oder in [SqlPackage.exe](../tools/sqlpackage.md) (DACFx-Befehlszeilentool).  
+Weitere Informationen über DACFx finden Sie in der Dokumentation zur verwalteten DACFx-API unter [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) oder in [SqlPackage.exe](../tools/sqlpackage.md) (DACFx-Befehlszeilentool).  
   
 > [!IMPORTANT]  
-> Die „dbSqlPackage“-Anbieterfunktion wird aus der nächsten Hauptversion von Visual Studio entfernt. Informationen zur Datenbankveröffentlichung mithilfe von Web Deploy finden Sie unter [dbDacFx-Anbieter für die inkrementelle Datenbankveröffentlichung](http://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
+> Die „dbSqlPackage“-Anbieterfunktion wird aus der nächsten Hauptversion von Visual Studio entfernt. Informationen zur Datenbankveröffentlichung mithilfe von Web Deploy finden Sie unter [dbDacFx-Anbieter für die inkrementelle Datenbankveröffentlichung](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
   
 ## <a name="command-line-syntax"></a>Befehlszeilensyntax  
 **MSDeploy** mit dem **dbSqlPackage**-Anbieter verwendet eine Befehlszeile im folgenden Format:  

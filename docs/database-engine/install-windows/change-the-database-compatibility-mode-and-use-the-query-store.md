@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 2c5aa5be950aa9596af1523a53665514a8b7f6c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb130bbf8c3c2e66bd5b64458ca5f07b83f9b532
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754918"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606770"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Ändern des Datenbank-Kompatibilitätsgrads und Verwenden des Abfragespeichers
 
@@ -39,7 +39,7 @@ In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](..
 > - Der Kompatibilitätsgrad der Datenbanken „tempdb“, „model“, „msdb“ und „Resource“ wird nach dem Upgrade auf den aktuellen Kompatibilitätsgrad festgelegt.   
 > - Die „master“-Systemdatenbank behält den Kompatibilitätsgrad von vor dem Upgrade bei.    
   
-Der Upgradevorgang zum Aktivieren neuer Abfrageprozessorfunktionen steht im Zusammenhang mit dem Wartungsmodell des Produkts nach der Einführung.  Einige dieser Fixes werden unter dem [Ablaufverfolgungsflag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199) zur Verfügung gestellt.  Kunden, die Fixes benötigen, können diese abonnieren, ohne unerwartete Regressionen für andere Kunden zu verursachen. Das Wartungsmodell für Abfrageprozessor-Hotfixes nach der Einführung ist [hier](http://support.microsoft.com/kb/974006)dokumentiert. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bedeutet das Verschieben in einen neuen Kompatibilitätsgrad, dass das Ablaufverfolgungsflag 4199 nicht mehr benötigt wird, da diese Problembehebungen (Fixes) nun standardmäßig im aktuellsten Kompatibilitätsgrad aktiviert sind. Im Rahmen des Upgradevorgangs ist es daher wichtig, sich zu vergewissern, dass 4199 nicht aktiviert ist, sobald der Upgradevorgang abgeschlossen ist.  
+Der Upgradevorgang zum Aktivieren neuer Abfrageprozessorfunktionen steht im Zusammenhang mit dem Wartungsmodell des Produkts nach der Einführung.  Einige dieser Fixes werden unter dem [Ablaufverfolgungsflag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199) zur Verfügung gestellt.  Kunden, die Fixes benötigen, können diese abonnieren, ohne unerwartete Regressionen für andere Kunden zu verursachen. Das Wartungsmodell für Abfrageprozessor-Hotfixes nach der Einführung ist [hier](https://support.microsoft.com/kb/974006)dokumentiert. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bedeutet das Verschieben in einen neuen Kompatibilitätsgrad, dass das Ablaufverfolgungsflag 4199 nicht mehr benötigt wird, da diese Problembehebungen (Fixes) nun standardmäßig im aktuellsten Kompatibilitätsgrad aktiviert sind. Im Rahmen des Upgradevorgangs ist es daher wichtig, sich zu vergewissern, dass 4199 nicht aktiviert ist, sobald der Upgradevorgang abgeschlossen ist.  
 
 > [!NOTE]
 > Das Ablaufverfolgungsflag 4199 ist jedoch weiterhin erforderlich, um alle neuen Abfrageprozessor-Problembehebungen zu aktivieren, die nach RTM freigegeben wurden (sofern zutreffend).

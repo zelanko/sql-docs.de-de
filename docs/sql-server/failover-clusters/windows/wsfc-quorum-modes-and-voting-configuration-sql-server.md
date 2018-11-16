@@ -14,12 +14,12 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb85a4e0f209fd5589c55e0392393c61a57e6fe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 134831664f7b13177dac016bb9b92906a2974eb5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835928"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703588"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "47835928"
 > [!IMPORTANT]  
 >  Um NodeWeight-Einstellungen zu verwenden, muss der folgende Hotfix im WSFC-Cluster für alle Server übernommen werden:  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): Ein Hotfix ist verfügbar, mit dem sich ein Clusterknoten konfigurieren lässt, der keine Quorumabstimmung in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] und in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): Ein Hotfix ist verfügbar, mit dem sich ein Clusterknoten konfigurieren lässt, der keine Quorumabstimmung in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] und in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Empfohlene Anpassungen an der Quorumabstimmung  
  Beachten Sie beim Aktivieren oder Deaktivieren der Stimmberechtigung eines bestimmten WSFC-Knotens folgende Richtlinien:  
@@ -110,7 +110,7 @@ ms.locfileid: "47835928"
 >   
 >  -   Der Clusterknoten, von dem das primäre Replikat gehostet wird, verfügt über keine Stimme.  
 > -   Ein sekundäres Replikat ist für das automatische Failover konfiguriert, und der zugehörige Clusterknoten verfügt über keine Stimme.  
-> -   [KB2494036](http://support.microsoft.com/kb/2494036) ist nicht auf allen Clusterknoten installiert, die Verfügbarkeitsreplikate hosten. Das Patch ist erforderlich, um Clusterknoten in standortübergreifenden Bereitstellungen Stimmen zu gewähren bzw. Stimmen zu entziehen. In Bereitstellungen mit einem Standort ist das Patch in der Regel nicht erforderlich, und die Warnung kann ignoriert werden.  
+> -   [KB2494036](https://support.microsoft.com/kb/2494036) ist nicht auf allen Clusterknoten installiert, die Verfügbarkeitsreplikate hosten. Das Patch ist erforderlich, um Clusterknoten in standortübergreifenden Bereitstellungen Stimmen zu gewähren bzw. Stimmen zu entziehen. In Bereitstellungen mit einem Standort ist das Patch in der Regel nicht erforderlich, und die Warnung kann ignoriert werden.  
   
 > [!TIP]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Es werden mehrere dynamische Verwaltungssichten (DMVs) für das System verfügbar gemacht, mit denen Sie Einstellungen in Bezug auf die WSFC-Clusterkonfiguration und die Knotenquorumabstimmung verwalten können.  
@@ -125,13 +125,13 @@ ms.locfileid: "47835928"
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Überprüfung der Konfiguration der Quorumabstimmung in Always On-Verfügbarkeitsgruppen-Assistenten](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Windows Server-Technologien: Failovercluster](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server-Technologien: Failovercluster](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Schritt-für-Schritt-Anleitung für Failovercluster: Konfigurieren des Quorums in einem Failovercluster](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Schritt-für-Schritt-Anleitung für Failovercluster: Konfigurieren des Quorums in einem Failovercluster](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67eab65f8ead5fe1cc4934671f8d11be2944044a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30514478f54d71d88245ace385600cb2931101eb
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737738"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814143"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Hinzufügen eines Links zu einer URL (Berichts-Generator und SSRS)
 Erfahren Sie, wie Sie Linkaktionen in paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  -Berichten zu Textfeldern, Bildern, Diagrammen und Messgeräten hinzufügen. Links können zu anderen Berichten, zu Lesezeichen in einem Bericht oder zu statischen oder dynamischen URLs führen. 
@@ -73,9 +73,9 @@ Sie können Links zu Lesezeichen für Positionen im aktuellen Bericht erstellen.
   
 4.  Geben Sie in **URL auswählen**eine URL oder einen Ausdruck, der eine URL ergibt, ein (bzw. wählen Sie diese aus), oder klicken Sie auf den Dropdownpfeil, und klicken Sie auf den Namen eines Felds, das eine URL enthält. 
 
-    Verwenden Sie für ein Element, das auf einem für den einheitlichen Modus konfigurierten Berichtsserver veröffentlicht wurde, einen vollständigen oder relativen Pfad. Beispiel: `http://<servername>/images/image1.jpg`. 
+    Verwenden Sie für ein Element, das auf einem für den einheitlichen Modus konfigurierten Berichtsserver veröffentlicht wurde, einen vollständigen oder relativen Pfad. Beispiel: `https://<servername>/images/image1.jpg`. 
     
-    Verwenden Sie für ein Element, das auf einem im integrierten SharePoint-Modus konfigurierten Berichtsserver veröffentlicht wird, eine vollqualifizierte URL. Beispiel: `http://<SharePointservername>/<site>/Documents/images/image1.jpg`.
+    Verwenden Sie für ein Element, das auf einem im integrierten SharePoint-Modus konfigurierten Berichtsserver veröffentlicht wird, eine vollqualifizierte URL. Beispiel: `https://<SharePointservername>/<site>/Documents/images/image1.jpg`.
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

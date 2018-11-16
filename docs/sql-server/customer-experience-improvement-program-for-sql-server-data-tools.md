@@ -11,25 +11,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 05386d70bb785aebd5093246b3545084517e7f5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 143a1d793faa0d782cce8252a4236166d2eb0719
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693268"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702848"
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Erfahren Sie, wie das Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program; CEIP) uns dabei hilft, unsere Software zu verbessern.  Sie können Tools konfigurieren, um Ihr Einverständnis jederzeit zu widerrufen bzw. neu zu erteilen.  
   
 > [!NOTE]  
-> Eine Erklärung der Datensammlungs- und Datennutzungsverfahren der Microsoft SQL Server-Releases finden Sie in diesen [Datenschutzbestimmungen](http://go.microsoft.com/fwlink/?LinkID=868444).  
+> Eine Erklärung der Datensammlungs- und Datennutzungsverfahren der Microsoft SQL Server-Releases finden Sie in diesen [Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkID=868444).  
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>Abonnieren und Kündigen des CEIP für SQL Server Data Tools  
  Das Programm zur Verbesserung der Benutzerfreundlichkeit soll Microsoft dabei helfen, seine Produkte im Lauf der Zeit zu verbessern. Dieses Programm sammelt Informationen zur Computerhardware und dazu, wie Benutzer unser Produkt verwenden, ohne die Benutzer bei ihren Aufgaben am Computer zu unterbrechen. Die gesammelten Informationen helfen Microsoft dabei, zu identifizieren, welche Funktionen verbessert werden müssen. In diesem Dokument wird beschrieben, wie Sie Ihr Einverständnis im CEIP für SQL Server Data Tools (SSDT) in Visual Studio 2017, Visual Studio 2015 und Visual Studio 2013 widerrufen bzw. neu erteilen können.  
 
 ### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>Auswahl und Kontrolle über das CEIP und SQL Server Data Tools in Visual Studio 2017  
- SSDT für Visual Studio 2017 ist das Datenmodellierungstool, das mit SQL Server 2017 geliefert wird. Es verwendet die CEIP-Optionen, die in Visual Studio 2017 integriert sind. Weitere Informationen zum Übermitteln von Feedback über das CEIP in Visual Studio 2017 finden Sie in diesem [Hilfedokument von Visual Studio](https://www.visualstudio.com/en-us/docs/work/connect/give-feedback).  
+ SSDT für Visual Studio 2017 ist das Datenmodellierungstool, das mit SQL Server 2017 geliefert wird. Es verwendet die CEIP-Optionen, die in Visual Studio 2017 integriert sind. Weitere Informationen zum Übermitteln von Feedback über das CEIP in Visual Studio 2017 finden Sie in diesem [Hilfedokument von Visual Studio](https://www.visualstudio.com/docs/work/connect/give-feedback).  
   
  In Vorschauversionen von SQL Server 2017 ist das CEIP standardmäßig aktiviert. Sie können es mithilfe der folgenden Anweisungen deaktivieren oder wieder aktivieren.  
   
@@ -70,7 +70,7 @@ Wert = (DWORD)
 > [!CAUTION]  
 >  Ein fehlerhaftes Bearbeiten der Registrierung kann möglicherweise eine schwerwiegende Beschädigung des Systems zur Folge haben. Bevor Sie Änderungen an der Registrierung vornehmen, sollten Sie wichtige Daten auf dem Computer sichern. Sie können auch die Startoption Letzte als funktionierend bekannte Konfiguration verwenden, wenn nach dem Übernehmen manueller Änderungen Probleme auftreten.  
   
- Weitere Informationen zu den vom CEIP gesammelten, verarbeiteten oder übertragenen Informationen finden Sie in den [Datenschutzbestimmungen](http://go.microsoft.com/fwlink/?LinkID=868444).  
+ Weitere Informationen zu den vom CEIP gesammelten, verarbeiteten oder übertragenen Informationen finden Sie in den [Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkID=868444).  
  
 ### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Auswahl und Kontrolle über das CEIP und SQL Server Data Tools für Visual Studio 2015  
  SSDT für Visual Studio 2015 ist das Datenmodellierungstool, das mit SQL Server 2016 geliefert wird. Es verwendet die CEIP-Optionen, die in Visual Studio 2015 integriert sind. Weitere Informationen zum Übermitteln von Feedback über das CEIP in Visual Studio 2015 finden Sie in diesem [Hilfedokument von Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).  
@@ -112,7 +112,7 @@ Wert = (DWORD)
 > [!CAUTION]  
 >  Ein fehlerhaftes Bearbeiten der Registrierung kann möglicherweise eine schwerwiegende Beschädigung des Systems zur Folge haben. Bevor Sie Änderungen an der Registrierung vornehmen, sollten Sie wichtige Daten auf dem Computer sichern. Sie können auch die Startoption Letzte als funktionierend bekannte Konfiguration verwenden, wenn nach dem Übernehmen manueller Änderungen Probleme auftreten.  
   
- Weitere Informationen zu den vom CEIP gesammelten, verarbeiteten oder übertragenen Informationen finden Sie in den [Datenschutzbestimmungen](http://go.microsoft.com/fwlink/?LinkID=868444).  
+ Weitere Informationen zu den vom CEIP gesammelten, verarbeiteten oder übertragenen Informationen finden Sie in den [Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkID=868444).  
   
 ### <a name="choice-and-control-for-ceip-and-sql-server-data-tools---bi-ssdt-bi"></a>Auswahl und Steuerung für das CEIP und SQL Server Data Tools – BI (SSDT-BI)  
  Falls Sie SSDT-BI verwenden, erhalten Sie während der Installation die Gelegenheit zur Teilnahme am CEIP. Später können Sie die CEIP-Konfiguration für SSDT-BI durch Clienttools oder durch Ändern der Registrierungseinstellungen ändern.  

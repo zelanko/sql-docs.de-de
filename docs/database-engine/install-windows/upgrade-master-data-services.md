@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: f9d3d446e629fd4898db71b0001f2b9f487f44c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4128ed5937688ebd681c0fd99f7d346d66b0f263
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666034"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600740"
 ---
 # <a name="upgrade-master-data-services"></a>Aktualisieren von Master Data Services
 
@@ -43,7 +43,7 @@ ms.locfileid: "47666034"
   
 -   In [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] werden die Dateien standardmäßig in *Laufwerk*:\Programme\Microsoft SQL Server\140\Master Data Services installiert.  
 
--   In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] werden die Dateien standardmäßig in *Laufwerk*:\Programme\Microsoft SQL Server\130\Master Data Services installiert.  
+-   In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]werden die Dateien standardmäßig in *Laufwerk*:\Programme\Microsoft SQL Server\130\Master Data Services installiert.  
   
 -   In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]werden die Dateien standardmäßig in *Laufwerk*:\Programme\Microsoft SQL Server\120\Master Data Services installiert.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47666034"
         > [!IMPORTANT]  
         >  Die vorhandene MDS-Webanwendung aus einer früheren SQL Server-Version ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) kann in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version des Konfigurations-Managers für Master Data Services ausgewählt werden. Sie dürfen nicht die vorhandene Webanwendung auswählen, sondern müssen stattdessen eine [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] -Webanwendung für MDS erstellen. Andernfalls wird beim Versuch, die Webanwendung der aktualisierten MDS-Datenbank zuzuordnen, eine Fehlermeldung mit dem Hinweis ausgegeben, dass auf die angeforderte Seite nicht zugegriffen werden kann, da die zugehörigen Konfigurationsdaten für die Seite ungültig sind.  
         >   
-        >  Wenn Sie für die MDS-Webanwendung denselben Namen (Alias) wie für die vorhandene Webanwendung ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) verwenden möchten, müssen Sie die Webanwendung und den zugehörigen Anwendungspool zunächst aus IIS löschen und dann mit der [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]-Version des Konfigurations-Managers für Master Data Services eine Webanwendung mit demselben Namen erstellen. Informationen zum Entfernen von Webanwendungen und Anwendungspools aus IIS finden Sie unter [Entfernen einer Anwendung (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) und [Entfernen eines Anwendungspools (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  Wenn Sie für die MDS-Webanwendung denselben Namen (Alias) wie für die vorhandene Webanwendung ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) verwenden möchten, müssen Sie die Webanwendung und den zugehörigen Anwendungspool zunächst aus IIS löschen und dann mit der [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]-Version des Konfigurations-Managers für Master Data Services eine Webanwendung mit demselben Namen erstellen. Informationen zum Entfernen von Webanwendungen und Anwendungspools aus IIS finden Sie unter [Entfernen einer Anwendung (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) und [Entfernen eines Anwendungspools (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
   
 4.  Ordnen Sie die neue Webanwendung nun der upgegradeten MDS-Datenbank zu.  
   

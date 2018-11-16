@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e08cc23d78be8f617d51bd6d8310eaef5aa1f0e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d923536f678884307be526ddebf0f825774c1093
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666598"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699668"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 > 
 > Wenn Sie den Datenbank-Kompatibilitätsgrad „140“ für Ihre gesamte Datenbank nutzen möchten, aber aus irgendeinem Grund das **Kardinalitätsschätzung**smodell von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bevorzugen, sodass eine Zuordnung zum Datenbank-Kompatibilitätsgrad „110“ erfolgt, sollten Sie die Dokumentation zur Anweisung [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) und insbesondere den Abschnitt zu deren Schlüsselwort `LEGACY_CARDINALITY_ESTIMATION = ON` lesen.
 >  
-> Weitere Einzelheiten zur Bewertung der Leistungsunterschiede bei Ihren wichtigsten Abfragen zwischen zwei Kompatibilitätsgraden in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] finden Sie unter [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/) (Verbesserte Abfrageleistung bei Kompatibilitätsgrad 130 in Azure SQL-Datenbank). Beachten Sie, dass dieser Artikel sich auf den Kompatibilitätsgrad „130“ und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht. Es gelten jedoch die gleichen Vorgehensweisen für den Wechsel zu „140“ für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> Weitere Einzelheiten zur Bewertung der Leistungsunterschiede bei Ihren wichtigsten Abfragen zwischen zwei Kompatibilitätsgraden in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] finden Sie unter [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/) (Verbesserte Abfrageleistung bei Kompatibilitätsgrad 130 in Azure SQL-Datenbank). Beachten Sie, dass dieser Artikel sich auf den Kompatibilitätsgrad „130“ und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht. Es gelten jedoch die gleichen Vorgehensweisen für den Wechsel zu „140“ für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Führen Sie die folgende Abfrage aus, um die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Version zu bestimmen, mit der Sie verbunden sind.  
   
@@ -116,7 +116,7 @@ Für Neuentwicklungen oder für den Fall, dass eine vorhandene Anwendung die Nut
 >
 > Weitere Informationen zu Unterschieden zwischen den Kompatibilitätsgraden finden Sie in den entsprechenden Abschnitten weiter unten in diesem Artikel. 
 
-Um für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ein Upgrade auf die neueste Version durchzuführen, dabei aber den Datenbank-Kompatibilitätsgrad, der vor dem Upgrade vorhanden war, und dessen Unterstützbarkeitsstatus beizubehalten, empfiehlt es sich, mit dem [Microsoft-Datenmigrations-Assistent](http://www.microsoft.com/download/details.aspx?id=53595) (DMA) eine statische Funktionsprüfung des Oberflächenbereichs des Anwendungscodes in der Datenbank auszuführen. Gibt es in der Ausgabe von DMA keine Fehler hinsichtlich fehlender oder inkompatibler Funktionalität, ist zu erwarten, dass es keine funktionalen Rückschritte für die Anwendung in der neuen Zielversion gibt. Weitere Informationen zum DMA finden Sie [hier](http://blogs.msdn.microsoft.com/datamigration/dma).
+Um für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ein Upgrade auf die neueste Version durchzuführen, dabei aber den Datenbank-Kompatibilitätsgrad, der vor dem Upgrade vorhanden war, und dessen Unterstützbarkeitsstatus beizubehalten, empfiehlt es sich, mit dem [Microsoft-Datenmigrations-Assistent](https://www.microsoft.com/download/details.aspx?id=53595) (DMA) eine statische Funktionsprüfung des Oberflächenbereichs des Anwendungscodes in der Datenbank auszuführen. Gibt es in der Ausgabe von DMA keine Fehler hinsichtlich fehlender oder inkompatibler Funktionalität, ist zu erwarten, dass es keine funktionalen Rückschritte für die Anwendung in der neuen Zielversion gibt. Weitere Informationen zum DMA finden Sie [hier](https://blogs.msdn.microsoft.com/datamigration/dma).
 
 > [!NOTE] 
 > DMA unterstützt Datenbank-Kompatibilitätsgrad 100 und höher. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ist als Quellversion ausgeschlossen. 

@@ -13,12 +13,12 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 958446082e1576e14f50d09a9b8b7181bf2f18af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10ad201fd848ba195c5c448dfc1f27c2b6ff058d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771578"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638607"
 ---
 # <a name="data-streaming-destination"></a>Konfigurieren des Datenstreamingziels
   Das **Datenstreamingziel** ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Zielkomponente (SSIS), die es dem **OLE DB-Anbieter für SSIS** ermöglicht, die Ausgabe eines SSIS-Pakets als ein tabellarisches Resultset zu verwenden. Sie können einen Verbindungsserver erstellen, der den OLE DB-Anbieter für SSIS verwendet und anschließend eine SQL-Abfrage auf den Verbindungsserver ausführen, um die Daten anzuzeigen, die vom SSIS-Paket zurückgegeben wurden.  
@@ -54,7 +54,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
  Das Admin Center ermöglicht Ihnen die Veröffentlichung von Ansichten in einer SQL Server-Datenbank. Daher können Sie den SSIS-Assistent für das Veröffentlichen von Paketen (SSIS Package Publish Wizard), um ein SSIS-Paket als SQL-Ansicht zu veröffentlichen. Anschließend können Sie die Ansicht auswählen, die im OData-Feed im Power BI Admin Center enthalten sein soll. Ein Data Steward kann den Feed aus dem SSIS-Paket mithilfe des Power Query-Add-Ins für Excel verwenden.  
   
- Eine ausführliche exemplarische Vorgehensweise finden Sie unter [Publish SSIS Packages as OData Feed Sources](http://go.microsoft.com/fwlink/?LinkID=317367)(Veröffentlichen von SSIS-Paketen als OData-Feedquellen).  
+ Eine ausführliche exemplarische Vorgehensweise finden Sie unter [Publish SSIS Packages as OData Feed Sources](https://go.microsoft.com/fwlink/?LinkID=317367)(Veröffentlichen von SSIS-Paketen als OData-Feedquellen).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -81,6 +81,6 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  Ähnlich wie bei der Registerkarte „Eingabespalten“ können Sie auf dieser Registerkarte die Namen von Ausgabespalten ändern. Erweitern Sie in der Strukturansicht auf der linken Seite den Eintrag **Eingabe des Datenstreamingziels** , und erweitern Sie dann **Eingabespalten**. Klicken Sie auf den Namen der Eingabespalte, und ändern Sie im rechten Bereich den Namen der Ausgabespalte.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Publish SSIS Packages as OData Feed Sources](http://go.microsoft.com/fwlink/?LinkID=317367)  
+ [Publish SSIS Packages as OData Feed Sources](https://go.microsoft.com/fwlink/?LinkID=317367)  
   
   

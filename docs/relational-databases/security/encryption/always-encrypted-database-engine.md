@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d514532bc7c3c08a1c31a934c41761ee524c9d7
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827351"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675129"
 ---
 # <a name="always-encrypted-database-engine"></a>Immer verschlüsselt (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -187,7 +187,7 @@ Anforderungen an Tools
 
 - SQL Server Management Studio kann die von verschlüsselten Spalten abgerufenen Ergebnisse entschlüsseln, wenn sie eine Verbindung mit der *column encryption setting=enabled* auf der Registerkarte **Weitere Eigenschaften** des Dialogfelds **Verbindung mit Server herstellen** herstellen. Erfordert mindestens SQL Server Management Studio-Version 17, um verschlüsselte Spalten einzufügen, zu aktualisieren oder zu filtern.
 
-- Für verschlüsselte Verbindungen von `sqlcmd` ist mindestens Version 13.1 erforderlich, die im [Download Center](http://go.microsoft.com/fwlink/?LinkID=825643)verfügbar ist.
+- Für verschlüsselte Verbindungen von `sqlcmd` ist mindestens Version 13.1 erforderlich, die im [Download Center](https://go.microsoft.com/fwlink/?LinkID=825643)verfügbar ist.
 
   
 ## <a name="database-permissions"></a>Datenbankberechtigungen  

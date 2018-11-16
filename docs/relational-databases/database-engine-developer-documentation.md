@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cf6458cdb92f11871b27ae007d4207f3628c46b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 500281b84c84e84507660e3961b3d512b939e582
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597649"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668600"
 ---
 # <a name="database-engine-developer-documentation"></a>Entwicklerhandbuch (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ ms.locfileid: "47597649"
  [Datenbank-Engine – Programmierung der erweiterten gespeicherten Prozedur](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
  Beschreibt, wie erweiterte gespeicherte Prozeduren zur Erstellung eigener externer Routinen in einer Programmiersprache wie z. B. C verwendet werden.  
   
- [Programmieren mit dem Datensammler](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  
+ [Programmieren mit dem Datensammler](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  
  Beschreibt das Datensammler-Objektmodell.  
   
- [Programmierung eines Ausnahmemeldungsfelds](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
+ [Programmierung eines Ausnahmemeldungsfelds](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
  Beschreibt, wie Sie das Ausnahmemeldungsfeld (eine programmgesteuerte Schnittstelle) in Ihren Anwendungen verwenden können, um die Steuerungsmöglichkeiten für Meldungen zu erweitern, Benutzern die Möglichkeit zum Speichern von Fehlermeldungen zur späteren Bezugnahme zu geben und Hilfe zu Meldungen abzurufen.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

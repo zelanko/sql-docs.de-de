@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccc38600559c931e1ce3cd59708b47e581de2557
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a28d59165f7c1a7e733807cb4b86d334604da289
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706568"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672769"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Zugreifen auf speicheroptimierte Tabellen mit interpretiertem Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Wenn der Zugriff auf eine speicheroptimierte Tabelle von einer expliziten oder i
   
 - Legt Sie die Datenbankoption [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../../t-sql/statements/alter-database-transact-sql-set-options.md) auf ON fest.  
   
-Ein Tabellenhinweis auf die Isolationsstufe ist bei speicheroptimierten Tabellen, auf die der Zugriff mit Abfragen im [Autocommitmodus](http://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00)erfolgt, nicht erforderlich.  
+Ein Tabellenhinweis auf die Isolationsstufe ist bei speicheroptimierten Tabellen, auf die der Zugriff mit Abfragen im [Autocommitmodus](https://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00)erfolgt, nicht erforderlich.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
 

@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cff08e85cb8235567dd2ce7e8f8294f465892b47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c3faf4bb4b9f2a180bc09c91591ce6f6a9c3f15
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838868"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605470"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Upgraden von Always On-Verfügbarkeitsgruppen-Replikatsinstanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "47838868"
 Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz, die eine Always On-Verfügbarkeitsgruppe (AG) hostet, auf eine neue [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]-Version, ein neues [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Service Pack oder ein kumulatives Update upgegradet wird, oder wenn Sie ein neues Windows Service Pack oder ein kumulatives Update installieren, können Sie die Downtime des primären Replikats auf ein einziges manuelles Failover reduzieren, indem Sie ein paralleles Upgrade (oder zwei manuelle Failovers, falls Sie ein Failback auf das ursprüngliche primäre Replikat durchführen) durchführen. Während des Upgradevorgangs steht ein sekundäres Replikat weder für ein Failover noch für schreibgeschützte Vorgänge zur Verfügung. Nach dem Upgrade kann es etwas dauern, bis das sekundäre Replikat auf dem gleichen Stand wie der primäre Replikatknoten ist. Dies ist vom Ausmaß der Aktivität auf dem primären Replikatknoten abhängig und kann zu einer hohen Netzwerkauslastung führen. Beachten Sie außerdem, dass die Datenbanken in dieser Verfügbarkeitsgruppe nach dem ersten Failover auf ein sekundäres Replikat, auf dem eine neuere Version von SQL Server ausgeführt wird, einen Upgradeprozess durchlaufen, um sie auf die neueste Version zu aktualisieren. Währenddessen gibt es keine Lesereplikate für diese Datenbanken. Die Downtime nach dem ersten Failover hängt von der Anzahl von Datenbanken in der Verfügbarkeitsgruppe ab. Wenn Sie ein Failback auf das ursprüngliche Replikat durchführen möchten, wird dieser Schritt beim Failback nicht wiederholt.
   
 >[!NOTE]  
->In diesem Artikel wird nur das Upgraden von SQL Server behandelt. Das Upgraden des Betriebssystems, das den WSFC-Cluster (Windows Server Failover Clustering) beinhaltet, wird nicht behandelt. Das Upgraden des Windows-Betriebssystems, das den Failovercluster hostet, wird für ältere Betriebssysteme als Windows Server 2012 R2 nicht unterstützt. Weitere Informationen über das Upgraden eines Clusterknotens, der auf Windows Server 2012 R2 ausgeführt wird, finden Sie unter [Cluster Operating System Rolling Upgrade](http://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade)(Paralleles Upgraden für Clusterbetriebssysteme).  
+>In diesem Artikel wird nur das Upgraden von SQL Server behandelt. Das Upgraden des Betriebssystems, das den WSFC-Cluster (Windows Server Failover Clustering) beinhaltet, wird nicht behandelt. Das Upgraden des Windows-Betriebssystems, das den Failovercluster hostet, wird für ältere Betriebssysteme als Windows Server 2012 R2 nicht unterstützt. Weitere Informationen über das Upgraden eines Clusterknotens, der auf Windows Server 2012 R2 ausgeführt wird, finden Sie unter [Cluster Operating System Rolling Upgrade](https://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade)(Paralleles Upgraden für Clusterbetriebssysteme).  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
 Lesen Sie die folgenden wichtigen Informationen, bevor Sie beginnen:  
@@ -245,7 +245,7 @@ Abhängig vom angewendeten Update können zusätzliche Schritte für Replikatdat
 
 1. Führen Sie ein Upgrade für die Instanz aus, bei der es sich um das ursprüngliche primäre Replikat handelt.
 
-Weitere Informationen finden Sie unter [CDC functionality may break after upgrading to the latest CU (Die CDC-Funktion funktioniert nach dem Upgrade auf das aktuelle kumulative Update nicht mehr)](http://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+Weitere Informationen finden Sie unter [CDC functionality may break after upgrading to the latest CU (Die CDC-Funktion funktioniert nach dem Upgrade auf das aktuelle kumulative Update nicht mehr)](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
