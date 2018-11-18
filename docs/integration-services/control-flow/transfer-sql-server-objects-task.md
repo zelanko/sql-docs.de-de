@@ -17,12 +17,12 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7175ed9eed05295ec193dcc5f1cbaef287d27f77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7e699eb44ac381fa6cfe5c7dbca857010806753
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826648"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640787"
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server-Objekte kopieren (Task)
   Mit dem Task „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen“ wird mindestens ein Typ von Objekten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zwischen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übertragen. Der Task kann z. B. Tabellen und gespeicherte Prozeduren kopieren. Je nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version, die als Quelle verwendet wird, stehen verschiedene Objekttypen zum Kopieren zur Verfügung. Nur eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank enthält z.B. Schemas und benutzerdefinierte Aggregate.  
@@ -82,7 +82,7 @@ ms.locfileid: "47826648"
  Der Task „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen“ meldet keinen schrittweisen Fortschritt der Objektübertragung, sondern nur 0 % und 100 % der Ausführung.  
   
 ## <a name="execution-value"></a>Ausführungswert  
- Der in der **ExecutionValue** -Eigenschaft des Tasks gespeicherte Ausführungswert gibt die Anzahl der übertragenen Objekte zurück. Indem der **ExecValueVariable**-Eigenschaft des Tasks „SQL Server-Objekte übertragen“ eine benutzerdefinierte Variable zugewiesen wird, können Informationen über die Objektübertragung anderen Objekten im Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Der in der **ExecutionValue** -Eigenschaft des Tasks gespeicherte Ausführungswert gibt die Anzahl der übertragenen Objekte zurück. Indem der **ExecValueVariable**-Eigenschaft des Tasks „SQL Server-Objekte übertragen“ eine benutzerdefinierte Variable zugewiesen wird, können Informationen über die Objektübertragung anderen Objekten im Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="log-entries"></a>Protokolleinträge  
  Der Task "SQL Server-Objekte übertragen" enthält die folgenden benutzerdefinierten Protokolleinträge:  
@@ -113,7 +113,7 @@ ms.locfileid: "47826648"
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
--   [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Festlegen der Eigenschaften eines Tasks oder Containers](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-transfer-sql-server-objects-task"></a>Programmgesteuerte Konfiguration des Tasks 'SQL Server-Objekte übertragen'  
  Klicken Sie auf das folgende Thema, um weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften anzuzeigen:  
@@ -327,7 +327,7 @@ ms.locfileid: "47826648"
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
- [Editor für den Task „SQL Server-Objekte übertragen“ &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [Editor für den Task SQL Server-Objekte übertragen &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
  [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)   
  [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

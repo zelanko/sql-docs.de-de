@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 380a73ff26d48abf90e5068395a2defc29d28746
-ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
+ms.openlocfilehash: 1c5e3e3e1cdfda5126392e6295fc45cf29b9f507
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47441750"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657079"
 ---
 # <a name="export-a-data-tier-application"></a>Exportieren einer Datenebenenanwendung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ In der Azure SQL-Datenbank müssen Sie **jeder Datenbank** die Berechtigungen �
 ##  <a name="NetApp"></a> Verwenden einer .NET Framework-Anwendung  
  **So exportieren Sie eine DAC mithilfe der Export()-Methode in einer .NET Framework-Anwendung**  
   
- Laden Sie zum Anzeigen eines Codebeispiels die DAC-Beispielanwendung unter [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)herunter.  
+ Laden Sie zum Anzeigen eines Codebeispiels die DAC-Beispielanwendung unter [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)herunter.  
   
 1.  Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Instanz fest, die die zu exportierende DAC enthält.  
   

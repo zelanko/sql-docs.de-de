@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7db1fd9af6a36f0804819c389b06778ae04d2ebf
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021174"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813763"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Mobile Berichte mit SQL Server: End-to-End-Vorgehensweise
 Exemplarische Vorgehensweise zum Erstellen mobiler Berichte für sämtliche Bildschirmgrößen mit [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal und ihrer Anzeige in mobilen Power BI-Apps.
@@ -37,7 +37,7 @@ Um folgen zu können, benötigen Sie diese Produkte:
 *  ODER: Wide World Importers-Beispieldatenbank (WWI), die auf der Seite [Microsoft SQL Server-Beispiele](../../sample/microsoft-sql-server-samples.md) verfügbar ist.
 * Führen Sie zum Anzeigen von Ergebnissen die folgenden Schritte aus: 
   *   [Registrieren beim Power BI-Dienst](https://go.microsoft.com/fwlink/?LinkID=513879) und
-  *  [Herunterladen der mobilen Power BI-App](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) auf Ihr Mobilgerät: iOS, Android-Smartphone oder Windows 10-Gerät.  
+  *  [Herunterladen der mobilen Power BI-App](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) auf Ihr Mobilgerät: iOS, Android-Smartphone oder Windows 10-Gerät.  
 
   
 ## <a name="create-a-shared-data-source"></a>Erstellen einer freigegebenen Datenquelle  
@@ -76,7 +76,7 @@ Verwenden Sie ein vorhandenes [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversi
    
 4. Geben Sie in das Feld „Name“ den Namen des Servers, auf dem Sie die Datenquelle gespeichert hat, in diesem Format ein:   
    
-   Name: http://*localhost*/ReportServer  
+   Name: https://*localhost*/ReportServer  
    Elemente vom Typ: Datenquellen (*.rsds)  
    
 5. Klicken Sie auf **Öffnen**, und navigieren Sie zur Datenquelle, die Sie auf diesem Server erstellt haben.  
@@ -260,7 +260,7 @@ Sie können den Bericht lokal oder in einem [!INCLUDE[PRODUCT_NAME](../../includ
 Führen Sie zum Anzeigen Ihres [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichts zunächst diese Schritte aus:
 
 *  [Registrieren beim Power BI-Dienst](https://go.microsoft.com/fwlink/?LinkID=513879), wenn Sie noch kein Konto haben.
-*  [Herunterladen der mobile Power BI-App](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) auf Ihr mobiles Gerät.  
+*  [Herunterladen der mobile Power BI-App](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) auf Ihr mobiles Gerät.  
 
 ### <a name="view-your-mobile-report"></a>Anzeigen des mobilen Berichts
   

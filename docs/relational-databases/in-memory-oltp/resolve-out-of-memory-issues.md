@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c8e06e7070491eb608dc315acae235465a802bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b0c54bf494055567e7a8c8fc59fe001ac843cfa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656478"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671685"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ GO
 > Weitere Informationen finden Sie im Thema [Verwenden von In-Memory-OLTP in einer Umgebung mit virtuellen Computern](#bkmk_VMs).  
   
 ##  <a name="bkmk_PageAllocFailure"></a> Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist  
- Wenn Sie die Fehlermeldung `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'http://go.microsoft.com/fwlink/?LinkId=330673' for more information.` im Fehlerprotokoll erhalten, obwohl der verfügbare physische Arbeitsspeicher zum Zuordnen der Seite ausreichend ist, kann dies daran liegen, dass die Ressourcenkontrolle deaktiviert ist. Wenn die Ressourcenkontrolle deaktiviert ist, führt MEMORYBROKER_FOR_RESERVE zu einem künstlichen Mangel an Arbeitsspeicher.  
+ Wenn Sie die Fehlermeldung `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'https://go.microsoft.com/fwlink/?LinkId=330673' for more information.` im Fehlerprotokoll erhalten, obwohl der verfügbare physische Arbeitsspeicher zum Zuordnen der Seite ausreichend ist, kann dies daran liegen, dass die Ressourcenkontrolle deaktiviert ist. Wenn die Ressourcenkontrolle deaktiviert ist, führt MEMORYBROKER_FOR_RESERVE zu einem künstlichen Mangel an Arbeitsspeicher.  
   
  Um dieses Problem zu beheben, müssen Sie die Ressourcenkontrolle aktivieren.  
   
@@ -159,7 +159,7 @@ Wenn Sie für eine Datenbank mit speicheroptimierten Tabellen die oben genannten
 Um dieses Risiko abzuschwächen, ordnen Sie der Datenbank vorab genügend Arbeitsspeicher zu, um die Datenbank wiederherzustellen oder neu zu starten. Verwenden Sie hierfür nicht den Minimalwert auf Basis des dynamischen Speichers, um den zusätzlichen Arbeitsspeicher bei Bedarf bereitzustellen.
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Verwalten des Arbeitsspeichers für In-Memory OLTP](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
+ [Verwalten des Arbeitsspeichers für In-Memory OLTP](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [Überwachung und Problembehebung bei der Arbeitsspeichernutzung](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Handbuch zur Architektur der Speicherverwaltung](../../relational-databases/memory-management-architecture-guide.md)  

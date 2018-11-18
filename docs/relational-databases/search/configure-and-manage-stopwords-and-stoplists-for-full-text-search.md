@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e7f87bdfcbebe8843564a95a9f38f5d69a649cd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 328f313630286f3ef2a67fc7c27455e411d3d294
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729638"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658909"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ Verwenden Sie [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-
   
     -   **Aus vorhandener Volltext-Stoppliste erstellen**  
   
-     Weitere Informationen finden Sie unter [Neue Volltext-Stoppliste &#40;Seite 'Allgemein'&#41;](http://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309).  
+     Weitere Informationen finden Sie unter [Neue Volltext-Stoppliste &#40;Seite 'Allgemein'&#41;](https://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -96,7 +96,7 @@ Verwenden Sie [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/state
   
 4.  Klicken Sie mit der rechten Maustaste auf die Stoppliste, deren Eigenschaften Sie ändern möchten, und wählen Sie **Eigenschaften**aus.  
   
-5.  Im Dialogfeld [Volltext-Stopplisten-Eigenschaften](http://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) :  
+5.  Im Dialogfeld [Volltext-Stopplisten-Eigenschaften](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) :  
   
     1.  Wählen Sie im Listenfeld **Aktion** eine der folgenden Aktionen aus: **Stoppwort hinzufügen**, **Stoppwort löschen**, **Alle Stoppwörter löschen**oder **Inhalt der Stoppliste löschen**.  
   

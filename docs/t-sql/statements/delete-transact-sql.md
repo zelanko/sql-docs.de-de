@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cfd9c9d9a1e309cae28abfa7674d021405f6d02
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: bcf25195821c42d5120fc5d248b364ce23e24ed0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798599"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700318"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -205,7 +205,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 -   Erstellen Sie einen gruppierten Index für den Heap, bevor Sie die Zeilen löschen. Nach dem Löschen der Zeilen können Sie den gruppierten Index löschen. Diese Methode ist zeitaufwändiger als die vorherigen Methoden und beansprucht mehr temporäre Ressourcen.  
   
 > [!NOTE]  
->  Leere Seiten können zu jeder Zeit mithilfe der Anweisung `ALTER TABLE <table_name> REBUILD` aus einem Heap gelöscht werden.  
+>  Leere Seiten können zu jeder Zeit mithilfe der `ALTER TABLE <table_name> REBUILD`-Anweisung aus einem Heap gelöscht werden.  
   
 ## <a name="logging-behavior"></a>Protokollierungsverhalten  
  Die DELETE-Anweisung wird immer vollständig protokolliert.  
@@ -230,7 +230,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Anhand von Beispielen in diesem Abschnitt wird die grundlegende Funktion der DELETE-Anweisung mithilfe der mindestens erforderlichen Syntax veranschaulicht.  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>A. Verwenden von DELETE ohne WHERE-Klausel  
- Im folgenden Beispiel werden alle Zeilen aus der `SalesPersonQuotaHistory`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank gelöscht, da keine WHERE-Klausel verwendet wird, um die Anzahl der gelöschten Zeilen zu begrenzen.  
+ Im folgenden Beispiel werden alle Zeilen aus der `SalesPersonQuotaHistory` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank gelöscht, da keine WHERE-Klausel verwendet wird, um die Anzahl der gelöschten Zeilen zu begrenzen.  
   
 ```sql
 DELETE FROM Sales.SalesPersonQuotaHistory;  
@@ -241,7 +241,7 @@ GO
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie die Anzahl von Zeilen beschränkt wird, die gelöscht werden.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Löschen einer Reihe von Zeilen mithilfe der WHERE-Klausel  
- Im folgenden Beispiel werden alle Zeilen der Tabelle `ProductCostHistory` aus der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] gelöscht, bei denen der Wert `1000.00` in der Spalte `StandardCost` überschritten wird.  
+ Im folgenden Beispiel werden alle Zeilen der `ProductCostHistory` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank gelöscht, bei denen der Wert in der `StandardCost` -Spalte `1000.00`überschreitet.  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -259,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. Bestimmen der zu löschenden Zeile mithilfe eines Cursors  
- Im folgenden Beispiel wird eine einzelne Zeile aus der Tabelle `EmployeePayHistory` in der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] mithilfe eines Cursors namens `my_cursor` gelöscht. Von der Löschoperation ist nur die Zeile betroffen, die aktuell durch den Cursor abgerufen wird.  
+ Im folgenden Beispiel wird eine einzelne Zeile der `EmployeePayHistory` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank gelöscht, bei der ein Cursor mit dem Namen `my_cursor`. Von der Löschoperation ist nur die Zeile betroffen, die aktuell durch den Cursor abgerufen wird.  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -324,7 +324,7 @@ WHERE DueDate < '20020701';
 GO  
 ```  
   
- Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge zu löschen, müssen Sie sie zusammen mit ORDER BY in einer untergeordneten SELECT-Anweisung verwenden. Die folgende Abfrage löscht die zehn Zeilen der `PurchaseOrderDetail` -Tabelle mit den frühesten Fälligkeitsdaten. Die in der untergeordneten SELECT-Anweisung angegebene Spalte (`PurchaseOrderID`) ist der Primärschlüssel der Tabelle, um sicherzustellen, dass nur 10 Zeilen gelöscht werden. Wird in der untergeordneten SELECT-Anweisung eine Nichtschlüsselspalte verwendet, werden möglicherweise mehr als 10 Zeilen gelöscht, wenn die angegebene Spalte doppelte Werte enthält.  
+ Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge zu löschen, müssen Sie sie zusammen mit ORDER BY in einer untergeordneten SELECT-Anweisung verwenden. Die folgende Abfrage löscht die zehn Zeilen der `PurchaseOrderDetail`-Tabelle mit den frühesten Fälligkeitsdaten. Die in der untergeordneten SELECT-Anweisung angegebene Spalte (`PurchaseOrderID`) ist der Primärschlüssel der Tabelle, um sicherzustellen, dass nur 10 Zeilen gelöscht werden. Wird in der untergeordneten SELECT-Anweisung eine Nichtschlüsselspalte verwendet, werden möglicherweise mehr als 10 Zeilen gelöscht, wenn die angegebene Spalte doppelte Werte enthält.  
   
 ```sql
 DELETE FROM Purchasing.PurchaseOrderDetail  
@@ -367,7 +367,7 @@ GO
 ```  
   
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. Löschen von Daten aus einer Remotetabelle mithilfe der OPENQUERY-Funktion  
- Im folgenden Beispiel werden durch Angabe der Rowsetfunktion [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) Zeilen aus einer Remotetabelle gelöscht. Der im vorherigen Beispiel erstellte Name des Verbindungsservers wird hier verwendet.  
+ Im folgenden Beispiel werden durch Angabe der [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) -Rowsetfunktion Zeilen aus einer Remotetabelle gelöscht. Der im vorherigen Beispiel erstellte Name des Verbindungsservers wird hier verwendet.  
   
 ```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
@@ -404,7 +404,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Verwenden von OUTPUT mit <from_table_name> in einer DELETE-Anweisung  
- Im folgenden Beispiel werden Zeilen in der Tabelle `ProductProductPhoto` aus der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] basierend auf Suchkriterien gelöscht, die in der Klausel `FROM` der Anweisung `DELETE` definiert wurden. Die `OUTPUT` -Klausel gibt die Spalten aus der zu löschenden Tabelle, `DELETED.ProductID`und `DELETED.ProductPhotoID`, sowie Spalten aus der `Product` -Tabelle zurück. Diese werden in der `FROM` -Klausel verwendet, um die zu löschenden Zeilen anzugeben.  
+ Im folgenden Beispiel werden Zeilen in der `ProductProductPhoto`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank basierend auf Suchkriterien gelöscht, die in der `FROM`-Klausel der `DELETE`-Anweisung definiert wurden. Die `OUTPUT` -Klausel gibt die Spalten aus der zu löschenden Tabelle, `DELETED.ProductID`und `DELETED.ProductPhotoID`, sowie Spalten aus der `Product` -Tabelle zurück. Diese werden in der `FROM` -Klausel verwendet, um die zu löschenden Zeilen anzugeben.  
   
 ```sql
 DECLARE @MyTableVar table (  
@@ -458,7 +458,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. Verwenden einer Bezeichnung und eines Abfragehinweises mit der Anweisung DELETE  
- Diese Abfrage zeigt die grundlegende Syntax für die Verwendung eines Join-Abfragehinweises mit der DELETE-Anweisung. Weitere Informationen zu Joinhinweisen und der Verwendung der OPTION-Klausel finden Sie unter [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ Diese Abfrage zeigt die grundlegende Syntax für die Verwendung eines Join-Abfragehinweises mit der DELETE-Anweisung. Weitere Informationen zu Joinhinweisen und der Verwendung der OPTION-Klausel finden Sie unter [OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
 ```sql
 -- Uses AdventureWorks  
