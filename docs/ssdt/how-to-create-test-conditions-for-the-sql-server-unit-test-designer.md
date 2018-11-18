@@ -11,12 +11,12 @@ ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0fe82226d1c4de82883498ba92893ec98fc7b05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfb25121dcc417f2ead0d85bc723bc7b402cebab
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681968"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675069"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Vorgehensweise: Erstellen von Testbedingungen für den SQL Server-Komponententest-Designer
 Mit der erweiterbaren [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)-Klasse können neue Testbedingungen erstellt werden. Beispielsweise können Sie eine neue Testbedingung erstellen, mit der die Anzahl der Spalten oder die Werte in einem Resultset überprüft werden.  
@@ -49,7 +49,7 @@ Im folgenden Verfahren wird erläutert, wie Sie eine Testbedingung erstellen, di
   
 10. Leiten Sie die Klasse von der [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)-Klasse ab.  
   
-11. Signieren Sie die Assembly mit einem starken Namen. Weitere Informationen finden Sie unter [Gewusst wie: Signieren einer Assembly mit einem starken Namen](http://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Signieren Sie die Assembly mit einem starken Namen. Weitere Informationen finden Sie unter [Gewusst wie: Signieren einer Assembly mit einem starken Namen](https://msdn.microsoft.com/library/xc31ft41.aspx).  
   
 12. Erstellen Sie die Klassenbibliothek.  
   

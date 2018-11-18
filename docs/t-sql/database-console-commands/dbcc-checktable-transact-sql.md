@@ -27,12 +27,12 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 7d846878ae012a82f7ff8f6662b8a6095d664cb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd3481d797bca1822255b1ac6cf30a1123c2e669
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831938"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697192"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ Daher bewirkt das Verwenden der PHYSICAL_ONLY-Option möglicherweise eine viel k
 DATA_PURITY  
  Bewirkt, dass DBCC CHECKTABLE die Tabelle auf Spaltenwerte überprüft, die ungültig sind oder außerhalb des zulässigen Bereichs liegen. So können mit DBCC CHECKTABLE z.B. Spalten mit Datums- und Zeitwerten erkannt werden, die außerhalb des zulässigen Bereichs für den **datetime**-Datentyp liegen, oder es werden **decimal**-Spalten oder Spalten mit einem ungefähren numerischen Datentyp erkannt, die ungültige Dezimal- oder Genauigkeitswerte enthalten.  
  Die Überprüfung der Spaltenwertintegrität ist standardmäßig aktiviert. Die Option DATA_PURITY ist nicht erforderlich. Bei Datenbanken, die von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisiert wurden, können Sie mit DBCC CHECKTABLE WITH DATA_PURITY Fehler in einer bestimmten Tabelle suchen und beheben, jedoch ist die Spaltenwertprüfung standardmäßig erst dann aktiviert, wenn DBCC CHECKDB WITH DATA_PURITY fehlerfrei für die Datenbank ausgeführt wurde. Danach wird die Spaltenwertintegrität standardmäßig von DBCC CHECKDB und DBCC CHECKTABLE überprüft.  
- Mit dieser Option gemeldete Überprüfungsfehler können nicht mithilfe der DBCC-Reparaturoptionen behoben werden. Informationen zur manuellen Behebung dieser Fehler finden Sie im Knowledge Base-Artikel 923247: [Problembehandlung bei DBCC-Fehler 2570 in SQL Server 2005 und höher](http://support.microsoft.com/kb/923247).  
+ Mit dieser Option gemeldete Überprüfungsfehler können nicht mithilfe der DBCC-Reparaturoptionen behoben werden. Informationen zur manuellen Behebung dieser Fehler finden Sie im Knowledge Base-Artikel 923247: [Problembehandlung bei DBCC-Fehler 2570 in SQL Server 2005 und höher](https://support.microsoft.com/kb/923247).  
  Wenn PHYSICAL_ONLY angegeben ist, wird die Spaltenintegrität nicht überprüft.  
     
 MAXDOP  

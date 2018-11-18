@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 02f454ba26701263b98ba86d22bb98943ed2a498
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99d1b87ac5584f05911ebfb16387babc408e26f5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613429"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600930"
 ---
 # <a name="upgrade-database-engine"></a>Aktualisieren der Datenbank-Engine
 
@@ -36,6 +36,6 @@ ms.locfileid: "47613429"
   
 4.  [Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) Einer der Schritte nach dem Upgrade der Datenbanken auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist das Aktivieren neuer Funktionen durch Ändern des Datenbankkompatibilitätsmodus und danach das Verwenden des Abfragespeichers zum Überwachen der Leistung. Dieser Artikel erläutert diesen Prozess und stellt einen empfohlenen Workflow bereit.  
   
-5.  [Take Advantage of New SQL Server Features (Nutzen Sie die Vorteile der neuen Features von SQL Server)](http://www.microsoft.com/sql-server/sql-server-2017) Schließlich, nachdem Sie die vorherigen Schritte abgeschlossen haben, können Sie die speziellen neuen Erweiterungen der Datenbank-Engine nutzen. Dieser Artikel schlägt einige dieser Erweiterungen vor und stellt Links zu weiteren Informationen bereit.  
+5.  [Take Advantage of New SQL Server Features (Nutzen Sie die Vorteile der neuen Features von SQL Server)](https://www.microsoft.com/sql-server/sql-server-2017) Schließlich, nachdem Sie die vorherigen Schritte abgeschlossen haben, können Sie die speziellen neuen Erweiterungen der Datenbank-Engine nutzen. Dieser Artikel schlägt einige dieser Erweiterungen vor und stellt Links zu weiteren Informationen bereit.  
   
   

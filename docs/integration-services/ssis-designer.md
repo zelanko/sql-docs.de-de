@@ -25,12 +25,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bed5ac354f31b809f7699cea2e9e09f99158928
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e70f5cffad52b660f0006d416dfa027fba355de4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820108"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642127"
 ---
 # <a name="ssis-designer"></a>SSIS-Designer
   [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist ein grafisches Tool, mit dem Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete erstellen und verwalten können. [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] im Rahmen eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts verfügbar.  
@@ -89,7 +89,7 @@ ms.locfileid: "47820108"
 ### <a name="event-handlers-tab"></a>Registerkarte Ereignishandler  
  Die Ereignisse in einem Paket erstellen Sie in der Entwurfsoberfläche der Registerkarte **Ereignishandler** . Wählen Sie auf der Registerkarte **Ereignishandler** das Paket oder das Paketobjekt aus, für das Sie einen Ereignishandler erstellen möchten, und wählen Sie anschließend das Ereignis aus, das dem Ereignishandler zugeordnet werden soll. Ein Ereignishandler weist eine Ablaufsteuerung und optional Datenflüsse auf.  
   
- Weitere Informationen finden Sie unter [Hinzufügen eines Ereignishandlers zu einem Paket](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
+ Weitere Informationen finden Sie unter [Hinzufügen eines Ereignishandlers zu einem Paket](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
 ### <a name="package-explorer-tab"></a>Registerkarte Paket-Explorer  
  Pakete können komplex sein und viele Tasks, Verbindungs-Manager, Variablen und sonstige Elemente einschließen. Im Paket-Explorer wird eine vollständige Liste der Paketelemente angezeigt.  
@@ -104,7 +104,7 @@ ms.locfileid: "47820108"
 #### <a name="connection-managers-area"></a>Verbindungs-Manager (Bereich)  
  Die Verbindungs-Manager, die ein Paket verwendet, können Sie im Bereich **Verbindungs-Manager** hinzufügen und ändern. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält Verbindungs-Manager zum Herstellen von Verbindungen mit verschiedenen Datenquellen, beispielsweise mit Textdateien, OLE DB-Datenbanken und .NET-Providern.  
   
- Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) und [Erstellen von Verbindungs-Managern](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) und [Erstellen von Verbindungs-Managern](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
  
 ## <a name="control-flow-tab"></a>Ablaufsteuerung (Registerkarte)
 Verwenden Sie die Registerkarte **Ablaufsteuerung** des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers, um die Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakets zu erstellen.  

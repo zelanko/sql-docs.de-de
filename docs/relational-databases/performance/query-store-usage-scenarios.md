@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcea20d707eb04922efc9a12fb81335ef48f9378
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d556922a6bdb0e6edd538630e34dd21d428f2953
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654248"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673829"
 ---
 # <a name="query-store-usage-scenarios"></a>Verwendungsszenarien für den Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Wenn Sie eine Abfrage mit nicht optimaler Leistung identifiziert haben, richtet 
   
 -   Erstellen von fehlenden Indizes für Tabellen, auf die aufwändige Abfragen verweisen.  
   
--   Anwenden einer Filterrichtlinie für Sicherheit auf Zeilenebene. Weitere Details finden Sie unter [Optimizing Row Level Security with Query Store](http://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx)(Optimieren von Sicherheit auf Zeilenebene mithilfe des Abfragespeichers).  
+-   Anwenden einer Filterrichtlinie für Sicherheit auf Zeilenebene. Weitere Details finden Sie unter [Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx)(Optimieren von Sicherheit auf Zeilenebene mithilfe des Abfragespeichers).  
   
 -   Hinzufügen von temporaler Verwaltung durch das System zu Tabellen, die häufigen Änderungen durch OLTP-Anwendungen unterliegen.  
   

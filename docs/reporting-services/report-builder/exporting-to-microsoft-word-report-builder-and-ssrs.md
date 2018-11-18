@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9a345a40713bdba845e2e2cdd825326c1799c1e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021094"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814093"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportieren nach Microsoft Word (Berichts-Generator und SSRS)
 
@@ -112,9 +112,9 @@ ms.locfileid: "50021094"
   
  Die folgenden Themen enthalten weitere Informationen zum Einstellen der Office- und Word-Optionen.  
   
--   Ändern Sie die Bearbeitungssprache in den **Microsoft Office-Spracheinstellungen** oder im Dialogfeld **Word-Optionen** in Word. Weitere Informationen finden Sie unter [Festlegen der Bearbeitungs-, Anzeige- oder Hilfespracheinstellungen](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
+-   Ändern Sie die Bearbeitungssprache in den **Microsoft Office-Spracheinstellungen** oder im Dialogfeld **Word-Optionen** in Word. Weitere Informationen finden Sie unter [Festlegen der Bearbeitungs-, Anzeige- oder Hilfespracheinstellungen](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
   
--   Fügen Sie die Office-Sprachpakete hinzu, und ändern Sie anschließend die Bearbeitungssprache. Weitere Informationen finden Sie unter [Festlegen der Bearbeitungs-, Anzeige- oder Hilfespracheinstellungen](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) und [Office-Sprachoptionen](http://office.microsoft.com/language/).  
+-   Fügen Sie die Office-Sprachpakete hinzu, und ändern Sie anschließend die Bearbeitungssprache. Weitere Informationen finden Sie unter [Festlegen der Bearbeitungs-, Anzeige- oder Hilfespracheinstellungen](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) und [Office-Sprachoptionen](https://office.microsoft.com/language/).  
   
 > [!NOTE]  
 >  Wenn Sie die Bearbeitungssprache in den **Microsoft Office-Spracheinstellungen** oder im Dialogfeld **Word-Optionen** in Word ändern, gilt die Änderung für alle Office-Programme.  

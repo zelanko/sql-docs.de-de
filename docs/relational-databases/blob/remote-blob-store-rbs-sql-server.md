@@ -14,12 +14,12 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c0d656ffdc18168e12092abfb66b0027fd68632
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66422144cac35578bd9d6e77c887ad7e12ed21f9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633138"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673599"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "47633138"
 ## <a name="rbs-requirements"></a>RSB-Anforderungen  
  - RSB erfordert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise für den Hauptdatenbankserver, in dem die BLOB-Metadaten gespeichert werden.  Wenn Sie jedoch den bereitgestellten FILESTREAM-Anbieter verwenden, können Sie die BLOBs selbst auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard speichern. RBS erfordert mindestens ODBC-Treiberversion 11 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]und ODBC-Treiber, Version 13 für [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] , um eine Verbindung mit [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]herzustellen. Treiber stehen unter [Herunterladen von ODBC-Treibern für SQL Server](https://msdn.microsoft.com/library/mt703139.aspx)zur Verfügung.    
   
- RBS beinhaltet einen FILESTREAM-Anbieter, mit dem Sie BLOBs mithilfe von RBS auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]speichern können. Wenn Sie BLOBs mithilfe von RBS in einer anderen Speicherlösung speichern möchten, müssen Sie einen für diese Speicherlösung entwickelten RSB-Anbieter eines Drittanbieters verwenden oder einen benutzerdefinierten RBS-Anbieter mithilfe der RBS-API entwickeln. Ein Beispielanbieter, der BLOBs im NTFS-Dateisystem speichert, steht als Lernressource auf [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)zur Verfügung.  
+ RBS beinhaltet einen FILESTREAM-Anbieter, mit dem Sie BLOBs mithilfe von RBS auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]speichern können. Wenn Sie BLOBs mithilfe von RBS in einer anderen Speicherlösung speichern möchten, müssen Sie einen für diese Speicherlösung entwickelten RSB-Anbieter eines Drittanbieters verwenden oder einen benutzerdefinierten RBS-Anbieter mithilfe der RBS-API entwickeln. Ein Beispielanbieter, der BLOBs im NTFS-Dateisystem speichert, steht als Lernressource auf [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)zur Verfügung.  
   
 ## <a name="rbs-security"></a>RSB-Sicherheit  
- Der SQL Remote Blob Storage-Teamblog ist eine gute Informationsquelle für diese Funktion. Das RBS-Sicherheitsmodell wird in dem Beitrag unter [RBS Security Model](http://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx)(RBS-Sicherheitsmodell) beschrieben.  
+ Der SQL Remote Blob Storage-Teamblog ist eine gute Informationsquelle für diese Funktion. Das RBS-Sicherheitsmodell wird in dem Beitrag unter [RBS Security Model](https://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx)(RBS-Sicherheitsmodell) beschrieben.  
   
 ### <a name="custom-providers"></a>Benutzerdefinierte Anbieter  
  Wenn Sie einen benutzerdefinierten Anbieter zum Speichern von Blobs außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden, stellen Sie sicher, dass die gespeicherten Blobs anhand von Berechtigungen und Verschlüsselungsoptionen geschützt sind, die für das vom benutzerdefinierten Anbieter verwendete Speichermedium geeignet sind.  
@@ -77,10 +77,10 @@ Wenn Ihre Sicherheitsrichtlinien verschiedene Schlüsseleigenschaften (z.B. Algo
 ##  <a name="rbsresources"></a> RSB-Ressourcen  
   
  **RSB-Beispiele**  
- In den auf [CodePlex](http://go.microsoft.com/fwlink/?LinkId=210190) verfügbaren RSB-Beispielen wird veranschaulicht, wie Sie eine RBS-Anwendung entwickeln und einen benutzerdefinierten RBS-Anbieter installieren.  
+ In den auf [CodePlex](https://go.microsoft.com/fwlink/?LinkId=210190) verfügbaren RSB-Beispielen wird veranschaulicht, wie Sie eine RBS-Anwendung entwickeln und einen benutzerdefinierten RBS-Anbieter installieren.  
   
  **RBS-Blog**  
- Der [RBS-Blog](http://go.microsoft.com/fwlink/?LinkId=210315) bietet zusätzliche Informationen, durch die Sie RBS besser verstehen, bereitstellen und verwalten können.  
+ Der [RBS-Blog](https://go.microsoft.com/fwlink/?LinkId=210315) bietet zusätzliche Informationen, durch die Sie RBS besser verstehen, bereitstellen und verwalten können.  
   
 ##  <a name="Key_rotation"></a> Skript zur Schlüsselrotation  
  In diesem Beispiel wird eine gespeicherte Prozedur namens `sp_rotate_rbs_symmetric_credential_key` erstellt, um den aktuell verwendeten symmetrischen Schlüssel des RBS-Anmeldeinformationsspeichers  

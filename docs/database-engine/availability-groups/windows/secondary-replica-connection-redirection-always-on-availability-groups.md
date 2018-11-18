@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 43f4a29f67c474ff30a7da0512d89b106769e90c
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a811fdb21d6c0c1d702c067f255ece3c2b183b9c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018135"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600526"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Umleitung von Lese-/Schreibverbindungen vom sekundären zum primären Replikat (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -154,7 +154,7 @@ Im folgenden Diagramm wurde für das primäre Replikat ein manuelles Failover zu
 
 ## <a name="sql-server-instance-offline"></a>SQL Server-Instanz offline
 
-Wenn die in der Verbindungszeichenfolge angegebene SQL Server-Instanz nicht verfügbar ist (ausgefallen ist), kann keine Verbindung hergestellt werden, unabhängig davon, welche Rolle das Replikat auf dem Zielserver innehat. Um längere Ausfallzeiten für Anwendungen zu verhindert, konfigurieren Sie einen alternativen `FailoverPartner` in der Verbindungszeichenfolge. Die Anwendung muss eine Wiederholungslogik implementieren, um die Verarbeitung sicherzustellen, falls sowohl das primäre als auch das sekundäre Replikat während des tatsächlichen Failovers nicht online sind. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [SqlConnection.ConnectionString-Eigenschaft](http://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
+Wenn die in der Verbindungszeichenfolge angegebene SQL Server-Instanz nicht verfügbar ist (ausgefallen ist), kann keine Verbindung hergestellt werden, unabhängig davon, welche Rolle das Replikat auf dem Zielserver innehat. Um längere Ausfallzeiten für Anwendungen zu verhindert, konfigurieren Sie einen alternativen `FailoverPartner` in der Verbindungszeichenfolge. Die Anwendung muss eine Wiederholungslogik implementieren, um die Verarbeitung sicherzustellen, falls sowohl das primäre als auch das sekundäre Replikat während des tatsächlichen Failovers nicht online sind. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [SqlConnection.ConnectionString-Eigenschaft](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

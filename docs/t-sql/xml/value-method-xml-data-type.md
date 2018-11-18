@@ -16,12 +16,12 @@ ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d5e52daf3d17fce8a91cb42ceb32914093c8d93f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c44abf761d2576dd0e73c7c88fb9e52a823d25eb
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837608"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697908"
 ---
 # <a name="value-method-xml-data-type"></a>value()-Methode (xml-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,14 +72,14 @@ SELECT @ProdID
   
  Als Ergebnis wird Wert 1 zurückgegeben.  
   
- Obwohl es nur ein `ProductID` -Attribut in der XML-Instanz gibt, müssen Sie aufgrund der statischen Typisierungsregeln explizit angeben, dass der Pfadausdruck ein Singleton zurückgibt. Deshalb wird zusätzlich `[1]` am Ende des Pfadausdrucks angegeben. Weitere Informationen zur statischen Typisierung finden Sie unter [XQuery and statische Typisierung](../../xquery/xquery-and-static-typing.md).  
+ Obwohl es nur ein `ProductID` -Attribut in der XML-Instanz gibt, müssen Sie aufgrund der statischen Typisierungsregeln explizit angeben, dass der Pfadausdruck ein Singleton zurückgibt. Deshalb wird zusätzlich `[1]` am Ende des Pfadausdrucks angegeben. Weitere Informationen zur statischen Typisierung finden Sie unter [XQuery and Static Typing](../../xquery/xquery-and-static-typing.md).  
   
 ### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. Verwenden der value()-Methode zum Abrufen eines Werts aus einer Spalte vom Typ XML  
  Die folgende Abfrage wird für eine Spalte vom Typ **xml** (`CatalogDescription`) in der `AdventureWorks` -Datenbank angegeben. Die Abfrage ruft die Werte des Attributs `ProductModelID` aus jeder in der Spalte gespeicherten XML-Instanz ab.  
   
 ```  
 SELECT CatalogDescription.value('             
-    declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";             
+    declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";             
        (/PD:ProductDescription/@ProductModelID)[1]', 'int') AS Result             
 FROM Production.ProductModel             
 WHERE CatalogDescription IS NOT NULL             
@@ -102,18 +102,18 @@ ORDER BY Result desc
 ```  
   
 ### <a name="c-using-the-value-and-exist-methods-to-retrieve-values-from-an-xml-type-column"></a>C. Verwenden der value()- und der exist()-Methode zum Abrufen von Werten aus einer Spalte vom Typ XML  
- Das folgende Beispiel veranschaulicht die Verwendung der beiden Methoden `value()` und [exist()](../../t-sql/xml/exist-method-xml-data-type.md) des **XML**-Datentyps. Die `value()` -Methode wird zum Abrufen von `ProductModelID` -Attributwerten aus der XML-Instanz verwendet. Mit der `exist()` -Methode in der `WHERE` -Klausel werden die Zeilen aus der Tabelle gefiltert.  
+ Das folgende Beispiel veranschaulicht das Verwenden der beiden Methoden `value()` und [exist()](../../t-sql/xml/exist-method-xml-data-type.md) des **xml** -Datentyp sein. Die `value()` -Methode wird zum Abrufen von `ProductModelID` -Attributwerten aus der XML-Instanz verwendet. Mit der `exist()`-Methode in der `WHERE`-Klausel werden die Zeilen aus der Tabelle gefiltert.  
   
  Mit der Abfrage werden Produktmodell-IDs aus XML-Instanzen mit Garantieinformationen (<`Warranty`>-Element) als eine der Funktionen abgerufen. Die Bedingung in der `WHERE` -Klausel verwendet die `exist()` -Methode, um nur solche Zeilen abzurufen, die diese Bedingung erfüllen.  
   
 ```  
 SELECT CatalogDescription.value('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
            (/PD:ProductDescription/@ProductModelID)[1] ', 'int') as Result  
 FROM  Production.ProductModel  
 WHERE CatalogDescription.exist('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-     declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
   
      /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
 ```  

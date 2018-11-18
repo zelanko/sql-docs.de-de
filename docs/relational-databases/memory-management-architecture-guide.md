@@ -5,8 +5,7 @@ ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
@@ -16,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cd0d739f35f9f6cdcf03c525c41f0d2fb70d131
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dadd28224a7f360ee90767861025b0bdebc7cbe5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623828"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669399"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +68,7 @@ Mithilfe von AWE und der Berechtigung „Locked Pages in Memory“ können Sie f
 <sup>6</sup> Wenn die Berechtigung „Lock Pages in Memory (LPIM)“ erteilt wird (entweder für 32-Bit zur Unterstützung von AWE oder für 64-Bit als eigenständige Option), wird empfohlen, auch die Option „Max. Serverarbeitsspeicher“ festzulegen. Weitere Informationen zu LPIM finden Sie unter [Konfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
 
 > [!NOTE]
-> Ältere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können unter einem 32-Bit-Betriebssystem ausgeführt. Für den Zugriff auf mehr als 4 GB (Gigabyte) Arbeitsspeicher auf einem 32-Bit-Betriebssystem ist Address Windowing Extensions (AWE) erforderlich, um den Speicher zu verwalten. Dies ist nicht erforderlich, wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unter 64-Bit-Betriebssystemen ausgeführt wird. Weitere Informationen zu AWE finden Sie unter [Prozessadressraum](http://msdn.microsoft.com/library/ms189334.aspx) und [Verwalten von Arbeitsspeicher für große Datenbanken](http://msdn.microsoft.com/library/ms191481.aspx) in der Dokumentation zu [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
+> Ältere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können unter einem 32-Bit-Betriebssystem ausgeführt. Für den Zugriff auf mehr als 4 GB (Gigabyte) Arbeitsspeicher auf einem 32-Bit-Betriebssystem ist Address Windowing Extensions (AWE) erforderlich, um den Speicher zu verwalten. Dies ist nicht erforderlich, wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unter 64-Bit-Betriebssystemen ausgeführt wird. Weitere Informationen zu AWE finden Sie unter [Prozessadressraum](https://msdn.microsoft.com/library/ms189334.aspx) und [Verwalten von Arbeitsspeicher für große Datenbanken](https://msdn.microsoft.com/library/ms191481.aspx) in der Dokumentation zu [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Änderungen an der Verwaltung des Arbeitsspeichers ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 In früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) erfolgte die Speicherbelegung mithilfe von fünf verschiedenen Mechanismen:
@@ -188,7 +187,7 @@ In der folgenden Liste werden die Richtwerte für den Arbeitsspeicher beschriebe
 
 Die **Netzwerkpaketgröße** entspricht der Größe der TDS-Pakete (Tabular Data Stream), die für die Kommunikation zwischen Anwendungen und der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank-Engine verwendet werden. Die Standardpaketgröße beträgt 4 KB und wird durch die Konfigurationsoption Netzwerkpaketgröße gesteuert.
 
-Wenn mehrere aktive Resultsets (Multiple Active Result Sets, MARS) aktiviert sind, benötigt die Benutzerverbindung ca. (3 + 3 \* numerische_logische_Verbindungen) \* Netzwerkpaketgröße + 94 KB.
+Wenn mehrere aktive Resultsets (Multiple Active Result Sets, MARS) aktiviert sind, benötigt die Benutzerverbindung ca. (3 + 3 \*numerische_logische_Verbindungen)\* Netzwerkpaketgröße + 94 KB.
 
 ## <a name="effects-of-min-memory-per-query"></a>Auswirkungen von „Min. Arbeitsspeicher pro Abfrage“
 Sie können mithilfe der Konfigurationsoption *Min. Arbeitsspeicher pro Abfrage* die Mindestmenge an Arbeitsspeicher (in KB) festlegen, die für das Ausführen einer Abfrage zugeordnet wird. Dies ist auch als minimale Arbeitsspeicherzuweisung bekannt. Alle Abfragen müssen warten, bis der mindestens erforderliche Arbeitsspeicher zugesichert werden kann oder bis der Wert überschritten wird, der in der Serverkonfigurationsoption „Abfragewartezeit“ angegeben ist, bevor die Ausführung gestartet wird. Der Wartetyp, der in diesem Szenario gesammelt wird, ist RESOURCE_SEMAPHORE.

@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b24129d26523ec4bee866c96180c0907992099e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51a50d8798dc05ee012d7da9848e45a759b7d9cb
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760268"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701398"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -121,7 +121,7 @@ Zum Ändern der Mitgliedschaft einer festen Datenbankrolle benötigen Sie darüb
 ### <a name="a-change-the-name-of-a-database-role"></a>A. Ändern eines Datenbankrollennamens  
  **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 oder höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- Im folgenden Beispiel wird der Name der `buyers`-Rolle in `purchasing` geändert.   Dieses Beispiel kann in der [AdventureWorks](http://msftdbprodsamples.codeplex.com/)-Musterdatenbank ausgeführt werden.
+ Im folgenden Beispiel wird der Name der `buyers`-Rolle in `purchasing` geändert.   Dieses Beispiel kann in der [AdventureWorks](https://msftdbprodsamples.codeplex.com/)-Musterdatenbank ausgeführt werden.
   
 ```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
@@ -130,7 +130,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ### <a name="b-add-or-remove-role-members"></a>B. Hinzufügen oder Entfernen von Rollenmitgliedern  
  **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 oder höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- In folgendem Beispiel wird eine neue Datenbankrolle mit dem Namen `Sales` erstellt. Dieser wird der Datenbankbenutzer Barry als Mitglied hinzugefügt. Anschließend wird dieses Mitglied wieder entfernt.   Dieses Beispiel kann in der [AdventureWorks](http://msftdbprodsamples.codeplex.com/)-Musterdatenbank ausgeführt werden.
+ In folgendem Beispiel wird eine neue Datenbankrolle mit dem Namen `Sales` erstellt. Dieser wird der Datenbankbenutzer Barry als Mitglied hinzugefügt. Anschließend wird dieses Mitglied wieder entfernt.   Dieses Beispiel kann in der [AdventureWorks](https://msftdbprodsamples.codeplex.com/)-Musterdatenbank ausgeführt werden.
   
 ```sql  
 CREATE ROLE Sales;  

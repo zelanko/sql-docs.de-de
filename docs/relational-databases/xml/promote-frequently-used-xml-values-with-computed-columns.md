@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 680232b1a65bf811c5281da715e4fb93fd2f416f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9be4170345ea7aab0d7d1a7dc848291e776e27d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735688"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665569"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  Dazu erstellen Sie zuerst die Streaming-CLR-Funktion. Der **xml** -Datentyp wird als eine verwaltete SqlXml-Klasse in ADO.NET verfügbar gemacht und unterstützt die **CreateReader()** -Methode, die einen XmlReader zurückgibt.  
   
 > [!NOTE]  
->  Der Beispielcode in diesem Abschnitt verwendet XPathDocument und XPathNavigator. Diese zwingen Sie, alle XML-Dokumente in den Arbeitsspeicher zu laden. Wenn Sie ähnlichen Code in Ihrer Anwendung verwenden, um mehrere große XML-Dokumente zu verarbeiten, ist dieser Code nicht skalierbar. Halten Sie stattdessen die Speicherbelegung gering, und verwenden Sie wenn möglich Streaming-Schnittstellen. Weitere Informationen zur Leistung finden Sie unter [Architektur der CLR-Integration](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
+>  Der Beispielcode in diesem Abschnitt verwendet XPathDocument und XPathNavigator. Diese zwingen Sie, alle XML-Dokumente in den Arbeitsspeicher zu laden. Wenn Sie ähnlichen Code in Ihrer Anwendung verwenden, um mehrere große XML-Dokumente zu verarbeiten, ist dieser Code nicht skalierbar. Halten Sie stattdessen die Speicherbelegung gering, und verwenden Sie wenn möglich Streaming-Schnittstellen. Weitere Informationen zur Leistung finden Sie unter [Architektur der CLR-Integration](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
   
 ```  
 public class c_streaming_xml_tvf {  
