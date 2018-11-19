@@ -11,12 +11,12 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ce122713ce5d57daa9a7313d8b6d184bd33b850
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f9eded908271973415987155de5cf1efdc906db
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842748"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600970"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Verwenden von Always Encrypted mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,9 +29,9 @@ Always Encrypted ermöglicht Clients das Verschlüsseln von vertraulichen Daten 
 - Stellen Sie Sie sicher, dass Microsoft JDBC-Treiber 6.0 (oder höher) für SQL Server auf dem Entwicklungscomputer installiert ist. 
 - Laden Sie die Richtliniendateien Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction herunter und installieren Sie sie.  Achten Sie darauf, die in der ZIP-Datei enthaltene Infodatei zu lesen, um Installationsanweisungen und relevante Details zu möglichen Export-/Importproblemen zu erhalten.  
 
-    - Wenn Sie die Datei „mssql-jdbc-X.X.X.jre7.jar“ oder die Datei „sqljdbc41.jar“ verwenden, können die Richtliniendateien von [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 7 Download](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html) heruntergeladen werden.
+    - Wenn Sie die Datei „mssql-jdbc-X.X.X.jre7.jar“ oder die Datei „sqljdbc41.jar“ verwenden, können die Richtliniendateien von [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 7 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html) heruntergeladen werden.
 
-    - Wenn Sie die Datei „mssql-jdbc-X.X.X.jre8.jar“ oder die Datei „sqljdbc42.jar“ verwenden, können die Richtliniendateien von [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) heruntergeladen werden.
+    - Wenn Sie die Datei „mssql-jdbc-X.X.X.jre8.jar“ oder die Datei „sqljdbc42.jar“ verwenden, können die Richtliniendateien von [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) heruntergeladen werden.
 
     - Wenn Sie die Mssql-Jdbc-X.X.X.jre9.jar verwenden zu können, muss keine Datei heruntergeladen werden. Die Zuständigkeit-Richtlinie in Java 9 wird standardmäßig unbegrenzt Verschlüsselung.
 
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 > Ein Beispiel dafür, wie diese Abhängigkeiten in ein Maven-Projekt eingeschlossen werden sollen, finden Sie unter [herunterladen ADAL4J und Azure-Schlüsseltresor-Abhängigkeiten mit Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
-### <a name="using-windows-certificate-store-provider"></a>Mithilfe der Windows Certificate Store-Anbieter
+### <a name="using-windows-certificate-store-provider"></a>Verwenden des Windows-Zertifikatspeicheranbieters
 Mit „SqlColumnEncryptionCertificateStoreProvider“ können Spaltenhauptschlüssel im Windows-Zertifikatspeicher gespeichert werden. Verwenden Sie SQL Server Management Studio (SSMS) Always Encrypted-Assistenten oder anderer unterstützter Tools, um die spaltenhauptschlüssel und die spaltenverschlüsselung Definitionen in der Datenbank erstellen. Der gleiche Assistent kann verwendet werden, um ein selbstsigniertes Zertifikat in der Windows Certificate Store zu generieren, das als spaltenhauptschlüssel für die immer verschlüsselten Daten verwendet werden kann. Weitere Informationen zu den spaltenhauptschlüssel und Column Encryption Key T-SQL-Syntax, finden Sie unter [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) und [CREATE COLUMN Encryption KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) bzw.
 
 Der Name des der SQLServerColumnEncryptionCertificateStoreProvider "mssql_certificate_store" ist und die GetName()"eingeben API des Anbieterobjekts abgefragt werden kann. Sie wird vom Treiber automatisch registriert und kann nahtlos ohne anwendungsänderung verwendet werden.
@@ -154,7 +154,7 @@ Sie können auch abrufen, oder legen Sie diese Einstellungen mithilfe der SQLSer
 Der JDBC-Treiber instanziiert die SQLServerColumnEncryptionJavaKeyStoreProvider automatisch, wenn diese Anmeldeinformationen in den Verbindungseigenschaften vorhanden sind.
 
 ### <a name="creating-a-column-master-key-for-the-java-key-store"></a>Erstellen eines spaltenhauptschlüssels für die Java-Key Store
-Die SQLServerColumnEncryptionJavaKeyStoreProvider kann mit JKS oder PKCS12-Keystore-Typen verwendet werden. Erstellen oder importieren ein Schlüssels für die Verwendung mit diesem Anbieter Java verwenden [Keytool](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) Hilfsprogramm. Der Schlüssel muss es sich um dasselbe Kennwort wie der Keystore selbst haben. Hier wird verdeutlicht, wie Sie einen öffentlichen Schlüssel und den zugehörigen privaten Schlüsseln, die mit dem Keytool-Hilfsprogramm zu erstellen:
+Die SQLServerColumnEncryptionJavaKeyStoreProvider kann mit JKS oder PKCS12-Keystore-Typen verwendet werden. Erstellen oder importieren ein Schlüssels für die Verwendung mit diesem Anbieter Java verwenden [Keytool](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) Hilfsprogramm. Der Schlüssel muss es sich um dasselbe Kennwort wie der Keystore selbst haben. Hier wird verdeutlicht, wie Sie einen öffentlichen Schlüssel und den zugehörigen privaten Schlüsseln, die mit dem Keytool-Hilfsprogramm zu erstellen:
 
 ```
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks

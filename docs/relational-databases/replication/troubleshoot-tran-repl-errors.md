@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0507fd785dfe6eb61993c30c90b116db423548aa
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419455"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675899"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Problembehandlung: Suchen von Fehlern bei SQL Server-Transaktionsreplikationen 
 Die Problembehandlung von Replikationsfehlern kann ohne grundlegende Kenntnisse der Transaktionsreplikation frustrierend sein. Der erste Schritt beim Erstellen einer Veröffentlichung besteht darin, den Momentaufnahmen-Agent eine Momentaufnahme erstellen zu lassen und diese im Ordner für Momentaufnahmen zu speichern. Anschließend wendet der Verteilungs-Agent die Momentaufnahme auf den Abonnenten an. 
@@ -252,7 +252,7 @@ Sie können die ausführliche Protokollierung verwenden, um detailliertere Infor
     
 1. Führen Sie zum Deaktivieren der ausführlichen Protokollierung die vorherigen Schritte erneut durch, um die gesamte Zeile `-Output` zu entfernen, die Sie zuvor hinzugefügt haben. 
 
-Weitere Informationen finden Sie unter [Enabling verbose logging for replication agents (Aktivieren der ausführlichen Protokollierung für Replikations-Agents)](https://support.microsoft.com/en-us/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se). 
+Weitere Informationen finden Sie unter [Enabling verbose logging for replication agents (Aktivieren der ausführlichen Protokollierung für Replikations-Agents)](https://support.microsoft.com/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se). 
 
 
 ## <a name="see-also"></a>Siehe auch

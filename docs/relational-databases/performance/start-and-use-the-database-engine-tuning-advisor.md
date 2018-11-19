@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cc9fbc190645b2f517758b129e92f458dcef316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846598"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661126"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "47846598"
   
 2.  Geben Sie Ihr [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript in den Abfrage-Editor ein. Dieses Skript sollte eine Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen an mindestens eine zu optimierende Datenbank enthalten.  
   
-3.  Speichern Sie die Datei mit der Erweiterung SQL **** . Die Datenbankoptimierungsratgeber-GUI und das Befehlszeilen-Hilfsprogramm **dta** können dieses [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript als Arbeitsauslastung verwenden.  
+3.  Speichern Sie die Datei mit der Erweiterung **SQL**. Die Datenbankoptimierungsratgeber-GUI und das Befehlszeilen-Hilfsprogramm **dta** können dieses [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript als Arbeitsauslastung verwenden.  
   
 ###  <a name="Profiler"></a> So erstellen Sie Arbeitsauslastungen für Ablaufverfolgungsdateien und -tabellen  
   
@@ -223,7 +223,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
 >  Das Anhalten des Datenbankoptimierungsratgebers wird nicht unterstützt. Wenn Sie auf die Symbolleistenschaltfläche **Analyse starten** klicken, nachdem Sie auf eine der beiden Symbolleistenschaltflächen **Analyse beenden** oder **Analyse beenden (mit Empfehlungen)** geklickt haben, startet der Datenbankoptimierungsratgeber eine neue Optimierungssitzung.  
   
 ###  <a name="dta"></a> Verwenden des dta-Hilfsprogramms  
- Das Hilfsprogramm [dta](../../tools/dta/dta-utility.md) stellt eine ausführbare Datei für Eingabeaufforderungen zur Verfügung, mit der Datenbanken optimiert werden können. Sie können auf diese Weise den Datenbankoptimierungsratgeber in Batchdateien und Skripts verwenden. Das Hilfsprogramm **dta** akzeptiert Plancacheeinträge, Ablaufverfolgungsdateien und -tabellen sowie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts als Arbeitsauslastung. Außerdem akzeptiert es XML-Eingaben, die dem XML-Schema des Datenbankoptimierungsratgebers entsprechen. Dieses Schema steht auf dieser [Microsoft-Website](http://go.microsoft.com/fwlink/?linkid=43100)zur Verfügung.  
+ Das Hilfsprogramm [dta](../../tools/dta/dta-utility.md) stellt eine ausführbare Datei für Eingabeaufforderungen zur Verfügung, mit der Datenbanken optimiert werden können. Sie können auf diese Weise den Datenbankoptimierungsratgeber in Batchdateien und Skripts verwenden. Das Hilfsprogramm **dta** akzeptiert Plancacheeinträge, Ablaufverfolgungsdateien und -tabellen sowie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts als Arbeitsauslastung. Außerdem akzeptiert es XML-Eingaben, die dem XML-Schema des Datenbankoptimierungsratgebers entsprechen. Dieses Schema steht auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?linkid=43100)zur Verfügung.  
   
  Beachten Sie Folgendes, bevor Sie eine Arbeitsauslastung mit dem Hilfsprogramm **dta** optimieren:  
   
@@ -313,7 +313,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
   
  C:\Programme\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- Das XML-Schema des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers ist auch online auf dieser [Microsoft-Website](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)verfügbar.  
+ Das XML-Schema des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers ist auch online auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)verfügbar.  
   
  Diese URL öffnet eine Seite, auf der viele [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -XML-Schemas verfügbar sind. Führen Sie auf der Seite einen Bildlauf nach unten aus, bis Sie die Zeile für den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber erreichen.  
   

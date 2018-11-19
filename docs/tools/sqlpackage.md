@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: b7bf75b16a9c7962ce1d04f51182d21107daa181
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 2d16e9c805f9979a53a9e8bc8c2e265e06ccbab9
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051222"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629623"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -102,6 +102,8 @@ Eine Veröffentlichungsaktion von "SqlPackage.exe" aktualisiert inkrementell das
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
 |**/ AzureKeyVaultAuthMethod:**|**/AKV**|{Interaktive&#124;ClientIdSecret}|Gibt an, welche Authentifizierungsmethode für den Zugriff auf Azure Key Vault verwendet wird. |
 |**/ClientId:**|**/CID**|{string}|Gibt die Client-ID an, die zur Authentifizierung bei Azure Key Vault verwendet wird (sofern erforderlich). |
+|**/ DeployScriptPath:**|**DSP**|{string}|Gibt an, einem optionalen Dateipfad, um das Bereitstellungsskript auszugeben. Wenn bei Azure-Bereitstellungen TSQL-Befehle zum Erstellen oder Ändern der Masterdatenbank verwendet werden, wird ein Skript in den gleichen Pfad geschrieben, wobei der Name der Ausgabedatei „Dateiname_Master.sql“ lautet. |
+|**/ DeployReportPath:**|**/DRP**|{string}|Gibt an, einem optionalen Dateipfad, um XML-Datei mit dem Bericht auszugeben. |
 |**/Diagnostics:**|**/d**|{"True"&#124;"false"}|Gibt an, ob die Diagnoseprotokollierung in der Konsole ausgegeben wird. Der Standardwert ist "false". |
 |**/ DiagnosticsFile:**|**/ df**|{string}|Gibt eine Datei an, in der Diagnoseprotokolle gespeichert werden. |
 |**/ MaxParallelism:**|**/mp**|{int}| Gibt den Parallelitätsgrad für gleichzeitige Vorgänge in einer Datenbank an. Der Standardwert ist 8. |
@@ -476,6 +478,8 @@ Durch eine **SqlPackage.exe**-Skriptaktion wird ein inkrementelles Transact-SQL-
 |---|---|---|---|
 |**/Action:**|**/a**|Skript|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
+|**/ DeployScriptPath:**|**DSP**|{string}|Gibt an, einem optionalen Dateipfad, um das Bereitstellungsskript auszugeben. Wenn bei Azure-Bereitstellungen TSQL-Befehle zum Erstellen oder Ändern der Masterdatenbank verwendet werden, wird ein Skript in den gleichen Pfad geschrieben, wobei der Name der Ausgabedatei „Dateiname_Master.sql“ lautet. |
+|**/ DeployReportPath:**|**/DRP**|{string}|Gibt an, einem optionalen Dateipfad, um XML-Datei mit dem Bericht auszugeben. |
 |**/Diagnostics:**|**/d**|{"True"&#124;"false"}|Gibt an, ob die Diagnoseprotokollierung in der Konsole ausgegeben wird. Der Standardwert ist "false". |
 |**/ DiagnosticsFile:**|**/ df**|{string}|Gibt eine Datei an, in der Diagnoseprotokolle gespeichert werden. |
 |**/ MaxParallelism:**|**/mp**|{int}| Gibt den Parallelitätsgrad für gleichzeitige Vorgänge in einer Datenbank an. Der Standardwert ist 8. |

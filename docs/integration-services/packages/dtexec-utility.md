@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02cd5a093d0af3d325437c77dc07846ee8f6db23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83346a846e180cd2e77c6ba895bac7a899b1143a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601268"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639178"
 ---
 # <a name="dtexec-utility"></a>dtexec (Hilfsprogramm)
   Das Befehlszeilen-Hilfsprogramm **dtexec** dient zum Konfigurieren und Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen. Das Hilfsprogramm **dtexec** ermöglicht den Zugriff auf alle Features zur Paketkonfiguration und -ausführung, z.B. Parameter, Verbindungen, Eigenschaften, Variablen und Statusanzeigen. Das Hilfsprogramm **dtexec** ermöglicht das Laden von Paketen aus diesen Quellen: dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server, einer ISPAC-Projektdatei, einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und dem Dateisystem.  
@@ -172,7 +172,7 @@ dtexec /option [value] [/option [value]]...
   
      Wenn diese Option verwendet wird, müssen beide Parameter angegeben werden: Der Name oder die GUID des Verbindungs-Managers muss mit dem *ID_oder_Name*-Argument bereitgestellt werden, und mit dem *Verbindungszeichenfolge*-Argument muss eine gültige Verbindungszeichenfolge angegeben werden. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-     Sie können zur Laufzeit die Option **/Connection** verwenden, um Paketkonfigurationen von einem anderen Speicherort als dem zur Entwurfszeit angegebenen Speicherort zu laden. Die Werte dieser Konfigurationen ersetzen dann die Werte, die ursprünglich angegeben wurden. Sie können die Option **/Connection** jedoch nur für Konfigurationen verwenden, die einen Verbindungs-Manager verwenden (z.B. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurationen). Um zu verstehen, wie Paketkonfigurationen angewendet werden, lesen Sie [SSIS-Paketkonfigurationen](../../integration-services/packages/package-configurations.md) und [Behavior Changes to Integration Services Features in SQL Server 2016](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)(Verhaltensänderungen von Integration Services Features in SQL Server 2016).  
+     Sie können zur Laufzeit die Option **/Connection** verwenden, um Paketkonfigurationen von einem anderen Speicherort als dem zur Entwurfszeit angegebenen Speicherort zu laden. Die Werte dieser Konfigurationen ersetzen dann die Werte, die ursprünglich angegeben wurden. Sie können die Option **/Connection** jedoch nur für Konfigurationen verwenden, die einen Verbindungs-Manager verwenden (z.B. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurationen). Um zu verstehen, wie Paketkonfigurationen angewendet werden, lesen Sie [SSIS-Paketkonfigurationen](../../integration-services/packages/package-configurations.md) und [Behavior Changes to Integration Services Features in SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)(Verhaltensänderungen von Integration Services Features in SQL Server 2016).  
   
 -   **/Cons[oleLog]** [[*Anzeigeoptionen*];[*Listenoptionen*;*Quellname_oder_-GUID*]...]: (Optional). Zeigt während der Paketausführung bestimmte Protokolleinträge an der Konsole an. Wenn die Option nicht angegeben wird, werden keine Protokolleinträge an der Konsole angezeigt. Wenn die Option ohne Parameter zur Begrenzung der Anzeige angegeben wird, werden alle Protokolleinträge angezeigt. Wenn Sie die an der Konsole angezeigten Einträge begrenzen möchten, können Sie die anzuzeigenden Spalten mithilfe des *Anzeigeoptionen* -Parameters angeben und die Protokolleintragstypen mithilfe des *Listenoptionen* -Parameters begrenzen.  
   
@@ -403,7 +403,7 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     Sie können die Option **/Set** verwenden, um den Speicherort zu ändern, von dem Paketkonfigurationen geladen werden. Sie können die Option **/Set** jedoch nicht verwenden, um einen Wert zu überschreiben, der zur Entwurfszeit von einer Konfiguration angegeben wurde. Um zu verstehen, wie Paketkonfigurationen angewendet werden, lesen Sie [SSIS-Paketkonfigurationen](../../integration-services/packages/package-configurations.md) und [Behavior Changes to Integration Services Features in SQL Server 2016](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)(Verhaltensänderungen von Integration Services Features in SQL Server 2016).  
+     Sie können die Option **/Set** verwenden, um den Speicherort zu ändern, von dem Paketkonfigurationen geladen werden. Sie können die Option **/Set** jedoch nicht verwenden, um einen Wert zu überschreiben, der zur Entwurfszeit von einer Konfiguration angegeben wurde. Um zu verstehen, wie Paketkonfigurationen angewendet werden, lesen Sie [SSIS-Paketkonfigurationen](../../integration-services/packages/package-configurations.md) und [Behavior Changes to Integration Services Features in SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794) (Verhaltensänderungen von Integration Services Features in SQL Server 2016).  
   
 -   **/Ser[ver]** *Server*: (Optional). Wenn die Option **/SQL** oder **/DTS** verwendet wurde, gibt diese Option den Namen des Servers an, von dem das Paket abgerufen werden soll. Wenn Sie die Option **/Server** nicht angeben, die Option **/SQL** oder **/DTS** jedoch angegeben wird, wird versucht, das Paket auf den lokalen Server anzuwenden. Der *Serverinstanz* -Wert kann in Anführungszeichen eingeschlossen werden.  
   
@@ -630,6 +630,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag zu [Exitcodes, DTEXEC und SSIS-Katalog](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)auf www.mattmasson.com.  
+ Blogeintrag zu [Exitcodes, DTEXEC und SSIS-Katalog](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/) auf www.mattmasson.com.  
   
   

@@ -33,7 +33,7 @@ ms.locfileid: "49461015"
 ### <a name="new-word-breakers-and-stemmers-installed"></a>Neue Wörtertrennungen und Wortstammerkennungen wurden installiert  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] aktualisiert alle Wörtertrennungen und Wortstammerkennungen, die von der Volltextsuche und der semantischen Suche verwendet werden. Aus Gründen der Konsistenz zwischen dem Inhalt von Indizes und den Ergebnissen von Abfragen empfiehlt es sich, dass Sie vorhandene Volltextindizes wieder auffüllen.  
   
-1.  Es gibt neue Wörtertrennungen für Englisch. Informationen zum Beibehalten des vorherigen Verhaltens finden Sie unter [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+1.  Es gibt neue Wörtertrennungen für Englisch. Informationen zum Beibehalten des vorherigen Verhaltens finden Sie unter [Ändern der für Englisch (USA) und Englisch (Großbritannien) verwendeten Wörtertrennung](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 2.  Die Wörtertrennungen von Drittanbietern für Dänisch, Polnisch und Türkisch, die in vorherigen Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] enthalten waren, wurden durch [!INCLUDE[msCoName](../includes/msconame-md.md)]-Komponenten ersetzt. Die neuen Komponenten werden standardmäßig aktiviert.  
   
