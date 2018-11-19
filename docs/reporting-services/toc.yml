@@ -16,21 +16,21 @@ items:
     items:
     - name: Veraltete Features
       href: deprecated-features-in-sql-server-reporting-services-ssrs.md
-    - name: Nicht mehr unterstützte Funktionen in SQL Server Reporting Services in SQL Server 2016
+    - name: In SSRS in SQL Server 2016 nicht mehr unterstützte Funktionen
       href: discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
-    - name: Aktuelle Änderungen in SQL Server Reporting Services in SQL Server 2016
+    - name: Grundlegende Änderungen in SSRS in SQL Server 2016
       href: breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
     - name: Verhaltensänderungen in SQL Server Reporting Services in SQL Server 2016
       href: behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
 - name: Planung
   items:
-  - name: Auswählen von Microsoft Business Intelligence-Tools (BI) für Analyse und Berichterstellung
+  - name: Auswählen von BI-Tools für die Analyse und Berichterstellung
     href: choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
   - name: Browserunterstützung für Reporting Services und Power View
     href: browser-support-for-reporting-services-and-power-view.md
-  - name: Planen von Berichtsentwurf und -bereitstellung | Reporting Services
+  - name: Planen von Berichtsentwurf und -bereitstellung
     href: plan-for-report-design-and-report-deployment-reporting-services.md
-  - name: Von den SQL Server 2016-Editionen unterstützte Reporting Services-Funktionen
+  - name: Reporting Services-Features in SQL Server-Editionen
     href: reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
 - name: Install
   href: ../reporting-services/install-windows/install-reporting-services.md
@@ -39,17 +39,17 @@ items:
   items:
   - name: Branding des Webportals
     href: branding-the-web-portal.md
-  - name: Arbeiten mit freigegebenen Datasets (Webportal)
+  - name: Working with shared datasets (Arbeiten mit freigegebenen Datasets)
     href: work-with-shared-datasets-web-portal.md
-  - name: Arbeiten mit paginierten Berichten (Webportal)
+  - name: Arbeiten mit paginierten Berichten
     href: working-with-paginated-reports-web-portal.md
-  - name: Arbeiten mit Momentaufnahmen (Webportal)
+  - name: Arbeiten mit Momentaufnahmen
     href: working-with-snapshots-web-portal.md
-  - name: Arbeiten mit Abonnements (Webportal)
+  - name: Arbeiten mit Abonnements
     href: working-with-subscriptions-web-portal.md
-  - name: Arbeiten mit KPIs in Reporting Services
+  - name: Arbeiten mit KPIs
     href: working-with-kpis-in-reporting-services.md
-  - name: Meine Einstellungen für die Power BI-Integration (Webportal)
+  - name: Meine Einstellungen für die Power BI-Integration
     href: my-settings-for-power-bi-integration-web-portal.md
 - name: Berichtsserver
   href: ../reporting-services/report-server/reporting-services-report-server-native-mode.md
@@ -251,9 +251,9 @@ items:
       href: tutorial-creating-drillthrough-and-main-reports-report-builder.md
     - name: 'Lernprogramm: Einführung in Ausdrücke'
       href: tutorial-introducing-expressions.md
-ms.openlocfilehash: 3846d92e32ce762f767407c535a58ebbe2e6bd7f
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: bf39fd7ed94dff4fb4efbbc80f25b954438c5494
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899750"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350584"
