@@ -137,7 +137,7 @@ public override void PreExecute()
   
 -   Überschreiben Sie **\<inputbuffer>_ProcessInputRow**, um die Daten in jeder Eingabezeile beim Durchlaufen zu verarbeiten.  
   
--   Überschreiben Sie **\<inputbuffer>_ProcessInput** nur dann, wenn Sie beim Durchlaufen der Eingabezeilen noch einen anderen Vorgang ausführen müssen. (Sie müssen beispielsweise `EndOfRowset` testen, um andere Maßnahmen zu ergreifen, nachdem alle Zeilen verarbeitet wurden.) Rufen Sie \<** inputbuffer>_ProcessInputRow auf, um die Zeilenverarbeitung auszuführen.  
+-   Überschreiben Sie **\<inputbuffer>_ProcessInput** nur dann, wenn Sie beim Durchlaufen der Eingabezeilen noch einen anderen Vorgang ausführen müssen. (Sie müssen beispielsweise `EndOfRowset` testen, um andere Maßnahmen zu ergreifen, nachdem alle Zeilen verarbeitet wurden.) Rufen Sie **\<inputbuffer>_ProcessInputRow** auf, um die Zeilenverarbeitung auszuführen.  
   
 -   überschreiben Sie `FinishOutputs`, wenn Sie etwas mit den Ausgaben durchführen müssen, bevor sie geschlossen werden.  
   
