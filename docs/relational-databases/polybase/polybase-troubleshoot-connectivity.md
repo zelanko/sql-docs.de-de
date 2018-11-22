@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 515a98fba15d6531ce106d2c47bb0a62d1a84572
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 890fc0156200c135b49f695811c983d94c418766
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847228"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270183"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Problembehandlung: PolyBase-Kerberos-Konnektivität
 
@@ -38,7 +38,7 @@ Damit können Sie das Kerberos-Protokoll zunächst auf höherer Ebene verstehen.
 1. gesicherte Ressourcen (HDFS, MR2, YARN, Auftragsverlauf, usw.)
 1. das Schlüsselverteilungscenter (in Active Directory als Domänencontroller bezeichnet)
 
-Jede gesicherte Ressource von Hadoop wird im **Schlüsselverteilungscenter (Key Distribution Center, KDC)** mit einem eindeutigen **Dienstprinzipalnamen (Service Principal Name, SPN)** im Rahmen des Sicherungsprozesses des Hadoop-Clusters von Kerberos registriert. Ziel ist es, dass der Client ein temporäres Benutzerticket, ein sogenanntes **Ticket Granting Ticket (TGT)**, erhält, um ein weiteres temporäres Ticket, ein sogenanntes **Dienstticket (Service Ticket, ST)** vom KDC mit dem gegebenen SPN anfordern zu können.  
+Jede gesicherte Ressource von Hadoop wird im  **Schlüsselverteilungscenter (Key Distribution Center, KDC)**  mit einem eindeutigen  **Dienstprinzipalnamen (Service Principal Name, SPN)**  im Rahmen des Sicherungsprozesses des Hadoop-Clusters von Kerberos registriert. Ziel ist es, dass der Client ein temporäres Benutzerticket, ein sogenanntes  **Ticket Granting Ticket (TGT)**, erhält, um ein weiteres temporäres Ticket, ein sogenanntes  **Dienstticket (Service Ticket, ST)** vom KDC mit dem gegebenen SPN anfordern zu können.  
 
 Wenn in PolyBase die Authentifizierung mit einer durch Kerberos gesicherten Ressource angefordert wird, kommt es zu folgendem Handshake aus vier Zyklen:
 
@@ -66,9 +66,9 @@ Diese Dateien befinden sich unter:
 
 \\[Systemlaufwerk\\]:{installationspfad}\\{instanz}\\{name}\\MSSQL\\Binn\\Polybase\\Hadoop\\conf
 
-Der Standardspeicherort für SQL Server 2016 ist z.B. „C:\\Programmdateien\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\Polybase\\Hadoop\\conf“.
+Der Standardspeicherort für SQL Server 2016 ist z.B. „C:\\Programme\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\Polybase\\Hadoop\\conf“.
 
-Aktualisieren Sie eine der Konfigurationsdateien von PolyBase, **core-site.xml**, mit den unten stehenden Struktureigenschaften mit Werten, die der Umgebung entsprechen:
+Aktualisieren Sie eine der Konfigurationsdateien von PolyBase,  **core-site.xml**, mit den unten stehenden Struktureigenschaften mit Werten, die der Umgebung entsprechen:
 
 ```xml
 <property>
@@ -90,7 +90,7 @@ Die anderen XMLs müssen später auch aktualisiert werden, wenn Weitergabevorgä
 Das Tool wird unabhängig von SQL Server ausgeführt. Dies bedeutet, dass es weder ausgeführt noch neu gestartet werden muss, wenn die Konfigurations-XMLs aktualisiert wurden. Um das Tool auszuführen, führen Sie die folgenden Befehle auf dem Host mit SQL Server aus:
 
 ```cmd
-> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase  
+> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
 
@@ -102,7 +102,7 @@ Das Tool wird unabhängig von SQL Server ausgeführt. Dies bedeutet, dass es wed
 | *Namenknotenport* | Der Port des Namensknotens. Dies verweist auf das „LOCATION“-Argument ihrer T-SQL „CREATE EXTERNAL DATA SOURCE“. Normalerweise ist dies 8020. |
 | *Dienstprinzipal* | Der Administratordienstprinzipal Ihres KDC. Dies sollte Ihrem „IDENTITY“-Argument in Ihrer T-SQL „CREATE DATABASE SCOPED CREDENTIAL“ entsprechen.|
 | *Dienstkennwort* | Statt Ihr Kennwort in der Konsole einzugeben, speichern Sie dieses in einer Datei und geben Sie hier den Dateipfad ein. Die Inhalte Ihrer Datei sollten Ihrem „SECRET“-Argument in Ihrer T-SQL „CREATE DATABASE SCOPED CREDENTIAL“ entsprechen. |
-| *Remoter HDFS-Dateipfad (optional)* | Der Pfad einer vorhandenen Datei, auf die zugegriffen werden soll. Wenn nicht angegeben, wird der Stamm „/“ verwendet. |
+| *Remoter HDFS-Dateipfad (Hadoop Distributed File System) (optional) * | Der Pfad einer vorhandenen Datei, auf die zugegriffen werden soll. Wenn nicht angegeben, wird der Stamm „/“ verwendet. |
 
 ## <a name="example"></a>Beispiel
 
@@ -210,12 +210,11 @@ Wenn das Tool ausgeführt wurde und die Eigenschaften den Zielpfads *nicht* ausg
 
 ## <a name="debugging-tips"></a>Tipps zum Debuggen
 
-### <a name="mit-kdc"></a>KDC von MIT  
+### <a name="mit-kdc"></a>KDC von MIT  
 
-Alle im KDC registrierten SPN, einschließlich Administratoren, können angezeigt werden, indem Sie **kadmin.local** > (admin login) > **listprincs** im Host des KDC oder einem beliebigen KDC-Client ausführen. Wenn der Hadoop-Cluster ordnungsgemäß kerberisiert wurde, sollte es einen SPN für jeden der vielen verfügbaren Dienste im Cluster geben (z.B. nn, dn, rm, yarn, spnego, usw.). Die entsprechenden Schlüsseltabellendatei wird standardmäßig unter **/etc/security/keytabs** angezeigt. Sie werden mit dem privaten Schlüssel des KDC verschlüsselt.  
+Alle im KDC registrierten SPN, einschließlich Administratoren, können angezeigt werden, indem Sie  **kadmin.local** > (admin login) >  **listprincs**  im Host des KDC oder einem beliebigen KDC-Client ausführen. Wenn der Hadoop-Cluster ordnungsgemäß kerberisiert wurde, sollte es einen SPN für jeden der vielen verfügbaren Dienste im Cluster geben (z.B. nn, dn, rm, yarn, spnego, usw.). Die entsprechenden Schlüsseltabellendatei (Kennwortersatz) wird standardmäßig unter  **/etc/security/keytabs** angezeigt. Sie werden mit dem privaten Schlüssel des KDC verschlüsselt.  
 
-Ziehen Sie auch in Betracht, das [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)-Tool zu verwenden, um die Administratoranmeldeinformationen lokal im KDC zu überprüfen. Es kann z.B. so verwendet werden: *kinit identity@MYREALM.COM*. Wenn Sie nach einem Kennwort gefragt werden, zeigt dies an, dass die Identität existiert.  
-Die Protokolle des KDC stehen standardmäßig unter **/var/log/krb5kdc.log** zur Verfügung. Dazu gehören auch alle Ticketanforderungen, einschließlich der Client-IP, von der die Anforderung ausgegangen ist. Es sollten zwei Anforderungen von der IP des Computers mit SQL Server angezeigt werden, auf dem das Tool ausgeführt wurde: die erste vom authentifizierender Server als **AS\_REQ** und die zweite **TGS\_REQ** für das Dienstticket vom Ticket-Granting-Server.
+Ziehen Sie auch in Betracht, das  [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) -Tool zu verwenden, um die Administratoranmeldeinformationen lokal im KDC zu überprüfen. Es kann z.B. so verwendet werden:  *kinit identity@MYREALM.COM*. Wenn Sie nach einem Kennwort gefragt werden, zeigt dies an, dass die Identität existiert.  Die Protokolle des KDC stehen standardmäßig unter  **/var/log/krb5kdc.log** zur Verfügung. Dazu gehören auch alle Ticketanforderungen, einschließlich der Client-IP, von der die Anforderung ausgegangen ist. Es sollten zwei Anforderungen von der IP des Computers mit SQL Server angezeigt werden, auf dem das Tool ausgeführt wurde: die erste vom authentifizierender Server als  **AS\_REQ** und die zweite  **TGS\_REQ** für das Dienstticket vom Ticket-Granting-Server.
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -225,7 +224,7 @@ Die Protokolle des KDC stehen standardmäßig unter **/var/log/krb5kdc.log** zur
 
 ### <a name="active-directory"></a>Active Directory 
 
-In Active Directory können Sie sich die SPN anschauen, indem Sie an die folgende Stelle navigieren: Einstellungen > Active Directory-Benutzer und -Computer > *MyRealm*  > *MyOrganizationUnit* (MeinBereich > MeineOrganisationeinheit). Wenn der Hadoop-Cluster ordnungsgemäß kerberisiert wurde, sollte es einen SPN für jeden der vielen verfügbaren Dienste geben (z.B. nn, dn, rm, yarn, spnego, usw.).
+In Active Directory können Sie sich die SPN ansehen, indem Sie an die folgende Stelle navigieren: Einstellungen > Active Directory-Benutzer und -Computer > *MyRealm* > *MyOrganizationUnit* (MeinBereich > MeineOrganisationeinheit). Wenn der Hadoop-Cluster ordnungsgemäß kerberisiert wurde, sollte es einen SPN für jeden der vielen verfügbaren Dienste geben (z.B. nn, dn, rm, yarn, spnego, usw.).
 
 ## <a name="see-also"></a>Siehe auch
 

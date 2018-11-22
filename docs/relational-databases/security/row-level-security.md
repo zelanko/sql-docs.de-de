@@ -1,7 +1,7 @@
 ---
 title: Sicherheit auf Zeilenebene | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/29/2017
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,29 +17,31 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d75e4dd2499261fc28f97796d865fa71709bc663
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 13e2f3c63a9712ffa04bf7842815a51ba5a420c4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814678"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672416"
 ---
 # <a name="row-level-security"></a>Sicherheit auf Zeilenebene
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   ![Grafik zur Sicherheit auf Zeilenebene](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
   
- Mithilfe der Sicherheit auf Zeilenbene können Kunden den Zugriff auf die Zeilen in einer Datenbanktabelle auf Grundlage der Merkmale des Benutzers steuern, der eine Abfrage ausführt (z. B. Gruppenmitgliedschaft oder Ausführungskontext).  
+ Mithilfe der Sicherheit auf Zeilenebene können Kunden den Zugriff auf die Zeilen in einer Datenbanktabelle auf Grundlage der Merkmale des Benutzers steuern, der eine Abfrage ausführt (z.B. Gruppenmitgliedschaft oder Ausführungskontext).  
   
- Eine zeilenbasierte Sicherheit vereinfacht den Entwurf und die Sicherheitscodierung in Ihrer Anwendung. Mit RLS können Sie Einschränkungen in den Datenzeilenzugriff implementieren. Dazu können Sie beispielsweise sicherstellen, dass Mitarbeiter nur auf die Datenzeilen zugreifen können, die für ihre Abteilung relevant sind oder Sie können den Datenzugriff eines Kunden auf die Daten beschränken, die nur für sein Unternehmen relevant sind.  
+ Eine zeilenbasierte Sicherheit vereinfacht den Entwurf und die Sicherheitscodierung in Ihrer Anwendung. Mithilfe der Sicherheit auf Zeilenebene (Row-Level Security, RLS) können Sie Einschränkungen in den Datenzeilenzugriff implementieren. Dazu können Sie beispielsweise sicherstellen, dass Mitarbeiter nur auf die Datenzeilen zugreifen können, die für ihre Abteilung relevant sind, oder Sie können den Datenzugriff eines Kunden auf die Daten beschränken, die nur für sein Unternehmen relevant sind.  
   
  Die Datenbeschränkungszugriffslogik befindet sich auf der Datenbankebene, statt fern der Daten auf einer anderen Anwendungsebene. Das Datenbanksystem wendet die Zugriffsbeschränkungen bei jedem Zugriffsversuch auf Daten aus einer beliebigen Ebene an. Dadurch wird Ihr Sicherheitssystem zuverlässiger und robuster, indem die Oberfläche Ihres Sicherheitssystems verringert wird.  
   
- Implementieren Sie RLS, indem Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md) und Prädikate verwenden, die als [Inline-Tabellenwertfunktionen](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md) erstellt werden.  
+ Implementieren Sie RLS, indem Sie die [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung und Prädikate verwenden, die als [Inline-Tabellenwertfunktionen](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md) erstellt werden.  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] , ([hier beziehen](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([hier herunterladen](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
+> [!NOTE]
+> Azure SQL Data Warehouse unterstützt nur Filterprädikate. Blockprädikate werden in Azure SQL Data Warehouse derzeit nicht unterstützt.
 
 ##  <a name="Description"></a> Beschreibung  
  RLS unterstützt zwei Arten von Sicherheitsprädikaten.  
@@ -48,9 +50,9 @@ ms.locfileid: "47814678"
   
 -   BLOCK-Prädikate blockieren explizit Schreibvorgänge (AFTER INSERT, AFTER UPDATE, BEFORE UPDATE, BEFORE DELETE), die gegen das Prädikat verstoßen.  
   
- Der Zugriff auf Daten auf Zeilenebene in einer Tabelle wird durch ein Sicherheitsprädikat beschränkt, das als Inline-Tabellenwertfunktion definiert ist. Die Funktion wird dann aufgerufen und durch eine Sicherheitsrichtlinie erzwungen. Für FILTER-Prädikate gilt: Es gibt keinen Hinweis für die Anwendung, dass Zeilen aus dem Resultset gefiltert wurden. Wenn alle Zeilen gefiltert werden, wird ein Nullsatz zurückgegeben. Für BLOCK-Prädikate gilt: Alle Vorgänge, die gegen das Prädikat verstoßen, misslingen mit einem Fehler.  
+ Der Zugriff auf Daten auf Zeilenebene in einer Tabelle wird durch ein Sicherheitsprädikat beschränkt, das als Inline-Tabellenwertfunktion definiert ist. Die Funktion wird dann aufgerufen und durch eine Sicherheitsrichtlinie erzwungen. Für Filterprädikate gilt: Es gibt keinen Hinweis für die Anwendung, dass Zeilen aus dem Resultset gefiltert wurden. Wenn alle Zeilen gefiltert werden, wird ein Nullsatz zurückgegeben. Für BLOCK-Prädikate gilt: Alle Vorgänge, die gegen das Prädikat verstoßen, misslingen mit einem Fehler.  
   
- Filterprädikate werden beim Lesen von Daten aus der Basistabelle angewendet. Dies betrifft alle GET-Vorgänge: **AUSWÄHLEN** **LÖSCHEN** (d.h., der Benutzer kann keine Zeilen löschen, die gefiltert werden), und **UPDATE** (d.h., der Benutzer kann keine Zeilen aktualisieren, die gefiltert werden, obwohl es möglich ist, Zeilen so zu aktualisieren, dass sie anschließend gefiltert werden). BLOCK-Prädikate betreffen alle Schreibvorgänge.  
+ Filterprädikate werden beim Lesen von Daten aus der Basistabelle angewendet. Dies betrifft alle GET-Vorgänge: **SELECT**-, **DELETE**- (d.h., der Benutzer kann keine Zeilen löschen, die gefiltert werden), und **UPDATE**-Vorgänge (d.h., der Benutzer kann keine Zeilen aktualisieren, die gefiltert werden, obwohl es möglich ist, Zeilen so zu aktualisieren, dass sie anschließend gefiltert werden). BLOCK-Prädikate betreffen alle Schreibvorgänge.  
   
 -   Die Prädikate AFTER INSERT und AFTER UPDATE können Benutzer am Ändern von Zeilen in Werte hindern, die gegen das Prädikat verstoßen.  
   
@@ -62,7 +64,7 @@ ms.locfileid: "47814678"
   
 -   Sie können eine Prädikatfunktion definieren, die mit einer anderen Tabelle verknüpft wird und/oder eine Funktion aufruft. Wenn die Sicherheitsrichtlinie mit `SCHEMABINDING = ON`erstellt wird, ist die Verknüpfung oder Funktion über die Abfrage zugänglich und funktioniert wie erwartet, ohne zusätzliche Berechtigungsüberprüfungen durchführen zu müssen. Wenn die Sicherheitsrichtlinie mit `SCHEMABINDING = OFF`erstellt wird, benötigen die Benutzer zum Abfragen der Zieltabelle **SELECT** - oder **EXECUTE** -Berechtigungen für diese zusätzlichen Tabellen und Funktionen.
   
--   Sie können eine Abfrage auf eine Tabelle anwenden, für die ein Sicherheitsprädikat zwar definiert, jedoch deaktiviert ist. Alle Zeilen, die gefiltert oder blockiert worden wären, sind nicht betroffen.  
+-   Sie können eine Abfrage auf eine Tabelle anwenden, für die ein Sicherheitsprädikat zwar definiert, jedoch deaktiviert ist. Alle Zeilen, die gefiltert oder blockiert werden, sind nicht betroffen.  
   
 -   Wenn der Benutzer „dbo“, ein Mitglied der **db_owner** -Rolle oder der Tabellenbesitzer eine Tabelle abfragt, für die eine Sicherheitsrichtlinie definiert und aktiviert ist, werden die Zeilen gemäß Definition durch die Sicherheitsrichtlinie gefiltert oder blockiert.  
   
@@ -76,13 +78,13 @@ ms.locfileid: "47814678"
   
  FILTER-Prädikate weisen folgendes Verhalten auf:  
   
--   Definieren Sie eine Sicherheitsrichtlinie, die die Zeilen einer Tabelle filtert. Der Anwendung ist nicht bekannt, dass Zeilen nach **SELECT**-, **UPDATE**- und **DELETE** -Vorgängen gefiltert wurden, einschließlich Situationen, in denen alle Zeilen gefiltert wurden. Die Anwendung kann eine beliebige Anzahl von Zeilen mit **INSERT** einfügen, unabhängig davon, ob sie bei einem anderen Vorgang gefiltert werden.  
+-   Definieren Sie eine Sicherheitsrichtlinie, die die Zeilen einer Tabelle filtert. Die Anwendung beachtet keine Zeilen, die nach **SELECT**-, **UPDATE**- und **DELETE**-Vorgängen gefiltert wurden, auch dann nicht, wenn alle Zeilen gefiltert wurden. Mit der Anwendung kann eine beliebige Anzahl von Zeilen mit **INSERT**-Vorgängen eingefügt werden, unabhängig davon, ob sie bei einem anderen Vorgang gefiltert werden.  
   
  BLOCK-Prädikate weisen folgendes Verhalten auf:  
   
 -   BLOCK-Prädikate für UPDATE werden in getrennte Vorgänge für BEFORE und AFTER unterteilt. Deshalb ist es beispielsweise nicht möglich zu blockieren, dass Benutzer eine Zeile in einen Wert ändern, der höher als der aktuelle ist. Wenn diese Art von Logik erforderlich ist, müssen Sie Trigger mit den Zwischentabellen des Typs DELETED und INSERTED verwenden, um gemeinsam auf die alten und neuen Werte zu verweisen.  
   
--   Der Optimierer überprüft kein BLOCK-Prädikat des Typs AFTER UPDATE, wenn keine der von der Prädikatfunktion verwendeten Spalten geändert wurde. Beispiel: Alice soll nicht in der Lage sein, ein Gehalt in einen Wert größer als 100.000 zu ändern. Sie soll aber die Adresse eines Mitarbeiters ändern können, dessen Gehalt bereits größer als 100.000 ist (und deshalb bereits gegen das Prädikat verstößt).  
+-   Der Optimierer überprüft kein BLOCK-Prädikat des Typs AFTER UPDATE, wenn keine der von der Prädikatfunktion verwendeten Spalten geändert wurde. Beispiel: Alice soll nicht in der Lage sein, ein Gehalt in einen Wert höher als 100.000 zu ändern. Sie soll aber die Adresse eines Mitarbeiters ändern können, dessen Gehalt bereits höher als 100.000 ist (und deshalb bereits gegen das Prädikat verstößt).  
   
 -   An den APIs für Massenvorgänge, einschließlich BULK INSERT, sind keine Änderungen erfolgt. Dies bedeutet, dass BLOCK-Prädikate des Typs AFTER INSERT für Masseneinfügevorgänge genauso wie für herkömmliche Einfügevorgänge gelten.  
   
@@ -94,11 +96,11 @@ ms.locfileid: "47814678"
   
 -   Eine Bank kann eine Richtlinie erstellen, um den Zugriff auf die Zeilen von Finanzdaten anhand der Geschäftsabteilung des Mitarbeiters oder anhand des Mitarbeiter-Rolle innerhalb des Unternehmens zu beschränken.  
   
--   Eine Anwendung mit mehreren Mandanten kann eine Richtlinie zum Erzwingen einer logischen Trennung der einzelnen Datenzeilen der Mandanten aus jeder anderen Mandanten-Zeile erstellen. Effizienzen werden durch den Datenspeicher für viele Mandanten in einer einzelnen Tabelle erreicht. Natürlich kann jeder Mandant nur die eigenen Datenzeilen anzeigen.  
+-   Eine Anwendung mit mehreren Mandanten kann eine Richtlinie zum Erzwingen einer logischen Trennung der einzelnen Datenzeilen der Mandanten aus jeder anderen Mandanten-Zeile erstellen. Effizienzen werden durch den Datenspeicher für viele Mandanten in einer einzelnen Tabelle erreicht. Jeder Mandant kann nur die eigenen Datenzeilen anzeigen.  
   
  RLS-Filterprädikate sind funktional äquivalent zum Anhängen einer **WHERE** -Klausel. Bei dem Prädikat kann es sich um komplexe Geschäftsabläufe handeln oder die Klausel kann so einfach sein wie das `WHERE TenantId = 42`.  
   
- Formaler ausgedrückt führt RLS eine prädikatbasierte Zugriffssteuerung ein. Es bietet eine flexible, zentrale und prädikatbasierte Bewertung, die Metadaten oder andere Kriterien berücksichtigt, die der Administrator nach Bedarf bestimmt. Das Prädikat wird als Kriterium verwendet, um zu bestimmen, ob der Benutzer den entsprechenden Zugriff auf die Daten anhand von Benutzerattributen verfügt. Die bezeichnungsbasierte Zugriffssteuerung kann mithilfe der prädikatbasierten Zugriffssteuerung implementiert werden.  
+ Formaler ausgedrückt führt RLS eine prädikatbasierte Zugriffssteuerung ein. Es bietet eine flexible, zentrale und prädikatbasierte Bewertung, die Metadaten oder andere Kriterien berücksichtigt, die der Administrator nach Bedarf bestimmt. Das Prädikat wird als Kriterium verwendet, um zu bestimmen, ob der Benutzer über die entsprechenden Zugriffsberechtigungen für die Daten basierend auf den Benutzerattributen verfügt. Die bezeichnungsbasierte Zugriffssteuerung kann mithilfe der prädikatbasierten Zugriffssteuerung implementiert werden.  
   
   
 ##  <a name="Permissions"></a> Berechtigungen  
@@ -121,11 +123,11 @@ ms.locfileid: "47814678"
   
 -   Es wird dringend empfohlen, ein separates Schema für die RLS-Objekte zu erstellen (Prädikatfunktion und Sicherheitsrichtlinie).  
   
--   Die **ALTER ANY SECURITY POLICY** -Berechtigung richtet sich an hoch privilegierte Benutzer (z. B. ein Sicherheitsrichtlinienmanager). Die Sicherheitsrichtlinienmanager erfordert keine **SELECT** -Berechtigung für die Tabellen, die sie schützen.  
+-   Die **ALTER ANY SECURITY POLICY**-Berechtigung sollte nur für Benutzer mit erhöhten Berechtigungen (z.B. ein Sicherheitsrichtlinienmanager) verwendet werden. Der Sicherheitsrichtlinienmanager benötigt keine **SELECT**-Berechtigung für die geschützten Tabellen.  
   
 -   Vermeiden Sie Konvertierungen in Prädikatfunktionen, um potenzielle Laufzeitfehler zu vermeiden.  
   
--   Vermeiden Sie nach Möglichkeit Rekursionen in Prädikatfunktionen, um Leistungseinbußen zu vermeiden. Der Abfrageoptimierer versucht die direkten Rekursionen zu erkennen, gewährleistet jedoch nicht, indirekte Rekursionen zu finden (d. h. wenn eine zweite Funktion die Prädikatfunktion aufruft).  
+-   Vermeiden Sie nach Möglichkeit Rekursionen in Prädikatfunktionen, um Leistungseinbußen zu vermeiden. Der Abfrageoptimierer versucht, direkte Rekursionen zu erkennen. Es ist jedoch nicht garantiert, dass er indirekte Rekursionen findet (d.h., wenn eine zweite Funktion die Prädikatfunktion aufruft).  
   
 -   Vermeiden Sie übermäßige Tabellenverknüpfungen Prädikatfunktionen, um die Leistung zu maximieren.  
   
@@ -141,7 +143,7 @@ ms.locfileid: "47814678"
    
   
 ##  <a name="SecNote"></a> Sicherheitshinweis: Seitenkanalangriffe  
- **Schädlicher Manager für Sicherheitsrichtlinien:** Es ist wichtig zu beachten, dass ein schädlicher Manager für Sicherheitsrichtlinien mit ausreichenden Berechtigungen zum Erstellen einer Sicherheitsrichtlinie für eine vertrauliche Spalte und der Berechtigung zum Erstellen oder Ändern von Inline-Tabellenwertfunktionen mit einem anderen Benutzer zusammenwirken kann, der SELECT-Berechtigungen für eine Tabelle hat. Es kann dann eine Datenexfiltration erfolgen, indem schädliche Inline-Tabellenwertfunktionen mit dem Zweck erstellt werden, Seitenkanalangriffe zum Ableiten von Daten zu verwenden. Solche Angriffe bedürfen der Absprache (oder übermäßig erteilte Berechtigungen bei einem schädlichen Benutzer), und sie erfordern wahrscheinlich mehrere Iterationen zum Ändern der Richtlinie (erfordert die Berechtigung zum Entfernen des Prädikats, um die Schemabindung aufzuheben), zum Ändern der Inline-Tabellenwertfunktionen und zum wiederholen Ausführen ausgewählter Anweisungen für die Zieltabelle. Es wird dringend empfohlen, Berechtigungen nach Bedarf zu beschränken, und sie nach verdächtigen Aktivitäten wie dem konstanten Ändern von Richtlinien und Inline-Tabellenwertfunktionen im Zusammenhang mit der zeilenbasierter Sicherheit zu überwachen.  
+ **Böswilliger Sicherheitsrichtlinienmanager:** Es ist wichtig zu beachten, dass ein böswilliger Sicherheitsrichtlinienmanager mit ausreichenden Berechtigungen zum Erstellen einer Sicherheitsrichtlinie für eine vertrauliche Spalte und der Berechtigung zum Erstellen oder Ändern von Inline-Tabellenwertfunktionen sich mit einem anderen Benutzer absprechen kann, der SELECT-Berechtigungen für eine Tabelle hat. Dadurch können sie Daten exfiltrieren, indem sie böswillig Inline-Tabellenwertfunktionen erstellen, um durch Seitenkanalangriffe Daten abzuleiten. Solche Angriffe sind möglich, wenn sich Benutzer abgesprochen haben, oder wenn einem böswilligen Benutzer zu hohe Berechtigungen erteilt wurden. Zudem sind vermutlich mehrere Iterationen zum Anpassen der Richtlinie vonnöten. Dazu sind Berechtigungen zum Entfernen das Prädikats erforderlich, um die Schemabindung aufheben zu können. Gleichzeitig müssen die Inline-Tabellenwertfunktionen angepasst und SELECT-Anweisungen wiederholt für die Zieltabelle ausgeführt werden. Es wird dringend empfohlen, Berechtigungen nach Bedarf zu beschränken, und Ihre Umgebung auf verdächtige Aktivitäten zu überwachen, wie z.B. wiederholtes Ändern von Richtlinien und Inline-Tabellenwertfunktionen, die im Zusammenhang mit der zeilenbasierten Sicherheit stehen.  
   
  **Sorgfältig erstellte Abfragen:** Es ist möglich, die Offenlegung von Informationen durch die Verwendung sorgfältig erstellter Abfragen zu verursachen. Beispiel: `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` würde einen schädlichen Benutzer wissen lassen, dass das Gehalt von John Doe 100.000 USD beträgt. Auch wenn ein Sicherheitsprädikat eingerichtet ist, um zu verhindern, dass ein schädlicher Benutzer die Gehälter anderer Personen direkt abfragen kann, kann der Benutzer bestimmen, wann die Abfrage eine Division-durch-Null-Ausnahme zurückgibt.  
    
@@ -149,17 +151,17 @@ ms.locfileid: "47814678"
 ##  <a name="Limitations"></a> Featureübergreifende Kompatibilität  
  Im Allgemeinen funktioniert Sicherheit auf Zeilenebene featureübergreifend wie erwartet. Es gibt jedoch einige Ausnahmen. In diesem Abschnitt finden Sie verschiedene Hinweise und Vorsichtsmaßnahmen bei Verwenden von Sicherheit auf Zeilenebene mit bestimmten anderen Features von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **DBCC SHOW_STATISTICS** meldet eine Statistik zu ungefilterten Daten und kann somit zur Offenlegung von Informationen führen, die ansonsten durch eine Sicherheitsrichtlinie geschützt sind. Aus diesem Grund muss der Benutzer zum Anzeigen des Statistikobjekts für eine Tabelle mit geltender Richtlinie zur Sicherheit auf Zeilenebene der Besitzer der Tabelle oder Mitglied der festen Serverrolle „sysadmin“, der festen Datenbankrolle „db_owner“ oder der festen Datenbankrolle „db_ddladmin“ sein.  
+-   **DBCC SHOW_STATISTICS** meldet Statistiken zu ungefilterten Daten, was zur Offenlegung von Informationen führen kann, die ansonsten durch eine Sicherheitsrichtlinie geschützt sind. Aus diesem Grund muss der Benutzer zum Anzeigen des Statistikobjekts für eine Tabelle mit geltender Richtlinie zur Sicherheit auf Zeilenebene der Besitzer der Tabelle oder Mitglied der festen Serverrolle „sysadmin“, der festen Datenbankrolle „db_owner“ oder der festen Datenbankrolle „db_ddladmin“ sein.  
   
 -   **Filestream** RLS ist nicht kompatibel mit Filestream.  
   
--   **Polybase** RLS ist nicht kompatibel mit Polybase.  
+-   **PolyBase**-RLS ist nicht kompatibel mit PolyBase.  
   
 -   **Speicheroptimierte Tabellen**Die Inline-Tabellenwertfunktion, die für ein Sicherheitsprädikat für eine speicheroptimierte Tabelle verwendet wird, muss mit der Option `WITH NATIVE_COMPILATION` definiert werden. Bei dieser Option werden von speicheroptimierten Tabellen nicht unterstützte Sprachfeatures gesperrt, und zur Erstellungszeit wird der entsprechende Fehler ausgelöst. Weitere Informationen finden Sie im Abschnitt **Sicherheit auf Zeilenebene** in [Einführung in speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 -   **Indizierte Sichten** Im allgemeinen können Sicherheitsrichtlinien basierend auf Sichten erstellt werden. Sichten können basierend auf Tabellen erstellt werden, die durch Sicherheitsrichtlinien gebunden sind. Allerdings können indizierte Sichten nicht basierend auf Tabellen erstellt werden, für die eine Sicherheitsrichtlinie gilt, da die Richtlinie bei Zeilensuchvorgängen über den Index umgangen würde.  
   
--   **Change Data Capture** Change Data Capture kann ganze Zeilen preisgeben, die für Mitglieder von **db_owner** oder Benutzer gefiltert werden sollen, die Mitglieder der „Gating-Rolle“ sind, die angegeben wird, wenn CDC für eine Tabelle aktiviert ist (Hinweis: Sie können diese Einstellung explizit auf **NULL** festlegen, damit alle Benutzer auf die Änderungsdaten zugreifen können). Im Endeffekt können **db_owner** und Mitglieder dieser Gating-Rolle alle Datenänderungen für eine Tabelle anzeigen, auch wenn für die Tabelle eine Sicherheitsrichtlinie gilt.  
+-   **Change Data Capture** Change Data Capture kann ganze Zeilen offenlegen, die für Mitglieder von **db_owner** oder Benutzer gefiltert werden sollen, die Mitglieder der Gatingrolle sind. Diese wird angegeben, wenn CDC für eine Tabelle aktiviert ist (Hinweis: Sie können diese Einstellung explizit auf **NULL** festlegen, damit alle Benutzer auf die Änderungsdaten zugreifen können). Im Endeffekt können **db_owner** und Mitglieder dieser Gating-Rolle alle Datenänderungen für eine Tabelle anzeigen, auch wenn für die Tabelle eine Sicherheitsrichtlinie gilt.  
   
 -   **Änderungsnachverfolgung** Eine Änderungsnachverfolgung kann zum Preisgeben des Primärschlüssels von Zeilen führen, die für Benutzer mit den Berechtigungen **SELECT** und **VIEW CHANGE TRACKING** gefiltert werden sollen. Tatsächliche Datenwerte werden nicht preisgegeben, sondern nur dass Spalte A für die Spalte mit dem Primärschlüssel B aktualisiert/eingefügt/gelöscht wurde. Dies ist problematisch, wenn der primäre Schlüssel ein vertrauliches Element enthält, z. B. eine US-Sozialversicherungsnummer. In der Praxis ist **CHANGETABLE** jedoch fast immer mit der ursprünglichen Tabelle verknüpft, um die neuesten Daten abzurufen.  
   
@@ -175,10 +177,13 @@ ms.locfileid: "47814678"
 ##  <a name="CodeExamples"></a> Beispiele  
   
 ###  <a name="Typical"></a> A. Szenario für Benutzer, die sich bei der Datenbank authentifizieren  
- In diesem kurzen Beispiel werden drei Benutzer erstellt, es wird eine Tabelle mit 6 Zeilen erstellt, und eine Inline-Tabellenwertfunktion sowie eine Sicherheitsrichtlinie für die Tabelle wird erstellt. Im Beispiel wird gezeigt, wie ausgewählte Anweisungen für verschiedene Benutzer gefiltert werden.  
+ In diesem kurzen Beispiel werden drei Benutzer erstellt, es wird eine Tabelle mit sechs Zeilen erstellt, und eine Inline-Tabellenwertfunktion sowie eine Sicherheitsrichtlinie für die Tabelle. Im Beispiel wird gezeigt, wie ausgewählte Anweisungen für verschiedene Benutzer gefiltert werden.  
   
  Erstellen Sie drei Benutzerkonten, anhand derer unterschiedliche Zugriffsmöglichkeiten vorgeführt werden.  
-  
+
+> [!NOTE]
+> Azure SQL Data Warehouse unterstützt keine EXECUTE AS USER-Anweisungen. Das bedeutet, Sie müssen für jeden Benutzer zuerst eine CREATE LOGIN-Anweisung durchführen. Sie werden später als der entsprechende Benutzer dieses Verhalten testen.
+
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
@@ -197,7 +202,7 @@ CREATE TABLE Sales
     );  
 ```  
   
- Füllen Sie die Tabelle mit 6 Datenzeilen, die drei Bestellungen für jeden Vertriebsmitarbeiter enthalten.  
+ Füllen Sie die Tabelle mit sechs Datenzeilen auf, sodass drei Bestellungen pro Vertriebsmitarbeiter enthalten sind.  
   
 ```  
 INSERT Sales VALUES   
@@ -219,7 +224,7 @@ GRANT SELECT ON Sales TO Sales1;
 GRANT SELECT ON Sales TO Sales2;  
 ```  
   
- Erstellen ein neues Schema, und eine Inline-Tabellenwertfunktion. Die Funktion gibt 1 zurück, wenn eine Zeile in der Spalte SalesRep dem Benutzer entspricht, der die Abfrage ausführt (`@SalesRep = USER_NAME()`) oder wenn der Benutzer, der die Abfrage ausführt, der Manager-Benutzer ist (`USER_NAME() = 'Manager'`).  
+ Erstellen Sie ein neues Schema und eine Inline-Tabellenwertfunktion. Die Funktion gibt 1 zurück, wenn eine Zeile in der Spalte SalesRep dem Benutzer entspricht, der die Abfrage ausführt (`@SalesRep = USER_NAME()`) oder wenn der Benutzer, der die Abfrage ausführt, der Manager-Benutzer ist (`USER_NAME() = 'Manager'`).  
   
 ```  
 CREATE SCHEMA Security;  
@@ -233,6 +238,9 @@ AS
 WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
 ```  
   
+> [!NOTE]
+> Azure SQL Data Warehouse unterstützt USER_NAME() nicht, verwenden Sie daher stattdessen SYSTEM_USER.
+
  Erstellen Sie eine Sicherheitsrichtlinie, die die Funktion als Filterprädikat hinzufügt. Der Status muss auf ON festgelegt werden, um die Richtlinie zu aktivieren.  
   
 ```  
@@ -257,8 +265,10 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;   
 REVERT;  
 ```  
-  
- Dem Manager sollten alle 6 Zeilen angezeigt werden. Den Benutzern Sales1 und Sales2 sollten nur ihre eigenen Verkäufe angezeigt werden.  
+> [!NOTE]
+> Azure SQL Data Warehouse unterstützt EXECUTE AS USER nicht, melden Sie sich also als der entsprechende Benutzer an, um so das oben beschriebene Verhalten zu testen.
+
+ Dem Manager sollten alle sechs Zeilen angezeigt werden. Den Benutzern Sales1 und Sales2 sollten nur ihre eigenen Verkäufe angezeigt werden.  
   
  Ändern Sie die Sicherheitsrichtlinie, um die Richtlinie zu deaktivieren.  
   
@@ -267,11 +277,14 @@ ALTER SECURITY POLICY SalesFilter
 WITH (STATE = OFF);  
 ```  
   
- Jetzt werden den Benutzern Sales1 und Sales2 alle 6 Zeilen angezeigt.  
+ Jetzt werden den Sales1- und Sales2-Benutzern alle sechs Zeilen angezeigt.  
   
   
 ###  <a name="MidTier"></a> B. Szenario für Benutzer, die sich über eine Middle-Tier Application mit der Datenbank verbinden  
- Dieses Beispiel zeigt, wie eine Anwendung der mittleren Schicht eine Verbindungsfilterung implementieren kann, bei der Anwendungsbenutzer (oder Mandanten) den gleichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzer (die Anwendung) gemeinsam verwenden. Die Anwendung legt nach dem Verbinden mit der Datenbank die aktuelle Anwendungsbenutzer-ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) fest. Dann sorgen Sicherheitsrichtlinien dafür, dass Zeilen transparent herausgefiltert werden, die für diese ID nicht sichtbar sein sollen. Außerdem wird der Benutzer am Einfügen von Zeilen für die falsche Benutzer-ID gehindert. Es sind keine weiteren App-Änderungen erforderlich.  
+> [!NOTE]
+> Dieses Beispiel gilt nicht für Azure SQL Data Warehouse, da sowohl SESSION_CONTEXT als auch Blockprädikate derzeit nicht unterstützt werden.
+
+Dieses Beispiel zeigt, wie eine Anwendung der mittleren Schicht eine Verbindungsfilterung implementieren kann, bei der Anwendungsbenutzer (oder Mandanten) den gleichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzer (die Anwendung) gemeinsam verwenden. Die Anwendung legt nach dem Verbinden mit der Datenbank die aktuelle Anwendungsbenutzer-ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) fest. Dann sorgen Sicherheitsrichtlinien dafür, dass Zeilen transparent herausgefiltert werden, die für diese ID nicht sichtbar sein sollen. Außerdem wird der Benutzer am Einfügen von Zeilen für die falsche Benutzer-ID gehindert. Es sind keine weiteren App-Änderungen erforderlich.  
   
  Erstellen Sie eine einfache Tabelle zum Speichern von Daten.  
   
@@ -284,7 +297,7 @@ CREATE TABLE Sales (
 );  
 ```  
   
- Füllen Sie die Tabelle mit 6 Datenzeilen, die drei Bestellungen für jeden Vertriebsmitarbeiter enthalten.  
+ Füllen Sie die Tabelle mit sechs Datenzeilen auf, sodass drei Bestellungen pro Anwendungsbenutzer enthalten sind.  
   
 ```  
 INSERT Sales VALUES   
@@ -307,8 +320,8 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON Sales TO AppUser;
 DENY UPDATE ON Sales(AppUserId) TO AppUser;  
 ```  
   
- Erstellen Sie ein neues Schema und eine Prädikatfunktion, die die Anwendungsbenutzer-ID verwendet, die in **SESSION_CONTEXT** zum Filtern von Zeilen gespeichert ist.  
-  
+ Erstellen Sie ein neues Schema und eine Prädikatfunktion, die die Anwendungsbenutzer-ID verwendet, die in **SESSION_CONTEXT** zum Filtern von Zeilen gespeichert ist.
+
 ```  
 CREATE SCHEMA Security;  
 GO  
@@ -366,6 +379,6 @@ GO
  [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)   
  [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
  [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
- [Erstellen benutzerdefinierter Funktionen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
+ [Erstellen benutzerdefinierter Funktionen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   

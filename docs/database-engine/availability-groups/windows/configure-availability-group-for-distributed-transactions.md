@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07dadc3a5268ab45d54c234b51e89905767b80bd
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: 53c1a7c5ce6c7d529fb07f356d87e0adc5c02e31
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411770"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639123"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Konfigurieren von Verfügbarkeitsgrupppen für verteilte Transaktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "50411770"
 Um verteilte Transaktionen gewährleisten zu können, muss die Verfügbarkeitsgruppe so konfiguriert sein, dass Datenbanken als Ressourcenmanager verteilter Transaktionen registriert werden.  
 
 >[!NOTE]
->[!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] Service Pack 2 und höher stellt die vollständige Unterstützung für verteilte Transaktionen in Verfügbarkeitsgruppen bereit. In früheren [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)]-Versionen vor Service Pack 2 werden datenbankübergreifende verteilte Transaktionen nicht unterstützt, wenn sie eine Datenbank in einer Verfügbarkeitsgruppe enthalten. Bei diesen Transaktionen werden nur Datenbanken auf der gleichen SQL Server-Instanz verwendet. Diese Einschränkung besteht in [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] nicht. 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 und höher stellt die vollständige Unterstützung für verteilte Transaktionen in Verfügbarkeitsgruppen bereit. In früheren [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)]-Versionen vor Service Pack 2 werden datenbankübergreifende verteilte Transaktionen nicht unterstützt, wenn sie eine Datenbank in einer Verfügbarkeitsgruppe enthalten. Bei diesen Transaktionen werden nur Datenbanken auf der gleichen SQL Server-Instanz verwendet. Diese Einschränkung besteht in [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] nicht. 
 >
 >Die Einrichtungsschritte für [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] sind identisch mit denen für [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 
@@ -45,7 +45,7 @@ Bevor Sie eine Verfügbarkeitsgruppe so konfigurieren, dass verteilte Transaktio
 
 * Alle Instanzen von [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)], die an verteilten Transaktionen teilnehmen, müssen unter [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] oder höher laufen.
 
-* Verfügbarkeitsgruppen müssen auf Windows Server 2016 oder Windows Server 2012 R2 ausgeführt werden. Für Windows Server 2012 R2 müssen Sie das Update in KB3090973 installieren, das unter [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973) verfügbar ist.  
+* Verfügbarkeitsgruppen müssen auf Windows Server 2016 oder Windows Server 2012 R2 ausgeführt werden. Für Windows Server 2012 R2 müssen Sie das Update in KB3090973 installieren, das unter [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973) verfügbar ist.  
 
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>Erstellen einer Verfügbarkeitsgruppe für verteilte Transaktionen
 
@@ -180,16 +180,16 @@ Nach dem Rollback oder Commit der Transaktion können Sie die Datenbank mit `ALT
    ALTER DATABASE [DB1] SET ONLINE
    ```
 
-Weitere Informationen zum Auflösen unsicherer Transaktionen finden Sie unter [Resolve Transactions manually](http://technet.microsoft.com/library/cc754134.aspx) (Transaktionen manuell auflösen).
+Weitere Informationen zum Auflösen unsicherer Transaktionen finden Sie unter [Resolve Transactions manually](https://technet.microsoft.com/library/cc754134.aspx) (Transaktionen manuell auflösen).
 
 ## <a name="next-steps"></a>Next Steps  
 
-[Distributed Transactions](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions) (Verteilte Transaktionen)
+[Distributed Transactions](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions) (Verteilte Transaktionen)
 
 [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [Transactions - Always On availability groups and Database Mirroring](transactions-always-on-availability-and-database-mirroring.md) (Transaktionen – Always On-Verfügbarkeitsgruppen und Datenbankspiegelung  
 
-[Supporting XA Transactions](http://technet.microsoft.com/library/cc753563(v=ws.10).aspx) (Unterstützung von XA-Transaktionen)
+[Supporting XA Transactions](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx) (Unterstützung von XA-Transaktionen)
 
-[How It Works: Session/SPID (–2) for DTC Transactions](http://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/) (Funktionsweise: Session/SPID (-2) für DTC-Transaktionen)
+[How It Works: Session/SPID (–2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/) (Funktionsweise: Session/SPID (-2) für DTC-Transaktionen)

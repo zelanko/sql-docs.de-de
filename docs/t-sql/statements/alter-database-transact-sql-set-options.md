@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 096948b417e29b073ecc30abd9831c62ef520646
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252197"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814353"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL) 
 
@@ -668,7 +668,7 @@ Siehe [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-s
   
 **\<mixed_page_allocation_option> ::=**  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)). 
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
   
 MIXED_PAGE_ALLOCATION { OFF | ON } steuert, ob die Datenbank die ersten Seiten mit einem gemischten Block für die ersten acht Seiten einer Tabelle oder eines Index erstellen kann.  
  
@@ -682,7 +682,7 @@ Diese Einstellung ist für alle Systemdatenbanken auf ON festgelegt. **tempdb** 
   
 **\<PARAMETERIZATION_option> ::=**  
   
-Steuert die Parametrisierungsoption.  
+Steuert die Parametrisierungsoption. Weitere Informationen zur Parametrisierung finden Sie im [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#SimpleParam). 
   
 PARAMETERIZATION { SIMPLE | FORCED }  
 SIMPLE  
@@ -698,13 +698,13 @@ Die aktuelle Einstellung der Option kann mithilfe der Spalte is_parameterization
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
-Steuert, ob der Abfragespeicher in dieser Datenbank aktiviert ist, und steuert außerdem das Entfernen des Inhalts des Abfragespeichers.  
+Steuert, ob der Abfragespeicher in dieser Datenbank aktiviert ist, und steuert außerdem das Entfernen des Inhalts des Abfragespeichers. Weitere Informationen finden Sie unter [Verwendungsszenarios für den Abfragespeicher](../../relational-databases/performance/query-store-usage-scenarios.md). 
   
 ON  
 Aktiviert den Abfragespeicher.  
   
 OFF  
-Deaktiviert den Abfragespeicher.  Dies ist der Standardwert.   
+Deaktiviert den Abfragespeicher. Dies ist der Standardwert.   
   
 CLEAR  
 Entfernt den Inhalt des Abfragespeichers.  
@@ -809,7 +809,7 @@ Bei Entdecken einer zerrissenen Seite oder eines Prüfsummenfehlers können Sie 
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wiederholt Lesevorgänge, die wegen eines Prüfsummenfehlers, einer zerrissenen Seite oder eines anderen E/A-Fehlers fehlschlagen, vier Mal. Ist der Lesevorgang bei einem dieser Wiederholungsversuche erfolgreich, wird eine Meldung in das Fehlerprotokoll geschrieben, und der Befehl, der den Lesevorgang ausgelöst hat, wird fortgesetzt. Schlagen alle Wiederholungsversuche fehl, schlägt der Befehl mit Fehlermeldung 824 fehl.  
   
-Weitere Informationen zu den Fehlermeldungen 823, 824 und 825 finden Sie unter [How to troubleshoot a Msg 823 error in SQL Server (Problembehandlung bei der Fehlermeldung 823 in SQL Server)](http://support.microsoft.com/help/2015755), [How to troubleshoot Msg 824 in SQL Server (Problembehandlung bei der Fehlermeldung 824 in SQL Server)](http://support.microsoft.com/help/2015756) und [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server (Problembehandlung bei der Fehlermeldung 825 (read retry) in SQL Server)](http://support.microsoft.com/help/2015757).
+Weitere Informationen zu den Fehlermeldungen 823, 824 und 825 finden Sie unter [How to troubleshoot a Msg 823 error in SQL Server (Problembehandlung bei der Fehlermeldung 823 in SQL Server)](https://support.microsoft.com/help/2015755), [How to troubleshoot Msg 824 in SQL Server (Problembehandlung bei der Fehlermeldung 824 in SQL Server)](https://support.microsoft.com/help/2015756) und [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server (Problembehandlung bei der Fehlermeldung 825 (read retry) in SQL Server)](https://support.microsoft.com/help/2015757).
   
 Die aktuelle Einstellung dieser Option kann mithilfe der *page_verify_option*-Spalte in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht oder der *IsTornPageDetectionEnabled*-Eigenschaft der [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)-Funktion ermittelt werden.  
   
@@ -1154,7 +1154,7 @@ Der Prozedurcache wird auch in den folgenden Szenarien geleert.
 - Sie stellen eine Datenbanksicherung wieder her.  
 -   Sie trennen eine Datenbank.  
   
-Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Für jeden gelöschten Cachespeicher im Plancache enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll folgende Informationsmeldung: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den %s-Cachespeicher (Bestandteil des Plancache) %d Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden". Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.  
+Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Für jeden geleerten Cachespeicher im Plancache enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll folgende Meldung zur Information: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den '%s'-Cachespeicher (Bestandteil des Plancache) %d Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden". Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.  
   
 ## <a name="examples"></a>Beispiele  
   

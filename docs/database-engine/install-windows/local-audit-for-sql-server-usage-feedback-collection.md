@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4b53d5804668a46ade48d0beb41eae8fb7650374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a094030a35acf997186061b752f9b61d8f7b8200
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794388"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601679"
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Lokale Überwachung für Feedbackerfassung zur SQL Server-Nutzung
 
@@ -27,7 +27,7 @@ ms.locfileid: "47794388"
 
 ## <a name="introduction"></a>Einführung
 
-Microsoft SQL Server enthält internetfähige Features, die Daten über Ihren Computer oder Ihr Gerät erfassen und senden können. Die zugehörigen Informationen werden als *Standardcomputerinformationen* bezeichnet. Die Komponente „Lokale Überwachung“ der [Feedbackerfassung zur SQL Server-Nutzung](http://support.microsoft.com/kb/3153756) schreibt die vom Dienst erfassten Daten, die die an Microsoft zu sendenden Daten (Protokolle) darstellen, in einen bestimmten Ordner. Der Zweck der lokalen Überwachung besteht darin, dass es Benutzern gestattet wird, alle Daten hinsichtlich Zustimmung, behördlicher Bestimmungen oder aus Datenschutzgründen anzuzeigen, die Microsoft mithilfe dieses Features erfasst.  
+Microsoft SQL Server enthält internetfähige Features, die Daten über Ihren Computer oder Ihr Gerät erfassen und senden können. Die zugehörigen Informationen werden als *Standardcomputerinformationen* bezeichnet. Die Komponente „Lokale Überwachung“ der [Feedbackerfassung zur SQL Server-Nutzung](https://support.microsoft.com/kb/3153756) schreibt die vom Dienst erfassten Daten, die die an Microsoft zu sendenden Daten (Protokolle) darstellen, in einen bestimmten Ordner. Der Zweck der lokalen Überwachung besteht darin, dass es Benutzern gestattet wird, alle Daten hinsichtlich Zustimmung, behördlicher Bestimmungen oder aus Datenschutzgründen anzuzeigen, die Microsoft mithilfe dieses Features erfasst.  
 
 Seit SQL Server 2016 CU2 kann die lokale Überwachung auf der Instanzebene für SQL Server-Datenbank-Engine und Analysis Services (SSAS) konfiguriert werden. In SQL Server 2016 CU4 und SQL Server 2016 SP1 ist die lokale Überwachung auch für SQL Server Integration Services (SSIS) aktiviert. Andere SQL Server-Komponenten, die beim Setup installiert werden, und SQL Server-Tools, die nach dem Setup heruntergeladen oder installiert werden, verfügen für die Feedbackerfassung hinsichtlich der Nutzung nicht über die Funktion zur lokalen Überwachung. 
 
@@ -37,7 +37,7 @@ Nachfolgend sind die erforderlichen Komponenten zum Aktivieren der lokalen Über
 
 1. Die Instanz wird auf SQL Server 2016 RTM CU2 oder höher gepatcht. Für Integration Services wird die Instanz auf SQL 2016 RTM CU4 oder SQL 2016 SP1 gepatcht.
 
-1. Benutzer muss ein Systemadministrator oder eine Rolle mit Zugriff zum Hinzufügen und Ändern von Registrierungsschlüsseln, Erstellen von Ordnern, Verwalten der Ordnersicherheit und Beenden/Starten eines Windows-Diensts sein.  
+1. Benutzer muss ein Systemadministrator oder eine Rolle mit Zugriff zum Hinzufügen und Ändern von Registrierungsschlüsseln, Erstellen von Ordnern, Verwalten der Ordnersicherheit und Beenden/Starten eines Windows-Diensts sein.  
 
 ## <a name="pre-configuration-steps-prior-to-turning-on-local-audit"></a>Vorkonfigurationsschritte vor der Aktivierung der lokalen Überwachung 
 
@@ -66,7 +66,7 @@ Führen Sie die folgenden Schritte aus, um das Anmeldekonto für den SQL Server 
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>Er muss einen neuen Ordner für die Dateien der lokalen Überwachung konfigurieren.    
 
-Erstellen Sie einen neuen Ordner (Verzeichnis für die lokale Überwachung), in das die lokale Überwachung die Protokolle schreiben wird. Der vollständige Pfad zum Verzeichnis der lokalen Überwachung für eine Standardinstanz der Datenbank-Engine wäre beispielsweise: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
+Erstellen Sie einen neuen Ordner (Verzeichnis für die lokale Überwachung), in das die lokale Überwachung die Protokolle schreiben wird. Der vollständige Pfad zum Verzeichnis der lokalen Überwachung für eine Standardinstanz der Datenbank-Engine wäre beispielsweise: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
  
   >[!NOTE] 
   >Konfigurieren Sie den Verzeichnispfad für die lokale Überwachung außerhalb des SQL Server-Installationspfads, um zu vermeiden, dass die Überwachungsfunktionen und das Patchen zu potenziellen Problemen mit SQL Server führen.
@@ -127,7 +127,7 @@ Erstellen Sie einen neuen Ordner (Verzeichnis für die lokale Überwachung), in 
 
 Nachdem Sie die Schritte zur Vorkonfiguration abgeschlossen haben, können Sie die lokale Überwachung aktivieren. Verwenden Sie dazu ein Systemadministratorkonto oder eine ähnliche Rolle mit Zugriff zum Ändern von Registrierungsschlüsseln, um die lokale Überwachung mithilfe der folgenden Schritte zu aktivieren oder zu deaktivieren. 
 
-1. Starten Sie **regedit**.  
+1. Starten Sie **regedit**.  
 
 1. Navigieren Sie zu dem entsprechenden CPE-[Pfad](#create-a-registry-key-setting-to-configure-local-audit-target-directory). 
 
@@ -162,9 +162,9 @@ Die lokale Überwachung generiert eine Protokolldatei pro Tag. Die Protokolldate
 
 ## <a name="maintenance"></a>Verwaltung 
 
-1. Um die Nutzung von Speicherplatz beim Schreiben von Dateien durch die lokale Überwachung einzuschränken, richten Sie eine Richtlinie oder einen regulären Auftrag ein, um das Verzeichnis für die lokale Überwachung zu bereinigen, damit ältere, überflüssige Dateien entfernt werden.  
+1. Um die Nutzung von Speicherplatz beim Schreiben von Dateien durch die lokale Überwachung einzuschränken, richten Sie eine Richtlinie oder einen regulären Auftrag ein, um das Verzeichnis für die lokale Überwachung zu bereinigen, damit ältere, überflüssige Dateien entfernt werden.  
 
-2. Schützen Sie das Verzeichnis der lokalen Überwachung, sodass nur entsprechende Personen darauf zugreifen können. Beachten Sie, dass die Protokolldateien Informationen enthalten, die in [Konfigurieren von SQL Server 2016 zum Senden von Feedback an Microsoft](http://support.microsoft.com/kb/3153756) erläutert werden. Der entsprechende Zugriff auf diese Datei sollte die meisten Personen in Ihrem Unternehmen daran hindern, die Datei zu lesen.  
+2. Schützen Sie das Verzeichnis der lokalen Überwachung, sodass nur entsprechende Personen darauf zugreifen können. Beachten Sie, dass die Protokolldateien Informationen enthalten, die in [Konfigurieren von SQL Server 2016 zum Senden von Feedback an Microsoft](https://support.microsoft.com/kb/3153756) erläutert werden. Der entsprechende Zugriff auf diese Datei sollte die meisten Personen in Ihrem Unternehmen daran hindern, die Datei zu lesen.  
 
 ## <a name="data-dictionary-of-local-audit-output-data-structure"></a>Datenwörterbuch für die Ausgabedatenstruktur der lokalen Überwachung 
 
@@ -177,9 +177,9 @@ Die lokale Überwachung generiert eine Protokolldatei pro Tag. Die Protokolldate
 - **data** enthält die Ausgabe der entsprechenden Abfrageausführung, die **queryTimeInTicks** benötigt hat.
 - Für**queryIdentifiers** für T-SQL-Abfragen ist die T-SQL-Abfragedefinition in der Abfrage gespeichert.
 
-| Logische Informationshierarchie für die lokale Überwachung | Verbundene Spalten |
+| Logische Informationshierarchie für die lokale Überwachung | Verbundene Spalten |
 | ------ | -------|
-| Header | emitTime, schemaVersion 
+| Header | emitTime, schemaVersion 
 | Computer | operatingSystem 
 | Instanz | instanceUniqueID, correlationID, clientVersion 
 | Session | sessionID, traceName 
@@ -188,12 +188,12 @@ Die lokale Überwachung generiert eine Protokolldatei pro Tag. Die Protokolldate
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>Definition und Beispiele für Name-Wert-Paare 
 
-Die nachfolgend aufgeführten Spalten stellen die Reihenfolge für die Dateiausgabe der lokalen Überwachung dar. Unidirektionaler Hash mit SHA-256 dient zum Anonymisieren von Werten für eine Reihe der nachfolgenden Spalten.  
+Die nachfolgend aufgeführten Spalten stellen die Reihenfolge für die Dateiausgabe der lokalen Überwachung dar. Unidirektionaler Hash mit SHA-256 dient zum Anonymisieren von Werten für eine Reihe der nachfolgenden Spalten.  
 
 | Name | und Beschreibung | Beispielwerte
 |-------|--------| ----------|
 |instanceUniqueID| Anonymisierter Instanzbezeichner | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
-|schemaVersion| Schemaversion von SQLCEIP |  3 
+|schemaVersion| Schemaversion von SQLCEIP |  3 
 |emitTime |Ausgabezeit für Datenpunkt in UTC | 2016-09-08T17:20:22.1124269Z 
 |sessionID | Sitzungsbezeichner für SQLCEIP-Dienst | 89decf9a-ad11-485c-94a7-fefb3a02ed86 
 |correlationId | Platzhalter für einen zusätzlichen Bezeichner | 0 
@@ -204,8 +204,8 @@ Die nachfolgend aufgeführten Spalten stellen die Reihenfolge für die Dateiausg
 |traceName | Ablaufverfolgungskategorien: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | Ein Bezeichner der Abfrage | SQLServerProperties.002 
 |data   | Die Ausgabe der für queryIdentifier erfassten Informationen als Ausgabe einer T-SQL-Abfrage, XE-Sitzung oder der Anwendung |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-Bit) unter Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
-|Abfrage| Die auf queryIdentifier bezogene T-SQL-Abfragedefinition, die Daten erzeugt, falls zutreffend.        Diese Komponente wird nicht vom SQL Server CEIP-Dienst hochgeladen. Sie ist in der lokalen Überwachung nur als Referenz für Kunden enthalten.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolybaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolybaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
-|queryTimeInTicks | Die Dauer zum Ausführen der Abfrage mit der folgenden Ablaufverfolgungskategorie: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
+|Abfrage| Die auf queryIdentifier bezogene T-SQL-Abfragedefinition, die Daten erzeugt, falls zutreffend.        Diese Komponente wird nicht vom SQL Server CEIP-Dienst hochgeladen. Sie ist in der lokalen Überwachung nur als Referenz für Kunden enthalten.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
+|queryTimeInTicks | Die Dauer zum Ausführen der Abfrage mit der folgenden Ablaufverfolgungskategorie: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
 ### <a name="trace-categories"></a>Ablaufverfolgungskategorien 
 Derzeit werden die folgenden Ablaufverfolgungskategorien erfasst: 
@@ -263,7 +263,7 @@ Es folgt ein Auszug aus einer JSON-Dateiausgabe der lokalen Überwachung.
         "Version": "Microsoft SQL Server 2017 (RTM-CU6) (KB4101464) - 14.0.3025.34 (X64) \n\tApr  9 2018 18:00:41 \n\tCopyright (C) 2017 Microsoft Corporation\n\tEnterprise Edition: Core-based Licensing (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 16299: )\n"
       }
     ],
-    "query": "SELECT\n      SERVERPROPERTY('Collation') AS [Collation],\n      SERVERPROPERTY('IsFullTextInstalled') AS [SqlFTinstalled],\n      SERVERPROPERTY('IsIntegratedSecurityOnly') AS [SqlIntSec],\n      SERVERPROPERTY('IsSingleUser') AS [IsSingleUser],\n      SERVERPROPERTY ('FileStreamEffectiveLevel') AS [SqlFilestreamMode],\n      SERVERPROPERTY('IsPolybaseInstalled') AS [SqlPbInstalled],\n      SERVERPROPERTY('PolybaseRole') AS [SqlPbNodeRole],\n      SERVERPROPERTY('ProductMajorVersion') AS [SqlVersionMajor],\n      SERVERPROPERTY('ProductMinorVersion') AS [SqlVersionMinor],\n      SERVERPROPERTY('ProductBuild') AS [SqlVersionBuild],\n      SERVERPROPERTY('ProductBuildType') AS ProductBuildType,\n      SERVERPROPERTY('ProductLevel') AS ProductLevel,\n      SERVERPROPERTY('ProductUpdateLevel') AS ProductUpdateLevel,\n      SERVERPROPERTY('ProductUpdateReference') AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)),CHARINDEX('.', REVERSE(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY('EditionID') AS SQLEditionId,\n      SERVERPROPERTY('IsClustered') AS IsClustered,\n      SERVERPROPERTY('IsHadrEnabled') AS IsHadrEnabled,\n      SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version",
+    "query": "SELECT\n      SERVERPROPERTY('Collation') AS [Collation],\n      SERVERPROPERTY('IsFullTextInstalled') AS [SqlFTinstalled],\n      SERVERPROPERTY('IsIntegratedSecurityOnly') AS [SqlIntSec],\n      SERVERPROPERTY('IsSingleUser') AS [IsSingleUser],\n      SERVERPROPERTY ('FileStreamEffectiveLevel') AS [SqlFilestreamMode],\n      SERVERPROPERTY('IsPolyBaseInstalled') AS [SqlPbInstalled],\n      SERVERPROPERTY('PolyBaseRole') AS [SqlPbNodeRole],\n      SERVERPROPERTY('ProductMajorVersion') AS [SqlVersionMajor],\n      SERVERPROPERTY('ProductMinorVersion') AS [SqlVersionMinor],\n      SERVERPROPERTY('ProductBuild') AS [SqlVersionBuild],\n      SERVERPROPERTY('ProductBuildType') AS ProductBuildType,\n      SERVERPROPERTY('ProductLevel') AS ProductLevel,\n      SERVERPROPERTY('ProductUpdateLevel') AS ProductUpdateLevel,\n      SERVERPROPERTY('ProductUpdateReference') AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)),CHARINDEX('.', REVERSE(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY('EditionID') AS SQLEditionId,\n      SERVERPROPERTY('IsClustered') AS IsClustered,\n      SERVERPROPERTY('IsHadrEnabled') AS IsHadrEnabled,\n      SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version",
     "queryTimeInTicks": 0
   },
   {
@@ -322,7 +322,7 @@ Das Bereinigen der Dateien im Verzeichnis muss von den Datenbankadministratoren 
 
 **Gibt es einen Client oder ein Tool, mit dem diese JSON-Ausgabe gelesen werden kann?**
 Die Ausgabe kann mit Editor, Visual Studio oder einem beliebigen JSON-Reader gelesen werden.
-Alternativ können Sie die JSON-Datei lesen und die Daten in einer Instanz von SQL Server 2016 analysieren, wie unten dargestellt. Weitere Informationen zum Lesen von JSON-Datei in SQL Server finden Sie unter [Importieren von JSON-Dateien in SQL Server mithilfe von OPENROWSET (BULK) und OPENJSON (Transact-SQL)](http://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/).
+Alternativ können Sie die JSON-Datei lesen und die Daten in einer Instanz von SQL Server 2016 analysieren, wie unten dargestellt. Weitere Informationen zum Lesen von JSON-Datei in SQL Server finden Sie unter [Importieren von JSON-Dateien in SQL Server mithilfe von OPENROWSET (BULK) und OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

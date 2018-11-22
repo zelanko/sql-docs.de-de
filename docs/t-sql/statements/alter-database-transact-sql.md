@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ece0ca36756e233412d2befcc7246504d1c2aa23
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 41d256aa69778804f637b2e380383d29552efc98
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252137"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571469"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -143,6 +143,9 @@ Benennt die Datenbank in den angegebenen Namen *new_database_name* um.
   
 COLLATE *collation_name*  
 Gibt die Sortierung für die Datenbank an. *collation_name* kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname sein. Wenn keine Sortierung angegeben ist, wird der Datenbank die Sortierung der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugewiesen.  
+
+> [!NOTE]
+> Sobald die Datenbank einmal in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] erstellt wurde, kann sie nicht mehr geändert werden.
   
 Beim Erstellen von Datenbanken mit einer von der Standardsortierung abweichenden Sortierung folgen die Daten in der Datenbank immer der angegebenen Sortierung. Bei der Erstellung einer eigenständigen Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die internen Kataloginformationen mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardsortierung **Latin1_General_100_CI_AS_WS_KS_SC** verwaltet.  
   

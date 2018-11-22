@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69be1793c824014abc7262ebdb7d231ce4bb66af
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 991eefb50ec949098e132f17f2c18691f4822987
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020564"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813506"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Gleichzeitiges Installieren von Reporting Services und Internetinformationsdiensten
 
@@ -41,11 +41,11 @@ Sie können SQL Server Reporting Services (SSRS) und die Internetinformationsdie
   
 |Beispiel|Anforderung|  
 |-------------|-------------|  
-|`http://123.234.345.456:80/reports`|Empfängt alle Anforderungen, die an `http://123.234.345.456/reports` oder `http://\<computername>/reports` gesendet werden, wenn ein Domain Name Service die IP-Adresse in diesen Hostnamen auflösen kann.|  
-|`http://+:80/reports`|Empfängt alle Anforderungen, die an eine IP-Adresse oder einen Hostnamen gesendet werden, die bzw. der gültig für diesen Computer ist, sofern die URL den Namen des virtuellen Verzeichnisses "reports" enthält.|  
-|`http://123.234.345.456:80`|Empfängt alle Anforderungen, die `http://123.234.345.456` oder `http://\<computername>` angeben, wenn ein Domain Name Service die IP-Adresse in diesen Hostnamen auflösen kann.|  
-|`http://+:80`|Empfängt für alle Anwendungsendpunkte, die **Alle zugewiesenen**zugeordnet sind, Anforderungen, die nicht bereits von anderen Anwendungen empfangen wurden.|  
-|`http://*:80`|Empfängt für Anwendungsendpunkte, die **Alle nicht zugewiesenen**zugeordnet sind, Anforderungen, die nicht bereits von anderen Anwendungen empfangen wurden.|  
+|`https://123.234.345.456:80/reports`|Empfängt alle Anforderungen, die an `https://123.234.345.456/reports` oder `https://\<computername>/reports` gesendet werden, wenn ein Domain Name Service die IP-Adresse in diesen Hostnamen auflösen kann.|  
+|`https://+:80/reports`|Empfängt alle Anforderungen, die an eine IP-Adresse oder einen Hostnamen gesendet werden, die bzw. der gültig für diesen Computer ist, sofern die URL den Namen des virtuellen Verzeichnisses "reports" enthält.|  
+|`https://123.234.345.456:80`|Empfängt alle Anforderungen, die `https://123.234.345.456` oder `https://\<computername>` angeben, wenn ein Domain Name Service die IP-Adresse in diesen Hostnamen auflösen kann.|  
+|`https://+:80`|Empfängt für alle Anwendungsendpunkte, die **Alle zugewiesenen**zugeordnet sind, Anforderungen, die nicht bereits von anderen Anwendungen empfangen wurden.|  
+|`https://*:80`|Empfängt für Anwendungsendpunkte, die **Alle nicht zugewiesenen**zugeordnet sind, Anforderungen, die nicht bereits von anderen Anwendungen empfangen wurden.|  
   
  Ein Zeichen für einen Portkonflikt ist die folgende Fehlermeldung: 'System.IO.FileLoadException: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird. (Ausnahme von HRESULT: 0x80070020).  
   
@@ -54,9 +54,9 @@ Sie können SQL Server Reporting Services (SSRS) und die Internetinformationsdie
   
 |Application|URL-Reservierung|und Beschreibung|Anforderungsempfang|  
 |-----------------|---------------------|-----------------|---------------------|  
-|Berichtsserver|`http://+:80/ReportServer`|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "ReportServer".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "ReportServer" angeben. Der Berichtsserver-Webdienst empfängt alle Anforderungen an http://\<Computername>/reportserver.|  
-|Webportal|`http://+:80/Reports`|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "Reports".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "reports" angeben. Das [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] empfängt alle Anforderungen an http://\<Computername>/reports.|  
-|IIS|`http://*:80/`|Schwacher Platzhalter an Port 80.|Empfängt an Port 80 alle verbleibenden Anforderungen, die nicht von einer anderen Anwendung empfangen wurden.|  
+|Berichtsserver|`https://+:80/ReportServer`|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "ReportServer".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "ReportServer" angeben. Der Berichtsserver-Webdienst empfängt alle Anforderungen an „https://\<Computername>/reportserver“.|  
+|Webportal|`https://+:80/Reports`|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "Reports".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "reports" angeben. Das [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] empfängt alle Anforderungen an „https://\<Computername>/reports“.|  
+|IIS|`https://*:80/`|Schwacher Platzhalter an Port 80.|Empfängt an Port 80 alle verbleibenden Anforderungen, die nicht von einer anderen Anwendung empfangen wurden.|  
 
 ## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Parallele Bereitstellungen von SQL Server Reporting Services in IIS 8.0, 8.5
 
@@ -66,7 +66,7 @@ Sie können SQL Server Reporting Services (SSRS) und die Internetinformationsdie
   
 -   Eine in der Standardkonfiguration installierte Berichtsserverinstanz, bei der die URL-Reservierung auch Port 80 angibt und die [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]-Anwendung auch „Reports“ als Namen des virtuellen Verzeichnisses verwendet.  
   
- Bei dieser Konfiguration wird eine an http://\<Computername>:80/reports gesendete Anforderung vom [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] empfangen. Die Anwendung, auf die über das virtuelle Verzeichnis „Reports“ in IIS zugegriffen wird, empfängt nach der Installation der Berichtsserverinstanz keine Anforderungen mehr.  
+ Bei dieser Konfiguration wird eine an „https://\<Computername>:80/reports“ gesendete Anforderung vom [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] empfangen. Die Anwendung, auf die über das virtuelle Verzeichnis „Reports“ in IIS zugegriffen wird, empfängt nach der Installation der Berichtsserverinstanz keine Anforderungen mehr.  
   
  Wenn Sie die Bereitstellungen älterer und neuerer Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]gleichzeitig ausführen, tritt unter Umständen das gerade beschriebene Routingproblem auf. Dies liegt daran, dass alle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Versionen „ReportServer“ und „Reports“ als Namen der virtuellen Verzeichnisse für den Berichtsserver und die [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] anwendungen verwenden und damit die Wahrscheinlichkeit erhöht wird, dass in IIS die virtuellen Verzeichnisse „reports“ und „reportserver“ vorhanden sind.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5edf3a09bb12f39541413e52ba5afcabe20fd5c8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5ce513473683d12d5ba2af68f08bc96c0f47d893
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021674"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814003"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Verwalten einer Reporting Services-SharePoint-Dienstanwendung
 
@@ -92,7 +92,7 @@ ms.locfileid: "50021674"
 |Einstellung|Kommentare|  
 |-------------|--------------|  
 |Berichts-Generator-Download aktivieren|Der Standardwert ist TRUE.<br /><br /> Gibt an, ob Clients die Schaltfläche zum Herunterladen der Berichts-Generator-Anwendung erkennen.|  
-|Start-URL des Berichts-Generators|Geben Sie eine benutzerdefinierte URL an, wenn der Berichtsserver nicht die Standard-URL des Berichts-Generators verwendet. Dies ist eine optionale Einstellung. Wenn Sie keinen Wert angeben, wird die Standard-URL verwendet, mit der Berichts-Generator gestartet wird. Um den Berichts-Generator 3.0 als ClickOnce-Anwendung zu starten, geben Sie den folgenden Wert ein: http://\<Computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|Start-URL des Berichts-Generators|Geben Sie eine benutzerdefinierte URL an, wenn der Berichtsserver nicht die Standard-URL des Berichts-Generators verwendet. Dies ist eine optionale Einstellung. Wenn Sie keinen Wert angeben, wird die Standard-URL verwendet, mit der Berichts-Generator gestartet wird. Geben Sie den folgenden Wert ein, um den Berichts-Generator 3.0 als ClickOnce-Anwendung zu starten: https://\<Computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Clientdruck aktivieren|Der Standard lautet TRUE.<br /><br /> Gibt an, ob Benutzer das clientseitige Steuerelement herunterladen können, das Druckoptionen bereitstellt.|  
 |Sitzungstimeout bearbeiten|Der Standardwert ist 7.200 Sekunden.|  
 |Sitzungscachelimit bearbeiten|Der Standardwert ist 5.|  

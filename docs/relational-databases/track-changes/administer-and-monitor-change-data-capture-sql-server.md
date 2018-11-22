@@ -1,12 +1,10 @@
 ---
 title: Verwalten und Überwachen von Change Data Capture (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
@@ -16,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d12ba58b2257425356b01c38c8fddeb41f6336a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6fafa2ba203ecbcd3141503a170c81c21282621
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780028"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560517"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +68,7 @@ ms.locfileid: "47780028"
 ### <a name="structure-of-the-cleanup-job"></a>Struktur des Cleanupauftrags  
  Change Data Capture verwendet eine beibehaltungsbasierte Cleanupstrategie zum Verwalten der Größe der Änderungstabellen. Der Cleanupmechanismus besteht aus einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftrag, der erstellt wird, wenn die erste Datenbanktabelle aktiviert wird. Ein einzelner Cleanupauftrag verarbeitet das Cleanup für alle Datenbankänderungstabellen und wendet denselben Beibehaltungswert auf alle definierten Aufzeichnungsinstanzen an.  
   
- Der Cleanupauftrag wird durch Ausführen der parameterlosen gespeicherten Prozedur **sp_MScdc_cleanup_job**initiiert. Diese gespeicherte Prozedur beginnt mit dem Extrahieren der konfigurierten Beibehaltungs- und Schwellenwerte für den Cleanupauftrag aus **msdb.dbo.cdc_jobs**. Der Beibehaltungswert wird verwendet, um eine neue Untergrenzenmarkierung für die Änderungstabellen zu berechnen. Die angegebene Anzahl von Minuten wird von dem maximalen *tran_end_time* -Wert aus der **cdc.lsn_time_mapping** -Tabelle subtrahiert, um die neue Untergrenzenmarkierung, angegeben als „datetime“-Wert, zu erhalten. Anschließend wird die Tabelle „CDC.lsn_time_mapping“ verwendet, um diesen „datetime“-Wert in einen entsprechenden **lsn** -Wert zu konvertieren. Wenn mehrere Werte in der Tabelle dieselbe Commitzeit verwenden, wird der **lsn** , der dem Eintrag mit dem kleinsten **lsn** entspricht, als neue Untergrenzenmarkierung bestimmt. Dieser **lsn** -Wert wird an **sp_cdc_cleanup_change_tables** übergeben, um Einträge in den Änderungstabellen aus den Datenbankänderungstabellen zu entfernen.  
+ Der Cleanupauftrag wird durch Ausführen der parameterlosen gespeicherten Prozedur **sp_MScdc_cleanup_job**initiiert. Diese gespeicherte Prozedur beginnt mit dem Extrahieren der konfigurierten Beibehaltungs- und Schwellenwerte für den Cleanupauftrag aus **msdb.dbo.cdc_jobs**. Der Beibehaltungswert wird verwendet, um eine neue Untergrenzenmarkierung für die Änderungstabellen zu berechnen. Die angegebene Anzahl von Minuten wird von dem maximalen *tran_end_time* -Wert aus der **cdc.lsn_time_mapping**-Tabelle subtrahiert, um die neue Untergrenzenmarkierung, angegeben als datetime-Wert, zu erhalten. Anschließend wird die Tabelle „CDC.lsn_time_mapping“ verwendet, um diesen „datetime“-Wert in einen entsprechenden **lsn** -Wert zu konvertieren. Wenn mehrere Werte in der Tabelle dieselbe Commitzeit verwenden, wird der **lsn** , der dem Eintrag mit dem kleinsten **lsn** entspricht, als neue Untergrenzenmarkierung bestimmt. Dieser **lsn** -Wert wird an **sp_cdc_cleanup_change_tables** übergeben, um Einträge in den Änderungstabellen aus den Datenbankänderungstabellen zu entfernen.  
   
 > [!NOTE]  
 >  Das Verwenden der Commitzeit der letzten Transaktion zum Berechnen der neuen Untergrenzenmarkierung hat den Vorteil, dass Änderungen in den Änderungstabellen für die angegebene Zeit erhalten bleiben. Dies geschieht sogar, wenn der Aufzeichnungsprozess zurückliegt. Alle Einträge, die dieselbe Commitzeit verwenden wie die aktuelle Untergrenzenmarkierung, werden weiterhin in den Änderungstabellen durch Wählen des kleinsten **lsn** dargestellt, der die gemeinsame Commitzeit für die aktuelle Untergrenzenmarkierung aufweist.  
@@ -86,18 +84,24 @@ ms.locfileid: "47780028"
 ### <a name="identify-sessions-with-empty-result-sets"></a>Identifizieren von Sitzungen mit leeren Resultsets  
  Jede Zeile in sys.dm_cdc_log_scan_sessions stellt eine Protokollscansitzung (außer der Zeile mit einer ID von 0) dar. Eine Protokollscansitzung entspricht einer Ausführung von [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md). Während einer Sitzung kann der Scan entweder Änderungen oder ein leeres Ergebnis zurückgeben. Wenn das Resultset leer ist, wird die Spalte empty_scan_count in sys.dm_cdc_log_scan_sessions auf den Wert 1 gesetzt. Folgen noch weitere leere Resultsets, z. B. wenn der Aufzeichnungsauftrag dauerhaft ausgeführt wird, wird empty_scan_count in der letzten vorhandenen Zeile inkrementiert. Wenn sys.dm_cdc_log_scan_sessions z. B. bereits 10 Zeilen für Scans enthält, die Änderungen zurückgegeben haben, und fünf leere Ergebnisse aufeinander folgen, enthält die Sicht 11 Zeilen. Die letzte Zeile verfügt in der Spalte empty_scan_count über einen Wert von 5. Führen Sie die folgende Abfrage aus, um Sitzungen zu ermitteln, die einen leeren Scan aufweisen:  
   
- `SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0`  
+```sql
+SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0
+```
   
 ### <a name="determine-latency"></a>Bestimmen von Latenzzeit  
  Die Verwaltungssicht sys.dm_cdc_log_scan_sessions enthält eine Spalte, in der die Latenzzeit für die einzelnen Aufzeichnungssitzungen erfasst wird. Die Latenzzeit ist als die Zeitspanne zwischen dem Ausführen des Commit für eine Transaktion in einer Quelltabelle und dem Ausführen des Commit für die letzte aufgezeichnete Transaktion in der Änderungstabelle definiert. Die Latenzzeitspalte wird nur für aktive Sitzungen aufgefüllt. Für Sitzungen, die in der Spalte empty_scan_count column einen höheren Wert als 0 enthalten, wird die Latenzzeitspalte auf 0 gesetzt. Die folgende Abfrage gibt die durchschnittliche Latenzzeit für die letzten Sitzungen zurück:  
   
- `SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
  Sie können Latenzzeitdaten verwenden, um zu ermitteln, wie schnell bzw. langsam der Aufzeichnungsprozess Transaktionen verarbeitet. Diese Daten sind sehr hilfreich, wenn der Aufzeichnungsprozess kontinuierlich ausgeführt wird. Wenn der Aufzeichnungsprozess gemäß einem Zeitplan ausgeführt wird, kann die Latenzzeit u. U. lang sein. Dies liegt an der Verzögerung zwischen den Transaktionen, für die in der Quelltabelle ein Commit ausgeführt wird, und dem Aufzeichnungsprozess, der zum geplanten Zeitpunkt ausgeführt wird.  
   
  Eine andere wichtige Kennzahl für die Effizienz des Aufzeichnungsprozesses ist der Durchsatz. Dies ist die durchschnittliche Anzahl von Befehlen pro Sekunde, die während einer Sitzung verarbeitet werden. Um den Durchsatz einer Sitzung zu ermitteln, teilen Sie den Wert in der Spalte command_count durch den Wert in der Spalte mit der Dauer (duration). Die folgende Abfrage gibt den durchschnittlichen Durchsatz für die letzten Sitzungen zurück:  
   
- `SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
 ### <a name="use-data-collector-to-collect-sampling-data"></a>Verwenden des Datensammlers zum Erfassen von Samplingdaten  
  Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datensammlers können Sie Momentaufnahmen von Daten aus allen Tabellen oder dynamischen Verwaltungssichten erfassen und ein Data Warehouse für die Leistung erstellen. Wenn für eine Datenbank Change Data Capture aktiviert ist, sollten Sie in regelmäßigen Abständen Momentaufnahmen der Sichten sys.dm_cdc_log_scan_sessions und sys.dm_cdc_errors erstellen, um später eine Analyse durchführen zu können. Die folgende Prozedur richtet einen Datensammler ein, der Datenstichproben aus der Verwaltungssicht sys.dm_cdc_log_scan_sessions entnimmt.  
@@ -130,10 +134,10 @@ ms.locfileid: "47780028"
   
     -- Create a collection item using statistics from   
     -- the change data capture dynamic management view.  
-    DECLARE @paramters xml;  
+    DECLARE @parameters xml;  
     DECLARE @collection_item_id int;  
   
-    SELECT @paramters = CONVERT(xml,   
+    SELECT @parameters = CONVERT(xml,   
         N'<TSQLQueryCollector>  
             <Query>  
               <Value>SELECT * FROM sys.dm_cdc_log_scan_sessions</Value>  
@@ -146,7 +150,7 @@ ms.locfileid: "47780028"
     @collector_type_uid = N'302E93D1-3424-4BE7-AA8E-84813ECF2419',  
     @name = ' CDC Performance Data Collector',  
     @frequency = 5,   
-    @parameters = @paramters,  
+    @parameters = @parameters,  
     @collection_item_id = @collection_item_id output;  
   
     GO  

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3041a862639c8cbd71f2ad71378e980ec0b31fdc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b9294d9208b9cafc3610a9682c13cebcc970669e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905134"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672939"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Verbessern von PolyBase-Erweiterungsgruppen unter Windows
 
@@ -52,7 +52,7 @@ Hier erfahren Sie, wie Sie eine PolyBase-Gruppe mit den folgenden Informationen 
   
    - PQTH4A-CMP02  
   
-2. Domänenkonto: *PQTH4A\PolybaseUser*  
+2. Domänenkonto: *PQTH4A\PolyBaseUser*  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>Installieren von SQL Server mit PolyBase auf allen Computern
 
@@ -60,7 +60,7 @@ Hier erfahren Sie, wie Sie eine PolyBase-Gruppe mit den folgenden Informationen 
   
 2. Wählen Sie auf der Seite „Funktionsauswahl“ **PolyBase Query Service for External Data** (PolyBase-Abfragedienst für externe Daten).
   
-3. Verwenden Sie das **Domänenkonto** „PQTH4A\PolybaseUser“ für SQL Server PolyBase-Engine und SQL Server PolyBase-Datenverschiebungsdienst auf der Konfigurationsseite des Servers.
+3. Verwenden Sie das **Domänenkonto** „PQTH4A\PolyBaseUser“ für die SQL Server-PolyBase-Engine und den SQL Server PolyBase-Datenverschiebungsdienst auf der Konfigurationsseite des Servers.
   
 4. Wählen Sie auf der PolyBase-Konfigurationsseite die Option **Use the SQL Server instance as part of a PolyBase scale-out group**(SQL Server-Instanz als Teil einer PolyBase-Erweiterungsgruppe verwenden). Dies öffnet die Firewall, um eingehende Verbindungen an die PolyBase-Dienste zuzulassen.
   
@@ -106,6 +106,6 @@ Nachdem das Setup abgeschlossen ist, können beide Computer als PolyBase-Gruppen
   
 ## <a name="next-steps"></a>Nächste Schritte  
 
-Informationen zur Problembehandlung finden Sie unter [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
+Informationen zur Problembehandlung finden Sie unter [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
   
 Weitere Informationen zu PolyBase finden Sie im [PolyBase-Leitfaden](../../relational-databases/polybase/polybase-guide.md).

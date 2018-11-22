@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051013"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813673"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Report Gruppierungen und Gesamtergebnisse hinzufügen, um Ihre Daten zu organisieren und zusammenzufassen.  
@@ -115,7 +115,7 @@ In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../inc
 3.  Geben Sie in **TargetServerURL** den Namen Ihres Berichtsservers ein, z.B.   
     - `http:/<servername>/reportserver`  
    
-    - `http://localhost/reportserver` funktioniert, wenn Sie den Bericht auf dem Berichtsserver erstellen.  
+    - `https://localhost/reportserver` funktioniert, wenn Sie den Bericht auf dem Berichtsserver erstellen.  
   
   
 4. Beachten Sie, dass für TargetReportFolder „tutorial“ angegeben wurde – der Name des Projekts.  Dies ist der Name des Ordners, in dem in den nächsten Schritten der Bericht bereitgestellt wird.  
@@ -129,7 +129,7 @@ In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../inc
     > Skipping 'Sales Orders.rdl'. Item is up to date.  
     > Erstellung abgeschlossen -- 0 Fehler, 0 Warnungen  
     > ------ Deploy started: Project: tutorial, Configuration: Debug ------  
-    > Deploying to http://[server name]/reportserver  
+    > Deploying to https://[server name]/reportserver  
     > Deploying report '/tutorial/Sales Orders'.  
     > Deploy complete -- 0 errors, 0 warnings  
     > ========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========  
@@ -143,8 +143,8 @@ In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../inc
   
     Rufen Sie die [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Webportal-URL auf.   
     **Hinweis:** Für die URL des *Portals* wird „Reports“ und nicht die *Berichtsserver* -URL „Berichtsserver“ verwendet.  Zum Beispiel:   
-    `http://<server name>/reports`installiert haben.  
-    `http://localhost/reports` funktioniert, wenn Sie den Bericht auf dem Berichtsserver erstellen.  
+    `https://<server name>/reports`installiert haben.  
+    `https://localhost/reports` funktioniert, wenn Sie den Bericht auf dem Berichtsserver erstellen.  
   
 8.  Wechseln Sie zum Ordner, in dem der Bericht gespeichert ist. Als Standardname wird *Tutorial*, der Name des Projekts oder der Name, den Sie in das Feld TargetReportFolder in den Projekteigenschaften eingegeben haben, verwendet.   
 Klicken Sie auf den Namen des Berichts **Sales Orders** , um den gerenderten Bericht im Browser anzuzeigen.  

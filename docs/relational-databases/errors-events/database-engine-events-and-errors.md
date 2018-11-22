@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6507c72a325871fa4ec2e075a00dc458ac64ba3
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: e80daf389baedb35dc7416c95096fe346854dfe9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384175"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678069"
 ---
 # <a name="database-engine-errors"></a>Datenbank-Engine – Fehler
 Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den Fehlermeldungstext aus der sys.messages-Katalogansicht. 
@@ -1035,10 +1035,10 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   2117    |   16  |   nein  |   %S_MSG INSTEAD OF-Triggers "%.*ls" für %S_MSG "%.* ls" ist nicht möglich, weil %S_MSG eine FILESTREAM-Spalte enthält.  |
 |   2201    |   16  |   nein  |   %sDie Abweichung von 'anySimpleType' durch Einschränkung ist nicht zulässig, und die Abweichung durch Einschränkung eines von 'anySimpleType' abgeleiteten Typs nach Erweiterung ist nur dann zulässig, wenn keine Einschränkungsfacets angegeben wurden. |
 |   2202    |   16  |   nein  |   %sFehler beim Kompilieren der Abfrage. Um ausführlichere Informationen zu dem Fehler zu erhalten, muss die Abfrage von einem Benutzer mit EXECUTE-Berechtigungen für die XML-Schemaauflistung, die in der Abfrage verwendet wird, ausgeführt werden.    |
-|   2203    |   16  |   nein  |   %sNur "http://www.w3.org/2001/XMLSchema#decimal?", "http://www.w3.org/2001/XMLSchema#boolean?" oder 'node()*'-Ausdrücke sind als Prädikate zulässig. Gefunden: '% ls'. |
-|   2204    |   16  |   nein  |   %sNur "http://www.w3.org/2001/XMLSchema#boolean?" oder 'node()*'-Ausdrücke sind in Bedingungen und logischen Operatoren zulässig: Gefunden '% ls'.   |
+|   2203    |   16  |   nein  |   %sNur "https://www.w3.org/2001/XMLSchema#decimal?", "https://www.w3.org/2001/XMLSchema#boolean?" oder 'node()*'-Ausdrücke sind als Prädikate zulässig. Gefunden: '% ls'.   |
+|   2204    |   16  |   nein  |   %sNur "https://www.w3.org/2001/XMLSchema#boolean?" oder 'node()*'-Ausdrücke sind in Bedingungen und logischen Operatoren zulässig: Gefunden '% ls'.  |
 |   2205    |   16  |   nein  |   %s"%ls" wurde erwartet.   |
-|   2206    |   16  |   nein  |   %sNamespacepräfix "xml" kann nur dem URI "http://www.w3.org/XML/1998/namespace" zugeordnet werden. Dieser URI kann nicht mit anderen Präfixen verwendet werden.    |
+|   2206    |   16  |   nein  |   %sNamespacepräfix "xml" kann nur dem URI "https://www.w3.org/XML/1998/namespace" zugeordnet werden. Dieser URI kann nicht mit anderen Präfixen verwendet werden.   |
 |   2207    |   16  |   nein  |   %sNur Nichtdokumentknoten können eingefügt werden. Gefunden: "%ls". |
 |   2208    |   16  |   nein  |   %sDer mit '%ls' beginnende URI ist zu lang. Eine Länge von maximal %d Zeichen ist zulässig.  |
 |   2209    |   16  |   nein  |   %sSyntaxfehler in der Nähe von '%ls'.   |
@@ -1121,7 +1121,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   2309    |   16  |   nein  |   %sDer Wert von "%ls" ist keine gültige Zahl. |
 |   2310    |   16  |   nein  |   %sDas "%ls"-Attribut ist mehrmals deklariert.   |
 |   2311    |   16  |   nein  |   %sDas "%ls"-Attribut ist in "%ls" mehrmals deklariert.  |
-|   2312    |   16  |   nein  |   %sDer Wert des "%ls"-Attributs entspricht nicht der Typdefinition von http://www.w3.org/2001/XMLSchema#%ls: "%ls".   |
+|   2312    |   16  |   nein  |   %sDer Wert des "%ls"-Attributs entspricht nicht der Typdefinition von https://www.w3.org/2001/XMLSchema#%ls: "%ls".  |
 |   2313    |   16  |   nein  |   %sFür das "%ls"-Attribut ist der Wert "%ls" unzulässig. |
 |   2314    |   16  |   nein  |   %sDas "%ls"-Attribut darf keinen negativen Wert haben. |
 |   2315    |   16  |   nein  |   %sDas "%ls"-Attribut sollte einen Zeichenfolgenwert haben.   |
@@ -3044,7 +3044,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   6869    |   16  |   nein  |   Es wird versucht, das Namespacepräfix '%.*ls' neu zu definieren.    |
 |   6870    |   16  |   nein  |   Das in der WITH XMLNAMESPACES-Klausel verwendete Präfix '%.*ls' enthält einen ungültigen XML-Bezeichner. '%c'(0x%04X) ist das erste fehlerhafte Zeichen.  |
 |   6871    |   16  |   nein  |   Das in WITH XMLNAMESPACES verwendete Präfix '%.*ls' ist reserviert und kann nicht als benutzerdefiniertes Präfix verwendet werden.  |
-|   6872    |   16  |   nein  |   Das XML-Namespacepräfix "xml" kann nur dem URI http://www.w3.org/XML/1998/namespace zugeordnet werden. Dieser URI kann nicht mit anderen Präfixen verwendet werden.   |
+|   6872    |   16  |   nein  |   Das XML-Namespacepräfix "xml" kann nur dem URI https://www.w3.org/XML/1998/namespace zugeordnet werden. Dieser URI kann nicht mit anderen Präfixen verwendet werden.  |
 |   6873    |   16  |   nein  |   Eine Neudefinition des XML-Namespacepräfixes 'xsi' wird mit der Option ELEMENTS XSINIL von FOR XML nicht unterstützt. |
 |   6874    |   16  |   nein  |   Ein leerer URI ist in der WITH XMLNAMESPACES-Klausel nicht zulässig.  |
 |   6875    |   16  |   nein  |   Der in WITH XMLNAMESPACES verwendete URI '%.*ls' ist ungültig. '%c'(0x%04X) ist das erste fehlerhafte Zeichen.    |
@@ -3423,7 +3423,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   7802    |   16  |   nein  |   Funktionen mit dem Rückgabetyp '%.*ls' werden über einen SOAP-Aufruf nicht unterstützt.   |
 |   7803    |   15  |   nein  |   Die %.*ls-Klausel kann in der %.* ls-Anweisung nicht verwendet werden.    |
 |   7804    |   15  |   nein  |   Für %.*ls und %.* ls kann nicht der gleiche Wert verwendet werden.   |
-|   7805    |   16  |   nein  |   Vor dem SITE-Parameter kann kein Schema als Präfix eingefügt werden, wie z. B. 'http://'. Gültige Werte für SITE sind {"*" | "+" | "site_name"}.  |
+|   7805    |   16  |   nein  |   Vor dem SITE-Parameter kann kein Schema wie „https://“ als Präfix eingefügt werden. Gültige Werte für SITE sind {"*" | "+" | "site_name"}. |
 |   7806    |   16  |   nein  |   Die vom Endpunkt '%.*ls' angegebene URL ist bereits für den Empfang von Anforderungen registriert, oder er ist für die Verwendung durch einen anderen Dienst reserviert.  |
 |   7807    |   16  |   nein  |   Fehler ('0x%x') beim Registrieren des Endpunkts '%.*ls'.   |
 |   7808    |   10  |   nein  |   Die Registrierung des Endpunkts '%.*ls' konnte nicht aufgehoben werden. |
@@ -4176,11 +4176,11 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   9304    |   16  |   nein  |   %sDiese Version des Servers unterstützt nur XQuery, Version 1.0.    |
 |   9305    |   16  |   nein  |   %sNur Typnamen, auf die '?' folgt, werden im Ziel von 'instance of' unterstützt. |
 |   9306    |   16  |   nein  |   %sDas Ziel von 'replace value of' darf kein Vereinigungstyp sein. Gefunden: '%ls'. |
-|   9308    |   16  |   nein  |   %sDas Argument für "%ls" muss einem einzelnen numerischen primitiven Typ oder "http://www.w3.org/2004/07/xpath-datatypes#untypedAtomic" entsprechen. Gefunden wurde ein Argument vom Typ '%ls'.  |
-|   9309    |   16  |   nein  |   %sDas Ziel von "replace value of" darf nicht http://www.w3.org/2001/XMLSchema#anySimpleType sein. Gefunden: "%ls". |
+|   9308    |   16  |   nein  |   %sDas Argument für "%ls" muss einem einzelnen numerischen primitiven Typ oder "https://www.w3.org/2004/07/xpath-datatypes#untypedAtomic" entsprechen. Gefunden wurde ein Argument vom Typ '%ls'. |
+|   9309    |   16  |   nein  |   %sDas Ziel von "replace value of" darf nicht https://www.w3.org/2001/XMLSchema#anySimpleType sein. Gefunden: "%ls".    |
 |   9310    |   16  |   nein  |   %sDie WITH-Klausel von 'replace value of' darf keinen konstruierten XML-Code enthalten.   |
 |   9311    |   16  |   nein  |   %sHeterogene Sequenzen sind in '%ls'nicht zulässig. Gefunden wurden '%ls' und '%ls'.  |
-|   9312    |   16  |   nein  |   %s"%ls" wird für einfache typisierte Elemente oder "http://www.w3.org/2001/XMLSchema#anyType"-Elemente nicht unterstützt. Gefunden. "%ls".   |
+|   9312    |   16  |   nein  |   %s"%ls" wird für einfache typisierte Elemente oder "https://www.w3.org/2001/XMLSchema#anyType"-Elemente nicht unterstützt. Gefunden. "%ls".  |
 |   9313    |   16  |   nein  |   %sDiese Version des Servers unterstützt in einem Attributkonstruktor nicht mehrere Ausdrücke oder Ausdrücke gemischt mit Zeichenfolgen.   |
 |   9314    |   16  |   nein  |   %s'fn:data()' kann nicht implizit unteilbar sein oder auf komplexe Inhaltselemente angewendet werden. Gefunden wurde der Typ '%ls' innerhalb des abgeleiteten Typs '%ls'.  |
 |   9315    |   16  |   nein  |   %sAls Namensausdruck bei Konstruktoren für berechnete Elemente und Attribute werden nur konstante Ausdrücke unterstützt.   |
@@ -4200,7 +4200,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   9330    |   16  |   nein  |   %sIn '%ls' sind nur vergleichbare Typen zulässig. Gefunden wurde '%ls'.  |
 |   9331    |   16  |   nein  |   %sSyntaxfehler in der Nähe von '%ls', erwartet wurde '%ls' oder '%ls'. |
 |   9332    |   16  |   nein  |   %sSyntaxfehler in der Nähe von '%ls', erwartet wurde 'where', '(stable) order by' oder 'return'.   |
-|   9333    |   16  |   nein  |   %s"//" gefolgt von den Achsen "self", "parent" oder "descendant-or-self" wird für einfache typisierte Elemente oder "http://www.w3.org/2001/XMLSchema#anyType"-Elemente nicht unterstützt. Gefunden: "%ls".  |
+|   9333    |   16  |   nein  |   %s"//" gefolgt von den Achsen "self", "parent" oder "descendant-or-self" wird für einfache typisierte Elemente oder "https://www.w3.org/2001/XMLSchema#anyType"-Elemente nicht unterstützt. Gefunden: "%ls". |
 |   9334    |   16  |   nein  |   %sDas form-Attribut darf für ein lokales Attribut oder eine Elementdefinition mit dem ref-Attribut nicht angegeben werden. Speicherort: '%ls'.    |
 |   9335    |   16  |   nein  |   %sDie XQuery-Syntax '%ls' wird nicht unterstützt. |
 |   9336    |   16  |   nein  |   %sDie XML-Schemasyntax '%ls' wird nicht unterstützt. |
@@ -4270,10 +4270,10 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   9461    |   16  |   nein  |   XML %ls beginnend mit '%.*ls' ist %d Zeichen lang, womit das Limit überschritten wird. Eine Länge von maximal %d Zeichen ist zulässig.  |
 |   9462    |   16  |   nein  |   XML-Analyse: Zeile %d, Zeichen %d, nicht alle Wertsegmente wurden gelesen.  |
 |   9463    |   16  |   nein  |   XML-Analyse: Zeile %d, Zeichen %d, 'xml:space' weist einen ungültigen Wert auf. |
-|   9464    |   16  |   nein  |   XML-Analyse: Zeile %d, Zeichen %d, XML-Namespacepräfix "xml", kann nur URI http://www.w3.org/XML/1998/namespace zugeordnet werden. Dieser URI kann nicht mit anderen Präfixen verwendet werden.   |
+|   9464    |   16  |   nein  |   XML-Analyse: Zeile %d, Zeichen %d, XML-Namespacepräfix "xml", kann nur URI https://www.w3.org/XML/1998/namespace zugeordnet werden. Dieser URI kann nicht mit anderen Präfixen verwendet werden.  |
 |   9465    |   16  |   nein  |   XML-Analyse: Zeile %d, Zeichen %d, das XML-Namespacepräfix 'xmlns' ist für die Verwendung durch XML reserviert.    |
-|   9466    |   16  |   nein  |   XML-Analyse: Zeile %d, Zeichen %d, XML-Namespace-URI (http://www.w3.org/XML/1998/namespace) darf nur Präfix "xml" zugeordnet werden).   |
-|   9467    |   16  |   nein  |   XML-Analyse: Zeile %d, Zeichen %d, Namespace-URI (http://www.w3.org/2000/xmlns/) ist reserviert und darf nicht verwendet werden).   |
+|   9466    |   16  |   nein  |   XML-Analyse: Zeile %d, Zeichen %d, XML-Namespace-URI (https://www.w3.org/XML/1998/namespace) darf nur Präfix "xml" zugeordnet werden).  |
+|   9467    |   16  |   nein  |   XML-Analyse: Zeile %d, Zeichen %d, Namespace-URI (https://www.w3.org/2000/xmlns/) ist reserviert und darf nicht verwendet werden).  |
 |   9480    |   16  |   nein  |   XML-Analyse: Zeile %d, Zeichen %d, nicht unterstützter XML-Code. |
 |   9500    |   16  |   nein  |   Der in der VALUE-Methode verwendete '%.*ls'-Datentyp ist ungültig.  |
 |   9501    |   16  |   nein  |   XQuery: 'sql:variable('%.*ls')' kann nicht aufgelöst werden. Die Variable muss als TSQL-Skalarvariable deklariert werden.   |
@@ -5860,7 +5860,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   14684   |   16  |   nein  |   Gefundene Fehlernummer: %d, Ebene: %d, Status: %d, in Prozedur: %s, Zeile: %d, mit Meldung: %s   |
 |   14685   |   16  |   nein  |   Der Sammlungssatz '%s' enthält keine Sammelelemente. Das Starten des Sammlungssatzes hat daher keinerlei Auswirkungen. |
 |   14686   |   16  |   nein  |   Der MDWInstance- und der MDWDatabase-Parameter des Konfigurationsspeichers darf nicht NULL sein.   |
-|   14687   |   16  |   nein  |   Ungültiger Wert (%d) des \@cache_window-Parameters. Zulässige Werte sind: -1 (alle hochgeladenen Daten von früheren Uploadfehlern werden zwischengespeichert), 0 (es werden keine hochgeladenen Daten zwischengespeichert), N (Daten aus N früheren Uploadfehlern werden zwischengespeichert, wobei N &gt;= 1).  |
+|   14687   |   16  |   nein  |   Ungültiger Wert (%d) des \@cache_window-Parameters.  Zulässige Werte sind: -1 (alle hochgeladenen Daten von früheren Uploadfehlern werden zwischengespeichert), 0 (es werden keine hochgeladenen Daten zwischengespeichert), N (Daten aus N früheren Uploadfehlern werden zwischengespeichert, wobei N >= 1).  |
 |   14688   |   16  |   nein  |   Ein Sammlungssatz kann nicht gestartet werden, wenn der SQL Server-Agent angehalten wurde. Starten Sie den SQL Server-Agent. |
 |   14689   |   16  |   nein  |   Ein Sammlungssatz kann nicht gestartet werden, wenn das Verwaltungs-Data Warehouse nicht konfiguriert ist. Führen Sie das instmdw.sql-Skript aus, um das Verwaltungs-Data Warehouse zu erstellen und zu konfigurieren. |
 |   14690   |   16  |   nein  |   Diese Prozedur kann nicht durchgeführt werden, wenn der Sammler aktiviert ist. Deaktivieren Sie den Sammler, und wiederholen Sie den Vorgang.  |
@@ -8894,7 +8894,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   33024   |   16  |   nein  |   Der Kryptografieanbieter %S_MSG '%ls' in der DLL stimmt nicht mit der GUID überein, die im Systemkatalog für den Anbieter mit der ID %d aufgezeichnet ist.   |
 |   33025   |   16  |   nein  |   Ungültige Kryptografieanbietereigenschaft: %S_MSG.   |
 |   33026   |   16  |   nein  |   Der Kryptografieanbieter mit der GUID '%ls' ist bereits vorhanden.  |
-|   [33027](mssqlserver-33027-database-engine-error.md) |       |       |   Fehler beim Laden des Kryptografieanbieters ‚%.*ls’ aufgrund einer ungültigen Authenticode-Signatur oder eines ungültigen Dateipfades. Überprüfen Sie vorhergehende Meldungen auf weitere Fehler.    |
+|   [33027](mssqlserver-33027-database-engine-error.md) |       |       |   Fehler beim Laden des Kryptografieanbieters ‚%.*ls’ aufgrund einer ungültigen Authenticode-Signatur oder eines ungültigen Dateipfades. Überprüfen Sie vorhergehende Meldungen auf weitere Fehler.    |
 |   33027   |   16  |   nein  |   Bibliothek "%.*ls" kann nicht geladen werden. Weitere Informationen finden Sie im Fehlerprotokoll. |
 |   [33028](mssqlserver-33028-database-engine-error.md) |   16  |   nein  |   Sitzung kann nicht für %S_MSG ‚%.*ls’ geöffnet werden. Anbieterfehlercode: %d. (%S_MSG)   |
 |   33029   |   16  |   nein  |   Der Kryptografieanbieter kann nicht initialisiert werden. Anbieterfehlercode: %d. (%S_MSG) |
@@ -9069,7 +9069,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
 [Grundlegendes zu Datenbank-Engine-Fehlern](../../relational-databases/errors-events/understanding-database-engine-errors.md)  
-[Ursachen und Lösungen für Datenbank-Engine-Fehler](http://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)  
+[Ursachen und Lösungen für Datenbank-Engine-Fehler](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)  
 
   
   

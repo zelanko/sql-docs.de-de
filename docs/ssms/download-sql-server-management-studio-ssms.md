@@ -1,7 +1,7 @@
 ---
 title: Herunterladen von SQL Server Management Studio (SSMS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/25/2018
+ms.date: 11/16/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20dbf5e89a29c7a92cb3c8172cb037f0983203ec
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: d36dd71c7b67b079f2a87ca2875412a38f14aa93
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971071"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699434"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Herunterladen von SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,26 +43,43 @@ Verwenden Sie SQL Server Management Studio (SSMS) zum Abfragen, Entwerfen und Ve
 
 **SSMS ist kostenlos!**
 
+**[SSMS 18.0 Public Preview 5 ist nun verfügbar](#ssms-180-preview-5) und stellt die neueste Generation von *SQL Server Management Studio* dar, die Unterstützung für [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] bietet.**
+
 ## <a name="ssms-179-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9 ist die aktuelle Version von SSMS mit allgemeiner Verfügbarkeit (GA, General Availability)
 
 **[![Download](../ssdt/media/download.png) SQL Server Management Studio 17.9 herunterladen](https://go.microsoft.com/fwlink/?linkid=2014306)**
 <br>**[![Download](../ssdt/media/download.png) Upgradepaket für SQL Server Management Studio 17.9 (Upgrades 17.x bis 17.9) herunterladen](https://go.microsoft.com/fwlink/?linkid=2014215)**
 
+### <a name="available-languages-ssms-179"></a>Verfügbare Sprachen (SSMS 17.9)
+
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
+
 Weitere Informationen zu SSMS 17.9 finden Sie im [Änderungsprotokoll für SSMS 17.9](sql-server-management-studio-changelog-ssms.md#ssms-179-latest-ga-release).
 
-## <a name="ssms-180-preview"></a>SSMS 18.0 (Preview)
+## <a name="ssms-installation-tips-and-issues-ssms-179"></a>Tipps und Probleme bei der Installation von SSMS (SSMS 17.9)
 
-**SSMS 18.0 Public Preview 4 ist nun verfügbar und stellt die neueste Generation von *SQL Server Management Studio* dar, die Unterstützung für [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] bietet.**
+### <a name="minimize-installation-reboots"></a>Minimieren von Installationsneustarts
 
-**[![Download](../ssdt/media/download.png) SQL Server Management Studio 18.0 (Preview 4) herunterladen](https://go.microsoft.com/fwlink/?linkid=2014662)**
+* Führen Sie die folgenden Aktionen durch, um zu verhindern, dass das SSMS-Setup einen Neustart am Ende der Installation benötigt:
+  * Stellen Sie sicher, dass Sie eine aktuelle Version von Microsoft Visual C++ 2013 Redistributable Package ausführen. Die Version 12.0.40649.5 (oder höher) ist erforderlich. Es wird nur die x64-Version benötigt.
+  * Überprüfen Sie, ob die .NET Framework-Version auf dem Computer 4.6.1 (oder höher) ist.
+  * Schließen Sie alle Instanzen von Visual Studio, die auf dem Computer geöffnet sind.
+  * Stellen Sie sicher, dass die neuesten Betriebssystemupdates auf dem Computer installiert sind.
+  * Die registrierten Aktionen werden normalerweise nur einmal benötigt. Es gibt einige Fälle, in denen ein Neustart während zusätzlichen Upgrades auf dieselbe Hauptversion von SSMS notwendig sind. Für kleinere Upgrades sind alle Voraussetzungen für SSMS bereits auf dem Computer vorhanden.
 
-Preview 4 ist die erste öffentliche Vorschau von SSMS 18.0.
+## <a name="ssms-180-preview-5"></a>SSMS 18.0 (Preview 5)
+
+**SSMS 18.0 Public Preview 5 ist nun verfügbar und stellt die neueste Generation von *SQL Server Management Studio* dar, die Unterstützung für [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] bietet.**
+
+**[![Download](../ssdt/media/download.png) SQL Server Management Studio 18.0 (Preview 5) herunterladen](https://go.microsoft.com/fwlink/?linkid=2041155)**
+
+*Preview 5* ist die zweite öffentliche Vorschauversion von SSMS 18.0. Wenn Sie eine niedrigere Vorschauversion von SSMS 18.0 installiert haben, deinstallieren Sie diese, bevor Sie SSMS 18.0 Preview 5 installieren.
 
 **Versionsinformationen**
 
-- Releasenummer: 18.0 (Preview 4)<br>
-- Buildnummer: 15.0.18040.0<br>
-- Veröffentlichungsdatum: 24. September 2018
+- Releasenummer: 18.0 (Preview 5)<br>
+- Buildnummer: 15.0.18068.0<br>
+- Veröffentlichungsdatum: 15. November 2018
 
 Wenn Sie Kommentare oder Vorschläge haben oder Probleme melden möchten, erreichen Sie das SSMS-Team am besten über [UserVoice](https://aka.ms/sqlfeedback).
 
@@ -71,34 +88,34 @@ Durch die Installation von SSMS 18.x erfolgt weder ein Upgrade noch eine Ersetzu
 Wenn ein Computer parallele SSMS-Installationen enthält, sollten Sie sich vergewissern, dass Sie die richtige Version für Ihre speziellen Anforderungen starten. Die neueste Version heißt *Microsoft SQL Server Management Studio 18*.
  
 
-## <a name="available-languages-ssms-180-preview"></a>Verfügbare Sprachen (SSMS 18.0 Preview)
+## <a name="available-languages-ssms-180-preview-5"></a>Verfügbare Sprachen (SSMS 18.0 Preview 5)
 
 Diese Version von SSMS kann in folgenden Sprachen installiert werden:
 
-SQL Server Management Studio 18.0 (Preview 4):<br>
-[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x40a)
+SQL Server Management Studio 18.0 (Preview 5):<br>
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x40a)
 
 Upgradepaket für SQL Server Management Studio 18.0 (Upgrades auf 18.0):<br>
-Zurzeit ist keine Upgradeoption verfügbar.
+Zurzeit ist keine Upgradeoption verfügbar. Wenn Sie eine niedrigere Vorschauversion von SSMS 18.0 installiert haben, deinstallieren Sie diese, bevor Sie SSMS 18.0 Preview 5 installieren.
 
 > [!NOTE]
 > Das SQL Server PowerShell-Modul ist eine separate Installation über den PowerShell-Katalog. Weitere Informationen finden Sie unter [Download SQL Server PowerShell Module](download-sql-server-ps-module.md) (Herunterladen des SQL Server PowerShell-Moduls).
 
 
-## <a name="new-in-this-release-ssms-180-preview"></a>In dieser Version neu (SSMS 18.0 Preview)
+## <a name="new-in-this-release-ssms-180-preview-5"></a>Neues in dieser Version (SSMS 18.0 Preview 5)
 
-SSMS 18.0 (Preview) ist die neueste Version von SQL Server Management Studio. Die Generation 18.x von SSMS bietet Unterstützung für beinahe alle Featurebereiche unter SQL Server 2008 bis SQL Server 2019 Preview.
+SSMS 18.0 (Preview 5) ist die neueste Version von SQL Server Management Studio. Die Generation 18.x von SSMS bietet Unterstützung für beinahe alle Featurebereiche unter SQL Server 2008 bis SQL Server 2019 Preview.
 
 Ausführliche Informationen zu Neuerungen in dieser Version finden Sie im [SSMS-Änderungsprotokoll](sql-server-management-studio-changelog-ssms.md).
 
 
-## <a name="supported-sql-offerings-ssms-180-preview"></a>Unterstützte SQL-Angebote (SSMS 18.0 Preview)
+## <a name="supported-sql-offerings-ssms-180-preview-5"></a>Unterstützte SQL-Angebote (SSMS 18.0 Preview 5)
 
 * Diese Version von SSMS funktioniert mit allen [unterstützten Versionen von SQL Server 2008 – [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) und bietet das höchste verfügbare Maß an Unterstützung für die Arbeit mit den neuesten Cloudfunktionen in Azure SQL-Datenbank und Azure SQL Data Warehouse.
 * Zusätzlich kann SSMS 18.x parallel zu SSMS 17.x, SSMS 16.x oder SQL Server 2014 SSMS und früheren Versionen installiert werden.
 * SQL Server Integration Services (SSIS): SSMS Version 17.x oder höher unterstützt das Herstellen von Verbindungen zum veralteten Dienst SQL Server Integration Services nicht. Verwenden Sie die Version von SSMS, die auf die Version von SQL Server ausgerichtet ist, um eine Verbindung zu einer früheren Version von Integration Services herzustellen. Verwenden Sie beispielsweise SSMS 16.x, um eine Verbindung zum veralteten Dienst SQL Server 2016 Integration Services herzustellen. SSMS 17.x und SSMS 16.x können parallel auf demselben Computer installiert sein. Seit dem Release von SQL Server 2012 wird empfohlen, Integration Services-Pakete mithilfe der SSIS-Katalogdatenbank (SSISDB) zu speichern, zu verwalten, auszuführen und zu überwachen. Weitere Informationen finden Sie unter [SSIS-Katalog](../integration-services/catalog/ssis-catalog.md).
 
-## <a name="supported-operating-systems-ssms-180-preview"></a>Unterstützte Betriebssysteme (SSMS 18.0 Preview)
+## <a name="supported-operating-systems-ssms-180-preview-5"></a>Unterstützte Betriebssysteme (SSMS 18.0 Preview 5)
 
 Dieses Release von SSMS unterstützt die folgenden 64-Bit-Plattformen, wenn sie mit dem aktuellen Service Pack ausgestattet sind:
 
@@ -113,34 +130,18 @@ Dieses Release von SSMS unterstützt die folgenden 64-Bit-Plattformen, wenn sie 
 > [!NOTE]
 > SSMS wird nur unter Windows ausgeführt. Wenn Sie ein Tool benötigen, das auf anderen Plattformen als Windows ausgeführt wird, sehen Sie sich Azure Data Studio an. Azure Data Studio ist ein neues plattformübergreifendes Tool, das unter macOS, Linux sowie Windows ausgeführt werden kann. Weitere Informationen finden Sie unter [Azure Data Studio](../azure-data-studio/what-is.md).
   
-## <a name="ssms-installation-tips-and-issues-ssms-180-preview"></a>Tipps und Probleme bei der Installation von SSMS (SSMS 18.0 Preview)
-
-### <a name="minimize-installation-reboots"></a>Minimieren von Installationsneustarts
-
-* Führen Sie die folgenden Aktionen durch, um zu verhindern, dass das SSMS-Setup einen Neustart am Ende der Installation benötigt:
-  * Stellen Sie sicher, dass Sie eine aktuelle Version von Microsoft Visual C++ 2013 Redistributable Package ausführen. Die Version 12.0.40649.5 (oder höher) ist erforderlich. Es wird nur die x64-Version benötigt.
-  * Überprüfen Sie, ob die .NET Framework-Version auf dem Computer 4.6.1 (oder höher) ist.
-  * Schließen Sie alle anderen Instanzen von Visual Studio, die auf dem Computer geöffnet sind.
-  * Stellen Sie sicher, dass die neuesten Betriebssystemupdates auf dem Computer installiert sind.
-  * Die registrierten Aktionen werden normalerweise nur einmal benötigt. Es gibt einige Fälle, in denen ein Neustart während zusätzlichen Upgrades auf dieselbe Hauptversion von SSMS notwendig sind. Für kleinere Upgrades sind alle Voraussetzungen für SSMS bereits auf dem Computer vorhanden.
 
 
-## <a name="release-notes-ssms-180-preview"></a>Anmerkungen zu dieser Version (SSMS 18.0 Preview)
 
-Im Folgenden werden bekannte Probleme in der aktuellen Version aufgeführt:
+## <a name="release-notes-ssms-180-preview-5"></a>Versionshinweise (SSMS 18.0 Preview 5)
 
-> [!IMPORTANT]
-> Bei Verwendung des Authentifizierungstyps *Active Directory: Universell mit MFA-Unterstützung* für den SQL-Abfrage-Editor stellen Benutzer möglicherweise fest, dass die Verbindung bei jedem Aufruf der Abfrage geschlossen und erneut geöffnet wird. Nebeneffekte eines solchen Schließens sind unter anderem, dass globale temporäre Tabellen unerwartet gelöscht werden und manchmal der Verbindung eine neue SPID gegeben wird. Ein solches Schließen tritt nicht auf, wenn die Verbindung eine offene Transaktion aufweist. Um dieses Problem zu umgehen, können Benutzer `persist security info=true` in den Verbindungsparametern festlegen.
+Folgende Probleme von SSMS 18.0 Preview 5 sind bekannt:
 
 SSMS
 
 - Durch Doppelklicken auf eine SQL-Datei wird SSMS gestartet, das eigentliche Skript jedoch nicht geöffnet.
   - Problemumgehung: Verschieben Sie die SQL-Datei mit Drag und Drop in den SSMS-Editor.
 
-SSIS
-
-- Das Paket kann nicht erfolgreich bereitgestellt oder ausgeführt werden, wenn es eine alte Version von SQL Server zum Ziel hat und gleichzeitig Skripttask- und Skriptkomponenten enthält.
-- SSMS kann keine Verbindung mit Remote-Integration-Services herstellen.
 
 
 ## <a name="previous-releases"></a>Vorgängerversionen

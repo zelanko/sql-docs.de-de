@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren einer SQL Server-Verteilungsdatenbank in einer Verfügbarkeitsgruppe | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 11/13/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 94616b5950ca1ff7f33d9061d2bbc8bab53fbc8c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48817998"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602630"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Einrichten der Verteilungsdatenbank für die Replikation in einer Always On-Verfügbarkeitsgruppe
 
@@ -48,6 +48,7 @@ Nachdem eine Verteilungsdatenbank gemäß der nachfolgenden Anleitung in der Ver
 - Knoten zur vorhandenen Verteilungsdatenbank hinzufügen oder daraus entfernen
 - Ein Verteiler kann über mehrere Verteilungsdatenbanken verfügen. Jede Verteilungsdatenbank kann sich in einer eigenen oder gar keiner Verfügbarkeitsgruppe befinden. Mehrere Verteilungsdatenbanken können sich eine Verfügbarkeitsgruppe teilen.
 - Verleger und Verteiler müssen sich auf separaten SQL Server-Instanzen befinden.
+- Wenn der Listener für die Verfügbarkeitsgruppe, die die Verteilungsdatenbank hostet, so konfiguriert ist, dass kein Standardport verwendet wird, müssen Sie einen Alias für den Listener und den Port einrichten.
 
 ## <a name="limitations-or-exclusions"></a>Einschränkungen oder Ausschlüsse
 
@@ -63,6 +64,7 @@ Nachdem eine Verteilungsdatenbank gemäß der nachfolgenden Anleitung in der Ver
 - Für die Verfügbarkeitsgruppe der Verteilungsdatenbank muss ein Listener konfiguriert sein.
 - Sekundäre Replikate in einer Verfügbarkeitsgruppe einer Verteilungsdatenbank können synchron oder asynchron sein. Der synchrone Modus wird jedoch empfohlen und bevorzugt.
 - Die bidirektionale Transaktionsreplikation wird nicht unterstützt.
+- SSMS zeigt für Verteilungsdatenbanken nicht die Status „Wird synchronisiert“ bzw. „Synchronisiert“ an, wenn eine Verteilungsdatenbank zu einer Verfügbarkeitsgruppe hinzugefügt wird.
 
 
    >[!NOTE]
@@ -391,9 +393,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
- /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+ /* For security reasons the linked server remote logins password is changed with ######## */
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f6f3e3d23c2d2777a3a17db16d047222991d48a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6feef76b565f8a1bb738175a06b8b6ab5d68c440
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030619"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813173"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Bereitstellen des Webparts des Berichts-Viewers für SQL Server Reporting Services auf einer SharePoint-Website
 
@@ -79,7 +79,7 @@ In diesem Abschnitt erfahren Sie, wie Sie das Lösungspaket für Ihre SharePoint
 
     ![Websiteeinstellungen über das Zahnradsymbol.](media/sharepoint-site-settings.png)
 
-    Standardmäßig wird auf SharePoint-Webanwendungen über Port 80 zugegriffen. Dies bedeutet, dass Sie häufig auf eine SharePoint-Website zugreifen können, indem Sie *http://<computer name>* eingeben, um die Stammwebsitesammlung zu öffnen.
+    Standardmäßig wird auf SharePoint-Webanwendungen über Port 80 zugegriffen. Dies bedeutet, dass Sie häufig auf eine SharePoint-Website zugreifen können, indem Sie *https://<computer name>* eingeben, um die Stammwebsitesammlung zu öffnen.
 
 3. Klicken Sie unter **Websitesammlungsverwaltung** auf **Site collection features** (Websitesammlungsfeatures).
 
@@ -119,7 +119,7 @@ Durch das Zurückziehen der Lösung wird das Berichts-Viewer-Webpart nicht aus d
 
     ![Websiteeinstellungen über das Zahnradsymbol.](media/sharepoint-site-settings.png)
 
-    Standardmäßig wird auf SharePoint-Webanwendungen über Port 80 zugegriffen. Dies bedeutet, dass Sie häufig auf eine SharePoint-Website zugreifen können, indem Sie *http://<computer name>* eingeben, um die Stammwebsitesammlung zu öffnen.
+    Standardmäßig wird auf SharePoint-Webanwendungen über Port 80 zugegriffen. Dies bedeutet, dass Sie häufig auf eine SharePoint-Website zugreifen können, indem Sie *https://<computer name>* eingeben, um die Stammwebsitesammlung zu öffnen.
 
 2. Klicken Sie unter **Web-Designer-Kataloge** auf **Webparts**.
 

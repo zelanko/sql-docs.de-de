@@ -11,12 +11,12 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bad683dc5ad0b49ac464ab3efcb90a652d45aa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca00f40146d5019f770e3141d3961e40ed526ccc
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760818"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559158"
 ---
 # <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>Lektion 3-3: Testen des Lektion 3-Tutorialpakets
 In dieser Aufgabe führen Sie das Paket Lesson 3.dtsx aus. Beim Ausführen des Pakets werden im Fenster Protokollereignisse die Protokolleinträge aufgelistet, die in die Protokolldatei geschrieben werden. Nachdem vom Paket die Ausführung abgeschlossen wurde, überprüfen Sie den Inhalt der Protokolldatei, die vom Protokollanbieter generiert worden ist.  
@@ -32,7 +32,7 @@ Bevor Sie das Paket testen, sollten Sie überprüfen, ob Ablaufsteuerung und Dat
   
 ![Datenfluss im Paket](../integration-services/media/task9lesson1data.gif "Datenfluss im Paket")  
   
-### <a name="to-run-the-lesson-4-tutorial-package"></a>So führen Sie das Lernprogrammpaket aus Lektion 4 aus  
+### <a name="to-run-the-lesson-3-tutorial-package"></a>So führen Sie das Tutorialpaket aus Lektion 3 aus  
   
 1.  Klicken Sie im Menü SSIS auf Protokollereignisse.  
   

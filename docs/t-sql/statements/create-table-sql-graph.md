@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a143011f3fb93c9aeef6d699e89e0d12b664409c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b4efb9168f49b6c574b3358cba6dadb6d5896af
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855728"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269893"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL-Graph)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ Das Erstellen einer Knoten- oder Edgetabelle als temporale Tabelle wird nicht un
 
 Stretch Database wird für Knoten- oder Edgetabellen nicht unterstützt.
 
-Knoten- oder Edgetabellen können keine externen Tabellen sein (es besteht keine Unterstützung von PolyBase für Graph-Tabellen). 
+Knoten- oder Edgetabellen können keine externen Tabellen sein (es besteht keine Unterstützung von PolyBase für Graphtabellen). 
   
  
 ## <a name="examples"></a>Beispiele  

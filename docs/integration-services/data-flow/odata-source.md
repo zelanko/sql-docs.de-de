@@ -16,12 +16,12 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b0a2404d61f9eaeffae606cec86cedb1ecb491f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 820541da1699e2e74a9ec0b9a5f00f094a14f38c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692128"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638658"
 ---
 # <a name="odata-source"></a>OData-Quelle
 Verwenden Sie die OData-Quellkomponente in einem SSIS-Paket, um Daten aus einem Open Data Protocol (OData)-Dienst zu nutzen.
@@ -38,13 +38,13 @@ Die Komponente unterstützt die OData v3 und v4-Protokolle.
 
 Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
 -   Microsoft Dynamics AX Online und Microsoft Dynamics CRM Online
--   SharePoint-Listen. Um alle Listen auf einem SharePoint-Server anzuzeigen, verwenden Sie die folgende URL: „http://\<Server>/_vti_bin/ListData.svc“. Weitere Informationen zu den URL-Konventionen in SharePoint finden Sie unter [SharePoint Foundation-REST-Schnittstelle](http://msdn.microsoft.com/library/ff521587.aspx).
+-   SharePoint-Listen. Damit alle Listen auf einem SharePoint-Server angezeigt werden, verwenden Sie die folgende URL: „https://\<Server>/_vti_bin/ListData.svc“. Weitere Informationen zu den URL-Konventionen in SharePoint finden Sie unter [SharePoint Foundation-REST-Schnittstelle](https://msdn.microsoft.com/library/ff521587.aspx).
 
 ## <a name="supported-data-types"></a>Unterstützte Datentypen
 
 Die OData-Datenquelle unterstützt die folgenden einfachen Datentypen: int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string und TimeSpan.
 
-Um die Datentypen der Spalten in der Datenquelle zu ermitteln, lesen Sie die `http://<OData feed endpoint>/$metadata`-Seite.
+Um die Datentypen der Spalten in der Datenquelle zu ermitteln, lesen Sie die `https://<OData feed endpoint>/$metadata`-Seite.
 
 > [!IMPORTANT]
 > Die OData-Quellkomponente unterstützt keine komplexen Typen wie Multiple-Choice-Elemente in SharePoint-Listen.

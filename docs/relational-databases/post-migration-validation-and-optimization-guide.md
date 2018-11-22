@@ -1,12 +1,10 @@
 ---
 title: Handbuch für die Überprüfung und Optimierung nach der Migration | Microsoft-Dokumtenation
-ms.custom: ''
 ms.date: 5/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - post-migration validation and optimization
@@ -14,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-manager: ''
-ms.openlocfilehash: fe6ebb9967a3f1569db605a17b8f48b2a82a0470
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 897f8affc74e764b19457aec84bfff21b867895e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662948"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658521"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Handbuch für die Überprüfung und Optimierung nach der Migration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ Wenn Sie von einer älteren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 
 Seit [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] sind daher alle Änderungen des Abfrageoptimierers an den neuesten [Datenbank-Kompatibilitätsgrad](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) gebunden, sodass Pläne nicht sofort im Moment des Upgrades geändert werden, sondern erst, wenn ein Benutzer die Datenbankoption `COMPATIBILITY_LEVEL` auf die neuste aktualisiert. Diese Möglichkeit gibt Ihnen in Kombination mit dem Abfragespeicher ein großes Maß an Kontrolle über die Abfrageleistung im Upgradeprozess. 
 
-Weitere Informationen zu Änderungen des Abfrageoptimierers, der in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] eingeführt wurde, finden Sie unter [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimieren Ihrer Abfragepläne mit der Kardinalitätsschätzung von SQL Server 2014)](http://msdn.microsoft.com/library/dn673537.aspx).
+Weitere Informationen zu Änderungen des Abfrageoptimierers, der in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] eingeführt wurde, finden Sie unter [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimieren Ihrer Abfragepläne mit der Kardinalitätsschätzung von SQL Server 2014)](https://msdn.microsoft.com/library/dn673537.aspx).
 
 ### <a name="steps-to-resolve"></a>Schritte zum Beheben
 
@@ -53,7 +51,7 @@ Weitere Informationen zu diesem Thema finden Sie unter [Aufrechterhalten einer s
 **Gilt für:** die Migration von Drittanbieter-Plattformen (z.B. Oracle, DB2, MySQL und Sybase) zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 > [!NOTE]
-> Bei Migrationen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird dieses Szenario bei einer Migration auf eine neuere, unveränderte Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht berücksichtigt, wenn das Problem auf dem Quell-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits bestand. 
+> Bei Migrationen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird dieses Szenario bei einer Migration auf eine neuere, unveränderte Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  nicht berücksichtigt, wenn das Problem auf dem Quell-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits bestand. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kompiliert Abfragepläne in gespeicherten Prozeduren, indem die Eingabeparameter bei der ersten Kompilierung ermittelt werden. Anschließend wird ein parametrisierter und wiederverwendeter Plan generiert, der für diese Verteilung von Eingabedaten optimiert ist. Die meisten Anweisungen, die triviale Pläne generieren, werden parametrisiert, wenn auch nicht in gespeicherten Prozeduren. Nachdem Sie ein Plan zuerst zwischengespeichert wird, wird jede spätere Ausführung einem zuvor zwischengespeicherten Plan zugeordnet.
 Ein mögliches Problem tritt auf, wenn diese erste Kompilierung möglicherweise nicht die am häufigsten verwendeten Parametersätze für die übliche Arbeitsauslastung verwendet hat. Bei anderen Parametern wird derselbe Ausführungsplans ineffizient. Weitere Informationen zu diesem Thema finden Sie unter [Parameterermittlung](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
@@ -81,7 +79,7 @@ Falsche oder fehlende Indizes führt zu zusätzlicher Eingabe/Ausgabe, wegen der
 
 1.  Nutzen Sie den grafischen Ausführungsplan für „Fehlender Index“-Verweise.
 2.  Indizieren Sie generierte Vorschläge mit dem [Datenbankoptimierungsratgeber](../tools/dta/tutorial-database-engine-tuning-advisor.md).
-3.  Nutzen Sie die [Fehlende Indizes-DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) oder das [SQL Server-Leistungsdashboard](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+3.  Nutzen Sie die [Fehlende Indizes-DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) oder das [SQL Server-Leistungsdashboard](https://www.microsoft.com/download/details.aspx?id=29063).
 4.  Nutzen Sie bereits vorhandene Skripts, die vorhandene DMVs verwenden können, um einen Einblick in alle fehlenden, doppelten, redundante, selten verwendeten und nicht vollständig verwendeten Indizes zu bieten. Verwenden Sie diese Skripts auch, wenn Indexverweise in vorhandenen Prozeduren und Funktionen in der Datenbank mit einem Hinweis versehen/hartcodiert wurden. 
 
 > [!TIP] 

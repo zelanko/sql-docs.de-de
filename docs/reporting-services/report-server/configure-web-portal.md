@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f37cb519981b0f3ac0be532ad82e6ed74d073d8f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 606b6fa37f5dc067cdf134792215fd7c2cd09067
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031704"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813213"
 ---
 # <a name="configure-the-web-portal"></a>Konfigurieren des Webportals
 
@@ -80,7 +80,7 @@ Sie können ein benutzerdefiniertes Markenpaket erstellen, um die für das Webpo
 
 2. Öffnen Sie Internet Explorer.
 
-3. Geben Sie die Webportal-URL ein. Standardmäßig lautet sie „http://\<**ihr-servername**>/reports“, aber wenn Sie Reporting Services als Instanz mit einem Namen installiert haben, ändert sie sich zu: „http://\<**ihr-servername**>/reports\<**_instanzname**>“.
+3. Geben Sie die Webportal-URL ein. Standardmäßig lautet sie „https://\<**ihr-servername**>/reports“, aber wenn Sie Reporting Services als Instanz mit einem Namen installiert haben, ändert sie sich in: „https://\<**ihr-servername**>/reports\<**_Instanzname**>“.
 
 4. Wählen Sie **Siteeinstellungen**aus.
 

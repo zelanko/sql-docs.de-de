@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7c7dd4137517f9ad4ec97dda1b0fa948f40feb4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9bb61746e2794faa9fab5f2fbc89c42fbe9ccd5f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021894"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814333"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Webportal (einheitlicher SSRS-Modus)
 
@@ -75,9 +75,9 @@ Führen Sie folgende Schritte aus, um das Webportal über einen Webbrowser zu st
 
 2. Geben Sie in die Adressleiste des Webbrowsers die URL des Webportals ein.
 
-    Standardmäßig lautet die URL *http://[ComputerName]/reports*.
+    Standardmäßig lautet die URL *https://[ComputerName]/reports*.
 
-    Der Berichtsserver ist möglicherweise für die Verwendung eines bestimmten Ports konfiguriert. Zum Beispiel, *http://[ComputerName]:80/reports* oder *http://[ComputerName]:8080/reports*.
+    Der Berichtsserver ist möglicherweise für die Verwendung eines bestimmten Ports konfiguriert. Zum Beispiel, *https://[ComputerName]:80/reports* oder *https://[ComputerName]:8080/reports*.
 
 ## <a name="grouping-by-categories"></a>Gruppieren nach Kategorien
 

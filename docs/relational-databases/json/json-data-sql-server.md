@@ -14,15 +14,18 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a049e4b6d965f5eccc661414214585430a305290
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 166b6517389b9c48b37544df1a0e71e621b617f8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758568"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664619"
 ---
 # <a name="json-data-in-sql-server"></a>JSON-Daten in SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+> [!div class="nextstepaction"]
+> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 JSON ist ein beliebtes Textdatenformat, das zum Austauschen von Daten in modernen Webanwendungen und mobilen Anwendungen verwendet wird. JSON wird auch zum Speichern von unstrukturierten Daten in Protokolldateien oder NoSQL-Datenbanken wie Microsoft Azure Cosmos DB verwendet. Viele REST-Webdienste geben Ergebnisse zurück, die als JSON-Text formatiert sind, oder akzeptieren Daten, die im JSON-Format formatiert sind. Beispielsweise verfügen die meisten Azure-Dienste wie Azure Search, Azure Storage und Azure Cosmos DB über REST-Endpunkte, die JSON zurückgeben oder verarbeiten. JSON ist auch das hauptsächliche Format zum Austauschen von Daten zwischen Webseiten und Webservern über AJAX-Aufrufe. 
 
@@ -62,9 +65,9 @@ In den nächsten Abschnitten werden die wichtigsten Funktionen erläutert, die S
 Wenn Sie JSON-Text verwenden, der in Datenbanktabellen gespeichert ist, können Sie Werte in dem JSON-Text lesen oder ändern, indem Sie die folgenden integrierten Funktionen verwenden:  
     
 -   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) testet, ob eine Zeichenfolge gültige JSON-Zeichenfolgen enthält.
--   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) extrahiert einen Skalarwert aus einer JSON-Zeichenfolge.
--   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) extrahiert ein Objekt oder ein Array aus einer JSON-Zeichenfolge.
--   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) ändert einen Wert in der JSON-Zeichenfolge.
+-   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) extrahiert einen Skalarwert aus einer JSON-Zeichenfolge.
+-   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) extrahiert ein Objekt oder ein Array aus einer JSON-Zeichenfolge.
+-   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) ändert einen Wert in der JSON-Zeichenfolge.
 
 
 **Beispiel**
@@ -244,7 +247,7 @@ Hier folgen einige Anwendungsfälle, die veranschaulichen, wie Sie die integrier
 
 ## <a name="store-and-index-json-data-in-sql-server"></a>Speichern und Indizieren von JSON-Daten in SQL Server
 
-JSON ist ein Textformat. Deshalb können JSON-Dokumente in einer SQL-Datenbank-Instanz in `NVARCHAR`-Spalten gespeichert werden. Da der Typ `NVARCHAR` in allen untergeordneten Systemen von SQL Server unterstützt wird, können Sie JSON-Dokumente in Tabellen mit **CLUSTERED COLUMNSTORE**-Indizes, **arbeitsspeicheroptimierten** Tabellen oder externen Dateien speichern, die mit OPENROWSET oder Polybase gelesen werden können.
+JSON ist ein Textformat. Deshalb können JSON-Dokumente in einer SQL-Datenbank-Instanz in `NVARCHAR`-Spalten gespeichert werden. Da der Typ `NVARCHAR` in allen untergeordneten Systemen von SQL Server unterstützt wird, können Sie JSON-Dokumente in Tabellen mit **CLUSTERED COLUMNSTORE**-Indizes, **arbeitsspeicheroptimierten** Tabellen oder externen Dateien speichern, die mit OPENROWSET oder PolyBase gelesen werden können.
 
 Weitere Informationen zu den verschiedenen Optionen zum Speichern, Indizieren und Optimieren von JSON-Daten in SQL Server finden Sie unter:
 -   [Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank](store-json-documents-in-sql-tables.md)
@@ -255,7 +258,7 @@ Weitere Informationen zu den verschiedenen Optionen zum Speichern, Indizieren un
 
 Sie können Informationen, die in Dateien gespeichert sind, als Standard-JSON oder als JSON-Text formatieren, in dem Zeilenumbrüche als Trennzeichen verwendet werden. SQL Server kann die Inhalte aus JSON-Dateien importieren, sie über die **OPENJSON**- oder **JSON_VALUE**-Funktion analysieren und in Tabellen laden.  
   
--   Wenn Ihre JSON-Dokumente in lokalen Dateien, auf freigegebenen Netzlaufwerken oder ein Azure Files-Speicherorten gespeichert sind, auf die SQL Server zugreifen kann, können Sie einen Massenimport durchführen, um die JSON-Daten in SQL Server zu laden. Weitere Informationen zu diesem Szenario finden Sie unter [Importing JSON files into SQL Server using OPENROWSET (BULK)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)(Importieren von JSON-Dateien in SQL Server mithilfe von OPENROWSET [BULK]).  
+-   Wenn Ihre JSON-Dokumente in lokalen Dateien, auf freigegebenen Netzlaufwerken oder ein Azure Files-Speicherorten gespeichert sind, auf die SQL Server zugreifen kann, können Sie einen Massenimport durchführen, um die JSON-Daten in SQL Server zu laden. Weitere Informationen zu diesem Szenario finden Sie unter [Importing JSON files into SQL Server using OPENROWSET (BULK)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)(Importieren von JSON-Dateien in SQL Server mithilfe von OPENROWSET [BULK]).  
   
 -   Wenn Ihre JSON-Dateien, die Zeilenumbrüche als Trennzeichen verwenden, in Azure-Blobspeicher oder im Hadoop-Dateisystem gespeichert werden, können Sie den JSON-Text mithilfe von PolyBase laden, in Transact-SQL-Code analysieren und in Tabellen laden.  
 
@@ -335,12 +338,12 @@ Sie können z.B. eine JSON-Ausgabe generieren, die der OData-Spezifikation entsp
   
 -   Anforderung: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
   
--   Antwort: `{"@odata.context":"http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+-   Antwort: `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
   
 Diese OData-URL stellt eine Anforderung für die Spalten „ProductID“ und „ProductName“ für das Produkt mit der `id` 1 dar. Sie können **FOR JSON** verwenden, um die Ausgabe erwartungsgemäß in SQL Server zu formatieren.  
   
 ```sql  
-SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
+SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
  AS '@odata.context',   
  ProductID, Name as ProductName   
 FROM Production.Product  
@@ -377,7 +380,7 @@ Mit den Skripts, die in der Datei enthalten sind, haben Sie die folgenden Mögli
   
 ### <a name="microsoft-blog-posts"></a>Microsoft-Blogbeiträge  
   
-Spezielle Lösungen, Anwendungsfälle und Empfehlungen finden Sie in den [Blogbeiträgen über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank.  
+Spezielle Lösungen, Anwendungsfälle und Empfehlungen finden Sie in den [Blogbeiträgen über die integrierte JSON-Unterstützung](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank.  
 
 ### <a name="microsoft-videos"></a>Microsoft-Videos
 

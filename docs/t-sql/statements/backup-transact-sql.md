@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea0a580f54af1296394b26ffd2175efad873657e
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 5c0d52b75baa9850df8d6da546a3abbf31498df8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252207"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699338"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -257,7 +257,7 @@ Gibt eine Datenträgerdatei oder ein Bandmedium oder einen Microsoft Azure-BLOB-
 > Das Datenträgermedium NUL verwirft alle Informationen, die es empfängt, und sollte nur zu Testzwecken verwendet werden. Es ist nicht zur Verwendung in der Produktion bestimmt.
   
 > [!IMPORTANT]  
-> Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] können Sie nur auf ein einzelnes Gerät sichern, wenn Sie über die URL sichern. Um auf mehreren Geräten eine Sicherung durchzuführen, wenn Sie über die URL sichern, verwenden Sie [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Außerdem müssen Sie Shared Access Signature-Token (SAS) verwenden. Beispiele für die Erstellung einer Shared Access Signature finden Sie unter [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md) und [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).  
+> Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] können Sie nur auf ein einzelnes Gerät sichern, wenn Sie über die URL sichern. Um auf mehreren Geräten eine Sicherung durchzuführen, wenn Sie über die URL sichern, verwenden Sie [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Außerdem müssen Sie Shared Access Signature-Token (SAS) verwenden. Beispiele für die Erstellung einer Shared Access Signature finden Sie unter [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md) und [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).  
   
 **URL betrifft**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
@@ -279,7 +279,7 @@ MIRROR TO \<backup_device> [ **,**...*n* ] Gibt einen Satz von bis zu drei sekun
 Diese Option ist nur in der Enterprise Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar.  
   
 > [!NOTE]  
-> Für MIRROR TO = DISK legt BACKUP automatisch die geeignete Blockgröße für Datenträgermedien fest. Weitere Informationen zur Blockgröße finden Sie weiter unten in dieser Tabelle unter "BLOCKSIZE".  
+> Für MIRROR TO = DISK legt BACKUP automatisch die geeignete Blockgröße für Datenträgermedien auf Basis der Sektorgröße des Datenträgers fest. Wenn der MIRROR TO-Datenträger mit einer anderen Sektorgröße als der als primäres Sicherungsmedium angegebener Datenträger formatiert ist, schlägt der backup-Befehl fehl.  Um Sicherungen auf Geräten zu spiegeln, die verschiedene Sektorgrößen aufweisen, muss der BLOCKSIZE-Parameter angegeben werden und sollte auf der höchsten Sektorgröße für die Zielgeräte festgelegt werden.  Weitere Informationen zur Blockgröße finden Sie weiter unten in diesem Thema unter „BLOCKSIZE“.  
   
 \<backup_device> Informationen finden Sie unter "\<backup_device>" weiter oben in diesem Abschnitt.
   
@@ -470,7 +470,7 @@ Gibt die Gesamtanzahl von E/A-Puffern an, die für den Sicherungsvorgang verwend
 Der gesamte von den Puffern belegte Speicherplatz wird durch *buffercount/maxtransfersize* bestimmt.  
   
 > [!NOTE]  
-> Wichtige Informationen zur Verwendung der `BUFFERCOUNT`-Option finden Sie im Blogeintrag [Falsche BufferCount-Datenübertragungsoption kann OOM-Bedingung auslösen](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).  
+> Wichtige Informationen zur Verwendung der `BUFFERCOUNT`-Option finden Sie im Blogeintrag [Falsche BufferCount-Datenübertragungsoption kann OOM-Bedingung auslösen](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).  
 
@@ -726,7 +726,7 @@ Die BACKUP-Anweisung ist nicht in einer expliziten oder implizierten Transaktion
 Sicherungsvorgänge über Plattformen hinweg, sogar zwischen unterschiedlichen Prozessortypen, können ausgeführt werden, solange die Sortierung der Datenbank vom Betriebssystem unterstützt wird.  
  
 Bei Verwendung der Sicherungskomprimierung mit [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)-fähigen Datenbanken mit einer einzelnen Datendatei wird empfohlen, eine `MAXTRANSFERSIZE` Einstellung  **zu verwenden, die 65536 (64 KB) überschreitet**.   
-Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ermöglicht dies einen optimierten Komprimierungsalgorithmus für TDE-verschlüsselte Datenbanken, der eine Seite zuerst entschlüsselt, komprimiert und dann erneut verschlüsselt. Bei Verwendung von `MAXTRANSFERSIZE = 65536` (64 KB), komprimiert die Sicherungskomprimierung mit TDE-verschlüsselten Datenbanken die verschlüsselten Seiten direkt und gibt möglicherweise keine guten Komprimierungsraten aus. Weitere Informationen finden Sie unter [Backup Compression for TDE-enabled Databases (Sicherungskomprimierung für TDE-fähige Datenbanken)](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ermöglicht dies einen optimierten Komprimierungsalgorithmus für TDE-verschlüsselte Datenbanken, der eine Seite zuerst entschlüsselt, komprimiert und dann erneut verschlüsselt. Bei Verwendung von `MAXTRANSFERSIZE = 65536` (64 KB), komprimiert die Sicherungskomprimierung mit TDE-verschlüsselten Datenbanken die verschlüsselten Seiten direkt und gibt möglicherweise keine guten Komprimierungsraten aus. Weitere Informationen finden Sie unter [Backup Compression for TDE-enabled Databases (Sicherungskomprimierung für TDE-fähige Datenbanken)](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
 
 > [!NOTE]  
 > In einigen Fällen ist die Standardeinstellung von `MAXTRANSFERSIZE` größer als 64 KB:
@@ -1003,7 +1003,7 @@ TO URL
 Gibt die URL an, die für den Sicherungsvorgang verwendet werden soll. Das URL-Format wird zum Erstellen von Sicherungen in Microsoft Azure Storage verwendet. 
 
 > [!IMPORTANT]  
-> Um auf mehreren Geräten eine Sicherung durchzuführen, wenn Sie über die URL sichern, müssen Sie Shared Access Signature-Token (SAS) verwenden. Beispiele für die Erstellung einer Shared Access Signature finden Sie unter [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md) und [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).  
+> Um auf mehreren Geräten eine Sicherung durchzuführen, wenn Sie über die URL sichern, müssen Sie Shared Access Signature-Token (SAS) verwenden. Beispiele für die Erstellung einer Shared Access Signature finden Sie unter [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md) und [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).  
   
 *n*  
 Ein Platzhalter, der anzeigt, dass in einer durch Trennzeichen getrennten Liste möglicherweise bis zu 64 Sicherungsmedien angegeben werden.  
@@ -1068,7 +1068,7 @@ Gibt die Gesamtanzahl von E/A-Puffern an, die für den Sicherungsvorgang verwend
 Der gesamte von den Puffern belegte Speicherplatz wird durch *buffercount/maxtransfersize* bestimmt.  
   
 > [!NOTE]  
-> Wichtige Informationen zur Verwendung der `BUFFERCOUNT`-Option finden Sie im Blogeintrag [Falsche BufferCount-Datenübertragungsoption kann OOM-Bedingung auslösen](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).  
+> Wichtige Informationen zur Verwendung der `BUFFERCOUNT`-Option finden Sie im Blogeintrag [Falsche BufferCount-Datenübertragungsoption kann OOM-Bedingung auslösen](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).  
 

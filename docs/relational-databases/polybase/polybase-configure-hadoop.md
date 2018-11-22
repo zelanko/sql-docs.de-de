@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2dd074f4cd7d3d9042e5f0deb3de6ee0731c4af9
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: e899430e196563d4477ae4cbe072cdc1078cd471
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806720"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606560"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop
 
@@ -35,11 +35,9 @@ In diesem Artikel wird erläutert, wie Sie PolyBase in einer SQL Server-Instanz 
 
 - PolyBase unterstützt zwei Hadoop-Anbieter: Hortonworks Data Platform (HDP) und Cloudera Distributed Hadoop (CDH). Hadoop folgt dem Muster „Hauptversion.Nebenversion“ für neue Releases, und alle Versionen, die zu einer unterstützten Haupt- und Nebenversion gehören, werden unterstützt. Folgende Hadoop-Anbieter werden unterstützt:
 
-  - Hortonworks HDP 1.3 auf Linux/Windows Server  
-  - Hortonworks HDP 2.1 – 2.6 unter Linux
-  - Hortonworks HDP 2.1 – 2.3 unter Windows Server  
-  - Cloudera CDH 4.3 unter Linux  
-  - Cloudera CDH 5.1 bis 5.5, 5.9 bis 5.13 unter Linux
+  - Hortonworks HDP 1.3, 2.1 bis 2.6 und 3.0 unter Linux
+  - Hortonworks HDP 1.3 und 2.1 bis 2.3 unter Windows Server
+  - Cloudera CDH 4.3, 5.1 bis 5.5 und 5.9 bis 5.13 unter Linux
 
 > [!NOTE]
 > PolyBase unterstützt Hadoop-Verschlüsselungszonen ab SQL Server 2016 SP1 CU7 und SQL Server 2017 CU3. Wenn Sie [PolyBase-Erweiterungsgruppen](polybase-scale-out-groups.md) verwenden, müssen alle Computeknoten auch einen Build aufweisen, der Unterstützung für Hadoop-Verschlüsselungszonen enthält.
@@ -75,7 +73,7 @@ Um die Abfrageleistung zu verbessern, aktivieren Sie die Weitergabeberechnung f�
 1. Suchen Sie die Datei **yarn-site.xml** im Installationspfad von SQL Server. In der Regel lautet der Pfad:  
 
    ```xml  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolybaseHadoopconf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBaseHadoopconf  
    ```  
 
 1. Suchen Sie auf dem Hadoop-Computer die analoge Datei im Hadoop-Konfigurationsverzeichnis. Suchen Sie in der Datei den Wert des Konfigurationsschlüssels „yarn.application.classpath.“, und kopieren Sie diesen.  
@@ -88,7 +86,7 @@ Um die Abfrageleistung zu verbessern, aktivieren Sie die Weitergabeberechnung f�
 
 Um die Daten in Ihrer Hadoop-Datenquelle abzufragen, müssen Sie eine externe Tabelle definieren, die in Transact-SQL-Abfragen verwendet werden soll. Die folgenden Schritte beschreiben, wie Sie die externe Tabelle konfigurieren.
 
-1. Erstellen Sie einen Hauptschlüssel für die Datenbank, wenn noch keiner vorhanden ist. Dies ist erforderlich, um das Geheimnis für die Anmeldeinformationen zu verschlüsseln.
+1. Erstellen Sie einen Hauptschlüssel für die Datenbank, falls noch keiner vorhanden ist. Dies ist erforderlich, um das Geheimnis für die Anmeldeinformationen zu verschlüsseln.
 
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
@@ -96,7 +94,7 @@ Um die Daten in Ihrer Hadoop-Datenquelle abzufragen, müssen Sie eine externe Ta
     ## <a name="arguments"></a>Argumente
     PASSWORD ='password'
 
-    Das zum Verschlüsseln des Datenbank-Hauptschlüssels verwendete Kennwort. „password“ muss den Anforderungen der Windows-Kennwortrichtlinien des Computers entsprechen, auf dem die Instanz von SQL Server ausgeführt wird.
+    Das zum Verschlüsseln des Datenbank-Hauptschlüssels verwendete Kennwort. „password“ (Kennwort) muss den Anforderungen der Windows-Kennwortrichtlinien des Computers entsprechen, auf dem die Instanz von SQL Server ausgeführt wird.
 1. Erstellen Sie datenbankweite Anmeldeinformationen für Hadoop-Cluster, die mit Kerberos gesichert sind.
 
    ```sql

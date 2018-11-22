@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e40163fe08b451e59dc28915002079b80e987e6f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9ae23135583dc09db8d8a8b0cfb7d356244fb753
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021184"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812277"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Aktivieren der Berichtsserver- und Power View-Integrationsfunktionen in SharePoint
 
@@ -26,7 +26,7 @@ ms.locfileid: "50021184"
 > [!NOTE]
 > Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
 
- Wenn Sie nach der Installation des SharePoint-Produkts das Reporting Services-Add-In für SharePoint 2010-Produkte installieren, werden die Berichtsserverintegrationsfunktion und die Power View-Integrationsfunktion nur für Stammwebsitesammlungen aktiviert. Für andere Websitesammlungen müssen Sie die Funktionen manuell aktivieren. Wenn Sie z.B. eine Websitesammlung wie **http://[Mein Servername]/sites/[Websitesammlungsname]** besitzen, müssen Sie die Reporting Services-Websitesammlungsfunktionen manuell aktivieren.  
+ Wenn Sie nach der Installation des SharePoint-Produkts das Reporting Services-Add-In für SharePoint 2010-Produkte installieren, werden die Berichtsserverintegrationsfunktion und die Power View-Integrationsfunktion nur für Stammwebsitesammlungen aktiviert. Für andere Websitesammlungen müssen Sie die Funktionen manuell aktivieren. Wenn Sie z.B. über eine Websitesammlung wie **https://[Mein Servername]/sites/[Websitesammlungsname]** verfügen, müssen Sie die Reporting Services-Websitesammlungsfeatures manuell aktivieren.  
   
  Wenn keine Stammwebsitesammlung vorhanden ist, wird vom Reporting Services-Add-In ungefähr folgende Meldung protokolliert.  
   

@@ -26,12 +26,12 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dd91fdb2419be15b08fc42ee4928f8bf52c56a1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 577e3013c3538d641da81d416cd016041df80143
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709738"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637867"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
  Eine Dateigruppe muss online vorhanden sein und vom Partitionsschema, das die Partitionsfunktion verwendet, zum Speichern der neuen Partition als NEXT USED markiert werden. Dateigruppen werden in einer CREATE PARTITION SCHEME-Anweisung Partitionen zugeordnet. Falls eine CREATE PARTITION SCHEME-Anweisung mehr Dateigruppen als erforderlich zuordnet (in der CREATE PARTITION FUNCTION-Anweisung werden weniger Partitionen als Dateigruppen zum Speichern erstellt), sind nicht zugewiesene Dateigruppen vorhanden, und eine davon wird vom Partitionsschema als NEXT USED markiert. In dieser Dateigruppe wird die neue Partition gespeichert. Falls vom Partitionsschema keine Dateigruppen als NEXT USED markiert werden, müssen Sie mit ALTER PARTITION SCHEME eine Dateigruppe hinzufügen oder eine vorhandene Dateigruppe zum Speichern der neuen Partition festlegen. Für eine Dateigruppe, in der bereits Partitionen vorhanden sind, können zusätzliche Partitionen festgelegt werden. Eine Partitionsfunktion kann bei mehreren Partitionsschemas verwendet werden. Deshalb müssen alle Partitionsschemas, die die Partitionsfunktion verwenden, der Sie Partitionen hinzufügen, eine NEXT USED-Dateigruppe aufweisen. Andernfalls wird für ALTER PARTITION FUNCTION ein Fehler gemeldet, und es werden die Partitionsschemas angezeigt, für die eine NEXT USED-Dateigruppe fehlt.  
   
- Wenn Sie alle Partitionen in derselben Dateigruppe erstellen, wird diese Dateigruppe anfänglich automatisch der NEXT USED-Dateigrupp zugewiesen. Nach der Ausführung eines Teilungsvorgangs gibt es jedoch keine festgelegte NEXT USED-Dateigruppe mehr. Sie müssen die Dateigruppe explizit mit ALTER PARITION SCHEME der NEXT USED-Dateigruppe zuweisen. Andernfalls schlägt ein nachfolgender Teilungsvorgang fehl.  
+ Wenn Sie alle Partitionen in derselben Dateigruppe erstellen, wird diese Dateigruppe anfänglich automatisch der NEXT USED-Dateigrupp zugewiesen. Nach der Ausführung eines Teilungsvorgangs gibt es jedoch keine festgelegte NEXT USED-Dateigruppe mehr. Sie müssen die Dateigruppe explizit mit ALTER PARTITION SCHEME der NEXT USED-Dateigruppe zuweisen. Andernfalls schlägt ein späterer Teilungsvorgang fehl.  
   
 > [!NOTE]  
 >  Einschränkungen im Zusammenhang mit dem Columnstore-Index: Wenn ein Columnstore-Index für die Tabelle vorhanden ist, können nur leere Partitionen aufgeteilt werden. Vor dem Ausführen dieses Vorgangs müssen Sie den Columnstore-Index löschen oder deaktivieren.  

@@ -5,8 +5,7 @@ ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
@@ -17,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b6be4caf0746d7ebbcd25c1a3a27221d48db582
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226382"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701478"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +119,9 @@ Der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 Der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wählt nicht nur den Ausführungsplan aus, der die geringsten Kosten bezüglich der benötigten Ressourcen verursacht. Stattdessen wird der Plan ausgewählt, der die Ergebnisse so schnell wie möglich an den Benutzer zurückgibt und dabei Kosten für Ressourcen in vertretbarem Maß verursacht. Für die parallele Verarbeitung einer Abfrage werden in der Regel mehr Ressourcen verwendet als für die serielle Verarbeitung, die Abfrageausführung wird jedoch schneller beendet. Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer verwendet einen Plan mit paralleler Ausführung, um Ergebnisse zurückzugeben, wenn sich dies nicht negativ auf die Serverlast auswirkt.
 
-Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer stützt sich bei der Schätzung der Ressourcenkosten, die durch unterschiedliche Methoden zum Extrahieren von Informationen aus einer Tabelle oder einem Index verursacht werden, auf Verteilungsstatistiken. Die Verteilungsstatistiken werden für Spalten und Indizes erstellt. Sie kennzeichnen die Selektivität der Werte in einem bestimmten Index oder einer bestimmten Spalte. In einer Tabelle für Autos stammen z. B. viele Autos von demselben Hersteller, jedes Auto verfügt jedoch über eine eindeutige Fahrzeugnummer. Ein Index, der die Fahrzeugnummer verwendet, weist eine höhere Selektivität auf als ein Index, der den Hersteller einsetzt. Wenn die Indexstatistiken nicht auf dem aktuellen Stand sind, wählt der Abfrageoptimierer möglicherweise nicht den Plan aus, der für den aktuellen Status der Tabelle am besten geeignet ist. Weitere Informationen zum Aktualisieren von Indexstatistiken finden Sie unter [Statistik](../relational-databases/statistics/statistics.md). 
+Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer stützt sich bei der Schätzung der Ressourcenkosten, die durch unterschiedliche Methoden zum Extrahieren von Informationen aus einer Tabelle oder einem Index verursacht werden, auf Verteilungsstatistiken. Die Verteilungsstatistiken werden für Spalten und Indizes gespeichert und enthalten Informationen über die Dichte<sup>1</sup> der zugrunde liegenden Daten. Dies dient dazu, die Selektivität der Werte in einem bestimmten Index oder einer bestimmten Spalte zu kennzeichnen. In einer Tabelle für Autos stammen z. B. viele Autos von demselben Hersteller, jedes Auto verfügt jedoch über eine eindeutige Fahrzeugnummer. Ein Index für das VIN-Objekt weist eine höhere Selektivität auf als ein Index für den Hersteller, da „VIN“ eine niedrigere Dichte als „Hersteller“ aufweist. Wenn die Indexstatistiken nicht auf dem aktuellen Stand sind, wählt der Abfrageoptimierer möglicherweise nicht den Plan aus, der für den aktuellen Status der Tabelle am besten geeignet ist. Weitere Informationen zu Dichten finden Sie unter [Statistik](../relational-databases/statistics/statistics.md#density). 
+
+<sup>1</sup> Dichte definiert die Verteilung von eindeutigen Werten, die in den Daten vorhanden sind, oder die durchschnittliche Anzahl doppelter Werte für eine bestimmte Spalte. Bei einer Verringerung der Dichte erhöht sich die Selektivität eines Werts.
 
 Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist deshalb so wichtig, weil er es dem Datenbankserver ermöglicht, dynamische Anpassungen an geänderte Bedingungen in der Datenbank vorzunehmen, ohne dass eine Eingabe durch einen Programmierer oder Datenbankadministrator erforderlich ist. Programmierer können sich somit darauf konzentrieren, das endgültige Ergebnis der Abfrage zu beschreiben. Sie können sich darauf verlassen, dass der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer bei jeder Ausführung der Anweisung einen effizienten Ausführungsplan auf der Basis des aktuellen Status der Datenbank erstellt.
 
@@ -138,11 +139,11 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist
 
 Die zuvor beschriebenen grundlegenden Schritte für die Verarbeitung einer `SELECT` -Anweisung gelten ebenfalls für andere SQL-Anweisungen, wie z.B. `INSERT`, `UPDATE`und `DELETE`. `UPDATE` - und `DELETE` -Anweisungen müssen sich auf die Gruppe von Zeilen beziehen, die geändert bzw. gelöscht werden soll. Der Vorgang zum Identifizieren dieser Zeilen ist der gleiche Vorgang, der zum Identifizieren der Quellzeilen verwendet wird, die einen Beitrag zum Resultset einer `SELECT` -Anweisung leisten. `UPDATE` - und `INSERT` -Anweisungen können eingebettete SELECT-Anweisungen enthalten, die die Datenwerte bereitstellen, die aktualisiert oder eingefügt werden sollen.
 
-Sogar DDL-Anweisungen (Data Definition Language, Datendefinitionssprache), wie z.B. `CREATE PROCEDURE` oder `ALTER TABL`E, werden letztendlich in eine Folge relationaler Operationen aufgelöst, die für die Systemkatalogtabellen und manchmal (wie bei `ALTER TABLE ADD COLUMN`) auch für die Datentabellen ausgeführt werden.
+Sogar DDL-Anweisungen (Data Definition Language, Datendefinitionssprache), wie z.B. `CREATE PROCEDURE` oder `ALTER TABLE`, werden letztendlich in eine Folge relationaler Operationen aufgelöst, die für die Systemkatalogtabellen und manchmal (wie bei `ALTER TABLE ADD COLUMN`) auch für die Datentabellen ausgeführt werden.
 
 ### <a name="worktables"></a>Arbeitstabellen
 
-Um eine logische Operation ausführen zu können, die in einer SQL-Anweisung angegeben wurde, muss die relationale Engine ggf. eine Arbeitstabelle erstellen. Arbeitstabellen sind interne Tabellen, die zum Speichern von Zwischenergebnissen verwendet werden. Arbeitstabellen werden für bestimmte `GROUP BY`-, `ORDER BY`- oder `UNION` -Abfragen generiert. Wenn z.B. eine `ORDER BY`-Klausel auf Spalten verweist, die nicht durch Indizes erfasst werden, muss die relationale Engine eventuell eine Arbeitstabelle generieren, um das Resultset in der angeforderten Reihenfolge sortieren zu können. Arbeitstabellen werden mitunter auch als Spool-Speicher verwendet, die vorübergehend das Ergebnis der Ausführung eines Teils eines Abfrageplans aufnehmen. Arbeitstabellen werden in `tempdb` erstellt und automatisch wieder gelöscht, sobald sie nicht mehr benötigt werden.
+Um eine logische Operation ausführen zu können, die in einer SQL-Anweisung angegeben wurde, muss die relationale Engine ggf. eine Arbeitstabelle erstellen. Arbeitstabellen sind interne Tabellen, die zum Speichern von Zwischenergebnissen verwendet werden. Arbeitstabellen werden für bestimmte `GROUP BY`-, `ORDER BY`- oder `UNION` -Abfragen generiert. Wenn z.B. eine `ORDER BY`-Klausel auf Spalten verweist, die nicht durch Indizes erfasst werden, muss die relationale Engine eventuell eine Arbeitstabelle generieren, um das Resultset in der angeforderten Reihenfolge sortieren zu können. Arbeitstabellen werden mitunter auch als Spool-Speicher verwendet, die vorübergehend das Ergebnis der Ausführung eines Teils eines Abfrageplans aufnehmen. Arbeitstabellen werden in tempdb erstellt und automatisch wieder gelöscht, sobald sie nicht mehr benötigt werden.
 
 ### <a name="view-resolution"></a>Sichtauflösung
 
@@ -698,7 +699,7 @@ Mithilfe der Serverkonfigurationsoption [Max. Grad an Parallelität](../database
 
 Wenn die Option „Max. Grad an Parallelität“ auf 0 (Standard) festgelegt wurde, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alle verfügbaren Prozessoren (maximal 64) zur Ausführung paralleler Pläne verwenden. Obwohl [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ein Laufzeitziel von 64 logischen Prozessoren festlegt, wenn MAXDOP auf 0 festgelegt ist, kann falls nötig ein anderer Wert manuell festgelegt werden. Wenn MAXDOP für Abfragen und Indizes auf 0 (null) festgelegt wurde, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alle verfügbaren Prozessoren (maximal 64) zur Ausführung paralleler Pläne für die jeweiligen Abfragen oder Indizes verwenden. MAXDOP ist kein erzwungener Wert für alle parallelen Abfragen, sondern eher ein Ziel mit Vorbehalt für alle Abfragen, die für die Parallelität qualifiziert sind. Das bedeutet, dass wenn nicht genügend Arbeitsthreads zur Laufzeit vorhanden sind, eine Abfrage möglicherweise mit einem niedrigeren Grad der Parallelität als die MAXDOP-Serverkonfigurationsoption ausgeführt wird.
 
-Bewährte Methoden zum Konfigurieren von MAXDOP finden Sie im [Microsoft Support-Artikel](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server).
+Bewährte Methoden zum Konfigurieren von MAXDOP finden Sie im [Microsoft Support-Artikel](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server).
 
 ### <a name="parallel-query-example"></a>Beispiel für eine parallele Abfrage
 
@@ -1019,7 +1020,7 @@ Wir empfehlen die folgenden bewährten Vorgehensweisen, um die Leistung von Abfr
 * Verwenden Sie einen Server mit schnellen und möglichst vielen Prozessoren, um sich die Vorteile der parallelen Abfrageverarbeitung zu Nutze zu machen.
 * Stellen Sie sicher, dass der Server über eine ausreichend große E/A-Controllerbandbreite verfügt. 
 * Erstellen Sie für jede große partitionierte Tabelle einen gruppierten Index, um den optimierten B-Strukturscan voll nutzen zu können.
-* Beachten Sie die Empfehlungen für bewährte Vorgehensweisen im Whitepaper [The Data Loading Performance Guide (Leistungsleitfaden für das Laden von Daten)](http://msdn.microsoft.com/library/dd425070.aspx), wenn Sie mittels Massenladen Daten in partitionierte Tabellen laden.
+* Beachten Sie die Empfehlungen für bewährte Vorgehensweisen im Whitepaper [The Data Loading Performance Guide (Leistungsleitfaden für das Laden von Daten)](https://msdn.microsoft.com/library/dd425070.aspx), wenn Sie mittels Massenladen Daten in partitionierte Tabellen laden.
 
 ### <a name="example"></a>Beispiel
 

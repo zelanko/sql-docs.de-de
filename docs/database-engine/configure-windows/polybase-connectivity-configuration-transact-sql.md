@@ -1,5 +1,5 @@
 ---
-title: Konfiguration der PolyBase-Konnektivität (Transact-SQL) | Microsoft-Dokumentation
+title: Konfiguration der PolyBase-Netzwerkkonnektivität (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4e70d30aaaef2d256f2dcff38b1d5989e1f6e5f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b877040c532a0ccb7911e4770d33f9e5f7a709c5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784808"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602450"
 ---
-# <a name="polybase-connectivity-configuration-transact-sql"></a>Konfiguration der PolyBase-Konnektivität (Transact-SQL)
+# <a name="polybase-connectivity-configuration-transact-sql"></a>Konfiguration der PolyBase-Netzwerkkonnektivität (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
 
   Stellt globale Konfigurationseinstellungen für die PolyBase-Hadoop- und Azure Blob Storage-Konnektivität dar oder ändert diese.
@@ -75,7 +75,7 @@ RECONFIGURE
   
 -   Option 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 und 5.13 unter Linux  
   
--   Option 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5 und 2.6 unter Linux  
+-   Option 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6 und 3.0 unter Linux  
   
 -   Option 7: Hortonworks 2.1, 2.2 und 2.3 unter Windows Server  
   
