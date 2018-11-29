@@ -28,14 +28,14 @@ ms.locfileid: "51512705"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet graphdatenbank-Funktionen zum Modellieren von m: n Beziehungen. Die Graph-Beziehungen sind in integriert [!INCLUDE[tsql-md](../../includes/tsql-md.md)] und erhalten die Vorteile der Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als grundlegende Database Managementsystem.
 
 
-## <a name="what-is-a-graph-database"></a>Was ist eine graphdatenbank verwendet?  
+## <a name="what-is-a-graph-database"></a>Was ist eine Graphdatenbank?  
 Eine Diagrammdatenbank ist eine Sammlung von Knoten (oder Vertices) und Edges (oder Beziehungen). Ein Knoten stellt eine Entität (z.B. eine Person oder Organisation) dar, und ein Edge repräsentiert eine Beziehung zwischen den beiden Knoten, die durch den Edge verbunden werden (z.B. Likes oder Freunde). Sowohl Knoten und Edges können Eigenschaften zugeordnet haben. Hier sind einige Funktionen, die eine graphdatenbank eindeutig zu machen:  
 -   Ränder oder Beziehungen sind erstklassige Entitäten in einer Diagrammdatenbank und können haben Attribute oder Eigenschaften zugeordnet. 
 -   Eine einzelne Kante kann flexibel auf mehrere Knoten in einer Diagrammdatenbank verbinden.
 -   Sie können Musterabgleich und Multi-Hop-Navigation-Abfragen problemlos Ausdrücken.
 -   Sie können transitiver und polymorphe Abfragen problemlos Ausdrücken.
 
-## <a name="when-to-use-a-graph-database"></a>Bei Verwendung einer Diagrammdatenbank
+## <a name="when-to-use-a-graph-database"></a>Wann wird eine Graphdatenbank verwendet?
 
 Es gibt nichts, was eine Diagrammdatenbank erreichen kann, die Verwendung einer relationalen Datenbank erreicht werden kann. Allerdings kann eine Diagrammdatenbank express bestimmte Art von Abfragen erleichtern. Darüber hinaus können mit bestimmten Optimierungen, bestimmte Abfragen eine bessere Leistung. Basiert die Entscheidung, wann auswählen kann auf folgenden Faktoren:  
 -   Ihre Anwendung verfügt über hierarchische Daten. Der HierarchyID-Datentyp kann verwendet werden, um Hierarchien zu implementieren, aber es gelten einige Einschränkungen. Beispielsweise können dabei nicht mehrere übergeordnete Elemente für einen Knoten zu speichern.
@@ -46,7 +46,7 @@ Es gibt nichts, was eine Diagrammdatenbank erreichen kann, die Verwendung einer 
 Wir beginnen damit, Hinzufügen von Graph-Erweiterungen mit SQL Server, um das Speichern und Abfragen von Diagrammdaten zu erleichtern. Folgende Features werden in der ersten Version eingeführt. 
 
 
-### <a name="create-graph-objects"></a>Erstellen von Graph-Objekte
+### <a name="create-graph-objects"></a>Erstellen von Graph-Objekten
 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] Erweiterungen können Benutzer Knoten-oder edgetabellen zu erstellen. Sowohl Knoten und Edges können Eigenschaften, die ihnen zugewiesene verfügen. Da Knoten und Kanten werden als Tabellen gespeichert, alle Vorgänge, die auf relationalen Tabellen unterstützt werden, werden auf Knoten-oder edgetabelle unterstützt. Beispiel:  
 
 ```   
