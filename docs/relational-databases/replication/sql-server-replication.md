@@ -14,12 +14,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ff49250b6af2d309df7b184168f3c2c901cb050e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 249fedd79398097fffbffae3afc5effb275dd6c5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661139"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407277"
 ---
 # <a name="sql-server-replication"></a>SQL Server-Replikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51661139"
  Als Alternative zur Replikation können Sie Datenbanken mit Microsoft Sync Framework synchronisieren. Sync Framework schließt Komponenten und eine intuitive und flexible API ein, die es Ihnen erleichtern, zwischen SQL Server-, SQL Server Express-, SQL Server Compact- und SQL Azure-Datenbanken zu synchronisieren. Sync Framework schließt auch Klassen ein, die angepasst werden können, um zwischen einer SQL Server-Datenbank und einer beliebigen anderen Datenbank, die mit ADO.NET kompatibel ist, zu synchronisieren. Eine ausführliche Dokumentation der Sync Framework-Datenbanksynchronisierungskomponenten finden Sie unter [Synchronisieren von Datenbanken](https://go.microsoft.com/fwlink/?LinkId=209079). Eine Übersicht über Sync Framework finden Sie im [Microsoft Sync Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=209078). Einen Vergleich zwischen Sync Framework und Mergereplikation finden Sie unter [Übersicht über das Synchronisieren von Datenbanken](https://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)  
   
  **Suchen Sie nach Bereich**  
- - [Neues](../../relational-databases/replication/what-s-new-replication.md)  
+ - [What's New in BizTalk Server 2016 (Neuerungen in BizTalk Server 2016)](../../relational-databases/replication/what-s-new-replication.md)  
  - [Abwärtskompatibilität](../../relational-databases/replication/replication-backward-compatibility.md)  
  - [Replikationsfunktionen und -tasks](../../relational-databases/replication/replication-features-and-tasks.md)  
  - [Technische Referenz](../../relational-databases/replication/technical-reference-replication.md)  

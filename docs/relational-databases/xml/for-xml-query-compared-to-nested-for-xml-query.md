@@ -14,12 +14,12 @@ ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12ad145e68eb3766bc58f7df7e0d0908b8af0622
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52e2475748a96d8be757890552225061a241d32a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664518"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539093"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML-Abfragen im Vergleich zu geschachtelten FOR XML-Abfragen
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -195,9 +195,9 @@ FOR XML AUTO, TYPE
                 ProductName="Mountain-100 Silver, 42" Color="Silver" />  
       <Production.Product ProductID="773"   
                 ProductName="Mountain-100 Silver, 44" Color="Silver" />  
-        …  
+        ...  
     </ProductModel>  
-     …  
+     ...  
 ```  
   
  Wenn Sie die `ELEMENTS` -Direktive aus der geschachtelten `FOR XML` -Abfrage entfernen, mit der die Produktunterkategorien generiert werden, ist das gesamte Ergebnis attributzentriert. Sie können diese Abfrage dann ohne Schachtelung schreiben. Das Hinzufügen der `ELEMENTS` -Direktive ergibt einen XML-Code, der teilweise attributzentriert und teilweise elementzentriert ist. Dieses Ergebnis kann nicht durch eine FOR XML-Abfrage mit nur einer einzigen Ebene generiert werden.  

@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a9d56cab3d149490b176aade356708c15767cf9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db0fbc2125ca748f0426eea95c4c1a059e5b67f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838498"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509963"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -253,7 +253,7 @@ Gibt ein Zeichen an, das als Anführungszeichen in der CSV-Datei verwendet wird.
 >    Meldung 491, Ebene 16, Status 1, Zeile 20    
 >    Für das Massenrowset in der FROM-Klausel muss ein abhängiger Name angegeben werden.    
   
--   Eine `SELECT...FROM OPENROWSET(BULK...)`-Anweisung fragt Daten in einer Datei direkt ab, ohne dass die Daten in eine Tabelle importiert werden. `SELECT…FROM OPENROWSET(BULK...)`-Anweisungen können auch Massenspaltenaliase auflisten, indem eine Formatdatei verwendet wird, um Spaltennamen und auch Datentypen anzugeben.  
+-   Eine `SELECT...FROM OPENROWSET(BULK...)`-Anweisung fragt Daten in einer Datei direkt ab, ohne dass die Daten in eine Tabelle importiert werden. `SELECT...FROM OPENROWSET(BULK...)`-Anweisungen können auch Massenspaltenaliase auflisten, indem eine Formatdatei verwendet wird, um Spaltennamen und auch Datentypen anzugeben.  
   
 -   Durch die Verwendung von `OPENROWSET(BULK...)` als Quelltabelle in einer `INSERT`- oder `MERGE`-Anweisung wird ein Massenimport von Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle ausgeführt. Weitere Informationen finden Sie unter [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   

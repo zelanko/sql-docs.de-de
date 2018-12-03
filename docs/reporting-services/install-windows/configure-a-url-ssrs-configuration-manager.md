@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2638e15f21d21563d639b2597ad30b6597f9ecd1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813353"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509516"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Konfigurieren einer URL (SSRS-Konfigurations-Manager)
   Bevor Sie das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] oder den Berichtsserver-Webdienst verwenden können, müssen Sie mindestens eine URL für jede Anwendung konfigurieren. Die Konfiguration der URLs ist obligatorisch, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im Modus zur ausschließlichen Installation von Dateien installiert haben (also durch Auswahl der Option **Server installieren, jedoch nicht konfigurieren** auf der Seite mit den Berichtsserver-Installationsoptionen im Installations-Assistenten). Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der Standardkonfiguration installiert haben, sind die URLs bereits für jede Anwendung konfiguriert.  
@@ -76,7 +76,7 @@ ms.locfileid: "51813353"
   
     -   Geben Sie an einer Eingabeaufforderung den folgenden Befehl ein, um eine Liste der verwendeten TCP-Anschlüsse auszugeben:  
   
-         `netstat –anp tcp`  
+         `netstat -anp tcp`  
   
     -   Im Microsoft-Support-Artikel [Informationen zur Zuweisung von TCP/IP-Ports](https://support.microsoft.com/kb/174904)finden Sie Informationen zur Zuweisung von TCP-Ports und zu den Unterschieden zwischen bekannten Ports (0 bis 1023), registrierten Ports (1024 bis 49151) und dynamischen bzw. privaten Ports (49152 bis 65535).  
   

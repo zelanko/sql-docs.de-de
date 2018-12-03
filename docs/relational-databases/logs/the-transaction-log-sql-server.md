@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d85c61376992e22488b4ddddffc227e2a371ac76
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677299"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711591"
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,9 +114,9 @@ Um zu vermeiden, dass nur noch wenig Speicherplatz vorhanden ist, erfolgt die K�
 |7|DATABASE_SNAPSHOT_CREATION|Eine Datenbank-Momentaufnahme wird erstellt. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger, im Allgemeinen jedoch nur kurz andauernder Grund für ein verzögertes Kürzen eines Protokolls.|  
 |8|LOG_SCAN|Ein Protokollscan wird ausgelöst. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger, im Allgemeinen jedoch nur kurz andauernder Grund für ein verzögertes Kürzen eines Protokolls.|  
 |9|AVAILABILITY_REPLICA|Ein sekundäres Replikat einer Verfügbarkeitsgruppe wendet Transaktionsprotokoll-Datensätze dieser Datenbank auf eine zugehörige sekundäre Datenbank an. (vollständiges Wiederherstellungsmodell)<br /><br /> Weitere Informationen finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
-|10|—|Nur interne Verwendung|  
-|11|—|Nur interne Verwendung|  
-|12|—|Nur interne Verwendung|  
+|10|-|Nur interne Verwendung|  
+|11|-|Nur interne Verwendung|  
+|12|-|Nur interne Verwendung|  
 |13|OLDEST_PAGE|Ist eine Datenbank zur Verwendung von indirekten Prüfpunkten konfiguriert, ist die älteste Seite in der Datenbank u.U. älter als die [Protokollfolgenummer (Log Sequence Number, LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch). In diesem Fall kann die älteste Seite die Protokollkürzung verzögern. (Alle Wiederherstellungsmodelle)<br /><br /> Weitere Informationen zu indirekten Prüfpunkten finden Sie unter [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Dieser Wert wird derzeit nicht verwendet.|  
   
@@ -158,17 +158,17 @@ Wenn die Transaktionsreplikation aktiviert ist, werden SELECT INTO-Vorgänge auc
     -   Neuerstellungen neuer Heaps mit [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (falls zutreffend). Aufhebungen von Indexseitenzuordnungen während eines `DROP INDEX`-Vorgangs werden **immer** vollständig protokolliert.
   
 ##  <a name="RelatedTasks"></a> Related tasks  
- **Verwalten des Transaktionsprotokolls**  
+**Verwalten des Transaktionsprotokolls**  
   
 -   [Verwalten der Größe der Transaktionsprotokolldatei](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  
   
 -   [Problembehandlung bei vollen Transaktionsprotokollen &#40;SQL Server-Fehler 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
- **Sichern des Transaktionsprotokolls (vollständiges Wiederherstellungsmodell)**  
+**Sichern des Transaktionsprotokolls (vollständiges Wiederherstellungsmodell)**  
   
 -   [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **Wiederherstellen des Transaktionsprotokolls (vollständiges Wiederherstellungsmodell)**  
+**Wiederherstellen des Transaktionsprotokolls (vollständiges Wiederherstellungsmodell)**  
   
 -   [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

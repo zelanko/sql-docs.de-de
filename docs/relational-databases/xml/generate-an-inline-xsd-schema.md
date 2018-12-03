@@ -19,12 +19,12 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6aae24935aea1c7ca452f199340cd1dca7299a4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b45bd2df29628717d8cb1b2d1ba66a858a03f7a3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675349"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521491"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generieren eines XSD-Inlineschemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -241,7 +241,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  Dies ist das entsprechende XML, das generiert wird. Es wird nur ein Teil des XSD-Inlineschemas dargestellt.  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -279,7 +279,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
 -   Da der Wert `DealerPrice` in der Tabelle NULL ist, wird nur `ListPrice` als <`Price`>-Element zurückgegeben. Wenn Sie der ELEMENTS-Direktive den `XSINIL`-Parameter hinzufügen, erhalten Sie beide Elemente, deren Wert `xsi:nil`für das <`Price`>-Element auf TRUE festgelegt wurde, das DealerPrice entspricht. Außerdem erhalten Sie zwei untergeordnete <`Price`>-Elemente in der komplexen Typdefinition <`row`> im XSD-Inlineschema, wobei das `nillable`-Attribut für beide auf TRUE festgelegt wurde. Dieses Fragment ist ein Teilergebnis:  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -335,7 +335,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Dies ist das Ergebnis. Es wird nur ein Fragment des XSD-Schemas dargestellt.  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -404,7 +404,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  In der folgenden Abfrage erhalten Col2 und Col3 den gleichen Alias. Diese Abfrage generiert zwei gleichgeordnete Elemente, die den gleichen Namen besitzen und untergeordnete Elemente des <`raw`>-Elements im Ergebnis sind. Diese beiden Spalten gehören unterschiedlichen Typen an und dürfen NULL sein Dies ist das Ergebnis. Es wird nur ein Teil des XSD-Inlineschemas gezeigt.  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   

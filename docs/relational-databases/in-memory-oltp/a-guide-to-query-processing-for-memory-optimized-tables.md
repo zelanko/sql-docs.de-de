@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fed96fa278f64a5fd8628802c1875f2ca8195f7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4b9d49756a4edb78fcda40f4c4d86bfbb299904d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664640"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543497"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -226,7 +226,7 @@ Ausführung systemintern kompilierter gespeicherten Prozeduren.
   
  Der Aufruf einer systemintern kompilierten gespeicherten Prozedur lässt sich folgendermaßen beschreiben:  
   
-1.  Der Benutzer gibt eine **EXEC***usp myproc*-Anweisung aus.  
+1.  Der Benutzer gibt eine **EXEC**_usp_myproc_ -Anweisung aus.  
   
 2.  Der Parser extrahiert den Namen und die Parameter der gespeicherten Prozedur.  
   

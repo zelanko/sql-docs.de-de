@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11602dcd1274690e7b77ca285c50269e83b6ca23
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: cf6a87ac5c41a2bd28a528a7337d05cb8dcf8775
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215798"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532110"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Task 'Wartungscleanup' (Wartungsplan)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "51215798"
  **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein.**  
  Wählen Sie den Server aus, zu dem bei der Ausführung dieses Tasks eine Verbindung hergestellt werden soll.  
   
- **…**  
+ **...**  
  Wählen Sie diese Option aus, um die Liste der verfügbaren Server anzuzeigen.  
   
  **Geben Sie Informationen zum Anmelden am Server ein**  

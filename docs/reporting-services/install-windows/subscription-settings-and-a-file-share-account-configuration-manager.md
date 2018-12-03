@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 61f8db13b3984825d37924a248ffebb31e2a5613
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0dd324cfbe9fbac48c85c31cea20887d650014c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813113"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402113"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Abonnementeinstellungen und ein Dateifreigabekonto (Konfigurations-Manager)
   Verwenden Sie die Seite **Abonnementeinstellungen** im Konfigurations-Manager für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um ein Dateifreigabekonto für Berichtsserver im einheitlichen Modus und Dateifreigabeabonnements zu konfigurieren. Mit dem Dateifreigabekonto können Sie einen einzelnen Anmeldeinformationssatz in mehreren Abonnements verwenden, die Berichte an eine Dateifreigabe übermitteln. Wenn die Anmeldeinformationen geändert werden müssen, konfigurieren Sie die Änderung für das Dateifreigabekonto. So müssen Sie nicht jedes einzelne Abonnement aktualisieren.  
@@ -43,7 +43,7 @@ ms.locfileid: "51813113"
 > [!IMPORTANT]
 > Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstkonto steuert die Abonnementübermittlung und interagiert mit dem für Dateifreigabeabonnements verwendeten Konto. Die Windows-Sicherheitsfunktionen beschränken Kombinationen von 1) dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstkonto und 2) dem für Dateifreigabekonten verwendeten Konto. Wenn beispielsweise ein integriertes Konto im Betriebssystem für das Dateifreigabekonto verwendet wird, muss das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstkonto ein anderes Dienstkonto mit Identitätswechselberechtigungen sein. Wenn ein explizites Dateifreigabekonto und ein Kennwort konfiguriert sind, benötigt das Dateifreigabekonto das Recht, sich auf dem Computer anzumelden, auf dem der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst ausgeführt wird. Wenn das Dateifreigabekonto nicht über die erforderlichen Berechtigungen verfügt, schlagen Abonnements fehl, die dieses Dateifreigabekonto verwenden. Die Fehlermeldung ähnelt der folgenden:  
 >   
->  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
+>  `"Failure writing file {file} : An impersonation error occurred using the security context of the current user."`  
   
 ## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>PowerShell-Beispiel zum Überwachen der Verwendung des Dateifreigabekontos  
  Führen Sie das folgende Windows PowerShell-Skript aus, um alle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements aufzulisten, die für die Verwendung des **Dateifreigabekontos**konfiguriert sind. Aktualisieren Sie `SERVERNAME` auf einen für den Berichtsserver geeigneten Wert.  

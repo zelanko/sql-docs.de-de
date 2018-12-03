@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d74e1ebfb3f1d8e2bc36c2a4bd0432a830934b5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f72bda649e317b5c08638f959e6b7600aac72a88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799338"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530524"
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ XACT_STATE()
  Sowohl über die XACT_STATE-Funktion als auch über die @@TRANCOUNT-Funktion kann ermittelt werden, ob für die aktuelle Anforderung eine aktive Benutzertransaktion vorliegt. Mit @@TRANCOUNT kann nicht bestimmt werden, ob die betreffende Transaktion als nicht commitfähig klassifiziert wurde. Mit XACT_STATE kann nicht bestimmt werden, ob geschachtelte Transaktionen vorhanden sind.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `XACT_STATE` im `CATCH`-Block eines `TRY…CATCH`-Konstrukts verwendet, um zu bestimmen, ob für eine Transaktion ein Commit- oder Rollback-Vorgang ausgeführt werden soll. Da `SET XACT_ABORT` auf den Wert `ON` festgelegt ist, wird die Transaktion wegen des aufgrund der Einschränkungsverletzung aufgetretenen Fehlers in einen nicht commitfähigen Zustand versetzt.  
+ Im folgenden Beispiel wird `XACT_STATE` im `CATCH`-Block eines `TRY...CATCH`-Konstrukts verwendet, um zu bestimmen, ob für eine Transaktion ein Commit- oder Rollback-Vorgang ausgeführt werden soll. Da `SET XACT_ABORT` auf den Wert `ON` festgelegt ist, wird die Transaktion wegen des aufgrund der Einschränkungsverletzung aufgetretenen Fehlers in einen nicht commitfähigen Zustand versetzt.  
   
 ```  
 USE AdventureWorks2012;  

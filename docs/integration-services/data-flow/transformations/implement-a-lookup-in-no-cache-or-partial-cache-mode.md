@@ -16,12 +16,12 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b735de61b88a5b33c6dd8174a3e0bd6cf3b9dece
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b063396b2dc55636f85b6884206c1a5a1d6e6109
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628658"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509225"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementieren einer Suche im Modus "Kein Cache" oder "Teilcache"
   Sie können die Transformation für die Suche so konfigurieren, dass der Modus "Teilcache" oder "Kein Cache" verwendet wird:  
@@ -61,11 +61,11 @@ ms.locfileid: "47628658"
   
     -   Klicken Sie auf **Ergebnisse einer SQL-Abfrage verwenden**, und erstellen Sie dann eine Abfrage im Fenster **SQL-Befehl** .  
   
-         – oder –  
+         -oder-  
   
          Klicken Sie auf **Abfrage erstellen** , um mit den vom **Abfrage-Generator** bereitgestellten grafischen Tools eine Abfrage zu erstellen.  
   
-         – oder –  
+         -oder-  
   
          Klicken Sie auf **Durchsuchen** , um eine SQL-Anweisung aus einer Datei zu importieren.  
   

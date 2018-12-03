@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5fb8a1667d6cd10d13826bebfed5d529585276e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ce3a973f84664769ced971eedb28a1c13faeae8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598588"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519697"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ SET DATEFORMAT { format | @format_var }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *format* | **@***format_var*  
+ *format* | **@**_format_var_  
  Reihenfolge der Datumsteile. Gültige Parameter sind **mdy**, **dmy**, **ymd**, **ydm**, **myd**, and **dym**. Kann entweder in Unicode oder in Doppelbyte-Zeichensätzen (Double-Byte Character Set, DBCS), die in Unicode konvertiert wurden, dargestellt werden. Der Standardparameter Der Standard für Englisch ist **mdy**. Die standardmäßige DATEFORMAT-Einstellung aller Unterstützungssprachen finden Sie unter [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  

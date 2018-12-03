@@ -12,12 +12,12 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f22aed510bf6c5a34d4c4c2a79db7d0f3a56bfe2
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 8fb0f6ab994ffc096324a179050abbb4e8f303e7
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051122"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711521"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Unterstützte Kombinationen von SharePoint- und Reporting Services-Servern
 
@@ -75,7 +75,7 @@ Ein SQL Server Reporting Services-Berichtsserver, der im SharePoint-Modus instal
 ## <a name="next-steps"></a>Nächste Schritte
 
  [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
- [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

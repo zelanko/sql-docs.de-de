@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2bcf8d1f44e78f58e3797c9dde7a04a75f90acb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acc855479abc620a4f7229af9220432aed6892ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686008"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405977"
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Audit Add Member to DB Role-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47686008"
 |**ClientProcessID**|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Benutzerkontensteuerung|  
 |**DatabaseID**|**int**|Die ID der Datenbank, die durch die USE *database* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Benutzerkontensteuerung|  
 |**DatabaseName**|**nvarchar**|Name der Datenbank, in der die Rollenmitgliedschaft geändert wird.|35|Benutzerkontensteuerung|  
-|**DBUserName**|**nvarchar**|Der Benutzername des Ausstellers in der Datenbank.|40|Benutzerkontensteuerung|  
+|**DBUserName**|**nvarchar**|Name des ausstellenden Benutzers in der Datenbank.|40|Benutzerkontensteuerung|  
 |**EventClass**|**int**|Ereignistyp = 110.|27|nein|  
 |**EventSequence**|**int**|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|nein|  
 |**EventSubClass**|**int**|Der Typ der Ereignisunterklasse.<br /><br /> 1 = Hinzufügen<br /><br /> 2 = Löschen<br /><br /> 3 = Gruppe ändern|21|Benutzerkontensteuerung|  

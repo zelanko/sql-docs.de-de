@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 992f029f64cdb9d6c60bcef4e748b2fee21a0c90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a3a3456a816769217c4b1e8f89ee9ffd8cfe91d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673031"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711711"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService-Konfigurationsdatei
- ||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server 2016|
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
   
 Die Datei ReportingServicesService.exe.config enthält Einstellungen zum Konfigurieren der Ablaufverfolgung.  
   
@@ -88,6 +87,6 @@ Die Datei ReportingServicesService.exe.config enthält Einstellungen zum Konfigu
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Reporting Services-Konfigurationsdateien](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Report Server Service Trace Log (Berichtsserverdienst-Ablaufverfolgungsprotokoll)](../../reporting-services/report-server/report-server-service-trace-log.md)  
+ [Berichtsserverdienst-Ablaufverfolgungsprotokoll](../../reporting-services/report-server/report-server-service-trace-log.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9bffd6f227344d4f94b004af928f86f98d75eaa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6e8d6912eef4722bb862946f93d00362db0bc0c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715378"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526088"
 ---
 # <a name="run-queries-visual-database-tools"></a>Ausführen von Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ Nachdem Sie das Erstellen der Abfrage abgeschlossen haben, können Sie die Abfra
   
 2.  Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle im Abfragefenster, und wählen Sie im Kontextmenü die Option **SQL ausführen** aus.  
   
-    – Oder –  
+    -oder-  
   
     Drücken Sie STRG+R.  
   

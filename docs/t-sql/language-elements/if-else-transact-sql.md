@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f962317b7695d705d64652d6a5fa43db774802d2
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 6851ae0f1ff4f5e65ce74db7f351deb3127a1a23
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970474"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515209"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "50970474"
 
 Legt Bedingungen für die Ausführung einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung fest. Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung nach dem IF-Schlüsselwort und der Bedingung wird nur ausgeführt, wenn die Bedingung erfüllt ist. Dies ist der Fall, wenn der boolesche Ausdruck TRUE zurückgibt. Das optionale ELSE-Schlüsselwort führt eine alternative [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ein, die ausgeführt wird, wenn die IF-Bedingung nicht erfüllt ist. Dies ist der Fall., wenn der boolesche Ausdruck FALSE zurückgibt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -74,7 +74,7 @@ ELSE
  Weitere Beispiele finden Sie unter [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md).  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
- Im folgenden Beispiel wird `IF…ELSE` verwendet, um basierend auf der Gewichtung eines Elements in der `DimProduct`-Tabelle festzulegen, welche Antwort von zwei Antworten dem Benutzer angezeigt wird.  
+ Im folgenden Beispiel wird `IF...ELSE` verwendet, um basierend auf der Gewichtung eines Elements in der `DimProduct`-Tabelle festzulegen, welche Antwort von zwei Antworten dem Benutzer angezeigt wird.  
   
 ```  
 -- Uses AdventureWorksDW  

@@ -22,12 +22,12 @@ ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 479aabd0ca4edfc7529d0a9a1d47b075a7e1cab2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70f932e1372fb3cb185167b778b9f280dbbee816
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694778"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540295"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Wiederherstellen zu einer Protokollfolgenummer (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ ms.locfileid: "47694778"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Transact-SQL-Syntax für die Wiederherstellung bis zu einer LSN  
  Mithilfe einer [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) -Anweisung können Sie an oder direkt vor der LSN stoppen, wie im Folgenden gezeigt:  
   
--   Verwenden Sie die WITH STOPATMARK **='** lsn:*<LSN-Nummer>***'**-Klausel, wobei lsn:*\<LSN-Nummer>* eine Zeichenfolge darstellt, die angibt, dass der Protokolldatensatz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
+-   Verwenden Sie die WITH STOPATMARK **='** lsn:_<LSN-Nummer>_**'**-Klausel, wobei lsn:*\<LSN-Nummer>* eine Zeichenfolge darstellt, die angibt, dass der Protokolldatensatz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
   
      Von STOPATMARK wird ein Rollforward zur LSN ausgeführt und dieser Protokolldatensatz im Rollforward eingeschlossen.  
   
--   Verwenden Sie die WITH STOPBEFOREMARK **='** lsn:*<LSN-Nummer>****'-Klausel, wobei lsn:*\<LSN-Nummer>* eine Zeichenfolge darstellt, die angibt, dass der Protokolldatensatz direkt vor dem Protokolldatensatz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
+-   Verwenden Sie die WITH STOPBEFOREMARK **= '** lsn:_<LSN-Nummer>_**'**-Klausel, wobei lsn:*\<LSN-Nummer>* eine Zeichenfolge darstellt, die angibt, dass der Protokolldatensatz direkt vor dem Protokolldatensatz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
   
      Von STOPBEFOREMARK wird ein Rollforward bis zur LSN ausgeführt und dieser Protokolldatensatz aus dem Rollforward ausgeschlossen.  
   

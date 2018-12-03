@@ -11,12 +11,12 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 963ea851b052d3a460aad1bbfd6e59051ecc6f7d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571210"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302684"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ Diese Lektion enthält die folgenden Aufgaben:
 - [Autorisieren zusätzlicher Verbindungen](#additional) 
 
 ## <a name="tools">Tools für die ersten Schritte</a> 
- – Im Lieferumfang von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sind eine Vielzahl von Tools enthalten. In diesem Thema wird beschrieben, welche Tools Sie zuerst benötigen und wie das richtige Tool für den Auftrag ausgewählt wird. Auf alle Tools kann über das Menü **Start** zugegriffen werden. Einige Tools wie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]werden nicht standardmäßig installiert. Die Tools müssen als Teil der Clientkomponenten während der Ausführung des Setupprogramms installiert werden. Eine vollständige Beschreibung der unten aufgeführten Tools finden Sie, indem Sie in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation danach suchen. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] enthält nur eine Teilmenge der Tools.  
+- Im Lieferumfang von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sind eine Vielzahl von Tools enthalten. In diesem Thema wird beschrieben, welche Tools Sie zuerst benötigen und wie das richtige Tool für den Auftrag ausgewählt wird. Auf alle Tools kann über das Menü **Start** zugegriffen werden. Einige Tools wie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]werden nicht standardmäßig installiert. Die Tools müssen als Teil der Clientkomponenten während der Ausführung des Setupprogramms installiert werden. Eine vollständige Beschreibung der unten aufgeführten Tools finden Sie, indem Sie in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation danach suchen. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] enthält nur eine Teilmenge der Tools.  
 
 ### <a name="basic-tools"></a>Haupttools
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) ist das Haupttool zum Verwalten von [!INCLUDE[ssDE](../includes/ssde-md.md)] und Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)] -Code. Es wird in der [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Shell gehostet. SSMS steht im [Microsoft Download Center](https://msdn.microsoft.com/library/mt238290.aspx)zum Herunterladen zur Verfügung. Die neueste Version kann mit älteren Versionen des [!INCLUDE[ssDE_md](../includes/ssde-md.md)]verwendet werden.  
@@ -45,10 +45,10 @@ Die Beispieldatenbanken und Beispiele werden nicht standardmäßig mit [!INCLUDE
 
 ##### <a name="to-start-sql-server-configuration-manager"></a>So starten Sie den SQL Server-Konfigurations-Manager  
 - Tippen Sie in aktuellen Versionen von Windows auf der **Startseite** **Configuration Manager** ein, und klicken Sie anschließend auf **SQL Server *Version* Configuration Manager**.   
- – Wenn Sie eine ältere Version von Windows verwenden, zeigen Sie im **Startmenü** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie anschließend auf **SQL Server-Konfigurations-Manager**.  
- -  
+- Wenn Sie eine ältere Version von Windows verwenden, zeigen Sie im **Startmenü** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie anschließend auf **SQL Server-Konfigurations-Manager**.  
+
 ## <a name="connect"></a>Herstellen einer Verbindung mit Management Studio  
- – Es ist sehr einfach, mithilfe von Tools, die auf demselben Computer ausgeführt werden, eine Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] herzustellen, wenn Sie den Namen der Instanz kennen und wenn Sie die Verbindung als Mitglied der lokalen Administratorengruppe auf dem Computer herstellen. Die folgenden Vorgänge müssen auf dem Computer ausgeführt werden, der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]hostet.  
+- Es ist sehr einfach, mithilfe von Tools, die auf demselben Computer ausgeführt werden, eine Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] herzustellen, wenn Sie den Namen der Instanz kennen und wenn Sie die Verbindung als Mitglied der lokalen Administratorengruppe auf dem Computer herstellen. Die folgenden Vorgänge müssen auf dem Computer ausgeführt werden, der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]hostet.  
 
 > [!NOTE]  
 > Dieses Thema beschreibt das Herstellen einer Verbindung mit einem lokalen SQL Server. Informationen zum Herstellen einer Verbindung mit der Azure SQL-Datenbank finden Sie unter [Herstellen einer Verbindung mit einer SQL-Datenbank mit SQL Server Management Studio und Ausführen einer T-SQL-Beispielabfrage](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/).  
