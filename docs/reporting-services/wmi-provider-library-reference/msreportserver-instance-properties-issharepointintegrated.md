@@ -11,10 +11,10 @@ ms.assetid: e21d00ad-5d9a-4290-8d74-7eeeda39e1ed
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 2e5a2990e61d0b94a7d9d8ca05b06344dafcca28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
+ms.lasthandoff: 11/20/2018
 ms.locfileid: "47594819"
 ---
 # <a name="msreportserverinstance-properties---issharepointintegrated"></a>MSReportServer_Instance-Eigenschaften: IsSharePointIntegrated
@@ -38,6 +38,6 @@ public Boolean IsSharePointIntegrated;
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [MSReportServer_Instance-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)   
- [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting-Klasse](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
   

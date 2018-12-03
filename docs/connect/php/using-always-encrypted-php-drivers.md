@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695678"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403425"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Verwenden von Always Encrypted mit den PHP-Treibern für SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -155,7 +155,7 @@ $stmt->execute();
 Die folgenden Beispiele veranschaulichen Filtern von Daten basierend auf verschlüsselten Werten und Abrufen von Klartextdaten aus verschlüsselten Spalten, die über die SQLSRV- und PDO_SQLSRV-Treiber. Beachten Sie folgende Punkte:
  -   Der in der WHERE-Klausel zum Filtern der Spalte „SSN“ verwendete Wert muss mit dem bind-Parameter übergeben werden, damit ihn der Treiber vor dem Senden an die Datenbank transparent verschlüsseln kann.
  -   Beim Ausführen der Abfrage mit gebundenen Parametern, die PHP-Treibern bestimmt automatisch die SQL-Typ für den Benutzer, wenn der Benutzer explizit den SQL-Typ gibt an, wenn der SQLSRV-Treiber verwenden.
- -   Alle Werte, die vom Programm gedruckt werden als nur-Text, da der Treiber die aus den Spalten "ssn" und "BirthDate" abgerufenen Daten transparent entschlüsselt.
+ -   Alle Werte werden vom Programm als Klartext ausgegeben, da der Treiber die aus den Spalten „SSN“ und „BirthDate“ abgerufenen Daten transparent entschlüsselt.
  
 Hinweis: Abfragen können Übereinstimmungsvergleiche für verschlüsselte Spalten nur ausführen, wenn die Verschlüsselung deterministisch ist. Weitere Informationen finden Sie im Abschnitt [Auswählen der deterministischen oder zufälligen Verschlüsselung](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 

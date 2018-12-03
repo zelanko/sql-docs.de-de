@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 6f51baee10a0f9b9cbb3595be816b2928f5bc0b0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604715"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506832"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Verwenden von Always Encrypted mit ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -365,9 +365,9 @@ Azure Key Vault ist eine praktische Möglichkeit zum Speichern von Spaltenhaupts
 
 Der Treiber unterstützt die Authentifizierung bei Azure Key Vault mithilfe der folgenden Typen von Anmeldeinformationen:
 
-- Benutzername und Kennwort – sind die Anmeldeinformationen den Namen des Azure Active Directory-Benutzer und das zugehörige Kennwort mit dieser Methode.
+- Benutzername/Kennwort - sind die Anmeldeinformationen den Namen des Azure Active Directory-Benutzer und das zugehörige Kennwort mit dieser Methode.
 
-- Client-ID/Geheimnis – mit dieser Methode sind die Anmeldeinformationen ein Anwendungsclient-ID und einen geheimen Anwendungsschlüssel.
+- Client-ID/Geheimnis - mit dieser Methode sind die Anmeldeinformationen ein Anwendungsclient-ID und einen geheimen Anwendungsschlüssel.
 
 Damit um den Treiber CMKs in AKV gespeichert werden, für die spaltenverschlüsselung verwenden zu können, verwenden Sie die folgenden Connection-String-only-Schlüsselwörter:
 

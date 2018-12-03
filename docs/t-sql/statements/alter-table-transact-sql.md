@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7676df1bf5d5a556b79cdcfe0797884438150190
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cc42802f6263e7e7609ef6c11aa6dda4114cee97
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701118"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503655"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -593,9 +593,9 @@ Die Onlineänderung ermöglicht, dass vom Benutzer und automatisch erstellte Sta
   
 -   Die `WAIT_AT_LOW_PRIORITY`-Option kann für die Onlinespaltenänderung nicht verwendet werden.  
   
--   `ALTER COLUMN … ADD/DROP PERSISTED` wird bei der Onlinespaltenänderung nicht unterstützt.  
+-   `ALTER COLUMN ... ADD/DROP PERSISTED` wird bei der Onlinespaltenänderung nicht unterstützt.  
   
--   `ALTER COLUMN … ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` ist von der Onlinespaltenänderung nicht betroffen.  
+-   `ALTER COLUMN ... ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` ist von der Onlinespaltenänderung nicht betroffen.  
   
 -   Die Onlinespaltenänderung von Tabellen mit Änderungsnachverfolgung und von Tabellen, die ein Mergereplikationsverleger sind, wird nicht unterstützt.  
   
@@ -1008,7 +1008,7 @@ Löscht die Spalte oder Einschränkung nur, wenn diese bereits vorhanden ist.
  Sie können Länge, Präzision oder Dezimalstellen einer Spalte ändern, indem Sie die neue Größe für den Spaltendatentyp in der ALTER COLUMN-Klausel angeben. Wenn die Spalte Daten enthält, darf die neue Größe nicht unter der maximalen Datenmenge liegen. Außerdem darf die Spalte nicht in einem Index definiert werden, es sei denn, die Spalte ist vom Datentyp **varchar**, **nvarchar** oder **varbinary** und der Index ist nicht das Ergebnis einer PRIMARY KEY-Einschränkung. Siehe Beispiel P.  
   
 ## <a name="locks-and-alter-table"></a>Sperren und ALTER TABLE  
- Die in ALTER TABLE angegebenen Änderungen werden sofort implementiert. Wenn die Änderungen Änderungen der Zeilen in der Tabelle erfordern, aktualisiert ALTER TABLE die Zeilen. ALTER TABLE belegt die Tabelle mit einer Schemaänderungssperre (SCH-M), um sicherzustellen, dass andere Verbindungen während der Änderung noch nicht einmal auf die Metadaten der Tabelle verweisen können. Eine Ausnahme sind Onlineindexvorgänge, die am Ende eine sehr kurze SCH-M-Sperre erfordern. Bei einem `ALTER TABLE…SWITCH`-Vorgang werden sowohl die Quell- als auch die Zieltabelle mit der Sperre belegt. Die an der Tabelle vorgenommenen Änderungen werden protokolliert und sind vollständig wiederherstellbar. Änderungen, die sich auf sämtliche Zeilen einer sehr großen Tabelle auswirken (z. B. das Löschen einer Spalte oder in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Hinzufügen einer NOT NULL-Spalte mit einem Standardwert) kann viel Zeit in Anspruch nehmen und dazu führen, dass viele Protokolldatensätze generiert werden. Diese ALTER TABLE-Anweisungen sollten ebenso vorsichtig ausgeführt werden wie jede INSERT-, UPDATE- oder DELETE-Anweisung, die sich auf viele Zeilen auswirkt.  
+ Die in ALTER TABLE angegebenen Änderungen werden sofort implementiert. Wenn die Änderungen Änderungen der Zeilen in der Tabelle erfordern, aktualisiert ALTER TABLE die Zeilen. ALTER TABLE belegt die Tabelle mit einer Schemaänderungssperre (SCH-M), um sicherzustellen, dass andere Verbindungen während der Änderung noch nicht einmal auf die Metadaten der Tabelle verweisen können. Eine Ausnahme sind Onlineindexvorgänge, die am Ende eine sehr kurze SCH-M-Sperre erfordern. Bei einem `ALTER TABLE...SWITCH`-Vorgang werden sowohl die Quell- als auch die Zieltabelle mit der Sperre belegt. Die an der Tabelle vorgenommenen Änderungen werden protokolliert und sind vollständig wiederherstellbar. Änderungen, die sich auf sämtliche Zeilen einer sehr großen Tabelle auswirken (z. B. das Löschen einer Spalte oder in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Hinzufügen einer NOT NULL-Spalte mit einem Standardwert) kann viel Zeit in Anspruch nehmen und dazu führen, dass viele Protokolldatensätze generiert werden. Diese ALTER TABLE-Anweisungen sollten ebenso vorsichtig ausgeführt werden wie jede INSERT-, UPDATE- oder DELETE-Anweisung, die sich auf viele Zeilen auswirkt.  
   
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>Hinzufügen von NOT NULL-Spalten als Onlinevorgang  
  Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition ist das Hinzufügen einer NOT NULL-Spalte mit einem Standardwert ein Onlinevorgang, wenn der Standardwert eine *Laufzeitkonstante* darstellt. Dies bedeutet, dass der Vorgang unabhängig von der Anzahl von Zeilen in der Tabelle nahezu sofort abgeschlossen wird. Dies liegt daran, dass die vorhandenen Zeilen in der Tabelle während des Vorgangs nicht aktualisiert werden. Stattdessen wird der Standardwert nur in den Metadaten der Tabelle gespeichert und der Wert in Abfragen, die auf diese Zeilen zugreifen, nur nach Bedarf gesucht. Dieses Verhalten ist automatisch. Es ist keine zusätzliche Syntax erforderlich, um den Onlinevorgang außerhalb der ADD COLUMN-Syntax zu implementieren. Eine Laufzeitkonstante ist ein Ausdruck, der zur Laufzeit unabhängig vom Determinismus den gleichen Wert für jede Zeile in der Tabelle erzeugt. Der konstante Ausdruck "My temporary data" oder die GETUTCDATETIME()-Systemfunktion sind z. B. Laufzeitkonstanten. Im Gegensatz dazu sind die Funktionen `NEWID()` oder `NEWSEQUENTIALID()` keine Laufzeitkonstanten, da für jede Zeile in der Tabelle ein eindeutiger Wert erzeugt wird. Das Hinzufügen einer NOT NULL-Spalte mit einem Standardwert, der keine Laufzeitkonstante ist, wird immer offline ausgeführt, und dabei wird eine exklusive (SCH-M)-Sperre für die Dauer des Vorgangs abgerufen.  

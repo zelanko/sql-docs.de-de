@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1e28639c3e0f167c61f63c4d63eadf703609b54b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf6c6caf1162c3b2257ffea9c051fa7634250fd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603518"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507262"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Genauigkeit, Dezimalstellen und Länge (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ Die Operandenausdrücke werden als Ausdruck e1 mit der Genauigkeit p1 und der De
   
 \* Die Genauigkeit und Dezimalstellen des Ergebnisses haben ein absolutes Maximum von 38. Wenn die Genauigkeit des Ergebnisses 38 überschreitet, wird es auf 38 reduziert. Ebenfalls wird die zugehörige Dezimalstellenanzahl reduziert, um zu verhindern, dass der ganzzahlige Teil eines Ergebnisses abgeschnitten wird. In solchen Fällen (z.B. bei der Multiplikation oder Division) wird der Skalierungsfaktor nicht reduziert, um die Dezimalgenauigkeit beizubehalten. Dadurch kann jedoch ein Überlauffehler ausgelöst werden.
 
-Bei Additions- und Subtraktionsvorgängen werden `max(p1 – s1, p2 – s2)`-Platzhalter benötigt, um den integralen Bestandteil der Dezimalzahl zu speichern. Wenn nicht genügend Speicherplatz vorhanden ist (d.h. `max(p1 – s1, p2 – s2) < min(38, precision) – scale`), werden die Dezimalstellen reduziert, um genügend Speicherplatz für den integralen Bestandteil bereitzustellen. Die resultierenden Dezimalstellen sind `MIN(precision, 38) - max(p1 – s1, p2 – s2)`. Die Stellen hinter dem Dezimaltrennzeichen werden also möglicherweise gerundet, um in diese zu passen.
+Bei Additions- und Subtraktionsvorgängen werden `max(p1 - s1, p2 - s2)`-Platzhalter benötigt, um den integralen Bestandteil der Dezimalzahl zu speichern. Wenn nicht genügend Speicherplatz vorhanden ist (d.h. `max(p1 - s1, p2 - s2) < min(38, precision) - scale`), werden die Dezimalstellen reduziert, um genügend Speicherplatz für den integralen Bestandteil bereitzustellen. Die resultierenden Dezimalstellen sind `MIN(precision, 38) - max(p1 - s1, p2 - s2)`. Die Stellen hinter dem Dezimaltrennzeichen werden also möglicherweise gerundet, um in diese zu passen.
 
 Bei Multiplikations- und Divisionsvorgängen werden `precision - scale`-Platzhalter benötigt, um den integralen Bestandteil des Ergebnisses zu speichern. Die Dezimalstellen können mithilfe von folgenden Regeln reduziert werden:
-1.  Die resultierenden Dezimalstellen wird auf `min(scale, 38 – (precision-scale))` reduziert, wenn der integrale Bestandteil kleiner als 32 ist, da diese nicht größer als `38 – (precision-scale)` sein darf. Das Ergebnis kann in diesem Fall gerundet werden.
+1.  Die resultierenden Dezimalstellen wird auf `min(scale, 38 - (precision-scale))` reduziert, wenn der integrale Bestandteil kleiner als 32 ist, da diese nicht größer als `38 - (precision-scale)` sein darf. Das Ergebnis kann in diesem Fall gerundet werden.
 1. Die Dezimalstellen werden nicht geändert, wenn dieses kleiner als 6 und der integrale Bestandteil größer als 32 ist. In diesem Fall wird möglicherweise ein Überlauffehler ausgelöst, wenn das Ergebnis nicht in decimal(38, scale) passt. 
 1. Die Dezimalstellen werden auf 6 festgelegt, wenn dieses weniger als 6 beträgt und der integrale Bestandteil größer als 32 ist. In diesem Fall werden der integrale Bestandteil und die Dezimalstellen reduziert, und der sich ergebende Typ lautet decimal(38,6). Das Ergebnis wird auf 6 Dezimalstellen gerundet. Andernfalls wird ein Überlauffehler ausgelöst, wenn der integrale Bestandteil nicht in 32 Ziffern passt.
 
@@ -76,7 +76,7 @@ Der folgende Ausdruck gibt das Ergebnis `0.00000090000000000` ohne Rundung zurü
 select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20)) [decimal 38,17]
 ```
 In diesem Fall beträgt die Genauigkeit 61 und die Dezimalstellen betragen 40.
-Der integrale Bestandteil (precision-scale = 21) ist kleiner als 32. Dies entspricht also Fall (1) in den Multiplikationsregeln, und die Dezimalstellen werden als `min(scale, 38 – (precision-scale)) = min(40, 38 – (61-40)) = 17` berechnet. Der Ergebnistyp ist `decimal(38,17)`.
+Der integrale Bestandteil (precision-scale = 21) ist kleiner als 32. Dies entspricht also Fall (1) in den Multiplikationsregeln, und die Dezimalstellen werden als `min(scale, 38 - (precision-scale)) = min(40, 38 - (61-40)) = 17` berechnet. Der Ergebnistyp ist `decimal(38,17)`.
 
 Der folgende Ausdruck gibt das Ergebnis `0.000001` zurück, das in `decimal(38,6)` passen soll:
 ```sql

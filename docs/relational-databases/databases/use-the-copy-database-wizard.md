@@ -26,12 +26,12 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3513d85607582a8aab726804f2501ee675859460
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8930cb9c01ab04f6166a710de66ab3bbb3241a05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560507"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403245"
 ---
 # <a name="use-the-copy-database-wizard"></a>Verwenden des Assistenten zum Kopieren von Datenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -312,7 +312,7 @@ Unabhängig davon, ob Sie sich für **Verschieben** oder **Kopieren**, **Trennen
      > **HINWEIS:** Sie können den Assistenten zum Kopieren von Datenbanken über eine beliebige Datenbank starten.  Sie können den Assistenten zum Kopieren von Datenbanken entweder auf dem Quell- oder Zielserver starten.
   
 ### <a name="a--move-database-using-detach-and-attach-method-to-an-instance-on-a-different-physical-server--a-login-and-sql-server-agent-job-will-be-moved-as-well"></a>**A.  Verschieben Sie die Datenbank mithilfe der Methode zum Trennen und Anfügen in eine Instanz auf einem anderen physischen Server.  Ebenso werden eine Anmeldung und ein SQL Server-Agentauftrag verschoben.**  
-Im folgenden Beispiel wird die `Sales` -Datenbank, eine Windows-Anmeldung namens `contoso\Jennie` und ein SQL Server-Agentauftrag namens `Jennie’s Report` aus einer Instanz von SQL Server 2008 auf `Server1` in eine Instanz von SQL Server 2016 auf `Server2`verschoben.  `Jennie’s Report` verwendet die `Sales` -Datenbank.  `Sales` ist nicht bereits auf dem Zielserver, `Server2`, vorhanden.  `Server1` wird einem anderen Team neu zugewiesen, nachdem die Datenbank verschoben wurde.
+Im folgenden Beispiel wird die `Sales` -Datenbank, eine Windows-Anmeldung namens `contoso\Jennie` und ein SQL Server-Agentauftrag namens `Jennie's Report` aus einer Instanz von SQL Server 2008 auf `Server1` in eine Instanz von SQL Server 2016 auf `Server2`verschoben.  `Jennie's Report` verwendet die `Sales` -Datenbank.  `Sales` ist nicht bereits auf dem Zielserver, `Server2`, vorhanden.  `Server1` wird einem anderen Team neu zugewiesen, nachdem die Datenbank verschoben wurde.
   
 6.  Wie oben unter [Einschränkungen](#Restrictions)erwähnt, muss beim Übertragen eines SQL Server-Agentauftrags, der auf eine Datenbank verweist, die noch nicht auf dem Zielserver vorhanden ist, eine Shelldatenbank auf dem Zielserver erstellt werden.  Erstellen Sie eine Shelldatenbank namens `Sales` auf dem Zielserver. 
 
@@ -322,7 +322,7 @@ Im folgenden Beispiel wird die `Sales` -Datenbank, eine Windows-Anmeldung namens
   
 9.  Seite**Zieldatenbank konfigurieren** : Der **Assistent** hat erkannt, dass `Sales` bereits auf dem Zielserver vorhanden ist, wie oben in **Schritt 6** erstellt, und hat `_new` an den Namen der **Zieldatenbank** angefügt.  Löschen Sie `_new` aus dem Textfeld **Zieldatenbank** .  Ändern Sie bei Bedarf die Werte für **Dateiname**und **Zielordner**.  Wählen Sie **Löschen Sie jede auf dem Zielserver vorhandene Datenbank, die denselben Namen hat, und setzen Sie dann die Datenbankübertragung fort, wobei vorhandene Datenbankdateien überschrieben werden**aus.  Klicken Sie auf **Weiter**.
   
-10. Seite**Serverobjekte auswählen** : Klicken Sie im Bereich **Ausgewählte verbundene Objekte:** auf die Schaltfläche mit den Auslassungspunkten für **Objektnamenanmeldungen**.  Wählen Sie unter **Kopieroptionen** die Option **Nur die ausgewählten Anmeldenamen kopieren:** aus.  Aktivieren Sie das Kontrollkästchen für **Alle Serveranmeldungen anzeigen**.  Aktivieren Sie das Feld **Anmeldung** für `contoso\Jennie`.  Klicken Sie auf **OK**.  Wählen Sie im Bereich **Verfügbare verbundene Objekte:** die Option **SQL Server-Agentaufträge** aus, und klicken Sie dann auf die Schaltfläche **>** .  Klicken Sie im Bereich **Ausgewählte verbundene Objekte:** auf die Schaltfläche mit den Auslassungspunkten für **SQL Server-Agentaufträge**.  Wählen Sie unter **Kopieroptionen** die Option **Nur die ausgewählten Aufträge kopieren:** aus.  Aktivieren Sie das Kontrollkästchen für `Jennie’s Report`.  Klicken Sie auf **OK**.  Klicken Sie auf **Weiter**.  
+10. Seite**Serverobjekte auswählen** : Klicken Sie im Bereich **Ausgewählte verbundene Objekte:** auf die Schaltfläche mit den Auslassungspunkten für **Objektnamenanmeldungen**.  Wählen Sie unter **Kopieroptionen** die Option **Nur die ausgewählten Anmeldenamen kopieren:** aus.  Aktivieren Sie das Kontrollkästchen für **Alle Serveranmeldungen anzeigen**.  Aktivieren Sie das Feld **Anmeldung** für `contoso\Jennie`.  Klicken Sie auf **OK**.  Wählen Sie im Bereich **Verfügbare verbundene Objekte:** die Option **SQL Server-Agentaufträge** aus, und klicken Sie dann auf die Schaltfläche **>** .  Klicken Sie im Bereich **Ausgewählte verbundene Objekte:** auf die Schaltfläche mit den Auslassungspunkten für **SQL Server-Agentaufträge**.  Wählen Sie unter **Kopieroptionen** die Option **Nur die ausgewählten Aufträge kopieren:** aus.  Aktivieren Sie das Kontrollkästchen für `Jennie's Report`.  Klicken Sie auf **OK**.  Klicken Sie auf **Weiter**.  
   
 11. Seite**Speicherort der Quelldatenbankdateien** : Klicken Sie auf die Schaltfläche mit den Auslassungspunkten für **Dateifreigabe auf dem Quellserver** , und navigieren Sie zum Speicherort für den angegebenen Ordner.  Verwenden Sie z. B. für den Ordnerspeicherort `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` die Option `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` für **Dateifreigabe auf dem Quellserver**.  Klicken Sie auf **Weiter**.
   
@@ -354,7 +354,7 @@ Im folgenden Beispiel wird die `Sales` -Datenbank, eine Windows-Anmeldung namens
 Da `Server1` zu einem anderen Team verschoben wird und der **Verschieben** -Vorgang nicht wiederholt wird, sollten Sie die folgenden Schritte ausführen:
      -    SSIS-Paket `SalesFromServer1toServer2_Move` auf `Server2`löschen.
      -    SQL Server-Agentauftrag `SalesFromServer1toServer2_Move` auf `Server2`löschen.
-     -    SQL Server-Agentauftrag `Jennie’s Report` auf `Server1`löschen.
+     -    SQL Server-Agentauftrag `Jennie's Report` auf `Server1`löschen.
      -    Anmeldename `contoso\Jennie` auf `Server1`löschen.
 
 

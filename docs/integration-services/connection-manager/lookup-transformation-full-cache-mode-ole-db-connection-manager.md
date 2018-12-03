@@ -13,12 +13,12 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5bf791d21d9a3997a7284a6fdda7f4e8eab9c66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43edd7fbdaf744ae9c5ea401e28ccef930d91f2d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616034"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506979"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Suchtransformation im Vollcachemodus – OLE DB-Verbindungs-Manager
   Sie können die Transformation für Suche so konfigurieren, dass der Vollcachemodus und ein OLE DB-Verbindungs-Manager verwendet werden. Im Vollcachemodus wird das Verweisdataset in den Cache geladen, bevor die Transformation für Suche ausgeführt wird.  
@@ -52,11 +52,11 @@ ms.locfileid: "47616034"
   
     -   Klicken Sie auf **Tabelle oder Sicht verwenden**, und wählen Sie dann eine Tabelle oder eine Sicht aus, oder klicken Sie auf **Neu** , um eine Tabelle oder Sicht zu erstellen.  
   
-         – oder –  
+         -oder-  
   
     -   Klicken Sie auf **Ergebnisse einer SQL-Abfrage verwenden**, und erstellen Sie im Fenster **SQL-Befehl** eine Abfrage, oder klicken Sie auf **Abfrage erstellen** , um eine Abfrage mithilfe der grafischen Tools des **Abfrage-Generators** zu erstellen.  
   
-         – oder –  
+         -oder-  
   
     -   Klicken Sie alternativ auf **Durchsuchen** , um eine SQL-Anweisung aus einer Datei zu importieren.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47616034"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Implementieren einer Suchtransformation im Vollcachemodus mit dem Cacheverbindungs-Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
- [Implementieren einer Suche im Modus „Kein Cache“ oder „Teilcache“](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Implementieren einer Suche im Modus "Kein Cache" oder "Teilcache"](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [SQL Server Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
