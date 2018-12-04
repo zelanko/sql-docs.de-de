@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7f0c8c9d13eca087db3d7202d57c058527e2c073
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8f59034d6826bd1af3f1c48c81674dfc039b85e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610318"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545477"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Verwenden von Multiple Active Result Sets (MARS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +107,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  Von Anweisungen und atomic-Blöcke, die sich überlappen vorgenommenen Änderungen sind voneinander isoliert. Z. B. wenn eine Anweisung oder atomic-Block nimmt einige Änderungen vor, und klicken Sie dann setzt die Ausführung auf einer anderen Anweisung aus, sehen die neue Anweisung nicht durch die erste Anweisung vorgenommene Änderungen. Darüber hinaus bei der ersten Anweisung die Ausführung fortgesetzt wird, wird sie keine Änderungen, die von allen anderen Anweisungen angezeigt. Anweisungen werden nur Änderungen angezeigt, die abgeschlossen und ein Commit ausgeführt, bevor die Anweisung beginnt.  
   
- Eine neue Benutzertransaktion in der aktuellen Benutzertransaktion, die mit der BEGIN TRANSACTION-Anweisung gestartet werden – dies ist nur im interop-Modus unterstützt werden, damit der BEGIN TRANSACTION kann nur von einer T-SQL-Anweisung aufgerufen werden und nicht aus innerhalb einer systemintern kompilierten gespeicherten die Prozedur. Sie können einen erstellen, zeigen Sie mit der Transaktion zu speichern oder einen API-Aufruf zu Transaktion in einer Transaktion. Save(save_point_name), ein Rollback zum Sicherungspunkt auszuführen. Dieses Feature ist auch nur von T-SQL-Anweisungen aktiviert und nicht in systemintern kompilierten gespeicherten Prozeduren.  
+ Eine neue Benutzertransaktion in der aktuellen Benutzertransaktion, die mit der BEGIN TRANSACTION-Anweisung gestartet werden – dies ist nur im interop-Modus unterstützt werden, damit der BEGIN TRANSACTION kann nur von einer T-SQL-Anweisung aufgerufen werden und nicht von innerhalb einer systemintern kompilierten gespeicherten die Prozedur. Sie können einen erstellen, zeigen Sie mit der Transaktion zu speichern oder einen API-Aufruf zu Transaktion in einer Transaktion. Save(save_point_name), ein Rollback zum Sicherungspunkt auszuführen. Dieses Feature ist auch nur von T-SQL-Anweisungen aktiviert und nicht in systemintern kompilierten gespeicherten Prozeduren.  
   
  **MARS und columnstore-Indizes**  
   

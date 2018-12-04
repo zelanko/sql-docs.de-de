@@ -1,7 +1,7 @@
 ---
 title: SQL-Tools und Hilfsprogramme für SQLServer, Azure SQL-Datenbank und Azure SQL Datawarehouse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0a0a46fb27c8695ead3cc68e17677ccdcf7cb6fc
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292976"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190990"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL-Tools und Hilfsprogramme für SQLServer, Azure SQL-Datenbank und Azure SQL Datawarehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ Im folgenden sind die wichtigsten Befehlszeilentools:
 | [**sqlpackage**](sqlpackage.md) |**"Sqlpackage"** ist ein Befehlszeilenprogramm, das mehrere Aufgaben der Datenbankentwicklung automatisiert. MacOS und Linux-Versionen von "Sqlpackage" befinden sich derzeit in der Vorschauphase. | Windows, MacOS und Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** stellt Cmdlets bereit, für die Arbeit mit SQL| Windows, MacOS und Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**Sqlcmd** Dienstprogramm können Sie die Transact-SQL-Anweisungen, Systemprozeduren und Skriptdateien an der Eingabeaufforderung eingeben. | Windows, MacOS und Linux|
-|[**bcp**](../2014/tools/bcp-utility.md)|Mit dem Hilfsprogramm **bcp**(**B**ulk **C**opy **P**rogram) werden Daten per Massenvorgang zwischen einer Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und einer Datendatei in einem benutzerdefinierten Format kopiert.|Windows, MacOS und Linux|
+|[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|Mit dem Hilfsprogramm **bcp**(**B**ulk **C**opy **P**rogram) werden Daten per Massenvorgang zwischen einer Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und einer Datendatei in einem benutzerdefinierten Format kopiert.|Windows, MacOS und Linux|
 |[**MSSQL-Skripter (Vorschau)**](https://github.com/Microsoft/mssql-scripter)|**MSSQL-Skripter** ist eine plattformübergreifende Befehlszeile-Umgebung für die Skripterstellung von SQL Server-Datenbanken|Windows, MacOS und Linux|
 |[**MSSQL-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**MSSQL-Conf** konfiguriert SQL Server unter Linux ausgeführt wird.|Linux|
 
