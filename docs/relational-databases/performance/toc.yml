@@ -1,32 +1,119 @@
 items:
 - name: Leistungscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank
   href: performance-center-for-sql-server-database-engine-and-azure-sql-database.md
-- name: Konfigurieren von Speicherplätzen mit NVDIMM-N-Zurückschreibcache
-  href: configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
 - name: Automatische Optimierung
   href: ../automatic-tuning/automatic-tuning.md
-- name: Kardinalitätsschätzung
-  href: cardinality-estimation-sql-server.md
+- name: Konfigurieren von Speicherplätzen mit NVDIMM-N-Zurückschreibcache
+  href: configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
+- name: Ausführungsplan
+  href: execution-plans.md
+  items:
+  - name: Profilerstellungsinfrastruktur für Abfragen
+    href: query-profiling-infrastructure.md
+  - name: Anzeigen und Speichern von Ausführungsplänen
+    href: display-and-save-execution-plans.md
+    items:
+    - name: Anzeigen des geschätzten Ausführungsplans
+      href: display-the-estimated-execution-plan.md
+    - name: Anzeigen eines tatsächlichen Ausführungsplans
+      href: display-an-actual-execution-plan.md
+    - name: Speichern eines Ausführungsplans im XML-Format
+      href: save-an-execution-plan-in-xml-format.md
+  - name: Vergleichen und Analysieren von Ausführungsplänen
+    href: compare-and-analyze-execution-plans.md
+    items:
+    - name: Vergleichen von Ausführungsplänen
+      href: compare-execution-plans.md
+    - name: Analysieren eines tatsächlichen Ausführungsplans
+      href: analyze-an-actual-execution-plan.md
+  - name: Planhinweislisten
+    href: plan-guides.md
+    items:
+    - name: Erstellen einer neuen Planhinweisliste
+      href: create-a-new-plan-guide.md
+    - name: Erstellen einer Planhinweisliste für parametrisierte Abfragen
+      href: create-a-plan-guide-for-parameterized-queries.md
+    - name: Angeben des Abfrageparametrisierungsverhaltens mithilfe von Planhinweislisten
+      href: specify-query-parameterization-behavior-by-using-plan-guides.md
+    - name: Anwenden eines festen Abfrageplans auf eine Planhinweisliste
+      href: apply-a-fixed-query-plan-to-a-plan-guide.md
+    - name: Anfügen von Abfragehinweisen an eine Planhinweisliste
+      href: attach-query-hints-to-a-plan-guide.md
+    - name: Anzeigen der Eigenschaften der Planhinweisliste
+      href: view-plan-guide-properties.md
+    - name: Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten
+      href: use-sql-server-profiler-to-create-and-test-plan-guides.md
+    - name: Überprüfen von Planhinweislisten nach einem Upgrade
+      href: validate-plan-guides-after-upgrade.md
+    - name: Löschen einer Planhinweisliste
+      href: delete-a-plan-guide.md
+    - name: Aktivieren oder Deaktivieren einer Planhinweisliste
+      href: enable-or-disable-a-plan-guide.md
 - name: Intelligente Abfrageverarbeitung
   href: intelligent-query-processing.md
   items:
   - name: Adaptive Abfrageverarbeitung
     href: adaptive-query-processing.md
+  - name: Inlining skalarer benutzerdefinierter Funktionen
+    href: ../user-defined-functions/scalar-udf-inlining.md
 - name: Überwachen und Optimieren der Leistung
   href: monitor-and-tune-for-performance.md
   items:
   - name: Überwachen von SQL Server-Komponenten
     href: monitor-sql-server-components.md
+    items:
+    - name: Aktivitätsmonitor
+      href: ../performance-monitor/activity-monitor.md
+    - name: Dynamische Verwaltungssichten (DMVs, Dynamic Management Views) und -funktionen
+      href: ../system-dynamic-management-views/system-dynamic-management-views.md
+    - name: Erweiterte Ereignisse
+      href: ../extended-events/extended-events.md
+    - name: SQL Server Profiler
+      href: ../../tools/sql-server-profiler/sql-server-profiler.md
+    - name: SQL-Ablaufverfolgung
+      href: ../sql-trace/sql-trace.md
   - name: Tools für die Leistungsüberwachung und -optimierung
     href: performance-monitoring-and-tuning-tools.md
+    items:
+    - name: Live-Abfragestatistik
+      href: live-query-statistics.md
+    - name: -Datenbankoptimierungsratgeber
+      href: database-engine-tuning-advisor.md
+      items:
+      - name: Starten und Verwenden des Datenbankoptimierungsratgebers
+        href: start-and-use-the-database-engine-tuning-advisor.md
+      - name: Reduzieren der Optimierungsauslastung des Produktionsservers
+        href: reduce-the-production-server-tuning-load.md
+        items:
+        - name: Gesichtspunkte bei der Verwendung von Testservern
+          href: considerations-for-using-test-servers.md
+      - name: Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers
+        href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
+      - name: Empfehlungen für Columnstore-Index im Datenbankoptimierungsratgeber (DTA)
+        href: columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
+      - name: Datenbankoptimierung mithilfe der Workload aus dem Abfragespeicher
+        href: tuning-database-using-workload-from-query-store.md
+      - name: Leistungsverbesserungen mithilfe von Empfehlungen des Datenbankoptimierungsratgebers (DTA)
+        href: performance-improvements-using-dta-recommendations.md
+  - name: Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten
+    href: upgrade-dbcompat-using-qta.md
+  - name: Überwachen der Leistung mit dem Abfragespeicher
+    href: monitoring-performance-by-using-the-query-store.md
+    items:
+    - name: Verwenden des Abfragespeichers mit In-Memory-OLTP
+      href: using-the-query-store-with-in-memory-oltp.md
+    - name: Bewährte Methoden für den Abfragespeicher
+      href: best-practice-with-the-query-store.md
+    - name: Verwendungsszenarien für den Abfragespeicher
+      href: query-store-usage-scenarios.md
+    - name: So werden Daten im Abfragespeicher gesammelt
+      href: how-query-store-collects-data.md
   - name: Festlegen einer Leistungsbasislinie
     href: establish-a-performance-baseline.md
   - name: Isolieren von Leistungsproblemen
     href: isolate-performance-problems.md
   - name: Identifizieren von Engpässen
     href: identify-bottlenecks.md
-  - name: Inlining skalarer benutzerdefinierter Funktionen
-    href: ../user-defined-functions/scalar-udf-inlining.md
   - name: Festlegen der Nutzung und Leistung von Ansichten mit DMV
     href: use-dmvs-determine-usage-performance-views.md
   - name: Überwachen der Serverleistung und -aktivität
@@ -48,77 +135,47 @@ items:
       href: save-showplan-xml-events-separately-sql-server-profiler.md
     - name: Separates Speichern eines Showplan XML Statistics Profile-Ereignisses (SQL Server Profiler)
       href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
-  - name: Anzeigen und Speichern von Ausführungsplänen
-    href: display-and-save-execution-plans.md
-    items:
-    - name: Anzeigen des geschätzten Ausführungsplans
-      href: display-the-estimated-execution-plan.md
-    - name: Anzeigen eines tatsächlichen Ausführungsplans
-      href: display-an-actual-execution-plan.md
-    - name: Speichern eines Ausführungsplans im XML-Format
-      href: save-an-execution-plan-in-xml-format.md
-  - name: Live-Abfragestatistik
-    href: live-query-statistics.md
-  - name: Überwachen der Leistung mit dem Abfragespeicher
-    href: monitoring-performance-by-using-the-query-store.md
-  - name: Verwenden des Abfragespeichers mit In-Memory-OLTP
-    href: using-the-query-store-with-in-memory-oltp.md
-  - name: Bewährte Methoden für den Abfragespeicher
-    href: best-practice-with-the-query-store.md
-  - name: Verwendungsszenarien für den Abfragespeicher
-    href: query-store-usage-scenarios.md
-  - name: So werden Daten im Abfragespeicher gesammelt
-    href: how-query-store-collects-data.md
-- name: -Datenbankoptimierungsratgeber
-  href: database-engine-tuning-advisor.md
+    - name: Verwenden der system_health-Sitzung
+      href: ../extended-events/use-the-system-health-session.md
+  - name: Überwachen der Ressourcenverwendung (Systemmonitor)
+    href: ../performance-monitor/monitor-resource-usage-system-monitor.md
+- name: Interna und Architektur
+  href: ../sql-server-guides.md
   items:
-  - name: Starten und Verwenden des Datenbankoptimierungsratgebers
-    href: start-and-use-the-database-engine-tuning-advisor.md
-  - name: Reduzieren der Optimierungsauslastung des Produktionsservers
-    href: reduce-the-production-server-tuning-load.md
+  - name: Kardinalitätsschätzung
+    href: cardinality-estimation-sql-server.md
+  - name: Cursor
+    href: ../cursors.md
+  - name: Bereinigungsprozess für inaktive Datensätze
+    href: ../ghost-record-cleanup-process-guide.md
+  - name: Architektur und Entwurf von Indizes
+    href: ../sql-server-index-design-guide.md
+  - name: Joins
+    href: joins.md
+  - name: Architektur der Speicherverwaltung
+    href: ../memory-management-architecture-guide.md
     items:
-    - name: Gesichtspunkte bei der Verwendung von Testservern
-      href: considerations-for-using-test-servers.md
-  - name: Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers
-    href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
-  - name: Empfehlungen für Columnstore-Index im Datenbankoptimierungsratgeber (DTA)
-    href: columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
-  - name: Datenbankoptimierung mithilfe der Arbeitsauslastung aus dem Abfragespeicher
-    href: tuning-database-using-workload-from-query-store.md
-  - name: Leistungsverbesserungen mithilfe von Empfehlungen des Datenbankoptimierungsratgebers (DTA)
-    href: performance-improvements-using-dta-recommendations.md
-- name: Planhinweislisten
-  href: plan-guides.md
-  items:
-  - name: Erstellen einer neuen Planhinweisliste
-    href: create-a-new-plan-guide.md
-  - name: Erstellen einer Planhinweisliste für parametrisierte Abfragen
-    href: create-a-plan-guide-for-parameterized-queries.md
-  - name: Angeben des Abfrageparametrisierungsverhaltens mithilfe von Planhinweislisten
-    href: specify-query-parameterization-behavior-by-using-plan-guides.md
-  - name: Anwenden eines festen Abfrageplans auf eine Planhinweisliste
-    href: apply-a-fixed-query-plan-to-a-plan-guide.md
-  - name: Anfügen von Abfragehinweisen an eine Planhinweisliste
-    href: attach-query-hints-to-a-plan-guide.md
-  - name: Anzeigen der Eigenschaften der Planhinweisliste
-    href: view-plan-guide-properties.md
-  - name: Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten
-    href: use-sql-server-profiler-to-create-and-test-plan-guides.md
-  - name: Überprüfen von Planhinweislisten nach einem Upgrade
-    href: validate-plan-guides-after-upgrade.md
-  - name: Löschen einer Planhinweisliste
-    href: delete-a-plan-guide.md
-  - name: Aktivieren oder Deaktivieren einer Planhinweisliste
-    href: enable-or-disable-a-plan-guide.md
-- name: Überwachen der Ressourcenverwendung (Systemmonitor)
-  href: ../performance-monitor/monitor-resource-usage-system-monitor.md
-- name: Joins
-  href: joins.md
-- name: Unterabfragen
-  href: subqueries.md
-ms.openlocfilehash: c1a06a77f377871a652f8295897e8e912ef353f2
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+    - name: Lesen von Seiten
+      href: ../reading-pages.md
+    - name: Schreiben von Seiten
+      href: ../writing-pages.md
+  - name: Architektur von Seiten und Blöcken
+    href: ../pages-and-extents-architecture-guide.md
+  - name: Architektur der Abfrageverarbeitung
+    href: ../query-processing-architecture-guide.md
+  - name: Referenz zu logischen und physischen Showplanoperatoren
+    href: ../showplan-logical-and-physical-operators-reference.md
+  - name: Unterabfragen
+    href: subqueries.md
+  - name: Thread- und Taskarchitektur
+    href: ../thread-and-task-architecture-guide.md
+  - name: Architektur und Verwaltung von Transaktionsprotokollen
+    href: ../sql-server-transaction-log-architecture-and-management-guide.md
+  - name: Transaktionssperren und Zeilenversionsverwaltung
+    href: ../sql-server-transaction-locking-and-row-versioning-guide.md
+ms.openlocfilehash: 2bf87948dbeb01794c7af547586e1204613994be
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221526"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586223"

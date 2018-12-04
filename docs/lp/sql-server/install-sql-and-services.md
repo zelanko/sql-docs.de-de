@@ -6,12 +6,12 @@ description: Finden Sie die Inhalte, die Ihnen bei Installation oder Upgrade Ihr
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: be4c1d4fed73718c0a2aa7e5d386613444c3072d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 729759ad9e60f5ec45845545f7b81e1cbc1bae73
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697938"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402080"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -154,7 +154,7 @@ ms.locfileid: "51697938"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Installieren von SQL Server Reporting Services (SSRS)</h3>
-                                                    <p>Eine Lösung, um Berichte zu erstellen, zu veröffentlichen und zu verwalten und schließlich auf unterschiedliche Weise an die gewünschten Benutzer zu übermitteln, etwa durch Anzeigen der Berichte im Webbrowser, auf mobilen Geräten oder als E-Mails in den Postfächern. </p>
+                                                    <p>Eine Lösung, um Berichte zu erstellen, zu veröffentlichen und zu verwalten und anschließend auf unterschiedliche Weise an die gewünschten Benutzer zu übermitteln, etwa durch Anzeigen der Berichte im Webbrowser, auf mobilen Geräten oder als E-Mails in den Postfächern. </p>
                                                 </div>
                                             </div>
                                         </div>
