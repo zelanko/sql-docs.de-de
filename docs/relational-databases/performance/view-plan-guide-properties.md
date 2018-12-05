@@ -15,12 +15,12 @@ ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1545e1a8251e27363286d4ed482690cbd1c9bb38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0dfbacb908d70a76dede70e167670af753c0101b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801068"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401093"
 ---
 # <a name="view-plan-guide-properties"></a>Anzeigen der Eigenschaften der Planhinweisliste
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47801068"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -97,7 +97,7 @@ ms.locfileid: "47801068"
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
     ```  
-    -- If a plan guide named “Guide1” already exists in the AdventureWorks2012 database, delete it.  
+    -- If a plan guide named "Guide1" already exists in the AdventureWorks2012 database, delete it.  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID(N'Guide1') IS NOT NULL  
@@ -125,7 +125,7 @@ ms.locfileid: "47801068"
        hints,  
        is_disabled  
     FROM sys.plan_guides  
-    WHERE name = N’Guide1’;  
+    WHERE name = N'Guide1';  
     GO  
     ```  
   

@@ -17,12 +17,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a18484c470c3485fca750e1f6986702a9c37ff7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 975423cab6fb7b00baf279a9a4186336120e08c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612455"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537925"
 ---
 # <a name="remote-servers"></a>Remoteserver
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47612455"
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
 ### <a name="remote-server-security-example"></a>Beispiel für die Sicherheit von Remoteservern  
- Betrachten Sie diese beiden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationen: **serverSend** und **serverReceive**. **serverReceive** ist so konfiguriert, dass eine eingehende Anmeldung von **serverSend**namens **Sales_Mary**einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung bei **serverReceive**namens **Alice**zugeordnet wird. Eine weitere eingehende Anmeldung von **serverSend** namens **Joe** wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-authentifizierten Anmeldung auf **serverReceive**** namens **Joe** zugeordnet.  
+ Betrachten Sie diese beiden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationen: **serverSend** und **serverReceive**. **serverReceive** ist so konfiguriert, dass eine eingehende Anmeldung von **serverSend**namens **Sales_Mary**einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung bei **serverReceive**namens **Alice**zugeordnet wird. Eine weitere eingehende Anmeldung von **serverSend**namens **Joe**wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung auf **serverReceive**_,_ namens **Joe**zugeordnet.  
   
  Der folgende Transact-SQL-Beispielcode konfiguriert `serverSend` so, dass Remoteprozeduraufrufe auf `serverReceive`ausgeführt werden können.  
   
