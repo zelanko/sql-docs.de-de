@@ -11,18 +11,18 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebdaa05923df2437c0d8d5bafc2bfa86b0a76de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b794a8c93fd7a9c83e783a04999cbeb8a9e58f48
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750108"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510500"
 ---
 # <a name="using-advanced-data-types"></a>Verwenden von erweiterten Datentypen
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verwendet die erweiterten JDBC-Datentypen für die Konvertierung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen in ein Format, das von der Programmiersprache Java verarbeitet werden kann.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verwendet die erweiterten JDBC-Datentypen für die Konvertierung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen in ein Format, das von der Programmiersprache Java verarbeitet werden kann.  
   
 ## <a name="remarks"></a>Remarks
 
@@ -66,7 +66,7 @@ Reader reader = rs.getCharacterStream(2);
 > [!NOTE]
 > Diese Vorgehensweise kann auch verwendet werden, für die **Text**, **Ntext**, und **nvarchar(max)** -Datentypen.  
 
-Beim Abrufen eines binären Datentyps mit umfangreichen Werten aus einer Datenbank, z.B. dem Datentyp **varchar(max)**, stehen Ihnen mehrere Vorgehensweisen zur Verfügung. Die effizienteste Vorgehensweise besteht darin, die Daten als Binärdatenstrom zu lesen, wie z. B.:  
+Beim Abrufen eines binären Datentyps mit umfangreichen Werten aus einer Datenbank, z.B. dem Datentyp **varbinary (max)**, stehen Ihnen mehrere Vorgehensweisen zur Verfügung. Die effizienteste Vorgehensweise besteht darin, die Daten als Binärdatenstrom zu lesen, wie z. B.:  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -156,7 +156,7 @@ Die Implementierung des **XML**-Datentyps im JDBC-Treiber ermöglicht Folgendes:
   
 - Zugriff auf XML-Daten als Bytearray mit führender Bytereihenfolgemarke (Byte Order Mark, BOM) bei Codierung in UTF-16 für den Austausch mit anderen XML-Prozessoren und Datenträgerdateien  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setzt eine führende BOM für UTF-16-codierte XML-Daten voraus. Die Anwendung muss diese bereitstellen, wenn XML-Parameterwerte als Bytearrays angegeben werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt XML-Werte immer in Form von UTF-16-Zeichenfolgen ohne BOM oder eingebettete Codierungsdeklaration aus. Wenn XML-Werte als "byte[]", "BinaryStream" oder "Blob" abgerufen werden, steht vor dem Wert ein UTF-16-BOM.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setzt eine führende BOM für UTF-16-codierte XML-Daten voraus. Die Anwendung muss diese bereitstellen, wenn XML-Parameterwerte als Bytearrays angegeben werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt XML-Werte immer in Form von UTF-16-Zeichenfolgen ohne BOM oder eingebettete Kodierungsdeklaration aus. Wenn XML-Werte als "byte[]", "BinaryStream" oder "Blob" abgerufen werden, steht vor dem Wert ein UTF-16-BOM.  
   
 Weitere Informationen zum **XML**-Datentyp finden Sie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „XML-Datentyp“.  
   

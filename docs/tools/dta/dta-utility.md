@@ -21,12 +21,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9a091731d5eccbf7dca054450d4735077ad7d6d
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 719e891168fcf6a0ce094d67ec8186c653d00f49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292496"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529120"
 ---
 # <a name="dta-utility"></a>dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ dta
 [ -? ] |  
 [  
       [ -S server_name[ \instance ] ]  
-      { { -U login_id [-P password ] } | –E  }  
+      { { -U login_id [-P password ] } | -E  }  
       { -D database_name [ ,...n ] }  
       [ -d database_name ]   
       [ -Tl table_list | -Tf table_list_file ]  
@@ -106,13 +106,13 @@ dta
  Gibt den Namen jeder zu optimierenden Datenbank an. Die erste Datenbank ist die Standarddatenbank. Sie können mehrere Datenbanken angeben, indem Sie Kommas als Trennzeichen zwischen den Datenbanknamen verwenden. Beispiel:  
   
 ```  
-dta –D database_name1, database_name2...  
+dta -D database_name1, database_name2...  
 ```  
   
  Alternativ dazu können Sie auch mehrere Datenbanken angeben, indem Sie das Argument **-D** für jeden einzelnen Datenbanknamen verwenden. Beispiel:  
   
 ```  
-dta –D database_name1 -D database_name2... n  
+dta -D database_name1 -D database_name2... n  
 ```  
   
  Das Argument **-D** ist verbindlich. Wenn das Argument **-d** nicht angegeben wurde, stellt **dta** zunächst eine Verbindung mit der Datenbank her, die in der ersten `USE database_name` -Klausel in der Arbeitsauslastung angegeben ist. Enthält die Arbeitsauslastung keine explizite `USE database_name` -Klausel, müssen Sie das Argument **-d** verwenden.  
@@ -233,7 +233,7 @@ dta -d AdventureWorks2012 ...
   
 |Parameter|Standardwert|  
 |---------------|-------------------|  
-|*Datenbankname*|Der mit der Option *-D* angegebene Wert für **database_name** .|  
+|*database_name*|Der mit der Option *-D* angegebene Wert für **database_name**.|  
 |*owner_name*|**dbo**|  
 |*table_name*|Keine.|  
   
@@ -371,7 +371,7 @@ In diesem Fall wird die DTA Query Store als Quelle der Workload verwenden und nu
  In diesem Beispiel wird eine sichere Verbindung (`-E`) verwendet, um eine Verbindung mit der **tpcd1G** -Datenbank auf dem Server „MyServer“ herzustellen und dann eine Arbeitsauslastung zu analysieren und Empfehlungen zu erstellen. Die Ausgabe wird in die Skriptdatei "script.sql" geschrieben. Wenn „script.sql“ bereits vorhanden ist, wird die Datei von **dta** überschrieben, da das Argument `-F` angegeben wurde. Die Dauer der Optimierungssitzung wird nicht begrenzt, um sicherzustellen, dass die Arbeitsauslastung vollständig analysiert wird (`-A 0`). Die Empfehlung muss eine Verbesserung von mindestens 5 % (`-m 5`) ergeben. In der endgültigen Empfehlung von**dta** sollten Indizes und indizierte Sichten enthalten sein (`-fa IDX_IV`).  
   
 ```  
-dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
+dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
  **B. Begrenzen des verwendeten Speicherplatzes**  
@@ -379,7 +379,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
  In diesem Beispiel wird die Gesamtgröße der Datenbank, einschließlich Rohdaten und zusätzlicher Indizes, auf 3 GB begrenzt (`-B 3000`) und die Ausgabe in die Datei d:\result_dir\script1.sql geschrieben. Die Optimierung wird maximal 1 Stunde ausgeführt (`-A 60`).  
   
 ```  
-dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
+dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
  **C. Begrenzen der Anzahl optimierter Abfragen**  
@@ -387,7 +387,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
  In diesem Beispiel wird die Optimierung beendet, sobald die Anzahl der Abfragen, die aus der Datei orders_wkld.sql gelesen werden, den Wert 10 erreicht hat (`-n 10`) oder die Optimierung für eine Dauer von 15 Minuten ausgeführt wurde (`-A 15`), je nachdem, welches Ereignis zuerst eintritt. Wenn Sie die Optimierung aller 10 Abfragen sicherstellen möchten, geben Sie mithilfe von `-A 0` eine unbegrenzte Optimierungszeit an. Wenn die Zeit ein wichtiger Faktor ist, geben Sie ein geeignetes Zeitlimit an, indem Sie wie im folgenden Beispiel gezeigt mit dem Argument `-A` die Anzahl der Minuten angeben, die für die Optimierung zur Verfügung stehen.  
   
 ```  
-dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
+dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
  **D. Optimieren bestimmter Tabellen, die in einer Datei aufgeführt sind**  
@@ -413,7 +413,7 @@ AdventureWorks2012.Production.Product  2000000
  Die Optimierungszeit beträgt 2 Stunden (`-A 120`), und die Ausgabe wird in eine XML-Datei geschrieben (`-ox XMLTune.xml`).  
   
 ```  
-dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
+dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

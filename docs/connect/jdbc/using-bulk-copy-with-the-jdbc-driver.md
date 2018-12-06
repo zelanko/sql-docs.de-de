@@ -11,12 +11,12 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8a936373f299530f4bd98f2873d10727c980cce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4d7fabdf0f3de8c413a4621e6adb646cb1122e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741758"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534691"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Verwenden von Massenkopieren mit dem JDBC Driver
 
@@ -46,7 +46,7 @@ Die Tabellen „BulkCopyDemoMatchingColumns“ und „BulkCopyDemoDifferentColum
 Einige der Codebeispiele zeigen, wie eine Klasse „SQLServerBulkCopy“ zum Schreiben in mehrere Tabellen verwendet werden kann. Für diese Beispiele werden die Tabellen „BulkCopyDemoOrderHeader“ und „BulkCopyDemoOrderDetail“ als Zieltabellen verwendet. Diese Tabellen basieren auf den Tabellen „Sales.SalesOrderHeader“ und „Sales.SalesOrderDetail“ in „AdventureWorks“.  
   
 > [!NOTE]  
-> Die Codebeispiele zu „SQLServerBulkCopy“ werden nur zur Verfügung gestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu veranschaulichen. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT … SELECT“ zum Kopieren der Daten einfacher und schneller.  
+> Die Codebeispiele zu „SQLServerBulkCopy“ werden nur zur Verfügung gestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu veranschaulichen. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT …“ einfacher und schneller. SELECT“ zum Kopieren der Daten einfacher und schneller.  
 
 ### <a name="table-setup"></a>Tabelleneinrichtung  
 
@@ -144,7 +144,7 @@ Die einfachste Herangehensweise an einen SQL Server-Massenkopiervorgang ist das 
 Die folgende Anwendung zeigt das Laden von Daten mithilfe der Klasse „SQLServerBulkCopy“. In diesem Beispiel wird ein „ResultSet“ verwendet, um Daten aus der Tabelle „Production.Product“ in der SQL Server AdventureWorks-Datenbank in eine ähnliche Tabelle in der gleichen Datenbank zu kopieren.  
   
 > [!IMPORTANT]  
-> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT … SELECT“ zum Kopieren der Daten einfacher und schneller.  
+> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT …“ einfacher und schneller. SELECT“ zum Kopieren der Daten einfacher und schneller.  
 
 ```java
 import java.sql.Connection;
@@ -238,7 +238,7 @@ Mithilfe einer einzelnen Instanz einer SQLServerBulkCopy-Klasse können Sie mehr
 Wenn Sie mehrere Massenkopiervorgänge mithilfe des gleichen SQLServerBulkCopy-Objekts ausführen, bestehen normalerweise keine Einschränkungen hinsichtlich der Gleichheit oder Verschiedenheit der Quell- und Zielinformationen für die einzelnen Vorgänge. Sie müssen jedoch sicherstellen, dass die Informationen zur Spaltenzuordnung bei jedem Schreibvorgang auf dem Server ordnungsgemäß festgelegt sind.  
   
 > [!IMPORTANT]  
-> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT … SELECT“ zum Kopieren der Daten einfacher und schneller.  
+> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT …“ einfacher und schneller. SELECT“ zum Kopieren der Daten einfacher und schneller.  
 
 ```java
 import java.sql.Connection;
@@ -367,7 +367,7 @@ In dem Beispiel enthalten Quell- und Zieltabelle jeweils eine Identitätsspalte 
 Der Massenkopiervorgang wird mit dem Wert „10“ für die Eigenschaft **BatchSize** ausgeführt. Wenn der Vorgang auf die ungültige Zeile trifft, wird eine Ausnahme ausgelöst. In diesem ersten Beispiel ist der Massenkopiervorgang nicht transaktional. Für alle bis zum Auftreten des Fehlers kopierten Batches wird ein Commit ausgeführt; für den Batch, der den doppelten Schlüssel enthält, wird ein Rollback ausgeführt, und der Massenkopiervorgang wird vor dem Verarbeiten weiterer Batches angehalten.  
   
 > [!NOTE]  
-> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT … SELECT“ zum Kopieren der Daten einfacher und schneller.  
+> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT …“ einfacher und schneller. SELECT“ zum Kopieren der Daten einfacher und schneller.  
 
 ```java
 import java.sql.Connection;
@@ -476,7 +476,7 @@ Sie können ein Verbindungsobjekt, für das Transaktionen aktiviert sind, als Pa
 Die folgende Anwendung ähnelt **BulkCopyNonTransacted**, mit einer Ausnahme: in diesem Beispiel ist der Massenkopiervorgang in einer größeren, externen Transaktion enthalten. Wenn der Fehler aufgrund des Primärschlüsselverstoßes auftritt, wird ein Rollback der gesamten Transaktion ausgeführt, und der Zieltabelle werden keine Zeilen hinzugefügt.
 
 > [!NOTE]  
-> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT … SELECT“ zum Kopieren der Daten einfacher und schneller.  
+> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT …“ einfacher und schneller. SELECT“ zum Kopieren der Daten einfacher und schneller.  
 
 ```java
 import java.sql.Connection;
@@ -583,7 +583,7 @@ public class BulkCopyExistingTransactions {
   
 5. Wählen Sie **Abfrage zum Abgeben der zu übertragenden Daten schreiben** und anschließend **Weiter** aus.  Geben Sie für die **SQL-Anweisung** SELECT ProductID, Name, ProductNumber FROM Production.Product und **Weiter** ein.  
   
-6. Überprüfen Sie die Konfiguration: Sie können das Zeilentrennzeichen als {CR}{LF} und das Spaltentrennzeichen als Komma {,} belassen.  Wählen Sie **Zuordnungen bearbeiten** aus. und überprüfen Sie, ob der **Datentyp** für die einzelnen Spalten richtig ist (z.B. Integer für ProductID und Unicode-Zeichenfolge für die anderen).  
+6. Überprüfen Sie die Konfiguration: Sie können das Zeilentrennzeichen als {CR}{LF} und das Spaltentrennzeichen als Komma {,} belassen.  Wählen Sie **Zuordnungen bearbeiten** und überprüfen Sie, ob der **Datentyp** für die einzelnen Spalten richtig ist (z.B. Integer für ProductID und Unicode-Zeichenfolge für die anderen).  
   
 7. Überspringen Sie die weiteren Optionen bis zu **Fertig stellen**, und führen Sie den Exportvorgang aus.  
 
@@ -776,7 +776,7 @@ Hinweise zur Implementierung und Einschränkungen:
   
 3. Das für die CSV-Datei verwendete Trennzeichen darf an keiner Stelle innerhalb der Daten auftreten und muss ordnungsgemäß escaped werden, wenn es in den regulären Java-Ausdrücken zu den eingeschränkten Zeichen gehört.  
   
-4. In der CSV-Dateiimplementierung werden doppelte Anführungszeichen als Teil der Daten behandelt. Beispielsweise würde die Zeile Hallo,”Welt”,”Hallo,Welt” als aus vier Spalten mit den Werten Hallo, “Welt”, “Hallo und Welt” bestehend aufgefasst, wenn als Trennzeichen Komma verwendet wird.  
+4. In der CSV-Dateiimplementierung werden doppelte Anführungszeichen als Teil der Daten behandelt. Beispielsweise würde die Zeile Hallo,„Welt“, „Hallo,Welt“ als aus vier Spalten mit den Werten Hallo, „Welt“, „Hallo und Welt“ bestehend aufgefasst, wenn als Trennzeichen Komma verwendet wird.  
   
 5. Zeilenvorschubzeichen werden als Zeilenendzeichen verwendet und dürfen an keiner Stelle in den Daten auftreten.  
   

@@ -11,12 +11,12 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f9eded908271973415987155de5cf1efdc906db
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600970"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510721"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Verwenden von Always Encrypted mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -106,7 +106,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > Ein Beispiel dafür, wie diese Abhängigkeiten in ein Maven-Projekt eingeschlossen werden sollen, finden Sie unter [herunterladen ADAL4J und Azure-Schlüsseltresor-Abhängigkeiten mit Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### <a name="using-windows-certificate-store-provider"></a>Verwenden des Windows-Zertifikatspeicheranbieters
-Mit „SqlColumnEncryptionCertificateStoreProvider“ können Spaltenhauptschlüssel im Windows-Zertifikatspeicher gespeichert werden. Verwenden Sie SQL Server Management Studio (SSMS) Always Encrypted-Assistenten oder anderer unterstützter Tools, um die spaltenhauptschlüssel und die spaltenverschlüsselung Definitionen in der Datenbank erstellen. Der gleiche Assistent kann verwendet werden, um ein selbstsigniertes Zertifikat in der Windows Certificate Store zu generieren, das als spaltenhauptschlüssel für die immer verschlüsselten Daten verwendet werden kann. Weitere Informationen zu den spaltenhauptschlüssel und Column Encryption Key T-SQL-Syntax, finden Sie unter [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) und [CREATE COLUMN Encryption KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) bzw.
+Mit „SqlColumnEncryptionCertificateStoreProvider“ können Spaltenhauptschlüssel im Windows-Zertifikatspeicher gespeichert werden. Verwenden Sie SQL Server Management Studio (SSMS) Always Encrypted-Assistenten oder anderer unterstützter Tools, um die spaltenhauptschlüssel und die spaltenverschlüsselung Definitionen in der Datenbank erstellen. Der gleiche Assistent kann verwendet werden, um ein selbstsigniertes Zertifikat in der Windows Certificate Store zu generieren, das als spaltenhauptschlüssel für die immer verschlüsselten Daten verwendet werden kann. Weitere Informationen zum Spaltenhauptschlüssel und der T-SQL-Syntax für den Spaltenverschlüsselungsschlüssel finden Sie unter [ERSTELLEN DES SPALTENHAUPTSCHLÜSSELS](../../t-sql/statements/create-column-master-key-transact-sql.md) bzw. [ERSTELLEN DES SPALTENVERSCHLÜSSELUNGSSCHLÜSSELS](../../t-sql/statements/create-column-encryption-key-transact-sql.md).
 
 Der Name des der SQLServerColumnEncryptionCertificateStoreProvider "mssql_certificate_store" ist und die GetName()"eingeben API des Anbieterobjekts abgefragt werden kann. Sie wird vom Treiber automatisch registriert und kann nahtlos ohne anwendungsänderung verwendet werden.
 
@@ -260,7 +260,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
  */
 public class AlwaysEncrypted {
     // Alias of the key stored in the keystore.
-    private static String keyAlias = "<proide key alias>";
+    private static String keyAlias = "<provide key alias>";
 
     // Name by which the column master key will be known in the database.
     private static String columnMasterKeyName = "MyCMK";

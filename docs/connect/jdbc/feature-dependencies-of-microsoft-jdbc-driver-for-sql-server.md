@@ -11,29 +11,29 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61c66d192a158fb754563e2d103eba946dee47c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01388e48e12a01e18b837cac8e663bf2f52ebe40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830358"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502630"
 ---
-# <a name="feature-dependencies-of-microsoft-jdbc-driver-for-sql-server"></a>Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server
+# <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Diese Seite führt Sie Bibliotheken, denen von der Microsoft JDBC-Treiber für SQL Server abhängig ist. Das Projekt enthält die folgenden Abhängigkeiten.
+Dieser Artikel beschreibt die Bibliotheken, denen von der Microsoft JDBC-Treiber für SQL Server abhängig ist. Das Projekt enthält die folgenden Abhängigkeiten.
 
 ## <a name="compile-time"></a>Kompilierzeit
 
-- `azure-keyvault`: Azure Key Vault-Anbieter für Always Encrypted Azure Key Vault-Feature (optional)
-- `adal4j`: Azure Active Directory-Bibliothek für Java für Azure Active Directory-Authentifizierung-Feature und Azure Key Vault-Feature (optional)
+- `azure-keyvault`: Azure Key Vault-Anbieter für die Always Encrypted Azure Key Vault-Funktion (optional)
+- `adal4j`: Azure Active Directory-Authentifizierungsbibliothek für Java für das Azure Active Directory-Authentifizierung-Feature und die Azure Key Vault-Funktion (optional)
 
 ## <a name="test-time"></a>Testzeit
 
-Bestimmte Projekte, die eines der beiden oben genannten Features erfordern müssen explizit deklarieren, die entsprechenden Abhängigkeiten in ihrer Pom-Datei:
+Bestimmte Projekte, die entweder die vorangehenden Funktionen erfordern müssen die entsprechenden Abhängigkeiten in ihrer POM-Datei explizit deklarieren.
 
-**_Zum Beispiel:_**  Verwendung _Feature von Azure Active Directory-Authentifizierung_, müssen Sie erneut _adal4j_ Abhängigkeit in Pom-Datei des Projekts. Finden Sie unter den folgenden Codeausschnitt:
+**Zum Beispiel:** , wenn Sie das Feature für die Azure Active Directory-Authentifizierung verwenden, müssen Sie erneut die `adal4j` Abhängigkeit in POM-Datei des Projekts. Finden Sie unter den folgenden Codeausschnitt:
 
 ```xml
 <dependency>
@@ -50,7 +50,7 @@ Bestimmte Projekte, die eines der beiden oben genannten Features erfordern müss
 </dependency>
 ```
 
-**_Zum Beispiel:_**  Verwendung _Azure Key Vault-Feature_, müssen Sie erneut _Azure Key Vault_ Abhängigkeit und _adal4j_ die Abhängigkeit in Pom-Datei Ihres Projekts. Finden Sie unter den folgenden Codeausschnitt:
+**Zum Beispiel:** , wenn Sie die Azure Key Vault-Funktion verwenden, müssen Sie erneut die `azure-keyvault` Abhängigkeit und die `adal4j` Abhängigkeit in POM-Datei des Projekts. Finden Sie unter den folgenden Codeausschnitt:
 
 ```xml
 <dependency>
@@ -75,32 +75,32 @@ Bestimmte Projekte, die eines der beiden oben genannten Features erfordern müss
 
 ## <a name="dependency-requirements-for-the-jdbc-driver"></a>Abhängigkeitsanforderungen für den JDBC-Treiber
 
-### <a name="working-with-azure-key-vault-provider"></a>Arbeiten mit Azure Key Vault-Anbieters:
+### <a name="working-with-the-azure-key-vault-provider"></a>Arbeiten mit dem Azure Key Vault-Anbieter:
 
-- JDBC Driver, Version 7.0.0 - abhängigkeitsversionen: Azure Key Vault (Version 1.0.0), die Adal4j (Version 1.6.0), und ihre Abhängigkeiten ([Beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-7-0-0.md))
-- JDBC Driver, Version 6.4.0 - abhängigkeitsversionen: Azure Key Vault (Version 1.0.0), die Adal4j (Version 1.4.0), und ihre Abhängigkeiten ([Beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC Driver, Version 6.2.2 - abhängigkeitsversionen: Azure Key Vault (Version 1.0.0), die Adal4j (Version 1.4.0), und ihre Abhängigkeiten ([Beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC Driver, Version 6.0.0 - abhängigkeitsversionen: Azure Key Vault (Version 0.9.7), die Adal4j (Version 1.3.0), und ihre Abhängigkeiten ( [Beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
+- JDBC Driver, Version 7.0.0 - abhängigkeitsversionen: Azure Key Vault (Version 1.0.0), die Adal4j (Version 1.6.0), und ihre Abhängigkeiten ([beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-7-0-0.md))
+- JDBC Driver, Version 6.4.0 - abhängigkeitsversionen: Azure Key Vault (Version 1.0.0), die Adal4j (Version 1.4.0), und ihre Abhängigkeiten ([beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- JDBC Driver, Version 6.2.2 - abhängigkeitsversionen: Azure Key Vault (Version 1.0.0), die Adal4j (Version 1.4.0), und ihre Abhängigkeiten ([beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- JDBC Driver, Version 6.0.0 - abhängigkeitsversionen: Azure Key Vault (Version 0.9.7), die Adal4j (Version 1.3.0), und ihre Abhängigkeiten ( [beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
 
 > [!NOTE]
-> V6.2.2 und v6.4.0 Treiberversionen haben die Azure-Keyvault-Java-Abhängigkeit auf Version 1.0.0 aktualisiert. Allerdings wird die neue Version war nicht kompatibel mit der früheren Version (Version 0.9.7) und aus diesem Grund unterbrochen wird die vorhandene Implementierung im Treiber. Die neue Implementierung im Treiber erforderlich, API-Änderungen, die unterbrochen wiederum Clientprogramme, die den Azure Key Vault-Anbieter verwenden.
-
-> Dieses Problem wurde mit dem neuesten Treiber Version v7.0.0 gelöst, wie der entfernte Konstruktor mit Rückruf Authentifizierungsmechanismus an Azure Key Vault-Anbieter für Abwärtskompatibilität Kompatibilität hinzugefügt wird.
+> Mit 6.2.2 und 6.4.0 Treiberversionen haben die Azure-Keyvault-Java-Abhängigkeit auf Version 1.0.0 aktualisiert. Allerdings wird die neue Version war nicht kompatibel mit der früheren Version (0.9.7) und unterbricht die vorhandene Implementierung im Treiber. Die neue Implementierung im Treiber erforderlich, API-Änderungen, die unterbrochen wiederum Clientprogramme, die den Azure Key Vault-Anbieter verwenden.
+>
+> Dieses Problem ist behoben, mit der neuesten Treiber (7.0.0). Der entfernte Konstruktor, der die Rückruf-Authentifizierung verwendet wird zurück an den Azure Key Vault-Anbieter für die Abwärtskompatibilität hinzugefügt.
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Arbeiten mit der Azure Active Directory-Authentifizierung:
 
 - JDBC Driver, Version 7.0.0 - abhängigkeitsversionen: Ada4j (Version 1.6.0) und seine Abhängigkeiten
 - JDBC Driver, Version 6.4.0 - abhängigkeitsversionen: Adal4j (Version 1.4.0) und seine Abhängigkeiten
 - JDBC Driver, Version 6.2.2 - abhängigkeitsversionen: Adal4j (Version 1.4.0) und seine Abhängigkeiten
-- JDBC Driver, Version 6.0.0 - abhängigkeitsversionen: Adal4j (Version 1.3.0), und seine Abhängigkeiten – In dieser Version des Treibers, Sie können eine Verbindung herstellen mit _ActiveDirectoryIntegrated_ Authentifizierungsmodus nur auf einem Windows-Betriebssystem und Verwenden von "sqljdbc_auth.dll" und Active Directory-Authentifizierungsbibliothek für SQL Server (ADALSQL. (DLL).
+- JDBC Driver, Version 6.0.0 - abhängigkeitsversionen: Adal4j (Version 1.3.0), und seine Abhängigkeiten. In dieser Version des Treibers, Sie können eine Verbindung herstellen mit _ActiveDirectoryIntegrated_ Authentifizierungsmodus nur auf einem Windows-Betriebssystem und mithilfe von "sqljdbc_auth.dll" und Active Directory-Authentifizierungsbibliothek für SQL Server () ADALSQL. (DLL).
 
-Von Treiberversion 6.4.0 oder höher benötigen Anwendungen nicht zwingend ADALSQL verwenden. Die DLL auf Windows-Betriebssystemen. Für **nicht-Windows-Betriebssystemen**, der Treiber erfordert Kerberos-Ticket mit ActiveDirectoryIntegrated Authentifizierung arbeiten. Weitere Informationen zum Herstellen einer Verbindung mit Active Directory mithilfe von Kerberos finden Sie unter [festgelegt Kerberos-Ticket für Windows, Linux und Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac).
+Von Treiberversion 6.4.0 gerechnet benötigen Anwendungen nicht zwingend ADALSQL verwenden. Die DLL auf Windows-Betriebssystemen. Für *nicht-Windows-Betriebssystemen*, der Treiber erfordert eine Kerberos-Ticket mit ActiveDirectoryIntegrated Authentifizierung arbeiten. Weitere Informationen zum Herstellen einer Verbindung mit Active Directory mithilfe von Kerberos finden Sie unter [festgelegt Kerberos-Ticket für Windows, Linux und Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac).
 
-Für **Windows-Betriebssystemen**, Treiber "sqljdbc_auth.dll" in der Standardeinstellung sucht und keine Kerberos-Ticket-Einrichtung oder Azure bibliotheksabhängigkeiten erforderlich. Wenn "sqljdbc_auth.dll" nicht verfügbar ist, sucht Treiber allerdings für Kerberos-Ticket für die Authentifizierung bei Active Directory als bei anderen Betriebssystemen.
+Für *Windows-Betriebssystemen*, der Treiber "sqljdbc_auth.dll" in der Standardeinstellung sucht und keine Kerberos-Ticket-Einrichtung oder Azure bibliotheksabhängigkeiten erforderlich. Wenn "sqljdbc_auth.dll" nicht verfügbar ist, sucht der Treiber die Kerberos-Ticket für die Authentifizierung bei Active Directory als bei anderen Betriebssystemen.
 
-Eine beispielanwendung, die mit diesem Feature finden Sie [hier](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md).
+Sie erhalten eine [beispielanwendung](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md) , die diese Funktion verwendet.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Siehe auch
 
-[JDBC-Treiber-GitHub-Repository](https://github.com/microsoft/mssql-jdbc)  
- [API-Referenz für den JDBC-Treiber](../../connect/jdbc/reference/jdbc-driver-api-reference.md)
+[JDBC-Treiber-GitHub-repository](https://github.com/microsoft/mssql-jdbc)  
+ [JDBC-Treiber-API-Referenz](../../connect/jdbc/reference/jdbc-driver-api-reference.md)

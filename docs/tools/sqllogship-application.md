@@ -13,12 +13,12 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d4b12736ccbf670b12312b372410879c8a08a9e
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: f56669ce6fdb9bdc71017afa351e0f2b31f0b9d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291856"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508048"
 ---
 # <a name="sqllogship-application"></a>Anwendung sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51291856"
   
 ```  
   
-sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -restore secondary_id } [ –verboselevel level ] [ –logintimeout timeout_value ] [ -querytimeout timeout_value ]  
+sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -restore secondary_id } [ -verboselevel level ] [ -logintimeout timeout_value ] [ -querytimeout timeout_value ]  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -52,7 +52,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
  Alle Sicherungsdateien im Zielverzeichnis, die nach dem letzten Wiederherstellungspunkt erstellt wurden, werden in der sekundären Datenbank bzw. in den sekundären Datenbanken wiederhergestellt. Für die veralteten Sicherungsdateien wird dann auf der Grundlage der Beibehaltungsdauer der Datei von der Anwendung **sqllogship** ein Cleanup ausgeführt. Anschließend wird der Verlauf für den Wiederherstellungsvorgang von der Anwendung auf dem sekundären Server und dem Überwachungsserver protokolliert. Abschließend wird von der Anwendung die Prozedur **sp_cleanup_log_shipping_history**ausgeführt, sodass auf der Grundlage der Beibehaltungsdauer veraltete Verlaufsinformationen gelöscht werden.  
   
- **–verboselevel** *level*  
+ **-verboselevel** *level*  
  Gibt die Ebene der dem Protokollversandverlauf hinzugefügten Meldungen an. *level* entspricht einer der folgenden ganzen Zahlen:  
   
 |level|und Beschreibung|  
@@ -63,7 +63,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |**3**|Ausgabe von Informationsmeldungen, Warnungen und Fehlerbehandlungsmeldungen. Dies ist der Standardwert.|  
 |4|Ausgabe aller Debug- und Ablaufverfolgungsmeldungen|  
   
- **–logintimeout** *timeout_value*  
+ **-logintimeout** *timeout_value*  
  Gibt die für das Anmelden an der Serverinstanz vorgesehene Zeit an, bevor für den Versuch ein Timeout auftritt. Der Standardwert ist 15 Sekunden. *timeout_value* hat den Typ **int**_._  
   
  **-querytimeout** *timeout_value*  

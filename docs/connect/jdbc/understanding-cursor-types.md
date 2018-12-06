@@ -11,12 +11,12 @@ ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 295d4b7867c8ed51822080d03489643d69f68f4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9ac737c528701baca47b8ffd592389cef3fad45
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735458"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396334"
 ---
 # <a name="understanding-cursor-types"></a>Grundlegendes zu Cursortypen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47735458"
 -   Unterstützen von unterschiedlichen Sichtbarkeitsebenen bei Änderungen, die von anderen Benutzern an den Datenbankdaten, die im Resultset dargestellt werden, ausgeführt wurden.  
   
 > [!NOTE]  
->  Eine umfassende Beschreibung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursortypen finden Sie im Thema „Cursortypen (Datenbank-Engine)“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+>  Eine umfassende Beschreibung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursortypen finden Sie im Thema zu Cursortypen (Datenbank-Engine) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
  Die JDBC-Spezifikation stellt Unterstützung für Vorwärtscursor und scrollfähige Cursor bereit, die Änderungen durch andere Aufträge berücksichtigen oder nicht berücksichtigen können und schreibgeschützt oder aktualisierbar sein können. Diese Funktionalität wird von der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bereitgestellt.  
   

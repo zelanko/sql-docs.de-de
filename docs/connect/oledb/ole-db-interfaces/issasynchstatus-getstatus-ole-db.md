@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c8b7efac3068cc95af65e13db1492f935871bf66
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 1920ce001879baf01a337898c452493dccd430f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031062"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505076"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ HRESULT GetStatus(
  DBASYNCHPHASE_CANCELED – Die asynchrone Verarbeitung des Objekts wurde abgebrochen. Die **ISSAsynchStatus::GetStatus**-Methode gibt DB_E_CANCELED zurück. Wenn der asynchrone Vorgang die Folge eines Aufrufs von **ICommand::Execute** für einen Befehl zum Aktualisieren, Löschen oder Einfügen von Zeilen war, entspricht *pulProgress* der Gesamtzahl der Zeilen für alle Parametersätze, die von dem Befehl vor dem Abbrechen betroffen wurden.  
   
  *ppwszStatusText*[in/out]  
- Ein Zeiger auf den Arbeitsspeicher, der weitere Informationen über den Vorgang enthält. Mit diesem Wert kann ein Anbieter zwischen verschiedenen Elementen eines Vorgangs unterscheiden, z. B. verschiedene Ressourcen, auf die zugegriffen wurde. Diese Zeichenfolge wird gemäß der DBPROP_INIT_LCID-Eigenschaft für das Datenquellobjekt lokalisiert.  
+ Ein Zeiger auf den Arbeitsspeicher, der weitere Informationen über den Vorgang enthält. Mit diesem Wert kann ein Anbieter zwischen verschiedenen Elementen eines Vorgangs unterscheiden, z.B. verschiedene Ressourcen, auf die zugegriffen wurde. Diese Zeichenfolge wird gemäß der DBPROP_INIT_LCID-Eigenschaft für das Datenquellobjekt lokalisiert.  
   
  Wenn *ppwszStatusText* bei Eingabe ungleich NULL ist, gibt der Anbieter den Status in Verbindung mit dem entsprechenden, durch *ppwszStatusText*identifizierten Element zurück. Gibt *ppwszStatusText* kein Element von *eOperation*an, gibt der Anbieter S_OK zurück, wobei *pulProgress* und *pulProgressMax* auf den gleichen Wert festgelegt sind. Wenn der Anbieter nicht zwischen Elementen basierend auf einer wörtlichen ID unterscheidet, setzt er *ppwszStatusText* auf NULL und gibt Informationen über den gesamten Vorgang zurück. Ist *ppwszStatusText* bei Eingabe ungleich NULL, lässt der Anbieter *ppwszStatusText* unverändert.  
   
