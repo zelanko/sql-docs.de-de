@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1b0c54bf494055567e7a8c8fc59fe001ac843cfa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671685"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518609"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "51671685"
   
 |Thema|Übersicht|  
 |-----------|--------------|  
-|[Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung](#bkmk_resolveRecoveryFailures)|Erläutert, wie Sie bei der Fehlermeldung „Fehler beim Wiederherstellungsvorgang für Datenbank „*\<Datenbankname>*“ aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool „*\<Ressourcenpoolname>*““ vorgehen.|  
+|[Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung](#bkmk_resolveRecoveryFailures)|Erläutert, wie Sie bei der Fehlermeldung „Fehler beim Wiederherstellungsvorgang für Datenbank „*\<Datenbankname>*“ aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool „*\<Ressourcenpoolname>*“ vorgehen.|  
 |[Beheben von Beeinträchtigungen der Arbeitsauslastung durch wenig oder unzureichenden Arbeitsspeicher](#bkmk_recoverFromOOM)|Erläutert, wie Sie vorgehen, wenn die Leistung durch unzureichenden Arbeitsspeicher beeinträchtigt wird.|  
-|[Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist](#bkmk_PageAllocFailure)|Erläutert, wie Sie bei der Fehlermeldung „Seitenbelegungen für die Datenbank „*\<Datenbankname>*“ sind aufgrund unzureichenden Arbeitsspeichers im Ressourcenpool „*\<Ressourcenpoolname>*“ nicht zulässig“ vorgehen. … nicht zugelassen" vorgehen, wenn ausreichend Arbeitsspeicher für den Vorgang verfügbar ist.|
+|[Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist](#bkmk_PageAllocFailure)|Erläutert, wie Sie bei der Fehlermeldung „Seitenbelegungen für die Datenbank „*\<Datenbankname>*“ sind aufgrund unzureichenden Arbeitsspeichers im Ressourcenpool „*\<Ressourcenpoolname>*“ nicht zulässig“ vorgehen. … nicht zugelassen“ vorgehen, wenn ausreichend Arbeitsspeicher für den Vorgang verfügbar ist.|
 |[Bewährte Methoden zum Verwenden von In-Memory OLTP in einer Umgebung mit virtuellen Computern](#bkmk_VMs)|Zu berücksichtigende Punkte beim Verwenden von In-Memory-OLTP in einer virtualisierten Umgebung.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung  
- Wenn Sie versuchen, eine Datenbank wiederherzustellen, erhalten Sie möglicherweise folgende Fehlermeldung: „Fehler beim Wiederherstellungsvorgang für Datenbank „*\<Datenbankname>*“ aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool „*\<Ressourcenpoolname>*““. Dies gibt an, dass der Server nicht genügend verfügbaren Arbeitsspeicher zum Wiederherstellen der Datenbank hat. 
+ Wenn Sie versuchen, eine Datenbank wiederherzustellen, erhalten Sie möglicherweise folgende Fehlermeldung: „Fehler beim Wiederherstellungsvorgang für Datenbank „*\<Datenbankname>*“ aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool „*\<Ressourcenpoolname>*“. Dies gibt an, dass der Server nicht genügend verfügbaren Arbeitsspeicher zum Wiederherstellen der Datenbank hat. 
    
 Der Server, auf dem Sie eine Datenbank wiederherstellen, muss genügend verfügbaren Arbeitsspeicher für die speicheroptimierten Tabellen in der Datenbanksicherung besitzen. Andernfalls wird die Datenbank nicht online geschaltet und als fehlerverdächtig markiert.  
   
@@ -153,7 +153,7 @@ Einige bewährte Methoden für die Virtualisierung und Verwaltung von SQL Server
 -  Bei Verwendung von „Min. Serverarbeitsspeicher“ sollte nur die tatsächlich erforderliche Speichermenge zugewiesen werden, sodass ausreichend Speicher für andere Prozesse verbleibt (und Auslagerungen vermieden werden).
 -  Legen Sie den Wert für die Vorabbelegung von Arbeitsspeicher nicht zu hoch fest. Andernfalls erhalten andere Prozesse u. U. nicht ausreichend Speicher, wenn sie ihn brauchen. Dies kann zu Speicherauslagerungen führen.
 
-Wenn Sie für eine Datenbank mit speicheroptimierten Tabellen die oben genannten Methoden verwenden, kann der Versuch, die Datenbank wiederherzustellen, dazu führen, dass die Datenbank im Status "Wiederherstellung steht aus" hängen bleibt, obwohl genügend Arbeitsspeicher zum Wiederherstellen der Datenbank verfügbar ist. Die Ursache hierfür ist, dass In-Memory-OLTP die Daten beim Starten aggressiver in den Speicher lädt, als die dynamische Speicherbelegung den Arbeitsspeicher der Datenbank zuweist.
+Wenn Sie für eine Datenbank mit speicheroptimierten Tabellen die oben genannten Methoden verwenden, kann der Versuch, die Datenbank wiederherzustellen, dazu führen, dass die Datenbank im Status „Wiederherstellung steht aus“ hängen bleibt, obwohl genügend Arbeitsspeicher zum Wiederherstellen der Datenbank verfügbar ist. Die Ursache hierfür ist, dass In-Memory-OLTP die Daten beim Starten aggressiver in den Speicher lädt, als die dynamische Speicherbelegung den Arbeitsspeicher der Datenbank zuweist.
 
 ### <a name="resolution"></a>Lösung
 Um dieses Risiko abzuschwächen, ordnen Sie der Datenbank vorab genügend Arbeitsspeicher zu, um die Datenbank wiederherzustellen oder neu zu starten. Verwenden Sie hierfür nicht den Minimalwert auf Basis des dynamischen Speichers, um den zusätzlichen Arbeitsspeicher bei Bedarf bereitzustellen.

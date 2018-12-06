@@ -22,12 +22,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 05631087cc98f2b148072f954f3400bbcbaba41a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 35366fbbeac73a551546f2778592f03da5c7e1e7
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600535"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617670"
 ---
 # <a name="logging-in-to-sql-server"></a>Anmelden an SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "51600535"
 |Verbindung mit einer benannten Instanz durch Angabe der IP-Adresse und des verwendeten TCP-Ports (in diesem Fall 2828).|192.168.17.28\SQLEXPRESS,2828|  
 |Verbindung mit einer Standardinstanz nach Name unter Erzwingung einer TCP-Verbindung.|tcp:APPHOST|  
 |Verbindung mit einer benannten Instanz nach Name unter Erzwingung einer TCP-Verbindung.|tcp:APPHOST\SQLEXPRESS|  
-|Verbindung mit einer Standardinstanz unter Angabe eines Named Pipe-Namens.|\\\APPHOST\pipe\unit\app|  
+|Verbindung mit einer Standardinstanz unter Angabe eines Named Pipe-Namens.|\\\APPHOST\pipe\SQL\query|  
 |Verbindung mit einer benannten Instanz unter Angabe eines Named Pipe-Namens.|\\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
 |Verbindung mit einer Standardinstanz nach Name unter Erzwingung einer Named Pipe-Verbindung.|np:APPHOST|  
 |Verbindung mit einer benannten Instanz nach Name unter Erzwingung einer Named Pipe-Verbindung.|np:APPHOST\SQLEXPRESS|  

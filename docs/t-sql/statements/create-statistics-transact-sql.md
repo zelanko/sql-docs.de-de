@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32e830639abf73e85051486c8fa542bc0d1842a9
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae5faf4c861de4849289fe8752633caca0347976
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560194"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523289"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     <disjunct> | <comparison>  
   
 <disjunct> ::=  
-        column_name IN (constant ,…)  
+        column_name IN (constant ,...)  
   
 <comparison> ::=  
         column_name <comparison_op> constant  
@@ -110,7 +110,7 @@ CREATE STATISTICS statistics_name
     <disjunct> | <comparison>  
   
 <disjunct> ::=  
-        column_name IN (constant ,…)  
+        column_name IN (constant ,...)  
   
 <comparison> ::=  
         column_name <comparison_op> constant  
@@ -126,7 +126,7 @@ CREATE STATISTICS statistics_name
  *table_or_indexed_view_name*  
  Der Name der Tabelle, der indizierten Sicht oder der externen Tabelle, für die die Statistik erstellt werden soll. Legen Sie einen qualifizierten Tabellennamen fest, um Statistiken für eine andere Datenbank zu erstellen.  
   
- *column [ ,…n]*  
+ *Spalte [ ,...n]*  
  Mindestens eine Spalte, die in den Statistiken enthalten sein soll. Die Spalten sollten von links nach rechts nach Priorität geordnet sein. Nur die erste Spalte wird zum Erstellen des Histrogramms verwendet. Alle Spalten werden für spaltenübergreifende Statistiken verwendet, die als „Dichten“ bezeichnet werden.  
   
  Sie können beliebige Spalten angeben, die von folgenden Ausnahmen abgesehen als Indexschlüsselspalte angegeben werden können:  

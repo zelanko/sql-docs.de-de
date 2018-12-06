@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importfailing.f1
@@ -16,12 +15,12 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3fd18c3f8614a47a96f5a917fdeb6e59025a2590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 394fbfd149e9631148ca495675d93bda0ed652f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828588"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616890"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importieren von Werten aus einer Excel-Datei in eine Domäne
 
@@ -35,7 +34,7 @@ ms.locfileid: "47828588"
   
 -   Importieren Sie Werte in eine vorhandene, aufgefüllte Domäne. In diesem Fall werden nur neue Werte importiert. Alle Werte, die bereits existieren, werden nicht importiert.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Um Domänen aus einer Excel-Datei zu importieren, muss Excel auf dem Computer installiert sein, auf dem die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Anwendung installiert ist, um Domänenwerte oder eine vollständige Domäne zu importieren; Sie müssen eine Excel-Datei mit Domänenwerten erstellt haben (siehe [How the import works](#How)) und Sie müssen eine Wissensdatenbank erstellt und geöffnet haben, um die Domäne zu importieren.  
@@ -67,9 +66,9 @@ ms.locfileid: "47828588"
   
 10. Klicken Sie auf **OK**. Eine Statusanzeige wird angezeigt, die darauf hinweist, wie viele Werte erfolgreich importiert wurden, wie viele nicht importiert wurden sowie die Gesamtzahl der Werte. Klicken Sie auf die Schaltfläche **Abbrechen** , um den Prozess abzubrechen.  
   
-11. Überprüfen Sie, dass "Importieren abgeschlossen" im Dialogfeld **Domänenwerte importieren** angezeigt wird. In diesem Dialogfeld sehen Sie, welche Werte erfolgreich importiert wurden und welche nicht. Es zeigt den Namen der Datei und den Dateipfad an, den Abschlussstatus des Vorgangs, wie viele Werte erfolgreich importiert wurden, wie viele Werte nicht importiert wurden sowie die Gesamtzahl der verarbeiteten Werte.  
+11. Überprüfen Sie, dass „Importieren abgeschlossen“ im Dialogfeld **Domänenwerte importieren** angezeigt wird. In diesem Dialogfeld sehen Sie, welche Werte erfolgreich importiert wurden und welche nicht. Es zeigt den Namen der Datei und den Dateipfad an, den Abschlussstatus des Vorgangs, wie viele Werte erfolgreich importiert wurden, wie viele Werte nicht importiert wurden sowie die Gesamtzahl der verarbeiteten Werte.  
   
-12. Klicken Sie für die Werte, die nicht erfolgreich importiert wurden, auf **Protokoll** , um das Dialogfeld **Domänenwerte importieren - fehlerhafte Werte** anzuzeigen. Hier sehen Sie, weshalb der Importvorgang fehlgeschlagen ist. Die Spalte **Fehlerhafter Wert** zeigt die Werte an, die nicht aus einer Excel-Datei in eine Domäne importiert werden konnten, und die Spalte **Grund** erläutert, warum der Import fehlgeschlagen ist. Klicken Sie auf **In Zwischenablage kopieren** , um die Tabelle **Fehlerhafte Werte** in die Zwischenablage zu kopieren, aus der Sie sie in ein anderes Programm kopieren können, z. B. ein Excel-Arbeitsblatt oder eine Editor-Datei. Klicken Sie auf **OK** , um das Dialogfeld **Fehlerhafte Werte** zu schließen.  
+12. Klicken Sie für die Werte, die nicht erfolgreich importiert wurden, auf **Protokoll**, um das Dialogfeld **Domänenwerte importieren – fehlerhafte Werte** anzuzeigen. Hier sehen Sie, weshalb der Importvorgang fehlgeschlagen ist. Die Spalte **Fehlerhafter Wert** zeigt die Werte an, die nicht aus einer Excel-Datei in eine Domäne importiert werden konnten, und die Spalte **Grund** erläutert, warum der Import fehlgeschlagen ist. Klicken Sie auf **In Zwischenablage kopieren** , um die Tabelle **Fehlerhafte Werte** in die Zwischenablage zu kopieren, aus der Sie sie in ein anderes Programm kopieren können, z. B. ein Excel-Arbeitsblatt oder eine Editor-Datei. Klicken Sie auf **OK** , um das Dialogfeld **Fehlerhafte Werte** zu schließen.  
   
 13. Klicken Sie auf **OK** , um den Importvorgang abzuschließen, und schließen Sie das Dialogfeld. Wenn der Import erfolgreich abgeschlossen wurde, wird die Domänenwerteliste auf der Seite **Domänenwerte** aktualisiert und schließt die neuen importierten Werte ein. Der Filter wird in **Alle Werte** geändert und **Nur neue anzeigen** wird ausgewählt. Wenn **Nur neue anzeigen** nach dem Importvorgang ausgewählt wird, werden nur die aus der Excel-Datei importierten Werte angezeigt.  
   
@@ -116,7 +115,7 @@ ms.locfileid: "47828588"
   
     -   Das erwartete Format ist, dass die erste Spalte führende Werte und die zweite Spalte und höher Synonyme sind.  
   
-    -   Sie können mehrere Synonyme in die gleiche Zeile oder in verschiedene Zeilen importieren. Wenn Sie z. B. "NYC" und "New York City" als Synonyme für "New York" importieren möchten, können Sie eine einzelne Zeile mit "New York" in Spalte 1, "NYC" in Spalte 2 und "New York City" in Spalte 3 importieren; oder Sie können eine Zeile mit "New York" in Spalte 1 und "NYC" in Spalte 2 und eine andere Zeile mit "New York" in Spalte 1 und "New York City" in Spalte 2 importieren. Beachten Sie, dass, wenn der Wert "New York" bereits in der Domäne vorhanden ist, nur die Synonyme hinzugefügt werden. Der Benutzer erhält während des Importvorgangs keinen Fehler, der ihm mitteilt, dass der Wert bereits vorhanden ist. Wenn der erste Wert nicht bereits vorhanden ist, wird er der Domäne hinzugefügt.  
+    -   Sie können mehrere Synonyme in die gleiche Zeile oder in verschiedene Zeilen importieren. Wenn Sie z. B. „NYC“ und „New York City“ als Synonyme für „New York“ importieren möchten, können Sie eine einzelne Zeile mit „New York“ in Spalte 1, „NYC“ in Spalte 2 und „New York City“ in Spalte 3 importieren, Oder Sie können eine Zeile mit „New York“ in Spalte 1 und „NYC“ in Spalte 2 und eine andere Zeile mit „New York“ in Spalte 1 und „New York City“ in Spalte 2 importieren. Beachten Sie, dass, wenn der Wert „New York“ bereits in der Domäne vorhanden ist, nur die Synonyme hinzugefügt werden. Der Benutzer erhält während des Importvorgangs keinen Fehler, der ihm mitteilt, dass der Wert bereits vorhanden ist. Wenn der erste Wert nicht bereits vorhanden ist, wird er der Domäne hinzugefügt.  
   
  Die folgenden Regeln gelten für die Excel-Datei, die für den Import verwendet wird:  
   

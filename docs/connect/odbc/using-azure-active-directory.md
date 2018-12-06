@@ -11,12 +11,12 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 949ae2e19279db895ca9bca1441f06c2b2d8948f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7273baec814905d86e431c5a6a8f13313b9743e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604100"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536650"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Verwenden von Azure Active Directory mit dem ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -88,13 +88,13 @@ Eingabeaufforderungs-Dialogfeld angezeigt, wenn es zum Herstellen die Verbindung
 Diese Optionen entsprechen den gleichen fünf in der DSN-Setup-Benutzeroberfläche, die oben genannten verfügbar.
 
 ### <a name="example-connection-strings"></a>Exemplarische Verbindungszeichenfolgen
-1. SQL Server-Authentifizierung – legacy-Syntax. Serverzertifikat wird nicht überprüft, und nur dann, wenn der Server, die es erzwingt, wird Verschlüsselung verwendet. Der Benutzername und Kennwort wird in der Verbindungszeichenfolge übergeben.
+1. SQL Server-Authentifizierung - legacy-Syntax. Serverzertifikat wird nicht überprüft, und nur dann, wenn der Server, die es erzwingt, wird Verschlüsselung verwendet. Der Benutzername und Kennwort wird in der Verbindungszeichenfolge übergeben.
 `server=Server;database=Database;UID=UserName;PWD=Password;`
 2. SQL-Authentifizierung – neue Syntax. Der Client fordert Verschlüsselung (der Standardwert von `Encrypt` ist `true`) und das Serverzertifikat überprüft, unabhängig von der verschlüsselungseinstellung (es sei denn, `TrustServerCertificate` nastaven NA hodnotu `true`). Der Benutzername und Kennwort wird in der Verbindungszeichenfolge übergeben.
  `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=SqlPassword;`
 3. Integrierte Windows-Authentifizierung (Kerberos unter Linux und MacOS) mithilfe der SSPI (mit SQL Server oder SQL-IaaS) – aktuelle Syntax. Serverzertifikat wird nicht überprüft, es sei denn, die Verschlüsselung verwendet wird. 
 `server=Server;database=Database;Trusted_Connection=yes;`
-4. (_Nur die Windows-Treiber_.) Integrierte Windows-Authentifizierung mit SSPI (wenn die Zieldatenbank in SQL Server oder SQL-IaaS-ist): der neue Syntax. Der Client fordert Verschlüsselung (der Standardwert von `Encrypt` ist `true`) und das Serverzertifikat überprüft, unabhängig von der verschlüsselungseinstellung (es sei denn, `TrustServerCertificate` nastaven NA hodnotu `true`). 
+4. (_Nur die Windows-Treiber_.) Integrierte Windows-Authentifizierung mithilfe der SSPI (wenn die Zieldatenbank in SQL Server oder SQL-IaaS-ist) – neue Syntax. Der Client fordert Verschlüsselung (der Standardwert von `Encrypt` ist `true`) und das Serverzertifikat überprüft, unabhängig von der verschlüsselungseinstellung (es sei denn, `TrustServerCertificate` nastaven NA hodnotu `true`). 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
 5. AAD Benutzername/Kennwort-Authentifizierung (wenn die Zieldatenbank in Azure SQL-Datenbank ist). Serverzertifikat überprüft Ruft ab, unabhängig von der verschlüsselungseinstellung (es sei denn, `TrustServerCertificate` nastaven NA hodnotu `true`). Der Benutzername und Kennwort wird in der Verbindungszeichenfolge übergeben. 
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`
@@ -108,7 +108,7 @@ Diese Optionen entsprechen den gleichen fünf in der DSN-Setup-Benutzeroberfläc
 > [!NOTE] 
 >- Wenn Sie die Optionen für den neuen Active Directory mit der Windows-ODBC-Treiber verwenden, stellen Sie sicher, dass die [Active Directory-Authentifizierungsbibliothek für SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) installiert wurde. Wenn Sie die Treiber für Linux und MacOS verwenden, stellen Sie sicher, dass `libcurl` installiert wurde. Treiber, Version 17.2 und spätere ist dies nicht explizite Abhängigkeit, da er nicht für die anderen Authentifizierungsmethoden oder ODBC-Vorgänge erforderlich ist.
 >- Zum Verbinden mit SQL Server-Konto-Benutzername und Kennwort jetzt können Sie die neue `SqlPassword` Option, die speziell für SQL Azure empfohlen, da diese Option sicherer Standardwerte für die Verbindung aktiviert.
->- Beim Verbinden mit einer Azure Active Directory-Konto-Benutzernamen und Kennwort angeben `Authentication=ActiveDirectoryPassword` in der Verbindungszeichenfolge und die `UID` und `PWD` Schlüsselwörter, mit dem Benutzernamen und Kennwort bzw.
+>- Um eine Verbindung über den Benutzernamen und das Kennwort eines Azure Active Directory-Kontos herzustellen, geben Sie `Authentication=ActiveDirectoryPassword` in der Verbindungszeichenfolge und die Schlüsselwörter `UID` und `PWD` mit dem Benutzernamen und dem Kennwort an.
 >- Geben Sie zum Verbinden mit Windows-integrierte oder Active Directory-integrierte (nur Windows-Treiber) Authentifizierung `Authentication=ActiveDirectoryIntegrated` in der Verbindungszeichenfolge. Der Treiber den richtigen Authentifizierungsmodus automatisch ausgewählt. `UID` und `PWD` darf nicht angegeben werden.
 >- Die Verbindung mithilfe der Active Directory Interavtive (nur Windows-Treiber) Authentifizierung `UID` muss angegeben werden.
 

@@ -11,12 +11,12 @@ ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: deed72fce55d5e80f54ba53596c213288aae249d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: daae5aa71c227591a3349de4abd6526e83131f8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664629"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512610"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Exemplarische Vorgehensweise: Bereitstellung des Datenbankprojekts erweitern, um den Bereitstellungsplan zu analysieren
 Sie können Bereitstellungs-Contributors erstellen, um benutzerdefinierte Aktionen durchzuführen, wenn Sie ein SQL-Projekt bereitstellen. Sie können DeploymentPlanModifier oder DeploymentPlanExecutor erstellen. Verwenden Sie DeploymentPlanModifier, um den Plan zu ändern, bevor er ausgeführt wird, und DeploymentPlanExecutor, um Vorgänge durchzuführen, während der Plan ausgeführt wird. In dieser exemplarischen Vorgehensweise erstellen Sie einen DeploymentPlanExecutor mit der Bezeichnung DeploymentUpdateReportContributor, der einen Bericht über die Aktionen erstellt, die beim Bereitstellen eines Datenbankprojekts ausgeführt werden. Da dieser Erstellungs-Contributor einen Parameter akzeptiert, mit dem gesteuert wird, ob der Bericht erstellt wird, müssen Sie einen weiteren erforderlichen Schritt durchführen.  
@@ -92,7 +92,7 @@ Zum Erstellen eines Bereitstellungs-Contributors führen Sie folgende Aufgaben a
         /// passed as an additional argument to the DacServices API. To set in a project file, add the following:  
         ///   
         /// <PropertyGroup>  
-        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug’”>  
+        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
         /// $(ContributorArguments);DeploymentUpdateReportContributor.GenerateUpdateReport=true;  
         ///     </ContributorArguments>  
         /// <PropertyGroup>  
@@ -586,9 +586,9 @@ Die zweite Methode ist das Erstellen einer Zieledatei, die die erforderlichen Co
   
 1.  Navigieren Sie zu %Programme%\MSBuild.  
   
-2.  Erstellen Sie einen neuen Ordner „MyContributors“, in dem Ihre Zieledateien gespeichert werden.  
+2.  Erstellen Sie einen neuen Ordner namens „MyContributors“, in dem Ihre Zieledateien gespeichert werden.  
   
-3.  Erstellen Sie eine neue Datei „MyContributors.targets“ in diesem Verzeichnis, fügen Sie den folgenden Text hinzu, und speichern Sie die Datei:  
+3.  Erstellen Sie in diesem Verzeichnis eine neue Datei namens „MyContributors.targets“, fügen Sie den folgenden Text hinzu, und speichern Sie die Datei:  
   
     ```  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -613,7 +613,7 @@ Nach dem Durchführen einer dieser Vorgehensweisen können Sie MSBuild verwenden
 > Sie müssen die Eigenschaft „DeploymentContributors“ stets aktualisieren, damit Ihre Contributor-ID angegeben wird. Dies ist dieselbe ID, wie im Attribut „ExportDeploymentPlanExecutor“ in der Contributorquelldatei verwendet wird. Ohne diese wird Ihr Contributor nicht ausgeführt, wenn Sie das Projekt erstellen. Die Eigenschaft „ContributorArguments“ muss nur aktualisiert werden, wenn Argumente erforderlich sind, damit Ihr Contributor ausgeführt werden kann.  
   
 ### <a name="deploy-the-database-project"></a>Das Datenbankprojekt bereitstellen  
-Ihr Projekt kann in Visual Studio normal veröffentlicht oder bereitgestellt werden. Öffnen Sie einfach eine Projektmappe, die Ihr SQL-Projekt enthält, und wählen Sie im Kontextmenü über die rechte Maustaste die Option „Veröffentlichen…“, oder verwenden Sie F5 für eine Debugbereitstellung auf „LocalDB“. In diesem Beispiel verwenden wir das Dialogfeld „Veröffentlichen…“, um ein Bereitstellungsskript zu generieren.  
+Ihr Projekt kann in Visual Studio normal veröffentlicht oder bereitgestellt werden. Öffnen Sie einfach eine Projektmappe, die Ihr SQL-Projekt enthält, und wählen Sie im Kontextmenü des Projekts die Option „Veröffentlichen...“, oder verwenden Sie F5 für eine Debug-Bereitstellung in LocalDB. In diesem Beispiel wird das Dialogfeld „Veröffentlichen...“ verwendet, um ein Bereitstellungsskript zu generieren.  
   
 ##### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>So stellen Sie Ihr SQL-Projekt bereit und generieren einen Bereitstellungsbericht  
   

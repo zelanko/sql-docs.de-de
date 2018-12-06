@@ -9,18 +9,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4cafa82c6c5dd7712daa930b9b9aaf4be2bf66fc
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703908"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711831"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Neuigkeiten zu SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] ist eine Erweiterung der SQL Server-Plattform basierend auf früheren Releases, die Ihnen eine große Auswahl an Entwicklungssprachen, Datentypen und Betriebssystemen sowie die Arbeit mit einer lokalen Umgebung oder der Cloud bietet. Dieser Artikel beschreibt die Neuigkeiten zu SQL Server 2019. Weitere Informationen und bekannte Probleme finden Sie unter [SQL Server 2019 (Vorschau) – Anmerkungen zu dieser Version](sql-server-ver15-release-notes.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ist eine Erweiterung der SQL Server-Plattform basierend auf früheren Releases, die Ihnen eine große Auswahl an Entwicklungssprachen, Datentypen und Betriebssystemen sowie die Arbeit mit einer lokalen Umgebung oder der Cloud bietet. Dieser Artikel beschreibt die Neuigkeiten zu SQL Server 2019. Weitere Informationen und bekannte Probleme finden Sie unter [SQL Server 2019 (Vorschau) – Anmerkungen zu dieser Version](sql-server-ver15-release-notes.md).
 
 **Testen Sie SQL Server 2019!**
 - [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Laden Sie SQL Server 2019 für die Installation unter Windows herunter.](https://go.microsoft.com/fwlink/?LinkID=862101)
@@ -29,7 +29,7 @@ ms.locfileid: "51703908"
 
 ## <a name="ctp-21"></a>CTP 2.1
 
-Community Technology Preview (CTP) 2.1 ist das neueste öffentliche Release von [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. Die folgenden Features wurden für [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1 hinzugefügt oder verbessert.
+Community Technology Preview (CTP) 2.1 ist das neueste öffentliche Release von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Die folgenden Features wurden für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1 hinzugefügt oder verbessert.
 
 - [Big Data-Cluster](#bigdatacluster)
   - Bereitstellung von Python- und R-Apps
@@ -46,7 +46,7 @@ Community Technology Preview (CTP) 2.1 ist das neueste öffentliche Release von 
 
 ## <a name="ctp-20"></a>CTP 2.0 
 
-Community Technology Preview (CTP) 2.0 ist das erste öffentliche Release von [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. Die folgenden Features wurden für [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0 hinzugefügt oder verbessert.
+Community Technology Preview (CTP) 2.0 ist das erste öffentliche Release von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Die folgenden Features wurden für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 hinzugefügt oder verbessert.
 
 - [Big Data-Cluster](#bigdatacluster)
   - Bereitstellen eines Big Data-Clusters mit SQL und Spark-Linux-Containern in Kubernetes
@@ -163,7 +163,7 @@ Vollständige Unterstützung für die weit verbreitete Zeichencodierung UTF-8 al
 
 Beispiel: `LATIN1_GENERAL_100_CI_AS_SC` in `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. Die in SQL Server 2012 eingeführte UTF-8-Codierung ist nur für Windows-Sortierungen verfügbar, die Sonderzeichen unterstützen. `NCHAR` und `NVARCHAR` lassen nur die UTF-16-Codierung zu und bleiben unverändert.
 
-Dieses Feature kann abhängig von dem verwendeten Zeichensatz beträchtliche Speichereinsparungen ermöglichen. Die Änderung eines vorhandenen Spaltendatentyps mit lateinischen Zeichen von `NCHAR(10)` in `CHAR(10)` mit einer UTF-8-fähigen Sortierung führt beispielsweise zu einer Verringerung der Speicheranforderungen um fast 50 %. Diese Verringerung ist darauf zurückzuführen, dass `NCHAR(10)` 22 Byte für den Speicher erfordert, wohingegen `CHAR(10)` 12 Byte für die gleiche Unicode-Zeichenfolge erfordert.
+Dieses Feature kann abhängig von dem verwendeten Zeichensatz beträchtliche Speichereinsparungen ermöglichen. Die Änderung eines vorhandenen Spaltendatentyps mit lateinischen Zeichen von `NCHAR(10)` in `CHAR(10)` mit einer UTF-8-fähigen Sortierung führt beispielsweise zu einer Verringerung der Speicheranforderungen um 50 %. Diese Verringerung ist darauf zurückzuführen, dass `NCHAR(10)` 20 Byte für den Speicher erfordert, wohingegen `CHAR(10)` 10 Byte für die gleiche Unicode-Zeichenfolge erfordert.
 
 ### <a name="resumable-online-index-create-ctp-20"></a>Erstellung fortsetzbarer Onlineinidizes (CTP 2.0)
 

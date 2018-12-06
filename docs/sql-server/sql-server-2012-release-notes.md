@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: c53f178bb532eb038d4c06ca882d067aa7ae4eb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1e3b8c76da30f9216b8f5d44df40b92360350dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703938"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540556"
 ---
 # <a name="sql-server-2012-release-notes"></a>Versionsanmerkungen zu SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ Vor der Installation von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]sollt
 ### <a name="12-adding-a-local-user-account-for-the-distributed-replay-controller-service-might-terminate-setup-unexpectedly"></a>1.2 Das Hinzufügen eines lokalen Benutzerkontos für den Distributed Replay Controller-Dienst kann dazu führen, dass Setup unerwartet beendet wird  
 **Problem:** Beim Versuch, auf der Seite **Distributed Replay Controller** von SQL Server-Setup ein lokales Benutzerkonto für den Distributed Replay Controller-Dienst hinzuzufügen, wird Setup mit der Fehlermeldung „SQL Server-Setupfehler“ unerwartet beendet.  
   
-**Problemumgehung:** Vermeiden Sie es beim Ausführen von SQL-Setup, lokale Benutzerkonten mit „Aktuellen Benutzer hinzufügen“ oder „Hinzufügen“ hinzuzufügen. Fügen Sie ein lokales Benutzerkonto mithilfe folgender Schritte manuell hinzu, nachdem Setup ausgeführt wurde:  
+**Problemumgehung:** Vermeiden Sie es beim Ausführen von SQL-Setup, lokale Benutzerkonten mit „Aktuellen Benutzer hinzufügen“ oder „Hinzufügen...“ hinzuzufügen. Fügen Sie ein lokales Benutzerkonto mithilfe folgender Schritte manuell hinzu, nachdem Setup ausgeführt wurde:  
   
 1.  Beenden Sie den SQL Server Distributed Replay Controller-Dienst.  
   
@@ -308,9 +308,9 @@ Bei der Arbeit mit tabellarischen Modellen verursacht der AS-Verarbeitungstask P
   
 **Problemumgehung:** Zur Vermeidung des Problems aktivieren Sie IPv4, oder befolgen Sie die nachstehenden Anweisungen, um einen Registrierungseintrag hinzuzufügen und eine Zugriffssteuerungsliste (ACL) zu erstellen und den Hilfe-Viewer für IPv6 zu aktivieren:  
   
-1.  Erstellen Sie einen Registrierungsschlüssel mit dem Namen "IPv6" und einem Wert von "1 (DWORD(32 Bit))" unter HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
+1.  Erstellen Sie unter HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0 einen Registrierungsschlüssel mit dem Namen „IPv6“ und dem Wert „1 (DWORD(32 Bit))“.  
   
-2.  Legen Sie die Sicherheits-ACL-Einstellungen für den IPv6-Port fest, indem Sie über die Administrator-Eingabeaufforderung folgenden Befehl ausführen:  
+2.  Legen Sie die Sicherheits-ACL-Einstellungen für den Port für IPv6 fest, indem Sie über die Administrator-Eingabeaufforderung folgenden Befehl ausführen:  
   
     ```  
     netsh http add urlacl url=https://[::1]:47873/help/ sddl=D:(A;;GX;;;WD)  
@@ -403,7 +403,7 @@ Problem: Wenn Sie eine Wissensdatenbank in der Liste **Zuletzt verwendete Wissen
   
 Das Problem tritt auf, weil Zeichenfolgen in der SQL Server-Datenbank und in C# von DQS auf unterschiedliche Weise verglichen werden. Beim Zeichenfolgenvergleich in der SQL Server-Datenbank wird die Groß-/Kleinschreibung nicht beachtet, während sie in C# beachtet wird.  
   
-Dies wird an einem Beispiel deutlich. Im Beispiel wird der Benutzer "Domain\user1" verwendet. Der Benutzer meldet sich unter Verwendung des Kontos "user1" beim Data Quality-Clientcomputer an und arbeitet mit einer Wissensdatenbank. DQS speichert die zuletzt verwendete Wissensdatenbank für jeden Benutzer als Datensatz in der A_CONFIGURATION-Tabelle der DQS_MAIN-Datenbank. In diesem Fall wird der Datensatz unter folgendem Namen gespeichert: RecentList:KB:Domain\user1. Später meldet sich der Benutzer als „User1“ (beachten Sie den Großbuchstaben U) beim Data Quality Client-Computer an und versucht, die in der Liste **Zuletzt verwendete Wissensdatenbank** enthaltene Wissensdatenbank zu öffnen, um die Domänenverwaltungsaktivität auszuführen. Durch den DQS zugrunde liegenden Code werden die beiden Zeichenfolgen "RecentList:KB:DOMAIN\user1" und "DOMAIN\User1" verglichen. Da beim Zeichenfolgenvergleich in C# die Groß-/Kleinschreibung beachtet wird, stimmen die Zeichenfolgen nicht überein, sodass DQS versucht, einen neuen Datensatz für den Benutzer (User1) in die A_CONFIGURATION-Tabelle der DQS_MAIN-Datenbank einzufügen. Da die Groß-/Kleinschreibung beim Zeichenfolgenvergleich in der SQL-Datenbank jedoch nicht beachtet wird, ist die Zeichenfolge in der A_CONFIGURATION-Tabelle der DQS_MAIN-Datenbank folglich schon vorhanden, sodass der Einfügevorgang fehlschlägt.  
+Dies wird an einem Beispiel deutlich. Im Beispiel wird der Benutzer "Domain\user1" verwendet. Der Benutzer meldet sich unter Verwendung des Kontos „user1“ beim Data Quality-Client-Computer an und arbeitet mit einer Wissensdatenbank. DQS speichert die zuletzt verwendete Wissensdatenbank für jeden Benutzer als Datensatz in der A_CONFIGURATION-Tabelle der DQS_MAIN-Datenbank. In diesem Fall wird der Datensatz unter folgendem Namen gespeichert: RecentList:KB:Domain\user1. Später meldet sich der Benutzer als „User1“ (beachten Sie den Großbuchstaben U) beim Data Quality-Client-Computer an und versucht, die in der Liste **Zuletzt verwendete Wissensdatenbank** enthaltene Wissensdatenbank zu öffnen, um die Domänenverwaltungsaktivität auszuführen. Durch den DQS zugrunde liegenden Code werden die beiden Zeichenfolgen „RecentList:KB:DOMAIN\user1“ und „DOMAIN\User1“ verglichen. Da beim Zeichenfolgenvergleich in C# die Groß-/Kleinschreibung beachtet wird, stimmen die Zeichenfolgen nicht überein, sodass DQS versucht, einen neuen Datensatz für den Benutzer (User1) in die A_CONFIGURATION-Tabelle der DQS_MAIN-Datenbank einzufügen. Da die Groß-/Kleinschreibung beim Zeichenfolgenvergleich in der SQL-Datenbank jedoch nicht beachtet wird, ist die Zeichenfolge in der A_CONFIGURATION-Tabelle der DQS_MAIN-Datenbank folglich schon vorhanden, sodass der Einfügevorgang fehlschlägt.  
   
 **Problemumgehung:** Befolgen Sie einen der folgenden Schritte, um das Problem zu beheben:  
   

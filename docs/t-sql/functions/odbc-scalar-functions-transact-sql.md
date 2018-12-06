@@ -53,12 +53,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e0989f8f24e3764c63ca30b7ed980c9a4852165
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6456a8ad03e4f0cb86c5299f1d817775688c1330
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702678"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535595"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC-Skalarfunktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,13 +95,13 @@ ms.locfileid: "51702678"
 |CURTIME() (ODBC 3.0)|Gibt die aktuelle lokale Zeit zurück.|  
 |DAYNAME( date_exp ) (ODBC 2.0)|Gibt eine Zeichenfolge zurück, die den für die Datenquelle spezifischen Namen des Tages (z. B. Sonntag bis Samstag oder So. bis Sa. bei einer Datenquelle, die Deutsch verwendet, oder Sunday bis Saturday bei einer Datenquelle, die Englisch verwendet) für den Tagesteil von date_exp enthält.|  
 |DAYOFMONTH( date_exp ) (ODBC 1.0)|Gibt den Tag des Monats basierend auf dem Monatsfeld in date_exp als ganze Zahl im Bereich von 1 bis 31 zurück.|  
-|DAYOFWEEK( date_exp ) (ODBC 1.0)|Gibt den Wochentag basierend auf dem Wochenfeld in "date_exp" als ganze Zahl im Bereich von 1 bis 7 zurück, wobei 1 den Sonntag darstellt.|  
-|HOUR( time_exp ) (ODBC 1.0)|Gibt die Stunde basierend auf dem Stundenfeld in "time_exp" als ganze Zahl im Bereich von 0 bis 23 zurück.|  
-|MINUTE( time_exp ) (ODBC 1.0)|Gibt die Minute basierend auf dem Minutenfeld in "time_exp" als ganze Zahl im Bereich von 0 bis 59 zurück.|  
-|SECOND( time_exp ) (ODBC 1.0)|Gibt die Sekunde basierend auf dem Sekundenfeld in "time_exp" als ganze Zahl im Bereich von 0 bis 59 zurück.|  
-|MONTHNAME( date_exp ) (ODBC 2.0)|Gibt eine Zeichenfolge zurück, die den für die Datenquelle spezifischen Namen des Monats (z. B. January bis December bzw. Jan. bis Dec. für eine Datenquelle in englischer Sprache oder Januar bis Dezember für eine Datenquelle in deutscher Sprache) für den Monatsteil von "date_exp" enthält.|  
+|DAYOFWEEK( date_exp ) (ODBC 1.0)|Gibt den Wochentag basierend auf dem Wochenfeld in „date_exp“ als ganze Zahl im Bereich von 1 bis 7 zurück, wobei 1 den Sonntag darstellt.|  
+|HOUR( time_exp ) (ODBC 1.0)|Gibt die Stunde basierend auf dem Stundenfeld in „time_exp“ als ganze Zahl im Bereich von 0 bis 23 zurück.|  
+|MINUTE( time_exp ) (ODBC 1.0)|Gibt die Minute basierend auf dem Minutenfeld in „time_exp“ als ganze Zahl im Bereich von 0 bis 59 zurück.|  
+|SECOND( time_exp ) (ODBC 1.0)|Gibt die Sekunde basierend auf dem Sekundenfeld in „time_exp“ als ganze Zahl im Bereich von 0 bis 59 zurück.|  
+|MONTHNAME( date_exp ) (ODBC 2.0)|Gibt eine Zeichenfolge zurück, die den für die Datenquelle spezifischen Namen des Monats (z. B. January bis December bzw. Jan. bis Dec. für eine Datenquelle in englischer Sprache oder Januar bis Dezember für eine Datenquelle in deutscher Sprache) für den Monatsteil von „date_exp“ enthält.|  
 |QUARTER( date_exp ) (ODBC 1.0)|Gibt das Quartal in date_exp als ganze Zahl im Bereich von 1 bis 4 zurück, wobei 1 den Zeitraum vom 1. Januar bis 31. März darstellt.|  
-|WEEK( date_exp ) (ODBC 1.0)|Gibt die Woche des Jahres basierend auf dem Wochenfeld in "date_exp" als ganze Zahl im Bereich von 1 bis 53 zurück.|  
+|WEEK( date_exp ) (ODBC 1.0)|Gibt die Woche des Jahres basierend auf dem Wochenfeld in „date_exp“ als ganze Zahl im Bereich von 1 bis 53 zurück.|  
   
 ## <a name="examples"></a>Beispiele  
   

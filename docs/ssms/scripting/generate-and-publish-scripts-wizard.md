@@ -44,12 +44,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 409da0193276741d11a09d14018d016afbe449a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 846769ff6330edf5576e4342a3c145829a18196a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700268"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530561"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -149,7 +149,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
  **Optionen** – Sie können erweiterte Skriptoptionen angeben, indem Sie einen Wert aus der Liste der verfügbaren Einstellungen rechts neben den einzelnen Optionen auswählen.  
   
- **Allgemein** – Die folgenden Optionen gelten für das ganze Skript:  
+ **Allgemein**: Die folgenden Optionen gelten für das ganze Skript.  
   
 -   **ANSI-Auffüllung** – schließt **ANSI PADDING ON** in das Skript ein. Der Standardwert ist **True**.  
   
@@ -199,7 +199,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
 -   **Skript für Änderungsnachverfolgung erstellen** – Die Änderungsnachverfolgung für Skripts wird in der Ursprungsdatenbank oder in den Tabellen in der Ursprungsdatenbank aktiviert. Der Standardwert ist **False**. Weitere Informationen finden Sie unter [Informationen zur Änderungsnachverfolgung &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
--   **Skripterstellung für CHECK-Einschränkungen** – Fügt dem Skript **CHECK** -Einschränkungen hinzu. Der Standardwert ist **True**. Für**CHECK** -Einschränkungen ist es erforderlich, dass Daten, die in eine Tabelle eingegeben werden, eine angegebene Bedingung erfüllen. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
+-   **Skripterstellung für CHECK-Einschränkungen**: Fügt dem Skript **CHECK** -Einschränkungen hinzu. Der Standardwert ist **True**. Für**CHECK** -Einschränkungen ist es erforderlich, dass Daten, die in eine Tabelle eingegeben werden, eine angegebene Bedingung erfüllen. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
 -   **Skripterstellung für Datenkomprimierungsoptionen** – Schließt Datenkomprimierungsoptionen ein, wenn sie in der Ursprungsdatenbank oder den Tabellen in der Ursprungsdatenbank konfiguriert werden. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md). Der Standardwert ist **False**.  
   
@@ -239,7 +239,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
  **Optionen** – Sie können erweiterte Skriptoptionen angeben, indem Sie einen Wert aus der Liste der verfügbaren Einstellungen rechts neben den einzelnen Optionen auswählen.  
   
- **Allgemein** – Die folgenden Optionen gelten für die gesamte Veröffentlichung:  
+ **Allgemein**: Die folgenden Optionen gelten für die gesamte Veröffentlichung.  
   
 1.  **UDDTs in Basistypen konvertieren** – Im Falle von **True**werden benutzerdefinierte Datentypen (UDDT) in die zugrunde liegenden Basisdatentypen konvertiert, die zu ihrer Erstellung verwendet wurden. Verwenden Sie **True** , wenn der UDDT in der Datenbank, in der das Skript ausgeführt wird, nicht vorhanden ist. Im Falle von **False**werden UDDTs verwendet. Der Standardwert ist **False**.  
   
@@ -265,7 +265,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
 12. **Zu veröffentliche Datentypen** – Wählt aus, wofür ein Skript erstellt werden soll: **Nur Daten**, **Nur Schema** oder beides. Der Standard ist **Schema und Daten**.  
   
- **Veröffentlichungsoptionen** – Gibt an, ob beim Veröffentlichen auf dem Webhostinganbieter Transaktionen verwendet werden sollen.  
+ **Veröffentlichungsoptionen**: Gibt an, ob beim Veröffentlichen auf dem Webhostinganbieter Transaktionen verwendet werden sollen.  
   
 1.  **Mithilfe einer Transaktion veröffentlichen** – Verwendet Transaktionen beim Veröffentlichen zu einem Remote-Webhostinganbieter. Wenn die Zieldatenbank die Veröffentlichung nicht abschließen kann, werden die Transaktionen zurückgesetzt. Der Standardwert ist **True**.  
   
@@ -340,7 +340,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
  
 ## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Generieren von Skripts in Azure SQL Data Warehouse  
 
-Wenn die bei der Verwendung von „Skripterstellung als...“ generierte Syntax nicht wie die [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] -Syntax aussieht, oder wenn Sie eine Fehlermeldung erhalten, müssen Sie möglicherweise Ihre Optionen für die Skripterstellung in SQL Server Management Studio auf [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]festlegen.  
+Wenn die generiert Syntax bei Verwenden von „Skripterstellung als...“ nicht wie die [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]-Syntax aussieht, oder Sie eine Fehlermeldung erhalten, müssen Sie möglicherweise Ihre Optionen für die Skripterstellung in SQL Server Management Studio auf [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] festlegen.  
 
 ### <a name="how-to-set-default-scripting-options-to-sql-data-warehouse"></a>Festlegen der Standardoptionen für die Skripterstellung auf SQL Data Warehouse  
 

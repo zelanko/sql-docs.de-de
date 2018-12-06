@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b02b430acbc2fc56942e1c7287ea1c7e4527ccc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603570"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408887"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Listener, Clientkonnektivität, Anwendungsfailover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -183,7 +183,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  Wenn die Verfügbarkeitsgruppe während des Verbindungsversuchs einer Clientanwendung, jedoch vor dem Verbindungstimeout online geschaltet wird, stellt der Clienttreiber möglicherweise während einer der internen Wiederholungsversuche erfolgreich eine Verbindung her. In diesem Fall wird kein Fehler an die Anwendung ausgegeben.  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> Unterstützen von Multisubnetz-Failovern für Verfügbarkeitsgruppen  
- Wenn Sie Clientbibliotheken verwenden, die die MultiSubnetFailover-Verbindungsoption in der Verbindungszeichenfolge unterstützen, können Sie das Verfügbarkeitsgruppenfailover auf ein anderes Subnetz optimieren, indem Sie MultiSubnetFailover je nach Syntax des verwendeten Anbieters auf "True" oder "Ja" festlegen.  
+ Wenn Sie Clientbibliotheken verwenden, die die Verbindungsoption „MultiSubnetFailover“ in der Verbindungszeichenfolge unterstützen, können Sie das Verfügbarkeitsgruppenfailover auf ein anderes Subnetz optimieren, indem Sie „MultiSubnetFailover“ je nach Syntax des verwendeten Anbieters auf „True“ oder „Yes“ festlegen.  
   
 > [!NOTE]  
 >  Diese Einstellung wird für Verbindungen mit einem Subnetz und mehreren Subnetzen mit den Namen von Verfügbarkeitslistenern und SQL Server-Failoverclusterinstanzen empfohlen.  Wenn Sie diese Option aktivieren, stehen auch für Szenarien mit einem Subnetz weitere Optimierungen zur Verfügung.  

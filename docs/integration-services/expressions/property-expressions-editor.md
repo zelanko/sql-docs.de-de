@@ -15,12 +15,12 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbca50777271309b338940abc2bfde8c8d6ae679
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74efb5537a801e7c01d9a11a2ef9cd219e46312a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793568"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532147"
 ---
 # <a name="property-expressions-editor"></a>Eigenschaftsausdrucks-Editor
   Verwenden Sie das Dialogfeld **Eigenschaftsausdrucks-Editor** , um die Eigenschaftsausdrücke, durch die Eigenschaftswerte aktualisiert werden, zu erstellen, zu bearbeiten oder zu löschen.  
@@ -35,7 +35,7 @@ ms.locfileid: "47793568"
 > [!NOTE]  
 >  Die Namen von benutzerdefinierten und Systemvariablen unterscheiden nach Groß-/Kleinschreibung.  
   
- **Ausdruck (…)**  
+ **Ausdruck (...)**  
  Klicken Sie auf die Schaltfläche mit den drei Punkten, um das Dialogfeld **Ausdrucks-Generator** zu öffnen. Weitere Informationen finden Sie unter [Expression Builder](../../integration-services/expressions/expression-builder.md).  
   
  **Delete**  

@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c6e008139eb9e52583045690cdc51b812ef8e73
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5723f60855952e9e14e7cdff07ac312d10e38732
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642267"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526609"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt zwei Bereitstellungsmodelle: das Projektbereitstellungsmodell und das Legacy-Paketbereitstellungsmodell. Mithilfe des Projektbereitstellungsmodells können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen.  
@@ -100,7 +100,7 @@ Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und den er
   
  Um auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server ein Projekt bereitzustellen, führen Sie die folgenden Tasks aus:  
   
-1.  Erstellen Sie einen SSISDB-Katalog, wenn Sie dies nicht bereits getan haben. Weitere Informationen finden Sie im [SSIS-Katalog](../../integration-services/catalog/ssis-catalog.md).  
+1.  Erstellen Sie einen SSISDB-Katalog, falls noch nicht geschehen. Weitere Informationen finden Sie im [SSIS-Katalog](../../integration-services/catalog/ssis-catalog.md).  
   
 2.  Konvertieren Sie das Projekt mit dem Assistenten für die Konvertierung von **Integration Services-Projekten** ins Projektbereitstellungsmodell. Weitere Informationen finden Sie in den folgenden Anweisungen: [So konvertieren Sie ein Projekt in das Projektbereitstellungsmodell](#convert).  
   
@@ -318,7 +318,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
 #### <a name="select-source"></a>Quellen auswählen  
  Die Seite **Quelle auswählen** im **Bereitstellungs-Assistenten für Integration Services** zeigt die Einstellungen speziell für das Paketbereitstellungsmodell an, wenn Sie die Option **Paketbereitstellung** als **Bereitstellungsmodell**gewählt haben.  
   
- Zum Auswählen der Quellpakete klicken Sie auf die Schaltfläche **Durchsuchen…** , um den **Ordner** that contains the packages or type the Ordner path in the **Packages Ordner path** ein, und klicken Sie die Schaltfläche **Aktualisieren** am unteren Seitenrand. Jetzt sollten Sie alle Pakete im angegebenen Ordner im Listenfeld sehen. Standardmäßig sind alle Pakete ausgewählt. Klicken Sie das **Kontrollkästchen** in der ersten Spalte, um auszuwählen, welche Pakete an den Server bereitgestellt werden sollen.  
+ Zum Auswählen der Quellpakete klicken Sie auf die Schaltfläche **Durchsuchen…**, um den **Ordner** auszuwählen, der die Pakete enthält, oder geben Sie den Ordnerpfad in das Textfeld **Paketordnerpfad** ein, und klicken Sie am unteren Seitenrand auf die Schaltfläche **Aktualisieren**. Jetzt sollten Sie alle Pakete im angegebenen Ordner im Listenfeld sehen. Standardmäßig sind alle Pakete ausgewählt. Klicken Sie das **Kontrollkästchen** in der ersten Spalte, um auszuwählen, welche Pakete an den Server bereitgestellt werden sollen.  
   
  Beziehen Sie sich auf die Spalten **Status** und **Meldung** , um den Status des Pakets zu überprüfen. Falls der Status auf **Bereit** oder **Warnung**steht, würde der Bereitstellungs-Assistent den Bereitstellungsvorgang nicht blockieren. Falls hingegen der Status auf **Fehler**steht, setzt der Assistent die Bereitstellung der ausgewählten Pakete nicht fort. Klicken Sie auf den Link in der Spalte **Meldung** , um sich die detaillierteren Warn-/Fehlermeldungen anzeigen zu lassen.  
   
@@ -327,7 +327,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
  Falls der Status aller ausgewählten Pakete nicht auf **Fehler**steht, ist die Schaltfläche **Weiter** aktiviert. Sie können also mit dem Paketbereitstellungsvorgang fortfahren.  
   
 #### <a name="select-destination"></a>Ziel auswählen  
- Klicken Sie, nachdem Sie die Paketquellen ausgewählt haben, auf die Schaltfläche **Weiter** , um auf die Seite **Ziel auswählen** zu wechseln. Pakete müssen an ein Projekt im SSIS-Katalog (SSISDB) bereitgestellt werden. Stellen Sie daher vor der Bereitstellung von Paketen sicher, dass das Zielprojekt bereits im SSIS-Katalog existiert. , erstellen Sie andernfalls ein leeres Projekt. Auf der Seite **Ziel auswählen** geben Sie den Namen des Servers in das Textfeld **Servername** ein, oder klicken Sie auf die Schaltfläche **Durchsuchen…** , um eine Serverinstanz auszuwählen. Klicken Sie dann auf die Schaltfläche **Durchsuchen…** neben dem Textfeld **Pfad** , um das Zielprojekt anzugeben. Klicken Sie auf **Neues Projekt…** , um ein leeres Projekt als Zielprojekt zu erstellen, falls das Projekt noch nicht existiert. Das Projekt **MUSS** unter einem Ordner erstellt werden.  
+ Klicken Sie, nachdem Sie die Paketquellen ausgewählt haben, auf die Schaltfläche **Weiter** , um auf die Seite **Ziel auswählen** zu wechseln. Pakete müssen an ein Projekt im SSIS-Katalog (SSISDB) bereitgestellt werden. Stellen Sie daher vor der Bereitstellung von Paketen sicher, dass das Zielprojekt bereits im SSIS-Katalog existiert. Erstellen Sie andernfalls ein leeres Projekt. Auf der Seite **Ziel auswählen** geben Sie den Namen des Servers in das Textfeld **Servername** ein, oder klicken Sie auf die Schaltfläche **Durchsuchen...**, um eine Serverinstanz auszuwählen. Klicken Sie dann neben dem Textfeld **Pfad** auf die Schaltfläche **Durchsuchen...**, um das Zielprojekt anzugeben. Klicken Sie auf **Neues Projekt…**, um ein leeres Projekt als Zielprojekt zu erstellen, falls das Projekt noch nicht existiert. Das Projekt **MUSS** unter einem Ordner erstellt werden.  
   
 #### <a name="review-and-deploy"></a>Überprüfen und bereitstellen  
  Klicken Sie auf der Seite **Ziel auswählen** auf **Weiter** , um auf die Seite **Überprüfung** im **Bereitstellungs-Assistenten für Integration Services**zu wechseln. Auf der Seite zur Überprüfung können Sie sich den Bericht zur Bereitstellungsaktion ansehen. Klicken Sie nach der Überprüfung auf die Schaltfläche **Bereitstellen** , um die Bereitstellungsaktion auszuführen.  
@@ -336,7 +336,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
  Nachdem die Bereitstellung abgeschlossen ist, sollten Sie die Seite **Ergebnisse** sehen. Auf der Seite **Ergebnisse** sehen Sie die Ergebnisse aus jedem Schritt des Bereitstellungsvorgangs. Klicken Sie auf der Seite **Ergebnisse** entweder auf **Bericht speichern** zum Speichern des Bereitstellungsberichts oder auf **Schließen** zum Schließen des Assistenten.  
 
 ## <a name="create-and-map-a-server-environment"></a>Erstellen und Zuordnen einer Serverumgebung
-  Sie erstellen eine Serverumgebung, um Laufzeitwerte für Pakete festzulegen, die in einem auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellten Projekt enthalten sind. Anschließend können Sie die Umgebungsvariablen Parametern für ein bestimmtes Paket, für Einstiegspunktpakete oder für alle Pakete in einem angegebenen Projekt zuordnen. Ein Einstiegspunktpaket ist in der Regel ein übergeordnetes Paket, von dem ein untergeordnetes Paket ausgeführt wird.  
+  Sie erstellen eine Serverumgebung, um Laufzeitwerte für Pakete festzulegen, die in einem auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitgestellten Projekt enthalten sind. Anschließend können Sie die Umgebungsvariablen Parametern für ein bestimmtes Paket, für Einstiegspunktpakete oder für alle Pakete in einem angegebenen Projekt zuordnen. Ein Einstiegspunktpaket ist in der Regel ein übergeordnetes Paket, von dem ein untergeordnetes Paket ausgeführt wird.  
   
 > [!IMPORTANT]  
 >  Ein Paket kann jeweils nur mit den Werten ausgeführt werden, die in einer einzelnen Serverumgebung enthalten sind.  
@@ -490,7 +490,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
 -   Überprüfen Sie, ob der Distributed Transaction Coordinator (DTC) auf beiden Servern gestartet ist.  
   
- Rufen Sie catalog.get_project auf, um die Binärdatei für das Projekt zurückzugeben, und rufen Sie dann catalog.deploy_project auf. Der von catalog.get_project zurückgegebene Wert wird in eine Tabellenvariable des Typs "varbinary(max)" eingefügt. Der Verbindungsserver kann keine Ergebnisse vom Typ "varbinary(max)" zurückgeben.  
+ Rufen Sie catalog.get_project auf, um die Binärdatei für das Projekt zurückzugeben, und rufen Sie dann catalog.deploy_project auf. Der von catalog.get_project zurückgegebene Wert wird in eine Tabellenvariable des Typs "varbinary(max)" eingefügt. Der Verbindungsserver kann keine Ergebnisse vom Typ „varbinary(max)“ zurückgeben.  
   
  Im folgenden Beispiel gibt catalog.get_project eine Binärdatei für das SSISPackages-Projekt auf dem Verbindungsserver zurück. Das catalog.deploy_project stellt das Projekt auf dem lokalen Server im Ordner DestFolder bereit.  
   

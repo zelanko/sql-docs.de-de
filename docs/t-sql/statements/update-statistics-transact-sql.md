@@ -22,21 +22,21 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd501cd54a4726033b8c2a1b746148ec17f3dc8a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 877fbd597ce603427c9bdcca00b2ecdeffbb2180
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701753"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586293"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Aktualisiert eine Abfrageoptimierungsstatistik für eine Tabelle oder indizierte Sicht. Standardmäßig nimmt der Abfrageoptimierer erforderliche Updates der Statistiken automatisch vor, um den Abfrageplan zu verbessern. In einigen Fällen können Sie die Abfrageleistung mit UPDATE STATISTICS oder der gespeicherten Prozedur [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) verbessern, um Statistiken häufiger zu aktualisieren als von der Standardeinstellung vorgegeben.  
+Aktualisiert eine Abfrageoptimierungsstatistik für eine Tabelle oder indizierte Sicht. Standardmäßig nimmt der Abfrageoptimierer erforderliche Updates der Statistiken automatisch vor, um den Abfrageplan zu verbessern. In einigen Fällen können Sie die Abfrageleistung mit `UPDATE STATISTICS` oder der gespeicherten Prozedur [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) verbessern, um Statistiken häufiger zu aktualisieren als von der Standardeinstellung vorgegeben.  
   
- Durch das Update von Statistiken wird sichergestellt, dass Abfragen anhand aktueller Statistiken kompiliert werden. Dies führt jedoch dazu, dass Abfragen neu kompiliert werden. Es empfiehlt sich, Statistiken nicht zu oft zu aktualisieren und die Vorteile optimierter Abfragepläne gegen den Zeitaufwand für die Neukompilierung von Abfragen abzuwägen. Die Entscheidung hängt von der verwendeten Anwendung ab. UPDATE STATISTICS-Vorgänge können mithilfe von tempdb die Stichprobenzeilen zum Erstellen von Statistiken sortieren.  
+Durch das Update von Statistiken wird sichergestellt, dass Abfragen anhand aktueller Statistiken kompiliert werden. Dies führt jedoch dazu, dass Abfragen neu kompiliert werden. Es empfiehlt sich, Statistiken nicht zu oft zu aktualisieren und die Vorteile optimierter Abfragepläne gegen den Zeitaufwand für die Neukompilierung von Abfragen abzuwägen. Die Entscheidung hängt von der verwendeten Anwendung ab. `UPDATE STATISTICS`-Vorgänge können mithilfe von tempdb die Stichprobenzeilen zum Erstellen von Statistiken sortieren.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,7 +57,7 @@ UPDATE STATISTICS table_or_indexed_view_name
             | SAMPLE number { PERCENT | ROWS }   
               [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
             | RESAMPLE   
-              [ ON PARTITIONS ( { <partition_number> | <range> } [, …n] ) ]  
+              [ ON PARTITIONS ( { <partition_number> | <range> } [, ...n] ) ]  
             | <update_stats_stream_option> [ ,...n ]  
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
@@ -131,7 +131,7 @@ Bei **ON** behalten die Statistiken den festgelegten Prozentsatz für die Stichp
  
  **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
  
- ON PARTITIONS ( { \<partition_number> | \<range> } [, …n] ) ] erzwingt, dass die Statistiken auf Blattebene, die die in der ON PARTITIONS-Klausel angegebenen Partitionen umfassen, erneut berechnet und dann zusammengeführt werden, um die globale Statistik zu bilden. WITH RESAMPLE ist erforderlich, da mit unterschiedlichen Stichprobenraten erstellte Partitionsstatistiken nicht zusammengeführt werden können.  
+ ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] erzwingt, dass die Statistiken auf Blattebene, die die in der ON PARTITIONS-Klausel angegebenen Partitionen umfassen, erneut berechnet und dann zusammengeführt werden, um die globale Statistik zu bilden. WITH RESAMPLE ist erforderlich, da mit unterschiedlichen Stichprobenraten erstellte Partitionsstatistiken nicht zusammengeführt werden können.  
   
 **Gilt für** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
@@ -183,25 +183,28 @@ MAXDOP = *max_degree_of_parallelism*
 
 ## <a name="remarks"></a>Remarks  
   
-## <a name="when-to-use-update-statistics"></a>Wann UPDATE STATISTICS verwendet werden sollte  
- Weitere Informationen dazu, wann UPDATE STATISTICS verwendet werden sollte, finden Sie unter [Statistik](../../relational-databases/statistics/statistics.md).  
+### <a name="when-to-use-update-statistics"></a>Wann UPDATE STATISTICS verwendet werden sollte  
+ Weitere Informationen zur Verwendung von `UPDATE STATISTICS` finden Sie unter [Statistiken](../../relational-databases/statistics/statistics.md).  
 
-## <a name="limitations-and-restrictions"></a>Einschränkungen  
+### <a name="limitations-and-restrictions"></a>Einschränkungen  
 * Das Aktualisieren von Statistiken bei externen Tabellen wird nicht unterstützt. Zum Aktualisieren einer Statistik müssen Sie die Statistik löschen und neu erstellen.  
-* Die Option MAXDOP ist nicht mit den Optionen STATS_STREAM, ROWCOUNT und PAGECOUNT kompatibel.
-* Die Option MAXDOP ist, falls verwendet, durch die Einstellung „MAX_DOP“ der Resource Governor-Arbeitsauslastungsgruppe eingeschränkt.
+* Die Option `MAXDOP` ist mit den Optionen `STATS_STREAM`, `ROWCOUNT` und `PAGECOUNT` nicht kompatibel.
+* Die Option `MAXDOP` ist, falls verwendet, durch die Einstellung „`MAX_DOP`“ der Resource Governor-Arbeitsauslastungsgruppe eingeschränkt.
 
-## <a name="updating-all-statistics-with-spupdatestats"></a>Aktualisieren aller Statistiken mit "sp_updatestats"  
- Informationen zum Aktualisieren von Statistiken für alle benutzerdefinierten und internen Tabellen in der Datenbank finden Sie in der Beschreibung der gespeicherten Prozedur [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Durch den folgenden Befehl wird beispielsweise sp_updatestats zum Aktualisieren aller Statistiken für die Datenbank aufgerufen.  
+### <a name="updating-all-statistics-with-spupdatestats"></a>Aktualisieren aller Statistiken mit "sp_updatestats"  
+Informationen zum Aktualisieren von Statistiken für alle benutzerdefinierten und internen Tabellen in der Datenbank finden Sie in der Beschreibung der gespeicherten Prozedur [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Durch den folgenden Befehl wird beispielsweise sp_updatestats zum Aktualisieren aller Statistiken für die Datenbank aufgerufen.  
   
 ```sql  
 EXEC sp_updatestats;  
 ```  
+
+### <a name="automatic-index-and-statistics-management"></a>Automatische Verwaltung von Index und Statistiken
+Nutzen Sie Lösungen wie [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), um die Indexdefragmentierung und das Aktualisieren der Statistiken für eine oder mehrere Datenbanken automatisch zu verwalten. Dieser Vorgang entscheidet unter anderem anhand des Fragmentierungsgrads automatisch, ob ein Index neu organisiert oder neu erstellt wird und aktualisiert Statistiken mit einem linearen Schwellenwert.
   
-## <a name="determining-the-last-statistics-update"></a>Ermitteln des letzten Statistikupdates  
+### <a name="determining-the-last-statistics-update"></a>Ermitteln des letzten Statistikupdates  
  Um zu ermitteln, wann Statistiken zuletzt aktualisiert wurden, verwenden Sie die [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) -Funktion.  
   
-## <a name="pdw--sql-data-warehouse"></a>PDW (SQL Data Warehouse)  
+### <a name="pdw--sql-data-warehouse"></a>PDW (SQL Data Warehouse)  
  Die folgende Syntax wird nicht von PDW bzw. SQL Data Warehouse unterstützt.  
   
 ```sql  
@@ -225,7 +228,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ```  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht.  
+ Erfordert die `ALTER`-Berechtigung für die Tabelle oder Sicht.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -306,8 +309,5 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
-  
-
-
-
+ [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
+ [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

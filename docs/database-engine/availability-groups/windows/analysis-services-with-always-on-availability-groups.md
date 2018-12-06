@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83aa8029ce66db969256ee672ae9418d1bc48a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 252353bd71cbbc5d3cdeb18ae0bcf49b7be440b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635018"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395453"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services mit Always On-Verfügbarkeitsgruppen
 
@@ -214,7 +214,7 @@ ms.locfileid: "47635018"
 ##  <a name="bkmk_whathappens"></a> Vorgänge nach einem Failover  
  Während eines Failovers geht ein sekundäres Zielreplikat in die primäre Rolle über, und das frühere primäre Replikat geht in die sekundäre Rolle über. Alle Clientverbindungen werden beendet, der Besitz am Verfügbarkeitsgruppenlistener wechselt mit der primären Replikatrolle zu einer neuen SQL Server-Instanz, und der Listenerendpunkt wird an die virtuellen IP-Adressen und TCP-Ports der neuen Instanz gebunden. Weitere Informationen finden Sie unter [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- Wenn während der Verarbeitung ein Failover erfolgt, wird in Analysis Services in der Protokolldatei oder im Ausgabefenster der folgende Fehler angezeigt "OLE DB-Fehler: OLE DB- oder ODBC-Fehler: Kommunikationslinkfehler; 08S01; TPC-Anbieter: Eine vorhandene Verbindung wurde vom Remotehost geschlossen. ; 08S01."  
+ Wenn während der Verarbeitung ein Failover erfolgt, wird in Analysis Services in der Protokolldatei oder im Ausgabefenster der folgende Fehler angezeigt „OLE DB-Fehler: OLE DB- oder ODBC-Fehler: Kommunikationslinkfehler; 08S01; TPC-Anbieter: Eine vorhandene Verbindung wurde vom Remotehost geschlossen. ; 08S01.“  
   
  Dieser Fehler sollte behoben sein, wenn Sie eine Minute lang warten und es dann erneut versuchen. Sofern die Verfügbarkeitsgruppe ordnungsgemäß für ein lesbares sekundäres Replikat konfiguriert ist, wird die Verarbeitung auf dem neuen sekundären Replikat fortgesetzt, wenn Sie die Verarbeitung erneut starten.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "47635018"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Always On Policies for Operational Issues with Always On Availability Groups (SQL Server) (Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen (SQL Server))](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Erstellen einer Datenquelle (SSAS: mehrdimensional)](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Rückschreiben von Dimensionen aktivieren](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  

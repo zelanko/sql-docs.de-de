@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8a2a8539b63df48520777276dac4e66867e8634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a729dac9bba3f8ace1f117b6317d24ec541fcc19
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799708"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641021"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -235,6 +235,8 @@ Execute a character string
   
  Wenn der Wert eines Parameters ein Objektname oder eine Zeichenfolge ist oder durch den Namen einer Datenbank oder eines Schemas qualifiziert ist, dann muss der gesamte Name in einfache Anführungszeichen eingeschlossen werden. Ist der Wert eines Parameters ein Schlüsselwort, muss das Schlüsselwort in doppelte Anführungszeichen eingeschlossen werden.  
   
+Wenn Sie ein einzelnes Wort übergeben, das nicht mit `@` beginnt und nicht in Anführungszeichen eingeschlossen ist, z.B. wenn Sie `@` bei einem Parameternamen vergessen, wird das Wort trotz der fehlenden Anführungszeichen als nvarchar-Zeichenfolge behandelt.
+
  Falls im Modul ein Standardwert definiert ist, kann ein Benutzer das Modul ohne Angabe von Parametern ausführen.  
   
  Der Standardwert kann auch NULL sein. Im Allgemeinen gibt die Moduldefinition die Aktion an, die ausgeführt werden soll, wenn ein Parameter den Wert NULL hat.  
@@ -295,7 +297,7 @@ Execute a character string
  Gibt an, dass *command_string* für *linked_server_name* ausgeführt wird und dass Ergebnisse ggf. an den Client zurückgegeben werden. *linked_server_name* muss auf die Definition eines vorhandenen Verbindungsservers auf dem lokalen Server verweisen. Verbindungsserver werden mithilfe von [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) definiert.  
   
  WITH \<execute_option>  
- Mögliche Ausführungsoptionen. Die RESULT SETS-Optionen können nicht in einer INSERT…EXEC-Anweisung angegeben werden.  
+ Mögliche Ausführungsoptionen. Die RESULT SETS-Optionen können nicht in einer INSERT...EXEC-Anweisung angegeben werden.  
   
 |Begriff|Definition|  
 |----------|----------------|  
@@ -315,7 +317,7 @@ Execute a character string
 |schema_name|Der Name des Schemas, das im Besitz der Tabelle, Sicht oder Tabellenwertfunktion ist.|  
 |table_name &#124; view_name &#124; table_valued_function_name|Gibt an, dass die zurückgegebenen Spalten den in der Tabelle, Sicht oder Tabellenwertfunktion genannten entsprechen. Tabellenvariablen, temporäre Tabellen und Synonyme werden in AS-Objektsyntax nicht unterstützt.|  
 |AS TYPE [schema_name.]table_type_name|Gibt an, dass die zurückgegebenen Spalten den im Tabellentyp angegebenen entsprechen.|  
-|AS FOR XML|Gibt an, dass die XML-Ergebnisse aus der Anweisung oder gespeicherten Prozedur, die von der EXECUTE-Anweisung aufgerufen wird, in das Format konvertiert wird, als wären sie durch eine "SELECT ... FOR XML …"-Anweisung generiert worden. verwendet. Die gesamte Formatierung aus den Typdirektiven in der ursprünglichen Anweisung werden entfernt, und die zurückgegebenen Ergebnisse werden so angezeigt, als wäre keine Typdirektive angegeben worden. AS FOR XML konvertiert keine tabellarischen Nicht-XML-Ergebnisse aus der ausgeführten Anweisung bzw. der gespeicherten Prozedur in XML.|  
+|AS FOR XML|Gibt an, dass die XML-Ergebnisse aus der Anweisung oder gespeicherten Prozedur, die von der EXECUTE-Anweisung aufgerufen wird, in das Format konvertiert wird, als wären sie durch eine „SELECT ... FOR XML ...“-Anweisung. Die gesamte Formatierung aus den Typdirektiven in der ursprünglichen Anweisung werden entfernt, und die zurückgegebenen Ergebnisse werden so angezeigt, als wäre keine Typdirektive angegeben worden. AS FOR XML konvertiert keine tabellarischen Nicht-XML-Ergebnisse aus der ausgeführten Anweisung bzw. der gespeicherten Prozedur in XML.|  
   
 |Begriff|Definition|  
 |----------|----------------|  

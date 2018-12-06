@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3cec2923a408a857c5cdd6440e022c9314f1b5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c06ef657cc4a29926c29eef8616e22ba4025201f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658778"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511919"
 ---
 # <a name="expressions-transact-sql"></a>Ausdrücke (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47658778"
 }  
 [ COLLATE Windows_collation_name ]  
   
--- Scalar Expression in a DECLARE, SET, IF…ELSE, or WHILE statement  
+-- Scalar Expression in a DECLARE, SET, IF...ELSE, or WHILE statement  
 <scalar_expression> ::=  
 {  
     constant   
@@ -86,7 +86,7 @@ ms.locfileid: "47658778"
 |----------|----------------|  
 |*constant*|Ein Symbol, das einen einzelnen bestimmten Datenwert darstellt. Weitere Informationen finden Sie unter [Konstanten &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).|  
 |*scalar_function*|Eine Einheit der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Syntax, die einen bestimmten Dienst bereitstellt und einen einzelnen Wert zurückgibt. Bei *scalar_function* kann es sich um integrierte Skalarfunktionen wie die SUM-, GETDATE- oder CAST-Funktionen oder um benutzerdefinierte Skalarfunktionen handeln.|  
-|[ *table_name***.** ]|Der Name oder Alias einer Tabelle.|  
+|[ _table_name_**.** ]|Der Name oder Alias einer Tabelle.|  
 |*column*|Der Name einer Spalte. Nur der Name der Spalte ist in einem Ausdruck zulässig.|  
 |*variable*|Der Name einer Variablen oder eines Parameters. Weitere Informationen finden Sie unter [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
 |**(** *expression*  **)**|Ein beliebiger gültiger Ausdruck, wie er in diesem Thema definiert ist. Die Klammern sind gruppierende Operatoren, die sicherstellen, dass alle Operatoren in dem in Klammern stehenden Ausdruck ausgewertet werden, bevor der resultierende Ausdruck mit einem weiteren Ausdruck kombiniert wird.|  

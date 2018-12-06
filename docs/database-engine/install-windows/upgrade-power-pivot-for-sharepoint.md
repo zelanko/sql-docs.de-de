@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 9d68be09f17fcb9cbd084c5567c7edae87e0ca5a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 921994834433e7a4e2e081d6b8b43ce6294f6e09
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605420"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518302"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Upgraden von PowerPivot für SharePoint
 
@@ -84,7 +84,7 @@ ms.locfileid: "51605420"
   
     1.  Klicken Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup-Assistenten auf **Installation**.  
   
-    2.  Klicken Sie auf **Aktualisieren von SQL Server**.  
+    2.  Klicken Sie auf **Aktualisieren von SQL Server...**.  
   
     3.  Wählen Sie auf der Seite **Instanz auswählen** den Instanznamen **POWERPIVOT** aus, und klicken Sie auf **Weiter**.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "51605420"
   
          Zeigen Sie im **Startmenü** auf **Alle Programme**, und klicken Sie dann auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Konfigurationstools**und auf das **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013“**. Beachten Sie, dass dieses Tool nur aufgeführt ist, wenn [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf dem lokalen Server installiert ist.  
   
-    2.  Beim Starten überprüft das Konfigurationstool den Upgradestatus der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Farmlösung und der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webanwendungslösungen. Wenn frühere Versionen dieser Lösungen erkannt werden, wird folgende Meldung angezeigt: „**Neuere Versionen der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Lösungsdateien wurden erkannt. Wählen Sie die Option zum Durchführen eines Upgrades für Ihre Farm**.“ Klicken Sie auf **OK** , um die Systemüberprüfungsmeldung zu schließen.  
+    2.  Beim Starten überprüft das Konfigurationstool den Upgradestatus der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Farmlösung und der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webanwendungslösungen. Wenn frühere Versionen dieser Lösungen erkannt werden, wird folgende Meldung angezeigt: „**Neuere Versionen der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Lösungsdateien wurden erkannt. Wählen Sie die Upgradeoption, um ein Upgrade für die Farm durchzuführen**.“ Klicken Sie auf **OK** , um die Systemüberprüfungsmeldung zu schließen.  
   
     3.  Klicken Sie auf **Funktionen, Dienste, Anwendungen und Lösungen aktualisieren**und dann auf **OK**.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "51605420"
         > [!IMPORTANT]  
         >  Die erste Aktion, **Farmlösung aktualisieren**, muss immer zuerst verarbeitet werden. Sie registriert die PowerShell-Cmdlets, die zur Serverkonfiguration verwendet werden. Wenn Sie für diese Aktion einen Fehler erhalten, fahren Sie nicht fort. Verwenden Sie stattdessen die vom Fehler zurückgegebenen Informationen, um das Problem vor dem Verarbeiten weiterer Aktionen in der Taskliste zu diagnostizieren und zu lösen.  
   
-    7.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen** klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: „**Alle im Tool als gültig gekennzeichneten Konfigurationseinstellungen werden auf die SharePoint-Farm angewendet. Möchten Sie den Vorgang fortsetzen?**“.  
+    7.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen**klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: „**Alle im Tool als gültig gekennzeichneten Konfigurationseinstellungen werden auf die SharePoint-Farm angewendet. Möchten Sie den Vorgang fortsetzen?**“.  
   
     8.  Klicken Sie zum Fortsetzen des Vorgangs auf **Ja** .  
   
@@ -172,11 +172,11 @@ ms.locfileid: "51605420"
   
     1.  Zeigen Sie im **Startmenü** auf **Alle Programme**, klicken Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]und **Konfigurationstools**, und klicken Sie dann auf **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool**. Beachten Sie, dass dieses Tool nur aufgeführt ist, wenn [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf dem lokalen Server installiert ist.  
   
-    2.  Beim Starten überprüft das Konfigurationstool den Upgradestatus der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Farmlösung und der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webanwendungslösungen. Wenn frühere Versionen dieser Lösungen erkannt werden, wird folgende Meldung angezeigt: „Neuere Versionen der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Lösungsdateien wurden erkannt. Wählen Sie die Upgradeoption, um ein Upgrade für die Farm durchzuführen.“ Klicken Sie auf **OK** , um die Meldung zu schließen.  
+    2.  Beim Starten überprüft das Konfigurationstool den Upgradestatus der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Farmlösung und der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webanwendungslösungen. Wenn frühere Versionen dieser Lösungen erkannt werden, wird folgende Meldung angezeigt: „Neuere Versionen der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Lösungsdateien wurden erkannt. Wählen Sie die Upgradeoption, um ein Upgrade für die Farm durchzuführen.“ Klicken Sie auf **OK** , um die Meldung zu schließen.  
   
     3.  Klicken Sie auf **Funktionen, Dienste, Anwendungen und Lösungen aktualisieren**, und klicken Sie dann auf **OK** , um fortzufahren.  
   
-    4.  Die folgende Warnung wird angezeigt: "Arbeitsmappen im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard werden in Kürze auf die neueste Version aktualisiert. Alle an vorhandenen Arbeitsmappen vorgenommenen Anpassungen gehen verloren. Möchten Sie den Vorgang fortsetzen?"  
+    4.  Die folgende Warnung wird angezeigt: „Arbeitsmappen im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Management-Dashboard werden in Kürze auf die neueste Version aktualisiert. Alle an vorhandenen Arbeitsmappen vorgenommenen Anpassungen gehen verloren. Möchten Sie den Vorgang fortsetzen?“  
   
          Diese Warnung bezieht sich auf Arbeitsmappen im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard, die Berichte zu Datenaktualisierungsaktivitäten enthalten. Wenn Sie diese Arbeitsmappen angepasst haben, gehen alle an diesen Arbeitsmappen vorgenommenen Änderungen verloren, wenn vorhandene Dateien durch neuere Versionen ersetzt werden.  
   
@@ -197,11 +197,11 @@ ms.locfileid: "51605420"
         > [!IMPORTANT]  
         >  Die erste Aktion, **Farmlösung aktualisieren**, muss immer zuerst verarbeitet werden. Sie registriert die PowerShell-Cmdlets, die zur Serverkonfiguration verwendet werden. Wenn Sie für diese Aktion einen Fehler erhalten, fahren Sie nicht fort. Verwenden Sie stattdessen die vom Fehler zurückgegebenen Informationen, um das Problem vor dem Verarbeiten weiterer Aktionen in der Taskliste zu diagnostizieren und zu lösen.  
   
-    8.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen**klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: "Alle im Tool als gültig gekennzeichneten Konfigurationseinstellungen werden auf die SharePoint-Farm angewendet. Möchten Sie den Vorgang fortsetzen?"  
+    8.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen**klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: „Alle im Tool als gültig gekennzeichneten Konfigurationseinstellungen werden auf die SharePoint-Farm angewendet. Möchten Sie den Vorgang fortsetzen?“  
   
     9. Klicken Sie zum Fortsetzen des Vorgangs auf **Ja** .  
   
-    10. Die Aktualisierung von Lösungen und Funktionen in der Farm kann mehrere Minuten dauern. Während dieser Zeit treten bei Verbindungsanforderungen für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten z.B. folgende Fehler auf: „Die Daten konnten nicht aktualisiert werden.“ oder „Fehler bei dem Versuch, die angeforderte Aktion auszuführen. Wiederholen Sie den Vorgang.“ Nach dem Upgrade ist der Server verfügbar, und diese Fehler treten nicht mehr auf.  
+    10. Die Aktualisierung von Lösungen und Funktionen in der Farm kann mehrere Minuten dauern. Während dieser Zeit treten bei Verbindungsanforderungen für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Daten z.B. folgende Fehler auf: „Die Daten konnten nicht aktualisiert werden.“ oder „Fehler bei dem Versuch, die angeforderte Aktion auszuführen. Wiederholen Sie den Vorgang.“ Nach dem Upgrade ist der Server verfügbar, und diese Fehler treten nicht mehr auf.  
   
 8.  **Wiederholen Sie den Vorgang** für jeden SQL Server Analysis Services-Dienst ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) in der Farm: 1) Führen Sie SQL Server-Setup aus, 2) Führen Sie das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool aus.  
   
@@ -216,15 +216,15 @@ ms.locfileid: "51605420"
     1.  Starten Sie die SharePoint 2010-Verwaltungsshell als Administrator, und führen Sie dann den folgenden Befehl aus, um Aufträge in der Warteschlange anzuzeigen:  
   
         ```  
-        Stsadm –o enumdeployments  
+        Stsadm -o enumdeployments  
         ```  
   
     2.  Überprüfen Sie vorhandene Bereitstellungen auf die folgenden Informationen: **Typ** ist "Zurückziehung" oder "Bereitstellung", **Datei** ist "powerpivotwebapp.wsp" oder "powerpivotfarm.wsp".  
   
-    3.  Kopieren Sie bei Bereitstellungen oder Zurückziehungen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Lösungen den GUID-Wert für **JobId** , und fügen Sie ihn in den folgenden Befehl ein (verwenden Sie zum Kopieren der GUID die Befehle zum Markieren, Kopieren und Einfügen im Bearbeitungsmenü der Shell):  
+    3.  Kopieren Sie bei Bereitstellungen oder Zurückziehungen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Lösungen den GUID-Wert für **JobId**, und fügen Sie ihn in den folgenden Befehl ein (verwenden Sie zum Kopieren der GUID die Befehle zum Markieren, Kopieren und Einfügen im Bearbeitungsmenü der Shell):  
   
         ```  
-        Stsadm –o canceldeployment –id “<GUID>”  
+        Stsadm -o canceldeployment -id "<GUID>"  
         ```  
   
     4.  Wiederholen Sie den Task im Konfigurationstool, indem Sie auf **Überprüfen** und **Ausführen**klicken.  

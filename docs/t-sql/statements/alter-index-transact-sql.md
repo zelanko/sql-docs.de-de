@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6492f067d05a3606c5304e473162c8eabdcee5f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddf69ebe967767c67f92782afdaaa2484fe2531
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845708"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537781"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | DISABLE  
     | REORGANIZE  [ PARTITION = partition_number ] [ WITH ( <reorganize_option>  ) ]  
     | SET ( <set_index_option> [ ,...n ] )   
-    | RESUME [WITH (<resumable_index_options>,[…n])]
+    | RESUME [WITH (<resumable_index_options>,[...n])]
     | PAUSE
     | ABORT
 }  
@@ -245,7 +245,7 @@ PARTITION
    
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
- Die Partitionsnummer eines partitionierten Indexes, der neu erstellt oder neu organisiert werden soll. *partition_number* ist ein konstanter Ausdruck, der auf Variablen verweisen kann. Bei diesen Variablen kann es sich um Funktionen und benutzerdefinierte Variablen oder Funktionen handeln, die jedoch nicht auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung verweisen können. *partition_number* muss vorhanden sein. Andernfalls schlägt die Anweisung fehl.  
+ Die Partitionsnummer eines partitionierten Indexes, der neu erstellt oder neu organisiert werden soll. *partition_number* ist ein konstanter Ausdruck, der auf Variablen verweisen kann. Dazu gehören Variablen eines benutzerdefinierten Typs oder Funktionen und benutzerdefinierte Funktionen, es kann jedoch nicht auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung verwiesen werden. *partition_number* muss vorhanden sein. Andernfalls schlägt die Anweisung fehl.  
   
  WITH **(**\<single_partition_rebuild_index_option>**)**  
    
@@ -329,7 +329,7 @@ FILLFACTOR = *fillfactor*
  
  **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
- Gibt einen Prozentwert an, der dem Füllfaktor entspricht. Dieser Faktor legt fest, wie weit die [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung auffüllen soll.  *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0. Die Füllfaktorwerte 0 und 100 sind in jeder Hinsicht identisch.  
+ Gibt einen Prozentsatz an, der anzeigt, wie weit [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung füllen soll. *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0. Die Füllfaktorwerte 0 und 100 sind in jeder Hinsicht identisch.  
   
  Eine explizite FILLFACTOR-Einstellung gilt nur bei der erstmaligen Erstellung oder bei der Neuerstellung des Indexes. [!INCLUDE[ssDE](../../includes/ssde-md.md)] hält den angegebenen Prozentsatz des Speicherplatzes nicht dynamisch auf den Seiten frei. Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
@@ -654,7 +654,7 @@ Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sind Sie u. U. weiterhin
   
 Die Neuerstellung eines gruppierten columnstore-Indexes verläuft in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie folgt:  
   
-1.  Abrufen einer exklusiven Sperre für die Tabelle oder Partition, während die Neuerstellung ausgeführt wird. Die Daten sind während der Neuerstellung "offline" und nicht verfügbar.  
+1.  Abrufen einer exklusiven Sperre für die Tabelle oder Partition, während die Neuerstellung ausgeführt wird. Die Daten sind während der Neuerstellung „offline“ und nicht verfügbar.  
   
 2.  Defragmentieren des Columnstore, indem physisch Zeilen gelöscht werden, die logisch aus der Tabelle gelöscht wurden. Die gelöschten Bytes werden auf dem physischen Medium freigegeben.  
   
@@ -720,7 +720,7 @@ Die Neuerstellung von Onlineindizes wird als fortsetzbar angegeben, wenn die Opt
  
 -  Durch das erneute Ausführen der ursprünglichen ALTER INDEX REBUILD-Anweisung mit denselben Parametern wird ein angehaltener Indexneuerstellungsvorgang fortgesetzt. Auch durch Ausführen der ALTER INDEX RESUME-Anweisung kann ein angehaltener Indexneuerstellungsvorgang fortgesetzt werden.
 -  Die Option SORT_IN_TEMPDB=ON wird für den fortsetzbaren Index nicht unterstützt. 
--  Der DDL-Befehl kann mit RESUMABLE=ON nicht innerhalb einer expliziten Transaktion ausgeführt werden (kann nicht Teil des Blocks „Begin Transaction... Commit“ sein).
+-  Der DDL-Befehl kann mit RESUMABLE = ON nicht innerhalb einer expliziten Transaktion ausgeführt werden (kann nicht Teil des Blocks „tran ... commit  block“ sein).
 -  Nur Indexvorgänge, die angehalten wurden, sind fortsetzbar.
 -  Beim Fortsetzen eines Indexvorgangs, der angehalten wurde, können Sie den MAXDOP-Wert in einen neuen Wert ändern.  Wird beim Fortsetzen eines angehaltenen Indexvorgangs kein MAXDOP-Wert angegeben, wird der letzte MAXDOP-Wert übernommen. Wird überhaupt keine MAXDOP-Option für Indexneuerstellungsvorgänge angegeben, wird der Standardwert übernommen.
 - Wenn Sie den Indexvorgang sofort anhalten möchten, können Sie den laufenden Befehl beenden (STRG+C) oder die Befehle ALTER INDEX PAUSE oder KILL *session_id* ausführen. Ein angehaltener Befehl kann mit der RESUME-Option fortgesetzt werden.
@@ -733,7 +733,7 @@ Die folgenden Funktionen sind für Indexneuerstellungsvorgänge deaktiviert:
    -    Neuerstellen eines deaktivierten Index nicht unterstützt bei RESUMABLE=ON
    -    ALTER INDEX REBUILD ALL-Befehl
    -    ALTER TABLE-Befehl mithilfe von Indexneuerstellung  
-   -    DDL-Befehl kann mit RESUMABLE=ON nicht innerhalb einer expliziten Transaktion ausgeführt werden (kann nicht Teil des Blocks „Begin Transaction... Commit“ sein).
+   -    Der DDL-Befehl kann mit „RESUMEABLE = ON“ nicht innerhalb einer expliziten Transaktion ausgeführt werden (kann nicht Teil des Blocks „tran ... commit  block“ sein).
    -    Erstellen eines Index, der mindestens eine berechnete Spalte oder TIMESTAMP-Spalte als Schlüsselspalte besitzt
 -   Sollte die Basistabelle mindestens eine LOB-Spalte besitzen, dann ist für die Indexneuerstellung eines fortsetzbaren gruppierten Index eine Sch-M-Sperre zu Beginn dieses Vorgangs erforderlich.
    -    Die Option SORT_IN_TEMPDB=ON wird für den fortsetzbaren Index nicht unterstützt. 
@@ -741,7 +741,7 @@ Die folgenden Funktionen sind für Indexneuerstellungsvorgänge deaktiviert:
 > [!NOTE]
 > Der DDL-Befehl wird so lange ausgeführt, bis er entweder abgeschlossen ist, angehalten wird oder ein Fehler auftritt. Wenn der Befehl angehalten wird, wird ein Fehler ausgelöst, der meldet, dass der Vorgang angehalten wurde und dass die Indexerstellung nicht abgeschlossen wurde. Weitere Informationen zum aktuellen Indexstatus finden Sie unter [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Tritt ein Fehler auf, wird auch hier eine Fehlermeldung ausgegeben. 
 
- Weitere Informationen finden Sie unter [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
+ Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
  ### <a name="waitatlowpriority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY bei Onlineindexvorgängen  
   
@@ -768,7 +768,7 @@ Für partitionierte Indizes gelten die folgenden Einschränkungen:
 -   Mit der ALTER INDEX \<index> ... REBUILD WITH ...-Syntax werden alle Partitionen des Indexes neu erstellt.  
   
 ## <a name="statistics"></a>Statistik  
- Beim Ausführen von **ALTER INDEX ALL...** für eine Tabelle, werden nur die Statistikmitarbeiter mit Indizes aktualisiert. Automatische oder manuelle Statistiken, die statt eines Indexes in der Tabelle erstellt wurden, werden nicht aktualisiert.  
+ Wenn Sie **ALTER INDEX ALL ...** in einer Tabelle ausführen, werden nur die Statistiken mit zugeordneten Indizes aktualisiert. Automatische oder manuelle Statistiken, die statt eines Indexes in der Tabelle erstellt wurden, werden nicht aktualisiert.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Zum Ausführen von ALTER INDEX benötigen Sie mindestens die ALTER-Berechtigung auf der Tabelle bzw. Sicht.  
@@ -1007,7 +1007,7 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
 ```  
   
 ### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. Neuerstellen aller Indizes einer Tabelle und Angeben von Optionen  
- Im folgenden Beispiel wird das Schlüsselwort ALL angegeben. Dadurch werden alle Indizes neu erstellt, die der Production.Product-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zugeordnet sind. Es werden drei Optionen angegeben.  
+ Im folgenden Beispiel wird das Schlüsselwort ALL angegeben. Dadurch werden alle Indizes neu erstellt, die der Production.Product[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Tabelle in der -Datenbank zugeordnet sind. Es werden drei Optionen angegeben.  
   
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

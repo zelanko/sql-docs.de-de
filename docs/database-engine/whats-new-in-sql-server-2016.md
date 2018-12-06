@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604340"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504512"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Neues in der Datenbank-Engine – SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ Diese Version bietet Verbesserungen für Columnstore-Indizes, einschließlich ak
 
 Weitere Informationen finden Sie in den folgenden Themen im Abschnitt [Beschreibung von Columnstore-Indizes](../relational-databases/indexes/columnstore-indexes-overview.md) der Onlinedokumentation:
 
-- [Columnstore-Indizes, Zusammenfassung der Funktionen nach Version](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) – einschließlich der Neuigkeiten.
+- [Columnstore-Indizes, Zusammenfassung der Funktionen nach Version](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) – einschließlich der Neuerungen.
 
 - [Laden von Daten für Columnstore-Indizes](../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)
 
@@ -293,7 +293,7 @@ SQL Server 2016 fügt die integrierte Unterstützung für das Importieren und Ex
  Weitere Informationen finden Sie im [PolyBase-Handbuch](../relational-databases/polybase/polybase-guide.md).
 
 ## <a name="stretch-database"></a>Stretch Database
- Stretch Database ist ein neues Feature in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], mit dem Ihre Verlaufsdaten transparent und sicher in die Microsoft Azure-Cloud migriert werden. Sie können problemlos auf Ihre SQL Server-Daten zugreifen, unabhängig davon, ob sie lokal oder in der Cloud gespeichert sind. Sie legen die Richtlinie fest, die bestimmt, wo Daten gespeichert werden, und SQL Server übernimmt die Verschiebung der Daten im Hintergrund. Die gesamte Tabelle ist ständig online und kann jederzeit abgefragt werden. Und für die Stretch-Datenbank sind keine Änderungen an vorhandenen Abfragen oder Anwendungen erforderlich – der Speicherort der Daten ist für die Anwendung vollständig transparent. Weitere Informationen finden Sie unter [Stretch Database](../sql-server/stretch-database/stretch-database.md).
+ Stretch Database ist ein neues Feature in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], mit dem Ihre Verlaufsdaten transparent und sicher in die Microsoft Azure-Cloud migriert werden. Sie können problemlos auf Ihre SQL Server-Daten zugreifen, unabhängig davon, ob sie lokal oder in der Cloud gespeichert sind. Sie legen die Richtlinie fest, die bestimmt, wo Daten gespeichert werden, und SQL Server übernimmt die Verschiebung der Daten im Hintergrund. Die gesamte Tabelle ist ständig online und kann jederzeit abgefragt werden. Und für Stretch Database sind keine Änderungen an vorhandenen Abfragen oder Anwendungen erforderlich. Der Speicherort der Daten ist für die Anwendung vollständig transparent. Weitere Informationen finden Sie unter [Stretch Database](../sql-server/stretch-database/stretch-database.md).
  
 ## <a name="support-for-utf-8"></a>Unterstützung für UTF-8
 Das Hilfsprogramm [bcp](../tools/bcp-utility.md), [BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) und [OPENROWSET](../t-sql/functions/openrowset-transact-sql.md) unterstützen jetzt die UTF-8-Codepage. Weitere Informationen finden Sie in diesen Themen und unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).
@@ -382,7 +382,7 @@ Sicherheit auf Zeilenebene führt eine prädikatbasierte Zugriffssteuerung ein. 
 
 
 ### <a name="always-encrypted"></a>Always Encrypted
-Mit Always Encrypted kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Vorgänge für verschlüsselte Daten durchführen. Das Beste daran ist, der Verschlüsselungsschlüssel befindet sich bei der Anwendung innerhalb der vertrauenswürdigen Umgebung des Kunden und nicht auf dem Server. Always Encrypted sichert die Kundendaten, sodass DBAs keinen Zugriff auf Nur-Text-Daten haben. Die Verschlüsselung und Entschlüsselung von Daten erfolgt transparent auf Treiberebene, wodurch Änderungen minimiert werden, die an vorhandenen Anwendungen vorgenommen werden müssen. Weitere Informationen finden Sie unter [Immer verschlüsselt &amp;#40;Datenbank-Engine&amp;#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
+Mit Always Encrypted kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Vorgänge auf verschlüsselte Daten anwenden. Das Beste daran ist, der Verschlüsselungsschlüssel befindet sich bei der Anwendung innerhalb der vertrauenswürdigen Umgebung des Kunden und nicht auf dem Server. Always Encrypted sichert die Kundendaten, sodass DBAs keinen Zugriff auf Nur-Text-Daten haben. Die Verschlüsselung und Entschlüsselung von Daten erfolgt transparent auf Treiberebene, wodurch Änderungen minimiert werden, die an vorhandenen Anwendungen vorgenommen werden müssen. Weitere Informationen finden Sie unter [Immer verschlüsselt &amp;#40;Datenbank-Engine&amp;#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 
 ### <a name="dynamic-data-masking"></a>Dynamische Datenmaskierung

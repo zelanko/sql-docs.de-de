@@ -11,12 +11,12 @@ ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8fa6573f852eebe34801db57ba62cd29f9da3e5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659139"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523422"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten, um Modellstatistiken zu generieren
 Sie können einen Erstellungs-Contributor erstellen, um benutzerdefinierte Aktionen durchzuführen, wenn Sie ein Datenbankprojekt erstellen. In dieser exemplarischen Vorgehensweise erstellen Sie einen Erstellungs-Contributor mit der Bezeichnung ModelStatistics, von dem Statistiken über das SQL-Datenbankmodell ausgegeben werden, wenn Sie ein Datenbankprojekt erstellen. Da von diesem Erstellungs-Contributor beim Erstellen Parameter übernommen werden, sind einige zusätzliche Schritte erforderlich.  
@@ -480,7 +480,7 @@ Dazu haben Sie zwei Möglichkeiten:
   
     ```  
     /// <PropertyGroup>  
-    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'”>  
+    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
     ///         $(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy="name";  
     ///     </ContributorArguments>  
     /// <PropertyGroup>  
@@ -493,7 +493,7 @@ Dazu haben Sie zwei Möglichkeiten:
   
     1.  Navigieren Sie zu %Programme%\MSBuild\\.  
   
-    2.  Erstellen Sie einen neuen Ordner „MyContributors“, in dem Ihre Zieledateien gespeichert werden.  
+    2.  Erstellen Sie einen neuen Ordner namens „MyContributors“, in dem Ihre Zieledateien gespeichert werden.  
   
     3.  Erstellen Sie eine neue Datei „MyContributors.targets“ in diesem Verzeichnis, fügen Sie den folgenden Text hinzu, und speichern Sie dann die Datei:  
   

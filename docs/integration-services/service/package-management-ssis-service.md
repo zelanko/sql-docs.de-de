@@ -28,12 +28,12 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 964ebe774bb33279fef618b31f5edc2bdb73266f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 141810965960031cf004f9c9999943760bc6c810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701628"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532085"
 ---
 # <a name="package-management-ssis-service"></a>Paketverwaltung (SSIS-Dienst)
   Die Paketverwaltung umfasst das Überwachen, Verwalten, Importieren und Exportieren von Paketen.  
@@ -127,7 +127,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
   
     -   Wählen Sie im Feld **Servertyp** die Option **Integration Services**aus.  
   
-    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen>**, um nach dem zu verwendenden Server zu suchen.  
+    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen...>**, um nach dem zu verwendenden Server zu suchen.  
   
 3.  Wenn der Objekt-Explorer nicht geöffnet ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   
@@ -151,7 +151,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
   
 7.  Aktualisieren Sie optional den Paketnamen.  
   
-8.  Zum Aktualisieren der Schutzebene des Pakets klicken Sie auf die Schaltfläche mit den drei Punkten **(…)** , und wählen Sie im Dialogfeld **Paketschutzebene** eine andere Schutzebene aus. Falls die Option **Sensible Daten mit einem Kennwort verschlüsseln** oder **Alle Daten mit einem Kennwort verschlüsseln** ausgewählt ist, geben Sie ein Kennwort ein, und bestätigen Sie es.  
+8.  Zum Aktualisieren der Schutzebene des Pakets klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, und wählen Sie im Dialogfeld **Paketschutzebene** eine andere Schutzebene aus. Falls die Option **Sensible Daten mit einem Kennwort verschlüsseln** oder **Alle Daten mit einem Kennwort verschlüsseln** ausgewählt ist, geben Sie ein Kennwort ein, und bestätigen Sie es.  
   
 9. Klicken Sie auf **OK** , um den Import abzuschließen.  
   
@@ -163,7 +163,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
   
     -   Wählen Sie im Feld **Servertyp** die Option **Integration Services**aus.  
   
-    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen>**, um nach dem zu verwendenden Server zu suchen.  
+    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen...>**, um nach dem zu verwendenden Server zu suchen.  
   
 3.  Wenn der Objekt-Explorer nicht geöffnet ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   
@@ -175,15 +175,15 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
   
     -   Zum Exportieren einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wählen Sie die Option **SQL Server** aus, geben Sie den Server an, und wählen Sie den Authentifizierungsmodus aus. Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung auswählen, geben Sie einen Benutzernamen und ein Kennwort ein.  
   
-         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, und erweitern Sie den Ordner **SSIS-Pakete** , um den Ordner zu suchen, in dem Sie das Paket speichern möchten. Aktualisieren Sie optional den Standardnamen des Pakets, und klicken Sie dann auf **OK**.  
+         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, und erweitern Sie den Ordner **SSIS-Pakete**, um den Ordner zu suchen, in dem Sie das Paket speichern möchten. Aktualisieren Sie optional den Standardnamen des Pakets, und klicken Sie dann auf **OK**.  
   
     -   Zum Exportieren in das Dateisystem wählen Sie die Option **Dateisystem** aus.  
   
-         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)** , um den Ordner zu suchen, in den Sie das Paket exportieren möchten, geben Sie den Namen der Paketdatei ein, und klicken Sie dann auf **Speichern**.  
+         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, um den Ordner zu suchen, in den Sie das Paket exportieren möchten, geben Sie den Namen der Paketdatei ein, und klicken Sie dann auf **Speichern**.  
   
     -   Zum Exportieren in den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher wählen Sie die Option **SSIS-Paketspeicher** aus, und geben Sie den Server an.  
   
-         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, erweitern Sie den Ordner **SSIS-Pakete** , und wählen Sie den Ordner aus, in dem Sie das Paket speichern möchten. Geben Sie optional in das Textfeld **Paketname** einen neuen Namen für das Paket ein. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, erweitern Sie den Ordner **SSIS-Pakete**, und wählen Sie den Ordner aus, in dem Sie das Paket speichern möchten. Geben Sie optional in das Textfeld **Paketname** einen neuen Namen für das Paket ein. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 7.  Zum Aktualisieren der Schutzebene des Pakets klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, und wählen Sie im Dialogfeld **Paketschutzebene** eine andere Schutzebene aus. Falls die Option **Sensible Daten mit einem Kennwort verschlüsseln** oder **Alle Daten mit einem Kennwort verschlüsseln** ausgewählt ist, geben Sie ein Kennwort ein, und bestätigen Sie es.  
   
@@ -221,13 +221,13 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
  Stellen Sie ein Kennwort bereit, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Paketpfad**  
- Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche „Durchsuchen“ **(…)** , und suchen Sie das Paket.  
+ Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche „Durchsuchen“ **(…)**, und suchen Sie das Paket.  
   
  **Paketname**  
  Sie können das Paket auch umbenennen. Der Standardname ist der Name des zu importierenden Pakets.  
   
  **Schutzebene**  
- Klicken Sie auf die Schaltfläche „Durchsuchen“ **(…)** , und aktualisieren Sie im Dialogfeld **Paketschutzebene** die Schutzebene. Weitere Informationen finden Sie unter [Dialogfeld „Paket- und Projektschutzebene“](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
+ Klicken Sie auf die Schaltfläche „Durchsuchen“ **(…)**, und aktualisieren Sie im Dialogfeld **Paketschutzebene** die Schutzebene. Weitere Informationen finden Sie unter [Dialogfeld „Paket- und Projektschutzebene“](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Paket exportieren
   Verwenden Sie das in **verfügbare Dialogfeld** Paket exportieren [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket an einen anderen Speicherort zu exportieren und optional die Schutzebene zu ändern.  
@@ -261,10 +261,10 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
  Stellen Sie ein Kennwort bereit, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Paketpfad**  
- Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um nach dem Ordner zu suchen, in dem das Paket gespeichert werden soll.  
+ Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um nach dem Ordner zu suchen, in dem das Paket gespeichert werden soll.  
   
  **Schutzebene**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , und aktualisieren Sie im Dialogfeld **Paketschutzebene** die Schutzebene. Weitere Informationen finden Sie unter [Dialogfeld „Paket- und Projektschutzebene“](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, und aktualisieren Sie im Dialogfeld **Paketschutzebene** die Schutzebene. Weitere Informationen finden Sie unter [Dialogfeld „Paket- und Projektschutzebene“](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## <a name="back-up-and-restore-packages"></a>Sichern und Wiederherstellen von Paketen
   

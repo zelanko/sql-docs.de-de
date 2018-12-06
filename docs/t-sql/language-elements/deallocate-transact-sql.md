@@ -22,12 +22,12 @@ ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 715803e27516df04c0fb1267ceabc8a162d5da4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b189c99b2a225161eaa675e749464245cd830538
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747828"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586203"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,49 +39,48 @@ ms.locfileid: "47747828"
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }  
 ```  
   
 ## <a name="arguments"></a>Argumente  
  *cursor_name*  
- Der Name eines bereits deklarierten Cursors. Falls sowohl ein lokaler als auch ein globaler Cursor namens *cursor_name* vorhanden ist, bezieht sich *cursor_name* nur dann auf den globalen Cursor, wenn GLOBAL angegeben ist. Wird GLOBAL nicht angegeben, bezieht es sich auf den lokalen Cursor.  
+ Der Name eines bereits deklarierten Cursors. Falls sowohl ein lokaler als auch ein globaler Cursor namens *cursor_name* vorhanden ist, bezieht sich *cursor_name* nur dann auf den globalen Cursor, wenn `GLOBAL` angegeben ist. Wird `GLOBAL` nicht angegeben, bezieht es sich auf den lokalen Cursor.  
   
  @*cursor_variable_name*  
  Der Name einer **cursor**-Variablen. @*cursor_variable_name* muss vom Typ **cursor** sein.  
   
 ## <a name="remarks"></a>Remarks  
- Anweisungen, die auf Cursor angewendet werden, verwenden entweder einen Cursornamen oder eine Cursorvariable, um auf den Cursor zu verweisen. DEALLOCATE entfernt die Zuordnung zwischen einem Cursor und dem Cursornamen oder der Cursorvariablen. Ist dies der letzte Name bzw. die letzte Variable, die auf den Cursor verweist, wird die Zuordnung des Cursors aufgehoben, und alle vom Cursor verwendeten Ressourcen werden freigegeben. Durch DEALLOCATE werden alle Scrollsperren freigegeben, die zum Schützen der Isolierung der Abrufvorgänge verwendet werden. Transaktionssperren, mit denen vom Cursor vorgenommene Updates, einschließlich positionierter Updates, geschützt werden, bleiben bis zum Ende der Transaktion wirksam.  
+Anweisungen, die auf Cursor angewendet werden, verwenden entweder einen Cursornamen oder eine Cursorvariable, um auf den Cursor zu verweisen. `DEALLOCATE` entfernt die Zuordnung zwischen einem Cursor und dem Cursornamen oder der Cursorvariablen. Ist dies der letzte Name bzw. die letzte Variable, die auf den Cursor verweist, wird die Zuordnung des Cursors aufgehoben, und alle vom Cursor verwendeten Ressourcen werden freigegeben. Durch `DEALLOCATE` werden alle Scrollsperren freigegeben, die zum Schützen der Isolierung der Abrufvorgänge verwendet werden. Transaktionssperren, mit denen vom Cursor vorgenommene Updates, einschließlich positionierter Updates, geschützt werden, bleiben bis zum Ende der Transaktion wirksam.  
   
- Die DECLARE CURSOR-Anweisung ordnet einem Cursor einen Cursornamen zu.  
+Die `DECLARE CURSOR`-Anweisung ordnet einem Cursor einen Cursornamen zu.  
   
-```  
+```sql  
 DECLARE abc SCROLL CURSOR FOR  
 SELECT * FROM Person.Person;  
 ```  
   
- Nachdem dem Cursor ein Cursorname zugeordnet wurde, kann der Name so lange nicht für einen anderen Cursor des gleichen Bereiches (GLOBAL oder LOCAL) verwendet werden, bis die Zuordnung des Cursors aufgehoben wurde.  
+Nachdem dem Cursor ein Cursorname zugeordnet wurde, kann der Name so lange nicht für einen anderen Cursor des gleichen Bereiches (global oder lokal) verwendet werden, bis die Zuordnung des Cursors aufgehoben wurde.  
   
  Eine Cursorvariable kann mithilfe einer der beiden folgenden Methoden einem Cursor zugeordnet werden:  
   
--   Über den Namen mithilfe einer SET-Anweisung, in der ein Cursor auf eine Cursorvariable festgelegt wird.  
+-   Über den Namen mithilfe einer `SET`-Anweisung, in der ein Cursor auf eine Cursorvariable festgelegt wird.  
   
-    ```  
+    ```sql  
     DECLARE @MyCrsrRef CURSOR;  
     SET @MyCrsrRef = abc;  
     ```  
   
 -   Ein Cursor kann auch erstellt und einer Variablen zugeordnet werden, ohne dass ein Cursorname definiert ist.  
   
-    ```  
+    ```sql  
     DECLARE @MyCursor CURSOR;  
     SET @MyCursor = CURSOR LOCAL SCROLL FOR  
     SELECT * FROM Person.Person;  
     ```  
   
- Eine DEALLOCATE @*cursor_variable_name*-Anweisung entfernt nur den Verweis der benannten Variablen auf den Cursor. Die Zuordnung der Variablen wird erst dann aufgehoben, wenn sie am Ende des Batches, der gespeicherten Prozedur oder des Triggers den Gültigkeitsbereich verlässt. Nach einer DEALLOCATE @*cursor_variable_name*-Anweisung kann die Variable mithilfe einer SET-Anweisung einem anderen Cursor zugeordnet werden.  
+ Eine `DEALLOCATE <@cursor_variable_name>`-Anweisung entfernt nur den Verweis der benannten Variablen auf den Cursor. Die Zuordnung der Variablen wird erst dann aufgehoben, wenn sie am Ende des Batches, der gespeicherten Prozedur oder des Triggers den Gültigkeitsbereich verlässt. Nach einer `DEALLOCATE <@cursor_variable_name>`-Anweisung kann die Variable mithilfe einer SET-Anweisung einem anderen Cursor zugeordnet werden.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -96,15 +95,15 @@ SET @MyCursor = CURSOR LOCAL SCROLL FOR
 GO  
 ```  
   
- Eine Zuordnung für eine Cursorvariable muss nicht explizit aufgehoben werden. Die Zuordnung der Variablen wird implizit aufgehoben, wenn sie den Bereich verlässt.  
+Eine Zuordnung für eine Cursorvariable muss nicht explizit aufgehoben werden. Die Zuordnung der Variablen wird implizit aufgehoben, wenn sie den Bereich verlässt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- DEALLOCATE-Berechtigungen erhalten standardmäßig alle gültigen Benutzer.  
+ `DEALLOCATE`-Berechtigungen erhalten standardmäßig alle gültigen Benutzer.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Skript wird gezeigt, wie Cursor erhalten bleiben, bis die Zuordnung des letzten Namens oder der Variablen, die auf die Cursor verweist, aufgehoben wurde.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Create and open a global named cursor that  

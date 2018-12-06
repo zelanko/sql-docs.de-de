@@ -3,7 +3,7 @@ title: Automatisches Seeding für sekundäre Replikate (SQL Server) | Microsoft-
 description: Verwenden Sie das automatische Seeding zum Initialisieren sekundärer Replikate.
 services: data-lake-analytics
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b519e70c46f697c4ef819f59c122fba6c4e40ea2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603620"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506691"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Automatisches Seeding für sekundäre Replikate
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,16 +117,14 @@ Das Festlegen von `SEEDING_MODE` auf einem primären Replikat während einer `CR
 
 Sobald auf einer Instanz, die zum sekundären Replikat wird, die Verknüpfung erfolgt, wird folgende Meldung zum SQL Server-Protokoll hinzugefügt:
 
->Dem lokalen Verfügbarkeitsreplikat der Verfügbarkeitsgruppe „AGName“ wurde nicht die Berechtigung zum Erstellen von Datenbanken erteilt, aber `SEEDING_MODE` ist auf `AUTOMATIC` festgelegt. Verwenden Sie den Befehl `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE`, um das Erstellen von Datenbanken zuzulassen, für die vom primären Verfügbarkeitsreplikat ein Seeding ausgeführt wird.
+>Dem lokalen Verfügbarkeitsreplikat der Verfügbarkeitsgruppe „AGName“ wurde nicht die Berechtigung zum Erstellen von Datenbanken erteilt, aber `SEEDING_MODE` ist auf `AUTOMATIC` festgelegt. Verwenden Sie den Befehl `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE`, um das Erstellen von Datenbanken zuzulassen, für die vom primären Verfügbarkeitsreplikat ein Seeding ausgeführt wird.
 
 ### <a name = "grantCreate"></a> Erteilen der Berechtigung zum Erstellen von Datenbanken auf dem sekundären Replikat von Verfügbarkeitsgruppen
 
 Erteilen Sie der Verfügbarkeitsgruppe nach dem Hinzufügen die Berechtigung zum Erstellen von Datenbanken auf der sekundären Replikatinstanz von SQL Server. Die Verfügbarkeitsgruppe benötigt die Berechtigung zum Erstellen von Datenbanken, damit das automatische Seeding funktioniert. 
 
 >[!TIP]
->Wenn die Verfügbarkeitsgruppe eine Datenbank auf einem sekundären Replikat erstellt, legt sie als Datenbankbesitzer das Konto fest, das die Anweisung `ALTER AVAILABILITY GROUP` ausgeführt hat, um die Berechtigung zum Erstellen von Datenbanken zu erteilen. Die meisten Anwendungen erfordern, dass der Datenbankbesitzer des sekundären Replikats mit dem des primären Replikats übereinstimmt.
->
->Führen Sie den untenstehenden Beispielbefehl im Sicherheitskontext des Kontos aus, das der Datenbankbesitzer des primären Replikats ist, um sicherzustellen, dass alle Datenbanken mit dem gleichen Datenbankbesitzer wie dem des primären Replikats erstellt werden. Beachten Sie, dass eine Anmeldung die Berechtigung `ALTER AVAILABILITY GROUP` erfordert. 
+>Wenn die Verfügbarkeitsgruppe eine Datenbank für ein sekundäres Replikat erstellt, legt sie „sa“ (genauer gesagt, das Konto mit der SID 0x01) als Besitzer der Datenbank fest. 
 >
 >Verwenden Sie `ALTER AUTHORIZATION`, um den Datenbankbesitzer zu ändern, nachdem ein sekundäres Replikat automatisch eine Datenbank erstellt hat. Siehe [ALTER AUTHORIZATION (Transact-SQL)](../../../t-sql/statements/alter-authorization-transact-sql.md).
  
@@ -221,7 +219,7 @@ CREATE EVENT SESSION [AG_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
     ADD TARGET package0.event_file(
-        SET filename=N’autoseed.xel’,
+        SET filename=N'autoseed.xel',
         max_file_size=(5),
         max_rollover_files=(4)
         )

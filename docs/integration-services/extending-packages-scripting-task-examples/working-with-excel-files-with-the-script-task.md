@@ -17,12 +17,12 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ddbb2e0fe97024fe0ae44fcdcd971746263fad24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69771260dbffe33583e300942548a69fd21a5258
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715728"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529597"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Arbeiten mit Excel-Dateien mit dem Skripttask
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt den Excel-Verbindungs-Manager, die Excel-Quelle und das Excel-Ziel zum Arbeiten mit den in Kalkulationstabellen gespeicherten Daten im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Dateiformat bereit. Die in diesem Thema beschriebenen Verfahren verwenden den Skripttask zum Abrufen von Informationen über verfügbare Excel-Datenbanken (Arbeitsmappendateien) und -Tabellen (Arbeitsmappen und benannte Bereiche).
@@ -264,7 +264,7 @@ public class ScriptMain
   
          -oder-  
   
-    -   Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**) neben dem Eigenschaftsfeld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable ExcelFiles aus.  
+    -   Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**) neben dem Eigenschaftsfeld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable „ExcelFiles“ aus.  
   
 4.  Klicken Sie zum Öffnen des Skript-Editors auf **Skript bearbeiten**.  
   
@@ -331,7 +331,7 @@ public class ScriptMain
   
          -oder-  
   
-    -   Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**) neben dem Eigenschaftsfeld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable ExcelFile aus.  
+    -   Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**) neben dem Eigenschaftsfeld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable „ExcelFiles“ aus.  
   
 3.  Klicken Sie auf **ReadWriteVariables**, und geben Sie den Eigenschaftswert mit einer der folgenden Methoden ein:  
   

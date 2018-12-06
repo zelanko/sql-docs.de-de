@@ -14,12 +14,12 @@ ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1724fcbf34817dbb87c2c57a68735c1502bcdce3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86f8ef15874d9777aeb1b47481ba4f9933b13b4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651848"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502007"
 ---
 # <a name="operator-precedence-and-associativity"></a>Operatorenrangfolge und -assoziativität
   Jeder Operator, der von der Ausdrucksauswertung unterstützt wird, weist eine zugewiesene Rangfolge in der Rangfolgenhierarchie auf und enthält eine bestimmte Auswertungsrichtung. Die Auswertungsrichtung für einen Operator ist die Operatorassoziativität. Operatoren mit einer höheren Position in der Rangfolge werden vor Operatoren mit einer niedrigeren Position in der Rangfolge ausgewertet. Besitzt ein komplexer Ausdruck mehrere Operatoren, bestimmt die Operatorenrangfolge die Reihenfolge, in der die einzelnen Operationen ausgeführt werden. Die Ausführungsreihenfolge kann sich entscheidend auf das Ergebnis auswirken. Manche Operatoren weisen die gleiche Rangfolge auf. Falls ein Ausdruck mehrere Operatoren mit gleicher Rangfolge enthält, werden die Operatoren von links nach rechts bzw. von rechts nach links ausgewertet.  
@@ -29,10 +29,10 @@ ms.locfileid: "47651848"
 |Operatorsymbol|Vorgangstyp|Assoziativität|  
 |---------------------|-----------------------|-------------------|  
 |( )|expression|Von links nach rechts|  
-|–, !, ~|Unäroperatoren|Von rechts nach links|  
+|-, !, ~|Unäroperatoren|Von rechts nach links|  
 |Umwandlungen|Unäroperatoren|Von rechts nach links|  
 |*, / ,%|Multiplikativ|Von links nach rechts|  
-|+, –|Additiv|Von links nach rechts|  
+|+, -|Additiv|Von links nach rechts|  
 |\<, >, \<=, >=|Relational|Von links nach rechts|  
 |==, !=|Gleichheit|Von links nach rechts|  
 |&|Bitweises AND|Von links nach rechts|  
