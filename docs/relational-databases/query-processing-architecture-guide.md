@@ -1,7 +1,7 @@
 ---
 title: Handbuch zur Architektur der Abfrageverarbeitung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/06/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701478"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542525"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -350,16 +350,19 @@ Der Ausführungsplan für gespeicherte Prozeduren und Trigger wird getrennt von 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-Wenn eine SQL-Anweisung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird, durchsucht die relationale Engine zunächst den Plancache, um zu überprüfen, ob ein vorhandener Ausführungsplan für die SQL-Anweisung vorhanden ist. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet sämtliche vorhandenen Pläne, die hierbei gefunden werden, wieder und spart somit den Aufwand für das erneute Kompilieren der SQL-Anweisung ein. Wenn kein Ausführungsplan vorhanden ist, generiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einen neuen Ausführungsplan für die Abfrage.
+Wenn eine SQL-Anweisung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird, durchsucht die relationale Engine zunächst den Plancache, um zu überprüfen, ob ein vorhandener Ausführungsplan für die SQL-Anweisung vorhanden ist. Die SQL-Anweisung wird dann als vorhanden qualifiziert, wenn sie mit einer zuvor ausgeführten SQL-­Anweisung mit einem zwischengespeicherten Plan Zeichen für Zeichen genau übereinstimmt. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet sämtliche vorhandenen Pläne, die hierbei gefunden werden, wieder und spart somit den Aufwand für das erneute Kompilieren der SQL-Anweisung ein. Wenn kein Ausführungsplan vorhanden ist, generiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einen neuen Ausführungsplan für die Abfrage.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet einen effizienten Algorithmus, um vorhandene Ausführungspläne für bestimmte SQL-Anweisungen zu suchen. In den meisten Systemen können durch das erneute Verwenden vorhandener Pläne anstelle des erneuten Kompilierens jeder SQL-Anweisung mehr Ressourcen eingespart werden, als für den Scan nach vorhandenen Plänen benötigt werden.
 
-Die Algorithmen, die SQL-Anweisungen mit vorhandenen, nicht verwendeten Ausführungsplänen im Cache vergleichen, erfordern, dass alle Objektverweise vollqualifiziert sind. Die erste der folgenden `SELECT` -Anweisungen wird z. B. nicht mit vorhandenen Plänen verglichen. Für die zweite Anweisung wird jedoch ein Vergleich vorgenommen:
+Die Algorithmen, die SQL-Anweisungen mit vorhandenen, nicht verwendeten Ausführungsplänen im Cache vergleichen, erfordern, dass alle Objektverweise vollqualifiziert sind. Angenommen, `Person` ist das Standardschema für den Benutzer, der die unten angegebenen `SELECT`-Anweisungen ausführt. Da es in diesem Beispiel nicht erforderlich ist, dass die Tabelle `Person` zum Ausführen vollqualifiziert ist, bedeutet dies, dass die zweite Anweisung nicht mit einem vorhandenen Plan verglichen wird, aber die dritte Anweisung:
 
 ```sql
 SELECT * FROM Person;
-
+GO
 SELECT * FROM Person.Person;
+GO
+SELECT * FROM Person.Person;
+GO
 ```
 
 ### <a name="removing-execution-plans-from-the-plan-cache"></a>Entfernen von Ausführungsplänen aus dem Plancache
@@ -637,7 +640,6 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bietet das Vorbereiten
 * Die Anwendung kann steuern, wann der Ausführungsplan erstellt, und wann er wiederverwendet werden soll.
 * Das Vorbereiten/Ausführen-Modell kann auf andere Datenbanken portiert werden, einschließlich früherer Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
- 
 ### <a name="ParamSniffing"></a> Parameterermittlung
 Die „Parameterermittlung“ bezieht sich auf einen Prozess, wobei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die aktuellen Parameter während der Kompilierung oder Neukompilierung ermittelt und diese an den Abfrageoptimierer übermittelt, sodass sie zum Generieren potenziell effizienter Abfrageausführungspläne verwendet werden können.
 
@@ -655,6 +657,24 @@ Parameterwerte werden während der Kompilierung oder Neukompilierung für die fo
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ermöglicht parallele Abfragen, um die Abfrageausführung und Indexvorgänge für Computer zu optimieren, die über mehrere Mikroprozessoren (CPUs) verfügen. Da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mehrere Betriebssystem-Arbeitsthreads verwenden kann, um eine Abfrage oder einen Indexvorgang parallel auszuführen, kann der betreffende Vorgang schnell und effizient ausgeführt werden.
 
 Während der Abfrageoptimierung sucht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nach Abfragen oder Indexvorgängen, für die eine parallele Ausführung vorteilhaft ist. Für diese Abfragen fügt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Verteilungsoperatoren in den Abfrageausführungsplan ein, um die Abfrage für die parallele Ausführung vorzubereiten. Ein Verteilungsoperator ist ein Operator in einem Plan für die Abfrageausführung, der die Prozessverwaltung, die Neuverteilung der Daten und die Ablaufsteuerung ermöglicht. Der Verteilungsoperator schließt die logischen Operatoren `Distribute Streams`, `Repartition Streams`und `Gather Streams` als Untertypen ein. Einer oder mehrere dieser Operatoren können in der Showplanausgabe eines Abfrageplans für eine parallele Abfrage enthalten sein. 
+
+> [!IMPORTANT]
+> Bestimmte Konstrukte verhindern, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Parallelität für den gesamten Ausführungsplan oder Teile davon nutzen kann.
+
+Zu den Konstrukten, die Parallelität verhindern, gehören:
+>
+> - **Benutzerdefinierte Skalarfunktionen**    
+>   Weitere Informationen zu benutzerdefinierten Skalarfunktionen finden Sie unter [Erstellen benutzerdefinierter Funktionen](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Ab [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] bietet die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die Möglichkeit, ein Inlining dieser Funktionen vorzunehmen und die Verwendung von Parallelität während der Abfrageverarbeitung zu entsperren. Weitere Informationen zum Inlining benutzerdefinierter Skalarfunktionen finden Sie unter [Intelligente Abfrageverarbeitung in SQL-Datenbanken](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
+> - **Remote Query**    
+>   Weitere Informationen zu Remote Query finden Sie unter [Referenz zu logischen und physischen Showplanoperatoren](../relational-databases/showplan-logical-and-physical-operators-reference.md).
+> - **Dynamische Cursor**    
+>   Weitere Informationen zu Cursorn finden Sie unter [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
+> - **Rekursive Abfragen**    
+>   Weitere Informationen zur Rekursion finden Sie unter [Richtlinien zum Definieren und Verwenden rekursiver allgemeiner Tabellenausdrücke](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) und [Rekursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
+> - **Tabellenwertfunktionen**    
+>   Weitere Informationen zu Tabellenwertfunktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen (Datenbank-Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+> - **TOP-Schlüsselwort**    
+>   Weitere Informationen finden Sie unter [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
 
 Nach dem Einfügen eines Verteilungsoperators ist das Ergebnis ein Plan für eine parallele Abfrageausführung. Ein Plan für die parallele Abfrageausführung kann mehrere Arbeitsthreads verwenden. Ein serieller Ausführungsplan, der von einer nicht parallelen Abfrage verwendet wird, verwendet nur einen Arbeitsthread bei seiner Ausführung. Die tatsächliche Anzahl der Arbeitsthreads, die von einer parallelen Abfrage verwendet werden, wird während der Initialisierung der Abfrageplanausführung bestimmt und durch die Komplexität des Plans und den Grad der Parallelität bestimmt. Der Grad der Parallelität bestimmt die maximal verwendete Anzahl von CPUs; er bezieht sich nicht auf die Anzahl der verwendeten Arbeitsthreads. Der Wert für den Grad der Parallelität wird auf Serverebene festgelegt und kann mithilfe der gespeicherten Systemprozedur „sp_configure“ geändert werden. Sie können diesen Wert für einzelne Abfrage- oder Indexanweisungen überschreiben, indem Sie den `MAXDOP` -Abfragehinweis oder die `MAXDOP` -Indexoption angeben. 
 
@@ -1098,4 +1118,6 @@ GO
  [Bewährte Methoden für den Abfragespeicher](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Kardinalitätsschätzung](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [Adaptive Abfrageverarbeitung](../relational-databases/performance/adaptive-query-processing.md)   
- [Operatorrangfolge](../t-sql/language-elements/operator-precedence-transact-sql.md)
+ [Operatorrangfolge](../t-sql/language-elements/operator-precedence-transact-sql.md)    
+ [Ausführungspläne](../relational-databases/performance/execution-plans.md)    
+ [Leistungscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

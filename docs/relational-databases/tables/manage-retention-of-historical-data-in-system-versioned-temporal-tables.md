@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a209033dc614ad2cccd6c1138d89c462f5152a7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698598"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417941"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -333,7 +333,7 @@ COMMIT TRANSACTION
 ### <a name="performance-considerations-with-table-partitioning"></a>Überlegungen zur Leistung bei der Tabellenpartitionierung  
  Es ist äußerst wichtig, MERGE und SPLIT RANGE-Vorgänge durchzuführen, um das Verschieben von Daten zu vermeiden, da dies einen erheblichen Verarbeitungsaufwand verursachen kann. Weitere Informationen finden Sie unter [Ändern einer Partitionsfunktion](../../relational-databases/partitions/modify-a-partition-function.md). Verwenden Sie dazu RANGE LEFT statt RANGE RIGHT, wenn Sie [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md) verwenden.  
   
- Lassen Sie mich zuerst visuell die Bedeutung der Optionen RANGE LEFT und RANGE RIGHT erläutern:  
+ Lassen Sie uns zuerst visuell die Bedeutung der Optionen RANGE LEFT und RANGE RIGHT erläutern:  
   
  ![Partitionierung3](../../relational-databases/tables/media/partitioning3.png "Partitionierung3")  
   

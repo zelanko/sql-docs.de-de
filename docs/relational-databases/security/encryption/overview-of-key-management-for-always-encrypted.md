@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4399368e139d9ba6875e7b724c2c401bab8b7615
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790230"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535386"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Übersicht über die Schlüsselverwaltung für Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,15 +44,15 @@ Der Prozess der Schlüsselverwaltung kann in die folgenden grundlegenden Tasks u
 
 - **Schlüsselbereitstellung** – Erstellen des physischen Schlüssels in einem vertrauenswürdigen Schlüsselspeicher (z.B. im Windows-Zertifikatspeicher, Azure Key Vault oder einem Hardwaresicherheitsmodul), Verschlüsseln von Spaltenverschlüsselungsschlüsseln mithilfe von Spaltenhauptschlüsseln und Erstellen von Metadaten für beide Schlüsseltypen in der Datenbank
 
-- **Schlüsselrotation** – Ersetzen eines vorhandenen Schlüssels mit einem neuen Schlüssel in regelmäßigen Abständen Sie müssen einen Schlüssel möglicherweise drehen, wenn er kompromittiert wurde, oder um die Richtlinien und Kompatibilitätsbestimmungen Ihrer Organisation einzuhalten, die die Rotation kryptografischer Schlüssel vorschreiben. 
+- **Schlüsselrotation** – Ersetzen eines vorhandenen Schlüssels mit einem neuen Schlüssel in regelmäßigen Abständen Sie müssen einen Schlüssel möglicherweise rotieren, wenn er kompromittiert wurde, oder um die Richtlinien und Kompatibilitätsbestimmungen Ihrer Organisation einzuhalten, die die Rotation kryptografischer Schlüssel vorschreiben. 
 
 
 ## <a name="KeyManagementRoles"></a> Schlüsselverwaltungsrollen
 
 Es gibt zwei unterschiedliche Rollen von Benutzern, die Always Encrypted-Schlüssel verwalten, und zwar Sicherheits- und Datenbankadministratoren (DBAs):
 
-- **Sicherheitsadministrator** : generiert Spaltenverschlüsselungsschlüssel und Spaltenhauptschlüssel und verwaltet die Schlüsselspeicher, die die Spaltenhauptschlüssel enthalten. Ein Sicherheitsadministrator benötigt zum Durchführen dieser Aufgaben Zugriff auf die Schlüssel und den Schlüsselspeicher, jedoch nicht auf die Datenbank.
-- **DBA** : verwaltet die Metadaten zu den Schlüsseln in der Datenbank. Ein DBA muss zum Durchführen von Schlüsselverwaltungsaufgaben in der Lage sein, Schlüsselmetadaten in der Datenbank zu verwalten, benötigt jedoch keinen Zugriff auf die Schlüssel oder den Schlüsselspeicher, der die Spaltenhauptschlüssel enthält.
+- **Sicherheitsadministrator**: generiert Spaltenverschlüsselungsschlüssel und Spaltenhauptschlüssel und verwaltet die Schlüsselspeicher, die die Spaltenhauptschlüssel enthalten. Ein Sicherheitsadministrator benötigt zum Durchführen dieser Aufgaben Zugriff auf die Schlüssel und den Schlüsselspeicher, jedoch nicht auf die Datenbank.
+- **DBA**: verwaltet die Metadaten zu den Schlüsseln in der Datenbank. Ein DBA muss zum Durchführen von Schlüsselverwaltungsaufgaben in der Lage sein, Schlüsselmetadaten in der Datenbank zu verwalten, benötigt jedoch keinen Zugriff auf die Schlüssel oder den Schlüsselspeicher, der die Spaltenhauptschlüssel enthält.
 
 Unter Berücksichtigung der oben erwähnten Rollen gibt es zwei unterschiedliche Arten, Verwaltungsaufgaben für Always Encrypted durchzuführen: *per Rollentrennung*und *ohne Rollentrennung*. Je nach den Bedürfnissen Ihrer Organisation können Sie den Schlüsselverwaltungsprozess auswählen, der sich für Ihre Anforderungen am besten eignet.
 
@@ -93,7 +93,7 @@ Das primäre Ziel von Always Encrypted ist es, zu gewährleisten, dass in einer 
 
 Ihr Schlüsselverwaltungsprozess muss sicherstellen, dass die Spaltenhauptschlüssel und die Spaltenverschlüsselungsschlüssel sowie die Anmeldeinformationen für einen Schlüsselspeicher, der die Spaltenhauptschlüssel enthält, niemals einem potenziellen Angreifer angezeigt werden, um zu gewährleisten, dass Always Encrypted diese Arten von Angriffen effektiv verhindert. Im Folgenden finden Sie einige Richtlinien, die Sie befolgen sollten:
 
-- Generieren Sie niemals Spaltenhauptschlüssel oder Spaltenverschlüsselungsschlüssel auf einem Computer, der Ihre Datenbank hostet. Generieren Sie die Schlüssel stattdessen auf einem separaten Computer, der entweder für die Schlüsselverwaltung vorgesehen ist oder auf dem Anwendungen gehostet werden, die ohnehin Zugriff auf die Schlüssel benötigen. Dies bedeutet, dass Sie **niemals Tools ausführen sollten, die für das Generieren der Schlüssel auf dem Computer verwendet werden, der die Datenbank hostet** . Wenn nämlich ein Angreifer auf einen Computer zugreift, der für die Bereitstellung oder Verwaltung Ihrer Always Encrypted-Schlüssel verwendet wird, kann er Ihre Schlüssel möglicherweise abrufen, selbst wenn die Schlüssel nur für kurze Zeit im Arbeitsspeicher des Tools angezeigt werden.
+- Generieren Sie niemals Spaltenhauptschlüssel oder Spaltenverschlüsselungsschlüssel auf einem Computer, der Ihre Datenbank hostet. Generieren Sie die Schlüssel stattdessen auf einem separaten Computer, der entweder für die Schlüsselverwaltung vorgesehen ist oder auf dem Anwendungen gehostet werden, die ohnehin Zugriff auf die Schlüssel benötigen. Dies bedeutet, dass Sie **niemals Tools ausführen sollten, die für das Generieren der Schlüssel auf dem Computer verwendet werden, der die Datenbank hostet**. Wenn nämlich ein Angreifer auf einen Computer zugreift, der für die Bereitstellung oder Verwaltung Ihrer Always Encrypted-Schlüssel verwendet wird, kann er Ihre Schlüssel möglicherweise abrufen, selbst wenn die Schlüssel nur für kurze Zeit im Arbeitsspeicher des Tools angezeigt werden.
 - Es ist wichtig, potenzielle Angreifer und Sicherheitsbedrohungen zu identifizieren, bevor ein Schlüsselverwaltungprozess definiert und implementiert wird, um sicherzustellen, dass ihr Schlüsselverwaltungsprozess nicht aus Versehen Spaltenhauptschlüssel oder Spaltenverschlüsselungsschlüssel offenlegt. Wenn Sie z.B. möchten, dass DBAs keinen Zugriff auf sensible Daten haben, darf ein DBA nicht für das Generieren von Schlüsseln verantwortlich sein. Ein DBA *kann* jedoch Schlüsselmetadaten in der Datenbank verwalten, da die Nur-Text-Schlüssel in den Metadaten nicht enthalten sind.
 
 ## <a name="next-steps"></a>Next Steps

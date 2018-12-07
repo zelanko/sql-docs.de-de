@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e05fe32c6c08375ddd1b424ef3401b1bf684822
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 21008fca4e8bb75b9daace2d83cd166dafc79eb9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671759"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521613"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Anzeigen und Ändern von Replikationssicherheitseinstellungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,9 +144,9 @@ ms.locfileid: "51671759"
   
 1.  Im Dialogfeld **Abonnementeigenschaften - \<Subscription>** auf dem Verleger können Sie folgende Änderungen vornehmen:  
   
-    -   Um das Konto zu ändern, unter dem der Verteilungs-Agent ausgeführt wird und Verbindungen zum Verteiler herstellt, klicken Sie auf die Zeile **Agentprozesskonto** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie im Dialogfeld **Sicherheit für den Verteilungs-Agent** einen Anmeldenamen und ein Kennwort an.  
+    -   Um das Konto zu ändern, unter dem der Verteilungs-Agent ausgeführt wird und Verbindungen zum Verteiler herstellt, klicken Sie auf die Zeile **Agentprozesskonto**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie im Dialogfeld **Sicherheit für den Verteilungs-Agent** einen Anmeldenamen und ein Kennwort an.  
   
-    -   Um den Kontext zu ändern, in dem der Verteilungs-Agent Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Abonnentenverbindung** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
+    -   Um den Kontext zu ändern, in dem der Verteilungs-Agent Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Abonnentenverbindung**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
   
          Wenn Sie Abonnements mit verzögertem Update über eine Warteschlange verwenden, verwendet auch der Warteschlangenlese-Agent den hier angegebenen Kontext für Verbindungen zum Abonnenten.  
   
@@ -156,11 +156,11 @@ ms.locfileid: "51671759"
   
 1.  Im Dialogfeld **Abonnementeigenschaften - \<Subscription>** auf dem Abonnenten können Sie folgende Änderungen vornehmen:  
   
-    -   Um das Konto zu ändern, unter dem der Verteilungs-Agent ausgeführt wird und Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Agentprozesskonto** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie im Dialogfeld **Sicherheit für den Verteilungs-Agent** einen Anmeldenamen und ein Kennwort an.  
+    -   Um das Konto zu ändern, unter dem der Verteilungs-Agent ausgeführt wird und Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Agentprozesskonto**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie im Dialogfeld **Sicherheit für den Verteilungs-Agent** einen Anmeldenamen und ein Kennwort an.  
   
          Wenn Sie Abonnements mit verzögertem Update über eine Warteschlange verwenden, verwendet auch der Warteschlangenlese-Agent den hier angegebenen Kontext für Verbindungen zum Abonnenten.  
   
-    -   Um den Kontext zu ändern, in dem der Verteilungs-Agent Verbindungen zum Verteiler herstellt, klicken Sie auf die Zeile **Verteilerverbindung** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
+    -   Um den Kontext zu ändern, in dem der Verteilungs-Agent Verbindungen zum Verteiler herstellt, klicken Sie auf die Zeile **Verteilerverbindung**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -168,9 +168,9 @@ ms.locfileid: "51671759"
   
 1.  Im Dialogfeld **Abonnementeigenschaften - \<Subscription>** auf dem Verleger können Sie folgende Änderungen vornehmen:  
   
-    -   Um das Konto zu ändern, unter dem der Merge-Agent ausgeführt wird und Verbindungen zum Verleger und zum Verteiler herstellt, klicken Sie auf die Zeile **Agentprozesskonto** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie im Dialogfeld **Sicherheit für den Merge-Agent** einen Anmeldenamen und ein Kennwort an.  
+    -   Um das Konto zu ändern, unter dem der Merge-Agent ausgeführt wird und Verbindungen zum Verleger und zum Verteiler herstellt, klicken Sie auf die Zeile **Agentprozesskonto**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie im Dialogfeld **Sicherheit für den Merge-Agent** einen Anmeldenamen und ein Kennwort an.  
   
-    -   Um den Kontext zu ändern, in dem der Merge-Agent Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Abonnentenverbindung** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
+    -   Um den Kontext zu ändern, in dem der Merge-Agent Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Abonnentenverbindung**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -178,15 +178,15 @@ ms.locfileid: "51671759"
   
 1.  Im Dialogfeld **Abonnementeigenschaften - \<Subscription>** auf dem Abonnenten können Sie folgende Änderungen vornehmen:  
   
-    -   Um das Konto zu ändern, unter dem der Merge-Agent ausgeführt wird und Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Agentprozesskonto** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie im Dialogfeld **Sicherheit für den Merge-Agent** einen Anmeldenamen und ein Kennwort an.  
+    -   Um das Konto zu ändern, unter dem der Merge-Agent ausgeführt wird und Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Agentprozesskonto**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie im Dialogfeld **Sicherheit für den Merge-Agent** einen Anmeldenamen und ein Kennwort an.  
   
-    -   Um den Kontext zu ändern, in dem der Merge-Agent Verbindungen zum Verleger und zum Verteiler herstellt, klicken Sie auf die Zeile **Verlegerverbindung** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
+    -   Um den Kontext zu ändern, in dem der Merge-Agent Verbindungen zum Verleger und zum Verteiler herstellt, klicken Sie auf die Zeile **Verlegerverbindung**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>So ändern Sie das Konto, unter dem der Warteschlangenlese-Agent ausgeführt wird  
   
-1.  Klicken Sie auf der Seite **Allgemein** des Dialogfelds **Verteilereigenschaften - \<Distributor>** auf die Schaltfläche mit den drei Punkten (**…**) neben der Verteilungsdatenbank.  
+1.  Klicken Sie auf der Seite **Allgemein** des Dialogfelds **Verteilereigenschaften - \<Distributor>** auf die Schaltfläche mit den drei Punkten (**...**) neben der Verteilungsdatenbank.  
   
 2.  Klicken Sie im Dialogfeld **Eigenschaften der Verteilungsdatenbank - \<Database>** auf die Schaltfläche **Sicherheitseinstellungen** neben dem Textfeld **Agentprozesskonto**.  
   
@@ -218,7 +218,7 @@ ms.locfileid: "51671759"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>So ändern Sie die Sicherheitseinstellungen für ein Pullabonnement mit sofortigem Update  
   
-1.  Klicken Sie im Dialogfeld **Abonnementeigenschaften - \<Subscription>** auf dem Abonnenten auf die Zeile **Verlegerverbindung**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**).  
+1.  Klicken Sie im Dialogfeld **Abonnementeigenschaften - \<Subscription>** auf dem Abonnenten auf die Zeile **Verlegerverbindung**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**).  
   
 2.  Wählen Sie im Dialogfeld **Verbindungsinformationen eingeben** eine der folgenden Optionen aus:  
   

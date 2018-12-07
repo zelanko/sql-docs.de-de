@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b782d10d323ea7e548a149a873812359552345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3374d7ae2f86ce27de46fad9027f78a040ca356b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674928"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545754"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ END CATCH
  *statement_block*  
  Eine beliebige Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem Batch oder in einem BEGIN…END-Block.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Ein TRY…CATCH-Konstrukt fängt alle Ausführungsfehler ab, deren Schweregrad größer als 10 ist und durch die die Datenbankverbindung nicht geschlossen wird.  
   
  Auf einen TRY-Block muss direkt ein dazugehöriger CATCH-Block folgen. Werden andere Anweisungen zwischen die END TRY- und BEGIN CATCH-Anweisungen eingeschlossen, wird dadurch ein Syntaxfehler generiert.  
@@ -103,7 +103,7 @@ END CATCH
   
 -   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) gibt den gesamten Text der Fehlermeldung zurück. Der Text umfasst die Werte, die für alle ersetzbaren Parameter angegeben werden, wie z. B. Längen, Objektnamen oder Zeitangaben.  
   
- Diese Funktionen geben NULL zurück, wenn sie außerhalb des Bereichs eines CATCH-Blocks aufgerufen werden. Fehlerinformationen können mithilfe dieser Funktionen an beliebiger Stelle im Bereich des CATCH-Blocks abgerufen werden. Das folgende Skript zeigt beispielsweise eine gespeicherte Prozedur, die Fehlerbehandlungsfunktionen umfasst. Im `CATCH`-Block eines `TRY…CATCH`-Konstrukts wird die gespeicherte Prozedur aufgerufen, und Informationen zum Fehler werden zurückgegeben.  
+ Diese Funktionen geben NULL zurück, wenn sie außerhalb des Bereichs eines CATCH-Blocks aufgerufen werden. Fehlerinformationen können mithilfe dieser Funktionen an beliebiger Stelle im Bereich des CATCH-Blocks abgerufen werden. Das folgende Skript zeigt beispielsweise eine gespeicherte Prozedur, die Fehlerbehandlungsfunktionen umfasst. Im `CATCH`-Block eines `TRY...CATCH`-Konstrukts wird die gespeicherte Prozedur aufgerufen, und Informationen zum Fehler werden zurückgegeben.  
   
 ```sql  
 -- Verify that the stored procedure does not already exist.  
@@ -156,7 +156,7 @@ END CATCH;
   
  Tritt ein Fehler bei der Kompilierung oder Neukompilierung auf Anweisungsebene auf einer niedrigeren Ausführungsebene (z. B. bei Ausführung von sp_executesql oder einer benutzerdefinierten gespeicherten Prozedur) innerhalb des TRY-Blocks auf, befindet sich der Fehler auf einer niedrigeren Ebene als das TRY…CATCH-Konstrukt und wird vom dazugehörigen CATCH-Block behandelt.  
   
- Das folgende Beispiel zeigt, wie ein Fehler bei der Objektnamensauflösung, der von einer `SELECT`-Anweisung generiert wurde, nicht vom `TRY…CATCH`-Konstrukt erfasst wurde. Er wird jedoch vom `CATCH`-Block erfasst, wenn dieselbe `SELECT`-Anweisung innerhalb einer gespeicherten Prozedur ausgeführt wird.  
+ Das folgende Beispiel zeigt, wie ein Fehler bei der Objektnamensauflösung, der von einer `SELECT`-Anweisung generiert wurde, nicht vom `TRY...CATCH`-Konstrukt erfasst wurde. Er wird jedoch vom `CATCH`-Block erfasst, wenn dieselbe `SELECT`-Anweisung innerhalb einer gespeicherten Prozedur ausgeführt wird.  
   
 ```sql  
 BEGIN TRY  
@@ -171,9 +171,9 @@ BEGIN CATCH
 END CATCH  
 ```  
   
- Der Fehler wird nicht erfasst, und die Steuerung wird vom `TRY…CATCH`-Konstrukt an die nächsthöhere Ebene weitergegeben.  
+ Der Fehler wird nicht erfasst, und die Steuerung wird vom `TRY...CATCH`-Konstrukt an die nächsthöhere Ebene weitergegeben.  
   
- Das Ausführen der `SELECT`-Anweisung innerhalb einer gespeicherten Prozedur führt dazu, dass der Fehler auf einer Ebene unter dem `TRY`-Block auftritt. Der Fehler wird vom `TRY…CATCH`-Konstrukt behandelt.  
+ Das Ausführen der `SELECT`-Anweisung innerhalb einer gespeicherten Prozedur führt dazu, dass der Fehler auf einer Ebene unter dem `TRY`-Block auftritt. Der Fehler wird vom `TRY...CATCH`-Konstrukt behandelt.  
   
 ```sql  
 -- Verify that the stored procedure does not exist.  
@@ -205,7 +205,7 @@ END CATCH;
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-trycatch"></a>A. Verwenden von TRY…CATCH  
+### <a name="a-using-trycatch"></a>A. Verwenden von TRY...CATCH  
  Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Der Fehler führt dazu, dass die Ausführung zum dazugehörigen `CATCH`-Block wechselt.  
   
 ```sql  
@@ -226,7 +226,7 @@ GO
 ```  
   
 ### <a name="b-using-trycatch-in-a-transaction"></a>B. Verwenden von TRY…CATCH in einer Transaktion  
- Das folgende Beispiel zeigt die Funktionsweise eines `TRY…CATCH`-Blocks innerhalb einer Transaktion. Die Anweisung innerhalb des `TRY`-Blocks generiert einen Fehler aufgrund einer Einschränkungsverletzung.  
+ Das folgende Beispiel zeigt die Funktionsweise eines `TRY...CATCH`-Blocks innerhalb einer Transaktion. Die Anweisung innerhalb des `TRY`-Blocks generiert einen Fehler aufgrund einer Einschränkungsverletzung.  
   
 ```sql  
 BEGIN TRANSACTION;  
@@ -255,7 +255,7 @@ GO
 ```  
   
 ### <a name="c-using-trycatch-with-xactstate"></a>C. Verwenden von TRY…CATCH mit XACT_STATE  
- Das folgende Beispiel zeigt, wie das `TRY…CATCH`-Konstrukt zur Behandlung von Fehlern verwendet wird, die innerhalb einer Transaktion auftreten. Über die `XACT_STATE`-Funktion wird bestimmt, ob für die Transaktion ein Commit oder ein Rollback ausgeführt werden soll. In diesem Beispiel hat `SET XACT_ABORT` den Wert `ON`. Dies bewirkt, dass die Transaktion nach dem Fehler aufgrund einer Einschränkungsverletzung nicht commitfähig ist.  
+ Das folgende Beispiel zeigt, wie das `TRY...CATCH`-Konstrukt zur Behandlung von Fehlern verwendet wird, die innerhalb einer Transaktion auftreten. Über die `XACT_STATE`-Funktion wird bestimmt, ob für die Transaktion ein Commit oder ein Rollback ausgeführt werden soll. In diesem Beispiel hat `SET XACT_ABORT` den Wert `ON`. Dies bewirkt, dass die Transaktion nach dem Fehler aufgrund einer Einschränkungsverletzung nicht commitfähig ist.  
   
 ```sql  
 -- Check to see whether this stored procedure exists.  
@@ -323,7 +323,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="d-using-trycatch"></a>D. Verwenden von TRY…CATCH  
+### <a name="d-using-trycatch"></a>D. Verwenden von TRY...CATCH  
  Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Der Fehler führt dazu, dass die Ausführung zum dazugehörigen `CATCH`-Block wechselt.  
   
 ```sql  

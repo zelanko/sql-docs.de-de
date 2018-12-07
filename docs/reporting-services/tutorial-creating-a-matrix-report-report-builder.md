@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8721c5fda498fc0e8874ced102c058a98ff9b9be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600618"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712371"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Lernprogramm: Erstellen eines Matrixberichts (Berichts-Generator)
 Dieses Tutorial zeigt Ihnen die Erstellung eines [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginierten Berichts mit einer Matrix von Beispielumsatzdaten in geschachtelten Zeilen- und Spaltengruppen. 
@@ -361,6 +361,6 @@ Hiermit ist das Lernprogramm für die Erstellung eines Matrixberichts abgeschlos
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)  
-[Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Berichts-Generator in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

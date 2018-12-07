@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 34c11c9568fd922d3502ac69c8bcbc0d531686ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825198"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710731"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial erstellen Sie ein Kreisdiagramm in einem paginierten Reporting Services-Bericht. Sie fügen Prozentsätze hinzu und kombinieren kleine Slices zu einem einzelnen Slice.
@@ -216,6 +216,6 @@ Sie haben das Lernprogramm "Hinzufügen eines Kreisdiagramms zu einem Bericht" e
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)  
-[Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Berichts-Generator in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

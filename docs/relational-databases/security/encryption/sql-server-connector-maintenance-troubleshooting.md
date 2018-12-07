@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1acf0e20eb84502fdba5915dfafbf5d4873130c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649508"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520694"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server-Connector – Wartung &amp; Problembehandlung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,8 @@ ms.locfileid: "47649508"
 ### <a name="key-rollover"></a>Schlüsselrollover  
   
 > [!IMPORTANT]  
->  Für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector ist es erforderlich, dass im Schlüsselnamen nur die Zeichen „a-z“, „A-Z“, „0-9“ und „-“ bei einem Zeichenlimit von 26 Zeichen verwendet werden.   
-> Verschiedene Schlüsselversionen unter dem gleichen Schlüsselnamen in Azure Key Vault funktionieren in Verbindung mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector nicht. Um die Möglichkeit zur Rotation eines Azure Key Vault-Schlüssels zu bieten, der von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwendet wird, muss ein neuer Schlüssel mit einem neuen Schlüsselnamen erstellt werden.  
+>  Für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connector ist es erforderlich, dass im Schlüsselnamen nur die Zeichen „a-z“, „A-Z“, „0-9“ und „-“ bei einem Zeichenlimit von 26 Zeichen verwendet werden.   
+> Verschiedene Schlüsselversionen unter dem gleichen Schlüsselnamen in Azure Key Vault funktionieren in Verbindung mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector nicht. Um die Möglichkeit zur Rotation eines Azure Key Vault-Schlüssels zu bieten, der von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet wird, muss ein neuer Schlüssel mit einem neuen Schlüsselnamen erstellt werden.  
   
  In der Regel müssen asymmetrische Serverschlüssel für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verschlüsselung alle 1-2 Jahre geändert werden. Es ist wichtig zu beachten, dass der Schlüsseltresor die Änderung von Schlüsseln zwar zulässt, diese Funktion von Kunden jedoch nicht zum Implementieren einer Versionsverwaltung verwendet werden sollte. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector kann nicht mit Änderungen der Version des Key Vault-Schlüssels umgehen. Zum Implementieren einer Schlüsselversionsverwaltung müssen Kunden einen neuen Schlüssel im Schlüsseltresor erstellen und den Datenverschlüsselungsschlüssel in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]neu verschlüsseln.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47649508"
     ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
-       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
+       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789='   
     FOR CRYPTOGRAPHIC PROVIDER EKM;  
   
     ALTER LOGIN TDE_Login2  
@@ -148,7 +148,7 @@ Zusammengefasst ergeben sich folgende Schritte:
   
 * Sichern Sie den Tresorschlüssel (mithilfe des PowerShell-Cmdlets „Backup-AzureKeyVaultKey“).  
 * Im Fall eines Tresorfehlers erstellen Sie einen neuen Tresor in der gleichen geografischen Region*. Der Benutzer, der ihn erstellt, sollte sich im gleichen Standardverzeichnis wie der Dienstprinzipal befinden, der für SQL Server eingerichtet wurde.  
-* Stellen Sie den Schlüssel für den neuen Tresor wieder her (mithilfe des PowerShell-Cmdlets „Restore-AzureKeyVaultKey“– dieses stellt den Schlüssel mit dem gleichen Namen wie zuvor wieder her). Wenn bereits ein Schlüssel mit dem gleichen Namen vorhanden ist, tritt ein Fehler bei der Wiederherstellung auf.  
+* Stellen Sie den Schlüssel für den neuen Tresor wieder her (mithilfe des PowerShell-Cmdlets „Restore-AzureKeyVaultKey“ – dieses stellt den Schlüssel mit dem gleichen Namen wie zuvor wieder her). Wenn bereits ein Schlüssel mit dem gleichen Namen vorhanden ist, tritt ein Fehler bei der Wiederherstellung auf.  
 * Erteilen Sie dem SQL Server-Dienstprinzipal Berechtigungen zum Verwenden dieses neuen Tresors.  
 * Ändern Sie die von der Datenbank-Engine verwendeten SQL Server-Anmeldeinformationen so, dass sie den neuen Tresornamen widerspiegeln (falls erforderlich).  
   

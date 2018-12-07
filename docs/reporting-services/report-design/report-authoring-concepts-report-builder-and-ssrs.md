@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a51c8ac3fce465e6742001eb884332d2eb1e4309
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fab47f8994be4500cca49bc427aa7ec7292be2a2
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800574"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710991"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Berichtserstellungskonzepte (Berichts-Generator und SSRS)
   In diesem Abschnitt werden kurz einige in der Dokumentation zum Berichts-Generator und Berichts-Designer verwendete Schlüsselkonzepte zur Beschreibung paginierter Berichte definiert. Definitionen bestimmter Wörter oder Begriffe finden Sie im [Glossar &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  
@@ -34,10 +34,10 @@ ms.locfileid: "47800574"
  [Datenbereiche und Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Beschreibt die Datenbereichstypen, die einem Berichtslayout hinzugefügt werden können. Datenbereiche bestimmen die Darstellung eines Berichts: Tabelle, Matrix, Liste oder Diagramm.  
   
- [Berichtsparameterkonzept (Berichts-Generator und SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
+ [Berichtsparameter-Konzept (Berichts-Generator und SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
  Beschreibt die Möglichkeiten zum Definieren und Verwenden von Berichtsparametern und wie diese unabhängig von der Berichtsdefinition auf dem Berichtsserver verwaltet werden.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+ [Berichts-Generator in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   

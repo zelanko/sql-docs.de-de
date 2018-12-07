@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 742c3dfb66add1a8e81fb9f530923b11e17bfea8
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 9dfc5e2cf7bab164d650f2da1767b2a0e7c399aa
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307114"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711181"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -53,9 +53,9 @@ Mit Secure Enclaves schützt Always Encrypted die Vertraulichkeit von Daten und 
 - **Umfangreiche Berechnungen (Vorschau)**: Vorgänge in verschlüsselten Spalten, wie z.B. Musterabgleich (das LIKE-Prädikat) und Bereichsvergleiche, werden innerhalb der Secure Enclave unterstützt. Damit lässt sich Always Encrypted für eine Vielzahl von Anwendungen und Szenarien verwenden, bei denen solche Berechnungen innerhalb des Datenbanksystems ausgeführt werden müssen.
 
 > [!IMPORTANT]
-> In [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] stehen für umfangreiche Berechnungen noch einige Leistungsoptimierungen aus. Zudem weisen solche Berechnungen eine eingeschränkte Funktionalität auf (z.B. keine Indizierung) und sind derzeit standardmäßig deaktiviert. Informationen zum Aktivieren umfangreicher Berechnungen finden Sie unter [Aktivieren von umfangreichen Berechnungen](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
+> In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] stehen für umfangreiche Berechnungen noch einige Leistungsoptimierungen aus. Zudem weisen solche Berechnungen eine eingeschränkte Funktionalität auf (z.B. keine Indizierung) und sind derzeit standardmäßig deaktiviert. Informationen zum Aktivieren umfangreicher Berechnungen finden Sie unter [Aktivieren von umfangreichen Berechnungen](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-In [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] verwendet Always Encrypted über [Virtualisierungsbasierte Sicherheit (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) abgesicherte Secure Enclaves (auch als VSM-Enclaves bezeichnet) im Windows-Arbeitsspeicher.
+In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] verwendet Always Encrypted über [Virtualisierungsbasierte Sicherheit (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) abgesicherte Secure Enclaves (auch als VSM-Enclaves bezeichnet) im Windows-Arbeitsspeicher.
 
 ## <a name="secure-enclave-attestation"></a>Nachweis von Secure Enclaves
 
@@ -63,11 +63,11 @@ Die Secure Enclave in der SQL Server-Engine kann im Klartextformat auf vertrauli
 
 Der Prozess der Überprüfung der Enclave wird als **Enclave-Nachweis** bezeichnet und erfordert in der Regel, dass ein Clienttreiber innerhalb der Anwendung (und manchmal auch SQL Server) einen externen Nachweisdienst kontaktiert. Die genauen Merkmale des Nachweisprozesses richten sich nach der Enclave-Technologie und dem Nachweisdienst.
 
-Der Nachweisprozess, den SQL Server für Secure Enclaves für VBS in [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] unterstützt, ist der Windows Defender System Guard-Runtimenachweis, bei dem Host Guardian Service (HGS) als Nachweisdienst verwendet wird. Sie müssen HGS in Ihrer Umgebung konfigurieren und den Computer, auf dem Ihre SQL Server-Instanz gehostet wird, in HGS registrieren. Sie müssen auch Ihre Clientanwendungen oder -tools (z.B. SQL Server Management Studio) mit einem HGS-Nachweis konfigurieren.
+Der Nachweisprozess, den SQL Server für Secure Enclaves für VBS in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] unterstützt, ist der Windows Defender System Guard-Runtimenachweis, bei dem Host Guardian Service (HGS) als Nachweisdienst verwendet wird. Sie müssen HGS in Ihrer Umgebung konfigurieren und den Computer, auf dem Ihre SQL Server-Instanz gehostet wird, in HGS registrieren. Sie müssen auch Ihre Clientanwendungen oder -tools (z.B. SQL Server Management Studio) mit einem HGS-Nachweis konfigurieren.
 
 ## <a name="secure-enclave-providers"></a>Anbieter von Secure Enclaves
 
-Um Always Encrypted mit Secure Enclaves verwenden zu können, muss eine Anwendung einen Clienttreiber nutzen, der dieses Feature unterstützt. In [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] müssen Ihre Anwendungen .NET Framework 4.7.2 und den .NET Framework-Datenanbieter für SQL Server verwenden. Darüber hinaus müssen .NET-Anwendungen mit einem **Anbieter für Secure Enclaves** konfiguriert werden, der genau auf den von Ihnen verwendeten Enclave-Typ (z.B. VBS) und Nachweisdienst (z.B. HGS) ausgerichtet ist. Die unterstützten Enclave-Anbieter werden separat in einem NuGet-Paket ausgeliefert, das Sie in Ihre Anwendung integrieren müssen. Ein Enclave-Anbieter implementiert die clientseitige Logik für das Nachweisprotokoll und für die Einrichtung eines sicheren Kanals mit einer Secure Enclave eines bestimmten Typs.
+Um Always Encrypted mit Secure Enclaves verwenden zu können, muss eine Anwendung einen Clienttreiber nutzen, der dieses Feature unterstützt. In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] müssen Ihre Anwendungen .NET Framework 4.7.2 und den .NET Framework-Datenanbieter für SQL Server verwenden. Darüber hinaus müssen .NET-Anwendungen mit einem **Anbieter für Secure Enclaves** konfiguriert werden, der genau auf den von Ihnen verwendeten Enclave-Typ (z.B. VBS) und Nachweisdienst (z.B. HGS) ausgerichtet ist. Die unterstützten Enclave-Anbieter werden separat in einem NuGet-Paket ausgeliefert, das Sie in Ihre Anwendung integrieren müssen. Ein Enclave-Anbieter implementiert die clientseitige Logik für das Nachweisprotokoll und für die Einrichtung eines sicheren Kanals mit einer Secure Enclave eines bestimmten Typs.
 
 ## <a name="enclave-enabled-keys"></a>Enclave-fähige Schlüssel
 
@@ -141,6 +141,6 @@ Die folgenden Einschränkungen gelten für die aktuelle Vorschau, eine Lösung i
 
 - Für umfangreiche Berechnungen für Nicht-Unicode-Zeichenfolgenspalten (char, varchar) muss eine BIN2-Sortierung auf Datenbankebene festgelegt werden. Weitere Informationen finden Sie bei den besonderen Überlegungen für Nicht-Unicode-Zeichenfolgenspalten unter [Verwalten von Sortierungen](configure-always-encrypted-enclaves.md#manage-collations).
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 
-- Richten Sie Ihre Testumgebung ein, und testen Sie die Funktionalität von Always Encrypted mit Secure Enclaves in SSMS – Siehe [Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+- Richten Sie Ihre Testumgebung ein, und testen Sie die Funktionalität von Always Encrypted mit Secure Enclaves in SSMS. Weitere Informationen finden Sie unter [Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).

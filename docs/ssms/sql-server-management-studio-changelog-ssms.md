@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio – Änderungsprotokoll (SSMS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 11/22/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd9e5b79aaf16454e74eb1e63325f95bf5f45a40
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: db6f79e16f65494bdb45b297324541668d69d567
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703988"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712731"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio – Änderungsprotokoll (SSMS)
 
@@ -198,10 +198,10 @@ SSMS wird nicht der PATH-Umgebungsvariablen hinzugefügt:
 
 - Der Pfad zu SSMS.EXE (und Tools im Allgemeinen) wird nicht mehr zum Pfad hinzugefügt. Die Benutzer können diesen entweder selbst hinzufügen oder – bei einer modernen Windows-Version – das Startmenü verwenden.
 
-Unterstützung für [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]
+Unterstützung für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-- Dieses Release ist das erste von SSMS, bei dem [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] (compatLevel 150 usw.) vollständig *berücksichtigt* wird.
-- Die Unterstützung von BATCH_STARTED_GROUP und BATCH_COMPLETED_GROUP in [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] und der verwalteten Instanz in SSMS wurde hinzugefügt.
+- Dieses Release ist das erste von SSMS, bei dem *(compatLevel 150 usw.) vollständig*berücksichtigt[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird.
+- Die Unterstützung von BATCH_STARTED_GROUP und BATCH_COMPLETED_GROUP in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] und der verwalteten Instanz in SSMS wurde hinzugefügt.
 - GraphDB: Hinzufügung eines Flags im Showplan für TC-Sequenz in Graph.
 - Always Encrypted: Unterstützung für [Always Encrypted mit Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md) wurde hinzugefügt.
   - Das Verbindungsdialogfeld verfügt über eine neue Registerkarte "Always Encrypted", wenn der Benutzer auf die Schaltfläche „Optionen“ klickt, um Enclave-Unterstützung zu aktivieren und konfigurieren.
@@ -302,7 +302,7 @@ Objekt-Explorer:
 
 - Ein Problem wurde behoben, bei dem SSMS die Ausnahme „Das Objekt kann nicht von DBNull in einen anderen Typ umgewandelt werden“ auslöste, wenn versucht wurde, den Knoten „Verwaltung“ im Objekt-Explorer zu erweitern (falsch konfigurierter DataCollector).
 - Ein Problem wurde behoben, bei dem die ENTF-Taste beim Umbenennen eines Knotens nicht funktionierte (https://feedback.azure.com/forums/908035/suggestions/32910247 und andere Duplikate).
-- Ein Problem wurde behoben, bei dem Objekt-Explorer vor dem Aufrufen von „Die ersten n bearbeiten“ keine Escapezeichen für Anführungszeichen einfügte, wodurch der Entwurf verfälscht wurde.
+- Ein Problem wurde behoben, bei dem Objekt-Explorer vor dem Aufrufen von „Die ersten n bearbeiten...“ keine Escapezeichen für Anführungszeichen einfügte, wodurch der Entwurf verfälscht wurde.
 - Ein Problem wurde behoben, bei dem der Assistent zum Importieren der Datenebenenanwendung nicht aus der Azure Storage-Struktur gestartet wurde.
 - Ein Problem in der Konfiguration von Datenbank-E-Mail wurde behoben, bei dem der Status des Kontrollkästchens „SSL“ nicht beibehalten wurde (https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541).
 - Ein Fehler wurde behoben, bei dem SSMS die Option zum Schließen vorhandener Verbindungen beim Wiederherstellen der Datenbank mit „is_auto_update_stats_async_on“ ausgeblendet hat.
@@ -430,7 +430,36 @@ SSIS
 - Das Paket kann nicht erfolgreich bereitgestellt oder ausgeführt werden, wenn es eine alte Version von SQL Server zum Ziel hat und gleichzeitig Skripttask- und Skriptkomponenten enthält.
 - SSMS kann keine Verbindung mit Remote-Integration-Services herstellen.
 
-## <a name="ssms-179-latest-ga-release"></a>SSMS 17.9 (neuestes allgemein verfügbares Release)
+
+## <a name="ssms-1791-latest-ga-release"></a>SSMS 17.9.1 (neuestes allgemein verfügbares Release)
+
+![Herunterladen von](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+
+- Releasenummer: 17.9.1<br>
+- Buildnummer: 14.0.17289.0<br>
+- Veröffentlichungsdatum: 21. November 2018
+
+17.9.1 ist ein kleines Update für 17.9 mit die folgenden Fehlerbehebungen:
+
+- Korrektur für folgenden Fehler: Bei Verwendung des Authentifizierungstyps „Active Directory: Universell mit MFA-Unterstützung“ für den SQL-Abfrage-Editor stellen Benutzer möglicherweise fest, dass die Verbindung bei jedem Aufruf der Abfrage geschlossen und erneut geöffnet wird. Nebeneffekte eines solchen Schließens der Verbindung sind u. a., dass globale temporäre Tabellen unerwartet gelöscht werden und mitunter der Verbindung eine neue SPID gegeben wird.
+- Ein seit langem bestehendes Problem wurde behoben, bei dem der Wiederherstellungsplan keinen Wiederherstellungsplan finden konnte oder unter bestimmten Bedingungen einen ineffizienten Wiederherstellungsplan generieren konnte.
+- Ein Problem im Assistenten „Datenschichtanwendung importieren“ wurde behoben, das bei der Verbindung mit einer Azure SQL-Datenbank einen Fehler verursachen konnte.
+
+
+
+> [!NOTE]
+> In andere Sprachen als Englisch lokalisierte Versionen von SSMS 17.x benötigen das [KB 2862966-Sicherheitsupdate-Paket](https://support.microsoft.com/kb/2862966) für die Installation unter Windows 8, Windows 7, Windows Server 2012 und Windows Server 2008 R2.
+
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+
+
+
+
+
+
+
+
+## <a name="ssms-179"></a>SSMS 17.9
 
 ![Download](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 
@@ -978,14 +1007,14 @@ Die Schaltfläche „Skript“ wurde bei Abzielen auf SQL Azure-Objekt erneut ak
 **SSMS Allgemein**
 
 - Die folgenden SSMS-Funktionen werden für die Azure AD-Authentifizierung nicht unterstützt, wenn die universelle Authentifizierung mit MFA verwendet wird:
-   - Der Datenbankoptimierungsratgeber wird für die Azure AD-Authentifizierung nicht unterstützt. Es liegt ein bekanntes Problem vor, bei dem dem Benutzer die eher unverständliche Fehlermeldung „Die Datei oder Assembly "Microsoft.IdentityModel.Clients.ActiveDirectory" konnte nicht geladen werden,…“ angezeigt wird statt der erwarteten Fehlermeldung „Microsoft Azure SQL-Datenbank wird vom Datenbankoptimierungsratgeber nicht unterstützt. (DTAClient)“ (Die Microsoft Azure SQL-Datenbank wird vom Datenbankoptimierungsratgeber nicht unterstützt).
+   - Der Datenbankoptimierungsratgeber wird für die Azure AD-Authentifizierung nicht unterstützt. Es liegt ein bekanntes Problem vor, bei dem dem Benutzer die eher unverständliche Fehlermeldung „Die Datei oder Assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory' konnte nicht geladen werden,…“ angezeigt wird statt der erwarteten Fehlermeldung „Microsoft Azure SQL-Datenbank wird vom Datenbankoptimierungsratgeber nicht unterstützt. (DTAClient)“ (Die Microsoft Azure SQL-Datenbank wird vom Datenbankoptimierungsratgeber nicht unterstützt).
 - Bei dem Versuch, eine Abfrage in DTA zu analysieren entsteht folgender Fehler: "Object must implement IConvertible. (mscorlib)“ (Objekt muss IConvertible implementieren).
 - *Rückläufige Abfragen* fehlen in der Liste der Berichte im Abfragespeicher im Objekt-Explorer.
    - Problemumgehung: Klicken Sie mit der rechten Maustaste auf den Knoten **Abfragespeicher**, und wählen Sie **View Regressed Queries (Rückläufige Abfragen anzeigen)** aus.
 
 **Integration Services**
 
-- Der [Ausführungspfad] in [Katalog].[Ereignismeldungen] ist für Paketausführungen in Scale Out falsch. Der [Ausführungspfad] beginnt mit „\Package“ anstelle des Objektnamens des ausführbaren Pakets. Beim Anzeigen der Übersichtsberichte von Paketausführungen in SSMA kann der Link zum „Ausführungspfad“ in der Übersicht über die Ausführung nicht funktionieren. Klicken Sie im Übersichtsbericht auf „Nachrichten anzeigen“, um alle Ereignismeldungen zu prüfen.
+- Der [Ausführungspfad] in [Katalog].[Ereignismeldungen] ist für Paketausführungen in Scale Out falsch. Der [Ausführungspfad] beginnt mit „\Package“ anstelle des Objektnamens des ausführbaren Pakets. Beim Anzeigen der Übersichtsberichte von Paketausführungen in SSMS kann der Link zum „Ausführungspfad“ in der Übersicht über die Ausführung nicht funktionieren. Klicken Sie im Übersichtsbericht auf „Nachrichten anzeigen“, um alle Ereignismeldungen zu prüfen.
 
 
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![download (Herunterladen von)](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
@@ -1061,7 +1090,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - Der Designer **Neue Tabelle/Sicht** zeigt die Anmeldeaufforderung im alten Format an, außerdem funktioniert die Azure AD-Authentifizierung nicht.
   - Das Feature **Die ersten 200 Zeilen bearbeiten** unterstützt die Azure AD-Authentifizierung nicht.
   - Die Komponente **Registrierter Server** unterstützt die Azure AD-Authentifizierung nicht.
-  - Der **Datenbankoptimierungsratgeber** wird für die Azure AD-Authentifizierung nicht unterstützt. Es liegt ein bekanntes Problem vor, bei dem der Benutzer eine wenig hilfreiche Fehlermeldung angezeigt bekommt: *Datei oder Assembly ‚Microsoft.IdentityModel.Clients.ActiveDirectory,…‘ konnte nicht geladen werden* Entgegen der Erwartung *wird die Microsoft Azure SQL-Datenbank nicht vom Datenbankoptimierungsratgeber unterstützt. (DTAClient)*.
+  - Der **Datenbankoptimierungsratgeber** wird für die Azure AD-Authentifizierung nicht unterstützt. Es liegt ein bekanntes Problem vor, bei dem dem Benutzer die eher unverständliche Fehlermeldung *„Die Datei oder Assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory' konnte nicht geladen werden,…“* angezeigt wird statt der erwarteten Fehlermeldung *Microsoft Azure SQL-Datenbank wird vom Datenbankoptimierungsratgeber nicht unterstützt. (DTAClient)*.
 
 **Analysis Services (AS)**
 
@@ -1271,7 +1300,7 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 - Probleme mit dem Absturz der Benutzeroberfläche im Dialogfeld „Neue Serverregistrierung“ wurden behoben
 - Beheben eines DMF-Problems, die Benutzeroberfläche aktualisiert Ausdrücke inkorrekt, die konstante Zeichenfolgewerte mit Anführungszeichen enthalten
 - Das Problem wurde behoben, das zum Absturz von SSMS beim Ausführen von benutzerdefinierten Berichten geführt hat
-- Das Menüelement „Execution in Scale Out...“ (Ausführung in horizontaler Hochskalierung) wurde dem Ordnerknoten hinzugefügt
+- Menüelement „Execution in Scale Out...“ (Ausführung in horizontaler Hochskalierung) in den Ordnerknoten einfügen
 - Ein Problem mit der Funktion zum Erstellen von IP-Adressen-Whitelists für die Firewall einer Azure SQL-Datenbank wurde behoben
 - Ein Problem in SSMS wurde behoben, bei dem beim Bearbeiten der Source einer multidimensionalen AS-Partition die Ausnahme ausgelöst wurde, dass der Objektverweis nicht festgelegt ist
 - Ein Problem in SSMS wurde behoben, bei dem beim Löschen einer Kundenassembly von einem multidimensionalen AS-Server die Ausnahme ausgelöst wurde, dass der Objektverweis nicht festgelegt ist

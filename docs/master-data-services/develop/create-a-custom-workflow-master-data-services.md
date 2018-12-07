@@ -11,12 +11,12 @@ ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 374971541d49ebd55449c500b3d61a6ed1296ff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffee06e8a6372f146996673c425a89000eda0a1d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766084"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420661"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Erstellen eines benutzerdefinierten Workflows (Master Data Services)
 
@@ -62,9 +62,9 @@ ms.locfileid: "47766084"
   
 2.  Fügen Sie einen Verweis auf Microsoft.MasterDataServices.WorkflowTypeExtender.dll hinzu. Diese Assembly befindet sich unter \<Ihr Installationsordner>\Master Data Services\WebApplication\bin.  
   
-3.  Fügen Sie "using Microsoft.MasterDataServices.Core.Workflow;" der C#-Codedatei hinzu.  
+3.  Fügen Sie „using Microsoft.MasterDataServices.Core.Workflow;“ der C#-Codedatei hinzu.  
   
-4.  Erben Sie in der Klassendeklaration von <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. Die Klassendeklaration sollte in etwa wie folgt aussehen: "public class WorkflowTester : IWorkflowTypeExtender".  
+4.  Erben Sie in der Klassendeklaration von <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. Die Klassendeklaration sollte in etwa wie folgt aussehen: „public class WorkflowTester : IWorkflowTypeExtender“.  
   
 5.  Implementieren Sie die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>-Schnittstelle. Die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>-Methode wird vom SQL Server MDS Workflow Integration Service aufgerufen, um den Workflow zu starten.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "47766084"
   
 1.  Suchen Sie nach der Datei „Microsoft.MasterDataServices.Workflow.exe.config“ unter \<Ihr Installationsordner>\Master Data Services\WebApplication\bin.  
   
-2.  Fügen Sie der Einstellung "ConnectionString" die Verbindungsinformationen der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank hinzu. Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation eine Sortierung mit Berücksichtigung der Groß-/Kleinschreibung verwendet, muss der Name der Datenbank in der gleichen Schreibweise wie in der Datenbank eingegeben werden. Beispielsweise kann das vollständige Einstellungstag wie folgt aussehen:  
+2.  Fügen Sie der Einstellung „ConnectionString“ die Verbindungsinformationen der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank hinzu. Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation eine Sortierung mit Berücksichtigung der Groß-/Kleinschreibung verwendet, muss der Name der Datenbank in der gleichen Schreibweise wie in der Datenbank eingegeben werden. Beispielsweise kann das vollständige Einstellungstag wie folgt aussehen:  
   
     ```xml  
     <setting name="ConnectionString" serializeAs="String">  
@@ -83,7 +83,7 @@ ms.locfileid: "47766084"
     </setting>  
     ```  
   
-3.  Fügen Sie unter der Einstellung "ConnectionString" eine WorkflowTypeExtenders-Einstellung hinzu, um der Workflowhandlerassembly einen Tagnamen zuzuordnen. Zum Beispiel:  
+3.  Fügen Sie unter der Einstellung „ConnectionString“ eine Einstellung „WorkflowTypeExtenders“ hinzu, um der Workflowhandlerassembly einen Tagnamen zuzuordnen. Zum Beispiel:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -94,7 +94,7 @@ ms.locfileid: "47766084"
      Der innere Text des Tags \<Wert> hat das Format \<Workflowtag>=\<durch die Assembly qualifizierter Workflowtypname>. \<Workflowtag> ist ein Name, mit dem Sie die Workflowhandlerassembly identifizieren, wenn Sie in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] eine Geschäftsregel erstellen. \<durch die Assembly qualifizierter Workflowtypname> entspricht dem durch einen Namespace qualifizierten Namen der Workflowklasse, gefolgt von einem Komma und dem Anzeigenamen der Assembly. Verfügt die Assembly über einen starken Namen, binden Sie zudem Versionsinformationen und sowie das zugehörige PublicKeyToken ein. Sie können mehrere \<Einstellungstags> einbinden, wenn Sie mehrere Workflowhandler für andere Arten von Workflows erstellt haben.  
   
 > [!NOTE]  
->  Je nach Serverkonfiguration wird möglicherweise der Fehler "Der Zugriff wurde verweigert" angezeigt, wenn Sie versuchen, die Datei "Microsoft.MasterDataServices.Workflow.exe.config" zu speichern. Tritt dieser Fehler auf, deaktivieren Sie vorübergehend die Benutzerkontensteuerung (UAC) auf dem Server. Öffnen Sie dazu die Systemsteuerung, und klicken Sie auf **System und Sicherheit**. Klicken Sie unter **Wartungscenter** auf **Einstellungen der Benutzerkontensteuerung ändern**. Schieben Sie im Dialogfeld **Einstellungen zur Benutzerkontensteuerung** den Balken nach unten, damit Sie keine Benachrichtigung erhalten. Starten Sie den Computer neu, und wiederholen Sie die vorherigen Schritte, um die Konfigurationsdatei zu bearbeiten. Setzen Sie nach dem Speichern der Datei die UAC-Einstellungen auf die Standardebene zurück.  
+>  Je nach Serverkonfiguration wird möglicherweise der Fehler „Der Zugriff wurde verweigert“ angezeigt, wenn Sie versuchen, die Datei „Microsoft.MasterDataServices.Workflow.exe.config“ zu speichern. Tritt dieser Fehler auf, deaktivieren Sie vorübergehend die Benutzerkontensteuerung (UAC) auf dem Server. Öffnen Sie dazu die Systemsteuerung, und klicken Sie auf **System und Sicherheit**. Klicken Sie unter **Wartungscenter** auf **Einstellungen der Benutzerkontensteuerung ändern**. Schieben Sie im Dialogfeld **Einstellungen zur Benutzerkontensteuerung** den Balken nach unten, damit Sie keine Benachrichtigung erhalten. Starten Sie den Computer neu, und wiederholen Sie die vorherigen Schritte, um die Konfigurationsdatei zu bearbeiten. Setzen Sie nach dem Speichern der Datei die UAC-Einstellungen auf die Standardebene zurück.  
   
 ### <a name="start-sql-server-mds-workflow-integration-service"></a>Starten des SQL Server MDS Workflow Integration Service  
  Standardmäßig ist SQL Server MDS Workflow Integration Service nicht installiert. Sie müssen den Dienst installieren, bevor er verwendet werden kann. Erstellen Sie für eine maximale Sicherheit einen lokalen Benutzer für den Dienst, und weisen Sie diesem Benutzer nur die zum Ausführen von Workflowvorgängen erforderlichen Berechtigungen zu. Gehen Sie wie folgt vor, um einen Benutzer zu erstellen sowie den Dienst zu installieren und zu starten:  
@@ -118,7 +118,7 @@ ms.locfileid: "47766084"
 6.  Starten Sie SQL Server MDS Workflow Integration Service mithilfe des Dienst-Snap-Ins. Suchen Sie dazu SQL Server MDS Workflow Integration Service im Dienst-Snap-In, wählen Sie den Dienst aus, und klicken Sie auf den Link **Starten**.  
   
 ### <a name="create-a-workflow-business-rule"></a>Erstellen einer Workflowgeschäftsregel  
- Erstellen und veröffentlichen Sie mithilfe von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] eine Geschäftsregel, die bei Anwendung den Workflow startet. Die Geschäftsregel muss Aktionen enthalten, die Attributwerte ändern, damit die Regel den Wert "false" ergibt, nachdem sie einmal übernommen wurde. Beispielsweise kann die Geschäftsregel den Wert "true" ergeben, wenn ein Preisattributwert größer als 500 und der Approved-Attributwert leer ist. Die Regel kann dann zwei Aktionen umfassen, und zwar eine zum Festlegen des Approved-Attributwerts auf "Ausstehend" und eine zum Starten des Workflows. Sie können alternativ eine Regel erstellen, die auf die Bedingung "has changed" (wurde geändert) zurückgreift, und Ihre Attribute hinzufügen, um die Nachverfolgungsgruppen zu ändern. Weitere Informationen finden zu Geschäftsregeln Sie unter [Geschäftsregeln &#40;Master Data Services&#41;](../../master-data-services/business-rules-master-data-services.md).  
+ Erstellen und veröffentlichen Sie mithilfe von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] eine Geschäftsregel, die bei Anwendung den Workflow startet. Die Geschäftsregel muss Aktionen enthalten, die Attributwerte ändern, damit die Regel den Wert "false" ergibt, nachdem sie einmal übernommen wurde. Beispielsweise kann die Geschäftsregel den Wert "true" ergeben, wenn ein Preisattributwert größer als 500 und der Approved-Attributwert leer ist. Die Regel kann dann zwei Aktionen umfassen, und zwar eine zum Festlegen des Approved-Attributwerts auf "Ausstehend" und eine zum Starten des Workflows. Sie können alternativ eine Regel erstellen, die auf die Bedingung „has changed“ (wurde geändert) zurückgreift, und Ihre Attribute hinzufügen, um die Nachverfolgungsgruppen zu ändern. Weitere Informationen finden zu Geschäftsregeln Sie unter [Geschäftsregeln &#40;Master Data Services&#41;](../../master-data-services/business-rules-master-data-services.md).  
   
  Erstellen Sie wie folgt eine Geschäftsregel, mit der ein benutzerdefinierter Workflow in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] gestartet wird:  
   

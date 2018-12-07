@@ -1,6 +1,6 @@
 ---
-title: Berichts-Generator in SQL Server 2016 | Microsoft-Dokumentation
-ms.date: 03/30/2017
+title: Berichts-Generator in SQL Server | Microsoft-Dokumentation
+ms.date: 11/29/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15762e449c61642989dd507897682d30b4c1421d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 381f0070a8e045aeec707c1f8dc9a6df9cd157d9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690958"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711418"
 ---
-# <a name="report-builder-in-sql-server-2016"></a>Berichts-Generator in SQL Server 2016
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ist ein Tool zum Erstellen von paginierten Berichten, für Geschäftsbenutzer, die es bevorzugen, in einer eigenständigen Umgebung zu arbeiten, statt den Berichts-Designer in Visual Studio zu verwenden.  Wenn Sie einen paginierten Bericht erstellen, erstellen Sie Berichtsdefinitionen, die angeben, von woher die Daten abgerufen werden sollen, welche Daten abgerufen werden sollen und wie die Daten dargestellt werden sollen. Wenn Sie den Bericht ausführen lassen, nimmt der Berichtsprozessor die von Ihnen angegebene Berichtsdefinition, ruft die Daten ab und kombiniert sie mit dem Berichtslayout, um den Bericht zu erstellen. Sie können eine Vorschau Ihres Berichts in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] anzeigen und Ihren Bericht auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver im einheitlichen Modus oder im integrierten SharePoint-Modus veröffentlichen. Dort können andere ihn ausführen.  
+# <a name="report-builder-in-sql-server"></a>Berichts-Generator in SQL Server
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ist ein Tool zum Erstellen von paginierten Berichten, für Geschäftsbenutzer, die es bevorzugen, in einer eigenständigen Umgebung zu arbeiten, statt den Berichts-Designer in Visual Studio zu verwenden.  Wenn Sie einen paginierten Bericht erstellen, erstellen Sie Berichtsdefinitionen, die angeben, von woher die Daten abgerufen werden sollen, welche Daten abgerufen werden sollen und wie die Daten dargestellt werden sollen. Wenn Sie den Bericht ausführen lassen, nimmt der Berichtsprozessor die von Ihnen angegebene Berichtsdefinition, ruft die Daten ab und kombiniert sie mit dem Berichtslayout, um den Bericht zu erstellen. Sie können eine Vorschau des Berichts in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] anzeigen. Dann veröffentlichen Sie den Bericht auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver im einheitlichen Modus oder im integrierten SharePoint-Modus (2016 und frühere Versionen). Sie können einen paginierten Bericht auch im Power BI-Dienst veröffentlichen. Weitere Informationen finden Sie unter [paginierte Berichte in Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (Vorschau).
   
  ![rs_Erste Schritte mit einem Bericht](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47690958"
   
   [Install Report Builder (Installieren des Berichts-Generators)](../../reporting-services/install-windows/install-report-builder.md)
 
-  [Neues in Reporting Services und beim Berichts-Generator für SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+  [Neues in SQL Server Reporting Services und beim Berichts-Generator](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Beschreibt die neuen Funktionen in dieser Version von [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], einschließlich Karten.   
   [Lernprogramm: Erstellen eines Quick-Diagrammberichts offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Bietet eine Einführung für [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] und die Assistenten, die zur Verfügung stehen, um Ihnen bei der Erstellung von Berichten zu helfen. Das Lernprogramm enthält eine Reihe von Daten, mit denen Sie arbeiten können, ohne eine Verbindung mit einer Datenquelle herstellen zu müssen.  
@@ -80,7 +80,7 @@ ms.locfileid: "47690958"
  Enthält Informationen zu den Punkten, die Sie vor dem Erstellen des Berichts beachten sollten.  
   
  [Berichtserstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- Definiert Schlüsselkonzepte, die in der gesamten [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]-Dokumentation verwendet werden.  
+ Definiert Schlüsselkonzepte, die in der gesamten [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] -Dokumentation verwendet werden.  
   
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  Erläutert die unterschiedlichen Bereiche und Abschnitte der Berichtsentwurfsansicht.  

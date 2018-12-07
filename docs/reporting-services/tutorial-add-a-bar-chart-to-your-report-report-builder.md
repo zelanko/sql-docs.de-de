@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9cfffb3e3df68d28fc7798461f1f45133f47148e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785648"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712441"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
-In diesem Tutorial verwenden Sie einen Assistenten in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], um ein Kreisdiagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Bericht zu erstellen. Anschließend fügen Sie einen Filter hinzu und erweitern das Diagramm. 
+In diesem Tutorial verwenden Sie einen Assistenten in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , um ein Kreisdiagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht zu erstellen. Anschließend fügen Sie einen Filter hinzu und erweitern das Diagramm. 
 
 In einem Balkendiagramm werden Kategoriedaten horizontal angezeigt. Diese Darstellung bietet folgende Vorteile:  
   
@@ -298,6 +298,6 @@ Sie haben das Lernprogramm "Hinzufügen eines Balkendiagramms zu einem Bericht" 
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)  
-[Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Berichts-Generator in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fafda7376f5c44c795fab85c6659cf5824522e1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 91709818cad0609fda4c624f9bd7585af0c9eea9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677899"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712606"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Änderungsprotokoll für SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ Veröffentlichungsdatum: 27. September 2018
 
 **SSIS:**
 
-1. Unterstützung für [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] wurde hinzugefügt.
+1. Unterstützung für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] hinzugefügt.
 2. Unterstützung für SQL Server 2012 wurde entfernt.
 
 ### <a name="known-issues"></a>Bekannte Probleme:
@@ -151,7 +151,7 @@ Releasedatum: 10. April 2018
 
 **Installationsprogramm:**
 
-- Fügen Sie den Link zum „Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools“ zu den Datenschutzbestimmungen hinzu.
+- Fügen Sie den Link zum „Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools“ in den Datenschutzbestimmungen hinzu.
 - Korrigiert: Das Visual Studio-Installer-Fenster erscheint bei der Auswahl von „Neue SQL Server Data Tools für Visual Studio 2017-Instanz installieren“.
 
 ### <a name="known-issues"></a>Bekannte Probleme:
@@ -207,7 +207,7 @@ SSDT für Visual Studio 2017 (15.5.0) befindet sich nicht mehr in der Vorschauph
 1. Die Qualität des Symbols wurde verbessert.
 
 **Integration Services**
-1. Im Bereitstellungsassistenten wurde ein Schritt zur Paketvalidierung hinzugefügt, wenn eine Bereitstellung an Azure SSIS IR in ADF durchgeführt wird, wobei mögliche Kompatibilitätsprobleme in SSIS-Paketen bei der Ausführung in Azure SSIS IR erkannt werden. Weitere Informationen finden Sie unter [Überprüfen von in Azure bereitgestellten SSIS-Paketen](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+1. Im Bereitstellungsassistenten wurde ein Schritt zur Paketvalidierung hinzugefügt, wenn eine Bereitstellung an Azure SSIS IR in ADF durchgeführt wird, wobei mögliche Kompatibilitätsprobleme in SSIS-Paketen bei der Ausführung in Azure SSIS IR erkannt werden. Weitere Informationen finden Sie unter [Überprüfen von in Azure bereitgestellten SSIS-Paketen](../integration-services/lift-shift/ssis-azure-validate-packages.md).
 1. Die SSIS-Erweiterung wurde lokalisiert.
 
 ### <a name="bug-fixes"></a>Behebung von Programmfehlern
@@ -234,7 +234,7 @@ Buildnummer: 14.0.61712.050
   - Hintergrundanalyse ausführen: Ist diese Option aktiviert, führt der Abfrage-Editor für moderne Datenquellen Abfragen mit der Datenquelle aus, während diese geladen werden, um das Ausgabeschema der Abfrage zu analysieren.
 
 **Integration Services**
-- Im Bereitstellungsassistenten wurde ein Schritt zur Paketvalidierung hinzugefügt, wenn eine Bereitstellung an Azure SSIS IR in ADF durchgeführt wird, wobei mögliche Kompatibilitätsprobleme in SSIS-Paketen bei der Ausführung in Azure SSIS IR erkannt werden. Weitere Informationen finden Sie unter [Überprüfen von in Azure bereitgestellten SSIS-Paketen](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+- Im Bereitstellungsassistenten wurde ein Schritt zur Paketvalidierung hinzugefügt, wenn eine Bereitstellung an Azure SSIS IR in ADF durchgeführt wird, wobei mögliche Kompatibilitätsprobleme in SSIS-Paketen bei der Ausführung in Azure SSIS IR erkannt werden. Weitere Informationen finden Sie unter [Überprüfen von in Azure bereitgestellten SSIS-Paketen](../integration-services/lift-shift/ssis-azure-validate-packages.md).
 
 
 ### <a name="bug-fixes"></a>Behebung von Programmfehlern
@@ -509,7 +509,7 @@ Buildnummer: : 14.0.61704.140
     - Datenzugriffsoptionen in Modellen vom 1400-Typ (von der M-Engine verwendete Eigenschaften auf Modellebene)
         - Aktivieren von schnellem Kombinieren (der Standardwert ist „FALSE“, wenn er auf „TRUE“ gesetzt wird, ignoriert die Mashup-Engine die Datenschutzebenen der Datenquellen beim Kombinieren von Daten)
         - Aktivieren von Legacy-Umleitungen (der Standardwert ist „FALSE“, wenn er auf „TRUE“ gesetzt wird, folgt die Mashup-Engine HTTP-Umleitungen, die potenziell unsicher sind.  Beispielsweise eine Umleitung von einer HTTPS- zu einer HTTP-URI)  
-        - Zurückgeben von Fehlerwerten als NULL (der Standardwert ist „FALSE“, wenn er auf „TRUE“ gesetzt wird, werden Fehler auf Zellebene als NULL zurückgegeben. Wenn der Wert „FALSE“ ist, wird eine Ausnahme ausgelöst, falls die Zelle einen Fehler enthält)  
+        - Zurückgeben von Fehlerwerten als NULL (der Standardwert ist „FALSE“, wenn er auf „TRUE“ festgelegt wird, werden Fehler auf Zellebene als NULL zurückgegeben. Wenn der Wert „FALSE“ ist, wird eine Ausnahme ausgelöst, falls die Zelle einen Fehler enthält)  
     - Zusätzliche Datenquellen (Dateidatenquellen) mithilfe von PowerQuery
         - Excel 
         - Text/CSV 
@@ -529,7 +529,7 @@ Buildnummer: : 14.0.61704.140
 
 ### <a name="bug-fixes"></a>Behebung von Programmfehlern
 **AS-Projekte:**
-- Der Fehler bei der Vorlagenpriorität für BI-Projekte wurde behoben, damit sie nicht oben in den Kategorien „New Projects“ (Neue Projekte) in Visual Studio angezeigt werden
+- Der Fehler bei der Vorlagenpriorität für BI-Projekte wurde behoben, damit sie nicht oben in den Kategorien „Neue Projekte“ in Visual Studio angezeigt werden
 - Ein VS-Absturz wurde behoben, der in seltenen Fällen auftreten kann, wenn eine SSIS-, SSAS- oder SSRS-Projektmappe geöffnet ist
 - Tabellarisch: unterschiedlichste Erweiterungen und Leistungsproblembehebungen für die DAX-Analyse und die Bearbeitungsleiste.
 - Tabellarisch: Der tabellarische Modellexplorer wird nicht mehr angezeigt, wenn keine SSAS-Tabellenprojekte geöffnet sind.
@@ -543,7 +543,7 @@ Buildnummer: : 14.0.61704.140
 - Tabellarisch: Das Problem wurde behoben, dass beim Einfügen aus bestimmten Anwendungen in die DAX-Bearbeitungsleiste Bilder und andere Inhalte statt des Texts eingefügt wurden.
 - Tabellarisch: Das Problem wurde behoben, dass einige alte Modelle in 1103 nicht geöffnet werden konnten, da Measures mit einer bestimmten Definition vorhanden waren.
 - Tabellarisch: Das Problem wurde behoben, dass XEvent-Sitzungen nicht gelöscht werden konnten.
-- Ein Fehler wurde behoben, bei dem der Versuch, AS-smproj-Dateien mit devenv.com zu erstellen, fehlschlug
+- Ein Fehler wurde behoben, bei dem der Versuch, AS-Dateien des Typs „smproj“ mit devenv.com zu erstellen, fehlschlug
 - Ein Fehler wurde behoben, bei dem Änderungen am Text bei Verwendung des koreanischen IME im Titel von Registerkarten von Blättern im Tabellenmodell zu häufig abgeschlossen wurden
 - Ein Fehler wurde behoben, bei dem IntelliSense für die DAX Related()-Funktion Spalten aus anderen Tabellen nicht ordnungsgemäß anzeigte
 - Verbesserung des AS Tabular-Projektimports aus dem Datenbank-Dialogfeld durch Sortieren der Liste von AS-Datenbanken
@@ -617,11 +617,11 @@ Beispiel für die Verwendung:
 
 **Veröffentlichungsaktion**
 
-```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 **Skriptaktion**
 
-```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 In DacFx wurden zwei neue APIs hinzugefügt: DacServices.Publish() und DacServices.Script(). Diese unterstützen zudem die Durchführung von Veröffentlichungs-, Skript- und Berichtsaktionen in einem einzigen Vorgang. Beispiel für die Verwendung:
 
@@ -658,15 +658,15 @@ Weitere Informationen finden Sie im [Blogbeitrag von Analysis Services](https://
 
 **Datenbanktools**
 
-* [Verbindungsfehler 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-cannot-be-selected-from-cross-apply-openjson-with-explicit-schema) – Spalten können nicht mit explizitem Schema aus CROSS APPLY OPENJSON ausgewählt werden.
-* Behoben – Problem bei automatisch generierten Verlaufstabellenindizes, wobei DacFx den Index bei erneuter Bereitstellung löschte
-* Behoben – Problem mit dem DacFx-Batch-Parser, der „]“-Zeichen mit Escapezeichen nicht analysierte, sodass die Veröffentlichung fehlschlug
-* Verbessert – SqlPackage enthält jetzt Beschreibungen für jede Aktion in der Hilfeausgabe.
-* Behoben – Die Option „Kennwort speichern“ im Verbindungsdialogfeld wurde in folgenden Fällen nicht beibehalten: beim Bearbeiten der erweiterten Optionen sowie beim Bearbeiten einer Verbindungszeichenfolge, die in Veröffentlichungs-, Schemavergleichs- und anderen Dateien gespeichert wurde.
-* Behoben – Für Verbindungen, für die in der Registerkarte „Verlauf“ der Wert IntegratedAuthentication = true gilt, wurde das Authentifizierungsfeld in den Verbindungseigenschaften leer gelassen. Jetzt zeigt es wie erwartet „Windows-Authentifizierung“ an.
-* Behoben – Änderungen an den Intellisense-Einstellungen der SQL Server-Tools unter Extras- > Optionen -> Text-Editor wurden nicht beibehalten.
-* Verbessert – Die Schaltfläche zum Anheften und Lösen auf der Registerkarte „Verlauf“ im Verbindungsdialogfeld ist jetzt kompakter. Dadurch wird die Anzeige einer Bildlaufleiste weniger wahrscheinlich.
-* Behoben – Im Verbindungsdialogfeld wurden verschiedene Probleme behoben.
+* [Verbindungsfehler 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-cannot-be-selected-from-cross-apply-openjson-with-explicit-schema): Spalten können nicht mit explizitem Schema aus CROSS APPLY OPENJSON ausgewählt werden.
+* Behoben: Problem bei automatisch generierten Verlaufstabellenindizes, wobei DacFx den Index bei erneuter Bereitstellung löschte
+* Behoben: Problem mit dem DacFx-Batch-Parser, der „]“-Zeichen mit Escapezeichen nicht analysierte, sodass die Veröffentlichung fehlschlug
+* Verbessert: SqlPackage enthält jetzt Beschreibungen für jede Aktion in der Hilfeausgabe.
+* Behoben: Die Option „Kennwort speichern“ im Verbindungsdialogfeld wurde in folgenden Fällen nicht beibehalten: beim Bearbeiten der erweiterten Optionen sowie beim Bearbeiten einer Verbindungszeichenfolge, die in Veröffentlichungs-, Schemavergleichs- und anderen Dateien gespeichert wurde.
+* Behoben: Für Verbindungen, für die in der Registerkarte „Verlauf“ der Wert IntegratedAuthentication = true gilt, wurde das Authentifizierungsfeld in den Verbindungseigenschaften leer gelassen. Jetzt zeigt es wie erwartet „Windows-Authentifizierung“ an.
+* Behoben: Änderungen an den Intellisense-Einstellungen der SQL Server-Tools unter „Extras- > Optionen -> Text-Editor“ wurden nicht beibehalten.
+* Verbessert: Die Schaltfläche zum Anheften und Lösen auf der Registerkarte „Verlauf“ im Verbindungsdialogfeld ist jetzt kompakter. Dadurch wird die Anzeige einer Bildlaufleiste weniger wahrscheinlich.
+* Behoben: Im Verbindungsdialogfeld wurden verschiedene Probleme behoben.
 
 **Analysis Services und Reporting Services**
 
@@ -693,7 +693,7 @@ Buildnummer: 14.0.60918
 
 Schemavergleich wird jetzt in SqlPackage.exe und in der Data-Tier Application Framework-API (DacFx) unterstützt. Weitere Informationen finden Sie unter  [Schema Compare in SqlPackage and the Data-Tier Application Framework (Schemavergleich in SqlPackage und Data-Tier Application Framework)](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/).
 
-**Analysis Services – Modus „Integrierter Arbeitsbereich“ für den SSDT-Tabellen-Designer (SSAS)**
+**Analysis Services: Modus „Integrierter Arbeitsbereich“ für den SSDT-Tabellen-Designer (SSAS)**
 
 Der SSDT-Tabellen-Designer umfasst jetzt eine interne SSAS-Instanz, die der SSDT-Tabellen-Designer automatisch im Hintergrund startet, falls der Modus „Integrierter Arbeitsbereich“ aktiviert ist. Auf diese Weise können Sie Tabellen, Spalten und Daten im Modell-Designer hinzufügen und anzeigen, ohne eine externe Arbeitsbereich-Serverinstanz bereitzustellen. Der Modus „Integrierter Arbeitsbereich“ verändert die Funktionsweise von SSDT für Analysis Services-Projekte für tabellarische Modelle mit einem Arbeitsbereichsserver und einer Arbeitsbereichsdatenbank nicht. Was sich ändert, ist der Ort, an dem SSDT für Analysis Services-Projekte für tabellarische Modelle die Arbeitsbereichsdatenbank hostet. Zum Aktivieren des Modus „Integrierter Arbeitsbereich“ wählen Sie im Dialogfeld „Designer für tabellarische Modelle“ die Option „Integrierter Arbeitsbereich“, wenn Sie ein neues Tabellenprojekt erstellen. Für vorhandene Tabellenprojekte, die derzeit einen expliziten Arbeitsbereichserver verwenden, können Sie in den Modus „Integrierter Arbeitsbereich“ wechseln, indem Sie den Parameter für den Modus „Integrierter Arbeitsbereich“ im Fenster „Eigenschaften“auf „True“ festlegen. Dieses Fenster wird angezeigt, wenn Sie im Projektmappen-Explorer die Model.bim-Datei auswählen. Weitere Informationen finden Sie im [Blogbeitrag von Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/).
 
@@ -704,7 +704,7 @@ Der SSDT-Tabellen-Designer umfasst jetzt eine interne SSAS-Instanz, die der SSDT
 - [Verbindungsfehler 1026648](https://connect.microsoft.com/SQLServer/feedback/details/1026648): IsPersistedNullable wird im SSDT-Vergleich als unterschiedlich angezeigt.
 - [Verbindungsfehler 2054735](https://connect.microsoft.com/SQLServer/feedback/details/2054735): Identität wird beim Importieren einer BACPAC-Datei zurückgesetzt.
 - [Verbindungsfehler 2900167](https://connect.microsoft.com/SQLServer/feedback/details/2900167): Nach dem Ausführen von SSDT- Komponententests bleiben temporäre Dateien zurück.
-- [Verbindungsfehler 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712): unterbrochene Abwärtskompatibilität – lokale Anwendungsdaten und Verwaltung über den Nuget-Paketmanager
+- [Verbindungsfehler 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712): Unterbrochene Abwärtskompatibilität – lokale Anwendungsdaten und Verwaltung über den NuGet-Paketmanager
 
 **Analysis Services und Reporting Services**
 

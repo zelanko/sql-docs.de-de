@@ -1,7 +1,7 @@
 ---
 title: Beispieldatenbank für In-Memory OLTP | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 11/30/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7e6bf628b30bedb157e17bd7dc785061dbc2d26
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4d7adb7156a6f61ef76f62d1eeff9a4689208815
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665619"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712481"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Beispieldatenbank für In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51665619"
   
 -   [Beschreibung der Beispieltabellen und -prozeduren](#Descriptionofthesampletablesandprocedures) einschließlich der Tabellen und der Verfahren, die AdventureWorks durch das Beispiel In-Memory OLTP hinzugefügt werden, sowie Überlegungen zur Migration einiger ursprünglicher AdventureWorks-Tabellen zu speicheroptimierten Tabellen  
   
--   Anweisungen zur Ausführung von [Leistungsmessungen anhand der exemplarischen Arbeitsauslastung](#PerformanceMeasurementsusingtheDemoWorkload) , einschließlich Anweisungen zur Installation und Ausführung von OSTRESS (einem Tool zum Steuern der Arbeitsauslastung) sowie zur Ausführung der exemplarischen Arbeitsauslastung selbst  
+-   Anweisungen zur Ausführung von [Leistungsmessungen anhand der exemplarischen Arbeitsauslastung](#PerformanceMeasurementsusingtheDemoWorkload), einschließlich Anweisungen zur Installation und Ausführung von OSTRESS (einem Tool zum Steuern der Arbeitsauslastung) sowie zur Ausführung der exemplarischen Arbeitsauslastung selbst  
   
 -   [Arbeitsspeicher- und Datenträgernutzung im Beispiel](#MemoryandDiskSpaceUtilizationintheSample)  
   
@@ -48,8 +48,8 @@ ms.locfileid: "51665619"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Für Leistungstests benötigen Sie einen Server, dessen Kapazität ungefähr der eines Servers in Ihrer Produktionsumgebung entspricht. Für dieses spezielle Beispiel sollten SQL Server mindestens 16 GB Arbeitsspeicher zur Verfügung stehen. Allgemeine Richtlinien zur Hardware für In-Memory-OLTP finden Sie in folgendem Blogbeitrag: [https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx).  
-  
+-   Für Leistungstests benötigen Sie einen Server, dessen Kapazität ungefähr der eines Servers in Ihrer Produktionsumgebung entspricht. Für dieses spezielle Beispiel sollten SQL Server mindestens 16 GB Arbeitsspeicher zur Verfügung stehen. Allgemeine Richtlinien zur Hardware für In-Memory-OLTP finden Sie in folgendem Blogeintrag:[Aspekte zur Hardware für In-Memory-OLTP in SQL Server 2014](blog-hardware-in-memory-oltp.md).
+
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installieren des auf AdventureWorks basierenden InMemory OLTP-Beispiels  
  Führen Sie die folgenden Schritte aus, um das Beispiel zu installieren:  
   
@@ -84,7 +84,7 @@ ms.locfileid: "51665619"
 ##  <a name="Descriptionofthesampletablesandprocedures"></a> Beschreibung der Beispieltabellen und -prozeduren  
  Im Beispiel werden neue Tabellen für Produkte und Verkaufsaufträge auf Grundlage vorhandener AdventureWorks-Tabellen erstellt. Das Schema der neuen Tabellen entspricht bis auf die nachfolgend beschriebenen Unterschiede dem der vorhandenen Tabellen.  
   
- Die neuen speicheroptimierten Tabellen verfügen über das Suffix "_inmem". Zusätzlich umfasst das Beispiel entsprechende Tabellen mit dem Suffix "_ondisk". Mithilfe dieser Tabellen können 1:1-Vergleiche zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen im System angestellt werden.  
+ Die neuen speicheroptimierten Tabellen haben das Suffix „_inmem“. Zusätzlich umfasst das Beispiel entsprechende Tabellen mit dem Suffix „_ondisk“. Mithilfe dieser Tabellen können 1:1-Vergleiche zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen im System angestellt werden.  
   
  Beachten Sie, dass die in der Arbeitsauslastung für Leistungsvergleiche verwendeten speicheroptimierten Tabellen vollständig dauerhaft und vollständig protokolliert sind, d. h., dass Leistungsvorteile nicht auf Kosten der Dauerhaftigkeit oder Zuverlässigkeit erzielt werden.  
   
@@ -158,15 +158,15 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
   
  Sales.SalesOrderDetail  
   
--   *Standardeinschränkungen* : Ähnlich wie SalesOrderHeader wird die Standardeinschränkung, die das Systemdatum bzw. die Systemzeit erfordert, nicht migriert. Stattdessen wird das aktuelle Systemdatum bzw. die aktuelle Systemzeit von der gespeicherten Prozedur, die Verkaufsaufträge einfügt, beim ersten Einfügevorgang hinzugefügt.  
+-   *Standardeinschränkungen*: Ähnlich wie SalesOrderHeader wird die Standardeinschränkung, die das Systemdatum bzw. die Systemzeit erfordert, nicht migriert. Stattdessen wird das aktuelle Systemdatum bzw. die aktuelle Systemzeit von der gespeicherten Prozedur, die Verkaufsaufträge einfügt, beim ersten Einfügevorgang hinzugefügt.  
   
--   *Berechnete Spalten* : Die berechnete Spalte „LineTotal“ wurde nicht migriert, weil berechnete Spalten bei speicheroptimierten Tabellen in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]nicht unterstützt werden. Um auf diese Spalte zuzugreifen, verwenden Sie die Sicht Sales.vSalesOrderDetail_extended_inmem.  
+-   *Berechnete Spalten*: Die berechnete Spalte „LineTotal“ wurde nicht migriert, weil berechnete Spalten bei speicheroptimierten Tabellen in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]nicht unterstützt werden. Um auf diese Spalte zuzugreifen, verwenden Sie die Sicht Sales.vSalesOrderDetail_extended_inmem.  
   
 -   *Rowguid* : Die rowguid-Spalte wird nicht verwendet. Ausführliche Informationen finden Sie in der Beschreibung zur Tabelle SalesOrderHeader.  
   
  Production.Product  
   
--   *Alias-UDTs* : Die ursprüngliche Tabelle verwendet den benutzerdefinierten Datentyp „dbo.Flag“, der dem Systemdatentyp „bit“ entspricht. Die migrierte Tabelle verwendet stattdessen den Datentyp bit.  
+-   *Alias-UDTs*: Die ursprüngliche Tabelle verwendet den benutzerdefinierten Datentyp „dbo.Flag“, der dem Systemdatentyp „bit“ entspricht. Die migrierte Tabelle verwendet stattdessen den Datentyp bit.  
   
 -   *Rowguid* : Die rowguid-Spalte wird nicht verwendet. Ausführliche Informationen finden Sie in der Beschreibung zur Tabelle SalesOrderHeader.  
   
@@ -229,7 +229,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
   
     -   Ausgabeparameter:  
   
-        -   @SalesOrderID int – SalesOrderID für den gerade eingefügten Verkaufsauftrag  
+        -   @SalesOrderID int: SalesOrderID für den gerade eingefügten Verkaufsauftrag  
   
     -   Eingabeparameter (erforderlich):  
   
@@ -243,7 +243,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
   
         -   @ShipMethodID [int]  
   
-        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem – Tabellenwertparameter (TVP), der die Einzelposten des Auftrags enthält  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem: Tabellenwertparameter, der die Einzelposten des Auftrags enthält  
   
     -   Eingabeparameter (optional):  
   
@@ -299,7 +299,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
   
 1.  dbo.usp_ValidateIntegrity  
   
-    -   Optionaler Parameter: @object_id – ID des Objekts, dessen Integrität überprüft werden soll  
+    -   Optionaler Parameter: @object_id: ID des Objekts, dessen Integrität überprüft werden soll  
   
     -   Diese Prozedur ermittelt anhand der Tabellen dbo.DomainIntegrity, dbo.ReferentialIntegrity und dbo.UniqueIntegrity, welche Integritätsregeln überprüft werden müssen. Im Beispiel werden diese Tabellen auf der Grundlage der CHECK-, FOREIGN KEY- und UNIQUE-Einschränkungen der ursprünglichen Tabellen in der AdventureWorks-Datenbank aufgefüllt.  
   
@@ -313,16 +313,16 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
   
  Installationsschritte:  
   
-1.  Laden Sie die x64-Version des Installationspakets für die RML-Hilfsprogramme von folgender Seite herunter, und führen Sie das Paket aus: [https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx).  
-  
-2.  Falls Sie in einem Dialogfeld darauf hingewiesen werden, dass bestimmte Dateien gerade verwendet werden, klicken Sie auf Weiter:  
+1.  Laden Sie die x64-Version des Installationspakets für die RML-Hilfsprogramme von folgender Seite herunter, und führen Sie das Paket aus: [Report Markup Language (RML) für SQL Server herunterladen](https://www.microsoft.com/en-us/download/details.aspx?id=4511).
+
+2.  Falls Sie in einem Dialogfeld darauf hingewiesen werden, dass bestimmte Dateien gerade verwendet werden, klicken Sie auf „Weiter“.  
   
 ### <a name="running-ostress"></a>Ausführen von OSTRESS  
  OSTRESS wird an der Eingabeaufforderung ausgeführt. Am einfachsten lässt sich das Tool über die RML-Eingabeaufforderung ausführen, die mit den RML-Hilfsprogrammen installiert wird.  
   
  Führen Sie die folgenden Schritte aus, um die RML-Eingabeaufforderung zu öffnen:  
   
- Öffnen Sie in Windows Server 2012 [R2] sowie in Windows 8 und 8.1 das Startmenü, indem Sie die Windows-Taste drücken, und geben Sie rml ein. Klicken Sie auf die in der Liste der Suchergebnisse angezeigte RML-Eingabeaufforderung (RML Cmd Prompt).  
+ Öffnen Sie in Windows Server 2012 [R2] sowie in Windows 8 und 8.1 das Startmenü, indem Sie die Windows-Taste drücken, und geben Sie „rml“ ein. Klicken Sie auf die in der Liste der Suchergebnisse angezeigte RML-Eingabeaufforderung (RML Cmd Prompt).  
   
  Vergewissern Sie sich, dass sich die Eingabeaufforderung im Installationsordner für die RML-Hilfsprogramme befindet.  
   
@@ -330,7 +330,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
   
 -   -S: Der Name der Microsoft SQL Server-Instanz, mit der eine Verbindung hergestellt werden soll.  
   
--   -E: Verwendet die Windows-Authentifizierung für Verbindungen (Standard). Bei Verwendung der SQL Server-Authentifizierung können Sie mit den Optionen –U und –P den Benutzernamen bzw. das Kennwort angeben.  
+-   -E: Verwendet die Windows-Authentifizierung für Verbindungen (Standard). Bei Verwendung der SQL Server-Authentifizierung können Sie mit den Optionen -U und -P den Benutzernamen bzw. das Kennwort angeben.  
   
 -   -d: Der Name der Datenbank, in diesem Beispiel "AdventureWorks2014".  
   
@@ -375,12 +375,12 @@ END
   
  Mit diesem Skript wird jeder erstellte Beispielauftrag durch 20 in einer WHILE-Schleife ausgeführte gespeicherte Prozeduren 20 Mal eingefügt. Die Schleife wird verwendet, weil die Datenbank zum Erstellen des Beispielauftrags verwendet wird. In einer typischen Produktionsumgebung wird der einzufügende Verkaufsauftrag durch die Mid-Tier-Anwendung erstellt.  
   
- Durch das oben angegebene Skript werden Verkaufsaufträge in speicheroptimierte Tabellen eingefügt. Sie erhalten das Skript zum Einfügen von Verkaufsaufträgen in datenträgerbasierte Tabellen, indem Sie die beiden Suffixe _inmem in _ondisk ändern.  
+ Durch das oben angegebene Skript werden Verkaufsaufträge in speicheroptimierte Tabellen eingefügt. Sie erhalten das Skript zum Einfügen von Verkaufsaufträgen in datenträgerbasierte Tabellen, indem Sie die beiden Suffixe „_inmem in _ondisk“ ändern.  
   
- Wir verwenden das OSTRESS-Tool, um die Skripts unter Verwendung mehrerer gleichzeitiger Verbindungen auszuführen. Dabei wird mit dem Parameter -n gesteuert, wie viele Verbindungen verwendet werden, und mit dem Parameter -r, wie oft das Skript für jede Verbindung ausgeführt wird.  
+ Wir verwenden das OSTRESS-Tool, um die Skripts unter Verwendung mehrerer gleichzeitiger Verbindungen auszuführen. Dabei wird mit dem Parameter „-n“ gesteuert, wie viele Verbindungen verwendet werden, und mit dem Parameter „-r“, wie oft das Skript für jede Verbindung ausgeführt wird.  
   
 #### <a name="running-the-workload"></a>Ausführen der Arbeitsauslastung  
- Um das Verhalten in einem größeren Szenario zu testen, fügen wir unter Verwendung von 100 Verbindungen 10 Millionen Verkaufsaufträge ein. Bei einem einfach ausgestatteten Server (z. B. mit 8 physischen und 16 logischen Kernen) und SSD-Basisspeicher für das Protokoll liefert der Test zufriedenstellende Ergebnisse. Falls der Test mit Ihrer Hardware nicht gut abschneidet, sollten Sie sich im Abschnitt [Problembehandlung bei langsamer Testausführung](#Troubleshootingslow-runningtests)informieren. Wenn Sie das Belastungsniveau für diesen Test verringern möchten, reduzieren Sie die Anzahl der Verbindungen, indem Sie den Parameter -n ändern. Um die Anzahl der Verbindungen z. B. auf 40 zu verringern, ändern Sie den Parameter -n100 in -n40.  
+ Um das Verhalten in einem größeren Szenario zu testen, fügen wir unter Verwendung von 100 Verbindungen 10 Millionen Verkaufsaufträge ein. Bei einem einfach ausgestatteten Server (z. B. mit 8 physischen und 16 logischen Kernen) und SSD-Basisspeicher für das Protokoll liefert der Test zufriedenstellende Ergebnisse. Falls der Test mit Ihrer Hardware nicht gut abschneidet, sollten Sie sich im Abschnitt [Problembehandlung bei langsamer Testausführung](#Troubleshootingslow-runningtests) informieren. Wenn Sie das Belastungsniveau für diesen Test verringern möchten, reduzieren Sie die Anzahl der Verbindungen, indem Sie den Parameter „-n“ ändern. Um die Anzahl der Verbindungen z. B. auf 40 zu verringern, ändern Sie den Parameter „-n100“ in „-n40“.  
   
  Als Leistungskennzahl für die Arbeitsauslastung wird die Zeitspanne verwendet, die von ostress.exe nach Ausführung der Arbeitsauslastung gemeldet wird.  
   
@@ -394,7 +394,7 @@ END
  Klicken Sie auf die Schaltfläche zum Kopieren, um den Befehl zu kopieren, und fügen Sie ihn in die Eingabeaufforderung der RML-Hilfsprogramme ein.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  Auf einem Testserver mit insgesamt 8 physischen (16 logischen) Kernen betrug die Dauer zwei Minuten und fünf Sekunden. Auf einem zweiten Testserver mit 24 physischen (48 logischen) Kernen dauerte der Vorgang eine Minute und 0 (null) Sekunden.  
@@ -409,16 +409,16 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
  Klicken Sie auf die Schaltfläche zum Kopieren, um den Befehl zu kopieren, und fügen Sie ihn in die Eingabeaufforderung der RML-Hilfsprogramme ein.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  Auf einem Testserver mit insgesamt 8 physischen (16 logischen) Kernen betrugt die Dauer 41 Minuten und 25 Sekunden. Auf einem zweiten Testserver mit 24 physischen (48 logischen) Kernen dauerte der Vorgang 52 Minuten und 16 Sekunden.  
   
  Der Hauptunterschied zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen in diesem Test besteht darin, dass die CPU bei Verwendung datenträgerbasierter Tabellen von SQL Server nicht voll ausgenutzt werden kann. Die Ursache sind Latchkonflikte: Wenn gleichzeitige Transaktionen versuchen, Daten in dieselbe Datenseite zu schreiben, wird mithilfe von Latches sichergestellt, dass jeweils nur eine Transaktion Schreibzugriff auf eine Seite hat. Die In-Memory-OLTP-Engine verwendet keine Latches, und Datenzeilen sind nicht seitenweise angeordnet. Da sich Einfügungen gleichzeitiger Transaktionen nicht gegenseitig blockieren, kann die CPU-Leistung von SQL Server voll ausgeschöpft werden.  
   
- Sie können die CPU-Auslastung bei der Ausführung der Arbeitsauslastung beispielsweise mit dem Task-Manager beobachten. Sie werden feststellen, dass die CPU-Auslastung bei Verwendung datenträgerbasierter Tabellen weit von 100 % entfernt ist. In einer Testkonfiguration mit 16 logischen Prozessoren würde sich die Auslastung um 24 % bewegen.  
+ Sie können die CPU-Auslastung bei der Ausführung der Arbeitsauslastung beispielsweise mit dem Task-Manager beobachten. Sie werden feststellen, dass die CPU-Auslastung bei Verwendung datenträgerbasierter Tabellen weit von 100 % entfernt ist. In einer Testkonfiguration mit 16 logischen Prozessoren würde sich die Auslastung um 24 % bewegen.  
   
- Optional können Sie den Leistungsindikator \SQL Server:Latches\Latchwartevorgänge/Sekunde im Systemmonitor verwenden, um die Anzahl der Latchwartevorgänge pro Sekunde anzuzeigen.  
+ Optional können Sie den Leistungsindikator „\SQL Server:Latches\Latchwartevorgänge/Sekunde“ im Systemmonitor verwenden, um die Anzahl der Latchwartevorgänge pro Sekunde anzuzeigen.  
   
 #### <a name="resetting-the-demo"></a>Zurücksetzen der exemplarischen Arbeitsauslastung  
  Um die exemplarische Arbeitsauslastung zurückzusetzen, öffnen Sie die RML-Eingabeaufforderung und führen folgenden Befehl aus:  
@@ -767,7 +767,7 @@ ORDER BY state, file_type
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
   
- In diesem Fall gibt es zwei Prüfpunktdateipaare mit dem Status UNDER CONSTRUCTION. Das legt die Vermutung nahe, dass aufgrund des hohen Parallelitätsgrads der Arbeitsauslastung mehrere Dateipaare in den Status UNDER CONSTRUCTION versetzt wurden. Mehrere gleichzeitige Threads erforderten also zur selben Zeit ein neues Dateipaar, wodurch sich der Status eines Paares von PRECREATED in UNDER CONSTRUCTION geändert hat.  
+ In diesem Fall gibt es zwei Prüfpunktdateipaare mit dem Status „under construction“. Das legt die Vermutung nahe, dass aufgrund des hohen Parallelitätsgrads der Arbeitsauslastung mehrere Dateipaare in den Status „under construction“ versetzt wurden. Mehrere gleichzeitige Threads erforderten also zur selben Zeit ein neues Dateipaar, wodurch sich der Status eines Paares von „precreated“ in „under construction“ geändert hat.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

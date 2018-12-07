@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51983605c640bddafae41463c27843282820041e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a68a953609b8f76b4ea441d3d35fbf04a72af7a
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764078"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711241"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Berichtsentwurfstipps (Berichts-Generator und SSRS)
   Nutzen Sie die folgenden Tipps zum Entwerfen paginierter [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichte.  
@@ -156,7 +156,7 @@ ms.locfileid: "47764078"
  Die Kombination dieses Verhaltens, die Breiten- und Höheneigenschaften von Berichtselementen, die Größe des Hauptteils des Berichts, die Seitenhöhe und die Seitenbreitendefinition, die Seitenrandeinstellungen des übergeordneten Berichts und die rendererspezifische Unterstützung für Auslagerungen bestimmen gemeinsam, welche Berichtselemente sich auf einer gerenderten Seite zusammenfügen. Weitere Informationen finden Sie unter [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Berichts-Generator in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Reporting Services-Tutorials (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Lernprogramme für den Berichts-Generator](../../reporting-services/report-builder-tutorials.md)  
   

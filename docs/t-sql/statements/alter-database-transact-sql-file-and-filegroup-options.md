@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE-Optionen für Dateien und Dateigruppen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 11/16/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9a07b7c9536f3d1f98293317f56e4c10dbae25e0
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 1191ae28c9683a89d06830c942a22941fccfb943
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252147"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403556"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE-Optionen für Dateien und Dateigruppen (Transact-SQL) 
 
@@ -145,7 +145,7 @@ Entfernt die logische Dateibeschreibung aus einer Instanz von [!INCLUDE[ssNoVers
 Der logische Dateiname, der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Verweis auf die Datei verwendet wird.  
   
 > [!WARNING]  
-> Sie können zwar eine Datenbankdatei entfernen, der FILE_SNAPSHOT-Sicherungen zugeordnet ist, jedoch werden keine zugeordneten Momentaufnahmen gelöscht, um zu vermeiden, dass die Sicherungen, die auf die Datenbankdatei verweisen, ungültig gemacht wird. Die Datei wird zwar abgeschnitten, aber nicht physisch gelöscht, damit die FILE_SNAPSHOT-Sicherungen vollständig erhalten bleiben. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+> Sie können zwar eine Datenbankdatei entfernen, der `FILE_SNAPSHOT`-Sicherungen zugeordnet ist, jedoch werden keine zugeordneten Momentaufnahmen gelöscht, um zu vermeiden, dass die Sicherungen, die auf die Datenbankdatei verweisen, ungültig gemacht wird. Die Datei wird zwar abgeschnitten, aber nicht physisch gelöscht, damit die FILE_SNAPSHOT-Sicherungen vollständig erhalten bleiben. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 MODIFY FILE  
 Gibt die Datei an, die geändert werden soll. Es kann jeweils nur eine \<filespec>-Eigenschaft geändert werden. NAME muss zur Identifikation der Datei, die geändert werden soll, stets in \<filespec> angegeben sein. Wenn SIZE angegeben ist, muss die neue Größe die aktuelle Dateigröße übersteigen.  
@@ -171,7 +171,7 @@ Bei einer FILESTREAM-Dateigruppe kann NAME online geändert werden. FILENAME kan
 Sie können eine FILESTREAM-Datei auf OFFLINE festlegen. Ist eine FILESTREAM-Datei offline, wird ihre übergeordnete Dateigruppe intern als offline markiert; daher schlägt jeder Zugriff auf FILESTREAM-Daten in der Dateigruppe fehl.  
   
 > [!NOTE]  
->  \<add_or_modify_files>-Optionen sind in einer eigenständigen Datenbank nicht verfügbar.
+> \<add_or_modify_files>-Optionen sind in einer eigenständigen Datenbank nicht verfügbar.
   
 **\<filespec>::=**  
   
@@ -195,7 +195,8 @@ Gibt einen Betriebssystem-Dateinamen (physischer Dateiname) an.
 ' *os_file_name* '  
 Bei einer Standarddateigruppe (ROWS) ist dies der Pfad und der Dateiname, die vom Betriebssystem beim Erstellen der Datei verwendet werden. Die Datei muss sich auf dem Server befinden, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist. Der angegebene Pfad muss vorhanden sein, bevor die ALTER DATABASE-Anweisung ausgeführt wird.  
   
-Die Parameter SIZE, MAXSIZE und FILEGROWTH können nicht festgelegt werden, wenn für die Datei ein UNC-Pfad angegeben ist.  
+> [!NOTE]
+> Die Parameter SIZE, MAXSIZE und FILEGROWTH können nicht festgelegt werden, wenn für die Datei ein UNC-Pfad angegeben ist.  
   
 > [!NOTE]  
 > Systemdatenbanken dürfen nicht in Verzeichnissen von UNC-Freigaben enthalten sein.  
@@ -205,16 +206,20 @@ Datendateien sollten nicht in komprimierten Dateisystemen abgelegt werden, es se
 Wenn sich die Datei auf einer Rawpartition befindet, darf *os_file_name* nur den Laufwerkbuchstaben einer vorhandenen Rawpartition angeben. Auf jeder Rawpartition kann nur eine Datei abgelegt werden.  
   
 **'** *filestream_path* **'**  
-Für eine FILESTREAM-Dateigruppe verweist FILENAME auf einen Pfad, wo FILESTREAM-Daten gespeichert werden. Der Pfad muss bis zum letzten Ordner vorhanden sein, und der letzte Ordner darf nicht vorhanden sein. Wenn Sie z. B. den Pfad C:\MyFiles\MyFilestreamData angeben, muss C:\MyFiles vor der Ausführung von ALTER DATABASE vorhanden sein, der Ordner MyFilestreamData muss jedoch noch nicht existieren.  
+Für eine FILESTREAM-Dateigruppe verweist FILENAME auf einen Pfad, wo FILESTREAM-Daten gespeichert werden. Der Pfad muss bis zum letzten Ordner vorhanden sein, und der letzte Ordner darf nicht vorhanden sein. Wenn Sie z. B. den Pfad `C:\MyFiles\MyFilestreamData` angeben, muss `C:\MyFiles` vor der Ausführung von ALTER DATABASE vorhanden sein, der Ordner `MyFilestreamData` muss jedoch noch nicht vorhanden sein.  
   
-Die Eigenschaften SIZE und FILEGROWTH gelten nicht für eine FILESTREAM-Dateigruppe.  
+> [!NOTE]
+> Die Eigenschaften SIZE und FILEGROWTH gelten nicht für eine FILESTREAM-Dateigruppe.  
   
 **'** *memory_optimized_data_path* **'**  
-Bei einer speicheroptimierten Dateigruppe verweist FILENAME auf einen Pfad, unter dem speicheroptimierte Daten gespeichert werden. Der Pfad muss bis zum letzten Ordner vorhanden sein, und der letzte Ordner darf nicht vorhanden sein. Wenn Sie z. B. den Pfad C:\MyFiles\MyData angeben, muss C:\MyFiles vor der Ausführung von ALTER DATABASE vorhanden sein, der Ordner MyData muss jedoch noch nicht vorhanden sein.  
+Bei einer speicheroptimierten Dateigruppe verweist FILENAME auf einen Pfad, unter dem speicheroptimierte Daten gespeichert werden. Der Pfad muss bis zum letzten Ordner vorhanden sein, und der letzte Ordner darf nicht vorhanden sein. Wenn Sie z. B. den Pfad `C:\MyFiles\MyData` angeben, muss `C:\MyFiles` vor der Ausführung von ALTER DATABASE vorhanden sein, der Ordner `MyData` muss jedoch noch nicht vorhanden sein.  
   
 Die Dateigruppe und die Datei (`<filespec>`) müssen in derselben Anweisung erstellt werden.  
   
-Die Eigenschaften SIZE, MAXSIZE und FILEGROWTH gelten nicht für eine speicheroptimierte Dateigruppe.  
+> [!NOTE]
+> Die Eigenschaften SIZE und FILEGROWTH gelten nicht für eine Dateigruppe des Typs MEMORY_OPTIMIZED_DATA.  
+
+Weitere Informationen zu speicheroptimierten Dateigruppen finden Sie unter [Die speicheroptimierte Dateigruppe](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).
   
 SIZE *size*  
 Gibt die Dateigröße an. SIZE gilt nicht für FILESTREAM-Dateigruppen.  
@@ -227,6 +232,11 @@ In Verbindung mit ADD FILE ist *size* die Anfangsgröße für die Datei. In Verb
 Wenn *size* für die primäre Datei nicht angegeben wird, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Größe der primären Datei in der**model**-Datenbank. Wenn eine sekundäre Datendatei oder Protokolldatei angegeben wird, für die *size* jedoch nicht angegeben ist, legt [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Größe der Datei auf 1 MB fest.  
   
 Die Suffixe KB, MB, GB und TB können verwendet werden, um Kilobyte, Megabyte, Gigabyte oder Terabyte als Einheit anzugeben. Die Standardeinheit ist MB. Geben Sie eine ganze Zahl (also ohne Dezimalstellen) an. Um einen Bruchteil eines Megabyte anzugeben, konvertieren Sie den Wert in Kilobyte, indem Sie die Zahl mit 1024 multiplizieren. Geben Sie z. B. 1536 KB statt 1,5 MB (1,5 x 1024 = 1536) an.  
+
+> [!NOTE] 
+> `SIZE` kann nicht festgelegt werden:
+> - Wenn ein UNC-Pfad für die Datei angegeben wird  
+> - Für die Dateigruppen `FILESTREAM` und `MEMORY_OPTIMIZED_DATA`   
   
 MAXSIZE { *max_size*| UNLIMITED }  
 Gibt die maximale Größe an, auf die die Datei vergrößert werden kann.  
@@ -236,6 +246,9 @@ Die maximale Dateigröße. Die Suffixe KB, MB, GB und TB können verwendet werde
   
 UNLIMITED  
 Gibt an, dass die Größe der Datei so lange zunehmen kann, bis auf dem Datenträger kein Speicherplatz mehr verfügbar ist. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gilt für eine Protokolldatei, für die keine Größenbeschränkung festgelegt ist, eine Maximalgröße von 2 TB und für eine Datendatei eine Maximalgröße von 16 TB. Wenn diese Option für einen FILESTREAM-Container angegeben wird, gilt keine Maximalgröße. Die Dateigröße erhöht sich so lange, bis der Datenträger voll ist.  
+
+> [!NOTE] 
+> `MAXSIZE` kann nicht festgelegt werden, wenn ein UNC-Pfad für die Datei angegeben wird.
   
 FILEGROWTH *growth_increment*  
 Gibt das automatische Dateivergrößerungs-Inkrement an. Die FILEGROWTH-Einstellung für eine Datei darf die MAXSIZE-Einstellung nicht überschreiten. FILEGROWTH gilt nicht für FILESTREAM-Dateigruppen.  
@@ -254,12 +267,17 @@ Wenn FILEGROWTH nicht angegeben ist, lauten die Standardwerte wie folgt:
 |Seit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Daten: 64 MB, Protokolldateien: 64 MB|  
 |Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Daten: 1 MB, Protokolldateien: 10 %|  
 |Vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Daten: 10 %, Protokolldateien: 10 %|  
-  
+
+> [!NOTE] 
+> `FILEGROWTH` kann nicht festgelegt werden:
+> - Wenn ein UNC-Pfad für die Datei angegeben wird  
+> - Für die Dateigruppen `FILESTREAM` und `MEMORY_OPTIMIZED_DATA`   
+
 OFFLINE  
 Legt die Datei auf offline fest und sperrt den Zugriff auf alle Objekte in der Dateigruppe.  
   
 > [!CAUTION]  
->  Diese Option sollte nur verwendet werden, wenn die Datei beschädigt ist und wiederhergestellt werden kann. Eine Datei, für die OFFLINE festgelegt ist, kann nur wieder online geschaltet werden, indem sie aus der Sicherung wiederhergestellt wird. Weitere Informationen zum Wiederherstellen einer einzelnen Datei finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+> Diese Option sollte nur verwendet werden, wenn die Datei beschädigt ist und wiederhergestellt werden kann. Eine Datei, für die OFFLINE festgelegt ist, kann nur wieder online geschaltet werden, indem sie aus der Sicherung wiederhergestellt wird. Weitere Informationen zum Wiederherstellen einer einzelnen Datei finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 > [!NOTE]  
 > \<filespec>-Optionen sind in einer eigenständigen Datenbank nicht verfügbar.  
@@ -278,21 +296,13 @@ CONTAINS MEMORY_OPTIMIZED_DATA
 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
   
-Gibt an, dass die Dateigruppe arbeitsspeicheroptimierte Daten im Dateisystem speichert. Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Nur eine MEMORY_OPTIMIZED_DATA-Dateigruppe ist pro Datenbank zulässig. Zum Erstellen von speicheroptimierten Tabellen kann die Dateigruppe nicht leer sein. Mindestens eine Datei muss angegeben werden. *filegroup_name* verweist auf einen Pfad. Der Pfad muss bis zum letzten Ordner vorhanden sein, und der letzte Ordner darf nicht vorhanden sein.  
-  
-Im folgenden Beispiel wird eine Dateigruppe erstellt, die einer Datenbank namens xtp_db hinzugefügt wird. Außerdem wird eine Datei der Dateigruppe hinzugefügt. Die Dateigruppe speichert memory_optimized-Daten.  
-  
-```sql  
-ALTER DATABASE xtp_db ADD FILEGROUP xtp_fg CONTAINS MEMORY_OPTIMIZED_DATA;  
-GO  
-ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO FILEGROUP xtp_fg;  
-```  
-  
+Gibt an, dass die Dateigruppe arbeitsspeicheroptimierte Daten im Dateisystem speichert. Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Nur eine `MEMORY_OPTIMIZED_DATA`-Dateigruppe ist pro Datenbank zulässig. Zum Erstellen von speicheroptimierten Tabellen kann die Dateigruppe nicht leer sein. Mindestens eine Datei muss angegeben werden. *filegroup_name* verweist auf einen Pfad. Der Pfad muss bis zum letzten Ordner vorhanden sein, und der letzte Ordner darf nicht vorhanden sein.  
+ 
 REMOVE FILEGROUP *filegroup_name*  
 Entfernt eine Dateigruppe aus der Datenbank. Die Dateigruppe kann nur entfernt werden, wenn sie leer ist. Entfernen Sie zuerst alle Dateien aus der Dateigruppe. Weitere Informationen finden Sie im Abschnitt „REMOVE FILE *logical_file_name*“ in diesem Artikel.  
   
 > [!NOTE]  
-> Wenn vom FILESTREAM-Garbage Collector nicht alle Dateien aus einem FILESTREAM-Container entfernt wurden, wird beim Ausführen von ALTER DATABASE REMOVE FILE zum Entfernen eines FILESTREAM-Containers ein Fehler erzeugt. Weitere Informationen finden Sie unter "Entfernen eines FILESTREAM-Containers" im Abschnitt "Hinweise" weiter unten in diesem Thema.  
+> Wenn vom FILESTREAM-Garbage Collector nicht alle Dateien aus einem FILESTREAM-Container entfernt wurden, wird beim Ausführen von `ALTER DATABASE REMOVE FILE` zum Entfernen eines FILESTREAM-Containers ein Fehler zurückgegeben. Weitere Informationen finden Sie unter [Entfernen eines FILESTREAM-Containers](#removing-a-filestream-container) weiter unten in diesem Thema.  
   
 MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Ändert die Dateigruppe durch Festlegen des Status auf READ_ONLY oder READ_WRITE, Festlegen der Dateigruppe als Standarddateigruppe für die Datenbank oder Ändern des Dateigruppennamens.  
   
@@ -300,7 +310,7 @@ MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT |
 Legt die read-only- oder read/write-Eigenschaft für die Dateigruppe fest.  
   
 DEFAULT  
-Ändert die Standarddatenbank-Dateigruppe in *filegroup_name*. Es können nicht mehrere Dateigruppen in der Datenbank gleichzeitig als Standarddateigruppe verwendet werden. Weitere Informationen finden Sie unter [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
+Ändert die Standarddatenbank-Dateigruppe in *filegroup_name*. Es können nicht mehrere Dateigruppen in der Datenbank gleichzeitig als Standarddateigruppe verwendet werden. Weitere Informationen finden Sie unter [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md).  
   
 NAME = *new_filegroup_name*  
 Ändert den Namen der Dateigruppe in *new_filegroup_name*.  
@@ -327,21 +337,21 @@ READ_ONLY | READONLY
 Gibt an, dass die Dateigruppe schreibgeschützt ist. Updates von Objekten in der Dateigruppe sind nicht zulässig. Die primäre Dateigruppe kann nicht schreibgeschützt werden. Sie müssen über exklusiven Zugriff auf die Datenbank verfügen, um diesen Status zu ändern. Weitere Informationen finden Sie unter der SINGLE_USER-Klausel.  
   
 Da in einer schreibgeschützten Datenbank keine Datenänderungen vorgenommen werden dürfen, gilt Folgendes:  
-  
 - Die automatische Wiederherstellung wird beim Systemstart ausgelassen.  
 - Das Verkleinern der Datenbank ist nicht möglich.  
 - In schreibgeschützten Datenbanken werden keine Daten gesperrt. Dies kann zu einer schnelleren Ausführung von Abfragen führen.  
   
 > [!NOTE]  
->  Das Schlüsselwort READONLY wird in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt. Vermeiden Sie die Verwendung von READONLY bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen READONLY aktuell verwendet wird. Verwenden Sie stattdessen READ_ONLY.  
+> Das Schlüsselwort `READONLY` wird in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt. Vermeiden Sie die Verwendung von `READONLY` bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, in denen `READONLY` aktuell verwendet wird. Verwenden Sie stattdessen `READ_ONLY` .  
   
 READ_WRITE | READWRITE  
 Gibt an, dass die Gruppe den Status READ_WRITE hat. Updates sind für die Objekte in der Dateigruppe möglich. Sie müssen über exklusiven Zugriff auf die Datenbank verfügen, um diesen Status zu ändern. Weitere Informationen finden Sie unter der SINGLE_USER-Klausel.  
   
 > [!NOTE]  
->  Das Schlüsselwort `READWRITE` wird in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt. Vermeiden Sie die Verwendung von `READWRITE` bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, in denen derzeit `READWRITE` verwendet wird, sodass diese stattdessen `READ_WRITE` verwenden.  
+> Das Schlüsselwort `READWRITE` wird in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt. Vermeiden Sie die Verwendung von `READWRITE` bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, in denen derzeit `READWRITE` verwendet wird, sodass diese stattdessen `READ_WRITE` verwenden.  
   
-Der Status dieser Optionen kann mithilfe der Spalte **is_read_only** in der **sys.databases**-Katalogsicht oder der **Updateability**-Eigenschaft der `DATABASEPROPERTYEX`-Funktion ermittelt werden.  
+> [!TIP]
+> Der Status dieser Optionen kann mithilfe der Spalte **is_read_only** in der **sys.databases**-Katalogsicht oder der **Updateability**-Eigenschaft der `DATABASEPROPERTYEX`-Funktion ermittelt werden.  
   
 ## <a name="remarks"></a>Remarks  
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.  
@@ -352,7 +362,15 @@ Für jede Datenbank können maximal 32.767 Dateien und 32.767 Dateigruppen angeg
   
 Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder einer höheren Version wird der Status einer Datenbankdatei (z.B. online oder offline) unabhängig vom Status der Datenbank verwaltet. Weitere Informationen finden Sie im Abschnitt [Dateistatus](../../relational-databases/databases/file-states.md). 
 - Der Status der Dateien in einer Dateigruppe bestimmt die Verfügbarkeit der gesamten Dateigruppe. Damit eine Dateigruppe verfügbar ist, müssen alle Dateien in der Dateigruppe online sein. 
-- Ist eine Dateigruppe offline, verursacht jeder Versuch, über eine SQL-Anweisung auf die Dateigruppe zuzugreifen, einen Fehler. Wenn Sie Abfragepläne für `SELECT`-Anweisungen erstellen, vermeidet der Abfrageoptimierer nicht gruppierte Indizes und indizierte Sichten, die sich in Offlinedateigruppen befinden. Dadurch wird ein erfolgreiches Ausführen der Anweisungen ermöglicht. Enthält die Offlinedateigruppe jedoch den Heap oder gruppierten Index der Zieltabelle, schlagen die `SELECT`-Anweisungen fehl. Auch alle `INSERT`-, `UPDATE`- oder `DELETE`-Anweisungen, die eine Tabelle mit einem Index in einer Offlinedateigruppe ändern, schlagen fehl.  
+- Ist eine Dateigruppe offline, verursacht jeder Versuch, über eine SQL-Anweisung auf die Dateigruppe zuzugreifen, einen Fehler. Wenn Sie Abfragepläne für `SELECT`-Anweisungen erstellen, vermeidet der Abfrageoptimierer nicht gruppierte Indizes und indizierte Sichten, die sich in Offlinedateigruppen befinden. Dadurch wird ein erfolgreiches Ausführen der Anweisungen ermöglicht. Enthält die Offlinedateigruppe jedoch den Heap oder gruppierten Index der Zieltabelle, schlagen die `SELECT`-Anweisungen fehl. Auch alle `INSERT`-, `UPDATE`- oder `DELETE`-Anweisungen, die eine Tabelle mit einem Index in einer Offlinedateigruppe ändern, schlagen fehl. 
+
+Die Parameter SIZE, MAXSIZE und FILEGROWTH können nicht festgelegt werden, wenn für die Datei ein UNC-Pfad angegeben ist. 
+
+Die Parameter SIZE und FILEGROWTH können nicht für speicheroptimierte Dateigruppen festgelegt werden. 
+
+Das Schlüsselwort `READONLY` wird in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt. Vermeiden Sie die Verwendung von `READONLY` bei neuen Entwicklungsprojekten, und planen Sie die Änderung von Anwendungen, in denen READONLY aktuell verwendet wird. Verwenden Sie stattdessen `READ_ONLY` . 
+
+Das Schlüsselwort `READWRITE` wird in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt. Vermeiden Sie die Verwendung von `READWRITE` bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, in denen derzeit `READWRITE` verwendet wird, sodass diese stattdessen `READ_WRITE` verwenden. 
   
 ## <a name="moving-files"></a>Verschieben von Dateien  
 Sie können System- oder benutzerdefinierte Daten und Protokolldateien verschieben, indem Sie in FILENAME den neuen Speicherort angeben. Dies kann in den folgenden Szenarien nützlich sein:  
@@ -373,8 +391,8 @@ Standardmäßig werden Daten- und Protokolldateien durch Ausfüllen der Dateien 
   
 Datendateien können sofort initialisiert werden. Dies ermöglicht ein schnelles Ausführen der entsprechenden Dateioperationen. Weitere Informationen finden Sie unter [Datenbankdatei-Initialisierung](../../relational-databases/databases/database-instant-file-initialization.md). 
   
-## <a name="removing-a-filestream-container"></a>Entfernen eines FILESTREAM-Containers  
-Auch wenn der FILESTREAM-Container möglicherweise durch Ausführen von DBCC SHRINKFILE geleert wurde, kann es auch Gründen der Systemwartung erforderlich sein, Verweise auf die gelöschten Dateien beizubehalten. [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) führt den FILESTREAM-Garbage Collector aus, um diese Dateien zum richtigen Zeitpunkt zu entfernen. Wenn vom FILESTREAM-Garbage Collector nicht alle Dateien aus einem FILESTREAM-Container entfernt wurden, wird beim Ausführen von ALTER DATABASE REMOVE FILE zum Entfernen eines FILESTREAM-Containers ein Fehler zurückgegeben. Um einen FILESTREAM-Container zu entfernen, wird empfohlen, den folgenden Prozess auszuführen.  
+## <a name="removing-a-filestream-container"></a> Entfernen eines FILESTREAM-Containers  
+Auch wenn der FILESTREAM-Container möglicherweise durch Ausführen des Vorgangs DBCC SHRINKFILE geleert wurde, kann es auch Gründen der Systemwartung erforderlich sein, Verweise auf die gelöschten Dateien beizubehalten. [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) führt den FILESTREAM-Garbage Collector aus, um diese Dateien zum richtigen Zeitpunkt zu entfernen. Wenn vom FILESTREAM-Garbage Collector nicht alle Dateien aus einem FILESTREAM-Container entfernt wurden, wird beim Ausführen von ALTER DATABASE REMOVE FILE zum Entfernen eines FILESTREAM-Containers ein Fehler zurückgegeben. Um einen FILESTREAM-Container zu entfernen, wird empfohlen, den folgenden Prozess auszuführen.  
   
 1. Führen Sie [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) mit der EMPTYFILE-Option aus, um die aktiven Inhalte dieses Containers in andere Container zu verschieben.  
   
@@ -408,7 +426,6 @@ ADD FILE
     FILEGROWTH = 5MB  
 );  
 GO  
-  
 ```  
   
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Hinzufügen einer Dateigruppe mit zwei Dateien zu einer Datenbank  
@@ -438,7 +455,6 @@ ADD FILE
 )  
 TO FILEGROUP Test1FG1;  
 GO  
-  
 ```  
   
 ### <a name="c-adding-two-log-files-to-a-database"></a>C. Hinzufügen von zwei Protokolldateien zu einer Datenbank  
@@ -464,7 +480,6 @@ ADD LOG FILE
     FILEGROWTH = 5MB  
 );  
 GO  
-  
 ```  
   
 ### <a name="d-removing-a-file-from-a-database"></a>D. Entfernen einer Datei aus einer Datenbank  
@@ -586,8 +601,7 @@ GO
 Im folgenden Beispiel wird eine `FILEGROUP`, die die `FILESTREAM`-Klausel enthält, der `FileStreamPhotoDB`-Datenbank hinzugefügt.  
   
 ```sql  
---Create and add a FILEGROUP that CONTAINS the FILESTREAM clause to  
---the FileStreamPhotoDB database.  
+--Create and add a FILEGROUP that CONTAINS the FILESTREAM clause.  
 ALTER DATABASE FileStreamPhotoDB  
 ADD FILEGROUP TodaysPhotoShoot  
 CONTAINS FILESTREAM;  
@@ -602,7 +616,27 @@ ADD FILE
 )  
 TO FILEGROUP TodaysPhotoShoot;  
 GO  
-```      
+```     
+
+Im folgenden Beispiel wird eine `FILEGROUP`, die die `MEMORY_OPTIMIZED_DATA`-Klausel enthält, der `xtp_db`-Datenbank hinzugefügt. Die Dateigruppe speichert speicheroptimierte Daten.  
+  
+```sql 
+--Create and add a FILEGROUP that CONTAINS the MEMORY_OPTIMIZED_DATA clause.
+ALTER DATABASE xtp_db 
+ADD FILEGROUP xtp_fg 
+CONTAINS MEMORY_OPTIMIZED_DATA;  
+GO  
+
+--Add a file for storing memory optimized data to FILEGROUP
+ALTER DATABASE xtp_db 
+ADD FILE 
+(
+    NAME='xtp_mod', 
+    FILENAME='d:\data\xtp_mod'
+) 
+TO FILEGROUP xtp_fg;  
+GO
+```  
         
 ### <a name="j-change-filegroup-so-that-when-a-file-in-the-filegroup-meets-the-autogrow-threshold-all-files-in-the-filegroup-grow"></a>J. Ändern der Dateigruppe, sodass alle Dateien in der Dateigruppe vergrößert werden, wenn sich eine Datei in der Dateigruppe dem Schwellenwert für die automatische Vergrößerung nähert
  Im folgenden Beispiel werden die erforderlichen `ALTER DATABASE`-Anweisungen generiert, um Dateien mit Lese-/Schreibzugriff mit der `AUTOGROW_ALL_FILES`-Einstellung zu ändern.  
@@ -827,7 +861,7 @@ MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT 
 Legt die read-only- oder read/write-Eigenschaft für die Dateigruppe fest.  
   
 DEFAULT  
-Ändert die Standarddatenbank-Dateigruppe in *filegroup_name*. Es können nicht mehrere Dateigruppen in der Datenbank gleichzeitig als Standarddateigruppe verwendet werden. Weitere Informationen finden Sie unter [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
+Ändert die Standarddatenbank-Dateigruppe in *filegroup_name*. Es können nicht mehrere Dateigruppen in der Datenbank gleichzeitig als Standarddateigruppe verwendet werden. Weitere Informationen finden Sie unter [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md).  
   
 NAME = *new_filegroup_name*  
 Ändert den Namen der Dateigruppe in *new_filegroup_name*.  
@@ -1057,6 +1091,6 @@ GO
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
-[DBCC SHRINKFIL](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  
- 
-::: moniker-end
+[DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
+[Die speicheroptimierte Dateigruppe](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) 
+

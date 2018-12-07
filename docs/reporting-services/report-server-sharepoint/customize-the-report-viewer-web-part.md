@@ -1,26 +1,26 @@
 ---
 title: Anpassen des Berichts-Viewer-Webparts | Microsoft-Dokumentation
-ms.date: 09/25/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd5749c287f76dd018066ba6e63b3006e6f7d118
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6676e1ae64161d042fa32976bedc5c32288477ca
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021524"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411637"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Anpassen des Berichts-Viewer-Webparts
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Über das Berichts-Viewer-Webpart können Sie Berichte abrufen, die auf einem Berichtsserver ausgeführt werden, für den die Ausführung im integrierten SharePoint-Modus konfiguriert ist. Sie können u. a. Berichtsdefinitionsdateien (RDL-Dateien) und Berichts-Generator-Berichte anzeigen. Berichte werden im Berichts-Viewer-Webpart automatisch auf einer neuen Seite angezeigt, aber Sie können auch einer vorhandenen Webseite oder Website ein Berichts-Viewer-Webpart hinzufügen, wenn auf der Seite ein bestimmter Bericht immer angezeigt werden soll.
+Über das Berichts-Viewer-Webpart können Sie Berichte abrufen, die auf einem Berichtsserver ausgeführt werden, für den die Ausführung im integrierten SharePoint-Modus konfiguriert ist. Sie können u. a. Berichtsdefinitionsdateien (RDL-Dateien) und Berichts-Generator-Berichte anzeigen. Berichte werden automatisch im Berichts-Viewer-Webpart auf einer neuen Seite geöffnet. Sie können ein Berichts-Viewer-Webpart auch einer vorhandenen Webseite oder Website hinzufügen, wenn ein bestimmter Bericht immer auf dieser Seite angezeigt werden soll.
 
 > [!NOTE]
 > Obwohl ihre Namen identisch sind, unterscheidet sich das über das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In installierte Berichts-Viewer-Webpart von dem in der Datei RSWebParts.cab enthaltenen Berichts-Viewer-Webpart. Die Anleitungen in diesem Artikel sind speziell für das Berichts-Viewer-Webpart gedacht, das über das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In installiert wurde.
@@ -41,7 +41,7 @@ ms.locfileid: "50021524"
   
 ### <a name="change-default-properties"></a>Ändern von Standardeigenschaften
 
- Das Berichts-Viewer-Webpart besitzt Standardeigenschaften, die im Idealfall zum bedarfsgesteuerten Öffnen von Berichten in einer Bibliothek oder einem Ordner geeignet sind. In der Standardeinstellung werden alle verfügbaren Steuerelemente auf der Symbolleiste angezeigt, wobei Höhe und Breite so festgelegt sind, dass der gesamte verfügbare Platz auf der Webseite eingenommen wird. Wenn Sie die Standardeigenschaften ändern möchten, können Sie das Webpart unter **Site Settings** (Websiteeinstellungen) anpassen.  
+ Das Berichts-Viewer-Webpart besitzt Standardeigenschaften, die im Idealfall zum bedarfsgesteuerten Öffnen von Berichten in einer Bibliothek oder einem Ordner geeignet sind. Standardmäßig werden alle verfügbaren Steuerelemente auf der Symbolleiste angezeigt. Höhe und Breite sind so festgelegt, dass der gesamte verfügbare Platz auf der Webseite genutzt wird. Wenn Sie die Standardeigenschaften ändern möchten, können Sie das Webpart unter **Site Settings** (Websiteeinstellungen) anpassen.  
   
 1.  Klicken Sie im Menü **Websiteaktionen** auf **Siteeinstellungen**.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "50021524"
   
 ### <a name="customize-an-embedded-report-viewer-in-a-web-page"></a>Anpassen eines auf einer Webseite eingebetteten Berichts-Viewers
 
- Sie können Eigenschaften festlegen, um die Größe des Berichts-Viewers an die einer Webseite anzupassen. Für den Berichts-Viewer können derselbe Stil und dieselbe Farbe wie für die Seite verwendet werden, die diesen enthält. Sie können die Symbolleiste, die Dokumentstruktur und den Parameterbereich ganz oder teilweise ausblenden, um den Berichtsanzeigebereich im zugeordneten Bereich zu maximieren. Für den Bericht werden immer die beim Erstellen definierten Stile verwendet. Sie können die Darstellung eines Berichts nicht mehr anpassen, nachdem dieser in einer SharePoint-Bibliothek veröffentlicht wurde.  
+ Sie können Eigenschaften festlegen, um die Größe des Berichts-Viewers an die einer Webseite anzupassen. Für den Berichts-Viewer können derselbe Stil und dieselbe Farbe wie für die Seite verwendet werden, die diesen enthält. Sie können die Symbolleiste, die Dokumentstruktur und den Parameterbereich ganz oder teilweise ausblenden, um den Berichtsanzeigebereich im zugeordneten Bereich zu maximieren. Für den Bericht werden immer die Stile verwendet, die Sie bei seiner Erstellung festgelegt haben. Sie können die Darstellung des Berichts nach seiner Veröffentlichung in einer SharePoint-Bibliothek anpassen.  
   
  Wenn Sie das Berichts-Viewer-Webpart auf einer Webseite einbetten, sollten Sie die Eigenschaft **Berichts-URL** auf einen bestimmten Bericht festlegen. Andernfalls werden im Berichts-Viewer Anweisungen zum Verknüpfen mit einem Bericht angezeigt. Die Anweisungen können Sie nicht anpassen oder entfernen.  
   

@@ -24,12 +24,12 @@ ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f284273004cd01c927473b9114ed06742f3fe794
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68d27a88ec604de05f8165f6c251982e53914794
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804618"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586213"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "47804618"
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 FETCH   
           [ [ NEXT | PRIOR | FIRST | LAST   
                     | ABSOLUTE { n | @nvar }   
@@ -55,10 +54,10 @@ FETCH
   
 ## <a name="arguments"></a>Argumente  
  NEXT  
- Gibt die auf die aktuelle Zeile folgende Zeile zurück und macht diese zur aktuellen Zeile. Ist FETCH NEXT der erste Datenabruf vom Cursor, wird die erste Zeile im Resultset zurückgegeben. NEXT ist die Standardoption für Datenabruf vom Cursor.  
+ Gibt die auf die aktuelle Zeile folgende Zeile zurück und macht diese zur aktuellen Zeile. Ist `FETCH NEXT` der erste Datenabruf vom Cursor, wird die erste Zeile im Resultset zurückgegeben. `NEXT` ist die Standardoption für Datenabruf vom Cursor.  
   
  PRIOR  
- Gibt die der aktuellen Zeile vorangehende Zeile zurück und macht diese zur aktuellen Zeile. Ist FETCH PRIOR der erste Datenabruf vom Cursor, wird keine Zeile zurückgegeben, und die Cursorposition verbleibt vor der ersten Zeile.  
+ Gibt die der aktuellen Zeile vorangehende Zeile zurück und macht diese zur aktuellen Zeile. Ist `FETCH PRIOR` der erste Datenabruf vom Cursor, wird keine Zeile zurückgegeben, und die Cursorposition verbleibt vor der ersten Zeile.  
   
  FIRST  
  Gibt die erste Zeile im Cursor zurück und macht sie zur aktuellen Zeile.  
@@ -70,7 +69,7 @@ FETCH
  Wenn *n* oder @*nvar* eine positive Zahl ist, wird die *n*-te Zeile – ausgehend vom Anfang des Cursors – zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder @*nvar* eine negative Zahl ist, wird die *n*-te Zeile – ausgehend von der letzten Zeile des Cursors – zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder @*nvar* gleich 0 (null) ist, werden keine Zeilen zurückgegeben. *n* muss eine Integerkonstante und @*nvar* muss vom Typ **smallint**, **tinyint** oder **int** sein.  
   
  RELATIVE { *n*| @*nvar*}  
- Wenn *n* oder @*nvar* eine positive Zahl ist, wird die *n*-te Zeile nach der aktuellen Zeile zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder @*nvar* eine negative Zahl ist, wird die *n*-te Zeile vor der aktuellen Zeile zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder @*nvar* gleich 0 ist, wird die aktuelle Zeile zurückgegeben. Wenn beim ersten Datenabruf vom Cursor FETCH RELATIVE auf *n* oder @*nvar* auf 0 oder auf eine negative Zahl festgelegt wird, werden keine Zeilen zurückgegeben. *n* muss eine Integerkonstante und @*nvar* muss vom Typ **smallint**, **tinyint** oder **int** sein.  
+ Wenn *n* oder @*nvar* eine positive Zahl ist, wird die *n*-te Zeile nach der aktuellen Zeile zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder @*nvar* eine negative Zahl ist, wird die *n*-te Zeile vor der aktuellen Zeile zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder @*nvar* gleich 0 ist, wird die aktuelle Zeile zurückgegeben. Wenn beim ersten Datenabruf vom Cursor `FETCH RELATIVE` auf *n* oder *@nvar* auf 0 oder auf eine negative Zahl festgelegt wird, werden keine Zeilen zurückgegeben. *n* muss eine Integerkonstante und @*nvar* muss vom Typ **smallint**, **tinyint** oder **int** sein.  
   
  GLOBAL  
  Gibt an, dass *cursor_name* auf einen globalen Cursor verweist.  
@@ -85,27 +84,27 @@ FETCH
  Ermöglicht die Zuweisung von Daten aus den Spalten, die durch einen Abruf zurückgegeben werden, an lokale Variablen. Jeder Variablen in der Liste wird (von links nach rechts) die entsprechende Spalte im Cursorresultset zugeordnet. Die Datentypen aller Variablen müssen mit dem Datentyp der entsprechenden Resultsetspalte übereinstimmen oder implizit in diesen Datentyp konvertiert werden können. Die Anzahl von Variablen muss mit der Anzahl von Spalten in der SELECT-Liste des Cursors übereinstimmen.  
   
 ## <a name="remarks"></a>Remarks  
- Wird SCROLL in der ISO-Anweisung DECLARE CURSOR nicht angegeben, wird lediglich die FETCH-Option NEXT unterstützt. Wird SCROLL in der ISO-Anweisung DECLARE CURSOR angegeben, werden alle FETCH-Optionen unterstützt.  
+ Wird `SCROLL` in der ISO-Anweisung `DECLARE CURSOR` nicht angegeben, wird lediglich die `FETCH`-Option `NEXT` unterstützt. Wird `SCROLL` in der ISO-Anweisung `DECLARE CURSOR` angegeben, werden alle `FETCH`-Optionen unterstützt.  
   
  Wenn die DECLARE CURSOR-Erweiterungen von [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet werden, gelten folgende Regeln:  
   
--   Falls entweder FORWARD_ONLY oder FAST_FORWARD angegeben wird, wird lediglich die FETCH-Option NEXT unterstützt.  
+-   Wird entweder `FORWARD_ONLY` oder `FAST_FORWARD` angegeben, ist `NEXT` die einzige unterstützte `FETCH`-Option.  
   
--   Wenn keine der Optionen DYNAMIC, FORWARD_ONLY oder FAST_FORWARD, aber eine der Optionen KEYSET, STATIC oder SCROLL angegeben ist, werden alle FETCH-Optionen unterstützt.  
+-   Wenn `DYNAMIC`, `FORWARD_ONLY` oder `FAST_FORWARD` nicht angegeben sind und entweder `KEYSET`, `STATIC` oder `SCROLL` angegeben wird, werden alle `FETCH`-Optionen unterstützt.  
   
--   DYNAMIC SCROLL-Cursor unterstützen alle FETCH-Optionen außer ABSOLUTE.  
+-   `DYNAMIC SCROLL`-Cursor unterstützen alle `FETCH`-Optionen außer `ABSOLUTE`.  
   
- Die @@FETCH_STATUS-Funktion meldet den Status der letzten FETCH-Anweisung. Die gleichen Informationen werden in der fetch_status-Spalte des Cursors gespeichert, der von sp_describe_cursor zurückgegeben wird. Mit diesen Statusinformationen kann die Gültigkeit von Daten einer vorangehenden FETCH-Anweisung überprüft werden, bevor diese Daten weiterverarbeitet werden. Weitere Informationen finden Sie unter [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md).  
+ Die `@@FETCH_STATUS`-Funktion meldet den Status der letzten `FETCH`-Anweisung. Die gleichen Informationen werden in der fetch_status-Spalte des Cursors gespeichert, der von sp_describe_cursor zurückgegeben wird. Mit diesen Statusinformationen kann die Gültigkeit von Daten einer vorangehenden `FETCH`-Anweisung überprüft werden, bevor diese Daten weiterverarbeitet werden. Weitere Informationen finden Sie unter [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- FETCH-Berechtigungen erhalten standardmäßig alle gültigen Benutzer.  
+ `FETCH`-Berechtigungen erhalten standardmäßig alle gültigen Benutzer.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-fetch-in-a-simple-cursor"></a>A. Verwenden von FETCH in einem einfachen Cursor  
  Im folgenden Beispiel wird ein einfacher Cursor für die Zeilen in der `Person.Person`-Tabelle deklariert, die einen Nachnamen enthalten, der mit `B` beginnt. Mit `FETCH NEXT` wird Zeile für Zeile eingelesen. Die `FETCH`-Anweisungen geben den Wert für die in `DECLARE CURSOR` angegebene Spalte als einzeiliges Resultset zurück.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE contact_cursor CURSOR FOR  
@@ -133,7 +132,7 @@ GO
 ### <a name="b-using-fetch-to-store-values-in-variables"></a>B. Verwenden von FETCH, um Werte in Variablen zu speichern  
  Das folgende Beispiel ähnelt Beispiel A. Allerdings wird hier die Ausgabe der `FETCH`-Anweisungen in lokalen Variablen gespeichert und nicht direkt an den Client zurückgegeben. Die `PRINT`-Anweisung fasst die Variablen zu einer einzelnen Zeichenfolge zusammen und gibt sie an den Client zurück.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Declare the variables to store the values returned by FETCH.  
@@ -173,7 +172,7 @@ GO
 ### <a name="c-declaring-a-scroll-cursor-and-using-the-other-fetch-options"></a>C. Deklarieren eines SCROLL-Cursors und Verwenden der übrigen FETCH-Optionen  
  Im folgenden Beispiel wird ein `SCROLL`-Cursor erstellt, damit alle Möglichkeiten für das Durchführen eines Bildlaufs mit den Optionen `LAST`, `PRIOR`, `RELATIVE` und `ABSOLUTE` genutzt werden können.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Execute the SELECT statement alone to show the   
