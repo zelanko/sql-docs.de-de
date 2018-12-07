@@ -30,12 +30,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6c32b45e6ca3b7543b087474fe5c5b631d16caf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da4ea3844087ea5b130060b8cc37a6bfa4c355bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808428"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522268"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Erstellen partitionierter Tabellen und Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47808428"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -91,7 +91,7 @@ ms.locfileid: "47808428"
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank, in der Sie eine partitionierte Tabelle erstellen möchten und wählen Sie **Eigenschaften**aus.  
   
-2.  Wählen Sie im Dialogfeld **Datenbankeigenschaften –** *database_name* unter **Seite auswählen**die Option **Dateigruppen**aus.  
+2.  Wählen Sie im Dialogfeld **Datenbankeigenschaften -** *database_name* unter **Seite auswählen**die Option **Dateigruppen**aus.  
   
 3.  Klicken Sie unter **Zeilen**auf **Hinzufügen**. Geben Sie in der neuen Zeile den Dateigruppennamen ein.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "47808428"
   
 #### <a name="to-create-a-partitioned-table"></a>So erstellen Sie eine partitionierte Tabelle  
   
-1.  Klicken Sie mit der rechten Maustaste auf die Tabelle, die Sie partitionieren möchten, zeigen Sie auf **Speicher**, und klicken Sie dann auf **Partition erstellen**.  
+1.  Klicken Sie mit der rechten Maustaste auf die Tabelle, die Sie partitionieren möchten, zeigen Sie auf **Speicher**, und klicken Sie dann auf **Partition erstellen...**.  
   
 2.  Klicken Sie im **Assistent zum Erstellen von Partitionen**auf der Seite **Willkommen beim Assistenten zum Erstellen von Partitionen** auf **Weiter**.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "47808428"
   
      Die folgenden zusätzlichen Optionen sind auf dieser Seite verfügbar:  
   
-     **Begrenzungen festlegen…**  
+     **Begrenzungen festlegen...**  
      Öffnet das Dialogfeld **Begrenzungswerte festlegen** , um die Begrenzungswerte und Datumsbereiche für die Partitionen auszuwählen. Diese Option ist nur verfügbar, wenn Sie eine Partitionierungsspalte ausgewählt haben, die einen der folgenden Datentypen enthält: **date**, **datetime**, **smalldatetime**, **datetime2**oder **datetimeoffset**.  
   
      **Schätzungsspeicher**  
@@ -202,15 +202,15 @@ ms.locfileid: "47808428"
   
             -   Wenn Sie **Monatlich**auswählen, wählen Sie **Tag** oder **Am**aus.  
   
-                -   Wenn Sie **Tag**auswählen, geben Sie das Datum ein, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Falls Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am 15. ausgeführt wird, wählen Sie **Tag** aus, und geben Sie in das erste Feld "15" und in das zweite Feld "2" ein. Beachten Sie, dass die größte im zweiten Feld zugelassene Zahl "99" ist.  
+                -   Wenn Sie **Tag**auswählen, geben Sie das Datum ein, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am 15. ausgeführt wird, wählen Sie **Tag** aus, und geben Sie in das erste Feld „15“ und in das zweite Feld „2“ ein. Beachten Sie, dass die größte im zweiten Feld zulässige Zahl „99“ ist.  
   
-                -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Falls Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag**und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld "2" ein. Sie können auch **erster**, **zweiter**, **dritter**oder **vierter**sowie bestimmte Wochentage (z.B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zugelassene Zahl "99" ist.  
+                -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag** und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld „2“ ein. Sie können auch **erster**, **zweiter**, **dritter**oder **vierter**sowie bestimmte Wochentage (z.B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zulässige Zahl „99“ ist.  
   
         2.  Geben Sie unter **Häufigkeit pro Tag**an, wie oft der Auftragszeitplan an dem Tag wiederholt werden soll, an dem der Auftragszeitplan ausgeführt wird:  
   
             -   Wenn Sie **Einmalig um**auswählen, geben Sie im Feld **Einmalig um** die spezifische Tageszeit ein, zu der der Auftragszeitplan ausgeführt werden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
-            -   Wenn Sie **Alle**auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit**ausgewählten Tag ausgeführt werden soll. Wenn Sie z.B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle**aus, geben in das erste Feld „2“ ein und wählen in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)** auswählen. Beachten Sie, dass die größte im ersten Feld zugelassene Zahl "100" ist.  
+            -   Wenn Sie **Alle**auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit**ausgewählten Tag ausgeführt werden soll. Wenn Sie z.B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle** aus, geben in das erste Feld „2“ ein und wählen dann in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)** auswählen. Beachten Sie, dass die größte im ersten Feld zulässige Zahl „100“ ist.  
   
                  Geben Sie im Feld **Start** die Zeit ein, zu der die Ausführung des Auftragszeitplans beginnen soll. Geben Sie im Feld **Ende** die Zeit ein, zu der die Ausführung des Auftragszeitplans enden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
@@ -265,7 +265,7 @@ ms.locfileid: "47808428"
   
 #### <a name="to-create-a-partitioned-table"></a>So erstellen Sie eine partitionierte Tabelle  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
