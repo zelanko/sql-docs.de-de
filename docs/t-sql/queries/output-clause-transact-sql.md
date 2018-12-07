@@ -31,12 +31,12 @@ ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8269d0b8913d0ccde1a351ee2489a7818b00c45e
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: b4bef219ec0e9bd4526b8f7c015a1800d9753656
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336289"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529873"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -215,7 +215,7 @@ DELETE Sales.ShoppingCartItem
 ## <a name="parallelism"></a>Parallelism
  Eine OUTPUT-Klausel, die Ergebnisse an den Client zurückgibt, verwendet immer einen seriellen Plan.
 
-Wenn im Kontext einer Datenbank, für die ein Kompatibilitätsgrad von mindestens 130 festgelegt wurde, ein INSERT...SELECT-Vorgang einen WITH (TABLOCK)-Hinweis für die SELECT-Anweisung und darüber hinaus auch OUTPUT…INTO zum Einfügen einer temporären oder Benutzertabelle verwendet, erfüllt die Zieltabelle für den INSERT…SELECT-Vorgang je nach Unterstrukturkosten die Kriterien für Parallelität.  Die Zieltabelle, die in der OUTPUT INTO-Klausel referenziert wird, erfüllt die Kriterien für Parallelität nicht. 
+Wenn im Kontext einer Datenbank, für die ein Kompatibilitätsgrad von mindestens 130 festgelegt wurde, ein INSERT...SELECT-Vorgang einen WITH (TABLOCK)-Hinweis für die SELECT-Anweisung und darüber hinaus auch OUTPUT...INTO zum Einfügen einer temporären oder Benutzertabelle verwendet, erfüllt die Zieltabelle für den INSERT...SELECT-Vorgang je nach Unterstrukturkosten die Kriterien für Parallelität.  Die Zieltabelle, die in der OUTPUT INTO-Klausel referenziert wird, erfüllt die Kriterien für Parallelität nicht. 
  
 ## <a name="triggers"></a>Trigger  
  Von OUTPUT zurückgegebene Spalten spiegeln die Daten nach Abschluss der INSERT-, UPDATE- oder DELETE-Anweisung wider, jedoch vor der Ausführung der Trigger.  

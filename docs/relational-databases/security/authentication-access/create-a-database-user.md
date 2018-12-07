@@ -25,12 +25,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3b2ec3e4a055d331799efab64223012b162a1fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11e155be4678c2cb57b9b551b412570e4578eb46
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648108"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516656"
 ---
 # <a name="create-a-database-user"></a>Erstellen eines Datenbankbenutzers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "47648108"
   
 2.  Erweitern Sie die Datenbank, in der der neue Datenbankbenutzer erstellt werden soll.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sicherheit**, zeigen Sie auf **Neu**, und klicken Sie dann auf **Benutzer**.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sicherheit**, zeigen Sie auf **Neu**, und klicken Sie anschließend auf **Benutzer...**.  
   
 4.  Wählen Sie im Dialogfeld **Datenbankbenutzer – Neu** auf der Seite **Allgemein** einen der folgenden Benutzertypen aus der Liste **Benutzertyp** aus:  
   
@@ -93,10 +93,10 @@ ms.locfileid: "47648108"
 5.  Wenn Sie eine Option auswählen, ändern sich möglicherweise die verbleibenden Optionen im Dialog. Einige Optionen gelten nur für bestimmte Typen von Datenbankbenutzer. Einige Optionen können leer gelassen werden und verwenden dann einen Standardwert.  
   
      **Benutzername**  
-     Geben Sie einen Namen für den Benutzer ein. Wenn Sie **Windows-Benutzer** aus der Liste **Benutzertyp** ausgewählt haben, können Sie zudem auf die Auslassungszeichen **(…)** klicken, um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
+     Geben Sie einen Namen für den Benutzer ein. Wenn Sie **Windows-Benutzer** aus der Liste **Benutzertyp** ausgewählt haben, können Sie zudem auf die Auslassungspunkte **(…)** klicken, um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
   
      **Anmeldename**  
-     Geben Sie den Anmeldenamen des Benutzers ein. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Anmeldenamen auswählen** zu öffnen. **Anmeldename** ist verfügbar, wenn Sie entweder **SQL-Benutzer mit Anmeldename** oder **Windows-Benutzer** aus der Liste **Benutzertyp** auswählen.  
+     Geben Sie den Anmeldenamen des Benutzers ein. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Anmeldenamen auswählen** zu öffnen. **Anmeldename** ist verfügbar, wenn Sie entweder **SQL-Benutzer mit Anmeldename** oder **Windows-Benutzer** aus der Liste **Benutzertyp** auswählen.  
   
      **Kennwort** und **Kennwort bestätigen**  
      Geben Sie für Benutzer, die sich an der Datenbank authentifizieren, ein Kennwort ein.  
@@ -105,7 +105,7 @@ ms.locfileid: "47648108"
      Geben Sie die Standardsprache des Benutzers ein.  
   
      **Standardschema**  
-     Geben Sie das Schema ein, das die Objekte besitzen wird, die von diesem Benutzer erstellt werden. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Schema auswählen** zu öffnen. **Standardschema** ist verfügbar, wenn Sie entweder **SQL-Benutzer mit Anmeldename**, **SQL-Benutzer ohne Anmeldename**oder **Windows-Benutzer** aus der Liste **Benutzertyp** auswählen.  
+     Geben Sie das Schema ein, das die Objekte besitzen wird, die von diesem Benutzer erstellt werden. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Schema auswählen** zu öffnen. **Standardschema** ist verfügbar, wenn Sie entweder **SQL-Benutzer mit Anmeldename**, **SQL-Benutzer ohne Anmeldename**oder **Windows-Benutzer** aus der Liste **Benutzertyp** auswählen.  
   
      **Zertifikatsname**  
      Geben Sie das Zertifikat ein, das für den Datenbankbenutzer verwendet werden soll. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Zertifikat auswählen** zu öffnen. **Zertifikatname** ist verfügbar, wenn Sie die Option **Benutzer, der einem Zertifikat zugeordnet ist** aus der Liste **Benutzertyp** auswählen.  
@@ -116,7 +116,7 @@ ms.locfileid: "47648108"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Zusätzliche Optionen  
- Im Dialogfeld **Datenbankbenutzer - Neu** sind auch Optionen auf vier zusätzlichen Seiten verfügbar: **Schemas im Besitz**, **Mitgliedschaft**, **Sicherungsfähige Elemente**und **Erweiterte Eigenschaften**.  
+ Im Dialogfeld **Datenbankbenutzer – Neu** sind auch Optionen auf vier zusätzlichen Seiten verfügbar: **Schemas im Besitz**, **Mitgliedschaft**, **Sicherungsfähige Elemente**und **Erweiterte Eigenschaften**.  
   
 -   Auf der Seite **Schemas im Besitz** werden alle möglichen Schemas aufgelistet, die dem neuen Datenbankbenutzer gehören können. Aktivieren oder deaktivieren Sie unter **Schemas im Besitz dieses Benutzers**die Kontrollkästchen, die sich neben den Schemas befinden, um einem Datenbankbenutzer Schemas hinzuzufügen oder diese von diesem zu entfernen.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "47648108"
      Zeigt bzw. gibt die erweiterten Eigenschaften für das Objekt an. Jede erweiterte Eigenschaft besteht aus einem aus Name und Wert bestehenden Paar von Metadaten, das dem Objekt zugeordnet ist.  
   
      **Auslassungspunkte (…)**  
-     Klicken Sie auf die Auslassungszeichen **(…)** hinter **Wert** , um das Dialogfeld **Wert für erweiterte Eigenschaft** zu öffnen. Geben Sie den Wert der erweiterten Eigenschaft an diesem größeren Speicherort ein, bzw. zeigen Sie ihn an. Weitere Informationen finden Sie unter [Wert für erweiterte Eigenschaft (Dialogfeld)](../../databases/value-for-extended-property-dialog-box.md).  
+     Klicken Sie auf die Auslassungspunkte **(…)** hinter **Wert**, um das Dialogfeld **Wert für erweiterte Eigenschaft** zu öffnen. Geben Sie den Wert der erweiterten Eigenschaft an diesem größeren Speicherort ein, bzw. zeigen Sie ihn an. Weitere Informationen finden Sie unter [Wert für erweiterte Eigenschaft (Dialogfeld)](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Delete**  
      Entfernt die ausgewählte erweiterte Eigenschaft.  

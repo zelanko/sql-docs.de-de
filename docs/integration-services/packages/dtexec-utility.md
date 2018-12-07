@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 83346a846e180cd2e77c6ba895bac7a899b1143a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bcbef7c771d402d1532ecaece4426666920f785b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639178"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513391"
 ---
 # <a name="dtexec-utility"></a>dtexec (Hilfsprogramm)
   Das Befehlszeilen-Hilfsprogramm **dtexec** dient zum Konfigurieren und Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen. Das Hilfsprogramm **dtexec** ermöglicht den Zugriff auf alle Features zur Paketkonfiguration und -ausführung, z.B. Parameter, Verbindungen, Eigenschaften, Variablen und Statusanzeigen. Das Hilfsprogramm **dtexec** ermöglicht das Laden von Paketen aus diesen Quellen: dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server, einer ISPAC-Projektdatei, einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und dem Dateisystem.  
@@ -168,7 +168,7 @@ dtexec /option [value] [/option [value]]...
   
      Sie können die Option **/ConfigFile** verwenden, um zur Laufzeit zusätzliche Konfigurationen zu laden, die Sie zur Entwurfszeit nicht angegeben haben. Sie können die Option **/ConfigFile** jedoch nicht verwenden, um konfigurierte Werte zu ersetzen, die Sie auch zur Entwurfszeit angegeben haben. Weitere Informationen zur Anwendung von Paketkonfigurationen finden Sie unter [Paketkonfigurationen](../../integration-services/packages/package-configurations.md).  
   
--   **/Conn[ection]** *ID_oder_Name;Verbindungszeichenfolge [[;ID_oder_Name;Verbindungszeichenfolge]…]*: (Optional). Gibt an, dass sich der Verbindungs-Manager mit dem angegebenen Namen oder GUID im Paket befindet. Eine Verbindungszeichenfolge wird ebenfalls angegeben.  
+-   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]...]*: (Optional). Gibt an, dass sich der Verbindungs-Manager mit dem angegebenen Namen oder GUID im Paket befindet. Eine Verbindungszeichenfolge wird ebenfalls angegeben.  
   
      Wenn diese Option verwendet wird, müssen beide Parameter angegeben werden: Der Name oder die GUID des Verbindungs-Managers muss mit dem *ID_oder_Name*-Argument bereitgestellt werden, und mit dem *Verbindungszeichenfolge*-Argument muss eine gültige Verbindungszeichenfolge angegeben werden. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
@@ -222,7 +222,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/De[crypt]**  *Kennwort*: (Optional). Legt das Entschlüsselungskennwort fest, das beim Laden eines Pakets mit Kennwortverschlüsselung verwendet wird.  
   
--   (Optional) Erstellt die Debugdumpdateien (MDMP und TMP), wenn bei der Ausführung des Pakets ein oder mehrere angegebene Ereignisse auftreten. Das Argument *Fehlercode* gibt den Typ des Ereigniscodes – Fehler, Warnung oder Information – an, der auslöst, dass das System die Debugdumpdateien erstellt. Trennen Sie die *Fehlercode* -Argumente durch ein Semikolon (;), um mehrere Ereigniscodes anzugeben. Schließen Sie keine Anführungszeichen in das *Fehlercode* -Argument ein.  
+-   (Optional) Erstellt die Debugdumpdateien (MDMP und TMP), wenn bei der Ausführung des Pakets ein oder mehrere angegebene Ereignisse auftreten. Das Argument *Fehlercode* gibt den Typ des Ereigniscodes (Fehler, Warnung oder Information) an, der auslöst, dass das System die Debugdumpdateien erstellt. Trennen Sie die *Fehlercode* -Argumente durch ein Semikolon (;), um mehrere Ereigniscodes anzugeben. Schließen Sie keine Anführungszeichen in das *Fehlercode* -Argument ein.  
   
      Im folgenden Beispiel werden die Debugdumpdateien generiert, wenn der DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER-Fehler auftritt.  
   
@@ -333,7 +333,7 @@ dtexec /option [value] [/option [value]]...
   
      Im Folgenden finden Sie ein Beispiel zum Ausführen eines Pakets und Bereitstellen von "myvalue" für den Projektparameter (myparam) und eines ganzzahligen Werts "12" für den Projektparameter (anotherparam).  
   
-     `Dtexec /isserver “SSISDB\MyFolder\MyProject\MyPackage.dtsx” /server “.” /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
+     `Dtexec /isserver "SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "." /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
   
      Eigenschaften des Verbindungs-Managers können auch mithilfe von Parametern festgelegt werden. Sie verwenden das Präfix "CM", um einen Parameter des Verbindungs-Managers zu kennzeichnen.  
   
@@ -625,7 +625,7 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  Im folgenden Beispiel werden die Verwendung der Option **/ISServer** sowie das Festlegen der Projekt- und Verbindungs-Manager-Parameter gezeigt.  
   
 ```  
-/Server localhost /ISServer “\SSISDB\MyFolder\Integration Services Project1\Package.dtsx” /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
+/Server localhost /ISServer "\SSISDB\MyFolder\Integration Services Project1\Package.dtsx" /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
   
 ```  
   

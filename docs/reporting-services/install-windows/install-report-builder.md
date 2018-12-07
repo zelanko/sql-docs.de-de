@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 916709e73cd7cad750683dca984d9e897b84997d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c77e8fdb5c3c7f4e163472b5a2fc8325d8d3583a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813183"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396833"
 ---
 # <a name="install-report-builder"></a>Installieren Sie den Berichts-Generator
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ist eine eigenständige App, die von Ihnen oder einem Administrator auf dem Computer installiert wird. Sie können sie über das Microsoft Download Center, über einen [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsserver oder über eine in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierte SharePoint-Website installieren.  
@@ -99,7 +99,7 @@ ms.locfileid: "51813183"
   
 -   Klicken Sie auf den **Berichts-Generator** .  
   
-     Wenn der Berichtsserver in der Liste vorhandener Server nicht angezeigt wird, schließen Sie das Dialogfeld **Bericht öffnen** , und klicken Sie dann unten im **auf** Verbinden [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , um eine Verbindung zu Server herzustellen.  
+     Wenn der Berichtsserver nicht in der Liste vorhandener Server angezeigt wird, schließen Sie das Dialogfeld **Bericht öffnen**, und klicken Sie dann unten im Berichts-Generator auf **Verbinden**, um eine Verbindung mit dem Server herzustellen.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Starten des Berichts-Generators](../../reporting-services/report-builder/start-report-builder.md)   

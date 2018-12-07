@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7f60b5fab839ebb3fb506e38774ba60593d35c89
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bb69a4c0adb6a86bd72d7a0f296502636f923f0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695694"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528753"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ Weitere Informationen zu den Windows-Berechtigungen, die für das [!INCLUDE[ssNo
   
 2.  Klicken Sie auf das Pluszeichen, um den Ordner **Lokale Servergruppen** zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Serverinstanz, auf der Sie das Dienststartkonto festlegen möchten, und wählen Sie dann **SQL Server-Konfigurations-Manager**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf die Serverinstanz, auf der Sie das Dienststartkonto festlegen möchten, und wählen Sie dann **SQL Server-Konfigurations-Manager** aus.  
   
 4.  Klicken Sie im Dialogfeld **Benutzerkontensteuerung** auf **Ja**.  
   

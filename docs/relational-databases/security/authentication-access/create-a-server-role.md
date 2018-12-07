@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8eb7fad6678fba7e5e6b036166c53e8115a89a61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1467b692a574d7f3497d5f0426a841543cdeee76
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659774"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520901"
 ---
 # <a name="create-a-server-role"></a>Erstellen einer Serverrolle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47659774"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Serverrollen kann keine Berechtigung für sicherungsfähige Elemente auf Datenbankebene gewährt werden. Informationen zum Erstellen von Datenbankrollen finden Sie unter [CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md).  
@@ -70,11 +70,11 @@ ms.locfileid: "47659774"
   
 2.  Erweitern Sie den Ordner **Sicherheit** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Serverrollen** , und klicken Sie dann auf **Neue Serverrolle**.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Serverrollen**, und klicken Sie dann auf **Neue Serverrolle...**.  
   
-4.  Geben Sie im Dialogfeld **Neue Serverrolle –**_server\_role\_name_ auf der Seite **Allgemein** einen Namen für die neue Serverrolle in das Feld **Serverrollenname** ein.  
+4.  Geben Sie im Dialogfeld **Neue Serverrolle –** _Serverrollenname_ auf der Seite **Allgemein** einen Namen für die neue Serverrolle in das Feld **Serverrollenname** ein.  
   
-5.  Geben Sie im Feld **Besitzer** den Namen des Serverprinzipals ein, der die neue Rolle besitzt. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Serveranmeldenamen oder -rolle auswählen** zu öffnen.  
+5.  Geben Sie im Feld **Besitzer** den Namen des Serverprinzipals ein, der die neue Rolle besitzt. Klicken Sie alternativ auf die Auslassungspunkte **(...)**, um das Dialogfeld **Serveranmeldenamen oder -rolle auswählen** zu öffnen.  
   
 6.  Wählen Sie unter **Sicherungsfähige Elemente**ein oder mehrere sicherungsfähige Elemente auf Serverebene aus. Wenn ein sicherungsfähiges Element ausgewählt ist, können dieser Serverrolle Berechtigungen für dieses sicherungsfähige Element gewährt oder verweigert werden.  
   

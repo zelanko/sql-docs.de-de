@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ed0fb7bcc834127254a6d3298d3baba7404386c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1b4bcffb5ec575c90561daf5c8c3757b3cdcb65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699358"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539123"
 ---
 # <a name="join-a-role"></a>Verknüpfen einer Rolle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47699358"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -79,9 +79,9 @@ ms.locfileid: "47699358"
   
 4.  Klicken Sie mit der rechten Maustaste auf die Rolle, die Sie bearbeiten möchten, und wählen Sie anschließend **Eigenschaften**aus.  
   
-5.  Klicken Sie im Dialogfeld **Serverrolleneigenschaften –**_server\_role\_name_ auf der Seite **Mitglieder** auf **Hinzufügen**.  
+5.  Klicken Sie im Dialogfeld **Serverrolleneigenschaften –** _server\_role\_name_ auf der Seite **Mitglieder** auf **Hinzufügen**.  
   
-6.  Geben Sie im Dialogfeld **Serveranmeldenamen oder -rolle auswählen** unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** den Anmeldenamen oder die Serverrolle ein, den bzw. die Sie dieser Serverrolle hinzufügen möchten. Alternativ können Sie auf **Durchsuchen** klicken und verfügbare Objekte im Dialogfeld **Nach Objekten suchen** auswählen. Klicken Sie auf **OK**, um zum Dialogfeld **Serverrolleneigenschaften –**_server\_role\_name_ zurückzukehren.  
+6.  Geben Sie im Dialogfeld **Serveranmeldenamen oder -rolle auswählen** unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** den Anmeldenamen oder die Serverrolle ein, den bzw. die Sie dieser Serverrolle hinzufügen möchten. Alternativ können Sie auf **Durchsuchen** klicken und verfügbare Objekte im Dialogfeld **Nach Objekten suchen** auswählen. Klicken Sie auf **OK**, um zum Dialogfeld **Serverrolleneigenschaften –** _server\_role\_name_ zurückzukehren.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -101,9 +101,9 @@ ms.locfileid: "47699358"
   
 7.  Klicken Sie mit der rechten Maustaste auf die Rolle, die Sie bearbeiten möchten, und wählen Sie anschließend **Eigenschaften**aus.  
   
-8.  Klicken Sie im Dialogfeld **Datenbankrolleneigenschaften –**_database\_role\_name_ auf der Seite **Allgemein** auf **Hinzufügen**.  
+8.  Klicken Sie im Dialogfeld **Datenbankrolleneigenschaften –** _database\_role\_name_ auf der Seite **Allgemein** auf **Hinzufügen**.  
   
-9. Geben Sie im Dialogfeld **Datenbankbenutzer oder -rolle auswählen** unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** den Anmeldenamen oder die Datenbankrolle ein, den bzw. die Sie dieser Datenbankrolle hinzufügen möchten. Alternativ können Sie auf **Durchsuchen** klicken und verfügbare Objekte im Dialogfeld **Nach Objekten suchen** auswählen. Klicken Sie auf **OK**, um zum Dialogfeld **Datenbankrolleneigenschaften –**_database\_role\_name_ zurückzukehren.  
+9. Geben Sie im Dialogfeld **Datenbankbenutzer oder -rolle auswählen** unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** den Anmeldenamen oder die Datenbankrolle ein, den bzw. die Sie dieser Datenbankrolle hinzufügen möchten. Alternativ können Sie auf **Durchsuchen** klicken und verfügbare Objekte im Dialogfeld **Nach Objekten suchen** auswählen. Klicken Sie auf **OK**, um zum Dialogfeld **Datenbankrolleneigenschaften –** _database\_role\_name_ zurückzukehren.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -126,7 +126,7 @@ ms.locfileid: "47699358"
   
 #### <a name="to-add-a-member-to-a-user-defined-database-role"></a>So fügen Sie einer benutzerdefinierten Datenbankrolle ein Mitglied hinzu  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

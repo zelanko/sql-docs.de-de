@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32c1cfde6f887074e3aa40486ea93f73f3865782
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 494272f6609af4d8cf8747aff8d3dd5eda85483f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672098"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510173"
 ---
 # <a name="create-statistics"></a>Erstellen von Statistiken
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47672098"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47672098"
   
 3.  Klicken Sie auf das Pluszeichen, um die Tabelle zu erweitern, in der Sie eine neue Statistik erstellen möchten.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Statistik** , und wählen Sie dann **Neue Statistiken…**.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Statistik**, und wählen Sie dann **New Statistics...** (Neue Statistiken…).  
   
      Die folgenden Eigenschaften werden auf der Seite **Allgemein** im Dialogfeld **Neue Statistik für Tabelle**_Tabellenname_ angezeigt.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "47672098"
      Die folgende Eigenschaft wird auf der Seite **Filter** im Dialogfeld **Neue Statistik für Tabelle**_Tabellenname_ angezeigt.  
   
      **Filterausdruck**  
-     Definiert, welche Datenzeilen in die gefilterte Statistik eingeschlossen werden sollen. Beispielsweise `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Definiert, welche Datenzeilen in die gefilterte Statistik eingeschlossen werden sollen. Beispiel: `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle**_Tabellenname_ auf der Seite **Allgemein** auf **Hinzufügen**.  
   

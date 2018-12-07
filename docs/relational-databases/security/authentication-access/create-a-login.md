@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc1eb47e6cde8ff1fb34bde4bf82f4d79013d90e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3702cdd2e09b101b3a779926fa170a976b39c958
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675417"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516642"
 ---
 # <a name="create-a-login"></a>Erstellen eines Anmeldenamens
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,19 +56,19 @@ ms.locfileid: "51675417"
   
 1.  Erweitern Sie im Objekt-Explorer den Ordner der Serverinstanz, in dem Sie eine neue Anmeldung erstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sicherheit** , zeigen Sie auf **Neu**, und wählen Sie dann **Anmeldung**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sicherheit**, zeigen Sie auf **Neu**, und wählen Sie dann **Anmeldung...** aus.  
   
-3.  Geben Sie in das Dialogfeld **Anmeldung - Neu** auf der Seite **Allgemein** einen Benutzernamen in das Feld **Anmeldename** ein. Klicken Sie alternativ auf **Suchen** , um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
+3.  Geben Sie in das Dialogfeld **Anmeldung - Neu** auf der Seite **Allgemein** einen Benutzernamen in das Feld **Anmeldename** ein. Klicken Sie alternativ auf **Suchen...**, um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
   
-     Wenn Sie auf **Suchen**klicken:  
+     Wenn Sie auf **Suchen...** klicken:  
   
-    1.  Klicken Sie unter **Wählen Sie den Objekttyp aus**auf **Objekttypen** , um das Dialogfeld **Objekttypen** zu öffnen, und wählen Sie eine der folgenden Optionen aus: **Integrierte Sicherheitsprinzipale**, **Gruppen**und **Benutzer**. Die Optionen**Integrierte Sicherheitsprinzipale** und **Benutzer** sind standardmäßig ausgewählt. Wenn Sie fertig sind, klicken Sie auf **OK**.  
+    1.  Klicken Sie unter **Wählen Sie den Objekttyp aus** auf **Objekttypen...**, um das Dialogfeld **Objekttypen** zu öffnen, und wählen Sie beliebige oder alle der folgenden Optionen aus: **Integrierte Sicherheitsprinzipale**, **Gruppen** und **Benutzer**. Die Optionen**Integrierte Sicherheitsprinzipale** und **Benutzer** sind standardmäßig ausgewählt. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-    2.  Klicken Sie unter **Suchpfad**auf **Speicherorte** , um das Dialogfeld **Speicherorte** zu öffnen, und wählen Sie eine der verfügbaren Serverspeicherorte aus. Wenn Sie fertig sind, klicken Sie auf **OK**.  
+    2.  Klicken Sie unter **Suchpfad** auf **Speicherorte...**, um das Dialogfeld **Speicherorte** zu öffnen, und wählen Sie einen der verfügbaren Serverspeicherorte aus. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
     3.  Geben Sie unter **Geben Sie die zu verwendenden Objektnamen ein (Beispiele)** den Benutzer- oder Gruppennamen ein, den Sie suchen möchten. Weitere Informationen finden Sie unter [Benutzer, Computer oder Gruppen auswählen (Dialogfeld)](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Klicken Sie auf **Erweitert** für erweiterte Suchoptionen. Weitere Informationen finden Sie unter [Auswählen von Benutzern, Computern oder Gruppen (Dialogfeld) – Erweitert (Seite)](https://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Klicken Sie auf **Erweitert...** für erweiterte Suchoptionen. Weitere Informationen finden Sie unter [Auswählen von Benutzern, Computern oder Gruppen (Dialogfeld) – Erweitert (Seite)](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Klicken Sie auf **OK**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "51675417"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Zusätzliche Optionen  
- Im Dialogfeld **Anmeldung – Neu** sind auch Optionen auf vier zusätzlichen Seiten verfügbar: **Serverrollen**, **Benutzerzuordnung**, **Sicherungsfähige Elemente**und **Status**.  
+ Im Dialogfeld **Anmeldung - Neu** sind auch Optionen auf vier zusätzlichen Seiten verfügbar: **Serverrollen**, **Benutzerzuordnung**, **Sicherungsfähige Elemente**und **Status**.  
   
 ### <a name="server-roles"></a>Serverrollen  
  Die Seite **Serverrollen** listet alle möglichen Rollen auf, die der neuen Anmeldung zugewiesen werden können. Die folgenden Optionen stehen zur Verfügung:  
@@ -165,23 +165,23 @@ ms.locfileid: "51675417"
   
 1.  Klicken Sie auf **Suchen**.  
   
-2.  Wählen Sie im Dialogfeld **Objekte hinzufügen** eine der folgenden Optionen aus: **Bestimmte Objekte...**, **Alle Objekte des Typs...** oder **Der Server**_Servername_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Wählen Sie im Dialogfeld **Objekte hinzufügen** eine der folgenden Optionen aus: **Bestimmte Objekte...**, **Alle Objekte des Typs...** oder **Der Server**_Servername\__. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > **HINWEIS**: Wenn Sie die Option **Der Server**_Servername_ auswählen, wird das obere Raster automatisch mit allen sicherungsfähigen Objekten des Servers gefüllt.  
   
-3.  Bei Auswahl der Option **Bestimmte Objekte**:  
+3.  Bei Auswahl der Option **Bestimmte Objekte...**:  
   
-    1.  Klicken Sie im Dialogfeld **Objekte auswählen** unter **Wählen Sie Objekttypen aus**auf **Objekttypen**.  
+    1.  Klicken Sie im Dialogfeld **Objekte auswählen** unter **Wählen Sie Objekttypen aus** auf **Objekttypen...**.  
   
     2.  Wählen Sie im Dialogfeld **Objekttypen auswählen** einen der folgenden Objekttypen aus: **Endpunkte**, **Anmeldungen**, **Server**, **Verfügbarkeitsgruppen**und **Serverrollen**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  Klicken Sie unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** auf **Durchsuchen**.  
+    3.  Klicken Sie unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** auf **Durchsuchen...**.  
   
     4.  Wählen Sie im Dialogfeld **Nach Objekten suchen** eines der verfügbaren Objekte vom Typ aus, den Sie im Dialogfeld **Objekttypen auswählen** ausgewählt haben, und klicken Sie anschließend auf **OK**.  
   
     5.  Klicken Sie im Dialogfeld **Objekte auswählen** auf **OK**.  
   
-4.  Wenn Sie im Dialogfeld **Objekttypen auswählen**die Option **Alle Objekte des Typs** auswählen, dann wählen Sie einen der folgenden Objekttypen aus: **Endpunkte**, **Anmeldungen**, **Server**, **Verfügbarkeitsgruppen**und **Serverrollen**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Wenn Sie im Dialogfeld **Objekttypen auswählen** die Option **Alle Objekte des Typs...** auswählen, dann wählen Sie beliebige oder alle der folgenden Objekttypen aus: **Endpunkte**, **Anmeldungen**, **Server**, **Verfügbarkeitsgruppen** und **Serverrollen**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Name**  
  Die Namen der Prinzipale oder sicherungsfähigen Elemente, die dem Raster hinzugefügt werden.  

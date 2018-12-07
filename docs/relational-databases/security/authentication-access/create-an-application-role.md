@@ -16,12 +16,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d9b5b5de9948c72aa3654c0236516886f4c4a72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70f74f1b098c53c864fb2bf20889b43541d70846
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633678"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539732"
 ---
 # <a name="create-an-application-role"></a>Erstellen einer Anwendungsrolle
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47633678"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -59,11 +59,11 @@ ms.locfileid: "47633678"
   
 3.  Erweitern Sie den Ordner **Rollen** .  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Anwendungsrollen** , und klicken Sie dann auf **Neue Anwendungsrolle…**.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Anwendungsrollen**, und klicken Sie dann auf **Neue Anwendungsrolle...**.  
   
-5.  Geben Sie in das Dialogfeld **Anwendungsrolle - Neu** auf der Seite **Allgemein**den neuen Namen der neuen Anwendungsrolle in das Feld **Rollenname** ein.  
+5.  Geben Sie in das Dialogfeld **Anwendungsrolle – Neu** auf der Seite **Allgemein** den Namen der neuen Anwendungsrolle in das Feld **Rollenname** ein.  
   
-6.  Geben Sie im Feld **Standardschema** das Schema an, das Objekte besitzen soll, die von dieser Rolle durch Eingabe der Objektnamen erstellt wurden. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Schema suchen** zu öffnen.  
+6.  Geben Sie im Feld **Standardschema** das Schema an, das Objekte besitzen soll, die von dieser Rolle durch Eingabe der Objektnamen erstellt wurden. Klicken Sie alternativ auf die Auslassungspunkte **(...)**, um das Dialogfeld **Schema suchen** zu öffnen.  
   
 7.  Geben Sie im Feld **Kennwort** ein Kennwort für die neue Rolle ein. Geben Sie im Feld **Kennwort bestätigen** das Kennwort erneut ein.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47633678"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Zusätzliche Optionen  
- Das Dialogfeld **Anwendungsrolle - Neu** verfügt zudem über Optionen auf zwei zusätzlichen Seiten: **Sicherungsfähige Elemente** und **Erweiterte Eigenschaften**.  
+ Das Dialogfeld **Anwendungsrolle – Neu** verfügt zudem über Optionen auf zwei zusätzlichen Seiten: **Sicherungsfähige Elemente** und **Erweiterte Eigenschaften**.  
   
 -   Auf der Seite **Sicherungsfähige Elemente** werden alle möglichen sicherungsfähigen Elemente und die Berechtigungen für diese sicherungsfähigen Elemente aufgelistet, die für die Anmeldung gewährt werden können.  
   

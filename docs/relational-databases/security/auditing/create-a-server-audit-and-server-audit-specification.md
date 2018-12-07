@@ -18,12 +18,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6742cefe44c2fd4a545b243d22993e0d7615e585
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 803ce49a254bc6f0e969828192d914facf46ef3c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845408"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523030"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47845408"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47845408"
   
 1.  Erweitern Sie im Objekt-Explorer den Ordner **Sicherheit** .  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Überwachungen** , und wählen Sie dann **Neue Überwachung**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Überwachungen**, und wählen Sie dann **New Audit...** (Neue Überwachung...) aus.  
   
      Die folgenden Optionen befinden sich im Dialogfeld **Überwachung erstellen** auf der Seite **Allgemein** :  
   
@@ -97,7 +97,7 @@ ms.locfileid: "47845408"
      Gibt den Speicherort des Ordners an, in den Überwachungsdaten geschrieben werden, wenn das **Überwachungsziel** eine Datei ist.  
   
      **Auslassungspunkte (…)**  
-     Öffnet das Dialogfeld **Ordner suchen –** _Servername_, sodass Sie einen Dateipfad angeben oder einen Ordner erstellen können, in den die Überwachungsdatei geschrieben wird.  
+     Öffnet das Dialogfeld **Ordner suchen –** _Servername_, um einen Dateipfad anzugeben oder einen Ordner zu erstellen, in dem die Überwachungsdatei geschrieben werden soll.  
   
      **Maximale Grenze für Überwachungsdatei:**  
      **Maximale Anzahl Rolloverdateien**  
@@ -126,7 +126,7 @@ ms.locfileid: "47845408"
   
 1.  Klicken Sie im Objekt-Explorer auf das Pluszeichen, um den Ordner **Sicherheit** zu erweitern.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Serverüberwachungsspezifikationen** und dann auf **Neue Serverüberwachungsspezifikation**.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Serverüberwachungsspezifikationen**, und wählen Sie dann **Neue Serverüberwachungsspezifikation...** aus.  
   
      Die folgenden Optionen sind im Dialogfeld **Serverüberwachungsspezifikation erstellen** verfügbar.  
   

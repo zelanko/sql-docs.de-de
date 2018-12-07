@@ -10,18 +10,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9a1ae0aac049fef58d8007c26dce6ce355344a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700528"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514530"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Offlinehilfe und Help Viewer für SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Sie können Help Viewer in SQL Server Management Studio (SSMS) oder Visual Studio (VS) verwenden, um Hilfepakete für SQL Server von Onlinequellen oder Datenträgern herunterzuladen und zu installieren, sodass Sie diese auch abrufen können, wenn Sie offline sind. In diesem Artikel werden Tools beschrieben, die Help Viewer installieren. Außerdem erhalten Sie eine Anleitung zum Installieren von Hilfeinhalt, der offline verfügbar ist, und es wird beschrieben, wie Sie Hilfe für [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 und SQL Server 2017 abrufen.
+
+Sobald der Inhalt auf ein System mit Internetzugang heruntergeladen wurde, können Sie den Inhalt auf ein System migrieren, das keinen Internetzugang hat. 
 
 > [!NOTE]
 > Die Hilfe für SQL Server 2016 und SQL Server 2017 wird gemeinsam erläutert. Es wird darauf hingewiesen, wenn ein Thema nur für einzelne Versionen von Belang ist. Die meisten Themen gelten für beide Versionen.
@@ -125,7 +127,8 @@ Führen Sie die folgenden Schritte aus, damit die in Visual Studio installierte 
    ![Hilfe anzeigen](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
    Das Inhaltsverzeichnis der Hilfe wird auf der linken Seite und das ausgewählte Hilfethema auf der rechten Seite angezeigt. 
-   
+
+  
 ## <a name="use-help-viewer-v1x"></a>Verwenden von Help Viewer v1.x
 
 Frühere Versionen von SSMS und Visual Studio verwenden Help Viewer 1.x. Diese Version unterstützt die Hilfe für SQL Server 2014. 
@@ -165,6 +168,8 @@ In diesem Vorgang wird Help Viewer 1.x verwendet, um die Hilfe für SQL Server 2
    
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
    
+
+
 ## <a name="view-online-help"></a>Anzeigen der Onlinehilfe
 
 In der Onlinehilfe werden stets die aktuellsten Inhalte angezeigt. 
@@ -204,6 +209,22 @@ Wenn Sie F1 drücken oder in einem Dialogfeld in SSMS oder Visual Studio auf **H
 
 >  [!NOTE]
 >  Die F1-Hilfe funktioniert nur, wenn Sie online sind. Es sind keine Offlinequellen für F1-Hilfe verfügbar. 
+
+## <a name="systems-without-internet-access"></a>Systeme ohne Internetzugang
+Nachdem Sie die [zuvor beschriebenen Schritte](#use-help-viewer-v2x) zum Herunterladen von Offlineinhalten mit dem SQL Server Help Viewer auf ein System mit Internetzugang ausgeführt haben, können Sie diese Inhalte auf ein System migrieren, das keinen Internetzugang hat. Dies kann über die folgenden Schritte erfolgen. 
+
+  >[!NOTE]
+  >Software, die den Help Viewer unterstützt, wie z. B. SQL Server Management Studio, muss auf dem Offlinesystem installiert sein. 
+
+1. Öffnen Sie den Help Viewer (STRG+ALT+F1).
+1. Wählen Sie die Dokumentation aus, die Sie interessiert. Filtern Sie beispielsweise nach SQL Server, und wählen Sie „Technische Dokumentation zu SQL Server“ aus. 
+1. Bestimmen Sie den physischen Pfad der Dateien auf dem Datenträger, der unter **Lokaler Speicherpfad** zu finden ist.
+1. Navigieren Sie im Dateisystem-Explorer zu diesem Speicherort. 
+    1.  Der Standardspeicherort lautet: `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`.
+1. Wählen Sie die drei Ordner **ContentStore**, **Incoming** und **IndexStore** aus, und kopieren Sie sie auf Ihrem Offlinesystem an den gleichen Speicherort. Sie müssen möglicherweise einen Wechseldatenträger wie einen USB-Stick oder eine CD verwenden. 
+1. Sobald diese Dateien verschoben wurden, starten Sie den Help Viewer auf dem Offlinesystem, woraufhin die technische Dokumentation zu SQL Server verfügbar ist.
+
+![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
    
 
 ## <a name="next-steps"></a>Nächste Schritte

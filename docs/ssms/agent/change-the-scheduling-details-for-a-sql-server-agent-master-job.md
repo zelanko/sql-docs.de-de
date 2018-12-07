@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da96a86f4e25f6397af5cbba3423bc31514f7ca7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 42bc4465080cacee930c0815ae587f4cafd2722a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702891"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512283"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Sie können nur Aufträge ändern, die in Ihrem Besitz sind, es sei denn, Sie si
   
 4.  Klicken Sie mit der rechten Maustaste auf den Auftrag, dessen Zeitplan Sie bearbeiten möchten, und wählen Sie **Eigenschaften**aus.  
   
-5.  Klicken Sie im Dialogfeld **Auftragseigenschaften –**_Auftragsname_ unter **Seite auswählen** auf die Option **Zeitpläne**. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften – Neuer Auftrag &#40;Seite „Zeitpläne“&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
+5.  Klicken Sie im Dialogfeld **Auftragseigenschaften >** _Auftragsname_ unter **Seite auswählen** auf die Option **Zeitpläne**. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften – Neuer Auftrag &#40;Seite „Zeitpläne“&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

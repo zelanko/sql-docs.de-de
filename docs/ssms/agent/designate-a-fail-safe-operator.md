@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3f973f4894eb79456376250a838b9e71745a83c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f79ccd9b759275f3811ed0de2cb84114ce0609f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678968"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501981"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Bestimmen eines Ausfallsicherheitsoperators
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Ausfallsicherheitsope
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent** , und wählen Sie **Eigenschaften**aus.  
   
-3.  Klicken Sie im Dialogfeld **Eigenschaften des SQL Server-Agents –**_Servername_ unter **Seite auswählen** auf **Warnungssystem**.  
+3.  Klicken Sie im Dialogfeld **Eigenschaften des SQL Server-Agents >**_Servername_ unter **Seite auswählen** auf **Warnungssystem**.  
   
 4.  Aktivieren Sie unter **Ausfallsicherheitsoperator**die Option **Ausfallsicherheitsoperator aktivieren**.  
   
