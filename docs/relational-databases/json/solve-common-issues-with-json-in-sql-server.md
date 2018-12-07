@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f6222c5829af5a63e4ab7fd079a405063f08ec5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2f2efdc555a1fe236d42ea342846674154cbee5b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661729"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393073"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Lösen häufiger Probleme mit JSON in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ FOR JSON PATH
 Jedes Ergebnis einer FOR JSON-Abfrage oder die Funktion JSON_QUERY in den Spaltenausdrücken wird als separates geschachteltes JSON-Unterobjekt formatiert und im Hauptergebnis aufgenommen.  
 
 ### <a name="prevent-double-escaped-json-in-for-json-output"></a>Verhindern von doppelt geschütztem JSON in der FOR JSON-Ausgabe  
- **Frage:** Ich habe einen JSON-Text, der in einer Tabellenspalte gespeichert ist. Ich möchte ihn in der Ausgabe von FOR JSON einschließen. FOR JSON schützt aber alle Zeichen in JSON, also erhalte ich eine JSON-Zeichenfolge anstelle eines geschachtelten-Objekts, wie im folgenden Beispiel gezeigt.  
+ **Frage:** Ich habe einen JSON-Text, der in einer Tabellenspalte gespeichert ist. Ich möchte ihn in der Ausgabe von FOR JSON einschließen. FOR JSON schützt aber alle Zeichen in JSON, also erhalte ich wie im folgenden Beispiel gezeigt eine JSON-Zeichenfolge anstelle eines geschachtelten Objekts.  
   
 ```sql  
 SELECT 'Text' AS myText, '{"day":23}' AS myJson  
@@ -133,7 +133,7 @@ WHERE [key] = 'color'
 ### <a name="openjson-requires-compatibility-level-130"></a>OPENJSON erfordert Kompatibilitätsgrad 130  
  **Frage:** Ich versuche, OPENJSON in SQL Server 2016 auszuführen, und erhalte die folgende Fehlermeldung.  
   
- `Msg 208, Level 16, State 1 ‘Invalid object name OPENJSON’`  
+ `Msg 208, Level 16, State 1 'Invalid object name OPENJSON'`  
   
  **Antwort:** Die OPENJSON-Funktion steht nur für Kompatibilitätsgrad 130 zur Verfügung. Wenn der Kompatibilitätsgrad Ihrer DB kleiner als 130 ist, wird OPENJSON ausgeblendet. Andere JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar.  
  

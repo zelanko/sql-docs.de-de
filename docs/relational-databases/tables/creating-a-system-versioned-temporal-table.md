@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665519"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409617"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Erstellen einer temporalen Tabelle mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51665519"
 -   Temporale Tabelle mit einer vorab erstellten, benutzerdefinierten Verlaufstabelle: Sie erstellen eine Verlaufstabelle, die Ihren Anforderungen am besten entspricht, und verweisen dann beim Erstellen der temporalen Tabelle auf diese Tabelle.  
   
 ## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>Erstellen einer temporalen Tabelle mit einer anonymen Verlaufstabelle  
- Das Erstellen einer temporalen Tabelle mit einer „anonymen“ Verlaufstabelle ist eine praktische Möglichkeit für das schnelle erstellen von Objekten, insbesondere in Prototyp- und Testumgebungen. Es ist auch die einfachste Möglichkeit, eine temporale Tabelle zu erstellen, da keine Parameter in der **SYSTEM_VERSIONING** -Klausel erforderlich sind. Im folgenden Beispiel wird eine neue Tabelle mit aktivierter Systemversionsverwaltung erstellt, ohne den Namen der Verlaufstabelle zu definieren.  
+ Das Erstellen einer temporalen Tabelle mit einer „anonymen“ Verlaufstabelle ist eine praktische Möglichkeit für das schnelle Erstellen von Objekten insbesondere in Prototyp- und Testumgebungen. Es ist auch die einfachste Möglichkeit, eine temporale Tabelle zu erstellen, da keine Parameter in der **SYSTEM_VERSIONING**-Klausel erforderlich sind. Im folgenden Beispiel wird eine neue Tabelle mit aktivierter Systemversionsverwaltung erstellt, ohne den Namen der Verlaufstabelle zu definieren.  
   
 ```  
 CREATE TABLE Department   

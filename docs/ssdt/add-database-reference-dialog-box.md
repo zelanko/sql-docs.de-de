@@ -13,12 +13,12 @@ ms.assetid: 838caa2a-4117-48bc-8c6c-9e7ceab38893
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6ebccd038bd2dc96f540e17c9ad67a135ec6ceb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 821af23f45cbf190f094931643b9be6ddbed9a35
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651651"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400604"
 ---
 # <a name="add-database-reference-dialog-box"></a>Datenbankverweis hinzufügen (Dialogfeld)
 In diesem Thema werden die Verfahren beschrieben, die Sie im Dialogfeld **Datenbankverweis hinzufügen** ausführen können.  
@@ -53,7 +53,7 @@ Verweise können für Objekte an einem der folgenden Orte aufgelöst werden:
   
 - In einer anderen Datenbank als der, die den Verweis enthält, die sich aber auf einem anderen Server befindet.  
   
-Geben Sie einen Datenbanknamen an. Wenn Sie **Systemdatenbank** auswählen, sollte der Literalname der Systemdatenbank nicht geändert werden. Wenn Sie **Datenbankprojekte in der aktuellen Projektmappe** auswählen, basiert der Standardname der Datenbank auf dem Namen der Datenbank, die im Projekt enthalten ist.  
+Geben Sie einen Datenbanknamen an. Wenn Sie **Systemdatenbank** ausgewählt haben, sollte Sie den Literal der Systemdatenbank nicht ändern. Wenn Sie **Datenbankprojekte in der aktuellen Projektmappe** auswählen, basiert der Standardname der Datenbank auf dem Namen der Datenbank, die im Projekt enthalten ist.  
   
 Wenn Sie **Andere Datenbank, anderer Server** ausgewählt haben, geben Sie einen Servernamen an.  
   

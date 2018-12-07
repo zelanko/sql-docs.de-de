@@ -15,12 +15,12 @@ ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 35b4b5e10ee2e76b85bd7b63e1ee57dbefe6af14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b3cde0ea72ff74c57f4adb3875ed7c53a6891f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750528"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402515"
 ---
 # <a name="entity-permissions-master-data-services"></a>Entitätsberechtigungen (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "47750528"
   
 -   Alle Attribute der Entität, einschließlich **Name** und **Code**für Blatt- und konsolidierte Elemente.  
   
--   Alle Auflistungen der Entität.  
+-   Alle Collections der Entität.  
   
 -   Explizite Hierarchiemitgliedschaften und Beziehungen.  
   

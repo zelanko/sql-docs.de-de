@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a52dbdd40605d9a1634495066b4249bd0567075
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 09ffdde2f04c45d02bfd69369c0fbba8bd2fb5ab
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028104"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398883"
 ---
 # <a name="custom-report-item-class-libraries"></a>Klassenbibliotheken für ein benutzerdefiniertes Berichtselement
   Benutzerdefinierte Berichtselemente verwenden Klassen des **Microsoft.ReportDesigner**-Namespaces. Die Klassen, die zum Implementieren eines benutzerdefinierten Berichtselements verwendet werden, können in zwei Hauptkategorien gruppiert werden: eindeutige Klassen zur Unterstützung der Infrastruktur eines benutzerdefinierten Berichtselements und verwaltete Wrapperklassen, die die Funktionalität von relevanten RDL-Elementen (Report Definition Language) kapseln. Ein Codebeispiel für die Verwendung dieser Klassen finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  
@@ -45,7 +45,7 @@ ms.locfileid: "50028104"
 |**Style**|Die Stileigenschaften für das benutzerdefinierte Berichtselement.|  
 |**Adornment**|Ein Gestaltungsfenster für die interaktive Bearbeitung der Steuerung.|  
 |**Site**|Die **ISite** der Komponente.|  
-|**DesignerVerbCollection**|Ein Array der benutzerdefinierten Verben für das Kontextmenü der Steuerung.|  
+|**DesignerVerbCollection**|Ein Array von benutzerdefinierten Verben für das Kontextmenü der Steuerung.|  
   
 #### <a name="public-methods"></a>Öffentliche Methoden  
   

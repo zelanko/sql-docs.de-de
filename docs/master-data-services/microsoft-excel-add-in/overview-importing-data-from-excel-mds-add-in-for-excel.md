@@ -11,12 +11,12 @@ ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2211d4d23367e08d8a30ec4b7e71f7ad477a6030
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0f410c49f1ae4ded84c1077e26e824ba8c2b82f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685968"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502940"
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>Übersicht: Importieren von Daten aus Excel (MDS-Add-In für Excel)
 
@@ -49,7 +49,7 @@ ms.locfileid: "47685968"
 >  Wenn Sie eine Anmerkung von mehr als 500 Zeichen eingeben, wird die Anmerkung automatisch abgeschnitten.  
   
 ## <a name="business-rule-and-other-validation"></a>Geschäftsregel und andere Überprüfung  
- Wenn Sie Daten veröffentlichen, wird eine Überprüfung ausgeführt, um sicherzustellen, dass die Daten exakt sind, bevor sie dem MDS-Repository hinzugefügt werden. Wenn die Daten die angegebenen Kriterien nicht erfüllen, werden sie nicht im Repository veröffentlicht. Weitere Informationen finden Sie unter [Überprüfen von Daten &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
+ Wenn Sie Daten veröffentlichen, wird eine Überprüfung ausgeführt, um sicherzustellen, dass die Daten richtig sind, bevor sie dem MDS-Repository hinzugefügt werden. Wenn die Daten die angegebenen Kriterien nicht erfüllen, werden sie nicht im Repository veröffentlicht. Weitere Informationen finden Sie unter [Überprüfen von Daten &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

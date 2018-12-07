@@ -19,17 +19,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7aff73be9d9213cea3c9336a926a0ad0de0a3c80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a9c57b68a7aabc2d275dd5fa64c7e7cb00c3969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803258"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505913"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Löst eine Ausnahme aus und übergibt die Ausführung an einem CATCH-Block eines TRY…CATCH-Konstrukts in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Löst eine Ausnahme aus und übergibt die Ausführung an einem CATCH-Block eines TRY...CATCH-Konstrukts in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ THROW [ { error_number | @local_variable },
 ## <a name="remarks"></a>Remarks  
  Auf die Anweisung vor der THROW-Anweisung muss als Anweisungsabschlusszeichen das Semikolon (;) folgen.  
   
- Wenn kein TRY…CATCH-Konstrukt verfügbar ist, wird der Anweisungsbatch beendet. Die Zeilennummer und die Prozedur, in der die Ausnahme ausgelöst wird, werden festgelegt. Der Schweregrad wird auf 16 festgelegt.  
+ Wenn kein TRY...CATCH-Konstrukt verfügbar ist, wird der Anweisungsbatch beendet. Die Zeilennummer und die Prozedur, in der die Ausnahme ausgelöst wird, werden festgelegt. Der Schweregrad wird auf 16 festgelegt.  
   
  Wenn die THROW-Anweisung ohne Parameter angegeben wird, muss sie in einem CATCH-Block enthalten sein. Dies bewirkt, dass die abgefangene Ausnahme ausgelöst wird. Jeder in einer THROW-Anweisung auftretende Fehler führt dazu, dass der Anweisungsbatch beendet wird.  
   

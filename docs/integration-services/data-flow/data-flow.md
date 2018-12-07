@@ -18,12 +18,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cea3308f6d070a0cd1b7b902f1b76306ae1930a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ba9dc3ac94a3db07bb37eac96ffdbb72911ad562
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641677"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503568"
 ---
 # <a name="data-flow"></a>Datenfluss
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt drei verschiedene Arten von Datenflusskomponenten bereit: Quellen, Transformationen und Ziele. Quellen extrahieren Daten aus Datenspeichern, wie z. B. Tabellen und Sichten in relationalen Datenbanken, Dateien und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken. Mit Transformationen werden Daten geändert, zusammengefasst und bereinigt. Mit Zielen werden Daten in Datenspeicher geladen oder Datasets im Arbeitsspeicher erstellt.  
@@ -68,7 +68,7 @@ ms.locfileid: "51641677"
  Wenn die Registerkarte **Datenfluss** aktiv ist, enthält die Toolbox die Quellen, Transformationen und Ziele, die Sie dem Datenfluss hinzufügen können.  
   
 ## <a name="expressions"></a>Ausdrücke  
- Eine Reihe von Datenflusskomponenten – hierzu zählen Quellen, Transformationen und Ziele – unterstützen die Verwendung von Eigenschaftsausdrücken mit einigen ihrer Eigenschaften. Ein Eigenschaftsausdruck ist ein Ausdruck, der beim Laden des Pakets den Wert der Eigenschaft ersetzt. Zur Laufzeit verwendet das Paket die aktualisierten Eigenschaftswerte. Die Ausdrücke werden mithilfe der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ausdruckssyntax erstellt und können [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Funktionen, -Operatoren, -Bezeichner und -Variablen enthalten. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md) und [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md).  
+ Eine Reihe von Datenflusskomponenten (Quellen, Transformationen und Ziele) unterstützen die Verwendung von Eigenschaftsausdrücken mit einigen ihrer Eigenschaften. Ein Eigenschaftsausdruck ist ein Ausdruck, der beim Laden des Pakets den Wert der Eigenschaft ersetzt. Zur Laufzeit verwendet das Paket die aktualisierten Eigenschaftswerte. Die Ausdrücke werden mithilfe der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ausdruckssyntax erstellt und können [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Funktionen, -Operatoren, -Bezeichner und -Variablen enthalten. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md) und [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
  Wenn Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ein Paket erstellen, werden die Eigenschaften aller Datenflusskomponenten, die Eigenschaftsausdrücke unterstützen, im zugehörigen Datenflusstask verfügbar gemacht. Klicken Sie zum Hinzufügen, Ändern oder Entfernen von Eigenschaftsausdrücken der Datenflusskomponenten auf den Datenflusstask, und verwenden Sie dann das Eigenschaftenfenster oder den Editor für den Task, um Eigenschaftsausdrücke hinzuzufügen, zu ändern oder zu löschen. Die Eigenschaftsausdrücke für den Datenflusstask selbst werden vom Eigenschaftenfenster aus verwaltet.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "51641677"
  Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).  
   
 ### <a name="columns"></a>Spalte  
- Eingaben, Ausgaben und Fehlerausgaben sind Auflistungen von Spalten. Alle Spalten sind konfigurierbar, und je nach Spaltentyp – Eingabe, Ausgabe oder extern – stellt[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterschiedliche Eigenschaften für die jeweilige Spalte bereit. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt drei verschiedene Möglichkeiten zum Festlegen von Spalteneigenschaften bereit: programmgesteuert, durch die Verwendung komponentenspezifischer Dialogfelder oder durch die Verwendung des Dialogfelds **Erweiterter Editor**.  
+ Eingaben, Ausgaben und Fehlerausgaben sind Auflistungen von Spalten. Alle Spalten sind konfigurierbar, und je nach Spaltentyp (Eingabe, Ausgabe oder extern) stellt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterschiedliche Eigenschaften für die jeweilige Spalte bereit. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt drei verschiedene Möglichkeiten zum Festlegen von Spalteneigenschaften bereit: programmgesteuert, durch die Verwendung komponentenspezifischer Dialogfelder oder durch die Verwendung des Dialogfelds **Erweiterter Editor**.  
   
 ## <a name="paths"></a>Pfade  
  Mit Pfaden werden Datenflusskomponenten verbunden. Im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer können Sie die Pfadeigenschaften anzeigen und ändern, die Ausgabemetadaten für den Ausgangspunkt des Pfads anzeigen sowie einem Pfad Daten-Viewer anfügen.  

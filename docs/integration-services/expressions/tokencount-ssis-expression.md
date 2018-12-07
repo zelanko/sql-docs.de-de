@@ -11,12 +11,12 @@ ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 508f752b04307e8930b19f0175608667c5ef1d90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24f5bb65aa7c9545bbe1842f97e8f43546c14848
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788538"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411487"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS-Ausdruck)
   Gibt die Anzahl der Token in einer Zeichenfolge zurück, die durch die angegebenen Trennzeichen getrennte Token enthält.  
@@ -32,7 +32,7 @@ TOKENCOUNT(character_expression, delimiter_string)
  Eine Zeichenfolge, die durch Trennzeichen getrennte Token enthält.  
   
  *delimiter_string*  
- Eine Zeichenfolge, die Begrenzungszeichen enthält. "; , " enthält beispielsweise drei Begrenzungszeichen: Semikolon, Leerzeichen und Komma.  
+ Eine Zeichenfolge, die Begrenzungszeichen enthält. „; ,“ enthält beispielsweise drei Begrenzungszeichen: ein Semikolon, ein Leerzeichen und ein Komma.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
@@ -51,25 +51,25 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   Sie können Variablen und Spalten als Argumente für diesen Ausdruck verwenden.  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  
- Im folgenden Beispiel gibt die TOKENCOUNT-Funktion 3 zurück, da die Zeichenfolge drei Token enthält: "01", "12", "2011".  
+ Im folgenden Beispiel gibt die TOKENCOUNT-Funktion „3“ zurück, da die Zeichenfolge drei Token enthält: „01“, „12“, „2011“.  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  
 ```  
   
- Im darauf folgenden Beispiel gibt die TOKENCOUNT-Funktion 4 zurück, da vier Token ("a", "little", "white", "dog") vorhanden sind.  
+ Im darauf folgenden Beispiel gibt die TOKENCOUNT-Funktion „4“ zurück, da vier Token („a“, „little“, „white“, „dog“) vorhanden sind.  
   
 ```  
 TOKENCOUNT("a little white dog"," ")  
 ```  
   
- Im folgenden Beispiel gibt die TOKENCOUNT-Funktion 1 zurück. Die Funktion analysiert die Eingabezeichenfolge für Trennzeichen, und da es in der Zeichenfolge keine gibt, fügt es die ganze Zeichenfolge als erstes Token hinzu.  
+ Im folgenden Beispiel gibt die TOKENCOUNT-Funktion 1 zurück. Die Funktion analysiert die Eingabezeichenfolge für Trennzeichen, und da es in der Zeichenfolge keine gibt, fügt es die ganze Zeichenfolge als erstes Token hinzu.  
   
 ```  
 TOKENCOUNT("a little white dog","|")  
 ```  
   
- Im folgenden Beispiel gibt die TOKENCOUNT-Funktion 4 zurück. Die Trennzeichenfolge in diesem Beispiel enthält 5 Trennzeichen. Die Eingabezeichenfolge enthält 4 Token: "ein", "kleiner", "weißer", "Hund".  
+ Im folgenden Beispiel gibt die TOKENCOUNT-Funktion 4 zurück. Die Trennzeichenfolge in diesem Beispiel enthält 5 Trennzeichen. Die Eingabezeichenfolge enthält 4 Token: „a“, „little“, „white“, „dog“.  
   
 ```  
 TOKENCOUNT("a:little|white dog","| ,.:")  

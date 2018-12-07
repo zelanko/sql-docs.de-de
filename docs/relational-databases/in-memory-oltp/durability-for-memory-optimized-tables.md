@@ -11,12 +11,12 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2093e1445f7328090d71c6c133960597da5ddf6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fe8886c5c826a6535a7d9898ad7d6f30756effd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650148"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419911"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Dauerhaftigkeit für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "47650148"
 |CFP0 (30 %), CFP1 (20 %), CFP2 (50 %), CFP3 (10 %)|(CFP0, CFP1, CFP2). Dateien werden von links nach rechts ausgewählt.<br /><br /> CTP3 wird nicht ausgewählt, da andernfalls die resultierende Datendatei größer als 100 % der idealen Größe wird.|  
 |CFP0 (80 %), CFP1 (30 %), CFP2 (10 %), CFP3 (40 %)|(CFP1, CFP2, CFP3). Dateien werden von links nach rechts ausgewählt.<br /><br /> CFP0 wird übersprungen, da die resultierende Datendatei bei Kombination mit CFP1 größer als 100 % der idealen Größe wird.|  
   
- Nicht alle CFPs mit verfügbarem Speicherplatz kommen für die Zusammenführung infrage. Wenn beispielsweise zwei aufeinanderfolgende CFPs zu 60 % gefüllt sind, kommen sie für eine Zusammenführung nicht infrage, und jedes dieser CFPs weist 40 % nicht genutzten Speicherplatz auf. Im ungünstigsten Fall sind alle CFPs zu 50 % gefüllt, was einer Speicherauslastung von nur 50 % entspricht. Auch wenn die gelöschten Zeilen möglicherweise im Speicher vorhanden sind, da die CFPs für eine Zusammenführung nicht infrage kommen, wurden die gelöschten Zeilen möglicherweise bereits von der In-Memory-Garbage Collection aus dem Arbeitsspeicher entfernt. Die Verwaltung des Speichers und des Arbeitsspeichers erfolgt unabhängig von der Garbage Collection. Der Speicher, der von aktiven CFPs belegt wird (nicht alle CFPs werden aktualisiert), kann doppelt so groß wie bei dauerhaften Tabellen im Arbeitsspeicher ausfallen.  
+ Nicht alle CFPs mit verfügbarem Speicherplatz kommen für die Zusammenführung infrage. Wenn beispielsweise zwei aufeinanderfolgende CFPs zu 60 % gefüllt sind, kommen sie für eine Zusammenführung nicht infrage, und jedes dieser CFPs weist 40 % nicht genutzten Speicherplatz auf. Im ungünstigsten Fall sind alle CFPs zu 50 % gefüllt, was einer Speicherauslastung von nur 50 % entspricht. Auch wenn die gelöschten Zeilen möglicherweise im Speicher vorhanden sind, da die CFPs für eine Zusammenführung nicht infrage kommen, wurden die gelöschten Zeilen möglicherweise bereits von der In-Memory-Garbage Collection aus dem Arbeitsspeicher entfernt. Die Verwaltung des Speichers und des Arbeitsspeichers erfolgt unabhängig von der Garbage Collection. Der Speicher, der von aktiven CFPs belegt wird (nicht alle CFPs werden aktualisiert), kann doppelt so groß wie bei dauerhaften Tabellen im Arbeitsspeicher ausfallen.  
   
 ### <a name="life-cycle-of-a-cfp"></a>Lebenszyklus eines CFP  
  CFPs durchlaufen mehrere Zustände, bevor ihre Zuordnung aufgehoben werden kann. Als Folge der Datenbank-Prüfpunkte und Protokollsicherungen durchlaufen die Dateien die Phasen, und am Ende werden die nicht mehr benötigten Dateien bereinigt. Eine Beschreibung dieser Phasen finden Sie unter [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md).  

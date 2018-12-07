@@ -13,12 +13,12 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b302626d3a1f13a2be13d0da77f2f3aca684b83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a7449f51121491025d662fde50eaa548602cd41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772008"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503457"
 ---
 # <a name="database-mirroring-operating-modes"></a>Betriebsmodi der Datenbankspiegelung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47772008"
 > [!NOTE]  
 >  Die meisten Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützen nur die synchrone Datenbankspiegelung (nur SAFETY FULL). Weitere Informationen zu Editionen, die die Datenbankspiegelung vollständig unterstützen, finden Sie unter „Hohe Verfügbarkeit (Always On)“ in [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
- Wenn die Transaktionssicherheit auf OFF festgelegt ist, wird die Datenbank-Spiegelungssitzung asynchron ausgeführt. Im asynchronen Betrieb wird nur ein Betriebsmodus unterstützt, nämlich der Modus für hohe Leistung. Dieser Modus verbessert die Leistung auf Kosten der hohen Verfügbarkeit. Im Modus für hohe Leistung werden nur der Prinzipalserver und der Spiegelserver verwendet. Probleme auf dem Spiegelserver haben nie Auswirkungen auf den Prinzipalserver. Bei einem Ausfall des Prinzipalservers wird die Spiegeldatenbank als DISCONNECTED gekennzeichnet, steht jedoch als betriebsbereit zur Verfügung.  
+ Wenn die Transaktionssicherheit auf OFF festgelegt ist, wird die Datenbank-Spiegelungssitzung asynchron ausgeführt. Im asynchronen Betrieb wird nur ein Betriebsmodus unterstützt, der Modus für hohe Leistung. Dieser Modus verbessert die Leistung auf Kosten der Hochverfügbarkeit. Im Modus für hohe Leistung werden nur der Prinzipalserver und der Spiegelserver verwendet. Probleme auf dem Spiegelserver haben nie Auswirkungen auf den Prinzipalserver. Bei einem Ausfall des Prinzipalservers wird die Spiegeldatenbank als DISCONNECTED gekennzeichnet, steht jedoch als betriebsbereit zur Verfügung.  
   
  Im Modus für hohe Leistung wird nur eine Form des Rollenwechsels unterstützt: erzwungener Dienst (mit möglichem Datenverlust), der den Spiegelserver als betriebsbereiten Standbyserver verwendet. Der erzwungene Dienst ist eine der möglichen Antworten auf einen Fehler des Prinzipalservers. Da Datenverlust möglich ist, sollten Sie andere Alternativen in Betracht ziehen, bevor Sie den erzwungenen Dienst für den Spiegelserver verwenden. Weitere Informationen finden Sie im Abschnitt zu [Antworten auf Fehler des Prinzipalservers](#WhenPrincipalFails)weiter unten in diesem Thema.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "47772008"
   
  Im Gegensatz zu den beiden Partnern stellt der Zeuge die Datenbank nicht bereit. Der Zeuge unterstützt das automatische Failover einfach dadurch, dass er prüft, ob der Prinzipalserver aktiv und funktionsfähig ist. Der Spiegelserver initiiert das automatische Failover nur, wenn der Spiegel und der Zeuge miteinander verbunden bleiben, nachdem beide vom Prinzipalserver getrennt wurden.  
   
- Wenn ein Zeuge festgelegt ist, benötigt die Sitzung das *Quorum*– eine Beziehung zwischen mindestens zwei Serverinstanzen, damit die Datenbank verfügbar gemacht werden kann. Weitere Informationen finden Sie unter [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md) und [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Wenn ein Zeuge festgelegt ist, benötigt die Sitzung das *Quorum*, eine Beziehung zwischen mindestens zwei Serverinstanzen, damit die Datenbank verfügbar gemacht werden kann. Weitere Informationen finden Sie unter [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md) und [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  Für automatisches Failover müssen folgende Bedingungen erfüllt sein:  
   

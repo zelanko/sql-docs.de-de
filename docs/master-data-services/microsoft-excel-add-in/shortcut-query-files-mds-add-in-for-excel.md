@@ -11,12 +11,12 @@ ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 85c8a747e4b1ce6ad5221a1ae219e9032822b88b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15796a0783bd181e95df725de39f10802c5ed089
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801268"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411397"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>Shortcutabfragedateien (MDS-Add-In für Excel)
 
@@ -41,7 +41,7 @@ ms.locfileid: "47801268"
 ## <a name="queryopener-application"></a>QueryOpener-Anwendung  
  Für alle Benutzer, die den [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] installieren, ist eine Anwendung mit dem Namen QueryOpener installiert. Diese Anwendung wird verwendet, um Shortcutabfragedateien im [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]zu öffnen. Wenn Sie auf eine Shortcutabfragedatei doppelklicken, wird diese Anwendung automatisch zum Öffnen der Datei im Add-In verwendet.  
   
- Wenn Sie eine Shortcutabfragedatei mit dieser Anwendung öffnen, werden Sie aufgefordert, die Verbindung mit einer "sicheren" Verbindung herzustellen. Dies bedeutet, dass Sie Inhalt von diesem Speicherort vertrauen. (Eine Verbindung können Sie durch Auswahl von **Always allow connection to this address** (Verbindung zu dieser Adresse immer erlauben) an der Eingabeaufforderung als vertrauenswürdig und sicher deklarieren.) Jedes Mal, wenn Sie eine Verbindung als sicher markieren, wird sie einer Liste hinzugefügt. Wenn Sie diese Liste löschen möchten, öffnen Sie das Dialogfeld **Einstellungen** und klicken im Abschnitt **Zur sicheren Liste hinzugefügte Server** auf **Auswahl aufheben**.  
+ Wenn Sie eine Shortcutabfragedatei mit dieser Anwendung öffnen, werden Sie aufgefordert, die Verbindung mit einer „sicheren“ Verbindung herzustellen. Dies bedeutet, dass Sie Inhalt von diesem Speicherort vertrauen. (Eine Verbindung können Sie durch Auswahl von **Always allow connection to this address** (Verbindung zu dieser Adresse immer erlauben) an der Eingabeaufforderung als vertrauenswürdig und sicher deklarieren.) Jedes Mal, wenn Sie eine Verbindung als sicher markieren, wird sie einer Liste hinzugefügt. Wenn Sie diese Liste löschen möchten, öffnen Sie das Dialogfeld **Einstellungen** und klicken im Abschnitt **Zur sicheren Liste hinzugefügte Server** auf **Auswahl aufheben**.  
   
  Der Standardspeicherort für die Anwendung ist *Laufwerk*:\Programme\Microsoft SQL Server\130\Master Daten Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe.  
   

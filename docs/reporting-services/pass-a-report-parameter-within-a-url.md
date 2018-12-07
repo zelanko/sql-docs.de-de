@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a45460437b050275e2f679d64a5bd6a3fd5c4534
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b0848b6c5d34470964bc363b827e82c466f78326
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812823"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390483"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Übergeben von Berichtsparametern innerhalb einer URL
   Sie können Berichtsparameter an einen Bericht übergeben, indem Sie sie in eine Berichts-URL einschließen. Diesen URL-Parametern wird nichts vorangestellt, da sie direkt an die Berichtsverarbeitungs-Engine übergeben werden.  
@@ -46,7 +46,7 @@ ms.locfileid: "51812823"
 parameter=value  
 ```  
   
- Damit Sie beispielsweise die zwei Parameter "ReportMonth" und "ReportYear" angeben können, die in einem Bericht definiert wurden, verwenden Sie die folgende URL für einen Berichtsserver im einheitlichen Modus:  
+ Damit Sie beispielsweise die beiden Parameter „ReportMonth“ und „ReportYear“ angeben können, die in einem Bericht definiert wurden, verwenden Sie die folgende URL für einen Berichtsserver im nativen Modus:  
   
 ```  
 https://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
@@ -81,11 +81,11 @@ SalesOrderNumber:isnull=true
 ##  <a name="bkmk_examples"></a> Zusätzliche Beispiele  
  Die URL im folgenden Beispiel enthält Leerzeichen und mehrere Parameter.  
   
--   Der Ordnername SQL Server User Education Team enthält Leerzeichen; daher wird jedes Leerzeichen durch das Pluszeichen (+) ersetzt.  
+-   Der Ordnername „SQL Server User Education Team“ enthält Leerzeichen; daher wird jedes Leerzeichen durch das Pluszeichen (+) ersetzt.  
   
--   Der Berichtsname Team Project Report enthält Leerzeichen, und daher wird jedes Leerzeichen durch das Pluszeichen (+) ersetzt.  
+-   Der Berichtsname „Team Project Report“ enthält Leerzeichen, und daher wird jedes Leerzeichen durch das Pluszeichen (+) ersetzt.  
   
--   Übergibt zwei teamgrouping2-Parameter mit dem Wert xgroup und teamgrouping1 mit dem Wert ygroup.  
+-   Übergibt zwei teamgrouping2-Parameter mit dem Wert „xgroup“ und teamgrouping1 mit dem Wert „ygroup“.  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup  
@@ -97,7 +97,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- Im folgenden Beispiel für eine URL wird der einzelne *SellStartDate* -Parameter mit dem Wert „7/1/2005“ für einen Berichtsserver im einheitlichen Modus übergeben.  
+ Im folgenden Beispiel für eine URL wird der einzelne *SellStartDate*-Parameter mit dem Wert „7/1/2005“ für einen Berichtsserver im nativen Modus übergeben.  
   
 ```  
 https://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  

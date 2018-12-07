@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 256fd27b738070b1f18e77cd89b0fe8e75fbf952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6105d05a89ad05b0b20d45cb67f394796811e0ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779635"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505289"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -135,7 +135,7 @@ In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die I
  Die gespeicherte Systemprozedur sp_helprotect gibt Informationen zu Berechtigungen für sicherungsfähige Elemente auf Datenbankebene zurück.  
   
 ## <a name="with-grant-option"></a>WITH GRANT OPTION  
- Die Anweisung **GRANT** **WITH GRANT OPTION** gibt an, dass der Sicherheitsprinzipal, der die Berechtigung erhält, die Fähigkeit erhält, anderen Sicherheitskonten die angegebene Berechtigung zu erteilen. Wenn es sich bei dem Prinzipal, der die Berechtigung erhält, um eine Rolle oder eine Windows-Gruppe handelt, muss die **AS**-Klausel verwendet werden, wenn die Objektberechtigung Benutzern gewährt werden muss, die keine Elemente der Gruppe oder der Rolle sind. Da nur ein Benutzer anstelle einer Gruppe oder Rolle eine **GRANT**-Anweisung ausführen kann, muss ein spezifisches Element der Gruppe oder Rolle die **AS**-Klausel verwenden, um die Rollen- oder Gruppenmitgliedschaft beim Gewähren der Berechtigung explizit aufzurufen. Das folgende Beispiel zeigt, wie die Option **WITH GRANT OPTION** verwendet wird, wenn sie einer Rolle oder einer Windows-Gruppe gewährt wird.  
+ **GRANT** ... **WITH GRANT OPTION** gibt an, dass der Sicherheitsprinzipal, der die Berechtigung erhält, die Fähigkeit erhält, anderen Sicherheitskonten die angegebene Berechtigung zu erteilen. Wenn es sich bei dem Prinzipal, der die Berechtigung erhält, um eine Rolle oder eine Windows-Gruppe handelt, muss die **AS**-Klausel verwendet werden, wenn die Objektberechtigung Benutzern gewährt werden muss, die keine Elemente der Gruppe oder der Rolle sind. Da nur ein Benutzer anstelle einer Gruppe oder Rolle eine **GRANT**-Anweisung ausführen kann, muss ein spezifisches Element der Gruppe oder Rolle die **AS**-Klausel verwenden, um die Rollen- oder Gruppenmitgliedschaft beim Gewähren der Berechtigung explizit aufzurufen. Das folgende Beispiel zeigt, wie die Option **WITH GRANT OPTION** verwendet wird, wenn sie einer Rolle oder einer Windows-Gruppe gewährt wird.  
   
 ```  
 -- Execute the following as a database owner  

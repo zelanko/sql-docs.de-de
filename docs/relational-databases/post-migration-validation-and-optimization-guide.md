@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 897f8affc74e764b19457aec84bfff21b867895e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7dcb9f3efe8ffcc0e1dc2dbd0ff800f67f82d499
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658521"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506342"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Handbuch für die Überprüfung und Optimierung nach der Migration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ Einige Beispiele für nicht SARGable-Prädikate sind:
 3. Gründe für die Nützlichkeit der folgenden Konstrukte:
   -   Funktionen werden als Prädikate verwendet
   -   Platzhaltersuchen
-  -   Komplexe Ausdrücke auf Grundlage von spaltenbasierten Daten – bewerten Sie die Notwendigkeit, anstatt persistenter Spalten berechnete Spalten zu erstellen, die indiziert werden können
+  -   Komplexe Ausdrücke auf Grundlage von spaltenbasierten Daten. Bewerten Sie die Notwendigkeit, stattdessen persistente berechnete Spalten zu erstellen, die indiziert werden können
 
 > [!NOTE] 
 > Alles, was oben aufgeführt ist, kann programmgesteuert ausgeführt werden.

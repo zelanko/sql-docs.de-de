@@ -12,12 +12,12 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0ba960c94e1620b0381796a2e26112af21a3a9a1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 657308bcf378b6e35a360a2c6ad39a807c03e086
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696839"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392340"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Neues in Master Data Services (MDS)
 
@@ -82,7 +82,7 @@ ms.locfileid: "51696839"
   
  Einem Benutzer kann jetzt auf Modellebene explizit die Administratorberechtigung zugewiesen werden. Dies bedeutet, dass der Benutzer die Administratorberechtigung nicht verliert, wenn ihm später in der Modellunterstruktur andere Berechtigungen zugewiesen werden.  
   
- In dieser Version von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]werden durch die Einführung der folgenden neuen Berechtigungen mehr Berechtigungsstufen bereitgestellt: Lesen, Erstellen, Aktualisieren und Löschen. Beispielsweise kann jetzt ein Benutzer, der nur über die Berechtigung „Aktualisieren“ verfügt, die Masterdaten aktualisieren, ohne Daten zu erstellen oder zu löschen. Wenn Sie einem Benutzer die Berechtigung „Erstellen“, „Aktualisieren“ oder „Löschen“ erteilen, erhält er auch automatisch die Berechtigung „Lesen“. Die Berechtigungen „Lesen“, „Erstellen“, „Aktualisieren“ und „Löschen“ können auch kombiniert werden.  
+ In dieser Version von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] werden durch die Einführung der folgenden neuen Berechtigungen mehr Berechtigungsstufen bereitgestellt: Lesen, Erstellen, Aktualisieren und Löschen. Beispielsweise kann jetzt ein Benutzer, der nur über die Berechtigung „Aktualisieren“ verfügt, die Masterdaten aktualisieren, ohne Daten zu erstellen oder zu löschen. Wenn Sie einem Benutzer die Berechtigung „Erstellen“, „Aktualisieren“ oder „Löschen“ erteilen, erhält er auch automatisch die Berechtigung „Lesen“. Die Berechtigungen „Lesen“, „Erstellen“, „Aktualisieren“ und „Löschen“ können auch kombiniert werden.  
   
  Wenn Sie ein Upgrade auf [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]durchführen, werden alte Berechtigungen in neue Berechtigungen konvertiert, wie in der folgenden Tabelle veranschaulicht.  
   

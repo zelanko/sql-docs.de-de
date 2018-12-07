@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c73e625f6447d5afd1e60acf8ec0e9159dcdb04e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849588"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410857"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Erste Schritte mit Berechtigungen für die Datenbank-Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `PERMISSION` legt fest, welche Aktion zulässig oder unzulässig ist. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] In können 230 Berechtigungen angegeben werden. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] bietet weniger Berechtigungen, da einige Aktionen in Azure nicht relevant sind. Die Berechtigungen sind im Thema [Berechtigungen &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/permissions-database-engine.md) und im nachstehenden Diagramm aufgeführt.  
   
--   `ON SECURABLE::NAME` ist der Typ des sicherungsfähigen Objektes (Server, Serverobjekt, Datenbank oder Datenbankobjekt) und sein Name. Einige Berechtigungen erfordern `ON SECURABLE::NAME` nicht, da diese Angabe unmissverständlich oder im Kontext nicht zulässig ist. Die Berechtigung `CREATE TABLE` erfordert z.B. nicht die `ON SECURABLE::NAME` -Klausel. (Beispiel: `GRANT CREATE TABLE TO Mary;` erlaubt Mary das Erstellen von Tabellen.)  
+-   `ON SECURABLE::NAME` ist der Typ des sicherungsfähigen Objektes (Server, Serverobjekt, Datenbank oder Datenbankobjekt) und sein Name. Einige Berechtigungen erfordern `ON SECURABLE::NAME` nicht, da diese Angabe unmissverständlich oder im Kontext nicht zulässig ist. Die Berechtigung `CREATE TABLE` erfordert z.B. nicht die `ON SECURABLE::NAME`-Klausel. (Beispiel: `GRANT CREATE TABLE TO Mary;` erlaubt Mary das Erstellen von Tabellen.)  
   
 -   `PRINCIPAL` ist der Sicherheitsprinzipal (Anmeldung, Benutzer oder Rolle), der die Berechtigung empfängt oder verliert. Erteilen Sie Berechtigungen nach Möglichkeit stets Rollen.  
   

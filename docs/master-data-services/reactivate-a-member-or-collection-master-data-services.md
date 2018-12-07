@@ -19,12 +19,12 @@ ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d4ae3628252f20b1f56d54e1ad08c2eada426aea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00453cc3aacdaf644f1009c1564745c0b4a9f402
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839918"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412447"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>Reaktivieren eines Elements oder einer Auflistung (Master Data Services)
 
@@ -40,7 +40,7 @@ ms.locfileid: "47839918"
   
  Wenn Sie ein Element erneut aktivieren, werden dessen Attribute und Mitgliedschaften in Hierarchien und Auflistungen wiederhergestellt.  
   
- Sie können auch Auflistungen erneut aktivieren. In diesem Fall werden die Attribute der Auflistung und die Elemente, die zur Auflistung gehören, wiederhergestellt.  
+ Sie können auch Auflistungen erneut aktivieren. In diesem Fall werden die Attribute der Collection und die Elemente, die zur Collection gehören, wiederhergestellt.  
   
  Wenn eine Auflistung oder ein Element erneut aktiviert wird, werden alle vorherigen Transaktionen wiederhergestellt.  
   

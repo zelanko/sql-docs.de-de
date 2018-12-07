@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 8dde773d49f9f53c6c35a7a4508b3666180480fd
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 66a1663a0411f91dcf89c294f10f087704ec96e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604950"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418674"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services mit Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "51604950"
   
  Um [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 und früher zu verwenden, müssen Sie einen Hotfix für .NET 3.5 SP1 herunterladen und installieren. Der Hotfix fügt Unterstützung für Funktionen des SQL Client für Verfügbarkeitsgruppen und Unterstützung der Verbindungszeichenfolgeneigenschaften **ApplicationIntent** und **MultiSubnetFailover**hinzu. Wenn der Hotfix nicht auf jedem Computer installiert ist, der einen Berichtsserver hostet, dann sehen Benutzer, die versuchen, Berichte in der Vorschau anzuzeigen, eine Fehlermeldung wie die Folgende, und die Fehlermeldung wird in das Ablaufverfolgungsprotokoll des Berichtsservers geschrieben:  
   
-> **Fehlermeldung:** "Das Schlüsselwort wird nicht unterstützt: 'applicationintent'"  
+> **Fehlermeldung:** „Das Schlüsselwort wird nicht unterstützt: ‚applicationintent‘“  
   
- Die Meldung wird ausgegeben, wenn Sie eine der [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Eigenschaften in die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Verbindungszeichenfolge einschließen, aber der Server die Eigenschaft nicht erkennt. Die angegebene Fehlermeldung wird angezeigt, wenn Sie auf die Schaltfläche 'Verbindung testen' in den [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Benutzeroberflächen klicken, und wenn Sie den Bericht in der Vorschau anzeigen, sofern Remotefehler auf den Berichtsservern aktiviert sind.  
+ Die Meldung wird ausgegeben, wenn Sie eine der [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Eigenschaften in die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Verbindungszeichenfolge einschließen, aber der Server die Eigenschaft nicht erkennt. Die angegebene Fehlermeldung wird angezeigt, wenn Sie in den [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Benutzeroberflächen auf die Schaltfläche „Verbindung testen“ klicken, und wenn Sie den Bericht in der Vorschau anzeigen, sofern Remotefehler auf den Berichtsservern aktiviert sind.  
   
  Weitere Informationen zum erforderlichen Hotfix finden Sie in [KB 2654347A, Hotfix bietet Unterstützung für die Always On-Funktionen aus SQL Server 2012 in .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkId=242896).  
   
@@ -88,7 +88,7 @@ ms.locfileid: "51604950"
   
 -   **SharePoint-Modus:** Verwenden Sie die SharePoint-Konfigurationsseiten innerhalb der Dokumentbibliotheken für Berichte, die bereits auf einem SharePoint-Server veröffentlicht wurden.  
   
--   **Berichtsentwurf:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] oder [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] , wenn Sie neue Berichte erstellen. Weitere Informationen finden Sie im Abschnitt 'Berichtsentwurf' in diesem Thema.  
+-   **Berichtsentwurf:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] oder [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] , wenn Sie neue Berichte erstellen. Weitere Informationen finden Sie in diesem Thema im Abschnitt „Berichtsentwurf“.  
   
  **Zusätzliche Ressourcen:**  
   
@@ -104,7 +104,7 @@ ms.locfileid: "51604950"
   
 -   Geografischer Standort und Entfernung zwischen den primären und sekundären Replikaten. Die Verzögerung ist z. B. in der Regel größer, wenn die sekundären Replikate sich einem anderen Rechenzentrum befinden, als wenn sie sich im gleichen Gebäude wie das primäre Replikat befinden.  
   
--   Konfiguration des Verfügbarkeitsmodus für jedes Replikat. Der Verfügbarkeitsmodus legt fest, ob das primäre Replikat mit dem Commit der Transaktionen für eine Datenbank wartet, bis das sekundäre Replikat die Transaktion auf den Datenträger geschrieben hat. Weitere Informationen finden Sie im Abschnitt „Verfügbarkeitsmodi“ von [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
+-   Konfiguration des Verfügbarkeitsmodus für jedes Replikat. Der Verfügbarkeitsmodus legt fest, ob das primäre Replikat mit dem Commit der Transaktionen für eine Datenbank wartet, bis das sekundäre Replikat die Transaktion auf den Datenträger geschrieben hat. Weitere Informationen finden Sie im Abschnitt „Verfügbarkeitsmodi“ des Themas [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
  Wenn ein schreibgeschütztes sekundäres Replikat als [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Datenquelle verwendet wird, muss sichergestellt werden, dass die Datenupdatewartezeit die Anforderungen der Berichtsbenutzer erfüllt.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "51604950"
   
 -   **Remote- oder Servermodusvorschau:** Wenn nach dem Veröffentlichen von Berichten auf dem Berichtsserver oder Anzeigen der Vorschau auf [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]ein Fehler wie der Folgende angezeigt wird, ist dies ein Hinweis darauf, dass Sie Berichte vom Berichtsserver anzeigen, und dass der .NET Framework 3.5 SP1-Hotfix für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nicht auf dem Berichtsserver installiert wurde.  
   
-> **Fehlermeldung:** "Das Schlüsselwort wird nicht unterstützt: 'applicationintent'"  
+> **Fehlermeldung:** „Das Schlüsselwort wird nicht unterstützt: ‚applicationintent‘“  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Berichtsserver-Datenbanken und Verfügbarkeitsgruppen  
  Reporting Services und Power BI-Berichtsserver bieten eingeschränkte Unterstützung für die Verwendung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit Berichtsserver-Datenbanken. Die Berichtsserver-Datenbanken können in Verfügbarkeitsgruppen als Teil eines Replikats konfiguriert werden, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet bei einem Failover jedoch nicht automatisch ein anderes Replikat für die Berichtsserver-Datenbanken. Die Verwendung von MultiSubnetFailover mit den Berichtsserver-Datenbanken wird nicht unterstützt.  
@@ -142,7 +142,7 @@ ms.locfileid: "51604950"
   
 -   ReportServerTempDB  
   
- Der einheitliche Modus unterstützt bzw. verwendet Warnungsdatenbanken und zugehörige Funktionen nicht. Berichtsserver im einheitlichen Modus konfigurieren Sie im [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager. Im SharePoint-Modus konfigurieren Sie den Dienstanwendungsdatenbanknamen als Namen des "Clientzugriffspunkts", den Sie als Teil der SharePoint-Konfiguration erstellten. Weitere Informationen zum Konfigurieren von SharePoint mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Konfigurieren und Verwalten von SQL Server-Verfügbarkeitsgruppen für SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165)).  
+ Der einheitliche Modus unterstützt bzw. verwendet Warnungsdatenbanken und zugehörige Funktionen nicht. Berichtsserver im einheitlichen Modus konfigurieren Sie im [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager. Im SharePoint-Modus konfigurieren Sie den Dienstanwendungsdatenbanknamen als Namen des „Clientzugriffspunkts“, den Sie als Teil der SharePoint-Konfiguration erstellten. Weitere Informationen zum Konfigurieren von SharePoint mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Konfigurieren und Verwalten von SQL Server-Verfügbarkeitsgruppen für SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165)).  
   
 > [!NOTE]  
 >  Berichtsserver im SharePoint-Modus verwenden einen Synchronisierungsvorgang zwischen den [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Dienstanwendungsdatenbanken und den SharePoint-Inhaltsdatenbanken. Es ist wichtig, die Berichtsserver-Datenbanken und Inhaltsdatenbanken zusammen zu verwalten. Sie sollten erwägen, sie in den gleichen Verfügbarkeitsgruppen zu konfigurieren, damit sie bei Failover und Wiederherstellung als Satz behandelt werden. Nehmen Sie das folgende Szenario als Beispiel:  
@@ -158,7 +158,7 @@ ms.locfileid: "51604950"
   
 -   **Primäres Replikat:** Konfigurieren Sie die Berichtsserver-Datenbanken als Teil einer einzelnen Verfügbarkeitsgruppe, und erstellen Sie ein primäres Replikat, das alle Berichtsserver-Datenbanken einschließt.  
   
--   **Sekundäre Replikate:** Erstellen Sie ein oder mehrere sekundäre Replikate. Die übliche Methode zum Kopieren der Datenbanken vom primären Replikat zum sekundären Replikat besteht darin, die Datenbanken mit 'RESTORE WITH NORECOVERY' auf jedem sekundären Replikat wiederherzustellen. Weitere Informationen zum Erstellen von sekundären Replikaten und zum Überprüfen, ob die Datensynchronisierung funktioniert, finden Sie unter [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+-   **Sekundäre Replikate:** Erstellen Sie ein oder mehrere sekundäre Replikate. Die übliche Methode zum Kopieren der Datenbanken vom primären Replikat zum sekundären Replikat besteht darin, die Datenbanken mit „RESTORE WITH NORECOVERY“ auf jedem sekundären Replikat wiederherzustellen. Weitere Informationen zum Erstellen von sekundären Replikaten und zum Überprüfen, ob die Datensynchronisierung funktioniert, finden Sie unter [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 -   **Berichtsserveranmeldeinformationen:** Sie müssen die entsprechenden Berichtsserveranmeldeinformationen auf den sekundären Replikaten erstellen, die Sie auf dem primären Replikat erstellt haben. Die genauen Schritte hängen davon ab, welchen Authentifizierungstyp Sie in der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Umgebung verwenden; Windows-[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Dienstkonto, Windows-Benutzerkonto oder SQL Server-Authentifizierung. Weitere Informationen finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   

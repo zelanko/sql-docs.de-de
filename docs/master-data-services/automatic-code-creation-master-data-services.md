@@ -12,12 +12,12 @@ ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 24965436108df067d7bd4ea10b4ad1e71b9ce69e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f77a3a5ffd40ea3f279f64a42c173625b95e4bd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727278"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394273"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Automatische Codeerstellung (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "47727278"
 ## <a name="generating-other-attribute-values"></a>Generieren von anderen Attributwerten  
  Administratoren können Werte für andere Attribute als Code automatisch generieren, indem sie Geschäftsregeln erstellen. Sie können einen Anfangswert angeben und die Zahl angeben, um die jeder nachfolgende Wert inkrementiert wird.  
   
- Wenn Sie Attributwerte in MDS entweder in einem der Tools oder mit dem Stagingprozess eingeben, können Sie den Attributwert leer lassen. Wenn Geschäftsregeln angewendet werden, werden die Werte auf Grundlage des höchsten vorhandenen Werts inkrementiert. Wenn die Regel z. B. "Standardattribut für einen generierten Wert, der bei 1 startet und um 4 inkrementiert wird" lautet und der höchste aktuelle Wert für das Attribut 700 ist, beträgt der Wert für das nächste Element, das hinzugefügt wird, 704.  
+ Wenn Sie Attributwerte in MDS entweder in einem der Tools oder mit dem Stagingprozess eingeben, können Sie den Attributwert leer lassen. Wenn Geschäftsregeln angewendet werden, werden die Werte auf Grundlage des höchsten vorhandenen Werts inkrementiert. Wenn die Regel z.B. „Standardattribut für einen generierten Wert, der bei 1 startet und um 4 inkrementiert wird“ lautet und der höchste aktuelle Wert für das Attribut „700“ ist, beträgt der Wert für das nächste hinzugefügte Element „704“.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

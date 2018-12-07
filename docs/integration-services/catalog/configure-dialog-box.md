@@ -15,12 +15,12 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1089176ed6b47ab7001f0a505b7d475bf1241c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 179c3418f6d8c13c4974d6b5b023e1905140c6a3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662388"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410207"
 ---
 # <a name="configure-dialog-box"></a>Konfigurieren (Dialogfeld)
   Verwenden Sie das Dialogfeld **Konfigurieren** , um Parameter, Verbindungs-Manager und Umgebungsverweise für Pakete und Projekte zu konfigurieren.  
@@ -37,7 +37,7 @@ ms.locfileid: "47662388"
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zum [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server her.  
   
-     Sie stellen eine Verbindung mit der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanz her, die die SSISDB-Datenbank hostet.  
+     Sie stellen eine Verbindung mit der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz her, die die SSISDB-Datenbank hostet.  
   
 2.  Erweitern Sie im Objekt-Explorer die Struktur, um den Knoten **Integration Services-Kataloge** anzuzeigen.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "47662388"
 ##  <a name="references"></a> Festlegen der Optionen auf der Seite 'Verweise'  
  Verwenden Sie die Seite **Verweise** , um Umgebungsverweise hinzuzufügen und zu entfernen und um auf Umgebungseigenschaften zuzugreifen.  
   
- In einer Umgebung werden Laufzeitwerte für Pakete festgelegt, die in den auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellten Projekten enthalten sind.  
+ In einer Umgebung werden Laufzeitwerte für Pakete festgelegt, die in den auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitgestellten Projekten enthalten sind.  
   
  **Umgebung**  
  Listet die Umgebung auf.  

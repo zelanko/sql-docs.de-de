@@ -11,12 +11,12 @@ ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfb25121dcc417f2ead0d85bc723bc7b402cebab
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0b58d17340eeee18fdda5b6ea56f9aebd291ba1f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675069"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400034"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Vorgehensweise: Erstellen von Testbedingungen für den SQL Server-Komponententest-Designer
 Mit der erweiterbaren [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)-Klasse können neue Testbedingungen erstellt werden. Beispielsweise können Sie eine neue Testbedingung erstellen, mit der die Anzahl der Spalten oder die Werte in einem Resultset überprüft werden.  
@@ -178,7 +178,7 @@ Die Klasse für die benutzerdefinierte Testbedingung erbt von der [TestCondition
   
 |Attributparameter|Position|und Beschreibung|  
 |-----------------------|------------|---------------|  
-|DisplayName|1|Identifiziert die Zeichenfolge im Kombinationsfeld Testbedingungen. Dieser Name muss eindeutig sein. Wenn zwei Bedingungen über denselben Anzeigenamen verfügen, wird die erste gefundene Bedingung angezeigt, und im Fehler-Manager von Visual Studio wird eine Warnung ausgegeben.|  
+|DisplayName|1|Gibt die Zeichenfolge im Kombinationsfeld „Testbedingungen“ an. Dieser Name muss eindeutig sein. Wenn zwei Bedingungen über denselben Anzeigenamen verfügen, wird die erste gefundene Bedingung angezeigt, und im Fehler-Manager von Visual Studio wird eine Warnung ausgegeben.|  
 |ImplementingType|2|Dieser Parameter wird verwendet, um die Erweiterung eindeutig zu identifizieren. Er muss in Anpassung an den Typ geändert werden, für den das Attribut verwendet wird. In diesem Beispiel wird der Typ **ResultSetColumnCountCondition** verwendet. Verwenden Sie daher **typeof(ResultSetColumnCountCondition)**. Falls Sie den Typ **NewTestCondition** verwenden, verwenden Sie **typeof(NewTestCondition)**.|  
   
 In diesem Beispiel fügen Sie zwei Eigenschaften hinzu. Benutzer der benutzerdefinierten Testbedingung können die ResultSet-Eigenschaft verwenden, um das Resultset anzugeben, dessen Spaltenanzahl überprüft werden soll. Anschließend kann mit der Count-Eigenschaft die erwartete Spaltenanzahl angegeben werden.  

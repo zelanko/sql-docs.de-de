@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 94616b5950ca1ff7f33d9061d2bbc8bab53fbc8c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 719fc39579f76b8f028de27cf8d22623968231c6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602630"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405967"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Einrichten der Verteilungsdatenbank für die Replikation in einer Always On-Verfügbarkeitsgruppe
 
@@ -48,7 +48,7 @@ Nachdem eine Verteilungsdatenbank gemäß der nachfolgenden Anleitung in der Ver
 - Knoten zur vorhandenen Verteilungsdatenbank hinzufügen oder daraus entfernen
 - Ein Verteiler kann über mehrere Verteilungsdatenbanken verfügen. Jede Verteilungsdatenbank kann sich in einer eigenen oder gar keiner Verfügbarkeitsgruppe befinden. Mehrere Verteilungsdatenbanken können sich eine Verfügbarkeitsgruppe teilen.
 - Verleger und Verteiler müssen sich auf separaten SQL Server-Instanzen befinden.
-- Wenn der Listener für die Verfügbarkeitsgruppe, die die Verteilungsdatenbank hostet, so konfiguriert ist, dass kein Standardport verwendet wird, müssen Sie einen Alias für den Listener und den Port einrichten.
+- Wenn der Listener für die Verfügbarkeitsgruppe, die die Verteilungsdatenbank hostet, so konfiguriert ist, dass kein Standardport verwendet wird, müssen Sie einen Alias für den Listener und den Port einrichten. Dieser Alias müsste für alle Verleger, Verteiler, und Abonnentenreplikate (für Abonnenten im Pullmodus) erstellt werden. 
 
 ## <a name="limitations-or-exclusions"></a>Einschränkungen oder Ausschlüsse
 

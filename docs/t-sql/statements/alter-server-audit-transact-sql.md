@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5f5eea2555792f5c25338407144df53d5784ed39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9176be66c987d3ff4f7cdf09ac8dd70fc1447273
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756562"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411857"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ Erzwingt, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
  Sie können Überwachungsspezifikation hinzufügen, ändern und entfernen, ohne eine Überwachung beenden zu müssen.  
   
- Sie können den GUID einer Überwachung nicht ändern, nachdem die Überwachung erstellt wurde.  
+ Sie können die GUID einer Überwachung nicht ändern, nachdem die Überwachung erstellt wurde.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Um einen Serverüberwachungsprinzipal erstellen, ändern oder löschen zu können, müssen Sie über die Berechtigung ALTER ANY SERVER AUDIT oder CONTROL SERVER verfügen.  

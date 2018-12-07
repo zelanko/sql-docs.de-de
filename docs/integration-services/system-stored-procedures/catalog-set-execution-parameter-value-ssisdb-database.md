@@ -11,17 +11,17 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7d44c57600719b35340295723f0ab25b4e1ae56f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c89486bb4d33ba52d1e0516d51eede715ddd9987
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808668"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405648"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Legt den Wert eines Parameters für eine Instanz der Ausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog fest.  
+  Legt den Wert eines Parameters für eine Instanz der Ausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog fest.  
   
  Ein Parameterwert kann nicht geändert werden, nachdem eine Instanz der Ausführung gestartet wurde.  
   
@@ -83,25 +83,25 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |4|Runtimeherkunft<br /><br /> Sammelt die Daten, die zum Nachverfolgen der Datenherkunft im Datenfluss benötigt werden.|  
 |100|Benutzerdefinierter Protokolliergrad<br /><br /> Legen Sie die Einstellungen im CUSTOMIZED_LOGGING_LEVEL-Parameter fest. Weitere Informationen zu den Werten, die Sie angeben können, finden Sie unter [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> Weitere Informationen zu benutzerdefinierten Protokolliergraden finden Sie unter [Aktivieren der Protokollierung für die Paketausführung auf dem SSIS-Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).|  
   
- Um festzulegen, dass der Integration Services-Server Dumpdateien generiert, wenn während einer Paketausführung ein Fehler auftritt, legen Sie die folgenden Parameterwerte für eine Ausführungsinstanz fest, die nicht ausgeführt wurde.  
+ Wenn Sie festlegen möchten, dass der Integration Services-Server Dumpdateien generiert, wenn während einer Paketausführung ein Fehler auftritt, legen Sie die folgenden Parameterwerte für eine Ausführungsinstanz fest, die nicht ausgeführt wurde.  
   
 |Parameter|value|  
 |---------------|-----------|  
 |*execution_id*|Der eindeutige Bezeichner für die Instanz der Ausführung|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_ERROR|  
+|*parameter_name*|'DUMP_ON_ERROR|  
 |*parameter_value*|1|  
   
- Um festzulegen, dass der Integration Services-Server Dumpdateien generiert, wenn während einer Paketausführung Ereignisse auftreten, legen Sie die folgenden Parameterwerte für eine Ausführungsinstanz fest, die nicht ausgeführt wurde.  
+ Wenn Sie festlegen möchten, dass der Integration Services-Server Dumpdateien generiert, wenn während einer Paketausführung Ereignisse auftreten, legen Sie die folgenden Parameterwerte für eine Ausführungsinstanz fest, die nicht ausgeführt wurde.  
   
 |Parameter|value|  
 |---------------|-----------|  
 |*execution_id*|Der eindeutige Bezeichner für die Instanz der Ausführung|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_EVENT|  
+|*parameter_name*|'DUMP_ON_EVENT|  
 |*parameter_value*|1|  
   
- Um die während einer Paketausführung auftretenden Ereignisse festzulegen, die Integration Services-Server zum Generieren von Dumpdateien veranlassen, legen Sie die folgenden Parameterwerte für eine Ausführungsinstanz fest, die nicht ausgeführt wurde. Trennen Sie mehrere Ereigniscodes mithilfe eines Semikolons.  
+ Wenn Sie die während einer Paketausführung auftretenden Ereignisse festlegen möchten, die Integration Services-Server zum Generieren von Dumpdateien veranlassen, legen Sie die folgenden Parameterwerte für eine Ausführungsinstanz fest, die nicht ausgeführt wurde. Trennen Sie mehrere Ereigniscodes mithilfe eines Semikolons.  
   
 |Parameter|value|  
 |---------------|-----------|  

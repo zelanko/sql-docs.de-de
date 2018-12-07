@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df7cb6c2f5c04138d6738eadeb9b352d21f240f5
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a8acf400f03ec77aff21d839dee132ba5258f54f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813683"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403635"
 ---
 # <a name="html-device-information-settings"></a>HTML-Geräteinformationseinstellungen
 In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern in das HTML-Format aufgeführt.  
@@ -41,7 +41,7 @@ In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern
 |**OutlookCompat**|Gibt an, ob beim Rendern zusätzliche Metadaten verwendet werden sollen, um die Darstellung des Berichts in Outlook zu optimieren. Der Standardwert ist **false**.|  
 |**Parameter**|Gibt an, ob der Parameterbereich der Symbolleiste angezeigt oder ausgeblendet werden soll. Wenn Sie diesen Parameter auf den Wert **true**festlegen, wird der Parameterbereich der Symbolleiste angezeigt. Der Standardwert dieses Parameters ist **true**.|  
 |**PrefixId**|Bei Verwendung mit **HTMLFragment**wird das angegebene Präfix allen **ID** -Attributen des zu erstellenden HTML-Fragments hinzugefügt.|  
-|**ReplacementRoot(\*)**|Die Zeichenfolge, die allen Drillthrough-, Umschalt- und Lesezeichenlinks im Bericht vorangestellt wird, wenn das Rendern außerhalb des ReportViewer-Steuerelements erfolgt. Dies wird beispielsweise verwendet, um den Klick eines Benutzers auf eine benutzerdefinierte Seite umzuleiten.|  
+|**ReplacementRoot(\*)**|Die Zeichenfolge, die allen Drillthrough-, Umschalt- und Lesezeichenlinks im Bericht vorangestellt wird, wenn das Rendern außerhalb des ReportViewer-Steuerelements erfolgt. Diese wird beispielsweise verwendet, um den Klick eines Benutzers auf eine benutzerdefinierte Seite umzuleiten.|  
 |**ResourceStreamRoot(\*)**|Die Zeichenfolge, die der URL für alle Bildressourcen vorangestellt wird, z. B. Bilder für die Umschaltfläche oder Sortierung.|  
 |**Abschnitt**|Die Seitenzahl des zu rendernden Berichts. Der Wert **0** gibt an, dass alle Abschnitte des Berichts gerendert werden. Der Standardwert ist **1**.|  
 |**StreamRoot (\*)**|Der im HTML-Bericht dem Wert des **src** -Attributs des IMG-Elements vorangestellte Pfad, welcher vom Berichtsserver zurückgegeben wird. Standardmäßig stellt der Berichtsserver den Pfad bereit. Sie können diese Einstellung verwenden, um einen Stammpfad für die Bilder in einem Bericht anzugeben (beispielsweise **https://\<Servername>/resources/companyimages**).|  

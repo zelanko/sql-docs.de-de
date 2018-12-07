@@ -31,12 +31,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcaca36529f0a3592a96b943184ef7f26ab59d52
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 12f91e676983cea041d966a0306fb1faf636019b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642234"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505927"
 ---
 # <a name="foreach-loop-container"></a>Foreach-Schleifencontainer
   Der Foreach-Schleifencontainer definiert die Wiederholung einer Ablaufsteuerung in einem Paket. Die Schleifenimplementierung ist mit der **Foreach** -Schleifenstruktur in Programmiersprachen zu vergleichen. In einem Paket wird die Schleife mithilfe eines Foreach-Enumerators ermöglicht.  Der Foreach-Schleifencontainer wiederholt die Ablaufsteuerung für jedes Mitglied eines angegebenen Enumerators.  
@@ -155,7 +155,7 @@ In diesem Verfahren wird das Konfigurieren eines Foreach-Schleifencontainers bes
   
     -   Wenn Sie den Foreach-SMO-Enumerator verwenden möchten, wählen Sie eine vorhandene ADO.NET-Verbindung aus, oder klicken Sie in der Liste **Verbindung** auf **Neue Verbindung** , und geben Sie die zu verwendende Zeichenfolge ein, oder klicken Sie auf **Durchsuchen**. **Dadurch** haben Sie im Dialogfeld **SMO-Enumeration auswählen** die Möglichkeit, den aufzuzählenden Objekttyp und den Enumerationstyp auszuwählen. Klicken Sie dann auf **OK**.  
   
-6.  Klicken Sie optional im Textfeld **Ausdrücke** auf der Seite **Sammlung** auf die Schaltfläche mit den drei Punkten **(…)** , um Ausdrücke zu erstellen, mit denen Eigenschaftswerte aktualisiert werden. Weitere Informationen finden Sie unter [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](../../integration-services/expressions/add-or-change-a-property-expression.md).  
+6.  Klicken Sie optional im Textfeld **Ausdrücke** auf der Seite **Sammlung** auf die Schaltfläche mit den drei Auslassungspunkten **(…)**, um Ausdrücke zu erstellen, mit denen Eigenschaftswerte aktualisiert werden. Weitere Informationen finden Sie unter [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  Die in der Liste **Eigenschaft** aufgeführten Eigenschaften hängen vom Enumerator ab.  
@@ -213,7 +213,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
 |**Foreach-ADLS-Datei-Enumerator**|Aufzählen von Dateien im angegebenen Data Lake Store-Verzeichnis. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-ADLS-Datei-Enumerator** die dynamischen Optionen angezeigt.|
   
  **Ausdrücke**  
- Klicken Sie auf die Option **Ausdrücke** , oder erweitern Sie diese, um die Liste der vorhandenen Eigenschaftsausdrücke anzuzeigen. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, um einer Enumeratoreigenschaft einen Eigenschaftsausdruck hinzuzufügen, oder um einen vorhandenen Eigenschaftsausdruck zu bearbeiten und auszuwerten.  
+ Klicken Sie auf die Option **Ausdrücke** , oder erweitern Sie diese, um die Liste der vorhandenen Eigenschaftsausdrücke anzuzeigen. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, um einen Eigenschaftsausdruck zu einer Enumeratoreigenschaft hinzuzufügen, oder um einen vorhandenen Eigenschaftsausdruck zu bearbeiten und auszuwerten.  
   
  **Verwandte Themen:** [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Eigenschaftsausdrucks-Editor](../../integration-services/expressions/property-expressions-editor.md), [Ausdrucks-Generator](../../integration-services/expressions/expression-builder.md)  
   
@@ -240,11 +240,11 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  Geben Sie die aufzuzählenden Dateien an.  
   
 > [!NOTE]  
->  Sie können Platzhalterzeichen (*) verwenden, um die in der Sammlung zu berücksichtigenden Dateien anzugeben. Um Dateien einzubeziehen, deren Name „abc“ enthält, verwenden Sie beispielsweise den folgenden Filter: \*abc\*.  
+>  Sie können Platzhalterzeichen (*) verwenden, um die in der Sammlung zu berücksichtigenden Dateien anzugeben. Verwenden Sie zum Einbeziehen von Dateien, deren Name „abc“ enthält, beispielsweise den folgenden Filter: \*abc\*.  
 >   
 >  Wenn Sie eine Dateierweiterung angeben, gibt der Enumerator auch Dateien mit derselben Erweiterung mit angehängten zusätzlichen Zeichen zurück. (Dieses Verhalten entspricht dem Verhalten des **dir**-Befehls im Betriebssystem, mit dem 8.3-Dateinamen auf Abwärtskompatibilität überprüft werden.) Dieses Verhalten des Enumerators könnte unerwartete Ergebnisse verursachen. Angenommen, Sie möchten nur Excel 2003-Dateien auflisten und geben "*.xls" an. Der Enumerator gibt in diesem Fall auch Excel 2007-Dateien zurück, da sie die Erweiterung „.xlsx“ haben.  
 >   
->  Sie können einen Ausdruck verwenden, um die in eine Sammlung einzubeziehenden Dateien anzugeben. Erweitern Sie dazu **Ausdrücke** auf der Seite **Sammlung** , wählen Sie die **FileSpec** -Eigenschaft aus, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (…), um den Eigenschaftsausdruck hinzuzufügen.  
+>  Sie können einen Ausdruck verwenden, um die in eine Sammlung einzubeziehenden Dateien anzugeben. Erweitern Sie dazu auf der Seite **Sammlung** die Option **Ausdrücke**, wählen Sie die **FileSpec**-Eigenschaft aus, und klicken Sie anschließend auf die Schaltfläche mit den Auslassungspunkten (…), um den Eigenschaftsausdruck hinzuzufügen.  
   
  **Vollqualifiziert**  
  Wählen Sie diese Option aus, um den vollqualifizierten Pfad von Dateinamen abzurufen. Wenn in der Dateioption Platzhalterzeichen angegeben wurden, stimmen die zurückgegebenen vollqualifizierten Pfade mit dem Filter überein.  
@@ -347,7 +347,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
 |**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **DocumentSource**  
- Wenn für **DocumentSourceType** die Option **Direkteingabe** festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (…), um mithilfe des Dialogfelds **Dokumentquellen-Editor** XML bereitzustellen.  
+ Wenn für **DocumentSourceType** die Option **Direkteingabe** festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (…), um über das Dialogfeld **Dokumentquellen-Editor** XML bereitzustellen.  
   
  Wenn **DocumentSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   

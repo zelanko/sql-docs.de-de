@@ -14,12 +14,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23c5961e3cc5c194690f99c8e614adf402ef31c7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 86bd76e7d1e4cfce15343355a915d5d1bf5a0d9d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701958"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504081"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Erstellen von Abfragen mit anderen Quellen als einer Tabelle (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ FROM sales
 Weitere Informationen zum Hinzufügen einer Sicht zu einer Abfrage finden Sie unter [Hinzufügen von Tabellen zu Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md).  
   
 ## <a name="using-a-query-in-place-of-a-table"></a>Verwenden einer Abfrage anstelle einer Tabelle  
-Sie können Zeilen aus einer Abfrage auswählen. Nehmen Sie z. B. an, dass Sie bereits eine Abfrage erstellt haben, die die Titel und IDs für Bücher zurückgibt, für die ein Mitautor angegeben ist, also alle Bücher mit mehreren Autoren. Die SQL-Anweisung könnte folgendermaßen aussehen:  
+Sie können Zeilen aus einer Abfrage auswählen. Nehmen Sie z.B. an, dass Sie bereits eine Abfrage erstellt haben, die die Titel und IDs für Bücher zurückgibt, für die ein Mitautor angegeben ist, also alle Bücher mit mehreren Autoren. Die SQL-Anweisung könnte folgendermaßen aussehen:  
   
 ```  
 SELECT   
@@ -133,7 +133,7 @@ Weitere Informationen zum Hinzufügen einer Abfrage zu einer Abfrage finden Sie 
 ## <a name="using-a-user-defined-function-in-place-of-a-table"></a>Verwenden einer benutzerdefinierten Funktion anstelle einer Tabelle  
 In SQL Server 2000 oder höher können Sie eine benutzerdefinierte Funktion erstellen, die eine Tabelle zurückgibt. Solche Funktionen eignen sich zum Ausführen komplexer oder prozeduraler Logiken.  
   
-Angenommen die Tabelle der Mitarbeiter enthält eine zusätzliche Spalte employee.manager_emp_id und eine Fremdschlüsselbeziehung liegt zwischen manager_emp_id und employee.emp_id vor. Innerhalb jeder Zeile der Tabelle der Mitarbeiter gibt die Spalte manager_emp_id den Vorgesetzten des Mitarbeiters an. Genauer gesagt wird die emp_id des Vorgesetzten des Mitarbeiters angezeigt. Sie können eine benutzerdefinierte Funktion erstellen, die eine Tabelle mit jeweils einer Zeile für jeden Mitarbeiter zurückgibt, der innerhalb der Organisationshierarchie unter einem Manager mit der angegebenen Tätigkeitsstufe arbeitet. Die Funktion trägt die Bezeichnung fn_GetWholeTeam und ist so formuliert, dass eine Eingabevariable übergeben werden kann: die emp_id des Managers, dessen Team Sie abrufen möchten.  
+Angenommen die Tabelle der Mitarbeiter enthält eine zusätzliche Spalte employee.manager_emp_id und eine Fremdschlüsselbeziehung liegt zwischen manager_emp_id und employee.emp_id vor. Innerhalb jeder Zeile der Tabelle der Mitarbeiter gibt die Spalte manager_emp_id den Vorgesetzten des Mitarbeiters an. Genauer gesagt wird die emp_id des Vorgesetzten des Mitarbeiters angezeigt. Sie können eine benutzerdefinierte Funktion erstellen, die eine Tabelle mit jeweils einer Zeile für jeden Mitarbeiter zurückgibt, der innerhalb der Organisationshierarchie unter einem Manager mit der angegebenen Tätigkeitsstufe arbeitet. Die Funktion trägt die Bezeichnung „fn_GetWholeTeam“ und ist so formuliert, dass eine Eingabevariable übergeben werden kann: die emp_id des Managers, dessen Team Sie abrufen möchten.  
   
 Sie können eine Abfrage erstellen, die die Funktion fn_GetWholeTeam als Datenquelle verwendet. Hierfür kann folgende SQL-Anweisung formuliert werden:  
   

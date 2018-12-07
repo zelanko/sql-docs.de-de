@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d525d686b8be1e17214dd8908017b86358f87ec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d78d5bd802b1c194cb4b1cf09a81a1eecc9f54df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605998"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413696"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Seitenlayout und Rendering (Berichts-Generator und SSRS)
-Erfahren Sie mehr über [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Renderingerweiterungen für paginierte Berichte, damit der Bericht genau so aussieht, wie Sie es möchten – einschließlich Seitenlayout, Seitenumbrüchen und Papierformat. 
+Erfahren Sie mehr über [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Renderingerweiterungen für paginierte Berichte, damit der Bericht genau so aussieht, wie Sie es möchten – einschließlich Seitenlayout, Seitenumbrüchen und Papierformat. 
 
  Wenn Sie Berichte auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver oder im Vorschaufenster von Berichts-Generator oder Berichts-Designer anzeigen, wird der Bericht zuerst vom HTML-Renderer gerendert. Sie können dann den Bericht in andere Formate, z.B. Excel oder durch Trennzeichen getrennte Dateien (CSV) exportieren. Der exportierte Bericht kann dann in Excel oder als Datenquelle für Anwendungen verwendet werden, die CSV-Dateien importieren und verwenden können.  
   

@@ -13,12 +13,12 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b67c3deaa58efe3b9a180f51d812ee0cec96f03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 424fb19d14d1851cd647f0fa21a4d3271c8dd2b6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826528"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502881"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Erstellen, Bereitstellen und Debuggen von benutzerdefinierten Objekten
   Nachdem Sie den Code für ein benutzerdefiniertes Objekt für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] geschrieben haben, müssen Sie die Assembly erstellen, bereitstellen und in [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer integrieren, um sie für die Nutzung in Paketen verfügbar zu machen, sie zu testen und zu debuggen.  
@@ -62,7 +62,7 @@ ms.locfileid: "47826528"
 ##  <a name="building"></a> Erstellen der Assembly  
  Nach der Signierung des Projekts müssen Sie das Projekt oder die Projektmappe erstellen bzw. neu erstellen, indem Sie die im **Build**-Menü von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] verfügbaren Befehle verwenden. Die Lösung enthält möglicherweise ein separates Projekt für eine benutzerdefinierte Benutzeroberfläche, die ebenfalls mit einem starken Namen signiert sein muss und zur gleichen Zeit erstellt werden kann.  
   
- Der einfachste Weg, um die nächsten zwei Schritte (Bereitstellen der Assembly und Installieren im globalen Assemblycache) auszuführen, besteht darin, für diese Schritte als Postbuildereignis in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ein Skript zu erstellen. Buildereignisse stehen unter „Projekteigenschaften“ auf der Seite **Kompilieren** für ein [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Projekt und auf der Seite **Buildereignisse** für ein C#-Projekt zur Verfügung. Der vollständige Pfad ist für Eingabeaufforderungs-Hilfsprogramme wie **gacutil.exe** erforderlich. Pfade mit Leerzeichen und Makros wie $(TargetPath), mit denen Pfade mit Leerzeichen erweitert werden, müssen von Anführungszeichen umschlossen werden.  
+ Der einfachste Weg, um die nächsten zwei Schritte (Bereitstellen der Assembly und Installieren im globalen Assemblycache) auszuführen, besteht darin, ein Skript für diese Schritte als Postbuildereignis in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] zu erstellen. Buildereignisse stehen unter „Projekteigenschaften“ auf der Seite **Kompilieren** für ein [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Projekt und auf der Seite **Buildereignisse** für ein C#-Projekt zur Verfügung. Der vollständige Pfad ist für Eingabeaufforderungs-Hilfsprogramme wie **gacutil.exe** erforderlich. Pfade mit Leerzeichen und Makros wie $(TargetPath), mit denen Pfade mit Leerzeichen erweitert werden, müssen von Anführungszeichen umschlossen werden.  
   
  Nachfolgend finden Sie ein Beispiel einer Postbuildereignis-Befehlszeile für einen benutzerdefinierten Protokollanbieter:  
   

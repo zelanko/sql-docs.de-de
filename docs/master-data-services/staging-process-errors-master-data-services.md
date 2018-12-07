@@ -14,12 +14,12 @@ ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 65239f7dbdb0690115f50172ea34f72a62924250
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a47b9b13c5de6368b14b6767ea71d8e888da4c72
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798068"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395391"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Fehler des Stagingprozesses (Master Data Services)
 
@@ -31,12 +31,12 @@ ms.locfileid: "47798068"
 |----------|-----------|--------------------------|----------------------|  
 |210001|Der gleiche Elementcode ist in der Stagingtabelle mehrmals vorhanden.|In Ihrer Stagingbatch ist der gleiche Elementcode mehrmals vorhanden. Keines der Elemente wird erstellt oder aktualisiert.|Blatt<br /><br /> Konsolidiert<br /><br /> Beziehung|  
 |210003|Die Attributwerte verweisen auf ein Element, das nicht vorhanden oder inaktiv ist.|Wenn Sie domänenbasierte Attribute bereitstellen, müssen Sie den Code und nicht den Namen verwenden. Gilt für **ImportType0**, **1**und **2**.|Blatt<br /><br /> Konsolidiert|  
-|210006|Der Elementcode ist inaktiv.|**ImportType** = **1** , und Sie haben einen Elementcode angegeben, der nicht vorhanden ist.|Blatt<br /><br /> Konsolidiert<br /><br /> Beziehung|  
+|210006|Der Elementcode ist inaktiv.|**ImportType** = **1**, und Sie haben einen Elementcode angegeben, der nicht vorhanden ist.|Blatt<br /><br /> Konsolidiert<br /><br /> Beziehung|  
 |210032|Der Hierarchiename fehlt oder ist nicht gültig.|Die explizite Hierarchie wurde nicht gefunden, oder der **HierarchyName** -Wert war leer.|Konsolidiert<br /><br /> Beziehung|  
 |210035|Da keine Geschäftsregel zur Codegenerierung vorhanden ist, wird der **MemberCode** benötigt.|Beim Erstellen oder Aktualisieren von Elementen ist ein **MemberCode** immer erforderlich, außer wenn Sie die automatische Codegenerierung verwenden. Weitere Informationen finden Sie unter [Automatische Codeerstellung &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).|Blatt<br /><br /> Konsolidiert|  
 |210036|Da eine Geschäftsregel zur Codegenerierung vorhanden ist, wird der **MemberCode** nicht benötigt.|Beim Erstellen oder Aktualisieren von Elementen ist ein **MemberCode** nicht erforderlich, wenn Sie die automatische Codegenerierung verwenden. Sie können jedoch einen Code angeben, wenn Sie dies möchten. Weitere Informationen finden Sie unter [Automatische Codeerstellung &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).|Blatt<br /><br /> Konsolidiert|  
-|210041|"ROOT" ist kein gültiger Elementcode.|Der **MemberCode** -Wert enthält das Wort "ROOT".|Blatt<br /><br /> Konsolidiert<br /><br /> Beziehung|  
-|210042|"MDMUNUSED" ist kein gültiger Elementcode.|Der **MemberCode** -Wert enthält das Wort "MDMUNUSED".|Blatt<br /><br /> Konsolidiert<br /><br /> Beziehung|  
+|210041|„ROOT“ ist kein gültiger Elementcode.|Der **MemberCode**-Wert enthält das Wort „ROOT“.|Blatt<br /><br /> Konsolidiert<br /><br /> Beziehung|  
+|210042|„MDMUNUSED“ ist kein gültiger Elementcode.|Der **MemberCode**-Wert enthält das Wort „MDMUNUSED“.|Blatt<br /><br /> Konsolidiert<br /><br /> Beziehung|  
 |210052|Der MemberCode kann nicht deaktiviert werden, da er als domänenbasierter Attributwert verwendet wird.|Wenn **ImportType** = **3** oder **4**ist, schlägt das Staging fehl, wenn das Element als Attributwert für andere Elemente verwendet wird. Legen Sie den Wert entweder mithilfe von **ImportType5** **6** auf NULL fest, oder ändern Sie die Werte vor dem Ausführen des Stagingprozesses.|Blatt<br /><br /> Konsolidiert|  
 |300002|Der Elementcode ist nicht gültig.|Beziehungen: Entweder ist der übergeordnete oder der untergeordnete Elementcode nicht vorhanden.<br /><br /> Blatt oder konsolidiert: **ImportType** = **3** oder **4** und der Elementcode ist nicht vorhanden.|Blatt<br /><br /> Konsolidiert<br /><br /> Beziehung|  
 |300004|Der Elementcode ist bereits vorhanden.|**ImportType** = **1** , und Sie haben einen Elementcode verwendet, der bereits in der Entität vorhanden ist.|Blatt<br /><br /> Konsolidiert|  

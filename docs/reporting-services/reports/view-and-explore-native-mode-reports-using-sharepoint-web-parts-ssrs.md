@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4124d8a88485332133baf2cd4a39eb52da56652e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c78f6e02a2aef893aa3e8702158a5f3c63cea76a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813414"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417281"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Anzeigen und Durchsuchen von Berichten im einheitlichen Modus mithilfe von SharePoint-Webparts (SSRS)
 
@@ -114,7 +114,7 @@ ms.locfileid: "51813414"
     STSADM.EXE -o addwppack -filename "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -globalinstall  
     ```  
   
-4.  Die Meldung "Der Vorgang wurde erfolgreich abgeschlossen" sollte angezeigt werden.  
+4.  Die Meldung „Operation completed successfully“ (Der Vorgang wurde erfolgreich abgeschlossen) sollte angezeigt werden.  
   
      Durch Angeben von `-globalinstall` werden die Webparts dem globalen Assemblycache (Global Assembly Cache, GAC) hinzugefügt. Dieser Schritt ist notwendig, wenn Sie eine Verbindung mit den Webparts herstellen möchten.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "51813414"
   
 7.  Geben Sie unter **Report Manager URL**eine URL zu einer Berichts-Manager-Instanz ein, die mit dem Berichtsserver im einheitlichen Modus verbunden ist, auf den Sie zugreifen möchten. In der Standardeinstellung weist die Berichts-Manager-URL die folgende Syntax auf: **https://\<Servername>/reports**.  
   
-8.  Geben Sie unter **Berichtspfad**einen Schrägstrich an, gefolgt vom Ordnerpfad und dem Berichtsnamen. Der Servername oder das virtuelle Berichts-Manager-Verzeichnis dürfen **nicht** angegeben werden. Wenn Sie z.B. den Bericht „Company Sales“ im Ordner „Adventure Works“ öffnen möchten, geben Sie **/Adventure Works/Company Sales**an. Im Folgenden wird ein weiteres Beispiel gezeigt, in dem sich der Bericht „Produkte“ im Stammordner **/Products**des Berichtsservers befindet.  
+8.  Geben Sie unter **Berichtspfad**einen Schrägstrich an, gefolgt vom Ordnerpfad und dem Berichtsnamen. Der Servername oder das virtuelle Berichts-Manager-Verzeichnis dürfen **nicht** angegeben werden. Wenn Sie z.B. den Bericht „Company Sales“ im Ordner „Adventure Works“ öffnen möchten, geben Sie **/Adventure Works/Company Sales**an. Im Folgenden wird ein weiteres Beispiel gezeigt, in dem sich der Bericht „Produkte“ im Stammordner **/Products** des Berichtsservers befindet.  
   
 9. Klicken Sie auf **OK**.  
   

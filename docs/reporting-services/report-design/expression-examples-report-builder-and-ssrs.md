@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 89bed7eb00e04a354b1dd1fd59b0c36899aed044
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 3415084fcc93098f77ea367217b74ae2df7729f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814323"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393220"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Beispiele für Ausdrücke (Berichts-Generator und SSRS)
 Ausdrücke werden in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten häufig zum Steuern des Inhalts und der Darstellung des Berichts verwendet. Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschrieben und können integrierte Funktionen, benutzerdefinierten Code, Berichts- und Gruppenvariablen sowie benutzerdefinierte Variablen verwenden. Ausdrücke beginnen immer mit einem Gleichheitszeichen (=). Weitere Informationen zum Ausdrucks-Editor und den Verweistypen, die Sie einfügen können, finden Sie unter [Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) und [Hinzufügen eines Ausdrucks (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -165,7 +165,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
 -   Der folgende Ausdruck generiert die Jahre des Intervalls zwischen SellStartDate und LastReceiptDate. Diese Felder sind in zwei unterschiedlichen Datasets enthalten, DataSet1 und DataSet2. Die Aggregatfunktion [First-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-first-function.md) gibt den ersten Wert von SellStartDate in DataSet1 und den ersten Wert von LastReceiptDate in DataSet2 zurück.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   Die Funktion **DatePart** gibt einen ganzzahligen Wert zurück, der die angegebene Komponente eines bestimmten Date-Werts enthält. Der folgende Ausdruck gibt das Jahr für den ersten Wert von SellStartDate in DataSet1 zurück. Der Datasetbereich ist angegeben, weil mehrere Datasets im Bericht enthalten sind.  
@@ -229,7 +229,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
      Das folgende Beispiel hat die gleiche Funktion wie das Beispiel oben und zeigt darüber hinaus vor der Liste der ausgewählten Werte eine Textzeichenfolge an:  
   
     ```  
-    =”Report for “ & JOIN(Parameters!MySelection.Value, “ & “)  
+    ="Report for " & JOIN(Parameters!MySelection.Value, " & ")  
   
     ```  
   
@@ -244,7 +244,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
   
 ### <a name="lookup"></a>Suche  
   
--   Durch Angabe eines Schlüsselfelds können Sie mit der **Lookup** -Funktion einen Wert von einem Dataset für eine 1:1-Beziehung, beispielsweise ein Schlüssel-Wert-Paar, abrufen. Der folgende Ausdruck zeigt den Produktnamen aus einem Dataset ("Product") an, wenn als Grundlage für die Übereinstimmung der Produktbezeichner angegeben ist:  
+-   Durch Angabe eines Schlüsselfelds können Sie mit der **Lookup** -Funktion einen Wert von einem Dataset für eine 1:1-Beziehung, beispielsweise ein Schlüssel-Wert-Paar, abrufen. Der folgende Ausdruck zeigt den Produktnamen aus einem Dataset („Product“) an, wenn der Produktbezeichner als Grundlage für die Übereinstimmung angegeben ist:  
   
     ```  
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
@@ -543,7 +543,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
     End Function  
     ```  
   
-     Der folgende Ausdruck veranschaulicht, wie dieser benutzerdefinierte Code aus einem Textfeld für den "ColumnGroupByYear"-Container (Gruppe bzw. Datenbereich) aufgerufen wird.  
+     Der folgende Ausdruck veranschaulicht, wie dieser benutzerdefinierte Code aus einem Textfeld für den Container „ColumnGroupByYear“ (Gruppe bzw. Datenbereich) aufgerufen wird.  
   
     ```  
     =Code.GetDeltaPercentage(Previous(Sum(Fields!Sales.Value),"ColumnGroupByYear"), Sum(Fields!Sales.Value))  

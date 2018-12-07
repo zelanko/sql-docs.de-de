@@ -1,22 +1,22 @@
 ---
 title: Hinzufügen des Webparts des Berichts-Viewers für SQL Server Reporting Services zu einer SharePoint-Seite | Microsoft-Dokumentation
-ms.date: 09/26/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 39379fa6d6471f9d0d624dbbd2b05331c7e7a36a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813023"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398348"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Hinzufügen des Webparts des Berichts-Viewers für SQL Server Reporting Services zu einer SharePoint-Seite
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 Zeigen Sie einen Bericht von SQL Server Reporting Services oder Power BI-Berichtsserver an, indem Sie das Berichts-Viewer-Webpart zu einer SharePoint-Seite hinzufügen.
 
@@ -46,7 +46,7 @@ Zeigen Sie einen Bericht von SQL Server Reporting Services oder Power BI-Bericht
 
     ![Fügen Sie das Berichts-Viewer-Webpart hinzu.](media/sharepoint-report-viewer-web-part.png)
 
-    Dabei wird zunächst möglicherweise ein Fehler ausgelöst. Dieser Fehler tritt auf, weil die Standard-URL auf *https://localhost* festgelegt und an diesem Speicherort möglicherweise nicht verfügbar ist.
+    Möglicherweise wird Ihnen anfangs ein Fehler angezeigt. Dieser Fehler tritt auf, weil die Standard-URL auf *https://localhost* festgelegt und an diesem Speicherort möglicherweise nicht verfügbar ist.
 
 ## <a name="configure-the-report-viewer-web-part"></a>Konfigurieren des Berichts-Viewer-Webparts
 
@@ -56,7 +56,7 @@ Führen Sie folgende Schritte aus, um das Webpart zu konfigurieren, das auf eine
 
     ![Bearbeiten Sie die Webseite über die Dropdownliste des Webparts.](media/sharepoint-edit-web-part.png)
 
-2. Geben Sie die **Berichtsserver-URL** des Berichtsserver ein, der Ihren Bericht hostet. Dies sollte etwa wie folgt aussehen: *https://myrsserver/reportserver*.
+2. Geben Sie die **Berichtsserver-URL** des Berichtsserver ein, der Ihren Bericht hostet. Die URL sollte in etwa wie folgt aussehen: *https://myrsserver/reportserver*.
 
 3. Geben Sie den Pfad und den Namen des Berichts an, den Sie im Webpart anzeigen möchten. Dies sollte in etwa wie folgt aussehen: */AdventureWorks Sample Reports/Company Sales*. In diesem Beispiel befindet sich der Bericht *Company Sales* (Firmenumsatz) in einem Ordner mit der Bezeichnung *AdventureWorks Sample Reports* (AdventureWorks-Beispielberichte).
 

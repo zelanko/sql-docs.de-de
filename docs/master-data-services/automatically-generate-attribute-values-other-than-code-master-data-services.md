@@ -12,18 +12,18 @@ ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 279198ba384acf33656d7567ed417a633eae7266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e607136bf7e13994e931166831b68d531d229dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826408"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404525"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Automatisches Generieren von anderen Attributwerten als Code (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie Werte für die Attributwerte einer Entität automatisch generieren, wenn Sie möchten, dass eine ganze Zahl jedes Mal automatisch als Wert zugewiesen werden soll, wenn Geschäftsregeln angewendet werden.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] können Sie Werte für die Attributwerte einer Entität automatisch generieren, wenn Sie möchten, dass eine ganze Zahl jedes Mal automatisch als Wert zugewiesen werden soll, wenn Geschäftsregeln angewendet werden.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
@@ -54,7 +54,7 @@ ms.locfileid: "47826408"
   
 9. Erweitern Sie im Bereich **Komponenten** den Knoten **Aktionen** .  
   
-10. Klicken Sie im Knoten "Standardwert" auf **entspricht standardmäßig generiertem Wert** , und ziehen Sie es auf die Beschriftung **Aktionen** des Bereichs **THEN** .  
+10. Klicken Sie im Knoten „Standardwert“ auf **entspricht standardmäßig generiertem Wert**, und ziehen Sie ihn auf die Beschriftung **Aktionen** des Bereichs **THEN**.  
   
 11. Klicken Sie im Bereich **Attribute** auf das Attribut mit dem zu generierenden Wert, und ziehen Sie es in die Beschriftung **Attribut auswählen** des Bereichs **Aktion bearbeiten** .  
   

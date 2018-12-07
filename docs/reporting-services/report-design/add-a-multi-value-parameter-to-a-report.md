@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a7823a0757cb4980a52b9ab9577829ce9d6102f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b6492cc78c9cbdc23f8deed9b1a577341637c300
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029979"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402079"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Hinzufügen eines aus mehreren Werten bestehenden Parameters zu einem Bericht
   Sie können einem Bericht einen Parameter hinzufügen, der dem Benutzer die Auswahl mehrerer Werte für den Parameter ermöglicht.  
@@ -38,7 +38,7 @@ ms.locfileid: "50029979"
     > [!IMPORTANT]  
     > *  Der Abfragetext darf keine DECLARE-Anweisung für die Abfragevariable enthalten.  
     > *  Der Text für die Abfragevariable muss den **IN** -Operator enthalten, wie im Beispiel oben veranschaulicht wird.  
-    > *  Achten Sie darauf, die Variablen wie oben gezeigt in Klammern einzuschließen. Andernfalls wird der Bericht nicht gerendert und der Fehler „Die Skalarvariable muss deklariert werden“ wird angezeigt.  
+    > *  Achten Sie darauf, die Variablen wie oben gezeigt in Klammern einzuschließen. Andernfalls wird der Bericht nicht gerendert, und der Fehler „Die Skalarvariable muss deklariert werden“ wird angezeigt.  
   
     Für die Abfragevariable wird automatisch ein Datasetparameter für ein eingebettetes Dataset oder ein freigegebenes Dataset erstellt. Für den Datasetparameter wird automatisch ein Berichtsparameter erstellt.  
   

@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b64711527f4a21b2504f10ff3518607198ca46ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 529aaf3e6de3d748ee998b4b345bf90e84a885f1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852618"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407987"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Konfigurieren von Always Encrypted mithilfe von PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -135,7 +135,7 @@ Die folgenden PowerShell-Cmdlets sind für Always Encrypted verfügbar:
 |**[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)**   |Erstellt ein SqlColumnMasterKeySettings-Objekt, das einen asymmetrischen Schlüssel beschreibt, der in einem Schlüsselspeicher gespeichert ist, der die Cryptography Next Generation-API (CNG) unterstützt.
 |**[New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)** |Erstellt ein neues Spaltenverschlüsselungsschlüssel-Objekt in der Datenbank
 |**[New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)** |Erstellt den verschlüsselten Wert eines Spaltenverschlüsselungsschlüssels.
-|**[New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings)**   |Erstellt ein SqlColumnEncryptionSettings-Objekt, das Informationen über die Verschlüsselung einer einzelnen Spalte kapselt, einschließlich Spaltenverschlüsselungsschlüssel und Verschlüsselungstyp
+|**[New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings)**   |Erstellt ein SqlColumnEncryptionSettings-Objekt, das Informationen über die Verschlüsselung einer einzelnen Spalte kapselt, einschließlich Spaltenverschlüsselungsschlüssel und Verschlüsselungstyp.
 |**[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)** |Erstellt ein Spaltenhauptschlüssel-Objekt in der Datenbank
 |**[New-SqlColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkeysettings)**|Erstellt ein SqlColumnMasterKeySettings-Objekt für einen Spaltenhauptschlüssel mit dem angegebenen Anbieter und Schlüsselpfad
 |**[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)**   |Erstellt ein SqlColumnMasterKeySettings-Objekt, das einen asymmetrischen Schlüssel beschreibt, das in einem Schlüsselspeicher mit einem Kryptografiedienstanbieter (cryptography service provider; CSP) gespeichert ist, der die Kryptografie-API (CAPI) unterstützt.

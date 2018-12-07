@@ -13,12 +13,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 921e2883985eed8b3640ef7da9e874b74b30c55f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 1e8a7300f2b3a006ade820831f682eb379e9e200
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638007"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393973"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services-Paketen
   In der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]kann die SQL-Anweisung in einem Task „SQL ausführen“ eine MERGE-Anweisung enthalten. Diese MERGE-Anweisung ermöglicht es Ihnen, in einer einzelnen Anweisung mehrere INSERT-, UPDATE- und DELETE-Vorgänge auszuführen.  
@@ -56,7 +56,7 @@ ms.locfileid: "51638007"
  Jede Woche generiert die Datenbank eine WeeklyChanges-Tabelle, in der Preisänderungen und neue Bücher, die während der Woche in den Bestand aufgenommen wurden, enthalten sind. Mit einer einzigen MERGE-Anweisung können Sie die Änderungen der WeeklyChanges-Tabelle in die DimBook-Tabelle übernehmen. Die MERGE-Anweisung fügt neue Zeilen für neu hinzugefügte Bücher hinzu und aktualisiert die IsCurrent-Spalte für Zeilen vorhandener Bücher, deren Preis sich geändert hat, auf 0. Außerdem fügt die MERGE-Anweisung neue Zeilen für Bücher hinzu, deren Preis sich geändert hat, und legt den Wert der IsCurrent-Spalte für diese neuen Zeilen auf 1 fest.  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>Zusammenführen einer Tabelle mit neuen Daten aus der alten Tabelle  
- Die Datenbank formt die Eigenschaften eines Objekts mit einem "offenen Schema", das heißt, eine Tabelle enthält Name/Wert-Paare für jede Eigenschaft. Die Properties-Tabelle enthält drei Spalten: EntityID,  PropertyID und Value. Eine NewProperties-Tabelle, bei der es sich um eine neuere Version der Tabelle handelt, muss mit der Properties-Tabelle synchronisiert werden. Um diese beiden Tabellen zu synchronisieren, können Sie eine einzelne MERGE-Anweisung verwenden, um die folgenden Vorgänge auszuführen:  
+ Die Datenbank formt die Eigenschaften eines Objekts mit einem „offenen Schema“, das heißt, eine Tabelle enthält Name/Wert-Paare für jede Eigenschaft. Die Properties-Tabelle enthält drei Spalten: EntityID,  PropertyID und Value. Eine NewProperties-Tabelle, bei der es sich um eine neuere Version der Tabelle handelt, muss mit der Properties-Tabelle synchronisiert werden. Um diese beiden Tabellen zu synchronisieren, können Sie eine einzelne MERGE-Anweisung verwenden, um die folgenden Vorgänge auszuführen:  
   
 -   Löschen Sie Eigenschaften aus der Properties-Tabelle, wenn sie in der NewProperties-Tabelle fehlen.  
   

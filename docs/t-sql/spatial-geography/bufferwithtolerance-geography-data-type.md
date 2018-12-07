@@ -18,12 +18,12 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de205df81d6919d6529726e9de77ec65e0aac927
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f83a4174fb599170e466a28ab06eb0d2772fd604
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698459"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391355"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51698459"
  *distance*  
  Ein **float**-Ausdruck, der den Abstand zu der **geometry**-Instanz angibt, um die der Puffer berechnet werden soll.  
   
- Der maximale Abstand des Puffers darf 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Kugelumfang) oder die vollständige Kugel nicht überschreiten.  
+ Der maximale Abstand des Puffers darf 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Umfang der Erde) oder den vollständigen Umfang der Erde nicht überschreiten.  
   
  *tolerance*  
  Ein **float** -Ausdruck, der die Toleranz des Pufferabstands angibt.  
@@ -69,7 +69,7 @@ ms.locfileid: "51698459"
   
  Diese Methode löst eine **ArgumentException** in **FullGlobe**-Instanzen aus, bei denen der Abstand des Puffers die folgende Einschränkung überschreitet:  
   
- 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Kugelumfang)  
+ 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Umfang der Erde)  
   
  Die Abweichung zwischen dem theoretischen und dem berechnetem Puffer beträgt max(tolerance, extents \* 1,0E-7), wobei die Toleranz der Wert des Parameters *tolerance* ist. Weitere Informationen zu Erweiterungen finden Sie unter [geography-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   

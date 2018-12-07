@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a76c8c745101a6327be13f6865bcbc392cc40c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808758"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414098"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Berichtsserver-Sichten ExecutionLog und ExecutionLog3
   Das Berichtsserver-Ausführungsprotokoll von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthält Informationen zu den Berichten, die auf dem Server bzw. auf mehreren Servern in einer Bereitstellung für horizontales Skalieren im einheitlichen Modus oder in einer SharePoint-Farm ausgeführt werden. Anhand des Ausführungsprotokolls des Berichtsservers können Sie feststellen, wie oft ein Bericht angefordert wird, welche Ausgabeformate am meisten verwendet werden und wie viele Millisekunden Verarbeitungszeit für die einzelnen Verarbeitungsphasen aufgewendet werden. Das Protokoll enthält Informationen über die Zeit, die für die Ausführung der Datasetabfrage eines Berichts aufgewendet wurde, und die Zeit, die für die Verarbeitung der Daten aufgewendet wurde. Wenn Sie Berichtsserveradministrator sind, können Sie die Protokollinformationen überprüfen und Aufgaben mit langer Laufzeit identifizieren sowie den Berichtsautoren zu den Bereichen des Berichts (Dataset oder Verarbeitung) Vorschläge zur Verbesserung machen.  
@@ -26,7 +26,7 @@ ms.locfileid: "47808758"
 ##  <a name="bkmk_top"></a> Anzeigen von Protokollinformationen  
  Die Berichtsserverausführung protokolliert Daten zur Berichtsausführung in einer internen Datenbanktabelle. Die Informationen aus der Tabelle sind in SQL Server-Sichten verfügbar.  
   
- Das Berichtsausführungsprotokoll wird in der Berichtsserver-Datenbank gespeichert, die standardmäßig **ReportServer**genannt wird. Die SQL-Ansichten enthalten die Ausführungsprotokollinformationen. Die Ansichten "2" und "3" wurden in aktuelleren Versionen hinzugefügt und enthalten neue Felder, oder sie enthalten Felder mit benutzerfreundlicheren Namen als die vorherigen Versionen. Die älteren Ansichten bleiben im Produkt, sodass es keinerlei Auswirkungen auf benutzerdefinierte Anwendungen, die von ihnen abhängen, gibt. Wenn keine Abhängigkeit von einer älteren Sicht vorliegt, z.B. ExecutionLog, wird empfohlen, die neueste Sicht, ExecutionLog**3**, zu verwenden.  
+ Das Berichtsausführungsprotokoll wird in der Berichtsserver-Datenbank gespeichert, die standardmäßig **ReportServer**genannt wird. Die SQL-Ansichten enthalten die Ausführungsprotokollinformationen. Die Ansichten „2“ und „3“ wurden in aktuelleren Versionen hinzugefügt und enthalten neue Felder, oder sie enthalten Felder mit benutzerfreundlicheren Namen als die vorherigen Versionen. Die älteren Ansichten bleiben im Produkt, sodass es keinerlei Auswirkungen auf benutzerdefinierte Anwendungen, die von ihnen abhängen, gibt. Wenn keine Abhängigkeit von einer älteren Sicht vorliegt, z.B. ExecutionLog, wird empfohlen, die neueste Sicht, ExecutionLog**3**, zu verwenden.  
   
  In diesem Thema:  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47808758"
   
  **So aktivieren Sie die Protokollierung der Ausführung:**  
   
-1.  Starten Sie SQL Server Management Studio mit Administratorprivilegien. Klicken Sie z. B. mit der rechten Maustaste auf das Management Studio-Symbol, und klicken Sie auf "Ausführen als Administrator".  
+1.  Starten Sie SQL Server Management Studio mit Administratorprivilegien. Klicken Sie z. B. mit der rechten Maustaste auf das Management Studio-Symbol, und klicken Sie auf „Ausführen als Administrator“.  
   
 2.  Stellen Sie eine Verbindung mit dem gewünschten Berichtsserver her.  
   
@@ -324,7 +324,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |Spalte|und Beschreibung|  
 |------------|-----------------|  
 |InstanceName|Name der Berichtsserverinstanz, die die Anforderung verarbeitet hat.|  
-|ReportPath|Die Pfadstruktur zum Bericht.  Zum Beispiel ein Bericht mit dem Namen "Test", der der Stammordner im Berichts-Manager ist, würde den ReportPath "/test" aufweisen.<br /><br /> Ein Bericht mit dem Namen "Test", der im Ordner "Samples" im Berichts-Manager gespeichert ist, weist den ReportPath “/Samples/test/” auf|  
+|ReportPath|Die Pfadstruktur zum Bericht.  Zum Beispiel würde ein Bericht mit dem Namen „Test“, der der Stammordner im Berichts-Manager ist, den ReportPath „/test“ aufweisen.<br /><br /> Ein Bericht mit dem Namen „Test“, der im Ordner „Samples“ im Berichts-Manager gespeichert ist, würde den ReportPath „/Samples/test/“ aufweisen.|  
 |UserName|Benutzer-ID.|  
 |ExecutionID||  
 |RequestType|Anforderungstyp (Benutzer oder System).|  

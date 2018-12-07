@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41f52b1a60ebc5fc456b0b90b998c173356c5c7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f81e94012e4c976dc1d4fdb1013ec34e22ff51d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809638"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413307"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -90,7 +90,7 @@ Das Unicode-Zeichenformat wird von den folgenden Befehlsoptionen unterstützt:
 |OPENROWSET|–|Muss eine Formatdatei verwenden|
   
 > [!NOTE]
->  Alternativ können Sie die Formatierung pro Feld in einer Formatdatei angeben. Weitere Informationen finden Sie unter [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
+>  Alternativ können Sie die Formatierung pro Feld in einer Formatdatei angeben. Weitere Informationen finden Sie unter [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)erforderlich.
   
 ## Beispieltestbedingungen<a name="etc"></a>  
 Die in diesem Thema beschriebenen Beispiele basieren auf einer Tabelle und einer Formatdatei, die nachstehend definiert werden.
@@ -163,7 +163,7 @@ REM Review results is SSMS
 ```
 
 ### **Verwenden von bcp und dem Unicode-Zeichenformat zum Importieren von Daten mit einer Nicht-XML-Formatdatei**<a name="bcp_widechar_import_fmt"></a>
-Die Schalter **-w** und **-f** switches und **IN** commund.  Da in diesem Beispiel bcp, eine Formatdatei und Unicode-Zeichen verwendet werden und das erste Datenfeld in der Datendatei ein Nichtzeichen enthält, muss eine Problemumgehung angewendet werden.  Weitere Informationen finden Sie weiter oben in diesem Artikel unter [Besondere Überlegungen zur Verwendung des Unicode-Zeichenformats, bcp und einer Formatdatei](#special_considerations).  Die Datendatei `myWidechar.bcp` wird durch Hinzufügen eines zusätzlichen Datensatzes als „Dummy“-Datensatz geändert, der dann mit dem Schalter `-F 2` ausgelassen wird.
+Die Schalter **-w** und **-f** switches und **IN** commund.  Da in diesem Beispiel bcp, eine Formatdatei und Unicode-Zeichen verwendet werden und das erste Datenfeld in der Datendatei ein Nichtzeichen enthält, muss eine Problemumgehung angewendet werden.  Weitere Informationen finden Sie weiter oben in diesem Artikel unter [Besondere Überlegungen zur Verwendung des Unicode-Zeichenformats, bcp und einer Formatdatei](#special_considerations).  Die Datendatei `myWidechar.bcp` wird durch Hinzufügen eines zusätzlichen Datensatzes als „Dummy“-Datensatz geändert, der dann mit dem Switch `-F 2` ausgelassen wird.
 
 Geben Sie an der Befehlszeile die folgenden Befehle ein, und führen Sie die folgenden Änderungsschritte aus:
 ```

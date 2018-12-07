@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 ms.manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b27f66940d3b1a43681cba5ad26a95596d0a969
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdc46b1d0addad193f5bc09a9bcd60fab9efe027
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744188"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418171"
 ---
 # <a name="rename-views"></a>Umbenennen von Sichten
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47744188"
   
 -   **Follow Up:**  [After renaming a view](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Rufen Sie eine Liste aller Abhängigkeiten der Sicht ab. Für alle Objekte, Skripts oder Anwendungen, die auf die Sicht verweisen, muss der neue Name der Sicht festgelegt werden. Weitere Informationen finden Sie unter [Get Information About a View](../../relational-databases/views/get-information-about-a-view.md). Es ist ratsam, die Sicht zu verwerfen und unter einem neuen Namen neu zu erstellen, anstatt die Sicht umzubenennen. Indem Sie die Sicht neu erstellen, aktualisieren Sie die Abhängigkeitsinformationen für die Objekte, auf die in der Sicht verwiesen wird.  
@@ -63,7 +63,7 @@ ms.locfileid: "47744188"
   
 2.  Klicken Sie mit der rechten Maustaste auf die Sicht, die Sie umbenennen möchten, und wählen Sie die Option **Umbenennen**.  
   
-3.  Geben Sie den neuen Namen der Sicht ein.  
+3.  Geben Sie den neuen Namen der Ansicht ein.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So benennen Sie eine Sicht um**  
@@ -73,6 +73,6 @@ ms.locfileid: "47744188"
  Weitere Informationen finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md) und [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md).  
   
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Umbenennen einer Sicht  
- Stellen Sie sicher, dass alle Objekte, Skripts und Anwendungen, die auf den alten Namen der Sicht verweisen, jetzt den neuen Namen verwenden.  
+ Stellen Sie sicher, dass alle Objekte, Skripts und Anwendungen, die auf den alten Namen der Ansicht verweisen, jetzt den neuen Namen verwenden.  
   
   

@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c651f7a719a30ad4781c4d1af8bf3703bfc6d7c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eff1de488818894b39796430e23804066f266f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595082"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417361"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ SELECT <select_criteria>
   
  SELECT-Anweisungen sind in benutzerdefinierten Funktionen nur dann zulässig, wenn die Auswahllisten dieser Anweisungen Ausdrücke enthalten, die lokalen Variablen der Funktionen Werte zuweisen.  
   
- Ein mit der OPENDATASOURCE-Funktion als Servername konstruierter vierteiliger Name kann als Tabellenquelle überall dort verwendet werden, wo ein Tabellenname in einer SELECT-Anweisung vorkommen kann. Für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] kann kein vierteiliger Name angegeben werden.  
+ Ein mit der OPENDATASOURCE-Funktion als Servername konstruierter vierteiliger Name kann als Tabellenquelle überall dort verwendet werden, wo ein Tabellenname in einer SELECT-Anweisung vorkommen kann. Ein vierteiliger Name kann für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] nicht angegeben werden.  
   
  Für SELECT-Anweisungen, die Remotetabellen einbeziehen, gelten einige Syntaxeinschränkungen.  
   

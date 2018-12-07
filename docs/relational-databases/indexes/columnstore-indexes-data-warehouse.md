@@ -12,19 +12,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ce64614e3c2f9d27bfafb9101e54ab49df2089e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2cfd16b46ddf4c06c283009ecfa836780c1c2444
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672619"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412067"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Columnstore-Indizes: Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Columnstore-Indizes sind in Verbindung mit der Partitionierung unverzichtbar für die Erstellung eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Data Warehouse.  
   
-## <a name="whats-new"></a>Neuigkeiten  
+## <a name="whats-new"></a>Neues  
  In[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wurden die folgenden Funktionen für Columnstore-Leistungsverbesserungen eingeführt:  
   
 -   AlwaysOn unterstützt das Abfragen eines Columnstore-Indexes auf einem lesbaren sekundären Replikat.  

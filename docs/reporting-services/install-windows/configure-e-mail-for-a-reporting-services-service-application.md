@@ -8,12 +8,12 @@ ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 29b5ba7b28781351232ba1a51ad20b6b84fbfce7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 26c28f65737fe989b416078e609f7742cfcf07b1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050862"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410367"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Konfigurieren von E-Mail für eine Reporting Services-Dienstanwendung
 
@@ -52,16 +52,16 @@ ms.locfileid: "50050862"
   
     -   Fehler beim Senden von E-Mail: Für den SMTP-Server ist eine sichere Verbindung erforderlich, oder der Client wurde nicht authentifiziert. Die Serverantwort war: „5.7.1 Client wurde nicht authentifiziert. E-Mails werden nicht erneut gesendet“.  
   
-     Ändern Sie **SMTPAuthenticate** so, dass der Wert "2" verwendet wird. Dieser Wert kann nicht über die Benutzeroberfläche geändert werden. Das folgende PowerShell-Skript-Beispiel aktualisiert die vollständige Konfiguration für die Berichtsserver-E-Mail-Übermittlungserweiterung für die Dienstanwendung mit dem Namen "SSRS_TESTAPPLICATION". Beachten Sie, dass einige der im Skript aufgeführten Knoten, wie z. B. die Absenderadresse, über die Benutzeroberfläche festgelegt werden können.  
+     Ändern Sie **SMTPAuthenticate** so, dass der Wert „2“ verwendet wird. Dieser Wert kann nicht über die Benutzeroberfläche geändert werden. Das folgende beispielhafte PowerShell-Skript aktualisiert die vollständige Konfiguration für die Berichtsserver-E-Mail-Übermittlungserweiterung für die Dienstanwendung mit dem Namen „SSRS_TESTAPPLICATION“. Beachten Sie, dass einige der im Skript aufgeführten Knoten, wie z. B. die Absenderadresse, über die Benutzeroberfläche festgelegt werden können.  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION *"}  
     $emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
     $emailXml = [xml]$emailCfg   
-    $emailXml.SelectSingleNode("//SMTPServer").InnerText = “your email server name"  
+    $emailXml.SelectSingleNode("//SMTPServer").InnerText = "your email server name"  
     $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
     $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
-    $emailXml.SelectSingleNode("//From").InnerText = “your FROM email address”  
+    $emailXml.SelectSingleNode("//From").InnerText = "your FROM email address"  
     Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
     ```  
   
@@ -71,14 +71,14 @@ ms.locfileid: "50050862"
     get-sprsserviceapplication  
     ```  
   
-3.  Das folgende Beispiel ruft den aktuellen Wert der E-Mail-Erweiterung für die Dienstanwendung mit dem Namen "SSRS_TESTAPPLICATION" ab.  
+3.  Im folgenden Beispiel wird der aktuelle Wert der E-Mail-Erweiterung für die Dienstanwendung mit dem Namen „SSRS_TESTAPPLICATION“ abgerufen.  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRSTEST_APPLICATION*"}  
     Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
     ```  
   
-4.  Das folgende Beispiel erstellt eine neue Datei mit dem Namen "emailconfig.txt" mit den aktuellen Werten der E-Mail-Erweiterung für die Dienstanwendung mit dem Namen "SSRS_TESTAPPLICATION".  
+4.  Im folgenden Beispiel wird eine neue Datei mit dem Namen „emailconfig.txt“ mit den aktuellen Werten der E-Mail-Erweiterung für die Dienstanwendung mit dem Namen „SSRS_TESTAPPLICATION“ erstellt.  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION*"}  

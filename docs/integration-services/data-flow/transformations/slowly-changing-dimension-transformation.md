@@ -18,12 +18,12 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d334d7aac70cdbadef5bdeede6d9f3a53c74caa7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9aeb16eff9632fe5a6859985f70e8aefddd0fea4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638327"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414537"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Transformation für langsam veränderliche Dimensionen
   Die Transformation für langsam veränderliche Dimensionen koordiniert das Aktualisieren und Einfügen von Datensätzen in Data Warehouse-Dimensionstabellen. Beispielsweise können Sie mit dieser Transformation die Transformationsausgaben konfigurieren, die Datensätze in der DimProduct-Tabelle der [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] -Datenbank mit Daten aus der Production.Products-Tabelle in der AdventureWorks-OLTP-Datenbank aktualisieren und ersetzen.  
@@ -69,7 +69,7 @@ ms.locfileid: "51638327"
 |------------|-----------------|----------------------------|  
 |**Ausgabe: Updates von veränderlichen Attributen**|Der Datensatz in der Nachschlagetabelle wird aktualisiert. Diese Ausgabe wird für veränderliche Attributzeilen verwendet.|Eine Transformation für OLE DB-Befehl aktualisiert den Datensatz mithilfe einer UPDATE-Anweisung.|  
 |**Ausgabe des festen Attributs**|Die Werte in Zeilen, die nicht geändert werden dürfen, stimmen nicht mit Werten in der Nachschlagetabelle überein. Diese Ausgabe wird für feste Attributzeilen verwendet.|Es wird kein Standarddatenfluss erstellt. Falls für die Transformation konfiguriert ist, dass sie fortgesetzt wird, wenn Änderungen an Spalten fester Attribute gefunden werden, sollten Sie einen Datenfluss zum Aufzeichnen dieser Zeilen erstellen.|  
-|**Ausgabe der Einfügevorgänge im Verlaufsattribut**|Die Nachschlagetabelle enthält mindestens eine übereinstimmende Zeile. Die als "aktuell" markierte Zeile muss jetzt als "abgelaufen" markiert werden. Diese Ausgabe wird für Verlaufsattributzeilen verwendet.|Transformationen für abgeleitete Spalten erstellen Spalten für die Indikatoren abgelaufener Zeilen und aktueller Zeilen. Eine OLE DB-Befehlstransformation aktualisiert den Datensatz, der jetzt als "abgelaufen" markiert werden muss. Die Zeile mit den neuen Spaltenwerten wird an die neue Ausgabe geleitet, wo die Zeile eingefügt und als "aktuell" markiert wird.|  
+|**Ausgabe der Einfügevorgänge im Verlaufsattribut**|Die Nachschlagetabelle enthält mindestens eine übereinstimmende Zeile. Die als „current“ (aktuell) markierte Zeile muss jetzt als „expired“ (abgelaufen) markiert werden. Diese Ausgabe wird für Verlaufsattributzeilen verwendet.|Transformationen für abgeleitete Spalten erstellen Spalten für die Indikatoren abgelaufener Zeilen und aktueller Zeilen. Eine OLE DB-Befehlstransformation aktualisiert den Datensatz, der jetzt als "abgelaufen" markiert werden muss. Die Zeile mit den neuen Spaltenwerten wird an die neue Ausgabe geleitet, wo die Zeile eingefügt und als "aktuell" markiert wird.|  
 |**Ausgabe der Updates abgeleiteter Elemente**|Zeilen für abgeleitete Dimensionselemente werden eingefügt. Diese Ausgabe wird für abgeleitete Elementzeilen verwendet.|Eine Transformation für OLE DB-Befehl aktualisiert den Datensatz mithilfe einer UPDATE-Anweisung von SQL.|  
 |**Neue Ausgabe**|Die Nachschlagetabelle enthält keine übereinstimmenden Zeilen. Die Zeile wird der Dimensionstabelle hinzugefügt. Diese Ausgabe wird für neue Zeilen und Änderungen an Verlaufsattributzeilen verwendet.|Eine Transformation für abgeleitete Spalten legt den Indikator für die aktuelle Zeile fest, und ein OLE DB-Ziel fügt die Zeile ein.|  
 |**Nicht geänderte Ausgabe**|Die Werte in der Nachschlagetabelle stimmen mit den Zeilenwerten überein. Diese Ausgabe wird für nicht geänderte Zeilen verwendet.|Es wird kein Standarddatenfluss erstellt, weil die Transformation für langsam veränderliche Dimensionen keine Schritte ausführt. Wenn Sie diese Zeilen aufzeichnen möchten, sollten Sie einen Datenfluss für diese Ausgabe erstellen.|  

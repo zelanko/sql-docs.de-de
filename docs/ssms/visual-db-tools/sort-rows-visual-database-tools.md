@@ -14,12 +14,12 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1c4cbf7909a6ab779d34be4595a0434bdf5812a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06a68464cbc0eeaa5536deca73497229b0e0e435
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668228"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505362"
 ---
 # <a name="sort-rows-visual-database-tools"></a>Sortieren von Zeilen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ Zum Sortieren der Abfrageergebnisse stehen Ihnen mehrere Möglichkeiten zur Verf
     ORDER BY price DESC  
     ```  
   
--   **Sie können nach abgeleiteten Spalten sortieren.** Sie können z. B. ein Resultset erstellen, in dem jede Zeile einen Buchtitel enthält und in dem die Bücher zuerst aufgeführt werden, die die höchsten Tantiemen pro Exemplar erzielen. Hierfür kann folgende SQL-Anweisung formuliert werden:  
+-   **Sie können nach abgeleiteten Spalten sortieren.** Sie können z.B. ein Resultset erstellen, in dem jede Zeile einen Buchtitel enthält und zuerst die Bücher aufgeführt werden, die die höchsten Tantiemen pro Exemplar erzielen. Hierfür kann folgende SQL-Anweisung formuliert werden:  
   
     ```  
     SELECT title, price * royalty / 100 as royalty_per_unit  
@@ -74,7 +74,7 @@ Zum Sortieren der Abfrageergebnisse stehen Ihnen mehrere Möglichkeiten zur Verf
   
     Zum Berechnen einer abgeleiteten Spalte können Sie wie im vorhergehenden Beispiel SQL-Syntax verwenden, Sie können aber auch eine benutzerdefinierte Funktion verwenden, die einen Skalarwert zurückgibt. Weitere Informationen über benutzerdefinierte Funktionen finden Sie in der SQL Server-Dokumentation.  
   
--   **Sie können gruppierte Zeilen sortieren.** Sie können z. B. ein Resultset erstellen, in dem jede Zeile eine Stadt sowie die Anzahl der in dieser Stadt lebenden Autoren enthält, wobei die Städte mit mehreren Autoren zuerst aufgeführt werden. Hierfür kann folgende SQL-Anweisung formuliert werden:  
+-   **Sie können gruppierte Zeilen sortieren.** Sie können z.B. ein Resultset erstellen, in dem jede Zeile eine Stadt sowie die Anzahl der in dieser Stadt lebenden Autoren enthält, wobei die Städte mit mehreren Autoren zuerst aufgeführt werden. Hierfür kann folgende SQL-Anweisung formuliert werden:  
   
     ```  
     SELECT city, state, COUNT(*)  

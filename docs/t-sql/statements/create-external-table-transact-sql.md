@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c4dd4b79881160f5fdfe61a7c60f76ce0ae2cf0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4409d67e60fd4d82d339ac31e96ca75b578171fe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703958"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402815"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -220,7 +220,7 @@ Beispiel:
 REJECTED_ROW_LOCATION = *Verzeichnis*
   
   Gibt das Verzeichnis in der externen Datenquelle an, in das die abgelehnten Zeilen und die entsprechende Fehlerdatei geschrieben werden sollen.
-Ist das angegebene Verzeichnis nicht vorhanden, wird es von PolyBase für Sie erstellt. Es wird ein untergeordnetes Verzeichnis erstellt, das den Namen „_rejectedrows“ hat. Mit dem „_“-Zeichen wird sichergestellt, dass das Verzeichnis für andere Datenverarbeitungsvorgänge übergangen wird, es sei denn, es ist explizit im LOCATION-Parameter angegeben. In diesem Verzeichnis befindet sich ein Ordner, der ausgehend von der Zeit der Lastübermittlung im Format JahrMonatTag-StundeMinuteSekunde erstellt wurde (z. B. 20180330-173205). In diesen Ordner werden zwei Arten von Dateien geschrieben: die Ursachendatei (_reason-Datei) und die Datendatei. 
+Ist das angegebene Verzeichnis nicht vorhanden, wird es von PolyBase für Sie erstellt. Es wird ein untergeordnetes Verzeichnis mit dem Namen „_rejectedrows“ erstellt. Mit dem „_“-Zeichen wird sichergestellt, dass das Verzeichnis für andere Datenverarbeitungsvorgänge übergangen wird, es sei denn, es ist explizit im LOCATION-Parameter angegeben. In diesem Verzeichnis befindet sich ein Ordner, der ausgehend von der Zeit der Lastübermittlung im Format JahrMonatTag-StundeMinuteSekunde erstellt wurde (z. B. 20180330-173205). In diesen Ordner werden zwei Arten von Dateien geschrieben: die Ursachendatei (_reason-Datei) und die Datendatei. 
 
 Sowohl die Ursachendateien als auch die Datendateien haben die „queryID“, die der CTAS-Anweisung zugeordnet ist. Da die Daten und die Ursachen in getrennten Dateien gespeichert sind, haben die zugehörigen Dateien ein entsprechendes Suffix. 
   

@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 578c7002e4366dd0b0b4ef4e633d5e59dffe4802
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c9855f798a7867dfd67a52a1c8452340cdf2a69a
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697688"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439902"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Mitwirken an der SQL Server-Dokumentation
 
@@ -28,6 +28,8 @@ Wenn Sie zur Dokumentation beitragen möchten, stehen Ihnen zwei Hauptworkflows 
 |---|---|
 | [Bearbeiten von Inhalten im Browser](#githubui) | Geeignet für kleinere Bearbeitungen eines Artikels |
 | [Lokales Bearbeiten von Inhalten mit Tools](#tools) | Geeignet für komplexere Bearbeitungen in mehreren Artikeln und bei häufigen Beiträgen für docs.microsoft.com |
+
+Alle öffentlichen Beiträge werden vom SQL-Inhaltsteam auf technische Richtigkeit und Konsistenz geprüft. 
 
 ## <a id="githubui"></a> Bearbeiten von Inhalten im Browser
 

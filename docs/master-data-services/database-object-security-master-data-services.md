@@ -15,12 +15,12 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ebd4835fe24846df21b887841813f7cac596f7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d39d78d9fef6756804f69c8fb49ed1e880d94767
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598165"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395384"
 ---
 # <a name="database-object-security-master-data-services"></a>Sicherheit von Datenbankobjekten (Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "47598165"
 -   [Konfigurieren von Systemeinstellungen](#SysSettings)  
   
 ##  <a name="Staging"></a> Bereitstellen von Daten  
- In der folgenden Tabelle hat jedes sicherungsfähige Element "Name" als Teil des Namens. Dies gibt den Namen der Stagingtabelle an, die angegeben wird, wenn eine Entität erstellt wird. Weitere Informationen finden Sie unter [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ In der folgenden Tabelle weist jedes sicherungsfähige Element „Name“ als Teil des Namens auf. Dies gibt den Namen der Stagingtabelle an, die angegeben wird, wenn eine Entität erstellt wird. Weitere Informationen finden Sie unter [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 |Aktion|Sicherungsfähige Elemente|Berechtigungen|  
 |------------|----------------|-----------------|  

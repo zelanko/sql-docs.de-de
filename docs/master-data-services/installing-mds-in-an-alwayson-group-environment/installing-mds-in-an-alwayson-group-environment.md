@@ -11,12 +11,12 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8d6625b72cadddb7c6f587f664ae5134730f9939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692188"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395680"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services
 
@@ -92,7 +92,7 @@ In diesem Abschnitt werden die folgenden Aufgaben behandelt.
 
 Wie in Abbildung 1 im vorherigen Abschnitt gezeigt, enthält die in diesem Artikel beschriebene Projektmappe den Windows Server-Failovercluster (WSFC). Wir müssen das WSFC einrichten, da SQL Always On immer auf WFSC für die Fehlererkennung und das Failover baut.
 
-WSFC ist ein Feature, das die Hochverfügbarkeit von Anwendungen und Diensten verbessert. Es besteht aus einer Gruppe unabhängiger Windows Server-Instanzen, auf denen der Microsoft-Failoverclusterdienst ausgeführt wird. Die Windows Server-Instanzen (oder Knoten, wie sie manchmal genannt werden) sind miteinander verbunden, sodass sie kommunizieren können und so die Fehlererkennung möglich machen. Der WSFC stellt die Fehlererkennung und Failoverfunktionen bereit. Wenn ein Knoten oder Dienst im Cluster einen Fehler ausgibt, wird der Fehler erkannt, und ein anderer Knoten stellt automatisch oder manuell die auf dem fehlgeschlagenen Knoten gehosteten Dienste bereit. So erfahren Benutzer nur eine minimale Unterbrechung des Diensts, und die Verfügbarkeit des Diensts wird verbessert.  
+WSFC ist ein Feature, das die Hochverfügbarkeit von Anwendungen und Diensten verbessert. Es besteht aus einer Gruppe unabhängiger Windows Server-Instanzen, auf denen der Microsoft-Failoverclusterdienst ausgeführt wird. Die Windows Server-Instanzen (oder Knoten, wie sie manchmal genannt werden) sind miteinander verbunden, sodass sie kommunizieren können und so die Fehlererkennung möglich machen. Der WSFC stellt die Fehlererkennung und Failoverfunktionen bereit. Wenn ein Knoten oder Dienst im Cluster einen Fehler ausgibt, wird der Fehler erkannt, und ein anderer Knoten stellt automatisch oder manuell die auf dem fehlgeschlagenen Knoten gehosteten Dienste bereit. So erfahren Benutzer nur eine minimale Unterbrechung des Diensts, und die Verfügbarkeit des Diensts wird verbessert.  
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
@@ -111,7 +111,7 @@ Schließen Sie die folgenden Schritte für jede Windows Server-Instanz ab, um di
 
 3.  Aktivieren Sie das Kontrollkästchen **Failoverclustering**, und klicken Sie auf **Weiter**, um die Installation abzuschließen. Weitere Informationen in Abbildung 2.
 
-    Wenn Sie zur Bestätigung zum **Hinzufügen von Features, die für das Failoverclustering erforderlich sind**, aufgefordert werden, klicken Sie auf **Features hinzufügen**. Weitere Informationen in Abbildung 3.
+    Wenn Sie zur Bestätigung zum **Hinzufügen von Funktionen, die für das Failoverclustering erforderlich sind**, aufgefordert werden, klicken Sie auf **Funktionen hinzufügen**. Weitere Informationen in Abbildung 3.
 
     ![Assistent zum Hinzufügen von Rollen und Features, Failoverclustering](media/Fig2_SelectFeatures.png)
 
@@ -155,9 +155,9 @@ Sobald das WSFC-Feature auf allen Instanzen installiert ist, können Sie den WSF
 
 7.  Überprüfen Sie die Seite **Zusammenfassung** auf Warnungen oder Fehlermeldungen.
 
-    Fehler müssen behoben werden. Warnungen stellen möglicherweise jedoch kein Problem dar. Eine Warnmeldung bedeutet nur, dass „das geprüfte Element womöglich den Anforderungen entspricht, jedoch gibt es etwas, das Sie überprüfen sollten“. Abbildung 7 zeigt beispielsweise die Warnung „Wartezeit beim Datenträgerzugriff überprüfen“, die aufgrund dessen angezeigt werden könnte, dass der Datenträger derzeit auf andere Aufgaben fokussiert ist. Diese Warnung können Sie ignorieren. Suchen Sie im Onlinedokument für jede Warnung oder Fehlermeldung nach weiteren Informationen. Weitere Informationen in Abbildung 7.
- 
-    ![Assistent zum Überprüfen der Konfiguration, Seite „Überprüfung“](media/Fig6_ValidationTests.png)
+    Fehler müssen behoben werden. Warnungen stellen möglicherweise jedoch kein Problem dar. Eine Warnmeldung bedeutet nur, dass „das geprüfte Element womöglich den Anforderungen entspricht, jedoch gibt es etwas, das Sie überprüfen sollten“. Abbildung 7 zeigt beispielsweise die Warnung „Wartezeit beim Datenträgerzugriff überprüfen“, die aufgrund dessen angezeigt werden könnte, dass der Datenträger derzeit auf andere Aufgaben fokussiert ist. Diese Warnung können Sie ignorieren. Suchen Sie im Onlinedokument für jede Warnung oder Fehlermeldung nach weiteren Informationen. Weitere Informationen in Abbildung 7.
+ 
+![Assistent zum Überprüfen der Konfiguration, Seite „Überprüfung“](media/Fig6_ValidationTests.png)
 
     Abbildung 6
 
@@ -326,7 +326,7 @@ Die Verfügbarkeitsgruppe kann nur auf vorhandenen Datenbanken erstellt werden. 
     d.  Geben Sie im Textfeld **Netzwerkmodus** „DHCP“ ein, und klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.
 
     >[!NOTE] 
-    >Optional können Sie „Statische IP“ als **Netzwerkmodus** auswählen und als statische IP eingeben. Sie können auch einen anderen Port als 1433 eingeben. 
+    >Sie können optional „Statische IP“ als **Netzwerkmodus** auswählen und als statische IP eingeben. Sie können auch einen anderen Port als 1433 eingeben. 
 
     ![Konfigurieren des Listeners](media/Fig18_AvailabilityGroupCreateListener.png)
 
@@ -338,7 +338,7 @@ Die Verfügbarkeitsgruppe kann nur auf vorhandenen Datenbanken erstellt werden. 
 
     ![Konfigurieren der Datensynchronisierung](media/Fig19_AvailabilityGroupDataSync.png)
 
-    Abbildung 19 
+    Abbildung 19 
 
 10. Stellen Sie auf der Seite **Überprüfung** sicher, dass Überprüfungen erfolgreich übergeben werden, und beheben Sie aufgetretene Fehler. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.
 
@@ -354,11 +354,11 @@ Die Verfügbarkeitsgruppe kann nur auf vorhandenen Datenbanken erstellt werden. 
 
     ![Dashboard anzeigen](media/Fig20_ShowDashboard.png)
 
-    Abbildung 20 
+    Abbildung 20 
 
 3.  Klicken Sie auf **Failover**, um ein Failover auf ein synchrones und ein asynchrones Replikat auszuführen. So können Sie überprüfen, ob ein Failover ohne Probleme ausgeführt werden kann.
 
- Die Always On-Einrichtung ist abgeschlossen.
+ Die Always On-Einrichtung ist abgeschlossen.
 
 Weitere Informationen zur Always On-Verfügbarkeitsgruppe finden Sie unter [Always On-Verfügbarkeitsgruppen (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
 

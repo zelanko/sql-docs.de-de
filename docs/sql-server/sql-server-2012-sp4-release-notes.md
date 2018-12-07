@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 611d882b0711d19e8b9015e0d5081c1a22d0d11d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 49dea1b469a7e8e79810e4a0ab2da6c40b97d3cb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701098"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503273"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Anmerkungen zu dieser Version von SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Die Service Packs sind ausschließlich online und nicht auf dem Installationsmed
 - **Neue DMF zum Ersetzen des DBCC INPUTBUFFER:** Eine neue dynamische Verwaltungsfunktion, sys.dm_input_buffer, die session_id als Parameter verwendet, wird eingeführt, um den DBCC INPUTBUFFER zu ersetzen.
 - **Erweiterung für XEvents zum Lesen von Routingfehlern für eine Verfügbarkeitsgruppe:** Derzeit wird read_only_rout_fail XEvent nur ausgelöst, wenn zwar eine Routingliste besteht, jedoch zu keinem der Server auf dieser Liste eine Verbindung hergestellt werden kann. Diese Verbesserung beinhaltet zusätzliche Informationen zur Unterstützung bei der Problembehandlung und Erweiterungen zu den Codepunkten, bei denen XEvent ausgelöst wird. 
 - **Verbesserte Handhabung von Service Broker mit Failover einer Verfügbarkeitsgruppe:** Wenn Service Broker für Datenbanken der Verfügbarkeitsgruppe derzeit aktiviert ist, bleiben bei einem Failover der Verfügbarkeitsgruppe alle Service Broker-Verbindungen, die dem primären Replikat entstammen, geöffnet. Mit dieser Verbesserung werden all diese offenen Verbindungen während eines Failover der Verfügbarkeitsgruppe geschlossen.
-- **Partitionierung mit der automatischen Soft-NUMA**: Mit der Version SQL 2014 SP2 wird die Partitionierung mit der automatischen [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) eingeführt, wenn das Ablaufverfolgungsflag 8079 auf Serverebene aktiviert ist. Wenn das Ablaufverfolgungsflag 8079 beim Starten aktiviert ist, fragt SQL Server 2014 SP2 das Hardwarelayout ab und konfiguriert soft-NUMA automatisch auf Systemen, die mindestens acht CPU pro NUMA-Knoten vermelden. Die automatische soft-NUMA ist Hyperthread-fähig (HT/logischer Prozessor). Durch die Partitionierung und Erstellung von weiteren Knoten wird die Hintergrundverarbeitung skaliert, indem die Anzahl von Listenern, Skalierungen sowie Netzwerk- und Verschlüsselungsfunktionen erhöht wird. Wir empfehlen Ihnen, die Leistung der Arbeitsauslastung mit der automatischen soft-NUMA vor der Aktivierung im Rahmen der Produktion zunächst zu testen.
+- **Partitionierung mit der automatischen Soft-NUMA**: Mit der Version SQL 2014 SP2 wird die Partitionierung mit der automatischen [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) eingeführt, wenn das Ablaufverfolgungsflag 8079 auf Serverebene aktiviert ist. Wenn das Ablaufverfolgungsflag 8079 beim Starten aktiviert ist, fragt SQL Server 2014 SP2 das Hardwarelayout ab und konfiguriert soft-NUMA automatisch auf Systemen, die mindestens acht CPU pro NUMA-Knoten vermelden. Die automatische soft-NUMA ist Hyperthread-fähig (HT/logischer Prozessor). Durch die Partitionierung und Erstellung von weiteren Knoten wird die Hintergrundverarbeitung skaliert, indem die Anzahl von Listenern, Skalierungen sowie Netzwerk- und Verschlüsselungsfunktionen erhöht wird. Wir empfehlen Ihnen, die Leistung der Arbeitsauslastung mit der automatischen soft-NUMA vor der Aktivierung im Rahmen der Produktion zunächst zu testen.
 
 ## <a name="service-pack-3-release-notes"></a>Versionsanmerkungen zu Service Pack 3
 
@@ -226,11 +226,11 @@ Früher wurde der Zustand von CHECK-Einschränkungen (WITH CHECK/NOCHECK), der f
   
 **Updates auf „SqlPackage.exe“ (DACFx-Befehlszeilentool)**  
   
--   Extrahieren einer DACPAC-Datei mit Daten: Erstellt eine Datenbank-Momentaufnahmedatei (.dacpac) von einer SQL Server- oder Windows Azure SQL-Livedatenbank, die zusätzlich zum Datenbankschema Daten aus Benutzertabellen enthält. Diese Pakete können mithilfe der Veröffentlichungsaktion von SqlPackage.exe auf einer neuen oder bestehenden SQL Server- oder Windows Azure SQL-Datenbank veröffentlicht werden. Die im Paket enthaltenen Daten ersetzen die bestehenden Daten in der Zieldatenbank.  
+-   Extrahieren einer DACPAC-Datei mit Daten: Erstellt eine Datenbank-Momentaufnahmedatei (DACPAC) von einer SQL Server- oder Microsoft Azure SQL-Livedatenbank, die zusätzlich zum Datenbankschema Daten aus Benutzertabellen enthält. Diese Pakete können mithilfe der Veröffentlichungsaktion von SqlPackage.exe auf einer neuen oder bestehenden SQL Server- oder Windows Azure SQL-Datenbank veröffentlicht werden. Die im Paket enthaltenen Daten ersetzen die bestehenden Daten in der Zieldatenbank.  
   
 -   Exportieren einer BACPAC-Datei: Erstellt eine logische Sicherungsdatei (.bacpac) einer SQL Server- oder Windows Azure SQL-Livedatenbank, die das Datenbankschema und die Benutzerdaten enthält. Diese können verwendet werden, um eine Datenbank von einer lokalen SQL Server-Datenbank zu einer Windows Azure SQL-Datenbank zu migrieren. Mit Azure kompatible Datenbanken können exportiert und später zwischen unterstützten Versionen von SQL Server importiert werden.  
   
--   Importieren einer BACPAC-Datei: Importiert eine BACPAC-Datei, um eine neue SQL Server- oder Windows Azure SQL-Datenbank zu erstellen bzw. eine leere Datenbank mit Daten aufzufüllen.  
+-   Importieren einer BACPAC-Datei: Importiert eine BACPAC-Datei, um eine neue SQL Server- oder Microsoft Azure SQL-Datenbank zu erstellen bzw. eine leere Datenbank mit Daten aufzufüllen.  
   
 Eine vollständige Dokumentation zu SqlPackage.exe auf MSDN finden Sie [hier](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx).  
   

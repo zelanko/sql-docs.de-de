@@ -14,12 +14,12 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 134831664f7b13177dac016bb9b92906a2974eb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ec96dd777f338af847602fdb4b595f9fefc76a9d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703588"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404095"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "51703588"
   
  Kein einzelner Knoten in einem WSFC-Cluster kann definitiv bestimmen, dass der Cluster als Ganzes fehlerfrei oder nicht fehlerfrei ist.  Aus Sicht der einzelnen Knoten können einige andere Knoten jederzeit offline sein, sich in einem Failoverprozess befinden oder aufgrund eines Netzwerkkommunikationsfehlers nicht reagieren.  Eine Hauptfunktion der Quorumabstimmung ist die Ermittlung, ob der scheinbare Status der einzelnen Knoten im WSFC-Cluster tatsächlich dem Ist-Zustand dieser Knoten entspricht.  
   
- Für alle Quorummodelle mit Ausnahme von Nur Datenträger hängt die Effektivität einer Quorumabstimmung von einer zuverlässigen Kommunikation zwischen allen Abstimmungsknoten im Cluster ab. Die Netzwerkkommunikation zwischen Knoten in demselben physischen Subnetz sollte als zuverlässig angesehen werden. Die Quorumabstimmung sollte als vertrauenswürdig eingestuft werden.  
+ Für alle Quorummodelle mit Ausnahme von „Nur Datenträger“ hängt die Effektivität einer Quorumabstimmung von einer zuverlässigen Kommunikation zwischen allen Abstimmungsknoten im Cluster ab. Die Netzwerkkommunikation zwischen Knoten in demselben physischen Subnetz sollte als zuverlässig angesehen werden. Die Quorumabstimmung sollte als vertrauenswürdig eingestuft werden.  
   
  Wenn ein Knoten in einem anderen Subnetz für eine Quorumabstimmung jedoch als nicht reagierend angesehen wird, während der Knoten eigentlich online und auch sonst fehlerfrei ist, liegt dies in den meisten Fällen an einem Netzwerkkommunikationsfehler zwischen Subnetzen.  Je nach Clustertopologie, Quorummodus und Konfiguration der Failoverrichtlinien kann bei dem Netzwerkkommunikationsfehler ggf. mehr als ein Satz (oder eine Teilmenge) mit Abstimmungsknoten erstellt werden.  
   

@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e268c036ffb1805c968017a566b2e319507490e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f145386e82132316484beb6757c47007d8144f11
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839732"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391925"
 ---
 # <a name="lastvalue-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -103,7 +103,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
 ### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>B. Verwenden von FIRST_VALUE und LAST_VALUE in einem berechneten Ausdruck  
  Im folgenden Beispiel werden die FIRST_VALUE-Funktion und die LAST_VALUE-Funktion in berechneten Ausdrücken verwendet, um den Unterschied zwischen den Verkaufszahlen für das laufende Quartal und das erste bzw. letzte Quartal des Jahres für eine bestimmte Anzahl von Mitarbeitern aufzuzeigen. Die FIRST_VALUE-Funktion gibt den Verkaufszahlenwert für das erste Quartal des Jahres zurück und subtrahiert diesen von den Verkaufszahlen für das aktuelle Quartal. Der Wert wird in der abgeleiteten Spalte mit dem Titel "DifferenceFromFirstQuarter" zurückgegeben. Für das erste Quartal eines Jahres ist der Wert der Spalte "DifferenceFromFirstQuarter" 0. Die LAST_VALUE-Funktion gibt den Verkaufszahlenwert für das letzte Quartal des Jahres zurück und subtrahiert diesen von den Verkaufszahlen für das aktuelle Quartal. Der Wert wird in der abgeleiteten Spalte mit dem Titel "DifferenceFromLastQuarter" zurückgegeben. Für das letzte Quartal eines Jahres ist der Wert der Spalte "DifferenceFromLastQuarter" 0.  
   
- Die Klausel "RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" muss in diesem Beispiel für die Werte ungleich NULL in der Spalte "DifferenceFromLastQuarter" zurückgegeben werden, wie unten dargestellt. Der Standardbereich lautet "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW". In diesem Beispiel führt die Verwendung dieses Standardbereichs (oder ausschließlich eines Bereichs, wodurch der Standardbereich verwendet wird) dazu, dass Nullen (0) in der Spalte "DifferenceFromLastQuarter" zurückgegeben werden. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ Die Klausel „RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING“ muss in diesem Beispiel wie unten dargestellt für die Werte ungleich NULL in der Spalte „DifferenceFromLastQuarter“ zurückgegeben werden. Der Standardbereich lautet „RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW“. In diesem Beispiel führt die Verwendung dieses Standardbereichs (oder ausschließlich eines Bereichs, wodurch der Standardbereich verwendet wird) dazu, dass Nullen (0) in der Spalte "DifferenceFromLastQuarter" zurückgegeben werden. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  

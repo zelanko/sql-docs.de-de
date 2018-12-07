@@ -18,12 +18,12 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a07686a0aefb9b5d41e8c6f231c57214b75f687
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a7a09c5653fe89528c49ade19e044066acfb34cd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702758"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403705"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51702758"
  *distance*  
  Ein Wert vom Typ **float** (**double** in .NET-Framework), der den Abstand zu der **geography**-Instanz angibt, um die der Puffer berechnet werden soll.  
   
- Der maximale Abstand des Puffers darf 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Kugelumfang) oder die vollständige Kugel nicht überschreiten.  
+ Der maximale Abstand des Puffers darf 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Umfang der Erde) oder den vollständigen Umfang der Erde nicht überschreiten.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
@@ -59,7 +59,7 @@ ms.locfileid: "51702758"
   
  Diese Methode löst eine **ArgumentException** in **FullGlobe**-Instanzen aus, bei denen der Abstand des Puffers die folgende Einschränkung überschreitet:  
   
- 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Kugelumfang)  
+ 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Umfang der Erde)  
   
  Die Begrenzung des maximal möglichen Abstands ermöglicht das Erstellen von äußerst flexiblen Puffern.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 589da307442ff382910d7185c761d4a0fe6a8178
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1713cfed406a4a300f98a1a06e9317cae1fb82e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723898"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402165"
 ---
 # <a name="xml-device-information-settings"></a>XML-Geräteinformationseinstellungen
   In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern in das XML-Format aufgeführt.  
@@ -27,7 +27,7 @@ ms.locfileid: "47723898"
 |**MIMEType**|MIME-Typ (Multipurpose Internet Mail Extensions) der XML-Datei||  
 |**UseFormattedValues**|**true**<br /><br /> **false**|Gibt an, ob der formatierte Wert eines Textfelds beim Generieren der XML-Daten gerendert werden soll.<br /><br /> Ein false-Wert gibt an, dass der zugrundeliegende Wert des Textfelds verwendet wird.|  
 |**Indented**|**true**<br /><br /> **false**|Gibt an, ob XML-Dateien mit Einzug generiert werden sollen. Der Standardwert **FALSE** generiert komprimierte XML-Dateien ohne Einzug.|  
-|**OmitNamespace**|**true**<br /><br /> **false**|Gibt an, ob der Standardnamespace in der XML-Datei weggelassen werden soll.<br /><br /> Bei "true" wird kein Standardnamespace in der XML-Datei angegeben.<br /><br /> Bei "false" gibt die XML-Datei einen Standardnamespace mit dem Wert der DataSchema-Eigenschaft des Berichts an. Die DataSchema-Eigenschaft verwendet standardmäßig den Berichtsnamen.<br /><br /> Der Standardwert ist**false**.|  
+|**OmitNamespace**|**true**<br /><br /> **false**|Gibt an, ob der Standardnamespace in der XML-Datei weggelassen werden soll.<br /><br /> Bei "true" wird kein Standardnamespace in der XML-Datei angegeben.<br /><br /> Bei FALSE gibt die XML-Datei einen Standardnamespace mit dem Wert der DataSchema-Eigenschaft des Berichts an. Die DataSchema-Eigenschaft verwendet standardmäßig den Berichtsnamen.<br /><br /> Der Standardwert ist**false**.|  
 |**OmitSchema**|**true**<br /><br /> **false**|Gibt an, ob der Schemaspeicherort in der XML-Datei weggelassen werden soll. Der Speicherort ist das SchemaLocation-Attribut.<br /><br /> Der Standardwert von OmitSchema hängt vom OmitNamespace-Wert ab:<br /><br /> Wenn OmitNamespace = False, gilt standardmäßig OmitSchema = **False** . Der Benutzer kann den Standardwert überschreiben, indem OmitSchema = True festgelegt wird.<br /><br /> Wenn OmitNamespace = true, gilt für OmitSchema **TRUE** – unabhängig vom explizit für OmitSchema konfigurierten Wert.|  
 |**Codierung**|Der Internet Assigned Numbers Authority (IANA)-Name einer Zeichencodierung, die von .NET Framework unterstützt wird.|Der Standardwert ist **UTF-8**. Beispiele für andere Werte: ASCII, UTF-7 und UTF-16.|  
 |**FileExtension**|Die Dateierweiterung für die generierte Datei.||  
@@ -36,7 +36,7 @@ ms.locfileid: "47723898"
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technische Referenz (SSRS)](../reporting-services/technical-reference-ssrs.md)  
+ [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technische Referenz &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

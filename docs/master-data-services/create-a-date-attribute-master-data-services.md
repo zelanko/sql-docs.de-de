@@ -15,12 +15,12 @@ ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfe30a7f6aa477c123d8b9efa9d17e69bd2bfc51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa31a8e2601eba31d1f7579b5f110945a47f4d79
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728299"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395293"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Erstellen eines Datenattributs (Master Data Services)
 
@@ -87,7 +87,7 @@ ms.locfileid: "47728299"
 |Sichtbar|1|  
 |Group_ID|3|  
   
- Nachdem Sie in die Tabelle mdm.tblList eine Zeile mit den oben angegebenen Werten eingegeben haben, steht im Listenfeld Eingabeformat die Maske "dd/MM/yyyy hh:mm:ss tt" zur Verfügung. Anschließend können Sie diese Maske auswählen, um das Datum und die Uhrzeit in einer datetime-Attributspalte einer Entität im MDS-Explorer anzuzeigen.  
+ Nachdem Sie in die Tabelle „mdm.tblList“ eine Zeile mit den oben angegebenen Werten eingegeben haben, steht im Eingabeformat-Listenfeld die Maske „dd/MM/yyyy hh:mm:ss tt“ zur Verfügung. Anschließend können Sie diese Maske auswählen, um das Datum und die Uhrzeit in einer datetime-Attributspalte einer Entität im MDS-Explorer anzuzeigen.  
   
  Die Input Mask ist eine benutzerdefinierte .NET DateTime-Formatzeichenfolge. Weitere Informationen finden Sie unter [Benutzerdefinierte Datums- und Uhrzeit-Formatzeichenfolgen](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)  
   

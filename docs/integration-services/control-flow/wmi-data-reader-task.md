@@ -18,12 +18,12 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2945ebadf1a9637018a2e6cbbda7379efa6ef58
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: dbe9e655bff91e514c8157a1afb74504b9dc6717
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638198"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502716"
 ---
 # <a name="wmi-data-reader-task"></a>WMI-Datenleser (Task)
   Der Task WMI-Datenleser führt Abfragen mithilfe von WQL (WMI Query Language) aus, womit Informationen von WMI zu einem Computersystem zurückgegeben werden. Der Task WMI-Datenleser kann für folgende Zwecke verwendet werden:  
@@ -151,7 +151,7 @@ Select * FROM Win32_QuickFixEngineering
   
 #### <a name="wqlquerysourcetype--direct-input"></a>WQLQuerySourceType = Direct input  
  **WQLQuerySource**  
- Stellen Sie eine Abfrage bereit, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten, und geben Sie eine Abfrage mithilfe des Dialogfelds **WQL-Abfrage** ein.  
+ Stellen Sie eine Abfrage bereit, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...), und geben Sie eine Abfrage mithilfe des Dialogfelds **WQL-Abfrage** ein.  
   
 #### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = File connection  
  **WQLQuerySource**  

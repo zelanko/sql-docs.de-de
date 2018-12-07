@@ -15,12 +15,12 @@ ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b3a57de7e071a66fa1b8a6091d51fb4d799f2cbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dc91a21f83283a78e5d47e49dbe1a36ec166e05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610308"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419961"
 ---
 # <a name="navigational-access-master-data-services"></a>Navigationszugriff (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "47610308"
 
   Der Navigationszugriff gilt für die Modellobjektsicherheit, die auf der Registerkarte **Modelle** zugewiesen wird.  
   
- Navigationszugriff ist der Zugriff auf höhere Ebenen als die Ebene, für die Ihnen Sicherheit zugewiesen wurde.  
+ Navigationszugriff ist der Zugriff auf höhere Ebenen als die Ebene, für die Sie Sicherheit zugewiesen haben.  
   
  In diesem Beispiel werden einer Entität Berechtigungen zugewiesen, der Navigationszugriff wird daher auf der Modellebene gewährt.  
   

@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a4c0341041bcd2cbf6845e7fd261e16b6028260
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 25abbb1cc11706b58c93d0884e024ad54fd280e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668699"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395893"
 ---
 # <a name="index-json-data"></a>Indizieren von JSON-Daten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 ### <a name="more-info-about-the-computed-column"></a>Weitere Informationen über die berechnete Spalte 
 Die Spalte wird nicht permanent berechnet. Sie wird nur berechnet, wenn der Index erneut erstellt werden muss. Sie beansprucht keinen zusätzlichen Platz in der Tabelle.   
   
-Es ist wichtig, dass Sie die berechnete Spalte mit dem gleichen Ausdruck erstellen, den Sie in Ihren Abfragen verwenden möchten – in diesem Beispiel handelt es sich dabei um den Ausdruck `JSON_VALUE(Info, '$.Customer.Name')`.  
+Es ist wichtig, die berechnete Spalte mit dem gleichen Ausdruck zu erstellen, den Sie in Ihren Abfragen verwenden möchten – in diesem Beispiel handelt es sich dabei um den Ausdruck `JSON_VALUE(Info, '$.Customer.Name')`.  
   
 Sie müssen Ihre Abfragen nicht neu schreiben. Falls Sie wie in der vorherigen Beispielabfrage dargestellt Ausdrücke mit der `JSON_VALUE`-Funktion verwenden, erkennt SQL Server, dass es eine gleichwertig berechnete Spalte mit dem gleichen Ausdruck gibt und wendet dann, falls möglich, einen Index darauf an.
 

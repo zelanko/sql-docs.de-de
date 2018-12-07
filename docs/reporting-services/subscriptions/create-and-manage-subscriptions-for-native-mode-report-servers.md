@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26826171d9d240e5daf919faabeb6023e77b86f8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: cc5d22756ce35acb3469dbf385a5a21e3c969ef0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021684"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400903"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus
   Ein Standardabonnement wird von einzelnen Benutzern erstellt, die einen Bericht per E-Mail oder an einen freigegebenen Ordner übermitteln möchten. Dieses Thema stellt Informationen zu Standardabonnements bereit, die von einzelnen Benutzern erstellt und verwaltet werden. Für datengesteuerte Abonnements gelten unterschiedliche Anforderungen und Schritte, die in einem anderen Thema behandelt werden. Weitere Informationen finden Sie unter [Erstellen, Ändern und Löschen von datengesteuerten Abonnements](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -112,7 +112,7 @@ ms.locfileid: "50021684"
     > [!NOTE]  
     >  Abhängig von Ihren Berechtigungen können Sie auch die E-Mail-Adresse eingeben, an die der Bericht geliefert werden soll. Mehrere E-Mail-Adressen müssen durch ein Semikolon (;) getrennt werden. Sie können weitere E-Mail-Adressen in die Textfelder **Cc**, **Bcc**und **Antwort an** eingeben. Für dieses Verfahren müssen Sie über die Berechtigung zum Verwalten von Abonnements verfügen.  
   
-7.  **Betreff**: Standardmäßig „Der @ReportName-Bericht wurde zum Zeitpunkt '@ExecutionTime' ausgeführt“. Sie können den Betreff bearbeiten. Beachten Sie jedoch, dass @ReportName und @ExecutionTime die einzigen globalen Variablen sind, die im **Betreff**-Feld unterstützt werden.  
+7.  **Betreff:** Standardmäßig „Der @ReportName-Bericht wurde zum Zeitpunkt '@ExecutionTime' ausgeführt“. Sie können den Betreff bearbeiten. Beachten Sie jedoch, dass @ReportName und @ExecutionTime die einzigen globalen Variablen sind, die im **Betreff**-Feld unterstützt werden.  
   
 8.  Wählen Sie die Übermittlungsoptionen wie folgt aus:  
   
@@ -163,7 +163,7 @@ ms.locfileid: "50021684"
 ##  <a name="bkmk_delete_subscription"></a> So löschen Sie ein Abonnement  
  So löschen Sie ein Abonnement  
   
-1.  Starten Sie denen Sie den [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Klicken Sie im Berichts-Manager auf der Symbolleiste auf **Meine Abonnements** , und navigieren Sie zu dem Abonnement, das Sie ändern oder löschen möchten.  
   

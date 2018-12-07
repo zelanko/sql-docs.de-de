@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0398062e9b57d536a0cc1a2c71c25e6983bea5c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df1121e89f1ec62148852e7b8a7aefaedd436fc9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678938"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399283"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Verwalten von Berichtsserverinhalten (einheitlicher SSRS-Modus)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verweist die Inhaltsverwaltung auf die Verwaltung von Berichtsserverelementen. Alle Elemente lassen sich durch Eigenschaften und Sicherheitseinstellungen unabhängig verwalten. Alle Elemente können an einen anderen Speicherort im Ordnernamespace des Berichtsservers verschoben werden. Zur effektiven Verwaltung der Elemente muss Ihnen bekannt sein, welche Aufgaben von einem Inhalts-Manager ausgeführt werden. Mit [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2 ist erstmals das  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal verfügbar. In diesem Artikel werden der Berichts-Manager und das neue Web-Portal besprochen.  
@@ -123,7 +123,7 @@ ms.locfileid: "47678938"
  Die Sichtbarkeit eines Elements in einem Ordner hängt sowohl von den Rollenzuweisungen (d. h. Berechtigung zum Anzeigen eines Elements) als auch von den Anzeigeoptionen für den jeweiligen Ordner ab. Im Berichts-Manager können Sie die Seite Inhalt auf Listenansicht oder Detailansicht festlegen. In einigen Fällen kann ein Bericht oder ein Element in der Listenansicht ausgeblendet sein. Zeigen Sie einen Ordner unbedingt in der Detailansicht an, bevor Sie seinen Inhalt löschen.  
   
 ##  <a name="bkmk_Resources"></a> Ressourcen  
- Eine Ressource ist ein verwaltetes Element, das auf einem Berichtsserver gespeichert wird, jedoch nicht vom Berichtsserver verarbeitet wird. In der Regel stellt eine Ressource externen Inhalt für die Benutzerberichterstattung bereit. Beispiele beinhalten ein Bild als JPG-Datei, eine ESRI-Shape-Datei mit räumlichen Daten oder eine HTML-Datei mit einer Beschreibung der in einem Bericht verwendeten Geschäftsregeln. Die JPG-, SHP- oder HTML-Datei wird auf dem Berichtsserver gespeichert, wobei der Berichtsserver die Datei jedoch direkt an den Browser weiterleitet, ohne sie zuerst zu verarbeiten. Weitere Informationen finden Sie unter [Bilder (Berichts-Generator und SSRS)](../../reporting-services/report-design/images-report-builder-and-ssrs.md) und im Abschnitt „Hinzufügen von Daten zu einer Karte“ im [Karten (Berichts-Generator und SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
+ Eine Ressource ist ein verwaltetes Element, das auf einem Berichtsserver gespeichert wird, jedoch nicht vom Berichtsserver verarbeitet wird. In der Regel stellt eine Ressource externen Inhalt für die Benutzerberichterstattung bereit. Beispiele beinhalten ein Bild als JPG-Datei, eine ESRI-Shape-Datei mit räumlichen Daten oder eine HTML-Datei mit einer Beschreibung der in einem Bericht verwendeten Geschäftsregeln. Die JPG-, SHP- oder HTML-Datei wird auf dem Berichtsserver gespeichert, wobei der Berichtsserver die Datei jedoch direkt an den Browser weiterleitet, ohne sie zuerst zu verarbeiten. Weitere Informationen finden Sie unter [Bilder &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) und im Abschnitt „Hinzufügen von Daten zu einer Karte“ im [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ### <a name="adding-and-viewing-a-resource"></a>Hinzufügen und Anzeigen einer Ressource  
  Um einem Berichtsserver eine Ressource hinzuzufügen, laden Sie eine Datei hoch oder veröffentlichen sie:  

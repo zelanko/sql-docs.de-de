@@ -14,12 +14,12 @@ ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5336a318a5384402d10e44b905446e29b0b71aec
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9d6d01272a88f4a529e55959e12d87dd33c01cd5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606530"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406187"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>Ausblenden einer Instanz der SQL Server-Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51606530"
   Weitere Informationen finden Sie unter [Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="clustering"></a>Clustering  
- Wenn Sie ein benannte Clusterinstanz ausblenden, ist der Clusterdienst möglicherweise nicht imstande, eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen. Dies führt zu einem Fehler bei der **IsAlive** -Prüfung der Clusterinstanz, daraufhin wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offline gesetzt. Es empfiehlt sich, in allen Knoten einen Alias der Clusterinstanz zu erstellen, um den statischen Port anzugeben, den Sie für die Instanz konfiguriert haben.  
+ Wenn Sie ein benannte Clusterinstanz ausblenden, ist der Clusterdienst möglicherweise nicht imstande, eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen. Dies führt zu einem Fehler bei der **IsAlive**-Prüfung der Clusterinstanz. Daraufhin wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offline geschaltet. Es empfiehlt sich, in allen Knoten einen Alias der Clusterinstanz zu erstellen, um den statischen Port anzugeben, den Sie für die Instanz konfiguriert haben.  
  Weitere Informationen finden Sie unter [Erstellen oder Löschen eines Serveralias für die Verwendung durch einen Client &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   
  Wenn Sie eine benannte Clusterinstanz ausblenden, kann der Clusterdienst möglicherweise keine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen, wenn der Registrierungsschlüssel **LastConnect** (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) einen anderen Port als den von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwachten Port angibt. Wenn der Clusterdienst keine Verbindung mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herstellen kann, wird möglicherweise ein Fehler wie der Folgende angezeigt:  

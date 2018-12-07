@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0bed1d8109d49b7c6f2ba57734f2daa1a5eb056d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800570"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410707"
 ---
 # <a name="tutorial-introducing-expressions"></a>Lernprogramm: Einführung in Ausdrücke
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] -Tutorial verwenden Sie Ausdrücke mit allgemeinen Funktionen und Operatoren zum Erstellen von leistungsstarken und flexiblen [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginierten Berichten. 
@@ -587,9 +587,9 @@ Erstellen Sie einen Parameter, damit die Leser des Berichts die Farbe bestimmen 
   
 8. Klicken Sie auf **Parameter** und doppelklicken Sie in der Liste **Werte** auf **Spaltenfarbe**.  
   
-22. Geben Sie unmittelbar hinter `Parameters!RowColor.Value` **, “White”)** ein.  
+22. Geben Sie unmittelbar hinter `Parameters!RowColor.Value` **, „White“)** ein.  
   
-    Der vollständige Ausdruck lautet wie folgt: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, “White”)`.  
+    Der vollständige Ausdruck lautet wie folgt: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`.  
     
     ![Berichts-Generator-Ausdruck-Tutorial-Ausdruck-gebänderte-Farben](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   

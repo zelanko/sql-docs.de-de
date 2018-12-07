@@ -13,12 +13,12 @@ ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7386a1bceed8ed79dddf2636ae152d79c460a5ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed6f127b8f1a692f1cd71839570cd38d21213482
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675050"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396917"
 ---
 # <a name="analyze-script-performance"></a>Analysieren der Skriptleistung
 Sie können mit den von SQL Server Data Tools bereitgestellten Tools bestimmen, ob die Leistung von Abfragen, gespeicherten Prozeduren oder Skripts verbessert werden kann. Indem Sie beispielsweise Clientstatistiken wie die Antwortzeiten für häufig verwendete Abfragen überwachen, können Sie ermitteln, ob Änderungen an der Abfrage oder den Indizes in den Tabellen erforderlich sind. Solche Statistiken können die Clientausführungszeit, das Abfrageprofil sowie gesendete und empfangene Pakete/Bytes enthalten.  
@@ -32,7 +32,7 @@ Um die Erfassung von Clientstatistiken zu aktivieren oder zu deaktivieren, zeige
   
 Wenn Sie Clientstatistiken aktiviert haben, wird nach Ausführen der Abfrage die Registerkarte **Statistik** neben der Registerkarte **Meldung** angezeigt. Wenn Sie Clientstatistiken deaktiviert haben, wird die Registerkarte **Statistik** nicht angezeigt. Statistiken von aufeinander ausgeführten Abfragen werden mit Durchschnittswerten aufgelistet.  
   
-Weitere Informationen zu den gesammelten Statistiken finden Sie unter [Statistikbereich im Abfragefenster](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) und im Abschnitt zur [Registerkarte „Clientstatistiken“ dieses Themas](https://msdn.microsoft.com/library/aa833205.aspx).  
+Weitere Informationen zu den gesammelten Statistiken finden Sie unter [Statistikbereich im Abfragefenster](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) und im Abschnitt zur [Registerkarte „Clientstatistiken“ in diesem Artikel](https://msdn.microsoft.com/library/aa833205.aspx).  
   
 ## <a name="using-execution-plans"></a>Verwenden von Ausführungsplänen  
 In Ausführungsplänen wird angezeigt, wie die Datenbank-Engine in Tabellen navigiert und Indizes verwendet, um auf die Daten für eine Abfrage oder eine andere DML-Anweisung wie ein Update zuzugreifen oder diese zu verarbeiten. Durch diese grafische Darstellung sind die Leistungsmerkmale einer Abfrage wesentlich leichter zu verstehen.  

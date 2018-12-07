@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04ca2c0792b1b10ffd4baf182ac8aa12fb5c1f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92b1b2098d1486c8dbc6958c9668387c815047d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810436"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403445"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Ändern von Daten in einer temporalen Tabelle mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ SWITCH TO [dbo].[Department] PARTITION 2;
   
 ```  
   
- Falls Sie versuchen, einen Partitionsaustausch (PARTITION SWITCH) aus einer Tabelle ohne Zeitraumdefinitionen auszuführen, erhalten Sie eine Fehlermeldung: `Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
+ Wenn Sie versuchen, PARTITION SWITCH über eine Tabelle ohne Zeitraumdefinitionen auszuführen, erhalten Sie folgende Fehlermeldung: `Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
   
 ## <a name="updating-data"></a>Aktualisieren von Daten  
  Sie aktualisieren Daten in der aktuellen Tabelle mit einer regulären **UPDATE** -Anweisung. Im Notfall können Sie die Daten in der aktuellen Tabelle auch mithilfe der Verlaufstabelle aktualisieren. Sie können jedoch **PERIOD** -Spalten nicht aktualisieren, und Sie können die Daten in der Verlaufstabelle nicht direkt aktualisieren während **SYSTEM_VERSIONING = ON**gilt.   

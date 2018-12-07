@@ -1,7 +1,7 @@
 ---
 title: SQL-Ablaufverfolgung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,30 +11,32 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc3432906e9d96b10def455aea07d4ef22cfe89d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: de20ad37cf5393f2498f00b7d5b1e78bd5285b34
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571449"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439802"
 ---
 # <a name="sql-trace"></a>SQL-Ablaufverfolgung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Bei der SQL-Ablaufverfolgung werden Ereignisse gesammelt, wenn sie Instanzen von in der Ablaufverfolgungsdefinition aufgeführten Ereignisklassen sind. Diese Ereignisse können aus der Ablaufverfolgung herausgefiltert oder für ihr Ziel in Warteschlangen eingereiht werden. Bei dem Ziel kann es sich um eine Datei oder um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) handeln, die die Ablaufverfolgungsinformationen in Anwendungen verwenden können, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwalten.  
+Bei der SQL-Ablaufverfolgung werden Ereignisse gesammelt, wenn sie Instanzen von in der Ablaufverfolgungsdefinition aufgeführten Ereignisklassen sind. Diese Ereignisse können aus der Ablaufverfolgung herausgefiltert oder für ihr Ziel in Warteschlangen eingereiht werden. Bei dem Ziel kann es sich um eine Datei oder um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) handeln, die die Ablaufverfolgungsinformationen in Anwendungen verwenden können, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwalten.  
   
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen erweiterte Ereignisse.  
-  
+> [!IMPORTANT]
+> SQL Trace und [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sind veraltet. Der *Microsoft.SqlServer.Management.Trace*-Namespace, der die Objekte für die Microsoft SQL Server-Ablaufverfolgung und -Wiedergabe enthält, ist ebenfalls veraltet. 
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
+> Verwenden Sie stattdessen erweiterte Ereignisse. Weitere Informationen zu [erweiterten Ereignissen](../../relational-databases/extended-events/extended-events.md) finden Sie unter [Schnellstart: Erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) und [Verwenden des SSMS XEvent Profilers](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+
 ## <a name="benefits-of-sql-trace"></a>Vorteile der SQL-Ablaufverfolgung  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt zum Erstellen von Ablaufverfolgungen für eine Instanz von [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Systemprozeduren zur Verfügung. Sie können aus Ihren Anwendungen heraus diese gespeicherten Systemprozeduren verwenden, um Ablaufverfolgungen statt mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]manuell zu erstellen. Dadurch können Sie benutzerdefinierte Anwendungen schreiben, die den speziellen Anforderungen Ihres Unternehmens entsprechen.  
+Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt zum Erstellen von Ablaufverfolgungen für eine Instanz von [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Systemprozeduren zur Verfügung. Sie können aus Ihren Anwendungen heraus diese gespeicherten Systemprozeduren verwenden, um Ablaufverfolgungen statt mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]manuell zu erstellen. Dadurch können Sie benutzerdefinierte Anwendungen schreiben, die den speziellen Anforderungen Ihres Unternehmens entsprechen.  
   
 ## <a name="sql-trace-architecture"></a>Architektur der SQL-Ablaufverfolgung  
- Bei den Ereignisquellen kann es sich um jede Quelle handeln, die das Ablaufverfolgungsereignis erstellt, z. B. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batches oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse wie Deadlocks. Weitere Informationen zu Ereignissen finden Sie unter [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md). Wenn ein Ereignis auftritt, werden die Ereignisinformationen von der Ablaufverfolgung gesammelt, sofern die Ereignisklasse in eine Ablaufverfolgungsdefinition aufgenommen wurde. Wenn Filter für die Ereignisklasse in der Ablaufverfolgungsdefinition definiert wurden, werden die Filter angewendet und die Informationen zum Ablaufverfolgungsereignis an eine Warteschlange übergeben. Von der Warteschlange werden die Ablaufverfolgungsinformationen entweder in eine Datei geschrieben oder können von SMO in Anwendungen wie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verwendet werden. Das folgende Diagramm zeigt, wie die SQL-Ablaufverfolgung Ereignisse während einer Ablaufverfolgung sammelt.  
+Bei den Ereignisquellen kann es sich um jede Quelle handeln, die das Ablaufverfolgungsereignis erstellt, z. B. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batches oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse wie Deadlocks. Weitere Informationen zu Ereignissen finden Sie unter [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md). Wenn ein Ereignis auftritt, werden die Ereignisinformationen von der Ablaufverfolgung gesammelt, sofern die Ereignisklasse in eine Ablaufverfolgungsdefinition aufgenommen wurde. Wenn Filter für die Ereignisklasse in der Ablaufverfolgungsdefinition definiert wurden, werden die Filter angewendet und die Informationen zum Ablaufverfolgungsereignis an eine Warteschlange übergeben. Von der Warteschlange werden die Ablaufverfolgungsinformationen entweder in eine Datei geschrieben oder können von SMO in Anwendungen wie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verwendet werden. Das folgende Diagramm zeigt, wie die SQL-Ablaufverfolgung Ereignisse während einer Ablaufverfolgung sammelt.  
   
- ![Ereignisablaufverfolgungs-Prozess des Datenbankmoduls](../../relational-databases/sql-trace/media/tracarch.gif "Database Engine event tracing process")  
+![Ereignisablaufverfolgungs-Prozess des Datenbankmoduls](../../relational-databases/sql-trace/media/tracarch.gif "Database Engine event tracing process")  
   
 ## <a name="sql-trace-terminology"></a>Terminologie zur SQL-Ablaufverfolgung  
- Die folgenden Begriffe beschreiben die Schlüsselkonzepte der SQL-Ablaufverfolgung.  
+Die folgenden Begriffe beschreiben die Schlüsselkonzepte der SQL-Ablaufverfolgung.  
   
  **Ereignis**  
  Das Auftreten einer Aktion innerhalb einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -70,7 +72,7 @@ ms.locfileid: "51571449"
  Eine Tabelle in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], die beim Speichern einer Ablaufverfolgung in einer Tabelle erstellt wird.  
   
 ## <a name="use-data-columns-to-describe-returned-events"></a>Verwenden von Datenspalten zum Beschreiben zurückgegebener Ereignisse  
- Die SQL-Ablaufverfolgung verwendet Datenspalten in der Ablaufverfolgungsausgabe, um Ereignisse zu beschreiben, die beim Ausführen der Ablaufverfolgung zurückgegeben werden. In der folgenden Tabelle werden die Datenspalten von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] beschrieben, die mit den von der SQL-Ablaufverfolgung verwendeten Datenspalten identisch sind. Außerdem wird auf die Spalten verwiesen, die standardmäßig ausgewählt sind.  
+Die SQL-Ablaufverfolgung verwendet Datenspalten in der Ablaufverfolgungsausgabe, um Ereignisse zu beschreiben, die beim Ausführen der Ablaufverfolgung zurückgegeben werden. In der folgenden Tabelle werden die Datenspalten von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] beschrieben, die mit den von der SQL-Ablaufverfolgung verwendeten Datenspalten identisch sind. Außerdem wird auf die Spalten verwiesen, die standardmäßig ausgewählt sind.  
   
 |Datenspalte|Spaltennummer|und Beschreibung|  
 |-----------------|-------------------|-----------------|  

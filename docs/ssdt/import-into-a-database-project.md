@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7a570dda05c5fe83227b7f88209eecdc25529e0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c5cf17437f97aa649ee81f2fb0f71061df04fec8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667099"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400393"
 ---
 # <a name="import-into-a-database-project"></a>Importieren in ein Datenbankprojekt
 Mithilfe von Importieren können Sie ein Projekt mit neuen Objekten aus einer Livedatenbank oder einer DACPAC-Datei auffüllen bzw. im Projekt vorhandene Objekte anhand einer neuen Definition aus einem Skript aktualisieren. Bei den drei nachfolgend beschriebenen Methoden sind einige Verhaltensunterschiede zu beachten.  
@@ -40,7 +40,7 @@ Mithilfe von Importieren können Sie ein Projekt mit neuen Objekten aus einer Li
 ## <a name="bkmk_import_source_db"></a>Importquelle: Datenbank oder Datenschichtanwendung (DACPAC)  
 Die Fähigkeit, ein Schema aus einer Datenbank oder DACPAC-Datei zu importieren, ist nur verfügbar, wenn noch keine Schemaobjekte im Projekt definiert sind. Davon ausgeschlossen sind RefactorLog-Dateien oder Skripts vor und nach der Bereitstellung.  
   
-Beim Import werden für Objektdefinitionen Skripts in Projektdateien erstellt, wobei die in SSDT enthaltenen betrieblichen Standardwerte für neue Objekte verwendet werden: neue Dateien für Objekte oberster Ebene, untergeordnete Hierarchieelemente, die in derselben Datei wie das übergeordnete Element definiert sind, oder inline definierte Tabellen- oder Spalteneinschränkungen (sofern möglich). Um die Sichtbarkeit und Steuerung der einzelnen Objekte zu verbessern, verwenden Sie anstelle von Importieren die Option Schemavergleich.  
+Beim Import werden für Objektdefinitionen Skripts in Projektdateien erstellt, wobei die in SSDT enthaltenen betrieblichen Standardwerte für neue Objekte verwendet werden: neue Dateien für allgemeine Objekte, untergeordnete Hierarchieelemente, die in derselben Datei wie das übergeordnete Element definiert sind, oder inline definierte Tabellen- oder Spalteneinschränkungen (sofern möglich). Um die Sichtbarkeit und Steuerung der einzelnen Objekte zu verbessern, verwenden Sie anstelle von Importieren die Option Schemavergleich.  
   
 Wenn die Importquelle Skripts vor und nach der Bereitstellung, RefactorLog-Dateien oder Definitionen von SQLCMD-Variablen enthält, werden diese in das Projekt importiert. Wenn eines dieser Artefakte bereits im Projekt enthalten ist, werden die importierten Dateien einem Projektordner namens **Beim Import ignoriert** hinzugefügt.  
   

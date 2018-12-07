@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16a9ad6bc26b304be0ad3308c2e5afe2084a3a8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb658507dd7e28100338e1f300ff24ca0aeadf92
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732298"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394853"
 ---
 # <a name="pptx-device-information-settings"></a>PPTX-Geräteinformationseinstellungen
   In der folgenden Tabelle werden die Einstellungen der Geräteinformationen zum Rendern von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichten im PPTX-Format aufgeführt.  
@@ -37,12 +37,12 @@ ms.locfileid: "47732298"
 |**PageHeight**|Die für den Bericht gewünschte Seitenhöhe in Zoll. Sie müssen eine ganze Zahl oder einen Dezimalwert gefolgt von „in“ angeben (z.B. **11in**). Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**PageWidth**|Die für den Bericht gewünschte Seitenbreite in Zoll. Sie müssen eine ganze Zahl oder einen Dezimalwert angeben, gefolgt von „in“ (z.B. **8,5in**). Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**StartPage**|Die erste Seite des zu rendernden Berichts. Der Wert **0** gibt an, dass alle Seiten des Berichts gerendert werden. Der Standardwert ist **1**.|  
-|**UseReportPageSize**|Wenn „UseReportPageSize =**false** “, ist die Standardfoliengröße der PowerPoint-Standard 13,333” x 7,5” (Seitenverhältnis 16:9). Wenn "UseReportPageSize =true", ist die Standardfoliengröße die definierte Seitengröße des Berichts.<br /><br /> Der Standardwert ist **false**<br /><br /> Beachten Sie, dass die PageWidth- und PageHeight-Einstellungen die Standardbreite und -höhe überschreiben.|  
+|**UseReportPageSize**|Wenn „UseReportPageSize =**false**“, ist die Standardfoliengröße der PowerPoint-Standard 13,333” x 7,5” (Seitenverhältnis 16:9). Wenn "UseReportPageSize =true", ist die Standardfoliengröße die definierte Seitengröße des Berichts.<br /><br /> Der Standardwert ist **false**<br /><br /> Beachten Sie, dass die PageWidth- und PageHeight-Einstellungen die Standardbreite und -höhe überschreiben.|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technische Referenz (SSRS)](../reporting-services/technical-reference-ssrs.md)  
+ [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technische Referenz &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

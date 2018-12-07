@@ -20,12 +20,12 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 84db1d36a782fc054129b1ff753b620e82684499
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0468195ebe718db73dfa4a302185b677f76c6896
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675369"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413167"
 ---
 # <a name="utility-explorer-f1-help"></a>Hilfsprogramm-Explorer (F1-Hilfe)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +152,7 @@ ms.locfileid: "51675369"
   
     -   Grüner Pfeil nach unten – Der Zustand für mindestens eine Dateigruppe oder Protokolldateigruppe ist unterausgelastet, und keine Dateigruppe oder Protokolldateigruppe ist überausgelastet.  
   
-    -   Roter Pfeil nach oben – Der Integritätsstatus für mindestens eine Dateigruppe oder die Protokolldateigruppe ist überausgelastet. Wenn eine Datenbank den Status "Notfall" aufweist, wird für den Integritätsstatus ein überausgelasteter Protokolldateispeicherplatz angezeigt.  
+    -   Roter Pfeil nach oben – Der Integritätsstatus für mindestens eine Dateigruppe oder die Protokolldateigruppe ist überausgelastet. Wenn eine Datenbank den Status „Notfall“ aufweist, wird ein überausgelasteter Protokolldateispeicherplatz für den Integritätsstatus angezeigt.  
   
      Um die Richtliniengrenzwerte für den Dateispeicherplatz anzuzeigen oder zu ändern, klicken Sie auf die Registerkarte **Speicherauslastung** .  
   
@@ -216,7 +216,7 @@ ms.locfileid: "51675369"
   
 -   Grüner Pfeil nach unten – Die Auslastung des Dateispeicherplatzes für mindestens eine Datendatei in der Dateigruppe ist unterausgelastet, und keine Dateien in der Dateigruppe sind überausgelastet.  
   
--   Roter Pfeil nach oben – Die Auslastung des Dateispeicherplatzes für alle Datendateien in der Dateigruppe ist überausgelastet. Wenn eine Datenbank den Status "Notfall" aufweist, wird für den Integritätsstatus ein überausgelasteter Protokolldateispeicherplatz angezeigt.  
+-   Roter Pfeil nach oben – Die Auslastung des Dateispeicherplatzes für alle Datendateien in der Dateigruppe ist überausgelastet. Wenn eine Datenbank den Status „Notfall“ aufweist, wird ein überausgelasteter Protokolldateispeicherplatz für den Integritätsstatus angezeigt.  
   
  Um die Dateien nach Volume anzuzeigen, aktivieren Sie im Auswahlbereich **Dateien gruppieren nach** das Optionsfeld **Volume** . Im Diagramm mit Verlaufsdaten zur Speicherplatzauslastung wird der Dateispeicherplatz dargestellt, der von allen Datendateien und Protokolldateien auf dem Speichervolume belegt wird. Erweitern Sie die Struktur, um Details zu einzelnen Datenbankdatendateien und Protokolldateien anzuzeigen.  
   

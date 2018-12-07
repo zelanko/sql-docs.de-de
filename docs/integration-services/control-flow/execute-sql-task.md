@@ -21,12 +21,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd627ea368aea84611863b491ee3b0aaab1cc190
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641820"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504074"
 ---
 # <a name="execute-sql-task"></a>SQL ausführen (Task)
   Mit dem Task SQL ausführen werden SQL-Anweisungen oder gespeicherte Prozeduren aus einem Paket ausgeführt. Dieser Task kann eine oder mehrere SQL-Anweisungen enthalten, die sequenziell ausgeführt werden. Der Task SQL ausführen kann für folgende Zwecke verwendet werden:  
@@ -280,8 +280,8 @@ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Paramet
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<Parametername>|\@\<Parametername>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|EXCEL und OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|EXCEL und OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Verwenden von Parametern mit ADO.NET- und ADO-Verbindungs-Managern  
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)]- und ADO-Verbindungs-Manager besitzen besondere Anforderungen für SQL-Befehle, die Parameter verwenden:  
@@ -442,8 +442,8 @@ In diesem Abschnitt wird beschrieben, wie Sie eine parametrisierte SQL-Anweisung
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
     |ADO.NET und SQLMOBILE|\@\<Parametername>|  
-    |ODBC|1, 2, 3, …|  
-    |EXCEL und OLE DB|0, 1, 2, 3, …|  
+    |ODBC|1, 2, 3, ...|  
+    |EXCEL und OLE DB|0, 1, 2, 3, ...|  
   
 10. Wählen Sie in der Liste **Variablenname** eine Variable aus. Weitere Informationen finden Sie unter [Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
@@ -464,7 +464,7 @@ In diesem Abschnitt wird beschrieben, wie Sie eine parametrisierte SQL-Anweisung
 ##  <a name="Return_codes"></a> Abrufen von Rückgabecodewerten  
  Eine gespeicherte Prozedur kann einen ganzzahligen Wert zurückgeben, der als Rückgabecode bezeichnet wird, um den Ausführungsstatus einer Prozedur anzuzeigen. Verwenden Sie Parameter des **ReturnValue** -Typs, um Rückgabecodes im Task SQL ausführen zu implementieren.  
   
- In der folgenden Tabelle finden Sie eine Auflistung einiger Beispiele des EXEC-Befehls nach verschiedenen Verbindungstypen, die Rückgabecodes implementieren. In alle Beispiele wird ein **input** -Parameter verwendet. Die Regeln für die Verwendung von Parametermarkierungen und Parameternamen sind für alle Parametertypen,**Input**, **Output**und **ReturnValue**, gleich.  
+ In der folgenden Tabelle finden Sie eine Auflistung einiger Beispiele des EXEC-Befehls nach verschiedenen Verbindungstypen, die Rückgabecodes implementieren. In alle Beispiele wird ein **input** -Parameter verwendet. Die Regeln für die Verwendung von Parametermarkierungen und Parameternamen sind für alle Parametertypen, **Input**, **Output** und **ReturnValue**, gleich.  
   
  Ein Teil der Syntax unterstützt keine Parameterliterale. In diesem Fall müssen Sie die Parameterwerte mithilfe einer Variablen bereitstellen.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db904742a73ec3837bfffe1eaecffbe37ca5c154
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a63512de9229f26e6e04ad5f44c5dd1c757cb881
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763248"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391693"
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>ConfigurationSetting-Methode: SetWindowsServiceIdentity
   Lässt den Report Server-Windows-Dienst als einen angegebenen Windows-Benutzer ausführen und gibt diesem Konto die erforderlichen Dateisystemberechtigungen, damit der Berichtsserver ausgeführt werden kann  
@@ -56,7 +56,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="remarks"></a>Remarks  
  Wenn der *UseBuiltInAccount* -Parameter auf **TRUE** festgelegt ist und der Berichtsserver unter Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] oder Windows XP ausgeführt wird, werden die Werte der Parameter *Name*, *Domäne*und *Kennwort* ignoriert, und das lokale Systemkonto wird verwendet.  
   
- Wenn der *UseBuiltInAccount* -Parameter auf **TRUE** festgelegt ist und der Berichtsserver unter Windows Server 2003 ausgeführt wird, werden die Eigenschaft *Domäne* und die Eigenschaft *Kennwort* ignoriert, und das Namensfeld muss den Namen „Builtin\NetworkService“, „Builtin\System“ oder „Builtin\LocalService“ enthalten.  
+ Wenn der *UseBuiltInAccount*-Parameter auf **TRUE** festgelegt ist und der Berichtsserver unter Windows Server 2003 ausgeführt wird, werden die Eigenschaft *Domäne* und die Eigenschaft *Kennwort* ignoriert, und das Namensfeld muss den Namen „Builtin\NetworkService“, „Builtin\System“ oder „Builtin\LocalService“ enthalten.  
   
  Die SetWindowsServiceIdentity-Methode legt Dateiberechtigungen für Dateien und Ordner im Installationsverzeichnis des Berichtsservers fest.  
   

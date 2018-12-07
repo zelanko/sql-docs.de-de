@@ -13,12 +13,12 @@ ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db4e21dc88e3eb5dfc76fa00c37a32148424af20
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9663732206ec3697379a241ae7eecf6d12a3b749
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700958"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407727"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>Konfigurieren von Cluster-Quorum-NodeWeight-Einstellungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "51700958"
 ```powershell  
 Import-Module FailoverClusters  
   
-$node = “AlwaysOnSrv1”  
+$node = "AlwaysOnSrv1"  
 (Get-ClusterNode $node).NodeWeight = 0  
   
 $cluster = (Get-ClusterNode $node).Cluster  
@@ -85,7 +85,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  Verwenden Sie **cluster.exe** , um `NodeWeight` -Werte festzulegen.  
   
 ### <a name="example-clusterexe"></a>Beispiel (Cluster.exe)  
- Im folgenden Beispiel wird der NodeWeight-Wert geändert, um die Quorumabstimmung des AlwaysOnSrv1-Knotens im Cluster001-Cluster zu entfernen.  
+ Im folgenden Beispiel wird der NodeWeight-Wert geändert, um die Quorumabstimmung des Knotens „AlwaysOnSrv1“ im Cluster „Cluster001“ zu entfernen.  
   
 ```ms-dos  
 cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0  

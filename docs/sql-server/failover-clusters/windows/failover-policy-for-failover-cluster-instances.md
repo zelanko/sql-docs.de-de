@@ -12,12 +12,12 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0b06b45e9d3f2cfd06fba04a0d24547ec4689ce
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bce8b626c33bfb5a75fe7614ddb5c55d80d1d906
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699788"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398650"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failoverrichtlinie für Failoverclusterinstanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,9 +98,9 @@ ms.locfileid: "51699788"
 |0|Kein automatischer Failover oder Neustart|Gibt an, dass bei einer Fehlerbedingung nicht automatisch ein Failover oder Neustart ausgelöst wird. Diese Ebene ist nur für die Systemwartung vorgesehen.|  
 |1|Failover oder Neustart bei Serverausfall|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn die folgende Bedingung zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.|  
 |2|Failover oder Neustart bei nicht reagierendem Server|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.<br /><br /> SQL Server-Instanz reagiert nicht (die Ressourcen-DLL kann von sp_server_diagnostics keine Daten innerhalb der durch die HealthCheckTimeout-Einstellungen vorgegebenen Zeit empfangen).|  
-|3*|Failover oder Neustart bei wichtigen Serverfehlern|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.<br /><br /> SQL Server-Instanz reagiert nicht (die Ressourcen-DLL kann von sp_server_diagnostics keine Daten innerhalb der durch die HealthCheckTimeout-Einstellungen vorgegebenen Zeit empfangen).<br /><br /> Gespeicherte Systemprozedur sp_server_diagnostics gibt einen Systemfehler zurück.|  
-|4|Failover oder Neustart auf mittelschweren Serverfehlern|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.<br /><br /> SQL Server-Instanz reagiert nicht (die Ressourcen-DLL kann von sp_server_diagnostics keine Daten innerhalb der durch die HealthCheckTimeout-Einstellungen vorgegebenen Zeit empfangen).<br /><br /> Gespeicherte Systemprozedur sp_server_diagnostics gibt einen Systemfehler zurück.<br /><br /> Gespeicherte Systemprozedur sp_server_diagnostics gibt einen Ressourcenfehler zurück.|  
-|5|Failover oder Neustart bei qualifizierten Fehlerbedingungen|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.<br /><br /> SQL Server-Instanz reagiert nicht (die Ressourcen-DLL kann von sp_server_diagnostics keine Daten innerhalb der durch die HealthCheckTimeout-Einstellungen vorgegebenen Zeit empfangen).<br /><br /> Gespeicherte Systemprozedur sp_server_diagnostics gibt einen Systemfehler zurück.<br /><br /> Gespeicherte Systemprozedur sp_server_diagnostics gibt einen Ressourcenfehler zurück.<br /><br /> Gespeicherte Systemprozedur sp_server_diagnostics gibt Fehler bei der Abfrageverarbeitung zurück.|  
+|3*|Failover oder Neustart bei wichtigen Serverfehlern|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.<br /><br /> SQL Server-Instanz reagiert nicht (die Ressourcen-DLL kann von sp_server_diagnostics keine Daten innerhalb der durch die HealthCheckTimeout-Einstellungen vorgegebenen Zeit empfangen).<br /><br /> Die gespeicherte Systemprozedur sp_server_diagnostics gibt einen Systemfehler zurück.|  
+|4|Failover oder Neustart auf mittelschweren Serverfehlern|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.<br /><br /> SQL Server-Instanz reagiert nicht (die Ressourcen-DLL kann von sp_server_diagnostics keine Daten innerhalb der durch die HealthCheckTimeout-Einstellungen vorgegebenen Zeit empfangen).<br /><br /> Die gespeicherte Systemprozedur sp_server_diagnostics gibt einen Systemfehler zurück.<br /><br /> Die gespeicherte Systemprozedur sp_server_diagnostics gibt einen Ressourcenfehler zurück.|  
+|5|Failover oder Neustart bei qualifizierten Fehlerbedingungen|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.<br /><br /> SQL Server-Instanz reagiert nicht (die Ressourcen-DLL kann von sp_server_diagnostics keine Daten innerhalb der durch die HealthCheckTimeout-Einstellungen vorgegebenen Zeit empfangen).<br /><br /> Die gespeicherte Systemprozedur sp_server_diagnostics gibt einen Systemfehler zurück.<br /><br /> Die gespeicherte Systemprozedur sp_server_diagnostics gibt einen Ressourcenfehler zurück.<br /><br /> Die gespeicherte Systemprozedur sp_server_diagnostics gibt einen Fehler bei der Abfrageverarbeitung zurück.|  
   
  *Standardwert  
   

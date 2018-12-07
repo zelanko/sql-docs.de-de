@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4df963c826675b5c837200c4ab69037800b9dc5c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2051f89e5f7b9d07dccacbb441d95a72ff1de22a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814023"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391663"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Behandlung von Problemen bei der Installation von Reporting Services
 
@@ -75,7 +75,7 @@ ms.locfileid: "51814023"
  ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> Nach der Installation von SQL Server 2016 SSRS im SharePoint-Modus wird der SQL Server Reporting Services-Dienst nicht in der SharePoint-Zentraladministration angezeigt.  
- **Beschreibung:** Wenn Ihnen nach einer erfolgreichen Installation von SQL Server 2016 Reporting Services im SharePoint-Modus und dem SQL Server 2016 Reporting Services-Add-In für SharePoint 2013/2016 nicht der Eintrag „SQL Server Reporting Services“ in den folgenden zwei Menüs angezeigt wird, wurde der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst nicht registriert:  
+ **Beschreibung:** Wenn Ihnen nach einer erfolgreichen Installation von SQL Server 2016 Reporting Services im SharePoint-Modus und dem SQL Server 2016 Reporting Services-Add-In für SharePoint 2013/2016 in den folgenden beiden Menüs nicht der Eintrag „SQL Server Reporting Services“ angezeigt wird, wurde der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst nicht registriert:  
   
 -   Klicken Sie auf SharePoint 2013/2016-Zentraladministration > „Anwendungsverwaltung“ > Seite „Dienste auf dem Server verwalten“.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "51814023"
  
  - Die SSRS-Dienstanwendung ist nicht dieser Webanwendung zugeordnet. Verwenden Sie, die SSRS-Dienstanwendungsseiten, um den Proxy der SSRS-Dienstanwendung der Anwendungsproxygruppe dieser Webanwendung zuzuordnen. 
   
- **Problemumgehung:** Die Fehlermeldung enthält drei vorgeschlagene Schritte, um dieses Problem zu beheben. Der erste Vorschlag in der Meldung „Es wurde keine Berichtsserver-URL konfiguriert...“ spielt bei der Integration der früheren Version des Berichtsservers in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eine wichtige Rolle. Die SharePoint-Konfiguration für die vorherigen Berichtsserverversionen wird auf der Seite **Allgemeine Anwendungseinstellungen** abgeschlossen und verwendet **SQL Server Reporting Services (2008 und 2008 R2)**.  
+ **Problemumgehung:** Die Fehlermeldung enthält drei vorgeschlagene Schritte, um dieses Problem zu beheben. Der erste Vorschlag in der Meldung „Es wurde keine Berichtsserver-URL konfiguriert.“ spielt bei der Integration der früheren Version des Berichtsservers in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eine wichtige Rolle. Die SharePoint-Konfiguration für die vorherigen Berichtsserverversionen wird auf der Seite **Allgemeine Anwendungseinstellungen** abgeschlossen und verwendet **SQL Server Reporting Services (2008 und 2008 R2)**.  
   
  **Weitere Informationen:** Diese Fehlermeldung wird beim Versuch angezeigt, eine der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen zu verwenden, die eine Verbindung zum [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst erfordern. Dies schließt Folgendes ein:  
   
@@ -183,7 +183,7 @@ ms.locfileid: "51814023"
 ###  <a name="bkmk_RS_SHP_notsupported"></a> Eine Fehlermeldung wird angezeigt, die besagt, dass RS_SHP nicht mit PREPAREIMAGE unterstützt wird.  
  **Beschreibung:** Wenn Sie versuchen, PREPAREIMAGE für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auszuführen, wird eine Fehlermeldung ähnlich der folgenden angezeigt:  
   
- "Beim Ausführen der PREPAREIMAGE-Aktion wird die angegebene Funktion 'RS_SHP' nicht unterstützt, da sie SysPrep nicht unterstützt." Entfernen Sie die Funktionen, die nicht kompatibel mit SysPrep sind, und führen Sie Setup erneut aus."  
+ „Beim Ausführen der PREPAREIMAGE-Aktion wird die angegebene Funktion „RS_SHP“ nicht unterstützt, da sie SysPrep nicht unterstützt. Entfernen Sie die Funktionen, die nicht mit SysPrep kompatibel sind, und führen Sie das Setup erneut aus.“  
   
  **Problemumgehung:** Es gibt keine Problemumgehung. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt SYSPREP (PREPAREIMAGE) nicht. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt SYSPREP.  
   

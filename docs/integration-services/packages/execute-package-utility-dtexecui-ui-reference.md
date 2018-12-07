@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae61a794d9eea4a9fbd0aae72ec0bcdd1d636988
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: ec072be872bbee61b00839b70327fa3397f1fe92
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169110"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506240"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Paketausführungsprogramm (dtexecui)
   Verwenden Sie das **Paketausführungshilfsprogramm** , um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete auszuführen. Das Hilfsprogramm führt Pakete aus, die an einem von drei Speicherorten gespeichert wurden: in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und im Dateisystem. Diese Benutzeroberfläche, die über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder durch Eingeben von **dtexecui** an der Eingabeaufforderung geöffnet werden kann, stellt eine Alternative zum Ausführen von Paketen mithilfe des Eingabeaufforderungstools **DTExec** dar.  
@@ -99,11 +99,11 @@ ms.locfileid: "49169110"
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
  **Paket**  
- Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
+ Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
   
 #### <a name="package-source--file-system"></a>Package Source = File System  
  **Paket**  
- Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um das Paket mithilfe des Dialogfelds Öffnen zu suchen. In dem Dialogfeld werden standardmäßig nur Dateien mit der Erweiterung *.dtsx aufgelistet.  
+ Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Paket mithilfe des Dialogfelds „Öffnen“ zu suchen. In dem Dialogfeld werden standardmäßig nur Dateien mit der Erweiterung *.dtsx aufgelistet.  
   
 #### <a name="package-source--ssis-package-store"></a>Package Source = SSIS Package Store  
  **Server**  
@@ -119,7 +119,7 @@ ms.locfileid: "49169110"
  Diese Option ist nicht verfügbar, wenn Sie ein in **SSIS-Paketspeicher**gespeichertes Paket ausführen.  
   
  **Paket**  
- Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
+ Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
   
 ## <a name="configurations-page"></a>Konfigurationsseite  
  Auf der Seite **Konfigurationen** des Dialogfelds **Paketausführungsprogramm** wählen Sie die Konfigurationsdateien aus, die zur Laufzeit geladen werden sollen, und geben Sie die Reihenfolge an, in der sie geladen werden sollen.  
@@ -207,7 +207,7 @@ ms.locfileid: "49169110"
  Führt die vom Paket verwendete Prüfpunktdatei auf, wenn die Paketprüfpunkte aktiviert sind.  
   
  **Durchsuchen**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um die Prüfpunktdatei mithilfe des Dialogfelds **Öffnen** zu suchen, wenn Paketprüfpunkte aktiviert sind. Wenn bereits eine Prüfpunktdatei angegeben ist, wird diese durch die ausgewählte Datei ersetzt.  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, um die Prüfpunktdatei mithilfe des Dialogfelds **Öffnen** zu suchen, wenn Paketprüfpunkte aktiviert sind. Wenn bereits eine Prüfpunktdatei angegeben ist, wird diese durch die ausgewählte Datei ersetzt.  
   
  **Neustartoptionen überschreiben**  
  Gibt an, ob die Neustartoptionen überschrieben werden, wenn Sie die Paketprüfpunkte aktivieren.  

@@ -11,12 +11,12 @@ ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ef6c960ecb96da5416419e812b70352c9e1d30a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7eef632f4c38961176986d500b8f2ce134731f65
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765578"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403865"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Anzeigen aller Anmerkungen oder Transaktionen für ein Element (MDS-Add-In für Excel)
 
@@ -35,7 +35,7 @@ ms.locfileid: "47765578"
   
 1.  Klicken Sie in die Zeile, die Transaktionen enthält, die Sie anzeigen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste, und klicken Sie im Menü, das angezeigt wird, auf **Transaktionen anzeigen** oder **Verlauf anzeigen**.  
+2.  Öffnen Sie durch einen Klick mit der rechten Maustaste das Kontextmenü, und wählen Sie **Transaktionen anzeigen** oder **Verlauf anzeigen** aus.  
   
 3.  Im Dialogfeld **Transaktionen anzeigen** wird die Liste der Transaktionen angezeigt. Um alle einer Transaktion zugeordneten Anmerkungen anzuzeigen, klicken Sie im Raster auf eine Zeile.  
   

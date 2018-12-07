@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17ecab14fce7cc302fafb64e949a7ed896e2ccdb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b4ebed5355fdbbd4185301fa87e4c525a89b3171
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028589"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504045"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Zeigern auf einem Messgerät (Berichts-Generator und SSRS)
  In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht gibt ein Messgerätzeiger den aktuellen Wert des Messgeräts an.   
@@ -37,7 +37,7 @@ ms.locfileid: "50028589"
 ##  <a name="DisplayingMultiple"></a> Anzeigen von mehreren Zeigern auf dem Messgerät  
  Sie können dem Messgerät mehrere Zeiger hinzufügen, sodass auf der gleichen Skala auf unterschiedliche Werte gezeigt wird. Dies ermöglicht es Ihnen, gleichzeitig einen niedrigen und einen hohen Wert anzuzeigen. Wenn Sie auf dem Messgerät für die Skala mehrere Zeiger angeben möchten, klicken Sie auf eine beliebige Stelle auf dem Messgerät, und klicken Sie im Kontextmenü auf **Zeiger hinzufügen** . Sie können auch eine Skala hinzufügen, indem Sie mit der rechten Maustaste auf eine beliebige Stelle auf dem Messgerät klicken und anschließend auf **Skalierung hinzufügen**klicken. Anschließend können Sie einen neuen Zeiger hinzufügen, der automatisch der letzten Skala zugeordnet wird.  
   
- Wenn Zeiger einander überlappen, wird die Zeichnungsreihenfolge der Zeiger durch die Reihenfolge bestimmt, in der sie dem Messgerät hinzugefügt wurden. Sie können die Zeichnungsreihenfolge der Zeiger nicht ändern, indem Sie die Reihenfolge der Felder in Datenbereich ändern. Wenn Sie die Zeichnungsreihenfolge für mehrere Zeiger ändern möchten, öffnen Sie den Eigenschaftenbereich und klicken auf **Zeiger (…)**. Ändern Sie dann die Reihenfolge der Zeiger in der Pointer-Auflistung.  
+ Wenn Zeiger einander überlappen, wird die Zeichnungsreihenfolge der Zeiger durch die Reihenfolge bestimmt, in der sie dem Messgerät hinzugefügt wurden. Sie können die Zeichnungsreihenfolge der Zeiger nicht ändern, indem Sie die Reihenfolge der Felder in Datenbereich ändern. Wenn Sie die Zeichnungsreihenfolge für mehrere Zeiger ändern möchten, öffnen Sie den Eigenschaftenbereich, und klicken auf **Zeiger (…)**. Ändern Sie dann die Reihenfolge der Zeiger in der Pointer-Auflistung.  
   
 ##  <a name="SettingGradients"></a> Festlegen von Farbverläufen für eine Nadelabdeckung  
  Eine Nadelabdeckung, die über oder unter dem Zeiger gezeichnet werden kann, kann nur für ein radiales Messgerät angegeben werden. Alle Arten für Nadelabdeckungen werden mit integrierten Farbverläufen gezeichnet, die nicht geändert werden können. Eine Ausnahme stellt der **RoundedDark** -Stil dar, für den Sie eine Verlaufsfarbe und die Art des Farbverlaufs angeben können.  

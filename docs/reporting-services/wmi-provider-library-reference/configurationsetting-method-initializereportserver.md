@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9dca016cd56035a9973dd649744f7bca08e2e58a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4084310c0c01b7a06a752783db74615a92aa83ff
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626228"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405546"
 ---
 # <a name="configurationsetting-method---initializereportserver"></a>ConfigurationSetting-Methode: InitializeReportServer
   Initialisiert die angegebene Berichtsdienstinstanz  
@@ -57,7 +57,7 @@ public void InitializeReportServer(string InstallationID,
   
  Die *InitializeReportServer* -Methode muss für einen Berichtsserver aufgerufen werden, der bereits Zugriff auf die sicheren Informationen hat, damit der Verschlüsselungsschlüssel entschlüsselt werden kann. Der resultierende verschlüsselte Verschlüsselungsschlüssel wird dann in der Berichtsserver-Datenbank gespeichert.  
   
- Wenn die [IsInitialized](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md) -Eigenschaft des Berichtsservers beim Aufruf der InitializeReportServer-Methode auf **TRUE** festgelegt ist, gibt die Methode einen Erfolgswert zurück, ohne zu versuchen, den Verschlüsselungsschlüssel zu verschlüsseln.  
+ Wenn die Eigenschaft [IsInitialized](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md) des Berichtsservers beim Aufruf der InitializeReportServer-Methode auf **TRUE** festgelegt ist, gibt die Methode einen Erfolgswert zurück, ohne zu versuchen, den Verschlüsselungsschlüssel zu verschlüsseln.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

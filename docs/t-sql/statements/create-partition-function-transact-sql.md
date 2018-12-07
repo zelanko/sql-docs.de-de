@@ -1,7 +1,7 @@
 ---
 title: CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,12 +28,12 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ac8e31a6f918b79dbc43294e3f617630fa79ba50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa09a229b3cff08f452417a89bbc2ba357a502b0
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755358"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191017"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,9 +64,11 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Gibt die Grenzwerte für jede Partition einer partitionierten Tabelle oder eines partitionierten Index an, die bzw. der *partition_function_name* verwendet. Wenn *boundary_value* leer bleibt, ordnet die Partitionsfunktion die gesamte Tabelle oder den gesamten Index mithilfe von *partition_function_name* einer Partition zu. Nur eine einzige, in einer CREATE TABLE- oder CREATE INDEX-Anweisung angegebene Partitionierungsspalte kann verwendet werden.  
   
  *boundary_value* ist ein konstanter Ausdruck, der auf Variablen verweisen kann. Dazu gehören Variablen des benutzerdefinierten Typs oder Funktionen und benutzerdefinierte Funktionen. Er kann nicht auf [!INCLUDE[tsql](../../includes/tsql-md.md)]-Ausdrücke verweisen. *boundary_value* muss entweder mit dem in *input_parameter_type* enthaltenen Datentyp übereinstimmen oder implizit in diesen konvertiert werden. Während der impliziten Konvertierung kann der Wert nicht so abgeschnitten werden, dass dessen Größe und Dezimalstellen mit denen des entsprechenden *input_parameter_type*-Werts nicht übereinstimmen.  
-  
+
 > [!NOTE]  
->  Wenn *boundary_value* aus den Literalen **datetime** oder **smalldatetime** besteht, werden diese Literale ausgewertet, wobei angenommen wird, dass us_english die Sitzungssprache darstellt. Dieses Verhalten ist als veraltet markiert. Wenn Sie sicherstellen möchten, dass sich die Definition der Partitionsfunktion für alle Sitzungssprachen wie erwartet verhält, wird empfohlen, dass Sie die Konstanten verwenden, die für alle Sprachen gleich interpretiert werden, z. B. das Format yyyymmdd, oder dass Sie die Literale explizit in ein bestimmtes Format konvertieren. Führen Sie `SELECT @@LANGUAGE` aus, um die Sitzungssprache des Servers zu bestimmen.  
+>  Wenn *boundary_value* aus den Literalen **datetime** oder **smalldatetime** besteht, werden diese Literale ausgewertet, wobei angenommen wird, dass us_english die Sitzungssprache darstellt. Dieses Verhalten ist als veraltet markiert. Wenn Sie sicherstellen möchten, dass sich die Definition der Partitionsfunktion für alle Sitzungssprachen wie erwartet verhält, wird empfohlen, dass Sie die Konstanten verwenden, die für alle Sprachen gleich interpretiert werden, z. B. das Format yyyymmdd, oder dass Sie die Literale explizit in ein bestimmtes Format konvertieren. Führen Sie `SELECT @@LANGUAGE` aus, um die Sitzungssprache des Servers zu bestimmen.
+>
+> Weitere Informationen finden Sie unter [Nondeterministic conversion of literal date strings into DATE values (Nicht deterministische Konvertierung von Datumsliteralzeichenfolgen in DATE-Werte)](../data-types/nondeterministic-convert-date-literals.md).
   
  *...n*  
  Gibt die Anzahl der von *boundary_value* bereitgestellten Werte an, wobei 14.999 nicht überschritten werden darf. Die Anzahl der erstellten Partitionen entspricht *n* + 1. Die Werte müssen nicht der Reihenfolge nach angegeben werden. Wenn die Werte nicht der Reihenfolge nach aufgeführt sind, werden sie von [!INCLUDE[ssDE](../../includes/ssde-md.md)] sortiert, die Funktion wird erstellt und eine Warnung zurückgegeben, die besagt, dass die Werte nicht der Reihenfolge nach bereitgestellt werden. Die Datenbank-Engine gibt einen Fehler zurück, wenn *n* doppelte Werte enthält.  

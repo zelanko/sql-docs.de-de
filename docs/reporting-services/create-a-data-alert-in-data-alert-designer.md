@@ -9,12 +9,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c96de7a5f5141e97a9e3670711e09eb3c20cd324
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f58c39fb0be119da6164b62d91d3e3da8e0a5c48
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021614"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504112"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Erstellen einer Datenwarnung im Datenwarnungs-Designer
 
@@ -75,15 +75,15 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen. Nach 
   
 10. Geben Sie den Vergleichswert ein.  
   
-11. Klicken Sie optional erneut auf die Auslassungspunkte ( **…** ).  
+11. Klicken Sie optional erneut auf die Auslassungspunkte **(...)**.  
   
-     Die Auslassungspunkte ( **…** ) werden in der Zeile mit der ersten Klausel angezeigt.  
+     Die Auslassungspunkte **(...)** werden in der Zeile mit der ersten Klausel angezeigt.  
   
      Eine OR-Klausel wird unten und innerhalb der AND-Regel hinzugefügt.  
   
 12. Klicken Sie optional auf den Pfeil nach unten, wählen Sie **Feldauswahlmodus**und anschließend eine Spalte in der Liste aus.  
   
-     Die Auslassungspunkte ( **…** ), auf die Sie zum Hinzufügen von OR-Klauseln klicken, werden nicht mehr angezeigt.  
+     Die Auslassungspunkte **(...)**, auf die Sie zum Hinzufügen von OR-Klauseln klicken, werden nicht mehr angezeigt.  
   
 13. Klicken Sie optional erneut auf **Regel hinzufügen** , um weitere Regeln hinzuzufügen.  
   

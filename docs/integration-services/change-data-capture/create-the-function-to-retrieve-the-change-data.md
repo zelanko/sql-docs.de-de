@@ -13,12 +13,12 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fca9cfa8f04e5c3c506e1c4ba6d0226c26db4711
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc5fb2da6ab1d276ac4a5397b8ea9832878b1c5a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650218"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418031"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Erstellen der Funktion zum Abrufen der Änderungsdaten
   Nach Abschluss der Ablaufsteuerung für ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der nächste Task die Erstellung einer Tabellenwertfunktion, mit der die Änderungsdaten abgerufen werden. Sie müssen diese Funktion nur einmal vor dem ersten inkrementellen Laden erstellen.  
@@ -135,7 +135,7 @@ deallocate #hfunctions
   
 -   Eine Spalte mit dem Namen __CDC_OPERATION, die ein Feld mit einem oder zwei Zeichen verwendet, um den der Zeile zugeordneten Vorgang zu kennzeichnen. Folgende Werte sind für dieses Feld gültig: „I“ für insert (einfügen), „D“ für delete (löschen), „UO“ für update old values (alte Werte aktualisieren) und „UN“ für update new values (neue Werte aktualisieren).  
   
--   Updateflags, wenn Sie diese anfordern, die als bit-Spalten hinter dem Vorgangscode in der vom *@update_flag_list* -Parameter festgelegten Reihenfolge angezeigt werden. Diese Spalten werden bezeichnet, indem an den zugeordneten Spaltennamen „_uflag“ angehängt wird.  
+-   Updateflags, wenn Sie diese anfordern, die als bit-Spalten hinter dem Vorgangscode in der vom *@update_flag_list* -Parameter festgelegten Reihenfolge angezeigt werden. Diese Spalten werden bezeichnet, indem „_uflag“ an den zugeordneten Spaltennamen angehängt wird.  
   
  Wenn Ihr Paket eine Wrapperfunktion aufruft, die alle Änderungen abfragt, gibt die Wrapperfunktion außerdem die Spalten __CDC_STARTLSN und \__CDC_SEQVAL zurück. Diese beiden Spalten sind die erste bzw. die zweite Spalte des Resultsets. Die Wrapperfunktion sortiert das Resultset außerdem auf der Grundlage dieser beiden Spalten.  
   

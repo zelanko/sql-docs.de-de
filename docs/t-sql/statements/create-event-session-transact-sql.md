@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d98dfd2c96322a2ba1b042a0edfcff8f7e6fb518
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696678"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401325"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "51696678"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```    
 CREATE EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -230,7 +229,7 @@ ON SERVER
  Gibt an, ob diese Ereignissitzung beim Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch gestartet werden soll.  
   
 > [!NOTE]  
->  Wenn STARTUP_STATE = ON, beginnt die Ereignissitzung erst, wenn SQL Server beendet und anschließend neu gestartet wird.  
+> Wenn `STARTUP_STATE = ON`, beginnt die Ereignissitzung erst, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beendet und anschließend neu gestartet wird.  
   
  ON  
  Die Ereignissitzung wird beim Start gestartet.  
@@ -239,15 +238,15 @@ ON SERVER
  Die Ereignissitzung wird nicht beim Start gestartet.  
   
 ## <a name="remarks"></a>Remarks  
- Die Rangfolge der logischen Operatoren beginnt mit NOT (höchster Operator). Darauf folgt AND und anschließend OR.  
+Die Rangfolge der logischen Operatoren beginnt mit `NOT` (höchster Operator). Darauf folgt `AND` und anschließend `OR`.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die ALTER ANY EVENT SESSION-Berechtigung.  
+Erfordert die `ALTER ANY EVENT SESSION`-Berechtigung.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel zeigt, wie eine Ereignissitzung mit der Bezeichnung `test_session` erstellt wird. In diesem Beispiel werden zwei Ereignisse hinzugefügt, und das Ziel 'Ereignisablaufverfolgung für Windows' wird verwendet.  
   
-```  
+```sql  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='test_session')  
     DROP EVENT session test_session ON SERVER;  
 GO  

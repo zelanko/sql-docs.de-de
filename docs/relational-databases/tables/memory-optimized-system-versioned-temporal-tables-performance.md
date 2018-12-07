@@ -11,12 +11,12 @@ ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 58257752fa22f6b3536e80c3dd25da8cca924b01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbbeb9f11b735f461f5901c8cc03d6fff313bf31
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723848"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397233"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>Systemleistung bei speicheroptimierten temporären Tabellen mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47723848"
   
 -   Der Zeitraum der Aktivierung der Datenleerung ist nicht konfigurierbar, jedoch können Sie den Prozess durch den Aufruf von [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)gilt).  
   
--   Sie sollten als Speicheroption für datenträgerbasierte Verlaufstabellen einen gruppierten Columnstore verwenden, insbesondere dann, wenn Sie beabsichtigen, Analyseabfragen für Verlaufsdaten auszuführen, die Aggregat- oder Windowingfunktionen verwenden. In diesem Fall ist ein gruppierter Columnstore eine optimale Lösung für die Verlaufstabelle, da dieser gute Datenkomprimierung bietet und sich „einfügefreundlich“ verhält, was darauf ausgerichtet ist, wie Verlaufsdaten generiert werden.  
+-   Sie sollten als Speicheroption für datenträgerbasierte Verlaufstabellen einen gruppierten Columnstore verwenden, insbesondere dann, wenn Sie beabsichtigen, Analyseabfragen für Verlaufsdaten auszuführen, die Aggregat- oder Windowingfunktionen verwenden. In diesem Fall ist ein gruppierter Columnstore eine optimale Lösung für die Verlaufstabelle, da dieser gute Datenkomprimierung bietet und sich „einfügefreundlich“ verhält, was der Generierung von Verlaufsdaten entspricht.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   

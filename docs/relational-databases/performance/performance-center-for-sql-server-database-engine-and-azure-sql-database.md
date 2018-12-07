@@ -1,7 +1,7 @@
 ---
 title: Leistungscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/08/2016
+ms.date: 11/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -20,15 +20,15 @@ ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cd4ba3f1606c1d62a0cd85760213552770f6e94e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6211647a58035ef4ef9ca38ed6ca5c51ce5d419c
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665589"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302856"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Leistungscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Diese Seite enthält Links, mit deren Hilfe Sie die erforderlichen Informationen zur Leistung in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]finden.  
   
  **Legende**  
@@ -47,7 +47,12 @@ ms.locfileid: "51665589"
 |**Optimisierungsoptionen für die Datenbankkonfiguration**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md)<br />![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [Anzeigen oder Ändern des Kompatibilitätsgrads einer Datenbank](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)<br />![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |**Tabellenkonfigurationsoptimierung**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)|  
 |**Leistung der Datenbank-Engine auf einem virtuellen Azure-Computer**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Kurze Checkliste](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Überlegungen zur Größe von virtuellen Computern und zu Speicherkonten](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Überlegungen zu Datenträgern und zur Leistung](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Überlegungen zur E/A-Leistung](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Überlegungen zur funktionsspezifischen Leistung](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)|  
-  
+
+> [!IMPORTANT]
+> Weitere Überlegungen stehen in folgenden Abschnitten zur Verfügung:    
+> -  [Empfohlene Updates und Konfigurationsoptionen für SQL Server 2012 und SQL Server 2014 mit Arbeitsauslastungen mit hoher Leistung](https://support.microsoft.com/help/2964518)
+> -  [Empfohlene Updates und Konfigurationsoptionen für SQL Server 2017 und SQL Server 2016 mit Arbeitsauslastungen mit hoher Leistung](https://support.microsoft.com/help/4465518)
+
 ## <a name="query-performance-options"></a>Abfrageleistungsoptionen  
   
 |||  
@@ -57,11 +62,12 @@ ms.locfileid: "51665589"
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Joins](../../relational-databases/performance/joins.md)**|[Join Fundamentals (Grundlagen zu Joins)](../../relational-databases/performance/joins.md#fundamentals)<br />[Nested Loops Join (Join geschachtelter Schleifen)](../../relational-databases/performance/joins.md#nested_loops)<br />[Merge Join (Zusammenführungsjoin)](../../relational-databases/performance/joins.md#merge)<br />[Hash Join (Hashjoin)](../../relational-databases/performance/joins.md#hash)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Unterabfragen](../../relational-databases/performance/subqueries.md)**|[Subquery Fundamentals (Grundlegende Informationen zu Unterabfragen)](../../relational-databases/performance/subqueries.md#fundamentals)<br />[Correlated subqueries (Korrelierte Unterabfragen)](../../relational-databases/performance/subqueries.md#correlated)<br />[Subquery types (Arten von Unterabfragen)](../../relational-databases/performance/subqueries.md#types)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Gespeicherte Prozeduren](../stored-procedures/stored-procedures-database-engine.md)**|[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md#best-practices)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Benutzerdefinierte Funktionen](../user-defined-functions/user-defined-functions.md)**|[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md#best-practices)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Benutzerdefinierte Funktionen](../user-defined-functions/user-defined-functions.md)**|[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md#best-practices)<br />[Erstellen benutzerdefinierter Funktionen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Optimierung von Parallelismus**|[Konfigurieren der Serverkonfigurationsoption Maximale Anzahl von Arbeitsthreads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)<br />[ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Optimierung des Abfrageoptimierers**|[ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Optimierung des Abfrageoptimierers**|[ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)<br />[Abfragehinweis „USE HINT“](../../t-sql/queries/hints-transact-sql-query.md#use_hint)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Statistik](../../relational-databases/statistics/statistics.md)**|[Zeitpunkt des Statistikupdates](../statistics/statistics.md)<br />[Statistikaktualisierung](../../relational-databases/statistics/update-statistics.md)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[Erstellen von und Zugreifen auf Tabellen in TempDB aus nativ kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[Problembehandlung für häufige Leistungsprobleme bei speicheroptimierten Hashindizes](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[Demo: Leistungsverbesserungen von In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[Erstellen von und Zugreifen auf Tabellen in TempDB aus nativ kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[Problembehandlung für häufige Leistungsprobleme bei speicheroptimierten Hashindizes](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[Demo: Leistungsverbesserungen von In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[Intelligente Abfrageverarbeitung](../../relational-databases\performance\intelligent-query-processing.md)**|[Adaptive Abfrageverarbeitung](../../relational-databases/performance/adaptive-query-processing.md)|
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)   

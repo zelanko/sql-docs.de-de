@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d03661990e6316b7faa223cac63c8c63939fb998
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f820161dcf242a06054e3f64198aad1f827ed3dd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606010"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395353"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51606010"
 >  **Erweiterter Schutz** ist in Windows standardmäßig nicht aktiviert. Informationen zum Aktivieren von **Erweiterter Schutz** in Windows finden Sie unter [Erweiterter Schutz für die Authentifizierung](https://support.microsoft.com/kb/968389).  
   
 ## <a name="description-of-extended-protection"></a>Beschreibung von "Erweiterter Schutz"  
- **Erweiterter Schutz** nutzt die Dienstbindung und die Kanalbindung, um Relayangriffe während der Authentifizierung zu verhindern. Bei einem Relayangriff während der Authentifizierung stellt ein Client, der in der Lage ist, NTLM-Authentifizierungen auszuführen (z. B. Windows-Explorer, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, eine .NET SqlClient-Anwendung usw.), eine Verbindung mit einem Angreifer her (z. B. einem feindlichen CIFS-Dateiserver). Der Angreifer verwendet die Anmeldeinformationen des Clients, um sich als der Client auszugeben und sich bei einem Dienst (z. B. einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Diensts) zu authentifizieren.  
+ **Erweiterter Schutz** nutzt die Dienstbindung und die Kanalbindung, um Relayangriffe während der Authentifizierung zu verhindern. Bei einem Relayangriff während der Authentifizierung stellt ein Client, der in der Lage ist, NTLM-Authentifizierungen auszuführen (z. B. Windows-Explorer, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, eine .NET SqlClient-Anwendung usw.), eine Verbindung mit einem Angreifer her (z. B. einem feindlichen CIFS-Dateiserver). Der Angreifer verwendet die Anmeldeinformationen des Clients, um sich als der Client auszugeben und sich bei einem Dienst (z.B. einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Diensts) zu authentifizieren.  
   
  Der Angriff kann auf zwei Arten erfolgen:  
   

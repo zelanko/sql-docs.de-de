@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5a968cfc8cbe06a492528d60022ba4aef03cd34
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: f9e1e9c58b88e7edd48fe3a1390f56e313572adf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324583"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418811"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Wenn Sie den letzten (aktuellsten) Zustand der Daten in einer temporalen Tabelle abrufen möchten, können Sie die Abfrage wie gewohnt durchführen, so wie auch bei nicht temporalen Tabellen. Wenn die PERIOD-Spalten nicht ausgeblendet sind, erscheinen ihre Werte in einer SELECT \* -Abfrage. Wenn Sie die **PERIOD** -Spalten als ausgeblendet angegeben haben, erscheinen ihre Werte nicht in einer SELECT \* -Abfrage. Wenn die **PERIOD** -Spalten ausgeblendet wurden, verweisen Sie in der SELECT-Klausel explizit auf die **PERIOD** -Spalten, um die Werte für diese Spalten zurückzugeben.  
+  Wenn Sie den letzten (aktuellsten) Zustand der Daten in einer temporalen Tabelle abrufen möchten, können Sie die Abfrage wie gewohnt durchführen, so wie auch bei nicht temporalen Tabellen. Wenn die PERIOD-Spalten nicht ausgeblendet sind, erscheinen ihre Werte in einer SELECT \* -Abfrage. Wenn Sie die **PERIOD**-Spalten ausgeblendet haben, erscheinen ihre Werte nicht in einer SELECT \*-Abfrage. Wenn die **PERIOD** -Spalten ausgeblendet wurden, verweisen Sie in der SELECT-Klausel explizit auf die **PERIOD** -Spalten, um die Werte für diese Spalten zurückzugeben.  
   
  Verwenden Sie die neue **FOR SYSTEM_TIME**-Klausel mit vier temporal-spezifischen Unterklauseln zum Abfragen von Daten in den aktuellen Tabellen und Verlaufstabellen, um eine zeitbasierte Analyse jedweder Art auszuführen. Weitere Informationen zu diesen Klauseln finden Sie unter [Temporal Tables](../../relational-databases/tables/temporal-tables.md) (Temporäre Tabellen) und [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   

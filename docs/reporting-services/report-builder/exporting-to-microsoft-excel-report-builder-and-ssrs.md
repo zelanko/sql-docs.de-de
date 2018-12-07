@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1e0f1af0b3dff47607960d8c2d37af84f4b00fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71ba67e4abb97a0de9ed4143adcd072b2f3eef8a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663118"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400024"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   Die Excel-Renderingerweiterung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rendert einen paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht im [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Format (XLSX). Mit der Excel-Renderingerweiterung spiegelt die Breite von Spalten in Excel die Breite von Spalten in Berichten genauer wider.  
@@ -161,7 +161,7 @@ ms.locfileid: "47663118"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- Die EXCELOPENXML-Erweiterung definiert den Excel-Renderer für aktuelle Excel-Dateien (XLSX). Die EXCEL-Erweiterung definiert die Excel 2003-Version. `Visible = “false”` gibt an, dass der Excel 2003-Renderer ausgeblendet wird. Weitere Informationen finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) und [RSReportDesigner-Konfigurationsdatei](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
+ Die EXCELOPENXML-Erweiterung definiert den Excel-Renderer für aktuelle Excel-Dateien (XLSX). Die EXCEL-Erweiterung definiert die Excel 2003-Version. `Visible = "false"` gibt an, dass der Excel 2003-Renderer ausgeblendet wird. Weitere Informationen finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) und [RSReportDesigner-Konfigurationsdatei](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-current-xlsx-excel-and-excel-2003-renderers"></a>Unterschiede zwischen dem aktuellen Excel-Renderer (XLSX) und den Excel 2003-Renderern  
  Mit dem aktuellen Excel-Renderer (XLSX) oder dem Excel 2003-Renderer gerenderte Berichte sind in der Regel identisch, und nur in seltenen Fällen bemerken Sie Unterschiede zwischen den beiden Formaten. In der folgenden Tabelle werden der Excel-Renderer und der Excel 2003-Renderer verglichen.  
@@ -267,7 +267,7 @@ ms.locfileid: "47663118"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  

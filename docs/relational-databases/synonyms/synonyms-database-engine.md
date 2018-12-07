@@ -16,12 +16,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba7494d37f556813371d248b4bbe0408e053835c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0c3f19abb7b6730e51630c9077310b5331c14bf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846308"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409137"
 ---
 # <a name="synonyms-database-engine"></a>Synonyme (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "47846308"
   
 -   Ein Synonym stellt eine Abstraktionsschicht bereit, die eine Clientanwendung vor Änderungen schützt, die am Namen oder Speicherort des Basisobjekts vorgenommen werden.  
   
- Nehmen Sie z. B. die **Employee** -Tabelle von [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], die auf dem Server **Server1**gespeichert ist. Eine Clientanwendung müsste, um von einem anderen Server, **Server2**, auf diese Tabelle zu verweisen, den vierteiligen Namen **Server1.AdventureWorks.Person.Employee**verwenden. Die Clientanwendung müsste außerdem geändert werden, wenn sich der Speicherort der Tabelle ändert, z. B. in einen anderen Server.  
+Nehmen Sie z. B. die **Employee** -Tabelle von [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], die auf dem Server **Server1**gespeichert ist. Eine Clientanwendung müsste, um von einem anderen Server, **Server2**, auf diese Tabelle zu verweisen, den vierteiligen Namen **Server1.AdventureWorks.Person.Employee**verwenden. Die Clientanwendung müsste außerdem geändert werden, wenn sich der Speicherort der Tabelle ändert, z. B. in einen anderen Server.  
   
- Um diese beiden Probleme zu vermeiden, können Sie das Synonym **EmpTable**auf **Server2** für die **Employee** -Tabelle auf **Server1**erstellen. Nun muss die Clientanwendung nur den einteiligen Namen **EmpTable**verwenden, um auf die **Employee** -Tabelle zu verweisen. Wenn sich außerdem der Speicherort der **Employee** -Tabelle ändert, müssen Sie das Synonym **EmpTable**ändern, um auf den neuen Speicherort der **Employee** -Tabelle zu verweisen. Da es keine ALTER SYNONYM-Anweisung gibt, müssen Sie zuerst das Synonym **EmpTable**löschen und anschließend mit dem gleichen Namen neu erstellen, aber das Synonym auf den neuen Speicherort der **Employee**-Tabelle verweisen lassen.  
+Um diese beiden Probleme zu vermeiden, können Sie das Synonym **EmpTable**auf **Server2** für die **Employee** -Tabelle auf **Server1**erstellen. Nun muss die Clientanwendung nur den einteiligen Namen **EmpTable**verwenden, um auf die **Employee** -Tabelle zu verweisen. Wenn sich außerdem der Speicherort der **Employee** -Tabelle ändert, müssen Sie das Synonym **EmpTable**ändern, um auf den neuen Speicherort der **Employee** -Tabelle zu verweisen. Da es keine ALTER SYNONYM-Anweisung gibt, müssen Sie zuerst das Synonym **EmpTable**löschen und anschließend mit dem gleichen Namen neu erstellen, aber das Synonym auf den neuen Speicherort der **Employee**-Tabelle verweisen lassen.  
   
- Ein Synonym gehört zu einem Schema, und der Name eines Schemas muss wie andere Objekte in einem Schema eindeutig sein. Sie können Synonyme für die folgenden Datenbankobjekte erstellen:  
+Ein Synonym gehört zu einem Schema, und der Name eines Schemas muss wie andere Objekte in einem Schema eindeutig sein. Sie können Synonyme für die folgenden Datenbankobjekte erstellen:  
   
 |||  
 |-|-|  
@@ -49,21 +49,21 @@ ms.locfileid: "47846308"
  *Enthält lokale und globale temporäre Tabellen  
   
 > [!NOTE]  
->  Vierteilige Namen für Funktionsbasisobjekte werden nicht unterstützt.  
+> Vierteilige Namen für Funktionsbasisobjekte werden nicht unterstützt.  
   
- Ein Synonym kann nicht das Basisobjekt für ein anderes Synonym sein. Außerdem kann ein Synonym nicht auf eine benutzerdefinierte Aggregatfunktion verweisen.  
+Ein Synonym kann nicht das Basisobjekt für ein anderes Synonym sein. Außerdem kann ein Synonym nicht auf eine benutzerdefinierte Aggregatfunktion verweisen.  
   
- Die Bindung zwischen einem Synonym und dem zugehörigen Basisobjekt erfolgt nur mit dem Namen. Alle Überprüfungen auf das Vorhandensein, den Typ und die Berechtigungen für das Basisobjekt werden bis zur Laufzeit verschoben. Deshalb kann das Basisobjekt geändert, gelöscht oder gelöscht und durch ein anderes Objekt, das den gleichen Namen wie das ursprüngliche Basisobjekt hat, ersetzt werden. Betrachten wir als Beispiel das Synonym **MyContacts**, das auf die **Person.Contact** -Tabelle in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]verweist. Wenn die **Contact** -Tabelle gelöscht und durch die **Person.Contact**-Sicht ersetzt wird, verweist **MyContacts** nun auf die **Person.Contact** -Sicht.  
+Die Bindung zwischen einem Synonym und dem zugehörigen Basisobjekt erfolgt nur mit dem Namen. Alle Überprüfungen auf das Vorhandensein, den Typ und die Berechtigungen für das Basisobjekt werden bis zur Laufzeit verschoben. Deshalb kann das Basisobjekt geändert, gelöscht oder gelöscht und durch ein anderes Objekt, das den gleichen Namen wie das ursprüngliche Basisobjekt hat, ersetzt werden. Betrachten wir als Beispiel das Synonym **MyContacts**, das auf die **Person.Contact** -Tabelle in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]verweist. Wenn die **Contact** -Tabelle gelöscht und durch die **Person.Contact**-Sicht ersetzt wird, verweist **MyContacts** nun auf die **Person.Contact** -Sicht.  
   
- Verweise auf Synonyme sind nicht schemagebunden. Deshalb kann ein Synonym jederzeit gelöscht werden. Durch das Löschen eines Synonyms besteht jedoch die Gefahr, dass Verweise auf das gelöschte Synonym zurückbleiben. Diese Verweise werden erst zur Laufzeit gefunden.  
+Verweise auf Synonyme sind nicht schemagebunden. Deshalb kann ein Synonym jederzeit gelöscht werden. Durch das Löschen eines Synonyms besteht jedoch die Gefahr, dass Verweise auf das gelöschte Synonym zurückbleiben. Diese Verweise werden erst zur Laufzeit gefunden.  
   
 ## <a name="synonyms-and-schemas"></a>Synonyme und Schemas  
- Wenn Sie über ein Standardschema verfügen, das nicht Ihnen gehört, und Sie ein Synonym erstellen möchten, müssen Sie den Synonymnamen mit dem Namen eines Schemas, das Ihnen gehört, qualifizieren. Angenommen, Ihnen gehört ein Schema **x**, aber **y** ist Ihr Standardschema und Sie verwenden die CREATE SYNONYM-Anweisung. In diesem Fall müssen Sie dem Namen des Synonyms das Schema **x**als Präfix voranstellen, anstatt dem Synonym einen einteiligen Namen zu geben. Weitere Informationen zum Erstellen von Synonymen finden Sie unter [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)gespeichert ist.  
+Wenn Sie über ein Standardschema verfügen, das nicht Ihnen gehört, und Sie ein Synonym erstellen möchten, müssen Sie den Synonymnamen mit dem Namen eines Schemas, das Ihnen gehört, qualifizieren. Angenommen, Ihnen gehört ein Schema **x**, aber **y** ist Ihr Standardschema und Sie verwenden die CREATE SYNONYM-Anweisung. In diesem Fall müssen Sie dem Namen des Synonyms das Schema **x**als Präfix voranstellen, anstatt dem Synonym einen einteiligen Namen zu geben. Weitere Informationen zum Erstellen von Synonymen finden Sie unter [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)gespeichert ist.  
   
 ## <a name="granting-permissions-on-a-synonym"></a>Erteilen von Berechtigungen für Synonyme  
- Nur Besitzer eines Synonyms, Mitglieder der Rollen **db_owner**oder **db_ddladmin** können Berechtigungen für ein Synonym erteilen.  
+Nur Besitzer eines Synonyms, Mitglieder der Rollen **db_owner**oder **db_ddladmin** können Berechtigungen für ein Synonym erteilen.  
   
- Sie können eine GRANT-, DENY-, REVOKE-Anweisung für alle oder einige der folgenden Berechtigungen für ein Synonym ausführen:  
+Sie können eine `GRANT`-, `DENY`-, `REVOKE`-Anweisung für alle oder eine beliebige Anzahl der folgenden Berechtigungen für ein Synonym ausführen:  
   
 |||  
 |-|-|  
@@ -84,27 +84,27 @@ ms.locfileid: "47846308"
  Wenn Sie Synonyme in den vorher beschriebenen Kontexten verwenden, ist das Basisobjekt davon betroffen. Angenommen, ein Synonym verweist auf ein Basisobjekt, das eine Tabelle darstellt, und Sie fügen eine Zeile in das Synonym ein. In Wirklichkeit fügen Sie dann eine Zeile in die Tabelle ein, auf die verwiesen wird.  
   
 > [!NOTE]  
->  Auf ein Synonym, das auf einem Verbindungsserver gespeichert ist, kann nicht verwiesen werden.  
+> Auf ein Synonym, das auf einem Verbindungsserver gespeichert ist, kann nicht verwiesen werden.  
   
  Sie können ein Synonym als Parameter für die OBJECT_ID-Funktion verwenden; die Funktion gibt jedoch die Objekt-ID des Synonyms und nicht das Basisobjekt zurück.  
   
  Sie können in einer DDL-Anweisung nicht auf ein Synonym verweisen. So generieren beispielsweise die folgenden Anweisungen, die auf ein Synonym namens `dbo.MyProduct`verweisen, einen Fehler:  
   
-```  
+```sql  
 ALTER TABLE dbo.MyProduct  
    ADD NewFlag int null;  
 EXEC ('ALTER TABLE dbo.MyProduct  
    ADD NewFlag int null');  
 ```  
   
- Die folgenden Berechtigungsanweisungen beziehen sich nur auf das Synonym, nicht auf das Basisobjekt.  
+Die folgenden Berechtigungsanweisungen beziehen sich nur auf das Synonym, nicht auf das Basisobjekt.  
   
 |||  
 |-|-|  
 |GRANT|DENY|  
 |REVOKE||  
   
- Synonyme sind nicht schemagebunden. Deshalb kann von den folgenden schemagebundenen Ausdruckskontexten nicht auf Synonyme verwiesen werden:  
+Synonyme sind nicht schemagebunden. Deshalb kann von den folgenden schemagebundenen Ausdruckskontexten nicht auf Synonyme verwiesen werden:  
   
 |||  
 |-|-|  
@@ -112,19 +112,19 @@ EXEC ('ALTER TABLE dbo.MyProduct
 |Standardausdrücke|Regelausdrücke|  
 |Schemagebundene Sichten|Schemagebundene Funktionen|  
   
- Weitere Informationen zu schemagebundenen Funktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
+Weitere Informationen zu schemagebundenen Funktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ## <a name="getting-information-about-synonyms"></a>Abrufen von Informationen zu Synonymen  
- Die sys.synonyms-Katalogsicht enthält einen Eintrag für jedes Synonym in einer bestimmten Datenbank. Diese Katalogsicht macht Synonymmetadaten verfügbar, wie z. B. den Namen des Synonyms und den Namen des Basisobjekts. Weitere Informationen zur **sys.synonyms**-Katalogsicht finden Sie unter [sys.synonyms &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md).  
+Die `sys.synonyms`-Katalogsicht enthält einen Eintrag für jedes Synonym in einer bestimmten Datenbank. Diese Katalogsicht macht Synonymmetadaten verfügbar, wie z. B. den Namen des Synonyms und den Namen des Basisobjekts. Weitere Informationen finden Sie unter [sys.synonyms &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md).  
   
- Mithilfe erweiterter Eigenschaften können Sie Beschreibungs- oder Anweisungstext, Eingabeformate und Formatierungsregeln als Eigenschaften eines Synonyms hinzufügen. Da die Eigenschaft in der Datenbank gespeichert wird, können alle Anwendungen, die die Eigenschaft lesen, das Objekt auf die gleiche Weise auswerten. Weitere Informationen finden Sie unter [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md).  
+Mithilfe erweiterter Eigenschaften können Sie Beschreibungs- oder Anweisungstext, Eingabeformate und Formatierungsregeln als Eigenschaften eines Synonyms hinzufügen. Da die Eigenschaft in der Datenbank gespeichert wird, können alle Anwendungen, die die Eigenschaft lesen, das Objekt auf die gleiche Weise auswerten. Weitere Informationen finden Sie unter [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md).  
   
- Verwenden Sie die OBJECTPROPERTYEX-Funktion, um den Basistyp des Basisobjekts eines Synonyms zu suchen. Weitere Informationen finden Sie unter [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md).  
+Verwenden Sie die OBJECTPROPERTYEX-Funktion, um den Basistyp des Basisobjekts eines Synonyms zu suchen. Weitere Informationen finden Sie unter [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md).  
   
 ### <a name="examples"></a>Beispiele  
- Das folgende Beispiel gibt den Basistyp des Basisobjekts eines Synonyms zurück, das ein lokales Objekt ist.  
+Das folgende Beispiel gibt den Basistyp des Basisobjekts eines Synonyms zurück, das ein lokales Objekt ist.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
 CREATE SYNONYM MyEmployee   
@@ -133,9 +133,9 @@ GO
 SELECT OBJECTPROPERTYEX(OBJECT_ID('MyEmployee'), 'BaseType') AS BaseType;  
 ```  
   
- Das folgende Beispiel gibt den Basistyp des Basisobjekts eines Synonyms zurück, das ein Remoteobjekt auf einem Server mit dem Namen `Server1`ist.  
+Das folgende Beispiel gibt den Basistyp des Basisobjekts eines Synonyms zurück, das ein Remoteobjekt auf einem Server mit dem Namen `Server1`ist.  
   
-```  
+```sql  
 EXECUTE sp_addlinkedserver Server1;  
 GO  
 CREATE SYNONYM MyRemoteEmployee  
@@ -146,10 +146,7 @@ GO
 ```  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [Erstellen von Synonymen](../../relational-databases/synonyms/create-synonyms.md)  
-  
- [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)  
-  
- [DROP SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/drop-synonym-transact-sql.md)  
-  
+ [Erstellen von Synonymen](../../relational-databases/synonyms/create-synonyms.md)    
+ [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)    
+ [DROP SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/drop-synonym-transact-sql.md)    
   

@@ -16,12 +16,12 @@ ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1998aa0072e001f4c6065341dc788a9b0bb562e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4395090e03c904970b5cefcd71b0570a3e184a1e
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713398"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321726"
 ---
 # <a name="operators-ssis-expression"></a>Operatoren (SSIS-Ausdruck)
   In diesem Abschnitt werden die von der Ausdruckssprache bereitgestellten Operatoren sowie die Operatorenrangfolge und die Assoziativität der Ausdrucksauswertung beschrieben.  
@@ -41,11 +41,11 @@ ms.locfileid: "47713398"
 |[% &#40;Modulo&#41; &#40;SSIS-Ausdrücke&#41;](../../integration-services/expressions/modulo-ssis-expression.md)|Stellt den ganzzahligen Rest einer Division des ersten numerischen Ausdrucks durch den zweiten bereit.|  
 |[&#124;&#124; &#40;Logisches OR&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/logical-or-ssis-expression.md)|Führt eine logische OR-Operation aus.|  
 |[&& &#40;Logisches AND&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/logical-and-ssis-expression.md)|Führt eine logische AND-Operation aus.|  
-|[\! &#40;Logisches Not&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|Negiert einen booleschen Operanden.|  
+|[\! &#40;Logisches NOT&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|Negiert einen booleschen Operanden.|  
 |[&#124; &#40;Bitweises inklusives OR&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)|Führt eine bitweise OR-Operation mit zwei ganzzahligen Werten aus.|  
 |[^ &#40;Bitweises exklusives OR&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)|Führt eine bitweise exklusive OR-Operation mit zwei ganzzahligen Werten aus.|  
 |[& &#40;Bitweises AND&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)|Führt eine bitweise AND-Operation mit zwei ganzzahligen Werten aus.|  
-|[~ &#40;Bitweises Not&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/bitwise-not-ssis-expression.md)|Führt eine bitweise Negation einer ganzen Zahl aus.|  
+|[~ &#40;Bitweises NOT&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/bitwise-not-ssis-expression.md)|Führt eine bitweise Negation einer ganzen Zahl aus.|  
 |[== &#40;Gleich&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/equal-ssis-expression.md)|Führt einen Vergleich aus, um zu ermitteln, ob zwei Ausdrücke gleich sind.|  
 |[\!= &#40;Ungleich&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/unequal-ssis-expression.md)|Führt einen Vergleich aus, um zu ermitteln, ob zwei Ausdrücke ungleich sind.|  
 |[&#62; &#40;Größer als&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)|Führt einen Vergleich aus, um zu ermitteln, ob der erste Ausdruck größer ist als der zweite.|  

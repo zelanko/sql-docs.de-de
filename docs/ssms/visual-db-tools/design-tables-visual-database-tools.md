@@ -18,12 +18,12 @@ ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff738c43095548ea6667deadf0eb80c4c6818ec3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4dcdc69317db78546a5dcc2550ebfc58b02ab36
+ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805478"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52267855"
 ---
 # <a name="create-and-update-database-tables"></a>Erstellen und Aktualisieren von Datenbanktabellen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,3 +64,4 @@ Der Tabellen-Designer ist ein visuelles Tool, in dem [Datenbanktabellen](../../r
 [Indizes](../../relational-databases/indexes/indexes.md)  
 [Data types (Transact-SQL) (Datentypen (Transact-SQL))](../../t-sql/data-types/data-types-transact-sql.md)  
 [Herunterladen von SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)  
+[Create a database and add tables in Visual Studio (Erstellen einer Datenbank und Hinzufügen von Tabellen in Visual Studio)](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)

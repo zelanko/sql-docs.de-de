@@ -11,12 +11,12 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 040fea749664fb63fa2911a2d4fcaab5185af912
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2dc364cc2665d800e311625d754716e4582b6b65
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638903"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392863"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC-Datenbanken
   Eine Oracle CDC-Instanz wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit dem gleichen Namen auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz zugeordnet. Diese Datenbank wird als Oracle CDC-Datenbank (oder kurz CDC-Datenbank) bezeichnet.  

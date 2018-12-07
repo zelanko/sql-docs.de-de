@@ -12,12 +12,12 @@ ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 24b21d901e30af96362198001033d56c51d6c9e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4cff9d79f6c357d419f6ef058e58ea4cc1da4e2a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700375"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416771"
 ---
 # <a name="filter-operators-master-data-services"></a>Filteroperatoren (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "51700375"
 |Steuerelementname|und Beschreibung|  
 |------------------|-----------------|  
 |**Ist gleich**|Gibt Attributwerte zurück, die den angegebenen Kriterien genau entsprechen. Um nach **Mountain-100**zu filtern, müssen Sie z.B. **Mountain-100**eingeben.|  
-|**Ist nicht gleich**|Gibt Attributwerte zurück, die keine genaue Übereinstimmung mit den angegebenen Kriterien aufweisen. Die Filterkriterien müssen dem Attributwert, den Sie aus den Ergebnissen ausschließen möchten, genau entsprechen. Um Ergebnisse auszuschließen, die mit **Mountain-100**übereinstimmen, müssen Sie z.B. **Mountain-100**eingeben.<br /><br /> <br /><br /> Hinweis: Wenn eine Filteranwendung mit einer „Ist nicht gleich“-Klausel auf ein Attribut angewendet wird, wird ein Element, dessen Attribut nicht NULL ist, die Filterbedingung übergeben und zurückgegeben werden, wenn in Ihren Datenbankeinstellungen SET ANSI_NULLS auf ON festgelegt ist. Um dieses Verhalten zu beenden, legen Sie SET ANSI_NULLS in den Datenbankeinstellungen auf OFF fest. Wenn SET ANSI_NULLS auf OFF festgelegt ist, werden alle Datenvergleiche mit einem NULL-Wert als TRUE ausgewertet, falls der Datenwert NULL ist. Dies hat zur Folge, dass das Element die "Ist nicht gleich"-Klausel nicht besteht. Weitere Informationen finden Sie unter [SET ANSI_NULLS &#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md).|  
+|**Ist nicht gleich**|Gibt Attributwerte zurück, die keine genaue Übereinstimmung mit den angegebenen Kriterien aufweisen. Die Filterkriterien müssen dem Attributwert, den Sie aus den Ergebnissen ausschließen möchten, genau entsprechen. Um Ergebnisse auszuschließen, die mit **Mountain-100**übereinstimmen, müssen Sie z.B. **Mountain-100**eingeben.<br /><br /> <br /><br /> Hinweis: Wenn eine Filteranwendung mit einer „Ist ungleich“-Klausel auf ein Attribut angewendet wird, wird ein Element, dessen Attribut nicht NULL ist, die Filterbedingung übergeben und zurückgegeben werden, wenn in Ihren Datenbankeinstellungen SET ANSI_NULLS auf ON festgelegt ist. Um dieses Verhalten zu beenden, legen Sie SET ANSI_NULLS in den Datenbankeinstellungen auf OFF fest. Wenn SET ANSI_NULLS auf OFF festgelegt ist, werden alle Datenvergleiche mit einem NULL-Wert als TRUE ausgewertet, falls der Datenwert NULL ist. Dies hat zur Folge, dass das Element die „Ist ungleich“-Klausel nicht besteht. Weitere Informationen finden Sie unter [SET ANSI_NULLS &#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md).|  
 |**Ist wie**|Verwendet den LIKE-Operator aus Transact-SQL zum Filtern von Ergebnissen. Weitere Informationen finden Sie unter [LIKE &#40;Transact-SQL&#41;](../t-sql/language-elements/like-transact-sql.md) in der SQL Server-Onlinedokumentation.|  
 |**Ist nicht wie**|Verwendet den NOT-Operator aus Transact-SQL zum Filtern von Ergebnissen. Weitere Informationen finden Sie unter [NOT &#40;Transact-SQL&#41;](../t-sql/language-elements/not-transact-sql.md) in der SQL Server-Onlinedokumentation.|  
 |**Ist größer als**|Gibt Attributwerte zurück, die größer als die angegebenen Kriterien sind. Um Attributwerte zurückzugeben, die mit einem Buchstaben größer als **F**beginnen, geben Sie z. B. **F**ein.|  

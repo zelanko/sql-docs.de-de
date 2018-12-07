@@ -19,12 +19,12 @@ ms.author: mikeray
 manager: craigg
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b648c1ec93ed3a1425b39055438735f70aed6a4a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0fc7beced0f0858a8b431628c9ad6178c9f81342
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668589"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412157"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Richtlinien für Onlineindexvorgänge
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ Im Allgemeinen besteht kein Unterschied bei der Defragmentierungsqualität zwisc
 Sie können Standardoptionen für online oder fortsetzbar auf Datenbankebene festlegen, indem Sie die datenbankbezogenen Konfigurationsoptionen ELEVATE_ONLINE und ELEVATE_RESUMABLE festlegen. Mit diesen Standardoptionen können Sie versehentliches Ausführen eines Vorgangs verhindern, der die Datenbanktabelle offline schalten würde. Beide Optionen bewirken, dass die Engine bestimmte Vorgänge automatisch in Online- oder fortsetzbare Ausführung erhöht.  
 Sie können die Option über den Befehl [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) entweder auf FAIL_UNSUPPORTED, WHEN_SUPPORTED oder OFF festlegen. Sie können verschiedene Werte für online und fortsetzbar festlegen. 
 
-Sowohl ELEVATE_ONLINE als auch ELEVATE_RESUMABLE gelten nur für DDL-Anweisungen, die die Syntax für online bzw. fortsetzbar unterstützen. Wenn Sie beispielsweise versuchen, einen XML-Index mit ELEVATE_ONLINE = FAIL_UNSUPORTED zu erstellen, wird der Vorgang offline ausgeführt, weil für XML-Indizes die ONLINE =-Syntax nicht unterstützt wird. Die Optionen wirken sich nur auf DDL-Anweisungen aus, die ohne Angabe einer ONLINE- oder RESUMABLE-Option gesendet werden. Wird z. B. eine Anweisung ONLINE=OFF oder RESUMABLE=OFF gesendet, kann der Benutzer eine FAIL_UNSUPPORTED-Einstellung außer Kraft setzen und eine Anweisung offline und/oder nicht fortsetzbar ausführen. 
+Sowohl ELEVATE_ONLINE als auch ELEVATE_RESUMABLE gelten nur für DDL-Anweisungen, die die Syntax für online bzw. fortsetzbar unterstützen. Wenn Sie beispielsweise versuchen, einen XML-Index mit ELEVATE_ONLINE = FAIL_UNSUPORTED zu erstellen, wird der Vorgang offline ausgeführt, weil die ONLINE =-Syntax nicht für XML-Indizes unterstützt wird. Die Optionen wirken sich nur auf DDL-Anweisungen aus, die ohne Angabe einer ONLINE- oder RESUMABLE-Option gesendet werden. Wird z. B. eine Anweisung ONLINE=OFF oder RESUMABLE=OFF gesendet, kann der Benutzer eine FAIL_UNSUPPORTED-Einstellung außer Kraft setzen und eine Anweisung offline und/oder nicht fortsetzbar ausführen. 
  
 > [!NOTE]
 > ELEVATE_ONLINE und ELEVATE_RESUMABLE gelten nicht für XML-Indexvorgänge. 

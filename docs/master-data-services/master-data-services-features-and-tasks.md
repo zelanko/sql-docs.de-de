@@ -12,18 +12,18 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3f4c71f7e0fdf539ab9a70213eeb275b45e33056
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61252bf85ab9862508bed327e27068add2cc0c74
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628448"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403837"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services - Features und Tasks
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Erfahren Sie, wie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] verwendet wird, um die Masterdaten Ihrer Organisation zu verwalten. Erfahren Sie, wie Modellobjekte zu erstellen und zu bearbeiten sind, die als Container für Daten dienen. Erfahren Sie, wie die Masterdaten an sich organisiert und verwaltet werden. Erfahren Sie, wie Masterdaten zu importieren und exportieren sind und wie sich Modelle zwischen Test- und Produktionsumgebungen freigeben lassen. Abschließend erfahren Sie, wie sich benutzerdefinierte Anwendungen, die auf den [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Webdienst zugreifen, entwickeln lassen.  
+  Erfahren Sie, wie Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] verwenden können, um die Masterdaten Ihrer Organisation zu verwalten. Erfahren Sie, wie Modellobjekte zu erstellen und zu bearbeiten sind, die als Container für Daten dienen. Erfahren Sie, wie die Masterdaten an sich organisiert und verwaltet werden. Erfahren Sie, wie Masterdaten zu importieren und exportieren sind und wie sich Modelle zwischen Test- und Produktionsumgebungen freigeben lassen. Abschließend erfahren Sie, wie sich benutzerdefinierte Anwendungen, die auf den [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Webdienst zugreifen, entwickeln lassen.  
   
 ## <a name="create-structures-to-contain-data"></a>Erstellen von Strukturen, die Daten enthalten  
   

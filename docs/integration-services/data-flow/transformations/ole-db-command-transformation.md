@@ -16,12 +16,12 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3913196ff2d9ea967915a5e61ab2d2aafee9f22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4710cf3a1c89a87d5dbe12b5579ca7aaa3489f0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799874"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506561"
 ---
 # <a name="ole-db-command-transformation"></a>Transformation für OLE DB-Befehl
   Die Transformation für OLE DB-Befehl führt eine SQL-Anweisung für jede Zeile in einem Datenfluss aus. Beispielsweise können Sie eine SQL-Anweisung ausführen, die Zeilen in einer Datenbanktabelle einfügt, aktualisiert oder löscht.  
@@ -61,13 +61,13 @@ ms.locfileid: "47799874"
   
 3.  Klicken Sie auf die Registerkarte **Datenfluss** , und ziehen Sie dann aus dem Fenster **Toolbox**die Transformation für OLE DB-Befehl auf die Entwurfsoberfläche.  
   
-4.  Verbinden Sie die Transformation für OLE DB-Befehl mit dem Datenfluss, indem Sie einen Konnektor (der grüne oder rote Pfeil) von einer Datenquelle oder einer vorherigen Transformation mit der Maus auf die Transformation für OLE DB-Befehl ziehen.  
+4.  Verbinden Sie die Transformation für den OLE DB-Befehl mit dem Datenfluss, indem Sie einen Connector (der grüne oder rote Pfeil) von einer Datenquelle oder einer vorherigen Transformation mit der Maus auf die Transformation für den OLE DB-Befehl ziehen.  
   
 5.  Klicken Sie mit der rechten Maustaste auf die Komponente, und wählen Sie „Bearbeiten“ oder **Erweiterten Editor anzeigen**aus.  
   
 6.  Wählen Sie auf der Registerkarte **Verbindungs-Manager** in der Liste **Verbindungs-Manager** einen OLE DB-Verbindungs-Manager aus. Weitere Informationen finden Sie unter [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-7.  Klicken Sie auf die Registerkarte **Komponenteneigenschaften** , und klicken Sie im Feld **SqlCommand** auf die Schaltfläche mit den drei Punkten ( **…** ).  
+7.  Klicken Sie auf die Registerkarte **Komponenteneigenschaften**, und klicken Sie im Feld **SqlCommand** auf die Schaltfläche mit den Auslassungspunkten (**...**).  
   
 8.  Geben Sie in **Zeichenfolgenwert-Editor**die parametrisierte SQL-Anweisung mithilfe eines Fragezeichens (?) als Parametermarkierung für jeden Parameter ein.  
   

@@ -25,12 +25,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e70f5cffad52b660f0006d416dfa027fba355de4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 91099edbdbd2f1b25fd77dc1f076acd5b4647708
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642127"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397393"
 ---
 # <a name="ssis-designer"></a>SSIS-Designer
   [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist ein grafisches Tool, mit dem Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete erstellen und verwalten können. [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] im Rahmen eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts verfügbar.  
@@ -58,7 +58,7 @@ ms.locfileid: "51642127"
 ## <a name="undo-and-redo"></a>Rückgängig machen und Wiederholen  
  Sie können bis zu 20 Aktionen im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer rückgängig machen und wiederholen. Bei Paketen ist Rückgängig/Wiederholen auf den Registerkarten **Ablaufsteuerung**, **Datenfluss**, **Ereignishandler**und **Parameter** sowie im Fenster **Variablen** verfügbar. Bei Projekten ist Rückgängig/Wiederholen im Fenster **Projektparameter** verfügbar.  
   
- An der neuen **SSIS-Toolbox**können Sie keine Rückgängig/Wiederholen-Änderungen vornehmen.  
+ In der neuen **SSIS-Toolbox** können Sie keine Änderungen rückgängig machen oder wiederholen.  
   
  Wenn Sie Änderungen an einer Komponente vornehmen, für die der Komponenten-Editor verwendet wird, können Sie Änderungen gruppenweise statt einzeln rückgängig machen und wiederholen. Die Gruppe von Änderungen wird in der Dropdownliste zum Rückgängigmachen und Wiederholen als einzelne Aktion angezeigt.  
   

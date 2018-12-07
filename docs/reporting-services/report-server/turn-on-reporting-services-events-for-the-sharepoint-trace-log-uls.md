@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f4d8f59821a649214ddc2deda128d801e6ddb7a
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 96e3049ecb5e222b6ced7fc6a2202c80e25a7028
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814173"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409537"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS)
 
@@ -85,9 +85,9 @@ Get-SPDiagnosticConfig
   
 1.  **Produkt: SQL Server Reporting Services**  
   
-2.  **Kategorie** : Auf den Server bezogene Ereignisse verfügen über die Zeichenfolge "Berichtsserver", am Anfang des Namens. Beispielsweise "Berichtsserverwarnungs-Laufzeit". Diese Ereignisse werden auch in den Protokolldateien des Berichtsservers protokolliert.  
+2.  **Kategorie** : Auf den Server bezogene Ereignisse weisen am Anfang des Namens die Zeichenfolge „Berichtsserver“ auf. Beispiel: „Laufzeit für Berichtsserverwarnungen“. Diese Ereignisse werden auch in den Protokolldateien des Berichtsservers protokolliert.  
   
-3.  **Kategorie** : Auf eine Web-Front-End-Komponente bezogene oder von einer Web-Front-End-Komponente kommunizierte Ereignisse enthalten nicht die Zeichenfolge „Berichtsserver“. Beispielsweise "Dienstanwendungsproxy – Laufzeit für Warnungen" (Berichtsserver). Die WFE-Einträge enthalten CorrelationID, die Servereinträge jedoch nicht.  
+3.  **Kategorie**: Auf eine Web-Front-End-Komponente bezogene oder von einer Web-Front-End-Komponente kommunizierte Ereignisse enthalten nicht die Zeichenfolge „Berichtsserver“. Beispiel: „Dienstanwendungsproxy – Laufzeit für Berichtsserverwarnungen“. Die WFE-Einträge enthalten CorrelationID, die Servereinträge jedoch nicht.  
   
 ##  <a name="bkmk_list"></a> Liste der SQL Server Reporting Services-Ereignisse  
  Die folgende Tabelle enthält eine Liste der Ereignisse in der SQL Server Reporting Services-Kategorie:  
@@ -100,7 +100,7 @@ Get-SPDiagnosticConfig
 |Rendering im lokalen Modus||  
 |SOAP-Clientproxy||  
 |Benutzeroberflächenseiten||  
-|Power View|Protokolleinträge, die in die **LogClientTraceEvents** -API geschrieben wurden. Diese Einträge werden aus Clientanwendungen eingebunden. Dazu zählt Power View, eine Funktion des Add-Ins von SQL Server Reporting Services.<br /><br /> Alle Protokolleinträge aus der LogClientTraceEvents-API werden unter der "SQL Server Reporting Services"- **Kategorie** und dem "Power View"- **Bereich** protokolliert.<br /><br /> Der Inhalt der Einträge, der mit dem "Power View"-Bereich protokolliert wurde, wird von der Clientanwendung bestimmt.|  
+|Power View|Protokolleinträge, die in die **LogClientTraceEvents** -API geschrieben wurden. Diese Einträge werden aus Clientanwendungen eingebunden. Dazu zählt Power View, eine Funktion des Add-Ins von SQL Server Reporting Services.<br /><br /> Alle Protokolleinträge aus der LogClientTraceEvents-API werden unter der **Kategorie** von „SQL Server Reporting Services" und dem **Bereich** von „Power View“ protokolliert.<br /><br /> Der Inhalt der Einträge, der mit dem Bereich „Power View“ protokolliert wurde, wird von der Clientanwendung bestimmt.|  
 |Laufzeit für Berichtsserverwarnungen||  
 |Berichtsserver-AppDomain-Manager||  
 |Gepufferte Berichtsserverantwort||  
@@ -138,10 +138,10 @@ Get-SPDiagnosticConfig
 |Gemeinsamer Dienst|Beispieleinträge:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting-Zugriff auf Inhaltsdatenbanken.<br /><br /> MediumProvisioning-Instanzen für ReportingWebServiceApplication<br /><br /> MediumProcessing-Dienstkontoänderung für ReportingWebServiceApplication<br /><br /> MediumSetting-Datenbankberechtigungen.|  
   
 ##  <a name="bkmk_powershell"></a> Anzeigen einer Protokolldatei mit PowerShell  
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") Sie können PowerShell verwenden, um eine Liste der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-bezogenen Ereignisse aus einer ULS-Protokolldatei zurückzugeben. Geben Sie den folgenden Befehl über die SharePoint 2010-Verwaltungsshell ein, um eine gefilterte Liste mit den Zeilen der ULS-Protokolldatei „UESQL11SPOINT-20110606-1530.log“ zurückzugeben, die**sql server reporting services**enthalten:  
+ ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") Sie können PowerShell verwenden, um eine Liste der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-bezogenen Ereignisse aus einer ULS-Protokolldatei zurückzugeben. Geben Sie über die SharePoint 2010-Verwaltungsshell folgenden Befehl ein, um eine gefilterte Liste mit den Zeilen der ULS-Protokolldatei „UESQL11SPOINT-20110606-1530.log“ zurückzugeben, die „**sql server reporting services**“ enthalten:  
   
 ```  
-Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
+Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
 ```  
   
  Sie können auch Tools herunterladen, die Ihnen erlauben, ULS-Protokolle zu lesen. Zum Beispiel den auf GitHub verfügbaren [SharePoint-LogViewer](https://github.com/hasankhan/SharePointLogViewer). 

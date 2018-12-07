@@ -13,12 +13,12 @@ ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a8acb95f1091d905269a86a431ec7ee3514c5f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f50a0e343ea7ffd934ed0de3384deffa4679ff7c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748708"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505196"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Datenbankspiegelungs-Monitor (Seite Status)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "47748708"
 ## <a name="remarks"></a>Remarks  
  Mitglieder der festen Datenbankrolle **dbm_monitor** können den vorhandenen Spiegelungsstatus entweder mithilfe des Datenbankspiegelungs-Monitors oder der gespeicherten Prozedur **sp_dbmmonitorresults** anzeigen. Diese Benutzer können jedoch nicht die Statustabelle aktualisieren. Sie sind abhängig davon, dass der **Auftrag für den Datenbankspiegelungs-Monitor**die Statustabelle regelmäßig aktualisiert. Das Alter des angezeigten Status kann ein Benutzer über die Zeitangaben in den Bezeichnungen **Prinzipalprotokoll (***\<Zeit>***)** und **Spiegelungsprotokoll (***\<Zeit>***)** erfahren.  
   
- Wenn dieser Auftrag nicht vorhanden ist oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beendet wurde, veraltet der Status zunehmend und gibt die Konfiguration der Spiegelungssitzung möglicherweise nicht mehr wieder. So kann z. B. nach einem Failover fälschlicherweise angezeigt werden, dass die Partner dieselbe Rolle haben (Prinzipal oder Spiegel), oder der aktuelle Prinzipalserver wird als Spiegel angezeigt, während der aktuelle Spiegelserver als Prinzipal angezeigt wird.  
+ Wenn dieser Auftrag nicht vorhanden ist oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beendet wurde, veraltet der Status zunehmend und gibt die Konfiguration der Spiegelungssitzung möglicherweise nicht mehr wieder. So kann z.B. nach einem Failover fälschlicherweise angezeigt werden, dass die Partner dieselbe Rolle haben (Prinzipal oder Spiegel), oder der aktuelle Prinzipalserver wird als Spiegel angezeigt, während der aktuelle Spiegelserver als Prinzipal angezeigt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   

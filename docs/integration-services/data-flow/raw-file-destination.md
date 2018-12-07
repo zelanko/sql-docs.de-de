@@ -21,12 +21,12 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d9632936ad839e0dbc1d425f0d554847f657dfd
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 15fbcd91b9b2604b0ce7faef4d129101c0fb6f40
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639788"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393613"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   Das Rohdatendatei-Ziel schreibt Rohdaten in eine Datei. Die Daten liegen im systemeigenen Zielformat vor, sodass die Daten nicht übersetzt und kaum analysiert werden müssen. Dies bedeutet, dass das Rohdatendatei-Ziel Daten schneller als andere Ziele, wie z. B. Flatfile- und OLE DB-Ziele, schreiben kann.  
@@ -105,7 +105,7 @@ ms.locfileid: "51639788"
   
 5.  Schreiben Sie in RawFile2 mit dem Rohdatendatei-Ziel.  
   
-     RawFile1 wird gesperrt, da im Datenfluss davon gelesen wird.  
+     RawFile1 wird gesperrt, da die Datei im Datenfluss gelesen wird.  
   
 6.  Ersetzen Sie RawFile1 durch RawFile2.  
   

@@ -11,12 +11,12 @@ ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 76f25db84d074a9aeb544daf2fe33b512836daf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f706344fb2e3f194cb059e5d0d0338aaf7adc06
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713098"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402696"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Data Quality-Abgleich im MDS-Add-In für Excel
 
@@ -24,7 +24,7 @@ ms.locfileid: "47713098"
 
   Es ist möglich, dass Sie dem MDS-Repository im Laufe der Zeit weitere Daten hinzufügen möchten. Vor dem Hinzufügen von Daten kann es hilfreich sein, die neuen Daten mit den bereits in MDS verwalteten Daten zu vergleichen, um sicherzustellen, dass Sie keine doppelten oder ungenauen Daten hinzufügen.  
   
- Unter MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] wird die Data Quality Services-Funktion (DQS) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um ähnliche Daten zu ermitteln. Wenn Sie im Add-In die Abgleichfunktion verwenden, werden ähnliche Datensätze gruppiert, und es wird ein Wert angezeigt, der die Genauigkeit des Ergebnisses angibt. Weitere Informationen zur Abgleichfunktion von DQS finden Sie unter [Data Matching](../../data-quality-services/data-matching.md).  
+ Unter MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] wird das Data Quality Services-Feature (DQS) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um ähnliche Daten zu ermitteln. Wenn Sie im Add-In die Abgleichfunktion verwenden, werden ähnliche Datensätze gruppiert, und es wird ein Wert angezeigt, der die Genauigkeit des Ergebnisses angibt. Weitere Informationen zur Abgleichfunktion von DQS finden Sie unter [Data Matching](../../data-quality-services/data-matching.md).  
   
 ## <a name="workflow-for-data-quality-matching"></a>Workflow für Data Quality-Abgleich  
  Verwenden Sie beim Nutzen von DQS in Verbindung mit MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]den folgenden Workflow:  

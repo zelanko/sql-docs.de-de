@@ -11,12 +11,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be26ab7526d4ff270efc1ed11e592ad8552b0b22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9ce064f0d1e629ea8492dfbee3292d9a580d676
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634768"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505761"
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lektion 5-2: Aktivieren und Konfigurieren von Paketkonfigurationen
 In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell und aktivieren Paketkonfigurationen mithilfe des Paketkonfigurations-Assistenten. Sie verwenden diesen Assistenten zum Generieren einer XML-Konfigurationsdatei, die Konfigurationseinstellungen für die **Directory** -Eigenschaft des Foreach-Schleifencontainers enthält. Der Wert der Directory-Eigenschaft wird durch eine neue Variable auf Paketebene bereitgestellt, die Sie zur Laufzeit aktualisieren können. Zusätzlich füllen Sie einen neuen Beispieldatenordner auf, der während des Testens verwendet wird.  
@@ -40,11 +40,11 @@ In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell
   
 7.  Kehren Sie zur Registerkarte **Ablaufsteuerung** zurück, und doppelklicken Sie auf den **Foreach File in Folder** -Container.  
   
-8.  Klicken Sie auf der Seite **Auflistung** des **Foreach-Schleifen-Editors**auf **Ausdrücke**und anschließend auf die Schaltfläche mit den Auslassungspunkten **(…)**.  
+8.  Klicken Sie auf der Seite **Sammlung** des **Foreach-Schleifen-Editors** auf **Ausdrücke** und anschließend auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
   
 9. Klicken Sie im **Eigenschaftsausdrucks-Editor**in die Liste **Eigenschaft** , und wählen Sie **Verzeichnis**aus.  
   
-10. Klicken Sie im Feld **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(…)**.  
+10. Klicken Sie im Feld **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
   
 11. Erweitern Sie im **Ausdrucks-Generator**den Ordner Variablen, und ziehen Sie die Variable **User::varFolderName** in das Feld **Ausdruck** .  
   
@@ -88,7 +88,7 @@ In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell
   
 16. Klicken Sie auf **Schließen**.  
   
-17. Vom Assistenten wird eine Konfigurationsdatei mit dem Namen SSISTutorial.dtsConfig erstellt, die die Konfigurationseinstellungen für den Wert (**value** ) der Variablen enthält, durch die wiederum die **Directory** -Eigenschaft des Enumerators festgelegt wird.  
+17. Vom Assistenten wird eine Konfigurationsdatei mit dem Namen „SSISTutorial.dtsConfig“ erstellt, die die Konfigurationseinstellungen für den Wert (**Value**) der Variablen enthält, durch die wiederum die **Directory**-Eigenschaft des Enumerators festgelegt wird.  
   
     > [!NOTE]  
     > Eine Konfigurationsdatei enthält typischerweise komplexe Informationen zu den Paketeigenschaften. In diesem Lernprogramm sollte die einzige Konfigurationsinformation allerdings Folgende sein:  

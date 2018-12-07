@@ -14,12 +14,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db2423abafdc0ae9e3949e1cac55d0b963a4fc3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c2f0a9a77b3cbcd4dd1ecc652b78f2bd2909bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754358"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505980"
 ---
 # <a name="add-or-change-a-property-expression"></a>Hinzufügen oder Ändern eines Eigenschaftsausdrucks
   Sie können Eigenschaftsausdrücke für Pakete, Tasks, Foreach-Schleifencontainer, For-Schleifencontainer, Sequenzcontainer, Ereignishandler, Verbindungs-Manager auf Paket- und Projektebene sowie für Protokollanbieter erstellen.  
@@ -38,15 +38,15 @@ ms.locfileid: "47754358"
   
     -   Klicken Sie mit der rechten Maustaste auf das Element, und klicken Sie dann auf **Eigenschaften**.  
   
-3.  Klicken Sie in das Feld **Ausdrücke** und dann auf die Auslassungspunkte (…).  
+3.  Klicken Sie in das Feld **Ausdrücke**, und klicken Sie dann auf die Auslassungspunkte (…).  
   
 4.  Wählen Sie im **Eigenschaftsausdrucks-Editor**eine Eigenschaft in der Liste **Eigenschaft** aus, und gehen Sie dann wie folgt vor:  
   
     -   Geben Sie in die Spalte **Ausdruck** direkt einen Ausdruck ein oder ändern Sie ihn, und klicken Sie dann auf **OK**.  
   
-         – oder –  
+         -oder-  
   
-    -   Klicken Sie in der Ausdruckszeile der Eigenschaft auf die Auslassungspunkte (…), um den **Ausdrucks-Generator**zu öffnen.  
+    -   Klicken Sie in der Ausdruckszeile der Eigenschaft auf die Auslassungspunkte (...), um den **Ausdrucks-Generator** zu öffnen.  
   
 5.  (Optional) Führen Sie im **Ausdrucks-Generator**eine der folgenden Aufgaben aus:  
   
@@ -69,10 +69,10 @@ ms.locfileid: "47754358"
  [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md)   
  [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
- [Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)   
+ [SQL Server Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services-Ereignishandler &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services (SSIS) Connections (Integration Services-Verbindungen (SSIS))](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   

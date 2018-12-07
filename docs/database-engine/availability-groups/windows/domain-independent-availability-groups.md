@@ -12,12 +12,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f17ff228c8cf71cc766c6f6fe43a6917577fe983
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0024663d9d16d191338abfa2604e6c969f0d58e5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788518"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415077"
 ---
 # <a name="domain-independent-availability-groups"></a>Domänenunabhängige Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Das Bereitstellen einer domänenunanbhängigen Verfügbarkeitsgruppe hat einige 
 
 ## <a name="set-and-verify-the-dns-suffix-on-all-replica-servers"></a>Festlegen und Überprüfen des DNS-Suffix auf allen Replikatservern
 
-Ein allgemeines DNS-Suffix ist für den Workgroupcluster einer domänenunabhängige Verfügbarkeitsgruppe erforderlich. Um das DNS-Suffix auf jedem Windows-Server, der ein Replikat für die Verfügbarkeitsgruppe hosten wird, festzulegen und zu überprüfen, befolgen Sie die folgenden Anweisungen:
+Ein allgemeines DNS-Suffix ist für den Workgroupcluster einer domänenunabhängigen Verfügbarkeitsgruppe erforderlich. Um das DNS-Suffix auf jedem Windows-Server, der ein Replikat für die Verfügbarkeitsgruppe hosten wird, festzulegen und zu überprüfen, befolgen Sie die folgenden Anweisungen:
 
 1. Wählen Sie mithilfe der Windows-Taste + X „System“ aus.
 2. Wenn der Computername und der vollständige Computername identisch sind, wurde das DNS-Suffix nicht festgelegt. Wenn der Computername z.B. ALLAN ist, sollte der Wert für den vollständigen Computernamen nicht nur ALLAN sein. Dies sollte etwa wie ALLAN.SQLHA.LAB aussehen. SQLHA.LAB ist das DNS-Suffix. Der Wert für die Arbeitsgruppe müsste WORKGROUP sein. Wenn Sie das DNS-Suffix festlegen müssen, wählen Sie „Einstellungen ändern“.

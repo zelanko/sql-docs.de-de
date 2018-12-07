@@ -12,12 +12,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb90a4311a1fe37905d5962e66572f7431db7a2a
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 18f025f4ba212849d3823466d6555733f305ac91
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085256"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302693"
 ---
 # <a name="database-engine-tuning-advisor"></a>Datenbankoptimierungsratgeber
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49085256"
 -   Verwalten des Speicherplatzes  
   
 ## <a name="database-engine-tuning-advisor-benefits"></a>Vorteile des Datenbankoptimierungsratgebers:  
- Die Optimierung der Abfrageleistung kann sich ohne umfassende Kenntnisse bzgl. der Datenbankstruktur und der für die Datenbank ausgeführten Abfragen schwierig gestalten. Der Datenbankoptimierungsratgeber kann diese Aufgabe durch Analysieren des aktuellen Abfrageplancache oder einer Arbeitsauslastung der erstellten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen und Empfehlen eines entsprechenden physischen Entwurfs erleichtern. Für erfahrenere Datenbankadministratoren stellt DTA einen leistungsstarken Mechanismus zum Ausführen explorativer Was-wäre-wenn-Analysen verschiedener Alternativen physischer Entwürfe bereit. Der DTA kann die folgenden Informationen bereitstellen:  
+ Die Optimierung der Abfrageleistung kann sich ohne umfassende Kenntnisse bzgl. der Datenbankstruktur und der für die Datenbank ausgeführten Abfragen schwierig gestalten. Der **Datenbankoptimierungsratgeber** kann diese Aufgabe durch Analysieren des aktuellen Abfrageplancache oder einer Arbeitsauslastung der erstellten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfragen und Empfehlen eines entsprechenden physischen Entwurfs erleichtern. Für erfahrenere Datenbankadministratoren stellt DTA einen leistungsstarken Mechanismus zum Ausführen explorativer Was-wäre-wenn-Analysen verschiedener Alternativen physischer Entwürfe bereit. Der DTA kann die folgenden Informationen bereitstellen:  
   
 -   Empfehlen der besten Mischung aus Rowstore- und [Columnstore](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)-Indizes für Datenbanken mithilfe des Abfrageoptimierers zur Analyse von Abfragen in einer Arbeitsauslastung.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "49085256"
 
 -   Berücksichtigen von Alternativen, bei denen Sie mögliche Entwurfsoptionen in Form von hypothetischen Konfigurationen liefern, die vom Datenbankoptimierungsratgeber bewertet werden sollen.
 
--  Optimieren von Arbeitsauslastungen aus einer Vielzahl von Quellen, wie SQL Server-Abfragespeicher, Plancache, SQL Server Profiler-Ablaufverfolgungsdatei oder -tabelle oder SQL-Datei.
+-   Optimieren von Arbeitsauslastungen aus einer Vielzahl von Quellen, wie SQL Server-Abfragespeicher, Plancache, SQL Server Profiler-Ablaufverfolgungsdatei oder -tabelle oder SQL-Datei.
 
   
- Der Datenbankoptimierungsratgeber ist für die folgenden Typen von Abfragearbeitsauslastungen ausgelegt:  
+Der Datenbankoptimierungsratgeber ist für die folgenden Typen von Abfragearbeitsauslastungen ausgelegt:  
   
 -   Nur OLTP-Abfragen (Online Transaction Processing, Onlinetransaktionsverarbeitung)  
   
@@ -66,22 +66,22 @@ ms.locfileid: "49085256"
 -   Updateintensive Arbeitsauslastungen (mehr Datenänderungen als Abfragen)  
   
 ## <a name="dta-components-and-concepts"></a>DTA-Komponenten und -Konzepte  
- Grafische Benutzeroberfläche des Datenbankoptimierungsratgebers  
+ **Grafische Benutzeroberfläche des Datenbankoptimierungsratgebers**  
  Eine benutzerfreundliche Schnittstelle, über die Sie die Arbeitsauslastung angeben und verschiedene Optimierungsoptionen aktivieren können.  
   
  **dta** -Hilfsprogramm  
  Die Befehlszeilenversion des Datenbankoptimierungsratgebers. Mit dem Hilfsprogramm **dta** soll es Ihnen ermöglicht werden, die Funktionalität des Datenbankoptimierungsratgebers in Anwendungen und Skripts zu verwenden.  
   
- Arbeitsauslastung  
+ **Arbeitsauslastung**  
  Eine Transact-SQL-Skriptdatei, Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle, die eine repräsentative Arbeitsauslastung für die zu optimierenden Datenbanken enthält. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]können Sie den Plancache als Arbeitsauslastung angeben.  Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie [den Abfragespeicher als Workload angeben](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
   
- XML-Eingabedatei  
+ **XML-Eingabedatei**  
  Eine Datei im XML-Format, mit der der Datenbankoptimierungsratgeber Arbeitsauslastungen optimieren kann. Die XML-Eingabedatei unterstützt erweiterte Optimierungsoptionen, die weder über die GUI noch im Hilfsprogramm **dta** verfügbar sind.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Für den Datenbankoptimierungsratgeber gelten die folgenden Einschränkungen:  
   
--   Er kann keine eindeutigen Indizes bzw. Indizes, die PRIMARY KEY- oder UNIQUE-Einschränkungen erzwingen, hinzufügen oder löschen.  
+-   Er kann keine eindeutigen Indizes bzw. Indizes, die `PRIMARY KEY`- oder `UNIQUE`-Einschränkungen erzwingen, hinzufügen oder löschen.  
   
 -   Er kann keine Datenbank analysieren, die auf den Einzelbenutzermodus festgelegt ist.  
   

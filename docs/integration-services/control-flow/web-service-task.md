@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642347"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502609"
 ---
 # <a name="web-service-task"></a>Webdienst (Task)
   Der Task "Webdienst" führt eine Webdienstmethode aus. Der Task "Webdienst" kann für folgende Zwecke verwendet werden:  
@@ -84,7 +84,7 @@ ms.locfileid: "51642347"
   
 ### <a name="options"></a>Tastatur  
  **HTTPConnection**  
- Wählen Sie einen Verbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie in der Liste einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
 > [!IMPORTANT]  
 >  Der HTTP-Verbindungs-Manager unterstützt nur die anonyme Authentifizierung und die Standardauthentifizierung. Er unterstützt keine Windows-Authentifizierung.  
@@ -92,7 +92,7 @@ ms.locfileid: "51642347"
  **Verwandte Themen:** [HTTP-Verbindungs-Manager](../../integration-services/connection-manager/http-connection-manager.md), [HTTP-Verbindungs-Manager-Editor &#40;Seite Server&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- Geben Sie den vollqualifizierten Pfad der auf dem Computer lokalen WSDL-Datei an, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um nach dieser Datei zu suchen.  
+ Geben Sie den vollqualifizierten Pfad der auf dem Computer lokalen WSDL-Datei an, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, um nach dieser Datei zu suchen.  
   
  Wenn Sie die WSDL-Datei bereits manuell auf den Computer heruntergeladen haben, wählen Sie diese Datei aus. Wenn die WSDL-Datei jedoch noch nicht heruntergeladen wurde, führen Sie folgende Schritte aus:  
   
@@ -137,7 +137,7 @@ ms.locfileid: "51642347"
  Wählen Sie für den auszuführenden Task eine Webmethode aus der Liste aus.  
   
  **WebMethodDocumentation**  
- Geben Sie eine Beschreibung der Webmethode ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , und geben Sie anschließend im Dialogfeld **Dokumentation der Webmethode** die Beschreibung ein.  
+ Geben Sie eine Beschreibung der Webmethode ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, und geben Sie anschließend in das Dialogfeld **Dokumentation der Webmethode** die Beschreibung ein.  
   
  **Name**  
  Führt die Namen der Eingaben in die Webmethode in einer Liste auf.  

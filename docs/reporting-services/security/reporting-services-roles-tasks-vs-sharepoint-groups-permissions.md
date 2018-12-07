@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 64339c62cfe6d37e1117febd797ae43d6d43bdc2
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b099941ce9b51583647cd29d0114cd795bf051ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813296"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397194"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services-Rollen/Tasks im Vergleich zu SharePoint-Gruppen/Berechtigungen
   In diesem Thema werden rollen- und taskbasierte Autorisierungsfunktionen im einheitlichen Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mit den Sicherheitsfunktionen in SharePoint-Produkten verglichen. In diesem Thema werden die Terminologie und Merkmale von Rollen, Tasks, SharePoint-Gruppen, Berechtigungsstufen und Berechtigungen verglichen.  
@@ -47,9 +47,9 @@ ms.locfileid: "51813296"
   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus|SharePoint|  
 |---------------------------------------------|----------------|  
-|**Rolle:** Beispielsweise "Inhalts-Manager".|**Gruppe:** Beispielsweise die Standardgruppe "Anzeigende Benutzer".|  
-|---|**Berechtigungsstufe der Gruppe:** Beispielsweise "Nur anzeigen" für die Gruppe "Anzeigende Benutzer".|  
-|**Tasks:** Beispielsweise "Berichte verwalten".|**Berechtigungen:** Die Gruppe "Nur anzeigen" enthält beispielsweise listenbezogene Berechtigungen für die Elemente, Versionen und Anwendungsseiten von Sichten.|  
+|**Rolle:** Beispielsweise „Inhalts-Manager“.|**Gruppe:** Beispielsweise die Standardgruppe „Anzeigende Benutzer“.|  
+|---|**Berechtigungsstufe der Gruppe:** Beispielsweise „Nur anzeigen“ für die Gruppe „Anzeigende Benutzer“.|  
+|**Tasks:** Beispielsweise „Berichte verwalten“.|**Berechtigungen:** Die Gruppe „Nur anzeigen“ enthält beispielsweise listenbezogene Berechtigungen für die Elemente, Versionen und Anwendungsseiten von Ansichten.|  
   
  Weitere Informationen zu SharePoint-Berechtigungen finden Sie unter [Berechtigungsstufen und Berechtigungen](https://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) und [Bestimmen von Berechtigungsstufen und Gruppen in SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   

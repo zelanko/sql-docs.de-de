@@ -12,12 +12,12 @@ ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41d20108ae2fd1c8060627ae09b150e2b1bab9b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95ca303d9bed86f92cbd58776d4a24c4d92cce2a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656768"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398203"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Bereitstellen eines Modellbereitstellungspakets mit MDSModelDeploy
 
@@ -94,7 +94,7 @@ ms.locfileid: "47656768"
   
      Dabei gilt: *PackageName* ist der Name der Paketdatei (PKG-Datei), *ModelName* ist der Name des neuen Modells, *VersionName* ist der Name der Version, und *ServiceName* ist der Name des Diensts, der im vorherigen Schritt zurückgegeben wurde. Stellen Sie sicher, dass die Modell- und Versionsnamen nach Groß-/Kleinschreibung genau mit den Namen übereinstimmen.  
   
-6.  Nach der erfolgreichen Bereitstellung des Pakets wird eine Meldung angezeigt, die besagt, dass der MDSModelDeploy-Vorgang erfolgreich abgeschlossen wurde.  
+6.  Nach der erfolgreichen Bereitstellung des Pakets wird eine Meldung angezeigt, die angibt, dass der MDSModelDeploy-Vorgang erfolgreich abgeschlossen wurde.  
   
  **Hinweise:**  
   

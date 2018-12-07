@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e6fafa2ba203ecbcd3141503a170c81c21282621
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: fd3fc6793ce2c95bfbb03d80e0413d0b0f6148d1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560517"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404985"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "51560517"
  Wenn ein Cleanup ausgeführt wird, wird die Untergrenzenmarkierung für alle Aufzeichnungsinstanzen zunächst in einer einzelnen Transaktion aktualisiert. Anschließend wird versucht, veraltete Einträge aus den Änderungstabellen und der Tabelle cdc.lsn_time_mapping zu entfernen. Der konfigurierbare Schwellenwert begrenzt, wie viele Einträge in jeder einzelnen Anweisung gelöscht werden. Das Fehlschlagen des Löschvorgangs für einzelne Tabellen führt nicht dazu, dass die Ausführung des Vorgangs nicht für die übrigen Tabellen versucht wird.  
   
 ### <a name="cleanup-job-customization"></a>Anpassen eines Cleanupauftrags  
- Die Anpassungsmöglichkeiten für den Cleanupauftrag bestehen in der Strategie, die verwendet wird, um zu bestimmen, welche Einträge in der Änderungstabelle verworfen werden sollen. Im übermittelten Cleanupauftrag wird nur eine zeitbasierte Strategie unterstützt. In diesem Fall wird die neue Untergrenzenmarkierung durch Subtrahieren der zulässigen Beibehaltungsdauer von der Commitzeit der letzten verarbeiteten Transaktion berechnet. Da die zugrunde liegenden Cleanupprozeduren auf **lsn** statt auf Zeit basieren, kann eine beliebe Anzahl von Strategien verwendet werden, um den kleinsten **lsn** zu bestimmen, der in den Änderungstabellen bewahrt werden soll. Nur einige von diesen sind streng zeitbasiert. Es könnte z. B. Wissen über die Clients zum Bereitstellen einer Sicherung verwendet werden, wenn nachfolgende Prozesse, die Zugriff auf die Änderungstabellen erfordern, nicht ausgeführt werden können. Obwohl die Standardstrategie denselben **lsn** für das Cleanup aller Änderungstabellen der Datenbank verwendet, kann auch die zugrunde liegende Cleanupprozedur für das Cleanup auf Aufzeichnungsinstanzebene aufgerufen werden.  
+ Die Anpassungsmöglichkeiten für den Cleanupauftrag bestehen in der Strategie, die verwendet wird, um zu bestimmen, welche Einträge in der Änderungstabelle verworfen werden sollen. Im übermittelten Cleanupauftrag wird nur eine zeitbasierte Strategie unterstützt. In diesem Fall wird die neue Untergrenzenmarkierung durch Subtrahieren der zulässigen Beibehaltungsdauer von der Commitzeit der letzten verarbeiteten Transaktion berechnet. Da die zugrunde liegenden Cleanupprozeduren auf **lsn** statt auf Zeit basieren, kann eine beliebe Anzahl von Strategien verwendet werden, um den kleinsten **lsn** zu bestimmen, der in den Änderungstabellen bewahrt werden soll. Nur einige von diesen sind streng zeitbasiert. Es könnte z. B. Wissen über die Clients zum Bereitstellen einer Sicherung verwendet werden, wenn nachfolgende Prozesse, die Zugriff auf die Änderungstabellen erfordern, nicht ausgeführt werden können. Obwohl die Standardstrategie dieselbe **LSN** für das Cleanup aller Änderungstabellen der Datenbank verwendet, kann auch die zugrunde liegende Cleanupprozedur für das Cleanup auf Aufzeichnungsinstanzebene aufgerufen werden.  
   
 ##  <a name="Monitor"></a> Überwachen des Change Data Capture-Prozesses  
  Indem Sie den Change Data Capture-Prozess überwachen, können Sie ermitteln, ob Änderungen korrekt und mit einer akzeptablen Latenzzeit in die Änderungstabellen geschrieben werden. Das Überwachen kann Ihnen auch dabei helfen, jegliche Fehler zu identifizieren, die auftreten könnten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über zwei dynamische Verwaltungssichten, womit Sie Change Data Capture überwachen können: [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) und [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).  

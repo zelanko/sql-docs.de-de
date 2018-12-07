@@ -17,12 +17,12 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73236a13046257caabc572de24957524d1cb41ea
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d247df4047b95456fb5ccdf1fe8bc1940909388e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639017"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502740"
 ---
 # <a name="transfer-jobs-task"></a>Aufträge übertragen (Task)
   Durch die Task "Aufträge übertragen" werden ein oder mehrere Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents zwischen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übertragen.  
@@ -116,7 +116,7 @@ ms.locfileid: "51639017"
 |**False**|Kopiert nur angegebene Aufträge.|  
   
  **JobsList**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um die zu kopierenden Aufträge auszuwählen. Es muss mindestens ein Auftrag ausgewählt werden.  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um die zu kopierenden Aufträge auszuwählen. Es muss mindestens ein Auftrag ausgewählt werden.  
   
 > [!NOTE]  
 >  Geben Sie vor der Auswahl der zu kopierenden Aufträge **SourceConnection** an.  

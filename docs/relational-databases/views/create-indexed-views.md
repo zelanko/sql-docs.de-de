@@ -1,7 +1,7 @@
 ---
 title: Erstellen von indizierten Sichten | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c37482e2adb298af1c2d650c5a6c0e5d06ece2b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650968"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191050"
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie Sie Indizes für eine Sicht erstellen. Der erste Index, der für eine Sicht erstellt wird, muss ein eindeutiger gruppierter Index sein. Nachdem der eindeutige gruppierte Index erstellt wurde, können Sie weitere nicht gruppierte Indizes erstellen. Das Erstellen eines eindeutigen gruppierten Indexes für eine Sicht verbessert die Abfrageleistung, da die Sicht wie eine Tabelle mit einem gruppierten Index in der Datenbank gespeichert wird. Der Abfrageoptimierer kann indizierte Sichten verwenden, um die Abfrageausführung zu beschleunigen. Es ist nicht erforderlich, dass in der Abfrage auf die jeweilige Sicht verwiesen wird, damit der Optimierer diese Sicht als Ersatz berücksichtigt.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Die folgenden Schritte sind zum Erstellen einer indizierten Sicht erforderlich und wichtig für eine erfolgreiche Implementierung der indizierten Sicht:  
   
 1.  Stellen Sie sicher, dass die SET-Optionen für alle vorhandenen Tabellen korrekt sind, auf die in der Sicht verwiesen wird.    
@@ -66,7 +66,8 @@ Um sicherzustellen, dass die Sichten ordnungsgemäß verwaltet werden können un
 |ARITHABORT|ON|ON|OFF|OFF|  
 |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF| 
+|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
   
 <sup>1</sup> Durch das Festlegen von `ANSI_WARNINGS` auf ON wird `ARITHABORT` implizit auf ON festgelegt.  
   
@@ -107,6 +108,7 @@ Zusätzlich zu den Anforderungen bzgl. SET-Optionen und deterministischen Funkti
     |PRECISE = TRUE|Muss explizit als ein Attribut der .NET Framework-Methode deklariert werden.|  
     |DATA ACCESS = NO SQL|Wird durch Festlegen des DataAccess-Attributs auf DataAccessKind.None und des SystemDataAccess-Attributs auf SystemDataAccessKind.None bestimmt.|  
     |EXTERNAL ACCESS = NO|Diese Eigenschaft ist für CLR-Routinen standardmäßig auf NO festgelegt.|  
+    |&nbsp;|&nbsp;|
   
 -   Die Sicht muss mithilfe der Option `WITH SCHEMABINDING` erstellt werden.  
   
@@ -126,6 +128,7 @@ Zusätzlich zu den Anforderungen bzgl. SET-Optionen und deterministischen Funkti
     |Tabellenvariablen|`OUTER APPLY` oder `CROSS APPLY`|`PIVOT`, `UNPIVOT`|  
     |Spaltensätze mit geringer Dichte|Inline-Tabellenwertfunktionen (TVF) oder Tabellenwertfunktionen mit mehreren Anweisungen (MSTVF)|`OFFSET`|  
     |`CHECKSUM_AGG`|||  
+    |&nbsp;|&nbsp;|&nbsp;|
   
      <sup>1</sup> Die indizierte Sicht kann Spalten mit dem Datentyp **float** enthalten. Allerdings dürfen solche Spalten nicht im Schlüssel des gruppierten Indexes enthalten sein.  
   
@@ -152,8 +155,9 @@ Wenn Sie DML (z.B. `UPDATE`, `DELETE` oder `INSERT`) für eine Tabelle ausführe
   
  Indizes für Tabellen und Sichten können deaktiviert werden. Wenn ein gruppierter Index für eine Tabelle deaktiviert wird, werden Indizes für die den Tabellen zugeordneten Sichten auch deaktiviert.  
  
-<a name="nondeterministic"></a> Ausdrücke, die eine implizite Konvertierung von Zeichenfolgen in **datetime** oder **smalldatetime** umfassen, werden als nicht deterministisch angesehen. Der Grund hierfür ist, dass die Ergebnisse von den LANGUAGE- und DATEFORMAT-Einstellungen der Serversitzung abhängen. Die Ergebnisse des Ausdrucks `CONVERT (datetime, '30 listopad 1996', 113)` hängen beispielsweise von der LANGUAGE-Einstellung ab, da die Zeichenfolge '`listopad`' für verschiedene Monate in verschiedenen Sprachen steht. In ähnlicher Weise interpretiert `DATEADD(mm,3,'2000-12-01')`in dem Ausdruck [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Zeichenfolge `'2000-12-01'` basierend auf der DATEFORMAT-Einstellung. Die implizierte Konvertierung von Nicht-Unicode-Zeichendaten zwischen Sortierungen wird auch als nicht deterministisch angesehen.  
-  
+<a name="nondeterministic"></a> Ausdrücke, die eine implizite Konvertierung von Zeichenfolgen in **datetime** oder **smalldatetime** umfassen, werden als nicht deterministisch angesehen. Weitere Informationen finden Sie unter [Nondeterministic conversion of literal date strings into DATE values (Nicht deterministische Konvertierung von Datumsliteralzeichenfolgen in DATE-Werte)](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
+
+
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  

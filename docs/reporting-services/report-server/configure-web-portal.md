@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 606b6fa37f5dc067cdf134792215fd7c2cd09067
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 01c235ec53d0b8f70611b8523a4286790623d990
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813213"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415407"
 ---
 # <a name="configure-the-web-portal"></a>Konfigurieren des Webportals
 
@@ -27,7 +27,7 @@ Für das Webportal müssen folgende Voraussetzungen erfüllt sein:
 
 - Sie müssen einen minimal konfigurierten Berichtsserver haben. Weitere Informationen finden Sie unter [Configure a Report Server (Konfigurieren eines Berichtsservers)](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md).
 
-- Der Berichtsserver muss im einheitlichen Modus ausgeführt werden. Das Webportal kann mit einem Berichtsserver, für den der integrierte SharePoint-Modus konfiguriert ist, nicht verwendet werden. In SQL Server 2012 kann ein Berichtsserver nicht von einem Modus in den anderen wechseln. Wenn Sie den von der Umgebung verwendeten Berichtsservertyp ändern möchten, müssen Sie den gewünschten Berichtsservermodus installieren und dann die Berichtselemente vom alten Berichtsserver zum neuen Berichtsserver kopieren oder verschieben. Dieser Prozess wird in der Regel als "Migration" bezeichnet. Die für das Migrieren erforderlichen Schritte hängen vom Modus ab, zu dem Sie migrieren, und von der Version, von der Sie migrieren. Weitere Informationen finden Sie unter [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
+- Der Berichtsserver muss im einheitlichen Modus ausgeführt werden. Das Webportal kann mit einem Berichtsserver, für den der integrierte SharePoint-Modus konfiguriert ist, nicht verwendet werden. In SQL Server 2012 kann ein Berichtsserver nicht von einem Modus in den anderen wechseln. Wenn Sie den von der Umgebung verwendeten Berichtsservertyp ändern möchten, müssen Sie den gewünschten Berichtsservermodus installieren und dann die Berichtselemente vom alten Berichtsserver zum neuen Berichtsserver kopieren oder verschieben. Dieser Prozess wird in der Regel als „Migration“ bezeichnet. Die für das Migrieren erforderlichen Schritte hängen vom Modus ab, zu dem Sie migrieren, und von der Version, von der Sie migrieren. Weitere Informationen finden Sie unter [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 
 - Außerdem benötigen Sie Internet Explorer 11 oder höher mit aktivierter Skripterstellung. Weitere Informationen finden Sie unter [Browserunterstützung für Reporting Services und Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 608021d678f57bda86b1fc77950e029efceea7ad
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ef9d3882a00792606daa357508677b1af6fbe570
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663609"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502784"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank
 SQL Server und Azure SQL-Datenbank verfügen über native JSON-Funktionen, mit denen Sie JSON-Dokumente durch die standardmäßige SQL-Sprache analysieren können. Jetzt können Sie JSON-Dokumente in SQL Server oder SQL-Datenbank speichern und JSON-Daten wie in einer NoSQL-Datenbank abfragen. Dieser Artikel beschreibt die Optionen zum Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank.
@@ -48,12 +48,12 @@ Jedes Mal, wenn ein Dokument in die Tabelle eingefügt oder in der Tabelle aktua
 Wenn Sie die JSON-Dokumente in der Tabelle speichern, können Sie zum Abfragen der Dokumente die Standardsprache Transact-SQL verwenden. Zum Beispiel:
 
 ```sql
-SELECT TOP 100 JSON_VALUE(log, ‘$.severity’), AVG( CAST( JSON_VALUE(log,’$.duration’) as float))
+SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.duration') as float))
  FROM WebSite.Logs
- WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
- GROUP BY JSON_VALUE(log, ‘$.severity’)
- HAVING AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) > 100
- ORDER BY AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
+ WHERE CAST( JSON_VALUE(log,'$.date') as datetime) > @datetime
+ GROUP BY JSON_VALUE(log, '$.severity')
+ HAVING AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) > 100
+ ORDER BY AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) DESC
 ```
 
 Die Möglichkeit, *jede* T-SQL-Funktion und Abfrageklausel zum Abfragen von JSON-Dokumenten verwenden zu können, ist besonders nützlich. SQL Server und SQL-Datenbank führen in den Abfragen, die Sie zur Analyse von JSON-Dokumenten verwenden können, keine Einschränkungen ein. Sie können mit der Funktion `JSON_VALUE` Werte aus einem JSON-Dokument extrahieren und wie jeden anderen Wert in der Abfrage verwenden.
@@ -107,7 +107,7 @@ Im vorhergehende Beispiel wird ein Sequenzobjekt verwendet, um der Spalte `_id` 
 
 ## <a name="frequently-changing-documents--memory-optimized-tables"></a>Häufig geänderte Dokumente und speicheroptimierte Tabellen
 
-Wenn Sie mit einer großen Anzahl von Aktualisierungs-, Einfüge- und Löschvorgängen in Ihren Sammlungen rechnen, können Sie Ihre JSON-Dokumente in speicheroptimierten Tabellen speichern. Speicheroptimierte JSON-Sammlungen verwalten die Daten immer im Arbeitsspeicher, sodass kein Speicher-E/A-Overhead erzeugt wird. Darüber hinaus sind speicheroptimierte JSON-Sammlungen komplett sperrenfrei, d.h., andere Vorgänge werden durch Aktionen für Dokumente nicht blockiert.
+Wenn Sie mit einer großen Anzahl von Aktualisierungs-, Einfüge- und Löschvorgängen in Ihren Sammlungen rechnen, können Sie Ihre JSON-Dokumente in speicheroptimierten Tabellen speichern. Speicheroptimierte JSON-Sammlungen verwalten die Daten immer im Arbeitsspeicher, sodass kein Speicher-E/A-Overhead erzeugt wird. Darüber hinaus sind speicheroptimierte JSON-Sammlungen komplett sperrenfrei, d. h., andere Vorgänge werden durch Aktionen für Dokumente nicht blockiert.
 
 Um eine klassische Sammlung in eine speicheroptimierte Sammlung zu konvertieren, müssen Sie lediglich die Option **with (memory_optimized=on)** nach der Tabellendefinition angeben, wie im folgenden Beispiel gezeigt wird. Dann haben Sie eine speicheroptimierte Version der JSON-Sammlung erstellt.
 

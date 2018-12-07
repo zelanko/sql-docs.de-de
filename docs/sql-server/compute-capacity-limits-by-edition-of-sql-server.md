@@ -14,12 +14,12 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 32b0e29977dea2d3269972ff06bc34f9af214012
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b74eddf6fa77c63d7b4657375883e9b83e1893d4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697448"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400623"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ Die folgende Tabelle gibt die Rechenkapazitätsgrenzen für eine einzelne Instan
   
 In einer virtualisierten Umgebung beruht die Beschränkung der Rechenkapazität auf der Anzahl der logischen Prozessoren, nicht der Kerne. Dies hat den Grund, dass die Prozessorarchitektur für die Gastanwendungen nicht sichtbar ist. 
 
-Ein Server mit vier Sockets beispielsweise, bestückt mit Quad-Core-Prozessoren und der Fähigkeit, zwei Hyperthreads pro Kern zu aktivieren, enthält mit aktiviertem Hyperthreading 32 logische Prozessoren. Er enthält jedoch mit deaktiviertem Hyperthreading nur 16 logische Prozessoren. Diese logischen Prozessoren können virtuellen Computern auf dem Server zugeordnet werden. Die Rechenlast der virtuellen Computers auf diesem logischen Prozessor wird einem Ausführungs-Thread auf dem physischen Prozessor im Hostserver zugeordnet.  
+Ein Server mit vier Sockets beispielsweise, bestückt mit Quad-Core-Prozessoren und der Fähigkeit, zwei Hyperthreads pro Kern zu aktivieren, enthält mit aktiviertem Hyperthreading 32 logische Prozessoren. Er enthält jedoch mit deaktiviertem Hyperthreading nur 16 logische Prozessoren. Diese logischen Prozessoren können virtuellen Computern auf dem Server zugeordnet werden. Die Rechenlast des virtuellen Computers auf diesem logischen Prozessor wird einem Ausführungs-Thread auf dem physischen Prozessor im Hostserver zugeordnet.  
   
 Es kann daher sinnvoll sein, Hyperthreading zu deaktivieren, wenn die Leistung der einzelnen virtuellen Prozessoren wichtig ist. Sie können das Hyperthreading mithilfe einer BIOS-Einstellung für den Prozessor während der BIOS-Einrichtung aktivieren oder deaktivieren. Normalerweise handelt es sich aber um einen Vorgang im Bereich des Servers, der alle auf dem Server ausgeführten Arbeitsauslastungen betrifft. Dies kann dafür sprechen, Arbeitsauslastungen, die in virtualisierten Umgebungen ausgeführt werden, von solchen zu trennen, die in einer physischen Betriebssystemumgebung von der Leistungssteigerung durch Hyperthreading profitieren würden.  
   

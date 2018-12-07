@@ -8,18 +8,18 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad6781d27078053a67d236c6a96b21fd67e355df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ed9f661a49e6ad64642938672f6355a1d19d9f6
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703478"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302560"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 In dieser Lektion des [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Tutorials verwenden Sie die datengesteuerten Abonnementseiten des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Webportals, um eine Verbindung mit einer Abonnementdatenquelle herzustellen, um eine Abfrage zu erstellen, die Abonnementdaten abruft, und um das Resultset den Berichts- und Übermittlungsoptionen zuzuordnen.  
   
 > [!NOTE]  
-> Prüfen Sie vor dem Starten, dass der **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent** ausgeführt wird. Ist dies nicht der Fall, können Sie das Abonnement nicht speichern.  Sie können dies überprüfen, indem Sie den [SQL Server-Konfigurations-Manager](../relational-databases/sql-server-configuration-manager.md)öffnen.
+> Prüfen Sie vor dem Starten, dass der **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent** ausgeführt wird. Ist dies nicht der Fall, können Sie das Abonnement nicht speichern.  Sie können dies überprüfen, indem Sie den [SQL Server-Konfigurations-Manager](../relational-databases/sql-server-configuration-manager.md) öffnen.
 In dieser Lektion wird davon ausgegangen, dass Sie Lektion 1 und Lektion 2 abgeschlossen haben und dass die Berichtsdatenquelle gespeicherte Anmeldeinformationen verwendet.  Weitere Informationen finden Sie unter [Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
   
 ## <a name="bkmk_startwizard"></a>Starten des Assistenten für datengesteuertes Abonnement  
@@ -32,14 +32,17 @@ In dieser Lektion wird davon ausgegangen, dass Sie Lektion 1 und Lektion 2 abges
   
 ## <a name="define-a-description"></a>Definieren einer Beschreibung  
 1.  Geben Sie **Lieferung Verkaufsauftrag** bei Beschreibung ein.
+
 ## <a name="type"></a>Geben Sie
 1.  Klicken Sie auf **Datengesteuertes Abonnement**.  
+
 ## <a name="schedule"></a>Zeitplan
 1. Klicken Sie im Bereich „Zeitplan“ auf **Berichtsspezifischer Zeitplan**.
 2. Klicken Sie auf **Zeitplan bearbeiten**.
 3.  Klicken Sie in **Zeitplandetails**auf **Einmal**.  
 4.  Geben Sie eine Startzeit an, die ein paar Minuten nach der aktuellen Zeit liegt.  
 5.  Klicken Sie auf **Anwenden**.
+
 ## <a name="destination"></a>Ziel  
 1.  Wählen Sie im Zielabschnitt **Windows-Dateifreigabe** als Übermittlungsmethode aus.  
 
@@ -53,22 +56,24 @@ In dieser Lektion wird davon ausgegangen, dass Sie Lektion 1 und Lektion 2 abges
     data source=localhost; initial catalog=Subscribers
     ```
     
- ## <a name="credentials"></a>Anmeldeinformationen
- 1. Wählen Sie **Die folgenden Anmeldeinformationen verwenden**aus.
- 2. Wählen Sie **Windows-Benutzername und -Kennwort**aus.
- 3.  Geben Sie unter **Benutzername** und **Kennwort**Ihren Benutzernamen und Ihr Kennwort für die Domäne ein. Geben Sie unter **Benutzername**sowohl die Domäne als auch das Benutzerkonto an.
-     > [!NOTE]  
+## <a name="credentials"></a>Anmeldeinformationen
+1. Wählen Sie **Die folgenden Anmeldeinformationen verwenden**aus.
+2. Wählen Sie **Windows-Benutzername und -Kennwort**aus.
+3.  Geben Sie unter **Benutzername** und **Kennwort**Ihren Benutzernamen und Ihr Kennwort für die Domäne ein. Geben Sie unter **Benutzername**sowohl die Domäne als auch das Benutzerkonto an.
+    > [!NOTE]  
     > Die Anmeldeinformationen, die für die Verbindung mit einer Abonnentendatenquelle verwendet werden, werden nicht an [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]zurückgegeben. Wenn Sie das Abonnement später ändern, müssen Sie das Kennwort zum Herstellen der Verbindung mit der Datenquelle erneut eingeben.
+
 ## <a name="query"></a>Dataseteigenschaften      
 1.  Geben Sie im Abfragefeld folgende Abfrage ein:  
   
-    ```  
+    ```sql
     Select * from OrderInfo  
     ```  
   
 2.  Geben Sie ein Timeout von 30 Sekunden an.  
   
 3.  Klicken Sie auf **Abfrage überprüfen**, und klicken Sie anschließend auf **Anwenden**.
+
 ## <a name="delivery-options"></a>Übermittlungsoptionen
 Geben Sie folgende Werte an:
 
