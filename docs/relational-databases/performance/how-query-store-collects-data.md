@@ -1,7 +1,7 @@
 ---
 title: So werden Daten im Abfragespeicher gesammelt | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb78849cf72f9cb38a6d99082e21e8c4d0c6b4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775058"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711072"
 ---
 # <a name="how-query-store-collects-data"></a>So werden Daten im Abfragespeicher gesammelt
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Der Abfragespeicher fungiert als **Flugdatenschreiber** und sammelt durchgehend Kompilier- und Laufzeitinformationen, die sich auf Abfragen und Pläne beziehen. Daten, die sich auf Abfragen beziehen, werden in den internen Tabellen beibehalten und dem Benutzer durch eine Reihe von Sichten dargestellt.  
   
@@ -30,14 +30,13 @@ ms.locfileid: "47775058"
  Das folgende Diagramm zeigt Abfragespeichersichten und ihre logischen Beziehungen, wobei Kompilierzeitinformationen als blaue Entitäten dargestellt werden:  
   
  ![Prozess im Abfragespeicher](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
-  
- **Sichtbeschreibungen**  
+**Sichtbeschreibungen**  
   
 |Anzeigen|und Beschreibung|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Stellt eindeutige Abfragetexte dar, die in der Datenbank ausgeführt wurden. Kommentare und Leerzeichen vor und nach dem Abfragetext werden ignoriert. Kommentare und Leerzeichen im Text werden nicht ignoriert. Jede Anweisung im Batch generiert einen separaten Abfragetexteintrag.|  
 |**sys.query_context_settings**|Stellt eindeutige Kombinationen von Einstellungen zur Planauswirkung dar, unter denen Abfragen ausgeführt werden. Derselbe Abfragetext, der mit unterschiedlichen Einstellungen zur Planauswirkung ausgeführt wurde, erzeugt separate Abfrageeinträge im Abfragespeicher, da `context_settings_id` Teil des Abfrageschlüssels ist.|  
-|**sys.query_store_query**|Abfrageeinträge, die im Abfragespeicher separat nachverfolgt und erzwungen werden. Ein einzelner Abfragetext kann mehrere Abfrageeinträge erzeugen, wenn er unter unterschiedlichen Kontexteinstellungen oder außerhalb im Vergleich zu innerhalb verschiedener [!INCLUDE[tsql](../../includes/tsql-md.md)] -Module (gespeicherte Prozeduren, Trigger usw.) ausgeführt wird.|  
+|**sys.query_store_query**|Abfrageeinträge, die im Abfragespeicher separat nachverfolgt und erzwungen werden. Ein einzelner Abfragetext kann mehrere Abfrageeinträge generieren, wenn er unter unterschiedlichen Kontexteinstellungen bzw. außerhalb oder innerhalb verschiedener [!INCLUDE[tsql](../../includes/tsql-md.md)]-Module (gespeicherte Prozeduren, Trigger usw.) ausgeführt wird.|  
 |**sys.query_store_plan**|Stellt den geschätzten Plan für die Abfrage mit den Kompilierzeitstatistiken dar. Der gespeicherte Plan entspricht einem Plan, den Sie durch die Verwendung von `SET SHOWPLAN_XML ON`erhalten würden.|  
 |**sys.query_store_runtime_stats_interval**|Der Abfragespeicher trennt die Zeit in automatisch generierte Zeitfenster (Intervalle) und speichert aggregierte Statistiken für jeden ausgeführten Plan auf diesem Intervall. Die Größe des Intervalls wird gesteuert durch die Konfigurationsoption „Intervall für Statistikerfassung“ (in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) oder durch `INTERVAL_LENGTH_MINUTES` mithilfe von [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Aggregierte Laufzeitstatistiken für ausgeführte Pläne. Alle erfassten Metriken werden in Form von 4 Statistikfunktionen ausgedrückt: Mittelwert, Minimum, Maximum und Standardabweichung.|  
@@ -63,10 +62,10 @@ ms.locfileid: "47775058"
   
  ![abfrage-speicher-prozess-3plan](../../relational-databases/performance/media/query-store-process-3.png "abfrage-speicher-prozess-3plan")  
   
- Im Fall eines Systemabsturzes kann der Abfragespeicher Laufzeitdaten bis zu einer durch `DATA_FLUSH_INTERVAL_SECONDS`definierten Menge verlieren. Mit dem Standardwert von 900 Sekunden (15 Minuten) besteht ein optimales Gleichgewicht zwischen der Abfrageerfassungsleistung und der Datenverfügbarkeit.  
-Im Fall einer Arbeitsspeicherauslastung können Laufzeitstatistiken früher auf den Datenträger geleert werden als mit `DATA_FLUSH_INTERVAL_SECONDS`definiert.  
+ Im Fall eines Systemabsturzes kann der Abfragespeicher Laufzeitdaten bis zu einer durch `DATA_FLUSH_INTERVAL_SECONDS` definierten Menge verlieren. Mit dem Standardwert von 900 Sekunden (15 Minuten) besteht ein optimales Gleichgewicht zwischen der Abfrageerfassungsleistung und der Datenverfügbarkeit.  
+Wenn eine Arbeitsspeicherauslastung des Systems auftritt, können Laufzeitstatistiken früher auf den Datenträger geleert werden als durch `DATA_FLUSH_INTERVAL_SECONDS` definiert.  
 Während dem Lesen der Abfragespeicherdaten werden arbeitsspeicherinterne und auf dem Datenträger gespeicherte Daten transparent zusammengeführt.
-Im Falle einer Sitzungsbeendigung oder des Neustarts/Absturzes einer Clientanwendung werden Abfragestatistiken nicht aufgezeichnet.  
+Wenn eine Sitzung beendet oder die Clientanwendung neu gestartet wird oder abstürzt, werden keine Abfragestatistiken aufgezeichnet.  
   
  ![abfrage-speicher-prozess-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "abfrage-speicher-prozess-4planinfo")    
 

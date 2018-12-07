@@ -1,7 +1,7 @@
 ---
 title: Überwachen der Serverleistung und -aktivität | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -20,12 +20,12 @@ ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 579601ec5a7a3a9890c38d8f4883779d07e2a135
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e36e25728079412e483a96702db3fed3d60c16b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747258"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513670"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>Überwachen der Serverleistung und -aktivität
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,30 +33,50 @@ ms.locfileid: "47747258"
   
  Der folgende Abschnitt enthält Themen zum Verwenden der Leistungs- und Aktivitätsüberwachungstools von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Windows. Die Lektion enthält die folgenden Themen:  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- **So führen Sie Überwachungsaufgaben mithilfe von Windows-Tools aus**  
+## <a name="to-perform-monitoring-tasks-with-windows-tools"></a>So führen Sie Überwachungsaufgaben mithilfe von Windows-Tools aus 
   
 -   [Starten des Systemmonitors &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
 -   [Anzeigen des Anwendungsprotokolls von Windows &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
- **So erstellen Sie SQL Server-Datenbankwarnungen mithilfe von Windows-Tools**  
+## <a name="to-create-sql-server-database-alerts-with-windows-tools"></a>So erstellen Sie SQL Server-Datenbankwarnungen mithilfe von Windows-Tools  
   
 -   [Einrichten einer SQL Server-Datenbankwarnung &#40;Windows&#41;](../../relational-databases/performance/set-up-a-sql-server-database-alert-windows.md)  
 
- **So führen Sie Überwachungsaufgaben mit erweiterten Ereignissen aus**  
+## <a name="to-perform-monitoring-tasks-with-extended-events"></a>So führen Sie Überwachungsaufgaben mit erweiterten Ereignissen aus  
  
  -   [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)
  
-  -   [Schnellstart: Erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ -   [Schnellstart: Erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ 
+ -   [Verwalten von Ereignissitzungen im Objekt-Explorer](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)
+ 
+ -   [Ändern einer Sitzung für erweiterte Ereignisse](../../relational-databases/extended-events/alter-an-extended-events-session.md)
+ 
+ -   [Konvertieren eines vorhandenen SQL-Ablaufverfolgungsskripts in eine Sitzung für erweiterte Ereignisse](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)
+ 
+ -   [Anzeigen der Entsprechungen von erweiterten Ereignissen für SQL-Ablaufverfolgungsklassen](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
    
- **So führen Sie Überwachungsaufgaben mithilfe von SQL Server Management Studio aus**  
+## <a name="to-perform-monitoring-tasks-with-sql-server-management-studio"></a>So führen Sie Überwachungsaufgaben mithilfe von SQL Server Management Studio aus  
   
 -   [Anzeigen des SQL Server-Fehlerprotokolls &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)  
   
 -   [Öffnen des Aktivitätsmonitors &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)  
-  
- **So führen Sie Überwachungsaufgaben mithilfe der SQL-Ablaufverfolgung unter Verwendung gespeicherter Transact-SQL-Prozeduren aus**  
+
+-   [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+
+## <a name="to-perform-monitoring-tasks-with-sql-trace-and-sql-server-profiler"></a>So führen Sie Überwachungsaufgaben mithilfe der SQL-Ablaufverfolgung und SQL Server Profiler aus
+
+> [!IMPORTANT]
+> Die nächsten Abschnitte beschreiben die Methoden für die Verwendung der SQL-Ablaufverfolgung und von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+> Die SQL-Ablaufverfolgung und [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sind veraltet. Der *Microsoft.SqlServer.Management.Trace*-Namespace, der die Objekte für die Microsoft SQL Server-Ablaufverfolgung und -Wiedergabe enthält, ist ebenfalls veraltet.   
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> Verwenden Sie stattdessen erweiterte Ereignisse. Weitere Informationen zu [erweiterten Ereignissen](../../relational-databases/extended-events/extended-events.md) finden Sie unter [Schnellstart: Erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) und [Verwenden des SSMS XEvent Profilers](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+
+> [!NOTE] 
+> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] für die Analysis Services-Workloads ist NICHT veraltet und wird weiterhin unterstützt.
+
+### <a name="to-perform-monitoring-tasks-with-sql-trace-by-using-transact-sql-stored-procedures"></a>So führen Sie Überwachungsaufgaben mithilfe der SQL-Ablaufverfolgung unter Verwendung gespeicherter Transact-SQL-Prozeduren aus  
   
 -   [Erstellen einer Ablaufverfolgung &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)  
   
@@ -70,7 +90,7 @@ ms.locfileid: "47747258"
   
 -   [Löschen einer Ablaufverfolgung &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/delete-a-trace-transact-sql.md)  
   
- **So erstellen und ändern Sie Ablaufverfolgungen mithilfe von SQL Server Profiler**  
+### <a name="to-create-and-modify-traces-by-using-sql-server-profiler"></a>So erstellen und ändern Sie Ablaufverfolgungen mithilfe von SQL Server Profiler  
   
 -   [Erstellen einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -102,7 +122,7 @@ ms.locfileid: "47747258"
   
 -   [Organisieren von in einer Ablaufverfolgung angezeigten Spalten &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)  
   
- **So können Sie Ablaufverfolgungen mithilfe von SQL Server Profiler starten, anhalten und beenden**  
+### <a name="to-start-pause-and-stop-traces-by-using-sql-server-profiler"></a>So können Sie Ablaufverfolgungen mithilfe von SQL Server Profiler starten, anhalten und beenden  
   
 -   [Automatisches Starten einer Ablaufverfolgung nach dem Herstellen einer Verbindung mit einem Server &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)  
   
@@ -112,7 +132,7 @@ ms.locfileid: "47747258"
   
 -   [Ausführen einer Ablaufverfolgung, nachdem sie angehalten oder beendet wurde &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
- **So können Sie mithilfe von SQL Server Profiler Ablaufverfolgungen öffnen und ihre Anzeige konfigurieren**  
+### <a name="to-open-traces-and-configure-how-traces-are-displayed-by-using-sql-server-profiler"></a>So können Sie mithilfe von SQL Server Profiler Ablaufverfolgungen öffnen und ihre Anzeige konfigurieren  
   
 -   [Öffnen einer Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
@@ -126,7 +146,7 @@ ms.locfileid: "47747258"
   
 -   [Festlegen der Standardeinstellungen für die Ablaufverfolgungsanzeige &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)  
   
- **So geben Sie Ablaufverfolgungen mithilfe von SQL Server Profiler wieder**  
+### <a name="to-replay-traces-by-using-sql-server-profiler"></a>So geben Sie Ablaufverfolgungen mithilfe von SQL Server Profiler wieder  
   
 -   [Wiedergeben einer Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)  
   
@@ -140,7 +160,7 @@ ms.locfileid: "47747258"
   
 -   [Wiedergeben eines Transact-SQL-Skripts &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)  
   
- **So erstellen, ändern und verwenden Sie Ablaufverfolgungsvorlagen mithilfe von SQL Server Profiler**  
+### <a name="to-create-modify-and-use-trace-templates-by-using-sql-server-profiler"></a>So erstellen, ändern und verwenden Sie Ablaufverfolgungsvorlagen mithilfe von SQL Server Profiler  
   
 -   [Erstellen einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)  
   
@@ -154,7 +174,7 @@ ms.locfileid: "47747258"
   
 -   [Importieren einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
- **So verwenden Sie SQL Server Profiler-Ablaufverfolgungen zum Auflisten und Überwachen der Serverleistung**  
+### <a name="to-use-sql-server-profiler-traces-to-collect-and-monitor-server-performance"></a>So verwenden Sie SQL Server Profiler-Ablaufverfolgungen zum Auflisten und Überwachen der Serverleistung  
   
 -   [Suchen eines Wertes oder einer Datenspalte während der Ablaufverfolgung &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)  
   

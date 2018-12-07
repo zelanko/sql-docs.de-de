@@ -15,12 +15,12 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98dd4481e6f7afdc1c0f140073e26650392ee746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72595a95c08d89bec7db4a9b4252fe8873b12195
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680308"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525719"
 ---
 # <a name="data-tier-applications"></a>Datenebenenanwendungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,16 +35,16 @@ ms.locfileid: "47680308"
   
  Der Vorteil einer DAC-gesteuerten Bereitstellung im Gegensatz zu einer skriptgesteuerten Bereitstellung besteht darin, dass das Tool dem Datenbankadministrator beim Identifizieren und Überprüfen von Verhaltensweisen verschiedener Quell- und Zieldatenbanken behilflich ist. Während der Upgrades warnt das Tool den Datenbankadministrator, wenn das Upgrade Datenverlust verursachen könnte, und es stellt auch einen Upgradeplan bereit. Der Datenbankadministrator kann den Plan auswerten und dann das Tool verwenden, um mit dem Upgrade fortzufahren.  
   
- Der DAC unterstützt auch die Versionsverwaltung, um dem Entwickler und dem Datenbankadministrator zu helfen, die Datenbankherkunft während des Lebenszyklus zu warten und zu verwalten.  
+ DACs unterstützen auch die Versionsverwaltung, um dem Entwickler und dem Datenbankadministrator zu helfen, die Datenbankherkunft während des Lebenszyklus zu warten und zu verwalten.  
   
 ## <a name="dac-concepts"></a>Konzepte von DAC  
  Eine DAC vereinfacht die Entwicklung, Bereitstellung und Verwaltung der Datenebenenelemente, die eine Anwendung unterstützen:  
   
--   Eine Datenebenenanwendung (DAC) ist eine logische Datenbankverwaltungsentität, die alle SQL Server-Objekte definiert, beispielsweise Tabellen, Sichten und Instanzobjekte, einschließlich Anmeldenamen, die mit der Datenbank eines Benutzers verknüpft sind. Sie ist eine in sich geschlossene Einheit der SQL Server-Datenbankbereitstellung, mit der Datenebenenentwickler und Datenbankadministratoren SQL Server-Objekte in ein portables Artefakt, das sog. "DAC-Paket" oder die sog. DACPAC-Datei, packen können.  
+-   Eine Datenebenenanwendung (DAC) ist eine logische Datenbankverwaltungsentität, die alle SQL Server-Objekte definiert (beispielsweise Tabellen, Sichten und Instanzobjekte), die mit der Datenbank eines Benutzers verknüpft sind. Sie ist eine in sich geschlossene Einheit der SQL Server-Datenbankbereitstellung, mit der Datenebenenentwickler und Datenbankadministratoren SQL Server-Objekte in ein portables Artefakt, das sog. "DAC-Paket" oder die sog. DACPAC-Datei, packen können.  
   
--   Damit eine SQL Server-Datenbank als DAC behandelt wird, muss sie registriert werden, und zwar entweder explizit durch einen Benutzervorgang oder implizit durch eine der DAC-Vorgänge. Wenn eine Datenbank registriert wird, werden die DAC-Version und andere Eigenschaften als Teil der Metadaten der Datenbank aufgezeichnet. Umgekehrt kann die Registrierung einer Datenbank auch aufgehoben werden, wodurch die DAC-Eigenschaften entfernt werden.  
+-   Damit eine SQL Server-Datenbank als DAC behandelt wird, muss sie registriert werden, und zwar entweder explizit durch einen Benutzervorgang oder implizit durch einen der DAC-Vorgänge. Wenn eine Datenbank registriert wird, werden die DAC-Version und andere Eigenschaften als Teil der Metadaten der Datenbank aufgezeichnet. Umgekehrt kann die Registrierung einer Datenbank auch aufgehoben werden, wodurch die DAC-Eigenschaften entfernt werden.  
   
--   Im Allgemeinen können DAC-Tools DACPAC-Dateien lesen, die von DAC-Tools früherer SQL Server-Versionen generiert wurden. Zudem können von den DAC-Tools DACPAC-Dateien für frühere Versionen von SQL Server bereitgestellt werden. Demgegenüber können DAC-Tools früherer Versionen keine DACPAC-Dateien lesen, die mit höheren DAC-Tool-Versionen generiert wurden. Dies gilt insbesondere in folgenden Fällen:  
+-   Im Allgemeinen können DAC-Tools DACPAC-Dateien lesen, die von DAC-Tools früherer SQL Server-Versionen generiert wurden. Außerdem können von den DAC-Tools DACPAC-Dateien für frühere Versionen von SQL Server bereitgestellt werden. Demgegenüber können DAC-Tools früherer Versionen keine DACPAC-Dateien lesen, die mit höheren DAC-Tool-Versionen generiert wurden. Dies gilt insbesondere in folgenden Fällen:  
   
     -   DAC-Vorgänge wurden in SQL Server 2008 R2 eingeführt. Zusätzlich zu SQL Server 2008 R2-Datenbanken unterstützen die Tools die Generierung der DACPAC-Dateien von SQL Server 2008, SQL Server 2005 und SQL Server 2000-Datenbanken.  
   

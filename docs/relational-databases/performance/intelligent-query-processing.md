@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d48f9fd87ff375a518b038d9ed4ef4a8d42675cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660952"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403925"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Intelligente Abfrageverarbeitung in SQL-Datenbanken
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,10 +29,15 @@ Die Featurefamilie **Intelligente Abfrageverarbeitung** umfasst Features mit wei
 ![Features der intelligenten Abfrageverarbeitung](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>Adaptive Abfrageverarbeitung
-Die Featurefamilie „Adaptive Abfrageverarbeitung“ umfasst Verbesserungen bei der Abfrageverarbeitung, die Optimierungsstrategien auf die Laufzeitbedingungen Ihrer Anwendungsarbeitsauslastung anwenden. Diese Verbesserungen umfassen: Adaptive Joins im Batchmodus, Feedback zur Speicherzuweisung und die verschachtelte Ausführung für Tabellenwertfunktionen mit mehreren Anweisungen.
+Die Featurefamilie „Adaptive Abfrageverarbeitung“ umfasst Verbesserungen bei der Abfrageverarbeitung, die Optimierungsstrategien auf die Laufzeitbedingungen Ihrer Anwendungsworkload anwenden. Diese Verbesserungen beinhalten: 
+-  Adaptive Joins im Batchmodus
+-  Feedback zur Speicherzuweisung
+-  Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen (MSTVFs)
 
 ### <a name="batch-mode-adaptive-joins"></a>Adaptive Joins im Batchmodus
 Dieses Feature ermöglicht Ihrem Plan, während der Ausführung mithilfe eines einzelnen zwischengespeicherten Plans dynamisch zu einer besseren Joinstrategie zu wechseln.
+
+Weitere Informationen zu adaptiven Joins im Batchmodus finden Sie unter [Adaptive Abfrageverarbeitung in SQL-Datenbanken](../../relational-databases/performance/adaptive-query-processing.md).
 
 ### <a name="row-and-batch-mode-memory-grant-feedback"></a>Feedback zur Speicherzuweisung im Zeilen- und Batchmodus
 > [!NOTE]
@@ -40,10 +45,12 @@ Dieses Feature ermöglicht Ihrem Plan, während der Ausführung mithilfe eines e
 
 Dieses Feature berechnet den tatsächlich benötigten Speicherplatz für eine Abfrage und aktualisiert anschließend den Zuweisungswert für den zwischengespeicherten Plan. Hierdurch werden exzessive Speicherzuweisungen reduziert, die die Parallelität beeinflussen, und zu gering geschätzte Speicherzuweisungen behoben, die zu teuren Überläufen auf den Datenträger führen.
 
-### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen (MSTVFs)
-Bei der verschachtelten Ausführung verwenden Sie die tatsächliche Zeilenanzahl aus der Funktion, um besser informierte Entscheidungen zum Downstream-Abfrageplan zu treffen. 
+Weitere Informationen zum Feedback zur Speicherzuweisung finden Sie unter [Adaptive Abfrageverarbeitung in SQL-Datenbanken](../../relational-databases/performance/adaptive-query-processing.md).
 
-Weitere Informationen finden Sie unter [Adaptive Abfrageverarbeitung in SQL-Datenbanken](../../relational-databases/performance/adaptive-query-processing.md).
+### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen (MSTVFs)
+Bei der verschachtelten Ausführung verwenden Sie die tatsächliche Zeilenanzahl aus der Funktion, um besser informierte Entscheidungen zum Downstream-Abfrageplan zu treffen. Weitere Informationen zu Tabellenwertfunktionen mit mehreren Anweisungen (MSTVFs) finden Sie unter [Tabellenwertfunktionen](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+
+Weitere Informationen finden zur verschachtelten Ausführung Sie unter [Adaptive Abfrageverarbeitung in SQL-Datenbanken](../../relational-databases/performance/adaptive-query-processing.md).
 
 ## <a name="table-variable-deferred-compilation"></a>Verzögerte Kompilierung von Tabellenvariablen
 > [!NOTE]
@@ -59,7 +66,7 @@ Weitere Informationen finden Sie unter [Verzögerte Kompilierung von Tabellenvar
 > [!NOTE]
 > Das Inlining benutzerdefinierter Skalarfunktion ist ein Previewfeature.  
 
-Das Inlining benutzerdefinierter Skalarfunktionen wandelt die entsprechenden Funktionen automatisch in relationale Ausdrücke um und bettet sie in die aufrufende SQL-Abfrage ein. Dadurch wird die Leistung von Workloads verbessert, die benutzerdefinierte Skalarfunktionen verwenden. Das Inlining benutzerdefinierter Skalarfunktionen ermöglicht eine kostenbasierte Optimierung von Vorgängen in benutzerdefinierten Funktionen und erzielt effiziente Pläne, die konkret und parallel sind – im Gegensatz zu ineffizienten, iterativen, seriellen Ausführungsplänen. Dieses Feature ist standardmäßig unter dem Datenbank-Kompatibilitätsgrad 150 aktiviert.
+Das Inlining [benutzerdefinierter Skalarfunktionen](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) wandelt die entsprechenden Funktionen automatisch in relationale Ausdrücke um und bettet sie in die aufrufende SQL-Abfrage ein. Dadurch wird die Leistung von Workloads verbessert, die benutzerdefinierte Skalarfunktionen verwenden. Das Inlining benutzerdefinierter Skalarfunktionen ermöglicht eine kostenbasierte Optimierung von Vorgängen in benutzerdefinierten Funktionen und erzielt effiziente Pläne, die konkret und parallel sind – im Gegensatz zu ineffizienten, iterativen, seriellen Ausführungsplänen. Dieses Feature ist standardmäßig unter dem Datenbank-Kompatibilitätsgrad 150 aktiviert.
 
 Weitere Informationen finden Sie unter [Scalar UDF Inlining (Inlining benutzerdefinierter Skalarfunktionen)](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions).
 
@@ -76,9 +83,9 @@ Weitere Informationen finden Sie unter [APPROX_COUNT_DISTINCT (Transact-SQL)](..
 > Batchmodus bei Rowstore ist eine öffentliche Previewfunktion.  
 
 ### <a name="background"></a>Hintergrund
-Mit SQL Server 2012 wurde ein neues Feature zur Beschleunigung analytischer Workloads eingeführt: Columnstore-Indizes. Wir haben die Anwendungsfälle erweitert und die Leistung von Columnstore-Indizes in allen nachfolgenden Releases verbessert. Nun haben wir alle diese Funktionen in einem einzelnen Feature kombiniert und dokumentiert: Sie erstellen die Columnstore-Indizes in Ihren Tabellen, und Ihre analytische Workload „läuft einfach schneller“. Im Hintergrund gibt es jedoch zwei miteinander zusammenhängende, aber unterschiedliche Gruppen von Technologien:
+Mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde ein neues Feature zur Beschleunigung analytischer Workloads eingeführt: Columnstore-Indizes. Wir haben die Anwendungsfälle erweitert und die Leistung von Columnstore-Indizes in allen nachfolgenden Releases verbessert. Nun haben wir alle diese Funktionen in einem einzelnen Feature kombiniert und dokumentiert: Sie erstellen die Columnstore-Indizes in Ihren Tabellen, und Ihre analytische Workload „läuft einfach schneller“. Im Hintergrund gibt es jedoch zwei miteinander zusammenhängende, aber unterschiedliche Gruppen von Technologien:
 - **Columnstore**-Indizes erlauben Analyseabfragen nur den Zugriff auf die Daten in den Spalten, die sie benötigen. Das Columnstore-Format ermöglicht auch viel effektivere Komprimierung, als Sie mit der Seitenkomprimierung in herkömmlichen „Rowstore“-Indizes erhalten. 
-- **Batchmodus**-Verarbeitung ermöglicht Abfrageoperatoren, Daten effizienter zu verarbeiten, indem jeweils ein Batch von Zeilen statt einer einzelnen Zeile verarbeitet wird. Zahlreiche weitere Verbesserungen der Skalierbarkeit sind an die Batchmodusverarbeitung gebunden.
+- **Batchmodus**-Verarbeitung ermöglicht Abfrageoperatoren, Daten effizienter zu verarbeiten, indem jeweils ein Batch von Zeilen statt einer einzelnen Zeile verarbeitet wird. Zahlreiche weitere Verbesserungen der Skalierbarkeit sind an die Batchmodusverarbeitung gebunden. Weitere Informationen zum Batchmodus finden Sie unter [Ausführungsmodi](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
 Die zwei Gruppen von Funktionen verbessern zusammen die E/A- und CPU-Auslastung:
 - Mit Columnstore-Indizes passen mehr Daten in den Arbeitsspeicher, und dies reduziert die E/A-Anforderungen.
@@ -117,6 +124,7 @@ Wenn der Batchmodus bei Rowstore verwendet wird, sehen Sie im Abfrageausführung
 
 ### <a name="configuring-batch-mode-on-rowstore"></a>Konfigurieren des Batchmodus bei Rowstore
 Die datenbankweite Konfiguration BATCH_MODE_ON_ROWSTORE ist standardmäßig aktiviert und kann verwendet werden, um den Batchmodus bei Rowstore zu deaktivieren, ohne dass eine Änderung im Datenbank-Kompatibilitätsgrad erforderlich ist:
+
 ```sql
 -- Disabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
@@ -124,7 +132,9 @@ ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
 -- Enabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = ON;
 ```
+
 Sie können den Batchmodus bei Rowstore über die datenbankweite Konfiguration deaktivieren, aber die Einstellung immer noch auf der Abfrageebene mit dem Abfragehinweis ALLOW_BATCH_MODE überschreiben. Im folgenden Beispiel wird der Batchmodus bei Rowstore aktiviert, auch wenn die Funktion über die datenbankweite Konfiguration deaktiviert ist:
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended
@@ -133,7 +143,9 @@ GROUP BY [Tax Rate], [Lineage Key], [Salesperson Key]
 ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('ALLOW_BATCH_MODE'));
 ```
+
 Sie können den Batchmodus bei Rowstore auch mit dem Abfragehinweis DISALLOW_BATCH_MODE für eine bestimmte Abfrage deaktivieren. Zum Beispiel:
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended

@@ -2,7 +2,7 @@
 title: Adaptive Abfrageverarbeitung in SQL-Datenbanken von Microsoft | Microsoft-Dokumentation
 description: Funktionen zur adaptiven Abfrageverarbeitung, die die Abfrageleistung in SQL Server (2017 und höher) und in der Azure SQL-Datenbank verbessern
 ms.custom: ''
-ms.date: 10/15/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60f02a303e6e085dc14a165ec51e316a2bc88f8e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f4494b91315c8d2cd155e2ac80d6b5005685ff32
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031197"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503411"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Adaptive Abfrageverarbeitung in SQL-Datenbanken
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,12 +27,14 @@ ms.locfileid: "51031197"
 In diesem Artikel werden die folgenden Features zur adaptiven Abfrageverarbeitung beschrieben, die Sie zur Verbesserung der Abfrageleistung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] verwenden können:
 - Feedback zur Speicherzuweisung im Batchmodus
 - Adaptiver Join im Batchmodus
-- Verschachtelte Ausführung 
+- Verschachtelte Ausführung
 
-Prinzipiell führt SQL Server eine Abfrage wie folgt durch:
+Prinzipiell führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Abfrage wie folgt aus:
 1. Der Prozess der Abfragenoptimierung generiert einen Satz von durchführbaren Ausführungsplänen für bestimmten Abfragen. Währenddessen wird der Aufwand der Planoptionen geschätzt, und der Plan mit dem geringsten Aufwand wird verwendet.
 1. Der Prozess der Abfrageausführung verwendet den vom Abfrageoptimierer ausgewählten Plan zum Ausführen.
-    
+
+Weitere Informationen zur Abfrageverarbeitung und den Ausführungsmodi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie im [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md).
+
 Manchmal ist der vom Abfrageoptimierer ausgewählte Plan nicht optimal. Dies kann mehrere Gründe haben. Beispielsweise kann die Zahl der Reihen, die durch den Abfrageplan laufen, inkorrekt sein. Der geschätzte Aufwand hilft dabei, zu bestimmen, welcher Plan bei der Ausführung verwendet wird. Wenn die Kardinalitätsschätzungen inkorrekt sind, wird der ursprüngliche Plan trotz der schlechten ursprünglichen Schätzung verwendet.
 
 ![Funktionen der adaptiven Abfrageverarbeitung](./media/1_AQPFeatures.png)
@@ -88,7 +90,7 @@ Das Feedback zur Speicherzuweisung kann im Datenbank- oder Anweisungsbereich dea
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-Ist diese Einstellung aktiviert, wird sie in „sys.database_scoped_configurations“ als aktiviert aufgeführt.
+Ist diese Einstellung aktiviert, wird sie in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) als aktiviert aufgeführt.
 
 Um das Feedback zur Speicherzuweisung im Batchmodus für alle Abfrageausführungen, die aus der Datenbank stammen, wieder zu aktivieren, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
 
@@ -96,7 +98,7 @@ Um das Feedback zur Speicherzuweisung im Batchmodus für alle Abfrageausführung
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
-Sie können das Feedback zur Speicherzuweisung im Batchmodus auch für eine bestimmte Abfrage deaktivieren, indem Sie DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK als USE HINT-Abfragehinweis festlegen.  Zum Beispiel:
+Sie können das Feedback zur Speicherzuweisung im Batchmodus auch für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Zum Beispiel:
 
 ```sql
 SELECT * FROM Person.Address  
@@ -107,23 +109,23 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 Ein USE HINT-Abfragehinweis hat Vorrang vor einer datenbankweit gültigen Konfiguration oder einer Ablaufverfolgungsflageinstellung.
 
 ## <a name="row-mode-memory-grant-feedback"></a>Feedback zur Speicherzuweisung im Zeilenmodus
-**Gilt für**: SQL-Datenbank als öffentliche Vorschau
+**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
 
 > [!NOTE]
 > Feedback zur Speicherzuweisung im Zeilenmodus ist eine öffentliche Previewfunktion.  
 
 Das Feedback zur Speicherzuweisung im Zeilenmodus erweitert die Feedbackfunktion zur Speicherzuweisung im Batchmodus, indem die Größe der Speicherzuweisung sowohl für Batch- als auch für Zeilenmodusoperatoren angepasst wird.  
 
-Um die öffentliche Vorschau von Feedback zur Speicherzuweisung im Zeilenmodus in der Azure SQL-Datenbank zu aktivieren, aktivieren Sie Datenbank-Kompatibilitätsgrad 150 für die Datenbank, mit der Sie beim Ausführen der Abfrage verbunden sind.
+Um die öffentliche Vorschau von Feedback zur Speicherzuweisung im Zeilenmodus in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] zu aktivieren, aktivieren Sie Datenbank-Kompatibilitätsgrad 150 für die Datenbank, mit der Sie beim Ausführen der Abfrage verbunden sind.
 
 Die Feedbackaktivität zur Speicherzuweisung im Zeilenmodus wird über das XEvent-Ereignis **memory_grant_updated_by_feedback** angezeigt. 
 
-Seitdem Feedback zur Speicherzuweisung im Zeilenmodus verfügbar ist, werden zwei neue Abfrageplanattribute für die tatsächlichen Pläne nach der Ausführung angezeigt: **IsMemoryGrantFeedbackAdjusted** und **LastRequestedMemory**. Diese werden dem XML-Element des MemoryGrantInfo-Abfrageplans hinzugefügt. 
+Seitdem Feedback zur Speicherzuweisung im Zeilenmodus verfügbar ist, werden zwei neue Abfrageplanattribute für die tatsächlichen Pläne nach der Ausführung angezeigt: ***IsMemoryGrantFeedbackAdjusted*** und ***LastRequestedMemory***. Diese werden dem XML-Element des *MemoryGrantInfo*-Abfrageplans hinzugefügt. 
 
-LastRequestedMemory zeigt den zugewiesenen Speicher in Kilobytes (KB) von der vorherigen Abfrageausführung an. Mit dem Attribut IsMemoryGrantFeedbackAdjusted können Sie den Feedbackstatus einer Speicherzuweisung für die Anweisung in einem Abfrageausführungsplan überprüfen. Folgende Werte werden in diesem Attribut angezeigt:
+*LastRequestedMemory* zeigt den zugewiesenen Speicher in KB von der vorherigen Abfrageausführung an. Mit dem Attribut *IsMemoryGrantFeedbackAdjusted* können Sie den Feedbackstatus einer Speicherzuweisung für die Anweisung in einem Abfrageausführungsplan überprüfen. Folgende Werte werden in diesem Attribut angezeigt:
 
 | Wert IsMemoryGrantFeedbackAdjusted | und Beschreibung |
-|--- |--- |
+|---|---|
 | No: First Execution | Das Feedback zur Speicherzuweisung passt den Speicher für die erste Kompilierung und die zugeordnete Ausführung nicht an.  |
 | No: Accurate Grant | Wenn es keinen Überlauf auf dem Datenträger gibt und die Anweisung mindestens 50 % des zugewiesenen Speichers nutzt, wird Feedback zur Speicherzuweisung nicht ausgelöst. |
 | No: Feedback disabled | Wenn das Feedback zur Speicherzuweisung kontinuierlich ausgelöst wird und zwischen Speichererhöhung und -verkleinerung schwankt, deaktivieren Sie das Feedback zur Speicherzuweisung für die Anweisung. |
@@ -131,7 +133,7 @@ LastRequestedMemory zeigt den zugewiesenen Speicher in Kilobytes (KB) von der vo
 | Yes: Stable | Das Feedback zur Speicherzuweisung wurde angewendet und der zugewiesene Speicher ist jetzt stabil. Das bedeutet: Der für die vorherige Ausführung zuletzt zugewiesene Speicher entspricht dem für die aktuelle Ausführung. |
 
 > [!NOTE]
-> Die Planattribute des Feedbacks zur Speicherzuweisung im Zeilenmodus (öffentliche Vorschau) sind in Ausführungsplänen zur SQL Server Management Studio-Grafikabfrage in Version 17.9 und höher sichtbar. 
+> Die Planattribute des Feedbacks zur Speicherzuweisung im Zeilenmodus (öffentliche Vorschau) sind in Ausführungsplänen zur [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Grafikabfrage in Version 17.9 und höher sichtbar. 
 
 ### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>Deaktivieren des Feedbacks zur Speicherzuweisung im Zeilenmodus ohne Änderung des Kompatibilitätsgrads
 Das Feedback zur Speicherzuweisung im Zeilenmodus kann im Datenbank- oder Anweisungsbereich deaktiviert werden, während der Datenbankkompatibilitätsgrad weiterhin bei 150 und höher bleibt. Um das Feedback zur Speicherzuweisung im Zeilenmodus für alle Abfrageausführungen, die aus der Datenbank stammen, zu deaktivieren, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
@@ -146,7 +148,7 @@ Um das Feedback zur Speicherzuweisung im Zeilenmodus für alle Abfrageausführun
 ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-Sie können das Feedback zur Speicherzuweisung im Zeilenmodus auch für eine bestimmte Abfrage deaktivieren, indem Sie DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK als USE HINT-Abfragehinweis festlegen.  Zum Beispiel:
+Sie können das Feedback zur Speicherzuweisung im Zeilenmodus auch für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Zum Beispiel:
 
 ```sql
 SELECT * FROM Person.Address  
@@ -166,28 +168,26 @@ Funktionsweise:
 Die folgende Abfrage veranschaulicht ein Beispiel für einen adaptiven Join:
 
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
-[fo].[Quantity]
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
-Die Abfrage gibt 336 Zeilen zurück. Wenn Sie die [Liveabfragestatistik](../../relational-databases/performance/live-query-statistics.MD) aktivieren, sehen Sie den folgenden Plan:
+Die Abfrage gibt 336 Zeilen zurück. Wenn Sie die [Liveabfragestatistik](../../relational-databases/performance/live-query-statistics.md) aktivieren, sehen Sie den folgenden Plan:
 
 ![Abfrageergebnis: 336 Zeilen](./media/4_AQPStats336Rows.png)
 
 Im Plan sehen wir das Folgende:
 1. Ein Columnstore-Indexscan wurde verwendet, um Zeilen für die Buildphase des Hashjoins bereitzustellen.
 1. Wir sehen den neuen Operator für adaptive Joins. Dieser Operator definiert einen Schwellenwert, der bestimmt, wann zu einem Plan geschachtelter Schleifen gewechselt wird. In diesem Beispiel beträgt der Schwellenwert 78 Zeilen. Alles, was &gt;= 78 Zeilen enthält, verwendet einen Hashjoin. Wenn der Schwellenwert nicht überschritten wird, wird ein Join geschachtelter Schleifen verwendet.
-1. Da 336 Zeilen zurückgegeben werden, wird der Schwellenwert überschritten. Deshalb stellt der zweite Branch die Überprüfungsphase eines standardmäßigen Hashjoinvorgangs dar. Beachten Sie, dass die Liveabfragestatistik Zeilen anzeigt, die den Operator durchlaufen: in diesem Fall „672 von 672“.
+1. Da 336 Zeilen zurückgegeben werden, wird der Schwellenwert überschritten. Deshalb stellt der zweite Branch die Überprüfungsphase eines standardmäßigen Hashjoinvorgangs dar. Beachten Sie, dass die Liveabfragestatistik Zeilen anzeigt, die die Operatoren durchlaufen: in diesem Fall „672 von 672“.
 1. Der letzte Branch ist der Clustered Index Seek, der vom Nested Loop-Join verwendet worden wäre, wäre der Schwellenwert nicht überschritten worden. Beachten Sie, dass „0 von 336“ Zeilen angezeigt werden (der Branch wird nicht verwendet).
  Schauen wir uns nun den Plan für die gleiche Abfrage, aber dieses Mal mit einem *Mengenwert* an, der nur eine Zeile in der Tabelle hat:
  
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
-[fo].[Quantity]
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
@@ -249,14 +249,14 @@ Um adaptive Joins für alle Abfrageausführungen zu deaktivieren, die aus der Da
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
 ```
 
-Ist diese Einstellung aktiviert, wird sie in „sys.database_scoped_configurations“ als aktiviert aufgeführt.
+Ist diese Einstellung aktiviert, wird sie in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) als aktiviert aufgeführt.
 Um adaptive Joins für alle Abfrageausführungen wieder zu aktivieren, die aus der Datenbank stammen, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ```
 
-Sie können adaptive Joins auch für eine bestimmte Abfrage deaktivieren, indem Sie DISABLE_BATCH_MODE_ADAPTIVE_JOINS als USE HINT-Abfragehinweis festlegen.  Zum Beispiel:
+Sie können adaptive Joins auch für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Zum Beispiel:
 
 ```sql
 SELECT s.CustomerID,
@@ -264,17 +264,18 @@ SELECT s.CustomerID,
        sc.CustomerCategoryName
 FROM Sales.Customers AS s
 LEFT OUTER JOIN Sales.CustomerCategories AS sc
-ON s.CustomerCategoryID = sc.CustomerCategoryID
+       ON s.CustomerCategoryID = sc.CustomerCategoryID
 OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
 ```
 
 Ein USE HINT-Abfragehinweis hat Vorrang vor einer datenbankweit gültigen Konfiguration oder einer Ablaufverfolgungsflageinstellung.
 
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen
-Eine verschachtelte Ausführung ändert die unidirektionale Grenze zwischen der Optimierungs- und der Ausführungsphase für eine Ausführung mit einer Abfrage. Zudem können Pläne damit auf Grundlage der überarbeiteten Kardinalitätsschätzungen angepasst werden. Wenn Sie bei der Optimierung auf einen möglichen Kandidaten für eine verschachtelte Ausführung (bei der es sich aktuell um **Funktionen mit mehreren Anweisungen (MSTVFs)** handelt) stoßen, wird die Optimierung unterbrochen, die entsprechende Unterstruktur ausgeführt, die genauen Kardinalitätsschätzungen erfasst, und anschließend wird die Optimierung für Downstreamvorgänge wiederaufgenommen.
-Die festgelegte Kardinalitätsschätzung von MSTVFs beträgt in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] „100“ und in früheren Versionen „1“. Die verschachtelte Ausführung löst Probleme bei der Leistung von Workloads, die auf die festgelegten Kardinalitätsschätzungen von MSTVFs zurückzuführen sind.
+Eine verschachtelte Ausführung ändert die unidirektionale Grenze zwischen der Optimierungs- und der Ausführungsphase für eine Ausführung mit einer Abfrage. Zudem können Pläne damit auf Grundlage der überarbeiteten Kardinalitätsschätzungen angepasst werden. Wenn Sie bei der Optimierung auf einen möglichen Kandidaten für eine verschachtelte Ausführung (bei der es sich aktuell um **Tabellenfunktionen mit mehreren Anweisungen (MSTVFs)** handelt) stoßen, wird die Optimierung unterbrochen, die entsprechende Unterstruktur ausgeführt, die genauen Kardinalitätsschätzungen erfasst, und anschließend wird die Optimierung für Downstreamvorgänge wiederaufgenommen.   
 
-Die folgende Abbildung zeigt die Ausgabe einer Liveabfragestatistik, eine Teilmenge eines allgemeinen Ausführungsplans, der die Auswirkung festgelegter Kardinalitätsschätzungen von MSTVFs veranschaulicht. Sie sehen den tatsächlichen Zeilenfluss gegenüber dem geschätzten. Es gibt drei erwähnenswerte Bereiche des Plans (von rechts nach links):
+Die festgelegte Kardinalitätsschätzung von MSTVFs beträgt ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] „100“ und in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] „1“. Die verschachtelte Ausführung löst Probleme bei der Leistung von Workloads, die auf die festgelegten Kardinalitätsschätzungen von MSTVFs zurückzuführen sind. Weitere Informationen zu MSTVFs finden Sie unter [Erstellen benutzerdefinierter Funktionen (Datenbank-Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+
+Die folgende Abbildung zeigt die Ausgabe einer [Liveabfragestatistik](../../relational-databases/performance/live-query-statistics.md), eine Teilmenge eines allgemeinen Ausführungsplans, der die Auswirkung festgelegter Kardinalitätsschätzungen von MSTVFs veranschaulicht. Sie sehen den tatsächlichen Zeilenfluss gegenüber dem geschätzten. Es gibt drei erwähnenswerte Bereiche des Plans (von rechts nach links):
 1. Der MSTVF-Table Scan hat eine festgelegte Schätzung von 100 Zeilen. In diesem Beispiel gibt es allerdings 527.597 Zeilen, die den MSTVF Table Scan durchlaufen. Dies ist an der Liveabfragestatistik *527597 von 100* der tatsächlichen Elemente von geschätzten Elemente zu erkennen – die festgelegte Schätzung liegt also deutlich zu weit unten.
 1. Für den Nested Loop-Vorgang wird davon ausgegangen, dass nur 100 Zeilen von der äußeren Seite des Joins zurückgegebene werden. Aufgrund der hohen Zahl an tatsächlich von MSTVF zurückgegebenen Zeilen sollten Sie sich aber für einen komplett anderen Joinalgorithmus entscheiden.
 1. Beachten Sie, dass beim Hash Match-Vorgang ein kleines Warnsymbol angezeigt wird, das in diesem Fall darauf hinweist, dass es einen Überlauf auf den Datenträger hab.
@@ -297,7 +298,7 @@ Allgemein gilt: Je höher der Unterschied zwischen der geschätzten und tatsäch
 Allgemein profitieren Abfragen von der verschachtelten Ausführung, die:
 1. eine große Diskrepanz zwischen der geschätzten und tatsächlichen Zeilenzahl für das temporäre Resultset aufweisen (in diesem Fall MSTVF);
 1. und in denen die Abfrage empfindlich ist, was Änderungen der Größe des temporären Ergebnisses angeht. Dies geschieht typischerweise, wenn es eine komplexe Struktur über der Unterstruktur im Abfrageplan gibt.
-Ein einfaches „SELECT *“ einer MSTVF profitiert nicht von einer verschachtelten Ausführung.
+Ein einfaches `SELECT *` einer MSTVF profitiert nicht von einer verschachtelten Ausführung.
 
 ### <a name="interleaved-execution-overhead"></a>Aufwand der verschachtelten Ausführung
 Der Aufwand sollte sehr gering oder nicht vorhanden sein. MSTVFs wurden bereits vor der Einführung der verschachtelten Ausführung materialisiert. Der Unterschied besteht jedoch darin, dass jetzt eine verzögerte Optimierung möglich ist sowie die anschließende Nutzung der Kardinalitätsschätzung des materialisierten Rowsets.
@@ -339,18 +340,18 @@ Geschachtelte Ausführung kann im Datenbank- oder Anweisungsbereich deaktiviert 
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
-Ist diese Einstellung aktiviert, wird sie in „sys.database_scoped_configurations“ als aktiviert aufgeführt.
+Ist diese Einstellung aktiviert, wird sie in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) als aktiviert aufgeführt.
 Um geschachtelte Ausführung für alle Abfrageausführungen wieder zu aktivieren, die aus der Datenbank stammen, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
-Sie können verschachtelte Ausführung auch für eine bestimmte Abfrage deaktivieren, indem Sie DISABLE_INTERLEAVED_EXECUTION_TVF als USE HINT-Abfragehinweis festlegen.  Zum Beispiel:
+Sie können adaptive Joins auch für eine verschachtelte Ausführung für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_INTERLEAVED_EXECUTION_TVF` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Zum Beispiel:
 
 ```sql
-SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
-FROM    [Fact].[Order] AS [fo]
+SELECT [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM [Fact].[Order] AS [fo]
 INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
                             '1-01-2013',
                             '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
@@ -371,5 +372,6 @@ Ein USE HINT-Abfragehinweis hat Vorrang vor einer datenbankweit gültigen Konfig
 [Leitfaden zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)    
 [Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Joins](../../relational-databases/performance/joins.md)    
-[Veranschaulichung der adaptiven Abfrageverarbeitung](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)          
-
+[Veranschaulichung der adaptiven Abfrageverarbeitung](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)    
+[USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint)   
+[Erstellen von benutzerdefinierten Funktionen (Datenbank-Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)  

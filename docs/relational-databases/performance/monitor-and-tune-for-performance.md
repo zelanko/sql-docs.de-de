@@ -30,12 +30,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbfac38c561a8943a6e15753f3ba20f9ca534311
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbfda8b5768242980d61cce90f1ca16f5de6aa9f
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667768"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586263"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Überwachen und Optimieren der Leistung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47667768"
 -   Beheben von Problemen oder Debuggen von Anwendungskomponenten, z. B. gespeicherte Prozeduren.  
   
 ## <a name="monitoring-in-a-dynamic-environment"></a>Überwachen in einer dynamischen Umgebung  
-Geänderte Bedingungen bedeuten eine andere Leistung. In Ihren Auswertungen sehen Sie Leistungsänderungen, wenn die Anzahl der Benutzer steigt, wenn die Benutzer andere Zugriffs- und Verbindungsmethoden verwenden, wenn die Datenbank wächst, wenn andere Clientanwendungen genutzt werden, wenn sich die Daten in den Anwendungen ändern, wenn die Abfragen komplexer werden und wenn die Netzwerkbelastung ansteigt. Verwenden von Tools für die Leistungsüberwachung ermöglicht es Ihnen, Änderungen in der Leistung mit geänderten Bedingungen und komplexen Abfragen zu verknüpfen. **Beispiele:**:  
+Geänderte Bedingungen bedeuten eine andere Leistung. In Ihren Auswertungen sehen Sie Leistungsänderungen, wenn die Anzahl der Benutzer steigt, wenn die Benutzer andere Zugriffs- und Verbindungsmethoden verwenden, wenn die Datenbank wächst, wenn andere Clientanwendungen genutzt werden, wenn sich die Daten in den Anwendungen ändern, wenn die Abfragen komplexer werden und wenn die Netzwerkbelastung ansteigt. Verwenden von Tools für die Leistungsüberwachung ermöglicht es Ihnen, Änderungen in der Leistung mit geänderten Bedingungen und komplexen Abfragen zu verknüpfen. **Beispiele:**  
   
 -   Wenn Sie die Antwortzeiten für häufig verwendete Abfragen überwachen, können Sie ermitteln, ob Änderungen an der Abfrage oder den Indizes in den Tabellen, in denen die Abfragen ausgeführt werden, notwendig sind.  
   
@@ -61,30 +61,29 @@ Geänderte Bedingungen bedeuten eine andere Leistung. In Ihren Auswertungen sehe
   
 -   Wenn Sie überwachen, wie Benutzer versuchen, eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen, können Sie ermitteln, ob die Sicherheit adäquat eingerichtet ist, und Anwendungen und Entwicklungssysteme testen.  
   
- Die Antwortzeit ist die Zeitdauer, die benötigt wird, um die erste Zeile des Resultsets in Form einer optischen Bestätigung, dass eine Abfrage verarbeitet wird, an den Benutzer zurückzugeben. Der Durchsatz ist die Gesamtzahl der Abfragen, die vom Server während eines bestimmten Zeitraums bearbeitet werden.  
+Die Antwortzeit ist die Zeitdauer, die benötigt wird, um die erste Zeile des Resultsets in Form einer optischen Bestätigung, dass eine Abfrage verarbeitet wird, an den Benutzer zurückzugeben. Der Durchsatz ist die Gesamtzahl der Abfragen, die vom Server während eines bestimmten Zeitraums bearbeitet werden.  
   
- Mit steigender Benutzerzahl nimmt auch der Wettstreit um die Ressourcen eines Servers zu, was wiederum zu einer erhöhten Antwortzeit und einem insgesamt reduzierten Durchsatz führt.  
+Mit steigender Benutzerzahl nimmt auch der Wettstreit um die Ressourcen eines Servers zu, was wiederum zu einer erhöhten Antwortzeit und einem insgesamt reduzierten Durchsatz führt.  
   
 ## <a name="monitoring-and-performance-tuning-tasks"></a>Überwachungs- und Leistungsoptimierungstasks  
   
 |Thema| Task|  
 |-----------|----------------------|  
-|[Überwachen von SQL Server-Komponenten](../../relational-databases/performance/monitor-sql-server-components.md)|Erforderliche Schritte, um eine SQL Server-Komponente zu überwachen|  
-|[Tools für die Leistungsüberwachung und -optimierung](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|Listet die Überwachungs- und Optimierungstools auf, die mit SQL Server verfügbar sind|  
+|[Überwachen von SQL Server-Komponenten](../../relational-databases/performance/monitor-sql-server-components.md)|Erforderliche Schritte zum Überwachen beliebiger SQL Server-Komponenten, z.B. Aktivitätsmonitor, erweiterte Ereignisse und dynamische Verwaltungssichten und -funktionen usw.|  
+|[Tools für die Leistungsüberwachung und -optimierung](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|Listet die Überwachungs- und Optimierungstools auf, die mit SQL Server verfügbar sind, z.B. Live-Abfragestatistiken und den Datenbankoptimierungsratgeber.|  
+|[Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)|Beibehalten der Stabilität der Workloadleistung während des Upgrades auf einen neueren Datenbank-Kompatibilitätsgrad.|  
+|[Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|Verwenden von Abfragespeicher, um automatisch einen Verlauf der Abfragen, Pläne und Laufzeitstatistiken zu erfassen und diese zur Überprüfung aufzubewahren|  
 |[Festlegen einer Leistungsbasislinie](../../relational-databases/performance/establish-a-performance-baseline.md)|Beschreibt, wie eine Leistungsbasislinie festgelegt wird|  
 |[Isolieren von Leistungsproblemen](../../relational-databases/performance/isolate-performance-problems.md)|Isolieren von Leistungsproblemen bei Datenbanken|  
 |[Identifizieren von Engpässen](../../relational-databases/performance/identify-bottlenecks.md)|Überwachen und Nachverfolgen der Serverleistung, um Engpässe zu ermitteln|  
+|[Verwenden von DMVs zum Bestimmen von Verwendungsstatistiken und der Leistung von Sichten](../../relational-databases/performance/use-dmvs-determine-usage-performance-views.md)|Behandelt Methoden und Skripts, mit denen Sie Informationen zur Leistung von Abfragen abrufen können.|  
 |[Überwachen der Serverleistung und -aktivität](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Verwenden von Leistungs- und Aktivitätsüberwachungstools von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und von Windows|  
-|[Anzeigen und Speichern von Ausführungsplänen](../../relational-databases/performance/display-and-save-execution-plans.md)|Anzeigen und Speichern von Ausführungsplänen in einer Datei im XML-Format|  
-|[Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)|Anzeigen von Echtzeitstatistiken zu den Ausführungsschritten einer Abfrage|  
-|[Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|Verwenden von Abfragespeicher, um automatisch einen Verlauf der Abfragen, Pläne und Laufzeitstatistiken zu erfassen und diese zur Überprüfung aufzubewahren|  
-|[Verwenden des Abfragespeichers mit In-Memory-OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)|Überlegungen zu speicheroptimierten Tabellen|  
-|[Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)|Hinweise zur Verwendung des Abfragespeichers|  
+|[Überwachen der Ressourcenverwendung](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|Verenden des Systemmonitors (auch als „perfmon“ bezeichnet) zum Messen der Leistung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Verwendung von Leistungsindikatoren.|  
+
   
 ## <a name="see-also"></a>Siehe auch  
- [Automatisierte Verwaltung in einem Unternehmen](../../ssms/agent/automated-administration-across-an-enterprise.md)   
- [Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)   
- [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [Automatisierte Verwaltung in einem Unternehmen](../../ssms/agent/automated-administration-across-an-enterprise.md)    
+ [Vergleichen und Analysieren von Ausführungsplänen](../../relational-databases/performance/compare-and-analyze-execution-plans.md)    
+ [Anzeigen und Speichern von Ausführungsplänen](../../relational-databases/performance/display-and-save-execution-plans.md)    
   
   

@@ -1,0 +1,136 @@
+---
+title: Profilerstellungsinfrastruktur für Abfragen | Microsoft-Dokumentation
+ms.custom: ''
+ms.date: 11/26/2018
+ms.prod: sql
+ms.reviewer: ''
+ms.technology: performance
+ms.topic: conceptual - "query plans [SQL Server]" - "execution plans [SQL Server]" - "query profiling" - "lightweight query profiling" - "lightweight profiling" - "lwp"
+ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
+author: pmasl
+ms.author: pelopes
+manager: amitban
+ms.openlocfilehash: e0ee0bc2c99d997d6a44d5ca0e9944e0ae4bfeb3
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617250"
+---
+# <a name="query-profiling-infrastructure"></a>Profilerstellungsinfrastruktur für Abfragen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] bietet die Möglichkeit, auf Laufzeitinformationen für Abfrageausführungspläne zuzugreifen. Eine der wichtigsten Aktionen beim Auftreten eines Leistungsproblems besteht darin, ein genaues Verständnis der Workload zu erlangen, die ausgeführt wird, und zu ermitteln, wie die Ressourcenauslastung gesteuert wird. Für diese Erkenntnisse ist Zugriff auf den [tatsächlichen Ausführungsplan](../../relational-databases/performance/display-an-actual-execution-plan.md) wichtig.
+
+Während der Abschluss der Abfrage eine Voraussetzung für die Verfügbarkeit eines aktuellen Abfrageplans ist, können [Live-Abfragestatistiken](../../relational-databases/performance/live-query-statistics.md) Einblicke in Echtzeit in den Abfrageausführungsprozess gewähren, während die Daten von einem [Abfrageplanoperator](../../relational-databases/showplan-logical-and-physical-operators-reference.md) zu einem anderen fließen. Der Live-Abfrageplan zeigt den gesamten Abfragestatus und die Laufzeit-Ausführungsstatistik auf Operatorebene an, wie z.B. die Anzahl der erzeugten Zeilen, die verstrichene Zeit, den Operatorstatus usw. Da diese Daten in Echtzeit verfügbar sind, ohne auf den Abschluss der Abfrage warten zu müssen, sind diese Ausführungsstatistiken äußerst nützlich für das Debuggen von Leistungsproblemen bei Abfragen, beispielsweise bei Abfragen mit langer Ausführungszeit und Abfragen, die unbegrenzt ausgeführt und nie abgeschlossen werden.
+
+## <a name="the-standard-query-execution-statistics-profiling-infrastructure"></a>Standard-Profilerstellungsinfrastruktur für Abfrageausführungsstatistiken
+
+Die *Profilerstellungsinfrastruktur für Abfrageausführungsstatistiken* (Standardprofilerstellung) muss aktiviert sein, um Informationen über Ausführungspläne zu erfassen, nämlich Zeilenanzahl, CPU- und E/A-Auslastung. Die folgenden Methoden zum Erfassen von Ausführungsplaninformationen für eine **Zielsitzung** nutzen die Standard-Profilerstellungsinfrastruktur:
+
+- [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) 
+- [SET STATISTICS PROFILE](../../t-sql/statements/set-statistics-profile-transact-sql.md)
+- [Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)
+
+> [!NOTE]
+> Die Verwendung von Live-Abfragestatistiken mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] nutzt die Standard-Profilerstellungsinfrastruktur.    
+> Wenn in höheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die [einfache Profilerstellungsinfrastruktur](#lwp) aktiviert ist, wird sie von Live-Abfragestatistiken anstelle der Standardprofilerstellung genutzt.
+
+Die folgenden Methoden zum globalen Erfassen von Ausführungsplaninformationen für **alle Sitzungen** nutzen die Standard-Profilerstellungsinfrastruktur:
+
+-  Das erweiterte Ereignis ***query_post_execution_showplan***. Informationen zum Aktivieren von erweiterten Ereignissen finden Sie unter [Überwachen der Systemaktivität mit erweiterten Ereignissen](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
+- Das Ablaufverfolgungsereignis **Showplan XML** in der [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md) und in [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). Weitere Informationen zu diesem Ablaufverfolgungsereignis finden Sie unter [Showplan XML-Ereignisklasse](../../relational-databases/event-classes/showplan-xml-event-class.md).
+
+Wenn Sie eine erweiterte Ereignissitzung ausführen, die das Ereignis *query_post_execution_showplan* verwendet, dann wird die [sys.dm_exec_query_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)-DMV ebenfalls mit Daten aufgefüllt. Dies ermöglicht Live-Abfragestatistiken für alle Sitzungen, indem der [Aktivitätsmonitor](../../relational-databases/performance-monitor/activity-monitor.md) verwendet oder die DMV direkt abgefragt wird. Weitere Informationen finden Sie unter [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md).
+
+## <a name="lwp"></a> Die einfache Profilerstellungsinfrastruktur für die Abfrageausführungsstatistik
+
+Beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wurde eine neue *einfache Profilerstellungsinfrastruktur für die Abfrageausführungsstatistik* (oder **einfache Profilerstellung**) eingeführt. 
+
+> [!NOTE]
+> Nativ kompilierte gespeicherte Prozeduren werden bei der einfachen Profilerstellung nicht unterstützt.  
+
+### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v1"></a>Einfache Profilerstellungsinfrastruktur für die Abfrageausführungsstatistik v1
+
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 bis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
+  
+Beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wurde der Leistungsmehraufwand für die Erfassung von Informationen zu Ausführungsplänen durch die Einführung von einfacher Profilerstellung verringert. Im Gegensatz zur Standardprofilerstellung erfasst die einfache Profilerstellung keine CPU-Laufzeitinformationen. Allerdings erfasst die einfache Profilerstellung weiterhin die Zeilenanzahl und Informationen zur E/A-Verwendung.
+
+Ein neues erweitertes Ereignis ***query_thread_profile*** wurde ebenfalls eingeführt, das einfache Profilerstellung nutzt. Dieses erweiterte Ereignis stellt Statistiken zur Abfrageausführung pro Operator bereit und ermöglicht einen besseren Einblick in die Leistung der einzelnen Knoten und Threads. Eine Beispielsitzung mit diesem erweiterten Ereignis kann wie im folgenden Beispiel konfiguriert werden:
+
+```sql
+CREATE EVENT SESSION [NodePerfStats] ON SERVER
+ADD EVENT sqlserver.query_thread_profile(
+  ACTION(sqlos.scheduler_id,sqlserver.database_id,sqlserver.is_system,
+    sqlserver.plan_handle,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,
+    sqlserver.server_instance_name,sqlserver.session_id,sqlserver.session_nt_username,
+    sqlserver.sql_text))
+ADD TARGET package0.ring_buffer(SET max_memory=(25600))
+WITH (MAX_MEMORY=4096 KB,
+  EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+  MAX_DISPATCH_LATENCY=30 SECONDS,
+  MAX_EVENT_SIZE=0 KB,
+  MEMORY_PARTITION_MODE=NONE,
+  TRACK_CAUSALITY=OFF,
+  STARTUP_STATE=OFF);
+```
+
+> [!NOTE]
+> Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung finden Sie im Blogbeitrag [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/). 
+
+Wenn Sie eine erweiterte Ereignissitzung ausführen, die das Ereignis *query_thread_profile* verwendet, dann wird die [sys.dm_exec_query_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)-DMV ebenfalls unter Verwendung von einfacher Profilerstellung mit Daten aufgefüllt. Dies ermöglicht Live-Abfragestatistiken für alle Sitzungen, indem der [Aktivitätsmonitor](../../relational-databases/performance-monitor/activity-monitor.md) verwendet oder die DMV direkt abgefragt wird.
+
+### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>Einfache Profilerstellungsinfrastruktur für die Abfrageausführungsstatistik v2
+
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
+
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 enthält eine überarbeitete Version der einfachen Profilerstellung mit minimalem Mehraufwand. Einfache Profilerstellung kann auch global über das [Ablaufverfolgungsflag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) für die Versionen aktiviert werden, die oben unter *Gilt für* angegeben werden. Eine neue DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) wurde eingeführt, um den Abfrageausführungsplan für In-Flight-Anforderungen zurückzugeben.
+
+Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 gilt Folgendes: Wenn einfache Profilerstellung nicht global aktiviert ist, kann das Argument **QUERY_PLAN_PROFILE** des neuen [USE HINT-Abfragehinweises](../../t-sql/queries/hints-transact-sql-query.md#use_hint) verwendet werden, um einfache Profilerstellung auf Abfrageebene für jede beliebige Sitzung zu aktivieren. Wenn eine Abfrage, die diesen neuen Hinweis enthält, abgeschlossen wird, wird auch ein neues erweitertes Ereignis ***query_plan_profile*** ausgegeben, das XML für einen tatsächlichen Ausführungsplan ähnlich dem erweiterten Ereignis *query_post_execution_showplan* bereitstellt. Eine Beispielsitzung mit diesem erweiterten Ereignis kann wie im folgenden Beispiel konfiguriert werden:
+
+```sql
+CREATE EVENT SESSION [PerfStats_LWP_Plan] ON SERVER
+ADD EVENT sqlserver.query_plan_profile(
+  ACTION(sqlos.scheduler_id,sqlserver.database_id,sqlserver.is_system,
+    sqlserver.plan_handle,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,
+    sqlserver.server_instance_name,sqlserver.session_id,sqlserver.session_nt_username,
+    sqlserver.sql_text))
+ADD TARGET package0.ring_buffer(SET max_memory=(25600))
+WITH (MAX_MEMORY=4096 KB,
+  EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+  MAX_DISPATCH_LATENCY=30 SECONDS,
+  MAX_EVENT_SIZE=0 KB,
+  MEMORY_PARTITION_MODE=NONE,
+  TRACK_CAUSALITY=OFF,
+  STARTUP_STATE=OFF);
+```
+
+### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>Einfache Profilerstellungsinfrastruktur für die Abfrageausführungsstatistik v3
+
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] enthält eine neu überarbeitete Version der einfachen Profilerstellung, die Informationen zur Anzahl der Zeilen für alle Ausführungen erfasst. Einfache Profilerstellung ist für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] standardmäßig aktiviert, und das Ablaufverfolgungsflag 7412 besitzt keine Auswirkungen.
+
+## <a name="remarks"></a>Remarks
+
+> [!IMPORTANT]
+> Aufgrund einer möglichen zufälligen AV bei der Ausführung einer gespeicherten Überwachungsprozedur, die auf [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) verweist, müssen Sie sicherstellen, dass [KB 4078596](http://support.microsoft.com/help/4078596) in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] installiert ist.
+
+Beginnend mit der einfachen Profilerstellung v2 und ihrem geringen Mehraufwand kann jeder Server, der nicht bereits CPU-gebunden ist, einfache Profilerstellung **kontinuierlich** ausführen und es Datenbankexperten ermöglichen, jederzeit auf jede aktuell ausgeführte Ausführung zuzugreifen (z.B. mit dem Aktivitätsmonitor oder durch direktes Abfragen von `sys.dm_exec_query_profiles`) und den Abfrageplan mit Laufzeitstatistiken abzurufen.
+
+Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung finden Sie im Blogbeitrag [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/). 
+
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [Tools für die Leistungsüberwachung und -optimierung](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
+ [Öffnen des Aktivitätsmonitors &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     
+ [Aktivitätsmonitor](../../relational-databases/performance-monitor/activity-monitor.md)     
+ [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [Überwachen der Systemaktivität mit erweiterten Ereignissen](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)      
+ [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)     
+ [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
+ [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
+ [Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
+ [Tatsächlicher Ausführungsplan](../../relational-databases/performance/display-an-actual-execution-plan.md)    
+ [Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)      
+ [Developers Choice: Query progress - anytime, anywhere (Wahl der Entwickler: Abfragestatus – jederzeit und überall)](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)

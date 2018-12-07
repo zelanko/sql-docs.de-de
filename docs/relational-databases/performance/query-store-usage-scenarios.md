@@ -1,7 +1,7 @@
 ---
 title: Verwendungsszenarios für den Abfragespeicher | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/02/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,36 +14,32 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d556922a6bdb0e6edd538630e34dd21d428f2953
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673829"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711201"
 ---
 # <a name="query-store-usage-scenarios"></a>Verwendungsszenarien für den Abfragespeicher
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Der Abfragespeicher kann in einer großen Bandbreite von Szenarien eingesetzt werden, wenn das Nachverfolgen und Sicherstellen einer vorhersagbaren Arbeitsleistung entscheidend ist. Diese Beispiele dienen zur Veranschaulichung:  
   
 -   Bestimmen und Reparieren von Abfragen mit Planauswahlregression  
-  
 -   Erkennen und Optimieren der Abfragen mit dem höchsten Ressourcenverbrauch  
-  
 -   A/B-Tests  
-  
 -   Aufrechterhalten einer stabilen Leistung während des Upgrades auf das neuere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
-  
 -   Erkennen und Verbessern von Ad-hoc-Arbeitsauslastungen  
   
 ## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>Bestimmen und Reparieren von Abfragen mit Planauswahlregression  
- Im Rahmen seiner normalen Abfrageausführung kann der Abfrageoptimierer entscheiden, einen anderen Plan zu wählen, da sich wichtige Eingangsparameter geändert haben: die Datenkardinalität hat sich geändert, es wurden Indizes erstellt, geändert oder gelöscht, Statistikinformationen wurden aktualisiert usw. Meistens funktioniert der neue Plan besser oder in etwa gleich gut wie der zuvor verwendete. Es gibt jedoch Fälle, in denen der neue Plan deutlich schlechter funktioniert – diese Situation wird als Planauswahl-Änderungsregression bezeichnet. Vor der Einführung des Abfragespeichers war das ein sehr schwer zu erkennendes und behebendes Problem, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen integrierten Datenspeicher bereitstellte, in dem Benutzer nach Ausführungsplänen suchen konnten, die im Lauf der Zeit verwendet worden waren.  
+ Im Rahmen seiner normalen Abfrageausführung kann der Abfrageoptimierer entscheiden, einen anderen Plan zu wählen, da sich wichtige Eingangsparameter geändert haben: die Datenkardinalität hat sich geändert, es wurden Indizes erstellt, geändert oder gelöscht, Statistikinformationen wurden aktualisiert usw. Meistens funktioniert der neue Plan besser oder in etwa gleich gut wie der zuvor verwendete. Es gibt jedoch Fälle, in denen der neue Plan deutlich schlechter funktioniert – diese Situation wird als Planauswahl-Änderungsregression bezeichnet. Vor der Einführung des Abfragespeichers war das ein schwer zu erkennendes und behebendes Problem, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen integrierten Datenspeicher bereitstellte, in dem Benutzer nach Ausführungsplänen suchen konnten, die im Lauf der Zeit verwendet worden waren.  
   
  Mit dem Abfragespeicher lassen sich diese Aufgaben schnell lösen:  
   
 -   Identifizieren aller Abfragen, deren Ausführungsmetrik im interessierenden Zeitraum (letzte Stunde, letzter Tag, letzte Woche usw.) heruntergestuft wurde. Verwendung von **Zurückgestellten Abfragen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zum Beschleunigen der Analyse.  
   
--   Unter den zurückgestellten Abfragen lassen sich leicht diejenigen identifizieren, die mehrere Pläne hatten und aufgrund schlechter Planauswahl heruntergestuft wurden. Verwenden Sie den Bereich **Planzusammenfassung** in **Zurückgestellte Abfragen** , um alle Pläne für eine zurückgestellte Abfrage und ihre Abfrageleistung im zeitlichen Verlauf darzustellen.  
+-   Unter den zurückgestellten Abfragen lassen sich leicht diejenigen identifizieren, die mehrere Pläne hatten und deren Leistung sich aufgrund schlechter Planauswahl verschlechtert hat. Verwenden Sie den Bereich **Planzusammenfassung** in **Zurückgestellte Abfragen** , um alle Pläne für eine zurückgestellte Abfrage und ihre Abfrageleistung im zeitlichen Verlauf darzustellen.  
   
 -   Setzen Sie die Verwendung des im Verlauf vorhergehenden Plans durch, wenn der sich als besser erwiesen hat. Verwenden Sie die Schaltfläche **Plan erzwingen** in **Zurückgestellte Abfragen**, um die Verwendung des ausgewählten Plans für die Abfrage durchzusetzen.  
   
@@ -81,7 +77,7 @@ Wenn Sie eine Abfrage mit nicht optimaler Leistung identifiziert haben, richtet 
   
 -   Erstellen von fehlenden Indizes für Tabellen, auf die aufwändige Abfragen verweisen.  
   
--   Anwenden einer Filterrichtlinie für Sicherheit auf Zeilenebene. Weitere Details finden Sie unter [Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx)(Optimieren von Sicherheit auf Zeilenebene mithilfe des Abfragespeichers).  
+-   Anwenden einer Filterrichtlinie für Sicherheit auf Zeilenebene. Weitere Informationen finden Sie unter [Optimieren von Sicherheit auf Zeilenebene mithilfe des Abfragespeichers](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx).  
   
 -   Hinzufügen von temporaler Verwaltung durch das System zu Tabellen, die häufigen Änderungen durch OLTP-Anwendungen unterliegen.  
   
@@ -105,7 +101,7 @@ In der folgenden Abbildung ist die Abfragespeicheranalyse (Schritt 4) im Fall ei
   
 ![Abfrage-Store-Nutzung-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
-Darüber hinaus können Sie Pläne vor und nach der Indexerstellung vergleichen, indem Sie sie nebeneinander anzeigen. (Symbolleistenoption „Vergleichen Sie die Pläne für die ausgewählte Abfrage in einem separaten Fenster“, die auf der Symbolleiste mit einem roten Quadrat gekennzeichnet ist.)  
+Darüber hinaus können Sie Pläne vor und nach der Indexerstellung vergleichen, indem Sie sie nebeneinander anzeigen. (Symbolleistenoption „Pläne für die ausgewählte Abfrage in einem separaten Fenster vergleichen“, die auf der Symbolleiste mit einem roten Quadrat gekennzeichnet ist.)  
   
 ![Abfrage-Store-Nutzung-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
   
@@ -122,7 +118,7 @@ Seit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sind alle Änderungen des
   
 ![Abfrage-Store-Nutzung-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
-1.  Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ohne den Datenbankkompatibilitätsgrad zu ändern Dadurch werden nicht die neuesten Änderungen des Abfrageoptimierer verfügbar gemacht. Gleichzeitig bietet es aber neuere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen, wie z.B. den Abfragespeicher.  
+1.  Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ohne den Datenbankkompatibilitätsgrad zu ändern Dadurch werden zwar nicht die neuesten Änderungen des Abfrageoptimierers bereitgestellt, aber es sind neuere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen verfügbar, z.B. der Abfragespeicher.  
   
 2.  Aktivieren des Abfragespeichers Weitere Informationen zu diesem Thema finden Sie unter [Keep Query Store adjusted to your workload (Dauerhafte Abfragespeicheranpassung an Ihre Arbeitsauslastung)](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
 
@@ -145,10 +141,10 @@ Einige Arbeitsauslastungen weisen keine dominierenden Abfragen auf, die sich opt
   
 Verwenden Sie die Metrik **Ausführungsanzahl** , um zu analysieren, ob Ihre Abfragen mit dem höchsten Ressourcenverbrauch Ad-hoc-Abfragen sind (dafür müssen Sie den Abfragespeicher mit `QUERY_CAPTURE_MODE = ALL`ausführen). Im Diagramm oben können Sie sehen, dass 90% der **Abfragen mit dem höchstem Ressourcenverbrauch** nur einmal ausgeführt werden.  
   
-Alternativ können Sie ein [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript ausführen, um die Gesamtzahl der Abfragetexte, Abfragen und Pläne im System abzurufen und ihre Verschiedenheit durch den Vergleich ihres query_hash- und plan_hash-Werts zu bestimmen:  
+Alternativ können Sie ein [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript ausführen, um die Gesamtzahl der Abfragetexte, Abfragen und Pläne im System abzurufen und ihre Verschiedenheit durch den Vergleich des query_hash- und plan_hash-Werts zu bestimmen:  
   
 ```sql  
-/*Do cardinality analysis when suspect on ad hoc workloads*/  
+--Do cardinality analysis when suspect on ad hoc workloads
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
 SELECT COUNT(DISTINCT query_hash) AS CountDifferentQueryRows FROM  sys.query_store_query;  
@@ -169,7 +165,7 @@ Wenn der Anwendungscode in Ihre Zuständigkeit fällt, können Sie eine Neuerste
 Der Ansatz mit einzelnen Abfragevorlagen erfordert die Erstellung von Planhinweislisten:  
   
 ```sql  
-/*Apply plan guide for the selected query template*/  
+--Apply plan guide for the selected query template 
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   
@@ -191,7 +187,7 @@ Die Lösung mit Planhinweislisten ist genauer, erfordert aber mehr Arbeit.
 Wenn alle Ihre Abfragen (oder eine Mehrheit davon) Kandidaten für automatische Parametrisierung sind, stellt das Ändern von `FORCED PARAMETERIZATION` für die gesamte Datenbank möglicherweise die bessere Option dar:  
   
 ```sql  
-/*Apply forced parameterization for entire database*/  
+--Apply forced parameterization for entire database  
 ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;  
 ```  
 
@@ -204,7 +200,7 @@ Nach dem Ausführen eines dieser Schritte zeichnet **Abfragen mit höchstem Ress
   
 In manchen Fällen generiert Ihre Anwendung möglicherweise viele verschiedene Abfragen, die keine geeigneten Kandidaten für automatische Parametrisierung darstellen. In diesem Fall findet sich eine große Anzahl Abfragen im System, das Verhältnis zwischen eindeutigen Abfragen und eindeutigem Abfragehash (`query_hash`) liegt aber wahrscheinlich nahe bei 1.  
   
-In diesem Fall kann es sinnvoll sein die Serveroption [**Für Ad-hoc-Arbeitsauslastungen optimieren**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) zu aktivieren, um die Verschwendung von Cachespeicher für Abfragen zu vermeiden, die wahrscheinlich nicht mehr ausgeführt werden. Um die Erfassung solcher Abfragen im Abfragespeicher zu verhindern, legen Sie `QUERY_CAPTURE_MODE` auf `AUTO`fest.  
+In diesem Fall kann es sinnvoll sein, die Serveroption [**Für Ad-hoc-Arbeitsauslastungen optimieren**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) zu aktivieren, um die Verschwendung von Cachespeicher für Abfragen zu vermeiden, die wahrscheinlich nicht erneut ausgeführt werden. Um die Erfassung solcher Abfragen im Abfragespeicher zu verhindern, legen Sie `QUERY_CAPTURE_MODE` auf `AUTO`fest.  
   
 ```sql  
 EXEC sys.sp_configure N'show advanced options', N'1' RECONFIGURE WITH OVERRIDE

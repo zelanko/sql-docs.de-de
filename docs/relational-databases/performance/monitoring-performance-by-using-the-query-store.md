@@ -1,7 +1,7 @@
 ---
 title: Überwachen der Leistung mit dem Abfragespeicher | Microsoft -Dokumentation
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8daab3f7a68ee846d8f02012d572a1687058cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e36a66564564bb468592df491e12d97a87d5dc4b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673329"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711501"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Leistungsüberwachung mit dem Abfragespeicher
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abfragespeicher bietet Ihnen Einblick in die Auswahl und die Leistung eines Abfrageplans. Er vereinfacht das Beheben von Leistungsproblemen, indem er das schnelle Auffinden von Leistungsabweichungen durch Änderungen an Abfrageplänen ermöglicht. Der Abfragespeicher erfasst automatisch einen Verlauf der Abfragen, Pläne und Laufzeitstatistiken und bewahrt diese zur Überprüfung auf. Es unterteilt die Daten nach Zeitfenstern, sodass Sie Verwendungsmuster für Datenbanken erkennen können und verstehen, wann Abfrageplanänderungen auf dem Server aufgetreten sind. Sie können den Abfragespeicher mit der Option [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) konfigurieren. 
   
@@ -101,18 +101,30 @@ INNER JOIN sys.query_store_query_text AS Txt
 ```  
  
 ##  <a name="Regressed"></a> Verwenden der Funktion „Zurückgestellte Abfragen“  
- Aktualisieren Sie nach der Aktivierung des Abfragespeichers den Datenbankbereich im Objekt-Explorer-Bereich, um den Abschnitt **Abfragespeicher** hinzuzufügen.  
+Aktualisieren Sie nach der Aktivierung des Abfragespeichers den Datenbankbereich im Objekt-Explorer-Bereich, um den Abschnitt **Abfragespeicher** hinzuzufügen.  
   
- ![Abfragespeicherstruktur im Objekt-Explorer](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Abfragespeicherstruktur im Objekt-Explorer")  
+![SQL Server 2016-Abfragespeicherstruktur im SSMS-Objekt-Explorer](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016-Abfragespeicherstruktur im SSMS-Objekt-Explorer")![SQL Server 2017-Abfragespeicherstruktur im SSMS-Objekt-Explorer](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017-Abfragespeicherstruktur im SSMS-Objekt-Explorer") 
   
- Wählen Sie **Zurückgestellte Abfragen** aus, um den Bereich **Zurückgestellte Abfragen** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]zu öffnen. Im Bereich „Regressed Queries“ werden die Abfragen und Pläne im Abfragespeicher angezeigt. Verwenden Sie die Dropdownfelder oben, um Abfragen anhand verschiedener Kriterien auszuwählen. Wählen Sie einen Plan aus, um die grafische Darstellung des Abfrageplans anzuzeigen. Über verschiedene Schaltflächen können Sie die Quellabfrage anzeigen, einen Abfrageplan erzwingen und die Erzwingung wieder aufheben und die Ansicht aktualisieren.  
+Wählen Sie **Zurückgestellte Abfragen** aus, um den Bereich **Zurückgestellte Abfragen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zu öffnen. Im Bereich „Regressed Queries“ werden die Abfragen und Pläne im Abfragespeicher angezeigt. Verwenden Sie die Dropdownfelder im oberen Bereich, um Abfragen anhand verschiedener Kriterien zu filtern: **Dauer (ms)** (Standard), CPU-Zeit (ms), Logische Lesevorgänge (KB), Logische Schreibvorgänge (KB), Physische Lesevorgänge (KB), CLR-Zeit (ms), DOP, Arbeitsspeicherverbrauch (KB), Zeilenanzahl, Verwendeter Protokollspeicher (KB), Verwendeter temporärer DB-Speicher (KB) und Wartezeit (ms).  
+Wählen Sie einen Plan aus, um die grafische Darstellung des Abfrageplans anzuzeigen. Schaltflächen stehen zur Verfügung, um die Quellabfrage anzuzeigen, einen Abfrageplan zu erzwingen bzw. seine Erzwingung aufzuheben, zwischen Raster- und Diagrammformaten umzuschalten, ausgewählte Pläne zu vergleichen (wenn mehrere Pläne ausgewählt sind) und die Anzeige zu aktualisieren.  
   
- ![Zurückgesetzte Abfragen im Objekt-Explorer](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Zurückgesetzte Abfragen im Objekt-Explorer")  
+![Zurückgestellte SQL Server 2016-Abfragen im SSMS-Objekt-Explorer](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Zurückgestellte SQL Server 2016-Abfragen im SSMS-Objekt-Explorer")  
   
- Wählen Sie eine Abfrage und einen Plan aus, und klicken Sie anschließend auf **Plan erzwingen**, um einen Plan zu erzwingen. Sie können nur Pläne erzwingen, die mit dem Abfrageplanfeature gespeichert wurden und sich noch im Abfrageplancache befinden.  
+Wählen Sie eine Abfrage und einen Plan aus, und klicken Sie anschließend auf **Plan erzwingen**, um einen Plan zu erzwingen. Sie können nur Pläne erzwingen, die mit dem Abfrageplanfeature gespeichert wurden und sich noch im Abfrageplancache befinden.
+
 ##  <a name="Waiting"></a> Suchen von Warteanfragen
 
-Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] sind im Abfragespeicher Wartestatistiken pro Abfrage über Zeit verfügbar. Im Abfragespeicher werden Wartetypen in **Wartekategorien** zusammengefasst. Die Zuordnung von Wartekategorien zu Wartetypen finden Sie unter [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
+Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sind im Abfragespeicher Wartestatistiken pro Abfrage über Zeit verfügbar. Im Abfragespeicher werden Wartetypen in **Wartekategorien** zusammengefasst. Die Zuordnung von Wartekategorien zu Wartetypen finden Sie unter [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
+
+Wählen Sie **Abfragewartestatistiken** aus, um den Bereich **Abfragewartestatistiken** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 oder höher zu öffnen. Der Bereich „Abfragewartestatistiken“ zeigt ein Balkendiagramm mit den wichtigsten Wartekategorien im Abfragespeicher an. Verwenden Sie die Dropdownliste im oberen Bereich, um ein Aggregatkriterium für die Wartezeit auszuwählen: avg, max, min, std dev oder **total** (Standard).
+
+ ![SQL Server 2017-Abfragewartestatistiken im SSMS-Objekt-Explorer](../../relational-databases/performance/media/query-store-waits.PNG "SQL Server 2017--Abfragewartestatistiken im SSMS-Objekt-Explorer")
+
+Wählen Sie eine Wartekategorie aus, indem Sie auf die Leiste klicken. Eine Detailansicht der ausgewählten Wartekategorie wird angezeigt. Dieses neue Balkendiagramm enthält die Abfragen, die zu dieser Wartekategorie beigetragen haben. 
+  
+ ![SQL Server 2017-Abfragewartestatistiken (Detailansicht) im SSMS-Objekt-Explorer](../../relational-databases/performance/media/query-store-waits-detail.PNG "SQL Server 2017--Abfragewartestatistiken (Detailansicht) im SSMS-Objekt-Explorer")
+
+Verwenden Sie die Dropdownfelder im oberen Bereich, um Abfragen nach verschiedenen Wartezeitkriterien für die ausgewählte Wartekategorie zu filtern: avg, max, min, std dev oder **total** (Standard). Wählen Sie einen Plan aus, um die grafische Darstellung des Abfrageplans anzuzeigen. Über verschiedene Schaltflächen können Sie die Quellabfrage anzeigen, einen Abfrageplan erzwingen und die Erzwingung wieder aufheben und die Ansicht aktualisieren.  
 
 **Wartekategorien** fassen mehrere Wartetypen in Buckets zusammen, die sich in ihrer Art ähneln. Verschiedene Wartekategorien erfordern verschiedene Analysen zur Problembehebung. Wartetypen aus der gleichen Kategorien führen jedoch zu sehr ähnlichen Problembehebungsvorgängen. Wenn nun die betroffenen Abfrage in den Wartezuständen bereitgestellt wird, kann ein Großteil der Überprüfungen erfolgreich abgeschlossen werden.
 
@@ -124,10 +136,9 @@ Im folgenden finden Sie einige Beispiele, wie Sie ausführlicheren Einblick in I
 |Lange Wartezustände von RESOURCE_SEMAPHORE pro Datenbank|Lange Speicherwartezustände im Abfragespeicher für bestimmte Abfragen|Machen Sie die Abfragen im Abfragespeicher ausfindig, die am meisten Speicher nutzen. Es liegt wahrscheinlich an diesen Abfragen, dass der Fortschritt der betroffen Abfragen verzögert wird. Ziehen Sie in Betracht, den Abfragehinweis „MAX_GRANT_PERCENT“ für diese Abfragen oder für die betroffene Abfrage zu verwenden.|
 |Lange Wartezustände von LCK_M_X pro Datenbank|Lange Sperrwartezustände im Abfragespeicher für bestimmte Abfragen|Überprüfen Sie die Abfragetexte der betroffenen Abfragen, und identifizieren Sie die Zielentitäten. Suchen Sie im Abfragespeicher nach anderen Abfragen, die die gleiche Entität modifizieren und die häufig ausgeführt werden bzw. oder eine lange Dauer haben. Nachdem Sie diese Abfragen identifiziert haben, denken Sie darüber nach, die Anwendungslogik zu ändern, um die Parallelität zu verbessern, oder verwenden Sie eine weniger einschränkende Transaktionsisolationsstufe.|
 |Lange Wartezustände von PAGEIOLATCH_SH pro Datenbank|Lange Wartezustände der Puffer-E/A im Abfragespeicher für bestimmte Abfragen|Suchen Sie im Abfragespeicher nach Abfragen mit einer hohen Zahl an physische Lesevorgängen. Wenn Sie mit den Abfragen mit langen E/A-Wartezuständen übereinstimmen, denken Sie darüber nach, einen Index auf der zugrunde liegenden Entität einzufügen, damit Suchvorgänge statt Scanvorgängen durchgeführt werden und damit der E/A-Aufwand der Abfragen gesenkt wird.|
-|Lange Wartezustände von SOS_SCHEDULER_YIELD pro Datenbank|Lange CPU-Wartezustände im Abfragespeicher für bestimmte Abfragen|Machen Sie die Abfragen im Abfragespeicher ausfindig, die am meisten CPU nutzen. Bestimmen Sie dann, welche dieser Abfragen sowohl eine hohe CPU-Auslastung als auch lange CPU-Wartezustände für die betroffenen Abfragen aufweisen. Konzentrieren Sie sich darauf, diese Abfragen zu optimieren: möglicherweise gibt es eine Planregression oder es fehlt ein Index.|
+|Lange Wartezustände von SOS_SCHEDULER_YIELD pro Datenbank|Lange CPU-Wartezustände im Abfragespeicher für bestimmte Abfragen|Machen Sie die Abfragen im Abfragespeicher ausfindig, die am meisten CPU nutzen. Bestimmen Sie dann, welche dieser Abfragen sowohl eine hohe CPU-Auslastung als auch lange CPU-Wartezustände für die betroffenen Abfragen aufweisen. Konzentrieren Sie sich darauf, diese Abfragen zu optimieren: möglicherweise gibt es eine Planregression, oder es fehlt ein Index.|
 
 ##  <a name="Options"></a> Konfigurationsoptionen 
-
 Die folgenden Optionen sind zur Konfiguration von Abfragespeicherparametern verfügbar.
 
 *OPERATION_MODE*  
@@ -555,19 +566,23 @@ OPTION (MERGE JOIN);
 ```  
  
 ###  <a name="Stability"></a> Erhalten einer stabilen Abfrageleistung  
- Für mehrfach ausgeführte Abfragen werden Sie möglicherweise feststellen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschiedene Pläne verwendet, die eine unterschiedliche Ressourcenverwendung und Dauer nach sich ziehen. Mit dem Abfragespeicher können Sie erkennen, wenn die Abfrageleistung abfällt, und den optimalen Plan innerhalb des gewünschten Zeitraums bestimmen. Anschließend können Sie diesen optimalen Plan für zukünftige Abfrageausführungen erzwingen.  
+Für mehrfach ausgeführte Abfragen werden Sie möglicherweise feststellen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschiedene Pläne verwendet, die eine unterschiedliche Ressourcenverwendung und Dauer nach sich ziehen. Mit dem Abfragespeicher können Sie erkennen, wenn die Abfrageleistung abfällt, und den optimalen Plan innerhalb des gewünschten Zeitraums bestimmen. Anschließend können Sie diesen optimalen Plan für zukünftige Abfrageausführungen erzwingen.  
   
- Sie können auch abweichende Abfrageleistungen für eine Abfrage mit Parametern ermitteln (entweder automatisch oder manuell parametrisiert). Sie können unter den verschiedenen Plänen den Plan identifizieren, der schnell und ausreichend geeignet für alle oder die meisten Parameterwerte ist, und diesen anschließend erzwingen. So erhalten Sie eine vorhersagbare Leistung für eine größere Anzahl von Benutzerszenarien.  
+Sie können auch abweichende Abfrageleistungen für eine Abfrage mit Parametern ermitteln (entweder automatisch oder manuell parametrisiert). Sie können unter den verschiedenen Plänen den Plan identifizieren, der schnell und ausreichend geeignet für alle oder die meisten Parameterwerte ist, und diesen anschließend erzwingen. So erhalten Sie eine vorhersagbare Leistung für eine größere Anzahl von Benutzerszenarien.  
   
- **Erzwingen eines Plans für eine Abfrage (Anwenden einer Durchsetzungsrichtlinie).** Wenn ein Plan für eine bestimmte Abfrage erzwungen wird, erfolgen sämtliche Ausführungen dieser Abfrage mit dem erzwungenen Plan.  
-  
+ ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>Erzwingen eines Plans für eine Abfrage (Anwenden einer Durchsetzungsrichtlinie)
+
+Wenn ein Plan für eine bestimmte Abfrage erzwungen wird, versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], den Plan im Optimierer zu erzwingen. Wenn das Erzwingen des Plans fehlschlägt, wird ein XEvent ausgelöst, und der Optimierer wird angewiesen, die Optimierung auf die übliche Weise durchzuführen.
+
 ```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- Durch die Verwendung von **sp_query_store_force_plan** können Sie ausschließlich solche Pläne erzwingen, die vom Abfragespeicher als Plan für diese Abfrage aufgezeichnet wurden. Es stehen für eine Abfrage also nur Pläne zur Verfügung, die bereits zum Ausführen dieser Abfrage verwendet wurden, während der Abfragespeicher aktiv war.  
+Durch die Verwendung von **sp_query_store_force_plan** können Sie ausschließlich solche Pläne erzwingen, die vom Abfragespeicher als Plan für diese Abfrage aufgezeichnet wurden. Es stehen für eine Abfrage also nur Pläne zur Verfügung, die bereits zum Ausführen dieser Abfrage verwendet wurden, während der Abfragespeicher aktiv war.  
   
- **Aufheben der Erzwingung eines Plans für eine Abfrage.** Wenn Sie wieder den Abfrageoptimierer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden möchten, um den optimalen Abfrageplan zu berechnen, heben Sie mit **sp_query_store_unforce_plan** das Erzwingen des für die Abfrage ausgewählten Plans auf.  
+### <a name="remove-plan-forcing-for-a-query"></a>Aufheben der Erzwingung eines Plans für eine Abfrage
+
+Wenn Sie wieder den Abfrageoptimierer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden möchten, um den optimalen Abfrageplan zu berechnen, heben Sie mit **sp_query_store_unforce_plan** das Erzwingen des für die Abfrage ausgewählten Plans auf.  
   
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

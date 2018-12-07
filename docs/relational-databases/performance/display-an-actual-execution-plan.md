@@ -1,7 +1,7 @@
 ---
 title: Anzeigen eines tatsächlichen Ausführungsplans | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/21/2017
+ms.date: 11/21/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8bd53376f4e154dd8ef178878957b7e6f3a4261d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 211bc818f3aa7a9ac233c2979f6fe2283b0430d0
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830968"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302923"
 ---
 # <a name="display-an-actual-execution-plan"></a>Anzeigen eines tatsächlichen Ausführungsplans
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,20 +30,30 @@ ms.locfileid: "47830968"
   
  Benutzer müssen zum Verwenden dieser Funktion die entsprechenden Berechtigungen zum Ausführen der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen besitzen, für die ein grafischer Ausführungsplan generiert wird. Darüber hinaus muss ihnen die SHOWPLAN-Berechtigung für alle Datenbanken erteilt werden, auf die die Abfrage verweist.  
   
-### <a name="to-include-an-execution-plan-for-a-query-during-execution"></a>So schließen Sie einen Ausführungsplan für eine Abfrage bei der Ausführung ein  
+## <a name="to-include-an-execution-plan-for-a-query-during-execution"></a>So schließen Sie einen Ausführungsplan für eine Abfrage bei der Ausführung ein  
   
 1.  Klicken Sie auf der Symbolleiste von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auf **Datenbank-Engine-Abfrage**. Sie können auch eine vorhandene Abfrage öffnen und den geschätzten Ausführungsplan anzeigen, indem Sie auf die Symbolleisten-Schaltfläche **Datei öffnen** klicken und die vorhandene Abfrage suchen. 
   
 2.  Geben Sie die Abfrage ein, für die Sie den tatsächlichen Ausführungsplan anzeigen möchten.  
   
-3.  Klicken Sie im Menü **Abfrage** auf **Tatsächlichen Ausführungsplan einschließen** , oder klicken Sie auf die Symbolleistenschaltfläche **Tatsächlichen Ausführungsplan einschließen** .  
+3.  Klicken Sie im Menü **Abfrage** auf **Tatsächlichen Ausführungsplan einschließen**, oder klicken Sie auf die Symbolleistenschaltfläche **Tatsächlichen Ausführungsplan einschließen**.
+
+    ![Schaltfläche „Tatsächlicher Ausführungsplan“ auf der Symbolleiste](../../relational-databases/performance/media/actualexecplantoolbar.png "Schaltfläche „Tatsächlicher Ausführungsplan“ auf der Symbolleiste")   
   
-4.  Führen Sie die Abfrage aus, indem Sie auf die Symbolleistenschaltfläche **Ausführen** klicken. Der vom Abfrageoptimierer verwendete Plan wird im Ergebnisbereich auf der Registerkarte **Ausführungsplan** angezeigt. Positionieren Sie die Maus über die logischen und physischen Operatoren, um deren Beschreibung und Eigenschaften in der QuickInfo anzuzeigen.  
+4.  Führen Sie die Abfrage aus, indem Sie auf die Symbolleistenschaltfläche **Ausführen** klicken. Der vom Abfrageoptimierer verwendete Plan wird im Ergebnisbereich auf der Registerkarte **Ausführungsplan** angezeigt. 
+
+    ![Tatsächlicher Ausführungsplan](../../relational-databases/performance/media/actualexecplan.png "Tatsächlicher Ausführungsplan")   
+
+5.  Positionieren Sie die Maus über den logischen und physischen Operatoren, um die Beschreibung und Eigenschaften der Operatoren in der angezeigten QuickInfo anzuzeigen, einschließlich der Eigenschaften des gesamten Ausführungsplans, indem Sie den Stammknotenoperator (den SELECT-Knoten in der Abbildung oben) auswählen.   
   
-     Sie können die Operatoreigenschaften auch im Eigenschaftenfenster anzeigen. Falls die Eigenschaften nicht sichtbar sind, klicken Sie mit der rechten Maustaste auf einen Operator, und wählen Sie **Eigenschaften**aus. Wählen Sie einen Operator aus, um seine Eigenschaften anzuzeigen.  
+    Sie können die Operatoreigenschaften auch im Eigenschaftenfenster anzeigen. Klicken Sie mit der rechten Maustaste auf einen Operator, und klicken Sie auf **Eigenschaften**, wenn die Eigenschaften nicht sichtbar sind. Wählen Sie einen Operator aus, um seine Eigenschaften anzuzeigen.  
+
+    ![Rechtsklick auf „Eigenschaften“ im Planoperator](../../relational-databases/performance/media/planproperties.png "Rechtsklick auf „Eigenschaften“ im Planoperator")    
   
-5.  Sie können die Anzeige des Ausführungsplans ändern, indem Sie mit der rechten Maustaste auf den Ausführungsplan klicken und **Vergrößern**, **Verkleinern**, **Vergrößern/Verkleinern**oder **Zoom anpassen**auswählen. Mit**Vergrößern** und **Verkleinern** können Sie den Ausführungsplan vergrößern bzw. verkleinern. Mit **Vergrößern/Verkleinern** können Sie dagegen einen eigenen Zoomfaktor definieren, z. B. 80 Prozent. Mit**Zoom anpassen** können Sie den Ausführungsplan an die Größe des Ergebnisbereichs anpassen. Verwenden Sie alternativ eine Kombination aus der STRG-Taste und Ihrem Mausrad, um den **dynamischen Zoom** zu aktivieren.  
-  
- 
- > [!NOTE] 
- > Verwenden Sie alternativ [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md), um Informationen zum Ausführungsplan an jede Anweisung nach deren Ausführung zurückzugeben. Bei der Verwendung in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt die Registerkarte *Ergebnisse* über einen Link, der den Ausführungsplan im grafischen Format öffnet.   
+6.  Sie können die Anzeige des Ausführungsplans ändern, indem Sie mit der rechten Maustaste auf den Ausführungsplan klicken und **Vergrößern**, **Verkleinern**, **Vergrößern/Verkleinern**oder **Zoom anpassen**auswählen. Mit**Vergrößern** und **Verkleinern** können Sie den Ausführungsplan vergrößern bzw. verkleinern. Mit **Vergrößern/Verkleinern** können Sie dagegen einen eigenen Zoomfaktor definieren, z. B. 80 Prozent. Mit**Zoom anpassen** können Sie den Ausführungsplan an die Größe des Ergebnisbereichs anpassen. Verwenden Sie alternativ eine Kombination aus der STRG-Taste und Ihrem Mausrad, um den **dynamischen Zoom** zu aktivieren.  
+
+7.  Um in der Anzeige des Ausführungsplans zu navigieren, verwenden Sie die vertikalen und horizontalen Scrollleisten, oder **klicken Sie in einem beliebigen leeren Bereich** des Ausführungsplans, und halten Sie die Maustaste gedrückt, und **ziehen Sie die Maus**. Alternativ können Sie auch auf das Pluszeichen (+) in der rechten unteren Ecke des Ausführungsplanfensters klicken und die Maustaste gedrückt halten, um eine Miniaturansicht des gesamten Ausführungsplans anzuzeigen.
+
+> [!NOTE] 
+> Verwenden Sie alternativ [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md), um Informationen zum Ausführungsplan an jede Anweisung nach deren Ausführung zurückzugeben. Bei der Verwendung in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt die Registerkarte *Ergebnisse* über einen Link, der den Ausführungsplan im grafischen Format öffnet.   
+> Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).

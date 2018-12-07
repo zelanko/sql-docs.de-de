@@ -12,19 +12,19 @@ ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4f691fa89bf3d6db014542088fdd127e344a8346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cfadca5d9bbdeecf582c5cff67b499dc1172297
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690698"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545363"
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>Leistungsverbesserungen mit DTA-Empfehlungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
 ---
-Die Leistung von Data Warehousing- und Analysearbeitsauslastungen kann mit **Columnstore**-Indizes enorm verbessert werden, insbesondere bei Abfragen, bei denen umfangreiche Tabellen gescannt werden müssen. **Rowstore**-Indizes (B+-Struktur) sind bei Abfragen am effektivsten, bei denen bei der Suche nach einem bestimmten Wert oder Wertebereich auf relativ kleine Datenmengen zugegriffen wird. Da Rowstore-Indizes Zeilen in sortierter Reihenfolge zurückgeben, lassen sich damit auch die Kosten der Sortierung in Abfrageausführungsplänen reduzieren. Die Wahl der Kombination von Rowstore- und Columnstore-Indizes für die Erstellung Ihrer Datenbank, hängt somit von der Arbeitsauslastung Ihrer Anwendung ab.
+Die Leistung von Data Warehousing- und Analysearbeitsauslastungen kann mit **Columnstore**-Indizes enorm verbessert werden, insbesondere bei Abfragen, bei denen umfangreiche Tabellen gescannt werden müssen. **Rowstore**-Indizes (B+-Struktur) sind bei Abfragen am effektivsten, bei denen bei der Suche nach einem bestimmten Wert oder Wertebereich auf relativ kleine Datenmengen zugegriffen wird. Da Rowstore-Indizes Zeilen in sortierter Reihenfolge zurückgeben, lassen sich damit auch die Kosten der Sortierung in Abfrageausführungsplänen reduzieren. Die Auswahl der Kombination von Rowstore- und Columnstore-Indizes für die Erstellung Ihrer Datenbank hängt somit von der Workload Ihrer Anwendung ab.
 
 Der Datenbankoptimierungsratgeber (Database Engine Tuning Advisor, DTA) kann ab SQL Server 2016 durch die Analyse der Arbeitsauslastung einer bestimmten Datenbank eine geeignete **Kombination von Rowstore- und Columnstore**-Indizes empfehlen. 
 
@@ -41,15 +41,15 @@ Anschließend haben wir die jeweils empfohlenen Indizes implementiert. Dabei wur
 
 
 
-**Bedarf an gemischten physischen Entwürfen**: Die erste Säulengruppe entspricht Kunde 1, Abfrage 1. DTA (Rowstore + Columnstore) empfiehlt eine Gruppe von vier Columnstore- und sechs Rowstore-Indizes, was zu einer im Vergleich zu einem reinen Columnstore-Index und DTA (nur Rowstore) eine 2,5- bis 4-mal geringere CPU-Zeit zur Folge hat. Dies zeigt die Vorteile von gemischten physischen Entwürfen, die aus Rowstore- und Columnstore-Indizes bestehen, *auch bei einer einzelnen Abfrage*. 
+**Bedarf an gemischten physischen Entwürfen**: Die erste Säulengruppe entspricht Kunde 1, Abfrage 1. DTA (Rowstore und Columnstore) empfiehlt eine Gruppe von vier Columnstore- und sechs Rowstore-Indizes, was zu einer im Vergleich zu einem reinen Columnstore-Index und DTA (nur Rowstore) eine zweieinhalb bis vier Mal geringere CPU-Zeit zur Folge hat. Dies zeigt die Vorteile von gemischten physischen Entwürfen, die aus Rowstore- und Columnstore-Indizes bestehen, *auch bei einer einzelnen Abfrage*. 
 
 **Effizienz von Rowstore-Indexempfehlungen**: Die zweite und die dritte Säulengruppe (die Kunde 1, Abfrage 2 und Kunde 2, Abfrage 1 entsprechen) stellen Fälle dar, bei denen die Abfragen über Auswahlfilterprädikate verfügen, die von geeigneten Rowstore-Indizes profitieren. Für beide Abfragen empfiehlt DTA (nur Rowstore) und DTA (Rowstore + Columnstore) nur Rowstore-Indizes. Diese Beispiele zeigen auch, dass selbst dann, wenn DTA mit der Option ausgeführt wird, Columnstore-Indizes zu empfehlen, das kostenbasierte Konzept sicherstellt, dass ein Columnstore-Index nur dann empfohlen wird, wenn die Arbeitsauslastung tatsächlich davon profitiert.
 
 **Effizienz von Columnstore-Indexempfehlungen**: Die vierte Säulengruppe, die Kunde 2, Abfrage 2 entspricht, stellt einen Fall dar, bei dem die Abfrage umfangreiche Tabellen scannt, die von Columnstore-Indizes profitieren würden. DTA (nur Rowstore) generiert eine Empfehlung, bei der der Wert für die CPU-Zeit höher ist, als wenn Columnstore-Indizes verwendet werden würden. DTA (Rowstore + Columnstore) empfiehlt geeignete Columnstore-Indizes und entspricht somit der Abfrageausführungsleistung der Option „Nur Columnstore“.
 
-**Effizienz von Empfehlungen für Arbeitsauslastungen mit mehreren Abfragen**: Die letzte Säulengruppe, die der gesamten Arbeitsauslastung für Kunde 2 entspricht, veranschaulicht die Fähigkeit von DTA, mehrere Abfragen in der Arbeitsauslastung analysieren und eine geeignete Kombination aus Rowstore- und Columnstore-Indizes empfehlen zu können, sodass die Ausführungskosten der gesamten Arbeitsauslastung verbessert werden. DTA (Rowstore + Columnstore) empfiehlt vier Columnstore-Indizes und eine Reihe von Rowstore-Indizes. Dadurch wird die Leistung für die Arbeitsauslastung im Vergleich zu der Option, mit der nur Columnstore-Indizes erstellt werden, um ein Vielfaches verbessert. Im Vergleich zu DTA (nur Rowstore) lässt sich die Leistung um ein 4- bis 5-Faches verbessern.
+**Effizienz von Empfehlungen für Workloads mit mehreren Abfragen**: Die letzte Säulengruppe, die der gesamten Workload für Kunde 2 entspricht, veranschaulicht die Fähigkeit von DTA, mehrere Abfragen in der Workload analysieren und eine geeignete Kombination aus Rowstore- und Columnstore-Indizes empfehlen zu können, sodass die Ausführungskosten der gesamten Workload verbessert werden. DTA (Rowstore und Columnstore) empfiehlt vier Columnstore-Indizes und eine Reihe von Rowstore-Indizes. Dadurch wird die Leistung für die Workload im Vergleich zu der Option, mit der nur Columnstore-Indizes erstellt werden, um ein Vielfaches verbessert. Im Vergleich zu DTA (nur Rowstore) lässt sich die Leistung um das 4- bis 5-Fache verbessern.
 
-Die obigen Beispiele veranschaulichen also die Fähigkeit von DTA, die von der SQL Server-Datenbank-Engine unterstützten Rowstore- und Columnstore-Indizes optimal nutzen und eine geeignete Indexkombination empfehlen zu können, mit der sich die CPU-Zeit für die Arbeitsauslastung deutlich reduzieren lässt. 
+Die Beispiele oben veranschaulichen also die Fähigkeit von DTA, die von der SQL Server-Datenbank-Engine unterstützten Rowstore- und Columnstore-Indizes optimal nutzen und eine geeignete Indexkombination empfehlen zu können, mit der sich die CPU-Zeit für die Workload deutlich verringern lässt. 
 
 <a name="see-also"></a>Weitere Informationen finden Sie unter
 ---

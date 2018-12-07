@@ -23,12 +23,12 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c20a95bcdb8c91059c63590c333c71a10542473a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 31b1fb369ee6b5007e79c96ebb7a536d6e2a147e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814046"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514036"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "43814046"
   
 -   **Aktualisieren einer DAC mit:**  [Assistent zum Aktualisieren von Datenebenenanwendungen](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Eine DAC-Aktualisierung ist ein direkter Prozess, mit dem das Schema der vorhandenen Datenbank so geändert wird, dass es dem in einer neuen Version der DAC definierten Schema entspricht. Die neue Version der DAC wird in einer DAC-Paketdatei bereitgestellt. Weitere Informationen zum Erstellen eines DAC-Pakets finden Sie unter [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md).  
   
 ###  <a name="ChoseDACUpgOptions"></a> Auswählen von DAC-Aktualisierungsoptionen  
  Für eine parallele Aktualisierung stehen vier Aktualisierungsoptionen zur Verfügung:  
   
--   **Datenverlust ignorieren** – Wenn auf **True**festgelegt, wird die Aktualisierung auch dann fortgesetzt, wenn einige der Vorgänge zu Datenverlust führen. Wenn auf **False**festgelegt, wird bei solchen Vorgängen die Aktualisierung beendet. Wenn beispielsweise eine Tabelle in der aktuellen Datenbank im Schema der neuen DAC nicht vorhanden ist, wird die Tabelle gelöscht, wenn **True** festgelegt ist. Die Standardeinstellung ist **True**.  
+-   **Datenverlust ignorieren**: Wenn **TRUE**, wird das Upgrade auch dann fortgesetzt, wenn einige der Vorgänge zu Datenverlust führen. Wenn auf **False**festgelegt, wird bei solchen Vorgängen die Aktualisierung beendet. Wenn beispielsweise eine Tabelle in der aktuellen Datenbank im Schema der neuen DAC nicht vorhanden ist, wird die Tabelle gelöscht, wenn **True** festgelegt ist. Die Standardeinstellung ist **True**.  
   
--   **Bei Änderungen blockieren** – Wenn auf **True**festgelegt, wird die Aktualisierung beendet, wenn sich das Datenbankschema von dem in der vorherigen DAC definierten Schema unterscheidet. Wenn auf **False**festgelegt, wird die Aktualisierung auch dann fortgesetzt, wenn Änderungen erkannt werden. Die Standardeinstellung ist **False**.  
+-   **Bei Änderungen blockieren**: Wenn **TRUE**, wird die Aktualisierung beendet, wenn sich das Datenbankschema von dem in der vorherigen DAC definierten Schema unterscheidet. Wenn auf **False**festgelegt, wird die Aktualisierung auch dann fortgesetzt, wenn Änderungen erkannt werden. Die Standardeinstellung ist **False**.  
   
--   **Rollback bei Fehler** – Wenn auf **True**festgelegt, wird die Aktualisierung in eine Transaktion eingeschlossen, und wenn Fehler auftreten, wird ein Rollback versucht. Wenn auf **False**festgelegt, wird für alle Änderungen bei ihrer Erstellung ein Commit ausgeführt, und wenn Fehler auftreten, muss möglicherweise eine vorherige Sicherung der Datenbank wiederhergestellt werden. Die Standardeinstellung ist **False**.  
+-   **Rollback bei Fehler**: Wenn **TRUE**, wird die Aktualisierung in eine Transaktion eingeschlossen, und wenn Fehler auftreten, wird ein Rollback versucht. Wenn auf **False**festgelegt, wird für alle Änderungen bei ihrer Erstellung ein Commit ausgeführt, und wenn Fehler auftreten, muss möglicherweise eine vorherige Sicherung der Datenbank wiederhergestellt werden. Die Standardeinstellung ist **False**.  
   
--   **Richtlinienüberprüfung überspringen** – Wenn auf **True**festgelegt, wird die DAC-Richtlinie zur Serverauswahl nicht überprüft. Wenn auf **False**festgelegt, wird die Richtlinie ausgewertet, und im Fall eines Fehlers wird die Aktualisierung beendet. Die Standardeinstellung ist **False**.  
+-   **Richtlinienüberprüfung überspringen**: Wenn **TRUE**, wird die DAC-Richtlinie zur Serverauswahl nicht überprüft. Wenn auf **False**festgelegt, wird die Richtlinie ausgewertet, und im Fall eines Fehlers wird die Aktualisierung beendet. Die Standardeinstellung ist **False**.  
   
 ###  <a name="LimitationsRestrictions"></a> Einschränkungen  
  DAC-Aktualisierungen können nur in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ab Service Pack 4 (SP4) durchgeführt werden.  
@@ -178,7 +178,7 @@ ms.locfileid: "43814046"
 ## <a name="options-page"></a>Seite "Optionen"  
  Verwenden Sie diese Seite, um das Rollback bei Fehlern für die Aktualisierung auszuwählen.  
   
- **Rollback bei Fehler** – Wählen Sie diese Option aus, um die Aktualisierung in eine Transaktion einzuschließen. Der Assistent kann beim Auftreten von Fehlern dann versuchen, ein Rollback durchzuführen. Weitere Informationen zu dieser Option finden Sie unter [Auswählen von DAC-Aktualisierungsoptionen](#ChoseDACUpgOptions).  
+ **Rollback bei Fehler**: Wählen Sie diese Option aus, um das Upgrade in eine Transaktion einzuschließen. Der Assistent kann beim Auftreten von Fehlern dann versuchen, ein Rollback durchzuführen. Weitere Informationen zu dieser Option finden Sie unter [Auswählen von DAC-Aktualisierungsoptionen](#ChoseDACUpgOptions).  
   
  **Standardwerte wiederherstellen**: Setzt die Option auf die Standardeinstellung „false“ zurück.  
   
@@ -193,13 +193,13 @@ ms.locfileid: "43814046"
   
  **Die folgenden Aktionen werden zum Aktualisieren der DAC verwendet.** – Überprüfen Sie die angezeigten Informationen darauf, ob die ergriffenen Maßnahmen richtig sind. In der Spalte **Aktion** werden die Aktionen angezeigt, die für die Aktualisierung ausgeführt werden, z.B. Transact-SQL-Anweisungen. Die Spalte **Datenverlust** enthält eine Warnung, wenn durch die zugeordnete Aktion Daten gelöscht werden könnten.  
   
- **Aktualisieren** – Aktualisiert die Liste der Aktionen.  
+ **Aktualisieren**: Aktualisiert die Liste der Aktionen.  
   
- **Aktionsbericht speichern** – Speichert den Inhalt des Aktionsfensters in einer HTML-Datei.  
+ **Aktionsbericht speichern**: Speichert den Inhalt des Aktionsfensters in einer HTML-Datei.  
   
  **Vorgang fortsetzen, obwohl Änderungen verloren gehen können** : Sie wurden informiert, dass einige der Objekte oder Daten in der aktuellen Datenbank nicht in der neuen Datenbank vorhanden sein werden, möchten die Aktualisierung aber dennoch fortsetzen. Sie sollten diese Schaltfläche nur aktivieren, wenn Sie den Änderungsbericht überprüft und verstanden haben, welche Schritte erforderlich sind, um Objekte oder Daten, die in der neuen Datenbank erforderlich sind, manuell zu übertragen. Wenn Sie nicht sicher sind, klicken Sie auf die Schaltfläche **Aktionsbericht speichern** , um den Änderungsbericht zu speichern. Klicken Sie auf die Schaltfläche **Skripts speichern** , um das Transact-SQL-Skript zu speichern, und klicken Sie dann auf **Abbrechen**. Analysieren Sie den Bericht und das Skript, planen Sie die Übertragung erforderlicher Objekte und Daten nach der Aktualisierung, und starten Sie den Assistenten erneut.  
   
- **Skripts speichern** : Speichert die für die Aktualisierung verwendeten Transact-SQL-Anweisungen in einer Textdatei.  
+ **Skripts speichern**: Speichert die für das Upgrade verwendeten Transact-SQL-Anweisungen in einer Textdatei.  
   
  **Standardwerte wiederherstellen**: Setzt die Option auf die Standardeinstellung „false“ zurück.  
   

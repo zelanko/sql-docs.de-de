@@ -9,25 +9,22 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 05a02bae41ff2d39d9415154fd1aeabeee065c82
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4181615840f62b6e4e8a7447f559f4f0c50eb206
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668549"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586313"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Bestimmen von Nutzungsstatistiken und der Leistung von Ansichten mit DMV
+Dieser Artikel behandelt Methoden und Skripts, mit denen Sie Informationen zur **Leistung von Abfragen, die Sichten verwenden** abrufen können. Der Zweck dieser Skripts besteht darin, Indikatoren für die Nutzung und Leistung verschiedener Sichten in einer Datenbank zu liefern. 
 
-Dieser Artikel behandelt Methoden und Skripts mit denen Sie Informationen zur **Leistung von Abfragen in Ansichten** in einem Datenbankobjekt abrufen können. Die Absicht dieser Skripts ist es, Indikatoren für die Nutzung und Leistung verschiedener Ansichten innerhalb einer Datenbank zu liefern. 
+## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+Die dynamische Verwaltungssicht (DMV) [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) stellt Statistiken zu den Optimierungen durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer bereit. Diese Werte sind kumulativ und werden erfasst, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird. Weitere Informationen zum Abfrageoptimierer finden Sie im [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md).   
 
-## <a name="sysdmexecqueryoptimizerinfo"></a>Sys.dm_exec_query_optimizer_info
+Der common_table_expression (CTE, allgemeiner Tabellenausdruck) unten verwendet diese DMV, um Informationen zur Workload bereitzustellen, z.B. den Prozentsatz der Abfragen, die auf eine Sicht verweisen. Die von dieser Abfrage zurückgegebenen Ergebnisse deuten an sich nicht auf ein Leistungsproblem hin, sondern weisen ggf. auf zugrunde liegende Probleme hin, wenn sie mit Benutzerbeschwerden über langsame Abfragen kombiniert werden. 
 
-Die dynamische Verwaltungssicht (DMV) [sys.dm_exec_query_optimizer_info](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql) macht Statistiken zu den Optimierungen durch den SQL Server-Abfrageoptimierer verfügbar. Diese Werte sind kumulativ und werden erfasst, wenn SQL Server gestartet wird.  
-
-Der untenstehende allgemeine Tabellenausdruck (CTE) verwendet diese DMV, um Informationen zur Arbeitsbelastung bereitzustellen, z.B. den Prozentsatz der Abfragen, die auf eine Ansicht verweisen. Die von dieser Abfrage zurückgegebenen Ergebnisse deuten an sich nicht auf ein Leistungsproblem hin, sondern weisen ggf. auf zugrunde liegende Probleme hin, wenn sie mit Benutzerbeschwerden über langsame Abfragen kombiniert werden. 
-
-
-```SQL
+```sql
 WITH CTE_QO AS
 (
   SELECT
@@ -104,17 +101,17 @@ PIVOT (MAX([%]) FOR [counter]
       ,[fast forward cursor request])) AS p;
 GO
 ```
-Kombinieren Sie die Ergebnisse dieser Abfrage mit den Ergebnissen der Systemansicht [sys.views](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-views-transact-sql), um Abfragestatistiken, Abfragetext und den zwischengespeicherten Ausführungsplan zu ermitteln. 
 
-## <a name="sysviews"></a>Sys.views
+Kombinieren Sie die Ergebnisse dieser Abfrage mit den Ergebnissen der Systemansicht [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), um Abfragestatistiken, Abfragetext und den zwischengespeicherten Ausführungsplan zu ermitteln. 
 
+## <a name="sysviews"></a>sys.views
 Der folgende allgemeine Tabellenausdruck liefert Informationen über die Anzahl von Ausführungen, die Gesamtlaufzeit und die aus dem Arbeitsspeicher gelesenen Seiten. Mithilfe der Ergebnisse lassen sich Abfragen identifizieren, die möglicherweise optimiert werden können. 
   
-  >[!NOTE]
-  > Die Ergebnisse dieser Abfrage können je nach SQL Server-Version variieren.  
+> [!NOTE]
+> Die Ergebnisse dieser Abfrage können je nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version variieren.  
 
 
-```SQL
+```sql
 WITH CTE_VW_STATS AS
 (
   SELECT
@@ -168,12 +165,10 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>Sys.dmv_exec_cached_plans
+## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+Die letzte Abfrage stellt mithilfe der DMV [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) Informationen zu unbenutzte Ansichten bereit. Der Ausführungsplancache ist jedoch dynamisch und die Ergebnisse können variieren. Führen Sie diese Abfrage daher im Laufe der Zeit aus, um festzustellen, ob eine Ansicht tatsächlich verwendet wird. 
 
-Die letzte Abfrage stellt mithilfe der DMV [sys.dmv_exec_cached_plans](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql) Informationen zu unbenutzte Ansichten bereit. Der Ausführungsplancache ist jedoch dynamisch und die Ergebnisse können variieren. Führen Sie diese Abfrage daher im Laufe der Zeit aus, um festzustellen, ob eine Ansicht tatsächlich verwendet wird. 
-
-
-```SQL
+```sql
 SELECT
   SCHEMA_NAME(vw.schema_id) AS schemaname
   ,vw.name AS name
@@ -198,11 +193,11 @@ WHERE
 GO
 ```
 
-## <a name="related-external-resources"></a>Ähnliche externe Ressourcen
-
-- [DMV zur Leistungsoptimierung (Video, SQL Saturday, Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k) (in italienischer Sprache)
-- [DMV zur Leistungsoptimierung (Präsentation und Demo, SQL Saturday, Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409) (in italienischer Sprache)
-- [SQL Server: Optimierung in Kürze (Video, SQL Saturday, Parma)](https://vimeo.com/200980883) (in italienischer Sprache)
-- [SQL Server: Optimierung in Kürze (Präsentation und Demo, SQL Saturday, Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988) (in italienischer Sprache)
-- [Optimieren der Leistung mit der dynamischen Verwaltungssicht von SQL Server](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views) (in englischer Sprache)
-- [Die wichtigsten Wartetypen von SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016) (in italienischer Sprache)
+## <a name="see-also"></a>Siehe auch
+[Dynamische Verwaltungssichten und -funktionen](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[DMVs zur Leistungsoptimierung (Video, SQL Saturday, Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)  (in italienischer Sprache)  
+[DMVs zur Leistungsoptimierung (Präsentation und Demo, SQL Saturday, Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)  (in italienischer Sprache)  
+[SQL Server: Optimierung in Kürze (Video, SQL Saturday, Parma)](https://vimeo.com/200980883)   (in italienischer Sprache)  
+[SQL Server: Optimierung in Kürze (Präsentation und Demo, SQL Saturday, Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)  (in italienischer Sprache)  
+[Optimieren der Leistung mit der dynamischen Verwaltungssicht von SQL Server](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)  (in englischer Sprache)  
+[Die wichtigsten Wartetypen von SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016) (in italienischer Sprache)   

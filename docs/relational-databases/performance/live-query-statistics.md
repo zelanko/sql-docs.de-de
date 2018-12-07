@@ -1,7 +1,7 @@
 ---
 title: Live-Abfragestatistik | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/28/2015
+ms.date: 11/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -11,29 +11,37 @@ helpviewer_keywords:
 - live query statistics
 - debugging [SQL Server], live query stats
 - statistics [SQL Server], live query statistics
+- query profiling
+- lightweight query profiling
+- lightweight profiling
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ecfcf242fc0c56bd7e232b5ac22823526193ad9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42c1612916ec1de69e02ce50febd6a2820cd9684
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648528"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412607"
 ---
 # <a name="live-query-statistics"></a>Live-Abfragestatistik
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] bietet die Möglichkeit, den Live-Ausführungsplan einer aktiven Abfrage anzuzeigen. Dieser Live-Abfrageplan bietet Einblicke in Echtzeit in den Ausführungsprozess der Abfrage, während die Steuerelemente von einem [Abfrageplanoperator](../../relational-databases/showplan-logical-and-physical-operators-reference.md) zu einem anderen übertragen werden. Der Live-Abfrageplan zeigt den gesamten Abfragestatus und die Laufzeit-Ausführungsstatistik auf Operatorebene an, wie z.B. die Anzahl der erzeugten Zeilen, die verstrichene Zeit, den Operatorstatus usw. Da diese Daten in Echtzeit verfügbar sind und es nicht nötig ist, auf den Abschluss der Abfrage zu warten, sind diese Ausführungsstatistiken äußerst nützlich für das Debuggen von Leistungsproblemen in Zusammenhang mit Abfragen. Diese Funktion ist ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]verfügbar, funktioniert unter Umständen jedoch auch mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] bietet die Möglichkeit, den Live-Ausführungsplan einer aktiven Abfrage anzuzeigen. Dieser Live-Abfrageplan bietet Einblicke in Echtzeit in den Ausführungsprozess der Abfrage, während die Steuerelemente von einem [Abfrageplanoperator](../../relational-databases/showplan-logical-and-physical-operators-reference.md) zu einem anderen übertragen werden. Der Live-Abfrageplan zeigt den gesamten Abfragestatus und die Laufzeit-Ausführungsstatistik auf Operatorebene an, wie z.B. die Anzahl der erzeugten Zeilen, die verstrichene Zeit, den Operatorstatus usw. Da diese Daten in Echtzeit verfügbar sind und es nicht nötig ist, auf den Abschluss der Abfrage zu warten, sind diese Ausführungsstatistiken äußerst nützlich für das Debuggen von Leistungsproblemen in Zusammenhang mit Abfragen. Diese Funktion ist ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]verfügbar, funktioniert unter Umständen jedoch auch mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+
+> [!NOTE]
+> Intern nutzen Live-Abfragestatistiken die [dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)-DMV.
   
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 > [!WARNING]  
-> Diese Funktion wird hauptsächlich für Problembehandlungszwecke vorgesehen. Mit dieser Funktion kann die gesamte Abfrageleistung leicht verlangsamt werden. Diese Funktion kann mit dem [Transact-SQL-Debugger](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)verwendet werden.  
+> Diese Funktion wird hauptsächlich für Problembehandlungszwecke vorgesehen. Mit dieser Funktion kann die gesamte Abfrageleistung leicht verlangsamt werden, insbesondere in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).  
+> Diese Funktion kann mit dem [Transact-SQL-Debugger](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)verwendet werden.  
   
-#### <a name="to-view-live-query-statistics"></a>So zeigen Sie die Live-Abfragestatistik an  
+## <a name="to-view-live-query-statistics-for-one-query"></a>So zeigen Sie Live-Abfragestatistiken für eine Abfrage an 
   
-1.  Klicken Sie zum Anzeigen des Live-Abfrageausführungsplans im Menü „Extras“ auf das Symbol **Live-Abfragestatistik** .  
+1.  Klicken Sie zum Anzeigen des Live-Abfrageausführungsplans im Menü „Extras“ auf das Symbol **Live-Abfragestatistik einschließen**.  
   
      ![Schaltfläche „Live-Abfragestatistik“ auf der Symbolleiste](../../relational-databases/performance/media/livequerystatstoolbar.png "Schaltfläche „Live-Abfragestatistik“ auf der Symbolleiste")  
   
@@ -45,34 +53,17 @@ ms.locfileid: "47648528"
   
      ![Schaltfläche „Live-Abfragestatistik“ im Showplan](../../relational-databases/performance/media/livequerystatsplan.png "Schaltfläche „Live-Abfragestatistik“ im Showplan")  
   
- Sie können auf den Plan für aktive Abfragen auch vom **Aktivitätsmonitor** aus zugreifen, indem Sie mit der rechten Maustaste auf die Abfragen in der Tabelle **Aktuelle ressourcenintensive Abfragen** klicken.  
+## <a name="to-view-live-query-statistics-for-any-query"></a>So zeigen Sie Live-Abfragestatistiken für eine beliebige Abfrage an 
+
+Sie können auf den Plan für aktive Abfragen auch über den **[Aktivitätsmonitor](../../relational-databases/performance-monitor/activity-monitor.md)** zugreifen, indem Sie mit der rechten Maustaste auf eine beliebige Abfrage in der Tabelle **Prozesse** oder **Aktuelle ressourcenintensive Abfragen** klicken.  
   
  ![Schaltfläche „Live-Abfragestatistik“ im Aktivitätsmonitor](../../relational-databases/performance/media/livequerystatsactmon.png "Schaltfläche „Live-Abfragestatistik“ im Aktivitätsmonitor")  
   
 ## <a name="remarks"></a>Remarks  
- Die Infrastruktur des Statistikprofils muss aktiviert sein, bevor die Live-Abfragestatistik Informationen zum Status von Abfragen erfassen kann. Die Angabe von **Live-Abfragestatistiken einschließen** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] aktiviert die Statistikinfrastruktur für die aktuelle Abfragesitzung. 
- 
-Bis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] gibt es zwei weitere Methoden, um die Statistikinfrastruktur zu aktivieren. Diese kann verwendet werden, um die Statistiken für aktive Abfragen aus anderen Sitzungen (z.B. vom Aktivitätsmonitor) anzuzeigen:  
-  
--   Führen Sie `SET STATISTICS XML ON;` oder `SET STATISTICS PROFILE ON;` in der Zielsitzung aus.  
-  
- oder  
-  
--   Aktivieren Sie das erweiterte Ereignis **query_post_execution_showplan** . Dies ist eine serverweite Einstellung, die Statistiken für aktive Abfragen zu allen Sitzungen aktiviert. Informationen zum Aktivieren von erweiterten Ereignissen finden Sie unter [Überwachen der Systemaktivität mit erweiterten Ereignissen](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
-
-Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 umfasst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine einfache Version der Infrastruktur des Statistikprofils. Es gibt zwei Methoden, die einfache Version der Statistikinfrastruktur zu aktivieren. Diese kann verwendet werden, um die Statistiken für aktive Abfragen aus anderen Sitzungen (z.B. vom Aktivitätsmonitor) anzuzeigen:
-
--   Verwenden des globalen Ablaufverfolgungsflags 7412  
-  
- oder  
-  
--   Aktivieren des erweiterten Ereignisses **query_thread_profile** . Dies ist eine serverweite Einstellung, die Statistiken für aktive Abfragen zu allen Sitzungen aktiviert. Informationen zum Aktivieren von erweiterten Ereignissen finden Sie unter [Überwachen der Systemaktivität mit erweiterten Ereignissen](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).
-  
- > [!NOTE]
- > Nativ kompilierte gespeicherte Prozeduren werden nicht unterstützt.  
+ Die Infrastruktur des Statistikprofils muss aktiviert sein, bevor die Live-Abfragestatistik Informationen zum Status von Abfragen erfassen kann. Abhängig von der Version kann der Mehraufwand erheblich sein. Weitere Informationen zu diesem Mehraufwand finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **SHOWPLAN** -Berechtigung für die Datenbankebene, um die **Live-Abfragestatistik** -Ergebnisseite aufzufüllen, und die **VIEW SERVER STATE** -Berechtigung für die Serverebene, um die Live-Statistik anzuzeigen sowie eine nötige Berechtigung zum Ausführen der Abfrage.  
+ Erfordert die `SHOWPLAN`-Berechtigung auf Datenbankebene, um die **Live-Abfragestatistik**-Ergebnisseite mit Daten aufzufüllen, und die `VIEW SERVER STATE`-Berechtigung auf Serverebene, um die Live-Statistik anzuzeigen, sowie erforderliche Berechtigungen zum Ausführen der Abfrage.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -83,4 +74,5 @@ Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 umfasst [!INCLUDE[ssNoV
  [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)     
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
  [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
- [Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md)
+ [Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
+ [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md)   
