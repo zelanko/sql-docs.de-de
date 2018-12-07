@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28e84b82a069515330e58ea5a15fd321ce77a11b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1d4d718b38780b7dd77f356269a431daf0f91b03
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660249"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514644"
 ---
 # <a name="create-views"></a>Erstellen von Sichten
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "51660249"
   
 1.  Erweitern Sie im **Objekt-Explorer**die Datenbank, in der Sie die neue Sicht erstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sichten** , und klicken Sie anschließend auf **Neue Sicht…**.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sichten**, und klicken Sie anschließend auf **Neue Sicht…**.  
   
 3.  Wählen Sie im Dialogfeld **Tabelle hinzufügen** das Element oder die Elemente, die Sie in die neue Sicht einschließen möchten, auf einer der folgenden Registerkarten aus: Tabellen, Sichten, Funktionen und Synonyme.  
   

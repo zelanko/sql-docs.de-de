@@ -13,12 +13,12 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b3e0a936d4898988dfeacfefe1bf00058b16fa5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b8205fdb8dc5e869a9ef96ab4d76739e08ce386
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757808"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522366"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable-Kompatibilität mit anderen SQL Server-Funktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,11 +86,11 @@ ms.locfileid: "47757808"
   
 -   Die Sicht weist keine FileTable-Semantik auf. Die Spalten in der Sicht (einschließlich Dateiattributspalten) verhalten sich z. B. wie normale Sichtspalten ohne besondere Semantik. Das gleiche gilt für Zeilen, die Dateien/Verzeichnisse darstellen.  
   
--   Die Sicht kann möglicherweise auf Grundlage der Semantik für eine aktualisierbare Sicht aktualisiert werden, die Updates können jedoch wie in der Tabelle aufgrund der zugrunde liegenden Tabelleneinschränkungen abgelehnt werden.  
+-   Die Ansicht kann möglicherweise auf Grundlage der Semantik für eine aktualisierbare Ansicht aktualisiert werden, die Updates können jedoch wie in der Tabelle aufgrund der zugrunde liegenden Tabelleneinschränkungen abgelehnt werden.  
   
 -   Der Dateipfad für eine Datei kann in der Sicht visuell dargestellt werden, indem er als explizite Spalte in der Sicht hinzugefügt wird. Zum Beispiel:  
   
-     `CREATE VIEW MP3FILES AS SELECT column1, column2, …, GetFileNamespacePath() AS PATH, column3,…  FROM Documents`  
+     `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   
  **Indizierte Sichten**  
  Indizierte Sichten können derzeit keine FILESTREAM-Spalten oder berechnete/persistente berechnete Spalten enthalten, die von den FILESTREAM-Spalten abhängig sind. Dieses Verhalten bleibt auch bei in der FileTable definierten Sichten unverändert.  

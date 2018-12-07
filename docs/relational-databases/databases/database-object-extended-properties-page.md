@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65d7ed2f7b7639ae2b92222ad97af6edba873f6c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 773edf9a47ab10af5a1b00ee7f64b27f60c14191
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671869"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522253"
 ---
 # <a name="database-object-extended-properties-page"></a>Datenbankobjekt (Seite Erweiterte Eigenschaften)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51671869"
  Zeigt bzw. gibt die erweiterten Eigenschaften für das Objekt an. Jede erweiterte Eigenschaft besteht aus einem aus Name und Wert bestehenden Paar von Metadaten, das dem Objekt zugeordnet ist.  
   
  **Durchsuchen (Schaltfläche)**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen (…) neben **Wert** , um das **Dialogfeld mit dem Wert der erweiterten Eigenschaft** zu öffnen. Geben Sie den Wert der erweiterten Eigenschaft an diesem größeren Speicherort ein, bzw. zeigen Sie ihn an.  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen (…) neben **Wert**, um das **Dialogfeld mit dem Wert der erweiterten Eigenschaft** zu öffnen. Geben Sie den Wert der erweiterten Eigenschaft an diesem größeren Speicherort ein, bzw. zeigen Sie ihn an.  
   
  **Delete**  
  Entfernt die ausgewählte erweiterte Eigenschaft.  

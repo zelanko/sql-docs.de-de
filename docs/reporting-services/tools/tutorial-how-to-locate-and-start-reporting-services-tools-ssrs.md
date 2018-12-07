@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be1056992fea4b9b1ee7bcd0857ca566d67cab40
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2a720f17e43dc22c5bb554c1e7a83cc7e845b835
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813853"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711301"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Lernprogramm: So suchen und starten Sie Reporting Services-Tools (SSRS)
 
@@ -132,7 +132,7 @@ Herunterladen von [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkI
  Informationen zum Erstellen Ihrer ersten Berichte finden Sie unter [Erstellen eines einfachen Tabellenberichts (SSRS-Tutorial)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Weitere Informationen zu Abfrage-Designern, die Sie im Berichts-Designer verwenden können, finden Sie unter [Abfrageentwurfstools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)kennen lernen.  
   
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
- Der[Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) ist eine eigenständige Anwendung zum Erstellen paginierter Berichte außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie haben die Möglichkeit, alle vorhandenen Berichte anzupassen und zu aktualisieren. Dabei spielt es keine Rolle, ob sie im Berichts-Designer oder in früheren Versionen des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]s erstellt wurden. Die Installation kann über das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Webportal oder über das Microsoft Download Center erfolgen.  
+ Der [Berichts-Generator in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) ist eine eigenständige Anwendung zum Erstellen paginierter Berichte außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie haben die Möglichkeit, alle vorhandenen Berichte anzupassen und zu aktualisieren. Dabei spielt es keine Rolle, ob sie im Berichts-Designer oder in früheren Versionen des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]s erstellt wurden. Die Installation kann über das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Webportal oder über das Microsoft Download Center erfolgen.  
   
  [Laden Sie den Berichts-Generator](https://go.microsoft.com/fwlink/?LinkID=219138) aus dem Microsoft Download Center herunter.  
   

@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.linkeddomain.f1
@@ -14,12 +13,12 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0bce721aec2958cca21a4ac002b0da5a90682fb9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 40757d069ce849b71f93d7f420247dddcc8d229a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702228"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617890"
 ---
 # <a name="create-a-linked-domain"></a>Erstellen einer verknüpften Domäne
 
@@ -36,7 +35,7 @@ ms.locfileid: "51702228"
 ### <a name="controlling-data-flow-to-composite-domains"></a>Steuern des Datenflusses zu Verbunddomänen  
  Verknüpfte Domänen ermöglichen es Ihnen, den Datenfluss zwischen Felder und Verbunddomänen zu steuern. Sie können unterscheiden, wenn Daten von einem Feld in eine Verbunddomäne fließen und wenn Daten von einem anderen, sehr ähnlichen Feld nicht in die Verbunddomäne fließen. Dies erreichen Sie, indem Sie angeben, dass von zwei verknüpften Domänen eine Teil einer Verbunddomäne ist, die andere aber nicht. Aus Domänenperspektive sind verknüpfte Domänen identisch. Sie enthalten das gleiche Wissen. Aus Verbunddomänenperspektive unterscheiden sich verknüpfte Domänen allerdings voneinander. Die eine ist Teil der Verbunddomäne, die andere aber nicht.  
   
- Ein Beispiel ist ein Datensatz, der die folgenden Felder enthält: Kundenvorname, Kundennachname und Vorname des Vaters. Angenommen, Sie ordnen den Kundenvornamen und den Vornamen des Vaters einer Vornamendomäne zu und machen die Vornamendomäne und die Nachnamendomäne zu Teilen einer Verbunddomäne für vollständige Namen. Das Problem ist, dass der Vorname des Vaters der Verbunddomäne ohne Nachname hinzugefügt wird. Wenn Sie allerdings die beiden Vornamenfelder mit einer Domäne verknüpfen und die beiden Domänen miteinander verknüpfen, können Sie die Kundenvornamedomäne der Verbunddomäne für vollständige Namen hinzufügen und das Feld für den Vornamen des Vaters nicht der Verbunddomäne hinzufügen. Dadurch verhindern Sie, dass der Vorname des Vaters der Verbunddomäne hinzugefügt wird.  
+ Ein Beispiel ist ein Datensatz, der die folgenden Felder enthält: Kundenvorname, Kundennachname und Vorname des Vaters. Angenommen, Sie ordnen den Kundenvornamen und den Vornamen des Vaters einer Vornamendomäne zu und machen die Vornamendomäne und die Nachnamendomäne zu Teilen einer Verbunddomäne für vollständige Namen. Das Problem ist, dass der Vorname des Vaters zur Verbunddomäne ohne Nachname hinzugefügt wird. Wenn Sie allerdings die beiden Vornamenfelder mit einer Domäne verknüpfen und die beiden Domänen miteinander verknüpfen, können Sie die Kundenvornamendomäne zur Verbunddomäne für vollständige Namen hinzufügen und das Feld für den Vornamen des Vaters nicht zur Verbunddomäne hinzufügen. Dadurch verhindern Sie, dass der Vorname des Vaters zur Verbunddomäne hinzugefügt wird.  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   

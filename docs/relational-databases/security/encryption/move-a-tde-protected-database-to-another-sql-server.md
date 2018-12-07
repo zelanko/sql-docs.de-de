@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9b4036967c0e542aa418fe80cf42c60c602a1ae1
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 1549c672211d328a723ab8eb056e8f227f1107ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169300"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521111"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
   
 4.  Geben Sie im Dialogfeld **Neue Datenbank** in das Feld **Datenbankname** den Namen der neuen Datenbank ein.  
   
-5.  Geben Sie im Feld **Besitzer** den Namen des Besitzers der neuen Datenbank ein. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Datenbankbesitzer auswählen** zu öffnen. Weitere Informationen zum Erstellen einer neuen Datenbank finden Sie unter [Create a Database](../../../relational-databases/databases/create-a-database.md).  
+5.  Geben Sie im Feld **Besitzer** den Namen des Besitzers der neuen Datenbank ein. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Datenbankbesitzer auswählen** zu öffnen. Weitere Informationen zum Erstellen einer neuen Datenbank finden Sie unter [Create a Database](../../../relational-databases/databases/create-a-database.md).  
   
 6.  Klicken Sie im Objekt-Explorer auf das Pluszeichen, um den Ordner **Datenbank** zu erweitern.  
   
@@ -142,7 +142,7 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
   
 ###  <a name="SSMSMove"></a> Verwenden von SQL Server Management Studio  
   
-1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste, auf die oben verschlüsselte Datenbank, zeigen Sie auf **Tasks** , und wählen Sie **Trennen**aus.  
+1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank, die Sie oben verschlüsselt haben, zeigen Sie auf **Tasks**, und wählen Sie **Trennen...** aus.  
   
      Die folgenden Optionen sind im Dialogfeld **Datenbank trennen** verfügbar.  
   
@@ -172,7 +172,7 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
   
     -   Wenn eine Datenbank an einer Replikation beteiligt ist, hat der **Status** den Wert **Nicht bereit** , und unter **Meldung** wird **Die Datenbank wurde repliziert**angezeigt.  
   
-    -   Wenn eine Datenbank über eine oder mehrere Verbindungen verfügt, hat der **Status** den Wert **Nicht bereit**, und in der Spalte **Meldung** wird _\<number\_of\_active\_connections\>_**Aktive Verbindung(en)** angezeigt, z. B.: **1 Aktive Verbindung(en)**. Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
+    -   Wenn eine Datenbank über mindestens eine Verbindung verfügt, weist der **Status** den Wert **Nicht bereit** auf, und in der Spalte **Nachricht** wird _\<number\_of\_active\_connections\>_**Aktive Verbindung(en)** angezeigt, z. B.: **1 Aktive Verbindung(en)**. Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
   
      Weitere Informationen zu einer Meldung erhalten Sie, indem Sie auf den Linktext klicken, um den Aktivitätsmonitor zu öffnen.  
   
@@ -186,11 +186,11 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
   
 6.  Erstellen Sie anhand der entsprechenden Sicherungsdatei das Serverzertifikat neu. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
   
-7.  Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf den Ordner **Datenbanken** , und klicken Sie dann auf **Anfügen**.  
+7.  Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf den Ordner **Datenbanken**, und klicken Sie anschließend auf **Anfügen...**.  
   
 8.  Klicken Sie im Dialogfeld **Datenbanken anfügen** unter **Anzufügende Datenbanken**auf **Hinzufügen**.  
   
-9. Wählen Sie im Dialogfeld **Lokale Datenbankdateien –**_server\_name_ die Datenbankdatei aus, die dem neuen Server angefügt werden soll, und klicken Sie auf **OK**.  
+9. Wählen Sie im Dialogfeld **Lokale Datenbankdateien –**_server\_name_ die Datenbankdatei aus, die an den neuen Server angefügt werden soll, und klicken Sie auf **OK**.  
   
      Die folgenden Optionen sind im Dialogfeld **Datenbanken anfügen** verfügbar.  
   
@@ -234,7 +234,7 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
      Entfernt die ausgewählte Datei aus dem Raster **Anzufügende Datenbank** .  
   
      **"** *<database_name>* **" Datenbankdetails für**  
-     Zeigt die Namen der anzufügenden Dateien an. Um den Pfadnamen einer Datei zu überprüfen bzw. zu ändern, klicken Sie auf die Schaltfläche **Durchsuchen** (**…**).  
+     Zeigt die Namen der anzufügenden Dateien an. Klicken Sie zum Überprüfen oder Ändern des Pfadnamens einer Datei auf die Schaltfläche **Durchsuchen** (**…**).  
   
     > [!NOTE]  
     >  Wenn eine Datei nicht vorhanden ist, wird in der Spalte **Meldung** "Nicht gefunden" angezeigt. Wenn keine Protokolldatei gefunden wird, liegt sie in einem anderen Verzeichnis oder wurde gelöscht. Dann müssen Sie entweder den Dateipfad im Raster **Datenbankdetails** ändern, um auf den richtigen Pfad zu verweisen, oder die Protokolldatei aus dem Raster entfernen. Wenn keine .ndf-Datei gefunden wurde, müssen Sie ihren Pfad im Raster aktualisieren, um auf den richtigen Pfad zu verweisen.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e7dfa2d347f020fc0514536680dce4343ee625c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a912718146d2c106072615577c130b2da576a578
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021454"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518514"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -25,7 +25,7 @@ ms.locfileid: "50021454"
 
   Dieser Artikel dient zur Übersicht über die Upgrade- und Migrationsoptionen für SQL Server Reporting Services. Es gibt zwei allgemeine Vorgehensweisen beim Upgrade einer SQL Server Reporting Services-Bereitstellung:  
   
--   **Upgrade:** Sie aktualisieren die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten auf den Servern und Instanzen, auf denen sie derzeit installiert sind. Dies wird im Allgemeinen als "direktes" Upgrade bezeichnet. Direkte Upgrades zwischen verschiedenen Modi des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servers werden nicht unterstützt. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf einen Berichtsserver im SharePoint-Modus aktualisieren. Berichtselemente können allerdings zwischen verschiedenen Modi migriert werden. Weitere Informationen finden Sie weiter unten in diesem Dokument im Abschnitt "Migration vom einheitlichen Modus zum SharePoint-Modus".  
+-   **Upgrade:** Sie aktualisieren die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten auf den Servern und Instanzen, auf denen sie derzeit installiert sind. Dies wird im Allgemeinen als „direktes“ Upgrade bezeichnet. Direkte Upgrades zwischen verschiedenen Modi des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servers werden nicht unterstützt. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf einen Berichtsserver im SharePoint-Modus aktualisieren. Berichtselemente können allerdings zwischen verschiedenen Modi migriert werden. Weitere Informationen finden Sie weiter unten in diesem Dokument im Abschnitt „Migration vom einheitlichen Modus zum SharePoint-Modus“.  
   
 -   **Migrieren:** Sie installieren und konfigurieren eine neue SharePoint-Umgebung, kopieren Ihre Berichtselemente und Ressourcen in die neue Umgebung und konfigurieren die neue Umgebung für die Verwendung der vorhandenen Inhalte. Eine einfachere Form der Migration besteht darin, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenbanken, die Konfigurationsdateien und (falls Sie den SharePoint-Modus verwenden) die SharePoint-Inhaltsdatenbanken zu kopieren.  
     
@@ -131,7 +131,7 @@ ms.locfileid: "50021454"
   
   
 ##  <a name="bkmk_native_scaleout"></a> Aktualisieren einer Bereitstellung für horizontales Skalieren mit Reporting Services im einheitlichen Modus  
- Im Folgenden erhalten Sie eine Übersicht darüber, wie Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung im einheitlichen Modus aktualisieren, die horizontal auf mehr als einen Berichtsserver skaliert ist. Bei diesem Vorgang muss die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung außer Betrieb gesetzt werden:  
+ Im Folgenden erhalten Sie eine Übersicht darüber, wie Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bereitstellung im einheitlichen Modus aktualisieren, die horizontal auf mehr als einen Berichtsserver skaliert ist. Bei diesem Vorgang muss die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung außer Betrieb gesetzt werden:  
   
 1.  Sichern Sie die Berichtsserver-Datenbanken und die Verschlüsselungsschlüssel. Weitere Informationen finden Sie unter [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) und [Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   

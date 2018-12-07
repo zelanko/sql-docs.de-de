@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d2aaa46b763e58cff11fec353a46745cb4065325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802988"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711483"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial erstellen Sie einen paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht mit einem Säulendiagramm, das eine Datenreihe in Form mehrerer nach Kategorie gruppierter Säulen erstellt. 
@@ -302,6 +302,6 @@ Sie haben das Lernprogramm "Hinzufügen eines Säulendiagramms zu einem Bericht"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 -    [Tutorials (Berichts-Generator)](../reporting-services/report-builder-tutorials.md) 
--    [Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+-    [Berichts-Generator in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

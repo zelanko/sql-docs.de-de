@@ -18,12 +18,12 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dc7dac6572ac10d6526fbf4052a046a2093bbd52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2197d120799041cb679453b6b6a1c3dc2070e7d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662818"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507614"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Diagramme (Berichts-Generator und SSRS)
 Erfahren Sie mehr über das Verwenden von Diagrammdatenbereichen, um die Leser Ihrer paginierten Berichte von [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] dabei zu unterstützen, große Mengen von aggregierten Daten auf einen Blick zu verstehen.  
@@ -139,8 +139,8 @@ Je mehr Zeit Sie dafür aufwenden, Ihre Daten vorzubereiten und zu analysieren, 
  [Bilder, Textfelder, Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
  [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

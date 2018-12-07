@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 95cda6788643ac19fd21c2838f10c8a3c3e54f8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2b85546e79e426f078ff77ab11b4eb9eb076aea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828729"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519523"
 ---
 # <a name="server-memory-server-configuration-options"></a>Serverkonfigurationsoptionen für den Serverarbeitsspeicher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Die Standardeinstellung für **Minimaler Serverarbeitsspeicher** ist 0; für **M
 Die minimal zulässige Arbeitsspeichermenge für **Max. Serverarbeitsspeicher** beträgt 128 MB.
   
 > [!IMPORTANT]  
-> Die Festlegung von **Max. Serverarbeitsspeicher** auf einen zu hohen Wert kann dazu führen, dass eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise in Konkurrenz mit anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen gerät, die auf dem gleichen Host aufgeführt werden. Die Festlegung auf einen zu niedrigen Wert kann jedoch zu erheblichem Arbeitsspeichermangel und entsprechenden Leistungsproblemen führen. Das Festlegen von **Max. Serverarbeitsspeicher** auf den Minimalwert kann sogar den Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhindern. Wenn sich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach dem Ändern dieser Option nicht starten lässt, müssen Sie es mithilfe der Startoption ***–f*** starten und die Option **Max. Serverarbeitsspeicher** auf ihren vorherigen Wert zurücksetzen. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+> Die Festlegung von **Max. Serverarbeitsspeicher** auf einen zu hohen Wert kann dazu führen, dass eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise in Konkurrenz mit anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen gerät, die auf dem gleichen Host aufgeführt werden. Die Festlegung auf einen zu niedrigen Wert kann jedoch zu erheblichem Arbeitsspeichermangel und entsprechenden Leistungsproblemen führen. Das Festlegen von **Max. Serverarbeitsspeicher** auf den Minimalwert kann sogar den Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhindern. Wenn sich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach dem Ändern dieser Option nicht starten lässt, müssen Sie es mithilfe der Startoption ***-f*** starten und die Option **Max. Serverarbeitsspeicher** auf ihren vorherigen Wert zurücksetzen. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Arbeitsspeicher dynamisch verwenden. Sie können die Speicheroptionen jedoch auch manuell festlegen und den Umfang des für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifbaren Arbeitsspeichers einschränken. Bevor Sie den Umfang des Arbeitsspeichers für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] festlegen, sollten Sie die geeignete Arbeitsspeichereinstellung ermitteln. Ziehen Sie dazu vom gesamten physischen Speicher den Arbeitsspeicher ab, der für das Betriebssystem, für nicht durch die Einstellung „max_server_memory“ gesteuerte Speicherbelegungen und für alle weiteren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erforderlich ist. (Falls der Computer nicht vollständig für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserviert ist, müssen Sie zusätzlich auch den für andere Verwendungen des Systems benötigten Arbeitsspeicher abziehen.) Die Differenz entspricht der maximalen Arbeitsspeichergröße, die Sie der aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zuweisen können.  
  

@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3041f983b1d5aec55ac3727c322558ed22e69315
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 29682619886dc257ba2b2583f4c4d256158df797
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658629"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535311"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -204,7 +204,7 @@ GO
 
 Weitere Informationen zu Verbesserungen der Leistung in tempdb finden Sie im folgenden Blogartikel:
 
-[TEMPDB – Files and Trace Flags and Updates, Oh My! (TEMPDB: Dateien, Ablaufverfolgungsflags und Updates – Hilfe!)](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
+[TEMPDB – Files and Trace Flags and Updates, Oh My! (TEMPDB: Dateien, Ablaufverfolgungsflags und Updates)](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>Kapazitätsplanung für tempdb in SQL Server
  Das Festlegen der angemessenen Größe von tempdb in einer SQL Server-Produktionsumgebung hängt von vielen Faktoren ab. Wie bereits zuvor in diesem Artikel beschrieben, schließen diese Faktoren die vorhandene Workload und die verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen ein. Es wird empfohlen, die vorhandene Workload durch Ausführen folgender Aufgaben in einer SQL Server-Testumgebung zu analysieren:

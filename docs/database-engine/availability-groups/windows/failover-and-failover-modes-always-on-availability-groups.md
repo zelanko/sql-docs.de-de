@@ -15,12 +15,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 048b5d627e33ac241f68c7d2017535ddb5e0bd16
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d66d1ccdbfbcd7f59f395b9ecf8367b7a7e16058
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605310"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523400"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51605310"
   
  Die von den einzelnen Verfügbarkeitsreplikaten unterstützten Failoverformen werden von der Eigenschaft *Failovermodus* angegeben. Die für die einzelnen Verfügbarkeitsreplikate möglichen Failovermodi hängen wie folgt vom [Verfügbarkeitsmodus](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md) des Replikats ab:  
   
--   **Replikate mit synchronem Commit** unterstützen zwei Einstellungen – automatisch oder manuell. Die "automatische" Einstellung unterstützt sowohl automatisches Failover als auch manuelles Failover. Um Datenverluste zu vermeiden, muss das Failoverziel beim automatischen und geplanten Failover ein sekundäres Replikat mit synchronem Commit und fehlerfreiem Synchronisierungsstatus sein (was darauf hinweist, dass jede sekundäre Datenbank auf dem Failoverziel mit der entsprechenden primären Datenbank synchronisiert ist). Wenn ein sekundäres Replikat keine dieser Bedingungen erfüllt, unterstützt es stets nur ein erzwungenes Failover. Beachten Sie, dass erzwungene Failover auch von Replikaten unterstützt werden, deren Rolle sich im RESOLVING-Status befindet.  
+-   **Replikate mit synchronem Commit** unterstützen zwei Einstellungen: automatisch oder manuell. Die "automatische" Einstellung unterstützt sowohl automatisches Failover als auch manuelles Failover. Um Datenverluste zu vermeiden, muss das Failoverziel beim automatischen und geplanten Failover ein sekundäres Replikat mit synchronem Commit und fehlerfreiem Synchronisierungsstatus sein (was darauf hinweist, dass jede sekundäre Datenbank auf dem Failoverziel mit der entsprechenden primären Datenbank synchronisiert ist). Wenn ein sekundäres Replikat keine dieser Bedingungen erfüllt, unterstützt es stets nur ein erzwungenes Failover. Beachten Sie, dass erzwungene Failover auch von Replikaten unterstützt werden, deren Rolle sich im RESOLVING-Status befindet.  
   
 -   **Replikate mit asynchronem Commit** unterstützen nur den manuellen Failovermodus. Da sie nie synchronisiert werden, unterstützen sie nur erzwungene Failover.  
   

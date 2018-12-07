@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.matchingproject.map.f1
@@ -16,12 +15,12 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9d855f0f1a43c3c5d885941b6a924835732161d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93ad673f1566d1045705c390b0b0064859ba18fd
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702928"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617950"
 ---
 # <a name="run-a-matching-project"></a>Ausführen eines Abgleichsprojekts
 
@@ -33,7 +32,7 @@ ms.locfileid: "47702928"
   
  Sie müssen den Abgleich vorbereiten, indem Sie eine Abgleichsrichtlinie mit einer oder mehreren Abgleichsregeln erstellen und die Richtlinie für Beispieldaten ausführen. Der Abgleichsprojektprozess erfolgt getrennt vom Abgleichsrichtlinienprozess. Es wird keine Wissensdatenbank mit dem beim Abgleichsprojekt gewonnenen Abgleichswissen gefüllt. Weitere Informationen zum Erstellen von Abgleichsrichtlinie finden Sie unter [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
@@ -67,7 +66,7 @@ ms.locfileid: "47702928"
     > [!NOTE]  
     >  Sie können die Quelldaten nur dann einer DQS-Domäne zuordnen, wenn der Quelldatentyp in DQS unterstützt wird und mit dem DQS-Domänendatentyp übereinstimmt. Informationen zu in DQS unterstützten Datentypen finden Sie unter [Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Klicken Sie auf das Plussteuerelement **(+)** , um der Zuordnungstabellen eine Zeile hinzuzufügen, oder auf das Minussteuerelement **(-)** , um eine Zeile zu entfernen.  
+4.  Klicken Sie auf das Plussteuerelement **(+)**, um der Zuordnungstabelle eine Zeile hinzuzufügen, oder auf das Minussteuerelement **(-)**, um eine Zeile zu entfernen.  
   
 5.  Klicken Sie auf **Vorschau der Datenquelle** , um die Daten in der ausgewählten SQL Server-Tabelle oder -Sicht oder im ausgewählten Excel-Arbeitsblatt anzuzeigen.  
   
@@ -128,7 +127,7 @@ ms.locfileid: "47702928"
   
     -   Eine Liste der Cluster und der übereinstimmenden Datensätze in jedem Cluster, einschließlich des Regelnamens und der Genauigkeit. Der Pivotdatensatz wird als „Pivot“ markiert. Die Cluster werden als erstes in der Exportliste angezeigt.  
   
-    -   Eine Liste der nicht übereinstimmenden Datensätze mit dem Wert „NULL“ in der Spalte für die Genauigkeit und den Regelnamen. Diese Datensätze werden nach den Clustern an die Exportliste angefügt.  
+    -   Eine Liste der nicht übereinstimmenden Datensätze mit dem Wert „NULL“ in der Spalten „Score“ und „Rule Name“. Diese Datensätze werden nach den Clustern an die Exportliste angefügt.  
   
      Für Survivorship-Ergebnisse wird Folgendes exportiert:  
   

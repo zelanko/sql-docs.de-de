@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.refdata.f1
@@ -15,12 +14,12 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a317f61002d185b73c146a8fd1392252211928c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730818"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617081"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Anfügen einer Domäne oder Verbunddomäne an Verweisdaten
 
@@ -34,9 +33,9 @@ ms.locfileid: "47730818"
 > [!WARNING]  
 >  Die an einen Verweisdatendienst angefügte Verbunddomäne ist in der Domänen-Dropdownliste verfügbar, während Domänen den Spalten in Schema des Verweisdatendiensts zugeordnet werden. Ordnen Sie die Verbunddomäne keiner Spalte im Schema des Verweisdatendiensts zu; Sie dürfen den entsprechenden Spalten im Schema des Verweisdatendiensts nur einzelne Domänen innerhalb einer Verbunddomäne zuordnen. Andernfalls tritt ein Fehler auf.  
   
- Das Schema eines Verweisdatendiensts kann über eine erforderliche Spalte verfügen, die mit der entsprechenden Domäne zugeordnet werden muss, wenn Sie einen Verweisdatendienst verwenden möchten. Die erforderliche Spalte in einem Verweisdatenschema wird mit einem "(M)" im Spaltennamen gekennzeichnet. Beispielsweise ist **AddressLine** die erforderliche Schemaspalte in **Melissa Data (Adressdaten)** , und **CompanyName** ist die erforderliche Schemaspalte in **Digital Trowel Inc. (US-Unternehmen und professionelle Daten für SQL-Benutzer)**.  
+ Das Schema eines Verweisdatendiensts kann über eine erforderliche Spalte verfügen, die mit der entsprechenden Domäne zugeordnet werden muss, wenn Sie einen Verweisdatendienst verwenden möchten. Die erforderliche Spalte in einem Verweisdatenschema wird mit einem „(M)“ im Spaltennamen gekennzeichnet. So ist **AddressLine** beispielsweise die erforderliche Schemaspalte in **Melissa Data (Adressdaten)**, und **CompanyName** ist die erforderliche Schemaspalte in **Digital Trowel Inc. (US-Unternehmen und professionelle Daten für SQL-Benutzer)**.  
   
- In diesem Thema erstellen wir vier Domänen: **Adresszeile**, **Ort**, **Bundesland**und **PLZ**unter der Verbunddomäne **Adressüberprüfung**, fügen die Verbunddomäne an den Verweisdatendienst **Melissa Data (Adresse)** an und ordnen die einzelnen Domänen innerhalb der Verbunddomäne dann den entsprechenden Spalten im Schema des Verweisdatendiensts zu.  
+ In diesem Thema erstellen wir vier Domänen: **Adresszeile**, **Ort**, **Bundesland** und **PLZ**, unter einer Verbunddomäne, **Adressüberprüfung**, fügen die Verbunddomäne an den Verweisdatendienst **Melissa Data (Adressüberprüfung)** an und ordnen die einzelnen Domänen innerhalb der Verbunddomäne anschließend den entsprechenden Spalten im Schema des Verweisdatendiensts zu.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
   
@@ -66,9 +65,9 @@ ms.locfileid: "47730818"
   
 8.  Im Dialogfeld **Onlinekatalog der Reference Data Service-Anbieter** :  
   
-    1.  Aktivieren Sie unter **DataMarket Data Quality Services**das Kontrollkästchen **Melissa Data – Adresse** .  
+    1.  Aktivieren Sie unter **DataMarket Data Quality Services** das Kontrollkästchen **Melissa Data (Adressüberprüfung)**.  
   
-    2.  Ordnen Sie die Spalten des Verweisdatendiensts Melissa Data (Adresse) den entsprechenden Domänen (Adresszeile, Ort, Bundesland und PLZ) zu. Sie ordnen die Spalten zu, indem Sie in der Spalte **RDS-Schema** eine Verweisdatendienst-Spalte auswählen und dann die entsprechende Domäne in der Spalte **Domäne** auswählen. Um mehr Zeilen in der Tabelle hinzuzufügen, klicken Sie auf das Symbol **Schemaeintrag hinzufügen** .  
+    2.  Ordnen Sie die Spalten des Verweisdatendiensts Melissa Data (Adressüberprüfung) den entsprechenden Domänen (Adresszeile, Ort, Bundesland und PLZ) zu. Sie ordnen die Spalten zu, indem Sie in der Spalte **RDS-Schema** eine Verweisdatendienst-Spalte auswählen und dann die entsprechende Domäne in der Spalte **Domäne** auswählen. Um mehr Zeilen in der Tabelle hinzuzufügen, klicken Sie auf das Symbol **Schemaeintrag hinzufügen** .  
   
     3.  Klicken Sie auf **OK** , um die Änderungen zu speichern, und schließen Sie das Dialogfeld **Onlinekatalog der Reference Data Service-Anbieter** .  
   

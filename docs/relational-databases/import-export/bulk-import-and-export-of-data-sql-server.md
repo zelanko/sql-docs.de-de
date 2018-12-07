@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9931ea1e809043aa96eddd76cd06cff75b1b1be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a1a8a8beb6f39db8aa7f3b72189870e26762dca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697658"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533542"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Massenimport und -export von Daten (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47697658"
 |------------|-----------------|------------------|------------------|  
 |[bcp (Hilfsprogramm)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Ein Befehlszeilenprogramm (Bcp.exe), mit dem Massenexporte und -importe von Daten ausgeführt und Formatdateien generiert werden können.|Benutzerkontensteuerung|Benutzerkontensteuerung|  
 |[BULK INSERT-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, mit der Daten direkt aus einer Datendatei in eine Datenbanktabelle oder nicht partitionierte Sicht importiert werden.|Benutzerkontensteuerung|nein|  
-|[INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, bei der mit dem OPENROWSET-Massenrowsetanbieter ein Massenimport von Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle ausgeführt wird. Dabei wird die OPENROWSET(BULK…)-Funktion angegeben, um Daten in einer INSERT-Anweisung auszuwählen.|Benutzerkontensteuerung|nein| 
+|[INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, bei der mit dem OPENROWSET-Massenrowsetanbieter ein Massenimport von Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle ausgeführt wird. Dabei wird die OPENROWSET(BULK…)-Funktion angegeben, um Daten in einer INSERT-Anweisung auszuwählen.|Benutzerkontensteuerung|nein| 
 |[SQL Server-Import/Export-Assistent](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|Der Assistent erstellt einfache Pakete, die Daten zwischen vielen häufigen Datenformaten, einschließlich Datenbanken, Kalkulationstabellen und Textdateien, importieren und exportieren.|Benutzerkontensteuerung|Benutzerkontensteuerung|  
   
 > [!IMPORTANT]

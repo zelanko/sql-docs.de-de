@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1841f9ac3408726bd54817c2f59291261a5fc641
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e3017d2f90f1b9ef7988b110e6767864924217c
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788478"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586283"
 ---
 # <a name="update-statistics"></a>Statistikaktualisierung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47788478"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47788478"
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-#### <a name="to-update-a-specific-statistics-object"></a>So aktualisieren Sie ein bestimmtes Statistikobjekt  
+### <a name="to-update-a-specific-statistics-object"></a>So aktualisieren Sie ein bestimmtes Statistikobjekt  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "47788478"
     GO  
     ```  
   
-#### <a name="to-update-all-statistics-in-a-table"></a>So aktualisieren Sie alle Statistiken in einer Tabelle  
+### <a name="to-update-all-statistics-in-a-table"></a>So aktualisieren Sie alle Statistiken in einer Tabelle  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
@@ -96,9 +96,9 @@ ms.locfileid: "47788478"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md).  
+Weitere Informationen finden Sie unter [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md).  
   
-#### <a name="to-update-all-statistics-in-a-database"></a>So aktualisieren Sie alle Statistiken in einer Datenbank  
+### <a name="to-update-all-statistics-in-a-database"></a>So aktualisieren Sie alle Statistiken in einer Datenbank  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
@@ -112,7 +112,9 @@ ms.locfileid: "47788478"
     -- The following example updates the statistics for all tables in the database.   
     EXEC sp_updatestats;  
     ```  
-  
- Weitere Informationen finden Sie unter [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).  
-  
-  
+
+Weitere Informationen finden Sie unter [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).   
+
+### <a name="automatic-index-and-statistics-management"></a>Automatische Verwaltung von Index und Statistiken
+Nutzen Sie Lösungen wie [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), um die Indexdefragmentierung und das Aktualisieren der Statistiken für eine oder mehrere Datenbanken automatisch zu verwalten. Dieser Vorgang entscheidet unter anderem anhand des Fragmentierungsgrads automatisch, ob ein Index neu organisiert oder neu erstellt wird und aktualisiert Statistiken mit einem linearen Schwellenwert.
+

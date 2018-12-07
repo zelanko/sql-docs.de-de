@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4697eada10910db5ef9b37e9884b9746df360b8a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: adedbb3c4e173a1b27c0f1d911f847c5e69fe956
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021944"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542219"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Berichtsteile (Berichts-Generator und SSRS)
   Berichtselemente wie Tabellen, Matrizen, Diagramme und Bilder können als *Berichtsteile*veröffentlicht werden. Berichtsteile sind Elemente paginierter Berichte, die separat auf einem Berichtsserver veröffentlicht wurden und in anderen paginierten Berichten wieder verwendet werden können. Berichtsteile besitzen die Dateierweiterung ".rsc".  
@@ -85,12 +85,12 @@ ms.locfileid: "50021944"
  Die einfachste Möglichkeit zum Erstellen eines Berichts besteht darin, einen vorhandenen Berichtsteil zum Bericht im Berichtsteilkatalog hinzuzufügen, beispielsweise eine Tabelle oder ein Diagramm. Nachdem Sie dem Bericht den Berichtsteil hinzugefügt haben, können Sie diesen nach Bedarf ändern oder Updates vom Server akzeptieren. Eine Änderung des Berichtselements in Ihrem Bericht wirkt sich nicht auf die Instanz des Berichtsteils aus, die auf der Website oder dem Server veröffentlicht wurde. Auch die Beziehung zwischen der Instanz im Bericht und der Instanz auf der Website oder dem Server bleibt bestehen. Wenn Sie über ausreichende Berechtigungen verfügen, können Sie die aktualisierte Kopie auf der Website oder auf dem Server erneut speichern. Wenn eine andere Person die Kopie auf der Website oder dem Server ändert, können Sie Ihre Kopie in ihrem momentanen Zustand beibehalten oder sie aktualisieren, damit sie der Kopie auf der Website oder dem Server entspricht.  
   
 ### <a name="searching-for-report-parts"></a>Suchen nach Berichtsteilen  
- Im Berichtsteilkatalog können Sie nach Berichtsteilen suchen, die Sie Ihrem Bericht hinzufügen möchten. Sie können die Berichtsteile nach dem gesamten Namen oder einem Teil des Namens, nach der Person, die sie erstellt oder zuletzt geändert hat, nach dem letzten Änderungsdatum, dem Speicherort oder dem Typ des Berichtsteils filtern. Sie konnten z. B. nach allen Diagrammen suchen, die in der vorhergehenden Woche von einem oder mehreren Ihrer Kollegen erstellt wurden.  
+ Im Berichtsteilkatalog können Sie nach Berichtsteilen suchen, die Sie Ihrem Bericht hinzufügen möchten. Sie können die Berichtsteile nach dem Namen des Teils (vollständig oder teilweise), nach der Person, von der der Berichtsteil erstellt oder zuletzt geändert wurde, nach dem letzten Änderungsdatum, dem Speicherort oder dem Typ des Berichtsteils filtern. Sie konnten z. B. nach allen Diagrammen suchen, die in der vorhergehenden Woche von einem oder mehreren Ihrer Kollegen erstellt wurden.  
   
  Sie können die Suchergebnisse als Miniaturansichten oder in Listenform anzeigen und nach Name, Erstellungs- und Änderungsdatum und dem Ersteller sortieren. Weitere Informationen finden Sie unter [Suchen nach Berichtsteilen und Festlegen eines Standardordners &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)veröffentlicht werden.  
   
 ### <a name="what-comes-with-a-report-part"></a>Zugehörige Elemente zu einem Berichtsteil  
- Wenn Sie dem Bericht einen Berichtsteil hinzufügen, werden damit auch alle für die Verarbeitung erforderlichen Elemente hinzugefügt. Beispielsweise ist jedes angezeigte Objekt von einem Dataset (d. h., einer Abfrage und einer Verbindung zu einer Datenquelle) abhängig. Möglicherweise verfügt es auch über einen oder mehrere Parameter. Alle Elemente, von denen es abhängig ist, werden als *Abhängigkeiten*bezeichnet. Diese Elemente und Verweise auf diese Elemente sind im Berichtsteil enthalten, wenn Sie ihn dem Bericht hinzufügen. Das Dataset und die Parameter werden im Berichtsdatenbereich des Berichts aufgeführt.  
+ Wenn Sie dem Bericht einen Berichtsteil hinzufügen, werden damit auch alle für die Verarbeitung erforderlichen Elemente hinzugefügt. Beispielsweise ist jedes angezeigte Objekt von einem Dataset (d.h., einer Abfrage und einer Verbindung zu einer Datenquelle) abhängig. Möglicherweise verfügt es auch über einen oder mehrere Parameter. Alle Elemente, von denen es abhängig ist, werden als *Abhängigkeiten*bezeichnet. Diese Elemente und Verweise auf diese Elemente sind im Berichtsteil enthalten, wenn Sie ihn dem Bericht hinzufügen. Das Dataset und die Parameter werden im Berichtsdatenbereich des Berichts aufgeführt.  
   
  Das Dataset für den Berichtsteil kann in den Berichtsteil eingebettet oder ein separates freigegebenes Dataset sein, auf den der Berichtsteil verweist. Wenn es in den Berichtsteil eingebettet ist, können Sie es möglicherweise ändern. Wenn es ein freigegebenes Dataset ist, ist es ein separates Objekt, für das Sie die entsprechenden Berechtigungen benötigen. Weitere Informationen zu freigegebenen und eingebetteten Datasets finden Sie unter [Berichtsdatasets (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
   

@@ -15,12 +15,12 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7192dc954337d5c6a1f58b7b444219d022c43f95
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ec49399b46b39217a41ee1c18f0475bf2f64ffd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602640"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537742"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |Kategorie|Als veraltet markierte Funktion|Ersatz|Feature name|Funktions-ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|Kompatibilitätsgrad|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
+|Kompatibilitätsgrad|sp_dbcmptlevel|ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
 |Kompatibilitätsgrad|Datenbank-Kompatibilitätsgrad 110 und 120|Planen Sie, in einer zukünftigen Version die Datenbank und die Anwendung zu aktualisieren. Wir werden jedoch so lange wie möglich Anwendungen unterstützen, die für irgendeinen unterstützten Datenbankkompatibilitätsgrad zertifiziert sind, um die Upgrades zu vereinfachen. Weitere Informationen zu den Kompatibilitätsgraden finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Datenbank-Kompatibilitätsgrad 110<br /><br /> Datenbank-Kompatibilitätsgrad 120||  
 |XML|XDR-Inlineschemagenerierung|Die XMLDATA-Direktive zur FOR XML-Option ist veraltet. Verwenden Sie XSD-Generierung für RAW- und AUTO-Modus. Es gibt keinen Ersatz für die XMLDATA-Direktive im EXPLICIT-Modus.|XMLDATA|181|  
 |Sichern und Wiederherstellen|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *Bandgerät*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *Datenträger*|BACKUP DATABASE oder LOG TO TAPE|235|  
@@ -102,7 +102,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Indexoptionen|CREATE TABLE-, ALTER TABLE- oder CREATE INDEX-Syntax ohne Klammern um die Optionen|Schreiben Sie Anweisung so um, dass sie die aktuelle Syntax verwendet.|INDEX_OPTION|33|  
 |Instanzoptionen|sp_configure-Option 'Updates zulassen'|Systemtabellen sind nicht mehr aktualisierbar. Die Einstellung hat keine Auswirkungen.|sp_configure 'allow updates'|173|  
 |Instanzoptionen|sp_configure-Optionen:<br /><br /> 'locks'<br /><br /> 'Geöffnete Objekte'<br /><br /> 'Festgelegte Workingsetgröße'|Wird jetzt automatisch konfiguriert. Die Einstellung hat keine Auswirkungen.|sp_configure 'locks'<br /><br /> sp_configure 'open objects'<br /><br /> sp_configure 'set working set size'|174<br /><br /> 175<br /><br /> 176|  
-|Instanzoptionen|sp_configure-Option 'Prioritätserhöhung'|Systemtabellen sind nicht mehr aktualisierbar. Die Einstellung hat keine Auswirkungen. Verwenden Sie stattdessen die start /high … program.exe-Option von Windows.|sp_configure 'priority boost'|199|  
+|Instanzoptionen|sp_configure-Option 'Prioritätserhöhung'|Systemtabellen sind nicht mehr aktualisierbar. Die Einstellung hat keine Auswirkungen. Verwenden Sie stattdessen die Windows-Option „start /high … program.exe“.|sp_configure 'priority boost'|199|  
 |Instanzoptionen|sp_configure-Option 'remote proc trans'|Systemtabellen sind nicht mehr aktualisierbar. Die Einstellung hat keine Auswirkungen.|sp_configure 'remote proc trans'|37|  
 |Verbindungsserver|Angeben des SQLOLEDB-Anbieters für Verbindungsserver.|SQL Server Native Client (SQLNCLI)|SQLOLEDDB für Verbindungsserver|19|  
 |Sperren|sp_lock|sys.dm_tran_locks|sp_lock|99|  

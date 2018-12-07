@@ -6,12 +6,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dced97164a9ba37fe6a2f5102f109c4c3c4ac90f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 60ed9bf8c11dba87df9c41ed1caae0413ed32bc5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050900"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712221"
 ---
 # <a name="create-a-report-server-database"></a>Erstellen einer Berichtsserver-Datenbank
 
@@ -43,7 +43,7 @@ ms.locfileid: "50050900"
   
  **SharePoint-Modus** : Die Seite Berichtsserver-Installationsoptionen besitzt nur eine Option für den SharePoint-Modus von **Nur installieren**. Diese Option installiert alle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dateien und den gemeinsamen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst. Der nächste Schritt besteht darin mindestens eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung in einer der folgenden Methoden zu erstellen:  
   
--   Verwenden Sie die SharePoint-Zentraladministration, um eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung zu erstellen. Weitere Informationen finden Sie im Abschnitt "Dienstanwendung" in [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
+-   Verwenden Sie die SharePoint-Zentraladministration, um eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung zu erstellen. Weitere Informationen finden Sie im Abschnitt „Dienstanwendung“ unter [Schritt 3: Erstellen einer Reporting Services-Dienstanwendung](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 -   Verwenden Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -PowerShell-Cmdlets zum Erstellen einer Dienstanwendung und der Berichtsserver-Datenbanken. Weitere Informationen finden Sie im Beispiel für die Erstellung von Dienstanwendungen im Thema [PowerShell-Cmdlets für SharePoint-Modus von Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "50050900"
 >  Der Berichtsserver und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, die die Berichtsserver-Datenbank hostet, können sich in verschiedenen Domänen befinden. Bei einer Internetbereitstellung ist es üblich, einen Server zu verwenden, der sich hinter einer Firewall befindet. Wenn Sie einen Berichtsserver für den Internetzugriff konfigurieren, sollten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen verwenden, um die Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz hinter der Firewall herzustellen, und IPSec zum Schützen dieser Verbindung.  
   
 ## <a name="database-server-edition-requirements"></a>Anforderungen für die Datenbankserver-Edition  
- Wenn Sie eine Berichtsserver-Datenbank erstellen, sollten Sie beachten, dass nicht alle Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Hosten der Datenbank verwendet werden können. Weitere Informationen finden Sie im Abschnitt [Anforderungen für die Edition der Berichtsserver-Datenbank](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) unter [Von den SQL Server 2016-Editionen unterstützte Reporting Services-Features](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
+ Wenn Sie eine Berichtsserver-Datenbank erstellen, sollten Sie beachten, dass nicht alle Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Hosten der Datenbank verwendet werden können. Weitere Informationen finden Sie im Abschnitt [Anforderungen für die Edition der Berichtsserver-Datenbank](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) unter [Von den SQL Server 2017-Editionen unterstützte Reporting Services-Features](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
 ## <a name="next-steps"></a>Nächste Schritte
 

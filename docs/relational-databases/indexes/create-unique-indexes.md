@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ade996ce083c37bbf9ef2eeae30fb6e62a5786c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caec4221795ed991c01d635931989499302b0c1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680488"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515085"
 ---
 # <a name="create-unique-indexes"></a>Erstellen eindeutiger Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47680488"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Benefits"></a> Vorteile eines eindeutigen Indexes  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47680488"
   
 7.  Wählen Sie im Hauptraster unter **(Allgemein)** **Typ** aus, und wählen Sie dann **Index** aus der Liste aus.  
   
-8.  Wählen Sie **Spalten**aus, und klicken Sie dann auf die Auslassungspunkte **(...)**.  
+8.  Wählen Sie **Spalten** aus, und klicken Sie dann auf die Auslassungspunkte **(...)**.  
   
 9. Wählen Sie im Dialogfeld **Indexspalten** unter **Spaltenname**die Spalten aus, die Sie indizieren möchten. Sie können bis zu 16 Spalten auswählen. Um optimale Ergebnisse zu gewährleisten, sollten Sie für jeden Index höchstens zwei Spalten auswählen. Für jede ausgewählte Spalte können Sie festlegen, ob die darin enthaltenen Werte über den Index in aufsteigender oder absteigender Reihenfolge geordnet werden.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "47680488"
   
 13. Klicken Sie auf **Schließen**.  
   
-14. Klicken Sie im Menü **Datei** auf _Tabellenname_ **speichern**.  
+14. Klicken Sie im Menü **Datei** auf **Tabellenname**_speichern\__.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>Erstellen eines eindeutigen Indexes mit dem Objekt-Explorer  
   
@@ -138,15 +138,15 @@ ms.locfileid: "47680488"
   
 3.  Erweitern Sie die Tabelle, für die Sie einen eindeutigen Index erstellen möchten.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Index** , zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index…** aus.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes**, zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index** aus.  
   
 5.  Geben Sie in das Dialogfeld **Neuer Index** auf der Seite **Allgemein** den Namen des neuen Indexes in das Feld **Indexname** ein.  
   
 6.  Aktivieren Sie das Kontrollkästchen **Eindeutig** .  
   
-7.  Klicken Sie unter **Indexschlüsselspalten**auf **Hinzufügen…**.  
+7.  Klicken Sie unter **Indexschlüsselspalten** auf **Hinzufügen…**.  
   
-8.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_Tabellenname_ die Kontrollkästchen der Tabellenspalten, die dem eindeutigen Index hinzugefügt werden sollen.  
+8.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_Name\_Tabelle_ die Kontrollkästchen der Tabellenspalten, die dem eindeutigen Index hinzugefügt werden sollen.  
   
 9. Klicken Sie auf **OK**.  
   

@@ -19,12 +19,12 @@ ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45d5aa53bc64b8146b4afe8de98d8136c0abbec8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d30c93cd56467c6137db647e52ea97f2cc7641ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818318"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509581"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>Ergebniswert  
- Gibt TRUE zurück, wenn der angegebene Vergleich für alle Paare (*scalar_expression ***,*** x)* TRUE ergibt, wenn *x* ein Wert im Einspaltensatz ist. Andernfalls wird FALSE zurückgegeben.  
+ Gibt TRUE zurück, wenn der angegebene Vergleich für alle Paare (_scalar_expression_**,**_x)_ TRUE ergibt, wenn *x* ein Wert im Einspaltensatz ist. Andernfalls wird FALSE zurückgegeben.  
   
 ## <a name="remarks"></a>Remarks  
  ALL erfordert, dass der Vergleich von *scalar_expression* mit jedem der von der Unterabfrage zurückgegebenen Wert positiv ausfällt. Wenn die Unterabfrage beispielsweise die Werte 2 und 3 zurückgibt, ergibt *scalar_expression* <= ALL (Unterabfrage) für *scalar_expression* = 2 TRUE. Wenn die Unterabfrage beispielsweise die Werte 2 und 3 zurückgibt, ergibt *scalar_expression* = ALL (Unterabfrage) FALSE, da einige Werte der Unterabfrage (der Wert 3) die Kriterien des Ausdrucks nicht erfüllen.  

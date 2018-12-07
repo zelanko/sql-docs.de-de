@@ -12,12 +12,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c22748f79ecf91239255374716e29c729eca34
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1ca7cb161bb4b3bebf2d7c65018b5221fd5bf1cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660369"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533404"
 ---
 # <a name="overview-and-usage-scenarios"></a>Übersicht und Verwendungsszenarien
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ So fangen Sie bei einer vorhandenen Anwendung an
 #### <a name="customer-case-studies"></a>Fallstudien von Kunden
 
 - CMC Markets nutzt In-Memory-OLTP in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], um eine konsistent niedrige Latenz zu erreichen: [Da eine Sekunde Wartezeit zu lang ist, aktualisiert dieser Finanzdienstleister gerade seine Handelssoftware.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
-- Derivco nutzt In-Memory-OLTP in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], um einen erhöhten Durchsatz zu unterstützen und Workloadspitzen zu bewältigen: [Wenn ein Anbieter von Onlinespielen seine Zukunft nicht riskieren will, setzt er auf [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
+- Derivco nutzt in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] In-Memory-OLTP, um einen erhöhten Durchsatz zu unterstützen und Workloadspitzen zu bewältigen: [Wenn ein Anbieter von Onlinespielen seine Zukunft nicht riskieren will, setzt er auf [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>Datenerfassung, einschließlich IoT (Internet der Dinge)
@@ -92,7 +92,7 @@ Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Beispielrepository
  
 #### <a name="customer-case-studies"></a>Fallstudien von Kunden
 
-- [Quorum verdoppelt die Workload seiner wichtigen Datenbank und senkt die Auslastung um 70 % mithilfe von In-Memory-OLTP in Azure SQL-Datenbank](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
+- [Quorum verdoppelt die Workload seiner wichtigen Datenbank und senkt die Auslastung um 70 % mithilfe von In-Memory-OLTP in Azure SQL-Datenbank](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
 - EdgeNet hat mit In-Memory-OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] die Leistung von Batch-Datenladevorgängen verbessert und die Notwendigkeit eines Mid-Tier-Caches beseitigt: [Anbieter von Datendiensten verschafft sich Echtzeitzugriff auf Produktdaten mit In-Memory-Technologie](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
 - Das Beth Israel Deaconess Medical Center konnte mithilfe von In-Memory-OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] die Datenerfassungsrate von Domänencontrollern drastisch steigern: https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for
 
@@ -232,4 +232,4 @@ Eine Demo der Leistung bei der Verwendung von In-Memory-OLTP finden Sie unter: [
 [Verbesserern der temporären Tabelle und Tabellenvariablenleistung mithilfe der Speicheroptimierung](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   
 [Optimieren der Leistung mithilfe von In-Memory-Technologien in SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
 [Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[In-Memory-OLTP – Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](https://msdn.microsoft.com/library/dn673538.aspx) 
+[In-Memory-OLTP: Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](https://msdn.microsoft.com/library/dn673538.aspx). 

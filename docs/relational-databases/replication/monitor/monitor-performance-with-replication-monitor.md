@@ -20,12 +20,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2684a24c333014ee351359ee229d32603ee11acd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc8f5b10cd0dce7b3d9b6e8acc5b6018eff0e85a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833398"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515460"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Überwachen der Leistung mit dem Replikationsmonitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47833398"
   
     |Hervorragend|Gut|Durchschnittlich|Schlecht|Kritisch|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
+    |0 – 34 %|35 – 59 %|60 – 84 %|85 – 99 %|100% +|  
   
 -   Bei der Mergereplikation ist der Wert für die Leistungsqualität unabhängig von den beiden Schwellenwerten. (Der Schwellenwert für die Zeilenverarbeitung bestimmt, ob der Wert **Leistungskritisch** in der **Status** -Spalte angezeigt wird). Die Leistungsqualität wird ermittelt, indem die Leistung der einzelnen Abonnements mit der durchschnittlichen bisherigen Leistung der Veröffentlichungsabonnements mit dem gleichen Verbindungstyp (DFÜ oder LAN) verglichen wird. Der Replikationsmonitor zeigt einen Wert an, nachdem fünf Synchronisierungen mit jeweils mindestens 50 Änderungen über denselben Verbindungstyp stattgefunden haben. Wenn weniger als fünf Synchronisierungen mit 50 oder mehr Änderungen ausgeführt wurden oder wenn die letzte Synchronisierung weniger als 50 Änderungen aufweist, zeigt der Replikationsmonitor keinen Wert an.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "47833398"
   
     |Hervorragend|Gut|Durchschnittlich|Schlecht|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150%|26 – 75%|0 – 25%|  
+    |151+%|76 – 150 %|26 – 75 %|0 – 25 %|  
   
  Weitere Informationen zum Anzeigen von Abonnementinformationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für ein Abonnement &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
   
@@ -100,6 +100,6 @@ ms.locfileid: "47833398"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Festlegen von Schwellenwerten und Warnungen im Replikationsmonitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

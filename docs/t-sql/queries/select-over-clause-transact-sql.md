@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48f4de868657978e62285907d4f513b313f484b5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699828"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526394"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -132,7 +132,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  Grenzt die Zeilen innerhalb der Partition weiter ein, indem Start- und Endpunkte innerhalb der Partition angegeben werden. Dies erfolgt durch die Angabe einer Reihe von Zeilen unter Berücksichtigung der aktuellen Zeile – entweder anhand der logischen oder physischen Zuordnung. Die physische Zuordnung wird erreicht, indem die ROWS-Klausel verwendet wird.  
   
- Die ROWS-Klausel schränkt die Zeilen innerhalb einer Partition ein, indem eine feste Anzahl an Zeilen angegeben wird, die der aktuellen Zeile vorausgehen oder dieser folgen. Alternativ schränkt die RANGE-Klausel die Zeilen innerhalb einer Partition logisch ein, indem eine Reihe von Werten unter Berücksichtigung des Werts der aktuellen Zeile angegeben wird. Vorausgehende und folgende Zeilen werden auf Grundlage der Reihenfolge in der ORDER BY-Klausel definiert. Der Fensterrahmen "RANGE … CURRENT ROW …“ beinhaltet alle Zeilen, die im ORDER BY-Ausdruck über die gleichen Werte wie die aktuelle Zeile verfügen. Beispielsweise bedeutet ROWS BETWEEN 2 PRECEDING AND CURRENT ROW, dass das Zeilenfenster, über das die Funktion ausgeführt wird, drei Zeilen umfasst – beginnend mit zwei vorausgehenden Zeilen bis zur und einschließlich der aktuellen Zeile.  
+ Die ROWS-Klausel schränkt die Zeilen innerhalb einer Partition ein, indem eine feste Anzahl an Zeilen angegeben wird, die der aktuellen Zeile vorausgehen oder dieser folgen. Alternativ schränkt die RANGE-Klausel die Zeilen innerhalb einer Partition logisch ein, indem eine Reihe von Werten unter Berücksichtigung des Werts der aktuellen Zeile angegeben wird. Vorausgehende und folgende Zeilen werden auf Grundlage der Reihenfolge in der ORDER BY-Klausel definiert. Der Fensterrahmen „RANGE ... CURRENT ROW ...“ enthält alle Zeilen, die im ORDER BY-Ausdruck über die gleichen Werte wie die aktuelle Zeile verfügen. Beispielsweise bedeutet ROWS BETWEEN 2 PRECEDING AND CURRENT ROW, dass das Zeilenfenster, über das die Funktion ausgeführt wird, drei Zeilen umfasst – beginnend mit zwei vorausgehenden Zeilen bis zur und einschließlich der aktuellen Zeile.  
   
 > [!NOTE]  
 >  ROWS oder RANGE erfordert die Angabe der ORDER BY-Klausel. Wenn ORDER BY mehrere Reihenfolgenausdrücke enthält, berücksichtigt CURRENT ROW FOR RANGE beim Ermitteln der aktuellen Zeile alle Spalten in der ORDER BY-Liste.  
@@ -175,7 +175,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  
 ### <a name="important"></a>Wichtig!
 
-Bei Angabe von ROWS/RANGE und Verwendung von \<window frame preceding> für \<window frame extent> (kurze Syntax) wird diese Spezifikation für den Startgrenzpunkt des Fensterrahmens und CURRENT ROW für den Endgrenzpunkt verwendet. Beispielsweise ist "ROWS 5 PRECEDING" gleich "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW".  
+Bei Angabe von ROWS/RANGE und Verwendung von \<window frame preceding> für \<window frame extent> (kurze Syntax) wird diese Spezifikation für den Startgrenzpunkt des Fensterrahmens und CURRENT ROW für den Endgrenzpunkt verwendet. Beispielsweise ist „ROWS 5 PRECEDING“ gleich „ROWS BETWEEN 5 PRECEDING AND CURRENT ROW“.  
   
 > [!NOTE]
 > Wenn ORDER BY nicht angegeben ist, wird die ganze Partition für einen Fensterrahmen verwendet. Dies gilt nur für Funktionen, die keine ORDER BY-Klausel erfordern. Wenn ROWS/RANGE nicht angegeben und ORDER BY angegeben ist, wird RANGE UNBOUNDED PRECEDING AND CURRENT ROW für Fensterrahmen als Standard verwendet. Dies gilt nur für Funktionen, die eine optionale ROWS/RANGE-Spezifikation akzeptieren. Beispielsweise können Rangfolgefunktionen ROWS/RANGE nicht akzeptieren. Daher wird dieser Fensterrahmen nicht übernommen, obwohl ORDER BY angegeben und ROWS/RANGE nicht angegeben ist.  

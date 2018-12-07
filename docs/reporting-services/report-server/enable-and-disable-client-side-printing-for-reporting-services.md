@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eba94f256e5b8a9f8d335076e65765d507622cea
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 05f63018eb5af5ec4c3a12c9bce14b550512471e
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030169"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711942"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services
 
   Die Schaltfläche „Drucken“ auf der Symbolleiste des Berichts-Viewers verwendet das Format „Portable Document Format“ (PDF) für clientseitiges Drucken von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten, die in einem Browser angezeigt werden. Die neue Umgebung für Remotedrucken verwendet die PDF-Renderingerweiterung, die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthalten ist, um den Bericht im PDF-Format zu rendern. Sie können ein .PDF-Formular des Berichts herunterladen. Wenn Sie über eine Anwendung für das Anzeigen von .PDF-Dateien verfügen, zeigt die Schaltfläche „Drucken“ ein Dialogfeld „Drucken“ für die Seite mit den üblicherweise zur Verfügung stehenden Druckeinstellungen wie Seitengröße und Ausrichtung an sowie eine Vorschau der .PDF-Datei. Clientseitiges Drucken ist standardmäßig aktiviert, Sie können diese Funktion jedoch auf Wunsch deaktivieren.  
   
- Frühere Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] haben ein ActiveX-Steuerelement verwendet, das vom Berichtsserver auf den Clientcomputer heruntergeladen werden musste. Wenn Sie Ihren Berichtsserver auf SQL Server 2016 upgraden, wird das Drucksteuerelement nicht aus dem Berichtsserver oder von den Clientcomputern entfernt.  
+ Frühere Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] haben ein ActiveX-Steuerelement verwendet, das vom Berichtsserver auf den Clientcomputer heruntergeladen werden musste. Wenn Sie Ihren Berichtsserver auf SQL Server 2016 oder höher upgraden, wird das Drucksteuerelement nicht aus dem Berichtsserver oder von den Clientcomputern entfernt.  
 
 ##  <a name="bkmk_clientside_printexpereince"></a> Ablauf des Druckens  
  Wenn Sie auf der Symbolleiste des Berichts-Viewers auf die Schaltfläche „Drucken“ ![HTML-Ansicht „Drucken“](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") klicken, variiert die Benutzeroberfläche, je nachdem welche Anwendungen zum Anzeigen von PDF-Dateien auf dem Clientcomputer installiert sind und welchen Browser Sie verwenden.   Sie können die .PDF-Datei herunterladen oder Druckoptionen über ein Dialogfeld oder auch beides tun, je nachdem wie Sie den Clientcomputer konfigurieren.  
@@ -98,7 +98,7 @@ Dim rs As New ReportingService()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  

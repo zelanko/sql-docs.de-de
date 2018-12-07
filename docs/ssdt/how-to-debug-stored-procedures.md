@@ -13,12 +13,12 @@ ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70ed380939046fd66f3d829c96d798190c039918
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b0aafe7ed2eddd189f57929b9d4ed971540dc57
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605148"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533421"
 ---
 # <a name="how-to-debug-stored-procedures"></a>Vorgehensweise: Debuggen von gespeicherten Prozeduren
 Mit dem Transact\-SQL-Debugger können Sie gespeicherte Prozeduren interaktiv debuggen, indem Sie die SQL-Aufrufliste, lokale Variablen und Parameter für die gespeicherte SQL-Prozedur anzeigen. Wie beim Debuggen in anderen Programmiersprachen können Sie beim Debuggen des Transact\-SQL-Skripts lokale Variablen und Parameter anzeigen und ändern, globale Variablen anzeigen sowie Breakpoints steuern und verwalten.  

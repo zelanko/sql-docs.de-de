@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3a171b8a55394ae974cdc9e891e94bd84c9511f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc197fdb8571df79e1ea39cf49086a1cea68b4f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653368"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543802"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Angeben von Feld- und Zeilenabschlusszeichen (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47653368"
 |Umgekehrter Schrägstrich*|\\\|  
 |NULL-Abschlusszeichen (nicht sichtbares Abschlusszeichen)**|\0|  
 |Jedes Zeichen, das gedruckt werden kann (Steuerzeichen können nicht gedruckt werden, ausgenommen Null, Tabstopp, Neue Zeile und Wagenrücklauf)|(*, A, t, l usw.)|  
-|Eine Zeichenfolge von bis zu 10 Zeichen, die gedruckt werden können, einschließlich einiger oder aller oben aufgeführten Abschlusszeichen|(**\t\*\*, Ende, !!!!!!!!!!, \t - \n usw.)|  
+|Eine Zeichenfolge von bis zu 10 Zeichen, die gedruckt werden können, einschließlich einiger oder aller oben aufgeführten Abschlusszeichen|(**\t\*\*, end, !!!!!!!!!!, \t-\n usw.)|  
   
  *Um ein Steuerzeichen zu erzeugen, können in Verbindung mit dem Escapezeichen des umgekehrten Schrägstrichs nur die Zeichen t, n, r, 0 und '\0' verwendet werden.  
   

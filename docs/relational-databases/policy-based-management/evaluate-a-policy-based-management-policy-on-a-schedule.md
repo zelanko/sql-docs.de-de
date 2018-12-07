@@ -13,12 +13,12 @@ ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ae74b7e24c842ba265689024cca80676f7c85e6c
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 8ca041f0bb84feab3773a1a7404d110c6d5c75f6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512031"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526302"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>Auswerten einer Richtlinie der richtlinienbasierten Verwaltung nach einem Zeitplan
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "51512031"
   
 5.  Klicken Sie mit der rechten Maustaste auf die Richtlinie, deren Zeitplan Sie auswerten möchten, und wählen Sie **Eigenschaften**aus.  
   
-6.  Klicken Sie im Dialogfeld **Richtlinie öffnen** > *Richtlinienname* in der Liste **Auswertungsmodus** auf die Option **Nach Zeitplan**.  
+6.  Klicken Sie im Dialogfeld **Richtlinie öffnen > ***Richtlinienname* in der Liste **Auswertungsmodus** auf die Option **Nach Zeitplan**.  
   
 7.  Klicken Sie unter **Zeitplan**auf **Auswählen** , um einen vorhandenen Zeitplan anzugeben, oder klicken Sie auf **Neu** , um einen neuen Zeitplan zu erstellen.  
   

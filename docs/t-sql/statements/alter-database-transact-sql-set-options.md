@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6e89d2803fda21563b69bb2ba658df2f9a8f0bef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814353"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545450"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL) 
 
@@ -728,7 +728,7 @@ SIZE_BASED_CLEANUP_MODE
 Steuert, ob die Bereinigung automatisch aktiviert wird, wenn sich die Gesamtmenge der Daten der maximalen Größe nähert:  
   
 OFF  
-Ein auf der Größe basierendes Cleanup wird nicht automatisch aktiviert. 
+Ein auf der Größe basiertes Cleanup wird nicht automatisch aktiviert. 
   
 AUTO  
 Ein auf der Größe basierendes Cleanup wird automatisch aktiviert, wenn die Größe auf dem Datenträger 90 Prozent von **max_storage_size_mb** übersteigt. Ein auf der Größe basierendes Cleanup entfernt die am wenigsten aufwendigen und die ältesten Abfragen. Bei ungefähr 80 Prozent von **max_storage_size_mb** wird dieser Vorgang angehalten.  Dies ist der Standardkonfigurationswert.  
@@ -1079,7 +1079,7 @@ Der Status dieser Option kann mithilfe der Spalte is_recursive_triggers_on in de
   
 Gibt die Frequenz indirekter Prüfpunkte auf Basis einzelner Datenbanken an. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] beträgt der Standardwert für neue Datenbanken, der darauf hindeutet, dass Datenbanken indirekte Prüfpunkte verwendet werden, eine Minute. Der Standard für ältere Versionen ist 0 (null) und gibt an, dass die Datenbank automatische Prüfpunkte verwendet, deren Frequenz von der Einstellung für das Wiederherstellungsintervall der Serverinstanz abhängt. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist für die meisten Systeme eine Minute empfohlen.  
   
-TARGET_RECOVERY_TIME **=***Zielwiederherstellungszeit* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_Zielwiederherstellungszeit_ {SECONDS | MINUTES}  
 *target_recovery_time*  
 Gibt die maximale Grenze für die Zeit an, die für die Wiederherstellung der angegebenen Datenbank im Fall eines Fehlers aufgewendet wird.  
   
@@ -1692,7 +1692,7 @@ SIZE_BASED_CLEANUP_MODE
 Steuert, ob die Bereinigung automatisch aktiviert wird, wenn sich die Gesamtmenge der Daten der maximalen Größe nähert:  
   
 OFF  
-Ein auf der Größe basierendes Cleanup wird nicht automatisch aktiviert. 
+Ein auf der Größe basiertes Cleanup wird nicht automatisch aktiviert. 
   
 AUTO  
 Ein auf der Größe basierendes Cleanup wird automatisch aktiviert, wenn die Größe auf dem Datenträger 90 Prozent von **max_storage_size_mb** übersteigt. Ein auf der Größe basierendes Cleanup entfernt die am wenigsten aufwendigen und die ältesten Abfragen. Bei ungefähr 80 Prozent von **max_storage_size_mb** wird dieser Vorgang angehalten.  Dies ist der Standardkonfigurationswert.  
@@ -1910,7 +1910,7 @@ Der Status dieser Option kann mithilfe der Spalte is_recursive_triggers_on in de
   
 Gibt die Frequenz indirekter Prüfpunkte auf Basis einzelner Datenbanken an. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] beträgt der Standardwert für neue Datenbanken, der darauf hindeutet, dass Datenbanken indirekte Prüfpunkte verwendet werden, eine Minute. Der Standard für ältere Versionen ist 0 (null) und gibt an, dass die Datenbank automatische Prüfpunkte verwendet, deren Frequenz von der Einstellung für das Wiederherstellungsintervall der Serverinstanz abhängt. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist für die meisten Systeme eine Minute empfohlen.  
   
-TARGET_RECOVERY_TIME **=***Zielwiederherstellungszeit* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_Zielwiederherstellungszeit_ {SECONDS | MINUTES}  
 *target_recovery_time*  
 Gibt die maximale Grenze für die Zeit an, die für die Wiederherstellung der angegebenen Datenbank im Fall eines Fehlers aufgewendet wird.  
   
@@ -2420,7 +2420,7 @@ SIZE_BASED_CLEANUP_MODE
 Steuert, ob die Bereinigung automatisch aktiviert wird, wenn sich die Gesamtmenge der Daten der maximalen Größe nähert:  
   
 OFF  
-Ein auf der Größe basierendes Cleanup wird nicht automatisch aktiviert. 
+Ein auf der Größe basiertes Cleanup wird nicht automatisch aktiviert. 
   
 AUTO  
 Ein auf der Größe basierendes Cleanup wird automatisch aktiviert, wenn die Größe auf dem Datenträger 90 Prozent von **max_storage_size_mb** übersteigt. Ein auf der Größe basierendes Cleanup entfernt die am wenigsten aufwendigen und die ältesten Abfragen. Bei ungefähr 80 Prozent von **max_storage_size_mb** wird dieser Vorgang angehalten.  Dies ist der Standardkonfigurationswert.  
@@ -2638,7 +2638,7 @@ Der Status dieser Option kann mithilfe der Spalte is_recursive_triggers_on in de
   
 Gibt die Frequenz indirekter Prüfpunkte auf Basis einzelner Datenbanken an. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] beträgt der Standardwert für neue Datenbanken, der darauf hindeutet, dass Datenbanken indirekte Prüfpunkte verwendet werden, eine Minute. Der Standard für ältere Versionen ist 0 (null) und gibt an, dass die Datenbank automatische Prüfpunkte verwendet, deren Frequenz von der Einstellung für das Wiederherstellungsintervall der Serverinstanz abhängt. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist für die meisten Systeme eine Minute empfohlen.  
   
-TARGET_RECOVERY_TIME **=***Zielwiederherstellungszeit* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_Zielwiederherstellungszeit_ {SECONDS | MINUTES}  
 *target_recovery_time*  
 Gibt die maximale Grenze für die Zeit an, die für die Wiederherstellung der angegebenen Datenbank im Fall eines Fehlers aufgewendet wird.  
   

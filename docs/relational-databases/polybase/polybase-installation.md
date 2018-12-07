@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d786294fb6f5c6c60243912d31bb9339a079a12e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f77ab925ebfba6ab1d3fd524d7d740eca58fcba6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674229"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523477"
 ---
 # <a name="install-polybase-on-windows"></a>Installieren von PolyBase unter Windows
 
@@ -180,9 +180,9 @@ SELECT SERVERPROPERTY ('IsPolyBaseInstalled') AS IsPolyBaseInstalled;
 
 Beim Setup von SQL Server PolyBase werden die folgenden Firewallregeln auf dem Computer erstellt:  
    
-- SQL Server PolyBase – Datenbank-Engine – \<SQL Server-Instanzname&gt; (eingehendes TCP)  
+- SQL Server PolyBase - Datenbank-Engine - \<SQLServerInstanzname> (eingehendes TCP)  
    
-- SQL Server PolyBase – PolyBase-Dienste – \<SQL Server-Instanzname> (eingehendes TCP)  
+- SQL Server PolyBase - PolyBase-Dienste - \<SQLServerInstanzname> (eingehendes TCP)  
 
 - SQL Server-PolyBase – SQL-Browser – (eingehendes UDP)  
    

@@ -19,12 +19,12 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a136d62eb71b4551478e4247c498555cad0fafe
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 003b04c5fddfc83abee45f76faa7b683e4ee1848
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641017"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516073"
 ---
 # <a name="pivot-transformation"></a>Transformation für Pivot
   Die Transformation für Pivot macht aus einem normalisierten Dataset eine weniger normalisierte, aber kompaktere Version, indem die Eingabedaten nach einem Spaltenwert pivotiert werden. Beispielsweise weist ein normalisiertes **Orders** -Dataset, das den Kundennamen, das Produkt und die gekaufte Menge auflistet, in der Regel mehrere Zeilen für jeden Kunden auf, der mehrere Produkte gekauft hat. Dabei zeigt jede Zeile für den betreffenden Kunden Bestelldetails für ein anderes Produkt an. Durch Pivotieren des Datasets nach der Produktspalte kann mit der Transformation für Pivot ein Dataset mit einer einzigen Zeile pro Kunde ausgegeben werden. In dieser Zeile werden alle Einkäufe des Kunden aufgelistet, wobei die Produktnamen als Spaltennamen und die Menge als Wert in der Produktspalte angezeigt werden. Da nicht jeder Kunde jedes Produkt kauft, können viele Spalten NULL-Werte enthalten.  
@@ -98,7 +98,7 @@ ms.locfileid: "51641017"
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
-|2004|Water Bottle – 30 oz.|2805.00|  
+|2004|Water Bottle - 30 oz.|2805.00|  
 |2002|Touring Tire|62364.225|  
   
  In der folgenden Tabelle wird ein Dataset nach dem Pivotieren der Daten nach der **Jahr** -Spalte angezeigt.  
@@ -107,7 +107,7 @@ ms.locfileid: "51641017"
 |-|----------|----------|----------|  
 |HL Mountain Tire|141164.10|446297.775|1504884.15|  
 |Road Tire Tube|3592.05|35920.50|89801.25|  
-|Water Bottle – 30 oz.|*NULL*|*NULL*|2805.00|  
+|Water Bottle - 30 oz.|*NULL*|*NULL*|2805.00|  
 |Touring Tire|62364.225|375051.60|1041810.00|  
   
  Zum Pivotisieren der Daten für die **Jahr** -Spalte (wie oben gezeigt) müssen die folgenden Optionen im Dialogfeld **Pivot** festgelegt werden.  

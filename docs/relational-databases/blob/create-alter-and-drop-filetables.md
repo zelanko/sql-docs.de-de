@@ -15,12 +15,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e22a148595e8aac059193a21a1b5d4688f5d6f4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecf449319df1d2edc24a061165a983ba08b24347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686558"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542376"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Erstellen, Ändern und Löschen von FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ GO
   
 -   Da eine FileTable eine FILESTREAM-Spalte enthält, erfordert eine FileTable eine gültige FILESTREAM-Dateigruppe. Zum Erstellen einer FileTable können Sie optional eine gültige FILESTREAM-Dateigruppe als Teil des **CREATE TABLE** -Befehls angeben. Wenn Sie keine Dateigruppe angeben, verwendet die FileTable die Standard-FILESTREAM-Dateigruppe für die Datenbank. Wenn die Datenbank keine FILESTREAM-Dateigruppe aufweist, wird ein Fehler ausgelöst.  
   
--   Als Teil der **CREATE TABLE…AS FILETABLE** -Anweisung kann keine Tabelleneinschränkung erstellt werden. Sie können die Einschränkung jedoch später mit einer **ALTER TABLE** -Anweisung hinzufügen.  
+-   Sie können keinen Tabellenconstraint als Teil einer **CREATE TABLE...AS FILETABLE**-Anweisung erstellen. Sie können die Einschränkung jedoch später mit einer **ALTER TABLE** -Anweisung hinzufügen.  
   
 -   Sie können keine FileTable in der **tempdb** -Datenbank oder in einer der anderen Systemdatenbanken erstellen.  
   
@@ -141,7 +141,7 @@ GO
   
 -   Das FileTable-Verzeichnis und die Unterverzeichnisse, die es enthielt, aus der FILESTREAM-Datei und der Verzeichnishierarchie der Datenbank.  
   
- Der DROP TABLE-Befehl schlägt fehl, wenn geöffnete Dateihandles im Dateinamespace der FileTable vorhanden sind. Informationen zum Schließen von geöffneten Handles finden Sie unter [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md).  
+ Der DROP TABLE-Befehl schlägt fehl, wenn geöffnete Dateihandles im Dateinamespace der Dateitabelle vorhanden sind. Informationen zum Schließen von geöffneten Handles finden Sie unter [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md).  
   
 ##  <a name="BasicsOtherObjects"></a> Beim Erstellen einer FileTable werden andere Datenbankobjekte erstellt  
  Wenn Sie eine neue FileTable erstellen, werden auch einige systemdefinierte Indizes und Einschränkungen erstellt. Sie können diese Objekte nicht ändern oder löschen; sie verschwinden nur, wenn die FileTable selbst gelöscht wird. Um eine Liste dieser Objekte anzuzeigen, fragen Sie die Katalogsicht [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md) ab.  

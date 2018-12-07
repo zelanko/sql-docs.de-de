@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 6f9f6b87abbac930bc51d5b0f5a32d48e0afb730
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 47d911c6a05af96d042211f98b5365230dd57084
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701983"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525204"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Konfigurieren von SQL Server zum Senden von Feedback an Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Nach dem Einrichten der Einstellung für das Erfassen von Nutzungsdaten für SQL
 
 Um die Fehler- und Verwendungsberichterstellung von SQL Server zu starten, klicken oder tippen Sie auf **Start**, und suchen Sie anschließend im Suchfeld nach „Fehler“. Das SQL-Server-Element „Fehler- und Verwendungsberichterstellung“ wird angezeigt. Nachdem Sie das Tool gestartet haben, können Sie die Nutzungsdaten und schwerwiegende Fehler verwalten, die für Instanzen und Komponenten gesammelt wurden, die auf diesem Computer installiert sind.
 
-Verwenden Sie in bezahlten Versionen die Kontrollkästchen „Nutzungsberichte“, um zu bestimmen, welche Daten zur Nutzung an Microsoft gesendet wird.
+Verwenden Sie in bezahlten Versionen die Kontrollkästchen „Nutzungsberichte“, um zu bestimmen, welche Daten zur Nutzung an Microsoft gesendet werden.
 
 Verwenden Sie für bezahlte oder kostenlose Versionen die Kontrollkästchen „Fehlerberichte“, um zu bestimmen, welche Daten zu schwerwiegenden Fehlern an Microsoft gesendet werden.
 
@@ -94,7 +94,7 @@ Enterprise-Kunden können die Einstellungen für Gruppenrichtlinien konfiguriere
     Eingabetyp DWORD: 0 bedeutet deaktivieren; 1 bedeutet aktivieren
 
 > [!NOTE]
-> {Hauptversion} ist die Version von SQL Server, z.B. 140 für SQL Server 2017.
+> {Hauptversion} ist die Version von SQL Server, z. B. 140 für SQL Server 2017
 
 - Für SQL Server Management Studio:
   

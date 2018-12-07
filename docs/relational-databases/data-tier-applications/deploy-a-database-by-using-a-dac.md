@@ -20,12 +20,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba87cc9564183c45f4c00765f05bbaa363d231ce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff2967c06b32540b92f40007f66ebe346eedca40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673349"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540391"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Bereitstellen einer Datenbank mit DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "51673349"
   
 3.  Erweitern Sie den Knoten **Datenbanken** .  
   
-4.  Klicken Sie mit der rechten Maustaste auf die Datenbank, die Sie bereitstellen möchten, wählen Sie **Tasks**und dann **Datenbank in SQL Azure bereitstellen**aus.  
+4.  Klicken Sie mit der rechten Maustaste auf die Datenbank, die Sie bereitstellen möchten, klicken Sie auf **Tasks** und dann auf **Datenbank in SQL Azure bereitstellen**.  
   
 5.  Abschließen der Dialogfelder des Assistenten  
   
@@ -92,22 +92,22 @@ ms.locfileid: "51673349"
   
 -   **Weiter** – führt Sie zur Seite **Bereitstellungseinstellungen** .  
   
--   **Abbrechen** – bricht den Vorgang ab und schließt den Assistenten.  
+-   **Abbrechen:** bricht den Vorgang ab und schließt den Assistenten.  
   
 ##  <a name="Deployment_settings"></a> Bereitstellungseinstellungen (Seite)  
  Auf dieser Seite können Sie den Zielserver angeben sowie Details zur neuen Datenbank bereitstellen.  
   
  **Lokaler Host:**  
   
--   **Serververbindungen** – Geben Sie Serververbindungsdetails an, und klicken Sie dann auf **Verbinden** , um die Verbindung zu überprüfen.  
+-   **Serververbindungen:** Geben Sie Serververbindungsdetails an, und klicken Sie dann auf **Verbinden**, um die Verbindung zu überprüfen.  
   
--   **Neuer Datenbankname** – Geben Sie einen Namen für die neue Datenbank an.  
+-   **Neuer Datenbankname:** Geben Sie einen Namen für die neue Datenbank an.  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Datenbankeinstellungen:**  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Edition** – Wählen Sie die Edition von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] im Dropdownmenü aus.  
+-   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Edition:** Wählen Sie die Edition von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] im Dropdownmenü aus.  
   
--   **Maximale Datenbankgröße** – Wählen Sie die maximale Datenbankgröße im Dropdownmenü aus.  
+-   **Maximale Datenbankgröße:** Wählen Sie die maximale Datenbankgröße im Dropdownmenü aus.  
   
  **Andere Einstellungen:**  
   

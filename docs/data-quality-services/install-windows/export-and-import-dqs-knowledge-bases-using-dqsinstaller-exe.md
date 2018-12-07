@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e1f999908a0cf5ed006c651da31701cb4aa93ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b76eca15b4c435230c2449d79dd892fd9bd736a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772178"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617450"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export und Importieren von DQS-Wissensdatenbanken mit DQSInstaller.exe
 
@@ -33,7 +32,7 @@ ms.locfileid: "47772178"
 -   Um alle Wissensdatenbanken aus einem [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] in eine DQS-Sicherungsdatei (.dqsb) zu exportieren, führen Sie DQSInstaller.exe mit dem `exportkbs` -Parameter von der Eingabeaufforderung, zusammen mit dem vollständigen Pfad und dem Dateinamen, wohin Sie die Wissensdatenbanken exportieren möchten, aus. Beispiel: Um alle Wissensdatenbanken in die Datei DQSBackup.dqsb auf Laufwerk C: zu exportieren:  
   
     ```  
-    dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb  
+    dqsinstaller.exe -exportkbs c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -42,7 +41,7 @@ ms.locfileid: "47772178"
 -   Um alle Wissensdatenbanken bei der Deinstallation von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]in eine DQS-Sicherungsdatei zu exportieren, führen Sie DQSInstaller.exe mit dem `uninstall` -Parameter von der Eingabeaufforderung, zusammen mit dem vollständigen Pfad und dem Dateinamen, wohin Sie die Wissensdatenbanken exportieren möchten, aus. Beispiel: Um alle Wissensdatenbanken in die Datei DQSBackup.dqsb auf Laufwerk C: zu exportieren und dann [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]zu deinstallieren:  
   
     ```  
-    dqsinstaller.exe –uninstall c:\DQSBackup.dqsb  
+    dqsinstaller.exe -uninstall c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -54,10 +53,10 @@ ms.locfileid: "47772178"
  Führen Sie DQSInstaller.exe mit dem `importkbs` -Parameter von der Eingabeaufforderung, zusammen mit dem vollständigen Pfad und dem Dateinamen, von wo Sie die Wissensdatenbanken importieren möchten, aus. Beispiel: Um alle Wissensdatenbanken aus der Datei DQSBackup.dqsb auf Laufwerk C: zu importieren:  
   
 ```  
-dqsinstaller.exe –importkbs c:\DQSBackup.dqsb  
+dqsinstaller.exe -importkbs c:\DQSBackup.dqsb  
 ```  
   
- Wenn auf dem [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] Wissensdatenbanken mit dem gleichen Namen wie den zu importierenden vorhanden sind, wird an die Namen der importierten Wissensdatenbanken ein Unterstrich (_) angefügt, gefolgt von einem ganzzahligen Wert, beginnend mit 1. Wenn die Domäne "Firmenname" z. B. doppelt ist, ist der importierte Domänenname "Firmenname_1".  
+ Wenn auf dem [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] Wissensdatenbanken mit dem gleichen Namen wie den zu importierenden vorhanden sind, wird an die Namen der importierten Wissensdatenbanken ein Unterstrich (_) angefügt, gefolgt von einem ganzzahligen Wert, beginnend mit 1. Wenn die Domäne „Firmenname“ z. B. doppelt vorkommt, ist der importierte Domänenname „Firmenname_1“.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ausführen von DQSInstaller.exe zum Abschließen der Installation von Data Quality Server](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73b557a4f883c61a4877ad3f7c0e15ca18aac6f0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029799"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529738"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services-Berichtsserver (SharePoint-Modus)
 
@@ -80,11 +80,11 @@ ms.locfileid: "50029799"
   
 -   Die SharePoint-Personalisierung wird auf den Reporting Services-Seiten ebenfalls nicht unterstützt. Die Berichtsserverintegration wird nicht unterstützt, wenn die SharePoint-Webanwendung für den anonymen Zugriff aktiviert ist.  
   
--   SQL Server Reporting Services unterstützt **keine** Versionskontrolle für die SharePoint-Dokumentbibliothek. Wenn Sie Berichtselemente in einer Dokumentbibliothek speichern, die mit aktiviertem "Dokumentversionsverlauf" konfiguriert ist, funktionieren die Reporting Services-Funktionen nicht ordnungsgemäß und erzeugen Fehler im ULS-Protokoll. Das folgende Beispiel veranschaulicht einen Fehler im ULS-Protokoll:  
+-   SQL Server Reporting Services unterstützt **keine** Versionskontrolle für die SharePoint-Dokumentbibliothek. Wenn Sie Berichtselemente in einer Dokumentbibliothek speichern, die mit aktiviertem „Dokumentversionsverlauf“ konfiguriert ist, funktionieren die Reporting Services-Features nicht ordnungsgemäß und erzeugen Fehler im ULS-Protokoll. Das folgende Beispiel veranschaulicht einen Fehler im ULS-Protokoll:  
   
-    -   "…Eine Datenquelle, die dem Bericht zugeordnet ist, wurde deaktiviert."  
+    -   „...Eine Datenquelle, die dem Bericht zugeordnet ist, wurde deaktiviert.“  
   
-     Der Versionsverlauf von Dokumentbibliotheken wird unter Bibliothekseinstellungen auf der Seite Versionierungseinstellungen konfiguriert.  
+     Der Versionsverlauf von Dokumentbibliotheken wird unter „Bibliothekseinstellungen“ auf der Seite „Versionsverwaltungseinstellungen“ konfiguriert.  
   
 ## <a name="supported-combinations-of-the-sharepoint-add-in-and-report-server"></a>Unterstützte Kombinationen des SharePoint-Add-Ins und des Berichtsservers
 

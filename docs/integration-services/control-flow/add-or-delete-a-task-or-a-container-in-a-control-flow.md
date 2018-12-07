@@ -16,12 +16,12 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7524bd375dcf2c2d34395a0e87c1b3fe7d08ba63
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6f0362ef230cfb620603c874a76e0614f89ab460
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640060"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523108"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung
   Wenn Sie im Ablaufsteuerungs-Designer arbeiten, werden in der Toolbox im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer die Tasks aufgeführt, die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zum Erstellen einer Ablaufsteuerung in einem Paket bereitstellt. Weitere Informationen über die Toolbox finden Sie unter [SSIS Toolbox](../../integration-services/ssis-toolbox.md).  
@@ -80,7 +80,7 @@ Sie können die meisten Eigenschaften von Tasks und Containern im Fenster **Eige
 5.  Aktualisieren Sie im Fenster **Eigenschaften** den Eigenschaftswert.  
   
     > [!NOTE]  
-    >  Die meisten Eigenschaften können durch direktes Eingeben der gewünschten Werte in die jeweiligen Textfelder bzw. Auswählen der Werte aus einer Liste festgelegt werden. Einige Eigenschaften sind jedoch komplexer und verfügen über einen Editor für benutzerdefinierte Eigenschaften. Zum Festlegen der Eigenschaft klicken Sie in das Textfeld und anschließend auf die Schaltfläche zum Erstellen **(...)** . Der benutzerdefinierte Editor wird geöffnet.  
+    >  Die meisten Eigenschaften können durch direktes Eingeben der gewünschten Werte in die jeweiligen Textfelder bzw. Auswählen der Werte aus einer Liste festgelegt werden. Einige Eigenschaften sind jedoch komplexer und verfügen über einen Editor für benutzerdefinierte Eigenschaften. Klicken Sie zum Festlegen der Eigenschaft in das Textfeld und anschließend auf die Schaltfläche zum Erstellen **(...)**. Der benutzerdefinierte Editor wird geöffnet.  
   
 6.  Erstellen Sie optional Eigenschaftsausdrücke, um die Eigenschaften des Tasks oder Containers dynamisch zu aktualisieren. Weitere Informationen finden Sie unter [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   

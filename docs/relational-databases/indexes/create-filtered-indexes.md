@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5dadd6da3f1f39060f8ec0f96e1034f42670300
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa37094aa6e41da48de776e7bb73b98096cae503
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603248"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523490"
 ---
 # <a name="create-filtered-indexes"></a>Erstellen gefilterter Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "47603248"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Design"></a> Entwurfsaspekte  
   
@@ -113,17 +113,17 @@ ms.locfileid: "47603248"
   
 3.  Klicken Sie auf das Pluszeichen, um die Tabelle zu erweitern, in der Sie einen gefilterten Index erstellen möchten.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes** , zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index**aus.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes**, zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index** aus.  
   
 5.  Geben Sie in das Dialogfeld **Neuer Index** auf der Seite **Allgemein** den Namen des neuen Indexes in das Feld **Indexname** ein.  
   
-6.  Klicken Sie unter **Indexschlüsselspalten**auf **Hinzufügen…**.  
+6.  Klicken Sie unter **Indexschlüsselspalten** auf **Hinzufügen…**.  
   
 7.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_Name\_Tabelle_ die Kontrollkästchen der Tabellenspalten, die dem eindeutigen Index hinzugefügt werden sollen.  
   
 8.  Klicken Sie auf **OK**.  
   
-9. Geben Sie auf der Seite **Filter** unter **Filterausdruck**den SQL-Ausdruck ein, mit dem Sie den gefilterten Index erstellen.  
+9. Geben Sie auf der Seite **Filter** unter **Filterausdruck** den SQL-Ausdruck ein, mit dem Sie den gefilterten Index erstellen.  
   
 10. Klicken Sie auf **OK**.  
   

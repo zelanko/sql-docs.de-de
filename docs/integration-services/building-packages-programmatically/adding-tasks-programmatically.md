@@ -17,12 +17,12 @@ ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4496c35376a91ca0450a68a08087bac5e034725
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c0d7ed0444b123ff0b5bc5d52727d2fcf83724b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641963"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543877"
 ---
 # <a name="adding-tasks-programmatically"></a>Programmgesteuertes Hinzufügen von Tasks
   Folgenden Objekttypen in der Runtime-Engine können Tasks hinzugefügt werden:  
@@ -411,7 +411,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogeintrag, [EzAPI – Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223) (EzAPI – aktualisiert für SQL Server 2012), auf blogs.msdn.com.  
+ Blogbeitrag, [EzAPI – Updated for SQL Server 2012 (EzAPI: für SQL Server 2012 aktualisiert)](https://go.microsoft.com/fwlink/?LinkId=243223), auf blogs.msdn.com.  
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Programmgesteuertes Verbinden von Tasks](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  

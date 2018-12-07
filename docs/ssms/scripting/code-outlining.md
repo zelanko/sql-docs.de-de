@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3b9207af9dcf70db110768dbf4f6895767d22f0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e00bb3652d3692f498bbbb2cd6cae2330865b841
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643264"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530386"
 ---
 # <a name="code-outlining"></a>Codegliederung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Sie können die Gliederungsfunktion in den [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Abfrage-Editoren verwenden, um ausgewählten Code auszublenden, wenn Sie Abfragen bearbeiten. Auf diese Weise können Sie insbesondere in großen Abfragedateien den bearbeiteten Code besser anzeigen.  
   
 ## <a name="outlining-overview"></a>Übersicht über Gliederungen  
- Standardmäßig wird der gesamte Code angezeigt, wenn Sie ein Abfrage-Editorfenster öffnen. Es ist möglich, Codebereiche zu reduzieren, sodass der Code ausgeblendet wird. Eine vertikale Linie auf der linken Seite des Editorfensters gibt anhand eines Quadrats mit einem Minuszeichen (-) den Beginn eines reduzierbaren Codebereichs an. Wenn Sie auf ein Minuszeichen klicken, wird der Text des Codebereichs durch ein Feld mit drei Punkten (…) ersetzt, und das Minuszeichen wird in ein Pluszeichen (+) geändert. Wenn Sie auf ein Pluszeichen klicken, wird der reduzierte Code angezeigt, und das Pluszeichen wird in ein Minuszeichen (-) geändert. Wenn Sie den Mauszeiger über ein Feld mit drei Punkten bewegen, wird eine QuickInfo mit dem Code im reduzierten Abschnitt angezeigt.  
+ Standardmäßig wird der gesamte Code angezeigt, wenn Sie ein Abfrage-Editorfenster öffnen. Es ist möglich, Codebereiche zu reduzieren, sodass der Code ausgeblendet wird. Eine vertikale Linie auf der linken Seite des Editorfensters gibt anhand eines Quadrats mit einem Minuszeichen (-) den Beginn eines reduzierbaren Codebereichs an. Wenn Sie auf ein Minuszeichen klicken, wird der Text des Codebereichs durch ein Feld mit drei Punkten (...) ersetzt, und das Minuszeichen wird in ein Pluszeichen (+) geändert. Wenn Sie auf ein Pluszeichen klicken, wird der reduzierte Code angezeigt, und das Pluszeichen wird in ein Minuszeichen (-) geändert. Wenn Sie den Mauszeiger über ein Feld mit drei Punkten bewegen, wird eine QuickInfo mit dem Code im reduzierten Abschnitt angezeigt.  
   
 ## <a name="system-outline-regions"></a>Gliederungsbereiche des Systems  
  Jeder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Editor generiert einen Satz vorgegebener systemdefinierter Gliederungsbereiche.  
@@ -43,7 +43,7 @@ ms.locfileid: "51643264"
   
  ![XML-Code mit verborgenem innerem Knoten](../../ssms/scripting/media/editoutlinexmlinnercol.gif "XML code with inner node hidden")  
   
- Wenn Sie den Mauszeiger über das Feld mit den drei Punkten (…) bewegen, wird der Code im reduzierten Bereich in einer QuickInfo angezeigt, wie in der folgenden Abbildung gezeigt.  
+ Wenn Sie den Mauszeiger über das Feld mit den drei Punkten (…) bewegen, wird der Code wie in der folgenden Abbildung gezeigt im reduzierten Bereich in einer QuickInfo angezeigt.  
   
  ![XML-Code mit QuickInfo mit verborgenem Code](../../ssms/scripting/media/editoutlinexmlmouse.gif "XML code with tooltip showing hidden code")  
   

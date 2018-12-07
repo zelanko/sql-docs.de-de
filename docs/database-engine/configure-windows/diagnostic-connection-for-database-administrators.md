@@ -21,12 +21,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8272586fc2621a22ffa6337624fab4414e8229e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d08609edc596006290d5e0bb062701c5f212ff8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770128"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514697"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Diagnoseverbindung für Datenbankadministratoren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47770128"
   
 -   Die DAC versucht zunächst, eine Verbindung zu der Standarddatenbank herzustellen, die dem Anmeldenamen zugeordnet ist. Nach erfolgreichem Verbindungsaufbau können Sie eine Verbindung mit der master-Datenbank herstellen. Wenn die Standarddatenbank offline oder aus anderen Gründen nicht verfügbar ist, wird von der Verbindung der Fehler 4060 zurückgegeben. Die Verbindung kann jedoch hergestellt werden, wenn Sie die Standarddatenbank überschreiben und stattdessen mithilfe des folgenden Befehls eine Verbindung mit der master-Datenbank herstellen:  
   
-     **sqlcmd –A –d master**  
+     **sqlcmd -A -d master**  
   
      Es wird empfohlen, die dedizierte Administratorverbindung mit der master-Datenbank herzustellen, da diese sicher verfügbar ist, wenn die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] gestartet ist.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "47770128"
   
  Der DAC-Port wird dynamisch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Start zugewiesen. Beim Herstellen der Verbindung mit der Standardinstanz vermeidet die DAC die Verwendung einer SSRP-Anforderung ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) an den SQL Server-Browser-Dienst. Zunächst wird eine Verbindung über den TCP-Port 1434 hergestellt. Tritt dabei ein Fehler auf, wird ein SSRP-Aufruf ausgegeben, um den Port abzurufen. Falls der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser SSRP-Anforderungen nicht überwacht, gibt die Verbindungsanforderung einen Fehler zurück. Suchen Sie im Fehlerprotokoll nach der Portnummer, die von der DAC überwacht wird. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Annahme von Remoteverwaltungsverbindungen konfiguriert ist, muss die DAC wie folgt mit einer expliziten Portnummer initiiert werden:  
   
- **sqlcmd –S tcp:***\<Server>,\<Port>*  
+ **sqlcmd -S tcp:***\<server>,\<port>*  
   
  Im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll ist die Portnummer für die DAC aufgelistet, standardmäßig 1434. Ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausschließlich für die Annahme lokaler DAC konfiguriert, müssen Sie die Verbindung mithilfe des Loopbackadapters herstellen. Verwenden Sie dazu folgenden Befehl:  
   
- **sqlcmd –S 127.0.0.1,1434**  
+ **sqlcmd -S 127.0.0.1,1434**  
   
 > [!TIP]  
 >  Beim Herstellen einer Verbindung mit [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] über die DAC müssen Sie auch den Datenbanknamen in der Verbindungszeichenfolge angeben, indem Sie die Option „-d“ verwenden.  
@@ -105,7 +105,7 @@ ms.locfileid: "47770128"
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel bemerkt ein Administrator, dass der Server `URAN123` nicht reagiert, und möchte das Problem analysieren. Dazu aktiviert der Benutzer das Eingabeaufforderungs-Hilfsprogramm `sqlcmd` und stellt eine Verbindung mit dem Server `URAN123` her. Dabei gibt er den Schalter `-A` an, um die DAC anzuzeigen.  
   
- `sqlcmd -S URAN123 -U sa -P <xxx> –A`  
+ `sqlcmd -S URAN123 -U sa -P <xxx> -A`  
   
  Jetzt kann der Administrator Abfragen für eine Problemdiagnose ausführen und möglicherweise die nicht reagierenden Sitzungen beenden.  
   

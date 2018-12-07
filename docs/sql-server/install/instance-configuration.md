@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 7018c0f71f51fa482ef0c1fad78b1aac20bf79cd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7ef6aa3dbfb10b0b17a6648270541c5e87e2142d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701062"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535738"
 ---
 # <a name="installation-wizard-help"></a>Hilfe zum Installations-Assistenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
  Weitere Informationen finden Sie unter [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
 ### <a name="options"></a>Tastatur  
- Nur Failoverclusterinstanzen: Geben Sie den Netzwerknamen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusters an. Anhand dieses Namens wird die Failoverclusterinstanz im Netzwerk identifiziert.  
+ Nur Failoverclusterinstanzen: Geben Sie den Netzwerknamen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusters an. Anhand dieses Namens wird die Failoverclusterinstanz im Netzwerk identifiziert.  
   
- Standardinstanz oder benannte Instanz: Bei der Entscheidung der Frage, ob eine Standardinstanz oder eine benannte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert werden soll, müssen folgende Informationen beachtet werden:  
+ Standardinstanz oder benannte Instanz: Bei der Entscheidung der Frage, ob eine Standardinstanz oder eine benannte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert werden soll, müssen folgende Informationen beachtet werden:  
   
 -   Wenn Sie eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Datenbankserver installieren möchten, sollte dies eine Standardinstanz sein.  
   
@@ -437,7 +437,7 @@ Mithilfe der Seite **Benutzerinstanz** können Sie eine separate Instanz von [!I
  Benutzerinstanzen aktivieren  
  Standardmäßig aktiviert. Um die Funktionalität zum Aktivieren von Benutzerinstanzen zu deaktivieren, deaktivieren Sie das Kontrollkästchen.  
   
- Die Benutzerinstanz, auch bekannt als untergeordnete Instanz oder Clientinstanz, ist eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die durch die übergeordnete Instanz (die primäre Instanz, die wie [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]als Dienst ausgeführt wird) für den Benutzer generiert wurde. Die Benutzerinstanz wird als Benutzerprozess in dem Sicherheitskontext des Benutzers ausgeführt. Die Benutzerinstanz ist von der übergeordneten Instanz und anderen Benutzerinstanzen, die auf dem Computer ausgeführt werden, isoliert. Im Zusammenhang mit der Benutzerinstanzfunktion wird auch der Ausdruck "Ausführen von Instanzen als normaler Benutzer" (RANU, Run As Normal User) verwendet.  
+ Die Benutzerinstanz, auch bekannt als untergeordnete Instanz oder Clientinstanz, ist eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die durch die übergeordnete Instanz (die primäre Instanz, die wie [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]als Dienst ausgeführt wird) für den Benutzer generiert wurde. Die Benutzerinstanz wird als Benutzerprozess in dem Sicherheitskontext des Benutzers ausgeführt. Die Benutzerinstanz ist von der übergeordneten Instanz und anderen Benutzerinstanzen, die auf dem Computer ausgeführt werden, isoliert. Im Zusammenhang mit der Benutzerinstanzfunktion wird auch der Ausdruck „Ausführen von Instanzen als normaler Benutzer“ (RANU, Run As Normal User) verwendet.  
   
 > [!NOTE]  
 >  Während des Setups als Mitglieder der festen Serverrolle **sysadmin** bereitgestellte Anmeldungen werden in der Vorlagendatenbank als Administratoren bereitgestellt. Sie sind so lange Mitglieder der festen Serverrolle **sysadmin** auf der Benutzerinstanz, bis sie entfernt werden.  
@@ -451,6 +451,6 @@ Mithilfe der Seite **Benutzerinstanz** können Sie eine separate Instanz von [!I
   
  Stellen Sie sicher, dass im Feld **Bereitstellung für Benutzer** die Angaben zu Domänenname\Benutzername des Benutzers aufgeführt sind, dessen Berechtigungen aktualisiert werden sollen. Wählen Sie aus der Liste der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen im Bereich **Verfügbare Privilegien** die zu aktualisierende Rolle aus, und klicken Sie dann auf den Pfeil nach rechts. Wenn Sie den Benutzer allen verfügbaren Rollen für alle verfügbaren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen und allen verfügbaren Rollen hinzufügen möchten, klicken Sie auf den doppelten Pfeil nach rechts.  
   
- Klicken Sie zum Implementieren der Änderungen nach Abschluss der Auswahl auf [!INCLUDE[clickOK](../../includes/clickok-md.md)]. Klicken Sie auf **Abbrechen**, wenn Sie das Tool beenden möchten, ohne Änderungen vorzunehmen.  
+ Klicken Sie auf **Abbrechen**, um die Änderungen zu implementieren, nachdem Sie Ihre Auswahl getroffen haben, [!INCLUDE[clickOK](../../includes/clickok-md.md)] um das Tool zu beenden, ohne Änderungen vorzunehmen.  
   
   

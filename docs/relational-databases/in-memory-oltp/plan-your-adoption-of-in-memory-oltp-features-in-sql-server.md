@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e8ebbbd4b9b507e8f41af26be70c676afe61c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803488"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519561"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planen der Übernahme von In-Memory-OLTP-Funktionen in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -216,7 +216,7 @@ Eine Übersicht über Indizes bei speicheroptimierten Tabellen finden Sie unter:
 
 Hashindizes können das schnellste Format darstellen, um auf eine bestimmte Zeile mit ihrem exakten Primärschlüssel zuzugreifen, indem der „**=**“-Operator verwendet wird.
 
-- Ungenaue Operatoren, wie z.B. „**!=**“, „**>**“ oder „**BETWEEN**“ würden die Leistung beeinträchtigen, wenn Sie mit einem Hashindex verwendet werden.
+- Ungenaue Operatoren, z.B. „**!=**“, „**>**“ oder „**BETWEEN**“ würden die Leistung beeinträchtigen, wenn Sie mit einem Hashindex verwendet werden.
 
 - Ein Hashindex stellt möglicherweise nicht die beste Wahl dar, wenn die Rate der Schlüsselwertduplizierung zu hoch wird.
 

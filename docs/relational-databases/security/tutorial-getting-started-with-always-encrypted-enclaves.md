@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c8c9e653781b821d3fcc2e7c2e5dd218b329e22c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 90a9b797862db65187d991bb6961cdfd0bda8959
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675359"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523553"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -228,7 +228,7 @@ In diesem Schritt erstellen Sie einen Spaltenhauptschlüssel und einen Spaltenve
 1. Stellen Sie mit SSMS eine Datenbankverbindung her.
 2. Erweitern Sie Ihre Datenbank im **Objekt-Explorer**, und navigieren Sie zu **Sicherheit** > **Always Encrypted-Schlüssel**.
 3. Stellen Sie einen neuen Enclave-fähigen Spaltenhauptschlüssel bereit:
-    1. Klicken Sie mit der rechten Maustaste auf **Always Encrypted-Schlüssel**, und wählen Sie **Neuer Spaltenhauptschlüssel...**.
+    1. Klicken Sie mit der rechten Maustaste auf **Always Encrypted-Schlüssel**, und wählen Sie **Neuer Spaltenhauptschlüssel** aus.
     2. Wählen Sie den Namen des Spaltenhauptschlüssels aus: CMK1.
     3. Stellen Sie sicher, dass Sie entweder **Windows-Zertifikatspeicher (Aktueller Benutzer oder lokaler Computer)** oder **Azure Key Vault** auswählen.
     4. Wählen Sie **Enclave-Berechnungen zulassen**.
@@ -295,7 +295,7 @@ Sie können nun umfangreiche Abfragen für verschlüsselte Spalten ausführen. E
 
 1. Aktivieren Sie die Parametrisierung für Always Encrypted.
     1. Wählen Sie im Hauptmenü von SSMS die Option **Abfrage** aus.
-    2. Wählen Sie **Abfrageoptionen...** aus.
+    2. Klicken Sie auf **Abfrageoptionen**.
     3. Navigieren Sie zu **Ausführung** > **Erweitert**.
     4. Aktivieren oder deaktivieren Sie „Parametrisierung für Always Encrypted aktivieren“.
     5. Wählen Sie „OK“ aus.

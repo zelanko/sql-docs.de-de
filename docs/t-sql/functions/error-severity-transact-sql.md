@@ -23,19 +23,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e0b6dacfa0facce9da804dac8406885e7228e4c
-ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
+ms.openlocfilehash: 7a8784072fe01c8da2af3af601126957583f9ebf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359283"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515804"
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Diese Funktion gibt den Wert des Schweregrads für den Fehler zurück, an dem der Fehler auftritt, wenn durch diesen die Ausführung des CATCH-Blocks eines TRY…CATCH-Konstrukts verursacht wurde.  
+Diese Funktion gibt den Wert des Schweregrads für den Fehler zurück, an dem der Fehler auftritt, wenn durch diesen die Ausführung des CATCH-Blocks eines TRY...CATCH-Konstrukts verursacht wurde.  
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

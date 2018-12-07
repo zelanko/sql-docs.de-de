@@ -24,12 +24,12 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6cf546af42ff08a587c0d786026d2b89efffa296
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4efe82fa71303bdaf4f8615c80ce45ae3dfda857
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639137"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514129"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services-Verbindungen (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete verwenden Verbindungen zum Ausführen verschiedener Tasks und zum Implementieren von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Funktionen.  
@@ -159,7 +159,7 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
   
     -   Klicken Sie auf den Verbindungs-Manager-Typ, den Sie dem Paket hinzufügen möchten.  
   
-         – oder –  
+         -oder-  
   
     -   Wenn der Typ, den Sie hinzufügen möchten, nicht aufgelistet ist, klicken Sie auf **Neue Verbindung** . Das Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** wird aufgerufen. Wählen Sie einen Verbindungs-Manager-Typ aus, und klicken Sie dann auf **OK**.  
   

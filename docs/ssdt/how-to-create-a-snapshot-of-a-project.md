@@ -14,12 +14,12 @@ ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7215ed9f2374a46ffd5034ce8a85ab0f40419ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840228"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530784"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>Gewusst wie: Erstellen einer Momentaufnahme eines Projekts
 Eine **Datenschichtanwendungs-Datei** stellt eine schreibgeschützte Darstellung des Datenbankschemas zum Zeitpunkt seiner Erstellung dar. Sie wird im Grunde als Datenbankschema behandelt, aus dem Sie die Schemaobjekte zurück in ein Projekt importieren können. Sie können es auch mit dem Schema einer Datenbank oder eines Projekts vergleichen und die Datenbank bzw. das Projekt so aktualisieren, dass das in der Momentaufnahme definierte Schema widergespiegelt wird.  
@@ -35,7 +35,7 @@ Bei einem Benutzerfehler in einem Quellendatenbankprojekt können Sie das Quellp
   
 2.  SSDT versucht zuerst, das Projekt zu erstellen. Wenn kein Buildfehler auftritt, wird im **Projektmappen-Explorer** ein Ordner **Momentaufnahme** erstellt. In diesem Ordner erstellt SSDT eine DACPAC-Datei, wobei das Namensformat „<Project Name>_JJJJMMTT_HH-MM-SS.dacpac“ verwendet wird.  
   
-3.  Klicken Sie mit der rechten Maustaste auf die DACPAC-Datei, und wählen Sie **Umbenennen** aus. Ändern Sie den Standarddateinamen in "TradeDev1.dacpac".  
+3.  Klicken Sie mit der rechten Maustaste auf die DACPAC-Datei, und wählen Sie **Umbenennen** aus. Ändern Sie den Standarddateinamen in „TradeDev1.dacpac“.  
   
 4.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Funktion **GetProductsBySupplier**, und wählen Sie **Löschen** aus, um sie aus dem Projekt zu entfernen.  
   
@@ -43,7 +43,7 @@ Bei einem Benutzerfehler in einem Quellendatenbankprojekt können Sie das Quellp
   
 ### <a name="to-import-a-snapshot"></a>So importieren Sie eine Momentaufnahme  
   
-1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt **TradeDev** auf **Importieren**, und wählen Sie im Kontextmenü **Datenschichtanwendung (\*.dacpac)** aus.  
+1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt **TradeDev**, und wählen Sie im Kontextmenü **Importieren** und dann **Datenebenenanwendung (\*.dacpac)** aus.  
   
 2.  Klicken Sie im Dialogfeld **Datenschichtanwendung importieren** auf **Durchsuchen**, um **TradeDev1.dacpac** als Quelle des Importvorgangs auszuwählen.  
   

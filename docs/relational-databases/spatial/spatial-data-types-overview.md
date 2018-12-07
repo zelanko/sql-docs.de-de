@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a9e4f02d0662150c8f8458da7bde3b5a4838022
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99f6a05b3d033a32b9a45ec305faa92f214e59e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668029"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535817"
 ---
 # <a name="spatial-data-types-overview"></a>Übersicht über räumliche Datentypen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ In der Simple Features for SQL-Spezifikation von OGC werden äußere und innere 
 
 Weitere Informationen zu den OGC-Spezifikationen finden Sie in den folgenden Themen:  
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 2: SQL Options (OGC-Spezifikationen, Simple Feature Access, Teil 2: SQL-Optionen)](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> Kreisbogensegmente  
 Drei instanziierbare Typen können Kreisbogensegmente verwenden: **CircularString**, **CompoundCurve**und **CurvePolygon**.  Ein Kreisbogensegment wird von drei Punkten in einer zweidimensionalen Ebene definiert; der dritte Punkt darf nicht mit dem ersten Punkt identisch sein.  
@@ -124,7 +124,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 Dieser Codeausschnitt führt zu den folgenden Ergebnissen:  
 ```
 LS LengthCS Length
-5.65685…6.28318…
+5.65685...6.28318...
 ```
 
 **CircularString**-Instanzen verwenden weniger Punkte, um Kurvenbegrenzungen mit größerer Genauigkeit zu speichern, als **LineString**-Instanzen. **CircularString** -Instanzen sind hilfreich für das Speichern von Kreisbegrenzungen, z.B. ein Suchradius von zwanzig Kilometern von einem bestimmten Punkt aus. **LineString** -Instanzen eignen sich für das Speichern von linearen Grenzen, z. B. ein Häuserblock.  

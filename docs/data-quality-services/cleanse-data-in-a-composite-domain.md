@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d201f4cd41acb71a1b6502e0a6dd2b2d27ceb9f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c25c25223f660f4e5a71897bf599b986135bf7a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754648"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617433"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Bereinigen von Daten in einer Verbunddomäne
 
@@ -34,7 +33,7 @@ ms.locfileid: "47754648"
   
     -   Wenn die Verbunddomäne keinem Verweisdatendienst zugeordnet wird, werden die Quelldaten basierend auf der für die Verbunddomäne definierten Methode analysiert. Weitere Informationen zum Angeben einer Analysemethode für Verbunddomänen finden Sie unter [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)  
   
--   Die Quelldaten bestehen aus mehreren Feldern (z. B. „Vorname“, „Weitere Vornamen“ und „Nachname“), die einzelnen Domänen innerhalb einer Verbunddomäne zugeordnet werden.  
+-   Die Quelldaten bestehen aus mehreren Feldern (z. B. „Vorname“, „Weitere Vornamen“ und „Nachname“), die einzelnen Domänen innerhalb einer Verbunddomäne zugeordnet werden.  
   
  Ein Beispiel zum Zuordnen von Verbunddomänen zu Quelldaten finden Sie unter [Anfügen einer Domäne oder Verbunddomäne an Verweisdaten](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
@@ -43,7 +42,7 @@ ms.locfileid: "47754648"
   
  Beachten Sie das folgende Beispiel: Es gibt eine Verbunddomäne namens „Product“ mit drei einzelnen Domänen: ProductName, CompanyName und ProductVersion. Erstellen Sie die folgende definitive domänenübergreifende Regel:  
   
- IF Domain ‘CompanyName’ Value contains *Microsoft* and Domain ‘ProductName’ Value is equal to *Office* and ‘ProductVersion’ Value is equal to *2010* THEN Domain ‘ProductName’ Value is equal to *Microsoft Office 2010*.  
+ Wenn der Domänenwert „CompanyName“ *Microsoft* enthält und der Domänenwert „ProductName“ gleich *Office* und „ProductVersion“ gleich *2010* ist, dann ist der Domänenwert „ProductName“ gleich *Microsoft Office 2010*.  
   
  Wenn diese domänenübergreifende Regel ausgeführt wird, werden die Quelldaten (ProductName) nach der Bereinigungsaktivität wie folgt korrigiert:  
   
@@ -59,7 +58,7 @@ ms.locfileid: "47754648"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Wenn Sie die definitive domänenübergreifende *Then* -Regel **Wert ist gleich**testen, enthält das Dialogfeld **Verbunddomänenregel testen** eine neue Spalte namens **Korrigieren in**, in der die korrigierten Daten angezeigt werden. In einem Data Quality-Bereinigungsprojekt ändert diese definitive domänenübergreifende Regel die Daten mit 100%iger Vertraulichkeit, und die Spalte **Grund** zeigt die folgende Meldung an: Korrigiert von Regel ‚*\<Name der domänenübergreifenden Regel>*‘. Weitere Informationen zu domänenübergreifenden Regeln finden Sie unter [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
+ Wenn Sie die definitive domänenübergreifende *Then* -Regel **Wert ist gleich**testen, enthält das Dialogfeld **Verbunddomänenregel testen** eine neue Spalte namens **Korrigieren in**, in der die korrigierten Daten angezeigt werden. In einem Data Quality-Bereinigungsprojekt ändert diese definitive domänenübergreifende Regel die Daten mit 100%iger Vertraulichkeit, und die Spalte **Grund** zeigt die folgende Meldung an: Korrigiert von Regel „*\<Name der domänenübergreifenden Regel>*“. Weitere Informationen zu domänenübergreifenden Regeln finden Sie unter [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  Die definitive domänenübergreifende Regel funktioniert nicht für Verbunddomänen, die an einen Verweisdatendienst angefügt wurden.  

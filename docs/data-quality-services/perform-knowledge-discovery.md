@@ -5,8 +5,7 @@ ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.kbterms.f1
@@ -17,12 +16,12 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 500508952a99d773b0349bb930dc04e5abfb8701
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07db48d0c1dbac3d071dc1574295c9c471cfabb4
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738028"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617830"
 ---
 # <a name="perform-knowledge-discovery"></a>Durchführen der Wissensermittlung
 
@@ -32,7 +31,7 @@ ms.locfileid: "47738028"
   
  Die Wissensermittlung ist ein über einen Assistenten ausgeführter Prozess mit drei Schritten, die vollständig abgeschlossen werden müssen.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Microsoft Excel muss auf dem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Computer installiert sein, wenn sich die Quelldaten, für die Sie den Ermittlungsprozess ausführen, in einer Excel-Datei befinden. Andernfalls sind Sie nicht in der Lage, die Excel-Datei in der Zuordnungsphase auszuwählen. Die von Microsoft Excel erstellten Dateien können die Erweiterung .xlsx, .xls oder .csv haben. Wenn die 64-Bit-Version von Excel verwendet wird, werden nur Excel 2003-Dateien (.xls) unterstützt; Excel 2007- oder 2010-Dateien (.xlsx) werden nicht unterstützt. Wenn Sie die 64-Bit-Version von Excel 2007 oder 2010 verwenden, speichern Sie die Datei als XLS-Datei oder CSV-Datei, oder installieren Sie stattdessen eine 32-Bit-Version von Excel.  
@@ -153,15 +152,15 @@ ms.locfileid: "47738028"
   
 2.  Suchen Sie alle von Data Quality Services vorgeschlagenen Korrekturen, indem Sie **Filter** auf **Fehler**festlegen. Überprüfen Sie, ob der Wert tatsächlich ein Fehler ist und ob der Wert in der Spalte **Korrigieren in** geeignet ist.  
   
-3.  Legen Sie **Filter** auf **Alle Werte** fest, und überprüfen Sie, ob der Status der Werte geeignet ist. Um den Status eines Werts zu ändern, wählen Sie den Wert aus, und klicken Sie dann auf die Schaltfläche **Ausgewählte Domänenwerte als korrigiert festlegen** (Häkchen), die Schaltfläche **Ausgewählte Domänenwerte als Fehler festlegen** (Kreuz) oder auf die Schaltfläche **Ausgewählte Domänenwerte als ungültig festlegen** (Dreieck).  
+3.  Legen Sie **Filter** auf **Alle Werte** fest, und überprüfen Sie, ob der Status der Werte geeignet ist. Zum Ändern des Status eines Werts wählen Sie den Wert aus, und klicken Sie anschließend auf die Schaltfläche **Ausgewählte Domänenwerte als korrigiert festlegen** (Häkchen), die Schaltfläche **Ausgewählte Domänenwerte als Fehler festlegen** (Kreuz) oder auf die Schaltfläche **Ausgewählte Domänenwerte als ungültig festlegen** (Dreieck).  
   
-4.  Um den Status eines Werts zu ändern, gehen Sie wie folgt vor:  
+4.  Gehen Sie wie folgt vor, um den Status eines Werts zu ändern:  
   
-    1.  **Ausgewählte Domänenwerte als korrigiert festlegen**: Um den Status eines Werts von „Fehler“ oder „Ungültig“ in „Richtig“ zu ändern, wählen Sie den Wert aus, und klicken Sie dann nach Auswahl des Abwärtspfeils in der Symbolleiste oder in der Dropdownliste „Typ“ auf das Symbol **Ausgewählte Domänenwerte als korrigiert festlegen** (Häkchen). Wenn der fehlerhafte oder ungültige Wert mit einem richtigen Wert gruppiert ist, löschen Sie diesen Wert nach dem Vorgang.  
+    1.  **Ausgewählte Domänenwerte als korrigiert festlegen**: Wählen Sie zum Ändern des Status eines Werts von „Fehler“ oder „Ungültig“ in „Richtig“ den Wert aus, und klicken Sie anschließend nach Auswahl des Abwärtspfeils in der Symbolleiste oder in der Dropdownliste „Typ“ auf das Symbol **Ausgewählte Domänenwerte als korrigiert festlegen** (Häkchen). Wenn der fehlerhafte oder ungültige Wert mit einem richtigen Wert gruppiert ist, löschen Sie diesen Wert nach dem Vorgang.  
   
-    2.  **Ausgewählte Domänenwerte als Fehler festlegen**: Um den Status eines Werts von „Richtig“ oder „Ungültig“ in „Fehler“ zu ändern, wählen Sie den Wert aus, und klicken Sie dann nach Auswahl des Abwärtspfeils in der Symbolleiste oder in der Dropdownliste „Typ“ auf das Symbol **Ausgewählte Domänenwerte als Fehler festlegen** (Kreuz). Sie können eine Korrektur in die Spalte **Korrigieren in** eingeben oder diese leer lassen.  
+    2.  **Ausgewählte Domänenwerte als Fehler festlegen**: Wählen Sie zum Ändern des Status eines Werts von „Richtig“ oder „Ungültig“ in „Fehler“ den Wert aus, und klicken Sie anschließend nach Auswahl des Abwärtspfeils in der Symbolleiste oder in der Dropdownliste „Typ“ auf das Symbol **Ausgewählte Domänenwerte als Fehler festlegen** (Kreuz). Sie können eine Korrektur in die Spalte **Korrigieren in** eingeben oder diese leer lassen.  
   
-    3.  **Ausgewählte Domänenwerte als ungültig festlegen**: Um den Status eines Werts von „Richtig“ oder „Fehler“ in „Ungültig“ zu ändern, wählen Sie den Wert aus, und klicken Sie dann nach Auswahl des Abwärtspfeils in der Symbolleiste oder in der Dropdownliste „Typ“ auf das Symbol **Ausgewählte Domänenwerte als ungültig festlegen** (Dreieck). Sie können eine Korrektur in die Spalte **Korrigieren in** eingeben oder diese leer lassen.  
+    3.  **Ausgewählte Domänenwerte als ungültig festlegen**: Wählen Sie zum Ändern des Status eines Werts von „Richtig“ oder „Fehler“ in „Ungültig“ den Wert aus, und klicken Sie anschließend nach Auswahl des Abwärtspfeils in der Symbolleiste oder in der Dropdownliste „Typ“ auf das Symbol **Ausgewählte Domänenwerte als ungültig festlegen** (Dreieck). Sie können eine Korrektur in die Spalte **Korrigieren in** eingeben oder diese leer lassen.  
   
     4.  **Korrigieren in**: Nachdem Sie einen Wert als fehlerhaft oderungültig festgelegt haben, geben Sie in die Spalte **Korrigieren in** einen neuen Wert ein. DQS fügt eine neue Zeile für den Ersatzwert hinzu, legt diesen als richtig fest und gruppiert dann die zwei Werte. Der neue Wert wird als führender Wert angezeigt. Dabei wird der führende Wert fett und der fehlerhafte oder ungültige Wert eingezogen dargestellt.  
   
@@ -201,7 +200,7 @@ ms.locfileid: "47738028"
   
     -   Klicken Sie auf**Abbrechen** , um die Wissensermittlung abzubrechen, ohne die Ergebnisse zu speichern, und um zur DQS-Homepage zurückzukehren.  
   
-    -   Klicken Sie auf**Schließen** , um die Ergebnisse zu speichern und zur DQS-Homepage zurückzukehren. Die Wissensdatenbank wird für Sie gesperrt, und der Status der Wissensdatenbank wird in der Wissensdatenbanktabelle auf der Seite **Wissensdatenbank öffnen** als **Ermittlung – Werteverwaltung**angezeigt.  
+    -   Klicken Sie auf**Schließen** , um die Ergebnisse zu speichern und zur DQS-Homepage zurückzukehren. Die Wissensdatenbank wird für Sie gesperrt, und als Status der Wissensdatenbank wird in der Wissensdatenbanktabelle auf der Seite **Wissensdatenbank öffnen** **Ermittlung – Werteverwaltung** angezeigt.  
   
     -   Klicken Sie auf **Zurück** , um zur Seite **Ermitteln** zurückzukehren. Nachdem Sie auf **Schließen**geklickt haben, um die Domänenverwaltung durchzuführen, müssen Sie im Fenster **Wissensdatenbank öffnen** auf **Wissensermittlung** klicken, die Seite **Wissensdatenbank-Verwaltung: Domänenbegriffe verwalten** öffnen, auf **Fertig stellen**klicken und anschließend auf **Ja** (um die Wissensdatenbank zu veröffentlichen) oder **Nein** (um die Arbeit in der Wissensdatenbank zu speichern und zu beenden) klicken.  
   
@@ -211,11 +210,11 @@ ms.locfileid: "47738028"
 ##  <a name="Meaning"></a> Die Bedeutung von richtigen, fehlerhaften und ungültigen Werten  
  Jedem Wert in der Tabelle **Wert** der Seite **Domänenwerte** wird eine Einstellung für **Typ** von **Richtig**, **Fehler**oder **Ungültig**zugewiesen. Der Typ des Werts wird anfänglich von der Wissensermittlungsaktivität generiert, Sie können diesen jedoch nach Bedarf ändern. Der abschließende sowohl auf der Ermittlung als auch auf interaktiven Änderungen basierende Typ wird durch die Bereinigungsaktivität generiert. Diese Einstellungen haben die folgenden Bedeutungen:  
   
--   **Richtig:** Dieser Wert gehört zur Domäne und weist keine Syntaxfehler auf. Beispielsweise ist „Chicago“ in einer Ortsdomäne richtig.  
+-   **Richtig:** Dieser Wert gehört zur Domäne und weist keine Syntaxfehler auf. Beispiel: „Chicago“ ist in einer Ortsdomäne richtig.  
   
--   **Fehler:** Dieser Wert gehört zur Domäne, ist aber fehlerhaft. beispielsweise ist „Shicago“ statt „Chicago“ in einer Ortsdomäne ein Fehler. DQS kennzeichnet einen Wert als fehlerhaft, wenn ein Syntaxfehler und eine zugehörige Korrektur im Ermittlungsprozess erkannt wird. Syntaxfehler schließen auch orthographische Fehler ein.  
+-   **Fehler:** Dieser Wert gehört zur Domäne, ist aber fehlerhaft. Beispiel: „Shicago“ statt „Chicago“ ist in einer Ortsdomäne fehlerhaft. DQS kennzeichnet einen Wert als fehlerhaft, wenn ein Syntaxfehler und eine zugehörige Korrektur im Ermittlungsprozess erkannt wird. Syntaxfehler schließen auch orthographische Fehler ein.  
   
--   **Ungültig:** Dieser Wert gehört nicht zur Domäne, und es ist keine Korrektur vorhanden. Beispielsweise ist der Wert „12345“ in einer Ortsdomäne ungültig. DQS kennzeichnet einen Wert als ungültig, wenn er eine Domänenregel nicht erfüllt.  
+-   **Ungültig:** Dieser Wert gehört nicht zur Domäne, und es ist keine Korrektur vorhanden. Beispiel: Der Wert „12345“ in einer Ortsdomäne ist ungültig. DQS kennzeichnet einen Wert als ungültig, wenn er eine Domänenregel nicht erfüllt.  
   
  Sie können den Typ eines Werts manuell in einen der beiden anderen Werte ändern. DQS erzwingt bei manuellen Vorgängen keine Gültigkeits- und Fehlersemantik. Sie können eine Korrektur für einen ungültigen Wert eingeben, ohne den Status zu ändern. Sie können einen Wert als ungültig festlegen, auch wenn er keiner Domänenregel widerspricht. Sie können einen Wert als fehlerhaft festlegen, auch wenn der Ermittlungsprozess nicht angegeben hat, dass er einen Syntaxfehler aufweist. Sie können außerdem eine Korrektur eines fehlerhaften Werts entfernen, der als richtig markiert wurde, ohne den Status zu ändern.  
   

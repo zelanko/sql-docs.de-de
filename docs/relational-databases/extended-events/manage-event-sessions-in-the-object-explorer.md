@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9cf09d6a2e6c4b1699c6c3e6d213bea0d617f2a3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4068946d131934aede88e6801da97d8f63f8aee3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681308"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531911"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Verwalten von Ereignissitzungen im Objekt-Explorer
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ STATE = STOP
   
 4.  Erweitern Sie das Dropdownfeld **Vorlage** .  
   
-5.  Klicken Sie auf **\<Aus Datei…>Öffnen** und suchen Sie nach der Sitzung (XML-Datei), die Sie importieren möchten.  
+5.  Klicken Sie auf **\<Aus Datei…> Öffnen**, und suchen Sie nach der Sitzung (XML-Datei), die Sie importieren möchten.  
   
  Die Sitzung wird unter dem Knoten **Sitzungen** angezeigt. Standardmäßig die Sitzung nicht gestartet.  
   

@@ -15,12 +15,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a2cb16273cd19ee5ef58c1cfde74d3ba890f9ad
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c91b162bfd64b8fb7a2408c796c384981cea917e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641377"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517213"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Datenprofilerstellungs-Task und -Viewer
   Der Datenprofilerstellungs-Task bietet Funktionen zur Datenprofilerstellung beim Extrahieren, Transformieren und Laden von Daten. Mit dem Datenprofilerstellungs-Task können Sie die folgenden Vorteile erzielen:  
@@ -49,7 +49,7 @@ ms.locfileid: "51641377"
   
 -   Die Verteilung der Werte in der Spalte City.  
   
--   Die Stärke der funktionalen Abhängigkeit der Spalte State von der Spalte Zip, d. h., der Staat sollte für einen bestimmten PLZ-Wert immer gleich sein.  
+-   Die Stärke der funktionalen Abhängigkeit der Spalte „State“ von der Spalte „Zip“, d.h., der Staat sollte für einen bestimmten PLZ-Wert immer gleich sein.  
   
  Die Statistiken, die ein Datenprofil bietet, liefern Ihnen die erforderlichen Informationen, um effizient die Qualitätsprobleme zu minimieren, die durch die Verwendung der Quelldaten auftreten könnten.  
   

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.opendqproject.f1
@@ -19,12 +18,12 @@ ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cc3dd7357788f1a4aa305161f5c4d837e5f9a64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ead34cab28f4988f649c6bc9dcfec5d282a08f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773194"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617820"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>Öffnen, Entsperren, Umbenennen und Löschen eines Data Quality-Projekts
 
@@ -32,7 +31,7 @@ ms.locfileid: "47773194"
 
   In diesem Thema wird beschrieben, wie ein Data Quality-Projekt mithilfe von [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] verwaltet wird, zum Beispiel das Öffnen, Entsperren, Umbenennen und Löschen eines Data Quality-Projekts.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="LimitationsRestrictions"></a> Einschränkungen  
   
@@ -64,9 +63,9 @@ ms.locfileid: "47773194"
   
 4.  Das Data Quality-Projekt wird mit demselben Aktivitätsstatus geöffnet, mit dem es zuletzt geschlossen wurde. Ein Data Quality-Projekt hat die folgenden Status:  
   
-    -   Für die **Bereinigungsaktivität** kann ein Data Quality-Projekt die folgenden Status haben: **Bereinigung - Zuordnen**, **Bereinigung - Bereinigen**, **Bereinigung - Ergebnisse verwalten und anzeigen**und **Bereinigung - Export**.  
+    -   Für die **Bereinigungsaktivität** kann ein Data Quality-Projekt die folgenden Status haben: **Bereinigung – Zuordnen**, **Bereinigung – Bereinigen**, **Bereinigung – Ergebnisse verwalten und anzeigen** und **Bereinigung – Export**.  
   
-    -   Für die **Abgleichsaktivität** kann ein Data Quality-Projekt die folgenden Status haben: **Abgleich - Zuordnung**, **Abgleich - Übereinstimmung**, **Abgleich - Survivorship**und **Abgleich - Export**.  
+    -   Für die **Abgleichsaktivität** kann ein Data Quality-Projekt die folgenden Status haben: **Abgleich – Zuordnung**, **Abgleich – Übereinstimmung**, **Abgleich – Survivorship** und **Abgleich – Export**.  
   
 ##  <a name="Unlock"></a> Entsperren eines Data Quality-Projekts  
  Wenn Sie ein Data Quality-Projekt erstellen, ist es gesperrt, um zu verhindern, dass es von anderen Benutzern verwendet oder geändert wird. Sie müssen das Data Quality-Projekt entsperren, nachdem Sie die Arbeit abgeschlossen haben, wenn Sie möchten, dass andere Benutzer am Data Quality-Projekt arbeiten können. Ein Schlosssymbol wird für gesperrte Projekte angezeigt.  

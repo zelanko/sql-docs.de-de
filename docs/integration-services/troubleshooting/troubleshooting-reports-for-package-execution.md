@@ -11,12 +11,12 @@ ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a52a29196fb0578482ebfff068adff736c954efa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed8aedc5ac55f933651d66826a58e7ba09f36c8e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818948"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526047"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>Behandlung von Problemen in Berichten für die Paketausführung
   In der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]sind Standardberichte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbar, die für die Überwachung und Problembehandlung der im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog bereitgestellten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete hilfreich sind. Zwei dieser Paketberichte dienen insbesondere zum Anzeigen des Status der Paketausführung und zum Ermitteln der Ursache von Ausführungsfehlern.  
@@ -25,15 +25,15 @@ ms.locfileid: "47818948"
   
      Startzeit, Endzeit und Dauer können wie folgt interpretiert werden:  
   
-    -   Wenn das Paket noch ausgeführt wird, gilt Dauer = aktuelle Zeit – Startzeit.  
+    -   Wenn das Paket noch ausgeführt wird, gilt Dauer = aktuelle Zeit - Startzeit.  
   
-    -   Wenn das Paket abgeschlossen wurde, gilt Dauer = Endzeit – Startzeit.  
+    -   Wenn das Paket abgeschlossen wurde, gilt Dauer = Endzeit - Startzeit.  
   
      Im Dashboard können Sie die Informationen zu jedem auf dem Server ausgeführten Paket erweitern, um spezifische Details über möglicherweise aufgetretene Paketausführungsfehler zu suchen. Sie können z.B. auf **Übersicht** klicken, um eine allgemeine Übersicht über die Status der in der Ausführung enthaltenen Tasks anzuzeigen, oder auf **Alle Meldungen** , um die ausführlichen Meldungen anzuzeigen, die bei der Paketausführung erfasst wurden.  
   
      Sie können die auf einer beliebigen Seite angezeigte Tabelle filtern, indem Sie auf **Filtern** klicken und dann im Dialogfeld **Filtereinstellungen** die gewünschten Kriterien auswählen. Abhängig von den angezeigten Daten sind unterschiedliche Filterkriterien verfügbar. Sie können die Sortierreihenfolge des Berichts ändern, indem Sie im Dialogfeld **Filtereinstellungen** auf das Sortiersymbol klicken.  
   
--   **Bericht „Aktivität – Alle Vorgänge“** : Dieser Bericht zeigt eine Zusammenfassung aller [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ausführungen auf dem Server. Die Zusammenfassung enthält Informationen für jede Ausführung, z. B. Status, Startzeit und Endzeit. Jeder Zusammenfassungseintrag enthält Links zu weiteren Informationen zur Ausführung, z. B. während der Ausführung generierten Meldungen und Leistungsdaten. Wie in dem Integration Services-Dashboard können Sie einen Filter auf die Tabelle anwenden, um die angezeigten Informationen einzugrenzen.  
+-   **Bericht „Aktivität – Alle Vorgänge“:** Dieser Bericht zeigt eine Zusammenfassung aller [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Ausführungen auf dem Server. Die Zusammenfassung enthält Informationen für jede Ausführung, z. B. Status, Startzeit und Endzeit. Jeder Zusammenfassungseintrag enthält Links zu weiteren Informationen zur Ausführung, z. B. während der Ausführung generierten Meldungen und Leistungsdaten. Wie in dem Integration Services-Dashboard können Sie einen Filter auf die Tabelle anwenden, um die angezeigten Informationen einzugrenzen.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Berichte für den Integration Services-Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)  

@@ -13,12 +13,12 @@ ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b49e683b948443533019ce23c91bacfc04165c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c265d14a78f89cf90e7aaa572fa584a5aa69f96f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689338"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520228"
 ---
 # <a name="print-dialog-box"></a>Drucken (Dialogfeld)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ Sie können angeben, wie ein Dokument gedruckt werden soll, indem Sie Optionen i
 Gibt den Drucker an. Wählen Sie in der Liste einen Drucker aus. Der ausgewählte Drucker wird als Standarddrucker festgelegt, bis Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] schließen oder einen anderen Drucker auswählen. Die Informationen, die in den Feldern unterhalb der Liste angezeigt werden, gelten für den ausgewählten Drucker.  
   
 **Status**  
-Beschreibt den Status des ausgewählten Druckers, wie z. B. ausgelastet oder bereit.  
+Beschreibt den Status des ausgewählten Druckers, wie z. B. beschäftigt oder bereit.  
   
 **Typ**  
 Identifiziert den ausgewählten Drucker.  

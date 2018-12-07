@@ -13,12 +13,12 @@ ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fe2c25b769e6f7d26897915df04518478505a71a
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 162b0f18759253ac5c842a88eb0027926a4c458b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521190"
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>Anzeigen der Facets der richtlinienbasierten Verwaltung für ein SQL Server-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51512675"
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ein Instanzobjekt, eine Datenbank oder ein Datenbankobjekt, und klicken Sie dann auf **Facets**.  
   
-2.  Wählen Sie im Dialogfeld **Facets anzeigen** > *Objektname* in der Liste **Facet** ein Facet aus, dessen Eigenschaften Sie anzeigen möchten. Weitere Informationen zu den Optionen in diesem Dialogfeld finden Sie unter [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md).  
+2.  Wählen Sie im Dialogfeld **Facets anzeigen > ***Objektname* in der **Facetliste** ein Facet aus, dessen Eigenschaften Sie anzeigen möchten. Weitere Informationen zu den Optionen in diesem Dialogfeld finden Sie unter [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md).  
   
 3.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa047ea7506c4fd9111345e0b5cbb6beca877356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20bcd05c479debbbb17883d354390899c1a1f10c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815404"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712521"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Erstellen eines datengesteuerten Abonnements (SSRS-Lernprogramm)
 In diesem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Tutorial lernen Sie die Konzepte von datengesteuerten Abonnements kennen, indem Sie durch ein einfaches Beispiel geführt werden, in dem ein datengesteuertes Abonnement erstellt wird, das zum Generieren und Speichern einer gefilterten Berichtsausgabe in eine Dateifreigabe verwendet wird. 
@@ -56,7 +56,7 @@ Das Tutorial verwendet den Bericht *Sales order* , der im Tutorial [Erstellen ei
   
 Auf Ihrem Computer müssen für die Verwendung dieses Lernprogramms folgende Anwendungen installiert sein:  
   
--   Eine Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die datengesteuerte Abonnements unterstützt. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md).  
+-   Eine Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die datengesteuerte Abonnements unterstützt. Weitere Informationen finden Sie unter [Editionen und Features von SQL Server 2017](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 -   Der Berichtsserver muss im einheitlichen Modus ausgeführt werden. Die in diesem Lernprogramm beschriebene Benutzeroberfläche basiert auf einem Berichtsserver im einheitlichen Modus. Abonnements werden auf Berichtsservern im SharePoint-Modus unterstützt, aber die Benutzeroberfläche weicht von der die in diesem Lernprogramm beschriebenen ab.  
   

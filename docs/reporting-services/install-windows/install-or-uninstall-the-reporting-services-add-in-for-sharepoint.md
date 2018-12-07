@@ -8,12 +8,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6b6abe93a63e24a2526da7b29caeb469db0c1750
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 55c88749d84290636fd6a9fc3ac3866f5499450f
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051172"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711611"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint
 
@@ -51,7 +51,7 @@ ms.locfileid: "50051172"
 ##  <a name="bkmk_3ways_to_install"></a> Übersicht über die Installationsmethoden  
  Das SQL Server 2016 Reporting Services-Add-In für SharePoint-Produkte kann mithilfe einer der folgenden zwei Methoden installiert werden:  
   
--   **Installations-Assistent**: ![Hinweis](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note")Das Add-In kann ab SQL Server 2016 erstmals auch mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistenten installiert werden. Wählen Sie im Assistenten auf der Seite **Funktionsauswahl** die Option **Reporting Services-Add-In für SharePoint-Produkte** .  
+-   **Installations-Assistent**: ![Hinweis](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") Das Add-In kann in SQL Server 2016 mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistenten installiert werden. Wählen Sie im Assistenten auf der Seite **Funktionsauswahl** die Option **Reporting Services-Add-In für SharePoint-Produkte** .  
   
 -   **rsSharepoint.msi:** Das Add-In kann direkt von den Installationsmedien installiert bzw. heruntergeladen und installiert werden. rsSharepoint.msi unterstützt sowohl die Installation über die grafische Benutzeroberfläche als auch über die Befehlszeile. Sie müssen die MSI-Datei mit Administratorrechten ausführen, indem Sie zuerst eine Eingabeaufforderung mit erhöhten Rechten öffnen und dann die Datei rsSharepoint.msi über die Befehlszeile ausführen. Weitere Informationen zum Herunterladen des Add-Ins finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
@@ -234,7 +234,7 @@ Rssharepoint.msi /?
   
 #### <a name="view-a-log-file-with-powershell"></a>Anzeigen einer Protokolldatei mit PowerShell  
   
-1.  Geben Sie den folgenden Befehl in der SharePoint-Verwaltungsshell ein, um eine gefilterte Liste der Zeilen, die "ssrscustomactionerror" enthalten, aus der Datei abzurufen:  
+1.  Geben Sie den folgenden Befehl in der SharePoint-Verwaltungsshell ein, um eine gefilterte Liste der Zeilen, die „ssrscustomactionerror“ enthalten, aus der Datei abzurufen:  
   
     ```  
     Get-content -path C:\Users\<UserName\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  

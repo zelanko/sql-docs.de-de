@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d17a0c27fa6ae4ed3c8cb609a41c44ad0342adae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2505215ccc58c9f85d256a5aa4a9de1d292cb5e8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653268"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617610"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -33,7 +32,7 @@ ms.locfileid: "47653268"
   
 -   Stellt einen aus zwei Schritten bestehenden Prozess zum Bereinigen der Daten bereit: *computerunterstützt* und *interaktiv*. Vom computergestützten Prozess werden die Informationen in einer DQS-Wissensdatenbank verwendet, um die Daten automatisch zu verarbeiten und um Ersetzungen bzw. Korrekturen vorzuschlagen. Der nächste Schritt ist interaktiv. Der Data Steward kann die vom DQS während des computerunterstützten Datenbereinigungsprozesses vorgeschlagenen Änderungen genehmigen, ablehnen oder ändern.  
   
--   Standardisiert und erweitert Kundendaten mit Domänenwerten, Domänenregeln und Verweisdaten. Beispielsweise können Sie die Ausdrucksverwendung standardisieren, indem Sie "St." in "Straße" ändern oder Daten durch Ausfüllen der fehlenden Elemente anreichern: "1 Microsoft way Redmond 98006" wird in "1 Microsoft Way, Redmond, WA 98006" geändert.  
+-   Standardisiert und erweitert Kundendaten mit Domänenwerten, Domänenregeln und Verweisdaten. Beispielsweise können Sie die Ausdrucksverwendung standardisieren, indem Sie „St.“ in „Straße“ ändern oder Daten durch Ausfüllen der fehlenden Elemente anreichern: „1 Microsoft way Redmond 98006“ wird in „1 Microsoft Way, Redmond, WA 98006“ geändert.  
   
 -   Stellt dem Benutzer eine einfache, intuitive, und konsistente assistentenähnliche Oberfläche bereit, um damit in Daten zu navigieren und Fehler unter einem sehr umfangreichen Satz an Daten zu überprüfen.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "47653268"
  ![Datenbereinigung im Data Quality-Client](../data-quality-services/media/dqs-cleansingindqsclient.gif "Data Cleansing in Data Quality Client")  
   
 ##  <a name="Leading"></a> Korrektur des führenden Werts  
- Die Korrektur des führenden Werts gilt für Domänenwerte, die über Synonyme verfügen, und der Benutzer möchte einen der Synonymwerte als führenden Wert anstelle von anderen für die konsistente Darstellung des Werts verwenden. Beispielsweise sind "New York", "NYC" und "Big Apple" Synonyme. Der Benutzer möchte jedoch "New York" als führenden Wert anstelle von "NYC" und "Big Apple" verwenden. DQS unterstützt während des Bereinigungsprozesses die Korrektur des führenden Werts, um Ihnen beim Standardisieren der Daten zu helfen. Die Korrektur des führenden Werts wird nur ausgeführt, wenn die Domäne für das Gleiche aktiviert wurde, als sie erstellt wurde. Standardmäßig ist bei allen Domänen die Korrektur des führenden Werts aktiviert, außer wenn Sie beim Erstellen einer Domäne das Kontrollkästchen **Führende Werte verwenden** deaktiviert haben. Weitere Informationen zu diesem Kontrollkästchen finden Sie unter [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+ Die Korrektur des führenden Werts gilt für Domänenwerte, die über Synonyme verfügen, und der Benutzer möchte einen der Synonymwerte als führenden Wert anstelle von anderen für die konsistente Darstellung des Werts verwenden. Beispielsweise sind „New York“, „NYC“ und „Big Apple“ Synonyme. Der Benutzer möchte jedoch „New York“ als führenden Wert anstelle von „NYC“ und „Big Apple“ verwenden. DQS unterstützt während des Bereinigungsprozesses die Korrektur des führenden Werts, um Ihnen beim Standardisieren der Daten zu helfen. Die Korrektur des führenden Werts wird nur ausgeführt, wenn die Domäne für das Gleiche aktiviert wurde, als sie erstellt wurde. Standardmäßig ist bei allen Domänen die Korrektur des führenden Werts aktiviert, außer wenn Sie beim Erstellen einer Domäne das Kontrollkästchen **Führende Werte verwenden** deaktiviert haben. Weitere Informationen zu diesem Kontrollkästchen finden Sie unter [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
 ##  <a name="Standardize"></a> Standardisieren bereinigter Daten  
  Sie können auswählen, ob Sie die bereinigten Daten im standardisierten Format auf Grundlage des für Domänen definierten Ausgabeformats ausgegeben möchten. Wählen beim Erstellen einer Domäne die Formatierung aus, die beim Ausgeben der Datenwerte in der Domäne angewendet wird. Weitere Informationen zum Angeben von Ausgabeformaten einer Domäne finden Sie in der Liste **Formatausgabe** in [Set Domain Properties](../data-quality-services/set-domain-properties.md).  

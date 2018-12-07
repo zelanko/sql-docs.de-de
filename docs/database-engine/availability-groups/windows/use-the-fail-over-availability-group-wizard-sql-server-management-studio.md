@@ -20,18 +20,18 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: da51f432e92aac3ea446dc6d8392fe5dea305457
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78bc2ed5285440afa526cc7e6e6ef1e732e4fc9e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799208"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530008"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie ein geplantes manuelles Failover oder ein erzwungenes manuelles Failover (ein erzwungenes Failover) in einer Always On-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ausgeführt wird. Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats ein Failover aus. Bei einem Failover zu einem sekundären Replikat im Status SYNCHRONIZED führt der Assistent ein geplantes manuelles Failover (ohne Datenverlust) aus. Bei einem Failover zu einem sekundären Replikat im Status UNSYNCHRONIZED oder NOT SYNCHRONIZING führt der Assistent ein erzwungenes manuelles Failover aus, ein sogenanntes *erzwungenes Failover* (mit möglichem Datenverlust). Bei beiden Formen des manuellen Failovers geht das sekundäre Replikat, mit dem die Verbindung besteht, in die primäre Rolle über. Bei einem geplanten manuellen Failover wird aktuell das frühere primäre Replikat in die sekundäre Rolle überführt. Nach einem erzwungenen Failover geht das frühere primäre Replikat, sobald es online geschaltet wird, in die sekundäre Rolle über.  
 
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Bevor Ihrem ersten geplanten manuellen Failovers, gehen Sie zum Abschnitt „Vorbereitungen“ unter [Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)ausgeführt wird.  
   
  Vor dem ersten erzwungenen Failover lesen Sie die Abschnitte „Vorbereitungen“ und „Nachverfolgung: Wichtige Aufgaben nach einem erzwungenen Failover“ unter [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)ausgeführt wird.  
@@ -60,7 +60,7 @@ ms.locfileid: "47799208"
   
 4.  Welche Informationen auf der Seite **Einführung** angezeigt werden, hängt davon ab, ob ein sekundäres Replikat für ein geplantes Failover geeignet ist. Wenn diese Seite den Text "**Geplantes Failover für diese Verfügbarkeitsgruppe ausführen**" enthält, dann können Sie ein Failover für die Verfügbarkeitsgruppe ohne Datenverlust durchführen.  
   
-5.  Auf der Seite **Neues primäres Replikat auswählen** können Sie den Status des aktuellen primären Replikats und des WSFC-Quorums überprüfen, bevor Sie das sekundäre Replikat auswählen, das das neue primäre Replikat (das *Failoverziel*) wird. Für ein geplantes manuelles Failover müssen Sie ein sekundäres Replikat auswählen, das für **Failoverbereitschaft** den Wert "**Kein Datenverlust**" aufweist. Bei einem erzwungenen Failover lautet dieser Wert für alle möglichen Failoverziele **Data loss, Warnings(***#***)**, wobei *#* die Anzahl von Warnungen angibt, die für ein angegebenes sekundäres Replikat vorhanden sind. Um die Warnungen für ein angegebenes Failoverziel anzuzeigen, klicken Sie auf dessen "Failoverbereitschaft"-Wert.  
+5.  Auf der Seite **Neues primäres Replikat auswählen** können Sie den Status des aktuellen primären Replikats und des WSFC-Quorums überprüfen, bevor Sie das sekundäre Replikat auswählen, das das neue primäre Replikat (das *Failoverziel*) wird. Für ein geplantes manuelles Failover müssen Sie ein sekundäres Replikat auswählen, das für **Failoverbereitschaft** den Wert "**Kein Datenverlust**" aufweist. Bei einem erzwungenen Failover lautet dieser Wert für alle möglichen Failoverziele „**Data loss, Warnings(***#***)**“, wobei *#* die Anzahl von Warnungen angibt, die für ein angegebenes sekundäres Replikat vorhanden sind. Um die Warnungen für ein angegebenes Failoverziel anzuzeigen, klicken Sie auf dessen „Failoverbereitschaft“-Wert.  
   
      Weitere Informationen finden Sie weiter unten in diesem Thema unter [Seite 'Neues primäres Replikat auswählen'](#SelectNewPrimaryReplica).  
   
@@ -190,7 +190,7 @@ ms.locfileid: "47799208"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Verfügbarkeitsmodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
+ [Verfügbarkeitsmodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   
  [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)   

@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 403f29c972b8137a7f2181962ce48a796ac4c753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817583"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513747"
 ---
 # <a name="control-transaction-durability"></a>Steuern der Transaktionsdauerhaftigkeit
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,19 +95,19 @@ ms.locfileid: "47817583"
  Der Datenbankadministrator kann mithilfe der folgenden Anweisung steuern, ob Benutzer die verzögerte Transaktionsdauerhaftigkeit in einer Datenbank nutzen können. Sie müssen die Einstellung für verzögerte Dauerhaftigkeit mit ALTER DATABASE festlegen.    
     
 ```sql    
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
  **DISABLED**    
  [Standard] Mit dieser Einstellung sind alle Transaktionen, für die in der Datenbank ein Commit ausgeführt wurde, unabhängig von der Einstellung der Commitebene (DELAYED_DURABILITY=[ON | OFF]) vollständig dauerhaft. Gespeicherte Prozeduren müssen weder geändert noch neu kompiliert werden. Auf diese Weise können Sie verhindern, dass Daten aufgrund verzögerter Dauerhaftigkeit gefährdet werden.    
     
  **ZULÄSSIG**    
- Mit dieser Einstellung wird die Dauerhaftigkeit jeder Transaktion auf der Transaktionsebene bestimmt: DELAYED_DURABILITY = { *OFF* | ON }. Weitere Informationen finden Sie unter [Steuerung auf Atomic-Blockebene – systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) und [Steuerung auf COMMIT-Ebene – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl) .    
+ Mit dieser Einstellung wird die Dauerhaftigkeit jeder Transaktion auf der Transaktionsebene bestimmt: DELAYED_DURABILITY = { *OFF* | ON }. Weitere Informationen finden Sie unter [Steuerung auf Atomic-Blockebene: nativ kompilierte gespeicherte Prozeduren](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) und [Steuerung auf COMMIT-Ebene: Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl).    
     
  **FORCED**    
  Mit dieser Einstellung wird jede Transaktion, für die in der Datenbank ein Commit ausgeführt wird, zu einer verzögert dauerhaften Transaktion. Unabhängig davon, ob für die Transaktion vollständige Dauerhaftigkeit (DELAYED_DURABILITY = OFF) oder keine Einstellung angegeben wird, wird sie zu einer verzögert dauerhaften Transaktion. Diese Einstellung ist hilfreich, wenn die verzögerte Transaktionsdauerhaftigkeit für eine Datenbank von Nutzen ist und Sie keinen Anwendungscode ändern möchten.    
     
-###  <a name="CompiledProcControl"></a> Steuerung auf Atomic-Blockebene – systemintern kompilierte gespeicherte Prozeduren    
+###  <a name="CompiledProcControl"></a> Steuerung auf Atomic-Blockebene: nativ kompilierte gespeicherte Prozeduren    
  Folgender Code wird in den Atomic-Block eingefügt.    
     
 ```sql    
@@ -123,14 +123,14 @@ DELAYED_DURABILITY = { OFF | ON }
  **Beispielcode:**    
     
 ```sql    
-CREATE PROCEDURE <procedureName> …    
+CREATE PROCEDURE <procedureName> ...    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
 (    
     DELAYED_DURABILITY = ON,    
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,    
     LANGUAGE = N'English'    
-    …    
+    ...    
 )    
 END    
 ```    
@@ -142,7 +142,7 @@ END
 |**DELAYED_DURABILITY = OFF**|Atomic-Block startet eine neue vollständig dauerhafte Transaktion.|Atomic-Block erstellt einen Sicherungspunkt in der vorhandenen Transaktion und startet dann die neue Transaktion.|    
 |**DELAYED_DURABILITY = ON**|Atomic-Block startet eine neue verzögert dauerhafte Transaktion.|Atomic-Block erstellt einen Sicherungspunkt in der vorhandenen Transaktion und startet dann die neue Transaktion.|    
     
-###  <a name="bkmk_T-SQLControl"></a> Steuerung auf COMMIT-Ebene –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> Steuerung auf COMMIT-Ebene: [!INCLUDE[tsql](../../includes/tsql-md.md)]    
  Da die COMMIT-Syntax erweitert ist, kann die verzögerte Transaktionsdauerhaftigkeit erzwungen werden. Wenn für DELAYED_DURABILITY auf Datenbankebene DISABLED oder FORCED festgelegt wird (siehe oben), wird diese COMMIT-Option ignoriert.    
     
 ```sql    

@@ -14,12 +14,12 @@ ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9980566e30c496398045804e9f22be245bab8637
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9178ee0cbb010f55cf7438c345112c95f3d2b3fb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607130"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508703"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Starten von SQL Server im Einzelbenutzermodus
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Wenn Sie die Option **-m** mit **SQLCMD** oder [!INCLUDE[ssManStudio](../../incl
   
  Gehen Sie folgendermaßen vor, um das Problem zu verhindern:  
   
-1.  Entfernen Sie den –m-Startparameter aus den erweiterten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Eigenschaften.  
+1.  Entfernen Sie den -m-Startparameter aus den erweiterten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Eigenschaften.  
   
 2.  Schalten Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressource offline.  
   

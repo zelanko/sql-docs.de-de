@@ -13,12 +13,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d09004ae91d7a30c64413f1f5f426e1c9da9fd07
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7b98cab5bffef09bdbbfd353f9f72bbb6d093c9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696578"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509004"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Volltextindex (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ Löschen Sie den in der Liste **Ausgewählter Volltextindex** ausgewählten Voll
 Wenn die Kategorie erweitert ist, werden **Spalten** und **Volltextkatalogname**angezeigt.  
   
 **Spalten**  
-Zeigt eine durch Trennzeichen getrennte Liste mit den Namen volltextdurchsuchbarer Spalten an. Um die Liste vollständig anzuzeigen, klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**) links neben dem Eigenschaftenfeld.  
+Zeigt eine durch Trennzeichen getrennte Liste mit den Namen volltextdurchsuchbarer Spalten an. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**) links neben dem Eigenschaftenfeld, um die Liste vollständig anzuzeigen.  
   
 **Full-Text Catalog Name**  
 Zeigt den Namen des Volltextkatalogs an, für den dieser Volltextindex gespeichert wird. Um den Index für einen anderen Katalog zu speichern, klicken Sie auf den Katalognamen, und wählen Sie aus der Dropdownliste den gewünschten Katalog aus.  

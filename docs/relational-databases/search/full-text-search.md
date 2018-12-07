@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ae40796c73616831797d3d9fdf589e4dc4e8320
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb330dfed7671762b353176cc7d94df02c5c0e65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794398"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535564"
 ---
 # <a name="full-text-search"></a>Volltextsuche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,21 +61,21 @@ Ein Volltextindex umfasst eine oder mehrere zeichenbasierte Spalten in einer Tab
   
  Volltextabfragen verwenden eine geringe Anzahl von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prädikaten (CONTAINS und FREETEXT) und -Funktionen (CONTAINSTABLE und FREETEXTTABLE). Die Suchziele des jeweiligen Geschäftsszenarios beeinflussen jedoch die Struktur von Volltextabfragen. Zum Beispiel:  
   
--   e-Business – Suchen nach einem Produkt auf einer Website:  
+-   E-Business: Suchen nach einem Produkt auf einer Website:  
   
     ```  
     SELECT product_id   
     FROM products   
-    WHERE CONTAINS(product_description, ”Snap Happy 100EZ” OR FORMSOF(THESAURUS,’Snap Happy’) OR ‘100EZ’)   
+    WHERE CONTAINS(product_description, "Snap Happy 100EZ" OR FORMSOF(THESAURUS,'Snap Happy') OR '100EZ')   
     AND product_cost < 200 ;  
     ```  
   
--   Einstellungsszenario – Suchen nach Jobkandidaten, die bereits mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gearbeitet haben:  
+-   Einstellungsszenario: Suchen nach Jobkandidaten, die bereits mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gearbeitet haben:  
   
     ```  
     SELECT candidate_name,SSN   
     FROM candidates   
-    WHERE CONTAINS(candidate_resume,”SQL Server”) AND candidate_division =DBA;  
+    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division =DBA;  
     ```  
   
  Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md).  

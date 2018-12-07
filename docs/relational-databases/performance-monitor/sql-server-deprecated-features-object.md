@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -16,12 +16,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 179829be2e7aed6e6e71d31c5baadc57bfeb1e38
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665409"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523341"
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |PERMISSIONS|Verweise auf die systeminterne PERMISSIONS-Funktion wurden gefunden. Fragen Sie stattdessen sys.fn_my_permissions ab. Tritt einmal pro Abfrage auf.|  
 |ProcNums|Die veraltete ProcNums-Syntax wurde gefunden. Schreiben Sie die Anweisungen um, um die Verweise zu entfernen. Tritt einmal pro Kompilierung auf.|  
 |READTEXT|Die Syntax READTEXT wurde gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp **varchar(max)** verwendet und die Datentypsyntax **text** entfernt wird. Tritt einmal pro Abfrage auf.|  
-|RESTORE DATABASE oder LOG WITH DBO_ONLY|Die RESTORE ... WITH DBO_ONLY-Syntax wurde gefunden. Verwenden Sie die RESTORE ... RESTRICTED_USER-Syntax.|  
+|RESTORE DATABASE oder LOG WITH DBO_ONLY|Die RESTORE ... WITH DBO_ONLY-Syntax wurde gefunden. Verwenden Sie stattdessen die RESTORE ... RESTRICTED_USER-Syntax.|  
 |RESTORE DATABASE oder LOG WITH MEDIAPASSWORD|Die RESTORE ... WITH MEDIAPASSWORD-Syntax wurde gefunden. WITH MEDIAPASSWORD bietet keine hohe Sicherheit und sollte entfernt werden.|  
 |RESTORE DATABASE oder LOG WITH PASSWORD|Die RESTORE ... WITH PASSWORD-Syntax wurde gefunden. WITH PASSWORD bietet keine hohe Sicherheit und sollte entfernt werden.|  
 |Zurückgeben von Ergebnissen aus Triggern|Dieses Ereignis tritt einmal pro Triggeraufruf auf. Schreiben Sie den Trigger so um, dass er keine Resultsets zurückgibt.|  
@@ -173,13 +173,13 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |sp_configure 'ft notify bandwidth (min)'|Die „ft notify bandwidth (min)“-Option von sp_configure wurde gefunden. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf.|  
 |sp_configure 'locks'|Die „locks“-Option von sp_configure wurde gefunden. Sperren sind nicht mehr konfigurierbar. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf.|  
 |sp_configure 'open objects'|Die „open objects“-Option von sp_configure wurde gefunden. Die Anzahl geöffneter Objekte ist nicht mehr konfigurierbar. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf.|  
-|sp_configure 'priority boost'|Die Option „priority boost“ von sp_configure wurde gefunden. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf. Verwenden Sie stattdessen die start /high … program.exe-Option von Windows.|  
+|sp_configure 'priority boost'|Die Option „priority boost“ von sp_configure wurde gefunden. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf. Verwenden Sie stattdessen die Windows-Option „start /high … program.exe“.|  
 |sp_configure 'remote proc trans'|Die „remote proc trans“-Option von sp_configure wurde gefunden. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf.|  
 |sp_configure 'set working set size'|Die „set working set size“-Option von sp_configure wurde gefunden. Die Workingsetgröße ist nicht mehr konfigurierbar. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf.|  
 |sp_control_dbmasterkey_password|Die gespeicherte Prozedur sp_control_dbmasterkey_password überprüft nicht, ob ein Hauptschlüssel vorhanden ist. Dies wird aus Gründen der Abwärtskompatibilität zugelassen, es wird jedoch eine Warnung angezeigt. Dieses Verhalten ist als veraltet markiert. In einer künftigen Version muss der Hauptschlüssel vorhanden sein, und das Kennwort, das in der gespeicherten Prozedur sp_control_dbmasterkey_password verwendet wird, muss einem der Kennwörter zum Verschlüsseln des Datenbank-Hauptschlüssels entsprechen.|  
 |sp_create_removable|Die Prozedur sp_create_removable wurde gefunden. Verwenden Sie stattdessen CREATE DATABASE. Tritt einmal pro Abfrage auf.|  
 |sp_db_vardecimal_storage_format|Die Verwendung des Speicherformats **vardecimal** wurde erkannt. Verwenden Sie stattdessen die Datenkomprimierung.|  
-|sp_dbcmptlevel|Die Prozedur sp_dbcmptlevel wurde gefunden. Verwenden Sie ALTER DATABASE … SET COMPATIBILITY_LEVEL. Tritt einmal pro Abfrage auf.|  
+|sp_dbcmptlevel|Die Prozedur sp_dbcmptlevel wurde gefunden. Verwenden Sie ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Tritt einmal pro Abfrage auf.|  
 |sp_dbfixedrolepermission|Die Prozedur sp_dbfixedrolepermission wurde gefunden. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf.|  
 |sp_dboption|Die Prozedur sp_dboption wurde gefunden. Verwenden Sie stattdessen ALTER DATABASE und DATABASEPROPERTYEX. Tritt einmal pro Kompilierung auf.|  
 |sp_dbremove|Die Prozedur sp_dbremove wurde gefunden. Verwenden Sie stattdessen DROP DATABASE. Tritt einmal pro Abfrage auf.|  

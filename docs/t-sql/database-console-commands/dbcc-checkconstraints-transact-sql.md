@@ -24,12 +24,12 @@ ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 763acaea371103ac9d87bf25aa2de787cef78854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e93d0f71ab7c59a7bd0c43ea6badbc95bd8ee80
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759640"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525342"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ DBCC CHECKCONSTRAINTS prüft die Integrität von FOREIGN KEY- und CHECK-Einschr�
   
 **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
-Wenn *table_name* oder *table_id* angegeben wird und DBCC CHECKCONSTRAINTS für die Versionsverwaltung durch das System aktiviert ist, führt der Befehl außerdem Konsistenzprüfungen temporärer Daten für die angegebene Tabelle aus. Wenn *NO_INFOMSGS* nicht angegeben ist, gibt dieser Befehl jeden Konsistenzverstoß in der Ausgabe in einer separaten Zeile zurück. Das Format der Ausgabe ist ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>…) AND \<Fehler des temporären Tabelleneintrags>.
+Wenn *table_name* oder *table_id* angegeben wird und DBCC CHECKCONSTRAINTS für die Versionsverwaltung durch das System aktiviert ist, führt der Befehl außerdem Konsistenzprüfungen temporärer Daten für die angegebene Tabelle aus. Wenn *NO_INFOMSGS* nicht angegeben ist, gibt dieser Befehl jeden Konsistenzverstoß in der Ausgabe in einer separaten Zeile zurück. Das Format der Ausgabe ist ([pkcol1], [pkcol2]..) = (\<pkcol1-Wert>, \<pkcol2-Wert>...) AND \<Fehler des temporären Tabelleneintrags>.
   
 |Check|Zusätzliche Informationen in der Ausgabe, wenn die Prüfung einen Fehler zurückgibt|  
 |-----------|-----------------------------------------------|  

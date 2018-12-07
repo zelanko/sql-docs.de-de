@@ -13,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a369cf9f73508f5d891b0b2af8807c490eb9fd47
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 502403eab1376679471b6825fb6b58333947c47f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672469"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522314"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Aktivieren der semantischen Suche in Tabellen und Spalten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51672469"
   
 -   Sie können einen beliebigen Dokumenttyp angeben, der für Volltextindizierung für **varbinary(max)** -Spalten unterstützt wird. Weitere Informationen finden Sie unter [Vorgehensweise: Ermitteln, welche Dokumenttypen indiziert werden können](#doctypes) .  
   
--   Bei der semantischen Indizierung werden zwei Typen von Indizes für die ausgewählten Spalten erstellt – ein Index mit Schlüsselausdrücken und ein Index für Dokumentähnlichkeit. Wenn Sie die semantische Indizierung aktivieren, können Sie nur einen Indextyp auswählen. Sie können diese beiden Indizes jedoch unabhängig voneinander abfragen. Weitere Informationen finden Sie unter [Suchen von Schlüsselausdrücken in Dokumenten mit der semantischen Suche](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) und [Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
+-   Bei der semantischen Indizierung werden zwei Typen von Indizes für die ausgewählten Spalten erstellt: ein Index mit Schlüsselausdrücken und ein Index für Dokumentähnlichkeit. Wenn Sie die semantische Indizierung aktivieren, können Sie nur einen Indextyp auswählen. Sie können diese beiden Indizes jedoch unabhängig voneinander abfragen. Weitere Informationen finden Sie unter [Suchen von Schlüsselausdrücken in Dokumenten mit der semantischen Suche](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) und [Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
 -   Wenn Sie nicht explizit eine LCID für einen semantischen Index angeben, werden nur die primäre Sprache und ihre zugeordneten Sprachstatistiken für die semantische Indizierung verwendet.  
   

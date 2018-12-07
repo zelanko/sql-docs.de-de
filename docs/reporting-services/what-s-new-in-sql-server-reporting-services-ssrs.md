@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c7fe58cb279924ac60c2902c29dcd6bade82dd6f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b72f5bfef28c5f434cff07b2a931519c3fefd295
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813823"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712401"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Neues in SQL Server Reporting Services (SSRS)
 
@@ -59,7 +59,7 @@ Mit dem Berichts-Generator und SQL Server Data Tools können Sie jetzt native DA
  
 Mehr dazu erfahren Sie im [Reporting Services-Blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
-* Laden Sie den [SQL Server 2016-Berichts-Generator](https://go.microsoft.com/fwlink/?LinkId=734968) herunter.
+* [SQL Server-Berichts-Generator](https://go.microsoft.com/fwlink/?LinkId=734968) herunterladen.
 * Laden Sie [SQL Server Data Tools: Release Candidate](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate) herunter.
 
 > **Hinweis:** Sie können den Abfrage-Designer für DAX nur mit SSAS-Tabellendatenquellen verwenden, die in SQL Server 2016 und höher integriert sind.
@@ -192,7 +192,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 [Neuigkeiten in Analysis Services](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [Abwärtskompatibilität](reporting-services-backward-compatibility.md)   
-[Von den SQL Server 2016-Editionen unterstützte Reporting Services-Funktionen](https://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
+[Von den SQL Server-Editionen unterstützte Reporting Services-Features](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)   
 [Aktualisieren und Migrieren von Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 

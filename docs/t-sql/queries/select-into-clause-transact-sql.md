@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0996aa061c8c662c0ff14700961559bdbf22102
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f8d40fed1b2183bc82b85b5d82ac1895ca118f2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596658"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509015"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ Falls eine dieser Bedingungen erfüllt ist, wird die Spalte mit NOT NULL erstell
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Tabellenvariablen und Tabellenwertparameter können nicht als neue Tabelle angegeben werden.  
   
- Sie können mit `SELECT…INTO` keine partitionierte Tabelle erstellen, auch dann nicht, wenn die Quelltabelle partitioniert ist. Für `SELECT...INTO` wird nicht das Partitionsschema der Quelltabelle verwendet. Stattdessen wird die neue Tabelle in der Standarddateigruppe erstellt. Erstellen Sie zum Einfügen von Zeilen in eine partitionierte Tabelle zuerst die partitionierte Tabelle, und verwenden Sie anschließend die `INSERT INTO...SELECT...FROM`-Anweisung.  
+ Sie können mit `SELECT...INTO` keine partitionierte Tabelle erstellen, auch dann nicht, wenn die Quelltabelle partitioniert ist. Für `SELECT...INTO` wird nicht das Partitionsschema der Quelltabelle verwendet. Stattdessen wird die neue Tabelle in der Standarddateigruppe erstellt. Erstellen Sie zum Einfügen von Zeilen in eine partitionierte Tabelle zuerst die partitionierte Tabelle, und verwenden Sie anschließend die `INSERT INTO...SELECT...FROM`-Anweisung.  
   
  Indizes, Einschränkungen und Trigger, die in der Quelltabelle definiert wurden, werden nicht in die neue Tabelle übertragen. Sie können auch nicht in der `SELECT...INTO`-Anweisung angegeben werden. Wenn diese Objekte erforderlich sind, können Sie sie nach dem Ausführen der `SELECT...INTO`-Anweisung erstellen.  
   
@@ -232,7 +232,7 @@ Das folgende Beispiel zeigt, wie eine neue Tabelle als Kopie einer anderen Tabel
  **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 ```sql
-ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
+ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
 (
@@ -241,7 +241,7 @@ FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO
-SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
+SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

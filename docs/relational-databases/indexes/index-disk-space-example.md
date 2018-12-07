@@ -18,12 +18,12 @@ ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 294e4230ac932deb2f86aadb45ffd9eda98f72e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c7abfc8f9ae7837ad1a89214c2e956ed5ff63a7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726188"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520923"
 ---
 # <a name="index-disk-space-example"></a>Beispiel für den zum Speichern eines Indexes belegten Speicherplatz
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,9 +63,9 @@ ms.locfileid: "47726188"
   
      Gruppierter Index: 1 Million * 200 Byte / 80% ~ 250 MB  
   
-     Nicht gruppierter Index A: 1 Million * (50 – 8 + 24) Byte / 80% ~ 83 MB  
+     Nicht gruppierter Index A: 1 Million * (50 - 8 + 24) Byte / 80% ~ 83 MB  
   
-     Nicht gruppierter Index B: 1 Million * (80 – 8 + 24) Byte / 80% ~ 120 MB  
+     Nicht gruppierter Index B: 1 Million * (80 - 8 + 24) Byte / 80% ~ 120 MB  
   
      Gesamtgröße der neuen Strukturen: 453 MB  
   

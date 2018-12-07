@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8042627fcc85cf6b9418f7a0b16eae9255441a57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cb94b594be62bf19ad90c00ffaef6145eb90fc9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684058"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531625"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Mit dem Bericht zur Transaktionsleistungsanalyse in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie einschätzen, ob In-Memory-OLTP die Leistung Ihrer Datenbankanwendung verbessern kann. Der Bericht gibt darüber hinaus an, welchen Arbeitsaufwand Sie leisten müssen, um In-Memory-OLTP in Ihrer Anwendung zu aktivieren. Nachdem Sie eine datenträgerbasierte Tabelle identifiziert haben, die Sie zur Verwendung von In-Memory-OLTP portieren, können Sie die Tabellenmigration mit dem [Ratgeber für die Speicheroptimierung](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)vereinfachen. In ähnlicher Weise unterstützt Sie der [Ratgeber für native Kompilierung](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) bei der Portierung einer gespeicherten Prozedur in eine nativ kompilierte gespeicherte Prozedur. Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory-OLTP − Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](https://msdn.microsoft.com/library/dn673538.aspx).  
+  Mit dem Bericht zur Transaktionsleistungsanalyse in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie einschätzen, ob In-Memory-OLTP die Leistung Ihrer Datenbankanwendung verbessern kann. Der Bericht gibt darüber hinaus an, welchen Arbeitsaufwand Sie leisten müssen, um In-Memory-OLTP in Ihrer Anwendung zu aktivieren. Nachdem Sie eine datenträgerbasierte Tabelle identifiziert haben, die Sie zur Verwendung von In-Memory-OLTP portieren, können Sie die Tabellenmigration mit dem [Ratgeber für die Speicheroptimierung](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)vereinfachen. In ähnlicher Weise unterstützt Sie der [Ratgeber für native Kompilierung](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) bei der Portierung einer gespeicherten Prozedur in eine nativ kompilierte gespeicherte Prozedur. Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory OLTP - Common Workload Patterns and Migration Considerations (In-Memory-OLTP: Allgemeine Workloadmuster und Überlegungen zur Migration)](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  Der Bericht zur Transaktionsleistungsanalyse wird direkt gegen die Produktionsdatenbank oder eine Testdatenbank ausgeführt, deren aktive Arbeitsauslastung der Arbeitsauslastung der Produktion ähnelt.  
   
@@ -137,7 +137,7 @@ Scan- und Konfliktstatistiken für den Tabellendetailbericht werden aus „sys.d
 2.  Geben Sie den folgenden Befehl ein.  
   
     ```  
-    Save-SqlMigrationReport –FolderPath “<folder_path>”  
+    Save-SqlMigrationReport -FolderPath "<folder_path>"  
     ```  
   
 3.  Überprüfen Sie Folgendes.  
@@ -158,12 +158,12 @@ Scan- und Konfliktstatistiken für den Tabellendetailbericht werden aus „sys.d
     ```  
   
     ```  
-    Save-SqlMigrationReport –Server "<instance_name>" -Database "<db_name>" -FolderPath "<folder_path1>"  
+    Save-SqlMigrationReport -Server "<instance_name>" -Database "<db_name>" -FolderPath "<folder_path1>"  
   
     ```  
   
     ```  
-    Save-SqlMigrationReport –Server "<instance_name>" -Database "<db_name>" -Object <object_name> -FolderPath "<folder_path2>"  
+    Save-SqlMigrationReport -Server "<instance_name>" -Database "<db_name>" -Object <object_name> -FolderPath "<folder_path2>"  
   
     ```  
   

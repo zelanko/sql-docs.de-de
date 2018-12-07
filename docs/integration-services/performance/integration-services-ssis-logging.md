@@ -30,12 +30,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9be97427a20f7277088422734f0108d999a7302d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c3843517e906cd2a1e6eaa7bcfe80d029525a902
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641257"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542890"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services-Protokollierung (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Protokollanbieter, mit denen Sie die Protokollierung in Paketen, Containern und Tasks implementieren können. Mit der Protokollierung können Sie Laufzeitinformationen zu einem Paket aufzeichnen, damit Sie ein Paket bei jeder Ausführung überwachen und Probleme behandeln können. Beispielsweise können in einem Protokoll der Name des Operators, der das Paket ausgeführt hat, und der Zeitpunkt, zu dem die Paketausführung begann und endete, aufgezeichnet werden.  
@@ -209,7 +209,7 @@ ms.locfileid: "51641257"
   
 -   Die Transformation für abgeleitete Spalten mit dem Namen "Calculate LineItemTotalCost" hat 356 Millisekunden für das Durchführen von Berechnungen für eingehende Zeilen benötigt.  
   
--   Die Transformation für das Aggregieren mit dem Namen "Sum Quantity and LineItemTotalCost" hat insgesamt 220 Millisekunden &ndash; 141 für den PrimeOutput- und 79 für den ProcessInput-Schritt &ndash; benötigt, um Berechnungen durchzuführen und die Daten an die nächste Transformation zu übergeben.  
+-   Die Transformation für das Aggregieren mit dem Namen „Sum Quantity and LineItemTotalCost“ hat insgesamt 220 Millisekunden (141 für den PrimeOutput- und 79 für den ProcessInput-Schritt) benötigt, um Berechnungen durchzuführen und die Daten an die nächste Transformation zu übergeben.  
 
 ## <a name="ssdt"></a> Aktivieren der Paketprotokollierung in SQL Server Data Tools
   In diesem Verfahren wird beschrieben, wie einem Paket Protokolle hinzugefügt werden, die Protokollierung auf Paketebene konfiguriert wird und die Protokollierungskonfiguration in eine XML-Datei gespeichert wird. Sie können Protokolle nur auf der Paketebene hinzufügen, das Paket muss jedoch keine Protokollierung durchführen, um die Protokollierung in den Containern zu ermöglichen, die im Paket enthalten sind.  

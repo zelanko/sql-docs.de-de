@@ -19,12 +19,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ddb4cc58fed64ddb755e797095d72a31b85885a0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 35b990e553116d88764f4fa995935bc4ba90b22d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642007"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512903"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services-Variablen (SSIS)
   Variablen speichern Werte, die von einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket und dessen Containern, Tasks und Ereignishandlern zur Laufzeit verwendet werden können. Die Skripts im Skripttask und die Skriptkomponente können ebenfalls Variablen verwenden. Die Rangfolgeneinschränkungen, mit denen Tasks und Container zu einem Workflow zusammengestellt werden, können Variablen verwenden, wenn ihre Einschränkungsdefinitionen Ausdrücke einschließen.  
@@ -46,7 +46,7 @@ ms.locfileid: "51642007"
 ## <a name="system-and-user-defined-variables"></a>Systemvariablen und benutzerdefinierte Variablen  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt zwei Arten von Variablen: Benutzerdefinierte Variablen und Systemvariablen. Benutzerdefinierte Variablen werden von Paketentwicklern definiert, und Systemvariablen werden von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]definiert. Sie können so viele benutzerdefinierte Variablen erstellen, wie für das Paket erforderlich sind. Zusätzliche Systemvariablen können jedoch nicht erstellt werden.  
   
- Alle Variablen, seien es Systemvariablen oder benutzerdefinierte Variablen, können in den Parameterbindungen verwendet werden, die der Task SQL ausführen zum Zuordnen von Variablen zu Parametern in SQL-Anweisungen verwendet. Weitere Informationen finden Sie unter [SQL ausführen (Task)](../integration-services/control-flow/execute-sql-task.md) und [Parameter und Rückgabecodes im Task „SQL ausführen“](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ Alle Variablen, seien es Systemvariablen oder benutzerdefinierte Variablen, können in den Parameterbindungen verwendet werden, die der Task „SQL ausführen“ zum Zuordnen von Variablen zu Parametern in SQL-Anweisungen verwendet. Weitere Informationen finden Sie unter [SQL ausführen (Task)](../integration-services/control-flow/execute-sql-task.md) und [Parameter und Rückgabecodes im Task „SQL ausführen“](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
   
 > [!NOTE]  
 >  Bei den Namen von benutzerdefinierten und Systemvariablen wird nach Groß-/Kleinschreibung unterschieden.  
@@ -221,7 +221,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
 4.  Wählen Sie die zu löschende Variable aus, und klicken Sie dann auf **Variable löschen**.  
   
-     Wenn die Variable nicht im Fenster Variablen angezeigt wird, klicken Sie auf **Rasteroptionen** , und wählen Sie dann **Variablen aller Bereiche anzeigen**aus.  
+     Wenn die Variable nicht im Fenster „Variablen“ angezeigt wird, klicken Sie auf **Rasteroptionen**, und wählen Sie dann **Variablen aller Bereiche anzeigen** aus.  
   
 5.  Wenn das Dialogfeld **Löschen der Variablen bestätigen** aufgerufen wird, klicken Sie zur Bestätigung auf **Ja** .  
   
@@ -237,7 +237,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
 4.  Wählen Sie die Variable aus, und klicken Sie dann auf **Variable verschieben**.  
   
-     Wenn die Variable nicht im Fenster Variablen angezeigt wird, klicken Sie auf **Rasteroptionen** , und wählen Sie dann **Variablen aller Bereiche anzeigen**aus.  
+     Wenn die Variable nicht im Fenster „Variablen“ angezeigt wird, klicken Sie auf **Rasteroptionen**, und wählen Sie dann **Variablen aller Bereiche anzeigen** aus.  
   
 5.  Wählen Sie im Dialogfeld **Neuen Bereich auswählen** das Paket oder einen Container, Task oder Ereignishandler im Paket aus, um den Gültigkeitsbereich der Variablen zu ändern.  
   

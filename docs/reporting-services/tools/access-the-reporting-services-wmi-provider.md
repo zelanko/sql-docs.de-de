@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f793de9e36968021155387ce0f926899f81f753d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bf1a42cb16c499490bd7ea1ff5657e8dff58bcde
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027779"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524422"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Zugreifen auf den Reporting Services-WMI-Anbieter
   Der Reporting Services-WMI-Anbieter macht zwei WMI-Klassen für die Verwaltung von Berichtsserverinstanzen im einheitlichen Modus durch Skripterstellung verfügbar:  
@@ -36,30 +36,30 @@ ms.locfileid: "50027779"
  Für jede Berichtsserverinstanz wird eine Instanz von jeder der oben erwähnten Klassen erstellt. Sie können mit jedem Microsoft- oder Drittanbietertool auf die WMI-Objekte zugreifen, die vom Berichtsserver verfügbar gemacht werden, einschließlich WMI-Programmierungsschnittstellen, die von .NET Framework verfügbar gemacht werden. In diesem Thema wird die Verwendung von und der Zugriff auf WMI-Klasseninstanzen mit dem PowerShell-Befehl [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx)beschrieben.  
   
 ## <a name="determine-the-instance-name-in-the-namespace-string"></a>Bestimmen des Instanznamens in der Namespacezeichenfolge  
- Der Instanzname im Namespacepfad für Reporting Services-WMI-Klassen stellt eine Codierung des Instanznamens dar, den Sie angeben, wenn Sie die benannten Reporting Services-Instanzen installieren. Und zwar werden die Sonderzeichen in den Instanznamen codiert. Ein Unterstrich (_) wird z. B. als "_5f" codiert, d. h. der Instanzname "My_Instance" wird im WMI-Namespacepfad als "My_5fInstance" codiert.  
+ Der Instanzname im Namespacepfad für Reporting Services-WMI-Klassen stellt eine Codierung des Instanznamens dar, den Sie angeben, wenn Sie die benannten Reporting Services-Instanzen installieren. Und zwar werden die Sonderzeichen in den Instanznamen codiert. Ein Unterstrich (_) wird z.B. als „_5f“ codiert, d.h., der Instanzname „My_Instance“ wird im WMI-Namespacepfad als „My_5fInstance“ codiert.  
   
  Um die codierten Instanznamen der Berichtsserverinstanzen im WMI-Namespacepfad aufzulisten, verwenden Sie den folgenden PowerShell-Befehl:  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace root\Microsoft\SqlServer\ReportServer  –class __Namespace –ComputerName hostname | select Name  
+PS C:\windows\system32> Get-WmiObject -namespace root\Microsoft\SqlServer\ReportServer  -class __Namespace -ComputerName hostname | select Name  
 ```  
   
 ## <a name="access-the-wmi-classes-using-powershell"></a>Zugreifen auf die WMI-Klassen mit PowerShell  
  Führen Sie den folgenden Befehl aus, um auf die WMI-Klassen zuzugreifen:  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace <namespacename> –class <classname> –ComputerName <hostname>  
+PS C:\windows\system32> Get-WmiObject -namespace <namespacename> -class <classname> -ComputerName <hostname>  
 ```  
   
  Um z. B. auf die MSReportServer_ConfigurationSetting-Klasse der Standardberichtsserverinstanz des Host "myrshost" zuzugreifen, führen Sie den folgenden Befehl aus. Für eine erfolgreiche Ausführungs dieses Befehls muss die Standardberichtsserverinstanz auf myrshost installiert sein.  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERER\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost  
+PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERER\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost  
 ```  
   
  Mit dieser Befehlssyntax werden alle Klasseneigenschaftsnamen und -werte ausgegeben. Hinweis: Alle Instanzen der Klasse "MSReportServer_ConfigurationSetting" werden zurückgegeben, auch wenn der Zugriff auf die Klasse im Namespace der Standardberichtsserverinstanz (RS_MSSQLSERVER) erfolgt. Wenn myrshost z. B. mit der Standardberichtsserverinstanz und einer benannten Berichtsserverinstanz mit dem Namen SHAREPOINT installiert ist, werden mit diesem Befehl zwei WMI-Objekte zurückgegeben und die Eigenschaftsnamen und Werte für beide Berichtsserverinstanzen ausgegeben.  
   
- Um eine bestimmte Klasseninstanz zurückzugeben, wenn mehrere Instanzen zurückgegeben werden, verwenden Sie den –Filter-Parameter, um die Ergebnisse basierend auf den Eigenschaften mit eindeutigen Werten, z. B. InstanceName, zu filtern. Wenn Sie z. B. nur das WMI-Objekt für die Standardberichtsserverinstanz zurückgeben möchten, verwenden Sie den folgenden Befehl:  
+ Um eine bestimmte Klasseninstanz zurückzugeben, wenn mehrere Instanzen zurückgegeben werden, verwenden Sie den Parameter „-Filter“, um die Ergebnisse basierend auf den Eigenschaften mit eindeutigen Werten, z.B. InstanceName, zu filtern. Wenn Sie z. B. nur das WMI-Objekt für die Standardberichtsserverinstanz zurückgeben möchten, verwenden Sie den folgenden Befehl:  
   
 ```  
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v13\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost -filter "InstanceName='MSSQLSERVER'"  

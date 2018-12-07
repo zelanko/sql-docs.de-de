@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8eb14ed03dc43a1a27254a1998f84b786e39694d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 94eea6f9e8d76875c11a6e52de423812c16b255e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671404"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516020"
 ---
 # <a name="database-project-settings"></a>Datenbankprojekteinstellungen
 Mit Datenbankprojekteinstellungen werden Aspekte der Datenbank-, Debug- und Buildkonfigurationen gesteuert. Diese Einstellungen werden in die folgenden Kategorien eingeteilt.  
@@ -102,7 +102,7 @@ Die Einstellungen in der folgenden Tabelle gelten für alle Konfigurationen dies
 > [!IMPORTANT]  
 > Die Funktion zur erweiterten Transact-SQL-Überprüfung wird aus der nächsten Featureversion von SQL Server Data Tools und dem nächsten Hauptrelease von Visual Studio entfernt.  
   
-Die erweiterte Transact-SQL-Überprüfung ist eine Funktion innerhalb des Datenbankprojektsystems, mit deren Hilfe Entwickler ihr Datenbankprojekt zur Buildzeit vom Transact-SQL Compiler Service überprüfen lassen können, indem der Projektcode mit dem Parser und Interpreter von SQL Server Engine überprüft wird.  
+Die erweiterte Transact-SQL-Überprüfung ist eine Funktion innerhalb des Datenbankprojektsystems, mit deren Hilfe Entwickler ihr Datenbankprojekt zur Buildzeit vom Transact-SQL-Compilerdienst für Microsoft SQL Server 2014 überprüfen lassen können, indem der Projektcode mit dem Parser und Interpreter von SQL Server Engine überprüft wird.  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL Compiler Service  
 Der Transact-SQL-Compilerdienst ist eine Komponente, die auf der Microsoft SQL Server 2012-Datenbank-Engine basiert. Dieser Dienst ist in der Lage, die Syntax und Semantik von DDL-Anweisungen mit derselben Genauigkeit wie eine Microsoft SQL Server 2012-Datenbank-Engine zu überprüfen. Dies bedeutet auch, dass der Compilerdienst keine Syntax oder Funktionen unterstützt, die in Microsoft SQL Server 2012 als veraltet markiert wurden. Weitere Informationen zu veralteten Funktionen finden Sie unter [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
@@ -147,7 +147,7 @@ Die erweiterte Überprüfungsfunktion kann auch verwendet werden, wenn eine Date
 1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf eine SQL-Datei.  
   
     > [!NOTE]  
-    > Um die Funktion für die erweiterte Transact\-SQL-Überprüfung auf Dateiebene zu deaktivieren, muss die Eigenschaft **Buildvorgang** der Datei auf **Build** festgelegt werden.  
+    > Zum Deaktivieren der Funktion für die erweiterte Transact\-SQL-Überprüfung auf Dateiebene muss die Eigenschaft **Buildvorgang** der Datei auf **Build** festgelegt werden.  
   
 2.  Ändern Sie unter **Eigenschaften** die Eigenschaft **Erweiterte T-SQL-Überprüfung** in **False**.  
   
@@ -162,7 +162,7 @@ Weitere Informationen zu den Assemblyoptionen finden Sie unter [Dialogfeld "Asse
 Weitere Informationen zum Signieren finden Sie im Abschnitt **Signieren von Assemblys** im Thema [Seite "Signierung", Projekt-Designer](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
   
 ## <a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR- und SQLCLR-Build  
-Die Eigenschaftenseiten **SQLCLR** und **SQLCLR Build** enthalten viele Einstellungen zum Verwenden von SQL CLR-Objekten im Projekt. Insbesondere enthält die Eigenschaftenseite **SQLCLR** eine Berechtigungsstufeneinstellung zum Festlegen von Berechtigungen für die SQLCLR-Assembly. Sie enthält außerdem die Einstellung "DDL generieren", um zu steuern, ob DDL (Dynamic Data Language) für die dem Projekt hinzugefügten SQLCLR-Objekte generiert wird. Die Eigenschaftenseite **SQLCLR Build** enthält alle Compileroptionen, die Sie festlegen können, um die Kompilierung des SQLCLR-Codes im Projekt zu konfigurieren.  
+Die Eigenschaftenseiten **SQLCLR** und **SQLCLR Build** enthalten viele Einstellungen zum Verwenden von SQL CLR-Objekten im Projekt. Insbesondere enthält die Eigenschaftenseite **SQLCLR** eine Berechtigungsstufeneinstellung zum Festlegen von Berechtigungen für die SQLCLR-Assembly. Sie enthält außerdem die Einstellung „DDL generieren“, um zu steuern, ob DDL (Dynamic Data Language) für die dem Projekt hinzugefügten SQLCLR-Objekte generiert wird. Die Eigenschaftenseite **SQLCLR Build** enthält alle Compileroptionen, die Sie festlegen können, um die Kompilierung des SQLCLR-Codes im Projekt zu konfigurieren.  
   
 Die Eigenschaftenseite **SQLCLR Build** enthält erweiterte Buildeinstellungen zum Erstellen von SQL CLR-Objekten. Je nach der für die Programmierung der SQL CLR-Objekte verwendeten Sprache (VB oder C#) sind unterschiedliche Optionen verfügbar.  
   
@@ -226,7 +226,7 @@ Mit diesen Einstellungen können Sie das Debuggen des Datenbankprojekts steuern.
 |Inkrementelle Bereitstellung blockieren, wenn Datenverlust auftreten könnte|Benutzerkontensteuerung|Gibt an, ob die Bereitstellung angehalten wird, wenn ein Update Datenverluste verursachen kann. Wenn dieses Kontrollkästchen aktiviert ist, verursachen Änderungen, die zu Datenverlusten führen, das Beenden der Bereitstellung mit einem Fehler, der den Datenverlust verhindert. Die Bereitstellung wird beispielsweise beendet, wenn eine `varchar(50)` -Spalte in `varchar(30)`geändert wird.<br /><br />**HINWEIS**: Die Bereitstellung wird nur blockiert, wenn die Tabellen, in denen es zu einem Datenverlust kommen kann, Daten enthalten können. Die Bereitstellung wird fortgesetzt, wenn keine Daten verloren gehen können.|  
 |DROP-Objekte im Ziel, aber nicht im Projekt|nein|Gibt an, ob Objekte, die sich in der Zieldatenbank, aber nicht im Datenbankprojekt befinden, im Rahmen des Bereitstellungsskripts gelöscht werden sollen. Sie können einige Dateien im Projekt ausschließen, um sie vorübergehend aus dem Buildskript zu entfernen. Sie können jedoch die vorhandenen Versionen solcher Objekte in der Zieldatenbank belassen. Dieses Kontrollkästchen hat keine Auswirkung, wenn das Kontrollkästchen **Datenbank immer neu erstellen** aktiviert ist, da die Datenbank gelöscht wird.|  
 |CLR-Typen nicht mit ALTER ASSEMBLY-Anweisungen aktualisieren|nein|Gibt an, ob CLR (Common Language Runtime)-Typen mit ALTER ASSEMBLY-Anweisungen aktualisiert werden oder ob stattdessen das Objekt, das den CLR-Typ instanziiert, gelöscht und beim Bereitstellen von Änderungen neu erstellt wird.|  
-|Erweitert…|nein|Befehlsschaltfläche, die Ihnen das Angeben von Optionen ermöglicht, die Ereignisse und das Verhalten der Bereitstellung steuern.|  
+|Erweitert...|nein|Befehlsschaltfläche, die Ihnen das Angeben von Optionen ermöglicht, die Ereignisse und das Verhalten der Bereitstellung steuern.|  
   
 ## <a name="bkmk_ref_paths"></a>Verweispfade  
 Sie können diese Seite verwenden, um Servervariablen und Datenbankvariablen zu definieren, die einem datenbankübergreifenden Verweis zugeordnet sind. Außerdem können Sie die Werte dieser Variablen angeben. Weitere Informationen finden Sie unter [Verwenden von Verweisen in Datenbankprojekten](https://msdn.microsoft.com/library/bb386242.aspx).  

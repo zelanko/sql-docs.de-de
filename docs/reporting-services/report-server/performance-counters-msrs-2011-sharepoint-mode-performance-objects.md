@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 048503cecc50b684aea1d684cdef4a849ee0378f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b7df0f9ab315adddb3714846601210e54aa987e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030189"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529515"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Leistungsindikatoren für Leistungsobjekte des MSRS 2011-Webdiensts im SharePoint-Modus
   In diesem Thema werden Leistungsobjekte für den **MSRS 2011-Webdienst im SharePoint Modus** und den **MSRS 2011-Windows-Dienst im SharePoint Modus** beschrieben, die Teil einer [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Bereitstellung im SharePoint-Modus sind.  
@@ -80,12 +80,12 @@ ms.locfileid: "50030189"
 |**Aktive Sitzungen**|Die Anzahl der aktiven Sitzungen, die in der Berichtsserver-Datenbank gespeichert sind. Dieser Leistungsindikator liefert die Gesamtanzahl aller verfügbaren Browsersitzungen, die aus Berichtsabonnements generiert wurden, unabhängig davon, ob sie noch aktiv sind oder nicht.|  
 |**Warnung: Länge der Ereigniswarteschlange**||  
 |**Warnung: verarbeitete Ereignisse - CreateSchedule**||  
-|**Warnung: verarbeitete Ereignisse - DeleteSchedule**||  
-|**Warnung: verarbeitete Ereignisse - DeliverAlert**||  
-|**Warnung: verarbeitete Ereignisse - FireAlert**||  
-|**Warnung: verarbeitete Ereignisse - FireSchedule**||  
-|**Warnung: verarbeitete Ereignisse - GenerateAlert**||  
-|**Warnung: verarbeitete Ereignisse - UpdateSchedule**||  
+|**Warnung: verarbeitete Ereignisse, DeleteSchedule**||  
+|**Warnung: verarbeitete Ereignisse, DeliverAlert**||  
+|**Warnung: verarbeitete Ereignisse, FireAlert**||  
+|**Warnung: verarbeitete Ereignisse, FireSchedule**||  
+|**Warnung: verarbeitete Ereignisse, GenerateAlert**||  
+|**Warnung: verarbeitete Ereignisse, UpdateSchedule**||  
 |**Cacheleerungen/Sekunde**|Die Anzahl der Cacheleerungen pro Sekunde.|  
 |**Cachetreffer/Sekunde**|Die Anzahl der Anforderungen pro Sekunde nach zwischengespeicherten Berichten. Es handelt sich um Anforderungen für erneut gerenderte Berichte, nicht um Anforderungen für direkt aus dem Cache verarbeitete Berichte. (Siehe **Gesamtanzahl der Cachetreffer** weiter unten in diesem Thema.)|  
 |**Cachetreffer/Sekunde (Semantikmodelle)**|Die Anzahl der Anforderungen für zwischengespeicherte Modelle pro Sekunde.|  
@@ -118,7 +118,7 @@ ms.locfileid: "50030189"
 |**Updates von Momentaufnahmen gesamt**|Die Gesamtanzahl der Updates von Berichtsausführungs-Momentaufnahmen.|  
   
 ##  <a name="bkmk_powershell"></a> Zurückgeben von Listen mithilfe von PowerShell-Cmdlets  
- ![Betrifft PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") Das folgende Windows PowerShell-Skript gibt die Indikatorensätze zurück, bei denen CounterSetName mit „msr“ beginnt:  
+ ![Betrifft PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")Das folgende Windows PowerShell-Skript gibt die Indikatorensätze zurück, bei denen CounterSetName mit „msr“ beginnt:  
   
 ```  
 get-counter -listset msr*  

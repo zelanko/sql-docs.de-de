@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641567"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521230"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht
   Diese exemplarische Vorgehensweise enthält detaillierte Schritte zum Veröffentlichen eines SSIS-Pakets als SQL-Ansicht in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.  
@@ -243,7 +243,7 @@ GO
  Syntax der OPENQUERY-Funktion:  
   
 ```sql 
-SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
+SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters="<parameter_name_1>=<value1>; parameter_name_2=<value2>";Timeout=<Number of Seconds>;')  
 ```  
   
  Parameter für Ordner, Projekt und Paket müssen angegeben werden. Use32BitRuntime, Timeout und Parameter sind optional.  
@@ -260,7 +260,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
 -   Doppelte Anführungszeichen ("): Die Parameter, die Teil der Abfrage sind, werden in doppelte Anführungszeichen eingeschlossen. Wenn ein Parameter selbst ein doppeltes Anführungszeichen enthält, verwenden Sie das Escapezeichen. Beispiel: \".  
   
--   Linke und rechte eckige Klammern ([ und ]): Diese Zeichen werden verwendet, um führende/nachstehende Leerzeichen anzugeben. Der Eintrag „[ einige Leerzeichen ]“ stellt z. B. die Zeichenfolge „ einige Leerzeichen “ mit einem führenden und einem nachstehenden Leerzeichen dar. Wenn diese Zeichen selbst in der Abfrageklausel verwendet werden, müssen sie mit Escapezeichen versehen werden. Beispiel: \\[ und \\].  
+-   Linke und rechte eckige Klammern ([ und ]): Diese Zeichen werden verwendet, um führende/nachstehende Leerzeichen anzugeben. Der Eintrag „[ einige Leerzeichen ]“ stellt z. B. die Zeichenfolge „ einige Leerzeichen “ mit einem führenden und einem nachstehenden Leerzeichen dar. Wenn diese Zeichen selbst in der Abfrageklausel verwendet werden, müssen sie mit Escapezeichen versehen werden. Beispiel: \\[ und \\].  
   
 -   Schrägstrich (\\): Jeder in der Abfrageklausel verwendete Schrägstrich (\) muss mit Escapezeichen versehen werden. Beispiel: \\\ wird in der Abfrageklausel als \ ausgewertet.  
   

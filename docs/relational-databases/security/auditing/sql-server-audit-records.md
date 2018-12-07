@@ -13,12 +13,12 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c657e42e1e754ca843a40967221512f55c9c9c9f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7a11a699a9bba7f04459bbcc39ef6fcf085cbed1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675339"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539683"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit-Datensätze
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "51675339"
 |**event_time**|Datum und Uhrzeit der Auslösung des überwachbaren Vorgangs.|**datetime2**|Benutzerkontensteuerung|  
 |**sequence_no**|Hält die Reihenfolge der Datensätze innerhalb eines einzelnen Überwachungsdatensatzes fest, der zu groß für den Schreibpuffer für Überwachungen ist.|**int**|Benutzerkontensteuerung|  
 |**action_id**|ID der Aktion<br /><br /> Tipp: Damit **action_id** als Prädikat verwendet werden kann, muss eine Konvertierung von einer Zeichenfolge in einen numerischen Wert durchgeführt werden. Weitere Informationen finden Sie unter [Filtern von SQL Server Audit nach dem action_id-Prädikat oder class_type-Prädikat](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|**varchar(4)**|Benutzerkontensteuerung|  
-|**succeeded**|Gibt an, ob die Berechtigungsprüfung für die Aktion, die das Überwachungsereignis ausgelöst hat, erfolgreich war oder fehlgeschlagen ist. |**bit**<br /> 1 = Erfolg, <br />0 = Fehler|Benutzerkontensteuerung|  
+|**succeeded**|Gibt an, ob die Berechtigungsprüfung für die Aktion, die das Überwachungsereignis ausgelöst hat, erfolgreich war oder fehlgeschlagen ist. |**bit**<br /> - 1 = Success (Erfolg), <br />0 = Fehler|Benutzerkontensteuerung|  
 |**permission_bitmask**|Zeigt, sofern anwendbar, die Berechtigungen an, die gewährt, verweigert oder widerrufen wurden.|**bigint**|nein|  
-|**is_column_permission**|Flag, das eine Berechtigung auf Spaltenebene angibt.|**bit** <br />1 = TRUE, <br />0 = False|nein|  
+|**is_column_permission**|Flag, das eine Berechtigung auf Spaltenebene angibt.|**bit** <br />- 1 = True, <br />0 = False|nein|  
 |**session_id**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|**int**|Benutzerkontensteuerung|  
 |**server_principal_id**|ID des Anmeldekontexts, in dem die Aktion ausgeführt wird.|**int**|Benutzerkontensteuerung|  
 |**database_principal_id**|ID des Datenbankbenutzerkontexts, in dem die Aktion ausgeführt wird.|**int**|nein|  

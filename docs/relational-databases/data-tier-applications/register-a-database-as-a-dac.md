@@ -19,12 +19,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53ca1a857e08b538f61067ba6a035a6ceab1e8c6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a9a3359957c543c809003c4289207cd4b325ee0c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813993"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513235"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrieren einer Datenbank als eine DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.locfileid: "51813993"
  [Verwenden des Assistenten zum Registrieren von Datenebenenanwendungen](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Überprüfen von Objekten  
- **Prüfung**  *SchemaName* **beispielsweise nicht ausgeführt werden.** *ObjectName* **beispielsweise nicht ausgeführt werden.** – Zeigt eine Statusanzeige an, während der Assistent die Abhängigkeiten der abgerufenen Objekten überprüft und sicherstellt, dass sie alle für eine DAC gültig sind. *Schemaname ***.*** Objektname* gibt das derzeit überprüfte Objekt an.  
+ **Prüfung**  *SchemaName* **beispielsweise nicht ausgeführt werden.** *ObjectName* **beispielsweise nicht ausgeführt werden.** – Zeigt eine Statusanzeige an, während der Assistent die Abhängigkeiten der abgerufenen Objekten überprüft und sicherstellt, dass sie alle für eine DAC gültig sind. _SchemaName_**.**_ObjectName_ gibt das derzeit überprüfte Objekt an.  
   
  **< Zurück**– Sie kehren zur Seite **Eigenschaften festlegen** zurück, auf der Sie Ihre Einträge ändern.  
   

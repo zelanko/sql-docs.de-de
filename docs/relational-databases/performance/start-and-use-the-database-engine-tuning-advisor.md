@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 926b099e6cadadb130717159188f2fcc87dbc218
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661126"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517674"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -248,13 +248,13 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
 2.  Geben Sie zum Ändern der Anzahl der für die Analyse zu verwendenden Ereignisse die Option **–n** an. Im folgenden Beispiel wird die Anzahl der Cacheeinträge auf 2.000 erhöht.  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  Geben Sie zum Analysieren der Ereignisse aller Datenbanken in der Instanz die Option **-ipf** an.  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>So optimieren Sie eine Datenbank mithilfe einer Arbeitsauslastung und den Standardeinstellungen des dta-Hilfsprogramms  

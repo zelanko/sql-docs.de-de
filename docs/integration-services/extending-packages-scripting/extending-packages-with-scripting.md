@@ -15,12 +15,12 @@ ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c66db1148c702bcfce378648e3d0b3bc59563508
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5928217d9ca44cf03fda79009da42a52e7f0614a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621268"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517263"
 ---
 # <a name="extending-packages-with-scripting"></a>Erweitern von Paketen mit Skripts
   Wenn die integrierten Komponenten in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Ihren Anforderungen nicht entsprechen, können Sie die Effektivität von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] durch Codieren eigener Erweiterungen erhöhen. Ihnen stehen zwei unterschiedliche Optionen zur Erweiterung der Pakete zur Verfügung: Sie können Code in die leistungsstarken Wrapper schreiben, die vom Skripttask und der Skriptkomponente bereitgestellt werden, oder benutzerdefinierte [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Erweiterungen durch Ableitung von den Basisklassen, die im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell zur Verfügung stehen, vollständig neu erstellen.  

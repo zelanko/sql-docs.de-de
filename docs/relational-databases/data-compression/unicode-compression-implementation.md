@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2637e6c503a5272ff7f4e1f6bc224ecb4449bbd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d3a4ec486e08827d6a56564950106e766dabcc8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633068"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525552"
 ---
 # <a name="unicode-compression-implementation"></a>Implementierung von Unicode-Komprimierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47633068"
 >  Unicode-Komprimierung wird nicht für **nvarchar(max)** -Daten unterstützt, auch wenn sie in Zeile gespeichert wird. Dieser Datentyp kann immer noch jedoch von der Seitenkomprimierung profitieren.  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>Aktualisieren von früheren Versionen von SQL Server  
- Wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert wird, werden keine Änderungen im Zusammenhang mit Unicode-Komprimierung für die Datenbankobjekte durchgeführt – unabhängig davon, ob diese komprimiert oder unkomprimiert sind. Das Datenbankupgrade wirkt sich wie folgt auf Objekte aus:  
+ Wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisiert wird, werden keine Änderungen im Zusammenhang mit Unicode-Komprimierung für die Datenbankobjekte durchgeführt – unabhängig davon, ob diese komprimiert oder nicht komprimiert sind. Das Datenbankupgrade wirkt sich wie folgt auf Objekte aus:  
   
 -   Wenn das Objekt nicht komprimiert ist, werden keine Änderungen durchgeführt, und das Objekt funktioniert wie bisher.  
   

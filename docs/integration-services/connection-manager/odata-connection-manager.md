@@ -14,12 +14,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 790c7b1e50b029ab2cf2cbf4ad41bd80cf11cb0c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: aa18c7b1a6aeaccb448c7006e8d4430d436a2516
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641825"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511265"
 ---
 # <a name="odata-connection-manager"></a>OData-Verbindungs-Manager
  Stellen Sie eine Verbindung mit einer OData-Quelle mit einem OData-Verbindungs-Manager her. Eine OData-Quellkomponente stellt über einen OData-Verbindungs-Manager eine Verbindung mit einer OData-Quelle her und verwendet die Daten des Diensts. Weitere Informationen finden Sie unter [OData Source](../../integration-services/data-flow/odata-source.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "51641825"
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>Hinzufügen eines OData-Verbindungs-Managers zu einem SSIS-Paket  
  Sie können einem SSIS-Paket einen neuen OData-Verbindungs-Manager auf drei Arten hinzufügen:  
   
--   Klicken Sie im **Quellen-Editor für OData** auf die Schaltfläche **Neu**  
+-   Klicken Sie im **Quellen-Editor für OData** auf die Schaltfläche **Neu...**.  
   
 -   Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Ordner **Verbindungs-Manager**, und klicken Sie anschließend auf **Neuer Verbindungs-Manager**. Wählen Sie unter **Typ des Verbindungs-Managers** die Option **ODATA**aus.  
   

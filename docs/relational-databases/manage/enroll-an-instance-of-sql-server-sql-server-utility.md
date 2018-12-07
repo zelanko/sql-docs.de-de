@@ -21,12 +21,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ff7bffcb3a31a697300d98e0de03a7f3e3111701
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f928fcfc873e1a5e6209338b075a9df0ff543691
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681338"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509792"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrieren einer Instanz von SQL Server (SQL Server-Hilfsprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "51681338"
 -   [Registrieren der Instanz von SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Einführung in den Instanzregistrierungs-Assistenten  
- Um den Assistenten zu starten, erweitern Sie auf einem Steuerungspunkt für das Hilfsprogramm (UCP, Utility Control Point) die Hilfsprogramm-Explorer-Struktur, klicken mit der rechten Maustaste auf **Verwaltete Instanzen**und wählen **Verwaltete Instanz hinzufügen...** aus.  
+ Um den Assistenten zu starten, erweitern Sie auf einem Steuerungspunkt für das Hilfsprogramm (UCP, Utility Control Point) die Hilfsprogramm-Explorer-Struktur, klicken mit der rechten Maustaste auf **Verwaltete Instanzen** und wählen **Verwaltete Instanz hinzufügen...** aus.  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "51681338"
 >  Weitere Informationen zur Fehlerbehebung finden Sie unter [Problembehandlung beim SQL Server-Hilfsprogramm](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   
 > [!IMPORTANT]  
->  Ändern Sie keine Eigenschaften des Sammlungssatzes "Hilfsprogramminformationen" in einer verwalteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und aktivieren/deaktivieren Sie die Datensammlung nicht manuell, da die Datensammlung von einem Hilfsprogramm-Agentauftrag gesteuert wird.  
+>  Ändern Sie keine Eigenschaften des Sammlungssatzes „Hilfsprogramminformationen“ in einer verwalteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und aktivieren/deaktivieren Sie die Datensammlung nicht manuell, da die Datensammlung von einem Hilfsprogramm-Agentauftrag gesteuert wird.  
   
  Nachdem der Instanzregistrierungs-Assistent abgeschlossen wurde, klicken Sie auf den Knoten **Verwaltete Instanzen** , der sich im **Hilfsprogramm-Explorer** -Navigationsbereich in SSMS befindet. Registrierte Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden in der Listenansicht in Bereich **Inhalt des Hilfsprogramm-Explorers** angezeigt.  
   

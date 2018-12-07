@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01be3d3e15f85a5b95a0d704f40bfb0cc0017732
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 085764ce76a5a6eb18d23c1c77ef67dd63282a56
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625769"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545700"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Leitfaden zum Entwerfen von Columnstore-Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -183,7 +183,7 @@ Hierbei handelt es sich um Aufgaben zum Erstellen und Verwalten von Columnstore-
 |Löschen einer Zeile aus einem Columnstore-Index|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Verwenden Sie [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) zum Löschen einer Zeile.<br /><br /> **columnstore** -Zeile: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] markiert die Zeile als logisch gelöscht, der physische Speicherplatz für die Zeile wird jedoch erst wieder freigegeben, wenn der Index neu erstellt wird.<br /><br /> **deltastore** -Zeile: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] löscht die Zeile logisch und physisch.|  
 |Aktualisieren einer Zeile im columnstore-Index|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Verwenden Sie [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) , um eine Zeile zu aktualisieren.<br /><br /> **columnstore** -Zeile:  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] markiert die Zeile als logisch gelöscht und fügt dann die aktualisierte Zeile in den Deltastore ein.<br /><br /> **deltastore** -Zeile: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisiert die Zeile im Deltastore.|  
 |Durchsetzen, dass alle Zeilen im Deltastore in den Columnstore wechseln.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Columnstore-Indizes für Defragmentierung](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|ALTER INDEX mit der REBUILD-Option erzwingt die Übernahme aller Zeilen in den Columnstore.|  
-|Defragmentieren eines Columnstore-Index|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX … REORGANIZE defragmentiert-Columnstore-Indizes online.|  
+|Defragmentieren eines Columnstore-Index|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX ... REORGANIZE defragmentiert-Columnstore-Indizes online.|  
 |Zusammenführen von Tabellen mit Columnstore-Indizes.|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)|
 
 

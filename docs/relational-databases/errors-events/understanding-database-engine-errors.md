@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bb1318a5acd0e5ad04dd2ebefa009af7a60dd43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf30ad3a99c8ffbe469413a315db26ad2e3b79e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782668"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532779"
 ---
 # <a name="understanding-database-engine-errors"></a>Grundlegendes zu Datenbank-Engine-Fehlern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47782668"
   
  Alle Datenbank-APIs, wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** -Namespace, ActiveX Data Objects (ADO), OLE DB und Open Database Connectivity (ODBC) berichten die grundlegenden Fehlerattribute. Diese Information schließt die Fehlernummer und die Meldungszeichenfolge ein. Nicht alle APIs berichten jedoch alle anderen Fehlerattribute.  
   
- Informationen zu einem Fehler, der innerhalb des Bereichs des TRY-Blocks eines TRY…CATCH-Konstrukts auftritt, können im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code mithilfe von Funktionen wie z. B. ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY und ERROR_STATE innerhalb des Bereichs des zugehörigen CATCH-Blocks abgerufen werden. Weitere Informationen finden Sie unter [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
+ Informationen zu einem Fehler, der innerhalb des Bereichs des TRY-Blocks eines TRY...CATCH-Konstrukts auftritt, können im [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code mithilfe von Funktionen wie ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY und ERROR_STATE innerhalb des Bereichs des zugehörigen CATCH-Blocks abgerufen werden. Weitere Informationen finden Sie unter [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die `sys.messages` -Katalogsicht abgefragt, um eine Liste aller system- und benutzerdefinierten Fehlermeldungen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] zurückzugeben, die über englischen Text verfügen (`1033`).  

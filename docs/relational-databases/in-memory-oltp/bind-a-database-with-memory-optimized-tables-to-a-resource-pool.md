@@ -11,12 +11,12 @@ ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e9ea3f4ea5649f6c23d5874c38f151839cbdc4b4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e176906e41e815733ac50f2e1b9e0db90a8d3a5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672789"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513151"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -176,7 +176,7 @@ GO
 |\<= 96 GB|85%|  
 |>96 GB|90%|  
   
- Wenn der zugesicherte Zielspeicher beispielsweise 100 GB beträgt und Sie schätzen, dass für die speicheroptimierten Tabellen und Indizes 60 GB Arbeitsspeicher benötigt werden, können Sie einen Ressourcenpool mit MAX_MEMORY_PERCENT = 67 erstellen (60 GB erforderlich/0,90 = 66,667 GB – aufgerundet auf 67 GB; 67 GB/100 GB installiert = 67 %). So wird sichergestellt, dass für die [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Objekte die erforderlichen 60 GB vorhanden sind.  
+ Wenn der zugesicherte Zielspeicher beispielsweise 100 GB beträgt und Sie schätzen, dass für die speicheroptimierten Tabellen und Indizes 60 GB Arbeitsspeicher benötigt werden, können Sie einen Ressourcenpool mit MAX_MEMORY_PERCENT = 67 erstellen (60 GB erforderlich/0,90 = 66,667 GB – aufgerundet auf 67 GB; 67 GB/100 GB installiert = 67 %). So wird sichergestellt, dass für die [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Objekte die erforderlichen 60 GB vorhanden sind.  
   
  Sobald eine Datenbank an einen benannten Ressourcenpool gebunden wurde, können Sie mit der folgenden Abfrage die Speicherbelegungen für unterschiedliche Ressourcenpools anzeigen.  
   
@@ -206,7 +206,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  Weitere Informationen finden Sie unter [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
- Wenn Sie die Datenbank nicht an einen benannten Ressourcenpool binden, wird sie an den Pool "default" gebunden. Da der Standardressourcenpool von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die meisten anderen Zuordnungen verwendet wird, können Sie nicht die DMV "sys.dm_resource_governor_resource_pools" verwenden, um den von speicheroptimierten Tabellen beanspruchten Arbeitsspeicher für die gewünschte Datenbank exakt zu überwachen.  
+ Wenn Sie die Datenbank nicht an einen benannten Ressourcenpool binden, wird sie an den Pool „default“ gebunden. Da der Standardressourcenpool von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die meisten anderen Zuordnungen verwendet wird, können Sie nicht die DMV "sys.dm_resource_governor_resource_pools" verwenden, um den von speicheroptimierten Tabellen beanspruchten Arbeitsspeicher für die gewünschte Datenbank exakt zu überwachen.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   

@@ -14,12 +14,12 @@ ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c22cb379e77fc643160c385624a2e3394eb613b9
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 791eacc2d9e16fc76c78d53eb5a691838e553250
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512051"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507519"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Anzeigen oder Ändern der Eigenschaften einer Bedingung der richtlinienbasierten Verwaltung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51512051"
   
 4.  Klicken Sie auf das Pluszeichen, um den Ordner **Bedingungen** zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf die Bedingung, die Sie anzeigen oder bearbeiten möchten, und wählen Sie **Eigenschaften**aus. Weitere Informationen zu den Optionen im Dialogfeld **Bedingung öffnen** > *Bedingungsname* finden Sie unter [Dialogfeld 'Neue Bedingung erstellen' oder 'Bedingung öffnen', Seite 'Allgemein'](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md), [Dialogfeld 'Bedingung öffnen', Seite 'Abhängige Richtlinien'](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md), [Dialogfeld 'Neue Bedingung erstellen' oder 'Bedingung öffnen', Seite 'Beschreibung'](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md) und [Dialogfeld 'Erweiterte Bearbeitung (Bedingung)'](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md).  
+5.  Klicken Sie mit der rechten Maustaste auf die Bedingung, die Sie anzeigen oder bearbeiten möchten, und wählen Sie **Eigenschaften**aus. Weitere Informationen zu den Optionen im Dialogfeld **Bedingung öffnen – ***Bedingungsname* finden Sie unter [Dialogfeld 'Neue Bedingung erstellen' oder 'Bedingung öffnen', Seite 'Allgemein'](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md), [Dialogfeld 'Bedingung öffnen', Seite 'Abhängige Richtlinien'](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md), [Dialogfeld 'Neue Bedingung erstellen' oder 'Bedingung öffnen', Seite 'Beschreibung'](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md) und [Dialogfeld 'Erweiterte Bearbeitung &#40;Bedingung&#41;'](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md).  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

@@ -11,12 +11,12 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 80ddd9fb25dcd9246da0b9cb9ac86e8872888e7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79c6f65a6ceba8eef0a61f27512fa09b6fb3f474
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785874"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531804"
 ---
 # <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>Lektion 2-3: Ändern des Flatfile-Verbindungs-Managers
 In dieser Aufgabe ändern Sie den in Lektion 1 konfigurierten und erstellten Flatfile-Verbindungs-Manager. Bei der ursprünglichen Erstellung wurde der Flatfile-Verbindungs-Manager so konfiguriert, dass eine einzelne Datei statisch geladen wird. Damit der Flatfile-Verbindungs-Manager Dateien iterativ laden kann, müssen Sie die ConnectionString-Eigenschaft des Verbindungs-Managers so ändern, dass die benutzerdefinierte Variable `User:varFileName`, die den Pfad der zur Laufzeit zu ladenden Datei enthält, akzeptiert wird.  
@@ -27,11 +27,11 @@ Indem Sie den Verbindungs-Manager so ändern, dass er den Wert der benutzerdefin
   
 1.  Klicken Sie im Bereich **Verbindungs-Manager** mit der rechten Maustaste auf **Sample Flat File Source Data**(Beispielquelldaten von Flatfiles), und wählen Sie **Eigenschaften**aus.  
   
-2.  Klicken Sie im Eigenschaftenfenster für **Ausdrücke**in die leere Zelle, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**.  
+2.  Klicken Sie im Eigenschaftenfenster für **Ausdrücke** in die leere Zelle, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
   
 3.  Geben Sie im Dialogfeld **Eigenschaftsausdrucks-Editor** in der Spalte **Eigenschaft** die Option **ConnectionString**ein, oder wählen Sie sie aus.  
   
-4.  Klicken Sie in der Spalte **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(…)** , um das Dialogfeld **Ausdrucks-Generator** zu öffnen.  
+4.  Klicken Sie in der Spalte **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Dialogfeld **Ausdrucks-Generator** zu öffnen.  
   
 5.  Erweitern Sie im Dialogfeld **Ausdrucks-Generator** den Knoten **Variablen** .  
   

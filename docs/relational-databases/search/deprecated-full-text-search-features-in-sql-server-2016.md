@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3424962c9c5df48bc738a0ec35cb92e1d998150
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: dbab8cc4eb36d81c0aa6f1ff40c2f498157257f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571299"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525937"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Als veraltet markierte Funktionen der Volltextsuche in SQL Server 2016
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ Sie können die Nutzung von als veralteten Funktionen mithilfe des Objektleistun
   
 |Als veraltet markierte Funktion|Ersatz|Feature name|Feature ID|  
 |------------------------|-----------------|------------------|----------------|  
-|Generischer NEAR-Operator für CONTAINS and CONTAINSTABLE:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|Der benutzerdefinierte NEAR-Operator:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> )<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|Generischer NEAR-Operator für CONTAINS and CONTAINSTABLE:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|Der benutzerdefinierte NEAR-Operator:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> )<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG (Option):<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|Keine.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Keine.<sup>*</sup>|237<br /><br /> Keine.*|  
 |DATABASEPROPERTYEX-Eigenschaft: IsFullTextEnabled|Keine.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |sp_detach_db-Option:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|Keine.|sp_detach_db @keepfulltextindexfile|226|  

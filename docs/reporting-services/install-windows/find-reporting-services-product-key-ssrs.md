@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7c7a9e61ff2cda1d0760a1ae28ab7e79fbddf09e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b33173a3a37ba9b4a8e71ee33661b85e60e759c0
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028089"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711263"
 ---
 # <a name="how-to-find-the-product-key-for-sql-server-2017-reporting-services"></a>Finden Sie den Product Key für SQL Server 2017 Reporting Services
 
@@ -40,8 +40,8 @@ Diesen Schritt müssen Sie nur bei der ersten Installation von SSRS 2017 durchf�
 
 ## <a name="related-information"></a>Verwandte Informationen
 
-- Informationen zur Installation von SQL Server 2016 Reporting Services im einheitlichen Modus finden Sie unter [Install Reporting Services native mode report server (Installieren des Reporting Services-Berichtsservers im einheitlichen Modus)](install-reporting-services-native-mode-report-server.md). 
-- Informationen zur Installation von SQL Server 2016 Reporting Services im SharePoint-Integrationsmodus finden Sie unter [Install the first Report Server in SharePoint mode (Installieren des ersten Berichtsservers im SharePoint-Modus)](install-the-first-report-server-in-sharepoint-mode.md).
+- Informationen zur Installation von SQL Server 2016 Reporting Services im einheitlichen Modus finden Sie unter [Installieren des Reporting Services-Berichtsservers im nativen Modus](install-reporting-services-native-mode-report-server.md). 
+- Informationen zur Installation von SQL Server 2016 Reporting Services (und früheren Versionen) im SharePoint-Integrationsmodus finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](install-the-first-report-server-in-sharepoint-mode.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

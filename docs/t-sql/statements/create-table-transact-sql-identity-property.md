@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94b77d9ce0e036e0b3c5727d3731d0effc074f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782448"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507392"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Eigenschaft)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -64,11 +64,11 @@ IDENTITY [ (seed , increment) ]
   
  Die Identitätseigenschaft für eine Spalte garantiert nicht Folgendes:  
   
--   **Eindeutigkeit des Werts**: Eindeutigkeit muss mit einer **PRIMARY KEY**- oder **UNIQUE**-Einschränkung bzw. einem **UNIQUE**-Index erzwungen werden.  
+-   **Eindeutigkeit des Werts**: Die Eindeutigkeit muss mit einer **PRIMARY KEY**- oder **UNIQUE**-Einschränkung bzw. einem **UNIQUE**-Index erzwungen werden.  
   
 -   **Aufeinanderfolgende Werte innerhalb einer Transaktion**: Bei einer Transaktion, durch die mehrere Zeilen eingefügt werden, ist nicht sichergestellt, dass Sie aufeinanderfolgende Werte für die Zeilen erhalten, da für die Tabelle möglicherweise andere gleichzeitige Einfügungsvorgänge stattfinden. Wenn Werte fortlaufend sein müssen, sollte die Transaktion eine exklusive Sperre für die Tabelle oder die Isolationsstufe **SERIALIZABLE** verwenden.  
   
--   **Aufeinanderfolgende Werte nach Serverneustart oder anderen Fehlern**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Identitätswerte aus Leistungsgründen zwischenspeichern. Einige der zugewiesenen Werte können während eines Datenbankausfalls oder Serverneustarts verloren gehen. Dies kann zu Lücken im Identitätswert beim Einfügen führen. Wenn Lücken nicht zulässig sind, sollte die Anwendung ihren eigenen Mechanismus verwenden, um Schlüsselwerte zu generieren. Die Verwendung eines Sequenzgenerators mit der **NOCACHE**-Option kann die Lücken auf Transaktionen beschränken, für die nie ein Commit ausgeführt wird.  
+-   **Aufeinanderfolgende Werte nach Serverneustart oder anderen Fehlern** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Identitätswerte aus Leistungsgründen zwischenspeichern. Einige der zugewiesenen Werte können während eines Datenbankausfalls oder Serverneustarts verloren gehen. Dies kann zu Lücken im Identitätswert beim Einfügen führen. Wenn Lücken nicht zulässig sind, sollte die Anwendung ihren eigenen Mechanismus verwenden, um Schlüsselwerte zu generieren. Die Verwendung eines Sequenzgenerators mit der **NOCACHE**-Option kann die Lücken auf Transaktionen beschränken, für die nie ein Commit ausgeführt wird.  
   
 -   **Wiederverwendung von Werten**: Für eine bestimmte Identitätseigenschaft mit spezifischem Ausgangswert/Inkrement werden die Identitätswerte von der Engine nicht wiederverwendet. Wenn eine bestimmte INSERT-Anweisung fehlschlägt oder für die INSERT-Anweisung ein Rollback ausgeführt wird, gehen die verwendeten Identitätswerte verloren und werden nicht erneut generiert. Es können Lücken entstehen, wenn die nachfolgenden Identitätswerte generiert werden.  
   

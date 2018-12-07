@@ -14,12 +14,12 @@ ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b84f8d8de17b64d99b8e308ab45c36479b4a2b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668886"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516701"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Gewusst wie: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts
 Sie können die SQL Server-Zielversion für Ihr SSDT-Datenbankprojekt (SQL Server Data Tools) in jede unterstützte SQL Server-Instanz (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 oder SQL Azure) ändern. Hierdurch können Sie die Datenbankentwicklung in einem einzelnen Projekt bündeln, das Projekt jedoch bei Bedarf in mehreren SQL Server-Instanzen veröffentlichen.  
@@ -63,7 +63,7 @@ SSDT vereinfacht auch diese Aufgabe durch Berücksichtigung der Zielplattform un
   
 6.  Sie können auch die Veröffentlichungseinstellungen in einem Profil speichern, damit Sie für zukünftige Veröffentlichungsvorgänge die gleichen Einstellungen wiederverwenden können. Klicken Sie hierzu im Dialogfeld **Datenbank veröffentlichen** auf die Schaltfläche **Profil speichern unter** . Wenn Sie vorhandene Einstellungen in der Zukunft erneut laden möchten, können Sie auf die Schaltfläche **Profil laden** klicken.  
   
-7.  Beachten Sie die Meldungen im Fenster **Datentoolvorgänge** . Klicken Sie rechts von **Veröffentlichungsvorschau wird erstellt** auf den Link "Vorschau anzeigen". Dadurch wird der Bereitstellungsvorschaubericht geöffnet. Wenn die Zielplattform des Projekts nicht mit dem Datenbankserver identisch ist, auf dem das Projekt veröffentlicht wird, gibt SSDT in diesem Bericht eine Warnung aus.  Wenn z.B. die Zielplattform des Projekts Microsoft SQL Server 2012 ist und Sie versuchen, das Projekt in einer SQL Server 2008 R2-Serverinstanz zu veröffentlichen, wird im **Ausgabefenster** die folgende Warnung angezeigt:  
+7.  Beachten Sie die Meldungen im Fenster **Datentoolvorgänge** . Klicken Sie rechts von **Veröffentlichungsvorschau wird erstellt...** auf „Vorschau anzeigen“. auf den Link "Vorschau anzeigen". Dadurch wird der Bereitstellungsvorschaubericht geöffnet. Wenn die Zielplattform des Projekts nicht mit dem Datenbankserver identisch ist, auf dem das Projekt veröffentlicht wird, gibt SSDT in diesem Bericht eine Warnung aus.  Wenn z. B. die Zielplattform des Projekts Microsoft SQL Server 2012 ist und Sie versuchen, das Projekt in einer SQL Server 2008 R2-Serverinstanz zu veröffentlichen, wird im **Ausgabefenster** die folgende Warnung angezeigt:  
   
 **Bei einem Projekt, bei dem Microsoft SQL Server 2012 als Zielplattform angegeben ist, können möglicherweise Kompatibilitätsprobleme mit SQL Server 2008 auftreten.** Enthält ein solches Projekt Entitäten (z.B. ein Sequenzobjekt), die in Microsoft SQL Server 2012 eingeführt wurden, tritt beim Veröffentlichungsvorgang ein Fehler auf.  
   

@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3989426a807b5d4fbcfa078a41fdaf6856dea98d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91439c93e0c21ca447bb0ca585904ddf41d885c9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709678"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541082"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Verwenden des Abfragespeichers mit In-Memory-OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Es gibt jedoch einige Aspekte, die Benutzer bei der Verwendung des Abfragespeich
   
 -   Die durch den Abfragespeicher erfasste Dauer der Abfragekompilierung enthält nur die Zeit, die für die Optimierung von Abfragen vor dem Generieren des nativen Codes verwendet wurde. Genauer gesagt umfasst es nicht die Zeit für die C-Code-Kompilierung und -Generierung interner Datenstrukturen, die für die Generierung von C-Code erforderlich sind.  
   
--   Speicherzuweisungsmetriken in [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) werden für nativ kompilierte Abfragen nicht aufgefüllt; ihre Werte sind immer 0. Die Speicherzuweisungsspalten sind die folgenden: avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory und stdev_query_max_used_memory.  
+-   Speicherzuweisungsmetriken in [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) werden für nativ kompilierte Abfragen nicht aufgefüllt. Ihre Werte sind immer 0 (null). Die Speicherzuweisungsspalten sind die folgenden: avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory und stdev_query_max_used_memory.  
   
 ## <a name="enabling-and-using-query-store-with-in-memory-oltp"></a>Aktivieren und Verwenden des Abfragespeichers mit In-Memory-OLTP  
  Das folgende einfache Beispiel veranschaulicht die Verwendung des Abfragespeichers mit In-Memory-OLTP in einem End-to-End-Benutzerszenario. In diesem Beispiel wird davon ausgegangen, dass für In-Memory-OLTP eine Datenbank (`MemoryOLTP`) aktiviert ist.  
@@ -138,7 +138,7 @@ WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Erstellen einer speicheroptimierten Tabelle und einer nativ kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
- [Best Practices für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)   
+ [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   

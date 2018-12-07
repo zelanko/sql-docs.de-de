@@ -22,12 +22,12 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79e015043fe256037e808d68a4188e1091780797
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14b512a4ec1260c188752869d887e8e8d6ee8ff9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629188"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528769"
 ---
 # <a name="developing-a-custom-source-component"></a>Entwickeln einer benutzerdefinierten Quellkomponente
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ermöglicht es Entwicklern, in Quellkomponenten zu schreiben, die Verbindungen mit benutzerdefinierten Datenquellen herstellen und anderen Komponenten im Datenflusstask Daten aus diesen Quellen zur Verfügung stellen. Die Möglichkeit, benutzerdefinierte Quellen zu erstellen, ist hilfreich, wenn Sie Verbindungen zu Datenquellen herstellen müssen, auf die Sie über keine der bestehenden [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Quellen zugreifen können.  
@@ -40,7 +40,7 @@ ms.locfileid: "47629188"
  Zur Implementierung der Entwurfszeitfunktionen einer Quellkomponente müssen Sie eine Verbindung mit einer externen Datenquelle festlegen, der Datenquelle entsprechende Ausgabespalten hinzufügen und konfigurieren sowie überprüfen, ob die Komponente zur Ausführung bereit ist. Definitionsgemäß verfügt eine Quellkomponente über keine Eingabe und eine oder mehrere asynchrone Ausgaben.  
   
 ### <a name="creating-the-component"></a>Erstellen der Komponente  
- Quellkomponenten stellen mithilfe in einem Paket definierter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekte eine Verbindung mit externen Datenquellen her. Um auf die Notwendigkeit eines Verbindungs-Managers zu verweisen, wird der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>-Auflistung der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>-Eigenschaft ein Element hinzugefügt. Diese Auflistung erfüllt zweierlei Zwecke: Sie enthält Verweise auf Verbindungs-Manager im Paket, die von der Komponente genutzt werden, und zeigt dem Designer den Bedarf für einen Verbindungs-Manager an. Beim Hinzufügen eines <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>-Typs zur Auflistung wird im **Erweiterten Editor** die Registerkarte **Verbindungseigenschaften** angezeigt, um den Benutzer aufzufordern, im Paket eine Verbindung auszuwählen oder zu erstellen.  
+ Quellkomponenten stellen mithilfe in einem Paket definierter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekte eine Verbindung mit externen Datenquellen her. Um auf die Notwendigkeit eines Verbindungs-Managers zu verweisen, wird der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>-Auflistung der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>-Eigenschaft ein Element hinzugefügt. Diese Sammlung erfüllt zweierlei Zwecke: Sie enthält Verweise auf Verbindungs-Manager im Paket, die von der Komponente genutzt werden, und zeigt dem Designer den Bedarf für einen Verbindungs-Manager an. Beim Hinzufügen eines <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>-Typs zur Auflistung wird im **Erweiterten Editor** die Registerkarte **Verbindungseigenschaften** angezeigt, um den Benutzer aufzufordern, im Paket eine Verbindung auszuwählen oder zu erstellen.  
   
  Im folgenden Codebeispiel wird eine Implementierung von <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> gezeigt, die eine Ausgabe sowie ein <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>-Objekt zur <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> hinzufügt.  
   

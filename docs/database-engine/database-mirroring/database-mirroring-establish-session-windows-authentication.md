@@ -14,12 +14,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd3762adabe4098d48bfd5352a0a159672b76ecd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9270b71457bdbb6e932015ddcad8118ef2f42cdd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599098"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529919"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Datenbankspiegelung: Einrichtung der Sitzung – Windows-Authentifizierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47599098"
   
      Dabei ist _\<Systemadresse>_ eine Zeichenfolge, die das Zielcomputersystem eindeutig identifiziert, und _\<Port>_ ist die vom Spiegelungsendpunkt der Partnerserverinstanz verwendete Portnummer. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)verwendet.  
   
-     Auf der Spiegelserverinstanz wird z. B. mit der folgenden ALTER DATABASE-Anweisung der Partner als ursprüngliche Prinzipalserverinstanz festgelegt. Der Datenbankname lautet **AdventureWorks**, die Systemadresse ist DBSERVER1 - der Name des Partnersystems - und der vom Endpunkt für die Datenbankspiegelung des Partners verwendete Port ist 7022:  
+     Auf der Spiegelserverinstanz wird z. B. mit der folgenden ALTER DATABASE-Anweisung der Partner als ursprüngliche Prinzipalserverinstanz festgelegt. Der Datenbankname lautet **AdventureWorks**, die Systemadresse ist „DBSERVER1“ (der Name des Partnersystems) und der vom Endpunkt für die Datenbankspiegelung des Partners verwendete Port ist 7022:  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -90,7 +90,7 @@ ms.locfileid: "47599098"
   
      Weitere Informationen finden Sie unter Schritt 4.  
   
-     Auf der Prinzipalserverinstanz wird z. B. mit der folgenden ALTER DATABASE-Anweisung der Partner als ursprüngliche Spiegelserverinstanz festgelegt. Der Datenbankname lautet **AdventureWorks**, die Systemadresse ist DBSERVER2 (der Name des Partnersystems), und der Spiegelungsendpunkt der Partnerdatenbank verwendet den Port 7025:  
+     Auf der Prinzipalserverinstanz wird z. B. mit der folgenden ALTER DATABASE-Anweisung der Partner als ursprüngliche Spiegelserverinstanz festgelegt. Der Datenbankname lautet **AdventureWorks**, die Systemadresse ist „DBSERVER2“ (der Name des Partnersystems) und der vom Endpunkt für die Datenbankspiegelung des Partners verwendete Port ist 7025:  
   
     ```  
     ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  

@@ -19,12 +19,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7de1896d8c94113070dbfc57e31e7af8851b5ce0
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 48881cbff003b37e0a58dd7d6eb3c11c220ed268
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560182"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507718"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "51560182"
   
 8.  Geben Sie die Anfangsgröße der Datei an. Legen Sie die Datendatei so groß wie möglich aus. Orientieren Sie sich dabei an dem maximal zu erwartenden Umfang der Datei, die in der Datenbank gespeichert werden soll.  
   
-9. Um anzugeben, wie die Datei wachsen soll, klicken Sie auf (**…**) in der Spalte **Automatische Vergrößerung** . Wählen Sie eine der folgenden Optionen aus:  
+9. Klicken Sie auf (**…**) in der Spalte **Automatische Vergrößerung**, um anzugeben, wie die Datei wachsen soll. Wählen Sie eine der folgenden Optionen aus:  
   
     1.  Um ein Anwachsen der aktuell ausgewählten Datei zuzulassen, wenn mehr Datenspeicherplatz benötigt wird, aktivieren Sie das Kontrollkästchen **Automatische Vergrößerung aktivieren** , und wählen Sie dann eine der folgenden Optionen aus:  
   

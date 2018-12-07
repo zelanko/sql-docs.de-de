@@ -11,17 +11,17 @@ ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74d17c1ceb03cfc452a925d41fdeab98c6f90339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b5f0799a26848f70bc67b24708a5d4352339d50
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654406"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532064"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>Lektion 2-2: Überprüfen des Bereitstellungspakets
 In Lektion 1 haben Sie das Deployment Tutorial-Projekt erstellt und dem Projekt Pakete und Hilfsdateien hinzugefügt; in der vorherigen Aufgabe haben Sie ein Bereitstellungsprogramm für das Projekt erstellt.  
   
-In dieser Aufgabe überprüfen Sie den Inhalt des Bereitstellungspakets. Das Bereitstellungspaket ist der Ordner, den Sie auf den Zielcomputer kopieren und zum Installieren der Pakete verwenden. Wenn Sie den Standardwert – bin\Deployment – als Speicherort des Bereitstellungshilfsprogramms verwendet haben, entspricht das Bereitstellungspaket dem Ordner Bin\Deployment im Ordner Deployment Tutorial des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts.  
+In dieser Aufgabe überprüfen Sie den Inhalt des Bereitstellungspakets. Das Bereitstellungspaket ist der Ordner, den Sie auf den Zielcomputer kopieren und zum Installieren der Pakete verwenden. Wenn Sie den Standardwert, bin\Deployment, als Speicherort des Bereitstellungshilfsprogramms verwendet haben, entspricht das Bereitstellungspaket dem Ordner „Bin\Deployment“ im Ordner „Deployment Tutorial“ des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekts.  
   
 ### <a name="to-verify-the-content-of-deployment-bundle"></a>So überprüfen Sie den Inhalt des Bereitstellungspakets  
   

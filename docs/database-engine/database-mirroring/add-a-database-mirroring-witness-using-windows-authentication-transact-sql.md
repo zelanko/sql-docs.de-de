@@ -15,12 +15,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ca1ecc06039f8bdfbf4516778a04f9c191544e45
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 4cf7b351726ab07313dff9272bd4411957f05cb2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168892"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507101"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "49168892"
   
      Dabei ist \<*Systemadresse>* eine Zeichenfolge, die das Zielcomputersystem eindeutig identifiziert, und \<*Port>* ist die vom Spiegelungsendpunkt der Partnerserverinstanz verwendete Portnummer. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)verwendet.  
   
-     Beispiel: Auf der Prinzipalserverinstanz wird mit folgender ALTER DATABASE-Anweisung der Zeuge festgelegt. Der Datenbankname ist **AdventureWorks**, die Systemadresse ist DBSERVER3 – der Name des Zeugensystems, und der vom Datenbankspiegelungsendpunkt des Zeugen verwendet Port ist `7022`:  
+     Beispiel: Auf der Prinzipalserverinstanz wird mit folgender ALTER DATABASE-Anweisung der Zeuge festgelegt. Der Datenbankname ist **AdventureWorks**, die Systemadresse lautet DBSERVER3, der Name des Zeugensystems, und der vom Datenbankspiegelungsendpunkt des Zeugen verwendete Port ist `7022`:  
   
     ```  
     ALTER DATABASE AdventureWorks   

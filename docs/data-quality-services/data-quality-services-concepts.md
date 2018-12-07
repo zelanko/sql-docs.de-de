@@ -5,19 +5,18 @@ ms.date: 01/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ac951cc6dd7ffc9225e1c97f0f698a0cecd5478
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de96b2465dd1829e3104af3af7e506204969963b
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738458"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617114"
 ---
 # <a name="data-quality-services-concepts"></a>Konzepte der Data Quality Services
 
@@ -61,7 +60,7 @@ ms.locfileid: "47738458"
   
  **Datenabgleich**  
   
- Der Abgleichsprozess ermöglicht es dem Data Steward, Daten abzugleichen, damit ähnliche, aber leicht abweichende Daten anhand eines Deduplizierungsprozesses ausgerichtet werden können. DQS führt die Deduplizierung auf Grundlage der in der Wissensdatenbank enthaltenen Abgleichsregeln aus; die Parameter für den Abgleichsprozess werden vom Data Steward aus dem Data Quality-Projekt heraus angegeben. Weitere Informationen finden Sie unter [Datenabgleich](../data-quality-services/data-matching.md).  
+ Der Abgleichsprozess ermöglicht es dem Data Steward, Daten abzugleichen, damit ähnliche, aber leicht abweichende Daten anhand eines Deduplizierungsprozesses ausgerichtet werden können. DQS führt die Deduplizierung auf Grundlage der in der Wissensdatenbank enthaltenen Abgleichsregeln aus; die Parameter für den Abgleichsprozess werden vom Data Steward aus dem Data Quality-Projekt heraus angegeben. Weitere Informationen finden Sie unter [Data Matching](../data-quality-services/data-matching.md).  
   
  **Profilerstellung und Benachrichtigungen**  
   

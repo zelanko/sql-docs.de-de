@@ -16,17 +16,17 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbc19d879e52f758f168cc7dce0e5bb5db75db9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dafef2f6008e924bceda759404d0be23e920c3f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614548"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534609"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Ableiten von Spaltenwerten mithilfe der Transformation für abgeleitete Spalten
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie eine Transformation für abgeleitete Spalten hinzufügen und konfigurieren können.  
   
- Die Transformation für abgeleitete Spalten verwendet Ausdrücke, um vorhandene Werte zu aktualisieren oder Werte neuen Spalten hinzuzufügen. Wenn Sie das Hinzufügen von neuen Werten zu neuen Spalten auswählen, wird mithilfe des Dialogfelds **Transformations-Editor für abgeleitete Spalte** der Ausdruck ausgewertet, und danach werden die Metadaten der Spalten definiert. Wenn beispielsweise ein Ausdruck zwei Spalten verkettet, wobei jede den DT_WSTR-Datentyp und eine Länge von 50 aufweist, und sich ein Leerzeichen zwischen den zwei Spaltenwerten befindet, dann weist die neue Spalte den DT_WSTR-Datentyp und eine Länge von 101 auf. Sie können den Datentyp neuer Spalten aktualisieren. Als einzige Vorraussetzung muss der Datentyp mit den eingefügten Daten kompatibel sein. Wenn beispielsweise das Dialogfeld **Transformations-Editor für abgeleitete Spalte** eine Fehlermeldung generiert, müssen Sie einer Spalte mit einem integer-Datentyp einen Datenwert zuweisen. Abhängig von dem ausgewählten Datentyp, können Sie die Länge, Genauigkeit, Dezimalstellen und Codepage jeder Spalte angeben.  
+ Die Transformation für abgeleitete Spalten verwendet Ausdrücke, um vorhandene Werte zu aktualisieren oder Werte neuen Spalten hinzuzufügen. Wenn Sie das Hinzufügen von neuen Werten zu neuen Spalten auswählen, wird mithilfe des Dialogfelds **Transformations-Editor für abgeleitete Spalte** der Ausdruck ausgewertet, und danach werden die Metadaten der Spalten definiert. Wenn beispielsweise ein Ausdruck zwei Spalten verkettet, die beide den DT_WSTR-Datentyp sowie eine Länge von 50 aufweisen und sich ein Leerzeichen zwischen den zwei Spaltenwerten befindet, dann weist die neue Spalte den DT_WSTR-Datentyp und eine Länge von 101 auf. Sie können den Datentyp neuer Spalten aktualisieren. Als einzige Vorraussetzung muss der Datentyp mit den eingefügten Daten kompatibel sein. Wenn beispielsweise das Dialogfeld **Transformations-Editor für abgeleitete Spalte** eine Fehlermeldung generiert, müssen Sie einer Spalte mit einem integer-Datentyp einen Datenwert zuweisen. Abhängig von dem ausgewählten Datentyp, können Sie die Länge, Genauigkeit, Dezimalstellen und Codepage jeder Spalte angeben.  
   
 ### <a name="to-derive-column-values"></a>So leiten Sie Spaltenwerte ab  
   

@@ -18,12 +18,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 791253a685908baf69fe789aabd199a5cad7e921
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0775eb7bd5cb87c902a6871eeebd4409dbe0cf2f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600750"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531532"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Konfigurieren der Sicherung auf Verfügbarkeitsreplikaten (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -188,8 +188,8 @@ ms.locfileid: "51600750"
 ```  
 IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
 BEGIN  
-      Select ‘This is not the preferred replica, exiting with success’;  
-      RETURN 0 – This is a normal, expected condition, so the script returns success  
+      Select 'This is not the preferred replica, exiting with success';  
+      RETURN 0 - This is a normal, expected condition, so the script returns success  
 END  
 BACKUP DATABASE @DBNAME TO DISK=<disk>  
    WITH COPY_ONLY;  
@@ -198,7 +198,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
  Indem Sie für einen Sicherungsauftrag ein Skript mit dieser Logik erstellen, können Sie die Ausführung des Auftrags auf jedem Verfügbarkeitsreplikat nach demselben Zeitplan vorsehen. Jeder dieser Aufträge greift auf die gleichen Daten zurück, um zu bestimmen, welcher Auftrag auszuführen ist. Folglich wechselt eigentlich nur einer der geplanten Aufträge in den Sicherungsstatus.  Bei einem Failover muss kein Skript oder Auftrag geändert werden. Auch bei der Neukonfiguration einer Verfügbarkeitsgruppe zum Hinzufügen eines Verfügbarkeitsreplikats ist zum Verwalten des Sicherungsauftrags nur das Kopieren oder Planen des Sicherungsauftrags erforderlich. Wenn Sie ein Verfügbarkeitsreplikat entfernen, löschen Sie einfach den Sicherungsauftrag von der Serverinstanz, die dieses Replikat gehostet hat.  
   
 > [!TIP]  
->  Wenn Sie einen bestimmten Sicherungsauftrag mithilfe des[Wartungsplanungs-Assistenten](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)erstellen, verfügt der Auftrag automatisch über die Skripterstellungslogik, durch die die **sys.fn_hadr_backup_is_preferred_replica** -Funktion aufgerufen und überprüft wird. Die Meldung, dass es sich nicht um das bevorzugte Replikat handelt, wird vom Sicherungsauftrag jedoch nicht zurückgegeben. Erstellen Sie die Aufträge für jede Verfügbarkeitsdatenbank auf jeder Serverinstanz, die ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe hostet.  
+>  Wenn Sie einen bestimmten Sicherungsauftrag mithilfe des[Wartungsplanungs-Assistenten](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)erstellen, verfügt der Auftrag automatisch über die Skripterstellungslogik, durch die die **sys.fn_hadr_backup_is_preferred_replica** -Funktion aufgerufen und überprüft wird. Der Sicherungsauftrag gibt jedoch nicht die Nachricht „Dies ist nicht das bevorzugte Replikat...“ zurück. Stellen Sie sicher, dass Sie die Aufträge für jede Verfügbarkeitsdatenbank auf jeder Serverinstanz erstellen, die ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe hostet.  
   
 ##  <a name="ForInfoAboutBuPref"></a> So rufen Sie Informationen zu Sicherungseinstellungen ab  
  Folgendes ist hilfreich zum Abrufen von Informationen, die für eine Sicherung auf sekundären Replikaten relevant sind.  

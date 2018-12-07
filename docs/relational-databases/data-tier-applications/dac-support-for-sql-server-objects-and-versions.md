@@ -13,12 +13,12 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85f07a1380cf59db3944ab905d6aca9156a4b94b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ec1a3488a8b28054f211e4d68dc329371e4cfb6b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672039"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513202"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>DAC-Unterstützung für SQL Server-Objekte und -Versionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "51672039"
   
 -   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 und Visual Studio 2010 SP1 umfassten DAC-Framework 1.1, das alle DAC-Vorgänge mit Ausnahme des Exports und Imports unterstützt.  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und Visual Studio 2010 umfassen DAC Framework 1.0, das alle DAC-Vorgänge außer Export, Import und direkte Upgrades unterstützt.  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und Visual Studio 2010 umfassen DAC Framework 1.0, das alle DAC-Vorgänge außer Export, Import und direkte Upgrades unterstützt.  
   
 -   Die Clienttools früherer Versionen von SQL Server oder Visual Studio unterstützen keine DAC-Vorgänge.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "51672039"
   
     -   Basistypen MONEY, SMALLMONEY, NUMERIC, DECIMAL: Die Genauigkeit wird nicht beibehalten.  
   
-        -   Basistypen DECIMAL/NUMERIC mit der Genauigkeit 38: Die sql_variant-Metadaten für "TotalBytes" sind immer auf 21 festgelegt.  
+        -   Basistypen DECIMAL/NUMERIC mit der Genauigkeit 38: Die sql_variant-Metadaten für „TotalBytes“ sind immer auf 21 festgelegt.  
   
     -   Alle Textbasistypen. Die Standardsortierung der Datenbank wird auf sämtlichen Text angewendet.  
   
@@ -110,16 +110,16 @@ ms.locfileid: "51672039"
   
 3.  Der Bereitstellungsvorgang schlägt unter den folgenden Bedingungen innerhalb von sql_variant-Spalten fehl. In den betreffenden Fällen wird ein Dialogfeld mit folgender Meldung angezeigt:  **Fehler beim Vorgang aufgrund von Datenbeschränkungen in DAC-Framework.**  
   
-    -   Basistypen DATETIME2, SMALLDATETIME und DATE: Wenn der Wert außerhalb des DATETIME-Bereichs liegt; die Jahresangabe ist z. B. kleiner als 1753.  
+    -   Basistypen DATETIME2, SMALLDATETIME und DATE: Wenn der Wert außerhalb des DATETIME-Bereichs liegt; die Jahresangabe ist z. B. kleiner als 1753.  
   
     -   Basistypen DECIMAL, NUMERIC: Wenn die Genauigkeit des Werts größer als 28 ist.  
   
 ##  <a name="Considerations"></a> Zusätzliche Überlegungen zu Bereitstellungsaktionen  
  Beachten Sie Folgendes bei DAC-Framework-Datenbereitstellungsaktionen:  
   
--   **Extrahieren/Exportieren** : Für Aktionen, bei denen mithilfe des DAC-Frameworks ein Paket auf Grundlage einer Datenbank erstellt wird – z.B. Extrahieren einer DACPAC-Datei und Exportieren einer BACPAC-Datei –, gelten diese Beschränkungen nicht. Die im Paket enthaltenen Daten zeichnen sich durch vollständige Datentreue mit den Daten in der Quelldatenbank aus. Falls eine dieser Bedingungen im Paket vorliegt, enthält das Extrahierungs-/Exportprotokoll eine Zusammenfassung der Probleme anhand der oben beschriebenen Meldungen. Das soll den Benutzer vor möglichen Problemen mit der Datenbereitstellung warnen, die beim erstellten Paket auftreten können. Darüber hinaus sieht der Benutzer die folgende Zusammenfassungsmeldung im Protokoll: **Die Genauigkeit der Datentypen und Werte, die in dem von DAC-Framework erstellten DAC-Paket gespeichert sind, wird durch diese Beschränkungen nicht beeinträchtigt; die Beschränkungen gelten nur für die Datentypen und Werte, die sich aus der Bereitstellung eines DAC-Pakets auf einer Datenbank ergeben. Weitere Informationen zu den betroffenen Daten und eine Problemumgehung dieser Beschränkung finden Sie in** [diesem Thema](https://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Extrahieren/Exportieren** : Für Aktionen, bei denen mithilfe des DAC-Frameworks ein Paket auf Grundlage einer Datenbank erstellt wird – z. B. Extrahieren einer DACPAC-Datei und Exportieren einer BACPAC-Datei –, gelten diese Beschränkungen nicht. Die im Paket enthaltenen Daten zeichnen sich durch vollständige Datentreue mit den Daten in der Quelldatenbank aus. Falls eine dieser Bedingungen im Paket vorliegt, enthält das Extrahierungs-/Exportprotokoll eine Zusammenfassung der Probleme anhand der oben beschriebenen Meldungen. Das soll den Benutzer vor möglichen Problemen mit der Datenbereitstellung warnen, die beim erstellten Paket auftreten können. Darüber hinaus sieht der Benutzer die folgende Zusammenfassungsmeldung im Protokoll: **Die Genauigkeit der Datentypen und Werte, die in dem von DAC-Framework erstellten DAC-Paket gespeichert sind, wird durch diese Beschränkungen nicht beeinträchtigt; die Beschränkungen gelten nur für die Datentypen und Werte, die sich aus der Bereitstellung eines DAC-Pakets auf einer Datenbank ergeben. Weitere Informationen zu den betroffenen Daten und eine Problemumgehung dieser Beschränkung finden Sie in** [diesem Thema](https://go.microsoft.com/fwlink/?LinkId=267086).  
   
--   **Bereitstellen/Veröffentlichen/Importieren**: Für Aktionen, bei denen mithilfe des DAC-Frameworks ein Paket in einer Datenbank bereitgestellt wird – z.B. Bereitstellen oder Veröffentlichen einer DACPAC-Datei und Importieren einer BACPAC-Datei – sind diese Beschränkungen gültig. Die Daten in der Zieldatenbank entsprechen möglicherweise keiner vollständig datentreuen Ausgabe der im Paket enthaltenen Daten. Das Bereitstellungs-/Importprotokoll enthält für jede Instanz, auf der das Problem auftritt, die oben angegebene Meldung. Der Vorgang wird durch Fehler zwar blockiert (siehe Kategorie 3 oben), anschließend jedoch mit den übrigen Warnungen fortgesetzt.  
+-   **Bereitstellen/Veröffentlichen/Importieren**: Für Aktionen, bei denen mithilfe des DAC-Frameworks ein Paket in einer Datenbank bereitgestellt wird – z.B. Bereitstellen oder Veröffentlichen einer DACPAC-Datei und Importieren einer BACPAC-Datei – sind diese Beschränkungen gültig. Die Daten in der Zieldatenbank entsprechen möglicherweise keiner vollständig datentreuen Ausgabe der im Paket enthaltenen Daten. Das Bereitstellungs-/Importprotokoll enthält für jede Instanz, auf der das Problem auftritt, die oben angegebene Meldung. Der Vorgang wird zwar durch Fehler blockiert (siehe Kategorie 3 oben), anschließend jedoch mit den übrigen Warnungen fortgesetzt.  
   
      Weitere Informationen zu den von diesem Szenario betroffenen Daten und eine Problemumgehung dieser Beschränkung für Bereitstellungs-/Veröffentlichungs-/Importaktionen finden Sie in [diesem Thema](https://go.microsoft.com/fwlink/?LinkId=267087).  
   

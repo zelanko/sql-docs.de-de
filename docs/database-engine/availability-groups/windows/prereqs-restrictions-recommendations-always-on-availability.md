@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b5f815cba0bf8cf2777053a502597cd19ccd6a20
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0343bef5bcd6ba26539bfe3f4a726ab538bb24a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600950"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516462"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Voraussetzungen, Einschränkungen und Empfehlungen (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +152,7 @@ ms.locfileid: "51600950"
   
      Threads werden bedarfsgesteuert wie folgt freigegeben:  
   
-    -   In der Regel gibt es 3 bis 10 freigegebene Threads, aber diese Zahl kann sich abhängig von der Arbeitslast des primären Replikats erhöhen.  
+    -   In der Regel gibt es 3 bis 10 freigegebene Threads, diese Zahl kann sich jedoch abhängig von der Arbeitsauslastung des primären Replikats erhöhen.  
   
     -   Wenn ein bestimmter Thread eine Zeit lang im Leerlauf ist, wird er wieder im allgemeinen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Threadpool freigegeben. Normalerweise wird ein inaktiver Thread nach ~ 15 Sekunden Inaktivität freigegeben. Abhängig von der letzten Aktivität kann ein Thread jedoch länger im Leerlauf gehalten werden.  
 

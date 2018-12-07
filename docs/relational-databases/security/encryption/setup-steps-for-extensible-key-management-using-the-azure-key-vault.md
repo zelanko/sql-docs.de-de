@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 422b8e8d8436430ec01cd92045e951850ee913ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663356"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522924"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server-TDE): Setupschritte
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,7 +147,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
 4.  **Erteilen Sie dem Azure Active Directory-Dienstprinzipal die Berechtigung zum Zugriff auf den Schlüsseltresor**  
   
      Sie können andere Benutzer und andere Anwendungen autorisieren, Ihren Schlüsseltresor zu verwenden.   
-    Nutzen wir im Rahmen dieses Beispiels den in Teil I erstellten Azure Active Directory-Dienstprinzipal zum Autorisieren der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz.  
+    Nutzen wir im Rahmen dieses Beispiels den in Teil I erstellten Azure Active Directory-Dienstprinzipal zum Autorisieren der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz.  
   
     > [!IMPORTANT]  
     >  Der Azure Active Directory-Dienstprinzipal benötigt mindestens die Berechtigungen `get`, `wrapKey` und `unwrapKey` für den Schlüsseltresor.  
@@ -190,16 +190,16 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
     -   **HSM-geschützt** : Von einem Hardwaresicherheitsmodul (HSM) erstellt und geschützt, um zusätzliche Sicherheit zu erzielen. Die Kosten liegen bei ungefähr $ 1 pro Schlüsselversion.  
   
         > [!IMPORTANT]  
-        >  Für den SQL Server-Connector ist es erforderlich, dass im Schlüsselnamen nur die Zeichen „a-z“, „A-Z“, „0-9“ und „-“ bei einem Zeichenlimit von 26 Zeichen verwendet werden.   
-        > Verschiedene Schlüsselversionen unter dem gleichen Schlüsselnamen in Azure Key Vault funktionieren in Verbindung mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector nicht. Informationen zur rotierenden Verwendung eines Azure Key Vault-Schlüssels, der von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwendet wird, finden Sie in den Schritten zum Schlüsselrollover unter [SQL Server-Connector – Verwaltung und Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)durcharbeiten.  
+        >  Für den SQL Server-Connector ist es erforderlich, dass im Schlüsselnamen nur die Zeichen „a-z“, „A-Z“, „0-9“ und „-“ bei einem Zeichenlimit von 26 Zeichen verwendet werden.   
+        > Verschiedene Schlüsselversionen unter dem gleichen Schlüsselnamen in Azure Key Vault funktionieren in Verbindung mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector nicht. Informationen zur rotierenden Verwendung eines Azure Key Vault-Schlüssels, der von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet wird, finden Sie in den Schritten zum Schlüsselrollover unter [SQL Server-Connector – Verwaltung und Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
 
     ### <a name="import-an-existing-key"></a>Importieren eines vorhandenen Schlüssels   
   
     Wenn Sie über einen vorhandenen softwaregeschützten 2048-Bit-RSA-Schlüssel verfügen, können Sie den Schlüssel in den Azure Key Vault hochladen. Wenn beispielsweise eine PFX-Datei auf Ihrem Laufwerk `C:\\` in einer Datei mit dem Namen `softkey.pfx` gespeichert ist, die Sie in den Azure Key Vault hochladen möchten, geben Sie Folgendes ein, um die Variable `securepfxpwd` für das Kennwort `12987553` für die PFX-Datei festzulegen:  
   
     ``` powershell  
-    $securepfxpwd = ConvertTo-SecureString –String '12987553' `  
-      –AsPlainText –Force  
+    $securepfxpwd = ConvertTo-SecureString -String '12987553' `  
+      -AsPlainText -Force  
     ```  
   
     Anschließend können Sie Folgendes eingeben, um den Schlüssel aus der PFX-Datei, die ihn durch die Hardware schützt (empfohlen), in den Schlüsseltresordienst zu importieren:  
@@ -215,7 +215,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
 
     ### <a name="create-a-new-key"></a>Erstellen eines neuen Schlüssels
     #### <a name="example"></a>Beispiel:  
-    Alternativ können Sie einen neuen Verschlüsselungsschlüssel direkt in Azure Key Vault erstellen und ihn per Software oder HSM schützen.  In diesem Beispiel erstellen wir einen softwaregeschützten Schlüssel mithilfe des `Add-AzureKeyVaultKey cmdlet`:  
+    Alternativ können Sie einen neuen Verschlüsselungsschlüssel direkt in Azure Key Vault erstellen und ihn per Software oder HSM schützen.  In diesem Beispiel erstellen wir mithilfe des `Add-AzureKeyVaultKey cmdlet` einen softwaregeschützten Schlüssel:  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -242,7 +242,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
  Laden Sie den SQL Server-Connector aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700)herunter. (Dies sollte vom Administrator des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Computers ausgeführt werden.)  
 
 > [!NOTE]  
->  Die Versionen 1.0.0.440 und älter wurden ersetzt und werden nicht länger in Produktionsumgebungen unterstützt. Führen Sie ein Upgrade auf Version 1.0.1.0 oder höher durch, indem Sie das [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) besuchen und die Anweisungen auf der Seite [SQL Server-Connector Wartung &amp; Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) (SQL Server Connector Wartung &amp; Problembehandlung) unter „Upgrade des SQL Server-Connectors“ ausführen.
+>  Die Versionen 1.0.0.440 und älter wurden ersetzt und werden nicht länger in Produktionsumgebungen unterstützt. Führen Sie ein Upgrade auf Version 1.0.1.0 oder höher durch, indem Sie das [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) besuchen und die Anweisungen auf der Seite [SQL Server-Connector Wartung & Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) unter „Upgrade des SQL Server-Connectors“ ausführen.
 
 > [!NOTE]  
 > In Version 1.0.5.0 gibt es einen Breaking Change hinsichtlich des Fingerabdruckalgorithmus. Nach dem Upgrade auf Version 1.0.5.0 tritt möglicherweise ein Fehler bei der Wiederherstellung auf. Weitere Informationen erhalten Sie im KB-Artikel [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
@@ -345,7 +345,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
   
      Wenn Sie einen asymmetrischen Schlüssel importiert haben, wie in Teil II beschrieben, öffnen Sie den Schlüssel, indem Sie Ihren Schlüsselnamen im folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript angeben.  
   
-    -   Ersetzen Sie `CONTOSO_KEY` durch den Namen, den der Schlüssel in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]haben soll.  
+    -   Ersetzen Sie `CONTOSO_KEY` durch den Namen, den der Schlüssel in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthalten soll.  
   
     -   Ersetzen Sie `ContosoRSAKey0` durch den Namen Ihres Schlüssels im Azure Key Vault.  
   

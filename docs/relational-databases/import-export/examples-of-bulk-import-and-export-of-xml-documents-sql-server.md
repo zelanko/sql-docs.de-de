@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76859771490cf744db4dff1e247188f978426cfa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8bca6661ce0401cf5f24398e60f263a644584b7c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670599"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530559"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Beispiele für den Massenimport und -export von XML-Dokumenten (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -158,7 +158,7 @@ GO
   
  Um dieses Problem zu umgehen, können Sie die XML-Daten aus einer Datendatei mit DTD importieren, indem Sie die `OPENROWSET(BULK...)` -Funktion verwenden und die `CONVERT` -Option in der `SELECT` -Klausel des Befehls angeben. Die Hauptsyntax für diesen Befehl lautet:  
   
- `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
+ `INSERT ... SELECT CONVERT(...) FROM OPENROWSET(BULK...)`  
   
 #### <a name="sample-data-file"></a>Beispieldatendatei  
  Bevor Sie dieses Beispiel für den Massenimport testen, müssen Sie zunächst die Datei`C:\temp\Dtdfile.xml`erstellen, die die folgende Beispielinstanz enthält:  

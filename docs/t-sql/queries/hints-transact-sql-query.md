@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0b16356be0c36f48f9e82b4a49e483c3eac529b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 42247b11f00524ba08dd74f41f11da35fdcb2026
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704088"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530352"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -287,7 +287,7 @@ ms.locfileid: "51704088"
    > [!NOTE]
    > Der Hinweis QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n überschreibt keine standardmäßigen oder älteren Einstellungen für die Kardinalitätsschätzung, wenn er durch eine datenbankweite Konfiguration, ein Ablaufverfolgungsflag oder einen anderen Abfragehinweis wie QUERYTRACEON erzwungen wurde.   
    > Dieser Hinweis betrifft nur das Verhalten des Abfrageoptimierers. Er wirkt sich nicht auf andere Features von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus, die möglicherweise vom [Datenbank-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) abhängig sind, wie z.B. die Verfügbarkeit bestimmter Datenbankfeatures.  
-   > Weitere Informationen zu diesem Hinweis finden Sie unter [Wahl des Entwicklers: Modell für Hinweisabfrageausführung](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model).
+   > Weitere Informationen zu diesem Hinweis finden Sie unter [Developer's Choice: Hinting Query Execution model (Developer's Choice: Modell für Hinweisabfrageausführung)](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model).
     
 *  'QUERY_PLAN_PROFILE'      
  Aktiviert einfache Profilerstellung für die Abfrage. Wenn eine Abfrage, die diesen neuen Hinweis enthält, abgeschlossen wird, wird ein neues erweitertes Ereignis, query_plan_profile, ausgelöst. Dieses erweiterte Ereignis macht Ausführungsstatistiken und ein tatsächliches Ausführungsplan-XML verfügbar, das dem erweiterten Ereignis query_post_execution_showplan ähnelt, aber nur für Abfragen, die den neuen Hinweis enthalten. **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
@@ -296,7 +296,7 @@ ms.locfileid: "51704088"
   > Wenn Sie das Sammeln des erweiterten Ereignisses query_post_execution_showplan aktivieren, wird dadurch jeder Abfrage, die auf dem Server ausgeführt wird, eine Standard-Profilerstellungsinfrastruktur hinzugefügt, was die Gesamtleistung des Servers beeinträchtigen kann.      
   > Wenn Sie das Sammeln des erweiterten Ereignisses *query_thread_profile* stattdessen für die Verwendung der einfachen Profilerstellungsinfrastruktur aktivieren, führt dies zu einem wesentlich geringeren Verarbeitungsaufwand, wirkt sich aber immer noch auf die Gesamtleistung des Servers aus.       
   > Wenn Sie das erweiterte Ereignis „query_plan_profile“ aktivieren, aktiviert dies die einfache Profilerstellungsinfrastruktur nur für eine Abfrage, die mit dem QUERY_PLAN_PROFILE ausgeführt wurde, und wirkt sich deshalb nicht auf andere Workloads auf dem Server aus. Verwenden Sie diesen Hinweis, um ein Profil für eine bestimmte Abfrage zu erstellen, ohne dabei andere Teile der Serverworkload zu beeinträchtigen.
-  > Weitere Informationen zur einfachen Profilerstellung finden Sie unter [Wahl des Entwicklers: Abfragestatus – jederzeit und überall](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+  > Weitere Informationen zur einfachen Profilerstellung finden Sie unter [Wahl des Entwicklers: Abfragestatus: jederzeit und überall](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
  
 Die Liste aller unterstützten USE HINT-Namen kann über die dynamische Verwaltungsansicht [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) abgefragt werden.    
 

@@ -11,12 +11,12 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 193794ba5d5553036b6fc2018d3e8d8a5ce4401d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 492691c3fd6c8cd9206b591aa2302bc62a658daa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642167"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527128"
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Lektion 2-2 – Hinzufügen und Konfigurieren des Foreach-Schleifencontainers
 In dieser Aufgabe fügen Sie die Möglichkeit zum Schleifendurchlauf für einen Ordner von Flatfiles hinzu und wenden die auch in Lektion 1 verwendete Datenflusstransformation auf jede dieser Flatfiles an. Dies geschieht durch das Hinzufügen eines Foreach-Schleifencontainers zur Ablaufsteuerung und dessen Konfigurierung.  

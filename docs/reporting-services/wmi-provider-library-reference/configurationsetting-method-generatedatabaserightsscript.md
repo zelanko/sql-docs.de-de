@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abaa798e164df9fb552360357dbfc7a4943c9124
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d08234fcf8e50851d40a86859244e6bc2840fd1f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857082"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526408"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting Method – GenerateDatabaseRightsScript (ConfigurationSetting-Methode: GenerateDatabaseRightsScript)
   Generiert ein SQL-Skript, das verwendet werden kann, um einem Benutzer Berechtigungen für die Berichtsserver-Datenbank sowie für andere Datenbanken zu gewähren, die für das Ausführen eines Berichtsservers erforderlich sind. Es wird erwartet, dass der Aufrufer eine Verbindung mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankserver herstellt und das Skript ausführt.  
@@ -91,9 +91,9 @@ out Int32 HRESULT);
   
 |Wert von "DatabaseServerName"|Beispiel|  
 |---------------------------------|-------------|  
-|“.”||  
-|"(local)"||  
-|"LOCAL"||  
+|„.“||  
+|„(local)“||  
+|„LOCAL“||  
 |localhost||  
 |\<Computername>|testlab14|  
 |\<ComputerFQDN>|example.redmond.microsoft.com|  

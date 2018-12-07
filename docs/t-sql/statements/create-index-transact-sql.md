@@ -55,18 +55,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b5aaa932ce2e41122d2b133c7260e5eeafc1a7a
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 679eb8412f4633af845efc7c5520c351f9749822
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971031"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518327"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)> [!div class="nextstepaction"]
 > [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 Erstellt einen eindeutigen Index für eine Tabelle oder Sicht. Wird auch als Rowstore-Index bezeichnet, da es sich entweder um einen gruppierten oder nicht gruppierten B-Strukturindex handelt. Sie können noch bevor die Tabelle mit Daten aufgefüllt wird, einen Rowstore-Index erstellen. Verwenden Sie einen Rowstore-Index, um die Abfrageleistung zu verbessern, insbesondere, wenn die Abfragen aus bestimmten Spalten auswählen oder Werte erfordern, die in einer bestimmten Reihenfolge sortiert werden sollen.  
@@ -106,7 +105,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 -   [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)  
 -   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)     
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
 
@@ -731,7 +730,7 @@ Die folgenden Richtlinien gelten für fortsetzbare Indexvorgänge:
 - Wenn Sie den Indexvorgang sofort anhalten möchten, können Sie den laufenden Befehl beenden (STRG+C) oder die Befehle [ALTER INDEX](alter-index-transact-sql.md) PAUSE oder KILL `<session_id>` ausführen. Ein angehaltener Befehl kann mit dem Befehl [ALTER INDEX](alter-index-transact-sql.md) fortgesetzt werden. 
 - Das erneute Ausführen der ursprünglichen CREATE INDEX-Anweisung für den fortsetzbaren Index führt dazu, dass ein angehaltener Indexvorgang automatisch fortgesetzt wird.
 - Die Option SORT_IN_TEMPDB=ON wird für den fortsetzbaren Index nicht unterstützt. 
-- Der DDL-Befehl kann mit RESUMABLE = ON nicht innerhalb einer expliziten Transaktion ausgeführt werden (kann nicht Teil des Blocks „Begin TRAN... COMMIT“ sein).
+- Der DDL-Befehl kann mit RESUMABLE = ON nicht innerhalb einer expliziten Transaktion ausgeführt werden (kann nicht Teil des Blocks „Begin TRAN ... COMMIT“ sein).
 - Zum Fortsetzen bzw. Abbrechen einer Indexerstellung bzw. -neuerstellung verwenden Sie die [ALTER INDEX](alter-index-transact-sql.md)-T-SQL-Syntax.
 
 > [!NOTE]

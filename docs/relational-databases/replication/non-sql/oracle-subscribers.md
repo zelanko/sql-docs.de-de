@@ -17,12 +17,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 647828d7e0e78b7faa6abb2ce1a7ca8102490d67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab63604cbaad009cd92825df1f252a95c1f4e0fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842448"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525631"
 ---
 # <a name="oracle-subscribers"></a>Oracle-Abonnenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "47842448"
   
     -   Stellen Sie sicher, dass keine leeren Zeichenfolgen als Spaltenwerte in die veröffentlichte Tabelle eingefügt werden.  
   
-    -   Verwenden Sie für den Verteilungs-Agent den **–SkipErrors** -Parameter, wenn eine Fehlerbenachrichtigung im Verlaufsprotokoll des Verteilungs-Agents genügt und die Verarbeitung ansonsten fortgesetzt werden kann. Geben Sie den Oracle-Fehlercode 1400 (**-SkipErrors1400**) an.  
+    -   Verwenden Sie für den Verteilungs-Agent den Parameter **-SkipErrors**, wenn eine Fehlerbenachrichtigung im Verlaufsprotokoll des Verteilungs-Agents genügt und die Verarbeitung ansonsten fortgesetzt werden kann. Geben Sie den Oracle-Fehlercode 1400 (**-SkipErrors1400**) an.  
   
     -   Entfernen Sie das NOT NULL-Attribut aus allen Zeichenspalten, denen eventuell leere Zeichenfolgen zugeordnet werden können, aus dem generierten CREATE TABLE-Skript, und geben Sie das geänderte Skript mithilfe des @creation_script -Parameters von [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)als benutzerdefiniertes Skript für den Artikel an.  
   
@@ -146,6 +146,6 @@ ms.locfileid: "47842448"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   

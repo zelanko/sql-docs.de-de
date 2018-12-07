@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15d6d10b1bc3345da8c626a3b4d6e842aafaf954
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14027e51732d0177f9058a2635358ec7ae46c8c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664809"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535844"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Vorbereiten von Daten für den Massenexport oder -import (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "51664809"
   
      Für den Massenimport von Daten aus einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro- oder Visual FoxPro-Tabellendatei (.dbf) oder einer [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Arbeitsblattdatei (.xls), müssen die Daten in eine CSV-Datei umgewandelt werden, die den vorangehenden Einschränkungen entspricht. Die Dateierweiterung lautet normalerweise .csv. Anschließend kann die Datei mit der Dateinamenerweiterung .csv als Datendatei in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Massenimportvorgang verwendet werden.  
   
-     In 32-Bit-Systemen ist es jedoch möglich, CSV-Daten mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [mit dem OLE DB-Anbieter für Jet in eine](../../t-sql/functions/openrowset-transact-sql.md) -Tabelle ohne Massenimportoptimierungen zu importieren. Jet behandelt Textdateien als Tabellen mit dem durch eine schema.ini-Datei, die sich im gleichen Verzeichnis wie die Datenquelle befindet, festgelegten Schema.  Für CSV-Daten ist einer der Parameter in der Datei schema.ini "FORMAT=CSVDelimited". Für diese Lösung ist das Verständnis der Jet Test IISAMm-Vorgänge – die Verbindungszeichenfolgensyntax, Verwendung von schema.ini, Einstellungsoptionen für die Registrierung usw. – erforderlich.  Die besten Informationsquellen hierfür sind die Microsoft Access-Hilfe und Knowledge Base (KB)-Artikel. Weitere Informationen finden Sie unter [Initializing the Text Data Source Driver](https://msdn.microsoft.com/library/office/ff834391.aspx), [Verwendung eine verteilten Abfrage von SQLServer 7.0 mit einem verknüpften Server gesicherten Access-Datenbanken](https://go.microsoft.com/fwlink/?LinkId=128504)(maschinell übersetzter Artikel), [Verwendung von Jet OLE DB-Provider 4.0 an ISAM-Datenbanken](https://go.microsoft.com/fwlink/?LinkId=128505)(maschinell übersetzter Artikel) und [Gewusst wie: Öffnen Sie getrennte Textdateien mit der Jet-Provider Text IIsam (maschinell übersetzter Artikel)](https://go.microsoft.com/fwlink/?LinkId=128501).  
+     In 32-Bit-Systemen ist es jedoch möglich, CSV-Daten mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [mit dem OLE DB-Anbieter für Jet in eine](../../t-sql/functions/openrowset-transact-sql.md) -Tabelle ohne Massenimportoptimierungen zu importieren. Jet behandelt Textdateien als Tabellen mit dem durch eine schema.ini-Datei, die sich im gleichen Verzeichnis wie die Datenquelle befindet, festgelegten Schema.  Für CSV-Daten ist einer der Parameter in der Datei schema.ini "FORMAT=CSVDelimited". Für diese Lösung Kenntnisse über die Jet Test IISAMm-Vorgänge, die zugehörige Verbindungszeichenfolgensyntax, die Verwendung von „schema.ini“, die Einstellungsoptionen für die Registrierung usw., erforderlich.  Die besten Informationsquellen hierfür sind die Microsoft Access-Hilfe und Knowledge Base (KB)-Artikel. Weitere Informationen finden Sie unter [Initializing the Text Data Source Driver](https://msdn.microsoft.com/library/office/ff834391.aspx), [Verwendung eine verteilten Abfrage von SQLServer 7.0 mit einem verknüpften Server gesicherten Access-Datenbanken](https://go.microsoft.com/fwlink/?LinkId=128504)(maschinell übersetzter Artikel), [Verwendung von Jet OLE DB-Provider 4.0 an ISAM-Datenbanken](https://go.microsoft.com/fwlink/?LinkId=128505)(maschinell übersetzter Artikel) und [Gewusst wie: Öffnen Sie getrennte Textdateien mit der Jet-Provider Text IIsam (maschinell übersetzter Artikel)](https://go.microsoft.com/fwlink/?LinkId=128501).  
   
  Darüber hinaus ist Folgendes für den Massenimport von Daten aus einer Datendatei in eine Tabelle erforderlich:  
   

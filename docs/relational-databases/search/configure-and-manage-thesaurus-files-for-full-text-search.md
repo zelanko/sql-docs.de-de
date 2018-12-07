@@ -15,12 +15,12 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 290008818b5cd486535e9b14f437729e4cab07e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3fc363a3ea7922c6c486f250222b5ce62da8e6e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731398"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514269"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ Für jede Thesaurusabfrage wird zuerst ein sprachspezifischer Thesaurus und dann
 2.  Anschließend werden diese Schritte für den globalen Thesaurus wiederholt. Wenn für einen Begriff in der sprachspezifischen Thesaurusdatei bereits eine Übereinstimmung gefunden wurde, werden die globalen Synonyme des Begriffs ignoriert.  
 
 ##  <a name="structure"></a> Struktur einer Thesaurusdatei  
- Jede Thesaurusdatei definiert einen XML-Container, dessen ID `Microsoft Search Thesaurus`lautet, sowie einen Kommentar, `<!--` … `-->`, der einen Beispielthesaurus enthält. Der Thesaurus wird in einem `<thesaurus>`-Element definiert, das Beispiele für die untergeordneten Elemente enthält, in denen die Einstellung für diakritische Zeichen, Erweiterungssätze und Ersetzungssätze definiert werden.
+ Jede Thesaurusdatei definiert einen XML-Container, dessen ID `Microsoft Search Thesaurus` lautet, sowie einen Kommentar, `<!--` … `-->`, der einen Beispielthesaurus enthält. Der Thesaurus wird in einem `<thesaurus>`-Element definiert, das Beispiele für die untergeordneten Elemente enthält, in denen die Einstellung für diakritische Zeichen, Erweiterungssätze und Ersetzungssätze definiert werden.
 
 Eine typische leere Thesaurusdatei enthält den folgenden XML-Text:  
   

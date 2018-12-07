@@ -11,12 +11,12 @@ ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0c9ddcd2fecd498e6bb00458bfde1e07b1d431b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747438"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532744"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Verwendungsszenarien für temporale Tabellen
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -136,9 +136,9 @@ FROM Employee
   
 > [!TIP]  
 >  Filterbedingungen, die in temporalen Klauseln mit FOR SYSTEM_TIME angegeben werden, sind SARG-fähig (SQL Server kann den zugrunde liegenden gruppierten Index verwenden, um einen Suchvorgang statt eines Scanvorgangs auszuführen.   
-> Wenn Sie die Verlaufstabelle direkt abfragen, stellen Sie sicher, dass die Filterbedingung ebenfalls SARG-fähig ist, indem Sie Filter in Form von \<Zeitraumspalte  {< | > | =, …} festlegen date_condition AT TIME ZONE 'UTC' angeben.  
+> Wenn Sie die Verlaufstabelle direkt abfragen, stellen Sie sicher, dass die Filterbedingung ebenfalls SARG-fähig ist, indem Sie Filter in Form von \<Zeitraumspalte  {< | > | =, …} date_condition AT TIME ZONE 'UTC' angeben.  
 > Wenn Sie AT TIME ZONE auf Zeitraumspalten anwenden, führt SQL Server einen Tabellen-/Indexscanvorgang durch, der sehr teuer sein kann. Vermeiden Sie folgenden Bedingungstyp in Ihren Abfragen:  
-> \<Zeitraumspalte>  AT ZEIT ZONE ‘\<Ihre Zeitzone>’  >  {< | > | =, …} date_condition.  
+> \<Zeitraumspalte>  AT ZEIT ZONE „\<Ihre Zeitzone>“  >  {< | > | =, …} date_condition.  
   
  Weitere Informationen finden Sie unter [Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
@@ -368,7 +368,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
 Sie können temporale Tabellen mit Systemversionsverwaltung verwenden, um Anomalien zu erkennen, die in regelmäßigen Abständen oder unregelmäßig auftreten, da Sie mit temporalen Abfragen schnell bestimmte Muster auffinden können.  
 Die Form der Anomalie hängt von der Art von Daten ab, die Sie sammeln, sowie von Ihrer Geschäftslogik.  
   
- Das folgende Beispiel zeigt die vereinfachte Logik zum Erkennen von „Spitzen“ in Verkaufszahlen. Angenommen, Sie arbeiten mit einer temporalen Tabelle, die den Verlauf von erworbenen Produkten erfasst:  
+ Das folgende Beispiel zeigt die vereinfachte Logik zum Erkennen von „Spitzen“ in Verkaufszahlen. Angenommen, Sie arbeiten mit einer temporalen Tabelle, in der der Verlauf von erworbenen Produkten erfasst wird:  
   
 ```  
 CREATE TABLE [dbo].[Product]  
@@ -446,7 +446,7 @@ FROM CTE
  Das folgende Beispiel veranschaulicht den Prozess. Dabei wird davon ausgegangen, dass die DimLocation-Dimensionstabelle bereits über ValidFrom und ValidTo verfügt, da datetime2-Spalten keine NULL-Werte zulassen und vom ETL-Prozess aufgefüllt werden:  
   
 ```  
-/*Move “closed” row versions into newly created history table*/  
+/*Move "closed" row versions into newly created history table*/  
 SELECT * INTO  DimLocationHistory  
     FROM DimLocation  
         WHERE ValidTo < '9999-12-31 23:59:59.99';  

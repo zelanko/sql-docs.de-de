@@ -15,12 +15,12 @@ ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b4f641af83a39fa76af3b6dc525740e1c0b0057b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6057c87d7fb4e1a5f4b29879179efa0ff716275e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819288"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529691"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>Datenbankspiegelung: Verwenden von Zertifikaten für eingehende Verbindungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "47819288"
   
 5.  Erteilen Sie die CONNECT-Berechtigung für den Anmeldenamen für den Remotespiegelungsendpunkt.  
   
-     Um z. B. auf HOST_A die Berechtigung für die Remoteserverinstanz auf HOST_B zum Herstellen der Verbindung mit ihrem lokalen Anmeldenamen zu erteilen – d. h., Verbindungen mit `HOST_B_login`zu ermöglichen –, verwenden Sie die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen:  
+     Um beispielsweise auf HOST_A die Berechtigung für die Remoteserverinstanz auf HOST_B zum Herstellen der Verbindung mit ihrem lokalen Anmeldenamen zu erteilen, d.h., um eine Verbindung mit `HOST_B_login` herzustellen, verwenden Sie die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen:  
   
     ```  
     USE master;  

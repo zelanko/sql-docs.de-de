@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f8e1ebaaeaf6ea6ee413bf20f83beaddcbdd465
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 85d63fa9515552f2c2acc5851f36e38f52017dda
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020354"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539103"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Arbeiten mit freigegebenen Datasets (Webportal)
 
@@ -48,7 +48,7 @@ Sie können Sie Folgendes tun, um ein vorhandenes freigegebenes Dataset zu verwa
 > [!NOTE]
 > Falls Sie das freigegebene Dataset nicht im Ordner sehen, stellen Sie sicher, dass Sie Datasets anzeigen. Sie können **Ansicht** aus der Menüleiste in der oberen rechten Ecke des Webportals auswählen. Stellen Sie sicher, dass **Datasets** aktiviert ist.  
   
-1.  Klicken Sie auf die **Auslassungspunkte (...)** für das Dataset aus, das Sie verwalten möchten.  
+1.  Klicken Sie auf die **Auslassungspunkte (...)** für das Dataset, das Sie verwalten möchten.  
   
     ![SSRS-Dataset-Auslassungspunkte](../reporting-services/media/ssrsdataset-ellipse.png)  
   

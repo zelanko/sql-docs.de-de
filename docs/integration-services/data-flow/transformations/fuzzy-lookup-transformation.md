@@ -34,12 +34,12 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 851f89487199b1deae2086352a255374621688c6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ad931e49146aacdfcae92cca008ffce681ae5dd4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638817"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540896"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Transformation für Fuzzysuche
   Die Transformation für Fuzzysuche führt Aufgaben zum Datencleanup durch, wie das Standardisieren von Daten, das Korrigieren von Daten und das Bereitstellen fehlender Werte.  
@@ -123,7 +123,7 @@ ms.locfileid: "51638817"
 ## <a name="temporary-tables-and-indexes"></a>Temporäre Tabellen und Indizes  
  Zur Laufzeit erstellt die Transformation für Fuzzysuche temporäre Objekte, z. B. Tabellen und Indizes, in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank, mit der die Transformation eine Verbindung herstellt. Die Größe dieser temporären Tabellen und Indizes ist proportional zur Anzahl der Zeilen und Token in der Verweistabelle und zur Anzahl der Token, die von der Transformation für Fuzzysuche erstellt werden; deshalb können sie möglicherweise einen großen Teil des Speicherplatzes belegen. Die Transformation fragt auch diese temporären Tabellen ab. Deshalb sollten Sie in Erwägung ziehen, die Transformation für Fuzzysuche eine Verbindung mit einer Nichtproduktionsinstanz einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank herstellen zu lassen, insbesondere wenn auf dem Produktionsserver nur eingeschränkt Speicherplatz verfügbar ist.  
   
- Die Leistung dieser Transformation kann verbessert werden, wenn sich die dabei verwendeten Tabellen und Indizes auf dem lokalen Computer befinden. Wenn sich die Verweistabelle, die von der Transformation für Fuzzysuche verwendet wird, auf dem Produktionsserver befindet, sollten Sie die Tabelle auf einen Nichtproduktionsserver kopieren und die Transformation für Fuzzysuche für den Zugriff auf die Kopie konfigurieren. So können Sie verhindern, dass die Suchabfragen Ressourcen auf dem Produktionsserver verbrauchen. Wenn die Transformation für Fuzzysuche den Übereinstimmungsindex verwaltet, d.h., wenn MatchIndexOption auf **GenerateAndMaintainNewIndex**festgelegt ist, sperrt die Transformation eventuell überdies die Verweistabelle für die Dauer des Datencleanupvorgangs und verhindert, dass andere Benutzer und Anwendungen auf die Tabelle zugreifen.  
+ Die Leistung dieser Transformation kann verbessert werden, wenn sich die dabei verwendeten Tabellen und Indizes auf dem lokalen Computer befinden. Wenn sich die Verweistabelle, die von der Transformation für Fuzzysuche verwendet wird, auf dem Produktionsserver befindet, sollten Sie die Tabelle auf einen Nichtproduktionsserver kopieren und die Transformation für Fuzzysuche für den Zugriff auf die Kopie konfigurieren. So können Sie verhindern, dass die Suchabfragen Ressourcen auf dem Produktionsserver verbrauchen. Wenn die Transformation für Fuzzysuche den Übereinstimmungsindex verwaltet, d.h., wenn MatchIndexOption auf **GenerateAndMaintainNewIndex** festgelegt ist, sperrt die Transformation eventuell überdies die Verweistabelle für die Dauer des Datencleanupvorgangs und verhindert, dass andere Benutzer und Anwendungen auf die Tabelle zugreifen.  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>Konfigurieren der Transformation für Fuzzysuche  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  

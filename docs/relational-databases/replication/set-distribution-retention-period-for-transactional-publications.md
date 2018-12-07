@@ -14,12 +14,12 @@ ms.assetid: 9a98c53a-fea5-4235-b23d-6c69587c5676
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11ffd55e30a238c443ccd4d1dcbeff5f658cba5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ba35c0cdc52557b179beaec259fd4c5d7f5d698
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792078"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514676"
 ---
 # <a name="set-distribution-retention-period-for-transactional-publications"></a>Festlegen der Beibehaltungsdauer für die Verteilung von Transaktionsveröffentlichungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47792078"
   
 ### <a name="to-specify-the-distribution-retention-period"></a>So geben Sie die Beibehaltungsdauer für die Verteilung an  
   
-1.  Klicken Sie auf der Seite **Allgemein** des Dialogfelds **Verteilereigenschaften - \<Distributor>** auf die Schaltfläche mit den drei Punkten (**…**) für die Verteilungsdatenbank.  
+1.  Klicken Sie auf der Seite **Allgemein** des Dialogfelds **Verteilereigenschaften – \<Verteiler>** auf die Schaltfläche mit den Auslassungspunkten (**...**) für die Verteilungsdatenbank.  
   
 2.  Zum Angeben der Mindestbeibehaltungsdauer geben Sie einen Wert in das Feld **Mindestens** ein; zum Angeben der maximalen Beibehaltungsdauer geben Sie einen Wert in das Feld **Aber nicht länger als** ein.  
   

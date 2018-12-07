@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7dd2bd8733c3de4a7ca14000fb56f11e9a63780
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0730dc681a4faa61425803f98dc091a0fb745b1e
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643125"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617874"
 ---
 # <a name="sqlcmd---use-the-utility"></a>Verwenden des Hilfsprogramms „sqlcmd“
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -479,7 +479,7 @@ ms.locfileid: "51643125"
   
 -   Der Schalter "-N" wird vom Client verwendet, um eine verschlüsselte Verbindung anzufordern. Diese Option entspricht der ADO.NET-Option `ENCRYPT = true`.  
   
--   Der –C-Schalter wird vom Client verwendet, um ihn so zu konfigurieren, dass dem Serverzertifikat implizit vertraut wird, ohne es zu überprüfen. Diese Option entspricht der ADO.NET-Option `TRUSTSERVERCERTIFICATE = true`.  
+-   Der Switch „–C“ wird vom Client verwendet, um ihn so zu konfigurieren, dass dem Serverzertifikat implizit vertraut wird, ohne es zu überprüfen. Diese Option entspricht der ADO.NET-Option `TRUSTSERVERCERTIFICATE = true`.  
   
  Der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Dienst unterstützt nicht alle `SET` -Optionen, die für eine SQL Server-Instanz verfügbar sind. Die folgenden Optionen lösen einen Fehler aus, wenn die entsprechende `SET` -Option auf `ON` oder `OFF`festgelegt wird:  
   
@@ -505,21 +505,21 @@ ms.locfileid: "51643125"
  Verbindung mit Windows-Anmeldeinformationen herstellen und Kommunikation verschlüsseln:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Verbindung mit Windows-Anmeldeinformationen herstellen und Serverzertifikat vertrauen:  
   
 ```  
-SQLCMD –E –C  
+SQLCMD -E -C  
   
 ```  
   
  Verbindung mit Windows-Anmeldeinformationen herstellen, Kommunikation verschlüsseln und Serverzertifikat vertrauen:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   
@@ -528,28 +528,28 @@ SQLCMD –E –N –C
  Verbindung mit Windows-Anmeldeinformationen herstellen, Kommunikation verschlüsseln und Serverzertifikat vertrauen:  
   
 ```  
-SQLCMD –E  
+SQLCMD -E  
   
 ```  
   
  Verbindung mit Windows-Anmeldeinformationen herstellen, Kommunikation verschlüsseln und Serverzertifikat vertrauen:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Verbindung mit Windows-Anmeldeinformationen herstellen, Kommunikation verschlüsseln und Serverzertifikat vertrauen:  
   
 ```  
-SQLCMD –E –T  
+SQLCMD -E -C  
   
 ```  
   
  Verbindung mit Windows-Anmeldeinformationen herstellen, Kommunikation verschlüsseln und Serverzertifikat vertrauen:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   

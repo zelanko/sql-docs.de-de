@@ -11,12 +11,12 @@ ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8158439e20b5f841c01914f83490b8d9ab128fbb
-ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
+ms.openlocfilehash: 5b9e328f3abd3a53bfb4764470138d6d6b966236
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50965968"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617600"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Master Data Services-Add-In für Microsoft Excel
 
@@ -29,7 +29,7 @@ ms.locfileid: "50965968"
  In [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]können Sie mithilfe von Data Quality Services (DQS) Daten vor dem Laden in MDS zuordnen. Dadurch werden doppelte Daten in MDS verhindert.  
 
 ## <a name="downloads"></a>Downloads 
->*  Sie können das Master Data Services Add-In für Excel und SQL Server 2016 SP1 von [dieser Microsoft Download Center-Seite](https://go.microsoft.com/fwlink/?linkid=836866) herunterladen. 
+>*  Sie können das Master Data Services Add-In für Excel und SQL Server 2016 SP2 von [dieser Microsoft Download Center-Seite](https://www.microsoft.com/download/details.aspx?id=56838) herunterladen. 
 >* Laden Sie das [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] für SQL Server 2017 auf [dieser Microsoft Download Center-Seite](https://go.microsoft.com/fwlink/?linkid=836867) herunter.
  
   

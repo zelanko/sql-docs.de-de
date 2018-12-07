@@ -16,12 +16,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae4d55d1cd6496b8e21d0522f750450c6b4a7338
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ec3ca3bc16f7967128efc617844717dcf5e57270
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601140"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509285"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51601140"
 > [!TIP]  
 >  Von einer primären Datenbank können beliebige Sicherungstypen erstellt werden. Alternativ können Sie Protokollsicherungen und vollständige Kopiesicherungen von sekundären Datenbanken erstellen. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)wichtig sind.   
 
- Jeder Satz von Verfügbarkeitsdatenbanken wird von einem *Verfügbarkeitsreplikat*gehostet. Es gibt zwei Typen von Verfügbarkeitsreplikaten: ein einzelnes *primäres Replikat*, das die primären Datenbanken hostet, und ein bis acht *sekundäre Replikate*, die jeweils einen Satz sekundärer Datenbanken hosten und als mögliche Failoverziele für die Verfügbarkeitsgruppe dienen. Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats ein Failover aus. Ein Verfügbarkeitsreplikat gewährleistet nur Redundanz auf Datenbankebene, und zwar für den in einer Verfügbarkeitsgruppe enthaltenen Satz von Datenbanken. Failover werden nicht durch Datenbankprobleme verursacht, z. B. wenn eine Datenbank aufgrund eines Verlusts einer Datendatei oder der Beschädigung eines Transaktionsprotokolls fehlerverdächtig wird.  
+ Jeder Satz von Verfügbarkeitsdatenbanken wird von einem *Verfügbarkeitsreplikat*gehostet. Es gibt zwei Typen von Verfügbarkeitsreplikaten: ein einzelnes *primäres Replikat*, das die primären Datenbanken hostet, und ein bis acht *sekundäre Replikate*, die jeweils einen Satz sekundärer Datenbanken hosten und als mögliche Failoverziele für die Verfügbarkeitsgruppe dienen. Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats ein Failover aus. Ein Verfügbarkeitsreplikat gewährleistet nur Redundanz auf Datenbankebene, und zwar für die in einer Verfügbarkeitsgruppe enthaltenen Datenbanken. Failover werden nicht durch Datenbankprobleme verursacht, z. B. wenn eine Datenbank aufgrund eines Verlusts einer Datendatei oder der Beschädigung eines Transaktionsprotokolls fehlerverdächtig wird.  
   
  Das primäre Replikat stellt die primären Datenbanken für Lese-/Schreibverbindungen von Clients bereit. Vom primären Replikat werden Transaktionsprotokoll-Datensätze jeder primären Datenbank an jede sekundäre Datenbank gesendet. Dieser auch als *Datensynchronisierung* bezeichnete Prozess findet auf Datenbankebene statt. Die Transaktionsprotokoll-Datensätze werden von jedem sekundären Replikat zwischengespeichert (das Protokoll wird*festgeschrieben* ) und anschließend auf die entsprechende sekundäre Datenbank angewendet. Die Datensynchronisierung erfolgt zwischen der primären Datenbank und jeder verbundenen sekundären Datenbank unabhängig von den anderen Datenbanken. Daher kann eine sekundäre Datenbank angehalten werden oder einen Fehler verursachen, ohne andere sekundäre Datenbanken zu beeinträchtigen, und eine primäre Datenbank kann angehalten werden oder einen Fehler verursachen, ohne andere primäre Datenbanken zu beeinträchtigen.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "51601140"
 >  Wenn die Rolle eines Verfügbarkeitsreplikats unbestimmt ist, z. B. während eines Failovers, befinden sich seine Datenbanken vorübergehend im NOT SYNCHRONIZING-Status. Ihre Rolle wird auf RESOLVING festgelegt, bis die Rolle des Verfügbarkeitsreplikats aufgelöst wurde. Wird ein Verfügbarkeitsreplikat zur primären Rolle aufgelöst, werden seine Datenbanken zu primären Datenbanken. Wird ein Verfügbarkeitsreplikat zur sekundären Rolle aufgelöst, werden seine Datenbanken sekundäre Datenbanken.  
   
 ##  <a name="AvailabilityModes"></a> Verfügbarkeitsmodi  
- Der Verfügbarkeitsmodus ist eine Eigenschaft jedes Verfügbarkeitsreplikats. Der Verfügbarkeitsmodus legt fest, ob das primäre Replikat mit dem Commit der Transaktionen für eine Datenbank wartet, bis ein bestimmtes sekundäres Replikat die Transaktionsprotokoll-Datensätze auf den Datenträger geschrieben hat. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unterstützt zwei Verfügbarkeitsmodi:*asynchroner Commit-Modus* und *synchroner Commit-Modus*.  
+ Der Verfügbarkeitsmodus ist eine Eigenschaft jedes Verfügbarkeitsreplikats. Der Verfügbarkeitsmodus legt fest, ob das primäre Replikat mit dem Commit der Transaktionen für eine Datenbank wartet, bis ein bestimmtes sekundäres Replikat die Transaktionsprotokoll-Datensätze auf den Datenträger geschrieben hat. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unterstützt zwei Verfügbarkeitsmodi: *asynchroner Commit-Modus* und *synchroner Commit-Modus*.  
   
 -   **Asynchronous-commit mode**  
   

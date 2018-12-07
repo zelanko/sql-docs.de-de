@@ -18,12 +18,12 @@ ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66f4d5e1a419d9a194532902e0df259eccc35590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dddd2ea5c0abb9cf2aaa1258bbbb5cff14e6ca99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838538"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519161"
 ---
 # <a name="table-value-constructor-transact-sql"></a>Tabellenwertkonstruktor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

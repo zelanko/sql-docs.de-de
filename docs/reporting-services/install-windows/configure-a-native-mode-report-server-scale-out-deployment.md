@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren der Bereitstellung für horizontales Skalieren für Berichtsserver im einheitlichen Modus | Microsoft-Dokumentation
-ms.date: 05/24/2018
+ms.date: 11/29/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b026e4e361ff6664dfdc78d0215ec3ed723fe93
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a0e990b52a9433f959288dcf2e3518f85b8a6f67
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021644"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710641"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Konfigurieren der Bereitstellung für horizontales Skalieren für Berichtsserver im einheitlichen Modus
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
 
 Der einheitliche Modus von Reporting Services unterstützt ein Bereitstellungsmodell für horizontales Skalieren, das die Ausführung mehrerer Berichtsserverinstanzen ermöglicht, die eine einzelne Berichtsserver-Datenbank gemeinsam nutzen. Die Bereitstellung für horizontales Skalieren wird verwendet, um die Skalierbarkeit von Berichtsservern zu erhöhen, sodass diese mehr gleichzeitige Benutzer und größere Berichtsausführungslasten unterstützen. Darüber hinaus können damit bestimmte Server für die Verarbeitung von interaktiven oder geplanten Berichten reserviert werden.
 
 Für Power BI-Berichtsserver müssen Sie die Clientaffinität (auch als „beständige Sitzungen“ bekannt) im Lastenausgleichsmodul für jede horizontal hochskalierte Umgebung konfigurieren, um die ordnungsgemäße Ausführung zu gewährleisten.  
   
-Für SQL Server 2016 Reporting Services verwenden Berichtsserver im SharePoint-Modus die SharePoint-Produktinfrastruktur für horizontales Skalieren. Der SharePoint-Modus für horizontales Skalieren wird durch das Hinzufügen weiterer Berichtsserver im SharePoint-Modus zur SharePoint-Farm ausgeführt. Informationen zur horizontalen Skalierung im SharePoint-Modus finden Sie unter [Add an Additional Report Server to a Farm (SSRS Scale-out) (Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm (Horizontales Skalieren für SSRS))](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+Für SQL Server 2016 Reporting Services verwenden Berichtsserver im SharePoint-Modus die SharePoint-Produktinfrastruktur für die horizontale Skalierung. Der SharePoint-Modus für horizontales Skalieren wird durch das Hinzufügen weiterer Berichtsserver im SharePoint-Modus zur SharePoint-Farm ausgeführt. Informationen zur horizontalen Skalierung im SharePoint-Modus finden Sie unter [Add an Additional Report Server to a Farm (SSRS Scale-out) (Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm (Horizontales Skalieren für SSRS))](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
  
   Eine *Bereitstellung für horizontales Skalieren* wird in den folgenden Szenarien verwendet:  
   
@@ -46,7 +46,7 @@ Für SQL Server 2016 Reporting Services verwenden Berichtsserver im SharePoint-M
   
  **Führen Sie folgende Schritte aus, um eine Bereitstellung für horizontales Skalieren zu planen, zu installieren und zu konfigurieren:**  
   
--   Anweisungen zum Installieren von Berichtsserverinstanzen finden Sie unter [Installieren von SQL Server 2016 vom Installations-Assistenten aus &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+-   Anweisungen zum Installieren von Berichtsserverinstanzen finden Sie unter [Installieren von SQL Server 40 vom Installations-Assistenten aus &#41;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 -   Wenn Sie vorhaben, die Bereitstellung für horizontales Skalieren auf einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich) zu hosten, müssen Sie den NLB-Cluster zuerst konfigurieren. Weitere Informationen finden Sie unter [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
@@ -133,7 +133,7 @@ Dann tritt ein zeitweiliger Fehler auf, aufgrund dessen nur der Server, der den 
 3.  Wählen Sie auf der Seite „Bereitstellung für horizontales Skalieren“ die Berichtsserverinstanz aus, die auf den Join mit der Bereitstellung wartet, und wählen Sie **Server hinzufügen**aus.  
   
     > [!NOTE]  
-    >  **Problem** : Wenn Sie versuchen, eine Reporting Services-Berichtsserverinstanz mit der Bereitstellung für horizontales Skalieren zu verknüpfen, wird möglicherweise eine Fehlermeldung vom Typ „Zugriff verweigert“ angezeigt.  
+    >  **Problem** : Wenn Sie versuchen, eine Reporting Services-Berichtsserverinstanz mit der Bereitstellung für die horizontale Skalierung zu verknüpfen, wird möglicherweise eine Fehlermeldung vom Typ „Zugriff verweigert“ angezeigt.  
     >   
     >  **Problemumgehung:** Sichern Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Verschlüsselungsschlüssel von der ersten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz, und stellen Sie den Schlüssel auf dem zweiten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver wieder her. Versuchen Sie dann, den zweiten Server mit der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung für horizontales Skalieren zu verknüpfen.  
   

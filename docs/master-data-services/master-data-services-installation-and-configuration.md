@@ -12,12 +12,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7016e66ba91972f6f9ef365b7c60fa320b0bdbcf
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b79bb79750d7f4696581dab86c95cf71abf02375
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697358"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526950"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services-Installation und -Konfiguration
 
@@ -132,7 +132,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
 3.  Wählen Sie auf der Seite **Datenbankserver** den **Authentifizierungstyp** , und klicken Sie anschließend auf **Verbindung testen** , um zu bestätigen, dass Sie eine Verbindung mit der Datenbank mithilfe der Anmeldeinformationen für den von Ihnen ausgewählten Authentifizierungstyp herstellen können. Klicken Sie auf **Weiter**.
   
     > [!NOTE]  
-    >  Wenn Sie als Authentifizierungstyp **Aktueller Benutzer – Integrierte Sicherheit** auswählen, so ist das Feld **Benutzername** schreibgeschützt und zeigt den Namen des Windows-Benutzerkontos an, das am Computer angemeldet ist. Wenn Sie [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] auf einem virtuellen Azure-Computer (VM) ausführen, zeigt das Feld **Benutzername** den VM-Namen sowie den Benutzernamen für das lokale Administratorkonto auf der VM an. 
+    >  Wenn Sie als Authentifizierungstyp **Aktueller Benutzer – Integrierte Sicherheit** auswählen, ist das Feld **Benutzername** schreibgeschützt und zeigt den Namen des Windows-Benutzerkontos an, das am Computer angemeldet ist. Wenn Sie [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] auf einem virtuellen Azure-Computer (VM) ausführen, zeigt das Feld **Benutzername** den VM-Namen sowie den Benutzernamen für das lokale Administratorkonto auf der VM an. 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   

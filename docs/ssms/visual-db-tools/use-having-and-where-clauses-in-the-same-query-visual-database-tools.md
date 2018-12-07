@@ -21,12 +21,12 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35f30ac6e2e597f822fde99d52840a2d39ac23ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a6e778155ad0a470bd5b9e97484aea94d205055
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608973"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537301"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Verwenden von HAVING- und WHERE-Klauseln in derselben Abfrage (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

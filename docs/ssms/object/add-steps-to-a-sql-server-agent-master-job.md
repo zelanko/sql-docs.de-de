@@ -11,12 +11,12 @@ ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33c01da8b0ae9f439debe2f8343bddbc1c7de2fe
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 640b9c04c8988c091fea267b74c7f3552079d175
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698488"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517542"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,8 +58,8 @@ Sie können nur Aufträge ändern, die in Ihrem Besitz sind, es sei denn, Sie si
   
 4.  Klicken Sie mit der rechten Maustaste auf den Auftrag, dem Sie Schritte hinzufügen möchten, und wählen Sie **Eigenschaften**aus.  
   
-5.  Klicken Sie im Dialogfeld **Auftragseigenschaften >***Auftragsname* unter **Seite auswählen** auf die Option **Schritte**. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften – Neuer Auftrag &#40;Seite „Schritte“&#41;](../../ssms/agent/job-properties-new-job-steps-page.md).  
-  
+5.  Klicken Sie im Dialogfeld **Auftragseigenschaften** > _Auftragsname_ unter **Seite auswählen** auf die Option **Schritte**. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften – Neuer Auftrag &#40;Seite „Schritte“&#41;](../../ssms/agent/job-properties-new-job-steps-page.md).  
+ 
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
 ## <a name="TsqlProcedure"></a>Verwenden von Transact-SQL  

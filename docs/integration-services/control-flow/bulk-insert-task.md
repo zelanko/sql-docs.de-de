@@ -19,12 +19,12 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be86ec99816b6d609400aeb1f703c4bbe2adc131
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bd16052afcb3acf9b0d5a45f6f57ab896fcdc1c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641767"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531828"
 ---
 # <a name="bulk-insert-task"></a>Masseneinfügungstask
   Der Masseneinfügungstask stellt eine effektive Möglichkeit zum Kopieren großer Datenmengen in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder -Sicht bereit. Angenommen, Ihr Unternehmen verwaltet eine Produktliste mit einer Million Zeilen auf einem Großrechner. Das E-Commerce-System des Unternehmens verwendet jedoch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Auffüllen von Webseiten. Sie müssen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produkttabelle jede Nacht mit der Hauptproduktliste vom Großrechner aktualisieren. Dazu speichern Sie die Produktliste in einem Format mit Tabstopp-Trennzeichen und kopieren mit dem Masseneinfügungstask die Daten direkt in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle.  
@@ -153,7 +153,7 @@ ms.locfileid: "51641767"
   
 #### <a name="format--use-file"></a>Format = Use File  
  **FormatFile**  
- Geben Sie den Pfad der Formatdatei ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten ( **…** ), um nach der Formatdatei zu suchen.  
+ Geben Sie den Pfad der Formatdatei ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**), um nach der Formatdatei zu suchen.  
   
 #### <a name="format--specify"></a>Format = Specify  
  **RowDelimiter**  

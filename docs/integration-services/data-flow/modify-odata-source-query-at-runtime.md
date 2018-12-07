@@ -11,24 +11,24 @@ ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 13ca379e808a970142bd568fe158bafdfaa5d0d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbfb753b0c2674e3345286b5a2ee2f038228c5d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778580"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517842"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>Bereitstellen einer OData-Quellabfrage zur Laufzeit
  Sie können die OData-Quellabfrage zur Laufzeit ändern, indem Sie der Eigenschaft **[OData-Quelle].[Abfrage]** des Datenflusstasks einen *Ausdruck* hinzufügen.  
   
- Die zurückgegebenen Spalten müssen die gleichen Spalten sein, die zur Entwurfszeit zurückgegeben wurden; andernfalls erhalten Sie eine Fehlermeldung, wenn das Paket ausgeführt wird. Geben Sie bei Verwendung der $select-Abfrageoption die gleichen Spalten (in der gleichen Reihenfolge) an. Eine sicherere Alternative zur Verwendung der $select-Option besteht darin, die nicht benötigten Spalten direkt in der Benutzeroberfläche der Quellkomponente zu deaktivieren.  
+ Die zurückgegebenen Spalten müssen die gleichen Spalten sein, die zur Entwurfszeit zurückgegeben wurden; andernfalls erhalten Sie eine Fehlermeldung, wenn das Paket ausgeführt wird. Geben Sie bei Verwendung der $select-Abfrageoption die gleichen Spalten (in der gleichen Reihenfolge) an. Eine sicherere Alternative zur Verwendung der $select-Option besteht darin, die nicht benötigten Spalten direkt über die Benutzeroberfläche der Quellkomponente zu deaktivieren.  
   
  Es gibt einige verschiedene Möglichkeiten, den Abfragewert zur Laufzeit dynamisch festzulegen. Hier werden einige der gängigeren Methoden beschrieben.  
   
 ## <a name="provide-the-query-as-a-parameter"></a>Bereitstellen der Abfrage als Parameter  
  Anhand der folgenden Schritte können Sie eine Abfrage, die von der OData-Quellkomponente als Parameter verwendet wird, für das Paket verfügbar machen.  
   
-1.  Klicken Sie mit der rechten Maustaste auf **Datenflusstask** , und wählen Sie die Option **Parametrisieren** aus.  
+1.  Klicken Sie mit der rechten Maustaste auf **Datenflusstask**, und wählen Sie die Option **Parametrisieren** aus.  
   
 2.  Wählen Sie im Dialogfeld **Parametrisieren** für **Eigenschaft** **[\<Name der OData-Quellkomponente>].[ Abfrage]** aus.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47778580"
   
 4.  Wählen Sie die Eigenschaft **[OData-Quelle].[Abfrage]** aus.  
   
-5.  Klicken Sie auf die auf die Schaltfläche mit den Auslassungspunkten (...) für **Ausdruck**.  
+5.  Klicken Sie unter **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten (...).  
   
 6.  Geben Sie den **Ausdruck**ein.  
   

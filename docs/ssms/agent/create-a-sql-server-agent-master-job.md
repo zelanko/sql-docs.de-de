@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b665f3d20d223351b9da207d767cea0015fb94b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: be7ca58b2278941e37d3eee7f33469c9a53ab4eb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701961"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525073"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Erstellen eines Masterauftrag für den SQL Server-Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ Falls bei Auftragsschritten, die Proxykonten verwenden, beim Herunterladen vom M
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge** , und wählen Sie dann **Neuer Auftrag**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge**, und wählen Sie dann **Neuer Auftrag**aus.  
   
 4.  Ändern Sie im Dialogfeld **Neuer Auftrag** auf der Seite **Allgemein** die allgemeinen Eigenschaften des Auftrags. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften – Neuer Auftrag &#40;Seite „Allgemein“&#41;](../../ssms/agent/job-properties-new-job-general-page.md).  
   

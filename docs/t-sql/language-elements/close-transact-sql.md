@@ -20,24 +20,23 @@ ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 778c3bdb9fc17a27af4fbc3a7b0fd6e2aa89f402
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c98cff1909bc74ff550ea9d68359d7a845d04d7
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629110"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586233"
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Schließt einen geöffneten Cursor, indem die Zuordnung des aktuellen Resultsets zum Cursor aufgehoben wird und alle Cursorsperren für die Zeilen, auf die der Cursor positioniert ist, freigegeben werden. CLOSE sorgt dafür, dass die Daten für ein erneutes Öffnen verfügbar sind, jedoch sind das Abrufen und positionierte Aktualisieren von Daten erst dann zulässig, wenn der Cursor erneut geöffnet wird. CLOSE muss bei einem geöffneten Cursor ausgeführt werden. Wurde ein Cursor lediglich deklariert oder bereits geschlossen, darf CLOSE nicht angewendet werden.  
+  Schließt einen geöffneten Cursor, indem die Zuordnung des aktuellen Resultsets zum Cursor aufgehoben wird und alle Cursorsperren für die Zeilen, auf die der Cursor positioniert ist, freigegeben werden. `CLOSE` sorgt dafür, dass die Daten für ein erneutes Öffnen verfügbar sind, jedoch sind das Abrufen und positionierte Aktualisieren von Daten erst dann zulässig, wenn der Cursor erneut geöffnet wird. CLOSE muss bei einem geöffneten Cursor ausgeführt werden. Wurde ein Cursor lediglich deklariert oder bereits geschlossen, darf `CLOSE` nicht angewendet werden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   
@@ -54,7 +53,7 @@ CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die richtige Platzierung der `CLOSE`-Anweisung in einem cursorbasierten Prozess gezeigt.  
   
-```  
+```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT EmployeeID, Title FROM AdventureWorks2012.HumanResources.Employee;  
 OPEN Employee_Cursor;  

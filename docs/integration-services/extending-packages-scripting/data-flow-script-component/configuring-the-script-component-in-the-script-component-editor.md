@@ -18,12 +18,12 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1633811117b65b397f3f961898895b785cb86d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5d13e7ee8fa8bcf058abfada37583c7d69cfa72
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648798"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527431"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor
   Bevor Sie benutzerdefinierten Code in der Skriptkomponente schreiben, müssen Sie sich für eine Datenflusskomponente entscheiden (Quelle, Transformation oder Ziel) und anschließend die Metadaten und Eigenschaften der Komponente im **Transformations-Editor für Skripterstellung** konfigurieren.  

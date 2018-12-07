@@ -11,12 +11,12 @@ ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ce3f4e559e9ed708154b8c5b5710540c701b44e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 573a0eeb49640b44af5179f0cb44ec8dfb6753f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638497"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544725"
 ---
 # <a name="lesson-4-1---copying-the-lesson-3-package"></a>Lektion 4-1: Kopieren des Pakets aus Lektion 3
 In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 3 erstellten Pakets Lesson 3.dtsx. Wenn Sie Lektion 3 nicht abgeschlossen haben, können Sie stattdessen das vollständige Lektion 3-Paket, das im Lernprogramm des Projekts enthalten ist, hinzufügen und dann kopieren. Sie verwenden diese neue Kopie im gesamten Rest der Lektion 4.  
@@ -47,9 +47,9 @@ In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 3 erstellten Pakets Le
   
 2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **SSIS-Pakete**, und klicken Sie auf **Vorhandenes Paket hinzufügen**.  
   
-3.  Wählen Sie im Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** unter **Paketspeicherort** die Option **Dateisystem** aus.  
+3.  Wählen Sie im Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** unter **Paketspeicherort**die Option **Dateisystem**aus.  
   
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , navigieren Sie zu Lesson 3.dtsx auf Ihrem Computer, und klicken Sie anschließend auf **Öffnen**.  
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, navigieren Sie zu „Lesson 3.dtsx“ auf Ihrem Computer, und klicken Sie anschließend auf **Öffnen**.  
   
     Um alle Lektionspakete für dieses Lernprogramm herunterzuladen, gehen Sie wie folgt vor.  
   

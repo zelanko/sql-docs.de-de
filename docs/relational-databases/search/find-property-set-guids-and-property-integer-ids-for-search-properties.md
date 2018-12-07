@@ -15,18 +15,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85e6537fe5b9df976724d9d2392f14520ccf48d5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bb9628196ae08e94b9076e9e1bb422eaad0331e0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657809"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532142"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Suchen von Eigenschaftensatz-GUIDS und ganzzahligen Eigenschaft-IDs für Sucheigenschaften
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In diesem Thema wird erläutert, wie Sie die Werte, die Sie vor dem Hinzufügen einer Eigenschaft zu einer Sucheigenschaftenliste benötigen, abrufen und für die Volltextsuche durchsuchbar machen. Zu diesen Werten zählen die Eigenschaftensatz-GUID und der ganzzahlige Eigenschaftsbezeichner einer Dokumenteigenschaft.  
   
- Dokumenteigenschaften, die von IFilters aus Binärdaten extrahiert werden, d. h. aus Daten, die in einer Spalte vom Datentyp **varbinary**, **varbinary(max)** (einschließlich **FILESTREAM**) oder **image** gespeichert sind, können für die Volltextsuche verfügbar gemacht werden. Um eine extrahierte Eigenschaft durchsuchbar zu machen, muss sie manuell einer Sucheigenschaftenliste hinzugefügt werden. Darüber hinaus muss der Sucheigenschaftenliste mindestens ein Volltextindex zugeordnet werden. Weitere Informationen finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Dokumenteigenschaften, die von IFilters aus Binärdaten extrahiert werden, d.h. aus Daten, die in einer Spalte vom Datentyp **varbinary**, **varbinary(max)** (einschließlich **FILESTREAM**) oder **image** gespeichert sind, können für die Volltextsuche zur Verfügung gestellt werden. Um eine extrahierte Eigenschaft durchsuchbar zu machen, muss sie manuell einer Sucheigenschaftenliste hinzugefügt werden. Darüber hinaus muss der Sucheigenschaftenliste mindestens ein Volltextindex zugeordnet werden. Weitere Informationen finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
  Bevor Sie eine verfügbare Eigenschaft einer Eigenschaftenliste hinzufügen können, müssen Sie die folgenden zwei Informationen zur Eigenschaft ermitteln:  
   
@@ -78,10 +78,10 @@ ms.locfileid: "51657809"
 .  
 propertyDescription  
 name = System.Author  
-…  
+...  
 formatID = F29F85E0-4FF9-1068-AB91-08002B27B3D9  
 propID = 4  
-…  
+...  
 ```  
   
  Eine vollständige Beschreibung dieser Eigenschaft finden Sie unter [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) in der Windows Search-Dokumentation.  

@@ -25,17 +25,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 459119eb08117ed52a455fdfb80fe3f393a410fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caae632e8e413001d57d125126bb3f8f979a8e82
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807102"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617060"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Diese Funktion gibt den Namen der gespeicherten Prozedur oder des Triggers zurück, an der bzw. an dem der Fehler auftritt, wenn durch diesen die Ausführung des CATCH-Blocks eines TRY…CATCH-Konstrukts verursacht wurde.  
+Diese Funktion gibt den Namen der gespeicherten Prozedur oder des Triggers zurück, an der bzw. an dem der Fehler auftritt, wenn durch diesen die Ausführung des CATCH-Blocks eines TRY...CATCH-Konstrukts verursacht wurde.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,10 +58,8 @@ Wenn `ERROR_PROCEDURE` im CATCH-Block einer gespeicherten Prozedur aufgerufen wi
 ## <a name="remarks"></a>Remarks  
 `ERROR_PROCEDURE` kann überall im Bereich eines CATCH-Blocks aufgerufen werden.  
   
-`ERROR_PROCEDURE` gibt den Namen der gespeicherten Prozedur oder des Triggers, bei der bzw. bei dem ein Fehler auftritt, unabhängig davon zurück, wie oft die Funktion ausgeführt wurde oder wo im Bereich des `CATCH`-Blocks sie ausgeführt wurde. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die nur eine Fehlernummer in der Anweisung zurückgeben, die unmittelbar auf die Anweisung folgt, die einen Fehler auslöst.  
-  
-`ERROR_PROCEDURE` gibt in einem geschachtelten `CATCH`-Block die Fehlernummer für den entsprechenden Bereich des `CATCH`-Blocks zurück, der auf den `CATCH`-Block verwiesen hat. Zum Beispiel könnte der `CATCH`-Block eines äußeren TRY...CATCH-Konstrukts ein inneres `TRY...CATCH`-Konstrukt aufweisen. In diesem inneren `CATCH`-Block gibt `ERROR_PROCEDURE` die Nummer des Fehlers zurück, der den inneren `CATCH`-Block aufgerufen hat. Wenn `ERROR_PROCEDURE` im äußeren `CATCH`-Block ausgeführt wird, wird die Nummer des Fehlers zurückgegeben, der den äußeren `CATCH`-Block aufgerufen hat.  
-  
+`ERROR_PROCEDURE` gibt den Namen der gespeicherten Prozedur oder des Triggers, bei der bzw. bei dem ein Fehler auftritt, unabhängig davon zurück, wie oft die Funktion ausgeführt wurde oder wo sie im Bereich des `CATCH`-Blocks ausgeführt wurde. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die nur eine Fehlernummer in der Anweisung zurückgeben, die unmittelbar auf die Anweisung folgt, die einen Fehler auslöst.  
+   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. Verwenden von ERROR_PROCEDURE in einem CATCH-Block  

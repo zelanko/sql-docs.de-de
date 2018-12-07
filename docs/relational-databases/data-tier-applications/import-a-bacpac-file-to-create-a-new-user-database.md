@@ -26,16 +26,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2227cb838c52bf309373a6d67f4d006841e30a4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c92dc9aad30134f0d9b8b834798a416fb610e142
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673669"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521240"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Importieren Sie eine Datei einer Datenebenenanwendung (DAC) (eine BACPAC-Datei), um eine Kopie der ursprünglichen Datenbank mit den Daten auf einer neuen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder auf [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] zu erstellen. Die Export-/Importvorgänge können kombiniert werden, um eine DAC oder Datenbank zwischen Instanzen zu migrieren oder eine logische Sicherung zu erstellen. Dazu gehört z. B. das Erstellen einer lokalen Kopie einer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]bereitgestellten Datenbank.  
+  Importieren Sie eine Datei einer Datenebenenanwendung (eine BACPAC-Datei), um eine Kopie der ursprünglichen Datenbank mit den Daten auf einer neuen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder auf [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] zu erstellen. Die Export-/Importvorgänge können kombiniert werden, um eine DAC oder Datenbank zwischen Instanzen zu migrieren oder eine logische Sicherung zu erstellen. Dazu gehört z. B. das Erstellen einer lokalen Kopie einer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]bereitgestellten Datenbank.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Beim Importvorgang wird in zwei Phasen eine neue DAC erstellt.  
@@ -92,16 +92,16 @@ ms.locfileid: "51673669"
   
 -   **Diese Seite nicht mehr anzeigen.** – Aktivieren Sie dieses Kontrollkästchen, damit die Einführungsseite in Zukunft nicht mehr angezeigt wird.  
   
--   Durch**Weiter** gelangen Sie zur Seite **Importeinstellungen** .  
+-   Durch **Weiter** gelangen Sie zur Seite **Importeinstellungen**.  
   
--   **Abbrechen** – bricht den Vorgang ab und schließt den Assistenten.  
+-   **Abbrechen**: Bricht den Vorgang ab und schließt den Assistenten.  
   
 ###  <a name="Import_settings"></a> Importeinstellungen (Seite)  
  Verwenden Sie diese Seite, um den Speicherort der zu importierenden BACPAC-Datei anzugeben.  
   
--   **Vom lokalen Datenträger importieren** – Klicken Sie auf **Durchsuchen** , um den lokalen Computer zu durchsuchen, oder geben Sie den Pfad im dafür vorgesehenen Feld an. Der Pfadname muss einen Dateinamen und die Erweiterung BACPAC enthalten.  
+-   **Vom lokalen Datenträger importieren**: Klicken Sie auf **Durchsuchen...**, um den lokalen Computer zu durchsuchen, oder geben Sie den Pfad im dafür vorgesehenen Feld an. Der Pfadname muss einen Dateinamen und die Erweiterung BACPAC enthalten.  
   
--   **Aus Azure importieren** – Importiert eine BACPAC-Datei aus einem Microsoft Azure-Container. Sie müssen eine Verbindung mit einem Microsoft Azure-Container herstellen, um diese Option zu überprüfen. Beachten Sie, dass diese Option auch erfordert, dass Sie ein lokales Verzeichnis für die temporäre Datei angeben. Die temporäre Datei wird am angegebenen Speicherort erstellt und verbleibt dort, nachdem der Vorgang abgeschlossen wurde.  
+-   **Aus Azure importieren**: Importiert eine BACPAC-Datei aus einem Microsoft Azure-Container. Sie müssen eine Verbindung mit einem Microsoft Azure-Container herstellen, um diese Option zu überprüfen. Beachten Sie, dass diese Option auch erfordert, dass Sie ein lokales Verzeichnis für die temporäre Datei angeben. Die temporäre Datei wird am angegebenen Speicherort erstellt und verbleibt dort, nachdem der Vorgang abgeschlossen wurde.  
   
      Wenn Sie Azure durchsuchen, können Sie zwischen Containern innerhalb eines Kontos wechseln. Sie müssen eine einzelne BACPAC-Datei angeben, um den Importvorgang fortzusetzen. Beachten Sie, dass Sie Spalten nach **Name**, **Größe**oder **Geändert am**sortieren können.  
   
@@ -112,11 +112,11 @@ ms.locfileid: "51673669"
   
  **Für eine lokale Instanz von SQL Server:**  
   
--   **Neuer Datenbankname** – Geben Sie einen Namen für die importierte Datenbank an.  
+-   **Neuer Datenbankname**: Geben Sie einen Namen für die importierte Datenbank an.  
   
--   **Datendateipfad** - Stellen Sie ein lokales Verzeichnis für Datendateien bereit. Klicken Sie auf **Durchsuchen** , um den lokalen Computer zu durchsuchen, oder geben Sie den Pfad im dafür vorgesehenen Feld an.  
+-   **Datendateipfad**: Stellen Sie ein lokales Verzeichnis für Datendateien bereit. Klicken Sie auf **Durchsuchen...**, um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
   
--   **Protokolldateipfad** – Geben Sie ein lokales Verzeichnis für Protokolldateien an. Klicken Sie auf **Durchsuchen** , um den lokalen Computer zu durchsuchen, oder geben Sie den Pfad im dafür vorgesehenen Feld an.  
+-   **Protokolldateipfad**: Geben Sie ein lokales Verzeichnis für Protokolldateien an. Klicken Sie auf **Durchsuchen...**, um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   

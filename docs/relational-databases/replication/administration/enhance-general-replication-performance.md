@@ -22,12 +22,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c57fd45ac2633e8027e916055b2850033bf69e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665038"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539188"
 ---
 # <a name="enhance-general-replication-performance"></a>Verbessern der allgemeinen Replikationsleistung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -154,11 +154,11 @@ ms.locfileid: "47665038"
   
 -   Reduzieren Sie die Meldungsstufen von Replikations-Agents, außer während erster Test-, Überwachungs- oder Debugverfahren.  
   
-     Reduzieren Sie den **–HistoryVerboseLevel** -Parameter und den **–OutputVerboseLevel** -Parameter der Verteilungs-Agents oder Merge-Agents. Dadurch wird die Anzahl der neuen Zeilen reduziert, die zum Nachverfolgen des Verlaufs und der Ausgabe von Agents eingefügt werden. Stattdessen werden frühere Verlaufsmeldungen mit dem gleichen Status auf die neuen Verlaufsinformationen aktualisiert. Erhöhen Sie die Meldungsstufen für das Testen, Überwachen und Debuggen, sodass Sie so viele Informationen zur Agent-Aktivität erhalten wie möglich.  
+     Reduzieren Sie den Parameter **-HistoryVerboseLevel** und den Parameter **-OutputVerboseLevel** der Verteilungs-Agents oder Merge-Agents. Dadurch wird die Anzahl der neuen Zeilen reduziert, die zum Nachverfolgen des Verlaufs und der Ausgabe von Agents eingefügt werden. Stattdessen werden frühere Verlaufsmeldungen mit dem gleichen Status auf die neuen Verlaufsinformationen aktualisiert. Erhöhen Sie die Meldungsstufen für das Testen, Überwachen und Debuggen, sodass Sie so viele Informationen zur Agent-Aktivität erhalten wie möglich.  
   
--   Verwenden Sie den **–MaxBCPThreads** -Parameter des Momentaufnahme-Agents, Merge-Agents und Verteilungs-Agents (die Anzahl der angegebenen Threads sollte die Anzahl der Prozessoren des Computers nicht überschreiten). Mit diesem Parameter wird die Anzahl der Massenkopiervorgänge angegeben, die beim Erstellen und Anwenden der Momentaufnahme parallel ausgeführt werden können.  
+-   Verwenden Sie den Parameter **-MaxBCPThreads** des Momentaufnahmen-Agents, Merge-Agents und Verteilungs-Agents (die Anzahl der angegebenen Threads sollte die Anzahl der Prozessoren des Computers nicht überschreiten). Mit diesem Parameter wird die Anzahl der Massenkopiervorgänge angegeben, die beim Erstellen und Anwenden der Momentaufnahme parallel ausgeführt werden können.  
   
--   Verwenden Sie den **–UseInprocLoader** -Parameter des Verteilungs-Agents und des Merge-Agents (dieser Parameter kann nicht verwendet werden, wenn veröffentlichte Tabellen XML-Spalten enthalten). Durch diesen Parameter verwendet der Agent beim Anwenden der Momentaufnahme den BULK INSERT-Befehl.  
+-   Verwenden Sie den Parameter **-UseInprocLoader** des Verteilungs-Agents und des Merge-Agents (dieser Parameter kann nicht verwendet werden, wenn veröffentlichte Tabellen XML-Spalten enthalten). Durch diesen Parameter verwendet der Agent beim Anwenden der Momentaufnahme den BULK INSERT-Befehl.  
   
  Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
   

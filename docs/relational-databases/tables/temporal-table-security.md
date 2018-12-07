@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d080ae2ac8d10469afb35efbd64122daf89d312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebe4438e48f14c1adba3b56d30cc772549f9ee7e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744428"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526445"
 ---
 # <a name="temporal-table-security"></a>Sicherheit bei temporale Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,15 +42,15 @@ ms.locfileid: "47744428"
 |Vorgang|aktuelle Tabelle|Verlaufstabelle|  
 |---------------|-------------------|-------------------|  
 |**DROP TABLE**|Unzulässig|Unzulässig|  
-|**ALTER TABLE…SWITCH PARTITION**|Nur SWITCH IN (siehe [Partitionierung mit temporären Tabellen](../../relational-databases/tables/partitioning-with-temporal-tables.md))|Nur SWITCH OUT (siehe [Partitionierung mit temporären Tabellen](../../relational-databases/tables/partitioning-with-temporal-tables.md))|  
-|**ALTER TABLE…DROP PERIOD**|Unzulässig|-|  
-|**ALTER TABLE…ADD PERIOD**|-|Unzulässig|  
+|**ALTER TABLE...SWITCH PARTITION**|Nur SWITCH IN (siehe [Partitionierung mit temporären Tabellen](../../relational-databases/tables/partitioning-with-temporal-tables.md))|Nur SWITCH OUT (siehe [Partitionierung mit temporären Tabellen](../../relational-databases/tables/partitioning-with-temporal-tables.md))|  
+|**ALTER TABLE...DROP PERIOD**|Unzulässig|-|  
+|**ALTER TABLE...ADD PERIOD**|-|Unzulässig|  
   
 ## <a name="allowed-alter-table-operations"></a>Zulässigen ALTER TABLE-Vorgänge  
   
 |Vorgang|Aktuell|Verlauf|  
 |---------------|-------------|-------------|  
-|**ALTER TABLE…REBUILD**|Zulässig (unabhängig)|Zulässig (unabhängig)|  
+|**ALTER TABLE...REBUILD**|Zulässig (unabhängig)|Zulässig (unabhängig)|  
 |**CREATE INDEX**|Zulässig (unabhängig)|Zulässig (unabhängig)|  
 |**CREATE STATISTICS**|Zulässig (unabhängig)|Zulässig (unabhängig)|  
   

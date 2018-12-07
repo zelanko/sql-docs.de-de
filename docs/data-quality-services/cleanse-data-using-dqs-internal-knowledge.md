@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.interactivecleansing.f1
@@ -17,12 +16,12 @@ ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94800c20ae6b5ad5dfc45f9a17779242cd430286
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af37e0dd65edebe2037d305d085e5c65872d03f8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822038"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617650"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Bereinigen von Daten mit (internem) DQS-Wissen
 
@@ -38,7 +37,7 @@ ms.locfileid: "47822038"
   
 -   Sie müssen entsprechende Schwellenwerte für die Bereinigungsaktivität angegeben haben. Weitere Informationen dazu finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   Eine DQS-Wissensdatenbank muss auf [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] verfügbar sein, um Ihre Quelldaten vergleichen und bereinigen zu können. Darüber hinaus muss die Wissensdatenbank Wissen zum Typ von Daten enthalten, die Sie bereinigen möchten. Wenn Sie z. B. die Quelldaten bereinigen, die US-Adressen enthalten, benötigen Sie eine Wissensdatenbank, die gegen „hochwertige“ Beispieldaten für US-Adressen erstellt wurde.  
+-   Eine DQS-Wissensdatenbank muss auf [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] verfügbar sein, um Ihre Quelldaten vergleichen und bereinigen zu können. Darüber hinaus muss die Wissensdatenbank Wissen zum Typ von Daten enthalten, die Sie bereinigen möchten. Wenn Sie z. B. die Quelldaten bereinigen möchten, die US-Adressen enthalten, benötigen Sie eine Wissensdatenbank, die gegen „hochwertige“ Beispieldaten für US-Adressen erstellt wurde.  
   
 -   Microsoft Excel muss auf dem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Computer installiert sein, wenn sich die Quelldaten, die bereinigt werden sollen, in einer Excel-Datei befinden. Andernfalls sind Sie nicht in der Lage, die Excel-Datei in der Zuordnungsphase auszuwählen. Die von Microsoft Excel erstellten Dateien können die Erweiterung .xlsx, .xls oder .csv haben. Wenn die 64-Bit-Version von Excel verwendet wird, werden nur Excel 2003-Dateien (.xls) unterstützt; Excel 2007- oder 2010-Dateien (.xlsx) werden nicht unterstützt. Wenn Sie die 64-Bit-Version von Excel 2007 oder 2010 verwenden, speichern Sie die Datei als XLS-Datei oder CSV-Datei, oder installieren Sie stattdessen eine 32-Bit-Version von Excel.  
   
@@ -129,7 +128,7 @@ ms.locfileid: "47822038"
   
     -   Im unteren Bereich werden einzelne Vorkommen des Domänenwerts angezeigt, der im Bereich rechts oben ausgewählt wurde. Die folgenden Informationen werden angezeigt: ein Feld, um einen anderen (richtigen) Wert anzugeben, den Vertrauensgrad (nicht verfügbar für die Werte auf der Registerkarte **Richtig** ), der Grund für die DQS-Aktion für den Wert und die Option, um die Korrekturen und Vorschläge für den Wert zu genehmigen und abzulehnen, und der ursprüngliche Wert.  
   
-3.  Wenn Sie beim Erstellen einer Domäne die Funktion **Rechtschreibprüfung** aktiviert haben, werden wellige rote Unterstriche für solche Domänenwerte angezeigt, die als potenzielle Fehler identifiziert werden. Der Unterstrich wird für den ganzen Wert angezeigt. Wenn „New York“ z. B. falsch als „Neu York“ buchstabiert wurde, zeigt die Rechtschreibprüfung einen roten Unterstrich unter „Neu York“ und nicht nur unter „Neu“ an. Wenn Sie mit der rechten Maustaste auf den Wert klicken, sehen Sie vorgeschlagene Korrekturen. Wenn es mehr als 5 Vorschläge gibt, können Sie im Kontextmenü auf **Weitere Vorschläge** klicken, um die restlichen Vorschläge anzuzeigen. Wie bei der Fehleranzeige ersetzen die Vorschläge den ganzen Wert. „New York“ wird so im vorherigen Beispiel als Vorschlag angezeigt, nicht nur „Neu“. Sie können einen der Vorschläge auswählen oder dem Wörterbuch einen Wert hinzufügen, der für diesen Wert angezeigt werden soll. Werte werden im Wörterbuch auf Benutzerkontoebene gespeichert. Wenn Sie einen Vorschlag im Kontextmenü der Rechtschreibprüfung auswählen, wird der Spalte **Korrigieren in** der ausgewählte Vorschlag hinzugefügt. Wenn Sie jedoch in der Spalte **Korrigieren in** einen Vorschlag auswählen, wird der Wert in der Spalte durch den ausgewählten Vorschlag ersetzt.  
+3.  Wenn Sie beim Erstellen einer Domäne die Funktion **Rechtschreibprüfung** aktiviert haben, werden wellige rote Unterstriche für solche Domänenwerte angezeigt, die als potenzielle Fehler identifiziert werden. Der Unterstrich wird für den ganzen Wert angezeigt. Wenn „New York“ z. B. falsch als „Neu York“ buchstabiert wurde, zeigt die Rechtschreibprüfung einen roten Unterstrich unter „Neu York“ und nicht nur unter „Neu“ an. Wenn Sie mit der rechten Maustaste auf den Wert klicken, sehen Sie vorgeschlagene Korrekturen. Wenn es mehr als 5 Vorschläge gibt, können Sie im Kontextmenü auf **Weitere Vorschläge** klicken, um die restlichen Vorschläge anzuzeigen. Wie bei der Fehleranzeige ersetzen die Vorschläge den ganzen Wert. „New York“ wird so im vorherigen Beispiel als Vorschlag angezeigt, nicht nur „Neu“. Sie können einen der Vorschläge auswählen oder dem Wörterbuch einen Wert hinzufügen, der für diesen Wert angezeigt werden soll. Werte werden im Wörterbuch auf Benutzerkontoebene gespeichert. Wenn Sie einen Vorschlag im Kontextmenü der Rechtschreibprüfung auswählen, wird der Spalte **Korrigieren in** der ausgewählte Vorschlag hinzugefügt. Wenn Sie jedoch in der Spalte **Korrigieren in** einen Vorschlag auswählen, wird der Wert in der Spalte durch den ausgewählten Vorschlag ersetzt.  
   
      Die Rechtschreibprüfungsfunktion ist standardmäßig in der interaktiven Bereinigungsphase aktiviert. Sie können die Rechtschreibprüfung in der interaktiven Bereinigungsphase deaktivieren, indem Sie auf das Symbol **Rechtschreibprüfung aktivieren/deaktivieren** klicken oder mit der rechten Maustaste in den Domänenwertebereich klicken und dann im Kontextmenü auf **Rechtschreibprüfung** klicken. Um sie wieder zu aktivieren, gehen Sie genau so vor.  
   
@@ -150,9 +149,9 @@ ms.locfileid: "47822038"
   
     1.  **SQL Server**Wählen Sie **DQS_STAGING_DATA** als Zieldatenbank aus, wenn Sie die Daten hierher exportieren möchten, und geben Sie dann einen Namen für die Tabelle an, die erstellt wird, um die exportierten Daten zu speichern. Wählen Sie andernfalls eine andere Datenbank aus, wenn Sie Daten in eine andere Datenbank exportieren möchten, und geben Sie dann einen Namen für die Tabellen an, die erstellt wird, um die exportierten Daten zu speichern. Die Zieldatenbank muss sich in der gleichen SQL Server-Instanz wie [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] befinden, um in der Dropdownliste **Datenbank** verfügbar zu sein.  
   
-    2.  **CSV-Datei**: Klicken Sie auf **Durchsuchen**, und geben Sie den Namen und den Speicherort der CSV-Datei an, in die Sie die bereinigten Daten exportieren möchten. Sie können auch den Dateinamen für die CSV-Datei, in die Sie die bereinigten Daten exportieren möchten, zusammen mit dem vollständigen Pfad eingeben. Zum Beispiel „c:\ExportedData.csv“. Die Datei wird auf dem Computer gespeichert, auf dem [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] installiert ist.  
+    2.  **CSV-Datei**: Klicken Sie auf **Durchsuchen**, und geben Sie den Namen und den Speicherort der CSV-Datei an, in die Sie die bereinigten Daten exportieren möchten. Sie können auch den Dateinamen für die CSV-Datei, in die Sie die bereinigten Daten exportieren möchten, zusammen mit dem vollständigen Pfad eingeben. Beispiel „c:\ExportedData.csv“. Die Datei wird auf dem Computer gespeichert, auf dem [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] installiert ist.  
   
-    3.  **Excel-Datei**: Klicken Sie auf **Durchsuchen**, und geben Sie den Namen und den Speicherort der Excel-Datei an, in die Sie die bereinigten Daten exportieren möchten. Sie können auch den Dateinamen für die Excel-Datei, in die Sie die bereinigten Daten exportieren möchten, zusammen mit dem vollständigen Pfad eingeben. Zum Beispiel „c:\ExportedData.xlsx“. Die Datei wird auf dem Computer gespeichert, auf dem [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] installiert ist.  
+    3.  **Excel-Datei**: Klicken Sie auf **Durchsuchen**, und geben Sie den Namen und den Speicherort der Excel-Datei an, in die Sie die bereinigten Daten exportieren möchten. Sie können auch den Dateinamen für die Excel-Datei, in die Sie die bereinigten Daten exportieren möchten, zusammen mit dem vollständigen Pfad eingeben. Beispiel „c:\ExportedData.xlsx“. Die Datei wird auf dem Computer gespeichert, auf dem [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] installiert ist.  
   
 2.  Aktivieren Sie das Kontrollkästchen **Ausgabe standardisieren** , um die Ausgabe auf Grundlage des für die Domäne ausgewählten Ausgabeformats zu standardisieren. Ändern Sie z. B. den Zeichenfolgenwert in Großbuchstaben, oder schreiben Sie den ersten Buchstaben des Worts groß. Informationen zum Angeben des Ausgabeformats einer Domäne finden Sie in der Liste **Formatausgabe** in [Domäne-Eigenschaften festlegen](../data-quality-services/set-domain-properties.md).  
   
@@ -172,7 +171,7 @@ ms.locfileid: "47822038"
   
         -   **\<Domäne>_Status**: Der Status des Domänenwerts nach der Datenbereinigung. Beispiele sind **Vorgeschlagen**, **Neu**, **Ungültig**, **Korrigiert**oder **Richtig**.  
   
-        -   **Datensatzstatus**: Abgesehen von einem Statusfeld für jede zugeordnete Domäne **(\<Domänenname>_Status**) wird im Feld **Datensatzstatus** der Status eines Datensatzes angezeigt. Wenn einer der Statuswerte der Domäne im Datensatz *Neu* oder *Korrigiert*lautet, wird der **Datensatzstatus** auf *Richtig*festgelegt. Wenn einer der Statuswerte der Domäne im Datensatz *Vorgeschlagen*, *Ungültig*oder *Korrigiert*lautet, wird **Datensatzstatus** auf den entsprechenden Wert festgelegt. Wenn beispielsweise einer der Statuswerte der Domäne im Datensatz *Vorgeschlagen*lautet, wird **Datensatzstatus** auf *Vorgeschlagen*festgelegt.  
+        -   **Datensatzstatus**: Abgesehen von einem Statusfeld für jede zugeordnete Domäne **(\<Domänenname>_Status**) wird im Feld **Datensatzstatus** der Status eines Datensatzes angezeigt. Wenn einer der Statuswerte der Domäne im Datensatz *Neu* oder *Korrigiert* lautet, wird der **Datensatzstatus** auf *Richtig* festgelegt. Wenn einer der Statuswerte der Domäne im Datensatz *Vorgeschlagen*, *Ungültig* oder *Korrigiert* lautet, wird **Datensatzstatus** auf den entsprechenden Wert festgelegt. Wenn beispielsweise einer der Statuswerte der Domäne im Datensatz *Vorgeschlagen* lautet, wird der **Datensatzstatus** auf *Vorgeschlagen* festgelegt.  
   
             > [!NOTE]  
             >  Wenn Sie den Verweisdatendienst für den Bereinigungsvorgang verwenden, stehen auch zusätzliche Daten zum Domänenwert für das Exportieren zur Verfügung. Weitere Informationen finden Sie unter [Bereinigen von Daten mit &#40;externem&#41; Verweisdaten-Wissen](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

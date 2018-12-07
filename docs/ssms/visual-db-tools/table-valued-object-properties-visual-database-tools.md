@@ -13,12 +13,12 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b99978fa5b861ce6fe8481bb0172b91e42d8e72e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 243ad5c0489f2af49823eb0663efbb8b6b474056
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616818"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519849"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Tabellenwertobjekt-Eigenschaften (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,11 +46,11 @@ Wird erweitert, um die Eigenschaften von **Alias**, **Spaltenliste**, **Vollstä
 Zeigt den Alias des ausgewählten Tabellenwertobjekts an. Um einen Alias hinzuzufügen oder zu ändern, geben Sie ihn in das Feld ein.  
   
 **Spaltenliste**  
-Zeigt die Spalten des ausgewählten Tabellenwertobjekts an. Um die Spalten in einem eigenen Fenster anzuzeigen, klicken Sie auf die Spaltenliste und dann rechts neben der Eigenschaft auf die Schaltfläche mit den drei Punkten (...).  
+Zeigt die Spalten des ausgewählten Tabellenwertobjekts an. Klicken Sie auf die Spaltenliste und dann rechts neben der Eigenschaft auf die Schaltfläche mit den Auslassungspunkten (...), um die Spalten in einem eigenen Fenster anzuzeigen.  
   
 **Vollständiger Name**  
 Zeigt den Namen des ausgewählten Tabellenwertobjekts mitsamt Zusatzinformationen an, z. B. Schema oder Datenquelle des Objekts.  
   
 **Parameterliste**  
-Zeigt die für die ausgewählte Tabellenwertfunktion definierten Parameter an. Um Werte für die Parameter zu definieren, klicken Sie auf die Parameterliste und dann rechts neben der Eigenschaft auf die Schaltfläche mit den drei Punkten (...). Geben Sie im Dialogfeld Funktionsparameter die entsprechenden Werte ein. Diese Eigenschaft ist nur verfügbar, wenn eine Tabellenwertfunktion ausgewählt ist.  
+Zeigt die für die ausgewählte Tabellenwertfunktion definierten Parameter an. Klicken Sie auf die Parameterliste und dann rechts neben der Eigenschaft auf die Schaltfläche mit den Auslassungspunkten (...), um Werte für die Parameter zu definieren. Geben Sie im Dialogfeld Funktionsparameter die entsprechenden Werte ein. Diese Eigenschaft ist nur verfügbar, wenn eine Tabellenwertfunktion ausgewählt ist.  
   

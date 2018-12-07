@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae9cbb47056a368faeed42fd4e20179e0fb0f61d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7619852bae5989dcf12b571175d21243f6968051
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021824"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516041"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Formatieren von Text in einem Textfeld (Berichts-Generator und SSRS)
   Sie können beliebige Teile des Texts in einem Textfeld unabhängig voneinander formatieren und Platzhaltertext und statischen Text in einem Textfeld mischen. Durch das Mischen von Formaten und Hinzufügen von Platzhaltertext können Sie im Bericht Seriendrucke oder Vorlagen für Text erstellen. Jeder Ausdruck kann mithilfe eines Platzhalters getrennt definiert und formatiert werden.  
@@ -49,7 +49,7 @@ ms.locfileid: "50021824"
   
 2.  Klicken Sie auf der Registerkarte **Einfügen** auf **Textfeld**. Klicken Sie in die Liste, und erstellen Sie dann durch Ziehen ein Feld mit der gewünschten Größe.  
   
-3.  Geben Sie im Textfeld eine Bezeichnung ein - z. B. **Mein Feld**:.  
+3.  Geben Sie im Textfeld eine Bezeichnung ein, z. B. **Mein Feld**.  
   
 4.  Ziehen Sie ein Feld aus dem Dataset in das Textfeld. Es wird ein Platzhalter für das Feld erstellt.  
   

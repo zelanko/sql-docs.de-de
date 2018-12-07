@@ -21,12 +21,12 @@ ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f1247bcaa04c14a822a333dc99f5a38e5354b247
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f0818c47f0b62240786e76b7e35fc7ea6db2dfd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606190"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534013"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "51606190"
   
 4.  Klicken Sie im Konsolenbereich auf **SQL Server-Dienste**.  
   
-5.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server (***\<Instanzname>***)**, und klicken Sie dann auf **Neu starten**, um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst zu beenden und neu zu starten.  
+5.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server (**_\<Instanzname>_**)**, und klicken Sie dann auf **Neu starten**, um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst zu beenden und neu zu starten.  
   
 ##  <a name="PowerShellProcedure"></a> SQL Server PowerShell  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51606190"
   
 2.  Starten Sie Windows PowerShell aus der Taskleiste, oder klicken Sie auf "Start", auf "Alle Programme", auf "Zubehör", auf "Windows PowerShell" und dann auf "Windows PowerShell".  
   
-3.  Importieren Sie das **sqlps** -Modul durch Eingeben von **Import-Module "sqlps"**.  
+3.  Importieren Sie das **sqlps**-Modul durch Eingeben von **Import-Module "sqlps"**.  
   
 4.  Führen Sie die folgenden Anweisungen aus, um die Protokolle für TCP und Named Pipes zu aktivieren. Ersetzen Sie `<computer_name>` mit dem Namen des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird. Wenn Sie eine benannte Instanz konfigurieren, ersetzen Sie `MSSQLSERVER` durch den Namen der Instanz.  
   

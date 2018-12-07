@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74e64506ec3ba27a3caf87292556ab22c5609c57
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6e2231b51551972536d9ea534f53d5a0a2cbbfc7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543963"
 ---
 # <a name="rsexe-utility-ssrs"></a>Hilfsprogramm 'RS.exe' (SSRS)
   Das Dienstprogramm rs.exe verarbeitet Skripts, die von Ihnen in einer Eingabedatei bereitgestellt werden. Verwenden Sie dieses Hilfsprogramm, um die Berichtsserverbereitstellung und Verwaltungsaufgaben zu automatisieren.  
@@ -84,7 +84,7 @@ rs {-?}
  (Optional) Gibt an, dass die Befehle in der Skriptdatei als Batch ausgeführt werden. Falls ein Befehl fehlschlägt, wird ein Rollback für den Batch ausgeführt. Einige Befehle können nicht als Batch ausgeführt werden. Diese Befehle werden wie gewohnt ausgeführt. Nur Ausnahmen, die ausgegeben werden und nicht innerhalb des Skripts behandelt werden, führen zu einem Rollback. Wenn das Skript eine Ausnahme behandelt und normalerweise von **Main**zurückgegeben wird, wird ein Commit für den Batch ausgeführt. Wenn Sie diesen Parameter nicht angeben, werden die Befehle ausgeführt, ohne dass ein Batch erstellt wird. Weitere Informationen finden Sie unter [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
  **-v** *globaleVariable*  
- (Optional) Gibt globale Variablen an, die in dem Skript verwendet werden. Wenn das Skript globale Variablen verwendet, müssen Sie dieses Argument angeben. Der angegebene Wert muss für die in der RSS-Datei definierten globalen Variablen gültig sein. Sie müssen eine globale Variable für jedes **-v** -Argument angeben.  
+ (Optional) Gibt globale Variablen an, die in dem Skript verwendet werden. Wenn das Skript globale Variablen verwendet, müssen Sie dieses Argument angeben. Der angegebene Wert muss für die in der RSS-Datei definierten globalen Variablen gültig sein. Sie müssen eine globale Variable für jedes **-v**-Argument angeben.  
   
  Das Argument **-v** wird in der Befehlszeile angegeben, um zur Laufzeit einen Wert für eine globale Variable festzulegen, die in Ihrem Skript definiert ist. Wenn Ihr Skript beispielsweise eine Variable namens *parentFolder*, enthält, können Sie in der Befehlszeile einen Namen für diesen Ordner angeben:  
   
@@ -104,7 +104,7 @@ rs {-?}
  Das folgende Beispiel zeigt, wie die Skriptdatei angegeben wird, die das [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET-Skript und die auszuführenden Webdienstmethoden enthält.  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
+rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
 ```  
   
  Ein ausführliches Beispiel finden Sie unter [Reporting Services-Beispielskript „rs.exe“ zum Migrieren von Inhalten zwischen Berichtsservern](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  

@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2d9dcbb729c09ef327861430a36f4565c2645d3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d9d870762becec1ff0717c4e9d7aef5eda7be94c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643058"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541903"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Statusleiste (Abfrage-Editor der Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "51643058"
 ##  <a name="SetRegServerColor"></a> Festlegen der Statusfarbe für einen Registrierter Server  
  **So legen Sie eine Serverfarbe für einen Registrierten Server fest**  
   
-1.  Klicken Sie unter **Registrierte Server**mit der rechten Maustaste auf einen Serverknoten und klicken Sie dann auf **Eigenschaften...**.  
+1.  Klicken Sie unter **Registrierte Server** mit der rechten Maustaste auf einen Serverknoten, und wählen Sie dann **Eigenschaften...** aus.  
   
 2.  Wählen Sie im Dialogfeld **Serverregistrierungseigenschaften bearbeiten** die Registerkarte **Verbindungseigenschaften** aus.  
   

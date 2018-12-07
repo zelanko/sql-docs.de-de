@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef1ca3b64ee0e70dd71bfcea3fc270790343e204
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661110"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511769"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "51661110"
   
  Wenn ein Anweisungsfehler zur Laufzeit (wie etwa eine Einschränkungsverletzung) in einem Batch auftritt, führt das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] standardmäßig nur für die Anweisung ein Rollback aus, die den Fehler generiert hat. Sie können dieses Verhalten mithilfe der `SET XACT_ABORT`-Anweisung ändern. Nach dem Ausführen von `SET XACT_ABORT` ON führt jeder Anweisungsfehler zur Laufzeit dazu, dass automatisch ein Rollback für die aktuelle Transaktion ausgeführt wird. Kompilierungsfehler, wie z.B. Syntaxfehler, sind von `SET XACT_ABORT` nicht betroffen. Weitere Informationen finden Sie unter [SET XACT_ABORT &#40;Transact-SQL&#41;](../t-sql/statements/set-xact-abort-transact-sql.md).  
   
- Für den Fall, dass Fehler auftreten, sollte in den Anwendungscode eine korrigierende Aktion (`COMMIT` oder `ROLLBACK`) aufgenommen werden. Ein effizientes Tool zur Fehlerbehandlung u.a. bei Fehlern in Transaktionen ist die [!INCLUDE[tsql](../includes/tsql-md.md)]-`TRY…CATCH`-Konstruktion. Weitere Informationen mit Beispielen zu Transaktionen finden Sie unter [TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md). Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] kann die `THROW`-Anweisung verwendet werden, um eine Ausnahme auszulösen und die Ausführung an einen `CATCH`-Block eines `TRY…CATCH`-Konstrukts zu übergeben. Weitere Informationen finden Sie unter [THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md).  
+ Für den Fall, dass Fehler auftreten, sollte in den Anwendungscode eine korrigierende Aktion (`COMMIT` oder `ROLLBACK`) aufgenommen werden. Ein effizientes Tool zur Fehlerbehandlung u.a. bei Fehlern in Transaktionen ist die [!INCLUDE[tsql](../includes/tsql-md.md)]-`TRY...CATCH`-Konstruktion. Weitere Informationen mit Beispielen zu Transaktionen finden Sie unter [TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md). Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] kann die `THROW`-Anweisung verwendet werden, um eine Ausnahme auszulösen und die Ausführung an einen `CATCH`-Block eines `TRY...CATCH`-Konstrukts zu übergeben. Weitere Informationen finden Sie unter [THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md).  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>Kompilierungs- und Laufzeitfehler im Autocommit-Modus  
  Im Autocommit-Modus entsteht hin und wieder der Eindruck, dass eine [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Instanz ein Rollback für einen gesamten Batch und nicht nur für eine einzelne SQL-Anweisung ausgeführt hat. Dies passiert, wenn es sich beim aufgetretenen Fehler um einen Kompilierungsfehler und nicht um einen Laufzeitfehler handelt. Bei einem Kompilierungsfehler wird verhindert, dass [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] einen Ausführungsplan erstellt; somit wird keine Anweisung im Batch ausgeführt. Obwohl der Eindruck entsteht, dass für alle Anweisungen vor derjenigen, die den Fehler generiert hat, ein Rollback ausgeführt wurde, hat der Fehler bereits verhindert, dass überhaupt eine Anweisung im Batch ausgeführt wurde. Im folgenden Beispiel wird aufgrund eines Kompilierungsfehlers keine der `INSERT`-Anweisungen im dritten Batch ausgeführt. Es entsteht der Eindruck, dass für die ersten zwei `INSERT`-Anweisungen ein Rollback ausgeführt wird, obwohl sie nie ausgeführt wurden.  
@@ -421,7 +421,7 @@ GO
 -   Es wird entweder der **TABLOCK**-Hinweis angegeben oder die Tabellenoption **table lock on bulk load** mithilfe von **sp_tableoption** festgelegt.  
   
 > [!TIP]  
-> Im Gegensatz zur BULK INSERT-Anweisung, die eine weniger restriktive Massenupdatesperre enthält, weist INSERT INTO…SELECT mit dem TABLOCK-Hinweis eine exklusive Sperre (X) für die Tabelle auf. Das bedeutet, dass Sie keine Zeilen mit parallelen Einfügevorgängen einfügen können.  
+> Im Gegensatz zur BULK INSERT-Anweisung, die eine weniger restriktive Massenupdatesperre enthält, weist INSERT INTO...SELECT mit dem TABLOCK-Hinweis eine exklusive Sperre (X) für die Tabelle auf. Das bedeutet, dass Sie keine Zeilen mit parallelen Einfügevorgängen einfügen können.  
   
 #### <a name="key_range"></a> Schlüsselbereichssperren  
  Schlüsselbereichssperren schützen einen Bereich von Zeilen, die implizit in ein Recordset eingeschlossen wurden, das von einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung gelesen wird; dies geschieht bei Verwendung der Transaktionsisolationsstufe SERIALIZABLE. Durch Schlüsselbereichssperren werden Phantomlesezugriffe verhindert. Indem die Schlüsselbereiche zwischen Zeilen geschützt werden, wird auch verhindert, dass beim Zugreifen von Transaktionen auf Recordsets Phantomeinfügungen oder -löschungen erfolgen.  
@@ -1839,7 +1839,7 @@ GO
   
  Eine Transaktion mit langer Ausführungszeit kann für eine Datenbank schwerwiegende Probleme nach sich ziehen:  
   
--   Wenn eine Serverinstanz heruntergefahren wird, nachdem die aktive Transaktion zahlreiche Änderungen vorgenommen hat, für die kein Commit ausgeführt wurde, kann die Wiederherstellungsphase beim nachfolgenden Neustart erheblich länger dauern als durch die Serverkonfigurationsoption **Wiederherstellungsintervall** bzw. durch die `ALTER DATABASE … SET TARGET_RECOVERY_TIME`-Option angegeben. Durch diese Option wird die Frequenz aktiver bzw. indirekter Prüfpunkte gesteuert. Weitere Informationen zu Prüfpunkttypen finden Sie unter [Datenbankprüfpunkte &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
+-   Wenn eine Serverinstanz heruntergefahren wird, nachdem die aktive Transaktion zahlreiche Änderungen vorgenommen hat, für die kein Commit ausgeführt wurde, kann die Wiederherstellungsphase beim nachfolgenden Neustart erheblich länger dauern als durch die Serverkonfigurationsoption **Wiederherstellungsintervall** bzw. durch die `ALTER DATABASE ... SET TARGET_RECOVERY_TIME`-Option angegeben. Durch diese Option wird die Frequenz aktiver bzw. indirekter Prüfpunkte gesteuert. Weitere Informationen zu Prüfpunkttypen finden Sie unter [Datenbankprüfpunkte &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 -   Obwohl durch eine wartende Transaktion möglicherweise nur sehr wenige Protokolldaten generiert werden, wird die Protokollkürzung auf unbestimmte Zeit aufgehalten. Dies führt dazu, dass das Transaktionsprotokoll anwächst und möglicherweise irgendwann voll ist. Wenn das Transaktionsprotokoll voll ist, kann die Datenbank keine weiteren Updates mehr ausführen. Weitere Informationen finden Sie im [Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md), unter [Problembehandlung bei einem vollständigen Transaktionsprotokoll &#40;SQL Server-Fehler 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) sowie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md).  
   

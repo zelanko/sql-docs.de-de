@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a22a07d05fa6286eb88089393d563e746ee9def5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb89c5bd1d3c1f40e03de60041dc3d22cc56f661
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787178"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540409"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Erteilen einer Berechtigung für einen Prinzipal
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47787178"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Mit den folgenden Best Practices wird die Verwaltung von Berechtigungen erleichtert.  
@@ -68,7 +68,7 @@ ms.locfileid: "47787178"
   
 4.  Klicken Sie mit der rechten Maustaste auf eine gespeicherte Prozedur, und wählen Sie **Eigenschaften**aus.  
   
-5.  Klicken Sie im Dialogfeld **Eigenschaften der gespeicherten Prozedur –** _Name\_der\_gespeicherten_Prozedur_ unter „Seite auswählen“ auf die Option **Berechtigungen**. Verwenden Sie diese Seite, um der gespeicherten Prozedur Benutzer oder Rollen hinzuzufügen und um die Berechtigungen anzugeben, die diese Benutzer oder Rollen haben.  
+5.  Klicken Sie im Dialogfeld **Eigenschaften der gespeicherten Prozedur -**_Name\_der\_gespeicherten_Prozedur_ unter „Seite auswählen“ auf die Option **Berechtigungen**. Verwenden Sie diese Seite, um der gespeicherten Prozedur Benutzer oder Rollen hinzuzufügen und um die Berechtigungen anzugeben, die diese Benutzer oder Rollen haben.  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

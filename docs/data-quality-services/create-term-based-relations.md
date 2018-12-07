@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
@@ -14,20 +13,20 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1d46bc9edd1c907c1d8b13fb5677f1bec5f7c2f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d15ecb6a7ef4c9db9ce10fd2fd51882c68883aaa
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700868"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617270"
 ---
 # <a name="create-term-based-relations"></a>Erstellen von begriffsbasierten Beziehungen
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In diesem Thema wird die Erstellung von begriffsbasierten Beziehungen für eine Domäne in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) beschrieben. Mithilfe von begriffsbasierten Beziehungen (Term-based Relation, TBR) können Sie eine Korrektur an einem Begriff vornehmen, der Teil eines Werts in einer Domäne ist. Mehrere Werte, die abgesehen von der Schreibweise eines gemeinsamen Teils identisch sind, werden als identische Synonyme angesehen. Sie können z. B. eine begriffsbasierte Beziehung einrichten, die den Begriff „Inc.“ in „Incorporated“ ändert. Der Begriff „Inc.“ wird jedes Mal geändert, wenn er in der Domäne vorkommt. Instanzen von „Contoso, Inc.“ werden in „Contoso, Incorporated“ geändert, und die beiden Werte werden als exakte Synonyme angesehen.  
+  In diesem Thema wird die Erstellung von begriffsbasierten Beziehungen für eine Domäne in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) beschrieben. Mithilfe von begriffsbasierten Beziehungen (Term-based Relation, TBR) können Sie eine Korrektur an einem Begriff vornehmen, der Teil eines Werts in einer Domäne ist. Mehrere Werte, die abgesehen von der Schreibweise eines gemeinsamen Teils identisch sind, werden als identische Synonyme angesehen. Sie können z.B. eine begriffsbasierte Beziehung einrichten, die den Begriff „Inc.“ in „Incorporated“ ändert. Der Begriff „Inc.“ wird jedes Mal geändert, wenn er in der Domäne vorkommt. Instanzen von „Contoso, Inc.“ werden in „Contoso, Incorporated“ geändert, und die beiden Werte werden als exakte Synonyme angesehen.  
   
- Um begriffsbasierte Beziehungen zu verwenden, erstellen Sie eine Liste mit Wert-/Ersetzungswertpaaren, z. B. „Inc.“ und „Incorporated“ oder „Senior“ und „Sr.“. Durch die Verwendung einer begriffsbasierten Beziehung können Sie einen Begriff in der gesamten Domäne ändern, ohne manuell einzelne Domänenwerte als Synonyme festzulegen. Sie können angeben, dass ein Wert korrigiert wird, auch wenn er nicht zuvor von der Wissensermittlung erkannt wurde. Wenn eine Transformation aufgrund einer begriffsbasierten Beziehung dazu führt, dass zwei Werte identisch sind, erstellt DQS zwischen ihnen eine Synonymbeziehung (in der Wissensermittlung), eine Korrekturbeziehung (in der Datenkorrektur) oder eine genaue Übereinstimmung (beim Abgleich).  
+ Um begriffsbasierte Beziehungen zu verwenden, erstellen Sie eine Liste mit Wert-/Ersetzungswertpaaren, z.B. „Inc.“ und „Incorporated“ oder „Senior“ und „Sr.“. Durch die Verwendung einer begriffsbasierten Beziehung können Sie einen Begriff in der gesamten Domäne ändern, ohne manuell einzelne Domänenwerte als Synonyme festzulegen. Sie können angeben, dass ein Wert korrigiert wird, auch wenn er nicht zuvor von der Wissensermittlung erkannt wurde. Wenn eine Transformation aufgrund einer begriffsbasierten Beziehung dazu führt, dass zwei Werte identisch sind, erstellt DQS zwischen ihnen eine Synonymbeziehung (in der Wissensermittlung), eine Korrekturbeziehung (in der Datenkorrektur) oder eine genaue Übereinstimmung (beim Abgleich).  
   
  Transformationen aufgrund einer begriffsbasierten Beziehung und Symboltransformationen (Sonderzeichen werden durch ein Leerzeichen oder einen NULL-Wert ersetzt) werden in einer Vorverarbeitungsphase vor der Analyse durchgeführt. Wenn eine Verbunddomänenanalyse angefordert wird, erfolgt diese vor den beiden Transformationen, da für die Trennzeichenanalyse Symbole erforderlich sind. Andere Vorgänge, z. B. Änderungen an Domänenregeln und Domänenwerten, werden nach den Transformationen ausgeführt. Beim Abgleich werden begriffsbasierte Beziehungen vor der Abgleichsaktivität auf die Quelldaten angewendet, unabhängig davon, ob die Bereinigung ausgeführt wird.  
   

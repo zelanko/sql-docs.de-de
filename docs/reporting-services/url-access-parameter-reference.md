@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 701c91f58f4629385b70ec2abc750f0edb8d8059
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813723"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515122"
 ---
 # <a name="url-access-parameter-reference"></a>URL-Zugriffsparameterreferenz
   Sie können die folgenden Parameter als Teil einer URL verwenden, um das Aussehen und Verhalten Ihrer [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]-Berichte zu konfigurieren. In diesem Abschnitt sind die am häufigsten verwendeten Parameter aufgeführt. Bei Parametern muss keine Groß- und Kleinschreibung beachtet werden. Sie beginnen mit dem Präfix *rs:* , wenn sie an den Berichtsserver weitergeleitet werden, und mit *rs:* , wenn sie zu einem HTML-Viewer weitergeleitet werden. Sie können außerdem Parameter angeben, die für Geräte oder Renderingerweiterungen spezifisch sind. Weitere Informationen zu gerätespezifischen Parametern finden Sie unter [Angeben von Geräteinformationseinstellungen in einer URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "51813723"
   
 -   *Stylesheet*: Legt ein Stylesheet fest, das auf den HTML-Viewer angewendet wird.  
   
--   Geräteinformationseinstellung: Legt eine Geräteinformationseinstellung in der Form von `rc:tag=value`fest, wobei *tag* der Name einer für die gerade verwendete Renderingerweiterung spezifischen Geräteinformationseinstellung ist (siehe die Beschreibung für den *Format* -Parameter). Sie können z.B. die *OutputFormat* -Geräteinformationseinstellung für die IMAGE-Renderingerweiterung verwenden, um den Bericht mithilfe der folgenden Parameter in der URL-Zugriffszeichenfolge zu einem JPEG-Bild zu rendern: `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Weitere Informationen zu allen erweiterungsspezifischen Geräteinformationseinstellungen finden Sie im Artikel [Geräteinformationseinstellungen für Renderingerweiterungen &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
+-   Geräteinformationseinstellung: Legt eine Geräteinformationseinstellung in der Form von `rc:tag=value`fest, wobei *tag* der Name einer für die gerade verwendete Renderingerweiterung spezifischen Geräteinformationseinstellung ist (siehe die Beschreibung für den *Format* -Parameter). Sie können z.B. die *OutputFormat* -Geräteinformationseinstellung für die IMAGE-Renderingerweiterung verwenden, um den Bericht mithilfe der folgenden Parameter in der URL-Zugriffszeichenfolge zu einem JPEG-Bild zu rendern: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Weitere Informationen zu allen erweiterungsspezifischen Geräteinformationseinstellungen finden Sie im Artikel [Geräteinformationseinstellungen für Renderingerweiterungen &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ##  <a name="bkmk_reportserver"></a> Befehle des Berichtsservers (rs:)  
  Befehle des Berichtsservers werden mit dem Präfix *rs:* versehen und zum Auswählen des Berichtsservers verwendet:  
@@ -310,7 +310,7 @@ ms.locfileid: "51813723"
   
 -   *AsyncRender*: Steuert, ob ein Bericht asynchron gerendert wird. Der Standardwert ist **TRUE**. Er gibt an, dass ein Bericht asynchron gerendert wird. Der Wert muss ein boolescher Wert **TRUE** oder **FALSE**sein.  
   
--   *ParamMode*: Steuert, wie der Eingabeaufforderungsbereich für Parameter des Berichts-Viewer-Webparts in der Ganzseitenansicht angezeigt wird. Der Standardwert ist **Full**. Gültige Werte sind:  
+-   *ParamMode:* Steuert, wie der Eingabeaufforderungsbereich für Parameter des Berichts-Viewer-Webparts in der Ganzseitenansicht angezeigt wird. Der Standardwert ist **Full**. Gültige Werte sind:  
   
     -   **Full**: Eingabeaufforderungsbereich für Parameter anzeigen.  
   
@@ -324,7 +324,7 @@ ms.locfileid: "51813723"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode*: Steuert, wie der Dokumentstrukturbereich des Berichts-Viewer-Webparts in der Ganzseitenansicht angezeigt wird. Der Standardwert ist **Full**. Gültige Werte sind:  
+-   *DocMapMode:* Steuert, wie der Dokumentstrukturbereich des Berichts-Viewer-Webparts in der Ganzseitenansicht angezeigt wird. Der Standardwert ist **Full**. Gültige Werte sind:  
   
     -   **Full**: Dokumentstrukturbereich anzeigen.  
   
@@ -332,7 +332,7 @@ ms.locfileid: "51813723"
   
     -   **Hidden**: Dokumentstrukturbereich ausblenden.  
   
--   *DockToolBar*: Steuert, ob die Symbolleiste des Berichts-Viewer-Webparts oben oder unten angedockt wird. Gültige Werte sind **Top** und **Bottom**. Der Standardwert ist **Top**.  
+-   *DockToolBar:* Steuert, ob die Symbolleiste des Berichts-Viewer-Webparts oben oder unten angedockt wird. Gültige Werte sind **Top** und **Bottom**. Der Standardwert ist **Top**.  
   
      Wenn z.B. im **SharePoint** -Modus die Symbolleiste unten angedockt werden soll.  
   

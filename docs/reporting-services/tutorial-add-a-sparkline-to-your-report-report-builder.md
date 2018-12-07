@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98a4d2d4bcc7faeb18352360b51b5fe4dcf722c1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030829"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711142"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
 
@@ -319,6 +319,6 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
 Hiermit ist das Lernprogramm zum Erstellen eines Tabellenberichts mit Sparklinediagrammen abgeschlossen. Weitere Informationen zu Sparklines finden Sie unter [Sparklines und Datenbalken](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 [Tutorials (Berichts-Generator)](../reporting-services/report-builder-tutorials.md) 
-[Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Berichts-Generator in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

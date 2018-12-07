@@ -15,16 +15,16 @@ ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8fc0698d476b89ded113e0485a50c2c485880ff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bd5f44a6e9c4907aa320a42ce89d5fdcf80e457
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598991"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511833"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Hinzufügen von Tabellen zu Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Beim Erstellen einer Abfrage rufen Sie Daten aus einer Tabelle oder aus anderen Objekten mit Tabellenstruktur ab, z. B. aus Sichten und bestimmten benutzerdefinierten Funktionen. Objekte, mit denen Sie in der Abfrage arbeiten möchten, müssen Sie dem **Diagrammbereich**hinzufügen.  
+Beim Erstellen einer Abfrage rufen Sie Daten aus einer Tabelle oder aus anderen Objekten mit Tabellenstruktur ab, z.B. aus Ansichten und bestimmten benutzerdefinierten Funktionen. Objekte, mit denen Sie in der Abfrage arbeiten möchten, müssen Sie dem **Diagrammbereich**hinzufügen.  
   
 ### <a name="to-add-a-table-or-table-valued-object-to-a-query"></a>So fügen Sie einer Abfrage eine Tabelle oder ein Tabellenwertobjekt hinzu  
   
@@ -50,7 +50,7 @@ Der Abfrage- und Sicht-Designer zeigt keine Datenspalten für eine Tabelle oder 
   
 3.  Öffnen Sie für die vorhandene Abfrage den Abfrage-Designer. (Es sind nun zwei Instanzen des Abfrage-Designers geöffnet.)  
   
-4.  Öffnen Sie den **SQL-Bereich** für die innere, d. h. die bereits vorhandene Abfrage, die Sie in die neue, äußere Abfrage einbeziehen.  
+4.  Öffnen Sie den **SQL-Bereich** für die innere, d.h. die bereits vorhandene Abfrage, die Sie in die neue, äußere Abfrage einbeziehen.  
   
 5.  Markieren Sie im **SQL-Bereich**den gesamten Text, und kopieren Sie ihn in die Zwischenablage.  
   

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb5c0c7e3e955bb4489e93943303cce4bd42c8d6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 37868fcc35bc5ba09339a24151f2d8d6e4c1f6ba
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021864"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712181"
 ---
 # <a name="project-property-pages-dialog-box"></a>Projekt (Eigenschaftenseiten, Dialogfeld)
 
-  Mithilfe der Eigenschaftenseiten für Projekte können Sie Bereitstellungseigenschaften für ein Berichtsserverprojekt konfigurieren. Klicken Sie zum Öffnen des Dialogfelds im Menü **Projekt** auf *\<Berichtsprojektname>***Eigenschaften**.  
+  Mithilfe der Eigenschaftenseiten für Projekte können Sie Bereitstellungseigenschaften für ein Berichtsserverprojekt konfigurieren. Klicken Sie zum Öffnen des Dialogfelds im Menü **Projekt** auf _\<Berichtsprojektname>_**Eigenschaften**.  
   
  Nachdem Sie Konfigurationseigenschaften definiert haben, können Sie auf der Symbolleiste aus der Dropdownliste **Projektmappenkonfigurationen** eine Konfiguration auswählen.  
 
@@ -54,7 +54,7 @@ ms.locfileid: "50021864"
  Wählen Sie **TRUE** aus, um die Datenquelle auf dem Server mit der Datenquelle im Projekt zu überschreiben, wenn die Berichte veröffentlicht werden. Wählen Sie **False** aus, um die vorhandene Datenquelle auf dem Server zu belassen.  
   
  **TargetServerVersion**  
- Wählen Sie entweder die geeignete Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oder **Version erkennen** aus, um automatisch die Version zu ermitteln, die auf dem von der **TargetServer URL** -Eigenschaft angegebenen Server installiert ist. Der Standardwert lautet **SQL Server 2016**.  
+ Wählen Sie entweder die geeignete Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oder **Version erkennen** aus, um automatisch die Version zu ermitteln, die auf dem von der **TargetServer URL** -Eigenschaft angegebenen Server installiert ist. Der Standardwert lautet **SQL Server 2017**.  
   
  **TargetDataSourceFolder**  
  Der Name des Ordners, in dem die veröffentlichten, freigegebenen Datenquellen gespeichert werden sollen. Wenn Sie keinen Ordner angeben, wird die Datenquelle im gleichen Ordner wie der Bericht veröffentlicht. Falls der Ordner nicht auf dem Berichtsserver vorhanden ist, erstellt der Berichts-Designer den Ordner, wenn die Berichte veröffentlicht werden.  

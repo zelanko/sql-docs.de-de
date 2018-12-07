@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18579eba7d7a66b9efd1a10de4a0815d2503744e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672529"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532547"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Verbessern der Leistung von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -132,23 +132,23 @@ Die variablen Teile des Durchforstungsprotokolldatei-Namens sind die folgenden.
   
 Wichtige Informationen zu den folgenden Formeln finden Sie in den Notizen unter der Tabelle.  
   
-|Platform|Schätzung des von „fdhost.exe“ benötigten Arbeitsspeichers in MB:*F*^1|Formel zum Berechnen des „max server memory“-Werts:*M*^2|  
+|Platform|Schätzung des von „fdhost.exe“ benötigten Arbeitsspeichers in MB: *F*^1|Formel zum Berechnen des „max server memory“-Werts: *M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *Anzahl der Durchforstungsbereiche*.*.50|*M*=Minimum(*T* 2000) - F - 500|  
-|x64|*F* = *Anzahl der Durchforstungsbereiche** 10 * 8|*M* = *T* – *F* – 500|  
+|x86|*F* = *Anzahl der Durchforstungsbereiche*.*.50|*M* = Minimum (*T*, 2000) - F - 500|  
+|x64|*F* = *Anzahl der Durchforstungsbereiche** 10 * 8|*M* = *T* - *F* - 500|  
 
 **Hinweise zu den Formeln**
-1.  Wenn mehrere vollständige Auffüllungen ausgeführt werden, berechnen Sie die Arbeitsspeicheranforderungen für „fdhost.exe“ separat, also *F1*, *F2*, usw. Berechnen Sie anschließend *M* als *T***–** Sigma **(***F*i**)**.  
+1.  Wenn mehrere vollständige Auffüllungen ausgeführt werden, berechnen Sie die Arbeitsspeicheranforderungen für „fdhost.exe“ separat, also *F1*, *F2*, usw. Berechnen Sie anschließend *M* als _T_**-** sigma **(**_F_i **)**.  
 2.  500 MB ist eine Schätzung des erforderlichen Speichers, der von den anderen Prozessen im System benötigt wird. Wenn das System noch weitere Aufgaben durchführt, sollten Sie diesen Wert entsprechend erhöhen.  
 3.  .*ism_size* wird 8 MB für x64-Plattformen angenommen.  
   
  #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Beispiel: Schätzen der Arbeitsspeicheranforderungen von „fdhost.exe“  
   
- Dieses Beispiel gilt für einen 64-Bit-Computer mit 8 GM RAM und 4 dual-Core-Prozessoren. Die erste Berechnung schätzt den Speicher, der von fdhost.exe benötigt wird:*F*. Die Anzahl der Durchforstungsbereiche beträgt `8`.  
+ Dieses Beispiel gilt für einen 64-Bit-Computer mit 8 GM RAM und 4 dual-Core-Prozessoren. Die erste Berechnung schätzt den Speicher, der von „fdhost.exe“ benötigt wird: *F*. Die Anzahl der Durchforstungsbereiche beträgt `8`.  
   
  `F = 8*10*8=640`  
   
- Die nächste Berechnung ergibt den optimalen Wert für **max server memory**:*M*. *T*, der gesamte physische Speicher, der auf diesem System verfügbar ist, beträgt `8192` (in MB).  
+ Die nächste Berechnung ergibt den optimalen Wert für **max server memory**-*M*. *T*, der gesamte physische Speicher, der auf diesem System verfügbar ist, beträgt `8192` (in MB).  
   
  `M = 8192-640-500=7052`  
   

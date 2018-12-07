@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 325a2bad11c168e1b14031b8f16ac71e9dbb7eb3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4df60da8f70eaddd0aeea28d7bb498a8273e1486
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661869"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543949"
 ---
 # <a name="dynamic-data-masking"></a>Dynamische Datenmaskierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Mit der dynamischen Datenmaskierung können Sie unbefugten Zugriff auf sensible 
 
 Ein Supportmitarbeiter in einem Call Center kann z. B. Anrufer anhand mehrerer Ziffern seiner Sozialversicherungs- oder Kreditkartennummer identifizieren. Diese Datenelemente dürfen dem Supportmitarbeiter aber nicht vollständig verfügbar gemacht werden. Es kann eine Maskierungsregel definiert werden, die alle außer den letzten vier Ziffern einer Sozialversicherungsnummer oder Kreditkartennummer im Resultset einer beliebigen Abfrage maskiert. Als weiteres Beispiel kann ein Entwickler Produktionsumgebungen zu Problembehandlungszwecken abfragen, ohne gegen Genehmigungsregeln zu verstoßen, indem er die entsprechende Datenmaske zum Schützen von personenbezogenen Daten verwendet.
 
-Der Zweck der dynamischen Datenmaskierung besteht darin, die Offenlegung sensibler Daten zu beschränken, die Benutzer an der Anzeige der Daten hindert, die keinen Zugriff auf diese erhalten sollten. Die dynamische Datenmaskierung ist nicht darauf ausgerichtet, Datenbankbenutzer daran zu hindern, eine direkte Verbindung zur Datenbank herzustellen und umfassende Abfragen auszuführen, die Teile der vertraulichen Daten verfügbar machen. Die dynamische Datenmaskierung ist eine Ergänzung zu anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsfunktionen (Überwachung, Verschlüsselung, Sicherheit auf Zeilenebene...), und es empfiehlt sich dringend, dieses Feature in Verbindung mit diesen anderen Funktionen zu verwenden, um die sensiblen Daten in der Datenbank besser zu schützen.  
+Der Zweck der dynamischen Datenmaskierung besteht darin, die Offenlegung sensibler Daten zu beschränken, die Benutzer an der Anzeige der Daten hindert, die keinen Zugriff auf diese erhalten sollten. Die dynamische Datenmaskierung ist nicht darauf ausgerichtet, Datenbankbenutzer daran zu hindern, eine direkte Verbindung zur Datenbank herzustellen und umfassende Abfragen auszuführen, die Teile der vertraulichen Daten verfügbar machen. Die dynamische Datenmaskierung ist eine Ergänzung zu anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherheitsfeatures (Überwachung, Verschlüsselung, Sicherheit auf Zeilenebene usw.), und es wird dringend empfohlen, dieses Feature in Verbindung mit diesen anderen Features zu verwenden, um die sensiblen Daten in der Datenbank besser zu schützen.  
   
 Die dynamische Datenmaskierung steht in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]zur Verfügung und wird mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehlen konfiguriert. Weitere Informationen zum Konfigurieren der dynamischen Datenmaskierung über das Azure-Portal finden Sie unter [Erste Schritte mit der dynamischen Datenmaskierung für SQL-Datenbank (Azure-Portal)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d4e262ab70d75ef1f8ddff4772ceaf7adc68fec3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1e2cf655389529c6211ad2ed29ba2e9a309dcfa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701348"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542471"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Erstellen einer rekursiven Hierarchiegruppe (Berichts-Generator und SSRS)
 In paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten organisiert eine rekursive Hierarchiegruppe Daten aus einem einzelnen Berichtsdataset, das mehrere hierarchische Ebenen aufweist, z.B. eine Berichtsstruktur für die Beziehung zwischen Managern und Mitarbeitern in der Hierarchie einer Organisation.  

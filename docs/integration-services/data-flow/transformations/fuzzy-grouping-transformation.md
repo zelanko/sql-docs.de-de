@@ -29,12 +29,12 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6dd2866ef242ad51a90de24051b5f39c3f68a8f7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 48b6e5a48822401f543a494b8fd59638c4ea9609
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638900"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540887"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation für Fuzzygruppierung
   Die Transformation für Fuzzygruppierung führt Datenbereinigungsaufgaben durch, indem Datenzeilen identifiziert werden, die wahrscheinlich Duplikate sind, und eine kanonische Datenzeile ausgewählt wird, die zum Standardisieren der Daten verwendet wird.  
@@ -44,7 +44,7 @@ ms.locfileid: "51638900"
   
  Für die Transformation der Fuzzygruppierung ist eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erforderlich, damit die temporären [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Tabellen erstellt werden können, die der Transformationsalgorithmus zur Durchführung benötigt. Die Verbindung muss für einen Benutzer aufgelöst sein, der die Berechtigung zum Erstellen von Tabellen in der Datenbank besitzt.  
   
- Um die Transformation zu konfigurieren, müssen Sie die Eingabespalten auswählen, die zum Identifizieren von Duplikaten verwendet werden sollen, und Sie müssen für jede Spalte den Typ der Übereinstimmung auswählen – entweder fuzzy oder genau. Mit einer genauen Übereinstimmung wird garantiert, dass nur Zeilen mit identischen Werten in dieser Spalte gruppiert werden. Die genaue Übereinstimmung kann für Spalten aller [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Datentypen verwendet werden, mit Ausnahme von DT_TEXT, DT_NTEXT und DT_IMAGE. Bei der Fuzzyübereinstimmung werden Zeilen gruppiert, die annähernd dieselben Werte aufweisen. Die Methode zur Ermittlung der annähernden Übereinstimmung von Daten basiert auf einem vom Benutzer angegebenen Ähnlichkeitsergebnis. Zur Fuzzyübereinstimmung können nur Spalten mit den Datentypen DT_WSTR und DT_STR verwendet werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../../integration-services/data-flow/integration-services-data-types.md).  
+ Um die Transformation zu konfigurieren, müssen Sie die Eingabespalten auswählen, die zum Identifizieren von Duplikaten verwendet werden sollen, und Sie müssen für jede Spalte den Typ der Übereinstimmung auswählen, entweder fuzzy oder genau. Mit einer genauen Übereinstimmung wird garantiert, dass nur Zeilen mit identischen Werten in dieser Spalte gruppiert werden. Die genaue Übereinstimmung kann für Spalten aller [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Datentypen verwendet werden, mit Ausnahme von DT_TEXT, DT_NTEXT und DT_IMAGE. Bei der Fuzzyübereinstimmung werden Zeilen gruppiert, die annähernd dieselben Werte aufweisen. Die Methode zur Ermittlung der annähernden Übereinstimmung von Daten basiert auf einem vom Benutzer angegebenen Ähnlichkeitsergebnis. Zur Fuzzyübereinstimmung können nur Spalten mit den Datentypen DT_WSTR und DT_STR verwendet werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  Die Transformationsausgabe umfasst alle Eingabespalten, eine oder mehrere Spalten mit standardisierten Daten sowie eine Spalte, die das Ähnlichkeitsergebnis enthält. Das Ergebnis ist ein Dezimalwert zwischen 0 und 1. Die kanonische Zeile weist ein Ergebnis von 1 auf. Andere Zeilen in der Fuzzygruppierung weisen Ergebnisse auf, die angeben, wie stark die Zeile mit der kanonischen Zeile übereinstimmt. Je näher das Ergebnis an 1 liegt, desto genauer stimmt die Zeile mit der kanonischen Zeile überein. Wenn die Fuzzygruppierung Zeilen enthält, die genaue Duplikate der kanonischen Zeile sind, besitzen diese Zeilen ebenfalls das Ergebnis 1. Die Transformation entfernt doppelte Zeilen nicht, sondern gruppiert diese, indem ein Schlüssel erstellt wird, der die kanonische Zeile in Bezug zu ähnlichen Zeilen stellt.  
   

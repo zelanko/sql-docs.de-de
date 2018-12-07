@@ -13,12 +13,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 570a859d3db7a2d5dbe219199bb251515d9862cf
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 436dfee205c5e200d469741075ac2e61b1e7d875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217948"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514390"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Erstellen eines Wartungsplans (Entwurfsoberfläche für Wartungspläne)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -201,7 +201,7 @@ ms.locfileid: "51217948"
   
     3.  Geben Sie im Dialogfeld **Verbindungseigenschaften** im Feld **Verbindungsname** den Namen der Verbindung ein, die Sie erstellen.  
   
-    4.  Geben Sie unter **Geben Sie Folgendes für die Verbindung mit SQL Server-Daten an**im Feld **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein** entweder den Namen des SQL-Servers ein, den Sie verwenden möchten, oder klicken Sie auf die Auslassungspunkte **(…)** , und wählen Sie im Dialogfeld **SQL Server** einen Server aus. Wenn Sie im Dialogfeld **SQL Server** einen Server auswählen, klicken Sie auf **OK**.  
+    4.  Geben Sie unter **Geben Sie Folgendes für die Verbindung mit SQL Server-Daten an** im Feld **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein** entweder den Namen des SQL-Servers ein, den Sie verwenden möchten, oder klicken Sie auf die Auslassungspunkte **(…)**, und wählen Sie im Dialogfeld **SQL Server** einen Server aus. Wenn Sie im Dialogfeld **SQL Server** einen Server auswählen, klicken Sie auf **OK**.  
   
     5.  Wählen Sie unter **Geben Sie Informationen zum Anmelden am Server ein**die Option **Integrierte Sicherheit von Windows NT verwenden** oder **SQL Server-Authentifizierung verwenden**aus. Wenn Sie sich für die Verwendung der SQL Server-Authentifizierung entscheiden, geben Sie die entsprechenden Informationen in die Felder **Benutzername** und **Kennwort** ein.  
   

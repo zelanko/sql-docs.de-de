@@ -15,12 +15,12 @@ ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 052c7f8374fbdc047af6452dc117d1651bc35edc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e55e29f428185f195b65ae046df3aa63b8c35c3a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782008"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539660"
 ---
 # <a name="create-a-credential"></a>Create a Credential
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47782008"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -63,13 +63,13 @@ ms.locfileid: "47782008"
   
 1.  Erweitern Sie im Objekt-Explorer den Ordner **Sicherheit** .  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Anmeldeinformationen** , und wählen Sie **Neue Anmeldeinformationen**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Anmeldeinformationen**, und wählen Sie **Neue Anmeldeinformationen**aus.  
   
 3.  Geben Sie im Dialogfeld **Neue Anmeldeinformationen** im Feld **Anmeldungsname** einen Namen für die Anmeldeinformationen ein.  
   
 4.  Geben Sie im Feld **Identität** den Namen des für ausgehende Verbindungen verwendeten Kontos ein (das beim Verlassen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Kontexts verwendet wird). In der Regel ist dies ein Windows-Benutzerkonto, aber die Identität kann ein Konto eines anderen Typs sein.  
   
-     Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
+     Klicken Sie alternativ auf die Auslassungspunkte **(...)**, um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
   
 5.  Geben Sie in den Feldern **Kennwort** und **Kennwort bestätigen** das Kennwort für das im Feld **Identität** festgelegte Konto ein. Falls **Identität** ein Windows-Benutzerkonto ist, handelt es sich dabei um das Windows-Kennwort. Falls kein Kennwort erforderlich ist, können Sie das Feld **Kennwort** leer lassen.  
   

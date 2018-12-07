@@ -11,12 +11,12 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a884d0faf7f3f688e00ed83e2c7eeab770791f7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a346d55b84b115a7a128d02fdedd1ff7f6b800d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646798"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527143"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lektion 3-2: Ausführen des Paketinstallations-Assistenten
 In diesem Schritt führen Sie den Paketinstallations-Assistenten aus, um die Pakete aus dem Deployment Tutorial-Projekt auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bereitzustellen. In der sysssispackages-Tabelle der msdb-Datenbank von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können nur Pakete installiert werden. Die unterstützenden Dateien, die das Bereitstellungspaket enthält, werden im Dateisystem bereitgestellt.  
@@ -29,7 +29,7 @@ In einer früheren Lektion haben Sie die Pakete des Lernprogramms so geändert, 
   
 1.  Suchen Sie das Bereitstellungspaket auf dem Zielcomputer.  
   
-    Wenn Sie den Standardwert, bin\Deployment, als Speicherort für das Bereitstellungshilfsprogramm verwendet haben, befindet sich das Bereitstellungspaket im Ordner Deployment des Deployment Tutorial-Projekts.  
+    Wenn Sie den Standardwert, bin\Deployment, als Speicherort für das Bereitstellungshilfsprogramm verwendet haben, befindet sich das Bereitstellungspaket im Ordner „Deployment“ des Deployment Tutorial-Projekts.  
   
 2.  Doppelklicken Sie im Ordner Deployment auf die Manifestdatei Deployment Tutorial.SSISDeploymentManifest.  
   

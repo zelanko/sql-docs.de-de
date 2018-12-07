@@ -13,12 +13,12 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18a953d0bf5619fec9ee443df19130cca0a8314d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93fea5756d35e116ae9d265d2c0c157e538258ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785894"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512150"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML-Indizes (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ Wenn die Kategorie erweitert ist, werden die Eigenschaftenfelder für **Name** u
 Zeigt den Namen des XML-Indexes an. Wenn ein neuer Index erstellt wird, erhält dieser einen Standardnamen, der auf der Tabelle im aktiven Fenster des Tabellen-Designers basiert. Sie können den Namen jederzeit ändern.  
   
 **Beschreibung**  
-Beschreiben Sie den Index. Klicken Sie zum Erstellen einer detaillierteren Beschreibung auf **Beschreibung** , und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (**…**) rechts neben dem Eigenschaftenfeld. Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
+Beschreiben Sie den Index. Klicken Sie zum Erstellen einer detaillierteren Beschreibung auf **Beschreibung**, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (**…**) rechts neben dem Eigenschaftenfeld. Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
   
 **Kategorie Tabellen-Designer**  
 Wenn die Kategorie erweitert ist, werden Informationen zu den Eigenschaften dieses XML-Indexes angezeigt.  

@@ -22,12 +22,12 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a635138aa7488b9580a69560bb43295257b2915
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ee3a0ed473c40f21781eeb061d2d10436ebd47bd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657031"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510586"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server-Konfigurations-Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,11 +73,11 @@ ms.locfileid: "51657031"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager können Sie ein Alias erstellen oder entfernen, die Reihenfolge für die Verwendung der Protokolle ändern oder Serveraliaseigenschaften anzeigen, z. B. Folgende:  
   
--   Serveralias - Serveralias, der für den Computer verwendet wird, mit dem der Client eine Verbindung herstellt  
+-   Serveralias: Der Serveralias, der für den Computer verwendet wird, mit dem der Client eine Verbindung herstellt  
   
--   Protokoll - Netzwerkprotokoll, das für den Konfigurationseintrag verwendet wird  
+-   Protokoll: Das Netzwerkprotokoll, das für den Konfigurationseintrag verwendet wird  
   
--   Verbindungsparameter - Parameter, die mit der Verbindungsadresse für die Netzwerkprotokollkonfiguration verknüpft sind  
+-   Verbindungsparameter: Die Parameter, die mit der Verbindungsadresse für die Netzwerkprotokollkonfiguration verknüpft sind  
   
  Außerdem können Sie mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager Informationen zu Failover-Clusterinstanzen anzeigen. Für einige Aktionen, z. B. Starten und Beenden der Dienste, sollten Sie aber die Clusterverwaltung verwenden.  
   

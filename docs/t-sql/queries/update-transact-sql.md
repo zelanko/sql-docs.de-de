@@ -39,12 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5118700c017167664b0e33867f43ec6dbd46813d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9ab6a40f49ce64e4e157c4eacccb59b6135ed4ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704058"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520849"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -459,7 +459,7 @@ ID     Value
  Eine UPDATE-Anweisung ruft immer eine exklusive (X) Sperre für die von ihr geänderte Tabelle ab und hält diese Sperre bis zum Abschluss der Transaktion aufrecht. Bei einer exklusiven Sperre können keine anderen Transaktionen Daten ändern. Sie können Tabellenhinweise angeben, um dieses Standardverhalten für die Dauer der UPDATE-Anweisung zu überschreiben, indem Sie eine andere Sperrmethode angeben. Es wird jedoch empfohlen, dass Hinweise nur von erfahrenen Entwicklern und Datenbankadministratoren und nur als letzte Möglichkeit verwendet werden. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## <a name="logging-behavior"></a>Protokollierungsverhalten  
- Die UPDATE-Anweisung wird protokolliert; Teilupdates von Datentypen mit umfangreichen Werten, welche die **.** WRITE-Klausel verwenden, werden allerdings nur minimal protokolliert. Weitere Informationen finden Sie im vorherigen Abschnitt "Datentypen" unter "Aktualisieren von Datentypen mit umfangreichen Werten".  
+ Die UPDATE-Anweisung wird protokolliert; Teilupdates von Datentypen mit umfangreichen Werten, welche die **.** WRITE-Klausel verwenden, werden allerdings nur minimal protokolliert. Weitere Informationen finden Sie im vorherigen Abschnitt „Datentypen“ unter „Aktualisieren von Datentypen mit umfangreichen Werten“.  
   
 ## <a name="security"></a>Security  
   
@@ -482,7 +482,7 @@ ID     Value
 |[Aktualisieren benutzerdefinierter Typen](#UDTs)|Benutzerdefinierte Typen|  
 |[Überschreiben des Standardverhaltens des Abfrageoptimierers mithilfe von Hinweisen](#TableHints)|Tabellenhinweise • Abfragehinweise|  
 |[Erfassen der Ergebnisse der UPDATE-Anweisung](#CaptureResults)|OUTPUT-Klausel|  
-|[Verwenden von UPDATE in anderen Anweisungen](#Other)|Gespeicherte Prozeduren • TRY…CATCH|  
+|[Verwenden von UPDATE in anderen Anweisungen](#Other)|Gespeicherte Prozeduren • TRY...CATCH|  
   
 ###  <a name="BasicSyntax"></a> Grundlegende Syntax  
  Anhand von Beispielen in diesem Abschnitt wird die grundlegende Funktion der UPDATE-Anweisung mithilfe der mindestens erforderlichen Syntax veranschaulicht.  
@@ -1033,8 +1033,8 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-#### <a name="ac-using-update-in-a-trycatch-block"></a>AC. Verwenden von UPDATE in einem TRY…CATCH-Block  
- Im folgenden Beispiel wird eine UPDATE-Anweisung in einem TRY…CATCH-Block verwendet, um Ausführungsfehler zu behandeln, die während des Updatevorgangs auftreten können.  
+#### <a name="ac-using-update-in-a-trycatch-block"></a>AC. Verwenden von UPDATE in einem TRY...CATCH-Block  
+ Im folgenden Beispiel wird eine UPDATE-Anweisung in einem TRY...CATCH-Block verwendet, um Ausführungsfehler zu behandeln, die während des Updatevorgangs auftreten können.  
   
 ```sql  
 USE AdventureWorks2012;  

@@ -19,12 +19,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77947ba03e3f094077c950981a394a3566e24f0e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 27976be0f3b6091450650f2bf3a73d1afbe42d20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639091"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518473"
 ---
 # <a name="data-flow-task"></a>Datenflusstask
   Der Datenflusstask kapselt die Datenfluss-Engine, mit dem Daten zwischen Quellen und Zielen verschoben werden, und ermöglicht dem Benutzer das Transformieren, Bereinigen und Ändern von Daten beim Verschieben. Durch das Hinzufügen eines Datenflusstasks zu einer Paketablaufsteuerung kann das Paket Daten extrahieren, transformieren und laden.  
@@ -56,7 +56,7 @@ ms.locfileid: "51639091"
 |**OnPipelinePrePrimeOutput**|Zeigt an, dass die Komponente einen Aufruf aus der **PrimeOutput** -Methode erhalten soll. Je nach Datenfluss werden möglicherweise mehrere Protokolleinträge geschrieben.|  
 |**OnPipelineRowsSent**|Berichtet die Anzahl von Zeilen, die einer Komponenteneingabe durch einen Aufruf der **ProcessInput** -Methode bereitgestellt wurden. Der Protokolleintrag enthält den Komponentennamen.|  
 |**PipelineBufferLeak**|Stellt Informationen zu Komponenten bereit, die Puffer aufrechterhalten haben, nachdem der Puffer-Manager beendet wurde. Aufrechterhaltene Puffer blockieren die Freigabe von Pufferressourcen und können Speicherverluste verursachen. Der Protokolleintrag stellt den Namen der Komponente und die ID des Puffers bereit.|  
-|**PipelineComponentTime**|Meldet den Zeitaufwand in Millisekunden, den die Komponente für jeden der Hauptverarbeitungsschritte "Validate", "PreExecute", "PostExecute", "ProcessInput" und "ProcessOutput" benötigt.|  
+|**PipelineComponentTime**|Meldet den Zeitaufwand in Millisekunden, den die Komponente für jeden der Hauptverarbeitungsschritte „Validate“, „PreExecute“, „PostExecute“, „ProcessInput“ und „ProcessOutput“ benötigt.|  
 |**PipelineExecutionPlan**|Berichtet den Ausführungsplan des Datenflusses. Der Ausführungsplan stellt Informationen dazu bereit, wie Puffer an Komponenten gesendet werden. Diese Informationen beschreiben in Kombination mit dem PipelineExecutionTrees-Protokolleintrag, was innerhalb des Datenflusstasks geschieht.|  
 |**PipelineExecutionTrees**|Berichtet die Ausführungsstrukturen des Layouts im Datenfluss. Die Datenfluss-Engine-Planung verwendet die Strukturen zum Erstellen des Ausführungsplans des Datenflusses.|  
 |**PipelineInitialization**|Bietet Initialisierungsinformationen zu dem Task. Zu diesen Informationen gehören die Verzeichnisse für die temporäre Speicherung von BLOB-Daten, die Standardpuffergröße und die Zeilenanzahl in einem Puffer. Je nach der Konfiguration des Datenflusstasks werden möglicherweise mehrere Protokolleinträge geschrieben.|  

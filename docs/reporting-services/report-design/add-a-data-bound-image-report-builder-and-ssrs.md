@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a48d24c6250160fe5ade5a941c5591c358fc1908
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 945ee262e8d507a62aa954eec847e3b7bd4ac308
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031681"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524499"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>Hinzufügen eines datengebundenen Bilds (Berichts-Generator und SSRS)
   Ein Bericht kann einen Verweis auf ein Bild enthalten, das in einer Datenbank gespeichert ist. Ein solches Bild wird als *datengebundenes Bild*bezeichnet. Bilder, die neben Produktnamen in einer Produktliste angezeigt werden, sind Beispiele für datengebundene Bilder.  
@@ -39,7 +39,7 @@ ms.locfileid: "50031681"
   
 7.  Wählen Sie unter **Dieses Feld verwenden**das Feld aus, das Bilder im Bericht enthält.  
   
-8.  Wählen Sie unter **Diesen MIME-Typ verwenden**den MIME-Typ oder das Dateiformat des Bilds aus – beispielsweise BMP.  
+8.  Wählen Sie unter **Diesen MIME-Typ verwenden** den MIME-Typ oder das Dateiformat des Bilds aus, beispielsweise BMP.  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

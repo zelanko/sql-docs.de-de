@@ -26,12 +26,12 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb0840c67ff34759e9d17426b33ce2d32f4e1143
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bb7ed2c7f9989344a44a2ad2de9a59d2c4a2e1fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642239"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525260"
 ---
 # <a name="set-package-properties"></a>Festlegen von Paketeigenschaften
   Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mithilfe der grafischen Benutzeroberfläche von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] erstellen, legen Sie die Eigenschaften des Paketobjekts im Eigenschaftenfenster fest.  
@@ -118,8 +118,8 @@ ms.locfileid: "51642239"
   
 |Eigenschaft|und Beschreibung|  
 |--------------|-----------------|  
-|**Konfigurationen**|Die Auflistung mit Konfigurationen, die vom Paket verwendet werden. Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um Paketkonfigurationen anzuzeigen und zu konfigurieren.|  
-|**Ausdrücke**|Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um Ausdrücke für Paketeigenschaften zu erstellen.<br /><br /> Beachten Sie, dass Sie Eigenschaftsausdrücke für alle Paketeigenschaften dieses Objektmodells erstellen können, nicht nur für die im Eigenschaftenfenster aufgeführten Eigenschaften.<br /><br /> Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> Erweitern Sie **Expressions**, um vorhandene Eigenschaftsausdrücke anzuzeigen. Klicken Sie in einem Ausdruckstextfeld auf die Schaltfläche zum Durchsuchen **(…)** , um einen Ausdruck zu ändern und auszuwerten.|  
+|**Konfigurationen**|Die Auflistung mit Konfigurationen, die vom Paket verwendet werden. Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um Paketkonfigurationen anzuzeigen und zu konfigurieren.|  
+|**Ausdrücke**|Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um Ausdrücke für Paketeigenschaften zu erstellen.<br /><br /> Beachten Sie, dass Sie Eigenschaftsausdrücke für alle Paketeigenschaften dieses Objektmodells erstellen können, nicht nur für die im Eigenschaftenfenster aufgeführten Eigenschaften.<br /><br /> Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> Erweitern Sie **Expressions**, um vorhandene Eigenschaftsausdrücke anzuzeigen. Klicken Sie in einem Ausdruckstextfeld auf die Schaltfläche zum Durchsuchen **(...)**, um einen Ausdruck zu ändern und auszuwerten.|  
 |**ForceExecutionResult**|Das Ausführungsergebnis des Pakets. Mögliche Werte sind **None**, **Success**, **Failure**und **Completion**. Der Standardwert dieser Eigenschaft ist **None**. Weitere Informationen finden Sie unter T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult.|  
 |**LocaleId**|Ein Microsoft Win32-Gebietsschema. Der Standardwert dieser Eigenschaft ist das Gebietsschema des Betriebssystems auf dem lokalen Computer.|  
 |**LoggingMode**|Ein Wert, der das Protokollierungsverhalten des Pakets angibt. Mögliche Werte sind **Disabled**, **Enabled**und **UseParentSetting**. Der Standardwert dieser Eigenschaft ist **UseParentSetting**. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  

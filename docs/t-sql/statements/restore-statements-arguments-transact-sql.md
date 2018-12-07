@@ -16,12 +16,12 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e397d797568d14cd184d8246425db13d9fb2a0b6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2d80647230c13b31ca9e5ae540798609fc93f527
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697678"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527404"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE-Anweisungen – Argumente (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -389,7 +389,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  CONTINUE_AFTER_ERROR  
  Gibt an, dass der Wiederherstellungsvorgang fortgesetzt werden soll, nachdem ein Fehler festgestellt wurde.  
   
- Wenn eine Sicherung beschädigte Seiten enthält, ist es das Beste, den Wiederherstellungsvorgang mithilfe einer alternativen Sicherung zu wiederholen, in der die Fehler nicht enthalten sind. Dies kann beispielsweise eine Sicherung sein, die ausgeführt wurde, bevor die Seiten beschädigt wurden. Als letzte Möglichkeit können Sie eine beschädigte Sicherung mithilfe der Option CONTINUE_AFTER_ERROR der Wiederherstellungsanweisung wiederherstellen und so versuchen, die Daten zu retten.  
+ Wenn eine Sicherung beschädigte Seiten enthält, empfiehlt es sich, den Wiederherstellungsvorgang mithilfe einer alternativen Sicherung zu wiederholen, in der die Fehler nicht enthalten sind. Dies kann beispielsweise eine Sicherung sein, die ausgeführt wurde, bevor die Seiten beschädigt wurden. Als letzte Möglichkeit können Sie eine beschädigte Sicherung mithilfe der Option CONTINUE_AFTER_ERROR der Wiederherstellungsanweisung wiederherstellen und so versuchen, die Daten zu retten.  
   
 ##### <a name="filestream-options"></a>FILESTREAM-Optionen  
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
@@ -586,16 +586,16 @@ Verwenden Sie KEEP_REPLICATION, wenn eine Replikation für die Verwendung von Pr
   
 |WITH-Option|RESTORE|RESTORE FILELISTONLY|RESTORE HEADERONLY|RESTORE LABELONLY|RESTORE REWINDONLY|RESTORE VERIFYONLY|  
 |-----------------|-------------|--------------------------|------------------------|-----------------------|------------------------|------------------------|  
-|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|—|√|  
-|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|—|√|  
-|FILE<sup>1</sup>|√|√|√|—|—|√|  
-|LOADHISTORY|—|—|—|—|—|√|  
-|MEDIANAME|√|√|√|√|—|√|  
-|MEDIAPASSWORD|√|√|√|√|—|√|  
-|MOVE|√|—|—|—|—|√|  
-|PASSWORD|√|√|√|—|—|√|  
-|{ REWIND &#124; NOREWIND }|√|Nur REWIND|Nur REWIND|Nur REWIND|—|√|  
-|STATS|√|—|—|—|—|√|  
+|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|-|√|  
+|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|-|√|  
+|FILE<sup>1</sup>|√|√|√|-|-|√|  
+|LOADHISTORY|-|-|-|-|-|√|  
+|MEDIANAME|√|√|√|√|-|√|  
+|MEDIAPASSWORD|√|√|√|√|-|√|  
+|MOVE|√|-|-|-|-|√|  
+|PASSWORD|√|√|√|-|-|√|  
+|{ REWIND &#124; NOREWIND }|√|Nur REWIND|Nur REWIND|Nur REWIND|-|√|  
+|STATS|√|-|-|-|-|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
  <sup>1</sup> FILE **=**_backup\_set\_file\_number_, unterscheidet sich von {FILE | FILEGROUP}.  

@@ -18,12 +18,12 @@ ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c19d5d73e996c8d3ea2b6903290ad0b3635e09d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4272379809eabde398a6b50c54d39c7139419d9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776798"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535016"
 ---
 # <a name="tail-log-backups-sql-server"></a>Protokollfragmentsicherungen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47776798"
    ##  <a name="TailLogScenarios"></a> Szenarien, die eine Sicherung des Protokollfragments erfordern  
  In den folgenden Szenarien wird empfohlen, eine Sicherung des Protokollfragments auszuführen:  
   
--   Wenn die Datenbank online ist und Sie einen Wiederherstellungsvorgang für die Datenbank ausführen möchten, beginnen Sie mit der Sicherung des Protokollfragments: Verwenden Sie zur Vermeidung eines Fehlers bei einer Onlinedatenbank die … Die Option WITH NORECOVERY der [BACKUP](../../t-sql/statements/backup-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung.  
+-   Wenn die Datenbank online ist und Sie einen Wiederherstellungsvorgang für die Datenbank ausführen möchten, beginnen Sie mit der Sicherung des Protokollfragments: Verwenden Sie zur Vermeidung eines Fehlers bei einer Onlinedatenbank … Die Option WITH NORECOVERY der [BACKUP](../../t-sql/statements/backup-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung.  
   
 -   Wenn eine Datenbank offline ist und nicht gestartet werden kann, Sie aber die Datenbank wiederherstellen möchten, sichern Sie zunächst das Protokollfragment. Da während dieser Zeit keine Transaktionen auftreten können, kann WITH NORECOVERY optional verwendet werden.  
   

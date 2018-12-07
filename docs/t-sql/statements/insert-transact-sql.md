@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2c24413499991277e93c882c581cc57a7c07478
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: be8577fca914627434314fa4b7352d6610ff72c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704048"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522910"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -812,7 +812,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
  In den Beispielen in diesem Abschnitt werden zwei Methoden zum Massenladen von Daten in eine Tabelle mithilfe der INSERT-Anweisung vorgestellt.  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. Einfügen von Daten mit minimaler Protokollierung in einen Heap  
- Im folgenden Beispiel wird eine neue Tabelle (ein Heap) erstellt, und es werden Daten aus einer anderen Tabelle in die neu erstellte Tabelle eingefügt. Dazu wird minimale Protokollierung verwendet. Im Beispiel wird davon ausgegangen, dass das Wiederherstellungsmodell der `AdventureWorks2012`-Datenbank auf FULL festgelegt wird. Um sicherzustellen, dass die minimale Protokollierung verwendet wird, wird das Wiederherstellungsmodell der `AdventureWorks2012`-Datenbank auf BULK_LOGGED festgelegt, bevor Zeilen eingefügt und nach der INSERT INTO…-SELECT-Anweisung auf FULL zurückgesetzt werden. Außerdem wird der TABLOCK-Hinweis für die `Sales.SalesHistory`-Zieltabelle angegeben. Dadurch wird sichergestellt, dass die Anweisung minimalen Speicherplatz im Transaktionsprotokoll verwendet und effektiv ausgeführt wird.  
+ Im folgenden Beispiel wird eine neue Tabelle (ein Heap) erstellt, und es werden Daten aus einer anderen Tabelle in die neu erstellte Tabelle eingefügt. Dazu wird minimale Protokollierung verwendet. Im Beispiel wird davon ausgegangen, dass das Wiederherstellungsmodell der `AdventureWorks2012`-Datenbank auf FULL festgelegt wird. Zur Sicherstellung, dass die minimale Protokollierung verwendet wird, wird das Wiederherstellungsmodell der `AdventureWorks2012`-Datenbank auf BULK_LOGGED festgelegt, bevor Zeilen eingefügt und nach der INSERT INTO…-SELECT-Anweisung auf FULL zurückgesetzt werden. Außerdem wird der TABLOCK-Hinweis für die `Sales.SalesHistory`-Zieltabelle angegeben. Dadurch wird sichergestellt, dass die Anweisung minimalen Speicherplatz im Transaktionsprotokoll verwendet und effektiv ausgeführt wird.  
   
 ```sql
 -- Create the target heap.  

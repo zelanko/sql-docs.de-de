@@ -16,12 +16,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7de5dfc840c02faac0d915dc75b83ab82fd489fe
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 16688920d157a9f0fcbd68a12b3112418a81237e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031169"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511659"
 ---
 # <a name="data-alert-designer"></a>Datenwarnungs-Designer
 
@@ -82,9 +82,9 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
 ### <a name="rules-and-clauses"></a>Regeln und Klauseln  
  Der Umfang der Datenänderungen und die Warnungsregeln definieren die Datenänderungen, die die Warnung auslösen. Der Umfang der Datenänderungen lautet wie folgt:  
   
--   **Einige Daten haben**– Mindestens ein Wert in den Daten erfüllt die Regeln, die die Bedingung angibt.  
+-   **Any data has** (Einige Daten haben): Mindestens ein Wert in den Daten erfüllt die Regeln, die die Bedingung angibt.  
   
--   **Keine Daten haben**– Kein Wert in den Daten erfüllt die Regeln, die die Bedingung angibt.  
+-   **No data has** (Keine Daten haben): Kein Wert in den Daten erfüllt die Regeln, die die Bedingung angibt.  
   
  Eine Regel enthält 0 (null), eine Klausel oder viele Klauseln. Mehrere Regeln werden mithilfe des logischen AND-Operators kombiniert. Eine Regel kann mehrere mit dem OR-Operator kombinierte Klauseln beinhalten, wenn die Spalte den String-Datentyp aufweist. Im Folgenden werden die Basisregeln, die nur eine Klausel verwenden, sowie mehrere mit dem AND-Operator kombinierte Regeln und mehrere Regeln mit mindestens einer OR-Klausel gezeigt.  
   
@@ -153,13 +153,13 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
 ### <a name="schedule-settings"></a>Zeitplaneinstellungen  
  Der für die Datenwarnung definierte Zeitplan definiert für das Senden der Datenwarnmeldung das Serienmuster sowie Anfang und Ende der jeweiligen Warnmeldung. Die Muster sind: einmal, Minute, täglich und wöchentlich. Obwohl eine Warnung nur einen Zeitplan aufweist, können Sie mit diesen Intervallen komplexe Serienmuster erstellen, die die meisten Geschäftsanforderungen erfüllen. Beispiele für allgemeine Serienmuster, die in Zeitplänen verwendet werden:  
   
--   **Täglich alle 10 Tage** – sendet Warnungen alle 10 Tage einmal täglich.  
+-   **Täglich alle 10 Tage**: sendet Warnungen alle 10 Tage einmal täglich.  
   
--   **Wöchentlich alle 2 Wochen am Montag** – sendet Warnungen nur montags alle zwei Wochen.  
+-   **Wöchentlich alle 2 Wochen am Montag**: sendet Warnungen nur montags alle zwei Wochen.  
   
--   **Stündlich alle 12 Stunden** – sendet alle 12 Stunden Warnungen.  
+-   **Stündlich alle 12 Stunden**: sendet alle 12 Stunden Warnungen.  
   
--   **Minute alle 30 Minuten** – sendet alle 30 Minuten Warnungen.  
+-   **Minütlich alle 30 Minuten**: sendet alle 30 Minuten Warnungen.  
   
  Das Serienmuster gibt an, wann die Warnung gesendet wird. Wenn die Regeln während des Intervalls erfüllt werden, das das Muster angibt, wird die Warnung erst am Ende des Intervalls gesendet.  
   

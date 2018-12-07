@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 840849b3d08feac21dd5b96235405773fc06f64c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9ce14b9cbc983987072eb9433a20823c8721e3db
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607160"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533970"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Upgrade von SQL Server mithilfe des Installations-Assistenten (Setup)
 
@@ -102,15 +102,15 @@ Sie müssen Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](
   
 12. Geben Sie auf der Instanzkonfigurationsseite die Instanz-ID für die Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an.  
   
-     **Instanz-ID** – In der Standardeinstellung wird der Instanzname als Instanz-ID verwendet. So werden Installationsverzeichnisse und Registrierungsschlüssel für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]identifiziert. Dies ist der Fall für Standardinstanzen und benannte Instanzen. Bei einer Standardinstanz lauten Instanzname und Instanz-ID MSSQLSERVER. Wenn Sie nicht die Standard-Instanz-ID verwenden möchten, geben Sie im Textfeld **Instanz-ID** einen Wert an.  
+     **Instanz-ID** – Standardmäßig wird der Instanzname als Instanz-ID verwendet. Das Ziel ist dabei, Installationsverzeichnisse und Registrierungsschlüssel für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu identifizieren. Dies ist der Fall für Standardinstanzen und benannte Instanzen. Bei einer Standardinstanz lauten Instanzname und Instanz-ID MSSQLSERVER. Wenn Sie nicht die Standard-Instanz-ID verwenden möchten, geben Sie im Textfeld **Instanz-ID** einen Wert an.  
   
      Alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Service Packs und Updates werden für jede Komponente einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übernommen.  
   
-     **Installierte Instanzen**  – Im Raster werden Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angezeigt, die sich auf dem Computer befinden, auf dem Setup ausgeführt wird. Wenn bereits eine Standardinstanz auf dem Computer installiert ist, muss eine benannte Instanz von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]installiert werden.  
+     **Installierte Instanzen**: Im Raster werden Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angezeigt, die sich auf dem Computer befinden, auf dem das Setup ausgeführt wird. Wenn bereits eine Standardinstanz auf dem Computer installiert ist, muss eine benannte Instanz von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]installiert werden.  
   
 13. Der Ablauf für die weiteren Vorgänge dieses Artikels richtet sich nach den Funktionen, die Sie für die Installation angegeben haben. Je nach Auswahl werden möglicherweise nicht alle Seiten angezeigt.  
   
-14. Auf der Seite "Serverkonfiguration – Dienstkonten" werden die Standarddienstkonten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste angezeigt. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, ist von den zu aktualisierenden Funktionen abhängig.  
+14. Auf der Seite „Serverkonfiguration – Dienstkonten“ werden die Standarddienstkonten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste angezeigt. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, ist von den zu aktualisierenden Funktionen abhängig.  
   
      Authentifizierung und Anmeldeinformationen werden aus der vorherigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz übernommen. Sie können allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensten dasselbe Anmeldekonto zuweisen, oder Sie können jedes Dienstkonto einzeln konfigurieren. Außerdem können Sie angeben, ob Dienste automatisch starten sollen, manuell gestartet werden oder deaktiviert sind. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt, die Dienstkonten einzeln zu konfigurieren, um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensten die Berechtigungen zu gewähren, die mindestens erforderlich sind, um ihre Tasks auszuführen. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)betreffen.  
   
@@ -135,11 +135,11 @@ Sie müssen Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](
 ## <a name="next-steps"></a>Next Steps  
  Führen Sie nach dem Aktualisieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die folgenden Tasks aus:  
   
--   **Registrieren Sie die Server** : Beim Upgrade werden die Registrierungseinträge für die frühere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz entfernt. Nach dem Aktualisieren müssen Sie die Server neu registrieren.  
+-   **Registrieren Sie Ihre Server**: Beim Upgrade werden die Registrierungseinträge für die frühere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz entfernt. Nach dem Aktualisieren müssen Sie die Server neu registrieren.  
   
--   **Aktualisieren Sie die Statistiken** : Zum Optimieren der Abfrageleistung wird empfohlen, nach dem Upgrade die Statistiken für alle Datenbanken zu aktualisieren. Statistiken in benutzerdefinierten Tabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken aktualisieren Sie mithilfe der gespeicherten Prozedur **sp_updatestats**.  
+-   **Aktualisieren Sie die Statistiken**: Zum Optimieren der Abfrageleistung wird empfohlen, nach dem Upgrade die Statistiken für alle Datenbanken zu aktualisieren. Statistiken in benutzerdefinierten Tabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken aktualisieren Sie mithilfe der gespeicherten Prozedur **sp_updatestats**.  
   
--   **Konfigurieren Sie die neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation**: Um die Angriffsfläche eines Systems zu verringern, werden zentrale Dienste und Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selektiv installiert und aktiviert. Weitere Informationen zur Oberflächenkonfiguration finden Sie in der Infodatei für diese Version.  
+-   **Konfigurieren Sie Ihre neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation**: Zur Verringerung der Angriffsfläche eines Systems werden zentrale Dienste und Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selektiv installiert und aktiviert. Weitere Informationen zur Oberflächenkonfiguration finden Sie in der Infodatei für diese Version.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Upgrade von SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   

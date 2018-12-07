@@ -11,12 +11,12 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe4b6dd462a8f8fec6797c26f7ae0461c4b0a4ce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1857f503abe300127d92c26ba5591407b863ebc0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669859"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527919"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Vorgehensweise: Ausführen von SQL Server-Komponententests aus Team Foundation Build
 Sie können Team Foundation Build verwenden, um SQL Server-Komponententests im Rahmen eines Buildüberprüfungstests (Build Verification Test, BVT) auszuführen. Komponententests können so konfiguriert werden, dass sie die Datenbank bereitstellen, Testdaten generieren und ausgewählte Tests ausführen. Wenn Sie mit Team Foundation Build nicht vertraut sind, sollten Sie die folgenden Informationen lesen, bevor Sie die Schritte in diesem Thema ausführen:  
@@ -93,7 +93,7 @@ Wenn Sie eine Builddefinition zum Ausführen von Komponententests erstellen, geb
   
 2.  Wählen Sie einen Test aus.  
   
-3.  Klicken Sie im Eigenschaftenbereich auf **Testkategorien**, und klicken Sie auf die Auslassungszeichen (...) in der äußersten rechten Spalte.  
+3.  Klicken Sie im Eigenschaftenbereich auf **Testkategorien**, und klicken Sie auf die Auslassungspunkte (...) in der äußersten rechten Spalte.  
   
 4.  Geben Sie im Fenster **Testkategorie** im Feld **Neue Kategorie hinzufügen** einen Namen für die neue Testkategorie an.  
   
@@ -252,7 +252,7 @@ In dieser Prozedur checken Sie alle Dateien der Projektmappe ein. Diese Dateien 
   
 5.  Klicken Sie auf der Navigationsleiste auf **Verarbeiten**.  
   
-6.  Klicken Sie in der Gruppe **Erforderlich** unter **Zu erstellende Elemente** auf die Schaltfläche zum Durchsuchen (…).  
+6.  Klicken Sie in der Gruppe **Erforderlich** unter **Zu erstellende Elemente** auf die Schaltfläche zum Durchsuchen (...).  
   
 7.  Klicken Sie im Dialogfeld **Buildprojektlisten-Editor** auf **Hinzufügen**.  
   

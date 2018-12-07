@@ -15,12 +15,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f477276ef55689b6d79244f4493246f99aa9d34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671559"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514202"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (Transaktionsreplikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -182,7 +182,7 @@ In diesem Abschnitt fügen Sie der zuvor erstellten Veröffentlichung einen Abon
   
    ![Eingeben eines Namens für die Abonnementdatenbank](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. Klicken Sie auf der Seite **Sicherheit für den Verteilungs-Agent** auf die Schaltfläche mit den Auslassungspunkten (**…**). Geben Sie <*Publisher_Machine_Name*>**\repl_distribution** in das Feld **Prozesskonto** und anschließend das Kennwort für dieses Konto ein. Klicken Sie erst auf **OK** und anschließend auf **Weiter**.
+8. Klicken Sie auf der Seite **Distribution Agent Security** (Verteilungs-Agent-Sicherheit) auf die Schaltfläche mit den Auslassungspunkten (**…**). Geben Sie <*Publisher_Machine_Name*>**\repl_distribution** in das Feld **Prozesskonto** und anschließend das Kennwort für dieses Konto ein. Klicken Sie erst auf **OK** und anschließend auf **Weiter**.
 
    ![Informationen zum Verteilungskonto im Dialogfeld „Sicherheit für den Verteilungs-Agent“](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   

@@ -12,23 +12,23 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dca46f2aa08235e69c93efb4a9538ef5004b71b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e52e83a630a81b87f30e2c07d954fc9bb14696d9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652988"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617840"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Rotation von Always Encrypted-Schlüsseln mithilfe von PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Dieser Artikel enthält die Schritte zur Rotation von Always Encrypted-Schlüsseln unter Verwendung des SqlServer PowerShell-Moduls. Informationen darüber, wie Sie die Arbeit mit dem SQL Server-PowerShell-Modul beginnen, finden Sie unter [Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
-Die Rotation von Always Encrypted-Schlüsseln bezieht sich auf das Ersetzen eines vorhandenen Schlüssels mit einem neuen Schlüssel. Sie müssen einen Schlüssel möglicherweise rotieren, wenn er kompromittiert wurde. Kryptografische Schlüssel müssen regelmäßig rotiert werden, damit sie die Richtlinien Ihrer Organisation oder die Kompatibilitätsregelungen erfüllen. 
+Die Rotation von Always Encrypted-Schlüsseln bezieht sich auf das Ersetzen eines vorhandenen Schlüssels mit einem neuen Schlüssel. Sie müssen einen Schlüssel möglicherweise auswechseln, wenn er kompromittiert wurde. Kryptografische Schlüssel müssen regelmäßig ausgewechselt werden, damit sie die Richtlinien Ihrer Organisation oder die Kompatibilitätsregelungen erfüllen. 
 
 Always Encrypted verwendet zwei Schlüsseltypen, es gibt also zwei allgemeine Schlüsselrotationsworkflows: das Drehen von Spaltenhauptschlüssel und das Drehen von Spaltenverschlüsselungsschlüssel.
 
-* **Rotieren des Spaltenverschlüsselungsschlüssels** – umfasst das Entschlüsseln von Daten, die mit dem vorhandenen Schlüssel verschlüsselt sind und das erneute Verschlüsseln der Daten mit einem neuen Spaltenverschlüsselungsschlüssel. Da ein Spaltenverschlüsselungsschlüssel Zugriff auf beiden Schlüssel sowie die Datenbank benötigt, kann die Rotation von Spaltenverschlüsselungsschlüsseln nur ohne Rollentrennung ausgeführt werden.
+* **Rotieren des Spaltenverschlüsselungsschlüssels** – umfasst das Entschlüsseln von Daten, die mit dem vorhandenen Schlüssel verschlüsselt sind und das erneute Verschlüsseln der Daten mit einem neuen Spaltenverschlüsselungsschlüssel. Da ein Spaltenverschlüsselungsschlüssel sowohl Zugriff auf den Schlüssel als auch die Datenbank benötigt, kann die Rotation von Spaltenverschlüsselungsschlüsseln nur ohne Rollentrennung ausgeführt werden.
 * **Rotation des Spaltenhauptschlüssels** – umfasst das Entschlüsseln von Spaltenverschlüsselungsschlüsseln, die mit dem aktuellen Spaltenhauptschlüssel verschlüsselt sind, das erneute Verschlüsseln mit dem neuen Spaltenhauptschlüssel sowie das Aktualisieren der Metadaten für beide Schlüsseltypen. Die Rotation des Spaltenhauptschlüssels kann mit oder ohne Rollentrennung abgeschlossen werden (bei Verwendung des SqlServer PowerShell-Moduls).
 
 

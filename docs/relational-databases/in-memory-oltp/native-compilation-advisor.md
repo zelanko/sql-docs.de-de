@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af912eebf1274b911c6b48405ba9001e18592916
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a91aa69fcc3fc375c1a6469274613fa656813b8b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659638"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507842"
 ---
 # <a name="native-compilation-advisor"></a>Ratgeber für native Kompilierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51659638"
   
  In einer bestimmten interpretierten gespeicherten Prozedur können Sie mit dem Ratgeber für native Kompilierung alle Features identifizieren, die in nativen Modulen nicht unterstützt werden. Der Ratgeber für native Kompilierung bietet Links zu Problemumgehungen oder Lösungen an.  
   
- Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory-OLTP − Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](https://msdn.microsoft.com/library/dn673538.aspx).  
+ Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory OLTP - Common Workload Patterns and Migration Considerations (In-Memory-OLTP: Allgemeine Workloadmuster und Überlegungen zur Migration)](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>Exemplarische Vorgehensweise: Ratgeber für native Kompilierung  
  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die gespeicherte Prozedur, die Sie konvertieren möchten, und wählen Sie **Ratgeber für native Kompilierung**aus. Daraufhin wird die Willkommensseite für **Ratgeber für die native Kompilierung gespeicherter Prozeduren**angezeigt. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  

@@ -11,12 +11,12 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 906287203a4ea4fe4129da373330b957ced33a57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3fbb4994b1f7f7416fbdbdde5dc6377b396dae9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626158"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539071"
 ---
 # <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>Lektion 1-3: Hinzufügen und Konfigurieren eines OLE DB-Verbindungs-Managers
 Nach dem Hinzufügen eines Flatfile-Verbindungs-Managers zum Herstellen einer Verbindung mit der Datenquelle besteht die nächste Aufgabe im Hinzufügen eines OLE DB-Verbindungs-Managers zum Herstellen einer Verbindung mit dem Ziel. Ein OLE DB-Verbindungs-Manager ermöglicht einem Paket das Extrahieren von Daten aus einer oder das Laden von Daten in eine OLE DB-kompatible(n) Datenquelle. Mithilfe des OLE DB-Verbindungs-Managers können Sie den Server, die Authentifizierungsmethode und die Standarddatenbank für die Verbindung angeben.  

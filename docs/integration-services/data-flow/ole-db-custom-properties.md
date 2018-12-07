@@ -11,12 +11,12 @@ ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9942a24879e9e9c8d3b2bfa0c20c0f3f7400992
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: cb7cf5fed46000c77634ad0c5461b926d6c361dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638987"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524508"
 ---
 # <a name="ole-db-custom-properties"></a>Benutzerdefinierte Eigenschaften für OLE DB
   **Benutzerdefinierte Eigenschaften von Quellen**  
@@ -52,7 +52,7 @@ ms.locfileid: "51638987"
   
 |Eigenschaftenname|Datentyp|und Beschreibung|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Ganze Zahl (Enumeration)|Ein Wert, der angibt, wie das Ziel auf seine Zieldatenbank zugreift.<br /><br /> Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> <br /><br /> **OpenRowset** (0) – Sie geben den Namen einer Tabelle oder Sicht an.<br /><br /> **OpenRowset from Variable** (1) – Sie geben den Namen einer Variablen an, die den Namen einer Tabelle oder Sicht enthält.<br /><br /> **OpenRowset Using Fastload** (3) – Sie geben den Namen einer Tabelle oder Sicht an.<br /><br /> **OpenRowset Using Fastload from Variable** (4) – Sie geben den Namen einer Variablen an, die den Namen einer Tabelle oder Sicht enthält.<br /><br /> **SQL Command** (2) – Sie geben eine SQL-Anweisung an.|  
+|AccessMode|Ganze Zahl (Enumeration)|Ein Wert, der angibt, wie das Ziel auf seine Zieldatenbank zugreift.<br /><br /> Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> <br /><br /> **OpenRowset** (0): Sie geben den Namen einer Tabelle oder Ansicht an.<br /><br /> **OpenRowset from Variable** (1): Sie geben den Namen einer Variablen an, die den Namen einer Tabelle oder Ansicht enthält.<br /><br /> **OpenRowset Using Fastload** (3): Sie geben den Namen einer Tabelle oder Ansicht an.<br /><br /> **OpenRowset Using Fastload from Variable** (4): Sie geben den Namen einer Variablen an, die den Namen einer Tabelle oder Ansicht enthält.<br /><br /> **SQL Command** (2): Sie geben eine SQL-Anweisung an.|  
 |AlwaysUseDefaultCodePage|Boolean|Ein Wert, der angibt, ob der Wert der **DefaultCodePage** -Eigenschaft für jede Spalte verwendet werden soll, oder ob versucht werden soll, die Codepage aus dem Gebietsschema der einzelnen Spalten abzuleiten. Der Standardwert dieser Eigenschaft ist **False**.|  
 |CommandTimeout|Integer|Die maximale Ausführungsdauer in Sekunden, bevor ein Timeout für den SQL-Befehl eintritt. Der Wert 0 steht für eine unbegrenzte Dauer. Der Standardwert dieser Eigenschaft ist 0.<br /><br /> Hinweis: Diese Eigenschaft ist nicht im **Ziel-Editor für OLE DB**verfügbar, kann jedoch mit dem **erweiterten Editor**festgelegt werden.|  
 |DefaultCodePage|Integer|Die dem OLE DB-Ziel zugeordnete Standardcodepage.|  

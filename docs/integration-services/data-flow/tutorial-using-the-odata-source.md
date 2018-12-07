@@ -11,12 +11,12 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7cda725134aeba441a1cd6a59c7d3e7ae57d76de
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 841892faace82677df0bbd8939a147d2c65b363f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637757"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512996"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Lernprogramm: Verwenden der OData-Quelle
   Dieses Tutorial führt Sie schrittweise durch den Prozess, bei dem die Sammlung **Employees** aus dem OData-Beispieldienst **Northwind** (https://services.odata.org/V3/Northwind/Northwind.svc/) extrahiert und anschließend in eine Flatfile geladen wird.  
@@ -43,7 +43,7 @@ ms.locfileid: "51637757"
   
 4.  Doppelklicken Sie auf die Komponente **OData-Quelle**, um das Dialogfeld **Quellen-Editor für OData** zu öffnen.  
   
-5.  Klicken Sie auf **Neu…** , um einen neuen OData-Verbindungs-Manager hinzuzufügen.  
+5.  Klicken Sie auf **Neu…**, um einen neuen OData-Verbindungs-Manager hinzuzufügen.  
   
 6.  Geben Sie die OData-Dienst-URL als **Speicherort des Dienstdokuments**ein. Diese URL kann die URL zum Dienstdokument oder zu einem bestimmten Feed oder einer bestimmten Entität sein. Geben Sie im Rahmen dieses Tutorials die folgende URL zum Dienstdokument ein: [https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/).  
   

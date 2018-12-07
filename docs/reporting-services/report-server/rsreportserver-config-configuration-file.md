@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23938f5885fd207aed8143686f7b762d81fc8130
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 92655853880919ba29b4736404fe1637471e8f15
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813893"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712631"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 In der Datei [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** werden Einstellungen gespeichert, die vom Berichtsserver-Webdienst und der Hintergrundverarbeitung verwendet werden. Alle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen werden innerhalb eines einzelnen Prozesses ausgeführt, der die in der Datei RSReportServer.config gespeicherten Konfigurationseinstellungen liest. Sowohl der Berichtsserver im einheitlichen als auch der Berichtsserver im SharePoint-Modus verwenden "Rsreportserver.config". Die zwei Modi verwenden jedoch nicht alle gleichen Einstellungen in der Konfigurationsdatei. Die SharePoint-Modusversion der Datei ist kleiner, da viele der Einstellungen für den SharePoint-Modus in den SharePoint-Konfigurationsdatenbanken und nicht in der Datei gespeichert werden. In diesem Thema werden die für den einheitlichen und den SharePoint-Modus installierte Standardkonfigurationsdatei sowie einige wichtige Einstellungen und Verhaltensweisen beschrieben, die von der Konfigurationsdatei gesteuert werden.  
@@ -29,20 +29,22 @@ Die Datei RSReportServer.config befindet sich abhängig vom Berichtsservermodus 
 
 
   
-### <a name="native-mode-report-server"></a>Berichtsserver im einheitlichen Modus  
+### <a name="native-mode-report-server"></a>Berichtsserver im einheitlichen Modus 
 
  
-**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server 2016
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
 ```
 
-**[!INCLUDE[applies](../../includes/applies-md.md)]** Januar 2017 Technical Preview von Power BI-Berichten in SQL Server Reporting Services
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
 ```  
   
-### <a name="sharepoint-mode-report-server"></a>Berichtsserver im SharePoint-Modus
+### <a name="sharepoint-mode-report-server"></a>Berichtsserver im SharePoint-Modus 
 
 > [!NOTE]
 > Der integrierte Modus von SharePoint steht in der Technical Preview von Berichten von Power BI in SQL Server Reporting Services von Januar 2017 nicht zur Verfügung.
@@ -57,7 +59,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
  In der folgenden Tabelle sind Informationen zu den allgemeinen Konfigurationseinstellungen im ersten Teil der Datei enthalten. Diese Einstellungen werden in der Reihenfolge aufgeführt, in der sie in der Konfigurationsdatei angezeigt werden. Die letzte Spalte der Tabelle gibt an, ob die Einstellung für einen Berichtsserver im einheitlichen Modus **(N)** oder für einen Berichtsserver im SharePoint-Modus **(S)** oder für beide gilt.  
   
 > [!NOTE]  
->  Maximale ganze Zahl bezieht sich in diesem Thema auf den INT_MAX-Wert 2147483647.  Weitere Informationen finden Sie unter [Ganzzahlige Grenzen](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  „Maximale ganze Zahl“ bezieht sich in diesem Thema auf den INT_MAX-Wert 2147483647.  Weitere Informationen finden Sie unter [Ganzzahlige Grenzen](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Einstellung|und Beschreibung|Mode|  
 |-------------|-----------------|----------|  

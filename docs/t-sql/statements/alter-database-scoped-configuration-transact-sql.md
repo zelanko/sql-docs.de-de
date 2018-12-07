@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7fa7bf2f5d315bda158ed45f3965fbc2a952fb00
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 744895bc3e2a60d8eb3edad4554f08bc1aaf6a95
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700298"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641501"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -111,7 +111,7 @@ Dieser Wert ist nur für sekundäre Datenbanken gültig, während die betreffend
 
 PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 
-Aktiviert oder deaktiviert die [Parameterermittlung](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). Der Standardwert ist ON. Das Festlegen von PARAMETER_SNIFFING auf „ON“ entspricht der Aktivierung des [Ablaufverfolgungsflags 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+Aktiviert oder deaktiviert die [Parameterermittlung](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). Der Standardwert ist ON. Das Festlegen von PARAMETER_SNIFFING auf OFF entspricht der Aktivierung des [Ablaufverfolgungsflags 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
 > Informationen darüber, wie Sie dies auf Abfrageebene erreichen, finden Sie unter dem [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **OPTIMIZE FOR UNKNOWN**.
@@ -121,7 +121,7 @@ PRIMARY
 
 Dieser Wert ist nur für sekundäre Datenbanken gültig, während die betreffende Datenbank primär ist, und gibt an, dass es sich bei dem Wert für diese Einstellung für alle sekundären Datenbanken um den für die primäre Datenbank festgelegten Wert handelt. Wenn sich die Konfiguration für die primäre Datenbank bei der Verwendung der [Parameterermittlung](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) ändert, ändert sich der Wert für die sekundären Datenbanken entsprechend, ohne dass dieser Wert explizit festgelegt werden muss. PRIMARY ist die Standardeinstellung für die sekundären Datenbanken.
 
-QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
+<a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
 
 Aktiviert oder deaktiviert Hotfixes für die Abfrageoptimierung unabhängig vom Kompatibilitätsgrad der Datenbank. Die Standardeinstellung ist **OFF**. Sie deaktiviert Hotfixes für Abfrageoptimierer, die nach der Einführung des höchsten verfügbaren Kompatibilitätsgrads für eine bestimmte Version (post-RTM) veröffentlicht wurden. Ein Festlegen dieser Einstellung auf **ON** entspricht der Aktivierung des [Ablaufverfolgungsflags 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -259,7 +259,7 @@ Die differenzierten Einstellungen können die globalen Einstellungen überschrei
 
   - Wenn der Abfragehinweis nicht auf 0 festgelegt ist, wird er von der Einstellung der Ressourcenkontrolle begrenzt.
 
-- Die datenbankweit gültige Einstellung überschreibt die Einstellung „sp_configure“ (wenn sie nicht auf 0 festgelegt ist), sofern kein Abfragehinweis vorhanden ist und sie nicht von der Einstellung der Ressourcenkontrolle begrenzt wird.
+- Die datenbankweit gültige Einstellung überschreibt die Einstellung „sp_configure“ (wenn sie nicht auf „0 (null)“ festgelegt ist), sofern kein Abfragehinweis vorhanden ist und sie nicht von der Einstellung der Ressourcenkontrolle begrenzt wird.
 
 - Die Einstellung „sp_configure“ wird von der Einstellung der Ressourcenkontrolle überschrieben.
 

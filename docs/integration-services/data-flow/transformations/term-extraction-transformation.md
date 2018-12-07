@@ -29,12 +29,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f20a2bba58605ca7b518fa1a55ba1a75ffb366bb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 85a35b34610982ac4418e0e8ab05d3e1b188b968
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638947"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507473"
 ---
 # <a name="term-extraction-transformation"></a>Transformation für Ausdrucksextrahierung
   Die Transformation für Ausdrucksextrahierung extrahiert Ausdrücke aus Text in einer Transformationseingabespalte und schreibt die Ausdrücke dann in eine Transformationsausgabespalte. Diese Transformation ist nur mit englischem Text kompatibel und verwendet ein eigenes englisches Wörterbuch und linguistische Informationen für Englisch.  
@@ -57,7 +57,7 @@ ms.locfileid: "51638947"
 ## <a name="exclusion-terms"></a>Ausschlussausdrücke  
  Optional kann die Transformation für Ausdrucksextrahierung auf eine Spalte in einer Tabelle verweisen, die Ausschlussausdrücke enthält. Dabei handelt es sich um Ausdrücke, die von der Transformation beim Extrahieren von Ausdrücken aus einem Dataset ausgelassen werden sollen. Dies ist hilfreich, wenn bereits mehrere Ausdrücke in einer bestimmten Branche als belanglos identifiziert wurden. Dies ist normalerweise der Fall, wenn der Ausdruck so häufig vorkommt, dass er zu einem Füllwort wird. Wenn Sie z. B. Ausdrücke aus einem Dataset extrahieren, das Informationen zum Kundendienst für eine bestimmte Automarke enthält, könnte der Markenname selbst ausgeschlossen werden, weil er zu häufig erwähnt wird und deshalb bedeutungslos ist. Deshalb müssen die Werte in der Ausschlussliste an das von Ihnen verwendete Dataset angepasst werden.  
   
- Wenn Sie der Ausschlussliste einen Ausdruck hinzufügen, werden alle Ausdrücke – Wörter oder Substantivausdrücke –, die den Ausdruck enthalten, ebenfalls ausgeschlossen. Enthält die Ausschlussliste beispielsweise das einzelne Wort *Daten*, werden alle Ausdrücke, die dieses Worte enthalten, wie z. B. *data*, *data mining*, *data integrity*und *data validation* , ebenfalls ausgeschlossen. Wenn Sie nur zusammengesetzte Wörter ausschließen wollen, die das Wort *data*enthalten, müssen Sie diese zusammengesetzten Wörter explizit zur Ausschlussliste hinzufügen. Wenn Sie beispielsweise den Begriff *data*extrahieren, aber *data validation*ausschließen wollen, fügen Sie *data validation* der Ausschlussliste hinzu, und stellen Sie sicher, dass *data* aus der Ausschlussliste entfernt wird.  
+ Wenn Sie der Ausschlussliste einen Ausdruck hinzufügen, werden alle Ausdrücke, Wörter oder Nominalphrasen, die den Ausdruck enthalten, ebenfalls ausgeschlossen. Enthält die Ausschlussliste beispielsweise das einzelne Wort *Daten*, werden alle Ausdrücke, die dieses Worte enthalten, wie z. B. *data*, *data mining*, *data integrity*und *data validation* , ebenfalls ausgeschlossen. Wenn Sie nur zusammengesetzte Wörter ausschließen wollen, die das Wort *data*enthalten, müssen Sie diese zusammengesetzten Wörter explizit zur Ausschlussliste hinzufügen. Wenn Sie beispielsweise den Begriff *data*extrahieren, aber *data validation*ausschließen wollen, fügen Sie *data validation* der Ausschlussliste hinzu, und stellen Sie sicher, dass *data* aus der Ausschlussliste entfernt wird.  
   
  Die Verweistabelle muss eine Tabelle in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - oder einer Access-Datenbank sein. Die Transformation für Ausdrucksextrahierung verwendet eine separate OLE DB-Verbindung, um eine Verbindung mit der Verweistabelle herzustellen. Weitere Informationen finden Sie unter [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
@@ -150,7 +150,7 @@ ms.locfileid: "51638947"
   
 -   Kombinationen aus Zahlen, Satzzeichen und Buchstaben. Beispielsweise gibt *A23B#99* den Ausdruck *A23B*zurück.  
   
--   Die Zeichen %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ und ‘.  
+-   %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " und '.  
   
     > [!NOTE]  
     >  Akronyme, die mindestens einen Punkt (.) enthalten, werden nicht in mehrere Sätze aufgeteilt.  

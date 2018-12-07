@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030199"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710701"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Erstellen eines mobilen Berichts in Reporting Services
-Mit dem Publisher für mobile Berichte von SQL Server können Sie schnell mobile Berichte für SQL Server 2016 Reporting Services erstellen, die sich problemlos an jede Bildschirmgröße anpassen. Das Tool bietet eine Entwurfsoberfläche mit anpassbaren Rasterzeilen und -spalten sowie flexible Elemente für mobile Berichte.  
+Mit dem Publisher für mobile Berichte von SQL Server können Sie schnell mobile Berichte für SQL Server Reporting Services erstellen, die sich problemlos an jede Bildschirmgröße anpassen. Das Tool bietet eine Entwurfsoberfläche mit anpassbaren Rasterzeilen und -spalten sowie flexible Elemente für mobile Berichte.  
   
 Wenn Sie zum ersten Mal einen mobilen Bericht erstellen, können Sie den Publisher für mobile Berichte von SQL Server über das Reporting Services-Webportal auf Ihrem lokalen Computer installieren. Die Installation kann auch über das [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=733527)erfolgen. Danach können Sie das Tool entweder aus dem Webportal oder lokal starten.   
     
@@ -62,7 +62,7 @@ Wenn Sie zum ersten Mal einen mobilen Bericht erstellen, können Sie den Publish
   
 11. Nun sollten Sie Ihren Bericht speichern. Wählen Sie oben links das Symbol aus, und klicken Sie anschließend auf **Lokal speichern** oder **Auf Server speichern**.  
   
-   Sie benötigen Zugriff auf einen SQL Server 2016 Reporting Services-Berichtsserver, um den Bericht auf einem Server zu speichern.  
+   Sie benötigen Zugriff auf einen SQL Server Reporting Services-Berichtsserver, um den Bericht auf einem Server zu speichern.  
      
    ### <a name="see-also"></a>Siehe auch  
      

@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 511436c7c6c5fc73f3bb8a5c02a91ea01f3e8791
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2736c3cf0d8373b80a41277a6b80b4b12b0ecd3a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670561"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510702"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,9 +86,9 @@ ms.locfileid: "51670561"
   
  Wenn ein Überwachungsadministrator die Datei an einen anderen Ort kopiert (zur Archivierung usw.), sollten die ACLs am neuen Ort auf die folgenden Berechtigungen beschränkt werden:  
   
--   Überwachungsadministrator - Lesen/Schreiben  
+-   Überwachungsadministrator – Lesen/Schreiben  
   
--   Überwachungsleser - Lesen  
+-   Überwachungsleser – Lesen  
   
  Es wird empfohlen, Überwachungsberichte auf einer separaten Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu erstellen, z.B. einer Instanz von [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], auf die nur Überwachungsadministratoren und -leser Zugriff haben. Durch Verwenden einer separaten Instanz von [!INCLUDE[ssDE](../../../includes/ssde-md.md)] zur Berichterstellung können Sie dazu beitragen, unautorisierte Benutzer am Zugriff auf die Überwachungsdatei zu hindern.  
   
@@ -114,9 +114,9 @@ ms.locfileid: "51670561"
  Weitere Informationen zur Überwachung finden Sie unter [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) sowie [Erstellen einer Server- und Datenbank-Überwachungsspezifikation](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
 ## <a name="considerations"></a>Weitere Überlegungen  
- Wenn während der Überwachungseinleitung ein Fehler auftritt, wird der Server nicht gestartet. In diesem Fall kann der Server gestartet werden, indem Sie in die Befehlszeile die Option **–f** eingeben.  
+ Wenn während der Überwachungseinleitung ein Fehler auftritt, wird der Server nicht gestartet. In diesem Fall kann der Server gestartet werden, indem Sie in die Befehlszeile die Option **-f** eingeben.  
   
- Wenn aufgrund eines Überwachungsfehlers der Server heruntergefahren wird oder nicht startet, da für die Überwachung ON_FAILURE=SHUTDOWN festgelegt wurde, wird das Ereignis MSG_AUDIT_FORCED_SHUTDOWN in das Protokoll geschrieben. Da der Server schon beim ersten Auftreten dieser Einstellung heruntergefahren wird, wird das Ereignis nur einmal im Protokoll aufgezeichnet. Das Ereignis wird erst nach der Fehlermeldung für die Überwachung, die das Herunterfahren verursacht, geschrieben. Ein Administrator kann ein durch eine Überwachung verursachtes Herunterfahren umgehen, indem er [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Flag **–m** im Einzelbenutzermodus startet. Wenn Sie sich im Einzelbenutzermodus anmelden, wird jede Überwachung herabgestuft, für die festgelegt wurde, dass ON_FAILURE=SHUTDOWN in dieser Sitzung als ON_FAILURE=CONTINUE ausgeführt wird. Wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Flag **–m** gestartet wird, wird die Meldung MSG_AUDIT_SHUTDOWN_BYPASSED im Fehlerprotokoll aufgezeichnet.  
+ Wenn aufgrund eines Überwachungsfehlers der Server heruntergefahren wird oder nicht startet, da für die Überwachung ON_FAILURE=SHUTDOWN festgelegt wurde, wird das Ereignis MSG_AUDIT_FORCED_SHUTDOWN in das Protokoll geschrieben. Da der Server schon beim ersten Auftreten dieser Einstellung heruntergefahren wird, wird das Ereignis nur einmal im Protokoll aufgezeichnet. Das Ereignis wird erst nach der Fehlermeldung für die Überwachung, die das Herunterfahren verursacht, geschrieben. Ein Administrator kann ein durch eine Überwachung verursachtes Herunterfahren umgehen, indem er [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Flag **-m** im Einzelbenutzermodus startet. Wenn Sie sich im Einzelbenutzermodus anmelden, wird jede Überwachung herabgestuft, für die festgelegt wurde, dass ON_FAILURE=SHUTDOWN in dieser Sitzung als ON_FAILURE=CONTINUE ausgeführt wird. Wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Flag **-m** gestartet wird, wird die Meldung MSG_AUDIT_SHUTDOWN_BYPASSED im Fehlerprotokoll aufgezeichnet.  
   
  Weitere Informationen zu Dienststartoptionen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](../../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   

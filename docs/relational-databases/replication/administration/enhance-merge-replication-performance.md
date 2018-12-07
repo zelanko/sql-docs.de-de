@@ -20,12 +20,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4319663f79c07772bb3b72c9de9d4120f8d83ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5cb5603b98701597847e1997c17714affa7b923
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718978"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535281"
 ---
 # <a name="enhance-merge-replication-performance"></a>Verbessern der Leistung der Mergereplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "47718978"
   
 -   Staffeln Sie die Zeitpläne für die Synchronisierung der Abonnements.  
   
-     Wenn viele Abonnenten eine Synchronisierung mit einem Verleger ausführen, sollten Sie die Zeitpläne so staffeln, dass die Merge-Agents zu unterschiedlichen Zeiten ausgeführt werden. Weitere Informationen finden Sie unter [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md).  
+     Wenn viele Abonnenten eine Synchronisierung mit einem Verleger ausführen, sollten Sie die Zeitpläne so staffeln, dass die Merge-Agents zu unterschiedlichen Zeiten ausgeführt werden. Weitere Informationen finden Sie unter [Angeben von Synchronisierungszeitplänen](../../../relational-databases/replication/specify-synchronization-schedules.md).  
   
 ## <a name="merge-agent-parameters"></a>Merge-Agentparameter  
  Informationen zum Merge-Agent und seinen Parametern finden Sie unter [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md).  
@@ -102,9 +102,9 @@ ms.locfileid: "47718978"
   
      Beim Aktualisieren des Abonnenten auf [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder eine höhere Version wird auch der Merge-Agent aktualisiert, der von den Abonnements auf diesem Abonnenten verwendet wird. Dieser Merge-Agent von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder einer höheren Version ist erforderlich, um die neuen Funktionen und Leistungsoptimierungsmöglichkeiten nutzen zu können.  
   
--   Wenn ein Abonnement über eine schnelle Verbindung synchronisiert wird und vom Verleger und vom Abonnenten Änderungen gesendet werden, verwenden Sie für den Merge-Agent den **–ParallelUploadDownload** -Parameter.  
+-   Wenn ein Abonnement über eine schnelle Verbindung synchronisiert wird sowie Änderungen vom Verleger und vom Abonnenten gesendet werden, verwenden Sie für den Merge-Agent den Parameter **-ParallelUploadDownload**.  
   
-     In[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein neuer Parameter für den Merge-Agent eingeführt: **–ParallelUploadDownload**. Wenn Sie diesen Parameter verwenden, kann der Merge-Agent gleichzeitig sowohl die Änderungen, die auf den Verleger hochgeladen werden, als auch die Änderungen verarbeiten, die auf den Abonnenten heruntergeladen werden. Dieses Verhalten erweist sich in Umgebungen mit hohem Volumen als nützlich, die eine hohe Netzwerkbandbreite besitzen. Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
+     Mit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein neuer Parameter für den Merge-Agent eingeführt: **-ParallelUploadDownload**. Wenn Sie diesen Parameter verwenden, kann der Merge-Agent gleichzeitig sowohl die Änderungen, die auf den Verleger hochgeladen werden, als auch die Änderungen verarbeiten, die auf den Abonnenten heruntergeladen werden. Dieses Verhalten erweist sich in Umgebungen mit hohem Volumen als nützlich, die eine hohe Netzwerkbandbreite besitzen. Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
   
     -   [Arbeiten mit Replikations-Agent-Profilen](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

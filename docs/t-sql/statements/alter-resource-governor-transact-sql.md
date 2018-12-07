@@ -21,12 +21,12 @@ ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: afac7a2ed586f53994bc60ea89e323389c979714
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c3b106d89db436ebf2a2d60abe7f5eee5fca2f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635778"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514722"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  ALTER RESOURCE GOVERNOR RECONFIGURE muss ausgegeben werden, damit Konfigurationsänderungen wirksam werden.  
   
- CLASSIFIER_FUNCTION = { *schema_name ***.*** function_name* | NULL }  
+ CLASSIFIER_FUNCTION = { _Schemaname_**.**_Funktionsname_ | NULL }  
  Registriert die Klassifizierungsfunktion, die durch *schema_name.function_name* angegeben wird. Diese Funktion klassifiziert jede neue Sitzung und weist die Sitzungsanforderungen und Abfragen einer Arbeitsauslastungsgruppe zu. Bei Verwendung von NULL werden neue Sitzungen automatisch der Standardarbeitsauslastungsgruppe zugewiesen.  
   
  RESET STATISTICS  

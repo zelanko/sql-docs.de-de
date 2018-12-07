@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fc441d3247d5320e0a9913c0df48cc2573f22858
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f7252b672eb29206bbd77cc92cdb3de68f3d6c91
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700472"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524318"
 ---
 # <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -68,11 +68,11 @@ Unterstützbarkeit und Diagnose betreffende Verbesserungen sind in SQL Server 20
 |Erweiterung modifizierter Informationen in „sys.dm_db_file_space_usage“| Eine neue Spalte, die „sys.dm_db_file_space_usage“ hinzugefügt wurde, um die Anzahl der geänderten Erweiterungen seit der letzten vollständigen Sicherung nachzuverfolgen  |       |
 |Segmentinformation in „sys.dm_exec_query_stats“ |   Neue Spalten wurden zu „sys.dm_exec_query_stats“ hinzugefügt, um die Anzahl der übersprungenen und gelesenen Columnstore-Segmente nachzuverfolgen, zum Beispiel „total_columnstore_segment_reads“ und „total_columnstore_segment_skips“.   |   [KB4051358](https://support.microsoft.com/help/4051358) |
 |Festlegen des korrekten Kompatibilitätsgrads für die Verteilungsdatenbank  |   Nach der Installation des Service Packs ändert sich der Kompatibilitätsgrad der Verteilungsdatenbank in 90. Der Grund dafür war ein Codepfad in der gespeicherten Prozedur „sp_vupgrade_replication“. Das Service Pack wurde nun dahingehend geändert, dass es nun einen angemessenen Kompatibilitätsgrad für die Verteilungsdatenbank bestimmt.   |       |
-|Verfügbarmachen der letzten bekannten funktionierenden DBCC CHECKDB-Information    |   Es wurde eine neue Datenbankoption hinzugefügt, damit die Datumsangabe der letzten erfolgreichen Ausführung von DBCC CHECKDB programmgesteuert zurückgegeben werden kann. Benutzer können nun DATABASEPROPERTYEX([database], ‘lastgoodcheckdbtime’) abfragen, um einen einzelnen Wert abzurufen, der das Datum und die Uhrzeit der letzten erfolgreichen DBCC CHECKDB-Ausführung auf der angegebenen Datenbank darstellt.  |       |
+|Verfügbarmachen der letzten bekannten funktionierenden DBCC CHECKDB-Information    |   Es wurde eine neue Datenbankoption hinzugefügt, damit die Datumsangabe der letzten erfolgreichen Ausführung von DBCC CHECKDB programmgesteuert zurückgegeben werden kann. Benutzer können nun DATABASEPROPERTYEX([database], ‘lastgoodcheckdbtime’) abfragen, um einen einzelnen Wert abzurufen, der das Datum und die Uhrzeit der letzten erfolgreichen DBCC CHECKDB-Ausführung in der angegebenen Datenbank darstellt.  |       |
 |Showplan XML-Erweiterungen| [Informationen darüber, welche Statistiken zum Kompilieren des Abfrageplans verwendet wurden](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/), einschließlich der Name der Statistik, des Änderungszählers und des Prozentsatzes der Stichproben sowie wann das letzte Update für die Statistik stattfand. Gilt nur für CE-Modelle 120 und höher. Dies wird beispielsweise nicht für CE 70 unterstützt.| |
-| |Showplan XML wird ein neues Attribut, [EstimateRowsWithoutRowgoal](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-row-goal/) hinzugefügt, wenn der Abfrageoptimierer die „row goal“-Logik verwendet.| |
+| |Zur Showplan-XML wird ein neues Attribut, [EstimateRowsWithoutRowgoal](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-row-goal/), hinzugefügt, wenn der Abfrageoptimierer die „row goal“-Logik verwendet.| |
 | |Die neuen Runtime-Attribute [UdfCpuTime und UdfElapsedTime](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-udfs/) in der tatsächlichen Showplan-XML zum Nachverfolgen der Zeit, die für skalare benutzerdefinierte Funktionen gebraucht wird| |
-| |Das Hinzufügen des CXPACKET-Wartetyps zur [Liste der möglichen Top 10 der Wartevorgänge](https://blogs.msdn.microsoft.com/sql_server_team/new-showplan-enhancements/) im tatsächlichen Showplan XML-Ereignis: Eine parallele Abfrageausführung erfordert häufig CXPACKET-Wartevorgänge. Dieser Wartevorgangstyp wurde jedoch nicht im aktuellen Showplan XML-Ereignis gemeldet. |       |
+| |Das Hinzufügen des CXPACKET-Wartetyps zur [Liste der möglichen Top 10 der Wartevorgänge](https://blogs.msdn.microsoft.com/sql_server_team/new-showplan-enhancements/) in der tatsächlichen Showplan-XML: Eine parallele Abfrageausführung erfordert häufig CXPACKET-Wartevorgänge. Dieser Wartevorgangstyp wurde jedoch nicht in der aktuellen Showplan-XML gemeldet. |       |
 | |Die Warnung vor dem Runtime-Überlauf wird erweitert, um die Anzahl der Seiten, die in tempdb geschrieben wurden, während des Überlaufs eines Parallelitätsoperators zu melden.| |
 |Replikationsunterstützung für Datenbanken mit ergänzenden Zeichensortierungen  |   Die Replikation kann nun auf Datenbanken unterstützt werden, die die ergänzende Zeichensortierung verwenden. |       |
 |Verbesserte Handhabung von Service Broker mit Failover einer Verfügbarkeitsgruppe |   Wenn Service Broker für Datenbanken der Verfügbarkeitsgruppe in der aktuellen Implementierung aktiviert ist, bleiben bei einem Failover der Verfügbarkeitsgruppe alle Service Broker-Verbindungen, die dem primären Replikat entstammen, geöffnet. Mit dieser Verbesserung sollen all diese offenen Verbindungen während eines Failover der Verfügbarkeitsgruppe geschlossen werden. |       |

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b22342b9f73ad87a2b6474772cd542b6a96ba55
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0e248ef60abf94ece20d93a6715c53cfc39660be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030629"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531470"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services-SharePoint-Dienst und -Dienstanwendungen
 
@@ -61,19 +61,19 @@ ms.locfileid: "50030629"
 1.  Fügen Sie das Anwendungspoolobjekt des Anwendungspoolnamens einer Variablen hinzu, die an die neue Aktion übergeben wird.  
   
     ```  
-    $appPoolName = get-spserviceapplicationpool “<application pool name>”  
+    $appPoolName = get-spserviceapplicationpool "<application pool name>"  
     ```  
   
 2.  Erstellen Sie die Dienstanwendung mit einem von Ihnen angegebenen Namen und Anwendungspool.  
   
     ```  
-    New-SPRSServiceApplication –Name ‘MyServiceApplication’ –ApplicationPool $appPoolName –DatabaseName ‘MyServiceApplicationDatabase’ –DatabaseServer ‘<Server Name>’  
+    New-SPRSServiceApplication -Name 'MyServiceApplication' -ApplicationPool $appPoolName -DatabaseName 'MyServiceApplicationDatabase' -DatabaseServer '<Server Name>'  
     ```  
   
 3.  Rufen Sie das neue Dienstanwendungsobjekt ab, und übergeben Sie das Objekt in die Pipe des neuen Proxy-Cmdlets.  
   
     ```  
-    Get-SPRSServiceApplication –name MyServiceApplication | New-SPRSServiceApplicationProxy “MyServiceApplicationProxy”  
+    Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
 ## <a name="related-tasks"></a>Verwandte Aufgaben

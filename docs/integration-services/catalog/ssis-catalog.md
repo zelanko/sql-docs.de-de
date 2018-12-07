@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e63424772029acf5862d19362e9a7e9bd0e082c1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641407"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535536"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
   Der **SSISDB**-Katalog ist der zentrale Punkt zum Arbeiten mit [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Projekten (SSIS), die Sie auf dem [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Server bereitgestellt haben. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
@@ -394,7 +394,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
 
   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] schließt die SSISDB-Datenbank ein. Sie können Sichten in der SSISDB-Datenbank abfragen, um im **SSISDB** -Katalog gespeicherte Objekte, Einstellungen und operative Daten zu überprüfen. Dieses Thema enthält Anweisungen zum Sichern und Wiederherstellen der Datenbank.  
   
- Der **SSISDB** -Katalog speichert die Pakete, die Sie auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt haben. Weitere Informationen zum Katalog finden Sie unter [SSIS-Katalog](../../integration-services/catalog/ssis-catalog.md).  
+ Der **SSISDB**-Katalog speichert die Pakete, die Sie auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitgestellt haben. Weitere Informationen zum Katalog finden Sie unter [SSIS-Katalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ###  <a name="backup"></a> So sichern Sie die SSIS-Datenbank  
   
@@ -627,7 +627,7 @@ Geben Sie das Kennwort an, das Sie beim Erstellen des SSIS-Katalogs auf der Seit
 > [!WARNING]  
 >  Das automatische Failover für die SSISDB-Datenbank wird nur unterstützt, wenn Sie die SSIS-Unterstützung für Always On aktiviert haben.  
   
- Die neu hinzugefügten sekundären Replikate aus der Always On-Verfügbarkeitsgruppe werden in der Tabelle angezeigt. Klicken Sie auf **Verbinden…** , und geben Sie Anmeldeinformationen für die Authentifizierung ein, um eine Verbindung mit dem Replikat herzustellen. Das Benutzerkonto muss auf jedem Replikat Mitglied der Gruppe „sysadmin“ sein, um die SSIS-Unterstützung für Always On zu aktivieren. Klicken Sie nach der erfolgreichen Herstellung einer Verbindung mit jedem Replikat auf **OK** , um die SSIS-Unterstützung für Always On zu aktivieren.  
+ Die neu hinzugefügten sekundären Replikate aus der Always On-Verfügbarkeitsgruppe werden in der Tabelle angezeigt. Klicken Sie für jedes Replikat in der Liste auf die Schaltfläche **Verbinden...**, und geben Sie Anmeldeinformationen für die Authentifizierung ein, um eine Verbindung mit dem Replikat herzustellen. Das Benutzerkonto muss auf jedem Replikat Mitglied der Gruppe „sysadmin“ sein, um die SSIS-Unterstützung für Always On zu aktivieren. Klicken Sie nach der erfolgreichen Herstellung einer Verbindung mit jedem Replikat auf **OK** , um die SSIS-Unterstützung für Always On zu aktivieren.  
  
 Wenn im Kontextmenü angezeigt wird, dass die Option **Always On-Unterstützung aktivieren** deaktiviert ist, nachdem Sie die erforderlichen Schritte abgeschlossen haben, versuchen Sie Folgendes:
 1.  Aktualisieren Sie das Kontextmenü, indem Sie auf die Option **Aktualisieren** klicken.

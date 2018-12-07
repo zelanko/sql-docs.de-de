@@ -23,12 +23,12 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 04664f3e8553ba1c9a29f6036532d2b8bc8fe3dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f49a603d7b5307c2ddac938b32361e67716f705f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742788"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534374"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>Verbindungs-Manager für mehrere Flatfiles
   Mit einem Verbindungs-Manager für mehrere Flatfiles kann ein Paket auf Daten in mehreren Flatfiles zugreifen. Eine Flatfilequelle kann beispielsweise einen Verbindungs-Manager für mehrere Flatfiles verwenden, wenn sich der Datenflusstask in einem Schleifencontainer wie dem For-Schleifencontainer befindet. In jeder Schleife des Containers werden von der Flatfilequelle Daten vom nächsten Dateinamen geladen, der vom Verbindungs-Manager für mehrere Flatfiles bereitgestellt wird.  
@@ -239,7 +239,7 @@ ms.locfileid: "47742788"
 |**TextQualified**|Gibt an, ob Textdaten mit einem Textqualifiziererzeichen gekennzeichnet werden:<br /><br /> **True**: Die Textdaten in der Flatfile sind gekennzeichnet.<br /><br /> **False**: Die Textdaten in der Flatfile sind nicht gekennzeichnet.|  
 |**Name**|Geben Sie einen Spaltennamen an. Standardwert ist eine nummerierte Liste mit Spalten; Sie können jedoch einen eindeutigen, beschreibenden Namen auswählen.|  
 |**DataScale**|Gibt die Skala numerischer Daten an. Skala heißt in diesem Fall die Anzahl der Dezimalstellen. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).|  
-|**ColumnDelimiter**|Wählen Sie eine Option aus der Liste der verfügbaren Spaltentrennzeichen aus. Dabei sollten Sie Spaltentrennzeichen auswählen, deren Auftreten als Zeichen im Text unwahrscheinlich ist. Bei Spalten fester Breite wird dieser Wert ignoriert.<br /><br /> **{CR}{LF}** – Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.<br /><br /> **{CR}** – Als Trennzeichen für Spalten dient ein Wagenrücklauf.<br /><br /> **{LF}** – Als Trennzeichen für Spalten dient ein Zeilenvorschub.<br /><br /> **Semikolon {;}** – Als Trennzeichen für Spalten dient ein Semikolon.<br /><br /> **Doppelpunkt {:}** – Als Trennzeichen für Spalten dient ein Doppelpunkt.<br /><br /> **Komma {,}** – Als Trennzeichen für Spalten dient ein Komma.<br /><br /> **Tabulator {t}** – Als Trennzeichen für Spalten dient ein Tabulator.<br /><br /> **Senkrechter Strich {&#124;}** – Als Trennzeichen für Spalten dient ein senkrechter Strich.|  
+|**ColumnDelimiter**|Wählen Sie eine Option aus der Liste der verfügbaren Spaltentrennzeichen aus. Dabei sollten Sie Spaltentrennzeichen auswählen, deren Auftreten als Zeichen im Text unwahrscheinlich ist. Bei Spalten fester Breite wird dieser Wert ignoriert.<br /><br /> **{CR}{LF}**: Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.<br /><br /> **{CR}**: Als Trennzeichen für Spalten dient ein Wagenrücklauf.<br /><br /> **{LF}**: Als Trennzeichen für Spalten dient ein Zeilenvorschub.<br /><br /> **Semikolon {;}**: Als Trennzeichen für Spalten dient ein Semikolon.<br /><br /> **Doppelpunkt {:}**:Als Trennzeichen für Spalten dient ein Doppelpunkt.<br /><br /> **Komma {,}**: Als Trennzeichen für Spalten dient ein Komma.<br /><br /> **Tabulator {t}**:Als Trennzeichen für Spalten dient ein Tabulator.<br /><br /> **Senkrechter Strich {&#124;}**: Als Trennzeichen für Spalten dient ein senkrechter Strich.|  
 |**DataPrecision**|Gibt die Präzision numerischer Daten an. Präzision heißt in diesem Fall die Anzahl der Stellen. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Gibt an, welcher Wert als Anzahl von Bytes gespeichert werden soll; bei Unicode-Dateien wird dieser Wert als Zeichenanzahl angezeigt. Bei mit Trennzeichen versehenen Spalten wird dieser Wert ignoriert.<br /><br /> **Hinweis:** Im Objektmodell heißt diese Eigenschaft ColumnWidth.|  
   

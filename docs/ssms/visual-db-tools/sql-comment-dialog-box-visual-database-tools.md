@@ -13,16 +13,16 @@ ms.assetid: a384b583-cec5-4f86-8353-954c989dd94d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d6e5236f261c6d4814b591664c3640c28defff9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8f22be01ff75aae6f6eb663c046eb3e5cba6697
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816948"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514978"
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>SQL-Kommentar (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Durch dieses Dialogfeld wird ein Bereich zum Bearbeiten zur Verfügung gestellt, in dem Sie eine detaillierte Beschreibung der Abfrage verfassen können. Öffnen Sie zum Zugreifen auf das Dialogfeld die Abfrage oder Sicht im Abfrage- und Sicht-Designer. Wählen Sie im Fenster **Eigenschaften** die Option **SQL-Kommentar**aus, und klicken Sie auf die Auslassungspunkte (**…**) rechts vom Eigenschaftenfeld.  
+Durch dieses Dialogfeld wird ein Bereich zum Bearbeiten zur Verfügung gestellt, in dem Sie eine detaillierte Beschreibung der Abfrage verfassen können. Öffnen Sie zum Zugreifen auf das Dialogfeld die Abfrage oder Sicht im Abfrage- und Sicht-Designer. Klicken Sie im Fenster **Eigenschaften** auf **SQL-Kommentar**, und klicken Sie auf die Auslassungspunkte (**...**) rechts vom Eigenschaftenfeld.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Anzeigen von Abfrageeigenschaften &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/show-query-properties-visual-database-tools.md)  

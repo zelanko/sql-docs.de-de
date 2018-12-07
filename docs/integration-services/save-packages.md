@@ -19,12 +19,12 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b48a90afb091382446900cd1875533f8976810f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e9a2cbb66b7b77a9cb87b779baf76f63f627bd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693398"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542024"
 ---
 # <a name="save-packages"></a>Speichern von Paketen
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] erstellen Sie Pakete mithilfe des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers und speichern diese als XML-Dateien (DTSX-Dateien) im Dateisystem. Sie können auch Kopien der Paket-XML-Datei in der msdb-Datenbank in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oder im Paketspeicher speichern. Der Paketspeicher stellt die Ordner im Dateisystempfad dar, die von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verwaltet werden.  
@@ -68,7 +68,7 @@ ms.locfileid: "47693398"
   
 5.  Wenn Sie in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]speichern, geben Sie den Authentifizierungstyp an und, falls Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwenden, einen Benutzernamen und ein Kennwort.  
   
-6.  Geben Sie zum Angeben des Paketpfades entweder den Pfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um den Speicherort des Pakets anzugeben. Der Standardname des Pakets lautet Paket. Optional können Sie den Paktnamen aktualisieren, sodass er Ihren Bedürfnissen entspricht.  
+6.  Geben Sie zum Angeben des Paketpfads entweder den Pfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um den Speicherort des Pakets anzugeben. Der Standardname des Pakets lautet Paket. Optional können Sie den Paktnamen aktualisieren, sodass er Ihren Bedürfnissen entspricht.  
   
      Wenn Sie **SQL Server** in der Option **Paketpfad** auswählen, besteht der Paketpfad aus logischen Ordnern in **msdb** und dem Paketnamen. Ist z.B. das Paket DownloadMonthlyData dem Ordner Finance im Ordner MSDB (der Standardname des logischen Stammordners in **msdb**) zugeordnet, lautet der Paketpfad MSDB/Finance/DownloadMonthlyData für das Paket DownloadMonthlyData.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47693398"
   
 7.  Überprüfen Sie die Paketschutzebene.  
   
-8.  Klicken Sie optional auf die Schaltfläche mit den drei Punkten **(…)** neben dem Feld **Schutzebene** , um die Schutzebene zu ändern.  
+8.  Klicken Sie optional auf die Auslassungspunkte **(…)** neben dem Feld **Schutzebene**, um die Schutzebene zu ändern.  
   
     -   Wählen Sie im Dialogfeld **Paketschutzebene** eine andere Schutzebene aus.  
   

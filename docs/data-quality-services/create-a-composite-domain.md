@@ -5,8 +5,7 @@ ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
@@ -15,12 +14,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 275a22b7fca0634fd3ae955ead6c7cbbcd9acf66
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 81173982e9c44b135a3ba98312839ac799461988
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701778"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616860"
 ---
 # <a name="create-a-composite-domain"></a>Erstellen einer Verbunddomäne
 
@@ -98,7 +97,7 @@ ms.locfileid: "51701778"
  Nachdem Sie eine Verbunddomäne erstellt haben, können Sie andere Domänenverwaltungstasks in der Domäne ausführen, Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
- Data Quality Services ermöglicht es Ihnen, Daten auf Grundlage des Wissens, nicht nur nach Trennzeichen oder Reihenfolge, zu analysieren. Die Analyse der Wissensdatenbank wird verwendet, wenn einer Verbunddomäne komplexe Quelldaten zugeordnet werden und Sie keine Verweisdatendienste verwenden. Sie können die Analyse der Wissensdatenbank verwenden, um die Daten aus der Datenquelle in die relevanten Einzeldomänen zu analysieren. Mit der Analyse der Wissensdatenbank versucht DQS zunächst, Wissen zu verwenden, um komplexe Daten in einzelne Domänen zu analysieren. Wenn möglich identifiziert DQS Teile der Zeichenfolge wie in einer oder mehreren Domänen und analysiert die Zeichenfolge in seine verschiedenen Domänen. Beispiel: Sie haben „John B. Doe“ als komplexen Wert in einem Feld für den vollen Namen, das durch eine Verbunddomäne „Voller Name“ dargestellt wird. Wenn DQS „John“ als Teil der Vornamendomäne und „Doe“ als Teil der Nachnamendomäne identifiziert, fügt DQS auf Grundlage des Domänenwissens „B.“  zur Domäne für den zweiten Vornamen hinzu.  
+ Data Quality Services ermöglicht es Ihnen, Daten auf Grundlage des Wissens, nicht nur nach Trennzeichen oder Reihenfolge, zu analysieren. Die Analyse der Wissensdatenbank wird verwendet, wenn einer Verbunddomäne komplexe Quelldaten zugeordnet werden und Sie keine Verweisdatendienste verwenden. Sie können die Analyse der Wissensdatenbank verwenden, um die Daten aus der Datenquelle in die relevanten Einzeldomänen zu analysieren. Mit der Analyse der Wissensdatenbank versucht DQS zunächst, Wissen zu verwenden, um komplexe Daten in einzelne Domänen zu analysieren. Wenn möglich identifiziert DQS Teile der Zeichenfolge wie in einer oder mehreren Domänen und analysiert die Zeichenfolge in seine verschiedenen Domänen. Beispiel: Sie haben „John B. Doe“ als komplexen Wert in einem Feld für den vollständigen Namen, das durch die Verbunddomäne „Vollständiger Name“ dargestellt wird. Wenn DQS „John“ als Teil der Vornamendomäne und „Doe“ als Teil der Nachnamendomäne identifiziert, fügt DQS auf Grundlage des Domänenwissens „B.“ hinzu. zur Domäne für den zweiten Vornamen hinzu.  
   
  Sie können die Analyse der Wissensdatenbank nur verwenden, wenn Sie auch die auf Trennzeichen basierende Analyse auswählen. Die Analyse der Wissensdatenbank ersetzt nicht die Trennzeichenanalyse, sondern erweitert sie. Nur, wenn kein Wissen dafür vorhanden ist, verwendet DQS für die Analyse ein Trennzeichen. In einigen Fällen bestimmt DQS möglicherweise die eine Analyse durch die Analyse der Wissensdatenbank und bestimmt dann eine andere Analyse durch die auf Trennzeichen basierte Analyse.  
   

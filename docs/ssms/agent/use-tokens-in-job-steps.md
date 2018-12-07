@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 42d80d891621de73b4bc333ad1728e595a8bf810
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1e3e1f9dffef09e3799be462e287705eef3b2e30
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703578"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532608"
 ---
 # <a name="use-tokens-in-job-steps"></a>Verwenden von Token in Auftragsschritten
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ In der folgenden Tabelle sind die vom [!INCLUDE[ssNoVersion](../../includes/ssno
 |**(MSSA)**|Name des Master-SQLServerAgent-Diensts.|  
 |**(OSCMD)**|Das Präfix des Programms, das zur Ausführung der **CmdExec** -Auftragsschritte verwendet wird.|  
 |**(SQLDIR)**|Verzeichnis, in dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist. Der Standardwert lautet "C:\Programme\Microsoft SQL Server\MSSQL".|  
-|**(SQLLOGDIR)**|Ersetzungstoken für den Pfad des SQL Server-Fehlerprotokollordners – beispielsweise $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
+|**(SQLLOGDIR)**|Ersetzungstoken für den Pfad des SQL Server-Fehlerprotokollordners, beispielsweise $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
 |**(STEPCT)**|Die Angabe, wie oft dieser Schritt ausgeführt wurde (ohne Abbrüche). Mit diesem Token kann der Schrittbefehl den Abbruch einer aus mehreren Schritten bestehenden Schleife erzwingen.|  
 |**(STEPID)**|Schritt-ID.|  
 |**(SRVR)**|Name des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird. Wenn es sich bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz um eine benannte Instanz handelt, ist auch der Name der Instanz angegeben.|  

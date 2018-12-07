@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 058272ca68136c3a1f00a20ef3036c5c9704c659
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 863e28c5a2545523161135821c420c1711ebf4e5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602540"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513774"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Installieren von SQL Server mit SysPrep
 
@@ -114,13 +114,13 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 11. Geben Sie auf der Instanzkonfigurationsseite die Instanz-ID für die Instanz an. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen. 
   
-     **Instanz-ID** — Die Instanz-ID wird verwendet, um Installationsverzeichnisse und Registrierungsschlüssel für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu identifizieren. Dies ist der Fall für Standardinstanzen und benannte Instanzen. Wenn die vorbereitete Instanz während des Schritts "Abschließen" als Standardinstanz abgeschlossen wird, wird der Instanzname mit MSSQLSERVER überschrieben. Die Instanz-ID bleibt die gleiche wie angegeben. 
+     **Instanz-ID**: Die Instanz-ID wird verwendet, um Installationsverzeichnisse und Registrierungsschlüssel für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu identifizieren. Dies ist der Fall für Standardinstanzen und benannte Instanzen. Wenn die vorbereitete Instanz während des Schritts "Abschließen" als Standardinstanz abgeschlossen wird, wird der Instanzname mit MSSQLSERVER überschrieben. Die Instanz-ID bleibt die gleiche wie angegeben. 
   
-     **Instanzstammverzeichnis** – Standardmäßig lautet das Instanzstammverzeichnis [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]. Verwenden Sie das dafür vorgesehene Feld, um ein nicht standardmäßiges Stammverzeichnis anzugeben. Alternativ können Sie auf **Durchsuchen** klicken, um einen Installationsordner zu suchen. Das im Vorbereitungsschritt angegebene Verzeichnis wird während der Konfiguration im Schritt "Abschließen" verwendet. 
+     **Instanzstammverzeichnis**: Standardmäßig lautet das Instanzstammverzeichnis [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]. Verwenden Sie das dafür vorgesehene Feld, um ein nicht standardmäßiges Stammverzeichnis anzugeben. Alternativ können Sie auf **Durchsuchen** klicken, um einen Installationsordner zu suchen. Das im Vorbereitungsschritt angegebene Verzeichnis wird während der Konfiguration im Schritt "Abschließen" verwendet. 
   
      Alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Service Packs und Updates werden für jede Komponente einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übernommen. 
   
-     **Installierte Instanzen** — Im Raster werden Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angezeigt, die sich auf dem Computer befinden, auf dem Setup ausgeführt wird. 
+     **Installierte Instanzen**: Im Raster werden Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angezeigt, die sich auf dem Computer befinden, auf dem das Setup ausgeführt wird. 
   
 12. Auf der Seite **Erforderlicher Speicherplatz** wird der für die angegebenen Funktionen erforderliche Speicherplatz berechnet. Der erforderliche Speicherplatz wird dann mit dem verfügbaren Speicherplatz auf dem Computer verglichen. 
   
@@ -163,17 +163,17 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 9. Geben Sie auf der Instanzkonfigurationsseite den Instanznamen für die vorbereitete Instanz an. Nach Abschluss der Konfiguration von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist dies der Name der Instanz. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen. 
   
-     **Instanz-ID** — Die Instanz-ID wird verwendet, um Installationsverzeichnisse und Registrierungsschlüssel für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu identifizieren. Dies ist der Fall für Standardinstanzen und benannte Instanzen. Wenn die vorbereitete Instanz während des Schritts "Abschließen" als Standardinstanz abgeschlossen wird, wird der Instanzname mit MSSQLSERVER überschrieben. Die Instanz-ID bleibt die gleiche wie während des Vorbereitungsschritts angegeben. 
+     **Instanz-ID**: Die Instanz-ID wird verwendet, um Installationsverzeichnisse und Registrierungsschlüssel für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu identifizieren. Dies ist der Fall für Standardinstanzen und benannte Instanzen. Wenn die vorbereitete Instanz während des Schritts "Abschließen" als Standardinstanz abgeschlossen wird, wird der Instanzname mit MSSQLSERVER überschrieben. Die Instanz-ID bleibt die gleiche wie während des Vorbereitungsschritts angegeben. 
   
-     **Instanzstammverzeichnis** — Das im Vorbereitungsschritt angegebene Verzeichnis wird verwendet und kann in diesem Schritt nicht geändert werden. 
+     **Instanzstammverzeichnis**: Das im Vorbereitungsschritt angegebene Verzeichnis wird verwendet und kann in diesem Schritt nicht geändert werden. 
   
      Alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Service Packs und Updates werden für jede Komponente einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übernommen. 
   
-     **Installierte Instanzen** – Im Raster werden Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angezeigt, die sich auf dem Computer befinden, auf dem Setup ausgeführt wird. 
+     **Installierte Instanzen** – Im Raster werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen angezeigt, die sich auf dem Computer befinden, auf dem Setup ausgeführt wird. 
   
 10. Der Ablauf für die weiteren Vorgänge in diesem Artikel richtet sich nach den Funktionen, die Sie während des Vorbereitungsschritts ausgewählt haben. Je nach Auswahl werden möglicherweise nicht alle Seiten angezeigt. 
   
-11. Geben Sie auf der Seite **Serverkonfiguration – Dienstkonten** Anmeldekonten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste an. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, ist von den Funktionen abhängig, die Sie für die Installation ausgewählt haben. 
+11. Geben Sie auf der Seite **Serverkonfiguration > Dienstkonten** Anmeldekonten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste an. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, ist von den Funktionen abhängig, die Sie für die Installation ausgewählt haben. 
   
      Sie können allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensten dasselbe Anmeldekonto zuweisen, oder Sie können jedes Dienstkonto einzeln konfigurieren. Außerdem können Sie angeben, ob Dienste automatisch starten sollen, manuell gestartet werden oder deaktiviert sind. [!INCLUDE[msCoName](../../includes/msconame-md.md)] , die Dienstkonten einzeln zu konfigurieren, um möglichst geringe Rechte für jeden Dienst bereitzustellen. Dabei erhalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste die Berechtigungen, die mindestens erforderlich ist, um ihre Tasks auszuführen. Weitere Informationen finden Sie unter [Serverkonfiguration – Dienstkonten](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) und [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). 
   
@@ -183,15 +183,15 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
      Wenn Sie die Angabe der Anmeldeinformationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste abgeschlossen haben, klicken Sie auf **Weiter**. 
   
-12. Verwenden Sie die Registerkarte **Serverkonfiguration - Sortierung** , um nicht standardmäßige Sortierungen für das [!INCLUDE[ssDE](../../includes/ssde-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]anzugeben. Weitere Informationen finden Sie unter [Serverkonfiguration – Sortierung](https://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022). 
+12. Verwenden Sie die Registerkarte **Serverkonfiguration – Sortierung** , um nicht standardmäßige Sortierungen für das [!INCLUDE[ssDE](../../includes/ssde-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]anzugeben. Weitere Informationen finden Sie unter [Serverkonfiguration – Sortierung](https://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022). 
   
 13. Geben Sie auf der Seite Konfiguration des [!INCLUDE[ssDE](../../includes/ssde-md.md)] s – Kontenbereitstellung folgende Informationen an:  
   
-    - Sicherheitsmodus — Wählen Sie für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die Windows-Authentifizierung oder die Authentifizierung im gemischten Modus aus. Bei Auswahl des gemischten Authentifizierungsmodus müssen Sie ein sicheres Kennwort für das integrierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemadministratorkonto angeben. 
+    - Sicherheitsmodus – Wählen Sie die Windows-Authentifizierung oder die Authentifizierung im gemischten Modus für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aus. Bei Auswahl des gemischten Authentifizierungsmodus müssen Sie ein sicheres Kennwort für das integrierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemadministratorkonto angeben. 
   
          Nachdem ein Gerät erfolgreich eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat, wird für die Windows-Authentifizierung und den gemischten Modus derselbe Sicherheitsmechanismus verwendet. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Serverkonfiguration](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
   
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren – Sie müssen wenigstens einen Systemadministrator für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angeben. Um das Konto hinzuzufügen, unter dem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup ausgeführt werden soll, klicken Sie auf **Aktuellen Benutzer hinzufügen**. Um Konten zur Liste der Systemadministratoren hinzuzufügen bzw. daraus zu entfernen, klicken Sie auf **Hinzufügen** bzw. **Entfernen**, und bearbeiten Sie anschließend die Liste der Benutzer, Gruppen bzw. Computer, die Administratorrechte für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz haben sollen. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Serverkonfiguration](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administratoren – Sie müssen mindestens einen Systemadministrator für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz angeben. Um das Konto hinzuzufügen, unter dem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup ausgeführt werden soll, klicken Sie auf **Aktuellen Benutzer hinzufügen**. Um Konten zur Liste der Systemadministratoren hinzuzufügen bzw. daraus zu entfernen, klicken Sie auf **Hinzufügen** bzw. **Entfernen**, und bearbeiten Sie anschließend die Liste der Benutzer, Gruppen bzw. Computer, die Administratorrechte für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz haben sollen. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Serverkonfiguration](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720). 
   
      Wenn Sie die Bearbeitung der Liste abgeschlossen haben, klicken Sie auf **OK**. Überprüfen Sie die Liste der Administratoren im Konfigurationsdialogfeld. Sobald die Liste vollständig ist, klicken Sie auf **Weiter**. 
   

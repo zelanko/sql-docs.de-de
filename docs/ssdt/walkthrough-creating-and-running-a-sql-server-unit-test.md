@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86f54b31eb9bab93b6a4a3be918e1011f023ab5b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 71be318c40c5776440bf427cad57ed3fb903e55a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666519"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540938"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests
 In dieser exemplarischen Vorgehensweise erstellen Sie einen SQL Server-Komponententest, mit dem das Verhalten mehrerer gespeicherter Prozeduren überprüft wird. Mithilfe von SQL Server-Komponententests können Codefehler, die u.U. ein fehlerhaftes Anwendungsverhalten verursachen, leichter identifiziert werden. SQL Server-Komponententests und -Anwendungstests können im Rahmen einer automatisierten Testreihe ausgeführt werden.  
@@ -556,7 +556,7 @@ Zu Testbeginn wird davon ausgegangen, dass die Datenbank einen fehlerfreien Zust
   
 4.  Klicken Sie im Bereich **Testbedingungen** in der Liste auf **Erwartetes Schema** , und klicken Sie dann auf **Testbedingung hinzufügen**.  
   
-5.  Klicken Sie im Fenster **Eigenschaften** in der Eigenschaft **Konfiguration** auf die Schaltfläche zum Durchsuchen („**…**“).  
+5.  Klicken Sie im Fenster **Eigenschaften** in der Eigenschaft **Konfiguration** auf die Schaltfläche zum Durchsuchen (**…**).  
   
 6.  Geben Sie im Dialogfeld **Konfiguration für expectedSchemaCondition1** eine Verbindung mit der Datenbank an. Wenn Sie beispielsweise den Standardbereitstellungsspeicherort, d.h. LocalDB, verwendet haben, würden Sie auf **Neue Verbindung** klicken und **(LocalDB)\Projects** angeben. Wählen Sie anschließend den Namen der Datenbank aus.  
   
@@ -621,7 +621,7 @@ Zu Testbeginn wird davon ausgegangen, dass die Datenbank einen fehlerfreien Zust
   
 13. Klicken Sie im Bereich **Testbedingungen** in der Liste auf **Datenprüfsumme** , und klicken Sie dann auf **Testbedingung hinzufügen**.  
   
-14. Klicken Sie im Fenster **Eigenschaften** in der Eigenschaft **Konfiguration** auf die Schaltfläche zum Durchsuchen („**…**“).  
+14. Klicken Sie im Fenster **Eigenschaften** in der Eigenschaft **Konfiguration** auf die Schaltfläche zum Durchsuchen (**…**).  
   
 15. Geben Sie im Dialogfeld **Konfiguration für checksumCondition1** eine Verbindung mit der Datenbank an.  
   

@@ -11,12 +11,12 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f03dfa50d19496b95a1c9ee4e3bf31e0c70cd79
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: edb990e57f3f02db207959a4511d3b23069b0db4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702908"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507764"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Optionen (Umgebung – Seite „Schriftarten und Farben“)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ Führt alle Elemente der Benutzeroberfläche auf, für die Sie das Schriftart- u
 Die Schaltfläche **Standard verwenden** setzt den Wert für die Standardschriftart- und -farbwerte des Listenelements zurück, das Sie aus der Liste **Einstellungen anzeigen für** ausgewählt haben.  
   
 **Schriftart (Fett bedeutet mit fester Breite formatiert)**  
-Führt alle Schriftarten auf, die auf Ihrem System installiert sind. Wenn diese Dropdownliste erstmalig geöffnet wird, ist die aktuelle Schriftart für das Element ausgewählt, das Sie aus der Liste **Einstellungen anzeigen für** ausgewählt haben. Feste Schriftarten – die im Editor einfacher auszurichten sind - werden in Fettschrift angezeigt.  
+Führt alle Schriftarten auf, die auf Ihrem System installiert sind. Wenn diese Dropdownliste erstmalig geöffnet wird, ist die aktuelle Schriftart für das Element ausgewählt, das Sie aus der Liste **Einstellungen anzeigen für** ausgewählt haben. Feste Schriftarten können im Editor leichter ausgerichtet werden und werden in Fettschrift angezeigt.  
   
 **Größe**  
 Führt die verfügbaren Schriftgrade für die ausgewählte Schriftart auf. Die Änderung des Schriftgrades der Schriftart wirkt sich auf alle Einträge in der Liste **Elemente anzeigen** für ein unter **Einstellungen anzeigen für** ausgewähltes Element aus.  

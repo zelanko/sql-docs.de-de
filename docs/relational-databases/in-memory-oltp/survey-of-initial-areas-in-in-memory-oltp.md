@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f70aa8745576c2837d4b957fed9783baa0248f07
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31a4e59da5f3555f79ac6fe6b82fa2d03721a81b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657609"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519451"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Überblick des Anfangsbereichs in In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ Eine Reihe exzellenter Blogbeiträge erklärt Ihnen aus verschiedenen Blickwinke
 #### <a name="real-time-operational-analytics"></a>Operative Echtzeitanalyse
 
 1. [Real-Time Operational Analytics Using In-Memory Technology (Operative Echtzeitanalyse mit In-Memory-Technologie)](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)
-2. [Real-Time Operational Analytics – Overview nonclustered columnstore index (NCCI) (Operative Echtzeitanalyse – Überblick über den nicht gruppierten Columnstore-Index [Nonclustered Columnstore Index, NCCI])](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
+2. [Real-Time Operational Analytics – Overview nonclustered columnstore index (NCCI) (Operative Echtzeitanalyse: Überblick über den nicht gruppierten Columnstore-Index [Nonclustered Columnstore Index, NCCI])](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
 3. [Real-Time Operational Analytics: Simple example using nonclustered clustered columnstore index (NCCI) in SQL Server 2016 (Operative Echtzeitanalyse: Einfaches Beispiel mit Verwendung des gruppierten/nicht gruppierten Columnstore-Index [Nonclustered Columnstore Index, NCCI] in SQL Server 2016)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
 4. [Real-Time Operational Analytics: DML operations and nonclustered columnstore index (NCCI) in SQL Server 2016 (Operative Echtzeitanalyse: DML-Operationen und nicht gruppierter Columnstore-Index [Nonclustered Columnstore Index, NCCI] in SQL Server 2016)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
 5. [Real-Time Operational Analytics: Filtered nonclustered columnstore index (NCCI) (Operative Echtzeitanalyse: Gefilterter, nicht gruppierter Columnstore-Index [Nonclustered Columnstore Index, NCCI])](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)

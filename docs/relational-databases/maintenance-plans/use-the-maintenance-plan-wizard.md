@@ -35,12 +35,12 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee630731ac4cfa1648eb6096f5c80ee817d0d989
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 533447273bb174eadeace6cd3b8a2b2f95504811
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217938"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544148"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Verwenden des Wartungsplanungs-Assistenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ Sie müssen [Agent XPs (Serverkonfigurationsoption)](../../database-engine/confi
   
     5.  Wenn Sie unter **Zeitplan**die Option **Einzelner Zeitplan für den gesamten Plan oder kein Zeitplan**ausgewählt haben, klicken Sie auf **Ändern**.  
   
-        1.  Geben Sie im Dialogfeld **Neuer Auftragszeitplan** im Feld **Name** den Namen des Auftragszeitplans ein.  
+        1.  Geben Sie in das Dialogfeld **Neuer Auftragszeitplan** im Feld **Name** den Namen des Auftragszeitplans ein.  
   
         2.  Wählen Sie in der Liste **Zeitplantyp** den Zeitplantyp aus:  
   
@@ -113,15 +113,15 @@ Sie müssen [Agent XPs (Serverkonfigurationsoption)](../../database-engine/confi
   
                 -   Wenn Sie **Monatlich**auswählen, wählen Sie **Tag** oder **Am**aus.  
   
-                    -   Wenn Sie **Tag**auswählen, geben Sie das Datum ein, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Falls Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am 15. ausgeführt wird, wählen Sie **Tag** aus, und geben Sie in das erste Feld "15" und in das zweite Feld "2" ein. Beachten Sie, dass die größte im zweiten Feld zugelassene Zahl "99" ist.  
+                    -   Wenn Sie **Tag**auswählen, geben Sie das Datum ein, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Falls Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am 15. ausgeführt wird, wählen Sie **Tag** aus, und geben Sie in das erste Feld „15“ und in das zweite Feld „2“ ein. Beachten Sie, dass die größte im zweiten Feld zugelassene Zahl „99“ ist.  
   
-                    -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Falls Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag**und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld "2" ein. Sie können auch **erster**, **zweiter**, **dritter**oder **vierter**sowie bestimmte Wochentage (z.B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zugelassene Zahl "99" ist.  
+                    -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Falls Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag** und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld „2“ ein. Sie können auch **erster**, **zweiter**, **dritter**oder **vierter**sowie bestimmte Wochentage (z.B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zugelassene Zahl „99“ ist.  
   
             2.  Geben Sie unter **Häufigkeit pro Tag**an, wie oft der Auftragszeitplan an dem Tag wiederholt werden soll, an dem der Auftragszeitplan ausgeführt wird:  
   
                 -   Wenn Sie **Einmalig um**auswählen, geben Sie im Feld **Einmalig um** die spezifische Tageszeit ein, zu der der Auftragszeitplan ausgeführt werden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
-                -   Wenn Sie **Alle**auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit**ausgewählten Tag ausgeführt werden soll. Wenn Sie z.B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle**aus, geben in das erste Feld „2“ ein und wählen in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)** auswählen. Beachten Sie, dass die größte im ersten Feld zugelassene Zahl "100" ist.  
+                -   Wenn Sie **Alle**auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit**ausgewählten Tag ausgeführt werden soll. Wenn Sie z. B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle** aus, geben in das erste Feld „2“ ein und wählen in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)** auswählen. Beachten Sie, dass die größte im ersten Feld zugelassene Zahl „100“ ist.  
   
                      Geben Sie im Feld **Start** die Zeit ein, zu der die Ausführung des Auftragszeitplans beginnen soll. Geben Sie im Feld **Ende** die Zeit ein, zu der die Ausführung des Auftragszeitplans enden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
@@ -143,7 +143,7 @@ Sie müssen [Agent XPs (Serverkonfigurationsoption)](../../database-engine/confi
   
     > **HINWEIS:** Die hier ausgewählten Tasks bestimmen, auf welchen Seiten Sie nach der Seite **Wartungstaskreihenfolge auswählen** Einstellungen vornehmen müssen.  
   
-8.  Klicken Sie auf der Seite **Wartungstaskreihenfolge auswählen** einen Task aus, und klicken Sie auf **Nach oben** oder **Nach unten** , um die Ausführungsreihenfolge zu ändern. Klicken Sie auf **Weiter**, wenn Sie fertig bzw. mit der aktuellen Taskreihenfolge zufrieden sind.  
+8.  Wählen Sie auf der Seite **Wartungstaskreihenfolge auswählen** einen Task aus, und klicken Sie auf **Nach oben...** oder **Nach unten...**, um die Ausführungsreihenfolge zu ändern. Klicken Sie auf **Weiter**, wenn Sie fertig bzw. mit der aktuellen Taskreihenfolge zufrieden sind.  
   
     > **HINWEIS:** Wenn Sie zuvor auf der Seite **Planeigenschaften auswählen** die Option **Getrennte Zeitpläne für jede Aufgabe** ausgewählt haben, können Sie die Reihenfolge der Wartungstasks auf dieser Seite nicht ändern.  
   
@@ -206,7 +206,7 @@ Kontrollkästchen**Indizes einschließen**
   
 ## <a name="define-the-index-tasks"></a>Definieren der Indextasks  
   
-1.  Wählen Sie auf der Seite **Task „Index neu organisieren“ definieren** die Server aus, auf denen Indexseiten in eine effizientere Suchreihenfolge gebracht werden sollen. Für diesen Task wird die `ALTER INDEX … REORGANIZE`-Anweisung verwendet. Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Klicken Sie anschließend auf **Weiter**.  
+1.  Wählen Sie auf der Seite **Task „Index neu organisieren“ definieren** die Server aus, auf denen Indexseiten in eine effizientere Suchreihenfolge gebracht werden sollen. Für diesen Task wird die `ALTER INDEX ... REORGANIZE`-Anweisung verwendet. Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Klicken Sie anschließend auf **Weiter**.  
   
      Die folgenden Optionen sind auf dieser Seite verfügbar.  
   
@@ -220,9 +220,9 @@ Kontrollkästchen**Indizes einschließen**
      Gibt die Tabellen oder Indizes an, auf die sich dieser Task auswirkt. Nicht verfügbar, wenn im Objektfeld der Eintrag **Tabellen und Sichten** ausgewählt ist.  
   
      Kontrollkästchen**Große Objekte komprimieren**   
-     Hebt die Speicherplatzzuordnung für Tabellen und Sichten nach Möglichkeit auf. Diese Option verwendet `ALTER INDEX … LOB_COMPACTION = ON`.  
+     Hebt die Speicherplatzzuordnung für Tabellen und Sichten nach Möglichkeit auf. Diese Option verwendet `ALTER INDEX ... LOB_COMPACTION = ON`.  
   
-2.  Wählen Sie auf der Seite **Task „Index neu erstellen“ definieren** die Datenbanken aus, in denen mehrere Indizes neu erstellt werden sollen. Für diesen Task wird die `ALTER INDEX … REBUILD PARTITION`-Anweisung verwendet. Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).) Klicken Sie anschließend auf **Weiter**.  
+2.  Wählen Sie auf der Seite **Task „Index neu erstellen“ definieren** die Datenbanken aus, in denen mehrere Indizes neu erstellt werden sollen. Für diesen Task wird die `ALTER INDEX ... REBUILD PARTITION`-Anweisung verwendet. Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).) Klicken Sie anschließend auf **Weiter**.  
   
      Die folgenden Optionen sind auf dieser Seite verfügbar.  
   
@@ -423,7 +423,7 @@ Kontrollkästchen**Indizes einschließen**
     |**Sicherung komprimieren**|Klicken Sie hier, um die Sicherung unabhängig von der Standardeinstellung auf Serverebene zu komprimieren.<br /><br /> **\*\* Wichtig \*\*** Standardmäßig steigt die CPU-Nutzung durch die Komprimierung erheblich, und die bei der Komprimierung zusätzlich verbrauchten CPU-Ressourcen können sich negativ auf gleichzeitige Vorgänge auswirken. Daher ist es u. U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch die Ressourcenkontrolle eingeschränkt ist, komprimierte Sicherungen mit niedriger Priorität zu erstellen. Weitere Informationen finden Sie unter [Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Sicherung nicht komprimieren**|Klicken Sie hier, um unabhängig von der Standardeinstellung auf Serverebene eine nicht komprimierte Sicherung zu erstellen.|  
   
-2.  Wählen Sie auf der Seite **Task 'Datenbank sichern (differenziell)' definieren** die Datenbanken aus, für die eine Teilsicherung ausgeführt werden soll. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie in der Definitionsliste in Schritt 16 oben. Für diesen Task wird die `BACKUP DATABASE … WITH DIFFERENTIAL`-Anweisung verwendet. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  Klicken Sie auf **Weiter**, wenn Sie fertig sind.  
+2.  Wählen Sie auf der Seite **Task 'Datenbank sichern (differenziell)' definieren** die Datenbanken aus, für die eine Teilsicherung ausgeführt werden soll. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie in der Definitionsliste in Schritt 16 oben. Für diesen Task wird die `BACKUP DATABASE ... WITH DIFFERENTIAL`-Anweisung verwendet. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  Klicken Sie auf **Weiter**, wenn Sie fertig sind.  
   
 3.  Wählen Sie auf der Seite **Task 'Datenbank sichern (Transaktionsprotokoll)' definieren** die Datenbanken aus, in denen eine Sicherung für ein Transaktionsprotokoll ausgeführt werden soll. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie in der Definitionsliste in Schritt 16 oben. Für diesen Task wird die `BACKUP LOG`-Anweisung verwendet. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Klicken Sie auf **Weiter**, wenn Sie fertig sind.  
   

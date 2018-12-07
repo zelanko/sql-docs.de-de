@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32f201e6eb386119fd61aa9fb34fdc90a7ab4b25
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 67e1f72fef6c10551f3d0670aff694777f52e391
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559449"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512109"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -231,7 +231,7 @@ ENCRYPTION
 EXECUTE AS-*Klausel*  
  Gibt den Sicherheitskontext an, unter dem die Prozedur ausgeführt wird.  
   
- Für nativ kompilierte gespeicherte Prozeduren, die mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] beginnen, bestehen keine Einschränkungen für die EXECUTE AS-Klausel. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] werden die SELF-, OWNER- und *‘user_name’*-Klauseln bei nativ kompilierten gespeicherten Prozeduren unterstützt.  
+ Für nativ kompilierte gespeicherte Prozeduren, die mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] beginnen, bestehen keine Einschränkungen für die EXECUTE AS-Klausel. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] werden die SELF-, OWNER- und *'user_name'*-Klauseln bei nativ kompilierten gespeicherten Prozeduren unterstützt.  
   
  Weitere Informationen finden Sie unter [EXECUTE AS-Klausel &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
@@ -498,7 +498,7 @@ GO
 |[Grundlegende Syntax](#BasicSyntax)|CREATE PROCEDURE|  
 |[Übergeben von Parametern](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • Tabellenwertparameter-Typ <br> &nbsp;&nbsp; • CURSOR VARYING|  
 |[Ändern von Daten mithilfe einer gespeicherten Prozedur](#Modify)|UPDATE|  
-|[Fehlerbehandlung](#Error)|TRY…CATCH|  
+|[Fehlerbehandlung](#Error)|TRY...CATCH|  
 |[Verbergen der Prozedurdefinition](#Encrypt)|WITH ENCRYPTION|  
 |[Erzwingen der erneuten Kompilierung der Prozedur](#Recompile)|WITH RECOMPILE|  
 |[Festlegen des Sicherheitskontexts](#Security)|EXECUTE AS|  
@@ -797,7 +797,7 @@ EXEC HumanResources.Update_VacationHours 40;
 ###  <a name="Error"></a> Fehlerbehandlung  
  Die Beispiele in diesem Abschnitt veranschaulichen Methoden zur Behandlung von Fehlern, die bei der Ausführung der gespeicherten Prozedur auftreten können.  
   
-#### <a name="j-using-trycatch"></a>J. Verwenden von TRY…CATCH  
+#### <a name="j-using-trycatch"></a>J. Verwenden von TRY...CATCH  
  Im folgenden Beispiel wird das TRY…CATCH-Konstrukt verwendet, um Fehlerinformationen zurückzugeben, die während der Ausführung einer gespeicherten Prozedur erfasst wurden.  
   
 ```sql  

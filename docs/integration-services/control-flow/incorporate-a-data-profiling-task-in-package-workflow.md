@@ -13,12 +13,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0304d7e1a27d9ff31be603ee4d3248f9b4c472eb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 621d19785793115c924243fd750b2d78c503c1ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638798"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545786"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Einschließen einer Datenprofilerstellungs-Tasks in den Paket-Workflow
   Datenprofilerstellung und Cleanup sind in den Anfangsphasen keine Kandidaten für einen automatisierten Prozess. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]erfordert die Ausgabe des Datenprofilerstellungs-Tasks normalerweise eine visuelle Analyse und menschliches Urteilsvermögen, um zu bestimmen, ob gemeldete Verstöße von Bedeutung sind oder übertrieben. Auch nach Erkennen eines Datenqualitätsproblems ist nach wie vor ein sorgfältig durchdachter Plan erforderlich, der den besten Bereinigungsansatz beinhaltet.  
@@ -264,7 +264,7 @@ ms.locfileid: "51638798"
   
 8.  Schließen Sie die Skriptentwicklungsumgebung, und schließen Sie dann den Skripttask-Editor.  
   
-#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Alternativer Code – Lesen der Profilausgabe aus einer Variablen  
+#### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>Alternativer Code: Lesen der Profilausgabe aus einer Variablen  
  Das vorherige Verfahren zeigt, wie die Ausgabe des Datenprofilerstellungs-Tasks aus einer Datei geladen wird. Eine alternative Methode wäre allerdings, diese Ausgabe aus einer Paketvariablen zu laden. Um die Ausgabe aus einer Variablen zu laden, müssen Sie den Beispielcode wie folgt ändern:  
   
 -   Rufen Sie die **LoadXml** -Methode der **XmlDocument** -Klasse statt der **Load** -Methode auf.  

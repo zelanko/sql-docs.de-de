@@ -16,12 +16,12 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: eed8e2ea431b38ff11c61d86c869cbc3f3de82cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2213a6f87aa11db9201dc052efa5a5513e185a7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618520"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539162"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Erstellen einer Server- und Datenbank-Überwachungsspezifikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47618520"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Datenbank-Überwachungsspezifikationen sind nicht sicherungsfähige Objekte, die sich in einer gegebenen Datenbank befinden. Wenn eine Datenbank-Überwachungsspezifikation erstellt wird, befindet sich diese in einem deaktivierten Zustand.  
@@ -66,7 +66,7 @@ ms.locfileid: "47618520"
   
 1.  Erweitern Sie im Objekt-Explorer den Ordner **Sicherheit** .  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Überwachungen** , und wählen Sie dann **Neue Überwachung**aus. Weitere Informationen finden Sie unter [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Überwachungen**, und wählen Sie dann **Neue Überwachung...** aus. Weitere Informationen finden Sie unter [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
 3.  Nachdem Sie alle Optionen ausgewählt haben, klicken Sie auf **OK**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "47618520"
   
 2.  Erweitern Sie den Ordner **Sicherheit** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Datenbank-Überwachungsspezifikationen** und dann auf **Neue Datenbank-Überwachungsspezifikation**.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Datenbank-Überwachungsspezifikationen** und dann auf **Neue Datenbank-Überwachungsspezifikation...**.  
   
      Die folgenden Optionen sind im Dialogfeld **Datenbank-Überwachungsspezifikation erstellen** verfügbar.  
   

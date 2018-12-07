@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdf0e6510d566fbf2ad31ebf9996ca27ad444eda
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7130114f33159290dd6917db87638140838ee8c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677129"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538072"
 ---
 # <a name="create-a-format-file-sql-server"></a>Erstellen einer Formatdatei (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -152,7 +152,7 @@ Die folgende Beispielformatdatei für eine Tabelle mit 5 Spalten beinhaltet die 
   
 ```  
   
- Wenn Sie versuchen, Daten mithilfe folgender Optionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu importieren: „ `bcp in –c –C65001 –f format_file` …“ oder „`BULK INSERT`/`OPENROWSET` … `FORMATFILE='format_file' CODEPAGE=65001` …“, haben Informationen zur Sortierung/Codepage Priorität gegenüber der 65001-Option.  
+ Wenn Sie versuchen Daten mithilfe von „`bcp in -c -C65001 -f format_file` ...“ oder „`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ...“ in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu importieren, haben Informationen zur Sortierung/Codepage Priorität gegenüber der 65001-Option.  
 Wenn Sie daher eine Formatdatei generieren, müssen Sie die Sortierungsinformationen manuell aus der generierten Formatdatei löschen, bevor Sie die Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zurückimportieren.  
 Im Folgenden ist ein Beispiel für die Formatdatei ohne Sortierungsinformationen aufgeführt.  
   
@@ -203,7 +203,7 @@ Im Folgenden ist ein Beispiel für die Formatdatei ohne Sortierungsinformationen
  Geben Sie an der Windows-Eingabeaufforderung den folgenden `bcp` -Befehl ein:  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
 ```  
   
  Die generierte Formatdatei, `Department-c.xml`, enthält die folgenden XML-Elemente:  

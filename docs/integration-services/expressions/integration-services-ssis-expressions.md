@@ -17,12 +17,12 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5cf578d21d7a6b67d1c72ee63f5516cd7b29db7d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 315ce164146e7d08096b6e927400dc3507ea74e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638567"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523018"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services-Ausdrücke (SSIS)
   Ein Ausdruck ist eine Kombination aus Symbolen (Bezeichner, Literale, Funktionen und Operatoren), die einen einzelnen Datenwert ergeben. Einfache Ausdrücke können aus einer einzelnen Konstante, Variable oder Funktion bestehen. Meist sind Ausdrücke jedoch komplex, verwenden mehrere Operatoren und Funktionen und verweisen auf mehrere Spalten und Variablen. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Ausdrücke zum Definieren von Bedingungen für CASE-Anweisungen, Erstellen und Aktualisieren von Werten in Datenspalten, Zuweisen von Werten zu Variablen, Aktualisieren oder Auffüllen von Eigenschaften zur Laufzeit, Definieren von Einschränkungen in Rangfolgeneinschränkungen sowie zum Bereitstellen von Ausdrücken für den For-Schleifencontainer verwendet werden.  

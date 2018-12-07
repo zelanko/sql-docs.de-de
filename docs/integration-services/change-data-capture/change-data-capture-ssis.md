@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff152320679a4a315da2630ecb426ce9ba2cc7b3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 374b59460313afaaeb670c8926f215580f7d11de
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641147"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534380"
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bietet Change Data Capture eine effektive Lösung für die Herausforderung, inkrementelles Laden aus Quelltabellen in Data Marts und Data Warehouses effizient auszuführen.  
@@ -119,6 +119,6 @@ ms.locfileid: "51641147"
 -   [Ausführen eines inkrementellen Ladens von mehreren Tabellen](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag zu [SSIS-Entwurfsmuster – Inkrementelles Laden](https://go.microsoft.com/fwlink/?LinkId=217679)auf sqlblog.com  
+ Blogbeitrag zum Thema [SSIS-Entwurfsmuster: Inkrementelles Laden](https://go.microsoft.com/fwlink/?LinkId=217679) auf sqlblog.com  
   
   

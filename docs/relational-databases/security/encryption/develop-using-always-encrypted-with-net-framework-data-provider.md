@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d6ad65d148f35255a93563cbdcb247efe8a61da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db78cdc744ec73e0f2fb8b465187eaac84a2fae2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661339"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526526"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Entwickeln von Always Encrypted mit .NET Framework-Datenanbieter
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -255,7 +255,7 @@ cmd.ExecuteNonQuery();
 
 Der .NET Framework-Datenanbieter für SQL Server muss zum Verschlüsseln eines Parameterwerts oder zum Entschlüsseln von Daten in Abfrageergebnissen einen Spaltenverschlüsselungsschlüssel erhalten, der für die Zielspalte konfiguriert ist. Spaltenverschlüsselungsschlüssel werden in der verschlüsselten Form in den Datenbankmetadaten gespeichert. Jeder Spaltenverschlüsselungsschlüssel weist einen entsprechenden Spaltenhauptschlüssel auf, mit dem der Spaltenverschlüsselungsschlüssel verschlüsselt wurde. Die Spaltenhauptschlüssel werden nicht von den Datenbankmetadaten gespeichert. Sie enthalten lediglich die Informationen zu einem Schlüsselspeicher, der einen bestimmten Spaltenhauptschlüssel und die Position des Schlüssels im Schlüsselspeicher enthält.
 
-Um einen Klartextwert eines Spaltenverschlüsselungsschlüssels zu erhalten, ruft der .NET Framework-Datenanbieter für SQL Server zunächst die Metadaten zum Spaltenverschlüsselungsschlüssel und seinen entsprechenden Spaltenhauptschlüssel ab. Dann verwendet er die Informationen in den Metadaten, um den Schlüsselspeicher zu kontaktieren, der den Spaltenhauptschlüssel enthält, und um den verschlüsselten Spaltenverschlüsselungsschlüssel zu entschlüsseln. Der .NET Framework-Datenanbieter für SQL Server kommuniziert mit einem Schlüsselspeicher, wobei ein Spaltenhauptschlüssel-Speicheranbieter verwendet wird, der eine Instanz einer Klasse darstellt, die von der Klasse [SqlColumnEncryptionKeyStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)abgeleitet wird.
+Um einen Klartextwert eines Spaltenverschlüsselungsschlüssels zu erhalten, ruft der .NET Framework-Datenanbieter für SQL Server zunächst die Metadaten zum Spaltenverschlüsselungsschlüssel und seinen entsprechenden Spaltenhauptschlüssel ab. Dann verwendet er die Informationen in den Metadaten, um den Schlüsselspeicher zu kontaktieren, der den Spaltenhauptschlüssel enthält, und um den verschlüsselten Spaltenverschlüsselungsschlüssel zu entschlüsseln. Der .NET Framework-Datenanbieter für SQL Server kommuniziert mit einem Schlüsselspeicher, wobei ein Spaltenhauptschlüssel-Speicheranbieter verwendet wird, der eine Instanz einer Klasse darstellt, die von der Klasse [SqlColumnEncryptionKeyStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx) abgeleitet wird.
 
 
 Vorgang zum Abrufen eines Spaltenverschlüsselungsschlüssels:

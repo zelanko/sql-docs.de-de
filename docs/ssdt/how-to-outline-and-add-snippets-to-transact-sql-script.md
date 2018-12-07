@@ -11,12 +11,12 @@ ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c51fde6d4fa7587b4fd305d1744934d42e76bad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca62b3b637f5983f7448a99fd9073f60a509a809
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732828"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526065"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Vorgehensweise: Gliedern und Hinzufügen von Ausschnitten zu Transact-SQL-Skripts
 SQL Server Data Tools enthält eine Codebibliothek mit Codeausschnitten, die in die Anwendung eingefügt werden können. Jeder Ausschnitt führt einen kompletten Skripttask aus, z. B. das Erstellen einer Funktion, einer Tabelle, eines Triggers, eines Index, einer Sicht, eines benutzerdefinierten Datentyps usw. Sie können mit wenigen Mausklicks einen Codeausschnitt in Ihren Quellcode einfügen. Diese Ausschnitte erhöhen die Produktivität, da Sie weniger Zeit für die Eingabe benötigen.  
@@ -42,7 +42,7 @@ Standardmäßig wird im Transact\-SQL-Editor der gesamte Text angezeigt, Sie kö
   
 ### <a name="to-outline-code"></a>So gliedern Sie Code  
   
-1.  Beachten Sie das **–**-Zeichen neben der CREATE TABLE-Anweisung. Klicken Sie auf das **-**-Zeichen neben einem Abschnitt im Skript, um ihn auszublenden.  
+1.  Beachten Sie das **-**-Zeichen neben der CREATE TABLE-Anweisung. Klicken Sie auf das **-**-Zeichen neben einem Abschnitt im Skript, um ihn auszublenden.  
   
 2.  Klicken Sie mit der rechten Maustaste auf den Transact\-SQL-Editor, und wählen Sie **Gliedern** und dann **Gliederung entfernen** aus, um die Gliederungsinformationen ohne Auswirkungen auf den zugrunde liegenden Code im Editor zu entfernen.  
   

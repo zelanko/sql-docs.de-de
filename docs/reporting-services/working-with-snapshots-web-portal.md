@@ -8,18 +8,18 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c0ab1cae8f3b99cb148096e272a1fd38f91ca31
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9cffd51ef8da35c7ee8c1e424c2cddbac92955cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021024"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517279"
 ---
 # <a name="working-with-snapshots-web-portal"></a>Arbeiten mit Momentaufnahmen (Webportal)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Sie können steuern, ob Momentaufnahmen für einen Bericht erstellt werden, indem Sie die **Auslassungspunkte (...)** eines Berichts auswählen, anschließend **Verwalten** und **Caching** oder **Verlaufsmomentaufnahmen**.  
+Sie können steuern, ob Momentaufnahmen für einen Bericht erstellt werden, indem Sie die **Auslassungspunkte (...)** eines Berichts gefolgt von **Verwalten** und **Caching** oder **Verlaufsmomentaufnahmen** auswählen.  
   
 > [!NOTE]
 > Der SQL Server-Agent-Dienst muss gestartet werden.  

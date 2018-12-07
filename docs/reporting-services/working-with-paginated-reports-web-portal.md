@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2115aa8933396d14f6f6f32e0c02f85f75321700
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7cab15eb6feb4a502957c7e8a1b929601cd6fd1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029189"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537352"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Arbeiten mit paginierten Berichten (Webportal)
 
@@ -42,7 +42,7 @@ Beim Verwalten eines vorhandenen paginierten Berichts haben Sie verschiedene Mö
 > [!NOTE]
 > Wenn im jeweiligen Ordner keine paginierten Berichte angezeigt werden, sollten Sie sich vergewissern, dass Sie paginierte Berichte anzeigen. Sie können **Ansicht** aus der Menüleiste in der oberen rechten Ecke des Webportals auswählen. Stellen Sie sicher, dass das Kontrollkästchen **Paginierte Berichte** aktiviert ist.  
   
-1.  Klicken Sie auf die **Auslassungspunkte (...)** für das Dataset aus, das Sie verwalten möchten.  
+1.  Klicken Sie auf die **Auslassungspunkte (...)** für das Dataset, das Sie verwalten möchten.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   

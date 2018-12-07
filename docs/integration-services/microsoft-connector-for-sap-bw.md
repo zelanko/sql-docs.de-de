@@ -11,12 +11,12 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fbb7e2458432bb39ff452b703441fc320d2e645
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a06dcac3487220a84d8a22f6c92e02859e91a6f8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639577"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510062"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
   Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector für SAP BW besteht aus drei Komponenten, mit denen Sie Daten aus einem SAP NetWeaver BW-System, Version 7, extrahieren oder in ein solches System laden können.  
@@ -35,11 +35,11 @@ ms.locfileid: "51639577"
 ## <a name="components"></a>Components  
  Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector für SAP BW weist folgende Komponenten auf:  
   
--   **SAP BW-Quelle**: Die SAP BW-Quelle ist eine Datenflussquellkomponente, mit der Sie Daten aus einem SAP NetWeaver BW 7-System extrahieren können.  
+-   **SAP BW-Quelle:** Die SAP BW-Quelle ist eine Datenflussquellkomponente, mit der Sie Daten aus einem SAP NetWeaver BW 7-System extrahieren können.  
   
--   **SAP BW-Ziel**: Das SAP BW-Ziel ist eine Datenflusszielkomponente, mit der Sie Daten in ein SAP NetWeaver BW 7-System laden können.  
+-   **SAP BW-Ziel:** Das SAP BW-Ziel ist eine Datenflusszielkomponente, mit der Sie Daten in ein SAP NetWeaver BW 7-System laden können.  
   
--   **SAP BW-Verbindungs-Manager**: Der SAP BW-Verbindungs-Manager verbindet eine SAP BW-Quelle oder ein SAP BW-Ziel mit einem SAP NetWeaver BW 7-System.  
+-   **SAP BW-Verbindungs-Manager:** Der SAP BW-Verbindungs-Manager verbindet eine SAP BW-Quelle oder ein SAP BW-Ziel mit einem SAP NetWeaver BW 7-System.  
   
  Eine exemplarische Vorgehensweise, die zeigt, wie der SAP BW-Verbindungs-Manager sowie die zugehörige Quelle und das zugehörige Ziel konfiguriert und verwendet werden, finden Sie im Whitepaper [Using SQL Server Integration Services with SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897)(Verwenden von SQL Server Integration Services und SAP BI 7.0). In diesem Whitepaper wird auch erläutert, wie die erforderlichen Objekte in SAP BW konfiguriert werden.  
   

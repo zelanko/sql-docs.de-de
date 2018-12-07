@@ -10,12 +10,12 @@ ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 18d5e095789c1f7a240925130821c8adb639fe7b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 05519dae5377d1e58f6b8e47b91d898c0b67dc2f
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028369"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710871"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>Installieren von Reporting Services 2016 über die Eingabeaufforderung
 
@@ -28,7 +28,7 @@ ms.locfileid: "50028369"
 ### <a name="rsinstallmode-native-mode"></a>RSINSTALLMODE (einheitlicher Modus)
  Die primäre Eingabeeinstellung zum Installieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist die **/RSINSTALLMODE** -Eingabeeinstellung. Die Einstellung verfügt über zwei Optionen: **DefaultNativeMode** und **FilesOnlyMode**.  
   
- Wenn die SQL Server-Datenbank-Engine in die Installation eingeschlossen wird, lautet der standardmäßige RSINSTALLMODE "DefaultNativeMode". Wird die SQL Server-Datenbank-Engine nicht in die Installation einbezogen, lautet der standardmäßige RSINSTALLMODE "FilesOnlyMode". Wenn Sie "DefaultNativeMode" auswählen, ohne dass die SQL Server-Datenbank-Engine in die Installation einbezogen wird, wird der RSINSTALLMODE bei der Installation automatisch in "FilesOnlyMode" geändert. Weitere Informationen zu den Eingabeeinstellungen finden Sie unter [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
+ Wenn die SQL Server-Datenbank-Engine in die Installation eingeschlossen wird, lautet der standardmäßige RSINSTALLMODE "DefaultNativeMode". Wird die SQL Server-Datenbank-Engine nicht in die Installation einbezogen, lautet der standardmäßige RSINSTALLMODE "FilesOnlyMode". Wenn Sie "DefaultNativeMode" auswählen, ohne dass die SQL Server-Datenbank-Engine in die Installation einbezogen wird, wird der RSINSTALLMODE bei der Installation automatisch in "FilesOnlyMode" geändert. Weitere Informationen zu den Eingabeeinstellungen finden Sie unter [Installieren von SQL Server über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
 
 ### <a name="examples-of-native-mode-installation"></a>Beispiele für die Installation des einheitlichen Modus
 

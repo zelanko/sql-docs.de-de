@@ -16,12 +16,12 @@ ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba7a8f577f9b05007e8b6b9a9477e1b3ffd6b441
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f0d0304757cb8b724a93ce02d03a889bb27e453a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701823"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532803"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>Entfernen von Tabellen aus Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ Sie können eine Tabelle oder ein Tabellenwertobjekt aus der Abfrage entfernen.
   
 -   Wählen Sie im **Diagrammbereich**die Tabelle, die Sicht, die benutzerdefinierte Funktion, das Synonym oder die Abfrage aus, und drücken Sie anschließend ENTF, oder klicken Sie mit der rechten Maustaste auf das Objekt, und wählen Sie im daraufhin angezeigten Dialogfeld den Befehl **Entfernen** aus. Sie können mehrere Objekte auswählen und gleichzeitig entfernen.  
   
-    – Oder –  
+    -oder-  
   
 -   Entfernen Sie im **SQL-Bereich**alle Verweise auf das Objekt.  
   

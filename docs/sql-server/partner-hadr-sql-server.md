@@ -12,19 +12,19 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 9d9dbe423415e1014a31621ba15f44fb0758e1a5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5dc3ba843314297131de569bafa5412577a24adf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699115"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510421"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server: Partner für Hochverfügbarkeit und Notfallwiederherstellung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Es gibt eine große Auswahl an branchenführenden Tools, die die Komponenten „Hochverfügbarkeit“ und „Notfallwiederherstellung“ für Ihre SQL Server-Dienste bereitstellen.  Im Folgenden werden Partnerunternehmen von Microsoft aufgelistet, die Hochverfügbarkeits- und Notfallwiederherstellungslösungen für Microsoft SQL Server anbieten.
 
 ## <a name="high-availability-and-disaster-recovery-partners"></a>Partner für Hochverfügbarkeit und Notfallwiederherstellung
-<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
 -->
 
 | Partner | und Beschreibung | Links | 
@@ -36,7 +36,7 @@ Es gibt eine große Auswahl an branchenführenden Tools, die die Komponenten „
 |![NEC][7]|**NEC**<br>ExpressCluster ist eine umfassende und vollständig automatisierte Lösung für hohe Verfügbarkeit und Notfallwiederherstellung nach größeren Ausfällen, z.B. durch Hardware-, Software-, Netzwerk- und Websitefehler. Die Lösung umfasst SQL Server und zugehörige Anwendungen, die auf physischen oder virtuellen Computern in lokalen oder Cloudumgebungen ausgeführt werden.<br><br>Microsoft SQL Server: 2005 oder höher; alle Editionen |[Website][necec_website]<br>[Datenblatt][necec_datasheet]<br>[Video][necec_youtube]<br>[Download][necec_download]|
 |![Portworx][6] |**Portworx**<br>Mit Portworx können zustandsbehaftete Container während der Produktion ausgeführt werden. Mit diesem Tool können Benutzer jede Datenbank oder jeden zustandsbehafteten Dienste mit jeder Infrastruktur verwalten, indem sie einen beliebigen Container-Scheduler, einschließlich Kuvernetes, Mesosphere DV/OS und Docker Swarm, verwenden. Portworx bietet Lösungen für die fünf häufigsten Probleme, auf die DevOps-Teams stoßen, wenn sie Datenbanken mit Containern und zustandsbehaftete Dienste während der Produktion ausführen: Persistenz, Hochverfügbarkeit, Datenautomatisierung, Unterstützung von mehreren Datenspeichern und Infrastrukturen sowie Sicherheit.<br><br>SQL Server 2017 unter Docker |[Website][portworx_website]<br>[Dokumentation][portworx_docs]<br>[Video][portworx_youtube]|
 |![SIOS][8] |**SIOS**<br>SIOS Technology stellt kostengünstige Hochverfügbarkeits- und Notfallwiederherstellungslösungen für SQL Server unter Windows oder Linux bereit. Mit SIOS SANless-Clustern ist kein gemeinsam genutztes SAN (Storage Area Network) mehr erforderlich, sodass Sie Ihre wichtigsten Anwendungen in physischen, virtuellen, cloudbasierten und hybriden Konfigurationen in Umgebungen mit einem oder mehreren Standorten flexibel schützen können.<br><br>Fügen Sie SIOS DataKeeper zu Ihrer Windows Server-Failoverclusterumgebung hinzu, um eine SANless-Volumeressource zu erstellen, die herkömmlichen gemeinsam genutzten Speicher ersetzt, sodass Sie Ihren Windows Server-Failovercluster problemlos in Azure ausführen können.<br><br>SIOS Protection Suite ist eine höchst flexible Clusterlösung, die wichtige Linux-Anwendungen wie SQL Server, SAP, HANA, Oracle und viele weitere schützt.|[Website][sios_website]<br>[Datenblatt][sios_datasheet]<br>[Twitter][sios_twitter]<br>[Marketplace][sios_marketplace]<br>[Video][sios_youtube]|
-|![Veeam][1] |**Veeam**<br>Veeam Backup & Replication ist eine leistungsstarke, benutzerfreundliche und erschwingliche Lösung für Sicherung und Verfügbarkeit. Dieses Tool bietet Ihnen eine schnelle, flexible und zuverlässige Wiederherstellung von virtualisierten Anwendungen und Daten und verbindet dabei VM-Sicherung und -Replikation in einer einzigen Softwarelösung. Veeam Backup & Replication liefert ausgezeichneten Support für virtuelle Umgebungen mit VMware vSphere und Microsoft Hyper-V.<br><br>SQL Server 2005 SP4 – SQL Server 2016 unter Windows |[Website][veeam_website]<br>[Datenblatt][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[Video][veeam_youtube]|
+|![Veeam][1] |**Veeam**<br>Veeam Backup & Replication ist eine leistungsstarke, benutzerfreundliche und erschwingliche Lösung für Sicherung und Verfügbarkeit. Dieses Tool bietet Ihnen eine schnelle, flexible und zuverlässige Wiederherstellung von virtualisierten Anwendungen und Daten und verbindet dabei VM-Sicherung und -Replikation in einer einzigen Softwarelösung. Veeam Backup & Replication liefert ausgezeichneten Support für virtuelle Umgebungen mit VMware vSphere und Microsoft Hyper-V.<br><br>SQL Server 2005 SP4, SQL Server 2016 unter Windows |[Website][veeam_website]<br>[Datenblatt][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[Video][veeam_youtube]|
 
 ## <a name="next-steps"></a>Nächste Schritte
 Nähere Informationen über weitere Partner finden Sie unter [SQL Server-Überwachungspartner][mon_partners], [SQL Server: Verwaltungspartner][management_partners] und [SQL Server: Entwicklungspartner][dev_partners].

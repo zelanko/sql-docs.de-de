@@ -11,12 +11,12 @@ ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8da09c20837b060606b087c0edebb7bf9713675e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34cea0d4a251266d21218cefaee2d5f122e574ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671244"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543902"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Verwenden von Transact-SQL-Assertionen in SQL Server-Komponententests
 In einem SQL Server-Komponententest wird ein Transact\-SQL-Testskript ausgeführt, von dem ein Ergebnis zurückgegeben wird. In einigen Fällen werden die Ergebnisse als Resultset zurückgegeben. Sie können die Ergebnisse mithilfe von Testbedingungen überprüfen. Beispielsweise können Sie eine Testbedingung verwenden, um zu überprüfen, wie viele Zeilen in einem bestimmten Resultset zurückgegeben wurden, bzw. um zu ermitteln, wie lange ein bestimmter Test gedauert hat. Weitere Informationen zu Testbedingungen finden Sie unter [Verwenden von Testbedingungen in SQL Server-Komponententests](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
@@ -72,7 +72,7 @@ Dabei gilt:
   
 @ErrorMessage steht für eine beliebige benutzerdefinierte Fehlermeldung. Sie können diese Meldungszeichenfolge ähnlich wie die printf_s-Funktion formatieren.  
   
-@ErrorSeverity ist ein benutzerdefinierter Schweregrad von 0 bis 18.  
+@ErrorSeverity ist ein benutzerdefinierter Schweregrad zwischen 0 und 18.  
   
 > [!NOTE]  
 > Ein Schweregrad vom Wert „0“ und „10“ führt nicht dazu, dass beim SQL Server-Komponententest ein Fehler auftritt. Sie können einen beliebigen anderen Wert im Bereich von 0 bis 18 eingeben, der dazu führt, dass der Test fehlschlägt.  

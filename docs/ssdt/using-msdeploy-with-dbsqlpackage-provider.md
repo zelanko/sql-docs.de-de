@@ -11,12 +11,12 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06df375e2887a58ed00370989921b654497afa84
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4e9112840f6329bd846c62bd7f8dbb8b5d99340
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670139"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520954"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Verwenden von MSDeploy mit dem dbSqlPackage-Anbieter
 **dbSqlPackage** ist ein **MSDeploy**-Anbieter, der Ihnen die Interaktion mit SQL Server- oder SQL Azure-Datenbanken ermöglicht. **dbSqlPackage** unterstützt die folgenden Aktionen:  
@@ -39,16 +39,16 @@ Weitere Informationen über DACFx finden Sie in der Dokumentation zur verwaltete
   
 ```  
   
-MSDeploy –verb: MSDeploy-verb –source:dbSqlPackage="Input"[,dbSqlPackage-source-parameters] –dest:dpSqlPackage="Input"[,dbSqlPackage-target-parameters]  
+MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-parameters] -dest:dpSqlPackage="Input"[,dbSqlPackage-target-parameters]  
 ```  
   
 ## <a name="ms-deploy-verbs"></a>MS-Deploy-Verben  
-Sie verwenden den Switch **–verb** in der MS Deploy-Befehlszeile, um MS Deploy-Verben anzugeben. Der **dbSqlPackage**-Anbieter unterstützt die folgenden **MSDeploy**-Verben:  
+Sie verwenden den Switch **-verb** in der MS Deploy-Befehlszeile, um MS Deploy-Verben anzugeben. Der **dbSqlPackage**-Anbieter unterstützt die folgenden **MSDeploy**-Verben:  
   
 |Verb|und Beschreibung|  
 |--------|---------------|  
-|dump|Stellt Informationen über eine in einer DACPAC-Datei enthaltene Quelldatenbank bereit, z. B. Namen, Versionsnummer und Beschreibung. Geben Sie die Quelldatenbank im folgenden Format in der Befehlszeile an:<br /><br />**msdeploy –verb:dump –source:dbSqlPackage=”***.dacpac-file-path***”**|  
-|sync|Gibt die dbSqlPackage-Aktionen im folgenden Format in der Befehlszeile an:<br /><br />**msdeploy –verb:sync –source:dbSqlPackage**=”input” *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**=”input” *[,DbSqlPackage-destination-parameters]*<br /><br />Weitere Informationen finden Sie in den folgenden Abschnitten zu den gültigen Quell- und Zielparametern für das sync-Verb.|  
+|dump|Stellt Informationen über eine in einer DACPAC-Datei enthaltene Quelldatenbank bereit, z. B. Namen, Versionsnummer und Beschreibung. Geben Sie die Quelldatenbank im folgenden Format in der Befehlszeile an:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage=„***DACPAC-Dateipfad***“**|  
+|sync|Gibt die dbSqlPackage-Aktionen im folgenden Format in der Befehlszeile an:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**=„Eingabe“ *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**=„Eingabe“ *[,DbSqlPackage-destination-parameters]*<br /><br />Weitere Informationen finden Sie in den folgenden Abschnitten zu den gültigen Quell- und Zielparametern für das sync-Verb.|  
   
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage-Quelle  
 Der **dbSqlPackage**-Anbieter akzeptiert eine Eingabe, die entweder einer gültigen SQL Server- oder SQL Azure-Verbindungszeichenfolge bzw. einem Pfad zu einer DACPAC-Datei auf dem Datenträger entspricht.  Die Syntax zum Angeben der Eingabequelle für den Anbieter lautet wie folgt:  
@@ -183,24 +183,24 @@ Die folgenden **Destination**-Parameter sind nur für die Vorgänge **DeployRepo
 Im folgenden Beispiel wird die Syntax für einen **Extract**-Vorgang veranschaulicht, bei dem **dbSqlPackage** verwendet wird:  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source connection string>”,<source parameter> –dest:dbSqlPackage="<target dacpac file path>”  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source connection string>",<source parameter> -dest:dbSqlPackage="<target dacpac file path>"  
 ```  
   
 Im folgenden Beispiel wird die Syntax für einen **Publish**-Vorgang veranschaulicht, bei dem **dbSqlPackage** verwendet wird:  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Publish,<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Publish,<destination parameters>  
 ```  
   
 Im folgenden Beispiel wird die Syntax für einen **DeployReport**-Vorgang veranschaulicht, bei dem **dbSqlPackage** verwendet wird:  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=DeployReport,OutputPath="<path to output XML file>",<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=DeployReport,OutputPath="<path to output XML file>",<destination parameters>  
 ```  
   
 Im folgenden Beispiel wird die Syntax für einen **Script**-Vorgang veranschaulicht, bei dem **dbSqlPackage** verwendet wird:  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
 ```  
   

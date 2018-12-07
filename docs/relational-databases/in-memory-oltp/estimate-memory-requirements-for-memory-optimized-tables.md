@@ -12,19 +12,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b01a26ac0db5d41f23343dda7a106c52524dea1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1cdacecf1c6d6c8c08411eff57c65adc0872dd39
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672689"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531517"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Speicheroptimierte Tabellen benötigen ausreichend verfügbaren Arbeitsspeicher, um alle Zeilen und Indizes im Arbeitsspeicher ablegen zu können. Da Arbeitsspeicher nicht unbegrenzt verfügbar ist, sollten Sie die Arbeitsspeichernutzung in Ihrem System kennen und effizient verwalten. Die Themen in diesem Abschnitt behandeln allgemeine Szenarien zur Speichernutzung und -verwaltung.
 
-Unabhängig davon, ob Sie eine neue speicheroptimierte Tabelle erstellen oder eine vorhandene datenträgerbasierte Tabelle zu einer speicheroptimierten [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Tabelle migrieren, ist es wichtig, den Arbeitsspeicherbedarf der einzelnen Tabellen realistisch einzuschätzen, damit Sie ausreichenden Arbeitsspeicher für den Server bereitstellen können. In diesem Abschnitt wird beschrieben, wie die Speichermenge geschätzt wird, die für die Daten einer speicheroptimierten Tabelle benötigt wird.  
+Unabhängig davon, ob Sie eine neue speicheroptimierte Tabelle erstellen oder eine vorhandene datenträgerbasierte Tabelle zu einer speicheroptimierten [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Tabelle migrieren, ist es wichtig, den Arbeitsspeicherbedarf der einzelnen Tabellen realistisch einzuschätzen, damit Sie ausreichenden Arbeitsspeicher für den Server bereitstellen können. In diesem Abschnitt wird beschrieben, wie die Speichermenge geschätzt wird, die für die Daten einer speicheroptimierten Tabelle benötigt wird.  
   
 Wenn Sie die Migration von datenträgerbasierten zu speicheroptimierten Tabellen in Erwägung ziehen, finden Sie im Thema [Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) Informationen dazu, welche Tabellen sich am besten migrieren lassen. Anschließend können Sie mit diesem Thema fortfahren. Alle Themen unter [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) bieten eine Anleitung zum Migrieren von datenträgerbasierten zu speicheroptimierten Tabellen. 
   
@@ -102,13 +102,13 @@ Im Folgenden eine Größenberechnung für 5.000.000 (5 Millionen) Zeilen in eine
   
 #### <a name="memory-for-the-tables-rows"></a>Arbeitsspeicher für die Tabellenzeilen  
   
-Aus den vorherigen Berechnungen ergibt sich für jede Zeile in der speicheroptimierten Tabelle eine Größe von 24 + 32 + 200 oder 256 Bytes.  Da sie 5 Million Zeilen enthält, belegt die Tabelle 5.000.000 * 256 Bytes oder 1.280.000.000 Bytes, also ungefähr 1,28 GB.  
+Aus den vorherigen Berechnungen ergibt sich für jede Zeile in der speicheroptimierten Tabelle eine Größe von 24 + 32 + 200 oder 256 Bytes.  Da sie 5 Million Zeilen enthält, belegt die Tabelle 5.000.000 * 256 Bytes oder 1.280.000.000 Bytes, also ungefähr 1,28 GB.  
   
 ###  <a name="bkmk_IndexMeemory"></a> Arbeitsspeicher für Indizes  
 
 #### <a name="memory-for-each-hash-index"></a>Arbeitsspeicher für jeden Hashindex  
   
-Jeder Hashindex ist ein Hasharray aus 8-Byte-Adresszeigern.  Die Größe des Arrays wird am besten anhand der Anzahl eindeutiger Indexwerte für diesen Index bestimmt. Beispielsweise ist die Anzahl eindeutiger Col2-Werte ein guter Ausgangspunkt für die Arraygröße von "t1c2_index". Durch ein übergroßes Hasharray wird Arbeitsspeicher vergeudet.  Ein zu kleines Hasharray verlangsamt die Leistung, da zu viele Konflikte durch Indexwerte entstehen, die demselben Hashindex zugeordnet sind.  
+Jeder Hashindex ist ein Hasharray aus 8-Byte-Adresszeigern.  Die Größe des Arrays wird am besten anhand der Anzahl eindeutiger Indexwerte für diesen Index bestimmt. Beispielsweise ist die Anzahl eindeutiger Col2-Werte ein guter Ausgangspunkt für die Arraygröße von „t1c2_index“. Durch ein übergroßes Hasharray wird Arbeitsspeicher vergeudet.  Ein zu kleines Hasharray verlangsamt die Leistung, da zu viele Konflikte durch Indexwerte entstehen, die demselben Hashindex zugeordnet sind.  
   
 Mit Hashindizes erzielen Sie sehr schnelle Übereinstimmungssuchen wie:  
   

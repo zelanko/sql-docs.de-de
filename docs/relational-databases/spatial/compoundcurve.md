@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26495b201fcfc29b891a83c4f7cc4011cfd7cbd9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ed40a84fba304dab0d9c11c7c6bbe950f2511e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658919"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511845"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- Hierdurch wird folgende Ausgabe generiert: 12.566370… was 4∏ entspricht. Von der `CompoundCurve` -Instanz im Beispiel wird ein Kreis mit dem Radius 2 gespeichert. In den beiden vorherigen Codebeispielen musste keine `CompoundCurve`verwendet werden. Für das erste Beispiel wäre eine `LineString` -Instanz einfacher gewesen, während sich für das zweite Beispiel eher eine `CircularString` -Instanz empfiehlt. Im nächsten Beispiel wird jedoch verdeutlich, in welchen Fällen eine `CompoundCurve` eine bessere Alternative darstellt.  
+ Dies erzeugt die Ausgabe „12.566370“, was 4∏ entspricht. Von der `CompoundCurve` -Instanz im Beispiel wird ein Kreis mit dem Radius 2 gespeichert. In den beiden vorherigen Codebeispielen musste keine `CompoundCurve`verwendet werden. Für das erste Beispiel wäre eine `LineString` -Instanz einfacher gewesen, während sich für das zweite Beispiel eher eine `CircularString` -Instanz empfiehlt. Im nächsten Beispiel wird jedoch verdeutlich, in welchen Fällen eine `CompoundCurve` eine bessere Alternative darstellt.  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. Speichern eines Halbkreises mithilfe einer CompoundCurve  
  Im folgenden Beispiel wird ein Halbkreis mithilfe einer `CompoundCurve` -Instanz gespeichert.  
@@ -182,8 +182,8 @@ SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amo
  Es wird folgende Ausgabe erhalten:  
   
 ```  
-Circle One11.940039…  
-Circle Two12.566370…  
+Circle One11.940039...  
+Circle Two12.566370...  
 ```  
   
  Der Umfang für Circle Two beträgt annähernd 4. Dies ist der tatsächliche Wert für den Umfang. Der Umkreis für Circle One ist jedoch sehr ungenau. Durch die `CompoundCurve` -Instanz von Circle One werden ein Kreisbogensegment (ABC) und zwei Liniensegmente (CD, DA) gespeichert. Von der `CompoundCurve` -Instanz müssen zwei Kreisbogensegmente (ABC, CDA) gespeichert werden, um einen Kreis zu definieren. Eine `LineString` -Instanz definiert die zweite Punktmenge (4 2, 2 4, 0 2) in der `CompoundCurve` -Instanz von Circle One. Sie müssen in einer `CircularString` explizit eine `CompoundCurve`-Instanz deklarieren.  

@@ -13,12 +13,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bd6d830a2c8fc612a7b9030de60e9c8ff458301
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5ae792d2237e1c2eaafddfe78cc0314f1240bd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649038"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526925"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Seite „Allgemein“ der Integration Services-Designer-Optionen
   Verwenden Sie die Seite **Allgemein** der Seite **Integration Services-Designer** im Dialogfeld **Optionen** , um die Optionen für das Laden, Anzeigen und Aktualisieren von Paketen festzulegen.  
@@ -37,7 +37,7 @@ ms.locfileid: "47649038"
  Wählen Sie diese Option aus, wenn beim Laden eines unsignierten Pakets eine Warnung angezeigt werden soll.  
   
  **Bezeichnungen für Rangfolgeneinschränkungen anzeigen**  
- Wählen Sie aus, welche Bezeichnung – Erfolg, Fehler oder Beendigung – bei Rangfolgeneinschränkungen angezeigt werden soll, wenn Sie Pakete in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]anzeigen.  
+ Wählen Sie aus, welche Bezeichnung – Success, Failure oder Completion (Erfolg, Fehler oder Beendet) – bei Rangfolgeneinschränkungen angezeigt werden soll, wenn Sie Pakete in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] anzeigen.  
   
  **"Skriptsprache"**  
  Wählen Sie die Standardskriptsprache für neue Skripttasks und Skriptkomponenten aus.  

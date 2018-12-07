@@ -20,12 +20,12 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f04de3c323f5655e7503d6d375df536897654740
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b55b675cf28bd0e61dd74b011aad9c50cd8325fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641387"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531610"
 ---
 # <a name="use-property-expressions-in-packages"></a>Verwenden von Eigenschaftsausdrücken in Paketen
   Ein Eigenschaftsausdruck ist ein einer Eigenschaft zugewiesener Ausdruck, um das dynamische Aktualisieren der Eigenschaft zur Laufzeit zu ermöglichen. So kann ein Eigenschaftsausdruck z. B. die An-Zeile aktualisieren, die ein Task des Typs "Mail senden" verwendet, indem eine in einer Variablen gespeicherte E-Mail-Adresse eingefügt wird.  
@@ -70,7 +70,7 @@ ms.locfileid: "51641387"
   
  ![Benutzeroberfläche für Eigenschaftsausdrücke](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "The user interface for property expressions")  
   
- Klicken Sie im **Eigenschaften** -Fenster und auf der **Ausdrücke** -Seite auf die Schaltfläche zum Durchsuchen **(…)** in der Sammlungsebene **Ausdrücke** , um das **Eigenschaftsausdruck-Editor** -Dialogfeld zu öffnen. Der Eigenschaftsausdruck-Editor ermöglicht das Zuordnen einer Eigenschaft zu einem Ausdruck und das Eingeben eines Eigenschaftsausdrucks. Wenn Sie die grafischen Ausdruckstools zum Erstellen und anschließend zum Überprüfen des Ausdrucks verwenden möchten, klicken Sie auf der Ausdrucksebene auf die Schaltfläche zum Durchsuchen **(…)** , um das **Ausdrucks-Generator** -Dialogfeld zu öffnen. Erstellen bzw. ändern Sie anschließend den Ausdruck, und überprüfen Sie ihn bei Bedarf.  
+ Klicken Sie im Fenster **Eigenschaften** und auf der Seite **Ausdrücke** auf der Sammlungsebene **Ausdrücke** auf die Schaltfläche zum Durchsuchen **(…)**, um das Dialogfeld **Eigenschaftsausdruck-Editor** zu öffnen. Der Eigenschaftsausdruck-Editor ermöglicht das Zuordnen einer Eigenschaft zu einem Ausdruck und das Eingeben eines Eigenschaftsausdrucks. Wenn Sie die grafischen Ausdruckstools zum Erstellen und anschließenden Überprüfen des Ausdrucks verwenden möchten, klicken Sie auf der Ausdrucksebene auf die Schaltfläche zum Durchsuchen **(…)**, um das Dialogfeld **Ausdrucks-Generator** zu öffnen. Erstellen bzw. ändern Sie anschließend den Ausdruck, und überprüfen Sie ihn bei Bedarf.  
   
  Sie können das **Ausdrucks-Generator** -Dialogfeld auch aus dem **Eigenschaftsausdrucks-Editor** -Dialogfeld heraus öffnen.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "51641387"
   
  Sie können daher die aktualisierten Werte der Paketobjekteigenschaften, die die Eigenschaftsausdrücke des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers verwenden, erst anzeigen, wenn Sie das Paket speichern, das Paket ausführen oder das Paket nach dem Hinzufügen der Eigenschaftsausdrücke erneut öffnen.  
   
- Die Eigenschaftsausdrücke, die anderen Objekttypen zugeordnet sind, wie z. B. Verbindungs-Manager, Protokollanbieter und Enumeratoren, werden ebenfalls geladen, wenn spezifische Methoden des jeweiligen Objekttyps aufgerufen werden. Beispielsweise werden die Eigenschaften der Verbindungs-Manager geladen, bevor in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eine Instanz der Verbindung erstellt wird.  
+ Die Eigenschaftsausdrücke, die anderen Objekttypen zugeordnet sind, wie z. B. Verbindungs-Manager, Protokollanbieter und Enumeratoren, werden ebenfalls geladen, wenn spezifische Methoden des jeweiligen Objekttyps aufgerufen werden. Beispielsweise werden die Eigenschaften der Verbindungs-Manager geladen, bevor in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eine Instanz der Verbindung erstellt wird.  
   
  Eigenschaftsausdrücke werden nach dem Laden der Paketkonfigurationen geladen. Beispielsweise werden Variablen zuerst durch ihre Konfigurationen aktualisiert, und anschließend werden die Eigenschaftsausdrücke, die die Variablen verwenden, ausgewertet und geladen. Das bedeutet, dass die Eigenschaftsausdrücke immer die Werte der Variablen verwenden, die durch Konfigurationen festgelegt wurden.  
   

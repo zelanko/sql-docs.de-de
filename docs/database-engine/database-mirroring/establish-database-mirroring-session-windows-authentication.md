@@ -13,12 +13,12 @@ ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e3a8430437bd4a4dae43e9a9b99f98c004a1b3c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a33e5f09ee0bda2bb1967b90902e47663f1846be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838938"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522323"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>Datenbankspiegelung: Einrichtung der Sitzung – Windows-Authentifizierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,14 +28,14 @@ ms.locfileid: "47838938"
   
  Verwenden Sie im Dialogfeld **Datenbankeigenschaften** die Seite für die **Spiegelung**, um eine Datenbank-Spiegelungssitzung festzulegen und die Eigenschaften der Datenbankspiegelung für eine Datenbank zu ändern. Bevor Sie die Seite für die **Spiegelung** zum Konfigurieren der Datenbankspiegelung verwenden, sollten Sie sicherstellen, dass die folgenden Anforderungen erfüllt sind:  
   
--   Die Prinzipalinstanz und die Spiegelserverinstanz müssen auf der gleichen Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden: entweder auf der Standard Edition oder auf der Enterprise Edition. Darüber hinaus wird die Ausführung auf vergleichbaren Systemen empfohlen, die identische Arbeitsauslastungen bewältigen können.  
+-   Die Prinzipalinstanz und die Spiegelserverinstanz müssen in der gleichen Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden: entweder in der Standard-Edition oder in der Enterprise-Edition. Darüber hinaus wird die Ausführung auf vergleichbaren Systemen empfohlen, die identische Arbeitsauslastungen bewältigen können.  
   
     > [!NOTE]  
     >  Eine Zeugenserverinstanz ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   Die Spiegeldatenbank muss vorhanden sein und sich auf dem neuesten Stand befinden.  
   
-     Zum Erstellen einer Spiegeldatenbank muss auf der Spiegelserverinstanz eine aktuelle Sicherung der Prinzipaldatenbank (mit der Option WITH NORECOVERY) wiederhergestellt werden. Nach der vollständigen Sicherung müssen außerdem eine oder mehrere Protokollsicherungen erstellt und der Reihe nach auf der Spiegeldatenbank (mit der Option WITH NORECOVERY) wiederhergestellt werden. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)verwendet.  
+     Zum Erstellen einer Spiegeldatenbank muss auf der Spiegelserverinstanz eine aktuelle Sicherung der Prinzipaldatenbank (mit der Option WITH NORECOVERY) wiederhergestellt werden. Nach der vollständigen Sicherung müssen außerdem eine oder mehrere Protokollsicherungen erstellt und der Reihe nach auf der Spiegeldatenbank (mit der Option WITH NORECOVERY) wiederhergestellt werden. Weitere Informationen finden Sie unter [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 -   Wenn die Serverinstanzen unter unterschiedlichen Domänenbenutzerkonten ausgeführt werden, ist für jede Instanz in der **master** -Datenbank der anderen Instanzen ein Anmeldename erforderlich. Sofern kein Anmeldename vorhanden ist, müssen Sie vor dem Konfigurieren der Spiegelung einen erstellen. Weitere Informationen finden Sie unter [Zulassen des Netzwerkzugriffs auf einen Datenbank-Spiegelungsendpunkt mithilfe der Windows-Authentifizierung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
@@ -82,8 +82,8 @@ ms.locfileid: "47838938"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Datenbankeigenschaften &#40;Seite Wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
+ [Datenbankeigenschaften &#40;Seite wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Anhalten oder Fortsetzen einer Datenbank-Spiegelungssitzung (SQL Server)](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)   
  [Einrichten der TRUSTWORTHY-Eigenschaft für eine Spiegeldatenbank (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
  [Entfernen der Datenbankspiegelung (SQL Server)](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)   

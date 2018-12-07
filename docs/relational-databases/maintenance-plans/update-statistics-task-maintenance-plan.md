@@ -15,18 +15,18 @@ ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 732cc1fb83248104d7f7487855961bf7969d7fae
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: c0b900cc31b9bacf0658422c9953dedec4ee9659
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217119"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517462"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Task 'Statistiken aktualisieren' (Wartungsplan)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Verwenden Sie das Dialogfeld **Task 'Statistiken aktualisieren'** , um die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Informationen zu den Daten in den Tabellen und Indizes zu aktualisieren. Dieser Task erstellt erneut die Verteilungsstatistik jedes für Benutzertabellen in der Datenbank erstellten Index mithilfe einer neuen Stichprobe. Die Verteilungsstatistiken werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um die Navigation durch die Tabellen während der Verarbeitung von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen zu optimieren. Um die Verteilungsstatistiken automatisch zu erstellen, nimmt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für jeden Index in regelmäßigen Abständen Daten in der entsprechenden Tabelle als Stichprobe. Die Größe der Stichprobe basiert auf der Anzahl der Zeilen in der Tabelle und der Häufigkeit der an den Daten vorgenommenen Änderungen. Verwenden Sie diese Option, um mithilfe des angegebenen Prozentsatzes der Tabellendaten eine zusätzliche Stichprobe auszuführen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt mithilfe dieser Informationen bessere Abfragepläne.  
   
- Dieser Task führt die UPDATE STATISTICS-Anweisung aus.  
+Für diesen Task wird die `UPDATE STATISTICS`-Anweisung verwendet.  
   
 ## <a name="options"></a>Tastatur  
  **Verbindung**  
@@ -54,7 +54,8 @@ ms.locfileid: "51217119"
   
      Generiert einen Wartungsplan, der Wartungstasks nur für die ausgewählten Datenbanken ausführt. Wenn diese Option ausgewählt wird, muss mindestens eine Datenbank in der Liste ausgewählt werden.  
   
- **Hinweis:** Wartungspläne werden nur für Datenbanken mit Kompatibilitätsgrad 80 oder höher ausgeführt. Datenbanken mit Kompatibilitätsgrad 70 oder niedriger werden nicht angezeigt.  
+ > [!NOTE]
+ > Wartungspläne werden nur für Datenbanken mit Kompatibilitätsgrad 80 oder höher ausgeführt. Datenbanken mit Kompatibilitätsgrad 70 oder niedriger werden nicht angezeigt.  
   
  **Objekt**  
  Begrenzt das Raster **Auswahl** auf die Anzeige von Tabellen, Sichten oder beides.  
@@ -84,7 +85,7 @@ ms.locfileid: "51217119"
  Zeigt die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen an, die für diesen Task auf dem Server auf Basis der ausgewählten Optionen ausgeführt werden.  
   
 > [!NOTE]  
->  Wenn die Anzahl der betroffenen Objekte groß ist, kann die Anzeige erhebliche Zeit in Anspruch nehmen.  
+> Wenn die Anzahl der betroffenen Objekte groß ist, kann die Anzeige erhebliche Zeit in Anspruch nehmen.  
   
 ## <a name="new-connection-dialog-box"></a>Neue Verbindung (Dialogfeld)  
  **Verbindungsname**  
@@ -112,6 +113,6 @@ ms.locfileid: "51217119"
  Stellt ein Kennwort für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
-  
-  
+ [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)    
+ [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)    
+ [Adaptive Indexdefragmentierung](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c123c562a9f0d6c581fb6a69fcc52d0126302a6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6e2d05ae0034f7826044f2ae2f29a8d6ca2a07df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643240"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508732"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Öffnen eines Editors (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "51643240"
 ### <a name="using-the-filenew-menu"></a>Verwenden des Menüs "Datei/Neu"  
  Klicken Sie im Menü **Datei** auf **Neu**, und wählen Sie dann eine Abfrage-Editor-Option aus:  
   
--   **Abfrage mit aktueller Verbindung** – Öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. Wenn Sie z. B. im Objekt-Explorer eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auswählen und dann **Abfrage mit aktueller Verbindung**verwenden, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
+-   **Abfrage mit aktueller Verbindung**: Öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. Wenn Sie z. B. im Objekt-Explorer eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auswählen und dann **Abfrage mit aktueller Verbindung**verwenden, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
   
--   **Datenbank-Engine-Abfrage** – Öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erforderlichen Informationen abzurufen.  
+-   **Datenbank-Engine-Abfrage**: Öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erforderlichen Informationen abzurufen.  
   
 -   **Analysis Services MDX-Abfrage** – Öffnet einen neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erforderlichen Informationen abzurufen.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "51643240"
 ### <a name="using-the-toolbar"></a>Verwenden der Symbolleiste  
  Klicken Sie auf der Symbolleiste **Standard** auf eine der folgenden Schaltflächen:  
   
--   **Neue Abfrage** – Öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. Wenn Sie z. B. im Objekt-Explorer eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auswählen und dann auf die Schaltfläche **Neue Abfrage** klicken, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
+-   **Neue Abfrage**: Öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. Wenn Sie z. B. im Objekt-Explorer eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auswählen und dann auf die Schaltfläche **Neue Abfrage** klicken, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
   
--   **Datenbank-Engine-Abfrage** – Öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erforderlichen Informationen abzurufen.  
+-   **Datenbank-Engine-Abfrage**: Öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erforderlichen Informationen abzurufen.  
   
 -   **Analysis Services MDX-Abfrage** – Öffnet einen neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erforderlichen Informationen abzurufen.  
   

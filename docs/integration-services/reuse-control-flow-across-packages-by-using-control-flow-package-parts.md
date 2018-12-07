@@ -16,15 +16,15 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5951daccc88e8593c27365254d208c4b2ee84118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11b6d7d881a034fa79315c37345d7845d868fc2b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753788"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542639"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Wiederverwenden der Ablaufsteuerung für Pakete mithilfe von Ablaufsteuerungs-Paketteilen
-  Sie können einen häufig verwendeten Ablaufsteuerungstask oder Container in einer eigenständigen Teiledatei (einer DTSXP-Datei) speichern und in einem oder mehreren Paketen unter Verwendung von Ablaufsteuerungs-Paketteilen mehrmalig wiederverwenden. Die Wiederverwendbarkeit erleichtert das Design und die Verwaltung von SSIS-Paketen.  
+  Sie können einen häufig verwendeten Ablaufsteuerungstask oder Container in einer eigenständigen Teiledatei (einer DTSXP-Datei) speichern und in mindestens einem Paket unter Verwendung von Ablaufsteuerungs-Paketteilen mehrmalig wiederverwenden. Die Wiederverwendbarkeit erleichtert das Design und die Verwaltung von SSIS-Paketen.  
   
 ## <a name="create-a-new-control-flow-package-part"></a>Erstellen eines neuen Ablaufsteuerungs-Paketteils  
  Erweitern Sie im Projektmappen-Explorer den Ordner **Paketteile** , um einen neuen Ablaufsteuerungs-Paketteil zu erstellen. Klicken Sie mit der rechten Maustaste auf **Ablaufsteuerung** , und wählen Sie **Neuer Ablaufsteuerungs-Paketteil**aus.  
@@ -141,13 +141,13 @@ ms.locfileid: "47753788"
 ## <a name="package-parts-are-a-design-time-feature-only"></a>Paketteile sind eine reine Entwurfszeitfunktion  
  Paketteile sind eine reine Entwurfszeitfunktion. Im SSIS-Designer können Sie Teile erstellen, öffnen, speichern und aktualisieren sowie Teileinstanzen zu einem Paket hinzufügen, darin konfigurieren oder daraus löschen. In der SSIS-Laufzeit werden die Teile jedoch ignoriert. Nachfolgend wird erläutert, wie der Designer diese Trennung erreicht.  
   
--   Der Designer speichert Instanzen von Paketteilen mit den konfigurierten Eigenschaften in einer .dtsx.designer-Datei.  
+-   Der Designer speichert Instanzen von Paketteilen mit den zugehörigen konfigurierten Eigenschaften in einer .dtsx.designer-Datei.  
   
 -   Beim Speichern der .dtsx.designer-Datei durch den Designer wird gleichzeitig der Inhalt aus den Teilen extrahiert, auf die diese Datei verweist, und die Teileinstanzen im Paket werden durch den Inhalt der Teile ersetzt.  
   
 -   Schließlich wird der gesamte Inhalt, der keine Teileinformationen mehr enthält, zurück in die DTSX-Paketdatei gespeichert. Dies ist die Datei, die von der SSIS-Laufzeit ausgeführt wird.  
   
- Das folgende Diagramm veranschaulicht die Beziehung zwischen Teilen („DTSXP-Dateien), dem SSIS-Designer und der SSIS-Laufzeit.  
+ Das folgende Diagramm veranschaulicht die Beziehung zwischen Teilen (DTSXP-Dateien), dem SSIS-Designer und der SSIS-Laufzeit.  
   
  ![Dateien und Fluss von Ablaufsteuerungsvorlagen](../integration-services/media/control-flow-templates-intro.png "Control flow templates files and flow")  
   

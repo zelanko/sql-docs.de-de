@@ -10,12 +10,12 @@ ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d60a5174b5ca067e9f0e0d9f5db7efd6e71466ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 105401dc20d20b3414624d5dd0a40238a32bd243
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840428"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535128"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Deinstallieren von Power Pivot für SharePoint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47840428"
 -   Sie müssen Analysis Services-Systemadministrator und Mitglied der lokalen Administratorengruppe sein, um Analysis Services und [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]zu deinstallieren.  
   
 ##  <a name="bkmk_before"></a> Schritt 1: Prüfliste vor der Deinstallation  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Der Power Pivot-Datenzugriff wird deaktiviert, sobald die Software, die die Abfrage- und -Datenverarbeitung unterstützt, aus der Farm entfernt wird. Als ersten Schritt sollten Sie die Dateien und Bibliotheken, die nicht mehr funktionsfähig sein werden, präventiv löschen. Auf diese Weise können Sie Fragen oder Bedenken hinsichtlich "fehlender Daten" bereits vor der Deinstallation der Software klären.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Der Power Pivot-Datenzugriff wird deaktiviert, sobald die Software, die die Abfrage- und -Datenverarbeitung unterstützt, aus der Farm entfernt wird. Als ersten Schritt sollten Sie die Dateien und Bibliotheken, die nicht mehr funktionsfähig sein werden, präventiv löschen. Auf diese Weise können Sie Fragen oder Bedenken hinsichtlich „fehlender Daten“ bereits vor der Deinstallation der Software klären.  
   
 1.  Löschen Sie alle [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen, -Dokumente und -Bibliotheken, die mit einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Installation verknüpft sind. Weder die Bibliotheken noch die Dokumente sind nach der Deinstallation der Software funktionsfähig.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47840428"
   
 6.  Klicken Sie auf **Überprüfen** , um zu überprüfen, ob jede Aktion gültig ist. Wenn **Überprüfen** nicht verfügbar ist, bedeutet das, dass alle Aktionen für das System gültig sind.  
   
-7.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen**klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: "Alle im Tool als gültig gekennzeichneten Konfigurationseinstellungen werden auf die SharePoint-Farm angewendet. Möchten Sie den Vorgang fortsetzen?"  
+7.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen** klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: „Alle im Tool als gültig gekennzeichneten Konfigurationseinstellungen werden auf die SharePoint-Farm angewendet. Möchten Sie den Vorgang fortsetzen?“  
   
 8.  Klicken Sie zum Fortsetzen des Vorgangs auf **Ja** .  
   
@@ -114,20 +114,20 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  Gehen Sie folgendermaßen vor, um einen Auftrag zum Bereitstellen oder Zurückziehen, der sich bereits in der Warteschlange befindet, zu suchen und zu entfernen:  
   
-1.  Überprüfen Sie bei allen anderen Fehlern die ULS-Protokolle. Weitere Informationen finden Sie unter [Konfigurieren und Anzeigen der SharePoint-Protokolldateien und -Diagnoseprotokollierung &#40;Power Pivot für SharePoint&#41;](~/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
+1.  Überprüfen Sie bei allen anderen Fehlern die ULS-Protokolle. Weitere Informationen finden Sie unter [Konfigurieren und Anzeigen der SharePoint-Protokolldateien und -Diagnoseprotokollierung &#40;Power Pivot for SharePoint&#41;](~/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 2.  Starten Sie die SharePoint-Verwaltungsshell als Administrator, und führen Sie dann den folgenden Befehl aus, um Aufträge in der Warteschlange anzuzeigen:  
   
     ```  
-    Stsadm –o enumdeployments  
+    Stsadm -o enumdeployments  
     ```  
   
 3.  Überprüfen Sie vorhandene Bereitstellungen auf die folgenden Informationen: **Typ** ist "Zurückziehung" oder "Bereitstellung", **Datei** ist "powerpivotwebapp.wsp" oder "powerpivotfarm.wsp".  
   
-4.  Kopieren Sie bei Bereitstellungen oder Zurückziehungen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Lösungen den GUID-Wert für **JobId** , und fügen Sie ihn in den folgenden Befehl ein (verwenden Sie zum Kopieren der GUID die Befehle zum Markieren, Kopieren und Einfügen im Bearbeitungsmenü der Shell):  
+4.  Kopieren Sie bei Bereitstellungen oder Zurückziehungen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Lösungen den GUID-Wert für **JobId**, und fügen Sie ihn in den folgenden Befehl ein (verwenden Sie zum Kopieren der GUID die Befehle zum Markieren, Kopieren und Einfügen im Bearbeitungsmenü der Shell):  
   
     ```  
-    Stsadm –o canceldeployment –id “<GUID>”  
+    Stsadm -o canceldeployment -id "<GUID>"  
     ```  
   
 5.  Wiederholen Sie den Task im Konfigurationstool, indem Sie auf **Überprüfen** und **Ausführen**klicken.  

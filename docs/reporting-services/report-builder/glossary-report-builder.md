@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e96093d286fa9ca7d5d76fd30206043ef8396b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddefafa610718710a6b8a41d267ceb8e3b5515d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857158"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541798"
 ---
 # <a name="glossary-report-builder"></a>Glossar (Berichts-Generator)
   
@@ -155,7 +155,7 @@ ms.locfileid: "47857158"
 |Messgerät (gauge)|Ein Messgerät ist ein Datenbereich, in dem ein Bereich von Daten dargestellt wird und ein Indikator auf einen bestimmten Wert innerhalb des Bereichs zeigt.|  
 |Messgerätbereich (gauge panel)|Der Messgerätbereich ist das umfassende äußere Element, das ein oder mehrere radiale und lineare Messgeräte enthält.  Verwenden Sie den Messgerätbereich, um Eigenschaften zu definieren, die für alle Messgeräte in einem Messgerätbereich gültig sind.|  
 |Messgerätzeiger (gauge pointer)|Ein Messgerätzeiger ist eine Nadel, eine Markierung oder eine Leiste, die den aktuellen Wert auf dem Messgerät anzeigt.  Ein Messgerätzeiger wird immer an eine Skalierung des Messgeräts angefügt.|  
-|Messgerätbereich (gauge range)|Ein Messgerätbereich ist ein farbiger Bereich, der eine "wichtige Zone" darstellt und stets durch einen Startwert und einen Endwert auf der Skalierung des Messgeräts begrenzt ist.|  
+|Messgerätbereich (gauge range)|Ein Messgerätbereich ist ein farbiger Bereich, der eine „wichtige Zone“ darstellt und stets durch einen Startwert und einen Endwert auf der Skalierung des Messgeräts begrenzt ist.|  
 |Messgerätskala (gauge scale)|Eine Messgerätskala ist der durch einen Minimalwert und einen Maximalwert begrenzte Bereich von Werten, die auf dem Messgerät angezeigt werden.  In der Regel enthält die Skalierung eines Messgeräts Messgerätbezeichnungen und -teilstriche, die das exakte Ablesen des Messgerätzeigers ermöglichen.|  
 |Geodätische Daten (geodesic data)|Daten, die Punkte, Linien oder Bereiche auf einer gekrümmten Oberfläche angeben.|  
 |Geografiedaten (geography data)|Ein SQL-Datentyp für räumliche Daten, der Daten in einem Erdkugel-Koordinatensystem darstellt, beispielsweise GPS-Koordinaten in Längen- und Breitengraden.|  
@@ -186,7 +186,7 @@ ms.locfileid: "47857158"
 |KPI|Siehe anderen Begriff: Key Performance Indicator (KPI)|  
 |Bezeichnungsfeld (label field)|Ein Berichtsdataset-Feld, das eine Bezeichnung für ein entsprechendes Schlüsselfeld identifiziert. Die Bezeichnung für ein Schlüsselfeld kann anstelle des Werts in Parametern und Datenbereichen angezeigt werden.|  
 |latency|Die Zeit, die zwischen dem Abschluss einer Datenänderung auf einem Server und der Anzeige dieser Änderung auf einem anderen Server verstreicht.|  
-|Breitengrad (latitude)|Die Breitengradkoordinate als dezimaler Gradwert in einem WGS 84-Bezug (World Geodetic System). Der gültige Wertebereich liegt zwischen –90,0 und +90,0.|  
+|Breitengrad (latitude)|Die Breitengradkoordinate als dezimaler Gradwert in einem WGS 84-Bezug (World Geodetic System). Der gültige Wertebereich liegt zwischen -90,0 und +90,0.|  
 |Ebene (layer)|In einem Kartenberichtselement gibt eine Ebene den Typ und die Darstellung eines einzelnen Typs von räumlichen Daten an. Ein Kartenberichtselement ist ein Container für mehrere Ebenen.|  
 |LCID|Eine Nummer, die ein Windows-basiertes Gebietsschema identifiziert.|  
 |Legende (legend)|Ein Element in einem Berichtsdiagramm, einer Karte oder einem Messgerätdatenbereich, das den Zusammenhang zwischen den dargestellten Daten und den zugrunde liegenden Datenwerten erläutert.|  
@@ -199,7 +199,7 @@ ms.locfileid: "47857158"
 |Protokolldatei (log file)|Eine Datei oder ein Dateisatz mit Aufzeichnungen zu den Änderungen, die in einer Datenbank vorgenommen wurden.|  
 |Logischer Name|Eine Name, der von SQL Server verwendet wird, um eine Datei zu identifizieren.|  
 |Logische Operatoren (logical operators)|Die Operatoren AND, OR und NOT. Logische Operatoren werden verwendet, um Suchbedingungen in WHERE-Klauseln zu verbinden.|  
-|Längengrad (longitude)|Die Längenkoordinate als dezimaler Gradwert nach dem World Geodetic System (WGS 84). Der gültige Wertebereich liegt zwischen –180,0 und +180,0.|  
+|Längengrad (longitude)|Die Längenkoordinate als dezimaler Gradwert nach dem World Geodetic System (WGS 84). Der gültige Wertebereich liegt zwischen -180,0 und +180,0.|  
 |m:n-Beziehung (many-to-many relationship)|Eine Beziehung zwischen zwei Tabellen, bei der Zeilen in jeder der beiden Tabellen mehrere übereinstimmende Zeilen in der verknüpften Tabelle aufweisen. Beispielsweise können in einer Rechnung mehrere Produkte aufgeführt sein, aber ein Produkt kann in mehreren Rechnungen enthalten sein.|  
 |m:1-Beziehung|Eine Beziehung zwischen zwei Tabellen, bei der eine Zeile in einer Tabelle mit vielen Zeilen in einer anderen Tabelle verknüpft sein kann.|  
 |Zuordnen|Ein Berichtselement, das als Container für Titel, verschiedene Typen von Legenden und Kartenebenen dient.|  

@@ -17,12 +17,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6919f19a3feec0122ac76d2b4cb4f0bdbbc68466
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3da52bc9b6014f5a2a553fc24e844299dd4ab4e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691528"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515785"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Verschieben eines vorhandenen Indexes in eine andere Dateigruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47691528"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -76,7 +76,7 @@ ms.locfileid: "47691528"
   
 8.  Klicken Sie auf **Schließen**.  
   
-9. Klicken Sie im Menü **Datei** auf **Speichern***Tabellenname*.  
+9. Klicken Sie im Menü **Datei** auf **Save**_Tabellenname_.  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>So verschieben Sie einen vorhandenen Index im Objekt-Explorer in eine andere Dateigruppe  
   
@@ -102,7 +102,7 @@ ms.locfileid: "47691528"
   
 8.  Klicken Sie auf **OK**.  
   
- Die folgenden Informationen sind auf der Seite **Speicher** des Dialogfelds **Indexeigenschaften –** *Indexname* verfügbar:  
+ Die folgenden Informationen sind auf der Seite **Speicher** des Dialogfelds **Indexeigenschaften >** *Indexname* verfügbar:  
   
  **Dateigruppe**  
  Speichert den Index in der angegebenen Dateigruppe. Diese Liste enthält nur Standarddateigruppen (ROW). Die Standardauswahl in der Liste ist die PRIMARY-Dateigruppe der Datenbank.  

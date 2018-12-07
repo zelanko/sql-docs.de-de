@@ -11,12 +11,12 @@ author: egranet
 ms.author: esgranet
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50b39571179528f96f19370c4935b87e457b214f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 18dd28aeb4c1678b4b6ae454c065d3d96770cb5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662996"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539108"
 ---
 # <a name="static-data-masking"></a>Statische Datenmaskierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ Hier finden Sie eine ausführliche Anleitung für die Ausführung der statischen
  
  ![Dropdownliste der Maskierungsfunktionen](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- Hinweis: Für die meisten dieser Maskierungsfunktionen gibt es zusätzliche Konfigurationsparameter. Für die Shufflemaskierung ist ein Standardparameter in der statischen Datenmaskierung verfügbar. Für die Funktionen „Group Shuffle“ (Gruppenshuffle), „Single value“ (Einzelwert) und „String Composite“ (Zusammengesetzte Zeichenfolge) muss der Benutzer Konfigurationsparameter angeben. Wenn Sie Konfigurationsparameter angeben oder ändern möchten, klicken Sie auf **Konfigurieren...**, und geben Sie im angezeigten Dialogfeld einen (alternativen) Wert für den Parameter an. Die Maskierungsfunktionen werden unter [Maskierungsfunktionen](#masking-functions) ausführlich beschrieben.
+ Hinweis: Für die meisten dieser Maskierungsfunktionen gibt es zusätzliche Konfigurationsparameter. Für die Shufflemaskierung ist ein Standardparameter in der statischen Datenmaskierung verfügbar. Für die Funktionen „Group Shuffle“ (Gruppenshuffle), „Single value“ (Einzelwert) und „String Composite“ (Zusammengesetzte Zeichenfolge) muss der Benutzer Konfigurationsparameter angeben. Klicken Sie zum Ändern oder Bereitstellen von Konfigurationsparametern auf die Option **Konfigurieren...**, und geben Sie in dem Dialogfeld, das angezeigt wird, einen (alternativen) Wert für den Parameter an. Die Maskierungsfunktionen werden unter [Maskierungsfunktionen](#masking-functions) ausführlich beschrieben.
  
  ![Schaltfläche „Konfigurieren...“ für Maskierungsfunktionen](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  
@@ -122,7 +122,7 @@ Hier finden Sie eine ausführliche Anleitung für die Ausführung der statischen
  
  ![Konfigurationsdatei](../../relational-databases/security/media/sql-static-data-masking/load_save_config.PNG)
  
-6. Die statische Datenmaskierung erstellt einen Ordner namens „Static Data Masking“ (Statische Datenmaskierung) im Ordner **Dokumente** des Benutzers, in dem Protokolldateien gespeichert werden. Die Protokolldateien können beim Debuggen nützlich sein. Der Name der Protokolldatei wird am unteren Rand des Konfigurationsfensters angezeigt. 
+6. Bei der statischen Datenmaskierung wird im Ordner **Dokumente** des Benutzers ein Ordner namens „Static Data Masking“ (Statische Datenmaskierung) erstellt, in dem Protokolldateien gespeichert werden. Die Protokolldateien können beim Debuggen nützlich sein. Der Name der Protokolldatei wird am unteren Rand des Konfigurationsfensters angezeigt. 
   
  
 7. Nur SQL Server: Wenn Sie die statische Datenmaskierung auf einer lokalen Datenbank ausführen, führt diese eine Sicherung und eine Wiederherstellung durch. Geben Sie unter **Step 2: Clone .BAK file Location** (Schritt 2: Speicherort der BAK-Datei klonen) den Speicherort auf dem Server an, an dem die Sicherungsdatei gespeichert wird. 
@@ -135,7 +135,7 @@ Bei der NULL-Maskierung werden alle Werte in der Spalte durch NULL ersetzt. Wenn
 
 ### <a name="single-value-masking"></a>Maskierung mit Einzelwerten
 
-Bei der Maskierung mit Einzelwerten werden alle Werte in der Spalte durch einen einzelnen, vom Benutzer festgelegten Wert ersetzt. Das Format der Eingabe muss in den Typ der ausgewählten Spalte konvertierbar sein. Klicken Sie auf **Konfigurieren...**, geben Sie einen Wert ein, und klicken Sie auf **OK**, um einen Wert festzulegen. 
+Bei der Maskierung mit Einzelwerten werden alle Werte in der Spalte durch einen einzelnen, vom Benutzer festgelegten Wert ersetzt. Das Format der Eingabe muss in den Typ der ausgewählten Spalte konvertierbar sein. Klicken Sie auf **Konfigurieren...**, geben Sie einen Wert an, und klicken Sie anschließend auf **OK**, um einen Wert festzulegen. 
 
 ![Parameter für die Maskierung mit Einzelwerten](../../relational-databases/security/media/sql-static-data-masking/single_value_parameter.PNG)
 

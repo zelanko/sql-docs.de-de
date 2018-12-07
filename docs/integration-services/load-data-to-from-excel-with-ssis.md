@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c4618fc4c6b352e119fb4c4686820ee8077dfab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 270528218e23d230ecb8b8ea4dc5bde6baaa6440
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848398"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545724"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS)
 
@@ -172,17 +172,17 @@ Sobald Sie die zu importierenden oder exportierenden Excel-Objekte ausgewählt o
 
 Der Excel-Treiber erkennt nur einen begrenzten Satz von Datentypen. Beispielsweise werden alle numerischen Spalten als Werte mit doppelter Genauigkeit (DT_R8) interpretiert, und alle Zeichenfolgenspalten (außer Memospalten) werden als Unicode-Zeichenfolgen mit 255 Zeichen (DT_WSTR) interpretiert. SSIS ordnet die Excel-Datentypen folgendermaßen zu:
 
--   Numerisch – Gleitkommawert mit doppelter Genauigkeit (DT_R8)
+-   Numerisch: Gleitkommawert mit doppelter Genauigkeit (DT_R8)
 
--   Währung – Währung (DT_CY)
+-   Währung: Währung (DT_CY)
 
--   Boolesch – Boolesch (DT_BOOL)
+-   Boolesch: Boolesch (DT_BOOL)
 
--   Datum/Uhrzeit – DateTime (DT_DATE)
+-   Datum/Uhrzeit: DateTime (DT_DATE)
 
--   Zeichenfolge – Unicode-Zeichenfolge, Länge 255 (DT_WSTR)
+-   Zeichenfolge: Unicode-Zeichenfolge, Länge 255 (DT_WSTR)
 
--   Memo – Unicode-Textdatenstrom (DT_NTEXT)
+-   Memo: Unicode-Textdatenstrom (DT_NTEXT)
 
 ### <a name="data-type-and-length-conversions"></a>Datentyp- und Längenkonvertierungen
 

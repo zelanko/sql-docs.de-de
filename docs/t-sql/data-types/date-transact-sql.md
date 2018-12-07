@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed9b7d2b24b2687de6e5736e6ef2ca523c2ade6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 801cdcf393ebadb9c0fd287fdd97e65cad87c284
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635958"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533018"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,10 +80,10 @@ In den folgenden Tabellen werden die gültigen Formate der Zeichenfolgenliterale
   
 |W3C XML-Format|und Beschreibung|  
 |--------------------|-----------------|  
-|yyyy-mm-ddTZD|Speziell unterstützt für die XML/SOAP-Verwendung.<br /><br /> TZD ist der Zeitzonenkennzeichner (Z oder +hh:mm oder -hh:mm):<br /><br /> – Der Zeitzonenoffset wird durch hh:mm angegeben. Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 14, die die Anzahl der Stunden im Zeitzonenoffset darstellen.<br />– Bei MM handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Anzahl der zusätzlichen Minuten im Zeitzonenoffset darstellen.<br />– + (plus) oder – (minus) ist das erforderliche Zeichen des Zeitzonenoffsets. Dieses gibt an, ob der Zeitzonenoffset zu der koordinierten Weltzeit (Coordinated Universal Time, UTC) addiert oder von dieser subtrahiert wird, um die lokale Zeit zu erhalten. Der gültige Zeitzonenoffset liegt im Bereich von -14: 00 bis +14: 00.|  
+|yyyy-mm-ddTZD|Speziell unterstützt für die XML/SOAP-Verwendung.<br /><br /> TZD ist der Zeitzonenkennzeichner (Z oder +hh:mm oder -hh:mm):<br /><br /> – Der Zeitzonenoffset wird durch hh:mm angegeben. Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 14, die die Anzahl der Stunden im Zeitzonenoffset darstellen.<br />– Bei MM handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Anzahl der zusätzlichen Minuten im Zeitzonenoffset darstellen.<br />– + (plus) oder - (minus) ist das erforderliche Zeichen des Zeitzonenoffsets. Dieses gibt an, ob der Zeitzonenoffset zu der koordinierten Weltzeit (Coordinated Universal Time, UTC) addiert oder von dieser subtrahiert wird, um die lokale Zeit zu erhalten. Der gültige Zeitzonenoffset liegt im Bereich von -14: 00 bis +14: 00.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Kompatibilität mit ANSI und ISO 8601  
-**date** ist mit der ANSI SQL-Standarddefinition für den gregorianischen Kalender kompatibel: "NOTE 85 - Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001–01–01 CE through 9999–12–31 CE."
+**date** ist mit der ANSI SQL-Standarddefinition für den gregorianischen Kalender kompatibel: „NOTE 85 - Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001-01-01–9999-12-31–01 CE through 9999–12–31 CE.“ (Hinweis 85: Datetime-Datentypen lassen Datumsangaben im gregorianischen Format im Bereich 1.1.0001 bis 31.12.9999 zu.)
   
 Das standardmäßige Format der Zeichenfolgenliterale, das für Downlevelclients verwendet wird, ist mit dem SQL-Standard konform, der als YYYY-MM-DD definiert ist. Dieses Format ist mit der Definition von ISO 8601 für DATE identisch.
   

@@ -20,12 +20,12 @@ ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 961e5bccc9dac041104280e3186ba6a767db588f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bdac01fd13da7f1662e8f8292a31a3412fcf5e7e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693538"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511199"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>Erstellen einer benutzerdefinierten Datenflusskomponente
   In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt der Datenflusstask ein Objektmodell zur Verfügung, das Entwicklern das Erstellen von benutzerdefinierten Datenflusskomponenten (Quellen, Transformationen und Ziele) anhand von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] und verwaltetem Code ermöglicht.  

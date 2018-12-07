@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9b41f81a9a42ca572633d858fd22113d8a6d718a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 992239e7b2e07ac555eb2c474716f341bf4d7870
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031609"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617800"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   In der Standardeinstellung werden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Anforderungen übergeben, die die Negotiate- oder die NTLM-Authentifizierung angeben. Wenn eine Bereitstellung Clientanwendungen und Browser umfasst, die diese Sicherheitsanbieter nutzen, können Sie die Standardwerte ohne zusätzliche Konfiguration verwenden. Wenn Sie einen anderen Sicherheitsanbieter für die integrierte Sicherheit von Windows nutzen möchten (wenn Sie beispielsweise Kerberos direkt verwenden möchten) oder wenn Sie die Standardwerte verändert haben und die ursprünglichen Einstellungen wiederherstellen möchten, können Sie mithilfe der in diesem Thema enthaltenen Informationen die Authentifizierungseinstellungen auf dem Berichtsserver festlegen.  
@@ -168,7 +168,7 @@ ms.locfileid: "50031609"
   
 -   Die Werte unter \<Explicit> enthalten die in Active Directory für das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienstkonto konfigurierten SPNs.  
   
- Wenn Sie den erweiterten Schutz nicht weiterverwenden möchten, setzen Sie die Konfigurationswerte auf die Standardwerte zurück und starten das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstkonto neu.  
+ Wenn Sie den erweiterten Schutz nicht weiterverwenden möchten, setzen Sie die Konfigurationswerte auf die Standardwerte zurück und starten das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienstkonto neu.  
   
 ```  
 <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>  

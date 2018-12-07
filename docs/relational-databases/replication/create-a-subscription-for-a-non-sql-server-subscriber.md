@@ -15,12 +15,12 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e73ba6315113f1bd73e309816a2ec5f3184c369
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4e6ffeeeb6c6c39b161c6957677f65843959b13
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808438"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540220"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "47808438"
   
     -   Bei IBM DB2 wird die Datenbank in der **Initial Catalog** -Eigenschaft der DB2-Verbindungszeichenfolge angegeben, die in dem nachfolgend erwähnten Feld **Zusätzliche Verbindungsoptionen** eingegeben werden kann.  
   
-8.  Klicken Sie auf der Seite **Sicherheit für den Verteilungs-Agent** neben dem Abonnenten auf die Schaltfläche für die Eigenschaften (**…**), um auf das Dialogfeld **Sicherheit für den Verteilungs-Agent** zuzugreifen.  
+8.  Klicken Sie auf der Seite **Sicherheit für den Verteilungs-Agent** neben dem Abonnenten auf die Schaltfläche für die Eigenschaften (**...**), um auf das Dialogfeld **Sicherheit für den Verteilungs-Agent** zuzugreifen.  
   
 9. Führen Sie im Dialogfeld **Sicherheit für den Verteilungs-Agent** folgende Schritte aus:  
   
@@ -189,6 +189,6 @@ ms.locfileid: "47808438"
  [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)   
  [Andere Nicht-SQL Server-Abonnenten](../../relational-databases/replication/non-sql/other-non-sql-server-subscribers.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Bewährte Methoden für die Replikationssicherheit](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

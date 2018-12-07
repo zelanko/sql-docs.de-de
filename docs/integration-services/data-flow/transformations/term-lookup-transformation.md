@@ -24,12 +24,12 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b3f90acc0f7fefea0ffd142c4b0acd6a8e59549
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9d3d52a5a1f63933bc383601a650bf8e044d22dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640157"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522713"
 ---
 # <a name="term-lookup-transformation"></a>Transformation für Ausdruckssuche
   Die Transformation für Ausdruckssuche vergleicht aus Text in einer Transformationseingabespalte extrahierte Ausdrücke mit Ausdrücken in einer Verweistabelle. Anschließend wird gezählt, wie häufig ein Ausdruck in der Nachschlagetabelle im Eingabedataset vorkommt. Dieser Wert wird zusammen mit dem Ausdruck aus der Verweistabelle in Spalten in der Transformationsausgabe geschrieben. Mit dieser Transformation können Sie eine benutzerdefinierte Kennwortliste basierend auf dem Eingabetext erstellen, einschließlich Worthäufigkeitsstatistiken.  
@@ -58,7 +58,7 @@ ms.locfileid: "51640157"
   
 -   Wenn der Text in der Eingabespalte ein lemmatisierter nominaler Ausdruck ist, ist nur das letzte Wort des nominalen Ausdrucks von der Normalisierung betroffen. Die lemmatisierte Version von *doctors appointments* lautet beispielsweise *doctors appointment*.  
   
- Wenn ein Suchelement Ausdrücke enthält, die sich im Verweissatz überlappen (d. h. ein Unterausdruck ist in mehreren Verweisdatensätzen zu finden), gibt die Transformation für Ausdruckssuche nur ein Suchergebnis zurück. Das folgende Beispiel zeigt das Ergebnis für den Fall, dass ein Suchelement einen sich überlappenden Unterausdruck enthält. In diesem Fall ist *Windows*der überlappende Unterausdruck, der sich in zwei Verweisausdrücken findet. Die Transformation gibt jedoch keine zwei Ergebnisse, sondern nur einen Verweisausdruck zurück: *Windows*. Der zweite Verweisausdruck, *Windows 7 Professional*, wird nicht zurückgegeben.  
+ Wenn ein Suchelement Ausdrücke enthält, die sich im Verweissatz überlappen (d.h. ein Unterausdruck ist in mehreren Verweisdatensätzen zu finden), gibt die Transformation für Ausdruckssuche nur ein Suchergebnis zurück. Das folgende Beispiel zeigt das Ergebnis für den Fall, dass ein Suchelement einen sich überlappenden Unterausdruck enthält. In diesem Fall ist *Windows*der überlappende Unterausdruck, der sich in zwei Verweisausdrücken findet. Die Transformation gibt jedoch keine zwei Ergebnisse, sondern nur einen Verweisausdruck zurück: *Windows*. Der zweite Verweisausdruck, *Windows 7 Professional*, wird nicht zurückgegeben.  
   
 |Element|value|  
 |----------|-----------|  
@@ -66,7 +66,7 @@ ms.locfileid: "51640157"
 |Verweisausdrücke|Windows, Windows 7 Professional|  
 |Ausgabe|Windows|  
   
- Die Transformation für Ausdruckssuche kann Nomen und nominale Ausdrücke vergleichen, die Sonderzeichen enthalten, und die Daten in der Verweistabelle können diese Zeichen enthalten. Die Sonderzeichen sind die folgenden: %, @, &, $, #, \*, :, ;, ., **,**, !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, und ‘.  
+ Die Transformation für Ausdruckssuche kann Nomen und nominale Ausdrücke vergleichen, die Sonderzeichen enthalten, und die Daten in der Verweistabelle können diese Zeichen enthalten. Folgende Sonderzeichen sind zulässig: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " und '.  
   
 ## <a name="data-types"></a>Datentypen  
  Die Transformation für Ausdruckssuche kann nur eine Spalte vom Datentyp DT_WSTR oder DT_NTEXT verwenden. Wenn eine Spalte Text enthält, aber keinen dieser Datentypen aufweist, kann die Transformation für Datenkonvertierung dem Datenfluss eine Spalte vom Datentyp DT_WSTR oder DT_NTEXT hinzufügen und die Spaltenwerte in die neue Spalte kopieren. Die Ausgabe von der Transformation für Datenkonvertierung kann dann als Eingabe für die Transformation für Ausdruckssuche verwendet werden. Weitere Informationen finden Sie unter [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  

@@ -18,12 +18,12 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7be0bb2b8864fc7720753e2af8a372c57a4ec3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f018f3415d0ee99eedb3c086e308a84c61cdc058
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770038"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542896"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Websynchronisierung für die Mergereplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47770038"
   
  ![Komponenten und Datenfluss für Websynchronisierung](../../relational-databases/replication/media/web-sync01.gif "Web synchronization components and data flow")  
   
- Die Websynchronisierung steht nur für Pullabonnements zur Verfügung. Ein Merge-Agent wird deshalb immer auf dem Abonnenten ausgeführt. Dabei kann es sich um den Standard-Merge-Agent, das ActiveX-Steuerelement für den Merge-Agent oder eine Anwendung handeln, die die Synchronisierung über Replikationsverwaltungsobjekte (RMO) bereitstellt. Mit dem **–InternetUrl** -Parameter für den Merge-Agent wird der Standort des Computers mit IIS angegeben.  
+ Die Websynchronisierung steht nur für Pullabonnements zur Verfügung. Ein Merge-Agent wird deshalb immer auf dem Abonnenten ausgeführt. Dabei kann es sich um den Standard-Merge-Agent, das ActiveX-Steuerelement für den Merge-Agent oder eine Anwendung handeln, die die Synchronisierung über Replikationsverwaltungsobjekte (RMO) bereitstellt. Mit dem **–InternetUrl**-Parameter für den Merge-Agent wird der Standort des Computers mit IIS angegeben.  
   
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung (Replisapi.dll) ist auf dem Computer mit IIS konfiguriert und verarbeitet die Nachrichten, die vom Verleger und den Abonnenten an den Server gesendet werden. Jeder Knoten in der Topologie verarbeitet den XML-Datenstrom mithilfe der SQL Server-Mergereplikationssynchronisierung (Replrec.dll).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47770038"
 3.  Der Merge-Agent auf dem Abonnenten akzeptiert anschließend die HTTPS-Antwort und wendet die Downloadänderungen auf die Abonnementdatenbank an.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
+ [Konfigurieren der Websynchronisierung](../../relational-databases/replication/configure-web-synchronization.md)   
  [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

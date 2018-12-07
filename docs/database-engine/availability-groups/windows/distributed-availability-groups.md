@@ -12,12 +12,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7ebe74f54dd33c3f31bc649eab9395e9f020b35f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebc3dfd0534deb313725ab646da26f770d0f99cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772388"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534451"
 ---
 # <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Informationen zum Konfigurieren einer verteilten Verfügbarkeitsgruppe finden Si
 
 ## <a name="understand-distributed-availability-groups"></a>Grundlegendes zu verteilten Verfügbarkeitsgruppen
 
-Eine verteilte Verfügbarkeitsgruppe ist ein spezieller Typ einer Verfügbarkeitsgruppe, der zwei separate Verfügbarkeitsgruppen umfasst. Die Verfügbarkeitsgruppen, die Teil einer verteilten Verfügbarkeitsgruppe sind, müssen sich nicht am selben Ort befinden. Sie können physisch, virtuell, lokal, in der öffentlichen Cloud oder an einem sonstigen Ort sein, der die Bereitstellung von Verfügbarkeitsgruppen unterstützt. Dazu zählen domänen- oder sogar plattformübergeifende Orte, z.B. zwischen einer Verfügbarkeitsgruppe, die unter Linux gehostet wird, und einer anderen, die unter Windows gehostet wird. Solange zwei Verfügbarkeitsgruppen kommunizieren können, können Sie mit diesen eine verteilte Verfügbarkeitsgruppe konfigurieren.
+Eine verteilte Verfügbarkeitsgruppe ist ein spezieller Typ einer Verfügbarkeitsgruppe, der zwei separate Verfügbarkeitsgruppen umfasst. Die Verfügbarkeitsgruppen, die Teil einer verteilten Verfügbarkeitsgruppe sind, müssen sich nicht am selben Ort befinden. Sie können physisch, virtuell, lokal, in der öffentlichen Cloud oder an einem sonstigen Ort sein, der die Bereitstellung von Verfügbarkeitsgruppen unterstützt. Dazu zählen domänen- und sogar plattformübergreifende Orte, z.B. zwischen einer Verfügbarkeitsgruppe, die unter Linux gehostet wird, und einer anderen, die unter Windows gehostet wird. Solange zwei Verfügbarkeitsgruppen kommunizieren können, können Sie mit diesen eine verteilte Verfügbarkeitsgruppe konfigurieren.
 
 Die Ressourcen einer herkömmlichen Verfügbarkeitsgruppe werden in einem WSFC-Cluster konfiguriert. Eine verteilte Verfügbarkeitsgruppe kann keine Konfigurationen in einem WSFC-Cluster vornehmen. Sie wird vollständig in SQL Server verwaltet. Informationen zum Anzeigen der Informationen für eine verteilte Verfügungsgruppe finden Sie unter [Viewing distributed availability group information (Anzeigen der Informationen für eine verteilte Verfügbarkeitsgruppe)](#viewing-distributed-availability-group-information). 
 

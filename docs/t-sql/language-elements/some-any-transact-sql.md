@@ -22,12 +22,12 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ea622a882d0c9ff45680c0ee5b975a08c780ce9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70907736aab1cdcf628f763209b39e88f1a2bf6f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597938"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511625"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **Boolean**  
   
 ## <a name="result-value"></a>Ergebniswert  
- SOME oder ANY geben **TRUE** zurück, wenn der angegebene Vergleich für ein Paar (*scalar_expression ***,*** x*) TRUE ergibt, wenn *x* ein Wert im Einspaltensatz ist. Andernfalls wird **FALSE** zurückgegeben.  
+ SOME oder ANY geben **TRUE** zurück, wenn der angegebene Vergleich für ein Paar (_scalar_expression_**,**_x_) TRUE ergibt, wenn *x* ein Wert im Einspaltensatz ist. Andernfalls wird **FALSE** zurückgegeben.  
   
 ## <a name="remarks"></a>Remarks  
  SOME erfordert, dass *scalar_expression* mit mindestens einem von der Unterabfrage zurückgegebenen Wert positiv verglichen wird. Anweisungen, die erfordern, dass *scalar_expression* mit jedem von der Unterabfrage zurückgegebenen Wert positiv verglichen wird, finden Sie unter [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Wenn die Unterabfrage beispielsweise die Werte 2 und 3 zurückgibt, ergibt *scalar_expression* = SOME (Unterabfrage) für *scalar_express* = 2 TRUE. Wenn die Unterabfrage beispielsweise die Werte 2 und 3 zurückgibt, ergibt *scalar_expression* = ALL (Unterabfrage) FALSE, da einige Werte der Unterabfrage (der Wert 3) die Kriterien des Ausdrucks nicht erfüllen.  

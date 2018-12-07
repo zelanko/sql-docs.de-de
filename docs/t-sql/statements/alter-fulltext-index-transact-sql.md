@@ -22,12 +22,12 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f824f7fec40cf99b55ff97382269413ae82b5c83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2db3b6241096501190e2d1c8e3978bd349fed7a3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662098"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526198"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ALTER FULLTEXT INDEX ON table_name
 >  Informationen zur Interaktion zwischen der Änderungsnachverfolgung und WITH NO POPULATION finden Sie unter "Hinweise" weiter unten in diesem Thema.  
   
  MANUAL  
- Gibt an, dass die nachverfolgten Änderungen manuell durch einen Aufruf der Anweisung ALTER FULLTEXT INDEX … START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung (*manuelles Auffüllung*). Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden, um die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in regelmäßigen Abständen aufzurufen.  
+ Gibt an, dass die nachverfolgten Änderungen durch das Aufrufen folgender Anweisung manuell verbreitet werden: ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung (*manuelles Auffüllung*). Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden, um die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in regelmäßigen Abständen aufzurufen.  
   
  AUTO  
  Gibt an, dass die nachverfolgten Änderungen automatisch weitergegeben werden, wenn Daten in der Basistabelle geändert werden (*automatische Auffüllung*). Obwohl Änderungen automatisch weitergegeben werden, werden diese Änderungen u. U. nicht sofort im Volltextindex wiedergegeben. AUTO ist die Standardeinstellung.  
@@ -128,7 +128,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Erstellt den zusätzlichen Schlüsselausdruck und die Dokumentähnlichkeitsindizes, die Teil der statistischen semantischen Indizierung sind. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- [ **,***...n*]  
+ [ **,**_...n_]  
  Gibt an, dass mehrere Spalten für die ADD-, ALTER- oder DROP-Klauseln angegeben werden können. Bei Angabe mehrerer Spalten müssen die Spalten mit Kommas getrennt werden.  
   
  WITH NO POPULATION  
@@ -185,7 +185,7 @@ ALTER FULLTEXT INDEX ON table_name
  Ändert die ggf. Sucheigenschaftenliste, die dem Index zugeordnet ist.  
   
  OFF  
- Gibt an, dass dem Volltextindex keine Eigenschaftenliste zugeordnet werden soll. Wenn Sie die Sucheigenschaftenliste eines Volltextindexes (ALTER FULLTEXT INDEX … SET SEARCH PROPERTY LIST OFF) deaktivieren, ist keine Suche nach Eigenschaften in der Basistabelle mehr möglich.  
+ Gibt an, dass dem Volltextindex keine Eigenschaftenliste zugeordnet werden soll. Wenn Sie die Sucheigenschaftenliste eines Volltextindexes (ALTER FULLTEXT INDEX ... SET SEARCH PROPERTY LIST OFF) deaktivieren, ist keine Suche nach Eigenschaften in der Basistabelle mehr möglich.  
   
  Wenn Sie eine vorhandene Sucheigenschaftenliste deaktivieren, wird der Volltextindex standardmäßig automatisch wieder aufgefüllt. Wenn Sie beim Deaktivieren einer Sucheigenschaftenliste WITH NO POPULATION angeben, erfolgt keine automatische Wiederauffüllung. Es empfiehlt sich jedoch, zu einem späteren Zeitpunkt, eine vollständige Auffüllung für diesen Volltextindex durchzuführen. Wenn der Volltextindex wieder aufgefüllt wird, werden die eigenschaftenspezifischen Metadaten der gelöschten Sucheigenschaften entfernt, und der Volltextindex wird kleiner und leistungsfähiger.  
   
@@ -274,7 +274,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 3.  Der Volltextindex wird erneut der gleichen oder einer anderen Sucheigenschaftenliste zugeordnet.  
   
-     Mit der folgenden Anweisung wird der Volltextindex beispielsweise wieder der ursprünglichen Sucheigenschaftenliste `spl_1` zugeordnet:  
+     Mit der folgenden Anweisung wird der Volltextindex beispielsweise wieder ursprünglichen Sucheigenschaftenliste `spl_1` zugeordnet:  
   
     ```  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_1;  
@@ -291,7 +291,7 @@ ALTER FULLTEXT INDEX ON table_name
  Wenn SET STOPLIST angegeben wird, muss der Benutzer über die REFERENCES-Berechtigung für die Stoppliste verfügen. Wenn SET SEARCH PROPERTY LIST angegeben wird, muss der Benutzer über die REFERENCES-Berechtigung für die Sucheigenschaftenliste verfügen. Der Besitzer der angegebenen Stoppliste oder der angegebenen Sucheigenschaftenliste kann die REFERENCES-Berechtigung erteilen, wenn der Besitzer über ALTER FULLTEXT CATALOG-Berechtigungen verfügt.  
   
 > [!NOTE]  
->  Der Datenbankrolle public wird für die Standardstoppliste, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeliefert wird, die REFERENCES-Berechtigung gewährt.  
+>  Der Datenbankrolle public[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird für die Standardstoppliste, die mit  ausgeliefert wird, die REFERENCES-Berechtigung gewährt.  
   
 ## <a name="examples"></a>Beispiele  
   

@@ -15,12 +15,12 @@ ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf8c50739d1579087000aabf9dfbb9e958663118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 125da46c853c66d79abc7a28efa5000223711f50
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670048"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532816"
 ---
 # <a name="remove-joins-visual-database-tools"></a>Entfernen von Joins (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ Wenn Tabellen nicht über einen inneren oder äußeren Join miteinander verknüp
 > [!NOTE]  
 > Durch das Entfernen eines Joins aus einer Abfrage wird die zugrunde liegende Beziehung in der Datenbank nicht geändert.  
   
-Wenn zwei verknüpfte Tabellen Teil der Abfrage sind und Sie alle Joinbedingungen zwischen diesen entfernen, entsteht die resultierende Abfrage als Produkt aus beiden Tabellen, d. h. sie wird als CROSS JOIN bezeichnet.  
+Wenn zwei verknüpfte Tabellen Teil der Abfrage sind und Sie alle Joinbedingungen zwischen diesen entfernen, entsteht die resultierende Abfrage als Produkt aus beiden Tabellen, d.h. sie wird als CROSS JOIN bezeichnet.  
   
 ### <a name="to-remove-a-join"></a>So entfernen Sie einen Join  
   

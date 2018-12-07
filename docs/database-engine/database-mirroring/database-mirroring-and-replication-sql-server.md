@@ -14,12 +14,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a88bb5e660d992139ed9bf748544a52ed9839b0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 029ad55778a1c4239bdb83d587ca9a1f21bcaf20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637488"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534446"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Datenbankspiegelung und Replikation (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47637488"
   
     -   Setzen Sie den Wert des **@working_directory** -Parameters auf den Momentaufnahmeordner fest, der von dem Prinzipal verwendet wird.  
   
-4.  Geben Sie den Spiegeldatenbanknamen für den **–PublisherFailoverPartner** -Parameter des Agents an. Dieser Parameter ist für die folgenden Agents erforderlich, um die Spiegeldatenbank nach einem Failover zu identifizieren:  
+4.  Geben Sie den Spiegeldatenbanknamen für den Parameter **-PublisherFailoverPartner** des Agents an. Dieser Parameter ist für die folgenden Agents erforderlich, um die Spiegeldatenbank nach einem Failover zu identifizieren:  
   
     -   Momentaufnahme-Agent (für alle Veröffentlichungen)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "47637488"
   
     -   [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     Es wird empfohlen, zunächst den **–PublisherFailoverPartner** -Parameter zu einem Agent-Profil hinzuzufügen und anschließend den Spiegeldatenbanknamen im Profil anzugeben. Wenn Sie z. B. die Replikation mit gespeicherten Prozeduren konfigurieren:  
+     Es wird empfohlen, zunächst den Parameter **-PublisherFailoverPartner** zu einem Agent-Profil hinzuzufügen und anschließend den Spiegeldatenbanknamen im Profil anzugeben. Wenn Sie z. B. die Replikation mit gespeicherten Prozeduren konfigurieren:  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

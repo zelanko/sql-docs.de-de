@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c80abd458a0275aeed00c2e97f29d07b0ce17f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d313a2e98bd80a5b2621fd7ce8b30b70cb63f0b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715028"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537415"
 ---
 # <a name="populate-full-text-indexes"></a>Auffüllen von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,9 +100,9 @@ Es gibt zwei Typen der Änderungsnachverfolgung:
   
      **Starten der Änderungsnachverfolgung mit automatischer Auffüllung**  
   
-    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING AUTO  
   
     **Beispiel: Umstellen eines Volltextindexes auf die automatische Änderungsnachverfolgung**  
     Im folgenden Beispiel wird der Volltextindex für die `HumanResources.JobCandidate` -Tabelle der `AdventureWorks` -Beispieldatenbank so geändert, dass dieser die automatische Auffüllung mit Änderungsnachverfolgung verwendet.  
@@ -116,13 +116,13 @@ Es gibt zwei Typen der Änderungsnachverfolgung:
   
 -   **Manuelle Auffüllung**  
   
-     Wenn Sie CHANGE_TRACKING MANUAL angeben, verwendet die Volltext-Engine die manuelle Auffüllung für den Volltextindex. Nachdem die ursprüngliche vollständige Auffüllung abgeschlossen wurde, werden Änderungen nachverfolgt, wenn Daten in der Basistabelle geändert werden. Sie werden jedoch nicht an den Volltextindex weitergegeben, bis Sie eine ALTER FULLTEXT INDEX … START UPDATE POPULATION -Anweisung anwenden. Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden, um die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in regelmäßigen Abständen aufzurufen.  
+     Wenn Sie CHANGE_TRACKING MANUAL angeben, verwendet die Volltext-Engine die manuelle Auffüllung für den Volltextindex. Nachdem die ursprüngliche vollständige Auffüllung abgeschlossen wurde, werden Änderungen nachverfolgt, wenn Daten in der Basistabelle geändert werden. Sie werden jedoch nicht an den Volltextindex weitergegeben, bis Sie eine ALTER FULLTEXT INDEX ... START UPDATE POPULATION -Anweisung anwenden. Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden, um die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in regelmäßigen Abständen aufzurufen.  
   
      **So beginnen Sie die Änderungsnachverfolgung mit manueller Auffüllung**  
   
-    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING MANUAL  
   
     **Beispiel: Erstellen eines Volltextindexes mit manueller Änderungsnachverfolgung**  
     Im folgenden Beispiel wird ein Volltextindex mit Änderungsnachverfolgung und manueller Auffüllung für die `HumanResources.JobCandidate` -Tabelle der `AdventureWorks` -Beispieldatenbank erstellt.  
@@ -150,9 +150,9 @@ Es gibt zwei Typen der Änderungsnachverfolgung:
    
 ### <a name="disable-change-tracking"></a>Deaktivieren der Änderungsnachverfolgung 
   
--   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING OFF  
    
   
 ## <a name="incremental-population-based-on-a-timestamp"></a>Inkrementelle Auffüllung basierend auf einem Zeitstempel  

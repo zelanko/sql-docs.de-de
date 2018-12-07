@@ -24,12 +24,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fb8aaaabd83d6e5f5f234c58f3c9dcfab1ee7fa
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e9eccb240bbce57f16442092996698dc619f5fab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640132"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525317"
 ---
 # <a name="ole-db-destination"></a>OLE DB-Ziel
   Das OLE DB-Ziel lädt Daten mithilfe einer Datenbanktabelle, einer Sicht oder eines SQL-Befehls in eine Reihe von OLE DB-kompatible Datenbanken. Beispielsweise können aus der OLE DB-Quelle Daten in Tabellen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access- und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken geladen werden.  
@@ -161,7 +161,7 @@ ms.locfileid: "51640132"
 > [!NOTE]  
 >  Wenn Sie auf **Neu**klicken, generiert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eine Standard-CREATE TABLE-Anweisung auf Grundlage der verbundenen Datenquelle. Diese Standard-CREATE TABLE-Anweisung enthält nicht das FILESTREAM-Attribut, selbst wenn die Quelltabelle eine Spalte mit der Erklärung des FILESTREAM-Attributs enthält. Um eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponente mit dem FILESTREAM-Attribut auszuführen, implementieren Sie zunächst die FILESTREAM-Speicherung in der Zieldatenbank. Fügen Sie dann das FILESTREAM-Attribut der CREATE TABLE-Anweisung im Dialogfeld **Tabelle erstellen** hinzu. Weitere Informationen finden Sie unter [Blob-Daten &#40;Binary Large Object, SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-#### <a name="data-access-mode--table-or-view--fast-load"></a>Datenzugriffsmodus = Tabelle oder Sicht – schnelles Laden  
+#### <a name="data-access-mode--table-or-view---fast-load"></a>Datenzugriffsmodus = Tabelle oder Ansicht – schnelles Laden  
  **Name der Tabelle oder Sicht**  
  Wählen Sie mithilfe dieser Liste eine Tabelle oder Sicht in der Datenbank aus, oder erstellen Sie eine neue Tabelle, indem Sie auf **Neu**klicken.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "51640132"
  Gibt an, ob das Ziel beim Laden von Daten Einschränkungen überprüft. Der Standardwert dieser Eigenschaft ist **true**.  
   
  **Zeilen pro Batch**  
- Geben Sie die Anzahl der Zeilen in einem Batch an. Der Standardwert dieser Eigenschaft lautet **-1**und zeigt an, dass kein Wert zugewiesen wurde.  
+ Geben Sie die Anzahl der Zeilen in einem Batch an. Der Standardwert dieser Eigenschaft lautet **-1**und bedeutet, dass kein Wert zugewiesen wurde.  
   
 > [!NOTE]  
 >  Löschen Sie im Dialogfeld **Ziel-Editor für OLE DB** den Inhalt des Textfelds, um anzugeben, dass für diese Eigenschaft kein benutzerdefinierter Wert zugewiesen werden soll.  
@@ -204,7 +204,7 @@ ms.locfileid: "51640132"
  **Variablenname**  
  Wählen Sie die Variable aus, die den Namen der Tabelle oder Sicht enthält.  
   
-#### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>Datenzugriffsmodus = Variable für Tabellenname oder Sichtname – schnelles Laden  
+#### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>Datenzugriffsmodus = Variable für Tabellenname oder Ansichtsname – schnelles Laden  
  **Variablenname**  
  Wählen Sie die Variable aus, die den Namen der Tabelle oder Sicht enthält.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "51640132"
  Gibt an, ob Einschränkungen vom Task überprüft werden sollen. Der Standardwert dieser Eigenschaft ist **false**.  
   
  **Zeilen pro Batch**  
- Geben Sie die Anzahl der Zeilen in einem Batch an. Der Standardwert dieser Eigenschaft lautet **-1**und zeigt an, dass kein Wert zugewiesen wurde.  
+ Geben Sie die Anzahl der Zeilen in einem Batch an. Der Standardwert dieser Eigenschaft lautet **-1**und bedeutet, dass kein Wert zugewiesen wurde.  
   
 > [!NOTE]  
 >  Löschen Sie im Dialogfeld **Ziel-Editor für OLE DB** den Inhalt des Textfelds, um anzugeben, dass für diese Eigenschaft kein benutzerdefinierter Wert zugewiesen werden soll.  

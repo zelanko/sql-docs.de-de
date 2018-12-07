@@ -14,12 +14,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f38f7da3ae5dc67a8f4282f38e5d8ebd6b110129
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cf2d4565166dc94569a7bb3815ce3d69112116c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699457"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518380"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Indizes – Schlüssel (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ Löschen Sie den in der Liste **Ausgewählter Primärschlüssel/eindeutiger Schl
 Wenn diese Kategorie erweitert ist, werden die Eigenschaften **Spalten**, **Ist eindeutig**und **Typ**angezeigt.  
   
 **Spalten**  
-Listet die Sortierreihenfolgen auf, die für die im Schlüssel oder Index enthaltenen Spalten ausgewählt wurden, und bietet Zugriff auf ein Dialogfeld, in dem die Sortierreihenfolgen definiert werden können. Klicken Sie zum Anzeigen des Dialogfelds auf **Spalten** , und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (...), die rechts neben dem Eigenschaftenfeld angezeigt wird.  
+Listet die Sortierreihenfolgen auf, die für die im Schlüssel oder Index enthaltenen Spalten ausgewählt wurden, und bietet Zugriff auf ein Dialogfeld, in dem die Sortierreihenfolgen definiert werden können. Klicken Sie zum Anzeigen des Dialogfelds auf **Spalten**, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (...), die rechts neben dem Eigenschaftenfeld angezeigt wird.  
   
 **Ist eindeutig**  
 Gibt an, ob in diesen Index oder Schlüssel eingegebene Daten eindeutig sein müssen. Diese Einstellung ist für XML-Indizes nicht verfügbar.  
@@ -57,7 +57,7 @@ Wenn diese Kategorie erweitert ist, werden die Eigenschaftenfelder für **Name**
 Zeigt den Namen des Schlüssels oder Indexes an. Wenn ein neuer Index erstellt wird, erhält dieser einen Standardnamen, der auf der Tabelle im aktiven Fenster des Tabellen-Designers basiert. Sie können den Namen jederzeit ändern.  
   
 **Beschreibung**  
-Ermöglicht die Eingabe einer Beschreibung des Schlüssels oder Index. Klicken Sie zum Erstellen einer detaillierteren Beschreibung auf **Beschreibung** , und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (**…**) rechts neben dem Eigenschaftenfeld. Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
+Ermöglicht die Eingabe einer Beschreibung des Schlüssels oder Index. Klicken Sie zum Erstellen einer detaillierteren Beschreibung auf **Beschreibung**, und klicken Sie dann rechts neben dem Eigenschaftenfeld auf die Schaltfläche mit den Auslassungspunkten (**...**). Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
   
 **Kategorie Tabellen-Designer**  
 Wenn diese Kategorie erweitert ist, werden Informationen zu **Als CLUSTERED erstellen**angezeigt.  

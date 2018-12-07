@@ -22,12 +22,12 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c13158bf5790af4603f691936a0599ddef3c4deb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 58fa8d8009806f22153a22d63ea83b238140d431
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820246"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517439"
 ---
 # <a name="deploy-a-data-tier-application"></a>Bereitstellen einer Datenebenenanwendung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Um eine DAC mit Anmeldungen bei [!INCLUDE[ssSDS](../../includes/sssds-md.md)] be
   
 1.  Erweitern Sie im **Objekt-Explorer**den Knoten für die Instanz, für die Sie die DAC bereitstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** , und wählen Sie **Datenebenenanwendung bereitstellen...** aus.  
+2.  Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken**, und wählen Sie **Datenebenenanwendung bereitstellen...** aus.  
   
 3.  Führen Sie die Dialogfenster des Assistenten aus, und klicken Sie auf „Fertig stellen“.
 Im Folgenden erfahren Sie mehr über einige Seiten des Assistenten: 

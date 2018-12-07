@@ -15,12 +15,12 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3cd37fbe598fe93f5c5af5a63789511d667162ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 787e034767e419cd5f3b41b07364c6a11d908244
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701238"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543918"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications"></a>Anzeigen und Lösen von Datenkonflikten für Mergeveröffentlichungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47701238"
 6.  Schließen Sie den Replikationskonflikt-Viewer.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Erweiterte Konflikterkennung und -lösung der Mergereplikation](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Angeben eines Mergeartikelkonfliktlösers](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)  
   
   

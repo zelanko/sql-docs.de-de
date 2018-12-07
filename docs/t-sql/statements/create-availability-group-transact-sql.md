@@ -25,12 +25,12 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b52f9aa0131639bdfe68222bba42eae774d2b18f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f3b97043a2f9c348da76b8d0c15a448bf8106011
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698329"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510793"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ CREATE AVAILABILITY GROUP group_name
    FOR [ DATABASE database_name [ ,...n ] ]  
    REPLICA ON <add_replica_spec> [ ,...n ]  
    AVAILABILITY GROUP ON <add_availability_group_spec> [ ,...2 ]  
-   [ LISTENER ‘dns_name’ ( <listener_option> ) ]  
+   [ LISTENER 'dns_name' ( <listener_option> ) ]  
 [ ; ]  
   
 <with_option_spec>::=   
@@ -83,8 +83,8 @@ CREATE AVAILABILITY GROUP group_name
      } )  
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
-        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+        [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer  
   
@@ -104,12 +104,12 @@ CREATE AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
+     'four_part_ipv4_address', 'four_part_ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
-        ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
-      | ‘ipv6_address’  
+        'four_part_ipv4_address', 'four_part_ipv4_mask'  
+      | 'ipv6_address'  
      }  
   
 ```  
@@ -147,7 +147,7 @@ CREATE AVAILABILITY GROUP group_name
  FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
  Gibt an, welche Fehlerbedingungen ein automatisches Failover für diese Verfügbarkeitsgruppe auslösen. FAILURE_CONDITION_LEVEL wird auf Gruppenebene festgelegt, ist aber nur auf Verfügbarkeitsreplikaten relevant, die für den Verfügbarkeitsmodus mit synchronen Commits (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT) konfiguriert sind. Weiterhin können Fehlerbedingungen nur ein automatisches Failover auslösen, wenn das primäre und das sekundäre Replikat für den automatischen Failovermodus konfiguriert sind (FAILOVER_MODE **=** AUTOMATIC) und das sekundäre Replikat gerade mit dem primären Replikat synchronisiert wird.  
   
- Die Fehlerbedingungsebenen (1-5) reichen von der Ebene 1 mit den wenigsten Einschränkungen bis zur Ebene 5 mit den meisten Einschränkungen. Jede Bedingungsebene umfasst stets auch sämtliche weniger restriktiven Ebenen. Daher schließt die strengste Bedingungsebene 5 die vier Bedingungsebenen mit weniger Einschränkungen (1-4) ein, Ebene 4 schließt die Ebenen 1-3 ein usw. In der folgenden Tabelle wird die Fehlerbedingung beschrieben, die der jeweiligen Ebene entspricht.  
+ Die Fehlerbedingungsebenen (1–5) reichen von der Ebene 1 mit den wenigsten Einschränkungen bis zur Ebene 5 mit den meisten Einschränkungen. Jede Bedingungsebene umfasst stets auch sämtliche weniger restriktiven Ebenen. Daher schließt die strengste Bedingungsebene 5 die vier Bedingungsebenen mit weniger Einschränkungen (1-4) ein, Ebene 4 schließt die Ebenen 1-3 ein usw. In der folgenden Tabelle wird die Fehlerbedingung beschrieben, die der jeweiligen Ebene entspricht.  
   
 |Ebene|Fehlerbedingung|  
 |-----------|-----------------------|  
@@ -297,7 +297,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)wichtig sind.  
   
- SECONDARY_ROLE **(** … **)**  
+ SECONDARY_ROLE **(** ... **)**  
  Gibt rollenspezifische Einstellungen an, die wirksam werden, wenn dieses Verfügbarkeitsreplikat gerade die sekundäre Rolle besitzt (d.h. wenn es gerade ein sekundäres Replikat ist). Geben Sie innerhalb der Klammern eine oder beide sekundäre Rollenoptionen an. Wenn Sie beide angeben, verwenden Sie eine durch Trennzeichen getrennte Liste.  
   
  Folgende Optionen stehen für die sekundäre Rolle zur Verfügung:  
@@ -326,7 +326,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  Für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollte der Transact-SQL-Listener konfiguriert werden, um einen bestimmten Port zu verwenden. Weitere Informationen finden Sie unter [Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
- PRIMARY_ROLE **(** … **)**  
+ PRIMARY_ROLE **(** ... **)**  
  Gibt rollenspezifische Einstellungen an, die wirksam werden, wenn dieses Verfügbarkeitsreplikat zu diesem Zeitpunkt die sekundäre Rolle besitzt (d.h. wenn es gerade ein sekundäres Replikat ist). Geben Sie innerhalb der Klammern eine oder beide primäre Rollenoptionen an. Wenn Sie beide angeben, verwenden Sie eine durch Trennzeichen getrennte Liste.  
   
  Folgende Optionen stehen für die primäre Rolle zur Verfügung:  
@@ -340,7 +340,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Für die Datenbanken im primären Replikat sind alle Verbindungen zugelassen. Dies ist das Standardverhalten.  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } Gibt eine durch Trennzeichen getrennte Liste von Serverinstanzen an, die Verfügbarkeitsreplikate für diese Verfügbarkeitsgruppe hosten, die beim Ausführen unter der sekundären Rolle die folgenden Anforderungen erfüllen:  
+ READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } gibt eine durch Trennzeichen getrennte Liste von Serverinstanzen an, die Verfügbarkeitsreplikate für diese Verfügbarkeitsgruppe hosten, die beim Ausführen unter der sekundären Rolle die folgenden Anforderungen erfüllen:  
   
 -   Wird konfiguriert, um alle Verbindungen oder schreibgeschützte Verbindungen (siehe das obige ALLOW_CONNECTIONS-Argument der SECONDARY_ROLE-Option) zuzulassen.  
   
@@ -436,7 +436,7 @@ CREATE AVAILABILITY GROUP group_name
   
  \<listener_option> LISTENER verwendet eine der folgenden \<listener_option>-Optionen: 
   
- WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
+ WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
  Gibt an, dass der Verfügbarkeitsgruppenlistener das Dynamic Host Configuration-Protokoll (DHCP) verwendet.  Verwenden Sie die ON-Klausel optional, um das Netzwerk zu identifizieren, auf dem dieser Listener erstellt wird. DHCP ist auf ein einzelnes Subnetz beschränkt, das für alle Serverinstanzen verwendet wird, die ein Replikat in der Verfügbarkeitsgruppe hosten.  
   
 > [!IMPORTANT]  
@@ -446,7 +446,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
  Gibt an, dass der Verfügbarkeitsgruppenlistener statt DHCP mindestens eine statische IP-Adresse verwendet. Um eine Verfügbarkeitsgruppe über mehrere Subnetze zu erstellen, erfordert jedes Subnetz in der Listenerkonfiguration eine statische IP-Adresse. Für ein angegebenes Subnetz kann die statische IP-Adresse entweder eine IPv4-Adresse oder eine IPv6-Adresse sein. Wenden Sie sich an Ihren Netzwerkadministrator, um eine statische IP-Adresse für jedes Subnetz zu erhalten, das ein Replikat für die neue Verfügbarkeitsgruppe hostet.  
   
  Zum Beispiel:  
@@ -555,7 +555,7 @@ CREATE AVAILABILITY GROUP MyAg
          );
 GO  
 ALTER AVAILABILITY GROUP [MyAg]
-  ADD LISTENER ‘MyAgListenerIvP6’ ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
+  ADD LISTENER 'MyAgListenerIvP6' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
 GO  
 ```  
   

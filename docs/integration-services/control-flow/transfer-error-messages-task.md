@@ -17,12 +17,12 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d377673177bd5aa2a5ac77b48e93153bdf420f41
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c189be4aa134ee15314571008ed29a3f53c467d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640857"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518787"
 ---
 # <a name="transfer-error-messages-task"></a>Fehlermeldungen übertragen (Task)
   Der Task „Fehlermeldungen übertragen“ überträgt eine oder mehrere benutzerdefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlermeldungen zwischen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Benutzerdefinierte Meldungen sind Meldungen mit einem Bezeichner gleich oder größer als 50000. Meldungen mit einem Bezeichner kleiner als 50000 sind Systemfehlermeldungen und können nicht mithilfe des Tasks "Fehlermeldungen übertragen" übertragen werden.  
@@ -116,13 +116,13 @@ ms.locfileid: "51640857"
 |**False**|Nur die angegebenen benutzerdefinierten Meldungen kopieren.|  
   
  **ErrorMessagesList**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um die zu kopierenden Fehlermeldungen auszuwählen.  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um die zu kopierenden Fehlermeldungen auszuwählen.  
   
 > [!NOTE]  
 >  Sie müssen **SourceConnection** angeben, bevor Sie eine zu kopierende Fehlermeldung auswählen können.  
   
  **ErrorMessageLanguagesList**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um die Sprachen auszuwählen, für die benutzerdefinierte Fehlermeldungen auf den Zielserver kopiert werden. Auf dem Zielserver muss eine Version der Meldung in us_english (Codepage 1033) vorhanden sein, bevor Sie andere Sprachversionen auf den Server übertragen können.  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um die Sprachen auszuwählen, für die benutzerdefinierte Fehlermeldungen auf den Zielserver kopiert werden. Auf dem Zielserver muss eine Version der Meldung in us_english (Codepage 1033) vorhanden sein, bevor Sie andere Sprachversionen auf den Server übertragen können.  
   
 > [!NOTE]  
 >  Sie müssen **SourceConnection** angeben, bevor Sie eine zu kopierende Fehlermeldung auswählen können.  

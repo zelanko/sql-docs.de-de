@@ -11,12 +11,12 @@ ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae60895da9a461b7bcf7fb8fa034833e39c68e1a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 992e258fad0d69542942d2ead4df8cf08b36c391
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637787"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536791"
 ---
 # <a name="lesson-3-1---copying-the-lesson-2-package"></a>Lektion 3-1: Kopieren des Pakets aus Lektion 2
 In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 2 erstellten Pakets Lesson 2.dtsx. Wahlweise können Sie dem Projekt auch das im Tutorial enthaltene abgeschlossene Paket aus Lektion 2 hinzufügen und anschließend von diesem Paket eine Kopie erstellen. Sie verwenden diese neue Kopie im gesamten Rest der Lektion 3.  
@@ -49,7 +49,7 @@ In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 2 erstellten Pakets Le
   
 3.  Wählen Sie im Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** unter **Paketspeicherort**die Option **Dateisystem**aus.  
   
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , navigieren Sie zu **Lesson 2.dtsx** auf Ihrem Computer, und klicken Sie anschließend auf **Öffnen**.  
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, navigieren Sie zu **Lesson 2.dtsx** auf Ihrem Computer, und klicken Sie anschließend auf **Öffnen**.  
   
     Um alle Lektionspakete für dieses Lernprogramm herunterzuladen, gehen Sie wie folgt vor.  
   

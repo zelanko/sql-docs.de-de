@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a17aac87516dcc3903c6802435762f962258efe9
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8afb64d468c895e0cfa52e8c7380ab54501180ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028789"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538740"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
   Nachdem Sie einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht mithilfe eines Assistenten eine Karte oder eine Kartenebene hinzugefügt haben, möchten Sie möglicherweise anpassen, wie die Karte im Bericht angezeigt wird. Sie können Verbesserungen vornehmen, indem Sie die folgenden Ideen beachten:  
@@ -117,7 +117,7 @@ ms.locfileid: "50028789"
  Weitere Informationen zu Ebenen finden Sie unter [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ##  <a name="DataGrouping"></a> Ändern der Datengruppierung für die Ebene  
- Sie können anpassen, wie räumliche Daten für Ihre eigenen Formen angepasst werden. Um die Gruppeneigenschaften für eine Ebene festzulegen, wählen Sie die Ebene im Kartenbereich aus, und klicken Sie im Bereich „Eigenschaften“ der Ebene auf **Gruppieren**. Klicken Sie dann auf die Auslassungspunkte (…), um die Gruppeneigenschaften zu öffnen. In diesem Dialogfeld können Sie Gruppenausdrücke angeben, Gruppenvariablen erstellen und für die Gruppierung verwendete Daten filtern.  
+ Sie können anpassen, wie räumliche Daten für Ihre eigenen Formen angepasst werden. Zum Festlegen der Gruppeneigenschaften für eine Ebene wählen Sie die Ebene im Kartenbereich aus, und klicken Sie im Bereich „Eigenschaften“ der Ebene auf **Gruppieren**. Klicken Sie dann auf die Auslassungspunkte (...), um die Gruppeneigenschaften zu öffnen. In diesem Dialogfeld können Sie Gruppenausdrücke angeben, Gruppenvariablen erstellen und für die Gruppierung verwendete Daten filtern.  
   
  Der Gruppenausdruck gibt an, wie analytische Daten, die zu räumlichen Daten in einer Beziehung stehen, für jedes Kartenelement in der Ebene aggregiert werden. Standardmäßig ist der Gruppenausdruck der Satz von Übereinstimmungsfeldern, der für die Beziehung zwischen den räumlichen Daten und den analytischen Daten angegeben wurden. Beispielsweise enthalten für eine Blasendiagrammkarte, die Orte und Einwohnerzahlen für ein Land oder einen Bereich anzeigt, die Übereinstimmungsfelder Ortsnamen [City] und Bereichsnamen [Region], da es mehrere Orte mit dem gleichen Namen geben kann. Der entsprechende Gruppenausdruck schließt zwei Felder ein: [City] und [Region].  
   

@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52ba8dd70e7b39dade42d21d3b02e5883be14735
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 514ec88554282cf6e2cf0cc74eb1f35e77091fa9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703208"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539024"
 ---
 # <a name="create-clustered-indexes"></a>Erstellen gruppierter Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47703208"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Implementations"></a> Typische Implementierungen  
  Gruppierte Indizes werden auf folgende Weise implementiert:  
@@ -84,11 +84,11 @@ ms.locfileid: "47703208"
   
 1.  Erweitern Sie im Objekt-Explorer die Tabelle, für die Sie einen gruppierten Index erstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes** , zeigen Sie auf **Neuer Index**, und wählen Sie **Gruppierter Index**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes**, zeigen Sie auf **Neuer Index**, und wählen Sie **Gruppierter Index** aus.  
   
 3.  Geben Sie in das Dialogfeld **Neuer Index** auf der Seite **Allgemein** den Namen des neuen Indexes in das Feld **Indexname** ein.  
   
-4.  Klicken Sie unter **Indexschlüsselspalten**auf **Hinzufügen…**.  
+4.  Klicken Sie unter **Indexschlüsselspalten** auf **Hinzufügen…**.  
   
 5.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table\_name_ das Kontrollkästchen der Tabellenspalte, die dem gruppierten Index hinzugefügt werden soll.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47703208"
   
 1.  Erweitern Sie im Objekt-Explorer die Datenbank, für die Sie eine Tabelle mit einem gruppierten Index erstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Tabellen** , und klicken Sie auf **Neue Tabelle**.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Tabellen**, und klicken Sie auf **Neue Tabelle...**.  
   
 3.  Erstellen Sie eine neue Tabelle. Weitere Informationen finden Sie unter [Verbindungsserver &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/tables/create-tables-database-engine.md).  
   

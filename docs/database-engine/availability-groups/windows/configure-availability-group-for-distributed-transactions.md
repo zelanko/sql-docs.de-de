@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 53c1a7c5ce6c7d529fb07f356d87e0adc5c02e31
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9a4a035c33efa17f901e721ed23faf41c068c507
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639123"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513679"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Konfigurieren von Verfügbarkeitsgrupppen für verteilte Transaktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51639123"
 Um verteilte Transaktionen gewährleisten zu können, muss die Verfügbarkeitsgruppe so konfiguriert sein, dass Datenbanken als Ressourcenmanager verteilter Transaktionen registriert werden.  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 und höher stellt die vollständige Unterstützung für verteilte Transaktionen in Verfügbarkeitsgruppen bereit. In früheren [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)]-Versionen vor Service Pack 2 werden datenbankübergreifende verteilte Transaktionen nicht unterstützt, wenn sie eine Datenbank in einer Verfügbarkeitsgruppe enthalten. Bei diesen Transaktionen werden nur Datenbanken auf der gleichen SQL Server-Instanz verwendet. Diese Einschränkung besteht in [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] nicht. 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 und höher stellt die vollständige Unterstützung für verteilte Transaktionen in Verfügbarkeitsgruppen bereit. In früheren [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)]-Versionen vor Service Pack 2 werden datenbankübergreifende verteilte Transaktionen nicht unterstützt, wenn sie eine Datenbank in einer Verfügbarkeitsgruppe enthalten. Bei diesen Transaktionen werden nur Datenbanken auf der gleichen SQL Server-Instanz verwendet. Diese Einschränkung besteht in [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] nicht. 
 >
 >Die Einrichtungsschritte für [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] sind identisch mit denen für [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 
@@ -192,4 +192,4 @@ Weitere Informationen zum Auflösen unsicherer Transaktionen finden Sie unter [R
 
 [Supporting XA Transactions](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx) (Unterstützung von XA-Transaktionen)
 
-[How It Works: Session/SPID (–2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/) (Funktionsweise: Session/SPID (-2) für DTC-Transaktionen)
+[How It Works: Session/SPID (–2) for DTC Transactions (Funktionsweise: Session/SPID (-2) für DTC-Transaktionen)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

@@ -13,12 +13,12 @@ ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 10f5d9c55f25221ae767a960393f7d7d775eff96
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 852651601ba7264c079a42c82a4bbb626d902328
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659211"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529879"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Verwenden von Testbedingungen in SQL Server-Komponententests
 In einem SQL Server-Komponententest wird mindestens ein Transact\-SQL-Testskript ausgeführt. Die Ergebnisse können innerhalb des Transact\-SQL-Skripts ausgewertet werden, wobei durch THROW oder RAISERROR zurückgegeben wird, dass ein Fehler aufgetreten bzw. der Test nicht erfolgreich war. Alternativ können Testbedingungen im Test definiert werden, um die Ergebnisse auszuwerten. Der Test gibt eine Instanz der Klasse [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) zurück. Die Instanz dieser Klasse enthält mindestens ein DataSet, die Ausführungszeit sowie die vom Skript betroffenen Zeilen. Alle diese Informationen werden während der Skriptausführung gesammelt. Diese Ergebnisse können mithilfe von Testbedingungen ausgewertet werden. SQL Server Data Tools stellt eine Reihe von vordefinierten Testbedingungen bereit. Sie können auch benutzerdefinierte Bedingungen erstellen und verwenden. Lesen Sie hierzu [Benutzerdefinierte Testbedingungen für SQL Server-Komponententests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
@@ -88,7 +88,7 @@ Nachdem Sie dem Datenbankkomponententest die Testbedingung „Datenprüfsumme“
   
 3.  (Optional) Sie können die Eigenschaft **(Name)** der Testbedingung auch in einen aussagekräftigeren Namen ändern.  
   
-4.  Klicken Sie in der Eigenschaft **Konfiguration** auf die Schaltfläche zum Durchsuchen (**…**).  
+4.  Klicken Sie in der Eigenschaft **Configuration** (Konfiguration) auf die Schaltfläche zum Durchsuchen (**…**).  
   
     Das Dialogfeld **Konfiguration für TestConditionName** wird angezeigt.  
   
@@ -118,7 +118,7 @@ Nachdem Sie einem SQL Server-Komponententest die Testbedingung „Erwartetes Sch
   
 3.  (Optional) Sie können die Eigenschaft **(Name)** der Testbedingung auch in einen aussagekräftigeren Namen ändern.  
   
-4.  Klicken Sie in der Eigenschaft **Konfiguration** auf die Schaltfläche zum Durchsuchen (**…**).  
+4.  Klicken Sie in der Eigenschaft **Configuration** (Konfiguration) auf die Schaltfläche zum Durchsuchen (**…**).  
   
     Das Dialogfeld **Konfiguration für TestConditionName** wird angezeigt.  
   

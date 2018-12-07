@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3087eea3b8bcf5b153ff1303cbdddf55263cc6b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 639c21a124a9d8bcdecd6d240616ac10f6c87e93
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658438"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617410"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Trennen und Anfügen von DQS-Datenbanken
 
@@ -25,7 +24,7 @@ ms.locfileid: "47658438"
 
   In diesem Thema wird beschrieben, wie DQS-Datenbanken getrennt und angefügt werden.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Limitations"></a> Einschränkungen  
  Eine Liste der Einschränkungen finden Sie unter [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)getrennt wird.  
@@ -76,7 +75,7 @@ ms.locfileid: "47658438"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  Im (unteren) Bereich **Datenbankdetails** werden die Namen der anzufügenden Dateien angezeigt. Um den Pfadnamen einer Datei zu überprüfen bzw. zu ändern, klicken Sie auf die Schaltfläche **Durchsuchen** (…).  
+5.  Im (unteren) Bereich **Datenbankdetails** werden die Namen der anzufügenden Dateien angezeigt. Klicken Sie auf die Schaltfläche zum **Durchsuchen** (…), um den Pfadnamen einer Datei zu überprüfen bzw. zu ändern.  
   
 6.  Klicken Sie auf **OK** , um die DQS_MAIN-Datenbank anzufügen.  
   

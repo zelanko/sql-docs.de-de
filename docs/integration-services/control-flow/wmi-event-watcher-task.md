@@ -18,12 +18,12 @@ ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57e2b48eef389d244a866eba9a0c27bdcacc9419
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 60ddc7dd6b9afc953017ed076fc9a57a713bc818
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642097"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527643"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI-Ereignisüberwachung (Task)
   Der Task "WMI-Ereignisüberwachung" überwacht ein WMI-Ereignis (Windows Management Instrumentation) mithilfe einer WQL-Ereignisabfrage (Windows Management Instrumentation Query Language), um relevante Ereignisse anzugeben. Der Task WMI-Ereignisüberwachung kann für folgende Zwecke verwendet werden:  
@@ -162,7 +162,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 #### <a name="wqlquerysource--direct-input"></a>WQLQuerySource = Direct input  
  **WQLQuerySource**  
- Stellen Sie eine Abfrage bereit, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (…), und geben Sie im Dialogfeld **WQL-Abfrage** eine Abfrage ein.  
+ Stellen Sie eine Abfrage bereit, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...), und geben Sie eine Abfrage mithilfe des Dialogfelds **WQL-Abfrage** ein.  
   
 #### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = File connection  
  **WQLQuerySource**  

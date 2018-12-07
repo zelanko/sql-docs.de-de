@@ -12,12 +12,12 @@ author: Jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8793d30d1db90b31020c0273de803608d92c62e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96c8f204f1be7775dbf77490e3fd3749c40e6a3d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780298"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531631"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -186,7 +186,7 @@ Drittens: Im allgemeinen T-SQL-Code:
     - _Alt:_ &#x23;tempSessionC  
     - _Neu:_ dbo.soSessionC  
 2. Ersetzen Sie die `CREATE TABLE #tempSessionC`-Anweisungen in Ihrem Code durch `DELETE FROM dbo.soSessionC`, um sicherzustellen, dass eine Sitzung keinen Tabelleninhalten ausgesetzt ist, die von einer vorherigen Sitzung mit der gleichen session_id eingefügt wurden. Es ist wichtig, dass Sie die speicheroptimierte Tabelle zur Bereitstellungszeit erstellen und nicht zur Laufzeit, um den Kompilierungsaufwand bei der Tabellenerstellung zu vermeiden.
-3. Entfernen Sie die `DROP TABLE #tempSessionC`-Anweisungen aus dem Code – Optional können Sie eine `DELETE FROM dbo.soSessionC`-Anweisung einfügen, wenn Speichergröße ein potenzielles Problem ist.
+3. Entfernen Sie die `DROP TABLE #tempSessionC`-Anweisungen aus dem Code. Optional können Sie eine `DELETE FROM dbo.soSessionC`-Anweisung einfügen, wenn die Speichergröße ein potenzielles Problem ist.
   
   
   

@@ -14,12 +14,12 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3bc09f7976d07d75c1a750e0f9ddadcc4ee0870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b03471825ee3a6db98a0df68c81828ee61d433a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685068"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527480"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Festlegen der Propagierungsmethode für Datenänderungen an Transaktionsartikeln
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47685068"
   
 #### <a name="to-specify-the-propagation-method"></a>So geben Sie die Propagierungsmethode an  
   
-1.  Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Artikel** bzw. im Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** eine Tabelle aus, und klicken anschließend auf **Artikeleigenschaften**.  
+1.  Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Artikel** bzw. im Dialogfeld **Veröffentlichungseigenschaften – \<<Veröffentlichung>** eine Tabelle aus, und klicken anschließend auf **Artikeleigenschaften**.  
   
 2.  Klicken Sie auf die Option **Eigenschaften des hervorgehobenen Tabelle-Artikels festlegen**.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "47685068"
     > [!NOTE]  
     >  Wenn Sie den Wert **SQL** für einen der obigen Parameter angeben, werden die Befehle des betreffenden Typs auf den Abonnenten als entsprechende [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Befehle repliziert.  
   
-     Weitere Informationen finden Sie unter [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-create-an-article-that-does-not-propagate-data-changes"></a>So erstellen Sie einen Artikel, der keine Datenänderungen weitergibt  
   
@@ -112,17 +112,17 @@ ms.locfileid: "47685068"
     > [!NOTE]  
     >  Wenn Sie den Wert **NONE** für einen der obigen Parameter angeben, werden die Befehle des betreffenden Typs auf den Abonnenten nicht repliziert.  
   
-     Weitere Informationen finden Sie unter [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-create-an-article-with-user-modified-custom-stored-procedures"></a>So erstellen Sie einen Artikel mit benutzerdefinierten gespeicherten Prozeduren  
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication**, den Namen des Artikels für **@article**, das Datenbankobjekt, das veröffentlicht wird, für **@source_object**, einen Wert für die **@schema_option** -Bitmaske, der den Wert **0x02** enthält (aktiviert die automatische Erstellung benutzerdefinierter gespeicherter Prozeduren), und wenigstens einen der folgenden Parameter an:  
   
-    -   **@ins_cmd**: Geben Sie einen Wert für **CALL sp_MSins_* Artikelname*** an, wobei ***Artikelname*** der für **@article** festgelegte Wert ist.  
+    -   **@ins_cmd**: Geben Sie einen Wert für **CALL sp_MSins\__Artikelname_** ein, wobei **_Artikelname_** der für **@article** festgelegte Wert ist.  
   
-    -   **@del_cmd**: Geben Sie einen Wert für **CALL sp_MSdel_*Artikelname*** oder **XCALL sp_MSdel_* Artikelname*** an, wobei ***Artikelname*** der für **@article** angegebene Wert ist.  
+    -   **@del_cmd**: Geben Sie einen Wert für **CALL sp_MSdel\__Artikelname_** oder **XCALL sp_MSdel\__Artikelname_** ein, wobei **_Artikelname_** der für **@article** angegebene Wert ist.  
   
-    -   **@upd_cmd**: Geben Sie einen Wert für **SCALL sp_MSupd_* Artikelname***, **CALL sp_MSupd_* Artikelname***, **XCALL sp_MSupd_* Artikelname***, oder **MCALL sp_MSupd_* Artikelname*** an, wobei ***Artikelname*** der für **@article** angegebene Wert ist.  
+    -   **@upd_cmd**: Geben Sie einen Wert für **SCALL sp_MSupd\__Artikelname_**, **CALL sp_MSupd\__Artikelname_**, **XCALL sp_MSupd\__Artikelname_** oder **MCALL sp_MSupd\__Artikelname_** an, wobei **_Artikelname_** der für **@article** angegebene Wert ist.  
   
     > [!NOTE]  
     >  Für jeden der obigen Befehlsparameter gilt: Sie können einen selbst gewählten Namen für die gespeicherten Prozeduren angeben, die von der Replikation generiert werden.  
@@ -130,7 +130,7 @@ ms.locfileid: "47685068"
     > [!NOTE]  
     >  Weitere Informationen über die CALL, SCALL, XCALL und MCALL-Syntax finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-     Weitere Informationen finden Sie unter [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Navigieren Sie nach der Momentaufnahmegenerierung zu dem Momentaufnahmeordner der Veröffentlichung, zu der dieser Artikel gehört, und suchen Sie die **.sch** -Datei, die denselben Namen wie der Artikel trägt. Öffnen Sie diese Datei mit Notepad.exe, suchen Sie den CREATE PROCEDURE-Befehl für die gespeicherte Prozedur INSERT, UPDATE oder DELETE, und bearbeiten Sie die Prozedurdefinition, um eine benutzerdefinierte Logik für die Propagierung von Datenänderungen bereitzustellen. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)  
   
@@ -138,11 +138,11 @@ ms.locfileid: "47685068"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication**, den Namen des Artikels für **@article**, das Datenbankobjekt, das veröffentlicht wird, für **@source_object**, einen Wert für die **@schema_option** -Bitmaske, der den Wert **0x02** enthält (aktiviert die automatische Erstellung benutzerdefinierter gespeicherter Prozeduren), und wenigstens einen der folgenden Parameter an:  
   
-    -   **@ins_cmd**: Geben Sie einen Wert für **CALL sp_MSins_* Artikelname*** an, wobei ***Artikelname*** der für **@article** festgelegte Wert ist.  
+    -   **@ins_cmd**: Geben Sie einen Wert für **CALL sp_MSins\__Artikelname_** ein, wobei **_Artikelname_** der für **@article** festgelegte Wert ist.  
   
-    -   **@del_cmd**: Geben Sie einen Wert für **CALL sp_MSdel_*Artikelname*** oder **XCALL sp_MSdel_* Artikelname*** an, wobei ***Artikelname*** der für **@article** angegebene Wert ist.  
+    -   **@del_cmd**: Geben Sie einen Wert für **CALL sp_MSdel\__Artikelname_** oder **XCALL sp_MSdel\__Artikelname_** ein, wobei **_Artikelname_** der für **@article** angegebene Wert ist.  
   
-    -   **@upd_cmd**: Geben Sie einen Wert für **SCALL sp_MSupd_* Artikelname***, **CALL sp_MSupd_* Artikelname***, **XCALL sp_MSupd_* Artikelname***, **MCALL sp_MSupd_* Artikelname*** an, wobei ***Artikelname*** der für **@article** angegebene Wert ist.  
+    -   **@upd_cmd**: Geben Sie einen Wert für **SCALL sp_MSupd\__Artikelname_**, **CALL sp_MSupd\__Artikelname_**, **XCALL sp_MSupd\__Artikelname_** oder **MCALL sp_MSupd\__Artikelname_** an, wobei **_Artikelname_** der für **@article** angegebene Wert ist.  
   
     > [!NOTE]  
     >  Für jeden der obigen Befehlsparameter gilt: Sie können einen selbst gewählten Namen für die gespeicherten Prozeduren angeben, die von der Replikation generiert werden.  
@@ -150,7 +150,7 @@ ms.locfileid: "47685068"
     > [!NOTE]  
     >  Weitere Informationen über die CALL, SCALL, XCALL und MCALL-Syntax finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-     Weitere Informationen finden Sie unter [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Verwenden Sie auf dem Verleger für die Veröffentlichungsdatenbank die [ALTER PROCEDURE](../../../t-sql/statements/alter-procedure-transact-sql.md) -Anweisung, um [sp_scriptpublicationcustomprocs](../../../relational-databases/system-stored-procedures/sp-scriptpublicationcustomprocs-transact-sql.md) so zu bearbeiten, dass ein [CREATE PROCEDURE](../../../t-sql/statements/create-procedure-transact-sql.md) -Skript für die benutzerdefinierten, gespeicherten Prozeduren INSERT, UPDATE und DELETE zurückgegeben wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)  
   

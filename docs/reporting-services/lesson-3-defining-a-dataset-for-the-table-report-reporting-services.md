@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc5ee5a106bf8b412f4096c06255be2e16f90a2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60f613e075c032faa9e81b30a48b9d6f630c0b5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594839"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516983"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lektion 3: Definieren eines Datasets für den Tabellenbericht (Reporting Services)
 Nachdem Sie die Datenquelle festgelegt haben, müssen Sie ein Dataset definieren. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]sind die Daten, die Sie in Berichten verwenden, in einem *Dataset*enthalten. Ein Dataset umfasst einen Zeiger auf eine Datenquelle sowie eine Abfrage, die vom Bericht verwendet werden, sowie berechnete Felder und Variablen.  
@@ -22,7 +22,7 @@ Verwenden Sie den Abfrage-Designer im Berichts-Designer, um das Dataset zu entwe
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>So definieren Sie eine Transact-SQL-Abfrage für Berichtsdaten  
   
-1.  Klicken Sie im **Berichtsdatenbereich** auf **Neu**und anschließend auf **Dataset...**. Das Dialogfeld **Dataseteigenschaften** wird angezeigt.  
+1.  Klicken Sie im **Berichtsdatenbereich** auf **Neu** und anschließend auf **Dataset...**. Das Dialogfeld **Dataseteigenschaften** wird angezeigt.  
   
 2.  Geben Sie in das Feld **Name** den Namen **AdventureWorksDataset**ein.  
   

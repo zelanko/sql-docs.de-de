@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa7424ec1883ec7f9dcc488ec231bcfcd7f6d601
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 58a824164a694239faeb5dbfc9ce18ba260f518f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643348"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538792"
 ---
 # <a name="search-text-with-regular-expressions"></a>Suchen von Text mit regulären Ausdrücken
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,8 +65,8 @@ ms.locfileid: "51643348"
   
 |expression|Syntax|und Beschreibung|  
 |----------------|------------|-----------------|  
-|Minimal; 0 oder mehr|@|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
-|Minimal; ein oder mehr|#|Entspricht einem oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
+|Minimal - zero or more|@|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
+|Minimal - one or more|#|Entspricht einem oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
 |n-mal wiederholen|^n|Entspricht n Vorkommen des vorherigen Ausdrucks. [0-9]^4 entspricht z. B. einer beliebigen Zeichenfolge aus vier Zahlen.|  
 |Grouping|()|Gruppiert einen untergeordneten Ausdruck.|  
 |n-markierter Text|\n|Gibt in einem **Suchen und Ersetzen** -Ausdruck den Text an, der dem n-ten markierten Ausdruck entspricht, wobei n eine Zahl von 1 bis 9 ist.<br /><br /> In einem **Ersetzen** -Ausdruck wird mit „\0“ der gesamte übereinstimmende Text eingefügt.|  

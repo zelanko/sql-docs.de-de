@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ad984721f43f478f35adc53b68c3d207fb2a2527
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2aa416e1913925c095e75888a624021f7eb3543f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696609"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541265"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Auswählen einer Sprache beim Erstellen eines Volltextindex
 
@@ -108,7 +108,7 @@ ms.locfileid: "47696609"
 ##  <a name="type"></a> Auswirkung des Spaltentyps auf Volltextsuche  
  Ein weiterer Aspekt bei der Wahl der Sprache ist die Art und Weise, wie die Daten dargestellt werden. Für Daten, die nicht in **varbinary(max)** -Spalten gespeichert sind, erfolgt keine spezielle Filterung. Stattdessen durchläuft der Text die Worteinheitenerkennungs-Komponente i. A. unverändert.  
   
- Die Wörtertrennung ist außerdem hauptsächlich für die Verarbeitung von geschriebenem Text konzipiert. Für Text mit speziellen Auszeichnungen (wie z. B. HTML) wird möglicherweise keine große linguistische Genauigkeit bei der Indizierung und Suche erreicht. In diesem Fall haben Sie zwei Möglichkeiten. Die bevorzugte Methode besteht darin, die Textdaten in einer **varbinary(max)** -Spalte zu speichern und den Dokumenttyp anzugeben, sodass die Daten gefiltert werden können. Ist dies nicht machbar, können Sie u.&nbsp;U. die neutrale Wörtertrennung verwenden und ggf. den Füllwortlisten Markupdaten (wie "br" in HTML) hinzufügen.  
+ Die Wörtertrennung ist außerdem hauptsächlich für die Verarbeitung von geschriebenem Text konzipiert. Für Text mit speziellen Auszeichnungen (wie z. B. HTML) wird möglicherweise keine große linguistische Genauigkeit bei der Indizierung und Suche erreicht. In diesem Fall haben Sie zwei Möglichkeiten. Die bevorzugte Methode besteht darin, die Textdaten in einer **varbinary(max)**-Spalte zu speichern und den Dokumenttyp anzugeben, sodass die Daten gefiltert werden können. Ist dies nicht machbar, können Sie u.&nbsp;U. die neutrale Wörtertrennung verwenden und ggf. den Füllwortlisten Markupdaten (wie "br" in HTML) hinzufügen.  
   
 > [!NOTE]  
 >  Eine sprachbasierte Wortstammerkennung ist nicht möglich, wenn Sie die neutrale Sprache angeben.  

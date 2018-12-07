@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 311e0589e2257a1bb465ae210c013780cf9fee42
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 83fb5aa641537e99f7562f6c4fd7981b8e2233b5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605210"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532759"
 ---
 # <a name="install-sql-server-database-engine"></a>Installieren der SQL Server-Datenbank-Engine
 
@@ -43,7 +43,7 @@ Wenn Sie im Installations-Assistenten von **[!INCLUDE[ssNoVersion](../../include
 
 -   Volltextsuche – optionale Komponente  
   
--   Data Quality Services – optionale Komponente  
+-   Data Quality Services: optionale Komponente  
   
     > [!NOTE]  
     >  In dieser Version wird durch Aktivieren des Kontrollkästchens **Data Quality Services** während des Setups DQS (Data Quality Services)-Server nicht installiert. Sie müssen nach der Installation weitere Schritte ausführen, um DQS-Server zu installieren. Weitere Informationen finden Sie unter [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  

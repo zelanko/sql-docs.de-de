@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 978997ac3048bffb2e8f475d2c728a38b7a27283
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 544dbc5722f1af81b3d4b858a8b6b5e4b2b7165f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383585"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517759"
 ---
 # <a name="create-foreign-key-relationships"></a>Erstellen von Fremdschlüssel-Beziehungen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "49383585"
     
 4.  Klicken Sie in der Liste **Ausgewählte Beziehung** auf die Beziehung.    
     
-5.  Klicken Sie im Datenblatt rechts auf **Tabellen- und Spaltenspezifikation** , und klicken Sie anschließend auf die rechts neben der Eigenschaft angezeigten Auslassungszeichen (**…**).    
+5.  Klicken Sie im Datenblatt rechts auf **Tabellen- und Spaltenspezifikation**, und klicken Sie anschließend auf die rechts neben der Eigenschaft angezeigten Auslassungspunkte (**...**).    
     
 6.  Wählen Sie im Dialogfeld **Tabellen und Spalten** in der Dropdownliste **Primärschlüssel** die Tabelle aus, die sich auf der Primärschlüsselseite der Beziehung befinden soll.    
     

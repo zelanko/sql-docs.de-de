@@ -14,12 +14,12 @@ ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e8d82ed31033d32c714889a2835df95a70bf589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d49a3b4de2edfb3dc0c027ce54b5f6677d00abb6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808548"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535507"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Wertzusammenfassung oder -aggregation für alle Zeilen in einer Tabelle (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ Wenn Sie eine Suchbedingung hinzufügen, können Sie die Teilmenge von Zeilen ag
   
 Wenn Sie für alle Zeilen in einer Tabelle einen einzigen Aggregatwert erstellen, werden nur die Aggregatwerte selbst angezeigt. Wenn Sie z. B. die Gesamtsumme des Werts für die `price` -Spalte in der Tabelle `titles` berechnen, werden die einzelnen Buchtitel, Herausgebernamen usw. nicht angezeigt.  
  
- **!** Wenn Sie Teilergebnisse berechnen, d. h. Gruppen erstellen, können Sie die Spaltenwerte für jede Gruppe anzeigen. Weitere Informationen finden Sie unter [Gruppieren von Zeilen in Abfrageergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
+ **!** Wenn Sie Teilergebnisse berechnen, d.h. Gruppen erstellen, können Sie die Spaltenwerte für jede Gruppe anzeigen. Weitere Informationen finden Sie unter [Gruppieren von Zeilen in Abfrageergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
 
 ## <a name="aggregate-values-for-all-rows"></a>Aggregieren von Werten für alle Zeilen  
   

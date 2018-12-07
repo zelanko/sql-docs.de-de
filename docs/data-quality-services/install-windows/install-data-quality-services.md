@@ -5,19 +5,18 @@ ms.date: 09/11/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c32d42292c9d16984fe37b72741da7941852ff8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 273d0e9df4a5cd5a2649fcd8ada4fe9891393dcd
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699679"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617940"
 ---
 # <a name="install-data-quality-services"></a>Installieren von Data Quality Services
 
@@ -70,7 +69,7 @@ ms.locfileid: "51699679"
   
 |Page|Aktion|  
 |----------|------------|  
-|Funktionsauswahl|Wählen Sie Folgendes:<br /><br /> **Data Quality Services** unter **Database Engine Services** , um den [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]zu installieren. <br />Wenn Sie das Kontrollkästchen **Data Quality Services** aktivieren, kopiert SQL Server-Setup eine Installationsdatei, DQSInstaller.exe, im Verzeichnis der SQL Server-Instanz auf dem Computer. Sie müssen diese Datei nach dem Abschließen des SQL Server-Setups ausführen, um die Installation von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] *abzuschließen*. Sie müssen außerdem einige zusätzliche Schritte zum Konfigurieren von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ausführen, bevor Sie ihn verwenden können. Weitere Informationen finden Sie unter [Installationsnachbereitung](#PostInstallationTasks).<br /><br /> **Data Quality-Client** zur Installation von [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].<br /><br /> (Empfohlen) **Verwaltungstools – Vollständig** unter **Verwaltungstools – Einfach** zur Installation von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ihnen steht eine grafische Benutzeroberfläche zur Verwaltung der SQL Server-Instanz zur Verfügung, und Sie werden bei der Ausführung weiterer Tasks während der Installationsnachbereitung unterstützt. Diese werden im folgenden Abschnitt erläutert.|  
+|Funktionsauswahl|Wählen Sie Folgendes:<br /><br /> **Data Quality Services** unter **Database Engine Services** , um den [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]zu installieren. <br />Wenn Sie das Kontrollkästchen **Data Quality Services** aktivieren, kopiert SQL Server-Setup eine Installationsdatei, DQSInstaller.exe, im Verzeichnis der SQL Server-Instanz auf dem Computer. Sie müssen diese Datei nach dem Abschließen des SQL Server-Setups ausführen, um die Installation von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] *abzuschließen*. Sie müssen außerdem einige zusätzliche Schritte zum Konfigurieren von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ausführen, bevor Sie ihn verwenden können. Weitere Informationen finden Sie unter [Installationsnachbereitung](#PostInstallationTasks).<br /><br /> **Data Quality-Client** zur Installation von [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].<br /><br /> (Empfohlen) **Verwaltungstools > Vollständig** unter **Verwaltungstools > Einfach** zur Installation von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ihnen steht eine grafische Benutzeroberfläche zur Verwaltung der SQL Server-Instanz zur Verfügung, und Sie werden bei der Ausführung weiterer Tasks während der Installationsnachbereitung unterstützt. Diese werden im folgenden Abschnitt erläutert.|  
 |Datenbank-Engine-Konfiguration|Klicken Sie auf **Aktuellen Benutzer hinzufügen** , um der festen Serverrolle sysadmin das Windows-Benutzerkonto hinzuzufügen. Dies ist erforderlich, damit Sie später die Datei DQSInstaller.exe ausführen können, um die Installation von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] abzuschließen.|  
   
 ##  <a name="PostInstallationTasks"></a> Installationsnachbereitung  

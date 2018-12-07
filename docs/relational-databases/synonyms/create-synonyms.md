@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88ed8266a4de04df116989953b3e5b43a162e265
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbe7f38f6132e79f1938936c0914bae236ea5a03
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818134"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543621"
 ---
 # <a name="create-synonyms"></a>Erstellen von Synonymen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47818134"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
  Zum Erstellen eines Synonyms in einem Schema muss ein Benutzer über die CREATE SYNONYM-Berechtigung verfügen und entweder der Besitzer des Schemas sein oder über die ALTER SCHEMA-Berechtigung verfügen. Die CREATE SYNONYM-Berechtigung ist eine erteilbare Berechtigung.  
@@ -51,7 +51,7 @@ ms.locfileid: "47818134"
   
 1.  Erweitern Sie im **Objekt-Explorer**die Datenbank, in der Sie die neue Sicht erstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Synonyme** , und klicken Sie dann auf **Neues Synonym…**.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Synonyme**, und klicken Sie dann auf **Neues Synonym…**.  
   
 3.  Geben Sie im Dialogfeld **Synonym hinzufügen** die folgenden Informationen ein.  
   

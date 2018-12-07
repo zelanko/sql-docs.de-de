@@ -19,12 +19,12 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 872991355d16ccd5dbd237baa4830957483b51ab
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: fb3f42c9b997b35492166d96a7eec698106f2ae9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641960"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522957"
 ---
 # <a name="script-task"></a>Skripttask
   Der Skripttask stellt Code zum Ausführen von Funktionen bereit, die in den integrierten Tasks und Transformationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht verfügbar sind. Der Skripttask kann auch Funktionen in einem einzigen Skript zusammenfassen, statt mehrere Tasks und Transformationen zu verwenden. Sie verwenden den Skripttask für einmalige Aktionen in einem Paket (einmalig pro aufgezähltem Objekt), anstatt diese einmalig pro Datenzeile auszuführen.  
@@ -127,13 +127,13 @@ ms.locfileid: "51641960"
  Wenn Sie den Namen der Methode im VSTA-Projekt geändert haben, müssen Sie den Wert der **EntryPoint** -Eigenschaft ändern.  
   
  **ReadOnlyVariables**  
- Geben Sie eine durch Trennzeichen getrennte Liste von schreibgeschützten Variablen ein, die für das Skript verfügbar sind, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**), und wählen Sie die Variablen im Dialogfeld **Variablen auswählen** aus.  
+ Geben Sie eine durch Trennzeichen getrennte Liste von schreibgeschützten Variablen ein, die für das Skript verfügbar sind, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**...**), und wählen Sie die Variablen im Dialogfeld **Variablen auswählen** aus.  
   
 > [!NOTE]  
 >  Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  
   
  **ReadWriteVariables**  
- Geben Sie eine durch Trennzeichen getrennte Liste von Lese-/Schreibvariablen ein, die für das Skript verfügbar sind, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**), und wählen Sie die Variablen im Dialogfeld **Variablen auswählen** aus.  
+ Geben Sie eine durch Trennzeichen getrennte Liste von Lese-/Schreibvariablen ein, die für das Skript verfügbar sind, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**...**), und wählen Sie die Variablen im Dialogfeld **Variablen auswählen** aus.  
   
 > [!NOTE]  
 >  Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  

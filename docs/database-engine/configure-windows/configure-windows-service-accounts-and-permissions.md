@@ -51,12 +51,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ce8d3928a59acfb2c3b53e19b50934b8f30a0eda
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c35e10e3ac81468a6add4bc1674fc6e56e126d42
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605981"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617730"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Konfigurieren von Windows-Dienstkonten und -Berechtigungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ ms.locfileid: "51605981"
 
 Als Startkonten zum Starten und Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können [Domänenbenutzerkonten](#Domain_User), [lokale Benutzerkonten](#Local_User), [verwaltete Dienstkonten](#MSA), [virtuelle Konten](#VA_Desc)oder [integrierte Systemkonten](#Local_Service)verwendet werden. Zum Starten und Ausführen muss für jeden Dienst in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] während der Installation ein Startkonto konfiguriert werden.
   
- In diesem Abschnitt werden die Konten beschrieben, die zum Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensten konfiguriert werden können. Des Weiteren werden die beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup verwendeten Standardwerte, das Konzept der Pro-Dienst-SIDs, die Startoptionen und die Konfiguration der Firewall erläutert.  
+ In diesem Abschnitt werden die Konten beschrieben, die zum Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Diensten konfiguriert werden können. Des Weiteren werden die beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup verwendeten Standardwerte, das Konzept der Pro-Dienst-SIDs, die Startoptionen und die Konfiguration der Firewall erläutert.  
   
 -   [Standarddienstkonten](#Default_Accts)  
   
@@ -247,7 +247,7 @@ Bei der Erstinstallation kann in den meisten Fällen mithilfe von Tools wie [!IN
   
 ##  <a name="Serv_Perm"></a> Dienstberechtigungen
 
-In diesem Abschnitt werden die Berechtigungen beschrieben, die beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup für die Pro-Dienst-SIDs der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste konfiguriert werden.  
+In diesem Abschnitt werden die Berechtigungen beschrieben, die beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup für die Pro-Dienst-SIDs der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste konfiguriert werden.  
   
 -   [Dienstkonfiguration und Zugriffssteuerung](#Serv_SID)  
   
@@ -291,7 +291,7 @@ In diesem Abschnitt werden die Berechtigungen beschrieben, die beim [!INCLUDE[ss
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz: **NT SERVICE\MSSQLSERVER**. Benannte Instanz: **NT SERVICE\MSSQL$** Instanzname.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> **Token auf Prozessebene ersetzen** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)<br /><br /> Berechtigung zum Starten von SQL Writer<br /><br /> Berechtigung zum Lesen des Ereignisprotokolldiensts<br /><br /> Berechtigung zum Lesen des Remoteprozeduraufruf-Diensts|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent:** \*<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz: **NT Service\SQLSERVERAGENT**. Benannte Instanz: **NT Service\SQLAGENT$**_Instanzname_.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> **Token auf Prozessebene ersetzen** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Einer lokalen Windows-Gruppe werden alle Rechte gewährt. Standardinstanz: **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**. Benannte Instanz: **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] Instanz: **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> Nur für tabellarisch:<br /><br /> **Arbeitssatz eines Prozesses vergrößern** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)<br /><br /> **Sperren von Seiten im Speicher** (SeLockMemoryPrivilege) – Dies ist nur erforderlich, wenn die Auslagerung vollständig ausgeschaltet wird.<br /><br /> Nur für Failoverclusterinstallationen:<br /><br /> **Anheben der Zeitplanungspriorität** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Einer lokalen Windows-Gruppe werden alle Rechte gewährt. Standardinstanz: **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**. Benannte Instanz: **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] Instanz: **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> Nur für tabellarisch:<br /><br /> **Arbeitssatz eines Prozesses vergrößern** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)<br /><br /> **Sperren von Seiten im Speicher** (SeLockMemoryPrivilege): Dies ist nur erforderlich, wenn die Auslagerung vollständig ausgeschaltet wird.<br /><br /> Nur für Failoverclusterinstallationen:<br /><br /> **Anheben der Zeitplanungspriorität** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz: **NT SERVICE\ReportServer**. Benannte Instanz: **NT SERVICE\\ReportServer$**_Instanzname_.)|**Als Dienst anmelden** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz und benannte Instanz: **NT SERVICE\MsDtsServer130**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verfügt über keinen separaten Prozess für eine benannte Instanz.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> Berechtigung zum Schreiben in das Anwendungsereignisprotokoll<br /><br /> **Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)<br /><br /> **Annehmen der Clientidentität nach Authentifizierung** (SeImpersonatePrivilege)|  
 |**Volltextsuche:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz: **NT Service\MSSQLFDLauncher**. Benannte Instanz: **NT Service\MSSQLFDLauncher$**_Instanzname_.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)<br /><br /> **Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)|  
@@ -562,13 +562,13 @@ Bei allen Installationen stellt das [!INCLUDE[ssNoVersion](../../includes/ssnove
   
     -   Die Pro-Dienst-SID vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] wird im [!INCLUDE[ssDE](../../includes/ssde-md.md)] als Mitglied der festen Serverrolle **sysadmin** bereitgestellt.  
   
-    -   Der Pro-Dienst-SID wird den lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Windows-Gruppen hinzugefügt, es sei denn, bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handelt es sich um eine Failoverclusterinstanz.  
+    -   Der Pro-Dienst-SID wird zu den lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Windows-Gruppen hinzugefügt, es sei denn, bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handelt es sich um eine Failoverclusterinstanz.  
   
     -   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcen werden weiterhin in den lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Windows-Gruppen bereitgestellt.  
   
     -   Die lokale Windows-Gruppe für Dienste wird von **SQLServer2005MSSQLUser$**_<Computername>_**$**_<Instanzname>_ in **SQLServerMSSQLUser$**_<Computername>_**$**_<Instanzname>_ umbenannt. Die Dateipfade für migrierte Datenbanken besitzen Zugriffssteuerungseinträge (Access Control Entries, ACE) für die lokalen Windows-Gruppen. Die Dateipfade für neue Datenbanken besitzen ACEs für die Pro-Dienst-SID.  
   
--   Während des Upgrades von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup die ACEs für die Pro-Dienst-SID von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] beibehalten.  
+-   Während des Upgrades von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] werden beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup die ACEs für die Pro-Dienst-SID von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] beibehalten.  
   
 -   Für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz wird der für den Dienst konfigurierte ACE für das Domänenkonto beibehalten.  
   
@@ -647,7 +647,7 @@ Bei allen Installationen stellt das [!INCLUDE[ssNoVersion](../../includes/ssnove
 |Französisch|AUTORITE NT\SERVICE LOCAL|AUTORITE NT\SERVICE RÉSEAU|AUTORITE NT\SYSTEM|BUILTIN\Administrators|  
 |Italienisch|NT AUTHORITY\SERVIZIO LOCALE|NT AUTHORITY\SERVIZIO DI RETE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators|  
 |Spanisch|NT AUTHORITY\SERVICIO LOC|NT AUTHORITY\SERVICIO DE RED|NT AUTHORITY\SYSTEM|BUILTIN\Administradores|  
-|Russisch|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Администраторы|  
+|Russisch|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\СИСТЕМА|BUILTIN\Администраторы|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

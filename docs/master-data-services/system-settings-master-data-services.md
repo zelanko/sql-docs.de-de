@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b67636c618343b4f5beb5ec000f8d94236fb64a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f58c276968fd88b64ef5c48995eafbc553e14987
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696978"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507282"
 ---
 # <a name="system-settings-master-data-services"></a>Systemeinstellungen (Master Data Services)
 
@@ -61,7 +61,7 @@ ms.locfileid: "51696978"
 |**Anzahl der Zeilen pro Batch.**|**RowsPerBatch**|Die Anzahl von Datensätzen, die vom Webdienst in den einzelnen Batches abgerufen werden sollen. Der Standardwert lautet **50**.|  
 ||**ApplicationName**|Der Text, der in Ereignisprotokollen angezeigt wird. Der Standardwert ist **MDM**.|  
 ||**SiteTitle**|Der Text, der in der Titelleiste des [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webbrowsers angezeigt wird. Der Standardwert ist **Master Data Manager**.|  
-|**Protokollbeibehaltung in tagen**|**LogRentionDays**|Die Anzahl der Tage, nach denen die Protokolle gelöscht werden. Der Standardwert ist -1. Er gibt an, dass die Protokolltabellen nicht bereinigt werden.<br /><br /> Wenn der Wert 0 ist, behalten Protokolltabellen nur die heutigen Daten. Datenprotokolle für die vergangenen Tage werden abgeschnitten.<br /><br /> Wenn der Wert größer als 0 ist, werden die Protokolldaten für die Anzahl der durch den Wert angegebenen Tage beibehalten.|  
+|**Protokollbeibehaltung in tagen**|**LogRentionDays**|Die Anzahl der Tage, nach denen die Protokolle gelöscht werden. Der Standardwert ist -1. Er gibt an, dass die Protokolltabellen nicht bereinigt werden.<br /><br /> Wenn der Wert „0 (null)“ ist, behalten Protokolltabellen nur die heutigen Daten. Datenprotokolle für die vergangenen Tage werden abgeschnitten.<br /><br /> Wenn der Wert größer als 0 ist, werden die Protokolldaten für die Anzahl der durch den Wert angegebenen Tage beibehalten.|  
   
 ##  <a name="Versions"></a> Versionsverwaltungseinstellungen  
   
@@ -84,7 +84,7 @@ ms.locfileid: "51696978"
   
 |Einstellung des Konfigurations-Managers|Systemeinstellung|und Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
-|**Die Standardanzahl der Elemente in der Hierarchie.**|**HierarchyChildNodeLimit**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **des** an, wie viele Elemente maximal in den einzelnen Hierarchieknoten angezeigt werden, bevor **…More…** des angezeigt. Sie können auf **…More…**(Mehr) klicken, um die nächste Gruppe von Elementen anzuzeigen. Der Standardwert lautet **50**.|  
+|**Die Standardanzahl der Elemente in der Hierarchie.**|**HierarchyChildNodeLimit**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-**Explorer** an, wie viele Elemente maximal in den einzelnen Hierarchieknoten angezeigt werden, bevor **...Weitere...** angezeigt wird. Sie können auf **...Weitere...** klicken, um die nächste Gruppe von Elementen anzuzeigen. Der Standardwert lautet **50**.|  
 |**Standardmäßig Namen in Hierarchie anzeigen**|**ShowNamesInHierarchy**|Legt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, determines the default setting that is selected when you view hierarchies.<br /><br /> Der Standardwert ist **Yes** oder **1**. Er gibt an, dass Name und Code der einzelnen Elemente angezeigt werden. Ändern Sie den Wert in **No** oder **2** , wenn Sie nur den Code anzeigen möchten.|  
 |**Anzahl domänenbasierter Attribute in Liste**|**DBAListRowLimit**|Gibt an, wie viele Attribute in einer Liste im Funktionsbereich des [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. Der Standardwert lautet **50**. Wenn mehr als 50 Elemente vorhanden sind, wird stattdessen ein durchsuchbares Dialogfeld angezeigt.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the level of similarity used when using the **Matches** filter criteria. Der Standardwert ist **0,3**. Legen Sie als Wert eine Zahl in der Nähe von **1** fest, um ein Ergebnis zurückzugeben, das den Suchkriterien besser entspricht. Eine exakte Übereinstimmung erhalten Sie, wenn Sie den Wert auf **1** festlegen.|  

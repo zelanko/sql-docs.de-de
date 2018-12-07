@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1f756c0f2e843f2a13e394bb739647530feda09
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029163"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526183"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
 In diesem Tutorial erfahren Sie, wie Sie zwei Arten von paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Berichten erstellen: einen Drillthroughbericht und einen Hauptbericht. Die in diesen Berichten verwendeten Beispielvertriebsdaten werden aus einem Analysis Services-Cube abgerufen. 
@@ -101,7 +101,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
 #### <a name="to-create-query-filters"></a>So erstellen Sie Abfragefilter  
   
-1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich Metadaten auf die Schaltfläche **(...)**.  
+1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich „Metadaten“ auf die Schaltfläche **(...)**.  
   
 2.  Klicken Sie im Dialogfeld **Cubeauswahl** auf „Sales“ und anschließend auf **OK**.  
   
@@ -392,7 +392,7 @@ Erstellen Sie als Nächstes ein eingebettetes Dataset. Hierzu erstellen Sie mit 
   
 #### <a name="to-create-query-filters"></a>So erstellen Sie Abfragefilter  
   
-1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich Metadaten im Cubeabschnitt auf die Schaltfläche mit den Auslassungszeichen **(...)**.  
+1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich „Metadaten“ im Cubeabschnitt auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
   
 2.  Klicken Sie im Dialogfeld **Cubeauswahl** auf „Sales“ und anschließend auf **OK**.  
   

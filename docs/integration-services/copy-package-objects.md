@@ -16,12 +16,12 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d74b4642fc3a8b9ad08796a4ff032088310acbe
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a3f537581dca2880d31efc10e0e3a5ac339f6622
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639447"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526162"
 ---
 # <a name="copy-package-objects"></a>Kopieren von Paketobjekten
   In diesem Thema wird beschrieben, wie Sie Ablaufsteuerungs- und Datenflusselemente sowie Verbindungs-Manager innerhalb eines Pakets bzw. von einem Paket in ein anderes kopieren.  

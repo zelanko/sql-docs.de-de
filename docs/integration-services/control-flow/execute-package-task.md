@@ -20,12 +20,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cb0ba9c72da4fe69988fa580ba3080237b3b078
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2148cf2e25e6cdddab20a29751cea82238159668
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640677"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535699"
 ---
 # <a name="execute-package-task"></a>Paket ausführen (Task)
   Der Task Paket ausführen erweitert die Unternehmensfunktionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , indem Paketen das Ausführen anderer Pakete als Teil eines Workflows ermöglicht wird.  
@@ -103,7 +103,7 @@ ms.locfileid: "51640677"
  Weitere Informationen finden Sie unter [Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
 ### <a name="accessing-parent-package-variables"></a>Zugriff auf Variablen für übergeordnete Pakete  
- Untergeordnete Pakete greifen über den Skripttask auf Variablen für übergeordnete Pakete zu. Wenn Sie den Namen der Variablen für das übergeordnete Paket im **Skripttask-Editor** auf der Seite **Skript**eingeben, lassen Sie **Benutzer:** im Variablennamen aus. Andernfalls wird die Variable beim Ausführen des übergeordneten Pakets vom untergeordneten Paket nicht gesucht.  
+ Untergeordnete Pakete greifen über den Skripttask auf Variablen für übergeordnete Pakete zu. Wenn Sie im **Skripttask-Editor** auf der Seite **Skript** den Namen der Variablen für das übergeordnete Paket eingeben, lassen Sie **Benutzer:** im Variablennamen aus. Andernfalls wird die Variable beim Ausführen des übergeordneten Pakets vom untergeordneten Paket nicht gesucht.  
   
 ## <a name="configuring-the-execute-package-task"></a>Konfigurieren des Tasks Paket ausführen  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
@@ -158,7 +158,7 @@ ms.locfileid: "51640677"
 >  Die Option **ReferenceType** ist schreibgeschützt und auf **Externer Verweis** festgelegt, wenn das Projekt, das das Paket enthält, nicht in das Projektbereitstellungsmodell konvertiert wurde. [Stellen Sie SQL Server Integration Services-Projekte und Pakete (SSIS) bereit](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Kennwort**  
- Wenn das untergeordnete Paket kennwortgeschützt ist, stellen Sie das Kennwort für das untergeordnete Paket bereit, oder klicken Sie auf die Schaltfläche mit den drei Punkten (...), und erstellen Sie ein neues Kennwort für das untergeordnete Paket.  
+ Wenn das untergeordnete Paket kennwortgeschützt ist, stellen Sie das Kennwort für das untergeordnete Paket bereit, oder klicken Sie auf die Schaltfläche mit den drei Auslassungspunkten (...), und erstellen Sie ein neues Kennwort für das untergeordnete Paket.  
   
  **ExecuteOutOfProcess**  
  Geben Sie an, ob das untergeordnete Paket im Prozess des übergeordneten Pakets oder in einem separaten Prozess ausgeführt wird. Die ExecuteOutOfProcess-Eigenschaft des Tasks „Paket ausführen“ ist standardmäßig auf **FALSE**festgelegt, und das untergeordnete Paket wird im selben Prozess wie das übergeordnete Paket ausgeführt. Wenn Sie diese Eigenschaft auf **TRUE**festlegen, wird das untergeordnete Paket in einem separaten Prozess ausgeführt. Dadurch kann sich der Start des untergeordneten Pakets verlangsamen. Wenn die Eigenschaft auf **TRUE**festgelegt wurde, ist außerdem das Debuggen des Pakets in einer Installation, die nur die Tools enthält, nicht möglich. Das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Produkt muss von Ihnen installiert werden. Weitere Informationen finden Sie unter [Installieren von Integration Services](../../integration-services/install-windows/install-integration-services.md).  
@@ -193,7 +193,7 @@ ms.locfileid: "51640677"
  **Verwandte Themen:** [OLE DB-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
- Geben Sie den Namen des untergeordneten Pakets an, oder klicken Sie auf die Schaltfläche mit den drei Punkten, um nach dem Paket zu suchen.  
+ Geben Sie den Namen des untergeordneten Pakets an, oder klicken Sie auf die Schaltfläche mit den drei Auslassungspunkten (...), um nach dem Paket zu suchen.  
   
 ##### <a name="location--file-system"></a>Location = File system  
  **Verbindung**  

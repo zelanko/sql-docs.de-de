@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da0c23b3fcc746fa2ad8614f88ce539386e71b6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42fdd43e7e535452d01701fd7d230484ae30fcae
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775318"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712161"
 ---
 # <a name="report-design-view-report-builder"></a>Berichtsentwurfsansicht (Berichts-Generator)
   Das Fenster des Berichts-Generators ist so aufgebaut, dass Sie Berichtsressourcen einfach anordnen und schnell die gewünschten paginierten Berichte erstellen können. Die Entwurfsoberfläche befindet sich in der Mitte des Fensters. Das Menüband und die Bereiche befinden sind um die Entwurfsoberfläche angeordnet. Auf der Entwurfsoberfläche können Sie die Berichtselemente hinzufügen und anordnen. Dieser Artikel erklärt die Bereiche, die Sie zum Hinzufügen, Auswählen und Organisieren Ihrer Berichtsressoucen und zum Verändern der Berichtselementeigenschaften verwenden.  
@@ -169,7 +169,7 @@ ms.locfileid: "47775318"
   
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+ [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Berichts-Generator in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   

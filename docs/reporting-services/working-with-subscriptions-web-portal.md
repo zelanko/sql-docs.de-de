@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0c94ab62231ba2167e52c9999f18cf4bd1e9ca5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b1990930387dbd68ea843073b9d372ce735273f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028129"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542011"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>Arbeiten mit Abonnements (Webportal)
 
@@ -28,7 +28,7 @@ Bevor Sie ein neues Abonnement erstellen können, müssen Sie sicherstellen, das
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-Sie können die Seite „Abonnements“ aufrufen, indem Sie auf die **Auslassungspunkte (...)** eines Berichts klicken, **Verwalten** und anschließend **Abonnements** auswählen.  
+Sie können die Seite „Abonnements“ aufrufen, indem Sie auf die **Auslassungspunkte (...)** eines Berichts klicken und dann auf **Verwalten** und **Abonnements** klicken.  
   
 Sie können auf der Seite „Abonnements“ ein neues Abonnement erstellen, indem Sie **+ Neues Abonnement**auswählen. Sie können vorhandene Abonnements auch bearbeiten oder die von Ihnen ausgewählten Abonnements löschen.  
   

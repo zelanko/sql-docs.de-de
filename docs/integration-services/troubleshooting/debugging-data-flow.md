@@ -17,12 +17,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f9ea0da85324aa74b7ce9af17ab64b743a8f031
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 38152544ed3f0684cc13db7c2f429b46ed9ef5b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638747"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521541"
 ---
 # <a name="debugging-data-flow"></a>Debuggen des Datenflusses
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer enthalten Funktionen und Tools, mit denen Sie die Datenflüsse in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket behandeln können.  
@@ -40,7 +40,7 @@ ms.locfileid: "51638747"
   
  Ein Daten-Viewer kann Daten in einem Raster anzeigen. Bei einem Raster wählen Sie die Spalten aus, die angezeigt werden sollen. Die Werte für die ausgewählten Spalten werden im Tabellenformat angezeigt.  
   
- Sie können auch mehrere Daten-Viewer in einen Pfad einschließen. Daten können in unterschiedlichen Formaten angezeigt werden (erstellen Sie z. B. eine Diagrammsicht und eine Rasteransicht der Daten), und es können unterschiedliche Daten-Viewer für verschiedene Datenspalten erstellt werden.  
+ Sie können auch mehrere Daten-Viewer in einen Pfad einschließen. Daten können in unterschiedlichen Formaten angezeigt werden (erstellen Sie z.B. eine Diagrammansicht und eine Rasteransicht der Daten). Außerdem können Sie unterschiedliche Daten-Viewer für verschiedene Datenspalten erstellen.  
   
  Wenn Sie einem Pfad einen Daten-Viewer hinzufügen, fügt der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer der Entwurfsoberfläche der Registerkarte **Datenfluss** neben dem Pfad ein Daten-Viewer-Symbol hinzu. Transformationen mit mehreren Ausgaben, wie z. B. die Transformation für bedingtes Teilen, können in jedem Pfad einen Daten-Viewer enthalten.  
   
@@ -89,9 +89,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** : Die Summe aller von der Komponente gesendeten Zeilen  
   
--   **wall_clock_time_ms** : Die insgesamt verstrichene Ausführungszeit, in Millisekunden, für jede Komponente  
+-   **wall_clock_time_ms:** Die insgesamt verstrichene Ausführungszeit, in Millisekunden, für jede Komponente  
   
--   **num_rows_per_millisecond** : Die Anzahl der pro Millisekunde von jeder Komponente gesendeten Zeilen  
+-   **num_rows_per_millisecond:** Die Anzahl der pro Millisekunde von jeder Komponente gesendeten Zeilen  
   
  Mit der **HAVING** -Klausel wird ein Fehler aufgrund einer Division durch 0 in den Berechnungen verhindert.  
   

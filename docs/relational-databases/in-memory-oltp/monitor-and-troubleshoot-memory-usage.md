@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 292b6a00e92ced31fc57c604c5d614df832dd9fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b250f4ec67db43c975d61f5944b7d6eaee8ccc73
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666679"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712002"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Überwachung und Fehlerbehebung für die Arbeitsspeicherauslastung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "51666679"
 ##  <a name="bkmk_Monitoring"></a> Überwachen der Arbeitsspeicherverwendung  
   
 ###  <a name="bkmk_UsingSSMS"></a> Bei Verwendung von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Im Lieferumfang sind integrierte Standardberichte enthalten, um den von Tabellen im Arbeitsspeicher beanspruchten Speicherplatz zu überwachen. Sie können auf diese Berichte mithilfe des Objekt-Explorers zugreifen, wie [hier](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)erläutert. Mit dem Objekt-Explorer können Sie auch den Arbeitsspeicher überwachen, der von einzelnen speicheroptimierten Tabellen beansprucht wird.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Im Lieferumfang sind integrierte Standardberichte enthalten, um den von Tabellen im Arbeitsspeicher beanspruchten Speicherplatz zu überwachen. Sie können auf diese Berichte mithilfe des Objekt-Explorers zugreifen. Mit dem Objekt-Explorer können Sie auch den Arbeitsspeicher überwachen, der von einzelnen speicheroptimierten Tabellen beansprucht wird.  
   
 #### <a name="consumption-at-the-database-level"></a>Verbrauch auf Datenbankebene  
  Sie können die Arbeitsspeicherauslastung auf Datenbankebene wie folgt überwachen.  

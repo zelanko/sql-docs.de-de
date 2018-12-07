@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90acf990b3e498c73d8b25cc4a11f414f6e24c31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c32b38b0327c8c418929514c7f82e26a3a41584
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717938"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539724"
 ---
 # <a name="create-indexes-with-included-columns"></a>Erstellen von Indizes mit eingeschlossenen Spalten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47717938"
 > [!NOTE]  
 > Wenn ein Index alle Spalten enthält, auf die eine Abfrage verweist, wird dies normalerweise als *Abdecken der Abfrage*bezeichnet.  
    
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="DesignRecs"></a> Entwurfsempfehlungen  
   
@@ -84,17 +84,17 @@ ms.locfileid: "47717938"
   
 3.  Klicken Sie auf das Pluszeichen, um die Tabelle zu erweitern, für die Sie einen Index mit Nichtschlüsselspalten erstellen möchten.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Index** , zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index…** aus.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes**, zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index** aus.  
   
 5.  Geben Sie in das Dialogfeld **Neuer Index** auf der Seite **Allgemein** den Namen des neuen Indexes in das Feld **Indexname** ein.  
   
-6.  Klicken Sie auf der Registerkarte **Indexschlüsselspalten** auf **Hinzufügen…**.  
+6.  Klicken Sie in der Registerkarte **Indexschlüsselspalten** auf **Hinzufügen…**.  
   
 7.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table\_name_ das oder die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem Index hinzugefügt werden sollen.  
   
 8.  Klicken Sie auf **OK**.  
   
-9. Klicken Sie auf der Registerkarte **Eingeschlossene Spalten** auf **Hinzufügen…**.  
+9. Klicken Sie auf der Registerkarte **Eingeschlossene Spalten** auf **Hinzufügen...**.  
   
 10. Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table\_name_ das oder die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem Index als Nichtschlüsselspalten hinzugefügt werden sollen.  
   

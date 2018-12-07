@@ -13,12 +13,12 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 988675dd00135599fa053acb5cb96d58e81d9e14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddbb902789cfc4cbef5135d024ba8f6e2e1c7e98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628578"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530275"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Festlegen der Eigenschaften einer Datenflusskomponente
   Die Eigenschaften von Datenflusskomponenten, z. B. Quellen, Ziele und Transformationen, können Sie mithilfe eine der folgenden Funktionen festlegen:  
@@ -27,7 +27,7 @@ ms.locfileid: "47628578"
   
 -   Im Fenster **Eigenschaften** werden die benutzerdefinierten Eigenschaften auf Komponentenebene jedes Elements sowie die allen Datenflusselementen gemeinsamen Eigenschaften aufgelistet.  
   
--   Das Dialogfeld **Erweiterter Editor** ermöglicht den Zugriff auf benutzerdefinierte Eigenschaften für jede Komponente. Das Dialogfeld **Erweiterter Editor** ermöglicht außerdem den Zugriff auf benutzerdefinierte Eigenschaften für die einzelnen Komponenten sowie auf die für alle Datenflusskomponenten gemeinsamen Eigenschaften – die Eigenschaften von Eingaben, Ausgaben, Fehlerausgaben, Spalten und externen Spalten.  
+-   Das Dialogfeld **Erweiterter Editor** ermöglicht den Zugriff auf benutzerdefinierte Eigenschaften für jede Komponente. Das Dialogfeld **Erweiterter Editor** ermöglicht außerdem den Zugriff auf benutzerdefinierte Eigenschaften für die einzelnen Komponenten sowie auf die für alle Datenflusskomponenten gemeinsamen Eigenschaften, die Eigenschaften von Eingaben, Ausgaben, Fehlerausgaben, Spalten und externen Spalten.  
   
 ## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>Festlegen der Eigenschaften einer Datenflusskomponente mit einem Komponenten-Editor  
   
@@ -108,7 +108,7 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
  In diesem Thema werden die allgemeinen Eigenschaften von Datenflussobjekten aufgelistet und beschrieben.  
   
--   [Komponenten](#components)  
+-   [Components](#components)  
   
 -   [Eingaben](#inputs)  
   

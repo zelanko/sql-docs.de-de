@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainlist.f1
@@ -14,12 +13,12 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0317dea3113fafdf7f3cb9a43553103f3ba51c99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 088629be0f2dfa11e563b0ef7441a1b7c59ec515
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699608"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617030"
 ---
 # <a name="domain-management-domain-list"></a>Domänenverwaltung: Domänenliste
 
@@ -40,7 +39,7 @@ ms.locfileid: "47699608"
  Erstellen Sie eine neue Domäne in der Wissensdatenbank. Durch diesen Befehl wird das Dialogfeld **Domäne erstellen** angezeigt. Sie rufen den Befehl auf, indem Sie mit der rechten Maustaste auf eine Domäne klicken oder indem Sie auf das Symbol oberhalb der Domänenliste klicken. Weitere Informationen finden Sie unter [Erstellen einer Domäne](../data-quality-services/create-a-domain.md).  
   
  **Kopie der ausgewählten Domäne erstellen**  
- Erstellen Sie eine genaue Kopie der ausgewählten Domäne, und fügen Sie sie der Wissensdatenbank hinzu. Der Name entspricht dem Namen der kopierten Domäne mit dem Zusatz „ ‑ Kopie“. Sie rufen den Befehl auf, indem Sie mit der rechten Maustaste auf eine Domäne klicken und **Kopie erstellen**auswählen oder indem Sie auf das Symbol oberhalb der Domänenliste klicken. Er ist für Verbunddomänen nicht verfügbar.  
+ Erstellen Sie eine genaue Kopie der ausgewählten Domäne, und fügen Sie sie der Wissensdatenbank hinzu. Der Name entspricht dem Namen der kopierten Domäne mit dem Zusatz „ – Kopie“. Sie rufen den Befehl auf, indem Sie mit der rechten Maustaste auf eine Domäne klicken und **Kopie erstellen**auswählen oder indem Sie auf das Symbol oberhalb der Domänenliste klicken. Er ist für Verbunddomänen nicht verfügbar.  
   
  **Domäne aus Datendatei importieren**  
  Importieren Sie eine Domäne aus einer DQS-Datei. Durch diesen Befehl wird das Dialogfeld **Aus Datendatei importieren** angezeigt, in dem Sie das Dateisystem durchsuchen und eine DQS-Datei für eine einzelne Domäne oder eine Verbunddomäne auswählen können. Sie rufen den Befehl auf, indem Sie auf das Symbol oberhalb der Domänenliste klicken. Weitere Informationen finden Sie unter [Importieren Sie eine Domäne aus einer DQS-Datei](../data-quality-services/import-a-domain-from-a-dqs-file.md).  

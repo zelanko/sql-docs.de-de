@@ -11,12 +11,12 @@ ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5217d0b8e3bd9e786e8afa18b2561f5e154ca938
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0b000870562295381c9c61d54327da4ae7059a0d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639317"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542993"
 ---
 # <a name="excel-custom-properties"></a>Benutzerdefinierte Eigenschaften von Excel
   **Benutzerdefinierte Eigenschaften von Quellen**  
@@ -47,8 +47,8 @@ ms.locfileid: "51639317"
   
 |Eigenschaftenname|Datentyp|und Beschreibung|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Ganze Zahl (Enumeration)|Ein Wert, der angibt, wie das Ziel auf seine Zieldatenbank zugreift.<br /><br /> Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **OpenRowset** (0) – Sie geben den Namen einer Tabelle oder Sicht an.<br /><br /> **OpenRowset from Variable** (1) – Sie geben den Namen einer Variablen an, die den Namen einer Tabelle oder Sicht enthält.<br /><br /> **OpenRowset Using Fastload** (3) – Sie geben den Namen einer Tabelle oder Sicht an.<br /><br /> **OpenRowset Using Fastload from Variable** (4) – Sie geben den Namen einer Variablen an, die den Namen einer Tabelle oder Sicht enthält.<br /><br /> **SQL Command** (2) – Sie geben eine SQL-Anweisung an.|  
-|CommandTimeOut|Integer|Die maximale Ausführungsdauer in Sekunden, bevor ein Timeout für den SQL-Befehl eintritt. Der Wert **0** gibt einen unbegrenzten Zeitraum an. Der Standardwert dieser Eigenschaft ist **0**.<br /><br /> Hinweis: Diese Eigenschaft ist nicht im **Ziel-Editor für Excel**verfügbar, kann jedoch mit dem **Erweiterten Editor**festgelegt werden.|  
+|AccessMode|Ganze Zahl (Enumeration)|Ein Wert, der angibt, wie das Ziel auf seine Zieldatenbank zugreift.<br /><br /> Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **OpenRowset** (0): Sie geben den Namen einer Tabelle oder Ansicht an.<br /><br /> **OpenRowset from Variable** (1): Sie geben den Namen einer Variablen an, die den Namen einer Tabelle oder Ansicht enthält.<br /><br /> **OpenRowset Using Fastload** (3): Sie geben den Namen einer Tabelle oder Ansicht an.<br /><br /> **OpenRowset Using Fastload from Variable** (4): Sie geben den Namen einer Variablen an, die den Namen einer Tabelle oder Ansicht enthält.<br /><br /> **SQL Command** (2): Sie geben eine SQL-Anweisung an.|  
+|CommandTimeout|Integer|Die maximale Ausführungsdauer in Sekunden, bevor ein Timeout für den SQL-Befehl eintritt. Der Wert **0** gibt einen unbegrenzten Zeitraum an. Der Standardwert dieser Eigenschaft ist **0**.<br /><br /> Hinweis: Diese Eigenschaft ist nicht im **Ziel-Editor für Excel**verfügbar, kann jedoch mit dem **Erweiterten Editor**festgelegt werden.|  
 |FastLoadKeepIdentity|Boolean|Ein Wert, der angibt, ob Identitätswerte beim Laden von Daten kopiert werden sollen. Diese Eigenschaft ist nur verfügbar, wenn eine der Optionen für das schnelle Laden verwendet wird. Der Standardwert dieser Eigenschaft ist **False**.|  
 |FastLoadKeepNulls|Boolean|Ein Wert, der angibt, ob NULL-Werte beim Laden von Daten kopiert werden sollen. Diese Eigenschaft ist nur verfügbar, wenn eine der Optionen für das schnelle Laden verwendet wird. Der Standardwert dieser Eigenschaft ist **False**.|  
 |FastLoadMaxInsertCommitSize|Integer|Ein Wert, der die Batchgröße angibt, für die das Excel-Ziel bei schnellen Ladevorgängen die Durchführung eines Commits versucht. Der Standardwert ist **2147483647**. Der Wert **0** gibt einen einzelnen Commitvorgang an, nachdem alle Zeilen verarbeitet wurden.|  

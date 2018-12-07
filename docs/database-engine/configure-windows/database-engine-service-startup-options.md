@@ -26,12 +26,12 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c4c3cd3a35cd15d1e9751ba939809a5d596bd2ae
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1c9c330ab53b83eb46fa60002bc8aa6c0ed72e13
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603980"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534667"
 ---
 # <a name="database-engine-service-startup-options"></a>Startoptionen für den Datenbank-Engine-Dienst
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,17 +67,17 @@ ms.locfileid: "51603980"
 |**-n**|Zeichnet keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse mithilfe des Windows-Anwendungsprotokolls auf. Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz mit der Option **-n**starten, sollten Sie auch die Startoption **-e** verwenden. Andernfalls werden keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse protokolliert.|  
 |**-s**|Ermöglicht es Ihnen, eine benannte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zu starten. Wenn der **-s** -Parameter nicht festgelegt wurde, wird versucht, die Standardinstanz zu starten. Sie müssen an der Eingabeaufforderung in das entsprechende BINN-Verzeichnis für die Instanz wechseln, bevor Sie **sqlservr.exe**starten. Wenn beispielsweise Instanz1 `\mssql$Instance1` für die zugehörigen Binärdateien verwendet, muss sich der Benutzer im Verzeichnis `\mssql$Instance1\binn` befinden, um **sqlservr.exe -s instance1** zu starten.|  
 |**-T**  *trace#*|Gibt an, dass eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz so gestartet werden soll, dass ein bestimmtes Ablaufverfolgungsflag (*trace#*) wirksam wird. Ablaufverfolgungsflags werden verwendet, um den Server mit nicht standardmäßigem Verhalten zu starten. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).<br /><br /> **Wichtig**: Wenn Sie ein Ablaufverfolgungsflag mit der Option **-T** angeben, sollten Sie ein „T“ in Großbuchstaben verwenden, um die Nummer des Ablaufverfolgungsflags zu übergeben. Ein "t" in Kleinbuchstaben wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] akzeptiert, doch werden dadurch andere interne Ablaufverfolgungsflags festgelegt, die nur von Supporttechnikern für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] benötigt werden. (Startparameter, die über die Anwendung Dienste in der Systemsteuerung angegeben werden, werden nicht gelesen.)|  
-|**-x**|Deaktiviert die folgenden Überwachungsfunktionen:<br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsindikatoren<br /> – Beibehalten der Statistiken zu CPU-Zeit und zur Cachetrefferquote<br /> – Sammeln von Informationen für den Befehl „DBCC SQLPERF“<br /> – Sammeln von Informationen für einige dynamische Verwaltungssichten<br /> – viele Ereignispunkte für erweiterte Ereignisse<br /><br /> **Warnung**: Wenn Sie die Startoption **-x** verwenden, werden die Informationen, die Ihnen zum Diagnostizieren von Leistungs- und Funktionsproblemen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Verfügung stehen, erheblich reduziert.|  
+|**-x**|Deaktiviert die folgenden Überwachungsfunktionen:<br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsindikatoren<br /> – Beibehalten der Statistiken zu CPU-Zeit und zur Cachetrefferquote<br /> – Sammeln von Informationen für den Befehl „DBCC SQLPERF“<br /> – Sammeln von Informationen für einige dynamische Verwaltungssichten<br /> – viele Ereignispunkte für erweiterte Ereignisse<br /><br /> **Warnung:** Wenn Sie die Startoption **-x** verwenden, werden die Informationen, die Ihnen zum Diagnostizieren von Leistungs- und Funktionsproblemen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Verfügung stehen, erheblich reduziert.|  
 |**-E**|Erhöht die Anzahl der Blöcke, die jeder Datei in einer Dateigruppe zugeordnet werden. Diese Option ist möglicherweise bei Data Warehouse-Anwendungen nützlich, bei denen nur eine eingeschränkte Anzahl von Benutzern Index- oder Datenscans ausführen. Sie sollte bei anderen Anwendungen nicht verwendet werden, da sie sich möglicherweise negativ auf die Leistung auswirkt. Diese Option wird in 32-Bit-Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht unterstützt.|  
   
 ## <a name="using-startup-options-for-troubleshooting"></a>Verwenden von Startoptionen für die Problembehandlung  
- Manche Startoptionen, z. B. der Einzelbenutzermodus und der Minimalkonfigurationsmodus, werden in erster Linie für die Problembehandlung verwendet. Um den Server für die Problembehandlung mit den Optionen **-m** oder **-f** zu starten, verwenden Sie am besten die Befehlszeile und starten „sqlservr.exe“ manuell.  
+ Manche Startoptionen, z. B. der Einzelbenutzermodus und der Minimalkonfigurationsmodus, werden in erster Linie für die Problembehandlung verwendet. Zum Starten des Servers für die Problembehandlung mit den Optionen **-m** oder **-f** verwenden Sie am besten die Befehlszeile und starten „sqlservr.exe“ manuell.  
   
 > [!NOTE]  
 >  Beim Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von **net start**wird ein Schrägstrich (/) anstelle eines Bindestrichs (-) für die Startoptionen verwendet.  
   
 ## <a name="using-startup-options-during-normal-operations"></a>Verwenden von Startoptionen im normalen Betrieb  
- Sie können Startoptionen bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Für diese Optionen, z.B. **-g** oder das Starten mit einem Ablaufverfolgungsflag, konfigurieren Sie die Startparameter am besten mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager. Dieses Tool speichert die Startoptionen als Registrierungsschlüssel, sodass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stets mit den Startoptionen gestartet werden kann.  
+ Sie können Startoptionen bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Für diese Optionen, z.B. **-g** oder das Starten mit einem Ablaufverfolgungsflag, konfigurieren Sie die Startparameter am besten mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager. Dieses Tool speichert die Startoptionen als Registrierungsschlüssel, sodass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stets mit den Startoptionen gestartet werden kann.  
   
 ## <a name="compatibility-support"></a>Kompatibilitätsunterstützung  
  Der **-h**  -Parameter wird in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht unterstützt. Dieser Parameter wurde in früheren Versionen der 32-Bit-Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um virtuellen Adressraum für Metadaten zum Hinzufügen von Speicher im laufenden Systembetrieb (Hot Add Memory) zu reservieren, wenn AWE aktiviert ist. Weitere Informationen finden Sie unter [Nicht mehr unterstützte SQL Server-Funktionen in SQL Server 2016](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  

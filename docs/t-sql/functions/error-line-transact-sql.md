@@ -23,17 +23,17 @@ ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe54b0a56e90dd7c4645fd0e78db7e97f6c838f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9c847b6b04aa4ec1a67b89bf3fa6473b91e13bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770978"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515873"
 ---
 # <a name="errorline-transact-sql"></a>ERROR_LINE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Diese Funktion gibt die Zeilennummer des Fehlers zurück, der die Ausführung des CATCH-Blocks eines TRY…CATCH-Konstrukts ausgelöst hat.  
+Diese Funktion gibt die Zeilennummer des Fehlers zurück, der die Ausführung des CATCH-Blocks eines TRY...CATCH-Konstrukts ausgelöst hat.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +58,7 @@ Ein Aufruf von `ERROR_LINE` kann überall im Bereich eines CATCH-Blocks auftrete
   
 `ERROR_LINE` gibt die Nummer der Zeile zurück, in der der Fehler aufgetreten ist. Dies geschieht unabhängig davon, wo `ERROR_LINE` innerhalb des Bereichs vom CATCH-Block aufgerufen wurde, und unabhängig davon, wie oft `ERROR_LINE` aufgerufen wurde. Dies steht im Gegensatz zu Funktionen wie @@ERROR. @@ERROR gibt eine Fehlernummer in der Anweisung zurück, die unmittelbar auf die folgt, die einen Fehler verursacht hat sowie in der ersten Anweisung eines CATCH-Blocks.  
   
-In geschachtelten CATCH-Blöcken gibt `ERROR_LINE` die für den Bereich des CATCH-Blockes spezifische Fehlerzeilennummer zurück, auf die im Block verwiesen wird. So könnte beispielsweise der CATCH-Block eines TRY…CATCH-Konstrukts ein geschachteltes TRY…CATCH-Konstrukt enthalten. Innerhalb des geschachtelten CATCH-Blocks gibt `ERROR_LINE` die Zeilennummer des Fehlers zurück, der den geschachtelten CATCH-Block aufgerufen hat. Wenn `ERROR_LINE` im äußeren CATCH-Block ausgeführt wird, gibt es die Zeilennummer des Fehlers zurück, der den spezifischen CATCH-Block aufgerufen hat.  
+In geschachtelten CATCH-Blöcken gibt `ERROR_LINE` die für den Bereich des CATCH-Blockes spezifische Fehlerzeilennummer zurück, auf die im Block verwiesen wird. So könnte beispielsweise der CATCH-Block eines TRY...CATCH-Konstrukts ein geschachteltes TRY...CATCH-Konstrukt enthalten. Innerhalb des geschachtelten CATCH-Blocks gibt `ERROR_LINE` die Zeilennummer des Fehlers zurück, der den geschachtelten CATCH-Block aufgerufen hat. Wenn `ERROR_LINE` im äußeren CATCH-Block ausgeführt wird, gibt es die Zeilennummer des Fehlers zurück, der den spezifischen CATCH-Block aufgerufen hat.  
   
 ## <a name="examples"></a>Beispiele  
   

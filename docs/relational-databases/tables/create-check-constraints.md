@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ace4a96004e22a1c922a491a8f2906c98caefc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98ddc4f21807b9ac5185ad5e510cd83e35bbc93b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856379"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521665"
 ---
 # <a name="create-check-constraints"></a>Erstellen von CHECK-Einschränkungen
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47856379"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47856379"
   
 1.  Erweitern Sie im **Objekt-Explorer**die Tabelle, der Sie eine CHECK-Einschränkung hinzufügen möchten, klicken Sie mit der rechten Maustaste auf **Einschränkungen** , und klicken Sie auf **Neue Einschränkung**.  
   
-2.  Klicken Sie im Dialogfeld **CHECK-Einschränkungen** auf das Feld **Ausdruck** und dann auf die Auslassungspunkte **(…)**.  
+2.  Klicken Sie im Dialogfeld **Einschränkungen überprüfen** auf das Feld **Ausdruck** und dann auf die Auslassungspunkte **(…)**.  
   
 3.  Geben Sie im Dialogfeld **CHECK-Einschränkungen** die SQL-Ausdrücke für die CHECK-Einschränkungen ein. Um die Einträge in der Spalte `SellEndDate` der Tabelle `Product` auf einen Wert zu beschränken, der entweder größer oder gleich dem Datum in der Spalte `SellStartDate` ist oder ein NULL-Wert ist, geben Sie z. B. Folgendes ein:  
   

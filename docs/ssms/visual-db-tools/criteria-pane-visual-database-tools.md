@@ -19,16 +19,16 @@ ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51e55de138c9e737163db9750d7665f5ae0a5908
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f6beffa273fbb08c8d4c4066eac3e08f52ed4c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665148"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514053"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Kriterienbereich (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Im Kriterienbereich können Sie Abfrageoptionen angeben, d. h. welche Datenspalten angezeigt oder wie die Ergebnisse sortiert werden und welche Zeilen ausgewählt werden sollen. Hierzu geben Sie die gewünschten Optionen in einem Datenblatt ähnlich einer Kalkulationstabelle ein. Im Kriterienbereich können Sie Folgendes angeben:  
+Im Kriterienbereich können Sie Abfrageoptionen angeben, d.h. welche Datenspalten angezeigt oder wie die Ergebnisse sortiert werden und welche Zeilen ausgewählt werden sollen. Hierzu geben Sie die gewünschten Optionen in einem Datenblatt ähnlich einer Kalkulationstabelle ein. Im Kriterienbereich können Sie Folgendes angeben:  
   
 -   die anzuzeigenden Spalten sowie Aliase für Spaltennamen  
   

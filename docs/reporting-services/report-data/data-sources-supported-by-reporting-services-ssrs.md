@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a08ece8729125bf1cc60bb96385d58ba5c3a6ee
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 13e03572ee4ce886288f1c72b89a97b476d3b35c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813863"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712571"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Von Reporting Services unterstützte Datenquellen (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Berichtsdaten von Datenquellen über eine modulare und erweiterbare Datenschicht abgerufen, für die Datenverarbeitungserweiterungen verwendet werden. Zum Abrufen von Berichtsdaten von einer Datenquelle müssen Sie eine Datenverarbeitungserweiterung auswählen, die den Typ der Datenquelle, die Version der für die Datenquelle ausgeführten Software und die Plattform der Datenquelle (32-Bit oder 64-Bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) unterstützt.  
@@ -68,7 +68,7 @@ ms.locfileid: "51813863"
  Weitere Informationen zu benutzerdefinierten Datenverarbeitungserweiterungen finden Sie unter [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md). Weitere Informationen zu [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Standarddatenanbietern finden Sie unter dem <xref:System.Data> -Namespace.   
   
 ## <a name="platform-support-for-report-data-sources"></a>Plattformunterstützung für Berichtsdatenquellen  
- Die Datenquellen, die Sie in einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung verwenden können, hängen von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Edition, der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Version und von der Plattform ab. Weitere Informationen finden Sie unter [Reporting Services Features Supported by the Editions of SQL Server 2016 (Von den SQL Server 2016-Editionen unterstützte Reporting Services-Funktionen)](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md). Die weiter unten in diesem Thema dargestellte Tabelle enthält Informationen zu unterstützten Datenquellen, sortiert nach Version und Plattform.  
+ Die Datenquellen, die Sie in einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung verwenden können, hängen von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Edition, der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Version und von der Plattform ab. Weitere Informationen finden Sie unter [Reporting Services Features Supported by the Editions of SQL Server (Von den SQL Server-Editionen unterstützte Reporting Services-Funktionen)](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md). Die weiter unten in diesem Thema dargestellte Tabelle enthält Informationen zu unterstützten Datenquellen, sortiert nach Version und Plattform.  
   
  Für den Berichterstellungsclient und den Berichtsserver gelten unterschiedliche Bedingungen bezüglich der Plattform für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenquellen.  
   

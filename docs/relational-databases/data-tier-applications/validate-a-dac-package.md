@@ -16,12 +16,12 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b39b9349d1ae4a9bb986808f6af2c6fbb7e96f9f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 29449a8caceb76e6f4b0e5229b05603de2d6a8f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810106"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518672"
 ---
 # <a name="validate-a-dac-package"></a>Überprüfen eines DAC-Pakets
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "43810106"
   
  **Anzeigen einer DAC in SQL Server Developer Tools**  
   
-1.  Öffnen Sie das Menü **Datei** , und wählen Sie **Neu**und dann **Projekt…** aus.  
+1.  Öffnen Sie das Menü **Datei**, und klicken Sie auf **Neu** und dann auf **Projekt...**.  
   
 2.  Wählen Sie die **SQL Server** -Projektvorlage aus, und geben Sie **Name**, **Speicherort**und **Projektmappenname**ein.  
   
-3.  Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf den Projektknoten, und wählen Sie dann **Eigenschaften**.  
+3.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektknoten, und wählen Sie dann **Eigenschaften** aus.  
   
 4.  Aktivieren Sie auf der Registerkarte **Projekteinstellungen** im Abschnitt **Ausgabetypen** das Kontrollkästchen **Datenebenenanwendung (DACPAC-Datei)** , und schließen Sie dann das Dialogfeld mit den Eigenschaften.  
   
-5.  Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf den Projektknoten, und wählen Sie **Datenebenenanwendung importieren**aus.  
+5.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektknoten, und wählen Sie **Datenebenenanwendung importieren** aus.  
   
 6.  Öffnen Sie mit dem **Projektmappen-Explorer** alle Dateien in der DAC, z. B. die Richtlinie zur Serverauswahl und die vor und nach der Bereitstellung auszuführenden Skripts.  
   

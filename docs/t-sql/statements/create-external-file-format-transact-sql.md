@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e96392c4dfd81e8b875227403b315a78419f318
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a25ec8508701f99602392176ef8210588e872b36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719258"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517706"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -190,7 +190,7 @@ Hinweise zur Tabelle:
 |SmallDateTime|DATE_FORMAT = 'JJJJ-MM-TT HH:mm'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 23 Stunden, 00 bis 59 Minuten.|  
 |SmallDateTime|DATE_FORMAT = 'JJJJ-MM-TT hh:mmtt'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 11 Stunden, 00 bis 59 Minuten, keine Sekunden und AM bzw. am und PM bzw. pm.|  
 |date|DATE_FORMAT = 'JJJJ-MM-TT'|Jahr, Monat und Tag. Es ist kein Zeitelement enthalten.|  
-|date|DATE_FORMAT = 'JJJJ-MMM-TT'|Jahr, Monat und Tag. Wenn der Monat mit 3 Ms angegeben ist, steht der Eingabewert für eine der folgenden Zeichenfolgen: Jan, Feb, Mrz, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov oder Dez.|  
+|date|DATE_FORMAT = 'JJJJ-MMM-TT'|Jahr, Monat und Tag. Wenn der Monat mit 3 Ms angegeben wird, steht der Eingabewert für eine der folgenden Zeichenfolgen: Jan, Feb, Mrz, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov oder Dez.|  
 |datetime2|DATE_FORMAT = 'JJJJ-MM-TT HH:mm:ss.fffffff'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 23 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden und 7 Ziffern für Millisekunden.|  
 |datetime2|DATE_FORMAT = 'JJJJ-MM-TT hh:mm:ss.ffffffftt'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 11 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden, 7 Ziffern für Millisekunden und AM bzw. am oder PM bzw. pm.|  
 |DateTimeOffset|DATE_FORMAT = 'JJJJ-MM-TT HH:mm:ss.fffffff zzz'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 23 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden, 7 Ziffern für Millisekunden und den Offsetwert für die Zeitzone, den Sie als `{+&#124;-}HH:ss` in die Eingabedatei eingefügt haben. Da die Uhrzeit in Los Angeles beispielsweise ohne Umschaltung der Sommer-/Winterzeit 8 hinter UTC liegt, gibt der Wert -08:00 in der Eingabedatei die Zeitzone für Los Angeles an.|  
@@ -216,7 +216,7 @@ Hinweise zur Tabelle:
   
  Details:  
   
--   Sie können „–“, „/“ oder „'.'“ verwenden, um Werte für Monat, Tag und Jahr zu trennen. Der Einfachheit halber wird in die Tabelle nur das Trennzeichen „–“ verwendet.
+-   Sie können „-“, „/“ oder „.“ verwenden, um Werte für Monat, Tag und Jahr zu trennen. Der Einfachheit halber wird in die Tabelle nur das Trennzeichen „-“ verwendet.
   
 -   Geben Sie mindestens drei Zeichen an, wenn der Monat in Textform angegeben werden soll. Monate mit einem oder zwei Zeichen werden als Zahlen interpretiert.
   

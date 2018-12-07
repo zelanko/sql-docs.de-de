@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 71e15d2c5bec349b20a87023912a80864563e8ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 61b886408c25f2200140609879421623f25cb81b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696169"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521670"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementieren der SQL Server-Agent-Sicherheit
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,21 +64,21 @@ Befolgen Sie diese Richtlinien, um die Sicherheit Ihrer [!INCLUDE[ssNoVersion](.
   
 -   Geben Sie das NT-Adminkonto nicht als Dienst- oder Proxykonto an.  
   
--   Hinweis: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent können gegenseitig auf ihre Ressourcen zugreifen. Die beiden Dienste verwenden einen einzelnen Prozessraum, und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent fungiert mit der Rolle "sysadmin" auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst.  
+-   Hinweis: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent können gegenseitig auf ihre Ressourcen zugreifen. Die beiden Dienste verwenden einen einzelnen Prozessraum, und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent fungiert mit der Rolle "sysadmin" auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst.  
   
 -   Wenn für ein TSX ein MSX eingetragen wird, erhält die MSX-Rolle "sysadmins" die vollständige Kontrolle über die TSX-Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   ACE ist eine Erweiterung und kann sich nicht selbst aufrufen. ACE wird von der "Chainer ScenarioEngine.exe" (auch als bekannt als "Microsoft.SqlServer.Chainer.Setup.exe") oder einem anderen Hostprozess aufgerufen.  
+-   ACE ist eine Erweiterung und kann sich nicht selbst aufrufen. ACE wird von der „Chainer ScenarioEngine.exe“ (auch als bekannt als „Microsoft.SqlServer.Chainer.Setup.exe“) oder einem anderen Hostprozess aufgerufen.  
   
 -   ACE hängt von den folgenden Konfigurations-DLL-Elementen ab, die sich im Besitz von SSDP befinden, da diese DLL-APIs von ACE aufgerufen werden:  
   
-    -   **SCO** – Microsoft.SqlServer.Configuration.Sco.dll, einschließlich neuer SCO-Überprüfungen für virtuelle Konten  
+    -   **SCO:** Microsoft.SqlServer.Configuration.Sco.dll, einschließlich neuer SCO-Überprüfungen für virtuelle Konten  
   
-    -   **Cluster** – Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **Cluster:** Microsoft.SqlServer.Configuration.Cluster.dll  
   
-    -   **SFC** – Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **SFC:** Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   
-    -   **Erweiterung** – Microsoft.SqlServer.Configuration.ConfigExtension.dll  
+    -   **Erweiterung:** Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwenden vordefinierter Rollen](../../reporting-services/security/role-definitions-predefined-roles.md)  
