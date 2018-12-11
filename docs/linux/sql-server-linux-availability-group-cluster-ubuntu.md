@@ -12,7 +12,7 @@ ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.openlocfilehash: 33b5631fdf834ea9a998f1dd4ae149dfe4cc6109
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51658380"
@@ -184,7 +184,7 @@ sudo apt-get install mssql-server-ha
 
 ## <a name="create-availability-group-resource"></a>Verfügbarkeitsgruppen-Ressource erstellen
 
-Verwenden Sie zum Erstellen der verfügbarkeitsgruppenressource `pcs resource create` -Befehl aus, und legen Sie die Ressourceneigenschaften. Folgenden Befehl erstellt eine `ocf:mssql:ag` Typressource für die verfügbarkeitsgruppe mit dem Namen, Master/Slave `ag1`. 
+Verwenden Sie zum Erstellen der verfügbarkeitsgruppenressource `pcs resource create` -Befehl aus, und legen Sie die Ressourceneigenschaften. Folgenden Befehl erstellt eine `ocf:mssql:ag` Typressource für die verfügbarkeitsgruppe mit dem Namen, Primär-/Sekundärgerät `ag1`. 
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s --master meta notify=true

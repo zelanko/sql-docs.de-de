@@ -12,7 +12,7 @@ ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51670819"
@@ -157,7 +157,7 @@ Weitere Informationen zu den Eigenschaften der Pacemaker-Cluster finden Sie unte
 
 ## <a name="create-availability-group-resource"></a>Verfügbarkeitsgruppen-Ressource erstellen
 
-Verwenden Sie zum Erstellen der verfügbarkeitsgruppenressource `pcs resource create` -Befehl aus, und legen Sie die Ressourceneigenschaften. Der folgende Befehl erstellt eine `ocf:mssql:ag` Typressource für die verfügbarkeitsgruppe mit dem Namen, Master/Slave `ag1`.
+Verwenden Sie zum Erstellen der verfügbarkeitsgruppenressource `pcs resource create` -Befehl aus, und legen Sie die Ressourceneigenschaften. Der folgende Befehl erstellt eine `ocf:mssql:ag` Typressource für die verfügbarkeitsgruppe mit dem Namen, Primär-/Sekundärgerät `ag1`.
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master notify=true

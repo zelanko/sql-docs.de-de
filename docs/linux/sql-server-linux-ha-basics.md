@@ -11,7 +11,7 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 880ccf036a12d5cc8e7e2bd56aa3bbcc58a2984f
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51665673"
@@ -172,7 +172,7 @@ Pacemaker über Standard "und" Clone Ressourcen verfügt. Klon-Ressourcen sind s
 Wenn eine Verfügbarkeitsgruppe erstellt wurde, ist eine spezielle Form von einem Klon Ressource mit dem Namen einer mehrstufigen Ressource erforderlich. Während eine Verfügbarkeitsgruppe nur ein primäres Replikat verfügt, wird die Verfügbarkeitsgruppe selbst in allen Knoten ausgeführt, die sie abarbeiten konfiguriert ist, und potenziell möglich, z. B. schreibgeschützten Zugriff. Da dies ein "live" des Knotens verwendet wird, wird durch die Ressourcen verfügen, das Konzept von zwei Status: Primär- und sekundärgerät. Weitere Informationen finden Sie unter [mehrstufigen Ressourcen: Ressourcen, die mehrere Modi](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
 
 #### <a name="resource-groupssets"></a>Ressourcen-Gruppen oder legt sie fest
-Ähnlich wie Rollen in einem WSFC ein Pacemaker-Clusters hat das Konzept einer Ressourcengruppe. Eine Ressourcengruppe (in SLES als einen Satz bezeichnet) ist eine Sammlung von Ressourcen, die zusammen funktionieren, und können ein Failover von einem Knoten in ein anderes als eine Einheit. Ressourcengruppen können keine Ressourcen enthalten, die als Master/Slave konfiguriert werden; Daher können sie für Verfügbarkeitsgruppen verwendet werden. Während Sie eine Ressourcengruppe für FCIs verwendet werden kann, ist es nicht in der Regel eine empfohlene Konfiguration.
+Ähnlich wie Rollen in einem WSFC ein Pacemaker-Clusters hat das Konzept einer Ressourcengruppe. Eine Ressourcengruppe (in SLES als einen Satz bezeichnet) ist eine Sammlung von Ressourcen, die zusammen funktionieren, und können ein Failover von einem Knoten in ein anderes als eine Einheit. Ressourcengruppen können keine Ressourcen enthalten, die als Primär-/Sekundärgerät konfiguriert werden; Daher können sie für Verfügbarkeitsgruppen verwendet werden. Während Sie eine Ressourcengruppe für FCIs verwendet werden kann, ist es nicht in der Regel eine empfohlene Konfiguration.
 
 #### <a name="constraints"></a>Einschränkungen
 WSFCs haben verschiedene Parameter für die Ressourcen als auch Dinge wie Abhängigkeiten auf, die den WSFC von einer über-/unterordnungsbeziehung zwischen den zwei verschiedene Ressourcen zu informieren. Eine Abhängigkeit ist nur eine Regel, die dem WSFC mitteilen, welche Ressource muss zuerst online sein.

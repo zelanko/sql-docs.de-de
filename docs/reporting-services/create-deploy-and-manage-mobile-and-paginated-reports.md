@@ -83,7 +83,7 @@ Für Endbenutzer des einheitlichen Modus von Reporting Services ist die „Einga
 
 Sie können Ihr eigenes benutzerdefiniertes Branding auf Ihr Webportal anwenden. Und Sie können KPIs direkt im Webportal erstellen. KPIs können wichtige Geschäftsmetriken auf einen Blick im Browser zum Vorschein bringen, ohne dass ein Bericht geöffnet werden muss. 
 
-Das neue Webportal ist eine vollständig neu geschriebene Version des Berichts-Managers. Es ist nun eine auf Standards basierende Einzelseiten-HTML5-App, für die moderne Browser optimiert sind: Edge, Internet Explorer 10 und 11, Chrome, Firefox, Safari und alle weiteren wichtigen Browser.
+Das neue Webportal ist eine vollständig neu geschriebene Version des Berichts-Managers. Es ist nun eine auf Standards basierende Einzelseiten-HTML5-App, für die moderne Browser optimiert sind: Microsoft Edge, Internet Explorer 10 und 11, Chrome, Firefox, Safari und alle weiteren wichtigen Browser.
 
 Der Inhalt im Webportal wird nach Typ strukturiert: mobile und paginierte Reporting Services-Berichte und KPIs, Excel-Arbeitsmappen, freigegebene Datasets sowie freigegebene Datenquellen, die als Bausteine für Ihre Berichte verwendet werden können. Sie können die Berichte dort in der herkömmlichen Ordnerhierarchie sicher speichern und verwalten. Sie können Ihre Favoriten kennzeichnen, und Sie können den Inhalt verwalten, wenn Sie diese Rolle haben.
 

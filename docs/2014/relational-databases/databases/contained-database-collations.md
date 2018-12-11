@@ -15,7 +15,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b0772ac03110b21912671b7e7651a1b0ede2903
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48055990"
@@ -31,7 +31,7 @@ ms.locfileid: "48055990"
  Alle Datenbanken weisen eine Standardsortierung auf, die beim Erstellen oder Ändern einer Datenbank festgelegt werden kann. Diese Sortierung wird für sämtliche Metadaten in der Datenbank sowie als Standard für alle Zeichenfolgenspalten in der Datenbank verwendet. Benutzer können eine andere Sortierung für jede einzelne Spalte auswählen, mit der `COLLATE` Klausel.  
   
 ### <a name="example-1"></a>Beispiel 1  
- Wenn Sie z. B. in Peking arbeiten, kann eine chinesische Sortierung verwendet werden:  
+ Wenn Sie z. B. in Beijing (Peking) arbeiten, kann eine chinesische Sortierung verwendet werden:  
   
 ```tsql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  

@@ -16,7 +16,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 575acd7d4fb264ebb8cba218c1e37b45e9af5a33
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48062960"
@@ -77,7 +77,7 @@ ms.locfileid: "48062960"
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird gezeigt, wie [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) verwendet wird, um den Wert der Option `default full-text` auf Holländisch (`1043`) festzulegen.  
+3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird gezeigt, wie [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) verwendet wird, um den Wert der Option `default full-text` auf Niederländisch (`1043`) festzulegen.  
   
 ```tsql  
 USE AdventureWorks2012 ;  
