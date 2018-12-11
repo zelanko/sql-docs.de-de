@@ -23,7 +23,7 @@ ms.locfileid: "51558448"
 # <a name="configuring-rds-on-windows-2000"></a>Konfigurieren von RDS unter Windows 2000
 Gehen folgendermaßen Sie vor, um das Problem zu beheben, wenn erste RDS ordnungsgemäß nach einem upgrade auf Windows 2000 Probleme auftreten, haben:  
   
-1.  Stellen Sie sicher, dass der WWW-Publishingdienst zuerst ausgeführt wird, navigieren Sie mithilfe von Internet Explorer mit https://-Server. Wenn Sie den Webserver, auf diese Weise zugreifen können, öffnen Sie eine Eingabeaufforderung, und geben Sie den folgenden Befehl "NET START W3SVC".  
+1.  Stellen Sie sicher, dass der WWW-Publishingdienst zuerst ausgeführt wird, navigieren Sie mithilfe von Internet Explorer mit https:// Server. Wenn Sie den Webserver, auf diese Weise zugreifen können, öffnen Sie eine Eingabeaufforderung, und geben Sie den folgenden Befehl "NET START W3SVC".  
   
 2.  Wählen Sie im Startmenü ausführen. Geben Sie "Msdfmap.ini", und klicken Sie dann auf OK, um die Datei "Msdfmap.ini" im Editor zu öffnen. Überprüfen Sie den Abschnitt [verbinden Standard], und wenn der Parameter für den Zugriff auf NOACCESS festgelegt ist, ändern Sie ihn auf READONLY.  
   
