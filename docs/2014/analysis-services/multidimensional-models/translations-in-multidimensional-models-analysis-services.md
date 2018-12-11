@@ -66,7 +66,7 @@ ms.locfileid: "48218940"
     |Angegebener Sprachbezeichner|Alternativer Sprachbezeichner|  
     |-----------------------------------|-----------------------------------|  
     |3076 - Chinesisch (Hongkong S.A.R., Volksrepublik China)|1028 - Chinesisch (Taiwan)|  
-    |5124 - Chinesisch (Macau SAR)|1028 - Chinesisch (Taiwan)|  
+    |5124 - Chinesisch (Macau, SAR)|1028 - Chinesisch (Taiwan)|  
     |1028 - Chinesisch (Taiwan)|Standardsprache|  
     |4100 - Chinesisch (Singapur)|2052 - Chinesisch (Volksrepublik China)|  
     |2074 - Kroatisch|Standardsprache|  
