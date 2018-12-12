@@ -39,7 +39,7 @@ ms.locfileid: "47853918"
  Verwenden Sie die Optionen des Bereichs **Wiederherstellungsoptionen** , um die Aspekte des Verhaltens des Wiederherstellungsvorgangs zu ändern.  
   
  **Vorhandene Datenbank überschreiben (WITH REPLACE)**  
- Beim Wiederherstellungsvorgang werden die Dateien jeder Datenbank überschrieben, die derzeit den Datenbanknamen verwendet, den Sie im Dialogfeld **Wiederherstellen in**auf der Seite [Allgemein](../../relational-databases/backup-restore/restore-database-general-page.md) im Feld **In Datenbank** angeben. Die Dateien der vorhandenen Datenbank werden sogar dann überschrieben, wenn Sie die Sicherungen von einer anderen Datenbank im vorhandenen Datenbanknamen wiederherstellen. Das Auswählen dieser Option entspricht der Verwendung der Option REPLACE in einer [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) -Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Beim Wiederherstellungsvorgang werden die Dateien jeder Datenbank überschrieben, die derzeit den Datenbanknamen verwendet, den Sie im Dialogfeld **Wiederherstellen in** auf der Seite [Allgemein](../../relational-databases/backup-restore/restore-database-general-page.md) im Feld **In Datenbank** angeben. Die Dateien der vorhandenen Datenbank werden sogar dann überschrieben, wenn Sie die Sicherungen von einer anderen Datenbank im vorhandenen Datenbanknamen wiederherstellen. Das Auswählen dieser Option entspricht der Verwendung der Option REPLACE in einer [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) -Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
 >  Verwenden Sie diese Option nur nach sorgfältiger Überlegung. Weitere Informationen finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "47853918"
  Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von replizierten Datenbanken](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
  **Zugriff auf die wiederhergestellte Datenbank einschränken (WITH RESTRICTED_USER)**  
- Macht die wiederhergestellte Datenbank nur Mitgliedern von **db_owner**, **dbcreator**oder **sysadmin**verfügbar.  
+ Macht die wiederhergestellte Datenbank nur Mitgliedern von **db_owner**, **dbcreator** oder **sysadmin**verfügbar.  
   
  Das Auswählen dieser Option entspricht der Verwendung der Option RESTRICTED_USER in einer RESTORE-Anweisung.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "47853918"
   
  Mithilfe dieser Option können Sie eine Wiederherstellungssequenz nach der Wiederherstellung einer beliebigen Sicherung anhalten. Diese Option ist insbesondere dann hilfreich, wenn Sie Bänder für verschiedene Mediensätze wechseln müssen, z. B. wenn der Server nur über ein Bandmedium verfügt. Klicken Sie auf **OK**, wenn der Vorgang fortgesetzt werden soll.  
   
- Sie können eine Wiederherstellungssequenz unterbrechen, indem Sie auf **Nein**klicken. Dadurch wird die Datenbank im Wiederherstellungsstatus belassen. Sie können die Wiederherstellungssequenz ggf. später fortsetzen, indem Sie die nächste Sicherung gemäß der Beschreibung im Dialogfeld **Wiederherstellung fortsetzen** fortsetzen. Die Prozedur zum Wiederherstellen der nächsten Sicherung ist wie folgt davon abhängig, ob sie Daten oder ein Transaktionsprotokoll enthält:  
+ Sie können eine Wiederherstellungssequenz unterbrechen, indem Sie auf **Nein** klicken. Dadurch wird die Datenbank im Wiederherstellungsstatus belassen. Sie können die Wiederherstellungssequenz ggf. später fortsetzen, indem Sie die nächste Sicherung gemäß der Beschreibung im Dialogfeld **Wiederherstellung fortsetzen** fortsetzen. Die Prozedur zum Wiederherstellen der nächsten Sicherung ist wie folgt davon abhängig, ob sie Daten oder ein Transaktionsprotokoll enthält:  
   
 -   Wenn die nächste Sicherung eine vollständige oder differenzielle Sicherung ist, verwenden Sie den Task **Datenbank wiederherstellen** erneut.  
   
