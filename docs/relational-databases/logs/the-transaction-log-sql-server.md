@@ -91,7 +91,7 @@ Um zu vermeiden, dass nur noch wenig Speicherplatz vorhanden ist, erfolgt die K�
  Weitere Informationen finden Sie unter [Faktoren, die die Protokollkürzung verzögern können](#FactorsThatDelayTruncation) weiter unten in diesem Thema.  
   
 > [!NOTE]
-> Die Protokollkürzung verringert nicht die Größe einer physischen Protokolldatei. Sie müssen zum Reduzieren der physischen Größe einer physischen Protokolldatei die Protokolldatei verkleinern. Informationen zum Verkleinern der Größe der physischen Protokolldatei finden Sie unter [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
+> Die Protokollkürzung verringert nicht die Größe einer physischen Protokolldatei. Sie müssen zum Reduzieren der physischen Größe einer physischen Protokolldatei die Protokolldatei verkleinern. Informationen zum Verkleinern der Größe der physischen Protokolldatei finden Sie unter [Verwalten der Größe der Transaktionsprotokolldatei](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
 > Berücksichtigen Sie jedoch die [Faktoren, die die Protokollkürzung verzögern können](#FactorsThatDelayTruncation). Wenn der Speicherplatz nach einer Protokollverkleinerung wieder benötigt wird, vergrößert sich das Transaktionsprotokoll wieder und führt bei der Protokollvergrößerung infolgedessen zu einem Leistungsoverhead.
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
