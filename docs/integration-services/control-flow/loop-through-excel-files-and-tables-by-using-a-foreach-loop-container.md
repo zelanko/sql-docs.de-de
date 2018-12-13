@@ -73,7 +73,7 @@ ms.locfileid: "51639247"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>So durchlaufen Sie Excel-Tabellen mithilfe des Enumerators für Foreach-ADO.NET-Schemarowset  
   
-1.  Erstellen Sie einen ADO.NET-Verbindungs-Manager, der mit dem Microsoft ACE OLE DB-Anbieter eine Verbindung mit einer Excel-Arbeitsmappe herstellt. Stellen Sie auf der Seite „Alle“ des Dialogfelds **Verbindungs-Manager** sicher, dass Sie die Excel-Version (12.0 in diesem Fall) als Wert der Eigenschaft „Erweiterte Eigenschaften“ eingeben. Weitere Informationen finden Sie unter [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+1.  Erstellen Sie einen ADO.NET-Verbindungs-Manager, der mit dem Microsoft ACE OLE DB-Anbieter eine Verbindung mit einer Excel-Arbeitsmappe herstellt. Stellen Sie auf der Seite „Alle“ des Dialogfelds **Verbindungs-Manager** sicher, dass Sie die Excel-Version (12.0 in diesem Fall) als Wert der Eigenschaft „Erweiterte Eigenschaften“ eingeben. Weitere Informationen finden Sie unter [Hinzufügen, Löschen oder Freigeben eines Verbindungs-Managers in einem Paket](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)  
   
 2.  Erstellen Sie eine Zeichenfolgenvariable, die bei jeder Iteration der Schleife den Namen der aktuellen Tabelle empfangen wird.  
   

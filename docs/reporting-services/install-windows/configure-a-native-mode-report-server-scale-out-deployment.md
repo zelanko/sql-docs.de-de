@@ -48,7 +48,7 @@ Für SQL Server 2016 Reporting Services verwenden Berichtsserver im SharePoint-
   
 -   Anweisungen zum Installieren von Berichtsserverinstanzen finden Sie unter [Installieren von SQL Server 40 vom Installations-Assistenten aus &#41;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
--   Wenn Sie vorhaben, die Bereitstellung für horizontales Skalieren auf einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich) zu hosten, müssen Sie den NLB-Cluster zuerst konfigurieren. Weitere Informationen finden Sie unter [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+-   Wenn Sie vorhaben, die Bereitstellung für horizontales Skalieren auf einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich) zu hosten, müssen Sie den NLB-Cluster zuerst konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers auf einem Netzwerklastenausgleich-Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 -   Machen Sie sich mit den Verfahren in diesem Thema vertraut. Hier finden Sie Anweisungen zum Freigeben einer Berichtsserver-Datenbank und zum Verknüpfen von Berichtsservern für das horizontale Skalieren.  
   

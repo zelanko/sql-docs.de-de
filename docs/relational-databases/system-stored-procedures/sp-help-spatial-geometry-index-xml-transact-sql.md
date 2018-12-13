@@ -46,10 +46,10 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Siehe [Arguments and Properties of Spatial Index Stored Procedures](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Siehe [Argumente und Eigenschaften gespeicherter Prozeduren für Räumlichkeitsindizes](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="properties"></a>Eigenschaften  
- Siehe [Arguments and Properties of Spatial Index Stored Procedures](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Siehe [Argumente und Eigenschaften gespeicherter Prozeduren für Räumlichkeitsindizes](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Der Benutzer muss ein Mitglied der Datenbankrolle **public** sein. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt.  

@@ -148,7 +148,7 @@ ms.locfileid: "51559471"
  Benutzerdefinierte Fehlermeldungen sind in der [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) -Katalogsicht enthalten. Diese Katalogsicht wird in der **master**-Datenbank gespeichert. Wenn eine Datenbankanwendung benutzerdefinierte Fehlermeldungen verwenden muss und die Datenbank auf einer anderen Serverinstanz bereitgestellt wird, können Sie mit [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) diese Fehlermeldungen auf der Zielserverinstanz hinzufügen.  
 
   
-##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
+##  <a name="event_notif_and_wmi_events"></a> Ereignisbenachrichtigungen und Windows Management Instrumentation (WMI)-Ereignisse (auf Serverebene)  
   
 ### <a name="server-level-event-notifications"></a>Ereignisbenachrichtigungen auf Serverebene  
  Ereignisbenachrichtigungen auf Serverebene werden in **msdb**gespeichert. Wenn eine Datenbankanwendung von einer Ereignisbenachrichtigung auf Serverebene abhängt, muss diese Ereignisbenachrichtigung daher auf der Zielserverinstanz neu erstellt werden. Die Ereignisbenachrichtigungen auf einer Serverinstanz werden in der [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) -Katalogsicht angezeigt. Weitere Informationen finden Sie unter [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
