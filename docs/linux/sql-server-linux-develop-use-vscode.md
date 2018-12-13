@@ -12,7 +12,7 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.openlocfilehash: b1ae9056ecbaf158b275798d69d691ae64e6ef06
 ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/06/2018
 ms.locfileid: "51033627"
@@ -48,7 +48,7 @@ Die folgenden Schritte erläutern, wie Sie die Mssql-Erweiterung zu installieren
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
 
    > [!NOTE]
-   > Für Mac OS müssen Sie OpenSSL installieren. Dies ist eine Voraussetzung für.NET Core, die von der Mssql-Erweiterung verwendet. Führen Sie die **Voraussetzung installieren** Schritte in der [.NET Core-Anweisungen]. Oder Sie können die folgenden Befehle in MacOS-Terminal ausführen.
+   > Für Mac OS müssen Sie OpenSSL installieren. Dies ist eine Voraussetzung für.NET Core, die von der Mssql-Erweiterung verwendet. Führen Sie die **Voraussetzung installieren** Schritte in der [.NET Core Anweisungen]. Oder Sie können die folgenden Befehle in MacOS-Terminal ausführen.
    >
    >   ```bash
    >   brew update
@@ -58,7 +58,7 @@ Die folgenden Schritte erläutern, wie Sie die Mssql-Erweiterung zu installieren
    >   ```
    
    > [!NOTE]
-   > Für Windows 8.1, Windows Server 2012 oder frühere Versionen müssen Sie herunterladen und installieren Sie die [Windows 10 Universal C-Laufzeit]. Laden Sie und öffnen Sie die Zip-Datei. Führen Sie das Installationsprogramm (MSU-Datei) für die aktuelle Konfiguration des Betriebssystems an.
+   > Für Windows 8.1, Windows Server 2012 oder frühere Versionen müssen Sie herunterladen und installieren Sie die [Windows 10 Universal C Runtime]. Laden Sie und öffnen Sie die Zip-Datei. Führen Sie das Installationsprogramm (MSU-Datei) für die aktuelle Konfiguration des Betriebssystems an.
 
 ## <a name="create-or-open-a-sql-file"></a>Erstellen Sie oder öffnen Sie eine SQL-Datei
 
@@ -258,13 +258,13 @@ Weitere Informationen zur Verwendung von Visual Studio Code finden Sie unter den
 
 [**Mssql** -Erweiterung für Visual Studio Code]:https://aka.ms/mssql-marketplace
 [Herunterladen und Installieren von VS Code]:https://code.visualstudio.com/Download
-[.NET Core-Anweisungen]:https://www.microsoft.com/net/core
+[.NET Core Anweisungen]:https://www.microsoft.com/net/core
 [Verwalten von remoteverbindungsprofilen]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [Problembehandlung bei verbindungsempfehlungen]:./sql-server-linux-troubleshooting-guide.md#connection
 [Anpassen von Tastenkombinationen]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
 [Lernprogramm: Schreiben von Transact-SQL-Anweisungen]:https://msdn.microsoft.com/library/ms365303.aspx
 [Transact-SQL-Referenz (Datenbank-Engine)]:https://msdn.microsoft.com/library/bb510741.aspx
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
-[Windows 10 Universal C-Laufzeit]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
+[Windows 10 Universal C Runtime]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
 [Passen Sie die Erweiterung-Optionen]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
 [der Mssql-Erweiterung Project wiki]: https://github.com/Microsoft/vscode-mssql/wiki

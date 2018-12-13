@@ -52,7 +52,7 @@ Installieren des Treiber-Managers:
   
 5.  Wenn Sie zur Installation bereit sind und Ihr Computer auf eine externe Website über FTP zugreifen kann, führen Sie den folgenden Befehl aus: **./build_dm.sh**.
 
-Wenn Ihr Computer auf keine externe Website über FTP zugreifen kann, laden Sie `unixODBC-2.3.0.tar.gz` herunter. Sie erhalten `unixODBC-2.3.0.tar.gz` aus [ https://www.unixodbc.org ](https://www.unixodbc.org/). Klicken Sie auf den Link Herunterladen** links auf der Seite, um zur Downloadseite zu wechseln. Klicken Sie dann auf den entsprechenden Link, um unixODBC-2.3.0 (nicht unixODBC-2.3.1) herunterzuladen. unixODBC-2.3.1 wird von dieser Version des [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht unterstützt. Führen Sie den folgenden Befehl aus, um den UnixODBC Treiber-Manager-Installation zu beginnen: **./build_dm.sh – Download-Url = file://unixODBC-2.3.0.tar.gz**.  
+Wenn Ihr Computer auf keine externe Website über FTP zugreifen kann, laden Sie `unixODBC-2.3.0.tar.gz` herunter. Sie erhalten `unixODBC-2.3.0.tar.gz` aus [ https://www.unixodbc.org ](https://www.unixodbc.org/). Klicken Sie auf den Link Herunterladen** links auf der Seite, um zur Downloadseite zu wechseln. Klicken Sie dann auf den entsprechenden Link, um unixODBC-2.3.0 (nicht unixODBC-2.3.1) herunterzuladen. unixODBC-2.3.1 wird von dieser Version des [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht unterstützt. Führen Sie den folgenden Befehl aus, um den UnixODBC Treiber-Manager-Installation zu beginnen: **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**.  
 
 6.  Geben Sie **JA** ein, um mit dem Entpacken der Dateien fortzufahren. Dieser Teil des Prozesses kann bis zu fünf Minuten in Anspruch nehmen.  
 
@@ -68,15 +68,15 @@ Wenn das Skript für die Installation nicht abgeschlossen werden konnte, konfigu
   
 2.  Wechseln Sie zu [https://www.unixodbc.org](https://www.unixodbc.org/). Klicken Sie auf den Link **Herunterladen** links auf der Seite, um zur Downloadseite zu wechseln. Klicken Sie dann auf den entsprechenden Link, um die Datei „unixodbc-2.3.0.tar.gz“ auf Ihrem Computer zu speichern. UnixODBC-2.3.1 wird von dieser Version des [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht unterstützt.  
   
-3.  Führen Sie den Befehl auf Ihrem Linux-Computer: **tar Xvzf UnixODBC-2.3.0.TAR.gz herunter**.  
+3.  Führen Sie den Befehl auf Ihrem Linux-Computer: **tar xvzf unixODBC-2.3.0.tar.gz**.  
   
 4.  Wechseln Sie zum Verzeichnis „unixODBC-2.3.0“.  
   
 5.  Führen Sie an einer Eingabeaufforderung den Befehl: **CPPFLAGS = "-DSIZEOF_LONG_INT = 8"**.  
   
-6.  Führen Sie an einer Eingabeaufforderung den Befehl: **exportieren CPPFLAGS**.  
+6.  Führen Sie an einer Eingabeaufforderung den Befehl: **export CPPFLAGS**.  
   
-7.  Führen Sie an einer Eingabeaufforderung den Befehl: **". / configure--Output prefix = / Usr--Libdir = / Usr/lib64--Sysconfdir = usw.--Enable-gui = Nein – Enable-Treiber = Nein – Enable-Iconv-mit-Iconv-Char-Enc = UTF8 - mit-Iconv-Ucode-Enc UTF16LE ="**.  
+7.  Führen Sie an einer Eingabeaufforderung den Befehl: **"./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --enable-gui=no --enable-drivers=no --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE"**.  
   
 8.  Nach der Eingabeaufforderung (angemeldet als Root) führen Sie den Befehl **make** aus.  
   
