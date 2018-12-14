@@ -40,7 +40,7 @@ ms.locfileid: "51672079"
 |Gastberechtigungen|[Gastberechtigungen für Benutzerdatenbanken](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
 |Datum der letzten erfolgreichen Sicherung|[Obsolete Sicherung](../../relational-databases/policy-based-management/outdated-backup.md)|  
 |Öffentlich – Keine Serverberechtigungen|[Serverberechtigungen für 'public'](../../relational-databases/policy-based-management/server-public-permissions.md)|  
-|Überlappung der SQL Server-64-Bit-Affinitätsmaske|[Correct Affinity Mask and Affinity Input and Output Mask Overlap](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Überlappung der SQL Server-64-Bit-Affinitätsmaske|[Richtige Überlappung von Affinitätsmaske und E/A-Affinitätsmaske](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |SQL Server-Affinitätsmaske|[Beibehalten des Standardwerts für die Affinitätsmaske](../../relational-databases/policy-based-management/keep-the-affinity-mask-default-value.md)|  
 |Schwellenwert für blockierte SQL Server-Prozesse|[Erhöhen oder Deaktivieren des Schwellenwerts für blockierte Prozesse](../../relational-databases/policy-based-management/increase-or-disable-blocked-process-threshold.md)|  
 |SQL Server-Standardablaufverfolgung|[Protokolldateien für Standardablaufverfolgung deaktiviert](../../relational-databases/policy-based-management/default-trace-log-files-disabled.md)|  
@@ -62,8 +62,8 @@ ms.locfileid: "51672079"
 |Gerätetreiber-Steuerungsfehler im Windows-Ereignisprotokoll|[Gerätetreiber-Steuerungsfehler](../../relational-databases/policy-based-management/device-driver-control-error.md)|  
 |Fehler "Gerät nicht bereit" im Windows-Ereignisprotokoll|[Fehler 'Gerät nicht bereit'](../../relational-databases/policy-based-management/device-not-ready-error.md)|  
 |Fehler aufgrund fehlerhafter E/A-Anforderung im Windows-Ereignisprotokoll|[Detect Failed Input and Output Requests](../../relational-databases/policy-based-management/detect-failed-input-and-output-requests.md)|  
-|E/A-Verzögerungswarnung im Windows-Ereignisprotokoll|[Check Disk Input and Output Subsystem for IO Delay Problems](../../relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
-|E/A-Fehler im Windows-Ereignisprotokoll während eines Hardwareseitenfehlers|[Input and Output Error During Hard Page Fault](../../relational-databases/policy-based-management/input-and-output-error-during-hard-page-fault.md)|  
+|E/A-Verzögerungswarnung im Windows-Ereignisprotokoll|[Überprüfen des Datenträger-E/A-Subsystems auf E/A-Verzögerungen](../../relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
+|E/A-Fehler im Windows-Ereignisprotokoll während eines Hardwareseitenfehlers|[Eingabe- und Ausgabefehler während eines Hardwareseitenfehlers](../../relational-databases/policy-based-management/input-and-output-error-during-hard-page-fault.md)|  
 |Fehler beim erneuten Leseversuch im Windows-Ereignisprotokoll|[Überprüfen des Datenträger-E/A-Subsystems auf Lesewiederholungsprobleme](../../relational-databases/policy-based-management/check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |E/A-Timeoutfehler des Speichersystems im Windows-Ereignisprotokoll|[Speichersystem – E/A-Timeout](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Fehler aufgrund eines Systemfehlers im Windows-Ereignisprotokoll|[Unerwartete Systemfehler](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
