@@ -15,29 +15,29 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db7fc8514fadbcf9be5b98c85457b4cddeac82cb
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a196ef879c176fe731fe85b2de7962d70edff7b4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559137"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541174"
 ---
 # <a name="automatic-tuning"></a>Automatische Optimierung
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Die automatische Datenbankoptimierung bietet einen Einblick in die potentiellen Abfrageleistungsprobleme, empfiehlt Lösungen und kann identifizierte Probleme automatisch beheben.
+Die automatische Datenbankoptimierung bietet einen Einblick in die potentiellen Abfrageleistungsprobleme, empfiehlt Lösungen und kann identifizierte Probleme automatisch beheben.
 
 Automatische Optimierung in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] benachrichtigt Sie, wenn ein mögliches Leistungsproblem erkannt wird. zudem Sie die korrigierende Aktionen angewendet werden sollen können, oder Sie können die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Leistungsprobleme automatisch beheben.
-Automatische Optimierung in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ermöglicht es Ihnen, identifizieren und Beheben von Leistungsproblemen aufgrund **SQL Plan Choice Regressionen**. Automatische Optimierung in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] erstellt die erforderlichen Indizes und nicht verwendete Indizes gelöscht.
+Automatische Optimierung in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ermöglicht es Ihnen, identifizieren und Beheben von Leistungsproblemen aufgrund **Execution Plan Choice abfrageregressionen**. Automatische Optimierung in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] auch die erforderlichen Indizes erstellt und löscht nicht verwendete Indizes. Weitere Informationen zu Abfrageausführungspläne, finden Sie unter [Ausführungspläne](../../relational-databases/performance/execution-plans.md).
 
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] überwacht die Abfragen, die für die Datenbank ausgeführt werden und automatisch die Leistung der arbeitsauslastung. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verfügt über einen integrierten intelligenten Funktionen-Mechanismus, der automatisch optimiert werden kann, und Verbessern der Leistung Ihrer Abfragen durch die dynamische Anpassung der Datenbank an Ihre Workload aus. Es gibt zwei Automatische Optimierung Features, die verfügbar sind:
+Die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verbessert die Leistung der Workload, überwacht die Abfragen, die in der Datenbank und automatisch ausgeführt werden. Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verfügt über einen integrierten intelligenten Funktionen Mechanismus, der automatisch optimiert werden kann, und Verbessern der Leistung Ihrer Abfragen durch die dynamische Anpassung der Datenbank an Ihre Workload. Es gibt zwei Automatische Optimierung Features, die verfügbar sind:
 
- -  **Automatische plankorrektur** (verfügbar in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] und [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]), die problematischen Abfrageausführungspläne identifiziert und Korrekturen SQL planen Sie Leistungsprobleme.
- -  **Automatische indexverwaltung** (verfügbar nur in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]), identifiziert Indizes, die in der Datenbank hinzugefügt werden soll, und solche, die entfernt werden soll.
+ -  **Automatische plankorrektur** problematische Abfragen, Pläne und korrigiert abfrageausführung Leistungsprobleme Plänen identifiziert. **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Beginnend mit [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ -  **Automatische indexverwaltung** identifiziert Indizes, die in der Datenbank hinzugefügt werden soll, und solche, die entfernt werden soll. **Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>Warum die automatische Optimierung?
 
-Drei der Hauptaufgabe bei der Verwaltung von klassischen Datenbanken sind das Überwachen der Workload, identifizieren kritische [!INCLUDE[tsql_md](../../includes/tsql-md.md)] abfragt, Indizes, die hinzugefügt, um die Leistung zu verbessern und identifizierende selten verwendet werden sollen. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] bietet detaillierte Einblicke in die Abfragen und Indizes, die Sie überwachen müssen. Kontinuierliche Überwachung der eine Datenbank ist jedoch eine schwierige und aufwendige Aufgabe, insbesondere bei sehr vielen Datenbanken. Verwalten einer großen Anzahl von Datenbanken möglicherweise nicht möglich, effizient durchführen. Anstelle der manuellen Überwachung und Optimierung Ihrer Datenbank, sollten Sie erwägen, einige für die Überwachung zu delegieren und Optimieren von Aktionen, die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] mithilfe von Features zur automatischen Optimierung.
+Drei der Hauptaufgabe bei der Verwaltung von klassischen Datenbanken sind das Überwachen der Workload, identifizieren kritische [!INCLUDE[tsql_md](../../includes/tsql-md.md)] abfragt, Indizes, die hinzugefügt, um die Leistung zu verbessern und identifizierende selten verwendet werden sollen. Die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] bietet detaillierte Einblicke in die Abfragen und Indizes, die Sie überwachen müssen. Kontinuierliche Überwachung der eine Datenbank ist jedoch eine schwierige und aufwendige Aufgabe, insbesondere bei sehr vielen Datenbanken. Verwalten einer großen Anzahl von Datenbanken möglicherweise nicht möglich, effizient durchführen. Anstelle der manuellen Überwachung und Optimierung Ihrer Datenbank, sollten Sie erwägen, einige für die Überwachung zu delegieren und Optimieren von Aktionen, die die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] mithilfe von Features zur automatischen Optimierung.
 
 ### <a name="how-does-automatic-tuning-work"></a>Wie funktioniert die automatische Optimierung?
 
@@ -49,13 +49,13 @@ Dieser Prozess ermöglicht es Datenbank eine dynamische Anpassung an Ihre Worklo
 
 ## <a name="automatic-plan-correction"></a>Automatische plankorrektur
 
-Automatische plankorrektur ist ein Feature der automatischen Optimierung, die identifiziert **SQL-Pläne Wahl Regression** und automatisch das Problem beheben, indem Sie den letzten bekannten guten Plan zu erzwingen.
+Automatische plankorrektur ist ein Feature der automatischen Optimierung, die identifiziert **Wahl Regression von Ausführungsplänen** und automatisch das Problem beheben, indem Sie den letzten bekannten guten Plan zu erzwingen. Weitere Informationen zu Abfrageausführungspläne und der Abfrageoptimierer, finden Sie unter den [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md).
 
-### <a name="what-is-sql-plan-choice-regression"></a>Was ist SQL-planauswahlen?
+### <a name="what-is-execution-plan-choice-regression"></a>Was ist die Ausführung von planauswahlen?
 
-[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] können Sie verschiedene SQL-Pläne zum Ausführen der [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Abfragen. Abfragepläne, abhängig von der Statistik, Indizes und anderen Faktoren ab. Der optimale Plan, die verwendet werden soll, um einige auszuführen [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Abfrage im Laufe der Zeit ändern kann. In einigen Fällen der neue Plan besser als die vorherige Version möglicherweise nicht, und der neue Plan kann einem Leistungsverlust führen.
+Die [!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] können Sie verschiedenen Ausführungsplänen führen Sie die [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Abfragen. Abfragepläne, abhängig von der Statistik, Indizes und anderen Faktoren ab. Der optimale Plan, die verwendet werden soll, um einige auszuführen [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Abfrage im Laufe der Zeit ändern kann. In einigen Fällen der neue Plan besser als die vorherige Version möglicherweise nicht, und der neue Plan kann einem Leistungsverlust führen.
 
- ![SQL-planauswahlen](media/plan-choice-regression.png "planauswahlen SQL") 
+ ![Abfragen von planauswahlen Ausführung](media/plan-choice-regression.png "Ausführung planauswahlen Abfragen") 
 
 Wenn Sie eine Regression der Planauswahl feststellen, sollten finden Sie einige vorherige gute Planung und ihn zwingen, anstatt die aktuelle eine `sp_query_store_force_plan` Verfahren.
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] enthält Informationen zu einem Regress geführt hatten Pläne und korrigierende Maßnahmen empfohlen.
@@ -65,12 +65,13 @@ Darüber hinaus [!INCLUDE[ssde_md](../../includes/ssde_md.md)] ermöglicht es Ih
 
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] können automatisch in den letzten bekannten guten Plan wechselt, wenn Regression der Planauswahl erkannt wird.
 
-![SQL-Korrektur der Planauswahl](media/force-last-good-plan.png "SQL-Korrektur der Planauswahl") 
+![Fragen Sie die Ausführung der Planauswahl](media/force-last-good-plan.png "Abfragen die Ausführung der Planauswahl") 
 
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erkennt automatisch alle potenziellen planauswahlen, einschließlich des Plans, der statt des falschen Plans verwendet werden soll.
-Wenn die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] wendet den letzten bekannten geeigneten Plan, automatisch die Leistung des erzwungenen Plans überwacht. Wenn der erzwungene Plan nicht besser als der zurückgestellte Plan ist, wird der neue Plan mehr erzwungen werden und die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] wird einen neuen Plan kompiliert. Wenn [!INCLUDE[ssde_md](../../includes/ssde_md.md)] stellt sicher, dass der erzwungene Plan besser als der zurückgestellte ist der erzwungene Plan bis zu einer Neukompilierung (z. B. auf einer Änderung des nächsten Statistik oder schemaänderung) beibehalten, sofern Sie es besser, als der zurückgestellte Plan ist.
+Wenn die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] wendet den letzten bekannten geeigneten Plan, automatisch die Leistung des erzwungenen Plans überwacht. Wenn der erzwungene Plan nicht besser als der zurückgestellte Plan ist, wird der neue Plan mehr erzwungen werden und die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] wird einen neuen Plan kompiliert. Wenn die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] bestätigt, dass der erzwungene Plan besser als der zurückgestellte Plan ist, wird der erzwungene Plan beibehalten werden, ist es besser, als der zurückgestellte Plan ist, bis zum Auftreten eine Neukompilierung (z. B. auf die nächste Änderung der Statistiken aktualisieren "oder" Schema).
 
-Hinweis: Alle Pläne automatisch erzwungen werden nicht Persit bei einem Neustart der SQL Server-Instanz.
+> [!NOTE]
+> Jede Ausführung Pläne automatisch erzwungen werden nicht beibehalten, nach einem Neustart von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.
 
 ### <a name="enabling-automatic-plan-choice-correction"></a>Aktivieren der automatischen Korrektur der Planauswahl
 
@@ -80,28 +81,32 @@ Sie können die automatische Optimierung pro Datenbank aktivieren und angeben, d
 ALTER DATABASE current
 SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON ); 
 ```
-Sobald die aktivieren Sie diese option, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatisch jede Empfehlung, in denen die geschätzte CPU-Gewinn größer als 10 Sekunden ist, oder die Anzahl von Fehlern im neuen Plan ist höher als die Anzahl von Fehlern im empfohlenen Plan, und überprüfen Sie, ob die Erzwungene Plan ist besser als die der aktuellen Aktivität.
+
+Nachdem Sie diese Option aktiviert die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatisch jede Empfehlung, in denen die geschätzte CPU-Gewinn größer als 10 Sekunden ist, oder die Anzahl von Fehlern im neuen Plan ist höher als die Anzahl von Fehlern im empfohlenen Plan, und überprüfen Sie, ob die Erzwungene Plan ist besser als die der aktuellen Aktivität.
 
 ### <a name="alternative---manual-plan-choice-correction"></a>Alternative – manuelle Korrektur der Planauswahl
 
 Ohne die automatische Optimierung müssen Benutzer ihr System regelmäßig überwachen und nach zurückgestellten Abfragen suchen. Wenn Pläne zurückgestellt wurden, sollten Benutzer gefunden, einige vorherige gute Planung und ihn zwingen, anstatt die aktuelle eine `sp_query_store_force_plan` Verfahren. Die bewährte Methode wäre, die den letzten bekannten guten Plan erzwungen werden, weil ältere Pläne möglicherweise aufgrund von Änderungen der Statistik oder ein Index ungültig. Der Benutzer, die erzwingt, die letzten bekannten guten Plan dass sollte Überwachen der Leistung der Abfragen, die mit der erzwungene Plan ausgeführt wird, und überprüfen Sie, der erzwungenen Plan wie erwartet funktioniert. Abhängig von den Ergebnissen der Überwachung und Analyse Plan erzwungen werden soll, oder Benutzer sollte eine andere Möglichkeit zum Optimieren der Abfrage zu suchen.
-Manuell erzwungene Plänen sollte nicht dauerhaft, erzwungen werden, da die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] optimalen Plänen anwenden können. Der Benutzer oder der Datenbankadministrator sollte schließlich Erzwingung der Plan mit `sp_query_store_unforce_plan` Prozedur ab, und die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] den optimalen Plan zu finden.
+Manuell erzwungene Plänen sollte nicht dauerhaft, erzwungen werden, da die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] optimalen Plänen anwenden können. Der Benutzer oder der Datenbankadministrator sollte schließlich Erzwingung der Plan mit `sp_query_store_unforce_plan` Prozedur ab, und die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] den optimalen Plan zu finden. 
+
+> [!TIP]
+> Alternativelly, verwenden die **Abfragen mit erzwungenen Plänen** Query Store Sicht zu suchen und die Erzwingung des Plans.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] umfasst alle erforderlichen Sichten und Prozeduren zum Überwachen der Leistung und Beheben von Problemen in Query Store erforderlich sind.
 
 In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], finden Sie Plan planauswahlregression Systemsichten Query Store verwenden. In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erkennt und zeigt potenzielle planregressionen Wahl und die empfohlenen Aktionen, die in angewendet werden sollen die [dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) anzeigen. Die Ansicht zeigt Informationen über das Problem, das die Wichtigkeit des Problems und Details wie den identifizierten Abfragen, die von der zurückgestellte Plan-ID, die ID des Plans, der als Baseline zum Vergleich verwendet wurde und die [!INCLUDE[tsql_md](../../includes/tsql-md.md)] -Anweisung, die ausgeführt werden kann, lösen Sie die Problem.
 
-| Typ | description | DATETIME | score | Details | … |
+| Typ | description | DATETIME | score | Details | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | CPU-Zeit, die von 4 ms in 14 ms geändert | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | CPU-Zeit, die von 37 ms in 84 ms geändert | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 
 Einige Spalten in dieser Ansicht werden in der folgenden Liste beschrieben:
- - Typ der empfohlenen Aktion - `FORCE_LAST_GOOD_PLAN`.
- - Beschreibung, die Informationen, warum enthält [!INCLUDE[ssde_md](../../includes/ssde_md.md)] davon ausgeht, dass diese Änderung des Plans ein potenzieller Leistungsverlust ist.
- - "DateTime", wenn die mögliche Regression erkannt wird.
- - Dieser Empfehlung zu bewerten. 
- - Details zu den Problemen wie z. B. die ID des erkannten Plan-ID des der zurückgestellte Plan mit der ID des Plans, die erzwungen werden soll, um das Problem zu beheben [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Skripts, die zum Beheben des Problems usw. angewendet werden kann. Details werden gespeichert, [JSON-Format](../../relational-databases/json/index.md).
+ - Typ, der die empfohlene Aktion: `FORCE_LAST_GOOD_PLAN`
+ - Beschreibung, die Informationen, warum enthält [!INCLUDE[ssde_md](../../includes/ssde_md.md)] davon ausgeht, dass diese Änderung des Plans ein potenzieller Leistungsverlust wird
+ - "DateTime", wenn die mögliche Regression erkannt wird
+ - Bewertung von dieser Empfehlung
+ - Details zu den Problemen wie z. B. die ID des erkannten Plan-ID des der zurückgestellte Plan mit der ID des Plans, die erzwungen werden soll, um das Problem zu beheben [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Skripts, die zum Beheben des Problems usw. angewendet werden kann. Details werden gespeichert, [JSON-Format](../../relational-databases/json/index.md)
 
 Verwenden Sie die folgende Abfrage aus, um ein Skript zu erhalten, die das Problem und zusätzliche Informationen zu den geschätzten Korrekturen erhalten:
 
@@ -139,13 +144,14 @@ FROM sys.dm_db_tuning_recommendations
 
 Obwohl [!INCLUDE[ssde_md](../../includes/ssde_md.md)] enthält alle Informationen, die zum Identifizieren Ihrer Wahl planregressionen; kontinuierliche das überwachungs- und das Beheben von Leistungsproblemen erforderlich sind, möglicherweise eine mühsame Angelegenheit. Die automatische Optimierung vereinfacht diesen Prozess.
 
-Hinweis: Die Daten in dieser DMV nach einem Neustart des SQL Server-Instanz nicht beibehalten.
+> [!NOTE]
+> Daten in der DMV dm_db_tuning_recommendations werden nicht beibehalten, nach einem Neustart von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.
 
 ## <a name="automatic-index-management"></a>Automatische indexverwaltung
 
 In [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], indexverwaltung ist einfach weil [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] Features, die über Ihre arbeitsauslastung und stellt sicher, dass Ihre Daten immer optimal indiziert sind. Das richtige indexdesign ist entscheidend für eine optimale Leistung Ihrer Workload und automatische indexverwaltung können Sie die Optimierung Ihrer Indizes. Automatische indexverwaltung kann entweder beheben Sie Leistungsprobleme in falsch indizierten Datenbanken oder verwalten und verbessern Sie die Indizes auf das vorhandene Datenbankschema. Automatische Optimierung in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] führt folgende Aktionen aus:
 
- - Identifiziert die Indizes, die Leistung Ihrer T-SQL-Abfragen verbessern können, die Daten aus den Tabellen zu lesen.
+ - Identifiziert Indizes, die Leistung verbessern könnten Ihre [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Abfragen, die Daten aus den Tabellen zu lesen.
  - Identifiziert die redundante Indizes oder Indizes, die in längeren Zeitraum nicht verwendet wurden, die entfernt werden konnte. Entfernen unnötiger Indizes verbessert die Leistung der Abfragen, die Daten in Tabellen zu aktualisieren.
 
 ### <a name="why-do-you-need-index-management"></a>Warum benötigen Sie die indexverwaltung?
@@ -160,13 +166,13 @@ Ermitteln des optimalen Satzes mit Indizes, die Leistung der Abfragen zu verbess
 
 Zusätzlich zur Erkennung [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] identifizierte Empfehlungen automatisch angewendet werden können. Wenn Sie feststellen, dass die integrierten Regeln die Leistung Ihrer Datenbank verbessern, können Sie möglicherweise [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] automatisch Ihre Indizes zu verwalten.
 
-Zum Aktivieren der automatischen Optimierung in Azure SQL-Datenbank und Verwendung für die vollständige Verwaltung Ihrer Workload, finden Sie unter [Aktivieren der automatischen Optimierung in Azure SQL-Datenbank mithilfe von Azure-Portal](https://docs.microsoft.com/azure/sql-database/sql-database-automatic-tuning-enable).
+Zum Aktivieren der automatischen Optimierung [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und ermöglicht das automatische Abstimmungsfeature vollständig Ihrer Workload zu verwalten, finden Sie unter [Aktivieren der automatischen Optimierung in Azure SQL-Datenbank mithilfe von Azure-Portal](/azure/sql-database/sql-database-automatic-tuning-enable).
 
 Wenn die [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] gilt eine CREATE Index- oder DROP INDEX-Empfehlung, es überwacht automatisch die Leistung von Abfragen, die der Index betroffen sind. Neuer Index werden nur dann, wenn die Leistung der betroffen Abfragen verbessert werden beibehalten. Der gelöschte Index werden automatisch neu erstellt, wenn einige Abfragen, die aufgrund eines fehlenden Indexes langsamer ausgeführt.
 
 ### <a name="automatic-index-management-considerations"></a>Aspekte der automatischen indexverwaltung
 
-Die erforderlichen Aktionen zum Erstellen von erforderlichen Indizes in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] möglicherweise verbrauchen Ressourcen und Workloads vorübergehend beeinträchtigt. Um die Auswirkungen der indexerstellung für die arbeitsauslastungsleistung zu minimieren, sucht Azure SQL-Datenbank das passende Zeitfenster für jeden Index-Management-Vorgang. Optimierungsvorgang wird verschoben, wenn die Datenbank Ressourcen zum Ausführen Ihrer Workload benötigt, und gestartet, wenn die Datenbank mit ausreichend freiem ungenutzte Ressourcen, die für die Wartungsaufgabe verwendet werden können. Ein wichtiges Feature der automatischen indexverwaltung ist eine Überprüfung der Aktionen. Wenn Azure SQL-Datenbank erstellt oder löscht Index, analysiert ein Überwachungsprozess die Leistung Ihrer Workload, um sicherzustellen, dass die Aktion, die Leistung verbessert. Wenn es signifikante Verbesserung bringen nicht, wird die Aktion sofort rückgängig gemacht. Auf diese Weise wird Azure SQL-Datenbank sichergestellt, dass automatische Aktionen nicht negativ auf Leistung Ihrer Workload beeinträchtigt. Indizes, die von der automatischen Optimierung erstellt sind für den Wartungsvorgang des zugrunde liegenden Schemas transparent. Schemaänderungen wie das Verwerfen oder Umbenennen von Spalten werden durch das Vorhandensein von automatisch erstellten Indizes nicht blockiert. Von Azure SQL-Datenbank automatisch erstellte Indizes werden sofort gelöscht, wenn im Zusammenhang, Tabelle oder Spalten verworfen.
+Die erforderlichen Aktionen zum Erstellen von erforderlichen Indizes in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] möglicherweise verbrauchen Ressourcen und Workloads vorübergehend beeinträchtigt. Zur Minimierung der Auswirkung der indexerstellung für die arbeitsauslastungsleistung, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] findet das passende Zeitfenster für jeden Index-Management-Vorgang. Optimierungsvorgang wird verschoben, wenn die Datenbank Ressourcen zum Ausführen Ihrer Workload benötigt, und gestartet, wenn die Datenbank mit ausreichend freiem ungenutzte Ressourcen, die für die Wartungsaufgabe verwendet werden können. Ein wichtiges Feature der automatischen indexverwaltung ist eine Überprüfung der Aktionen. Wenn [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] erstellt oder löscht Index ein Überwachungsprozess analysiert die Leistung Ihrer Workload, um sicherzustellen, dass die Aktion, die Leistung verbessert. Wenn sie bedeutende Verbesserung - bringen nicht wird die Aktion sofort rückgängig gemacht werden. Auf diese Weise [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] wird sichergestellt, dass automatische Aktionen nicht negativ auf Leistung Ihrer Workload auswirken. Indizes, die von der automatischen Optimierung erstellt sind für den Wartungsvorgang des zugrunde liegenden Schemas transparent. Schemaänderungen wie das Verwerfen oder Umbenennen von Spalten werden durch das Vorhandensein von automatisch erstellten Indizes nicht blockiert. Indizes, die automatisch, indem erstellt werden [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] werden sofort gelöscht wird, wenn im Zusammenhang, Tabelle oder Spalten verworfen.
 
 ### <a name="alternative---manual-index-management"></a>Alternative – manuelle indexverwaltung
 
@@ -182,4 +188,9 @@ Ohne automatische indexverwaltung, Benutzer manuell Abfragen müssten [Sys. dm_d
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
  [database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [JSON-Funktionen](../../relational-databases/json/index.md)
+ [JSON-Funktionen](../../relational-databases/json/index.md)    
+ [Ausführungspläne](../../relational-databases/performance/execution-plans.md)    
+ [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [Tools für die Leistungsüberwachung und -optimierung](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
+ [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Abfrage Optimierung-Assistent](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)
