@@ -12,7 +12,7 @@ ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51667989"
@@ -152,11 +152,11 @@ An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den
     crm_report -X "-p 3479" [...]
     ```
 
-    Weitere Informationen finden Sie unter [System Requirements and Recommendations in the SUSE documentation (Systemanforderungen und Empfehlungen in der SUSE-Dokumentation)](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html).
+    Weitere Informationen finden Sie unter [Systemanforderungen und Empfehlungen in der SUSE-Dokumentation ](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html).
 
 3. **Installieren Sie die Erweiterung für hohe Verfügbarkeit**. Um die Erweiterung zu installieren, befolgen Sie die Schritte im folgenden SUSE-Thema:
     
-    [Installation and Setup Quick Start (Installation und Setup – Schnellstart)](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html)
+    [Installation und Setup – Schnellstart](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html)
 
 4. **Installieren Sie den FCI-Ressourcenagent für SQL Server**. Führen Sie die folgenden Befehle auf beiden Knoten aus:
 

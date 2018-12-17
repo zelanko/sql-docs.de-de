@@ -91,7 +91,7 @@ ms.locfileid: "52518514"
   
  Eine manuelle **Migration** der Berichtsserverinstallation ist allerdings erforderlich, wenn eine der folgenden Bedingungen zutrifft:  
   
--   Sie möchten den Typ des in der Bereitstellung verwendeten Berichtsservers ändern. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf den SharePoint-Modus aktualisieren bzw. konvertieren. Weitere Informationen finden Sie unter [Native to SharePoint Migration (SSRS) (Migration vom einheitlichen Modus zum SharePoint-Modus (SSRS))](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
+-   Sie möchten den Typ des in der Bereitstellung verwendeten Berichtsservers ändern. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf den SharePoint-Modus aktualisieren bzw. konvertieren. Weitere Informationen finden Sie unter [Migration vom einheitlichen Modus zum SharePoint-Modus (SSRS)](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
   
 -   Sie möchten die Zeit verkürzen, die der Berichtsserver während des Upgradevorgangs offline geschaltet wird. Die derzeitige Installation bleibt online, während Sie Inhaltsdaten auf eine neue Berichtsserverinstanz kopieren und die Installation testen, ohne dass der Status der vorhandenen Berichtsserverinstallation geändert wird.  
   

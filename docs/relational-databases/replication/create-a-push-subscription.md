@@ -93,7 +93,7 @@ ms.locfileid: "51675209"
   
     -   Wenn der Wert von **allow_push** **0** ist, führen Sie [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) aus und geben Sie **allow_push** für **@property** und **true** für **@value**an.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)aus. Geben Sie **@publication**, **@subscriber** und **@destination_db**. Geben Sie den Wert **push** für **@subscription_type**. Informationen zum Aktualisieren von Abonnements finden Sie unter [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)aus. Geben Sie **@publication**, **@subscriber** und **@destination_db**. Geben Sie den Wert **push** für **@subscription_type**. Weitere Informationen zum Aktualisieren von Abonnements finden Sie unter [Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)aus. Geben Sie Folgendes an:  
   

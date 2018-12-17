@@ -254,7 +254,7 @@ ms.locfileid: "51641757"
  Weitere Informationen zur Zuordnung von Datentypen im Datenfluss finden Sie unter [Verwenden von Datentypen im Datenfluss](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), auf blogs.msdn.com.  
+ Blogeintrag, [Leistungsvergleich zwischen Datentypkonvertierungstechniken in SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), auf blogs.msdn.com.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Daten in Datenflüssen](../../integration-services/data-flow/data-in-data-flows.md)  
