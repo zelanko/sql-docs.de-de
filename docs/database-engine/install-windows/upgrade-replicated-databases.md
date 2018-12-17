@@ -34,20 +34,20 @@ ms.locfileid: "51668419"
 -   Für den Verleger ist jede Version zulässig, die der Verteiler-Version entspricht oder niedriger als diese ist.    
 -   Die Abonnenten-Version ist vom Veröffentlichungstyp abhängig:    
     - Ein Abonnent einer Transaktionsveröffentlichung kann einer der beiden Versionen im Rahmen der Verlegerversion angehören. Zum Beispiel: Ein SQL Server 2012-Verleger (11.x) kann SQL Server 2014-Abonnenten (12.x) und SQL Server 2016-Abonnenten (13.x) vorweisen. Ein SQL Server 2016-Verleger (13.x) kann SQL Server 2014-Abonnenten (12.x) und SQL Server 2012-Abonnenten (11.x) vorweisen.     
-    - Ein Abonnent für eine Mergeveröffentlichung kann alle Versionen, die gleich oder niedriger sind als die Verlegerversion, benutzen. Diese werden gemäß des Supportzeitraums für den Versionenlebenszyklus unterstützt.  
+    - Ein Abonnent für eine Mergeveröffentlichung kann alle Versionen, die gleich oder niedriger sind als die Verlegerversion, benutzen. Diese werden gemäß dem Supportzeitraums für den Versionenlebenszyklus unterstützt.  
  
-Der Upgradepfad für SQL Server unterscheidet sich je nach Bereitstellungsmuster. Allgemein stehen zwei Upgradepfade für SQL Server zur Verfügung:
+Der Upgradepfad für SQL Server unterscheidet sich je nach Bereitstellungsmuster. Grundsätzlich stehen zwei Upgradepfade für SQL Server zur Verfügung:
 - Parallel: Stellen Sie eine parallele Umgebung bereit, und verschieben Sie Datenbanken gemeinsam mit den zugehörigen Objekten auf Instanzebene, z.B. Anmeldenamen, Aufträge usw., in die neue Umgebung. 
-- Direktes Upgrade: Ermöglichen Sie dem SQL Server-Installationsmedium, das Upgrade der vorhandenen SQL Server-Installation durchzuführen, indem die SQL Server-Bits ersetzt und die Datenbankobjekte aktualisiert werden. Für Umgebungen, in denen Always On-Verfügbarkeitsgruppen oder Failoverclusterinstanzen ausgeführt werden, werden direkte Upgrades mit einem [parallelen Upgrade](choose-a-database-engine-upgrade-method.md#rolling-upgrade) kombiniert, um die Downtime zu minimieren. 
+- Direktes Upgrade: Führen Sie das Upgrade der vorhandenen SQL Server-Installation mithilfe des SQL Server-Installationsmediums durch. Dazu werden die SQL Server-Bits ersetzt und die Datenbankobjekte aktualisiert. Für Umgebungen, in denen Always On-Verfügbarkeitsgruppen oder Failoverclusterinstanzen ausgeführt werden, werden direkte Upgrades mit einem [parallelen Upgrade](choose-a-database-engine-upgrade-method.md#rolling-upgrade) kombiniert, um die Downtime zu minimieren. 
 
-Das Verschieben von Verleger-Abonnenten-Paaren in Teilen in die neue parallele Umgebung wurde anstelle der Verschiebung der gesamten Topologie als gängige Methode für parallele Upgrades für Replikationstopologien eingeführt. Mithilfe dieser Vorgehensweise mit Phasen können Sie die Downtime steuern und die Auswirkungen auf das Unternehmen, das von der Replikation abhängig ist, in einem gewissen Maß minimieren.  
+Das Verschieben von Verleger-Abonnenten-Paaren in Teilen in die neue parallele Umgebung wurde anstelle der Verschiebung der gesamten Topologie als gängige Methode für parallele Upgrades für Replikationstopologien eingeführt. Mithilfe eines solchen inkrementellen Ansatzes lässt sich die Downtime steuern, und die Auswirkungen auf das Unternehmen, das auf die Replikation angewiesen ist, lassen sich zumindest bis zu einem gewissen Grad minimieren.  
 
 
 > [!NOTE]  
 > **Ausführliche Informationen zum Upgrade der Replikationstopologie auf SQL Server 2016 finden Sie im Blogbeitrag [Upgrading a Replication Topology to SQL Server 2016 (Upgrade der Replikationstopologie auf SQL Server 2016)](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
 
  >[!WARNING]
- > Das Upgrade einer Replikationstopologie ist ein aus mehreren Schritten bestehender Vorgang. Es wird empfohlen, ein Upgrade eines Replikats Ihrer Replikationstopologie in einer Testumgebung auszuprobieren, bevor das Upgrade in der tatsächlichen Produktionsumgebung durchgeführt wird. Dadurch kann jegliche erforderliche betriebliche Dokumentation für das Upgrade reibungslos optimiert werden, ohne dass teure und lange Downtime während des tatsächlichen Upgradevorgangs auftritt. Kunden konnten die Downtime beim Upgrade ihrer Replikationstopologie mithilfe von Always On-Verfügbarkeitsgruppen und bzw. oder SQL Server-Failoverclusterinstanzen für ihre Produktionsumgebungen deutlich reduzieren. Darüber hinaus wird empfohlen, dass Sie Sicherungen aller Datenbanken anlegen, einschließlich MSDB, Master-, Verteilungs- und Benutzerdatenbanken, die an der Replikation beteiligt sind, bevor Sie das Upgrade ausführen.
+ > Das Upgrade einer Replikationstopologie ist ein aus mehreren Schritten bestehender Vorgang. Es wird empfohlen, ein Upgrade eines Replikats Ihrer Replikationstopologie in einer Testumgebung auszuprobieren, bevor das Upgrade in der eigentlichen Produktionsumgebung durchgeführt wird. Dadurch lässt sich jegliche für eine reibungslose Durchführung des Upgrades erforderliche Dokumentation ganz ohne zusätzliche Kosten und lange Downtimes während des eigentlichen Upgradevorgangs ins Reihe bringen. Kunden konnten die Downtime beim Upgrade ihrer Replikationstopologie mithilfe von Always On-Verfügbarkeitsgruppen und bzw. oder SQL Server-Failoverclusterinstanzen für ihre Produktionsumgebungen deutlich reduzieren. Darüber hinaus wird empfohlen, dass Sie Sicherungen aller Datenbanken anlegen, einschließlich MSDB, Master-, Verteilungs- und Benutzerdatenbanken, die an der Replikation beteiligt sind, bevor Sie das Upgrade ausführen.
 
 
 ## <a name="replication-matrix"></a>Replikationsmatrix
@@ -89,7 +89,7 @@ Nach dem Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i
 Bevor eine Edition von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] auf eine andere Edition aktualisiert wird, sollten Sie überprüfen, ob die derzeit verwendete Funktionalität in der Edition, die Ziel des Upgrades ist, unterstützt wird. Weitere Informationen finden Sie im Abschnitt zur Replikation im Thema [Editions and supported features of SQL Server (Editionen und unterstützte Funktionen von SQL Server)](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
 ## <a name="steps-to-upgrade-a-replication-topology"></a>Schritte für das Upgrade einer Replikationstopologie
-In diesen Schritten wird die Reihenfolge dargestellt, in der Upgrades für Replikationstopologien durchgeführt werden sollten. Die gleichen Schritte gelten sowohl für die Transaktions- als auch für die Mergereplikation. Diese Schritte gelten jedoch nicht für Peer-zu-Peer-Replikation, Abonnements mit verzögertem Update über eine Warteschlange und Abonnements mit sofortigem Update. 
+In diesen Schritten wird die Reihenfolge dargestellt, in der Upgrades für Replikationstopologien durchgeführt werden sollten. Dieselben Schritte gelten sowohl für die Transaktions- als auch für die Mergereplikation. Diese Schritte gelten jedoch nicht für Peer-zu-Peer-Replikation, Abonnements mit verzögertem Update über eine Warteschlange und Abonnements mit sofortigem Update. 
 
 ### <a name="in-place-upgrade"></a>Direktes Upgrade 
 1. Aktualisieren Sie den Verteiler. 
@@ -107,7 +107,7 @@ In diesen Schritten wird die Reihenfolge dargestellt, in der Upgrades für Repli
 
 
 ## <a name="steps-for-side-by-side-migration-of-the-distributor-to-windows-server-2012-r2"></a>Schritte für die parallele Migration des Verteilers zu Windows Server 2012 R2
-Wenn Sie ein Upgrade Ihrer SQL Server-Instanz auf SQL Server 2016 (oder höher) planen, und Ihr aktuelles Betriebssystem Windows Server 2008 (oder 2008 R2) ist, müssen Sie ein paralleles Upgrade auf Windows Server 2012 R2 oder höher für das Betriebssystem ausführen. Der Grund für dieses Zwischenupgrade des Betriebssystems ist, dass Windows Server 2008 bzw. 2008 R2 die Installation von SQL Server 2016 und direkte Upgrades von Failoverclustern nicht zulässt. Die folgenden Schritte können Sie sowohl in einer eigenständigen SQL Server-Instanz als auch innerhalb einer Always On-Failoverclusterinstanz (FCI) ausführen.
+Wenn Sie ein Upgrade Ihrer SQL Server-Instanz auf SQL Server 2016 (oder höher) planen und Ihr aktuelles Betriebssystem Windows Server 2008 (oder 2008 R2) ist, müssen Sie ein paralleles Upgrade auf Windows Server 2012 R2 oder höher für das Betriebssystem ausführen. Der Grund für dieses Zwischenupgrade des Betriebssystems ist, dass Windows Server 2008 bzw. 2008 R2 die Installation von SQL Server 2016 und direkte Upgrades von Failoverclustern nicht zulässt. Die folgenden Schritte können Sie sowohl in einer eigenständigen SQL Server-Instanz als auch innerhalb einer Always On-Failoverclusterinstanz (FCI) ausführen.
 
 1. Richten Sie eine neue SQL Server-Instanz (entweder eigenständig oder in einem Always On-Failovercluster) mit der gleichen Edition und Version des Windows Server 2012 R2/2016-Verteilers und einem anderen Windows-Cluster sowie SQL Server-FCI-Namen bzw. eigenständigen Hostnamen. Führen Sie keine Änderungen an der Verzeichnisstruktur durch, um sicherzustellen, dass sich die ausführbaren Replikations-Agents, Replikationsordner und Datenbankdateipfade in der neuen Umgebung im gleichen Pfad befinden. Damit werden die erforderlichen Schritte nach der Migration bzw. dem Upgrade reduziert.
 1. Stellen Sie sicher, dass Ihre Replikation synchronisiert ist, und beenden Sie dann alle Replikations-Agents. 
@@ -115,7 +115,7 @@ Wenn Sie ein Upgrade Ihrer SQL Server-Instanz auf SQL Server 2016 (oder höher) 
 1. Entfernen Sie die Einträge für die DNS- und AD-Computerobjekte für die alte Umgebung (aktuelle Verteilerinstanz). 
 1. Ändern Sie den Hostnamen des neuen Servers in den des alten Servers.
     1. Wenn es sich dabei um eine SQL Server-FCI handelt, geben Sie der neuen SQL Server-FCI den gleichen virtuellen Servernamen wie der alten Instanz. 
-1. Kopieren Sie die Datenbankdateien aus der vorherigen Instanz mithilfe einer SAN-Umleiten, Speicherkopie oder Dateikopie. 
+1. Kopieren Sie die Datenbankdateien aus der vorherigen Instanz mithilfe einer SAN-Umleitung, Speicherkopie oder Dateikopie. 
 1. Stellen Sie die neue SQL Server-Instanz online. 
 1. Starten Sie alle Replikations-Agents neu, und überprüfen Sie, ob die Agents erfolgreich ausgeführt werden.
 1. Prüfen Sie, ob die Replikation erwartungsgemäß funktioniert. 
@@ -123,7 +123,7 @@ Wenn Sie ein Upgrade Ihrer SQL Server-Instanz auf SQL Server 2016 (oder höher) 
 
 
   >[!NOTE]
-  > Zum Reduzieren der Downtime wird empfohlen, dass Sie die *parallele Migration* des Verteilers als eine Aktivität und das *direkte Upgrade auf SQL Server 2016* als eine andere Aktivität durchführen. Damit können Sie eine Vorgehensweise mit Phasen anwenden, das Risiko reduzieren und die Downtime minimieren.
+  > Zum Verkürzen der Downtime wird empfohlen, die *parallele Migration* des Verteilers und das *direkte Upgrade auf SQL Server 2016* jeweils als separate Aktivitäten durchzuführen. Damit können Sie eine Vorgehensweise mit Phasen anwenden, das Risiko reduzieren und die Downtime minimieren.
 
 ## <a name="web-synchronization-for-merge-replication"></a>Websynchronisierung für die Mergereplikation  
  Bei der Websynchronisierung für die Mergereplikation ist es erforderlich, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung (replisapi.dll) in das virtuelle Verzeichnis auf dem Server mit Internetinformationsdienste (Internet Information Services, IIS) kopiert wird, der für die Synchronisierung verwendet wird. Wenn Sie die Websynchronisierung konfigurieren, wird die Datei vom Assistenten zum Konfigurieren der Websynchronisierung in das virtuelle Verzeichnis kopiert. Wenn Sie die auf dem IIS-Server installierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten aktualisieren, müssen Sie replisapi.dll manuell vom Verzeichnis COM in das virtuelle Verzeichnis auf dem IIS-Server kopieren. Weitere Informationen zur Konfiguration der Websynchronisierung finden Sie unter [Konfigurieren der Websynchronisierung](../../relational-databases/replication/configure-web-synchronization.md).  
