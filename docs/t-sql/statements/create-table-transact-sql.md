@@ -1588,7 +1588,7 @@ WITH
 ```  
   
 ### <a name="r-creating-a-table-with-encrypted-columns"></a>R. Erstellen einer Tabelle mit verschlüsselten Spalten  
- Im folgenden Beispiel wird eine Tabelle mit zwei verschlüsselten Spalten erstellt. Weitere Informationen finden Sie unter [Immer verschlüsselt &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
+ Im folgenden Beispiel wird eine Tabelle mit zwei verschlüsselten Spalten erstellt. Weitere Informationen finden Sie unter [Immer verschlüsselt &#40;Datenbank-Engine &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
 ```sql  
 CREATE TABLE Customers (  

@@ -70,7 +70,7 @@ Gründe für die Verwendung benutzerdefinierter Funktionen
  Wie oft eine in einer Abfrage angegebene Funktion tatsächlich ausgeführt wird, kann bei den vom Abfrageoptimierer erstellten Ausführungsplänen variieren. Ein Beispiel hierfür ist eine Funktion, die von einer Unterabfrage in einer `WHERE`-Klausel aufgerufen wird. Wie oft die Unterabfrage und deren Funktion ausgeführt wird, kann bei den verschiedenen Zugriffsmethoden variieren, die der Abfrageoptimierer auswählt.  
  
 > [!IMPORTANT]   
-> Weitere Informationen und Leistungsüberlegungen zu benutzerdefinierten Funktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
+> Weitere Informationen und Leistungsüberlegungen zu benutzerdefinierten Funktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen &#40;Datenbank-Engine &#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
   
 ##  <a name="ValidStatements"></a> Gültige Anweisungen in einer Funktion  
 Die folgenden Anweisungstypen sind in einer Funktion zulässig:  
@@ -134,7 +134,7 @@ Die folgenden Anweisungstypen sind in einer Funktion zulässig:
 |||  
 |-|-|  
 |**Taskbeschreibung**|**Thema**|  
-|Beschreibt, wie eine benutzerdefinierte Transact-SQL-Funktion erstellt wird.|[Erstellen benutzerdefinierter Funktionen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
+|Beschreibt, wie eine benutzerdefinierte Transact-SQL-Funktion erstellt wird.|[Erstellen benutzerdefinierter Funktionen &a#40;Datenbank-Engine &#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |Beschreibt, wie eine CLR-Funktion erstellt wird.|[Erstellen von CLR-Funktionen](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
 |Beschreibt, wie eine benutzerdefinierte Aggregatfunktion erstellt wird.|[Erstellen benutzerdefinierter Aggregate](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
 |Beschreibt, wie eine benutzerdefinierte Transact-SQL-Funktion geändert wird.|[Ändern benutzerdefinierter Funktionen](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  

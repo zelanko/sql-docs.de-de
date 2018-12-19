@@ -36,7 +36,7 @@ Die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktio
 | Replikation | Replikationskonfigurationen, die keine Transaktionsreplikation in speicheroptimierten Tabellen von Abonnenten darstellen, sind mit Tabellen oder Ansichten, die auf speicheroptimierte Tabellen verweisen, nicht kompatibel.<br /><br />Die Replikation mit sync_mode='database snapshot' wird bei Vorhandensein speicheroptimierter Dateigruppen nicht unterstützt.<br /><br />Weitere Informationen finden Sie unter [Replikation mit Abonnenten von speicheroptimierten Tabellen](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|
 |Spiegelung|Die Datenbankspiegelung wird für Datenbanken mit einer MEMORY_OPTIMIZED_DATA-Dateigruppe nicht unterstützt. Weitere Informationen zur Spiegelung finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Protokollneuerstellung|Die Neuerstellung des Protokolls, entweder durch Anfügen oder mithilfe von ALTER DATABASE, wird für Datenbanken mit einer MEMORY_OPTIMIZED_DATA-Dateigruppe nicht unterstützt.|  
-|Verbindungsserver|Sie können auf verknüpfte Server nicht in der gleichen Abfrage oder Transaktion als speicheroptimierte Tabellen zugreifen. Weitere Informationen finden Sie unter [Verbindungsserver &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
+|Verbindungsserver|Sie können auf verknüpfte Server nicht in der gleichen Abfrage oder Transaktion als speicheroptimierte Tabellen zugreifen. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbank-Engine &#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
 |Massenprotokollierung|Unabhängig vom Wiederherstellungsmodell der Datenbank werden alle Vorgänge in dauerhaften speicheroptimierten Tabellen immer vollständig protokolliert.|  
 |Minimale Protokollierung|Die minimale Protokollierung wird für speicheroptimierte Tabellen nicht unterstützt. Weitere Informationen zur minimalen Protokollierung finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) und [Voraussetzungen für die minimale Protokollierung beim Massenimport](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
 |Änderungsnachverfolgung|Die Änderungsnachverfolgung kann in einer Datenbank mit In-Memory OLTP-Objekten aktiviert werden. Änderungen in speicheroptimierten Tabellen werden allerdings nicht nachverfolgt.|  
@@ -67,7 +67,7 @@ Datenbankübergreifende Transaktionen werden bis auf einige Ausnahmen nicht unte
 - Das Verwenden von **MERGE INTO** *ziel*, wobei *ziel* eine speicheroptimierte Tabelle ist, wird nicht unterstützt.
     - **MERGE USING** *quelle* wird für speicheroptimierte Tabellen unterstützt.  
   
-- Der Datentyp ROWVERSION (TIMESTAMP) wird nicht unterstützt. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).
+- Der Datentyp ROWVERSION (TIMESTAMP) wird nicht unterstützt. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL &#41;](../../t-sql/queries/from-transact-sql.md).
   
 - Automatisches Schließen wird für Datenbanken, die eine MEMORY_OPTIMIZED_DATA-Dateigruppe enthalten, nicht unterstützt.  
   
