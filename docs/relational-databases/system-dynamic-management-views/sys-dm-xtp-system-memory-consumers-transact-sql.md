@@ -21,7 +21,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8341ac09af815f2e96eadd1616fd02cc75810644
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47815048"
@@ -43,7 +43,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |memory_consumer_id|**bigint**|Interne ID für Arbeitsspeicherconsumer.|  
 |memory_consumer_type|**int**|Eine ganze Zahl, die den Typ des arbeitsspeicherconsumers mit einem der folgenden Werte darstellt:<br /><br /> 0 – Es wird kein Consumer angezeigt. Aggregiert die Speichernutzung von zwei oder mehreren Consumern.<br /><br /> 1 – LOOKASIDE: Verfolgt die arbeitsspeichernutzung für ein systemlookaside nach.<br /><br /> 2: VARHEAP: Verfolgt die arbeitsspeichernutzung für einen Heap variabler Länge.<br /><br /> 4 – e/a-Seitenpool: verfolgt die arbeitsspeichernutzung für einen systemseitenpool für e/a-Vorgänge verwendet.|  
 |memory_consumer_type_desc|**nvarchar(16)**|Die Beschreibung des Typs des Arbeitsspeicherconsumers:<br /><br /> 0 – Es wird kein Consumer angezeigt.<br /><br /> 1 – LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**Nvarchar(64)**|Die Beschreibung der Arbeitsspeicherconsumer-Instanz:<br /><br /> VARHEAP: <br />Der Systemheap. Allgemein. Wird derzeit nur verwendet, um Arbeitsaufgaben der Garbage Collection zuzuordnen.<br />-oder-<br />Der Lookasideheap. Wird von Lookasides verwendet, wenn die Anzahl der in der Lookasideliste enthaltenen Elemente einen vordefinierten Grenzwert (normalerweise etwa 5.000 Elemente) erreicht.<br /><br /> PGPOOL: Für e/a-System sind Systempools gibt es drei unterschiedliche Größen System 4-KB-Seitenpool System 64-KB-Seitenpool und System-256-KB-Seitenpool.|  
+|memory_consumer_desc|**Nvarchar(64)**|Die Beschreibung der Arbeitsspeicherconsumer-Instanz:<br /><br /> VARHEAP: <br />Der Systemheap. Allgemein. Wird derzeit nur verwendet, um Arbeitselemente der Garbage Collection zuzuordnen.<br />-oder-<br />Der Lookasideheap. Wird von Lookasides verwendet, wenn die Anzahl der in der Lookasideliste enthaltenen Elemente einen vordefinierten Grenzwert (normalerweise etwa 5.000 Elemente) erreicht.<br /><br /> PGPOOL: Für e/a-System sind Systempools gibt es drei unterschiedliche Größen System 4-KB-Seitenpool System 64-KB-Seitenpool und System-256-KB-Seitenpool.|  
 |lookaside_id|**bigint**|Die ID des threadlokalen Nebenarbeitsspeicheranbieters.|  
 |pagepool_id|**bigint**|Die ID des threadlokalen Seitenpool-Arbeitsspeicheranbieters.|  
 |allocated_bytes|**bigint**|Anzahl der für den Consumer reservierten Bytes.|  
