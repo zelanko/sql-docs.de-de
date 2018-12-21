@@ -102,7 +102,7 @@ ms.locfileid: "52539024"
   
 2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Tabellen**, und klicken Sie auf **Neue Tabelle...**.  
   
-3.  Erstellen Sie eine neue Tabelle. Weitere Informationen finden Sie unter [Verbindungsserver &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/tables/create-tables-database-engine.md).  
+3.  Erstellen Sie eine neue Tabelle. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbank-Engine&#41;](../../relational-databases/tables/create-tables-database-engine.md).  
   
 4.  Klicken Sie mit der rechten Maustaste auf die neue Tabelle, und klicken Sie auf **Entwurf**.  
   

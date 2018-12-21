@@ -382,7 +382,7 @@ Sicherheit auf Zeilenebene führt eine prädikatbasierte Zugriffssteuerung ein. 
 
 
 ### <a name="always-encrypted"></a>Always Encrypted
-Mit Always Encrypted kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Vorgänge auf verschlüsselte Daten anwenden. Das Beste daran ist, der Verschlüsselungsschlüssel befindet sich bei der Anwendung innerhalb der vertrauenswürdigen Umgebung des Kunden und nicht auf dem Server. Always Encrypted sichert die Kundendaten, sodass DBAs keinen Zugriff auf Nur-Text-Daten haben. Die Verschlüsselung und Entschlüsselung von Daten erfolgt transparent auf Treiberebene, wodurch Änderungen minimiert werden, die an vorhandenen Anwendungen vorgenommen werden müssen. Weitere Informationen finden Sie unter [Immer verschlüsselt &amp;#40;Datenbank-Engine&amp;#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
+Mit Always Encrypted kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Vorgänge auf verschlüsselte Daten anwenden. Das Beste daran ist, der Verschlüsselungsschlüssel befindet sich bei der Anwendung innerhalb der vertrauenswürdigen Umgebung des Kunden und nicht auf dem Server. Always Encrypted sichert die Kundendaten, sodass DBAs keinen Zugriff auf Nur-Text-Daten haben. Die Verschlüsselung und Entschlüsselung von Daten erfolgt transparent auf Treiberebene, wodurch Änderungen minimiert werden, die an vorhandenen Anwendungen vorgenommen werden müssen. Weitere Informationen finden Sie unter [Immer verschlüsselt &#40;Datenbank-Engine&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 
 ### <a name="dynamic-data-masking"></a>Dynamische Datenmaskierung

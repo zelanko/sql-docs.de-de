@@ -543,7 +543,7 @@ Wenn eine benutzerdefinierte Funktion nicht mit der `SCHEMABINDING`-Klausel erst
 -   Führen Sie die gespeicherte Prozedur [sp_refreshsqlmodule](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md) aus, nachdem Sie ein Objekt geändert haben, das in der Definition der Funktion angegeben ist.  
   
 > [!IMPORTANT]  
-> Weitere Informationen und Überlegungen zur Leistung von Inline-Tabellenwertfunktionen und Tabellenwertfunktionen mit mehreren Anweisungen finden Sie unter [Erstellen benutzerdefinierter Funktionen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
+> Weitere Informationen und Überlegungen zur Leistung von Inline-Tabellenwertfunktionen und Tabellenwertfunktionen mit mehreren Anweisungen finden Sie unter [Erstellen benutzerdefinierter Funktionen &#40;Datenbank-Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
 
 ## <a name="data-types"></a>Datentypen  
  Wenn Parameter in einer CLR-Funktion angegeben werden, sollte es sich dabei um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typen handeln, wie weiter oben für *scalar_parameter_data_type* definiert. Weitere Informationen zum Vergleichen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentypen mit CLR-Integrationsdatentypen oder Datentypen der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime finden Sie unter [Zuordnen von CLR-Parameterdaten](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
@@ -672,7 +672,7 @@ Durch die `ORDER`-Klausel wird keine bestimmte Ergebnisreihenfolge bei der Ausf�
 ## <a name="examples"></a>Beispiele  
 
 > [!NOTE]
-> Weitere Informationen und Leistungsüberlegungen zu benutzerdefinierten Funktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
+> Weitere Informationen und Leistungsüberlegungen zu benutzerdefinierten Funktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen &#40;Datenbank-Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
 
 ### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>A. Verwenden einer benutzerdefinierten Skalarwertfunktion zur Berechnung der ISO-Woche  
  Im folgenden Beispiel wird die benutzerdefinierte Funktion `ISOweek` erstellt. Diese Funktion nimmt ein Datumsargument und berechnet die Nummer der ISO-Woche. Damit diese Funktion richtig rechnet, muss `SET DATEFIRST 1` aufgerufen werden, bevor die Funktion aufgerufen wird.  

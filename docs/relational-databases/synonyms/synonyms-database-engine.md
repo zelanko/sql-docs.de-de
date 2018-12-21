@@ -112,7 +112,7 @@ Synonyme sind nicht schemagebunden. Deshalb kann von den folgenden schemagebunde
 |Standardausdrücke|Regelausdrücke|  
 |Schemagebundene Sichten|Schemagebundene Funktionen|  
   
-Weitere Informationen zu schemagebundenen Funktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
+Weitere Informationen zu schemagebundenen Funktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen &#40;Datenbank-Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ## <a name="getting-information-about-synonyms"></a>Abrufen von Informationen zu Synonymen  
 Die `sys.synonyms`-Katalogsicht enthält einen Eintrag für jedes Synonym in einer bestimmten Datenbank. Diese Katalogsicht macht Synonymmetadaten verfügbar, wie z. B. den Namen des Synonyms und den Namen des Basisobjekts. Weitere Informationen finden Sie unter [sys.synonyms &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md).  

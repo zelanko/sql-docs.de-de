@@ -482,7 +482,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
  Bevor Sie die gespeicherten Prozeduren ausführen, müssen Sie die folgenden Schritte ausführen.  
   
--   Erstellen Sie ein Verbindungsserverobjekt. Weitere Informationen finden Sie unter [Erstellen von Verbindungsservern &amp;#40;SQL Server-Datenbank-Engine&amp;#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md).  
+-   Erstellen Sie ein Verbindungsserverobjekt. Weitere Informationen finden Sie unter [Erstellen von Verbindungsservern &#40;SQL Server-Datenbank-Engine&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md).  
   
      Legen Sie auf der Seite **Serveroptionen** des Dialogfelds **Eigenschaften des Verbindungsservers** die Optionen **RPC** und **RPC-Ausgabe** auf **True**fest. Legen Sie außerdem **Höherstufung von verteilten Transaktionen für RPC aktivieren** auf **False**fest.  
   

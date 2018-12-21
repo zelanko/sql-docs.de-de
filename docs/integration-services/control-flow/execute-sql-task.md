@@ -112,7 +112,7 @@ ms.locfileid: "52504074"
 ## <a name="general-page---execute-sql-task-editor"></a>Seite „Allgemein“ – Editor für den Task „SQL ausführen“
  Mithilfe der Seite **Allgemein** im Dialogfeld **Editor für den Task „SQL ausführen“** können Sie den Task „SQL ausführen“ konfigurieren und die SQL-Anweisung bereitstellen, die vom Task ausgeführt wird.  
 
-Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact-SQL-Referenz &amp;#40;Datenbank-Engine&amp;#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
   
 ### <a name="static-options"></a>Statische Optionen  
  **Name**  

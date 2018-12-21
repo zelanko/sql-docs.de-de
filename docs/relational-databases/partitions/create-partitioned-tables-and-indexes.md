@@ -108,7 +108,7 @@ ms.locfileid: "52522268"
   
 8.  Fügen Sie weiter Zeilen hinzu, bis Sie mindestens eine Datei für jede Dateigruppe erstellt haben.  
   
-9. Erweitern Sie den Ordner **Tabellen** , und erstellen Sie eine Tabelle. Weitere Informationen finden Sie unter [Verbindungsserver &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/tables/create-tables-database-engine.md). Alternativ können Sie in der nächsten Prozedur eine vorhandene Tabelle angeben.  
+9. Erweitern Sie den Ordner **Tabellen** , und erstellen Sie eine Tabelle. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbank-Engine&#41;](../../relational-databases/tables/create-tables-database-engine.md). Alternativ können Sie in der nächsten Prozedur eine vorhandene Tabelle angeben.  
   
 #### <a name="to-create-a-partitioned-table"></a>So erstellen Sie eine partitionierte Tabelle  
   
