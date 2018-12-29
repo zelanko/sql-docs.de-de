@@ -42,7 +42,7 @@ ms.locfileid: "47740090"
 
   Entfernt eine zuvor erteilte oder verweigerte Berechtigung.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -90,7 +90,7 @@ REVOKE
  Gibt an, dass die Fähigkeit, die angegebene Berechtigung zu erteilen, aufgehoben wird. Dies ist bei Verwendung des CASCADE-Arguments erforderlich.  
   
 > [!IMPORTANT]  
->  Falls der Prinzipal die angegebene Berechtigung ohne GRANT OPTION besitzt, wird die Berechtigung selbst aufgehoben.  
+>  Falls der Prinzipal die angegebene Berechtigung ohne GRANT-Option besitzt, wird die Berechtigung selbst aufgehoben.  
   
  ALL  
 **Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -134,19 +134,19 @@ REVOKE
  Gibt an, dass die aufgehobene Berechtigung auch für andere Prinzipale aufgehoben wird, denen sie von diesem Prinzipal erteilt wurde. Bei Verwendung des CASCADE-Arguments müssen Sie auch das GRANT OPTION FOR-Argument einschließen.  
   
 > [!CAUTION]  
->  Durch ein kaskadiertes Aufheben einer Berechtigung, die mit GRANT OPTION erteilt wurde, werden sowohl GRANT als auch DENY für diese Berechtigung aufgehoben.  
+>  Durch ein kaskadiertes Aufheben einer Berechtigung, die mit WITH GRANT OPTION erteilt wurde, werden sowohl GRANT als auch DENY für diese Berechtigung aufgehoben.  
   
  AS *principal*  
- Verwenden Sie die Prinzipalklausel AS, um anzugeben, dass Sie eine Berechtigung aufheben, die von einem anderen Prinzipal erteilt wurde. Nehmen Sie beispielsweise an, dass die Benutzerin Mary der principal_id 12 und der Benutzer Raul der principal_id 15 entspricht. Die Benutzer Mary und Raul erteilen dem Benutzer Steven die gleiche Berechtigung. Dann gibt die Tabelle „sys.database_permissions“ die Berechtigungen zweimal an, jedoch mit einem jeweils anderen Wert von „grantor_principal_id“. Mary könnte in diesem Fall die Klausel `AS RAUL` verwenden, um die von Raul erteilten Berechtigungen zu entfernen.
+ Verwenden Sie die Prinzipalklausel AS, um anzugeben, dass Sie eine Berechtigung aufheben, die von einem anderen Prinzipal erteilt wurde. Nehmen Sie beispielsweise an, dass die Benutzerin Mary der principal_id 12 und der Benutzer Raul der principal_id 15 entspricht. Die Benutzer Mary und Raul erteilen dem Benutzer Steven die gleiche Berechtigung. Dann gibt die Tabelle „sys.database_permissions“ die Berechtigungen zweimal an, jedoch mit einem jeweils anderen Wert für „grantor_principal_id“. Mary könnte in diesem Fall die Klausel `AS RAUL` verwenden, um die von Raul erteilten Berechtigungen zu entfernen.
  
 In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die Identität eines anderen Benutzers anzunehmen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die vollständige Syntax der REVOKE-Anweisung ist sehr komplex. Das Syntaxdiagramm oben wurde vereinfacht, um die Struktur hervorzuheben. Die vollständige Syntax zum Aufheben von Berechtigungen für bestimmte sicherungsfähige Elemente wird in den Artikeln beschrieben, die unter [Für sicherungsfähige Elemente spezifische Syntax](#securable) weiter unten in diesem Artikel aufgelistet werden.  
   
- Die REVOKE-Anweisung kann zum Entfernen von erteilten Berechtigungen verwendet werden, und mit der DENY-Anweisung kann verhindert werden, dass einem Prinzipal eine spezifische Berechtigung durch eine GRANT-Anweisung erteilt wird.  
+ Die REVOKE-Anweisung kann zum Entfernen erteilter Berechtigungen verwendet werden. Ferner kann mit der DENY-Anweisung verhindert werden, dass einem Prinzipal eine spezifische Berechtigung durch eine GRANT-Anweisung erteilt wird.  
   
- Durch das Erteilen einer Berechtigung wird DENY oder REVOKE für diese Berechtigung aus dem angegebenen sicherungsfähigen Element entfernt. Falls dieselbe Berechtigung aus einem höheren Bereich als dem des sicherungsfähigen Elements verweigert wird, hat DENY Vorrang. Das Aufheben der erteilten Berechtigung in einem höheren Bereich hat jedoch keinen Vorrang.  
+ Durch das Erteilen einer Berechtigung wird DENY oder REVOKE für diese Berechtigung aus dem angegebenen sicherungsfähigen Element entfernt. Falls dieselbe Berechtigung aus einem höheren Bereich als dem des sicherungsfähigen Elements verweigert wird, hat DENY Vorrang. Das Aufheben der erteilten Berechtigung in einem höheren Bereich hat dagegen keinen Vorrang.  
   
 > [!CAUTION]  
 >  Eine DENY-Anweisung auf Tabellenebene hat keinen Vorrang vor einer GRANT-Anweisung auf Spaltenebene. Diese Inkonsistenz in der Berechtigungshierarchie wurde aus Gründen der Abwärtskompatibilität beibehalten. Dieses Verhalten wird in einer zukünftigen Version entfernt.  
@@ -158,7 +158,7 @@ In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die I
 ## <a name="permissions"></a>Berechtigungen  
  Prinzipale mit CONTROL-Berechtigung für ein sicherungsfähiges Element können die Berechtigung für dieses sicherungsfähige Element aufheben. Objektbesitzer können Berechtigungen für die Objekte aufheben, die sie besitzen.  
   
- Empfänger der CONTROL SERVER-Berechtigung, z. B. Mitglieder der festen Serverrolle sysadmin, können jede Berechtigung für ein beliebiges sicherungsfähiges Element auf dem Server aufheben. Empfänger der CONTROL SERVER-Berechtigung in einer Datenbank, z. B. Mitglieder der festen Datenbankrolle db_owner, können jede Berechtigung für ein beliebiges sicherungsfähiges Element in der Datenbank aufheben. Empfänger der CONTROL-Berechtigung in einem Schema können jede Berechtigung für jedes Objekt im Schema aufheben.  
+ Empfänger der CONTROL SERVER-Berechtigung, z.B. Mitglieder der festen Serverrolle sysadmin, können jede Berechtigung für ein beliebiges sicherungsfähiges Element auf dem Server aufheben. Empfänger der CONTROL SERVER-Berechtigung in einer Datenbank, z.B. Mitglieder der festen Datenbankrolle db_owner, können jede Berechtigung für ein beliebiges sicherungsfähiges Element in der Datenbank aufheben. Empfänger der CONTROL-Berechtigung in einem Schema können jede Berechtigung für jedes Objekt im Schema aufheben.  
   
 ##  <a name="securable"></a> Für sicherungsfähige Elemente spezifische Syntax  
  In der folgenden Tabelle sind die sicherungsfähigen Elemente und Themen aufgeführt, in denen die für ein sicherungsfähiges Element spezifische Syntax beschrieben wird.  
@@ -182,7 +182,7 @@ In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die I
 |Objekt|[REVOKE (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Warteschlange|[REVOKE (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Remotedienstbindung|[REVOKE (Berechtigungen von Service Broker) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|-Rolle|[REVOKE (Berechtigungen für Datenbankprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|Rolle|[REVOKE (Berechtigungen für Datenbankprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
 |Route|[REVOKE (Berechtigungen von Service Broker) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |Schema|[REVOKE (Schemaberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
 |Sucheigenschaftenliste|[REVOKE (Berechtigungen für das Durchsuchen von Eigenschaftenlisten) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
@@ -195,11 +195,11 @@ In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die I
 |Tabelle|[REVOKE (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Typ|[REVOKE (Typberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
 |Benutzer|[REVOKE (Berechtigungen für Datenbankprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|Anzeigen|[REVOKE (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Sicht|[REVOKE (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |XML-Schemasammlung|[REVOKE (Berechtigungen für XML-Schemaauflistungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Berechtigungshierarchie &amp;amp;#40;Datenbank-Engine &amp;amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Berechtigungshierarchie &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
