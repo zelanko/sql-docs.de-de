@@ -50,7 +50,7 @@ ms.locfileid: "51603310"
   
  *Download des Konnektivitätspatches für ADO.NET mit .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
   
- *Download des Konnektivitätspatches für ADO.NET mit .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
+ **Download des Konnektivitätspatches für ADO.NET mit .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
  
  * Den neuen Microsoft OLE DB-Treiber für SQL Server herunterladen: [ https://www.microsoft.com/download/details.aspx?id=56730 ](https://www.microsoft.com/download/details.aspx?id=56730).  
 
