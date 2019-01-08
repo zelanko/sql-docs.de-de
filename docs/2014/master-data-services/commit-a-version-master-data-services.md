@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - committing versions [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 484986c617742967c41160aaf369b3562e72d938
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db793009e2dd1c2be243b65c6bc50778578b0dc4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085783"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797753"
 ---
 # <a name="commit-a-version-master-data-services"></a>Durchführen eines Commits für eine Version (Master Data Services)
   Führen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]einen Commit für eine Version eines Modells durch, um Änderungen an den Elementen des Modells und den Attributen zu verhindern. Versionen mit ausgeführtem Commit können nicht entsperrt werden.  
@@ -29,9 +28,9 @@ ms.locfileid: "48085783"
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Versionsverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen.  
   
--   Der Status der Version muss **Gesperrt**sein. Weitere Informationen finden Sie unter [Lock a Version &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md).  
+-   Der Status der Version muss **Gesperrt**sein. Weitere Informationen finden Sie unter [Sperren einer Version &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md).  
   
 -   Alle Elemente müssen erfolgreich überprüft worden sein.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48085783"
   
 -   [Zuweisen eines Flags zu einer Version &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
--   [Kopieren einer Datenbankversion, &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)  
+-   [Kopieren einer Version &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Versionen &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  

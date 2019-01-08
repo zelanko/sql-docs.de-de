@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.mirroring.f1
@@ -13,12 +12,12 @@ ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc4c0179205eb027b6723f9f3ddb0d0bbd92f547
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3411b259ddb3dd5ce3e4247335eb51d226aa617f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058720"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788665"
 ---
 # <a name="database-properties-mirroring-page"></a>Datenbankeigenschaften (Seite Wird gespiegelt)
   Greifen Sie von der Prinzipaldatenbank aus auf diese Seite zu, und verwenden Sie sie zum Konfigurieren und Ändern der Eigenschaften der Datenbankspiegelung für eine Datenbank. Verwenden Sie die Seite auch, um den Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung zu starten, um den Status einer Spiegelungssitzung anzuzeigen und um die Datenbank-Spiegelungssitzung anzuhalten oder zu entfernen.  
@@ -30,7 +29,7 @@ ms.locfileid: "48058720"
   
 -   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Sicherheit konfigurieren**  
  Klicken Sie auf diese Schaltfläche, um den **Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung**zu starten.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "48058720"
 |Wenn die Spiegelung begonnen wurde.|Wenn der Zeugenserver im Assistenten geändert wurde, wird diese Einstellung entsprechend festgelegt.|  
   
  **Server-Netzwerkadressen**  
- Eine entsprechende Option ist für jede Serverinstanz vorhanden: **Prinzipal**, **Spiegel**und **Zeuge**.  
+ Eine entsprechende Option ist für jede der Serverinstanzen vorhanden: **Dienstprinzipal**, **Spiegel**, und **Zeuge**.  
   
  Die Server-Netzwerkadressen der Serverinstanzen werden automatisch angegeben, wenn Sie den Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung abschließen. Nach Abschluss des Assistenten können Sie die Netzwerkadressen bei Bedarf manuell ändern.  
   
@@ -122,7 +121,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |Option|Zeuge?|Erklärung|  
 |------------|--------------|-----------------|  
 |**Hohe Leistung (asynchron)**|NULL (falls vorhanden, wird er nicht verwendet, die Sitzung benötigt jedoch ein Quorum)|Um die Leistung zu steigern, befindet sich die Spiegeldatenbank immer in einem gewissen zeitlichen Abstand zur Prinzipaldatenbank und niemals auf dem tatsächlich aktuellen Stand. Die Lücke zwischen den beiden Datenbanken ist üblicherweise aber sehr klein. Der Verlust eines Partners hat folgenden Effekt:<br /><br /> Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalinstanz in Betrieb.<br /><br /> Wenn die Prinzipalserverinstanz nicht mehr zur Verfügung steht, wird der Spiegel beendet. Wenn die Sitzung jedoch keinen Zeugen hat (wie empfohlen) oder der Zeuge mit dem Spiegelserver verbunden ist, ist der Zugriff auf den Spiegelserver als betriebsbereiter Standbyserver weiterhin möglich. Der Datenbankbesitzer kann die Spiegelserverinstanz zur Übernahme des Diensts zwingen, wobei es möglicherweise zu Datenverlusten kommt.|  
-|**Hohe Sicherheit ohne automatisches Failover (synchron)**|nein|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf den Datenträger auf dem Spiegelserver geschrieben werden. Manuelles Failover ist möglich, wenn die Partner miteinander verbunden sind. Der Verlust eines Partners hat folgenden Effekt:<br /><br /> Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalinstanz in Betrieb.<br /><br /> Wenn die Prinzipalserverinstanz nicht mehr zur Verfügung steht, wird der Spiegel beendet, ist aber als betriebsbereiter Server verfügbar. Der Datenbankbesitzer kann die Spiegelserverinstanz zur Übernahme des Diensts zwingen, wobei es möglicherweise zu Datenverlusten kommt.|  
+|**Hohe Sicherheit ohne automatisches Failover (synchron)**|Nein|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf den Datenträger auf dem Spiegelserver geschrieben werden. Manuelles Failover ist möglich, wenn die Partner miteinander verbunden sind. Der Verlust eines Partners hat folgenden Effekt:<br /><br /> Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalinstanz in Betrieb.<br /><br /> Wenn die Prinzipalserverinstanz nicht mehr zur Verfügung steht, wird der Spiegel beendet, ist aber als betriebsbereiter Server verfügbar. Der Datenbankbesitzer kann die Spiegelserverinstanz zur Übernahme des Diensts zwingen, wobei es möglicherweise zu Datenverlusten kommt.|  
 |**Hohe Sicherheit mit automatischem Failover (synchron)**|Ja (erforderlich)|Bietet höchste Verfügbarkeit durch Einbindung einer Zeugenserverinstanz zur Unterstützung eines automatischen Failovers. Beachten Sie, dass die Auswahl der Option **Synchron mit automatischem Failover (hohe Verfügbarkeit)** nur möglich ist, wenn Sie zuvor eine Zeugenserveradresse angegeben haben. Manuelles Failover ist immer möglich, wenn die Partner miteinander verbunden sind. **\*\* Wichtig \*\*** Wenn der Zeuge getrennt wird, müssen die Partner miteinander verbunden sein, damit die Datenbank verfügbar ist. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).<br /><br /> In den Modi für den synchronen Betrieb wird sichergestellt, dass alle Transaktionen, für die ein Commit ausgeführt wurde, auf den Datenträger des Spiegelservers geschrieben werden. In Anwesenheit eines Zeugen hat der Verlust eines Partners die folgende Auswirkung:<br /><br /> Wenn der Prinzipalserver ausfällt, findet ein automatisches Failover statt. Die Spiegelserverinstanz übernimmt die Rolle des Prinzipals und stellt ihre Datenbank als Prinzipaldatenbank zur Verfügung.<br /><br /> Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalinstanz in Betrieb.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).|  
   
  Nach dem Beginn der Spiegelung können Sie den Betriebsmodus ändern und die Änderung speichern, indem Sie auf **OK**klicken.  

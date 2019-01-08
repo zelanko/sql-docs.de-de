@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, adding and removing Publishers
@@ -13,12 +12,12 @@ ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 217069061ea8169c3580e53de1d77462a85e29cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136010"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788440"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Hinzufügen und Entfernen von Verlegern vom Replikationsmonitor aus
   Der Server, von dem aus Sie den Replikationsmonitor starten, wird, sofern es sich um einen Verleger handelt, automatisch dem Replikationsmonitor hinzugefügt. Weitere Verleger können im Dialogfeld **Verleger hinzufügen** hinzugefügt werden. Alle hinzugefügten Verleger werden als Gruppe im linken Bereich des Replikationsmonitors angezeigt. Die Gruppe **Meine Verleger** ist standardmäßig enthalten, Sie können aber zum Verwalten einer oder mehrerer Replikationstopologien auch neue Gruppen erstellen. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](start-the-replication-monitor.md).  

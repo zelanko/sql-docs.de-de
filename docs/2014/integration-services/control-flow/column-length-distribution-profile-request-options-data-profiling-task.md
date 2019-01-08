@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ae900ea29dba0217a9e186007476c12fa15c92e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac9e0cfe4b8e7d0250f6da7acea276f64dfb622f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098580"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790732"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>Optionen für Anforderung für Verteilungsprofil für Spaltenlänge (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Verteilungsprofil für Spaltenlänge** festzulegen. Ein Verteilungsprofil für die Spaltenlänge dokumentiert alle eindeutigen Längen von Zeichenfolgenwerten in der ausgewählten Spalte sowie den Prozentsatz der Zeilen in der Tabelle, die jede Länge darstellt. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. ungültige Werte. Beispiel: Sie erstellen ein Profil einer Spalte mit den Codes der US-amerikanischen Bundesstaaten, die zwei Zeichen lang sind, und entdecken Werte, die länger als zwei Zeichen sind.  
@@ -72,7 +71,7 @@ ms.locfileid: "48098580"
  **RequestID**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **IgnoreLeadingSpaces**  
  Geben Sie an, ob führende Leerzeichen ignoriert werden sollen, wenn das Profil Zeichenfolgenwerte vergleicht. Der Standardwert für diese Option ist **False**.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "48098580"
  Geben Sie an, ob nachfolgende Leerzeichen ignoriert werden sollen, wenn das Profil Zeichenfolgenwerte vergleicht. Der Standardwert für diese Option ist **True**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Der Datenprofilerstellungs-Task-Editor &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

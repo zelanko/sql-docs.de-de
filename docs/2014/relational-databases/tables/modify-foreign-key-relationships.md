@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65538
@@ -17,12 +16,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a07b83aa6c7556cc8404dab6ff5e26e75800e340
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e6886e9ef69842432a0759095f11335cfbb494
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130630"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797662"
 ---
 # <a name="modify-foreign-key-relationships"></a>Ändern von Fremdschlüsselbeziehungen
   Sie können die Fremdschlüsselseite einer Beziehung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern. Wenn Sie den Fremdschlüssel einer Tabelle ändern, wird entsprechend angepasst, welche Spalten mit den Spalten in der Primärschlüsseltabelle verknüpft sind.  
@@ -33,7 +32,7 @@ ms.locfileid: "48130630"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So ändern Sie einen Fremdschlüssel mit:**  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48130630"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Für die neue Fremdschlüsselspalte und die verknüpfte Primärschlüsselspalte müssen Datentyp und Größe übereinstimmen, mit diesen Ausnahmen:  
@@ -57,7 +56,7 @@ ms.locfileid: "48130630"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>So ändern Sie einen Fremdschlüssel  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48130630"
      Überprüft alle Daten, die vor der Erstellung oder Reaktivierung der Einschränkung in der Tabelle vorhandenen sind, auf die Einschränkung hin.  
   
      **Kategorie Tabellen- und Spaltenspezifikation**  
-     Wenn die Kategorie erweitert ist, wird angezeigt, welche Spalten aus welchen Tabellen als Fremdschlüssel, Primärschlüssel oder eindeutiger Schlüssel in der Beziehung fungieren. Klicken Sie rechts neben dem Eigenschaftenfeld auf die Schaltfläche mit den Auslassungspunkten (**…**), um diese Werte zu bearbeiten oder zu definieren.  
+     Wenn die Kategorie erweitert ist, wird angezeigt, welche Spalten aus welchen Tabellen als Fremdschlüssel, Primärschlüssel oder eindeutiger Schlüssel in der Beziehung fungieren. Klicken Sie rechts neben dem Eigenschaftenfeld auf die Schaltfläche mit den Auslassungspunkten (**...**), um diese Werte zu bearbeiten oder zu definieren.  
   
      **Fremdschlüssel-Basistabelle**  
      Zeigt an, welche Tabelle die Spalte enthält, die in der ausgewählten Beziehung als Fremdschlüssel fungiert.  

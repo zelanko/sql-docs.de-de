@@ -14,12 +14,12 @@ ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee95aa0b47e18ac1409858da03d5972baa7ec951
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2524c51f1b4b9297b6e3483a27fd78e6c1836e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802358"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541844"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (Excel-Treiber)
 > [!NOTE]  
@@ -27,11 +27,11 @@ ms.locfileid: "47802358"
   
  **SQLGetInfo** unterstützt die SQL_FILE_USAGE Informationstyp. Der zurückgegebene Wert ist eine 16-Bit-Ganzzahl, die angibt, wie der Treiber die Dateien in einer Datenquelle direkt behandelt:  
   
--   SQL_FILE_NOT_SUPPORTED – Der Treiber ist nicht nur einer Ebene Treiber.  
+-   SQL_FILE_NOT_SUPPORTED - ist der Treiber keinen ein-Ebenen-Treiber.  
   
--   SQL_FILE_TABLE – Ein ein-Ebenen-Treiber behandelt Dateien in einer Datenquelle als Tabellen an.  
+-   SQL_FILE_TABLE - behandelt ein ein-Ebenen-Treiber-Dateien in einer Datenquelle als Tabellen.  
   
--   SQL_FILE_QUALIFIER – Ein ein-Ebenen-Treiber behandelt Dateien in einer Datenquelle als Qualifizierer an.  
+-   SQL_FILE_QUALIFIER - Treiber nur einer Ebene behandelt Dateien in einer Datenquelle, als Qualifizierer.  
   
  Der ODBC-Treiber gibt für die Microsoft Exceldriver SQL_FILE_TABLE zurück, da jede Datei eine Tabelle handelt.  
   

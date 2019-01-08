@@ -16,12 +16,12 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 80b89f52469b2d05bf7f428e4f4b67788b73969b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 529d83451c897359152520aecbece856ef7e6ded
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146170"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538201"
 ---
 # <a name="create-filtered-indexes"></a>Erstellen gefilterter Indizes
   In diesem Thema wird beschrieben, wie ein gefilterter Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Ein gefilterter Index ist ein optimierter nicht gruppierter Index, der sich besonders für Abfragen eignet, bei denen aus einer fest definierten Teilmenge von Daten ausgewählt wird. Dieser verwendet ein Filterprädikat, um einen Teil der Zeilen in der Tabelle zu indizieren. Mit einem sorgfältig entworfenen gefilterten Index können im Vergleich zu Tabellenindizes die Abfrageleistung verbessert und der Aufwand für die Indexverwaltung und die Indexspeicherung reduziert werden.  
@@ -48,7 +48,7 @@ ms.locfileid: "48146170"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie einen gefilterten Index mithilfe von:**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48146170"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Design"></a> Entwurfsaspekte  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48146170"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein. Verwenden Sie CREATE INDEX WITH DROP_EXISTING, um den gefilterten Indexausdruck zu ändern.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-create-a-filtered-index"></a>So erstellen Sie einen gefilterten Index  
   
@@ -105,17 +105,17 @@ ms.locfileid: "48146170"
   
 3.  Klicken Sie auf das Pluszeichen, um die Tabelle zu erweitern, in der Sie einen gefilterten Index erstellen möchten.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes** , zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index**aus.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes**, zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index...** aus.  
   
 5.  Geben Sie in das Dialogfeld **Neuer Index** auf der Seite **Allgemein** den Namen des neuen Indexes in das Feld **Indexname** ein.  
   
-6.  Klicken Sie unter **Indexschlüsselspalten**auf **Hinzufügen…**.  
+6.  Klicken Sie unter **Indexschlüsselspalten** auf **Hinzufügen…**.  
   
 7.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus***Tabellenname* die Kontrollkästchen der Tabellenspalten, die dem eindeutigen Index hinzugefügt werden sollen.  
   
 8.  Klicken Sie auf **OK**.  
   
-9. Geben Sie auf der Seite **Filter** unter **Filterausdruck**den SQL-Ausdruck ein, mit dem Sie den gefilterten Index erstellen.  
+9. Geben Sie auf der Seite **Filter** unter **Filterausdruck** den SQL-Ausdruck ein, mit dem Sie den gefilterten Index erstellen.  
   
 10. Klicken Sie auf **OK**.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48146170"
   
 #### <a name="to-create-a-filtered-index"></a>So erstellen Sie einen gefilterten Index  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

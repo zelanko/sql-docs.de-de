@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e9bedbd7807b78288a901d0b2a7674232c7e91
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 188406e99f32b42079b66536db42810222eb2a24
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145985"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516739"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Neuerungen in SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -64,7 +64,7 @@ Diese Version führt Codierungshinweise, eine erweiterte Funktion, die zur Optim
 
 * Hashcodierung wird für Group by-Spalten (häufig Dimensionstabelle Werte) und Fremdschlüssel bevorzugt. Zeichenfolgenspalten sind immer Hash codiert.
 
-Numerische Spalten können mit dieser Codierung Methoden verwenden. Wenn Analysis Services beginnt mit der Verarbeitung einer Tabelle, wenn entweder die Tabelle (mit oder ohne Partitionen) leer ist, oder ein vollständigen Tabelle Verarbeitungsvorgang ausgeführt wird, werden Beispielwerte für jede numerische Spalte zu bestimmen, ob die anzuwendende Wert oder die hashcodierung übernommen. . Wertcodierung wird standardmäßig ausgewählt, wenn das Beispiel der unterschiedlichen Werte in der Spalte ist groß genug ist, – andernfalls in der Regel eine bessere Komprimierung hashcodierung enthält. Es ist möglich, für die Analysis Services Codierungsmethode ändern, nachdem die Spalte basierend auf Weitere Informationen über die datenverteilung teilweise verarbeitet wurde, und starten Sie den encoding-Prozess. Diese können jedoch erhöhen die Verarbeitungszeit und ineffizient ist. Im Whitepaper zur Optimierung der Leistung erläutert im Detail neu codieren zu müssen, und es wird beschrieben, wie sie mithilfe von SQL Server Profiler erkannt.
+Numerische Spalten können mit dieser Codierung Methoden verwenden. Wenn Analysis Services beginnt mit der Verarbeitung einer Tabelle, wenn entweder die Tabelle (mit oder ohne Partitionen) leer ist, oder ein vollständigen Tabelle Verarbeitungsvorgang ausgeführt wird, werden Beispielwerte für jede numerische Spalte zu bestimmen, ob die anzuwendende Wert oder die hashcodierung übernommen. . Wertcodierung wird standardmäßig ausgewählt, wenn das Beispiel der unterschiedlichen Werte in der Spalte ist groß genug ist, – andernfalls in der Regel eine bessere Komprimierung hashcodierung bietet. Es ist möglich, für die Analysis Services Codierungsmethode ändern, nachdem die Spalte basierend auf Weitere Informationen über die datenverteilung teilweise verarbeitet wurde, und starten Sie den encoding-Prozess. Diese können jedoch erhöhen die Verarbeitungszeit und ineffizient ist. Im Whitepaper zur Optimierung der Leistung erläutert im Detail neu codieren zu müssen, und es wird beschrieben, wie sie mithilfe von SQL Server Profiler erkannt.
 
 Codierungshinweise ermöglicht dem Ersteller Geben Sie eine Einstellung für die Codierung Methode Vorkenntnisse angegeben, aus der datenprofilerstellung und/oder als Reaktion auf Ablaufverfolgungsereignisse neu codieren zu müssen. Da die Aggregation für Spalten-Hash-codiert ist langsamer als über Wert codiert Spalten wertcodierung als Hinweis für solche Spalten angegeben werden kann. Es ist nicht garantiert, dass die Einstellung angewendet wird. Es ist ein Hinweis im Gegensatz zu einer Einstellung. Legen Sie zum Angeben eines codierungshinweises die EncodingHint-Eigenschaft für die Spalte ein. Mögliche Werte sind "Default", "Value" und "Hash". JSON-basierte Metadaten aus der Datei "Model.bim" der folgende Codeausschnitt gibt die Codierung für die Spalte Sales Amount Wert an.
 

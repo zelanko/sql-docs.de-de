@@ -11,12 +11,12 @@ ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c52425d05f7e9acf8ea5468dff21f17aaf30ebe4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1f753856fbec3fe521cf23e6506c3b43e5dec481
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163680"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358902"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Erstellen und Anpassen von PowerPivot-Katalogen
   Der PowerPivot-Katalog ist eine spezielle SharePoint-Dokumentbibliothek, die umfangreiche Vorschau- und Dokumentverwaltungsfunktionen für veröffentlichte Excel-Arbeitsmappen und Reporting Services-Berichte bereitstellt, die PowerPivot-Daten enthalten.  
@@ -43,7 +43,7 @@ ms.locfileid: "48163680"
     >  Für den Power Pivot-Katalog ist Microsoft Silverlight erforderlich.  Silverlight wird vom Microsoft Edge-Browser nicht unterstützt.   
     > Um die Bibliotheksinhalte in Microsoft Edge anzuzeigen, klicken Sie auf die Registerkarte **Bibliothek** im Power Pivot-Katalog, und ändern Sie dann die Ansicht der Dokumentbibliothek in **Alle Dokumente**.    
     > Um die Standardansicht zu ändern, klicken Sie auf die Registerkarte **Bibliothek** und dann auf „Ansicht ändern“. Klicken Sie auf „Zur Standardansicht machen“, und klicken Sie dann auf „OK“, um die Standardansicht zu speichern.  
-    >  Weitere Informationen zu den von Microsoft Edge unterstützten Features finden Sie im Windows-Blog, [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  Weitere Informationen zu den von Edge unterstützten, finden Sie in der Windows-Blog, [eine Unterbrechung aus der Vergangenheit, Teil 2: Sagen Goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Sie müssen Websitebesitzer sein, um eine Bibliothek erstellen zu können.  
   
@@ -56,16 +56,16 @@ ms.locfileid: "48163680"
 -   Zum Anzeigen oder Erstellen eines Reporting Services-Berichts, der auf einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe basiert, müssen sowohl die Arbeitsmappe als auch der Bericht im gleichen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog enthalten sein. Der Bericht muss entweder eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe verwenden, die eingebettete Daten enthält, oder die Arbeitsmappe muss eine externe Datenquelle enthalten, die eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe ist.  
   
 ##  <a name="overview"></a> Übersicht  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog ist eine Bibliotheksvorlage, die verfügbar ist, wenn Sie [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] auf einem SharePoint-Server installieren. Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog kombiniert eine exakte Vorschau des Dateiinhalts mit Fakten zum Dokumentursprung. Sie können sofort sehen, wer das Dokument erstellt hat und wann es zuletzt geändert wurde. Um die Erstellung von Vorschaubildern [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog verwendet einen momentaufnahmedienst, der gelesen wird, kann [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Arbeitsmappen und Reporting Services-Berichte, die PowerPivot-Daten enthalten. Wenn Sie eine Datei veröffentlichen, die der Momentaufnahmedienst nicht lesen kann, ist kein Vorschaubild für diese Datei verfügbar.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog ist eine Bibliotheksvorlage, die verfügbar ist, wenn Sie [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] auf einem SharePoint-Server installieren. Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog kombiniert eine exakte Vorschau des Dateiinhalts mit Fakten zum Dokumentursprung. Sie können sofort sehen, wer das Dokument erstellt hat und wann es zuletzt geändert wurde. Zur Erstellung von Vorschaubildern verwendet der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog einen Momentaufnahmedienst, der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen und Reporting Services-Berichte lesen kann, die PowerPivot-Daten enthalten. Wenn Sie eine Datei veröffentlichen, die der Momentaufnahmedienst nicht lesen kann, ist kein Vorschaubild für diese Datei verfügbar.  
   
  Die Vorschaubilder beruhen auf dem Rendering der Arbeitsmappe in Excel Services. Die Darstellung im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog sollte mit der Anzeige einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe in einem Browser übereinstimmen. Die Vorschauoberfläche ist jedoch begrenzt. Teile einer Arbeitsmappe oder eines Berichts werden u. U. in Anpassung an den verfügbaren Platz gekürzt. Sie müssen unter Umständen eine Arbeitsmappe oder einen Bericht öffnen, um das gesamte Dokument anzuzeigen.  
   
- Das Aktualisieren von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappendaten aus externen Datenquellen wird im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog vollständig unterstützt, erfordert jedoch zusätzliche Konfigurationseinstellungen. Ein Farm- oder Dienstadministrator muss den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog als vertrauenswürdigen Excel Services-Speicherort hinzufügen. Weitere Informationen finden Sie unter [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ Das Aktualisieren von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappendaten aus externen Datenquellen wird im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog vollständig unterstützt, erfordert jedoch zusätzliche Konfigurationseinstellungen. Ein Farm- oder Dienstadministrator muss den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog als vertrauenswürdigen Excel Services-Speicherort hinzufügen. Weitere Informationen finden Sie unter [Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="createlib"></a> Erstellen von PowerPivot-Katalog  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog wird erstellt, wenn Sie [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] mithilfe der Installationsoption Neuer Server installieren. Wenn Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] einer vorhandenen Farm hinzugefügt haben oder eine zusätzliche Bibliothek benötigen, können Sie für Ihre Anwendung oder Website eine neue erstellen.  
   
-1.  1.  **SharePoint 2010**: Klicken Sie in der oberen linken Ecke der Homepage Ihrer Website auf **Websiteaktionen** .  
+1.  1.  **SharePoint 2010**: Klicken Sie auf **Websiteaktionen** auf der oberen linken Ecke der Homepage Ihrer Website.  
   
     2.  Klicken Sie auf **Weitere Optionen**.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48163680"
   
 3.  Klicken Sie auf **Erstellen**.  
   
-4.  Bitten Sie einen Farm- oder Dienstadministrator, den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog als vertrauenswürdigen Speicherort für Excel Services hinzuzufügen. Dieser Schritt ist notwendig, um Fehler zu vermeiden, wenn ein Benutzer eine Arbeitsmappe für die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenaktualisierung konfiguriert. Weitere Informationen zu diesem Task finden Sie unter [erstellen ein vertrauenswürdiges Speicherorts für PowerPivot-Websites in der Zentraladministration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+4.  Bitten Sie einen Farm- oder Dienstadministrator, den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog als vertrauenswürdigen Speicherort für Excel Services hinzuzufügen. Dieser Schritt ist notwendig, um Fehler zu vermeiden, wenn ein Benutzer eine Arbeitsmappe für die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenaktualisierung konfiguriert. Weitere Informationen zu diesem Task finden Sie unter [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
  Im Schnellstart-Navigationsbereich für die aktuelle Website wird ein Link zur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalogbibliothek angezeigt.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48163680"
   
 3.  **SharePoint 2010:** Klicken Sie unter Benutzerdefinierte Ansichten auf **Ansicht ändern**.  
   
-     **SharePoint 2013:** Klicken Sie unter **Ansichten verwalten**auf **Ansicht ändern**.  
+     **SharePoint 2013:** In **Ansichten verwalten**, klicken Sie auf **Ansicht ändern**.  
   
 4.  Geben Sie unter Sortieren die Kriterien an, die bestimmen, wie die Arbeitsmappen in der Liste angezeigt werden. Standardmäßig werden Dokumente in der Reihenfolge aufgeführt, in der sie hinzugefügt wurden.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48163680"
   
  ![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
- Arbeitsmappenbesitzer oder -autoren benötigen die Berechtigung **Teilnehmen** , um die Datenaktualisierung für eine Arbeitsmappe zu planen. Benutzer mit Mitwirkungsberechtigungen können die Konfigurationsseite der Arbeitsmappe öffnen und bearbeiten, um die zur Datenaktualisierung verwendeten Anmelde- und Zeitplaninformationen anzugeben.  
+ Arbeitsmappenbesitzer oder -autoren benötigen die Berechtigung **Teilnehmen** , um die Datenaktualisierung für eine Arbeitsmappe zu planen. Benutzer mit Mitwirkungsberechtigungen können öffnen und Bearbeiten von der Arbeitsmappe datenaktualisierungskonfigurationsseite zum Geben Sie die Anmeldeinformationen ein, und planen die Informationen, mit denen die Daten zu aktualisieren.  
   
- Daher können Benutzer, die lediglich über die Berechtigungsstufen **Anzeigen** oder **Lesen** verfügen, nicht auf die Schaltfläche Aktualisieren zugreifen. Die Schaltfläche Aktualisieren ist zwar sichtbar, aber deaktiviert. Weitere Informationen finden Sie unter [Benutzerberechtigungen und Berechtigungsstufen in SharePoint 2013](http://technet.microsoft.com/library/cc721640.aspx).  
+ Daher können Benutzer, die lediglich über die Berechtigungsstufen **Anzeigen** oder **Lesen** verfügen, nicht auf die Schaltfläche Aktualisieren zugreifen. Die Schaltfläche Aktualisieren ist zwar sichtbar, aber deaktiviert. Weitere Informationen finden Sie unter [Benutzerberechtigungen und Berechtigungsstufen in SharePoint 2013](https://technet.microsoft.com/library/cc721640.aspx).  
   
 ##  <a name="switch"></a> Wechseln zur Theatersicht oder Katalogsicht  
  Die Vorschau ändert sich abhängig davon, wie Sie die Sicht für die Bibliothek konfigurieren. In der Katalogsicht können Sie mit der Maus auf einzelne Arbeitsblätter in der Arbeitsmappe zeigen, um ein Blatt in den Vorschaubereich zu bringen.  

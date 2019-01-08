@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Beziehung | Microsoft Docs
+title: Erstellen einer Beziehung in tabellarischen Modellen von Analysis Services | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d985f9985691005eaa84365dacd2a4072542c05b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7e9ee96a04aa6b023be51f8e1e8d913e26a7e2a8
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041074"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072097"
 ---
 # <a name="create-a-relationship"></a>Erstellen einer Beziehung 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Wenn die Tabellen in der Datenquelle nicht über vorhandene Beziehungen verfügen oder wenn Sie neue Tabellen hinzufügen, können Sie zum Erstellen neuer Beziehungen die Tools im Modell-Designer verwenden. Informationen zur Verwendungsweise von Beziehungen in tabellarischen Modellen finden Sie unter [Beziehungen](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
+  Wenn die Tabellen in der Datenquelle nicht über vorhandene Beziehungen verfügen oder wenn Sie neue Tabellen hinzufügen, können Sie zum Erstellen neuer Beziehungen die Tools im Modell-Designer verwenden. Informationen, wie Beziehungen in tabellarischen Modellen verwendet werden, finden Sie unter [Beziehungen](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
   
 ## <a name="create-a-relationship-between-two-tables"></a>Erstellen einer Beziehung zwischen zwei Tabellen  
   

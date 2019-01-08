@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6312332a6c0c8cc9cf07a93f67aa71ebd61b62ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 009a2eda2bf0690ee9657a156a02eb4659a3224d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054240"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793560"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS-Ausdruck)
   Gibt ein Token (Teilzeichenfolge) aus einer Zeichenfolge zurück – basierend auf den angegebenen Trennzeichen, die Token in der Zeichenfolge trennen, und der Nummer des Tokens, die festlegt, welcher Token zurückgegeben werden soll.  
@@ -32,7 +31,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
  Eine Zeichenfolge, die durch Trennzeichen getrennte Token enthält.  
   
  *delimiter_string*  
- Eine Zeichenfolge, die Begrenzungszeichen enthält. "; , " enthält beispielsweise drei Begrenzungszeichen: Semikolon, Leerzeichen und Komma.  
+ Eine Zeichenfolge, die Begrenzungszeichen enthält. „; ,“ enthält beispielsweise drei Begrenzungszeichen: ein Semikolon, ein Leerzeichen und ein Komma.  
   
  *occurrence*  
  Eine ganze Zahl mit oder ohne Vorzeichen, die angibt, welcher Token zurückgegeben werden soll. Wenn Sie z. B. 3 als Wert für diesen Parameter angeben, wird das dritte Token in der Zeichenfolge zurückgegeben.  
@@ -58,13 +57,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
 -   Sie können Variablen und Spalten als Werte für alle Argumente des Ausdrucks verwenden.  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  
- Im folgenden Beispiel gibt die TOKEN-Funktion den Wert "ein" zurück. Die Zeichenfolge "ein kleiner weißer Hund" hat 4 durch das Trennzeichen " " (Leerzeichen) getrennte Token: "ein", "kleiner", "weißer", "Hund". Das zweite Argument, eine Trennzeichenfolge, gibt nur ein Trennzeichen (das Leerzeichen) an, das beim Teilen der Eingabezeichenfolge in Token verwendet werden soll. Das letzte Argument 1 legt fest, dass das erste Token zurückgegeben werden soll. In dieser Beispielzeichenfolge ist "ein" das erste Token.  
+ Im folgenden Beispiel gibt die TOKEN-Funktion den Wert "ein" zurück. Die Zeichenfolge „ein kleiner weißer Hund“ hat 4 durch das Trennzeichen „ “ (Leerzeichen) getrennte Token: „ein“, „kleiner“, „weißer“, „Hund“. Das zweite Argument, eine Trennzeichenfolge, gibt nur ein Trennzeichen (das Leerzeichen) an, das beim Teilen der Eingabezeichenfolge in Token verwendet werden soll. Das letzte Argument 1 legt fest, dass das erste Token zurückgegeben werden soll. In dieser Beispielzeichenfolge ist „ein“ das erste Token.  
   
 ```  
 TOKEN("a little white dog"," ",1)  
 ```  
   
- Im folgenden Beispiel gibt die TOKEN-Funktion den Wert "Hund" zurück. Die Trennzeichenfolge in diesem Beispiel enthält 5 Trennzeichen. Die Eingabezeichenfolge enthält 4 Token: "ein", "kleiner", "weißer", "Hund".  
+ Im folgenden Beispiel gibt die TOKEN-Funktion den Wert "Hund" zurück. Die Trennzeichenfolge in diesem Beispiel enthält 5 Trennzeichen. Die Eingabezeichenfolge enthält 4 Token: „a“, „little“, „white“, „dog“.  
   
 ```  
 TOKEN("a:little|white dog","| ,.:",4)  
@@ -94,7 +93,7 @@ TOKEN("        a little white dog", " ", 1)
 TOKEN("2009/01/01", "/"), 1  
 ```  
   
- Im folgenden Beispiel gibt die TOKEN-Funktion den Dateinamen des angegebenen Pfads zurück. Wenn der Wert von User::Path z. B. "C:\Programme\Data\MeineDatei.txt" ist, gibt die TOKEN-Funktion "MeineDatei.txt" zurück. Die TOKENCOUNT-Funktion gibt 4 zurück, und die TOKEN-Funktion gibt das 4. Token "MeineDatei.txt" zurück.  
+ Im folgenden Beispiel gibt die TOKEN-Funktion den Dateinamen des angegebenen Pfads zurück. Wenn der Wert von User::Path z. B. „C:\Programme\Daten\MeineDatei.txt“ lautet, gibt die TOKEN-Funktion „MeineDatei.txt“ zurück. Die TOKENCOUNT-Funktion gibt 4 zurück, und die TOKEN-Funktion gibt das 4. Token „MeineDatei.txt“ zurück.  
   
 ```  
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  

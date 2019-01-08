@@ -11,12 +11,12 @@ ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd9aaf7f069cd9454a9f735dd08f2956aaf582c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 263cdf9ddd1c140a4cb2d3142c8b3db29e558791
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159320"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543895"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Konfigurieren von Editoren (SQL Server Management Studio)
   Sie können die Operation der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Editoren anpassen, indem Sie die Optionen für jeden Editor konfigurieren.  
@@ -24,13 +24,13 @@ ms.locfileid: "48159320"
 ## <a name="settng-editor-options"></a>Settng-Editor-Optionen  
  Sie können die meisten Editoroptionen einrichten, indem Sie im Menü **Extras** den Eintrag **Optionen…** auswählen und so das Dialogfeld **Optionen** anzeigen. Öffnen Sie im Dialogfeld **Optionen** den Knoten **Text-Editor** im linken Bereich, um die Optionen für Code- und Textbearbeitung festzulegen. Die Knoten unter Text-Editor gelten für bestimmte Editoren:  
   
-1.  **Alle Sprachen** – Mit diesem Knoten festgelegte Optionen gelten für alle [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Editoren. Sie können diese Einstellungen mithilfe der anderen Knoten überschreiben, um für einen bestimmten Editor andere Optionen festzulegen.  
+1.  **Alle Sprachen**: Mit diesem Knoten festgelegte Optionen gelten für alle [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]-Editoren. Sie können diese Einstellungen mithilfe der anderen Knoten überschreiben, um für einen bestimmten Editor andere Optionen festzulegen.  
   
-2.  **Nur-Text** – Mit diesem Knoten festgelegte Optionen gelten für MDX-, DMX- und Text-Editoren.  
+2.  **Nur-Text**: Mit diesem Knoten festgelegte Optionen gelten für MDX-, DMX- und Text-Editoren.  
   
-3.  **Transact-SQL** – Mit diesem Knoten festgelegte Optionen gelten für den Datenbank-Engine-Abfrage-Editor.  
+3.  **Transact-SQL**: Mit diesem Knoten festgelegte Optionen gelten für den Datenbank-Engine-Abfrage-Editor.  
   
-4.  **XML** – Mit diesem Knoten festgelegte Optionen gelten für den XML for Analysis-Editor.  
+4.  **XML**: Mit diesem Knoten festgelegte Optionen gelten für den XML for Analysis-Editor.  
   
  Öffnen Sie die Knoten **Abfrageausführung** oder **Abfrageergebnisse** , um die Ausführung von Abfragen und die Anzeige der Ergebnisse anzupassen.  
   

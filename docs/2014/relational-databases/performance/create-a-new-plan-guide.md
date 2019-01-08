@@ -15,12 +15,12 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a792063b76beebfba4d0d7179e5bc5ed394d3f6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207750"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519872"
 ---
 # <a name="create-a-new-plan-guide"></a>Erstellen einer neuen Planhinweisliste
   Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]eine Planhinweisliste erstellen. Planhinweislisten beeinflussen die Abfrageoptimierung, indem Abfragehinweise oder ein fester Abfrageplan an die Abfragen angefügt werden. In der Planhinweisliste geben Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung an, die optimiert werden soll, sowie entweder eine OPTION-Klausel mit den zu verwendenden Abfragehinweisen oder einen spezifischen Abfrageplan, der für die Optimierung der Abfrage verwendet werden soll. Wenn die Abfrage ausgeführt wird, vergleicht der Abfrageoptimierer die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung mit der Planhinweisliste und fügt der Abfrage entweder zur Laufzeit die OPTION-Klausel hinzu oder verwendet den angegebenen Abfrageplan.  
@@ -31,7 +31,7 @@ ms.locfileid: "48207750"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie eine Planhinweisliste mit:**  
   
@@ -39,11 +39,11 @@ ms.locfileid: "48207750"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
--   Die Argumente für sp_create_plan_guide müssen in der angezeigten Reihenfolge bereitgestellt werden. Wenn Sie geben Sie Werte für die Parameter der `sp_create_plan_guide`, alle Parameter, die Namen müssen explizit angegeben werden, oder überhaupt. Wird z. B. `@name =` angegeben, müssen auch `@stmt =` , `@type =` usw. angegeben werden. Auch wenn `@name =` nicht angegeben und nur der Parameterwert bereitgestellt wird, die verbleibenden Parameternamen müssen ebenfalls angegeben und nur ihre Werte bereitgestellt. Argumentnamen dienen nur zu Beschreibungszwecken, zum besseren Verständnis der Syntax. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft nicht, ob der angegebene Parametername mit dem Namen des Parameters an der Position übereinstimmt, an der der Name verwendet wird.  
+-   Die Argumente für sp_create_plan_guide müssen in der angezeigten Reihenfolge bereitgestellt werden. Wenn Sie Werte für die Parameter von `sp_create_plan_guide` angeben, müssen entweder alle oder überhaupt keine Parameternamen explizit angegeben werden. Wird z. B. `@name =` angegeben, müssen auch `@stmt =` , `@type =` usw. angegeben werden. Ebenso dürfen, wenn `@name =` nicht angegeben und nur der Parameterwert bereitgestellt wird, die übrigen Parameterwerte ebenfalls nicht angegeben und nur ihre Werte bereitgestellt werden. Argumentnamen dienen nur zu Beschreibungszwecken, zum besseren Verständnis der Syntax. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft nicht, ob der angegebene Parametername mit dem Namen des Parameters an der Position übereinstimmt, an der der Name verwendet wird.  
   
 -   Sie können mehr als eine Planhinweisliste des Typs OBJECT oder SQL für dieselbe Abfrage und den Batch oder das Modul erstellen. Es kann jedoch nur jeweils eine Planhinweisliste aktiviert sein.  
   
@@ -56,13 +56,13 @@ ms.locfileid: "48207750"
 ####  <a name="Permissions"></a> Berechtigungen  
  Zum Erstellen einer Planhinweisliste vom Typ OBJECT wird die ALTER-Berechtigung für das Objekt benötigt, auf das verwiesen wird. Zum Erstellen einer Planhinweisliste vom Typ SQL oder TEMPLATE wird die ALTER-Berechtigung für die aktuelle Datenbank benötigt.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-create-a-plan-guide"></a>Erstellen einer Planhinweisliste  
   
 1.  Klicken Sie auf das Pluszeichen, um die Datenbank zu erweitern, in der Sie eine Planhinweisliste erstellen möchten, und klicken Sie dann auf das Pluszeichen, um den Ordner **Programmierbarkeit** zu erweitern.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Planhinweislisten** , und wählen Sie **Neue Planhinweisliste…**.  
+2.  Mit der rechten Maustaste die **Planhinweislisten** Ordner, und wählen **neue Planhinweisliste...** .  
   
 3.  Geben Sie im Dialogfeld **Neue Planhinweisliste** im Feld **Name** den Namen der Planhinweisliste ein.  
   

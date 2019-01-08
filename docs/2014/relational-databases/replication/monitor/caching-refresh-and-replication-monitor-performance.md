@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -17,21 +16,21 @@ ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e3c468524f470a11ec73ace3c5feffaa2f52ead
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d61c50c68033b3add4b52063980bf5caa042369
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049670"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800622"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>Zwischenspeichern, Aktualisieren und Leistung des Replikationsmonitors
   Der Replikationsmonitor von[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dient der effizienten Überwachung einer großen Zahl von Computern in einem Produktionssystem. Die Abfragen, mit denen der Replikationsmonitor Berechnungen ausführt und Daten erfasst, werden zwischengespeichert und regelmäßig aktualisiert. Das Zwischenspeichern verringert die Zahl der Abfragen und Berechnungen, die erforderlich sind, wenn Sie verschiedene Seiten im Replikationsmonitor anzeigen, und ermöglicht es, den Umfang der Überwachungen für mehrere Benutzer optimal anzupassen.  
   
  Die Aktualisierung des Cache wird durch einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agentauftrag ausgeführt: **Aktualisierung für die Replikationsüberwachung**. Der Auftrag wird fortlaufend ausgeführt. Der Zeitplan für die Aktualisierung des Cache hängt von einer bestimmten Wartedauer nach der vorhergehenden Aktualisierung ab:  
   
--   Wenn seit dem letzten Erstellen des Cache Änderungen des Agent-Verlaufs stattgefunden haben, beträgt die Wartezeit mindestens 4 Sekunden oder die Zeitspanne, die das Erstellen des vorherigen Cache gedauert hat.  
+-   Wenn Änderungen des Agent-Verlaufs der letzten Erstellung des Caches seit, ist die Wartezeit das Minimum an: 4 Sekunden. oder die Zeitspanne, die zum Erstellen des vorherigen Cache gedauert.  
   
--   Wenn seit dem letzten Erstellen des Cache keine Änderungen des Agent-Verlaufs stattgefunden haben (es könnten andere Änderungen eingetreten sein), beträgt die Wartezeit maximal 30 Sekunden oder die Zeitspanne, die das Erstellen des vorherigen Cache gedauert hat.  
+-   Gäbe es keine Änderungen des Agent-Verlaufs, da der Cache zuletzt erstellt (es könnten andere Änderungen durchgeführt wurden), die Wartezeit ist die maximale Anzahl von: 30 Sekunden. oder die Zeitspanne, die zum Erstellen des vorherigen Cache gedauert.  
   
 ## <a name="refreshing-the-replication-monitor-user-interface"></a>Aktualisieren der Benutzeroberfläche des Replikationsmonitors  
  Die Benutzeroberfläche des Replikationsmonitors kann folgendermaßen aktualisiert werden:  

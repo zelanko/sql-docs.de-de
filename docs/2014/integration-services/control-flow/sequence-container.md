@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sequencecontainer.f1
@@ -18,12 +17,12 @@ ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: daaec371cae5f224201c7e4660574ec5734c90fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7c66b78b6e6e8af245b71994c92d505b3f85ef9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183280"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772972"
 ---
 # <a name="sequence-container"></a>Sequenzcontainer
   Der Sequenzcontainer definiert eine Ablaufsteuerung, die eine Teilmenge der Paketablaufsteuerung ist. Sequenzcontainer gruppieren das Paket zu mehreren separaten Ablaufsteuerungen, die jeweils Tasks und Container enthalten, die innerhalb der allgemeinen Paketablaufsteuerung ausgeführt werden.  
@@ -57,8 +56,8 @@ ms.locfileid: "48183280"
  Weitere Informationen zum Festlegen der Eigenschaften der Komponente in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]finden Sie unter [Festlegen der Eigenschaften eines Tasks oder Containers](../set-the-properties-of-a-task-or-container.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Fügen Sie hinzu oder löschen Sie eines Tasks oder Containers in einer Ablaufsteuerung](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Verbinden von Tasks und Containern mithilfe einer Standardrangfolgen-Einschränkung](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
+ [Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [Verbinden von Tasks und Containern mithilfe einer Standardrangfolgeneinschränkung](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [SQL Server Integration Services-Container](integration-services-containers.md)  
   
   

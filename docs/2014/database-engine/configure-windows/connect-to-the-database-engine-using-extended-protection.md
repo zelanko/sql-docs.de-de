@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - spoofing attacks
@@ -18,21 +17,21 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 156fa271582673d93cf2f76e92e447ea63b846c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0df4e17291e03e23cb68e984c8473064b0208a9c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200830"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366322"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Erweiterter Schutz **wird von** ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. **Erweiterter Schutz für die Authentifizierung** ist eine Funktion der vom Betriebssystem implementierten Netzwerkkomponenten. **Erweiterter Schutz** wird in Windows 7 und Windows Server 2008 R2 unterstützt. **Erweiterter Schutz** ist in Service Packs für ältere [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Betriebssystemen enthalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist sicherer, wenn Verbindungen möglichst mithilfe des **erweiterten Schutzes**hergestellt werden.  
   
 > [!IMPORTANT]  
->  **Erweiterter Schutz** ist in Windows standardmäßig nicht aktiviert. Informationen zum Aktivieren von **Erweiterter Schutz** in Windows finden Sie unter [Erweiterter Schutz für die Authentifizierung](http://support.microsoft.com/kb/968389).  
+>  **Erweiterter Schutz** ist in Windows standardmäßig nicht aktiviert. Informationen zum Aktivieren von **Erweiterter Schutz** in Windows finden Sie unter [Erweiterter Schutz für die Authentifizierung](https://support.microsoft.com/kb/968389).  
   
 ## <a name="description-of-extended-protection"></a>Beschreibung von "Erweiterter Schutz"  
- **Erweiterter Schutz** nutzt die Dienstbindung und die Kanalbindung, um Relayangriffe während der Authentifizierung zu verhindern. Bei einem Relayangriff während der Authentifizierung stellt ein Client, der in der Lage ist, NTLM-Authentifizierungen auszuführen (z. B. Windows-Explorer, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, eine .NET SqlClient-Anwendung usw.), eine Verbindung mit einem Angreifer her (z. B. einem feindlichen CIFS-Dateiserver). Der Angreifer verwendet die Anmeldeinformationen des Clients, um sich als der Client auszugeben und sich bei einem Dienst (z. B. einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Diensts) zu authentifizieren.  
+ **Erweiterter Schutz** nutzt die Dienstbindung und die Kanalbindung, um Relayangriffe während der Authentifizierung zu verhindern. Bei einem Relayangriff während der Authentifizierung stellt ein Client, der in der Lage ist, NTLM-Authentifizierungen auszuführen (z. B. Windows-Explorer, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, eine .NET SqlClient-Anwendung usw.), eine Verbindung mit einem Angreifer her (z. B. einem feindlichen CIFS-Dateiserver). Der Angreifer verwendet die Anmeldeinformationen des Clients, um sich als der Client auszugeben und sich bei einem Dienst (z.B. einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Diensts) zu authentifizieren.  
   
  Der Angriff kann auf zwei Arten erfolgen:  
   
@@ -54,9 +53,9 @@ ms.locfileid: "48200830"
 ### <a name="operating-system-support"></a>Betriebssystemunterstützung  
  Die folgenden Links enthalten weitere Informationen dazu, wie **Erweiterter Schutz**von Windows unterstützt wird:  
   
--   [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz" (möglicherweise auf Englisch)](http://msdn.microsoft.com/library/dd639324.aspx)  
+-   [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz" (möglicherweise auf Englisch)](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Microsoft-Sicherheitsempfehlung (973811): Erweiterter Schutz für die Authentifizierung (möglicherweise auf Englisch)](http://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Microsoft-Sicherheitsempfehlung (973811): Erweiterter Schutz für die Authentifizierung (möglicherweise auf Englisch)](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
   
 ## <a name="settings"></a>Einstellungen  
  Es gibt drei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verbindungseinstellungen, die sich auf die Dienstbindung und die Kanalbindung auswirken. Die Einstellungen können mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager oder der Windows-Verwaltungsinstrumentation konfiguriert und mithilfe des Facets **Serverprotokolleinstellung** der richtlinienbasierten Verwaltung angezeigt werden.  
@@ -80,7 +79,7 @@ ms.locfileid: "48200830"
      Die Variable **Akzeptierte NTLM-SPNs** wird benötigt, wenn ein Server durch mehr als einen SPN identifiziert wird. Wenn ein Client versucht, mithilfe eines gültigen, dem Server nicht bekannten SPNs eine Verbindung mit dem Server herzustellen, verursacht die Dienstbindung einen Fehler. Um dieses Problem zu vermeiden, können Benutzer mithilfe von **Akzeptierte NTLM-SPNs**mehrere SPNs für den Server angeben. **Akzeptierte NTLM-SPNs** umfasst eine Reihe durch Semikolons getrennter SPNs. Beispiel: Um die Verwendung der SPNs **MSSQLSvc/ HostName1.Contoso.com** und **MSSQLSvc/ HostName2.Contoso.com**zuzulassen, geben Sie im Feld **Akzeptierte NTLM-SPNs** die Zeichenfolge **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** ein. Die maximale Länge der Variablen beträgt 2.048 Zeichen. **Akzeptierte NTLM-SPNs** befindet sich im **-Konfigurations-Manager unter** Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte „Erweitert“) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>Aktivieren von "Erweiterter Schutz" für die Datenbank-Engine  
- Zur Verwendung von **Erweiterter Schutz**benötigen sowohl der Server als auch der Client ein Betriebssystem, das **Erweiterter Schutz**unterstützt, und die Funktion **Erweiterter Schutz** muss für das Betriebssystem aktiviert sein. Weitere Informationen zum Aktivieren von **Erweiterter Schutz** für das Betriebssystem finden Sie unter [Erweiterter Schutz für die Authentifizierung](http://support.microsoft.com/kb/968389).  
+ Zur Verwendung von **Erweiterter Schutz**benötigen sowohl der Server als auch der Client ein Betriebssystem, das **Erweiterter Schutz**unterstützt, und die Funktion **Erweiterter Schutz** muss für das Betriebssystem aktiviert sein. Weitere Informationen zum Aktivieren von **Erweiterter Schutz** für das Betriebssystem finden Sie unter [Erweiterter Schutz für die Authentifizierung](https://support.microsoft.com/kb/968389).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Erweiterter Schutz **wird von** ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. Für einige frühere **-Versionen wird** Erweiterter Schutz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in zukünftigen Updates verfügbar sein. Nachdem Sie **Erweiterter Schutz** auf dem Servercomputer aktiviert haben, führen Sie die folgenden Schritte aus, um **Erweiterter Schutz**zu aktivieren:  
   
@@ -99,12 +98,12 @@ ms.locfileid: "48200830"
 ## <a name="configuring-other-sql-server-components"></a>Konfigurieren anderer SQL Server-Komponenten  
  Weitere Informationen zur Konfiguration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]finden Sie unter [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)(Erweiterter Schutz für die Authentifizierung mit Reporting Services).  
   
- Wenn IIS verwendet wird, um über eine HTTP- oder HTTPS-Verbindung auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten zuzugreifen, kann [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den von IIS bereitgestellten erweiterten Schutz nutzen. Weitere Informationen dazu, wie IIS für die Verwendung des erweiterten Schutzes konfiguriert wird, finden Sie unter [Konfigurieren von "Erweiterter Schutz" in IIS 7.5](http://go.microsoft.com/fwlink/?LinkId=181105)(möglicherweise auf Englisch).  
+ Wenn IIS verwendet wird, um über eine HTTP- oder HTTPS-Verbindung auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten zuzugreifen, kann [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den von IIS bereitgestellten erweiterten Schutz nutzen. Weitere Informationen dazu, wie IIS für die Verwendung des erweiterten Schutzes konfiguriert wird, finden Sie unter [Konfigurieren von "Erweiterter Schutz" in IIS 7.5](https://go.microsoft.com/fwlink/?LinkId=181105)(möglicherweise auf Englisch).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Server-Netzwerkkonfiguration](server-network-configuration.md)   
  [Client-Netzwerkkonfiguration](client-network-configuration.md)   
- [Übersicht über den erweiterten Schutz für die Authentifizierung (möglicherweise auf Englisch)](http://go.microsoft.com/fwlink/?LinkID=177943)   
- [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz"](http://go.microsoft.com/fwlink/?LinkId=179922)  
+ [Übersicht über den erweiterten Schutz für die Authentifizierung (möglicherweise auf Englisch)](https://go.microsoft.com/fwlink/?LinkID=177943)   
+ [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz"](https://go.microsoft.com/fwlink/?LinkId=179922)  
   
   

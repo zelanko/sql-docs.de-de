@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], enhanced behavior with earlier SQL Server versions
@@ -12,18 +12,18 @@ ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a715c6f9008b81cc77fdea84b47f3d70e9007a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125495"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774682"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Neue Funktionen für Datum und Uhrzeit bei früheren SQL Server-Versionen (OLE DB)
   Dieses Thema beschreibt das erwartete Verhalten, bei der Kommunikation einer Clientanwendung, die verbesserte Datums- und Uhrzeitfunktionen verwendet eine Version von zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], und wenn ein Client mit einer Version kompiliert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client älter als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sendet Befehle an einen Server, der verbesserte Datums- und Uhrzeitfunktionen unterstützt.  
   
 ## <a name="down-level-client-behavior"></a>Downlevelclient-Verhalten  
- Clientanwendungen, die eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Version vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] verwenden, betrachten die neuen Datum-/Uhrzeittypen als `nvarchar`-Spalten. Die Spalten enthalten literale Darstellungen. Weitere Informationen finden Sie im Abschnitt "Datenformate: Zeichenfolgen und Literale" [Datentypunterstützung für OLE DB-Datum und Uhrzeit-Verbesserungen](data-type-support-for-ole-db-date-and-time-improvements.md). Die Spaltengröße ist die maximale Literallänge für die Genauigkeit, die für die Spalte festgelegt wurde.  
+ Clientanwendungen, die eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Version vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] verwenden, betrachten die neuen Datum-/Uhrzeittypen als `nvarchar`-Spalten. Die Spalten enthalten literale Darstellungen. Weitere Informationen finden Sie unter der "Datenformate: Zeichenfolgen und Literale"unter [Datentypunterstützung für OLE DB-Datum und Uhrzeit-Verbesserungen](data-type-support-for-ole-db-date-and-time-improvements.md). Die Spaltengröße ist die maximale Literallänge für die Genauigkeit, die für die Spalte festgelegt wurde.  
   
  Katalog-APIs geben Metadaten zurück, die mit dem an den Client zurückgegebenen Datentypcode früherer Versionen (z. B. `nvarchar`) und der zugeordneten Darstellung früherer Versionen (z.  B. das entsprechende Literalformat) übereinstimmt. Der zurückgegebene Datentypname ist jedoch der echte [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Typname.  
   
@@ -35,8 +35,8 @@ ms.locfileid: "48125495"
 |DBTYPE_DBTIMESTAMP|||Zeitfelder werden auf 0 (Null) festgelegt.|IRowsetChange schlägt auch fehl, weil die Zeichenfolge abgeschnitten, wenn das Zeitfeld ungleich NULL ist.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Datumsfelder werden auf das aktuelle Datum festgelegt.|IRowsetChange schlägt auch fehl, weil die Zeichenfolge abgeschnitten, wenn Sekundenbruchteile ungleich NULL sind.<br /><br /> Datum wird ignoriert.|  
-|DBTYPE_DBTIME||Time(7)|Fehler. Ungültiges Zeitliteral.|OK|  
-|DBTYPE_DBTIMESTAMP|||Fehler. Ungültiges Zeitliteral.|OK|  
+|DBTYPE_DBTIME||Time(7)|Ein Fehler auftritt – Ungültiges Zeitliteral.|OK|  
+|DBTYPE_DBTIMESTAMP|||Ein Fehler auftritt – Ungültiges Zeitliteral.|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|OK|OK|  
 |DBTYPE_DBTIMESTAMP||datetime2(7)|OK|OK|  
 |DBTYPE_DBDATE|Smalldatetime|date|OK|OK|  
@@ -133,8 +133,8 @@ ms.locfileid: "48125495"
 |TYPE_NAME|date|Uhrzeit|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  

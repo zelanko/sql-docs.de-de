@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], expiration
@@ -16,12 +15,12 @@ ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc35e6e4f0fe4befe6db2ba93f990b9a7b8c6434
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7045454dfd2d05e37e18cdc57f53090cf8b9e76
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220841"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778352"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Festlegen des Ablaufdatums für Abonnements
   In diesem Thema wird beschrieben, wie der Ablaufzeitraum für Abonnements in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]festgelegt wird. Der Ablaufzeitraum für Abonnements bestimmt den Zeitraum, bevor ein Abonnement abläuft und entfernt wird. Weitere Informationen finden Sie unter [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "48220841"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48220841"
   
     -   Es ist möglich, anzugeben, dass Abonnements nie ablaufen. Es wird jedoch nachdrücklich empfohlen, diesen Wert nicht zu verwenden, da sonst kein Cleanup der Metadaten ausgeführt werden kann.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Geben Sie das Ablaufdatum von Abonnements im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf der Seite **Allgemein** an. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>So legen Sie das Ablaufdatum für Abonnements fest  

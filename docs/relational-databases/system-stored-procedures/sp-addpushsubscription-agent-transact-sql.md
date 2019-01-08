@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpushsubscription_agent_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f037d88ed536cf3fecc0b658dcba3f62d1e1bd47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e438e8584312964d3d16651cb5551a4fb949597d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832318"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209803"
 ---
 # <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47832318"
   Fügt einen neuen geplanten Agentauftrag hinzu, der zum Synchronisieren eines Pushabonnements mit einer Transaktionsveröffentlichung verwendet wird. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
   
 > [!IMPORTANT]  
->  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -110,7 +109,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [  **@frequency_type =** ] *Frequency_type*  
  Die Häufigkeit für die Zeitplanung des Verteilungs-Agents. *Frequency_type* ist **Int**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**2**|Bedarfsgesteuert|  
@@ -130,7 +129,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [  **@frequency_relative_interval =** ] *Frequency_relative_interval*  
  Das Datum des Verteilungs-Agents. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1** (Standard)|Erster|  
 |**2**|Zweimal|  
@@ -144,7 +143,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [  **@frequency_subday =** ] *Frequency_subday*  
  Die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**2**|Zweimal|  
@@ -188,19 +187,19 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@subscriber_provider=** ] **"***Subscriber_provider***"**  
- Der eindeutige Programmbezeichner (Programmatic Identifier, PROGID), mit dem der OLE DB-Anbieter für die Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquelle registriert wird. *Subscriber_provider* ist **Sysname**, mit dem Standardwert NULL. *Subscriber_provider* für auf dem Verteiler installierten OLE DB-Anbieter eindeutig sein. *Subscriber_provider* wird nur unterstützt, für nicht -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.  
+ Ist der eindeutige Programmbezeichner (PROGID) mit dem OLE DB-Anbieters für den nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle registriert wird. *Subscriber_provider* ist **Sysname**, mit dem Standardwert NULL. *Subscriber_provider* für auf dem Verteiler installierten OLE DB-Anbieter eindeutig sein. *Subscriber_provider* wird nur unterstützt, für nicht - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.  
   
  [  **@subscriber_datasrc=** ] **"***Subscriber_datasrc***"**  
- Der Name der Datenquelle im vom OLE DB-Anbieter unterstützten Format. *Subscriber_datasrc* ist **nvarchar(4000)**, hat den Standardwert NULL. *Subscriber_datasrc* wird als DBPROP_INIT_DATASOURCE-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben. *Subscriber_datasrc* wird nur unterstützt, für nicht -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.  
+ Der Name der Datenquelle im vom OLE DB-Anbieter unterstützten Format. *Subscriber_datasrc* ist **nvarchar(4000)**, hat den Standardwert NULL. *Subscriber_datasrc* wird als DBPROP_INIT_DATASOURCE-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben. *Subscriber_datasrc* wird nur unterstützt, für nicht - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.  
   
  [  **@subscriber_location=** ] **"***Subscriber_location***"**  
- Ist der Speicherort der Datenbank an, wie er vom OLE DB-Anbieter interpretiert. *Subscriber_location* ist **nvarchar(4000)**, hat den Standardwert NULL. *Subscriber_location* wird als DBPROP_INIT_LOCATION-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben. *Subscriber_location* wird nur unterstützt, für nicht -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.  
+ Ist der Speicherort der Datenbank an, wie er vom OLE DB-Anbieter interpretiert. *Subscriber_location* ist **nvarchar(4000)**, hat den Standardwert NULL. *Subscriber_location* wird als DBPROP_INIT_LOCATION-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben. *Subscriber_location* wird nur unterstützt, für nicht - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.  
   
  [  **@subscriber_provider_string=** ] **"***Subscriber_provider_string***"**  
- Die für den OLE DB-Anbieter spezifische Verbindungszeichenfolge zum Identifizieren der Datenquelle. *Subscriber_provider_string* ist **nvarchar(4000)**, hat den Standardwert NULL. *Subscriber_provider_string* IDataInitialize übergeben oder als DBPROP_INIT_PROVIDERSTRING-Eigenschaft festgelegt wird, um den OLE DB-Anbieter zu initialisieren. *Subscriber_provider_string* wird nur unterstützt, für nicht -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.  
+ Die für den OLE DB-Anbieter spezifische Verbindungszeichenfolge zum Identifizieren der Datenquelle. *Subscriber_provider_string* ist **nvarchar(4000)**, hat den Standardwert NULL. *Subscriber_provider_string* IDataInitialize übergeben oder als DBPROP_INIT_PROVIDERSTRING-Eigenschaft festgelegt wird, um den OLE DB-Anbieter zu initialisieren. *Subscriber_provider_string* wird nur unterstützt, für nicht - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.  
   
  [  **@subscriber_catalog=** ] **"***Subscriber_catalog***"**  
- Der beim Herstellen einer Verbindung mit dem OLE DB-Anbieter zu verwendende Katalog. *Subscriber_catalog* ist **Sysname**, mit dem Standardwert NULL. *Subscriber_catalog* wird als DBPROP_INIT_CATALOG-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben. *Subscriber_catalog* wird nur unterstützt, für nicht -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.  
+ Der beim Herstellen einer Verbindung mit dem OLE DB-Anbieter zu verwendende Katalog. *Subscriber_catalog* ist **Sysname**, mit dem Standardwert NULL. *Subscriber_catalog* wird als DBPROP_INIT_CATALOG-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben. *Subscriber_catalog* wird nur unterstützt, für nicht - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -217,7 +216,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="see-also"></a>Siehe auch  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
  [Gespeicherte Replikationsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [Sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   

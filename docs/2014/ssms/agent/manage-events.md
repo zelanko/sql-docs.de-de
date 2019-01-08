@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - event forwarding servers [SQL Server]
@@ -18,12 +18,12 @@ ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d1bbf304680611eca21f5d5baeb98a251f279e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193010"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812112"
 ---
 # <a name="manage-events"></a>Verwalten von Ereignissen
   Sie können an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Ereignismeldungen weiterleiten, die einen bestimmten Fehlerschweregrad aufweisen oder überschreiten. Dies wird als *Ereignisweiterleitung*bezeichnet. Der Weiterleitungsserver ist ein dedizierter Server, bei dem es sich auch um einen Masterserver handeln kann. Durch die Ereignisweiterleitung können Sie die Warnungsverwaltung für eine Gruppe von Servern zentralisieren und so die Arbeitsauslastung stark belasteter Server reduzieren.  

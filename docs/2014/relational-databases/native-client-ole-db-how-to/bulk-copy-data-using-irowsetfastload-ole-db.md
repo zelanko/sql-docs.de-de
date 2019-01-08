@@ -15,12 +15,12 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8bffd3776e04fa10cf6454d3200dac623835ac0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a19029a98daa5411f0e915b62f3c7556cafad97a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111767"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369382"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Massenkopieren von Daten mithilfe von IRowsetFastLoad (OLE DB)
   In diesem Beispiel wird die Verwendung von IRowsetFastLoad für das Massenkopieren von Datensätzen in eine Tabelle gezeigt.  
@@ -29,10 +29,10 @@ ms.locfileid: "48111767"
   
  Es ist ein vollständiges Beispiel verfügbar, das die Verwendung von `IRowsetFastLoad` zum Massenkopieren der Datensätze in eine Tabelle veranschaulicht. In diesem Beispiel werden der Tabelle **IRFLTable** 10 Datensätze hinzugefügt. Sie müssen die Tabelle **IRFLTable** in der Datenbank erstellen.  
   
- Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
+ Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>So massenkopieren Sie Daten in eine SQL Server-Tabelle  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48111767"
   
  Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete Tabelle zu erstellen.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
  Führen Sie das dritte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete Tabelle zu löschen.  
   

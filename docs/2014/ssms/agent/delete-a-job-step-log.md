@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -15,12 +15,12 @@ ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0870de459be9999979797579bf577cd7daab816
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 945c403a44f2b0c2cf2d691a1bcfda6cc96d422b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070890"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377552"
 ---
 # <a name="delete-a-job-step-log"></a>Löschen eines Auftragsschrittprotokolls
   In diesem Thema wird beschrieben, wie Sie ein Auftragsschrittprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents löschen.  
@@ -29,7 +29,7 @@ ms.locfileid: "48070890"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So löschen Sie ein Auftragsschrittprotokoll des SQL Server-Agents mit**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48070890"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Wenn Auftragsschritte gelöscht werden, werden auch die entsprechenden Ausgabeprotokolle gelöscht.  
@@ -49,7 +49,7 @@ ms.locfileid: "48070890"
 ####  <a name="Permissions"></a> Berechtigungen  
  Sie können nur Aufträge ändern, die in Ihrem Besitz sind, es sei denn, Sie sind ein Mitglied der festen Serverrolle **sysadmin** .  
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-delete-a-sql-server-agent-job-step-log"></a>So löschen Sie ein Auftragsschrittprotokoll des SQL Server-Agents  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48070890"
   
 #### <a name="to-delete-a-sql-server-agent-job-step-log"></a>So löschen Sie ein Auftragsschrittprotokoll des SQL Server-Agents  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48070890"
  Weitere Informationen finden Sie unter [Sp_delete_jobsteplog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql).  
   
 ##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
- Verwenden der `DeleteJobStepLogs` Methoden der `Job` Klasse, indem Sie eine Programmiersprache, die Sie, wie z. B. Visual Basic, Visual c# oder PowerShell auswählen. Weitere Informationen finden Sie unter[SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Verwenden Sie die `DeleteJobStepLogs`-Methoden der `Job`-Klasse in einer Programmiersprache Ihrer Wahl, z. B. Visual Basic, Visual C# oder PowerShell. Weitere Informationen finden Sie unter[SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
 ```  
 -- Uses PowerShell to delete all job step log files that have ID values larger than 5.  

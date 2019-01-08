@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -20,12 +19,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2dd079ec5abc9ef0ef8600f882236d44dd45b1b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c84d808b84a70ae9d70eff308351ff1e7f3df8e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086490"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815572"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Überwachen der Leistung mit dem Replikationsmonitor
   Der[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsmonitor ermöglicht es Ihnen, die Leistung bei Transaktions- und Mergereplikationen zu überwachen. Zu diesem Zweck können die folgenden Aktionen ausgeführt werden:  
@@ -76,7 +75,7 @@ ms.locfileid: "48086490"
   
     |Hervorragend|Gut|Durchschnittlich|Schlecht|Kritisch|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
+    |0 – 34 %|35 – 59 %|60 – 84 %|85 – 99 %|100% +|  
   
 -   Bei der Mergereplikation ist der Wert für die Leistungsqualität unabhängig von den beiden Schwellenwerten. (Der Schwellenwert für die Zeilenverarbeitung bestimmt, ob der Wert **Leistungskritisch** in der **Status** -Spalte angezeigt wird). Die Leistungsqualität wird ermittelt, indem die Leistung der einzelnen Abonnements mit der durchschnittlichen bisherigen Leistung der Veröffentlichungsabonnements mit dem gleichen Verbindungstyp (DFÜ oder LAN) verglichen wird. Der Replikationsmonitor zeigt einen Wert an, nachdem fünf Synchronisierungen mit jeweils mindestens 50 Änderungen über denselben Verbindungstyp stattgefunden haben. Wenn weniger als fünf Synchronisierungen mit 50 oder mehr Änderungen ausgeführt wurden oder wenn die letzte Synchronisierung weniger als 50 Änderungen aufweist, zeigt der Replikationsmonitor keinen Wert an.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48086490"
   
     |Hervorragend|Gut|Durchschnittlich|Schlecht|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150%|26 – 75%|0 – 25%|  
+    |151+%|76 – 150 %|26 – 75 %|0 – 25 %|  
   
  Weitere Informationen zum Anzeigen von Abonnementinformationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für ein Abonnement &#40;Replikationsmonitor&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
   
@@ -99,6 +98,6 @@ ms.locfileid: "48086490"
   
 ## <a name="see-also"></a>Siehe auch  
  [Überwachen der Replikation](../monitoring-replication.md)   
- [Festlegen von Schwellenwerten und Warnungen im Replikationsmonitor](set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

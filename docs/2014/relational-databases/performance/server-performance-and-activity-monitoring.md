@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - activity monitoring [SQL Server]
@@ -21,12 +20,12 @@ ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d0afee85867fb9bbec8c67cb81f53a94b1a81d03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7289c18fac421bbdb5ccc0e00a3bea60b7a22d9e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156910"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797572"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>Überwachen der Serverleistung und -aktivität
   Ziel der Überwachung von Datenbanken ist es, die Leistung eines Servers zu bewerten. Eine effektive Überwachung umfasst die regelmäßige Erstellung von Momentaufnahmen der aktuellen Leistung, um problematische Prozesse zu isolieren, und die kontinuierliche Sammlung von Daten, um Leistungstrends über längere Zeit zu verfolgen. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Betriebssystem stellen Hilfsprogramme bereit, mit denen Sie den aktuellen Zustand der Datenbank anzeigen und die Leistung unter veränderten Bedingungen nachverfolgen können.  

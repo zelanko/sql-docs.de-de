@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - affinity I/O mask option
@@ -16,12 +15,12 @@ ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3a2a4e3c41e98be8f39a39e37aee968532e2d9d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101550"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640091"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>Affinity I/O Mask (Serverkonfigurationsoption)
   Für die Ausführung von Multitasking verschieben [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 und Windows Server 2003 gelegentlich Prozessthreads zwischen den Prozessoren. Obwohl dies aus der Sicht des Betriebssystems effizient ist, kann diese Aktivität die Leistung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei starker Systemauslastung reduzieren, da jeder Prozessorcache wiederholt mit Daten geladen wird. Unter diesen Bedingungen kann das Zuweisen bestimmter Threads zu bestimmten Prozessoren die Leistung verbessern, da das erneute Laden von Prozessoren vermieden wird. Eine solche Zuordnung zwischen einem Thread und einem Prozessor wird als Prozessoraffinität bezeichnet.  
@@ -49,7 +48,7 @@ ms.locfileid: "48101550"
   
  Ein 1-Bit im E/A-Affinitätsmuster gibt an, dass die entsprechende CPU für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenträger-E/A-Vorgänge geeignet ist; ein 0-Bit gibt an, dass keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenträger-E/A-Vorgänge für die entsprechende CPU geplant werden sollen. Sind alle Bits auf 0 festgelegt oder ist **affinity I/O mask** nicht angegeben, werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenträger-E/A-Vorgänge für eine beliebige CPU geplant, die für die Verarbeitung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Threads geeignet ist.  
   
- Da das Festlegen der Option **Affinity I/O Mask**  (Affinität E/A Maske) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen spezialisierten Vorgang darstellt, sollte er nur bei Bedarf ausgeführt werden. In den meisten Fällen kann eine optimale Leistung durch die standardmäßige Affinität von Windows 2000 oder Windows Server 2003 erzielt werden.  
+ Da das Festlegen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **affinity I/O mask** einen spezialisierten Vorgang darstellt, sollte er nur bei Bedarf ausgeführt werden. In den meisten Fällen kann eine optimale Leistung durch die standardmäßige Affinität von Windows 2000 oder Windows Server 2003 erzielt werden.  
   
  Wenn Sie die Option **affinity I/O mask** angeben, müssen Sie sie mit der Konfigurationsoption **affinity mask** verwenden. Aktivieren Sie in der Option **affinity I/O mask** und in der Option **affinity mask** nicht dieselbe CPU. Die Bits, die den einzelnen CPUs entsprechen, sollten sich jeweils in einem der folgenden drei Zustände befinden:  
   

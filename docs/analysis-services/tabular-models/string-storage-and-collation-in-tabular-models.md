@@ -1,5 +1,5 @@
 ---
-title: Zeichenfolgenspeicher und-Sortierung in tabellenmodellen | Microsoft Docs
+title: Zeichenfolgenspeicher und-Sortierung in tabellarischen Modellen von Analysis Services | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 38a79073648bdab889913050118d7318ca3f536b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 84bd7e70c5ff3c1ee41bdcc331fefdd2422937ed
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044948"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071807"
 ---
-# <a name="string-storage-and-collation-in-tabular-models"></a>Zeichenfolgenspeicher und-Sortierung in tabellenmodellen
+# <a name="string-storage-and-collation-in-tabular-models"></a>Zeichenfolgenspeicher und -sortierung in tabellarischen Modellen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Zeichenfolgen (Textwerte) werden in einem stark komprimierten Format in Tabellenmodellen gespeichert. Aufgrund dieser Komprimierung erhalten Sie unter Umständen unerwartete Ergebnisse, wenn Sie vollständige Zeichenfolgen oder Teilzeichenfolgen abrufen. Da das Zeichenfolgengebietsschema und die Sortierungen hierarchisch vom nächsten übergeordneten Objekt geerbt werden, wenn die Zeichenfolgensprache nicht explizit definiert wird, können das Gebietsschema und die Sortierung des übergeordneten Objekts beeinflussen, wie die einzelnen Zeichenfolgen gespeichert werden, und ob die Zeichenfolge entsprechend der übergeordneten Sortierung eindeutig ist oder mit ähnlichen Zeichenfolgen zusammengefügt wurde.  
   
- Dieser Artikel beschreibt den Mechanismus, mit dem Zeichenfolgen komprimiert und gespeichert werden, und enthält Beispiele dazu, wie Sortierung und Sprache die Ergebnisse von Textformeln in tabellenmodellen beeinflussen.  
+ Dieser Artikel beschreibt den Mechanismus, mit dem Zeichenfolgen komprimiert und gespeichert werden, und enthält Beispiele für wie Sortierung und Sprache die Ergebnisse von Textformeln in tabellenmodellen beeinflussen.  
   
 ## <a name="storage"></a>Speicherung  
  In Tabellenmodellen werden alle Daten stark komprimiert, um eine zu hohe Auslastung des Arbeitsspeichers zu vermeiden. Infolgedessen werden alle Zeichenfolgen, die als lexikalisch äquivalent eingestuft werden können, nur einmal gespeichert. Die erste Instanz der Zeichenfolge wird als kanonische Darstellung verwendet, und anschließend wird jede entsprechende Zeichenfolge im gleichen komprimierten Wert wie das erste Vorkommen indiziert.  
@@ -54,10 +54,10 @@ ms.locfileid: "34044948"
 |trEE|  
 |PlAnT|  
   
- Wenn Sie im Modell die Spalte **Klassifizierung - Englisch**verwenden, werden beim Anzeigen der Pflanzenklassifizierung nicht die ursprünglichen Werte mit ihren diversen unterschiedlichen Schreibweisen angezeigt, sondern es erscheint lediglich das erste Vorkommen. Der Grund hierfür ist, dass alle Groß- und Kleinschreibungsvarianten von **tree** in dieser Sortierung und diesem Gebietsschema als äquivalent betrachtet werden. Daher wurde nur eine Zeichenfolge beibehalten, und die erste Instanz der Zeichenfolge, die vom System gefunden wird, wird gespeichert.  
+ Bei Verwendung die Spalte **Klassifizierung - Englisch**, in Ihrem Modell dem, Anzeigen der pflanzenklassifizierung sehen Sie nicht die ursprünglichen Werte, die verschiedene Einsatzbereiche der oberen und Kleinbuchstaben, sondern nur die erste Instanz. Der Grund hierfür ist, dass alle Groß- und Kleinschreibungsvarianten von **tree** in dieser Sortierung und diesem Gebietsschema als äquivalent betrachtet werden. Daher wurde nur eine Zeichenfolge beibehalten, und die erste Instanz der Zeichenfolge, die vom System gefunden wird, wird gespeichert.  
   
 > [!WARNING]  
->  Möglicherweise möchten Sie festlegen, welche Zeichenfolge als erste gespeichert werden soll (unter Berücksichtigung der von Ihnen als korrekt eingestuften Schreibweise), doch dies kann sich als sehr schwierig erweisen. Es existiert keine einfache Möglichkeit, im Voraus zu bestimmen, welche Zeile zuerst vom Modul verarbeitet werden soll, vorausgesetzt, dass alle Werte als identisch eingestuft werden. Stattdessen sollten beim Festlegen des Standardwerts alle Zeichenfolgen bereinigt werden, bevor das Modell geladen wird.  
+>  Möglicherweise möchten Sie festlegen, welche Zeichenfolge als erste gespeichert werden soll (unter Berücksichtigung der von Ihnen als korrekt eingestuften Schreibweise), doch dies kann sich als sehr schwierig erweisen. Es existiert keine einfache Möglichkeit, im Voraus zu bestimmen, welche Zeile zuerst von der Engine verarbeitet werden soll, vorausgesetzt, dass alle Werte als identisch eingestuft werden. Stattdessen sollten beim Festlegen des Standardwerts alle Zeichenfolgen bereinigt werden, bevor das Modell geladen wird.  
   
 ## <a name="locale-and-collation-order"></a>Gebietsschema und die Sortierreihenfolge  
  Wenn Zeichenfolgen (Textwerte) miteinander verglichen werden, wird Äquivalenz normalerweise durch den kulturellen Aspekt bestimmt, der die Interpretation solcher Zeichenfolgen beeinflusst. In einigen Kulturen kann sich die Bedeutung einer Zeichenfolge durch einen Akzent oder die Großschreibung eines Zeichens vollständig ändern. Daher werden solche Unterschiede in der Regel berücksichtigt, wenn sie Äquivalenz für eine bestimmte Sprache oder einen Bereich festlegen.  

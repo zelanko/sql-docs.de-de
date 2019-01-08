@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.addpublisher.f1
@@ -15,17 +14,17 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df8cd5e81352bbf0389e56de741f383a4f40d477
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fc6041d3d33a7ddaaeb9fb11ff8582c70c7f080
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215380"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817492"
 ---
 # <a name="add-publisher"></a>Verleger hinzufügen
   Mithilfe des Dialogfelds **Verleger hinzufügen** können Sie dem linken Bereich des Replikationsmonitors einen oder mehrere Verleger hinzufügen. Nach dem Hinzufügen eines Verlegers werden durch das Auswählen des Verlegers im linken Bereich Informationen zu diesem Verleger im rechten Bereich anzeigt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Hinzufügen**  
  Klicken Sie auf diese Option, um den Typ des hinzuzufügenden Verlegers auszuwählen. Dadurch wird das Dialogfeld **Verbindung mit Server herstellen** gestartet. Folgende Optionen sind verfügbar:  
   

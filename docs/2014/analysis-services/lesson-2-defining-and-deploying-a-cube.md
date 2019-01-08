@@ -11,12 +11,12 @@ ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4e7984c2bfa0ca9c654d5f6a3e9bc75a66bc34c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7396b5c5bf46abcbc60ac9e3a984fb2d7a7a2ee5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189810"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374502"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Lektion 2: Definieren und Bereitstellen eines Cubes
   Nach dem Definieren einer Datenquellensicht in Ihrem [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt können Sie einen ersten [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cube definieren.  
@@ -24,11 +24,11 @@ ms.locfileid: "48189810"
  Sie können einen Cube und seine Dimensionen in einem Durchgang definieren, indem Sie den Cube-Assistenten verwenden. Alternativ können Sie eine oder mehrere Dimensionen definieren und dann mit dem Cube-Assistenten einen Cube definieren, der diese Dimensionen verwendet. Wenn Sie eine komplexe Projektmappe entwerfen, definieren Sie im Allgemeinen zuerst die Dimensionen. Weitere Informationen finden Sie unter [Dimensionen in mehrdimensionalen Modellen](multidimensional-models/dimensions-in-multidimensional-models.md) oder [Cubes in mehrdimensionalen Modellen](multidimensional-models/cubes-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](http://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispielprojekte für dieses Lernprogramm herunterzuladen.  
+>  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispielprojekte für dieses Lernprogramm herunterzuladen.  
   
  Diese Lektion enthält die folgenden Aufgaben:  
   
- [Definieren einer Dimension](lesson-2-1-defining-a-dimension.md)  
+ [Definieren einer Dimension.](lesson-2-1-defining-a-dimension.md)  
  In dieser Aufgabe definieren Sie eine Dimension mithilfe des Dimensions-Assistenten.  
   
  [Definieren eines Cubes](lesson-2-2-defining-a-cube.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "48189810"
  In dieser Aufgabe durchsuchen Sie die Cube- und Dimensionsdaten mit Excel oder dem MDX-Abfrage-Designer.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 3: Ändern von Measures, Attributen und Hierarchien](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [Lektion 3: Ändern von Maßen, Attributen und Hierarchien](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Lernprogrammszenario](analysis-services-tutorial-scenario.md)   

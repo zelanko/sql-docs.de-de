@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32303301fb01e381fee0e28cfedb2cd299658c88
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: c79a3e34ea6ca1bbebfa35a77020b81618514133
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851885"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617580"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  Nachdem eine Anwendungssperre eingerichtet wurde, können nur die ersten 32 Zeichen im Nur-Text-Format abgerufen werden. Die übrigen Zeichen werden hashcodiert.  
   
  [ @LockMode=] '*Lock_mode*"  
- Der Sperrmodus, der für eine bestimmte Ressource abgerufen werden soll. *lock_mode* ist vom Datentyp **nvarchar(32)** und verfügt nicht über einen Standardwert. Der Wert kann eine der folgenden sein: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, oder **exklusive** .  
+ Der Sperrmodus, der für eine bestimmte Ressource abgerufen werden soll. *lock_mode* ist vom Datentyp **nvarchar(32)** und verfügt nicht über einen Standardwert. Einer der folgenden Werte ist möglich: **Freigegebene**, **Update**, **IntentShared**, **IntentExclusive**, oder **exklusive**.  
   
  [ @LockOwner=] '*Lock_owner*"  
  Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)**. Der Wert kann **Transaction** (Standard) oder **Session** sein. Wenn die *Lock_owner* Wert **Transaktion**, wird standardmäßig oder explizit angegeben wurde, Sp_getapplock muss aus ausgeführt werden innerhalb einer Transaktions.  
@@ -70,7 +70,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  \>= 0 (Erfolg) oder < 0 (Fehler)  
   
-|value|Ergebnis|  
+|Wert|Ergebnis|  
 |-----------|------------|  
 |0|Die Sperre wurde erfolgreich synchron erteilt.|  
 |1|Die Sperre wurde erfolgreich erteilt, nachdem das Aufheben anderer, inkompatibler Sperren abgewartet wurde.|  
@@ -92,7 +92,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
  Nur ein Mitglied des im @DbPrincipal-Parameter angegebenen Datenbankprinzipals kann Anwendungssperren einrichten, die diesen Prinzipal angeben. Mitglieder der Rollen dbo und db_owner werden implizit als Mitglieder aller Rollen betrachtet.  
   
- Mit sp_releaseapplock können Sperren explizit aufgehoben werden. Wenn eine Anwendung mehrere Male sp_getapplock für dieselbe Sperrenressource aufruft, muss sp_releaseapplock genauso oft aufgerufen werden, um die Sperre aufzuheben.  
+ Mit sp_releaseapplock können Sperren explizit aufgehoben werden. Wenn eine Anwendung mehrere Male sp_getapplock für dieselbe Sperrenressource aufruft, muss sp_releaseapplock genauso oft aufgerufen werden, um die Sperre aufzuheben.  Wenn eine Sperre geöffnet wird, mit der `Transaction` Eigentümer der Sperre, die, dass die Sperre aufgehoben wird, wenn die Transaktion ein Commit oder Rollback ist.
   
  Wenn sp_getapplock mehrere Male für dieselbe Sperrenressource aufgerufen wird, aber eine der Anforderungen einen Sperrmodus angibt, der nicht mit dem vorhandenen Modus übereinstimmt, kommt es in Bezug auf die Ressource zu einer Vereinigung der beiden Sperrmodi. In den meisten Fällen bedeutet dies, dass der Sperrmodus zum Stärkeren der Sperrmodi, d. h. des vorhandenen oder des neu angeforderten, heraufgestuft wird. Der stärkere Sperrmodus wird beibehalten, bis die Sperre endgültig aufgehoben wird, selbst wenn schon vorher Aufrufe zur Aufhebung der Sperre auftreten. In der folgenden Aufrufsequenz bleibt die Ressource im `Exclusive`-Modus und nicht im `Shared`-Modus.  
   

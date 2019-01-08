@@ -14,12 +14,12 @@ ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7ef6b9cbbd97937c2f2d3dc47f04b4ece57b1e84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50518e78585b7e56f62411edc539d0f9ac3db9e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184230"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360304"
 ---
 # <a name="some-availability-replicas-do-not-have-a-healthy-role"></a>Einige Verfügbarkeitsreplikate haben keine fehlerfreie Rolle
     
@@ -36,7 +36,7 @@ ms.locfileid: "48184230"
  Diese Richtlinie führt ein Rollup des Verbindungsstatus aller Verfügbarkeitsreplikate aus und überprüft, ob Verfügbarkeitsreplikate vorhanden sind, die keine fehlerfreie Rolle aufweisen. Die Richtlinie befindet sich in einem fehlerhaften Zustand, wenn jedes Verfügbarkeitsreplikat weder primär noch sekundär ist. Die Richtlinie befindet sich andernfalls in einem ordnungsgemäßen Zustand.  
   
 > [!NOTE]  
->  Für diese Version von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]finden Sie Informationen zu möglichen Ursachen und Lösungen im TechNet Wiki unter [Einige Verfügbarkeitsreplikate haben keine fehlerfreie Rolle](http://go.microsoft.com/fwlink/p/?LinkId=220854) .  
+>  Für diese Version von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]finden Sie Informationen zu möglichen Ursachen und Lösungen im TechNet Wiki unter [Einige Verfügbarkeitsreplikate haben keine fehlerfreie Rolle](https://go.microsoft.com/fwlink/p/?LinkId=220854) .  
   
 ## <a name="possible-causes"></a>Mögliche Ursachen  
  In dieser Verfügbarkeitsgruppe verfügt mindestens ein Verfügbarkeitsreplikat derzeit nicht über die primäre oder sekundäre Rolle.  

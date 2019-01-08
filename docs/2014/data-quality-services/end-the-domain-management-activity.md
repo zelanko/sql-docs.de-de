@@ -10,12 +10,12 @@ ms.assetid: ab6505ad-3090-453b-bb01-58435e7fa7c0
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9f53d3878ec6f5eb9c0996d7162fed792bf4930
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9c0913ab07b006b845af081be0722da89f2ecd23
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033367"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515813"
 ---
 # <a name="end-the-domain-management-activity"></a>Beenden der Domänenverwaltungsaktivität
   In diesem Thema wird beschrieben wie die Domänenverwaltungsaktivität in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) abgeschlossen, geschlossen oder abgebrochen wird. Die Domänenverwaltung wird nicht von einem Assistenten durchgeführt. Daher können die unten beschriebenen Steuerelemente auf allen Seiten der Domänenverwaltungsaktivität verwendet werden.  
@@ -24,11 +24,11 @@ ms.locfileid: "51033367"
  **Fertig stellen**  
  Klicken Sie auf diese Schaltfläche, um die Domänenverwaltung abzuschließen. Ein Popupfenster mit den folgenden Optionen wird angezeigt:  
   
--   **Ja – Wissensdatenbank veröffentlichen und beenden**: Die Wissensdatenbank wird veröffentlicht und kann vom aktuellen Benutzer oder von anderen Benutzern verwendet werden. Die Wissensdatenbank wird nicht gesperrt, der Status der Wissensdatenbank (in der Wissensdatenbanktabelle) wird auf leer festgelegt, und die Aktivitäten für die Domänenverwaltung sowie die Wissensermittlung sind verfügbar. Sie kehren zur Seite „Wissensdatenbank öffnen“ zurück.  
+-   **Veröffentlichen Sie Ja – Wissensdatenbank und beenden**: Die Wissensdatenbank wird für den aktuellen Benutzer oder von anderen Benutzern verwenden veröffentlicht werden. Die Wissensdatenbank wird nicht gesperrt, der Status der Wissensdatenbank (in der Wissensdatenbanktabelle) wird auf leer festgelegt, und die Aktivitäten für die Domänenverwaltung sowie die Wissensermittlung sind verfügbar. Sie kehren zur Seite „Wissensdatenbank öffnen“ zurück.  
   
--   **Nein – Arbeit in der Wissensdatenbank speichern und beenden**: Ihre Arbeit wird gespeichert, die Wissensdatenbank bleibt gesperrt, und der Status der Wissensdatenbank wird auf „In Arbeit“ festgelegt. Sowohl die Domänenverwaltungs- als auch die Wissensermittlungsaktivitäten sind verfügbar. Sie kehren zur Startseite zurück.  
+-   **Nein – Arbeit in die Wissensdatenbank, und Beenden speichern**: Ihre Arbeit wird gespeichert, die Wissensdatenbank bleibt gesperrt, und der Status der Wissensdatenbank wird auf Arbeit festgelegt werden. Sowohl die Domänenverwaltungs- als auch die Wissensermittlungsaktivitäten sind verfügbar. Sie kehren zur Startseite zurück.  
   
--   **Abbrechen – Im aktuellen Fenster bleiben**: Das Popupfenster wird geschlossen, und Sie kehren zum Fenster „Domänenverwaltung“ zurück.  
+-   **Abbrechen – im aktuellen Fenster bleiben**: Das Popupfenster wird geschlossen, und Sie kehren zum Fenster "Domänenverwaltung".  
   
  **Abbrechen**  
  Klicken Sie auf diese Schaltfläche, um die Domänenverwaltungsaktivität abzubrechen, ohne die Arbeit zu speichern, und zur DQS-Startseite zurückzukehren.  

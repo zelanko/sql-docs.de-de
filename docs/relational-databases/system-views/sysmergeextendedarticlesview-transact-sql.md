@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergeextendedarticlesview
@@ -19,12 +18,12 @@ ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 052e758a8ca86ed70afd92b4b06b3ab75791081b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f41868f4ffa8a542475ef7c4be304d8636f87d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818231"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802142"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

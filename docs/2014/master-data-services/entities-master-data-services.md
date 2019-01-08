@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], about entities
@@ -14,12 +13,12 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 97a3fe9e9552170332e6be0d5cf5a3cb8541fe9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb54250b1be15916055dd59a3f2e6d37330d5d93
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072910"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800912"
 ---
 # <a name="entities-master-data-services"></a>Entitäten (Master Data Services)
   Entitäten sind Objekte, die in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Modellen enthalten sind. Jede Entität enthält Elemente, bei denen es sich um die Zeilen von Masterdaten handelt, die Sie verwalten.  
@@ -50,7 +49,7 @@ ms.locfileid: "48072910"
  Sie können Benutzern Berechtigungen für eine Entität geben, die verwandte Modellobjekte einschließt. Weitere Informationen finden Sie unter [Entitätsberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/entity-permissions-master-data-services.md).  
   
 ## <a name="entity-examples"></a>Beispiele für Entitäten  
- Das folgende Beispiel zeigt eine Entität, die über folgende Attribute verfügt: Name, Code, Subcategory, StandardCost, ListPrice und FilePhoto. Diese Attribute beschreiben die Elemente. Jedes Element wird durch eine einzelne Zeile mit Attributwerten dargestellt.  
+ Das folgende Beispiel zeigt eine Entität, die diese Attribute verfügt: Name, Code, Subcategory, StandardCost, ListPrice und FilePhoto. Diese Attribute beschreiben die Elemente. Jedes Element wird durch eine einzelne Zeile mit Attributwerten dargestellt.  
   
  ![Entitätstabelle für Fahrradprodukte](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48072910"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Erstellen Sie eine neue Entität.|[Erstellen Sie eine Entität &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
+|Erstellen Sie eine neue Entität.|[Erstellen einer Entität &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
 |Geben Sie an, dass eine Entität explizite Hierarchien und Auflistungen enthalten kann.|[Aktivieren einer Entität für explizite Hierarchien und Auflistungen &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |Ändern Sie den Namen einer vorhandenen Entität.|[Ändern eines Entitätsnamens &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
 |Löschen Sie eine vorhandene Entität.|[Löschen einer Entität &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
@@ -75,7 +74,7 @@ ms.locfileid: "48072910"
   
 -   [Modelle &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
   
--   [Mitglieder &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [Elemente &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
 -   [Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   

@@ -15,12 +15,12 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab9f381706aaf5fe2f87051e1aada23ccf6dea16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc229e2bef69069ba1fc5f8cb3077e592d959a55
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668348"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521932"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Explizite Datentyp-Konvertierungsfunktion
 Explizite datentypkonvertierung wird in SQL-Datentypdefinitionen angegeben.  
@@ -29,7 +29,7 @@ Explizite datentypkonvertierung wird in SQL-Datentypdefinitionen angegeben.
   
  Das Format der **konvertieren** -Funktion ist:  
   
- **KONVERTIEREN (** *Value_exp*, *Data_type ***)**  
+ **KONVERTIEREN (** *Value_exp*, _Data_type_**)**  
   
  Die Funktion gibt den Wert gemäß *Value_exp* konvertiert in den angegebenen *Data_type*, wobei *Data_type* ist eine der folgenden Schlüsselwörter:  
   
@@ -65,7 +65,7 @@ Explizite datentypkonvertierung wird in SQL-Datentypdefinitionen angegeben.
   
  die Ausgabe der CURDATE skalare Funktion konvertiert in eine Zeichenfolge.  
   
- Da ODBC nicht über einen Datentyp für die Rückgabe von Werten aus vorschreibt Skalarfunktionen (da die Funktionen, die häufig Daten datenquellenspezifischen sind), Anwendungen sollten die CONVERT-Skalarfunktion nach Möglichkeit, um die datentypkonvertierung erzwingen verwenden.  
+ Da ODBC nicht über einen Datentyp für die Rückgabe von Werten aus vorschreibt Skalarfunktionen (da die Funktionen, die häufig Daten datenquellenspezifische sind), Anwendungen sollten die CONVERT-Skalarfunktion nach Möglichkeit, um die datentypkonvertierung erzwingen verwenden.  
   
  Die folgenden beiden Beispiele veranschaulichen die Verwendung des der **konvertieren** Funktion. Diese Beispiele nehmen an, das Vorhandensein einer Tabelle, die Mitarbeiter, mit einer EMPNO-Spalte vom Typ SQL_SMALLINT und eine EMPNAME-Spalte vom Typ SQL_CHAR aufgerufen wird.  
   

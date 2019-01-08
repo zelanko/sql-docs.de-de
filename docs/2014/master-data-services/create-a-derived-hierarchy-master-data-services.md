@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, creating
@@ -14,12 +13,12 @@ ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f1b4e891338cd835ec278631638aefc239567018
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b56342c407bf2324da503810ca00d797b1c5cc6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090274"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782372"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>Erstellen einer abgeleiteten Hierarchie (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine abgeleitete Hierarchie, wenn Sie eine ebenenbasierte Hierarchie möchten, die sicherstellt, dass sich die Elemente auf der richtigen Ebene befinden. Abgeleitete Hierarchien basieren auf den domänenbasierten Attributbeziehungen, die in einem Modell vorhanden sind.  
@@ -32,7 +31,7 @@ ms.locfileid: "48090274"
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)zuzugreifen.  
   
 ### <a name="to-create-a-derived-hierarchy"></a>So erstellen Sie eine abgeleitete Hierarchie  
   

@@ -17,17 +17,17 @@ ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 132ee99180595dca5e203a6821c5f87aa616530d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54da54a63fb1234478a3161cd46e7143258d2d65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695218"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510594"
 ---
 # <a name="rowset-size"></a>Rowsetgröße
 Die Größe des Rowsets verwenden, hängt von der Anwendung ab. Bildschirmbasierte Anwendungen gehen häufig von zwei Strategien verfolgen. Die erste ist für die Rowsetgröße festzulegen, die Anzahl der Zeilen, die auf dem Bildschirm angezeigt. Wenn der Benutzer den Bildschirm angepasst wird, wird die Anwendung die Rowsetgröße entsprechend geändert. Die zweite besteht darin, die Rowsetgröße auf einen höheren Wert ein, z. B. 100 festzulegen, die reduziert die Anzahl der Aufrufe an die Datenquelle. Die Anwendung lokal innerhalb des Rowsets möglichst verschiebt und neue Zeilen abruft, nur, wenn es außerhalb des Rowsets verschiebt.  
   
- Andere Anwendungen, z. B. Berichte, in der Regel die Rowsetgröße auf der größten Anzahl von Zeilen der Anwendung angemessen verarbeitet werden kann – mit einer größeren Zeilengruppe, manchmal im Netzwerk Aufwand pro Zeile reduziert ist. Genau wie groß ein Rowset sein kann, hängt von der Größe des jede Zeile und die Menge des verfügbaren Arbeitsspeichers ab.  
+ Andere Anwendungen, z. B. Berichte, für die Größe des Rowsets der größten Anzahl von Zeilen festzulegen, die Anwendung relativ verarbeiten kann – meist mit einer größeren Zeilengruppe, manchmal im Netzwerk Aufwand pro Zeile reduziert ist. Genau wie groß ein Rowset sein kann, hängt von der Größe des jede Zeile und die Menge des verfügbaren Arbeitsspeichers ab.  
   
  Rowsetgröße wird durch einen Aufruf von **SQLSetStmtAttr** mit einer *Attribut* SQL_ATTR_ROW_ARRAY_SIZE Argument. Die Anwendung die Größe des Rowsets zu ändern, neue Rowset-Puffer zu binden können (durch Aufrufen von **SQLBindCol** oder das Angeben eines Bindung Offsets) auch nach Zeilen abgerufen wurden, oder beides. Welche Konsequenzen eine Änderung der Größe des Rowsets, abhängig von der Funktion:  
   

@@ -4,29 +4,28 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 662bec342ded12494d0d8876b6e12274f34e16d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dab5e88df4808a31218270938766660da27bc2c7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069470"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787152"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Automatisches Generieren von anderen Attributwerten als Code (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie Werte für die Attributwerte einer Entität automatisch generieren, wenn Sie möchten, dass eine ganze Zahl jedes Mal automatisch als Wert zugewiesen werden soll, wenn Geschäftsregeln angewendet werden.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] können Sie Werte für die Attributwerte einer Entität automatisch generieren, wenn Sie möchten, dass eine ganze Zahl jedes Mal automatisch als Wert zugewiesen werden soll, wenn Geschäftsregeln angewendet werden.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen.  
   
 -   Ein numerisches Attribut muss vorhanden sein. Weitere Informationen finden Sie unter [Erstellen eines numerischen Attributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md).  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48069470"
   
 9. Erweitern Sie im Bereich **Komponenten** den Knoten **Aktionen** .  
   
-10. Klicken Sie im Knoten "Standardwert" auf **entspricht standardmäßig generiertem Wert** , und ziehen Sie es auf die Beschriftung **Aktionen** des Bereichs **THEN** .  
+10. Klicken Sie im Knoten „Standardwert“ auf **entspricht standardmäßig generiertem Wert**, und ziehen Sie ihn auf die Beschriftung **Aktionen** des Bereichs **THEN**.  
   
 11. Klicken Sie im Bereich **Attribute** auf das Attribut mit dem zu generierenden Wert, und ziehen Sie es in die Beschriftung **Attribut auswählen** des Bereichs **Aktion bearbeiten** .  
   

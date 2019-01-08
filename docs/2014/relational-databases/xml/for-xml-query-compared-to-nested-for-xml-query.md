@@ -13,12 +13,12 @@ ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8aab52401c438dc9428e082ab66307d3961a8f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 491c0a0084e334cabe7b0eb7648b50aed46a3abc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122020"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545571"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML-Abfragen im Vergleich zu geschachtelten FOR XML-Abfragen
   In diesem Thema wird eine einstufige FOR XML-Abfrage mit einer geschachtelten FOR XML-Abfrage verglichen. Ein Vorteil, den die Verwendung geschachtelter FOR XML-Abfragen bietet, besteht darin, dass Sie eine Kombination aus attributzentriertem und elementzentriertem XML-Code für Abfrageergebnisse angeben können. Das Beispiel veranschaulicht dies.  
@@ -193,9 +193,9 @@ FOR XML AUTO, TYPE
                 ProductName="Mountain-100 Silver, 42" Color="Silver" />  
       <Production.Product ProductID="773"   
                 ProductName="Mountain-100 Silver, 44" Color="Silver" />  
-        …  
+        ...  
     </ProductModel>  
-     …  
+     ...  
 ```  
   
  Wenn Sie die `ELEMENTS` -Direktive aus der geschachtelten `FOR XML` -Abfrage entfernen, mit der die Produktunterkategorien generiert werden, ist das gesamte Ergebnis attributzentriert. Sie können diese Abfrage dann ohne Schachtelung schreiben. Das Hinzufügen der `ELEMENTS` -Direktive ergibt einen XML-Code, der teilweise attributzentriert und teilweise elementzentriert ist. Dieses Ergebnis kann nicht durch eine FOR XML-Abfrage mit nur einer einzigen Ebene generiert werden.  

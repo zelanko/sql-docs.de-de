@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3736ebcdcf189ab377624b962a119de864130668
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: daa62b343adca72d28da5d83469409ed476a210e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184500"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782502"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Ergänzendes Oracle-Protokollierungsskript
   In diesem Dialogfeld wird das ergänzende Oracle-Protokollierungsskript angezeigt.  
@@ -25,7 +24,7 @@ ms.locfileid: "48184500"
   
  Je nach den Oracle DBA-Richtlinien in Ihrer Organisation kann es erforderlich sein, dass beim Ausführen des ergänzenden Protokollierungsskripts eine Überprüfung und Genehmigung durch einen Oracle-Datenbankadministrator erfolgt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Sie können die folgenden Optionen verwenden, um festzulegen, wie das Skript ausgeführt wird.  
   
  **Run Script**  
@@ -38,7 +37,7 @@ ms.locfileid: "48184500"
  Kopiert das Skript in die Zwischenablage. Nach Abschluss des Vorgangs können Sie das Skript an jedem erforderlichen Speicherort einfügen, falls ein Oracle-Datenbankadministrator das ergänzende Protokollierungsskript untersuchen und ausführen muss.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Verwalten einer CDC-Instanz](manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [Verwalten einer CDC-Instanz](manage-a-cdc-instance.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ed50f8107b1ee12109eedc904ef07c6a5342df7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c34694012a69285ee92fa90c58f293654c961890
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133550"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524186"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importieren eines Data Mining-Projekts mithilfe des Analysis Services-Import-Assistenten
   In diesem Thema wird beschrieben, wie ein neues Data Mining-Projekt erstellt wird, indem die Metadaten aus einem vorhandenen Data Mining-Projekt auf einen anderen Server mithilfe der Vorlage **Import from Server (Multidimensional and Data Mining) Project**(Vom Server importieren (mehrdimensionales und Data Mining-Projekt)) in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]importiert werden.  
@@ -24,7 +24,7 @@ ms.locfileid: "48133550"
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Importieren von Datenquellen, Miningstrukturen und Miningmodellen aus einem vorhandenen Data Mining-Projekt  
  Wenn Sie die Vorlage **Import from Server (Multidimensional and Data Mining) Project**verwenden, erstellt [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ein neues Data Mining-Projekt und kopiert die Metadaten anschließend aus dem angegebenen Data Mining-Projekt. Das neue Projekt enthält die gleichen Datenquellen, Datenquellensichten, Miningstrukturen und Miningmodelle wie die ssASnoversion-Datenbank, aus der der Import erfolgt ist. Das Projekt kann jedoch erst verwendet werden, wenn Sie bestimmte Eigenschaften aktualisiert und die Objekte wie beschrieben verarbeitet haben:  
   
--   Die Daten selbst werden nicht vom Quellserver in das neue Data Mining-Projekt kopiert – nur die Definitionen der Datenquellen und Datenquellensichten werden importiert. Nachdem der Importvorgang abgeschlossen ist und die Objekte erstellt wurden, müssen Sie die Objekte mit Daten auffüllen, indem Sie die Miningstrukturen und abhängigen Modelle trainieren. Sie können den Befehl **Alles verarbeiten** im Data Mining-Designer verwenden, um die Modelle und Strukturen zu trainieren.  
+-   Die Daten selbst werden nicht vom Quellserver kopiert, für die neue Datamining-Projekt nur die Definitionen der Datenquellen und Datenquellensichten importiert werden. Nachdem der Importvorgang abgeschlossen ist und die Objekte erstellt wurden, müssen Sie die Objekte mit Daten auffüllen, indem Sie die Miningstrukturen und abhängigen Modelle trainieren. Sie können den Befehl **Alles verarbeiten** im Data Mining-Designer verwenden, um die Modelle und Strukturen zu trainieren.  
   
 -   Wenn Sie ein Projekt importieren, das in einer früheren Version von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt wurde, könnte die Datenquelle Anbieter verwenden, die nicht auf dem Server installiert sind, auf den Sie das Projekt importieren. Wenn beim Verarbeiten der importierten Miningstrukturen Fehler auftreten, klicken Sie mit der rechten Maustaste auf jede Datenquelle, und wählen Sie **Designer öffnen** aus, um die Verbindungszeichenfolge zu bearbeiten und die Anbietereigenschaften zu überprüfen.  
   

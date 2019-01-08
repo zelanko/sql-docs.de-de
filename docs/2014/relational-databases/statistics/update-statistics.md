@@ -13,12 +13,12 @@ ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d83dcaf8ea6f674ae1086d2d02f9423a3bb98358
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 872b0ffa2cc08c90430ec703cea984ad7d274339
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053422"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527984"
 ---
 # <a name="update-statistics"></a>Statistikaktualisierung
   Sie können Abfrageoptimierungsstatistiken für eine Tabelle oder indizierte Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]aktualisieren. Standardmäßig nimmt der Abfrageoptimierer erforderliche Updates der Statistiken automatisch vor, um den Abfrageplan zu verbessern. In einigen Fällen können Sie die Abfrageleistung mit UPDATE STATISTICS oder der gespeicherten Prozedur `sp_updatestats` verbessern, um Statistiken häufiger zu aktualisieren, als von der Standardeinstellung vorgegeben.  
@@ -29,7 +29,7 @@ ms.locfileid: "48053422"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So aktualisieren Sie ein Statistikobjekt mit:**  
   
@@ -37,14 +37,14 @@ ms.locfileid: "48053422"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Bei der Verwendung von UPDATE STATISTICS oder beim Vornehmen von Änderungen mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ist für die Tabelle oder Sicht die ALTER-Berechtigung erforderlich. Wenn Sie `sp_updatestats`verwenden, ist die Mitgliedschaft in der festen Serverrolle **sysadmin** oder der Besitz der Datenbank (**dbo**) erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-update-a-statistics-object"></a>So aktualisieren Sie ein Statistikobjekt  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48053422"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Statistikobjekt, das Sie aktualisieren möchten, und wählen Sie **Eigenschaften**.  
   
-6.  Aktivieren Sie im Dialogfeld **Statistikeigenschaften** > *Statistikname* das Kontrollkästchen **Statistiken für diese Spalten aktualisieren**, und klicken Sie dann auf **OK**.  
+6.  In der **Statistikeigenschaften – *** Statistics_name* wählen Sie im Dialogfeld die **Aktualisieren von Statistiken für diese Spalten** Kontrollkästchen, und klicken Sie dann auf **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

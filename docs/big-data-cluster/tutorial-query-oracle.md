@@ -1,20 +1,21 @@
 ---
-title: Wie Sie Oracle-Abfrage aus einer SQL Server-big Data-Cluster | Microsoft-Dokumentation
+title: Abfragen von externen Daten in Oracle
+titleSuffix: SQL Server 2019 big data clusters
 description: In diesem Tutorial wird veranschaulicht, wie Oracle-Daten aus einer SQL Server-2019 big Data-Cluster (Vorschau) abgefragt werden. Sie erstellen eine externe Tabelle für Daten in Oracle und anschließend eine Abfrage ausführen.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/12/2018
+ms.date: 12/12/2018
 ms.topic: tutorial
-ms.prod: sql
-ms.openlocfilehash: 7f5383a6faf13f0454439a42efb7524eaeda7c76
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: f7a367a41814a7cb590276b10fcfb7c4c8697011
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644173"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432153"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutorial: Abfragen von Oracle aus einer SQL Server-big Data-cluster
+# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Lernprogramm: Abfragen von Oracle aus einer SQL Server-big Data-cluster
 
 Dieses Tutorial veranschaulicht, wie Sie Oracle-Daten aus einer SQL Server-2019 big Data-Cluster Abfragen. Um dieses Tutorial ausführen zu können, müssen Sie auf einem Oracle-Server zugreifen. Wenn Sie keinen Zugriff haben, erhalten in diesem Tutorial Sie einen Überblick über die Funktionsweise der Datenvirtualisierung für externe Datenquellen in SQL Server-big Data-Cluster.
 
@@ -29,11 +30,11 @@ In diesem Tutorial erfahren Sie, wie Sie:
 
 ## <a id="prereqs"></a> Erforderliche Komponenten
 
-* [Bereitstellen einen big Data-Cluster in Kubernetes](deployment-guidance.md).
-* [Installieren Sie Studio für Azure Data und die Erweiterung für SQL Server-2019](deploy-big-data-tools.md).
-* [Laden Sie Beispieldaten in den Cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Big Data-tools](deploy-big-data-tools.md)
+   - **"kubectl"**
+   - **Azure Data Studio**
+   - **SQL Server-2019-Erweiterung**
+- [Laden Sie Beispieldaten in Ihre big Data-cluster](tutorial-load-sample-data.md)
 
 ## <a name="create-an-oracle-table"></a>Erstellen einer Oracle-Tabelle
 
@@ -61,7 +62,7 @@ Die folgenden Schritte erstellen Sie eine Beispieltabelle namens `INVENTORY` in 
 
 Der erste Schritt ist die Erstellung eine externen Datenquelle, die auf den Oracle-Server zugreifen können.
 
-1. Verbinden Sie in Azure Data Studio mit der SQL Server-Masterinstanz von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](deploy-big-data-tools.md#master).
+1. Verbinden Sie in Azure Data Studio mit der SQL Server-Masterinstanz von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](connect-to-big-data-cluster.md#master).
 
 1. Doppelklicken Sie auf die Verbindung in der **Server** Fenster im Server-Dashboard für die master-SQL Server-Instanz angezeigt wird. Wählen Sie **neue Abfrage**.
 

@@ -20,27 +20,27 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: adbac2ea9036a6c869ed17aceed297ea13d0ec2d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7b8935bc203c616f88a7e5929bd19e10a41592d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663234"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591034"
 ---
 # <a name="domainconstraints-transact-sql"></a>DOMAIN_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt eine Zeile für jeden Aliasdatentyp in der aktuellen Datenbank zurück, an die eine Regel gebunden ist und auf die der aktuelle Benutzer zugreifen kann.  
   
- Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen der **INFORMATION_SCHEMA. *** View_name*.  
+ Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen der **INFORMATION_SCHEMA.** _View_name_.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**Nvarchar (** 128 **)**|Datenbank, in der die Regel vorhanden ist.|  
-|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, das die Einschränkung enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, das die Einschränkung enthält.<br /><br /> <strong>\*\* Wichtige \* \*</strong>  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**CONSTRAINT_NAME**|**sysname**|Name der Regel.|  
 |**DOMAIN_CATALOG**|**Nvarchar (** 128 **)**|Datenbank, in der der Aliasdatentyp vorhanden ist.|  
-|**DOMAIN_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, das den Aliasdatentyp enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Datentyps zu bestimmen. Die einzige zuverlässige Möglichkeit zum Finden des Schemas eines Typs besteht darin, die TYPEPROPERTY-Funktion zu verwenden.|  
+|**DOMAIN_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, das den Aliasdatentyp enthält.<br /><br /> <strong>\*\* Wichtige \* \*</strong>  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Datentyps zu bestimmen. Die einzige zuverlässige Möglichkeit zum Finden des Schemas eines Typs besteht darin, die TYPEPROPERTY-Funktion zu verwenden.|  
 |**DOMÄNENNAME**|**sysname**|Aliasdatentyp.|  
 |**IS_DEFERRABLE**|**Varchar (** 2 **)**|Gibt an, ob die einschränkungsüberprüfung verzögert werden. Es wird immer NO zurückgegeben.|  
 |**INITIALLY_DEFERRED**|**Varchar (** 2 **)**|Gibt an, ob die Einschränkungsüberprüfung zu Beginn zurückgestellt wird. Es wird immer NO zurückgegeben.|  

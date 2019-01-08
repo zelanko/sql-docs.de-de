@@ -11,12 +11,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3940f7c214ab3f9d5d48e83acef5ed2237ceeac3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0001b04a93c1aacfbf2e7701faada815cb6316ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206530"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515447"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Erstellen von Vorhersagen (Lernprogramm zu Data Mining-Grundlagen)
   Nachdem Sie entschieden, dass Sie mit den Ergebnissen zufrieden sind und die Genauigkeit Ihrer Miningmodelle getestet haben, können Sie Sie vorhersagen erzeugen, mit dem Generator für Vorhersageabfragen auf die **Miningmodellvorhersage** Registerkarte im Data Mining Designer.  
@@ -157,7 +157,7 @@ ms.locfileid: "48206530"
   
         2.  Geben Sie einen Namen für die Tabelle ein, in die die Abfrageergebnisse eingefügt werden.  
   
-        3.  Verwenden Sie die Option **zur Datenquellensicht hinzufügen**, um eine Tabelle erstellen, und fügen Sie es einer vorhandenen Datenquellensicht hinzu. Diese Option ist nützlich, wenn Sie alle verknüpften Tabellen für ein Modell – z. B. Trainingsdaten, Vorhersagequelldaten und Abfrageergebnisse – in der gleichen Datenquellensicht beibehalten möchten.  
+        3.  Verwenden Sie die Option **zur Datenquellensicht hinzufügen**, um eine Tabelle erstellen, und fügen Sie es einer vorhandenen Datenquellensicht hinzu. Dies ist nützlich, wenn Sie alle verknüpfte Tabellen für bleiben soll ein Modell wie z. B. Trainingsdaten, vorhersagequelldaten und Abfrage Ergebnisse-die gleiche Datenquellensicht in.  
   
         4.  Verwenden Sie die Option **überschreiben, falls vorhanden**, um eine vorhandene Tabelle mit den neuesten Ergebnissen zu aktualisieren.  
   

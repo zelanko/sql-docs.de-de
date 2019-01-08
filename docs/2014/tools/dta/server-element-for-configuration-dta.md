@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,15 +14,15 @@ ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 10a8fa9eed7f89d9706ab3388eccc881b165ef74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bc763d621d15f982a2670483683d3862e678c98
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206910"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367622"
 ---
 # <a name="server-element-for-configuration-dta"></a>Server-Element für Konfiguration (DTA)
-  Enthält die Identifikationsinformationen für den Server, der Datenbankoptimierungsratgeber die hypothetische Konfiguration auswerten soll (angegeben durch die `Configuration` Element).  
+  Enthält die Identifikationsinformationen für den Server, auf dem der Datenbankoptimierungsratgeber die hypothetische Konfiguration auswerten soll (wird durch das `Configuration`-Element angegeben).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,17 +40,17 @@ ms.locfileid: "48206910"
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
-|**Vorkommen**|Erforderlich einmal pro `Configuration` Element.|  
+|**Vorkommen**|Einmal pro `Configuration`-Element erforderlich.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[Konfigurationselement &#40;DTA&#41;](configuration-element-dta.md)|  
-|**Untergeordnete Elemente**|[Benennen Sie Element für Server &#40;DTA&#41;](name-element-for-server-dta.md)<br /><br /> [Database-Element für Konfiguration &#40;DTA&#41;](database-element-for-configuration-dta.md)|  
+|**Übergeordnetes Element**|[Configuration-Element &#40;DTA&#41;](configuration-element-dta.md)|  
+|**Untergeordnete Elemente**|[Name-Element für Server &#40;DTA&#41;](name-element-for-server-dta.md)<br /><br /> [Database-Element für Konfiguration &#40;DTA&#41;](database-element-for-configuration-dta.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Geben Sie nur einen `Server` -Element für die `Configuration` Element. Dieses Element hat den Namen **ServerTypecomplexType** im [XML-Schema des Datenbankoptimierungsratgebers](http://go.microsoft.com/fwlink/?linkid=43100). Verwechseln Sie dies nicht `Server` Element mit dem das untergeordnete Element ist die `DTAInput` Element. Weitere Informationen finden Sie unter [Server-Element &#40;DTA&#41;](server-element-dta.md).  
+ Geben Sie nur einen `Server` -Element für die `Configuration` Element. Dieses Element hat den Namen **ServerTypecomplexType** im [XML-Schema des Datenbankoptimierungsratgebers](https://go.microsoft.com/fwlink/?linkid=43100). Dieses `Server`-Element ist nicht mit dem untergeordneten Element für das `DTAInput`-Element identisch. Weitere Informationen finden Sie unter [Server-Element &#40;DTA&#41;](server-element-dta.md).  
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel für die Syntax finden Sie unter [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

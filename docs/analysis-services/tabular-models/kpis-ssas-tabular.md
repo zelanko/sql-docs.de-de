@@ -1,5 +1,5 @@
 ---
-title: KPIs | Microsoft-Dokumentation
+title: KPIs in tabellarischen Modellen von Analysis Services | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8c718c3f8501a56b9ba02062e9457ca0cd67ad56
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 2f6714d61ce53b251a6511aaf78c803213e19860
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906430"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072317"
 ---
 # <a name="kpis"></a>KPIs (Key Performance Indicators)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "48906430"
 ##  <a name="bkmk_example"></a> Beispiel  
  Der Vertriebsleiter von Adventure Works möchte eine PivotTable erstellen, in der schnell angezeigt wird, ob Vertriebsmitarbeiter ihre Umsatzvorgaben in einem bestimmten Zeitraum (Jahr) erfüllen. Für jeden Vertriebsmitarbeiter möchte sie die PivotTable die tatsächlichen Umsatzzahlen in Dollar, das die sollvorgaben in Dollar und eine einfache Statusgrafik angezeigt, die mit dem Status des davon, ob jedes Vertriebsmitarbeiters unten, bei oder oberhalb der sollvorgabe ist. Zudem möchte der Vertriebsleiter die Daten nach Jahr unterteilen.  
   
- Mit Unterstützung eines Kollegen, der für die Entwicklung von BI-Lösungen zuständig ist, fügt der Vertriebsleiter dem tabellarischen AdventureWorks-Modell einen "Sales KPI" hinzu. Der Vertriebsleiter verwendet dann Excel eine Verbindung mit AdventureWorks tabellarisches Modell als Datenquelle aus, und erstellen Sie eine PivotTable mit den Feldern (Measures und KPI) und Slicern, um zu analysieren, und zwar unabhängig davon, ob die Vertriebsmannschaft ihre Vorgaben erfüllt.  
+ Zu diesem Zweck trägt der Vertriebsleiter für die Unterstützung des ihr Unternehmens-BI-Lösung-Entwickler tabellarischen AdventureWorks-Modell eine Sales KPI hinzu. Der Vertriebsleiter verwendet dann Excel eine Verbindung mit AdventureWorks tabellarisches Modell als Datenquelle aus, und erstellen Sie eine PivotTable mit den Feldern (Measures und KPI) und Slicern, um zu analysieren, und zwar unabhängig davon, ob die Vertriebsmannschaft ihre Vorgaben erfüllt.  
   
  Im Modell wird ein Measure für die Spalte "SalesAmount" in der Tabelle "FactResellerSales" erstellt, das die tatsächlichen Vertriebszahlen für jeden Vertriebsmitarbeiter in Dollar angibt. Durch dieses Measure wird der Basiswert des KPIs definiert.  
   
@@ -60,7 +60,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  Nachdem die Measures nun erstellt wurden, um als Basis- und Zielwert des KPIs zu fungieren, wird das Sales-Measure zu einem neuen Sales-KPI erweitert. Im "Sales KPI" ist das Measure "Target SalesAmountQuota" als Zielwert definiert. Der Statusschwellenwert wird als Bereich von Prozentzahlen definiert, wobei 100 % der Zielvorgabe entsprechen. Das würde bedeuten, dass die durch das Sales-Measure definierten tatsächlichen Verkaufszahlen die Vorgaben erfüllen, die im Measure "Target SalesAmountQuota" definiert sind. Zum Definieren der niedrigen und hohen Prozentwerte wird die Statusleiste verwendet, und es wird ein Grafiktyp ausgewählt.  
   
- Der Vertriebsleiter kann jetzt eine PivotTable erstellen, indem er den Basiswert, Zielwert und den Status des KPIs dem Feld Werte hinzufügt. Die Spalte "Employees" wird dem Feld "RowLabel" hinzugefügt, und die Spalte "CalendarYear" wird als Slicer verwendet.  
+ Der Vertriebsleiter kann jetzt eine PivotTable hinzufügen Basiswert, Zielwert und Status des KPIS dem Feld Werte erstellen. Die Spalte "Employees" wird dem Feld "RowLabel" hinzugefügt, und die Spalte "CalendarYear" wird als Slicer verwendet.  
   
  Der Vertriebsleiter kann die tatsächlichen Umsatzzahlen, die Vertriebsvorgaben und den Status jedes Vertriebsmitarbeiters jetzt nach Jahr unterteilen. So lassen sich Vertriebstrends über Jahre analysieren, um zu ermitteln, ob die Vertriebsvorgaben für einen Vertriebsmitarbeiter angepasst werden müssen.  
   

@@ -13,12 +13,12 @@ ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7fbfb6d659aa8bc96ebc13ad0a3b89df750c5f95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e1ebde4d8b1303e3a845bf4ce9fdc03d3ba6c6a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167470"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589554"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lektion 3: Konfigurieren der Verteilung
   In dieser Lektion konfigurieren Sie die Verteilung auf dem Verleger und legen die erforderlichen Berechtigungen für die Verteilungs- und Veröffentlichungsdatenbanken fest. Wenn der Verteiler bereits konfiguriert wurde, müssen die Veröffentlichung und die Verteilung erst deaktiviert werden, bevor Sie mit dieser Lektion beginnen. Führen Sie diese Lektion nicht aus, wenn Sie eine vorhandene Replikationstopologie beibehalten müssen.  
@@ -36,11 +36,11 @@ ms.locfileid: "48167470"
   
      Der Verteilungskonfigurations-Assistent wird gestartet.  
   
-3.  Auf der **Verteiler** Seite **"***\<ServerName >***' als seinen eigenen Verteiler verwenden; fungiert SQL Server erstellt eine Verteilungsdatenbank und ein Protokoll**, und klicken Sie dann auf **Weiter**.  
+3.  Auf der **Verteiler** Seite **"**_\<ServerName >_**' als seinen eigenen Verteiler verwenden; fungiert SQL Server erstellt eine Verteilungsdatenbank und ein Protokoll**, und klicken Sie dann auf **Weiter**.  
   
 4.  Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht ausgeführt wird, wählen Sie auf der Seite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agent-Start** die Option **Ja**, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zum automatischen Starten konfigurieren. Klicken Sie auf **Weiter**.  
   
-5.  Geben Sie im Textfeld **Momentaufnahmeordner** die Zeichenfolge **\\\\**\<*Computername>***\repldata** ein, wobei \<*Computername>* der Name des Verlegers ist, und klicken Sie anschließend auf **Weiter**.  
+5.  Geben Sie im Textfeld **Momentaufnahmeordner** die Zeichenfolge **\\\\**\<_Machine_Name>_**\repldata** ein, wobei \<*Machine_Name>* der Name des Verlegers ist, und klicken Sie anschließend auf **Weiter**.  
   
 6.  Übernehmen Sie die Standardwerte auf den restlichen Seiten des Assistenten.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48167470"
   
 1.  Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den Knoten **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Anmeldungen**, und wählen Sie anschließend **Neue Anmeldung**aus.  
   
-2.  Klicken Sie auf der Seite **Allgemein** auf **Suchen**, geben Sie im Feld **Geben Sie die zu verwendenden Objektnamen** die Zeichenfolge \<*Computername>***\repl_snapshot** ein, wobei \<*Computername>* der Name des lokalen Verlegerservers ist. Klicken Sie auf **Namen überprüfen**, und klicken Sie anschließend auf **OK**.  
+2.  Klicken Sie auf der Seite **Allgemein** auf **Suchen**, geben Sie im Feld **Geben Sie die zu verwendenden Objektnamen ein** die Zeichenfolge \<_Machine_Name>_**\repl_snapshot** ein, wobei \<*Machine_Name>* der Name des lokalen Verlegerservers ist. Klicken Sie auf **Namen überprüfen**, und klicken Sie anschließend auf **OK**.  
   
 3.  Wählen Sie auf der Seite **Benutzerzuordnung** in der Liste **Benutzer, die dieser Anmeldung zugeordnet sind** sowohl die **Verteilungs** - als auch die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank aus.  
   
@@ -66,6 +66,6 @@ ms.locfileid: "48167470"
   
 ## <a name="see-also"></a>Siehe auch  
  [Verteilung konfigurieren](configure-distribution.md)   
- [Replication Agent Security Model](security/replication-agent-security-model.md)  
+ [Sicherheitsmodell des Replikations-Agents](security/replication-agent-security-model.md)  
   
   

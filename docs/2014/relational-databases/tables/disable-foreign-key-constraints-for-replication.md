@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - constraints [SQL Server], foreign keys
@@ -15,12 +14,12 @@ ms.assetid: 4211f2fd-d16a-4081-995c-43f1f0827f0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d992736b0ed9c032785fd4ae18330061c3a7146
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2cd2e4f3e5ee16c02ba48c6cd8ced98c06133dfb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200590"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798880"
 ---
 # <a name="disable-foreign-key-constraints-for-replication"></a>Deaktivieren von Fremdschlüsseleinschränkungen für die Replikation
   Sie können Fremdschlüsseleinschränkungen für die Replikation in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]deaktivieren. Dies kann nützlich sein, wenn Sie Daten einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]veröffentlichen.  
@@ -32,7 +31,7 @@ ms.locfileid: "48200590"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So deaktivieren Sie eine Fremdschlüsseleinschränkung für die Replikation mit:**  
   
@@ -40,14 +39,14 @@ ms.locfileid: "48200590"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-disable-a-foreign-key-constraint-for-replication"></a>So deaktivieren Sie eine Fremdschlüsseleinschränkung für die Replikation  
   

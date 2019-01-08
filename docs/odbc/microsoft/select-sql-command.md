@@ -13,12 +13,12 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f44eb85e80135f81d0e2ca1f37657818843a237
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710058"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540241"
 ---
 # <a name="select---sql-command"></a>SELECT (SQL-Befehl)
 Ruft Daten aus einer oder mehreren Tabellen ab.  
@@ -35,7 +35,7 @@ SELECT [ALL | DISTINCT]
 FROM [DatabaseName!]Table [Local_Alias]  
    [, [DatabaseName!]Table [Local_Alias] ...]   
 [WHERE JoinCondition [AND JoinCondition  
-…]  
+...]  
    [AND | OR FilterCondition [AND | OR FilterCondition ...]]]  
 [GROUP BY GroupColumn [, GroupColumn ...]]  
 [HAVING FilterCondition]  
@@ -84,13 +84,13 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   AVG (*Select_Item*) – eine Spalte mit numerischen Daten ermittelt.  
   
--   COUNT (*Select_Item*) – zählt die Anzahl der Elemente in einer Spalte auswählen. Count(*) zählt die Anzahl der Zeilen in der Ausgabe der Abfrage.  
+-   COUNT (*Select_Item*)-zählt die Anzahl der Elemente in einer Spalte auswählen. Count(*) zählt die Anzahl der Zeilen in der Ausgabe der Abfrage.  
   
--   MIN (*Select_Item*): ermittelt den kleinsten Wert der *Select_Item* in einer Spalte.  
+-   MIN (*Select_Item*)-ermittelt den kleinsten Wert der *Select_Item* in einer Spalte.  
   
--   MAX (*Select_Item*): ermittelt den größten Wert der *Select_Item* in einer Spalte.  
+-   MAX (*Select_Item*)-ermittelt den größten Wert der *Select_Item* in einer Spalte.  
   
--   SUM (*Select_Item*) – eine Spalte mit numerischen Daten summiert.  
+-   SUM (*Select_Item*)-Zeilengesamtwerte eine Spalte mit numerischen Daten.  
   
  Sie können keine Funktionen schachteln.  
   

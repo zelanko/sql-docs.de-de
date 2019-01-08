@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - parameter queries [SQL Server]
@@ -12,12 +12,12 @@ ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53d38505a07fe30ef22145f4ec8197092e7bc6d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098639"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815742"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Parameterabfragen (Visual Database Tools)
   Für bestimmte Aufgaben werden Abfragen benötigt, die bei sich wiederholenden Aufrufen die Übergabe eines wechselnden Werts ermöglichen. Angenommen, Sie führen des Öfteren eine Abfrage aus, mit der alle `title_ids` eines Autors abgerufen werden. In diesem Fall führen Sie für jede Anforderung dieselbe Abfrage aus, wobei jedoch die ID bzw. der Name des Autors jeweils unterschiedlich ist.  
@@ -31,7 +31,7 @@ WHERE (au_id = ?)
 ```  
   
 ## <a name="where-you-can-use-parameters"></a>Verwendungsmöglichkeit von Parametern  
- Sie können Parameter als Platzhalter für Literalwerte verwenden, d. h. sowohl für Textwerte als auch für numerische Werte. Sehr häufig werden Parameter als Platzhalter in Suchbedingungen für einzelne Zeilen oder Zeilengruppen verwendet (also in den WHERE- oder HAVING-Klauseln einer SQL-Anweisung).  
+ Sie können Parameter als Platzhalter für Literalwerte verwenden, d.h. sowohl für Textwerte als auch für numerische Werte. Sehr häufig werden Parameter als Platzhalter in Suchbedingungen für einzelne Zeilen oder Zeilengruppen verwendet (also in den WHERE- oder HAVING-Klauseln einer SQL-Anweisung).  
   
  Sie können Parameter als Platzhalter in Ausdrücken verwenden. Angenommen, Sie möchten Rabattpreise berechnen und bei jedem Ausführen der Abfrage einen anderen Rabattwert angeben können. Hierzu lässt sich folgender Ausdruck verwenden:  
   

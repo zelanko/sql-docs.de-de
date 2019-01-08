@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2bf94fb04bd6f96de019c7e8543b8a626cebe439
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699119"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524466"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Antivirus-Software für Analytics Platform System
 Wenn Ihr Rechenzentrum antivirus-Software erfordert, verwenden Sie diese Richtlinien, um die antivirus-Software in Analytics Platform System zu installieren. Es wird empfohlen, antivirus-Software nicht installiert, es sei denn, es sich um eine feste Anforderung Ihres Rechenzentrums ist.  
@@ -46,13 +46,13 @@ Um die antivirus-Software auf physischen Hosts installieren möchten, schließen
 ## <a name="exclusion-list-for-virtual-machines-vms"></a>Ausschlussliste für virtuelle Computer (VMs)  
 Um die antivirus-Software auf den virtuellen Computern zu installieren, schließen Sie die folgende Liste von Verzeichnissen und Dateien. Diese sollte nicht von der Antivirussoftware überprüft.  
   
-***PDW_region*-CTL01**  
+**_PDW_region_-CTL01**  
   
 -   C:\windows\cluster\  
   
 -   G:\  
   
-***Appliance_domain *-AD01** und ***Appliance_domain *-AD02**  
+**_Appliance_domain_-AD01** und  **_Appliance_domain_-AD02**  
   
 -   Keine Einschränkungen  
   
@@ -62,15 +62,15 @@ Um die antivirus-Software auf den virtuellen Computern zu installieren, schließ
   
 -   G:\  
   
-***Appliance_domain * – VMM**  
+**_Appliance_domain_– VMM**  
   
 -   Keine Einschränkungen  
   
-***Appliance_domain *-WDS**  
+**_Appliance_domain_- WDS**  
   
 -   Keine Einschränkungen  
   
-***Appliance_domain *-ISCSI01**  
+**_Appliance_domain_-ISCSI01**  
   
 -   C:\iscsitarget  
   

@@ -16,12 +16,12 @@ ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28ac9304ac49a210cfeafc564332828da0680dc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ba210106a7a4045c3dae43db3590e69a7c2c5ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178820"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515791"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Import und Export von Paketen (SSIS-Dienst)
     
@@ -38,16 +38,16 @@ ms.locfileid: "48178820"
   
 -   Ordner im SSIS-Paketspeicher. Die beiden Standardordner heißen File System und MSDM.  
   
--   Die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-msdb-Datenbank.  
+-   Die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -msdb-Datenbank.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Ihnen die Möglichkeit zum Importieren und Exportieren von Paketen und tun Sie dies durch das Speicherformat und den Speicherort der Pakete ändern. Mit den Import- und Export-Features können Sie Pakete zum Dateisystem, zum Paketspeicher oder zur msdb-Datenbank hinzufügen und Pakete aus einem Speicherformat in ein anderes Format kopieren. So können z.B. in msdb gespeicherte Pakete in das Dateisystem kopiert werden und umgekehrt.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ermöglicht Ihnen das Importieren und Exportieren von Paketen. Damit können Sie das Speicherformat und den Speicherort der Pakete ändern. Mit den Import- und Export-Features können Sie Pakete zum Dateisystem, zum Paketspeicher oder zur msdb-Datenbank hinzufügen und Pakete aus einem Speicherformat in ein anderes Format kopieren. So können z.B. in msdb gespeicherte Pakete in das Dateisystem kopiert werden und umgekehrt.  
   
  Zum Kopieren eines Pakets in ein anderes Format können Sie auch das Eingabeaufforderungs-Hilfsprogramm **dtutil** („dtutil.exe“) verwenden. Weitere Informationen finden Sie unter [dtutil Utility](dtutil-utility.md).  
   
 ## <a name="to-import-or-export-a-package"></a>So importieren oder exportieren Sie ein Paket  
   
 > [!IMPORTANT]  
->  In diesem Thema wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst erläutert, der Teil von [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]ist. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unterstützt den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Dienst aus Gründen der Abwärtskompatibilität mit [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Informationen zum Verwalten von Paketen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] finden Sie unter [Integration Services-Server &#40;SSIS&#41;](catalog/integration-services-ssis-server-and-catalog.md).  
+>  In diesem Thema wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst erläutert, der Teil von [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]ist. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unterstützt den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst aus Gründen der Abwärtskompatibilität mit [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Informationen zum Verwalten von Paketen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] finden Sie unter [Integration Services-Server &#40;SSIS&#41;](catalog/integration-services-ssis-server-and-catalog.md).  
   
  Sie können ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket aus folgenden Speicherorten importieren bzw. in folgende Speicherorte exportieren:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48178820"
   
     -   Wählen Sie im Feld **Servertyp** die Option **Integration Services**aus.  
   
-    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen>**, um nach dem zu verwendenden Server zu suchen.  
+    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen...>**, um nach dem zu verwendenden Server zu suchen.  
   
 3.  Wenn der Objekt-Explorer nicht geöffnet ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48178820"
   
 7.  Aktualisieren Sie optional den Paketnamen.  
   
-8.  Zum Aktualisieren der Schutzebene des Pakets klicken Sie auf die Schaltfläche mit den drei Punkten **(…)** , und wählen Sie im Dialogfeld **Paketschutzebene** eine andere Schutzebene aus. Falls die Option **Sensible Daten mit einem Kennwort verschlüsseln** oder **Alle Daten mit einem Kennwort verschlüsseln** ausgewählt ist, geben Sie ein Kennwort ein, und bestätigen Sie es.  
+8.  Zum Aktualisieren der Schutzebene des Pakets klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, und wählen Sie im Dialogfeld **Paketschutzebene** eine andere Schutzebene aus. Falls die Option **Sensible Daten mit einem Kennwort verschlüsseln** oder **Alle Daten mit einem Kennwort verschlüsseln** ausgewählt ist, geben Sie ein Kennwort ein, und bestätigen Sie es.  
   
 9. Klicken Sie auf **OK** , um den Import abzuschließen.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48178820"
   
     -   Wählen Sie im Feld **Servertyp** die Option **Integration Services**aus.  
   
-    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen>**, um nach dem zu verwendenden Server zu suchen.  
+    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen...>**, um nach dem zu verwendenden Server zu suchen.  
   
 3.  Wenn der Objekt-Explorer nicht geöffnet ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   
@@ -119,15 +119,15 @@ ms.locfileid: "48178820"
   
     -   Zum Exportieren einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]wählen Sie die Option **SQL Server** aus, geben Sie den Server an, und wählen Sie den Authentifizierungsmodus aus. Wenn Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung auswählen, geben Sie einen Benutzernamen und ein Kennwort ein.  
   
-         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, und erweitern Sie den Ordner **SSIS-Pakete** , um den Ordner zu suchen, in dem Sie das Paket speichern möchten. Aktualisieren Sie optional den Standardnamen des Pakets, und klicken Sie dann auf **OK**.  
+         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, und erweitern Sie den Ordner **SSIS-Pakete**, um den Ordner zu suchen, in dem Sie das Paket speichern möchten. Aktualisieren Sie optional den Standardnamen des Pakets, und klicken Sie dann auf **OK**.  
   
     -   Zum Exportieren in das Dateisystem wählen Sie die Option **Dateisystem** aus.  
   
-         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)** , um den Ordner zu suchen, in den Sie das Paket exportieren möchten, geben Sie den Namen der Paketdatei ein, und klicken Sie dann auf **Speichern**.  
+         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, um den Ordner zu suchen, in den Sie das Paket exportieren möchten, geben Sie den Namen der Paketdatei ein, und klicken Sie dann auf **Speichern**.  
   
     -   Zum Exportieren in den [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher wählen Sie die Option **SSIS-Paketspeicher** aus, und geben Sie den Server an.  
   
-         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, erweitern Sie den Ordner **SSIS-Pakete** , und wählen Sie den Ordner aus, in dem Sie das Paket speichern möchten. Geben Sie optional in das Textfeld **Paketname** einen neuen Namen für das Paket ein. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, erweitern Sie den Ordner **SSIS-Pakete**, und wählen Sie den Ordner aus, in dem Sie das Paket speichern möchten. Geben Sie optional in das Textfeld **Paketname** einen neuen Namen für das Paket ein. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Zum Aktualisieren der Schutzebene des Pakets klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, und wählen Sie im Dialogfeld **Paketschutzebene** eine andere Schutzebene aus. Falls die Option **Sensible Daten mit einem Kennwort verschlüsseln** oder **Alle Daten mit einem Kennwort verschlüsseln** ausgewählt ist, geben Sie ein Kennwort ein, und bestätigen Sie es.  
   

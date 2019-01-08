@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledest.f1
@@ -18,12 +17,12 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9cc425ca170a8b6619bead023f76b163e698aab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed4cb484f89d44ed31b4c82a9e1349dfab925dac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058790"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761752"
 ---
 # <a name="flat-file-destination"></a>Flatfileziel
   Das Flatfileziel schreibt Daten in eine Textdatei. Die Textdatei kann in verschiedenen Formaten vorliegen: mit Trennzeichen, mit fester Breite, mit fester Breite mit Zeilentrennzeichen oder mit rechtem Flatterrand.  
@@ -45,9 +44,9 @@ ms.locfileid: "48058790"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Quellen-Editor für Flatfiles** festlegen können:  
   
--   [Ziel-Editor für Flatfiles &#40;Seite Verbindungs-Manager&#41;](../flat-file-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für Flatfiles &#40;Seite „Verbindungs-Manager“&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [Ziel-Editor für Flatfiles &#40;Seite "Zuordnungen"&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für Flatfiles &#40;Seite „Zuordnungen“&#41;](../flat-file-destination-editor-mappings-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48058790"
  Informationen zum Festlegen der Eigenschaften einer Datenflusskomponente finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Flatfile-Datenquelle](flat-file-source.md)   
+ [Flatfilequelle](flat-file-source.md)   
  [Datenfluss](data-flow.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a82bf63ca0c70543d816cbd191b1ff9a36ced317
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9883e7e21e58424fbc6280ad99ac323becd9b00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211470"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526344"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>Hinzufügen eines datengebundenen Bilds (Berichts-Generator und SSRS)
   Ein Bericht kann einen Verweis auf ein Bild enthalten, das in einer Datenbank gespeichert ist. Ein solches Bild wird als *datengebundenes Bild*bezeichnet. Bilder, die neben Produktnamen in einer Produktliste angezeigt werden, sind Beispiele für datengebundene Bilder.  
@@ -42,15 +42,15 @@ ms.locfileid: "48211470"
   
 7.  Wählen Sie unter **Dieses Feld verwenden**das Feld aus, das Bilder im Bericht enthält.  
   
-8.  Wählen Sie unter **Diesen MIME-Typ verwenden**den MIME-Typ oder das Dateiformat des Bilds aus – beispielsweise BMP.  
+8.  Wählen Sie unter **Diesen MIME-Typ verwenden** den MIME-Typ oder das Dateiformat des Bilds aus, beispielsweise BMP.  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      Ein Bildplatzhalter wird auf der Berichtsentwurfsoberfläche angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Images &#40;Berichts-Generator und SSRS&#41;](images-report-builder-and-ssrs.md)   
- [Einbetten eines Bilds in einem Bericht &#40;Berichts-Generator und SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Bilder &#40;Berichts-Generator und SSRS&#41;](images-report-builder-and-ssrs.md)   
+ [Einbetten eines Bilds in einen Bericht &#40;Berichts-Generator und SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Hinzufügen eines externen Bilds &#40;Berichts-Generator und SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
  [Bildeigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

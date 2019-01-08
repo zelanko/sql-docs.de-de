@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], creating
@@ -13,12 +13,12 @@ ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 15117eadf004cff9359a20b512cffcb4576a6ed8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed3c7cf100d0105d393bb8c22bbc0d38d2e9de26
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066000"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808882"
 ---
 # <a name="create-a-job"></a>Erstellen eines Auftrags
   In diesem Thema wird beschrieben, wie Sie eine SQL Server-Agent-Auftragskategorie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects (SMO) erstellen können.  
@@ -29,7 +29,7 @@ ms.locfileid: "48066000"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie einen Auftrag Sicht mit**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48066000"
   
      [SQL Server Management Objects](#SMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -59,9 +59,9 @@ ms.locfileid: "48066000"
     >  Wenn Sie den Auftragsbesitz einem Benutzer zuweisen, der kein Mitglied der festen Serverrolle **sysadmin** ist, und wenn in dem Auftrag Schritte ausgeführt werden, für die Proxykonten erforderlich sind (beispielsweise die [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketausführung), müssen Sie sicherstellen, dass der Benutzer auf dieses Proxykonto zugreifen kann. Andernfalls schlägt der Auftrag fehl.  
   
 ####  <a name="Permissions"></a> Berechtigungen  
- Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-create-a-sql-server-agent-job"></a>So erstellen Sie einen Auftrag für den SQL Server-Agent  
   
@@ -69,19 +69,19 @@ ms.locfileid: "48066000"
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge** , und wählen Sie dann **Neuer Auftrag**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge**, und wählen Sie dann **Neuer Auftrag**aus.  
   
 4.  Ändern Sie im Dialogfeld **Neuer Auftrag** auf der Seite **Allgemein** die allgemeinen Eigenschaften des Auftrags. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften und neuer Auftrag &#40;Seite "Allgemein"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
 5.  Organisieren Sie die Auftragsschritte auf der Seite **Schritte** . Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften: Neuer Auftrag &#40;Seite "Schritte"&#41;](job-properties-new-job-steps-page.md)  
   
-6.  Organisieren Sie auf der Seite **Zeitpläne** Zeitpläne für den Auftrag. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften: Neuer Auftrag &#40;Zeitpläne (Seite)&#41;](job-properties-new-job-schedules-page.md)  
+6.  Organisieren Sie auf der Seite **Zeitpläne** Zeitpläne für den Auftrag. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften: Neuer Auftrag &#40;plant Seite&#41;](job-properties-new-job-schedules-page.md)  
   
 7.  Organisieren Sie auf der Seite **Warnungen** die Warnungen für den Auftrag. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften: Neuer Auftrag &#40;Seite "Warnungen"&#41;](job-properties-new-job-alerts-page.md)  
   
 8.  Legen Sie auf der Seite **Benachrichtigungen** die Aktionen für den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent fest, die bei Abschluss des Auftrags auszuführen sind. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften: Neuer Auftrag &#40;Seite "Benachrichtigungen"&#41;](job-properties-new-job-notifications-page.md).  
   
-9. Verwalten Sie auf der Seite **Ziele** die Zielserver für den Auftrag. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften: Neuer Auftrag &#40;Seite "Ziele"&#41;](job-properties-new-job-targets-page.md).  
+9. Verwalten Sie auf der Seite **Ziele** die Zielserver für den Auftrag. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften: Neuer Auftrag &#40;abzielt Seite&#41;](job-properties-new-job-targets-page.md).  
   
 10. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48066000"
   
 #### <a name="to-create-a-sql-server-agent-job"></a>So erstellen Sie einen Auftrag für den SQL Server-Agent  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

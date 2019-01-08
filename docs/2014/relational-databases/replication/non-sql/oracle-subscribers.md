@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,12 +16,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a11cdbd373a173fd2709b07ccb860484c0f59eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145150"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786366"
 ---
 # <a name="oracle-subscribers"></a>Oracle-Abonnenten
   Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Oracle-Pushabonnements über den von Oracle bereitgestellten Oracle OLE DB-Anbieter.  
@@ -86,7 +85,7 @@ ms.locfileid: "48145150"
   
     -   Stellen Sie sicher, dass keine leeren Zeichenfolgen als Spaltenwerte in die veröffentlichte Tabelle eingefügt werden.  
   
-    -   Verwenden Sie für den Verteilungs-Agent den **–SkipErrors** -Parameter, wenn eine Fehlerbenachrichtigung im Verlaufsprotokoll des Verteilungs-Agents genügt und die Verarbeitung ansonsten fortgesetzt werden kann. Geben Sie den Oracle-Fehlercode 1400 (**-SkipErrors1400**) an.  
+    -   Verwenden Sie für den Verteilungs-Agent den Parameter **-SkipErrors**, wenn eine Fehlerbenachrichtigung im Verlaufsprotokoll des Verteilungs-Agents genügt und die Verarbeitung ansonsten fortgesetzt werden kann. Geben Sie den Oracle-Fehlercode 1400 (**-SkipErrors1400**) an.  
   
     -   Entfernen Sie das NOT NULL-Attribut aus allen Zeichenspalten, denen eventuell leere Zeichenfolgen zugeordnet werden können, aus dem generierten CREATE TABLE-Skript, und geben Sie das geänderte Skript mithilfe des @creation_script -Parameters von [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)als benutzerdefiniertes Skript für den Artikel an.  
   
@@ -128,7 +127,7 @@ ms.locfileid: "48145150"
 |`smalldatetime`|DATE|  
 |`smallint`|NUMBER(5,0)|  
 |`smallmoney`|NUMBER(10,4)|  
-|`sql_variant`|–|  
+|`sql_variant`|Nicht zutreffend|  
 |`sysname`|VARCHAR2(128)|  
 |`text`|CLOB|  
 |`time(0-7)`|VARCHAR(16)|  
@@ -145,6 +144,6 @@ ms.locfileid: "48145150"
   
 ## <a name="see-also"></a>Siehe auch  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
- [Subscribe to Publications](../subscribe-to-publications.md)  
+ [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md)  
   
   

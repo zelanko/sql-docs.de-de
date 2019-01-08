@@ -26,12 +26,12 @@ ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45ade4f79f2433d6f5841605cbbb8112e6a9b63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4401eea7e5c5b42c1706095e4c14aee348298bc5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081595"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512785"
 ---
 # <a name="attribute-relationships"></a>Attributbeziehungen
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Attributen innerhalb einer Dimension beziehen sich immer entweder direkt oder indirekt mit dem Schlüsselattribut. Wenn Sie eine Dimension auf Basis eines Sternschemas definieren, in dem sämtliche Dimensionsattribute aus derselben relationalen Tabelle abgeleitet werden, wird automatisch eine Attributbeziehung zwischen dem Schlüsselattribut und den einzelnen Nichtschlüsselattributen definiert. Wenn Sie eine Dimension auf Basis eines Schneeflockenschemas definieren, in dem Dimensionsattribute aus mehreren verknüpften Tabellen abgeleitet werden, wird eine Attributbeziehung automatisch wie folgt definiert:  
@@ -80,7 +80,7 @@ ms.locfileid: "48081595"
   
 -   Das City-Attribut als Attributbeziehung zum Customer-Attribut.  
   
- Für das Navigieren durch Daten in den Cube aus, Sie können auch erstellen eine benutzerdefinierten Hierarchie, die eine natürliche Hierarchie in den Daten keine darstellt (die den Namen einer *ad-hoc-* oder *reporting* Hierarchie). Sie könnten z. B. eine benutzerdefinierte Hierarchie auf der Basis von `{Age, Gender}` erstellen. Benutzer erkennen keine Unterschiede im Verhalten der beiden Hierarchien, aber die natürliche Hierarchie profitiert von den Strukturen für Aggregation und Indizierung (ohne dass der Benutzer es bemerkt), die für die natürlichen Beziehungen in den Quelldaten verantwortlich sind.  
+ Für das Navigieren durch Daten in den Cube aus, Sie können auch erstellen eine benutzerdefinierten Hierarchie, die eine natürliche Hierarchie in den Daten keine darstellt (die den Namen einer *ad-hoc-* oder *reporting* Hierarchie). Sie könnten z. B. eine benutzerdefinierte Hierarchie auf der Basis von `{Age, Gender}` erstellen. Benutzer sehen keine keine Unterschiede im Verhalten der beiden Hierarchien, obwohl die natürliche Hierarchie profitiert von der Aggregation und Indizierung – den Benutzer ausgeblendete - Strukturen dieses Konto für die natürlichen Beziehungen in den Quelldaten.  
   
  Durch die `SourceAttribute`-Eigenschaft einer Ebene ist festgelegt, mit welchem Attribut die Ebene beschrieben wird. Die `KeyColumns`-Eigenschaft des Attributs gibt an, welche Spalte in der Datenquellensicht die Elemente bereitstellt. Mit der `NameColumn`-Eigenschaft des Attributs kann eine andere Namensspalte für die Elemente festgelegt werden.  
   

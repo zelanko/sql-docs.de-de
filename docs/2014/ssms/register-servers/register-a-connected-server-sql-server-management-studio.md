@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.f1
@@ -15,12 +15,12 @@ ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69590fd24ddad600074cc5feedc06badabb2399b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80dbd927f0a1b008e48fda7fcbd4a7e75b7fbaf8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225620"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795882"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrieren eines verbundenen Servers (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Server registrieren. Indem Sie den Server registrieren, können Sie die Verbindungsinformationen für Server, auf die Sie häufig zugreifen, speichern. Ein Server kann vor dem Verbinden oder bei der Verbindung im Objekt-Explorer registriert werden.  
@@ -31,7 +31,7 @@ ms.locfileid: "48225620"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-register-a-connected-server"></a>So registrieren Sie einen Server  
   

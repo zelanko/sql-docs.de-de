@@ -11,12 +11,12 @@ ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0db138c140b0f5e51a148a3114ad6f0a7054f8c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49feffa82a1ae20735a2b9b70982782c3562c9cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166950"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370092"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>Definieren von Farben in einem Diagramm mit einer Palette (Berichts-Generator und SSRS)
   Sie können die Farbpalette für ein Diagramm durch Auswählen einer vordefinierten Palette oder durch Definieren einer benutzerdefinierten Palette ändern. Benutzerdefinierte Paletten sind berichtsspezifisch.  
@@ -45,11 +45,11 @@ ms.locfileid: "48166950"
   
 3.  In der **Diagramm** Abschnitt für die `Palette` -Eigenschaft die Option **benutzerdefinierte**.  
   
-4.  Klicken Sie in der „CustomPaletteColors“-Eigenschaft auf die Schaltfläche zum Bearbeiten der Auflistung (**…**). Das Dialogfeld **ReportColorExpression-Auflistungs-Editor** wird geöffnet.  
+4.  Klicken Sie in der CustomPaletteColors-Eigenschaft auf die Schaltfläche zum Bearbeiten der Collection (**…**). Das Dialogfeld **ReportColorExpression-Auflistungs-Editor** wird geöffnet.  
   
 5.  Klicken Sie auf **Hinzufügen** , um eine Farbe hinzuzufügen. Wählen Sie in der Dropdownliste eine Farbe aus, oder wählen Sie Ausdruck, und geben Sie einen hexadezimalen Wert für eine bestimmte Farbe an, z. B. ff6600 für "Orange".  
   
-     Weitere Informationen zu Hexadezimalwerten finden Sie unter [Color Table](http://go.microsoft.com/fwlink/?linkid=9258) auf MSDN.  
+     Weitere Informationen zu Hexadezimalwerten finden Sie unter [Color Table](https://go.microsoft.com/fwlink/?linkid=9258) auf MSDN.  
   
 6.  Klicken Sie auf **Hinzufügen** , um der Palette weitere Farben hinzuzufügen.  
   

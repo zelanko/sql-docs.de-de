@@ -20,16 +20,16 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e165ca48af3b634f1dcbe80c05c83f2c872d1b01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e91febb4b5b94b5a7f9df62347b4db5edcecf975
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642778"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202439"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
   
  **Zusammenfassung**  
  **SQLCopyDesc** kopiert Informationen der Sicherheitsbeschreibung aus einen Deskriptorhandle an einen anderen.  
@@ -39,8 +39,8 @@ ms.locfileid: "47642778"
 ```  
   
 SQLRETURN SQLCopyDesc(  
-     SQLHDESC     SourceDescHandle,  
-     SQLHDESC     TargetDescHandle);  
+     SQLHDESC     SourceDescHandle,  
+     SQLHDESC     TargetDescHandle);  
 ```  
   
 ## <a name="arguments"></a>Argumente  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.shrink.f1
@@ -17,12 +16,12 @@ ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5bfbe4f8250749935a950d8eedf5bf95cfb78e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f96e45cdf5f94e3e8b71514e1bb3e7ed4d99cfb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213570"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786392"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Task 'Datenbank verkleinern' (Wartungsplan)
   Im Dialogfeld **Task 'Datenbank verkleinern'** erstellen Sie einen Task, mit dem versucht wird, die Größe der ausgewählten Datenbanken zu verkleinern. Legen Sie mithilfe der folgenden Optionen die Menge des nicht verwendeten Speicherplatzes fest, der in der Datenbank zur Verfügung stehen soll, nachdem diese verkleinert wurde (je höher der Prozentsatz, desto geringer der Spielraum für die Verkleinerung der Datenbank). Der Wert basiert auf dem Prozentsatz der tatsächlichen Daten in der Datenbank. So würde z. B. eine 100-MB-Datenbank mit 60 MB Daten und 40 MB freiem Speicherplatz und einem Prozentsatz von 50 für den freien Speicherplatz zu folgendem Ergebnis führen: 60 MB Daten und 30 MB freier Speicherplatz (da 50 % von 60 MB einen Wert von 30 MB ergibt). Es wird lediglich überschüssiger Speicherplatz aus der Datenbank entfernt. Die gültigen Werte sind 0 bis 100.  

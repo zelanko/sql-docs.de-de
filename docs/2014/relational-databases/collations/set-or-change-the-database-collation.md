@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - collations [SQL Server], database
@@ -14,12 +13,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c554ec2d49e9e03c3381a54b8c834514bd16e34
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa7359fc1436cfbb4222dcc63f9bb700720bf3cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071910"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772562"
 ---
 # <a name="set-or-change-the-database-collation"></a>Festlegen oder Ändern der Datenbanksortierung
   In diesem Thema wird beschrieben, wie die Datenbanksortierung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]festgelegt und geändert werden kann. Wenn keine Sortierung angegeben wird, wird die Sortierung des Servers verwendet.  
@@ -32,7 +31,7 @@ ms.locfileid: "48071910"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Festlegen oder Ändern der Datenbanksortierung mit:**  
   
@@ -40,7 +39,7 @@ ms.locfileid: "48071910"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48071910"
   
     -   Sämtliche vorhandene `char`-, `varchar`-, `text`-, `nchar`-, `nvarchar`- und `ntext`-Parameter und skalare Rückgabewerte für gespeicherte Prozeduren und benutzerdefinierte Funktionen erhalten die neue Sortierung.  
   
-    -   Die `char`, `varchar`, `text`, `nchar`, `nvarchar`, oder `ntext` -Systemdatentypen sowie alle benutzerdefinierten Datentypen auf Basis dieser Systemdatentypen, um die neue Sortierung geändert werden.  
+    -   Die `char`-, `varchar`-, `text`-, `nchar`-, `nvarchar`- und `ntext`-Systemdatentypen sowie alle benutzerdefinierten Datentypen, die auf Systemdatentypen basieren, erhalten die neue Sortierung.  
   
 -   Sie können die Sortierung von neuen Objekten, die in einer Benutzerdatenbank erstellt werden, mithilfe der COLLATE-Klausel der [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) -Anweisung ändern. Diese Anweisung ändert jedoch nicht die Sortierung der Spalten in vorhandenen benutzerdefinierten Tabellen. Letztere können mithilfe der COLLATE-Klausel der [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)-Anweisung geändert werden.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "48071910"
  ALTER DATABASE  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-set-or-change-the-database-collation"></a>So legen Sie die Datenbanksortierung oder ändern sie  
   

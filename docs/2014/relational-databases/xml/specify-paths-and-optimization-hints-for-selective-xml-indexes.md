@@ -10,12 +10,12 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73cfcc602ee7a7ef273da39126dbd4da596b6594
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8d5493c63b48c627dbc2cb192d8e10f8bfc4a43
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133520"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533991"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Angeben von Pfaden und Optimierungshinweisen für selektive XML-Indizes
   In diesem Thema wird beschrieben, wie Sie Knotenpfade zum Index angeben, und es werden Optimierungshinweise für die Indizierung aufgeführt, wenn Sie selektive XML-Indizes erstellen oder ändern.  
@@ -29,7 +29,7 @@ ms.locfileid: "48133520"
  Weitere Informationen über selektive XML-Indizes finden Sie unter [Selektive XML-Indizes &#40;SXI&#41;](../xml/selective-xml-indexes-sxi.md).  
   
 ##  <a name="untyped"></a> Grundlegendes zu XQuery- und SQL Server-Typen in nicht typisiertem XML  
- Selektive XML-Indizes unterstützen zwei Typsysteme: XQuery-Typen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Typen. Der indizierte Pfad kann verwendet werden, um entweder eine Entsprechung für einen XQuery-Ausdruck oder um eine Entsprechung für den Rückgabetyp der value()-Methode des XML-Datentyps zu finden.  
+ Selektive XML-Indizes unterstützen zwei Typsysteme: XQuery-Typen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Typen. Der indizierte Pfad kann verwendet werden, um entweder eine Entsprechung für einen XQuery-Ausdruck oder um eine Entsprechung für den Rückgabetyp der value()-Methode des XML-Datentyps zu finden.  
   
 -   Wenn ein zu indizierender Pfad nicht kommentiert ist oder mit dem XQUERY-Schlüsselwort kommentiert ist, entspricht der Pfad einem XQuery-Ausdruck. Es gibt zwei Varianten von XQUERY-kommentierten Knotenpfaden:  
   
@@ -101,8 +101,8 @@ mypath= '/a/b' as XQUERY 'node()',
 pathX = '/a/b/c' as XQUERY 'xs:double' SINGLETON,  
 pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON  
 )  
--- mypath – Only the node value is needed; storage is saved.  
--- pathX – Performance is improved; secondary indexes are possible.  
+-- mypath - Only the node value is needed; storage is saved.  
+-- pathX - Performance is improved; secondary indexes are possible.  
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   
@@ -110,7 +110,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Typen entsprechen dem Rückgabewert der value()-Methode.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Typen unterstützen diesen Optimierungshinweis: SINGLETON.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Typen unterstützen diesen Optimierungshinweis: SINGLETON.  
   
  Die Angabe eines Typs ist für Pfade erforderlich, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Typen zurückgeben. Verwenden Sie den gleichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Typ, den Sie in der value()-Methode verwenden würden.  
   
@@ -234,7 +234,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
     -   Knoten `b`, da ein Prädikat auf den Knoten`b` im XQuery-Ausdruck angewendet wird.  
   
-2.  **Prinzip 2**: Um eine optimale Leistung zu erzielen, indizieren Sie alle Knoten, die für die Auswertung eines bestimmten XQuery-Ausdrucks erforderlich sind. Wenn Sie nur einige der Knoten indizieren, dann verbessert der selektive XML-Index die Auswertung der Teilausdrücke, die nur indizierte Knoten umfassen.  
+2.  **Prinzip 2**: Indizieren Sie alle Knoten, die für die Auswertung eines bestimmten XQuery-Ausdrucks erforderlich sind, für eine optimale Leistung. Wenn Sie nur einige der Knoten indizieren, dann verbessert der selektive XML-Index die Auswertung der Teilausdrücke, die nur indizierte Knoten umfassen.  
   
  Um die Leistung der oben aufgeführten SELECT-Anweisung zu verbessern, können Sie den folgenden selektiven XML-Index erstellen:  
   
@@ -351,30 +351,30 @@ WHERE T.xmldata.exist('
   
  Die Verwendung von Optimierungshinweisen ist optional. Sie können stets die Standardzuordnungen übernehmen, die zuverlässig sind, möglicherweise jedoch keine optimale Leistung und Speicher bereitstellen.  
   
- Einige Optimierungshinweise, z. B. der SINGLETON-Hinweis, führen Sie Einschränkungen der Daten. In einigen Fällen werden möglicherweise Fehler ausgelöst, wenn diese Einschränkungen nicht erfüllt werden.  
+ Einige Optimierungshinweise, z.B. der SINGLETON-Hinweis, schränken Ihre Daten ein. In einigen Fällen werden möglicherweise Fehler ausgelöst, wenn diese Einschränkungen nicht erfüllt werden.  
   
 ### <a name="benefits-of-optimization-hints"></a>Vorteile von Optimierungshinweisen  
  In der folgenden Tabelle sind die Optimierungshinweise aufgeführt, die einen effizienteren Speicher oder eine verbesserte Leistung ermöglichen.  
   
 |Optimierungshinweis|Effizienterer Speicher|Verbesserte Leistung|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|Benutzerkontensteuerung|nein|  
-|**SINGLETON**|nein|Benutzerkontensteuerung|  
-|**DATA TYPE**|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|**MAXLENGTH**|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|**node()**|Ja|Nein|  
+|**SINGLETON**|Nein|Ja|  
+|**DATA TYPE**|Ja|Ja|  
+|**MAXLENGTH**|Ja|Ja|  
   
 ### <a name="optimization-hints-and-data-types"></a>Optimierungshinweise und Datentypen  
  Sie können Knoten als XQuery-Datentypen oder als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen indizieren. In der folgenden Tabelle ist aufgeführt, welche Optimierungshinweise für die einzelnen Datentypen unterstützt werden.  
   
 |Optimierungshinweis|XQuery-Datentypen|SQL-Datentypen|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|Benutzerkontensteuerung|nein|  
-|**SINGLETON**|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|**DATA TYPE**|Benutzerkontensteuerung|nein|  
-|**MAXLENGTH**|Benutzerkontensteuerung|nein|  
+|**node()**|Ja|Nein|  
+|**SINGLETON**|Ja|Ja|  
+|**DATA TYPE**|Ja|Nein|  
+|**MAXLENGTH**|Ja|Nein|  
   
 ### <a name="node-optimization-hint"></a>node()-Optimierungshinweis  
- Gilt für: XQuery-Datentypen  
+ Betrifft: XQuery-Datentypen  
   
  Sie können mithilfe der node()-Optimierung einen Knoten angeben, dessen Wert nicht erforderlich ist, um die typische Abfrage auszuwerten. Dieser Hinweis reduziert Speicheranforderungen, wenn die typische Abfrage nur das Vorhandensein des Knotens auswerten muss. (Standardmäßig speichert ein selektiver XML-Index den Wert für alle höher gestuften Knoten, außer komplexen Knotentypen.)  
   
@@ -392,7 +392,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  Wenn eine Abfrage den Wert eines Knotens erfordert, der mit dem node()-Hinweis indiziert wurde, dann kann der selektive XML-Index nicht verwendet werden.  
   
 ### <a name="singleton-optimization-hint"></a>SINGLETON-Optimierungshinweis  
- Gilt für: XQuery- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen  
+ Betrifft: XQuery oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen  
   
  Der SINGLETON-Optimierungshinweis gibt die Kardinalität eines Knotens an. Dieser Hinweis verbessert die Abfrageleistung, da im Voraus bekannt ist, dass ein Knoten höchstens einmal in seinem übergeordneten Element oder Vorgänger angezeigt wird.  
   
@@ -403,14 +403,14 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  Wenn der SINGLETON-Hinweis angegeben wurde, ein Knoten jedoch mehr als einmal in seinem übergeordneten Element oder Vorgänger vorkommt, dann wird ein Fehler ausgelöst, wenn Sie den Index (für vorhandene Daten) erstellen, oder wenn Sie eine Abfrage (für neue Daten) ausführen.  
   
 ### <a name="data-type-optimization-hint"></a>DATA TYPE-Optimierungshinweis  
- Gilt für: XQuery-Datentypen  
+ Betrifft: XQuery-Datentypen  
   
  Mit dem DATA TYPE-Optimierungshinweis können Sie eine XQuery oder einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp für den indizierten Knoten angeben. Der Datentyp wird in der Datentabelle des selektiven XML-Indexes für die Spalte verwendet, die dem indizierten Knoten entspricht.  
   
  Wenn es bei der Umwandlung eines vorhandenen Werts in den angegebenen Datentyp zu einem Fehler kommt, verursacht der Einfügevorgang (in den Index) keinen Fehler. Es wird jedoch ein NULL-Wert in die Datentabelle des Index eingefügt.  
   
 ### <a name="maxlength-optimization-hint"></a>MAXLENGTH-Optimierungshinweis  
- Gilt für: XQuery-Datentypen  
+ Betrifft: XQuery-Datentypen  
   
  Mit dem MAXLENGTH-Optimierungshinweis können Sie die Länge der xs:string-Daten einschränken. MAXLENGTH ist nicht relevant für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen, da Sie die Länge angeben, wenn Sie den VARCHAR- oder NVARCHAR-Datentyp angeben.  
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergepublication_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89e1ca46f323bb565eea9080a0118fb19b39af08
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 9eb6d52d72dec4efab7e744fd4eafd2d9a5eb612
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072294"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788482"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Diese Tabelle beschreibt die Eigenschaften der Veröffentlichung, die geändert werden kann, und werden Einschränkungen für die Werte für diese Eigenschaften beschrieben.  
   
-|Eigenschaft|value|Description|  
+|Eigenschaft|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Anonyme Abonnements sind zulässig.|  
 ||**false**|Anonyme Abonnements sind nicht zulässig.|  
@@ -106,7 +105,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Entfernt die Veröffentlichungsinformationen aus Active Directory.|  
 |**replicate_ddl**|**1**|Anweisungen von Data Definition Language (DDL), die auf dem Verleger ausgeführt werden, werden repliziert.|  
 ||**0**|DDL-Anweisungen werden nicht repliziert.|  
-|**Beibehaltungsdauer**||Dies ist ein **Int** , die die Anzahl der *Retention_period_unit* Einheiten für die Änderungen für die angegebene Veröffentlichung gespeichert werden. Wenn das Abonnement nicht innerhalb der Beibehaltungsdauer synchronisiert wird und die ausstehenden Änderungen von einem Cleanupvorgang auf dem Verteiler entfernt wurden, läuft das Abonnement ab und muss erneut initialisiert werden. Die maximal zulässige Beibehaltungsdauer entspricht der Anzahl von Tagen zwischen dem 31. Dezember 9999 und dem aktuellen Datum.<br /><br /> Hinweis: Die Beibehaltungsdauer für mergeveröffentlichungen verfügt über eine 24-Stunden-Toleranzperiode, um Abonnenten in unterschiedlichen Zeitzonen aufzunehmen.|  
+|**Beibehaltungsdauer**||Dies ist ein **Int** , die die Anzahl der *Retention_period_unit* Einheiten für die Änderungen für die angegebene Veröffentlichung gespeichert werden. Wenn das Abonnement nicht innerhalb der Beibehaltungsdauer synchronisiert wird und die ausstehenden Änderungen von einem Cleanupvorgang auf dem Verteiler entfernt wurden, läuft das Abonnement ab und muss erneut initialisiert werden. Die maximal zulässige Beibehaltungsdauer entspricht der Anzahl von Tagen zwischen dem 31. Dezember 9999 und dem aktuellen Datum.<br /><br /> Hinweis: Für die Beibehaltungsdauer von Mergeveröffentlichungen gilt eine Kulanzfrist von 24 Stunden, um Abonnenten in verschiedenen Zeitzonen zu unterstützen.|  
 |**retention_period_unit**|**day**|Die Beibehaltungsdauer wird in Tagen angegeben.|  
 ||**week**|Die Beibehaltungsdauer wird in Wochen angegeben.|  
 ||**month**|Die Beibehaltungsdauer wird in Monaten angegeben.|  
@@ -119,13 +118,13 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**inaktiv**|Die Veröffentlichung weist einen inaktiven Status auf.|  
 |**sync_mode**|**Native** oder<br /><br /> **systemeigene bcp**|Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus wird für die Anfangsmomentaufnahme verwendet.|  
 ||**character**<br /><br /> oder **Bcp-Zeichen**|Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus wird für die Anfangsmomentaufnahme verwendet. Dies ist für alle Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten erforderlich.|  
-|**use_partition_groups**<br /><br /> Hinweis: Stellen Sie nach der Verwendung von Partition_groups, wenn Sie wieder in den mit **Setupbelongs**, und legen Sie **Use_partition_groups = False** in **Changemergearticle**, dies ist möglicherweise nicht richtig wiedergegeben, nachdem eine Momentaufnahme erstellt wurde. Die Trigger, die von der Momentaufnahme generiert werden, sind mit Partitionsgruppen kompatibel.<br /><br /> Die problemumgehung für dieses Szenario besteht darin, den Status auf inaktiv festlegen, ändern Sie die **Use_partition_groups**, und legen Sie dann in den aktiven Status.|**true**|Die Veröffentlichung verwendet vorausberechnete Partitionen.|  
+|**use_partition_groups**<br /><br /> Hinweis: Nach der Verwendung von Partition_groups, wenn Sie wieder in den mit **Setupbelongs**, und legen Sie **Use_partition_groups = "false"** in **Changemergearticle**, dies ist möglicherweise nicht ordnungsgemäß übernommen, nachdem eine Momentaufnahme erstellt wurde. Die Trigger, die von der Momentaufnahme generiert werden, sind mit Partitionsgruppen kompatibel.<br /><br /> Die problemumgehung für dieses Szenario besteht darin, den Status auf inaktiv festlegen, ändern Sie die **Use_partition_groups**, und legen Sie dann in den aktiven Status.|**true**|Die Veröffentlichung verwendet vorausberechnete Partitionen.|  
 ||**false**|Die Veröffentlichung verwendet keine vorausberechneten Partitionen.|  
 |**validate_subscriber_info**||Listet die Funktionen auf, die zum Abrufen von Abonnenteninformationen verwendet werden. Überprüft anschließend die dynamischen Filterkriterien, die für den Abonnenten verwendet werden, um zu überprüfen, dass die Informationen konsistent partitioniert werden.|  
 |**web_synchronization_url**||Der Standardwert für die Internet-URL, die für die Websynchronisierung verwendet wird.|  
 |NULL (Standard)||Gibt die Liste der unterstützten Werte für *Eigenschaft*.|  
   
- [  **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
  Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen an der Veröffentlichung nicht die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  

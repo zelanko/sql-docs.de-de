@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.cleanup.f1
@@ -15,12 +14,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03e4059b6a35b1d447953c8816d40c1b753f59fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142300"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801492"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Task 'Wartungscleanup' (Wartungsplan)
   Mit dem **Task 'Wartungscleanup'** können Sie alte Dateien für Wartungspläne löschen, u. a. von Wartungsplänen und Datenbanksicherungsdateien erstellte Textberichte.  
@@ -28,7 +27,7 @@ ms.locfileid: "48142300"
 > [!NOTE]  
 >  Dateien in den Unterordnern des angegebenen Verzeichnisses werden vom Task Wartungscleanup nicht automatisch gelöscht. Diese Funktion reduziert die Möglichkeit eines bösartigen Angriffs, der den Task Wartungscleanup zum Löschen von Dateien verwendet. Wenn Sie Dateien in Unterordnern auf oberster Ebene löschen möchten, müssen Sie **Unterordner auf oberster Ebene einschließen**auswählen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verbindung**  
  Zeigt die aktuelle Verbindung an.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "48142300"
  **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein.**  
  Wählen Sie den Server aus, zu dem bei der Ausführung dieses Tasks eine Verbindung hergestellt werden soll.  
   
- **…**  
+ **...**  
  Wählen Sie diese Option aus, um die Liste der verfügbaren Server anzuzeigen.  
   
  **Geben Sie Informationen zum Anmelden am Server ein**  

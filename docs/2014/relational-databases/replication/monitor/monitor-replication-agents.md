@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], agents
@@ -20,12 +19,12 @@ ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b176e84d15daa2471014ebf90a6a72a683cdc29a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1456a3113feb8a32ce9876ef7ef060f96f66910b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107463"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800732"
 ---
 # <a name="monitor-replication-agents"></a>Überwachen der Replikations-Agents
   Der Replikationsmonitor von[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet einen systemischen Überblick über die Replikationsaktivität und erleichtert gleichzeitig die Suche nach Informationen zu einem bestimmten Agent. Die folgende Liste enthält alle Agents, die Registerkarten im Replikationsmonitor, auf denen die Agents zu finden sind, und einen Verweis darauf, wo Sie Informationen zum Zugreifen auf die jeweilige Registerkarte finden:  
@@ -38,7 +37,7 @@ ms.locfileid: "48107463"
   
     -   Warteschlangenlese-Agent  
   
-     Auf die Informationen und Aufgaben im Zusammenhang mit diesen Agents kann über die folgenden Registerkarten zugegriffen werden: **Agents** (verfügbar für jeden Verleger und jede Veröffentlichung) und **Warnungen** (verfügbar für jede Veröffentlichung). Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents &#40;Replikationsmonitor&#41;](view-information-and-perform-tasks-for-publication-agents.md).  
+     Den Zugriff auf Informationen und Aufgaben im Zusammenhang mit diesen Agents kann über die folgenden Registerkarten: **Agents** (verfügbar für jeden Verleger und jede Veröffentlichung) und **Warnungen** (verfügbar für jede Veröffentlichung). Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents &#40;Replikationsmonitor&#41;](view-information-and-perform-tasks-for-publication-agents.md).  
   
 -   Die folgenden Agents sind Abonnements im Replikationsmonitor zugeordnet:  
   
@@ -46,7 +45,7 @@ ms.locfileid: "48107463"
   
     -   Merge-Agent  
   
-     Auf die Informationen und Aufgaben im Zusammenhang mit diesen Agents kann über die folgenden Registerkarten zugegriffen werden: **Überwachungsliste für Abonnements** (verfügbar für jeden Verleger) bzw. **Alle Abonnements** (verfügbar für jede Veröffentlichung). Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agent &#40;Replikationsmonitor &#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
+     Den Zugriff auf Informationen und Aufgaben im Zusammenhang mit diesen Agents kann über die folgenden Registerkarten: **Überwachungsliste für Abonnements** (verfügbar für jeden Verleger) oder die **alle Abonnements** (verfügbar für jede Veröffentlichung). Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agent &#40;Replikationsmonitor &#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>Überwachen der Replikations-Agents mit SQL Server Management Studio  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] stellt die folgenden Dialogfelder zum Überwachen von Replikations-Agents bereit:  

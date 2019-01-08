@@ -1,5 +1,5 @@
 ---
-title: ASSL XML-Konventionen | Microsoft Docs
+title: ASSL XML-Konventionen | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e7bdc53ee4e85ee0ad782985744b3722ade6fd14
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c357efe4636c1b502cdb57305b9072907d4b2e98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023447"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532071"
 ---
 # <a name="assl-xml-conventions"></a>XML-Konventionen in ASSL
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34023447"
   
  Für die Darstellung der Objekthierarchie verwendet ASSL folgende XML-Konventionen:  
   
--   Alle Objekte und Eigenschaften werden als Elemente dargestellt, mit Ausnahme von XML-Standardattributen wie „xml:lang“.  
+-   Alle Objekte und Eigenschaften werden als Elemente, mit Ausnahme von XML-Standardattributen wie z. B. "XML: lang" dargestellt.  
   
 -   Sowohl Elementnamen als auch Enumerationswerte befolgen die Microsoft .NET Framework-Benennungskonvention der Schreibweise von Pascal ohne Unterstriche.  
   
@@ -30,12 +30,12 @@ ms.locfileid: "34023447"
   
  Zusätzlich zu dieser Konventionsliste werden in Analysis Services bestimmte Konventionen in Bezug auf Kardinalität, Vererbung, Leerzeichen, Datentypen und Standardwerte befolgt.  
   
-## <a name="cardinality"></a>Kardinalität  
+## <a name="cardinality"></a>Cardinality  
  Wenn ein Element eine Kardinalität besitzt, die größer als 1 ist, wird dieses Element von einer XML-Elementauflistung gekapselt. Der Name der Auflistung verwendet die Pluralform der in der Auflistung enthaltenen Elemente. Das folgenden XML-Fragment stellt beispielsweise die **Dimensions** -Auflistung innerhalb eines **Database** -Elements dar:  
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34023447"
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34023447"
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -107,10 +107,10 @@ ms.locfileid: "34023447"
  In Analysis Services werden die folgenden XSD-Standarddatentypen (XML Schema Definition Language) verwendet:  
   
  **Int**  
- Ein ganzzahliger Wert im Bereich von -231 bis 231 – 1.  
+ Ein ganzzahliger Wert im Bereich von-231 bis 231-1.  
   
  **Long**  
- Ein ganzzahliger Wert im Bereich von -263 bis 263 – 1.  
+ Ein ganzzahliger Wert im Bereich von-263 bis 263-1.  
   
  **String**  
  Ein Zeichenfolgenwert, der den folgenden allgemeinen Regeln entspricht:  
@@ -121,7 +121,7 @@ ms.locfileid: "34023447"
   
 -   Interne Leerzeichen werden beibehalten.  
   
- Die**Name** - und die **ID** -Eigenschaft besitzen spezielle Beschränkungen für gültige Zeichen in Zeichenfolgenelementen. Weitere Informationen zu **Namen** und **ID** Konventionen, finden Sie unter [ASSL-Objekte und-Objekteigenschaften](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
+ Die**Name** - und die **ID** -Eigenschaft besitzen spezielle Beschränkungen für gültige Zeichen in Zeichenfolgenelementen. Weitere Informationen zu **Namen** und **ID** -Konventionen, finden Sie unter [ASSL-Objekte und Objekteigenschaften](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
  **DateTime**  
  Eine **DateTime** -Struktur aus dem .NET Framework. Ein **DateTime** -Wert darf nicht NULL sein. Das früheste von dem **DataTime** -Datentyp unterstützte Datum ist der 1. Januar 1601, das für Programmierer als **DateTime.MinValue**zur Verfügung steht. Das früheste unterstützte Datum gibt an, dass ein **DateTime** -Wert fehlt.  
@@ -164,6 +164,6 @@ ms.locfileid: "34023447"
   
  `</Dimension>`  
   
- Weitere Informationen zu geerbten Standards finden Sie unter [ASSL-Objekte und-Objekteigenschaften](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
+ Weitere Informationen zu geerbten Standards finden Sie unter [ASSL-Objekte und Objekteigenschaften](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
   

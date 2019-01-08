@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
@@ -15,12 +14,12 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46eb3d71eb1c8ec7793cc2be798ef4e774dd9595
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194740"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786652"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
   Oracle-Datentypen und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentypen stimmen nicht immer exakt überein. Wenn möglich, wird beim Veröffentlichen einer Oracle-Tabelle der übereinstimmende Datentyp automatisch ausgewählt. In Fällen, in denen eine einzelne Datentypzuordnung unklar ist, werden alternative Datentypzuordnungen bereitgestellt. Informationen dazu, wie alternative Zuordnungen ausgewählt werden, finden Sie im Abschnitt "Angeben alternativer Datentypzuordnungen" weiter unten in diesem Thema.  
@@ -29,36 +28,36 @@ ms.locfileid: "48194740"
   
 |Oracle-Datentyp|SQL Server-Datentyp|Alternativen|  
 |----------------------|--------------------------|------------------|  
-|BFILE|VARBINARY(MAX)|Benutzerkontensteuerung|  
-|BLOB|VARBINARY(MAX)|Benutzerkontensteuerung|  
-|CHAR([1-2000])|CHAR([1-2000])|Benutzerkontensteuerung|  
-|CLOB|VARCHAR(MAX)|Benutzerkontensteuerung|  
-|DATE|DATETIME|Benutzerkontensteuerung|  
-|GLEITKOMMAZAHL|GLEITKOMMAZAHL|nein|  
-|FLOAT([1-53])|FLOAT([1-53])|nein|  
-|FLOAT([54-126])|GLEITKOMMAZAHL|nein|  
-|INT|NUMERIC(38)|Benutzerkontensteuerung|  
-|INTERVAL|DATETIME|Benutzerkontensteuerung|  
-|LONG|VARCHAR(MAX)|Benutzerkontensteuerung|  
-|LONG RAW|IMAGE|Benutzerkontensteuerung|  
-|NCHAR([1-1000])|NCHAR([1-1000])|nein|  
-|NCLOB|NVARCHAR(MAX)|Benutzerkontensteuerung|  
-|NUMBER|GLEITKOMMAZAHL|Benutzerkontensteuerung|  
-|NUMBER([1-38])|NUMERIC([1-38])|nein|  
-|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Benutzerkontensteuerung|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|nein|  
-|RAW([1-2000])|VARBINARY([1-2000])|nein|  
-|real|GLEITKOMMAZAHL|nein|  
-|ROWID|CHAR(18)|nein|  
-|TIMESTAMP|DATETIME|Benutzerkontensteuerung|  
-|TIMESTAMP(0-7)|DATETIME|Benutzerkontensteuerung|  
-|TIMESTAMP(8-9)|DATETIME|Benutzerkontensteuerung|  
-|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Benutzerkontensteuerung|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|nein|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Benutzerkontensteuerung|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|nein|  
-|UROWID|CHAR(18)|nein|  
-|VARCHAR2([1-4000])|VARCHAR([1-4000])|Benutzerkontensteuerung|  
+|BFILE|VARBINARY(MAX)|Ja|  
+|BLOB|VARBINARY(MAX)|Ja|  
+|CHAR([1-2000])|CHAR([1-2000])|Ja|  
+|CLOB|VARCHAR(MAX)|Ja|  
+|DATE|DATETIME|Ja|  
+|GLEITKOMMAZAHL|GLEITKOMMAZAHL|Nein|  
+|FLOAT([1-53])|FLOAT([1-53])|Nein|  
+|FLOAT([54-126])|GLEITKOMMAZAHL|Nein|  
+|INT|NUMERIC(38)|Ja|  
+|INTERVAL|DATETIME|Ja|  
+|LONG|VARCHAR(MAX)|Ja|  
+|LONG RAW|IMAGE|Ja|  
+|NCHAR([1-1000])|NCHAR([1-1000])|Nein|  
+|NCLOB|NVARCHAR(MAX)|Ja|  
+|NUMBER|GLEITKOMMAZAHL|Ja|  
+|NUMBER([1-38])|NUMERIC([1-38])|Nein|  
+|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Ja|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|Nein|  
+|RAW([1-2000])|VARBINARY([1-2000])|Nein|  
+|real|GLEITKOMMAZAHL|Nein|  
+|ROWID|CHAR(18)|Nein|  
+|timestamp|DATETIME|Ja|  
+|TIMESTAMP(0-7)|DATETIME|Ja|  
+|TIMESTAMP(8-9)|DATETIME|Ja|  
+|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Ja|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|Nein|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Ja|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|Nein|  
+|UROWID|CHAR(18)|Nein|  
+|VARCHAR2([1-4000])|VARCHAR([1-4000])|Ja|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Überlegungen zur Datentypzuordnung  
  Beachten Sie beim Replizieren von Daten aus Oracle-Datenbanken in Bezug auf Datentypen Folgendes:  
@@ -82,7 +81,7 @@ ms.locfileid: "48194740"
 ### <a name="float-and-number-types"></a>FLOAT- und NUMBER-Typen  
  Die Anzahl der Dezimalstellen und die Genauigkeit (Parameter 'scale' und 'precision'), die während der Zuordnung der Datentypen FLOAT und NUMBER angegeben werden, sind von den Parametern abhängig, die in der Spalte der Oracle-Datenbank angegeben wurde, die diese Datentypen verwendet. Genauigkeit gibt die Anzahl der Ziffern einer Zahl an. Dezimalstellen gibt die Anzahl der Nachkommastellen an. Die Zahl 123,45 hat z. B. eine Genauigkeit von 5 und 2 Dezimalstellen.  
   
- Bei Oracle können Zahlen mit Werten für 'scale' größer als 'precision' definiert werden, z. B. NUMBER(4,5), in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muss jedoch 'precision' größer oder gleich 'scale' sein. Um sicherzustellen, dass keine Daten abgeschnitten werden, wenn auf dem Oracle-Verleger 'scale' größer ist als 'precision', wird 'precision' bei der Zuordnung auf denselben Wert festgelegt wie 'scale': NUMBER(4,5) wird also beispielsweise NUMERIC(5,5) zugeordnet.  
+ Bei Oracle können Zahlen mit Werten für 'scale' größer als 'precision' definiert werden, z. B. NUMBER(4,5), in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muss jedoch 'precision' größer oder gleich 'scale' sein. Um sicherzustellen, dass es keine Daten abgeschnitten werden, wenn der Dezimalstellen größer als die Genauigkeit, auf dem Oracle-Verleger ist, wird die Genauigkeit festgelegt und der Skala gleich, wenn der Datentyp zugeordnet wird: Number(4,5) wird als also beispielsweise NUMERIC(5,5) zugeordnet werden.  
   
 > [!NOTE]  
 >  Wenn Sie für NUMBER weder 'scale' noch 'precision' angeben, verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] standardmäßig die maximalen Werte für 'scale' (8) und 'precision' (38). Es wird empfohlen, in Oracle eine bestimmte Anzahl von Dezimalstellen ('scale') und eine bestimmte Genauigkeit ('precision') festzulegen, um die Speicherplatzanforderungen zu reduzieren und die Leistung zu erhöhen, wenn die Daten repliziert werden.  
@@ -103,7 +102,7 @@ ms.locfileid: "48194740"
   
 -   Globales Ändern der Standardwerte für alle zukünftigen Artikel mithilfe von gespeicherten Prozeduren (für vorhandene Artikel werden die Standardwerte nicht geändert).  
   
- Informationen zum Angeben alternativer Datentypzuordnungen finden Sie unter [Specify Data Type Mappings for an Oracle Publisher](../publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
+ Informationen zum Angeben alternativer Datentypzuordnungen finden Sie unter [Angeben von Datentypzuordnungen für einen Oracle-Verleger](../publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren eines Oracle-Verlegers](configure-an-oracle-publisher.md)   

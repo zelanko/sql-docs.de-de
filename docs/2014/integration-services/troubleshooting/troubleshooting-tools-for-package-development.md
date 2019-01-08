@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -17,12 +16,12 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8dc02c97daa09091c2f7ca4063c32325e0a39a3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e1935b7ffa0acc22183f91cf5c7fe3896c9e1a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176690"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792085"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Tools zur Problembehandlung für die Paketentwicklung
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Funktionen und Tools, mit denen Sie die Problembehandlung von Paketen vornehmen können, während Sie diese in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]entwickeln.  
@@ -44,9 +43,9 @@ ms.locfileid: "48176690"
   
 -   **Festlegen des gesamten Pakets und aller Verbindungen auf den Offlinemodus, wenn keine Datenquellen verfügbar sind**. Sie können **Offline arbeiten** im Menü **SSIS** aktivieren. Im Gegensatz zu den `DelayValidation` -Eigenschaft, die **Offline arbeiten** Option ist verfügbar, noch bevor Sie ein Paket öffnen. Sie können die Option **Offline arbeiten** auch aktivieren, um die Vorgänge im Designer zu beschleunigen, und sie lediglich zum Überprüfen des Pakets deaktivieren.  
   
--   **Konfiguration der DelayValidation-Eigenschaft für Paketelemente, die bis zur Laufzeit nicht gültig sind**. Zum Verhindern von Überprüfungsfehlern können Sie für Paketelemente, deren Konfigurationen zur Entwurfszeit ungültig sind, `DelayValidation` auf `True` festlegen. Ein Beispiel hierfür wäre ein Datenflusstask, der eine Zieltabelle verwendet, die erst zur Laufzeit durch einen Task 'SQL ausführen' erstellt wird. Die `DelayValidation` Eigenschaft kann aktiviert werden, auf Paketebene oder auf der Ebene der einzelnen Tasks und Container, die das Paket enthält. Normalerweise müssen Sie diese Eigenschaft auf festgelegt lassen `True` auf die betreffenden Paketelemente, wenn Sie das Paket aus, um zu verhindern, dass die gleichen Überprüfungsfehler zur Laufzeit bereitstellen.  
+-   **Konfiguration der DelayValidation-Eigenschaft für Paketelemente, die bis zur Laufzeit nicht gültig sind**. Zum Verhindern von Überprüfungsfehlern können Sie für Paketelemente, deren Konfigurationen zur Entwurfszeit ungültig sind, `DelayValidation` auf `True` festlegen. Ein Beispiel hierfür wäre ein Datenflusstask, der eine Zieltabelle verwendet, die erst zur Laufzeit durch einen Task 'SQL ausführen' erstellt wird. Die `DelayValidation`-Eigenschaft kann auf Paketebene oder auf der Ebene der einzelnen, in den Paketen enthaltenen Tasks und Container aktiviert werden. In der Regel sollte bei der Bereitstellung des Pakets diese Eigenschaft für die betreffenden Paketelemente auf dem Wert `True` festgelegt bleiben, da andernfalls die gleichen Überprüfungsfehler zur Laufzeit auftreten.  
   
-     Die `DelayValidation` Eigenschaft kann festgelegt werden auf einen Datenflusstask, jedoch nicht für einzelne Datenflusskomponenten verbunden. Sie erreichen für einzelne Datenflusskomponenten ein ähnliches Ergebnis, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>-Eigenschaft der Datenflusskomponenten auf `false` festlegen. Wenn der Wert dieser Eigenschaft ist jedoch `false`, die Komponente ist nicht über Änderungen an den Metadaten externer Datenquellen.  
+     Die `DelayValidation`-Eigenschaft kann für einen Datenflusstask, jedoch nicht für einzelne Datenflusskomponenten festgelegt werden. Sie erreichen für einzelne Datenflusskomponenten ein ähnliches Ergebnis, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>-Eigenschaft der Datenflusskomponenten auf `false` festlegen. Wenn jedoch der Wert dieser Eigenschaft auf `false` festgelegt ist, erkennt die Komponente keine Änderungen der Metadaten externer Datenquellen.  
   
  Wenn vom Paket verwendete Datenbankobjekte zum Zeitpunkt der Überprüfung gesperrt sind, reagiert der Überprüfungsvorgang möglicherweise nicht mehr. Unter diesen Umständen reagiert der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer ebenfalls nicht mehr. Sie können die Überprüfung fortsetzen, indem Sie die zugehörigen Sitzung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]schließen. Sie können dieses Problem auch mit den in diesem Abschnitt beschriebenen Einstellungen umgehen.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "48176690"
  Wenn Sie während der Paketentwicklung auf eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Fehlernummer ohne dazugehörige Beschreibung stoßen, finden Sie die entsprechende Beschreibung unter [Fehler- und Meldungsreferenz von Integration Services](../integration-services-error-and-message-reference.md). Die Liste enthält zurzeit keine Informationen zur Problembehandlung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tools zur Problembehandlung für die Ausführung des Pakets](troubleshooting-tools-for-package-execution.md)   
- [Funktionen für die Datenflussleistung](../data-flow/data-flow-performance-features.md)  
+ [Behandlung von Problemen mit Paketausführungstools](troubleshooting-tools-for-package-execution.md)   
+ [Data Flow Performance Features](../data-flow/data-flow-performance-features.md)  
   
   

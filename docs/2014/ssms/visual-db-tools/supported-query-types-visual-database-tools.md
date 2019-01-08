@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Delete query
@@ -22,15 +22,15 @@ ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 543c70df2cda31251eb193f1acf04ab46ec8cddf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 752467d058a6618ccfa44d7e2f75ac33b632878e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065850"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792772"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>Unterstützte Abfragetypen (Visual Database Tools)
-  Sie können folgende Abfragetypen im Diagramm- oder Kriterienbereich (den grafischen Bereichen) des [Abfrage- und Sicht-Designers](visual-database-tools.md) erstellen:  
+  Sie können folgende Abfragetypen im Diagramm- oder Kriterienbereich (den grafischen Bereichen) des [Abfrage- und Sicht-Designers](visual-database-tools.md)erstellen:  
   
 -   **Auswahlabfrage** Ruft Daten aus einer oder mehreren Tabellen oder Sichten ab. Dieser Abfragetyp wird durch eine SELECT-Anweisung in SQL ausgedrückt.  
   

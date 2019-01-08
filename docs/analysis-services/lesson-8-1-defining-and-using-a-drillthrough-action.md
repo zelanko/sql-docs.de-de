@@ -1,5 +1,5 @@
 ---
-title: Definieren und verwenden eine Drillthroughaktion | Microsoft Docs
+title: Definieren und Verwenden einer Drillthroughaktion | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45f35145b116f36280ff7d70ee820f4e333382aa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3b57c18d159c677fe10d99fbae1ea9e4bffbed9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018047"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507963"
 ---
-# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Lektion 8-1: definieren und Verwenden einer Drillthroughaktion
+# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Lektion 8 – 1: definieren und Verwenden einer Drillthroughaktion
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Das Dimensionieren von Faktendaten mit einer Faktendimension, ohne die von der Abfrage zurückgegebenen Daten richtig zu filtern, kann bei Abfragen zu einer verminderten Leistung führen. Um dies zu vermeiden, können Sie eine Drillthroughaktion definieren, mit der die Gesamtanzahl der Zeilen, die zurückgegeben werden, reduziert wird. Dadurch wird die Abfrageleistung erheblich verbessert.  
@@ -31,7 +31,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie eine Drillthroughaktion, die 
   
     In der folgenden Abbildung ist die Registerkarte **Aktionen** des Cube-Designers dargestellt.  
   
-    ![Registerkarte ' Aktionen ', Cube-Designer](../analysis-services/media/l8-action1.gif "Registerkarte ' Aktionen ', Cube-Designer")  
+    ![Registerkarte "Aktionen", Cube-Designer](../analysis-services/media/l8-action1.gif "Registerkarte ' Aktionen ', Cube-Designer")  
   
 2.  Klicken Sie auf der Symbolleiste der Registerkarte **Aktionen** auf **Neue Drillthroughaktion** .  
   
@@ -51,15 +51,15 @@ Im Rahmen der Tasks in diesem Thema definieren Sie eine Drillthroughaktion, die 
   
 7.  Erweitern Sie das Feld **Weitere Eigenschaften** , wie in der folgenden Abbildung dargestellt.  
   
-    ![Zusätzliche Eigenschaftsfeld](../analysis-services/media/l8-action4.gif "im zusätzliche Eigenschaften")  
+    ![Zusätzliche Eigenschaftendialogfeld](../analysis-services/media/l8-action4.gif "im zusätzliche Eigenschaften")  
   
 8.  Geben Sie in das Feld **Maximale Zeilenanzahl** die Ziffer **10**ein.  
   
-9. Geben Sie in das Feld **Beschriftung** die Beschreibung **Drillthrough to Order Details…** ein.  
+9. In der **Beschriftung** geben **Drillthrough to Order Details...** .  
   
     Durch diese Einstellungen wird die Anzahl der zurückgegebenen Zeilen beschränkt und die Beschriftung angegeben, die im Clientanwendungsmenü angezeigt wird. In der folgenden Abbildung werden diese Einstellungen im Feld **Weitere Eigenschaften** dargestellt.  
   
-    ![Zusätzliche Eigenschaftsfeld](../analysis-services/media/l8-action5.gif "im zusätzliche Eigenschaften")  
+    ![Zusätzliche Eigenschaftendialogfeld](../analysis-services/media/l8-action5.gif "im zusätzliche Eigenschaften")  
   
 ## <a name="using-the-drillthrough-action"></a>Verwenden der Drillthroughaktion  
   
@@ -81,7 +81,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie eine Drillthroughaktion, die 
   
     Die Details der an Adam Powell gelieferten Bestellungen werden im **Datenstichproben-Viewer**angezeigt, wie in der folgenden Abbildung zu sehen ist. Einige zusätzliche Details wären jedoch hilfreich, wie z. B. Bestelldatum, Fälligkeitsdatum und Lieferdatum. Sie fügen diese zusätzlichen Details in der nächsten Prozedur hinzu.  
   
-    ![Aufträge an Adam Powell gelieferten](../analysis-services/media/l8-action6.gif "Bestellungen an Adam Powell gelieferten Bestellungen")  
+    ![Bestellungen an Adam Powell gelieferten](../analysis-services/media/l8-action6.gif "Bestellungen an Adam Powell gelieferten")  
   
 8.  Schließen von Excel/  
   
@@ -141,10 +141,10 @@ Im Rahmen der Tasks in diesem Thema definieren Sie eine Drillthroughaktion, die 
   
     Die Details dieser an Adam Powell gelieferten Bestellungen werden in einem temporären Arbeitsblatt angezeigt. Dies umfasst Artikelbeschreibung, Bestellnummer, Bestelldatum, Fälligkeitsdatum und Versanddatum, wie in der folgenden Abbildung dargestellt.  
   
-    ![Aufträge an Adam Powell gelieferten](../analysis-services/media/l8-action8.gif "Bestellungen an Adam Powell gelieferten Bestellungen")  
+    ![Bestellungen an Adam Powell gelieferten](../analysis-services/media/l8-action8.gif "Bestellungen an Adam Powell gelieferten")  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
-[Lektion 9: Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+[Lektion 9: Definieren von Perspektiven und Übersetzungen](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>Siehe auch  
 [Aktionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  

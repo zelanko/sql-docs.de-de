@@ -28,12 +28,12 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 59a80fcb9fdbd758f1ca76e73d279cdc6b3810d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 619f96921f1fbbaf3d1eec8d2c89a25491b46180
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137626"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364772"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
   Eine Karte ist eine Sammlung von Ebenen. Wenn Sie einem Bericht eine Karte hinzufügen, definieren Sie die erste Ebene. Sie können zusätzliche Ebenen mit dem Kartenebenen-Assistenten erstellen.  
@@ -57,7 +57,7 @@ ms.locfileid: "48137626"
   
  Am unteren Rand der Karte befindet sich der Kartenansichtsbereich. Um die Optionen für Zentrieren und Zoomen der Karte zu ändern, verwenden Sie die Pfeiltasten, um den Ansichtsmittelpunkt festzulegen, und den Schieberegler, um die Zoomstufe festzulegen.  
   
- Weitere Informationen zu Ebenen finden Sie unter [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md).  
+ Weitere Informationen zu Ebenen finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -82,7 +82,7 @@ ms.locfileid: "48137626"
   
 1.  Klicken Sie auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ebene hinzufügen** , und klicken Sie in der Dropdownliste auf den Typ der Ebene, die Sie hinzufügen möchten: **Punkt**, **Linie**oder **Polygon**.  
+2.  Klicken Sie auf der Symbolleiste auf die **fügen Layer** Schaltfläche, und klicken Sie in der Dropdown-Liste auf den Typ der Ebene, die Sie hinzufügen möchten: **Punkt**, **Zeile**, oder **Polygon**.  
   
     > [!NOTE]  
     >  Sie können eine Kartenebene auch manuell hinzufügen und konfigurieren. Es empfiehlt sich jedoch, neue Ebenen mit dem Kartenebenen-Assistenten hinzuzufügen. Um den Assistenten über die Symbolleiste des Kartenbereichs zu starten, klicken Sie auf die Schaltfläche für den Ebenen-Assistenten (![RS_SymbolKartenebenenassistent](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
@@ -125,9 +125,9 @@ ms.locfileid: "48137626"
   
 1.  Wählen Sie **Allgemein** im Dialogfeld **Punkteigenschaften von Karten** aus, um Bezeichnung, QuickInfo und Markertypoptionen für die folgenden Kartenelemente zu ändern:  
   
-    -   Alle dynamischen oder eingebettete Punkte auf einer Punktebene. Farbregeln, Größenregeln und Markertypregeln für Punkte überschreiben diese Optionen. Um Optionen für einen bestimmten eingebetteten Punkt zu überschreiben, verwenden die [Map Embedded Point Properties Dialog Box, Marker](../map-embedded-point-properties-dialog-box-marker.md) Seite.  
+    -   Alle dynamischen oder eingebettete Punkte auf einer Punktebene. Farbregeln, Größenregeln und Markertypregeln für Punkte überschreiben diese Optionen. Um Optionen für einen bestimmten eingebetteten Punkt zu überschreiben, verwenden Sie die Seite [Map Embedded Point Properties Dialog Box, Marker](../map-embedded-point-properties-dialog-box-marker.md) .  
   
-    -   Der Mittelpunkt für alle dynamischen oder eingebetteten Polygone auf einer Polygonebene. Farbregeln, Größenregeln und Markertypregeln für Mittelpunkte überschreiben diese Optionen. Verwenden Sie die Seite [Eigenschaften für eingebettete Punkte der Karte (Dialogfeld), Marker](../map-embedded-point-properties-dialog-box-marker.md), um Optionen für einen bestimmten eingebetteten Punkt zu überschreiben.  
+    -   Der Mittelpunkt für alle dynamischen oder eingebetteten Polygone auf einer Polygonebene. Farbregeln, Größenregeln und Markertypregeln für Mittelpunkte überschreiben diese Optionen. Verwenden Sie die Seite [Eigenschaften für eingebettete Punkte der Karte (Dialogfeld), Marker](../map-embedded-point-properties-dialog-box-marker.md) , um Optionen für einen bestimmten eingebetteten Punkt zu überschreiben.  
   
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48137626"
 4.  Geben Sie unter **Dateiname**den Speicherort einer ESRI-Shape-Datei ein, oder klicken Sie auf **Durchsuchen** , um eine ESRI-Shape-Datei auszuwählen.  
   
     > [!NOTE]  
-    >  Wenn sich die Shape-Datei auf dem lokalen Computer befindet, werden die räumlichen Daten in die Berichtsdefinition eingebettet. Um die Daten bei der Verarbeitung des Berichts dynamisch abzurufen, müssen Sie die ESRI-Shape-Datei (.shp) und die zugehörige Unterstützungsdatei (.dbf) auf den Berichtsserver hochladen. Weitere Informationen finden Sie unter „Vorgehensweise: Hochladen einer Datei oder eines Berichts (Berichts-Manager)“ in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
+    >  Wenn sich die Shape-Datei auf dem lokalen Computer befindet, werden die räumlichen Daten in die Berichtsdefinition eingebettet. Um die Daten bei der Verarbeitung des Berichts dynamisch abzurufen, müssen Sie die ESRI-Shape-Datei (.shp) und die zugehörige Unterstützungsdatei (.dbf) auf den Berichtsserver hochladen. Weitere Informationen finden Sie unter "Vorgehensweise: Hochladen einer Datei oder eines Berichts (Berichts-Manager) "in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server-Onlinedokumentation.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -190,7 +190,7 @@ ms.locfileid: "48137626"
 2.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ebene hinzufügen** , und klicken Sie in der Dropdownliste auf **Kachelebene**.  
   
     > [!NOTE]  
-    >  Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](http://go.microsoft.com/fwlink/?LinkId=151371) und der [Datenschutzerklärung](http://go.microsoft.com/fwlink/?LinkId=151372).  
+    >  Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](https://go.microsoft.com/fwlink/?LinkId=151371) und der [Datenschutzerklärung](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
 3.  Klicken Sie mit der rechten Maustaste im Kartenbereich auf die Kachelebene, und klicken Sie anschließend auf **Kacheleigenschaften**.  
   
@@ -275,7 +275,7 @@ ms.locfileid: "48137626"
   
     -   Geben Sie den minimalen und maximalen Zoomwert für die Anzeige der Ebene ein.  
   
-    -   Optional. Geben Sie einen Wert für die Transparenz ein.  
+    -   Dies ist optional. Geben Sie einen Wert für die Transparenz ein.  
   
      Sie können die Ebene auch bedingt ausblenden. Weitere Informationen finden Sie unter [Ausblenden eines Elements &#40;Berichts-Generator und SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md).  
   

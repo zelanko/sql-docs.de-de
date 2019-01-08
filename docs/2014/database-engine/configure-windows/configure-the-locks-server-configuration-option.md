@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - locks option [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b99e5ef3ac5065695d23f5a3c627c32328e293b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ede6cfa244f703143ae0ad265982c014cf5d7a8
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060320"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639981"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Sperren
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Sperren** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Mithilfe der Option **Sperren** können Sie die maximale Anzahl verfügbarer Sperren festlegen und so die Menge an Arbeitsspeicher begrenzen, die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] für Sperren verwendet. Die Standardeinstellung ist 0. Dadurch kann [!INCLUDE[ssDE](../../includes/ssde-md.md)] Sperrstrukturen je nach Systemanforderungen dynamisch zuordnen oder die Zuordnung von Sperrstrukturen aufheben.  
@@ -32,7 +31,7 @@ ms.locfileid: "48060320"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So konfigurieren Sie die Option Sperren mit:**  
   
@@ -40,9 +39,9 @@ ms.locfileid: "48060320"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung**  [Nach dem Konfigurieren der Option „Sperren“](#FollowUp)  
+-   **Nachverfolgung:**  [Nach dem Konfigurieren der Sperroption](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48060320"
 ####  <a name="Permissions"></a> Berechtigungen  
  Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Zum Ausführen von **sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung muss einem Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-configure-the-locks-option"></a>So konfigurieren Sie die Option locks  
   
@@ -98,7 +97,7 @@ GO
   
  Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)angezeigt oder konfiguriert wird.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Konfigurieren der Option Sperren  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Konfigurieren der Sperroption  
  Der Server muss neu gestartet werden, bevor die Einstellung wirksam werden kann.  
   
 ## <a name="see-also"></a>Siehe auch  

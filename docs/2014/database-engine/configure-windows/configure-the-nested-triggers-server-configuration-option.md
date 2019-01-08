@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - nested triggers option
@@ -13,12 +12,12 @@ ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7c543af9a55d11124827704510eba6fe035f1fcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09dfdb2bfaaadc29a3a70c949380a5e3cd1a0512
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157760"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639256"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Geschachtelte Trigger
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Geschachtelte Trigger** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Mit der Option **Geschachtelte Trigger** wird gesteuert, ob ein AFTER-Trigger kaskadiert werden kann. Das heißt, ob eine Aktion ausgeführt werden kann, die einen anderen Trigger initiiert, der wiederum einen anderen Trigger initiiert usw. Wenn die Option **Geschachtelte Trigger** auf 0 festgelegt ist, können AFTER-Trigger nicht kaskadiert werden. Wenn die Option **Geschachtelte Trigger** auf 1 festgelegt ist (Standardeinstellung), können AFTER-Trigger auf bis zu 32 Ebenen kaskadiert werden. INSTEAD OF-Trigger können unabhängig von der festgelegten Option geschachtelt werden.  
@@ -27,7 +26,7 @@ ms.locfileid: "48157760"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So konfigurieren Sie die Option Geschachtelte Trigger mit:**  
   
@@ -35,16 +34,16 @@ ms.locfileid: "48157760"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung:**  [Nach dem Konfigurieren der Option Geschachtelte Trigger](#FollowUp)  
+-   **Nachverfolgung:**  [Nach dem Konfigurieren der Option geschachtelte Trigger](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Zum Ausführen von **sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung muss einem Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-configure-the-nested-triggers-option"></a>So konfigurieren Sie die Option Geschachtelte Trigger  
   
@@ -78,7 +77,7 @@ GO
   
  Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)angezeigt oder konfiguriert wird.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Konfigurieren der Option Geschachtelte Trigger  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Konfigurieren der Option geschachtelte Trigger  
  Die Einstellung tritt ohne Neustarten des Servers sofort in Kraft.  
   
 ## <a name="see-also"></a>Siehe auch  

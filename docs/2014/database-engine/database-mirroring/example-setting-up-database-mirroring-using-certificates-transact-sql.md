@@ -15,12 +15,12 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e5afcf2441de59e233abb3f1d211e0f14e517a43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065700"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512182"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten (Transact-SQL)
   In diesem Beispiel werden sämtliche Schritte erläutert, die für das Erstellen einer Datenbank-Spiegelungssitzung mithilfe der zertifikatbasierten Authentifizierung erforderlich sind. In den Beispielen in diesem Thema wird [!INCLUDE[tsql](../../includes/tsql-md.md)]verwendet. Sofern Sie nicht garantieren können, dass Ihr Netzwerk sicher ist, wird das Verschlüsseln bei Verbindungen zur Datenbankspiegelung empfohlen.  

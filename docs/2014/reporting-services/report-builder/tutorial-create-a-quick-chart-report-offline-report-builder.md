@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Schnelles Erstellen eines Diagrammberichts offline (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Erstellen Sie eine Quick-Diagrammberichts Offline (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: da0f35362a329974f8044da21b125d545c7bb323
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 677469c2110bee76870e9f30ed470f894200d2ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091370"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527005"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Lernprogramm: Erstellen eines Quick-Diagrammberichts offline (Berichts-Generator)
-  In diesem Lernprogramm erstellen Sie ein Kreisdiagramm mithilfe eines Assistenten. Danach nehmen Sie eine kleine Änderung an diesem Diagramm vor, damit Sie eine Vorstellung von den Bearbeitungsmöglichkeiten erhalten. Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beide Methoden liefern das gleiche Ergebnis – ein Kreisdiagramm entsprechend der folgenden Abbildung:  
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Lernprogramm: Erstellen Sie eine Quick-Diagrammberichts Offline (Berichts-Generator)
+  In diesem Lernprogramm erstellen Sie ein Kreisdiagramm mithilfe eines Assistenten. Danach nehmen Sie eine kleine Änderung an diesem Diagramm vor, damit Sie eine Vorstellung von den Bearbeitungsmöglichkeiten erhalten. Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beide Methoden liefern das gleiche Ergebnis – ein Kreisdiagramm wie in der folgenden Abbildung:  
   
  ![Anzeigen von "Mein erstes Kreisdiagramm" in Testlauf](../media/rs-my1stpierunview.gif "Mein erstes Kreisdiagramm in Ausführung anzeigen")  
   
@@ -42,11 +42,11 @@ ms.locfileid: "48091370"
  [Erstellen des Kreisdiagramms mit XML-Daten](#CreatePieChartXML)  
   
 ### <a name="using-a-transact-sql-query-that-contains-data-for-this-tutorial"></a>Verwenden einer Transact-SQL-Abfrage mit Daten für dieses Lernprogramm  
- Sie können aus diesem Thema eine Abfrage mit Daten kopieren und diese in den Assistenten einfügen. Sie benötigen den Namen einer Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] und Anmeldeinformationen für den schreibgeschützten Zugriff auf eine beliebige Datenbank. Von der Datasetabfrage im Lernprogramm werden zwar Literaldaten verwendet, die Abfrage muss jedoch durch eine Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] verarbeitet werden, um die für ein Berichtsdataset erforderlichen Metadaten zurückzugeben.  
+ Sie können aus diesem Thema eine Abfrage mit Daten kopieren und diese in den Assistenten einfügen. Sie benötigen den Namen einer Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] sowie Anmeldeinformationen für den schreibgeschützten Zugriff auf eine beliebige Datenbank. Von der Datasetabfrage im Lernprogramm werden zwar Literaldaten verwendet, die Abfrage muss jedoch durch eine Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] verarbeitet werden, um die für ein Berichtsdataset erforderlichen Metadaten zurückzugeben.  
   
  Der Vorteil der Verwendung der [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Abfrage besteht darin, dass in allen anderen Lernprogrammen für Berichts-Generator die gleiche Methode verwendet wird und Sie beim Ausführen der anderen Lernprogramme bereits mit der Vorgehensweise vertraut sind.  
   
- Die [!INCLUDE[tsql](../../../includes/tsql-md.md)] Abfrage ist ein noch einige andere Voraussetzungen erforderlich. Weitere Informationen finden Sie unter [Voraussetzungen für Lernprogramme &#40;Berichts-Generator&#41;](../report-builder-tutorials.md).  
+ Für die [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfrage müssen noch einige andere Voraussetzungen erfüllt sein. Weitere Informationen finden Sie unter [Voraussetzungen für Lernprogramme &#40;Berichts-Generator&#41;](../report-builder-tutorials.md).  
   
  [Erstellen des Kreisdiagramms mit einer Transact-SQL-Abfrage, die Daten enthält](#CreatePieQueryData)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48091370"
   
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#TwoWays)  
   
-##  <a name="CreatePieQueryData"></a> Erstellen des Kreisdiagramms mit einer [!INCLUDE[tsql](../../../includes/tsql-md.md)] Abfrage  
+##  <a name="CreatePieQueryData"></a> Erstellen des Kreisdiagramms mit einer [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfrage  
   
 #### <a name="to-create-the-pie-chart-with-a-includetsqlincludestsql-mdmd-query-that-contains-data"></a>So erstellen Sie das Kreisdiagramm mit einer [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Abfrage, die Daten enthält  
   
@@ -203,7 +203,7 @@ ms.locfileid: "48091370"
   
 3.  Typ `#PERCENT{P0}` für die **Bezeichnungsdaten** Option.  
   
-     Die `{P0}` erhalten Sie den Prozentsatz ohne Dezimalstellen. Wenn Sie gerade eingeben `#PERCENT`, müssen Ihre Zahlen zwei Dezimalstellen an. `#PERCENT` ist ein Schlüsselwort, das eine Berechnung oder eine Funktion für Sie ausführt. Es gibt noch viele andere.  
+     Mit `{P0}` erhalten Sie den Prozentsatz ohne Dezimalstellen. Falls Sie nur `#PERCENT` eingeben, erhalten Ihre Zahlen zwei Dezimalstellen. `#PERCENT` ist ein Schlüsselwort, das eine Berechnung oder eine Funktion für Sie ausführt. Dies ist nur ein Beispiel unter vielen.  
   
  Weitere Informationen zum Anpassen von Diagrammbezeichnungen und -legenden finden Sie unter [Anzeigen von Prozentwerten in einem Kreisdiagramm &#40;Berichts-Generator und SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) sowie unter [Ändern des Texts eines Legendenelements &#40;Berichts-Generator und SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md).  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48091370"
 ##  <a name="WhatsNext"></a> Wie geht es weiter?  
  Nachdem Sie nun Ihren ersten Bericht im Berichts-Generator erstellt haben, können Sie die anderen Lernprogramme ausführen und die ersten Berichte mit Ihren eigenen Daten erstellen. Führen Sie Berichts-Generator, die Sie benötigen die Berechtigung zum Zugriff auf Ihre Datenquellen, z. B. Datenbanken, mit einem *Verbindungszeichenfolge*, die tatsächlich verbindet Sie mit der Datenquelle. Der Systemadministrator hat diese Informationen und kann Ihnen bei der Einrichtung helfen.  
   
- Um die anderen Tutorials durcharbeiten, benötigen Sie den Namen einer Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] und Anmeldeinformationen für den schreibgeschützten Zugriff auf eine beliebige Datenbank. Auch dabei können Sie sich an den Systemadministrator wenden.  
+ Zum Absolvieren der anderen Lernprogramme benötigen Sie den Namen einer Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] sowie Anmeldeinformationen für den schreibgeschützten Zugriff auf eine beliebige Datenbank. Auch dabei können Sie sich an den Systemadministrator wenden.  
   
  Schließlich benötigen Sie die URL und die Berechtigungen, um die Berichte auf einem Berichtsserver oder einer SharePoint-Website zu speichern, die mit einem Berichtsserver integriert ist. Sie können jeden Bericht, den Sie erstellen, direkt auf Ihrem Computer ausführen. Berichte haben jedoch mehr Funktionalität, wenn sie vom Berichtsserver oder von einer SharePoint-Website aus ausgeführt werden. Sie benötigen Berechtigungen zum Ausführen Ihrer Berichte oder anderer Berichte auf dem Berichtsserver oder einer SharePoint-Website, auf der sie veröffentlicht werden. Wenden Sie sich an den Systemadministrator, um Zugriff zu erhalten.  
   

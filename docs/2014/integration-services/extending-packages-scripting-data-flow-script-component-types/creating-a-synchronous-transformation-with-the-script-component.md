@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96585ac5a5f248cd1a127c766e5925bdc66d0b71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dad9b912d6202c79b21ee1e8638f5ce9b42f7cf2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215820"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376192"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Erstellen einer synchronen Transformation mit der Skriptkomponente
   Transformationskomponenten dienen im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets dazu, Daten auf dem Weg von der Quelle zum Ziel zu ändern und zu analysieren. Eine Transformation mit synchronen Ausgaben verarbeitet jede eingegebene Zeile, während sie die Komponente durchläuft. Eine Transformation mit asynchronen Ausgaben wartet, bis alle Eingabezeilen empfangen wurden, bevor die Verarbeitung abgeschlossen wird. In diesem Thema wird eine synchrone Transformation erläutert. Informationen zur asynchronen Transformation finden Sie unter [Creating an Asynchronous Transformation with the Script Component (Erstellen einer asynchronen Transformationen mit der Skriptkomponente)](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Weitere Informationen zu den Unterschieden zwischen synchronen und asynchronen Komponenten finden Sie unter [Understanding Synchronous and Asynchronous Transformations (Grundlegendes zu synchronen und asynchronen Transformationen)](../understanding-synchronous-and-asynchronous-transformations.md).  
@@ -87,7 +85,7 @@ ms.locfileid: "48215820"
 ### <a name="understanding-the-auto-generated-code"></a>Grundlegendes zum automatisch generierten Code  
  Wenn Sie nach der Erstellung und Konfiguration einer Transformationskomponente die VSTA-IDE öffnen, wird die bearbeitbare `ScriptMain`-Klasse im Code-Editor mit einem Stub für die `ProcessInputRow`-Methode angezeigt. In der `ScriptMain`-Klasse schreiben Sie Ihren benutzerdefinierten Code, und `ProcessInputRow` ist die wichtigste Methode in einer Transformationskomponente.  
   
- Wenn Sie öffnen die **-Projekt-Explorer** Fenster in VSTA können Sie sehen, dass die Skriptkomponente auch schreibgeschützte generiert hat `BufferWrapper` und `ComponentWrapper` Projektelemente. Die `ScriptMain` Klasse erbt von der `UserComponent` -Klasse in der `ComponentWrapper` Projektelement.  
+ Wenn Sie öffnen die **-Projekt-Explorer** Fenster in VSTA können Sie sehen, dass die Skriptkomponente auch schreibgeschützte generiert hat `BufferWrapper` und `ComponentWrapper` Projektelemente. Die `ScriptMain`-Klasse erbt von der `UserComponent`-Klasse im `ComponentWrapper`-Projektelement.  
   
  Zur Laufzeit ruft die Datenfluss-Engine die `ProcessInput`-Methode in der `UserComponent`-Klasse auf, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A>-Methode der übergeordneten <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Klasse überschreibt. Die `ProcessInput`-Methode durchläuft der Reihe nach in Schleifen die Zeilen im Eingabepuffer und ruft für jede Zeile einmal die `ProcessInputRow`-Methode auf.  
   
@@ -260,7 +258,7 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 }  
 ```  
   
-|![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **Bleiben Sie auf dem neuesten Stand mit Integrationsservices**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+|![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **Bleiben Sie auf dem neuesten Stand mit Integrationsservices**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Grundlegendes zu synchronen und asynchronen Transformationen](../understanding-synchronous-and-asynchronous-transformations.md) [Erstellen einer asynchronen Transformation mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md) [Entwickeln einer benutzerdefinierten Transformationskomponente mit synchronen Ausgaben](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)  

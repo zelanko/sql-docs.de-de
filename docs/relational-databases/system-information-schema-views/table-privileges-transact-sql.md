@@ -20,26 +20,26 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6331c75ff2e3df7980f774d33927e494021b30d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ea23e4639cb5dd6872092021f04ab35af28f27d5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659990"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589254"
 ---
 # <a name="tableprivileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt eine Zeile für jedes Tabellenprivileg zurück, das dem aktuellen Benutzer in der aktuellen Datenbank erteilt oder von diesem erteilt wurde.  
   
- Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen der **INFORMATION_SCHEMA. *** View_name*.  
+ Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen der **INFORMATION_SCHEMA.** _View_name_.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**BERECHTIGENDE (GRANTOR)**|**Nvarchar (** 128 **)**|Der Berechtigende|  
 |**EMPFÄNGER**|**Nvarchar (** 128 **)**|Der Berechtigte|  
 |**TABLE_CATALOG**|**Nvarchar (** 128 **)**|Tabellenqualifizierer|  
-|**TABLE_SCHEMA**|**Nvarchar (** 128 **)**|Der Name des Schemas, das die Tabelle enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**TABLE_SCHEMA**|**Nvarchar (** 128 **)**|Der Name des Schemas, das die Tabelle enthält.<br /><br /> <strong>\*\* Wichtige \* \*</strong>  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**TABLE_NAME**|**sysname**|Tabellenname.|  
 |**PRIVILEGE_TYPE**|**Varchar (** 10 **)**|Privilegientyp|  
 |**IS_GRANTABLE**|**Varchar (** 3 **)**|Gibt an, ob der Berechtigte anderen Benutzern Berechtigungen erteilen kann.|  

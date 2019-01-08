@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - group collapsing [SQL Server]
@@ -14,17 +14,17 @@ ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2f6b11b045e729e0f567bb4714b9a551706f7057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7f6cbc6b4150f2f951befcb70c1b09108de3b51
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182890"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788122"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Reduzieren von Zeilengruppen (Visual Database Tools)
   Sie können ein Abfrageergebnis erstellen, in dem jede Ergebniszeile einer kompletten Zeilengruppe aus den ursprünglichen Daten entspricht. Beim Reduzieren von Zeilengruppen sind folgende Punkte zu beachten:  
   
--   **Sie können doppelte Zeilen entfernen.** Einige Abfragen erstellen Resultsets mit mehreren identischen Zeilen. Sie können z. B. ein Resultset erstellen, in dem jede Zeile den Namen der Stadt und des Lands bzw. der Region für eine Stadt angibt, in der Autoren ansässig sind. Wenn jedoch mehrere Autoren in einer Stadt ansässig sind, werden mehrere identische Zeilen ausgegeben. Hierfür kann folgende SQL-Anweisung formuliert werden:  
+-   **Sie können doppelte Zeilen entfernen.** Einige Abfragen erstellen Resultsets mit mehreren identischen Zeilen. Sie können z.B. ein Resultset erstellen, in dem jede Zeile den Namen der Stadt und des Lands bzw. der Region für eine Stadt angibt, in der Autoren ansässig sind. Wenn jedoch mehrere Autoren in einer Stadt ansässig sind, werden mehrere identische Zeilen ausgegeben. Hierfür kann folgende SQL-Anweisung formuliert werden:  
   
     ```  
     SELECT city, state  

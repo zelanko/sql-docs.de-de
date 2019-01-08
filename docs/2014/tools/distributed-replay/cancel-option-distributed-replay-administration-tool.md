@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b69c21123f76517243805b3d5d3391fd3c5d5149
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d9aa28d4a6879f3077b137880aae54b9a0c434
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069500"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822284"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>Option Abbrechen (Verwaltungstool Distributed Replay)
   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Verwaltungstool, `DReplay.exe`, ist ein Befehlszeilentool, das Sie für die Kommunikation mit distributed Replay Controller verwenden können. In diesem Thema werden die **cancel** -Befehlszeilenoption und die entsprechende Syntax beschrieben.  
@@ -46,7 +46,7 @@ dreplay cancel [-mcontroller] [-q]
  Im folgenden Beispiel wird eine Abbruchanforderung im stillen Modus gesendet. Der Wert `localhost` gibt an, dass der Controllerdienst auf demselben Computer wie das Verwaltungstool ausgeführt wird.  
   
 ```  
-dreplay cancel –m localhost -q  
+dreplay cancel -m localhost -q  
 ```  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -13,12 +13,12 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 184e6a3354069ae5a1ed0d6b7557f4b0ac3fa716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65103e99a6cba7d21daca85f3295135a43f435a5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222650"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776382"
 ---
 # <a name="use-the-eventdata-function"></a>Verwenden der EVENTDATA-Funktion
   Informationen zu einem Ereignis, das einen DDL-Trigger auslöst, werden mit der EVENTDATA-Funktion erfasst. Diese Funktion gibt einen `xml`-Wert zurück. Das XML-Schema schließt Informationen zu folgenden Punkten ein:  
@@ -95,7 +95,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, die das Ereignis enthalten hat.  
   
- Die beiden letzten Elemente werden wiederum erfasst, indem XQuery für die `xml` Daten, die von EVENTDATA generierten.  
+ Die beiden letzten Elemente werden wiederum erfasst, indem XQuery für die von EVENTDATA generierten `xml`-Daten verwendet wird.  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,7 +125,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Zur Rückgabe von Ereignisdaten sollten Sie die XQuery-`value()`-Methode anstelle der `query()`-Methode verwenden. Die `query()` Methodenrückgabe XML- und kaufmännische und-Zeichen geschützte Carriage return, Wagenrücklauf und Zeilenvorschub (CR)-Instanzen in der Ausgabe, während die `value()` -Methode rendert ein CRLF-Instanzen in der Ausgabe nicht sichtbar sind.  
+>  Zur Rückgabe von Ereignisdaten sollten Sie die XQuery-`value()`-Methode anstelle der `query()`-Methode verwenden. Die `query()`-Methode gibt in der Ausgabe XML und Ampersand-Escape-CRLF-Instanzen (Carriage Return and Line Feed) zurück, wogegen die `value()`-Methode CRLF-Instanzen zurückgibt, die in der Ausgabe unsichtbar sind.  
   
  Ein ähnliches Beispiel für einen DDL-Trigger wird mit der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank bereitgestellt. Auf das Beispiel können Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Ordner "Datenbanktrigger" zugreifen. Dieser Ordner befindet sich unter dem Ordner **Programmierbarkeit** der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank. Klicken Sie mit der rechten Maustaste auf **ddlDatabseTriggerLog** , und wählen Sie **Skript für Datenbanktrigger als**aus. Standardmäßig ist der DDL-Trigger **ddlDatabseTriggerLog** deaktiviert.  
   

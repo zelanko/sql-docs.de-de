@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 17911fd8b2c4fbc310ec87950cdb5ed10164a05b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 058010d0e32fb26cf4c12e720342af04bd784768
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202450"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804782"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
   In diesem Verfahren wird beschrieben, wie Sie die CDC Designer Console zum Verwalten von CDC-Instanzvorgängen zur Laufzeit verwenden.  
@@ -35,19 +34,19 @@ ms.locfileid: "48202450"
   
      Sie können die folgenden Tasks ausführen:  
   
-    -   **Start**: Die Aufzeichnung der Änderungen wird gestartet.  
+    -   **Starten Sie**: Starten Sie die Aufzeichnung der Änderungen.  
   
-    -   **Beenden**: Die Aufzeichnung der Änderungen wird beendet.  
+    -   **Beenden Sie**: Zum Beenden der Aufzeichnung der Änderungen  
   
     -   **Zurücksetzen**: Klicken Sie auf **Zurücksetzen** , um die CDC-Instanz auf ihren ursprünglichen (leeren) Zustand zurückzusetzen. Diese Option ist verfügbar, wenn die CDC-Instanz beendet wurde. Alle Änderungen in den Änderungstabellen und der interne Status der CDC-Instanz werden gelöscht. Wenn die CDC-Instanz später dann gestartet wird, beginnt die Änderungsaufzeichnung ab diesem Zeitpunkt und schließt nur Transaktionen ein, die nach dem Starten der CDC-Instanz gestartet wurden.  
   
-    -   **Löschen**: Dient zum Löschen der CDC-Instanz.  
+    -   **Löschen Sie**: So löschen Sie die CDC-Instanz.  
   
-    -   **Oracle Logging Script**: Klicken Sie auf **Oracle Logging Script** , um das entsprechende Dialogfeld mit dem ergänzenden Oracle-Protokollierungsskript anzuzeigen. Informationen zu den Schritten, die Sie in diesem Dialogfeld ausführen können, finden Sie unter [Oracle Supplemental Logging Script](oracle-supplemental-logging-script.md).  
+    -   **Oracle-Protokollierungsskript**: Klicken Sie auf **Oracle Logging Script** um das entsprechende Dialogfeld mit dem Oracle-protokollierungsskript anzuzeigen. Informationen zu den Schritten, die Sie in diesem Dialogfeld ausführen können, finden Sie unter [Oracle Supplemental Logging Script](oracle-supplemental-logging-script.md).  
   
          **Hinweis**: Wenn Sie die ergänzenden Protokollierungsskripts ausführen, wird das Dialogfeld Oracle Credentials for Running Script geöffnet, in dem Sie einen gültigen Oracle-Benutzernamen und das dazugehörige Kennwort angeben können. Informationen zum Bereitstellen der richtigen Oracle-Anmeldeinformationen finden Sie unter [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md).  
   
-    -   **CDC Instance Deployment**: Dient zum Generieren eines Bereitstellungsskripts für die CDC-Instanz. Informationen zu diesem Dialogfeld finden Sie unter [CDC Instance Deployment Script](cdc-instance-deployment-script.md).  
+    -   **CDC Instance Deployment**: Zum Generieren eines Bereitstellungsskripts für die CDC-Instanz. Informationen zu diesem Dialogfeld finden Sie unter [CDC Instance Deployment Script](cdc-instance-deployment-script.md).  
   
      Weitere Informationen zu diesen Tasks finden Sie unter [Manage a CDC Instance](manage-a-cdc-instance.md).  
   

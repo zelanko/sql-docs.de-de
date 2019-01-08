@@ -18,12 +18,12 @@ ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e8ecad7b3d9df0974d7f7548438f2464d75fd35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d98c06131029f804476fe1f3779352a34ccd81e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225058"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537477"
 ---
 # <a name="specifying-the-installation-target"></a>Angeben des Installationszieles
   Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent liest die Informationen vom Ziel der \< *Projektname*> .deploymenttargets-Datei. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellt diese Datei, wenn Sie das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt erstellen. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] anhand der Datenbank und der Server angegeben wird, auf die **Bereitstellung** auf der Seite die  *\<Projektname >* **Eigenschaftenseiten** Dialogfeld zum Erstellen der \< *Projektname*> .targets-Datei.  
@@ -37,16 +37,16 @@ ms.locfileid: "48225058"
   
 -   Führen Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interaktiv aus. Geben Sie auf der Seite **Installationsziel** ein neues Ziel für die Instanz und die Datenbank von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] an.  
   
-     – oder –  
+     -oder-  
   
 -   Führen Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] an der Eingabeaufforderung aus, und legen Sie fest, dass der Assistent im Antwortdateimodus ausgeführt wird. Weitere Informationen zum Antwortdateimodus finden Sie unter [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md).  
   
-     – oder –  
+     -oder-  
   
 -   Ändern der \< *Projektname*> .deploymenttargets-Datei mit einem Text-Editor.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Angeben von Partitionen und Bereitstellungsoptionen für Rollen](deployment-script-files-partition-and-role-deployment-options.md)   
+ [Angeben von Bereitstellungsoptionen für Partitionen und Rollen](deployment-script-files-partition-and-role-deployment-options.md)   
  [Angeben der Konfigurationseinstellungen für die Lösungsbereitstellung](deployment-script-files-solution-deployment-config-settings.md)   
  [Angeben von Verarbeitungsoptionen](deployment-script-files-specifying-processing-options.md)  
   

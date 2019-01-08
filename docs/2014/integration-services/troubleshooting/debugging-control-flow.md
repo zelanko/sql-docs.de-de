@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
@@ -18,24 +17,24 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 142a22e07a9abf5a87e63268910de35ff95b79ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 786ede341e899acf2831c5c3e0a6204d3a80b1b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216280"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791945"
 ---
 # <a name="debugging-control-flow"></a>Debuggen der Ablaufsteuerung
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthalten Funktionen und Tools, die Sie verwenden können, um die Problembehandlung für der ablaufsteuerung in einem [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Paket.  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include features und tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Paket behandeln können.  
   
 -   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] unterstützt Breakpoints für Container und Tasks.  
   
--   [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer stellt zur Laufzeit Fortschrittsberichte bereit.  
+-   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer stellt zur Laufzeit Fortschrittsberichte bereit.  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] stellt Debugfenster bereit.  
   
 ## <a name="breakpoints"></a>Breakpoints  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer bietet die **Breakpoints festlegen** Dialogfeld, in dem Sie Breakpoints festlegen können, aktivieren Sie unterbrechungsbedingungen und geben an, wie oft ein Breakpoint, bevor die Ausführung des Pakets auftreten kann angehalten wird. Breakpoints können auf Paketebene oder auf der Ebene der einzelnen Komponenten aktiviert werden. Falls Unterbrechungsbedingungen auf der Task- oder Containerebene aktiviert sind, wird das Breakpointsymbol neben dem Task oder Container auf der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** angezeigt. Falls die Unterbrechungsbedingungen im Paket aktiviert sind, wird das Breakpointsymbol in der Bezeichnung der Registerkarte **Ablaufsteuerung** angezeigt.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer stellt das Dialogfeld **Breakpoints festlegen** bereit, in dem Sie Breakpoints festlegen können. Hierzu aktivieren Sie Unterbrechungsbedingungen und geben an, wie häufig ein Breakpoint auftreten kann, bevor die Ausführung des Pakets angehalten wird. Breakpoints können auf Paketebene oder auf der Ebene der einzelnen Komponenten aktiviert werden. Falls Unterbrechungsbedingungen auf der Task- oder Containerebene aktiviert sind, wird das Breakpointsymbol neben dem Task oder Container auf der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** angezeigt. Falls die Unterbrechungsbedingungen im Paket aktiviert sind, wird das Breakpointsymbol in der Bezeichnung der Registerkarte **Ablaufsteuerung** angezeigt.  
   
  Wird ein Breakpoint erreicht, ändert sich das Breakpointsymbol, damit Sie die Quelle des Breakpoints identifizieren können. Sie können beim Ausführen des Pakets Breakpoints hinzufügen, löschen und ändern.  
   
@@ -43,16 +42,16 @@ ms.locfileid: "48216280"
   
 |Unterbrechungsbedingung|Description|  
 |---------------------|-----------------|  
-|Wenn der Task oder Container empfängt die `OnPreExecute` Ereignis.|Wird aufgerufen, unmittelbar bevor ein Task ausgeführt wird. Dieses Ereignis wird durch einen Task oder Container ausgelöst, unmittelbar bevor er ausgeführt wird.|  
-|Wenn der Task oder Container empfängt die `OnPostExecute` Ereignis.|Wird aufgerufen, unmittelbar nachdem die Ausführungslogik des Tasks beendet wurde. Dieses Ereignis wird durch einen Task oder Container ausgelöst, unmittelbar nachdem er ausgeführt wurde.|  
-|Wenn der Task oder Container empfängt die `OnError` Ereignis.|Wird durch einen Task oder Container bei einem Fehler aufgerufen.|  
-|Wenn der Task oder Container empfängt die `OnWarning` Ereignis.|Wird aufgerufen, wenn der Task einen Status aufweist, der keinen Fehler, aber eine Warnung rechtfertigt.|  
-|Wenn der Task oder Container empfängt die `OnInformation` Ereignis.|Wird aufgerufen, wenn der Task Informationen bereitstellen muss.|  
-|Wenn der Task oder Container empfängt die `OnTaskFailed` Ereignis.|Wird durch den Taskhost bei einem Fehler aufgerufen.|  
-|Wenn der Task oder Container empfängt die `OnProgress` Ereignis.|Wird aufgerufen, um den Status der Taskausführung zu aktualisieren.|  
-|Wenn der Task oder Container empfängt die `OnQueryCancel` Ereignis.|Wird zu einem beliebigen Zeitpunkt der Taskverarbeitung aufgerufen, wenn Sie die Ausführung abbrechen.|  
-|Wenn der Task oder Container empfängt die `OnVariableValueChanged` Ereignis.|Wird durch die [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Laufzeit aufgerufen, wenn sich der Wert einer Variablen ändert. Das RaiseChangeEvent der Variablen muss festgelegt werden, um `true` zum Auslösen dieses Ereignisses.<br /><br /> **\*\* Warnung \*\*** Die diesem Breakpoint zugeordnete Variable muss im **Containerbereich** definiert werden. Wenn die Variable im Paketbereich definiert wird, wird der Breakpoint nicht erreicht.|  
-|Wenn der Task oder Container empfängt die `OnCustomEvent` Ereignis.|Wird durch Tasks aufgerufen, um benutzerdefinierte Taskereignisse auszulösen.|  
+|Wenn der Task oder Container das `OnPreExecute`-Ereignis empfängt.|Wird aufgerufen, unmittelbar bevor ein Task ausgeführt wird. Dieses Ereignis wird durch einen Task oder Container ausgelöst, unmittelbar bevor er ausgeführt wird.|  
+|Wenn der Task oder Container das `OnPostExecute`-Ereignis empfängt.|Wird aufgerufen, unmittelbar nachdem die Ausführungslogik des Tasks beendet wurde. Dieses Ereignis wird durch einen Task oder Container ausgelöst, unmittelbar nachdem er ausgeführt wurde.|  
+|Wenn der Task oder Container das `OnError`-Ereignis empfängt.|Wird durch einen Task oder Container bei einem Fehler aufgerufen.|  
+|Wenn der Task oder Container das `OnWarning`-Ereignis empfängt.|Wird aufgerufen, wenn der Task einen Status aufweist, der keinen Fehler, aber eine Warnung rechtfertigt.|  
+|Wenn der Task oder Container das `OnInformation`-Ereignis empfängt.|Wird aufgerufen, wenn der Task Informationen bereitstellen muss.|  
+|Wenn der Task oder Container das `OnTaskFailed`-Ereignis empfängt.|Wird durch den Taskhost bei einem Fehler aufgerufen.|  
+|Wenn der Task oder Container das `OnProgress`-Ereignis empfängt.|Wird aufgerufen, um den Status der Taskausführung zu aktualisieren.|  
+|Wenn der Task oder Container das `OnQueryCancel`-Ereignis empfängt.|Wird zu einem beliebigen Zeitpunkt der Taskverarbeitung aufgerufen, wenn Sie die Ausführung abbrechen.|  
+|Wenn der Task oder Container das `OnVariableValueChanged`-Ereignis empfängt.|Wird durch die [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Laufzeit aufgerufen, wenn sich der Wert einer Variablen ändert. Das RaiseChangeEvent der Variablen muss festgelegt werden, um `true` zum Auslösen dieses Ereignisses.<br /><br /> **\*\* Warnung \*\*** Die diesem Breakpoint zugeordnete Variable muss im **Containerbereich** definiert werden. Wenn die Variable im Paketbereich definiert wird, wird der Breakpoint nicht erreicht.|  
+|Wenn der Task oder Container das `OnCustomEvent`-Ereignis empfängt.|Wird durch Tasks aufgerufen, um benutzerdefinierte Taskereignisse auszulösen.|  
   
  Neben den Unterbrechungsbedingungen, die für alle Tasks und Container verfügbar sind, enthalten manche Tasks und Container spezielle Unterbrechungsbedingungen zum Festlegen von Breakpoints. Beispielsweise können Sie eine Unterbrechungsbedingung für den For-Schleifencontainer aktivieren, um einen Breakpoint festzulegen, der die Ausführung zu Beginn jeder Iteration der Schleife anhält.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "48216280"
 -   [Debuggen eines Pakets durch Festlegen von Breakpoints auf einem Task oder Container](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
   
 ## <a name="progress-reporting"></a>Fortschrittsberichte  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer enthält zwei Arten von Fortschrittsberichten: farbcodierung auf der Entwurfsoberfläche der der **Ablaufsteuerung** Registerkarte und statusmeldungen auf der **Fortschritt** Registerkarte.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer enthält zwei Arten von Fortschrittsberichten: Farbcodierung auf der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** und Statusmeldungen auf der Registerkarte **Status** .  
   
  Wenn Sie ein Paket ausführen, wird der Ausführungsstatus im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer gekennzeichnet, indem jeder Task oder Container in einer Farbe angezeigt wird, die Ausschluss über den Ausführungsstatus gibt. Anhand der Farbe wissen Sie, ob das Element auf die Ausführung wartet, zurzeit ausgeführt wird, erfolgreich ausgeführt wurde oder nicht erfolgreich beendet wurde. Nachdem Sie die Paketausführung beendet haben, verschwindet die Farbcodierung.  
   

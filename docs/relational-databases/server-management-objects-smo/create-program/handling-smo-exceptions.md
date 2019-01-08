@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c60f391f1429b8693feaee5c2d8e9716a3d74bfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a764a077f1be87f6c846589b9a1fb1e989a8e93a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823278"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537341"
 ---
 # <a name="handling-smo-exceptions"></a>Behandeln von SMO-Ausnahmen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47823278"
   
  In SMO sind verschiedene Ausnahmeklassen vorhanden. Informationen über die Ausnahme können aus den Ausnahmeeigenschaften wie der **Message** -Eigenschaft, die eine Textmeldung über die Ausnahme angibt, extrahiert werden.  
   
- Die Ausnahmebehandlungsanweisungen sind für die Programmiersprache spezifisch. Z. B. in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic gibt es die **Catch** Anweisung.  
+ Die Ausnahmebehandlungsanweisungen sind für die Programmiersprache spezifisch. In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic gibt es hierfür beispielsweise die **Catch** -Anweisung.  
   
 ## <a name="inner-exceptions"></a>Interne Ausnahmen  
  Ausnahmen können entweder allgemein oder spezifisch sein. Allgemeine Ausnahmen enthalten einen Satz spezifischer Ausnahmen. Einige **Catch** -Anweisungen können dazu verwendet werden, erwartete Fehler zu behandeln und die übrigen Fehler an den allgemeinen Ausnahmebehandlungscode weiterzugeben. Ausnahmen treten oft in einer überlappenden Sequenz auf. Häufig wird eine SMO-Ausnahme von einer SQL-Ausnahme verursacht. Um dies zu ermitteln, wird die **InnerException** -Eigenschaft nacheinander verwendet. So wird die ursprüngliche Ausnahme bestimmt, die die letzte Ausnahme auf oberster Ebene ausgelöst hat.  
@@ -47,7 +47,7 @@ ms.locfileid: "47823278"
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Abfangen einer Ausnahme in Visual Basic  
- Dieses Codebeispiel zeigt, wie Sie mit der **testen... Catch... Zum Schluss** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] Anweisung um eine SMO-Ausnahme abzufangen. Alle SMO-Ausnahmen haben den Typ SmoException und werden im SMO-Verweis aufgelistet. Die Sequenz von internen Ausnahmen wird angezeigt, um den Ursprung des Fehlers anzugeben. Weitere Informationen finden Sie unter den [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] Dokumentation zu .NET.  
+ Dieses Codebeispiel zeigt, wie Sie mit der **testen... Catch... Zum Schluss** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] Anweisung um eine SMO-Ausnahme abzufangen. Alle SMO-Ausnahmen haben den Typ SmoException und werden im SMO-Verweis aufgelistet. Die Sequenz von internen Ausnahmen wird angezeigt, um den Ursprung des Fehlers anzugeben. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.
@@ -84,7 +84,7 @@ End Try
 ``` 
   
 ## <a name="catching-an-exception-in-visual-c"></a>Abfangen einer Ausnahme in Visual C#  
- In diesem Codebeispiel wird gezeigt, wie die Visual C#-Anweisung **Try…Catch…Finally** verwendet wird, um eine SMO-Ausnahme abzufangen. Alle SMO-Ausnahmen haben den Typ SmoException und werden im SMO-Verweis aufgelistet. Die Sequenz von internen Ausnahmen wird angezeigt, um den Ursprung des Fehlers anzugeben. Weitere Informationen finden Sie in der Dokumentation zu Visual C#.  
+ Dieses Codebeispiel zeigt, wie Sie mit der **testen... Catch... Zum Schluss** Visual C# Anweisung um eine SMO-Ausnahme abzufangen. Alle SMO-Ausnahmen haben den Typ SmoException und werden im SMO-Verweis aufgelistet. Die Sequenz von internen Ausnahmen wird angezeigt, um den Ursprung des Fehlers anzugeben. Weitere Informationen finden Sie in der Dokumentation zu Visual C#.  
   
 ```csharp  
 {   

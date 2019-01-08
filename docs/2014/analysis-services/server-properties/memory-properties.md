@@ -24,15 +24,15 @@ ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94fa7654af0494d7d6bfec8396212634afade30f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea5ccba5686c9f3716fd6931909ec28a79e00b8a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091650"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362822"
 ---
 # <a name="memory-properties"></a>Speichereigenschaften
-  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in der folgenden Tabelle aufgeführten Serverarbeitsspeichereigenschaften unterstützt. Einen Leitfaden zum Festlegen dieser Eigenschaften finden Sie im [SQL Server 2008 R2 Analysis Services-Betriebshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539).  
+  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in der folgenden Tabelle aufgeführten Serverarbeitsspeichereigenschaften unterstützt. Einen Leitfaden zum Festlegen dieser Eigenschaften finden Sie im [SQL Server 2008 R2 Analysis Services-Betriebshandbuch](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Werte zwischen 1 und 100 stellen Prozentsätze von **Gesamter physischer Speicher** bzw. **Virtueller Adressraum**dar, je nachdem, welcher geringer ist. Werte über 100 stellen Arbeitsspeichergrenzwerte in Bytes dar.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48091650"
  Beachten Sie, dass `TotalMemoryLimit` immer kleiner als `HardMemoryLimit` sein muss.  
   
  `HardMemoryLimit`  
- Gibt einen Arbeitsspeicherschwellenwert an, ab dem die Instanz aktive Benutzersitzungen aggressiv beendet, um die Speicherauslastung zu reduzieren. Alle beendeten Sitzungen empfangen eine Fehlermeldung, dass der Abbruch der Sitzung durch ungenügenden Arbeitsspeicher bedingt ist. Der Standardwert 0 (null) bedeutet, dass die `HardMemoryLimit` festgelegt auf einen mittleren Wert zwischen `TotalMemoryLimit` und der gesamte physische Speicher des Systems festgelegt wird; Wenn der physische Speicher des Systems größer als der virtuelle Adressraum der Prozesses ist, dann virtuelle Adresse Speicherplatz wird stattdessen verwendet werden, berechnen `HardMemoryLimit`.  
+ Gibt einen Arbeitsspeicherschwellenwert an, ab dem die Instanz aktive Benutzersitzungen aggressiv beendet, um die Speicherauslastung zu reduzieren. Alle beendeten Sitzungen empfangen eine Fehlermeldung, dass der Abbruch der Sitzung durch ungenügenden Arbeitsspeicher bedingt ist. Der Standardwert 0 bedeutet, dass `HardMemoryLimit` auf einen mittleren Wert zwischen `TotalMemoryLimit` und dem gesamten physischen Speicher des Systems festgelegt wird; wenn der physische Speicher größer als der virtuelle Adressraum des Prozesses ist, dann wird anstelle der Berechnung von `HardMemoryLimit` der virtuelle Adressraum verwendet.  
   
  `VirtualMemoryLimit`  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
@@ -60,9 +60,9 @@ ms.locfileid: "48091650"
   
  Der Standardwert ist**1** . Diese Eigenschaft ermöglicht die Auslagerung auf Datenträger unter Verwendung der Auslagerungsdatei des Betriebssystems (pagefile.sys).  
   
- Wenn `VertiPaqPagingPolicy` je nastaven Verarbeitung auf 1 ist weniger wahrscheinlich aufgrund von arbeitsspeicherbeschränkungen fehlschlägt, da der Server versucht wird, um anhand der von Ihnen angegebenen Methode auf Datenträger auszulagern. Das Festlegen der `VertiPaqPagingPolicy`-Eigenschaft ist keine Garantie dafür, dass niemals Arbeitsspeicherfehler auftreten. Unter folgenden Bedingungen können weiterhin Fehler aufgrund von unzureichendem Arbeitsspeicher auftreten:  
+ Wenn `VertiPaqPagingPolicy` auf 1 festgelegt wird, ist es weniger wahrscheinlich, dass die Verarbeitung aufgrund von Arbeitsspeicherbeschränkungen fehlschlägt, da der Server versucht, Daten anhand der von Ihnen angegebenen Methode auf den Datenträger auszulagern. Das Festlegen der `VertiPaqPagingPolicy`-Eigenschaft ist keine Garantie dafür, dass niemals Arbeitsspeicherfehler auftreten. Unter folgenden Bedingungen können weiterhin Fehler aufgrund von unzureichendem Arbeitsspeicher auftreten:  
   
--   Es ist nicht genügend Arbeitsspeicher für alle Wörterbücher verfügbar. Während der Verarbeitung wird Analysis Services die Wörterbüchern für jede Spalte im Arbeitsspeicher gesperrt, und diese dürfen nicht mehr als der angegebene Wert für `VertiPaqMemoryLimit`.  
+-   Es ist nicht genügend Arbeitsspeicher für alle Wörterbücher verfügbar. Die Wörterbücher werden während der Verarbeitung von Analysis Services für jede Spalte im Arbeitsspeicher gesperrt, und diese dürfen in der Gesamtheit den für `VertiPaqMemoryLimit` angegebenen Wert nicht überschreiten.  
   
 -   Der virtuelle Adressraum reicht nicht aus, um den Prozess aufzunehmen.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48091650"
  `VertiPaqMemoryLimit`  
  Wenn die Auslagerung auf Datenträger zulässig ist, gibt diese Eigenschaft die Arbeitsspeichernutzung (als Prozentsatz des gesamten Arbeitsspeichers) beim Start der Auslagerung an. Der Standardwert ist 60. Wenn die Arbeitsspeichernutzung weniger als 60 Prozent beträgt, führt der Server keine Auslagerung auf Datenträger aus.  
   
- Diese Eigenschaft hängt die `VertiPaqPagingPolicyProperty`, die muss festgelegt werden, um 1, damit auslagerungen stattfinden.  
+ Diese Eigenschaft hängt von `VertiPaqPagingPolicyProperty` ab, die auf 1 festgelegt werden muss, damit Auslagerungen stattfinden.  
   
  Gilt nur für den tabellarischen Servermodus.  
   

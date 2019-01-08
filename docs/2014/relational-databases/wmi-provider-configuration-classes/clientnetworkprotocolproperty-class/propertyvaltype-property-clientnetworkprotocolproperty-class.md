@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - PropertyValType Property (ClientNetworkProtocolProperty Class)
@@ -20,15 +18,15 @@ ms.assetid: 624b9bdd-ed93-4140-bd4e-00d714a2558c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fc8c4e932e6fdfd801df0fd149f019ce52749657
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8305fa86ed3db9e3c0e2f98fa80f8da7c59d1b5d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223900"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789202"
 ---
 # <a name="propertyvaltype-property-clientnetworkprotocolproperty-class"></a>PropertyValType-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
-  Ruft den Datentyp des in der Eigenschaft, die auf gespeicherten Werts ab der [PropertyIdx-Eigenschaftswert (ClientNetworkProtocolProperty-Klasse)](clientnetworkprotocolproperty-class.md) Wert.  
+  Ruft den Datentyp des Werts ab, der in der Eigenschaft gespeichert ist, auf die durch den [PropertyIdx-Eigenschaftswert (ClientNetworkProtocolProperty-Klasse)](clientnetworkprotocolproperty-class.md) verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +41,7 @@ object
  A [ClientNetworkProtocolProperty-Klassenobjekt](clientnetworkprotocolproperty-class.md) , das ein Attribut des vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Client verwendeten Netzwerkprotokolls darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein `uint32` Wert, der den Datentyp des Eigenschaftswerts angibt.  
+ Ein `uint32`-Wert, der den Datentyp des Eigenschaftswerts angibt.  
   
 ## <a name="remarks"></a>Hinweise  
   

@@ -14,12 +14,12 @@ ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6926eae9c92a80e271c786a325e94f58b6ab647
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 307773a82206cc1c804a41525b733175ffbb12da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229770"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540168"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>Konfigurieren der Transformation für OLE DB-Befehl
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle, wie z. B. eine Flatfilequelle oder eine OLE DB-Quelle, einschließen, damit Sie eine Transformation für OLE DB-Befehl hinzufügen und konfigurieren können. Diese Transformation wird normalerweise zum Ausführen parametrisierter Abfragen verwendet.  
@@ -32,13 +32,13 @@ ms.locfileid: "48229770"
   
 3.  Klicken Sie auf die Registerkarte **Datenfluss** , und ziehen Sie dann aus dem Fenster **Toolbox**die Transformation für OLE DB-Befehl auf die Entwurfsoberfläche.  
   
-4.  Verbinden Sie die Transformation für OLE DB-Befehl mit dem Datenfluss, indem Sie einen Konnektor (der grüne oder rote Pfeil) von einer Datenquelle oder einer vorherigen Transformation mit der Maus auf die Transformation für OLE DB-Befehl ziehen.  
+4.  Verbinden Sie die Transformation für den OLE DB-Befehl mit dem Datenfluss, indem Sie einen Connector (der grüne oder rote Pfeil) von einer Datenquelle oder einer vorherigen Transformation mit der Maus auf die Transformation für den OLE DB-Befehl ziehen.  
   
 5.  Klicken Sie mit der rechten Maustaste auf die Komponente, und wählen Sie „Bearbeiten“ oder **Erweiterten Editor anzeigen**aus.  
   
 6.  Wählen Sie auf der Registerkarte **Verbindungs-Manager** in der Liste **Verbindungs-Manager** einen OLE DB-Verbindungs-Manager aus. Weitere Informationen finden Sie unter [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
   
-7.  Klicken Sie auf die Registerkarte **Komponenteneigenschaften** , und klicken Sie im Feld **SqlCommand** auf die Schaltfläche mit den drei Punkten ( **…** ).  
+7.  Klicken Sie auf die Registerkarte **Komponenteneigenschaften**, und klicken Sie im Feld **SqlCommand** auf die Schaltfläche mit den Auslassungspunkten (**...**).  
   
 8.  Geben Sie in **Zeichenfolgenwert-Editor**die parametrisierte SQL-Anweisung mithilfe eines Fragezeichens (?) als Parametermarkierung für jeden Parameter ein.  
   
@@ -73,8 +73,8 @@ ms.locfileid: "48229770"
 15. Klicken Sie im Menü **Datei** auf **Speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Transformation für OLE DB-Befehl](data-flow/transformations/ole-db-command-transformation.md)   
- [Integration Services-Transformationen](data-flow/transformations/integration-services-transformations.md)   
+ [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)   
+ [SQL Server Integration Services-Transformationen](data-flow/transformations/integration-services-transformations.md)   
  [SQL Server Integration Services-Pfade](data-flow/integration-services-paths.md)   
  [Datenflusstask](control-flow/data-flow-task.md)  
   

@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6aabfe5664f5370cc1d5699403cde84c5108886b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098052"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780118"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server-Eigenschaften (Registerkarte "Startparameter")
   Verwenden Sie dieses Dialogfeld, um Startparameter für [!INCLUDE[ssDE](../../includes/ssde-md.md)]hinzuzufügen oder zu entfernen. Startparameter können große Auswirkungen auf die Leistung von [!INCLUDE[ssDE](../../includes/ssde-md.md)] haben. Lesen Sie vor dem Hinzufügen oder Ändern von Startparametern das Thema "Verwenden der Startoptionen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Startparameter angeben**  
  Um einen Parameter hinzuzufügen, geben Sie den Parameter ein, und klicken Sie anschließend auf **Hinzufügen**.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "48098052"
   
 -   Führende und nachfolgende Leerzeichen jedes Startparameters werden abgeschnitten.  
   
--   Alle Startparameter beginnen mit "–" (Bindestrich), und der zweite Wert ist ein Buchstabe.  
+-   Alle Startparameter beginnen mit „–“ (Bindestrich), und der zweite Wert ist ein Buchstabe.  
   
 ## <a name="required-parameters"></a>Erforderliche Parameter  
  Die folgenden Parameter sind erforderlich. Sie können geändert, jedoch nicht entfernt werden.  
@@ -78,6 +77,6 @@ ms.locfileid: "48098052"
 -   Das Domänenkonto, das von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird, wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] für die Ausführung unter einem Domänenkonto konfiguriert ist.  
   
 ## <a name="books-online-references"></a>Referenzen in der Onlinedokumentation  
- Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Startparametern finden Sie in „Vorgehensweise: Konfigurieren von Serverstartoptionen ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager)“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Startparametern finden Sie unter "Vorgehensweise: Konfigurieren von Serverstartoptionen ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager)“in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
   

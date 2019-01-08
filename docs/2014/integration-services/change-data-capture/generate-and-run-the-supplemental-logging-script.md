@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - supLog
@@ -13,12 +12,12 @@ ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dcfeca9b451f0238a7148cbb9f1f60d4719ebe3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d7ba428b22044c8138b57fadd87dc190bd51865
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169910"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779972"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>Generieren und Ausführen des ergänzenden Protokollierungsskripts
   Verwenden Sie die Seite Set up Tables for Capturing Changes, um ein Skript für die Oracle-Quelldatenbank auszuführen, mit dem die ergänzende Protokollierung eingerichtet wird.  
@@ -38,7 +37,7 @@ ms.locfileid: "48169910"
  Klicken Sie auf **Weiter** , um den Schritt [Generate Mirror Tables and CDC Capture Instances](generate-mirror-tables-and-cdc-capture-instances.md)auszuführen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Erstellen von SQL Server Change Database-Instanz](how-to-create-the-sql-server-change-database-instance.md)   
+ [Erstellen der Instanz für die SQL Server-Änderungsdatenbank](how-to-create-the-sql-server-change-database-instance.md)   
  [Überprüfen und Generieren ergänzender Protokollierungsskripts](review-and-generate-supplemental-logging-scripts.md)  
   
   

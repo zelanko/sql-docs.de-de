@@ -14,12 +14,12 @@ ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82df10e6b8effeb040b362dcf466eb173dfce4f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629678"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541875"
 ---
 # <a name="odbc-dynamic-cursors"></a>Dynamische ODBC-Cursor
 Ein dynamischer Cursor handelt es sich um: dynamische. Sie können erkennen, dass alle Änderungen an der Mitgliedschaft, Reihenfolge und Werte des Resultsets nach der der Cursor geöffnet wird. Nehmen wir beispielsweise an ein dynamischer Cursor ruft zwei Zeilen und einer anderen Anwendung klicken Sie dann eine der Zeilen aktualisiert und löscht die andere. Wenn der dynamische Cursor anschließend versucht, diese Zeilen erneut abzurufen, die gelöschte Zeile nicht gefunden, aber neue Werte für die aktualisierte Zeile zurück.  
@@ -41,6 +41,6 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
    ORDER BY Name, CustID  
 ```  
   
- Diese Anweisung erstellt ein zweites Resultset, der das erste Rowset des nächsten Rowsets im ursprünglichen Resultset ist – in diesem Fall ist die Menge der Zeilen in der Customers-Tabelle. Der Cursor an die Anwendung das folgende Rowset zurückgibt.  
+ Diese Anweisung erstellt eine zweite Resultset, das erste Rowset, von denen des nächsten Rowsets im ursprünglichen Resultset – in diesem Fall ist, den Satz von Zeilen in der Customers-Tabelle. Der Cursor an die Anwendung das folgende Rowset zurückgibt.  
   
  Es ist interessant, beachten Sie, dass ein dynamischer Cursor, die auf diese Weise implementiert tatsächlich viele Resultsets erstellt, wodurch Änderungen an der ursprünglichen Resultset zu erkennen. Die Anwendung nie erfährt von der Existenz von dieser zusätzlichen Resultsets; Sie wird lediglich angezeigt, als wenn der Cursor kann Änderungen an der ursprünglichen Resultset zu erkennen ist.

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 78c4085a674bce6cca75394ee2c7f376c14d6a93
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 21f9a8e08fc230a24e3d00f2b13ec4ccb6c039dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146025"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535462"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Miningmodelle (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "50146025"
   
  ![Modell enthält Metadaten, Muster und Bindungen](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "Modell enthält Metadaten, Muster und Bindungen")  
   
- Die Metadaten legen den Namen des Modells und des Servers, auf dem es gespeichert ist, und eine Definition des Modells fest, einschließlich der Spalten aus der Miningstruktur, die bei der Erstellung des Modells herangezogen wurden, der Definitionen der Filter, die bei der Verarbeitung des Modells angewandt wurden, und eines Algorithmus, der für die Analyse der Daten verwendet wurde. All diese Faktoren – von den Datenspalten und deren Datentypen über Filter bis hin zum Algorithmus – haben einen erheblichen Einfluss auf die Analyseergebnisse.  
+ Die Metadaten legen den Namen des Modells und des Servers, auf dem es gespeichert ist, und eine Definition des Modells fest, einschließlich der Spalten aus der Miningstruktur, die bei der Erstellung des Modells herangezogen wurden, der Definitionen der Filter, die bei der Verarbeitung des Modells angewandt wurden, und eines Algorithmus, der für die Analyse der Daten verwendet wurde. Alle diese Optionen die Datenspalten und deren Datentypen, Filter und Algorithmus – haben einen erheblichen Einfluss auf die Ergebnisse der Analyse.  
   
  Sie können mehrere Modelle mithilfe der gleichen Daten erstellen und dabei Algorithmen wie den Clustering-Algorithmus, Decision Tree-Algorithmus und Naïve Bayes-Algorithmus verwenden. Durch jeden Modelltyp wird ein anderer Satz von Mustern, Itemsets, Regeln oder Formeln erstellt, den Sie zum Generieren von Vorhersagen verwenden können. Im Allgemeinen werden die Daten von jedem Algorithmus auf unterschiedliche Weise analysiert, sodass der *Inhalt* des resultierenden Modells ebenfalls in unterschiedlichen Strukturen angeordnet ist. In einem Modelltyp könnten die Daten und Muster in *Clustern*gruppiert werden, während sie in einem anderen Modelltyp in Strukturen, Verzweigungen und Regeln angeordnet sein könnten, durch die die Daten und Muster unterteilt und definiert werden.  
   
- Außerdem wird das Modell durch die Daten beeinflusst, für die es trainiert wird: Selbst Modelle, die in der gleichen Miningstruktur trainiert wurden, können unterschiedliche Ergebnisse liefern, wenn Sie die Daten unterschiedlich filtern oder während der Analyse verschiedene Ausgangswerte verwenden. Die tatsächlichen Daten werden jedoch nicht im Modell gespeichert, sondern befinden sich in der Miningstruktur. Im Modell werden lediglich Zusammenfassungsstatistiken gespeichert. Wenn Sie beim Trainieren des Modells Filter für die Daten erstellt haben, werden die Filterdefinitionen auch mit dem Modellobjekt gespeichert.  
+ Außerdem wird das Modell durch die Daten beeinflusst, für die es trainiert wird: Selbst Modelle, die in der gleichen Miningstruktur trainiert wurden, können unterschiedliche Ergebnisse liefern, wenn Sie die Daten unterschiedlich filtern oder während der Analyse verschiedene Ausgangswerte verwenden. Die tatsächlichen Daten ist jedoch nicht gespeichert, in die reine zusammenfassungsstatistiken gespeichert sind, mit den tatsächlichen Daten, die sich in der Miningstruktur befinden. Wenn Sie beim Trainieren des Modells Filter für die Daten erstellt haben, werden die Filterdefinitionen auch mit dem Modellobjekt gespeichert.  
   
  Das Modell enthält einen Satz von Bindungen, die auf die in der Miningstruktur zwischengespeicherten Daten zurückverweisen. Wenn die Daten in der Struktur zwischengespeichert und nach der Verarbeitung nicht bereinigt wurden, können Sie über diese Bindungen einen Drillthrough von den Ergebnissen zu den Fällen durchführen, die die Ergebnisse unterstützen. Die tatsächlichen Daten werden jedoch im Strukturcache, nicht im Modell, gespeichert.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "50146025"
   
 -   Wählen Sie den Algorithmus aus, der am besten für den analytischen Task geeignet ist.  
   
--   Wählen Sie die im Modell zu verwendenden Spalten aus der Struktur aus, und geben Sie deren Verwendungsweise an, z. B. welche Spalte das vorherzusagende Ergebnis enthält, welche Spalten nur für Eingaben vorgesehen sind usw.  
+-   Wählen Sie die Spalten aus der Struktur im Modell, und wie sie verwendet – wodurch-Spalte angegeben werden enthält das Ergebnis, das Sie vorhersagen möchten, welche Spalten für die Eingabe nur sind und so weiter.  
   
 -   Legen Sie optional Parameter fest, die die Verarbeitung durch den Algorithmus optimieren.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "50146025"
   
 -   Eine DMX ALTER STRUCTURE ADD MODEL-Anweisung kann verwendet werden, um ein neues Miningmodell zu einer bestehenden Struktur hinzuzufügen. Verwenden Sie diese Methode, wenn Sie mit unterschiedlichen Modellen experimentieren möchten, die auf dem gleichen Dataset basieren.  
   
- Darüber hinaus können Sie Miningmodelle programmgesteuert über AMO oder XML/A oder über den Einsatz anderer Clients, wie dem Data Mining-Client für Excel, erstellen. Weitere Informationen finden Sie in folgenden Themen:  
+ Darüber hinaus können Sie Miningmodelle programmgesteuert über AMO oder XML/A oder über den Einsatz anderer Clients, wie dem Data Mining-Client für Excel, erstellen. Weitere Informationen finden Sie unter den folgenden Themen:  
   
  [Architektur des Miningmodells](#bkmk_mdlArch)  
   
@@ -128,7 +128,7 @@ ms.locfileid: "50146025"
 ## <a name="related-tasks"></a>Related Tasks  
  Über die folgenden Links erhalten Sie spezifischere Informationen zur Verwendung von Data Mining-Modellen.  
   
-|Task|Link|  
+|Aufgabe|Link|  
 |----------|----------|  
 |Hinzufügen und Löschen von Miningmodellen|[Hinzufügen eines Miningmodells zu einer vorhandenen Miningstruktur](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [Löschen eines Miningmodells aus einer Miningstruktur](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
 |Arbeiten mit Miningmodellspalten|[Ausschließen einer Spalte aus einem Miningmodell](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [Erstellen eines Alias für eine Modellspalte](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [Ändern der Diskretisierung von Spalten in einem Miningmodell](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [Bestimmen einer in einem Modell als Regressor zu verwendenden Spalte](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  

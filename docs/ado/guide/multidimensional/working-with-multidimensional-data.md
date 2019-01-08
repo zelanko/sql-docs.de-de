@@ -13,12 +13,12 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb1f29a3037cafdddc14973f77d7bb3d8c52f296
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: a284254c058eae0362fe23860e1b406a97f0bf49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350270"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507247"
 ---
 # <a name="working-with-multidimensional-data"></a>Arbeiten mit mehrdimensionalen Daten
 Ein *Cellset* ist das Ergebnis einer Abfrage auf mehrdimensionalen Daten. Es besteht aus einer Auflistung von Achsen, in der Regel nicht mehr als vier Achsen und in der Regel nur zwei oder drei. Ein *Achse* ist eine Sammlung von Elementen aus einer oder mehreren Dimensionen, die zum Suchen oder Filtern von bestimmten Werten in einem Cube verwendet wird.  
@@ -35,11 +35,11 @@ Ein *Cellset* ist das Ergebnis einer Abfrage auf mehrdimensionalen Daten. Es bes
   
 -   Geography (natürliche Hierarchie) – Kontinente, Länder, Status usw.  
   
--   Quartale, Quartale, Monate, Tage  
+-   Viertel-Quartale, Monate, Tage  
   
 -   Years  
   
--   Measures, Prozent, Verkäufe BudgetedSales  
+-   Measures - Prozent, Verkäufe BudgetedSales  
   
 -   Products  
   
@@ -52,17 +52,17 @@ Ein *Cellset* ist das Ergebnis einer Abfrage auf mehrdimensionalen Daten. Es bes
   
 -   Achsendimensionen: Quartale Vertriebsmitarbeiters Geography  
   
--   Filtern von Dimensionen: Measures, Jahren Produkte  
+-   Filterdimensionen: Measures, Jahren Produkte  
   
 -   Zwei Achsen: Spalten-(X oder Achse 0) und (Achse 1 oder y)  
   
 -   x-Achse: zwei geschachtelte Dimensionen "," Vertriebsmitarbeiter "und" Geography  
   
--   y-Achse: Quartale-Dimension  
+-   y-Achse: Viertel-dimension  
   
- Die x-Achse besitzt zwei geschachtelten Dimensionen: Vertriebsmitarbeiter und Geografie. Von Geography, vier Elemente ausgewählt sind: Seattle, Boston, USA Süd und Japan. Zwei Member von Vertriebsmitarbeiter ausgewählt sind: Valentine und Nash. Dies ergibt insgesamt acht Positionen auf dieser Achse (8 = 4 * 2).  
+ Die x-Achse besitzt zwei geschachtelten Dimensionen: Verkäufer "und" Geography ". Von Geography sind vier Elemente ausgewählt: Seattle, Boston, USA Süd und Japan. Es werden zwei Elemente von Vertriebsmitarbeiter ausgewählt: Valentine und Nash. Dies ergibt insgesamt acht Positionen auf dieser Achse (8 = 4 * 2).  
   
- Die einzelnen Koordinaten wird dargestellt, wie eine Position mit zwei Membern – von der Vertriebsmitarbeiter-Dimension und eine andere von der Geography-Dimension:  
+ Die einzelnen Koordinaten werden als eine Position mit zwei Membern - eine von der Vertriebsmitarbeiter-Dimension und eine andere von der Geography-Dimension dargestellt:  
   
 ```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
@@ -76,7 +76,7 @@ Ein *Cellset* ist das Ergebnis einer Abfrage auf mehrdimensionalen Daten. Es bes
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- CellSets, Zellen, Achsen und Positionen werden alle dargestellt in ADO MD durch die entsprechenden Objekte: [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [Zelle](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [Achse](../../../ado/reference/ado-md-api/axis-object-ado-md.md), und [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ CellSets, Zellen, Achsen und Positionen werden alle durch die entsprechenden Objekte in ADO MD dargestellt: [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [Zelle](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [Achse](../../../ado/reference/ado-md-api/axis-object-ado-md.md), und [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO MD-Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md)   

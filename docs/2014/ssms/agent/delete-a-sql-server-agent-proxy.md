@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting SQL Server Agent proxies
@@ -14,12 +14,12 @@ ms.assetid: 9248841d-7294-47d4-94f3-b34a0521fabc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23ea04227f09d66a54180a6242da5e678915551b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9222253c884fdf3cfa52d283f250580a02a9f7ee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065220"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787992"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
   In diesem Thema wird beschrieben, wie Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykonto in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]löschen können.  
@@ -30,7 +30,7 @@ ms.locfileid: "48065220"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So löschen Sie einen SQL Server-Agent-Proxykonto mit**  
   
@@ -38,11 +38,11 @@ ms.locfileid: "48065220"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
--   Wenn Sie das Proxykonto eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents löschen, sollten Sie sicherstellen, dass der Proxy keine Verweise auf aktive Auftragsschritte enthält. Klicken Sie mit der rechten Maustaste auf den Proxy, um nach Auftragsschritten zu suchen, die auf den Proxy verweisen. Klicken Sie zuerst auf **Eigenschaften** und dann im Dialogfeld *Proxyname***Eigenschaften von Proxykonto* auf die Seite **Verweise**. Beim Löschen eines Proxys können Sie im Dialogfeld **Objekt löschen** die Auftragsschritte, die diesen Proxy verwenden, neu zuweisen.  
+-   Wenn Sie das Proxykonto eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents löschen, sollten Sie sicherstellen, dass der Proxy keine Verweise auf aktive Auftragsschritte enthält. Klicken Sie mit der rechten Maustaste auf den Proxy, um nach Auftragsschritten zu suchen, die auf den Proxy verweisen. Wählen Sie **Eigenschaften**aus, und wählen Sie dann im Dialogfeld _Proxyname_**-Proxykonto** die Seite **Verweise** aus. Beim Löschen eines Proxys können Sie im Dialogfeld **Objekt löschen** die Auftragsschritte, die diesen Proxy verwenden, neu zuweisen.  
   
 -   Von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxys werden Anmeldeinformationen zum Speichern von Informationen zu Windows-Benutzerkonten verwendet. Der in der Anmeldeinformation angegebene Benutzer muss über eine Berechtigung des Typs "Anmelden als Stapelverarbeitungsauftrag" auf dem Computer verfügen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48065220"
 ####  <a name="Permissions"></a> Berechtigungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können Proxykonten erstellen, ändern oder löschen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-delete-a-sql-server-agent-proxy-account"></a>So löschen Sie ein SQL Server-Agent-Proxykonto  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48065220"
   
 #### <a name="to-delete-a-sql-server-agent-proxy-account"></a>So löschen Sie ein SQL Server-Agent-Proxykonto  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

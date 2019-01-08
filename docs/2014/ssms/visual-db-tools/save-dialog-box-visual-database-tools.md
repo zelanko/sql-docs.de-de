@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65541
@@ -13,12 +13,12 @@ ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1e69d1bd526b9971037a35049e9c34d349ce72d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f0c4b1dbdaa7a2b4a15dd8e28586b182d93374a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089870"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800222"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Speichern (Dialogfeld) (Visual Database Tools)
   Dieses Dialogfeld wird angezeigt, wenn Sie Ihre Arbeit im Tabellen-Designer speichern und diese Arbeit sich auf andere Tabellen auswirkt. Mit diesem Dialogfeld können Sie bestimmen, welche Tabellen gespeichert werden sollen.  
@@ -26,7 +26,7 @@ ms.locfileid: "48089870"
 > [!NOTE]  
 >  Für die im Tabellen-Designer gemachten Änderungen an einer Tabelle wird erst dann ein Commit an die Datenbank ausgeführt, wenn Sie die Tabelle speichern. Nach dem Speichern der Tabelle können keine Änderungen rückgängig gemacht werden. Um alle nicht gespeicherten Änderungen zu verwerfen, schließen Sie alle offenen Tabellen, ohne sie zu speichern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Warnung bei betroffenen Tabellen**  
  Geben Sie an, ob dieses Dialogfeld beim nächsten Speichern ausgewählter Tabellen angezeigt wird. Dieses Kontrollkästchen ist standardmäßig aktiviert. Wenn Sie diese Option deaktivieren, können Sie sie im Dialogfeld **Optionen** erneut aktivieren.  
   

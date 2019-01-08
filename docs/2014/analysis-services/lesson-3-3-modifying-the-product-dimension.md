@@ -11,12 +11,12 @@ ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a7851a9da990c36b813d5281cfbf6c174f3086f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 430ac56191fcfc2c601c50f9f31de128d5d58368
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081540"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523330"
 ---
 # <a name="modifying-the-product-dimension"></a>Ändern der Product-Dimension
   In den Aufgaben in diesem Thema verwenden Sie eine benannte Berechnung, um aussagekräftigere Namen für Produktlinien zur Verfügung zu stellen, definieren eine Hierarchie in der Product-Dimension, und geben den (All) -Elementnamen für die Hierarchie an. Außerdem gruppieren Sie Attribute in Anzeigeordner.  
@@ -58,7 +58,7 @@ ms.locfileid: "48081540"
   
 2.  Wählen Sie im Bereich **Attribute** der Registerkarte **Dimensionsstruktur** die Option **Product Line**aus.  
   
-3.  Klicken Sie rechts auf dem Bildschirm im Eigenschaftenfenster auf das Eigenschaftsfeld **NameColumn** und anschließend auf die Schaltfläche mit den Auslassungspunkten (**…**), um das Dialogfeld **Namensspalte** zu öffnen. (Sie müssen ggf. auf die Registerkarte **Eigenschaften** auf der rechten Seite vom Bildschirm klicken, um das Eigenschaftenfenster zu öffnen).  
+3.  Klicken Sie im Eigenschaftenfenster auf der rechten Seite des Bildschirms auf die **NameColumn** Eigenschaftenfeld am unteren Rand des Fensters, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld. (Sie müssen ggf. auf die Registerkarte **Eigenschaften** auf der rechten Seite vom Bildschirm klicken, um das Eigenschaftenfenster zu öffnen).  
   
 4.  Wählen Sie `ProductLineName` am unteren Rand der **Quellspalte** aus, und klicken Sie dann auf **OK**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48081540"
   
 5.  Wählen Sie im Bereich **Attribute** der Registerkarte **Dimensionsstruktur** die Option **Product Key**aus.  
   
-6.  Klicken Sie im Eigenschaftenfenster auf das Eigenschaftsfeld **NameColumn** und anschließend auf die Schaltfläche mit den Auslassungspunkten (**…**), um das Dialogfeld **Namensspalte** zu öffnen.  
+6.  Klicken Sie im Eigenschaftenfenster auf die **NameColumn** Eigenschaft ein, und klicken Sie dann auf den Auslassungspunkten (**...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
   
 7.  Wählen Sie **EnglishProductName** in der Liste **Quellspalte** aus, und klicken Sie auf **OK**.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48081540"
   
     -   **Size Range**  
   
-    -   **Style**  
+    -   **Stil**  
   
     -   **Weight**  
   
@@ -185,6 +185,6 @@ ms.locfileid: "48081540"
 ## <a name="see-also"></a>Siehe auch  
  [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Erstellen von benutzerdefinierten Hierarchien](multidimensional-models/user-defined-hierarchies-create.md)   
- [Konfigurieren der &#40;alle&#41; Ebene für Attributhierarchien](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Konfigurieren der Ebene &#40;Alle&#41; für Attributhierarchien](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

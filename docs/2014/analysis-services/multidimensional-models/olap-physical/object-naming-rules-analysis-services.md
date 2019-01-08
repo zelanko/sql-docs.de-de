@@ -14,12 +14,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8cd63693c18b380d328a33ed4f7f947991787313
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4c8bcf9fc52ef26837d32fa765472e0056469a2a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147845"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511322"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Objektbenennungsregeln (Analysis Services)
   In diesem Thema werden die Benennungskonventionen für Objekte sowie reservierte Wörter und Zeichen beschieben, die in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nicht in Objektnamen, Code oder Skripts verwendet werden können.  
@@ -33,7 +33,7 @@ ms.locfileid: "50147845"
   
  Für die `Name`-Eigenschaft und die `ID`-Eigenschaft gelten folgende Regeln.  
   
--   Bei den Namen wird die Groß-/Kleinschreibung nicht berücksichtigt. Ein Cube mit dem Namen "sales" und ein anderer mit dem Namen "Sales" können nicht gleichzeitig in derselben Datenbank vorhanden sein.  
+-   Bei den Namen wird die Groß-/Kleinschreibung nicht berücksichtigt. Sie können einen Cube mit dem Namen "Sales" keine und eine andere mit dem Namen "Sales" in der gleichen Datenbank.  
   
 -   Führende oder nachfolgende Leerzeichen sind in Objektnamen nicht zulässig. Innerhalb des Namens können Leerzeichen verwendet werden. Führende und nachfolgende Leerzeichen werden implizit abgeschnitten. Dies gilt für die `Name`-Eigenschaft und die `ID`-Eigenschaft eines Objekts.  
   
@@ -82,10 +82,10 @@ ms.locfileid: "50147845"
   
 |Servermodus und Datenbank-Kompatibilitätsgrad|Reservierte Zeichen zulässig?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (alle Versionen)|nein|  
-|Tabellarischer Modus - 1050|nein|  
-|Tabellarischer Modus - 1100|nein|  
-|Tabellarischer Modus – 1130 und höher|Benutzerkontensteuerung|  
+|MOLAP (alle Versionen)|Nein|  
+|Tabellarischer Modus - 1050|Nein|  
+|Tabellarischer Modus - 1100|Nein|  
+|Tabellarischer Modus – 1130 und höher|Ja|  
   
  Für Datenbanken kann als ModelType Default angegeben sein. Default ist äquivalent zu Multidimensional, und die Verwendung von reservierten Zeichen in Spaltennamen wird in diesem Fall nicht unterstützt.  
   

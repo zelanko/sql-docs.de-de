@@ -1,7 +1,8 @@
 ---
-title: 'Tutorial: Erstellen einer Erweiterung für Azure Data Studio | Microsoft-Dokumentation'
-description: In diesem Tutorial wird veranschaulicht, wie eine Erweiterung für Azure Data Studio erstellt wird.
-ms.custom: tools|sos
+title: 'Lernprogramm: Erstellen einer Erweiterung'
+titleSuffix: Azure Data Studio
+description: In diesem Tutorial wird veranschaulicht, wie eine Erweiterung zum Hinzufügen von benutzerdefinierten Funktionen in Azure Data Studio erstellt wird.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,16 +11,16 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: ae1605f1c99e4fa2a74c7f728f191baf5a8b9bf8
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356551"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030604"
 ---
-# <a name="tutorial-create-an-azure-data-studio-extension"></a>Tutorial: Erstellen einer Azure Data Studio-Erweiterungs
+# <a name="tutorial-create-an-azure-data-studio-extension"></a>Lernprogramm: Erstellen Sie eine Azure Data Studio-Erweiterung
 
-Dieses Tutorial veranschaulicht, wie eine neue Azure Data Studio-Erweiterung. Die Erweiterung erstellt vertraute SSMS Keybindings in Studio für Azure Data.
+Dieses Tutorial veranschaulicht, wie eine neue Azure Data Studio-Erweiterung. Die Erweiterung erstellt vertraute tastenbindungen für SSMS in Azure Data Studio.
 
 In diesem Tutorial erfahren Sie, wie Sie:
 > [!div class="checklist"]
@@ -37,7 +38,7 @@ Azure Data Studio aufbaut, in demselben Framework als Visual Studio Code-Erweite
 - [Node.js](https://nodejs.org) installiert und kann in Ihrem `$PATH`. Von Node.js umfasst [Npm](https://www.npmjs.com/), den Node.js-Paket-Manager, die verwendet wird, um den Generator für die Erweiterung zu installieren.
 - [Visual Studio Code](https://code.visualstudio.com) zum Debuggen der Erweiterung.
 - Azure Data Studio [Debuggen Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug).
-- Stellen Sie sicher, dass Sqlops im Pfad befindet. Für Windows, stellen Sie sicher, dass Sie auswählen, die `Add to Path` -Option in setup.exe. Führen Sie für Mac oder Linux, die *Installationsbefehl "Sqlops" im Pfad* Option.
+- Stellen Sie sicher `sqlops` befindet sich in Ihrem Pfad. Für Windows, stellen Sie sicher, dass Sie auswählen, die `Add to Path` -Option in setup.exe. Führen Sie für Mac oder Linux, die *Installationsbefehl "Sqlops" im Pfad* Option.
 - Debuggen von SQL Operations Studio-Erweiterung (optional). Dadurch können Sie die Erweiterung ohne Packen und installieren Sie es in Azure Data Studio testen.
 
 
@@ -61,24 +62,24 @@ So erstellen Sie eine Erweiterung:
 
 3. Führen Sie die Schritte zum Ausfüllen der Name der Erweiterung (verwenden Sie für dieses Tutorial **Ssmskeymap**), und eine Beschreibung hinzufügen.
 
-Die vorherigen Schritte erstellt einen neuen Ordner. Öffnen der Ordner in Visual Studio Code, und Sie können nun Ihre eigenen Keybinding-Erweiterung zu erstellen.
+Die vorherigen Schritte erstellt einen neuen Ordner. Öffnen der Ordner in Visual Studio Code, und Sie können nun Ihre eigenen tastenzuordnung-Erweiterung zu erstellen.
 
 
 ### <a name="add-a-keyboard-shortcut"></a>Fügen Sie eine Tastenkombination hinzu.
 
-**Schritt 1: Ermitteln der Verknüpfungen zu ersetzen**
+**Schritt 1: Suchen Sie die Verknüpfungen zu ersetzen**
 
 Nun, da wir unsere Erweiterung bereit haben, fügen Sie einige SSMS Tastatur Verknüpfungen (oder Keybindings) in Studio für Azure Data. Ich verwendet habe [Andy Mallon Spickzettel](https://am2.co/2018/02/updated-cheat-sheet/) und RedGates Tastatur Verknüpfungen Liste inspirieren.
 
 Die wichtigsten Dinge, die fehlende aufgetreten waren:
 
 - Führen Sie eine Abfrage, mit der tatsächlichen Ausführungsplans aktiviert. Dies ist **STRG + M** in SSMS und eine Bindung kann in Azure Data Studio verfügt nicht über.
-- Mit **STRG + UMSCHALT + E** als 2. Möglichkeit der Ausführung einer Abfrage. Feedback von Benutzern angegeben, dass dies nicht vorhanden war.
+- Mit **STRG + UMSCHALT + E** als zweite Möglichkeit der Ausführung einer Abfrage. Feedback von Benutzern angegeben, dass dies nicht vorhanden war.
 - Mit **ALT + F1** ausführen `sp_help`. Wir dies in Azure Data Studio hinzugefügt, aber da die Bindung bereits verwendet wurde, zugeordnet wir damit **ALT + F2** stattdessen.
 - Vollbild umschalten (**UMSCHALT + ALT + Eingabe**).
 - **F8** anzuzeigenden **Objekt-Explorer** / **Ansicht**.
 
-Es ist leicht zu finden und Ersetzen Sie diese tastenzuordnungen. Führen Sie *öffnen Tastenkombinationen in Visual Studio* anzuzeigenden der **Tastenkombinationen in Visual Studio** Registerkarte in Azure Data Studio, suchen Sie nach *Abfrage* und wählen Sie dann **Änderung Keybinding**. Sobald Sie fertig sind tastenzuordnung ändern Sie sehen die aktualisierte Zuordnung in der Datei "KeyBindings.JSON" (führen Sie *öffnen Tastenkombinationen* angezeigt).
+Es ist leicht zu finden und Ersetzen Sie diese tastaturzuordnungen. Führen Sie *Öffnen von Tastenkombinationen* anzuzeigenden der **Tastenkombinationen in Visual Studio** Registerkarte in Azure Data Studio, suchen Sie nach *Abfrage* und wählen Sie dann **Änderungsschlüssel Bindung**. Wenn Sie fertig sind ändern die tastenzuordnung, sehen Sie die aktualisierte Zuordnung in der Datei "KeyBindings.JSON" (ausführen *öffnen Tastenkombinationen* angezeigt).
 
 ![Tastenkombinationen](./media/tutorial-create-extension/keyboard-shortcuts.png)
 
@@ -132,11 +133,11 @@ Wählen Sie **F5** Studio für Azure Data im Debugmodus gestartet, mit der Erwei
 
 ![Testen der Erweiterung](./media/tutorial-create-extension/test-extension.png)
 
-Keymaps sind eine der schnellsten Erweiterungen zu erstellen, sodass die neue Erweiterung jetzt sein sollte erfolgreich funktioniert und teilen möchten.
+Wichtige Zuordnungen sind eine der schnellsten Erweiterungen zu erstellen, damit die neue Erweiterung jetzt erfolgreich funktionsfähig und teilen möchten sein sollten.
 
 ## <a name="package-your-extension"></a>Packen Sie die Erweiterung
 
-Mit anderen Teilen, Sie die Erweiterung in eine einzelne Datei zu packen müssen. Dies kann im Azure Data Studio-Erweiterung Marketplace veröffentlicht, oder nur für Ihr Team oder der Community freigegeben. Zu diesem Zweck müssen Sie ein weiteres Npm-Paket über die Befehlszeile zu installieren:
+Mit anderen Teilen, Sie die Erweiterung in eine einzelne Datei zu packen müssen. Dies kann im Azure Data Studio-Erweiterung Marketplace veröffentlicht, oder für Ihr Team oder der Community gemeinsam verwendet. Zu diesem Zweck müssen Sie ein weiteres Npm-Paket über die Befehlszeile zu installieren:
 
 `npm install -g vsce`
 
@@ -164,7 +165,7 @@ Studio für Azure Data Marketplace-Erweiterung ist völlig noch nicht implementi
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie gelernt, wie Sie:
+In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 > * Erstellen eines Erweiterungsprojekts
 > * Installieren des Erweiterung-Generators

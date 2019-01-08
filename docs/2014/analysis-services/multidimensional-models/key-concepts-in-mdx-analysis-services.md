@@ -17,17 +17,17 @@ ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b13e80ce8ad0c721ea7cbde0188d73fec15b2e89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acd35ed9c39dc11b0ea60017b082d407f6c1b47d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049541"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512801"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Schlüsselkonzepte in MDX (Analysis Services)
   Bevor Sie mehrdimensionale Daten mit MDX (Multidimensional Expressions) abfragen können oder MDX-Ausdrücke zur Verwendung in einem Cubes zu erstellen, sollten Sie sich mit Konzepten und Begriffen der Mehrdimensionalität vertraut machen.  
   
- Wir beginnen hierzu mit einem Beispiel für Datenzusammenfassung, das Sie bereits kennen, und stellen anschließend den Bezug zu MDX her. Hier sehen Sie ein PivotTable in Excel, die mit Daten aus einem Analysis Services-Beispielcube gefüllt ist.  
+ Wir beginnen hierzu mit einem Beispiel für Datenzusammenfassung, das Sie bereits kennen, und stellen anschließend den Bezug zu MDX her. Hier ist ein PivotTable in Excel, mit Daten aus einer Analysis Services-Beispielcube gefüllt.  
   
  ![PivotTable mit Measures und Dimensionen als Legende](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "PivotTable mit Measures und Dimensionen als Legende")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48049541"
  Mit jedem Attribut ist eine Sammlung von Datenwerten oder Elementen verknüpft. Elemente des Ländergruppen-Attributs sind in diesem Fall Europa, Nordamerika und Pazifik. **Members** beziehen sich auf die tatsächlichen Datenwerte eines Attributs.  
   
 > [!NOTE]  
->  Ein Aspekt der Datenmodellierung ist die Formalisierung von Mustern und Beziehungen, die bereits zwischen den eigentlichen Daten existieren. Bei der Arbeit mit Daten, die eine natürliche Hierarchie haben, wie im aktuellen Beispiel Länder-Regionen-Städte, können Sie diese Beziehung durch die Erstellung einer **Attributbeziehung**formalisieren. Eine Attributbeziehung ist eine 1:n-Beziehung zwischen Attributen. Ein Beispiel dafür ist die Beziehung zwischen einem Land- und einem Stadt-Dimensionsattribut. Ein Land enthält viele Städte, aber jede Stadt gehört zu genau einem Land. Attributbeziehungen verbessern die Abfrageleistung der entsprechenden Modelle und sollten daher nach Möglichkeit erstellt werden, wenn die Daten dies unterstützen. Sie können Attributbeziehungen auch im Dimensions-Designer in den SQL Server Data Tools erstellen. Siehe [Define Attribute Relationships](attribute-relationships-define.md).  
+>  Ein Aspekt der Datenmodellierung ist die Formalisierung von Mustern und Beziehungen, die bereits zwischen den eigentlichen Daten existieren. Bei der Arbeit mit Daten, die eine natürliche Hierarchie haben, wie im aktuellen Beispiel Länder-Regionen-Städte, können Sie diese Beziehung durch die Erstellung einer **Attributbeziehung**formalisieren. Eine attributbeziehung ist eine 1: n Beziehung zwischen Attributen, z. B. eine Beziehung zwischen einem Land- und einem Stadt - ein Land enthält viele Städte, aber jede Stadt gehört zu genau einem Land. Attributbeziehungen im Modell beschleunigt die abfrageleistung verbessert werden, daher ist es eine bewährte Methode, die sie erstellen, wenn die Daten dies unterstützen. Sie können Attributbeziehungen auch im Dimensions-Designer in den SQL Server Data Tools erstellen. Siehe [Define Attribute Relationships](attribute-relationships-define.md).  
   
  Modell-Metadaten werden in Excel in der Feldliste der PivotTable angezeigt.  Vergleichen Sie die obige PivotTable mit der folgenden Feldliste. Beachten Sie, dass die Feldliste Vertriebsgebiet, Gruppe, Land, Region (Metadaten) enthält, und die PivotTable dagegen nur die Elemente (Datenwerte). Wenn Sie die Symbole kennen, können Sie die Teile von mehrdimensionalen Modellen schnell und einfach einer PivotTable in Excel zuordnen.  
   
@@ -78,10 +78,10 @@ ms.locfileid: "48049541"
   
 -   Zwischenebenen, wenn es sich bei der Attributhierarchie um eine Über-/Unterordnungshierarchie handelt (mehr dazu später).  
   
--   Ein (Alle)-Element, das die aggregierten Werte aller untergeordneten Attribute enthält. Sie können die (Alle)-Ebene optional ausblenden oder deaktivieren, wenn diese für Ihre Daten keinen Sinn macht. Obwohl der Produktcode numerisch ist, macht es z. B. wenig Sinn, Summen, Durchschnittswerte oder ähnliche Aggregationen über alle Produktcodes zu berechnen.  
+-   Ein (Alle)-Element, das die aggregierten Werte aller untergeordneten Attribute enthält. Sie können optional ausblenden oder Deaktivieren der Ebene (alle), wenn es sinnvoll für die Daten nicht. Angenommen, obwohl der Produktcode numerisch ist, wäre nicht es sinnvoll, sum, average oder alle Produktcodes.  
   
 > [!NOTE]  
->  BI-Entwickler verwenden oft Eigenschaften in der Attributhierarchie, um ein bestimmtes Verhalten in Clientanwendungen zu erreichen oder um Leistungsvorzüge umzusetzen. Sie könnten z. B. AttributeHierarchyEnabled=False für Attribute setzen, bei denen das (Alle)-Element keinen Sinn macht. Alternativ können Sie das (Alle)-Element einfach ausblenden. In diesem Fall würden Sie AttributeHierarchyVisible=False setzen. Weitere Details zu Eigenschaften finden Sie unter [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md) .  
+>  BI-Entwickler verwenden oft Eigenschaften in der Attributhierarchie, um ein bestimmtes Verhalten in Clientanwendungen zu erreichen oder um Leistungsvorzüge umzusetzen. Legen Sie z. B. AttributeHierarchyEnabled = False für Attribute, die für die das (alle)-Element keinen Sinn. Alternativ können Sie das (Alle)-Element einfach ausblenden. In diesem Fall würden Sie AttributeHierarchyVisible=False setzen. Weitere Details zu Eigenschaften finden Sie unter [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md) .  
   
 ## <a name="navigation-hierarchies"></a>Navigationshierarchien  
  In der PivotTable (zumindest in diesem Beispiel) werden Zeilen- und Spaltenachsen erweitert, um niedrigere Ebenen von Attributen anzuzeigen. Sie können Navigationshierarchien in einem Modell erstellen, um einen erweiterbaren Baum zu erhalten.  Im AdventureWorks-Beispielmodell hat die Vertriebsgebiet-Dimension eine Hierarchie mit mehreren Ebenen von Ländergruppe über Land zu Region.  
@@ -92,20 +92,20 @@ ms.locfileid: "48049541"
   
 |||  
 |-|-|  
-|![PivotTable mit ausgeglichener Hierarchie als Legende](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "PivotTable mit ausgeglichener Hierarchie als Legende")|Eine **ausgeglichene Hierarchie** ist eine Hierarchie, in der zwischen der obersten Ebene und jedem Blattelement die gleiche Anzahl von Ebenen liegen.<br /><br /> Eine **natürliche Hierarchie** entsteht natürlich aus den zugrunde liegenden Daten. Typische Beispiele sind Land-Region-Stadt, Jahr-Monat-Tag oder Kategorie-Unterkategorie-Modell. In diesen Fällen wird jede untergeordnete Ebene auf absehbare Weise von der vorherigen Ebene abgeleitet.<br /><br /> Mehrdimensionale Modelle enthalten hauptsächlich ausgeglichene Hierarchien, von denen viele außerdem auch natürliche Hierarchien sind.<br /><br /> Eine weitere verwandte Modellierungsbegriff ist eine `user-defined hierarchy`, der oft als Kontrast zu Attributhierarchien verwendet. Dies bezeichnet alle vom BI-Entwickler erstellten Hierarchien im Gegensatz zu den automatisch von Analysis Services bei der Defintion von Attributen erstellten Attributhierarchien.|  
+|![PivotTable mit ausgeglichener Hierarchie als Legende](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "PivotTable mit ausgeglichener Hierarchie als Legende")|Eine **ausgeglichene Hierarchie** ist eine Hierarchie, in der zwischen der obersten Ebene und jedem Blattelement die gleiche Anzahl von Ebenen liegen.<br /><br /> Eine **natürliche Hierarchie** entsteht natürlich aus den zugrunde liegenden Daten. Typische Beispiele sind Land-Region-Stadt, Jahr-Monat-Tag oder Kategorie-Unterkategorie-Modell. In diesen Fällen wird jede untergeordnete Ebene auf absehbare Weise von der vorherigen Ebene abgeleitet.<br /><br /> Mehrdimensionale Modelle enthalten hauptsächlich ausgeglichene Hierarchien, von denen viele außerdem auch natürliche Hierarchien sind.<br /><br /> Ein weiterer Modellierungsbegriff ist `user-defined hierarchy`, der oft als Kontrast zu Attributhierarchien verwendet werden. Dies bezeichnet alle vom BI-Entwickler erstellten Hierarchien im Gegensatz zu den automatisch von Analysis Services bei der Defintion von Attributen erstellten Attributhierarchien.|  
   
  **Unausgeglichene Hierarchien**  
   
 |||  
 |-|-|  
-|![PivotTable mit unregelmäßiger Hierarchie als Legende](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "PivotTable mit unregelmäßiger Hierarchie als Legende")|Eine **unregelmäßige Hierarchie** oder **unausgeglichene Hierarchie** ist eine Hierarchie, in der zwischen der obersten Ebene und den Blattelementen unterschiedlich viele Ebenen liegen. Diese Hierarchien werden ebenfalls vom BI-Entwickler erstellt, in diesem Fall jedoch mit Lücken zwischen den Daten.<br /><br /> Im AdventureWorks-Beispielmodell enthält das Vertriebsgebiet eine unregelmäßige Hierarchie, da in den USA eine zusätzliche Ebene existiert (Regionen), die für die anderen Länder in diesem Beispiel nicht gilt.<br /><br /> Unregelmäßige Hierarchien sind eine Herausforderung für BI-Entwickler, wenn die Clientanwendung diese nicht auf elegante Art verarbeiten kann. Im Analysis Services-Modell können Sie eine **Über-/Unterordnungshierarchie** erstellen, die eine Beziehung zwischen mehreren Datenebenen explizit definiert und somit Mehrdeutigkeiten bzgl. der Abfolge der Ebenen ausräumt. Finden Sie unter [über-/ Unterordnungshierarchie](parent-child-dimension.md) Details.|  
+|![PivotTable mit unregelmäßiger Hierarchie als Legende](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "PivotTable mit unregelmäßiger Hierarchie als Legende")|Eine **unregelmäßige Hierarchie** oder **unausgeglichene Hierarchie** ist eine Hierarchie, in der zwischen der obersten Ebene und den Blattelementen unterschiedlich viele Ebenen liegen. In diesem Fall es ist eine Hierarchie von BI-Entwickler erstellt, aber in diesem Fall Lücken in den Daten vorhanden sind.<br /><br /> Im AdventureWorks-Beispielmodell enthält das Vertriebsgebiet eine unregelmäßige Hierarchie, da in den USA eine zusätzliche Ebene existiert (Regionen), die für die anderen Länder in diesem Beispiel nicht gilt.<br /><br /> Unregelmäßige Hierarchien sind eine Herausforderung für BI-Entwickler, wenn die Clientanwendung diese nicht auf elegante Art verarbeiten kann. Im Analysis Services-Modell können Sie eine **Über-/Unterordnungshierarchie** erstellen, die eine Beziehung zwischen mehreren Datenebenen explizit definiert und somit Mehrdeutigkeiten bzgl. der Abfolge der Ebenen ausräumt. Siehe [Parent-Child Hierarchy](parent-child-dimension.md) .|  
   
 ## <a name="key-attributes"></a>Schlüsselattribute  
  Modelle sind Sammlungen miteinander verwandter Objekte, deren Zuordnungen mit Schlüsseln und Indizes verwaltet werden. Analysis Services-Modelle funktionieren auf dieselbe Weise. Für jede Dimension (Äquivalent zu Tabellen im relationalen Modell) existiert ein Schlüsselattribut. Das **Schlüsselattribut** wird in Fremdschlüssel-Beziehungen zur Faktentabelle (Measuregruppe) verwendet. Alle nicht-Schlüsselattribute in der Dimension werden (direkt oder indirekt) mit dem Schlüsselattribut verknüpft.  
   
- Das Schlüsselattribut ist oft, jedoch nicht immer, gleichzeitig auch das **Granularitätsattribut**. Granularität bezieht sich auf die Detail- oder Genauigkeitsebene der Daten. Ein schnelles Beispiel hilft auch hier beim besseren Verständnis. Berücksichtigen Sie Datumswerte: Für die täglichen Verkäufe brauchen Sie Datumswerte bis zum Tag. Für Kontingente reichen möglicherweise Quartalsangaben, aber wenn Ihre Analysedaten aus Rennergebnissen von Sportereignissen bestehen, benötigen Sie unter Umständen sogar Millisekunden. Die Genauigkeitsebene Ihrer Datenwerte nennt man auch die Körnung.  
+ Das Schlüsselattribut ist oft, jedoch nicht immer, gleichzeitig auch das **Granularitätsattribut**. Granularität bezieht sich auf die Detail- oder Genauigkeitsebene der Daten. Ein schnelles Beispiel hilft auch hier beim besseren Verständnis. Stellen Sie sich Datumswerte vor: Für die täglichen Verkäufe brauchen Sie Datumswerte bis zum Tag. Für Kontingente reichen möglicherweise Quartalsangaben, aber wenn Ihre Analysedaten aus Rennergebnissen von Sportereignissen bestehen, benötigen Sie unter Umständen sogar Millisekunden. Die Genauigkeitsebene Ihrer Datenwerte nennt man auch die Körnung.  
   
- Währungen sind ein weiteres Beispiel: eine Finanzanwendung kann Beträge mit vielen Nachkommastellen berechnen, während für eine Benefizveranstaltung an einer Schule gerundete Beträge ausreichend sind. Das Konzept der Körnung ist wichtig, um die Speicherung unnötiger Daten zu vermeiden. Indem Sie Millisekunden von einem Zeitstempel oder Cents von einem Verkaufsbetrag abschneiden, können Sie Speicherungs- und Verarbeitungszeit sparen, wenn der jeweilige Detailgrad für Ihre Analyse nicht relevant ist.  
+ Währung ist ein weiteres Beispiel: eine finanzanwendung kann monetärer Werte aus vielen Dezimalstellen, verfolgen, während Ihrer lokalen Schule Kurator nur Werte vollständigen Dollarbetrag möglicherweise. Das Konzept der Körnung ist wichtig, um die Speicherung unnötiger Daten zu vermeiden. Indem Sie Millisekunden von einem Zeitstempel oder Cents von einem Verkaufsbetrag abschneiden, können Sie Speicherungs- und Verarbeitungszeit sparen, wenn der jeweilige Detailgrad für Ihre Analyse nicht relevant ist.  
   
  Sie können das Granularitätsattribut in der Registerkarte Dimensionsverwendung im Cube-Designer in den SQL Server Data Tools einstellen. Im AdventureWorks-Beispielmodell ist das Schlüsselattribut der Datums-Dimension der Datums-Schlüssel. Für Verkaufsaufträge ist das Granularitätsattribut gleich dem Schlüsselattribut. Für Vertriebsziele wird die Granularität vierteljährlich verwendet, und das Granularitätsattribut wird entsprechend auf Kalenderquartal gesetzt.  
   
@@ -124,17 +124,17 @@ ms.locfileid: "48049541"
  **Cell** bezieht sich auf den Abstand an einem Schnittpunkt eines Elements des Measuedimensionselements und eines Elements der einzelnen Attributhierarchien in einem Cube.  
   
 ## <a name="other-modeling-terms"></a>Weitere Modellierungsbegriffe  
- Dieser Abschnitt enthält verschiedene Konzepte und Begriffe, die nicht in die anderen Abschnitte passen und die Sie dennoch kennen sollten.  
+ In diesem Abschnitt ist eine Sammlung von Konzepten und Begriffen, die nicht einfach in die anderen Abschnitte passen, jedoch müssen Sie dennoch kennen.  
   
  **Berechnetes Element** bezeichnet ein Dimensionselement, das zum Abfragezeitpunkt definiert und berechnet wird. Ein berechnetes Element kann in einer Benutzerabfrage oder in einem MDX-Berechnungsskript definiert und auf dem Server gespeichert werden. Ein berechnetes Element entspricht Zeilen in der Dimensionstabelle der Dimension, in der diese definiert sind.  
   
  **Distinct Count** ist ein spezieller Measuretyp, der für Datenelemente verwendet wird, die nur einmal gezählt werden sollen. Das AdventureWorks-Beispielmodell enthält Distinct Count Measures für Internetbestellungen, Wiederverkäuferbestellungen und Verkaufsaufträge.  
   
- **Measuregruppen** sind eine Sammlung von einem oder mehreren Measures. Diese Gruppen sind normalerweise benutzerdefiniert und werden zum Gruppieren verwandter Measures verwendet. Distinct Count Measures sind eine Ausnahme. Diese Measures sind immer Teil einer speziellen Measuregruppe, die nur distinct Measures enthält. Diese Measuregruppe ist in der PivotTable-Beispielabbildung nicht zu sehen, erscheint jedoch als benannte Sammlung von Measure in einer PivotTable-Feldliste.  
+ **Measuregruppen** sind eine Sammlung von einem oder mehreren Measures. Diese Gruppen sind normalerweise benutzerdefiniert und werden zum Gruppieren verwandter Measures verwendet. Distinct Count Measures sind eine Ausnahme. Diese Measures sind immer Teil einer speziellen Measuregruppe, die nur distinct Measures enthält. Die Measuregruppe, in der PivotTable-beispielabbildung nicht angezeigt, aber es wird als eine benannte Auflistung von Measures in einer PivotTable-Feldliste angezeigt.  
   
- **Measuredimension** ist die Dimension, die alle Measures in einem Cube enthält. Diese Dimension ist in mehrdimensionalen, mit SQL Server Data Tools erstellten Modellen nicht sichtbar, existiert jedoch trotzdem. Da diese Dimension Measures enthält, werden alle Elemente einer Measuredimension normalerweise aggregiert (typischerweise als Summe oder Anzahl).  
+ **Measuredimension** ist die Dimension, die alle Measures in einem Cube enthält. Es ist nicht verfügbar in einem mehrdimensionalen Modell, die Sie in SQL Server Data Tools erstellen, aber es genauso vorhanden ist. Da diese Dimension Measures enthält, werden alle Elemente einer Measuredimension normalerweise aggregiert (typischerweise als Summe oder Anzahl).  
   
- **Datenbankdimensionen und Cubedimensionen**. In Modellen können Sie eigenständige Dimensionen definieren, die anschließend in einer beliebigen Anzahl von Cubes im gleichen Modell integriert werden. Wenn Sie eine Dimension zu einem Cube hinzufügen, nennt man dies eine Cubedimension. Im Projektkontext als eigenständiges Element im Objekt-Explorer nennt man dies eine Datenbankdimension. Warum die Unterscheidung? Da Sie Eigenschaften der Dimensionen unabhängig voneinander setzen können. Die Produktdokumentation verwendet beide Begriffe, daher sollten Sie deren Bedeutung kennen.  
+ **Datenbankdimensionen und Cubedimensionen**. In Modellen können Sie eigenständige Dimensionen definieren, die anschließend in einer beliebigen Anzahl von Cubes im gleichen Modell integriert werden. Wenn Sie eine Dimension einem Cube hinzufügen, es eine Cubedimension genannt. Selbst in einem Projekt als eigenständiges Element im Objekt-Explorer wird dies eine Datenbankdimension bezeichnet. Warum die Unterscheidung? Da Sie Eigenschaften der Dimensionen unabhängig voneinander setzen können. In der Produktdokumentation sehen Sie beide Begriffe verwendet, daher ist es sinnvoll sein, zu deren Bedeutung kennen.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie kennen nun die wichtigsten Konzepte und Begriffe und können mit diesen zusätzlichen Themen fortfahren, in denen grundlegende Konzepte von Analysis Services weiter erläutert werden:  
@@ -146,14 +146,14 @@ ms.locfileid: "48049541"
 -   [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Cuberaum](mdx/cube-space.md)   
+ [Cube Space](mdx/cube-space.md)   
  [Tupel](mdx/tuples.md)   
  [Autoexists](mdx/autoexists.md)   
- [Arbeiten mit Elementen, Tupeln und Mengen &#40;MDX&#41;](mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [Verwenden von Elementen, Tupeln und Mengen &#40;MDX&#41;](mdx/working-with-members-tuples-and-sets-mdx.md)   
  [Sichtbare Gesamtwerte und nicht sichtbare Gesamtwerte](mdx/visual-totals-and-non-visual-totals.md)   
- [Grundlegendes zu MDX-Abfrage &#40;Analysis Services&#41;](mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX-Skripts Grundlagen &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Grundlegendes zu MDX-Skripts &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [MDX-Sprachreferenz &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Mehrdimensionale Ausdrücke &#40;MDX&#41; Verweis](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Mehrdimensionale Ausdrücke &#40;MDX&#41; – Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

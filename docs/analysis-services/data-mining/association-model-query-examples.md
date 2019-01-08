@@ -1,5 +1,5 @@
 ---
-title: Zuordnungsmodellabfragen | Microsoft Docs
+title: Zuordnungsmodellabfragen | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cb268ffeb4b7f997876b7fc28dfb773b971aaf1e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0c4f09cf3110c202caeaa5079a3124bd64ffedae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020017"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519224"
 ---
 # <a name="association-model-query-examples"></a>Beispiele für Zuordnungsmodellabfragen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34020017"
 ##  <a name="bkmk_top2"></a> Suchen nach Informationen über das Modell  
  Alle Miningmodelle machen den vom Algorithmus erfassten Inhalt nach einem standardisierten Schema verfügbar. Dieses Schema wird als Miningmodell-Schemarowset bezeichnet. Abfragen für das Miningmodell-Schemarowset können Sie entweder mithilfe von DMX-Anweisungen oder mit gespeicherten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Prozeduren erstellen. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie die Schemarowsets mit einer SQL-ähnlichen Syntax auch direkt als Systemtabellen abfragen.  
   
-###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellmetadaten mit DMX  
+###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellmetadaten mithilfe von DMX  
  Die folgende Abfrage gibt grundlegende Metadaten über das Zuordnungsmodell `Association`zurück, wie Name des Modells, die Datenbank, in der das Modell gespeichert ist, und die Anzahl der untergeordneten Knoten im Modell. Diese Abfrage ruft die Metadaten mithilfe einer DMX-Inhaltsabfrage vom übergeordneten Knoten des Modells ab:  
   
 ```  
@@ -94,7 +94,7 @@ WHERE MODEL_NAME = 'Association'
   
  [Zurück zum Anfang](#bkmk_top2)  
   
-###  <a name="bkmk_Query3"></a> Beispielabfrage 3: Abrufen von ursprünglichen Parametern für das Modell  
+###  <a name="bkmk_Query3"></a> Beispielabfrage 3: Abrufen von ursprünglichen Parametern für Modell  
  Die folgende Abfrage gibt eine einzelne Spalte mit Details über die Parametereinstellungen zurück, die beim Erstellen des Modells verwendet wurden.  
   
 ```  
@@ -112,7 +112,7 @@ WHERE MODEL_NAME = 'Association'
 ## <a name="finding-information-about-rules-and-itemsets"></a>Suchen nach Informationen über Regeln und Itemsets  
  Ein Zuordnungsmodell dient im Wesentlichen zwei Zwecken: dem Finden von Informationen über häufig vorhandene Itemsets und dem Extrahieren von Details über bestimmte Regeln und Itemsets. Sie können beispielsweise eine Liste der Regeln extrahieren, die als besonders interessant eingestuft wurden, oder eine Liste mit den gängigsten Itemsets erstellen. Diese Informationen rufen Sie mit einer DMX-Inhaltsabfrage ab. Sie können auch mithilfe des **Microsoft Association Viewer**nach diesen Informationen suchen.  
   
-###  <a name="bkmk_Query4"></a> Beispiel Abfrage 4: Abrufen der Liste von Itemsets und Produkten  
+###  <a name="bkmk_Query4"></a> Beispielabfrage 4: Abrufen der Liste von Itemsets und Produkten  
  Mit folgender Abfrage werden alle Itemsets sowie eine geschachtelte Tabelle abgerufen, in der die in den einzelnen Itemsets enthaltenen Produkte aufgeführt sind. Die Spalte NODE_NAME enthält die eindeutige ID des Itemsets innerhalb des Modells, während die Spalte NODE_CAPTION eine Textbeschreibung der Elemente zur Verfügung stellt. In diesem Beispiel wird die geschachtelte Tabelle vereinfacht, sodass ein Itemset, das zwei Produkte enthält, zwei Zeilen in den Ergebnissen generiert. Sie können das FLATTENED-Schlüsselwort auslassen, wenn der Client hierarchische Daten unterstützt.  
   
 ```  
@@ -159,8 +159,8 @@ WHERE NODE_TYPE = 7
   
  Ein anderes Beispiel für den sinnvollen Einsatz von Abfragen bei einem Zuordnungsmodell ist die Rückgabe des Vertrauenswerts für verschiedene Regeln und Itemsets, sodass Sie die Effektivität verschiedener Cross-Selling-Strategien vergleichen können. In den folgenden Beispielen wird gezeigt, wie derartige Abfragen erstellt werden.  
   
-###  <a name="bkmk_Query6"></a> Beispiel Abfrage 6: Vorhersagen von verknüpften Elementen  
- In diesem Beispiel wird das im [Data Mining-Tutorial für Fortgeschrittene &#40;Analysis Services – Data Mining&#41;](http://msdn.microsoft.com/library/404b31d5-27f4-4875-bd60-7b2b8613eb1b) erstellte Zuordnungsmodell verwendet. Es zeigt, wie Sie eine Vorhersageabfrage erstellen, die Aufschluss darüber gibt, welche Produkte Sie einem Kunden empfehlen sollten, der ein bestimmtes Produkt gekauft hat. Dieser Abfragetyp, bei dem Sie mithilfe einer **SELECT…UNION** -Anweisung Werte für das Modell bereitstellen, wird als SINGLETON-Abfrage bezeichnet. Da es sich bei der vorhersagbaren Modellspalte, die den neuen Werten entspricht, um eine geschachtelte Tabelle handelt, müssen Sie eine **SELECT** -Klausel verwenden, um den neuen Wert der geschachtelten Tabellenspalte zuzuordnen, sowie `[Model]`und eine weitere **SELECT** -Klausel, um die geschachtelte Tabellenspalte der Spalte auf Fallebene `[v Assoc Seq Line Items]`zuzuordnen. Durch Hinzufügen des Schlüsselworts INCLUDE-STATISTICS zur Abfrage können Sie die Wahrscheinlichkeit und die Unterstützung für die Empfehlungen sehen.  
+###  <a name="bkmk_Query6"></a> Beispielabfrage 6: Vorhersagen von verknüpften Elementen  
+ In diesem Beispiel wird das im [Data Mining-Tutorial für Fortgeschrittene &#40;Analysis Services – Data Mining&#41;](http://msdn.microsoft.com/library/404b31d5-27f4-4875-bd60-7b2b8613eb1b) erstellte Zuordnungsmodell verwendet. Es zeigt, wie Sie eine Vorhersageabfrage erstellen, die Aufschluss darüber gibt, welche Produkte Sie einem Kunden empfehlen sollten, der ein bestimmtes Produkt gekauft hat. Dieser Abfragetyp, in dem Sie stellt Werte, das Modell in bereit einem **auswählen... UNION** -Anweisung wird eine Singleton-Abfrage aufgerufen. Da es sich bei der vorhersagbaren Modellspalte, die den neuen Werten entspricht, um eine geschachtelte Tabelle handelt, müssen Sie eine **SELECT** -Klausel verwenden, um den neuen Wert der geschachtelten Tabellenspalte zuzuordnen, sowie `[Model]`und eine weitere **SELECT** -Klausel, um die geschachtelte Tabellenspalte der Spalte auf Fallebene `[v Assoc Seq Line Items]`zuzuordnen. Durch Hinzufügen des Schlüsselworts INCLUDE-STATISTICS zur Abfrage können Sie die Wahrscheinlichkeit und die Unterstützung für die Empfehlungen sehen.  
   
 ```  
 SELECT PredictAssociation([Association].[vAssocSeqLineItems],INCLUDE_STATISTICS, 3)  
@@ -219,19 +219,19 @@ ORDER BY NODE_SUPPORT DESC
 |||  
 |-|-|  
 |Vorhersagefunktion|Verwendung|  
-|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Diagramm für neuronale Netzwerke ist.|  
-|[IsInNode & #40; DMX & #41;](../../dmx/isinnode-dmx.md)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
-|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
-|[PredictAssociation & #40; DMX & #41;](../../dmx/predictassociation-dmx.md)|Sagt eine Mitgliedschaft in einem assoziativen Dataset voraus.|  
-|["PredictHistogram" & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
-|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|Gibt "Node_ID" für jeden Fall zurück.|  
-|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
-|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
-|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|Gibt die Varianz für den vorhergesagten Wert zurück.|  
+|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Diagramm für neuronale Netzwerke ist.|  
+|[IsInNode &#40;DMX&#41;](../../dmx/isinnode-dmx.md)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
+|[PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|Sagt eine Mitgliedschaft in einem assoziativen Dataset voraus.|  
+|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
+|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|Gibt "Node_ID" für jeden Fall zurück.|  
+|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
+|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
+|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Gibt die Varianz für den vorhergesagten Wert zurück.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Association-Algorithmus](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Technische Referenz für die Microsoft Association-Algorithmus](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [Miningmodellinhalt von Zuordnungsmodellen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Technische Referenz für den Microsoft Association-Algorithmus](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
+ [Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

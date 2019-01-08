@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
@@ -15,12 +15,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8d3342c6a45b705c72c113f58bde7d8df2ae71c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 946b447b974be9c24403957681f26df627094084
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229820"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353403"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Tabellen- und Indexpartitionierung. Die Daten partitionierter Tabellen und Indizes werden in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Datenbank verteilt sein können. Die Daten werden horizontal partitioniert, sodass Gruppen von Zeilen einzelnen Partitionen zugeordnet werden. Alle Partitionen eines einzelnen Indexes oder einer Tabelle müssen sich in der gleichen Datenbank befinden. Die Tabelle oder der Index wird als einzelne logische Entität behandelt, wenn Abfragen oder Aktualisierungen für die Daten ausgeführt werden. Partitionierte Tabellen und Indizes sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -45,13 +45,13 @@ ms.locfileid: "48229820"
  Die folgenden Begriffe beziehen sich auf die Tabellen- und Indexpartitionierung.  
   
  Partitionsfunktion  
- Ein Datenbankobjekt, das definiert, wie die Zeilen einer Tabelle oder eines Index basierend auf den Werten bestimmter Spalten, den sogenannten Partitionierungsspalten, einem Satz von Partitionen zugeordnet werden. Das heißt, die Partitionsfunktion definiert die Anzahl von Partitionen, über die die Tabelle verfügt, und wie die Begrenzungen der Partitionen definiert werden. Beispielsweise verfügen über eine Tabelle, die Verkaufsauftragsdaten enthält, Sie sollten zum Partitionieren der Tabelle in zwölf (monatliche) Partitionen auf Grundlage einer `datetime` Spalte z. B. Verkaufsdatum.  
+ Ein Datenbankobjekt, das definiert, wie die Zeilen einer Tabelle oder eines Index basierend auf den Werten bestimmter Spalten, den sogenannten Partitionierungsspalten, einem Satz von Partitionen zugeordnet werden. Das heißt, die Partitionsfunktion definiert die Anzahl von Partitionen, über die die Tabelle verfügt, und wie die Begrenzungen der Partitionen definiert werden. Angenommen, Sie verfügen über eine Tabelle, die Verkaufsauftragsdaten enthält, und möchten die Tabelle möglicherweise in zwölf (monatliche) Partitionen auf Grundlage einer `datetime`-Spalte (z. B. Verkaufsdatum) partitionieren.  
   
  Partitionsschema  
  Ein Datenbankobjekt, das die Partitionen einer Partitionsfunktion Dateigruppen zuordnet. Der wichtigste Grund dafür, dass Partitionen in separaten Dateigruppen platziert werden, besteht darin, sicherzustellen, dass Sie Sicherungsvorgänge unabhängig für Partitionen ausführen können. Dies liegt daran, dass Sie Sicherungen für einzelne Dateigruppen ausführen können.  
   
  Partitionierungsspalte  
- Die Spalte einer Tabelle oder eines Indexes, die von einer Partitionsfunktion zum Partitionieren der Tabelle oder des Indexes verwendet wird. Berechnete Spalten, die in eine Partitionsfunktion einbezogen werden, müssen explizit als PERSISTED gekennzeichnet sein. Alle Datentypen, die für ungültig zu verwenden, wie Sie Indexspalten außer als Partitionierungsspalte verwendet werden können `timestamp`. Die Datentypen `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` oder `varbinary(max)` können nicht angegeben werden. Zudem können der benutzerdefinierte CLR-Typ (Common Language Runtime) von Microsoft .NET Framework und die Spalten mit dem Aliasdatentyp nicht angegeben werden.  
+ Die Spalte einer Tabelle oder eines Indexes, die von einer Partitionsfunktion zum Partitionieren der Tabelle oder des Indexes verwendet wird. Berechnete Spalten, die in eine Partitionsfunktion einbezogen werden, müssen explizit als PERSISTED gekennzeichnet sein. Alle Datentypen, die zum Verwenden als Indexspalten zulässig sind, können als Partitionsspalte verwenden werden, mit Ausnahme des Datentyps `timestamp`. Die Datentypen `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` oder `varbinary(max)` können nicht angegeben werden. Zudem können der benutzerdefinierte CLR-Typ (Common Language Runtime) von Microsoft .NET Framework und die Spalten mit dem Aliasdatentyp nicht angegeben werden.  
   
  Ausgerichteter Index  
  Ein Index, der auf dem gleichen Partitionsschema wie die zugehörige Tabelle aufbaut. Wenn eine Tabelle und ihre Indizes aneinander ausgerichtet sind, kann SQL Server schnell zwischen Partitionen wechseln und gleichzeitig die Partitionsstruktur sowohl der Tabelle als auch ihrer Indizes beibehalten. Ein Index muss nicht an derselben benannten Partitionsfunktion beteiligt sein, um an ihrer Basistabelle ausgerichtet zu sein. Allerdings muss die Partitionsfunktion des Indexes und der Basistabelle im Wesentlichen übereinstimmen, und zwar dahingehend, dass 1) die Argumente der Partitionsfunktionen denselben Datentyp haben, dass sie 2) dieselbe Anzahl von Partitionen definieren und dass sie 3) dieselben Begrenzungswerte für Partitionen definieren.  
@@ -72,7 +72,7 @@ ms.locfileid: "48229820"
  Die neue, höhere Grenze von 15.000 Partitionen wirkt sich auf den Arbeitsspeicher, Vorgänge mit partitionierten Indizes, DBCC-Befehle und Abfragen aus. In diesem Abschnitt werden die Auswirkungen auf die Leistung beschrieben, wenn die Anzahl der Partitionen mehr als 1.000 beträgt, und es werden mögliche Problemumgehungen bereitgestellt. Dadurch, dass die maximale Anzahl von Partitionen auf 15.000 erhöht wurde, können Sie Daten über einen längeren Zeitraum speichern. Sie sollten Daten jedoch nur so lange beibehalten, wie sie benötigt werden, und darauf achten, dass die Leistung und die Anzahl der Partitionen ausgewogen ist.  
   
 ### <a name="memory-usage-and-guidelines"></a>Speicherauslastung und Richtlinien  
- Es empfiehlt sich, mindestens 16 GB Arbeitsspeicher zu verwenden, wenn eine große Anzahl von Partitionen verwendet wird. Wenn das System nicht über ausreichend Arbeitsspeicher verfügt, kann es bei DML-Anweisungen (Datenbearbeitungssprache), DDL-Anweisungen (Datendefinitionssprache) und anderen Vorgängen aufgrund ungenügenden Arbeitsspeichers zu Fehlern kommen. Bei Systemen mit 16 GB Arbeitsspeicher, die zahlreiche speicherintensive Prozesse ausführen, kann es bei Vorgängen, die für eine große Anzahl von Partitionen ausgeführt werden, zu Fehlern aufgrund von Speicherauslastung kommen. Je mehr Arbeitsspeicher Sie über die empfohlenen 16 GB hinaus verwenden, desto geringer ist die Wahrscheinlichkeit, dass Probleme mit der Leistung und Speicherauslastung auftreten.  
+ Es empfiehlt sich, mindestens 16 GB Arbeitsspeicher zu verwenden, wenn eine große Anzahl von Partitionen verwendet wird. Wenn das System nicht über ausreichend Arbeitsspeicher verfügt, kann es bei DML-Anweisungen (Datenbearbeitungssprache), DDL-Anweisungen (Datendefinitionssprache) und anderen Vorgängen aufgrund ungenügenden Arbeitsspeichers zu Fehlern kommen. Bei Systemen mit 16 GB Arbeitsspeicher, die zahlreiche speicherintensive Prozesse ausführen, kann es bei Vorgängen, die für eine große Anzahl von Partitionen ausgeführt werden, zu Fehlern aufgrund von Speicherauslastung kommen. Je mehr Arbeitsspeicher Sie über die empfohlenen 16 GB hinaus verwenden, desto geringer ist die Wahrscheinlichkeit, dass Probleme mit der Leistung und Speicherauslastung auftreten.  
   
  Einschränkungen beim Arbeitsspeicher können sich negativ auf die Leistung oder auf die Möglichkeit von SQL Server zum Erstellen eines partitionierten Index auswirken. Das gilt insbesondere für den Fall, wenn der Index nicht an seiner Basistabelle oder an deren gruppierten Index ausgerichtet ist, sofern für die Tabelle bereits ein gruppierter Index erstellt wurde.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48229820"
   
  Das Erstellen und Neuerstellen von ausgrichteten Indizes kann um so länger dauern, je mehr Partitionen hinzugefügt werden. Es empfiehlt sich, nicht mehrere Befehle zum Erstellen und Neuerstellen von Befehlen gleichzeitig auszuführen, da es zu Leistungs- und Arbeitsspeicherproblemen kommen kann.  
   
- Wenn SQL Server Sortiervorgänge zum Erstellen partitionierter Indizes durchführt, wird zuerst eine Sortiertabelle für jede Partition erstellt. Anschließend erstellt es den Sortiertabellen entweder in der jeweiligen Dateigruppe jeder Partition oder im `tempdb`, wenn die SORT_IN_TEMPDB-Indexoption angegeben wurde. Jede Sortiertabelle setzt für ihre Erstellung eine Mindestmenge an Arbeitsspeicher voraus. Wenn Sie einen partitionierten Index erstellen, der an seiner Basistabelle ausgerichtet ist, werden alle Sortiertabellen nacheinander erstellt, was weniger Arbeitsspeicher in Anspruch nimmt. Wenn Sie allerdings einen nicht gruppierten partitionierten Index erstellen, werden alle Sortiertabellen gleichzeitig erstellt. Das heißt, es muss ausreichend Arbeitsspeicher verfügbar sein, um diese gleichzeitigen Sortiervorgänge zu verarbeiten. Je größer die Anzahl der Partitionen, desto mehr Arbeitsspeicher wird benötigt. Die Mindestgröße für jede Sortiertabelle beträgt 40 Seiten für jede Partition mit 8 Kilobyte pro Seite. So beansprucht z.&nbsp;B. ein nicht ausgerichteter partitionierter Index mit 100 Partitionen ausreichend Arbeitsspeicher, um 4.000 (40 * 100) Seiten gleichzeitig seriell sortieren zu können. Wenn dieser Arbeitsspeicher verfügbar ist, ist die Erstellung zwar erfolgreich, jedoch kann die Leistung darunter leiden. Wenn dieser Arbeitsspeicher nicht verfügbar ist, schlägt die Erstellung fehl. Alternativ erfordert ein ausgerichteter partitionierter Index mit 100 Partitionen nur ausreichend Arbeitsspeicher, um 40 Seiten zu sortieren, da die Sortiervorgänge nicht gleichzeitig durchgeführt werden.  
+ Wenn SQL Server Sortiervorgänge zum Erstellen partitionierter Indizes durchführt, wird zuerst eine Sortiertabelle für jede Partition erstellt. Anschließend werden die Sortiertabellen entweder in der jeweiligen Dateigruppe jeder Partition oder in `tempdb` erstellt, wenn die SORT_IN_TEMPDB-Indexoption angegeben wurde. Jede Sortiertabelle setzt für ihre Erstellung eine Mindestmenge an Arbeitsspeicher voraus. Wenn Sie einen partitionierten Index erstellen, der an seiner Basistabelle ausgerichtet ist, werden alle Sortiertabellen nacheinander erstellt, was weniger Arbeitsspeicher in Anspruch nimmt. Wenn Sie allerdings einen nicht gruppierten partitionierten Index erstellen, werden alle Sortiertabellen gleichzeitig erstellt. Das heißt, es muss ausreichend Arbeitsspeicher verfügbar sein, um diese gleichzeitigen Sortiervorgänge zu verarbeiten. Je größer die Anzahl der Partitionen, desto mehr Arbeitsspeicher wird benötigt. Die Mindestgröße für jede Sortiertabelle beträgt 40 Seiten für jede Partition mit 8 Kilobyte pro Seite. So beansprucht z.&nbsp;B. ein nicht ausgerichteter partitionierter Index mit 100 Partitionen ausreichend Arbeitsspeicher, um 4.000 (40 * 100) Seiten gleichzeitig seriell sortieren zu können. Wenn dieser Arbeitsspeicher verfügbar ist, ist die Erstellung zwar erfolgreich, jedoch kann die Leistung darunter leiden. Wenn dieser Arbeitsspeicher nicht verfügbar ist, schlägt die Erstellung fehl. Alternativ erfordert ein ausgerichteter partitionierter Index mit 100 Partitionen nur ausreichend Arbeitsspeicher, um 40 Seiten zu sortieren, da die Sortiervorgänge nicht gleichzeitig durchgeführt werden.  
   
  Sowohl bei ausgerichteten als auch bei nicht ausgerichteten Indizes kann der Arbeitsspeicherbedarf noch höher sein, wenn SQL Server bei einem Computer mit mehreren Prozessoren Grade der Parallelität beim Erstellungsvorgang verwendet. Denn je höher die Grade der Parallelität sind, desto größer ist auch der Arbeitsspeicherbedarf. Wenn SQL Server z. B. die Grade der Parallelität auf 4 festlegt, benötigt ein nicht ausgerichteter partitionierter Index mit 100 Partitionen ausreichend Arbeitsspeicher, damit vier Prozessoren gleichzeitig jeweils 4.000 Seiten sortieren können – also 16.000 Seiten gleichzeitig. Wenn der partitionierte Index ausgerichtet ist, verringert sich der Arbeitsspeicherbedarf auf vier Prozessoren, die jeweils 40 Seiten sortieren – also 160 (4 * 40) Seiten. Sie können die MAXDOP-Indexoption verwenden, um die Grade der Parallelität manuell zu reduzieren.  
   
@@ -109,15 +109,15 @@ ms.locfileid: "48229820"
 ## <a name="related-content"></a>Verwandte Inhalte  
  Die folgenden Whitepaper zu partitionierten Tabellen und Indexstrategien sowie Implementierungen sind möglicherweise für Sie interessant.  
   
--   [Partitionierte Tabellen- und Indexstrategien für SQL Server 2008](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
+-   [Partitionierte Tabellen- und Indexstrategien für SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [So implementieren Sie ein automatisch gleitendes Fenster](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
+-   [So implementieren Sie ein automatisch gleitendes Fenster](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
--   [Massenladen in eine partitionierte Tabelle](http://msdn.microsoft.com/library/cc966380.aspx)  
+-   [Massenladen in eine partitionierte Tabelle](https://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [Project REAL: Data Lifecycle -- Partitionierung](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
+-   [Projekt REAL: Data Lifecycle--Partitionierung](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
   
--   [Verbesserte Abfrageverarbeitung bei partitionierten Tabellen und Indizes](http://msdn.microsoft.com/library/ms345599.aspx)  
+-   [Verbesserte Abfrageverarbeitung bei partitionierten Tabellen und Indizes](https://msdn.microsoft.com/library/ms345599.aspx)  
   
 -   [Top 10 Best Practices zum Erstellen von einem umfassenden relationalen Data Warehouse](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   

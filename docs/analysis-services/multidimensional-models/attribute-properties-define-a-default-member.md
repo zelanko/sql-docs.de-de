@@ -1,5 +1,5 @@
 ---
-title: Definieren eines Standardelements | Microsoft Docs
+title: Definieren eines Standardelements | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e112d0cfdd1e4558dcad1888531774357ce0102a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 10b5776a4d4be5f31522740c28a6142a7e213576
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020917"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516733"
 ---
 # <a name="attribute-properties---define-a-default-member"></a>Attributeigenschaften – Definieren eines Standardelements
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "34020917"
   
  Die **DefaultMember** -Einstellung für ein Attribut gilt für jede Hierarchie, an der das Attribut beteiligt ist. Sie können für verschiedene Hierarchien in einer Dimension keine unterschiedlichen Einstellungen verwenden. Wenn beispielsweise das Element [1998] das Standardelement für ein [Year]-Attribut ist, gilt diese Einstellung für jede Hierarchie in der Dimension. Die **DefaultMember** -Einstellung kann in diesem Fall nicht [1998] in einer Hierarchie und [1997] in einer anderen Hierarchie sein.  
   
- Wenn Sie ein Standardelement für eine bestimmte Ebene in einer Hierarchie definieren, das nicht auf natürliche Weise aggregiert, müssen Sie in allen Ebenen über dieser Ebene in der Hierarchie Standardelemente definieren. So können Sie beispielsweise in der Hierarchie All-Countries–Climate nur dann ein Standardelement für Climate festlegen, wenn Sie auch ein Standardelement für Countries definieren. Tun Sie dies nicht, führt dies zu Abfragezeitfehlern.  
+ Wenn Sie ein Standardelement für eine bestimmte Ebene in einer Hierarchie definieren, das nicht auf natürliche Weise aggregiert, müssen Sie in allen Ebenen über dieser Ebene in der Hierarchie Standardelemente definieren. In der Hierarchie All-Ländern-Klima, können nicht Sie beispielsweise ein Standardelement für Climate definieren, wenn Sie ein Standardelement für Countries definieren. Tun Sie dies nicht, führt dies zu Abfragezeitfehlern.  
   
- Wenn Ebenen in einer Hierarchie natürlich aggregieren, können Sie ein Standardelement für ein beliebiges Attribut in der Hierarchie definieren, ohne andere Attribute in der Hierarchie berücksichtigen zu müssen. In der Hierarchie Country-Province-City können Sie beispielsweise ein Standardelement für City wie [City].[Montreal] definieren, ohne das Standardelement für State oder für Country definieren zu müssen.  
+ Wenn Ebenen in einer Hierarchie natürlich aggregieren, können Sie ein Standardelement für ein beliebiges Attribut in der Hierarchie definieren, ohne andere Attribute in der Hierarchie berücksichtigen zu müssen. In der Hierarchie Country-Province-City können Sie beispielsweise ein Standardelement für City wie [City] definieren. [Montreal] ohne die Definition des Standardelements für State oder für das Land.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren der & #40; Alle & #41; Ebene für Attributhierarchien](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Konfigurieren der Ebene &#40;Alle&#41; für Attributhierarchien](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

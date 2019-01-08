@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ff3f6c31389622dc424c42e06bfa78477c70cde2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b2a17f1fd57b70dbee056e66a76c0416b0a25c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769368"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533574"
 ---
 # <a name="sysdmpdwnodes-transact-sql"></a>Sys.dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47769368"
 |Typ|**nvarchar(32)**|Der Typ des Knotens.|'BERECHNEN', 'CONTROL', 'VERWALTUNG'|  
 |NAME|**nvarchar(32)**|Logischer Name des Knotens.|Jede Zeichenfolge der Länge der entsprechenden.|  
 |address|**nvarchar(32)**|IP-Adresse dieses Knotens.|Das Format [0-255]. [0-255]. [0-255]. [0-255].|  
-|is_passive|**int**|Gibt an, ob der virtuelle Computer mit dem Knoten, auf dem Server zugewiesen ausgeführt wird oder ein auf den freien Server Failover wurde.|0-Knoten-VM wird auf dem ursprünglichen Server ausgeführt werden.<br /><br /> 1-Knoten-VM wird auf den spare-Server ausgeführt.|  
+|is_passive|**int**|Gibt an, ob der virtuelle Computer mit dem Knoten, auf dem Server zugewiesen ausgeführt wird oder ein auf den freien Server Failover wurde.|0 - Knoten-VM wird auf dem ursprünglichen Server ausgeführt werden.<br /><br /> 1 - Knoten-VM wird auf den spare-Server ausgeführt.|  
 |Bereich|**nvarchar(32)**|Die Region, in dem der Knoten ausgeführt wird.|"PDW", "HDINSIGHT"|  
   
 ## <a name="see-also"></a>Siehe auch  

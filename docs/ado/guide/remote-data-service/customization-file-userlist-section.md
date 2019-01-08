@@ -14,12 +14,12 @@ ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ce5c4b0a789572e58db7068911a9abae7475fcb
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: b499f06254a482deea2c90f2fc570b8bb7c9d43e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557858"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516754"
 ---
 # <a name="customization-file-userlist-section"></a>UserList-Abschnitt der Anpassungsdatei
 Die **Userlist** Abschnitt bezieht sich auf die **verbinden** Abschnitt mit dem gleichen *Bezeichner* Parameter.  
@@ -38,7 +38,7 @@ Die **Userlist** Abschnitt bezieht sich auf die **verbinden** Abschnitt mit dem 
 |Teil|Description|  
 |----------|-----------------|  
 |*userName*|Die *Benutzernamen* der Person, die diese Verbindung. Gültige Benutzernamen sind mit IIS hergestellt **Service Manager** Dialogfeld.|  
-|***accessRights***|Eine der folgenden Zugriffsrechte:<br /><br /> -   **NoAccess** – Benutzer kann nicht auf die Datenquelle zugreifen.<br />-   **ReadOnly** – der Benutzer kann die Datenquelle lesen.<br />-   **"ReadWrite"** – Benutzer Lese- oder Schreibzugriff auf Daten in die Datenquelle.|  
+|***accessRights***|Eine der folgenden Zugriffsrechte:<br /><br /> -   **NoAccess** -Benutzer kann nicht auf die Datenquelle zugreifen.<br />-   **ReadOnly** -Benutzer kann die Datenquelle lesen.<br />-   **"ReadWrite"** -Benutzer Lese- oder Schreibzugriff auf Daten in die Datenquelle.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Connect-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

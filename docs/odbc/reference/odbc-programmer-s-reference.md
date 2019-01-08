@@ -13,12 +13,12 @@ ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7fc5177fda3562efe4561f9d165629419f8a629b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850923"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520186"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC-Programmierer&#39;s-Referenz
 Die *ODBC Programmer's Reference* enthält die folgenden Abschnitte.  
@@ -66,39 +66,39 @@ Die *ODBC Programmer's Reference* enthält die folgenden Abschnitte.
 ## <a name="recommended-reading"></a>Empfohlene Lektüre  
  Weitere Informationen zu SQL stehen die folgenden Standards:  
   
--   Datenbanksprache – "SQL" mit der Integrität Verbesserung, ANSI, 1989 ANSI x 3.135-1989.  
+-   Language - SQL mit Integrität Verbesserung, ANSI, 1989 ANSI x 3.135-1989-Datenbank.  
   
--   Datenbanksprache – SQL: X3H2 mit ANSI und ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
+-   Language - SQL-Datenbank: X3H2 mit ANSI und ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
   
--   Öffnen Sie die, die Datenverwaltung: Structured Query Language (SQL), Version 2 (die Open Group 1996).  
+-   Öffnen Sie die, die Datenverwaltung: Strukturierte Abfragesprache (SQL), Version 2 (die Open Group 1996).  
   
  Zusätzlich zu Standards und Handbücher für SQL-herstellerspezifisches, beschreiben viele Bücher SQL, einschließlich:  
   
--   Datum, J. c, mit Darwen, Hugh: *eine Anleitung für die SQL-Standard* (Addison-Wesley, 1993).  
+-   Datum, J. c, mit Darwen, Hugh: *Eine Anleitung für die SQL-Standard* (Addison-Wesley, 1993).  
   
--   Emerson, Stefan L., Darnovsky, Marcy und Bowman, Judith S.: *die praktische SQL Handbook* (Addison-Wesley, 1989).  
+-   Emerson, Stefan L., Darnovsky, Marcy und Bowman, Judith S.: *Die praktische SQL Handbook* (Addison-Wesley, 1989).  
   
--   Groff, James r und Weinberg, Paul N.: *mithilfe von SQL* (Osborne McGraw-Hill, 1990).  
+-   Groff, James r und Weinberg, Paul N.: *Mithilfe von SQL* (Osborne McGraw-Hill, 1990).  
   
 -   Gruber, Martin: *Grundlegendes zum SQL* (Sybex, 1990).  
   
--   Hursch, Jack L. und J. die Carolyn: *SQL, die strukturierte Abfragesprache* (Registerkarte Bücher, 1988).  
+-   Hursch, Jack L. und Carolyn J.: *SQL, die strukturierte Abfragesprache* (Registerkarte Bücher, 1988).  
   
--   Melton, Jim und Simon "," Alan r: *Grundlegendes zu den neuen SQL: eine vollständige Anleitung* (Morgan Kaufmann Publishers, 1993).  
+-   Melton "," Jim "und" Simon "," Alan r ": *Grundlegendes zu neuen: Eine vollständige Anleitung* (Morgan Kaufmann Publishers, 1993).  
   
 -   Pascal-Schreibweise, Fabian: *SQL und relationalen Grundlagen* (M & T Bücher, 1990).  
   
--   Trimble, J. Harvey, Jr. und Chappell, David: *eine visuelle Einführung in SQL* (Wiley, 1989).  
+-   Trimble, J. Harvey, Jr. und Chappell, David: *Eine visuelle Einführung in SQL* (Wiley, 1989).  
   
 -   Van der Lans, Rick F.: *Einführung in SQL* (Addison-Wesley, 1988).  
   
 -   Vang, Soren: *SQL und relationalen Datenbanken* (Microtrend Bücher, 1990).  
   
--   Viescas, John: *Kurzreferenz für SQL* (Microsoft Corporation, 1989).  
+-   Viescas, John: *Kurzübersicht zu SQL* (Microsoft Corporation, 1989).  
   
  Weitere Informationen zu Transaction processing, onlinetransaktionsverarbeitung finden Sie unter:  
   
--   Grau, J. n und Reuter, Andreas: *Transaction Processing: Concepts and Techniques* (Morgan Kaufmann Publishers, 1993).  
+-   Grau, J. n und Reuter, Andreas: *Verarbeitung von Transaktionen: Konzepte und Techniken* (Morgan Kaufmann Publishers, 1993).  
   
 -   Hackathorn, Richard d: *Enterprise-Datenbankkonnektivität* (Wiley & Sons, 1993).  
   
@@ -110,16 +110,16 @@ Die *ODBC Programmer's Reference* enthält die folgenden Abschnitte.
   
  Weitere Informationen zu ODBC sind eine Reihe von Büchern zur Verfügung, darunter:  
   
--   Geiger, Kyle: *in ODBC* (Microsoft Press®, 1995).  
+-   Geiger, Kyle: *In ODBC* (Microsoft Press®, 1995).  
   
--   Gryphon "," Robert "," Charpentier "," Luc "," Oelschlager "," Jon "," Shoemaker, Andrew, Cross, Jim, "und" Lilley, Albert W.: *mithilfe von ODBC 2* (Que, 1994).  
+-   Gryphon "," Robert "," Charpentier "," Luc "," Oelschlager "," Jon "," Shoemaker, Andrew, Cross, Jim, "und" Lilley, Albert W.: *Mithilfe von ODBC 2* (Que, 1994).  
   
--   Johnston, Tom und Osborne, kennzeichnen: *ODBC-Developers Guide* (Howard W. Sams & Unternehmens, 1994).  
+-   Johnston, Tom und Osborne, zu markieren: *ODBC-Developers Guide* (Howard W. Sams & Unternehmens, 1994).  
   
--   Nord, Ken: *Windows Multi-DBMS-Programmierung: mithilfe C++, Visual Basic, ODBC, OLE 2 und Tools für DBMS-Projekte* (Wiley John & Sons, Inc., 1995).  
+-   Nord, Ken: *Windows-Multi-DBMS-Programmierung: Verwenden von C++, Visual Basic, ODBC, OLE 2 und Tools für DBMS-Projekte* (Wiley John & Sons, Inc., 1995).  
   
--   Stegman, Michael O., Signore, Robert und Creamer, John: *der ODBC-Lösung, eine offene Datenbankverbindung in verteilten Umgebungen* (McGraw-Hill, 1995).  
+-   Stegman, Michael O., Signore, Robert und Creamer, John: *Der ODBC-Lösung, eine offene Datenbankverbindung in verteilten Umgebungen* (McGraw-Hill, 1995).  
   
--   Welch, Keith: *mithilfe von ODBC 2* (Que, 1994).  
+-   Welch, Keith: *Mithilfe von ODBC 2* (Que, 1994).  
   
--   Wittling, Bill: *Selbststudium ODBC in 21 Tage* (Howard W. Sams & Unternehmens, 1994).
+-   Wittling, Rechnung: *Bringen Sie sich selbst ODBC in 21 Tage* (Howard W. Sams & Unternehmens, 1994).

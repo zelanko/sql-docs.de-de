@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b2f1bf4cf990c7888088388a8d9c65a45865a9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fb79f056e533f4aabacdab5e3467bedce22b696
+ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727118"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52860093"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "47727118"
 |first_row_time|**bigint**|Zeitstempel beim Öffnen der ersten Zeile (in Millisekunden).|  
 |last_row_time|**bigint**|Zeitstempel beim Öffnen der letzten Zeile (in Millisekunden).|  
 |close_time|**bigint**|Zeitstempel beim Schließen (in Millisekunden).|  
-|elapsed_time_ms|**bigint**|Gesamte verstrichene Zeit (in Millisekunden), die bisher durch die Vorgänge des Zielknotens beansprucht wurde.|  
-|cpu_time_ms|**bigint**|Die CPU-Gesamtzeit (in Millisekunden), die bisher durch die Vorgänge des Zielknotens beansprucht wurde.|  
+|elapsed_time_ms|**bigint**|Gesamte verstrichene Zeit (in Millisekunden) ein, die Vorgänge des Zielknotens bisher.|  
+|cpu_time_ms|**bigint**|Gesamtanzahl der Verwendung von CPU-Zeit (in Millisekunden) bisher durch die Vorgänge des Zielknotens.|  
 |database_id|**smallint**|ID der Datenbank, die das Objekt enthält, für das die Lese- und Schreibvorgänge ausgeführt werden.|  
 |object_id|**int**|Der Bezeichner für das Objekt, für das die Lese- und Schreibvorgänge ausgeführt werden. Verweist auf "sys.objects.object_id".|  
 |index_id|**int**|Der Index (sofern vorhanden), für den das Rowset geöffnet wird.|  
@@ -73,7 +73,7 @@ ms.locfileid: "47727118"
 |segment_read_count|**int**|Anzahl der bisherigen Segment-Read-Ahead-Lesevorgänge.|  
 |segment_skip_count|**int**|Anzahl der bisher übersprungenen Segmente.| 
 |actual_read_row_count|**bigint**|Anzahl der Zeilen, die durch den Operator zu lesen, bevor die residuale-Prädikat angewendet wurde.| 
-|estimated_read_row_count|**bigint**|**Gilt für:** ab [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Geschätzte Anzahl von Zeilen durch den Operator gelesen werden, bevor die residuale-Prädikat angewendet wurde.|  
+|estimated_read_row_count|**bigint**|**Gilt für:** Beginnend mit [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Geschätzte Anzahl von Zeilen durch den Operator gelesen werden, bevor die residuale-Prädikat angewendet wurde.|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Wenn der Abfrageplanknoten keine E/A-Vorgänge aufweist, werden alle E/A-Leistungsindikatoren auf NULL festgelegt.  
@@ -84,20 +84,30 @@ ms.locfileid: "47727118"
   
 -   Bei einem parallelen Scan meldet diese DMV Leistungsindikatoren für jeden der parallelen Threads für den Scan.
  
- Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 den standard abfrageausführungsstatistik profilerstellungsinfrastruktur Seite-an-Seite mit einer einfachen abfrageausführungsstatistik profilerstellungsinfrastruktur vorhanden. Die neue Abfrage Ausführung profilerstellung statistikinfrastruktur verringert erheblich Performance-Overhead pro Operator Statistiken zur abfrageausführung, z. B. die tatsächliche Anzahl der Zeilen erfassen. Diese Funktion kann aktiviert werden, entweder über globale Start [Ablaufverfolgungsflags 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), oder Sie wird automatisch aktiviert, wenn Query_thread_profile erweiterten Ereignis verwendet wird.
+Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 den standard abfrageausführungsstatistik profilerstellungsinfrastruktur Seite-an-Seite mit einer einfachen abfrageausführungsstatistik profilerstellungsinfrastruktur vorhanden. Die neue Abfrage Ausführung profilerstellung statistikinfrastruktur verringert erheblich Performance-Overhead pro Operator Statistiken zur abfrageausführung, z. B. die tatsächliche Anzahl der Zeilen erfassen. Diese Funktion kann aktiviert werden, entweder über globale Start [Ablaufverfolgungsflags 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), oder Sie wird automatisch aktiviert, wenn Query_thread_profile erweiterten Ereignis verwendet wird.
 
 >[!NOTE]
 > CPU und der verstrichenen Zeit werden unter die einfache Ausführung profilerstellung statistikinfrastruktur Reduzieren der Auswirkungen auf die Leistung nicht unterstützt.
 
- Legen Sie die STATISTICS XML ON und SET STATISTICS PROFILE ON immer die ältere abfrageausführungsstatistik profilerstellungsinfrastruktur verwenden.
-  
+Legen Sie die STATISTICS XML ON und SET STATISTICS PROFILE ON immer die ältere abfrageausführungsstatistik profilerstellungsinfrastruktur verwenden.
+
+Zum Aktivieren der Ausgabe in dm_exec_query_profiles folgendermaßen vor:
+
+In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 und höher verwenden Sie SET STATISTICS PROFILE ON oder SET STATISTICS XML ON zusammen mit der Abfrage wird untersucht. Dies kann die profilerstellung Infrastruktur und führt zu Ergebnissen im DMV für die Sitzung, in der SET-Befehl ausgeführt wurde. Wenn Sie eine Abfrage aus einer Anwendung untersuchen und SET-Optionen mit ihm können nicht aktiviert werden, können Sie erweiterte Ereignisse mit dem das Query_post_execution_showplan-Ereignis, das in der profilerstellungs-Infrastruktur aktivieren wird erstellen. 
+
+In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 können Sie entweder aktivieren [Ablaufverfolgungsflags 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) oder verwenden Sie das erweiterte Query_thread_profile-Ereignis.
+
+>[!NOTE]
+> Die Abfrage geprüft hat, starten Sie nach der Aktivierung der profilerstellungs-Infrastruktur. Wenn die Abfrage bereits ausgeführt wird, wird eine Sitzung für erweiterte Ereignisse starren in nicht dm_exec_query_profiles Ergebnissen.
+
+
 ## <a name="permissions"></a>Berechtigungen  
 
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
 Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
    
 ## <a name="examples"></a>Beispiele  
- Schritt 1: Melden Sie sich eine Sitzung, in der die Abfrage, die Sie analysieren, werden mit dm_exec_query_profiles ausgeführt werden sollen. Verwenden zum Konfigurieren die Abfrage für die profilerstellung SET STATISTICS PROFILE auf. Führen Sie Ihre Abfrage in derselben Sitzung aus.  
+ Schritt 1: Melden Sie sich bei einer Sitzung an, in der Sie die Abfrage ausführen möchten, die Sie mit "sys.dm_exec_query_profiles" analysieren werden. Verwenden zum Konfigurieren die Abfrage für die profilerstellung SET STATISTICS PROFILE auf. Führen Sie Ihre Abfrage in derselben Sitzung aus.  
   
 ```  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -111,7 +121,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- Schritt 2: Melden Sie sich eine zweite Sitzung, die sich von der Sitzung ist in der die Abfrage ausgeführt wird.  
+ Schritt 2: Melden Sie sich bei einer zweiten Sitzung an, die sich von der Sitzung unterscheidet, in der Ihre Abfrage ausgeführt wird.  
   
  Die folgende Anweisung fasst den Fortschritt der Abfrage zusammen, die derzeit in Sitzung 54 ausgeführt wird. Zu diesem Zweck wird die Gesamtzahl der Ausgabezeilen aller Threads für jeden Knoten berechnet und mit der geschätzten Anzahl an Ausgabezeilen für diesen Knoten verglichen.  
   

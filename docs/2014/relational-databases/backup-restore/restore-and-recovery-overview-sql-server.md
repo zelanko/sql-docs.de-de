@@ -20,12 +20,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4ae93c4d7b9827fd8d3a1a6c67d37f3a305fa51b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216380"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370192"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Übersicht über Wiederherstellungsvorgänge (SQL Server)
   Um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank nach einem Ausfall wiederherzustellen, muss ein Datenbankadministrator einen Satz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen im Rahmen einer logisch folgerichtigen und sinnvollen Wiederherstellungssequenz wiederherstellen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -RESTORE WITH RECOVERY unterstützt folgendermaßen die Wiederherstellung von Daten aus Sicherungskopien einer ganzen Datenbank, einer Datendatei oder einer Datenseite:  
@@ -143,15 +143,15 @@ ms.locfileid: "48216380"
 ##  <a name="DRA"></a> Datenbankwiederherstellungsberater (SQL Server Management Studio)  
  Der Datenbankwiederherstellungsberater erleichtert das Erstellen von Wiederherstellungsplänen, durch die optimale folgerichtige Wiederherstellungssequenzen implementiert werden. Viele bekannte Probleme mit der Datenbankwiederherstellung und von Kunden angeforderte Erweiterungen wurden behoben. Mit dem Datenbankwiederherstellungsberater werden u. a. folgende wichtige Erweiterungen eingeführt:  
   
--   **Wiederherstellungsplan-Algorithmus:**  Der zum Erstellen von Wiederherstellungsplänen verwendete Algorithmus wurde erheblich verbessert, insbesondere bei komplexen Wiederherstellungsszenarien. Viele Grenzfälle, einschließlich Verzweigungszenarien in Zeitpunktwiederherstellungen, werden effizienter als in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]behandelt.  
+-   **Wiederherstellungsplan-Algorithmus:**  Die zum Erstellen von Wiederherstellungsplänen verwendete Algorithmus wurde erheblich, insbesondere bei komplexen Wiederherstellungsszenarien verbessert. Viele Grenzfälle, einschließlich Verzweigungszenarien in Zeitpunktwiederherstellungen, werden effizienter als in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]behandelt.  
   
--   **Zeitpunktwiederherstellungen:**  Der Datenbankwiederherstellungsberater vereinfacht erheblich das Wiederherstellen von Datenbanken zu einem bestimmten Zeitpunkt. Die Unterstützung für Zeitpunktwiederherstellungen wird durch eine visuelle Sicherungszeitachse deutlich verbessert. Diese visuelle Zeitachse macht es möglich, einen geeigneten Zeitpunkt als Zielwiederherstellungspunkt zum Wiederherstellen einer Datenbank zu ermitteln. Die Zeitachse erleichtert das Durchlaufen eines verzweigten Wiederherstellungspfads (ein Pfad, der Wiederherstellungsverzweigungen umfasst). Ein angegebener Zeitpunktwiederherstellungsplan schließt automatisch die Sicherungen ein, die für das Wiederherstellen zum Zielzeitpunkt (Datum und Uhrzeit) relevant sind. Informationen finden Sie unter [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+-   **Point-in-Time-Wiederherstellung:**  Der Datenbankwiederherstellungsberater vereinfacht erheblich das Wiederherstellen einer Datenbank zu einem bestimmten Zeitpunkt. Die Unterstützung für Zeitpunktwiederherstellungen wird durch eine visuelle Sicherungszeitachse deutlich verbessert. Diese visuelle Zeitachse macht es möglich, einen geeigneten Zeitpunkt als Zielwiederherstellungspunkt zum Wiederherstellen einer Datenbank zu ermitteln. Die Zeitachse erleichtert das Durchlaufen eines verzweigten Wiederherstellungspfads (ein Pfad, der Wiederherstellungsverzweigungen umfasst). Ein angegebener Zeitpunktwiederherstellungsplan schließt automatisch die Sicherungen ein, die für das Wiederherstellen zum Zielzeitpunkt (Datum und Uhrzeit) relevant sind. Informationen finden Sie unter [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
  Weitere Informationen zum Datenbankwiederherstellungsberater finden Sie in den folgenden Blogs zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltbarkeit:  
   
--   [Wiederherstellungsberater: Eine Einführung](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Wiederherstellungsberater: Eine Einführung in](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Wiederherstellungsberater: Verwenden von SSMS zum Erstellen/Wiederherstellen von Teilungssicherungen](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Wiederherstellungsberater: Verwenden von SSMS zum Erstellen/teilungssicherungen](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
  Keine.  

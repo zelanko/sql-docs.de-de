@@ -17,17 +17,17 @@ ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7827a42a58e11847cdf9c3a63f4a7424eb5cfc5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654966"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539903"
 ---
 # <a name="multiple-results"></a>Mehrere Ergebnisse
 Ein *Ergebnis* etwas von der Datenquelle nach dem Aufruf zurückgegeben eine Anweisung ausgeführt wird. ODBC verfügt über zwei Arten von Ergebnissen: Resultsets und Zeilen-. *Zeilen-* sind die Anzahl der von einem Update betroffenen Zeilen gelöscht, oder insert-Anweisung. Batches, die in beschriebenen [Batches von SQL-Anweisungen](../../../odbc/reference/develop-app/batches-of-sql-statements.md), mehrere Ergebnisse generieren können.  
   
- Die folgende Tabelle enthält die **SQLGetInfo** Optionen, die eine Anwendung verwendet, um festzustellen, ob eine Datenquelle mehrere Ergebnisse für jeden Batch zurückgibt. Insbesondere eine Datenquelle kann eine einzelne Zeilenanzahl für den gesamten Batch von Anweisungen zurückgeben, oder einzelne Zeilenanzahl für jede Anweisung im Batch. Die Datenquelle kann ein einzelnes Resultset für alle Parametersätze zurückgeben oder Resultsets für jeden Satz von Parametern, im Fall einer Ergebnis Set – Generieren von-Anweisung mit einem Array von Parametern ausgeführt.  
+ Die folgende Tabelle enthält die **SQLGetInfo** Optionen, die eine Anwendung verwendet, um festzustellen, ob eine Datenquelle mehrere Ergebnisse für jeden Batch zurückgibt. Insbesondere eine Datenquelle kann eine einzelne Zeilenanzahl für den gesamten Batch von Anweisungen zurückgeben, oder einzelne Zeilenanzahl für jede Anweisung im Batch. Die Datenquelle kann ein einzelnes Resultset für alle Parametersätze zurückgeben oder Resultsets für jeden Satz von Parametern, im Fall einer Ergebnis generiert Set-Anweisung mit einem Array von Parametern ausgeführt.  
   
 |Batchtyp|Zeilenanzahl|Resultsets|  
 |----------------|----------------|-----------------|  
@@ -35,9 +35,9 @@ Ein *Ergebnis* etwas von der Datenquelle nach dem Aufruf zurückgegeben eine Anw
 |Prozedur|SQL_BATCH_ROW_COUNT [a]|--[b].|  
 |Arrays von Parametern|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
- [a] Zeile, die Anzahl – Generieren von Anweisungen in einem Batch möglicherweise unterstützt werden, aber die Rückgabe von der Zeilenanzahl wird nicht unterstützt. Die Option SQL_BATCH_SUPPORT in **SQLGetInfo** gibt an, ob Zeile Count – Generieren von Anweisungen in Batches zulässig sind; die SQL_BATCH_ROW_COUNTS-Option gibt an, ob diese Zeilenanzahl für die Anwendung zurückgegeben werden.  
+ [a] Zeile, die Anweisungen in einem Batch Count generiert möglicherweise unterstützt werden, aber die Rückgabe von der Zeilenanzahl wird nicht unterstützt. Die Option SQL_BATCH_SUPPORT in **SQLGetInfo** gibt an, ob Zeile Count – Generieren von Anweisungen in Batches zugelassen sind; die SQL_BATCH_ROW_COUNTS-Option gibt an, ob diese Zeilenanzahl für die Anwendung zurückgegeben werden.  
   
- [b] explizite Batches und Prozeduren immer mehrere Resultsets zurückgeben, wenn sie mehrere Ergebnis Set – Generieren von Anweisungen enthalten.  
+ [b] explizite Batches und Prozeduren immer mehrere Resultsets zurückgeben, wenn sie mehrere Ergebnis generiert Set-Anweisungen enthalten.  
   
 > [!NOTE]  
 >  Die SQL_MULT_RESULT_SETS-Option in ODBC-1.0 eingeführten bietet nur allgemeine Informationen, ob mehrere Resultsets zurückgegeben werden können. Insbesondere ist es auf "Y" festgelegt, wenn die Bits SQL_BS_SELECT_EXPLICIT oder SQL_BS_SELECT_PROC für SQL_BATCH_SUPPORT zurückgegeben werden oder SQL_PAS_BATCH für SQL_PARAM_ARRAYS_SELECT zurückgegeben wird.  

@@ -10,18 +10,18 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 75845ceafbf776eb15a30b3289de97573109c4d8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 001c489d9abf887495ea83cee00cede1463514ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018190"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376662"
 ---
 # <a name="circularstring"></a>CircularString
   Ein `CircularString` ist eine Auflistung von 0 (null) oder mehr stetigen Kreisbogensegmenten. Ein Kreisbogensegment ist ein von drei Punkten in einer zweidimensionalen Ebene definierter gekrümmter Abschnitt; der erste Punkt darf nicht mit dem dritten Punkt identisch sein. Wenn alle drei Punkte eines Kreisbogensegments kollinear sind, wird das Bogensegment als Liniensegment behandelt.  
   
 > [!IMPORTANT]  
->  Eine ausführliche Beschreibung und Beispiele der neuen räumlichen Funktionen in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], einschließlich der `CircularString` Untertyp, können Sie das Whitepaper zur [neue räumliche Funktionen in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Eine ausführliche Beschreibung und Beispiele der neuen räumlichen Funktionen in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], einschließlich der `CircularString` Untertyp, können Sie das Whitepaper zur [neue räumliche Funktionen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ## <a name="circularstring-instances"></a>CircularString-Instanzen  
  In der unten stehenden Zeichnung sind gültige `CircularString`-Instanzen dargestellt:  
@@ -46,7 +46,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
 ### <a name="valid-instances"></a>Gültige Instanzen  
  Eine gültige `CircularString`-Instanz muss leer sein oder über die folgenden Attribute verfügen:  
   
--   Sie muss mindestens ein Kreisbogensegment enthalten (d. h., sie muss mindestens über drei Punkte verfügen).  
+-   Sie muss mindestens ein Kreisbogensegment enthalten (d. h., sie muss mindestens über drei Punkte verfügen).  
   
 -   Der letzte Endpunkt für jedes Kreisbogensegment in der Sequenz (mit Ausnahme des letzten Segments) muss dem ersten Endpunkt für das jeweils nächste Segment in der Sequenz entsprechen.  
   
@@ -133,7 +133,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- Beachten Sie, dass der Wert für die `CircularString` Beispiel ist in der Nähe 2∏, die den tatsächlichen Umfang des Kreises ist.  
+ Beachten Sie, dass der Wert für die `CircularString` Beispiel ist in der Nähe 2 Zuweisen von gruppenlizenzen finden, die den tatsächlichen Umfang des Kreises ist.  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. Deklarieren und Instanziieren einer Geometry-Instanz mit einem CircularString in derselben Anweisung  
  In diesem Codeausschnitt wird veranschaulicht, wie eine `geometry`-Instanz mit einem `CircularString` in derselben Anweisung deklariert und instanziiert wird:  

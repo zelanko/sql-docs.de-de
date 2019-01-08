@@ -14,15 +14,15 @@ ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26f9bdc0564b98132bb5ec413c99917e78e4d62e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57e0fe66d76f91c8cea35710e9d0245db7619628
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855178"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544426"
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam-Zuordnung
-**SQLBindParam** kann nicht wirklich aufgerufen werden, als veraltet markierte da war es nie gibt es in ODBC; er jedoch doppelte Funktionen weiterhin darstellt – der Treiber-Manager benötigt, es zu exportieren, da ISO "und" Open Group-kompatible Anwendungen verwendet werden werden. Da **SQLBindParameter** enthält die gesamte Funktionalität der **SQLBindParam**, **SQLBindParam** wird zugeordnet werden, auf der Basis von **SQLBindParameter** (wenn der zugrunde liegenden Treiber ist ein ODBC 3.*.x* Treiber). Eine ODBC 3.*.x* Treiber muss nicht implementiert **SQLBindParam**.  
+**SQLBindParam** nicht wirklich aufgerufen werden als veraltet markierte, da sie noch nie war es in ODBC; allerdings es steht noch immer duplizierte Funktionalität – der Treiber-Manager benötigt, es zu exportieren, da ISO "und" Open Group-kompatible Anwendungen verwendet werden werden. Da **SQLBindParameter** enthält die gesamte Funktionalität der **SQLBindParam**, **SQLBindParam** wird zugeordnet werden, auf der Basis von **SQLBindParameter** (wenn der zugrunde liegenden Treiber ist ein ODBC 3.*.x* Treiber). Eine ODBC 3.*.x* Treiber muss nicht implementiert **SQLBindParam**.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn der folgende Aufruf von **SQLBindParam** erfolgt:  

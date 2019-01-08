@@ -1,5 +1,5 @@
 ---
-title: Datenquellen und Bindungen (SSAS – mehrdimensional) | Microsoft Docs
+title: Datenquellen und Bindungen (SSAS – mehrdimensional) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2461bbdc3707ed30e130aaa32e117f24f9fe379d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 76afbfcd2cd7668cfc65fc5078a1015ac33bc964
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025039"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529107"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Datenquellen und Bindungen (SSAS – mehrdimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34025039"
   
  Die Möglichkeiten zum Ausdrücken der Datenquelle sind vom Typ der Datenquelle abhängig. Beispielsweise wird eine relationale Datenquelle durch die Verbindungszeichenfolge gekennzeichnet. Weitere Informationen zu Datenquellen finden Sie unter [Datenquellen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md).  
   
- Unabhängig von der verwendeten Datenquelle enthält die Datenquellensicht (DSV) die Metadaten für die Datenquelle. Daher werden die Bindungen für einen Cube oder andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte als Bindungen zur DSV ausgedrückt. Diese Bindungen können Bindungen zu logischen Objekten einschließen, beispielsweise Sichten, berechnete Spalten und Beziehungen, die physisch in der Datenquelle nicht vorhanden sind. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fügt eine berechnete Spalte hinzu, die den Ausdruck für die DSV kapselt, und anschließend wird das entsprechende OLAP-Measure an diese Spalte in der DSV gebunden. Weitere Informationen zu DSVs finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+ Unabhängig von der verwendeten Datenquelle enthält die Datenquellensicht (DSV) die Metadaten für die Datenquelle. Daher werden die Bindungen für einen Cube oder andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte als Bindungen zur DSV ausgedrückt. Diese Bindungen können Bindungen zu logischen Objekten-Objekten wie z. B. Sichten, berechnete Spalten und Beziehungen, die nicht physisch in der Datenquelle vorhanden sind, enthalten. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fügt eine berechnete Spalte hinzu, die den Ausdruck für die DSV kapselt, und anschließend wird das entsprechende OLAP-Measure an diese Spalte in der DSV gebunden. Weitere Informationen zu DSVs finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Jedes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt bindet auf eigene Weise an die Datenquelle. Außerdem kann die Datenbindung für diese Objekte und die Definition der Datenquelle mit der Definition des datengebundenen Objekts (beispielsweise der Dimension) inline oder out-of-line als separater Definitionssatz bereitgestellt werden.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34025039"
 |BigInt|Ein 64-Bit-Integer mit Vorzeichen Dieser Datentyp wird dem Int64-Datentyp in Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_I8-Datentyp in der OLE DB zugeordnet.|  
 |Bool|Ein boolescher Wert. Dieser Datentyp wird dem booleschen Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_BOOL-Datentyp in der OLE DB zugeordnet.|  
 |Währung|Ein Währungswert im Bereich von -263 (bzw. -922.337.203.685.477,5808) bis 263-1 (bzw. +922.337.203.685.477,5807) mit einer Genauigkeit von einem Zehntausendstel einer Währungseinheit. Dieser Datentyp wird dem Decimal-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_CY-Datentyp in der OLE DB zugeordnet.|  
-|Datum|Datumsangaben, die als Gleitkommazahl mit doppelter Genauigkeit gespeichert sind. Der ganzzahlige Teil gibt die Anzahl von Tagen seit dem 30. Dezember 1899 wieder, während der Bruchteil ein Teil eines Tages ist. Dieser Datentyp wird dem DateTime-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_DATE-Datentyp in der OLE DB zugeordnet.|  
+|date|Datumsangaben, die als Gleitkommazahl mit doppelter Genauigkeit gespeichert sind. Der ganzzahlige Teil gibt die Anzahl von Tagen seit dem 30. Dezember 1899 wieder, während der Bruchteil ein Teil eines Tages ist. Dieser Datentyp wird dem DateTime-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_DATE-Datentyp in der OLE DB zugeordnet.|  
 |Double|Eine Gleitkommazahl mit doppelter Genauigkeit im Bereich von -1,79E +308 bis 1,79E +308. Dieser Datentyp wird dem Double-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_R8-Datentyp in der OLE DB zugeordnet.|  
 |Integer|Ein 32-Bit-Integer mit Vorzeichen Dieser Datentyp wird dem Int32-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_I4-Datentyp in der OLE DB zugeordnet.|  
 |Single|Eine Gleitkommazahl mit einfacher Genauigkeit im Bereich von -3,40E +38 bis 3,40E +38. Dieser Datentyp wird dem Single-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_R4-Datentyp in der OLE DB zugeordnet.|  
@@ -52,7 +52,7 @@ ms.locfileid: "34025039"
  Alle von der Datenquelle empfangenen Daten werden in den [!INCLUDE[ssAS](../../includes/ssas-md.md)] -Typ konvertiert, der in der Bindung (normalerweise während der Verarbeitung) angegeben wird. Ein Fehler wird ausgelöst, wenn die Konvertierung (z. B. von String in Int) nicht ausgeführt werden kann. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] legt den Datentyp in der Bindung normalerweise auf den Typ fest, der am ehesten dem Quelltyp in der Datenquelle entspricht. Beispielsweise werden die SQL-Typen Date, DateTime, SmallDateTime, DateTime2, DateTimeOffset [!INCLUDE[ssAS](../../includes/ssas-md.md)] Date zugewiesen und der SQL-Typ Time wird String zugeordnet.  
   
 ## <a name="bindings-for-dimensions"></a>Bindungen für Dimensionen  
- Jedes Attribut einer Dimension wird an eine Spalte in der DSV gebunden. Alle Attribute einer Dimension müssen aus einer einzigen Datenquelle kommen. Die Attribute können jedoch an Spalten in unterschiedlichen Tabellen gebunden werden. Die Beziehungen zwischen den Tabellen werden in der DSV definiert. Wenn in einer Tabelle mehrere Beziehungssätze vorhanden sind, kann es erforderlich sein, in der DSV eine benannte Abfrage einzufügen, die als Aliastabelle fungiert. Ausdrücke und Filter werden in der DSV mithilfe von benannten Berechnungen und benannten Abfragen definiert.  
+ Jedes Attribut einer Dimension wird an eine Spalte in der DSV gebunden. Alle Attribute einer Dimension müssen aus einer einzigen Datenquelle kommen. Die Attribute können jedoch an Spalten in unterschiedlichen Tabellen gebunden werden. Die Beziehungen zwischen den Tabellen werden in der DSV definiert. In der Fall, in denen mehr als ein Satz von Beziehungen auf dieselbe Tabelle vorhanden ist, möglicherweise es erforderlich, führen eine benannte Abfrage in der DSV als eine 'Alias'-Tabelle zu fungieren. Ausdrücke und Filter werden in der DSV mithilfe von benannten Berechnungen und benannten Abfragen definiert.  
   
 ## <a name="bindings-for-measuregroups-measures-and-partitions"></a>Bindungen für Measuregruppen, Measures und Partitionen  
  Jede Measuregruppe besitzt die folgenden Standardbindungen:  
@@ -145,7 +145,7 @@ ms.locfileid: "34025039"
   
  Out-of-Line-Bindungen werden durch Einfügung des optionalen **Bindings** -Auflistungsobjekts mit dem Verarbeitungsbefehl festgelegt. Die optionale **Bindings** -Auflistung enthält die folgenden Elemente.  
   
-|Eigenschaft|Kardinalität|Typ|Description|  
+|Eigenschaft|Cardinality|Typ|Description|  
 |--------------|-----------------|----------|-----------------|  
 |**Bindung**|0-n|**Bindung**|Stellt eine Auflistung neuer Bindungen bereit.|  
 |**DataSource**|0-1|**DataSource**|Ersetzt **DataSource** vom Server, der verwendet worden wäre.|  
@@ -154,9 +154,9 @@ ms.locfileid: "34025039"
  Alle Elemente, die sich auf Out-of-Line-Bindungen beziehen, sind optional. Für alle nicht angegebenen Elemente verwendet ASSL die im DDL-Code des permanenten Objekts enthaltene Festlegung. Die Angabe von **DataSource** oder **DataSourceView** im **Prozess** -Befehl ist optional. Wenn **DataSource** oder **DataSourceView** angegeben wird, werden diese nicht instanziiert und bleiben nicht erhalten, nachdem der **Process** -Befehl ausgeführt wurde.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definition des Out-of-Line-Bindungstyps  
- Innerhalb der Out-of-Line- **Bindings** -Auflistung ermöglicht ASSL eine Auflistung von Bindungen für mehrere Objekte, von denen jedes eine **Bindung**ist. Jede **Bindung** besitzt einen erweiterten Objektverweis, der dem Objektverweis entspricht, der jedoch auch auf untergeordnete Objekte verweisen kann (beispielsweise Dimensionsattribute und Measuregruppenattribute). Dieses Objekt übernimmt die flatform normalerweise von der **Objekt** Element im **Prozess** Befehlen, mit dem Unterschied, die die \< *Objekt* > \< */Object*>-Tags nicht vorhanden sind.  
+ Innerhalb der Out-of-Line- **Bindings** -Auflistung ermöglicht ASSL eine Auflistung von Bindungen für mehrere Objekte, von denen jedes eine **Bindung**ist. Jede **Bindung** besitzt einen erweiterten Objektverweis, der dem Objektverweis entspricht, der jedoch auch auf untergeordnete Objekte verweisen kann (beispielsweise Dimensionsattribute und Measuregruppenattribute). Dieses Objekt übernimmt die flatform normalerweise von der **Objekt** Element im **Prozess** Befehlen, mit dem Unterschied, der die \< *Objekt* > \< */Object*>-Tags nicht vorhanden sind.  
   
- Jedes Objekt, das für die die Bindung wird angegeben, wird durch ein XML-Element des Formulars identifiziert \< *Objekt*> ID (z. B. **DimensionID**). Nachdem Sie, das Objekt identifiziert haben so genau wie möglich mit dem Formular \< *Objekt*>-ID, wird das Element für die Bindung angegeben wird, die in der Regel ist **Quelle**. Häufig ist die **Source** eine Eigenschaft für das **DataItem**. Dies ist der Fall bei Spaltenbindungen in einem Attribut. In diesem Fall geben Sie nicht das **DataItem** -Tag an, sondern lediglich die **Source** -Eigenschaft, als befände sich diese direkt in der zu bindenden Spalte.  
+ Jedes Objekt, das für die die Bindung wird angegeben, wird durch ein XML-Element der Form identifiziert \< *Objekt*> ID (z. B. **DimensionID**). Nachdem Sie, das Objekt identifiziert haben so genau wie möglich mit dem Formular \< *Objekt*>-ID, wird das Element für die die Bindung angegeben wird, in der Regel **Quelle**. Häufig ist die **Source** eine Eigenschaft für das **DataItem**. Dies ist der Fall bei Spaltenbindungen in einem Attribut. In diesem Fall geben Sie nicht das **DataItem** -Tag an, sondern lediglich die **Source** -Eigenschaft, als befände sich diese direkt in der zu bindenden Spalte.  
   
  **KeyColumns** werden durch ihre Sortierung innerhalb der **KeyColumns** -Auflistung identifiziert. Es ist nicht möglich, beispielsweise nur die erste und die dritte Spalte eines Attributs anzugeben, da keine Möglichkeit besteht, festzulegen, dass die zweite Schlüsselspalte übersprungen werden soll. Alle Schlüsselspalten müssen in der Out-of-Line-Bindung für ein Dimensionsattribut vorhanden sein.  
   

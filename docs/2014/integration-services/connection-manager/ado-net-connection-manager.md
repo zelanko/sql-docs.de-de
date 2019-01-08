@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], ADO.NET
@@ -15,19 +14,19 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7452c96f624199bb2dca7d1b817b60ce68dafb42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c58df877a98ac5c62aeb7d7ca45beed7f129eaf0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147552"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799812"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET-Verbindungs-Manager
   Ein [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager ermöglicht einem Paket den Zugriff auf Datenquellen mithilfe eines .NET-Anbieters. Dieser Verbindungs-Manager dient in der Regel für den Zugriff auf Datenquellen, z.B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sowie Datenquellen, die durch OLE DB und XML in benutzerdefinierten Tasks verfügbar gemacht werden, die mit einer Programmiersprache wie C# in verwaltetem Code geschrieben sind.  
   
  Beim Hinzufügen einer [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Verbindungs-Manager einem Paket [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, der als aufgelöst wird erstellt eine [!INCLUDE[vstecado](../../includes/vstecado-md.md)] zur Laufzeit, des Verbindungs-Manager-Eigenschaften festlegt, und fügt den Verbindungs-Manager die `Connections` -Sammlung im Paket.  
   
- Die `ConnectionManagerType` Eigenschaft des Verbindungs-Managers nastaven NA hodnotu `ADO.NET`. Der Wert des `ConnectionManagerType` qualifiziert, um den Namen des .NET-Anbieters einzuschließen, die der Verbindungs-Manager verwendet wird.  
+ Die `ConnectionManagerType`-Eigenschaft des Verbindungs-Managers ist auf `ADO.NET` festgelegt. Der Wert von `ConnectionManagerType` ist qualifiziert, um den Namen des .NET-Anbieters einzuschließen, der vom Verbindungs-Manager verwendet wird.  
   
 ## <a name="adonet-connection-manager-troubleshooting"></a>Problembehandlung des ADO.NET-Verbindungs-Managers  
  Sie können die vom [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktionen können Sie Probleme bei Verbindungen behandeln, die vom [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager mit externen Datenquellen hergestellt werden. Aktivieren Sie zum Protokollieren der vom [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager an externe Datenprovider gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandeln von Problemen mit Paketausführungstools](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -61,9 +60,9 @@ ms.locfileid: "48147552"
   
 -   [ADO.NET-Verbindungs-Manager konfigurieren](../configure-ado-net-connection-manager.md)  
   
- Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrationsdienste &#40;SSIS&#41; Verbindungen](integration-services-ssis-connections.md)  
+ [Integration Services-Verbindungen &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

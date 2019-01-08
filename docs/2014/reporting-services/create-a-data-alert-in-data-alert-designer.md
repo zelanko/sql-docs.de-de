@@ -11,12 +11,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 02e1222b289d4cb081335a3575b0e1948fb37728
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 5e70f08293132f570ddb0663db7944ecb4bba497
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071844"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507970"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Erstellen einer Datenwarnung im Datenwarnungs-Designer
   Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen. Nach dem Speichern der Warnungsdefinitionen können Sie diese im Datenwarnungs-Designer erneut öffnen, bearbeiten und dann erneut speichern. Weitere Informationen zum Bearbeiten von Warnungsdefinitionen finden Sie unter [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](manage-my-data-alerts-in-data-alert-manager.md) und [Bearbeiten einer Datenwarnung im Warnungs-Designer](edit-a-data-alert-in-alert-designer.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "49071844"
   
      Der Standardname der Warnungsdefinition entspricht dem Namen des Berichts. Warnungsdefinitionsnamen müssen nicht eindeutig sind, sodass sie schwer voneinander zu unterscheiden sind, wenn Sie die Liste der Warnungen später im Datenwarnungs-Manager anzeigen. Es empfiehlt sich, sinnvolle und eindeutige Namen für die Warnungsdefinitionen zu verwenden.  
   
-6.  Ändern Sie optional die Standardoption für die Daten von **die Daten im Datenfeed Folgendes enthalten** zu **keine Daten im Datenfeed enthält**.  
+6.  Ändern Sie die Standarddatenoption optional von **die Daten im Datenfeed Folgendes enthalten** in **die Daten im Datenfeed Folgendes nicht enthalten**.  
   
 7.  Klicken Sie auf **Regel hinzufügen**.  
   
@@ -65,21 +65,21 @@ ms.locfileid: "49071844"
   
      Abhängig vom Datentyp der ausgewählten Spalte sind andere Vergleichsoperatoren aufgeführt. Wenn die Spalte einen Datumsdatentyp aufweist, wird ein Kalendersymbol neben dem Schwellenwert für die Regel angezeigt. Sie können Daten eingeben, indem Sie auf ein Datum im Kalender klicken oder das Datum eingeben.  
   
-     Der Datenwarnungs-Designer stellt zwei Vergleichsmodi bereit: **Werteingabemodus** und **Feldauswahlmodus**. Der Standardmodus ist der **Werteingabemodus**. Sie können OR-Klauseln nur hinzufügen, wenn der **Werteingabemodus** aktiviert ist und Sie den Vergleich **ist** verwenden.  
+     Datenwarnungs-Designer stellt zwei Vergleichsmodi bereit: **Wert den Eingabemodus für** und **Feld Auswahlmodus**. Der Standardmodus ist der **Werteingabemodus**. Sie können OR-Klauseln nur hinzufügen, wenn der **Werteingabemodus** aktiviert ist und Sie den Vergleich **ist** verwenden.  
   
 9. Um eine OR-Klausel hinzuzufügen, klicken Sie auf den Pfeil nach unten und anschließend auf **Werteingabemodus**.  
   
 10. Geben Sie den Vergleichswert ein.  
   
-11. Klicken Sie optional erneut auf die Auslassungspunkte ( **…** ).  
+11. Klicken Sie optional erneut auf die Auslassungspunkte **(...)**.  
   
-     Die Auslassungspunkte ( **…** ) werden in der Zeile mit der ersten Klausel angezeigt.  
+     Die Auslassungspunkte **(...)** werden in der Zeile mit der ersten Klausel angezeigt.  
   
      Eine OR-Klausel wird unten und innerhalb der AND-Regel hinzugefügt.  
   
 12. Klicken Sie optional auf den Pfeil nach unten, wählen Sie **Feldauswahlmodus**und anschließend eine Spalte in der Liste aus.  
   
-     Die Auslassungspunkte ( **…** ), auf die Sie zum Hinzufügen von OR-Klauseln klicken, werden nicht mehr angezeigt.  
+     Die Auslassungspunkte **(...)**, auf die Sie zum Hinzufügen von OR-Klauseln klicken, werden nicht mehr angezeigt.  
   
 13. Klicken Sie optional erneut auf **Regel hinzufügen** , um weitere Regeln hinzuzufügen.  
   

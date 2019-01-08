@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - removing subscriptions
@@ -16,12 +15,12 @@ ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9eb39e06198881ac5c51a9fc78e623b010485a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac5d4f7d199e3ee3de6ffb43e2c43e232681b0d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175310"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785112"
 ---
 # <a name="delete-a-pull-subscription"></a>Löschen eines Pullabonnements
   In diesem Thema wird beschrieben, wie ein Pullabonnement in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) gelöscht wird.  
@@ -36,7 +35,7 @@ ms.locfileid: "48175310"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Löschen Sie ein Pullabonnement auf dem Verleger (aus dem Ordner **Lokale Veröffentlichungen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) oder dem Abonnenten (aus dem Ordner **Lokale Abonnenten** ). Beim Löschen eines Abonnements werden keine Objekte oder Daten aus dem Abonnement entfernt, diese müssen manuell entfernt werden.  
   
 #### <a name="to-delete-a-pull-subscription-at-the-publisher"></a>So löschen Sie ein Pullabonnement auf dem Verleger  
@@ -66,9 +65,9 @@ ms.locfileid: "48175310"
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>So löschen Sie ein Pullabonnement für eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_droppullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql) aus. Geben Sie **@publication**, **@publisher**und **@publisher_db**.  
+1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_droppullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql) aus. Geben Sie **@publication**, **@publisher**und **@publisher_db**verfügbar ist.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql) aus. Geben Sie **@publication** und **@subscriber**verfügbar ist. Geben Sie für **@article** den Wert **@article**. (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann, geben Sie den Wert **1** den Wert **@ignore_distributor** an, um das Abonnement ohne die damit verbundenen Objekte auf dem Verteiler zu löschen.  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql) aus. Geben Sie **@publication** und **@subscriber**eine Momentaufnahme über FTP bereitgestellt wird. Geben Sie für **@article** den Wert **@article**. (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann, geben Sie den Wert **1** den Wert **@ignore_distributor** an, um das Abonnement ohne die damit verbundenen Objekte auf dem Verteiler zu löschen.  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>So löschen Sie ein Pullabonnement für eine Mergeveröffentlichung  
   
@@ -98,15 +97,15 @@ ms.locfileid: "48175310"
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPullSubscription> -Klasse, und legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>und <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> fest: Verwenden Sie die Verbindung zum Abonnenten aus Schritt 1, um die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft festzulegen.  
   
-3.  Überprüfen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> -Eigenschaft, um festzustellen, ob das Abonnement vorhanden ist. Wenn der Wert dieser Eigenschaft ist `false`, entweder die Abonnementeigenschaften in Schritt 2 falsch definiert, oder das Abonnement ist nicht vorhanden.  
+3.  Überprüfen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> -Eigenschaft, um festzustellen, ob das Abonnement vorhanden ist. Wenn der Wert dieser Eigenschaft `false` ist, wurden entweder die Abonnementeigenschaften in Schritt 2 falsch definiert, oder das Abonnement ist nicht vorhanden.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> -Methode auf.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A>-Methode auf.  
   
 5.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication> -Klasse, indem Sie die Verlegerverbindung aus Schritt 1 verwenden. Geben Sie <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> und <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>an.  
   
-6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode `false` zurückgibt, sind entweder die in Schritt 5 angegebenen Eigenschaften falsch definiert, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf. Wenn diese Methode `false` zurückgibt, sind entweder die in Schritt 5 angegebenen Eigenschaften falsch definiert, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
   
-7.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.TransPublication.RemovePullSubscription%2A> -Methode auf. Geben Sie den Namen des Abonnenten und der Abonnementdatenbank für die Parameter *subscriber* und *subscriberDB* an.  
+7.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.TransPublication.RemovePullSubscription%2A>-Methode auf. Geben Sie den Namen des Abonnenten und der Abonnementdatenbank für die Parameter *subscriber* und *subscriberDB* an.  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>So löschen Sie ein Pullabonnement für eine Mergeveröffentlichung  
   
@@ -114,15 +113,15 @@ ms.locfileid: "48175310"
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePullSubscription> -Klasse, und legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>und <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> fest: Verwenden Sie die Verbindung aus Schritt 1, um die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft festzulegen.  
   
-3.  Überprüfen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> -Eigenschaft, um festzustellen, ob das Abonnement vorhanden ist. Wenn der Wert dieser Eigenschaft ist `false`, entweder die Abonnementeigenschaften in Schritt 2 falsch definiert, oder das Abonnement ist nicht vorhanden.  
+3.  Überprüfen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> -Eigenschaft, um festzustellen, ob das Abonnement vorhanden ist. Wenn der Wert dieser Eigenschaft `false` ist, wurden entweder die Abonnementeigenschaften in Schritt 2 falsch definiert, oder das Abonnement ist nicht vorhanden.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> -Methode auf.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A>-Methode auf.  
   
 5.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse, indem Sie die Verlegerverbindung aus Schritt 1 verwenden. Geben Sie <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> und <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>an.  
   
-6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode `false` zurückgibt, sind entweder die in Schritt 5 angegebenen Eigenschaften falsch definiert, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf. Wenn diese Methode `false` zurückgibt, sind entweder die in Schritt 5 angegebenen Eigenschaften falsch definiert, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
   
-7.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.RemovePullSubscription%2A> -Methode auf. Geben Sie den Namen des Abonnenten und der Abonnementdatenbank für die Parameter *subscriber* und *subscriberDB* an.  
+7.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.RemovePullSubscription%2A>-Methode auf. Geben Sie den Namen des Abonnenten und der Abonnementdatenbank für die Parameter *subscriber* und *subscriberDB* an.  
   
 ###  <a name="PShellExample"></a> Beispiele (RMO)  
  In diesem Beispiel wird ein Pullabonnement für eine Transaktionsveröffentlichung gelöscht und die Registrierung des Abonnements auf dem Verleger entfernt.  
@@ -139,6 +138,6 @@ ms.locfileid: "48175310"
   
 ## <a name="see-also"></a>Siehe auch  
  [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)  
+ [Bewährte Methoden für die Replikationssicherheit](security/replication-security-best-practices.md)  
   
   

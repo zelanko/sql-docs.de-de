@@ -23,12 +23,12 @@ ms.assetid: e9b9ca57-a5cc-4fc0-87b5-305257038d56
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14a547098cf72ac4b4f1c49044aba1bb2f024adc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66c2683bd383ebd3d0a9278cb008b6909dc80007
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055530"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527119"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>Angeben von Bereitstellungsoptionen für Partitionen und Rollen
   Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent liest die Bereitstellungsoptionen für Partitionen und Rollen aus der \< *Projektname*> .deploymentoptions-Datei. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellt diese Datei, wenn Sie das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt erstellen. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwendet die Bereitstellungsoptionen für Partitionen und Rollen des aktuellen Projekts, wenn die \< *Projektname*> .deploymentoptions-Datei erstellt wird. Weitere Informationen zu den Konfigurationseinstellungen finden Sie unter [Grundlegendes zu den zum Erstellen des Bereitstellungsskripts verwendeten Eingabedateien](deployment-script-files-input-used-to-create-deployment-script.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "48055530"
   
 -   Vorhandene Rollen und Rollenelemente in der Zieldatenbank werden beibehalten, neue Rollen werden nicht bereitgestellt.  
   
--   **Hinweis:** Wenn vorhandene Rollen und Elemente beibehalten werden, werden die Berechtigungen, die diesen Rollen zugeordnet sind, zurückgesetzt. Sicherheitsberechtigungen sind in den Objekten enthalten, die sie sichern, und nicht in den Sicherheitsrollen, denen sie zugeordnet sind. Weitere Informationen zum Arbeiten mit diesem Verhalten mithilfe des Analysis Services-Bereitstellungs-Assistenten finden Sie im Abschnitt zum Beibehalten von Rollen und Elementen in der Microsoft Knowledge Base.  
+-   **Hinweis:** Wenn vorhandene Rollen und Elemente beibehalten werden, werden die Berechtigungen, die diesen Rollen zugeordnet sind, zurückgesetzt. Sicherheitsberechtigungen sind in den Objekten enthalten, die sie sichern, und nicht in den Sicherheitsrollen, denen sie zugeordnet sind. Weitere Informationen zum Arbeiten mit diesem Verhalten mithilfe des Assistenten für Analysis Service-Bereitstellung finden Sie unter "Beibehalten von Rollen und Mitglieder" in der Microsoft Knowledge Base.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>Ändern der Bereitstellungsoptionen für Partitionen und Rollen  
  Möglicherweise müssen Sie die Bereitstellung der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt mit anderen Partitions- und Rollenoptionen als denen, die in der \< *Projektname*> .deploymentoptions-Datei. Angenommen, Sie vorhandene Partitionen, Rollen und Mitglieder der Rolle, anstatt zu ersetzen alle vorhandenen Partitionen, Rollen und Elemente, wie angegeben in beibehalten möchten die \< *Projektname*> .deploymentoptions-Datei.  
@@ -62,11 +62,11 @@ ms.locfileid: "48055530"
   
 -   Führen Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interaktiv aus, und geben Sie auf der Seite **Bereitstellungsoptionen für Partitionen und Rollen** neue Bereitstellungsoptionen für die Partitionen und Rollen an.  
   
-     – oder –  
+     -oder-  
   
 -   Führen Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] an der Eingabeaufforderung aus, und legen Sie fest, dass der Assistent im Antwortdateimodus ausgeführt wird. Weitere Informationen zum Antwortdateimodus finden Sie unter [Ausführen des Bereitstellungs-Assistenten für Analysis Services](running-the-analysis-services-deployment-wizard.md).  
   
-     – oder –  
+     -oder-  
   
 -   Öffnen der \< *Projektname*> .deploymentoptions in einem Text-Editor, und manuell die Optionen ändern.  
   

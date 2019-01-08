@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.rg.properties.f1
@@ -15,21 +14,21 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a3e2caa3c2b89ead6ee109ea13fa6783cc61dab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1093297892ea2e03cb9583a1e5c40a1c2a85b19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116410"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781263"
 ---
 # <a name="view-resource-governor-properties"></a>Anzeigen der Eigenschaften der Ressourcenkontrolle
   Auf der Seite Eigenschaften der Ressourcenkontrolle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie Ressourcenkontrollentitäten erstellen oder konfigurieren, z. B. Ressourcenpools und Arbeitsauslastungsgruppen.  
   
 1.  **Vorbereitungen:**  [Berechtigungen](#Permissions)  
   
-2.  **Eigenschaften der Ressourcenkontrolle anzeigen mit:**  [Seite „Eigenschaften der Ressourcenkontrolle“](#ViewRGProp)  
+2.  **So zeigen Sie die Eigenschaften der Ressourcenkontrolle mit an:**  [Seite "Eigenschaften der Ressourcenkontrolle"](#ViewRGProp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Neben dem Anzeigen der Eigenschaften von Ressourcenkontrollentitäten können Sie auf der Seite **Eigenschaften der Ressourcenkontrolle** mehrere Konfigurationstasks ausführen. Weitere Informationen finden Sie in den folgenden Themen:  
   
 -   [Aktivieren der Ressourcenkontrolle](enable-resource-governor.md)  

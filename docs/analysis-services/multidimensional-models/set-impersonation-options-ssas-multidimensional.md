@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional) | Microsoft Docs
+title: Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6c11064ecc87744999c31080e6a4d57a3849f5d2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 279aff4acd671318b75988919d7625591f17812f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026157"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533813"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34026157"
  Alle Optionen sind im Dialogfeld verfügbar, aber nicht alle Optionen sind für jedes Szenario geeignet. Bestimmen Sie anhand folgender Informationen die beste Option für das Szenario.  
   
  **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden**  
- Wählen Sie diese Option aus, damit die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekt verwenden Sie die Anmeldeinformationen des Windows-Benutzerkontos in folgendem Format angegeben:  *\<Domänenname >***\\***\<Benutzer Kontoname >*.  
+ Wählen Sie diese Option, damit die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekt verwenden Sie die Sicherheitsanmeldeinformationen eines Windows-Benutzerkontos in folgendem Format angegeben: *\<Domänenname >***\\***\<Benutzerkontonamen >*.  
   
  Wählen Sie diese Option aus, um eine dedizierte Windows-Benutzeridentität mit den niedrigsten Privilegien zu verwenden, die Sie speziell für Datenzugriffszwecke erstellt haben. Wenn Sie z. B. routinemäßig ein allgemeines Konto zum Abrufen von Daten für Berichte erstellen, können Sie dieses Konto hier angeben.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34026157"
  Bei DMX-OPENQUERY-Anweisungen, lokalen Cubes und Miningmodellen werden die Anmeldeinformationen des aktuellen Benutzers auch dann verwendet, wenn Sie die Dienstkontooption auswählen. Die Dienstkontooption wird für Out-of-Line-Bindungen nicht unterstützt.  
   
 > [!NOTE]  
->  Wenn ein Data Mining-Modell aus einem Cube verarbeitet wird, können Fehler auftreten, sofern das Dienstkonto nicht über Administratorberechtigungen für die Analysis Services-Instanz verfügt. Weitere Informationen finden Sie unter [Minigstruktur: Fehler bei der Verarbeitung, wenn die Datenquelle ein OLAP-Cube ist](http://go.microsoft.com/fwlink/?LinkId=251610).  
+>  Wenn ein Data Mining-Modell aus einem Cube verarbeitet wird, können Fehler auftreten, sofern das Dienstkonto nicht über Administratorberechtigungen für die Analysis Services-Instanz verfügt. Weitere Informationen finden Sie unter [Miningstruktur: Fehler bei der Verarbeitung, wenn die Datenquelle ein OLAP-Cube ist](http://go.microsoft.com/fwlink/?LinkId=251610).  
   
  **Anmeldeinformationen des aktuellen Benutzers verwenden**  
  Wählen Sie diese Option aus, damit vom [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt für Out-of-Line-Bindungen, DMX OPENQUERY-Anweisungen, lokale Cubes und Miningmodelle die Sicherheitsanmeldeinformationen des aktuellen Benutzers verwendet werden.  
@@ -76,7 +76,7 @@ ms.locfileid: "34026157"
  **Standard** oder **Erben**  
  Im Dialogfeld wird **Standard** für die Identitätswechseloptionen auf Datenbankebene und **Erben** für Identitätswechseloptionen auf Datenquellenebene verwendet.  
   
- **Datenquellen – Option "Erben"**  
+ **Datenquellen – Option "erben"**  
   
  Auf Datenquellenebene wird durch **Erben** angegeben, dass von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Identitätswechseloption des übergeordneten Objekts verwendet werden muss. In mehrdimensionalen Modellen wird als übergeordnetes Objekt die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank verwendet. Wenn Sie die Option **Erben** auswählen, können Sie die Identitätswechseleinstellungen für diese und andere Datenquellen, die Teil derselben Datenbank sind, zentral verwalten. Um diese Option sinnvoll einzusetzen, wählen Sie einen bestimmten Windows-Benutzernamen und ein Kennwort auf Datenbankebene aus. Ansonsten entspricht die Kombination von **Erben** für die Datenquelle und **Standard** für die Datenbank der Verwendung der Dienstkontooption.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "34026157"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Festlegen von Datenquelleneigenschaften & #40; SSAS – mehrdimensional & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
+ [Festlegen von Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 
   
   

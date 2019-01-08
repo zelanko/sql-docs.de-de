@@ -13,15 +13,15 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d7acb87440377516e287e8ba077242953f13adc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d13cec7bac124a8fb1289de6086ec0326789501e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141710"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366702"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Leistungsindikatoren für die Leistungsobjekte 'ReportServer:Service' und 'ReportServerSharePoint:Service'
-  In diesem Thema werden Leistungsindikatoren für die folgenden [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Leistungsobjekte:  
+  In diesem Thema werden Leistungsindikatoren für die folgenden [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Leistungsobjekte:  
   
 -   `ReportServer:Service`  
   
@@ -30,7 +30,7 @@ ms.locfileid: "48141710"
 > [!NOTE]  
 >  Mit den Leistungsobjekten werden Ereignisse auf dem lokalen Berichtsserver überwacht. Wenn Sie einen Berichtsserver in einer Bereitstellung für horizontales Skalieren ausführen, beziehen sich die Zahlen auf den aktuellen Server, nicht auf die Bereitstellung für horizontales Skalieren insgesamt.  
   
- Die Leistungsobjekte sind im Windows-Systemmonitor (**Perfmon.exe**) verfügbar. Weitere Informationen finden Sie in der Windows-Dokumentation. [Laufzeit-Profilerstellung](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Die Leistungsobjekte sind im Windows-Systemmonitor (**Perfmon.exe**) verfügbar. Weitere Informationen finden Sie in der Windows-Dokumentation. [Laufzeit-Profilerstellung](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  In diesem Thema:  
   
@@ -43,11 +43,11 @@ ms.locfileid: "48141710"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint-Modus | Im einheitlichen Modus.  
   
 ##  <a name="bkmk_ReportServer"></a> ReportServer:Service-Leistungsindikatoren (Berichtsserver im einheitlichen Modus)  
- Das `ReportServer:Service`-Leistungsobjekt enthält eine Reihe von Leistungsindikatoren zum Nachverfolgen HTTP-bezogener und speicherbezogener Ereignisse für eine Berichtsserverinstanz. Dieses Leistungsobjekt erscheint einmalig pro [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Instanz auf dem Computer, und Sie können hinzufügen oder Entfernen von Leistungsindikatoren aus dem Leistungsobjekt für jede Instanz. Leistungsindikatoren für die Standardinstanz werden im Format  `ReportServer:Service` angezeigt. Leistungsindikatoren für benannte Instanzen werden, in dem Format angezeigt `ReportServer$<` *Instance_name*`>:Service`.  
+ Das `ReportServer:Service`-Leistungsobjekt enthält eine Reihe von Leistungsindikatoren zum Nachverfolgen HTTP-bezogener und speicherbezogener Ereignisse für eine Berichtsserverinstanz. Dieses Leistungsobjekt erscheint einmalig pro [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Instanz auf dem Computer, und Sie können für jede Instanz Indikatoren zum Leistungsobjekt hinzufügen oder aus dem Leistungsobjekt löschen. Leistungsindikatoren für die Standardinstanz werden im Format  `ReportServer:Service` angezeigt. Leistungsindikatoren für benannte Instanzen werden, in dem Format angezeigt `ReportServer$<` *Instance_name*`>:Service`.  
   
  Die `ReportServer:Service` -Leistungsobjekt ist neu in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], und bietet eine Teilmenge an Indikatoren, die mit Internet Information Services (IIS) enthalten waren und [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] in früheren Versionen von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Diese neuen Leistungsindikatoren sind spezifisch für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], und sie verfolgen HTTP-bezogene Ereignisse für den Berichtsserver nach, wie Anforderungen, Verbindungen und Anmeldeversuche. Darüber hinaus schließt dieses Leistungsobjekt Leistungsindikatoren für die Nachverfolgung von Speicherverwaltungsereignissen ein.  
   
- Die folgende Tabelle enthält die Leistungsindikatoren, die in enthalten sind die `ReportServer:Service` Leistungsobjekt.  
+ In der folgenden Tabelle werden die im `ReportServer:Service`-Leistungsobjekt enthaltenen Leistungsindikatoren aufgelistet.  
   
  ![Betrifft PowerShell](../media/rs-powershellicon.jpg "PowerShell related content") Das folgende Windows PowerShell-Skript gibt die Liste der Leistungsindikatoren für CounterSetName zurück.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48141710"
 |`Requests Disconnected`|Die Anzahl der Anforderungen, die aufgrund von Kommunikationsfehlern getrennt sind.|  
 |`Requests Executing`|Die Anzahl der Anforderungen, die gerade verarbeitet werden.|  
 |`Requests Not Authorized`|Die Anzahl der Anforderungen, die mit einem HTTP-401-Statuscode fehlschlagen.|  
-|`Requests Rejected`|Die Gesamtanzahl der Anforderungen, die aufgrund unzureichender Serverressourcen nicht verarbeitet wurden. Dieser Leistungsindikator gibt die Anzahl der Anforderungen wieder, die einen HTTP 503-Statuscode zurückgeben, der darauf hinweist, dass der Server vollständig ausgelastet ist.|  
+|`Requests Rejected`|Die Gesamtanzahl der Anforderungen, die aufgrund unzureichender Serverressourcen nicht verarbeitet wurden. Dieser Leistungsindikator gibt die Anzahl der Anforderungen wieder, die einen HTTP 503-Statuscode zurückgeben, der darauf hinweist, dass der Server vollständig ausgelastet ist.|  
 |`Requests Total`|Die Gesamtanzahl der Anforderungen, die vom Berichtsserverdienst seit dem Start empfangen wurden. Dieser Leistungsindikator zählt Anforderungen, die zum Berichts-Manager gesendet wurden, und Anforderungen, die vom Berichts-Manager zum Berichtsserver gesendet wurden.|  
 |`Requests/sec`|Die Anzahl der Anforderungen, die pro Sekunde verarbeitet werden. Dieser Wert stellt den aktuellen Durchsatz der Anwendung dar.|  
 |`Tasks Queued`|Die Anzahl der Tasks, die darauf warten, dass ein Thread für die Verarbeitung zur Verfügung steht. Jede Anforderung, die an den Berichtsserver gestellt wird, entspricht einer oder mehreren Tasks. Dieser Leistungsindikator stellt nur die Anzahl an Tasks dar, die für die Verarbeitung bereit sind. Er enthält nicht die Anzahl an Tasks, die derzeit ausgeführt werden.|  

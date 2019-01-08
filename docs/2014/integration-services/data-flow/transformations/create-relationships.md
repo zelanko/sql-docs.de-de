@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.createrelationships.f1
@@ -13,12 +12,12 @@ ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 730e203281c4bc964e2b2694e475095280483d58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23baf42a1ddc30ceccf5ec7c6f8b9db96e72e588
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095783"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804918"
 ---
 # <a name="create-relationships"></a>Beziehungen erstellen
   Im Dialogfeld **Beziehungen erstellen** werden Zuordnungen zwischen Quellspalten und den von Ihnen im Transformations-Editor für Fuzzysuche, Transformations-Editor für Suche und Transformations-Editor für Ausdruckssuche konfigurierten Spalten von Nachschlagetabellen bearbeitet.  
@@ -28,7 +27,7 @@ ms.locfileid: "48095783"
   
  Weitere Informationen zu den Transformationen, die das Dialogfeld **Beziehungen erstellen** verwenden, finden Sie unter [Fuzzy Lookup Transformation](lookup-transformation.md), [Lookup Transformation](lookup-transformation.md)und [Term Lookup Transformation](term-lookup-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eingabespalte**  
  Wählen Sie Spalten aus der Liste der verfügbaren Eingabespalten aus.  
   
@@ -50,9 +49,9 @@ ms.locfileid: "48095783"
  Geben Sie den Namen für eine Ausgabespalte an, die die Ähnlichkeitsergebnisse für die ausgewählte Spalte enthält. Wenn Sie diesen Wert nicht angeben, wird die Ausgabespalte nicht erstellt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../integration-services-error-and-message-reference.md)   
- [Transformations-Editor für Fuzzysuche &#40;Registerkarte „Spalten“&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../integration-services-error-and-message-reference.md)   
+ [Transformations-Editor für Fuzzysuche &#40;Registerkarte Spalten&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
  [Transformations-Editor für Suche &#40;Seite „Spalten“&#41;](../../lookup-transformation-editor-columns-page.md)   
- [Transformations-Editor Begriff &#40;Registerkarte Ausdruckssuche&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+ [Transformations-Editor für Ausdruckssuche &#40;Registerkarte Ausdruckssuche&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
   

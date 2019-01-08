@@ -17,15 +17,15 @@ ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8226f0d065620db27ca1046500c89360613d9eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7035fb90d9cc84743fc484e020efd6a19a217a4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052266"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512789"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING-Inhalt (MDX)
-  Die `FORMAT_STRING` -Zelleigenschaft formatiert die `VALUE` Zelleigenschaft, indem der Wert für die `FORMATTED_VALUE` Zelleigenschaft. Die `FORMAT_STRING` -Zelleigenschaft behandelt sowohl Zeichenfolgenwerte als auch numerische Rohdaten, Anwenden von einen Formatausdruck auf der zurückzugebende Wert, einen formatierten Wert für die `FORMATTED_VALUE` Zelleigenschaft. Die folgenden Tabellen geben die Syntax und die Formatierungszeichen detailliert an, mit denen Zeichenfolgenwerte und numerische Werte behandelt werden.  
+  Die `FORMAT_STRING`-Zelleigenschaft formatiert die `VALUE`-Zelleigenschaft, indem sie den Wert für die `FORMATTED_VALUE`-Zelleigenschaft erstellt. Die `FORMAT_STRING`-Zelleigenschaft behandelt sowohl Zeichenfolgenwerte als auch numerische Rohdaten, indem sie einen Formatausdruck auf den Wert anwendet, um einen formatierten Wert für die `FORMATTED_VALUE`-Zelleigenschaft zurückzugeben. Die folgenden Tabellen geben die Syntax und die Formatierungszeichen detailliert an, mit denen Zeichenfolgenwerte und numerische Werte behandelt werden.  
   
 ## <a name="string-values"></a>Zeichenfolgenwerte  
  Ein Formatausdruck für Zeichenfolgen kann aus einem Abschnitt oder aus zwei durch ein Semikolon (;) getrennten Abschnitten bestehen.  
@@ -77,11 +77,11 @@ ms.locfileid: "48052266"
 |**.**|Entspricht einem Dezimaltrennzeichen, das festlegt, wie viele Ziffern links und rechts vom Dezimaltrennzeichen angezeigt werden.<br /><br /> Wenn der Formatausdruck links vom Punkt (**#**.**) nur Nummernzeichen (**) enthält, beginnen Zahlen, die kleiner sind als 1, mit dem Dezimaltrennzeichen. Sollen Bruchzahlen mit einer führenden Null angezeigt werden, verwenden Sie 0 als ersten Ziffernplatzhalter links vom Dezimaltrennzeichen.<br /><br /> Welches Zeichen tatsächlich als Dezimaltrennzeichen in der formatierten Ausgabe verwendet wird, hängt von dem Zahlenformat ab, das vom Computersystem erkannt wird.<br /><br /> Hinweis: In manchen Gebietsschemas wird ein Komma als Dezimaltrennzeichen verwendet.|  
 |**%**|Entspricht einem Prozentwertplatzhalter. Der Ausdruck wird mit 100 multipliziert. Das Prozentzeichen (**%**) wird an der Position eingefügt, an der der Prozentsatz in der Formatzeichenfolge angezeigt wird.|  
 |**,**|Entspricht einem Tausendertrennzeichen, das in einer Zahl, die vier oder mehr Stellen links vom Dezimaltrennzeichen hat, die Tausender von den Hundertern trennt.<br /><br /> Die standardmäßige Verwendung des Tausendertrennzeichens wird angegeben, wenn das Format ein Tausendertrennzeichen enthält, das in Ziffernplatzhaltern (**0** oder **#**) eingeschlossen ist.<br /><br /> Zwei benachbarte Tausendertrennzeichen oder ein Tausendertrennzeichen direkt links vom Dezimaltrennzeichen (unabhängig davon, ob ein Dezimaltrennzeichen angegeben ist oder nicht) bedeuten Folgendes: "Die Zahl durch Division durch 1000 skalieren, gegebenenfalls mit Rundung". Sie können z.B. die Formatzeichenfolge „**##0**,,“ verwenden, um 100 Millionen als 100 darzustellen. Zahlen, die kleiner als 1 Million sind, werden als 0 dargestellt. Zwei benachbarte Tausendertrennzeichen in jeder anderen Position als direkt links vom Dezimaltrennzeichen werden so behandelt, als würden sie die Verwendung eines Tausendertrennzeichens angeben.<br /><br /> Welches Zeichen tatsächlich als Tausendertrennzeichen in der formatierten Ausgabe verwendet wird, hängt von dem Zahlenformat ab, das vom Computersystem erkannt wird.<br /><br /> Hinweis: In manchen Gebietsschemas wird der Punkt als Tausendertrennzeichen verwendet.|  
-|**:**|Entspricht einem Zeittrennzeichen, das Stunden, Minuten und Sekunden trennt, wenn Zeitwerte formatiert werden.<br /><br /> Hinweis: In manchen Gebietsschemas werden unter Umständen andere Zeichen als Zeittrennzeichen verwendet.<br /><br /> Welches Zeichen tatsächlich als Zeittrennzeichen in der formatierten Ausgabe verwendet wird, hängt von den Systemeinstellungen des Computers ab.|  
-|**/**|Entspricht einem Datumstrennzeichen, das den Tag, den Monat und das Jahr trennt, wenn Datumswerte formatiert werden.<br /><br /> Welches Zeichen tatsächlich als Datumstrennzeichen in der formatierten Ausgabe verwendet wird, hängt von den Systemeinstellungen des Computers ab.<br /><br /> Hinweis: In manchen Gebietsschemas werden unter Umständen andere Zeichen als Datumstrennzeichen verwendet.|  
+|**:**|Entspricht einem Zeittrennzeichen, das Stunden, Minuten und Sekunden trennt, wenn Zeitwerte formatiert werden.<br /><br /> Hinweis: In manchen Gebietsschemas unter Umständen andere Zeichen als Zeittrennzeichen verwendet werden.<br /><br /> Welches Zeichen tatsächlich als Zeittrennzeichen in der formatierten Ausgabe verwendet wird, hängt von den Systemeinstellungen des Computers ab.|  
+|**/**|Entspricht einem Datumstrennzeichen, das den Tag, den Monat und das Jahr trennt, wenn Datumswerte formatiert werden.<br /><br /> Welches Zeichen tatsächlich als Datumstrennzeichen in der formatierten Ausgabe verwendet wird, hängt von den Systemeinstellungen des Computers ab.<br /><br /> Hinweis: In manchen Gebietsschemas unter Umständen andere Zeichen als Datumstrennzeichen verwendet.|  
 |**E- E+ e- e+**|Entspricht dem wissenschaftlichen Format.<br /><br /> Wenn der Formatausdruck mindestens einen Ziffernplatzhalter (**0** oder **#**) rechts von **E-**, **E+**, **e-** oder **e+** enthält, wird der formatierte Wert im wissenschaftlichen Format angezeigt, und E oder e wird zwischen der Zahl und dem Exponenten der Zahl eingefügt. Die Anzahl der Ziffernplatzhalter auf der rechten Seite bestimmt die Anzahl der Ziffern im Exponenten. Verwenden Sie **E-** oder **e-** , um vor negativen Exponenten ein Minuszeichen einzufügen. Verwenden Sie **E+** oder **e+** , um vor negativen Exponenten ein Minuszeichen und vor positiven Exponenten ein Pluszeichen einzufügen.|  
 |**- + $ ( )**|Zeigt ein Literalzeichen an.<br /><br /> Wenn Sie keines der hier aufgelisteten Zeichen, sondern ein anderes Zeichen anzeigen möchten, setzen Sie einen umgekehrten Schrägstrich (**\\**) vor das Zeichen oder schließen das Zeichen in doppelte Anführungszeichen (**" "**) ein.|  
-|**\\**|Zeigt das nächste Zeichen in der Formatzeichenfolge an.<br /><br /> Soll ein Zeichen, das eine spezielle Bedeutung hat, als Literalzeichen angezeigt werden, setzen Sie einen umgekehrten Schrägstrich (**\\**) vor das Zeichen. Der umgekehrte Schrägstrich wird nicht angezeigt. Das Verwenden des umgekehrten Schrägstrichs ist gleichbedeutend mit dem Einschließen des nächsten Zeichens in doppelte Anführungszeichen. Um einen umgekehrten Schrägstrich anzuzeigen, verwenden Sie zwei umgekehrte Schrägstriche (**\\\\**). Folgende Zeichen gehören zu den Zeichen, die nicht als Literalzeichen angezeigt werden können:<br /><br /> Die Zeichen zum Formatieren von Datums- und Zeitangaben:**a**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y**, **/** und **:**<br /><br /> Die Zeichen zum Formatieren von Zahlen:**#**, **0**, **%**, **E**, **e**, **Komma**und **Punkt**<br /><br /> Die Zeichen zum Formatieren von Zeichenfolgen:**@**, **&**, **\<**, **>** und **!**|  
+|**\\**|Zeigt das nächste Zeichen in der Formatzeichenfolge an.<br /><br /> Soll ein Zeichen, das eine spezielle Bedeutung hat, als Literalzeichen angezeigt werden, setzen Sie einen umgekehrten Schrägstrich (**\\**) vor das Zeichen. Der umgekehrte Schrägstrich wird nicht angezeigt. Das Verwenden des umgekehrten Schrägstrichs ist gleichbedeutend mit dem Einschließen des nächsten Zeichens in doppelte Anführungszeichen. Um einen umgekehrten Schrägstrich anzuzeigen, verwenden Sie zwei umgekehrte Schrägstriche (**\\\\**). Folgende Zeichen gehören zu den Zeichen, die nicht als Literalzeichen angezeigt werden können:<br /><br /> Das Formatieren von Datums- und uhrzeitformatierungen Zeichen -**eine**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y** , **/**, und **:**<br /><br /> Das Formatieren von numerischen Zeichen -**#**, **0**, **%**, **E**, **e**, **Komma**, und **Zeitraum**<br /><br /> Die Formatierung von Zeichenfolgen Zeichen -**@**, **&**, **\<**, **>**, und **!**|  
 |**"ABC"**|Zeigt die Zeichenfolge innerhalb der doppelten Anführungszeichen (**" "**) an.<br /><br /> Um aus Code heraus eine Zeichenfolge in ein Format einzuschließen, schließen Sie den Text mithilfe von Chr(**34**) ein. (Der Zeichencode für ein doppeltes Anführungszeichen ist **34**.)|  
   
 ### <a name="named-numeric-formats"></a>Benannte numerische Formate  
@@ -105,29 +105,29 @@ ms.locfileid: "48052266"
 |Zeichen|Description|  
 |---------------|-----------------|  
 |**:**|Entspricht einem Zeittrennzeichen, das Stunden, Minuten und Sekunden trennt, wenn Zeitwerte formatiert werden.<br /><br /> Welches Zeichen tatsächlich als Zeittrennzeichen in der formatierten Ausgabe verwendet wird, hängt von den Systemeinstellungen des Computers ab.<br /><br /> Hinweis: In manchen Gebietsschemas werden unter Umständen andere Zeichen als Zeittrennzeichen verwendet.|  
-|**/**|Entspricht einem Datumstrennzeichen, das den Tag, den Monat und das Jahr trennt, wenn Datumswerte formatiert werden.<br /><br /> Welches Zeichen tatsächlich als Datumstrennzeichen in der formatierten Ausgabe verwendet wird, hängt von den Systemeinstellungen des Computers ab.<br /><br /> Hinweis: In einigen Gebietsschemas werden unter Umständen andere Zeichen als Datumstrennzeichen verwendet.|  
+|**/**|Entspricht einem Datumstrennzeichen, das den Tag, den Monat und das Jahr trennt, wenn Datumswerte formatiert werden.<br /><br /> Welches Zeichen tatsächlich als Datumstrennzeichen in der formatierten Ausgabe verwendet wird, hängt von den Systemeinstellungen des Computers ab.<br /><br /> Hinweis: In manchen Gebietsschemas werden unter Umständen andere Zeichen als Datumstrennzeichen verwendet.|  
 |**C**|Zeigt das Datum als **ddddd** und die Zeit als **ttttt**an, in dieser Reihenfolge.<br /><br /> Zeigt nur Datumsinformationen an, wenn die Datumsseriennummer keine Nachkommastellen enthält. Zeigt nur Zeitinformationen an, wenn kein ganzzahliger Teil vorhanden ist.|  
 |**d**|Zeigt den Tag als Zahl ohne führende Null an (1-31).|  
-|**dd**|Zeigt den Tag als Zahl mit einer führenden Null an (01-31).|  
-|**ddd**|Zeigt den Tag als Abkürzung an (So-Sa).|  
-|**dddd**|Zeigt den Tag mit vollem Namen an (Sonntag-Samstag).|  
+|**dd**|Zeigt den Tag als Zahl mit führender Null an (01-31).|  
+|**ddd**|Zeigt den Tag als Abkürzung an (so-SA).|  
+|**dddd**|Zeigt den Tag als vollständigen Namen (Sonntag-Samstag).|  
 |**ddddd**|Zeigt das Datum als vollständiges Datum (einschließlich Tag, Monat und Jahr) an, formatiert entsprechend der Systemeinstellung für das kurze Datumsformat.<br /><br /> In Microsoft Windows lautet das standardmäßige kurze Datumsformat **dd.mm.yy**.|  
 |**dddddd**|Zeigt eine Datumsseriennummer als vollständiges Datum (einschließlich Tag, Monat und Jahr) an, das entsprechend dem langen Datumsformat formatiert ist, auf das das Computersystem festgelegt ist.<br /><br /> In Windows ist das standardmäßige lange Datumsformat **dddd, d. mmmm yyyy**.|  
 |**w**|Zeigt den Wochentag als Zahl an (1 für Sonntag bis 7 für Samstag).|  
-|**ww**|Zeigt die Woche des Jahres als Zahl an (1–54).|  
+|**ww**|Zeigt die Woche des Jahres als Zahl (1-54) an.|  
 |**m**|Zeigt den Monat als Zahl ohne führende Null an (1-12).<br /><br /> Wenn **m** direkt auf **h** oder **hh**folgt, wird nicht der Monat, sondern die Minute angezeigt.|  
-|**mm**|Zeigt den Monat als Zahl mit einer führenden Null an (01–12).<br /><br /> Wenn **m** direkt auf **h** oder **hh**folgt, wird nicht der Monat, sondern die Minute angezeigt.|  
+|**mm**|Zeigt den Monat als Zahl mit führender Null an (01 bis 12).<br /><br /> Wenn **m** direkt auf **h** oder **hh**folgt, wird nicht der Monat, sondern die Minute angezeigt.|  
 |**mmm**|Zeigt den Monat als Abkürzung an (Jan-Dez).|  
 |**mmmm**|Zeigt den Monat als vollständigen Monatsnamen an (Januar-Dezember).|  
-|**q**|Zeigt das Quartal des Jahres als Zahl an (1-4).|  
-|**y**|Zeigt den Tag des Jahres als Zahl an (1-366).|  
-|**yy**|Zeigt das Jahr als zweistellige Zahl an (00-99).|  
-|**yyyy**|Zeigt das Jahr als vierstellige Zahl an (100-9999).|  
-|**h**|Zeigt die Stunde als Zahl ohne führende Nullen an (0-23).|  
+|**q**|Zeigt das Quartal des Jahres als Zahl (1 bis 4).|  
+|**y**|Zeigt den Tag des Jahres als Zahl (1-366) an.|  
+|**yy**|Zeigt das Jahr als zweistellige Zahl (00-99).|  
+|**yyyy**|Zeigt das Jahr als vierstellige Zahl (100-9999).|  
+|**h**|Zeigt die Stunde als Zahl ohne führende Nullen (0-23).|  
 |**hh**|Zeigt die Stunde als Zahl mit führenden Nullen an (00-23).|  
-|**n**|Zeigt die Minute als Zahl ohne führende Nullen an (0-59).|  
+|**n**|Zeigt die Minute als Zahl ohne führende Nullen (0-59).|  
 |**nn**|Zeigt die Minute als Zahl mit führenden Nullen an (00-59).|  
-|**s**|Zeigt die Sekunde als Zahl ohne führende Nullen an (0-59).|  
+|**s**|Zeigt die Sekunde als Zahl ohne führende Nullen (0-59).|  
 |**ss**|Zeigt die Sekunde als Zahl mit führenden Nullen an (00-59).|  
 |**t t t t t**|Zeigt eine Zeit als vollständige Zeit (einschließlich Stunde, Minute und Sekunde) an, wobei die Zeit mit dem Zeittrennzeichen formatiert ist, das durch das Zeitformat definiert ist, das vom Computersystem erkannt wird.<br /><br /> Eine führende Null wird angezeigt, wenn die entsprechende Option ausgewählt und die Uhrzeit früher als 10:00 Uhr (z. B. 09:59) ist. Dies gilt im 12-Stunden-Format für A.M. und P.M.<br /><br /> Das Standardzeitformat in Windows ist **hh:mm:ss**.|  
 |**AM/PM**|Zeigt die Großbuchstaben **AM** hinter jeder Stunde ab Mitternacht bis Mittag und die Großbuchstaben **PM** hinter jeder Stunde ab Mittag bis Mitternacht an.<br /><br /> Hinweis: Verwendet ein 12-Stunden-Format.|  
@@ -153,6 +153,6 @@ ms.locfileid: "48052266"
  [LANGUAGE und FORMAT_STRING für FORMATTED_VALUE](mdx-cell-properties-formatted-value-property.md)   
  [Verwenden von Zelleneigenschaften &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
  [Erstellen und Verwenden von Eigenschaftswerten &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
- [Grundlegendes zu MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

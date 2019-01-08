@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4187ed0ab1a647923c2b4dede1c7d168208ab504
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 595bd70b97b6586071177e2e93281e14ca62c32c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189990"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798172"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>Angeben von Instanzen im SQL Server PowerShell-Anbieter
   Die für den SQL Server PowerShell-Anbieter angegebenen Pfade müssen die Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] und den Computer, auf dem sie ausgeführt wird, angeben. Die Syntax zum Angeben des Computers und der Instanz muss sowohl den Regeln für die SQL Server-Bezeichner als auch für die Windows PowerShell-Pfade entsprechen.  
   
-1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
+1.  **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#LimitationsRestrictions)  
   
-2.  **Angeben einer Instanz:**  [Beispiele](#Examples)  
+2.  **Eine Instanz angeben:**  [Beispiele für](#Examples)  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Der erste Knoten, der auf SQLSERVER:\SQL in einem SQL Server-Anbieterpfad folgt, ist der Name des Computers, auf dem die Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]ausgeführt wird, z. B.:  

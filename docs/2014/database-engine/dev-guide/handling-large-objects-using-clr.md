@@ -12,12 +12,12 @@ ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c54fd3944d41e1522e792d649ea3d9fbcd331b95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e1dedaab57761c88487dbd3a61d359bcf0b3dd1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092856"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350270"
 ---
 # <a name="handling-large-objects-using-clr"></a>Behandeln von großen Objekten mit CLR
   Das `HandlingLOBUsingCLR`-Beispiel für SQL Server veranschaulicht das Übertragen von LOBs (Large Objects) zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem Dateisystem, das für den Server mithilfe von gespeicherten CLR (Common Language Runtime)-Prozeduren verfügbar ist. Dieses Beispiel veranschaulicht, wie Sie auf Dateien in serverseitigem Code zugreifen und dann aus CLR-basierten gespeicherten Prozeduren dynamische Abfragen und gespeicherte Prozeduren aufrufen. Darüber hinaus veranschaulicht es, wie Sie CLR-Methoden und CLR-Assemblys mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] registrieren und deren Registrierung aufheben.  
@@ -25,9 +25,9 @@ ms.locfileid: "48092856"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](http://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](https://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
   
--   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](http://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
+-   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
 -   .NET Framework SDK 2.0 oder höher oder Microsoft Visual Studio 2005 oder höher. Das .NET Framework SDK ist kostenlos erhältlich.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48092856"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie die `ALTER SETTINGS`-Serverberechtigung, die Mitglieder der festen Serverrollen `sysadmin` und `serveradmin` implizit erhalten.  
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   

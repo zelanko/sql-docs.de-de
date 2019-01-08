@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29e8c0afa66e5f6f667ef9435470146109f5676d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a96c531302c92e61e2a2e0b9feb875d0a1097c43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140659"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805192"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Extrahieren von Änderungsdaten mithilfe der CDC-Quelle
   Das Paket muss bereits mindestens einen Datenflusstask und einen CDC-Steuerungstask enthalten, damit Sie eine CDC-Quelle hinzufügen und konfigurieren können.  
@@ -45,15 +44,15 @@ ms.locfileid: "48140659"
   
 8.  Wählen Sie den Verarbeitungsmodus aus, der sich für die Behandlung Ihrer Verarbeitungsanforderungen am besten eignet. Folgende Optionen sind möglich:  
   
-    -   **All**: Gibt die Änderungen im aktuellen CDC-Bereich ohne **Vor Update** -Werte zurück.  
+    -   **alle**: Gibt die Änderungen zurück in den aktuellen CDC-Bereich, ohne die **vor Update** Werte.  
   
-    -   **All with old values:** Gibt die Änderungen im aktuellen CDC-Verarbeitungsbereich unter Einbeziehung der alten Werte (**Vor Update**) zurück. Für jeden Updatevorgang gibt es zwei Zeilen, eine mit den Werten vor dem Update und eine mit den Werten nach dem Update.  
+    -   **Alle mit den alten Werten**: Gibt die Änderungen im aktuellen CDC-Verarbeitungsbereich Einbeziehung der alten Werte (**vor Update**). Für jeden Updatevorgang gibt es zwei Zeilen, eine mit den Werten vor dem Update und eine mit den Werten nach dem Update.  
   
-    -   **Net**: Gibt nur eine Änderungszeile pro Quellzeile zurück, die im aktuellen CDC-Verarbeitungsbereich geändert wurde. Wenn eine Quellzeile mehrmals aktualisiert wurde, wird die kombinierte Änderung erzeugt (Beispiel: Einfügen+Update wird als einzelner Updatevorgang und Update+Löschen als einzelner Löschvorgang erzeugt). Beim Arbeiten im Änderungsverarbeitungsmodus Net ist es möglich, die Änderungen auf Lösch-, Einfüge- und Updatevorgänge aufzuteilen und parallel zu behandeln, da die einzelne Quellzeile in mehr als einer Ausgabe vorhanden ist.  
+    -   **NET**: Gibt nur eine Änderungszeile pro Quellzeile, die im aktuellen CDC-Verarbeitungsbereich geändert. Wenn eine Quellzeile mehrmals aktualisiert wurde, wird die kombinierte Änderung erzeugt (Beispiel: Einfügen+Update wird als einzelner Updatevorgang und Update+Löschen als einzelner Löschvorgang erzeugt). Beim Arbeiten im Änderungsverarbeitungsmodus Net ist es möglich, die Änderungen auf Lösch-, Einfüge- und Updatevorgänge aufzuteilen und parallel zu behandeln, da die einzelne Quellzeile in mehr als einer Ausgabe vorhanden ist.  
   
-    -   **Net with update mask:** Dieser Modus ähnelt dem normalen Net-Modus, aber es werden außerdem boolesche Spalten mit dem Namensmuster **__$\<Spaltenname>\___Changed** hinzugefügt, die auf geänderte Spalten in der aktuellen Änderungszeile hinweisen.  
+    -   **NET mit updatemaske**: Dieser Modus ähnelt dem normalen Net-Modus, jedoch werden außerdem boolesche Spalten mit dem Namensmuster hinzugefügt **__ $\<Spaltenname >\__Changed** , die auf geänderte Spalten in der aktuellen Änderungszeile.  
   
-    -   **Net with merge:** Dieser Modus ähnelt dem normalen Net-Modus, aber hierbei sind Einfüge- und Updatevorgänge zu einem einzelnen Mergevorgang (UPSERT) zusammengeführt.  
+    -   **NET mit Merge**: Dieser Modus ähnelt dem normalen Net-Modus aber Hierbei sind Einfüge-und Updatevorgänge zu einem einzelnen Mergevorgang (UPSERT) zusammengeführt.  
   
 9. Wählen Sie die SSIS-Zeichenfolgenpaketvariable aus, in der der CDC-Status für den aktuellen CDC-Kontext verwaltet wird. Weitere Informationen zur CDC-Statusvariablen finden Sie unter [Definieren einer Statusvariablen](define-a-state-variable.md).  
   
@@ -72,8 +71,8 @@ ms.locfileid: "48140659"
 15. Klicken Sie auf **OK**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Quellen-Editor für CDC &#40;Seite Verbindungs-Manager&#41;](../cdc-source-editor-connection-manager-page.md)   
- [Quellen-Editor für CDC &#40;Seite "Spalten"&#41;](../cdc-source-editor-columns-page.md)   
- [Quellen-Editor für CDC &#40;Seite "Fehlerausgabe"&#41;](../cdc-source-editor-error-output-page.md)  
+ [Quellen-Editor für CDC &#40;Seite „Verbindungs-Manager“&#41;](../cdc-source-editor-connection-manager-page.md)   
+ [Quellen-Editor für CDC &#40;Seite „Spalten“&#41;](../cdc-source-editor-columns-page.md)   
+ [Quellen-Editor für CDC &#40;Seite „Fehlerausgabe“&#41;](../cdc-source-editor-error-output-page.md)  
   
   

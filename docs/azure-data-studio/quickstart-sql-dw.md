@@ -1,7 +1,8 @@
 ---
-title: 'Schnellstart: Verbinden und Abfragen einer Azure SQL Data Warehouse mithilfe von Azure Data Studio | Microsoft-Dokumentation'
-description: In dieser schnellstartanleitung veranschaulicht, wie Azure Data Studio eine Verbindung mit einer SQL-Datenbank, und führen Sie eine Abfrage
-ms.custom: tools|sos
+title: 'Schnellstart: Verbinden Sie und Fragen Sie einer Azure SQL Data Warehouse ab'
+titleSuffix: Azure Data Studio
+description: Dieser schnellstartanleitung erfahren Sie, wie mit Azure Data Studio eine Verbindung mit einer Azure SQL Data Warehouse, und führen Sie eine Abfrage
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: bf26924bc7791cf5321c32b3c127abc52780740b
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 72e7e0e83757b52ba7fba6a24cc91499ca4863b1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355731"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030754"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Schnellstart: Verwenden von [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Verbinden und Abfragen von Daten in Azure SQL Data Warehouse
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Schnellstart: Verwendung [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Verbinden und Abfragen von Daten in Azure SQL Data Warehouse
 
 Dieser Schnellstart veranschaulicht, wie [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Verbinden mit Azure SQL Datawarehouse, und anschließend mithilfe von Transact-SQL-Anweisungen erstellen, einfügen, und wählen Sie Daten aus. 
 

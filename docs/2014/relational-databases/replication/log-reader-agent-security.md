@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.LRA.f1
@@ -15,12 +14,12 @@ ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: adecb551ab312f307489927225974e6679dc6f74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 03455e0ae31712d4ce02beab7eebb697978a1a1a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163580"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799922"
 ---
 # <a name="log-reader-agent-security"></a>Sicherheit für den Protokolllese-Agent
   Mithilfe des Dialogfelds **Sicherheit für den Protokolllese-Agent** können Sie folgende Angaben machen:  
@@ -36,7 +35,7 @@ ms.locfileid: "48163580"
   
  Alle Konten müssen gültig sein, und für jedes Konto muss das richtige Kennwort angegeben sein. Konten und Kennwörter werden erst bei der Ausführung eines Agents überprüft.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Prozesskonto**  
  Geben Sie das Windows-Konto an, unter dem der Protokolllese-Agent auf dem Verteiler ausgeführt wird. Das angegebene Windows-Konto muss mindestens ein Mitglied der festen Datenbankrolle **db_owner** in der Verteilungsdatenbank sein.  
   
@@ -55,6 +54,6 @@ ms.locfileid: "48163580"
  [Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation](security/manage-logins-and-passwords-in-replication.md)   
  [Sicherheitsmodell des Replikations-Agents](security/replication-agent-security-model.md)   
  [Replikations-Agents (Übersicht)](agents/replication-agents-overview.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)  
+ [Bewährte Methoden für die Replikationssicherheit](security/replication-security-best-practices.md)  
   
   

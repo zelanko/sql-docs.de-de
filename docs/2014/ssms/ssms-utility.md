@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], opening
@@ -17,12 +16,12 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cadd1de9ee94c89ab0b1604321423238a9a8c7e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20b6109b5622fb78366ab24886b991185c8dbc76
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111230"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777812"
 ---
 # <a name="ssms-utility"></a>Ssms-Hilfsprogramm
   Mit dem **Ssms**-Hilfsprogramm wird [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]geöffnet. Bei entsprechender Angabe stellt **Ssms** zudem eine Verbindung mit einem Server her und öffnet Abfragen, Skripts, Dateien, Projekte und Lösungen.  
@@ -79,7 +78,7 @@ ms.locfileid: "48111230"
 ## <a name="remarks"></a>Hinweise  
  Alle Schalter sind optional und werden durch Leerzeichen voneinander getrennt. Eine Ausnahme hiervon bilden Dateien, die durch Kommas getrennt werden. Wenn Sie keine Schalter angeben, wird **Ssms** Ssms [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] so geöffnet, wie es in den Einstellungen unter **Optionen** im Menü **Extras** angegeben ist. Wenn z.B. auf der Seite **Umgebung/Allgemein** unter **Beim Start** die Option **Neues Abfragefenster öffnen**angegeben ist, öffnet **Ssms** ein leeres Abfrage-Editor-Fenster.  
   
- Der **-log** -Schalter muss am Ende der Befehlszeile nach allen anderen Schaltern angegeben werden. Das filename-Argument ist optional. Wenn ein Dateiname angegeben wird und die Datei nicht vorhanden ist, wird sie erstellt. Wenn die Datei beispielsweise aufgrund unzureichender Schreibberechtigungen nicht erstellt werden kann, wird die Datei stattdessen in den Ordner für nicht lokalisierte Anwendungsdaten (APPDATA) geschrieben (siehe unten). Wenn das filename-Argument nicht angegeben wird, werden zwei Dateien in den Ordner für nicht lokalisierte Anwendungsdaten des aktuellen Benutzers geschrieben. Der Ordner für nicht lokalisierte Anwendungsdaten in SQL Server kann anhand der APPDATA-Umgebungsvariablen ermittelt werden. Für SQL Server 2012 lautet der Ordner beispielsweise \<Systemlaufwerk>:\Users\\<Benutzername\>\AppData\Roaming\Microsoft\AppEnv\10.0\\. Die beiden Dateien erhalten standardmäßig den Namen ActivityLog.xml und ActivityLog.xsl. Die erste Datei enthält die Aktivitätsprotokolldaten, und die zweite Datei ist ein XML-Stylesheet, mit dem die XML-Datei auf bequeme Weise angezeigt werden kann. Führen Sie die folgenden Schritte aus, um die Protokolldatei in einem standardmäßigen XML-Viewer wie Internet Explorer anzuzeigen: Klicken Sie auf „Start“ und auf „Ausführen“. Geben Sie dann \<Systemlaufwerk>:\Users\\<Benutzername\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml in das angezeigte Feld ein, und drücken Sie die EINGABETASTE.  
+ Der **-log** -Schalter muss am Ende der Befehlszeile nach allen anderen Schaltern angegeben werden. Das filename-Argument ist optional. Wenn ein Dateiname angegeben wird und die Datei nicht vorhanden ist, wird sie erstellt. Wenn die Datei beispielsweise aufgrund unzureichender Schreibberechtigungen nicht erstellt werden kann, wird die Datei stattdessen in den Ordner für nicht lokalisierte Anwendungsdaten (APPDATA) geschrieben (siehe unten). Wenn das filename-Argument nicht angegeben wird, werden zwei Dateien in den Ordner für nicht lokalisierte Anwendungsdaten des aktuellen Benutzers geschrieben. Der Ordner für nicht lokalisierte Anwendungsdaten in SQL Server kann anhand der APPDATA-Umgebungsvariablen ermittelt werden. Für SQL Server 2012 lautet der Ordner beispielsweise \<Systemlaufwerk>:\Users\\<Benutzername\>\AppData\Roaming\Microsoft\AppEnv\10.0\\. Die beiden Dateien erhalten standardmäßig den Namen ActivityLog.xml und ActivityLog.xsl. Die erste Datei enthält die Aktivitätsprotokolldaten, und die zweite Datei ist ein XML-Stylesheet, mit dem die XML-Datei auf bequeme Weise angezeigt werden kann. Verwenden Sie die folgenden Schritte aus, um die Protokolldatei in einem standardmäßigen XML-Viewer wie Internet Explorer anzuzeigen:  Klicken Sie auf Start, und klicken Sie dann ausführen...", und geben Sie dann"\<Systemlaufwerk >: \Users\\< Benutzername\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml "in das dafür vorgesehene Feld ein, und drücken Sie dann die EINGABETASTE.  
   
  Dateien, die Abfragen enthalten, fordern eine Verbindung mit einem Server an, wenn Verbindungsinformationen bereitgestellt werden und der Dateityp diesem Servertyp zugeordnet ist. So wird z. B. für SQL-Dateien ein SQL-Abfrage-Editorfenster in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]und für MDX-Dateien ein MDX-Abfrage-Editorfenster in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]geöffnet. **SQL Server-Lösungen und -Projekte** werden in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]geöffnet.  
   

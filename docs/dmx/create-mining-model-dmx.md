@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ea71a918ab9ceb1afba41e5af0148212f33044b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607140"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521201"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  Eine Liste der vom aktuellen Anbieter unterstützt Algorithmen kann abgerufen werden, mithilfe von [DMSCHEMA_MINING_SERVICES-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Die in der aktuellen Instanz von unterstützten Algorithmen an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], finden Sie unter [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
  *Parameterliste*  
- Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
+ Dies ist optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
   
  *XML-Zeichenfolge*  
  (Nur für fortgeschrittene Benutzer.) Ein XML-codiertes Modell (PMML). Die Zeichenfolge muss in einfache Anführungszeichen (') eingeschlossen werden.  
@@ -119,7 +119,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Mit der Parameterliste können Sie die Leistung und die Funktionsweise eines Miningmodells anpassen. Die Syntax der Parameterliste sieht wie folgt aus:  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
  Eine Liste der Parameter, die mit jedem Algorithmus zusammenhängen, finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  

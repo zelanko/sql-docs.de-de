@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -19,17 +17,17 @@ ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4860d9bf406a87f03c439b69adaf53a66d372233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ceef262411bf420330cf9e650d61a916719cb0e2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145730"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799432"
 ---
 # <a name="smo-namespaces"></a>SMO-Namespaces
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) verfügt über verschiedene Namespaces. Die verschiedenen Namespaces stellen unterschiedliche Bereiche der Funktionalität innerhalb von SMO dar.  
   
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], befinden sich die SMO-Assemblys in der [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] Ordner.  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]befinden sich die SMO-Assemblys im Ordner [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] .  
   
 ## <a name="namespaces"></a>Namespaces  
  Es folgt eine Liste der SMO-Namespaces:  

@@ -17,12 +17,12 @@ ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e77ba9379ebf482d8ed2f587ea175706458bd275
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24e5e554af43cd95a65c6d392106217af9ab2cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193410"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532185"
 ---
 # <a name="save-a-copy-of-a-package"></a>Speichern einer Kopie eines Pakets
   In diesem Verfahren wird beschrieben, wie Sie eine Kopie eines Pakets im Dateisystem, im Paketspeicher oder in der **msdb** -Datenbank in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]speichern. Wenn Sie einen Speicherort zum Speichern der Paketkopie angeben, können Sie auch den Namen des Pakets aktualisieren.  
@@ -46,7 +46,7 @@ ms.locfileid: "48193410"
   
 5.  Wenn Sie in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]speichern, geben Sie den Authentifizierungstyp an und, falls Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwenden, einen Benutzernamen und ein Kennwort.  
   
-6.  Geben Sie zum Angeben des Paketpfades entweder den Pfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um den Speicherort des Pakets anzugeben. Der Standardname des Pakets lautet Paket. Optional können Sie den Paktnamen aktualisieren, sodass er Ihren Bedürfnissen entspricht.  
+6.  Geben Sie zum Angeben des Paketpfads entweder den Pfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um den Speicherort des Pakets anzugeben. Der Standardname des Pakets lautet Paket. Optional können Sie den Paktnamen aktualisieren, sodass er Ihren Bedürfnissen entspricht.  
   
      Wenn Sie **SQL Server** in der Option **Paketpfad** auswählen, besteht der Paketpfad aus logischen Ordnern in **msdb** und dem Paketnamen. Ist z.B. das Paket DownloadMonthlyData dem Ordner Finance im Ordner MSDB (der Standardname des logischen Stammordners in **msdb**) zugeordnet, lautet der Paketpfad MSDB/Finance/DownloadMonthlyData für das Paket DownloadMonthlyData.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48193410"
   
 7.  Überprüfen Sie die Paketschutzebene.  
   
-8.  Klicken Sie optional auf die Schaltfläche mit den drei Punkten **(…)** neben dem Feld **Schutzebene** , um die Schutzebene zu ändern.  
+8.  Klicken Sie optional auf die Auslassungspunkte **(…)** neben dem Feld **Schutzebene**, um die Schutzebene zu ändern.  
   
     -   Wählen Sie im Dialogfeld **Paketschutzebene** eine andere Schutzebene aus.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48193410"
 9. Klicken Sie auf **OK**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrationsdienste &#40;SSIS&#41; Pakete](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services-Pakete &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Konfigurieren der Integration Services-Dienst &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen von Daten und Metadaten in Cube | Microsoft Docs
+title: Durchsuchen von Daten und Metadaten in Cube | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7bd1940a21407375015e6b732ab129653bff01e6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fda788cecbad21a73186b96a6c360ceeae3948e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022607"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537276"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Durchsuchen von Daten und Metadaten in Cube
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34022607"
   
  Bevor Sie einen Cube durchsuchen, müssen Sie ihn verarbeiten und erneut eine Verbindung damit herstellen. Nach der Verarbeitung öffnen Sie im Cube-Designer die Registerkarte **Browser** . Klicken Sie auf der Symbolleiste auf die Schaltfläche Verbindung wiederherstellen, um die Verbindung zu aktualisieren.  
   
- Die Registerkarte **Browser** verfügt über drei Bereiche: Metadaten, Filter und Daten. Verwenden Sie den Bereich Metadaten, um die Struktur des Cubes im Strukturformat zu untersuchen. Verwenden Sie den Bereich **Filter** oben auf der Registerkarte Browser, um einen beliebigen Teilcube zu definieren, den Sie durchsuchen möchten. Verwenden Sie den Bereich Daten, um das Resultset anzuzeigen und einen Drilldown durch Dimensionshierarchien auszuführen.  
+ Die **Browser** Registerkarte verfügt über drei Bereiche: Bereich Metadaten, der Bereich "Filter" und der Bereich "Daten". Verwenden Sie den Bereich Metadaten, um die Struktur des Cubes im Strukturformat zu untersuchen. Verwenden Sie den Bereich **Filter** oben auf der Registerkarte Browser, um einen beliebigen Teilcube zu definieren, den Sie durchsuchen möchten. Verwenden Sie den Bereich Daten, um das Resultset anzuzeigen und einen Drilldown durch Dimensionshierarchien auszuführen.  
   
 ## <a name="setting-up-the-browser"></a>Einrichten des Browsers  
  Um die Suche in einem Cube vorzubereiten, können Sie eine gewünschte Perspektive oder Übersetzung angeben. Fügen Sie dem Bereich Daten Measures und Dimensionen hinzu, und geben Sie im Bereich Filter Filter an.  
@@ -57,7 +57,7 @@ ms.locfileid: "34022607"
   
      \- oder –  
   
--   In der **Dimension** Spalte die **Filter** Bereich, klicken Sie auf  **\<Dimension auswählen >** wählen Sie eine Dimension aus der Liste, und klicken Sie auf  **\<Hierarchie auswählen >** in der **Hierarchie** Spalte, und wählen Sie eine Hierarchie aus der Liste.  
+-   In der **Dimension** Spalte die **Filter** Bereich, klicken Sie auf  **\<Dimension auswählen >** wählen Sie eine Dimension aus der Liste aus, und klicken Sie auf  **\<Hierarchie auswählen >** in die **Hierarchie** Spalte und wählen Sie eine Hierarchie aus der Liste.  
   
  Nachdem Sie die Hierarchie angegeben haben, geben Sie den Operator und den Filterausdruck an. In der folgenden Tabelle werden die Operatoren und die Filterausdrücke beschrieben.  
   

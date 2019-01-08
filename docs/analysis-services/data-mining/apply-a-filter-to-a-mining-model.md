@@ -1,5 +1,5 @@
 ---
-title: Anwenden eines Filters auf ein Miningmodell | Microsoft Docs
+title: Anwenden eines Filters auf ein Miningmodell | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a3e192718ed0e1c3597f4e0f76c951a96530c6c7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5430aa0125e621a574d8fb9cc6b28f6b73794b46
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014597"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519261"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Anwenden eines Filters auf ein Miningmodell
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Wählen Sie das Modell aus, und klicken Sie mit der rechten Maustaste, um das Kontextmenü zu öffnen.  
   
-     – Oder –  
+     -oder-  
   
      Wählen Sie das Modell aus. Wählen Sie dann im Menü **Miningmodell** die Funktion **Modellfilter festlegen**aus.  
   
@@ -91,7 +91,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      Dies sind die einzigen Bedingungen, die für die geschachtelte Tabelle im Dialogfeld **Modellfilter** verfügbar sind, da Sie die Falltabelle auf die Fälle einschränken, die einen bestimmten Wert in der verschachtelten Tabelle enthalten. Den Wert für die Bedingung in der geschachtelten Tabelle legen Sie im nächsten Schritt fest.  
   
-4.  Klicken Sie auf das Feld **Wert**, und klicken Sie anschließend auf die Schaltfläche **(...)**, um einen Ausdruck zu erstellen.  
+4.  Klicken Sie auf die **Wert** ein, und klicken Sie dann auf die **(...)**  Schaltfläche, um einen Ausdruck zu erstellen.  
   
      Die  **\<Name > Filter** Dialogfeld wird geöffnet. Dieses Dialogfeld kann Bedingungen nur für die aktuelle Tabelle festlegen. In diesem Fall ist dies die geschachtelte Tabelle.  
   
@@ -120,8 +120,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  Wenn Sie einen Teil eines Filterausdrucks manuell ändern, wird das Raster deaktiviert. Anschließend müssen Sie mit dem Filterausdruck im Textbearbeitungsmodus arbeiten. Um den Rasterbearbeitungsmodus wiederherzustellen, müssen Sie den Filterausdruck löschen und von Neuem beginnen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Filter für Miningmodelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Miningmodelltasks und Anweisungen Mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Löschen eines Filters aus einem Miningmodell](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   

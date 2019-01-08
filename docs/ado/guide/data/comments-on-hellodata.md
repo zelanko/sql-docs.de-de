@@ -13,12 +13,12 @@ ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3086eff0e4a774e7f63e7ff876a9675668d5912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 632703a1f7817986a6bc192006ef079af20cfb08
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707878"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527453"
 ---
 # <a name="comments-on-hellodata"></a>Kommentare zur HelloData
 Die Anwendung für die HelloData erläutert die grundlegenden Vorgänge einer typischen ADO-Anwendung: Abrufen, untersuchen, bearbeiten und Aktualisieren von Daten. Wenn Sie die Anwendung starten, klicken Sie auf die erste Schaltfläche **Datenabruf**. Dies führt die **GetData** Unterroutine.  
@@ -74,4 +74,4 @@ Die Anwendung für die HelloData erläutert die grundlegenden Vorgänge einer ty
  Um ausführliche Informationen zum Aktualisieren von Daten, einschließlich der Vorgehensweise, wenn Daten auf Änderungen an den Server während Ihrer **Recordset** ist getrennt, finden Sie [wird aktualisiert und Beibehalten von Daten](../../../ado/guide/data/updating-and-persisting-data.md).  
   
 ## <a name="formunload"></a>Form_Unload  
- Die **Form_Unload** Unterroutine ist wichtig, verschiedene Ursachen haben. Da dies eine Beispiel-App ist, löscht Form_Unload zuerst um die Änderungen, die in der Datenbank vor dem Beenden der Anwendung vorgenommen wurden. Zweitens: der Code zeigt, wie ein Befehl direkt über ein offenes ausgeführt werden kann **Verbindung** -Objekt unter Verwendung der **Execute** Methode. Abschließend wird ein Beispiel der Ausführung einer Abfrage nicht Zeile zurückgibt (eine UPDATE-Abfrage), für die Datenquelle.
+ Die **Form_Unload** Unterroutine ist wichtig, verschiedene Ursachen haben. Da dies eine Beispiel-App ist, löscht Form_Unload zuerst um die Änderungen, die in der Datenbank vor dem Beenden der Anwendung vorgenommen wurden. Zweitens: der Code zeigt, wie ein Befehl direkt über ein offenes ausgeführt werden kann **Verbindung** -Objekt unter Verwendung der **Execute** Methode. Abschließend wird ein Beispiel der Ausführung einer Abfrage nicht mit Zeilen zurückgeben (eine UPDATE-Abfrage), für die Datenquelle.

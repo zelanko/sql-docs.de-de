@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0926afa9cb434f105dfbd817f5c6bac9663fa5d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9f8ded0dfc540ab695342fc1765bf53e880ec0e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644149"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538057"
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
  Wenn der aktuelle Benutzer eine Tabelle mit dem angegebenen Namen besitzt, werden die Spalten dieser Tabelle zurückgegeben. Wenn *Table_owner* nicht angegeben ist und der aktuelle Benutzer keine Tabelle mit den angegebenen *Table_name*, sp_column nach für eine Tabelle mit dem angegebenen *Table_name* gehören dem Datenbankbesitzer. Sofern eine solche Tabelle vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
   
  [ @table_qualifier=] '*Table_qualifier*"  
- Der Name des Tabellenqualifizierers. *TABLE_QUALIFIER* ist *Sysname*, hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer ***.*** Besitzer ***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+ Der Name des Tabellenqualifizierers. *TABLE_QUALIFIER* ist *Sysname*, hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (_Qualifizierer_**.** _Besitzer_**.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
  [ @column_name=] '*Spalte*"  
  Eine einzelne Spalte, die verwendet wird, wenn nur eine Spalte mit Kataloginformationen empfangen wird. *Spalte* ist **Nvarchar (** 384 **)**, hat den Standardwert NULL. Wenn *Spalte* ist nicht angegeben ist, werden alle Spalten zurückgegeben. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *Spalte* dar, der den Namen der Spalte in der sys.columns-Tabelle aufgelistet. *Spalte* kann Platzhalterzeichen DBMS-spezifische Platzhalterzeichen enthalten. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen ISO-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  

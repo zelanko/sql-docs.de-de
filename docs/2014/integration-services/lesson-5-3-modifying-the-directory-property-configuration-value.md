@@ -1,25 +1,24 @@
 ---
-title: 'Schritt 3: Ändern des Directory-Eigenschaftskonfigurationswertes | Microsoft-Dokumentation'
+title: 'Schritt 3: Ändern des Directory-Eigenschaftskonfigurationswertes | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39a1547e2248c62299026440b5b33da88458138e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 011cd07c0f28f884f460d78d5f2f88631bfe2fd9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085880"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807502"
 ---
-# <a name="step-3-modifying-the-directory-property-configuration-value"></a>Schritt 3: Ändern des Directory-Eigenschaftskonfigurationswertes
-  In dieser Aufgabe ändern Sie die in der Datei SSISTutorial.dtsConfig gespeicherte Konfigurationseinstellung für die Wert-Eigenschaft der Variablen `User::varFolderName` auf Paketebene. Die Variable aktualisiert die Verzeichnis-Eigenschaft des Foreach-Schleifencontainers. Der geänderte Wert zeigt auf die `New Sample Data` Ordner, den Sie in der vorherigen Aufgabe erstellt haben. Nachdem Sie die Konfigurationseinstellung geändert und das Paket ausgeführt haben, wird die Verzeichnis-Eigenschaft durch die Variable aktualisiert. Dabei wird der durch die Konfigurationsdatei aufgefüllte Wert anstelle des Verzeichniswerts verwendet, der ursprünglich im Paket konfiguriert war.  
+# <a name="step-3-modifying-the-directory-property-configuration-value"></a>Schritt 3: Ändern des Directory-Eigenschaftskonfigurationswertes
+  In dieser Aufgabe ändern Sie die in der Datei SSISTutorial.dtsConfig gespeicherte Konfigurationseinstellung für die Wert-Eigenschaft der Variablen `User::varFolderName`auf Paketebene. Die Variable aktualisiert die Verzeichnis-Eigenschaft des Foreach-Schleifencontainers. Der geänderte Wert zeigt auf die `New Sample Data` Ordner, den Sie in der vorherigen Aufgabe erstellt haben. Nachdem Sie die Konfigurationseinstellung geändert und das Paket ausgeführt haben, wird die Verzeichnis-Eigenschaft durch die Variable aktualisiert. Dabei wird der durch die Konfigurationsdatei aufgefüllte Wert anstelle des Verzeichniswerts verwendet, der ursprünglich im Paket konfiguriert war.  
   
 ### <a name="to-modify-the-configuration-setting-of-the-directory-property"></a>So ändern Sie die Konfigurationseinstellung der Directory-Eigenschaft  
   
@@ -34,6 +33,6 @@ ms.locfileid: "48085880"
 3.  Speichern Sie die Änderung, und schließen Sie dann den Texteditor.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Schritt 4: Testen des Tutorialpakets aus Lektion 5](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
+ [Schritt 4: Testen des Lektion 5-Tutorialpakets](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   
   

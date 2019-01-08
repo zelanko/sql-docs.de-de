@@ -1,22 +1,24 @@
 ---
-title: Was ist der Speicherpool für SQL Server big Data-Cluster? | Microsoft-Dokumentation
+title: Was ist der Speicherpool?
+titleSuffix: SQL Server 2019 big data clusters
 description: Dieser Artikel beschreibt den Speicherpool in einer SQL Server-2019 big Data-Cluster.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cbf9ff14ece1b33e1c271786bc96f0ac590b807e
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.custom: seodec18
+ms.openlocfilehash: c0f376066ad02e70576c59bfe13c6f77e4b72c09
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050752"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029954"
 ---
-# <a name="what-is-the-sql-server-big-data-clusters-storage-pool"></a>Was ist der Speicherpool für SQL Server big Data-Cluster?
+# <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>Was ist der Speicherpool (SQL Server-2019 big Data-Cluster)?
 
-Dieser Artikel beschreibt die Rolle der *SQL Server-Speicherpool* in einer SQL Server-2019 Vorschau big Data-Cluster. Die folgenden Abschnitte beschreiben die Architektur und die Funktionalität eines SQL-Speicherpools.
+Dieser Artikel beschreibt die Rolle der *SQL Server-Speicherpool* in einer SQL Server-2019 big Data-Cluster (Vorschau). Die folgenden Abschnitte beschreiben die Architektur und die Funktionalität eines SQL-Speicherpools.
 
 ## <a name="storage-pool-architecture"></a>Pool-Speicherarchitektur
 

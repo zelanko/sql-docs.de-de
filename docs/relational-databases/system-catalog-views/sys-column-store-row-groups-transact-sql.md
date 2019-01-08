@@ -20,12 +20,12 @@ ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bff4582f8bf46d094db2a1689ad8c9fd6de92185
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fff57d41e522ae2e002809982bfeb084c28bbbba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782898"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531658"
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47782898"
 |**row_group_id**|**int**|Die dieser Zeilengruppe zugeordnete Zeilengruppenzahl. Diese ist innerhalb der Partition eindeutig.<br /><br /> -1 = Ende einer in-Memory-Tabelle.|  
 |**delta_store_hobt_id**|**bigint**|Die Hobt_id für OPEN-Zeilengruppe im deltaspeicher.<br /><br /> NULL, wenn die Zeilengruppe nicht im deltaspeicher ist.<br /><br /> NULL für das Ende einer in-Memory-Tabelle.|  
 |**state**|**tinyint**|Die der state_description zugeordnete ID.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = TOMBSTONE|  
-|**state_description**|**nvarchar(60)**|Beschreibung des persistenten Status der Zeilengruppe:<br /><br /> INVISIBLE – Ein ausgeblendetes komprimiertes Segment wird gerade aus Daten in einem Deltastore erstellt. Lesevorgänge nutzen den Deltastore, bis das unsichtbare komprimierte Segment abgeschlossen ist. Anschließend werden das neue Segment sichtbar gemacht und der Quelldeltastore entfernt.<br /><br /> OPEN: Eine Zeilengruppe mit Lese-/Schreibzugriff, die neue Datensätze akzeptiert. Eine offene Zeilengruppe befindet sich weiterhin im rowstore-Format und wurde nicht in das columnstore-Format komprimiert.<br /><br /> CLOSED: Eine Zeilengruppe, die aufgefüllt, aber vom Tupelverschiebungsprozess noch nicht komprimiert wurde.<br /><br /> COMPRESSED: Eine Zeilengruppe, die aufgefüllt und komprimiert wurde.|  
+|**state_description**|**nvarchar(60)**|Beschreibung des persistenten Status der Zeilengruppe:<br /><br /> UNSICHTBARE – ein ausgeblendetes komprimiertes Segment gerade aus Daten in einem deltastore erstellt wird. Lesevorgänge nutzen den Deltastore, bis das unsichtbare komprimierte Segment abgeschlossen ist. Anschließend werden das neue Segment sichtbar gemacht und der Quelldeltastore entfernt.<br /><br /> GEÖFFNET – eine Zeilengruppe für Lese-/Schreibzugriff, die neue Datensätze akzeptiert. Eine offene Zeilengruppe befindet sich weiterhin im rowstore-Format und wurde nicht in das columnstore-Format komprimiert.<br /><br /> GESCHLOSSEN – eine Zeilengruppe, die ausgefüllt wurde, aber vom tupelverschiebungsprozess noch nicht komprimiert.<br /><br /> KOMPRIMIERT: eine Zeilengruppe, die aufgefüllt und komprimiert wurde.|  
 |**total_rows**|**bigint**|Gesamtzahl der Zeilen, die in der Zeilengruppe physisch gespeichert sind. Einige wurden u. U. gelöscht, sind aber weiterhin gespeichert. Die maximale Anzahl der Zeilen in einer Zeilengruppe beträgt 1.048.576 (hexadezimal FFFFF).|  
 |**deleted_rows**|**bigint**|Gesamtzahl der Zeilen in der Zeilengruppe, die als gelöscht markiert sind. Dies ist für DELTA-Zeilengruppen immer 0.|  
 |**size_in_bytes**|**bigint**|Größe aller Daten (in Bytes) in dieser Zeilengruppe (ausgenommen von Metadaten oder freigegebenen Wörterbüchern) sowohl für DELTA- als auch für COLUMNSTORE-Zeilengruppen.|  

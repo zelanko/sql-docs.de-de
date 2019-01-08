@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transformations [Integration Services], listed
@@ -22,12 +21,12 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 288eb3b2e8e8b86d27c50efdaf6a1f6a2754e91d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76157486751a08d17cf46de312f63e6e41dc3cb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140718"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785232"
 ---
 # <a name="integration-services-transformations"></a>SQL Server Integration Services-Transformationen
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Transformationen handelt es sich um die Komponenten im Datenfluss eines Pakets, mit denen Daten aggregiert, zusammengeführt, verteilt und geändert werden. Mit Transformationen können auch Suchvorgänge ausgeführt und Stichprobendatasets generiert werden. In diesem Abschnitt werden die Transformationen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] beschrieben. Darüber hinaus wird deren Funktionsweise erklärt.  
@@ -83,7 +82,7 @@ ms.locfileid: "48140718"
 |[Transformation für Zusammenführungsjoin](merge-join-transformation.md)|Diese Transformation verknüpft zwei Datasets mithilfe eines FULL-, LEFT- oder INNER-Joins.|  
 |[Transformation für Suche](lookup-transformation.md)|Diese Transformation sucht Werte in einer Verweistabelle mithilfe einer genauen Übereinstimmung.|  
 |[Cachetransformation](cache-transform.md)|Die Transformation, die Daten aus einer verbundenen Datenquelle im Datenfluss in einen Cacheverbindungs-Manager schreibt, der die Daten in einer Cachedatei speichert. Die Transformation für Suche führt Suchvorgänge in den Daten der Cachedatei aus.|  
-|[Balanced Data Distributor-Transformation](balanced-data-distributor-transformation.md)|Die Transformation verteilt Puffer mit eingehenden Zeilen gleichmäßig auf Ausgaben für separate Threads, um die Leistung von SSIS-Paketen zu verbessern, die auf Mehrkern- und Mehrprozessorservern ausgeführt werden.|  
+|[Balanced Data Distributor (BDD)-Transformation](balanced-data-distributor-transformation.md)|Die Transformation verteilt Puffer mit eingehenden Zeilen gleichmäßig auf Ausgaben für separate Threads, um die Leistung von SSIS-Paketen zu verbessern, die auf Mehrkern- und Mehrprozessorservern ausgeführt werden.|  
   
 ## <a name="auditing-transformations"></a>Überwachen von Transformationen  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält die folgenden Transformationen, um Überwachungsinformationen hinzuzufügen und Zeilen zu zählen.  

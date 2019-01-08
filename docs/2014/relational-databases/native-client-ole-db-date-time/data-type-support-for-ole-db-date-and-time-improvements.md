@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], data type support
@@ -13,20 +13,20 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ff3ef6c9fd7347585b4e7df026fdc95bafdd069
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72bc879e1c04199f5e8e8cbdc1d630cf43113520
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157920"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807782"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit
   Dieses Thema liefert Informationen über OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client)-Typen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datums- und Uhrzeitdatentypen unterstützen.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Datentypzuordnung zu Rowsets und Parametern  
- OLE DB stellt zwei neue Datentypen bereit, um die neuen Servertypen zu unterstützen: DBTYPE_DBTIME2 und DBTYPE_DBTIMESTAMPOFFSET. Die folgende Tabelle zeigt die vollständige Servertypzuordnung:  
+ OLE DB bietet zwei neue Datentypen, um die neuen Servertypen zu unterstützen: DBTYPE_DBTIME2 und DBTYPE_DBTIMESTAMPOFFSET. Die folgende Tabelle zeigt die vollständige Servertypzuordnung:  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|OLE DB-Datentyp|value|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|OLE DB-Datentyp|Wert|  
 |-----------------------------------------|----------------------|-----------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  

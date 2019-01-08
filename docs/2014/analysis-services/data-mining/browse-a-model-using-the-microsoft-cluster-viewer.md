@@ -23,12 +23,12 @@ ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 185e9a154a7eb51ff15ce1b45bfd82dc2e36adf0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78172be64641195f787e0e807149b4995c3b5805
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087770"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530584"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster-Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Miningmodelle an, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus erstellt wurden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus ist ein Segmentierungsalgorithmus zum Durchsuchen von Daten, um Anomalien in den Daten zu identifizieren und Vorhersagen zu erstellen. Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "48087770"
 ###  <a name="BKMK_Diagram"></a> Clusterdiagramm  
  Die Registerkarte **Clusterdiagramm** des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster-Viewers zeigt alle in einem Miningmodell enthaltenen Cluster an. Die Schattierung der Linie, die einen Cluster mit einem anderen verbindet, stellt die Ähnlichkeit der Cluster dar. Ist die Schattierung schwach oder ist keine Schattierung vorhanden, sind sich die Cluster kaum ähnlich. Je stärker die Linie wird, umso mehr ähneln sich die Links. Sie können die Anzahl der im Viewer angezeigten Linien mithilfe des Schiebereglers rechts neben den Clustern anpassen. Wenn Sie den Schieberegler nach unten ziehen, werden nur die stärksten Links angezeigt.  
   
- Standardmäßig stellt die Schattierung die Auffüllung des Clusters dar. Mithilfe der Optionen **Schattierung****Variable** und **Status** können Sie auswählen, welches Attribut- und Statuspaar die Schattierung darstellen soll. Je stärker die Schattierung ist, umso größer ist die Attributverteilung für einen bestimmten Status. Die Verteilung wird geringer, wenn die Schattierung schwächer wird.  
+ Standardmäßig stellt die Schattierung die Auffüllung des Clusters dar. Mithilfe der **Schattierungvariable** und **Zustand** Optionen, Sie können auswählen, welches Attribut- und statuspaar die Schattierung darstellen. Je stärker die Schattierung ist, umso größer ist die Attributverteilung für einen bestimmten Status. Die Verteilung wird geringer, wenn die Schattierung schwächer wird.  
   
  Klicken Sie zum Umbenennen eines Clusters mit der rechten Maustaste auf den Clusterknoten, und wählen Sie **Cluster umbenennen**aus. Der neue Name wird auf dem Server persistent gespeichert.  
   
@@ -80,10 +80,10 @@ ms.locfileid: "48087770"
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm.md)   
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](mining-model-viewer-tasks-and-how-tos.md)   
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](mining-model-viewer-tasks-and-how-tos.md)   
- [Datamining-Tools](data-mining-tools.md)   
+ [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)   
+ [Tasks und Anweisungen für Miningmodell-Viewer](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tasks und Anweisungen für Miningmodell-Viewer](mining-model-viewer-tasks-and-how-tos.md)   
+ [Data Mining-Tools](data-mining-tools.md)   
  [Data Mining-Modell-Viewer](data-mining-model-viewers.md)  
   
   

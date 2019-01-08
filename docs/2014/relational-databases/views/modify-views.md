@@ -15,12 +15,12 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f29dc88bf6298aebea60591034f0c7abc6765185
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3d2581f2f086f8db5f9408502185c132a5866af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167010"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513227"
 ---
 # <a name="modify-views"></a>Ändern von Sichten
   Nachdem eine Sicht definiert wurde, können Sie ihre Definition in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ändern, ohne die Sicht mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]löschen und neu erstellen zu müssen.  
@@ -31,7 +31,7 @@ ms.locfileid: "48167010"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So ändern Sie eine Sicht mit:**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48167010"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48167010"
 ####  <a name="Permissions"></a> Berechtigungen  
  Für die Ausführung von ALTER VIEW wird zumindest die ALTER-Berechtigung für OBJECT benötigt.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-modify-a-view"></a>So ändern Sie eine Sicht  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48167010"
   
     1.  Aktivieren oder deaktivieren Sie die Kontrollkästchen beliebiger Elemente, die Sie hinzufügen oder entfernen möchten.  
   
-    2.  Klicken Sie mit der rechten Maustaste innerhalb des Diagrammbereichs, wählen Sie die Option **Tabelle hinzufügen…**, und wählen Sie im Dialogfeld **Tabelle hinzufügen** dann die weiteren Spalten aus, die Sie der Sicht hinzufügen möchten.  
+    2.  Klicken Sie mit der rechten Maustaste innerhalb des Diagrammbereichs, wählen Sie die Option **Tabelle hinzufügen...**, und wählen Sie im Dialogfeld **Tabelle hinzufügen** dann die weiteren Spalten aus, die Sie der Ansicht hinzufügen möchten.  
   
     3.  Klicken Sie mit der rechten Maustaste auf die Titelleiste der Tabelle, die Sie entfernen möchten, und wählen Sie die Option **Entfernen**.  
   

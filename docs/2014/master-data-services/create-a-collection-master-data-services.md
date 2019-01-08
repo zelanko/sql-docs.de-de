@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating collections [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 386da4804e3153361e055fc11cff6dfc2352a473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c0e899ebc7180fdfbe234c893cb364d3f9d01ee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208840"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782352"
 ---
 # <a name="create-a-collection-master-data-services"></a>Erstellen einer Auflistung (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine Auflistung, wenn Sie flache Listen mit Blatt- und konsolidierten Elementen erstellen möchten. Auflistungen müssen nicht alle Elemente aus der Entität einschließen.  
@@ -55,11 +54,11 @@ ms.locfileid: "48208840"
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [Hinzufügen von Mitgliedern einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
+-   [Hinzufügen von Elementen zu einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sammlungen &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)   
- [Löschen eines Elements oder einer Auflistung &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
+ [Löschen eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [Erstellen einer expliziten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
   

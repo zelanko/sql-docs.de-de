@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
@@ -14,12 +13,12 @@ ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 163332d281309ff2a3deef16ac8f96f0517346da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e80a18cef595ae3543aba8a656aca9267607e38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147305"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809552"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>Wiedergeben einer Ablaufverfolgungstabelle (SQL Server Profiler)
   Die Wiedergabe bezeichnet die Möglichkeit, eine gespeicherte Ablaufverfolgung zu öffnen und erneut wiederzugeben. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] verfügt über eine Multithread-Wiedergabe-Engine, die Benutzerverbindungen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung simulieren kann. Die Wiedergabe ist nützlich für die Behandlung von Anwendungs- oder Prozessproblemen. Wenn Sie das Problem identifiziert und Korrekturen implementiert haben, sollten Sie die Ablaufverfolgung, in der das mögliche Problem aufgetreten ist, für die korrigierte Anwendung bzw. den korrigierten Prozess erneut ausführen. Geben Sie anschließend die ursprüngliche Ablaufverfolgung wieder, und vergleichen Sie die Ergebnisse.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - / (divide)
@@ -14,12 +13,12 @@ ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c5739fc30656871c23b3a3c2b6e8ae9953b63c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf72606d04d02cda0ec656509f56fc636ee1f6e5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203760"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810192"
 ---
 # <a name="divide-ssis-expression"></a>(Division) (SSIS-Ausdruck)
   Dividiert den ersten numerischen Ausdruck durch den zweiten numerischen Ausdruck.  
@@ -34,7 +33,7 @@ dividend / divisor
   
 ## <a name="arguments"></a>Argumente  
  *dividend*  
- Der zu dividierende numerische Ausdruck. *dividend* kann ein beliebiger numerischer Ausdruck sein. Weitere Informationen finden Sie unter [Integration Services Datentypen](../data-flow/integration-services-data-types.md).  
+ Der zu dividierende numerische Ausdruck. *dividend* kann ein beliebiger numerischer Ausdruck sein. Weitere Informationen finden Sie unter [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  *divisor*  
  Der numerische Ausdruck, durch den der Dividend geteilt werden soll. *divisor* kann ein beliebiger numerischer Ausdruck außer Null sein.  
@@ -67,7 +66,7 @@ ListPrice / StandardCost
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Operatorrangfolge und Assoziativität](operator-precedence-and-associativity.md)   
+ [Operatorenrangfolge und -assoziativität](operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](operators-ssis-expression.md)  
   
   

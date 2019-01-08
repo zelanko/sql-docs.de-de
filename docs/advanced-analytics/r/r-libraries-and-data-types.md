@@ -1,41 +1,32 @@
 ---
-title: Arbeiten mit R-Datentypen in SQL Server-Machine Learning | Microsoft-Dokumentation
+title: R-an-SQL-datentypkonvertierungen – SQL Server Machine Learning Services
+description: Überprüfen Sie die Converstions Typ implizite und explizite Daten zwischen R und SQL Server in Data Science und Machine learning-Lösungen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 12/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: bcabb40cffb00e4f3ed1f5b7bb1df72f20f3f121
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 23318c4a0ad9fceff9b293b706ff61f62643ee6d
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890066"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644949"
 ---
-# <a name="r-libraries-and-r-data-types"></a>R-Bibliotheken und R-Datentypen
+# <a name="data-type-mappings-betweenr-and-sql-server"></a>Zuordnungen BetweenR und SQL Server-Datentyp
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel wird beschrieben, die R-Bibliotheken, die enthalten sind und die Datentypen, die in den folgenden Produkten unterstützt werden:
+Überprüfen Sie für R-Lösungen, die auf die Funktion für die R-Integration in SQL Server-Machine Learning-Dienste ausgeführt werden die Liste der nicht unterstützten Datentypen und datentypkonvertierungen, die möglicherweise implizit durchgeführt werden, wenn Daten zwischen R-Bibliotheken und SQL Server übergeben werden.
 
-+ SQL Server 2016 R Services (Datenbankintern)
-+ SQL Server Machine Learning-Dienste (Datenbankintern)
+## <a name="base-r-version"></a>Basis-R-version
 
-In diesem Artikel werden auch nicht unterstützten Datentypen aufgeführt, und listet die datentypkonvertierungen, die möglicherweise implizit durchgeführt werden, wenn Daten zwischen R und SQL Server übergeben werden.
+SQL Server 2016 R Services und SQL Server 2017 Machine Learning Services mit R, werden mit bestimmten Versionen von Microsoft R Open ausgerichtet. Die neueste Version, SQL Server 2017 Machine Learning Services basiert beispielsweise auf Microsoft R Open 3.3.3.
 
-## <a name="r-libraries"></a>R-Bibliotheken
+Öffnen Sie zum Anzeigen der R-Version, die mit einer bestimmten Instanz von SQL Server verknüpften **RGui**. Für die Standardinstanz wäre der Pfad wie folgt: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 
-Beide Produkte, die R Services und Machine Learning-Dienste mit R, werden mit bestimmten Versionen von Microsoft R Open ausgerichtet. Die neueste Version, SQL Server 2017 Machine Learning Services basiert beispielsweise auf Microsoft R Open 3.3.3.
-
-Öffnen Sie zum Anzeigen der R-Version, die mit einer bestimmten Instanz von SQL Server verknüpften RGui.
-
-1. Für die Standardinstanz wäre der Pfad wie folgt: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
-2. Eine Meldung angezeigt, die die R-Verteilung und die Microsoft R Open Versionsnummer auflistet.
-
-Die Version von R in einer bestimmten Version von Microsoft R Server enthalten, finden Sie unter [R Server – neues](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
-
-Beachten Sie, dass das paketverwaltungssystem in SQL Server bedeutet, dass mehrere Versionen der R-Paket mit mehreren Benutzern das gleiche Paket freigeben oder verschiedene Versionen desselben Pakets auf dem gleichen Computer installiert werden können. Weitere Informationen finden Sie unter [R-Paketverwaltung in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
+Das Tool lädt die Basis-R und andere Bibliotheken. Paketinformationen-Version wird in einer Benachrichtigung für jedes Paket bereitgestellt, die beim sitzungsstart geladen wird. 
 
 ## <a name="r-and-sql-data-types"></a>R und SQL-Datentypen
 
@@ -109,7 +100,7 @@ Beachten Sie, dass die Leistung von R-Code durch unnötige Spalten deutlich beei
 Falls ein bestimmter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp in R nicht unterstützt wird, Sie aber die Datenspalten im R-Skript verwenden müssen, empfehlen wir Ihnen, die Funktionen [„Cast“ und „Convert“ &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) zu verwenden, um sicherzustellen, dass die Datentypenkonvertierungen wie gewünscht ausgeführt werden, bevor Sie die Daten in Ihrem R-Skript verwenden.  
 
 > [!WARNING]
-Wenn Sie **rxDataStep** verwenden, um inkompatible Spalten beim Verschieben von Daten fallen zu lassen, denken Sie daran, dass die Argumente _varsToKeep_ und _varsToDrop_ für den Datenquelltyp **RxSqlServerData** nicht unterstützt werden.
+> Wenn Sie **rxDataStep** verwenden, um inkompatible Spalten beim Verschieben von Daten fallen zu lassen, denken Sie daran, dass die Argumente _varsToKeep_ und _varsToDrop_ für den Datenquelltyp **RxSqlServerData** nicht unterstützt werden.
 
 
 ## <a name="examples"></a>Beispiele
@@ -120,7 +111,7 @@ In folgendem Beispiel wird veranschaulicht, wie Daten auf dem Weg zwischen SQL S
 
 Die Abfrage ruft eine Reihe von Werten aus einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle, und verwendet die gespeicherte Prozedur [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) um die Werte, die mithilfe der R-Laufzeitumgebung auszugeben.
 
-```SQL
+```sql
 CREATE TABLE MyTable (    
  c1 int,    
  c2 varchar(10),    

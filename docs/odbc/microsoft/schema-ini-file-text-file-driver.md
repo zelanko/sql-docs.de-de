@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169220"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590864"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Datei „Schema.ini“ (Textdateitreiber)
 Wenn der Text-Treiber verwendet wird, wird das Format der Textdatei mit einer Schemadatei für die Informationen bestimmt. Die Schema-Informationsdatei ist immer mit dem Namen Schema.ini und immer im gleichen Verzeichnis wie die Text-Datenquelle gespeichert. Die Schemadatei für die Informationen enthält die IISAM mit Informationen über das allgemeine Format der Datei, den Namen der Spalte und Datentypinformationen und mehrere andere Datenmerkmale. Eine Schema.ini-Datei ist immer erforderlich, für den Zugriff auf Daten fester Länge. Sie sollten eine Schema.ini-Datei verwenden, wenn die Texttabelle enthält, DateTime, Währung oder Dezimaldaten oder jedes Mal, wenn Sie mehr Kontrolle über die Behandlung der Daten in der Tabelle möchten.  
@@ -95,7 +95,7 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die folgende Tabelle beschreibt die einzelnen Teile der **Col *** n* Eintrag.  
+ Die folgende Tabelle beschreibt die einzelnen Teile der **Col**_n_ Eintrag.  
   
 |Parameter|Description|  
 |---------------|-----------------|  
@@ -105,7 +105,7 @@ n=ColumnNametype [#]
 |*#*|Der ganzzahlige Wert, der die Breite der Spalte bestimmt (erforderlich, wenn **Breite** angegeben ist).|  
   
 ## <a name="selecting-a-character-set"></a>Auswählen eines Zeichensatzes  
- Sie können in zwei Zeichensätze auswählen: ANSI- und OEM. Die **CharacterSet** in Schema.ini überschreibt die Einstellung in der Windows-Registrierung, Dateien. Das folgende Beispiel zeigt den Schema.ini-Eintrag, der den Zeichensatz an ANSI festlegt:  
+ Sie können aus zwei Zeichensätze auswählen: ANSI- und OEM. Die **CharacterSet** in Schema.ini überschreibt die Einstellung in der Windows-Registrierung, Dateien. Das folgende Beispiel zeigt den Schema.ini-Eintrag, der den Zeichensatz an ANSI festlegt:  
   
 ```  
 CharacterSet=ANSI  
@@ -119,11 +119,11 @@ CharacterSet=ANSI
 |**DateTimeFormat**|Kann auf einer Formatzeichenfolge festgelegt werden, die Datums- und Uhrzeitangaben angibt. Sie sollten diesen Eintrag angeben, wenn alle Datum/Uhrzeit-Felder in den Import/Export mit dem gleichen Format verarbeitet werden. Alle Microsoft Jet-Formate, mit Ausnahme der Uhr und Uhr. werden unterstützt. Ist keine Formatzeichenfolge, werden die Optionen für das kurze Datum Windows-Systemsteuerung der Bild und die Uhrzeit verwendet.|  
 |**DecimalSymbol**|Kann auf jedem beliebigen einzelnen Zeichen festgelegt werden, die verwendet wird, um die ganze Zahl von der Bruchteil einer Zahl zu trennen.|  
 |**NumberDigits**|Gibt die Anzahl von Dezimalstellen in der Bruchteil einer Zahl.|  
-|**NumberLeadingZeros**|Gibt an, ob ein decimal-Wert kleiner als 1 und mehr als – 1 führende Nullen enthalten soll. Dieser Wert kann entweder "false" (ohne führenden Nullen) sein oder "true".|  
+|**NumberLeadingZeros**|Gibt an, ob ein decimal-Wert kleiner als 1 und mehr als 1, führende Nullen enthalten soll. Dieser Wert kann entweder "false" (ohne führenden Nullen) sein oder "true".|  
 |**CurrencySymbol**|Gibt an, das Währungssymbol ein, das für die Currency-Werte in der Textdatei verwendet werden kann. Beispiele sind das Dollarzeichen ($) und Dm.|  
 |**CurrencyPosFormat**|Kann auf eines der folgenden Werte festgelegt werden:<br /><br /> -Currency Symbol Präfix ohne Trennung ($1)<br />-Currency Symbol-Suffix ohne Trennung (1$)<br />-Currency Symbol-Präfix mit einem Zeichen getrenntem ($ 1)<br />-Currency Symbol-Suffix mit einem Trennung (1 $)|  
 |**CurrencyDigits**|Gibt die Anzahl von Ziffern für den Bruchteil einen Währungsbetrag.|  
-|**CurrencyNegFormat**|Folgende Werte sind möglich:<br /><br /> -   ($1)<br />-   –$1<br />-   $–1<br />-   $1–<br />-   (1$)<br />-   –1$<br />-   1–$<br />-   1$–<br />-   –1 $<br />-   –$ 1<br />-   1 $–<br />-   $ 1–<br />-   $ –1<br />-   1– $<br />-   ($ 1)<br />-   (1 $)<br /><br /> Dieses Beispiel zeigt das Dollarzeichen, aber ersetzen Sie es mit dem entsprechenden **CurrencySymbol** Wert im wirklichen Programm.|  
+|**CurrencyNegFormat**|Kann einer der folgenden Werte sein:<br /><br /> -   ($1)<br />--$1<br />-$-1<br />-$1:<br />-   (1$)<br />-1 $<br />-1-$<br />-1-<br />-1 $<br />--$ 1<br />-1-<br />-$ 1:<br />-$-1<br />-1-$<br />-   ($ 1)<br />-   (1 $)<br /><br /> Dieses Beispiel zeigt das Dollarzeichen, aber ersetzen Sie es mit dem entsprechenden **CurrencySymbol** Wert im wirklichen Programm.|  
 |**CurrencyThousandSymbol**|Gibt an, das einzelne Zeichen-Symbol, das für die Trennung von Währungswerten in der Textdatei von Tausenden verwendet werden kann.|  
 |**CurrencyDecimalSymbol**|Kann auf jedem beliebigen einzelnen Zeichen festgelegt werden, die verwendet wird, um die gesamte von den Bruchteil einen Währungsbetrag zu trennen.|  
   

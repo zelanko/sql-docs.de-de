@@ -1,21 +1,22 @@
 ---
-title: Ubuntu-Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren | Microsoft-Dokumentation
-description: ''
+title: Ubuntu-Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren
+titleSuffix: SQL Server
+description: Weitere Informationen Sie zum Erstellen von Availability Group-Clustern für Ubuntu
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 33b5631fdf834ea9a998f1dd4ae149dfe4cc6109
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: b8be84952a1f7652fc9e40cf82ce5ca25dfa25f4
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658380"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160618"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Konfigurieren von Ubuntu-Cluster und Availability Group-Ressource
 
@@ -97,7 +98,7 @@ sudo systemctl enable pacemaker
 
 1. Entfernen Sie alle vorhandenen Clusterkonfiguration, von allen Knoten. 
 
-   Laufende "Sudo apt-Get Install Pcs" Pacemaker und Corosync-Pcs zur selben Zeit installiert und startet die Ausführung alle 3 der Dienste.  Starten Corosync eine Vorlage generiert "/ etc/cluster/corosync.conf' Datei.  Damit die nächsten Schritte erfolgreich ausgeführt werden, kann diese Datei nicht vorhanden sein – also die problemumgehung besteht, beim Beenden des Pacemaker darin / Corosync und Löschen von "/ etc/cluster/corosync.conf", und klicken Sie dann weitere Schritte erfolgreich abgeschlossen. "Pcs Cluster destroy" führt die gleiche Aufgabe aus, und Sie können es verwenden, wie eine Zeitschritt ersten Cluster-Setup.
+   Laufende "Sudo apt-Get Install Pcs" Pacemaker und Corosync-Pcs zur selben Zeit installiert und startet die Ausführung alle 3 der Dienste.  Starten Corosync eine Vorlage generiert "/ etc/cluster/corosync.conf' Datei.  Damit die nächsten Schritte erfolgreich ausgeführt werden, kann diese Datei sollte nicht vorhanden: damit die problemumgehung besteht, beim Beenden des Pacemaker darin / Corosync und Löschen von "/ etc/cluster/corosync.conf", und klicken Sie dann weitere Schritte erfolgreich abgeschlossen. "Pcs Cluster destroy" führt die gleiche Aufgabe aus, und Sie können es verwenden, wie eine Zeitschritt ersten Cluster-Setup.
    
    Der folgende Befehl entfernt alle vorhandenen Konfigurationsdateien für den Cluster und alle Clusterdienste beendet. Dies zerstört dauerhaft den Cluster. Führen sie als ersten Schritt in einer präproduktionsumgebung. Beachten Sie, dass "Pcs Cluster destroy" deaktiviert die Pacemaker-Dienst und muss erneut aktiviert werden. Führen Sie den folgenden Befehl auf allen Knoten aus.
    
@@ -123,7 +124,7 @@ Der folgende Befehl erstellt einen Cluster mit drei Knoten. Bevor Sie das Skript
 
    ```bash
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
-   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2...> <node3>
    sudo pcs cluster start --all
    sudo pcs cluster enable --all
    ```

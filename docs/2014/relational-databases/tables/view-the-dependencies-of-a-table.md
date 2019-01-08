@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table dependencies [SQL Server]
@@ -16,23 +15,23 @@ ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1ce3195b114969a44f818ca0eb69d2979087e55
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 111a0664a61a586558dd4792525c7adf2d68646d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169120"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772302"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Anzeigen der Abhängigkeiten einer Tabelle
-  Sie können die Abhängigkeiten einer Tabelle mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen.  
+  Sie können die Abhängigkeiten einer Tabelle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] anzeigen.  
   
  **In diesem Thema**  
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
--   **So zeigen Sie die Abhängigkeiten einer Tabelle an mit:**  
+-   **So zeigen Sie die Abhängigkeiten einer Tabelle mit folgenden Elementen an:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,7 +44,7 @@ ms.locfileid: "49169120"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die VIEW DEFINITION-Berechtigung für die Datenbank und die SELECT-Berechtigung für sys.sql_expression_dependencies für die Datenbank. Standardmäßig wird die SELECT-Berechtigung nur Mitgliedern der festen Datenbankrolle db_owner gewährt. Wenn einem anderen Benutzer die SELECT-Berechtigung und die VIEW DEFINITION-Berechtigung erteilt werden, kann dieser Berechtigte alle Abhängigkeiten in der Datenbank anzeigen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-view-the-dependencies-of-a-table"></a>So zeigen Sie die Abhängigkeiten einer Tabelle an  
   

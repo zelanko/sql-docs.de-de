@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
@@ -28,15 +27,15 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f313854119094b4407dc8bf4f6e62fdf7a31677
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126530"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377870"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-  Sortierungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten Sortierregeln und die Berücksichtigung von Groß-/Kleinschreibung und Akzenten für die Daten. Sortierungen, mit denen, Zeichen-Datentypen wie z. B. `char` und `varchar` geben die Codeseite und die entsprechenden Zeichen, die für diesen Datentyp dargestellt werden können. Bei der Installation einer neuen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bei der Wiederherstellung einer Datenbanksicherung oder bei der Verbindung von Servern mit Clientdatenbanken ist es wichtig, dass Sie die Gebietsschemaanforderungen, die Sortierreihenfolge und das Verhalten in Bezug auf die Groß-/Kleinschreibung und Akzente der Daten kennen, mit denen Sie arbeiten. Informationen zum Auflisten von Sortierungen, die in Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verfügbar sind, finden Sie unter [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
+  Sortierungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten Sortierregeln und die Berücksichtigung von Groß-/Kleinschreibung und Akzenten für die Daten. Sortierungen, die mit Zeichendatentypen wie `char` und `varchar` verwendet werden, geben die Codeseite und die entsprechenden Zeichen vor, die für den jeweiligen Datentyp dargestellt werden können. Bei der Installation einer neuen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bei der Wiederherstellung einer Datenbanksicherung oder bei der Verbindung von Servern mit Clientdatenbanken ist es wichtig, dass Sie die Gebietsschemaanforderungen, die Sortierreihenfolge und das Verhalten in Bezug auf die Groß-/Kleinschreibung und Akzente der Daten kennen, mit denen Sie arbeiten. Informationen zum Auflisten von Sortierungen, die in Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verfügbar sind, finden Sie unter [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
   
  Wenn Sie eine Sortierung für den Server, die Datenbank, die Spalte oder den Ausdruck auswählen, weisen Sie den Daten bestimmte Merkmale zu, die Auswirkungen auf die Ergebnisse vieler Datenbankvorgänge haben. Wenn Sie beispielsweise eine Abfrage mit ORDER BY erstellen, kann die Sortierreihenfolge des Resultsets von der Sortierung abhängen, die für die Datenbank gilt oder die in einer COLLATE-Klausel auf Ausdrucksebene der Abfrage vorgegeben ist.  
   
@@ -53,8 +52,8 @@ ms.locfileid: "48126530"
 |Option|Description|  
 |------------|-----------------|  
 |Unterscheidung nach Groß-/Kleinschreibung (_CS)|Unterscheidet zwischen Groß- und Kleinbuchstaben. Wenn diese Option ausgewählt ist, stehen Kleinbuchstaben in der Sortierreihenfolge vor ihren entsprechenden Großbuchstaben. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung die Groß-/Kleinschreibung nicht beachtet. D. h. SQL Server betrachtet die groß- und die kleingeschriebenen Versionen von Buchstaben für Sortierzwecke als identisch. Sie können die Nichtunterscheidung nach Groß-/Kleinbuchstaben durch Angeben von "_CI" explizit auswählen.|  
-|Unterscheidung nach Akzent (_AS)|Unterscheidet zwischen Zeichen mit Akzent und Zeichen ohne Akzent. Beispielsweise ist 'a' nicht mit 'ấ' identisch. Wenn diese Option nicht aktiviert wird, werden bei der Sortierung Akzente nicht beachtet. D. h. SQL Server betrachtet die Versionen von Buchstaben mit und ohne Akzent für Sortierzwecke als identisch. Sie können die Nichtunterscheidung nach Akzent durch Angeben von "_AI" explizit auswählen.|  
-|Unterscheidung nach Kana (_KS)|Unterscheidet zwischen den zwei Arten japanischer Kana-Zeichen: Hiragana und Katakana. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung Kana nicht beachtet. D. h. SQL Server unterscheidet bei der Sortierung nicht zwischen Hiragana- und Katakana-Zeichen. Das Weglassen dieser Option ist die einzige Möglichkeit, die Nichtbeachtung von Kana anzugeben.|  
+|Unterscheidung nach Akzent (_AS)|Unterscheidet zwischen Zeichen mit Akzent und Zeichen ohne Akzent. Z. B. "ein"ist nicht gleich"???". Wenn diese Option nicht aktiviert wird, werden bei der Sortierung Akzente nicht beachtet. D. h. SQL Server betrachtet die Versionen von Buchstaben mit und ohne Akzent für Sortierzwecke als identisch. Sie können die Nichtunterscheidung nach Akzent durch Angeben von "_AI" explizit auswählen.|  
+|Unterscheidung nach Kana (_KS)|Unterscheidet zwischen zwei japanischen Kana-Zeichen: Hiragana und Katakana. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung Kana nicht beachtet. D. h. SQL Server unterscheidet bei der Sortierung nicht zwischen Hiragana- und Katakana-Zeichen. Das Weglassen dieser Option ist die einzige Möglichkeit, die Nichtbeachtung von Kana anzugeben.|  
 |Unterscheidung nach Breite (_WS)|Unterscheidet zwischen Zeichen halber Breite und Zeichen normaler Breite. Wenn diese Option nicht ausgewählt ist, betrachtet SQL Server die Darstellung in halber Breite und in normaler Breite desselben Zeichens für Sortierzwecke als identisch. Das Weglassen dieser Option ist die einzige Möglichkeit, die Nichtbeachtung der Breite anzugeben.|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden Sortierungssätze:  
@@ -63,16 +62,16 @@ ms.locfileid: "48126530"
  Windows-Sortierungen definieren Regeln zum Speichern von Zeichendaten, die auf dem zugehörigen Windows-Systemgebietsschema basieren. Bei einer Windows-Sortierung wird der Vergleich der Nicht-Unicode-Daten implementiert, indem derselbe Algorithmus wie bei Unicode-Daten verwendet wird. Die grundlegenden Regeln für Windows-Sortierreihenfolgen geben an, welches Alphabet oder welche Sprache verwendet wird, wenn Wörterbuchsortierung angewendet wird. Zudem geben die Regeln die Codepage an, die zum Speichern von Nicht-Unicode-Zeichendaten verwendet wird. Sowohl die Unicode- als auch die Nicht-Unicode-Sortierung sind kompatibel mit Zeichenfolgenvergleichen in einer bestimmten Version von Windows. Dadurch wird die Konsistenz der Datentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht. Außerdem erhalten Entwickler so die Möglichkeit, Zeichenfolgen in ihren Anwendungen mithilfe der gleichen Regeln zu sortieren, die auch in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden. Weitere Informationen finden Sie unter [Name der Windows-Sortierung &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql).  
   
  Binäre Sortierungen  
- Binäre Sortierungen sortieren Daten basierend auf der Reihenfolge codierter Werte, die vom Gebietsschema und Datentyp definiert werden. Dabei wird die Groß- und Kleinschreibung beachtet. Eine binäre Sortierung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiert das zu verwendende Gebietsschema sowie die zu verwendende ANSI-Codepage. Dies erzwingt eine binäre Sortierreihenfolge. Da binäre Sortierungen relativ einfach sind, tragen sie dazu bei, die Anwendungsleistung zu verbessern. Bei Nicht-Unicode-Datentypen basieren Datenvergleiche auf den in der ANSI-Codepage definierten Codepunkten. Bei Unicode-Datentypen basieren Datenvergleiche auf den Unicode-Codepunkten. Bei binären Sortierungen von Unicode-Datentypen wird das Gebietsschema bei Datensortierungen nicht berücksichtigt. Beispielsweise führen Latin_1_General_BIN und Japanese_BIN bei Unicode-Daten zu den gleichen Sortierergebnissen.  
+ Binäre Sortierungen sortieren Daten basierend auf der Reihenfolge codierter Werte, die vom Gebietsschema und Datentyp definiert werden. Dabei wird die Groß- und Kleinschreibung beachtet. Eine binäre Sortierung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiert das zu verwendende Gebietsschema sowie die zu verwendende ANSI-Codepage. Dies erzwingt eine binäre Sortierreihenfolge. Da binäre Sortierungen relativ einfach sind, tragen sie dazu bei, die Anwendungsleistung zu verbessern. Bei Nicht-Unicode-Datentypen basieren Datenvergleiche auf den in der ANSI-Codepage definierten Codepunkten. Bei Unicode-Datentypen basieren Datenvergleiche auf den Unicode-Codepunkten. Bei binären Sortierungen von Unicode-Datentypen wird das Gebietsschema bei Datensortierungen nicht berücksichtigt. Beispielsweise führen „Latin_1_General_BIN“ und „Japanese_BIN“ bei Unicode-Daten zu den gleichen Sortierergebnissen.  
   
  Es gibt zwei Arten von binären Sortierungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; die älteren `BIN`-Sortierungen und die neueren `BIN2`-Sortierungen. In einer `BIN2`-Sortierung werden alle Zeichen entsprechend ihren Codepunkten sortiert. In einer `BIN`-Sortierung wird nur der erste Buchstabe nach Codepunkt sortiert, die verbleibenden Zeichen werden entsprechend ihren Bytewerten sortiert. (Da die Intel Plattform eine Little-Endian-Architektur aufweist, werden Unicode-Zeichen immer mit vertauschten Bytes gespeichert.)  
   
  SQL Server-Sortierungen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sortierungen (SQL_*) sind hinsichtlich der Sortierreihenfolge mit älteren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kompatibel. Die Wörterbuch-Sortierungsregeln für Nicht-Unicode-Daten sind nicht kompatibel mit den vom Betriebssystem Windows bereitgestellten Sortierroutinen. Das Sortieren von Unicode-Daten ist jedoch kompatibel mit einer bestimmten Version der Windows-Sortierregeln. Da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierungen unterschiedliche Vergleichsregeln für Nicht-Unicode- und Unicode-Daten verwenden, werden bei Vergleichen derselben Daten, je nach dem zugrunde liegenden Datentyp, unterschiedliche Ergebnisse angezeigt. Weitere Informationen finden Sie unter [Name der SQL Server-Sortierung &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Wenn Sie eine englischsprachige Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisieren, können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierungen (SQL_*) angeben, die mit vorhandenen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kompatibel sein sollen. Da die Standardsortierung einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] während des Setups festgelegt wird, geben Sie unbedingt die Sortierungseinstellungen in den folgenden Fällen sorgfältig an:  
->   
+> 
 >  -   Der Anwendungscode ist abhängig vom Verhalten der vorherigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sortierungen.  
 > -   Sie müssen Zeichendaten speichern, die mehrere Sprachen wiedergeben.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48126530"
   
  Sie können die Sortierung von Systemdatenbanken nur ändern, indem Sie die Sortierung für den Server ändern.  
   
- Die Datenbanksortierung wird für alle Metadaten in der Datenbank verwendet und ist der Standard für alle Zeichenfolgenspalten, temporären Objekte, Variablennamen und anderen in der Datenbank verwendeten Zeichenfolgen. Wenn Sie die Sortierung einer Benutzerdatenbank ändern, treten möglicherweise Sortierungskonflikte auf, wenn Abfragen in der Datenbank auf temporäre Tabellen zugreifen. Temporäre Tabellen werden immer gespeichert, der `tempdb` Systemdatenbank, die die Sortierung für die Instanz verwendet wird. Abfragen, die Zeichendaten aus der Benutzerdatenbank und `tempdb` vergleichen, schlagen möglicherweise fehl, wenn die Sortierungen einen Konflikt beim Auswerten der Zeichendaten verursachen. Sie können dieses Problem umgehen, wenn Sie die COLLATE-Klausel in der Abfrage angeben. Weitere Informationen finden Sie unter [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations).  
+ Die Datenbanksortierung wird für alle Metadaten in der Datenbank verwendet und ist der Standard für alle Zeichenfolgenspalten, temporären Objekte, Variablennamen und anderen in der Datenbank verwendeten Zeichenfolgen. Wenn Sie die Sortierung einer Benutzerdatenbank ändern, treten möglicherweise Sortierungskonflikte auf, wenn Abfragen in der Datenbank auf temporäre Tabellen zugreifen. Temporäre Tabellen werden immer in der Systemdatenbank `tempdb` gespeichert, die die Sortierung für die Instanz verwendet. Abfragen, die Zeichendaten aus der Benutzerdatenbank und `tempdb` vergleichen, schlagen möglicherweise fehl, wenn die Sortierungen einen Konflikt beim Auswerten der Zeichendaten verursachen. Sie können dieses Problem umgehen, wenn Sie die COLLATE-Klausel in der Abfrage angeben. Weitere Informationen finden Sie unter [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations).  
   
  Sortierungen auf Spaltenebene  
  Beim Erstellen oder Ändern einer Tabelle können Sie mithilfe der COLLATE-Klausel Sortierungen für alle Zeichenfolgenspalten angeben. Wenn keine Sortierung angegeben ist, wird der Spalte die Standardsortierung der Datenbank zugewiesen.  
@@ -102,7 +101,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ###  <a name="Locale_Defn"></a> Gebietsschema  
- Ein Gebietsschema ist ein Satz von Informationen, die einem Ort oder einer Kultur zugeordnet sind. Es kann Name und Bezeichner der gesprochenen Sprache, die Schrift, die zum Schreiben dieser Sprache verwendet wird, sowie kulturelle Konventionen enthalten. Sortierungen können einem oder mehreren Gebietsschemas zugeordnet sein. Weitere Informationen finden Sie unter [Von Microsoft zugewiesene Gebietsschemabezeichner (LCIDs)](http://msdn.microsoft.com/goglobal/bb964664.aspx).  
+ Ein Gebietsschema ist ein Satz von Informationen, die einem Ort oder einer Kultur zugeordnet sind. Es kann Name und Bezeichner der gesprochenen Sprache, die Schrift, die zum Schreiben dieser Sprache verwendet wird, sowie kulturelle Konventionen enthalten. Sortierungen können einem oder mehreren Gebietsschemas zugeordnet sein. Weitere Informationen finden Sie unter [Von Microsoft zugewiesene Gebietsschemabezeichner (LCIDs)](https://msdn.microsoft.com/goglobal/bb964664.aspx).  
   
   
 ###  <a name="Code_Page_Defn"></a> Code Page  
@@ -114,7 +113,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Unicode_Defn"></a> Unicode-Unterstützung  
- Unicode ist ein Standard zum Zuordnen von Codepunkten zu Zeichen. Da dieser Standard entwickelt wurde, um alle Zeichen aus allen Sprachen der Welt zu unterstützen, besteht keine Notwendigkeit für unterschiedliche Codepages zur Handhabung der verschiedenen Zeichensätze. Wenn Sie Zeichendaten, die mehrere Sprachen darstellen speichern, verwenden Sie immer Unicode-Datentypen (`nchar`, `nvarchar`, und `ntext`) anstelle der nicht-Unicode-Datentypen (`char`, `varchar`, und `text`).  
+ Unicode ist ein Standard zum Zuordnen von Codepunkten zu Zeichen. Da dieser Standard entwickelt wurde, um alle Zeichen aus allen Sprachen der Welt zu unterstützen, besteht keine Notwendigkeit für unterschiedliche Codepages zur Handhabung der verschiedenen Zeichensätze. Wenn Sie Zeichendaten speichern, die mehrere Sprachen darstellen, müssen Sie statt der Nicht-Unicode-Datentypen (`nchar`, `nvarchar` und `ntext`) die Unicode-Datentypen (`char`, `varchar` und `text`) verwenden.  
   
  Nicht-Unicode-Datentypen verfügen über umfassende Einschränkungen. Das liegt daran, dass ein Nicht-Unicode-Computer auf die Verwendung einer einzelnen Codepage beschränkt ist. Es kann sein, dass Sie mit Unicode eine bessere Systemleistung erzielen, da weniger Codepagekonvertierungen erforderlich sind. Unicode-Sortierungen müssen auf der Datenbank-, Spalten- oder Ausdrucksebene einzeln ausgewählt werden, weil sie auf Serverebene nicht unterstützt werden.  
   
@@ -155,7 +154,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
 -   Ergänzende Zeichen werden für die Verwendung in Metadaten, beispielsweise in Namen von Datenbankobjekten, nicht unterstützt.  
   
--   Für die Datentypen `nchar`, `nvarchar` und `sql_variant` kann jetzt eine neue Familie von SC (Supplementary Characters)-Sortierungen verwendet werden, die in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt wurde. Beispiel: `Latin1_General_100_CI_AS_SC`, oder bei Verwenden einer japanischen Sortierung `Japanese_Bushu_Kakusu_100_CI_AS_SC`.  
+-   Für die Datentypen [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], `nchar` und `nvarchar` kann jetzt eine neue Familie von SC (Supplementary Characters)-Sortierungen verwendet werden, die in `sql_variant` eingeführt wurde. Beispiel: `Latin1_General_100_CI_AS_SC`, oder bei Verwenden einer japanischen Sortierung `Japanese_Bushu_Kakusu_100_CI_AS_SC`.  
   
      Das SC-Flag kann in folgenden Versionen angewendet werden:  
   
@@ -200,7 +199,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
 ##  <a name="Related_Tasks"></a> Verwandte Aufgaben  
   
-|Task|Thema|  
+|Aufgabe|Thema|  
 |----------|-----------|  
 |Beschreibt, wie die Sortierung der Instanz von SQL Server festgelegt oder geändert wird.|[Festlegen oder Ändern der Serversortierung](set-or-change-the-server-collation.md)|  
 |Beschreibt, wie die Sortierung einer Benutzerdatenbank festgelegt oder geändert wird.|[Festlegen oder Ändern der Datenbanksortierung](set-or-change-the-database-collation.md)|  
@@ -211,11 +210,11 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Related_Content"></a> Verwandte Inhalte  
- [Bewährte Vorgehensweisen zur Sortierungsänderung bei SQL Server](http://go.microsoft.com/fwlink/?LinkId=113891)  
+ [Bewährte Vorgehensweisen zur Sortierungsänderung bei SQL Server](https://go.microsoft.com/fwlink/?LinkId=113891)  
   
- ["Bewährte Vorgehensweise zur Unicode-Migration bei SQL Server"](http://go.microsoft.com/fwlink/?LinkId=113890)  
+ ["Bewährte Vorgehensweise zur Unicode-Migration bei SQL Server"](https://go.microsoft.com/fwlink/?LinkId=113890)  
   
- [Website des Unicode Consortium](http://go.microsoft.com/fwlink/?LinkId=48619)  
+ [Website des Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
 ## <a name="see-also"></a>Weitere Informationen enthält auch die  
  [Contained Database Collations](../databases/contained-database-collations.md)   

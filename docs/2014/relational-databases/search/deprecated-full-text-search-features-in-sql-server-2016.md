@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: search
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [full-text search]
@@ -14,12 +14,12 @@ ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63c53ddd93af33c966ae229c305d9f69367f1ceb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b39faa18a310a652b9a0b52c5c50c55060ab0f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129870"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799769"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>Als veraltet markierte Funktionen der Volltextsuche in SQL Server 2014
   In diesem Thema werden die als veraltet markierten Funktionen der Volltextsuche beschrieben, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] noch verfügbar sind. Diese Funktionen werden voraussichtlich in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Als veraltet markierte Funktionen sollten in neuen Anwendungen nicht verwendet werden.  
@@ -48,7 +48,7 @@ ms.locfileid: "48129870"
   
 |Als veraltet markierte Funktion|Ersatz|Feature name|Feature ID|  
 |------------------------|-----------------|------------------|----------------|  
-|Generischer NEAR-Operator für CONTAINS and CONTAINSTABLE:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|Der benutzerdefinierte NEAR-Operator:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,\<Entfernung > [,\<Reihenfolge >]]<br /><br /> }<br /><br /> )<br /><br /> \<Entfernung >:: = {*Ganzzahl* &#124; **MAX**}<br /><br /> \<Reihenfolge >:: = {TRUE &#124; **"false"**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|Generischer NEAR-Operator für CONTAINS and CONTAINSTABLE:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|Der benutzerdefinierte NEAR-Operator:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,\<Entfernung > [,\<Reihenfolge >]]<br /><br /> }<br /><br /> )<br /><br /> \<Entfernung >:: = {*Ganzzahl* &#124; **MAX**}<br /><br /> \<Reihenfolge >:: = {TRUE &#124; **"false"**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG (Option):<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|Keine.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Keine.*|237<br /><br /> Keine.<sup>*</sup>|  
 |DATABASEPROPERTYEX-Eigenschaft: IsFullTextEnabled|Keine.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |sp_detach_db-Option:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|Keine.|sp_detach_db @keepfulltextindexfile|226|  

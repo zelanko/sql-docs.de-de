@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Integration Services], tasks
@@ -27,12 +26,12 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a87a28e1e39959868b1a39c897b8b67716227466
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d840663c675452b137a57fedc56f623b430af6e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111841"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765642"
 ---
 # <a name="integration-services-tasks"></a>Integration Services-Tasks
   Tasks sind Ablaufsteuerungselemente, mit denen Arbeitseinheiten definiert werden, die in einer Paketablaufsteuerung ausgeführt werden. Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket besteht aus einem oder mehreren Tasks. Enthält das Paket mehrere Tasks, werden sie in der Ablaufsteuerung durch Rangfolgeneinschränkungen miteinander verbunden und angeordnet.  
@@ -75,10 +74,10 @@ ms.locfileid: "48111841"
   
  Weitere Informationen zum programmgesteuerten Hinzufügen eines Tasks zu einem Paket finden Sie unter [Programmgesteuertes Hinzufügen von Tasks](../building-packages-programmatically/adding-tasks-programmatically.md).  
   
- Jeder Task kann einzeln mithilfe der benutzerdefinierten Dialogfelder für die verschiedenen Tasks des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers konfiguriert werden oder mithilfe des Eigenschaftenfensters von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In einem Paket können mehrere Tasks desselben Typs vorhanden sein (z. B. sechs Tasks vom Typ SQL ausführen), wobei jeder Task unterschiedlich konfiguriert sein kann. Weitere Informationen finden Sie unter [Festlegen der Eigenschaften eines Tasks oder Containers](../set-the-properties-of-a-task-or-container.md).  
+ Jeder Task kann einzeln mithilfe der benutzerdefinierten Dialogfelder für die verschiedenen Tasks des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers konfiguriert werden oder mithilfe des Eigenschaftenfensters von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In einem Paket können mehrere Tasks desselben Typs vorhanden sein, z.B. sechs Tasks vom Typ SQL ausführen, wobei jeder Task unterschiedlich konfiguriert sein kann. Weitere Informationen finden Sie unter [Festlegen der Eigenschaften eines Tasks oder Containers](../set-the-properties-of-a-task-or-container.md).  
   
 ## <a name="tasks-connections-and-groups"></a>Tasks "Verbindungen" und "Gruppen"  
- Wenn mehrere Tasks vorhanden sind, werden sie in der Ablaufsteuerung durch Rangfolgeneinschränkungen miteinander verbunden und angeordnet. Weitere Informationen finden Sie unter [Precedence Constraints](precedence-constraints.md).  
+ Wenn mehrere Tasks vorhanden sind, werden sie in der Ablaufsteuerung durch Rangfolgeneinschränkungen miteinander verbunden und angeordnet. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](precedence-constraints.md).  
   
  Tasks können gruppiert und als eine einzelne Arbeitseinheit ausgeführt oder in einer Schleife wiederholt werden. Weitere Informationen finden Sie unter [Foreach Loop Container](foreach-loop-container.md), [For Loop Container](for-loop-container.md)und [Sequence Container](sequence-container.md).  
   

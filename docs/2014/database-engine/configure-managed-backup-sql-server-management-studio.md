@@ -12,15 +12,15 @@ ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0403d34b48b74d0517aaf3cb31ea520dbc436f89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f8c9664baa2803bbab4282b6897d49f0ddb1831
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165600"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523630"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Konfigurieren der verwalteten Sicherung (SQL Server Management Studio)
-  Die **Managed Backup** Dialogfeld können Sie so konfigurieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Standardwerte für die Instanz. In diesem Thema wird beschrieben, wie mit diesem Dialogfeld konfigurieren [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Standardeinstellungen für die Instanz und die Optionen, Sie müssen dabei berücksichtigen. Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] konfiguriert die Einstellungen gelten für die Instanz, auf alle neuen Datenbanken, die anschließend erstellt.  
+  Die **Managed Backup** Dialogfeld können Sie so konfigurieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Standardwerte für die Instanz. In diesem Thema wird beschrieben, wie Sie mit diesem Dialogfeld die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Standardeinstellungen für die Instanz konfigurieren und welche Optionen Sie dabei berücksichtigen müssen. Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für die Instanz konfiguriert ist, gelten die Einstellungen gelten für jede danach erstellte Datenbank.  
   
  Wenn Sie konfigurieren möchten [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine bestimmte Datenbank finden Sie unter [aktivieren und Konfigurieren von SQL Server Managed Backup für Windows Azure für eine Datenbank](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure).  
  
@@ -29,11 +29,11 @@ ms.locfileid: "48165600"
   
 ## <a name="task-list"></a>Aufgabenliste  
   
-## <a name="includesssmartbackupincludesss-smartbackup-mdmd-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Funktionen mit Schnittstelle für verwaltete Sicherung in SQL Server Management Studio  
- In dieser Version können Sie nur konfigurieren Standardeinstellungen auf Instanzebene mithilfe der **verwaltete Sicherung** Schnittstelle. Sie können nicht konfiguriert werden [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Datenbank anzuhalten oder fortzusetzen [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Vorgänge oder e-Mail-Benachrichtigungen einrichten. Informationen zum Ausführen von Vorgängen, die derzeit nicht unterstützt wird, über die **Managed Backup** Benutzeroberfläche, siehe [SQL Server Managed Backup für Windows Azure - Beibehaltungs- und Speichereinstellungen](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
+## <a name="includesssmartbackupincludesss-smartbackup-mdmd-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Funktionen mithilfe der Schnittstelle für verwaltete Sicherung in SQL Server Management Studio  
+ In dieser Version können Sie nur konfigurieren Standardeinstellungen auf Instanzebene mithilfe der **verwaltete Sicherung** Schnittstelle. Sie können [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] nicht für eine Datenbank konfigurieren, keine [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Vorgänge anhalten oder fortsetzen und keine E-Mail-Benachrichtigungen einrichten. Informationen zum Ausführen von Vorgängen, die derzeit nicht unterstützt wird, über die **Managed Backup** Benutzeroberfläche, siehe [SQL Server Managed Backup für Windows Azure - Beibehaltungs- und Speichereinstellungen](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- **Ansicht Knotens für verwaltete Sicherung ist SQL Server Management Studio:** anzeigen **Managed Backup** Knoten **Objekt-Explorer**, müssen Sie Systemadministrator sein oder über die folgenden Berechtigungen verfügen. speziell mit Ihrem Benutzerkonto gewährt:  
+ **Ansicht Knotens für verwaltete Sicherung ist SQL Server Management Studio:** Anzuzeigende **Managed Backup** Knoten **Objekt-Explorer**, müssen Sie entweder Systemadministrator sein oder müssen die folgenden Berechtigungen erteilt, Ihrem Benutzerkonto:  
   
 -   `db_backupoperator`  
   
@@ -49,13 +49,13 @@ ms.locfileid: "48165600"
   
  **Zum Konfigurieren der verwalteten Sicherung:** so konfigurieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] in SQL Server Management Studio müssen Sie Systemadministrator sein oder über die folgenden Berechtigungen verfügen:  
   
- Mitgliedschaft in `db_backupoperator` -Datenbankrolle mit `ALTER ANY CREDENTIAL` Berechtigungen und `EXECUTE` Berechtigungen für `sp_delete_backuphistory` gespeicherte Prozedur.  
+ Mitglied der `db_backupoperator`-Datenbankrolle mit Berechtigungen `ALTER ANY CREDENTIAL` und `EXECUTE` für gespeicherte Prozedur `sp_delete_backuphistory`.  
   
- `SELECT` Berechtigungen für die `smart_admin.fn_get_current_xevent_settings` Funktion.  
+ Berechtigungen `SELECT` für die `smart_admin.fn_get_current_xevent_settings`-Funktion.  
   
  `EXECUTE` Berechtigungen für die `smart_admin.sp_get_backup_diagnostics` gespeicherte Prozedur. Außerdem sind `VIEW SERVER STATE`-Berechtigungen erforderlich, da andere Systemobjekte, die diese Berechtigung erfordern, intern aufgerufen werden.  
   
- `EXECUTE` Berechtigungen für `smart_admin.sp_set_instance_backup`, und `smart_admin.sp_backup_master_switch`.  
+ `EXECUTE`Berechtigungen für `smart_admin.sp_set_instance_backup` und `smart_admin.sp_backup_master_switch`.  
   
 ## <a name="configure-includesssmartbackupincludesss-smartbackup-mdmd-using-sql-server-management-studio"></a>Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] mit SQL Server Management Studio  
  Von der **Objekt-Explorer**, erweitern Sie die **Management** Knoten und der rechten Maustaste auf **Managed Backup**. Wählen Sie **Konfigurieren**aus. Das Dialogfeld **Managed Backup** wird geöffnet.  
@@ -73,14 +73,14 @@ ms.locfileid: "48165600"
  Überprüfen Sie zum Festlegen der verschlüsselungseinstellungen auf Instanzebene **Sicherung verschlüsseln** aus, und geben Sie den Algorithmus und ein Zertifikat oder asymmetrischen Schlüssel für die Verschlüsselung verwendet.  Dies wird auf Instanzebene festgelegt und für alle neuen nach der Anwendung dieser Konfiguration erstellten Datenbanken verwendet.  
   
 > [!WARNING]  
->  Dieses Dialogfeld kann nicht verwendet werden, an die Verschlüsselungsoptionen ohne Konfiguration [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Diese Verschlüsselungsoptionen gelten nur für [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Vorgänge. Zum Verwenden der Verschlüsselung für andere Sicherungsverfahren finden Sie unter [Sicherungsverschlüsselung](../relational-databases/backup-restore/backup-encryption.md).  
+>  Die Verschlüsselungsoptionen können nicht in diesem Dialogfeld ohne die Konfiguration von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] angegeben werden. Diese Verschlüsselungsoptionen gelten nur für [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Vorgänge. Zum Verwenden der Verschlüsselung für andere Sicherungsverfahren finden Sie unter [Sicherungsverschlüsselung](../relational-databases/backup-restore/backup-encryption.md).  
   
 ### <a name="considerations"></a>Weitere Überlegungen  
- Wenn Sie konfigurieren [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf Instanzebene, gelten die Einstellungen auf alle neuen Datenbanken, die anschließend erstellt.  Diese Einstellungen werden jedoch nicht automatisch von vorhandenen Datenbanken geerbt. So konfigurieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für bereits vorhandene Datenbanken müssen Sie jede Datenbank konfigurieren. Weitere Informationen finden Sie unter [aktivieren und Konfigurieren von SQL Server Managed Backup für Windows Azure für eine Datenbank](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure).  
+ Wenn Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf Instanzebene konfigurieren, gelten die Einstellungen nur für alle nach diesem Zeitpunkt neu erstellten Datenbanken.  Diese Einstellungen werden jedoch nicht automatisch von vorhandenen Datenbanken geerbt. Zum Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für bereits vorhandene Datenbanken müssen Sie jede Datenbank konfigurieren. Weitere Informationen finden Sie unter [aktivieren und Konfigurieren von SQL Server Managed Backup für Windows Azure für eine Datenbank](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure).  
   
- Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] wurde angehalten wurde, mithilfe der `smart_admin.sp_backup_master_switch`, wird Ihnen eine Warnmeldung "verwaltete Sicherung ist deaktiviert und die aktuellen Konfigurationen nicht wirksam werden..." und die aktuellen Konfigurationen werden nicht übernommen.“ Verwenden der `smart_admin.sp_backup_master_switch` gespeichert, und legen Sie die @new_state= 1. Dies wird fortgesetzt, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Dienste und die Konfigurationseinstellungen werden wirksam. Weitere Informationen für die gespeicherte Prozedur finden Sie unter [smart_admin.sp_ Backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql).  
+ Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] wurde angehalten wurde, mithilfe der `smart_admin.sp_backup_master_switch`, sehen Sie eine Warnung message "verwaltete Sicherung ist deaktiviert und die aktuellen Konfigurationen nicht wirksam werden...", wenn Sie versuchen, die Konfiguration abzuschließen. Verwenden der `smart_admin.sp_backup_master_switch` gespeichert, und legen Sie die @new_state= 1. Damit werden die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Dienste fortgesetzt und die Konfigurationseinstellungen angewendet. Weitere Informationen für die gespeicherte Prozedur finden Sie unter [smart_admin.sp_ Backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql).  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server Managed Backup für Microsoft Azure: Interoperabilität und Koexistenz](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
+ [SQL Server Managed Backup für Windows Azure: Interoperabilität und Koexistenz](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
   

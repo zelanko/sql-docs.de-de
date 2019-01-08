@@ -16,12 +16,12 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1db5b5dcf8e1bf5c06882971d3bf3cd2e5a0309
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124900"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531583"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Erstellen von benutzerdefinierten Funktionen (Datenbank-Engine)
   In diesem Thema wird beschrieben, wie eine benutzerdefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktion mit [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird.  
@@ -32,7 +32,7 @@ ms.locfileid: "48124900"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie eine benutzerdefinierte Funktion:**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48124900"
   
      [Erstellen Sie eine Tabellenwert-Funktion](#TVF)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48124900"
   
 -   Von benutzerdefinierten Funktionen können nicht mehrere Resultsets zurückgegeben werden. Falls mehrere Resultsets zurückgegeben werden müssen, verwenden Sie eine gespeicherte Prozedur.  
   
--   Die Fehlerbehandlung ist in einer benutzerdefinierten Funktion eingeschränkt. TRY…CATCH, @ERROR oder RAISERROR wird von UDFs nicht unterstützt.  
+-   Die Fehlerbehandlung ist in einer benutzerdefinierten Funktion eingeschränkt. Versuchen Sie unterstützt eine benutzerdefinierte Funktion nicht... ABZUFANGEN, @ERROR oder RAISERROR.  
   
 -   Von benutzerdefinierten Funktionen kann zwar keine gespeicherte Prozedur, aber eine erweiterte gespeicherte Prozedur aufgerufen werden.  
   

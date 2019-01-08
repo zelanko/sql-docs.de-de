@@ -11,12 +11,12 @@ ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e9c5505aaed0fba7ff5097c059f11cd0af8f50f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e1fe559e8bbb4c9c484671737223766c4a0554
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117490"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358152"
 ---
 # <a name="report-builder-ssrs"></a>Berichts-Generator (SSRS)
   Berichts-Generator ist eine Berichterstellungsumgebung für Geschäftsbenutzer, die lieber in der vertrauten [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office-Umgebung arbeiten. Beim Entwurf eines Berichts geben Sie an, wo die Daten abgerufen werden sollen, welche Daten abgerufen werden sollen und wie die Daten angezeigt werden sollen. Bei der Ausführung des Berichts übernimmt der Berichtsprozessor alle angegebenen Informationen, ruft die Daten ab und kombiniert sie mit dem Berichtslayout, um den Bericht zu generieren.  
@@ -42,11 +42,11 @@ ms.locfileid: "48117490"
   
 -   Speichern Sie Berichte und verwandte Elemente in einer SharePoint-Bibliothek, auf einem Berichtsserver oder auf dem lokalen Computer.  
   
- Der Berichts-Generator und der Berichts-Designer haben viele gemeinsame Funktionen. Weitere Informationen zum Berichts-Generator finden Sie in der [Dokumentation zum Berichts-Generator](http://go.microsoft.com/fwlink/?LinkId=154494) unter msdn.microsoft.com.  
+ Der Berichts-Generator und der Berichts-Designer haben viele gemeinsame Funktionen. Weitere Informationen zum Berichts-Generator finden Sie in der [Dokumentation zum Berichts-Generator](https://go.microsoft.com/fwlink/?LinkId=154494) unter msdn.microsoft.com.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren des Berichts-Generator-Zugriffs](../report-server/configure-report-builder-access.md)   
  [Reporting Services-Tools](reporting-services-tools.md)   
- [Entwerfen von Berichten mithilfe des Berichts-Designers (SSRS)](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
+ [Entwerfen von Berichten mithilfe des Berichts-Designers &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e69e7f66b633a218ad5a2fb77cd44047c9810ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ecd203bfce80ffe4c64dcf0ca274f7e50f6ff1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131605"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544392"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>Unäre Operatoren in über- und untergeordneten Dimensionen
   In einer Dimension, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Über-/Unterordnungsbeziehung enthält, geben Sie eine unäre Operatorspalte (oder eine benutzerdefinierte Rollup-Operatorspalte) an, die den benutzerdefinierten Rollup für alle nicht berechneten Elemente des übergeordneten Attributs bestimmt. Der unäre Operator wird immer dann auf die Elemente angewendet, wenn die Werte des übergeordneten Elements ausgewertet werden. Die **UnaryOperatorColumn** -Eigenschaft für ein übergeordnetes Attribut (**Usage**=Parent) gibt die Spalte einer Tabelle in der Datenquellensicht an, die unäre Operatoren enthält. Werte für die benutzerdefinierten Rollup-Operatoren, die in dieser Spalte gespeichert sind, werden auf die einzelnen Elemente des Attributs angewendet.  
@@ -47,7 +47,7 @@ ms.locfileid: "48131605"
   
 ## <a name="see-also"></a>Siehe auch  
  [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)   
- [Benutzerdefinierte Rollupoperatoren in über-und untergeordneten Dimensionen](parent-child-dimension-attributes-custom-rollup-operators.md)   
+ [Benutzerdefinierte Rollupoperatoren in über- und untergeordneten Dimensionen](parent-child-dimension-attributes-custom-rollup-operators.md)   
  [Starten des Business Intelligence-Assistenten im Dimensions-Designer](database-dimensions-bi-wizard-in-dimension-designer.md)  
   
   

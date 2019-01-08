@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67e45ef54da3d79d877882c94ee34fcaf0814514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7729e4762b5289c4ed63b9cf204eac87381a232b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100710"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823644"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>Quellen-Editor für SAP BW (Seite Erweitert)
   Verwenden Sie die Seite **Erweitert** des **Quellen-Editors für SAP BW** , um die Zeichenkonvertierungsregel und den Timeoutzeitraum anzugeben sowie um den Status einer bestimmten Anforderungs-ID zurückzusetzen.  
@@ -37,7 +36,7 @@ ms.locfileid: "48100710"
   
 3.  Klicken Sie im **Quellen-Editor für SAP BW**auf **Erweitert** , um die Seite **Erweitert** des Editors zu öffnen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration der Quelle erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
@@ -47,7 +46,7 @@ ms.locfileid: "48100710"
   
 |Option|Description|  
 |------------|-----------------|  
-|**Automatische Zeichenfolgenkonvertierung**|Konvertieren Sie alle Zeichenfolgen in `nvarchar` bei SAP Netweaver BW-System ein Unicode-System ist. Konvertieren Sie andernfalls alle Zeichenfolgen in `varchar`.|  
+|**Automatische Zeichenfolgenkonvertierung**|Konvertieren Sie alle Zeichenfolgen in `nvarchar`, wenn das SAP NetWeaver BW-System ein Unicode-System ist. Konvertieren Sie andernfalls alle Zeichenfolgen in `varchar`.|  
 |**Zeichenfolgen in varchar konvertieren**|Konvertieren Sie alle Zeichenfolgen in `varchar`.|  
 |**Zeichenfolgen in nvarchar konvertieren**|Konvertieren Sie alle Zeichenfolgen in `nvarchar`.|  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48100710"
  Geben Sie die maximale Anzahl von Sekunden an, die die Quelle warten soll.  
   
 > [!NOTE]  
->  Diese Option ist nur gültig, wenn Sie auf der Seite **Verbindungs-Manager** des Editors **W – Benachrichtigung abwarten** als Wert für den **Ausführungsmodus** ausgewählt haben. Informationen hierzu finden Sie unter [SAP BW Source Editor &#40;Connection Manager Page&#41;](sap-bw-source-editor-connection-manager-page.md).  
+>  Diese Option ist nur gültig, wenn Sie auf der Seite **Verbindungs-Manager** des Editors **W – Benachrichtigung abwarten** als Wert für den **Ausführungsmodus** ausgewählt haben. Informationen hierzu finden Sie unter [Quellen-Editor für SAP BW &#40;Seite Verbindungs-Manager&#41;](sap-bw-source-editor-connection-manager-page.md).  
   
  **Anforderungs-ID**  
  Geben Sie die Anforderungs-ID an, deren Status Sie auf „G – Grün“ zurücksetzen möchten, wenn Sie auf **Zurücksetzen**klicken.  
@@ -64,8 +63,8 @@ ms.locfileid: "48100710"
  Mit dieser Option können Sie den Status der angegebenen Anforderungs-ID auf G - Grün zurücksetzen, nachdem Ihre Bestätigung angefordert wurde. Dies kann hilfreich sein, wenn ein Problem aufgetreten ist und das SAP NetWeaver BW-System die Anforderung mit einem gelben oder roten Status gekennzeichnet hat.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Quellen-Editor für SAP BW &#40;Seite Verbindungs-Manager&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [Quellen-Editor für SAP BW &#40;Seite "Spalten"&#41;](sap-bw-source-editor-columns-page.md)   
+ [Quellen-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [Quellen-Editor für SAP BW &#40;Seite Spalten&#41;](sap-bw-source-editor-columns-page.md)   
  [Quellen-Editor für SAP BW &#40;Seite „Fehlerausgabe“&#41;](sap-bw-source-editor-error-output-page.md)   
  [F1-Hilfe zu Microsoft Connector 1.1 für SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   

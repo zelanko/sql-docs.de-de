@@ -13,12 +13,12 @@ ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2652dd6ababc37a3883eef0cf385914a880ebdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157630"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519091"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Was&#39;eingeschlossen, die in den Data Mining-Add-Ins für Office
   Wenn Sie beim Installieren der Data Mining-Add-Ins für Office 2013 sämtliche Installationsoptionen auswählen, werden die folgenden Symbolleisten und Vorlagen hinzugefügt:  
@@ -31,7 +31,7 @@ ms.locfileid: "48157630"
   
 -   [Datamining-Client für Excel &#40;SQL Server Data Mining-Add-ins&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
-     Dieses Add-In bietet Tools für alle evtl. benötigten Data Mining-Aufgaben – vom Bereinigen und Entnehmen von Stichproben der Daten bis hin zum Erstellen von Modellen, Testen der Modellgenauigkeit und Ausführen der Kreuzvalidierung. Sie können Modelle auch verwalten und dokumentieren und DMX-Abfragen aus Vorlagen erstellen.  
+     Dieses Add-In stellt Tools bereit, für fast jede Datamining-Aufgaben, die möglicherweise vom bereinigen und Stichproben der Daten bis zum Erstellen von Modellen ausführen, Testen der modellgenauigkeit und Ausführen der kreuzvalidierung -. Sie können Modelle auch verwalten und dokumentieren und DMX-Abfragen aus Vorlagen erstellen.  
   
      Erfahrene Data Mining-Benutzer können alle in SQL Server Data Mining verfügbaren Tools nutzen, einschließlich Modellimport und -export, Vorhersageabfragen und Inhaltsabfragen.  
   

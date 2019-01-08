@@ -15,17 +15,17 @@ ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a023065ad0e2a72036fe5fbdebd72682ceb6546
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3121646cbcfee823be71b575349b814fbf36c1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121465"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512492"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX-Generator (Analysis Services – Mehrdimensionale Daten)
-  Im Dialogfeld **MDX-Generator** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] oder [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie einen MDX-Ausdruck (Multidimensional Expressions) erstellen. Um das Dialogfeld **MDX-Generator** anzuzeigen, klicken Sie für die Option **Lesen des Cubeinhalts zulassen** ,**Lesen des Zelleninhalts abhängig von der Zellensicherheit zulassen**oder **Lesen und Schreiben des Cubeinhalts zulassen** auf der Seite **Zellendaten** von **Rollen-Designer** auf die Schaltfläche mit den drei Punkten ( **…** ) neben **MDX bearbeiten**.  
+  Im Dialogfeld **MDX-Generator** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] oder [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie einen MDX-Ausdruck (Multidimensional Expressions) erstellen. Anzeigen der **MDX-Generator** Dialogfeld durch Klicken auf die **MDX bearbeiten** Schaltfläche mit den Auslassungspunkten (**...** ) für die **Lesen des Cubeinhalts zulassen** -Option der **Lesen des Zelleninhalts abhängig von der zellensicherheit zulassen** Option oder die **lesen zulassen und Schreiben des Cubeinhalts** option die **Zellendaten** auf der Seite **Rollen-Designers**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Begriff|Definition|  
 |----------|----------------|  

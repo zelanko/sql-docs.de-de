@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f7362e216213bc27efab0fd49f3ded2f15c37bdb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d459bafe395a10af75f8c0a721f0a8a08f39b3c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050788"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509682"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Ausführen des Bereitstellungs-Assistenten für Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "38050788"
 -   **Über die Eingabeaufforderung** Ausführung an der Eingabeaufforderung die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent generiert ein Skript der Bereitstellung auf der Basis der Schalter, mit denen Sie den Assistenten ausführen. Der Assistent kann dann einen der folgenden Schritte ausführen: den Benutzer zur Eingabe auffordern und die Eingabedateien entsprechend der Benutzereingabe ändern, eine unbeaufsichtigte Bereitstellung mithilfe der unveränderten Eingabedateien durchführen oder ein Bereitstellungsskript erstellen, das vom Benutzer zu einem späteren Zeitpunkt verwendet werden kann.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>Interaktives Ausführen des Bereitstellungs-Assistenten für Analysis Services  
- Wenn Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interaktiv ausführen, liest er die Werte aus den Eingabedateien und präsentiert Ihnen diese Informationen. Sie können diese Eingabewerte – z. B. das Bereitstellungsziel, Konfigurationseinstellungen, Bereitstellungsoptionen und Kennwörter für Verbindungszeichenfolgen – je nach Bedarf ändern oder unverändert übernehmen. Wenn Sie alle eingegebenen Werte ändern, verwendet der Assistent diese Änderungen beim Generieren des Bereitstellungsskripts an. Der Assistent nimmt dabei jedoch keine Änderungen an den Werten in der Eingabedatei vor.  
+ Wenn Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interaktiv ausführen, liest er die Werte aus den Eingabedateien und präsentiert Ihnen diese Informationen. Sie können diese Eingabe, die Werte wie z. als Bereitstellungsziel, Konfigurationseinstellungen, Bereitstellungsoptionen und Kennwörter für Verbindungszeichenfolgen-, oder lassen sie unverändert. Wenn Sie alle eingegebenen Werte ändern, verwendet der Assistent diese Änderungen beim Generieren des Bereitstellungsskripts an. Der Assistent nimmt dabei jedoch keine Änderungen an den Werten in der Eingabedatei vor.  
   
 > [!NOTE]  
 >  Wenn Sie möchten, dass der Bereitstellungs-Assistent für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Änderungen an den Eingabewerten vornimmt, müssen Sie den Assistenten an der Eingabeaufforderung ausführen und dabei festlegen, dass der Assistent im Antwortmodus ausgeführt wird.  
@@ -37,7 +37,7 @@ ms.locfileid: "38050788"
   
 -   Klicken Sie auf **starten** > **Microsoft SQL Server** > **Bereitstellungs-Assistent**.  
   
-     – oder –  
+     -oder-  
   
 -   In der **Projekte** Ordner die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt, doppelklicken Sie auf die \<Projektname > .asdatabase-Datei.
     > [!NOTE]  

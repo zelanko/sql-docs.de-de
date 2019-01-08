@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.tsxwiz.msx.f1
@@ -19,12 +19,12 @@ ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a9531e5395e22737365810906b793f0f38b06b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a001509cba1ef02182963fd8d8f8946f95321ef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065950"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823664"
 ---
 # <a name="make-a-target-server"></a>Erstellen eines Zielservers
   In diesem Thema wird beschrieben, wie Sie einen Zielserver in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder SQL Server Management Objects (SMO) erstellen.  
@@ -33,7 +33,7 @@ ms.locfileid: "48065950"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Erstellen eines Zielservers mit:**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48065950"
   
      [SMO](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
  Verteilte Aufträge mit Schritten, die einem Proxy zugeordnet sind, werden im Kontext des Proxykontos auf dem Zielserver ausgeführt. Stellen Sie sicher, dass die folgenden Bedingungen erfüllt sind, da andernfalls einem Proxy zugeordnete Auftragsschritte nicht vom Masterserver auf den Zielserver heruntergeladen werden:  
@@ -63,9 +63,9 @@ ms.locfileid: "48065950"
      Um diesen Fehler zu beheben, stellen Sie sicher, dass auf dem Zielserver ein Proxykonto vorhanden ist, das den gleichen Namen wie das Proxykonto des Masterservers hat, unter dem der Auftragsschritt ausgeführt wird.  
   
 ####  <a name="Permissions"></a> Berechtigungen  
- Berechtigungen zum Ausführen dieser Prozedur erhalten standardmäßig Mitglieder der `sysadmin` -Serverrolle sein.  
+ Berechtigungen zur Ausführung dieser Prozedur erhalten standardmäßig Mitglieder der festen Serverrolle `sysadmin`.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-make-a-target-server"></a>So erstellen Sie einen Zielserver  
   

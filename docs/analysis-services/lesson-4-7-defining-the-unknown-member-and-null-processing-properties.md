@@ -1,5 +1,5 @@
 ---
-title: Definieren von the Unknown Member and Null Processing Eigenschaften | Microsoft Docs
+title: Definieren von unbekannten Elementen und Eigenschaften Verarbeitung von Null | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e39ac2042304b927d8270da57a88c4452ef79337
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 08e05c68bf69bcb7ca54d2f0920ee041aae3ca99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019577"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525922"
 ---
-# <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lektion 4-7 – the Unknown Member and Null Processing Eigenschaften definieren
+# <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lektion 4-7: Definieren von unbekannten Elementen und Null-Verarbeitung von Eigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Wenn von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] eine Dimension verarbeitet wird, werden die Attribute in der Dimension durch alle unterschiedlichen Werte aus den zugrunde liegenden Spalten in den Tabellen oder Ansichten in der Datenquellensicht aufgefüllt. Wenn [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bei der Verarbeitung auf einen NULL-Wert stößt, wird dieser standardmäßig für numerische Spalten in einen Nullwert oder für Zeichenfolgenspalten in eine leere Zeichenfolge konvertiert. Sie können diese Standardeinstellungen ändern oder NULL-Werte in Ihrem Extrahierungs-, Transformations- und Ladeprozess (falls vorhanden) des zu Grunde liegenden relationalen Data Warehouse konvertieren. Darüber hinaus können Sie den NULL-Wert auch von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in einen festgelegten Wert konvertieren lassen. Zu diesem Zweck konfigurieren Sie drei Eigenschaften: die **UnknownMember** - und die **UnknownMemberName** -Eigenschaften für die Dimension und die **NullProcessing** -Eigenschaft für das Schlüsselattribut der Dimension.  
@@ -90,7 +90,7 @@ In den Aufgaben in diesem Thema fügen Sie die Produktkategorie- und Produktunte
   
 9. Ändern Sie im Bereich **Attribute** den Namen dieses neuen Attributs in **Category**.  
   
-10. Klicken Sie im Fenster „Eigenschaften“ in das Eigenschaftenfeld **NameColumn** und anschließend auf die Schaltfläche zum Durchsuchen (**…**), um das Dialogfeld **Namensspalte** zu öffnen.  
+10. Klicken Sie im Fenster Eigenschaften in der **NameColumn** Eigenschaft ein, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
   
 11. Wählen Sie **EnglishProductCategoryName** in der Liste **Quellspalte** aus, und klicken Sie auf **OK**.  
   
@@ -98,11 +98,11 @@ In den Aufgaben in diesem Thema fügen Sie die Produktkategorie- und Produktunte
   
 13. Ändern Sie im Bereich **Attribute** den Namen dieses neuen Attributs in **Subcategory**.  
   
-14. Klicken Sie im Fenster „Eigenschaften“ in das Eigenschaftenfeld **NameColumn** und anschließend auf die Schaltfläche zum Durchsuchen ( **…** ), um das Dialogfeld **Namensspalte** zu öffnen.  
+14. Klicken Sie im Fenster Eigenschaften in der **NameColumn** Eigenschaft ein, und klicken Sie dann auf die Schaltfläche zum Durchsuchen **(...)**  die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
   
 15. Wählen Sie **EnglishProductSubcategoryName** in der **Quellspalte** -Liste aus, und klicken Sie auf **OK**.  
   
-16. Erstellen Sie eine neue benutzerdefinierte Hierarchie mit dem Namen **Product Categories** mit den folgenden Ebenen (von oben nach unten): **Category**, **Subcategory**und **Product Name**.  
+16. Erstellen Sie eine neue benutzerdefinierte Hierarchie namens **Produktkategorien** mit den folgenden Ebenen, in der Reihenfolge von oben nach unten: **Kategorie**, **Subcategory**, und **Produktname**.  
   
 17. Geben Sie **All Products** als Wert für die **AllMemberName** -Eigenschaft der benutzerdefinierten Product Categories-Hierarchie an.  
   

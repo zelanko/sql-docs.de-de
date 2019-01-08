@@ -18,12 +18,12 @@ ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b5b6861d1dcd4a9e516fbbf9d1ef22af7ea881d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 158635a13a60d652da3b78408db6cbb9d74ffd86
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698108"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617560"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47698108"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|Eine Nummer als eindeutiger Bezeichner, der jeden Wiederherstellungsvorgang angibt. Identität, Primärschlüssel.|  
-|**restore_date**|**datetime**|Datum und Uhrzeit des Abschlusses des Wiederherstellungsvorgangs. Kann den Wert NULL haben.|  
+|**restore_date**|**datetime**|Datum und Uhrzeit des Beginns des Wiederherstellungsvorgangs. Kann den Wert NULL haben.|  
 |**destination_database_name**|**nvarchar(128)**|Name der Zieldatenbank für den Wiederherstellungsvorgang. Kann den Wert NULL haben.|  
 |**user_name**|**nvarchar(128)**|Name des Benutzers, der den Wiederherstellungsvorgang ausgeführt hat. Kann den Wert NULL haben.|  
 |**backup_set_id**|**int**|Eindeutige ID, die den wiederhergestellten Sicherungssatz bezeichnet. Verweise **backupset(backup_set_id)**.|  

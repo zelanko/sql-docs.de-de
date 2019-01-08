@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.f1
@@ -15,12 +14,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ba03c8bcfad515fbe7a651822177ffa349dff25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cce297bd0a894a432cd05ae10c7b4a0689321bbd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079176"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805452"
 ---
 # <a name="ftp-task"></a>FTP-Task
   Mit dem FTP-Task werden Datendateien heruntergeladen und hochgeladen sowie Verzeichnisse auf Servern verwaltet. Beispielsweise kann ein Paket Datendateien von einem Remoteserver oder einem Internetstandort als Teil eines Paket-Workflows von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] herunterladen. Der FTP-Task kann für folgende Zwecke verwendet werden:  
@@ -76,8 +75,8 @@ ms.locfileid: "48079176"
  Weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften finden Sie unter <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [FTP-Task-Editor &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
- [FTP-Task-Editor &#40;Dateiübertragung Seite&#41;](../ftp-task-editor-file-transfer-page.md)   
+ [Editor für den FTP-Task &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor für den FTP-Task &#40;Seite Dateiübertragung&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Integration Services-Tasks](integration-services-tasks.md)   
  [Ablaufsteuerung](control-flow.md)  
   

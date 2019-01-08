@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.f1
@@ -15,12 +14,12 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b07bc36ebf3ca16bac2a2134d1054d850c19886
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6fd76284caf53ff6a3d46d1bbfd0f514615c2e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203360"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805552"
 ---
 # <a name="transfer-database-task"></a>Datenbanken übertragen (Task)
   Der Task "Datenbanken übertragen" verschiebt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zwischen zwei Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Im Gegensatz zu den anderen Tasks, die lediglich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte durch Kopieren verschieben, kann der Task "Datenbanken übertragen" eine Datenbank entweder kopieren oder verschieben. Dieser Task kann auch verwendet werden, um eine Datenbank innerhalb desselben Servers zu kopieren.  
@@ -39,7 +38,7 @@ ms.locfileid: "48203360"
 ## <a name="execution-value"></a>Ausführungswert  
  Der in der `ExecutionValue`-Eigenschaft des Tasks definierte Ausführungswert gibt den Wert 1 zurück, da der Task "Datenbank übertragen" im Gegensatz zu anderen Übertragungstasks nur eine Datenbank übertragen kann.  
   
- Durch eine benutzerdefinierte Variable zugewiesen der `ExecValueVariable` -Eigenschaft des Tasks Datenbank übertragen, Informationen über die fehlermeldungsübertragung kann zur Verfügung gestellt werden auf andere Objekte im Paket. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](../use-variables-in-packages.md).  
+ Indem der `ExecValueVariable`-Eigenschaft des Tasks "Datenbanken übertragen" eine benutzerdefinierte Variable zugewiesen wird, können Informationen über die Fehlermeldungsübertragung anderen Objekten im Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Protokolleinträge  
  Der Task "Datenbanken übertragen" enthält die folgenden benutzerdefinierten Protokolleinträge:  
@@ -50,7 +49,7 @@ ms.locfileid: "48203360"
   
 -   SourceDB    Dieser Protokolleintrag gibt den Namen der übertragenen Datenbank an.  
   
- Außerdem wird ein Protokolleintrag für das `OnInformation` Ereignis geschrieben wird, wenn die Zieldatenbank überschrieben wird.  
+ Außerdem wird beim Überschreiben der Zieldatenbank ein Protokolleintrag für das `OnInformation`-Ereignis geschrieben.  
   
 ## <a name="security-and-permissions"></a>Sicherheit und Berechtigungen  
  Wenn Sie eine Datenbank im Offlinemodus übertragen, muss der Benutzer, der das Paket ausführt, Mitglied der sysadmin-Serverrolle sein.  
@@ -72,9 +71,9 @@ ms.locfileid: "48203360"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task Datenbanken übertragen &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task „Datenbanken übertragen“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor für den Task Datenbanken übertragen &#40;Seite Datenbanken&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [Editor für den Task „Datenbanken übertragen“ &#40;Seite „Datenbanken“&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

@@ -18,12 +18,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: da531e62f2067ff1ae217a313d1fdd0eb8ce24a7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 89f395d7456eaca66d2f225fd47e4cf957186fe2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120117"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518014"
 ---
 # <a name="data-alert-designer"></a>Datenwarnungs-Designer
   Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und bearbeiten. Eine Warnungsdefinition ist eine Auflistung von Metadaten. Dazu gehören die für Sie interessanten Berichtsdaten, die Regeln, die Berichtsdaten zum Erstellen von Datenwarnungsinstanzen und zum Senden von Datenwarnmeldungen erfüllen müssen, sowie die Empfänger der Warnmeldung usw.  
@@ -76,9 +76,9 @@ ms.locfileid: "49120117"
 ### <a name="rules-and-clauses"></a>Regeln und Klauseln  
  Der Umfang der Datenänderungen und die Warnungsregeln definieren die Datenänderungen, die die Warnung auslösen. Der Umfang der Datenänderungen lautet wie folgt:  
   
--   **Einige Daten haben**– Mindestens ein Wert in den Daten erfüllt die Regeln, die die Bedingung angibt.  
+-   **Any data has** (Einige Daten haben): Mindestens ein Wert in den Daten erfüllt die Regeln, die die Bedingung angibt.  
   
--   **Keine Daten haben**– Kein Wert in den Daten erfüllt die Regeln, die die Bedingung angibt.  
+-   **No data has** (Keine Daten haben): Kein Wert in den Daten erfüllt die Regeln, die die Bedingung angibt.  
   
  Eine Regel enthält 0 (null), eine Klausel oder viele Klauseln. Mehrere Regeln werden mithilfe des logischen AND-Operators kombiniert. Eine Regel kann mehrere mit dem OR-Operator kombinierte Klauseln beinhalten, wenn die Spalte den String-Datentyp aufweist. Im Folgenden werden die Basisregeln, die nur eine Klausel verwenden, sowie mehrere mit dem AND-Operator kombinierte Regeln und mehrere Regeln mit mindestens einer OR-Klausel gezeigt.  
   
@@ -147,13 +147,13 @@ ms.locfileid: "49120117"
 ### <a name="schedule-settings"></a>Zeitplaneinstellungen  
  Der für die Datenwarnung definierte Zeitplan definiert für das Senden der Datenwarnmeldung das Serienmuster sowie Anfang und Ende der jeweiligen Warnmeldung. Die Muster sind: einmal, Minute, täglich und wöchentlich. Obwohl eine Warnung nur einen Zeitplan aufweist, können Sie mit diesen Intervallen komplexe Serienmuster erstellen, die die meisten Geschäftsanforderungen erfüllen. Beispiele für allgemeine Serienmuster, die in Zeitplänen verwendet werden:  
   
--   **Täglich alle 10 Tage** – sendet Warnungen alle 10 Tage einmal täglich.  
+-   **Täglich alle 10 Tage**: sendet Warnungen alle 10 Tage einmal täglich.  
   
--   **Wöchentlich alle 2 Wochen am Montag** – sendet Warnungen nur montags alle zwei Wochen.  
+-   **Wöchentlich alle 2 Wochen am Montag**: sendet Warnungen nur montags alle zwei Wochen.  
   
--   **Stündlich alle 12 Stunden** – sendet alle 12 Stunden Warnungen.  
+-   **Stündlich alle 12 Stunden**: sendet alle 12 Stunden Warnungen.  
   
--   **Minute alle 30 Minuten** – sendet alle 30 Minuten Warnungen.  
+-   **Minütlich alle 30 Minuten**: sendet alle 30 Minuten Warnungen.  
   
  Das Serienmuster gibt an, wann die Warnung gesendet wird. Wenn die Regeln während des Intervalls erfüllt werden, das das Muster angibt, wird die Warnung erst am Ende des Intervalls gesendet.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "49120117"
  Weitere Informationen zum Generieren der E-Mail finden Sie unter [Reporting Services-Datenwarnungen](../ssms/agent/alerts.md).  
   
 ##  <a name="CreateAlert"></a> Erstellen einer Datenwarnungsdefinition  
- Wenn Ihnen die SharePoint-Berechtigungen "Elemente anzeigen" und "Warnungen erstellen" gewährt werden und erstellt werden, können Sie eine Datenwarnungsdefinition für jeden Bericht erstellen, den Sie anzeigen können. Dabei wird vorausgesetzt, dass der betreffende Bericht gespeicherte Anmeldeinformationen oder keine Anmeldeinformationen verwendet. Sie führen den Bericht über eine SharePoint-Bibliothek aus. Die für Sie verfügbaren Daten, die Sie im Datenwarnungs-Designer verwenden können, stammen aus dem Bericht. Wenn der Bericht parametrisiert ist, müssen Sie möglicherweise den Bericht mit anderen Parameterwerten, um sicherzustellen, dass die Daten ausführen, die Sie interessiert sind, die im Bericht angezeigt wird. Nachdem der Bericht geöffnet ist, klicken Sie auf der Berichtssymbolleiste im Menü **Aktionen** auf die Option **Neue Datenwarnung** , um den Datenwarnungs-Designer zu öffnen. Das folgende Bild zeigt das Öffnen des Datenwarnungs-Designers.  
+ Wenn Ihnen die SharePoint-Berechtigungen "Elemente anzeigen" und "Warnungen erstellen" gewährt werden und erstellt werden, können Sie eine Datenwarnungsdefinition für jeden Bericht erstellen, den Sie anzeigen können. Dabei wird vorausgesetzt, dass der betreffende Bericht gespeicherte Anmeldeinformationen oder keine Anmeldeinformationen verwendet. Sie führen den Bericht über eine SharePoint-Bibliothek aus. Die für Sie verfügbaren Daten, die Sie im Datenwarnungs-Designer verwenden können, stammen aus dem Bericht. Wenn der Bericht parametrisiert wird, müssen Sie den Bericht möglicherweise mithilfe anderer Parameterwerte erstellen, um sicherzustellen, dass die Daten, an denen Sie interessiert sind, im Bericht enthalten sind. Nachdem der Bericht geöffnet ist, klicken Sie auf der Berichtssymbolleiste im Menü **Aktionen** auf die Option **Neue Datenwarnung** , um den Datenwarnungs-Designer zu öffnen. Das folgende Bild zeigt das Öffnen des Datenwarnungs-Designers.  
   
  ![Warnungs-Designer aus SharePoint-Bibliothek öffnen](media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
   

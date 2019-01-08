@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1716b3b6e5794d8dbb8d9ee0195ed642db6df054
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 37c313484b2ee7ff87668cbfdd0b87ed52cdaf98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981102"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523974"
 ---
 # <a name="import-data-by-using-a-native-query"></a>Importieren von Daten mit einer nativen Abfrage
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
@@ -38,7 +38,7 @@ Wenn Sie noch keine Verbindung mit Ihrer Datenquelle haben, müssen Sie eine ers
 2. In **Abfrage-Editor**, klicken Sie auf **Abfrage** > **neue Abfrage** > **leere Abfrage**
 3. Geben Sie in der Bearbeitungsleiste
     ```
-    = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM …")
+    = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM ...")
     ```
 4. Zum Erstellen einer Tabelle in **Abfragen**mit der rechten Maustaste auf die Abfrage, und wählen Sie dann **neue Tabelle erstellen**. Die neue Tabelle müssen den gleichen Namen wie die Abfrage.
 

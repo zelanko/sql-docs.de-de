@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - adding external tools
@@ -14,17 +14,17 @@ ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc4371de7ec5cda5ecf40aa86755ba936b6d04cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc8f54bc4f6e7aaffa5d912fc9bc8f03fad71d03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221470"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786262"
 ---
 # <a name="external-tools-dialog-box"></a>Externe Tools (Dialogfeld)
   Mit dem Dialogfeld **Externe Tools** können Sie dem Menü **Extras** externe Tools hinzufügen, z. B. SQLCMD oder den Editor. Durch das Hinzufügen von externen Tools können Sie auf einfache Weise andere Anwendungen starten, während Sie in der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Umgebung arbeiten. Sie können beim Starten des Tools Argumente und ein Arbeitsverzeichnis angeben. Darüber hinaus kann im **Ausgabefenster** die Ausgabe einiger Tools angezeigt werden. Das Dialogfeld **Externe Tools** wird über das Menü **Extras** aufgerufen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Inhalt des Menüs**  
  Führt die Titel der Elemente auf, die aktuell dem Menü **Extras** hinzugefügt sind. Verwenden Sie die Schaltflächen **Nach oben** und **Nach unten** , um die Reihenfolge zu ändern, in der die Elemente im Menü angezeigt werden. Verwenden Sie die Schaltfläche **Löschen** , um ein Element aus dem Menü zu entfernen.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48221470"
 ## <a name="example"></a>Beispiel  
  Durch die Eingabe der folgenden Werte im Dialogfeld **Externe Tools** wird ein Menüelement mit der Bezeichnung "DAC" erstellt. Durch Auswählen des Elements wird eine Eingabeaufforderung geöffnet und das Hilfsprogramm **sqlcmd** mithilfe der dedizierten Administratorverbindung (Dedicated Administrator Connection, DAC) ausgeführt.  
   
-|Feld|value|  
+|Feld|Wert|  
 |---------|-----------|  
 |**Title**|DAC|  
 |**Befehl**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, stopping traces
@@ -24,12 +23,12 @@ ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b32b1d1d6416c6a8c6097a79dcba18eb62a89d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140248"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794062"
 ---
 # <a name="start-a-trace"></a>Starten einer Ablaufverfolgung
   Nachdem Sie mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]eine neue Ablaufverfolgung definiert oder eine Vorlage erstellt haben, können Sie die Aufzeichnung von Daten mithilfe der neuen Ablaufverfolgungsdefinition oder Vorlage starten, anhalten oder beenden.  
@@ -45,7 +44,7 @@ ms.locfileid: "48140248"
 >  Bei vorhandenen Ablaufverfolgungen können Sie die Eigenschaften zwar anzeigen, aber nicht ändern. Um die Eigenschaften zu ändern, müssen Sie die Ablaufverfolgung beenden oder anhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Starten eine Ablaufverfolgung automatisch nach dem Herstellen einer Verbindung mit einem Server &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Automatisches Starten einer Ablaufverfolgung nach dem Herstellen einer Verbindung mit einem Server &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [Anhalten einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
  [Beenden einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
  [Löschen des Inhalts eines Ablaufverfolgungsfensters &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   

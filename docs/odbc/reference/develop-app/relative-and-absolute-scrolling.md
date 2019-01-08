@@ -16,15 +16,15 @@ ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a6b77f61c8eadd8ef58d9eb475aaeb3faf88c57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ba05cb9079514750cf087149bae476efe0d8d41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661858"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510761"
 ---
 # <a name="relative-and-absolute-scrolling"></a>Relatives und absolutes Scrollen
-Der Bildlauf Optionen in den meisten **SQLFetchScroll** positionieren Sie den Cursor relativ zur aktuellen Position oder eine absolute Position. **SQLFetchScroll** unterstützt das Abrufen der nächsten, vorherigen, ersten und letzten Rowsets als auch als relativen abrufen (das Rowset abrufen, *n* Zeilen vom Anfang des aktuellen Rowsets) und absoluten abrufen (Fetch das Rowset starten in Zeile *n*). Wenn *n* ist in einem absoluten Abruf negativ ist, werden Zeilen vom Ende des Resultsets gezählt. Folglich bedeutet, dass ein absoluter Abruf von – 1-Zeile des Rowsets abzurufen, die mit der letzten Zeile im Resultset beginnt.  
+Der Bildlauf Optionen in den meisten **SQLFetchScroll** positionieren Sie den Cursor relativ zur aktuellen Position oder eine absolute Position. **SQLFetchScroll** unterstützt das Abrufen der nächsten, vorherigen, ersten und letzten Rowsets als auch als relativen abrufen (das Rowset abrufen, *n* Zeilen vom Anfang des aktuellen Rowsets) und absoluten abrufen (Fetch das Rowset starten in Zeile *n*). Wenn *n* ist in einem absoluten Abruf negativ ist, werden Zeilen vom Ende des Resultsets gezählt. Folglich bedeutet, dass ein absoluter Abruf von Zeile-1 das Rowset abzurufen, das mit der letzten Zeile im Resultset beginnt.  
   
  Dynamische Cursor erkennen Zeilen eingefügt und aus dem Resultset gelöscht, es gibt also keine einfache Möglichkeit für dynamic-Cursor, die Zeile an eine bestimmte Anzahl als das Lesen vom Anfang des Resultsets, abzurufen, wodurch der möglicherweise sehr langsam ausgeführt wird. Darüber hinaus ist absoluten abrufen nicht sehr nützlich in dynamischen Cursorn da Zeilennummern ändern, wenn Zeilen eingefügt und gelöscht werden; aus diesem Grund kann nacheinander abrufen die gleiche Anzahl von Zeilen unterschiedliche Zeilen erzielt werden.  
   
@@ -34,7 +34,7 @@ Der Bildlauf Optionen in den meisten **SQLFetchScroll** positionieren Sie den Cu
 |--------------------------|-------------------------------------|  
 |Bild auf|SQL_FETCH_PRIOR|  
 |Bild ab|SQL_FETCH_NEXT|  
-|Zeile auf|SQL_FETCH_RELATIVE mit *FetchOffset* ungleich – 1|  
+|Zeile auf|SQL_FETCH_RELATIVE mit *FetchOffset* gleich-1|  
 |Zeile ab|SQL_FETCH_RELATIVE mit *FetchOffset* gleich 1|  
 |Das Bildlauffeld, oben|SQL_FETCH_FIRST|  
 |Das Bildlauffeld, unten|SQL_FETCH_LAST|  
