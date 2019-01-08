@@ -10,28 +10,28 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40ea7c27958fe2a245b2279dc35f2029f81e21d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147420"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377900"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Bestimmen der korrekten Bucketanzahl für Hashindizes
-  Geben Sie einen Wert für die `BUCKET_COUNT` Parameter an, wenn Sie die Speicheroptimierte Tabelle erstellen. Dieses Thema enthält Empfehlungen zum Bestimmen des geeigneten Werts für den `BUCKET_COUNT`-Parameter. Wenn Sie die richtige Bucketanzahl nicht ermitteln können, verwenden Sie einen nicht gruppierten Index.  Ein ungültiger `BUCKET_COUNT`-Wert kann, insbesondere wenn er zu niedrig ist, die Arbeitsauslastungsleistung sowie die Wiederherstellungszeit der Datenbank erheblich beeinträchtigen. Es ist besser, die Bucketanzahl zu überschätzen.  
+  Beim Erstellen der speicheroptimierten Tabelle müssen Sie einen Wert für den `BUCKET_COUNT`-Parameter angeben. Dieses Thema enthält Empfehlungen zum Bestimmen des geeigneten Werts für den `BUCKET_COUNT`-Parameter. Wenn Sie die richtige Bucketanzahl nicht ermitteln können, verwenden Sie einen nicht gruppierten Index.  Ein ungültiger `BUCKET_COUNT`-Wert kann, insbesondere wenn er zu niedrig ist, die Arbeitsauslastungsleistung sowie die Wiederherstellungszeit der Datenbank erheblich beeinträchtigen. Es ist besser, die Bucketanzahl zu überschätzen.  
   
  Doppelte Indexschlüssel können bei Verwendung eines Hashindexes die Leistung beeinträchtigen, da die Schlüssel demselben Hashbucket hinzugefügt werden, wodurch die Kette dieses Buckets anwächst.  
   
- Weitere Informationen zu nicht gruppierten Hashindizes finden Sie unter [Hashindizes](hash-indexes.md) und [Richtlinien zum Verwenden von Indizes für Speicheroptimierte Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Weitere Informationen zu nicht gruppierten Hashindizes finden Sie unter [Hash Indexes](hash-indexes.md) und [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Für jeden Hashindex in einer speicheroptimierten Tabelle wird eine Hashtabelle zugeordnet. Die Größe der Hashtabelle zugeordnet, für ein Index, durch angegeben wird die `BUCKET_COUNT` Parameter im [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) oder [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). Die Bucketanzahl wird intern bis zur nächsten Zweierpotenz aufgerundet. Wenn als Bucketanzahl beispielsweise 300.000 angegeben wird, führt dies zu einer tatsächlichen Bucketanzahl von 524.288.  
   
- Links zu einem Artikel und Videos zur Bucketanzahl finden Sie unter [Bestimmen der richtigen Bucketanzahl für Hashindizes (In-Memory OLTP)](http://go.microsoft.com/fwlink/p/?LinkId=525853).  
+ Links zu einem Artikel und Videos zur Bucketanzahl finden Sie unter [Bestimmen der richtigen Bucketanzahl für Hashindizes (In-Memory OLTP)](https://go.microsoft.com/fwlink/p/?LinkId=525853).  
   
 ## <a name="recommendations"></a>Empfehlungen  
  In den meisten Fällen sollte die Bucketanzahl das Ein- bis Zweifache der Anzahl von unterschiedlichen Werten im Indexschlüssel betragen. Wenn der Indexschlüssel zahlreiche doppelte Werte enthält und durchschnittlich über 10 Zeilen für jeden Indexschlüsselwert vorhanden sind, verwenden Sie einen nicht gruppierten Index.  
   
- Möglicherweise können Sie nicht immer prognostizieren, wie viele Werte ein bestimmter Indexschlüssel enthalten kann oder wird. Leistung sollte akzeptabel sein, wenn die `BUCKET_COUNT` Wert ist innerhalb von 5-Mal der tatsächlichen Anzahl von Schlüsselwerten.  
+ Möglicherweise können Sie nicht immer prognostizieren, wie viele Werte ein bestimmter Indexschlüssel enthalten kann oder wird. Die Leistung sollte akzeptabel sein, wenn der `BUCKET_COUNT`-Wert bis zum Fünffachen der tatsächlichen Anzahl von Schlüsselwerten beträgt.  
   
  Verwenden Sie zum Ermitteln der Anzahl von eindeutigen Indexschlüsseln in vorhandenen Daten Abfragen wie in den folgenden Beispielen:  
   
@@ -82,12 +82,12 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  Zwei wichtige Indikatoren für den Zustand von Hashindizes lauten wie folgt:  
   
  *empty_bucket_percent*  
- *Empty_bucket_percent* gibt die Anzahl der leeren Buckets im Hashindex.  
+ *empty_bucket_percent* gibt die Anzahl der leeren Buckets im Hashindex an.  
   
  Wenn *empty_bucket_percent* kleiner als 10 Prozent ist, ist die Bucketanzahl wahrscheinlich zu niedrig. Im Idealfall sollte *empty_bucket_percent* mindestens 33 Prozent betragen. Wenn die Bucketanzahl der Anzahl der Indexschlüsselwerte entspricht, ist ca. 1/3 der Buckets aufgrund der Hashverteilung leer.  
   
  *avg_chain_length*  
- *Avg_chain_length* gibt die durchschnittliche Länge der zeilenketten in den hashbuckets.  
+ *avg_chain_length* gibt die durchschnittliche Länge der Zeilenketten in den Hashbuckets an.  
   
  Wenn *avg_chain_length* größer als 10 und *empty_bucket_percent* größer als 10 Prozent ist, sind wahrscheinlich zahlreiche doppelte Indexschlüsselwerte vorhanden, und ein nicht gruppierter Index wäre besser geeignet. Eine durchschnittliche Kettenlänge von 1 ist ideal.  
   
@@ -137,13 +137,13 @@ GO
   
  Betrachten Sie die drei Hashindizes für diese Tabelle:  
   
--   IX_Status: 50 Prozent der Buckets sind leer, das ist positiv. Die durchschnittliche Kettenlänge ist jedoch sehr hoch (65.536). Dies weist auf eine große Anzahl doppelter Werte hin. Die Verwendung eines nicht gruppierten Hashindexes ist in diesem Fall daher nicht sinnvoll. Stattdessen sollte ein nicht gruppierter Index verwendet werden.  
+-   IX_Status: 50 Prozent der Buckets sind leer, das ist positiv. Die durchschnittliche Kettenlänge ist jedoch sehr hoch (65.536). Dies weist auf eine große Anzahl doppelter Werte hin. Die Verwendung eines nicht gruppierten Hashindexes ist in diesem Fall daher nicht sinnvoll. Stattdessen sollte ein nicht gruppierter Index verwendet werden.  
   
--   IX_OrderSequence: 0 Prozent der Buckets sind leer. Dieser Wert ist zu niedrig. Darüber hinaus beträgt die durchschnittliche Kettenlänge 8. Da die Werte in diesem Index eindeutig sind, bedeutet dies, dass durchschnittlich jedem Bucket 8 Werte zugeordnet sind. Die Bucketanzahl sollte erhöht werden. Da der Indexschlüssel 262.144 eindeutige Werte enthält, sollte die Bucketanzahl mindestens 262.144 betragen. Wenn zukünftiges Wachstum erwartet wird, sollte die Zahl größer sein.  
+-   IX_OrderSequence: 0 Prozent der Buckets sind leer. Dieser Wert ist zu niedrig. Darüber hinaus beträgt die durchschnittliche Kettenlänge 8. Da die Werte in diesem Index eindeutig sind, bedeutet dies, dass durchschnittlich jedem Bucket 8 Werte zugeordnet sind. Die Bucketanzahl sollte erhöht werden. Da der Indexschlüssel 262.144 eindeutige Werte enthält, sollte die Bucketanzahl mindestens 262.144 betragen. Wenn zukünftiges Wachstum erwartet wird, sollte die Zahl größer sein.  
   
--   Primärschlüsselindex (PK__SalesOrder…): 36 Prozent der Buckets sind leer, das ist positiv. Außerdem beträgt die durchschnittliche Kettenlänge 1, was ebenfalls positiv ist. Es ist keine Änderung erforderlich.  
+-   Primärschlüsselindex (pk__salesorder…): 36 Prozent der Buckets sind leer, was gut ist. Außerdem beträgt die durchschnittliche Kettenlänge 1, was ebenfalls positiv ist. Es ist keine Änderung erforderlich.  
   
- Weitere Informationen zum Beheben von Problemen bei speicheroptimierten Hashindizes finden Sie unter [Beheben allgemeiner Leistungsprobleme bei speicheroptimierten Hashindizes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
+ Weitere Informationen zur Fehlerbehebung bei speicheroptimierten Hashindizes finden Sie unter [Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
   
 ## <a name="detailed-considerations-for-further-optimization"></a>Ausführliche Überlegungen für die weitere Optimierung  
  Dieser Abschnitt enthält zusätzliche Überlegungen zum Optimieren der Bucketanzahl.  
@@ -152,7 +152,7 @@ GO
   
 -   Je höher der Wert für die Bucketanzahl ist, desto mehr leere Buckets sind im Index enthalten. Dies hat Auswirkungen auf die Speicherauslastung (8 Bytes pro Bucket) und die Leistung von Tabellenscans, da jeder Bucket als Teil eines Tabellenscans überprüft wird.  
   
--   Je niedriger die Bucketanzahl, desto mehr Werte sind einem einzelnen Bucket zugewiesen. Dies verringert die Leistung für punktsuchen und einfügungen, da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] müssen möglicherweise mehrere Werte in einem einzelnen Bucket zum Auffinden des Werts, der durch das Suchprädikat angegebenen durchlaufen.  
+-   Je niedriger die Bucketanzahl, desto mehr Werte sind einem einzelnen Bucket zugewiesen. Dadurch wird die Leistung für Punktsuchen und Einfügungen verringert, da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] möglicherweise mehrere Werte in einem einzelnen Bucket durchlaufen muss, um den durch das Suchprädikat angegebenen Wert zu finden.  
   
  Wenn die Bucketanzahl deutlich niedriger als die Anzahl der eindeutigen Indexschlüssel ist, werden jedem Bucket zahlreiche Werte zugeordnet. Dadurch wird die Leistung der meisten DML-Vorgänge beeinträchtigt, insbesondere von Punktsuchen (Suchen nach einzelnen Indexschlüsseln) und Einfügevorgängen. Beispielsweise lässt sich eine Leistungsminderung bei SELECT-Abfragen sowie UPDATE- und DELETE-Vorgängen mit Gleichheitsprädikaten feststellen, durch die die Indexschlüsselspalten in der WHERE-Klausel verglichen werden. Eine niedrige Bucketanzahl hat außerdem Auswirkungen auf die Dauer der Datenbankwiederherstellung, da die Indizes beim Datenbankstart neu erstellt werden.  
   

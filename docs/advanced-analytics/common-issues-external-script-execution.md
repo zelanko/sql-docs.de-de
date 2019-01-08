@@ -1,27 +1,25 @@
 ---
-title: Häufige Probleme mit dem Launchpad-Dienst und der externen skriptausführung in SQL Server | Microsoft-Dokumentation
+title: Häufige Probleme mit dem Launchpad-Dienst und der externen skriptausführung – SQL Server Machine Learning Services
 ms.prod: sql
-ms.technology: mlserver
+ms.technology: ''
 ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5f770ce536dcbc29245d1b6e853a2548ab1ec744
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a3437e5f7081aa47cb33e33546a79aca0b100309
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701448"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644920"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Häufige Probleme mit dem Launchpad-Dienst und der externen skriptausführung in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- Trusted Launchpad für SQL Server-Dienst unterstützt die Ausführung des externen Skripts für R und Python. Auf SQL Server 2016 R Services bietet SP1 den Dienst. SQL Server 2017 beinhaltet den Launchpad-Lo als Teil der ersten Installation.
+ Trusted Launchpad für SQL Server-Dienst unterstützt die Ausführung des externen Skripts für R und Python. Auf SQL Server 2016 R Services bietet SP1 den Dienst. SQL Server 2017 beinhaltet den Launchpad-Dienst im Rahmen der Erstinstallation.
 
 Mehrere Probleme können verhindern, dass Launchpad aus starten, einschließlich von Konfigurationsproblemen oder Änderungen oder fehlen von Netzwerkprotokollen. Dieser Artikel enthält Anleitungen zur Fehlerbehebung für viele Probleme. Für alle, die wir nicht angetroffen haben, können Sie Fragen zu den [Machine Learning Server-Forum](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR).
-
-**Gilt für:** SQL Server 2016 R Services, SqlServer 2017 Machine Learning-Dienste
 
 ## <a name="determine-whether-launchpad-is-running"></a>Bestimmen Sie, ob Launchpad ausgeführt wird
 
@@ -69,7 +67,7 @@ Wenn Sie SQL Server als Datenbankadministrator installiert, oder Sie der Besitze
 
 Zum Beheben des Problems, in SQL Server Management Studio kann ein Sicherheitsadministrator die SQL-Anmeldung oder der Windows-Benutzerkonto ändern, indem das folgende Skript ausführen:
 
-```SQL
+```sql
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
 
@@ -129,9 +127,9 @@ Wenn Sie installiert und Machine Learning aktiviert haben, aber Sie diesen Fehle
 
 4. Neustarten des Diensts in der Regel wird das Problem behoben, damit Machine Learning-Skripts ausführen können. Wenn der Neustart das Problem nicht behoben wird, beachten Sie den Pfad und den Argumenten in der **Binärpfad** -Eigenschaft, und führen Sie folgende Schritte:
 
-    A. Überprüfen Sie das Startprogramm für den config-Datei aus, und stellen Sie sicher, dass das Arbeitsverzeichnis gültig ist.
+    a. Überprüfen Sie das Startprogramm für den config-Datei aus, und stellen Sie sicher, dass das Arbeitsverzeichnis gültig ist.
 
-    B. Sicherstellen, dass die Windows-Gruppe, die von Launchpad verwendet wird, die SQL Server-Instanz herstellen kann, wie in beschrieben die [vorherigen Abschnitt](#bkmk_LaunchpadTS).
+    b. Stellen Sie sicher, dass die Windows-Gruppe, die von Launchpad verwendete SQL Server-Instanz herstellen kann.
 
     c. Wenn Sie die Eigenschaften des Diensts ändern, starten Sie den Launchpad-Dienst neu.
 
@@ -171,7 +169,7 @@ Dieser Fehler kann in vielerlei Hinsicht auftreten:
 
 Um den Speicherort der R-paketbibliothek zu bestimmen, die von der Instanz verwendet wird, öffnen Sie SQL Server Management Studio (oder jedes andere Datenbank-Abfrage-Tool), eine Verbindung mit der Instanz, und führen Sie dann die folgende gespeicherte Prozedur:
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R',  
 @script = N' print(normalizePath(R.home())); print(.libPaths());'; 
 ```
@@ -211,7 +209,7 @@ Um dieses Problem zu vermeiden, werden Sie darauf, dass keine neuen Features auf
 
 > [!NOTE] 
 > Bei älteren Systemen kann Launchpad nicht gestartet, wenn eine Anforderung der 8.3-Notation. Diese Anforderung wurde in späteren Versionen entfernt. SQL Server 2016 R Services-Kunden sollten die folgenden installieren:
-> * SQL Server 2016 SP1 und CU1: [kumulativen Update 1 für SQLServer](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1).
+> * SQL Server 2016 SP1 und CU1: [Kumulatives Update 1 für SQLServer](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1).
 > * SQL Server 2016 RTM, das kumulative Update 3 und dadurch [Hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), die bei Bedarf verfügbar ist.
 
 Kompatibilität mit R, SQL Server 2016 R Services (Datenbankintern) erforderlich, das Laufwerk, in dem die Funktion installiert wurde, um die Erstellung von kurzen Dateinamen mithilfe unterstützen *8.3-Notation*. Ein 8.3-Dateiname wird auch als bezeichnet ein *kurzer Dateiname*, und es wird verwendet, für die Kompatibilität mit früheren Versionen von Microsoft Windows oder als Alternative zu langen Dateinamen.

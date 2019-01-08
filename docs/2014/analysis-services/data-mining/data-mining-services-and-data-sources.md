@@ -11,12 +11,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e5f21211b933bcf0327ba1dbf15703f354225550
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145895"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367752"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Data Mining-Dienste und Datenquellen
   Für Data Mining ist eine Verbindung zu einer Instanz von SQL Server Analysis Services erforderlich. Daten von einem Cube sind für Data Mining nicht erforderlich, und die Verwendung relationaler Quellen wird empfohlen. Data Mining verwendet jedoch von der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Engine bereitgestellte Komponenten.  
@@ -78,7 +78,7 @@ ms.locfileid: "50145895"
 -   `AllowAdHocOpenRowsetQueries` Steuert den ad-hoc-Zugriff auf OLE DB-Anbieter, die direkt in den serverspeicherbereich geladen werden.  
   
     > [!IMPORTANT]  
-    >  Zur Erhöhung der Sicherheit wird empfohlen, diese Eigenschaft auf `false` festzulegen. Der Standardwert lautet `false`. Auch wenn diese Eigenschaft auf `false` festgelegt ist, können Benutzer dennoch weiterhin SINGLETON-Abfragen erstellen und OPENQUERY für zulässige Datenquellen verwenden.  
+    >  Zur Erhöhung der Sicherheit wird empfohlen, diese Eigenschaft auf `false` festzulegen. Der Standardwert ist `false`. Auch wenn diese Eigenschaft auf `false` festgelegt ist, können Benutzer dennoch weiterhin SINGLETON-Abfragen erstellen und OPENQUERY für zulässige Datenquellen verwenden.  
   
 -   **AllowedProvidersInOpenRowset** : Gibt den Anbieter an, wenn Ad-hoc-Zugriff aktiviert ist. Sie können mehrere Anbieter angeben, indem Sie eine durch Trennzeichen getrennte Liste von Programm-IDs eingeben.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "50145895"
  Sie können auch Eigenschaften festlegen, mit denen Sie den Server optimieren und die Sicherheit für die Clientverwendung kontrollieren können. Weitere Informationen finden Sie unter [Feature Properties](../server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Weitere Informationen zur Unterstützung für Plug-in-Algorithmen, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [von den SQL Server 2012-Editionen unterstützte Funktionen](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Weitere Informationen zur Unterstützung für Plug-in-Algorithmen, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [von den SQL Server 2012-Editionen unterstützte Funktionen](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Programmgesteuerter Zugriff auf Data Mining-Objekte  
  Mit den folgenden Objektmodellen können Sie eine Verbindung zu einer Analysis Services-Datenbank herstellen und mit Data Mining-Objekten arbeiten.  

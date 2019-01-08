@@ -1,5 +1,5 @@
 ---
-title: Lektion 1 durchsuchen und Visualisieren von Daten mithilfe von Python und T-SQL (SQL Server-Machine Learning) | Microsoft-Dokumentation
+title: Lektion 1 durchsuchen und Visualisieren von Daten mithilfe von Python und T-SQL – SQL Server-Machine Learning
 description: Tutorial zum Einbetten von gespeicherten Python in SQL Server Prozeduren und T-SQL-Funktionen
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cf14409cdb321d2f52196e0793ea092ab9ba2430
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: e92b2e1a5d4d5e1ad6990ffafa1a1cfcfbb9d806
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030980"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645339"
 ---
 # <a name="explore-and-visualize-the-data"></a>Untersuchen und Visualisieren von Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -77,7 +77,7 @@ Die gespeicherte Prozedur gibt eine serialisierten Python `figure` Objekt als Da
     - Das Python-Skript ist recht einfach: **Matplotlib** `figure` Objekte verwendet, um das Histogramm und die XY-Diagramm, und diese Objekte werden dann serialisiert mithilfe der `pickle` Bibliothek.
     - Das Python-Graphics-Objekt serialisiert wird, um eine **Pandas** Dataframes für die Ausgabe.
   
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
     GO
 
@@ -135,13 +135,13 @@ Die gespeicherte Prozedur gibt eine serialisierten Python `figure` Objekt als Da
 
 2. Führen Sie nun die gespeicherte Prozedur ohne Argumente zum Generieren eines Plots aus den Daten, die als Eingabeabfrage hartcodiert.
 
-    ```
+    ```sql
     EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. Die Ergebnisse sollten in etwa wie folgt aussehen:
   
-    ```
+    ```sql
     plot
     0xFFD8FFE000104A4649...
     0xFFD8FFE000104A4649...

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ef77f630142cf5b7202a30b928ac6e049584071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63f87a7d2897f069f4447437dd3a837d92af18f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159977"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374748"
 ---
 # <a name="sap-bw-source"></a>SAP BW-Quelle
   Die SAP BW-Quelle ist die Quellkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Daher extrahiert die SAP BW-Quelle Daten aus einem SAP NetWeaver BW-System, Version 7, und macht diese Daten im Datenfluss in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket verfügbar.  
@@ -107,7 +106,7 @@ ms.locfileid: "48159977"
   
     -   Geben Sie für die Option **E – Nur extrahieren** die Anforderungs-ID an.  
   
--   Geben Sie Regeln für die Zeichenfolgenkonvertierung an. (Z. B. konvertieren Sie alle Zeichenfolgen abhängig davon, ob das SAP Netweaver BW-System Unicode oder nicht, oder konvertieren Sie alle Zeichenfolgen in `varchar` oder `nvarchar`).  
+-   Geben Sie Regeln für die Zeichenfolgenkonvertierung an. (Konvertieren Sie beispielsweise alle Zeichenfolgen abhängig davon, ob das SAP NetWeaver BW-System ein Unicode-System ist oder nicht, oder konvertieren Sie alle Zeichenfolgen in `varchar` oder `nvarchar`.  
   
 -   Verwenden Sie die ausgewählten Optionen, um die zu extrahierenden Daten in der Vorschau anzuzeigen.  
   
@@ -115,18 +114,18 @@ ms.locfileid: "48159977"
   
  Wenn Sie nicht alle Werte kennen, die zur Konfiguration der Quelle erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
   
- Eine exemplarische Vorgehensweise, die zeigt, wie der SAP BW-Verbindungs-Manager sowie die zugehörige Quelle und das zugehörige Ziel konfiguriert und verwendet werden, finden Sie im Whitepaper [Verwenden von SQL Server 2008 Integration Services und SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). In diesem Whitepaper wird auch erläutert, wie die erforderlichen Objekte in SAP BW konfiguriert werden.  
+ Eine exemplarische Vorgehensweise, die zeigt, wie der SAP BW-Verbindungs-Manager sowie die zugehörige Quelle und das zugehörige Ziel konfiguriert und verwendet werden, finden Sie im Whitepaper [Verwenden von SQL Server 2008 Integration Services und SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). In diesem Whitepaper wird auch erläutert, wie die erforderlichen Objekte in SAP BW konfiguriert werden.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Konfigurieren der Quelle mit dem SSIS-Designer  
  Um weitere Informationen zu den Eigenschaften der SAP BW-Quelle zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, klicken Sie auf eines der folgenden Themen:  
   
 -   [Quellen-Editor für SAP BW &#40;Seite Verbindungs-Manager&#41;](sap-bw-source-editor-connection-manager-page.md)  
   
--   [Quellen-Editor für SAP BW &#40;Seite "Spalten"&#41;](sap-bw-source-editor-columns-page.md)  
+-   [Quellen-Editor für SAP BW &#40;Seite Spalten&#41;](sap-bw-source-editor-columns-page.md)  
   
--   [Quellen-Editor für SAP BW &#40;Seite "Fehlerausgabe"&#41;](sap-bw-source-editor-error-output-page.md)  
+-   [Quellen-Editor für SAP BW &#40;Seite Fehlerausgabe&#41;](sap-bw-source-editor-error-output-page.md)  
   
--   [Quellen-Editor für SAP BW &#40;Seite "Erweitert"&#41;](sap-bw-source-editor-advanced-page.md)  
+-   [Quellen-Editor für SAP BW &#40;Seite Erweitert&#41;](sap-bw-source-editor-advanced-page.md)  
   
  Während Sie die SAP BW-Quelle konfigurieren, können Sie auch verschiedene Dialogfelder verwenden, um SAP NetWeaver BW-Objekte zu suchen oder die Quelldaten in der Vorschau anzuzeigen. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu diesen Dialogfeldern zu erhalten:  
   

@@ -13,12 +13,12 @@ ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 779236a22eee429f6574a202e07eeccffc6b8d1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 091f6d49c4cccbcba47d50bbde3b395d8ce9d260
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074910"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364272"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Designer für tabellarische Modelle (SSAS – tabellarisch)
   Der Designer für tabellarische Modelle ist Bestandteil [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], integriert in Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 oder höher mit zusätzliche Projekttypvorlagen speziell für die Entwicklung von Projektmappen für professionelle tabellarische Modelle.  
@@ -34,12 +34,12 @@ ms.locfileid: "48074910"
 -   [Visual Studio-Integration](#bkmk_vsint)  
   
 ##  <a name="bkmk_benefits"></a> Vorteile  
- Wenn Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] installieren, werden den verfügbaren Projekttypen neue Projektvorlagen zum Erstellen tabellarischer Modelle hinzugefügt. Nachdem ein neues Projekt für tabellarische Modelle auf der Grundlage einer der Vorlagen erstellt wurde, können Sie mit der Erstellung von Modellen beginnen. Dazu verwenden Sie die Designer-Tools und Assistenten für tabellarische Modelle.  
+ Wenn Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]installieren, werden den verfügbaren Projekttypen neue Projektvorlagen zum Erstellen tabellarischer Modelle hinzugefügt. Nachdem ein neues Projekt für tabellarische Modelle auf der Grundlage einer der Vorlagen erstellt wurde, können Sie mit der Erstellung von Modellen beginnen. Dazu verwenden Sie die Designer-Tools und Assistenten für tabellarische Modelle.  
   
- Zusätzlich zu neuen Vorlagen und Tools zum Erstellen professioneller Projektmappen für mehrdimensionale und tabellarische Modelle stellt die [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]-Umgebung Debugging- und Projektlebenszyklusfunktionen bereit, mit denen Sie immer die leistungsstärksten BI-Lösungen für Ihre Organisation erstellen können. Weitere Informationen zu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] finden Sie unter [Erste Schritte mit Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389).  
+ Zusätzlich zu neuen Vorlagen und Tools zum Erstellen professioneller Projektmappen für mehrdimensionale und tabellarische Modelle stellt die [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]-Umgebung Debugging- und Projektlebenszyklusfunktionen bereit, mit denen Sie immer die leistungsstärksten BI-Lösungen für Ihre Organisation erstellen können. Weitere Informationen zu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]finden Sie unter [Erste Schritte mit Visual Studio](https://go.microsoft.com/fwlink/?LinkId=206389).  
   
 ##  <a name="bkmk_proj_temp"></a> Projektvorlagen  
- Wenn Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] installieren, werden den Business Intelligence-Projekttypen die folgenden Projektvorlagen für tabellarische Modelle hinzugefügt:  
+ Wenn Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]installieren, werden den Business Intelligence-Projekttypen die folgenden Projektvorlagen für tabellarische Modelle hinzugefügt:  
   
  **Analysis Services-Projekt für tabellarische Modelle**  
  Mit dieser Vorlage kann ein neues, leeres tabellarisches Modellprojekt erstellt werden.  
@@ -48,13 +48,13 @@ ms.locfileid: "48074910"
  Mit dieser Vorlage kann ein neues tabellarisches Modellprojekt erstellt werden, indem die Metadaten aus einem vorhandenen tabellarischen Modell in Analysis Services extrahiert werden.  
   
  **Importieren aus PowerPivot**  
- Mit dieser Vorlage wird ein neues tabellarisches Modellprojekt erstellt, indem die Metadaten und Daten aus einer [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]-Datei extrahiert werden.  
+ Mit dieser Vorlage wird ein neues tabellarisches Modellprojekt erstellt, indem die Metadaten und Daten aus einer [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] -Datei extrahiert werden.  
   
 > [!NOTE]  
 >  Projekte für tabellarische Modelle erfordern, dass eine sich im tabellarischen Modus befindliche Analysis Services-Serverinstanz lokal oder im Netzwerk ausgeführt wird.  
   
 ##  <a name="bkmk_wind_men"></a> Fenster und Menüs  
- Die [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]-Erstellungsumgebung für tabellarische Modelle schließt Folgendes ein:  
+ Die [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] -Erstellungsumgebung für tabellarische Modelle schließt Folgendes ein:  
   
 ### <a name="designer-window"></a>Designerfenster  
  Das Designerfenster dient zur Erstellung tabellarischer Modelle, indem das Modell in einer visuellen Darstellung abgebildet wird. Wenn Sie die Datei Model.bim öffnen, wird das Modell im Designerfenster geöffnet. Zum Erstellen eines Modells im Designerfenster stehen zwei unterschiedliche Ansichtsmodi zur Verfügung:  
@@ -117,16 +117,16 @@ ms.locfileid: "48074910"
   
 ##  <a name="bkmk_vsint"></a> Integration in Visual Studio  
  **Quellcodeverwaltung**  
- Analysis Services-Projekte werden mit dem ausgewählten Plug-In für die Quellcodeverwaltung integriert. Wenn Sie Visual Studio für die Verwendung der Quellcodeverwaltung konfiguriert haben, können Sie die Funktionen zum Ein-/Auschecken im Projektmappen-Explorer verwenden. Weitere Informationen zum Konfigurieren von Team Foundation Server finden Sie unter [Konfigurieren von Visual Studio für die Verwendung der Team Foundation-Versionskontrolle](http://msdn.microsoft.com/library/ms253064.aspx). Viele Drittanbieter-Plug-Ins für die Quellcodeverwaltung werden ebenfalls unterstützt.  
+ Analysis Services-Projekte werden mit dem ausgewählten Plug-In für die Quellcodeverwaltung integriert. Wenn Sie Visual Studio für die Verwendung der Quellcodeverwaltung konfiguriert haben, können Sie die Funktionen zum Ein-/Auschecken im Projektmappen-Explorer verwenden. Weitere Informationen zum Konfigurieren von Team Foundation Server finden Sie unter [Konfigurieren von Visual Studio für die Verwendung der Team Foundation-Versionskontrolle](https://msdn.microsoft.com/library/ms253064.aspx). Viele Drittanbieter-Plug-Ins für die Quellcodeverwaltung werden ebenfalls unterstützt.  
   
  **Schriftarten**  
- Tabellarische Modelle verwenden die Schriftart der [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]-Umgebung, um die Schriftarten in der Anzeige zu steuern. Es kann erforderlich sein, diese Schriftart zu ändern, wenn die [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]-Standardschriftart nicht über alle Unicode-Zeichen verfügt, die Sie für Ihre Sprache benötigen. Klicken Sie zum Ändern von Schriftarten auf das Menü **Extras** &gt; **Optionen**und anschließend auf **Schriftarten und Farben**.  
+ Tabellarische Modelle verwenden die Schriftart der [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Umgebung, um die Schriftarten in der Anzeige zu steuern. Es kann erforderlich sein, diese Schriftart zu ändern, wenn die [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]-Standardschriftart nicht über alle Unicode-Zeichen verfügt, die Sie für Ihre Sprache benötigen. Klicken Sie zum Ändern von Schriftarten auf das Menü **Extras** &gt; **Optionen**und anschließend auf **Schriftarten und Farben**.  
   
  **Keyboard Shortcuts (Tastenkombinationen)**  
  Die Analysis Services-Tastenkombinationen können über das Dialogfeld Tools->Optionen->Tastatur konfiguriert bzw. neu zugeordnet werden. Einige globale [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]-Verknüpfungen, wie z.B. „Erstellen“, „Speichern“, „Debuggen“, „neues Projekt“ usw., werden im Kontext des Designers für tabellarische Modelle unterstützt. Andere spezifische Tastenkombinationen des Designers für tabellarische Modelle sind im Analysis Services-Kontext verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Projekte für tabellarische Modelle &#40;SSAS – tabellarisch&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [Tabellenmodellprojekte &#40;SSAS – tabellarisch&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
  [Eigenschaften &#40;SSAS – tabellarisch&#41;](tabular-models/properties-ssas-tabular.md)  
   
   

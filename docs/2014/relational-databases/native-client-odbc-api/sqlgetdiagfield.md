@@ -14,27 +14,27 @@ ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20b84484500e338136ff0ab99af7890d06a466e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109516"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368112"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber gibt an, die folgenden zusätzlichen Diagnosefelder für `SQLGetDiagField`. Diese Felder unterstützen umfangreiche fehlerberichterstellung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbundenen Anwendungen "und" zur Verfügung, in allen Diagnosedatensätzen generiert, ODBC-Verbindungshandles und ODBC-Anweisungshandles. Die Felder werden in sqlncli.h definiert.  
+  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber gibt an, die folgenden zusätzlichen Diagnosefelder für `SQLGetDiagField`. Diese Felder unterstützen eine umfangreiche Fehlerberichterstellung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anwendungen und sind in allen Diagnosedatensätzen verfügbar, die für verbundene ODBC-Verbindungshandles und ODBC-Anweisungshandles generiert werden. Die Felder werden in sqlncli.h definiert.  
   
 |Diagnosedatensatzfeld|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Meldet die Zeilennummer einer gespeicherten Prozedur, die einen Fehler verursacht. Der Wert von SQL_DIAG_SS_LINE ist nur aussagekräftig, wenn SQL_DIAG_SS_PROCNAME einen Wert zurückgibt. Der Wert wird als 16-Bit-Ganzzahl ohne Vorzeichen zurückgegeben.|  
-|SQL_DIAG_SS_MSGSTATE|Der Status einer Fehlermeldung. Weitere Informationen über den Status der Fehlermeldung finden Sie unter [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql). Der Wert wird als 32-Bit-Ganzzahl mit Vorzeichen zurückgegeben.|  
-|SQL_DIAG_SS_PROCNAME|Der Name der gespeicherten Prozedur, die einen Fehler generiert, falls zutreffend. Der Wert wird als Zeichenfolge zurückgegeben. Die Länge der Zeichenfolge (in Zeichen) hängt von der Version der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie kann bestimmt werden, durch den Aufruf [SQLGetInfo](sqlgetinfo.md) den Wert für SQL_MAX_PROCEDURE_NAME_LEN anfordert.|  
+|SQL_DIAG_SS_MSGSTATE|Der Status einer Fehlermeldung. Informationen über den Status der Fehlermeldung finden Sie unter [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql). Der Wert wird als 32-Bit-Ganzzahl mit Vorzeichen zurückgegeben.|  
+|SQL_DIAG_SS_PROCNAME|Der Name der gespeicherten Prozedur, die einen Fehler generiert, falls zutreffend. Der Wert wird als Zeichenfolge zurückgegeben. Die Länge der Zeichenfolge (in Zeichen) hängt von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version ab. Sie kann bestimmt werden, indem die [SQLGetInfo](sqlgetinfo.md) -Funktion, die den Wert für SQL_MAX_PROCEDURE_NAME_LEN anfordert, aufgerufen wird.|  
 |SQL_DIAG_SS_SEVERITY|Der Schweregrad der zugehörigen Fehlermeldung. Der Wert wird als 32-Bit-Ganzzahl mit Vorzeichen zurückgegeben.|  
 |SQL_DIAG_SS_SRVNAME|Der Name des Servers, auf dem der Fehler aufgetreten ist. Der Wert wird als Zeichenfolge zurückgegeben. Die Länge der Zeichenfolge (in Zeichen) wird in sqlncli.h durch das SQL_MAX_SQLSERVERNAME-Makro definiert.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]--spezifische Diagnosefelder, die Zeichendaten, SQL_DIAG_SS_PROCNAME und SQL_DIAG_SS_SRVNAME, enthalten diese Daten an den Client zurückgeben, als Null-terminiert, ANSI oder Unicode-Zeichenfolgen. Falls notwendig sollte die Anzahl von Zeichen der Zeichenbreite entsprechend angepasst werden. Alternativ kann die korrekte Länge der Programmvariablen mit einem übertragbaren C-Datentyp wie TCHAR oder SQLTCHAR sichergestellt werden.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische Diagnosefelder, die Zeichendaten, SQL_DIAG_SS_PROCNAME und SQL_DIAG_SS_SRVNAME enthalten, geben diese Daten an den Client mit NULL-Terminierung oder als ANSI- bzw. Unicode-Zeichenfolgen zurück. Falls notwendig sollte die Anzahl von Zeichen der Zeichenbreite entsprechend angepasst werden. Alternativ kann die korrekte Länge der Programmvariablen mit einem übertragbaren C-Datentyp wie TCHAR oder SQLTCHAR sichergestellt werden.  
   
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber meldet die folgenden zusätzlichen dynamischen Funktionscodes, die die zuletzt versuchte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anweisung identifizieren. Der dynamische Funktionscode wird im Header (Datensatz 0) des Diagnosedatensatzes zurückgegeben und ist daher bei jeder Ausführung verfügbar (unabhängig davon, ob diese erfolgreich ist oder nicht).  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber meldet die folgenden zusätzlichen dynamischen Funktionscodes, die die zuletzt versuchte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anweisung identifizieren. Der dynamische Funktionscode wird im Header (Datensatz 0) des Diagnosedatensatzes zurückgegeben und ist daher bei jeder Ausführung verfügbar (unabhängig davon, ob diese erfolgreich ist oder nicht).  
   
 |Dynamischer Funktionscode|Source|  
 |---------------------------|------------|  
@@ -100,7 +100,7 @@ ms.locfileid: "48109516"
  Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLGetDiagField-Funktion](http://go.microsoft.com/fwlink/?LinkId=59352)   
+ [SQLGetDiagField-Funktion](https://go.microsoft.com/fwlink/?LinkId=59352)   
  [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

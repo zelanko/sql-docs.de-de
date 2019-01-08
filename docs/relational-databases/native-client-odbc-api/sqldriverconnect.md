@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e0566f7a1ee0332ddbb81a140418d2f59acf057
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 23475a80aeb63f0681977f096e18886c426c4862
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661279"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591255"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "51661279"
   
  Eine Erläuterung der Schlüsselwörter für Verbindungszeichenfolgen, die für die gültig sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client finden Sie unter [Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Wenn die **SQLDriverConnect *** DriverCompletion* Parameterwert ist, SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE oder sql_driver_complete_required lautet, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber Ruft Werte aus der im angezeigten Dialogfeld. Wenn der Schlüsselwortwert in der Verbindungszeichenfolge übergeben wird und der Benutzer den Schlüsselwortwert nicht im Dialogfeld ändert, verwendet der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber den Wert aus der Verbindungszeichenfolge. Wenn der Wert in der Verbindungszeichenfolge nicht festgelegt wird und der Benutzer keine Zuweisung im Dialogfeld vornimmt, verwendet der Treiber den Standardwert.  
+ Wenn die **SQLDriverConnect**_DriverCompletion_ Parameterwert ist, SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE oder sql_driver_complete_required lautet, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber Ruft Werte aus dem angezeigten Dialogfeld ab. Wenn der Schlüsselwortwert in der Verbindungszeichenfolge übergeben wird und der Benutzer den Schlüsselwortwert nicht im Dialogfeld ändert, verwendet der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber den Wert aus der Verbindungszeichenfolge. Wenn der Wert in der Verbindungszeichenfolge nicht festgelegt wird und der Benutzer keine Zuweisung im Dialogfeld vornimmt, verwendet der Treiber den Standardwert.  
   
  **SQLDriverConnect** zugewiesen werden, der einen gültigen *WindowHandle* Wenn ein *DriverCompletion* Wert die Anzeige des Verbindungsdialogfelds des Treibers erfordert (oder erfordern könnte). Ein ungültiges Handle gibt SQL_ERROR zurück.  
   
- Geben Sie entweder das Schlüsselwort DRIVER oder DSN an. ODBC gibt an, dass ein Treiber das äußere linke dieser beiden Schlüsselwörter verwendet und das andere ignoriert, wenn beide Schlüsselwörter angegeben sind. Wenn DRIVER angegeben ist, oder das äußere linke der beiden Komponenten, und die **SQLDriverConnect *** DriverCompletion* -Parameterwert SQL_DRIVER_NOPROMPT, das SERVER-Schlüsselwort und ein entsprechenden Wert sind erforderlich.  
+ Geben Sie entweder das Schlüsselwort DRIVER oder DSN an. ODBC gibt an, dass ein Treiber das äußere linke dieser beiden Schlüsselwörter verwendet und das andere ignoriert, wenn beide Schlüsselwörter angegeben sind. Wenn DRIVER angegeben ist, oder das äußere linke der beiden Komponenten, und die **SQLDriverConnect**_DriverCompletion_ -Parameterwert SQL_DRIVER_NOPROMPT, das SERVER-Schlüsselwort und ein entsprechenden Wert sind erforderlich.  
   
  Wenn SQL_DRIVER_NOPROMPT angegeben wird, müssen Schlüsselwörter für die Benutzerauthentifizierung mit Werten vorhanden sein. Der Treiber stellt sicher, dass entweder die Zeichenfolge "Trusted_Connection=yes" oder sowohl das UID- als auch das PWD-Schlüsselwort vorhanden sind.  
   

@@ -18,12 +18,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 117391f9cbefeb7ed7fbc76d2c1d93376e5a1fa6
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 29868763c34944b0a33953e7a56c3d365afcd4d5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085336"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363922"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Konfigurieren der Sicherung auf Verfügbarkeitsreplikaten (SQL Server)
   In diesem Thema wird beschrieben, wie die Sicherung auf sekundären Replikaten für eine AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]konfiguriert wird.  
@@ -44,12 +44,12 @@ ms.locfileid: "49085336"
   
 ####  <a name="Permissions"></a> Berechtigungen  
   
-|Task|Berechtigungen|  
+|Aufgabe|Berechtigungen|  
 |----------|-----------------|  
 |Konfigurieren der Sicherung auf sekundären Replikaten beim Erstellen einer Verfügbarkeitsgruppe|Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** und die CREATE AVAILABILITY GROUP-Serverberechtigung, ALTER ANY AVAILABILITY GROUP-Berechtigung oder CONTROL SERVER-Berechtigung.|  
 |Ändern einer Verfügbarkeitsgruppe oder eines Verfügbarkeitsreplikats|Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.|  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  **So konfigurieren Sie die Sicherung auf sekundären Replikaten**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das primäre Replikat hostet, und klicken Sie auf den Servernamen, um die Serverstruktur zu erweitern.  
@@ -78,7 +78,7 @@ ms.locfileid: "49085336"
      Gibt an, dass Sicherungsaufträge die Rolle der Verfügbarkeitsreplikate ignorieren sollen, wenn sie das Replikat zum Durchführen der Sicherungen auswählen. Sicherungsaufträge können andere Faktoren auswerten, wie z. B. die Sicherungspriorität jedes Verfügbarkeitsreplikats in Verbindung mit seinem Betriebszustand und Verbindungsstatus.  
   
     > [!IMPORTANT]  
-    >  Die Voreinstellung für die automatisierte Sicherung wird nicht erzwungen. Die Interpretation dieser Voreinstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer bestimmten Verfügbarkeitsgruppe eingefügt haben. Die Voreinstellung für die automatisierte Sicherung hat keine Auswirkungen auf Ad-hoc-Sicherungen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Nachverfolgung: Nach dem Konfigurieren einer Sicherung auf sekundären Replikaten](#FollowUp) .  
+    >  Die Voreinstellung für die automatisierte Sicherung wird nicht erzwungen. Die Interpretation dieser Voreinstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer bestimmten Verfügbarkeitsgruppe eingefügt haben. Die Voreinstellung für die automatisierte Sicherung hat keine Auswirkungen auf Ad-hoc-Sicherungen. Weitere Informationen finden Sie unter [nachverfolgung: Nach dem Konfigurieren einer Sicherung auf sekundären Replikaten](#FollowUp) weiter unten in diesem Thema.  
   
 6.  Verwenden Sie das Raster **Replikatssicherungsprioritäten** , um die Sicherungspriorität der Verfügbarkeitsreplikate zu ändern. Dieses Raster enthält die aktuelle Sicherungspriorität aller Serverinstanzen, die ein Replikat für die Verfügbarkeitsgruppe hosten. Es gibt folgende Rasterspalten:  
   
@@ -146,7 +146,7 @@ ms.locfileid: "49085336"
      Gibt an, dass Sicherungsaufträge die Rolle der Verfügbarkeitsreplikate ignorieren sollen, wenn sie das Replikat zum Durchführen der Sicherungen auswählen. Hinweis: Sicherungsaufträge können andere Faktoren auswerten, wie z. B. die Sicherungspriorität jedes Verfügbarkeitsreplikats in Verbindung mit seinem Betriebszustand und Verbindungsstatus.  
   
     > [!IMPORTANT]  
-    >  `AutomatedBackupPreference` wird nicht erzwungen. Die Interpretation dieser Voreinstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer bestimmten Verfügbarkeitsgruppe eingefügt haben. Die Voreinstellung für die automatisierte Sicherung hat keine Auswirkungen auf Ad-hoc-Sicherungen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Nachverfolgung: Nach dem Konfigurieren einer Sicherung auf sekundären Replikaten](#FollowUp) .  
+    >  `AutomatedBackupPreference` wird nicht erzwungen. Die Interpretation dieser Voreinstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer bestimmten Verfügbarkeitsgruppe eingefügt haben. Die Voreinstellung für die automatisierte Sicherung hat keine Auswirkungen auf Ad-hoc-Sicherungen. Weitere Informationen finden Sie unter [nachverfolgung: Nach dem Konfigurieren einer Sicherung auf sekundären Replikaten](#FollowUp) weiter unten in diesem Thema.  
   
      Beispielsweise wird mit dem folgenden Befehl die Eigenschaft `AutomatedBackupPreference` für die Verfügbarkeitsgruppe `MyAg` auf `SecondaryOnly` festgelegt. Automatisierte Sicherungen der Datenbanken in dieser Verfügbarkeitsgruppe treten nie auf dem primären Replikat auf, sondern werden an das sekundäre Replikat mit der höchsten Sicherungspriorität umgeleitet.  
   
@@ -165,14 +165,14 @@ ms.locfileid: "49085336"
   
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Konfigurieren einer Sicherung auf sekundären Replikaten  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Konfigurieren der Sicherung auf sekundären Replikaten  
  Damit die automatisierte Sicherungseinstellung für eine angegebene Verfügbarkeitsgruppe berücksichtigt wird, müssen Sie auf jeder Serverinstanz, die ein Verfügbarkeitsreplikat hostet, dessen Sicherungspriorität größer als Null (>0) ist, Sicherungsauftragsskripts für die Datenbanken in der Verfügbarkeitsgruppe erstellen. Um zu bestimmen, ob das aktuelle Replikat das bevorzugte Sicherungsreplikat ist, verwenden Sie die [sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) -Funktion in Ihrem Sicherungsskript. Wenn das Verfügbarkeitsreplikat, das von der aktuellen Serverinstanz gehostet wird, das bevorzugte Replikat für die Sicherungen ist, wird von dieser Funktion "1" zurückgegeben. Wenn dies nicht zutrifft, wird von der Funktion "0" zurückgegeben. Indem Sie auf jedem Verfügbarkeitsreplikat, von dem diese Funktion abgefragt wird, ein einfaches Skript ausführen, können Sie bestimmen, von welchem Replikat ein bestimmter Sicherungsauftrag ausgeführt werden sollte. Ein typischer Ausschnitt eines Sicherungsauftragsskripts würde z. B. so aussehen:  
   
 ```  
 IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
 BEGIN  
-      Select ‘This is not the preferred replica, exiting with success’;  
-      RETURN 0 – This is a normal, expected condition, so the script returns success  
+      Select 'This is not the preferred replica, exiting with success';  
+      RETURN 0 - This is a normal, expected condition, so the script returns success  
 END  
 BACKUP DATABASE @DBNAME TO DISK=<disk>  
    WITH COPY_ONLY;  
@@ -181,7 +181,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
  Indem Sie für einen Sicherungsauftrag ein Skript mit dieser Logik erstellen, können Sie die Ausführung des Auftrags auf jedem Verfügbarkeitsreplikat nach demselben Zeitplan vorsehen. Jeder dieser Aufträge greift auf die gleichen Daten zurück, um zu bestimmen, welcher Auftrag auszuführen ist. Folglich wechselt eigentlich nur einer der geplanten Aufträge in den Sicherungsstatus.  Bei einem Failover muss kein Skript oder Auftrag geändert werden. Auch bei der Neukonfiguration einer Verfügbarkeitsgruppe zum Hinzufügen eines Verfügbarkeitsreplikats ist zum Verwalten des Sicherungsauftrags nur das Kopieren oder Planen des Sicherungsauftrags erforderlich. Wenn Sie ein Verfügbarkeitsreplikat entfernen, löschen Sie einfach den Sicherungsauftrag von der Serverinstanz, die dieses Replikat gehostet hat.  
   
 > [!TIP]  
->  Wenn Sie einen bestimmten Sicherungsauftrag mithilfe des[Wartungsplanungs-Assistenten](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)erstellen, verfügt der Auftrag automatisch über die Skripterstellungslogik, durch die die **sys.fn_hadr_backup_is_preferred_replica** -Funktion aufgerufen und überprüft wird. Die Meldung, dass es sich nicht um das bevorzugte Replikat handelt, wird vom Sicherungsauftrag jedoch nicht zurückgegeben. Erstellen Sie die Aufträge für jede Verfügbarkeitsdatenbank auf jeder Serverinstanz, die ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe hostet.  
+>  Wenn Sie einen bestimmten Sicherungsauftrag mithilfe des[Wartungsplanungs-Assistenten](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)erstellen, verfügt der Auftrag automatisch über die Skripterstellungslogik, durch die die **sys.fn_hadr_backup_is_preferred_replica** -Funktion aufgerufen und überprüft wird. Der Sicherungsauftrag gibt jedoch nicht die Nachricht „Dies ist nicht das bevorzugte Replikat...“ zurück. Stellen Sie sicher, dass Sie die Aufträge für jede Verfügbarkeitsdatenbank auf jeder Serverinstanz erstellen, die ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe hostet.  
   
 ##  <a name="ForInfoAboutBuPref"></a> So rufen Sie Informationen zu Sicherungseinstellungen ab  
  Folgendes ist hilfreich zum Abrufen von Informationen, die für eine Sicherung auf sekundären Replikaten relevant sind.  
@@ -195,9 +195,9 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   

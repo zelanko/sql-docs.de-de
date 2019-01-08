@@ -17,19 +17,19 @@ ms.assetid: 06b7edee-8636-49d9-9b5c-2c710bf4fa2d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: edaddc413c972672beee3033b861b04dce92a180
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce534f3667aaa9c42b1fa12820d5bdbd20728b8b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125640"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371402"
 ---
 # <a name="sql-server-native-client-odbc-reference"></a>SQL Server Native Client (ODBC) – Referenz
   ODBC (Open Database Connectivity) ist eine Win32-Anwendungsprogrammierschnittstelle von Microsoft, mit deren Hilfe Anwendungen auf Daten in ODBC-Datenquellen zugreifen.  
   
  In der Referenz zum ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sind nicht sämtliche ODBC-Funktionsaufrufe dokumentiert. Es werden nur diejenigen Funktionen besprochen, die über treiberspezifische Parameter verfügen oder ein treiberspezifisches Verhalten zeigen, wenn sie mit dem ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verwendet werden.  
   
- Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client entspricht der Spezifikation für ODBC 3.51. Eine umfassende Referenz zu ODBC 3.51 benötigen, laden Sie das Microsoft Data Access Components SDK vom die [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173), oder zeigen Sie die [ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45250) online.  
+ Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client entspricht der Spezifikation für ODBC 3.51. Eine umfassende Referenz zu ODBC 3.51 benötigen, laden Sie das Microsoft Data Access Components SDK vom die [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173), oder zeigen Sie die [ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45250) online.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: faf49ce16cdf76af644944a2a3cc21700863ade9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f58a349ebf67f710b4ff4722b85328992b3555eb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198370"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371122"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Master Data Services-Add-In für Microsoft Excel
   Mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], für alle Benutzer in Ihrer Organisation, die Excel verwenden können masterlisten mit Verweisdaten verteilt werden. Mit Sicherheit wird festgelegt, welche Daten die Benutzer anzeigen und aktualisieren können.  
@@ -28,7 +27,7 @@ ms.locfileid: "48198370"
  In [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]können Sie mithilfe von Data Quality Services (DQS) Daten vor dem Laden in MDS zuordnen. Dadurch werden doppelte Daten in MDS verhindert.  
   
 > [!IMPORTANT]  
->  Sie können weiterhin die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services Add-Ins für Excel nach dem Aktualisieren von Master Data Services- und Data Quality Services [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Frühere Versionen des Master Data Services-Add-Ins für Excel sind nach einem Upgrade auf SQL Server 2014 CTP2 jedoch nicht funktionsfähig. Sie können die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services Add-Ins für Excel aus [hier](http://go.microsoft.com/fwlink/?LinkId=328664).  
+>  Sie können weiterhin die Version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 des Master Data Services-Add-Ins für Excel verwenden, nachdem Sie für Master Data Services und Data Quality Services ein Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 ausgeführt haben. Frühere Versionen des Master Data Services-Add-Ins für Excel sind nach einem Upgrade auf SQL Server 2014 CTP2 jedoch nicht funktionsfähig. Sie können die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services-Add-Ins für Excel [hier](https://go.microsoft.com/fwlink/?LinkId=328664)herunterladen.  
   
 ## <a name="terms"></a>Begriffe  
  Wenn Sie mit dem Add-In arbeiten, stoßen Sie möglicherweise auf die folgenden Begriffe.  

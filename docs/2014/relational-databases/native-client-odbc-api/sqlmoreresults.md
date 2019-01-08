@@ -14,15 +14,15 @@ ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c6b6bc36139020f64ae4dd280988f5783d6f837
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85e0008e22e38b82fbd006a91eca80f67d7d8289
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207670"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375742"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
-  **SQLMoreResults** ermöglicht es der Anwendung, mehrere Ergebniszeilensätze abzurufen. Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung, die eine COMPUTE-Klausel enthält, oder ein übermittelter Batch ODBC- oder [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen veranlasst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber, mehrere Resultsets zu generieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt das Erstellen eines Servercursors zur Verarbeitung der Ergebnisse in beiden Fällen nicht. Deshalb muss der Entwickler sicherstellen, dass die ODBC-Anweisung blockierend wirkt. Der Entwickler muss die zurückgegebenen Daten vollständig nutzen oder die ODBC-Anweisung abbrechen, bevor Daten aus anderen aktiven Anweisungen für die Verbindung verarbeitet werden.  
+  **SQLMoreResults** ermöglicht es der Anwendung, mehrere Ergebniszeilensätze abzurufen. Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung, die eine COMPUTE-Klausel enthält, oder ein übermittelter Batch ODBC- oder [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen veranlasst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber, mehrere Resultsets zu generieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt das Erstellen eines Servercursors zum Verarbeiten der Ergebnisse keinesfalls zu. Deshalb muss der Entwickler sicherstellen, dass die ODBC-Anweisung blockierend wirkt. Der Entwickler muss die zurückgegebenen Daten vollständig nutzen oder die ODBC-Anweisung abbrechen, bevor Daten aus anderen aktiven Anweisungen für die Verbindung verarbeitet werden.  
   
 > [!NOTE]  
 >  Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung, die eine COMPUTE-Klausel enthält, wird nur beim Herstellen einer Verbindung zu einer Serverversion vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]unterstützt.  
@@ -161,7 +161,7 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLMoreResults-Funktion](http://go.microsoft.com/fwlink/?LinkId=59357)   
+ [SQLMoreResults-Funktion](https://go.microsoft.com/fwlink/?LinkId=59357)   
  [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
   
   

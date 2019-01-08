@@ -21,12 +21,12 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13352451c31822acdc9fea70965b22c6269577f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152014"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375942"
 ---
 # <a name="working-with-query-notifications"></a>Arbeiten mit Abfragebenachrichtigungen
   Abfragebenachrichtigungen wurden in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client eingeführt. Mit Abfragebenachrichtigungen, die auf der in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführten Service Broker-Infrastruktur aufsetzen, können Anwendungen benachrichtigt werden, wenn sich Daten geändert haben. Diese Funktion ist besonders nützlich für Anwendungen, die einen Informationscache aus einer Datenbank zur Verfügung stellen, z. B. eine Webanwendung, und die benachrichtigt werden müssen, wenn die Quelldaten geändert wurden.  
@@ -58,11 +58,11 @@ ms.locfileid: "48152014"
 CREATE QUEUE myQueue  
 CREATE SERVICE myService ON QUEUE myQueue   
   
-([http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
+([https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
 ```  
   
 > [!NOTE]  
->  Der Dienst muss den vordefinierten Vertrag `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification` verwenden wie oben dargestellt.  
+>  Der Dienst muss den vordefinierten Vertrag `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification` verwenden wie oben dargestellt.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB-Anbieter  
  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt die Benachrichtigung von Consumern bei rowsetänderungen. Der Consumer erhält in jeder Phase der Rowsetänderung und bei jeder versuchten Änderung eine Benachrichtigung.  
@@ -113,7 +113,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- Wenn SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT und SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS nicht NULL sind, wird der TDS-Abfragebenachrichtigungsheader mit den drei oben definierten Attributen bei jeder Ausführung des Befehls an den Server gesendet. Wenn eine der Eigenschaften NULL ist, wird der Header nicht gesendet und SQL_SUCCESS_WITH_INFO zurückgegeben. Die Überprüfung wird für [SQLPrepare-Funktion](http://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, und **SqlExecute**, dass alle Überprüfungen schlagen fehl, wenn die Attribute nicht gültig sind. Entsprechend schlägt die Ausführung mit SQL_SUCCESS_WITH_INFO fehl, wenn diese Abfragebenachrichtigungsattribute für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Versionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] festgelegt werden.  
+ Wenn SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT und SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS nicht NULL sind, wird der TDS-Abfragebenachrichtigungsheader mit den drei oben definierten Attributen bei jeder Ausführung des Befehls an den Server gesendet. Wenn eine der Eigenschaften NULL ist, wird der Header nicht gesendet und SQL_SUCCESS_WITH_INFO zurückgegeben. Die Überprüfung wird für [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, und **SqlExecute**, dass alle Überprüfungen schlagen fehl, wenn die Attribute nicht gültig sind. Entsprechend schlägt die Ausführung mit SQL_SUCCESS_WITH_INFO fehl, wenn diese Abfragebenachrichtigungsattribute für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Versionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] festgelegt werden.  
   
 > [!NOTE]  
 >  Durch Vorbereiten der Anweisungen wird nie eine Initiierung des Abonnements ausgelöst. Das Abonnement kann nur durch die Anweisungsausführung initiiert werden.  

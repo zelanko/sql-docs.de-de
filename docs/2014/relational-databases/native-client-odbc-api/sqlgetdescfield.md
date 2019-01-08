@@ -14,12 +14,12 @@ ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f3c06bbb9a8390b6ec41aa3e2233feeb10b8ce5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187760"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352998"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber macht die treiberspezifische deskriptorfelder für den Implementierungszeilendeskriptor (IRD) nur. Innerhalb des IRD wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deskriptorfelder durch treiberspezifische Spaltenattribute verwiesen. Weitere Informationen über eine vollständige Liste der verfügbaren treiberspezifische deskriptorfelder finden Sie unter [SQLColAttribute](sqlcolattribute.md).  
@@ -152,7 +152,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLGetDescField-Funktion](http://go.microsoft.com/fwlink/?LinkId=59351)   
+ [SQLGetDescField-Funktion](https://go.microsoft.com/fwlink/?LinkId=59351)   
  [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
   
   

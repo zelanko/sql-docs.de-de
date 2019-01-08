@@ -10,12 +10,12 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 396f26f617ec64aa1d2c46f4c4b600a824a2f278
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018935"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354944"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Überlegungen zur Installation von SQL Server mit SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep ermöglicht Ihnen die Vorbereitung einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer und den Abschluss der Konfiguration zu einem späteren Zeitpunkt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep umfasst einen aus zwei Schritten bestehenden Prozess zur Konfiguration einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Schritte umfassen Folgendes:  
@@ -39,7 +39,7 @@ ms.locfileid: "51018935"
   
 -   In Verbindung mit dem Windows-Systemvorbereitungstool (auch als Windows SysPrep bezeichnet) können Sie ein Image des Betriebssystems einschließlich der nicht konfigurierten vorbereiteten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Quellcomputer erstellen. Dann können Sie das Betriebssystemimage auf mehreren Computern bereitstellen. Nachdem Sie die Konfiguration des Betriebssystems abgeschlossen haben, können Sie die vorbereiteten Instanzen mit dem Schritt "Image abschließen" von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup konfigurieren.  
   
-     Das Windows SysPrep-Tool wird verwendet, um Windows-Betriebssystemimages vorzubereiten. Es wird verwendet, um ein benutzerdefiniertes Image des Betriebssystems aufzuzeichnen, das überall in einer Organisation bereitgestellt werden kann. Weitere Informationen zu SysPrep und den Verwendungsmöglichkeiten finden Sie unter [Erläuterungen zu SysPrep](http://go.microsoft.com/fwlink/?LinkId=143546).  
+     Das Windows SysPrep-Tool wird verwendet, um Windows-Betriebssystemimages vorzubereiten. Es wird verwendet, um ein benutzerdefiniertes Image des Betriebssystems aufzuzeichnen, das überall in einer Organisation bereitgestellt werden kann. Weitere Informationen zu SysPrep und den Verwendungsmöglichkeiten finden Sie unter [Erläuterungen zu SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546).  
   
 ## <a name="installation-media-considerations"></a>Überlegungen zu Installationsmedien  
  Wenn Sie eine Vollversion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden, berücksichtigen Sie Folgendes:  

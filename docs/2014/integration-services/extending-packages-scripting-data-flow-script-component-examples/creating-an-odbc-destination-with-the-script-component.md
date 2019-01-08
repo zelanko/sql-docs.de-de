@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], destination components
@@ -17,12 +15,12 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbc851400b31cca972311c35aa589c6cd1990b2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3049839f14d25413cee64ced2340578c178d6bb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150965"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356291"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Erstellen eines ODBC-Ziels mit der Skriptkomponente
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] werden Daten in der Regel mithilfe eines [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Ziels und des [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Datenanbieters für ODBC in einem ODBC-Ziel gespeichert. Sie können jedoch auch ein Ad-hoc-ODBC-Ziel für die Verwendung in einem einzelnen Paket erstellen. Zur Erstellung dieses Ad-hoc-ODBC-Ziels verwenden Sie die Skriptkomponente, wie in dem folgenden Beispiel dargestellt.  
@@ -167,7 +165,7 @@ ms.locfileid: "48150965"
     }  
     ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen eines Ziels mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  

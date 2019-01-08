@@ -14,12 +14,12 @@ ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3a45edaedce83d741d24ee085ccf962854303a68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63154af6d155dd05e1f07d38185830fefc30068a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129350"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371362"
 ---
 # <a name="use-my-subscriptions"></a>Verwenden von "Meine Abonnements"
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Berichts-Manager enthält eine **Meine Abonnements** Seite, die alle Ihre Abonnements zentral aufgelistet werden. Mithilfe von Meine Abonnements können Sie vorhandene Abonnements anzeigen, ändern und löschen. Abonnements können damit jedoch nicht erstellt werden.  
@@ -40,7 +40,7 @@ ms.locfileid: "48129350"
 ## <a name="use-windows-powershell-to-list-mysubscriptions"></a>Verwenden von Windows PowerShell zum Auflisten von MySubscriptions  
  ![PowerShell-Inhalt](../media/rs-powershellicon.jpg "PowerShell related content")  
   
- Mit dem folgenden PowerShell-Skript wird die Liste der Abonnements und Abonnementeigenschaften für den aktuellen Benutzer zurückgegeben. Weitere Informationen finden Sie unter [ReportingService2010.ListMySubscriptions-Methode](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx).  
+ Mit dem folgenden PowerShell-Skript wird die Liste der Abonnements und Abonnementeigenschaften für den aktuellen Benutzer zurückgegeben. Weitere Informationen finden Sie unter [ReportingService2010.ListMySubscriptions-Methode](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx).  
   
 ```  
 #server -  all subscriptions of the current user at the given server or site  

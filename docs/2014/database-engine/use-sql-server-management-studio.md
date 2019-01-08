@@ -14,19 +14,19 @@ ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dd92e346a3a1f3dbb04e2a8d726ad4460ca5fc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128130"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369152"
 ---
 # <a name="use-sql-server-management-studio"></a>Verwenden von SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) ist eine integrierte Umgebung für den Zugriff auf Konfiguration, Verwaltung, Verwaltung und Entwicklung aller Komponenten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS kombiniert eine Vielzahl grafischer Tools mit einer Reihe umfassender Skript-Editoren, um Entwicklern und Administratoren mit verschiedenem Kenntnisstand den Zugriff auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu ermöglichen.  
   
  SSMS kombiniert die Funktionen von Enterprise Manager, Query Analyzer und dem Analysis-Manager aus den vorherigen Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]in einer einzigen Umgebung. Darüber hinaus kann SSMS mit allen Komponenten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet werden, z. B. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Diese Umgebung ist Entwicklern vertraut und stellt für Administratoren ein einziges Hilfsprogramm mit einfachen grafischen Tools und umfangreichen Skripterstellungsfunktionen zum Ausführen ihrer Aufgaben bereit.  
   
- Herunterladen und installieren Sie SSMS aus dem [Microsoft Developer Network](http://msdn.microsoft.com/library/dn434042.aspx).  
+ Herunterladen und installieren Sie SSMS aus dem [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Funktionen in SQL Server Management Studio](features-in-sql-server-management-studio.md)  

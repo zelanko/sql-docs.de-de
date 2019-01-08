@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, system settings
@@ -14,12 +13,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a03d530c5dc6ca964d35df5ee67a932ddea3a6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e8f239afa5d26ee4a3d6d97a24f58a46f1e3334
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175380"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370202"
 ---
 # <a name="system-settings-master-data-services"></a>Systemeinstellungen (Master Data Services)
   Sie können für alle Webanwendungen und Webdienste, die einer [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank zugeordnet sind, Systemeinstellungen konfigurieren.  
@@ -79,7 +78,7 @@ ms.locfileid: "48175380"
   
 |Einstellung des Konfigurations-Managers|Systemeinstellung|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Die Standardanzahl der Elemente in der Hierarchie.**|**HierarchyChildNodeLimit**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **des** an, wie viele Elemente maximal in den einzelnen Hierarchieknoten angezeigt werden, bevor **…More…** des angezeigt. Sie können auf **…More…**(Mehr) klicken, um die nächste Gruppe von Elementen anzuzeigen. Der Standardwert lautet **50**.|  
+|**Die Standardanzahl der Elemente in der Hierarchie.**|**HierarchyChildNodeLimit**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-**Explorer** an, wie viele Elemente maximal in den einzelnen Hierarchieknoten angezeigt werden, bevor **...Weitere...** angezeigt wird. Sie können auf **...Weitere...** klicken, um die nächste Gruppe von Elementen anzuzeigen. Der Standardwert lautet **50**.|  
 |**Standardmäßig Namen in Hierarchie anzeigen**|**ShowNamesInHierarchy**|Legt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, determines the default setting that is selected when you view hierarchies.<br /><br /> Der Standardwert ist **Yes** oder **1**. Er gibt an, dass Name und Code der einzelnen Elemente angezeigt werden. Ändern Sie den Wert in **No** oder **2** , wenn Sie nur den Code anzeigen möchten.|  
 |**Anzahl domänenbasierter Attribute in Liste**|**DBAListRowLimit**|Gibt an, wie viele Attribute in einer Liste im Funktionsbereich des [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. Der Standardwert lautet **50**. Wenn mehr als 50 Elemente vorhanden sind, wird stattdessen ein durchsuchbares Dialogfeld angezeigt.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the level of similarity used when using the **Matches** filter criteria. Der Standardwert ist **0,3**. Legen Sie als Wert eine Zahl in der Nähe von **1** fest, um ein Ergebnis zurückzugeben, das den Suchkriterien besser entspricht. Eine exakte Übereinstimmung erhalten Sie, wenn Sie den Wert auf **1** festlegen.|  
@@ -107,8 +106,8 @@ ms.locfileid: "48175380"
 |**Master Data Manager-URL für Benachrichtigungen**|**MDMRootURL**|Gibt die URL für die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-Webanwendung an, die im Link in E-Mail-Benachrichtigungen verwendet wird, z.B. http://constoso/mds.|  
 |**Benachrichtigungs-E-Mail-Intervall**|**NotificationInterval**|Die Häufigkeit in Sekunden, in der E-Mail-Benachrichtigungen gesendet werden. Der Standardwert ist **120** Sekunden (2 Minuten).|  
 |**Anzahl von Benachrichtigungen in einer einzelnen E-Mail**|**NotificationsPerEmail**|Die maximale Anzahl von Problemen bei der Überprüfung, die in einer Benachrichtigungs-E-Mail aufgeführt werden. Weitere Probleme (sofern vorhanden) werden nicht in die E-Mail aufgenommen, sind aber im [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]verfügbar.|  
-|**E-Mail-Standardformat**|**EmailFormat**|Das Format für alle E-Mail-Benachrichtigungen. Der Standardwert ist **HTML** oder **1**. Die Datenbankeinstellung **2** steht für **Text**.<br /><br /> Hinweis: Sie können das Format für einen einzelnen Benutzer in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]überschreiben, indem Sie das **E-Mail-Format** auf der Registerkarte **Allgemein** des Benutzers ändern und speichern.|  
-|**Regulärer Ausdruck für E-Mail-Adresse**|**EmailRegExPattern**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. Weitere Informationen zu regulären Ausdrücken finden Sie unter [Sprachelemente für reguläre Ausdrücke](http://go.microsoft.com/fwlink/?LinkId=164401) in der MSDN Library.|  
+|**E-Mail-Standardformat**|**EmailFormat**|Das Format für alle E-Mail-Benachrichtigungen. Der Standardwert ist **HTML** oder **1**. Die Datenbankeinstellung **2** steht für **Text**.<br /><br /> Hinweis: Sie können dies außer Kraft setzen für einen einzelnen Benutzer im [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], ändern und speichern die **e-Mail-Format** des Benutzers **allgemeine** Registerkarte.|  
+|**Regulärer Ausdruck für E-Mail-Adresse**|**EmailRegExPattern**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. Weitere Informationen zu regulären Ausdrücken finden Sie unter [Sprachelemente für reguläre Ausdrücke](https://go.microsoft.com/fwlink/?LinkId=164401) in der MSDN Library.|  
 |**Datenbank-E-Mail-Konto**|**EmailProfilePrincipalAccount**|Zeigt das Datenbank-E-Mail-Konto an, das für das Senden von E-Mail-Benachrichtigungen verwendet werden soll. Das Standardprofil lautet **mds_email_user**.|  
 |**Profil für Datenbank-E-Mail**|**DatabaseMailProfile**|Das zu verwendende Datenbank-E-Mail-Profil beim Senden von E-Mail-Benachrichtigungen. Für diese Einstellung gibt es keinen Standardwert.|  
 ||**ValidationIssueHTML**|Der Text der E-Mail-Benutzer ist im HTML-Format, wenn keine Überprüfung für eine Geschäftsregel besteht.|  

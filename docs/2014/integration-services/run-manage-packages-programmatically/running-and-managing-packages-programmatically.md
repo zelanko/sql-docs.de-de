@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5322a21037fdbef79c3e1d6554128fcc10bff97f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3c58f5c81ee876239fa3b5ed0a5cbd9b0164b27
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051540"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370262"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Programmgesteuerte Ausführung und Verwaltung von Paketen
-  Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete außerhalb der Entwicklungsumgebung verwalten und ausführen müssen, können Sie Pakete programmgesteuert ändern. Dieser Ansatz bietet Ihnen eine Reihe von Optionen:  
+  Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete außerhalb der Entwicklungsumgebung verwalten und ausführen müssen, können Sie Pakete programmgesteuert ändern. Dieser Ansatz bietet Ihnen eine Reihe von Optionen:  
   
 -   Laden und Ausführen eines vorhandenen Pakets ohne Änderung  
   
@@ -37,7 +35,7 @@ ms.locfileid: "48051540"
 ## <a name="running-packages-on-the-integration-services-server"></a>Ausführen von Paketen auf dem Integration Services-Server  
  Wenn Sie Pakete auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitstellen, können Sie die Pakete programmgesteuert unter Verwendung des <xref:Microsoft.SqlServer.Management.IntegrationServices>-Namespaces ausführen. Die Microsoft.SqlServer.Management.IntegrationServices-Assembly wird mit .NET Framework 3.5 kompiliert. Wenn Sie eine .NET Framework 4.0-Anwendung erstellen, müssen Sie der Projektdatei den Assemblyverweis möglicherweise direkt hinzufügen.  
   
- Sie können auch den Namespace verwenden, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitzustellen und zu verwalten. Eine Übersicht über den Namespace und die Codeausschnitte finden Sie im Blogeintrag [A Glimpse of the SSIS Catalog Managed Object Model](http://go.microsoft.com/fwlink/?LinkId=253122) (Überblick über das SSIS-Katalogmodell verwalteter Objekte) auf blogs.msdn.com.  
+ Sie können auch den Namespace verwenden, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitzustellen und zu verwalten. Eine Übersicht über den Namespace und die Codeausschnitte finden Sie im Blogeintrag [Ein Blick auf das verwaltete Objektmodell des SSIS-Katalogs](https://go.microsoft.com/fwlink/?LinkId=253122) (Überblick über das SSIS-Katalogmodell verwalteter Objekte) auf blogs.msdn.com.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Grundlegendes zu den Unterschieden zwischen der lokalen und der Remoteausführung](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
@@ -64,7 +62,7 @@ ms.locfileid: "48051540"
  [Programmgesteuertes Verwalten von Paketrollen &#40;SSIS-Dienst&#41;](../run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
  Beschreibt, wie Informationen über die einem Paket oder einem Ordner zugewiesenen Rollen abgerufen oder festgelegt werden können.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  [Fehler- und Meldungsreferenz von Integration Services](../integration-services-error-and-message-reference.md)  
  Listet die vordefinierten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Fehlercodes mit ihren symbolischen Namen und Beschreibungen auf.  
   
@@ -78,7 +76,7 @@ ms.locfileid: "48051540"
  [Programmgesteuertes Erstellen von Paketen](../building-packages-programmatically/building-packages-programmatically.md)  
  Erläutert, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete programmgesteuert erstellt, konfiguriert und gespeichert werden können.  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Für die neuesten Downloads, Artikel, Beispiele und Videos von [!INCLUDE[msCoName](../../includes/msconame-md.md)]sowie ausgewählte Lösungen aus der Community finden Sie auf die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite auf MSDN:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von [!INCLUDE[msCoName](../../includes/msconame-md.md)] sowie ausgewählte Lösungen aus der Community finden Sie auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Seite auf MSDN:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

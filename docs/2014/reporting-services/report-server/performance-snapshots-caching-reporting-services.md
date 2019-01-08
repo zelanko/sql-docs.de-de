@@ -14,15 +14,15 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c578e5e56d575f3d324d8585f73a9891b2ad00ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3204e8f3f47dc77f38e9690bf34c0e6b69c79fdc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091680"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353150"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Leistung, Momentaufnahmen, Zwischenspeichern (Reporting Services)
-  Die Leistung des Berichtsservers wird von einer Reihe von Faktoren beeinflusst. Dazu zählen Hardware, Anzahl der Benutzer, die gleichzeitig auf Berichte zugreifen, Datenmenge in einem Bericht und Ausgabeformat. Um die Leistungsfaktoren, die spezifisch für Ihre Installation sind, und entsprechende Abhilfemaßnahmen zu ermitteln, müssen Sie sich zunächst mit den Basisdaten beschäftigen und Tests ausführen. Weitere Informationen zu Tools und Richtlinien stehen in den folgenden Publikationen auf MSDN zur Verfügung: [Leistungsoptimierung bei Reporting Services](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) und [Verwenden von Visual Studio 2005 zum Ausführen von Ladetests für einen SQL Server 2005 Reporting Services-Berichtsserver](http://go.microsoft.com/fwlink/?LinkID=77519).  
+  Die Leistung des Berichtsservers wird von einer Reihe von Faktoren beeinflusst. Dazu zählen Hardware, Anzahl der Benutzer, die gleichzeitig auf Berichte zugreifen, Datenmenge in einem Bericht und Ausgabeformat. Um die Leistungsfaktoren, die spezifisch für Ihre Installation sind, und entsprechende Abhilfemaßnahmen zu ermitteln, müssen Sie sich zunächst mit den Basisdaten beschäftigen und Tests ausführen. Weitere Informationen zu Tools und Richtlinien finden Sie in den folgenden MSDN-Artikeln: [Leistungsoptimierung für Reporting Services](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) und [mit Visual Studio 2005 zum Ausführen von Ladetests für einen SQL Server 2005 Reporting Services-Berichtsserver](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
  Folgende allgemeine Aspekte sind zu beachten:  
   
@@ -38,13 +38,13 @@ ms.locfileid: "48091680"
   
 -   Die Dauer der Berichtsverarbeitung und andere Nutzungsdaten können Sie im Ausführungsprotokoll des Berichtsservers ermitteln. Weitere Informationen finden Sie unter [Berichtsserver-Ausführungsprotokoll und die ExecutionLog3-Ansicht](report-server-executionlog-and-the-executionlog3-view.md).  
   
--   Weitere Informationen über das Minimieren von Leistungsproblemen durch Optimieren der speicherverwaltungs-Konfigurationseinstellungen finden Sie unter [Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen](../report-server/configure-available-memory-for-report-server-applications.md).  
+-   Weitere Informationen zum Minimieren von Leistungsproblemen durch das Optimieren der Speicherverwaltungs-Konfigurationseinstellungen finden Sie unter [Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen](../report-server/configure-available-memory-for-report-server-applications.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Monitoring Report Server Performance (Überwachen der Leistung des Berichtsservers)](monitoring-report-server-performance.md)  
+ [Überwachen der Leistung des Berichtsservers](monitoring-report-server-performance.md)  
  Beschreibt die Leistungsobjekte, die Sie verwenden können, um die Verarbeitungslast auf dem Server zu verfolgen.  
   
- [Set Report Processing Properties (Festlegen von Berichtsverarbeitungseigenschaften)](set-report-processing-properties.md)  
+ [Festlegen von Berichtsverarbeitungseigenschaften](set-report-processing-properties.md)  
  Beschreibt Möglichkeiten, einen Bericht so zu konfigurieren, dass er bedarfsgesteuert aus dem Cache oder nach Zeitplan als Berichtsmomentaufnahme ausgeführt wird.  
   
  [Configure Available Memory for Report Server Applications (Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen)](../report-server/configure-available-memory-for-report-server-applications.md)  
@@ -56,7 +56,7 @@ ms.locfileid: "48091680"
  [Zwischenspeichern von freigegebenen Datasets &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)  
  Beschreibt das Verhalten beim Zwischenspeichern freigegebener Datasets auf einem Berichtsserver.  
   
- [Process Large Reports (Verarbeiten von großen Berichten)](process-large-reports.md)  
+ [Verarbeiten von großen Berichten](process-large-reports.md)  
  Stellt Empfehlungen dazu bereit, wie ein großer Bericht konfiguriert und verteilt wird.  
   
  [Festlegen von Timeoutwerten für die Verarbeitung von Berichten und freigegebenen Datasets &#40;SSRS&#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
@@ -64,6 +64,6 @@ ms.locfileid: "48091680"
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwalten eines ausgeführten Prozesses](../subscriptions/manage-a-running-process.md)   
- [Verifying a Report Run (Überprüfen der Berichtsausführung)](verifying-a-report-run.md)  
+ [Überprüfen einer Berichtsausführung](verifying-a-report-run.md)  
   
   

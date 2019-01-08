@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 6: Hinzufügen von Gruppierungen und Gesamtergebnissen (Reporting Services) | Microsoft-Dokumentation'
+title: 'Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten (Reporting Services) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5a372f230cfc2fc63e59787b8f9b674928f72368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7565cf64d64197a261c36fb755e3f20a65f1fa27
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095295"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356465"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten (Reporting Services)
   Fügen Sie dem Bericht Gruppierungen und Gesamtwerte hinzu, um Daten zu gruppieren und zusammenzufassen.  
   
- Informationen zum Hinzufügen laufender Gesamtwerte zu Berichten finden Sie in der Kuratierung auf curah.microsoft.com: [Hinzufügen von Gesamtwerten zu Reporting-Services-Berichten (SSRS)](http://go.microsoft.com/fwlink/p/?LinkId=403698).  
+ Informationen zum Hinzufügen laufender Summen zu Berichten finden Sie in dieser Kuratierung auf curah.microsoft.com: [Hinzufügen von Gesamtwerten zu Reporting Services (SSRS)-Berichte](https://go.microsoft.com/fwlink/p/?LinkId=403698).  
   
  **In diesem Thema:**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48095295"
   
 6.  Klicken Sie im Menü **Format** auf **Hintergrundfarbe**, klicken Sie auf **Hellgrau**und dann auf **OK**.  
   
-     ![Entwurfsansicht: einfache Tabelle mit Gesamtergebnis der Bestellungen](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Design view: Basic table with order total")  
+     ![Entwurfsansicht: Einfache Tabelle mit Gesamtergebnis der Bestellungen](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Entwurfsansicht: Einfache Tabelle mit Gesamtergebnis der Bestellungen")  
   
 ##  <a name="bkmk_adddailytotal"></a> Ein Bericht einen tagesgesamtwert hinzu  
   
@@ -107,13 +107,13 @@ ms.locfileid: "48095295"
   
 4.  Klicken Sie im Menü **Format** auf **Hintergrundfarbe**, klicken Sie auf **Hellblau**und dann auf **OK**.  
   
-     ![Entwurfsansicht: Gesamtergebnis in einfacher Tabelle](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Design view: Grand total in basic table")  
+     ![Entwurfsansicht: Gesamtergebnis in einfacher Tabelle](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Entwurfsansicht: Gesamtergebnis in einfacher Tabelle")  
   
 5.  Klicken Sie auf "Vorschau".  
   
      Die letzte Seite sollte etwa folgendermaßen aussehen:  
   
-     ![Vorschau: Einfache Tabelle mit Gesamtergebnis](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Preview: Basic table with grand total")  
+     ![Vorschau: Einfache Tabelle mit Gesamtergebnis](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Preview: Einfache Tabelle mit Gesamtergebnis")  
   
 ##  <a name="bkmk_publishreport"></a> So veröffentlichen Sie den Bericht auf dem Berichtsserver (Optional)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48095295"
   
      Wenn Sie im Ausgabefenster eine Meldung wie die Folgende sehen, war die Bereitstellung erfolgreich:  
   
-    > ------ Build started: Project: tutorial, Configuration: Debug ------Skipping 'Sales Orders.rdl'. Element ist auf dem neuesten Stand. Erstellung abgeschlossen--0 Fehler, 0 Warnungen---bereitstellen, die gestartet: Projekt: Tutorial Konfiguration: Debug---bereitstellen auf http://\<Servername > / ReportserverDeploying melden "/ Tutorials/Sales Orders". Bereitstellung abgeschlossen--0 Fehler, 0 Warnungen ==== erstellen: 1 erfolgreich oder aktuell, 0 fehlgeschlagen, 0 übersprungen ==== bereitstellen: 1 erfolgreich, 0 fehlgeschlagen, 0 übersprungen ====  
+    > ------ Build started: Projekt: Tutorial, Konfiguration: Debug ------Skipping 'Sales Orders.rdl'. Item is up to date.Build complete -- 0 errors, 0 warnings------ Deploy started: Projekt: Tutorial, Konfiguration: Debug---bereitstellen auf http://\<Servername > / ReportserverDeploying melden "/ Tutorials/Sales Orders". Bereitstellung abgeschlossen--0 Fehler, 0 Warnungen ==== erstellen: 1 succeeded or up-to-date, 0 failed, 0 skipped ==================== Deploy: 1 succeeded, 0 failed, 0 skipped ==========  
   
      Wenn Sie eine Fehlermeldung wie die Folgende sehen, überprüfen Sie, ob Sie über Berechtigungen für den Berichtsserver verfügen und ob Sie [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] mit Administratorrechten gestartet haben.  
   
@@ -139,12 +139,12 @@ ms.locfileid: "48095295"
   
      Wechseln Sie zur Berichts-Manager-URL z. B.: `http://<server name>/reports`.  
   
-7.  Navigieren Sie zum Ordner mit dem Bericht, und klicken Sie auf den Namen des Berichts `Sales Orders` auf den gerenderten Bericht im Browser anzuzeigen.  
+7.  Wechseln Sie zum Ordner, der den Bericht enthält, und klicken Sie auf den Namen des Berichts `Sales Orders`, um den gerenderten Bericht im Browser anzuzeigen.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie haben nun das Lernprogramm zum Erstellen eines grundlegenden Tabellenberichts erfolgreich abgeschlossen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Filtern, gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

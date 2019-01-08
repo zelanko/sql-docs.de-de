@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_exec_requests (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/25/2017
+ms.date: 12/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,20 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 309970ba762b5e616cce10a21d1ef23bfd9097e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6320c20a9f27df7170caaba3e9749069f2365d7a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740468"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590114"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt Informationen über jede einzelne Anforderung, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, zurück.  
-  
-> [!NOTE]  
->  Für die Ausführung von Code außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. erweiterte gespeicherte Prozeduren und verteilte Abfragen) muss ein Thread außerhalb der Steuerung des nicht präemptiven Zeitplanungsmoduls ausgeführt werden. Dazu wechselt ein Arbeitsthread in den präemptiven Modus. Zeitwerte, die von dieser dynamischen Verwaltungssicht zurückgegeben werden, schließen nicht die im präemptiven Modus verbrachte Zeit ein.  
+Gibt Informationen über jede einzelne Anforderung, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, zurück.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -42,7 +40,7 @@ ms.locfileid: "47740468"
 |request_id|**int**|ID der Anforderung. Ist im Kontext der Sitzung eindeutig. Lässt keine NULL-Werte zu.|  
 |start_time|**datetime**|Der Zeitstempel, der angibt, wann die Anforderung eingetroffen ist. Lässt keine NULL-Werte zu.|  
 |status|**nvarchar(30)**|Status der Anforderung. Die folgenden Werte sind möglich:<br /><br /> Hintergrund<br />Wird ausgeführt<br />Ausführbar<br />Ruhezustand<br />Angehalten<br /><br /> Lässt keine NULL-Werte zu.|  
-|Befehl|**nvarchar(32)**|Identifiziert den aktuellen Typ des Befehls, der gerade verarbeitet wird. Als allgemeine Befehlstypen sind die folgenden möglich:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Der Text der Anforderung kann mithilfe von sys.dm_exec_sql_text und dem entsprechenden sql_handle-Wert für die Anforderung abgerufen werden. Interne Systemprozesse legen den Befehl je nach Typ des ausgeführten Tasks fest. Mögliche Tasks sind z. B. die folgenden:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Lässt keine NULL-Werte zu.|  
+|Befehl|**nvarchar(32)**|Identifiziert den aktuellen Typ des Befehls, der gerade verarbeitet wird. Als allgemeine Befehlstypen sind die folgenden möglich:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Der Text der Anforderung kann mithilfe von sys.dm_exec_sql_text und dem entsprechenden sql_handle-Wert für die Anforderung abgerufen werden. Interne Systemprozesse legen den Befehl je nach Typ des ausgeführten Tasks fest. Mögliche Tasks sind z. B. die folgenden:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Lässt keine NULL-Werte zu.|  
 |sql_handle|**varbinary(64)**|Hashzuordnung des SQL-Texts der Anforderung. Lässt NULL-Werte zu.|  
 |statement_start_offset|**int**|Anzahl von Zeichen im derzeit ausgeführten Batch oder in der derzeit ausgeführten gespeicherten Prozedur, an der die derzeit ausgeführte Anweisung beginnt. Kann zusammen mit sql_handle, statement_end_offset und der dynamischen Verwaltungsfunktion sys.dm_exec_sql_text zum Abrufen der zurzeit ausgeführten Anweisung für die Anforderung verwendet werden. Lässt NULL-Werte zu.|  
 |statement_end_offset|**int**|Anzahl von Zeichen im derzeit ausgeführten Batch oder in der derzeit ausgeführten gespeicherten Prozedur, an der die derzeit ausgeführte Anweisung endet. Kann zusammen mit sql_handle, statement_end_offset und der dynamischen Verwaltungsfunktion sys.dm_exec_sql_text zum Abrufen der zurzeit ausgeführten Anweisung für die Anforderung verwendet werden. Lässt NULL-Werte zu.|  
@@ -69,7 +67,7 @@ ms.locfileid: "47740468"
 |writes|**bigint**|Anzahl der von dieser Anforderung ausgeführten Schreibvorgänge. Lässt keine NULL-Werte zu.|  
 |logical_reads|**bigint**|Anzahl der von dieser Anforderung ausgeführten logischen Lesevorgänge. Lässt keine NULL-Werte zu.|  
 |text_size|**int**|TEXTSIZE-Einstellung für diese Anforderung. Lässt keine NULL-Werte zu.|  
-|Sprache|**nvarchar(128)**|Spracheinstellung für die Anforderung. Lässt NULL-Werte zu.|  
+|language|**nvarchar(128)**|Spracheinstellung für die Anforderung. Lässt NULL-Werte zu.|  
 |date_format|**nvarchar(3)**|DATEFORMAT-Einstellung für die Anforderung. Lässt NULL-Werte zu.|  
 |date_first|**smallint**|DATEFIRST-Einstellung für die Anforderung. Lässt keine NULL-Werte zu.|  
 |quoted_identifier|**bit**|1 = QUOTED_IDENTIFIER ist ON für die Anforderung. Andernfalls ist der Wert 0.<br /><br /> Lässt keine NULL-Werte zu.|  
@@ -99,60 +97,97 @@ ms.locfileid: "47740468"
 |is_resumable |**bit** |**Gilt für**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt an, ob die Anforderung eines fortsetzbaren Indexvorgangs. |  
 |page_resource |**binary(8)** |**Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Eine 8-Byte-hexadezimale Darstellung der Ressource für die Seite "Wenn die `wait_resource` Spalte enthält eine Seite. |
 
-## <a name="permissions"></a>Berechtigungen  
- Wenn der Benutzer hat `VIEW SERVER STATE` -Berechtigung auf dem Server, sieht der Benutzer alle zurzeit ausgeführten Sitzungen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist, andernfalls sieht der Benutzer nur die aktuelle Sitzung. `VIEW SERVER STATE` kann nicht gewährt werden, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] damit `sys.dm_exec_requests` ist immer auf die aktuelle Verbindung beschränkt. 
+## <a name="remarks"></a>Hinweise 
+Für die Ausführung von Code außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. erweiterte gespeicherte Prozeduren und verteilte Abfragen) muss ein Thread außerhalb der Steuerung des nicht präemptiven Zeitplanungsmoduls ausgeführt werden. Dazu wechselt ein Arbeitsthread in den präemptiven Modus. Zeitwerte, die von dieser dynamischen Verwaltungssicht zurückgegeben werden, schließen nicht die im präemptiven Modus verbrachte Zeit ein.
+
+Beim Ausführen von paralleler Anforderungen in [Zeilenmodus](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist einen Arbeitsthread zum Koordinieren der Arbeitsthreads, die zum Abschließen der Aufgaben, die ihnen zugewiesene verantwortlich. In dieser DMV ist nur der koordinatorthread für die Anforderung angezeigt. Die Spalten **liest**, **schreibt**, **Logical_reads**, und **Row_count** sind **nicht aktualisiert** für die koordinatorthread. Die Spalten **"wait_type"**, **"wait_time"**, **Last_wait_type**, **Wait_resource**, und **Granted_query_memory** sind **nur dann aktualisiert,** für den koordinatorthread. Weitere Informationen finden Sie unter den [Handbuch zur Architektur und Thread](../../relational-databases/thread-and-task-architecture-guide.md).
+
+## <a name="permissions"></a>Berechtigungen
+Wenn der Benutzer hat `VIEW SERVER STATE` -Berechtigung auf dem Server, sieht der Benutzer alle zurzeit ausgeführten Sitzungen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist, andernfalls sieht der Benutzer nur die aktuelle Sitzung. `VIEW SERVER STATE` kann nicht gewährt werden, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] damit `sys.dm_exec_requests` ist immer auf die aktuelle Verbindung beschränkt.
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-finding-the-query-text-for-a-running-batch"></a>A. Suchen des Abfragetexts für einen ausgeführten Batch  
+### <a name="a-finding-the-query-text-for-a-running-batch"></a>A. Suchen des Abfragetexts für einen ausgeführten Batch
+
  Im folgenden Beispiel werden `sys.dm_exec_requests` abgefragt, um die entsprechende Abfrage zu suchen und den `sql_handle`-Wert aus der Ausgabe zu kopieren.  
-  
-```  
+
+```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
-  
- Verwenden Sie dann zum Abrufen des Anweisungstexts den kopierten `sql_handle`-Wert mit der Systemfunktion `sys.dm_exec_sql_text(sql_handle)`.  
-  
-```  
+
+Verwenden Sie dann zum Abrufen des Anweisungstexts den kopierten `sql_handle`-Wert mit der Systemfunktion `sys.dm_exec_sql_text(sql_handle)`.  
+
+```sql
 SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);  
 GO  
-```  
-  
-### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. Suchen aller Sperren, die ein ausgeführter Batch enthält  
- Das folgende Beispiel fragt **Sys. dm_exec_requests** finden interessante Batch- und kopieren die `transaction_id` aus der Ausgabe.  
-  
-```  
+```
+
+### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. Suchen aller Sperren, die ein ausgeführter Batch enthält
+
+Das folgende Beispiel fragt **Sys. dm_exec_requests** finden interessante Batch- und kopieren die `transaction_id` aus der Ausgabe.
+
+```sql
 SELECT * FROM sys.dm_exec_requests;  
+GO
+```
+
+Verwenden Sie dann zum Suchen von Sperrinformationen den kopierten `transaction_id` mit der Systemfunktion **Sys. dm_tran_locks**.  
+
+```sql
+SELECT * FROM sys.dm_tran_locks
+WHERE request_owner_type = N'TRANSACTION'
+    AND request_owner_id = < copied transaction_id >;
 GO  
-```  
-  
- Verwenden Sie dann zum Suchen von Sperrinformationen den kopierten `transaction_id` mit der Systemfunktion **Sys. dm_tran_locks**.  
-  
-```  
-SELECT * FROM sys.dm_tran_locks   
-WHERE request_owner_type = N'TRANSACTION'   
-    AND request_owner_id = < copied transaction_id >;  
-GO  
-```  
-  
-### <a name="c-finding-all-currently-blocked-requests"></a>C. Suchen aller zurzeit blockierten Anforderungen  
- Das folgende Beispiel fragt **Sys. dm_exec_requests** finden Sie Informationen zu blockierten Anforderungen.  
-  
-```  
+```
+
+### <a name="c-finding-all-currently-blocked-requests"></a>C. Suchen aller zurzeit blockierten Anforderungen
+
+Das folgende Beispiel fragt **Sys. dm_exec_requests** finden Sie Informationen zu blockierten Anforderungen.  
+
+```sql
 SELECT session_id ,status ,blocking_session_id  
-    ,wait_type ,wait_time ,wait_resource   
-    ,transaction_id   
-FROM sys.dm_exec_requests   
+    ,wait_type ,wait_time ,wait_resource
+    ,transaction_id
+FROM sys.dm_exec_requests
 WHERE status = N'suspended';  
 GO  
 ```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [Sys. dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+
+### <a name="d-ordering-existing-requests-by-cpu"></a>D. Sortieren die vorhandene CPU-Anforderungen
+
+```sql
+SELECT 
+   req.session_id
+   , req.start_time
+   , cpu_time 'cpu_time_ms'
+   , object_name(st.objectid,st.dbid) 'ObjectName' 
+   , substring
+      (REPLACE
+        (REPLACE
+          (SUBSTRING
+            (ST.text
+            , (req.statement_start_offset/2) + 1
+            , (
+               (CASE statement_end_offset
+                  WHEN -1
+                  THEN DATALENGTH(ST.text)  
+                  ELSE req.statement_end_offset
+                  END
+                    - req.statement_start_offset)/2) + 1)
+       , CHAR(10), ' '), CHAR(13), ' '), 1, 512)  AS statement_text  
+FROM sys.dm_exec_requests AS req  
+   CROSS APPLY sys.dm_exec_sql_text(req.sql_handle) as ST
+   ORDER BY cpu_time desc;
+GO
+```
+
+## <a name="see-also"></a>Siehe auch
+
+- [Dynamische Verwaltungssichten und -funktionen](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [Ausführung bezogene dynamische Verwaltungssichten und-Funktionen](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)
+- [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
+- [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
+- [Sys. dm_exec_sql_text & #40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

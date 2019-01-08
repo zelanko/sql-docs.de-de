@@ -14,12 +14,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: f5838d497808e9a251522536a00d590403674eda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a9018c43ace6ebbf0a905567bb806b616530a02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053770"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352191"
 ---
 # <a name="sql-server-encryption"></a>SQL Server-Verschlüsselung
   Als Verschlüsselung wird der Vorgang bezeichnet, Daten mithilfe eines Schlüssels oder eines Kennworts unlesbar zu machen. Die Daten werden dadurch ohne den entsprechenden Entschlüsselungsschlüssel oder das Kennwort unbrauchbar. Durch Verschlüsselung werden keine Probleme der Zugriffssteuerung gelöst. Sie erhöht jedoch die Sicherheit, indem sie den Datenverlust auch dann einschränkt, wenn die Zugriffssteuerung umgangen wird. Wenn der Hostcomputer einer Datenbank beispielsweise falsch konfiguriert wurde und ein Hacker Zugriff auf vertrauliche Daten erlangt, sind diese gestohlenen Daten sehr wahrscheinlich nutzlos, wenn sie verschlüsselt wurden.  
@@ -62,7 +62,7 @@ ms.locfileid: "48053770"
  Informationen dazu, wie ein Zertifikat zur Verschlüsselung von Daten verwendet wird.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- [Microsoft TechNet: SQL Server-TechCenter: SQL Server 2005 – Sicherheit und Schutz](http://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
+ [Microsoft TechNet: SQL Server-TechCenter: SQL Server 2005 – Sicherheit und Schutz](https://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
  Aktuelle Informationen über die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sicherheit.  
   
 ## <a name="see-also"></a>Siehe auch  

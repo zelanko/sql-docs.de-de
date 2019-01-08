@@ -11,12 +11,12 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 43489355aabc9c03407dd6b5779996ceef8967b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edeefac46805ba74b011d7c86202c7d5dbcdec14
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143644"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367152"
 ---
 # <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Lektion 1: Erstellen eines Windows Azure-Speicherkontos und -containers
   Bevor Sie mit dem Speichern von SQL Server-Datendateien im Windows Azure-Speicher beginnen können, müssen Sie zunächst ein Windows Azure-Speicherkonto, einen BLOB-Container und eine Shared Access Signature erstellen. Lektion 1 führt Sie durch die Schritte zur Anmeldung beim Windows Azure-Verwaltungsportal. Dabei erstellen Sie ein Speicherkonto, einen BLOB-Container und eine Shared Access Signature.  
@@ -29,7 +29,7 @@ ms.locfileid: "48143644"
   
 -   Verwenden Sie eine gespeicherte Zugriffsrichtlinie, um Shared Access Signatures für einen Container oder seine BLOBs zu verwalten. Die gespeicherte Zugriffsrichtlinie bietet Ihnen zusätzliche Kontrolle über die Shared Access Signatures und stellt zudem eine einfache Methode dar, um sie aufzuheben.  
   
- Weitere Informationen finden Sie unter [Verwalten des Zugriffs auf Azure-Speicherressourcen](http://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
+ Weitere Informationen finden Sie unter [Verwalten des Zugriffs auf Azure-Speicherressourcen](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
   
 ## <a name="create-storage-account"></a>Erstellen eines Speicherkontos  
  Um ein Speicherkonto im Windows Azure-Verwaltungsportal zu erstellen, führen Sie die folgenden Schritte aus:  
@@ -58,7 +58,7 @@ ms.locfileid: "48143644"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  Um Container programmgesteuert zu erstellen, können Sie auch REST-APIs verwenden. Weitere Informationen finden Sie unter [-Container erstellen](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx) sowie [Windows Azure Storage Services REST-API-Referenz](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
+>  Um Container programmgesteuert zu erstellen, können Sie auch REST-APIs verwenden. Weitere Informationen finden Sie unter [-Container erstellen](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx) sowie [Windows Azure Storage Services REST-API-Referenz](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
   
  **Nächste Lektion:**  
   

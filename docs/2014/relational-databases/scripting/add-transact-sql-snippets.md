@@ -11,18 +11,18 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b93171cad6896b32086604b54bce30c3fe396fb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72e3d99672b17fcf6d7cafa3825d04f8989ecdea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144320"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373062"
 ---
 # <a name="add-transact-sql-snippets"></a>Hinzufügen von Transact-SQL-Ausschnitten
   Sie können dem Satz von vordefinierten Ausschnitten, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthalten sind, eigene Transact-SQL-Codeausschnitte hinzufügen.  
   
 ## <a name="creating-a-transact-sql-snippet-file"></a>Erstellen einer Transact-SQL-Ausschnittdatei  
- Der erste Teil des Erstellens eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Codeausschnitts besteht darin, eine XML-Datei mit dem Text des Codeausschnitts zu erstellen. Die Datei muss die Dateierweiterung SNIPPET aufweisen und die Anforderungen des [Codeausschnittschemas](http://go.microsoft.com/fwlink/?LinkId=207504)erfüllen. Legen Sie die Ausschnittsprache auf SQL fest.  
+ Der erste Teil des Erstellens eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Codeausschnitts besteht darin, eine XML-Datei mit dem Text des Codeausschnitts zu erstellen. Die Datei muss die Dateierweiterung SNIPPET aufweisen und die Anforderungen des [Codeausschnittschemas](https://go.microsoft.com/fwlink/?LinkId=207504)erfüllen. Legen Sie die Ausschnittsprache auf SQL fest.  
   
  Sie können die vordefinierten Ausschnitte, die im Lieferumfang von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthalten sind, als Beispiele verwenden. Um die vordefinierten Ausschnitte zu suchen, öffnen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], wählen Sie das Menü **Extras** aus, und klicken Sie auf **Codeausschnitt-Manager**. Wählen Sie im Listenfeld **Sprache** die Option **SQL** aus; der Pfad zu den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausschnitten wird im Feld **Speicherort** angezeigt.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "48144320"
 4.  Navigieren Sie zum Ordner, der den Ausschnitt enthält, klicken Sie auf die SNIPPET-Datei, und klicken Sie auf die Schaltfläche **Öffnen** .  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel erstellt eine `TRY-CATCH` umschließungsausschnitt und importiert es [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Im folgenden Beispiel wird ein `TRY-CATCH`-Umschließungsausschnitt erstellt und in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] importiert.  
   
 1.  Fügen Sie den folgenden Code in Editor ein, speichern Sie die Datei dann unter dem Namen "TryCatch.snippet".  
   
     ```  
     <?xml version="1.0" encoding="utf-8" ?>  
-    <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+    <CodeSnippets  xmlns="https://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
     <_locDefinition xmlns="urn:locstudio">  
         <_locDefault _loc="locNone" />  
         <_locTag _loc="locData">Title</_locTag>  

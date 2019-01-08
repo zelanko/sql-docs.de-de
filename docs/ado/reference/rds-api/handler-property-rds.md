@@ -14,12 +14,12 @@ ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 653e29f8666f63cd4867b11b378ee8711f8b0508
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 642addb5ff03e17b5b36e7baa01ef87661a00b35
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606440"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589604"
 ---
 # <a name="handler-property-rds"></a>Handler-Eigenschaft (RDS)
 Gibt den Namen eines Programms für serverseitige Anpassung (Handler), die die Funktionalität von erweitert die [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), und alle Parameter ein, die die *Handler*.  
@@ -50,7 +50,7 @@ DataControl.Handler = String
   
  Der Name der Standard-Handler ist **MSDFMAP. Handler**, und der Standardparameter ist eine Anpassungsdatei, die mit dem Namen **MSDFMAP. INI**. Verwenden Sie diese Eigenschaft, um alternative, durch den Server-Administrator erstellt Setupanpassungsdateien aufzurufen.  
   
- Die Alternative zur Einstellung der **Handler** Eigenschaft ist, geben Sie einen Handler und die Parameter in der ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschafts-, also "**Handler = *** HandlerName, parameter1, Parameter2,...,* ".  
+ Die Alternative zur Einstellung der **Handler** Eigenschaft ist, geben Sie einen Handler und die Parameter in der ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschafts-, also "**Handler =** _HandlerName, parameter1, parameter2,_".  
   
 ## <a name="applies-to"></a>Gilt für  
  [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

@@ -15,12 +15,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ee420b28442909af74a17a196ffac653b6089eb5
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: a0f004a2d145356e38816b65fc2cd5c2a1972074
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072324"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362912"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS)
   Der Karten-Assistent und der Kartenebenen-Assistent automatisieren das Erstellen einer Karte, Hinzufügen einer Kartenebene oder Ändern der Kartenebenen auf einer vorhandenen Ebene.  
@@ -30,9 +30,9 @@ ms.locfileid: "49072324"
   
  Bevor Sie einem Bericht eine Karte oder einer Karte eine Kartenebene hinzufügen, müssen Sie über die folgenden Informationen verfügen:  
   
--   **Räumliche Datenquelle.** Der Speicherort oder die Verbindung zu einer Quelle, die räumliche Daten bereitstellt, z.B. der Name einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz und einer Datenbank, die räumliche Daten enthält, oder der Name einer Shape-Datei vom Environmental Systems Research Institute, Inc. ESRI-Shape-Datei (ESRI Shapefile)  
+-   **Räumliche Datenquelle.** Der Speicherort oder die Verbindung zu einer Quelle, die räumliche Daten bereitstellt, z.B. der Name einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz und einer Datenbank, die räumliche Daten enthält, oder der Name einer Shape-Datei vom Environmental Systems Research Institute, Inc. ESRI-Shape-Datei (ESRI Shapefile)  
   
--   **anbieten.** Ein Feld aus der räumlichen Datenquelle, das Sätze von Koordinaten enthält, die Standorte angeben.  
+-   **Spatial data.** Ein Feld aus der räumlichen Datenquelle, das Sätze von Koordinaten enthält, die Standorte angeben.  
   
 -   **Analytische Daten.** Analytische Daten, die verwendet werden sollen, um die Kartenanzeige zu verändern, wie z. B. der Jahresumsatz pro Laden.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "49072324"
   
  Klicken Sie auf den Titel der Assistentenseite, um den entsprechenden Hilfeinhalt anzuzeigen. Die angezeigten Seiten hängen von der Auswahl für den Kartentyp, der Quelle der räumlichen Daten und der Quelle der analytischen Daten ab.  
   
-1.  [Quelle räumlicher Daten auswählen](#SpatialDataSource). Räumliche Daten können aus dem Kartenkatalog, aus einer Shape-Datei des Environmental Systems Research Institute, Inc. (ESRI) oder aus räumlichen Daten in einer relationalen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank stammen.  
+1.  [Quelle räumlicher Daten auswählen](#SpatialDataSource). Räumliche Daten können aus dem Kartenkatalog, aus einer Shape-Datei des Environmental Systems Research Institute, Inc. (ESRI) oder aus räumlichen Daten in einer relationalen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank stammen.  
   
     -   [Was sind räumliche Daten?](#SpatialData)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "49072324"
   
     -   **Kartenvisualisierung auswählen: Polygone**  
   
-    -   **Kartenvisualisierung auswählen: Linien**  
+    -   **Kartenvisualisierung auswählen: Zeilen**  
   
     -   **Kartenvisualisierung auswählen: Punkte**  
   
@@ -107,7 +107,7 @@ ms.locfileid: "49072324"
   
  Wenn Sie eine Karte oder eine Kartenebene hinzugefügt haben und den Bericht in der Vorschau anzeigen, können Sie Karten- und Kartenebenenoptionen ändern, die Sie in den Assistenten festgelegt haben. Weitere Informationen finden Sie unter [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Weitere Informationen über Karten finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md). Schritt-für-Schritt-Anweisungen zum Hinzufügen eines Bericht zu einer Karte finden Sie unter [Lernprogramm: Kartenbericht &#40;Berichts-Generator&#41;](../tutorial-map-report-report-builder.md).  
+ Weitere Informationen über Karten finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md). Schrittweise Anweisungen, um zu einem Bericht eine Karte hinzufügen, finden Sie unter [Lernprogramm: Kartenbericht &#40;Berichts-Generator&#41;](../tutorial-map-report-report-builder.md).  
   
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
   
@@ -139,7 +139,7 @@ ms.locfileid: "49072324"
  Fügen Sie im Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]dem Berichtsprojekt die SHP-Datei und die DBF-Datei hinzu, und geben Sie dann den Namen der SHP-Datei als räumliche Datenquelle an.  
   
 ###  <a name="GetShapefiles"></a> Wo finde ich ESRI-Shape-Dateien?  
- ESRI-Shape-Dateien sind im Web verfügbar. Weitere Informationen finden Sie unter [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814).  
+ ESRI-Shape-Dateien sind im Web verfügbar. Weitere Informationen finden Sie unter [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814).  
   
 ###  <a name="SqlServerSpatial"></a> Was ist eine SQL Server-Abfrage nach räumlichen Daten?  
  Eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abfrage nach räumlichen Daten ist eine Datasetabfrage, in der Daten vom Datentyp "SQLGeometry" oder "SQLGeography" aus einer relationalen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank angegeben werden.  
@@ -149,7 +149,7 @@ ms.locfileid: "49072324"
   
  Wenn Sie die Abfrage im Abfrage-Designer ausführen, enthält das Resultset eine Spalte mit räumlichen Daten, die als Text angezeigt werden. Eine Zeile kann z. B. räumliche Daten enthalten, die einen einzelnen Punkt darstellen, und die nächste Zeile kann räumliche Daten enthalten, die einen Satz von Punkten definieren. Jede Zeile wird zu einem Kartenelement. Sie können die Anzeige jedes Kartenelements als unteilbare Einheit verändern.  
   
- Weitere Informationen finden Sie unter "Typen räumlicher Daten" in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Weitere Informationen finden Sie unter "Typen räumlicher Daten" in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=120955).  
   
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
   
@@ -196,9 +196,9 @@ ms.locfileid: "49072324"
   
 -   **Hybrid.** Zeigt die Kombination der Ansichten **Straße** und **Luftbild** an.  
   
- Weitere Informationen zu Kacheln finden Sie unter [Bing Maps Tiles System](http://go.microsoft.com/fwlink/?LinkId=147315)(möglicherweise in englischer Sprache). Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](http://go.microsoft.com/fwlink/?LinkId=151371) und der [Datenschutzerklärung](http://go.microsoft.com/fwlink/?LinkId=151372).  
+ Weitere Informationen zu Kacheln finden Sie unter [Bing Maps Tiles System](https://go.microsoft.com/fwlink/?LinkId=147315)(möglicherweise in englischer Sprache). Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](https://go.microsoft.com/fwlink/?LinkId=151371) und der [Datenschutzerklärung](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
- Um einen Kachelhintergrund in der Entwurfsansicht anzuzeigen, müssen Sie über Internetzugriff verfügen. Um den Kachelhintergrund in der Vorschau eines Berichts auf einem Berichtsserver anzuzeigen, muss der Berichtsserver so konfiguriert werden, dass er Bing-Kartenkacheln unterstützt. Weitere Informationen finden Sie unter [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) und "Planen der Unterstützung von Karten" in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server-Onlinedokumentation.  
+ Um einen Kachelhintergrund in der Entwurfsansicht anzuzeigen, müssen Sie über Internetzugriff verfügen. Um den Kachelhintergrund in der Vorschau eines Berichts auf einem Berichtsserver anzuzeigen, muss der Berichtsserver so konfiguriert werden, dass er Bing-Kartenkacheln unterstützt. Weitere Informationen finden Sie unter [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) und "Planen der Unterstützung von Karten" in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server-Onlinedokumentation.  
   
  Weitere Informationen zu anderen Möglichkeiten, eine Kachelebene anzupassen, finden Sie unter [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -272,7 +272,7 @@ ms.locfileid: "49072324"
   
 ## <a name="see-also"></a>Siehe auch  
  [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [Planen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)   
+ [Planen eines Kartenberichts (Berichts-Generator und SSRS)](plan-a-map-report-report-builder-and-ssrs.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md)  
   
   

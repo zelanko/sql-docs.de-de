@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_exec_query_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 12/18/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e52c264de3e7e2e9e7de8a96f3ad0cdf8dd04066
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8df3c13b42df1b842d784fedd1720d2e9bfc258
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843564"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626389"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt die aggregierte Leistungsstatistiken für zwischengespeicherte Abfragepläne in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Diese Sicht enthält eine Zeile pro Abfrageanweisung innerhalb des zwischengespeicherten Plans, und die Lebensdauer der Zeilen ist an den Plan selbst gebunden. Wenn ein Plan aus dem Cache entfernt wird, werden die entsprechenden Zeilen aus dieser Sicht entfernt.  
+  Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepläne in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zurück. Diese Sicht enthält eine Zeile pro Abfrageanweisung innerhalb des zwischengespeicherten Plans, und die Lebensdauer der Zeilen ist an den Plan selbst gebunden. Wenn ein Plan aus dem Cache entfernt wird, werden die entsprechenden Zeilen aus dieser Sicht entfernt.  
   
 > [!NOTE]
 > Erste Abfrage von **Sys. dm_exec_query_stats** kann zu ungenauen Ergebnissen führen, wenn eine arbeitsauslastung, die gerade ausgeführt wird, auf dem Server vorhanden ist. Erneutes Ausführen der Abfrage liefert unter Umständen genauere Ergebnisse.  
@@ -58,7 +58,7 @@ ms.locfileid: "47843564"
 |**min_physical_reads**|**bigint**|Die bisherige minimale Anzahl physischer Lesevorgänge für eine einzelne Ausführung dieses Plans.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
 |**max_physical_reads**|**bigint**|Die bisherige maximale Anzahl physischer Lesevorgänge für eine einzelne Ausführung dieses Plans.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
 |**total_logical_writes**|**bigint**|Die Gesamtanzahl logischer Schreibvorgänge für Ausführungen dieses Plans seit der Kompilierung.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**last_logical_writes**|**bigint**|Die Anzahl der Pufferpoolseiten, die seit der letzten Planausführung modifiziert wurden. Wenn eine Seite bereits modifiziert (geändert) wurde, werden keine Schreibvorgänge gezählt.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**last_logical_writes**|**bigint**|Anzahl der pufferpoolseiten verschmutzte während der zuletzt abgeschlossenen Ausführung des Plans.<br /><br />Nachdem eine Seite gelesen wird, ist das die Seite modifizierte nur beim ersten Mal, wenn, das es geändert wird. Wenn eine Seite geändert wird, wird diese Zahl erhöht. Nachfolgende Änderungen an einem bereits modifizierte Seite wirken sich nicht auf diese Zahl aus.<br /><br />Diese Zahl wird immer 0 sein, beim Abfragen einer speicheroptimierten Tabelle.|  
 |**min_logical_writes**|**bigint**|Die bisherige minimale Anzahl logischer Schreibvorgänge für eine einzelne Ausführung dieses Plans.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
 |**max_logical_writes**|**bigint**|Die bisherige maximale Anzahl logischer Schreibvorgänge für eine einzelne Ausführung dieses Plans.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
 |**total_logical_reads**|**bigint**|Die Gesamtanzahl logischer Lesevorgänge für Ausführungen dieses Plans seit der Kompilierung.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
@@ -105,18 +105,18 @@ ms.locfileid: "47843564"
 |**last_used_threads**|**bigint**|Die Anzahl der verwendeten parallelen Threads, wenn dieser Plan zuletzt ausgeführt. Es wird immer 0 für die Abfrage einer speicheroptimierten Tabelle sein.<br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_used_threads**|**bigint**|Die minimale Anzahl von verwendet parallelen Threads, diesen Plan während einer Ausführung hat Sie bisher verwendet. Es wird immer 0 für die Abfrage einer speicheroptimierten Tabelle sein.<br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**max_used_threads**|**bigint**|Die maximale Anzahl von verwendet parallelen Threads, diesen Plan während einer Ausführung hat Sie bisher verwendet. Es wird immer 0 für die Abfrage einer speicheroptimierten Tabelle sein.<br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**total_columnstore_segment_reads**|**bigint**|Gesamtsumme der columnstore-Segmente, die von der Abfrage zu lesen. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_reads**|**bigint**|Die Anzahl der columnstore-Segmente, die von der letzten Ausführung der Abfrage gelesen. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_reads**|**bigint**|Die minimale Anzahl von columnstore-Segmente, die jemals während einer Ausführung von der Abfrage gelesen werden soll. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_reads**|**bigint**|Die maximale Anzahl von columnstore-Segmente, die jemals während einer Ausführung von der Abfrage gelesen werden soll. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**total_columnstore_segment_skips**|**bigint**|Gesamtsumme der columnstore-Segmente, die von der Abfrage ausgelassen. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_skips**|**bigint**|Die Anzahl der columnstore-Segmente, die von der letzten Ausführung der Abfrage ausgelassen. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_skips**|**bigint**|Die minimale Anzahl von columnstore-Segmente, die je von der Abfrage bei einer Ausführung übersprungen werden soll. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_skips**|**bigint**|Die maximale Anzahl von columnstore-Segmente, die je von der Abfrage bei einer Ausführung übersprungen werden soll. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
-|**total_spills**|**bigint**|Die Gesamtanzahl der Seiten, die durch die Ausführung dieser Abfrage überlaufen, seit der Kompilierung.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|Die Anzahl der Seiten überlaufen, Zeitpunkt der letzten der Abfrage Ausführung.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|Die minimale Anzahl der Seiten, die diese Abfrage immer eine einzelne Ausführung übergelaufen.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|Die maximale Anzahl der Seiten, die diese Abfrage immer eine einzelne Ausführung übergelaufen.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_columnstore_segment_reads**|**bigint**|Gesamtsumme der columnstore-Segmente, die von der Abfrage zu lesen. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_reads**|**bigint**|Die Anzahl der columnstore-Segmente, die von der letzten Ausführung der Abfrage gelesen. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_reads**|**bigint**|Die minimale Anzahl von columnstore-Segmente, die jemals während einer Ausführung von der Abfrage gelesen werden soll. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_reads**|**bigint**|Die maximale Anzahl von columnstore-Segmente, die jemals während einer Ausführung von der Abfrage gelesen werden soll. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**total_columnstore_segment_skips**|**bigint**|Gesamtsumme der columnstore-Segmente, die von der Abfrage ausgelassen. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_skips**|**bigint**|Die Anzahl der columnstore-Segmente, die von der letzten Ausführung der Abfrage ausgelassen. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_skips**|**bigint**|Die minimale Anzahl von columnstore-Segmente, die je von der Abfrage bei einer Ausführung übersprungen werden soll. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_skips**|**bigint**|Die maximale Anzahl von columnstore-Segmente, die je von der Abfrage bei einer Ausführung übersprungen werden soll. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
+|**total_spills**|**bigint**|Die Gesamtanzahl der Seiten, die durch die Ausführung dieser Abfrage überlaufen, seit der Kompilierung.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Die Anzahl der Seiten überlaufen, Zeitpunkt der letzten der Abfrage Ausführung.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|Die minimale Anzahl der Seiten, die diese Abfrage immer eine einzelne Ausführung übergelaufen.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Die maximale Anzahl der Seiten, die diese Abfrage immer eine einzelne Ausführung übergelaufen.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.<br /><br /> **Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 
 > [!NOTE]

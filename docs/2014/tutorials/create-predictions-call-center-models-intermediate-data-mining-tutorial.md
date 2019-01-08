@@ -11,12 +11,12 @@ ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebaafa4b25c4bd4847af24a36462e15d04d7774a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 792e3e8eb7e27f41aa03523d93dba02379213a17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148000"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372972"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Erstellen von Vorhersagen für Callcentermodelle (Data Mining-Lernprogramm für Fortgeschrittene)
   Nachdem Sie Informationen zu Interaktionen zwischen Arbeitsschichten, der Anzahl der Telefonisten und Anrufe sowie der Dienstqualität gesammelt haben, können Sie einige Vorhersageabfragen für Geschäftsanalysen und Planungen erstellen. Sie erstellen zunächst einige Vorhersagen über das explorative Modell, um bestimmte Annahmen zu testen. Als Nächstes erstellen Sie massenvorhersagen mithilfe des logistischen Regressionsmodells.  
@@ -175,20 +175,20 @@ ms.locfileid: "48148000"
   
 |Schicht, Lohn und Tag|Vorhergesagte Dienstqualität bei aktueller Durchschnittsantwortzeit|Vorhergesagte Dienstqualität bei Reduzierung der 90 % Antwortzeit|Vorhergesagte Dienstqualität bei Reduzierung der Antwortzeit auf 80 Prozent|  
 |--------------------------|------------------------------------------------------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------|  
-|Feiertag Vormittag|0.165|0.05|0.05|  
-|Feiertag Nachmittag 1|0.05|0.05|0.05|  
-|Feiertag Nacht|0.165|0.05|0.05|  
+|Feiertag Vormittag|0.165|0,05|0,05|  
+|Feiertag Nachmittag 1|0,05|0,05|0,05|  
+|Feiertag Nacht|0.165|0,05|0,05|  
   
  Es gibt eine Vielzahl anderer Vorhersageabfragen, die Sie für dieses Modell erstellen können. Sie können zum Beispiel vorhersagen, wie viele Telefonisten erforderlich sind, um eine bestimmte Dienstqualität zu erreichen oder um eine bestimmte Anzahl von eingehenden Aufrufen entgegenzunehmen. Da Sie in einem logistischen Regressionsmodell mehrere Ausgaben einschließen können, ist es leicht, mit verschiedenen unabhängigen Variablen und Ergebnissen zu experimentieren, ohne mehrere separate Modelle erstellen zu müssen.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Data Mining-Add-Ins für Excel 2007 stellen einen Logistic Regression-Assistenten bereit, mit dem komplexe Fragen einfach beantwortet werden können, beispielsweise wie viele Operatoren der Ebene 2 benötigt werden, um die Dienstqualität für eine bestimmte Schicht auf ein Zielniveau anzuheben. Die Data Mining-Add-Ins können kostenlos heruntergeladen werden und enthalten Assistenten, die auf dem neuronalen Netzwerk oder den Logistic Regression-Algorithmen basieren. Weitere Informationen finden Sie unter den folgenden Links:  
   
--   [SQL Server 2005 Data Mining-Add-Ins für Office 2007](http://www.microsoft.com/sql/technologies/dm/addins.mspx): Zielsuche und was-wäre-wenn Szenarienanalyse  
+-   [SQL Server 2005 Data Mining-Add-Ins für Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): Szenarienanalysen „Zielsuche“ und „Was-wäre-wenn“  
   
--   [SQL Server 2008 Data Mining-Add-Ins für Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790): Analyse von Zielsucheszenarien, was geschieht, wenn Szenarienanalyse und Vorhersagerechner  
+-   [SQL Server 2008 Data Mining-Add-Ins für Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): Szenarienanalyse „Zielsuche“, Szenarienanalyse „Was-wäre-wenn“ und Vorhersagerechner  
   
-## <a name="conclusion"></a>Fazit  
+## <a name="conclusion"></a>Schlussbemerkung  
  Sie haben gelernt, Miningmodelle zu erstellen, anzupassen und zu interpretieren, die auf dem Microsoft Neural Network-Algorithmus und dem Microsoft Logistic Regression-Algorithmus basieren. Diese Modelltypen bieten sehr umfassende Möglichkeiten und erlauben nahezu unendlich viele Variationen bei der Analyse. Ihre Verwendung kann daher komplex und schwierig sein.  
   
  Diese Algorithmen können jedoch viele Kombinationen von Faktoren durcharbeigten und automatisch die stärksten Korrelationen identifizieren. Sie bieten statistische Unterstützung für Erkenntnisse, zu denen Sie bei manuellem Durchsuchen von Daten mit Transact-SQL oder sogar PowerPivot kaum gelangen würden.  
@@ -196,7 +196,7 @@ ms.locfileid: "48148000"
 ## <a name="see-also"></a>Siehe auch  
  [Logistische Regressionsmodell-Abfragebeispiele](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
  [Microsoft Logistic Regression-Algorithmus](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Microsoft Neural Network-Algorithmus](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Beispiele für Abfragen von neuronalen Netzwerkmodellen](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

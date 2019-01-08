@@ -1,5 +1,5 @@
 ---
-title: Echtzeitbewertung in SQL Server-Machine Learning | Microsoft-Dokumentation
+title: Echtzeitbewertung mit Sp_rxPredict, die gespeicherte Prozedur - SQL Server Machine Learning Services
 description: Generieren von Vorhersagen mithilfe von Sp_rxPredict, Bewerten von von Dateneingaben für ein vorab trainiertes Modell in R auf SQL Server geschrieben.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: dce0928c0675172c503e6783aa25d6cbcaec9b5f
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: def60a6de7d5a6f3641a6de88410543e9e592ba4
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713513"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645159"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Echtzeitbewertung mit Sp_rxPredict in SQL Server-Machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -177,7 +177,7 @@ Rufen Sie sp\_RxPredict wie würde alle anderen gespeicherten Prozedur. In der a
 
 Da das binäre Format, die von der PREDICT-Funktion verwendet wird übereinstimmt, können Sie in der Tabelle Modelle und Daten aus dem vorherigen Beispiel.
 
-```SQL
+```sql
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
 WHERE model_name = 'iris.dtree' 

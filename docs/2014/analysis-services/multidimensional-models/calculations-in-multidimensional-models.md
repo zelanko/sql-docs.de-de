@@ -22,12 +22,12 @@ ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b7f71384b89be479d8388e4af8e897f384f2b141
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a132395bbd95997832e2a1df6948179cb2ffe8aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198700"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353635"
 ---
 # <a name="calculations-in-multidimensional-models"></a>Berechnungen in mehrdimensionalen Modellen
   Mithilfe der Registerkarte **Berechnungen** des Cube-Designers können Sie berechnete Elemente, benannte Mengen sowie andere MDX-Berechnungen (Multidimensional Expressions) erstellen.  
@@ -41,7 +41,7 @@ ms.locfileid: "48198700"
 -   Der Berechnungsausdrücke-Bereich unterstützt eine Formularansicht und eine Skriptansicht.  
   
 > [!NOTE]  
->  Weitere Informationen zur MDX-Skripterstellung finden Sie unter [Introduction to MDX Scripting in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892)(in Englisch) sowie im Abschnitt Additional Resources auf der Seite [SQL Server 2005 – Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) der Microsoft TechNet-Website. Weitere Informationen zu Leistungsproblemen im Zusammenhang mit dem Cubedesign finden Sie unter [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621).  
+>  Weitere Informationen zur MDX-Skripterstellung finden Sie unter [Introduction to MDX Scripting in Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892), und finden Sie im Abschnitt Weitere Ressourcen für die [SQL Server 2005 – Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853) Seite der Website der Microsoft TechNet-Website. Weitere Informationen zu Leistungsproblemen im Zusammenhang mit dem Cubedesign finden Sie unter [SQL Server 2005 Analysis Services Performance Guide](https://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="creating-a-new-calculation"></a>Erstellen einer neuen Berechnung  
  Zum Erstellen einer neuen Berechnung klicken Sie im Menü **Cube** auf der Registerkarte **Berechnungen** des Cube-Designers auf eine der Optionen **Neues berechnetes Element**, **Neue benannte Menge**oder **Neuer Skriptbefehl**, abhängig von der Art der Berechnung, die Sie erstellen möchten. Sie können auch auf eine der entsprechenden Schaltflächen auf der Symbolleiste oder mit der rechten Maustaste auf eine beliebige Stelle innerhalb des Bereichs **Skriptplaner** und dann auf einen der Befehle im Kontextmenü klicken. Durch diese Aktion wird dem **Skriptplaner** -Bereich eine neue Berechnung hinzugefügt, und im Berechnungsformular des Berechnungsausdrücke-Bereichs werden entsprechende Felder angezeigt. Wenn Sie ein neues Skript erstellen, wird durch diese Aktion die Skriptansicht im Berechnungsausdrücke-Bereich geöffnet. Weitere Informationen zu den drei Arten von Berechnungen finden Sie unter [Erstellen von berechneten Elementen](create-calculated-members.md), [Erstellen von benannten Mengen](create-named-sets.md)und [Definieren von Zuweisungen und anderen Skriptbefehlen](define-assignments-and-other-script-commands.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
@@ -16,12 +15,12 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b1d37bba3216a22d732c5562108db51925d37bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b428117cd445cf4cc8f06e588d344924394dcf02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120577"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357607"
 ---
 # <a name="ole-db-source"></a>OLE DB-Quelle
   Die OLE DB-Quelle extrahiert Daten mithilfe einer Datenbanktabelle, einer Sicht oder eines SQL-Befehls aus einer Reihe von OLE DB-kompatiblen relationalen Datenbanken. Beispielsweise kann die OLE DB-Quelle Daten aus Tabellen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken extrahieren.  
@@ -91,11 +90,11 @@ ms.locfileid: "48120577"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Quellen-Editor für OLE DB** festlegen können:  
   
--   [Quellen-Editor für OLE DB &#40;Seite Verbindungs-Manager&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [Quellen-Editor für OLE DB &#40;Seite „Verbindungs-Manager“&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [Quellen-Editor für OLE DB &#40;Seite "Spalten"&#41;](../ole-db-source-editor-columns-page.md)  
+-   [Quellen-Editor für OLE DB &#40;Seite „Spalten“&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [Quellen-Editor für OLE DB &#40;Seite "Fehlerausgabe"&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [Quellen-Editor für OLE DB &#40;Seite „Fehlerausgabe“&#41;](../ole-db-source-editor-error-output-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
@@ -114,11 +113,11 @@ ms.locfileid: "48120577"
 -   [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Wiki-Artikel, [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670), auf social.technet.microsoft.com.  
+ Wiki-Artikel, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670), auf social.technet.microsoft.com.  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Ziel](ole-db-destination.md)   
- [Integrationsdienste &#40;SSIS&#41; Variablen](../integration-services-ssis-variables.md)   
+ [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Datenfluss](data-flow.md)  
   
   

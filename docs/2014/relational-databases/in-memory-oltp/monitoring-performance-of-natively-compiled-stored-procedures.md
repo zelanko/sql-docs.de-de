@@ -10,18 +10,18 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad93f867eb10768806d3384c05596f7d4f008dce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa8a92b3727bf4c06a5b5a85c8359f96b592cd44
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209150"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359752"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Überwachen der Leistung von systemintern kompilierten gespeicherten Prozeduren
   In diesem Thema wird erläutert, wie Sie die Leistung von systemintern kompilierten gespeicherten Prozeduren überwachen können.  
   
 ## <a name="using-extended-events"></a>Unter Verwendung erweiterter Ereignisse  
- Verwenden der `sp_statement_completed` erweiterte Ereignis zur Ablaufverfolgung der codeausführung einer Abfrage. Erstellen Sie eine Sitzung für erweiterte Ereignisse mit diesem Ereignis. Optional können Sie für eine bestimmte systemintern kompilierte gespeicherte Prozedur nach object_id filtern. Das erweiterte Ereignis wird nach der Ausführung jeder Abfrage ausgelöst. Die vom erweiterten Ereignis angegebene CPU-Zeit und Dauer geben an, wie lange die CPU genutzt und wie lange die Abfrage ausgeführt wurde. Bei einer systemintern kompilierten gespeicherten Prozedur, die viel CPU-Zeit beansprucht, treten u. U. Leistungsprobleme auf.  
+ Verwenden Sie das erweiterte Ereignis `sp_statement_completed`, um die Ausführung einer Abfrage zu verfolgen. Erstellen Sie eine Sitzung für erweiterte Ereignisse mit diesem Ereignis. Optional können Sie für eine bestimmte systemintern kompilierte gespeicherte Prozedur nach object_id filtern. Das erweiterte Ereignis wird nach der Ausführung jeder Abfrage ausgelöst. Die vom erweiterten Ereignis angegebene CPU-Zeit und Dauer geben an, wie lange die CPU genutzt und wie lange die Abfrage ausgeführt wurde. Bei einer systemintern kompilierten gespeicherten Prozedur, die viel CPU-Zeit beansprucht, treten u. U. Leistungsprobleme auf.  
   
  Neben `line_number` kann auch `object_id` im erweiterten Ereignis verwendet werden, um die Abfrage zu untersuchen. Mithilfe der folgenden Abfrage kann die Prozedurdefinition abgerufen werden. Anhand der Zeilennummer wird die Abfrage innerhalb der Definition identifiziert:  
   
@@ -29,7 +29,7 @@ ms.locfileid: "48209150"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- Weitere Informationen zu den `sp_statement_completed` finden Sie mit der erweiterten Ereignis [Gewusst wie: Abrufen der Anweisung, die ein Ereignis ausgelöst wurde](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
+ Weitere Informationen zu den `sp_statement_completed` finden Sie mit der erweiterten Ereignis [Gewusst wie: Abrufen der Anweisung, die ein Ereignis ausgelöst wurde](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
 ## <a name="using-data-management-views"></a>Unter Verwendung von Datenverwaltungssichten  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt Ausführungsstatistiken für systemintern kompilierte gespeicherte Prozeduren sowohl auf Prozedur- als auch auf Abfrageebene. Das Sammeln statistischer Ausführungsdaten ist aufgrund der Leistungsauswirkungen standardmäßig nicht aktiviert.  

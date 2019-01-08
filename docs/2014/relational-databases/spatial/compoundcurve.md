@@ -10,18 +10,18 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6f109dcab6d7cf6280e15cdfb1bb2f5ad3b2f041
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: d8afb24373cf62d4b9f8696d9c2d9370ad665796
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018145"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352298"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   Eine `CompoundCurve` ist eine Auflistung von 0 (null) oder mehr fortlaufenden `CircularString`-Instanzen oder `LineString`-Instanzen von geometry- oder geography-Typen.  
   
 > [!IMPORTANT]  
->  Für eine ausführliche Beschreibung und Beispiele der neuen räumlichen Funktionen in dieser Version einschließlich der `CompoundCurve` Untertyp, können Sie das Whitepaper zur [neue räumliche Funktionen in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Für eine ausführliche Beschreibung und Beispiele der neuen räumlichen Funktionen in dieser Version einschließlich der `CompoundCurve` Untertyp, können Sie das Whitepaper zur [neue räumliche Funktionen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Eine leere `CompoundCurve`-Instanz kann instanziiert werden. Damit eine `CompoundCurve` gültig ist, muss sie jedoch die folgenden Kriterien erfüllen:  
   
@@ -55,7 +55,7 @@ DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (-1 0, 2 0))';  
 ```  
   
- Im folgenden Beispiel werden nicht akzeptierte `CompoundCurve`-Instanzen veranschaulicht. Diese Instanzen lösen eine `System.FormatException` aus.  
+ Im folgenden Beispiel werden nicht akzeptierte `CompoundCurve`-Instanzen veranschaulicht. Diese Instanzen lösen eine `System.FormatException`aus.  
   
 ```  
 DECLARE @g1 geometry = 'COMPOUNDCURVE(CIRCULARSTRING EMPTY)';  
@@ -137,7 +137,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- Hierdurch wird folgende Ausgabe generiert: 12.566370… was 4∏ entspricht. Von der `CompoundCurve` -Instanz im Beispiel wird ein Kreis mit dem Radius 2 gespeichert. In den beiden vorherigen Codebeispielen musste keine `CompoundCurve`verwendet werden. Für das erste Beispiel wäre eine `LineString` -Instanz einfacher gewesen, während sich für das zweite Beispiel eher eine `CircularString` -Instanz empfiehlt. Im nächsten Beispiel wird jedoch verdeutlich, in welchen Fällen eine `CompoundCurve` eine bessere Alternative darstellt.  
+ Hierdurch wird folgende Ausgabe generiert: 12. 566370…... Dies entspricht 4 Zuweisen von gruppenlizenzen finden. Von der `CompoundCurve` -Instanz im Beispiel wird ein Kreis mit dem Radius 2 gespeichert. In den beiden vorherigen Codebeispielen musste keine `CompoundCurve`verwendet werden. Für das erste Beispiel wäre eine `LineString` -Instanz einfacher gewesen, während sich für das zweite Beispiel eher eine `CircularString` -Instanz empfiehlt. Im nächsten Beispiel wird jedoch verdeutlich, in welchen Fällen eine `CompoundCurve` eine bessere Alternative darstellt.  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. Speichern eines Halbkreises mithilfe einer CompoundCurve  
  Im folgenden Beispiel wird ein Halbkreis mithilfe einer `CompoundCurve` -Instanz gespeichert.  
@@ -179,11 +179,11 @@ SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amo
  Es wird folgende Ausgabe erhalten:  
   
 ```  
-Circle One11.940039…  
-Circle Two12.566370…  
+Circle One11.940039...  
+Circle Two12.566370...  
 ```  
   
- Der Umfang für Circle Two beträgt annähernd 4. Dies ist der tatsächliche Wert für den Umfang. Der Umkreis für Circle One ist jedoch sehr ungenau. Durch die `CompoundCurve` -Instanz von Circle One werden ein Kreisbogensegment (ABC) und zwei Liniensegmente (CD, DA) gespeichert. Von der `CompoundCurve` -Instanz müssen zwei Kreisbogensegmente (ABC, CDA) gespeichert werden, um einen Kreis zu definieren. Eine `LineString` -Instanz definiert die zweite Punktmenge (4 2, 2 4, 0 2) in der `CompoundCurve` -Instanz von Circle One. Sie müssen in einer `CircularString` explizit eine `CompoundCurve`-Instanz deklarieren.  
+ Der Umfang für Circle Two ist ca. 4 Zuweisen von gruppenlizenzen finden, dies ist der tatsächliche Wert für den Umfang. Der Umkreis für Circle One ist jedoch sehr ungenau. Durch die `CompoundCurve` -Instanz von Circle One werden ein Kreisbogensegment (ABC) und zwei Liniensegmente (CD, DA) gespeichert. Von der `CompoundCurve` -Instanz müssen zwei Kreisbogensegmente (ABC, CDA) gespeichert werden, um einen Kreis zu definieren. Eine `LineString` -Instanz definiert die zweite Punktmenge (4 2, 2 4, 0 2) in der `CompoundCurve` -Instanz von Circle One. Sie müssen in einer `CircularString` explizit eine `CompoundCurve`-Instanz deklarieren.  
   
 ## <a name="see-also"></a>Siehe auch  
  [STIsValid &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)   

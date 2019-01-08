@@ -11,17 +11,17 @@ ms.assetid: d28a5ca8-ea9f-443f-af4f-b7e77987f8f0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c6e49e9c5c5306ba5d1986c7fd8e09ea463c8b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 18a88e4c6029705e5587dffce1803208186dfcd0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129020"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361312"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>Upgrade Advisor für SQL Server 2014
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Der Upgrade Advisor analysiert die Konfiguration der installierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten und generiert dann einen Bericht über Probleme, die Sie behandeln müssen, damit ein erfolgreiches Upgrade sichergestellt.  
+  Der Upgrade Advisor für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] analysiert die Konfiguration der installierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten und generiert dann einen Bericht über Probleme, die Sie behandeln müssen, damit ein erfolgreiches Upgrade sichergestellt wird.  
   
- Rufen Sie die Upgrade Advisor-Installationsdatei (sqlua.msi) im Ordner "Redist" des Installationsmediums oder als Teil des [SQL 2014 Feature Pack-Downloads](http://www.microsoft.com/download/details.aspx?id=42295)ab.  
+ Rufen Sie die Upgrade Advisor-Installationsdatei (sqlua.msi) im Ordner "Redist" des Installationsmediums oder als Teil des [SQL 2014 Feature Pack-Downloads](https://www.microsoft.com/download/details.aspx?id=42295)ab.  
   
 |Thema|Description|  
 |-----------|-----------------|  

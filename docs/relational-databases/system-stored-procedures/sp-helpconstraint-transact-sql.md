@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4158fd290b2a64ddf7e8f3a8fc9b566dd5602d4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4742d65ca25ecf656e442d03e1925cbe1bb518
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704368"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591781"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@objname=** ] **"***Tabelle***"**  
+ [  **@objname=** ] **"**_Tabelle_**"**  
  Die Tabelle, zu der Einschränkungsinformationen zurückgegeben werden. Die angegebene Tabelle muss für die aktuelle Datenbank lokal sein. *Tabelle* ist **nvarchar(776)**, hat keinen Standardwert.  
   
- [  **@nomsg=**] **"***No_message***"**  
+ [  **@nomsg=**] **"**_No_message_**"**  
  Ein optionaler Parameter, der den Tabellennamen ausgibt. *No_message* ist **varchar(5)**, hat den Standardwert **msg**. **Nomsg** unterdrückt die Ausgabe.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -55,7 +55,7 @@ sp_helpconstraint [ @objname = ] 'table'
  **Sp_helpconstraint** zeigt eine absteigende indizierte Spalte an, wenn sie in Primärschlüsseln teilgenommen haben. Die absteigend indizierte Spalte wird im Resultset mit einem Minuszeichen (-) hinter dem Namen aufgelistet. Standardmäßig werden Spalten aufsteigend indiziert, diese werden nur mit dem Namen aufgelistet.  
   
 ## <a name="remarks"></a>Hinweise  
- Ausführen von **Sp_help *** Tabelle* liefert alle Informationen über die angegebene Tabelle. Um nur Informationen zu den Einschränkungen anzuzeigen, verwenden Sie **Sp_helpconstraint**.  
+ Ausführen von **Sp_help**_Tabelle_ liefert alle Informationen über die angegebene Tabelle. Um nur Informationen zu den Einschränkungen anzuzeigen, verwenden Sie **Sp_helpconstraint**.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  

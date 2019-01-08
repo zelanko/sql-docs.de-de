@@ -1,5 +1,5 @@
 ---
-title: Speichern und Laden von R-Objekte von SQL Server mithilfe von ODBC | Microsoft Docs
+title: Speichern und Laden von R-Objekten aus SQL Server über ODBC - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 17f9ebc151e7112b04766ea1c644aad0a32bc580
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c7b874adc53d217c341a5dce689c7c5b4eb70bfe
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31201902"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431953"
 ---
-# <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>Speichern und Laden von R-Objekte von SQL Server mithilfe von ODBC
+# <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>Speichern und Laden von R-Objekten aus SQL Server über ODBC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server R Services können serialisierte R-Objekte in einer Tabelle speichern und dann die Objekt nach Bedarf aus der Tabelle laden, ohne den R-Code erneut ausführen oder das Modell erneut trainieren zu müssen. Diese Fähigkeit zum Speichern von R-Objekten in einer Datenbank ist entscheidend für Szenarios wie Trainieren und Speichern eines Modells und dann späteres Verwenden für Bewertungen oder Analysen.
@@ -23,17 +23,17 @@ Um die Leistung dieses ausschlaggebenden Schritts zu verbessern, enthält das **
 
 ## <a name="overview"></a>Übersicht
 
-Das **RevoScaleR** -Paket enthält jetzt neue Funktionen, mit denen es einfacher ist, R-Objekte in SQL Server zu speichern und die Objekte dann aus der SQL Server-Tabelle zu lesen. Im Allgemeinen jeden Funktionsaufruf verwendet einen einfache Schlüssel-Wert-Speicher, in dem der Schlüssel den Namen des Objekts ist, und der Wert, der dem Schlüssel zugeordnet ist, das Varbinary R-Objekt in oder aus einer Tabelle verschoben werden soll.
+Das **RevoScaleR** -Paket enthält jetzt neue Funktionen, mit denen es einfacher ist, R-Objekte in SQL Server zu speichern und die Objekte dann aus der SQL Server-Tabelle zu lesen. Im Allgemeinen alle Funktionsaufrufe verwendet einen einfachen Schlüssel-Wert-Speicher, in dem der Schlüssel der Name des Objekts ist, und der Wert, der dem Schlüssel zugeordnet ist, das Varbinary-R-Objekt, das in oder aus einer Tabelle verschoben werden.
 
-Um die R-Objekte in SQL Server direkt aus einer R-Umgebung zu speichern, müssen Sie folgende Aktionen ausführen:
+Um R-Objekte in SQL Server direkt aus einer R-Umgebung zu speichern, müssen Sie folgende Aktionen ausführen:
 
 + Stellt eine Verbindung mit SQL Server mithilfe der *RxOdbcData* -Datenquelle.
 + Rufen Sie die neuen Funktionen über die ODBC-Verbindung
-+ Optional können Sie angeben, dass das Objekt nicht serialisiert werden. Wählen Sie dann einen neue Komprimierungsalgorithmus anstelle der Standard-Komprimierungsalgorithmus verwendet.
++ Optional können Sie angeben, dass das Objekt nicht serialisiert werden. Wählen Sie dann einen neuen Komprimierungsalgorithmus anstelle des standardkomprimierungsalgorithmus verwendet.
 
 Standardmäßig wird jedes Objekt, das Sie aus R aufrufen, um es in SQL Server zu verschieben, serialisiert und komprimiert. Umgekehrt wird, wenn Sie ein Objekt aus einer SQL Server-Tabelle laden, um es in Ihrem R-Code zu verwenden, das Objekt deserialisiert und dekomprimiert.
 
-## <a name="list-of-new-functions"></a>Liste der neuen Funktionen
+## <a name="list-of-new-functions"></a>Liste neuer Funktionen
 
 - `rxWriteObject` schreibt über die ODBC-Datenquelle ein R-Objekt in SQL Server.
 
@@ -43,7 +43,7 @@ Standardmäßig wird jedes Objekt, das Sie aus R aufrufen, um es in SQL Server z
 
 - `rxListKeys` listet alle verfügbaren Objekte als Schlüssel-Wert-Paare auf. Dies erleichtert es Ihnen, die Namen und Versionen der R-Objekte zu ermitteln.
 
-Ausführliche Hilfe zur Syntax jeder Funktion finden Sie in der R-Hilfe. Details stehen auch in der [ScaleR Verweis](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
+Ausführliche Hilfe zur Syntax jeder Funktion finden Sie in der R-Hilfe. Details sind auch in der [revoscaler](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
 
 ## <a name="how-to-store-r-objects-in-sql-server-using-odbc"></a>So speichern Sie R-Objekte über ODBC in SQL Server
 

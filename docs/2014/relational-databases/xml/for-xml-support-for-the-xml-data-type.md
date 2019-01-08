@@ -13,15 +13,15 @@ ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a3a4cea6424f8bfb89207050719ec0db554fdd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 118a828a35aaee1ded4e91f3e5ded53ef6135a6a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130280"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355344"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>FOR XML-Unterstützung für den xml-Datentyp
-  Wenn eine FOR XML-Abfrage gibt an, eine Spalte mit `xml` Typ in der SELECT-Klausel werden die Spaltenwerte als Elemente im zurückgegebenen XML, unabhängig davon, ob die ELEMENTS-Direktive angegeben zugeordnet. XML-Deklarationen in einer Spalte des `xml`-Typs werden nicht serialisiert.  
+  Wenn eine FOR XML-Abfrage eine Spalte vom `xml`-Typ in der SELECT-Klausel angibt, werden die Spaltenwerte unabhängig davon, ob die ELEMENTS-Direktive angegeben wird, im zurückgegebenen XML als Elemente zugeordnet. XML-Deklarationen in einer Spalte des `xml`-Typs werden nicht serialisiert.  
   
  Z. B. die folgende Abfrage ruft Informationen zu Kundenkontakten wie z. B. die `BusinessEntityID`, `FirstName`, und `LastName` Spalten und die Rufnummern aus der `AdditionalContactInfo` Spalte `xml` Typ.  
   
@@ -29,18 +29,18 @@ ms.locfileid: "48130280"
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ') AS PhoneNumber  
 FROM Person.Person  
 WHERE AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ')IS NOT NULL  
 FOR XML AUTO, TYPE;  
 ```  
   
- Da die Abfrage nicht die ELEMENTS-Direktive angegeben ist, werden die Werte der Spalte zurückgegeben, als Attribute mit Ausnahme der zusätzlichen Kontaktinformationen Werte aus der `xml` Type-Spalte. Diese werden als Elemente zurückgegeben.  
+ Da die Abfrage nicht die ELEMENTS-Direktive angibt, werden die Spaltenwerte als Attribute zurückgegeben. Eine Ausnahme sind die Werte für die zusätzlichen Kontaktinformationen, die aus der Spalte vom Typ `xml` abgerufen werden. Diese werden als Elemente zurückgegeben.  
   
  Dies ist das Teilergebnis:  
   
@@ -48,9 +48,9 @@ FOR XML AUTO, TYPE;
   
  `<PhoneNumber>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
   
  `</PhoneNumber>`  
   
@@ -60,9 +60,9 @@ FOR XML AUTO, TYPE;
   
  `<PhoneNumber>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
   
  `</PhoneNumber>`  
   
@@ -75,12 +75,12 @@ FOR XML AUTO, TYPE;
   
 ```  
 SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ') AS PhoneNumber  
 FROM Person.Person  
 WHERE AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ')IS NOT NULL  
 FOR XML AUTO, TYPE;  
@@ -92,9 +92,9 @@ FOR XML AUTO, TYPE;
   
  `<MorePhoneNumbers>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
   
  `</MorePhoneNumbers>`  
   
@@ -104,9 +104,9 @@ FOR XML AUTO, TYPE;
   
  `<MorePhoneNumbers>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
   
  `</MorePhoneNumbers>`  
   
@@ -117,7 +117,7 @@ FOR XML AUTO, TYPE;
   
  Wenn Sie die ELEMENTS-Direktive in der Abfrage angeben, werden BusinessEntityID, LastName und FirstName als Elemente im sich ergebenden XML zurückgegeben.  
   
- Das folgende Beispiel zeigt, dass die FOR XML-Verarbeitungslogik XML-Deklarationen in den XML-Daten nicht serialisiert eine `xml` Spalte vom Typ:  
+ Das folgende Beispiel zeigt, dass die FOR XML-Verarbeitungslogik XML-Deklarationen in den XML-Daten aus einer Spalte des `xml`-Typs nicht serialisiert:  
   
 ```  
 create table t(i int, x xml)  
@@ -146,9 +146,9 @@ for xml auto;
   
 -   Eine Tabelle mit einer einzelnen Spalte des Typs `xml`.  
   
--   Eine Instanz von der `xml` Typ  
+-   Eine Instanz vom `xml`-Typ.  
   
- Die folgende benutzerdefinierte Funktion gibt z. B. eine Tabelle mit einer einzelnen Spalte des `xm`-Typs:  
+ Die folgende benutzerdefinierte Funktion gibt z. B. eine Tabelle mit einer einzelnen Spalte des `xm`-Typs zurück:  
   
 ```  
 USE AdventureWorks2012;  
@@ -170,7 +170,7 @@ declare namespace PD="http://www.adventure-works.com/schemas/products/descriptio
 END;  
 ```  
   
- Sie können die benutzerdefinierte Funktion ausführen und die von dieser zurückgegebene Tabelle abfragen. In diesem Beispiel erhält das durch Abfragen der Tabelle zurückgegebene XML auf eine `xml` Variablen vom Typ.  
+ Sie können die benutzerdefinierte Funktion ausführen und die von dieser zurückgegebene Tabelle abfragen. In diesem Beispiel wird das durch Abfragen der Tabelle zurückgegebene XML einer Variablen vom Typ `xml` zugewiesen.  
   
 ```  
 declare @x xml;  

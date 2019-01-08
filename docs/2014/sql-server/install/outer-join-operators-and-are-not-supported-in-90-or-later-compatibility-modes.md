@@ -16,21 +16,21 @@ ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc4cab3fac4a49535b2178332b6e355ed95647b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d5d9ff66bb078be30fcd6e7d4b43b5e94069be0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064900"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591614"
 ---
-# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Die Operatoren für äußere Joins *= und =* werden im Kompatibilitätsmodus 90 oder höher nicht unterstützt
-  Der Upgrade Advisor hat festgestellt, dass Operatoren für äußere Joins * = und =\*. Diese Operatoren werden im Kompatibilitätsmodus 90 oder höher nicht unterstützt. Beim Upgrade behalten die Benutzerdatenbanken ihren Kompatibilitätsmodus bei. Anweisungen, die diese Operatoren verwenden, führen zu einem Fehler.  
+# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Die Operatoren für äußere Joins \*= und =\* werden im Kompatibilitätsmodus 90 oder höher nicht unterstützt
+  Der Upgrade Advisor hat festgestellt, dass Operatoren für äußere Joins \*= und =\*. Diese Operatoren werden im Kompatibilitätsmodus 90 oder höher nicht unterstützt. Beim Upgrade behalten die Benutzerdatenbanken ihren Kompatibilitätsmodus bei. Anweisungen, die diese Operatoren verwenden, führen zu einem Fehler.  
   
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
- Bevor Sie die Datenbank-Kompatibilitätsmodus auf 90 oder höher ändern, ändern Sie Anweisungen, Operatoren für äußere Joins verwenden * = und =\* entsprechende OUTER JOIN-Schlüsselwörter verwenden. Im folgenden Beispiel wird eine Abfrage gezeigt, die den `*=`-Operator verwendet, sowie eine entsprechende Abfrage, die das `LEFT OUTER JOIN`-Schlüsselwort verwendet.  
+ Bevor Sie die Datenbank-Kompatibilitätsmodus auf 90 oder höher ändern, ändern Sie Anweisungen, Operatoren für äußere Joins verwenden \*= und =\* entsprechende OUTER JOIN-Schlüsselwörter verwenden. Im folgenden Beispiel wird eine Abfrage gezeigt, die den `\*=`-Operator verwendet, sowie eine entsprechende Abfrage, die das `LEFT OUTER JOIN`-Schlüsselwort verwendet.  
   
 ```  
 -- This query uses an old-style outer join operator.  

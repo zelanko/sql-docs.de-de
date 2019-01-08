@@ -22,12 +22,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d2cf693a4f4c909ef66b647f3ddd644a9bda6a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067920"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360142"
 ---
 # <a name="feature-selection-data-mining"></a>Funktionsauswahl (Data Mining)
   *Funktionsauswahl* ist ein Begriff, die im Datamining häufig verwendet werden, um die Tools und Techniken zum Reduzieren der Eingaben in eine verwaltbare Größe zur Verarbeitung und Analyse zu beschreiben. Funktionsauswahl bewirkt nicht nur *Kardinalitätsreduzierung*, was bedeutet anwendet, die einer willkürlichen oder vordefinierten Grenzwert für die Anzahl der Attribute, die beim Erstellen eines Modells, sondern auch die Auswahl der Attribute, d. h. berücksichtigt werden können dass entweder der Analyst oder das Modellierungstool aktiv ausgewählt oder Attribute, die basierend auf deren Eignung für die Analyse verwirft Sie.  
@@ -43,9 +43,9 @@ ms.locfileid: "48067920"
  Wenn von den 500 Spalten in der Datenquelle nur 50 Spalten Informationen enthalten, die bei der Modellerstellung von Nutzen sind, könnten Sie sie einfach nicht in das Modell einbeziehen. Alternativ könnten Sie mithilfe der Funktionsauswahl automatisch die besten Funktionen ermitteln und Werte ausschließen, die statistisch unbedeutend sind. Die Funktionsauswahl ist hilfreich bei der Lösung des doppelten Problems, dass zu viele Daten mit geringem Wert oder zu wenige hochwertige Daten vorhanden sind.  
   
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Die Funktionsauswahl bei Analysis Services Data Mining  
- In der Regel Funktionsauswahl erfolgt automatisch bei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], und jeder Algorithmus verfügt über einen Satz von Standardtechniken für die intelligente Anwendung der featurereduzierung. Die Funktionsauswahl wird stets durchgeführt, bevor das Modell trainiert wird, um automatisch die Attribute in einem Dataset auszuwählen, die im Modell am wahrscheinlichsten Verwendung finden. Sie können jedoch auch manuell Parameter festlegen, um das Verhalten der Funktionsauswahl zu beeinflussen.  
+ Normalerweise wird die Funktionsauswahl in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatisch ausgeführt. Jeder Algorithmus verfügt über eine Reihe von Standardtechniken für die intelligente Anwendung der Funktionsreduzierung. Die Funktionsauswahl wird stets durchgeführt, bevor das Modell trainiert wird, um automatisch die Attribute in einem Dataset auszuwählen, die im Modell am wahrscheinlichsten Verwendung finden. Sie können jedoch auch manuell Parameter festlegen, um das Verhalten der Funktionsauswahl zu beeinflussen.  
   
- Im Allgemeinen wird bei der Funktionsauswahl ein Wert für jedes Attribut berechnet, und dann werden nur diejenigen Attribute ausgewählt, die über die besten Werte verfügen. Sie können den Schwellenwert für die besten Ergebnisse auch anpassen. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet mehrere Methoden zum Berechnen dieser Scores und welche spezifische Methode auf, die jeweilige Modell angewendet wird, die auf diesen Faktoren abhängig ist:  
+ Im Allgemeinen wird bei der Funktionsauswahl ein Wert für jedes Attribut berechnet, und dann werden nur diejenigen Attribute ausgewählt, die über die besten Werte verfügen. Sie können den Schwellenwert für die besten Ergebnisse auch anpassen. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet mehrere Methoden zum Berechnen dieser Ergebnisse. Welche spezifische Methode auf das jeweilige Modell angewendet wird, hängt von folgenden Faktoren ab:  
   
 -   Im Modell verwendeter Algorithmus  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48067920"
 #### <a name="bayesian-with-k2-prior"></a>Bayes-Methode mit K2-A-priori-Verteilung  
  Analysis Services stellt zwei Funktionsauswahlwerte bereit, die auf Bayes-Netzwerken basieren. Ein Bayes-Netzwerk ist ein *gerichteter* oder *azyklischer* Graph von Zuständen und Übergängen zwischen Zuständen. Das heißt, dass einige Zustände immer vor dem aktuellen Status liegen, andere Zustände sind nachgelagert, und der Graph stellt keine Wiederholungen oder Schleifen dar. Definitionsgemäß ermöglichen Bayes-Netzwerke die Verwendung vorherigen Wissens. Allerdings ist die Frage, welche der früheren Zustände zur Berechnung der Wahrscheinlichkeit nachfolgender Zustände verwendet werden sollen, für den Algorithmusentwurf, die Leistung und die Genauigkeit wichtig.  
   
- Der K2-Algorithmus zum Lernen von Bayes-Netzwerken wurde von Cooper und Herskovits entwickelt und wird häufig im Data Mining eingesetzt. Er ist skalierbar und kann mehrere Variablen analysieren, erfordert jedoch eine Sortierung der als Eingabe verwendeten Variablen. Weitere Informationen finden Sie in [Learning Bayesian Networks](http://go.microsoft.com/fwlink/?LinkId=105885) von Chickering, Geiger, und Heckerman.  
+ Der K2-Algorithmus zum Lernen von Bayes-Netzwerken wurde von Cooper und Herskovits entwickelt und wird häufig im Data Mining eingesetzt. Er ist skalierbar und kann mehrere Variablen analysieren, erfordert jedoch eine Sortierung der als Eingabe verwendeten Variablen. Weitere Informationen finden Sie in [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885) von Chickering, Geiger, und Heckerman.  
   
  Diese Bewertungsmethode ist für diskrete und diskretisierte Attribute verfügbar.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48067920"
   
  Die Methode Bayes-Dirichlet-Äquivalent mit uniformer A-priori-Verteilung setzt einen Sonderfall der Dirichlet-Verteilung voraus, in dem eine mathematische Konstante zur Erstellung einer festen oder einheitlichen Verteilung von A-priori-Zuständen verwendet wird. Die Bayes-Dirichlet-Äquivalent-Bewertung unterstellt außerdem Likelihood-Äquivalenz, d. h. es wird nicht erwartet, dass die Daten äquivalente Strukturen unterscheiden können. Anders ausgedrückt bedeutet dies, wenn der Score von „Wenn A dann B“ dem Score von „Wenn B dann A“ entspricht, dann lassen sich die Strukturen nicht anhand der Daten unterscheiden, und die Kausalität kann nicht aus den Daten gefolgert werden.  
   
- Weitere Informationen zu Bayes-Netzwerken und der Implementierung dieser Bewertungsmethoden finden Sie in [Learning Bayesian Networks](http://go.microsoft.com/fwlink/?LinkId=105885).  
+ Weitere Informationen zu Bayes-Netzwerken und der Implementierung dieser Bewertungsmethoden finden Sie in [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885).  
   
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Von Analysis Services-Algorithmen verwendete Funktionsauswahlmethoden  
  Die folgende Tabelle enthält die Algorithmen, welche die Funktionsauswahl unterstützen, die von einem Algorithmus verwendeten Funktionsauswahlmethoden und die Parameter, mit denen sich das Funktionsauswahlverhalten steuern lässt:  

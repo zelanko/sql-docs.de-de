@@ -1,6 +1,6 @@
 ---
-title: Skalieren der gleichzeitigen Ausführung externer Skripts in SQL Server Machine Learning Services | Microsoft-Dokumentation
-description: 'Vorgehensweise: Ändern des benutzerkontenpools um SQL Server-Machine Learning-Dienste zu skalieren.'
+title: Gleichzeitige Ausführung externer Skripts – SQL Server-Machine Learning-Dienste skalieren
+description: Konfigurieren von parallel oder gleichzeitigen R und Python-Skript die Ausführung in einer benutzerkontenpool zum Skalieren von SQL Server-Machine Learning-Dienste.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cc51f5034614de950f0c0f51b7a83425f1a30d3d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 9f32e51122df8d2d13d6eada726a1a5e9bea82f0
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419435"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596811"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>Gleichzeitige Ausführung externer Skripts in SQL Server-Machine Learning-Dienste skalieren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,8 +21,6 @@ ms.locfileid: "49419435"
 Im Rahmen des Installationsprozesses für [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] wird ein neuer Windows-*Benutzerkontenpool* erstellt, um die Ausführung von Aufgaben vom [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]-Dienst zu unterstützen. Der Zweck dieser workerkonten ist es, gleichzeitige Ausführung externer Skripts, die von verschiedenen SQL-Benutzern zu isolieren.
 
 Dieser Artikel beschreibt die Standardkonfiguration und die Kapazität für die workerkonten und zum Ändern der Standardkonfiguration, um die Anzahl der gleichzeitigen Ausführung externer Skripts in SQL Server-Machine Learning-Dienste zu skalieren.
-
-**Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="worker-account-group"></a>Konto-workergruppe
 
@@ -53,7 +51,7 @@ Die jeweiligen Kennwörter der Benutzerkonten werden nach dem Zufallsprinzip gen
 2. Doppelklicken Sie auf den Launchpad-Dienst von SQL Server und beenden Sie den Dienst, wenn er ausgeführt wird.
 3.  Achten Sie darauf, dass der Startmodus auf der Registerkarte **Dienst** auf „Automatisch“ festgelegt ist. Externe Skripts können nicht gestartet werden, wenn das Launchpad nicht ausgeführt wird.
 4.  Klicken Sie auf die Registerkarte **Erweitert**, und bearbeiten Sie den Wert von **External Users Count** (Anzahl externer Benutzer), wenn nötig. Diese Einstellung steuert können wie viele verschiedene SQL-Benutzer externen Skript Sitzungen gleichzeitig ausführen. Der Standardwert ist 20 Konten. Die maximale Anzahl von Benutzern ist 100.
-5. Sie können die Option **Reset External Users Password** (Kennwörter externer Benutzer zurücksetzen) auch wahlweise auf _Ja_ festlegen, wenn Ihre Organisation eine Richtlinie zum regelmäßigen Ändern des Kennworts hat. Damit werden die verschlüsselten Kennwörter erneut generiert, die Launchpad für die Benutzerkonten verwaltet. Weitere Informationen finden Sie unter [Enforcing Password Policy (Erzwingen der Kennwortrichtlinie)](#bkmk_EnforcePolicy).
+5. Sie können die Option **Reset External Users Password** (Kennwörter externer Benutzer zurücksetzen) auch wahlweise auf _Ja_ festlegen, wenn Ihre Organisation eine Richtlinie zum regelmäßigen Ändern des Kennworts hat. Damit werden die verschlüsselten Kennwörter erneut generiert, die Launchpad für die Benutzerkonten verwaltet. Weitere Informationen finden Sie unter [Enforcing Password Policy (Erzwingen der Kennwortrichtlinie)](../security/sql-server-launchpad-service-account.md#bkmk_EnforcePolicy).
 6.  Starten Sie den Launchpad-Dienst neu.
 
 ## <a name="managing-workloads"></a>Verwalten von workloads
@@ -64,9 +62,11 @@ Wenn die gleiche Benutzer mehrere externe Skripts gleichzeitig ausführt, verwen
 
 Die Anzahl der workerkonten, die Sie unterstützen können, und die Anzahl gleichzeitiger Sitzungen, die ein einzelner Benutzer ausgeführt werden kann, wird nur durch Serverressourcen eingeschränkt. Für gewöhnlich ist der Arbeitsspeicher der erste Engpass beim Verwenden der R-Laufzeit.
 
-Die Ressourcen, die von Python- oder R-Skripts verwendet werden können, werden von SQL Server gesteuert. Es wird empfohlen, dass Sie die Ressourcenauslastung mit SQL Server DMVs überwachen oder sich Leistungsindikatoren im verknüpften Windows-Auftragsobjekt anschauen; so können Sie die Arbeitsspeicherauslastung des Servers entsprechend anpassen. Wenn Sie SQL Server Enterprise Edition haben, können Sie für die Ausführung externer Skripts durch Konfigurieren von Ressourcen zuordnen einer [externen Ressourcenpool](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md).
+Die Ressourcen, die von Python- oder R-Skripts verwendet werden können, werden von SQL Server gesteuert. Es wird empfohlen, dass Sie die Ressourcenauslastung mit SQL Server DMVs überwachen oder sich Leistungsindikatoren im verknüpften Windows-Auftragsobjekt anschauen; so können Sie die Arbeitsspeicherauslastung des Servers entsprechend anpassen. Wenn Sie SQL Server Enterprise Edition haben, können Sie für die Ausführung externer Skripts durch Konfigurieren von Ressourcen zuordnen einer [externen Ressourcenpool](how-to-create-a-resource-pool.md).
 
-Weitere Informationen zum Verwalten von Machine learning-Tasks-Kapazität finden Sie unter in diesen Artikeln:
+## <a name="see-also"></a>Siehe auch
+
+Weitere Informationen zum Konfigurieren der Kapazität finden Sie in diesen Artikeln:
 
 - [SQL Server-Konfiguration für R Services](../../advanced-analytics/r/sql-server-configuration-r-services.md)
 - [Leistungsfallstudie für R Services](../../advanced-analytics/r/performance-case-study-r-services.md)

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 11bfe5a2a1a8a79866983855c61c9666fb114a03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4f85a74b91a74b58847a24d04053e2b8848234d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188512"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371202"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Funktionsbereich "Systemverwaltung" (Master Data Manager)
   Im Funktionsbereich "Systemverwaltung" können Administratoren ein Modell und alle seine Objekte erstellen. Sie können auch Geschäftsregeln erstellen und Modellpakete bereitstellen. Weitere Informationen zu Administratoren finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
@@ -28,7 +27,7 @@ ms.locfileid: "48188512"
   
  [Entitäten &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
- [Erstellen Sie eine Entität &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)  
+ [Erstellen einer Entität &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)  
   
  [Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48188512"
   
  [Erstellen eines Modellbereitstellungspakets mithilfe des Assistenten](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)  
   
- [Behandeln von Problemen bei der Modellbereitstellung (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
+ [Behandeln von Problemen bei der Modellbereitstellung (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
   
 ## <a name="business-rules"></a>Geschäftsregeln  
  [Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
@@ -62,6 +61,6 @@ ms.locfileid: "48188512"
  [Geschäftsregelaktionen &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-actions-master-data-services.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Master Data Manager-Webanwendung](../../2014/master-data-services/master-data-manager-web-application.md)  
+ [Master Data Manager-Webanwendung [Master Data Services]](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

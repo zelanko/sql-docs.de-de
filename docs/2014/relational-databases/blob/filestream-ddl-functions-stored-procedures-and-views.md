@@ -10,12 +10,12 @@ ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ec7d554c8dedd2fb48d1af8a44dbee550e376ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b69cb7d47c70b6c34015c90252875c81c231d0a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189850"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356016"
 ---
 # <a name="filestream-ddl-functions-stored-procedures-and-views"></a>FILESTREAM-DDL, Funktionen, gespeicherte Prozeduren und Sichten
   Listet die Transact-SQL-Anweisungen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekte auf, die FILESTREAM unterstützen.  
@@ -48,11 +48,11 @@ ms.locfileid: "48189850"
   
 -   [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection)  
   
-##  <a name="cat"></a> Systemsichten – Katalogsichten  
+##  <a name="cat"></a> Systemsichten: Katalogsichten  
   
 -   [sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql)  
   
-##  <a name="dmv"></a> Systemsichten – Dynamische Verwaltungssichten  
+##  <a name="dmv"></a> Systemsichten: Dynamische Verwaltungssichten  
   
 -   [sys.dm_filestream_file_io_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-handles-transact-sql)  
   
@@ -62,6 +62,6 @@ ms.locfileid: "48189850"
   
 -   [ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)  
   
--   [Verwaltete API – SqlFileStream-Klasse](http://go.microsoft.com/fwlink/?LinkId=220875)  
+-   [Verwaltete API – SqlFileStream-Klasse](https://go.microsoft.com/fwlink/?LinkId=220875)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9eb4de07ad7bd564578462b053637bb472b22f6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201340"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353987"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
   Die `SSISDB` Katalog ist der zentrale Punkt zum Arbeiten mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Projekte (SSIS), die zum Bereitstellen der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
@@ -27,7 +26,7 @@ ms.locfileid: "48201340"
   
  Zur Verwaltung der Datenbank `SSISDB` wird empfohlen, Standardunternehmensrichtlinien für die Verwaltung von Benutzerdatenbanken anzuwenden. Informationen zum Erstellen von Wartungsplänen finden Sie unter [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- Die `SSISDB` Katalog und die `SSISDB` -Datenbank unterstützen Windows PowerShell. Weitere Informationen zum Verwenden von SQL Server mit Windows PowerShell finden Sie unter [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Beispiele zur Verwendung von Windows PowerShell zum Abschließen von Tasks, z. B. zum Bereitstellen eines Projekts, finden Sie im Blogeintrag zu [SSIS und PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)auf blogs.msdn.com.  
+ Die `SSISDB` Katalog und die `SSISDB` -Datenbank unterstützen Windows PowerShell. Weitere Informationen zum Verwenden von SQL Server mit Windows PowerShell finden Sie unter [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Beispiele zur Verwendung von Windows PowerShell zum Abschließen von Tasks, z. B. zum Bereitstellen eines Projekts, finden Sie im Blogeintrag zu [SSIS und PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)auf blogs.msdn.com.  
   
  Weitere Informationen zum Anzeigen von Vorgangsdaten finden Sie unter [Überwachen von Paketausführungen und anderen Vorgängen](../performance/monitor-running-packages-and-other-operations.md).  
   
@@ -98,7 +97,7 @@ ms.locfileid: "48201340"
  Die folgenden `SSISDB` Katalogeigenschaften definieren, wie sich dieser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag verhält. Sie können die Eigenschaften anzeigen oder ändern, indem Sie das Dialogfeld **Katalogeigenschaften** verwenden, oder [catalog.catalog_properties &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) und [catalog.configure_catalog &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  **Protokolle regelmäßig bereinigen**  
- Der Auftragsschritt für die vorgangsbereinigung wird ausgeführt, wenn diese Eigenschaft, um festgelegt wird `True`.  
+ Der Auftragsschritt für die Vorgangsbereinigung wird ausgeführt, wenn diese Eigenschaft auf `True` festgelegt ist.  
   
  **Beibehaltungsdauer (Tage)**  
  Definiert das maximale Alter von zulässigen Vorgangsdaten (in Tagen). Ältere Daten werden entfernt.  
@@ -106,7 +105,7 @@ ms.locfileid: "48201340"
  Der Mindestwert ist ein Tag. Der Höchstwert wird nur durch den maximalen Wert von beschränkt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` Daten. Informationen zu diesem Datentyp finden Sie unter [int, bigint, smallint und tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
   
  **Alte Versionen regelmäßig entfernen**  
- Der Auftragsschritt für die Bereinigung von Projektversionen, das ausgeführt wird, wenn diese Eigenschaft, um festgelegt wird `True`.  
+ Der Auftragsschritt für die Projektversionsbereinigung wird ausgeführt, wenn diese Eigenschaft auf `True` festgelegt ist.  
   
  **Maximale Anzahl der Versionen pro Projekt**  
  Definiert, wie viele Versionen eines Projekts im Katalog gespeichert sind. Frühere Versionen von Projekten werden entfernt.  
@@ -128,7 +127,7 @@ ms.locfileid: "48201340"
   
 -   DES  
   
- Wenn Sie ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitstellen, werden die Paketdaten und sensible Werte automatisch vom Katalog verschlüsselt. Die Daten werden vom Katalog auch automatisch entschlüsselt, wenn Sie sie abrufen. Der SSISDB-Katalog verwendet die `ServerStorage` Schutzebene. Weitere Informationen finden Sie unter [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
+ Wenn Sie ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitstellen, werden die Paketdaten und sensible Werte automatisch vom Katalog verschlüsselt. Die Daten werden vom Katalog auch automatisch entschlüsselt, wenn Sie sie abrufen. Der SSISDB-Katalog verwendet die Schutzebene `ServerStorage`. Weitere Informationen finden Sie unter [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
   
  Eine Änderung des Verschlüsselungsalgorithmus ist sehr aufwändig. Der Server muss zuerst alle Konfigurationswerte mithilfe des zuvor angegebenen Algorithmus entschlüsseln. Anschließend müssen die Werte vom Server mithilfe des neuen Algorithmus wieder verschlüsselt werden. In diesem Zeitraum können keine anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Vorgänge auf dem Server ausgeführt werden. Damit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Vorgänge weiterhin ohne Unterbrechung ausgeführt werden können, ist der Wert für den Verschlüsselungsalgorithmus im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]-Dialogfeld schreibgeschützt.  
   
@@ -284,10 +283,10 @@ ms.locfileid: "48201340"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Blogeintrag zu [SSIS und PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), auf blogs.msdn.com.  
+-   Blogeintrag zu [SSIS und PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), auf blogs.msdn.com.  
   
--   Blogeintrag zu [SSIS Catalog Access Control Tips](http://go.microsoft.com/fwlink/?LinkId=246669)(Tipps zur SSIS-Katalogzugriffssteuerung) auf blogs.msdn.com.  
+-   Blogeintrag zu [SSIS Catalog Access Control Tips](https://go.microsoft.com/fwlink/?LinkId=246669)(Tipps zur SSIS-Katalogzugriffssteuerung) auf blogs.msdn.com.  
   
--   Blogeintrag zu [Überblick über das SSIS-Katalogmodell verwalteter Objekte](http://go.microsoft.com/fwlink/?LinkId=254267)auf blogs.msdn.com.  
+-   Blogeintrag zu [Überblick über das SSIS-Katalogmodell verwalteter Objekte](https://go.microsoft.com/fwlink/?LinkId=254267)auf blogs.msdn.com.  
   
   

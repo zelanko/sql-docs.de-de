@@ -13,12 +13,12 @@ ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c1618bb590ea0733d537216548679eeb67f53ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8fe601413985cd61cb3c1c7c1fb61a65cdc49de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180290"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354325"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Massenkopieren mithilfe einer Formatdatei (ODBC)
   Dieses Beispiel zeigt, wie die ODBC-Funktion bcp_init mit einer Formatdatei verwendet wird.  
@@ -29,9 +29,9 @@ ms.locfileid: "48180290"
   
 2.  Legen Sie SQL_COPT_SS_BCP und SQL_BCP_ON fest, um Massenkopiervorgänge zu aktivieren.  
   
-3.  Stellen Sie eine Verbindung zu Microsoft® SQL Server™ her.  
+3.  Verbinden Sie sich an Microsoft?? SQLServer-Zuweisen von gruppenlizenzen finden.  
   
-4.  Rufen Sie [Bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) auf die folgenden Informationen festzulegen:  
+4.  Rufen Sie [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) auf, um die folgenden Informationen festzulegen:  
   
     -   Name der Tabelle oder Sicht, aus der bzw. in die massenkopiert werden soll  
   
@@ -39,20 +39,20 @@ ms.locfileid: "48180290"
   
     -   Name der Datendatei, in die Fehlermeldungen zum Massenkopiervorgang ausgegeben werden sollen (geben Sie NULL an, wenn keine Meldungsdatei erstellt werden soll)  
   
-    -   Kopierrichtung: DB_IN, wenn Daten aus der Datei in die Tabelle oder Sicht kopiert werden sollen  
+    -   Die Richtung der Kopie: DB_IN, wenn Daten aus der Datei auf die Tabelle oder Sicht.  
   
-5.  Rufen Sie [Bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) zum Lesen der Formatdatei beschreibt die Datendatei, die von der Massenkopiervorgang verwendet werden.  
+5.  Rufen Sie [bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) auf, um eine Formatdatei zu lesen, welche die vom Massenkopiervorgang verwendete Datendatei beschreibt.  
   
-6.  Rufen Sie [Bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) um den Massenkopiervorgang auszuführen.  
+6.  Rufen Sie [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) auf, um den Massenkopiervorgang auszuführen.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
- Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Homepage [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treibername lautet "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
+ Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treibername lautet "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Führen Sie das erste ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die Tabelle zu erstellen, die im Beispiel verwendete code.  
+ Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die im Beispiel verwendete Tabelle zu erstellen.  
   
  Kopieren Sie das zweite Codelisting, und fügen Sie es in eine Datei mit dem Namen Bcpfmt.fmt ein. Jede Spalte in der Tabelle wird durch ein Tabstoppzeichen getrennt.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom user interface [Integration Services]
@@ -15,12 +13,12 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2c291f88128442431c0a6e60250600d8866519fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cabe3abc2a6ce962a101f8dd2910bd37125f9eea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125610"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353185"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Entwickeln benutzerdefinierter Objekte für Integration Services
   Wenn die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthaltene Ablaufsteuerung und die Datenflussobjekte nicht vollständig Ihren Anforderungen entsprechen, können Sie eine Vielzahl von Typen benutzerdefinierter Objekte selbst entwickeln, darunter:  
@@ -61,9 +59,9 @@ ms.locfileid: "48125610"
 ## <a name="base-classes-attributes-and-important-methods"></a>Basisklassen, Attribute und wichtige Methoden  
  Die nachfolgende Tabelle bietet eine einfache Übersicht über die meisten wichtigen Elemente im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Objektmodell für die einzelnen Typen von benutzerdefinierten Objekten, die Sie entwickeln können.  
   
-|Benutzerdefiniertes Objekt|Basisklasse|attribute|Wichtige Methoden|  
+|Benutzerdefiniertes Objekt|Basisklasse|Attribut|Wichtige Methoden|  
 |-------------------|----------------|---------------|-----------------------|  
-|Task|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
+|Aufgabe|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
 |Ziel-Editor für Dimensionsverarbeitung|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
 |Protokollanbieter|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>|  
 |Enumerator|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A>|  
@@ -102,7 +100,7 @@ ms.locfileid: "48125610"
   
 |Benutzerdefiniertes Objekt|Basisklasse für Benutzeroberfläche|Standardmäßiges Bearbeitungsverhalten, wenn keine benutzerdefinierte Benutzeroberfläche bereitgestellt wird|  
 |-------------------|-----------------------------------|----------------------------------------------------------------------|  
-|Task|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|Nur das Eigenschaftenfenster|  
+|Aufgabe|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|Nur das Eigenschaftenfenster|  
 |Ziel-Editor für Dimensionsverarbeitung|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>|Nur das Eigenschaftenfenster|  
 |Protokollanbieter|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> (Nicht in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implementiert)|Textfeld in der Spalte **Konfiguration**|  
 |Enumerator|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI>|Nur das Eigenschaftenfenster. Der Bereich für die Enumeratorkonfiguration des Editors ist leer.|  
@@ -110,9 +108,9 @@ ms.locfileid: "48125610"
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   Blogeintrag; [Erstellungsprozess für Visual Studio-Projektmappen gibt eine Warnung über die indirekte Abhängigkeit von der .NET Framework-Assembly aufgrund von SSIS-Verweisen zurück](http://go.microsoft.com/fwlink/?LinkId=215662) (auf blogs.msdn.com).  
+-   Blogeintrag; [Erstellungsprozess für Visual Studio-Projektmappen gibt eine Warnung über die indirekte Abhängigkeit von der .NET Framework-Assembly aufgrund von SSIS-Verweisen zurück](https://go.microsoft.com/fwlink/?LinkId=215662) (auf blogs.msdn.com).  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Beibehalten von benutzerdefinierten Objekten](persisting-custom-objects.md)   

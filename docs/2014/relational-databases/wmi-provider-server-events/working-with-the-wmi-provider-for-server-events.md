@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - event notifications [WMI]
@@ -22,18 +20,18 @@ ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bd4def614340115bafc6046b4d0ea9d90f647e9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0519561b24d8aff32adc7c375657fa85b9dfa496
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060172"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376213"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Verwenden des WMI-Anbieters für Serverereignisse
   Dieses Thema enthält Richtlinien, die Sie vor dem Programmieren mit dem WMI-Anbieter für Serverereignisse lesen sollten.  
   
 ## <a name="enabling-service-broker"></a>Aktivieren von Service Broker  
- Der WMI-Anbieter für Serverereignisse übersetzt WQL-Abfragen für Ereignisse in Ereignisbenachrichtigungen in der Zieldatenbank. Kenntnisse darüber, wie Ereignisbenachrichtigungen funktionieren, können bei der Programmierung mit dem Anbieter hilfreich sein. Weitere Informationen finden Sie unter [Konzepte des WMI-Anbieters für Serverereignisse](http://technet.microsoft.com/library/ms180560.aspx).  
+ Der WMI-Anbieter für Serverereignisse übersetzt WQL-Abfragen für Ereignisse in Ereignisbenachrichtigungen in der Zieldatenbank. Kenntnisse darüber, wie Ereignisbenachrichtigungen funktionieren, können bei der Programmierung mit dem Anbieter hilfreich sein. Weitere Informationen finden Sie unter [Konzepte des WMI-Anbieters für Serverereignisse](https://technet.microsoft.com/library/ms180560.aspx).  
   
  Da die vom WMI-Anbieter erstellten Ereignisbenachrichtigungen Meldungen zu Serverereignissen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senden, muss dieser Dienst aktiviert sein, wenn die Ereignisse generiert werden. Wenn Ihr Programm Ereignisse in einer Serverinstanz abfragt, muss der [!INCLUDE[ssSB](../../includes/sssb-md.md)] dieser Instanz in msdb aktiviert sein, da dies der Speicherort des [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Zieldiensts (mit dem Namen SQL/Notifications/ProcessWMIEventProviderNotification/v1.0) ist, der vom Anbieter erstellt wird. Wenn Ihr Programm Ereignisse in einer Datenbank oder in einem bestimmten Datenbankobjekt abfragt, muss der [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Dienst in dieser Zieldatenbank aktiviert sein. Wenn der entsprechende [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Dienst nach dem Bereitstellen der Anwendung nicht aktiviert wird, werden die von der zugrundeliegenden Ereignisbenachrichtigung generierten Ereignisse an die Warteschlange des von der Ereignisbenachrichtigung verwendeten Diensts gesendet, aber erst nach der Aktivierung des [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Diensts an die WMI-Verwaltungsanwendung zurückgegeben.  
   
@@ -64,7 +62,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
 -   Zum Erstellen einer Ereignisbenachrichtigung, die sich auf eine Warteschlange bezieht, ist mindestens die ALTER-Berechtigung für die Warteschlange erforderlich.  
   
- Informationen dazu, wie WQL-Abfragen zugewiesen sind, finden Sie unter [Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse](http://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
+ Informationen dazu, wie WQL-Abfragen zugewiesen sind, finden Sie unter [Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
   
  Betrachten Sie zur Darstellung des Bereichs eine WMI-Anbieteranwendung, die die folgende WQL-Abfrage enthält:  
   
@@ -111,9 +109,9 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY oder REVOKE (Gilt nur für die Berechtigungen ALTER DATABASE, ALTER ANY DATABASE EVENT NOTIFICATION, CREATE DATABASE DDL EVENT NOTIFICATION, CONTROL SERVER, ALTER ANY EVENT NOTIFICATION, CREATE DDL EVENT NOTIFICATION oder CREATE TRACE EVENT NOTIFICATION.)  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>Verwenden von Ereignisdaten auf der Clientseite  
- Nachdem der WMI-Anbieter für Serverereignisse die erforderliche ereignisbenachrichtigung in der Zieldatenbank erstellt sendet die ereignisbenachrichtigung Ereignisdaten an den Zieldienst in ' msdb ' mit dem Namen **SQL/Notifications/ProcessWMIEventProviderNotification /V1.0**. Der Zieldienst fügt das Ereignis in einer Warteschlange in `msdb` mit dem Namen **WMIEventProviderNotificationQueue**. (Sowohl für den Dienst als auch für die Warteschlange werden dynamisch erstellt vom Anbieter beim ersten Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Der Anbieter liest die XML-Ereignisdaten aus dieser Warteschlange, wandelt sie in MOF-Daten (Managed Object Format) um und gibt sie dann an die Clientanwendung zurück. Die MOF-Daten bestehen aus den Eigenschaften des Ereignisses, das von der WQL-Abfrage als CIM-Classendefinition (Common Information Model) angefordert wird. Jede Eigenschaft verfügt über einen entsprechenden CIM-Typ. Die `SPID`-Eigenschaft wird beispielsweise als CIM-Typ `Sint32` zurückgegeben. Die CIM-Typen für die einzelnen Eigenschaften finden Sie unter jede Ereignisklasse in [WMI-Anbieter für Server Ereignisklassen und Eigenschaften](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
+ Nachdem der WMI-Anbieter für Serverereignisse die erforderliche ereignisbenachrichtigung in der Zieldatenbank erstellt sendet die ereignisbenachrichtigung Ereignisdaten an den Zieldienst in ' msdb ' mit dem Namen **SQL/Notifications/ProcessWMIEventProviderNotification /V1.0**. Der Zieldienst fügt das Ereignis in einer Warteschlange in `msdb` mit dem Namen **WMIEventProviderNotificationQueue**. (Sowohl der Dienst als auch die Warteschlange werden vom Anbieter beim Herstellen der ersten Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dynamisch erstellt.) Der Anbieter liest die XML-Ereignisdaten aus dieser Warteschlange, wandelt sie in MOF-Daten (Managed Object Format) um und gibt sie dann an die Clientanwendung zurück. Die MOF-Daten bestehen aus den Eigenschaften des Ereignisses, das von der WQL-Abfrage als CIM-Classendefinition (Common Information Model) angefordert wird. Jede Eigenschaft verfügt über einen entsprechenden CIM-Typ. Die `SPID`-Eigenschaft wird beispielsweise als CIM-Typ `Sint32` zurückgegeben. Die CIM-Typen für die einzelnen Eigenschaften finden Sie unter jede Ereignisklasse in [WMI-Anbieter für Server Ereignisklassen und Eigenschaften](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konzepte des WMI-Anbieters für Serverereignisse](http://technet.microsoft.com/library/ms180560.aspx)  
+ [Konzepte des WMI-Anbieters für Serverereignisse](https://technet.microsoft.com/library/ms180560.aspx)  
   
   

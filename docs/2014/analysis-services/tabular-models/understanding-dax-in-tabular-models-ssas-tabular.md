@@ -11,12 +11,12 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4bc835d09f02e170c3b5595495eb6554c1319df5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: fc2274fc3342c1a6cc11053c0f226232632bc225
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906380"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374142"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Grundlegendes zu DAX in tabellarischen Modellen (SSAS – tabellarisch)
   Data Analysis Expressions (DAX) ist die Formelsprache, mit der benutzerdefinierte Berechnungen in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Microsoft Excel-Arbeitsmappen und tabellarische [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modellprojekte erstellt werden. DAX-Formeln beinhalten Funktionen, Operatoren und Werte zum Ausführen erweiterter Berechnungen für Daten in Tabellen und Spalten.  
@@ -52,9 +52,9 @@ ms.locfileid: "48906380"
 ##  <a name="bkmk_DAXintm"></a> DAX in tabellarischen Modellen  
  In [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] und tabellarischen Modellen besteht kein funktioneller Unterschied bezüglich der Art und Weise, wie DAX-Formeln Werte aus den entsprechenden Datasets berechnen. Die Stelle, an der DAX-Formeln in der Arbeitsmappe und Modellerstellungstools erstellt werden und Kontext in bestimmten Measures ausgewertet wird, unterscheidet sich jedoch.  
   
- In [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] werden Berechnungsformeln in der Regel vom Benutzer der Arbeitsmappe für die Self-Service-Business Intelligence-Analyse erstellt. Berechnete Spalten werden für eine Tabelle im PowerPivot-Fenster erstellt, und Measures werden in PivotTables oder im Berechnungsbereich erstellt. Im Gegensatz zu Projekten für tabellarische Modelle bieten PowerPivot-Arbeitsmappen keine rollenbasierte Sicherheit, die mithilfe von DAX-Formeln Daten sichern kann.  
+ In [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]werden Berechnungsformeln in der Regel vom Benutzer der Arbeitsmappe für die Self-Service-Business Intelligence-Analyse erstellt. Berechnete Spalten werden für eine Tabelle im PowerPivot-Fenster erstellt, und Measures werden in PivotTables oder im Berechnungsbereich erstellt. Im Gegensatz zu Projekten für tabellarische Modelle bieten PowerPivot-Arbeitsmappen keine rollenbasierte Sicherheit, die mithilfe von DAX-Formeln Daten sichern kann.  
   
- In Projekten für tabellarische Modelle werden Berechnungsformeln von Modellentwicklern im Modell-Designer von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellt. Während Werte für mit DAX-Formeln berechnete Spalten sofort in der Tabelle im Modell-Designer angezeigt werden, werden Measures, abgesehen von der Measure-Vorschaufunktion im Measureraster, erst berechnet, nachdem ein Benutzer einen Filter in einem Berichterstellungsclient wie [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] oder in PivotTables in Microsoft Excel angegeben hat.  
+ In Projekten für tabellarische Modelle werden Berechnungsformeln von Modellentwicklern im Modell-Designer von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellt. Während Werte für mit DAX-Formeln berechnete Spalten sofort in der Tabelle im Modell-Designer angezeigt werden, werden Measures, abgesehen von der Measurevorschaufeature im Measureraster, erst berechnet, nachdem ein Benutzer einen Filter in einem Berichterstellungsclient wie [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] oder in PivotTables in Microsoft Excel angegeben hat.  
   
  Wenn Sie eine PowerPivot-Arbeitsmappe mit der Projektvorlage Aus PowerPivot importieren in ein neues tabellarisches Modellprojekt importieren, werden DAX-Formeln für berechnete Spalten automatisch im neuen tabellarischen Modell erstellt. DAX-Formeln für implizite und explizite Measures in der Arbeitsmappe werden automatisch im neuen tabellarischen Modell als explizite Measures erstellt. Da PowerPivot-Arbeitsmappen noch keine Filterfunktionen für Rollen und sichere Zeilen enthalten, müssen Sie mindestens eine Rolle im neuen tabellarischen Modell erstellen, um Rollenmitgliedern Zugriff auf Modelldaten zu erteilen. DAX-Formeln in Zeilenfiltern sind nur erforderlich, wenn Sie Tabellendaten auf der Zeilenebene schützen möchten.  
   
@@ -78,16 +78,16 @@ ms.locfileid: "48906380"
   
  Der Grund dafür, dass Sie die (gefilterten) Ergebnisse der Berechnung nicht sofort einsehen können, ist, dass das Ergebnis eines Measures ohne einen Kontext nicht bestimmt werden kann. Das Auswerten eines Measures erfordert eine Clientanwendung zur Berichtserstellung, die in der Lage ist, den erforderlichen Kontext bereitzustellen, um die relevanten Daten für jede Zelle abrufen und anschließend den Ausdruck für jede Zelle auswerten zu können. Dieser Client kann eine Excel PivotTable oder PivotChart, ein [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Bericht oder eine MDX-Abfrage sein. Unabhängig vom Berichterstellungsclient wird tatsächlich für jede Zelle in den Ergebnissen eine separate Abfrage ausgeführt. Demzufolge generiert jede Kombination aus Zeilen- und Spaltenüberschriften in einer PivotTable und jede Auswahl von Slicern und Filtern in einem [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Bericht eine andere Teilmenge der Daten, für die das Measure berechnet wird. Wenn ein Benutzer beispielsweise in einem Measure mit der Formel `Total Sales:=SUM([Sales Amount])`das Total Sales-Measure im Fenster Werte in einer PivotTable und anschließend die Product Category-Spalte aus einer Product-Tabelle im Fenster Zeilenfilter einfügt, wird die Summe von Sales Amount berechnet und für jede Produktkategorie angezeigt.  
   
- Anders als bei berechneten Spalten und Zeilenfiltern enthält die Syntax für ein Measure den Namen des Measures vor der Formel. Im obigen Beispiel wird der Name **Total Sales:** vor der Formel angezeigt. Nachdem Sie ein Measure erstellt haben, werden der Name und die Definition in der Feldliste der Clientanwendung zur Berichtserstellung angezeigt, und das Measure steht, abhängig von Perspektiven und Rollen, allen Benutzern des Modells zur Verfügung.  
+ Im Gegensatz zu berechneten Spalten und Zeilenfiltern enthält die Syntax für ein Measure den Namen des Measures vor der Formel. Im obigen Beispiel wird der Name **Total Sales:** vor der Formel angezeigt. Nachdem Sie ein Measure erstellt haben, werden der Name und die Definition in der Feldliste der Clientanwendung zur Berichtserstellung angezeigt, und das Measure steht, abhängig von Perspektiven und Rollen, allen Benutzern des Modells zur Verfügung.  
   
  Weitere Informationen finden Sie unter [Measures &#40;SSAS – tabellarisch&#41;](measures-ssas-tabular.md).  
   
 ### <a name="row-filters"></a>Zeilenfilter  
  Zeilenfilter definieren, welche Zeilen in einer Tabelle für Mitglieder einer bestimmten Rolle sichtbar sind. Zeilenfilter können für jede Tabelle in einem Modell mithilfe von DAX-Formeln erstellt werden. Zeilenfilter werden für eine bestimmte Rolle mit dem Rollen-Manager in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellt. Zeilenfilter können auch für ein bereitgestelltes Modell mit Rolleneigenschaften in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]definiert werden.  
   
- In einem Zeilenfilter definiert eine DAX-Formel, die den booleschen Wert TRUE oder FALSE ergeben muss, die Zeilen, die von Mitgliedern dieser spezifischen Rolle in Form der Abfrageergebnisse zurückgegeben werden können. Nicht in der DAX-Formel enthaltene Zeilen können nicht zurückgegeben werden. Beispielsweise können Mitglieder der Sales-Rolle in der Customers-Tabelle mit der DAX-Formel `=Customers[Country] = “USA”`nur Daten für Kunden in den USA anzeigen. Außerdem werden Aggregate, z.B. SUM, nur für Kunden in den USA zurückgegeben.  
+ In einem Zeilenfilter definiert eine DAX-Formel, die den booleschen Wert TRUE oder FALSE ergeben muss, die Zeilen, die von Mitgliedern dieser spezifischen Rolle in Form der Abfrageergebnisse zurückgegeben werden können. Nicht in der DAX-Formel enthaltene Zeilen können nicht zurückgegeben werden. Beispielsweise können Mitglieder der Sales-Rolle in der Customers-Tabelle mit der DAX-Formel `=Customers[Country] = "USA"`nur Daten für Kunden in den USA anzeigen. Außerdem werden Aggregate, z.B. SUM, nur für Kunden in den USA zurückgegeben.  
   
- Wenn Sie mithilfe der DAX-Formel einen Zeilenfilter definieren, erstellen Sie ein zulässiges Rowset. Dadurch wird der Zugriff auf andere Zeilen nicht verweigert, sie werden vielmehr nicht als Teil des zulässigen Rowsets zurückgegeben Andere Rollen können Zugriff auf die von der DAX-Formel ausgeschlossenen Zeilen gewähren. Wenn ein Benutzer einer anderen Rolle angehört und der Zeilenfilter dieser Rolle Zugriff auf dieses bestimmte Rowset gewährt, kann der Benutzer die Daten für diese Zeile anzeigen.  
+ Wenn Sie mithilfe der DAX-Formel einen Zeilenfilter definieren, erstellen Sie ein zulässiges Rowset. Dadurch wird der Zugriff auf andere Zeilen nicht verweigert, sie werden vielmehr nicht als Teil des zulässigen Rowsets zurückgegeben Andere Rollen können Zugriff auf die von der DAX-Formel ausgeschlossenen Zeilen gewähren. Wenn ein Benutzer Mitglied einer anderen Rolle ist, und Zeilenfilter dieser Rolle Zugriff auf dieses bestimmte Rowset zulassen, kann der Benutzer Daten für diese Zeile anzeigen.  
   
  Zeilenfilter gelten für die angegebenen sowie für verknüpfte Zeilen. Wenn eine Tabelle über mehrere Beziehungen verfügt, wird die Sicherheit für die aktive Beziehung mithilfe von Filtern gewährleistet. Für Zeilenfilter und Zeilenfilter, die für verknüpfte Tabellen definiert wurden, wird eine Schnittmenge gebildet.  
   
@@ -106,11 +106,11 @@ ms.locfileid: "48906380"
 |Textmodus|Zeichenfolge|Eine Unicodezeichen-Datenzeichenfolge. Dies können Zeichenfolgen, Zahlen oder Datumsangaben im Textformat sein.|  
 |date|Date/Time|Datumsangaben und Uhrzeiten in einer akzeptierten Form für die Darstellung von Datum und Uhrzeit.<br /><br /> Gültig sind alle Datumsangaben nach dem 1. März 1900.|  
 |Währung|Währung|Der Währungsdatentyp lässt Werte zwischen -922 337 203 685 477,5808 und 922 337 203 685 477,5807 mit vier Dezimalstellen unveränderlicher Genauigkeit zu.|  
-|–|Leer|Ein leerer Datentyp in DAX, der SQL-NULLEN darstellt und ersetzt. Sie können mit der BLANK-Funktion ein Leerzeichen erstellen und mit der logischen ISBLANK-Funktion nach Leerzeichen suchen.|  
+|Nicht zutreffend|Leer|Ein leerer Datentyp in DAX, der SQL-NULLEN darstellt und ersetzt. Sie können mit der BLANK-Funktion ein Leerzeichen erstellen und mit der logischen ISBLANK-Funktion nach Leerzeichen suchen.|  
   
  Tabellarische Modelle beinhalten auch den Table-Datentyp als Eingabe oder Ausgabe für viele DAX-Funktionen. Beispielsweise nimmt die FILTER-Funktion eine Tabelle als Eingabe an und gibt eine neue Tabelle aus, die nur die Zeilen enthält, die die Filterbedingungen erfüllen. Die Kombination von Tabellen- und Aggregationsfunktionen ermöglicht Ihnen die Ausführung komplexer Berechnungen für dynamisch definierte Datasets.  
   
- Obwohl Datentypen in der Regel automatisch festgelegt werden, ist es wichtig, ihre Funktion und Gültigkeit zu verstehen. Dies gilt insbesondere für DAX-Formeln. Fehler in Formeln oder unerwartete Ergebnisse werden z. B. oft von einem bestimmten Operator verursacht, der nicht mit einem in einem Argument angegebenen Datentyp verwendet werden kann. Die Formel `= 1 & 2`gibt z.B. ein Zeichenfolgenergebnis von 12 zurück, die Formel `= “1” + “2”` dagegen die ganze Zahl 3.  
+ Obwohl Datentypen in der Regel automatisch festgelegt werden, ist es wichtig, ihre Funktion und Gültigkeit zu verstehen. Dies gilt insbesondere für DAX-Formeln. Fehler in Formeln oder unerwartete Ergebnisse werden z. B. oft von einem bestimmten Operator verursacht, der nicht mit einem in einem Argument angegebenen Datentyp verwendet werden kann. Die Formel `= 1 & 2`gibt z.B. ein Zeichenfolgenergebnis von 12 zurück, die Formel `= "1" + "2"` dagegen die ganze Zahl 3.  
   
  Ausführliche Informationen zu Datentypen in tabellarischen Modellen und expliziten und impliziten Konvertierungen von Datentypen in DAX finden Sie unter [Unterstützte Datentypen &#40;SSAS – tabellarisch&#41;](data-types-supported-ssas-tabular.md).  
   
@@ -216,7 +216,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   DAX beinhaltet viele Funktionen, die keinen Wert, sondern eine Tabelle zurückgeben. In einem Berichtserstellungsclient wird diese Tabelle nicht angezeigt, sondern als Eingabe für andere Funktionen verwendet. Sie können z. B. eine Tabelle abrufen und dann die unterschiedlichen Werte darin zählen oder dynamische Summen von gefilterten Tabellen oder Spalten berechnen.  
   
--   Zu den DAX-Funktionen zählen auch verschiedene *Zeitintelligenzfunktionen* . Mit diesen Funktionen können Sie Datumsbereiche definieren oder auswählen und dynamische Berechnungen auf Grundlage dieser Datumsangaben oder Bereiche durchführen. Sie können z. B. Summen über parallele Zeiträume vergleichen.  
+-   Zu den DAX-Funktionen zählen auch verschiedene *Zeitintelligenzfunktionen* . Mit diesen Funktionen können Sie Datumsbereiche definieren oder auswählen und dynamische Berechnungen auf Grundlage dieser Datumsangaben oder Bereiche durchführen. Sie können z. B. Summen über parallele Zeiträume vergleichen.  
   
 ### <a name="date-and-time-functions"></a>Datums- und Uhrzeitfunktionen  
  Die Datums- und Uhrzeitfunktionen in DAX funktionieren ebenfalls ähnlich wie in Microsoft Excel. DAX-Funktionen basieren jedoch auf den von Microsoft SQL Server verwendeten `datetime`-Datentypen. Weitere Informationen finden Sie unter [Datums- und Uhrzeitfunktionen &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
@@ -265,7 +265,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Es gibt verschiedene Typen von Kontext: *Zeilenkontext*, *Abfragekontext*und *Filterkontext*.  
   
 ###  <a name="bkmk_row_context"></a> Zeilenkontext  
- Der*Zeilenkontext* kann als „die aktuelle Zeile“ betrachtet werden. Wenn Sie in einer berechneten Spalte eine Formel erstellen, enthält der Zeilenkontext für diese Formel die Werte aller Spalten in der aktuellen Zeile. Wenn die Tabelle mit einer anderen Tabelle verknüpft ist, enthält der Kontext auch alle Werte aus der anderen Tabelle, die mit der aktuellen Zeile verknüpft sind.  
+ *Zeilenkontext* können als "die aktuelle Zeile" betrachtet werden. Wenn Sie in einer berechneten Spalte eine Formel erstellen, enthält der Zeilenkontext für diese Formel die Werte aller Spalten in der aktuellen Zeile. Wenn die Tabelle mit einer anderen Tabelle verknüpft ist, enthält der Kontext auch alle Werte aus der anderen Tabelle, die mit der aktuellen Zeile verknüpft sind.  
   
  Angenommen, Sie erstellen die berechnete Spalte `=[Freight] + [Tax]`, die Werte aus zwei Spalten (Fracht und Steuer) aus derselben Tabelle addiert. Diese Formel ruft automatisch nur die Werte der aktuellen Zeile in der angegebenen Spalte ab.  
   
@@ -387,7 +387,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  *Neuberechnung* ist der Vorgang, bei dem die Ergebnisse von Formeln aktualisiert werden, um Änderungen an den Formeln sowie an den zugrunde liegenden Daten widerzuspiegeln. Neuberechnung kann die Leistung in folgender Weise beeinträchtigen:  
   
--   Die Werte in einer berechneten Spalte werden berechnet und im Modell gespeichert. Um die Werte in der berechneten Spalte zu aktualisieren, müssen Sie das Modell mit einem von drei Verarbeitungsbefehlen verarbeiten: Vollständig verarbeiten, Daten verarbeiten oder Prozessneuberechnung. Das Ergebnis der Formel muss immer für die ganze Spalte neu berechnet werden, wenn Sie die Formel ändern.  
+-   Die Werte in einer berechneten Spalte werden berechnet und im Modell gespeichert. Um die Werte in der berechneten Spalte zu aktualisieren, müssen Sie das Modell mit einem von drei verarbeitungsbefehlen - vollständig verarbeiten, Daten verarbeiten oder Prozessneuberechnung verarbeiten. Das Ergebnis der Formel muss immer für die ganze Spalte neu berechnet werden, wenn Sie die Formel ändern.  
   
 -   Die von Measures berechneten Werte werden dynamisch ausgewertet, sobald ein Benutzer einer PivotTable das Measure hinzufügt oder einen Bericht öffnet. Wenn der Benutzer den Kontext ändert, ändern sich die von dem Measure zurückgegebenen Werte. Die Ergebnisse des Measures spiegeln immer den aktuellen Stand des speicherinternen Caches wider.  
   
@@ -417,9 +417,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="bkmk_addional_resources"></a> Zusätzliche Ressourcen  
  [Tabellenmodellierung &#40;Adventure Works-Tutorial&#41;](../tabular-modeling-adventure-works-tutorial.md) stellt Schritt-für-Schritt-Anleitungen zum Erstellen eines tabellarischen Modells bereit, das viele Berechnungen in berechneten Spalten, Measures und Zeilenfiltern enthält. Für die meisten Formeln ist eine Beschreibung ihrer Funktion verfügbar.  
   
- Die [Analysis Services und PowerPivot-Teamblog](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) enthält Informationen, Tipps, Neuigkeiten und Ankündigungen über [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] und PowerPivot.  
+ Die [Analysis Services und PowerPivot-Teamblog](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) enthält Informationen, Tipps, Neuigkeiten und Ankündigungen über [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] und PowerPivot.  
   
- Im [DAX-Ressourcencenter](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) finden Sie sowohl interne als auch externe Informationen zu DAX, z.B. zahlreiche DAX-Lösungen von führenden Business Intelligence-Experten.  
+ Im [DAX-Ressourcencenter](https://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) finden Sie sowohl interne als auch externe Informationen zu DAX, z.B. zahlreiche DAX-Lösungen von führenden Business Intelligence-Experten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Data Analysis Expressions &#40;DAX&#41; Verweis](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   

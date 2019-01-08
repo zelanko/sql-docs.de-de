@@ -20,12 +20,12 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 071ef09e796f5b44076c4b6d00b780f2822e7168
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dfe88f11cc26d4a9711b7f21caf4c4475ec954b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227910"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351325"
 ---
 # <a name="binding-parameters"></a>Binden von Parametern
   Jede Parametermarkierung in einer SQL-Anweisung muss mit einer Variablen in der Anwendung verknüpft oder an diese gebunden werden, bevor die Anweisung ausgeführt wird. Dies erfolgt durch Aufrufen der [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) Funktion. **SQLBindParameter** beschreibt die Programmvariable (Adresse, C-Datentyp usw.) an den Treiber. Ferner identifiziert sie die Parametermarkierung durch Angabe ihres Ordinalwerts und beschreibt anschließend die Eigenschaften des SQL-Objekts, das sie darstellt (SQL-Datentyp, Genauigkeit usw.).  
@@ -56,7 +56,7 @@ ms.locfileid: "48227910"
   
  Benannte Parameter werden nur unterstützt, wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] `EXECUTE` -Anweisung oder die ODBC CALL-Escapesequenz zum Ausführen einer gespeicherten Prozedur.  
   
- Wenn `SQL_DESC_NAME` für einen gespeicherten Prozedurparameter festgelegt wird, sollten alle gespeicherten Prozedurparameter in der Abfrage ebenfalls `SQL_DESC_NAME` festlegen.  Wenn Literale in gespeicherten Prozeduraufrufen verwendet werden, verfügen über Parameter `SQL_DESC_NAME` festlegen, sollten die Literale das Format verwenden *"Namen*=*Wert*", wobei *Namen* ist der Parametername der gespeicherten Prozedur (z. B. @p1). Weitere Informationen finden Sie unter [Bindungsparameter von Namen (Parameter genannt)](http://go.microsoft.com/fwlink/?LinkId=167215).  
+ Wenn `SQL_DESC_NAME` für einen gespeicherten Prozedurparameter festgelegt wird, sollten alle gespeicherten Prozedurparameter in der Abfrage ebenfalls `SQL_DESC_NAME` festlegen.  Wenn Literale in gespeicherten Prozeduraufrufen verwendet werden, verfügen über Parameter `SQL_DESC_NAME` festlegen, sollten die Literale das Format verwenden *"Namen*=*Wert*", wobei *Namen* ist der Parametername der gespeicherten Prozedur (z. B. @p1). Weitere Informationen finden Sie unter [Bindungsparameter von Namen (Parameter genannt)](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von Anweisungsparametern](using-statement-parameters.md)  

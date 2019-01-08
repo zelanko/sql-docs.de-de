@@ -1,5 +1,5 @@
 ---
-title: Native Bewertung in SQL Server-Machine Learning | Microsoft-Dokumentation
+title: Native Bewertung mit VORHERSAGEN für T-SQL-Anweisung – SQL Server Machine Learning Services
 description: Generieren von Vorhersagen mit der VORHERSAGE für T-SQL-Funktion, die Bewertung der Dta-Eingaben für ein vorab trainiertes Modell in R oder Python geschrieben sind, auf SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: a14a4b188aa27acdef0bc836e939a7df0021e522
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713152"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645129"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Native Bewertung mithilfe der VORHERSAGEN für T-SQL-Funktion
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Nicht unterstützte Modelltypen umfassen die folgenden Typen:
 + PMML-Modelle
 + Mit anderen Bibliotheken Open Source- oder von Drittanbietern erstellte Modelle
 
-## <a name="example-predict-t-sql"></a>Beispiel: VORHERSAGEN Sie (T-SQL)
+## <a name="example-predict-t-sql"></a>Beispiel: VORHERSAGEN SIE (T-SQL)
 
 In diesem Beispiel stellen Sie ein Modell erstellen, und rufen dann die echtzeitvorhersage-Funktion von T-SQL.
 
@@ -78,7 +78,7 @@ In diesem Beispiel stellen Sie ein Modell erstellen, und rufen dann die echtzeit
 
 Führen Sie den folgenden Code zum Erstellen der Beispieldatenbank und die erforderlichen Tabellen.
 
-```SQL
+```sql
 CREATE DATABASE NativeScoringTest;
 GO
 USE NativeScoringTest;
@@ -95,7 +95,7 @@ GO
 
 Verwenden Sie die folgende Anweisung zum Auffüllen der Datentabelle mit Daten aus der **Iris** Dataset.
 
-```SQL
+```sql
 INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -107,7 +107,7 @@ GO
 
 Erstellen Sie nun eine Tabelle zum Speichern von Modellen.
 
-```SQL
+```sql
 DROP TABLE IF EXISTS ml_models;
 GO
 CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
@@ -118,7 +118,7 @@ GO
 
 Der folgende Code erstellt ein Modell basierend auf den **Iris** Dataset und speichert es in der Tabelle, die mit dem Namen **Modelle**.
 
-```SQL
+```sql
 DECLARE @model varbinary(max);
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -138,7 +138,7 @@ EXECUTE sp_execute_external_script
 
 Sie können eine Anweisung ähnlich der folgenden im Binärformat an das gespeicherte Modell ausführen:
 
-```SQL
+```sql
 SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
@@ -147,7 +147,7 @@ FROM ml_models;
 
 Die folgende einfache PREDICT-Anweisung ruft eine Klassifizierung ab, von der Entscheidung Tree-Modell unter Verwendung der **nativen Bewertung** Funktion. Es sagt die Iris-Arten basierend auf Attribute, die Sie bereitstellen, des kelchblatts sowie Länge und Breite.
 
-```SQL
+```sql
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models
@@ -168,5 +168,5 @@ Wenn Sie eine Fehlermeldung erhalten, Fehler"bei der Ausführung der PREDICT-Fun
 
 Eine vollständige Lösung, die enthält nativen Bewertung, finden Sie in diesen Beispielen aus dem SQL Server-Entwicklungsteam:
 
-+ Stellen Sie Ihre ML-Skript: [mit einem Python-Modell](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
-+ Stellen Sie Ihre ML-Skript: [mithilfe eines R-Modells](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
++ Bereitstellen Sie Ihres ML-Skripts: [Verwenden ein Python-Modell](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ Bereitstellen Sie Ihres ML-Skripts: [Mithilfe eines R-Modells](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sendmailtask.f1
@@ -19,12 +18,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 799fe96b22881af08f1c94b10b44bd0038fa78a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f1bcb08da6b28555502bb39658fb2f1fcbacb3b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064820"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354283"
 ---
 # <a name="send-mail-task"></a>Mail senden (Task)
   Der Task 'Mail senden' sendet eine E-Mail. Mithilfe des Tasks 'Mail senden' kann ein Paket Nachrichten senden, wenn Tasks im Paket-Workflow erfolgreich ausgeführt werden oder einen Fehler erzeugen, oder Nachrichten als Antwort auf ein Ereignis senden, das vom Paket zur Laufzeit ausgelöst wird. Beispielsweise kann mit diesem Task ein Datenbankadministrator über das erfolgreiche Ausführen des Tasks Datenbank sichern benachrichtigt werden.  
@@ -70,9 +69,9 @@ ms.locfileid: "48064820"
   
  Klicken Sie auf eines der folgenden Themen, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task Mail senden &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task „Mail senden“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor für den Task Mail senden &#40;e-Mail-Seite&#41;](../send-mail-task-editor-mail-page.md)  
+-   [Editor für den Task „Mail senden“ &#40;Seite „E-Mail“&#41;](../send-mail-task-editor-mail-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48064820"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Technischer Artikel [Vorgehensweise: Senden von E-Mails mit Zustellungsbenachrichtigung in C#](http://go.microsoft.com/fwlink/?LinkId=237625)(Gewusst wie: Senden von E-Mails mit Zustellungsbenachrichtigung in C#) auf shareourideas.com  
+-   Technischer Artikel [Vorgehensweise: Senden von E-Mails mit Zustellungsbenachrichtigung in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Gewusst wie: Senden von E-Mails mit Zustellungsbenachrichtigung in C#) auf shareourideas.com  
   
 ## <a name="see-also"></a>Siehe auch  
  [Integration Services-Tasks](integration-services-tasks.md)   

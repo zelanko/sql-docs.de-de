@@ -21,31 +21,31 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82b31b8a2a1a50b1ee3c9cad37f8f5db5374c6cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229920"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370492"
 ---
 # <a name="changing-passwords-programmatically"></a>Programmgesteuertes Ändern von Kennwörtern
   Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] konnte nur ein Administrator ein abgelaufenes Kennwort eines Benutzers zurücksetzen. Beginnend mit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt die Verwaltung von abgelaufenen Kennwörtern sowohl programmgesteuert über die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber und über Änderungen an der **SQL Server-Anmeldung** Dialogfelder.  
   
 > [!NOTE]  
->  Fordern Sie, wenn möglich, Benutzer dazu auf, ihre Anmeldeinformationen zur Laufzeit einzugeben, um zu vermeiden, diese Informationen in einem persistenten Format speichern zu müssen. Wenn Sie die Anmeldeinformationen persistent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](http://go.microsoft.com/fwlink/?LinkId=64532). Weitere Informationen zur Verwendung von Kennwörtern finden Sie unter [Sichere Kennwörter](../../security/strong-passwords.md).  
+>  Fordern Sie, wenn möglich, Benutzer dazu auf, ihre Anmeldeinformationen zur Laufzeit einzugeben, um zu vermeiden, diese Informationen in einem persistenten Format speichern zu müssen. Wenn Sie die Anmeldeinformationen persistent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532). Weitere Informationen zur Verwendung von Kennwörtern finden Sie unter [Sichere Kennwörter](../../security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Fehlercodes bei der SQL Server-Anmeldung  
  Wenn eine Verbindung aufgrund von Authentifizierungsproblemen nicht hergestellt werden kann, wird für die Anwendung einer der folgenden SQL Server-Fehlercodes bereitgestellt, um Diagnose und Wiederherstellung zu erleichtern.  
   
 |SQL Server-Fehlercode|Fehlermeldung|  
 |---------------------------|-------------------|  
-|15113|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortüberprüfung. Das Konto ist gesperrt.|  
-|18463|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort kann zurzeit nicht verwendet werden.|  
-|18464|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort ist zu kurz und erfüllt daher nicht die Anforderungen der Richtlinie.|  
-|18465|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort ist zu lang und erfüllt daher nicht die Anforderungen der Richtlinie.|  
-|18466|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort ist nicht komplex genug und erfüllt daher nicht die Anforderungen der Windows-Richtlinie.|  
-|18467|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort erfüllt nicht die Anforderungen der Kennwortfilter-DLL.|  
-|18468|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Unerwarteter Fehler während der Kennwortüberprüfung.|  
+|15113|Fehler bei der Anmeldung für Benutzer ' %. * ls. Ursache: Fehler bei der Kennwortüberprüfung. Das Konto ist gesperrt.|  
+|18463|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort kann zurzeit nicht verwendet werden.|  
+|18464|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort ist zu kurz und erfüllt daher nicht die Anforderungen der Richtlinie.|  
+|18465|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort ist zu lang und erfüllt daher nicht die Anforderungen der Richtlinie.|  
+|18466|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort ist nicht komplex genug und erfüllt daher nicht die Anforderungen der Windows-Richtlinie.|  
+|18467|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort erfüllt nicht die Anforderungen der Kennwortfilter-DLL.|  
+|18468|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Unerwarteter Fehler während der Kennwortüberprüfung.|  
 |18487|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Das Kennwort des Kontos ist abgelaufen.|  
 |18488|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Das Kennwort des Kontos muss geändert werden.|  
   

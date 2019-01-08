@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying replication security settings
@@ -17,12 +16,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ffe50320214f9d2d21c28612d5ac3ffb348dda6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c4fd9221e363cb869f01c525a7f4b63b91132ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163760"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375632"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Anzeigen und Ändern von Replikationssicherheitseinstellungen
   In diesem Thema wird beschrieben, wie die Replikationssicherheitseinstellungen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angezeigt und geändert werden. Die Verbindung des Protokolllese-Agents mit dem Verleger ist beispielsweise als SQL Server-Authentifizierung festgelegt, und Sie möchten Sie zu Integrierte Windows-Authentifizierung ändern, oder Sie müssen die zum Ausführen eines Agentauftrags verwendeten Anmeldeinformationen ändern, weil sich das Kennwort eines Windows-Kontos geändert hat. Informationen zu den für die jeweiligen Agents erforderlichen Berechtigungen finden Sie unter [Sicherheitsmodell des Replikations-Agents](replication-agent-security-model.md).  
@@ -33,7 +32,7 @@ ms.locfileid: "48163760"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So zeigen Sie Replikationssicherheitseinstellungen an und ändern sie mit:**  
   
@@ -43,9 +42,9 @@ ms.locfileid: "48163760"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
--   **Nachverfolgung:**  [Nach dem Ändern der Replikationssicherheitseinstellungen](#FollowUp)  
+-   **Nachverfolgung:**  [Nach dem Ändern von replikationssicherheitseinstellungen](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48163760"
   
 ####  <a name="Permissions"></a> Berechtigungen  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Sie können die Sicherheitseinstellungen in den folgenden Dialogfeldern anzeigen und ändern:  
   
 1.  Im Dialogfeld **Replikationskennwörter aktualisieren** , das über den Ordner **Replikation** von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verfügbar ist. Wenn Sie das Kennwort eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - oder Windows-Kontos auf einem Server der Replikationstopologie ändern, verwenden Sie am besten dieses Dialogfeld, anstatt die Kennwörter jedes Agents, der dieses Konto verwendet, einzeln zu aktualisieren. Wenn jedoch Agents dasselbe Konto auf mehreren Servern verwenden, müssen Sie mit jedem Server eine Verbindung herstellen und das Kennwort ändern. Das Kennwort wird überall aktualisiert, wo es die Replikation verwendet. Das Kennwort wird nicht an anderen Orten, wie z. B. auf Verbindungsservern, aktualisiert.  
@@ -143,9 +142,9 @@ ms.locfileid: "48163760"
   
 1.  Im Dialogfeld **Abonnementeigenschaften - \<Subscription>** auf dem Verleger können Sie folgende Änderungen vornehmen:  
   
-    -   Um das Konto zu ändern, unter dem der Verteilungs-Agent ausgeführt wird und Verbindungen zum Verteiler herstellt, klicken Sie auf die Zeile **Agentprozesskonto** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie im Dialogfeld **Sicherheit für den Verteilungs-Agent** einen Anmeldenamen und ein Kennwort an.  
+    -   Um das Konto zu ändern, unter dem der Verteilungs-Agent ausgeführt wird und Verbindungen zum Verteiler herstellt, klicken Sie auf die Zeile **Agentprozesskonto**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie im Dialogfeld **Sicherheit für den Verteilungs-Agent** einen Anmeldenamen und ein Kennwort an.  
   
-    -   Um den Kontext zu ändern, in dem der Verteilungs-Agent Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Abonnentenverbindung** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
+    -   Um den Kontext zu ändern, in dem der Verteilungs-Agent Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Abonnentenverbindung**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
   
          Wenn Sie Abonnements mit verzögertem Update über eine Warteschlange verwenden, verwendet auch der Warteschlangenlese-Agent den hier angegebenen Kontext für Verbindungen zum Abonnenten.  
   
@@ -155,11 +154,11 @@ ms.locfileid: "48163760"
   
 1.  Im Dialogfeld **Abonnementeigenschaften - \<Subscription>** auf dem Abonnenten können Sie folgende Änderungen vornehmen:  
   
-    -   Um das Konto zu ändern, unter dem der Verteilungs-Agent ausgeführt wird und Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Agentprozesskonto** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie im Dialogfeld **Sicherheit für den Verteilungs-Agent** einen Anmeldenamen und ein Kennwort an.  
+    -   Um das Konto zu ändern, unter dem der Verteilungs-Agent ausgeführt wird und Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Agentprozesskonto**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie im Dialogfeld **Sicherheit für den Verteilungs-Agent** einen Anmeldenamen und ein Kennwort an.  
   
          Wenn Sie Abonnements mit verzögertem Update über eine Warteschlange verwenden, verwendet auch der Warteschlangenlese-Agent den hier angegebenen Kontext für Verbindungen zum Abonnenten.  
   
-    -   Um den Kontext zu ändern, in dem der Verteilungs-Agent Verbindungen zum Verteiler herstellt, klicken Sie auf die Zeile **Verteilerverbindung** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
+    -   Um den Kontext zu ändern, in dem der Verteilungs-Agent Verbindungen zum Verteiler herstellt, klicken Sie auf die Zeile **Verteilerverbindung**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -167,9 +166,9 @@ ms.locfileid: "48163760"
   
 1.  Im Dialogfeld **Abonnementeigenschaften - \<Subscription>** auf dem Verleger können Sie folgende Änderungen vornehmen:  
   
-    -   Um das Konto zu ändern, unter dem der Merge-Agent ausgeführt wird und Verbindungen zum Verleger und zum Verteiler herstellt, klicken Sie auf die Zeile **Agentprozesskonto** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie im Dialogfeld **Sicherheit für den Merge-Agent** einen Anmeldenamen und ein Kennwort an.  
+    -   Um das Konto zu ändern, unter dem der Merge-Agent ausgeführt wird und Verbindungen zum Verleger und zum Verteiler herstellt, klicken Sie auf die Zeile **Agentprozesskonto**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie im Dialogfeld **Sicherheit für den Merge-Agent** einen Anmeldenamen und ein Kennwort an.  
   
-    -   Um den Kontext zu ändern, in dem der Merge-Agent Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Abonnentenverbindung** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
+    -   Um den Kontext zu ändern, in dem der Merge-Agent Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Abonnentenverbindung**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -177,15 +176,15 @@ ms.locfileid: "48163760"
   
 1.  Im Dialogfeld **Abonnementeigenschaften - \<Subscription>** auf dem Abonnenten können Sie folgende Änderungen vornehmen:  
   
-    -   Um das Konto zu ändern, unter dem der Merge-Agent ausgeführt wird und Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Agentprozesskonto** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie im Dialogfeld **Sicherheit für den Merge-Agent** einen Anmeldenamen und ein Kennwort an.  
+    -   Um das Konto zu ändern, unter dem der Merge-Agent ausgeführt wird und Verbindungen zum Abonnenten herstellt, klicken Sie auf die Zeile **Agentprozesskonto**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie im Dialogfeld **Sicherheit für den Merge-Agent** einen Anmeldenamen und ein Kennwort an.  
   
-    -   Um den Kontext zu ändern, in dem der Merge-Agent Verbindungen zum Verleger und zum Verteiler herstellt, klicken Sie auf die Zeile **Verlegerverbindung** , und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
+    -   Um den Kontext zu ändern, in dem der Merge-Agent Verbindungen zum Verleger und zum Verteiler herstellt, klicken Sie auf die Zeile **Verlegerverbindung**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**). Geben Sie den Kontext im Dialogfeld **Verbindungsinformationen eingeben** an.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>So ändern Sie das Konto, unter dem der Warteschlangenlese-Agent ausgeführt wird  
   
-1.  Klicken Sie auf der Seite **Allgemein** des Dialogfelds **Verteilereigenschaften - \<Distributor>** auf die Schaltfläche mit den drei Punkten (**…**) neben der Verteilungsdatenbank.  
+1.  Klicken Sie auf der Seite **Allgemein** des Dialogfelds **Verteilereigenschaften - \<Distributor>** auf die Schaltfläche mit den drei Punkten (**...**) neben der Verteilungsdatenbank.  
   
 2.  Klicken Sie im Dialogfeld **Eigenschaften der Verteilungsdatenbank - \<Database>** auf die Schaltfläche **Sicherheitseinstellungen** neben dem Textfeld **Agentprozesskonto**.  
   
@@ -217,7 +216,7 @@ ms.locfileid: "48163760"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>So ändern Sie die Sicherheitseinstellungen für ein Pullabonnement mit sofortigem Update  
   
-1.  Klicken Sie im Dialogfeld **Abonnementeigenschaften - \<Subscription>** auf dem Abonnenten auf die Zeile **Verlegerverbindung**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**…**).  
+1.  Klicken Sie im Dialogfeld **Abonnementeigenschaften - \<Subscription>** auf dem Abonnenten auf die Zeile **Verlegerverbindung**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten (**...**).  
   
 2.  Wählen Sie im Dialogfeld **Verbindungsinformationen eingeben** eine der folgenden Optionen aus:  
   
@@ -272,7 +271,7 @@ ms.locfileid: "48163760"
     -   Wenn Sie den beim Herstellen einer Verbindung mit dem Verleger verwendeten Sicherheitsmodus von **1** in **0** oder einen für diese Verbindung verwendeten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldenamen ändern, geben Sie **@publisher_login** und **@publisher_password**.  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>So ändern Sie die Sicherheitseinstellungen für den Protokolllese-Agent  
   
@@ -290,7 +289,7 @@ ms.locfileid: "48163760"
     >  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>So ändern Sie die Sicherheitseinstellungen für den Verteilungs-Agent eines Pushabonnements  
   
@@ -310,7 +309,7 @@ ms.locfileid: "48163760"
     >  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Eigenschaften einschließlich **distrib_job_login** und **distrib_job_password**bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Eigenschaften einschließlich **distrib_job_login** und **distrib_job_password**bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>So ändern Sie die Sicherheitseinstellungen für den Verteilungs-Agent eines Pullabonnements  
   
@@ -351,7 +350,7 @@ ms.locfileid: "48163760"
     >  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Eigenschaften einschließlich **merge_job_login** und **merge_job_password**bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Eigenschaften einschließlich **merge_job_login** und **merge_job_password**bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>So ändern Sie die Sicherheitseinstellungen für den Merge-Agent eines Pullabonnements  
   
@@ -381,7 +380,7 @@ ms.locfileid: "48163760"
 2.  Führen Sie [sp_changedynamicsnapshot_job](/sql/relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql)auf dem Verleger unter Angabe von **@publication**, den in Schritt 1 abgerufenen Wert für **@dynamic_snapshot_jobname**und ein neues Kennwort für **@job_password** oder den Anmeldenamen und das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird, für **@job_login** und **@job_password**.  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-change-security-settings-for-the-queue-reader-agent"></a>So ändern Sie die Sicherheitseinstellungen für den Warteschlangenlese-Agent  
   
@@ -416,7 +415,7 @@ ms.locfileid: "48163760"
 ##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
   
 > [!IMPORTANT]  
->  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](http://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
+>  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-change-all-instances-of-a-password-stored-on-a-replication-server"></a>So ändern Sie alle Instanzen eines auf einem Replikationsserver gespeicherten Kennworts  
   
@@ -433,7 +432,7 @@ ms.locfileid: "48163760"
     -   *password* &ndash; Der neue Kennwortwert.  
   
         > [!IMPORTANT]  
-        >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](http://go.microsoft.com/fwlink/?LinkId=34733) von Windows .NET Framework.  
+        >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von Windows .NET Framework.  
   
         > [!NOTE]  
         >  Nur ein Mitglied der festen Serverrolle `sysadmin` kann diese Methode aufrufen.  
@@ -448,7 +447,7 @@ ms.locfileid: "48163760"
   
 3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>und <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> für das Abonnement und die Verbindung aus Schritt 1 für die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft fest.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode zurückgibt `false`, entweder die Abonnementeigenschaften in Schritt 3 falsch definiert, oder das Abonnement ist nicht vorhanden.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, wurden entweder die Abonnementeigenschaften in Schritt 3 falsch definiert, oder das Abonnement ist nicht vorhanden.  
   
 5.  Legen Sie eine oder mehrere der folgenden Sicherheitseigenschaften für die Instanz von <xref:Microsoft.SqlServer.Replication.TransSubscription>fest:  
   
@@ -461,7 +460,7 @@ ms.locfileid: "48163760"
         > [!NOTE]  
         >  Die Agent-Verbindung zum Verteiler wird immer mit den durch <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>angegebenen Windows-Anmeldeinformationen hergestellt. Dieses Konto wird auch verwendet, um Remoteverbindungen unter Verwendung der Windows-Authentifizierung herzustellen.  
   
-6.  (Optional) Wenn Sie den Wert angegeben `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> Methode, um die Änderungen auf dem Server einzutragen. Wenn Sie einen Wert von angegeben `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (Standardeinstellung), die Änderungen werden an den Server sofort gesendet.  
+6.  (Optional) Wenn Sie den Wert `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> angegeben haben, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription-to-a-transactional-publication"></a>So ändern Sie die Sicherheitseinstellungen für den Verteilungs-Agent für ein Pullabonnement einer Transaktionsveröffentlichung  
   
@@ -471,7 +470,7 @@ ms.locfileid: "48163760"
   
 3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>und <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> für das Abonnement und die Verbindung aus Schritt 1 für die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft fest.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode zurückgibt `false`, entweder die Abonnementeigenschaften in Schritt 3 falsch definiert, oder das Abonnement ist nicht vorhanden.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, wurden entweder die Abonnementeigenschaften in Schritt 3 falsch definiert, oder das Abonnement ist nicht vorhanden.  
   
 5.  Legen Sie eine oder mehrere der folgenden Sicherheitseigenschaften für die Instanz von <xref:Microsoft.SqlServer.Replication.TransPullSubscription>fest:  
   
@@ -484,7 +483,7 @@ ms.locfileid: "48163760"
         > [!NOTE]  
         >  Die Agent-Verbindung zum Abonnenten wird immer mit den durch <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>angegebenen Windows-Anmeldeinformationen hergestellt. Dieses Konto wird auch verwendet, um Remoteverbindungen unter Verwendung der Windows-Authentifizierung herzustellen.  
   
-6.  (Optional) Wenn Sie den Wert angegeben `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> Methode, um die Änderungen auf dem Server einzutragen. Wenn Sie einen Wert von angegeben `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (Standardeinstellung), die Änderungen werden an den Server sofort gesendet.  
+6.  (Optional) Wenn Sie den Wert `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> angegeben haben, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription-to-a-merge-publication"></a>So ändern Sie die Sicherheitseinstellungen für den Merge-Agent für ein Pullabonnement einer Mergeveröffentlichung  
   
@@ -494,7 +493,7 @@ ms.locfileid: "48163760"
   
 3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>und <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> für das Abonnement und die Verbindung aus Schritt 1 für die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft fest.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode zurückgibt `false`, entweder die Abonnementeigenschaften in Schritt 3 falsch definiert, oder das Abonnement ist nicht vorhanden.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, wurden entweder die Abonnementeigenschaften in Schritt 3 falsch definiert, oder das Abonnement ist nicht vorhanden.  
   
 5.  Legen Sie eine oder mehrere der folgenden Sicherheitseigenschaften für die Instanz von <xref:Microsoft.SqlServer.Replication.MergePullSubscription>fest:  
   
@@ -504,14 +503,14 @@ ms.locfileid: "48163760"
   
     -   SQL Server-Authentifizierung als Authentifizierungstyp, den der Agent beim Herstellen einer mit dem Verteiler Verbindung, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> Eigenschaft `false`, und geben Sie die Anmeldeinformationen des Verteilers für die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
   
-    -   Integrierte Windows-Authentifizierung als Authentifizierungstyp, den der Agent beim Herstellen einer mit dem Verleger Verbindung, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> Eigenschaft `true`.  
+    -   Zur Angabe der integrierten Windows-Authentifizierung als Authentifizierungstyp, der vom Agent zum Verbindungsaufbau mit dem Verleger verwendet wird, legen Sie das <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>-Feld der <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A>-Eigenschaft auf `true` fest.  
   
     -   SQL Server-Authentifizierung als Authentifizierungstyp, den der Agent beim Herstellen einer mit dem Verleger Verbindung, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> Eigenschaft `false`, und geben Sie die Anmeldeinformationen des Verlegers für die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
   
         > [!NOTE]  
         >  Die Agent-Verbindung zum Abonnenten wird immer mit den durch <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>angegebenen Windows-Anmeldeinformationen hergestellt. Dieses Konto wird auch verwendet, um Remoteverbindungen unter Verwendung der Windows-Authentifizierung herzustellen.  
   
-6.  (Optional) Wenn Sie den Wert angegeben `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> Methode, um die Änderungen auf dem Server einzutragen. Wenn Sie einen Wert von angegeben `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (Standardeinstellung), die Änderungen werden an den Server sofort gesendet.  
+6.  (Optional) Wenn Sie den Wert `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> angegeben haben, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription-to-a-merge-publication"></a>So ändern Sie die Sicherheitseinstellungen für den Merge-Agent für ein Pushabonnement einer Mergeveröffentlichung  
   
@@ -521,7 +520,7 @@ ms.locfileid: "48163760"
   
 3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>und <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> für das Abonnement und die Verbindung aus Schritt 1 für die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft fest.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode zurückgibt `false`, entweder die Abonnementeigenschaften in Schritt 3 falsch definiert, oder das Abonnement ist nicht vorhanden.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, wurden entweder die Abonnementeigenschaften in Schritt 3 falsch definiert, oder das Abonnement ist nicht vorhanden.  
   
 5.  Legen Sie eine oder mehrere der folgenden Sicherheitseigenschaften für die Instanz von <xref:Microsoft.SqlServer.Replication.MergeSubscription>fest:  
   
@@ -531,14 +530,14 @@ ms.locfileid: "48163760"
   
     -   SQL Server-Authentifizierung als Authentifizierungstyp, den der Agent beim Herstellen einer mit dem Abonnenten Verbindung, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> Eigenschaft `false`, und geben Sie die Anmeldeinformationen des Abonnenten für die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
   
-    -   Integrierte Windows-Authentifizierung als Authentifizierungstyp, den der Agent beim Herstellen einer mit dem Verleger Verbindung, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> Eigenschaft `true`.  
+    -   Zur Angabe der integrierten Windows-Authentifizierung als Authentifizierungstyp, der vom Agent zum Verbindungsaufbau mit dem Verleger verwendet wird, legen Sie das <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>-Feld der <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A>-Eigenschaft auf `true` fest.  
   
     -   SQL Server-Authentifizierung als Authentifizierungstyp, den der Agent beim Herstellen einer mit dem Verleger Verbindung, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> Eigenschaft `false`, und geben Sie die Anmeldeinformationen des Verlegers für die <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A>und <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
   
         > [!NOTE]  
         >  Die Agent-Verbindung zum Verteiler wird immer mit den durch <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>angegebenen Windows-Anmeldeinformationen hergestellt. Dieses Konto wird auch verwendet, um Remoteverbindungen unter Verwendung der Windows-Authentifizierung herzustellen.  
   
-6.  (Optional) Wenn Sie den Wert angegeben `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> Methode, um die Änderungen auf dem Server einzutragen. Wenn Sie einen Wert von angegeben `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (Standardeinstellung), die Änderungen werden an den Server sofort gesendet.  
+6.  (Optional) Wenn Sie den Wert `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> angegeben haben, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
   
 #### <a name="to-change-the-login-information-used-by-an-immediate-updating-subscriber-when-it-connects-to-the-transactional-publisher"></a>So ändern Sie die Anmeldeinformationen, die von einem sofort aktualisierbaren Abonnenten beim Herstellen einer Verbindung mit dem Transaktionsverleger verwendet werden  
   
@@ -546,7 +545,7 @@ ms.locfileid: "48163760"
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> -Klasse für die Abonnementdatenbank. Geben Sie <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> und die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>an.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode zurückgibt `false`, entweder die Datenbankeigenschaften in Schritt 2 falsch definiert, oder die Abonnementdatenbank ist nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, wurden entweder die Datenbankeigenschaften in Schritt 2 falsch definiert, oder das Abonnementdatenbank ist nicht vorhanden.  
   
 4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> -Methode auf, und übergeben Sie hierbei die folgenden Parameter:  
   
@@ -567,7 +566,7 @@ ms.locfileid: "48163760"
   
  [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Ändern der Replikationssicherheitseinstellungen  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Ändern von replikationssicherheitseinstellungen  
  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
 ## <a name="see-also"></a>Siehe auch  

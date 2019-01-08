@@ -14,12 +14,12 @@ ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7049cce942cb593df74255a1459e07a6fa894c51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c94ac9865540016020bf1853bc318881defdaea7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090510"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374062"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Festlegen der Slice-Eigenschaft für Partitionen (Analysis Services)
   Ein Datenslice ist eine wichtige Optimierungsfunktion, die Ihnen dabei hilft, Abfragen an Daten der entsprechenden Partitionen weiterzuleiten. Das explizite Festlegen der Slice-Eigenschaft kann die Abfrageleistung verbessern, indem die für MOLAP- und HOLAP-Partitionen generierten Standardslices überschrieben werden. Darüber hinaus bietet die Slice-Eigenschaft bei der Verarbeitung der Partition eine zusätzliche Überprüfungsmöglichkeit.  
@@ -37,16 +37,16 @@ ms.locfileid: "48090510"
   
  Ein Datenslice einer Partition sollte die Daten in der Partition so getreu wie möglich wiedergeben. Wenn eine Partition z. B. auf die Daten des Jahres 2012 beschränkt ist, sollte der Datenslice der Partition das 2012-Element der Time-Dimension angeben. Es ist nicht immer möglich, einen Datenslice anzugeben, der den genauen Inhalt einer Partition wiedergibt. Wenn eine Partition z. B. Daten ausschließlich für January und February enthält, die Ebenen der Time-Dimension jedoch Year, Quarter und Month lauten, bietet der Partitions-Assistent keine Möglichkeit, die January- und February-Elemente zugleich auszuwählen. Wählen Sie in solchen Fällen das übergeordnete Objekt der Elemente aus, die den Inhalt der Partition wiedergeben. Wählen Sie in diesem Beispiel Quarter 1 aus.  
   
- Die Vorteile von Datenslices werden ausführlich unter [Festlegen von "Slice" für die SSAS-Cubepartition](http://go.microsoft.com/fwlink/?LinkId=317783)erläutert.  
+ Die Vorteile von Datenslices werden ausführlich unter [Festlegen von "Slice" für die SSAS-Cubepartition](https://go.microsoft.com/fwlink/?LinkId=317783)erläutert.  
   
 > [!NOTE]  
 >  Beachten Sie, dass dynamische MDX-Funktionen (z.B. [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) oder [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function)) in der Slice-Eigenschaft für Partitionen nicht unterstützt werden. Sie müssen das Slice mit expliziten Tupel- oder Elementverweisen definieren.  
 >   
 >  Z. B. statt der [: &#40;Bereich&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) Funktion, um einen Bereich zu definieren, müssen Sie jedes Element anhand der bestimmten Jahre auflisten.  
 >   
->  Wenn Sie ein komplexes Slice definieren müssen, empfiehlt sich das Definieren der Tupel im Slice mithilfe eines XMLA-Alter-Skripts. Anschließend können Sie entweder das Befehlszeilentool "Ascmd" oder die SSIS- [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) Task, um das Skript auszuführen und den bestimmten Satz von Elementen zu erstellen, unmittelbar vor dem Verarbeiten der Partitions.  
+>  Wenn Sie ein komplexes Slice definieren müssen, empfiehlt sich das Definieren der Tupel im Slice mithilfe eines XMLA-Alter-Skripts. Anschließend können Sie das Befehlszeilentool „Ascmd“ oder die SSIS- [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) -Aufgabe verwenden, um unmittelbar vor dem Verarbeiten der Partition das Skript auszuführen und den bestimmten Satz an Elementen zu erstellen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und verwalten eine lokale Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
+ [Erstellen und Verwalten einer lokalen Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

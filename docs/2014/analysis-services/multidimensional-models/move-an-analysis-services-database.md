@@ -15,12 +15,12 @@ ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69a3d667bbe057387d05ffd814ca3ea1a3854238
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0939540af0c302832925a7a1bef6367718b8c1be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145325"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369280"
 ---
 # <a name="move-an-analysis-services-database"></a>Verschieben einer Analysis Services Datenbank
   Es gibt oftmals Situationen, in denen ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankadministrator (DBA) eine mehrdimensionale oder tabellarische Modelldatenbank an einen anderen Speicherort verschieben möchte. Diese Situationen hängen in der Regel von Geschäftsforderungen ab, z. B. wenn die Datenbank zur Leistungssteigerung auf einen anderen Datenträger verschoben werden soll, wenn bei Datenbankzuwachs Platz geschaffen werden muss oder wenn ein Produkt aktualisiert werden soll.  
@@ -44,7 +44,7 @@ ms.locfileid: "50145325"
   
 1.  Suchen Sie im linken oder rechten Bereich von SSMS nach der zu verschiebenden Datenbank.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Datenbank, und wählen Sie **Trennen**aus.  
+2.  Mit der rechten Maustaste auf die Datenbank, und wählen **trennen...**  
   
 3.  Weisen Sie der Datenbank, die getrennt werden soll, ein Kennwort zu, und klicken Sie dann auf **OK** , um den Befehl zum Trennen auszuführen.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "50145325"
   
 5.  Suchen Sie im linken oder rechten Bereich von SSMS nach dem Ordner **Datenbanken** .  
   
-6.  Klicken Sie mit der rechten Maustaste auf den Ordner **Datenbanken** , und wählen Sie **Anfügen**aus.  
+6.  Mit der rechten Maustaste auf die **Datenbanken** Ordner, und wählen **anfügen...**  
   
-7.  Geben Sie im Textfeld **Ordner** den neuen Speicherort des Datenbankordners ein. Sie können auch über die Schaltfläche zum Durchsuchen (**…**) nach dem Datenbankordner suchen.  
+7.  Geben Sie im Textfeld **Ordner** den neuen Speicherort des Datenbankordners ein. Alternativ können Sie die Schaltfläche zum Durchsuchen (**...** ) nach dem Datenbankordner suchen.  
   
 8.  Wählen Sie die `ReadWrite` Modus für die Datenbank.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "50145325"
   
 2.  Kopieren Sie die folgende Skriptvorlage für XMLA:  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -128,11 +128,11 @@ ms.locfileid: "50145325"
   
 4.  Kopieren Sie die folgende Skriptvorlage für XMLA in eine neue XMLA-Registerkarte:  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

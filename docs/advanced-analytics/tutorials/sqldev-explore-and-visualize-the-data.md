@@ -1,6 +1,6 @@
 ---
-title: Lektion 1 durchsuchen und Visualisieren von Daten mithilfe von R und T-SQL (SQL Server-Machine Learning) | Microsoft-Dokumentation
-description: Veranschaulicht, wie Sie R in SQL Server Einbetten von gespeicherten Prozeduren und T-SQL-Funktionen
+title: Lektion 1 durchsuchen und Visualisieren von Daten mithilfe von R und T-SQL – SQL Server-Machine Learning
+description: In diesem Tutorial untersuchen und Visualisieren von SQL Server-Daten mithilfe von R-Funktionen veranschaulichen.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f1ed29dec28ade852a58980eb236a251fd072afa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 36a904eeb4c7cde7d3a5356aff2029698e91f059
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032217"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645499"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lektion 1: Untersuchen und Visualisieren von Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die fahrtendate
 
 **Taxi-IDs**
   
--   Die Spalte _medallion_ stellt die eindeutige ID-Nummer des Taxis dar.
+-   Die _"medallion"_ Spalte stellt die eindeutige Id-Nummer des Taxis dar.
   
 -   Die _hack\_Lizenz_ Spalte enthält die Taxi Führerscheinnummer (anonymisierte).
   
@@ -54,7 +54,7 @@ Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die fahrtendate
   
 -   Die Werte für die Bezeichnungsspalten basieren alle auf die _Tipp\_Menge_ Spalte verwenden folgende Geschäftsregeln:
   
-    |Name der abgeleiteten Spalte|Regel|
+    |Name der abgeleiteten Spalte|Rule|
     |-|-|
      |tipped|If tip_amount > 0, tipped = 1, otherwise tipped = 0|
     |tip_class|Class 0: tip_amount = $0<br /><br />Class 1: tip_amount > $0 and tip_amount <= $5<br /><br />Class 2: tip_amount > $5 and tip_amount <= $10<br /><br />Class 3: tip_amount > $10 and tip_amount <= $20<br /><br />Class 4: tip_amount > $20|
@@ -67,7 +67,7 @@ Verwenden Sie zum Erstellen des Plots [RxHistogram](https://docs.microsoft.com/m
 
 2. Fügen Sie das folgende Skript in einer gespeicherten Prozedur zu erstellen, die das Histogramm zeichnet. In diesem Beispiel wird mit dem Namen **RPlotRxHistogram*.
 
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
@@ -108,7 +108,7 @@ Die gespeicherte Prozedur gibt das Bild als Strom von varbinary-Daten zurück, d
   
 1.  Führen Sie die folgende Anweisung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]aus:
   
-    ```SQL
+    ```sql
     EXEC [dbo].[RxPlotHistogram]
     ```
   
@@ -119,7 +119,7 @@ Die gespeicherte Prozedur gibt das Bild als Strom von varbinary-Daten zurück, d
   
 2.  Öffnen Sie eine PowerShell-Eingabeaufforderung und führen Sie den folgenden Befehl, der Bereitstellung den erforderlichen Instanznamen, Datenbanknamen, Benutzernamen und Anmeldeinformationen als Argumente. Sie können für Benutzer, die Windows-Identitäten, ersetzen **- U** und **-P** mit **-T**.
   
-     ```text
+     ```powershell
      bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
      ```
 
@@ -134,7 +134,7 @@ Die gespeicherte Prozedur gibt das Bild als Strom von varbinary-Daten zurück, d
   
     -   Geben Sie **Y** ein, wenn Sie die Ausgabeparameter für den späteren Gebrauch speichern möchten.
   
-    ```
+    ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
@@ -146,7 +146,7 @@ Die gespeicherte Prozedur gibt das Bild als Strom von varbinary-Daten zurück, d
   
     **Ergebnisse**
     
-    ```
+    ```powershell
     Starting copy...
     1 rows copied.
     Network packet size (bytes): 4096
@@ -170,7 +170,7 @@ Diese gespeicherte Beispielprozedur verwendet die **Hist** Funktion, um das Hist
 
 2. Fügen Sie das folgende Skript in einer gespeicherten Prozedur zu erstellen, die das Histogramm zeichnet. In diesem Beispiel heißt **RPlotHist** .
   
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
@@ -244,13 +244,13 @@ Diese gespeicherte Beispielprozedur verwendet die **Hist** Funktion, um das Hist
 
 Führen Sie die folgende Anweisung aus, um die binäre Darstellung von Daten in Formate, JPEG und PDF-Datei zu exportieren.
 
-```SQL
+```sql
 EXEC RPlotHist
 ```
 
 **Ergebnisse**
     
-```
+```sql
 STDOUT message(s) from external script:
 [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
 

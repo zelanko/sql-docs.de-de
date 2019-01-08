@@ -19,12 +19,12 @@ ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e4d13fb24ad337ed6395e8529f4067d8acd2a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bf5ca4c2e27f366a6f5ded97f9a9aa5213db122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140640"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361072"
 ---
 # <a name="create-package-configurations"></a>Erstellen von Paketkonfigurationen
   Im Dialogfeld **Paketkonfigurationsplaner** und im Paketkonfigurationsassistenten erstellen Sie Paketkonfigurationen. Um auf diese Tools zuzugreifen, klicken Sie in **im Menü** SSIS **auf** Paketkonfigurationen [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -111,11 +111,11 @@ ms.locfileid: "48140640"
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   Technischer Artikel [Grundlegendes zu Integration Services-Paketkonfigurationen](http://go.microsoft.com/fwlink/?LinkId=165643)auf msdn.microsoft.com.  
+-   Technischer Artikel [Grundlegendes zu Integration Services-Paketkonfigurationen](https://go.microsoft.com/fwlink/?LinkId=165643)auf msdn.microsoft.com.  
   
--   Blogeintrag zu [Codebasiertes Erstellen von Paketen – Paketkonfigurationen](http://go.microsoft.com/fwlink/?LinkId=217663)auf www.sqlis.com.  
+-   Blogeintrag, [Erstellen von Paketen im Code - Paketkonfigurationen](https://go.microsoft.com/fwlink/?LinkId=217663), auf www.sqlis.com.  
   
--   Blogeintrag zu [API-Beispiel – Programmgesteuertes Hinzufügen einer Konfigurationsdatei zu einem Paket](http://go.microsoft.com/fwlink/?LinkId=217664)auf blogs.msdn.com.  
+-   Blogeintrag, [-API-Beispiel – Programmgesteuertes Hinzufügen eine Konfigurationsdatei zu einem Paket](https://go.microsoft.com/fwlink/?LinkId=217664), auf blogs.msdn.com.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Paketkonfigurationen](../../2014/integration-services/package-configurations.md)   

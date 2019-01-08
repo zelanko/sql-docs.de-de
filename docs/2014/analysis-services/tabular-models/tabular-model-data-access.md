@@ -11,12 +11,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51d3206e4df57c42c0245e13757cdcac1686a313
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5dc6ccd51a1ce8c64ef301e7435ee9ce21879cb5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148405"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364102"
 ---
 # <a name="tabular-model-data-access"></a>Zugriff auf Daten im tabellarischen Modell
   Auf tabellarische Modelldatenbanken in Analysis Services kann mit den meisten Clients, Schnittstellen und Sprachen zugegriffen werden, mit denen Sie auch Daten oder Metadaten aus einem mehrdimensionalen Modell abrufen. Weitere Informationen finden Sie unter [Datenzugriff auf mehrdimensionale Modelle &#40;Analysis Services – mehrdimensionale Daten&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -24,10 +24,10 @@ ms.locfileid: "50148405"
  In diesem Thema werden die Clients, Abfragesprachen und befehlsorientierten Benutzerschnittstellen beschrieben, die mit tabellarischen Modellen verwendet werden können.  
   
 ## <a name="clients"></a>Clients  
- Die folgenden Microsoft-Clientanwendungen unterstützen systemeigene Verbindungen mit tabellarischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Modelldatenbanken.  
+ Die folgenden Microsoft-Clientanwendungen unterstützen systemeigene Verbindungen mit tabellarischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modelldatenbanken.  
   
 ### <a name="excel"></a>Excel  
- Sie können in Excel eine Verbindung mit tabellarischen Modelldatenbanken herstellen und die Datenvisualisierungs- und Analysefunktionen in Excel verwenden, um mit den Daten zu arbeiten. Um auf die Daten zuzugreifen, definieren Sie eine Analysis Services-Datenverbindung, geben einen Server an, der im tabellarischen Servermodus ausgeführt wird, und wählen dann die gewünschte Datenbank aus. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit oder Importieren von Daten aus SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
+ Sie können in Excel eine Verbindung mit tabellarischen Modelldatenbanken herstellen und die Datenvisualisierungs- und Analysefunktionen in Excel verwenden, um mit den Daten zu arbeiten. Um auf die Daten zuzugreifen, definieren Sie eine Analysis Services-Datenverbindung, geben einen Server an, der im tabellarischen Servermodus ausgeführt wird, und wählen dann die gewünschte Datenbank aus. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit oder Importieren von Daten aus SQL Server Analysis Services](https://go.microsoft.com/fwlink/?linkID=215150).  
   
  Excel ist auch die empfohlene Anwendung zum Durchsuchen von tabellarischen Modellen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Das Tool beinhaltet eine Option **In Excel analysieren** , die eine neue Instanz von Excel startet, eine Excel-Arbeitsmappe erstellt und in der Arbeitsmappe eine Datenverbindung mit der Arbeitsbereichsdatenbank des Modells öffnet. Beim Durchsuchen von tabellarischen Modelldaten in Excel ist zu beachten, dass Excel Abfragen für das Modell mit dem Excel PivotTable-Client ausgibt. Entsprechend führen Vorgänge innerhalb der Excel-Arbeitsmappe zu MDX-Abfragen, die an die Arbeitsbereichsdatenbank gesendet werden. DAX-Abfragen werden nicht erstellt. Wenn Sie Abfragen mit SQL-Profiler oder einem anderen Überwachungstool überwachen, wird in der Profiler-Ablaufverfolgung voraussichtlich MDX angezeigt und nicht DAX. Weitere Informationen zur Funktion „In Excel analysieren“ finden Sie unter [In Excel analysieren &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "50148405"
  Die Abfragen, die vom [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Client an das Modell gesendet werden, werden als DAX-Anweisungen ausgegeben, die Sie überwachen können, indem Sie eine Ablaufverfolgung auf dem Modell festlegen.  Der Client gibt auch eine Anforderung an den Server für die ursprüngliche Schemadefinition aus, die entsprechend der konzeptionellen Schemadefinitionssprache (CSDL) präsentiert wird. Weitere Informationen finden Sie unter [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- Mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie Instanzen verwalten, die tabellarische Modelle hosten, sowie die darin enthaltenen Metadaten und Daten abfragen. Sie können die Modelle oder die Objekte in einem Modell verarbeiten, Partitionen erstellen und verwalten sowie die Sicherheit festlegen, die zum Verwalten des Datenzugriffs verwendet werden kann. Weitere Informationen finden Sie in folgenden Themen:  
+ Mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie Instanzen verwalten, die tabellarische Modelle hosten, sowie die darin enthaltenen Metadaten und Daten abfragen. Sie können die Modelle oder die Objekte in einem Modell verarbeiten, Partitionen erstellen und verwalten sowie die Sicherheit festlegen, die zum Verwalten des Datenzugriffs verwendet werden kann. Weitere Informationen finden Sie unter den folgenden Themen:  
   
 -   [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsource.f1
@@ -17,12 +16,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3a2e2ff2fd28004d924f2b06a19b6bab3c52914
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e8d49827c9f533c75933a316ff3b655d3f13025
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155370"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353905"
 ---
 # <a name="xml-source"></a>XML-Quelle
   Die XML-Quelle liest eine XML-Datendatei und füllt die Spalten in der Quellausgabe mit den Daten.  
@@ -66,7 +65,7 @@ ms.locfileid: "48155370"
 ## <a name="configuration-of-the-xml-source"></a>Konfiguration der XML-Quelle  
  Die XML-Quelle unterstützt drei verschiedene Datenzugriffsmodi. Sie können den Dateispeicherort der XML-Datendatei, eine Variable mit dem Dateispeicherort oder eine Variable mit den XML-Daten angeben.  
   
- Die XML-Quelle schließt die `XMLData` und `XMLSchemaDefinition` benutzerdefinierte Eigenschaften, die beim Laden des Pakets mithilfe von Eigenschaftsausdrücken aktualisiert werden können. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md), [Verwenden von Eigenschaftsausdrücken in Paketen](../expressions/use-property-expressions-in-packages.md) und [Benutzerdefinierte Eigenschaften der XML-Quelle](xml-source-custom-properties.md).  
+ Die XML-Quelle schließt die benutzerdefinierten Eigenschaften `XMLData` und `XMLSchemaDefinition` ein, die beim Laden des Pakets mithilfe von Eigenschaftsausdrücken aktualisiert werden können. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md), [Verwenden von Eigenschaftsausdrücken in Paketen](../expressions/use-property-expressions-in-packages.md) und [Benutzerdefinierte Eigenschaften der XML-Quelle](xml-source-custom-properties.md).  
   
  Die XML-Quelle unterstützt mehrere reguläre Ausgaben und Fehlerausgaben.  
   
@@ -96,6 +95,6 @@ ms.locfileid: "48155370"
  [Extrahieren von Daten mithilfe der XML-Quelle](xml-source.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Curated Answer, [Erstellen eines XML-Ziels für ein SSIS-Paket](http://go.microsoft.com/fwlink/?LinkId=321993)auf curatedviews.cloudapp.net  
+ Curated Answer, [Erstellen eines XML-Ziels für ein SSIS-Paket](https://go.microsoft.com/fwlink/?LinkId=321993)auf curatedviews.cloudapp.net  
   
   
