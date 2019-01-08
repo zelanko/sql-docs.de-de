@@ -1,5 +1,5 @@
 ---
-title: Modellierungs- und Bereitstellungseigenschaften Standardeigenschaften konfigurieren | Microsoft Docs
+title: Konfigurieren von Analysis Services Modellierung und Bereitstellung Standardeigenschaften für | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 926cb59f263b5dfbfb4178d4d512b07511cdc0cc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 938ef21a83a6e08336c9e9c53a95e3886ab24dab
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044064"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072577"
 ---
-# <a name="configure-default-data-modeling-and-deployment-properties"></a>Modellierungs- und Bereitstellungseigenschaften Standardeigenschaften konfigurieren 
+# <a name="configure-default-data-modeling-and-deployment-properties"></a>Konfigurieren von Standarddatenmodellierungs- und Bereitstellungseigenschaften 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  In diesem Artikel wird beschrieben, wie so konfigurieren Sie den Standardkompatibilitätsgrad, Bereitstellung und im arbeitsbereichseinstellungen für die Eigenschaften, vorab definiert werden können, für jeden neues tabellarisches Modell Projekt Sie erstellen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Auch nachdem ein neues Projekt erstellt wurde, können diese Eigenschaften abhängig von Ihren speziellen Anforderungen geändert werden.  
+  In diesem Artikel wird beschrieben, wie so konfigurieren Sie den Standardkompatibilitätsgrad, Bereitstellung und arbeitsbereichseinstellungen für die Eigenschaften, vorab definiert werden können, für jeden neues tabellarisches Modell Projekt Sie erstellen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Auch nachdem ein neues Projekt erstellt wurde, können diese Eigenschaften abhängig von Ihren speziellen Anforderungen geändert werden.  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>So konfigurieren Sie die Einstellung der Eigenschaft "Standardkompatibilitätsgrad" für neue Modellprojekte  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34044064"
   
 ## <a name="see-also"></a>Siehe auch  
  [Projekteigenschaften](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
- [Modelleigenschaften](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
+ [Eigenschaften des Modells](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
  [Kompatibilitätsgrad](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 96188955e60c11e4780ed4ffcf0be637b9e81871
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: d5f6c7eaff4ecced0d2244d9c12b13a0059344fb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147636"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525048"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Grundlegendes zur Microsoft OLAP-Architektur
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -27,14 +27,14 @@ ms.locfileid: "50147636"
   
  [Cubeobjekte &#40;Analysis Services – mehrdimensionale Daten&#41;](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
- [Weitere Informationen…](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+ [Weitere Informationen...](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
  ![Kleines Dateiordnersymbol](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **physische Architektur**  
  [OLAP-Engine-Serverkomponenten](../../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)  
   
  [Lokale Cubes &#40;Analysis Services – mehrdimensionale Daten&#41;](../../../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)  
   
- [Weitere Informationen…](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)  
+ [Weitere Informationen...](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)  
   
  ![Kleines Dateiordnersymbol](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Programmierarchitektur**  
  [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  

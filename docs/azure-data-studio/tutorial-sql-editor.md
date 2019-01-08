@@ -1,7 +1,8 @@
 ---
-title: 'Tutorial: Verwenden den Azure Data Studio Transact-SQL-Editor zum Erstellen von Datenbankobjekten | Microsoft-Dokumentation'
-description: Dieses Tutorial veranschaulicht die wichtigsten Features in Azure Data Studio, die mit T-SQL zu vereinfachen.
-ms.custom: tools|sos
+title: 'Lernprogramm: Verwenden Sie den Transact-SQL-Editor zum Erstellen von Datenbankobjekten'
+titleSuffix: Azure Data Studio
+description: Dieses Tutorial veranschaulicht die wichtigsten Features in Azure Data Studio, die die Arbeit mit T-SQL zu vereinfachen.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2a517b1efb6a86d70bd05f9a1418792c0b61098
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355931"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030454"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Verwenden des Transact-SQL-Editors zum Erstellen von Datenbankobjekten- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Lernprogramm: Verwendung der Transact-SQL-Editor, um Datenbankobjekte zu erstellen: [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Erstellen und Ausführen von Abfragen, werden gespeicherte Prozeduren, Skripts usw. Datenbankexperten die zentralen Aufgaben. Dieses Tutorial veranschaulicht die wichtigsten Funktionen der T-SQL-Editor, um Datenbankobjekte zu erstellen.
 
@@ -218,7 +219,7 @@ Die *SetCustomer* gespeicherte Prozedur, die im vorherigen Abschnitt erstellten 
    ![Testergebnis](./media/tutorial-sql-editor/test-result.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
-In diesem Tutorial haben Sie gelernt, wie Sie:
+In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 > * Schnellsuche Schemaobjekte
 > * Bearbeiten Sie Tabellendaten 

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0035994dbcc1e0f4aebf01b6dbc4b69dcb7bfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157950"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640741"
 ---
 # <a name="database-engine-instances-sql-server"></a>Datenbank-Engine-Instanzen (SQL Server)
-  Eine Instanz von der [!INCLUDE[ssDE](../../includes/ssde-md.md)] ist eine Kopie der `sqlservr.exe` ausführbare Datei, die als Betriebssystemdienst ausgeführt wird. Von jeder Instanz werden mehrere Systemdatenbanken und eine oder mehrere Benutzerdatenbanken verwaltet. Auf einem Computer können mehrere Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]ausgeführt werden. Anwendungen stellen eine Verbindung mit der Instanz her, um Tasks in einer durch die Instanz verwalteten Datenbank auszuführen.  
+  Eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] ist eine Kopie der ausführbaren Datei `sqlservr.exe`, die als Betriebssystemdienst ausgeführt wird. Von jeder Instanz werden mehrere Systemdatenbanken und eine oder mehrere Benutzerdatenbanken verwaltet. Auf einem Computer können mehrere Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]ausgeführt werden. Anwendungen stellen eine Verbindung mit der Instanz her, um Tasks in einer durch die Instanz verwalteten Datenbank auszuführen.  
   
 ## <a name="instances"></a>Instanzen  
  Eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] wird als Dienst ausgeführt, der alle Anwendungsanforderungen für Daten in den Datenbanken behandelt, die von der betreffenden Instanz verwaltet werden. Es handelt sich um das Ziel der Verbindungsanforderungen (Anmeldungen) von Anwendungen. Wenn sich Anwendung und Instanz auf getrennten Computern befinden, wird die Verbindung über eine Netzwerkverbindung hergestellt. Wenn sich Anwendung und Instanz auf demselben Computer befinden, kann die SQL Server-Verbindung als Netzwerkverbindung oder als Verbindung im Arbeitsspeicher ausgeführt werden. Wenn eine Verbindung hergestellt wurde, sendet eine Anwendung über die Verbindung [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen an die Instanz. Die Instanz löst die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in Vorgänge für die Daten und Objekte in den Datenbanken auf, und wenn den Anmeldeinformationen die erforderlichen Berechtigungen gewährt wurden, werden die Tasks ausgeführt. Alle abgerufenen Daten werden zusammen mit gegebenenfalls vorhandenen Meldungen, z. B. zu Fehlern, an die Anwendung zurückgegeben.  
