@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_change_subscription_properties_TSQL
@@ -17,12 +16,12 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f87fb9b43b723fa489e42f05f5f4f727bafd18dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45aadf2eab3cad31bfc376de59e8cce25126533f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692288"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785732"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  [  **@publication_type =** ] *Publication_type*  
  Gibt den Replikationstyp der Veröffentlichung an. *Publication_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|value|Veröffentlichungstyp|  
+|Wert|Veröffentlichungstyp|  
 |-----------|----------------------|  
 |**0**|Transaktion|  
 |**1**|Momentaufnahme|  
@@ -71,7 +70,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  Diese Tabelle beschreibt die Eigenschaften von Artikeln und die Werte für diese Eigenschaften.  
   
-|Eigenschaft|value|Description|  
+|Eigenschaft|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Gibt den Speicherort des anderen Ordners für die Momentaufnahme an. Wenn NULL festgelegt ist, werden die Momentaufnahmedateien aus dem vom Verleger angegebenen Standardspeicherort übernommen.|  
 |**distrib_job_login**||Anmeldename für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Agent ausgeführt wird.|  
@@ -81,7 +80,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_security_mode**|**1**|Verwendet die Windows-Authentifizierung beim Herstellen der Verbindung mit dem Verteiler.|  
 ||**0**|Verwendet die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung beim Herstellen der Verbindung mit dem Verteiler.|  
 |**dts_package_name**||Gibt den Namen des SQL Server 2000 DTS-Pakets (Data Transformation Services) an. Dieser Wert kann nur bei einer Transaktions- oder Momentaufnahmeveröffentlichung angegeben werden.|  
-|**dts_package_password**||Gibt das Kennwort für das Paket an. *Dts_package_password* ist **Sysname** hat den Standardwert NULL, der angibt, dass die Kennworteigenschaft ist, werden nicht geändert.<br /><br /> Hinweis: Ein DTS-Paket muss ein Kennwort verfügen.<br /><br /> Dieser Wert kann nur bei einer Transaktions- oder Momentaufnahmeveröffentlichung angegeben werden.|  
+|**dts_package_password**||Gibt das Kennwort für das Paket an. *Dts_package_password* ist **Sysname** hat den Standardwert NULL, der angibt, dass die Kennworteigenschaft ist, werden nicht geändert.<br /><br /> Hinweis: Ein DTS-Paket muss über ein Kennwort verfügen.<br /><br /> Dieser Wert kann nur bei einer Transaktions- oder Momentaufnahmeveröffentlichung angegeben werden.|  
 |**dts_package_location**||Der Speicherort, in dem das DTS-Paket gespeichert ist. Dieser Wert kann nur bei einer Transaktions- oder Momentaufnahmeveröffentlichung angegeben werden.|  
 |**dynamic_snapshot_location**||Gibt den Pfad zum Ordner an, in dem die Momentaufnahmedateien gespeichert werden. Dieser Wert kann nur bei einer Mergeveröffentlichung angegeben werden.|  
 |**ftp_address**||Nur aus Gründen der Abwärtskompatibilität beibehalten|  
@@ -92,7 +91,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**sich**||Der Anmeldename, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_password**||Das vom Merge-Agent verwendete Kennwort für die Herstellung einer Verbindung mit dem Webserver, der die Websynchronisierung hostet, wobei die Verbindung über die Standardauthentifizierung erfolgt.|  
 |**internet_security_mode**|**1**|Verwendet für die Websynchronisierung die integrierte Windows-Authentifizierung. Wir empfehlen, bei der Websynchronisierung die Standardauthentifizierung zu verwenden. Weitere Informationen finden Sie unter [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  
-||**0**|Verwendet für die Websynchronisierung die Standardauthentifizierung.<br /><br /> Hinweis: Die websynchronisierung erfordert einer SSL-Verbindungs an den Webserver.|  
+||**0**|Verwendet für die Websynchronisierung die Standardauthentifizierung.<br /><br /> Hinweis: Für die Websynchronisierung ist eine SSL-Verbindung mit dem Webserver erforderlich.|  
 |**internet_timeout**||Zeit in Sekunden, bevor eine Anforderung für eine Websynchronisierung abläuft.|  
 |**internet_url**||URL, die den Speicherort der replikationsüberwachung für die websynchronisierung darstellt.|  
 |**merge_job_login**||Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird.|  

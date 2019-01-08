@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bbc70dbfec864052c4c877794561c8692cdfcfb
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 190a9a07ad293253ee9a2005a6b5981db129465f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560407"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214099"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Beispiele für Massenzugriff auf Daten in Azure Blob Storage
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -31,16 +31,16 @@ Die Anweisungen `BULK INSERT` und `OPENROWSET` können direkt auf eine Datei in 
 
 Für den Massenzugriff auf Azure Blob Storage über SQL Server wird mindestens [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 benötigt.
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 >  Bei allen Pfaden zum Container und zu den Dateien in Blob Storage wird die Groß-/Kleinschreibung beachtet (`CASE SENSITIVE`). Wenn ein Pfad nicht korrekt ist, wird möglicherweise die folgende Fehlermeldung zurückgegeben: „Massenladen ist nicht möglich. Die Datei „file.csv“ ist nicht vorhanden, oder Sie besitzen keine Rechte für den Dateizugriff."
-"
+> "
 
 
 ## <a name="create-the-credential"></a>Anmeldeinformationen erstellen   
    
 Alle nachfolgenden Beispiele erfordern für die komplette Datenbank gültige Anmeldeinformationen mit einem Verweis auf eine Shared Access Signature.   
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 >  Die externe Datenquelle muss mit für die komplette Datenbank gültige Anmeldeinformationen erstellt werden, die die `SHARED ACCESS SIGNATURE`-Identität verwenden. Informationen zum Erstellen einer Shared Access Signature für das Speicherkonto finden Sie unter der Eigenschaft **Shared Access Signature** auf der Eigenschaftenseite des Speicherkontos im Azure-Portal. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Weitere Informationen finden Sie unter [ (Erstellen von datenbankweit gültigen Anmeldeinformationen)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
  
 Erstellen Sie datenbankweit gültige Anmeldeinformationen mithilfe von `IDENTITY`, die auf `SHARED ACCESS SIGNATURE` festgelegt sein muss. Verwenden Sie den geheimen Schlüssel aus dem Azure-Portal. Zum Beispiel:  
@@ -109,7 +109,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoicesContainer',
       FORMAT = 'CSV'); 
 ```
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter   
+## <a name="see-also"></a>Weitere Informationen   
 
 [CREATE DATABASE SCOPED CREDENTIAL (Erstellen von datenbankweit gültigen Anmeldeinformationen)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
 [ERSTELLEN EINER EXTERNEN DATENQUELLE](../../t-sql/statements/create-external-data-source-transact-sql.md)   

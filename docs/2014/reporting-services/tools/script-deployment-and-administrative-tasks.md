@@ -23,12 +23,12 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6bf10f8ef0b748582aeef2e790207dcb287d3bdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01d506f8db09b8bc30b5587d6d98ecec793adab9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167282"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398873"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Skripts für Bereitstellungs- und Verwaltungsaufgaben
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt die Verwendung von Skripts, um routinemäßige Installations-, Bereitstellungs- und Verwaltungsaufgaben zu automatisieren. Die Bereitstellung eines Berichtsservers stellt einen aus mehreren Schritten bestehenden Vorgang dar. Sie müssen mehrere Tools und Prozesse verwenden, um eine Bereitstellung zu konfigurieren. Es gibt kein einzelnes Programm oder Verfahren, das zum Automatisieren aller zugehörigen Aufgaben verwendet werden kann.  
@@ -44,7 +44,7 @@ ms.locfileid: "48167282"
 ## <a name="deployment-tasks-and-how-to-automate-them"></a>Bereitstellungsaufgaben und deren Automatisierung  
  In der folgenden Tabelle sind die Installations- und Konfigurationsaufgaben zusammengefasst, die zum Bereitstellen eines Berichtsservers erforderlich sind. Sie können die Tabelle verwenden, um eine bestimmte Aufgabe an eine Vorgehensweise anzupassen, die die Automatisierung und unbeaufsichtigte Ausführung der Aufgabe ermöglicht.  
   
-|Task|Vorgehensweise|  
+|Aufgabe|Vorgehensweise|  
 |----------|--------------|  
 |Installieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Sie können an der Befehlszeile das Setupprogramm ausführen, um eine unbeaufsichtigte Installation auszuführen.<br /><br /> Mit dem Setupprogramm können Sie einen Berichtsserver installieren und konfigurieren, jedoch nur, wenn Sie die Standardkonfigurationsoption angeben und Ihr System sämtliche Anforderungen für diesen Installationstyp erfüllt. Wenn Sie die Installation nicht mit der Standardkonfiguration vornehmen können, können Sie nur die Dateien installieren.|  
 |Konfigurieren des Dienstkontos.|Das Dienstkonto wird anfänglich im Rahmen des Setups konfiguriert. Wenn Sie Änderungen am Dienstkonto als nach dem Setup durchzuführende Aufgabe automatisieren möchten, müssen Sie benutzerdefinierten Code schreiben, der den Berichtsserver-WMI-Anbieter aufruft (Windows Management Instrumentation). Es gibt keine Eingabeaufforderungs-Hilfsprogramme oder Skriptvorlagen für die programmgesteuerte Konfiguration des Dienstkontos.<br /><br /> Wenn die Codierungsanforderungen Sie von der Automatisierung dieses Schritts abhalten, können Sie das Konto auf einfache Weise manuell konfigurieren, indem Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool ausführen. Weitere Informationen finden Sie unter [Konfigurieren eines Dienstkontos (SSRS-Konfigurations-Manager)](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).|  
@@ -70,7 +70,7 @@ ms.locfileid: "48167282"
   
 -   Mit dem Berichtsserver-Skript-Hosttool (rs.exe) kann benutzerdefinierter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Code ausgeführt werden, den Sie schreiben, um vorhandenen Inhalt neu zu erstellen oder von einem Berichtsserver auf einen anderen zu verschieben. Mit dieser Vorgehensweise schreiben Sie ein Skript in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], speichern es als RSS-Datei und verwenden rs.exe zum Ausführen des Skripts auf dem Zielberichtsserver. Das von Ihnen verfasste Skript kann die SOAP-Schnittstelle zum Report Server-Webdienst aufrufen. Bereitstellungsskripts werden mithilfe dieser Methode geschrieben, da Sie auf diese Weise den Ordnernamespace und -inhalt eines Berichtsservers sowie die rollenbasierte Sicherheit neu erstellen können.  
   
--   In der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version wurden PowerShell-Cmdlets für den integrierten SharePoint-Modus eingeführt. Sie können PowerShell zur Konfiguration und Verwaltung der SharePoint-Integration verwenden.  Weitere Informationen finden Sie unter [PowerShell-Cmdlets für Reporting Services SharePoint Mode](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+-   In der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version wurden PowerShell-Cmdlets für den integrierten SharePoint-Modus eingeführt. Sie können PowerShell zur Konfiguration und Verwaltung der SharePoint-Integration verwenden.  Weitere Informationen finden Sie unter [PowerShell-Cmdlets für SharePoint-Modus von Reporting Services](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>Migrieren von Berichtsserverinhalten und -ordnern mithilfe von Skripts  
  Sie können Skripts schreiben, mit denen eine Berichtsserverumgebung in einer anderen Berichtsserverinstanz dupliziert werden. Bereitstellungsskripts werden in der Regel in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] geschrieben und dann mithilfe des Skripthost-Hilfsprogramms des Berichtsservers verarbeitet.  
@@ -94,10 +94,10 @@ ms.locfileid: "48167282"
 > [!NOTE]  
 >  Sofern nicht explizit Anmeldeinformationen festgelegt wurden, werden Skripts mit den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen des Benutzers ausgeführt, der das Skript ausführt.  
   
- Weitere Informationen zum Formatieren und Ausführen einer Skriptdatei finden Sie unter [mit einem Skript mit dem rs.exe-Hilfsprogramm und dem Webdienst](script-with-the-rs-exe-utility-and-the-web-service.md).  
+ Weitere Informationen zum Formatieren und Ausführen einer Skriptdatei finden Sie unter [Skripterstellung mit dem Hilfsprogramm rs.exe und dem Webdienst](script-with-the-rs-exe-utility-and-the-web-service.md).  
   
 ## <a name="using-scripts-to-set-server-properties"></a>Festlegen von Servereigenschaften mithilfe von Skripts  
- Sie können Skripts schreiben, um Systemeigenschaften auf dem Berichtsserver festzulegen. Das folgende [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET-Skript zeigt eine Möglichkeit, Eigenschaften festzulegen. In diesem Beispiel wird das RSClientPrint ActiveX-Steuerelement deaktiviert, aber Sie können ersetzen `EnableClientPrinting` und `False` mit allen gültigen Eigenschaftennamen und Wert. Eine vollständige Liste der Servereigenschaften finden Sie unter [Berichtsserver-Systemeigenschaften](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
+ Sie können Skripts schreiben, um Systemeigenschaften auf dem Berichtsserver festzulegen. Das folgende [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET-Skript zeigt eine Möglichkeit, Eigenschaften festzulegen. In diesem Beispiel wird das RSClientPrint-ActiveX-Steuerelement deaktiviert. Sie können jedoch `EnableClientPrinting` und `False` durch einen beliebigen gültigen Eigenschaftennamen und -wert ersetzen. Eine vollständige Liste der Servereigenschaften finden Sie unter [Report Server System Properties](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
   
  Um dieses Skript zu verwenden, speichern Sie es in einer Datei mit der Erweiterung RSS und verwenden anschließend das Eingabeaufforderungs-Hilfsprogramm rs.exe, um die Datei auf dem Berichtsserver auszuführen. Das Skript wird nicht kompiliert, daher wird keine Installation von [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]benötigt. In diesem Beispiel wird davon ausgegangen, dass Sie über die entsprechenden Berechtigungen für den lokalen Computer verfügen, der den Berichtsserver hostet. Wenn Sie mit einem Konto angemeldet sind, das nicht über die erforderlichen Berechtigungen verfügt, müssen Sie Kontoinformationen über zusätzliche Befehlzeilenargumente angeben. Weitere Informationen finden Sie unter [Hilfsprogramm RS.exe (SSRS)](rs-exe-utility-ssrs.md).  
   
@@ -109,7 +109,7 @@ Public Sub Main()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  
@@ -122,13 +122,13 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [GenerateDatabaseCreationScript-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
- [GenerateDatabaseRightsScript-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
- [GenerateDatabaseUpgradeScript-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
+ [GenerateDatabaseCreationScript-Methode &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
+ [GenerateDatabaseRightsScript-Methode &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
+ [GenerateDatabaseUpgradeScript-Methode &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
  [Installieren von SQLServer 2014 über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [Installieren von Reporting Services-Berichtsserver im einheitlichen Modus](../install-windows/install-reporting-services-native-mode-report-server.md)   
+ [Installieren des Reporting Services-Berichtsservers im einheitlichen Modus](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [Eingabeaufforderung-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Browserunterstützung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Reporting Services-Tools](reporting-services-tools.md)  
   

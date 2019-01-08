@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - client configuration [SQL Server], SQL Server Native Client
@@ -13,12 +12,12 @@ ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1278b552a02d74a0336a10e882f4c0220ab63eb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52d059977481236883be931a78a302c249f43ae4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122500"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818764"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0-Konfiguration
   Dieser Abschnitt enthält die F1-Hilfethemen für die Dialogfelder **SQL Server Native Client-Konfiguration** im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client handelt es sich um die Netzwerkbibliothek, die von Clientcomputern zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird (ab [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -29,23 +28,23 @@ ms.locfileid: "48122500"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [SQL Server Native Client-Konfigurationseigenschaften &#40;Registerkarte Flags&#41;](../../../2014/tools/configuration-manager/sql-server-native-client-configuration-properties-flags-tab.md)  
+-   [SQL Server Native Client-Konfigurationseigenschaften &#40;Registerkarte „Flags“&#41;](../../../2014/tools/configuration-manager/sql-server-native-client-configuration-properties-flags-tab.md)  
   
 -   [Clientprotokolle &#40;SQL Server-Konfigurations-Manager&#41;](../../relational-databases/sql-server-configuration-manager.md)  
   
-    -   [Eigenschaften der Clientprotokolle &#40;sortieren Sie die Registerkarte "&#41;](../../../2014/tools/configuration-manager/client-protocols-properties-order-tab.md)  
+    -   [Eigenschaften der Clientprotokolle &#40;Registerkarte „Reihenfolge“&#41;](../../../2014/tools/configuration-manager/client-protocols-properties-order-tab.md)  
   
-    -   [Clientprotokolle - Shared Memory-Eigenschaften &#40;Registerkarte-Protokoll&#41;](../../../2014/tools/configuration-manager/client-protocols-shared-memory-properties-protocol-tab.md)  
+    -   [Clientprotokolle - Shared Memory-Eigenschaften &#40;Registerkarte „Protokoll“&#41;](../../../2014/tools/configuration-manager/client-protocols-shared-memory-properties-protocol-tab.md)  
   
     -   [Clientprotokolle - TCP- und IP-Eigenschaften &#40;Registerkarte-Protokoll&#41;](../../../2014/tools/configuration-manager/client-protocols-tcp-and-ip-properties-protocol-tab.md)  
   
-    -   [Clientprotokolle - Named Pipes-Eigenschaften &#40;Registerkarte-Protokoll&#41;](../../../2014/tools/configuration-manager/client-protocols-named-pipes-properties-protocol-tab.md)  
+    -   [Clientprotokolle - Named Pipes-Eigenschaften &#40;Registerkarte „Protokoll“&#41;](../../../2014/tools/configuration-manager/client-protocols-named-pipes-properties-protocol-tab.md)  
   
 -   [Aliase &#40;SQL Server-Konfigurations-Manager&#41;](../../../2014/tools/configuration-manager/aliases-sql-server-configuration-manager.md)  
   
-    -   [Neuer Alias &#40;Registerkarte "Alias"&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)  
+    -   [Neuer Alias &#40;Registerkarte „Alias“&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)  
   
-    -   [&#60;Alias&#62; Eigenschaften &#40;Registerkarte "Alias"&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
+    -   [&#60;Alias&#62;-Eigenschaften &#40;Registerkarte „Alias“&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
     -   [Erstellen einer gültigen Verbindungszeichenfolge mithilfe des Shared Memory-Protokolls](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)  
   

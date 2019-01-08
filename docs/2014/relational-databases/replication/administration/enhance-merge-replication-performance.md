@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -20,12 +19,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 72a781fb802609ed778c46e50459a4253dbb3507
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82452c5e0d4ddff21870ff341673da6d11b18f40
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175656"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772020"
 ---
 # <a name="enhance-merge-replication-performance"></a>Verbessern der Leistung der Mergereplikation
   Im Anschluss an die in [Verbessern der allgemeinen Replikationsleistung](enhance-general-replication-performance.md)beschriebenen Überlegungen zur allgemeinen Leistung sollten Sie sich Gedanken über die im Folgenden beschriebenen zusätzlichen Aspekte im Zusammenhang mit einer Mergereplikation machen.  
@@ -42,7 +41,7 @@ ms.locfileid: "48175656"
   
 -   Überlegen Sie, ob Sie Tabellen, die LOB-Datentypen (Large Object) enthalten, übernormalisieren sollten.  
   
-     Bei der Synchronisierung muss der Merge-Agent möglicherweise die gesamte Datenzeile von einem Verleger oder Abonnenten lesen und übertragen. Falls die Zeile Spalten enthält, die LOBs verwenden, kann dieser Vorgang eine zusätzliche Speicherbelegung erfordern und die Leistung beeinträchtigen, auch wenn diese Spalten gar nicht aktualisiert wurden. Um die Wahrscheinlichkeit einer solchen Leistungsbeeinträchtigung zu verringern, sollten Sie LOB-Spalten in einer separaten Tabelle mit einer 1:1-Beziehung zu den restlichen Zeilendaten speichern. Die Datentypen `text`, `ntext`, und `image` sind veraltet. Wenn Sie LOBs verwenden, es wird empfohlen, dass Sie der mithilfe `varchar(max)`, `nvarchar(max)`, `varbinary(max)`bzw.  
+     Bei der Synchronisierung muss der Merge-Agent möglicherweise die gesamte Datenzeile von einem Verleger oder Abonnenten lesen und übertragen. Falls die Zeile Spalten enthält, die LOBs verwenden, kann dieser Vorgang eine zusätzliche Speicherbelegung erfordern und die Leistung beeinträchtigen, auch wenn diese Spalten gar nicht aktualisiert wurden. Um die Wahrscheinlichkeit einer solchen Leistungsbeeinträchtigung zu verringern, sollten Sie LOB-Spalten in einer separaten Tabelle mit einer 1:1-Beziehung zu den restlichen Zeilendaten speichern. Die Datentypen `text`, `ntext` und `image` sind als veraltet markiert. Wenn Sie LOBs verwenden, sollten Sie auf die Datentypen `varchar(max)`, `nvarchar(max)` und `varbinary(max)` zurückgreifen.  
   
 ## <a name="publication-design"></a>Veröffentlichungsentwurf  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48175656"
   
 -   Staffeln Sie die Zeitpläne für die Synchronisierung der Abonnements.  
   
-     Wenn viele Abonnenten eine Synchronisierung mit einem Verleger ausführen, sollten Sie die Zeitpläne so staffeln, dass die Merge-Agents zu unterschiedlichen Zeiten ausgeführt werden. Weitere Informationen finden Sie unter [Specify Synchronization Schedules](../specify-synchronization-schedules.md).  
+     Wenn viele Abonnenten eine Synchronisierung mit einem Verleger ausführen, sollten Sie die Zeitpläne so staffeln, dass die Merge-Agents zu unterschiedlichen Zeiten ausgeführt werden. Weitere Informationen finden Sie unter [Angeben von Synchronisierungszeitplänen](../specify-synchronization-schedules.md).  
   
 ## <a name="merge-agent-parameters"></a>Merge-Agentparameter  
  Informationen zum Merge-Agent und seinen Parametern finden Sie unter [Replication Merge Agent](../agents/replication-merge-agent.md).  
@@ -101,9 +100,9 @@ ms.locfileid: "48175656"
   
      Beim Aktualisieren des Abonnenten auf [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder eine höhere Version wird auch der Merge-Agent aktualisiert, der von den Abonnements auf diesem Abonnenten verwendet wird. Dieser Merge-Agent von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder einer höheren Version ist erforderlich, um die neuen Funktionen und Leistungsoptimierungsmöglichkeiten nutzen zu können.  
   
--   Wenn ein Abonnement über eine schnelle Verbindung synchronisiert wird und vom Verleger und vom Abonnenten Änderungen gesendet werden, verwenden Sie für den Merge-Agent den **–ParallelUploadDownload** -Parameter.  
+-   Wenn ein Abonnement über eine schnelle Verbindung synchronisiert wird sowie Änderungen vom Verleger und vom Abonnenten gesendet werden, verwenden Sie für den Merge-Agent den Parameter **-ParallelUploadDownload**.  
   
-     In[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein neuer Parameter für den Merge-Agent eingeführt: **–ParallelUploadDownload**. Wenn Sie diesen Parameter verwenden, kann der Merge-Agent gleichzeitig sowohl die Änderungen, die auf den Verleger hochgeladen werden, als auch die Änderungen verarbeiten, die auf den Abonnenten heruntergeladen werden. Dieses Verhalten erweist sich in Umgebungen mit hohem Volumen als nützlich, die eine hohe Netzwerkbandbreite besitzen. Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
+     Mit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein neuer Parameter für den Merge-Agent eingeführt: **-ParallelUploadDownload**. Wenn Sie diesen Parameter verwenden, kann der Merge-Agent gleichzeitig sowohl die Änderungen, die auf den Verleger hochgeladen werden, als auch die Änderungen verarbeiten, die auf den Abonnenten heruntergeladen werden. Dieses Verhalten erweist sich in Umgebungen mit hohem Volumen als nützlich, die eine hohe Netzwerkbandbreite besitzen. Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
   
     -   [Arbeiten mit Replikations-Agent-Profilen](../agents/replication-agent-profiles.md)  
   
@@ -141,7 +140,7 @@ ms.locfileid: "48175656"
   
 -   Indizieren Sie die Systemtabellen für die Mergereplikation von Zeit zu Zeit neu.  
   
-     Als Teil der Wartung für die Mergereplikation überprüfen Sie gelegentlich die Vergrößerung der Systemtabellen, die mit der Mergereplikation verbunden sind: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**und **MSmerge_past_partition_mappings**. Führen Sie eine regelmäßige Neuindizierung dieser Tabellen durch. Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../indexes/reorganize-and-rebuild-indexes.md).  
+     Als Teil der Wartung für die Mergereplikation überprüfen Sie gelegentlich die Vergrößerung der Systemtabellen, bei der Mergereplikation verbunden sind: **MSmerge_contents**, **MSmerge_genhistory**, und **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, und **MSmerge_ Past_partition_mappings**. Führen Sie eine regelmäßige Neuindizierung dieser Tabellen durch. Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Überwachen Sie mithilfe der Registerkarte **Synchronisierungsverlauf** im Replikationsmonitor die Synchronisierungsleistung.  
   

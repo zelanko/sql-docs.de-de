@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f34454f292e7efc92c960930b6a9218edae6a70f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6c451d13016915c9218efb2963429f8f5a7709e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148315"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544233"
 ---
 # <a name="performing-batch-operations-xmla"></a>Ausführen von Batchvorgängen (XMLA)
   Können Sie die [Batch](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) -Befehl in XML for Analysis (XMLA), führen Sie mehrere XMLA-Befehle, die mit einer einzigen XMLA- [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) Methode. Sie können mehrere Befehle, die in enthaltenen Ausführen der **Batch** Befehl entweder als einzelne Transaktion oder als individuelle Transaktionen für jeden Befehl, seriell oder parallel. Sie können auch angeben, Out-of-Line-Bindungen und andere Eigenschaften in der **Batch** Befehl für die Verarbeitung mehrerer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekte.  
@@ -23,12 +23,12 @@ ms.locfileid: "50148315"
  Die **Batch** Befehl führt die Befehle in einer von zwei Arten:  
   
  **Transaktion**  
- Wenn die **Transaktion** Attribut der **Batch** Befehl festgelegt ist auf "true", die **Batch** Befehl führen Sie Befehle alle Befehle innerhalb der **Batch** Befehl in einer einzelnen Transaktion – eine *transaktionale* Batch.  
+ Wenn die **Transaktion** Attribut der **Batch** Befehl festgelegt ist auf "true", die **Batch** Befehl führen Sie Befehle alle Befehle innerhalb der **Batch** Befehl in einer einzelnen Transaktion a *transaktionale* Batch.  
   
  Wenn ein Befehl in einem transaktionalen Batch fehlschlägt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Rollback für alle Befehle aus, der **Batch** -Befehl, der vor dem Befehl fehlgeschlagenen ausgeführt wurde, und die **Batch** -Befehl wird unmittelbar beendet. Alle Befehle in der **Batch** -Befehl, der noch nicht ausgeführt haben, werden nicht ausgeführt. Nach der **Batch** Befehl endet, die **Batch** -Befehl meldet alle Fehler, die für den fehlgeschlagenen Befehl aufgetreten sind.  
   
  **Nontransactional**  
- Wenn die **Transaktion** -Attribut auf "False" festgelegt ist die **Batch** Befehl führt jeden Befehl enthalten die **Batch** Befehl in einer separaten Transaktion – eine  *nicht transaktionale* Batch. Wenn ein Befehl in einem nicht transaktionalen Batch fehlschlägt der **Batch** Befehl zum Ausführen der Befehle nach dem Befehl der Fehler wird fortgesetzt. Nach der **Batch** Befehl versucht, alle Befehle auszuführen, die die **Batch** Befehl enthält, die **Batch** Befehl gibt alle aufgetretenen Fehler.  
+ Wenn die **Transaktion** -Attribut auf "False" festgelegt ist die **Batch** Befehl führt jeden Befehl enthalten die **Batch** Befehl in einer separaten Transaktion a  *nicht transaktionale* Batch. Wenn ein Befehl in einem nicht transaktionalen Batch fehlschlägt der **Batch** Befehl zum Ausführen der Befehle nach dem Befehl der Fehler wird fortgesetzt. Nach der **Batch** Befehl versucht, alle Befehle auszuführen, die die **Batch** Befehl enthält, die **Batch** Befehl gibt alle aufgetretenen Fehler.  
   
  Alle Ergebnisse von Befehlen, die in enthaltenen eine **Batch** -Befehl zurückgegeben werden, in der gleichen Reihenfolge, in dem die Befehle enthalten sind, in, der **Batch** Befehl. Die Ergebnisse einer **Batch** Befehl variieren je nachdem, ob die **Batch** Befehl ist transaktional oder nicht transaktional.  
   

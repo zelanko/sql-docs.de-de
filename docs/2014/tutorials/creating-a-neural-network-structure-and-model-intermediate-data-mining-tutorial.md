@@ -17,12 +17,12 @@ ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa474cfd298b5d482f8b1804159f085fca5f8c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 144f2f754dc93be29f6be8fc786afa354a96c911
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195560"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395803"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Erstellen einer neuronalen Netzwerkstruktur und eines neuronalen Netzwerkmodells (Data Mining-Lernprogramm für Fortgeschrittene)
   Um ein Data Mining-Modell zu erstellen, müssen Sie zuerst mithilfe des Data Mining-Assistenten eine neue Miningstruktur auf Grundlage der neuen Datenquellensicht erstellen. In diesem Task erstellen Sie mit dem Assistenten eine Miningstruktur und zugleich ein zugehöriges Miningmodell auf Grundlage des [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network-Algorithmus.  
@@ -88,7 +88,7 @@ ms.locfileid: "48195560"
     |TotalOperators|Nicht verwenden|  
     |WageType|Eingabe|  
   
-     Beachten Sie, dass mehrere vorhersagbare Spalten ausgewählt wurden. Eine der Stärken des Neural Network-Algorithmus besteht in seiner Fähigkeit, alle möglichen Kombinationen von Eingabe- und Ausgabeattributen zu analysieren. Für ein großes Dataset ist dies nicht empfehlenswert, da es die Verarbeitungszeit exponentiell verlängern könnte.  
+     Beachten Sie, dass mehrere vorhersagbare Spalten ausgewählt wurden. Eine der Stärken des Neural Network-Algorithmus besteht in seiner Fähigkeit, alle möglichen Kombinationen von Eingabe- und Ausgabeattributen zu analysieren. Sie nicht empfehlenswert für ein großes DataSet, wie sie die Verarbeitungszeit exponentiell verlängern könnte...  
   
 12. Auf der **Inhalt und Datentyp der Spalten angeben** Seite stellen Sie sicher, dass das Raster enthält, die Spalten, Inhaltstypen und Datentypen, wie in der folgenden Tabelle dargestellt, und klicken Sie dann auf **Weiter**.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48195560"
   
  ![Verteilung von Werten für Dienstqualität](../../2014/tutorials/media/skt-service-grade-valuesc.gif "Verteilung von Werten für Dienstqualität")  
   
- Bei der Verarbeitung des Modells könnten die Ausgaben daher anders als erwartet gruppiert werden. Bei Verwendung von clustering Identifizieren der besten Wertegruppen teilt der Algorithmus die Werte in ServiceGrade z. B. in Bereiche wie folgt: 0,0748051948 - 0,09716216215. Obwohl diese Gruppierung mathematisch korrekt ist, sind solche Bereiche für Geschäftsbenutzer möglicherweise weniger sinnvoll.  
+ Bei der Verarbeitung des Modells könnten die Ausgaben daher anders als erwartet gruppiert werden. Bei Verwendung von clustering Identifizieren der besten Wertegruppen unterteilt der Algorithmus z. B. die Werte in ServiceGrade in Bereiche wie diese: 0,0748051948 - 0,09716216215. Obwohl diese Gruppierung mathematisch korrekt ist, sind solche Bereiche für Geschäftsbenutzer möglicherweise weniger sinnvoll.  
   
- In diesem Schritt gestalten Sie das Ergebnis intuitiver, indem Sie die numerischen Werte anders gruppieren und Kopien der numerischen Datenspalte erstellen.  
+ In diesem Schritt werden um das Ergebnis intuitiver, machen Sie die numerischen Werte gruppieren anders und Kopien der numerischen Datenspalte erstellen.  
   
 ### <a name="how-discretization-works"></a>Funktionsweise der Diskretisierung  
  Analysis Services stellt eine Vielzahl von Methoden zur Klasseneinteilung oder zur Verarbeitung numerischer Daten bereit. In der folgenden Tabelle werden die Unterschiede zwischen den Ergebnissen veranschaulicht, wenn das ServiceGrade-Ausgabeattribut mit drei verschiedenen Methoden verarbeitet wurde:  
@@ -263,7 +263,7 @@ ms.locfileid: "48195560"
   
      Die **Eigenschaften** Fenster sollte Folgendes enthalten:  
   
-    |Eigenschaft|value|  
+    |Eigenschaft|Wert|  
     |--------------|-----------|  
     |**Beschreibung**|Temporärer Spaltenalias|  
     |**ID**|ServiceGrade-Klassifizierung|  
@@ -321,6 +321,6 @@ ms.locfileid: "48195560"
  [Untersuchen des Callcentermodells &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningstrukturen &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

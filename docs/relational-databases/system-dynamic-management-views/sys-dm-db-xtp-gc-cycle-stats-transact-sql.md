@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64f6d23e30a589c4924925b834b310921d17ba57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b59b0bdfb2852c20c2f13641682a1adff3547662
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818938"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540784"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47818938"
   
 -   Generierungen 1-14: Speichern Transaktionen, deren Zeitstempel nach der ältesten aktiven Transaktion liegt. Die Zeilenversionen können nicht von der Garbage Collection bereinigt werden. Jede Generierung kann bis zu 16 Transaktionen enthalten. In den Generierungen können insgesamt 224 (14 * 16) Transaktionen gespeichert werden.  
   
--   Generierung 15: Enthält die übrigen Transaktionen, deren Zeitstempel nach der ältesten aktiven Transaktion liegt. Die Anzahl der Transaktionen in Generierung 15 ist genauso wie bei Generierung 0 unbegrenzt.  
+-   Generation 15 Enthält die übrigen Transaktionen, deren Zeitstempel nach der ältesten aktiven Transaktion liegt. Die Anzahl der Transaktionen in Generierung 15 ist genauso wie bei Generierung 0 unbegrenzt.  
   
  Bei unzureichendem Arbeitsspeicher wird der Hinweis auf die älteste aktive Transaktion vom Garbage Collection-Thread aggressiv aktualisiert, wodurch eine Garbage Collection erzwungen wird.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47818938"
 |cycle_id|**bigint**|Ein eindeutiger Bezeichner für den Zyklus der Garbage Collection.|  
 |ticks_at_cycle_start|**bigint**|Takte, bei denen der Zyklus gestartet wurde.|  
 |ticks_at_cycle_end|**bigint**|Takte, bei denen der Zyklus beendet wurde.|  
-|base_generation|**bigint**|Der aktuelle Basisgenerierungswert in der Datenbank. Dieser entspricht dem Zeitstempel der ältesten aktiven Transaktion, mit dessen Hilfe Transaktionen für die Garbage Collection identifiziert werden. Die ID der ältesten aktiven Transaktion wird in Schritten von 16 aktualisiert. Beispiel: Wenn die Transaktions-IDs 124, 125, 126 … 139 lauten, beträgt der Wert 124. Wenn Sie eine weitere Transaktion, z. B. 140, hinzufügen, ist der Wert 140.|  
+|base_generation|**bigint**|Der aktuelle Basisgenerierungswert in der Datenbank. Dieser entspricht dem Zeitstempel der ältesten aktiven Transaktion, mit dessen Hilfe Transaktionen für die Garbage Collection identifiziert werden. Die ID der ältesten aktiven Transaktion wird in Schritten von 16 aktualisiert. Wenn Sie Transaktions-Ids 124, 125, 126 haben z. B.... 139 lauten, beträgt der Wert 124. Wenn Sie eine weitere Transaktion, z. B. 140, hinzufügen, ist der Wert 140.|  
 |xacts_copied_to_local|**bigint**|Die Anzahl der Transaktionen, die aus der Transaktionspipeline in das Generierungsarray der Datenbank kopiert wurden.|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|Die Anzahl der Transaktionen in jeder Generierung.|  
   

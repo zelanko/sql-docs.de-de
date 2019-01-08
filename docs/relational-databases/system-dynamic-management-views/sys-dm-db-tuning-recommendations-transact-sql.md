@@ -23,19 +23,19 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0faae3cec2d71c28056a384b196a9b46929d5d6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb5b2558a6dca79d4794b5d12c8e63fd6f002312
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792108"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527513"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>Sys.DM\_Db\_Optimierung\_Empfehlungen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Gibt ausführliche Informationen zu optimierungsempfehlungen.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, dass diese Informationen verfügbar gemacht werden, wird jede Zeile mit Daten, die zum verbundenen Mandanten gehören, herausgefiltert.
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, diese Informationen bereitstellen, wird jede Zeile, die Daten enthält, die zum verbundenen Mandanten gehören nicht herausgefiltert.
 
 | **Spaltenname** | **Data type** | **Beschreibung** |
 | --- | --- | --- |
@@ -80,7 +80,7 @@ JSON-Dokuments in `state` Spalte enthält den Grund an, die beschreibt, warum di
 | `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` Option ist während der Überprüfung durch den Benutzer deaktiviert. Aktivieren Sie `FORCE_LAST_GOOD_PLAN` -Option [ALTER DATABASE festgelegt AUTOMATIC_TUNING &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) -Anweisung oder erzwingen Sie den Plan manuell mithilfe des Skripts im `[details]` Spalte. |
 | `UnsupportedStatementType` | Plan kann nicht in der Abfrage erzwungen werden. Beispiele für nicht unterstützte Abfragen sind Cursor und `INSERT BULK` Anweisung. |
 | `LastGoodPlanForced` | Die Empfehlung wurde erfolgreich angewendet. |
-| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identifiziert potenzielle Leistungsverlust, aber die `FORCE_LAST_GOOD_PLAN` nicht aktiviert ist – siehe [ALTER DATABASE festgelegt AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Anwenden einer Empfehlung manuell, oder aktivieren Sie `FORCE_LAST_GOOD_PLAN` Option. |
+| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identifiziert potenzielle Leistungsverlust, aber die `FORCE_LAST_GOOD_PLAN` nicht aktiviert ist: Siehe [ALTER DATABASE festgelegt AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Anwenden einer Empfehlung manuell, oder aktivieren Sie `FORCE_LAST_GOOD_PLAN` Option. |
 | `VerificationAborted`| Überprüfung wird aufgrund der Neustart oder Query Store Bereinigung abgebrochen. |
 | `VerificationForcedQueryRecompile`| Abfrage wird neu kompiliert werden, da keine deutliche leistungsverbesserung vorhanden ist. |
 | `PlanForcedByUser`| Benutzer manuell erzwungen, die mit [Sp_query_store_force_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) Verfahren. |

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b5bf5ce20678845111a1f410739674c50c7bb61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596159"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402850"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47596159"
 |**last_media_number**|**smallint**|Mediennummer des Mediums, bei dem der Sicherungssatz endet. Kann den Wert NULL haben.|  
 |**catalog_family_number**|**tinyint**|Familiennummer des Mediums, das den Beginn des Sicherungssatzverzeichnisses enthält. Kann den Wert NULL haben.|  
 |**catalog_media_number**|**smallint**|Mediennummer des Mediums, das den Beginn des Sicherungssatzverzeichnisses enthält. Kann den Wert NULL haben.|  
-|**Position**|**int**|Position des Sicherungssatzes, die in dem Wiederherstellungsvorgang zum Suchen nach dem geeigneten Sicherungssatz und den geeigneten Dateien verwendet wird. Kann den Wert NULL haben. Weitere Informationen finden Sie in der Datei im [Sicherung &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|Position des Sicherungssatzes, die in dem Wiederherstellungsvorgang zum Suchen nach dem geeigneten Sicherungssatz und den geeigneten Dateien verwendet wird. Kann den Wert NULL haben. Weitere Informationen finden Sie in der Datei im [Sicherung &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Datum und Uhrzeit des Zeitpunkts, zu dem die Gültigkeit des Sicherungssatzes endet. Kann den Wert NULL haben.|  
 |**software_vendor_id**|**int**|ID des Softwareanbieters, der den Sicherungsmedienheader schreibt. Kann den Wert NULL haben.|  
 |**name**|**nvarchar(128)**|Name des Sicherungssatzes. Kann den Wert NULL haben.|  
@@ -100,7 +100,7 @@ ms.locfileid: "47596159"
 |**compressed_backup_size**|**Numeric(20,0)**|Gesamtbytezahl der auf einem Datenträger gespeicherten Sicherung.<br /><br /> Zum Berechnen des Komprimierungsverhältnisses verwenden **Compressed_backup_size** und **Backup_size**.<br /><br /> Während ein **Msdb** ein Upgrade ausführen, wird dieser Wert auf NULL festgelegt. Dies gibt eine nicht komprimierte Sicherung an.|  
 |**key_algorithm**|**nvarchar(32)**|Der Verschlüsselungsalgorithmus, der zum Verschlüsseln der Sicherung verwendet wird. Der NO_Encryption-Wert gab an, dass die Sicherung nicht verschlüsselt wurde.|  
 |**encryptor_thumbprint**|**varbinary(20)**|Der Fingerabdruck der Verschlüsselung, der verwendet werden kann, um das Zertifikat oder den asymmetrischen Schlüssel in der Datenbank zu ermitteln. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
-|**encryptor_type**|**nvarchar(32)**|Der verwendete Verschlüsselungstyp: Zertifikat oder Asymmetrischer Schlüssel. . Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
+|**encryptor_type**|**nvarchar(32)**|Verwendeter Verschlüsselungstyp: Zertifikat oder asymmetrischer Schlüssel . Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
   
 ## <a name="remarks"></a>Hinweise  
  RESTORE VERIFYONLY FROM *Backup_device* WITH LOADHISTORY füllt die Spalte von der **Backupmediaset** Tabelle mit den entsprechenden Werten aus dem mediensatzheader.  

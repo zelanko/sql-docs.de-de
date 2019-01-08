@@ -20,16 +20,16 @@ ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1bd012fc4f3d1e55c27a585600bff7f85459d469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47069f1003b9b3f9bddb1e8601b3b4284372ae7e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844358"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205189"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführten: ODBC 1.0: veraltetes Feature in Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 und höher  
+ Eingeführt in Version: ODBC 1.0: Veraltetes Feature in Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 und höher  
   
  **Zusammenfassung**  
  **SQLInstallDriverManager** gibt den Pfad des das Zielverzeichnis für die Installation der ODBC-Kernkomponenten. Das aufrufende Programm muss der Treiber-Manager-Dateien tatsächlich in das Zielverzeichnis kopieren.  
@@ -74,7 +74,7 @@ BOOL SQLInstallDriverManager(
   
  Wenn eine ältere Version des Treiber-Managers durch das Installationsprogramm der Anwendung bereits installiert wurde, die Kernkomponenten deinstalliert und anschließend erneut installieren, damit an, dass der Verwendungszähler für Core Komponente gültig ist. **SQLRemoveDriverManager** zuerst aufgerufen werden, um die Verwendungsanzahl der Komponente zu verringern. **SQLInstallDriverManager** dann aufgerufen werden, um die Verwendungsanzahl der Komponente zu erhöhen. Das Installationsprogramm der Anwendung muss die alten Kerndateien Komponente durch die neuen Dateien ersetzen. Die Datei Verwendungszähler bleiben unverändert, und Verwenden anderer Anwendungen, die die ältere Version Komponente Kerndateien verwendet nun die Dateien für die neuere Version.  
   
- In einer Neuinstallation der ODBC-Kernkomponenten, Treiber und Übersetzer, sollte das Setupprogramm für die Anwendung die folgenden Funktionen aufrufen, in Reihenfolge: **SQLInstallDriverManager**, **SQLInstallDriverEx**, **SQLConfigDriver** (mit einem *häufigsten* von ODBC_INSTALL_DRIVER), und klicken Sie dann **SQLInstallTranslatorEx**. In der Kernkomponenten, Treiber und Übersetzer zu deinstallieren, sollte das Setupprogramm für die Anwendung die folgenden Funktionen aufrufen, nacheinander: **SQLRemoveTranslator**, **SQLRemoveDriver**, und klicken Sie dann **SQLRemoveDriverManager**. Diese Funktionen müssen in dieser Reihenfolge aufgerufen werden. Ein Upgrade aller Komponenten alle Funktionen für die Deinstallation nacheinander aufgerufen werden soll, und klicken Sie dann alle Funktionen für die Installation nacheinander aufgerufen werden soll.  
+ In einer Neuinstallation der ODBC-Kernkomponenten, Treiber und Übersetzer sollte das Setupprogramm für die Anwendung die folgenden Funktionen in der Sequenz aufrufen: **SQLInstallDriverManager**, **SQLInstallDriverEx**, **SQLConfigDriver** (mit einem *häufigsten* von ODBC_INSTALL_DRIVER), und klicken Sie dann  **SQLInstallTranslatorEx**. In der Core-Komponenten, Treiber und Übersetzer zu deinstallieren sollte das Setupprogramm für die Anwendung die folgenden Funktionen in der Sequenz aufrufen: **SQLRemoveTranslator**, **SQLRemoveDriver**, und klicken Sie dann **SQLRemoveDriverManager**. Diese Funktionen müssen in dieser Reihenfolge aufgerufen werden. Ein Upgrade aller Komponenten alle Funktionen für die Deinstallation nacheinander aufgerufen werden soll, und klicken Sie dann alle Funktionen für die Installation nacheinander aufgerufen werden soll.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   

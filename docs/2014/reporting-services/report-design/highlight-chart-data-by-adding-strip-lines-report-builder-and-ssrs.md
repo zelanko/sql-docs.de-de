@@ -11,12 +11,12 @@ ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6a0318d041a43e96246931015ef35edaf7fd74a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5aae805b154d8c8876766f98e4d17c277a034764
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162870"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528254"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Hervorheben von Diagrammdaten durch Hinzufügen von Bereichsstreifen (Berichts-Generator und SSRS)
   Bereichsstreifen oder Streifen sind horizontale oder vertikale Bereiche, die den Hintergrund des Diagramms in regelmäßigen oder benutzerdefinierten Abständen schattieren. Mithilfe von Bereichsstreifen können Sie Folgendes tun:  
@@ -50,7 +50,7 @@ ms.locfileid: "48162870"
   
      Die Achseneigenschaften werden im Fenster "Eigenschaften" angezeigt.  
   
-2.  Klicken Sie im Abschnitt **Darstellung** des Eigenschaftenbereichs für die Eigenschaft StripLines auf die Schaltfläche „Auflistung bearbeiten(…)“, um den **ChartStripLine Auflistungs-Editor**zu öffnen.  
+2.  Klicken Sie im Abschnitt **Darstellung** des Eigenschaftenbereichs für die Eigenschaft StripLines auf die Schaltfläche „Edit Collection(...)“ (Sammlung bearbeiten), um den **ChartStripLine-Auflistungs-Editor** zu öffnen.  
   
 3.  Klicken Sie auf **Hinzufügen** , um der Auflistung einen neuen Bereichsstreifen hinzuzufügen.  
   

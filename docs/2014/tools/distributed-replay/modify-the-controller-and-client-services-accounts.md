@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6dbd6a425222c0e3f31d55a590294e9d3554f96e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181110"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822114"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Ändern von Controller- und Clientdienstkonten
   In diesem Thema werden Änderungen der Distributed Replay Controller- und Clientdienstkonten und die erneute Anwendung der Zugriffssteuerungslisten (Access Control List, ACL) behandelt.  
   
 ### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>So starten oder beenden Sie die Distributed Replay-Dienste über die Computerverwaltung  
   
-1.  Geben Sie auf dem Computer, auf dem der Distributed Replay-Diensten, an der Eingabeaufforderung den Befehl installiert sind `dcomcnfg`.  
+1.  Geben Sie auf dem Computer mit den Distributed Replay-Diensten an der Eingabeaufforderung `dcomcnfg` ein.  
   
 2.  Doppelklicken Sie auf **Dienste**, scrollen Sie nach unten, und klicken Sie mit der rechten Maustaste auf **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<Dienstname>**. Klicken Sie anschließend auf **Start** oder auf **Beenden**.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "48181110"
   
 3.  Wählen Sie im Fenster **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** auf der Registerkarte **Anmelden** die Option **Dieses Konto**aus, geben Sie das neue Anmeldekonto ein, oder klicken Sie auf **Durchsuchen** , um dieses zu suchen. Klicken Sie dann auf **OK**.  
   
-     **Wichtig**: Wenn Sie den Distributed Replay Controller konfigurieren, können Sie mindestens ein Benutzerkonto angeben, das zum Ausführen der Distributed Replay Client-Dienste verwendet wird. Die folgenden Kontotypen werden unterstützt:  
+     **Wichtige**: Wenn Sie die Distributed Replay Controller konfigurieren, können Sie eine oder mehrere Benutzerkonten angeben, die zum Ausführen der Distributed Replay Client-Dienste verwendet werden. Die folgenden Kontotypen werden unterstützt:  
   
     -   Domänenbenutzerkonto  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48181110"
   
     1.  Beenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Controllerdienst.  
   
-    2.  Geben Sie auf dem Controllercomputer, auf dem der Controllerdienst, über die Eingabeaufforderung installiert ist `dcomcnfg`.  
+    2.  Geben Sie auf dem Controllercomputer, auf dem der Controllerdienst installiert ist, an der Eingabeaufforderung `dcomcnfg` ein.  
   
     3.  Navigieren Sie im Fenster **Komponentendienste** zu **Konsolenstamm > Komponentendienste > Computer > Arbeitsplatz > DCOM Config > DReplayController**.  
   

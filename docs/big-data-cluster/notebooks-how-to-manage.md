@@ -1,29 +1,34 @@
 ---
-title: 'Gewusst wie: Verwalten von Notebooks in Azure Data Studio | Microsoft-Dokumentation'
-description: ''
+title: Verwalten von Notebooks in Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: Informationen Sie zum Verwalten von Notebooks in Azure Data Studio. Dies umfasst das Öffnen von Notebooks speichern möchten, und ändern Ihre big Data-Cluster-Verbindung.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ca756c81dcf54f42cb46be4b0f412ce9630814af
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.custom: seodec18
+ms.openlocfilehash: 998692f56f75e890ef0b4f8e40e256f2ebbd54de
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48796744"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246589"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Gewusst wie: Verwalten von Notebooks in Azure Data Studio
 
 In diesem Artikel wird das Öffnen und speichern Notebook-Dateien in Azure Data Studio mit der Vorschau von SQL Server-2019 veranschaulicht. Es veranschaulicht auch so ändern Sie die Verbindung in Ihrer SQL Server-big Data-Cluster.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 In diesem Artikel wird davon ausgegangen, dass Sie bereits ein Notebook, das Sie in Azure Data Studio verwenden möchten. Wenn Sie ein Notebook zu erstellen möchten, finden Sie unter [Verwendung von Notebooks in der Vorschau von SQL Server-2019](notebooks-guidance.md). Um Notebooks in Azure Data Studio verwenden zu können, müssen die folgenden Voraussetzungen erfüllt sein:
 
-- [Installieren Sie die neuesten big Data-Tools für die Vorschau von SQL Server-2019](deploy-big-data-tools.md).
 - [Bereitstellen einen big Data-Cluster](quickstart-big-data-cluster-deploy.md).
+- [SQL Server-2019 big Data-Tools](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server-2019-Erweiterung**
+   - **"kubectl"**
 
 ## <a name="open-a-notebook"></a>Öffnen Sie ein notebook
 

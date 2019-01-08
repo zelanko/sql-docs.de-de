@@ -14,12 +14,12 @@ ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5e90c0ceb79af8834bb2df17ab84943099276bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 715bcfdda978801bac28e59246aeddc9ab76851e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129880"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418651"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   Mit dem Dialogfeld **Paket ausführen** können Sie ein Paket auszuführen, das auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server gespeichert ist.  
@@ -44,7 +44,7 @@ ms.locfileid: "48129880"
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]eine Verbindung zum [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server her.  
   
-     Sie stellen eine Verbindung mit der [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Instanz her, die die SSISDB-Datenbank hostet.  
+     Sie stellen eine Verbindung mit der [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Instanz her, die die SSISDB-Datenbank hostet.  
   
 2.  Erweitern Sie im Objekt-Explorer die Struktur, um den Knoten **Integration Services-Kataloge** anzuzeigen.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48129880"
  Wählen Sie den Protokolliergrad für die Paketausführung aus. Weitere Informationen finden Sie unter [catalog.set_execution_parameter_value &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database).  
   
  **Speichern bei Fehlern**  
- Geben Sie an, ob eine Dumpdatei erstellt wird, wenn Fehler während der Paketausführung auftreten. Weitere Informationen finden Sie unter [Generieren von Dumpdateien für die Paketausführung](troubleshooting/generating-dump-files-for-package-execution.md).  
+ Geben Sie an, ob eine Dumpdatei erstellt wird, wenn Fehler während der Paketausführung auftreten. Weitere Informationen finden Sie unter [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md).  
   
  **32-Bit-Laufzeit**  
  Geben Sie an, dass das Paket auf einem 32-Bit-System ausgeführt wird.  

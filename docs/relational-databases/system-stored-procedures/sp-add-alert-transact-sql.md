@@ -18,12 +18,12 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 924c6ccdcd5d6e2c5529c3967c2943ec6349fe19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12c44c565e6e867c2fde6a99d770c2b083e3d6f9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610751"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203280"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,10 +84,10 @@ sp_add_alert [ @name = ] 'name'
  [  **@include_event_description_in =** ] *Include_event_description_in*  
  Gibt an, ob die Beschreibung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlers in die Benachrichtigungsmeldung eingeschlossen werden soll. *Include_event_description_in*ist **Tinyint**, hat den Standardwert **5** (E-mail und **net Send**), und können über einen oder mehrere der folgenden Werte in Kombination mit einer **Oder** logischer Operator.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Die Pager- und **net send** -Optionen werden in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr im [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**0**|None|  
 |**1**|E-Mail|  
@@ -119,7 +119,7 @@ sp_add_alert [ @name = ] 'name'
 |--------------------|-----------------|  
 |*Element*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
 |*Comparator*|Einer dieser Operatoren: >, < oder =|  
-|*ReplTest1*|Numerischer Wert des Indikators|  
+|*Wert*|Numerischer Wert des Indikators|  
   
  [ **@category_name =** ] **'***category***'**  
  Der Name der Warnungskategorie. *Kategorie* ist **Sysname**, hat den Standardwert NULL.  

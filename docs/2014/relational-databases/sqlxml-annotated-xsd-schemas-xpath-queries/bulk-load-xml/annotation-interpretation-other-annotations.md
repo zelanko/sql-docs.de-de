@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - url-encode annotation
@@ -23,21 +21,21 @@ ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe23d1fbcae65bf77c66ffa423d597cb1539a1eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 668e26430e97a1e7d34e0e420966b975874224c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115756"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750032"
 ---
 # <a name="other-annotations-sqlxml-40"></a>Andere Anmerkungen (SQLXML 4.0)
   Neben den in den vorherigen Themen in diesem Abschnitt beschriebenen Anmerkungen interpretiert XML-Massenladen diese anderen Anmerkungen folgendermaßen:  
   
  `sql:id-prefix`  
- Wenn das Schema Präfixe für die XML-Daten festlegt, entfernt XML-Massenladen die Präfixe, bevor die Daten an Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gesendet werden.  
+ Wenn das Schema Präfixe für die XML-Daten festlegt, entfernt XML-Massenladen die Präfixe, bevor die Daten an Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gesendet werden.  
   
  `sql:use-cdata`  
- XML-Massenladen liest der Text an, die in den CDATA gespeichert sind, Abschnitte und sendet sie an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ XML-Massenladen liest den Text, der in den CDATA-Abschnitten gespeichert wird, und sendet ihn an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  `sql:url-encode`  
  XML-Massenladen unterstützt diese Anmerkung nicht. Eine in der XML-Dateneingabe angegebene URL wird beispielsweise von XML-Massenladen an diesem Speicherort nicht gelesen, sodass sie in der Datenbank gespeichert werden kann.  

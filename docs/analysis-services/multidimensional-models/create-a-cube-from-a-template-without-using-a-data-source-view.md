@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie einen Cube ohne Verwendung einer Datenquellensicht aus einer Vorlage | Microsoft Docs
+title: Erstellen Sie einen Cube ohne Verwendung einer Datenquellensicht aus einer Vorlage | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 654278ee171666564771a3e620c903e598039a74
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 28f87d9cbe6dfa0bf41a0d0547e8da7bec5659bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025897"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521346"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Erstellen eines Cubes aus einer Vorlage, ohne eine Datenquellensicht zu verwenden
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34025897"
   
  Sowohl das Raster **Measures aus der Vorlage auswählen** als auch das Raster **Neue Measures hinzufügen** enthält Werte in den Spalten, die in der folgenden Tabelle beschrieben sind. Sie können auf einen Wert in einer der Listen klicken, um ihn zu ändern.  
   
-|Column|Description|  
+|Spalte|Description|  
 |------------|-----------------|  
 |**Measurename**|Durch einen Wert in dieser Spalte wird der Name eines im Cube enthaltenen Measures definiert. Klicken Sie auf einen Wert in dieser Spalte, um einen Namen einzugeben. Klicken Sie in dieser Spalte auf **Neues Measure hinzufügen** , um ein neues Measure zu erstellen. In dieser Spalte wird die **Name** -Eigenschaft für das Measureobjekt festgelegt.|  
 |**Measuregruppe**|Der Name der Measuregruppe, in der das Measure enthalten ist. Klicken Sie auf diesen Wert, um einen Namen auszuwählen oder einzugeben. Wenn Sie alle Measures löschen, die zu einer bestimmten Measuregruppe gehören, wird die Measuregruppe ebenfalls entfernt. In dieser Spalte wird die **Name** -Eigenschaft für das Measuregruppenobjekt festgelegt.|  
@@ -55,7 +55,7 @@ ms.locfileid: "34025897"
   
  Sowohl das Raster **Dimensionen aus der Vorlage auswählen** als auch das Raster **Neue Dimensionen hinzufügen** enthält Werte in den Spalten, die in der folgenden Tabelle beschrieben sind. Sie können auf einen Wert in einer der Listen klicken, um ihn zu ändern.  
   
-|Column|Description|  
+|Spalte|Description|  
 |------------|-----------------|  
 |**Typ**|Zeigt den Dimensionstyp einer Vorlagendimension an. Klicken Sie auf diese Zelle, um den Dimensionstyp für eine Dimension zu ändern. In dieser Spalte wird die **Type** -Eigenschaft für das Dimensionsobjekt festgelegt.|  
 |**Name**|Zeigt den Namen der Dimension an. Klicken Sie auf diese Zelle, um einen anderen Namen einzugeben. Durch diesen Wert wird die **Name** -Eigenschaft für das Dimensionsobjekt festgelegt.|  
@@ -82,7 +82,7 @@ ms.locfileid: "34025897"
 |Kalender|Description|  
 |--------------|-----------------|  
 |Geschäftskalender|Ein zwölfmonatiger Geschäftskalender. Wenn Sie diesen Kalender auswählen, müssen Sie den Anfangstag des vom Unternehmen verwendeten Geschäftsjahres angeben.|  
-|Berichtskalender (oder Marketingkalender)|Ein zwölfmonatiger Berichtskalender, der in einem sich wiederholenden dreimonatigen (quartalsweisen) Muster zwei Monate mit vier und einen Monat mit fünf Wochen enthält. Wenn Sie diesen Kalender auswählen, müssen Sie den Anfangstag und den Anfangsmonat des Dreimonatsmusters mit 4-4-5, 4-5-4 oder 5-4-4 Wochen angeben, wobei diese Zahlen die in einem Monat enthaltenen Wochen darstellen.|  
+|Berichtskalender (oder Marketingkalender)|Ein zwölfmonatiger Berichtskalender, der in einem sich wiederholenden dreimonatigen (quartalsweisen) Muster zwei Monate mit vier und einen Monat mit fünf Wochen enthält. Wenn Sie diesen Kalender auswählen, geben Sie den Anfangstag und den drei Monate 4-4-5, 4-5-4 oder 5-4-4 Wochen, wobei jede Ziffer für die Anzahl der Wochen in einem Monat darstellt.|  
 |Produktionskalender|Ein Kalender, der 13 aus vier Wochen bestehende Zeiträume verwendet, die in drei Quartale mit vier Zeiträumen und ein Quartal mit fünf Zeiträumen unterteilt sind. Wenn Sie diesen Kalender auswählen, geben Sie die Startwoche (zwischen 1 und 4) und den Monat für das Herstellungsjahr und das Quartal mit zusätzlichen Zeiträumen an.|  
 |ISO 8601-Kalender|Der Standardkalender für die Daten- und Zeitdarstellung (8601) der Internationalen Organisation für Normung (International Organization for Standardization, ISO). Dieser Kalender besitzt eine integrale Anzahl von 7-Tage-Wochen. Um zu vermeiden, dass eine Woche unterteilt wird, kann ein neues Jahr im Kalender bis zu einige Tage vor oder nach dem 1. Januar starten.|  
   

@@ -10,12 +10,12 @@ ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5ca907bb6ce3a1f8e298c5ecefa920815cf6a8be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d7f290459e1da736605acad941602399ec3ea53
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712381"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215297"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Projekteinstellungen (Konvertierung) (SybaseToSQL)
 Die Seite die **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA für Sybase Adaptive Server Enterprise (ASE)-Syntax, um konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Syntax.  
@@ -38,9 +38,9 @@ Mit dieser Einstellung können Sie den Typ der Nachricht ("Warnung" oder "Fehler
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** konvertieren, und markieren Sie mit der Warnung  
+**Standard/vollständigen-Modus:** Konvertieren Sie aus, und markieren Sie mit der Warnung  
   
-**Vollmodus:** Markierung mit Fehler  
+**Vollmodus:** Markieren Sie mit Fehler  
   
 **Konvertierung von LIKE-operator**  
 Gibt an, ob wie-Operanden durch, um Übereinstimmung mit Sybase ASE-Verhalten zu konvertieren. Der Punkt ist, dass Sybase nachfolgende Leerzeichen in einem Vergleichsmuster entfernt. Die problemumgehung besteht darin, eine Umwandlung der rechte Ausdruck in einem Datentyp mit fester Länge, mit einer maximalen Genauigkeit durchführen.  
@@ -51,7 +51,7 @@ Gibt an, ob wie-Operanden durch, um Übereinstimmung mit Sybase ASE-Verhalten zu
   
 Wenn Sie einen Konvertierungsmodus im Modus auswählen, gilt der SSMA die folgende Einstellung:  
   
-**Standard/Optimistic-Modus**: einfache Umwandlung  
+**Standard/vollständige**: Einfache Umwandlung  
   
 **Vollständiger Modus**: Umwandlung in fester Länge  
   
@@ -64,20 +64,20 @@ Gibt an, wie leere oder leere Zeichenfolgen in CONVERT oder CAST-Ausdrücke mit 
   
 Wenn Sie einen Konvertierungsmodus im Modus auswählen, gilt der SSMA die folgende Einstellung:  
   
-**Standard/Optimistic-Modus**: einfache Umwandlung  
+**Standard/vollständige**: Einfache Umwandlung  
   
-**Vollständiger Modus**: leere Zeichenfolge als null numerisch  
+**Vollständiger Modus**: Leere Zeichenfolge als null numerische Werte  
   
 **Verkettung von NULL**  
 Diese Einstellung gibt an, wie mit NULL verketten von Zeichenfolgen zu konvertieren. Die folgenden Optionen können für diese Einstellung festgelegt werden:  
   
--   **ISNULL-Funktion umschlossen:** Wenn diese Option wird festgelegt, jeder nicht Konstanten "String_expression" in Verkettung ISNULL(string_expression) eingebunden werden wird und NULL-Werte mit leeren Zeichenfolge ersetzt werden.  
+-   **Umschließen Sie sich an ISNULL-Funktion:** Wenn diese Option festgelegt ist, wird jeder nicht Konstanten "String_expression" in Verkettung ISNULL(string_expression) eingebunden werden, und NULL-Werte mit leeren Zeichenfolge ersetzt werden.  
   
 -   **Behalten der aktuellen syntax**  
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** behalten der aktuellen Syntax  
+**Standard/vollständigen-Modus:** Behalten der aktuellen syntax  
   
 **Vollmodus:** Umschließen mit ISNULL-Funktion  
   
@@ -92,9 +92,9 @@ Diese Einstellung gibt an, wie Sie leere Zeichenfolgen zu konvertieren. Die folg
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** behalten der aktuellen Syntax  
+**Standard/vollständigen-Modus:** Behalten der aktuellen syntax  
   
-**Vollmodus:** ersetzen alle Zeichenfolgenausdrücke durch Leerzeichen  
+**Vollmodus:** Ersetzen Sie alle Zeichenfolgenausdrücke durch Leerzeichen  
   
 **Konvertieren und Umwandlung binärer zeichenfolgenkonvertierung**  
 Die Konvertierung der Binärwerte in Zahlen kann unterschiedliche Werte auf verschiedenen Plattformen zurück. Z. B. auf X86 Prozessoren, CONVERT (ganze Zahl, 0 x 00000100) zurückgegeben wird, 65536 in ASE und 256 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. ASE gibt auch unterschiedliche Werte je nach Bytereihenfolge zurück.  
@@ -109,11 +109,11 @@ Verwenden Sie diese Einstellung zum Steuern, wie SSMA konvertiert konvertieren u
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standardmodus:** konvertieren, und markieren Sie mit der Warnung  
+**Standardmodus:** Konvertieren Sie aus, und markieren Sie mit der Warnung  
   
-**Vollständige Modus:** einfache Umwandlung  
+**Vollständige Modus:** Einfache Umwandlung  
   
-**Vollmodus:** konvertieren und zu beheben  
+**Vollmodus:** Konvertieren und zu beheben  
   
 **Dynamisches SQL**  
 Verwenden Sie diese Einstellung, um den Typ der Nachricht ("Warnung" oder "Fehler") anzugeben, die SSMA im Ausgabe- oder Fehlerliste angezeigt wird, wenn es sich um dynamische SQL-Code in der ASE-Code trifft.  
@@ -124,9 +124,9 @@ Verwenden Sie diese Einstellung, um den Typ der Nachricht ("Warnung" oder "Fehle
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** konvertieren, und markieren Sie mit der Warnung  
+**Standard/vollständigen-Modus:** Konvertieren Sie aus, und markieren Sie mit der Warnung  
   
-**Vollmodus:** Markierung mit Fehler  
+**Vollmodus:** Markieren Sie mit Fehler  
   
 **Konvertierung von Gleichheit überprüfen**  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure, ist von die ANSI_NULLS-Einstellung, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure-UNKNOWN zurückgibt, wenn jede Vergleiche auf Gleichheit einen null-Wert enthält. ANSI_NULLS off festgelegt ist, Durchführung von Gleichheitsvergleichen, die null-Werte enthalten. "true" Wenn die verglichenen Spalte "und" Ausdruck "oder" zwei Ausdrücke beide sind geben null zurück. Vergleichen von Standard (ANSINULL OFF) Sybase ASE auf Gleichheit Verhalten sich wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure mit ANSI_NULLS OFF.  
@@ -137,12 +137,12 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure, ist von
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** einfache Umwandlung  
+**Standard/vollständigen-Modus:** Einfache Umwandlung  
   
-**Vollmodus:** ggf. NULL Werte  
+**Vollmodus:** Betrachten Sie die NULL-Werte  
   
 **Formatzeichenfolgen**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure unterstützt nicht mehr die *Format_string* -Argument in Print- und RAISERROR-Anweisungen. Die *Format_string* Variable unterstützt ersetzbare Parameter direkt in der Zeichenfolge einfügen, und klicken Sie dann die Parameter zur Laufzeit zu ersetzen. Stattdessen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfordert die vollständige Zeichenfolge mit entweder einem Zeichenfolgenliteral oder eine Zeichenfolge, die mithilfe einer Variablen erstellt. Weitere Informationen finden Sie unter der "PRINT ([!INCLUDE[tsql](../../includes/tsql-md.md)])" Thema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure unterstützt nicht mehr die *Format_string* -Argument in Print- und RAISERROR-Anweisungen. Die *Format_string* Variable unterstützt ersetzbare Parameter direkt in der Zeichenfolge einfügen, und klicken Sie dann die Parameter zur Laufzeit zu ersetzen. Stattdessen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfordert die vollständige Zeichenfolge mit entweder einem Zeichenfolgenliteral oder eine Zeichenfolge, die mithilfe einer Variablen erstellt. Weitere Informationen finden Sie unter der "PRINT ( [!INCLUDE[tsql](../../includes/tsql-md.md)])" Thema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 Wenn SSMA trifft eine *Format_string* -Argument, es kann ein Zeichenfolgenliteral mit den Variablen erstellen oder eine neue Variable zu erstellen und erstellen Sie eine Zeichenfolge, indem Sie anhand dieser Variablen.  
   
@@ -222,9 +222,9 @@ Wenn SSMA trifft eine *Format_string* -Argument, es kann ein Zeichenfolgenlitera
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** neue Zeichenfolge  
+**Standard/vollständigen-Modus:** Erstellen Sie neue Zeichenfolge  
   
-**Vollmodus:** neue Variable erstellen  
+**Vollmodus:** Neue Variable zu erstellen  
   
 **Fügen Sie einen expliziten Wert in eine Timestamp-Spalte**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure unterstützt nicht das Einfügen von expliziten Werten in Timestamp-Spalte.  
@@ -235,9 +235,9 @@ Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folge
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** Exclude-Spalte  
+**Standard/vollständigen-Modus:** Schließen Sie Spalte  
   
-**Vollmodus:** Markierung mit Fehler  
+**Vollmodus:** Markieren Sie mit Fehler  
   
 **Temporäre Objekte, die in Prozeduren definierten Store**  
 Diese Einstellung gibt an, ob die temporäre Objekte Definitionen an die in den Prozeduren angezeigt werden während der Konvertierung in den Metadaten der Datenquelle gespeichert werden sollen.  
@@ -259,7 +259,7 @@ Gibt an, ob der ASE-Proxy-Tabellen konvertiert werden [!INCLUDE[ssNoVersion](../
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic/Full-Modus:** Markierung mit Fehler  
+**Standard/optimistische/Full-Modus:** Markieren Sie mit Fehler  
   
 **RAISERROR Basis Meldungsnummer.**  
 ASE-Benutzer-Nachrichten werden in jeder Datenbank gespeichert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] benutzermeldungen werden zentral gespeichert und durch die **sys.messages** -Katalogsicht angezeigt. Darüber hinaus ASE benutzermeldungen 20000, beginnen jedoch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlermeldungen 50001 beginnen.  
@@ -293,9 +293,9 @@ Verwenden Sie diese Einstellung, den Typ der Nachricht (Warnung oder Fehler) an,
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** konvertieren, und markieren Sie mit der Warnung  
+**Standard/vollständigen-Modus:** Konvertieren Sie aus, und markieren Sie mit der Warnung  
   
-**Vollmodus:** Markierung mit Fehler  
+**Vollmodus:** Markieren Sie mit Fehler  
   
 **Nicht aufgelöster Bezeichner**  
 Verwenden Sie diese Einstellung, um den Typ der Nachricht ("Warnung" oder "Fehler") anzugeben, die SSMA im Bereich "Ausgabe" oder "Error List" zeigt an, wenn er einen Bezeichner nicht auflösen kann.  
@@ -306,9 +306,9 @@ Verwenden Sie diese Einstellung, um den Typ der Nachricht ("Warnung" oder "Fehle
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** konvertieren, und markieren Sie mit der Warnung  
+**Standard/vollständigen-Modus:** Konvertieren Sie aus, und markieren Sie mit der Warnung  
   
-**Vollmodus:** Markierung mit Fehler  
+**Vollmodus:** Markieren Sie mit Fehler  
   
 ## <a name="system-function-options"></a>Systemoptionen-Funktion  
 **CHARINDEX-Funktion**  
@@ -320,7 +320,7 @@ In App Service-Umgebung gibt CHARINDEX NULL zurück, nur, wenn alle eingegebenen
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** behalten der aktuellen Syntax  
+**Standard/vollständigen-Modus:** Behalten der aktuellen syntax  
   
 **Vollmodus:** Replace-Funktion  
   
@@ -333,7 +333,7 @@ Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folge
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** behalten der aktuellen Syntax  
+**Standard/vollständigen-Modus:** Behalten der aktuellen syntax  
   
 **Vollmodus:** Replace-Funktion  
   
@@ -344,7 +344,7 @@ ASE unterstützt ein optionales *User_id* Argument für die INDEX_COL-Funktion; 
   
 -   Wählen Sie zum Anzeigen jedes Mal, wenn diese INDEX_COL gefunden, wird einer Fehlermeldung **Markierung mit Fehler**. SSMA wird nicht konvertiert werden Verweise auf die Funktion und kennzeichnet die Anweisung mit Fehler Kommentare.  
   
-**Standard/Optimistic/Full-Modus:** Markierung mit Fehler  
+**Standard/optimistische/Full-Modus:** Markieren Sie mit Fehler  
   
 **INDEX_COLORDER-Funktion**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ Eine Systemfunktion INDEX_COLORDER keinen SQL Azure.  
@@ -355,7 +355,7 @@ ASE unterstützt ein optionales *User_id* Argument für die INDEX_COL-Funktion; 
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic/Full-Modus:** Markierung mit Fehler  
+**Standard/optimistische/Full-Modus:** Markieren Sie mit Fehler  
   
 **Left- und RIGHT-Funktionen**  
 Links und rechts-Funktionen in Sybase Verhalten sich anders für negative Length-Parameter.  
@@ -366,7 +366,7 @@ Links und rechts-Funktionen in Sybase Verhalten sich anders für negative Length
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** behalten der aktuellen Syntax  
+**Standard/vollständigen-Modus:** Behalten der aktuellen syntax  
   
 **Vollmodus:** Replace-Funktion  
   
@@ -382,7 +382,7 @@ Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folge
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic/Full-Modus:** Markierung mit Fehler  
+**Standard/optimistische/Full-Modus:** Markieren Sie mit Fehler  
   
 **PATINDEX-Funktion**  
 Gibt an, ob PATINDEX-Funktion, um Übereinstimmung mit Sybase ASE-Verhalten zu konvertieren. Der Punkt ist, dass Sybase nachfolgende Leerzeichen in ein Suchmuster werden entfernt. Die problemumgehung besteht eine Umwandlung des Value-Ausdruck mit einer festen Länge, die Daten mit einer maximalen Genauigkeit geben und Anwenden von Rtrim-Funktion, um Muster zu suchen.  
@@ -393,9 +393,9 @@ Gibt an, ob PATINDEX-Funktion, um Übereinstimmung mit Sybase ASE-Verhalten zu k
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** nicht verwenden.  
+**Standard/vollständigen-Modus:** Nicht verwenden  
   
-**Vollmodus:** verwenden  
+**Vollmodus:** Verwenden Sie  
   
 **REPLICATE-Funktion**  
 Die REPLICATE-Funktion wird eine Zeichenfolge die angegebene Anzahl von Malen wiederholt. Wenn Sie angeben, dass die Zeichenfolge null Mal wiederholt, ist das Ergebnis in App Service-Umgebung null. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure, das Ergebnis ist eine leere Zeichenfolge.  
@@ -406,7 +406,7 @@ Die REPLICATE-Funktion wird eine Zeichenfolge die angegebene Anzahl von Malen wi
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus/Full-Modus:** Replace-Funktion  
+**Standard/optimistische Modus/Full-Modus:** Replace-Funktion  
   
 **TRIM (LTRIM, RTRIM)-Funktion**  
 Diese Einstellung gibt an, ob Aufrufe von Trim (LTRIM, RTRIM)-Funktionen durch die Syntax der Funktionen von Sybase ASE-äquivalent zu ersetzen oder Syntax für die aktuelle beibehalten. Die folgenden Optionen sind für diese Einstellung vorhanden:  
@@ -417,7 +417,7 @@ Diese Einstellung gibt an, ob Aufrufe von Trim (LTRIM, RTRIM)-Funktionen durch d
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus/Full-Modus:** Replace-Funktion  
+**Standard/optimistische Modus/Full-Modus:** Replace-Funktion  
   
 **SUBSTRING-Funktion**  
 In App Service-Umgebung die Funktion `SUBSTRING(expression, start, length)` gibt NULL zurück, wenn ein Start-Wert, der größer als die Anzahl der Zeichen im Ausdruck angegeben wird oder wenn die Länge 0 (null) entspricht. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure, der entsprechende Ausdruck eine leere Zeichenfolge zurückgegeben.  
@@ -428,7 +428,7 @@ In App Service-Umgebung die Funktion `SUBSTRING(expression, start, length)` gibt
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** behalten der aktuellen Syntax  
+**Standard/vollständigen-Modus:** Behalten der aktuellen syntax  
   
 **Vollmodus:** Replace-Funktion  
   
@@ -440,7 +440,7 @@ Erstellt einen neuen primären Schlüssel in der [!INCLUDE[ssNoVersion](../../in
   
 -   **Vollständige**: False  
   
--   **Vollständiger Modus**: "true"  
+-   **Vollständiger Modus**: Wahr  
   
 > [!NOTE]  
 > Beim Verbinden mit SQL Azure, ist es standardmäßig "true".  

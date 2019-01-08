@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, enabling
@@ -13,21 +12,21 @@ ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e3d6ee852f6631014a4407e09f7b41646e9f9cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214550"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806182"
 ---
 # <a name="enable-resource-governor"></a>Aktivieren der Ressourcenkontrolle
   Die Ressourcenkontrolle ist standardmäßig deaktiviert. Sie können die Ressourcenkontrolle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mit Transact-SQL aktivieren.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  
   
--   **So aktivieren Sie den Resource Governor über:**  [Objekt-Explorer](#RGOnObjEx), [Eigenschaften des Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
+-   **Zum Aktivieren der Ressourcenkontrolle mit:**  [Objekt-Explorer](#RGOnObjEx), [Eigenschaften des Resource Governors](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Wenn Sie die Ressourcenkontrolle aktivieren, geschieht Folgendes:  
   
 -   Die Klassifizierungsfunktion wird für neue Verbindungen ausgeführt, damit deren Arbeitsauslastungen Arbeitsauslastungsgruppen zugeordnet werden können.  

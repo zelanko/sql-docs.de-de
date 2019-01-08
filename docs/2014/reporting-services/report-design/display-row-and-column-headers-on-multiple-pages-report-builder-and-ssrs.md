@@ -11,12 +11,12 @@ ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 60bfb038d6712f44d6a0b5cd6cc57863f0f76ade
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 79565c22eab900eb152f8b5fa52748b3e5a09a16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48904980"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394253"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Anzeigen von Zeilen- und Spaltenüberschriften auf mehreren Seiten (Berichts-Generator und SSRS)
   Sie können festlegen, ob bei einem Tablix-Datenbereich, der mehrere Seiten umfasst, Zeilen- und Spaltenüberschriften auf jeder Seite wiederholt werden sollen. Ein Tablix-Datenbereich kann eine Tabelle, eine Matrix oder eine Liste sein.  
@@ -25,7 +25,7 @@ ms.locfileid: "48904980"
   
  ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
- Zeilen- und spaltengruppenkopfzeilen werden automatisch erstellt werden, wenn Sie Gruppen mithilfe des Tabellen- oder Matrix-Assistenten oder den Diagramm-Assistenten, indem Sie Felder in den Gruppierungsbereich hinzufügen oder Kontextmenüs hinzufügen. Wenn der Tablix-Datenbereich nur einen Tablix-Textbereich und keine Gruppenkopfzeilen enthält, sind die Zeilen und Spalten Tablix-Elemente.  
+ Zeilen- und Spaltengruppenkopfzeilen werden automatisch erstellt, wenn Sie Gruppen mit dem Tabellen- oder Matrix-Assistenten bzw. dem Diagramm-Assistenten hinzufügen, indem Felder zu dem Gruppierungsbereich hinzugefügt oder Kontextmenüs verwendet werden. Wenn der Tablix-Datenbereich nur einen Tablix-Textbereich und keine Gruppenkopfzeilen enthält, sind die Zeilen und Spalten Tablix-Elemente.  
   
  Bei statischen Elementen können Sie die obersten angrenzenden Zeilen oder die seitlichen angrenzenden Spalten auf mehreren Seiten anzeigen.  
   

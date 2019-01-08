@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_repldropcolumn_TSQL
@@ -17,19 +16,19 @@ ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b15bcd0b5a24c464799d1bb8150be59600a85ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c2a269abf3e7f465c71e09437c313196e1dcd30
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652888"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205689"
 ---
 # <a name="sprepldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Löscht eine Spalte aus einem vorhandenen Tabellenartikel, der veröffentlicht worden ist. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Diese gespeicherte Prozedur wurde als veraltet markiert und wird hauptsächlich aus Gründen der Abwärtskompatibilität unterstützt. Sie sollten nur mit verwendet werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Herausgeber und [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Wiederveröffentlichungsabonnenten. Diese Prozedur sollte nicht für Spalten mit Datentypen verwendet werden, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher eingeführt wurden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

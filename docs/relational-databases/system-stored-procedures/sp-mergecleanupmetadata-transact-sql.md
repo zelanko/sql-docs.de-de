@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_mergecleanupmetadata_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 994f24e0b19dac70e6987a0c23d45d5446548689
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3ae8edeff1792cf3a1c70d4e80dea638402e30d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670591"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210959"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +51,10 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>Hinweise  
  **Sp_mergecleanupmetadata** sollte verwendet werden, nur in Replikationstopologien mit Servern, auf denen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. Topologien mit ausschließlich [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 oder höher sollten eine auf Metadatencleanup basierende automatische Beibehaltung verwenden. Beim Ausführen dieser gespeicherten Prozedur müssen Sie beachten, dass die Protokolldatei auf dem Computer, auf dem die gespeicherte Prozedur ausgeführt wird, stark anwachsen kann.  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  Nach dem **Sp_mergecleanupmetadata** ausgeführt wird, wird standardmäßig alle Abonnements auf den Abonnenten von Veröffentlichungen, die in gespeicherten Metadaten **MSmerge_genhistory**, **' MSmerge_contents '**  und **MSmerge_tombstone** gekennzeichnet sind zur erneuten Initialisierung auf dem Abonnenten alle ausstehenden Änderungen verloren, und die aktuelle Momentaufnahme als veraltet markiert ist.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Wenn mehrere Veröffentlichungen in einer Datenbank vorhanden sind, und eine dieser Veröffentlichungen eine unbegrenzte Beibehaltungsdauer Veröffentlichungen verwendet (**@retention**=**0**), ausgeführte  **Sp_mergecleanupmetadata** wird nicht bereinigt die Merge-Replikation Metadaten zur änderungsnachverfolgung für die Datenbank. Aus diesem Grund sollten Sie die unbegrenzte Aufbewahrungsdauer für Veröffentlichungen mit Vorsicht verwenden.  
   
  Beim Ausführen dieser gespeicherten Prozedur, können Sie wählen, ob zum erneuten Initialisieren der Abonnenten durch Festlegen der **@reinitialize_subscriber** Parameter **"true"** (Standard) oder **"false"**. Wenn **Sp_mergecleanupmetadata** ausgeführt wird, mit der **@reinitialize_subscriber** Parametersatz zu **"true"**, eine Momentaufnahme wird erneut auf dem Abonnenten angewendet, selbst wenn das Abonnement wurde erstellt, ohne dass eine anfangsmomentaufnahme (z. B., wenn die momentaufnahmedaten und das Schema manuell angewendet oder bereits vorhanden, auf dem Abonnenten war wurden). Festlegen des Parameters auf **"false"** sollte mit Vorsicht, verwendet werden, da, wenn die Veröffentlichung nicht erneut initialisiert wird, müssen Sie sicherstellen, dass die Daten auf dem Verleger und Abonnenten synchronisiert werden.  
@@ -66,7 +65,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  Es ist nicht vorgeschrieben, wird jedoch empfohlen, alle Updates der Veröffentlichungs- und Abonnementdatenbanken zu beenden. Falls Updates fortgesetzt werden, gehen alle seit der letzten Zusammenführung beim Abonnenten vorgenommenen Updates beim erneuten Initialisieren der Veröffentlichung verloren. Die Datenkonvergenz bleibt jedoch erhalten.  
   
-2.  Ausführen eines Mergeprozesses durch Ausführen des Merge-Agents. Wir empfehlen die Verwendung der **– Validate** Befehlszeilenoption Agent auf jedem Abonnenten, wenn Sie den Merge-Agent ausführen. Wenn Sie Mergeprozesse im fortlaufenden Modus ausgeführt werden, finden Sie unter *spezielle Überlegungen zu Mergeprozessen im fortlaufenden Modus* weiter unten in diesem Abschnitt.  
+2.  Ausführen eines Mergeprozesses durch Ausführen des Merge-Agents. Wir empfehlen die Verwendung der **-überprüfen** Befehlszeilenoption Agent auf jedem Abonnenten, wenn Sie den Merge-Agent ausführen. Wenn Sie Mergeprozesse im fortlaufenden Modus ausgeführt werden, finden Sie unter *spezielle Überlegungen zu Mergeprozessen im fortlaufenden Modus* weiter unten in diesem Abschnitt.  
   
 3.  Nachdem alle Mergeprozesse abgeschlossen wurden, führen Sie **Sp_mergecleanupmetadata**.  
   
@@ -82,7 +81,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  Beenden Sie **alle** Updates der Veröffentlichungs- und Abonnementdatenbanken.  
   
-2.  Ausführen eines Mergeprozesses durch Ausführen des Merge-Agents. Wir empfehlen die Verwendung der **– Validate** Befehlszeilenoption Agent auf jedem Abonnenten, wenn Sie den Merge-Agent ausführen. Wenn Sie Mergeprozesse im fortlaufenden Modus ausgeführt werden, finden Sie unter *spezielle Überlegungen zu Mergeprozessen im fortlaufenden Modus* weiter unten in diesem Abschnitt.  
+2.  Ausführen eines Mergeprozesses durch Ausführen des Merge-Agents. Wir empfehlen die Verwendung der **-überprüfen** Befehlszeilenoption Agent auf jedem Abonnenten, wenn Sie den Merge-Agent ausführen. Wenn Sie Mergeprozesse im fortlaufenden Modus ausgeführt werden, finden Sie unter *spezielle Überlegungen zu Mergeprozessen im fortlaufenden Modus* weiter unten in diesem Abschnitt.  
   
 3.  Nachdem alle Mergeprozesse abgeschlossen wurden, führen Sie **Sp_mergecleanupmetadata**.  
   
@@ -106,7 +105,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
  Sie nach Abschluss von Schritt 3 der Ausführung **Sp_mergecleanupmetadata**, Mergeprozesse im fortlaufenden Modus, die basierend auf der Sie sie gestoppt fortsetzen. Führen Sie einen der folgenden Schritte aus:  
   
--   Hinzufügen der **– Continuous** -Parameter für den Merge-Agent zurück.  
+-   Hinzufügen der **-Continuous** -Parameter für den Merge-Agent zurück.  
   
 -   Reaktivieren Sie die Veröffentlichung mit **Sp_changemergepublication.**  
   

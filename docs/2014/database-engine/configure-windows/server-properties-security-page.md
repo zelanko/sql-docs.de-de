@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.security.f1
@@ -13,12 +12,12 @@ ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb9d19b96350ebfc9eb2f3e047866c272e8d1e35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a42d496a59f489238d270fcb6bb17f3e1ff6421
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195270"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639448"
 ---
 # <a name="server-properties-security-page"></a>Servereigenschaften (Seite Sicherheit)
   Auf dieser Seite können Sie die Optionen für die Serversicherheit anzeigen oder bearbeiten.  
@@ -65,7 +64,7 @@ ms.locfileid: "48195270"
  **Kennwort**  
  Geben Sie das Kennwort für das Proxykonto ein.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **C2-Überwachungs-Ablaufverfolgung aktivieren**  
  Überwacht alle Zugriffsversuche auf Anweisungen und Objekte und zeichnet diese in einer Datei im Verzeichnis \MSSQL\Data (bei Standardinstanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) bzw. \MSSQL$*Instanzname*\Data (bei benannten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) auf. Weitere Informationen finden Sie unter [C2-Überwachungsmodus (Serverkonfigurationsoption)](c2-audit-mode-server-configuration-option.md).  
   

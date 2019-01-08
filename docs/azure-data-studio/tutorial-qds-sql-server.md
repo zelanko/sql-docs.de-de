@@ -1,7 +1,8 @@
 ---
-title: 'Tutorial: Aktivieren Sie die fünf langsamste Abfragen Beispiel-Widget - Studio für Azure Data | Microsoft-Dokumentation'
+title: 'Lernprogramm: Aktivieren Sie die fünf langsamsten Abfragen-Beispiel-widget'
+titleSuffix: Azure Data Studio
 description: Dieses Tutorial veranschaulicht, wie die fünf langsamsten Abfragen Beispiel-Widget auf die Datenbank-Dashboard.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75886c26b7ceff9df9e2fc96f76038e8d6e70dd0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 491e66ecc8b0dfb3024a2beb59cfefd3f8e0d28f
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356241"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030784"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Hinzufügen der *fünf langsamsten Abfragen* Beispiel Widget aus, das die Datenbank-Dashboard
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Lernprogramm: Hinzufügen der *fünf langsamsten Abfragen* Beispiel Widget aus, das die Datenbank-Dashboard
 
 Dieses Tutorial veranschaulicht den Prozess des Hinzufügens eines [!INCLUDE[name-sos](../includes/name-sos-short.md)]des integrierte Beispiel-Widgets zum die *Datenbank-Dashboard* fünf langsamsten Abfragen mit einer Datenbank schnell anzeigen. Außerdem erfahren Sie, wie zum Anzeigen der Details der langsamen Abfragen und Abfragepläne mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]des Features. In diesem Tutorial erfahren Sie, wie Sie:
 
@@ -54,7 +55,7 @@ Das Widget in diesem Beispiel erfordert *Query Store* aktiviert werden.
 Hinzufügen der *langsame Abfragen Widget* bearbeiten an Ihr Dashboard, die *dashboard.database.widgets* festlegen in Ihre *Benutzereinstellungen* Datei.
 
 1. Öffnen Sie *Benutzereinstellungen* durch Drücken von **STRG + UMSCHALT + P** zum Öffnen der *Befehlspalette*.
-2. Typ *Einstellungen* in das Suchfeld ein, und wählen **Voreinstellungen: Öffnen der Benutzereinstellungen**.
+2. Typ *Einstellungen* in das Suchfeld ein, und wählen **Einstellungen: Öffnen Sie die Benutzereinstellungen**.
 
    ![Offene User-Befehl "Einstellungen"](./media/tutorial-qds-sql-server/open-user-settings.png)
 
@@ -171,7 +172,7 @@ Hinzufügen der *langsame Abfragen Widget* bearbeiten an Ihr Dashboard, die *das
 
 
 ## <a name="next-steps"></a>Nächste Schritte
-In diesem Tutorial haben Sie gelernt, wie Sie:
+In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 > * Query Store in einer Datenbank zu aktivieren
 > * Fügen Sie ein Insight-Widget hinzu, um die Datenbank-dashboard

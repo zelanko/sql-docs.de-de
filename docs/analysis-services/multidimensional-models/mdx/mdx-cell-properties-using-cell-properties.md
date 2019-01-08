@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 49cf92537bf0289765dca7b3a04c76fe0bf50fd8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145305"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418701"
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>MDX – Zelleigenschaften: Verwenden von Zelleneigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +62,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_ENABLED_WITH_UPDATE** (0x00000002) Die Zelle kann mit einer UPDATE-Anweisung aktualisiert werden. Das Update kann einen Fehler erzeugen, wenn eine Blattzelle aktualisiert werden soll, für die der Schreibzugriff nicht aktiviert ist.|  
 ||**CELL_UPDATE_NOT_ENABLED_FORMULA** (0x10000001) Die Zelle kann nicht aktualisiert werden, weil sie in ihren Koordinaten ein berechnetes Element hat (die Zelle wurde mit einer Menge in der WHERE-Klausel abgerufen). Eine Zelle kann selbst dann aktualisiert werden, wenn sich eine Formel oder eine berechnete Zelle auf den Wert der Zelle auswirkt (sich irgendwo im Verlauf des Aggregationspfades befindet). In diesem Szenario ist der endgültige Wert der Zelle möglicherweise nicht mit dem aktualisierten Wert identisch, weil sich die Berechnung auf das Ergebnis ausgewirkt hat.|  
 ||**CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE** (0x10000002) Die Zelle kann nicht aktualisiert werden, weil Nichtsummenmeasures (Count, Min, Max, Distinct Count, semiadditive Measures) nicht aktualisiert werden können.|  
-||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003) Die Zelle kann nicht aktualisiert werden, weil es die Zelle nicht gibt, denn sie befindet sich am Schnittpunkt eines Measure- und eines Dimensionselements, die nicht mit der Measuregruppe des Measures verknüpft sind.|  
+||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0 x 10000003) die Zelle kann nicht aktualisiert werden, da die Zelle nicht vorhanden ist, da an den Schnittpunkt eines Measure- und ein Dimensionselements, die nicht mit der Measuregruppe.|  
 ||**CELL_UPDATE_NOT_ENABLED_SECURE** (0x10000005) Die Zelle kann nicht aktualisiert werden, weil sie geschützt ist.|  
 ||**CELL_UPDATE_NOT_ENABLED_CALCLEVEL** (0x10000006) Für die zukünftige Verwendung reserviert.|  
 ||**CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE** (0x10000007) Die Zelle kann wegen interner Gründe nicht aktualisiert werden.|  

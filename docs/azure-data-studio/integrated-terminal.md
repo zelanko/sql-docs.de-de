@@ -1,7 +1,8 @@
 ---
-title: Integriertes Terminal in Studio für Azure Data | Microsoft-Dokumentation
+title: Integriertes terminal
+titleSuffix: Azure Data Studio
 description: Lernen Sie das integrierte Terminal in Azure Data Studio aus.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 91adc56e93a7dc1b065b77169ad18fd977231d9f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355981"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030434"
 ---
 # <a name="integrated-terminal"></a>Integriertes Terminal
 
@@ -89,7 +90,7 @@ Sie können die integrierten terminal Schriftart und die Zeilenhöhe mit den fol
 
 ## <a id="key-bindings"></a>Der Terminalserver Tastenbindungen
 
-Die **anzeigen: ein-/ausschalten integriertes Terminal** Befehl gebunden ist **STRG +'** zum Umschalten der im integrierten terminal-Bereichs ein-und schnell.
+Die **anzeigen: Integriertes Terminal umschalten** Befehl gebunden ist **STRG +'** zum Umschalten der im integrierten terminal-Bereichs ein-und schnell.
 
 Im folgenden sind die Tastenkombinationen, um schnell in das integrierte Terminal zu navigieren:
 
@@ -111,14 +112,14 @@ Die Überladungen sind:
 
 * `workbench.action.terminal.focus`: Das Terminal zu konzentrieren. Dies ist wie ein/aus, aber der Schwerpunkt liegt das Terminal nicht ausgeblendet, wenn es sichtbar ist.
 * `workbench.action.terminal.focusNext`: Geht es um die nächste Terminaldienste-Instanz.
-* `workbench.action.terminal.focusPrevious`: Geht es um die vorherige Terminaldienste-Instanz.
-* `workbench.action.terminal.kill`: Entfernt die aktuelle Instanz des Terminalserver.
+* `workbench.action.terminal.focusPrevious`: Liegt der Schwerpunkt der vorherigen Terminaldienste-Instanz.
+* `workbench.action.terminal.kill`: Entfernen Sie die aktuelle Instanz des Terminalserver.
 * `workbench.action.terminal.runSelectedText`: Führen Sie den markierten Text in der terminal-Instanz.
 * `workbench.action.terminal.runActiveFile`: Führen Sie die aktive Datei in der terminal-Instanz.
 
 ### <a name="run-selected-text"></a>Ausführen von ausgewähltem Text
 
-Verwenden der `runSelectedText` Befehl, markieren Sie Text in einem Editor, und führen Sie den Befehl **Terminal: Führen Sie ausgewählten Text im aktiven Terminal** über die **Befehlspalette** (**STRG + UMSCHALT + P**). Das Terminal wird versucht, den markierten Text ausführen:
+Verwenden der `runSelectedText` Befehl, markieren Sie Text in einem Editor, und führen Sie den Befehl **Terminal: Ausführen von ausgewähltem Text in aktiven Terminal** über die **Befehlspalette** (**STRG + UMSCHALT + P**). Das Terminal wird versucht, den markierten Text ausführen:
 
 ![Ausführen von ausgewähltem text](media/integrated-terminal/terminal_run_selected.png)
 
@@ -145,7 +146,7 @@ Wenn Sie möchten **STRG + F** um mit der Shell nicht das Widget "Suchen" unter 
 
 ### <a name="rename-terminal-sessions"></a>Benennen Sie terminalsitzungen
 
-Integrierte terminalsitzungen können nun umbenannt werden mithilfe der **Terminal: Umbenennen** (`workbench.action.terminal.rename`) Befehl. Der neue Name wird in der terminal Auswahl-Dropdownliste angezeigt.
+Integrierte terminalsitzungen können nun umbenannt werden mithilfe der **Terminal: Benennen Sie** (`workbench.action.terminal.rename`) Befehl. Der neue Name wird in der terminal Auswahl-Dropdownliste angezeigt.
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Erzwingen die Tastenkombinationen, um über das Terminal zu übergeben.
 

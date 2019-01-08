@@ -1,6 +1,8 @@
 ---
-title: Entdecken Sie Azure SQL-Ressourcen mit Azure-Ressourcen-Explorer | Microsoft-Dokumentation
+title: Entdecken Sie Azure SQL-Ressourcen mit Azure-Ressourcen-Explorer
+titleSuffix: Azure Data Studio
 description: Erfahren Sie, wie Sie untersuchen und Verwalten von Azure SQL-Server, Azure SQL-Datenbank und Azure verwaltete SQL-Instanz über Azure-Ressourcen-Explorer.
+ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
 manager: craigg
@@ -8,14 +10,14 @@ ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 5b969ded699c11414c1822c0cb455ee84dfa212f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: d202a305468f78cf1890533292570ebb56edff12
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356061"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030114"
 ---
-# <a name="explore-azure-sql-resources-with-azure-resource-explorer"></a>Entdecken Sie Azure SQL-Ressourcen mit Azure-Ressourcen-Explorer
+# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Untersuchen und Verwalten von Azure SQL-Ressourcen mit Azure-Ressourcen-Explorer
 
 In diesem Dokument erfahren Sie, wie Sie untersuchen und Verwalten von Azure SQL-Server, Azure SQL-Datenbank und verwaltete Azure SQL-Instanz-Ressourcen über das Azure-Ressourcen-Explorer in [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 
