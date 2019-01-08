@@ -20,12 +20,12 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b376924dfb1833165a1f40ecfd1487c49eb2dcb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604620"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516721"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset-Methode (RDS)
 Erstellt ein leeres getrennt [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -62,7 +62,7 @@ object.CreateRecordset(ColumnInfos)
   
  Die folgende Tabelle enthält die [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) Werte, die von unterstützt die **CreateRecordset** Methode. Die Anzahl aufgeführt ist die Verweisnummer verwendet, um Felder zu definieren.  
   
- Jede der Datentypen ist fester oder variabler Länge. Typen mit fester Länge werden mit einer Größe von – 1 ist, definiert, weil die Größe wird und eine Definition der Größe nach wie vor erforderlich ist. Datentypen variabler Länge können eine Größe zwischen 1 und 32767.  
+ Jede der Datentypen ist fester oder variabler Länge. Typen mit fester Länge werden mit einer Größe von 1, definiert, weil die Größe wird und eine Definition der Größe nach wie vor erforderlich ist. Datentypen variabler Länge können eine Größe zwischen 1 und 32767.  
   
  Für einige der Variablen Datentypen kann der Typ in den in der Spalte "Substitution" angegebenen Typ umgewandelt werden. Sie werden feststellen, dass die Ersetzungen erst nach der **Recordset** erstellt und gefüllt ist. Anschließend können Sie für den tatsächlichen Datentyp, bei Bedarf überprüfen.  
   

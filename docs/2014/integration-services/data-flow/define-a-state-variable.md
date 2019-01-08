@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d80c4dc4d304dfb6b3043475026e0e5e34c2e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca9e4b8dd9c00904b09645e4d0c45673fbb6020f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072564"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811632"
 ---
 # <a name="define-a-state-variable"></a>Definieren einer Statusvariablen
   In diesem Verfahren wird beschrieben, wie Sie eine Paketvariable definieren, in der der CDC-Status gespeichert wird.  
@@ -50,10 +49,10 @@ ms.locfileid: "48072564"
 |-----------|-----------------|  
 |(INITIAL)|Der ursprüngliche Status, bevor ein Paket für die aktuelle CDC-Gruppe ausgeführt wurde. Dieser Status liegt auch vor, wenn der CDC-Status leer ist.|  
 |ILSTART (Initial Load Started)|Der Status beim Start des anfänglich geladenen Pakets, nachdem der CDC-Steuerungstask durch den `MarkInitialLoadStart`-Vorgang aufgerufen wurde.|  
-|ILEND (Initial Load Ended)|Dies ist der Zustand erfolgreich Beendigung des anfänglich geladenen Pakets nach dem `MarkInitialLoadEnd` Vorgangsaufruf zu CDC-Steuerungstask.|  
-|ILUPDATE (Initial Load Update)|Der Status bei der Ausführung des Trickle-Feed-Updatepakets im Anschluss an den erstmaligen Ladevorgang, während der anfängliche Verarbeitungsbereich noch verarbeitet wird. Dies ist nach der `GetProcessingRange` Vorgangsaufruf zu CDC-Steuerungstask.<br /><br /> Wenn die __$reprocessing-Spalte verwendet wird, wird sie auf 1 festgelegt, um anzugeben, dass das Paket möglicherweise Zeilen erneut verarbeitet, die bereits im Ziel vorhanden sind.|  
+|ILEND (Initial Load Ended)|Der Status nach erfolgreicher Beendigung des anfänglich geladenen Pakets, nachdem der CDC-Steuerungstask durch den `MarkInitialLoadEnd`-Vorgang aufgerufen wurde.|  
+|ILUPDATE (Initial Load Update)|Der Status bei der Ausführung des Trickle-Feed-Updatepakets im Anschluss an den erstmaligen Ladevorgang, während der anfängliche Verarbeitungsbereich noch verarbeitet wird. Dieser Schritt erfolgt nach dem Aufruf des CDC-Steuerungstasks durch den `GetProcessingRange`-Vorgang.<br /><br /> Wenn die __$reprocessing-Spalte verwendet wird, wird sie auf 1 festgelegt, um anzugeben, dass das Paket möglicherweise Zeilen erneut verarbeitet, die bereits im Ziel vorhanden sind.|  
 |TFEND (Trickle-Feed Update Ended)|Der für reguläre CDC-Ausführungen erwartete Status. Er gibt an, dass die vorherige Ausführung erfolgreich abgeschlossen wurde und eine neue Ausführung mit einem neuen Verarbeitungsbereich gestartet werden kann.|  
-|TFSTART|Dies ist der Status bei nicht-nachfolgenden Ausführungen des Trickle feed-Updatepakets, das, nach der `GetProcessingRange` Vorgangsaufruf zu CDC-Steuerungstask.<br /><br /> Dies bedeutet, dass eine reguläre CDC-Ausführung gestartet wird, jedoch nicht beendet wurde oder noch nicht, ordnungsgemäß abgeschlossen ist (`MarkProcessedRange`).|  
+|TFSTART|Der Status bei nachfolgenden Ausführungen des Trickle-Feed-Updatepakets nach dem Aufruf des CDC-Steuerungstasks durch den `GetProcessingRange`-Vorgang.<br /><br /> Gibt an, dass eine reguläre CDC-Ausführung gestartet, aber noch nicht einwandfrei beendet wurde (`MarkProcessedRange`).|  
 |TFREDO (Reprocessing Trickle-Feed Updates)|Der Status bei einem `GetProcessingRange`-Vorgang, der nach TFSTART stattfindet. Er gibt an, dass die vorherige Ausführung nicht erfolgreich abgeschlossen wurde.<br /><br /> Wenn die __$reprocessing-Spalte verwendet wird, wird sie auf 1 festgelegt, um anzugeben, dass das Paket möglicherweise Zeilen erneut verarbeitet, die bereits im Ziel vorhanden sind.|  
 |ERROR|Die CDC-Gruppe befindet sich in einem Fehlerstatus.|  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48072564"
  Wenn Sie den CDC-Steuerungstask nicht mit der Option Automatic State Persistence verwenden, müssen Sie den Variablenwert aus dem persistentem Speicher laden, in dem der Wert bei der letzten Ausführung des Pakets gespeichert wurde. In diesen persistenten Speicher wird der Wert auch zurückgeschrieben, nachdem die Verarbeitung des aktuellen Verarbeitungsbereichs abgeschlossen wurde.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CDC-Steuerungstask](../control-flow/cdc-control-task.md)   
+ [CDC Control Task](../control-flow/cdc-control-task.md)   
  [CDC Control Task Editor](../cdc-control-task-editor.md)  
   
   

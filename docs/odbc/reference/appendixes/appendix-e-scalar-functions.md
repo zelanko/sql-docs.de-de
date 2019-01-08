@@ -1,5 +1,5 @@
 ---
-title: 'Anhang E: Skalarfunktionen | Microsoft-Dokumentation'
+title: 'Anhang E: Skalare Funktionen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94e33460d3c50363e96e90fb457467b8e5cda315
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631858"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540508"
 ---
 # <a name="appendix-e-scalar-functions"></a>Anhang E: Skalarfunktionen
 ODBC gibt die folgenden Typen von Skalarfunktionen mit detaillierten Informationen zu den einzelnen Funktionstypen in den entsprechenden Abschnitten in diesem Anhang bereitgestellt. Zugeordnete Syntax wird von die Beschreibungen der Funktionen einschließen.  
@@ -39,7 +39,7 @@ ODBC gibt die folgenden Typen von Skalarfunktionen mit detaillierten Information
   
 -   [SQL-92 CAST-Funktion](../../../odbc/reference/appendixes/sql-92-cast-function.md)  
   
- ODBC ist keinen Datentyp für die Rückgabe von Werten aus skalaren Funktionen vorgeben, da die Funktionen häufig Daten datenquellenspezifischen sind. Anwendungen sollten die CONVERT-Skalarfunktion nach Möglichkeit, um die datentypkonvertierung erzwingen verwenden.  
+ ODBC ist keinen Datentyp für die Rückgabe von Werten aus skalaren Funktionen vorgeben, da die Funktionen häufig Daten datenquellenspezifische sind. Anwendungen sollten die CONVERT-Skalarfunktion nach Möglichkeit, um die datentypkonvertierung erzwingen verwenden.  
   
 ## <a name="odbc-and-sql-92-scalar-functions"></a>ODBC und SQL-92-Skalarfunktionen  
  Die Tabellen in diesem Anhang enthalten Funktionen, die ODBC 3.0 an einer Verbindung mit SQL-92 hinzugefügt wurden. Diese Funktionen, die für einen bestimmten Typ von skalaren Funktion hinzugefügt wird, wie definiert in ODBC werden in den einzelnen Abschnitten angegeben.  

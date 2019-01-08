@@ -1,5 +1,5 @@
 ---
-title: Power Pivot-Datenaktualisierung mit SharePoint 2013 | Microsoft Docs
+title: Power Pivot-Datenaktualisierung mit SharePoint 2013 | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 34208a7b3e3f782bcb93d46ab29099fe609f9925
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5df94dc555aead1225bcb791456e7dc87c0b7590
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024877"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214961"
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Power Pivot-Datenaktualisierung mit SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,28 +42,28 @@ ms.locfileid: "34024877"
 ||||  
 |-|-|-|  
 ||Excel 2013-Arbeitsmappen|Excel 2010-Arbeitsmappen|  
-|Datenaktualisierung auslösen|**Interaktiv:** Authentifizierter Benutzer<br /><br /> **Geplant:** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst|  
+|Datenaktualisierung auslösen|**Interaktive:** Authenticated User<br /><br /> **Geplant:** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst|  
 |Arbeitsmappe aus Inhaltsdatenbanken laden|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |Datenmodell in Analysis Services-Instanz laden|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |Verarbeitungsbefehle an Analysis Services-Instanz senden|SharePoint 2013 Excel Services|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst|  
 |Arbeitsmappendaten aktualisieren|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
-|Arbeitsmappe und Datenmodell in Inhaltsdatenbank speichern|**Interaktiv:** N/V<br /><br /> **Geplant:** SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
+|Arbeitsmappe und Datenmodell in Inhaltsdatenbank speichern|**Interaktive:** Nicht zutreffend<br /><br /> **Geplant:** SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
   
  In der folgenden Tabelle werden die unterstützten Aktualisierungsfunktionen in einer SharePoint 2013-Farm zusammengefasst, die für die Verwendung eines [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis-Servers im SharePoint-Modus konfiguriert ist:  
   
 |Arbeitsmappe erstellt in|planmäßige Datenaktualisierung|Interaktive Datenaktualisierung|  
 |-------------------------|----------------------------|-------------------------|  
-|2008 R2 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel|Nicht unterstützt. Arbeitsmappe upgraden **(\*)**|Nicht unterstützt. Arbeitsmappe upgraden **(\*)**|  
-|2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel|Supported|Nicht unterstützt. Arbeitsmappe upgraden **(\*)**|  
+|2008 R2 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel|Wird nicht unterstützt. Arbeitsmappe upgraden **(\*)**|Wird nicht unterstützt. Arbeitsmappe upgraden **(\*)**|  
+|2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel|Supported|Wird nicht unterstützt. Arbeitsmappe upgraden **(\*)**|  
 |Excel 2013|Supported|Supported|  
   
  **(\*)** Weitere Informationen zum Upgraden von Arbeitsmappen finden Sie unter [Upgraden von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
- Bei der interaktiven oder manuellen Datenaktualisierung in SharePoint Server 2013 Excel Services können Datenmodelle mit Daten aus der ursprünglichen Datenquelle aktualisiert werden. Die interaktive Datenaktualisierung ist verfügbar, nachdem Sie eine Excel Services-Anwendung konfiguriert haben, indem Sie einen im SharePoint-Modus ausgeführten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server registrieren. Weitere Informationen finden Sie unter [-modelleinstellungen Verwalten von Excel Services (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
+ Bei der interaktiven oder manuellen Datenaktualisierung in SharePoint Server 2013 Excel Services können Datenmodelle mit Daten aus der ursprünglichen Datenquelle aktualisiert werden. Die interaktive Datenaktualisierung ist verfügbar, nachdem Sie eine Excel Services-Anwendung konfiguriert haben, indem Sie einen im SharePoint-Modus ausgeführten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server registrieren. Weitere Informationen finden Sie unter [Verwalten von Excel Services-datenmodelleinstellungen (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
   
-> [!NOTE]  
->  Die interaktive Datenaktualisierung ist nur für Arbeitsmappen verfügbar, die in Excel 2013 erstellt wurden. Wenn Sie versuchen, eine Excel 2010-Arbeitsmappe zu aktualisieren, zeigt Excel Services eine Fehlermeldung ähnlich der folgenden an: „Fehler beim [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Vorgang: Die Arbeitsmappe wurde mit einer älteren Version von Excel erstellt, und [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] kann erst aktualisiert werden, nachdem für die Datei ein Upgrade durchgeführt wurde.“ Weitere Informationen zum Upgraden von Arbeitsmappen finden Sie unter [Upgraden von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+> [!NOTE]
+>  Die interaktive Datenaktualisierung ist nur für Arbeitsmappen verfügbar, die in Excel 2013 erstellt wurden. Wenn Sie versuchen, eine Excel 2010-Arbeitsmappe zu aktualisieren, zeigt Excel Services eine Fehlermeldung ähnlich wie " [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Vorgang fehlgeschlagen: Die Arbeitsmappe in einer früheren Version von Excel erstellt wurde und [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] kann nicht aktualisiert werden, bis die Datei aktualisiert wird ". Weitere Informationen zum Upgraden von Arbeitsmappen finden Sie unter [Upgraden von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  **Wichtige Punkte zur interaktiven Aktualisierung:**  
   
@@ -83,14 +83,14 @@ ms.locfileid: "34024877"
   
 3.  Excel Services lädt die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenbank, verarbeitet sie und fragt sie anschließend ab, um den Excel-Arbeitsmappencache zu aktualisieren.  
   
-4.  **Hinweis:** Die aktualisierte Arbeitsmappe wird nicht automatisch wieder in der Dokumentbibliothek gespeichert.  
+4.  **Hinweis**: Die aktualisierte Arbeitsmappe wird nicht automatisch wieder in der Dokumentbibliothek gespeichert.  
   
  ![interaktive Datenaktualisierung](../../analysis-services/power-pivot-sharepoint/media/as-interactive-datarefresh-sharepoint2013.gif "interaktive Datenaktualisierung")  
   
 ###  <a name="bkmk_windows_auth_interactive_data_refresh"></a> Windows-Authentifizierung mit Arbeitsmappen-Datenverbindungen und interaktiver Datenaktualisierung  
  Excel Services sendet dem Analysis Services-Server einen Verarbeitungsbefehl, der den Server anweist, die Identität eines Benutzerkontos anzunehmen. Um ausreichende Systemrechte zum Delegieren des Benutzeridentitätswechsels zu erhalten, benötigt das Analysis Services-Dienstkonto die Berechtigung **Einsetzen als Teil des Betriebssystems** auf dem lokalen Server. Der Analysis Services-Server muss auch in der Lage sein, die Anmeldeinformationen des Benutzers für Datenquellen zu delegieren. Das Abfrageergebnis wird an Excel Services gesendet.  
   
- Typische Benutzererfahrung: Wenn ein Kunde „Alle Verbindungen aktualisieren“ in einer Excel 2013-Arbeitsmappe auswählt, die ein [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Modell enthält, wird eine Fehlermeldung ähnlich der folgenden angezeigt:  
+ Typische Benutzererfahrung: Wenn ein Kunde "Alle Verbindungen aktualisieren" auswählt, in einer Excel 2013-Arbeitsmappe, enthält eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Modell, sie sehen eine Fehlermeldung ähnlich der folgenden angezeigt:  
   
 -   **Fehler bei der Aktualisierung der externen Daten:** Beim Arbeiten am Datenmodell in der Arbeitsmappe ist ein Fehler aufgetreten. Wiederholen Sie den Vorgang. Eine oder mehrere Datenverbindungen in dieser Arbeitsmappe können nicht aktualisiert werden.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "34024877"
   
  **Bei SQL Native Client:**  
   
--   Fehler beim Erstellen einer externen Verbindung oder beim Ausführen einer Abfrage. Anbietermeldung: Das Out-of-Line-Objekt 'DataSource', das auf die ID(s) '20102481-39c8-4d21-bf63-68f583ad22bb' verweist, wurde angegeben, jedoch nicht verwendet.  OLE DB- oder ODBC-Fehler: Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden, oder auf ihn kann nicht zugegriffen werden. Überprüfen Sie, ob der Instanzname richtig ist und ob SQL Server Remoteverbindungen zulässt. Weitere Informationen finden Sie in der SQL Server-Onlinedokumentation.; 08001; SSL-Anbieter: Das angeforderte Sicherheitspaket ist nicht vorhanden; 08001; Client kann keine Verbindung herstellen; 08001; Verschlüsselung wird auf dem Client nicht unterstützt.; 08001.  , Verbindungsname: ThisWorkbookDataModel, Arbeitsmappe: Mappe1.xlsx.  
+-   Fehler beim Erstellen einer externen Verbindung oder beim Ausführen einer Abfrage. Anbietermeldung: Das Out-of-Line-Objekt 'DataSource', das auf die ID(s) '20102481-39c8-4d21-bf63-68f583ad22bb' verweist, wurde angegeben, jedoch nicht verwendet.  OLE DB- oder ODBC-Fehler: Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden, oder auf ihn kann nicht zugegriffen werden. Überprüfen Sie, ob der Instanzname richtig ist und ob SQL Server Remoteverbindungen zulässt. Weitere Informationen finden Sie in der SQL Server-Onlinedokumentation.; 08001; SSL-Anbieter: Das angeforderte Sicherheitspaket ist nicht vorhanden; 08001; Der Client kann keine Verbindung herstellen; 08001; Verschlüsselung wird auf dem Client nicht unterstützt.; 08001.  , Verbindungsname: ThisWorkbookDataModel, Arbeitsmappe: Mappe1.xlsx.  
   
  **Bei Microsoft OLE DB-Anbieter für SQL Server:**  
   
@@ -106,13 +106,13 @@ ms.locfileid: "34024877"
   
  **Bei .NET Framework-Datenanbieter für SQL Server:**  
   
--   Fehler beim Erstellen einer externen Verbindung oder beim Ausführen einer Abfrage. Anbietermeldung: Das Out-of-Line-Objekt 'DataSource', das auf die ID(s) 'f5fb916c-3eac-4d07-a542-531524c0d44a' verweist, wurde angegeben, jedoch nicht verwendet.  Fehler im relationalen Modul. Ausnahme bei der Verwendung der verwalteten IDbConnection-Schnittstelle: Die Datei oder Assembly 'System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' oder eine Abhängigkeit davon wurde nicht gefunden. Entweder wurde eine geforderte Identitätswechselebene nicht geliefert, oder die gelieferte Identitätswechselebene ist unzulässig. (Ausnahme von HRESULT: 0x80070542).  , Verbindungsname: ThisWorkbookDataModel, Arbeitsmappe: NETProvider.xlsx.  
+-   Fehler beim Erstellen einer externen Verbindung oder beim Ausführen einer Abfrage. Anbietermeldung: Das Out-of-Line-Objekt 'DataSource', das auf die ID(s) 'f5fb916c-3eac-4d07-a542-531524c0d44a' verweist, wurde angegeben, jedoch nicht verwendet.  Fehler in der relationalen Engine. Die folgende Ausnahme ist aufgetreten, während die verwaltete IDbConnection-Schnittstelle verwendet wurde: Die Datei oder Assembly 'System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' oder eine Abhängigkeit davon wurde nicht gefunden. Entweder wurde eine geforderte Identitätswechselebene nicht geliefert, oder die gelieferte Identitätswechselebene ist unzulässig. (Ausnahme von HRESULT: 0x80070542).  , Verbindungsname: ThisWorkbookDataModel, Arbeitsmappe: NETProvider.xlsx.  
   
  **Zusammenfassung der Konfigurationsschritte** zum Konfigurieren der Berechtigung **Einsetzen als Teil des Betriebssystems** auf dem lokalen Server:  
   
 1.  Fügen Sie auf dem im SharePoint-Modus ausgeführten Analysis Services-Server das Analysis Services-Dienstkonto der Berechtigung "Einsetzen als Teil des Betriebssystem" hinzu:  
   
-    1.  Führen Sie "`secpol.msc`" aus.  
+    1.  Führen Sie "`secpol.msc`"  
   
     2.  Klicken Sie auf **Lokale Sicherheitsrichtlinie**, klicken Sie dann auf **Lokale Richtlinien**und anschließend auf **Zuweisen von Benutzerrechten**.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "34024877"
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **Wichtige Punkte zur geplanten Datenaktualisierung:**  
   
--   Erfordert die Bereitstellung des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-Ins. Weitere Informationen zur Installation finden Sie unter [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-Ins &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   Erfordert die Bereitstellung des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-Ins. Weitere Informationen finden Sie unter [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-In &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   Ein Benutzer konfiguriert einen Aktualisierungszeitplan für eine Arbeitsmappe. Zum geplanten Zeitpunkt sendet der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst eine Anforderung an Excel Services für folgende Aktionen:  
   
@@ -141,7 +141,7 @@ ms.locfileid: "34024877"
   
 -   **Anmeldeinformationen:** Verwendet gespeicherte Anmeldeinformationen. Verwendet nicht die Identität des aktuellen Benutzers.  
   
--   **Unterstützte Arbeitsmappen:** Mit dem [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Add-In für Excel 2010 oder mit Excel 2013 erstellte Arbeitsmappen. In Excel 2010 mit dem [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Add-In erstellte Arbeitsmappen werden nicht unterstützt. Aktualisieren Sie die Arbeitsmappe mindestens auf das [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Format. Weitere Informationen zum Upgraden von Arbeitsmappen finden Sie unter [Upgraden von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+-   **Unterstützte Arbeitsmappen:** Arbeitsmappen erstellt wurden, mit der [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] add-in für Excel 2010 oder mit Excel 2013. In Excel 2010 mit dem [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Add-In erstellte Arbeitsmappen werden nicht unterstützt. Aktualisieren Sie die Arbeitsmappe mindestens auf das [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Format. Weitere Informationen zum Upgraden von Arbeitsmappen finden Sie unter [Upgraden von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  So zeigen Sie die Seite **Datenaktualisierung verwalten** an:  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34024877"
   
     -   Erneutes Speichern der Arbeitsmappe in der Inhaltsdatenbank  
   
- ![Verwalten von Data Refresh-Kontextmenü](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "Daten aktualisieren Kontextmenü \"verwalten\"")  
+ ![Verwalten von Data Refresh-Kontextmenü](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "datenkontextmenü für die datenaktualisierung verwalten")  
   
 > [!TIP]  
 >  Informationen zum Aktualisieren von Arbeitsmappen aus SharePoint online finden Sie unter [Aktualisieren von Excel-Arbeitsmappen mit eingebundenen Power Pivot-Modellen aus SharePoint Online (Whitepaper)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  
@@ -169,20 +169,20 @@ ms.locfileid: "34024877"
 ##  <a name="bkmk_refresh_architecture"></a> Architektur der geplante Datenaktualisierung in SharePoint 2013  
  In der folgenden Abbildung wird die Datenaktualisierungsarchitektur in SharePoint 2013 und SQL Server 2012 SP1 zusammengefasst dargestellt.  
   
- ![Architektur der SQL Server 2012 SP1 datenaktualisierung](../../analysis-services/power-pivot-sharepoint/media/as-scheduled-data-refresh2012sp1-architecture.gif "Architektur der SQL Server 2012 SP1 datenaktualisierung")  
+ ![Architektur von SQL Server 2012 SP1 datenaktualisierung](../../analysis-services/power-pivot-sharepoint/media/as-scheduled-data-refresh2012sp1-architecture.gif "Architektur von SQL Server 2012 SP1 datenaktualisierung")  
   
 ||Description||  
 |-|-----------------|-|  
-|**(1)**|Analysis Services-Modul|Ein [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server, der im SharePoint-Modus ausgeführt wird. Der Server wird außerhalb der SharePoint-Farm ausgeführt.|  
+|**(1)**|Analysis Services-Engine|Ein [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server, der im SharePoint-Modus ausgeführt wird. Der Server wird außerhalb der SharePoint-Farm ausgeführt.|  
 |**(2)**|Benutzeroberfläche|Die Benutzeroberfläche besteht aus zwei Seiten. Auf einer Seite wird der Zeitplan definiert, auf der zweiten Seite wird der Aktualisierungsverlauf angezeigt. Die Seiten greifen nicht direkt auf die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungs-Datenbanken zu, sondern über den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst.|  
 |**(3)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst|Der Dienst wird installiert, wenn Sie das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-In bereitstellen.<br /><br /> Der Dienst wird für Folgendes verwendet:|  
-|||Dieser Dienst hostet das Aktualisierungsplanungsmodul, das Excel Services-APIs für die Datenaktualisierung von Excel 2013-Arbeitsmappen aufruft. Für Excel 2010-Arbeitsmappen führt der Dienst die Datenmodellverarbeitung direkt aus, verwendet für das Laden des Datenmodells und das Aktualisieren der Arbeitsmappe jedoch weiterhin Excel Services.|  
+|||Dieser Dienst hostet die Aktualisierungsplanungs-Engine, die Excel Services-APIs für die Datenaktualisierung von Excel 2013-Arbeitsmappen aufruft. Für Excel 2010-Arbeitsmappen führt der Dienst die Datenmodellverarbeitung direkt aus, verwendet für das Laden des Datenmodells und das Aktualisieren der Arbeitsmappe jedoch weiterhin Excel Services.|  
 |||Dieser Dienst stellt Methoden für Komponenten bereit, wie z. B. die Benutzeroberflächenseiten, um mit dem Systemdienst zu kommunizieren.|  
 |||Der Dienst verwaltet Anforderungen für den externen Zugriff auf Arbeitsmappen als Datenquelle, die vom [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webdienst empfangen werden.|  
 |||Verwaltung geplanter Datenaktualisierungsanforderungen für Zeitgeberaufträge und Konfigurationsseiten. Der Dienst verwaltet Anforderungen zum Lesen von Daten in die und aus der Datenbank und zum Auslösen der Datenaktualisierung mit Excel Services.|  
 |||Verwendungsanalyse und verwandter Zeitgeberauftrag.|  
 |**(4)**|Dienste für Excel-Berechnungen|Zuständig für das Laden der Datenmodelle.|  
-|**(5)**|Secure Store Service|Wenn die Authentifizierungseinstellungen in der Arbeitsmappe auf **Das Konto des authentifizierten Benutzers verwenden** oder **Keine**festgelegt sind, werden die Anmeldeinformationen, die in der Zielanwendungs-ID für den Secure Store Service (einmaliges Anmelden) gespeichert sind, für die Datenaktualisierung verwendet. Weitere Informationen finden Sie im Abschnitt [Zusätzliche Überlegungen zur Authentifizierung](#datarefresh_additional_authentication) in diesem Thema.|  
+|**(5)**|Secure Store Service|Wenn die Authentifizierungseinstellungen in der Arbeitsmappe auf **Konto des authentifizierten Benutzers verwenden** oder **keine**, die in Secure Store zielanwendungs-ID gespeicherten Anmeldeinformationen für Daten verwendet werden aktualisieren. Weitere Informationen finden Sie im Abschnitt [Zusätzliche Überlegungen zur Authentifizierung](#datarefresh_additional_authentication) in diesem Thema.|  
 |**(6)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Zeitgeberauftrag für die Datenaktualisierung|Weist den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst an, eine Verbindung mit Excel Services herzustellen, um Datenmodelle zu aktualisieren.|  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] benötigt entsprechende Datenanbieter und Clientbibliotheken, damit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server im SharePoint-Modus auf Datenquellen zugreifen kann.  
@@ -191,15 +191,15 @@ ms.locfileid: "34024877"
 >  Da der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst keine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Modelle mehr lädt oder speichert, gelten die meisten Einstellungen zum Zwischenspeichern von Modellen auf einem Anwendungsserver nicht für eine SharePoint 2013-Farm.  
   
 ## <a name="data-refresh-log-data"></a>Protokolldaten der Datenaktualisierung  
- **Verwendungsdaten:** Sie können Verwendungsdaten zur Datenaktualisierung im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard anzeigen. So zeigen Sie die Verwendungsdaten an:  
+ **Verwendungsdaten:** Sie können zur datenaktualisierung Nutzung im Anzeigen der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard. So zeigen Sie die Verwendungsdaten an:  
   
 1.  Klicken Sie in der SharePoint-Zentraladministration in der Gruppe **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Allgemeine Anwendungseinstellungen** auf **-Management-Dashboard** .  
   
-2.  Am unteren Rand des Dashboards finden Sie Informationen unter **Datenaktualisierung - Letzte Aktivität** und **Datenaktualisierung - Letzte Fehler**.  
+2.  Am unteren Rand des Dashboards, finden Sie unter den **Datenaktualisierung - letzte Aktivität** und **Datenaktualisierung - letzte Fehler**.  
   
 3.  Weitere Informationen zu Verwendungsdaten und wie Sie diese aktivieren finden Sie unter [PowerPivot-Management-Dashboard und Verwendungsdaten](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
- **Diagnoseprotokolldaten:** Sie können SharePoint-Diagnoseprotokolldaten zur Datenaktualisierung anzeigen. Überprüfen Sie zunächst die Konfiguration der Diagnoseprotokollierung für den **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst** auf der Seite **Überwachung** der SharePoint-Zentraladministration. Möglicherweise müssen Sie die Protokollierungsebene erhöhen, damit das "unwichtigste Ereignis" protokolliert wird. Legen Sie beispielsweise vorübergehend den Wert auf **Ausführlich** fest, und führen Sie dann die Datenaktualisierungsvorgänge erneut aus.  
+ **Diagnoseprotokolldaten:** Sie können SharePoint-Diagnoseprotokolldaten zur Datenaktualisierung anzeigen. Überprüfen Sie zunächst die Konfiguration der Diagnoseprotokollierung für den **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst** auf der Seite **Überwachung** der SharePoint-Zentraladministration. Müssen Sie möglicherweise erhöhen Sie die Ebene der Protokollierung für das "unwichtigste Ereignis" anmelden. Legen Sie beispielsweise vorübergehend den Wert auf **Ausführlich** fest, und führen Sie dann die Datenaktualisierungsvorgänge erneut aus.  
   
  Die Protokolleinträge enthalten Folgendes:  
   
@@ -212,11 +212,11 @@ ms.locfileid: "34024877"
 ##  <a name="datarefresh_additional_authentication"></a> Zusätzliche Überlegungen zur Authentifizierung  
  Die Einstellungen im Dialogfeld **Excel Services-Authentifizierungseinstellungen** in Excel 2013 bestimmen die Windows-Identität, die Excel Services und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Datenaktualisierung verwenden.  
   
--   **Das Konto des authentifizierten Benutzers verwenden**: Excel Services führt die Datenaktualisierung unter der Identität des gerade angemeldeten Benutzers aus.  
+-   **Konto des authentifizierten Benutzers verwenden**: Excel Services führt die Datenaktualisierung unter der Identität des aktuell angemeldeten Benutzers aus.  
   
 -   **Ein gespeichertes Konto verwenden**: Geht von einer SharePoint Secure Store Service-Anwendungs-ID aus, die Excel Services verwendet, um den Benutzernamen und das Kennwort abzurufen, um die Datenaktualisierung zu authentifizieren.  
   
--   **Keine**: Das **unbeaufsichtigte Dienstkonto** von Excel Services wird verwendet. Das Dienstkonto ist einem Secure Store Service-Proxy zugeordnet. Konfigurieren Sie die Einstellungen auf der Seite **Excel Services-Anwendungseinstellungen** im Abschnitt **Externe Daten** .  
+-   **None:** Die Excel Services **unbeaufsichtigte Dienstkonto** verwendet wird. Das Dienstkonto ist einem Secure Store Service-Proxy zugeordnet. Konfigurieren Sie die Einstellungen auf der Seite **Excel Services-Anwendungseinstellungen** im Abschnitt **Externe Daten** .  
   
  So öffnen Sie das Dialogfeld mit Authentifizierungseinstellungen:  
   
@@ -226,7 +226,7 @@ ms.locfileid: "34024877"
   
 3.  Wählen Sie im Dialogfeld **Arbeitsmappenverbindungen**die Verbindung aus, und klicken Sie auf **Eigenschaften**.  
   
-4.  In the **Verbindungseigenschaften** auf **Definition**und dann auf die Schaltfläche **Authentifizierungseinstellungen** aus.  
+4.  In der **Verbindungseigenschaften** Dialogfeld klicken Sie auf **Definition**, und klicken Sie dann auf die **Authentifizierungseinstellungen...**  Schaltfläche.  
   
  ![excel services authentication settings](../../analysis-services/power-pivot-sharepoint/media/as-authentication-settings-4-ecs-in-excel2013.gif "excel services authentication settings")  
   
@@ -235,7 +235,7 @@ ms.locfileid: "34024877"
 ##  <a name="bkmk_moreinformation"></a> Weitere Informationen  
  [Problembehandlung für Power Pivot-Datenaktualisierung](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)  
   
- [Excel Services in SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15).  
+ [Excel Services in SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (<http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Installieren von Analysis Services im PowerPivot-Modus](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  

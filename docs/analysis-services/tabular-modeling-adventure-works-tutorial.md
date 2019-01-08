@@ -1,5 +1,5 @@
 ---
-title: Tabellarische Modellierung (Kompatibilitätsgrad 1200) | Microsoft-Dokumentation
+title: Analysis Services-tabellarische Modellierung (Kompatibilitätsgrad 1200) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0b8d60c6c365d48f8eccc46cbc9a3b0f5222ff5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 43ef5c290e1234af4482f09f2ec7f01e2edbca99
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054687"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072177"
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>Tabellarische Modellierung (Kompatibilitätsgrad 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -75,19 +75,19 @@ Dieses Tutorial umfasst die folgenden Lektionen:
   
 |Lektion|Für den Abschluss voraussichtlich benötigte Zeit|  
 |----------|------------------------------|  
-|[Lektion 1: Erstellen eines neuen Tabellenmodellprojekts](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 Minuten|  
+|[Lektion 1: Erstellen eines neuen tabellarischen Modellprojekts](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 Minuten|  
 |[Lektion 2: Hinzufügen von Daten](../analysis-services/lesson-2-add-data.md)|20 Minuten|  
-|[Lesson 3: Mark as Date Table (Lektion 3: Markieren als Datumstabelle)](../analysis-services/lesson-3-mark-as-date-table.md)|3 Minuten|  
+|[Lektion 3: Markieren als Datumstabelle](../analysis-services/lesson-3-mark-as-date-table.md)|3 Minuten|  
 |[Lektion 4: Erstellen von Beziehungen](../analysis-services/lesson-4-create-relationships.md)|10 Minuten|  
 |[Lektion 5: Erstellen von berechneten Spalten](../analysis-services/lesson-5-create-calculated-columns.md)|15 Minuten|
 |[Lektion 6: Erstellen von Measures](../analysis-services/lesson-6-create-measures.md)|30 Minuten|  
-|[Lesson 7: Create Key Performance Indicators (Lektion 7: Erstellen von Leistungskennzahlen)](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 Minuten|  
+|[Lektion 7: Erstellen von Key Performance Indicators](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 Minuten|  
 |[Lektion 8: Erstellen von Perspektiven](../analysis-services/lesson-8-create-perspectives.md)|5 Minuten|  
 |[Lektion 9: Erstellen von Hierarchien](../analysis-services/lesson-9-create-hierarchies.md)|20 Minuten|  
 |[Lektion 10: Erstellen von Partitionen](../analysis-services/lesson-10-create-partitions.md)|15 Minuten|  
 |[Lektion 11: Erstellen von Rollen](../analysis-services/lesson-11-create-roles.md)|15 Minuten|  
-|[Lesson 12: Analyze in Excel (Lektion 12: Analysieren in Excel)](../analysis-services/lesson-12-analyze-in-excel.md)|20 Minuten| 
-|[Lesson 13: Deploy (Lektion 13: Bereitstellen)](../analysis-services/lesson-13-deploy.md)|5 Minuten|  
+|[Lektion 12: In Excel analysieren](../analysis-services/lesson-12-analyze-in-excel.md)|20 Minuten| 
+|[Lektion 13: Bereitstellen](../analysis-services/lesson-13-deploy.md)|5 Minuten|  
   
 ## <a name="supplemental-lessons"></a>Ergänzende Lektionen  
 Dieses Tutorial umfasst außerdem [ergänzende Lektionen](http://msdn.microsoft.com/library/2018456f-b4a6-496c-89fb-043c62d8b82e). Die Themen in diesem Abschnitt sind nicht erforderlich, um das Lernprogramm abzuschließen, aber sie können das Verständnis der erweiterten Funktionen zum Erstellen eines Tabellenmodells erleichtern.  
@@ -98,7 +98,7 @@ Dieses Tutorial umfasst außerdem [ergänzende Lektionen](http://msdn.microsoft.
 
   
 ## <a name="next-step"></a>Nächster Schritt  
-Um das Tutorial zu starten, gehen Sie zur ersten Lektion über: [Lektion 1: Erstellen eines neuen Tabellenmodellprojekts](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
+Um das Lernprogramm zu starten, fahren Sie mit der ersten Lektion fort: [Lektion 1: Erstellen ein neuen tabellarischen Modellprojekts](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
   
   

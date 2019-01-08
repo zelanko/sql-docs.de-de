@@ -12,15 +12,15 @@ helpviewer_keywords:
 - plan guides [SQL Server], enabling
 - disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 34f88b49dd0c7ef93d586c404a212a79a7ec5243
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48aa9add83db9697cf6ce71083ad18ba3aa813b9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834918"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354405"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Aktivieren oder Deaktivieren einer Planhinweisliste
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47834918"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So deaktivieren und aktivieren Sie Planhinweislisten mit:**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47834918"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47834918"
 ####  <a name="Permissions"></a> Berechtigungen  
  Das Deaktivieren oder Aktivieren einer OBJECT-Planhinweisliste erfordert die ALTER-Berechtigung für das Objekt (z. B. Funktion, gespeicherte Prozedur), auf das von der Planhinweisliste verwiesen wird. Für alle anderen Planhinweislisten ist die ALTER DATABASE-Berechtigung erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>So deaktivieren oder aktivieren Sie eine Planhinweisliste  
   

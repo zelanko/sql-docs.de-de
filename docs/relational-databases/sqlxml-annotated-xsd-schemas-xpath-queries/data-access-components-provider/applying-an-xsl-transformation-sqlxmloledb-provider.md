@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebaa2f29054b1fee64c44ea5c269f7d741617f97
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5b9a357303950bc7c36a605483a2a94daf1f3748
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673859"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523365"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Anwenden einer XSL-Transformation (SQLXMLOLEDB-Anbieter)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51673859"
   
  Die Xsl-Eigenschaft, die in der Anwendung angegeben ist. aus diesem Grund wird die XSL-Transformation wird angewendet, um das XML-Dokument, das auf dem Client generiert wird, und das Ergebnis ist eine zweispaltige Tabelle.  
   
- Zum Ausführen des Vorlagenbefehls muss für die XML-Vorlage der Dialekt {5d531cb2-e6ed-11d2-b252-00c04f681b71} angegeben werden.  
+ Um die Vorlagenbefehl auszuführen, muss die XML-Vorlage der Dialekt - {5d531cb2-e6ed-11d2-b252-00c04f681b71} - angegeben werden.  
   
 > [!NOTE]  
 >  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client als Datenanbieter angegeben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [Systemanforderungen für SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  

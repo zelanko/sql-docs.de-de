@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - starting SQL Server, single-user mode
@@ -14,12 +13,12 @@ ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aeb0e1c28885e8611c1ae57a21a05c1265b6349c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090150"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640891"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Starten von SQL Server im Einzelbenutzermodus
   Unter bestimmten Umständen müssen Sie möglicherweise eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der Startoption **-m**im Einzelbenutzermodus starten. Dies ist z. B. der Fall, wenn Sie Serverkonfigurationsoptionen ändern oder eine beschädigte master-Datenbank oder andere Systemdatenbanken wiederherstellen möchten. Beide Aktionen erfordern das Starten einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus.  
@@ -47,7 +46,7 @@ ms.locfileid: "48090150"
   
  Gehen Sie folgendermaßen vor, um das Problem zu verhindern:  
   
-1.  Entfernen Sie den –m-Startparameter aus den erweiterten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Eigenschaften.  
+1.  Entfernen Sie den -m-Startparameter aus den erweiterten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Eigenschaften.  
   
 2.  Schalten Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressource offline.  
   
@@ -56,14 +55,14 @@ ms.locfileid: "48090150"
   
 4.  Überprüfen Sie in Konsole der Clusterverwaltung oder der Failoverclusterverwaltung, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressource immer noch offline ist.  
   
-5.  Stellen Sie nun unter Verwendung des folgenden Befehls eine Verbindung mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, und führen Sie den erforderlichen Vorgang aus: SQLCMD -E -S\<servername>.  
+5.  Herstellen einer Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nun mit den folgenden Befehl und führen Sie den erforderlichen Vorgang: SQLCMD-e-s\<Servername >.  
   
 6.  Schließen Sie die Eingabeaufforderung, nachdem der Vorgang abgeschlossen wurde, und schalten Sie die SQL-Ressource sowie andere Ressourcen über die Clusterverwaltung wieder online.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [Diagnoseverbindung für Datenbankadministratoren](diagnostic-connection-for-database-administrators.md)   
- [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)   
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
  [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md)  

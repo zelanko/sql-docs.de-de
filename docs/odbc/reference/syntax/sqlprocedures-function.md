@@ -20,16 +20,16 @@ ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a044f3122f3f553e068d474901e52cce3eef1c9
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 260406eddd6caef88035376a764c3e140547e6c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120083"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204669"
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ODBC  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLProcedures** gibt die Liste der Prozedurnamen, die in einer bestimmten Datenquelle gespeichert. *Prozedur* ist ein generischer Begriff zum Beschreiben einer *ausführbares Objekt*, oder eine benannte Entität, die mit Eingabe-und Ausgabeparametern aufgerufen werden kann. Weitere Informationen zu Prozeduren finden Sie unter den [Prozeduren](../../../odbc/reference/develop-app/procedures-odbc.md).  
@@ -131,11 +131,11 @@ SQLRETURN SQLProcedures(
 |PROCEDURE_CAT (ODBC 2.0)|1|Varchar|Prozedur-Katalog-Bezeichner. NULL, wenn Sie mit der Datenquelle nicht anwendbar. Wenn ein Treiber Kataloge bei einigen Prozeduren unterstützt jedoch nicht für andere, z. B. wenn der Treiber die Daten aus verschiedenen DBMS abruft, eine leere Zeichenfolge zurückgegeben ("") für diese Verfahren aus, denen keine Kataloge.|  
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|Prozedur-Schema-Bezeichner. NULL, wenn Sie mit der Datenquelle nicht anwendbar. Wenn ein Treiber Schemas bei einigen Prozeduren unterstützt jedoch nicht für andere, z. B. wenn der Treiber die Daten aus verschiedenen DBMS abruft, eine leere Zeichenfolge zurückgegeben ("") für diese Verfahren, die keine Schemas aufweisen.|  
 |PROCEDURE_NAME (ODBC 2.0)|3|Varchar, die nicht NULL|Prozedur-Bezeichner.|  
-|NUM_INPUT_PARAMS (ODBC 2.0)|4|–|Zur künftigen Verwendung reserviert. Anwendungen sollten nicht auf die in diesen Ergebnisspalten zurückgegebenen Daten verlassen.|  
-|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|–|Zur künftigen Verwendung reserviert. Anwendungen sollten nicht auf die in diesen Ergebnisspalten zurückgegebenen Daten verlassen.|  
-|NUM_RESULT_SETS (ODBC 2.0)|6|–|Zur künftigen Verwendung reserviert. Anwendungen sollten nicht auf die in diesen Ergebnisspalten zurückgegebenen Daten verlassen.|  
+|NUM_INPUT_PARAMS (ODBC 2.0)|4|Nicht zutreffend|Zur künftigen Verwendung reserviert. Anwendungen sollten nicht auf die in diesen Ergebnisspalten zurückgegebenen Daten verlassen.|  
+|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|Nicht zutreffend|Zur künftigen Verwendung reserviert. Anwendungen sollten nicht auf die in diesen Ergebnisspalten zurückgegebenen Daten verlassen.|  
+|NUM_RESULT_SETS (ODBC 2.0)|6|Nicht zutreffend|Zur künftigen Verwendung reserviert. Anwendungen sollten nicht auf die in diesen Ergebnisspalten zurückgegebenen Daten verlassen.|  
 |HINWEISE (ODBC 2.0)|7|Varchar|Eine Beschreibung der Prozedur.|  
-|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|Definiert den Prozedurtyp an:<br /><br /> SQL_PT_UNKNOWN: Es kann nicht bestimmt werden, ob die Prozedur einen Wert zurückgibt.<br /><br /> SQL_PT_PROCEDURE: Das zurückgegebene Objekt ist eine Prozedur. Er hat, also keinen Wert zurückgegeben.<br /><br /> SQL_PT_FUNCTION: Das zurückgegebene Objekt ist eine Funktion. Das heißt, hat es einen Rückgabewert.|  
+|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|Definiert den Prozedurtyp an:<br /><br /> SQL_PT_UNKNOWN: Es kann nicht bestimmt werden, ob die Prozedur einen Wert zurückgibt.<br /><br /> SQL_PT_PROCEDURE: Das zurückgegebene Objekt ist eine Prozedur an. Er hat, also keinen Wert zurückgegeben.<br /><br /> SQL_PT_FUNCTION: Das zurückgegebene Objekt ist eine Funktion. Das heißt, hat es einen Rückgabewert.|  
   
  Die *SchemaName* und *ProcName* Argumente akzeptieren Suchmuster. Weitere Informationen zu gültigen Suchmuster, finden Sie unter [Musterwerts](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   

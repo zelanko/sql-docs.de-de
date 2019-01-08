@@ -1,5 +1,5 @@
 ---
-title: Analysieren eines Tabellenmodells in Excel | Microsoft Docs
+title: Eine Analysis Services-Tabellenmodells in Excel analysieren | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b1db764052a9c3370554a6456dc005612a2e8b95
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a3cd28375a60dc2cbf7447068fde8c5a1c7dba07
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040657"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072227"
 ---
-# <a name="analyze-a-tabular-model-in-excel"></a>Analysieren eines Tabellenmodells in Excel  
+# <a name="analyze-a-tabular-model-in-excel"></a>Analysieren eines tabellarischen Modells in Excel  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Über die Funktion In Excel analysieren in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] wird Microsoft Excel geöffnet, eine Datenquellenverbindung mit der Arbeitsbereichsdatenbank des Modells hergestellt und eine PivotTable in das Arbeitsblatt eingefügt. Modellobjekte (Tabellen, Spalten, Measures, Hierarchien und KPIs) sind als Felder in der PivotTable-Feldliste enthalten.  
   
 > [!NOTE]  
 >  Um die Funktion In Excel analysieren zu verwenden, muss Microsoft Office 2003 oder höher auf demselben Computer wie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]installiert sein. Wenn Office nicht auf demselben Computer installiert ist, können Sie Excel auf einem anderen Computer verwenden und eine Datenquellenverbindung mit der Arbeitsbereichsdatenbank des Modells herstellen. Sie können dem Arbeitsblatt dann manuell eine PivotTable hinzufügen. Modellobjekte (Tabellen, Spalten, Measures und KPIs) sind als Felder in der PivotTable-Feldliste enthalten.  
   
-## <a name="tasks"></a>Aufgaben  
+## <a name="tasks"></a>Richtlinienübersicht  
   
 #### <a name="to-analyze-a-tabular-model-project-by-using-the-analyze-in-excel-feature"></a>So analysieren Sie ein tabellarisches Modellprojekt mithilfe der Funktion "In Excel analysieren"  
   

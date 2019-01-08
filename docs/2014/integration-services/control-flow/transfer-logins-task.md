@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferloginstask.f1
@@ -15,12 +14,12 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d22dc265eda8e090d00674e198be2616514b857b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0506d617a3fe8070ceb0903eb2d4cfc6e62557f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143901"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762062"
 ---
 # <a name="transfer-logins-task"></a>Task "Anmeldungen übertragen"
   Mit dem Task "Anmeldungen übertragen" wird mindestens eine Anmeldung zwischen den Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übertragen.  
@@ -69,9 +68,9 @@ ms.locfileid: "48143901"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task Anmeldungen übertragen &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task Anmeldungen übertragen &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor für den Task Anmeldungen übertragen &#40;Seite "Anmeldungen"&#41;](../transfer-logins-task-editor-logins-page.md)  
+-   [Editor für den Task Anmeldungen übertragen &#40;Seite Anmeldungen&#41;](../transfer-logins-task-editor-logins-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

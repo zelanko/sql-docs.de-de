@@ -1,5 +1,5 @@
 ---
-title: 'Definieren einer m: N-Beziehung | Microsoft Docs'
+title: 'Definieren einer m: N Beziehung | Microsoft-Dokumentation'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 487b61512e1dbd784b9b63eb0c3efdf1f98281ec
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c2541637af690395bb52c86a604ed7b37bd3fb00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518023"
 ---
-# <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lektion 5-3: Definieren einer m: N-Beziehung
+# <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lektion 5-3: Definieren einer m: N Beziehung
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Wenn Sie eine Dimension definieren, wird typischerweise jeder einzelne Fakt (fact) mit genau einem Dimensionsmitglied verknüpft, wohingegen ein einzelnes Dimensionselement vielen verschiedenen Fakten zugeordnet sein kann. Beispielsweise können für jeden Kunden mehrere Bestellungen vorliegen, aber jede Bestellung kann nur einem einzelnen Kunden zugeordnet sein. In der Terminologie von relationalen Datenbanken wird dies als *1:n-Beziehung*bezeichnet. Manchmal kann allerdings ein einzelner Fakt mit mehreren Dimensionselementen verknüpft sein. In der Terminologie von relationalen Datenbanken wird dies als *m:n-Beziehung*bezeichnet. Ein Kunde kann beispielsweise mehrere Gründe für einen Kauf haben, und ein Kaufgrund kann mehreren Käufen zugeordnet sein. Eine Jointabelle wird verwendet, um die Kaufgründe zu definieren, die sich auf den jeweiligen Kauf beziehen. Eine mit solchen Beziehungen konstruierte Sales Reason-Dimension würde dann mehrere Elemente aufweisen, die mit einer einzelnen Verkaufstransaktion verknüpft ist. Durch m:n-Beziehungen werden das dimensionale Modell über das klassische Sternschema hinaus erweitert und komplexe Analysen unterstützt, wenn Dimensionen nicht direkt mit einer Faktentabelle verknüpft sind.  
@@ -26,7 +26,7 @@ In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]definieren Sie eine
 Bei einer m:n-Beziehung werden die Werte getrennt summiert, was bedeutet, dass sie nicht mehr als einmal für das All-Element aggregiert werden.  
   
 > [!NOTE]  
-> Eine Primärschlüssel-Fremdschlüssel-Beziehung muss in der Datenquellensicht zwischen allen beteiligten Tabellen definiert werden, um eine m:n-Beziehung zu unterstützen. Sie können sonst nicht die entsprechende Zwischenmeasuregruppe auswählen, wenn Sie die Beziehung auf der Registerkarte **Dimensionsverwendung** des Cube-Designers einrichten.  
+> Um eine m: n dimensionsbeziehung zu unterstützen, muss eine Primärschlüssel / Fremdschlüssel-Beziehung in der Datenquellensicht zwischen allen Tabellen definiert werden, die beteiligt sind. Sie können sonst nicht die entsprechende Zwischenmeasuregruppe auswählen, wenn Sie die Beziehung auf der Registerkarte **Dimensionsverwendung** des Cube-Designers einrichten.  
   
 Weitere Informationen finden Sie unter [Dimensionsbeziehungen](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)und [Definieren einer m:n-Beziehung und deren Eigenschaften](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
@@ -44,7 +44,7 @@ In den Aufgaben in diesem Thema definieren Sie die Sales Reasons-Dimension und d
   
 5.  Fügen Sie der Liste **Eingeschlossene Objekte** im Dialogfeld **Tabellen hinzufügen/entfernen** die Tabellen **DimSalesReason** und **FactInternetSalesReason** hinzu, und klicken Sie anschließend auf **OK**.  
   
-    Beachten Sie, dass die Primärschlüssel-Fremdschlüssel-Beziehungen zwischen den beteiligten Tabellen automatisch eingerichtet werden, weil diese Beziehungen in der zugrunde liegenden relationalen Datenbank definiert werden. Wenn diese Beziehungen nicht in der zugrunde liegenden relationalen Datenbank definiert wären, müssten Sie sie in der Datenquellensicht definieren.  
+    Beachten Sie, dass der primären Schlüssel-Fremdschlüssel-Beziehungen zwischen den beteiligten Tabellen automatisch eingerichtet werden, da diese Beziehungen in der zugrunde liegenden relationalen Datenbank definiert sind. Wenn diese Beziehungen nicht in der zugrunde liegenden relationalen Datenbank definiert wären, müssten Sie sie in der Datenquellensicht definieren.  
   
 6.  Zeigen Sie im Menü **Format** auf **Automatisches Layout**, und klicken Sie anschließend auf **Diagramm**.  
   
@@ -80,7 +80,7 @@ In den Aufgaben in diesem Thema definieren Sie die Sales Reasons-Dimension und d
   
 5.  Wählen Sie **Internet Sales Reason Count** aus, und überprüfen Sie die Eigenschaften dieses Measures im Eigenschaftenfenster.  
   
-    Die **AggregateFunction** -Eigenschaft für dieses Measure wurde als **Count** anstelle von **Sum**definiert. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ausgewählten **Anzahl** , da der zugrunde liegende Datentyp ein Zeichenfolgendatentyp ist. Die anderen zwei Spalten in der zugrunde liegenden Faktentabelle wurden nicht als Measures ausgewählt, weil sie von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] als numerische Schlüssel statt tatsächliche Measures festgestellt wurden. Weitere Informationen finden Sie unter [Semiadditives Verhalten definieren](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
+    Die **AggregateFunction** -Eigenschaft für dieses Measure wurde als **Count** anstelle von **Sum**definiert. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] hat **Count** ausgewählt, da der zugrunde liegende Datentyp ein Zeichenfolgendatentyp ist. Die anderen zwei Spalten in der zugrunde liegenden Faktentabelle wurden nicht als Measures ausgewählt, weil sie von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] als numerische Schlüssel statt tatsächliche Measures festgestellt wurden. Weitere Informationen finden Sie unter [Semiadditives Verhalten definieren](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
   
 6.  Ändern Sie im Eigenschaftenfenster die **Sichtbar** -Eigenschaft des **Internet Sales Reason Count** -Measures in **False**.  
   
@@ -88,7 +88,7 @@ In den Aufgaben in diesem Thema definieren Sie die Sales Reasons-Dimension und d
   
     Die folgende Abbildung zeigt die Eigenschaften für das **Internet Sales Reason Count** -Measure.  
   
-    ![Eigenschaften für das Internet Sales Reason Count-Measure](../analysis-services/media/l5-many-to-many-2.gif "Eigenschaften für das Internet Sales Reason Count-Measure")  
+    ![Eigenschaften für die Internet Sales Reason Count-Measure](../analysis-services/media/l5-many-to-many-2.gif "Eigenschaften für die Internet Sales Reason Count-Measure")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>Definieren der m:n-Dimension  
   
@@ -144,7 +144,7 @@ In den Aufgaben in diesem Thema definieren Sie die Sales Reasons-Dimension und d
   
     Die folgende Abbildung zeigt die Änderungen im Dialogfeld **Beziehung definieren** .  
   
-    ![Das Dialogfeld Beziehung definieren](../analysis-services/media/l5-many-to-many-3.gif "Beziehung definieren (Dialogfeld)")  
+    ![Das Dialogfeld Beziehung definieren](../analysis-services/media/l5-many-to-many-3.gif "Dialogfeld Beziehung definieren")  
   
 5.  Klicken Sie auf **OK**.  
   
@@ -170,11 +170,11 @@ In den Aufgaben in diesem Thema definieren Sie die Sales Reasons-Dimension und d
   
     ![Filter- und Datenbereiche des Cube-Designers](../analysis-services/media/l5-many-to-many-5.gif "Filter- und Datenbereiche des Cube-Designers")  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Definieren von Dimensionsgranularität innerhalb einer Measuregruppe](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Arbeiten Sie mit Diagrammen im Datenquellensicht-Designers & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[Verwenden von Diagrammen im Datenquellensicht-Designer &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [Dimensionsbeziehungen](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Definieren einer m:n-Beziehung und deren Eigenschaften](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

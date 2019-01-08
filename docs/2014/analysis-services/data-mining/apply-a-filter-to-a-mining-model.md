@@ -16,12 +16,12 @@ ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b851f631535008d1655a35c4b4af5321c8c4534
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159982"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512641"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Anwenden eines Filters auf ein Miningmodell
   Wenn Ihre Miningstruktur eine geschachtelte Tabelle enthält, können Sie einen Filter auf die Falltabelle und/oder die geschachtelte Tabelle anwenden.  
@@ -47,7 +47,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Wählen Sie das Modell aus, und klicken Sie mit der rechten Maustaste, um das Kontextmenü zu öffnen.  
   
-     – Oder –  
+     -oder-  
   
      Wählen Sie das Modell aus. Wählen Sie dann im Menü **Miningmodell** die Funktion **Modellfilter festlegen**aus.  
   
@@ -67,7 +67,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Klicken Sie auf das Textfeld **Wert** , und geben Sie einen Wert ein.  
   
-     Wählen Sie z. B. `Income` wählen Sie als Spalte aus, die größer als-Operator (>), und geben Sie dann `30000`.  
+     Wählen Sie z. B. `Income` als Spalte aus, wählen Sie den Operator "Größer als" (>) aus, und geben Sie dann `30000` ein.  
   
 9. Klicken Sie auf die nächste Zeile im Raster.  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. Wählen Sie einen Operator aus, und geben Sie einen Wert ein, wie in Schritt 7 und 8 beschrieben.  
   
-     Wählen Sie z. B. `Income` wie die Spalte erneut aus, wählen Sie den kleiner als-Operator (<), und geben Sie `40000`.  
+     Wählen Sie z. B. erneut `Income` als Spalte aus, wählen Sie den Operator "Kleiner als" (<) aus, und geben Sie dann `40000` ein.  
   
 12. Klicken Sie auf die nächste Zeile im Raster.  
   
@@ -97,7 +97,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      Dies sind die einzigen Bedingungen, die für die geschachtelte Tabelle im Dialogfeld **Modellfilter** verfügbar sind, da Sie die Falltabelle auf die Fälle einschränken, die einen bestimmten Wert in der verschachtelten Tabelle enthalten. Den Wert für die Bedingung in der geschachtelten Tabelle legen Sie im nächsten Schritt fest.  
   
-4.  Klicken Sie auf das Feld **Wert** , und klicken Sie anschließend auf die Schaltfläche **(...)** , um einen Ausdruck zu erstellen.  
+4.  Klicken Sie auf die **Wert** ein, und klicken Sie dann auf die **(...)**  Schaltfläche, um einen Ausdruck zu erstellen.  
   
      Die  **\<Name > Filter** Dialogfeld wird geöffnet. Dieses Dialogfeld kann Bedingungen nur für die aktuelle Tabelle festlegen. In diesem Fall ist dies die geschachtelte Tabelle.  
   
@@ -127,8 +127,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
   
   
 ## <a name="see-also"></a>Siehe auch  
- [Filter für Miningmodelle &#40;Analysis Services – Datamining&#41;](mining-models-analysis-services-data-mining.md)   
- [Miningmodelltasks und Anweisungen Mining](mining-model-tasks-and-how-tos.md)   
+ [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)   
+ [Miningmodelltasks und Anweisungen](mining-model-tasks-and-how-tos.md)   
  [Löschen eines Filters aus einem Miningmodell](delete-a-filter-from-a-mining-model.md)  
   
   

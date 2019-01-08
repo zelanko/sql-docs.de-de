@@ -20,19 +20,19 @@ ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f35bb06301fb7d4f53a415e055371db989942586
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9d8001765a06ce432ea8f5f7e3081e4a54e7efa
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642418"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202069"
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Einige Funktionen der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ändern Sie die Möglichkeit, [!INCLUDE[ssDE](../../includes/ssde-md.md)] speichert Informationen in den Datenbankdateien. Diese Funktionen sind nicht in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Datenbank, die diese Funktionen enthält, kann nicht in eine Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschoben werden, die sie nicht unterstützt. Verwenden Sie die dynamische verwaltungssicht Sys. dm_db_persisted_sku_features, um editionsspezifischen Funktionen aufzulisten, die in der aktuellen Datenbank aktiviert sind.
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -47,17 +47,17 @@ ms.locfileid: "47642418"
   
  Sys. dm_db_persisted_sku_features listet möglicherweise die folgenden Funktionen zur Datenbank verändert, wie auf bestimmte eingeschränkt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Editionen:  
   
--   **ChangeCapture**: Gibt an, dass eine Datenbank Change Data Capture aktiviert wurde. Um Change Data Capture zu entfernen, verwenden Sie die [Sys. sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) gespeicherte Prozedur. Weitere Informationen finden Sie unter [Informationen zu Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
+-   **ChangeCapture**: Gibt an, dass eine Datenbank für Change Data Capture aktiviert ist. Um Change Data Capture zu entfernen, verwenden Sie die [Sys. sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) gespeicherte Prozedur. Weitere Informationen finden Sie unter [Informationen zu Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
   
--   **Für ColumnStoreIndex**: Gibt an, mindestens eine Tabelle verfügt über einen columnstore-Index. Aktivieren eine Datenbank zu einer Edition von zu verschiebenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die diese Funktion nicht unterstützt, verwenden Sie die [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) oder [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) Anweisung, um den columnstore-Index zu entfernen. Weitere Informationen finden Sie unter [columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md).  
+-   **Für ColumnStoreIndex**: Gibt an, dass mindestens eine Tabelle einen columnstore-Index verfügt. Aktivieren eine Datenbank zu einer Edition von zu verschiebenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die diese Funktion nicht unterstützt, verwenden Sie die [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) oder [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) Anweisung, um den columnstore-Index zu entfernen. Weitere Informationen finden Sie unter [columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md).  
   
-    **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+    **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
--   **Komprimierung**: Gibt an, dass mindestens eine Tabelle oder ein Index die datenkomprimierung oder das Vardecimal-Speicherformat verwendet. Aktivieren eine Datenbank zu einer Edition von zu verschiebenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die diese Funktion nicht unterstützt, verwenden Sie die [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) -Anweisung zum Entfernen von datenkomprimierung. Um das vardecimal-Speicherformat zu entfernen, verwenden Sie die sp_tableoption-Anweisung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+-   **Komprimierung**: Gibt an, dass mindestens eine Tabelle oder ein Index die Datenkomprimierung oder das vardecimal-Speicherformat verwendet. Aktivieren eine Datenbank zu einer Edition von zu verschiebenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die diese Funktion nicht unterstützt, verwenden Sie die [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) -Anweisung zum Entfernen von datenkomprimierung. Um das vardecimal-Speicherformat zu entfernen, verwenden Sie die sp_tableoption-Anweisung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
--   **MultipleFSContainers**: Gibt an, dass die Datenbank mehrere FILESTREAM-Container verwendet. Die Datenbank hat eine FILESTREAM-Dateigruppe mit mehreren Containern (Dateien). Weitere Informationen finden Sie unter [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
+-   **MultipleFSContainers**: Gibt an, dass die Datenbank mehrere FILESTREAM-Container verwendet. Die Datenbank hat eine FILESTREAM-Dateigruppe mit mehreren Containern (Dateien). Weitere Informationen finden Sie unter [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
--   **InMemoryOLTP**: Gibt an, dass die Datenbank In-Memory OLTP verwendet. Die Datenbank verfügt über eine MEMORY_OPTIMIZED_DATA-Dateigruppe. Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
+-   **InMemoryOLTP**: Gibt an, dass die Datenbank In-Memory OLTP verwendet. Die Datenbank verfügt über eine MEMORY_OPTIMIZED_DATA-Dateigruppe. Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). 
   

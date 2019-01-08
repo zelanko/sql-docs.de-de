@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - remote login timeout option
@@ -13,12 +12,12 @@ ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b94b4ea344d2749b164c85bd1769889dfd9430d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 769e7891b389cb6ee1ec60189aa47db3a3c35f57
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102210"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641131"
 ---
 # <a name="configure-the-remote-login-timeout-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Timeout für Remoteanmeldungen
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Timeout für Remoteanmeldung** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Mit der Option **Timeout für Remoteanmeldung** können Sie den Zeitraum in Sekunden angeben, wie lange gewartet werden soll, bevor ein Remoteanmeldeversuch einen Fehler erzeugt. Wenn Sie z. B versuchen, sich an einem Remoteserver anzumelden, und dieser Server derzeit nicht betriebsbereit ist, wird durch **Timeout für Remoteanmeldung** sichergestellt, dass Sie nicht unbegrenzt warten müssen, bis der Computer seine Anmeldeversuche beendet. Der Standardwert für diese Option ist 10 Sekunden. Bei einem Wert von 0 ist eine unbegrenzte Wartezeit zulässig.  
@@ -32,7 +31,7 @@ ms.locfileid: "48102210"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So konfigurieren Sie die Option Timeout für Remoteanmeldung mit:**  
   
@@ -40,9 +39,9 @@ ms.locfileid: "48102210"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung:**  [Nach dem Konfigurieren der Option „Timeout für Remoteanmeldung“](#FollowUp)  
+-   **Nachverfolgung:**  [Nach dem Konfigurieren der Option remote Login timeout](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48102210"
 ####  <a name="Permissions"></a> Berechtigungen  
  Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Zum Ausführen von **sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung muss einem Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-configure-the-remote-login-timeout-option"></a>So konfigurieren Sie die Option Timeout für Remoteanmeldung  
   
@@ -87,7 +86,7 @@ GO
   
  Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)angezeigt oder konfiguriert wird.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Konfigurieren der Option Timeout für Remoteanmeldung  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Konfigurieren der Option remote Login timeout  
  Die Einstellung tritt ohne Neustarten des Servers sofort in Kraft.  
   
 ## <a name="see-also"></a>Siehe auch  

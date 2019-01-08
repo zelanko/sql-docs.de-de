@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2163528b17805e15d2ec3a368a77335d7854a9b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1042eeefb53b16573fd13eb6f0449eeda4688f3a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187772"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757662"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;Dienstname&gt;-Eigenschaften (Registerkarte „Dienst“)
   Hierbei handelt es sich um den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] -Dienst. Die ausgegrauten Eigenschaftswerte können nicht mithilfe dieser Anwendung geändert werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Binärpfad**  
  Zeigt den Speicherort der Programmdateien an, die von diesem Dienst verwendet werden.  
   
@@ -50,9 +49,9 @@ ms.locfileid: "48187772"
   
 -   Automatisch: Dieser Dienst wird zusammen mit dem Computer gestartet.  
   
--   Deaktiviert: Dieser Dienst kann nicht gestartet werden.  
+-   Deaktiviert: Der Dienst kann nicht gestartet werden.  
   
- **Status**  
+ **Zustand**  
  Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist.  
   
   

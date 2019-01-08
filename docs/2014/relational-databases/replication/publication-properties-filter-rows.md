@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.filterrows.f1
@@ -13,12 +12,12 @@ ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a33c0344fd0b195f920919bcabfdbf49fb0b63dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a12867b5efe457fa2361a85ac426db07c2760ac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065670"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780382"
 ---
 # <a name="publication-properties-filter-rows"></a>Veröffentlichungseigenschaften, Filterzeilen
   Mithilfe der Seite **Filterzeilen** des Dialogfelds **Veröffentlichungseigenschaften** können Sie Elemente hinzufügen, bearbeiten oder löschen:  
@@ -46,12 +45,12 @@ ms.locfileid: "48065670"
   
 -   Vermeiden der Übertragung vertraulicher Daten. Mithilfe von Zeilenfiltern und Spaltenfiltern kann der Datenzugriff für Abonnenten eingeschränkt werden. Im Fall von Mergereplikationen gelten besondere Sicherheitsüberlegungen, wenn Sie einen parametrisierten Filter verwenden, der HOST_NAME() einschließt. Weitere Informationen finden Sie im Abschnitt über das Filtern mit HOST_NAME() unter [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Gefilterte Tabellen**  
  Dieser Bereich wird mit Filtern aufgefüllt, während Sie den Tabellenartikeln in der Veröffentlichung Filter hinzufügen. Tabellen mit Zeilenfiltern werden im Bereich als Knoten der obersten Ebene angezeigt. Für Mergeveröffentlichungen werden Tabellen, auf die das Filtern durch einen Joinfilter erweitert wurde, als untergeordnete Knoten angezeigt.  
   
  **Hinzufügen**  
- Klicken Sie auf **Hinzufügen** , um ein Dialogfeld aufzurufen, mit dem Sie Tabellenartikel filtern können. Wenn Sie für eine Momentaufnahme- oder Transaktionsveröffentlichung auf **Hinzufügen** klicken, wird sofort ein Dialogfeld geöffnet. Wenn Sie für eine Mergeveröffentlichung auf **Hinzufügen** klicken, werden drei Auswahlmöglichkeiten angezeigt: **Filter hinzufügen**; **Join hinzufügen, um den ausgewählten Filter zu erweitern**; **Filter automatisch generieren**.  
+ Klicken Sie auf **Hinzufügen** , um ein Dialogfeld aufzurufen, mit dem Sie Tabellenartikel filtern können. Wenn Sie für eine Momentaufnahme- oder Transaktionsveröffentlichung auf **Hinzufügen** klicken, wird sofort ein Dialogfeld geöffnet. Auf **hinzufügen** für eine Mergeveröffentlichung werden drei Auswahlmöglichkeiten angezeigt: **Fügen Sie Filter hinzu**; **Verknüpfung hinzufügen, um den ausgewählten Filter zu erweitern**; **Filter automatisch generieren**.  
   
 -   Wählen Sie **Filter hinzufügen** aus, um das Dialogfeld **Filter hinzufügen** aufzurufen. Mithilfe dieses Dialogfelds können Sie Zeilenfilter auf einen Tabellenartikel anwenden. Im Dialogfeld **Filter hinzufügen** können Sie beispielsweise angeben, dass eine Tabelle mit Kundendaten nur Daten von französischen Kunden enthalten soll, wenn eine Replikation an Abonnenten erfolgt.  
   

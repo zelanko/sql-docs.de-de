@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.options.f1
@@ -13,12 +12,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54c7a5361a411ff68456504962bbf62298f4ba9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062627"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774422"
 ---
 # <a name="database-properties-options-page"></a>Datenbankeigenschaften (Seite Optionen)
   Mithilfe dieser Seite können Sie Optionen für die ausgewählte Datenbank anzeigen und ändern. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
@@ -28,7 +27,7 @@ ms.locfileid: "48062627"
  Geben Sie die Sortierung der Datenbank durch eine Auswahl aus der Liste an. Weitere Informationen finden Sie unter [Festlegen oder Ändern der Datenbanksortierung](../collations/set-or-change-the-database-collation.md).  
   
  **Wiederherstellungsmodell**  
- Geben Sie eines der folgenden Modelle für die Wiederherstellung der Datenbank an: **Vollständig**, **Massenprotokolliert**oder **Einfach**. Weitere Informationen zu Wiederherstellungsmodellen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md).  
+ Geben Sie eine der folgenden Modelle für die Wiederherstellung der Datenbank: **Vollständige**, **massenprotokollierten**, oder **einfache**. Weitere Informationen zu Wiederherstellungsmodellen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md).  
   
  **Kompatibilitätsgrad**  
  Geben Sie die letzte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die von der Datenbank unterstützt wird. Mögliche Werte sind  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)** und **SQL Server 2008 (100)**. Wenn eine SQL Server 2005-Datenbank auf SQL Server 2014 aktualisiert wird, wird der Kompatibilitätsgrad für die Datenbank von 90 in 100 geändert.  Der Kompatibilitätsgrad 90 wird in SQL Server 2014 nicht unterstützt. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
@@ -80,7 +79,7 @@ ms.locfileid: "48062627"
  **Umstellungsjahr für Angaben mit zwei Ziffern**  
  Gibt die höchste Zahl an, die als eine zweistellige Jahresangabe eingegeben werden kann. Das aufgeführte Jahr und die vorherigen 99 Jahre können als eine zweistellige Jahresangabe eingegeben werden. Alle anderen Jahre müssen als eine vierstellige Jahresangabe eingegeben werden.  
   
- Die Standardeinstellung 2049 zeigt beispielsweise an, dass ein als '3/14/49' eingegebenes Datum als 14. März 2049 und ein als '3/14/50' eingegebenes Datum als 14. März 1950 interpretiert wird. Weitere Informationen Konfigurieren der Serverkonfigurationsoption Umstellungsjahr für Angaben mit zwei Ziffern](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
+ Die Standardeinstellung 2049 zeigt beispielsweise an, dass ein als '3/14/49' eingegebenes Datum als 14. März 2049 und ein als '3/14/50' eingegebenes Datum als 14. März 1950 interpretiert wird. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Umstellungsjahr für Angaben mit zwei Ziffern](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
 ## <a name="cursor"></a>Cursor  
  **Schließen des Cursors nach Commit aktiviert**  
@@ -94,11 +93,11 @@ ms.locfileid: "48062627"
  Geben Sie den Verzeichnisnamen für die FILESTREAM-Daten an, die der ausgewählten Datenbank zugeordnet sind.  
   
  **Nicht transaktionsgebundener FILESTREAM-Zugriff**  
- Geben Sie eine der folgenden Optionen für nicht transaktionalen Zugriff über das Dateisystem auf FILESTREAM-Daten an, die in FileTables gespeichert sind: **OFF**, **READ_ONLY**oder **FULL**. Wenn FILESTREAM nicht auf dem Server aktiviert ist, wird dieser Wert auf OFF festgelegt und deaktiviert. Weitere Informationen finden Sie unter [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
+ Geben Sie eine der folgenden Optionen für nicht transaktionalen Zugriff über das Dateisystem auf FILESTREAM-Daten in FileTables gespeichert sind: **OFF**, **READ_ONLY**, oder **vollständige**. Wenn FILESTREAM nicht auf dem Server aktiviert ist, wird dieser Wert auf OFF festgelegt und deaktiviert. Weitere Informationen finden Sie unter [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Sonstiges  
  **ANSI NULL Default**  
- Null-Werte zulässt, für alle benutzerdefinierten Datentypen oder Spalten, die als nicht explizit definiert sind `NOT NULL` während einer `CREATE TABLE` oder `ALTER TABLE` Anweisung (Standardstatus). Weitere Informationen finden Sie unter [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) und [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql).  
+ Lässt NULL-Werte für alle benutzerdefinierten Datentypen oder Spalten zu, die während einer `NOT NULL`-Anweisung oder `CREATE TABLE`-Anweisung nicht explizit als `ALTER TABLE` definiert wurden (Standardstatus). Weitere Informationen finden Sie unter [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) und [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql).  
   
  **ANSI NULLS aktiviert**  
  Gibt das Verhalten der Vergleichsoperatoren Gleich (`=`) und Ungleich (`<>`) bei Verwendung mit NULL-Werten an. Mögliche Werte sind `True` (aktiviert) und `False` (deaktiviert). Bei `True` ergeben alle Vergleiche mit einem Nullwert UNKNOWN. Wenn `False`, ergeben Vergleiche von nicht-UNICODE-Werten mit einem Nullwert `True` Wenn beide Werte NULL sind. Weitere Informationen finden Sie unter [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql).  
@@ -146,7 +145,7 @@ ms.locfileid: "48062627"
   
  TRUSTWORTHY wird auf `False` festgelegt, wenn eine Datenbank an den Server angefügt wird.  
   
- Die empfohlene Vorgehensweise für den Zugriff auf Ressourcen außerhalb der Datenbank in einem Identitätswechselkontext ist die Verwendung Zertifikaten und Signaturen statt der `Trustworthy` Option.  
+ Die empfohlene Vorgehensweise zum Zugreifen auf Ressourcen außerhalb der Datenbank unter einem Identitätswechselkontext ist die Verwendung von Zertifikaten und Signaturen statt der Option `Trustworthy`.  
   
  Verwenden Sie zum Festlegen dieser Eigenschaft die ALTER DATABASE-Anweisung.  
   
@@ -168,7 +167,7 @@ ms.locfileid: "48062627"
  Zeigt den aktuellen Status der Datenbank an. Diese Option kann nicht bearbeitet werden. Weitere Informationen zum **Datenbankstatus**finden Sie unter [Datenbankstatus](database-states.md).  
   
  **Zugriff beschränken**  
- Gibt an, welche Benutzer auf die Datenbank zugreifen können. Folgende Werte sind möglich:  
+ Gibt an, welche Benutzer auf die Datenbank zugreifen können. Dabei sind folgende Werte möglich:  
   
 -   **Mehrere**  
   

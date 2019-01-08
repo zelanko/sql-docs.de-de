@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
@@ -14,12 +14,12 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46333534aebb2991fe0dc3239264bc94f7ddb821
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195520"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822624"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Exemplarische Vorgehensweise: Hinzufügen und Ändern von Datenbankdiagrammen
   In dieser exemplarischen Vorgehensweise wird das Erstellen und Ändern eines Datenbankdiagramms und das Ausführen von Änderungen an der Datenbank mithilfe der Datenbankdiagrammkomponente erläutert. Es wird in Einzelschritten erklärt, wie Diagrammen Tabellen hinzugefügt werden, wie Beziehungen zwischen Tabellen erstellt werden, wie Einschränkungen und Indizes für Spalten erstellt werden und wie die Ebene der Informationen geändert wird, die für die einzelnen Tabellen angezeigt werden.  
@@ -44,7 +44,7 @@ ms.locfileid: "48195520"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Knoten Datenbankdiagramme, und wählen Sie **Neues Datenbankdiagramm** aus.  
   
-     Wenn die Datenbank nicht über die zum Erstellen von Diagrammen erforderlichen Objekte verfügt, wird folgende Meldung angezeigt: **Dieser Datenbank fehlt mindestens eines der Unterstützungsobjekte, die erforderlich sind, damit Diagramme für die Datenbank erstellt werden können. Möchten Sie es erstellen?** Klicken Sie auf **Ja**.  
+     Wenn die Datenbank nicht zum Erstellen von Diagrammen erforderlichen Objekte verfügt, wird die folgende Meldung angezeigt: **Diese Datenbank keinen oder Unterstützung Objekte erforderlich, um Datenbankdiagramme verwenden. Möchten Sie es erstellen?** Klicken Sie auf **Ja**.  
   
      Das Dialogfeld **Tabelle hinzufügen** wird angezeigt.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48195520"
   
 1.  Klicken Sie mit der rechten Maustaste auf die `Address` -Tabelle. Zeigen Sie im Kontextmenü auf **Tabellensicht**, und klicken Sie dann auf **Standard**.  
   
-     Im Tabellenraster werden drei Spalten angezeigt: **Spaltenname**, **Datentyp**und **NULL-Werte zulassen**.  
+     Im Tabellenraster werden drei Spalten: **Name der Spalte**, **Datentyp**, und **NULL-Werte zulassen**.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die `Address` -Tabelle, klicken Sie auf **Tabellensicht** , und wählen Sie **Schlüssel**aus.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48195520"
   
 2.  In der **Namen auswählen** Dialogfeld klicken Sie auf **OK** um die Standardnamen `Table1`.  
   
-     Ein neues Tabellenraster mit drei Spalten wird angezeigt: **Spaltenname**, **Datentyp**und **NULL-Werte zulassen**.  
+     Es wird ein neues Tabellenraster mit drei Spalten angezeigt: **Name der Spalte**, **Datentyp**, und **NULL-Werte zulassen**.  
   
 3.  Fügen Sie die folgende Informationen zur `Table1`:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48195520"
   
 2.  Ziehen Sie `T2col1` in `T1col1`.  
   
-     Es werden zwei Dialogfelder angezeigt: **Fremdschlüsselbeziehung** im Hintergrund und **Tabellen und Spalten** im Vordergrund.  
+     Es werden zwei Dialogfelder angezeigt: **Foreign Key-Beziehung** im Hintergrund und **Tabellen und Spalten** im Vordergrund.  
   
 3.  Klicken Sie auf **OK** , um die neue Beziehung zu speichern.  
   

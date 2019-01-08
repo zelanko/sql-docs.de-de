@@ -11,12 +11,12 @@ ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 625aa7736ba6cc9ac4b1b77a65c0be31688d1e37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 730e9fa68477cbd96261a7036d7a95033db326a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183190"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544254"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Zeigern auf einem Messgerät (Berichts-Generator und SSRS)
   Ein Messgerätzeiger gibt den aktuellen Wert des Messgeräts an. Standardmäßig werden beim Hinzufügen eines Felds die darin enthaltenen Werte zu einem Wert aggregiert, der vom Zeiger auf dem Messgerät angezeigt wird. Sie können dem Messgerät mehrere Zeiger hinzufügen, die auf unterschiedliche Werte auf der gleichen Skala zeigen, oder Sie können mehrere Skalen und einen Zeiger für jede hinzugefügte Skala hinzufügen. Nachdem Sie einem Messgerät ein Feld hinzugefügt haben, müssen Sie den maximalen und den minimalen Wert für die entsprechende Skala festlegen, um einen Kontext zum Zeigerwert anzugeben. Sie haben auch die Möglichkeit, den minimalen und den maximalen Wert für einen Bereich festzulegen, wodurch auf der Skala ein kritischer Bereich angegeben wird.  
@@ -39,11 +39,11 @@ ms.locfileid: "48183190"
 ##  <a name="DisplayingMultiple"></a> Anzeigen von mehreren Zeigern auf dem Messgerät  
  Sie können dem Messgerät mehrere Zeiger hinzufügen, sodass auf der gleichen Skala auf unterschiedliche Werte gezeigt wird. Dies ermöglicht es Ihnen, gleichzeitig einen niedrigen und einen hohen Wert anzuzeigen. Wenn Sie auf dem Messgerät für die Skala mehrere Zeiger angeben möchten, klicken Sie auf eine beliebige Stelle auf dem Messgerät, und klicken Sie im Kontextmenü auf **Zeiger hinzufügen** . Sie können auch eine Skala hinzufügen, indem Sie mit der rechten Maustaste auf eine beliebige Stelle auf dem Messgerät klicken und anschließend auf **Skalierung hinzufügen**klicken. Anschließend können Sie einen neuen Zeiger hinzufügen, der automatisch der letzten Skala zugeordnet wird.  
   
- Wenn Zeiger einander überlappen, wird die Zeichnungsreihenfolge der Zeiger durch die Reihenfolge bestimmt, in der sie dem Messgerät hinzugefügt wurden. Sie können die Zeichnungsreihenfolge der Zeiger nicht ändern, indem Sie die Reihenfolge der Felder in Datenbereich ändern. Wenn Sie die Zeichnungsreihenfolge für mehrere Zeiger ändern möchten, öffnen Sie den Eigenschaftenbereich und klicken auf **Zeiger (…)**. Ändern Sie dann die Reihenfolge der Zeiger in der Pointer-Auflistung.  
+ Wenn Zeiger einander überlappen, wird die Zeichnungsreihenfolge der Zeiger durch die Reihenfolge bestimmt, in der sie dem Messgerät hinzugefügt wurden. Sie können die Zeichnungsreihenfolge der Zeiger nicht ändern, indem Sie die Reihenfolge der Felder in Datenbereich ändern. Wenn Sie die Zeichnungsreihenfolge für mehrere Zeiger ändern möchten, öffnen Sie den Eigenschaftenbereich, und klicken auf **Zeiger (…)**. Ändern Sie dann die Reihenfolge der Zeiger in der Pointer-Auflistung.  
   
   
 ##  <a name="SettingGradients"></a> Festlegen von Farbverläufen für eine Nadelabdeckung  
- Eine Nadelabdeckung, die über oder unter dem Zeiger gezeichnet werden kann, kann nur für ein radiales Messgerät angegeben werden. Alle Arten für Nadelabdeckungen werden mit integrierten Farbverläufen gezeichnet, die nicht geändert werden können. Die Ausnahme ist die `RoundedDark` Format, in dem Sie eine Verlaufsfarbe und die Art des Farbverlaufs angeben können.  
+ Eine Nadelabdeckung, die über oder unter dem Zeiger gezeichnet werden kann, kann nur für ein radiales Messgerät angegeben werden. Alle Arten für Nadelabdeckungen werden mit integrierten Farbverläufen gezeichnet, die nicht geändert werden können. Eine Ausnahme stellt der `RoundedDark`-Stil dar, für den Sie eine Verlaufsfarbe und die Art des Farbverlaufs abgeben können.  
   
   
 ##  <a name="SettingSnappingInterval"></a> Festlegen eines Ausrichtungsintervalls  

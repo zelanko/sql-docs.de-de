@@ -11,12 +11,12 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9791e381b9233137055c680efb8bdfcad62929a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abfaedbc8eb415d00b1947fe36bef0a51716f536
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110700"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513007"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Öffnen eines Editors (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-, MDX-, DMX- oder XML/A-Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geöffnet werden. Nach dem Öffnen werden alle Editor-Fenster als Registerkarte im zentralen Bereich von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]angezeigt.  
@@ -30,15 +30,15 @@ ms.locfileid: "48110700"
 ### <a name="permissions"></a>Berechtigungen  
  Vorgänge, die Sie in einem Code-Editor ausführen, unterliegen den dem für die Anmeldung verwendeten Authentifizierungskonto erteilten Berechtigungen. Wenn Sie beispielsweise mit der Windows-Authentifizierung ein Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors öffnen, können Sie keine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen ausführen, die auf Objekte verweisen, für die dem Windows-Anmeldekonto keine Zugriffsberechtigungen erteilt wurden.  
   
-## <a name="how-to-open-editors"></a>Vorgehensweise: Öffnen von Editoren  
+## <a name="how-to-open-editors"></a>Gewusst wie: Öffnen von Editoren  
  In diesem Abschnitt wird erläutert, wie die verschiedenen Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geöffnet werden.  
   
 ### <a name="using-the-filenew-menu"></a>Verwenden des Menüs "Datei/Neu"  
  Klicken Sie im Menü **Datei** auf **Neu**, und wählen Sie dann eine Abfrage-Editor-Option aus:  
   
--   **Abfrage mit aktueller Verbindung** – Öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. Wenn Sie z. B. im Objekt-Explorer eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auswählen und dann **Abfrage mit aktueller Verbindung**verwenden, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
+-   **Abfrage mit aktueller Verbindung**: Öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. Wenn Sie z. B. im Objekt-Explorer eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auswählen und dann **Abfrage mit aktueller Verbindung**verwenden, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
   
--   **Datenbank-Engine-Abfrage** – Öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erforderlichen Informationen abzurufen.  
+-   **Datenbank-Engine-Abfrage**: Öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erforderlichen Informationen abzurufen.  
   
 -   **Analysis Services MDX-Abfrage** – Öffnet einen neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erforderlichen Informationen abzurufen.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "48110700"
 ### <a name="using-the-toolbar"></a>Verwenden der Symbolleiste  
  Klicken Sie auf der Symbolleiste **Standard** auf eine der folgenden Schaltflächen:  
   
--   **Neue Abfrage** – Öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. Wenn Sie z. B. im Objekt-Explorer eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auswählen und dann auf die Schaltfläche **Neue Abfrage** klicken, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
+-   **Neue Abfrage**: Öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. Wenn Sie z. B. im Objekt-Explorer eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auswählen und dann auf die Schaltfläche **Neue Abfrage** klicken, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
   
--   **Datenbank-Engine-Abfrage** – Öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erforderlichen Informationen abzurufen.  
+-   **Datenbank-Engine-Abfrage**: Öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erforderlichen Informationen abzurufen.  
   
 -   **Analysis Services MDX-Abfrage** – Öffnet einen neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erforderlichen Informationen abzurufen.  
   

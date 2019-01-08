@@ -18,15 +18,15 @@ ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09c13d17415f44ba52c57c2323e7fd671ddff0b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119400"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398014"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Prognosegütediagramm (Analysis Services – Data Mining)
-  Ein **Prognosegütediagramm** grafisch Verbesserung mit einem Miningmodell im Vergleich gegenüber einer zufallsvorhersage darstellt, und die Änderung in Form einer *lift* Bewertung. Durch den Vergleich der Liftergebnisse für verschiedene Teile des Datasets und unterschiedliche Modelle können Sie bestimmen, welches Modell am besten geeignet ist, und wie viele Fälle im Dataset prozentual von der Anwendung der Modellvorhersagen profitieren würden.  
+  Ein **Prognosegütediagramm** grafisch Verbesserung mit einem Miningmodell im Vergleich gegenüber einer zufallsvorhersage darstellt, und die Änderung in Form einer *lift* Bewertung. Vergleichen der prognosegüteergebnisse für verschiedene Teile des Datasets und unterschiedliche Modelle, können Sie bestimmen, welches Modell am besten geeignet ist, und der Prozentsatz der Fälle im DataSet aus der Anwendung der modellvorhersagen profitieren würden.  
   
  Mit einem Prognosegütediagramm können Sie die Genauigkeit der Vorhersagen für mehrere Modelle vergleichen, die über das gleiche vorhersagbare Attribut verfügen. Sie können auch die Genauigkeit einer Vorhersage entweder für ein einzelnes Ergebnis (ein einzelner Wert des vorhersagbaren Attributs) oder für alle Ergebnisse (alle Werte des angegebenen Attributs) bewerten.  
   
@@ -118,6 +118,6 @@ ms.locfileid: "48119400"
  [Zurück zum Anfang](#bkmk_Top)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tests und Überprüfung &#40;Datamining&#41;](testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [SQL Server], SQL Server Agent
@@ -15,12 +15,12 @@ ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ab4aa53c70c15615f3d2ce4f780f2095c1fecec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75c7fbe2997c84963f2ed1d420840b514fb89860
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141530"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779042"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
   In diesem Thema wird beschrieben, wie der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent konfiguriert wird, sodass Agent-Fehlermeldungen mit NET SEND in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]übermittelt werden.  
@@ -31,11 +31,11 @@ ms.locfileid: "48141530"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   [So senden Sie SQL Server-Agent-Fehlermeldungen mithilfe von SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48141530"
   
  Weitere Informationen zu den Windows-Berechtigungen, die für die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienstkonto finden Sie unter [Auswählen eines Kontos für den SQL Server-Agent-Dienst](select-an-account-for-the-sql-server-agent-service.md) und [Konfigurieren von Windows-Dienstkonten und Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-send-sql-server-agent-error-messages"></a>So senden Sie SQL Server-Agent-Fehlermeldungen  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48141530"
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent** , und wählen Sie **Eigenschaften**aus.  
   
-3.  Geben Sie im Dialogfeld *SQL Server-Agent-Eigenschaften >***Servername* unter **Fehlerprotokoll** auf der Seite **Allgemein** den Benutzernamen oder den Computernamen, an den Sie die Fehlermeldung senden möchten, in das Feld **NET SEND-Empfänger** ein.  
+3.  In der **SQL Server-Agent-Eigenschaften – *** Server_name* Dialogfeld **Fehlerprotokoll** auf die **allgemeine** Seite, geben Sie den Benutzernamen oder Computernamen, auf die Sie senden möchten, Fehlermeldungen in der **Net send-Empfänger** Feld.  
   
 4.  Klicken Sie auf **OK**.  
   

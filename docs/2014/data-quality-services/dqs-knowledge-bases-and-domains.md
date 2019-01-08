@@ -10,12 +10,12 @@ ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dc1c6fe8e8d049b7b999984c0dcb5f0ed49e662a
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: e823d6fcac585c858cee3e187f27684eb1d38218
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032404"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410337"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS-Wissensdatenbanken und -Domänen
   In diesem Thema wird beschrieben, was eine Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ist. Zum Bereinigen von Daten müssen Sie über Wissen zu den Daten verfügen. Um Informationen für ein Data Quality-Projekt vorzubereiten, müssen Sie eine Wissensdatenbank (Knowledge Base, KB) erstellen und verwalten, die von DQS verwendet werden kann, um falsche oder ungültige Daten zu identifizieren. Mit DQS können Sie sowohl computerunterstützte als auch interaktive Prozesse verwenden, um Ihre Wissensdatenbank zu erstellen, aufzubauen und zu aktualisieren. Informationen in einer Wissensdatenbank werden in Domänen verwalten, wobei jede für ein Datenfeld spezifisch ist. Die Wissensdatenbank ist ein Repository des Wissens zu den Daten. Sie ermöglicht es Ihnen, die Daten zu verstehen und ihre Integrität aufrechtzuerhalten.  
@@ -56,7 +56,7 @@ ms.locfileid: "51032404"
 ##  <a name="Discovery"></a> Wissensermittlung  
  Die Erstellung der Wissensdatenbank ist initial ein computergestützter Prozess. Die Wissensermittlungsaktivität baut die Wissensdatenbank durch das Analysieren eines Datenbeispiels gemäß den Kriterien auf, die für die Qualität der Daten gelten, indem eine Suche nach inkonsistenten Daten und Syntaxfehlern ausgeführt wird und Änderungen an den Daten vorgeschlagen werden. Diese Analyse basiert auf in DQS integrierten Algorithmen.  
   
- Der Data Steward bereitet den Prozess vor, indem er eine Wissensdatenbank mit einer SQL Server-Datenbanktabelle oder -sicht verknüpft, die Beispieldaten enthält, die den Daten ähneln, die mithilfe der Wissensdatenbank analysiert werden. Anschließend ordnet der Data Steward jeder Spalte mit zu analysierenden Beispieldaten eine Wissensdatenbank-Domäne zu. Eine Domäne kann entweder eine einzelne Domäne sein, die einem einzelnen Feld zugeordnet ist, oder sie kann eine Verbunddomäne sein, die aus mehreren einzelnen Domänen besteht, wovon jede einem Teil der Daten in einem einzelnen Feld zugeordnet ist (siehe unten "Verbunddomänen"). Bei der Durchführung der Wissensermittlung extrahiert DQS Informationen bezüglich der Datenqualität aus den Beispieldaten in die Domänen in der Wissensdatenbank. Wenn Sie die Wissensermittlungsanalyse ausgeführt haben, verfügen Sie über eine Wissensdatenbank, mit der Sie Datenkorrektur ausführen können.  
+ Der Data Steward bereitet den Prozess vor, indem er eine Wissensdatenbank mit einer SQL Server-Datenbanktabelle oder -sicht verknüpft, die Beispieldaten enthält, die den Daten ähneln, die mithilfe der Wissensdatenbank analysiert werden. Anschließend ordnet der Data Steward jeder Spalte mit zu analysierenden Beispieldaten eine Wissensdatenbank-Domäne zu. Eine Domäne kann entweder eine einzelne Domäne sein, die einem einzelnen Feld zugeordnet ist, oder sie kann eine Verbunddomäne sein, die aus mehreren einzelnen Domänen besteht, wovon jede einem Teil der Daten in einem einzelnen Feld zugeordnet ist (siehe unten „Verbunddomänen“). Bei der Durchführung der Wissensermittlung extrahiert DQS Informationen bezüglich der Datenqualität aus den Beispieldaten in die Domänen in der Wissensdatenbank. Wenn Sie die Wissensermittlungsanalyse ausgeführt haben, verfügen Sie über eine Wissensdatenbank, mit der Sie Datenkorrektur ausführen können.  
   
  Die DQS-Wissensdatenbank ist erweiterbar. Sie können in der Wissensdatenbank nach der computerunterstützten Wissensermittlungsanalyse der Wissensdatenbank interaktiv Informationen hinzufügen. Sie können Wertänderungen manuell hinzufügen, und Sie können Domänenwerte aus einer Excel-Datei importieren. Außerdem können Sie den Wissensermittlungsprozess zu einem späteren Zeitpunkt erneut ausführen, wenn sich die Daten im Beispiel geändert haben. Sie können mehr Informationen aus der Domänenverwaltungsaktivität und der Datenabgleichsaktivität anwenden (siehe unten).  
   
@@ -126,7 +126,7 @@ ms.locfileid: "51032404"
   
 -   Das Analysieren der unterschiedlichen einzelnen Domänen, die eine Verbunddomäne bilden, kann beim Bewerten der Datenqualität ein effizienterer Weg sein.  
   
--   Wenn Sie eine Verbunddomäne verwenden, können Sie auch domänenübergreifende Regeln erstellen, mit denen Sie überprüfen können, ob die Beziehung zwischen Daten in mehreren Domänen ordnungsgemäß ist. Sie können z. B. überprüfen, ob die Zeichenfolge "Berlin" in einer Ortsdomäne der Zeichenfolge "Deutschland" in einer Landdomäne entspricht. Beachten Sie, dass domänenübergreifende Regeln nach Domänenregeln berücksichtigt werden.  
+-   Wenn Sie eine Verbunddomäne verwenden, können Sie auch domänenübergreifende Regeln erstellen, mit denen Sie überprüfen können, ob die Beziehung zwischen Daten in mehreren Domänen ordnungsgemäß ist. Sie können z.B. überprüfen, ob die Zeichenfolge „Berlin“ in einer Ortsdomäne der Zeichenfolge „Deutschland“ in einer Landdomäne entspricht. Beachten Sie, dass domänenübergreifende Regeln nach Domänenregeln berücksichtigt werden.  
   
 -   Daten in Verbunddomänen können an eine Verweisdaten-Quelle angefügt werden. In diesem Fall wird die Verbunddomäne an den Verweisdatenanbieter gesendet. Dies wird oft mit Adressdaten vorgenommen.  
   

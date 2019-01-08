@@ -16,21 +16,21 @@ ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8fc264df4708b5d6c58c8a87861597d299cdca2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b89f05822ee23f5ad62c627b8bc6d67ebe401a2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722988"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527634"
 ---
 # <a name="persisting-data"></a>Beibehalten von Daten
 Tragbare Computer (z. B. mit Laptops) hat die Notwendigkeit für Anwendungen erstellt werden, die in einem verbundenen sowie im getrennten Zustand ausgeführt werden kann. ADO wurde Unterstützung für dieses hinzugefügt, indem dem Entwickler die Möglichkeit zum Speichern eines Clientcursors **Recordset** auf dem Datenträger, und Laden Sie es später erneut.  
   
  Es gibt mehrere Szenarien, in denen Sie diese Art von Funktion, einschließlich der folgenden verwenden können:  
   
--   **Unterwegs:** bei die Anwendung auf Reisen nehmen zu können, ist es wichtig, geben Sie die Möglichkeit, um Änderungen vorzunehmen, und fügen Sie neue Datensätze, die weiter unten in der Datenbank wiederhergestellt und ein Commit ausgeführt werden können.  
+-   **Unterwegs:** Wenn die Anwendung auf Reisen nehmen zu können, ist es wichtig, geben Sie die Möglichkeit, um Änderungen vorzunehmen, und fügen Sie neue Datensätze, die weiter unten in der Datenbank wiederhergestellt und ein Commit ausgeführt werden können.  
   
--   **Suchvorgänge selten aktualisiert:** häufig in einer Anwendung werden die Tabellen als Suchvorgänge verwendet, z. B. Steuertabellen. Sie werden nur selten aktualisiert und sind schreibgeschützt. Anstelle von erneutes Lesen dieser Daten vom Server jedes Mal, die die Anwendung wird gestartet, die Anwendung kann einfach Laden der Daten aus lokal gespeicherten **Recordset**.  
+-   **Selten aktualisiert Suchvorgänge an:** Häufig in einer Anwendung Tabellen dienen als Suchvorgänge – z. B. Steuertabellen. Sie werden nur selten aktualisiert und sind schreibgeschützt. Anstelle von erneutes Lesen dieser Daten vom Server jedes Mal, die die Anwendung wird gestartet, die Anwendung kann einfach Laden der Daten aus lokal gespeicherten **Recordset**.  
   
  In ADO, zum Speichern und Laden von **Recordsets**, verwenden Sie die **Recordset.Save** und **Recordset.Open(,,,adCmdFile)** Methoden für das ADO **Recordset**Objekt.  
   

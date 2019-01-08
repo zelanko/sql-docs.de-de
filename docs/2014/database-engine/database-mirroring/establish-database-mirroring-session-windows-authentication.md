@@ -12,12 +12,12 @@ ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9149852a37f7e201ec5b84cb86bab9f4342eecd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70d9b3f9d243531e13d3d5a46693c80288815881
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219830"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520326"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung (SQL Server Management Studio)
     
@@ -26,14 +26,14 @@ ms.locfileid: "48219830"
   
  Verwenden Sie im Dialogfeld **Datenbankeigenschaften** die Seite für die **Spiegelung**, um eine Datenbank-Spiegelungssitzung festzulegen und die Eigenschaften der Datenbankspiegelung für eine Datenbank zu ändern. Bevor Sie die Seite für die **Spiegelung** zum Konfigurieren der Datenbankspiegelung verwenden, sollten Sie sicherstellen, dass die folgenden Anforderungen erfüllt sind:  
   
--   Die Prinzipalinstanz und die Spiegelserverinstanz müssen auf der gleichen Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden: entweder auf der Standard Edition oder auf der Enterprise Edition. Darüber hinaus wird die Ausführung auf vergleichbaren Systemen empfohlen, die identische Arbeitsauslastungen bewältigen können.  
+-   Die Prinzipalinstanz und die Spiegelserverinstanz müssen in der gleichen Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden: entweder in der Standard-Edition oder in der Enterprise-Edition. Darüber hinaus wird die Ausführung auf vergleichbaren Systemen empfohlen, die identische Arbeitsauslastungen bewältigen können.  
   
     > [!NOTE]  
     >  Eine Zeugenserverinstanz ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   Die Spiegeldatenbank muss vorhanden sein und sich auf dem neuesten Stand befinden.  
   
-     Zum Erstellen einer Spiegeldatenbank muss auf der Spiegelserverinstanz eine aktuelle Sicherung der Prinzipaldatenbank (mit der Option WITH NORECOVERY) wiederhergestellt werden. Nach der vollständigen Sicherung müssen außerdem eine oder mehrere Protokollsicherungen erstellt und der Reihe nach auf der Spiegeldatenbank (mit der Option WITH NORECOVERY) wiederhergestellt werden. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)verwendet.  
+     Zum Erstellen einer Spiegeldatenbank muss auf der Spiegelserverinstanz eine aktuelle Sicherung der Prinzipaldatenbank (mit der Option WITH NORECOVERY) wiederhergestellt werden. Nach der vollständigen Sicherung müssen außerdem eine oder mehrere Protokollsicherungen erstellt und der Reihe nach auf der Spiegeldatenbank (mit der Option WITH NORECOVERY) wiederhergestellt werden. Weitere Informationen finden Sie unter [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 -   Wenn die Serverinstanzen unter unterschiedlichen Domänenbenutzerkonten ausgeführt werden, ist für jede Instanz in der **master** -Datenbank der anderen Instanzen ein Anmeldename erforderlich. Sofern kein Anmeldename vorhanden ist, müssen Sie vor dem Konfigurieren der Spiegelung einen erstellen. Weitere Informationen finden Sie unter [Zulassen des Netzwerkzugriffs auf einen Datenbank-Spiegelungsendpunkt mithilfe der Windows-Authentifizierung &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48219830"
     |Option|Zeuge?|Erklärung|  
     |------------|--------------|-----------------|  
     |**Hohe Leistung (asynchron)**|NULL (falls vorhanden, wird er nicht verwendet, die Sitzung benötigt jedoch ein Quorum)|Um die Leistung zu steigern, befindet sich die Spiegeldatenbank immer in einem gewissen zeitlichen Abstand zur Prinzipaldatenbank und niemals auf dem tatsächlich aktuellen Stand. Die Lücke zwischen den beiden Datenbanken ist üblicherweise aber sehr klein. Der Verlust eines Partners hat folgenden Effekt:<br /><br /> Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalinstanz in Betrieb.<br /><br /> Falls die Prinzipalserverinstanz unverfügbar wird, wird der Spiegel beendet. Wenn aber die Sitzung keinen Zeugen hat (wie empfohlen) oder der Zeuge mit dem Spiegelserver verbunden ist, ist der Spiegelserver als betriebsbereiter Server verfügbar. Der Datenbankbesitzer kann die Spiegelserverinstanz zur Übernahme des Diensts zwingen, wobei es möglicherweise zu Datenverlusten kommt.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)herunter.|  
-    |**Hohe Sicherheit ohne automatisches Failover (synchron)**|nein|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf den Datenträger auf dem Spiegelserver geschrieben werden.<br /><br /> Ein manuelles Failover ist möglich, wenn die Partner miteinander verbunden sind und die Datenbank synchronisiert ist. Der Verlust eines Partners hat folgenden Effekt:<br /><br /> Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalinstanz in Betrieb.<br /><br /> Wenn die Prinzipalserverinstanz nicht mehr zur Verfügung steht, wird der Spiegel beendet, ist aber als betriebsbereiter Server verfügbar. Der Datenbankbesitzer kann die Spiegelserverinstanz zur Übernahme des Diensts zwingen, wobei es möglicherweise zu Datenverlusten kommt.<br /><br /> Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)herunter.|  
+    |**Hohe Sicherheit ohne automatisches Failover (synchron)**|Nein|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf den Datenträger auf dem Spiegelserver geschrieben werden.<br /><br /> Ein manuelles Failover ist möglich, wenn die Partner miteinander verbunden sind und die Datenbank synchronisiert ist. Der Verlust eines Partners hat folgenden Effekt:<br /><br /> Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalinstanz in Betrieb.<br /><br /> Wenn die Prinzipalserverinstanz nicht mehr zur Verfügung steht, wird der Spiegel beendet, ist aber als betriebsbereiter Server verfügbar. Der Datenbankbesitzer kann die Spiegelserverinstanz zur Übernahme des Diensts zwingen, wobei es möglicherweise zu Datenverlusten kommt.<br /><br /> Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)herunter.|  
     |**Hohe Sicherheit mit automatischem Failover (synchron)**|Ja (erforderlich)|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf den Datenträger auf dem Spiegelserver geschrieben werden. Die Verfügbarkeit wird durch Bereitstellen eine Zeugenserverinstanz zur Unterstützung des automatischen Failovers maximiert. Beachten Sie, dass die Auswahl der Option **Hohe Sicherheit mit automatischem Failover (synchron)** nur möglich ist, wenn Sie zuvor eine Zeugenserveradresse angegeben haben. Ein manuelles Failover ist möglich, wenn die Partner miteinander verbunden sind und die Datenbank synchronisiert ist.<br /><br /> In Anwesenheit eines Zeugen hat der Verlust eines Partners die folgende Auswirkung:<br /><br /> – Wenn die Prinzipalserverinstanz nicht mehr verfügbar ist, tritt ein automatisches Failover. Die Spiegelserverinstanz übernimmt die Rolle des Prinzipals und stellt ihre Datenbank als Prinzipaldatenbank zur Verfügung.<br /><br /> – Wenn die Spiegelserverinstanz ausfällt, wird der Prinzipal fortgesetzt.<br /><br /> Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)herunter.<br /><br /> **\*\* Wichtig \*\*** Wenn der Zeuge getrennt wird, müssen die Partner miteinander verbunden sein, damit die Datenbank verfügbar ist. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
   
 7.  Wenn alle folgenden Bedingungen vorhanden sind, klicken Sie auf **Spiegelung starten** , um die Spiegelung zu beginnen:  
@@ -80,8 +80,8 @@ ms.locfileid: "48219830"
   
 ## <a name="see-also"></a>Siehe auch  
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Datenbankeigenschaften &#40;Seite Wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
+ [Datenbankeigenschaften &#40;Seite wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Anhalten oder Fortsetzen einer Datenbank-Spiegelungssitzung (SQL Server)](pause-or-resume-a-database-mirroring-session-sql-server.md)   
  [Einrichten der TRUSTWORTHY-Eigenschaft für eine Spiegeldatenbank (Transact-SQL)](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
  [Entfernen der Datenbankspiegelung (SQL Server)](database-mirroring-sql-server.md)   

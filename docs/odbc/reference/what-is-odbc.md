@@ -13,17 +13,17 @@ ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27e153fd72c588f81342d74ce1fc851adc6fda91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc9c7a3d9f75e1863d90b16986234e0036229d01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622328"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540439"
 ---
 # <a name="what-is-odbc"></a>Was ist ODBC?
 Viele Missverständnisse über ODBC befinden sich in der IT-Welt. Für den Endbenutzer ist es ein Symbol in der Microsoft® Windows®-Systemsteuerung. Um den Anwendungsprogrammierer ist es eine Bibliothek mit der Data Access-Routinen. Für viele andere ist es die Antwort auf alle Datenbank-Access-Probleme, die jemals gestaltete.  
   
- Zuallererst ist ODBC eine Spezifikation für eine Datenbank-API. Diese API ist unabhängig von einem DBMS oder Betriebssystem. Obwohl dieses Handbuchs C verwendet wird, ist der ODBC-API sprachunabhängig. Der ODBC-API basiert auf den CLI-Spezifikationen von Open Group und ISO/IEC. ODBC 3. *x* vollständig implementiert beide dieser Spezifikationen – frühere Versionen von ODBC basieren auf den vorläufigen Versionen dieser Spezifikationen, aber sie nicht vollständig implementiert – und bietet Features, die häufig von Entwicklern bildschirmbasierte benötigt. Datenbank-Clientanwendungen, beispielsweise scrollfähige Cursor.  
+ Zuallererst ist ODBC eine Spezifikation für eine Datenbank-API. Diese API ist unabhängig von einem DBMS oder Betriebssystem. Obwohl dieses Handbuchs C verwendet wird, ist der ODBC-API sprachunabhängig. Der ODBC-API basiert auf den CLI-Spezifikationen von Open Group und ISO/IEC. ODBC 3. *x* vollständig implementiert beide dieser Spezifikationen - frühere Versionen von ODBC basieren auf den vorläufigen Versionen dieser Spezifikationen, aber sie nicht vollständig implementiert – und bietet Features, die häufig von Entwicklern bildschirmbasierte benötigt. Datenbank-Clientanwendungen, beispielsweise scrollfähige Cursor.  
   
  Die Funktionen der ODBC-API werden von Entwicklern mit speziellen DBMS-Treibern implementiert. Anwendungen werden die Funktionen in diesen Treibern, den Zugriff auf Daten in einer DBMS-unabhängige Weise aufrufen. Eine Treiber-Manager verwaltet die Kommunikation zwischen Anwendungen und Treiber.  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Options [SQL Server Management Studio], dialog boxes
@@ -13,12 +13,12 @@ ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58d35a101994c94b695ce1cb2443486af632fcf3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff1ba97de1c7698a1f2fde73b8ba8d592d8fccab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071510"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772822"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Optionen (Dialogfelder, F1-Hilfe)
   Dieser Abschnitt enthält die F1-Hilfe zu Dialogfeldern, die angezeigt werden, wenn Sie in **im Menü** Extras **auf** Optionen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]klicken.  

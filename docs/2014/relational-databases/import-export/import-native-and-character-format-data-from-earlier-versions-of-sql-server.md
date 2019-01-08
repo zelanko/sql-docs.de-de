@@ -15,12 +15,12 @@ ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 866e84844c563f1289a23a598cbd980d9b3bc432
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a87863d3046de695e489e83ec46eb073a7f4761c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169588"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531598"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importieren von Daten aus früheren SQL Server-Versionen im systemeigenen Format oder im Zeichenformat
   Sie können [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]bcp **in** verwenden, um Daten im nativen Format oder im Zeichenformat mithilfe des Schalters [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-V [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]aus [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , **oder** zu importieren. Der Schalter **-V** veranlasst [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , Datentypen aus der angegebenen früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu verwenden. Zudem entspricht das Datendateiformat dem Format dieser früheren Version.  
@@ -51,8 +51,8 @@ ms.locfileid: "48169588"
   
  <sup>1</sup> UDT gibt einen benutzerdefinierten Typ.  
   
-## <a name="exporting-using-v-80"></a>Exportieren mit –V 80  
- Beim Massenexport von Daten mithilfe der **– V80** zu wechseln, `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML und UDT-Daten im einheitlichen Modus werden mit einem 4-Byte-Präfix, gespeichert, z. B. `text`, `image`, und `ntext`Daten, anstatt mit einem 8-Byte-Präfix, die dies ist die Standardeinstellung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höhere Versionen.  
+## <a name="exporting-using--v-80"></a>Exportieren mit -V 80  
+ Beim Massenexport von Daten mithilfe der **-V80** zu wechseln, `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML und UDT-Daten im einheitlichen Modus werden mit einem 4-Byte-Präfix, gespeichert, z. B. `text`, `image`, und `ntext`Daten, anstatt mit einem 8-Byte-Präfix, die dies ist die Standardeinstellung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höhere Versionen.  
   
 ## <a name="copying-date-values"></a>Kopieren von Datumswerten  
  Von**bcp** wird die ODBC-API für das Massenkopieren verwendet. Deshalb verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bcp **zum Importieren von Datumswerten in** das ODBC-Datumsformat (*jjjj-mm-tt hh:mm:ss*[*.f...*]).  
@@ -60,7 +60,7 @@ ms.locfileid: "48169588"
  Die **Bcp** Befehl exportiert Datendateien im Zeichenformat mithilfe des ODBC-Standardformats für `datetime` und `smalldatetime` Werte. So wird beispielsweise eine `datetime`-Spalte mit dem Datum `12 Aug 1998` beim Massenkopieren in eine Datendatei als die Zeichenfolge `1998-08-12 00:00:00.000` übertragen.  
   
 > [!IMPORTANT]  
->  Beim Importieren von Daten in einem `smalldatetime` Feld mit **Bcp**, werden Sie sicher, dass der Wert für Sekunden 00.000; andernfalls schlägt der Vorgang fehl. Die `smalldatetime` Datentyp enthält nur die Werte auf die nächste Minute. BULK INSERT und INSERT ... SELECT * FROM OPENROWSET(BULK...) schlagen in diesem Fall nicht fehl, schneiden jedoch den Sekundenwert ab.  
+>  Beim Importieren von Daten in einem `smalldatetime` Feld mit **Bcp**, werden Sie sicher, dass der Wert für Sekunden 00.000; andernfalls schlägt der Vorgang fehl. Der `smalldatetime`-Datentyp kann nur Werte beinhalten, die auf die volle Minute gerundet sind. BULK INSERT und INSERT ... SELECT * FROM OPENROWSET(BULK...) schlagen in diesem Fall nicht fehl, schneiden jedoch den Sekundenwert ab.  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So verwenden Sie Datenformate für Massenimport oder Massenexport**  

@@ -11,12 +11,12 @@ ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 892ea8d21d03eafc21a98ec6799aa840fddf96a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 935cd8ec3f4e5069807e914e5af20e39b645deb3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094560"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520173"
 ---
 # <a name="prediction-queries-data-mining"></a>Vorhersageabfragen (Data Mining)
   Das Ziel eines typischen Data Mining-Projekts besteht darin, mithilfe des Miningmodells Vorhersagen zu treffen. Beispiel: Sie möchten die zu erwartenden Ausfallzeiten für einen bestimmten Servercluster vorhersagen oder die Wahrscheinlichkeit ermitteln, mit der bestimmte Kundensegmente auf eine Werbekampagne reagieren. Für all diese Aufgaben können Sie eine Vorhersageabfrage erstellen.  
@@ -59,7 +59,7 @@ ms.locfileid: "48094560"
 ###  <a name="bkmk_PredFunc"></a> Hinzufügen von Vorhersagefunktionen  
  Sie können nicht nur einen Wert vorhersagen, sondern eine Vorhersageabfrage anpassen, um verschiedene Arten von Informationen, die mit der Vorhersage verknüpft sind, zurückzugeben. Wenn durch die Vorhersage z. B. eine Liste mit Produktempfehlungen für einen Kunden erstellt wird, können Sie auch die Wahrscheinlichkeit für jede Vorhersage ermitteln, eine Rangfolge erstellen und dem Benutzer nur die besten Empfehlungen präsentieren.  
   
- Dazu müssen Sie der Abfrage *Vorhersagefunktionen* hinzufügen. Jedes Modell oder jeder Abfragetyp unterstützt bestimmte Funktionen. Clustermodelle unterstützen beispielsweise spezielle Vorhersagefunktionen, die zusätzliche Details über die vom Modell vorgenommenen Cluster bereitstellen, wohingegen Zeitreihenmodelle über Funktionen zur Berechnung der Unterschiede im zeitlichen Verlauf verfügen. Es gibt auch allgemeine Vorhersagefunktionen, die mit fast allen Modelltypen funktionieren. Eine Liste der Vorhersagefunktionen, die in verschiedenen Abfragen unterstützt werden, finden Sie unter folgendem Thema in der DMX-Referenz: [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
+ Dazu müssen Sie der Abfrage *Vorhersagefunktionen* hinzufügen. Jedes Modell oder jeder Abfragetyp unterstützt bestimmte Funktionen. Clustermodelle unterstützen beispielsweise spezielle Vorhersagefunktionen, die zusätzliche Details über die vom Modell vorgenommenen Cluster bereitstellen, wohingegen Zeitreihenmodelle über Funktionen zur Berechnung der Unterschiede im zeitlichen Verlauf verfügen. Es gibt auch allgemeine Vorhersagefunktionen, die mit fast allen Modelltypen funktionieren. Eine Liste der Vorhersagefunktionen, die in verschiedenen Abfragen unterstützt finden Sie unter folgendem Thema in der DMX-Referenz:  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
   
 ###  <a name="bkmk_SingletonQuery"></a> Erstellen von SINGLETON-Vorhersageabfragen  
  Eine SINGLETON-Vorhersageabfrage ist nützlich, wenn Sie schnelle Vorhersagen in Echtzeit erstellen möchten. Ein häufiges Szenario sind z. B. Informationen vom Kunden, die etwa über ein Formular auf einer Website abgerufen wurden und als Eingabedaten für eine SINGLETON-Vorhersageabfrage verwendet werden. Wenn ein Kunde z. B. ein Produkt aus einer Liste auswählt, können Sie diese Auswahl als Eingabe für eine Abfrage verwenden, die eine Liste geeigneter Produktempfehlungen erstellt.  
@@ -67,7 +67,7 @@ ms.locfileid: "48094560"
  SINGLETON-Vorhersageabfragen erfordern keine separate Tabelle mit Eingaben. Sie stellen stattdessen eine oder mehrere Zeilen mit Werten als Eingabe für das Modell bereit, und die Vorhersagen werden in Echtzeit zurückgegeben.  
   
 > [!WARNING]  
->  Ungeachtet des Namens können SINGLETON-Vorhersageabfragen nicht nur für einzelne Vorhersagen verwendet werden – Sie können mehrere Vorhersagen für jeden Satz von Eingaben generieren. Mehrere Eingabefälle geben Sie mithilfe von SELECT-Anweisungen für jeden Eingabefall an, die Sie dann mit dem UNION-Operator kombinieren.  
+>  Trotz des Namens Singleton-Vorhersageabfragen werden nicht nur einzelne Vorhersagen: Sie können mehrere Vorhersagen für jeden Satz von Eingaben generieren. Mehrere Eingabefälle geben Sie mithilfe von SELECT-Anweisungen für jeden Eingabefall an, die Sie dann mit dem UNION-Operator kombinieren.  
   
  Beim Erstellen einer SINGLETON-Vorhersageabfrage müssen Sie die neuen Daten in Form einer PREDICTION JOIN-Anweisung für das Modell bereitstellen. Dies bedeutet, dass Sie zwar keine Zuordnung zu einer tatsächlichen Tabelle vornehmen, jedoch dennoch sicherstellen müssen, dass die neuen Daten mit den vorhandenen Spalten des Miningmodells übereinstimmen. Wenn die neuen Datenspalten und die neuen Daten genau übereinstimmen, übernimmt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Zuordnung der Spalten. Dies wird als *NATURAL PREDICTION JOIN*bezeichnet. Wenn die Spalten jedoch nicht übereinstimmen oder die neuen Daten nicht dieselbe Art und Menge von Daten enthalten wie das Modell, müssen Sie angeben, welche Spalten im Modell den neuen Daten zuzuordnen sind, oder Sie legen die fehlenden Werte fest.  
   
@@ -147,7 +147,7 @@ FROM
  Wenn Ihr Anbieter keine hierarchischen Rowsets verarbeiten kann, können Sie die Ergebnisse mit dem FLATTEN-Schlüsselwort in der Vorhersageabfrage vereinfachen. Weitere Informationen sowie Beispiele vereinfachter Rowsets finden Sie unter [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Inhaltsabfragen &#40;Datamining&#41;](content-queries-data-mining.md)   
- [Datendefinitionsabfragen &#40;Datamining&#41;](data-definition-queries-data-mining.md)  
+ [Inhaltsabfragen &#40;Data Mining&#41;](content-queries-data-mining.md)   
+ [Datendefinitionsabfragen &#40;Data Mining&#41;](data-definition-queries-data-mining.md)  
   
   

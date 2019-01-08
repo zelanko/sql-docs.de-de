@@ -20,16 +20,16 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d1e4c4462aa10a2d99e50e71d7b2e86fa4d8555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825938"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213089"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
   
  **Zusammenfassung**  
  **SQLFetch** des nächsten Rowsets von Daten aus dem Resultset abruft, und gibt Daten für alle gebundenen Spalten zurück.  
@@ -39,7 +39,7 @@ ms.locfileid: "47825938"
 ```  
   
 SQLRETURN SQLFetch(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -65,7 +65,7 @@ SQLRETURN SQLFetch(
 |08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die mit der der Treiber verbunden wurde, Fehler vor der Verarbeitung für die Funktion abgeschlossen.|  
 |22001|Zeichenfolgendaten, rechts abgeschnitten|Lesezeichen zurückgegeben, die für eine Spalte variabler Länge wurden abgeschnitten.|  
 |22002|Anzeigevariable erforderlich, aber nicht angegeben|NULL-Daten wurde abgerufen in einer Spalte, deren *StrLen_or_IndPtr* festlegen, indem **SQLBindCol** (oder festlegen, indem SQL_DESC_INDICATOR_PTR **SQLSetDescField** oder  **SQLSetDescRec**) wurde ein null-Zeiger.|  
-|22003|Numerischer Wert außerhalb des gültigen Bereichs|Zurückgeben von dem numerischen Wert als numerische Werte oder die Zeichenfolge für eine oder mehrere gebundene Spalten würde den gesamten (im Gegensatz zu Bruch) Teil der Zahl abgeschnitten wird verursacht.<br /><br /> Weitere Informationen finden Sie unter [Konvertieren von Daten aus SQL in C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) in Anhang D:-Datentypen.|  
+|22003|Numerischer Wert außerhalb des gültigen Bereichs|Zurückgeben von dem numerischen Wert als numerische Werte oder die Zeichenfolge für eine oder mehrere gebundene Spalten würde den gesamten (im Gegensatz zu Bruch) Teil der Zahl abgeschnitten wird verursacht.<br /><br /> Weitere Informationen finden Sie unter [Konvertieren von Daten aus SQL in C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) in Anhang D: Datentypen.|  
 |22007|Ungültiges Datetime-format|Im Resultset eine Spalte mit dem Zeichen um ein Datum, Uhrzeit oder Zeitstempel C-Struktur gebunden wurde, und ein Wert in der Spalte wurde, bzw. ein ungültiges Datum, Uhrzeit oder Zeitstempel.|  
 |22012|Division durch 0 (null)|Ein Wert aus einem arithmetischen Ausdruck wurde von 0 (null) zurückgegeben Division geführt hat.|  
 |22015|Überlauf bei Intervallfeld|Intervalltyp C aus einer genauen numerischen oder Intervall SQL-Typ zuweisen, verursacht einen Verlust signifikanter Ziffern im Feld führende.<br /><br /> Beim Abrufen von Daten in ein C-Intervalltyp, gab es keine Darstellung des Werts von der SQL-Typ in den Intervalltyp C.|  
@@ -93,12 +93,12 @@ SQLRETURN SQLFetch(
   
  Wenn eine ODBC 3.*.x* Anwendung funktioniert mit einer ODBC 2.*.x* -Treiber verwenden, die der Treiber-Manager zugeordnet **SQLFetch** Aufrufe von **SQLExtendedFetch** für ein ODBC 2.*.x* Treiber, unterstützt **SQLExtendedFetch**. Wenn die ODBC 2.*.x* Treiber unterstützt keine **SQLExtendedFetch**, ordnet der Treiber-Manager **SQLFetch** Aufrufe von **SQLFetch** in die ODBC 2. *.x* Treiber, der nur eine einzelne Zeile abrufen kann.  
   
- Weitere Informationen finden Sie unter [Blockcursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität.  
+ Weitere Informationen finden Sie unter [Blockcursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
   
 ## <a name="positioning-the-cursor"></a>Positionieren des Cursors  
  Wenn das Resultset erstellt wird, wird der Cursor vor dem Start des Resultsets positioniert. **SQLFetch** wird die nächste Rowset abgerufen. Dies entspricht dem Aufruf **SQLFetchScroll** mit *FetchOrientation* SQL_FETCH_NEXT festgelegt. Weitere Informationen zu Cursorn finden Sie unter [Cursor](../../../odbc/reference/develop-app/cursors.md) und [Blockcursor](../../../odbc/reference/develop-app/block-cursors.md).  
   
- Die Anweisung SQL_ATTR_ROW_ARRAY_SIZE-Attribut gibt die Anzahl der Zeilen im Rowset an. Wenn das Rowset abgerufen wird, von **SQLFetch** überschneidet sich mit dem Ende des Resultsets, **SQLFetch** gibt eine partielle Rowset zurück. D. h. wenn S + R – 1 ist größer als L, wobei S der Startzeile des Rowsets wird abgerufen, R ist die Größe des Rowsets ist und L ist die letzte im Resultset, klicken Sie dann nur die ersten L – Zeile sind S + 1 Zeilen des Rowsets gültig. Die verbleibenden Zeilen sind leer und haben den Status der SQL_ROW_NOROW.  
+ Die Anweisung SQL_ATTR_ROW_ARRAY_SIZE-Attribut gibt die Anzahl der Zeilen im Rowset an. Wenn das Rowset abgerufen wird, von **SQLFetch** überschneidet sich mit dem Ende des Resultsets, **SQLFetch** gibt eine partielle Rowset zurück. D. h. wenn S + R – 1 ist größer als L, wobei S der Startzeile des Rowsets wird abgerufen, R ist die Größe des Rowsets ist und L ist die letzte im Resultset, klicken Sie dann nur die ersten L - Zeile sind S + 1 Zeilen des Rowsets gültig. Die verbleibenden Zeilen sind leer und haben den Status der SQL_ROW_NOROW.  
   
  Nach dem **SQLFetch** zurückgegeben wird, die aktuelle Zeile ist die erste Zeile des Rowsets.  
   
@@ -107,8 +107,8 @@ SQLRETURN SQLFetch(
 |Bedingung|Erste Zeile des neuen Rowsets|  
 |---------------|-----------------------------|  
 |Vor dem start|1|  
-|*CurrRowsetStart* \< =  *LastResultRow – RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow – RowsetSize*[1]|Nach Ende|  
+|*CurrRowsetStart* \< =  *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|Nach Ende|  
 |Nach Ende|Nach Ende|  
   
  [1] ist zwischen Abrufvorgängen die Rowsetgröße geändert wird, dies die Größe des Rowsets, die mit der vorhergehenden Abrufvorgang verwendet wurde.  

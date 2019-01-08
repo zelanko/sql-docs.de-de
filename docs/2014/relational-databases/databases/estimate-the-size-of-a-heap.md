@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - disk space [SQL Server], indexes
@@ -17,12 +16,12 @@ ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0464304a23e53762b3e2eb887383b111764379fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192060"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778423"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Schätzen der Größe eines Heaps
   Mit den folgenden Schritten können Sie den Umfang des Speicherplatzes schätzen, der zum Speichern von Daten in einem Heap erforderlich ist:  
@@ -58,7 +57,7 @@ ms.locfileid: "48192060"
      Die zu ***Max_Var_Size*** hinzugefügten Bytes dienen der Nachverfolgung jeder einzelnen Spalte mit variabler Länge. Bei dieser Formel wird angenommen, dass alle Spalten variabler Länge zu 100 % gefüllt sind. Wenn sich abzeichnet, dass ein niedrigerer Prozentsatz des Speicherplatzes für Spalten variabler Länge verwendet wird, können Sie den ***Max_Var_Size*** -Wert mithilfe dieses Prozentsatzes anpassen, um einen genaueren Schätzwert für die Gesamtgröße der Tabelle zu erhalten.  
   
     > [!NOTE]  
-    >  Sie können kombinieren `varchar`, `nvarchar`, `varbinary`, oder `sql_variant` Spalten, die dazu führen, dass die definierte Gesamtbreite der Tabelle 8.060 Bytes überschreitet. Die Länge jeder einzelnen Spalte weiterhin der Beschränkung von 8.000 Byte für liegen muss eine `varchar`, `nvarchar,``varbinary`, oder `sql_variant` Spalte. Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten.  
+    >  Sie können `varchar`-, `nvarchar`-, `varbinary`- oder `sql_variant`-Spalten kombinieren, mit dem Ergebnis, dass die definierte Tabellengesamtbreite größer als 8.060 Byte ist. Die Länge jeder einzelnen Spalte weiterhin der Beschränkung von 8.000 Byte für liegen muss eine `varchar`, `nvarchar,``varbinary`, oder `sql_variant` Spalte. Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten.  
   
      Wenn keine Spalten variabler Länge vorhanden sind, legen Sie ***Variable_Data_Size*** auf 0 fest.  
   

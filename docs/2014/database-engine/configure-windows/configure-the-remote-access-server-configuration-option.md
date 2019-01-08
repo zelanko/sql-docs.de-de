@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - remote servers [SQL Server], stored procedure execution
@@ -13,12 +12,12 @@ ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8a4f3917d7165c5a5cbf2d44e0c46c1f237e3a2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f25abacdc7c68b1598a27fd208ddb6cfde9739d5
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185470"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640471"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Remotezugriff
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Remotezugriff** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Mithilfe der Option **Remotezugriff** können Sie die Ausführung gespeicherter Prozeduren von lokalen Servern oder Remoteservern steuern, auf denen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden. Der Standardwert für diese Option ist 1. Damit wird die Berechtigung zum Ausführen lokal gespeicherter Prozeduren von Remoteservern aus oder zum Ausführen remote gespeicherter Prozeduren vom lokalen Server aus erteilt. Legen Sie die Option auf 0 fest, um zu verhindern, dass lokal gespeicherte Prozeduren von einem Remoteserver aus ausgeführt werden oder dass remote gespeicherte Prozeduren auf dem lokalen Server ausgeführt werden können.  
@@ -32,7 +31,7 @@ ms.locfileid: "48185470"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So konfigurieren Sie die Option Remotezugriff mit:**  
   
@@ -40,9 +39,9 @@ ms.locfileid: "48185470"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung:**  [Nach dem Konfigurieren der Option „Remotezugriff“](#FollowUp)  
+-   **Nachverfolgung:**  [Nach dem Konfigurieren der Option Remotezugriff](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48185470"
 ####  <a name="Permissions"></a> Berechtigungen  
  Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Zum Ausführen von **sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung muss einem Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-configure-the-remote-access-option"></a>So konfigurieren Sie die Option Remotezugriff  
   
@@ -83,7 +82,7 @@ GO
   
  Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)angezeigt oder konfiguriert wird.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Konfigurieren der Option Remotezugriff  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Konfigurieren der Option Remotezugriff  
  Diese Einstellung wird erst wirksam, wenn Sie SQL Server neu starten.  
   
 ## <a name="see-also"></a>Siehe auch  

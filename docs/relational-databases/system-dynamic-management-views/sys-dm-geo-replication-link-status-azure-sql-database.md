@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 57212bc80087e3f2227f90ab6fa16678df37517e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 251dcb7121b568444387a1e864294095a556b827
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809078"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396021"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47809078"
 |Rolle (role)|**tinyint**|Rolle "georeplikation", eine der:<br /><br /> 0 = Primary. Die Database_id bezieht sich auf der primären Datenbank in der georeplikationspartnerschaft.<br /><br /> 1 = der sekundären Datenbank.  Die Database_id bezieht sich auf der primären Datenbank in der georeplikationspartnerschaft.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Sekundären Typs, eines der:<br /><br /> 0 = keine direkten Verbindungen zugelassen sind, auf die sekundäre Datenbank und die Datenbank ist nicht für Lesezugriff verfügbar.<br /><br /> 2 = alle Verbindungen sind zulässig, mit der Datenbank in der sekundären Repl; Ication für schreibgeschützten Zugriff.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|nein<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar(256)**|Nein<br /><br /> All|  
 |last_commit|**datetimeoffset**|Der Zeitpunkt der letzten Transaktion, die an die Datenbank übergeben werden soll. Wenn in der primären Datenbank abgerufen wird, gibt es die letzte Commitzeit für die primäre Datenbank an. Wenn in der sekundären Datenbank abgerufen wird, gibt es die letzte Commitzeit für die sekundäre Datenbank an. Wenn in der sekundären Datenbank abgerufen, wenn das primäre Replikat der des Replikationslinks ausgefallen ist, bedeutet dies bis was zeigen Sie die sekundäre Datenbank erreicht ist.|
   
 > [!NOTE]  

@@ -17,12 +17,12 @@ ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e38e17ac469ec0685f11d7dfde587f36073fb970
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f357576e9e7510ae581b41a50976a34981f35109
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706908"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517354"
 ---
 # <a name="result-generating-and-result-free-statements"></a>Anweisungen mit generiertem Ergebnis und ohne Ergebnis
 SQL-Anweisungen können lose in den folgenden fünf Kategorien unterteilt werden:  
@@ -37,4 +37,4 @@ SQL-Anweisungen können lose in den folgenden fünf Kategorien unterteilt werden
   
 -   **Verwaltungsanweisungen** Hierbei handelt es sich um SQL-Anweisungen, die für administrative Zwecke in einer Datenbank verwendet. Z. B. **GRANT** und **widerrufen**.  
   
- SQL-Anweisungen in den ersten beiden Kategorien werden zusammen als bezeichnet *Anweisungen mit generiertem*. SQL-Anweisungen in den letzten drei Kategorien werden zusammen als bezeichnet *Ergebnis kostenfreie Anweisungen*. ODBC definiert die Semantik des Batches, die nur aus dem Ergebnis generieren Anweisungen enthalten. Diese Semantik stark variieren und sind daher Daten datenquellenspezifischen. Beispielsweise unterstützt der SQL Server-Treiber nicht, ein Objekt löschen und verweisen auf oder das gleiche Objekt im selben Batch neu zu erstellen. Daher der Begriff *Batch* als im bezieht sich dieses Handbuch nur für Batches von generiertem Anweisungen.
+ SQL-Anweisungen in den ersten beiden Kategorien werden zusammen als bezeichnet *Anweisungen mit generiertem*. SQL-Anweisungen in den letzten drei Kategorien werden zusammen als bezeichnet *Ergebnis kostenfreie Anweisungen*. ODBC definiert die Semantik des Batches, die nur aus dem Ergebnis generieren Anweisungen enthalten. Diese Semantik stark variieren und sind daher Daten datenquellenspezifische. Beispielsweise unterstützt der SQL Server-Treiber nicht, ein Objekt löschen und verweisen auf oder das gleiche Objekt im selben Batch neu zu erstellen. Daher der Begriff *Batch* als im bezieht sich dieses Handbuch nur für Batches von generiertem Anweisungen.

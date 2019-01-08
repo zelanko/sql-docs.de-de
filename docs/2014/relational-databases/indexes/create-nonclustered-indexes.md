@@ -16,12 +16,12 @@ ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3e806bc2997826aa8a44be94e79d1a0b428cee3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 932bd340e84e352eb6de2bd714508135328024d1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124590"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533067"
 ---
 # <a name="create-nonclustered-indexes"></a>Erstellen nicht gruppierter Indizes
   Sie können nicht gruppierte Indizes in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellen. Ein nicht gruppierter Index ist eine von den in einer Tabelle gespeicherten Daten getrennte Indexstruktur, durch die ausgewählte Spalten neu angeordnet werden. In vielen Fällen können Daten mithilfe von nicht gruppierten Indizes schneller gefunden werden als mit einer Suche in der zugrunde liegenden Tabelle. Mitunter lassen sich Abfragen vollständig mit den Daten im nicht gruppierten Index beantworten, oder der nicht gruppierte Index kann [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf die Zeilen in der zugrunde liegenden Tabelle verweisen. Im Allgemeinen werden nicht gruppierte Indizes erstellt, um die Leistung von häufig verwendeten Abfragen zu verbessern, die nicht vom gruppierten Index abgedeckt werden, oder Zeilen in einer Tabelle ohne gruppierten Index (als Heap bezeichnet) zu suchen. Sie können mehrere nicht gruppierte Indizes für eine Tabelle oder eine indizierte Sicht erstellen.  
@@ -32,7 +32,7 @@ ms.locfileid: "48124590"
   
      [Typische Implementierungen](#Implementations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Erstellen eines nicht gruppierten Indexes mit:**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48124590"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Implementations"></a> Typische Implementierungen  
  Nicht gruppierte Indizes werden auf folgende Weise implementiert:  
@@ -62,7 +62,7 @@ ms.locfileid: "48124590"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>So erstellen Sie einen nicht gruppierten Index mit dem Tabellen-Designer  
   
@@ -92,11 +92,11 @@ ms.locfileid: "48124590"
   
 3.  Erweitern Sie die Tabelle, für die Sie einen nicht gruppierten Index erstellen möchten.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes** , zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index**aus.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Indizes**, zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index...** aus.  
   
 5.  Geben Sie in das Dialogfeld **Neuer Index** auf der Seite **Allgemein** den Namen des neuen Indexes in das Feld **Indexname** ein.  
   
-6.  Klicken Sie unter **Indexschlüsselspalten**auf **Hinzufügen…**.  
+6.  Klicken Sie unter **Indexschlüsselspalten** auf **Hinzufügen…**.  
   
 7.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus***Tabellenname* die Kontrollkästchen der Tabellenspalten, die dem nicht gruppierten Index hinzugefügt werden sollen.  
   

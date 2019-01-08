@@ -11,12 +11,12 @@ ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6450b85b00906facfb291d8085d729474577bd32
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 77d37fff5b22e15656ef2eb76f33ada44572ba4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753577"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526107"
 ---
 # <a name="modifying-the-date-dimension"></a>Ändern der Date-Dimension
   In den Aufgaben dieses Themas erstellen Sie eine benutzerdefinierte Hierarchie und ändern die Elementnamen, die für die Attribute Date, Month, Calendar Quarter und Calendar Semester angezeigt werden. Außerdem definieren Sie zusammengesetzte Schlüssel für Attribute, steuern die Sortierreihenfolge von Dimensionselementen und definieren Attributbeziehungen.  
@@ -65,7 +65,7 @@ ms.locfileid: "50753577"
   
 3.  Wenn das Eigenschaftenfenster nicht geöffnet ist, öffnen Sie es, und klicken Sie in der Titelleiste auf die Schaltfläche **Automatisch im Hintergrund** , damit es geöffnet bleibt.  
   
-4.  Klicken Sie weiter unten im Fenster auf das Eigenschaftenfeld **NameColumn** und anschließend auf die Schaltfläche mit den Auslassungspunkten (**…**), um das Dialogfeld **Namensspalte** zu öffnen.  
+4.  Klicken Sie auf die **NameColumn** Eigenschaftenfeld nahe dem unteren Rand des Fensters, und klicken Sie dann auf den Auslassungspunkten (**...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
   
 5.  Wählen Sie `SimpleDate` am unteren Rand der **Quellspalte** aus, und klicken Sie dann auf **OK**.  
   

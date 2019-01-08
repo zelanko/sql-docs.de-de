@@ -16,15 +16,15 @@ ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e47248ac5719b2303c71f2e7b93161112ca7f870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758038"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507626"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Auswählen einer Datenquelle oder eines Treibers
-Die Datenquelle oder von einer Anwendung verwendeten Treiber ist manchmal in der Anwendung hartcodiert. Z. B. eine benutzerdefinierte Anwendung geschrieben von der Abteilung MIS zum Übertragen von Daten aus einer Datenquelle in eine andere enthält die Namen der Datenquellen, die Anwendung einfach funktioniert nicht mit allen anderen Datenquellen. Ein weiteres Beispiel ist eine vertikale Anwendung verwendet werden, z. B. für Bestellungen eingeben. Eine solche Anwendung immer verwendet die gleiche Datenquelle, mit einem vordefinierten Schema, das von der Anwendung bezeichnet.  
+Die Datenquelle oder von einer Anwendung verwendeten Treiber ist manchmal in der Anwendung hartcodiert. Z. B. eine benutzerdefinierte Anwendung geschrieben von der Abteilung MIS zum Übertragen von Daten aus einer Datenquelle in eine andere enthält die Namen dieser Daten Quellen: die Anwendung einfach funktioniert nicht mit allen anderen Datenquellen. Ein weiteres Beispiel ist eine vertikale Anwendung verwendet werden, z. B. für Bestellungen eingeben. Eine solche Anwendung immer verwendet die gleiche Datenquelle, mit einem vordefinierten Schema, das von der Anwendung bezeichnet.  
   
  Andere Anwendungen wählen Sie die Datenquelle oder Treiber zur Laufzeit. In der Regel sind dies allgemeiner Anwendungen, die ad-hoc-Abfragen, z. B. eine Tabelle, die ODBC verwendet, um Daten zu importieren. Solche Anwendungen in der Regel Auflisten der verfügbaren Datenquellen oder Treiber und können Benutzer die Produkte auszuwählen, die, denen Sie verwenden möchten. Gibt an, ob eine generische Anwendung Datenquellen, Treiber oder beides häufig enthält, hängt davon ab, ob die Anwendung die DBMS-basierten oder dateibasierte Treiber verwendet.  
   

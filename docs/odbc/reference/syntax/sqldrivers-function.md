@@ -20,16 +20,16 @@ ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0815a5d0597fabb6b4f5e942d2bbb92b7ae57e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bac7f88dcbd9895cfd0d07a5993ab9e38a4608d0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727536"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214731"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 2.0-Standards-Compliance: ODBC  
+ Eingeführt in Version: ODBC 2.0-Standards-Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLDrivers** enthält Beschreibungen der Treiber und Treiber-Attribut-Schlüsselwörter. Diese Funktion ist nur vom Treiber-Manager implementiert werden.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sequence.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54a6d265c6ad8f7c585a629c2adc997b808d636b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063242"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781604"
 ---
 # <a name="sequence-properties-general-page"></a>Sequenzeigenschaften (Seite "Allgemein")
   Erstellt ein Sequenzobjekt und gibt dessen Eigenschaften an. Als Sequenz wird ein benutzerdefiniertes schemagebundenes Objekt bezeichnet, das eine Sequenz numerischer Werte anhand der Spezifikation generiert, mit der die Sequenz erstellt wurde. Die Sequenz numerischer Werte wird in aufsteigender oder absteigender Reihenfolge in einem definierten Intervall generiert und kann so konfiguriert werden, dass sie beim Erreichen des Endes neu gestartet wird (Zyklus). Sequenzen werden anders als Identitätsspalten keinen bestimmten Tabellen zugeordnet. Anwendungen verweisen auf ein Sequenzobjekt, um dessen nächsten Wert abzurufen. Die Beziehung zwischen Sequenzen und Tabellen wird von der Anwendung gesteuert. Benutzeranwendungen können auf ein Sequenzobjekt verweisen und die Werte in mehreren Zeilen und Tabellen koordinieren.  
@@ -29,7 +28,7 @@ ms.locfileid: "48063242"
   
  Auf diese Seite kann auf zwei Arten zugegriffen werden: Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf **Sequenzen** und anschließend auf **Neue Sequenz**, oder klicken Sie mit der rechten Maustaste auf eine vorhandene Sequenz und anschließend auf **Eigenschaften**. Wenn Sie mit der rechten Maustaste auf eine vorhandene Sequenz und anschließend auf **Eigenschaften** klicken, können Sie die Optionen nicht bearbeiten. Zum Ändern der Sequenzoptionen verwenden Sie die [ALTER SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-sequence-transact-sql)-Anweisung, oder erstellen Sie das Sequenzobjekt durch Ziehen erneut.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Sequenzname**  
  Geben Sie hier den Sequenznamen ein.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48063242"
  Der Wert, um den der Wert des Sequenzobjekts bei jedem Aufruf der **NEXT VALUE FOR** -Funktion inkrementiert (oder bei negativem Wert dekrementiert) wird. Wenn als Inkrement ein negativer Wert verwendet wird, ist der Wert des Sequenzobjekts absteigend, andernfalls ist er aufsteigend. Das Inkrement kann nicht 0 sein.  
   
  **Mindestwert**  
- Gibt die Grenzen für das Sequenzobjekt an. Der minimale Standardwert eines neuen Sequenzobjekts ist gleich dem minimalen Wert für den Datentyp des Sequenzobjekts. Dies ist 0 (null), für die `tinyint` -Datentyp und für alle anderen Datentypen eine negative Zahl.  
+ Gibt die Grenzen für das Sequenzobjekt an. Der minimale Standardwert eines neuen Sequenzobjekts ist gleich dem minimalen Wert für den Datentyp des Sequenzobjekts. Dieser ist für den `tinyint`-Datentyp 0 und für alle anderen Datentypen eine negative Zahl.  
   
  **Höchstwert**  
  Gibt die Grenzen für das Sequenzobjekt an. Der maximale Standardwert eines neuen Sequenzobjekts ist gleich dem maximalen Wert für den Datentyp des Sequenzobjekts.  

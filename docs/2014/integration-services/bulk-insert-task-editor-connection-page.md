@@ -15,19 +15,19 @@ ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72b150ecf09dcf2c96c05ac690a366c6d2711586
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 047c5a572195520f194660753315fbe73ffe7c15
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226860"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523644"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Masseneinfügungstask-Editor (Seite Verbindung)
   Mithilfe der Seite **Verbindung** im Dialogfeld **Masseneinfügungstask-Editor** können Sie die Quelle und das Ziel des Masseneinfügevorgangs und das zu verwendende Format angeben.  
   
  Informationen zum Arbeiten mit Masseneinfügungen finden Sie unter [Masseneinfügungstask](control-flow/bulk-insert-task.md) und [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verbindung**  
  Wählen Sie einen OLE DB-Verbindungs-Manager in der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, um eine neue Verbindung zu erstellen.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48226860"
  **Format**  
  Wählen Sie die Quelle des Formats für die Masseneinfügung aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Use File**|Wählen Sie eine Datei mit Formatspezifikationen aus. Nach Auswahl dieser Option wird die dynamische Option **FormatFile**angezeigt.|  
 |**Specify**|Geben Sie das Format an. Nach Auswahl dieser Option werden die dynamischen Optionen `RowDelimiter` und `ColumnDelimiter`.|  
@@ -51,7 +51,7 @@ ms.locfileid: "48226860"
   
  Wenn Sie auf die Quelldatei mithilfe eines Flatfileverbindungs-Managers zugreifen, verwendet der Masseneinfügungstask nicht das im Flatfileverbindungs-Manager angegebene Format. Stattdessen verwendet der Masseneinfügungstask entweder das in einer Formatdatei angegebene Format oder die Werte der Eigenschaften RowDelimiter und ColumnDelimiter des Tasks.  
   
- **Verwandte Themen:** [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../2014/integration-services/file-connection-manager-editor.md), [Verbindungs-Manager für Flatfiles](connection-manager/flat-file-connection-manager.md), [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md), [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Spalten“&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md), [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Erweitert“&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ **Verwandte Themen:** [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../2014/integration-services/file-connection-manager-editor.md), [Dateiverbindungs-Manager für Flatfiles](connection-manager/flat-file-connection-manager.md), [Dateiverbindungs-Manager-Editor für Flatfiles &#40;Seite "Allgemein"&#41; ](general-page-of-integration-services-designers-options.md), [Dateiverbindungs-Manager-Editor für Flatfiles &#40;Seite "Spalten"&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md), [Dateiverbindungs-Manager-Editor für Flatfiles &#40;Seite "Erweitert"&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
  **Tabellen aktualisieren**  
  Aktualisieren Sie die Liste der Tabellen und Sichten.  
@@ -60,7 +60,7 @@ ms.locfileid: "48226860"
   
 ### <a name="format--use-file"></a>Format = Use File  
  **FormatFile**  
- Geben Sie den Pfad der Formatdatei ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten ( **…** ), um nach der Formatdatei zu suchen.  
+ Geben Sie den Pfad der Formatdatei ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**), um nach der Formatdatei zu suchen.  
   
 ### <a name="format--specify"></a>Format = Specify  
  `RowDelimiter`  
@@ -70,9 +70,9 @@ ms.locfileid: "48226860"
  Geben Sie das Spaltentrennzeichen in der Quelldatei an. Der Standardwert ist **Tabstopp**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Massenimport von Insert-Task-Editor &#40;Seite "Allgemein"&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
- [Massenimport von Insert-Task-Editor &#40;Seite "Optionen"&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Masseneinfügungstask-Editor &#40;Seite „Allgemein“&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
+ [Masseneinfügungstask-Editor &#40;Seite „Optionen“&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Ablaufsteuerung](control-flow/control-flow.md)  

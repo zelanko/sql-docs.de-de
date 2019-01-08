@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 5bd5581b2842ec5d11cd27a989aa41ddb2cee1de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661938"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532004"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Konfigurieren der Failoverclusterinstanz – SMB – SQL Server unter Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "47661938"
 
 In diesem Artikel wird erläutert, wie zum Konfigurieren des Linux SMB-Speicher für eine Failoverclusterinstanz (FCI) werden. 
  
-In der nicht-Windows-Welt ist SMB häufig zum Freigeben von als ein Common Internet File System (CIFS) bezeichnet und über Samba implementiert. In der Windows-Welt auf eine SMB-Dateifreigabe zugreifen auf diese Weise ausgeführt wird: \\Servername\Freigabename. Für Linux-basierten SQL Server-Installationen muss die SMB-Freigabe als Ordner bereitgestellt werden.
+In der nicht-Windows-Welt ist SMB häufig zum Freigeben von als ein Common Internet File System (CIFS) bezeichnet und über Samba implementiert. In der Windows-Welt auf eine SMB-Dateifreigabe zugreifen auf diese Weise erfolgt: \\SERVERNAME\FREIGABENAME. Für Linux-basierten SQL Server-Installationen muss die SMB-Freigabe als Ordner bereitgestellt werden.
 
 ## <a name="important-source-and-server-information"></a>Wichtige Informationen zu Quelle und server
 
@@ -102,7 +102,7 @@ Hier sind einige Tipps und Hinweise für die erfolgreiche Verwendung von SMB:
    *    Löschen Sie die Dateien aus dem vorhandenen Verzeichnis der SQL Server-Daten. Sie erhalten Bestätigung nicht bei erfolgreicher Ausführung.
  
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    Stellen Sie sicher, dass die Dateien gelöscht wurden. 

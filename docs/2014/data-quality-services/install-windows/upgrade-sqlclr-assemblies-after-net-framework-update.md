@@ -10,12 +10,12 @@ ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48166ece4bdbfb8472890c61ee4a33e3ce4243d0
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 26bb897211866e4bec0c027c1f7986919589038d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032227"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519377"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>Aktualisieren der SQLCLR-Assemblys nach dem Aktualisieren von .NET Framework
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) ist eine Auflistung der SQL CLR-Routinen (SQL Common Language Runtime), die auf Microsoft .NET Framework 4-Assemblys verweisen. Wenn Sie ein .NET Framework-Update auf dem Computer installieren, das sich auf eine der .NET Framework-Assemblys, auf die verwiesen wird, auswirkt, wird infolgedessen die MVID (Modul Version ID) der Assembly im globalen Assemblycache (GAC) geändert. Dadurch wird ein Konflikt zwischen den MVIDs der Assembly im GAC, auf die verwiesen wird, und der Assembly in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]verursacht.  
@@ -23,7 +23,7 @@ ms.locfileid: "51032227"
  Wenn es beim .NET Framework-Update erforderlich ist, den [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] -Computer neu zu starten, werden die betroffenen SQLCLR-Assemblys automatisch aktualisiert, um den MVID-Konflikt beim Neustart des [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] -Computers zu beheben. Bei .NET Framework-Updates jedoch, bei denen kein Neustart des [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] -Computers erforderlich ist, tritt ein Fehler aufgrund des Konflikts in den MVIDs der Assemblys auf, wenn Sie versuchen, eine Verbindung mit einem [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] herzustellen, der einen [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]verwendet:  
   
 ```  
-A new version of .NET was installed on this machine. In order to continue to work with DQS please run dqsinstaller.exe –upgradedlls.  
+A new version of .NET was installed on this machine. In order to continue to work with DQS please run dqsinstaller.exe -upgradedlls.  
 ```  
   
  Um dieses Problem zu beheben, müssen die betroffenen SQLCLR-Assemblys in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisiert werden. Sie können zu diesem Zweck die Datei DQSInstaller.exe mit dem **upgradedlls** -Befehlszeilenparameter ausführen, um das Neuerstellen der DQS-Datenbanken zu überspringen und nur die betroffenen Assemblys zu aktualisieren. Dadurch wird sichergestellt, dass die Knowledge Bases, Datenqualitätsprojekte und alle anderen Daten in DQS beibehalten werden.  

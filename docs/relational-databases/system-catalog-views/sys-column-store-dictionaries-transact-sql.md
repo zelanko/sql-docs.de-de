@@ -20,12 +20,12 @@ ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dbcd828ea886bd1c83b327cae9a49bca4668ef15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd497326f278dcc01b4fa81a0e64da6a93cbe8cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617898"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518812"
 ---
 # <a name="syscolumnstoredictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47617898"
 |**column_id**|**int**|ID des columnstore-Spalte beginnend mit 1. Die erste Spalte enthält die ID = 1, die zweite Spalte enthält, ID = 2, usw.|  
 |**dictionary_id**|**int**|Es können zwei Arten von Wörterbüchern, globale und lokale, ein Spaltensegment zugeordnet sein. Eine Dictionary_id 0 stellt dar, das globale Wörterbuch, das über alle spaltensegmente (eine für jede Zeilengruppe) für diese Spalte gemeinsam verwendet wird.|  
 |**version**|**int**|Version des Wörterbuchformats.|  
-|**type**|**int**|Wörterbuchtyp:<br /><br /> 1-Hash Wörterbuch mit **Int** Werte<br /><br /> 2 - Nicht verwendet<br /><br /> 3 – Hashwörterbuch, das Zeichenfolgenwerte enthält<br /><br /> 4 – hashwörterbuch Wörterbuch mit **"float"** Werte<br /><br /> Weitere Informationen zu Wörterbüchern finden Sie unter [Columnstore-Indizes](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
+|**type**|**int**|Wörterbuchtyp:<br /><br /> 1 - Hash Wörterbuch mit **Int** Werte<br /><br /> 2 – nicht verwendet.<br /><br /> 3 – hashwörterbuch, das Zeichenfolgenwerte enthält<br /><br /> 4 - Hash Wörterbuch mit **"float"** Werte<br /><br /> Weitere Informationen zu Wörterbüchern finden Sie unter [Columnstore-Indizes](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
 |**last_id**|**int**|Die letzte Daten-ID im Wörterbuch.|  
 |**entry_count**|**bigint**|Die Anzahl von Einträgen im Wörterbuch.|  
 |**on_disc_size**|**bigint**|Größe des Wörterbuchs in Byte.|  

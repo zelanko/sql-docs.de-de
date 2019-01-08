@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication synchronization [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 72d8b7697af9920f7bd15e7120a6724acff231d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a3dfc7b81bf6f6a3ef0b9b74a2d1a78f3e3e1db
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190916"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816732"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Websynchronisierung für die Mergereplikation
   Durch die Websynchronisierung für die Mergereplikation können Sie Daten mithilfe des HTTPS-Protokolls replizieren. Sie ist für die folgenden Szenarien hilfreich:  
@@ -48,7 +47,7 @@ ms.locfileid: "48190916"
   
  ![Komponenten und Datenfluss für Websynchronisierung](media/web-sync01.gif "Web synchronization components and data flow")  
   
- Die Websynchronisierung steht nur für Pullabonnements zur Verfügung. Ein Merge-Agent wird deshalb immer auf dem Abonnenten ausgeführt. Dabei kann es sich um den Standard-Merge-Agent, das ActiveX-Steuerelement für den Merge-Agent oder eine Anwendung handeln, die die Synchronisierung über Replikationsverwaltungsobjekte (RMO) bereitstellt. Mit dem **–InternetUrl** -Parameter für den Merge-Agent wird der Standort des Computers mit IIS angegeben.  
+ Die Websynchronisierung steht nur für Pullabonnements zur Verfügung. Ein Merge-Agent wird deshalb immer auf dem Abonnenten ausgeführt. Dabei kann es sich um den Standard-Merge-Agent, das ActiveX-Steuerelement für den Merge-Agent oder eine Anwendung handeln, die die Synchronisierung über Replikationsverwaltungsobjekte (RMO) bereitstellt. Mit dem **–InternetUrl**-Parameter für den Merge-Agent wird der Standort des Computers mit IIS angegeben.  
   
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung (Replisapi.dll) ist auf dem Computer mit IIS konfiguriert und verarbeitet die Nachrichten, die vom Verleger und den Abonnenten an den Server gesendet werden. Jeder Knoten in der Topologie verarbeitet den XML-Datenstrom mithilfe der SQL Server-Mergereplikationssynchronisierung (Replrec.dll).  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48190916"
 3.  Der Merge-Agent auf dem Abonnenten akzeptiert anschließend die HTTPS-Antwort und wendet die Downloadänderungen auf die Abonnementdatenbank an.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Configure Web Synchronization](configure-web-synchronization.md)   
+ [Konfigurieren der Websynchronisierung](configure-web-synchronization.md)   
  [Topologies for Web Synchronization](topologies-for-web-synchronization.md)  
   
   

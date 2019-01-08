@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], renaming
@@ -14,12 +13,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53a917074efc3ba8b966f795a619c2606e3a160b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8226ca15ed39dd6cc24c7235f54a047d2af86508
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055606"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783622"
 ---
 # <a name="rename-a-database"></a>Umbenennen einer Datenbank
   In diesem Thema wird beschrieben, wie eine benutzerdefinierte Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]umbenannt wird. Der Name der Datenbank kann alle Zeichen enthalten, die den Regeln für Bezeichner entsprechen.  
@@ -30,7 +29,7 @@ ms.locfileid: "48055606"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So benennen Sie eine Datenbank um mit:**  
   
@@ -38,9 +37,9 @@ ms.locfileid: "48055606"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [After renaming a database](#FollowUp)  
+-   **Nachverfolgung:**  [Nach dem Umbenennen einer Datenbank](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -82,7 +81,7 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Umbenennen einer Datenbank  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Umbenennen einer Datenbank  
  Sichern Sie die **master** -Datenbank nach jedem Umbenennen einer Datenbank.  
   
 ## <a name="see-also"></a>Siehe auch  

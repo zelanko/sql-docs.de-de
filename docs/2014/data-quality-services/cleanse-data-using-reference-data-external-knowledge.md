@@ -10,12 +10,12 @@ ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c556fb02eaad5a97a3f844991ba64440ac65f7b3
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 101d5ba77dce4ef384e1d9ade52e8e847828d685
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029658"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532411"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Bereinigen von Daten mit (externem) Verweisdaten-Wissen
   In diesem Thema wird beschrieben, wie Daten mithilfe des Wissens von Verweisdatenanbietern bereinigt werden. Während alle Schritte zum Ausführen einer Bereinigungsaktivität dieselben für die Bereinigung Ihrer Daten mithilfe des Wissens der Anbieter von Verweisdaten bleiben, wie unter [Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md) erläutert, bietet dieses Thema Informationen, die für die Datenbereinigung mithilfe von Reference Data Service in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) spezifisch sind.  
@@ -35,14 +35,14 @@ ms.locfileid: "51029658"
     > [!NOTE]  
     >  Die Schwellenwerte, die Sie während der Zuordnung einer Domäne zu einem Verweisdatendienst festlegen, werden während des Bereinigens von Daten mithilfe des Wissens im Verweisdatendienst und nicht mithilfe der Werte, die auf der Registerkarte **Allgemeine Einstellungen** im Abschnitt **Konfiguration** festgelegt wurden, angewendet. Informationen zum Angeben von Schwellenwerten für die verweisdatenbereinigung finden Sie in Schritt 9 in [Anfügen einer Domäne oder Verbunddomäne an Verweisdaten](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
--   Domänenwerte werden folgendermaßen kategorisiert: **Vorgeschlagen**, **Neu**, **Ungültig**, **Korrigiert** und **Richtig**.  
+-   Domänenwerte werden in Folgendes kategorisiert: **Vorgeschlagene**, **neue**, **ungültige**, **korrigiert**, und **richtig**.  
   
 -   Weitere Daten werden an die Quelle angefügt, und die Informationen stehen zusammen mit den bereinigten Daten zum Exportieren zur Verfügung.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
- Sie müssen dem entsprechenden Verweisdatendienst erforderliche Domänen in einer DQS-Wissensdatenbank zugeordnet haben. Darüber hinaus muss die Wissensdatenbank Wissen zum Typ von Daten enthalten, die Sie bereinigen möchten. Wenn Sie z. B. die Quelldaten bereinigen, die US-Adressen enthalten, müssen Sie die Domänen einem Verweisdaten-Dienstanbieter zuordnen, der hochwertige Daten für US-Adressen bereitstellt. Weitere Informationen finden Sie unter [Anfügen einer Domäne oder Verbunddomäne an Verweisdaten](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+ Sie müssen dem entsprechenden Verweisdatendienst erforderliche Domänen in einer DQS-Wissensdatenbank zugeordnet haben. Darüber hinaus muss die Wissensdatenbank Wissen zum Typ von Daten enthalten, die Sie bereinigen möchten. Wenn Sie z.B. die Quelldaten bereinigen, die US-Adressen enthalten, müssen Sie die Domänen einem Verweisdaten-Dienstanbieter zuordnen, der hochwertige Daten für US-Adressen bereitstellt. Weitere Informationen finden Sie unter [Anfügen einer Domäne oder Verbunddomäne an Verweisdaten](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -54,7 +54,7 @@ ms.locfileid: "51029658"
   
 1.  Erstellen Sie ein Datenqualitätsprojekt, und wählen Sie die Aktivität **Bereinigung** aus. Siehe [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md).  
   
-2.  Ordnen Sie die folgenden 4 Domänen mit entsprechenden Spalten auf der Seite **Karte** in den Quelldaten zu: **Adresszeile**, **Ort**, **Bundesland**und **PLZ**. Klicken Sie auf **Weiter**.  
+2.  Auf der **Zuordnung** Seite, ordnen Sie die folgenden 4 Domänen mit entsprechenden Spalten in den Quelldaten: **Adresszeile**, **City**, **Zustand**, und **Zip**. Klicken Sie auf **Weiter**.  
   
     > [!NOTE]  
     >  Nachdem Sie alle 4 Domänen innerhalb der Verbunddomäne **Adressüberprüfung** zugeordnet haben, wird die Datenbereinigung jetzt auf Verbunddomänenebene ausgeführt, und nicht auf einzelner Domänenebene.  
@@ -64,7 +64,7 @@ ms.locfileid: "51029658"
     > [!NOTE]  
     >  DQS zeigt auf der Seite **Bereinigen** die Informationen zu den Domänen an, die auf die folgenden zwei Weisen mit dem Verweisdatendienst verbunden sind:  
     >   
-    >  -   Eine Meldung wird unter der Schaltfläche **Starten** angezeigt: „Domänen \<Domäne1>, \<Domäne2>,... \<Domänen> werden mithilfe von Reference Data Service-Anbietern bereinigt.“ In diesem Beispiel wird die folgende Meldung angezeigt: „Domänen-Adressüberprüfung wird mithilfe von Verweisdaten-Dienstanbietern gereinigt.“  
+    >  -   Wird eine Meldung angezeigt, unter dem **starten** Schaltfläche: "Domänen \<Domäne1 >, \<Domäne2 >,... \<DomäneN> werden mithilfe von Reference Data Service-Anbietern bereinigt.“ In diesem Beispiel wird die folgende Meldung angezeigt: "Domänen-Adressüberprüfung wird mithilfe von Verweisdaten-Dienstanbieters gereinigt."  
     > -   Ein Symbol, ![Domäne ist an RDS angefügt](../../2014/data-quality-services/media/dqs-rdsindicator.JPG "Domain is attached to RDS"), wird im Bereich **Profiler** für die Domänen angezeigt, die mit dem Reference Data Service-Dienstanbieter verbunden sind. In diesem Beispiel wird das Symbol für die Verbunddomäne **Adressüberprüfung** angezeigt.  
   
 4.  Prüfen Sie auf der Seite **Ergebnisse verwalten und anzeigen** Ihre Domänenwerte. Der Verweisdatendienst kann ggf. mehr als einen Vorschlag für einen Wert anzeigen, je nach der maximalen Anzahl von Vorschlägen, die im Feld **Vorgeschlagene Kandidaten** während der Zuordnung der Domäne zum Verweisdatendienst angegeben sind. Zwei Vorschläge werden z. B. für die folgende US-Adresse angezeigt:  

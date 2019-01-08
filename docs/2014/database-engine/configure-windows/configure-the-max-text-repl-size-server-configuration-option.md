@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - max text repl size option
@@ -13,12 +12,12 @@ ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 97016ac7279bfc00bd617e6318067561d82cddda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5e89ca1fc43c140a4c6fa9aa8f610f5b86d7ef9
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073738"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640441"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption max text repl size
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Max. Textgröße für Replikation** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Die **Max. Textgröße** Option gibt die maximale Größe (in Byte) der `text`, `ntext`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, `xml`, und `image` Daten, die hinzugefügt werden können, einer replizierten oder aufgezeichneten Spalte in einer einzelnen INSERT-, Update-, WRITETEXT- oder UPDATETEXT-Anweisung. Der Standardwert ist 65536 Byte. Der Wert -1 gibt an, dass mit Ausnahme der durch den Datentyp auferlegten Größenbegrenzung keine Begrenzung der Größe gilt.  
@@ -29,7 +28,7 @@ ms.locfileid: "48073738"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So konfigurieren Sie die Option Max. Textgröße für Replikation mit:**  
   
@@ -37,9 +36,9 @@ ms.locfileid: "48073738"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung:**  [Nach dem Konfigurieren der Option „max text repl size“](#FollowUp)  
+-   **Nachverfolgung:**  [Nach dem Konfigurieren der Option Max. Textgröße für Replikation](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48073738"
 ####  <a name="Permissions"></a> Berechtigungen  
  Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Zum Ausführen von **sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung muss einem Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-configure-the-max-text-repl-size-option"></a>So konfigurieren Sie die Option Max. Textgröße für Replikation  
   
@@ -85,7 +84,7 @@ GO
   
  Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)angezeigt oder konfiguriert wird.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Konfigurieren der Option Max. Textgröße für Replikation  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Konfigurieren der Option Max. Textgröße für Replikation  
  Die Einstellung tritt ohne Neustarten des Servers sofort in Kraft.  
   
 ## <a name="see-also"></a>Siehe auch  

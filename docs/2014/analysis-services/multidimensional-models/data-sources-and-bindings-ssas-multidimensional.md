@@ -34,12 +34,12 @@ ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 606d3e19334e37ee418d4e99472845d24344d452
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 60b3e29ae94c4dcf5d136bcc01bf291a9a6118fe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148090"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510537"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Datenquellen und Bindungen (SSAS – mehrdimensional)
   Cubes, Dimensionen und andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte können an eine Datenquelle gebunden werden. Eine Datenquelle kann eines der folgenden Objekte sein:  
@@ -50,7 +50,7 @@ ms.locfileid: "48148090"
   
  Die Möglichkeiten zum Ausdrücken der Datenquelle sind vom Typ der Datenquelle abhängig. Beispielsweise wird eine relationale Datenquelle durch die Verbindungszeichenfolge gekennzeichnet. Weitere Informationen zu Datenquellen finden Sie unter [Datenquellen in mehrdimensionalen Modellen](data-sources-in-multidimensional-models.md).  
   
- Unabhängig von der verwendeten Datenquelle enthält die Datenquellensicht (DSV) die Metadaten für die Datenquelle. Daher werden die Bindungen für einen Cube oder andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte als Bindungen zur DSV ausgedrückt. Diese Bindungen können Bindungen zu logischen Objekten einschließen, beispielsweise Sichten, berechnete Spalten und Beziehungen, die physisch in der Datenquelle nicht vorhanden sind. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fügt eine berechnete Spalte hinzu, die den Ausdruck für die DSV kapselt, und anschließend wird das entsprechende OLAP-Measure an diese Spalte in der DSV gebunden. Weitere Informationen zu DSVs finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md).  
+ Unabhängig von der verwendeten Datenquelle enthält die Datenquellensicht (DSV) die Metadaten für die Datenquelle. Daher werden die Bindungen für einen Cube oder andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte als Bindungen zur DSV ausgedrückt. Diese Bindungen können Bindungen zu logischen Objekten-Objekten wie z. B. Sichten, berechnete Spalten und Beziehungen, die nicht physisch in der Datenquelle vorhanden sind, enthalten. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fügt eine berechnete Spalte hinzu, die den Ausdruck für die DSV kapselt, und anschließend wird das entsprechende OLAP-Measure an diese Spalte in der DSV gebunden. Weitere Informationen zu DSVs finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md).  
   
  Jedes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt bindet auf eigene Weise an die Datenquelle. Außerdem kann die Datenbindung für diese Objekte und die Definition der Datenquelle mit der Definition des datengebundenen Objekts (beispielsweise der Dimension) inline oder out-of-line als separater Definitionssatz bereitgestellt werden.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48148090"
  Alle von der Datenquelle empfangenen Daten werden in den [!INCLUDE[ssAS](../../includes/ssas-md.md)] -Typ konvertiert, der in der Bindung (normalerweise während der Verarbeitung) angegeben wird. Ein Fehler wird ausgelöst, wenn die Konvertierung (z. B. von String in Int) nicht ausgeführt werden kann. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] legt den Datentyp in der Bindung normalerweise auf den Typ fest, der am ehesten dem Quelltyp in der Datenquelle entspricht. Beispielsweise werden die SQL-Typen Date, DateTime, SmallDateTime, DateTime2, DateTimeOffset [!INCLUDE[ssAS](../../includes/ssas-md.md)] Date zugewiesen und der SQL-Typ Time wird String zugeordnet.  
   
 ## <a name="bindings-for-dimensions"></a>Bindungen für Dimensionen  
- Jedes Attribut einer Dimension wird an eine Spalte in der DSV gebunden. Alle Attribute einer Dimension müssen aus einer einzigen Datenquelle kommen. Die Attribute können jedoch an Spalten in unterschiedlichen Tabellen gebunden werden. Die Beziehungen zwischen den Tabellen werden in der DSV definiert. Wenn in einer Tabelle mehrere Beziehungssätze vorhanden sind, kann es erforderlich sein, in der DSV eine benannte Abfrage einzufügen, die als Aliastabelle fungiert. Ausdrücke und Filter werden in der DSV mithilfe von benannten Berechnungen und benannten Abfragen definiert.  
+ Jedes Attribut einer Dimension wird an eine Spalte in der DSV gebunden. Alle Attribute einer Dimension müssen aus einer einzigen Datenquelle kommen. Die Attribute können jedoch an Spalten in unterschiedlichen Tabellen gebunden werden. Die Beziehungen zwischen den Tabellen werden in der DSV definiert. In der Fall, in denen mehr als ein Satz von Beziehungen auf dieselbe Tabelle vorhanden ist, möglicherweise es erforderlich, führen eine benannte Abfrage in der DSV als eine 'Alias'-Tabelle zu fungieren. Ausdrücke und Filter werden in der DSV mithilfe von benannten Berechnungen und benannten Abfragen definiert.  
   
 ## <a name="bindings-for-measuregroups-measures-and-partitions"></a>Bindungen für Measuregruppen, Measures und Partitionen  
  Jede Measuregruppe besitzt die folgenden Standardbindungen:  
@@ -89,7 +89,7 @@ ms.locfileid: "48148090"
   
  Diese Standardbindungen können partitionsweise selektiv überschrieben werden. Jede Partition kann eine andere Datenquelle, eine andere Tabelle, einen anderen Abfragenamen oder einen anderen Filterausdruck angeben. Das üblichste Partitionskonzept ist, die Tabelle partitionsweise mithilfe der gleichen Datenquelle zu überschreiben. Alternativ kann beispielsweise auch für jede Partition ein anderer Filter verwendet oder die Datenquelle geändert werden.  
   
- Die Standarddatenquelle muss in der DSV definiert werden, dabei werden die Schemainformationen einschließlich der Details der Beziehungen angegeben. Alle zusätzlich auf Partitionsebene angegebenen Tabellen oder Abfragen müssen nicht in der DSV aufgeführt werden, sie müssen jedoch das gleiche Schema besitzen wie die für die Measuregruppe definierte Tabelle. Zumindest müssen sie alle Spalten enthalten, die von Measures oder Granularitätsattributen verwendet werden. Die einzelnen Bindungen pro Measure und Granularitätsattribut können nicht auf Partitionsebene überschrieben werden, und es wird angenommen, dass diese Bindungen zu den gleichen Spalten bestehen, die auch für die Measuregruppe definiert sind. Aus diesem Grund, wenn die Partition eine Datenquelle verwendet, die in der Tat besitzt ein anderes Schema, das `TableDefinition` Abfrage, die für die Partition dazu das gleiche Schema wie die von der Measuregruppe verwendete Schema führt definiert.  
+ Die Standarddatenquelle muss in der DSV definiert werden, dabei werden die Schemainformationen einschließlich der Details der Beziehungen angegeben. Alle zusätzlich auf Partitionsebene angegebenen Tabellen oder Abfragen müssen nicht in der DSV aufgeführt werden, sie müssen jedoch das gleiche Schema besitzen wie die für die Measuregruppe definierte Tabelle. Zumindest müssen sie alle Spalten enthalten, die von Measures oder Granularitätsattributen verwendet werden. Die einzelnen Bindungen pro Measure und Granularitätsattribut können nicht auf Partitionsebene überschrieben werden, und es wird angenommen, dass diese Bindungen zu den gleichen Spalten bestehen, die auch für die Measuregruppe definiert sind. Wenn daher die Partition eine Datenquelle verwendet, die tatsächlich ein anderes Schema besitzt, muss die für die Partition definierte `TableDefinition`-Abfrage das gleiche Schema ergeben wie das von der Measuregruppe verwendete Schema.  
   
 ### <a name="measuregroup-granularity-attributes"></a>Measuregruppen-Granularitätsattribute  
  Wenn die Granularität einer Measuregruppe mit der bekannten Granularität in der Datenbank übereinstimmt und eine direkte Beziehung von der Faktentabelle zu der Dimensionstabelle besteht, muss nur das Granularitätsattribut an die entsprechende Fremdschlüsselspalte, bzw. die Spalten, in der Faktentabelle gebunden werden. Betrachten Sie z. B. die folgenden Fakten- und Dimensionstabellen:  
@@ -108,7 +108,7 @@ ms.locfileid: "48148090"
   
  Wenn Sie eine Analyse nach bestellten Produkten ausführen, wäre das Produktgranularitätsattribut für "Bestelltes Produkt" in der Dimensionsrolle "Verkauf" an Sales.OrderedProductID gebunden.  
   
- Es kann aber auch vorkommen, dass die `GranularityAttributes` nicht als Spalten in der Faktentabelle vorhanden sind. Z. B. die `GranularityAttributes` möglicherweise nicht vorhanden, als Spalten in den folgenden Situationen:  
+ Es kann aber auch vorkommen, dass die `GranularityAttributes` nicht als Spalten in der Faktentabelle vorhanden sind. Beispielsweise könnten die `GranularityAttributes` unter den folgenden Umständen nicht als Spalten vorhanden sein:  
   
 -   Die OLAP-Granularität ist gröber als die Granularität in der Quelle.  
   
@@ -156,18 +156,18 @@ ms.locfileid: "48148090"
   
  In einem OLAP-Miningmodell folgen die Datenbindungen diesen Regeln:  
   
--   Jede nicht verschachtelte Tabellenspalte in ein Measure gebunden ist, für einen Cube, auf ein Attribut in einer Dimension dieses Cubes (Angeben der `CubeDimension` um im Fall von Dimensionsrollen zu unterscheiden), oder an ein Attribut in einer Dimension.  
+-   Jede nicht verschachtelte Tabelle ist an ein Measure in einem Cube gebunden, an ein Attribut in einer Dimension dieses Cubes (das die `CubeDimension` angibt, um im Fall von Dimensionsrollen Eindeutigkeit herzustellen) oder an ein Attribut in einer Dimension.  
   
 -   Jede verschachtelte Tabellenspalte wird an eine `CubeDimension` gebunden. Das bedeutet, es wird definiert, wie die Navigation von einer Dimension zu einem verknüpften Cube erfolgt oder (in dem seltenen Fall von geschachtelten Tabellen) von einem Cube zu einer seiner Dimensionen.  
   
 ## <a name="out-of-line-bindings"></a>Out-of-Line-Bindungen  
  Mithilfe von Out-of-Line-Bindungen können vorhandene Datenbindungen während der Dauer einer Befehlsausführung vorübergehend geändert werden. Out-of-Line-Bindungen bezeichnen Bindungen, die in einen Befehl eingeschlossen werden und nicht dauerhaft sind. Out-of-Line-Bindungen sind nur vorhanden, während dieser spezielle Befehl ausgeführt wird. Im Unterschied dazu sind Inline-Bindungen in der ASSL-Objektdefinition enthalten und bleiben mit der Objektdefinition innerhalb der Servermetadaten erhalten.  
   
- Ermöglicht Out-of-Line-Bindungen auf ASSL ein `Process` Befehl, wenn es nicht in einem Batch oder in einem `Batch` Befehl. Wenn Out-of-Line Bindungen in einem `Batch`-Befehl festgelegt werden, erstellen alle in dem `Batch`-Befehl festgelegten Bindungen einen neuen Bindungskontext, in dem alle `Process`-Befehle des Batchs ausgeführt werden. Dieser neue Bindungskontext schließt Objekte ein, die aufgrund des `Process`-Befehls indirekt verarbeitet werden.  
+ ASSL ermöglicht die Festlegung von Out-of-Line-Bindungen entweder in einem `Process`-Befehl, wenn dieser nicht in einem Batch enthalten ist, oder in einem `Batch`-Befehl. Wenn Out-of-Line Bindungen in einem `Batch`-Befehl festgelegt werden, erstellen alle in dem `Batch`-Befehl festgelegten Bindungen einen neuen Bindungskontext, in dem alle `Process`-Befehle des Batchs ausgeführt werden. Dieser neue Bindungskontext schließt Objekte ein, die aufgrund des `Process`-Befehls indirekt verarbeitet werden.  
   
- Wenn in einem Befehl Out-of-Line-Bindungen festgelegt werden, überschreiben diese die Inline-Bindungen im permanenten DDL-Code für die angegebenen Objekte. Diese verarbeiteten Objekte können das Objekt entweder direkt benannt im enthalten die `Process` -Befehl, oder sie können andere Objekte enthalten, deren Verarbeitung automatisch als Teil der Verarbeitung initiiert wird.  
+ Wenn in einem Befehl Out-of-Line-Bindungen festgelegt werden, überschreiben diese die Inline-Bindungen im permanenten DDL-Code für die angegebenen Objekte. Diese verarbeiteten Objekte können das Objekt entweder direkt benannt im `Process`-Befehl enthalten, oder sie können andere Objekte enthalten, deren Verarbeitung automatisch als Teil der Verarbeitung initiiert wird.  
   
- Out-of-Line-Bindungen werden durch Einfügung des optionalen `Bindings`-Auflistungsobjekts mit dem Verarbeitungsbefehl festgelegt. Der optionale `Bindings` Auflistung enthält die folgenden Elemente.  
+ Out-of-Line-Bindungen werden durch Einfügung des optionalen `Bindings`-Auflistungsobjekts mit dem Verarbeitungsbefehl festgelegt. Die optionale `Bindings`-Auflistung enthält die folgenden Elemente.  
   
 |Eigenschaft|Cardinality|Typ|Description|  
 |--------------|-----------------|----------|-----------------|  
@@ -180,12 +180,12 @@ ms.locfileid: "48148090"
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definition des Out-of-Line-Bindungstyps  
  Innerhalb der Out-of-Line-`Bindings`-Auflistung ermöglicht ASSL eine Auflistung von Bindungen für mehrere Objekte, von denen jedes eine `Binding` ist. Jede `Binding` besitzt einen erweiterten Objektverweis, der dem Objektverweis entspricht, der jedoch auch auf untergeordnete Objekte verweisen kann (beispielsweise Dimensionsattribute und Measuregruppenattribute). Dieses Objekt übernimmt die flatform normalerweise von der `Object` Element im `Process` Befehlen, mit dem Unterschied, der die \< *Objekt*>\<*/Object*> Tags sind nicht vorhanden.  
   
- Jedes Objekt, das für die die Bindung wird angegeben, wird durch ein XML-Element der Form identifiziert \< *Objekt*> ID (z. B. `DimensionID`). Nachdem Sie, das Objekt identifiziert haben so genau wie möglich mit dem Formular \< *Objekt*>-ID, wird das Element für die die Bindung angegeben wird, in der Regel `Source`. Ein häufiges Szenario zu beachten ist die `Source` ist eine Eigenschaft auf die `DataItem`, dies ist der Fall bei spaltenbindungen in einem Attribut. In diesem Fall geben Sie nicht das `DataItem`-Tag an, sondern lediglich die `Source`-Eigenschaft, als befände sich diese direkt in der zu bindenden Spalte.  
+ Jedes Objekt, das für die die Bindung wird angegeben, wird durch ein XML-Element der Form identifiziert \< *Objekt*> ID (z. B. `DimensionID`). Nachdem Sie, das Objekt identifiziert haben so genau wie möglich mit dem Formular \< *Objekt*>-ID, wird das Element für die die Bindung angegeben wird, in der Regel `Source`. Häufig ist die `Source` eine Eigenschaft auf dem `DataItem`. Dies ist der Fall bei Spaltenbindungen in einem Attribut. In diesem Fall geben Sie nicht das `DataItem`-Tag an, sondern lediglich die `Source`-Eigenschaft, als befände sich diese direkt in der zu bindenden Spalte.  
   
  `KeyColumns` werden durch ihre Sortierung innerhalb der `KeyColumns`-Auflistung identifiziert. Es ist nicht möglich, beispielsweise nur die erste und die dritte Spalte eines Attributs anzugeben, da keine Möglichkeit besteht, festzulegen, dass die zweite Schlüsselspalte übersprungen werden soll. Alle Schlüsselspalten müssen in der Out-of-Line-Bindung für ein Dimensionsattribut vorhanden sein.  
   
  `Translations` werden, obwohl sie keine ID haben, semantisch anhand ihrer Sprache identifiziert. Daher müssen `Translations` innerhalb einer `Binding` ihren Sprachbezeichner einfügen.  
   
- Ein weiteres Element darf innerhalb einer `Binding` , die direkt im DDL-Code nicht vorhanden ist `ParentColumnID`, die für geschachtelte Tabellen für Datamining verwendet wird. In diesem Fall ist es erforderlich, die übergeordnete Spalte in der verschachtelten Tabelle anzugeben, für die die Bindung bereitgestellt wird.  
+ Ein weiteres innerhalb einer `Binding` zulässiges Element, das nicht direkt im DDL-Code vorhanden ist, ist `ParentColumnID`, das in verschachtelten Tabellen für Data Mining verwendet wird. In diesem Fall ist es erforderlich, die übergeordnete Spalte in der verschachtelten Tabelle anzugeben, für die die Bindung bereitgestellt wird.  
   
   

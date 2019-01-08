@@ -28,12 +28,12 @@ ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f61ad0448df247678be1479b8f28ebb8828796a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6df57894c700391685d26f68b75791dfe916b729
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211830"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511895"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>Formatieren der Legende in einem Diagramm (Berichts-Generator und SSRS)
   Die Diagrammlegende enthält Beschreibungen für jede Kategorie in einem Diagramm. Eine Legende umfasst immer ein oder mehrere Legendenelemente. Jedes Legendenelement besteht aus einem farbigen Kästchen, das für die Reihe steht, und einer Textzeichenfolge, die die Reihe beschreibt. Dies ist in der folgenden Abbildung dargestellt.  
@@ -50,7 +50,7 @@ ms.locfileid: "48211830"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="ordering-legend-items-in-the-legend"></a>Sortieren von Legendenelementen in der Legende  
- Reihen werden in der Legende in der Reihenfolge sortiert, in der sie von der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Verarbeitungs-Engine verarbeitet werden. Sie können die Reihenfolge ändern, indem Sie die Reihenfolge der Felder in der Datenfeld-Ablagezone ändern. Wenn Sie eine Reihengruppierung verwenden, sind die Reihendaten erst bei der Verarbeitung bekannt. Es gibt also keine Möglichkeit, diese Elemente neu zu sortieren. Sie können die Änderungen in der Vorschau anzeigen. Weitere Informationen zur reihengruppierung finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Reihen werden in der Legende in der Reihenfolge sortiert, in der sie von der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Verarbeitungs-Engine verarbeitet werden. Sie können die Reihenfolge ändern, indem Sie die Reihenfolge der Felder in der Datenfeld-Ablagezone ändern. Wenn Sie eine Reihengruppierung verwenden, sind die Reihendaten erst bei der Verarbeitung bekannt. Es gibt also keine Möglichkeit, diese Elemente neu zu sortieren. Sie können die Änderungen in der Vorschau anzeigen. Weitere Informationen zur Reihengruppierung finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  Sie können für jede Reihe einzeln verhindern, dass sie in der Legende angezeigt wird. Wenn Sie die Reihengruppierung verwenden, werden alle Reihen mit Bezug zum Datenfeld ausgeblendet. Weitere Informationen finden Sie unter [Ausblenden von Legendenelementen im Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-legend-hide-items-report-builder.md).  
   
@@ -80,12 +80,12 @@ ms.locfileid: "48211830"
  Standardmäßig wird der Legendentext nicht optimiert, damit er dem Legendenbereich entspricht. Um den Legendentext automatisch an den zugewiesenen Platz anzupassen, legen Sie die "AutoFitTextDisabled"-Eigenschaft auf `False` und legen Sie einen minimalen Schriftgrad für die "minfontsize"-Eigenschaft die niedrigste Größe, die Sie denken akzeptabel ist und eine Legende weiterhin ermöglichen die Optimierung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Im Dialogfeld "Eigenschaften" Legende "," Allgemein &#40;Berichts-Generator und SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
- [Ändern des Texts eines Legendenelements (Berichts-Generator und SSRS)](chart-legend-change-item-text-report-builder.md)   
+ [Legendeneigenschaften (Dialogfeld), Allgemein &#40;Berichts-Generator und SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Ändern des Texts eines Legendenelements &#40;Berichts-Generator und SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Ausblenden von Legendenelementen im Diagramm (Berichts-Generator und SSRS)](chart-legend-hide-items-report-builder.md)   
+ [Ausblenden von Legendenelementen im Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-legend-hide-items-report-builder.md)   
  [Definieren von Farben in einem Diagramm mit einer Palette &#40;Berichts-Generator und SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

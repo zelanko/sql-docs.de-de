@@ -1,7 +1,8 @@
 ---
-title: Schneller Zugriff auf Einblicke und allgemeine Aufgaben in Azure Data Studio | Microsoft-Dokumentation
-description: Lernen Sie aufschlussreiche Widgets in Azure Data Studio angezeigt.
-ms.custom: tools|sos
+title: Schneller Zugriff auf Einblicke und allgemeine Aufgaben
+titleSuffix: Azure Data Studio
+description: Erfahren Sie, zum Anzeigen von Widgets auf dem datenbankdashboard in Azure Data Studio.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: b163d110353d07811f0feb991772c90053651659
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: faaa59e8607f707bb43f31638880f771ae7ae6ab
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356193"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030484"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Dashboards in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -42,7 +43,7 @@ Nach dem Lesen dieses Lernprogramms auf Weitere Informationen zu bestimmten Widg
 Flyout Details Insight bietet detailliertere Informationen zu einem Widget verwandte Einblicke. 
 - Ein Widget Insight wird eine Zusammenfassungsansicht für einen Blick die Anzahl, Linie, Diagramm usw. gerendert. 
 - Flyout Details Insight bietet es sich um "Eingehend" Details, Auflisten von Data-Einblicke für jedes Element im Widget Einblicke auf hoher Ebene aufgeführt. 
-  - Die Details Flyout-Inhalte werden durch eine separate SQL-Abfrage an das wichtigste Widget-Abfrage definiert. 
+  - Die Details Flyout-Inhalte werden durch eine separate SQL-Abfrage an das wichtigste Widget-Abfrage definiert.
 
 Besteht keine Notwendigkeit Satz für eine Abfrage der Insight-Details, aber das Layout ist standard.
 - Die obere Hälfte der Ansicht ist immer eine 2-Spalten "Zusammenfassung". Welche Spalten werden durch die Eigenschaften "Label" und "Value" der JSON-Konfiguration definiert.
@@ -85,14 +86,14 @@ Beispielkonfiguration für Insight-Details-flyout
 ```
 |property|Typ|Wert|Standardwert|description|comment|
 |:---|:---|:---|:---|:---|:---|
-|Details|JSON-Objekt|||obligatorische festgelegte Beschränkung Insight-Detail-Definitionen in ihrer Struktur definieren.||
+|Details|JSON-Objekt|||erforderliche Eigenschaft Insight-Detail-Definitionen in ihrer Struktur definieren.||
 |queryFile|Zeichenfolge|||den Dateipfad für den Insight Details Sql-Abfrage und der Dateiname relativ zum Speicherort der Datei "Package.JSON"||
 |Bezeichnung|JSON-Objekt|||erforderliche Eigenschaft, die zum Definieren von jedes Zeilenelement in der Liste "Zusammenfassung" anzeigen|in Zukunft den Namen dieser Eigenschaft wie "SummaryList" ändern|
-|Symbol "|Zeichenfolge|||Geben Sie das Symbol ein, geeignet für jedes Element der Liste "Zusammenfassung" anzeigen.|(tbd) Liste der unterstützten Symbole werden dokumentiert werden|
+|Symbol "|String|||Geben Sie das Symbol ein, die für jedes Element der Liste "Zusammenfassung" Anzeigen dargestellt.|(tbd) Liste der unterstützten Symbole werden dokumentiert werden|
 |column|Zeichenfolge|||Geben Sie den Namen der ersten Spalte in der Liste "Zusammenfassung" Ansicht aus dem Resultset der Abfrage|der Name dieser Eigenschaft wird in Zukunft intuitiver Namen geändert werden|
-|Wert|Zeichenfolge|||Geben Sie den Namen der zweiten Spalte in der Liste "Zusammenfassung" Ansicht aus dem Resultset der Abfrage. Der Wert dieser Spalte wird zum Überprüfen von Bedingungen, und legen die Farbe für jede Liste "Zusammenfassung" Elemente anzeigen die Color-Punkt|der Name dieser Eigenschaft wird in Zukunft etwas intuitiver ändern.|
+|Wert|Zeichenfolge|||Geben Sie den Namen der zweiten Spalte in der Liste "Zusammenfassung" Ansicht aus dem Resultset der Abfrage. Der Wert dieser Spalte wird zum Überprüfen von Bedingungen, und legen die Farbe für jede Liste "Zusammenfassung" anzeigen Elemente Farbe Punkt|der Name dieser Eigenschaft wird in Zukunft etwas intuitiver ändern.|
 |Bedingung|JSON-Objekt|||die Überprüfung der Bedingung für den Wert der Spalte definiert, und bestimmen Sie die Farbe für jedes Element der Liste "Zusammenfassung" anzeigen||
-|wenn|Zeichenfolge|immer, equals, NotEquals, GreaterThan, LessThan, GreaterThanOrEqauls, lessThanOrEquals||Bedingung überprüfen-operator|Namen der Eigenschaft wird in Zukunft an Operator ändern.|
+|wenn|String|immer, equals, NotEquals, GreaterThan, LessThan, GreaterThanOrEquals, lessThanOrEquals||Bedingung überprüfen-operator|Namen der Eigenschaft wird in Zukunft an Operator ändern.|
 |Ist gleich|Zeichenfolge|||Wert der Bedingung-Überprüfung|Diese Eigenschaftsnamen werden in Zukunft auf 'Value' ändern.|
 
 ## <a name="insight-actions"></a>Insight-Aktionen
@@ -104,7 +105,7 @@ Mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)]des Insight Akti
 
 ## <a name="sample-insight-action-definition"></a>Beispiel Einblicke Aktionsdefinition
 
-```"actions"{}``` definiert eine Insight-Aktion. Aktion kann z. B. über einen bestimmten Bereich definiert werden ```"server"```, ```"database"``` und so weiter und [!INCLUDE[name-sos](../includes/name-sos-short.md)] übergibt den aktuellen Kontext Verbindungsinformationen an die Aktion. 
+```"actions"{}``` definiert eine Insight-Aktion. Aktion kann z. B. über einen bestimmten Bereich definiert werden ```"server"```, ```"database"``` und so weiter und [!INCLUDE[name-sos](../includes/name-sos-short.md)] übergibt den aktuellen Kontext Verbindungsinformationen an die Aktion.
 
 Z. B. bei Aktion "Wiederherstellen" wird gestartet für Datenbank "wideworldimporters" ```"database": "${Database}"``` Definition gibt an, dass übergeben ```Database``` Spaltenwert in die Abfrageergebnisse auf die Aktion "Wiederherstellen". Dann beginnt die Aktion "Wiederherstellen" für die Datenbank. ```"types"``` ist ein Json-Array, und können mehrere Aktionen aufgeführt, in das Array. Es wird im Grunde ein Kontextmenü Insight-Details im Dialogfeld ", Benutzer auf und führen Sie die Aktion kann. 
 

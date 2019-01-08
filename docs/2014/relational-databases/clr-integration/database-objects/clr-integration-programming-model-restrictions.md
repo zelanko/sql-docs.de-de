@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a7b7dfcbd9d7cc7407ed33cc0ea00e93df839b93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187940"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509897"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Beschränkungen des Programmiermodells für die CLR-Integration
   Wenn Sie eine verwaltete gespeicherte Prozedur oder anderes verwaltetes Datenbankobjekt erstellen, es gibt bestimmte codeprüfungen ausgeführt werden, indem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] führt Überprüfungen der verwalteten Codeassembly, wenn es zuerst in der Datenbank registriert wird mithilfe der `CREATE ASSEMBLY` -Anweisung, und auch zur Laufzeit. Der verwaltete Code wird außerdem zur Laufzeit überprüft, da in einer Assembly Codepfade vorhanden sein können, die zur Laufzeit eigentlich nicht erreicht werden.  Dadurch wird Flexibilität für die Registrierung von Assemblys von Drittanbietern geschaffen, sodass eine Assembly nicht blockiert wird, wenn ein "Unsafe"-Code vorliegt, der in einer Clientumgebung ausgeführt werden soll, jedoch nie in der gehosteten CLR ausgeführt wird. Die Anforderungen an, die der verwaltete Code erfüllen muss, hängen davon ab, ob die Assembly, als registriert wurde `SAFE`, `EXTERNAL_ACCESS`, oder `UNSAFE`, `SAFE` ist die strengste Anforderung, und sind unten aufgeführt.  
@@ -86,7 +86,7 @@ ms.locfileid: "48187940"
  Zur Laufzeit wird die Codeassembly auf die folgenden Bedingungen überprüft. Wird eine dieser Bedingungen erkannt, darf der verwaltete Code nicht ausgeführt werden und es wird eine Ausnahme ausgelöst.  
   
 ### <a name="unsafe"></a>UNSAFE  
- Das Laden einer Assembly, entweder explizit durch Aufrufen der `System.Reflection.Assembly.Load()`-Methode von einem Bytearray aus oder implizit durch Verwendung des `Reflection.Emit`-Namespace, ist nicht zulässig.  
+ Laden einer Assembly entweder explizit durch Aufrufen der `System.Reflection.Assembly.Load()` -Methode aus einem Bytearray oder implizit durch die Verwendung von `Reflection.Emit` Namespace-ist nicht zulässig.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Alle `UNSAFE`-Bedingungen werden überprüft.  

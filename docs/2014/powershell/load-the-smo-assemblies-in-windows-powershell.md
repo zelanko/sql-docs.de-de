@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0767dd90db2411571c420d9439156dd195c72aac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b559003c3ee58e1220c1714e4ab26403cfdf11f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081356"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754130"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Laden der SMO-Assemblys in Windows PowerShell
   In diesem Thema wird beschrieben, wie die SQL Server Management Object-Assemblys (SMO) in Windows PowerShell-Skripts geladen werden, die nicht den SQL Server PowerShell-Anbieter verwenden.  
@@ -30,7 +29,7 @@ ms.locfileid: "48081356"
   
 -   Sie möchten SMO-Code portieren, der in einer anderen Sprache geschrieben wurde, die weder den Anbieter noch Cmdlets verwendet (z. B. C# oder Visual Basic).  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>Beispiel: Laden von SQL Server Management Objects  
+## <a name="example-loading-the-sql-server-management-objects"></a>Beispiel: Laden SQL Server Management Objects  
  Mit folgendem Code werden die SMO-Assemblys geladen:  
   
 ```  

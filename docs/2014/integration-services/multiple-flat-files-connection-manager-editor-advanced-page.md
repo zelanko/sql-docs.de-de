@@ -15,12 +15,12 @@ ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dda5cb294536354ed4bcc5003983d36f61167007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83e6aae7d4383440f148a8de1480cb8f1658e89c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143330"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542743"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>Verbindungs-Manager-Editor für mehrere Flatfiles (Seite Erweitert)
   Legen Sie mithilfe der Seite **Erweitert** im Dialogfeld **Verbindungs-Manager-Editor für mehrere Flatfiles** Eigenschaften wie den Datentyp und Trennzeichen für jede einzelne Spalte in den Textdateien fest, mit denen der Verbindungs-Manager für Flatfiles eine Verbindung herstellt.  
@@ -29,7 +29,7 @@ ms.locfileid: "48143330"
   
  Weitere Informationen zum Verbindungs-Manager für mehrere Flatfiles finden Sie unter [Multiple Flat Files Connection Manager](connection-manager/multiple-flat-files-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für den Verbindungs-Manager für mehrere Flatfiles im Workflow an. Der eingegebene Name wird im Bereich **Verbindungs-Manager** des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers angezeigt.  
   
@@ -44,17 +44,17 @@ ms.locfileid: "48143330"
 |**ColumnType**|Gibt an, ob eine Spalte getrennt ist, eine feste Breite hat bzw. einen unregelmäßigen rechten Rand aufweist. Diese Eigenschaft ist schreibgeschützt. Bei Dateien mit rechtem Flatterrand weisen alle Spalten mit Ausnahme der letzten eine feste Breite auf. Die letzte Spalte wird durch das Zeilentrennzeichen abgeschlossen.|  
 |**OutputColumnWidth**|Gibt an, welcher Wert als Anzahl von Bytes gespeichert werden soll; bei Unicode-Dateien wird dieser Wert als Zeichenanzahl angezeigt. Im Datenflusstask dient dieser Wert dem Festlegen der Breite der Ausgabespalte für die Flatfilequelle.<br /><br /> Hinweis: Im Objektmodell heißt diese Eigenschaft MaximumWidth.|  
 |**DataType**|Wählen Sie eine Option aus der Liste der verfügbaren Datentypen aus. Weitere Informationen finden Sie unter [Integration Services Datentypen](data-flow/integration-services-data-types.md).|  
-|**TextQualified**|Gibt an, ob Textdaten mit einem Textqualifiziererzeichen gekennzeichnet werden. Gültige Werte sind:<br /><br /> **True**: Die Textdaten in der Flatfile sind gekennzeichnet.<br /><br /> **False**: Die Textdaten in der Flatfile sind nicht gekennzeichnet.|  
+|**TextQualified**|Gibt an, ob Textdaten mit einem Textqualifiziererzeichen gekennzeichnet werden. Gültige Werte sind:<br /><br /> **"True"**: Die Textdaten in der Flatfile sind gekennzeichnet.<br /><br /> **"False"**: Die Textdaten in der Flatfile sind nicht gekennzeichnet.|  
 |**Name**|Geben Sie einen Spaltennamen an. Standardwert ist eine nummerierte Liste mit Spalten; Sie können jedoch einen eindeutigen, beschreibenden Namen auswählen.|  
 |**DataScale**|Gibt die Skala numerischer Daten an. Skala heißt in diesem Fall die Anzahl der Dezimalstellen. Weitere Informationen finden Sie unter [Integration Services Datentypen](data-flow/integration-services-data-types.md).|  
-|**ColumnDelimiter**|Wählen Sie eine Option aus der Liste der verfügbaren Spaltentrennzeichen aus. Dabei sollten Sie Spaltentrennzeichen auswählen, deren Auftreten als Zeichen im Text unwahrscheinlich ist. Bei Spalten fester Breite wird dieser Wert ignoriert.<br /><br /> **{CR}{LF}** – Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.<br /><br /> **{CR}** – Als Trennzeichen für Spalten dient ein Wagenrücklauf.<br /><br /> **{LF}** – Als Trennzeichen für Spalten dient ein Zeilenvorschub.<br /><br /> **Semikolon {;}** – Als Trennzeichen für Spalten dient ein Semikolon.<br /><br /> **Doppelpunkt {:}** – Als Trennzeichen für Spalten dient ein Doppelpunkt.<br /><br /> **Komma {,}** – Als Trennzeichen für Spalten dient ein Komma.<br /><br /> **Tabulator {t}** – Als Trennzeichen für Spalten dient ein Tabulator.<br /><br /> **Senkrechter Strich {&#124;}** – Als Trennzeichen für Spalten dient ein senkrechter Strich.|  
+|**ColumnDelimiter**|Wählen Sie eine Option aus der Liste der verfügbaren Spaltentrennzeichen aus. Dabei sollten Sie Spaltentrennzeichen auswählen, deren Auftreten als Zeichen im Text unwahrscheinlich ist. Bei Spalten fester Breite wird dieser Wert ignoriert.<br /><br /> **{CR}{LF}**: Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.<br /><br /> **{CR}**: Als Trennzeichen für Spalten dient ein Wagenrücklauf.<br /><br /> **{LF}**: Als Trennzeichen für Spalten dient ein Zeilenvorschub.<br /><br /> **Semikolon {;}**: Als Trennzeichen für Spalten dient ein Semikolon.<br /><br /> **Doppelpunkt {:}**:Als Trennzeichen für Spalten dient ein Doppelpunkt.<br /><br /> **Komma {,}**: Als Trennzeichen für Spalten dient ein Komma.<br /><br /> **Tabulator {t}**:Als Trennzeichen für Spalten dient ein Tabulator.<br /><br /> **Senkrechter Strich {&#124;}**: Als Trennzeichen für Spalten dient ein senkrechter Strich.|  
 |**DataPrecision**|Gibt die Präzision numerischer Daten an. Präzision heißt in diesem Fall die Anzahl der Stellen. Weitere Informationen finden Sie unter [Integration Services Datentypen](data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Gibt an, welcher Wert als Anzahl von Bytes gespeichert werden soll; bei Unicode-Dateien wird dieser Wert als Zeichenanzahl angezeigt. Bei mit Trennzeichen versehenen Spalten wird dieser Wert ignoriert.<br /><br /> **Hinweis:** Im Objektmodell heißt diese Eigenschaft ColumnWidth.|  
   
  **Neu**  
  Durch Klicken auf **Neu**fügen Sie eine neue Spalte hinzu. Die neue Spalten wird beim Klicken auf **Neu** standardmäßig am Ende der Liste hinzugefügt. Ferner sind für die Schaltfläche folgende, über die Dropdownliste auswählbare Optionen verfügbar.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Spalte hinzufügen**|Fügt am Ende der Liste eine neue Spalte hinzu.|  
 |**Einfügen vor**|Fügt vor der ausgewählten Spalte eine neue Spalte ein.|  
@@ -67,9 +67,9 @@ ms.locfileid: "48143330"
  Im Dialogfeld **Spaltentypen vorschlagen** können Sie die Beispieldaten in der ersten ausgewählten Datei auswerten, um Vorschläge für den Datentyp und die -länge der einzelnen Spalten zu erhalten. Weitere Informationen finden Sie unter [Referenz zur Benutzeroberfläche des Dialogfelds „Spaltentypen vorschlagen“](connection-manager/suggest-column-types-dialog-box-ui-reference.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
- [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite "Spalten"&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;für Preview&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)   
+ [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite „Spalten“&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite „Vorschau“&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

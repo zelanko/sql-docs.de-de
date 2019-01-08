@@ -10,15 +10,15 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 72c72dc551aa31dc22def397fb38fe09793478ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22530fafb9c41ec7bee87c43589f6eaba0fa3f70
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084510"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712461"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Erstellen systemintern kompilierter gespeicherter Prozeduren
-  Von systemintern kompilierten gespeicherten Prozeduren wird nicht die vollständige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Programmier- und -Abfrageoberfläche implementiert. Es gibt bestimmte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Konstrukte, die innerhalb systemintern kompilierter gespeicherter Prozeduren nicht verwendet werden können. Weitere Informationen finden Sie unter [unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren](..\in-memory-oltp\supported-features-for-natively-compiled-t-sql-modules.md).  
+  Von systemintern kompilierten gespeicherten Prozeduren wird nicht die vollständige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Programmier- und -Abfrageoberfläche implementiert. Es gibt bestimmte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Konstrukte, die innerhalb systemintern kompilierter gespeicherter Prozeduren nicht verwendet werden können. Weitere Informationen finden Sie unter [unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
  Allerdings gibt es auch mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen, die nur für systemintern kompilierte gespeicherte Prozeduren unterstützt werden:  
   
@@ -51,15 +51,15 @@ end
 go  
 ```  
   
- Im Codebeispiel `NATIVE_COMPILATION` gibt an, das von diesem [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur ist eine systemintern kompilierte gespeicherte Prozedur. Die folgenden Optionen sind erforderlich:  
+ Im Codebeispiel ist an `NATIVE_COMPILATION` erkennbar, dass diese gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur eine systemintern kompilierte gespeicherte Prozedur ist. Die folgenden Optionen sind erforderlich:  
   
 |Option|Description|  
 |------------|-----------------|  
-|`SCHEMABINDING`|Systemintern kompilierte gespeicherte Prozeduren müssen an das Schema der Objekte gebunden werden, auf die sie verweisen. Dies bedeutet, dass Tabellenverweise der Prozedur nicht gelöscht werden können. Tabellen, die in der Prozedur verwiesen wird, müssen ihre Schemaname und ein Platzhalter enthalten (\*) sind in Abfragen nicht zulässig. `SCHEMABINDING` wird nur für systemintern kompilierte gespeicherte Prozeduren in dieser Version unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|`SCHEMABINDING`|Systemintern kompilierte gespeicherte Prozeduren müssen an das Schema der Objekte gebunden werden, auf die sie verweisen. Dies bedeutet, dass Tabellenverweise der Prozedur nicht gelöscht werden können. Tabellen, die in der Prozedur verwiesen wird, müssen ihre Schemaname und ein Platzhalter enthalten (\*) sind in Abfragen nicht zulässig. `SCHEMABINDING` wird nur in dieser Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für systemintern kompilierte gespeicherte Prozeduren unterstützt.|  
 |`EXECUTE AS`|Systemintern kompilierte gespeicherte Prozeduren bieten keine Unterstützung für den standardmäßigen Ausführungskontext `EXECUTE AS CALLER`. Daher muss der Ausführungskontext angegeben werden. Die Optionen `EXECUTE AS OWNER`, `EXECUTE AS` *Benutzer*, und `EXECUTE AS SELF` werden unterstützt.|  
 |`BEGIN ATOMIC`|Der Text einer systemintern kompilierten gespeicherten Prozedur muss genau ein ATOMIC-Block sein. ATOMIC-Blöcke gewährleisten die unteilbare Ausführung der gespeicherten Prozedur. Wenn die Prozedur außerhalb des Kontexts einer aktiven Transaktion aufgerufen wird, wird eine neue Transaktion gestartet, für die am Ende des ATOMIC-Blocks ein Commit ausgeführt wird. ATOMIC-Blöcke in systemintern kompilierten gespeicherten Prozeduren weisen zwei erforderliche Optionen auf:<br /><br /> `TRANSACTION ISOLATION LEVEL`. installiert haben. Finden Sie unter [Isolationsstufen von Transaktionen](../../database-engine/transaction-isolation-levels.md) zu unterstützten Isolationsstufen.<br /><br /> `LANGUAGE`. installiert haben. Die Sprache der gespeicherten Prozedur muss auf eine der verfügbaren Sprachen bzw. einen der verfügbaren Sprachenaliase festgelegt werden.|  
   
- Bei `EXECUTE AS` und Windows-Anmeldungen kann ein Fehler aufgrund des Identitätswechsels auftreten, der über `EXECUTE AS` ausgeführt wird. Wenn ein Benutzerkonto die Windows-Authentifizierung verwendet, muss zwischen dem Dienstkonto, das für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz verwendet wird, und der Domäne der Windows-Anmeldung vollständige Vertrauenswürdigkeit bestehen. Wenn keine vollständige Vertrauenswürdigkeit vorliegt, wird die folgende Fehlermeldung zurückgegeben, wenn eine systemintern kompilierte gespeicherte Prozedur erstellt wird: Meldung 15404, Die Informationen über Windows NT-Gruppe oder -Benutzer 'username' konnten nicht abgerufen werden, Fehlercode 0x5.  
+ Bei `EXECUTE AS` und Windows-Anmeldungen kann ein Fehler aufgrund des Identitätswechsels auftreten, der über `EXECUTE AS` ausgeführt wird. Wenn ein Benutzerkonto die Windows-Authentifizierung verwendet, muss zwischen dem Dienstkonto, das für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz verwendet wird, und der Domäne der Windows-Anmeldung vollständige Vertrauenswürdigkeit bestehen. Wenn keine vollständige Vertrauensstellung vorhanden ist, wird die folgende Fehlermeldung zurückgegeben, wenn eine systemintern kompilierte Prozedur gespeicherte: Meldung 15404, konnten Informationen zu Windows NT-Gruppe oder-Benutzer 'Username', Fehlercode 0 x 5 nicht abgerufen werden.  
   
  Verwenden Sie eine der folgenden Schritte aus, um diesen Fehler zu beheben:  
   

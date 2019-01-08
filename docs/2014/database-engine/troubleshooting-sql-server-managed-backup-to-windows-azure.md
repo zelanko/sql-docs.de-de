@@ -10,12 +10,12 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4feb316cf43524fa84734d85bf62631833e26d0
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120067"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522531"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Problembehandlung für SQL Server Managed Backup für Windows Azure
   Dieses Thema enthält zudem Informationen zu den Aufgaben und Tools, die Sie verwenden können, um Fehler bei [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Vorgängen zu beheben.  
@@ -23,7 +23,7 @@ ms.locfileid: "49120067"
 ## <a name="overview"></a>Übersicht  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verfügt über integrierte Prüfungen und Fehlerbehebungen, d. h., in vielen Fällen kümmert sich der [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Prozess selbst um interne Fehler.  
   
- Ein Beispiel für einen solchen Fall ist ein Löschen einer Sicherungsdatei mit dem Ergebnis einer Unterbrechung in der Protokollkette, was die Wiederherstellbarkeit beeinträchtigt – [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] identifiziert die Unterbrechung in der Protokollkette und plant eine sofort auszuführende Sicherung. Nichtsdestotrotz sollten Sie den Status überwachen und mögliche Fehler, die ein manuelles Eingreifen erfordern, entsprechend behandeln.  
+ Beispiel für einen solchen Fall ist das Löschen einer Sicherungsdatei mit dem Ergebnis einer Unterbrechung des Protokolls verketten, was die wiederherstellbarkeit beeinträchtigt – [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] identifiziert die Unterbrechung der Protokollkette und eine sofort auszuführende Sicherung geplant wird. Nichtsdestotrotz sollten Sie den Status überwachen und mögliche Fehler, die ein manuelles Eingreifen erfordern, entsprechend behandeln.  
   
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] protokolliert Ereignisse und Fehler anhand gespeicherter Systemprozeduren, Systemsichten und erweiterter Ereignisse. Systemsichten und gespeicherte Prozeduren stellen [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Konfigurationsinformationen, Status von geplanten Sicherungen sowie Fehler bereit, die von erweiterten Ereignissen aufgezeichnet wurden. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendet erweiterte Ereignisse zur Aufzeichnung von Fehlern für die Fehlerbehebung. Zusätzlich zur Ereignisprotokollierung stellen die intelligenten Administrations-Richtlinien von SQL Server einen Integritätsstatus bereit, der von einem E-Mail-Benachrichtigungs-Auftrag zur Bereitstellung von Benachrichtigungen zu Fehlern und Problemen verwendet wird. Weitere Informationen finden Sie unter [Monitor SQL Server Managed Backup für Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
@@ -42,29 +42,29 @@ ms.locfileid: "49120067"
 ### <a name="common-causes-of-errors"></a>Häufige Fehlerursachen  
  Es folgt eine Liste häufiger Ursachen von Fehlern:  
   
-1.  **Änderungen an den SQL-Anmeldeinformationen:** , wenn der Name der Anmeldeinformationen von verwendet [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] geändert oder gelöscht wird, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ist nicht möglich, Sicherungen zu erstellen. Die Änderung sollte auf die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Konfigurationseinstellungen angewendet werden.  
+1.  **Änderungen an SQL-Anmeldeinformationen:** Wenn der Name der Anmeldeinformationen durch verwendet [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] geändert oder gelöscht wird, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ist nicht möglich, Sicherungen zu erstellen. Die Änderung sollte auf die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Konfigurationseinstellungen angewendet werden.  
   
-2.  **Änderungen an den Speicherzugriff-Schlüsselwerten:** Wenn der Speicher-Schlüsselwerte für das Windows Azure-Konto geändert werden, aber SQL-Anmeldeinformationen wird nicht mit den neuen Werten aktualisiert [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] schlägt fehl, wenn in den Speicher, Authentifizierung und ein Fehler auftritt, für die Sicherung Datenbanken, die so konfiguriert, dass dieses Konto verwenden.  
+2.  **Änderungen an den Speicherzugriff-Schlüsselwerten:** Wenn der Speicher-Schlüsselwerte für das Windows Azure-Konto geändert werden, aber SQL-Anmeldeinformationen wird nicht mit den neuen Werten aktualisiert [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] schlägt fehl, wenn in den Speicher zu authentifizieren und ein Fehler auftritt, zum Sichern von Datenbanken so konfiguriert, dass dieses Konto verwenden.  
   
-3.  **Änderungen an Windows Azure Storage-Konto:** löschen oder Umbenennen des Speicherkontos ohne entsprechende Änderung der SQL-Anmeldeinformationen führt [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] fehlschlägt und keine Sicherungen vorgenommen werden. Wenn Sie ein Speicherkonto löschen, müssen Sie sicherstellen, dass die Datenbanken mit gültigen Speicherkontoinformationen neu konfiguriert werden. Wenn ein Speicherkonto umbenannt oder die Schlüsselwerte geändert werden, stellen Sie sicher, dass diese Änderungen sich entsprechend in den von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendeten SQL-Anmeldeinformationen widerspiegeln.  
+3.  **Änderungen an Windows Azure Storage-Konto:** Löschen oder Umbenennen des Speicherkontos ohne entsprechende Änderung der SQL-Anmeldeinformationen führt [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] fehlschlägt und keine Sicherungen vorgenommen werden. Wenn Sie ein Speicherkonto löschen, müssen Sie sicherstellen, dass die Datenbanken mit gültigen Speicherkontoinformationen neu konfiguriert werden. Wenn ein Speicherkonto umbenannt oder die Schlüsselwerte geändert werden, stellen Sie sicher, dass diese Änderungen sich entsprechend in den von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendeten SQL-Anmeldeinformationen widerspiegeln.  
   
 4.  **Änderungen an Datenbankeigenschaften:** Änderungen an Wiederherstellungsmodellen oder Ändern des Namens kann dazu führen, dass Sicherungen fehlschlagen.  
   
-5.  **Änderungen an Wiederherstellungsmodell:** , wenn das Wiederherstellungsmodell der Datenbank von der vollständigen oder massenprotokollierten einfach geändert wird, Sicherungen angehalten und die Datenbanken übersprungen werden, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Weitere Informationen finden Sie unter [SQL Server Managed Backup für Windows Azure: Interoperabilität und Koexistenz](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
+5.  **Änderungen am Wiederherstellungsmodell:** Wenn das Wiederherstellungsmodell der Datenbank von der vollständigen oder massenprotokollierten einfach geändert wird, Sicherungen angehalten und die Datenbanken übersprungen werden, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Weitere Informationen finden Sie unter [SQL Server Managed Backup für Windows Azure: Interoperabilität und Koexistenz](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
 ### <a name="most-common-error-messages-and-solutions"></a>Häufigste Fehlermeldungen und Lösungen  
   
 1.  **Fehler beim Aktivieren oder Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     Fehler: "Fehler beim Zugriff auf Speicher-URL .... Geben Sie gültige SQL-Anmeldeinformationen..." : Sie können diese und andere ähnliche Fehler werden auf der SQL-Anmeldeinformationen finden Sie unter.  Lesen Sie in solchen Fällen den Namen der SQL-Anmeldeinformationen, die Sie angegeben haben, und die Informationen in den SQL-Anmeldeinformationen den Namen des Speicherkontos und den speicherzugriffsschlüssel gespeichert, und stellen Sie sicher, dass sie aktuell und gültig sind.  
+     Error: " Fehler beim Zugriff auf die Speicher-URL... Geben Sie gültige SQL-Anmeldeinformationen...": Sie können diese und andere ähnliche Fehler werden auf der SQL-Anmeldeinformationen finden Sie unter.  Lesen Sie in solchen Fällen den Namen der SQL-Anmeldeinformationen, die Sie angegeben haben, und die Informationen in die SQL-Anmeldeinformationen - der Name des Speicherkontos und den speicherzugriffsschlüssel gespeichert, und stellen Sie sicher, dass sie aktuell und gültig sind.  
   
-     Fehler: "... Konfigurieren Sie die Datenbank... nicht möglich, da es sich um eine Systemdatenbank handelt": Dieser Fehler wird angezeigt, wenn Sie versuchen, aktivieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Systemdatenbank.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] unterstützt keine Sicherungen von Systemdatenbanken.  Um die Sicherung einer Systemdatenbank zu konfigurieren, verwenden Sie andere SQL Server-Sicherungstechnologien, z. B. Wartungspläne.  
+     Fehler: "... kann die Datenbank... nicht konfigurieren, da es sich um eine Systemdatenbank handelt": Dieser Fehler wird angezeigt, wenn Sie versuchen, aktivieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Systemdatenbank.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] unterstützt keine Sicherungen von Systemdatenbanken.  Um die Sicherung einer Systemdatenbank zu konfigurieren, verwenden Sie andere SQL Server-Sicherungstechnologien, z. B. Wartungspläne.  
   
-     Fehler: "... Geben Sie eine Beibehaltungsdauer..." : Sie können Fehler für den Beibehaltungszeitraum angezeigt, wenn Sie entweder nicht einen Aufbewahrungszeitraum für die Datenbank oder Instanz angegeben haben, wenn Sie diese Werte zum ersten Mal konfigurieren. Es wird außerdem ein Fehler angezeigt, wenn Sie einen anderen Wert als eine Zahl zwischen 1 und 30 angeben. Der zulässige Wert für die Beibehaltungsdauer ist eine Zahl zwischen 1 und 30.  
+     Fehler: "... Geben Sie einen Aufbewahrungszeitraum...": Fehler in Bezug auf die Aufbewahrungsdauer können angezeigt werden, wenn Sie entweder nicht einen Aufbewahrungszeitraum für die Datenbank oder Instanz angegeben haben, wenn Sie diese Werte zum ersten Mal konfigurieren. Es wird außerdem ein Fehler angezeigt, wenn Sie einen anderen Wert als eine Zahl zwischen 1 und 30 angeben. Der zulässige Wert für die Beibehaltungsdauer ist eine Zahl zwischen 1 und 30.  
   
 2.  **E-Mail-Benachrichtigungsfehler:**  
   
-     Fehler: "Database Mail ist nicht aktiviert..." – Sie werden dieser Fehler angezeigt, wenn Sie die e-Mail-Benachrichtigungen aktivieren, aber Database Mail ist für die Instanz nicht konfiguriert. Sie müssen Datenbank-E-Mail für die Instanz konfigurieren, um Benachrichtigungen zum Integritätsstatus von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] empfangen zu können. Informationen zum Aktivieren von Datenbank-e-Mails finden Sie unter [Konfigurieren von Datenbank-e-Mails](../relational-databases/database-mail/configure-database-mail.md). Sie müssen außerdem den SQL Server-Agent aktivieren, um Datenbank-E-Mail für Benachrichtigungen verwenden zu können. Weitere Informationen finden Sie unter [Vorbemerkungen](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
+     Error: "Datenbank-e-Mails ist nicht aktiviert...": Dieser Fehler wird angezeigt, wenn Sie die e-Mail-Benachrichtigungen aktivieren, aber Database Mail ist für die Instanz nicht konfiguriert. Sie müssen Datenbank-E-Mail für die Instanz konfigurieren, um Benachrichtigungen zum Integritätsstatus von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] empfangen zu können. Informationen zum Aktivieren von Datenbank-e-Mails finden Sie unter [Konfigurieren von Datenbank-e-Mails](../relational-databases/database-mail/configure-database-mail.md). Sie müssen außerdem den SQL Server-Agent aktivieren, um Datenbank-E-Mail für Benachrichtigungen verwenden zu können. Weitere Informationen finden Sie unter [Vorbemerkungen](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
   
      Es folgt eine Liste der Fehlernummern, die möglicherweise angezeigt werden und die E-Mail-Benachrichtigungen zugeordnet sind:  
   
@@ -76,9 +76,9 @@ ms.locfileid: "49120067"
   
 3.  **Verbindungsfehler:**  
   
-    -   **Fehler im Zusammenhang mit SQL-Konnektivität:** diese Fehler treten auf, wenn eine Verbindung mit SQL Server-Instanz Probleme vorliegen. Dieser Fehlertyp wird durch erweiterte Ereignisse über den Adminkanal verfügbar gemacht. Die folgenden beiden erweiterten Ereignisse können bei Fehlern im Zusammenhang mit dieser Art von Verbindungsproblemen auftreten:  
+    -   **Fehler im Zusammenhang mit der SQL-Konnektivität:** Diese Fehler treten auf, wenn eine Verbindung mit SQL Server-Instanz Probleme vorliegen. Dieser Fehlertyp wird durch erweiterte Ereignisse über den Adminkanal verfügbar gemacht. Die folgenden beiden erweiterten Ereignisse können bei Fehlern im Zusammenhang mit dieser Art von Verbindungsproblemen auftreten:  
   
-         FileRetentionAdminXEvent mit event_type = SqlError. Ausführliche Informationen zu diesem Fehler finden Sie im Ereignis unter error_code, error_message und stack_trace. error_code entspricht der SqlException-Fehlernummer.  
+         FileRetentionAdminXEvent mit event_type = SqlError. Ausführliche Informationen zu diesem Fehler finden Sie im Ereignis unter error_code, error_message und stack_trace. Error_code entspricht der SqlException Fehlernummer.  
   
          SmartBackupAdminXevent mit folgenden Meldungspräfixen:  
   
@@ -101,7 +101,7 @@ ms.locfileid: "49120067"
 ### <a name="troubleshooting-system-issues"></a>Behandlung von Systemproblemen  
  Es folgen einige Szenarien, wenn es ein Problem mit dem System (SQL Server, SQL Server-Agent) und den Auswirkungen auf [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] gibt:  
   
--   **Sqlservr.exe reagiert nicht mehr oder funktioniert nicht bei [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ausgeführt wird:** Wenn SQL Server nicht mehr funktioniert, SQL Agent ordnungsgemäß heruntergefahren, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] beendet und die Ereignisse werden auch in der Datei SQL Agent.out protokolliert.  
+-   **Sqlservr.exe reagiert nicht mehr oder funktioniert nicht bei [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ausgeführt wird:** Wenn SQL Server nicht funktioniert mehr, SQL Agent ordnungsgemäß heruntergefahren, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] beendet und die Ereignisse werden auch in der Datei SQL Agent.out protokolliert.  
   
      Wenn SQL Server nicht mehr reagiert, werden Ereignisse im Adminkanal protokolliert.  Ein Beispiel für das Ereignisprotokoll:  
   

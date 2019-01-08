@@ -30,12 +30,12 @@ ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 64473c9163e63c6add18897edb87d48cef3922c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ab56815fa36f23a15bc646c69094c3ca2f5fa3e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816308"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204379"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>Loading Converted Database Objects into SQLServer (AccessToSQL)
 Nachdem Sie den Zugriff auf Datenbankobjekte, konvertiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, laden die daraus resultierende Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Sie können entweder SSMA, die die Objekte zu erstellen, oder Sie können Skripts für die Objekte und führen Sie die Skripts selbst. Darüber hinaus SSMA können Sie die Metadaten mit den eigentlichen Inhalt der aktualisieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbank.  
@@ -130,9 +130,9 @@ Sie können ein Skript oder einzelne Anweisungen in ausführen [!INCLUDE[ssManSt
   
 4.  Um einen Satz von Anweisungen auszuführen, wählen Sie die Anweisungen im Abfrage-Editor-Fenster, und drücken Sie dann die **F5** Schlüssel.  
   
-Weitere Informationen dazu, wie Sie den Abfrage-Editor verwenden, um Skripts auszuführen, finden Sie unter "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+Weitere Informationen dazu, wie Sie den Abfrage-Editor verwenden, um Skripts auszuführen, finden Sie unter " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
-Sie können Skripts auch über die Befehlszeile ausführen, mit der **Sqlcmd** -Hilfsprogramm und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Weitere Informationen zu **Sqlcmd**, finden Sie unter "Hilfsprogramms" Sqlcmd"" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent finden Sie unter "Automatisieren von Verwaltungsaufgaben ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent)" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+Sie können Skripts auch über die Befehlszeile ausführen, mit der **Sqlcmd** -Hilfsprogramm und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Weitere Informationen zu **Sqlcmd**, finden Sie unter "Hilfsprogramms" Sqlcmd"" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent finden Sie unter "Automatisieren von Verwaltungsaufgaben ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent)" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 ## <a name="securing-objects-in-sql-server"></a>Sichern die Objekte in SQLServer  
 Nachdem Sie die konvertierten Datenbankobjekten in geladen haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Sie können die GRANT- und deny-Berechtigungen für diese Objekte. Es ist eine gute Idee, die vor der Migration dazu Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen zum Schützen von in Objekten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter "Security Überlegungen zu Datenbanken und Datenbankanwendungen" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  

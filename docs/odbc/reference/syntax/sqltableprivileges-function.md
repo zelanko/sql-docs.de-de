@@ -20,16 +20,16 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 099582fa557d9e970db3b38c4fb95ae677bb5274
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1b3a3420ad882136b13b131938169dbdb224bd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678318"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204079"
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ODBC  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLTablePrivileges** gibt eine Liste von Tabellen und die Berechtigungen, die jeder Tabelle zugeordneten zurück. Der Treiber gibt zurück, die Informationen, die als Resultset auf der angegebenen Anweisung.  
@@ -130,7 +130,7 @@ SQLRETURN SQLTablePrivileges(
 |TABLE_NAME (ODBC 1.0)|3|Varchar, die nicht NULL|Tabellenname.|  
 |DER BERECHTIGENDE (ODBC 1.0)|4|Varchar|Name des Benutzers, der die Berechtigung gewährt werden soll; NULL, wenn Sie mit der Datenquelle nicht anwendbar.<br /><br /> Für alle Zeilen in denen der Wert in der Spalte für die Empfänger der Besitzer des Objekts ist, werden die GRANTOR-Spalte "_SYSTEM".|  
 |EMPFÄNGER (ODBC 1.0)|5|Varchar, die nicht NULL|Der Name des Benutzers, dem die Berechtigung erteilt wurde.|  
-|BERECHTIGUNGEN (ODBC 1.0)|6|Varchar, die nicht NULL|Die Table-Berechtigung. Dabei kann es sich um eine der folgenden Werte oder die Berechtigungen einer Daten-datenquellenspezifischen sein.<br /><br /> Option: Der Empfänger ist zulässig, Daten für eine oder mehrere Spalten der Tabelle abgerufen werden.<br /><br /> INSERT: Einzufügenden neue Zeilen mit Daten für eine oder mehrere Spalten in die Tabelle ist der Empfänger zulässig.<br /><br /> UPDATE: Der Empfänger ist zulässig, um die Daten in einer oder mehreren Spalten der Tabelle aktualisieren.<br /><br /> Löschen: Der Empfänger ist zulässig, um Zeilen mit Daten aus der Tabelle zu löschen.<br /><br /> Verweise: Der Empfänger ist zum Verweisen auf eine oder mehrere Spalten der Tabelle eine Einschränkung zulässig (z. B. einen eindeutigen, referenzielle, oder eine Tabelle, die check-Einschränkung).<br /><br /> Der Bereich der Aktion, die den Empfänger durch ein bestimmtes Tabellenprivileg zugelassen ist datenquellenabhängig. Beispielsweise kann die UPDATE-Privileg der GRANTEE aktualisieren alle Spalten in einer Tabelle für eine Datenquelle und nur die Spalten, die für die der berechtigende (Grantor) für eine andere Datenquelle die UPDATE-Privileg besitzt.|  
+|BERECHTIGUNGEN (ODBC 1.0)|6|Varchar, die nicht NULL|Die Table-Berechtigung. Dabei kann es sich um eine der folgenden Werte oder die Berechtigungen einer Daten-datenquellenspezifische sein.<br /><br /> WÄHLEN SIE AUS: Der Empfänger ist zum Abrufen von Daten für eine oder mehrere Spalten der Tabelle zulässig.<br /><br /> FÜGEN SIE EIN: Der Empfänger ist zulässig, um neue Zeilen, die mit den Daten für eine oder mehrere Spalten in die Tabelle einzufügen.<br /><br /> UPDATE: Der Empfänger ist zulässig, um die Daten in einer oder mehreren Spalten der Tabelle zu aktualisieren.<br /><br /> LÖSCHEN: Der Empfänger ist zulässig, um Zeilen mit Daten aus der Tabelle zu löschen.<br /><br /> VERWEISE: Der Empfänger ist zum Verweisen auf eine oder mehrere Spalten der Tabelle eine Einschränkung zulässig (z. B. einen eindeutigen, referenzielle, oder eine Tabelle, die check-Einschränkung).<br /><br /> Der Bereich der Aktion, die den Empfänger durch ein bestimmtes Tabellenprivileg zugelassen ist datenquellenabhängig. Beispielsweise kann die UPDATE-Privileg der GRANTEE aktualisieren alle Spalten in einer Tabelle für eine Datenquelle und nur die Spalten, die für die der berechtigende (Grantor) für eine andere Datenquelle die UPDATE-Privileg besitzt.|  
 |IS_GRANTABLE (ODBC 1.0)|7|Varchar|Gibt an, ob der Empfänger berechtigt ist, auf die Berechtigung, anderen Benutzern zu gewähren. "YES", "Nein", oder NULL, wenn unbekannt oder nicht anwendbar ist, mit der Datenquelle.<br /><br /> Eine Berechtigung ist die Berechtigung gewährt werden kann oder keine erteilbaren, aber nicht beides. Das Resultset zurückgegebenes **SQLColumnPrivileges** enthält niemals zwei Zeilen, die für die alle Spalten außer der IS_GRANTABLE-Spalte den gleichen Wert enthalten.|  
   
 ## <a name="code-example"></a>Codebeispiel  

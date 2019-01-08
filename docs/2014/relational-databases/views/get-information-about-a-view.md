@@ -21,12 +21,12 @@ ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb169a7054a5b93bd923bc989baf95f5d9e22ce0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140340"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528443"
 ---
 # <a name="get-information-about-a-view"></a>Abrufen von Informationen zu einer Sicht
   Sie erhalten Informationen zur Definition oder den Eigenschaften einer Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]. Manchmal ist es erforderlich, die Definition einer Sicht anzuzeigen, um zu verstehen, wie die Daten in der Sicht aus den Quelltabellen abgeleitet werden, oder um die durch die Sicht definierten Daten anzuzeigen.  
@@ -38,7 +38,7 @@ ms.locfileid: "48140340"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Informationen zu einer Sicht rufen Sie ab mit:**  
   
@@ -46,14 +46,14 @@ ms.locfileid: "48140340"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Für die Verwendung von `sp_helptext` zum Zurückgeben der Definition einer Sicht ist die Mitgliedschaft in der Rolle **Öffentlich** erforderlich. Für die Verwendung von `sys.sql_expression_dependencies` zur Suche aller Abhängigkeiten von einer Sicht sind die Berechtigung VIEW DEFINITION für die Datenbank und die Berechtigung SELECT auf `sys.sql_expression_dependencies` für die Datenbank erforderlich. Systemobjektdefinitionen, wie die in SELECT OBJECT_DEFINITION zurückgegebenen Systemobjektdefinitionen, sind öffentlich sichtbar.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Abrufen von Sichteigenschaften mit Objekt-Explorer  
   

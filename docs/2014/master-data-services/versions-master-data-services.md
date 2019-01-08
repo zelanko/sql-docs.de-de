@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
@@ -16,12 +15,12 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5003667b952e927454e5674538d0b40fab577aa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f99012be602f80279826de0446df006ff4e69f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190914"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778392"
 ---
 # <a name="versions-master-data-services"></a>Versionen (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie mehrere Versionen der Masterdaten innerhalb eines Modells erstellen. Versionen können gesperrt werden, während Sie die Daten überprüfen, und für Versionen kann ein Commit ausgeführt werden, nachdem die Daten überprüft wurden. Versionen mit ausgeführtem Commit bilden einen überwachbaren Datensatz mit Änderungen. Jede erstellte Version umfasst sämtliche Elemente, Attributwerte, Hierarchielemente, Hierarchiebeziehungen und Auflistungen für das Modell.  
@@ -48,7 +47,7 @@ ms.locfileid: "48190914"
   
 1.  Eine Anfangsversion wird automatisch erstellt, wenn Sie ein Modell anlegen und die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank mit den Masterdaten des Unternehmens auffüllen. Auf der Grundlage von Berechtigungen können Benutzer dann bei Bedarf Änderungen an dieser Version vornehmen.  
   
-2.  Wenn Sie ein Commit für eine Modellversion ausführen möchten, sperren Sie die Version, sodass nur Modelladministratoren die Daten aktualisieren können. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md). Wenn Benachrichtigungen konfiguriert sind, wird jedes Mal eine E-Mail-Benachrichtigung an Modelladministratoren gesendet, wenn sich der Status der Version ändert. Weitere Informationen finden Sie unter [Konfigurieren von E-Mail-Benachrichtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md).  
+2.  Wenn Sie ein Commit für eine Modellversion ausführen möchten, sperren Sie die Version, sodass nur Modelladministratoren die Daten aktualisieren können. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen. Wenn Benachrichtigungen konfiguriert sind, wird jedes Mal eine E-Mail-Benachrichtigung an Modelladministratoren gesendet, wenn sich der Status der Version ändert. Weitere Informationen finden Sie unter [Konfigurieren von E-Mail-Benachrichtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md).  
   
 3.  Wenden Sie Geschäftsregeln auf die Daten der gesperrten Version an und analysieren Sie alle Überprüfungsprobleme. Falls erforderlich können Sie fehlende Informationen einfügen oder die Transaktion, die das Problem verursacht hat, rückgängig machen. Darüber hinaus können Sie die Version entsperren, damit Benutzer Änderungen vornehmen können.  
   
@@ -73,11 +72,11 @@ ms.locfileid: "48190914"
 |Ändern Sie den Namen einer vorhandenen Version.|[Ändern eines Versionsnamens &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
 |Sperren Sie eine Version, sodass nur Administratoren die Daten bearbeiten können.|[Sperren einer Version &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
 |Entsperren Sie eine Version, damit Benutzer die Daten bearbeiten können.|[Entsperren einer Version &#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
-|Führen Sie für eine Version einen Commit aus, nachdem alle Daten überprüft wurden.|[Ausführen eines Commits &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
+|Führen Sie für eine Version einen Commit aus, nachdem alle Daten überprüft wurden.|[Durchführen eines Commits für eine Version &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
 |Erstellen Sie ein neues Flag, um eine Version zu markieren.|[Erstellen eines Versionsflags &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
 |Ändern Sie den Namen eines vorhandenen Versionsflags.|[Ändern des Namens eines Versionsflags &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
 |Weisen Sie einer Version ein vorhandenes Flag zu.|[Zuweisen eines Flags zu einer Version &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|Erstellen Sie eine neue Kopie einer vorhandenen Version.|[Kopieren einer Datenbankversion, &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
+|Erstellen Sie eine neue Kopie einer vorhandenen Version.|[Kopieren einer Version &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
 |Löschen Sie eine vorhandene Version.|[Löschen einer Version &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  

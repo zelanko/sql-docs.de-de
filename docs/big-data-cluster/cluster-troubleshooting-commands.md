@@ -1,18 +1,20 @@
 ---
-title: Verwenden Sie "kubectl", um eine SQL Server-big Data-Cluster überwachen | Microsoft-Dokumentation
+title: Verwenden Sie "kubectl" für die Überwachung/Problembehandlung
+titleSuffix: SQL Server 2019 big data clusters
 description: In diesem Artikel bieten nützliche Kubectl-Befehle für die Überwachung und Problembehandlung für eine SQL Server-2019 big Data-Cluster (Vorschau).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/15/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a47726e86bd1f10cda4db55bec6eac995344da38
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.custom: seodec18
+ms.openlocfilehash: 0d034058f7cc187caa373f3bdae2569d091c3977
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356594"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030564"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>"Kubectl"-Befehle zur Überwachung und Problembehandlung von SQL Server-big Data-Cluster
 
@@ -189,7 +191,7 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> Wenn Sie die folgende Fehlermeldung angezeigt: *kann nicht für das Lauschen an Port 8001: alle Listener konnte nicht erstellt die folgenden Fehler: nicht möglich, um Listener zu erstellen: Fehler Lauschen tcp4 127.0.0.1:8001: > binden: nur eine Verwendung der einzelnen Socket-Adressen (Protokoll/Netzwerk Normalerweise ist die Adresse und Anschluss) zulässig. So erstellen Sie Listener kann nicht: Fehler Lauschen tcp6: Adresse [[:: 1]]: 8001: fehlende Port in der > Behandeln von Fehlern: kann nicht auf die angeforderten Ports überwacht werden: [{8001 9090}]*, stellen Sie sicher, dass Sie nicht gestartet haben das Dashboard bereits von einem anderen Fenster.
+> Wenn Sie den folgenden Fehler erhalten: *Kann nicht für das Lauschen an Port 8001: Alle Listener Fehler beim Erstellen der folgende Fehler auf: So erstellen Sie Listener kann nicht: Fehler beim Lauschen tcp4 127.0.0.1:8001: > binden: Nur eine Verwendung der einzelnen Socket-Adressen (Protokoll/Netzwerk-Adresse/Port) ist normalerweise zulässig. So erstellen Sie Listener kann nicht: Fehler beim Lauschen tcp6: Adresse [[:: 1]]: 8001: Port in der fehlende > Behandeln von Fehlern: Kann nicht auf die angeforderten Ports überwacht werden: [{8001 9090}]*, stellen Sie sicher, dass Sie nicht gestartet haben das Dashboard bereits von einem anderen Fenster.
 
 Wenn Sie das Dashboard in Ihrem Browser starten, erhalten Sie möglicherweise die Berechtigung Warnungen aufgrund von RBAC in AKS-Clustern standardmäßig aktiviert und das Dienstkonto, das Dashboard ein, die keine ausreichende Berechtigungen zum Zugriff auf alle Ressourcen (z. B.  *Pods ist nicht zulässig: Benutzer "System: Serviceaccount:kube-System: Kubernetes-Dashboard" Pods im Namespace "Default" kann nicht aufgelistet werden*). Führen Sie den folgenden Befehl aus, um die erforderlichen Berechtigungen zum erteilen `kubernetes-dashboard`, und klicken Sie dann das Dashboard neu zu starten:
 

@@ -5,8 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.webconfigpg.f1
@@ -14,12 +13,12 @@ ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7dc4b92d3141db31271cf6977964d01eb51e5127
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f04a620a16ae2389412280ebd6b6c1bdacb32d5e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757601"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776992"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Webkonfiguration (Seite im Konfigurations-Manager für Master Data Sevices)
 
@@ -49,7 +48,7 @@ ms.locfileid: "47757601"
 |------------------|-----------------|  
 |**Integration in Data Quality Services aktivieren**|Aktivieren Sie diese Option, um die in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. Weitere Informationen finden Sie unter [Aktivieren der Data Quality Services-Integration in Master Data Services](../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md).|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Master Data Services – Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md) [Webanwendungsanforderungen & #40; Master Data Services & #41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
  [Erstellen einer Master Data Manager-Webanwendung &#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   

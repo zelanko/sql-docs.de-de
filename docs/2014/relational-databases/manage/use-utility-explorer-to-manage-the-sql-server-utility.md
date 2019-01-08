@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 031efcdc80028e8366a2e19827f180b78a21af0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124030"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759422"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Verwenden des Hilfsprogramm-Explorers zum Verwalten des SQL Server-Hilfsprogramms
   Als Komponente von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]stellt der Hilfsprogramm-Explorer eine Verbindung mit [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanzen her, um im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm eine Strukturansicht aller Objekte bereitzustellen. Der Inhaltsbereich des Hilfsprogramm-Explorers bietet verschiedene Möglichkeiten zur Anzeige von Zusammenfassungsdaten und detaillierten Daten zum Status verwalteter Instanzen von SQL Server. Der Hilfsprogramm-Explorer stellt auch eine Benutzeroberfläche für die Anzeige und Verwaltung von Richtliniendefinitionen bereit. Die Funktionen des Hilfsprogramm-Explorers können sich je nach den Objekten im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm geringfügig unterscheiden; sie umfassen in der Regel jedoch die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm verwalteten Objekte, Daten und Richtlinien. Weitere Informationen finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](sql-server-utility-features-and-tasks.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "48124030"
 ### <a name="sql-server-utility-navigation-pane"></a>Navigationsbereich des SQL Server-Hilfsprogramms  
  Der Navigationsbereich des Hilfsprogramm-Explorers stellt eine Strukturansicht der Objekte im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm bereit und gruppiert sie nach Steuerungspunkten für das Hilfsprogramm. Um Ordner zu erweitern, klicken Sie auf das Pluszeichen (+), oder doppelklicken Sie auf den UCP-Namen im Navigationsbereich des Hilfsprogramm-Explorers. Klicken Sie mit der rechten Maustaste auf Ordner oder Objekte, um allgemeine Aufgaben auszuführen. Die Strukturansicht enthält die folgenden Knoten:  
   
--   Der Knoten der obersten Ebene in der Strukturansicht ist der Steuerungspunkt für das Hilfsprogramm (UCP). Der Knotenname setzt sich wie folgt zusammen: "Hilfsprogrammname" (Computername\UCP-Instanzname). Wenn noch kein UCP eingerichtet wurde, müssen Sie einen erstellen. Wenn Sie nicht mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm verbunden sind, müssen Sie eine Verbindung mit einem Hilfsprogramm herstellen. Weitere Informationen finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](sql-server-utility-features-and-tasks.md). Klicken Sie in der Strukturansicht auf den UCP-Namen, um den Inhaltsbereich des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramm-Explorers mit Daten in der Dashboardsicht aufzufüllen. Weitere Informationen finden Sie unter [ Dashboard des Hilfsprogramms &#40;SQL Server-Hilfsprogramm&#41;](../../database-engine/utility-dashboard-sql-server-utility.md).  
+-   Der Knoten der obersten Ebene in der Strukturansicht ist der Steuerungspunkt für das Hilfsprogramm (UCP). Der Name des Knotens wird als erstellt: "Utility_Name" (ComputerName\UCP_instance_name). Wenn noch kein UCP eingerichtet wurde, müssen Sie einen erstellen. Wenn Sie nicht mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm verbunden sind, müssen Sie eine Verbindung mit einem Hilfsprogramm herstellen. Weitere Informationen finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](sql-server-utility-features-and-tasks.md). Klicken Sie in der Strukturansicht auf den UCP-Namen, um den Inhaltsbereich des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramm-Explorers mit Daten in der Dashboardsicht aufzufüllen. Weitere Informationen finden Sie unter [ Dashboard des Hilfsprogramms &#40;SQL Server-Hilfsprogramm&#41;](../../database-engine/utility-dashboard-sql-server-utility.md).  
   
      Klicken Sie mit der rechten Maustaste auf den UCP-Knoten, um Daten im Dashboard zu aktualisieren.  
   
@@ -67,6 +67,6 @@ ms.locfileid: "48124030"
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](sql-server-utility-features-and-tasks.md)   
  [Konfigurieren von Integritätsrichtlinien &#40;SQL Server-Hilfsprogramm&#41;](configure-health-policies-sql-server-utility.md)   
- [Objekt-Explorers](../../ssms/object/object-explorer.md)  
+ [Objekt-Explorer](../../ssms/object/object-explorer.md)  
   
   

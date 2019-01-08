@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906400"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984101"
 ---
 # <a name="dynamic-management-views-dmvs"></a>Dynamische Verwaltungssichten (DMVs) 
 
@@ -34,7 +34,7 @@ SELECT * FROM $System.<schemaRowset>
   
 ## <a name="query-syntax"></a>Abfragesyntax
 
-Die Abfrage-Engine für DMVs ist der Data Mining-Parser. Die DMV-Abfragesyntax basiert darauf, dass die SELECT-Anweisung &#40;DMX&#41; Anweisung. Obwohl die DMV-Abfragesyntax auf einer SELECT-SQL-Anweisung basiert, bietet sie keine vollständige Unterstützung einer SELECT-Anweisung. JOIN, GROUP BY, LIKE, CAST und CONVERT werden z. B. nicht unterstützt.  
+Die Abfrage-Engine für DMVs ist der Data Mining-Parser. Die DMV-Abfragesyntax basiert darauf, dass die SELECT-Anweisung &#40;DMX&#41; Anweisung. Obwohl die DMV-Abfragesyntax auf einer SELECT-SQL-Anweisung basiert, bietet sie keine vollständige Unterstützung einer SELECT-Anweisung. JOIN, GROUP BY, LIKE, CAST und CONVERT werden z. B. nicht unterstützt.  
   
 ```  
 SELECT [DISTINCT] [TOP <n>] <select list>  
@@ -93,7 +93,7 @@ WHERE TABLE_TYPE = 'SCHEMA'
 ORDER BY TABLE_NAME ASC  
 ```  
   
-Wenn eine DMV für ein angegebenes Rowset nicht vorliegen, gibt der Server Fehler zurück: `The <schemarowset> request type was not recognized by the server.` alle anderen Fehler weisen auf Probleme mit der Syntax.  
+Wenn eine DMV für ein angegebenes Rowset nicht vorliegen, gibt der Server den Fehler zurück: `The <schemarowset> request type was not recognized by the server.` Alle anderen Fehler weisen auf Probleme mit der Syntax.  
 
 Schemarowsets werden in zwei SQL Server Analysis Services-Protokollen beschrieben:   
 
@@ -101,7 +101,7 @@ Schemarowsets werden in zwei SQL Server Analysis Services-Protokollen beschriebe
 
 [[MS-SSAS]: SQL Server Analysis Services-Protokoll](https://msdn.microsoft.com/library/ee320606) -Schemarowsets für mehrdimensionale und tabellarische Modelle mit dem Kompatibilitätsgrad 1100 und 1103 beschreibt.
 
-### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>Rowsets, die in der [MS-SSAS-T] beschriebenen: SQL Server Analysis Services Tabular Protocol
+### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>Rowsets, die in der [MS-SSAS-T] beschrieben werden: SQL Server Analysis Services Tabular Protocol
 
 |Rowset  |Description  |
 |---------|---------|
@@ -134,7 +134,7 @@ Schemarowsets werden in zwei SQL Server Analysis Services-Protokollen beschriebe
 |[TMSCHEMA_TABLES](https://msdn.microsoft.com/library/mt719250)     |   Enthält Informationen über die Tabellenobjekte in das Modell.      |
 |[TMSCHEMA_VARIATIONS](https://msdn.microsoft.com/library/mt825008)|Enthält Informationen zu den Variation-Objekten in jeder Spalte.|
 
-### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>Rowsets, die in der [MS-SSAS] beschriebenen: SQL Server Analysis Services-Protokoll
+### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>Rowsets, die in der [MS-SSAS] beschrieben werden: SQL Server Analysis Services-Protokoll
 
 |Rowset|Description|  
 |------------|-----------------|  
@@ -172,7 +172,7 @@ Schemarowsets werden in zwei SQL Server Analysis Services-Protokollen beschriebe
 |[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](https://msdn.microsoft.com/library/ee320710)|Gibt Informationen zu der spaltensegmente, die zum Speichern von Daten für in-Memory-Tabellen verwendet.|  
 |[DISCOVER_STORAGE_TABLE_COLUMNS](https://msdn.microsoft.com/library/ee302101)|Enthält Informationen zu den Spalten, die zum Darstellen von Spalten einer Tabelle im Arbeitsspeicher verwendet.|  
 |[DISCOVER_STORAGE_TABLES](https://msdn.microsoft.com/library/ee302014)|Gibt Statistiken zu in-Memory-Tabellen ist verfügbar auf dem Server zurück.|  
-|[DISCOVER_TRACE_COLUMNS]()||  
+|[DISCOVER_TRACE_COLUMNS](https://msdn.microsoft.com/library/ee301342)||  
 |[DISCOVER_TRACE_DEFINITION_PROVIDERINFO](https://msdn.microsoft.com/library/ee301342)|Enthält DISCOVER_TRACE_COLUMNS-Schemarowsets an.|  
 |[DISCOVER_TRACE_EVENT_CATEGORIES](https://msdn.microsoft.com/library/ee320442)|Enthält DISCOVER_TRACE_EVENT_CATEGORIES-Schemarowsets an.|  
 |[DISCOVER_TRACES](https://msdn.microsoft.com/library/ee301643)|Enthält DISCOVER_TRACES-Schemarowsets an.|  

@@ -26,19 +26,19 @@ ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ab537a266924c352466d3b6d2b8364c3498b2b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd0a84928e1d5b531119a0a37dbb60d2b9eb3db9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112810"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531411"
 ---
 # <a name="assl-xml-conventions"></a>XML-Konventionen in ASSL
   Die Analysis Services Scripting Language (ASSL) stellt die Hierarchie von Objekten als Satz von Elementtypen dar, die jeweils die untergeordneten Elemente definieren, die sie enthalten können.  
   
  Für die Darstellung der Objekthierarchie verwendet ASSL folgende XML-Konventionen:  
   
--   Alle Objekte und Eigenschaften werden als Elemente dargestellt, mit Ausnahme von XML-Standardattributen wie „xml:lang“.  
+-   Alle Objekte und Eigenschaften werden als Elemente, mit Ausnahme von XML-Standardattributen wie z. B. "XML: lang" dargestellt.  
   
 -   Sowohl Elementnamen als auch Enumerationswerte befolgen die Microsoft .NET Framework-Benennungskonvention der Schreibweise von Pascal ohne Unterstriche.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "48112810"
  Zusätzlich zu dieser Konventionsliste werden in Analysis Services bestimmte Konventionen in Bezug auf Kardinalität, Vererbung, Leerzeichen, Datentypen und Standardwerte befolgt.  
   
 ## <a name="cardinality"></a>Cardinality  
- Wenn ein Element eine Kardinalität besitzt, die größer als 1 ist, wird dieses Element von einer XML-Elementauflistung gekapselt. Der Name der Auflistung verwendet die Pluralform der in der Auflistung enthaltenen Elemente. Das folgende XML-Fragment stellt beispielsweise die `Dimensions` Sammlung innerhalb einer `Database` Element:  
+ Wenn ein Element eine Kardinalität besitzt, die größer als 1 ist, wird dieses Element von einer XML-Elementauflistung gekapselt. Der Name der Auflistung verwendet die Pluralform der in der Auflistung enthaltenen Elemente. Das folgenden XML-Fragment stellt beispielsweise die `Dimensions`-Auflistung innerhalb eines `Database`-Elements dar:  
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -76,11 +76,11 @@ ms.locfileid: "48112810"
  Die Reihenfolge der Elemente ist bedeutungslos.  
   
 ## <a name="inheritance"></a>Vererbung  
- Die Vererbung wird bei unterschiedlichen Objekten verwendet, die über überlappende, jedoch deutlich unterschiedliche Sätze von Eigenschaften verfügen. Beispiele für derartige überlappende, jedoch unterschiedliche Objekte sind virtuelle Cubes, verknüpfte Cubes und reguläre Cubes. Für überlappende, jedoch unterschiedliche Objekte wird Analysis Services verwendet den Standard `type` Attribut aus der XML-Instanz Namespace, um die Vererbung anzugeben. Das folgende XML-Fragment zeigt, wie das `type`-Attribut ermittelt, ob ein `Cube`-Element von einem regulären Cube oder von einem virtuellen Cube erbt:  
+ Die Vererbung wird bei unterschiedlichen Objekten verwendet, die über überlappende, jedoch deutlich unterschiedliche Sätze von Eigenschaften verfügen. Beispiele für derartige überlappende, jedoch unterschiedliche Objekte sind virtuelle Cubes, verknüpfte Cubes und reguläre Cubes. Für überlappende, jedoch unterschiedliche Objekte wird in Analysis Services das `type`-Standardattribut aus dem XML-Instanzennamespace verwendet, um die Vererbung anzugeben. Das folgende XML-Fragment zeigt, wie das `type`-Attribut ermittelt, ob ein `Cube`-Element von einem regulären Cube oder von einem virtuellen Cube erbt:  
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48112810"
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -123,10 +123,10 @@ ms.locfileid: "48112810"
  In Analysis Services werden die folgenden XSD-Standarddatentypen (XML Schema Definition Language) verwendet:  
   
  `Int`  
- Ein ganzzahliger Wert im Bereich von -231 bis 231 – 1.  
+ Ein ganzzahliger Wert im Bereich von-231 bis 231-1.  
   
  `Long`  
- Ein ganzzahliger Wert im Bereich von -263 bis 263 – 1.  
+ Ein ganzzahliger Wert im Bereich von-263 bis 263-1.  
   
  `String`  
  Ein Zeichenfolgenwert, der den folgenden allgemeinen Regeln entspricht:  
@@ -137,10 +137,10 @@ ms.locfileid: "48112810"
   
 -   Interne Leerzeichen werden beibehalten.  
   
- `Name` und `ID` -Eigenschaft besitzen spezielle Beschränkungen für gültige Zeichen in Zeichenfolgenelementen. Weitere Informationen zu `Name` und `ID` -Konventionen, finden Sie unter [ASSL-Objekte und Objekteigenschaften](assl-objects-and-object-characteristics.md).  
+ Die `Name`- und die `ID`-Eigenschaft besitzen spezielle Beschränkungen für gültige Zeichen in Zeichenfolgenelementen. Weitere Informationen zu `Name` und `ID` -Konventionen, finden Sie unter [ASSL-Objekte und Objekteigenschaften](assl-objects-and-object-characteristics.md).  
   
  `DateTime`  
- Ein `DateTime` Struktur von .NET Framework. Ein `DateTime`-Wert darf nicht NULL sein. Das niedrigste Datum von unterstützt die `DataTime` -Datentyp ist der 1. Januar 1601, steht für Programmierer als `DateTime.MinValue`. Das früheste unterstützte Datum gibt an, dass eine `DateTime` Wert fehlt.  
+ Ein `DateTime` Struktur von .NET Framework. Ein `DateTime`-Wert darf nicht NULL sein. Das früheste von dem `DataTime`-Datentyp unterstützte Datum ist der 1. Januar 1601, das für Programmierer als `DateTime.MinValue` zur Verfügung steht. Das früheste unterstützte Datum gibt an, dass ein `DateTime`-Wert fehlt.  
   
  `Boolean`  
  Eine Enumeration mit nur zwei Werten wie {true, false} oder {0, 1}.  

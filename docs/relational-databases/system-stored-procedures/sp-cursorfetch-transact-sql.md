@@ -18,12 +18,12 @@ ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43cf13284789fa599c3f2f7b8841d7fe54e3b2e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732124"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538854"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_cursorfetch cursor
  *FetchType*  
  Gibt an, welcher Cursorpuffer abgerufen werden soll. *FetchType* ist ein optionaler Parameter, der einen der folgenden ganzzahligen Eingabewerte erfordert.  
   
-|value|Name|Description|  
+|Wert|Name|Description|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Ruft den ersten Puffer mit *Nrows* Zeilen. Wenn *Nrows* gleich 0 ist, der Cursor vor dem Resultset positioniert ist und keine Zeilen zurückgegeben werden.|  
 |0x0002|NEXT|Ruft den nächsten Puffer mit *Nrows* Zeilen.|  
-|0x0004|PREV|Ruft den vorherigen Puffer mit *Nrows* Zeilen.<br /><br /> Hinweis: Bei Verwendung von PREV für einen FORWARD_ONLY-Cursor eine Fehlermeldung zurückgegeben, weil FORWARD_ONLY nur den Bildlauf unterstützt in einer Richtung.|  
-|0x0008|LAST|Ruft den letzten Puffer mit *Nrows* Zeilen. Wenn *Nrows* gleich 0 ist, ist der Cursor positioniert ist, nachdem das Resultset und keine Zeilen zurückgegeben werden.<br /><br /> Hinweis: Bei Verwendung von LAST für einen FORWARD_ONLY-Cursor eine Fehlermeldung zurückgegeben, weil FORWARD_ONLY nur den Bildlauf unterstützt in einer Richtung.|  
-|0x10|ABSOLUTE|Ruft einen Puffer mit *Nrows* -Zeilen beginnend mit der *Rownum* Zeile.<br /><br /> Hinweis: Bei Verwendung von ABSOLUTE für einen dynamischen Cursor oder einen FORWARD_ONLY-Cursor eine Fehlermeldung zurückgegeben, weil FORWARD_ONLY nur den Bildlauf unterstützt in einer Richtung.|  
-|0x20|RELATIVE|Ruft den Puffer mit *Nrows* Zeilen ab, mit der Zeile, die als wird angegeben, wird die *Rownum* Wert von Zeilen aus der ersten Zeile im aktuellen Block. In diesem Fall *Rownum* kann eine negative Zahl sein.<br /><br /> Hinweis: Bei Verwendung von RELATIVE für einen FORWARD_ONLY-Cursor eine Fehlermeldung zurückgegeben, weil FORWARD_ONLY nur den Bildlauf unterstützt in einer Richtung.|  
+|0x0004|PREV|Ruft den vorherigen Puffer mit *Nrows* Zeilen.<br /><br /> Hinweis: Bei Verwendung von PREV für einen FORWARD_ONLY-Cursor wird eine Fehlermeldung zurückgegeben, weil FORWARD_ONLY nur den Bildlauf in einer Richtung unterstützt.|  
+|0x0008|LAST|Ruft den letzten Puffer mit *Nrows* Zeilen. Wenn *Nrows* gleich 0 ist, ist der Cursor positioniert ist, nachdem das Resultset und keine Zeilen zurückgegeben werden.<br /><br /> Hinweis: Bei Verwendung von LAST für einen FORWARD_ONLY-Cursor wird eine Fehlermeldung zurückgegeben, weil FORWARD_ONLY nur den Bildlauf in einer Richtung unterstützt.|  
+|0x10|ABSOLUTE|Ruft einen Puffer mit *Nrows* -Zeilen beginnend mit der *Rownum* Zeile.<br /><br /> Hinweis: Bei Verwendung von ABSOLUTE für einen DYNAMIC-Cursor oder einen FORWARD_ONLY-Cursor wird eine Fehlermeldung zurückgegeben, weil FORWARD_ONLY nur den Bildlauf in einer Richtung unterstützt.|  
+|0x20|RELATIVE|Ruft den Puffer mit *Nrows* Zeilen ab, mit der Zeile, die als wird angegeben, wird die *Rownum* Wert von Zeilen aus der ersten Zeile im aktuellen Block. In diesem Fall *Rownum* kann eine negative Zahl sein.<br /><br /> Hinweis: Bei Verwendung von RELATIVE für einen FORWARD_ONLY-Cursor wird eine Fehlermeldung zurückgegeben, weil FORWARD_ONLY nur den Bildlauf in einer Richtung unterstützt.|  
 |0x80|REFRESH|Füllt den Puffer anhand zugrunde liegender Tabellen auf.|  
 |0x100|INFO|Ruft Informationen zum Cursor ab. Diese Informationen werden zurückgegeben, mit der *Rownum* und *Nrows* Parameter. Wenn daher INFO angegeben wird, *Rownum* und *Nrows* werden Output-Parameter.|  
 |0x200|PREV_NOADJUST|Wird analog zu PREV verwendet. Wenn der Anfang des Resultsets vorzeitig gefunden wird, können die Ergebnisse jedoch variieren.|  
@@ -80,7 +80,7 @@ sp_cursorfetch cursor
  In den folgenden Tabellen sind die Werte dargestellt, die bei Angabe des Bitwerts INFO zurückgegeben werden können.  
   
 > [!NOTE]  
->  : Wenn keine Zeilen zurückgegeben werden, bleibt der Pufferinhalt unverändert zu lassen.  
+>  decodiert werden:   Wenn keine Zeilen zurückgegeben werden, bleibt der Pufferinhalt unverändert zu lassen.  
   
 |*\<RowNum >*|Festlegen auf|  
 |------------------|------------|  
@@ -89,12 +89,12 @@ sp_cursorfetch cursor
 |Falls nach dem Resultset positioniert|-1|  
 |Für KEYSET- und STATIC-Cursor|Die absolute Zeilennummer der aktuellen Position im Resultset|  
 |Für DYNAMIC-Cursor|1|  
-|Für ABSOLUTE|-1 gibt die letzte Zeile in einem Satz zurück.<br /><br /> -2 gibt die vorletzte Zeile in einem Satz zurück usw.<br /><br /> Hinweis: Wenn mehr als eine Zeile in diesem Fall abgerufen werden angefordert wird, werden die letzten beiden Zeilen des Resultsets zurückgegeben.|  
+|Für ABSOLUTE|-1 gibt die letzte Zeile in einem Satz zurück.<br /><br /> -2 gibt die vorletzte Zeile in einem Satz zurück usw.<br /><br /> Hinweis: Wenn in diesem Fall mehr als eine Zeile abgerufen werden soll, werden die letzten beiden Zeilen des Resultsets zurückgegeben.|  
   
 |*\<Nrows >*|Festlegen auf|  
 |-----------------|------------|  
 |Falls nicht geöffnet|0|  
-|Für KEYSET- und STATIC-Cursor|Normalerweise die aktuelle Keysetgröße.<br /><br /> **– m** ist der Cursor asynchron erstellt *m* Zeilen bis zum angegebenen Zeitpunkt gefunden.|  
+|Für KEYSET- und STATIC-Cursor|Normalerweise die aktuelle Keysetgröße.<br /><br /> **-m** ist der Cursor asynchron erstellt *m* Zeilen bis zum angegebenen Zeitpunkt gefunden.|  
 |Für DYNAMIC-Cursor|-1|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -134,16 +134,16 @@ sp_cursorfetch cursor
   
  Der RPC-Statusparameter wird auf einen der Werte in der folgenden Tabelle festgelegt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |0|Die Prozedur wurde erfolgreich ausgeführt.|  
 |0x0001|Fehler bei der Prozedur.|  
 |0x0002|Ein Abruf in einer negativen Richtung hätte die Cursorposition auf den Anfang des Resultsets festgelegt, wenn der Abruf logisch vor den Ergebnissen erfolgt wäre.|  
 |0x10|Ein FAST_FORWARD-Cursor wurde automatisch geschlossen.|  
   
- Die Zeilen werden als typisches Resultset zurückgegeben: Spaltenformat (0x2a), Zeilen (0xd1) gefolgt vom fertigen Resultset (0xfd). Metadatentoken werden im gleichen Format gesendet wie für sp_cursoropen angegeben: 0x81, 0xa5 und 0xa4 für SQL Server 7.0-Benutzer usw. Die Zeilenstatusindikatoren werden ähnlich dem BROWSE-Modus als ausgeblendete Spalten am Ende jeder Zeile mit dem Spaltennamen "rowstat" und dem Datentyp INT4 gesendet. Diese rowstat-Spalte verfügt über einen der Werte aus der folgenden Tabelle.  
+ Die Zeilen werden als typisches Resultset zurückgegeben: Spaltenformat (0x2a), Zeilen (0xd1) gefolgt vom fertigen Resultset (0xfd). Metadatentoken werden im gleichen Format wie für Sp_cursoropen angegeben, gesendet: 0 x 81, 0xa5 und 0xa4 für SQL Server 7.0-Benutzer und So weiter. Die Zeilenstatusindikatoren werden ähnlich dem BROWSE-Modus als ausgeblendete Spalten am Ende jeder Zeile mit dem Spaltennamen "rowstat" und dem Datentyp INT4 gesendet. Diese rowstat-Spalte verfügt über einen der Werte aus der folgenden Tabelle.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

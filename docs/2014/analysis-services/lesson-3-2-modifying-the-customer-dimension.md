@@ -11,12 +11,12 @@ ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb2d3f6ead3482a9f36807883f685eaed4225f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55bf692e1b24bb0184f9b126a0bde5c0ee7e0657
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178120"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513269"
 ---
 # <a name="modifying-the-customer-dimension"></a>Ändern der Customer-Dimension
   Es gibt viele verschiedene Möglichkeiten zum Verbessern der Benutzerfreundlichkeit und Funktionalität der Dimensionen in einem Cube. Mit den Schritten in diesem Thema ändern Sie die Customer-Dimension.  
@@ -106,7 +106,7 @@ ms.locfileid: "48178120"
   
 4.  In der **Namen** Eigenschaftenfeld `Full Name`.  
   
-5.  Klicken Sie unten in das Eigenschaftenfeld **NameColumn** und anschließend auf die Schaltfläche zum Durchsuchen (**…**), um das Dialogfeld **Namensspalte** zu öffnen.  
+5.  Klicken Sie in der **NameColumn** Eigenschaftenfeld am unteren Rand, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
   
 6.  Wählen Sie `FullName` am unteren Rand der **Quellspalte** aus, und klicken Sie dann auf **OK**.  
   

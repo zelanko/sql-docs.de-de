@@ -1,24 +1,23 @@
 ---
-title: 'Schritt 3: Ändern des Flatfile-Verbindungs-Managers | Microsoft-Dokumentation'
+title: 'Schritt 3: Ändern die Flat File Connection Manager | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e5f2aecb84754ee470a9cbafabdf06e38d38ae1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16a72ca205e3c1ba972169e2114321d44a8caed8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102035"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822104"
 ---
-# <a name="step-3-modifying-the-flat-file-connection-manager"></a>Schritt 3: Ändern des Flatfile-Verbindungs-Managers
+# <a name="step-3-modifying-the-flat-file-connection-manager"></a>Schritt 3: Ändern des Flatfile-Verbindungs-Managers
   In dieser Aufgabe ändern Sie den in Lektion 1 konfigurierten und erstellten Flatfile-Verbindungs-Manager. Bei der ursprünglichen Erstellung wurde der Flatfile-Verbindungs-Manager so konfiguriert, dass eine einzelne Datei statisch geladen wird. Damit der Flatfile-Verbindungs-Manager Dateien iterativ laden kann, müssen Sie die ConnectionString-Eigenschaft des Verbindungs-Managers so ändern, dass die benutzerdefinierte Variable `User:varFileName`, die den Pfad der zur Laufzeit zu ladenden Datei enthält, akzeptiert wird.  
   
  Indem Sie den Verbindungs-Manager so ändern, dass er den Wert der benutzerdefinierten Variable `User::varFileName`verwendet, um die ConnectionString-Eigenschaft des Verbindungs-Managers aufzufüllen, kann der Verbindungs-Manager eine Verbindung mit verschiedenen Flatfiles herstellen. Zur Laufzeit aktualisiert dann jede Iteration des Foreach-Schleifencontainers die `User::varFileName` -Variable. Durch das Aktualisieren der Variable stellt der Verbindungs-Manager wiederum eine Verbindung zu einer anderen Flatfile her, und der Datenflusstask verarbeitet andere Daten.  
@@ -27,11 +26,11 @@ ms.locfileid: "48102035"
   
 1.  Klicken Sie im Bereich **Verbindungs-Manager** mit der rechten Maustaste auf **Sample Flat File Source Data**(Beispielquelldaten von Flatfiles), und wählen Sie **Eigenschaften**aus.  
   
-2.  Klicken Sie im Eigenschaftenfenster für **Ausdrücke**in die leere Zelle, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**.  
+2.  Klicken Sie im Eigenschaftenfenster für **Ausdrücke** in die leere Zelle, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
   
 3.  In der **Eigenschaftsausdrucks-Editor** Dialogfeld die **Eigenschaft** Spalte eingeben oder auswählen `ConnectionString`.  
   
-4.  Klicken Sie in der Spalte **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(…)** , um das Dialogfeld **Ausdrucks-Generator** zu öffnen.  
+4.  Klicken Sie in der Spalte **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Dialogfeld **Ausdrucks-Generator** zu öffnen.  
   
 5.  Erweitern Sie im Dialogfeld **Ausdrucks-Generator** den Knoten **Variablen** .  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.addcopyexistingpackage.f1
@@ -15,17 +14,17 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2de0accc6822eb5d7e30191bee5dc2f5d850720
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b96a0f6639764299ba38293ddb059aa09da48ef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195366"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779992"
 ---
 # <a name="add-copy-of-existing-package"></a>Kopie des vorhandenen Pakets hinzufügen
   Verwenden Sie das Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** , um einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Projekt eine Kopie eines Pakets hinzuzufügen, das in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , im Dateisystem oder im SSIS-Paketspeicher gespeichert ist.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Paketspeicherort**  
  Wählen Sie den Typ des Speicherortes aus, aus dem das Paket kopiert werden soll.  
   
@@ -42,11 +41,11 @@ ms.locfileid: "48195366"
  Geben Sie ein Kennwort an, falls Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Paketpfad**  
- Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um das zu kopierende Paket zu suchen.  
+ Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, um das zu kopierende Paket zu suchen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Kopie des Pakets speichern](../../2014/integration-services/save-copy-of-package.md)   
- [Referenz zur Benutzeroberfläche des Import-Paket Dialogfelds](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+ [Referenz zur Benutzeroberfläche für Dialogfeld "Paket importieren"](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [Referenz zur Benutzeroberfläche des Dialogfelds Paket exportieren](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Speichern von Paketen](save-packages.md)   
  [Importieren und Exportieren von Paketen &#40;SSIS-Dienst&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  

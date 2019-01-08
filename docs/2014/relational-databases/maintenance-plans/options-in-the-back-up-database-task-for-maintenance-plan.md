@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.backup.f1
@@ -16,12 +15,12 @@ ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 177c5f7406ec3af9ebaa200376611f5327e76260
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111330"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774652"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>Task 'Datenbank sichern' (Wartungsplan)
   Mithilfe des Dialogfelds **Task 'Datenbank sichern'** können Sie dem Wartungsplan einen Sicherungstask hinzufügen. Eine Sicherung der Datenbank ist für den Fall wichtig, dass die Datenbank bei einem System- oder Hardwareausfall (oder einem Benutzerfehler) beschädigt wird. In diesem Fall muss eine Sicherungskopie wiederhergestellt werden. Dieser Task ermöglicht vollständige und differenzielle Sicherungen sowie Sicherungen von Dateien, Dateigruppen und Transaktionsprotokollen.  
@@ -30,7 +29,7 @@ ms.locfileid: "48111330"
   
 -   [Erstellen eines Wartungsplans](create-a-maintenance-plan.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verbindung**  
  Wählen Sie die Serververbindung aus, die bei der Ausführung dieses Tasks verwendet werden soll.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "48111330"
  Erstellen Sie eine neue Serververbindung, die bei der Ausführung dieses Tasks verwendet werden soll. Das Dialogfeld **Neue Verbindung** wird im Folgenden beschrieben.  
   
  **Datenbanken**  
- Gibt die Datenbanken an, die von dieser Aufgabe betroffen sind. Bei Auswahl dieser Option werden in der Dropdownliste die folgenden Optionen angezeigt: **Alle Datenbanken**, **Alle Systemdatenbanken**, **Alle Benutzerdatenbanken**, **Diese Datenbanken**.  
+ Gibt die Datenbanken an, die von dieser Aufgabe betroffen sind. Bei Auswahl dieser Option bietet die Dropdown-Liste die folgenden Optionen aus: **Alle Datenbanken**, **alle Systemdatenbanken**, **alle Benutzerdatenbanken**, **diese Datenbanken**.  
   
  **Alle Datenbanken**  
  Generiert einen Wartungsplan, der Wartungstasks für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken ausführt.  

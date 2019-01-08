@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cd116bbb0305f56302f679881ef0a2a795739eb3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 277f2b8195aa4238a490d37faaf81abdafc0008c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641397"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538745"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Festlegen des Administratorkennworts für die Anmeldung bei AD-Knoten im Verzeichnisdienste-Wiederherstellungsmodus (DSRM) - Analytics Platform System
 Directory Verzeichnisdienst-Wiederherstellungsmodus (DSRM) ist eine Startmodus zum Reparieren oder Wiederherstellen von Active Directory Domain Services (AD DS). Es wird verwendet, mit der AD-applianceknoten anmelden können, nach einem Fehler bei AD DS oder AD DS muss wiederhergestellt werden. Das Kennwort für den Verzeichnisdienst-Wiederherstellungsmodus wurde während des Setups Appliance am Standort Hardware-Hersteller initialisiert und sollte durch den Administrator der Anwendung geändert werden. Analytics Platform System verfügt über zwei AD DS (Domänencontroller);  **_Appliance_domain_-AD01** und  **_Appliance_domain_-AD02**. Ändern Sie das DSRM-Kennwort mithilfe der folgenden Schritte für jeden Knoten Appliance AD.  
   
 ## <a name="HowToDSRM"></a>Das Administratorkennwort zurücksetzen  
   
-1.  Öffnen Sie ein Eingabeaufforderungsfenster auf einem Knoten der Appliance AD ***Appliance_domain *– AD*Xx***virtuellen Computer.  
+1.  Öffnen Sie ein Eingabeaufforderungsfenster auf einem Knoten der Appliance AD ***Appliance_domain *-AD*Xx***virtuellen Computer.  
   
 2.  Geben Sie an der Eingabeaufforderung `ntdsutil` ein.  
   

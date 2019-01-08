@@ -1,18 +1,20 @@
 ---
-title: Konfigurieren von Minikube für SQL Server-2019 big Data-Cluster-Bereitstellungen | Microsoft-Dokumentation
+title: Konfigurieren von minikube
+titleSuffix: SQL Server 2019 big data clusters
 description: Informationen Sie zum Konfigurieren von Minikube für SQL Server-2019 big Data-Cluster (Vorschau)-Bereitstellungen auf einem einzelnen Computer.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9b6902057c3bf5da706de8832b33c959ed285a9b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.custom: seodec18
+ms.openlocfilehash: a4bdccba6d42868225a39792cb94566df1f56680
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702348"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246569"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Konfigurieren von Minikube für SQL Server-2019 big Data-Cluster-Bereitstellungen
 
@@ -20,7 +22,7 @@ In diesem Artikel wird beschrieben, wie so konfigurieren Sie **Minikube** auf ei
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Um einem Minikube-Cluster für SQL Server 2019 CTP 2.1 in einer SQL-big Data-Clusterkonfiguration ausführen, empfiehlt es sich, dass es sich bei Ihrem Computer mindestens 32 GB RAM verfügen.
+- Um einem Minikube-Cluster für SQL Server-2019 (Vorschau) für big Data-Cluster ausführen zu können, empfiehlt es sich, dass es sich bei Ihrem Computer mindestens 32 GB RAM verfügen.
 
    > [!TIP] 
    > Wenn der Computer nur die empfohlenen Arbeitsspeicher verfügt, konfigurieren Sie die Bereitstellung des Clusters auf nur 1 Compute-Pool-Instanz, 1-Data-Pool-Instanz und 1-Speicher-Pool-Instanz verfügen. Diese Konfiguration sollte nur für die Auswertung Umgebungen verwendet werden, ist die Dauerhaftigkeit und Verfügbarkeit der Daten unwichtig. Finden Sie unter den [Bereitstellungsdokumentation](deployment-guidance.md#define-environment-variables) für Weitere Informationen zu den Umgebungsvariablen festlegen, um die Anzahl der Replikate für Datenpools, die zu konfigurieren, Computeknoten, Pools und Speicherpools.
@@ -28,8 +30,6 @@ In diesem Artikel wird beschrieben, wie so konfigurieren Sie **Minikube** auf ei
 - VT-X- oder AMD-V-Virtualisierung muss im BIOS des Computers aktiviert werden.
 
 ## <a name="install-dependencies"></a>Installieren von Abhängigkeiten
-
-1. Sofern nicht bereits installiert ist, installieren Sie Git auf [Windows](https://git-for-windows.github.io/), [Linux- oder Mac](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 1. Installieren Sie ["kubectl"](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
@@ -44,7 +44,7 @@ In diesem Artikel wird beschrieben, wie so konfigurieren Sie **Minikube** auf ei
 
 ## <a name="install-minikube"></a>Installieren von Minikube
 
-Installieren von Minikube gemäß den Anweisungen für die [v0.28.2 Version](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). Die SQL Server 2019 CTP 2.1 big Data-Cluster funktioniert nur mit Version v0.24.1 oder höher.
+Installieren von Minikube gemäß den Anweisungen für die [v0.28.2 Version](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). Die SQL Server-2019 big Data-Cluster (Vorschau) funktioniert nur mit Version v0.24.1 oder höher.
 
 ## <a name="create-a-minikube-cluster"></a>Erstellen Sie einen Minikube-cluster
 
@@ -74,4 +74,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 Die Schritte in diesem Artikel konfiguriert einen Minikube-Cluster. Der nächste Schritt ist SQL Server-2019 big Data-Cluster bereitstellen. Anweisungen hierzu finden Sie unter den folgenden Artikel:
 
-[Bereitstellen von SQL Server 2019 CTP 2.1 in Kubernetes](deployment-guidance.md#deploy)
+[Bereitstellen von SQL Server-2019 big Data-Cluster in Kubernetes](deployment-guidance.md#deploy)

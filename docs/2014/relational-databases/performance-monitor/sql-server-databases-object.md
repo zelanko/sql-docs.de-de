@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -15,12 +15,12 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 029d59328bf13991cd98c4d5ed5fa186abbd4453
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111565"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776422"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Datenbanken-Objekt
   Das **SQLServer:Datenbanken** -Objekt in SQL Server stellt Leistungsindikatoren bereit, mit denen Sie Massenkopiervorgänge, den Durchsatz von Sicherungs- und Wiederherstellungsvorgängen sowie Transaktionsprotokollaktivitäten überwachen können. Überwachen Sie Transaktionen und das Transaktionsprotokoll, um ermitteln zu können, wie viel Benutzeraktivität in der Datenbank auftritt und in welchem Umfang das Transaktionsprotokoll aufgefüllt wird. Durch den Umfang der Benutzeraktivität kann die Leistung der Datenbank bestimmt werden. Protokollgröße, Sperren und die Replikation können davon betroffen sein. Das Überwachen der Protokollaktivität auf niedriger Ebene zur Messung der Benutzeraktivität und der Ressourcennutzung kann Ihnen dabei helfen, Leistungsengpässe zu erkennen.  

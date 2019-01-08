@@ -20,16 +20,16 @@ ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef1336514d876d171cd9d31d8c20171e154f9a2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ef74d98102c424a71ac1728d664fddbeac2296c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646898"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215599"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 1.0  
+ Eingeführt in Version: ODBC 1.0  
   
  **Zusammenfassung**  
  **SQLConfigDataSource** hinzufügt, ändert oder löscht Sie Datenquellen.  
@@ -58,13 +58,13 @@ BOOL SQLConfigDataSource(
   
  ODBC_CONFIG_DSN: Konfigurieren (ändern) einer vorhandenen Datenquelle für den Benutzer.  
   
- ODBC_REMOVE_DSN: Entfernen einer vorhandenen Datenquelle für den Benutzer.  
+ ODBC_REMOVE_DSN: Entfernen Sie eine vorhandene Datenquelle für den Benutzer.  
   
  ODBC_ADD_SYS_DSN: Fügen Sie eine neue System-Datenquelle hinzu.  
   
  ODBC_CONFIG_SYS_DSN: Ändern einer vorhandenen System-Datenquelle.  
   
- Mit ODBC_REMOVE_SYS_DSN: Entfernen einer vorhandenen System-Datenquelle.  
+ MIT ODBC_REMOVE_SYS_DSN: Entfernen einer vorhandenen System-Datenquelle.  
   
  ODBC_REMOVE_DEFAULT_DSN: Entfernen Sie den Standardabschnitt Data Source-Spezifikation aus der Systeminformationen. (Es entfernt auch den Abschnitt "Default-Treiber-Spezifikation" aus dem Eintrag "Odbcinst.ini" in den Systeminformationen. Dies *häufigsten* führt die gleiche Funktion wie der veraltete **SQLRemoveDefaultDataSource** Funktion.) Wenn diese Option angegeben wird, alle anderen Parameter im Aufruf von **SQLConfigDataSource** sollte Null sein, wenn sie nicht NULL sind, werden diese ignoriert.  
   

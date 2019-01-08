@@ -21,12 +21,12 @@ ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: feab5870c703fbe253923006a6f6ba84c4959cdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e58bcac859d4774803d3cec639a3b7582ee0065
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120040"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528692"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Diagramme (Berichts-Generator und SSRS)
   Wenn Sie Daten in einem visuellen Format zusammenfassen möchten, verwenden Sie den Diagrammdatenbereich. Diagramme ermöglichen es Ihnen, große Mengen aggregierter Informationen auf einen Blick zu präsentieren. Wichtig ist eine sorgfältige Aufbereitung und Analyse der Daten, bevor Sie das Diagramm erstellen, da so eine schnelle und effiziente Gestaltung der Diagramme erleichtert wird. Weitere Informationen finden Sie unter [Hinzufügen eines Diagramms zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Um ein Diagramm umgehend verwenden finden Sie in der Balken-, Spalten-, Sparkline und Kreisdiagrammen unter [Tutorials &#40;Berichts-Generator&#41; ](../report-builder-tutorials.md) oder die Balken- und Kreisdiagrammen unter [Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
@@ -109,7 +109,7 @@ ms.locfileid: "48120040"
   
   
 ##  <a name="AggregateValues"></a> Aggregieren von Werten von einem Datenfeld im Diagramm  
- Wenn dem Wertebereich des Diagramms ein Feld hinzugefügt wird, wird in der Standardeinstellung in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ein Aggregat für das Feld berechnet. Wenn Sie ein Feld auf das Diagramm ziehen, ohne das Feld in einem bestimmten Bereich abzulegen, bestimmt das Diagramm anhand des Datentyps für das Feld, ob dieses Feld zur Kategorie- (x-) oder Wertachse (y-Achse) gehört. Numerische Felder, die im Wertebereich abgelegt werden, werden mit der SUM-Funktion aggregiert. Wenn der Datentyp des Wertefelds im Wertebereich String lautet, kann das Diagramm auch dann keinen numerischen Wert anzeigen, wenn sich in den Feldern Zahlen befinden. Im Diagramm wird daher die COUNT-Funktion angezeigt. Zur Vermeidung dieses Verhaltens sollten Sie sicherstellen, dass die verwendeten Felder numerische Datentypen und keine Zeichenfolgen mit formatierten Zahlen aufweisen. Sie können einen Visual Basic-Ausdruck Zeichenfolgenwerte in einen Typ mit numerischen Daten konvertieren die `CDbl` oder `CInt` Konstanten. Zum Beispiel wird mit dem folgenden komplexen Ausdruck das Feld `MyField` mit als Zeichenfolgen formatierten numerischen Werten konvertiert.  
+ Wenn dem Wertebereich des Diagramms ein Feld hinzugefügt wird, wird in der Standardeinstellung in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ein Aggregat für das Feld berechnet. Wenn Sie ein Feld auf das Diagramm ziehen, ohne das Feld in einem bestimmten Bereich abzulegen, bestimmt das Diagramm anhand des Datentyps für das Feld, ob dieses Feld zur Kategorie- (x-) oder Wertachse (y-Achse) gehört. Numerische Felder, die im Wertebereich abgelegt werden, werden mit der SUM-Funktion aggregiert. Wenn der Datentyp des Wertefelds im Wertebereich String lautet, kann das Diagramm auch dann keinen numerischen Wert anzeigen, wenn sich in den Feldern Zahlen befinden. Im Diagramm wird daher die COUNT-Funktion angezeigt. Zur Vermeidung dieses Verhaltens sollten Sie sicherstellen, dass die verwendeten Felder numerische Datentypen und keine Zeichenfolgen mit formatierten Zahlen aufweisen. Mit einem Visual Basic-Ausdruck können Sie Zeichenfolgenwerte in einen numerischen Datentyp konvertieren, indem Sie die `CDbl`-Konstante oder die `CInt`-Konstante verwenden. Zum Beispiel wird mit dem folgenden komplexen Ausdruck das Feld `MyField` mit als Zeichenfolgen formatierten numerischen Werten konvertiert.  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
@@ -122,12 +122,12 @@ ms.locfileid: "48120040"
  Beschreibt die ersten Schritte beim Hinzufügen eines Diagramms zum Bericht.  
   
  [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
- Beschreibt alle in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verfügbaren Diagrammtypen und -untertypen, einschließlich Überlegungen und bewährten Vorgehensweisen zur Verwendung der verschiedenen Diagrammtypen.  
+ Beschreibt alle in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]verfügbaren Diagrammtypen und -untertypen, einschließlich Überlegungen und bewährten Vorgehensweisen zur Verwendung der verschiedenen Diagrammtypen.  
   
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
  Verwenden Sie Formatierungen, um die Gesamtdarstellung zu verbessern und wichtige Datenpunkte des Diagramms hervorzuheben.  
   
- [Leere und Null-Datenpunkte in Diagrammen &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Leere und NULL-Datenpunkte in Diagrammen &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)  
  Beschreibt Überlegungen beim Arbeiten mit Diagrammen, die auf Feldern mit leeren oder NULL-Werten basieren.  
   
  [Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
@@ -136,7 +136,7 @@ ms.locfileid: "48120040"
  [Mehrere Reihen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
  Beschreibt verschiedene Methoden zum Anzeigen mehrerer Reihen in einem Diagramm, einschließlich der Kombination von Diagrammtypen, der Verwendung der sekundären Achse, dem Angeben verschiedener Diagrammtypen und der Verwendung mehrerer Diagrammbereiche.  
   
- [Verknüpfen mehrerer Datenbereiche mit dem gleichen Dataset &#40;Berichts-Generator und SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
  Stellt verschiedene Ansichten der Daten aus dem gleichen Berichtsdataset bereit.  
   
  [Hinzufügen oder Löschen einer Gruppe in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
@@ -152,8 +152,8 @@ ms.locfileid: "48120040"
  [Bilder, Textfelder, Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

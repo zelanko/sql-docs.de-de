@@ -1,5 +1,5 @@
 ---
-title: Datamining-Assistenten (Analysis Services – Datamining) | Microsoft Docs
+title: Datamining-Assistenten (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 936a09c286b3732b6259d1ada9c8e720ab812074
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0f2773117b2578f22af63ed022a61f1eeb283295
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016877"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511466"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Data Mining-Assistent (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,14 +46,14 @@ ms.locfileid: "34016877"
   
  Anschließend müssen Sie die Miningstruktur und ein zugeordnetes Data Mining-Modell erstellen. Sie können auch nur die Miningstruktur erstellen und später Modelle hinzufügen. Es ist jedoch im Allgemeinen am einfachsten, zuerst ein Testmodell zu erstellen.  
   
-###  <a name="BKMK_Relational"></a>Vergleich der relationalen und OLAP-Miningmodelle  
+###  <a name="BKMK_Relational"></a> Vergleich der relationalen und OLAP-Miningmodelle  
  Sie sollten sich entscheiden, ob Sie eine relationale Datenquelle verwenden oder ob Ihr Modell auf multidimensionalen Daten (OLAP) basieren soll.  
   
- Im Data Mining-Assistenten gibt es an dieser Stelle zwei Möglichkeiten, je nachdem, ob Ihre Datenquelle relational oder in einem Cube ist: Abgesehen vom Datenauswahlprozess ist alles andere gleich – die Auswahl des Algorithmus, die Möglichkeit, ein Dataset mit zurückgehaltenen Daten hinzuzufügen usw. Die Auswahl der Cubedaten ist jedoch ein wenig komplexer als die Verwendung von relationalen Daten. (Sie erhalten am Ende auch einige zusätzliche Optionen, wenn Sie ein Modell auf Grundlage eines Cubes erstellen.)  
+ Im Data Mining-Assistenten gibt es an dieser Stelle zwei Möglichkeiten, je nachdem, ob Ihre Datenquelle relational oder in einem Cube ist: Alles außer Auswahl von Daten ist die gleiche: die Auswahl des Algorithmus, die Möglichkeit, ein zurückgehaltenes Dataset hinzuzufügen, usw. jedoch Auswahl der Cubedaten ist etwas komplexer als die Verwendung von relationaler Daten. (Sie erhalten am Ende auch einige zusätzliche Optionen, wenn Sie ein Modell auf Grundlage eines Cubes erstellen.)  
   
  Eine detaillierte exemplarische Vorgehensweise jeder Option finden Sie in den folgenden Themen:  
   
- [Erstellen Sie eine relationale Miningstruktur](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
+ [Erstellen einer relationalen Miningstruktur](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
  Hilft Ihnen bei der Entscheidungsfindung, wenn Sie ein relationales Data Mining-Modell erstellen.  
   
  [Erstellen einer OLAP-Miningstruktur](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
@@ -65,7 +65,7 @@ ms.locfileid: "34016877"
 ### <a name="choosing-an-algorithm"></a>Auswählen eines Algorithmus  
  Anschließend müssen Sie sich entscheiden, welcher Algorithmus für die Verarbeitung Ihrer Daten verwendet werden soll. Es kann schwierig sein, eine Entscheidung zu treffen. Jeder in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellte Algorithmus verfügt über unterschiedliche Funktionen und führt zu unterschiedlichen Ergebnissen. Sie können experimentieren und verschiedene Modelle ausprobieren, bevor Sie das angemessenste Modell für Ihre Daten und Ihr Geschäftsproblem bestimmen. Im folgenden Thema finden Sie eine Erklärung der Aufgaben, für die jeder Algorithmus am besten geeignet ist.  
   
- [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  Sie können mehrere Modelle mit unterschiedlichen Algorithmen erstellen oder die Parameter der Algorithmen ändern, um verschiedene Modelle zu erstellen. Sie werden in Bezug auf die Auswahl des Algorithmus nicht eingeschränkt, und es ist eine gute Übung, um mehrere unterschiedliche Modelle für die gleichen Daten zu erstellen.  
   
@@ -77,13 +77,13 @@ ms.locfileid: "34016877"
 ### <a name="additional-features"></a>Zusätzliche Funktionen  
  Vom Data Mining-Assistenten werden diese zusätzlichen Funktionen bereitgestellt, um Ihnen dabei zu helfen, die richtigen Daten auszuwählen und die Datenquellen ordnungsgemäß zu konfigurieren:  
   
--   **Automatische Erkennung von Datentypen:** Der Assistent untersucht die Eindeutigkeit und die Verteilung von Spaltenwerten und empfiehlt anschließend den besten Datentyp sowie einen Verwendungstyp für die Daten. Sie können diese Vorschläge überschreiben, indem Sie Werte aus einer Liste auswählen.  
+-   **Auto - Erkennung von Datentypen**: Der Assistent untersucht die Eindeutigkeit und die Verteilung von Spaltenwerten und dann wird empfohlen, den besten Datentyp und einen Verwendungstyp für die Daten. Sie können diese Vorschläge überschreiben, indem Sie Werte aus einer Liste auswählen.  
   
--   **Vorschläge für Variablen**: Sie können auf ein Dialogfeld klicken und einen Analyzer starten, der Korrelationen zwischen den in einem Modell einbezogenen Spalten berechnet und bestimmt, ob alle Spalten basierend auf der bisherigen Konfiguration des Modells wahrscheinliche Vorhersagen des Ausgabeattributs sind. Sie können diese Vorschläge überschreiben, indem Sie andere Werte eingeben.  
+-   **Vorschläge für Variablen**: Sie können in einem Dialogfeld klicken und einen Analyzer starten, der Korrelationen zwischen den in einem Modell einbezogenen Spalten berechnet und bestimmt, ob alle Spalten wahrscheinlich prädiktoren des ergebnisattributs, Konfiguration des Modells sind. Sie können diese Vorschläge überschreiben, indem Sie andere Werte eingeben.  
   
--   **Funktionsauswahl**: Von den meisten Algorithmen werden Spalten, die gute Indikatoren sind, automatisch erkannt und bevorzugt verwendet. Die *Funktionsauswahl* wird auf Spalten angewendet, die zu viele Werte enthalten, um die Kardinalität der Daten zu reduzieren und um die Chancen zu erhöhen, ein aussagekräftiges Muster zu finden. Sie können das Verhalten der Funktionsauswahl beeinflussen, indem Sie Modellparameter verwenden.  
+-   **Funktionsauswahl**: Die meisten Algorithmen werden Spalten, die gute Indikatoren sind und bevorzugt verwendet, automatisch erkannt. Die *Funktionsauswahl* wird auf Spalten angewendet, die zu viele Werte enthalten, um die Kardinalität der Daten zu reduzieren und um die Chancen zu erhöhen, ein aussagekräftiges Muster zu finden. Sie können das Verhalten der Funktionsauswahl beeinflussen, indem Sie Modellparameter verwenden.  
   
--   **Automatische Aufteilung des Cubes**: Wenn das Miningmodell auf einer OLAP-Datenquelle basiert, besteht automatisch die Möglichkeit, das Modell mit Cubeattributen in Slices aufzuteilen. Dies ist praktisch, um Modelle auf Grundlage der Teilmengen von Cubedaten zu erstellen.  
+-   **Automatische Cubes Aufteilen in Slices**: Wenn das Miningmodell auf einer OLAP-Datenquelle basiert, ist die Fähigkeit, das Modell mit automatisch bereitgestellt. Dies ist praktisch, um Modelle auf Grundlage der Teilmengen von Cubedaten zu erstellen.  
   
 ### <a name="completing-the-wizard"></a>Abschließen des Assistenten  
  Der letzte Schritt im Assistenten besteht aus der Benennung der Miningstruktur und dem damit verbundenen Miningmodell. Je nachdem welchen Modelltyp Sie erstellt haben, stehen Ihnen die folgenden wichtigen Optionen zur Verfügung;  
@@ -99,20 +99,20 @@ ms.locfileid: "34016877"
 ## <a name="related-content"></a>Verwandte Inhalte  
  Weitere Informationen über die nötigen Entscheidungen bei der Erstellung eines Data Mining-Modells sind den folgenden Links zu entnehmen:  
   
- [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Content-Arten & #40; Datamining & #41;](../../analysis-services/data-mining/content-types-data-mining.md)  
+ [Inhaltstypen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
   
- [Datentypen & #40; Datamining & #41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [Datentypen &#40;Data Mining&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
- [Funktionsauswahl & #40; Datamining & #41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
+ [Funktionsauswahl &#40;Data Mining&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
   
- [Fehlende Werte & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
+ [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
   
  [Drillthrough für Miningmodelle](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
- [Datamining-Lösungen](../../analysis-services/data-mining/data-mining-solutions.md)  
+ [Data Mining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

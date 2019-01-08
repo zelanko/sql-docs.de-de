@@ -1,5 +1,5 @@
 ---
-title: Tools und Anwendungen, die in Analysis Services verwendete | Microsoft Docs
+title: Tools und Anwendungen, die in Analysis Services verwendete | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e2ff1808739eff4aed9ad34bef5d512f7539b7a6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8d3ecb5de4c70c09bc367b9008f5d62c6a23faef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041791"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210072"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>In Analysis Services verwendete Tools und Anwendungen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,26 +22,26 @@ ms.locfileid: "34041791"
   Suchen die Tools und Anwendungen, die Sie zum Erstellen von Analysis Services-Modellen benötigen und Verwalten von Datenbanken bereitgestellt.  
   
 ## <a name="analysis-services-model-designers"></a>Analysis Services-Modell-Designer  
- Modelle werden mithilfe von Projektvorlagen in SQL Server Data Tools (SSDT), einer Visual Studio-Shell erstellt. Projektvorlagen enthalten die Modell-Designer zum Erstellen der Model-Objekte, die eine Analysis Services-Lösung bilden. SSDT ist ein kostenloser Webdownload monatlich aktualisiert.
+ Modelle werden mithilfe von Projektvorlagen in SQL Server Data Tools (SSDT), einer Visual Studio-Shell erstellt. Projektvorlagen bieten die Modell-Designer zum Erstellen der Objekte des Datenmodells, die Analysis Services-Lösung bilden. SSDT ist ein kostenloser Webdownload monatlich aktualisiert.
 
- **[Herunterladen von SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)** 
+ **[SQL Server Datatools (SSDT) herunterladen](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)** 
   
- Modelle verfügen über eine Einstellung des Kompatibilitätsgrades, der die Funktionsverfügbarkeit bestimmt und welches Release von Analysis Services das Modell ausführt.  Ob Sie angeben können, dass es sich bei ein bestimmten Kompatibilitätsgrad ist der Teil der Modell-Designer bestimmt.  
+ Modelle verfügen über eine Einstellung des Kompatibilitätsgrades, der die Funktionsverfügbarkeit bestimmt und welches Release von Analysis Services das Modell ausführt.  Ob Sie angeben können, dass es sich bei ein bestimmten Kompatibilitätsgrad wird festgelegt, teilweise vom Modell-Designer.  
   
- Tabellarische Modelle, die die neueste Funktionen verwenden, z. B. BIM-Dateien im JSON-Tabellenformat und bidirektionales kreuzfilterrichtung, müssen erstellt oder mit dem Kompatibilitätsgrad 1200 oder höher aktualisiert werden.  
+ Tabellarische Modelle verwenden die neueste Funktionalität nutzen, wie z. B. die BIM-Dateien im JSON-Tabellenformat und bidirektionale kreuzfilterung, müssen erstellt oder mit dem Kompatibilitätsgrad 1200 oder höher aktualisiert werden.  
   
- Wenn Sie einen niedrigeren Kompatibilitätsgrad benötigen, vielleicht können weil ein Modell mit einer früheren Version von Analysis Services, bereitgestellt werden soll weiterhin im Modell-Designer in SSDT. Neuere Versionen des Tools wird das Erstellen von jedem Modelltyp (tabellarisch oder mehrdimensional) mit jedem Kompatibilitätsgrad unterstützt.   
+ Wenn Sie mit einen niedrigeren Kompatibilitätsgrad benötigen, vielleicht können weil Sie ein Modell mit einer früheren Version von Analysis Services bereitstellen möchten weiterhin im Modell-Designer in SSDT. Neuere Versionen des Tools unterstützen jeden Modelltyp (tabellarisch oder mehrdimensional) mit jedem Kompatibilitätsgrad erstellen.   
 
 ## <a name="administrative-tools"></a>Verwaltungstools  
   
  SQL Server Management Studio (SSMS) ist das primäre Verwaltungstool für alle SQL Server-Funktionen, einschließlich Analysis Services. SSMS ist ein kostenloser Webdownload monatlich aktualisiert. 
   
-**[Herunterladen von SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)** 
+**[Hier können Sie SQL Server Management Studio herunterladen.](../ssms/download-sql-server-management-studio-ssms.md)** 
   
- SSMS bietet erweiterte Ereignisse (xEvents), mit einem eine einfache Alternative zu SQL Server Profiler-ablaufverfolgungen zum Überwachen der Aktivität und Diagnostizieren von Problemen auf SQL Server 2016 und Azure Analysis Services-Server. Weitere Informationen finden Sie unter [Überwachen von Analysis Services mit den erweiterten Ereignissen von SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) .  
+ SSMS umfasst erweiterte Ereignisse (xEvents), eine einfache Alternative zu SQL Server Profiler-ablaufverfolgungen zum Überwachen der Aktivität und Diagnostizieren von Problemen auf SQL Server 2016 und Azure Analysis Services-Server bereitstellen. Weitere Informationen finden Sie unter [Überwachen von Analysis Services mit den erweiterten Ereignissen von SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) .  
   
 ### <a name="sql-server-profiler"></a>SQL Server Profiler  
- Auch wenn er zugunsten von xEvents offiziell als veraltet eingestuft ist, bietet SQL Server Profiler ein vertrautes Konzept zum Überwachen von Verbindungen, der MDX-Abfrageausführung und anderer Servervorgänge. SQL Server Profiler wird standardmäßig installiert. Sie können es mit SQL Server-Anwendungen für Apps in Windows finden.  
+ Auch wenn er zugunsten von xEvents offiziell als veraltet eingestuft ist, bietet SQL Server Profiler ein vertrautes Konzept zum Überwachen von Verbindungen, der MDX-Abfrageausführung und anderer Servervorgänge. SQL Server Profiler wird standardmäßig installiert. Sie finden Sie mit SQL Server-Anwendungen für Apps in Windows.  
   
 ### <a name="powershell"></a>PowerShell  
  Mithilfe von PowerShell-Befehlen können Sie viele Verwaltungsaufgaben durchführen. Finden Sie unter [PowerShell-Referenz](../analysis-services/powershell/analysis-services-powershell-reference.md) für Weitere Informationen.  

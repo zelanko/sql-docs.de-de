@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5911783558ff259eef7488df082560cfe56a4dfb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 028da8892406be7c29d604cc0357f0006bacc4cb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665919"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215436"
 ---
 # <a name="process-odbc-errors-odbc"></a>Verarbeiten von ODBC-Fehlern (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Zwei ODBC-Funktionsaufrufe können verwendet werden, um ODBC-Meldungen abzurufen: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) und [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Um primäre, mit ODBC verbundene Informationen in den Feldern **SQLState**, **pfNative** und **ErrorMessage** zu erhalten, rufen Sie [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) auf, bis SQL_NO_DATA zurückgegeben wird. Für jeden Diagnosedatensatz kann [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) aufgerufen werden, um einzelne Felder abzurufen. Alle treiberspezifischen Felder müssen mit **SQLGetDiagField**abgerufen werden.  
+  Zwei ODBC-Funktionsaufrufe können verwendet werden, um ODBC-Meldungen abzurufen: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) und [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Um primäre, mit ODBC verbundene Informationen in den Feldern **SQLState**, **pfNative**and **ErrorMessage** zu erhalten, rufen Sie [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) auf, bis SQL_NO_DATA zurückgegeben wird. Für jeden Diagnosedatensatz kann [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) aufgerufen werden, um einzelne Felder abzurufen. Alle treiberspezifischen Felder müssen mit **SQLGetDiagField**abgerufen werden.  
   
  [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) und [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) werden vom ODBC-Treiber-Manager, nicht von einem einzelnen Treiber, verarbeitet. Der ODBC-Treiber-Manager speichert treiberspezifische Diagnosefelder erst zwischen, wenn eine erfolgreiche Verbindung hergestellt wurde. Der Aufruf von [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) für treiberspezifische Diagnosefelder ist vor dem erfolgreichen Herstellen einer Verbindung nicht möglich. Dies betrifft auch die ODBC-Verbindungsbefehle, auch wenn sie SQL_SUCCESS_WITH_INFO zurückgeben. Treiberspezifische Diagnosefelder sind bis zum nächsten ODBC-Funktionsaufruf nicht verfügbar.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "51665919"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) aus, um die in diesem Beispiel verwendete gespeicherte Prozedur zu erstellen.  
+ Führen Sie das erste ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code aus, um die von diesem Beispiel verwendete gespeicherte Prozedur zu erstellen.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib. Führen Sie dann das Programm aus.  
   
- Führen Sie das dritte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) aus, um die in diesem Beispiel verwendete gespeicherte Prozedur zu löschen.  
+ Führen Sie das dritte ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code aus, um die von diesem Beispiel verwendete gespeicherte Prozedur zu löschen.  
   
 ### <a name="code"></a>Code  
   

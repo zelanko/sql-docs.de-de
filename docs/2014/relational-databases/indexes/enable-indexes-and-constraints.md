@@ -17,12 +17,12 @@ ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0f9f0130c90796efa8bc12f663fbe3ad32f19413
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d68f329aecdd1284bac311db4139470bba55e41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152620"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533146"
 ---
 # <a name="enable-indexes-and-constraints"></a>Aktivieren von Indizes und Einschränkungen
   In diesem Thema wird beschrieben, wie ein deaktivierter Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]aktiviert wird. Nach dem Deaktivieren eines Indexes bleibt er deaktiviert, bis er neu erstellt oder gelöscht wird.  
@@ -33,7 +33,7 @@ ms.locfileid: "48152620"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So aktivieren Sie einen deaktivierten Index mit:**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48152620"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48152620"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Bei der Verwendung von DBCC DBREINDEX muss der Benutzer die Tabelle besitzen oder Mitglied der festen Serverrolle **sysadmin** oder der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-enable-a-disabled-index"></a>So aktivieren Sie einen deaktivierten Index  
   

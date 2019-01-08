@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 54dc66e30356f3896d7ce509bf83e56a1973c5b2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 55eb472ef14e980f77a47a2c6989031cebec91e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984842"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509554"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Konfigurieren von Power Pivot-Dienstkonten
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -110,7 +110,7 @@ ms.locfileid: "38984842"
   
 |Anforderung|Description|  
 |-----------------|-----------------|  
-|Bereitstellungsanforderung|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Beim Systemdienst handelt es sich um eine in der Farm freigegebene Ressource, die verfügbar wird, wenn Sie eine Dienstanwendung erstellen. Der Dienstanwendungspool muss bei der Erstellung der Dienstanwendung angegeben werden. Er kann auf zwei Arten angegeben werden: mithilfe des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstools oder durch PowerShell-Befehle.<br /><br /> Sie haben die Anwendungspoolidentität möglicherweise so konfiguriert, dass sie unter einem eindeutigen Konto ausgeführt wird. Andernfalls sollten Sie erwägen, dies jetzt zu ändern, dass sie unter einem anderen Konto ausgeführt wird.|  
+|Bereitstellungsanforderung|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Beim Systemdienst handelt es sich um eine in der Farm freigegebene Ressource, die verfügbar wird, wenn Sie eine Dienstanwendung erstellen. Der Dienstanwendungspool muss bei der Erstellung der Dienstanwendung angegeben werden. Er kann auf zwei Arten angegeben werden: mithilfe des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstools oder durch PowerShell-Befehle.<br /><br /> Sie haben die Anwendungspoolidentität möglicherweise so konfiguriert, dass sie unter einem eindeutigen Konto ausgeführt wird. Aber falls nicht, sollten Sie jetzt für die Ausführung unter einem anderen Konto zu ändern.|  
 |Domänenbenutzerkonto-Anforderung|Die Anwendungspoolidentität muss ein Windows-Domänenbenutzerkonto sein. Integrierte Computerkonten (z. B. Netzwerkdienst oder Lokaler Dienst) sind nicht zulässig.|  
 |Berechtigungsanforderungen|Dieses Konto benötigt keine lokalen Systemadministratorberechtigungen auf dem Computer. Dieses Konto muss Analysis Services-Systemadministratorberechtigungen auf dem lokalen [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] -Computer aufweisen, der auf dem gleichen Computer installiert ist. Diese Berechtigungen werden automatisch von SQL Server-Setup oder beim Festlegen oder Ändern der Anwendungspoolidentität in der Zentraladministration gewährt.<br /><br /> Administratorberechtigungen sind erforderlich, damit das Weiterleiten von Abfragen an den [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]-Computer erfolgen kann. Sie sind auch zum Überwachen des Zustands, zum Schließen inaktiver Sitzungen und zum Lauschen auf Ablaufverfolgungsereignisse erforderlich.<br /><br /> Das Konto muss über Verbindungs-, Lese- und Schreibberechtigungen für die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungsdatenbank verfügen. Diese Berechtigungen werden automatisch gewährt, wenn die Anwendung erstellt wird, und automatisch aktualisiert, wenn Sie Konten oder Kennwörter in der Zentraladministration ändern.<br /><br /> Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung überprüft, ob ein SharePoint-Benutzer berechtigt ist, Daten vor dem Abrufen der Datei anzuzeigen, sie nimmt jedoch nicht die Identität des Benutzers an. Es gibt keine Berechtigungsanforderungen für Identitätswechsel.|  
 |Anforderungen für horizontales Skalieren|Keine.|  
@@ -150,7 +150,7 @@ ms.locfileid: "38984842"
   
 11. Geben Sie den Namen des Kontos an, das für den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungspool verwendet wird, und klicken Sie auf **OK**.  
   
-##  <a name="expired"></a> Problembehandlung: Beheben von HTTP 503-Fehlern aufgrund abgelaufener Kennwörter für die zentrale Verwaltung oder den SharePoint Foundation-Webanwendungsdienst  
+##  <a name="expired"></a> Problembehandlung: Problembehandlung: Beheben von HTTP 503-Fehlern aufgrund abgelaufener Kennwörter für die zentrale Verwaltung oder den SharePoint Foundation-Webanwendungsdienst  
  Wenn der zentrale Verwaltungsdienst oder der SharePoint Foundation-Webanwendungsdienst aufgrund der Rücksetzung eines Kontos oder des Ablaufs eines Kennworts aufhört zu arbeiten, erhalten Sie die Fehlermeldung HTTP 503 "Dienst nicht verfügbar", wenn Sie versuchen, die zentrale SharePoint-Verwaltung oder eine SharePoint-Website zu öffnen. Führen Sie folgende Schritte aus, um den Server online zurückzubringen. Sobald die zentrale Verwaltung verfügbar ist, können Sie damit fortfahren, abgelaufene Kontoinformationen zu aktualisieren.  
   
 1.  Klicken Sie in der Verwaltung auf **Internetinformationsdienste-Manager**.  
@@ -159,7 +159,7 @@ ms.locfileid: "38984842"
   
     1.  Klicken Sie mit der rechten Maustaste auf den Namen des Anwendungspools, und wählen Sie **Erweiterte Einstellungen**aus.  
   
-    2.  Wählen Sie **Identität** aus, und klicken Sie auf die Schaltfläche zum Öffnen des Dialogfelds für die Identität des Anwendungspools.  
+    2.  Wählen Sie **Identität** , und klicken Sie auf der..., um das Dialogfeld Anwendungspoolidentität zu öffnen.  
   
     3.  Klicken Sie auf **Festlegen**.  
   
@@ -181,6 +181,6 @@ ms.locfileid: "38984842"
   
 ## <a name="see-also"></a>Siehe auch  
  [Starten oder Beenden eines Power Pivot für SharePoint-Servers](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [Konfigurieren des PowerPivot für die unbeaufsichtigte Datenaktualisierung (PowerPivot für SharePoint)-Konto](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [Konfigurieren des PowerPivot-Kontos für die unbeaufsichtigte Datenaktualisierung (PowerPivot für SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   

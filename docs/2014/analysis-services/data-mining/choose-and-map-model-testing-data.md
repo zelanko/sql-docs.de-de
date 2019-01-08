@@ -16,12 +16,12 @@ ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 641ec96632e2976ea56f1607b2076d4d01734523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac7a8f813aa884cc4267c73fbcedc88eecfb0a36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166353"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542302"
 ---
 # <a name="choose-and-map-model-testing-data"></a>Auswählen und Zuordnen von Modelltestdaten
   Um in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ein Genauigkeitsdiagramm zu erstellen, müssen Sie die Daten auswählen, die zum Testen des Modells verwendet werden und die Daten dem Modell zuordnen.  
@@ -76,7 +76,7 @@ ms.locfileid: "48166353"
   
 3.  Wählen Sie auf der Registerkarte **Eingabeauswahl** unter **Dataset auswählen, das für das Genauigkeitsdiagramm verwendet werden soll**die Option **Anderes Dataset verwenden**aus.  
   
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **…** ), um ein Dialogfeld zu öffnen und die Definition des externen Datasets zu erstellen.  
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**  ein Dialogfeld geöffnet, und die Definition des externen Datasets zu erstellen.  
   
 5.  Wählen Sie im Dialogfeld **Miningstruktur auswählen** die Miningstruktur aus, mit der Sie arbeiten wollen, und klicken Sie dann auf **OK**.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48166353"
   
 4.  Wählen Sie unter **Dataset auswählen, das für das Genauigkeitsdiagramm verwendet werden soll**die Option **Anderes Dataset verwenden**.  
   
-5.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **…** ), um ein Dialogfeld zu öffnen und die Definition der externen Datenquelle zu erstellen.  
+5.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**  ein Dialogfeld geöffnet, und die Definition der externen Datenquelle zu erstellen.  
   
 6.  Klicken Sie im Dialogfeld **Spaltenzuordnung angeben** auf **Falltabelle auswählen**.  
   
@@ -121,6 +121,6 @@ ms.locfileid: "48166353"
      Die neuen Spaltenzuordnungen werden im Dialogfeld **Spaltenzuordnung angeben** angezeigt. Sie können eine Zuordnung entfernen, indem Sie die Linie zwischen den Spalten auswählen und die ENTF-Taste drücken. Sie können eine neue Verbindung erstellen, indem Sie in der **Miningstruktur** -Tabelle eine Spalte auswählen und diese Spalte auf die entsprechende Spalte in der **Eingabetabelle(n) auswählen** -Tabelle ziehen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tests und Überprüfung miningmodelltasks und Anweisungen &#40;Datamining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tasks und Anweisungen für Test und Überprüfung &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

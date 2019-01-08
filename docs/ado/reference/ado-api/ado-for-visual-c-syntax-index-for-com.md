@@ -17,17 +17,17 @@ ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6140fe9fc991356a0138c533e8dcbfdb53ca0959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae03c7dccdc702ccb4deae068013a69d7852d623
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789476"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529630"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO für Visual C++ – Syntaxindex für COM
 Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz basiert auf Microsoft Visual C++.  
   
- Bei Verwendung der **#import** Direktive in Ihrer Anwendung, eine Headerdatei generiert werden können, die Sie ähnlich wie auf Microsoft Visual Basic-Syntax verwenden. Eigenschaftennamen im Format **Get_ *** PropertyName* und **Put_ *** PropertyName* behandelt werden kann, als ob sie einfach als deklariert wurden *PropertyName*. Eine Eigenschaft kann dann wie ein Datenmember anstelle einer Funktion behandelt werden.  
+ Bei Verwendung der **#import** Direktive in Ihrer Anwendung, eine Headerdatei generiert werden können, die Sie ähnlich wie auf Microsoft Visual Basic-Syntax verwenden. Die Eigenschaftsnamen des Formulars **Get_**_PropertyName_ und **Put_**_PropertyName_ behandelt werden kann, als ob sie einfach als deklariertwurden *PropertyName*. Eine Eigenschaft kann dann wie ein Datenmember anstelle einer Funktion behandelt werden.  
   
  Die Methoden, Eigenschaften und Ereignisse sind Funktionen, die Zurückgeben einer **HRESULT**, die Sie testen können, um festzustellen, ob die Funktion erfolgreich ausgeführt.  
   

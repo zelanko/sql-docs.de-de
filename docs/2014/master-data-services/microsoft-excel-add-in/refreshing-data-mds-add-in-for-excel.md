@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 399665103725cec573a790667c9253b25836b076
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bed79906ff69305a135b1c7249cd4d3331ca3d7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095951"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207586"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>Aktualisieren von Daten (MDS-Add-In für Excel)
   Aktualisieren Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]Daten, wenn Sie die aktuellsten Informationen aus dem MDS-Repository ohne Öffnen eines neuen Arbeitsblatts abrufen möchten. Sie können entweder alle Zellen oder eine Auswahl von Zellen aktualisieren. Dies kann nützlich sein, wenn Sie Spalten mit benutzerdefinierten Formeln oder anderen Daten eingefügt haben, die nicht in MDS verwaltet werden, und Sie diese Daten beibehalten möchten.  
@@ -36,7 +35,7 @@ ms.locfileid: "48095951"
   
 -   Wenn sich ein Attributwert im MDS-Repository geändert hat, wird der Wert im Arbeitsblatt mit dem Wert aus dem MDS-Repository aktualisiert. Die Zellenfarbe ändert sich nicht.  
   
-> [!WARNING]  
+> [!WARNING]
 >  -   Wenn nicht verwaltete Daten im aktiven Arbeitsblatt in Zeilen unter den von MDS verwalteten Daten vorhanden sind, werden die nicht verwalteten Daten möglicherweise überschrieben. Dies ist der Fall, wenn Sie das Blatt und neue Zeilen mit von MDS verwalteten Daten, die mit den nicht verwalteten Daten überlappen, aktualisieren.  
 > -   Wenn Sie eine Aktualisierung vornehmen, werden die Kommentare zu den von MDS verwalteten Zellen gelöscht.  
   
@@ -56,6 +55,6 @@ ms.locfileid: "48095951"
   
 -   [Laden von Daten &#40;MDS-Add-in für Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
--   [Master Data Services-Add-in für Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Master Data Services-Add-In für Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2f3c3da8228924a7d4b697865ee729e9b84aff5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9a063413a665d9e159cb513ea936ab851715ce4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131190"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515402"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>Konfigurieren der flexiblen Failoverrichtlinie zum Steuern der Bedingungen für ein automatisches Failover (AlwaysOn-Verfügbarkeitsgruppen)
   In diesem Thema wird beschrieben, wie die flexible Failoverrichtlinie für eine AlwaysOn-Verfügbarkeitsgruppe mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]konfiguriert wird. Eine flexible Failoverrichtlinie ermöglicht eine präzise Kontrolle über die Bedingungen, die ein automatisches Failover für eine Verfügbarkeitsgruppe verursachen. Durch eine Änderung der Fehlerbedingungen, die ein automatisches Failover und die Häufigkeit von Integritätsprüfungen auslösen, können Sie die Wahrscheinlichkeit für ein automatisches Failover erhöhen oder verringern, um das SLA für Hochverfügbarkeit zu unterstützen.  
@@ -29,7 +29,7 @@ ms.locfileid: "48131190"
     > [!NOTE]  
     >  The flexible failover policy of an availability group cannot be configured by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Limitations"></a> Einschränkungen beim automatischen Failover  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48131190"
   
 ####  <a name="Permissions"></a> Berechtigungen  
   
-|Task|Berechtigungen|  
+|Aufgabe|Berechtigungen|  
 |----------|-----------------|  
 |Konfigurieren der flexiblen Failoverrichtlinie für eine neue Verfügbarkeitsgruppe|Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** und die CREATE AVAILABILITY GROUP-Serverberechtigung, ALTER ANY AVAILABILITY GROUP-Berechtigung oder CONTROL SERVER-Berechtigung.|  
 |Ändern der Richtlinie einer vorhandenen Verfügbarkeitsgruppe|Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.|  
@@ -90,13 +90,13 @@ ms.locfileid: "48131190"
 ##  <a name="PowerShellProcedure"></a> PowerShell  
  **So konfigurieren Sie die flexible Failoverrichtlinie**  
   
-1.  Legen Sie den Standardwert (`cd`) mit der Serverinstanz her, die das primäre Replikat hostet.  
+1.  Legen Sie den Standard (`cd`) auf die Serverinstanz fest, auf der das primäre Replikat gehostet wird.  
   
 2.  Wenn Sie einer Verfügbarkeitsgruppe ein Verfügbarkeitsreplikat hinzufügen, verwenden Sie das `New-SqlAvailabilityGroup`-Cmdlet. Wenn Sie ein vorhandenes Verfügbarkeitsreplikat ändern, verwenden Sie das `Set-SqlAvailabilityGroup`-Cmdlet.  
   
     -   Um die Failover-bedingungsebene festzulegen, verwenden die `FailureConditionLevel` *Ebene* Parameter, wobei *Ebene* ist eine der folgenden Werte:  
   
-        |value|Ebene|Automatisches Failover wird initiiert, wenn...|  
+        |Wert|Ebene|Automatisches Failover wird initiiert, wenn...|  
         |-----------|-----------|-------------------------------------------|  
         |`OnServerDown`|1 (eins)|der Server ausfällt. Der SQL Server-Dienst wird aufgrund eines Failovers oder Neustarts beendet.|  
         |`OnServerUnresponsive`|2 (zwei)|der Server nicht reagiert. Der Wert der Bedingungsebene wird unterschritten, der SQL Server-Dienst ist mit dem Cluster verbunden, und der Schwellenwert für das Timeout der Integritätsprüfung wird überschritten, oder das aktuelle primäre Replikat weist einen fehlerhaften Status auf.|  
@@ -125,7 +125,7 @@ ms.locfileid: "48131190"
         ```  
   
 > [!NOTE]  
->  Um die Syntax eines Cmdlets anzuzeigen, verwenden die `Get-Help` -Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das `Get-Help`-Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Einrichten und Verwenden des SQL Server PowerShell-Anbieters**  
   

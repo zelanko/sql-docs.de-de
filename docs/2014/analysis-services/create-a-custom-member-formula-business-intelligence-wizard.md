@@ -13,25 +13,25 @@ ms.assetid: 5b9b2d93-0798-4bac-bbd3-c657e09d9883
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 06943ba0892799275fa6c1c479f9066d2e34f3e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 116a9c05069d59e3ae458e232f7451be04411794
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054380"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507857"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>Benutzerdefinierte Elementformel erstellen (Business Intelligence-Assistent)
-  Auf der Seite **Benutzerdefinierte Elementformel erstellen** können Sie den Attributen der angegebenen Dimension Spalten von benutzerdefinierten Elementformeln zuordnen. Diese Spalten enthalten MDX-Anweisungen, die Elementwerte für das betreffende Attribut definieren.  
+  Verwenden der **benutzerdefinierte Elementformel erstellen** Seite, um Attribute in der angegebenen Dimension Spalten von benutzerdefinierten Formel Spalten-zuordnen, die Anweisungen (Multidimensional Expressions) enthalten, die Elementwerte für das Definieren Dieses Attribut.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Attribut**  
  Wählen Sie das Attribut aus, das einer benutzerdefinierten Elementformel zugeordnet werden soll.  
   
  **Quellspalte**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen (**…**), um das Dialogfeld **Spalte auswählen** zu öffnen, und wählen Sie die Spalte der benutzerdefinierten Elementformel aus, die dem Attribut zugeordnet werden soll.  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen (**...** ) die Schaltfläche, um die **wählen Sie eine Spalte** Dialogfeld und wählen Sie die benutzerdefinierte Formel Spalte mit dem Attribut zugeordnet werden soll.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Business Intelligence-Assistent F1-Hilfe](business-intelligence-wizard-f1-help.md)   
+ [Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Dimensions-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

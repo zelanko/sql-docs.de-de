@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0d2e97c16773cd83d208faf711e7c0bebe8282a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 465b14ab5cb96f3f587222427ea793bbaf225b01
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107920"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762402"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>Laden von Daten (MDS-Add-In für Excel)
   In der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], müssen Sie Daten laden aus dem MDS-Repository in ein aktives Excel-Arbeitsblatt, bevor Sie damit arbeiten können. Wenn Sie mit der Arbeit an den Daten fertig sind, veröffentlichen Sie sie im MDS-Repository, sodass andere Benutzer sie freigeben können.  
@@ -29,7 +28,7 @@ ms.locfileid: "48107920"
 >  Eine MDS-aktivierte Arbeitsmappe darf nur in Excel mit dem MDS-Add-In für Excel geöffnet und aktualisiert werden. Das Öffnen der MDS-aktivierten Arbeitsmappe in Excel auf einem Computer, auf dem das MDS-Excel-Add-In nicht installiert ist, wird nicht unterstützt. Außerdem könnte dies die Arbeitsmappendatei beschädigen. Wenn Sie Daten für andere Personen freigeben möchten, empfiehlt es sich, ihnen eine Shortcutabfragedatei per E-Mail zu senden. Demgegenüber ist es nicht empfehlenswert die Arbeitsmappe nur zu speichern und sie per E-Mail zu versenden. Weitere Informationen über die Abfrage finden Sie unter [Senden einer Shortcutabfragedatei &#40;MDS-Add-In für Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md).  
   
 ## <a name="filtering-data"></a>Filtern von Daten  
- Sie können Daten vor dem Laden filtern, um die Datenmenge einzuschränken, die Sie herunterladen werden. Dies schließt die Auswahl der zu ladenden Attribute (Spalten) ein, die Reihenfolge, in der die Attribute angezeigt werden sollen, und die Elemente (Datenzeilen), mit denen Sie arbeiten möchten. Weitere Informationen finden Sie unter [Filtern von Daten vor dem Laden &#40;MDS-Add-in für Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md).  
+ Vor dem Laden, um die Datenmenge einzuschränken, die Sie herunterladen, können Sie Daten filtern. Dies schließt die Auswahl der zu ladenden Attribute (Spalten) ein, die Reihenfolge, in der die Attribute angezeigt werden sollen, und die Elemente (Datenzeilen), mit denen Sie arbeiten möchten. Weitere Informationen finden Sie unter [Filtern von Daten vor dem Laden &#40;MDS-Add-in für Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md).  
   
 ## <a name="connect-automatically-and-load-frequently-used-data"></a>Herstellen einer automatischen Verbindung und Laden von häufig verwendeten Daten  
  Wenn Sie immer eine Verbindung mit dem gleichen Server herstellen und den gleichen Satz Daten laden möchten, können Sie Shortcutabfragedateien erstellen, die Verbindungs- und Filterinformationen enthalten. Weitere Informationen zu Abfragedateien finden Sie unter [Shortcutabfragedateien &#40;MDS-Add-In für Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md).  
@@ -43,7 +42,7 @@ ms.locfileid: "48107920"
 |----------------------|-----------|  
 |Filtern Sie MDS-Daten, bevor Sie sie in Excel laden.|[Filtern von Daten vor dem Laden &#40;MDS-Add-in für Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
 |Laden Sie MDS-Daten in Excel.|[Laden von Daten aus MDS in Excel](export-data-to-excel-from-master-data-services.md)|  
-|Ändern Sie die Reihenfolge der Spalten, bevor Sie Daten herunterladen.|[Neuanordnen von Spalten &#40;MDS-Add-in für Excel&#41;](reorder-columns-mds-add-in-for-excel.md)|  
+|Ändern Sie die Reihenfolge der Spalten, bevor Sie Daten herunterladen.|[Neuanordnen von Spalten &#40;MDS-Add-In für Excel&#41;](reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48107920"
   
 -   [Shortcutabfragedateien &#40;MDS-Add-In für Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
--   [Master Data Services-Add-in für Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Master Data Services-Add-In für Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
 -   [Sicherheit &#40;Master Data Services&#41;](../security-master-data-services.md)  
   

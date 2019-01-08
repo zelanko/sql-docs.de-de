@@ -13,12 +13,12 @@ ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 04e58ec9c40f62932c4a711c1e96c0bd4e8162e2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 168fced99d74cb2d3716929b4b47fda1c03b92ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666169"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532389"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Verwenden von Testrepositorys (OracleToSQL)
 Der SSMA-testen-Repository speichert SSMA Tester Testfälle und die Testergebnisse für die spätere Verwendung. Die Repository-Daten in SQL Server-Tabellen gespeichert sind **TestCaseRepository** und **RunTestCaseResultRepository** im Schema **Ssma_oracle_utilities** von **Ssmatesterdb** Datenbank.  
@@ -30,17 +30,17 @@ Die folgenden Schaltflächen sind auf das Repository der Testfälle Dialogfeld v
 -   Klicken Sie auf die **schließen** Schaltfläche, um das Repository von Test Cases-Dialogfeld zu schließen.  
   
 ## <a name="test-cases-repository"></a>Testfälle-Repository  
-Sie können das Repository von Testfällen anzeigen, indem Sie auf **Testfälle...** von der **Tester** Menü. SSMA zeigt dann die **Repository Testfälle** Dialogfenster mit einer Liste von gespeicherten Testfälle auf die **Testfälle** Seite.  
+Sie können das Repository von Testfällen anzeigen, indem Sie auf **Testfälle...**  aus der **Tester** Menü. SSMA zeigt dann die **Repository Testfälle** Dialogfenster mit einer Liste von gespeicherten Testfälle auf die **Testfälle** Seite.  
   
 Das Raster zeigt die folgende Informationen zu jedem Testfall muss:  
   
 -   Name: Der Name des Testfalls.  
   
--   Erstellt: Der Testfall Erstellungsdatum.  
+-   Erstellt: Das Erstellungsdatum des Testfalls.  
   
--   Geänderte: Den Testfall Datum der letzten Änderung.  
+-   Geändert: Das Datum der letzten Änderung des Testfalls.  
   
--   Beschreibung: Die Testfall-Beschreibungen  
+-   Beschreibung: Die Testfall-Beschreibungen.  
   
 Die folgenden Schaltflächen sind auf der Seite "Testfälle" verfügbar:  
   
@@ -53,21 +53,21 @@ Die folgenden Schaltflächen sind auf der Seite "Testfälle" verfügbar:
 -   Klicken Sie auf die **ausführen** die Schaltfläche, um die [Ausführen von Testfällen (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) Dialogfeld, und führen Sie den ausgewählten Test.  
   
 ## <a name="test-results-repository"></a>Ergebnisrepository  
-Sehen Sie auf das Ergebnisrepository der **Testergebnisse** auf der Seite die **Repository Testfälle** Fenster. Öffnen Sie sie durch Klicken auf **Testergebnisse...** von der **Tester** Menü.  
+Sehen Sie auf das Ergebnisrepository der **Testergebnisse** auf der Seite die **Repository Testfälle** Fenster. Öffnen Sie sie durch Klicken auf **Testergebnisse...**  aus der **Tester** Menü.  
   
 Sie können zwei Filter auf **Testergebnisse** Seite:  
   
--   Den Namen des Testfalls ein Filter: ermöglicht die Auswahl der Testergebnisse anhand des Namens des Testfalls. Dieser Filter die **alle Testfälle** Wert ermöglicht das Anzeigen von Testergebnissen für alle Testfälle.  
+-   Der Name des Testfalls-Filter: Ermöglicht die Auswahl der Testergebnisse anhand des Namens des Testfalls. Dieser Filter die **alle Testfälle** Wert ermöglicht das Anzeigen von Testergebnissen für alle Testfälle.  
   
--   Der Testfall Ausführungsdatum Filter: Filter die Testergebnisse nach dem Datum speichern. Dieser Filter die **alle Zeitraum** Wert ermöglicht das Anzeigen von Testergebnissen für jedes Datum speichern.  
+-   Der Testfall Ausführungsdatum-Filter: Filter-Testergebnisse nach dem Datum speichern. Dieser Filter die **alle Zeitraum** Wert ermöglicht das Anzeigen von Testergebnissen für jedes Datum speichern.  
   
 Die folgende Informationen zu Testergebnissen wird im Raster angezeigt.  
   
 -   Name: Name des Testfalls.  
   
--   Gespeichert: Testen Sie Groß-/Kleinschreibung Datum speichern.  
+-   Gespeichert: Testfall Datum speichern.  
   
--   Ergebnis: Eine kurze Zusammenfassung der Ausführung des Tests (diese Zelle die QuickInfo zeigt eine vollständige Zusammenfassung der Ausführung des Tests).  
+-   Ergebnisse: Eine kurze Zusammenfassung der Ausführung des Tests (diese Zelle die QuickInfo zeigt eine vollständige Zusammenfassung der Ausführung des Tests).  
   
 Die folgenden Schaltflächen sind auf der Seite "Testergebnis" verfügbar:  
   

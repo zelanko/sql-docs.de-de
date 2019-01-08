@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2e060b546287b1a56a103086b8a4d6fc7e120be9
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 58afef163d7c46c69556ad00bfd201751e61e943
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753567"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514567"
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Lektion 3-4: Ändern der Date-Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ Nachdem Sie eine benannte Berechnung in der Datenquellensicht erstellt haben, k�
   
 3.  Wenn das Eigenschaftenfenster nicht geöffnet ist, öffnen Sie es, und klicken Sie in der Titelleiste auf die Schaltfläche **Automatisch im Hintergrund** , damit es geöffnet bleibt.  
   
-4.  Klicken Sie weiter unten im Fenster auf das Eigenschaftenfeld **NameColumn** und anschließend auf die Schaltfläche mit den Auslassungspunkten (**…**), um das Dialogfeld **Namensspalte** zu öffnen.  
+4.  Klicken Sie auf die **NameColumn** Eigenschaftenfeld nahe dem unteren Rand des Fensters, und klicken Sie dann auf den Auslassungspunkten (**...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
   
 5.  Wählen Sie **SimpleDate** weiter unten in der Liste **Quellspalte** aus, und klicken Sie auf **OK**.  
   

@@ -1,37 +1,41 @@
 ---
-title: Verwendung von Notebooks in der Vorschau von SQL Server-2019 | Microsoft-Dokumentation
-description: ''
+title: Führen Sie Notebooks in Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: In diesem Artikel wird erläutert, wie Jupyter-Notebooks in Azure Data Studio Conneected eine SQL Server-2019 big Data-Cluster ausgeführt wird.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9f9db16431cd6c3befbb32383725ec008f5a9081
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: af1393b38b297e451903d5a39942a3e878c88ee6
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221636"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246609"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Verwendung von Notebooks in der Vorschau von SQL Server-2019
 
-Dieser Artikel beschreibt, wie Sie Jupyter-Notebooks auf dem Cluster starten und erstellen Ihre eigenen Notebooks. Es wird gezeigt, wie Aufträge für den Cluster zu übermitteln.
+Dieser Artikel beschreibt, wie Sie Jupyter Notebooks in einem big Data-Cluster zu starten und zum Starten, erstellen Ihre eigenen Notebooks. Es wird gezeigt, wie Aufträge für den Cluster zu übermitteln.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Um Notebooks verwenden zu können, müssen Sie die folgenden erforderlichen Komponenten installieren:
 
 - [Eine SQL Server-2019 big Data-cluster](deployment-guidance.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
-- [Die Erweiterung für SQL Server-2019 (Vorschau)](../azure-data-studio/sql-server-2019-extension.md).
+- [SQL Server-2019 big Data-Tools](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server-2019-Erweiterung**
+   - **"kubectl"**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## <a name="connect-to-the-hadoop-gateway-knox-end-point"></a>Verbinden Sie mit der Hadoop-Gateway-Knox-Endpunkt
 
-Sie können auf verschiedene Endpunkte im Cluster verbinden. Sie können in den Microsoft SQL Server-Verbindungstyp oder an den Endpunkt HDFS/Spark-Gateway verbinden.
-Drücken von F1 in Azure Data Studio (Vorschau), und klicken Sie auf **neue Verbindung** und Sie können mit Ihren Endpunkt HDFS/Spark-Gateway verbinden.
+Sie können auf verschiedene Endpunkte im Cluster verbinden. Sie können in den Microsoft SQL Server-Verbindungstyp oder an den Endpunkt für HDFS/Spark-Gateway verbinden.
+Drücken von F1 in Azure Data Studio (Vorschau), und klicken Sie auf **neue Verbindung** und Sie können mit Ihren Endpunkt des HDFS/Spark-Gateway verbinden.
 
 ![Image1](media/notebooks-guidance/image1.png)
 
@@ -80,7 +84,7 @@ Bei Auswahl einer Kernelversion installiert dieser Kernel wird in der virtuellen
 |Spark-Kernel|Für das Schreiben von Scala-Code, die mit Spark Compute aus dem Cluster.
 |Python-Kernel|Für das Schreiben von Python-Code für die lokale Entwicklung.
 
-Die `Attach to` liefert den Kontext für den Kernel anfügen. Wenn Sie am Ende HDFS/Spark-Gateway (Knox) verbunden sind, zeigen Sie die Standardeinstellung `Attach to` wird dieser Endpunkt des Clusters.
+Die `Attach to` liefert den Kontext für den Kernel anfügen. Wenn Sie am Ende der HDFS/Spark-Gateway (Knox) verbunden sind, zeigen Sie die Standardeinstellung `Attach to` wird dieser Endpunkt des Clusters.
 
 ![image8](media/notebooks-guidance/image8.png)
 
@@ -105,7 +109,7 @@ Fügen Sie eine neue codezelle hinzu, indem Sie auf die **+ Code** Befehl in der
 
 ![Image12](media/notebooks-guidance/image12.png)
 
-Sie können auch die Optionen"Zelle" anzeigen, wenn Sie auf unten auf das Symbol "Optionen" klicken:
+Sie können auch die Optionen"Zelle" anzeigen, wenn Sie auf unten auf das Symbol "Optionen" klicken-
 
 ![Image13](media/notebooks-guidance/image13.png)
 
@@ -113,7 +117,7 @@ Hier sind die Optionen für jede Zelle ein:
 
 ![Image14](media/notebooks-guidance/image14.png)-
 
-Wählen Sie die Spark-Kernel nun in der Dropdownliste für den Kernel und in der Zelle geben/fügen Sie in:
+Wählen Sie die Spark-Kernel ist nun in der Dropdownliste für den Kernel und in der Zelle geben/fügen Sie in-
 
 ![Image15](media/notebooks-guidance/image15.png)
 

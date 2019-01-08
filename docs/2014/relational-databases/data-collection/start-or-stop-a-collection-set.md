@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - collection sets [SQL Server], stopping
@@ -13,12 +13,12 @@ ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b1ca312173be8075b0d53c5e1f8594574b7911f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db4477f347e0eff1a7a8d75aaf21c1a34d8130dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212940"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782492"
 ---
 # <a name="start-or-stop-a-collection-set"></a>Starten oder Beenden eines Sammlungssatzes
   In diesem Thema wird beschrieben, wie ein Sammlungssatz in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]gestartet oder angehalten wird.  
@@ -33,7 +33,7 @@ ms.locfileid: "48212940"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So starten oder halten Sie einen Sammlungssatz an, und zwar mit**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48212940"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48212940"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Datenbankrolle **dc_operator** . Wenn der Sammlungssatz über kein Proxykonto verfügt, ist die Mitgliedschaft in der festen Serverrolle **sysadmin** erforderlich. Beispiele  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-start-a-collection-set"></a>So starten Sie einen Sammlungssatz  
   

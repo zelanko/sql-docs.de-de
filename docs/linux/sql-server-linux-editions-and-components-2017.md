@@ -27,12 +27,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 089ced09d718b0716f0c19d4553e52ff02c3d505
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07aae4f4e619e38d41cd16a08e1e8f7267f5ed29
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665579"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533560"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Editionen und unterstützte Funktionen von SQL Server 2017 unter Linux
 
@@ -58,7 +58,7 @@ Eine Liste der SQL Server-Funktionen unter Linux nicht verfügbar, finden Sie un
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Edition|Definition|  
 |---------------------------------------|----------------|  
 |Enterprise|Die Premium-Angebot [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition bietet umfassende hochwertige datencenterfunktionen mit blitzschneller Performance hohe Servicelevel für unternehmenswichtige Workloads.|  
-|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard Edition bietet grundlegenden datenverwaltung für Abteilungen und kleinere Unternehmen ihre Anwendungen ausführen und unterstützt allgemeine Entwicklungstools für lokale und Cloud, ermöglicht eine effektive datenbankverwaltung mit minimalen IT-Ressourcen.|  
+|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard Edition bietet grundlegenden datenverwaltung für Abteilungen und kleinere Unternehmen ihre Anwendungen ausführen und unterstützt allgemeine Entwicklungstools für lokale und Cloud - ermöglicht eine effektive datenbankverwaltung mit minimalen IT-Ressourcen.|  
 |Web|Die[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition ist eine mit geringen Anschaffungs- und Betriebskosten verbundene Option für Webhoster und Web-VAPs, die kostengünstige Skalierbarkeit und Verwaltungsfunktionen für Webpräsenzen jeder Größe bietet.|  
 |Entwickler|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition ermöglicht Entwicklern das Erstellen beliebiger Anwendungen auf der Basis von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sämtliche Funktionen der Enterprise Edition stehen zur Verfügung. Die Lizenz bezieht sich jedoch auf die Verwendung als Entwicklungs- und Testsystem und nicht als Produktionsserver. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer ist eine ideale Option zum Erstellen und Testen von Anwendungen.|  
 |Express Edition|Die Express Edition ist eine kostenlose Datenbank auf Einstiegsebene und eignet sich ideal zum Üben und zum Erstellen von datengesteuerten Anwendungen für Desktopcomputer und kleine Server. Dies ist die beste Wahl für unabhängige Softwareanbieter, Entwickler und Tüftler, die Clientanwendungen erstellen. Wenn Sie erweiterte Datenbankfunktionen benötigen, können Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express nahtlos auf höhere Endversionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]aktualisieren.|  
@@ -97,23 +97,23 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 |Funktion|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
-|Protokollversand|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
-|Sicherungskomprimierung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein| 
-|Datenbankmomentaufnahme|Benutzerkontensteuerung|nein|nein|nein|
-|Always On-Failoverclusterinstanz<sup>1</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein| 
-|Always On-Verfügbarkeitsgruppen<sup>2</sup>|Benutzerkontensteuerung|nein|nein|nein|
-|Basis-Verfügbarkeitsgruppen <sup>3</sup>|nein|Benutzerkontensteuerung|nein|nein|
-|Mindestreplikate für Commitverfügbarkeitsgruppen|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|
-|Verfügbarkeitsgruppe ohne Cluster|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|
-|Onlineseiten- und Onlinedateiwiederherstellung|Benutzerkontensteuerung|nein|nein|nein|
-|Online-Indizierung|Benutzerkontensteuerung|nein|nein|nein|
-|Fortsetzbare Neuerstellung von online geschalteten Indizes|Benutzerkontensteuerung|nein|nein|nein|
-|Onlineschemaänderung|Benutzerkontensteuerung|nein|nein|nein|
-|Schnelle Wiederherstellung|Benutzerkontensteuerung|nein|nein|nein|
-|Gespiegelte Sicherungen|Benutzerkontensteuerung|nein|nein|nein|
-|Hinzufügen von Speicher im laufenden Systembetrieb und CPU|Benutzerkontensteuerung|nein|nein|nein|
-|Verschlüsselte Sicherung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|
-|Hybridsicherung in Windows Azure (Sicherung über URL)|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|
+|Protokollversand|Ja|Ja|Ja|Nein|  
+|Sicherungskomprimierung|Ja|Ja|Nein|Nein| 
+|Datenbankmomentaufnahme|Ja|Nein|Nein|Nein|
+|Always On-Failoverclusterinstanz<sup>1</sup>|Ja|Ja|Nein|Nein| 
+|Always On-Verfügbarkeitsgruppen<sup>2</sup>|Ja|Nein|Nein|Nein|
+|Basis-Verfügbarkeitsgruppen <sup>3</sup>|Nein|Ja|Nein|Nein|
+|Mindestreplikate für Commitverfügbarkeitsgruppen|Ja|Ja|Nein|Nein|
+|Verfügbarkeitsgruppe ohne Cluster|Ja|Ja|Nein|Nein|
+|Onlineseiten- und Onlinedateiwiederherstellung|Ja|Nein|Nein|Nein|
+|Online-Indizierung|Ja|Nein|Nein|Nein|
+|Fortsetzbare Neuerstellung von online geschalteten Indizes|Ja|Nein|Nein|Nein|
+|Onlineschemaänderung|Ja|Nein|Nein|Nein|
+|Schnelle Wiederherstellung|Ja|Nein|Nein|Nein|
+|Gespiegelte Sicherungen|Ja|Nein|Nein|Nein|
+|Hinzufügen von Speicher im laufenden Systembetrieb und CPU|Ja|Nein|Nein|Nein|
+|Verschlüsselte Sicherung|Ja|Ja|Nein|Nein|
+|Hybridsicherung in Windows Azure (Sicherung über URL)|Ja|Ja|Nein|Nein|
   
 <sup>1</sup> für die Enterprise Edition, ist die Anzahl der Knoten dem maximum des Betriebssystems. Bei der Standard Edition werden nur zwei Knoten unterstützt. 
 
@@ -125,23 +125,23 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 |Funktion|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
-|Columnstore <sup>1</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Große Objektbinärdateien in gruppierten Columnstore-Indizes|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Onlineneuerstellung für nicht gruppierten Columnstore-Index|Benutzerkontensteuerung|nein|nein|nein|
-|In-Memory-OLTP <sup>1</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Persistenter Hauptspeicher|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Tabellen- und Indexpartitionierung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Datenkomprimierung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Ressourcenkontrolle|Benutzerkontensteuerung|nein|nein|nein|  
-|Parallelverarbeitung für partitionierte Tabellen|Benutzerkontensteuerung|nein|nein|nein|
-|NUMA-basierter und großer Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|Benutzerkontensteuerung|nein|nein|nein|
-|Ressourcenkontrolle für E/A-Vorgänge|Benutzerkontensteuerung|nein|nein|nein|  
-|Verzögerte Dauerhaftigkeit|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Automatische Optimierung|Benutzerkontensteuerung|nein|nein|nein|
-|Adaptive Joins im Batchmodus|Benutzerkontensteuerung|nein|nein|nein|
-|Feedback zur Speicherzuweisung im Batchmodus|Benutzerkontensteuerung|nein|nein|nein|
-|Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Verbesserungen beim massenhaften Einfügen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|Columnstore <sup>1</sup>|Ja|Ja|Ja|Ja|  
+|Große Objektbinärdateien in gruppierten Columnstore-Indizes|Ja|Ja|Ja|Ja|  
+|Onlineneuerstellung für nicht gruppierten Columnstore-Index|Ja|Nein|Nein|Nein|
+|In-Memory-OLTP <sup>1</sup>|Ja|Ja|Ja|Ja|
+|Persistenter Hauptspeicher|Ja|Ja|Ja|Ja|
+|Tabellen- und Indexpartitionierung|Ja|Ja|Ja|Ja|  
+|Datenkomprimierung|Ja|Ja|Ja|Ja|
+|Resource Governor|Ja|Nein|Nein|Nein|  
+|Parallelverarbeitung für partitionierte Tabellen|Ja|Nein|Nein|Nein|
+|NUMA-basierter und großer Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|Ja|Nein|Nein|Nein|
+|Ressourcenkontrolle für E/A-Vorgänge|Ja|Nein|Nein|Nein|  
+|Verzögerte Dauerhaftigkeit|Ja|Ja|Ja|Ja|
+|Automatische Optimierung|Ja|Nein|Nein|Nein|
+|Adaptive Joins im Batchmodus|Ja|Nein|Nein|Nein|
+|Feedback zur Speicherzuweisung im Batchmodus|Ja|Nein|Nein|Nein|
+|Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen|Ja|Ja|Ja|Ja|
+|Verbesserungen beim massenhaften Einfügen|Ja|Ja|Ja|Ja|
 
 
 <sup>1</sup> Die Größe der In-Memory OLTP-Daten und des Columnstore-Segmentcaches sind auf die Größe des Arbeitsspeichers beschränkt, die von der Edition im Bereich Kapazitätsgrenzen festgelegt wird. Den maximale Grad an Parallelität ist beschränkt. Der Grad an prozessparallelität (DOP) für eine indexerstellung ist auf 2 DOP für die Standard Edition und auf 1 DOP für die Web und Express-Editionen beschränkt. Dies gilt für Columnstore-Indizes, die über datenträgerbasierte Tabellen und speicheroptimierte Tabellen erstellt wurden.
@@ -150,52 +150,52 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 |Funktion|Enterprise|Standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
-|Sicherheit auf Zeilenebene|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Always Encrypted|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Dynamische Datenmaskierung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|Allgemeine Überwachung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Feine Überwachung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Transparente Datenbankverschlüsselung|Benutzerkontensteuerung|nein|nein|nein|   
-|Benutzerdefinierte Rollen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Eigenständige Datenbanken|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Verschlüsselung von Sicherungen|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
+|Sicherheit auf Zeilenebene|Ja|Ja|Ja|Ja|  
+|Always Encrypted|Ja|Ja|Ja|Ja| 
+|Dynamische Datenmaskierung|Ja|Ja|Ja|Ja|   
+|Allgemeine Überwachung|Ja|Ja|Ja|Ja| 
+|Feine Überwachung|Ja|Ja|Ja|Ja| 
+|Transparente Datenbankverschlüsselung|Ja|Nein|Nein|Nein|   
+|Benutzerdefinierte Rollen|Ja|Ja|Ja|Ja| 
+|Eigenständige Datenbanken|Ja|Ja|Ja|Ja| 
+|Verschlüsselung von Sicherungen|Ja|Ja|Nein|Nein|  
 
 ##  <a name="RDBMSM"></a> RDBMS: Verwaltbarkeit  
   
 |Funktion|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
-|Dedizierte Administratorverbindung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja, mit Ablaufverfolgungsflag|Ja, mit Ablaufverfolgungsflag|   
-|PowerShell-Skriptunterstützung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Unterstützung für Komponentenvorgänge der Datenschichtanwendung: Extrahieren, Bereitstellen, Aktualisieren, Löschen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Richtlinienautomatisierung (Überprüfung nach Zeitplan und Änderungen)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|   
-|Sammler von Leistungsdaten|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein| 
-|Standardleistungsberichte|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein| 
-|Planhinweislisten und Planeinfrierung für Planhinweislisten|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|   
-|Direkte Abfrage von indizierten Sichten (mittels NOEXPAND-Hinweis)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Automatische Wartung für indizierte Sichten|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein| 
-|Verteilte partitionierte Sichten|Benutzerkontensteuerung|nein|nein|nein| 
-|Parallele Indexvorgänge|Benutzerkontensteuerung|nein|nein|nein|  
-|Automatische Verwendung indizierter Sichten mittels Abfrageoptimierer|Benutzerkontensteuerung|nein|nein|nein| 
-|Parallele Konsistenzprüfung|Benutzerkontensteuerung|nein|nein|nein| 
-|SQL Server-Steuerungspunkt für das Hilfsprogramm|Benutzerkontensteuerung|nein|nein|nein|    
+|Dedizierte Administratorverbindung|Ja|Ja|Ja|Ja, mit Ablaufverfolgungsflag|Ja, mit Ablaufverfolgungsflag|   
+|PowerShell-Skriptunterstützung|Ja|Ja|Ja|Ja| 
+|Unterstützung für Komponentenvorgänge der Datenschichtanwendung: Extrahieren, Bereitstellen, Aktualisieren, Löschen|Ja|Ja|Ja|Ja| 
+|Richtlinienautomatisierung (Überprüfung nach Zeitplan und Änderungen)|Ja|Ja|Ja|Nein|Nein|   
+|Sammler von Leistungsdaten|Ja|Ja|Ja|Nein|Nein| 
+|Standardleistungsberichte|Ja|Ja|Ja|Nein|Nein| 
+|Planhinweislisten und Planeinfrierung für Planhinweislisten|Ja|Ja|Ja|Nein|Nein|   
+|Direkte Abfrage von indizierten Sichten (mittels NOEXPAND-Hinweis)|Ja|Ja|Ja|Ja| 
+|Automatische Wartung für indizierte Sichten|Ja|Ja|Ja|Nein|Nein| 
+|Verteilte partitionierte Sichten|Ja|Nein|Nein|Nein| 
+|Parallele Indexvorgänge|Ja|Nein|Nein|Nein|  
+|Automatische Verwendung indizierter Sichten mittels Abfrageoptimierer|Ja|Nein|Nein|Nein| 
+|Parallele Konsistenzprüfung|Ja|Nein|Nein|Nein| 
+|SQL Server-Steuerungspunkt für das Hilfsprogramm|Ja|Nein|Nein|Nein|    
 
 ##  <a name="Programmability"></a> Programmability  
   
 |Funktion|Enterprise|Standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
-|JSON|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|Abfragespeicher|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|Temporal|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|Systemeigene XML-Unterstützung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|XML-Indizierung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|MERGE- und UPSERT-Funktionen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|Datums- und Uhrzeitdatentypen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Internationalisierungsunterstützung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Volltextsuche und semantische Suche|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein| 
-|Angabe der Sprache in einer Abfrage|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|   
-|Service Broker (Messaging)|Benutzerkontensteuerung|Benutzerkontensteuerung|Nein (nur Client)|Nein (nur Client)|Nein (nur Client)|   
-|Transact-SQL-Endpunkte|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein| 
-|Diagramm|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|JSON|Ja|Ja|Ja|Ja|   
+|Abfragespeicher|Ja|Ja|Ja|Ja|   
+|Temporal|Ja|Ja|Ja|Ja|   
+|Systemeigene XML-Unterstützung|Ja|Ja|Ja|Ja| 
+|XML-Indizierung|Ja|Ja|Ja|Ja| 
+|MERGE- und UPSERT-Funktionen|Ja|Ja|Ja|Ja|   
+|Datums- und Uhrzeitdatentypen|Ja|Ja|Ja|Ja|  
+|Internationalisierungsunterstützung|Ja|Ja|Ja|Ja| 
+|Volltextsuche und semantische Suche|Ja|Ja|Ja|Ja|Nein| 
+|Angabe der Sprache in einer Abfrage|Ja|Ja|Ja|Ja|Nein|   
+|Service Broker (Messaging)|Ja|Ja|Nein (nur Client)|Nein (nur Client)|Nein (nur Client)|   
+|Transact-SQL-Endpunkte|Ja|Ja|Ja|Nein|Nein| 
+|Diagramm|Ja|Ja|Ja|Ja|  
 
 
 <sup>1</sup> Horizontale Skalierung mit mehreren Computeknoten erfordert einen Hauptknoten.
@@ -208,10 +208,10 @@ Informationen zu den von den Editionen unterstützte Integration Services (SSIS)
   
 |Funktionsname|Enterprise|Standard|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
-|Räumlichkeitsindizes|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|Planarer und geodätischer Datentyp|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Erweiterte räumliche Bibliotheken|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|Importieren/Exportieren räumlicher Industriestandard-Datenformate|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
+|Räumlichkeitsindizes|Ja|Ja|Ja|Ja|   
+|Planarer und geodätischer Datentyp|Ja|Ja|Ja|Ja| 
+|Erweiterte räumliche Bibliotheken|Ja|Ja|Ja|Ja|   
+|Importieren/Exportieren räumlicher Industriestandard-Datenformate|Ja|Ja|Ja|Ja|   
 
   
 ## <a name="next-steps"></a>Nächste Schritte 

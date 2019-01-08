@@ -13,15 +13,15 @@ ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39d8a1bdbc3a56cc03710bc6982b708235c47c45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762428"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508753"
 ---
 # <a name="working-with-recordsets"></a>Arbeiten mit Recordsets
-Die **Recordset** Objekt verfügt über integrierte Features, mit denen Sie die Reihenfolge der Daten im Resultset, suchen Sie nach einem bestimmten Datensatz basierend auf Kriterien, die Sie angeben, und sogar die Suchvorgänge mithilfe von Indizes optimieren ändern können. Gibt an, ob diese Features verwendet werden könne.n hängt davon ab, der Anbieter und in einigen Fällen –, beispielsweise von der [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft, die Struktur der Datenquelle selbst.  
+Die **Recordset** Objekt verfügt über integrierte Features, mit denen Sie die Reihenfolge der Daten im Resultset, suchen Sie nach einem bestimmten Datensatz basierend auf Kriterien, die Sie angeben, und sogar die Suchvorgänge mithilfe von Indizes optimieren ändern können. Gibt an, ob diese Features verwendet werden könne.n hängt davon ab, der Anbieter und in einigen Fällen – wie z. B. mit der die [Index](../../../ado/reference/ado-api/index-property.md) -Eigenschaft: die Struktur der Datenquelle selbst.  
   
 ## <a name="arranging-data"></a>Anordnen von Daten  
  In vielen Fällen die effizienteste Methode zum Sortieren der Daten in Ihre **Recordset** durch Angeben von ORDER BY-Klausel in der SQL-Befehl verwendet, um die Ergebnisse zurückgegeben wird. Allerdings möglicherweise so ändern Sie die Reihenfolge der Daten in einem **Recordset** , die bereits erstellt wurde. Können Sie die **Sortierreihenfolge** Eigenschaft, um die Reihenfolge festlegen, welche Zeilen der einen **Recordset** werden durchlaufen. Darüber hinaus die **Filter** Eigenschaft bestimmt, welche Zeilen sind kann zugegriffen werden, wenn Zeilen durchlaufen.  
@@ -43,7 +43,7 @@ Die **Recordset** Objekt verfügt über integrierte Features, mit denen Sie die 
 ## <a name="finding-a-specific-record"></a>Suchen eines bestimmten Datensatzes  
  ADO bietet die [finden](../../../ado/reference/ado-api/find-method-ado.md) und [Seek](../../../ado/reference/ado-api/seek-method.md) Methoden für die Suche nach einem bestimmten Datensatz in einem **Recordset**. Die **finden** Methode wird durch eine Vielzahl von Anbietern unterstützt, aber auf ein einzelnes Suchkriterium begrenzt ist. Die **Seek** Methode auf mehreren Kriterien Suchvorgänge unterstützt, aber nicht von vielen Anbietern unterstützt wird.  
   
- Indizes für Felder können die Leistung erheblich verbessern die **finden** Methode und **sortieren** und **Filter** Eigenschaften der **Recordset** -Objekt. Sie können angeben, erstellen einen internen Index für eine **Feld** Objekt durch Festlegen der dynamischen [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) Eigenschaft. Diese dynamische Eigenschaft hinzugefügt wird die **Eigenschaften** Auflistung von der **Feld** Objekt, wenn Sie festlegen, die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft **AdUseClient**. Beachten Sie, dass dieser Index in ADO integriert – Sie können nicht auf sie zugreifen oder für andere Zwecke verwenden. Dieser Index außerdem unterscheidet sich von der [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft der **Recordset** Objekt.  
+ Indizes für Felder können die Leistung erheblich verbessern die **finden** Methode und **sortieren** und **Filter** Eigenschaften der **Recordset** -Objekt. Sie können angeben, erstellen einen internen Index für eine **Feld** Objekt durch Festlegen der dynamischen [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) Eigenschaft. Diese dynamische Eigenschaft hinzugefügt wird die **Eigenschaften** Auflistung von der **Feld** Objekt, wenn Sie festlegen, die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft **AdUseClient**. Denken Sie daran, dass dieser Index für ADO intern ist – Sie können nicht auf sie zugreifen oder für andere Zwecke verwenden. Dieser Index außerdem unterscheidet sich von der [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft der **Recordset** Objekt.  
   
  Die **finden** Methode einen Wert innerhalb einer Spalte (Feld) schnell und sucht nach einem **Recordset**. Sie können die Geschwindigkeit der häufig verbessern die **finden** Methode für eine Spalte mit der **optimieren** Eigenschaft, um einen Index dafür erstellen.  
   

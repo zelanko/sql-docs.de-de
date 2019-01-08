@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,12 +18,12 @@ ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: da828154eff0b5cfc8a5cfc8ef5deba02e24579a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224660"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816892"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementieren eines Geschäftslogikhandlers für einen Mergeartikel
   In diesem Thema wird beschrieben, wie ein Geschäftslogikhandler für einen Mergeartikel mit Replikationsprogrammierung oder Replikationsverwaltungsobjekten (RMO) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] implementiert wird.  
@@ -107,7 +106,7 @@ ms.locfileid: "48224660"
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem neuen Tabellenartikel  
   
-1.  Führen Sie [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) aus, um einen Artikel zu definieren. Geben Sie dabei den Anzeigenamen des Geschäftslogikhandlers für **@article_resolver** an. Weitere Informationen finden Sie unter [Define an Article](publish/define-an-article.md).  
+1.  Führen Sie [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) aus, um einen Artikel zu definieren. Geben Sie dabei den Anzeigenamen des Geschäftslogikhandlers für **@article_resolver** an. Weitere Informationen finden Sie unter [Definieren eines Artikels](publish/define-an-article.md).  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem bestehenden Tabellenartikel  
   
@@ -183,7 +182,7 @@ ms.locfileid: "48224660"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> &ndash; ein Anzeigename, den Sie beim Zugriff auf den Geschäftslogikhandler verwenden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> -Wert `true`.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> &ndash; der Wert `true`.  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>So stellen Sie einen Geschäftslogikhandler bereit  
   
@@ -203,7 +202,7 @@ ms.locfileid: "48224660"
   
     -   Den Anzeigenamen des Geschäftslogikhandlers (<xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A>) für <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Article.Create%2A> -Methode auf. Weitere Informationen finden Sie unter [Define an Article](publish/define-an-article.md).  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Article.Create%2A> -Methode auf. Weitere Informationen finden Sie unter [Definieren eines Artikels](publish/define-an-article.md).  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem bestehenden Tabellenartikel  
   
@@ -215,7 +214,7 @@ ms.locfileid: "48224660"
   
 4.  Legen Sie die Verbindung aus Schritt 1 für die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft fest.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode zurückgibt `false`, entweder die Artikeleigenschaften in Schritt 3 falsch definiert, oder der Artikel ist nicht vorhanden. Weitere Informationen finden Sie unter [View and Modify Article Properties](publish/view-and-modify-article-properties.md).  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, wurden entweder die Artikeleigenschaften in Schritt 3 falsch definiert, oder der Artikel ist nicht vorhanden. Weitere Informationen finden Sie unter [View and Modify Article Properties](publish/view-and-modify-article-properties.md).  
   
 6.  Legen Sie den Anzeigenamen des Geschäftslogikhandlers für <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>fest. Dies ist der Wert der <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> -Eigenschaft, die beim Registrieren des Geschäftslogikhandlers angegeben wird.  
   

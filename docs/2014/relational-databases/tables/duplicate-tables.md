@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - copying tables
@@ -16,12 +15,12 @@ ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c574ac8153e6d7032bc49f4438e1d0c8241f5cd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea98f596638d19994d76606ae136204ae5f8d419
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093645"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823924"
 ---
 # <a name="duplicate-tables"></a>Duplizieren von Tabellen
   Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine vorhandene Tabelle in [!INCLUDE[tsql](../../includes/tsql-md.md)] duplizieren, indem Sie eine neue Tabelle erstellen und dann Spalteninformationen aus einer vorhandenen Tabelle kopieren.  
@@ -33,7 +32,7 @@ ms.locfileid: "48093645"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So duplizieren Sie eine Tabelle mit:**  
   
@@ -41,14 +40,14 @@ ms.locfileid: "48093645"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die CREATE TABLE-Berechtigung in der Zieldatenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-duplicate-a-table"></a>So duplizieren Sie eine Tabelle  
   

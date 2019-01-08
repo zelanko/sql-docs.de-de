@@ -1,7 +1,8 @@
 ---
-title: 'Tutorial: Erstellen ein benutzerdefinierten Einblicks Widgets in Studio für Azure Data | Microsoft-Dokumentation'
+title: 'Lernprogramm: Erstellen eines benutzerdefinierten Einblicks-Widgets'
+titleSuffix: Azure Data Studio
 description: Dieses Tutorial veranschaulicht das Erstellen von benutzerdefinierten einblickwidgets und-Datenbank und Server-Dashboards in Azure Data Studio hinzufügen.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caecf780f5c8cc656f6b0b2a95dd3d68c48355cb
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ab545d4d058780503778fb470bc5802ecae9d077
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356341"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030034"
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Erstellen eines benutzerdefinierten Einblicks-Widgets
+# <a name="tutorial-build-a-custom-insight-widget"></a>Lernprogramm: Erstellen eines benutzerdefinierten Einblicks-Widgets
 
 Dieses Tutorial veranschaulicht, wie Ihre eigenen Einblicke-Abfragen verwenden, um benutzerdefinierte einblickwidgets zu erstellen.
 
@@ -163,7 +164,7 @@ Führen Sie in diesem Schritt ein Sql-Skript zum Abfragen der aktuellen aktiven 
     ![Activesession Einblicke](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
-In diesem Tutorial haben Sie gelernt, wie Sie:
+In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 > * Führen Sie Ihre eigene Abfrage und zeigen Sie ihn in einem Diagramm
 > * Erstellen eines benutzerdefinierten Einblicks Widgets aus dem Diagramm

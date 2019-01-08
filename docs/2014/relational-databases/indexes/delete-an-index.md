@@ -16,12 +16,12 @@ ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8d04911b52239ff9accc5d69ff1e1ddd21e5d50b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 092d6e9432f22ef43a155d2a7d3ff03299bcd131
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093450"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526455"
 ---
 # <a name="delete-an-index"></a>Löschen eines Indexes
   In diesem Thema wird beschrieben, wie ein Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]gelöscht wird.  
@@ -32,7 +32,7 @@ ms.locfileid: "48093450"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So löschen Sie einen Index mit:**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48093450"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Indizes, die als Ergebnis einer PRIMARY KEY- oder UNIQUE-Einschränkung erstellt wurden, können mit dieser Methode nicht gelöscht werden. In diesem Fall muss die Einschränkung gelöscht werden. Verwenden Sie [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) mit der DROP CONSTRAINT-Klausel in [!INCLUDE[tsql](../../includes/tsql-md.md)], wenn Sie die Einschränkung und den entsprechenden Index entfernen möchten. Weitere Informationen finden Sie unter [Delete Primary Keys](../tables/delete-primary-keys.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "48093450"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Über diese Berechtigungen verfügen standardmäßig die Mitglieder der festen Serverrolle **sysadmin** und die Mitglieder der festen Datenbankrollen **db_ddladmin** und **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-delete-an-index-by-using-object-explorer"></a>So löschen Sie einen Index mit dem Objekt-Explorer  
   
@@ -82,13 +82,13 @@ ms.locfileid: "48093450"
   
 7.  Klicken Sie auf **Schließen**.  
   
-8.  Klicken Sie im Menü **Datei** auf **Speichern***Tabellenname*.  
+8.  Klicken Sie im Menü **Datei** auf **Save**_Tabellenname_.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-delete-an-index"></a>So löschen Sie einen Index  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

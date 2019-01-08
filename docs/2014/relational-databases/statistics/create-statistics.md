@@ -18,12 +18,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50600dcb20df520dc462ed64fcd11333a53d3a66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3128828bd26e6d2755f30748c23873538b8a7649
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066840"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527722"
 ---
 # <a name="create-statistics"></a>Erstellen von Statistiken
   Sie können Abfrageoptimierungsstatistiken in einer oder mehreren Spalten einer Tabelle oder indizierten Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellen, indem Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]verwenden. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen.  
@@ -34,7 +34,7 @@ ms.locfileid: "48066840"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie Statistiken mit:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48066840"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48066840"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert, dass der Benutzer der Besitzer der Tabelle oder indizierten Sicht oder ein Mitglied einer der folgenden Rollen ist: feste Serverrolle **sysadmin** , feste Datenbankrolle **db_owner** oder feste Datenbankrolle **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-create-statistics"></a>So erstellen Sie Statistiken  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48066840"
   
 3.  Klicken Sie auf das Pluszeichen, um die Tabelle zu erweitern, in der Sie eine neue Statistik erstellen möchten.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Statistik** , und wählen Sie dann **Neue Statistiken…**.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Statistik**, und wählen Sie dann **New Statistics...** (Neue Statistiken…).  
   
      Die folgenden Eigenschaften werden auf der Seite **Allgemein** im Dialogfeld **Neue Statistik für Tabelle***Tabellenname* angezeigt.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48066840"
      Die folgende Eigenschaft wird auf der Seite **Filter** im Dialogfeld **Neue Statistik für Tabelle***Tabellenname* angezeigt.  
   
      **Filterausdruck**  
-     Definiert, welche Datenzeilen in die gefilterte Statistik eingeschlossen werden sollen. Beispielsweise `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Definiert, welche Datenzeilen in die gefilterte Statistik eingeschlossen werden sollen. beispielsweise `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle***Tabellenname* auf der Seite **Allgemein** auf **Hinzufügen**.  
   

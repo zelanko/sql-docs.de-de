@@ -21,23 +21,23 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1c4d2d5c90f651d1d24dd6fabbaa74213a6fff9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061900"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212009"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server-Konfigurations-Manager
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ist ein Tool zum Verwalten der Dienste, die mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verknüpft sind, zum Konfigurieren der Netzwerkprotokolle, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verwendet werden, und zum Verwalten der Konfiguration der Netzwerkkonnektivität von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Clientcomputern. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ist ein [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console-Snap-In, auf das Sie über das Startmenü zugreifen können. Er lässt sich auch einer beliebigen anderen [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console-Anzeige hinzufügen. [!INCLUDE[msCoName](../includes/msconame-md.md)] -Verwaltungskonsole (mmc.exe) wird die Datei SQLServerManager10.msc im Ordner Windows System32 verwendet, um öffnen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Konfigurations-Manager.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager und SQL Server Management Studio verwenden Windows-Verwaltungsinstrumentation (WMI, Window Management Instrumentation) zum Anzeigen und Ändern einiger Servereinstellungen. WMI bietet eine vereinheitlichte Schnittstellenfunktion zu API-Aufrufen, mit denen die Registrierungsvorgänge verwaltet werden, die von den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tools angefordert werden. Außerdem werden die Steuerungs- und Bearbeitungsfunktionen für die ausgewählten SQL-Dienste der Snap-In-Komponente des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Managers verbessert. Informationen zum Konfigurieren von Berechtigungen in Bezug auf WMI finden Sie unter [Konfigurieren von WMI zum Anzeigen des Serverstatus in SQL Server-Tools](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Da der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ein Snap-In für das [!INCLUDE[msCoName](../includes/msconame-md.md)] -Verwaltungskonsolenprogramm und kein eigenständiges Programm ist, wird der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager in neueren Versionen von Windows nicht als Anwendung angezeigt.  
->   
+> 
 >  -   **Windows 10**:  
->          Zum Öffnen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Konfigurations-Manager auf die **Startseite**, geben Sie SQLServerManager12.msc (für [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]). Für frühere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 12 durch eine kleinere Zahl ersetzen. Wenn SQLServerManager12.msc, wird der Konfigurations-Manager geöffnet. Um den Konfigurations-Manager an die Startseite oder Taskleiste anzuheften, mit der rechten Maustaste SQLServerManager12.msc, und klicken Sie dann auf **Dateispeicherort öffnen**. In den Windows-Datei-Explorer mit der rechten Maustaste SQLServerManager12.msc, und klicken Sie dann auf **an Startmenü anheften** oder **an Taskleiste anheften**.  
+>          Zum Öffnen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Konfigurations-Manager auf die **Startseite**, geben Sie SQLServerManager12.msc (für [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]). Ersetzen Sie für frühere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 12 durch eine kleinere Zahl. Wenn SQLServerManager12.msc, wird der Konfigurations-Manager geöffnet. Um den Konfigurations-Manager an die Startseite oder Taskleiste anzuheften, mit der rechten Maustaste SQLServerManager12.msc, und klicken Sie dann auf **Dateispeicherort öffnen**. In den Windows-Datei-Explorer mit der rechten Maustaste SQLServerManager12.msc, und klicken Sie dann auf **an Startmenü anheften** oder **an Taskleiste anheften**.  
 > -   **Windows 8**:  
 >          Zum Öffnen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager in der **Suche** charm **Apps**, Typ **SQLServerManager\<Version > .msc** wie z. B. `SQLServerManager12.msc`, und drücken Sie dann die **EINGABETASTE**.  
   
@@ -63,11 +63,11 @@ ms.locfileid: "48061900"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager können Sie ein Alias erstellen oder entfernen, die Reihenfolge für die Verwendung der Protokolle ändern oder Serveraliaseigenschaften anzeigen, z. B. Folgende:  
   
--   Serveralias - Serveralias, der für den Computer verwendet wird, mit dem der Client eine Verbindung herstellt  
+-   Serveralias: Der Serveralias, der für den Computer verwendet wird, mit dem der Client eine Verbindung herstellt  
   
--   Protokoll - Netzwerkprotokoll, das für den Konfigurationseintrag verwendet wird  
+-   Protokoll: Das Netzwerkprotokoll, das für den Konfigurationseintrag verwendet wird  
   
--   Verbindungsparameter - Parameter, die mit der Verbindungsadresse für die Netzwerkprotokollkonfiguration verknüpft sind  
+-   Verbindungsparameter: Die Parameter, die mit der Verbindungsadresse für die Netzwerkprotokollkonfiguration verknüpft sind  
   
  Außerdem können Sie mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager Informationen zu Failover-Clusterinstanzen anzeigen. Für einige Aktionen, z. B. Starten und Beenden der Dienste, sollten Sie aber die Clusterverwaltung verwenden.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48061900"
   
  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
- [Starten, Beenden oder Anhalten des SQL Server-Agent-Diensts](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
+ [Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
  [Festlegen des automatischen Starts einer Instanz von SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   

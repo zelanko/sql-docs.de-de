@@ -1,5 +1,5 @@
 ---
-title: Sprachen und Sortierungen (Analysis Services) | Microsoft Docs
+title: Sprachen und Sortierungen (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a1b066f23c0c5a4e92b6b1f86886cc54c7451f6c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3af3d6ba14e4a9f3e2948c910e4282e33c032d3e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018597"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214310"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Sprachen und Sortierungen (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die Sprachen und Sortierungen, die von [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Betriebssystemen bereitgestellt werden. **Language** - und **Collation** -Eigenschaften werden zunächst während der Installation auf Instanzebene festgelegt, können jedoch nachträglich auf unterschiedlichen Ebenen der Objekthierarchie geändert werden.  
   
- In einem mehrdimensionalen Modell (ausschließlich) lassen sich diese Eigenschaften in einer Datenbank oder einem Cube festlegen – Sie können sie auch für Übersetzungen festlegen, die Sie für Objekte innerhalb eines Cubes erstellen. In einem Tabellenmodell werden Sprache und Sortierung vom Betriebssystemhost geerbt.  
+ Klicken Sie in einem mehrdimensionalen Modell (nur) können Sie diese Eigenschaften für eine Datenbank oder den Cube festlegen - Sie können sie auch festlegen, Übersetzungen, die Sie für Objekte innerhalb eines Cubes erstellen. In einem Tabellenmodell werden Sprache und Sortierung vom Betriebssystemhost geerbt.  
   
  Beim Festlegen von **Sprache** und **Sortierung** in einem mehrdimensionalen Modell geben Sie entweder Einstellungen an, die während der Verarbeitung und Abfrageausführung vom Datenmodell verwendet werden, oder Sie statten ein Modell mit mehreren Übersetzungen aus, sodass fremdsprachige Personen in ihrer Muttersprache mit dem Modell arbeiten können. Das explizite Festlegen der Eigenschaften **Sprache** und **Sortierung** für ein Objekt (Datenbank, Modell oder Cube) ist sinnvoll, wenn die Entwicklungsumgebung und der Produktionsserver für verschiedene Gebietsschemas konfiguriert wurden und Sie sicherstellen möchten, dass die Sprache und Sortierung mit der beabsichtigten Zielumgebung übereinstimmen.  
   
 ##  <a name="bkmk_object"></a> Objekte, die Sprach- und Sortierungseigenschaften unterstützen  
- **Language** - und **Collation** -Eigenschaften werden häufig zusammen verfügbar gemacht – wenn Sie **Language**festlegen können, können Sie auch **Collation**festlegen.  
+ **Sprache** und **Sortierreihenfolge** Eigenschaften werden häufig zusammen – verfügbar gemacht, in dem Sie festlegen können **Sprache**, Sie können auch festlegen **Sortierung**.  
   
  Sie können **Language** und **Collation** für die folgenden Objekte festlegen:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34018597"
 ###  <a name="bkmk_lcid"></a> Wert der Spracheigenschaft ist ein Gebietsschemabezeichner (LCID, Locale Identifier)  
  Gültige Werte sind alle LCIDs, die in der Dropdownliste angezeigt werden. In Management Studio und SQL Server Data Tools werden LCIDs als Zeichenfolgenentsprechungen dargestellt. Unabhängig vom Tool werden überall da, wo die **Language** -Eigenschaft verfügbar gemacht wird, dieselben Sprachen angezeigt. Durch eine identische Liste der Sprachen wird sichergestellt, dass Sie Übersetzungen im gesamten Modell konsistent implementieren und testen können.  
   
- Obwohl Analysis Services die Sprachen nach Name aufführt, ist der tatsächlich für die Eigenschaft gespeicherte Wert eine LCID. Wenn Sie eine Spracheigenschaft programmgesteuert oder über die Datei „msmdsrv.ini“ festlegen, müssen Sie den [Gebietsschemabezeichner](http://en.wikipedia.org/wiki/Locale) (locale identifier; LCID) als Wert verwenden. Eine LCID ist ein 32-Bit-Wert, der aus einer Sprach-ID, einer Sortierungs-ID und reservierten Bits besteht, die eine bestimmte Sprache identifizieren. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet LCIDs, um die ausgewählte Sprache für Instanzen und Objekten von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] anzugeben.  
+ Obwohl Analysis Services die Sprachen nach Name aufführt, ist der tatsächlich für die Eigenschaft gespeicherte Wert eine LCID. Wenn Sie eine Spracheigenschaft programmgesteuert oder über die Datei „msmdsrv.ini“ festlegen, müssen Sie den [Gebietsschemabezeichner](http://en.wikipedia.org/wiki/Locale) (locale identifier; LCID) als Wert verwenden. Eine LCID ist ein 32-Bit-Wert, der aus einer Sprach-ID, einer Sortierungs-ID und reservierten Bits besteht, die eine bestimmte Sprache identifizieren. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet LCIDs, um die ausgewählte Sprache für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanzen und -Objekte anzugeben.  
   
  Sie können die LCID im Hexadezimal- oder Dezimalformat festlegen. Zu den Beispielen für gültige Werte für die Eigenschaft **Sprache** gehören:  
   
@@ -76,9 +76,9 @@ ms.locfileid: "34018597"
 ##  <a name="bkmk_collations"></a> Sortierungsunterstützung in Analysis Services  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet ausschließlich Windows- und Binärsortierungen (Versionen _90 und _100). Ältere SQL Server-Sortierungen werden nicht verwendet. Innerhalb eines Cubes wird eine einzelne Sortierung verwendet, mit Ausnahme von Übersetzungen auf Attributebene. Weitere Informationen zum Definieren von Attributübersetzungen finden Sie unter [Unterstützung für Übersetzungen in Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
   
- Sortierungen steuern die Unterscheidung nach Groß-/Kleinschreibung aller Zeichenfolgen in einem „bikameralen“ Sprachskript, mit Ausnahme von Objektbezeichnern. Wenn Sie in einem Objektbezeichner Groß- und Kleinbuchstaben verwenden, beachten Sie, dass die Unterscheidung nach Groß-/Kleinschreibung von Objektbezeichnern nicht von der Sortierung bestimmt wird, sondern von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Für Objektbezeichner, die im englischen Skript verfasst werden, wird die Groß-/Kleinschreibung unabhängig von der Sortierung nie unterschieden. Für Kyrillisch und andere „bikamerale“ Sprachen gilt das Gegenteil (immer Unterscheidung nach Groß-/Kleinschreibung). Einzelheiten dazu finden Sie unter [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
+ Sortierungen steuern die Unterscheidung nach Groß-/Kleinschreibung aller Zeichenfolgen in einem „bikameralen“ Sprachskript, mit Ausnahme von Objektbezeichnern. Wenn Sie in einem Objektbezeichner Groß- und Kleinbuchstaben verwenden, beachten Sie, dass die Unterscheidung nach Groß-/Kleinschreibung von Objektbezeichnern nicht von der Sortierung bestimmt wird, sondern von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Für Objektbezeichner, die im englischen Skript verfasst werden, wird die Groß-/Kleinschreibung unabhängig von der Sortierung nie unterschieden. Für Kyrillisch und andere „bikamerale“ Sprachen gilt das Gegenteil (immer Unterscheidung nach Groß-/Kleinschreibung). Einzelheiten dazu finden Sie unter [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
   
- Die Sortierung in Analysis Services ist kompatibel mit dem relationalen Datenbankmodul von SQL Server, vorausgesetzt, Sie behalten die Parität in den Sortieroptionen bei, die Sie für jeden Dienst auswählen. Wenn die relationale Datenbank beispielsweise nach Akzenten unterscheidet, sollten Sie den Cube auf die gleiche Weise konfigurieren. Es können Probleme auftreten, wenn Sortierungseinstellungen voneinander abweichen. Ein Beispiel und empfohlene Problemumgehungen finden Sie unter [Leerzeichen in einer Unicode-Zeichenfolge haben unterschiedliche Verarbeitungsergebnisse basierend auf Sortierung](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx). Weitere Informationen zur Sortierung und zum Datenbankmodul finden Sie unter [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Die Sortierung in Analysis Services ist kompatibel mit der relationalen Datenbank-Engine von SQL Server, vorausgesetzt, Sie behalten die Parität in den Sortieroptionen bei, die Sie für jeden Dienst auswählen. Wenn die relationale Datenbank beispielsweise nach Akzenten unterscheidet, sollten Sie den Cube auf die gleiche Weise konfigurieren. Es können Probleme auftreten, wenn Sortierungseinstellungen voneinander abweichen. Ein Beispiel und empfohlene Problemumgehungen finden Sie unter [Leerzeichen in einer Unicode-Zeichenfolge haben unterschiedliche Verarbeitungsergebnisse basierend auf Sortierung](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx). Weitere Informationen zur Sortierung und zur Datenbank-Engine finden Sie unter [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ###  <a name="bkmk_collationtype"></a> Sortierungstypen  
  Analysis Services unterstützt zwei Sortierungstypen:  
@@ -91,7 +91,7 @@ ms.locfileid: "34018597"
   
     -   latin1_general_100  
   
-     Eine Windows-Sortierung sortiert Zeichen anhand der linguistischen und kulturellen Merkmale der Sprache. In Windows übertrifft die Anzahl der Sortierungen die der damit verwendeten Gebietsschemas (oder Sprachen), da viele Sprachen gemeinsame Alphabete und Regeln für das Sortieren und Vergleichen von Zeichen besitzen. 33 Windows-Gebietsschemas, einschließlich aller portugiesischen und englischen Windows-Gebietsschemas, verwenden z. B. die Latin1-Codepage (1252) und folgen gemeinsamen Regeln für das Sortieren und Vergleichen von Zeichen.  
+     Eine Windows-Sortierung sortiert Zeichen anhand der linguistischen und kulturellen Merkmale der Sprache. In Windows übertrifft die Anzahl der Sortierungen die der damit verwendeten Gebietsschemas (oder Sprachen), da viele Sprachen gemeinsame Alphabete und Regeln für das Sortieren und Vergleichen von Zeichen besitzen. 33 Windows-Gebietsschemas, einschließlich aller portugiesischen und englischen Windows-Gebietsschemas, verwenden z. B. die Latin1-Codepage (1252) und folgen gemeinsamen Regeln für das Sortieren und Vergleichen von Zeichen.  
   
     > [!NOTE]  
     >  Bei der Entscheidung für eine Sortierung sollten Sie die gleiche Sortierung verwenden, die auch von der zugrunde liegenden Datenbank verwendet wird. Wenn Sie die Wahl haben, ist die _100-Version allerdings die neuere und bietet eine sprachlich präzisere kulturelle Sortierregel.  
@@ -124,7 +124,7 @@ ms.locfileid: "34018597"
   
 -   Erneutes Verarbeiten von Partitionen und Dimensionen, nachdem die Sortierung aktualisiert wurde  
   
- Sie können SQL Server Management Studio oder AMO PowerShell verwenden, um die Standardsprache oder -sortierung auf Serverebene zu ändern. Alternativ können Sie ändern die  **\<Sprache >** und  **\<CollationName >** Einstellungen in der Datei "Msmdsrv.ini" der LCID der Sprache angeben.  
+ Sie können SQL Server Management Studio oder AMO PowerShell verwenden, um die Standardsprache oder -sortierung auf Serverebene zu ändern. Alternativ können Sie ändern die  **\<Sprache >** und  **\<CollationName >** Einstellungen in der Datei "Msmdsrv.ini" die Angabe der LCID der Sprache.  
   
 1.  Klicken Sie in Management Studio mit der rechten Maustaste auf den Servernamen, und wählen Sie **Eigenschaften**  |  **Sprache/Sortierung** aus.  
   
@@ -165,11 +165,11 @@ ms.locfileid: "34018597"
  Wenn Sie die Sprachen-ID English (Vereinigte Staaten), (0x0409 oder 1033), als Standardsprache für die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz verwenden, können Sie von zusätzlichen Leistungsverbesserungen profitieren, indem Sie die Konfigurationseigenschaft **EnableFast1033Locale** definieren. Es handelt sich hierbei um eine erweiterte Konfigurationseigenschaft, die nur für diese Sprachen-ID zur Verfügung steht. Wenn Sie den Wert dieser Eigenschaft auf **true** festlegen, kann [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] einen schnelleren Algorithmus für Zeichenfolge-Hashingoperationen und Zeichenfolgevergleiche verwenden. Weitere Informationen zum Festlegen der Konfigurationseigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
 ##  <a name="bkmk_gb18030"></a> GB18030-Unterstützung in Analysis Services  
- GB18030 ist ein separater Standard, der in der Volksrepublik China zur Codierung von chinesischen Schriftzeichen verwendet wird. In GB18030 können Zeichen 1, 2 oder 4 Bytes lang sein. In Analysis Services wird bei der Verarbeitung von Daten aus externen Quellen keine Datenkonvertierung vorgenommen. Die Daten werden einfach als Unicode-Daten gespeichert. Zur Abfragezeit wird basierend auf den Client-Betriebssystemeinstellungen eine GB18030-Konvertierung über die Analysis Services-Clientbibliotheken durchgeführt (insbesondere mit dem OLE DB-Anbieter „MSOLAP.dll“), wenn Textdaten in den Abfrageergebnissen zurückgegeben werden. Das Datenbankmodul unterstützt GB18030 ebenfalls. Einzelheiten dazu finden Sie unter [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ GB18030 ist ein separater Standard, der in der Volksrepublik China zur Codierung von chinesischen Schriftzeichen verwendet wird. In GB18030 können Zeichen 1, 2 oder 4 Bytes lang sein. In Analysis Services wird bei der Verarbeitung von Daten aus externen Quellen keine Datenkonvertierung vorgenommen. Die Daten werden einfach als Unicode-Daten gespeichert. Zur Abfragezeit wird basierend auf den Client-Betriebssystemeinstellungen eine GB18030-Konvertierung über die Analysis Services-Clientbibliotheken durchgeführt (insbesondere mit dem OLE DB-Anbieter „MSOLAP.dll“), wenn Textdaten in den Abfrageergebnissen zurückgegeben werden. Die Datenbank-Engine unterstützt GB18030 ebenfalls. Einzelheiten dazu finden Sie unter [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Globalisierungsszenarien für Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Globalisierung Tipps und Best Practices & #40; Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
+ [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

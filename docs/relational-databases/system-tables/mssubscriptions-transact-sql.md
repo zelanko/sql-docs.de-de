@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSsubscriptions_TSQL
@@ -19,12 +18,12 @@ ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22a80f913566a65596d86bd08fce9ff9c7ee1570
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b0c5d53519b09c9f30ccdf7e973e25e5a06a6a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728858"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823594"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47728858"
 |**snapshot_seqno_flag**|**bit**|Gibt die Quelle an die Sequenznummer der Snapshot-Transaktion ein Wert von **1** bedeutet, dass **Subscription_seqno** die momentaufnahmesequenznummer ist.|  
 |**independent_agent**|**bit**|Zeigt an, ob ein Verteilungs-Agent im Einzelplatzmodus für diese Veröffentlichung vorhanden ist.|  
 |**subscription_time**|**datetime**|Nur interne Verwendung.|  
-|**loopback_detection**|**bit**|Gilt für Abonnements, die Teil einer bidirektionalen Transaktionsreplikationstopologie sind. Bestimmt, ob der Verteilungs-Agent Transaktionen des Abonnenten zurück an den Abonnenten sendet:<br /><br /> **1** unterstützt = sendet nicht zurück.<br /><br /> **0** = sendet zurück.<br /><br /> Hinweis: Diese Spalte wird nur für Abwärtskompatibilität mit in die bidirektionale Replikation-Funktionalität unterstützt [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. In höheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollte stattdessen eine Peer-zu-Peer-Replikation verwendet werden. Weitere Informationen finden Sie unter [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|**loopback_detection**|**bit**|Gilt für Abonnements, die Teil einer bidirektionalen Transaktionsreplikationstopologie sind. Bestimmt, ob der Verteilungs-Agent Transaktionen des Abonnenten zurück an den Abonnenten sendet:<br /><br /> **1** unterstützt = sendet nicht zurück.<br /><br /> **0** = sendet zurück.<br /><br /> Hinweis: Diese Spalte wird nur aus Gründen der Abwärtskompatibilität mit der direktionalen Replikationsfunktionalität in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] unterstützt. In höheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollte stattdessen eine Peer-zu-Peer-Replikation verwendet werden. Weitere Informationen finden Sie unter [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
 |**agent_id**|**int**|Die ID der Momentaufnahme.|  
 |**update_mode**|**tinyint**|Der Typ des Updates.|  
 |**publisher_seqno**|**varbinary(16)**|Die Sequenznummer der Transaktion auf dem Verleger für dieses Abonnement.|  

@@ -13,12 +13,12 @@ ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 302a43238c755890e9fd106d8784eabdd0361d88
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a761267c3d25619b58f23e2e7b6396f0e9b43958
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558617"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535798"
 ---
 # <a name="solutions-for-remote-data-access"></a>Lösungen für den Remotedatenzugriff
 ## <a name="the-issue"></a>Das Problem  
@@ -34,14 +34,14 @@ ms.locfileid: "51558617"
  In diesem Beispiel verbunden die Anwendung nie direkt mit der Datenquelle; IIS wurde. Und IIS Zugriff auf die Daten mithilfe von ADO.  
   
 > [!NOTE]
->  Die Client/Server-Anwendung muss nicht auf das Internet oder Intranet basieren (d. h. webbasierte) – Es könnte darin bestehen, ausschließlich der kompilierte Programme auf einem lokalen Netzwerk. Allerdings ist der Normalfall eine webbasierte Anwendung.  
+>  Die Client/Server-Anwendung muss nicht auf das Internet oder Intranet basieren (d. h. webbasierte)-Es könnte darin bestehen, ausschließlich der kompilierte Programme auf einem lokalen Netzwerk. Allerdings ist der Normalfall eine webbasierte Anwendung.  
   
  Da einige visual Kontrolle, z. B. ein Raster, Kontrollkästchen oder Liste, die zurückgegebene Informationen verwenden kann, muss die zurückgegebene Informationen einfach durch ein visuelles Steuerelement verwendet werden.  
   
  Sie möchten eine einfache und effiziente Anwendungsprogrammierschnittstelle, die Systemen mit drei Ebenen unterstützt und gibt Informationen zurück wie ganz einfach, als ob es abgerufen wurden auf einem System mit zwei Ebenen. Remote Data Service (RDS) ist diese Schnittstelle.  
   
 ## <a name="the-solution"></a>Die Lösung  
- RDS definiert ein Programmiermodell, die Abfolge von Aktivitäten, die zum Zugriff auf und Aktualisieren einer Datenquelle erforderlich sind, für den Zugriff auf Daten über einen Vermittler, z. B. Internet Information Services (IIS). Das Programmiermodell zusammengefasst, die gesamte Funktionalität von RDS.  
+ RDS definiert ein Programmiermodell zur Verfügung: die Abfolge von Aktivitäten, die zum Zugriff auf und Aktualisieren einer Datenquelle – für den Zugriff auf Daten über einen Vermittler, z. B. Internet Information Services (IIS) erforderlich sind. Das Programmiermodell zusammengefasst, die gesamte Funktionalität von RDS.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Grundlegendes RDS-Programmiermodell](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   

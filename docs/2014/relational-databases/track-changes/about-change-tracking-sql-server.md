@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data changes [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 23abfb7b5de5f319a15d8d255705929cc4d7293d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220290"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787052"
 ---
 # <a name="about-change-tracking-sql-server"></a>Informationen zur Änderungsnachverfolgung (SQL Server)
   Die Änderungsnachverfolgung ist eine einfache Lösung, die einen effizienten Änderungsnachverfolgungsmechanismus für Anwendungen bereitstellt. Normalerweise mussten Anwendungsentwickler benutzerdefinierte Mechanismen zur Änderungsnachverfolgung implementieren, damit die Anwendungen Änderungen an Daten in einer Datenbank abfragen und auf Informationen im Zusammenhang mit den Änderungen zugreifen konnten. Erstellung dieser Mechanismen war i. d. r. sehr viel Arbeit häufig verbunden und eine Kombination von Triggern, `timestamp` Spalten, neuen Tabellen zum Speichern von Nachverfolgungsinformationen und benutzerdefinierten cleanupprozessen.  

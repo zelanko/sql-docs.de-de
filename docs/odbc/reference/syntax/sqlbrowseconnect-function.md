@@ -20,16 +20,16 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d86f2aa373b120d2ecf1ea47b021b327fc57dc21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651968"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211710"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ODBC  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLBrowseConnect** unterstützt eine iterative Methode zum Erkennen und auflisten, die Attribute und Attributwerte für die Verbindung mit einer Datenquelle erforderlich sind. Jeder Aufruf von **SQLBrowseConnect** aufeinander folgenden Steuerungsebenen Attribute und Attributwerte zurückgibt. Wenn alle Ebenen wurde aufgelistet, eine Verbindung mit der Datenquelle abgeschlossen ist und eine vollständige Verbindungszeichenfolge, indem zurückgegeben wird **SQLBrowseConnect**. Ein Rückgabecode von SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO gibt an, dass alle Verbindungsinformationen angegeben wurde und die Anwendung jetzt mit der Datenquelle verbunden ist.  

@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b93de07afe217b475c55e74170a5b2e453494b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c61ba41037065c49e4a6e49a5cd0adc3b760a10
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630224"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589594"
 ---
 # <a name="delete-unique-constraints"></a>Löschen von Unique-Einschränkungen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47630224"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So löschen Sie eine Unique-Einschränkung mit:**  
   
@@ -42,14 +42,14 @@ ms.locfileid: "47630224"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-delete-a-unique-constraint-using-object-explorer"></a>So löschen Sie eine UNIQUE-Einschränkung im Objekt-Explorer  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47630224"
   
 4.  Klicken Sie auf **Löschen**.  
   
-5.  Klicken Sie im Menü **Datei** auf **Speichern** > *Tabellenname*.  
+5.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8cb82752697453f5179ac4d3432e60cbc8398c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14e14c23741f5473e6c9eaae46140a2f7a0668bb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615042"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406177"
 ---
 # <a name="using-user-defined-types"></a>Verwenden von benutzerdefinierten Typen
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47615042"
 |DBTYPE_STR|Unterstützt<sup>3,6</sup>|Nicht zutreffend<sup>2</sup>|Unterstützt<sup>4,6</sup>|Nicht zutreffend<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|Nicht unterstützt|Nicht zutreffend<sup>2</sup>|Nicht unterstützt|Nicht zutreffend<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Unterstützt<sup>6</sup>|Nicht zutreffend<sup>2</sup>|Unterstützt<sup>4</sup>|Nicht zutreffend<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Unterstützt<sup>3,6</sup>|Nicht zutreffend<sup>2</sup>|–|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Unterstützt<sup>3,6</sup>|Nicht zutreffend<sup>2</sup>|Nicht zutreffend|Nicht zutreffend<sup>2</sup>|  
   
  <sup>1</sup>Wird ein anderer Servertyp als DBTYPE_UDT mit **ICommandWithParameters::SetParameterInfo** angegeben, und ist der Accessortyp DBTYPE_UDT, tritt bei Ausführung der Anweisung ein Fehler auf (DB_E_ERRORSOCCURRED; der Parameterstatus lautet DBSTATUS_E_BADACCESSOR). Andernfalls werden die Daten an den Server gesendet, der Server gibt jedoch einen Fehler zurück und zeigt an, dass keine implizite Umwandlung des UDT in den Parameterdatentyp erfolgt.  
   

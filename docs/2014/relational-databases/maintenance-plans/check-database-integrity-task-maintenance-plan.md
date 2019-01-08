@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.maintplanproperties.integrity.f1
@@ -16,17 +15,17 @@ ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5385aec450862a1f09dad45d94376f6f17a8d13a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42fa69e6456b23f95d6a203062b580bd04f443fa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145940"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779142"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>Task 'Datenbankintegrität überprüfen' (Wartungsplan)
   Verwenden Sie das Dialogfeld **Task „Datenbankintegrität überprüfen“** , um die Zuordnung und die strukturelle Integrität von Benutzer- und Systemtabellen sowie Indizes in der Datenbank zu überprüfen, indem Sie die `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung ausführen. Durch die Ausführung von `DBCC` wird sichergestellt, dass etwaige Integritätsprobleme in der Datenbank gemeldet werden und später vom Systemadministrator oder Datenbankbesitzer behoben werden können.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verbindung**  
  Wählen Sie die Serververbindung aus, die bei der Ausführung dieses Tasks verwendet werden soll.  
   

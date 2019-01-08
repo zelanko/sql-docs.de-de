@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], time to execute
@@ -15,12 +14,12 @@ ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e6a5bd5639774520567943b64bfb55965e2f654e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 808100a35753a1a63e3e498d434fab4969a64342
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190080"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641514"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Kostenbeschränkung der Abfragekontrolle
   In diesem Thema wird beschrieben, wie so konfigurieren Sie die `query governor cost limit` Serverkonfigurationsoption in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]. Die Kostenbeschränkungsoption der Abfragekontrolle legt ein Höchstlimit für den Zeitraum an, in dem eine Abfrage ausgeführt werden kann. Die Abfragekosten beziehen sich auf eine geschätzte Zeit in Sekunden, die für das Ausführen einer Abfrage bei einer bestimmten Hardwarekonfiguration benötigt wird. Der Standardwert für diese Option ist 0, mit dem die Abfragekontrolle deaktiviert wird. Alle Abfragen können dann ohne zeitliche Begrenzung ausgeführt werden. Wenn Sie einen nicht negativen Wert ungleich Null angeben, lässt die Abfragekontrolle die Ausführung von Abfragen nicht zu, deren geschätzte Kosten über diesem Wert liegen.  
@@ -31,7 +30,7 @@ ms.locfileid: "48190080"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So konfigurieren Sie die Option Kostenbeschränkung der Abfragekontrolle mit:**  
   
@@ -39,9 +38,9 @@ ms.locfileid: "48190080"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung:**  [Nach dem Konfigurieren der Option Kostenbeschränkung der Abfragekontrolle](#FollowUp)  
+-   **Nachverfolgung:**  [Nachdem Sie konfigurieren, dass die Kosten die kostenbeschränkungsoption der Abfragekontrolle](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48190080"
 ####  <a name="Permissions"></a> Berechtigungen  
  Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Zum Ausführen von **sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung muss einem Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-configure-the-query-governor-cost-limit-option"></a>So konfigurieren Sie die Option Kostenbeschränkung der Abfragekontrolle  
   
@@ -92,7 +91,7 @@ GO
   
  Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)angezeigt oder konfiguriert wird.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Konfigurieren der Option Kostenbeschränkung der Abfragekontrolle  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nachdem Sie konfigurieren, dass die Kosten die kostenbeschränkungsoption der Abfragekontrolle  
  Die Einstellung tritt ohne Neustarten des Servers sofort in Kraft.  
   
 ## <a name="see-also"></a>Siehe auch  

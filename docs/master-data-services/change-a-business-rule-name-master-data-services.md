@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], changing name
@@ -14,12 +13,12 @@ ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0c6bff75be197b72f90a1fd9dcc102be90ba8938
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1aede5993fea74932e58e682e6efd89dec84671c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648828"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754632"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Ändern des Namens einer Geschäftsregel (Master Data Services)
 
@@ -58,7 +57,7 @@ ms.locfileid: "47648828"
   
 10. Klicken Sie im Bestätigungsdialogfeld auf **OK**. Der Wert in der Spalte **Geschäftsregelstatus**lautet **Aktiv**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

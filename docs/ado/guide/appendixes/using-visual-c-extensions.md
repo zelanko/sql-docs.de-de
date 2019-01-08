@@ -16,12 +16,12 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aeae626f924776092bc8f6652e716747768b689c
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350524"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544182"
 ---
 # <a name="visual-c-extensions"></a>Visual C++-Erweiterungen
 ## <a name="the-iadorecordbinding-interface"></a>Die IADORecordBinding-Schnittstelle
@@ -34,7 +34,7 @@ ms.locfileid: "51350524"
 ## <a name="binding-entries"></a>Binden von Einträgen
  Visual C++-Erweiterungen für ADO Zuordnen von Feldern von einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, das C/C++-Variablen. Die Definition einer Zuordnung zwischen einem Feld und eine Variable wird aufgerufen, eine *Bindungsreihenfolge*. Makros werden Bindungseinträge für numerische fester Länge und variabler Länge, die Daten bereitgestellt. Die Bindungseinträge und die C/C++-Variablen werden in einer von der Visual C++-Erweiterungen-Klasse abgeleiteten Klasse deklariert **CADORecordBinding**. Die **CADORecordBinding** Klasse wird intern durch die einstiegsmakros für die Bindung definiert.
 
- ADO ordnet die Parameter in diese Makros intern eine OLE DB **DBBINDING** strukturieren und erstellt einen OLE DB- **Accessor** Objekt, um das Verschieben und die Konvertierung von Daten zwischen Felder und Variablen verwalten. OLE DB definiert die Daten als besteht aus drei Teilen: ein *Puffer* wo die Daten gespeichert werden; eine *Status* , der angibt, ob ein Feld wurde erfolgreich im Puffer gespeichert wurde oder wie die Variable wiederhergestellt werden soll das Feld sein. und die *Länge* der Daten. (Finden Sie unter [abrufen und Einfügen der Daten (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)in der OLE DB Programmer's Reference, Weitere Informationen.)
+ ADO ordnet die Parameter in diese Makros intern eine OLE DB **DBBINDING** strukturieren und erstellt einen OLE DB- **Accessor** Objekt, um das Verschieben und die Konvertierung von Daten zwischen Felder und Variablen verwalten. OLE DB definiert die Daten als besteht aus drei Teilen: Ein *Puffer* wo die Daten gespeichert werden; eine *Status* , der angibt, ob ein Feld wurde erfolgreich im Puffer gespeichert wurde oder wie die Variable auf das Feld; wiederhergestellt werden soll und die *Länge* der Daten. (Finden Sie unter [abrufen und Einfügen der Daten (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)in der OLE DB Programmer's Reference, Weitere Informationen.)
 
 ## <a name="header-file"></a>Header-Datei
  Schließen Sie die folgende Datei, in Ihrer Anwendung, um die Visual C++-Erweiterungen für ADO verwenden:
@@ -139,7 +139,7 @@ Update(CADORecordBinding *binding)
 |**adFldSignMismatch**|5|Wert ist signiert und Datentyp der Variablen ohne Vorzeichen.|
 |**adFldDataOverFlow**|6|Wert ist größer als die in den Datentyp der Variablen gespeichert werden können.|
 |**adFldCantCreate**|7|Unbekannter Spaltentyp und Feld bereits geöffnet.|
-|**adFldUnavailable**|8|Wert des Felds konnte nicht bestimmt werden – z. B. auf ein neues, nicht zugewiesene Feld hat keinen Standardwert.|
+|**adFldUnavailable**|8|Wert des Felds konnte nicht bestimmt, z. B. auf ein neues, nicht zugewiesene Feld hat keinen Standardwert werden.|
 |**adFldPermissionDenied**|9|Bei der Aktualisierung keine Berechtigung zum Schreiben von Daten.|
 |**adFldIntegrityViolation**|10|Bei der Aktualisierung würde Spaltenintegrität Feldwert verletzt werden.|
 |**adFldSchemaViolation**|11|Bei der Aktualisierung würde Spaltenschema Feldwert verletzt werden.|

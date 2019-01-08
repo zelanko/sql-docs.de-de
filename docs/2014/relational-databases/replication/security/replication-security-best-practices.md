@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], best practices
@@ -16,19 +15,19 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 79ec3f4087f9350b881433877712700e8d89139d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 18a3bed07be7fd035a5011d16c528525685cdfb6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114425"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781172"
 ---
 # <a name="replication-security-best-practices"></a>Bewährte Methoden für die Replikationssicherheit
   Bei der Replikation werden Daten in verteilten Umgebungen verschoben, diese reichen von Intranets auf einer einzelnen Domäne bis hin zu Anwendungen, die auf Daten zwischen nicht vertrauenswürdigen Domänen und über das Internet zugreifen. Es ist wichtig, die beste Methode für die Sicherung der Replikationsverbindungen unter diesen verschiedenen Voraussetzungen zu kennen und zu verstehen.  
   
  Folgende Informationen sind für die Replikation in sämtlichen Umgebungen relevant:  
   
--   Verschlüsseln Sie die Verbindungen zwischen Computern in einer Replikationstopologie mithilfe einer Industriestandardmethode, wie beispielsweise Virtual Private Networks (VPN), Secure Sockets Layer (SSL) oder IP Security (IPSEC). Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Informationen zum Verwenden von VPN und SSL für die Replikation von Daten über das Internet finden Sie unter [Securing Replication Over the Internet](securing-replication-over-the-internet.md).  
+-   Verschlüsseln Sie die Verbindungen zwischen Computern in einer Replikationstopologie mithilfe einer Industriestandardmethode, wie beispielsweise Virtual Private Networks (VPN), Secure Sockets Layer (SSL) oder IP Security (IPSEC). Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Informationen zum Verwenden von VPN und SSL für die Replikation von Daten über das Internet finden Sie unter [Securing Replication Over the Internet](securing-replication-over-the-internet.md).  
   
      Wenn Sie SSL zum Sichern der Verbindungen zwischen Computern in einer Replikationstopologie verwenden, geben Sie den Wert **1** oder **2** für den Parameter **-EncryptionLevel** der einzelnen Replikations-Agents an (der Wert **2** wird empfohlen). Mit dem Wert **1** wird angegeben, dass eine Verschlüsselung verwendet wird. Der Agent überprüft aber nicht, ob das SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde. Mit dem Wert **2** wird angegeben, dass das Zertifikat überprüft wurde. Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
   

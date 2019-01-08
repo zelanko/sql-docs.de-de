@@ -1,5 +1,5 @@
 ---
-title: Anwenden von Vorhersagefunktionen auf ein Modell | Microsoft Docs
+title: Anwenden von Vorhersagefunktionen auf ein Modell | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7cd44eb2e5d5449283d1e222b854d065a72e15ca
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 192f55c8194bfb9b85b3e0bfad51d8261e45ab0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014877"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540659"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Anwenden von Vorhersagefunktionen auf ein Modell
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "34014877"
     > [!WARNING]  
     >  Der Generator für Vorhersageabfragen überprüft die DMX erst, wenn Sie auf **Ergebnisse**klicken. Sie werden öfters feststellen, dass der vom Abfrage-Generator erzeugte Ausdruck kein gültiger DMX-Wert ist. Dies liegt normalerweise an einer Spalte, die sich nicht auf die vorhersagbare Spalte bezieht, oder an dem Versuch, eine Spalte in einer geschachtelten Tabelle vorherzusagen, die eine untergeordnete SELECT-Anweisung erfordert. Hierkönnen Sie zur DMX-Ansicht wechseln und die Anweisung weiterhin bearbeiten.  
   
-### <a name="example-create-a-query-on-a-clustering-model"></a>Beispiel: Erstellen einer Abfrage für ein Clusteringmodell  
+### <a name="example-create-a-query-on-a-clustering-model"></a>Beispiel: Erstellen Sie eine Abfrage für ein Clusteringmodell  
   
 1.  Wenn Sie über kein Clustermodell für das Erstellen dieser Beispielabfrage verfügen, erstellen Sie das Modell [TM_Clustering] mithilfe des [Tutorials zu Data Mining-Grundlagen](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
@@ -120,9 +120,9 @@ ms.locfileid: "34014877"
     |----------------|--------------|-------------|-------------|  
     |0|Cluster 8|954|953.948638926372|  
   
- Wenn Sie an anderen Stellen weitere Klauseln in der Anweisung hinzufügen möchten, – wenn Sie beispielsweise eine WHERE-Klausel hinzufügen möchten – können Sie es nicht mit dem Raster hinzufügen, sondern müssen zuerst zur DMX-Ansicht wechseln.  
+ Wenn Sie die anderen Klauseln an anderer Stelle in der Anweisung hinzufügen möchten-z. B., wenn Sie eine WHERE-Klausel hinzufügen möchten – Sie können nicht mithilfe des Rasters; hinzufügen Sie müssen zuerst zur DMX-Ansicht wechseln.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Data Mining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

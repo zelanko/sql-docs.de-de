@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
@@ -21,12 +20,12 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1fc46b6f7827143c3fdd523970fd5748a28aeb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd4f907c45007942d7185decac2f958576647fed
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201310"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787632"
 ---
 # <a name="error-handling-in-data"></a>Fehlerbehandlung in Daten
   Wenn eine Datenflusskomponente eine Transformation auf Spaltendaten anwendet, Daten aus Quellen extrahiert oder Daten in Ziele lädt, können Fehler auftreten. Fehler treten häufig aufgrund unerwarteter Datenwerte auf. Beispielsweise tritt bei einer Datenkonvertierung ein Fehler auf, weil eine Spalte eine Zeichenfolge anstelle einer Zahl enthält. Beim Einfügen in eine Datenbankspalte kann ein Fehler auftreten, weil die Daten einen date-Datentyp und die Spalte einen numeric-Datentyp aufweist. Ein Ausdruck kann nicht ausgewertet werden, weil ein Spaltenwert Null ist, wodurch sich eine ungültige mathematische Operation ergibt.  

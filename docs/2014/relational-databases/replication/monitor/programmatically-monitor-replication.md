@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -29,12 +28,12 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0b69773070201021390926e6da1a7fdd20d8fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137284"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813912"
 ---
 # <a name="programmatically-monitor-replication"></a>Programmgesteuertes Überwachen der Replikation
   Der Replikationsmonitor ist ein grafisches Tool, mit dem Sie eine Replikationstopologie überwachen können. Mithilfe von gespeicherten [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Replikationsprozeduren oder Replikationsverwaltungsobjekten (RMO) können Sie programmgesteuert auf diese Überwachungsdaten zugreifen. Diese Objekte ermöglichen das Programmieren der folgenden Tasks:  
@@ -173,7 +172,7 @@ ms.locfileid: "48137284"
   
 2.  Rufen Sie auf eine der folgenden Arten ein <xref:Microsoft.SqlServer.Replication.PublisherMonitor> -Objekt ab.  
   
-    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublisherMonitor> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> -Eigenschaft für den Verleger fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode zurückgibt `false`, entweder der Verlegername falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+    -   Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublisherMonitor> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> -Eigenschaft für den Verleger fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> fest. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, ist der Verlegername falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
     -   Aus der <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> , auf die mittels der <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> -Eigenschaft eines vorhandenen <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> -Objekts zugegriffen wird.  
   
@@ -267,15 +266,15 @@ ms.locfileid: "48137284"
   
     -   *metricID* - ein <xref:System.Int32> -Wert, der die Schwellenwertmetrik für die Überwachung aus der folgenden Tabelle darstellt:  
   
-        |value|Description|  
+        |Wert|Description|  
         |-----------|-----------------|  
-        |1|`expiration` -überwacht den bevorstehenden Ablauf von Abonnements für transaktionsveröffentlichungen.|  
-        |2|`latency` -überwacht die Leistung von Abonnements für transaktionsveröffentlichungen.|  
-        |4|`mergeexpiration` -überwacht den bevorstehenden Ablauf von Abonnements für mergeveröffentlichungen.|  
+        |1|`expiration` - überwacht den bevorstehenden Ablauf von Abonnements für Transaktionsveröffentlichungen.|  
+        |2|`latency` - überwacht die Leistung von Abonnements für Transaktionsveröffentlichungen.|  
+        |4|`mergeexpiration` - überwacht den bevorstehenden Ablauf von Abonnements für Mergeveröffentlichungen.|  
         |5|`mergeslowrunduration` -überwacht die Dauer von mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ).|  
         |6|`mergefastrunduration` -überwacht die Dauer von mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN).|  
         |7|`mergefastrunspeed` - Überwachung der Synchronisierungsgeschwindigkeit von Mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN-Verbindungen).|  
-        |8|`mergeslowrunspeed` -überwacht die synchronisierungsgeschwindigkeit von mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ).|  
+        |8|`mergeslowrunspeed` - überwacht die Synchronisierungsgeschwindigkeit von Mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ-Verbindungen).|  
   
     -   *enable* - <xref:System.Boolean> -Wert, der angibt, ob die Metrik für die Veröffentlichung aktiviert ist.  
   

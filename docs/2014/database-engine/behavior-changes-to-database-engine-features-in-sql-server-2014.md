@@ -15,12 +15,12 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84c24494797a96670fc6abd5e8fd6fd409b0a705
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a951590c1284f39cb2dfea1f9e97c05a04a3e7ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226270"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520369"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Verhaltensänderungen von Datenbank-Engine-Funktionen in SQL Server 2014
   In diesem Thema werden Verhaltensänderungen in [!INCLUDE[ssDE](../includes/ssde-md.md)] beschrieben. Ein verändertes Programmverhalten wirkt sich darauf aus, wie Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]funktionieren oder zusammenwirken.  
@@ -99,7 +99,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>sqlcmd.exe-Verhaltensänderung im XML-Modus  
- Es treten Verhaltensänderungen auf, wenn Sie "sqlcmd.exe" beim Ausführen von "SELECT * from T FOR XML …." im XML-Modus verwenden (Befehl ": XML ON").  
+ Verändertes Programmverhalten vorhanden sind, bei der Verwendung von sqlcmd.exe mit XML-Modus (: XML ON-Befehl) beim Ausführen einer SELECT * from T FOR XML...  
   
 ### <a name="dbcc-checkident-revised-message"></a>Meldung "DBCC CHECKIDENT Revised" (DBCC CHECKIDENT überarbeitet)  
  In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vom DBCC CHECKIDENT-Befehl zurückgegebene Meldung geändert wurde, nur mit RESEED Verwendung *New_reseed_value* aktuellen Identitätswert zu ändern. Die neue Meldung lautet "Überprüfen der Identitätsinformationen: aktueller Identitätswert '\<aktueller Identitätswert >'. Die DBCC-Ausführung wurde abgeschlossen. Falls DBCC Fehlermeldungen ausgegeben hat, wenden Sie sich an den Systemadministrator."  

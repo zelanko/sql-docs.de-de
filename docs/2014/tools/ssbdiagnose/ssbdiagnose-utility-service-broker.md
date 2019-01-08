@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -26,12 +25,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c9d0d1885413e5931f495c6eb5cd711bc0a9106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111170"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823684"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose-Hilfsprogramm (Service Broker)
   Das Hilfsprogramm **ssbdiagnose** meldet Probleme in [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Konversationen oder der Konfiguration von [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Diensten. Konfigurationsüberprüfungen können entweder für zwei Dienste oder für einen einzelnen Dienst ausgeführt werden. Probleme werden entweder im Eingabeaufforderungsfenster als für den Benutzer lesbarer Text oder als formatierte XML, die in eine Datei oder ein anderes Programm umgeleitet werden kann, gemeldet.  
@@ -92,7 +91,7 @@ ms.locfileid: "48111170"
   [ CONNECT TO <connectionoptions> ] [ ...n]  
   
 <connectionoptions> ::=  
-    [ –E | { -Ulogin_id [ -Ppassword ] } ]  
+    [ -E | { -Ulogin_id [ -Ppassword ] } ]  
   [ -Sserver_name[\instance_name] ]  
   [ -ddatabase_name ]  
   [ -llogin_timeout ]  
@@ -157,11 +156,11 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  Fordert an, dass überprüft wird, ob der Dialog für die angegebene Ebene der Verschlüsselung ordnungsgemäß konfiguriert ist:  
   
- **ON**: Standardeinstellung. Vollständige Dialogsicherheit wird konfiguriert. Auf beiden Seiten des Dialogs wurden Zertifikate bereitgestellt, eine Remotedienstbindung ist vorhanden, und in der GRANT SEND-Anweisung für den Zieldienst wurde der Initiatorbenutzer angegeben.  
+ **ON**: Die Standardeinstellung. Vollständige Dialogsicherheit wird konfiguriert. Auf beiden Seiten des Dialogs wurden Zertifikate bereitgestellt, eine Remotedienstbindung ist vorhanden, und in der GRANT SEND-Anweisung für den Zieldienst wurde der Initiatorbenutzer angegeben.  
   
- **OFF**: Es wird keine Dialogsicherheit konfiguriert. Es wurden keine Zertifikate bereitgestellt, keine Remotedienstbindung erstellt, und in der GRANT SEND-Anweisung für den Initiatordienst wurde die **public** -Rolle angegeben.  
+ **OFF**: Es wird keine dialogsicherheit konfiguriert. Es wurden keine Zertifikate bereitgestellt, keine Remotedienstbindung erstellt, und in der GRANT SEND-Anweisung für den Initiatordienst wurde die **public** -Rolle angegeben.  
   
- **ANONYMOUS**: Die anonyme Dialogsicherheit wird konfiguriert. Ein Zertifikat wurde bereitgestellt, die Remotedienstbindung wurde in der ANONYMOUS-Klausel angegeben, und in der GRANT SEND-Anweisung für den Zieldienst wurde die **public** -Rolle angegeben.  
+ **ANONYME**: Anonyme dialogsicherheit wird konfiguriert. Ein Zertifikat wurde bereitgestellt, die Remotedienstbindung wurde in der ANONYMOUS-Klausel angegeben, und in der GRANT SEND-Anweisung für den Zieldienst wurde die **public** -Rolle angegeben.  
   
  **RUNTIME**  
  Fordert einen Bericht über Probleme an, die Laufzeitfehler in einer [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Konversation verursachen. Wenn weder **-NEW** noch **-ID** angegeben ist, überwacht **ssbdiagnose** alle Konversationen in allen in den Verbindungsoptionen angegebenen Datenbanken. Wenn **-NEW** oder **-ID** angegeben ist, erstellt **ssbdiagnose** eine Liste der in den Parametern angegebenen IDs.  
@@ -206,7 +205,7 @@ WHERE database_id = DB_ID();
  **\<runtimeconnectionoptions>**  
  Gibt die Verbindungsinformationen für die Datenbanken an, in denen die den überwachten Konversationselementen zugeordneten Dienste enthalten sind. Wenn alle Dienste in der gleichen Datenbank enthalten sind, müssen Sie nur eine **CONNECT TO** -Klausel angeben. Wenn sich die Dienste in unterschiedlichen Datenbanken befinden, müssen Sie für jede dieser Datenbanken eine **CONNECT TO** -Klausel angeben. Wenn **runtimeconnectionoptions** nicht angegeben ist, verwendet **ssbdiagnose** die Verbindungsinformationen aus **baseconnectionoptions**.  
   
- **–E**  
+ **-E**  
  Öffnen Sie mithilfe der Windows-Authentifizierung eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Verwenden Sie dazu das aktuelle Windows-Konto als Anmelde-ID. Die Anmeldung muss Mitglied der festen Serverrolle **sysadmin** sein.  
   
  Die Option "-E" ignoriert die Benutzer- und Kennworteinstellungen der Umgebungsvariablen SQLCMDUSER und SQLCMDPASSWORD.  
@@ -222,7 +221,7 @@ WHERE database_id = DB_ID();
   
  Wird die Option **-U** zusammen mit der Option **-E** verwendet, wird eine Fehlermeldung generiert. Werden nach der Option **-U** mehrere Argumente angegeben, wird eine Fehlermeldung generiert und das Programm beendet.  
   
- **-P** *Kennwort*  
+ **-P** *password*  
  Gibt das Kennwort für die Anmelde-ID **-U** an. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Wenn die Option **-U** verwendet wird, nicht aber die Option **-P** , verwendet **ssbdiagnose** den Wert aus der Umgebungsvariablen SQLCMDPASSWORD. Wenn SQLCMDPASSWORD auch nicht festgelegt ist, fordert **ssbdiagnose** den Benutzer zur Eingabe eines Kennworts auf.  
   
 > [!IMPORTANT]  
@@ -231,7 +230,7 @@ WHERE database_id = DB_ID();
  Wenn die Option **-P** ohne Kennwort angegeben ist, verwendet **ssbdiagnose** das Standardkennwort (NULL).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md).  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Weitere Informationen finden Sie unter [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
  Die Aufforderung zur Eingabe des Kennworts wird folgendermaßen an der Konsole ausgegeben: `Password:`  
   

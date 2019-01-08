@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b86f926c4f62d934515f58bd61608016edb6880a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 426f5044087fdf39732626ee8461b0d8c47f3a39
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085520"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791002"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für funktionales Abhängigkeitsprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** im Fenster **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für funktionales Abhängigkeitsprofil** festzulegen. Ein funktionales Abhängigkeitsprofil dokumentiert das Ausmaß, in dem die Werte in einer Spalte (der abhängigen Spalte) von den Werten in einer anderen Spalte oder einer Gruppe von Spalten (der determinanten Spalte) abhängen. Dieses Profil hilft Ihnen auch, Probleme mit den Daten zu identifizieren, z. B. ungültige Werte. Beispiel: Sie erstellen ein Profil der Abhängigkeit zwischen einer Spalte, die Postleitzahlen enthält, und einer Spalte mit US-amerikanischen Bundesstaaten. In diesem Profil sollte dieselbe Postleitzahl immer denselben Bundesstaat aufweisen, doch das Profil entdeckt Verstöße gegen das Abhängigkeitsverhältnis.  
@@ -85,7 +84,7 @@ ms.locfileid: "48085520"
 > [!NOTE]  
 >  Wenn Sie den Platzhalter **(\*)** für **ColumnName** verwenden, ist **CompareOptions** schreibgeschützt und auf die **Default**-Einstellung festgelegt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Default**|Sortiert und vergleicht Daten anhand der Sortierung der Spalte in der Quelltabelle.|  
 |**BinarySort**|Sortiert und vergleicht Daten anhand der für jedes Zeichen definierten Bitmuster. Die binäre Sortierreihenfolge unterscheidet nach Groß- und Kleinschreibung und nach Akzent. Die Option Binär ist zudem die schnellste Sortierreihenfolge.|  
@@ -93,7 +92,7 @@ ms.locfileid: "48085520"
   
  Wenn Sie **DictionarySort**auswählen, können Sie auch jede Kombination der in der folgenden Tabelle aufgelisteten Optionen auswählen. Standardmäßig ist keine dieser zusätzlichen Optionen ausgewählt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Gibt an, ob beim Vergleichen zwischen Groß- und Kleinbuchstaben unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich die Groß-/Kleinschreibung. Beispielsweise ist dann "ABC" mit "abc" identisch.|  
 |**IgnoreNonSpace**|Gibt an, ob beim Vergleichen zwischen Zeichen mit Zwischenraum und diakritischen Zeichen unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich diakritische Zeichen. Beispielsweise ist dann "å" mit "a" identisch.|  
@@ -108,7 +107,7 @@ ms.locfileid: "48085520"
  **ThresholdSetting**  
  Geben Sie die Schwellenwerteinstellung an. Der Standardwert dieser Eigenschaft ist **Specified**.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Keine**|Gibt keinen Schwellenwert an. Die funktionale Abhängigkeitsstärke wird unabhängig vom Wert gemeldet.|  
 |**Specified**|Verwenden Sie den Schwellenwert, der in **FDStrengthThreshold**angegeben ist. Die funktionale Abhängigkeitsstärke wird nur gemeldet, wenn sie größer als der Schwellenwert ist.|  
@@ -121,7 +120,7 @@ ms.locfileid: "48085520"
  Geben Sie die maximale Anzahl von funktionale Abhängigkeitsverstößen an, die in der Ausgabe dokumentiert werden sollen. Der Standardwert dieser Eigenschaft ist 100. Diese Option ist deaktiviert, wenn **Exact** als **ThresholdSetting**ausgewählt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Der Datenprofilerstellungs-Task-Editor &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

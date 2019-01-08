@@ -16,12 +16,12 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 606b5273619e0f88503abeadaf6d463f6f16d3c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188400"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539752"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Angeben von Feld- und Zeilenabschlusszeichen (SQL Server)
   Für Zeichendatenfelder geben Ihnen optionale Abschlusszeichen die Möglichkeit, das Ende jedes Felds in einer Datendatei mit einem *Feldabschlusszeichen* und das Ende jeder Zeile mit einem *Zeilenabschlusszeichen*zu markieren. Abschlusszeichen stellen eine Möglichkeit dar, für Datendatei lesende Programmen anzugeben, wo ein Feld oder eine Zeile endet und ein anderes Feld oder eine andere Zeile beginnt.  
@@ -40,7 +40,7 @@ ms.locfileid: "48188400"
 |Umgekehrter Schrägstrich<sup>1</sup>|\\\|  
 |NULL-Abschlusszeichen (nicht sichtbares Abschlusszeichen)<sup>2</sup>|\0|  
 |Jedes Zeichen, das gedruckt werden kann (Steuerzeichen können nicht gedruckt werden, ausgenommen Null, Tabstopp, Neue Zeile und Wagenrücklauf)|(*, A, t, l usw.)|  
-|Eine Zeichenfolge von bis zu 10 Zeichen, die gedruckt werden können, einschließlich einiger oder aller oben aufgeführten Abschlusszeichen|(\*\*\t\*\*, Ende, !!!!!!!!!!, \t - \n usw.)|  
+|Eine Zeichenfolge von bis zu 10 Zeichen, die gedruckt werden können, einschließlich einiger oder aller oben aufgeführten Abschlusszeichen|(**\t\*\*, end, !!!!!!!!!!, \t-\n usw.)|  
   
  <sup>1</sup> nur t, n, R, 0 und '\0'-Zeichen zu arbeiten, mit dem Escapezeichen umgekehrter Schrägstrich, um ein Steuerzeichen zu erzeugen.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "48188400"
   
          `Enter field terminator [none]:`  
   
-         Im Allgemeinen ist der Standard angemessen. Beachten Sie jedoch bei `char` oder `nchar` -Datenfeldern den folgenden Unterabschnitt "Richtlinien für die Verwendung von Abschlusszeichen". Ein Beispiel, das die Verwendung der Aufforderung im Kontext veranschaulicht, finden Sie unter [ Angeben von Datenformaten für die Kompatibilität bei Verwendung von „bcp“ &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+         Im Allgemeinen ist der Standard angemessen. Beachten Sie jedoch bei `char`- und `nchar`-Datenfeldern den folgenden Unterabschnitt "Richtlinien für die Verwendung von Abschlusszeichen". Ein Beispiel, das die Verwendung der Aufforderung im Kontext veranschaulicht, finden Sie unter [ Angeben von Datenformaten für die Kompatibilität bei Verwendung von „bcp“ &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
         > [!NOTE]  
         >  Nachdem Sie interaktiv alle Felder in einem **bcp**-Befehl angegeben haben, werden Sie vom Befehl dazu aufgefordert, Ihre Antworten für die einzelnen Felder in einer Nicht-XML-Formatdatei zu speichern. Weitere Informationen zu Nicht-XML-Formatdateien finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Richtlinien für die Verwendung von Abschlusszeichen  
- In einigen Fällen eignet sich ein Abschlusszeichen für ein `char` oder `nchar` Feld "Daten". Zum Beispiel:  
+ In einigen Fällen ist ein Abschlusszeichen für `char`- oder `nchar`-Datenfelder nützlich. Zum Beispiel:  
   
 -   Für eine Datenspalte, die einen NULL-Wert in einer Datendatei enthält, die in ein Programm importiert wird, das die Präfixlängeninformation nicht interpretieren kann.  
   
@@ -136,7 +136,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Für den OPENROWSET-Massenrowsetanbieter können Abschlusszeichen nur in der Formatdatei angegeben werden. Dies ist bis auf Datentypen für große Objekte vorgeschrieben. Wenn von einer Zeichendatendatei ein nicht-standardmäßiges Abschlusszeichen verwendet wird, muss dieses in der Formatdatei definiert werden. Weitere Informationen finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](create-a-format-file-sql-server.md) und [Massenimport von Daten mithilfe einer Formatdatei &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
   
-     Weitere Informationen zur OPENROWSET BULK-Klausel finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+     Weitere Informationen zur OPENROWSET BULK-Klausel finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)zu markieren.  
   
 ### <a name="examples"></a>Beispiele  
  In den Beispielen in diesem Abschnitt wird jeweils ein Massenimport von Zeichendaten aus der `Department-c-t.txt` -Datendatei, die im vorhergehenden Beispiel erstellt wurde, in die `myDepartment` -Tabelle in der [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] -Beispieldatenbank ausgeführt. Vor dem Ausführen dieser Beispiele müssen Sie diese Tabelle erstellen. Führen Sie zum Erstellen dieser Tabelle unter dem **dbo** -Schema im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor den folgenden Code aus:  
@@ -167,7 +167,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Verwenden von BULK INSERT zum interaktiven Angeben von Abschlusszeichen  
  Im folgenden Beispiel wird ein Massenimport der `Department-c-t.txt` -Datendatei mithilfe einer `BULK INSERT` -Anweisung ausgeführt, die die in der folgenden Tabelle aufgeführten Qualifizierer verwendet.  
   
-|Option|attribute|  
+|Option|Attribut|  
 |------------|---------------|  
 |DATAFILETYPE **='`char`"**|Gibt an, dass die Datenfelder als Zeichendaten geladen werden.|  
 |FIELDTERMINATOR **='**`,`**'**|Gibt ein Komma (`,`) als Feldabschlusszeichen an.|  

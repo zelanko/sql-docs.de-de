@@ -14,12 +14,12 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a0ac6ea9d3437e22a1493c9888ccb75e7996f1c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219860"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509419"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Minimieren der Ausfallzeit von gespiegelten Datenbanken beim Aktualisieren von Serverinstanzen
   Beim Aktualisieren von Serverinstanzen auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Sie können Downtime für jede gespiegelte Datenbank auf ein einzelnes Manuelles Failover reduzieren, indem Sie ein sequenzielles Upgrade ausführen, bekannt als eine *paralleles Upgrade*. Ein paralleles Upgrade bildet einen mehrstufigen Vorgang, bei dem im einfachsten Fall die gegenwärtig als Spiegelserver in einer Spiegelungssitzung verwendete Serverinstanz aktualisiert, dann ein manuelles Failover auf die gespiegelte Datenbank ausgeführt, der vorherige Prinzipalserver aktualisiert und die Spiegelung wiederaufgenommen wird. In der Praxis hängt der genaue Vorgang vom Beriebsmodus und der Anzahl und dem Layout der Spiegelungssitzung auf den zu aktualisierenden Serverinstanzen ab.  
@@ -69,9 +69,9 @@ ms.locfileid: "48219860"
     > [!IMPORTANT]  
     >  Wenn der Spiegelserver vom Prinzipalserver geografisch entfernt ist, ist ein paralleles Upgrade möglicherweise nicht geeignet.  
   
-    -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Ändern Sie im Dialogfeld **Datenbankeigenschaften** auf der Seite **Spiegelung** die Option [Betriebsmodus](../../relational-databases/databases/database-properties-mirroring-page.md) in **Hohe Sicherheit ohne automatisches Failover (synchron)** . Informationen über den Zugriff auf diese Seite finden Sie unter [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md).  
+    -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Ändern der **Betriebsmodus** option **hohe Sicherheit ohne automatisches Failover (synchron)** mithilfe der [Seite wird gespiegelt](../../relational-databases/databases/database-properties-mirroring-page.md) von der **Datenbank Eigenschaften** Dialogfeld. Informationen über den Zugriff auf diese Seite finden Sie unter [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: Legen Sie die Transaktionssicherheit auf FULL fest. Weitere Informationen finden Sie unter [Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+    -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: Die transaktionssicherheit auf FULL festgelegt. Weitere Informationen finden Sie unter [Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### <a name="to-remove-a-witness-from-a-session"></a>So entfernen Sie einen Zeugen aus einer Sitzung  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48219860"
   
 ### <a name="to-perform-the-rolling-upgrade"></a>So führen Sie das parallele Upgrade aus  
   
-1.  Zur Minimierung der Ausfallzeit wird Folgendes empfohlen: Starten Sie das parallele Upgrade mit dem Aktualisieren aller Spiegelungspartner, die aktuell als Spiegelserver in allen Spiegelungssitzungen fungieren. Möglicherweise müssen an dieser Stelle mehrere Serverinstanzen aktualisiert werden.  
+1.  Um Ausfallzeiten zu minimieren, empfehlen wir Folgendes: Zunächst, dass das parallele Upgrade Aktualisieren aller spiegelungspartner, die derzeit als Spiegelserver in allen spiegelungssitzungen fungiert. Möglicherweise müssen an dieser Stelle mehrere Serverinstanzen aktualisiert werden.  
   
     > [!NOTE]  
     >  Ein Zeuge kann jederzeit während der Ausführung des parallelen Upgrades aktualisiert werden. Wenn beispielsweise eine Serverinstanz in Sitzung 1 als Spiegelserver und in Sitzung 2 als Zeuge fungiert, können Sie die Serverinstanz nun aktualisieren.  
@@ -113,7 +113,7 @@ ms.locfileid: "48219860"
 4.  Aktualisieren Sie alle Serverinstanzen, die nun als Spiegelserver in allen Spiegelungssitzungen fungieren, in denen sie als Partner beteiligt sind. Möglicherweise müssen an dieser Stelle mehrere Server aktualisiert werden.  
   
     > [!IMPORTANT]  
-    >  Es ist möglich, dass in einer komplexen Spiegelungskonfiguration manche Serverinstanz nach wie vor der ursprüngliche Prinzipalserver in mindestens einer Spiegelungssitzung ist. Wiederholen Sie die Schritte 2 bis 4 für diese Serverinstanzen, bis alle beteiligten Instanzen aktualisiert sind.  
+    >  Es ist möglich, dass in einer komplexen Spiegelungskonfiguration manche Serverinstanz nach wie vor der ursprüngliche Prinzipalserver in mindestens einer Spiegelungssitzung ist. Wiederholen Sie die Schritte 2 bis 4 für diese Serverinstanzen, bis alle beteiligten Instanzen aktualisiert wurden.  
   
 5.  Setzen Sie die Spiegelungssitzung fort.  
   
@@ -126,9 +126,9 @@ ms.locfileid: "48219860"
   
 1.  Sie haben die folgenden Möglichkeiten, um den Modus einer Sitzung wieder in den Modus für hohe Leistung zu ändern:  
   
-    -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Ändern Sie im Dialogfeld **Datenbankeigenschaften** auf der Seite **Spiegelung** die Option [Betriebsmodus](../../relational-databases/databases/database-properties-mirroring-page.md) in **Hohe Leistung (asynchron)** .  
+    -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Ändern der **Betriebsmodus** option **hohe Leistung (asynchron)** mithilfe der [Seite wird gespiegelt](../../relational-databases/databases/database-properties-mirroring-page.md) von der **Datenbankeigenschaften**Dialogfeld.  
   
-    -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: Verwenden Sie [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring), um die Transaktionssicherheit auf OFF festzulegen.  
+    -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: Verwendung [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)die transaktionssicherheit auf OFF eingestellt.  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>So fügen Sie einen Zeugen einer Spiegelungssitzung erneut hinzu  
   
@@ -149,6 +149,6 @@ ms.locfileid: "48219860"
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Erzwingen des Diensts in einer Datenbank-Spiegelungssitzung (Transact-SQL)](force-service-in-a-database-mirroring-session-transact-sql.md)   
  [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
+ [Betriebsmodi der Datenbankspiegelung](database-mirroring-operating-modes.md)  
   
   

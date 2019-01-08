@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], about administrators
@@ -15,12 +14,12 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 676af20a08829dcc1bd4fda019c4f42b5d51eb51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c47d1905602f5cd96b58265963072cdd2dc01939
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083529"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778242"
 ---
 # <a name="administrators-master-data-services"></a>Administratoren (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] gibt es zwei Arten von Administratoren: Modelladministratoren und den [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Systemadministrator.  
@@ -34,7 +33,7 @@ ms.locfileid: "48083529"
   
  Jedes Modell kann mehrere Administratoren aufweisen. Ein Benutzer kann als Modelladministrator für ein Modell, mehrere oder alle Modelle in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Bereitstellung definiert sein.  
   
- Er wird entweder in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] oder programmgesteuert als Modelladministrator festgelegt. Weitere Informationen finden Sie unter [Create a Model Administrator &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md).  
+ Er wird entweder in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] oder programmgesteuert als Modelladministrator festgelegt. Weitere Informationen finden Sie unter [Erstellen eines Modelladministrators &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md).  
   
 ## <a name="master-data-services-system-administrator"></a>Master Data Services-Systemadministrator  
  Es gibt nur einen [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Systemadministrator. Der Systemadministrator ist für die angegebene Benutzer die **Administratorkonto** bei der Erstellung der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank.  

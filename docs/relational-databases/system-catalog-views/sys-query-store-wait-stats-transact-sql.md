@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96f6b91d68159bd1326b30ffc8b7e89e61cb8402
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 620413448f7bd6c10af2d0e7333cd9eb793ef41a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169140"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521254"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>Sys. query_store_wait_stats (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "49169140"
 |**wait_category**|**tinyint**|Wartetypen kategorisiert werden, mithilfe der folgenden Tabelle aus, und klicken Sie dann die Wartezeit aggregiert wird, für diese Kategorien warten. Verschiedene wartekategorien erfordern eine andere weitere Analyse das Problem zu beheben, aber Wartetypen aus der gleichen Kategorie Lead, ähnlich wie bei der Problembehandlung Erlebnis und Wartevorgänge Bereitstellen der betroffenen Abfrage darüber hinaus ist genau das Ausführen der Großteil der problembehebungsvorgängen erfolgreich.|
 |**wait_category_desc**|**nvarchar(128)**|Die textbeschreibung des das Kategoriefeld warten finden Sie in der folgenden Tabelle.|
 |**execution_type**|**tinyint**|Bestimmt die Art der Ausführung einer Abfrage:<br /><br /> 0 – reguläre Ausführung (erfolgreich abgeschlossen)<br /><br /> 3 – Client initiierter Abbruch der Ausführung<br /><br /> 4 - Ausnahme hat die Ausführung abgebrochen.|  
-|**execution_type_desc**|**nvarchar(128)**|Die textbeschreibung des Type-Feld Ausführung:<br /><br /> 0 – reguläre<br /><br /> 3 – abgebrochen<br /><br /> 4 - Ausnahme|  
+|**execution_type_desc**|**nvarchar(128)**|Die textbeschreibung des Type-Feld Ausführung:<br /><br /> 0 – reguläre<br /><br /> 3: abgebrochen<br /><br /> 4 - Ausnahme|  
 |**total_query_wait_time_ms**|**bigint**|Insgesamt `CPU wait` Zeit für den Abfrageplan in aggregationsintervalls und warte-Kategorie (in Millisekunden gemeldet).|
 |**avg_query_wait_time_ms**|**float**|Durchschnittliche Wartezeit für den Abfrageplan pro Ausführung innerhalb der Aggregation Intervall und warten Sie, Kategorie (in Millisekunden gemeldet).|
 |**last_query_wait_time_ms**|**bigint**|Letzte Wartezeit für den Abfrageplan in aggregationsintervalls und warte-Kategorie (in Millisekunden gemeldet).|

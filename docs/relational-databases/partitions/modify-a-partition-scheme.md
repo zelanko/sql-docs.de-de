@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7308d5cdc6b1b378c401b5b16f96059cf042cb2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e3f5e060d90863292dd00e423b8dc334c8025dc
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829634"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414135"
 ---
 # <a name="modify-a-partition-scheme"></a>Ändern eines Partitionsschemas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47829634"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Erstellen einer partitionierten Tabelle oder eines partitionierten Indexes mit:**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47829634"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Jede Dateigruppe, die von ALTER PARTITION SCHEME betroffen ist, muss online sein.  
@@ -52,7 +52,7 @@ ms.locfileid: "47829634"
   
 -   Die CONTROL SERVER-Berechtigung oder ALTER ANY DATABASE-Berechtigung auf dem Server der Datenbank, in der das Partitionsschema erstellt wurde.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  **So ändern Sie ein Partitionsschema**  
   
  Diese spezielle Aktion kann nicht mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ausgeführt werden. Um ein Partitionsschema zu ändern, müssen Sie zuerst das Schema löschen und dann mit dem Assistenten zum Erstellen von Partitionen eine neue Funktion mit den gewünschten Eigenschaften erstellen. Weitere Informationen finden Sie unter [Create Partitioned Tables and Indexes](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)[Using SQL Server Management Studio](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md#SSMSProcedure) in **Erstellen partitionierter Tabellen und Indizes**.  

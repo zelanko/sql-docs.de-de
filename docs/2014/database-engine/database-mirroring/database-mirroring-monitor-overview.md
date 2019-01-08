@@ -14,12 +14,12 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0e5a129fbd9a6dc9fbafd6b06fe5088d162ac9ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 876397aeab28f0d328e3fb80555bdae18699bb01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210850"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536973"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Datenbankspiegelungs-Monitor (Übersicht)
   Wenn Sie über die richtigen Berechtigungen verfügen, können Sie den Datenbankspiegelungs-Monitor verwenden, um eine beliebige Teilmenge der gespiegelten Datenbanken auf einer Serverinstanz zu überwachen. Durch das Überwachen können Sie das Vorhandensein und die Qualität des Datenflusses in der Datenbank-Spiegelungssitzung überprüfen. Der Datenbankspiegelungs-Monitor ist auch bei der Problembehandlung der Ursachen für reduzierten Datenfluss hilfreich.  
@@ -74,7 +74,7 @@ ms.locfileid: "48210850"
 ## <a name="detail-pane"></a>Detailbereich  
  Die Darstellung des Monitors ist abhängig davon, ob eine Datenbank ausgewählt ist. Wenn Sie den Monitor öffnen, zeigt der Detailbereich den Link **Gespiegelte Datenbank registrieren** an. Klicken Sie darauf, um eine Datenbank zu registrieren. Registrierte Datenbanken werden unter dem Knoten **Datenbankspiegelungs-Monitor** in der Navigationsstruktur aufgelistet. Der Datenbankspiegelungs-Monitor versucht immer, eine Verbindung mit jeder Serverinstanz herzustellen, für die gespeicherte Anmeldeinformationen vorliegen.  
   
- Wenn Sie eine Datenbank auswählen, wird der Status auf der Seite im Registerformat **Status** im Detailbereich angezeigt. Der Inhalt dieser Seite stammt sowohl von der Prinzipal- als auch von der Spiegelserverinstanz. Die Seite wird asynchron aufgefüllt, wenn Statusinformationen über separate Verbindungen mit der Prinzipal- und der Spiegelserverinstanz gesammelt werden. Der Status wird automatisch in Intervallen von 30 Sekunden aktualisiert.  
+ Wenn Sie eine Datenbank auswählen, wird der Status auf der Seite im Registerformat **Status** im Detailbereich angezeigt. Der Inhalt dieser Seite stammt sowohl von der Prinzipal- als auch von der Spiegelserverinstanz. Die Seite wird mit den Statusinformationen, die über jeweils separate Verbindungen zur Prinzipalserver- und Spiegelserverinstanz gesammelt werden, asynchron gefüllt. Der Status wird automatisch in Intervallen von 30 Sekunden aktualisiert.  
   
 > [!NOTE]  
 >  Sie können die Aktualisierungsrate des Monitors nicht ändern, aber die Statustabelle vom Dialogfeld **Datenbankspiegelungsverlauf** aus aktualisieren.  

@@ -1,4 +1,5 @@
 ---
+title: Analysis Services-Protokolleigenschaften | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: db79a57c3e63cf09f36cd1b9af2d529811b67ea0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999342"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071927"
 ---
 # <a name="log-properties"></a>Protokolleigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -131,7 +132,7 @@ ms.locfileid: "37999342"
  Der Standardwert für diese Eigenschaft ist leer. Dies bedeutet, dass standardmäßig die Datei FlightRecorderTraceDef.xml verwendet wird.  
   
 ## <a name="query-log"></a>Abfrageprotokoll  
- **Gilt für:** Nur mehrdimensionaler Servermodus  
+ **Gilt für:** Nur mehrdimensionaler Servermodus.  
   
  **QueryLog\QueryLogFileName**  
  Eine Zeichenfolge, die den Namen der Abfrageprotokolldatei angibt. Diese Eigenschaft gilt nur, wenn für die Protokollierung eine Datei auf dem Datenträger anstelle einer Datenbanktabelle (das Standardverhalten) verwendet wird.  
@@ -156,9 +157,6 @@ ms.locfileid: "37999342"
  Eine boolesche Eigenschaft, die angibt, ob die Abfrageprotokolltabelle erstellt werden soll.  
   
  Der Standardwert für diese Eigenschaft ist FALSE. Dies bedeutet, dass der Server nicht automatisch die Protokolltabelle erstellt und keine Abfrageereignisse protokolliert.  
-  
-> [!NOTE]  
->  Weitere Informationen zum Konfigurieren des Abfrageprotokolls finden Sie unter [Configuring the Analysis Services Query Log](http://go.microsoft.com/fwlink/?LinkId=81890)(Konfigurieren des Abfrageprotokolls von Analysis Services).  
   
 ## <a name="trace"></a>Ablaufverfolgung  
  **Trace\TraceBackgroundDistributionPeriod**  

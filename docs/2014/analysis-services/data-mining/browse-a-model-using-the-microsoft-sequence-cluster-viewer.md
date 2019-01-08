@@ -21,12 +21,12 @@ ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5571c8bc684a8d57f8696b3a5630170679c1cf63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 870e0fb8cb24a62a2914281e58915c7749771213
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229470"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521200"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Cluster-Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Miningmodelle an, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus erstellt wurden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus ist ein Algorithmus für die Sequenzanalyse, der zum Durchsuchen von Daten verwendet wird, und der Ereignisse enthält, die durch folgende Pfade oder *Sequenzen*verknüpft werden können. Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Sequence Clustering-Algorithmus](microsoft-sequence-clustering-algorithm.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "48229470"
 ###  <a name="BKMK_Diagram"></a> Clusterdiagramm  
  Die Registerkarte **Clusterdiagramm** des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequenzcluster-Viewers zeigt alle in einem Miningmodell enthaltenen Cluster an. Die Schattierung der Linie, die einen Cluster mit einem anderen verbindet, stellt die Ähnlichkeit der Cluster dar. Ist die Schattierung schwach oder ist keine Schattierung vorhanden, sind sich die Cluster kaum ähnlich. Je stärker die Linie wird, umso mehr ähneln sich die Links. Sie können die Anzahl der im Viewer angezeigten Linien mithilfe des Schiebereglers rechts neben den Clustern anpassen. Wenn Sie den Schieberegler nach unten ziehen, werden nur die stärksten Links angezeigt.  
   
- Standardmäßig stellt die Schattierung die Auffüllung des Clusters dar. Mithilfe der Optionen **Schattierung****Variable** und **Status** können Sie auswählen, welches Attribut- und Statuspaar die Schattierung darstellen soll. Je stärker die Schattierung ist, umso größer ist die Attributverteilung für einen bestimmten Status. Die Verteilung wird geringer, wenn die Schattierung schwächer wird.  
+ Standardmäßig stellt die Schattierung die Auffüllung des Clusters dar. Mithilfe der **Schattierungvariable** und **Zustand** Optionen, Sie können auswählen, welches Attribut- und statuspaar die Schattierung darstellen. Je stärker die Schattierung ist, umso größer ist die Attributverteilung für einen bestimmten Status. Die Verteilung wird geringer, wenn die Schattierung schwächer wird.  
   
  Klicken Sie zum Umbenennen eines Clusters mit der rechten Maustaste auf den Clusterknoten, und wählen Sie **Cluster umbenennen**aus. Der neue Name wird auf dem Server persistent gespeichert.  
   
@@ -92,11 +92,11 @@ ms.locfileid: "48229470"
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](mining-model-viewer-tasks-and-how-tos.md)   
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tasks und Anweisungen für Miningmodell-Viewer](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tasks und Anweisungen für Miningmodell-Viewer](mining-model-viewer-tasks-and-how-tos.md)   
  [Microsoft Sequence Clustering-Algorithmus](microsoft-sequence-clustering-algorithm.md)   
- [Datamining-Tools](data-mining-tools.md)   
- [Datamining-Modell-Viewer](data-mining-model-viewers.md)   
+ [Data Mining-Tools](data-mining-tools.md)   
+ [Data Mining-Modell-Viewer](data-mining-model-viewers.md)   
  [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
   

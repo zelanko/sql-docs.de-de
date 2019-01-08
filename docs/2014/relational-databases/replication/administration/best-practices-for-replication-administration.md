@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, best practices
@@ -14,15 +13,15 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b234ec214aeca9993f885cc3b191c89db857d33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079280"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823306"
 ---
 # <a name="best-practices-for-replication-administration"></a>Bewährte Methoden für die Replikationsverwaltung
-  Nachdem Sie die Replikation konfiguriert haben, müssen Sie sich mit der Verwaltung einer Replikationstopologie vertraut machen. Dieses Thema enthält grundlegende Hinweise zur Best Pa in verschiedenen Bereichen sowie Links zu weiteren Informationen zu jedem Bereich. Neben den folgenden Hinweisen zu den bewährten Methoden in diesem Thema sollten Sie das Thema mit den häufig gestellten Fragen lesen, um die häufigen Fragen und Probleme kennen zu lernen: [Häufig gestellte Fragen für Replikationsadministratoren](frequently-asked-questions-for-replication-administrators.md).  
+  Nachdem Sie die Replikation konfiguriert haben, müssen Sie sich mit der Verwaltung einer Replikationstopologie vertraut machen. Dieses Thema enthält grundlegende Hinweise zur Best Pa in verschiedenen Bereichen sowie Links zu weiteren Informationen zu jedem Bereich. Abgesehen vom Befolgen der bewährten Methoden in diesem Thema, sollten Sie das Thema mit den häufig gestellten Fragen, die sich häufig gestellte Fragen und Probleme hinweisen lesen: [Häufig gestellte Fragen für Replikationsadministratoren](frequently-asked-questions-for-replication-administrators.md).  
   
  Eine Unterteilung der Hinweise zu den bewährten Methoden in zwei Bereiche bietet sich an:  
   
