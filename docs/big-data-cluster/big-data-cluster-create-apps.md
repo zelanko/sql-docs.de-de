@@ -1,24 +1,26 @@
 ---
-title: 'Gewusst wie: Bereitstellen einer app auf SQL Server-big Data-Cluster | Microsoft-Dokumentation'
+title: 'Gewusst wie: Bereitstellen einer app'
+titleSuffix: SQL Server 2019 big data clusters
 description: Eine Python- oder R-Skript als eine Anwendung auf SQL Server-2019 big Data-Cluster (Vorschau) bereitstellen.
 author: TheBharath
 ms.author: bharaths
 manager: craigg
-ms.date: 11/07/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: dd24b4379f50a5b974e7a0a90412d1e13bf6db22
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.custom: seodec18
+ms.openlocfilehash: cca0ac5e7b81318d95fbb133758fca83e1a0742e
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272558"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246408"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Gewusst wie: Bereitstellen einer app auf SQL Server-2019 big Data-Cluster (Vorschau)
 
 Dieser Artikel beschreibt das Bereitstellen und Verwalten von R und Python-Skript als eine Anwendung in einer SQL Server-2019 big Data-Cluster (Vorschau).
 
-R und Python-Anwendungen bereitgestellt und verwaltet mit der **Mssqlctl-Pre-** Befehlszeilen-Hilfsprogramms die in CTP 2.1 enthalten ist. Dieser Artikel enthält Beispiele für die Bereitstellung dieser R und Python-Skripts wie apps, die von der Befehlszeile aus.
+R und Python-Anwendungen bereitgestellt und verwaltet mit der **Mssqlctl-Pre-** Befehlszeilen-Hilfsprogramms die in der CTP-Version 2.2 enthalten ist. Dieser Artikel enthält Beispiele für die Bereitstellung dieser R und Python-Skripts wie apps, die von der Befehlszeile aus.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -29,12 +31,12 @@ Sie benötigen einen SQL Server-2019 big Data-Cluster konfiguriert. Weitere Info
 Die **Mssqlctl-Pre-** Befehlszeilen-Hilfsprogramm wird bereitgestellt, um die Funktion zur Python- und R-Bereitstellung (Vorschau). Verwenden Sie den folgenden Befehl aus, um das Hilfsprogramm zu installieren:
 
 ```cmd
-pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctlpre
+pip install -r https://private-repo.microsoft.com/python/ctp-2.2/mssqlctlpre/mssqlctlpre.txt --trusted-host https://private-repo.microsoft.com
 ```
 
 ## <a name="capabilities"></a>Funktionen
 
-Löschen Sie in CTP 2.1 an, die Sie erstellen können, auflisten, und führen Sie eine R- oder Python-Anwendung. Die folgende Tabelle beschreibt die Befehle der Anwendung-Bereitstellung, mit denen Sie mit **Mssqlctl-Pre-**.
+Klicken Sie in der CTP-Version 2.2, die Sie erstellen können, löschen Sie, auflisten, und führen Sie eine R oder Python-Anwendung. Die folgende Tabelle beschreibt die Befehle der Anwendung-Bereitstellung, mit denen Sie mit **Mssqlctl-Pre-**.
 
 | Befehl | Description |
 |---|---|
@@ -54,15 +56,16 @@ In den folgenden Abschnitten werden diese Befehle im Detail beschrieben.
 
 ## <a name="log-in"></a>Anmelden
 
-Vor dem Konfigurieren von R und Python-Anwendungen, zuerst melden Sie sich bei Ihrer big Data-cluster mit SQL-Server die `mssqlctl-pre login` Befehl. Geben Sie die IP-Adresse (extern) die `service-proxy-lb` (z. B.: `https://ip-address:30777`) zusammen mit den Benutzernamen und das Kennwort für den Cluster.
+Vor dem Konfigurieren von R und Python-Anwendungen, zuerst melden Sie sich bei Ihrer big Data-cluster mit SQL-Server die `mssqlctl-pre login` Befehl. Geben Sie die externe IP-Adresse der `service-proxy-lb` oder `service-proxy-nodeport` Dienste (z. B.: `https://ip-address:30777`) zusammen mit den Benutzernamen und das Kennwort für den Cluster.
 
-Sie können die IP-Adresse des Dienst-Proxy-lb-Diensts abrufen, mit dem folgenden Befehl in einem nachfolgenden bash- oder Cmd-Fenster:
+Erhalten Sie die IP-Adresse der **-Dienst-Proxy-lb** oder **-Dienst-Proxy-Nodeport** Dienst mit dem folgenden Befehl in einem nachfolgenden bash- oder Cmd-Fenster:
+
 ```bash 
 kubectl get svc service-proxy-lb -n <name of your cluster>
 ```
 
 ```bash
-mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb> -u <user-name> -p <password>
+mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb>:30777 -u <user-name> -p <password>
 ```
 
 ## <a name="create-an-app"></a>Erstellen einer app

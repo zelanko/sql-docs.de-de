@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - logins [SMO]
@@ -16,32 +14,32 @@ ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36119391ebd552e1b3553e94ba3fcf0634887560
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bac188dcc6eb26c1bca77ec292a096f4eac2f35
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134580"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815200"
 ---
 # <a name="managing-users-roles-and-logins"></a>Verwalten von Benutzern, Rollen und Anmeldungen
-  In SMO werden Anmeldungen durch das <xref:Microsoft.SqlServer.Management.Smo.Login>-Objekt dargestellt. Wenn die Anmeldung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vorhanden ist, kann sie zu einer Serverrolle hinzugefügt werden. Die Serverrolle wird dargestellt, durch die <xref:Microsoft.SqlServer.Management.Smo.ServerRole> Objekt. Die Datenbankrolle wird durch das <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole>-Objekt und die Anwendungsrolle durch das <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>-Objekt dargestellt.  
+  In SMO werden Anmeldungen durch das <xref:Microsoft.SqlServer.Management.Smo.Login>-Objekt dargestellt. Wenn die Anmeldung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]vorhanden ist, kann sie zu einer Serverrolle hinzugefügt werden. Die Serverrolle wird durch das <xref:Microsoft.SqlServer.Management.Smo.ServerRole>-Objekt dargestellt. Die Datenbankrolle wird durch das <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole>-Objekt und die Anwendungsrolle durch das <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>-Objekt dargestellt.  
   
- Der Serverebene zugeordnete Berechtigungen sind aufgeführt, als Eigenschaften der <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> Objekt. Berechtigungen können für einzelne Anmeldekonten gewährt, verweigert oder aufgehoben werden.  
+ Der Serverebene zugeordnete Berechtigungen werden als Eigenschaften des <xref:Microsoft.SqlServer.Management.Smo.ServerPermission>-Objekts aufgelistet. Berechtigungen können für einzelne Anmeldekonten gewährt, verweigert oder aufgehoben werden.  
   
- Jede <xref:Microsoft.SqlServer.Management.Smo.Database> Objekt verfügt über eine <xref:Microsoft.SqlServer.Management.Smo.UserCollection> -Objekt, das alle Benutzer in der Datenbank angibt. Jeder Benutzer wird einer Anmeldung zugeordnet. Eine Anmeldung kann Benutzern in mehr als einer Datenbank zugeordnet werden. Die <xref:Microsoft.SqlServer.Management.Smo.Login> des Objekts <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> Methode kann verwendet werden, um alle Benutzer in allen Datenbanken aufzulisten, die der Anmeldung zugeordnet sind. Alternativ legt die <xref:Microsoft.SqlServer.Management.Smo.User>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Login>-Objekts die Anmeldung fest, die dem Benutzer zugeordnet ist.  
+ Jedes <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt verfügt über ein <xref:Microsoft.SqlServer.Management.Smo.UserCollection>-Objekt, das alle Benutzer in der Datenbank angibt. Jeder Benutzer wird einer Anmeldung zugeordnet. Eine Anmeldung kann Benutzern in mehr als einer Datenbank zugeordnet werden. Die <xref:Microsoft.SqlServer.Management.Smo.Login>-Methode des <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A>-Objekts kann verwendet werden, um alle Benutzer in allen Datenbanken aufzulisten, die der Anmeldung zugeordnet sind. Alternativ legt die <xref:Microsoft.SqlServer.Management.Smo.User>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Login>-Objekts die Anmeldung fest, die dem Benutzer zugeordnet ist.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbanken verfügen auch über Rollen, die einen Satz von Berechtigungen auf Datenbankebene festlegen, mit die einen Benutzer bestimmte Tasks durchführen können. Im Gegensatz zu Serverrollen sind Datenbankrollen variabel. Sie können erstellt, geändert und gelöscht werden. Einer Datenbankrolle können für die Massenverwaltung Berechtigungen und Benutzer zugeordnet werden.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken verfügen darüber hinaus über Rollen, die eine Gruppe von Berechtigungen auf Datenbankebene festlegen, über die Benutzer bestimmte Tasks durchführen können. Im Gegensatz zu Serverrollen sind Datenbankrollen variabel. Sie können erstellt, geändert und gelöscht werden. Einer Datenbankrolle können für die Massenverwaltung Berechtigungen und Benutzer zugeordnet werden.  
   
 ## <a name="example"></a>Beispiel  
  Für das folgende Codebeispiel müssen Sie die Programmierungsumgebung, die Programmiervorlage und die Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [erstellen Sie eine Visual Basic-SMO-Projekts in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) und [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-basic"></a>Auflisten von Anmeldungen und zugeordneten Benutzern in Visual Basic  
- Jeder Benutzer in einer Datenbank ist einer Anmeldung zugeordnet. Die Anmeldung kann Benutzern in mehreren Datenbanken zugeordnet werden. Das Codebeispiel zeigt, wie die <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A>-Methode des <xref:Microsoft.SqlServer.Management.Smo.Login>-Objekts aufgerufen wird, um alle Datenbankbenutzer aufzulisten, die der Anmeldung zugeordnet sind. Das Beispiel erstellt eine Anmeldung und einen Benutzer in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] Datenbank stellen Sie sicher, dass Zuordnungsinformationen vorliegen, die aufgelistet werden.  
+ Jeder Benutzer in einer Datenbank ist einer Anmeldung zugeordnet. Die Anmeldung kann Benutzern in mehreren Datenbanken zugeordnet werden. Das Codebeispiel zeigt, wie die <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A>-Methode des <xref:Microsoft.SqlServer.Management.Smo.Login>-Objekts aufgerufen wird, um alle Datenbankbenutzer aufzulisten, die der Anmeldung zugeordnet sind. Im Beispiel werden eine Anmeldung und ein Benutzer in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Datenbank erstellt, um sicherzustellen, dass Zuordnungsinformationen vorliegen, die aufgelistet werden können.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBLogins1](SMO How to#SMO_VBLogins1)]  -->  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Auflisten von Anmeldungen und zugeordneten Benutzern in Visual C#  
- Jeder Benutzer in einer Datenbank ist einer Anmeldung zugeordnet. Die Anmeldung kann Benutzern in mehreren Datenbanken zugeordnet werden. Das Codebeispiel zeigt, wie die <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A>-Methode des <xref:Microsoft.SqlServer.Management.Smo.Login>-Objekts aufgerufen wird, um alle Datenbankbenutzer aufzulisten, die der Anmeldung zugeordnet sind. Das Beispiel erstellt eine Anmeldung und einen Benutzer in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] Datenbank stellen Sie sicher, dass Zuordnungsinformationen vorliegen, die aufgelistet werden.  
+ Jeder Benutzer in einer Datenbank ist einer Anmeldung zugeordnet. Die Anmeldung kann Benutzern in mehreren Datenbanken zugeordnet werden. Das Codebeispiel zeigt, wie die <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A>-Methode des <xref:Microsoft.SqlServer.Management.Smo.Login>-Objekts aufgerufen wird, um alle Datenbankbenutzer aufzulisten, die der Anmeldung zugeordnet sind. Im Beispiel werden eine Anmeldung und ein Benutzer in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Datenbank erstellt, um sicherzustellen, dass Zuordnungsinformationen vorliegen, die aufgelistet werden können.  
   
 ```  
 {   
@@ -67,7 +65,7 @@ foreach ( Database db in srv.Databases) {
 ```  
   
 ## <a name="enumerating-logins-and-associated-users-in-powershell"></a>Auflisten von Anmeldungen und zugeordneten Benutzern in PowerShell  
- Jeder Benutzer in einer Datenbank ist einer Anmeldung zugeordnet. Die Anmeldung kann Benutzern in mehreren Datenbanken zugeordnet werden. Das Codebeispiel zeigt, wie die <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A>-Methode des <xref:Microsoft.SqlServer.Management.Smo.Login>-Objekts aufgerufen wird, um alle Datenbankbenutzer aufzulisten, die der Anmeldung zugeordnet sind. Das Beispiel erstellt eine Anmeldung und einen Benutzer in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] Datenbank stellen Sie sicher, dass Zuordnungsinformationen vorliegen, die aufgelistet werden.  
+ Jeder Benutzer in einer Datenbank ist einer Anmeldung zugeordnet. Die Anmeldung kann Benutzern in mehreren Datenbanken zugeordnet werden. Das Codebeispiel zeigt, wie die <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A>-Methode des <xref:Microsoft.SqlServer.Management.Smo.Login>-Objekts aufgerufen wird, um alle Datenbankbenutzer aufzulisten, die der Anmeldung zugeordnet sind. Im Beispiel werden eine Anmeldung und ein Benutzer in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Datenbank erstellt, um sicherzustellen, dass Zuordnungsinformationen vorliegen, die aufgelistet werden können.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server.  

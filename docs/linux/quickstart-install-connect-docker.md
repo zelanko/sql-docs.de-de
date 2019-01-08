@@ -1,5 +1,6 @@
 ---
-title: Erste Schritte mit SQL Server-Containern für Docker | Microsoft-Dokumentation
+title: Erste Schritte mit SQL Server-Containern für Docker (Ausführen von SQL Server unter Linux)
+titleSuffix: SQL Server
 description: Dieser Schnellstart veranschaulicht das Verwenden von Docker zum Ausführen von SQL Server 2017 und containerimages 2019. Anschließend erstellen Sie mit dem Hilfsprogramm „sqlcmd“ eine Datenbank und fragen diese ab.
 author: rothja
 ms.author: jroth
@@ -8,18 +9,18 @@ ms.date: 11/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: b0b123fbf42c81dd4f755855a2c71b0bb799a2a8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a8ed1a9be24ab071bc3e202902b2a56f3ab3c046
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667009"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266011"
 ---
-# <a name="quickstart-run-sql-server-container-images-with-docker"></a>Schnellstart: Führen Sie SQL Server-Container-Images mit Docker
+# <a name="quickstart-run-sql-server-container-images-with-docker"></a>Schnellstart: Ausführen von SQL Server-Container-Images mit Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -87,7 +88,7 @@ any changes to one section should be duplicated in the other-->
    ```
 
    > [!NOTE]
-   > Das Kennwort sollte der Standardrichtlinie für SQL Server-Kennwörter entsprechen. Ist dies nicht der Fall, kann der Container SQL Server nicht einrichten und funktioniert nicht mehr. Ein Standardkennwort enthält mindestens acht Zeichen, die aus drei der folgenden vier Kategorien stammen müssen: Großbuchstaben, Kleinbuchstaben, Grundzahlen (0-9) und Symbole. Mit dem Befehl [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) können Sie das Fehlerprotokoll untersuchen.
+   > Das Kennwort sollte der Standardrichtlinie für SQL Server-Kennwörter entsprechen. Ist dies nicht der Fall, kann der Container SQL Server nicht einrichten und funktioniert nicht mehr. Wird standardmäßig muss das Kennwort mindestens 8 Zeichen lang sein und Zeichen aus drei der folgenden vier Gruppen enthalten: Großbuchstaben, Kleinbuchstaben, Basis-10-Ziffern und Symbole. Mit dem Befehl [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) können Sie das Fehlerprotokoll untersuchen.
 
    > [!NOTE]
    > Standardmäßig wird dabei ein Container erstellt, der die Developer Edition von SQL Server 2017 enthält. Die Vorgehensweise zum Ausführen von Produktionseditionen in Containern weicht hiervon minimal ab. Weitere Informationen finden Sie unter [Run production container images (Ausführen von Containerimages für Produktionsumgebungen)](sql-server-linux-configure-docker.md#production).
@@ -140,11 +141,11 @@ Wenn Sie für `-h` und `--name` denselben Wert festlegen, kann der Zielcontainer
 1. Rufen Sie die Vorschau für SQL Server-2019 Linux-containerimage aus Docker Hub.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
 
    > [!TIP]
@@ -159,17 +160,17 @@ Wenn Sie für `-h` und `--name` denselben Wert festlegen, kann der Zielcontainer
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
 
    > [!NOTE]
-   > Das Kennwort sollte der Standardrichtlinie für SQL Server-Kennwörter entsprechen. Ist dies nicht der Fall, kann der Container SQL Server nicht einrichten und funktioniert nicht mehr. Ein Standardkennwort enthält mindestens acht Zeichen, die aus drei der folgenden vier Kategorien stammen müssen: Großbuchstaben, Kleinbuchstaben, Grundzahlen (0-9) und Symbole. Mit dem Befehl [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) können Sie das Fehlerprotokoll untersuchen.
+   > Das Kennwort sollte der Standardrichtlinie für SQL Server-Kennwörter entsprechen. Ist dies nicht der Fall, kann der Container SQL Server nicht einrichten und funktioniert nicht mehr. Wird standardmäßig muss das Kennwort mindestens 8 Zeichen lang sein und Zeichen aus drei der folgenden vier Gruppen enthalten: Großbuchstaben, Kleinbuchstaben, Basis-10-Ziffern und Symbole. Mit dem Befehl [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) können Sie das Fehlerprotokoll untersuchen.
 
    > [!NOTE]
    > Standardmäßig erstellt dieser einen Container mit der Developer-Edition von SQL Server-2019 Preview.
@@ -182,7 +183,7 @@ Wenn Sie für `-h` und `--name` denselben Wert festlegen, kann der Zielcontainer
    | **-e ' SA_PASSWORD =\<YourStrong! Passw0rd\>"** | Geben Sie ein starkes Kennwort ein, das aus mindestens acht Zeichen besteht und den [Kennwortanforderungen von SQL Server](../relational-databases/security/password-policy.md) entspricht. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
    | **-p-1433:1433** | Ordnen Sie einen TCP-Port in der Hostumgebung (erster Wert) einem TCP-Port im Container zu (zweiter Wert). In diesem Beispiel wird SQL-Server lauscht an TCP-Port 1433 im Container und dies zum Port 1433, auf dem Host. |
    | **--name sql1** | Geben Sie dem Container selbst einen Namen, anstatt einen willkürlich generierten zu verwenden. Wenn Sie mehrere Container ausführen, können Sie nicht denselben Namen mehrfach verwenden. |
-   | **MCR.Microsoft.com/MSSQL/Server:2019-CTP2.1-Ubuntu** | Das SQL Server 2019 CTP 2.1 Linux-containerimage. |
+   | **MCR.Microsoft.com/MSSQL/Server:2019-CTP2.2-Ubuntu** | Das SQL Server 2019 CTP-Version 2.2 Linux-containerimage. |
 
 3. Verwenden Sie den Befehl `docker ps`, um Ihre Docker-Container anzeigen zu lassen.
 

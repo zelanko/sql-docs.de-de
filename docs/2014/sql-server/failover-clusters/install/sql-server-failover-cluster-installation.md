@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 86f3e229893373589521a739b9a3cbdaceb290d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176350"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815732"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server-Failoverclusterinstallation
   Zum Installieren eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusters müssen Sie eine Failoverclusterinstanz erstellen und konfigurieren, indem Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup ausführen.  
@@ -44,7 +43,7 @@ ms.locfileid: "48176350"
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster  
   
-##### <a name="option-1-integrated-installation-with-add-node"></a>Option 1: Integrierte Installation mithilfe der Funktion zum Hinzufügen eines Knotens  
+##### <a name="option-1-integrated-installation-with-add-node"></a>Option 1: Integrierte Installation mithilfe der Option Knoten hinzufügen  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] besteht aus zwei Schritten:  
   
 1.  Erstellen und konfigurieren Sie eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz mit einem einzelnen Knoten. Beim Abschluss einer erfolgreichen Konfiguration des Knotens verfügen Sie über eine voll funktionsfähige Failoverclusterinstanz. Zu diesem Zeitpunkt verfügt diese noch nicht über eine hohe Verfügbarkeit, da nur ein Knoten im Failovercluster vorhanden ist.  

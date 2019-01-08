@@ -13,19 +13,19 @@ ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c3055a222133eb7427aab7dc32ef42bb2796e5c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efd73d5b433deeb21b1f3469882a3f0e5dbe7c2b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088790"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349883"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>Konfigurieren von Cluster-Quorum-NodeWeight-Einstellungen
   In diesem Thema wird beschrieben, wie NodeWeight-Einstellungen für einen Elementknoten in einem Windows Server-Failoverclustering-Cluster konfiguriert werden. NodeWeight-Einstellungen werden während der Quorumabstimmung verwendet, um Notfallwiederherstellungs- und Multisubnetzszenarien für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] - und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen zu unterstützen.  
   
--   **Vorbereitungen:**  [Erforderliche Komponenten](#Prerequisites), [Sicherheit](#Security)  
+-   **Bevor Sie beginnen:**  [Erforderliche Komponenten](#Prerequisites), [Sicherheit](#Security)  
   
--   **Anzeigen von Quorum-NodeWeight-Einstellungen mit:** [Verwenden von PowerShell](#PowerShellProcedure), [Verwenden von Cluster.exe](#CommandPromptProcedure)  
+-   **Anzeigen von Quorum-NodeWeight-Einstellungen mit:** [Mithilfe von Powershell](#PowerShellProcedure), [mithilfe von Cluster.exe](#CommandPromptProcedure)  
   
 -   [Verwandte Inhalte](#RelatedContent)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48088790"
 > [!IMPORTANT]  
 >  Um NodeWeight-Einstellungen zu verwenden, muss der folgende Hotfix im WSFC-Cluster für alle Server übernommen werden:  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): Ein Hotfix ist verfügbar, mit dem sich ein Clusterknoten konfigurieren lässt, der keine Quorumabstimmung in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] und in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): Ein Hotfix ist verfügbar, mit dem sich ein Clusterknoten konfigurieren lässt, der keine Quorumabstimmung in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] und in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] enthält.  
   
 > [!TIP]  
 >  Ist dieser Hotfix nicht installiert, geben die Beispiele in diesem Thema leere Werte oder NULL-Werte für NodeWeight zurück.  
@@ -63,7 +63,7 @@ ms.locfileid: "48088790"
 ```powershell  
 Import-Module FailoverClusters  
   
-$node = “AlwaysOnSrv1”  
+$node = "AlwaysOnSrv1"  
 (Get-ClusterNode $node).NodeWeight = 0  
   
 $cluster = (Get-ClusterNode $node).Cluster  
@@ -75,7 +75,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ##  <a name="CommandPromptProcedure"></a> Verwenden von Cluster.exe  
   
 > [!NOTE]  
->  Das Hilfsprogramm von cluster.exe ist in der [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] -Version veraltet.  Verwenden Sie PowerShell mit Failoverclustering für künftige Entwicklungen.  Das Hilfsprogramm von cluster.exe wird in der nächsten Version von Windows Server entfernt. Weitere Informationen finden Sie unter [Zuordnen von Cluster.exe-Befehlen zu Windows PowerShell-Cmdlets für Failovercluster](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
+>  Das Hilfsprogramm von cluster.exe ist in der [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] -Version veraltet.  Verwenden Sie PowerShell mit Failoverclustering für künftige Entwicklungen.  Das Hilfsprogramm von cluster.exe wird in der nächsten Version von Windows Server entfernt. Weitere Informationen finden Sie unter [Zuordnen von Cluster.exe-Befehlen zu Windows PowerShell-Cmdlets für Failovercluster](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
   
 ##### <a name="to-configure-nodeweight-settings"></a>So konfigurieren Sie NodeWeight-Einstellungen  
   
@@ -84,7 +84,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  Verwenden Sie **cluster.exe** , um `NodeWeight` -Werte festzulegen.  
   
 ### <a name="example-clusterexe"></a>Beispiel (Cluster.exe)  
- Im folgenden Beispiel wird der NodeWeight-Wert geändert, um die Quorumabstimmung des AlwaysOnSrv1-Knotens im Cluster001-Cluster zu entfernen.  
+ Im folgenden Beispiel wird der NodeWeight-Wert geändert, um die Quorumabstimmung des Knotens „AlwaysOnSrv1“ im Cluster „Cluster001“ zu entfernen.  
   
 ```ms-dos  
 cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0  
@@ -92,13 +92,13 @@ cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog-Failovercluster-Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog-Failovercluster-Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
  [WSFC-Quorummodi und Abstimmungskonfiguration &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Anzeigen von Cluster-Quorum-NodeWeight-Einstellungen](view-cluster-quorum-nodeweight-settings.md)   
- [Failovercluster-Cmdlets in Windows PowerShell, aufgelistet nach Taskfokus](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [Failovercluster-Cmdlets in Windows PowerShell, aufgelistet nach Taskfokus](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
   
   

@@ -20,16 +20,16 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52ad6bc3fc84b0d50675b4e0a4e7bb44a6ded1c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f44ae90a82e778bf8e8564b719aa6b9f0157a05a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849358"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204369"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: Öffnen Sie die  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: Gruppe öffnen  
   
  **Zusammenfassung**  
  **SQLSpecialColumns** Ruft die folgenden Informationen zu den Spalten innerhalb einer angegebenen Tabelle ab:  
@@ -64,7 +64,7 @@ SQLRETURN SQLSpecialColumns(
   
  SQL_BEST_ROWID: Gibt die optimale(n) Spalte(n) oder eine Gruppe von Spalten, denen durch Abrufen von Werten aus der Spalte bzw. Spalten, eine beliebige Zeile in der angegebenen Tabelle eindeutig identifiziert werden kann. Eine Spalte kann entweder eine Pseudospalte speziell für diesen Zweck (wie Oracle ROWID oder Ingres TID) oder die Spalte oder Spalten eines eindeutigen Indexes der Tabelle sein.  
   
- SQL_ROWVER: Gibt die Spalte oder Spalten in der angegebenen Tabelle, sofern vorhanden, die von der Datenquelle automatisch aktualisiert werden, wenn ein Wert in der Zeile durch eine Transaktion (wie SQLBase ROWID oder Sybase-TIMESTAMP) aktualisiert wird.  
+ SQL_ROWVER: Gibt die Spalte oder Spalten in der angegebenen Tabelle zurück, sofern vorhanden, die von der Datenquelle automatisch aktualisiert werden, wenn ein Wert in der Zeile durch eine Transaktion (wie SQLBase ROWID oder Sybase-TIMESTAMP) aktualisiert wird.  
   
  *Katalogname*  
  [Eingabe] Name des Katalogs für die Tabelle. Wenn ein Treiber unterstützt die Kataloge für einige Tabellen jedoch nicht für andere, z. B. wenn der Treiber Daten aus verschiedenen DBMS, eine leere Zeichenfolge ruft ("") steht für die Tabellen, denen keine Kataloge. *CatalogName* darf kein Suchmuster Zeichenfolge enthalten.  
@@ -95,16 +95,16 @@ SQLRETURN SQLSpecialColumns(
   
  SQL_SCOPE_CURROW: Die Rowid ist garantiert, allerdings nur, wenn in dieser Zeile gültig ist. Eine spätere erneute Auswahl mit der Rowid möglicherweise nicht als eine Zeile zurück, wenn die Zeile aktualisiert wurde, oder durch eine andere Transaktion gelöscht.  
   
- SQL_SCOPE_TRANSACTION: Die Rowid ist garantiert, für die Dauer der aktuellen Transaktion gültig ist.  
+ SQL_SCOPE_TRANSACTION: Ist garantiert die Rowid für die Dauer der aktuellen Transaktion gültig sein.  
   
- SQL_SCOPE_SESSION: Die Rowid ist garantiert, für die Dauer der Sitzung (über Transaktionsgrenzen hinweg) gültig ist.  
+ SQL_SCOPE_SESSION: Ist garantiert die Rowid für die Dauer der Sitzung (über Transaktionsgrenzen hinweg) gültig sein.  
   
  *NULL zulassen*  
  [Eingabe] Bestimmt, ob besondere Spalten zurückgeben, die einen Nullwert aufweisen darf. Dies muss eine der folgenden Ressourcen sein:  
   
  SQL_NO_NULLS: Schließen Sie spezielle Spalten, die NULL-Werte enthalten können. Einige Treiber können nicht SQL_NO_NULLS unterstützen und diese Treiber werden SQL_NO_NULLS angegeben wurde ein leeres Resultset zurück. Anwendungen sollten für diesen Fall und die Anforderung SQL_NO_NULLS vorbereitet sein, nur dann, wenn es absolut erforderlich ist.  
   
- SQL_NULLABLE: Zurückgeben Sie spezielle Spalten, auch wenn sie NULL-Werte haben können.  
+ SQL_NULLABLE: Spezielle Spalten zurück, auch wenn sie NULL-Werte haben können.  
   
 ## <a name="returns"></a>Rückgabewert  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
@@ -125,7 +125,7 @@ SQLRETURN SQLSpecialColumns(
 |HY009|Ungültige Verwendung eines null-Zeiger|Die *TableName* Argument wurde ein null-Zeiger.<br /><br /> Das Anweisungsattribut SQL_ATTR_METADATA_ID wurde festgelegt auf SQL_TRUE, die *CatalogName* Argument wurde ein null-Zeiger ist, und die SQL_CATALOG_NAME *Informationsart* gibt zurück, die Namen Katalog werden unterstützt.<br /><br /> (DM) das Anweisungsattribut SQL_ATTR_METADATA_ID wurde Wert auf SQL_TRUE festgelegt, und die *SchemaName* Argument wurde ein null-Zeiger.|  
 |HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Diese Funktion war immer noch ausgeführt, wenn **SQLSpecialColumns** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
 |HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) der Wert der eines der Argumente für die Länge ist kleiner als 0, jedoch nicht SQL_NTS gleich.<br /><br /> Der Wert eines der Argumente Länge überschritten, den Wert für die maximale Länge für den entsprechenden Namen. Die maximale Länge des Namens abgerufen werden kann, durch den Aufruf **SQLGetInfo** mit der *Informationsart* Werte: SQL_MAX_CATALOG_NAME_LEN SQL_MAX_SCHEMA_NAME_LEN oder SQL_MAX_TABLE_NAME_LEN.|  
+|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) der Wert der eines der Argumente für die Länge ist kleiner als 0, jedoch nicht SQL_NTS gleich.<br /><br /> Der Wert eines der Argumente Länge überschritten, den Wert für die maximale Länge für den entsprechenden Namen. Die maximale Länge des Namens abgerufen werden kann, durch den Aufruf **SQLGetInfo** mit der *Informationsart* Werte: SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN oder SQL_MAX_TABLE_NAME_LEN.|  
 |HY097|Spaltentyp außerhalb des gültigen Bereichs|(DM) eine ungültige *IdentifierType* -Wert wurde angegeben.|  
 |HY098|Bereichstyp außerhalb des gültigen Bereichs|(DM) eine ungültige *Bereich* -Wert wurde angegeben.|  
 |HY099|Nullable-Typs außerhalb des gültigen Bereichs|(DM) eine ungültige *Nullable* -Wert wurde angegeben.|  
@@ -168,11 +168,11 @@ SQLRETURN SQLSpecialColumns(
 |BEREICH (ODBC 1.0)|1|Smallint|Der Bereich der Rowid. Enthält einen der folgenden Werte:<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL wird zurückgegeben, wenn *IdentifierType* SQL_ROWVER ist. Eine Beschreibung der einzelnen Werte finden Sie unter der Beschreibung der *Bereich* in "Syntax" weiter oben in diesem Abschnitt.|  
 |COLUMN_NAME (ODBC 1.0)|2|Varchar, die nicht NULL|Name der Spalte. Der Treiber gibt eine leere Zeichenfolge für eine Spalte, die nicht über einen Namen verfügt.|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint nicht NULL|SQL-Datentyp. Dies kann einen ODBC-SQL-Datentyp oder die treiberspezifischen SQL-Datentyp sein. Eine Liste der gültigen ODBC-SQL-Datentypen, finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md). Informationen zu Treiber-spezifische SQL-Datentypen finden Sie in der vom Treiber-Dokumentation.|  
-|TYPE_NAME (ODBC 1.0)|4|Varchar, die nicht NULL|Data Source – abhängiger Datentypname; z. B. "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" oder "CHAR () für BIT-Daten".|  
+|TYPE_NAME (ODBC 1.0)|4|Varchar, die nicht NULL|Daten Datenquelle abhängiger Datentypname; z. B. "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" oder "CHAR () für BIT-Daten".|  
 |COLUMN_SIZE (ODBC 1.0)|5|Integer|Die Größe der Spalte in der Datenquelle. Weitere Informationen zu Spalten finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |DIE BUFFER_LENGTH (ODBC 1.0)|6|Integer|Die Länge in Bytes der Datenübertragung auf einen **SQLGetData** oder **SQLFetch** Vorgang, wenn SQL_C_DEFAULT angegeben wird. Für numerische Daten möglicherweise anders als die Größe der in der Datenquelle gespeicherten Daten diese Größe. Dieser Wert ist identisch mit der COLUMN_SIZE-Spalte für Zeichen- oder Binärdaten darstellen. Weitere Informationen finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |DIE DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|Die Dezimalstellen der Spalte in der Datenquelle. NULL wird für Datentypen zurückgegeben, in Dezimalstellen nicht anwendbar sind. Weitere Informationen zu Dezimalstellen finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
-|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Gibt an, ob die Spalte eine Pseudospalte, z. B. Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Hinweis:** für eine optimale Interoperabilität Pseudospalten sollte nicht in Anführungszeichen eingeschlossen werden mit dem Bezeichner, die Anführungszeichen vom **SQLGetInfo**.|  
+|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Gibt an, ob die Spalte eine Pseudospalte, z. B. Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **beachten:**  Für eine optimale Interoperabilität Pseudospalten sollte nicht in Anführungszeichen eingeschlossen werden mit dem Bezeichner, die Anführungszeichen vom **SQLGetInfo**.|  
   
  Nachdem die Anwendung Werte für SQL_BEST_ROWID abgerufen hat, kann die Anwendung diese Werte verwenden, auf die Zeile innerhalb des definierten Bereichs erneut auswählen. Die **wählen** Anweisung ist garantiert keine Zeilen oder eine Zeile zurück.  
   

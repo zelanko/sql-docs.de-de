@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: babdafaaa1c507a609760b02895f9438baf21581
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 313708ad1575c7b9922ac796791d0d623c51b54b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145016"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207519"
 ---
 # <a name="canceling-commands-xmla"></a>Abbrechen von Befehlen (XMLA)
   Abhängigkeit von den Administrationsberechtigungen des Benutzers, der den Befehl ausgibt die [Abbrechen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) -Befehl in XML for Analysis (XMLA) einen Befehl, die sich auf eine Sitzung, eine Sitzung, eine Verbindung, einem Serverprozess oder einer zugeordneten Sitzung abbrechen können oder die Verbindung.  
@@ -36,7 +36,7 @@ ms.locfileid: "50145016"
 ## <a name="canceling-connections"></a>Abbrechen von Verbindungen  
  Durch die Festlegung eines verbindungsbezeichners in der [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla) Eigenschaft der **Abbrechen** Befehl, ein Server-Administrator kann alle von einer bestimmten Verbindung, einschließlich aller zugeordneten Sitzungen Abbrechen Ausführen von Befehlen, und der Verbindung.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Wenn die Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nicht finden und eine Verbindung zugeordneten Sitzungen Abbrechen, wie z. B. wenn die Datapump mehrere Sitzungen gleichzeitig HTTP-Verbindung geöffnet wird, die Instanz die Verbindung nicht abbrechen. Wenn dieser Fall, während der Ausführung gefunden wird einer **Abbrechen** Befehls ein Fehler auftritt.  
   
  Ein Serveradministrator kann die aktiven Verbindungen für Abrufen einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz, indem Sie mit dem XMLA DISCOVER_CONNECTIONS-Schemarowsets abrufen **Discover** Methode.  

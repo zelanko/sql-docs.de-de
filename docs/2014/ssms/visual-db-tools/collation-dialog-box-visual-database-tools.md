@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.definecolumncollation
@@ -13,12 +13,12 @@ ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c48d4fc1d475a07dc9133173418c6474a87f9cab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28c32be0bfb42b923041169c542e21b21074cf70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070420"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812462"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>Sortierreihenfolge (Dialogfeld) (Visual Database Tools)
   Mit diesem Dialogfeld können Sie eine Sortierreihenfolge für die Spalte angeben. Die Sortierreihenfolge einer Spalte wird bei jedem Vorgang verwendet, bei dem die Werte der Spalte mit einer anderen Spalte oder mit konstanten Werten verglichen werden. Gleichzeitig wird dadurch das Verhalten einiger Zeichenfolgenfunktionen beeinflusst, z. B. SUBSTRING und CHARINDEX. Eine vollständige Liste der Auswirkungen der Einstellung der Sortierreihenfolge einer Spalte finden Sie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dokumentation.  
@@ -27,9 +27,9 @@ ms.locfileid: "48070420"
   
 -   Wenn Sie auf der Registerkarte **Spalteneigenschaften** im Feld **Sortierung** einen ungültigen Sortierungsnamen eingeben.  
   
--   Wenn Sie im Feld **Sortierreihenfolge** auf der Registerkarte **Spalteneigenschaften** klicken, und dann auf die Schaltfläche mit den Auslassungspunkten (**…**) rechts neben dem Feld klicken.  
+-   Wenn Sie in der Registerkarte **Spalteneigenschaften** in das Feld **Sortierreihenfolge** klicken, und dann auf die Schaltfläche mit den Auslassungspunkten (**...**) rechts neben dem Feld klicken.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **SQL-Sortierung**  
  Wählen Sie aus der Dropdownliste eine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definierte Sortierreihenfolge.  
   

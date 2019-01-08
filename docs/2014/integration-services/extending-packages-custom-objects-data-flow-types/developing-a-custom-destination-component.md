@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,12 +20,12 @@ ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03d0116338f6366759ef6961c0c33d67c2fe718d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cc1372b89d1b00a6f58eae15d32a0f74de51e55
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070170"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350726"
 ---
 # <a name="developing-a-custom-destination-component"></a>Entwickeln einer benutzerdefinierten Zielkomponente
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bietet Entwicklern die Möglichkeit, in benutzerdefinierte Zielkomponenten zu schreiben, die eine Verbindung mit einer beliebigen benutzerdefinierten Datenquelle herstellen und Daten in dieser speichern können. Benutzerdefinierte Zielkomponenten sind hilfreich, wenn Sie Verbindungen zu Datenquellen herstellen müssen, auf die nicht über eine der vorhandenen Quellkomponenten, die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthalten sind, zugegriffen werden kann.  
@@ -483,7 +481,7 @@ Namespace BlobDst
 End Namespace  
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Entwickeln einer benutzerdefinierten Quellkomponente](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)   

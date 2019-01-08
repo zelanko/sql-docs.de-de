@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
@@ -14,12 +14,12 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a2c9966dfbb270165ea5245fd59e0793d165bdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3254ae226a0ac955f2cf5b2f39077853ebf3e057
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127460"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762782"
 ---
 # <a name="create-a-job-category"></a>Erstellen einer Auftragskategorie
   In diesem Thema wird beschrieben, wie Sie eine Auftragskategorie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects erstellen können.  
@@ -28,17 +28,17 @@ ms.locfileid: "48127460"
   
  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Multiserverkategorien sind nur auf einem Masterserver vorhanden. Auf einem Masterserver ist nur eine Standardauftragskategorie verfügbar: [**Nicht kategorisiert (Multiserver)**]. Beim Herunterladen eines Multiserverauftrags wird seine Kategorie auf dem Zielserver in **Aufträge vom MSX** geändert.  
   
 ###  <a name="Security"></a> Sicherheit  
- Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
 
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-create-a-job-category"></a>So erstellen Sie eine Auftragskategorie  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48127460"
   
 8.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten >***Servername* auf **Aktualisieren**, um sicherzustellen, dass die neue Auftragskategorie aktiv ist. Schließen Sie das Dialogfeld, wenn alles normal aussieht.  
   
- Weitere Informationen zu diesen Dialogfeldern finden Sie unter [Auftragskategorien: Auftragskategorien verwalten](job-categories-manage-job-categories.md) und [Eigenschaften und eine neue Auftragskategorie](job-categories-properties-new-job-category.md).  
+ Weitere Informationen zu diesen Dialogfeldern finden Sie unter [Auftragskategorien: Auftragskategorien verwalten](job-categories-manage-job-categories.md) und [Auftrag Eigenschaften für Auftragskategorien und eine neue Auftragskategorie](job-categories-properties-new-job-category.md).  
   
  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48127460"
   
 #### <a name="to-create-a-job-category"></a>So erstellen Sie eine Auftragskategorie  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48127460"
 ##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
  **So erstellen Sie eine Auftragskategorie**  
   
- Rufen Sie die `JobCategory` Klasse, indem Sie eine Programmiersprache, die Sie, wie z. B. Visual Basic, Visual c# oder PowerShell auswählen. Beispielcode hierzu finden Sie unter [Planen von automatischen, administrativen Tasks im SQL Server-Agent](sql-server-agent.md).  
+ Rufen Sie die `JobCategory`-Klasse in einer Programmiersprache Ihrer Wahl auf, z. B. Visual Basic, Visual C# oder PowerShell. Beispielcode hierzu finden Sie unter [Planen von automatischen, administrativen Tasks im SQL Server-Agent](sql-server-agent.md).  
   
  
   

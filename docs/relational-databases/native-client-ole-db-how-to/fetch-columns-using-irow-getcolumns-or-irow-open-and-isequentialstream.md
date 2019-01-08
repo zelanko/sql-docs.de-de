@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7585936a5e91c8c98a36bc4c0d92276f123b227
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 45d144b583c934ef6599a611255d68d51f9413ef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663770"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205279"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (oder IRow::Open) und ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,11 +51,11 @@ ms.locfileid: "51663770"
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
- Mit dem ersten Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) wird eine im Beispiel verwendete Tabelle erstellt.  
+ Die erste ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) Codebeispiel erstellt eine Tabelle, die im Beispiel verwendet wird.  
   
  Kompilieren Sie mit „ole32.lib“ und „oleaut32.lib“, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
- Das dritte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die im Beispiel verwendete Tabelle.  
+ Das dritte ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht die im Beispiel verwendete Tabelle.  
   
 ```  
 USE AdventureWorks  

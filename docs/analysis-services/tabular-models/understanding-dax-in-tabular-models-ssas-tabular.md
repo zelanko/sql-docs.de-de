@@ -1,5 +1,5 @@
 ---
-title: DAX in tabellarischen Modellen | Microsoft-Dokumentation
+title: DAX in tabellarischen Modellen von Analysis Services | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 959189dbc1bae49c15fd23e49b5cdef98973a559
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: e62c50026d391db37beca5844da24eae43f12014
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906500"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072447"
 ---
 # <a name="dax-in-tabular-models"></a>DAX in tabellarischen Modellen 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -42,16 +42,16 @@ ms.locfileid: "48906500"
   
  Der Grund dafür, dass Sie die (gefilterten) Ergebnisse der Berechnung nicht sofort einsehen können, ist, dass das Ergebnis eines Measures ohne einen Kontext nicht bestimmt werden kann. Das Auswerten eines Measures erfordert eine Clientanwendung zur Berichtserstellung, die in der Lage ist, den erforderlichen Kontext bereitzustellen, um die relevanten Daten für jede Zelle abrufen und anschließend den Ausdruck für jede Zelle auswerten zu können. Dieser Client kann eine Excel-PivotTable oder PivotChart, ein Power BI-Bericht oder eine MDX-Abfrage sein. Unabhängig vom Berichterstellungsclient wird tatsächlich für jede Zelle in den Ergebnissen eine separate Abfrage ausgeführt. Das heißt, generiert jede Kombination von Zeilen- und Spaltenüberschriften in einer PivotTable und jede Auswahl von Slicern und Filtern in einem Power BI-Bericht, eine andere Teilmenge der Daten, die für die das Measure berechnet wird. Z. B. in einem Measure mit der Formel `Total Sales:=SUM([Sales Amount])`, wenn ein Benutzer das TotalSales-Measure im Fenster Werte in einer PivotTable platziert, und klicken Sie dann die DimProductCategory-Spalte aus einer DimProduct-Tabelle im Fenster Zeilenfilter, die Summe von Sales Amount ist berechnet und für jede Produktkategorie angezeigt.  
   
- Anders als bei berechneten Spalten und Zeilenfiltern enthält die Syntax für ein Measure den Namen des Measures vor der Formel. Im obigen Beispiel wird der Name **Total Sales:** vor der Formel angezeigt. Nachdem Sie ein Measure erstellt haben, werden der Name und die Definition in der Feldliste der Clientanwendung zur Berichtserstellung angezeigt, und das Measure steht, abhängig von Perspektiven und Rollen, allen Benutzern des Modells zur Verfügung.  
+ Im Gegensatz zu berechneten Spalten und Zeilenfiltern enthält die Syntax für ein Measure den Namen des Measures vor der Formel. Im obigen Beispiel wird der Name **Total Sales:** vor der Formel angezeigt. Nachdem Sie ein Measure erstellt haben, werden der Name und die Definition in der Feldliste der Clientanwendung zur Berichtserstellung angezeigt, und das Measure steht, abhängig von Perspektiven und Rollen, allen Benutzern des Modells zur Verfügung.  
   
  Weitere Informationen finden Sie unter [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)erstellte tabellarische Modellprojekte.  
   
 ### <a name="row-filters"></a>Zeilenfilter  
  Zeilenfilter definieren, welche Zeilen in einer Tabelle für Mitglieder einer bestimmten Rolle sichtbar sind. Zeilenfilter können für jede Tabelle in einem Modell mithilfe von DAX-Formeln erstellt werden. Zeilenfilter werden für eine bestimmte Rolle mithilfe des Rollen-Manager in SSDT erstellt. Zeilenfilter können auch für ein bereitgestelltes Modell mit Rolleneigenschaften in SQL Server Management Studio (SSMS) definiert werden.  
   
- In einem Zeilenfilter definiert eine DAX-Formel, die den booleschen Wert TRUE oder FALSE ergeben muss, die Zeilen, die von Mitgliedern dieser spezifischen Rolle in Form der Abfrageergebnisse zurückgegeben werden können. Nicht in der DAX-Formel enthaltene Zeilen können nicht zurückgegeben werden. Beispielsweise können Mitglieder der Sales-Rolle in der Customers-Tabelle mit der DAX-Formel `=Customers[Country] = “USA”`nur Daten für Kunden in den USA anzeigen. Außerdem werden Aggregate, z.B. SUM, nur für Kunden in den USA zurückgegeben.  
+ In einem Zeilenfilter definiert eine DAX-Formel, die den booleschen Wert TRUE oder FALSE ergeben muss, die Zeilen, die von Mitgliedern dieser spezifischen Rolle in Form der Abfrageergebnisse zurückgegeben werden können. Nicht in der DAX-Formel enthaltene Zeilen können nicht zurückgegeben werden. Beispielsweise können Mitglieder der Sales-Rolle in der Customers-Tabelle mit der DAX-Formel `=Customers[Country] = "USA"`nur Daten für Kunden in den USA anzeigen. Außerdem werden Aggregate, z.B. SUM, nur für Kunden in den USA zurückgegeben.  
   
- Wenn Sie mithilfe der DAX-Formel einen Zeilenfilter definieren, erstellen Sie ein zulässiges Rowset. Dadurch wird der Zugriff auf andere Zeilen nicht verweigert, sie werden vielmehr nicht als Teil des zulässigen Rowsets zurückgegeben Andere Rollen können Zugriff auf die von der DAX-Formel ausgeschlossenen Zeilen gewähren. Wenn ein Benutzer einer anderen Rolle angehört und der Zeilenfilter dieser Rolle Zugriff auf dieses bestimmte Rowset gewährt, kann der Benutzer die Daten für diese Zeile anzeigen.  
+ Wenn Sie mithilfe der DAX-Formel einen Zeilenfilter definieren, erstellen Sie ein zulässiges Rowset. Dadurch wird der Zugriff auf andere Zeilen nicht verweigert, sie werden vielmehr nicht als Teil des zulässigen Rowsets zurückgegeben Andere Rollen können Zugriff auf die von der DAX-Formel ausgeschlossenen Zeilen gewähren. Wenn ein Benutzer Mitglied einer anderen Rolle ist, und Zeilenfilter dieser Rolle Zugriff auf dieses bestimmte Rowset zulassen, kann der Benutzer Daten für diese Zeile anzeigen.  
   
  Zeilenfilter gelten für die angegebenen sowie für verknüpfte Zeilen. Wenn eine Tabelle über mehrere Beziehungen verfügt, wird die Sicherheit für die aktive Beziehung mithilfe von Filtern gewährleistet. Für Zeilenfilter und Zeilenfilter, die für verknüpfte Tabellen definiert wurden, wird eine Schnittmenge gebildet.  
   
@@ -70,11 +70,11 @@ ms.locfileid: "48906500"
 |Textmodus|Zeichenfolge|Eine Unicodezeichen-Datenzeichenfolge. Dies können Zeichenfolgen, Zahlen oder Datumsangaben im Textformat sein.|  
 |date|Date/Time|Datumsangaben und Uhrzeiten in einer akzeptierten Form für die Darstellung von Datum und Uhrzeit.<br /><br /> Gültig sind alle Datumsangaben nach dem 1. März 1900.|  
 |Währung|Währung|Der Währungsdatentyp lässt Werte zwischen -922 337 203 685 477,5808 und 922 337 203 685 477,5807 mit vier Dezimalstellen unveränderlicher Genauigkeit zu.|  
-|–|Leer|Ein leerer Datentyp in DAX, der SQL-NULLEN darstellt und ersetzt. Sie können mit der BLANK-Funktion ein Leerzeichen erstellen und mit der logischen ISBLANK-Funktion nach Leerzeichen suchen.|  
+|Nicht zutreffend|Leer|Ein leerer Datentyp in DAX, der SQL-NULLEN darstellt und ersetzt. Sie können mit der BLANK-Funktion ein Leerzeichen erstellen und mit der logischen ISBLANK-Funktion nach Leerzeichen suchen.|  
   
  Tabellarische Modelle beinhalten auch den Table-Datentyp als Eingabe oder Ausgabe für viele DAX-Funktionen. Beispielsweise nimmt die FILTER-Funktion eine Tabelle als Eingabe an und gibt eine neue Tabelle aus, die nur die Zeilen enthält, die die Filterbedingungen erfüllen. Die Kombination von Tabellen- und Aggregationsfunktionen ermöglicht Ihnen die Ausführung komplexer Berechnungen für dynamisch definierte Datasets.  
   
- Obwohl Datentypen in der Regel automatisch festgelegt werden, ist es wichtig, ihre Funktion und Gültigkeit zu verstehen. Dies gilt insbesondere für DAX-Formeln. Fehler in Formeln oder unerwartete Ergebnisse werden z. B. oft von einem bestimmten Operator verursacht, der nicht mit einem in einem Argument angegebenen Datentyp verwendet werden kann. Die Formel `= 1 & 2`gibt z.B. ein Zeichenfolgenergebnis von 12 zurück, die Formel `= “1” + “2”`dagegen die ganze Zahl 3.  
+ Obwohl Datentypen in der Regel automatisch festgelegt werden, ist es wichtig, ihre Funktion und Gültigkeit zu verstehen. Dies gilt insbesondere für DAX-Formeln. Fehler in Formeln oder unerwartete Ergebnisse werden z. B. oft von einem bestimmten Operator verursacht, der nicht mit einem in einem Argument angegebenen Datentyp verwendet werden kann. Die Formel `= 1 & 2`gibt z.B. ein Zeichenfolgenergebnis von 12 zurück, die Formel `= "1" + "2"`dagegen die ganze Zahl 3.  
   
  Ausführliche Informationen zu Datentypen in tabellarischen Modellen und expliziten und impliziten Konvertierungen von Datentypen in DAX, finden Sie unter [unterstützte Datentypen](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
@@ -232,7 +232,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Es gibt verschiedene Typen von Kontext: *Zeilenkontext*, *Abfragekontext*und *Filterkontext*.  
   
 ###  <a name="bkmk_row_context"></a> Zeilenkontext  
- Der*Zeilenkontext* kann als „die aktuelle Zeile“ betrachtet werden. Wenn Sie in einer berechneten Spalte eine Formel erstellen, enthält der Zeilenkontext für diese Formel die Werte aller Spalten in der aktuellen Zeile. Wenn die Tabelle mit einer anderen Tabelle verknüpft ist, enthält der Kontext auch alle Werte aus der anderen Tabelle, die mit der aktuellen Zeile verknüpft sind.  
+ *Zeilenkontext* können als "die aktuelle Zeile" betrachtet werden. Wenn Sie in einer berechneten Spalte eine Formel erstellen, enthält der Zeilenkontext für diese Formel die Werte aller Spalten in der aktuellen Zeile. Wenn die Tabelle mit einer anderen Tabelle verknüpft ist, enthält der Kontext auch alle Werte aus der anderen Tabelle, die mit der aktuellen Zeile verknüpft sind.  
   
  Angenommen, Sie erstellen die berechnete Spalte `=[Freight] + [Tax]`, die Werte aus zwei Spalten (Fracht und Steuer) aus derselben Tabelle addiert. Diese Formel ruft automatisch nur die Werte der aktuellen Zeile in der angegebenen Spalte ab.  
   
@@ -354,7 +354,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  *Neuberechnung* ist der Vorgang, bei dem die Ergebnisse von Formeln aktualisiert werden, um Änderungen an den Formeln sowie an den zugrunde liegenden Daten widerzuspiegeln. Neuberechnung kann die Leistung in folgender Weise beeinträchtigen:  
   
--   Die Werte in einer berechneten Spalte werden berechnet und im Modell gespeichert. Um die Werte in der berechneten Spalte zu aktualisieren, müssen Sie das Modell mit einem von drei Verarbeitungsbefehlen verarbeiten: Vollständig verarbeiten, Daten verarbeiten oder Prozessneuberechnung. Das Ergebnis der Formel muss immer für die ganze Spalte neu berechnet werden, wenn Sie die Formel ändern.  
+-   Die Werte in einer berechneten Spalte werden berechnet und im Modell gespeichert. Um die Werte in der berechneten Spalte zu aktualisieren, müssen Sie das Modell mit einem von drei verarbeitungsbefehlen - vollständig verarbeiten, Daten verarbeiten oder Prozessneuberechnung verarbeiten. Das Ergebnis der Formel muss immer für die ganze Spalte neu berechnet werden, wenn Sie die Formel ändern.  
   
 -   Die von Measures berechneten Werte werden dynamisch ausgewertet, sobald ein Benutzer einer PivotTable das Measure hinzufügt oder einen Bericht öffnet. Wenn der Benutzer den Kontext ändert, ändern sich die von dem Measure zurückgegebenen Werte. Die Ergebnisse des Measures spiegeln immer den aktuellen Stand des speicherinternen Caches wider.  
   

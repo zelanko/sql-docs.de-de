@@ -1,7 +1,8 @@
 ---
-title: Sichern und Wiederherstellen einer Datenbank mithilfe von Azure Data Studio | Microsoft-Dokumentation
+title: Sichern und Wiederherstellen einer Datenbank
+titleSuffix: Azure Data Studio
 description: Informationen Sie zum Sichern und Wiederherstellen einer Datenbank mithilfe von Azure Data Studio
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2d9b4cbee5ab4da44961927809bf1fb4c771cc1
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 0e6025c59206f48fe6cf5cd5bf5182ea73090bbf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355911"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207129"
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Sicherung und Wiederherstellung mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Sichern und Wiederherstellen von Datenbanken mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 In diesem Tutorial erfahren Sie, wie Sie mit [!INCLUDE[name-sos](../includes/name-sos-short.md)] auf:
 > [!div class="checklist"]
@@ -33,10 +34,11 @@ In diesem Tutorial ist die SQL Server *"tutorialdb"*. Zum Erstellen der *"tutori
 
 - [Verbinden und Abfragen von SQL Server verwenden [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
+Dieses Lernprogramm erfordert die Verbindung mit einer SQL Server-Datenbank. Azure SQL-Datenbank hat Sicherungen, automatisiert werden, damit Azure Data Studio keine Azure SQL-Datenbank sicherungs- und Wiederherstellungsvorgänge auszuführen. Weitere Informationen finden Sie unter [erfahren Sie mehr über die automatischen Sicherungen von SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 
 ## <a name="backup-a-database"></a>Sichern einer Datenbank
 
-1. Öffnen Sie das Datenbank-Dashboard "tutorialdb" (Öffnen Sie die **Server** Randleiste (**STRG + G**), erweitern Sie **Datenbanken**, mit der rechten Maustaste **"tutorialdb"**, und wählen Sie **verwalten**). 
+1. Öffnen Sie das Datenbank-Dashboard "tutorialdb" (Öffnen Sie die **Server** Randleiste (**STRG + G**), erweitern Sie **Datenbanken**, mit der rechten Maustaste **"tutorialdb"**, und wählen Sie **verwalten**).
 
 2. Öffnen der **datenbanksicherung** Dialogfeld (klicken Sie auf **Sicherung** auf die **Aufgaben** Widget).
 
@@ -79,7 +81,7 @@ Nach dem Klicken auf **Backup**, **datenbanksicherung** Dialogfeld nicht mehr an
    ![Wiederherstellungsprozess](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 
 
-In diesem Tutorial haben Sie gelernt, wie Sie:
+In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 > * Sichern einer Datenbank 
 > * Anzeigen des Status den Sicherungen

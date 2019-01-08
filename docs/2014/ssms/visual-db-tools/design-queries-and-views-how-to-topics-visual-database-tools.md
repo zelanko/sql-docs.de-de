@@ -4,10 +4,10 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- • vs.solutionexplorer.file.query
+- vs.solutionexplorer.file.query
 helpviewer_keywords:
 - queries [Visual Database Tools]
 - View Designer, about View Designer
@@ -20,12 +20,12 @@ ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1652e8a15b973e46a6692fcc2f79bc56cc2fdff8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108360"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328380"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten (Visual Database Tools)
   Mithilfe des Abfrage- und Sicht-Designers können Sie die Datenempfangs- und Datenmanipulationsteile einer Anwendung erstellen und verwalten.  
@@ -61,5 +61,3 @@ ms.locfileid: "48108360"
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Entwerfen von Tabellen &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)  
  Detaillierte Schritte für Entwurf und Verwaltung von Datenbankstrukturen mit Tabellen, Spalten, Schlüsseln, Indizes, gespeicherten Prozeduren u. a. m.  
-  
-  

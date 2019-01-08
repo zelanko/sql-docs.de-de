@@ -19,19 +19,19 @@ ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69e0eb339ee66da1f91956555a931a71ac94406b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab1ed7614ff315986f38d497f00687784785790b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743518"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213690"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt die aktuelle Größe des angeforderten Objekts zurück und schätzt die Objektgröße für den angeforderten Komprimierungsstatus. Die Komprimierung kann für ganze Tabellen oder Teile von Tabellen ermittelt werden. Dazu gehören Heaps, gruppierte Indizes, nicht gruppierte Indizes, columnstore-Indizes, indizierte Sichten, Tabelle und Indexpartitionen. Die Objekte können mithilfe der Zeile, Seite, columnstore- oder columnstore-archivkomprimierung komprimiert werden. Wenn die Tabelle, der Index oder die Partition bereits komprimiert ist, können Sie mithilfe dieser Prozedur die Größe der erneut komprimierten Tabelle, des erneut komprimierten Index oder der erneut komprimierten Partition einschätzen.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Komprimierung und **Sp_estimate_data_compression_savings** sind nicht verfügbar in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Um die Größe des Objekts bei Verwendung der angeforderten Komprimierungseinstellung einzuschätzen, fragt diese gespeicherte Prozedur das Quellobjekt ab und lädt diese Daten in eine entsprechende Tabelle und einen entsprechenden Index in tempdb. Die Tabelle oder der Index, die bzw. der in tempdb erstellt wurde, wird anschließend entsprechend der angeforderten Einstellung komprimiert, und die Komprimierungseinsparungen werden berechnet.  
@@ -72,7 +72,7 @@ sp_estimate_data_compression_savings
  Sie können auch angeben, um die Partition anzugeben, die [$partition](../../t-sql/functions/partition-transact-sql.md) Funktion. Geben Sie NULL an, wenn Informationen zu allen Partitionen des besitzenden Objekts zurückgegeben werden sollen.  
   
  [ @data_compression=] '*Data_compression*"  
- Der Typ der Komprimierung, die ausgewertet werden soll. *DATA_COMPRESSION* kann eine der folgenden Werte: keine, Zeile, Seite, COLUMNSTORE und COLUMNSTORE_ARCHIVE.  
+ Der Typ der Komprimierung, die ausgewertet werden soll. *DATA_COMPRESSION* kann eine der folgenden Werte: KEINE, Zeile, Seite, COLUMNSTORE und COLUMNSTORE_ARCHIVE.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

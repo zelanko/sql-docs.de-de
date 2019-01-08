@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cfe743a7ae0f86477dbbb1b0cee8099d98784b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11c0f2dd58d277f8736c3bab2038add94d1b3dd9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623398"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205469"
 ---
 # <a name="support-for-large-udts"></a>Unterstützung für große UDTs
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47623398"
 ## <a name="example"></a>Beispiel  
  Das erste Codelisting ist der C#-Quellcode. Fügen Sie den Code in eine Datei mit dem Namen LargeStringUDT.cs ein, und kompilieren Sie ihn zu einer DLL. Kopieren Sie LargeStringUDT.dll in das Stammverzeichnis des Laufwerks C.  
   
- Die zweite ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codebeispiel erstellt die Assembly in der master-Datenbank.  
+ Die zweite ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) Codebeispiel erstellt die Assembly in der master-Datenbank.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und user32.lib. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47623398"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Das vierte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die Assembly aus der master-Datenbank.  
+ Der vierte ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht die Assembly aus der master-Datenbank.  
   
 ```  
 // LargeStringUDT.cs  

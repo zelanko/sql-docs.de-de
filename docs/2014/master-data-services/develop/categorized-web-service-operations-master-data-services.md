@@ -4,21 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: master-data-services
+ms.technology: ''
 ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 48a4fcdf1d1bb0f3f0736abfac5946e066937ae7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3e0d205cba04fd0d45249eb2b1915310f98d6a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064130"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814582"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Kategorisierte Webdienstvorgänge (Master Data Services)
-  Der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Webdienst enthält einen vollständigen Satz an Vorgängen, mit dem Sie Code zum Steuern aller Funktionen schreiben können, die von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] über die zugehörige Benutzeroberfläche ausgeführt werden. Die Webdienstvorgänge werden von der <xref:Microsoft.MasterDataServices.IService>-Schnittstelle definiert und als Methoden in der <xref:Microsoft.MasterDataServices.ServiceClient>-Klasse implementiert. Dieses Thema gruppiert die Webdienstvorgänge in konzeptionelle Kategorien, sodass Sie einen besseren Einblick in die Verwendung der Webdienst-API erhalten.  
+  Der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Webdienst enthält einen vollständigen Satz an Vorgängen, mit dem Sie Code zum Steuern aller Funktionen schreiben können, die von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] über die zugehörige Benutzeroberfläche ausgeführt werden. Die Webdienstvorgänge werden von der <xref:Microsoft.MasterDataServices.IService>-Schnittstelle definiert und als Methoden in der <xref:Microsoft.MasterDataServices.ServiceClient>-Klasse implementiert. Dieses Thema gruppiert die Webdienstvorgänge in konzeptionelle Kategorien, sodass Sie einen besseren Einblick in die Verwendung der Webdienst-API erhalten.  
   
 ## <a name="model-operations"></a>Modellvorgänge  
  Anhand dieser Vorgänge werden Modelle erstellt, aktualisiert und gelöscht und Aktionen für sämtliche Inhalte eines Modells wie Entitäten, Hierarchien und Versionen ausgeführt. Weitere Informationen finden Sie unter [Modelle &#40;Master Data Services&#41;](../models-master-data-services.md).  
@@ -118,7 +118,7 @@ ms.locfileid: "48064130"
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## <a name="data-import-operations"></a>Datenimportvorgänge  
- Anhand dieser Vorgänge werden Daten in eine [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank importiert. Weitere Informationen finden Sie unter [Datenimport &#40;Master Data Services&#41;](../overview-importing-data-from-tables-master-data-services.md).  
+ Anhand dieser Vorgänge werden Daten in eine [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank importiert. Weitere Informationen finden Sie unter [Datenimport &#40;Master Data Services&#41;](../overview-importing-data-from-tables-master-data-services.md).  
   
 ||  
 |-|  
@@ -147,7 +147,7 @@ ms.locfileid: "48064130"
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
   
 ## <a name="security-operations"></a>Sicherheitsvorgänge  
- Diese Vorgänge werden verwendet, um die Sicherheitseinstellungen zu ändern, die den Zugriff auf die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank steuern. Weitere Informationen finden Sie unter [Sicherheit &#40;Master Data Services&#41;](../security-master-data-services.md).  
+ Diese Vorgänge werden verwendet, um die Sicherheitseinstellungen zu ändern, die den Zugriff auf die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank steuern. Weitere Informationen finden Sie unter [Sicherheit &#40;Master Data Services&#41;](../security-master-data-services.md).  
   
 ||  
 |-|  

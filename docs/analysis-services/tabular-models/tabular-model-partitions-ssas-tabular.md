@@ -1,5 +1,5 @@
 ---
-title: Tabellenmodellpartitionen | Microsoft-Dokumentation
+title: Analysis Services im tabellarischen Modell Partitionen | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ca9ea54ace50740acf9f0be0ec923b86d1667683
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5e8fbbfe1aaf7c97a5739768413cdc04644be6a6
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146285"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072647"
 ---
 # <a name="tabular-model-partitions"></a>Tabellenmodellpartitionen 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "50146285"
 ##  <a name="bkmk_benefits"></a> Vorteile  
  Bei einem effizienten Modellentwurf werden Partitionen genutzt, um unnötige Verarbeitungsschritte und die daraus resultierende Belastung der Analysis Services-Serverprozessoren zu eliminieren und gleichzeitig sicherzustellen, dass bestimmte Daten so häufig verarbeitet und aktualisiert werden, dass immer die neuesten Daten aus den Datenquellen bereitgestellt werden.  
   
- Ein tabellarisches Modell kann beispielsweise über eine Sales-Tabelle verfügen, die Umsatzzahlen für das laufende Geschäftsjahr 2011 und jedes vorangehende Geschäftsjahr umfasst. Die Sales-Tabelle des Modells verfügt über die folgenden drei Partitionen:  
+ Ein tabellarisches Modell kann beispielsweise über eine Sales-Tabelle verfügen, die Umsatzzahlen für das laufende Geschäftsjahr 2011 und jedes vorangehende Geschäftsjahr umfasst. Das Modell der Tabelle "Sales" hat die folgenden drei Partitionen:  
   
 |Partition|Daten aus|  
 |---------------|---------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "50146285"
   
  Im Unterschied dazu ist es nicht erforderlich, die Daten der Partition "Sales2010-2001" nachts zu verarbeiten. Da sich die Umsatzzahlen für die vorangegangenen zehn Geschäftsjahre aufgrund von Produktrücksendungen und anderen Anpassungen jedoch ändern können, müssen sie immer noch regelmäßig verarbeitet werden. Die Daten in der Partition "Sales2010-2001" werden folglich monatlich verarbeitet. Die Daten in der Partition "SalesOld" ändern sich nie und werden daher nur jährlich verarbeitet.  
   
- Wenn Sie das Geschäftsjahr 2012 eingeben, wird der Sales-Tabelle des Modells die neue Partition "Sales2012" hinzugefügt. Die Partition "Sales2011" kann dann mit der Partition "Sales2010-2001" zusammengeführt und in "Sales2011-2002" umbenannt werden. Die Daten aus dem Geschäftsjahr 2001 werden aus der neuen Partition "Sales2011-2002" entfernt und in die Partition "SalesOld" verschoben. Alle Partitionen werden daraufhin verarbeitet, damit die Änderungen berücksichtigt werden.  
+ Wenn Sie das Geschäftsjahr 2012 eingeben, wird der Modus des Sales-Tabelle neue Partition "sales2012" hinzugefügt. Die Partition "Sales2011" kann dann mit der Partition "Sales2010-2001" zusammengeführt und in "Sales2011-2002" umbenannt werden. Die Daten aus dem Geschäftsjahr 2001 werden aus der neuen Partition "Sales2011-2002" entfernt und in die Partition "SalesOld" verschoben. Alle Partitionen werden daraufhin verarbeitet, damit die Änderungen berücksichtigt werden.  
   
- Wie ein Unternehmen eine Partitionsstrategie für seine tabellarischen Modelle implementiert, hängt im Wesentlichen von den Verarbeitungsanforderungen für die jeweiligen Modelldaten und den verfügbaren Ressourcen ab.  
+ Wie Sie eine Partitionsstrategie für tabellarische Modelle Ihrer Organisation implementieren, werden zum größten Teil Ihrer verarbeitungsanforderungen bestimmten Modell und den verfügbaren Ressourcen abhängig sein.  
   
 ##  <a name="bkmk_permissions"></a> Berechtigungen  
  Damit Sie Partitionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellen, verwalten und verarbeiten können, müssen die entsprechenden Analysis Services-Berichtigungen in einer Sicherheitsrolle definiert sein. Jede Sicherheitsrolle verfügt über eine der folgenden Berechtigungen:  
@@ -74,7 +74,7 @@ Analysis Services enthält die parallele Verarbeitung für Tabellen mit zwei ode
 ##  <a name="bkmk_process_partitions"></a> Partitionen verarbeiten  
  Partitionen können in **mithilfe des Dialogfelds** Partitionen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder mithilfe eines Skripts unabhängig von anderen Partitionen verarbeitet (bzw. aktualisiert) werden. Folgende Optionen stehen für die Verarbeitung zur Verfügung:  
   
-|Mode|Description|  
+|Modus|Description|  
 |----------|-----------------|  
 |Standard verarbeiten|Erkennt den Verarbeitungsstatus eines Partitionsobjekts und führt die Verarbeitung durch, durch die nicht oder teilweise verarbeitete Partitionsobjekte in den Status "Vollständig verarbeitet" versetzt werden. Daten für leere Tabellen und Partitionen werden geladen, Hierarchien, berechnete Spalten und Beziehungen werden erstellt oder neu erstellt.|  
 |Vollständig verarbeiten|Verarbeitet ein Partitionsobjekt und alle darin enthaltenen Objekte. Wenn die Verarbeitungsmethode "Vollständig verarbeiten" für ein bereits verarbeitetes Objekt ausgeführt wird, löscht [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] alle Daten im Objekt und verarbeitet anschließend das Objekt. Diese Art der Verarbeitung ist erforderlich, wenn eine Änderung an der Objektstruktur vorgenommen wurde.|  
@@ -84,7 +84,7 @@ Analysis Services enthält die parallele Verarbeitung für Tabellen mit zwei ode
   
 ##  <a name="bkmk_related_tasks"></a> Verwandte Aufgaben  
   
-|Task|Description|  
+|Aufgabe|Description|  
 |----------|-----------------|  
 |[Erstellen und Verwalten von Tabellenmodellpartitionen](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|Beschreibt, wie Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Partitionen in einem bereitgestellten tabellarischen Modell erstellen und verwalten.|  
 |[Verarbeiten von Tabellenmodellpartitionen](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|Beschreibt, wie Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Partitionen in einem bereitgestellten tabellarischen Modell verarbeiten.|  

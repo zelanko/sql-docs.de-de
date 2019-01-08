@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration"
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.general.f1
@@ -13,17 +12,17 @@ ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f80b9d8c2fb07928debc38077f05913eb6718fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: baa29270bb95bdf8f44ecd3dd5e064bbeb1f5d0d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215500"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821674"
 ---
 # <a name="database-properties-general-page"></a>Datenbankeigenschaften (Seite 'Allgemein')
   Mithilfe dieser Seite können Sie die Eigenschaften für die ausgewählte Datenbank anzeigen und ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Letzte Datenbanksicherung**  
  Zeigt das Datum an, an dem die Datenbank zuletzt gesichert wurde.  
   

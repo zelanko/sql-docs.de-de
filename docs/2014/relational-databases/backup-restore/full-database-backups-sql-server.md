@@ -19,12 +19,12 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1b08652d94022aaad7219483e1d638e2e7686411
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bad28d9b10d09cbf08e3568d9f994c7d5b84dfda
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131200"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205379"
 ---
 # <a name="full-database-backups-sql-server"></a>Vollständige Datenbanksicherungen (SQL Server)
   Mit einer vollständigen Datenbanksicherung wird die gesamte Datenbank gesichert. Dazu gehört ein Teil des Transaktionsprotokolls, damit nach der Wiederherstellung einer vollständigen Datenbanksicherung die vollständige Datenbank wiederhergestellt werden kann. Vollständige Datenbanksicherungen stellen die Datenbank bei Abschluss der Sicherung dar.  
@@ -50,7 +50,7 @@ ms.locfileid: "48131200"
   
  ![Zeigt den Datenverlust zwischen Datenbanksicherungen an](../../database-engine/media/bnr-rmsimple-1-fulldb-backups.gif "Shows work-loss exposure between database backups")  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>Beispiel ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>Beispiel ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  Im folgenden Beispiel wird veranschaulicht, wie eine vollständige Datenbanksicherung erstellt wird, indem WITH FORMAT zum Überschreiben aller vorhandenen Sicherungen und zum Erstellen eines neuen Mediensatzes verwendet wird.  
   
 ```  
@@ -68,7 +68,7 @@ GO
   
  Informationen zum Verwenden von Transaktionsprotokollsicherungen finden Sie unter [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>Beispiel ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>Beispiel ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  Im folgenden Beispiel wird veranschaulicht, wie eine vollständige Datenbanksicherung erstellt wird, indem WITH FORMAT zum Überschreiben aller vorhandenen Sicherungen und zum Erstellen eines neuen Mediensatzes verwendet wird. Anschließend wird das Transaktionsprotokoll im Beispiel gesichert. In einer realen Situation müssten Sie mehrere reguläre Protokollsicherungen ausführen. Für dieses Beispiel muss die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank auf die Verwendung des vollständigen Wiederherstellungsmodells festgelegt sein.  
   
 ```  

@@ -5,8 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helparticle_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a52ab877f72f8a050e5582756b957e5db30c0ecb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ebb3f1e81fbace678d281116643e1fcd97c3dc1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843419"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212504"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_helparticle [ @publication = ] 'publication'
  Gibt an, ob die Filterklausel zurückgegeben werden soll. *Returnfilter* ist **Bit**, hat den Standardwert **1**, die die Filterklausel zurückgegeben.  
   
  [ **@publisher**=] **"***Verleger***"**  
- Gibt einen nicht-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+ Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht beim Anfordern von Informationen zu einem Artikel Veröffentlichen von angegeben werden eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  

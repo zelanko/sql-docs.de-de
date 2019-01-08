@@ -11,12 +11,12 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1938012555328b389c2b1b3e6c10fc20514496db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bce7d17a2edb004f662d5229ea929d89c6d66d4f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166100"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350479"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot-Verbindungstyp (SSRS)
   Sie können Daten mithilfe der SQL Server Analysis Services-Datenverarbeitungserweiterung aus einer PowerPivot-Arbeitsmappe abrufen, die in einem SharePoint-PowerPivot-Katalog veröffentlicht wird.  
@@ -26,7 +26,7 @@ ms.locfileid: "48166100"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Die PowerPivot-Datenquelle muss in einem PowerPivot-Katalog auf einer SharePoint-Website veröffentlicht sein.  
   
- Zur Unterstützung von Verbindungen von Berichts-Generator mit einer PowerPivot-Arbeitsmappe muss SQL Server 2008 R2 ADOMD.NET auf der Arbeitsstation installiert sein. Diese Clientbibliothek wird mit PowerPivot for Excel installiert. Wenn Sie jedoch einen Computer verwenden, der nicht über diese Anwendung verfügt, müssen Sie ADOMD.NET von der Seite [SQL Server 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=192565)herunterladen und installieren.  
+ Zur Unterstützung von Verbindungen von Berichts-Generator mit einer PowerPivot-Arbeitsmappe muss SQL Server 2008 R2 ADOMD.NET auf der Arbeitsstation installiert sein. Diese Clientbibliothek wird mit PowerPivot for Excel installiert. Wenn Sie jedoch einen Computer verwenden, der nicht über diese Anwendung verfügt, müssen Sie ADOMD.NET von der Seite [SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=192565)herunterladen und installieren.  
   
 ## <a name="data-source-type"></a>Datenquellentyp  
  Verwenden Sie den Berichtsdatenquellentyp **Microsoft SQL Server Analysis Services**.  
@@ -53,7 +53,7 @@ ms.locfileid: "48166100"
   
  Die Daten in einer PowerPivot-Arbeitsmappe sind stark komprimiert; aus der PowerPivot-Arbeitsmappe für einen Bericht abgerufene Daten sind nicht komprimiert. Geben Sie im Abfrage-Designer Filter und Parameter an, um die Daten auf die für den Bericht erforderliche Menge zu begrenzen.  
   
- Im Gegensatz zu einer Verbindung mit einem Analysis Services-Cube hat ein PowerPivot-Modell keine Hierarchien. Um ähnliche Funktionalität wie die von verwandten Slicern in der Arbeitsmappe bereitzustellen, müssen Sie kaskadierende Parameter im Bericht erstellen. Weitere Informationen finden Sie unter [Hinzufügen von kaskadierenden Parametern zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
+ Im Gegensatz zu einer Verbindung mit einem Analysis Services-Cube hat ein PowerPivot-Modell keine Hierarchien. Um ähnliche Funktionalität wie die von verwandten Slicern in der Arbeitsmappe bereitzustellen, müssen Sie kaskadierende Parameter im Bericht erstellen. Weitere Informationen finden Sie unter [Hinzufügen von kaskadierenden Parametern zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)erstellen.  
   
  In einigen Fällen müssen Sie möglicherweise Ausdrücke an die zugrunde liegenden Datenwerte aus dem PowerPivot-Modell anpassen. Sie müssen möglicherweise Ausdrücke ändern, um Daten in den richtigen Datentyp zu konvertieren oder eine Aggregatfunktion hinzuzufügen oder zu entfernen. Verwenden Sie zum Konvertieren eines Datentyps aus einer Zeichenfolge in eine ganze Zahl beispielsweise `=CInt`. Überprüfen Sie vor der Veröffentlichung des Berichts stets, dass der Bericht die erwarteten Werte aus den Daten im PowerPivot-Modell anzeigt.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48166100"
 -   Der Bericht enthält nur PowerPivot-Daten aus einer PowerPivot-Datenquelle.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Analysis Services MDX Query Designer User Interface &#40;Berichts-Generator&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services &#40;Berichts-Generator&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

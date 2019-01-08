@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.tablesandcolumns
@@ -12,20 +12,20 @@ ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a89dbc440cd47dc7ed951181c49d20d52097faa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 056c200ec6b73cb7cf11ee4b3acf35bc331110b3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165300"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821994"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Tabellen und Spalten (Dialogfeld) (Visual Database Tools)
-  In diesem Dialogfeld können Sie einen Primärschlüssel in einer Tabelle einem Fremdschlüssel in einer anderen Tabelle zuordnen. Sie können dieses Dialogfeld aufrufen, indem Sie im Menü **Tabellen-Designer** auf **Beziehungen**klicken. Klicken Sie im Dialogfeld **Fremdschlüsselbeziehungen** auf **Tabellen- und Spaltenspezifikation** , und klicken Sie anschließend auf die Auslassungspunkte **(…)** , die rechts neben der Eigenschaft angezeigt werden.  
+  In diesem Dialogfeld können Sie einen Primärschlüssel in einer Tabelle einem Fremdschlüssel in einer anderen Tabelle zuordnen. Sie können dieses Dialogfeld aufrufen, indem Sie im Menü **Tabellen-Designer** auf **Beziehungen**klicken. Klicken Sie im Dialogfeld **Fremdschlüsselbeziehungen** auf **Tabellen- und Spaltenspezifikation**, und klicken Sie anschließend auf die Auslassungspunkte **(…)**, die rechts neben der Eigenschaft angezeigt werden.  
   
 > [!NOTE]  
 >  Wenn die Tabelle zur Replikation veröffentlicht ist, müssen Sie mit der Transact-SQL-Anweisung [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) oder mit SMO (SQL Server Management Objects) Schemaänderungen ausführen. Wenn die Schemaänderungen mit dem Tabellen-Designer oder dem Datenbankdiagramm-Designer ausgeführt werden, wird versucht, die Tabelle zu entfernen und erneut zu erstellen. Da veröffentlichte Objekte nicht gelöscht werden können, schlägt die Schemaänderung fehl.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Beziehungsname**  
  Zeigt den Namen der Beziehung an.  
   

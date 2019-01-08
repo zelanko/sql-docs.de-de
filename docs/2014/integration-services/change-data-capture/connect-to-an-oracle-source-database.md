@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - oraDb
@@ -13,12 +12,12 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 565f88565a797c2f902b2df4f42deea631b34bb4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f22b5d71aa2d6d4ac63fe597e9da6b9dfb0a15c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114220"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202189"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Herstellen einer Verbindung zu einer Oracle-Quelldatenbank
   Verwenden Sie die Seite der Oracle-Quelle zum Eingeben der Informationen, die zum Herstellen einer Verbindung mit der Oracle-Quelldatenbank erforderlich sind. Die CDC-Instanz liest die Wiederholungsprotokolle (Redo Logs) der Oracle-Datenbank, mit der Sie verbunden sind.  
@@ -35,13 +34,13 @@ ms.locfileid: "48114220"
  **Oracle Log Mining Authentication**  
  Um die Anmeldeinformationen für den Oracle-Datenbankbenutzer einzugeben, der für das Log Mining autorisiert ist, wählen Sie eine der folgenden Optionen aus:  
   
--   **Windows-Authentifizierung**: Wählen Sie diese Option, um die aktuellen Anmeldeinformationen für die Windows-Domäne zu verwenden. Sie können diese Option nur verwenden, wenn die Oracle-Datenbank für die Nutzung der Windows-Authentifizierung konfiguriert ist.  
+-   **Windows-Authentifizierung**: Wählen Sie diese Option, um die aktuellen Anmeldeinformationen für die Windows-Domäne verwenden. Sie können diese Option nur verwenden, wenn die Oracle-Datenbank für die Nutzung der Windows-Authentifizierung konfiguriert ist.  
   
--   **Oracle Authentication**: Wenn Sie diese Option aktivieren, müssen Sie **Benutzername** und **Kennwort** für den Benutzer der Oracle-Datenbank eingeben, mit der Sie eine Verbindung herstellen.  
+-   **Oracle Authentication**: Wenn Sie diese Option auswählen, geben Sie die **Benutzernamen** und **Kennwort** für den Benutzer in der Sie eine Verbindung mit Oracle-Datenbank.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Einem Benutzer müssen in der Oracle-Datenbank die folgenden Berechtigungen gewährt werden, um als Log Mining-Benutzer fungieren zu können.  
->   
+> 
 >  -   SELECT on \<beliebige-aufgezeichnete-tabelle>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE on DBMS LOGMNR  
@@ -55,7 +54,7 @@ ms.locfileid: "48114220"
 > -   SELECT on ALL OBJECTS  
 > -   SELECT on DBA OBJECTS  
 > -   SELECT on ALL TABLES  
->   
+> 
 >  Falls eine dieser Berechtigungen nicht für V$xxx gewährt werden kann, können Sie diese V_S$xxx gewähren.  
   
  **Verbindung testen**  
@@ -67,7 +66,7 @@ ms.locfileid: "48114220"
  Klicken Sie **Weiter** , wenn Sie alle Informationen auf dieser Seite eingegeben haben, um den Schritt [Select Oracle Tables and Columns](select-oracle-tables-and-columns.md)auszuführen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Erstellen von SQL Server Change Database-Instanz](how-to-create-the-sql-server-change-database-instance.md)   
+ [Erstellen der Instanz für die SQL Server-Änderungsdatenbank](how-to-create-the-sql-server-change-database-instance.md)   
  [Bearbeiten von Instanzeigenschaften](edit-instance-properties.md)  
   
   

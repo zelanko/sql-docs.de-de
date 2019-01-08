@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.saveas
@@ -14,12 +14,12 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4862c346e29eceb38712d0062c4f3f4865afabe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116792"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203406"
 ---
 # <a name="save-as"></a>Speichern unter
   Mithilfe dieses Dialogfelds können Sie eine Instanz des aktuellen Elements an einem angegebenen Speicherort in einem angegebenen Dateiformat speichern. Klicken Sie zum Anzeigen dieses Dialogfelds **speichern**  *\<Datei >* **als** auf die **Datei** Menü (, in denen  *\<Datei >* ist der Name des aktuellen Elements), oder drücken Sie ALT + F, A im Code-Editor.  
@@ -31,8 +31,8 @@ ms.locfileid: "48116792"
  **Dateiname**  
  Mithilfe dieser Option können Sie den aktuellen Dateinamen anzeigen, den Dateinamen ändern sowie die angezeigten Dateien und Ordner filtern. Zum Filtern der angezeigten Dateien und Ordner geben Sie einen vollständigen oder teilweisen Dateinamen als Filterkriterium ein. Sie können das Sternchen (`*`) als Platzhalter verwenden.  
   
-> [!TIP]  
->  Um Dateien an Speicherorten im Web oder Netzwerk anzuzeigen, geben Sie eine URL oder Netzwerkpfad in das Feld **Dateiname** ein. Beispielsweise werden mit http://mywebsite alle Dateien angezeigt, die unter der Webadresse „mywebsite“ verfügbar sind, während mit „\\\myserver\myshare“ alle Dateien angezeigt werden, die im Ordner „myshare“ des Servers „myserver“ gespeichert sind.  
+> [!TIP]
+>  Um Dateien an Speicherorten im Web oder Netzwerk anzuzeigen, geben Sie eine URL oder Netzwerkpfad in das Feld **Dateiname** ein. Beispielsweise werden mit <http://mywebsite> alle Dateien angezeigt, die unter der Webadresse „mywebsite“ verfügbar sind, während mit „\\\myserver\myshare“ alle Dateien angezeigt werden, die im Ordner „myshare“ des Servers „myserver“ gespeichert sind.  
   
  **Dateityp**  
  Mithilfe dieser Option wählen Sie einen neuen Dateityp für das ausgewählte Element aus. Die angezeigten Dateitypen beinhalten alle verfügbaren Dateitypen, in die das ausgewählte Element konvertiert werden kann.  

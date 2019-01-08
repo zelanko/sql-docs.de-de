@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], size
@@ -16,12 +15,12 @@ ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7cd528c27ed34c91a076f79e0bfe8b0d1719a4a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02a34ba1e0f441b665c239d60f6398afa4247102
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069416"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808992"
 ---
 # <a name="increase-the-size-of-a-database"></a>Erhöhen der Größe einer Datenbank
   Dieses Thema beschreibt, wie eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]vergrößert wird. Datenbanken können entweder durch Vergrößern von vorhandenen Daten- oder Protokolldateien oder durch Hinzufügen neuer Dateien erweitert werden.  
@@ -32,7 +31,7 @@ ms.locfileid: "48069416"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erhöhen Sie die Größe einer Datenbank mit:**  
   
@@ -40,7 +39,7 @@ ms.locfileid: "48069416"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48069416"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-increase-the-size-of-a-database"></a>So erhöhen Sie die Größe einer Datenbank  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48069416"
   
 4.  Ändern Sie den Wert in der Spalte **Anfangsgröße (MB)** der entsprechenden Datei, um die Größe einer vorhandenen Datei zu erhöhen. Sie müssen jedoch die Größe der Datenbank um mindestens 1 MB erhöhen.  
   
-5.  Um die Größe der Datenbank durch das Hinzufügen einer neuen Datei zu erhöhen, klicken Sie auf **Hinzufügen** und geben die Werte für die neue Datei ein. Weitere Informationen finden Sie unter [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md).  
+5.  Um die Größe der Datenbank durch das Hinzufügen einer neuen Datei zu erhöhen, klicken Sie auf **Hinzufügen** und geben die Werte für die neue Datei ein. Weitere Informationen finden Sie unter [Hinzufügen von Daten oder Protokolldateien mit einer Datenbank](add-data-or-log-files-to-a-database.md).  
   
 6.  Klicken Sie auf **OK**.  
   

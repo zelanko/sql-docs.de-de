@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Tabellenmodellpartitionen | Microsoft-Dokumentation
+title: Verarbeiten von tabellenmodellpartitionen Analysis Services | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dea6ad8d7ef5d183990734042177f8053bb5969b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f4b4cb7307c30d03b80ef800d6808f5ce85deaa5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640927"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072017"
 ---
 # <a name="process-tabular-model-partitions"></a>Verarbeiten von Tabellenmodellpartitionen 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "51640927"
   
 3.  In der **Partition(en)** Dialogfeld die **Modus** Listenfeld eine der folgenden Verarbeitungsmodi aus:  
   
-    |Mode|Description|  
+    |Modus|Description|  
     |----------|-----------------|  
     |**Standard verarbeiten**|Erkennt den Verarbeitungsstatus eines Partitionsobjekts und führt die Verarbeitung durch, durch die nicht oder teilweise verarbeitete Partitionsobjekte in den Status "Vollständig verarbeitet" versetzt werden. Daten für leere Tabellen und Partitionen werden geladen, Hierarchien, berechnete Spalten und Beziehungen werden erstellt oder neu erstellt.|  
     |**Vollständig verarbeiten**|Verarbeitet ein Partitionsobjekt und alle darin enthaltenen Objekte. Wenn die Verarbeitungsmethode "Vollständig verarbeiten" für ein bereits verarbeitetes Objekt ausgeführt wird, löscht [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] alle Daten im Objekt und verarbeitet anschließend das Objekt. Diese Art der Verarbeitung ist erforderlich, wenn eine Änderung an der Objektstruktur vorgenommen wurde.|  

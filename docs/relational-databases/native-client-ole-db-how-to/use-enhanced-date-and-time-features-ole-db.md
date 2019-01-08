@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21f2ea4a439d794b2998acab4220ce1304b0942f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: aba5db3b36fd6caf5026db22c812c5e24af7de38
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656989"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216019"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Verwenden von erweiterten Datums- und Uhrzeitfeatures (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "51656989"
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Beispiel  
- Das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine im Beispiel verwendete gespeicherte Prozedur.  
+ Die erste ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) Codebeispiel erstellt eine gespeicherte Prozedur, die im Beispiel verwendet wird.  
   
  Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
- Das dritte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die im Beispiel verwendete gespeicherte Prozedur.  
+ Das dritte ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht die gespeicherte Prozedur, die im Beispiel verwendet wird.  
   
 ```  
 CREATE PROCEDURE sp_datetimetypes  

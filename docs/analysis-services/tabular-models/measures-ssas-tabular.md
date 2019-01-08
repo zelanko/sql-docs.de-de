@@ -1,5 +1,5 @@
 ---
-title: Measures | Microsoft-Dokumentation
+title: Measures in tabellarischen Modellen von Analysis Services | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cbd53d9d49c937967e88cefa95750dca41631876
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 508558f4458496ab4d376ec8906544f6656a25a5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045328"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072197"
 ---
 # <a name="measures"></a>Measures
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,13 +50,13 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**Grand Total**|**$4,691,673,731.53**|  
   
 ##  <a name="bkmk_def_mg"></a> Defining measures by using the measure grid  
- Measures werden zur Entwurfszeit mithilfe des Measurerasters im Modell-Designer erstellt. Jede Tabelle verfügt über ein Measureraster. Standardmäßig wird das Measureraster unter jeder Tabelle im Modell-Designer angezeigt. Sie können auch festlegen, das Measureraster für eine bestimmte Tabelle nicht anzuzeigen. Klicken Sie auf das Menü **Tabelle** und dann auf **Measureraster anzeigen**, um die Anzeige des Measurerasters für eine Tabelle einzuschalten.  
+ Measures werden zur Entwurfszeit mithilfe des Measurerasters im Modell-Designer erstellt. Jede Tabelle verfügt über ein Measureraster. Standardmäßig wird das Measureraster unter jeder Tabelle im Modell-Designer angezeigt. Sie können auch festlegen, das Measureraster für eine bestimmte Tabelle nicht anzuzeigen. Um die Anzeige des measurerasters für eine Tabelle zu wechseln, klicken Sie auf die **Tabelle** , und klicken Sie dann auf **Measureraster anzeigen**.  
   
  Im Measureraster können Sie wie folgt Measures erstellen:  
   
 -   Klicken Sie auf eine leere Zelle im Measureraster, und geben Sie dann in der Bearbeitungsleiste eine DAX-Formel ein. Wenn Sie die Formelerstellung mit EINGABE abschließen, wird das Measure in der Zelle des Measurerasters angezeigt.  
   
--   Erstellen Sie ein Measure mithilfe einer Standardaggregationsfunktion, indem Sie auf eine Spalte, auf der Symbolleiste auf die Schaltfläche AutoSumme (∑) und dann auf eine Standardaggregationsfunktion klicken. Standardaggregationen: Summe, Mittelwert, Anzahl, DistinctCount, Max, Min. Measures, die mithilfe der Schaltfläche AutoSumme erstellt wurden, werden im Measureraster immer direkt unterhalb der Spalte angezeigt.  
+-   Erstellen Sie ein Measure mithilfe einer Standardaggregationsfunktion, indem Sie auf eine Spalte, auf der Symbolleiste auf die Schaltfläche AutoSumme (∑) und dann auf eine Standardaggregationsfunktion klicken. Standardaggregationen sind: Summe, Mittelwert, Anzahl, DistinctCount, Max, Min. Measures, die mithilfe der Schaltfläche AutoSumme erstellt wurden, werden im Measureraster immer direkt unterhalb der Spalte angezeigt.  
   
  Bei Verwendung von AutoSumme wird der Name des Measures standardmäßig durch den Namen der zugeordneten Spalte definiert, auf den ein Doppelpunkt und dann die Formel folgt. Der Name kann auf der Bearbeitungsleiste oder in der Einstellung der Eigenschaft **Measurename** im Eigenschaftenfenster geändert werden. Wenn Sie ein Measure mithilfe einer benutzerdefinierten Formel erstellen, können Sie einen Namen in der Bearbeitungsleiste eingeben, auf den ein Doppelpunkt und dann die Formel folgt. Alternativ können Sie einen Namen in der Einstellung der Eigenschaft **Measurename** im Eigenschaftenfenster eingeben.  
   

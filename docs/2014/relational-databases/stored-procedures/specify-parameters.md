@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87180b692a613289fa8bbd22f6d605b0aa25cf6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a173b15546db7e2ceda571e617191fe4f0e84a4e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096390"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211839"
 ---
 # <a name="specify-parameters"></a>Angeben von Parametern
   Aufrufende Programme sind in der Lage, durch die Angabe von Prozedurparametern Werte in den Textkörper der Prozedur zu übergeben. Jene Werte können während der Prozedurausführung zu einer Vielzahl von Zwecken verwendet werden. Prozedurparameter können auch Werte an das aufrufende Programm zurückgeben, wenn der Parameter als OUTPUT-Parameter markiert wird.  
@@ -62,10 +62,10 @@ GO
   
  Durch das explizite Benennen der Parameter und Zuweisen der entsprechenden Werte zu jedem Parameter in einem Prozeduraufruf ist es möglich, dass die Parameter in beliebiger Reihenfolge angegeben werden. Wenn z. B. die Prozedur **my_proc** drei Parameter mit den Namen **\@first**, **\@second** und **\@third** erwartet, können die Werte, die an die Prozedur übergeben werden, den Parameternamen wie folgt zugewiesen werden: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
-> [!NOTE]  
+> [!NOTE]
 >  Wenn ein Parameterwert im Format **/@parameter =***Wert* angegeben wird, dann müssen auch alle nachfolgenden Parameter auf diese Weise angegeben werden. Wenn die Parameterwerte nicht im Format **\@parameter =***value* übergeben werden, müssen die Werte in derselben Reihenfolge (von links nach rechts) angegeben werden, in der die Parameter in der CREATE PROCEDURE-Anweisung aufgeführt sind.  
-  
-> [!WARNING]  
+> 
+> [!WARNING]
 >  Jeder Parameter, der im Format**\@parameter =***value* übergeben und falsch geschrieben wird, bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler generiert und die Prozedurausführung beendet.  
   
 ## <a name="specifying-parameter-data-types"></a>Angeben von Parameterdatentypen  

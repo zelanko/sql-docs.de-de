@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren eines Standardfeldsatzes für Power View-Berichte | Microsoft Docs
+title: Konfigurieren eines standardfeldsatzes für Power View-Berichte in Analysis Services | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 32d8d9c4acbc1c5eae47e90709c4ffdedd269f11
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4b8549a384b8eb0e7625d354ccf4d5c4e8b5e664
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041854"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072057"
 ---
-# <a name="power-view---configure-default-field-set-for-reports"></a>Power View: Konfigurieren eines Standardfeldsatzes für Berichte
+# <a name="power-view---configure-default-field-set-for-reports"></a>Power View – Konfigurieren eines Standardfeldsatzes für Berichte
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Ein Standardfeldsatz ist eine vordefinierte Liste von Spalten und Measures, die einem [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Berichtszeichenbereich automatisch hinzugefügt werden, wenn Sie in der Berichtsfeldliste die Tabelle auswählen. Ersteller tabellarischer Modelle können ein Standardfeld generieren, das für die Berichtsautoren, die das Modell für ihre Berichte verwenden, auf die Eliminierung redundanter Schritte abzielt. Wenn Sie beispielsweise wissen, dass die meisten Berichtsautoren, die Kundenkontaktdaten verwenden, immer einen Kontaktnamen, eine primäre Telefonnummer, eine E-Mail-Adresse und einen Unternehmensnamen benötigen, können Sie diese Spalten im Voraus auswählen, sodass sie dem Berichtszeichenbereich immer hinzugefügt werden, sobald der Autor auf die Kundenkontakttabelle klickt.  
   

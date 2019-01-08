@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table deletions [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: ca6aa3e9-9885-44c3-bafc-aec441fd97ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60b92e01601a2c0103594405e9adca41969142fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f040c9907574bba718827999bb9c0fbb432a0bd0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165500"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814512"
 ---
 # <a name="delete-tables-database-engine"></a>Löschen von Tabellen (Datenbank-Engine)
   Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Tabelle aus der Datenbank in [!INCLUDE[tsql](../../includes/tsql-md.md)]löschen (DROP).  
@@ -35,7 +34,7 @@ ms.locfileid: "48165500"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So löschen Sie eine Tabelle mit:**  
   
@@ -43,7 +42,7 @@ ms.locfileid: "48165500"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48165500"
   
 -   Wird eine Tabelle gelöscht, werden alle Bindungen von Regeln und Standardwerten zur Tabelle entfernt, und alle der Tabelle zugeordneten Einschränkungen und Trigger werden automatisch gelöscht. Wenn Sie die Tabelle neu erstellen, müssen Sie auch die entsprechenden Regeln und Standardwerte neu binden, die Trigger neu erstellen und alle erforderlichen Einschränkungen hinzufügen.  
   
--   Wenn Sie eine Tabelle löschen, enthält eine `varbinary (max)` Spalte mit dem FILESTREAM-Attribut, alle im Dateisystem gespeicherten Daten werden nicht entfernt werden.  
+-   Wenn Sie eine Tabelle löschen, die eine `varbinary (max)`-Spalte mit dem FILESTREAM-Attribut enthält, werden die im Dateisystem gespeicherten Daten nicht entfernt.  
   
 -   DROP TABLE und CREATE TABLE dürfen nicht in der gleichen Tabelle im gleichen Batch ausgeführt werden. Andernfalls tritt möglicherweise ein unerwarteter Fehler auf.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48165500"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für das Schema, zu dem die Tabelle gehört, die CONTROL-Berechtigung für die Tabelle oder die Mitgliedschaft in der festen Datenbankrolle **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-delete-a-table-from-the-database"></a>So entfernen Sie eine Tabelle aus der Datenbank  
   
