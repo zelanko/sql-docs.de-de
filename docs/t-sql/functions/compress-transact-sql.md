@@ -16,19 +16,19 @@ ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f5bca48c2aa30bf1a3616076c61d06f69dc5dab2
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 8c2169a32c9d82cd32491b1dabe5a87436623c80
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168954"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991843"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 Diese Funktion komprimiert den Eingabeausdruck mit dem GZIP-Algorithmus. Die Funktion gibt ein Bytearray vom Typ **varbinary(max)** zurück.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -81,10 +81,10 @@ VALUES (N'Michael', N'Raheem', compress(@info));
 Diese Anweisung löscht zunächst ältere Spielerdaten aus der `player`-Tabelle. Die Datensätze werden dann in der `inactivePlayer`-Tabelle in einem komprimierten Format gespeichert, um Speicherplatz zu sparen.
   
 ```sql
-DELETE player  
-WHERE datemodified < @startOfYear  
-OUTPUT id, name, surname datemodifier, COMPRESS(info)   
-INTO dbo.inactivePlayers ;  
+DELETE FROM player  
+OUTPUT deleted.id, deleted.name, deleted.surname, deleted.datemodifier, COMPRESS(deleted.info)   
+INTO dbo.inactivePlayers
+WHERE datemodified < @startOfYear; 
 ```  
   
 ## <a name="see-also"></a>Siehe auch

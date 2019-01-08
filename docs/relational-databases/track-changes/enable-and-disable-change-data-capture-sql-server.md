@@ -1,6 +1,6 @@
 ---
 title: Aktivieren und Deaktivieren von Change Data Capture (SQL Server) | Microsoft-Dokumentation
-ms.date: 03/06/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01dd23b4c7143280c54137b0e1474eb59fdcd0d3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 61ca34394e2cab5cf16862f6ddae20573c4e17a0
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558785"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991833"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Aktivieren und Deaktivieren von Change Data Capture (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie Sie Change Data Capture für Datenbanken und Tabelle aktivieren und deaktivieren können.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>Aktivieren von Change Data Capture für eine Datenbank  
@@ -142,7 +142,7 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  Wenn Change Data Capture für eine Tabelle mit einem vorhandenen Primärschlüssel aktiviert ist und der *@index_name* -Parameter nicht zum Identifizieren eines alternativen eindeutigen Indexes verwendet wird, verwendet die Change Data Capture-Funktion den Primärschlüssel. Nachfolgende Änderungen am Primärschlüssel sind nicht zulässig, ohne zuerst Change Data Capture für die Tabelle zu deaktivieren. Dies gilt unabhängig davon, ob Unterstützung für Abfragen für Nettoänderungen angefordert wurde, als Change Data Capture konfiguriert wurde. Wenn zum Zeitpunkt der Aktivierung für Change Data Capture für eine Tabelle kein Primärschlüssel vorhanden ist, wird das nachträgliche Hinzufügen eines Primärschlüssels von Change Data Capture ignoriert. Da Change Data Capture keinen Primärschlüssel verwendet, der nach der Aktivierung der Tabelle erstellt wurde, können der Schlüssel und die Schlüsselspalten ohne Einschränkungen entfernt werden.  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>Deaktivieren von Change Data Capture für eine Tabelle  
@@ -165,7 +165,7 @@ EXEC sys.sp_cdc_disable_table
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Arbeiten mit Änderungsdaten &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

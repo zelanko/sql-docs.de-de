@@ -12,19 +12,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32d5372f66881b130de832b8457e0618fc4d7364
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3964fc0563ae31fa5966b0652389a4b0deb41b88
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666179"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979126"
 ---
 # <a name="circularstring"></a>CircularString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Ein **CircularString** ist eine Auflistung von 0 (null) oder mehr stetigen Kreisbogensegmenten. Ein Kreisbogensegment ist ein von drei Punkten in einer zweidimensionalen Ebene definierter gekrümmter Abschnitt; der erste Punkt darf nicht mit dem dritten Punkt identisch sein. Wenn alle drei Punkte eines Kreisbogensegments kollinear sind, wird das Bogensegment als Liniensegment behandelt.  
   
 > [!IMPORTANT]  
->  Um eine ausführliche Beschreibung und Beispiele der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführten neuen räumlichen Funktionen (z.B. zum **CircularString** -Untertyp) zu erhalten, laden Sie das Whitepaper [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(Neue räumliche Funktionen in SQL Server 2012) herunter.  
+> Um eine ausführliche Beschreibung und Beispiele der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführten neuen räumlichen Funktionen (z.B. zum **CircularString** -Untertyp) zu erhalten, laden Sie das Whitepaper [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(Neue räumliche Funktionen in SQL Server 2012) herunter.  
   
 ## <a name="circularstring-instances"></a>CircularString-Instanzen  
  In der unten stehenden Zeichnung sind gültige **CircularString** -Instanzen dargestellt:  
@@ -34,7 +34,7 @@ ms.locfileid: "51666179"
 ### <a name="accepted-instances"></a>Akzeptierte Instanzen  
  Eine **CircularString**-Instanz wird akzeptiert, wenn sie entweder leer ist oder eine ungerade Anzahl von Punkten n enthält, wobei n > 1 gilt. Die folgenden **CircularString** -Instanzen werden akzeptiert.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
@@ -42,7 +42,7 @@ DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
   
  `@g3` zeigt, dass eine **CircularString** -Instanz zwar akzeptiert werden kann, möglicherweise jedoch nicht gültig ist. Die folgende Deklaration einer CircularString-Instanz wird nicht akzeptiert. Diese Deklaration löst eine `System.FormatException`aus.  
   
-```  
+```sql  
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
 ```  
   
@@ -50,18 +50,14 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
  Eine gültige **CircularString** -Instanz muss leer sein oder über die folgenden Attribute verfügen:  
   
 -   Sie muss mindestens ein Kreisbogensegment enthalten (d. h., sie muss mindestens über drei Punkte verfügen).  
-  
 -   Der letzte Endpunkt für jedes Kreisbogensegment in der Sequenz (mit Ausnahme des letzten Segments) muss dem ersten Endpunkt für das jeweils nächste Segment in der Sequenz entsprechen.  
-  
 -   Sie muss eine ungerade Anzahl von Punkten aufweisen.  
-  
 -   Sie darf sich über ein Intervalls nicht selbst überlappen.  
-  
 -   **CircularString** -Instanzen können zwar Liniensegmente enthalten, diese Liniensegmente müssen jedoch durch drei kollineare Punkte definiert werden.  
   
- Im folgenden Beispiel werden gültige **CircularString** -Instanzen veranschaulicht.  
+Im folgenden Beispiel werden gültige **CircularString** -Instanzen veranschaulicht.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1, 0 1)';  
@@ -69,23 +65,21 @@ DECLARE @g4 geometry = 'CIRCULARSTRING(1 1, 2 2, 2 2)';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();  
 ```  
   
- Eine **CircularString** -Instanz muss mindestens zwei Kreisbogensegmente enthalten, damit ein vollständiger Kreis definiert wird. In einer **CircularString** -Instanz kann kein einzelnes Kreisbogensegment, z.B. (1 1, 3 1, 1 1), verwendet werden, um einen vollständigen Kreis zu definieren. Definieren Sie den Kreis mit (1 1, 2 2, 3 1, 2 0, 1 1).  
+Eine **CircularString** -Instanz muss mindestens zwei Kreisbogensegmente enthalten, damit ein vollständiger Kreis definiert wird. In einer **CircularString** -Instanz kann kein einzelnes Kreisbogensegment, z.B. (1 1, 3 1, 1 1), verwendet werden, um einen vollständigen Kreis zu definieren. Definieren Sie den Kreis mit (1 1, 2 2, 3 1, 2 0, 1 1).  
   
- Im folgenden Beispiel werden CircularString-Instanzen veranschaulicht, die nicht gültig sind.  
+Im folgenden Beispiel werden CircularString-Instanzen veranschaulicht, die nicht gültig sind.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CIRCULARSTRING(1 1, 2 0, 1 1)';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(0 0, 0 0, 0 0)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
 ### <a name="instances-with-collinear-points"></a>Instanzen mit kollinearen Punkten  
- In den folgenden Fällen wird ein Kreisbogensegment als Liniensegment behandelt:  
+In den folgenden Fällen wird ein Kreisbogensegment als Liniensegment behandelt:  
   
 -   Wenn alle drei Punkte kollinear (z. B. 1 3, 4 4, 7 5) sind.  
-  
 -   Wenn der erste und der mittlere Punkt identisch sind und sich beide vom dritten Punkt unterscheiden (z. B. 1 3, 1 3, 7 5).  
-  
 -   Wenn der mittlere und der letzte Punkt identisch sind und sich beide vom ersten Punkt unterscheiden (z. B. 1 3, 4 4, 4 4).  
   
 ## <a name="examples"></a>Beispiele  
@@ -116,13 +110,13 @@ SET @g = geometry::Parse('CIRCULARSTRING(2 1, 1 2, 0 1, 1 0, 2 1)');
 SELECT 'Circumference = ' + CAST(@g.STLength() AS NVARCHAR(10));    
 ```  
   
- Hierdurch wird folgende Ausgabe generiert:  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
 Circumference = 6.28319  
 ```  
   
- Vergleichen Sie die Ausgabe, wenn **LineString** anstelle von **CircularString**verwendet wird:  
+Vergleichen Sie die Ausgabe, wenn **LineString** anstelle von **CircularString**verwendet wird:  
   
 ```sql  
 DECLARE @g geometry;  
@@ -130,13 +124,13 @@ SET @g = geometry::STGeomFromText('LINESTRING(2 1, 1 2, 0 1, 1 0, 2 1)', 0);
 SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));  
 ```  
   
- Hierdurch wird folgende Ausgabe generiert:  
-  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```  
 Perimeter = 5.65685  
 ```  
   
- Beachten Sie, dass der Wert für das **CircularString** -Beispiel annähernd 2∏ beträgt (der tatsächliche Umfang des Kreises).  
+Beachten Sie, dass der Wert für das **CircularString** -Beispiel annähernd 2∏ beträgt (der tatsächliche Umfang des Kreises).  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. Deklarieren und Instanziieren einer Geometry-Instanz mit einem CircularString in derselben Anweisung  
  In diesem Codeausschnitt wird veranschaulicht, wie eine **geometry** -Instanz mit einem **CircularString** in derselben Anweisung deklariert und instanziiert wird:  
@@ -160,7 +154,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über räumliche Datentypen](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   
  [MakeValid &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/makevalid-geography-data-type.md)   

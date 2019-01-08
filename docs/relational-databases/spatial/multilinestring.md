@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5190e1b6fdcd83719b84142bee49dff55c824c55
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 04fdc9eb5b22a9c3f88ab635c456e3fa81cf88e4
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018235"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979530"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,29 +47,29 @@ ms.locfileid: "51018235"
 ### <a name="accepted-instances"></a>Akzeptierte Instanzen  
  Damit eine **MultiLineString** -Instanz akzeptiert wird, muss sie entweder leer sein, oder sie darf nur aus **LineString** bestehen, die akzeptiert werden. Weitere Informationen über akzeptierte **LineString** -Instanzen finden Sie unter [LineString](../../relational-databases/spatial/linestring.md). In den folgenden Beispielen werden akzeptierte **MultiLineString** -Instanzen veranschaulicht.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
 DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
 DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
 DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
 ```  
   
- Im folgenden Beispiel wird eine `System.FormatException` ausgelöst, da die zweite **LineString** -Instanz nicht gültig ist.  
+Im folgenden Beispiel wird eine `System.FormatException` ausgelöst, da die zweite **LineString** -Instanz nicht gültig ist.  
   
-```  
+```sql  
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
 ```  
   
 ### <a name="valid-instances"></a>Gültige Instanzen  
- Damit eine **MultiLineString** -Instanz gültig ist, muss sie die folgenden Kriterien erfüllen:  
+Damit eine **MultiLineString** -Instanz gültig ist, muss sie die folgenden Kriterien erfüllen:  
   
 1.  Alle Instanzen, die die **MultiLineString** -Instanz beinhalten, müssen gültige **LineString** -Instanzen sein.  
   
 2.  Zwei **LineString** -Instanzen, die die **MultiLineString** -Instanz beinhalten, dürfen sich nicht  im Verlauf eines Intervalls überlappen. Die **LineString** -Instanzen können sich nur mit einer endlichen Anzahl von Punkten überschneiden oder sich selbst oder andere **LineString** -Instanzen berühren.  
   
- Im folgenden Beispiel werden drei gültige **MultiLineString** -Instanzen und eine nicht gültige **MultiLineString** -Instanz gezeigt.  
+Im folgenden Beispiel werden drei gültige **MultiLineString** -Instanzen und eine nicht gültige **MultiLineString** -Instanz gezeigt.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
 DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
 DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
@@ -77,25 +77,25 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` ist nicht gültig, da die zweite **LineString** -Instanz die erste **LineString** -Instanz in einem Intervall überlappt. Sie berühren sich mit einer unendlichen Anzahl von Punkten.  
+`@g4` ist nicht gültig, da die zweite **LineString** -Instanz die erste **LineString** -Instanz in einem Intervall überlappt. Sie berühren sich mit einer unendlichen Anzahl von Punkten.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird eine einfache `geometry``MultiLineString` -Instanz erstellt, die zwei `LineString` -Elemente mit der SRID 0 enthält.  
+Im folgenden Beispiel wird eine einfache `geometry``MultiLineString` -Instanz erstellt, die zwei `LineString` -Elemente mit der SRID 0 enthält.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
 ```  
   
- Um diese Instanz mit einem anderen SRID zu instanziieren, verwenden Sie `STGeomFromText()` oder `STMLineStringFromText()`. Sie können auch `Parse()` verwenden und den SRID dann ändern, wie im folgenden Beispiel gezeigt.  
+Um diese Instanz mit einem anderen SRID zu instanziieren, verwenden Sie `STGeomFromText()` oder `STMLineStringFromText()`. Sie können auch `Parse()` verwenden und den SRID dann ändern, wie im folgenden Beispiel gezeigt.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
 SET @g.STSrid = 13;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [STLength &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STIsClosed &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
  [LineString](../../relational-databases/spatial/linestring.md)   

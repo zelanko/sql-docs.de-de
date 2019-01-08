@@ -18,19 +18,19 @@ ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 144bc0915836fadf0965a305d8d10014106a85b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf66db2279aa6400f96564d0b364fb998009e1c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598449"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979276"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Erstellt ein Serverüberwachungsspezifikations-Objekt mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Audit-Features. Weitere Informationen finden Sie unter [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Erstellt ein Serverüberwachungsspezifikations-Objekt mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Audit-Features. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,18 +68,18 @@ FOR SERVER AUDIT audit_name
  Sobald eine Serverüberwachungsspezifikation erstellt wurde, kann sie von Prinzipalen mit den folgenden Berechtigungen eingesehen werden: CONTROL SERVER oder ALTER ANY SERVER AUDIT. Außerdem kann sie von Prinzipalen eingesehen werden, die über das sysadmin-Konto oder expliziten Zugriff auf die Überwachung verfügen.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird eine Serverüberwachungsspezifikation namens `HIPPA_Audit_Specification` erstellt, die fehlgeschlagene Anmeldungen für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Überwachung namens `HIPPA_Audit` überwacht.  
+ Im folgenden Beispiel wird eine Serverüberwachungsspezifikation namens `HIPAA_Audit_Specification` erstellt, die fehlgeschlagene Anmeldungen für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung namens `HIPAA_Audit`überwacht.  
   
 ```  
-CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     ADD (FAILED_LOGIN_GROUP);  
 GO  
 ```  
   
  Ein vollständiges Beispiel für das Erstellen einer Überwachung finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3421dd1189edf648f1e512851223f5baceaef8ff
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: ad41d2f0c0274aeaefdfcbe0b33fca6de1e0454a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018875"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978926"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Abfragen von nächsten Nachbarn aus räumlichen Daten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,16 +77,15 @@ SELECT TOP ( number )
  Es wird empfohlen, dass für Indizes in Nächster Nachbar-Abfragen die neuen Mosaiken für räumliche Indizes verwendet werden. Weitere Informationen zu Mosaiken für räumliche Indizes finden Sie unter [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)festgelegt sein.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird eine Nächster Nachbar-Abfrage veranschaulicht, die einen räumlichen Index verwenden kann. Im Beispiel wird die Tabelle `Person.Address` in der `AdventureWorks2012` -Datenbank verwendet.  
+ Im folgenden Codebeispiel wird eine Nächster Nachbar-Abfrage veranschaulicht, die einen räumlichen Index verwenden kann. Im Beispiel wird die Tabelle `Person.Address` in der `AdventureWorks2016` -Datenbank verwendet.  
   
 ```sql  
-USE AdventureWorks2012  
+USE AdventureWorks2016  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
 SELECT TOP(7) SpatialLocation.ToString(), City FROM Person.Address  
 WHERE SpatialLocation.STDistance(@g) IS NOT NULL  
 ORDER BY SpatialLocation.STDistance(@g);  
-  
 ```  
   
  Erstellen Sie einen räumlichen Index in der SpatialLocation-Spalte, um zu veranschaulichen, wie eine Nächster Nachbar-Abfrage einen räumlichen Index verwendet. Weitere Informationen zum Erstellen von räumlichen Indizes finden Sie unter [Create, Modify, and Drop Spatial Indexes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md).  
@@ -95,17 +94,16 @@ ORDER BY SpatialLocation.STDistance(@g);
  Im folgenden Codebeispiel wird eine Nächster Nachbar-Abfrage veranschaulicht, die keine räumlichen Indizes verwenden kann.  
   
 ```sql  
-USE AdventureWorks2012  
+USE AdventureWorks2016  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
 SELECT TOP(7) SpatialLocation.ToString(), City FROM Person.Address  
 ORDER BY SpatialLocation.STDistance(@g);  
-  
 ```  
   
  In der Abfrage fehlt eine **WHERE** -Klausel, die `STDistance()` in einem im Syntaxabschnitt angegebenen Format verwendet, sodass die Abfrage keine räumlichen Indizes verwenden kann.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
