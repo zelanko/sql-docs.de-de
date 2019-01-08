@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f09dd10c77c7e4d87e769748d9053f18fc6d0fe9
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: ee6b34ed594948bd796f589c7ded4b4259062a3d
+ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51811993"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52860083"
 ---
 # <a name="set-default-options-for-report-builder"></a>Set default options for Report Builder
   Im Berichts-Generator können Sie zahlreiche nützliche Standardeinstellungen zum Vereinfachen und Beschleunigen der Berichtserstellung festlegen.  Wenn Sie beispielsweise den Standardberichtsserver festlegen oder ändern, speichert der Berichts-Generator Ihre Berichte automatisch auf dem gleichen Berichtsserver, sofern nicht anders angegeben.  
@@ -24,7 +24,7 @@ ms.locfileid: "51811993"
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Standardmäßig diesen Berichtsserver oder diese SharePoint-Website verwenden**  
- Möglicherweise hat der Administrator diese Option konfiguriert. Der Wert kann eine wohlgeformte URL sein, die mit „https://“ beginnt. Diese Einstellung bestimmt, welche Datenquellenverbindungen standardmäßig im Tabellen-/Matrixassistenten und Diagrammassistenten angezeigt werden. Außerdem werden die Berichte auf diesem Server verarbeitet. Sie können Ressourcen von diesem Server referenzieren.  
+ Möglicherweise hat der Administrator diese Option konfiguriert. Der Wert kann eine wohlgeformte URL sein, die mit http:// oder https:// beginnt. Diese Einstellung bestimmt, welche Datenquellenverbindungen standardmäßig im Tabellen-/Matrixassistenten und Diagrammassistenten angezeigt werden. Außerdem werden die Berichte auf diesem Server verarbeitet. Sie können Ressourcen von diesem Server referenzieren.  
   
  Wenn Sie einen anderen Berichtsserver auswählen, müssen Sie Berichts-Generator möglicherweise neu starten, damit diese Änderung wirksam wird.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "51811993"
  **Löschen aller letzten Elementlisten**  
  Löscht die aktuellen Listen der zuletzt verwendeten Sites, Server, freigegebenen Datasets, freigegebenen Datenquellenverbindungen und Dokumente.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Start Report Builder (Starten des Berichts-Generators.)](../../reporting-services/report-builder/start-report-builder.md)  
   
   
