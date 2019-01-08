@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
@@ -21,12 +20,12 @@ ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d8b4b63ffb3ee47ed72e0dfe3190fe4231eca5d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 138e5743e18ba6e39aa55aaec6931413dd21175b
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184670"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640171"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>Zuordnen von TCP/IP-Ports zu NUMA-Knoten (SQL Server)
   In diesem Thema wird beschrieben, wie TCP/IP-Ports mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager nicht einheitlichen Speicherzugriffsknoten (Non-Uniform Memory Access, NUMA) zugeordnet werden. Beim Starten schreibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Knotendaten in das Fehlerprotokoll.  
@@ -53,7 +52,7 @@ ms.locfileid: "48184670"
   
 2.  Doppelklicken Sie im Detailbereich auf **TCP/IP**.  
   
-3.  Fügen Sie auf der Registerkarte **IP-Adressen** in dem der zu konfigurierenden IP-Adresse entsprechenden Abschnitt im Feld **TCP-Port** nach der Portnummer die NUMA-Knoten-ID in Klammern hinzu. Z. B. für TCP-Port 1500 und die Knoten 0, 2 und 5, verwenden Sie `1500[37]`, oder `1500[0x25]`.  
+3.  Fügen Sie auf der Registerkarte **IP-Adressen** in dem der zu konfigurierenden IP-Adresse entsprechenden Abschnitt im Feld **TCP-Port** nach der Portnummer die NUMA-Knoten-ID in Klammern hinzu. Verwenden Sie z. B. für den TCP-Port 1500 und die Knoten 0, 2 und 5 den Eintrag `1500[37]` oder `1500[0x25]`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von SQLServer zur Verwendung von Soft-NUMA &#40;SQLServer&#41;](soft-numa-sql-server.md)  

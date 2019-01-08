@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -22,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ffc277e43bf48975da92e5463b4e157e266b55b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 465e43422616d5d0202bf31959fab5f56c4f35d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138190"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806252"
 ---
 # <a name="enhance-general-replication-performance"></a>Verbessern der allgemeinen Replikationsleistung
   Wenn Sie die Hinweise in diesem Thema beachten, können Sie die allgemeine Leistung aller Replikationstypen in der Anwendung und im Netzwerk verbessern.  
@@ -81,7 +80,7 @@ ms.locfileid: "48138190"
   
 -   Schränken Sie die Verwendung des LOB-Datentyps (Large OBjects) ein.  
   
-     LOBs beanspruchen mehr Speicherplatz und Verarbeitungszeit als andere Spaltendatentypen. Verwenden Sie diese Spalten nur dann in Artikeln, wenn sie für die Anwendung erforderlich sind. Die Datentypen `text`, `ntext`, und `image` sind veraltet. Wenn Sie LOBs verwenden, es wird empfohlen, dass Sie der mithilfe `varchar(max)`, `nvarchar(max)`, `varbinary(max)`bzw.  
+     LOBs beanspruchen mehr Speicherplatz und Verarbeitungszeit als andere Spaltendatentypen. Verwenden Sie diese Spalten nur dann in Artikeln, wenn sie für die Anwendung erforderlich sind. Die Datentypen `text`, `ntext` und `image` sind als veraltet markiert. Wenn Sie LOBs verwenden, sollten Sie auf die Datentypen `varchar(max)`, `nvarchar(max)` und `varbinary(max)` zurückgreifen.  
   
      Verwenden Sie für die Transaktionsreplikation das Verteilungs-Agentprofil **Verteilungsprofil für das OLE DB-Streaming**. Weitere Informationen finden Sie unter [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
@@ -153,11 +152,11 @@ ms.locfileid: "48138190"
   
 -   Reduzieren Sie die Meldungsstufen von Replikations-Agents, außer während erster Test-, Überwachungs- oder Debugverfahren.  
   
-     Reduzieren Sie den **–HistoryVerboseLevel** -Parameter und den **–OutputVerboseLevel** -Parameter der Verteilungs-Agents oder Merge-Agents. Dadurch wird die Anzahl der neuen Zeilen reduziert, die zum Nachverfolgen des Verlaufs und der Ausgabe von Agents eingefügt werden. Stattdessen werden frühere Verlaufsmeldungen mit dem gleichen Status auf die neuen Verlaufsinformationen aktualisiert. Erhöhen Sie die Meldungsstufen für das Testen, Überwachen und Debuggen, sodass Sie so viele Informationen zur Agent-Aktivität erhalten wie möglich.  
+     Reduzieren Sie den Parameter **-HistoryVerboseLevel** und den Parameter **-OutputVerboseLevel** der Verteilungs-Agents oder Merge-Agents. Dadurch wird die Anzahl der neuen Zeilen reduziert, die zum Nachverfolgen des Verlaufs und der Ausgabe von Agents eingefügt werden. Stattdessen werden frühere Verlaufsmeldungen mit dem gleichen Status auf die neuen Verlaufsinformationen aktualisiert. Erhöhen Sie die Meldungsstufen für das Testen, Überwachen und Debuggen, sodass Sie so viele Informationen zur Agent-Aktivität erhalten wie möglich.  
   
--   Verwenden Sie den **–MaxBCPThreads** -Parameter des Momentaufnahme-Agents, Merge-Agents und Verteilungs-Agents (die Anzahl der angegebenen Threads sollte die Anzahl der Prozessoren des Computers nicht überschreiten). Mit diesem Parameter wird die Anzahl der Massenkopiervorgänge angegeben, die beim Erstellen und Anwenden der Momentaufnahme parallel ausgeführt werden können.  
+-   Verwenden Sie den Parameter **-MaxBCPThreads** des Momentaufnahmen-Agents, Merge-Agents und Verteilungs-Agents (die Anzahl der angegebenen Threads sollte die Anzahl der Prozessoren des Computers nicht überschreiten). Mit diesem Parameter wird die Anzahl der Massenkopiervorgänge angegeben, die beim Erstellen und Anwenden der Momentaufnahme parallel ausgeführt werden können.  
   
--   Verwenden Sie den **–UseInprocLoader** -Parameter des Verteilungs-Agents und des Merge-Agents (dieser Parameter kann nicht verwendet werden, wenn veröffentlichte Tabellen XML-Spalten enthalten). Durch diesen Parameter verwendet der Agent beim Anwenden der Momentaufnahme den BULK INSERT-Befehl.  
+-   Verwenden Sie den Parameter **-UseInprocLoader** des Verteilungs-Agents und des Merge-Agents (dieser Parameter kann nicht verwendet werden, wenn veröffentlichte Tabellen XML-Spalten enthalten). Durch diesen Parameter verwendet der Agent beim Anwenden der Momentaufnahme den BULK INSERT-Befehl.  
   
  Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
   

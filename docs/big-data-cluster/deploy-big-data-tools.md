@@ -1,67 +1,59 @@
 ---
-title: Herstellen einer Verbindung eine SQL Server big Data-cluster mit Azure Data Studio mit | Microsoft-Dokumentation
-description: Erfahren Sie, wie Sie mit einer SQL Server-2019 big Data-Cluster mit Azure Data Studio verbinden.
+title: Big Data-Tools installieren
+titleSuffix: SQL Server 2019 big data clusters
+description: Informationen Sie zum Installieren von Tools, die mit SQL Server-2019 big Data-Clustern (Vorschau) verwendet.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 18df937cfed15d7302a58267eb392a1933d73052
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 2327b7db3b21c972a98719a1126c46011bd9691a
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643788"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431304"
 ---
-# <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Verbinden Sie mit einer SQL Server-big Data-Cluster mit Azure Data Studio
+# <a name="install-sql-server-2019-big-data-tools"></a>Installieren von SQL Server-2019 big datatools
 
-Dieser Artikel beschreibt das Installieren von Azure Data Studio, die Erweiterung für SQL Server-2019 (Vorschau), und verbinden Sie dann mit einem big Data-Cluster. Die neue Erweiterung für SQL Server-2019 umfasst Unterstützung für die Vorschauversion [big Data-Cluster für SQL Server-2019](big-data-cluster-overview.md), eine integrierte [notebookfeatures](notebooks-guidance.md), und eine PolyBase [CreateExternalTable-Assistenten](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json).
+In diesem Artikel wird beschrieben, die Clienttools, die zum Erstellen, verwalten, installiert werden soll, und Verwenden von SQL Server-2019 big Data-Cluster (Vorschau).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="install-azure-data-studio"></a>Installieren von Azure Data Studio
+## <a name="big-data-cluster-tools"></a>Big Data-Cluster-tools
 
-Um Azure Data Studio zu installieren, finden Sie unter [herunterladen und installieren Sie die neueste Version von Azure Data Studio](../azure-data-studio/download.md).
+Die folgende Tabelle enthält allgemeine big Data-Cluster-Tools und deren Installation:
 
-## <a name="install-the-sql-server-2019-extension-preview"></a>Installieren der Erweiterung für SQL Server-2019 (Vorschau)
+| Tool | Erforderlich | Description | Installation |
+|---|---|---|---|
+| **mssqlctl** | Ja | Befehlszeilenprogramm zum Installieren und Verwalten von big Data-Cluster. | [Installieren](deploy-install-mssqlctl.md) |
+| **"kubectl"**<sup>1</sup> | Ja | Befehlszeilentool für die Überwachung der zugrunde liegenden Clusters Kuberentes ([Informationen](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
+| **Azure Data Studio** | Ja | Plattformübergreifende grafisches Tool zum Abfragen von SQL Server ([Informationen](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Installieren](../azure-data-studio/download.md) |
+| **SQL Server-2019-Erweiterung** | Ja | Erweiterung für Azure Data Studio, das die Verbindung mit dem big Data-Cluster unterstützt. Stellt auch einen Assistenten Datenvirtualisierung bereit. | [Installieren](../azure-data-studio/sql-server-2019-extension.md) |
+| **Azure-Befehlszeilenschnittstelle**<sup>2</sup> | Für AKS | Moderne Befehlszeilenschnittstelle zum Verwalten von Azure-Dienste. Mit AKS big Data-Cluster-Bereitstellungen verwendet ([Informationen](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Installieren](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **mssql-cli** | Optional | Moderne Befehlszeilenschnittstelle zum Abfragen von SQL Server ([Informationen](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
+| **sqlcmd** | Für einige Skripts | Legacy-Befehlszeilentool für Abfragen von SQL Server ([Informationen](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **curl** <sup>3</sup> | Für einige Skripts | Befehlszeilenprogramm zum Übertragen von Daten mit URLs. | [Windows](https://curl.haxx.se/windows/) \| Linux: Curl-Installationspaket |
 
-Um die Erweiterung zu installieren, finden Sie unter [Installieren der Erweiterung (Vorschau) für SQL Server-2019](../azure-data-studio/sql-server-2019-extension.md).
+<sup>1</sup> müssen Sie "kubectl", Version 1,10 oder höher verwenden. Darüber hinaus muss die Version des "kubectl" plus oder minus ein Nebenversion des Kubernetes-Clusters. Wenn Sie eine bestimmte Version auf "kubectl"-Client installieren möchten, finden Sie unter [Installieren von Kubectl über Curl binäre](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (unter Windows 10 verwenden cmd.exe und nicht die Windows PowerShell zum Ausführen von Curl).
 
-## <a name="connect-to-the-cluster"></a>Verbinden mit dem cluster
+<sup>2</sup> müssen verwenden Sie Azure CLI-Version 2.0.4 oder höher. Führen Sie `az --version` auf die Version zu ermitteln, bei Bedarf.
 
-Wenn Sie mit einem big Data-Cluster verbinden, haben Sie die Option für die Verbindung mit SQL Server [Masterinstanz](concept-master-instance.md) oder das HDFS/Spark-Gateway. Die folgenden Abschnitte zeigen, Herstellen einer Verbindung mit jeder.
+<sup>3</sup> , wenn Sie auf Windows 10 ausführen **curl** ist bereits in Ihrem Pfad, wenn von einer Cmd-Eingabeaufforderung ausgeführt wird. Laden Sie für andere Versionen von Windows, **curl** verwenden Sie den Link, und platzieren Sie sie in Ihrem Pfad befindet.
 
-## <a id="master"></a> Master-Instanz
+## <a name="which-tools-are-required"></a>Welche Tools sind erforderlich?
 
-1. Drücken Sie in Azure Data Studio **F1** > **neue Verbindung**.
+Die vorherige Tabelle enthält alle allgemeinen Tools, die mit big Data-Cluster verwendet werden. Welche Tools erforderlich sind, hängt von Ihrem Szenario ab. Aber im Allgemeinen sind die folgenden Tools zum Verwalten, Herstellen einer Verbindung mit und Abfragen der wichtigsten:
 
-1. In **Verbindungstyp**Option **Microsoft SQL Server**.
+- **mssqlctl**
+- **"kubectl"**
+- **Azure Data Studio**
+- **SQL Server-2019-Erweiterung**
 
-1. Geben Sie die IP-Adresse in der SQL Server-Masterinstanz **Servernamen** (z. B.:  **\<IP-Adresse\>, 31433**).
-
-1. Geben Sie einen SQL-Anmeldenamen **Benutzernamen** und **Kennwort**.
-
-1. Ändern der **Datenbanknamen** auf die **High_value_data** Datenbank.
-
-   ![Verbinden Sie mit der master-Instanz](./media/deploy-big-data-tools/connect-to-cluster.png)
-
-1. Drücken Sie **Connect**, und die **Serverdashboard** sollte angezeigt werden.
-
-## <a id="hdfs"></a> HDFS/Spark-gateway
-
-1. Drücken Sie in Azure Data Studio **F1** > **neue Verbindung**.
-
-1. In **Verbindungstyp**Option **SQL Server-big Data-Cluster**.
-
-1. Geben Sie die IP-Adresse der big Data-Cluster in **Servernamen**.
-
-1. Geben Sie `root` für die **Benutzer** , und geben Sie die **Kennwort** auf Ihre big Data-Cluster.
-
-   ![Verbinden Sie mit HDFS/Spark-gateway](./media/deploy-big-data-tools/connect-to-cluster-hdfs-spark.png)
-
-1. Drücken Sie **Connect**, und die **Serverdashboard** sollte angezeigt werden.
+Die übrigen Tools sind nur in bestimmten Szenarien erforderlich. **Azure-Befehlszeilenschnittstelle** kann zum Verwalten von Azure-Dienste im Zusammenhang mit AKS-Bereitstellungen verwendet werden. **MSSQL-Cli** ist ein Tool, optional, aber hilfreich, mit dem Sie SQL Server-Instanz master im Cluster herstellen und Abfragen von der Befehlszeile aus ausführen. Und **Sqlcmd** und **curl** sind erforderlich, wenn Sie Daten mit dem GitHub-Skript installieren möchten.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Führen Sie Notebooks in Azure Data Studio finden Sie unter [Verwendung von Notebooks in der Vorschau von SQL Server-2019](notebooks-guidance.md).
+Weitere Informationen über big Data-Cluster finden Sie unter [was SQL Server-2019 big Data-Cluster sind?](big-data-cluster-overview.md).

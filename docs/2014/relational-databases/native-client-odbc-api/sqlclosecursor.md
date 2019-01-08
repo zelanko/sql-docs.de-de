@@ -14,18 +14,18 @@ ms.assetid: e7134d65-5c1c-4ae2-b119-d9b4b9a42483
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26b00c4781624bf653ad9a8200a219951dc793c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da7d6541f7bf31920519cc7462bdfd24a5f6dc0d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097160"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360632"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
-  **SQLCloseCursor** ersetzt [SQLFreeStmt](sqlfreestmt.md) mit einer *Option* von SQL_CLOSE. Beim Empfang von **SQLCloseCursor**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verwirft ausstehende Resultsetzeilen. Beachten Sie, dass die Spalten- und Parameterbindungen der Anweisung (sofern vorhanden) von **SQLCloseCursor**nicht geändert werden.  
+  **SQLCloseCursor** ersetzt [SQLFreeStmt](sqlfreestmt.md) mit einer *Option* von SQL_CLOSE. Beim Empfang von **SQLCloseCursor**verwirft der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber ausstehende Resultsetzeilen. Beachten Sie, dass die Spalten- und Parameterbindungen der Anweisung (sofern vorhanden) von **SQLCloseCursor**nicht geändert werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLCloseCursor](http://go.microsoft.com/fwlink/?LinkId=59331)   
+ [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   
  [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
   
   

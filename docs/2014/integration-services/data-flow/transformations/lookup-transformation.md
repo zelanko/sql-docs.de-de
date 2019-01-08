@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
@@ -20,12 +19,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c4491baada6f3a378a1704608c4dd8427c526ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66c285e24c2a981464c93001c1df41f164e60b1e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229850"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353807"
 ---
 # <a name="lookup-transformation"></a>Transformation für Suche
   Die Transformation für die Suche führt Suchvorgänge aus, indem Daten in Eingabespalten mit Spalten in einem Verweisdataset verknüpft werden. Mithilfe der Transformation für Suche können Sie auf zusätzliche Informationen in einer zugehörigen Tabelle zugreifen, die auf Werten in gemeinsamen Spalten basiert.  
@@ -130,15 +129,15 @@ ms.locfileid: "48229850"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Video [How to: Implement a Lookup Transformation in Full Cache Mode](http://go.microsoft.com/fwlink/?LinkId=131031)(Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus) unter msdn.microsoft.com  
+-   Video [Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus](https://go.microsoft.com/fwlink/?LinkId=131031), auf "MSDN.Microsoft.com"  
   
--   Blog-Artikel [Best Practices for Using the Lookup Transformation Cache Modes](http://go.microsoft.com/fwlink/?LinkId=146623)(Bewährte Vorgehensweisen für die Verwendung des Cachemodus der Transformation für Suche) unter blogs.msdn.com  
+-   Blog-Artikel [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)(Bewährte Vorgehensweisen für die Verwendung des Cachemodus der Transformation für Suche) unter blogs.msdn.com  
   
--   Blogeintrag [Suchmuster: Keine Beachtung von Groß-/Kleinschreibung](http://go.microsoft.com/fwlink/?LinkId=157782)auf blogs.msdn.com.  
+-   Blogeintrag, [Suchmuster: Groß-/Kleinschreibung](https://go.microsoft.com/fwlink/?LinkId=157782), auf blogs.msdn.com  
   
--   Beispiel [Transformation für Suche](http://go.microsoft.com/fwlink/?LinkId=267528)auf msftisprodsamples.codeplex.com.  
+-   Beispiel [Transformation für Suche](https://go.microsoft.com/fwlink/?LinkId=267528)auf msftisprodsamples.codeplex.com.  
   
-     Informationen zum Installieren von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Produktbeispielen und Beispieldatenbanken finden Sie unter [SQL Server Integration Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=267527).  
+     Informationen zum Installieren von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Produktbeispielen und Beispieldatenbanken finden Sie unter [SQL Server Integration Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Transformation für Fuzzysuche](fuzzy-lookup-transformation.md)   

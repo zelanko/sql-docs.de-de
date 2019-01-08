@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,12 +17,12 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f2b36eef7c358fde58316bafc06697c992f3918b
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: a702321888ad49a9ca5e3bea90abdde6924c8dc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461027"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360102"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor
   Bevor Sie benutzerdefinierten Code in der Skriptkomponente schreiben, müssen Sie sich für eine Datenflusskomponente entscheiden (Quelle, Transformation oder Ziel) und anschließend die Metadaten und Eigenschaften der Komponente im **Transformations-Editor für Skripterstellung** konfigurieren.  
@@ -86,9 +84,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 > [!NOTE]  
 >  Wenn die **Transformations-Editor** die erste Ausgabe generiert, legt die `SynchronousInputID` -Eigenschaft der Ausgabe, die `ID` der komponenteneingabe. Bei der Erstellung weiterer Ausgaben legt der Editor die `SynchronousInputID`-Eigenschaften dieser Ausgaben auf null fest.  
 >   
->  Wenn Sie eine Komponente mit synchronen Ausgaben erstellen, muss die `SynchronousInputID`-Eigenschaft für jede Ausgabe auf die `ID` der Komponenteneingabe gesetzt sein. Daher muss für jede Ausgabe, die der Editor nach der ersten generiert, der `SynchronousInputID`-Wert von null in die `ID` der Komponenteneingabe geändert werden.  
+>  Wenn Sie eine Komponente mit synchronen Ausgaben erstellen, kann jede Ausgabe benötigen die `SynchronousInputID` -Eigenschaftensatz auf die `ID` der komponenteneingabe. Daher muss für jede Ausgabe, die der Editor nach der ersten generiert, der `SynchronousInputID`-Wert von null in die `ID` der Komponenteneingabe geändert werden.  
 >   
->  Wenn Sie eine Komponente mit asynchronen Ausgaben erstellen, muss die `SynchronousInputID`-Eigenschaft für jede Ausgabe auf null gesetzt sein. Daher muss für die erste Ausgabe der `SynchronousInputID`-Wert von der `ID` der Komponenteneingabe in null geändert werden.  
+>  Wenn Sie eine Komponente mit asynchronen Ausgaben erstellen, muss die `SynchronousInputID`-Eigenschaft für jede Ausgabe auf null gesetzt sein. Aus diesem Grund müssen die erste Ausgabe dessen `SynchronousInputID` Wert geändert wird, aus der `ID` der komponenteneingabe 0 (null).  
   
  Ein Beispiel für das Weiterleiten von Zeilen an eine von zwei synchronen Ausgaben in der Skriptkomponente finden Sie unter [Creating a Synchronous Transformation with the Script Component (Erstellen einer synchronen Transformation mit der Skriptkomponente)](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md).  
   
@@ -128,7 +126,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  Weitere Informationen finden Sie unter [Connecting to Data Sources in the Script Component (Herstellen einer Verbindung mit Datenquellen in der Skriptkomponente)](connecting-to-data-sources-in-the-script-component.md).  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Codieren und Debuggen der Skriptkomponente](coding-and-debugging-the-script-component.md)  

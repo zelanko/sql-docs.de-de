@@ -14,12 +14,12 @@ ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 048db455419d2b74658b758f3a3c525b02bf37f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5870cb445d7afd098aba32ffd9be7a88c048bae5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811408"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591514"
 ---
 # <a name="system-functions"></a>Systemfunktionen
 Die folgende Tabelle enthält die Systemfunktionen, die in der ODBC-Skalarfunktion Menge enthalten sind. Durch Aufrufen von **SQLGetInfo** mit einer *Informationstyp* des SQL_SYSTEM_FUNCTIONS, kann eine Anwendung bestimmen, welche Systemfunktionen durch einen Treiber unterstützt werden.  
@@ -33,5 +33,5 @@ Die folgende Tabelle enthält die Systemfunktionen, die in der ODBC-Skalarfunkti
 |Funktion|Description|  
 |--------------|-----------------|  
 |**DATENBANK ()** (ODBC 1.0)|Gibt den Namen der Datenbank entspricht dem Verbindungshandle. (Der Name der Datenbank kann auch durch Aufrufen von **SQLGetConnectOption** mit der SQL_CURRENT_QUALIFIER-Verbindungsoption.)|  
-|**IFNULL (** *"exp"*,*Wert ***)** (ODBC-1.0)|Wenn *"exp"* null ist, *Wert* zurückgegeben wird. Wenn *"exp"* ist nicht null, *"exp"* zurückgegeben wird. Die möglichen Datentyp oder die Arten von *Wert* muss mit dem Datentyp kompatibel sein *"exp"*.|  
-|**BENUTZER ()** (ODBC 1.0)|Gibt den Benutzernamen in das DBMS zurück. (Der Benutzername ist auch verfügbar, mit **SQLGetInfo** durch Angabe der Informationstyp: SQL_USER_NAME.) Dies kann sich der Anmeldename sein.|
+|**IFNULL (** _"exp"_,_Wert_**)** (ODBC-1.0)|Wenn *"exp"* null ist, *Wert* zurückgegeben wird. Wenn *"exp"* ist nicht null, *"exp"* zurückgegeben wird. Die möglichen Datentyp oder die Arten von *Wert* muss mit dem Datentyp kompatibel sein *"exp"*.|  
+|**BENUTZER ()** (ODBC 1.0)|Gibt den Benutzernamen in das DBMS zurück. (Der Benutzername ist auch verfügbar, mit **SQLGetInfo** durch den Informationstyp angeben: SQL_USER_NAME.) Dies kann sich der Anmeldename sein.|

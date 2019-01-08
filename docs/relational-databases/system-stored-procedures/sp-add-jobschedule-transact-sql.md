@@ -18,12 +18,12 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e52684ee8c73c976e42c29ca54079ac716527a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4411cb68c86bbea92429a983449e77985d3d236d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834488"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591584"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@job_id=** ] *job_id*  
  Die ID des Auftrags, dem der Zeitplan hinzugefügt wird. *Job_id* ist **Uniqueidentifier**, hat keinen Standardwert.  
   
- [  **@job_name=** ] **"***Job_name***"**  
+ [  **@job_name=** ] **"**_Job_name_**"**  
  Der Name des Auftrags, dem der Zeitplan hinzugefügt wird. *Job_name* ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
   
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
- [ **@name=** ] **'***name***'**  
+ [  **@name=** ] **"**_Namen_**"**  
  Name des Zeitplans. *Namen* ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
   
  [ **@enabled=** ] *enabled_flag*  
@@ -70,7 +70,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@freq_type=** ] *frequency_type*  
  Ein Wert, der angibt, wann der Auftrag ausgeführt werden soll. *Frequency_type* ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**4**|Täglich|  
@@ -83,7 +83,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@freq_interval=** ] *frequency_interval*  
  Der Tag, an dem der Auftrag ausgeführt wird. *Frequency_interval* ist **Int**, hat den Standardwert 0 (null) und hängt vom Wert der *Frequency_type* in der folgenden Tabelle aufgeführt:  
   
-|value|Wirkung|  
+|Wert|Wirkung|  
 |-----------|------------|  
 |**1** (einmal)|*Frequency_interval* wird nicht verwendet.|  
 |**4** (täglich)|Jede *Frequency_interval* Tage.|  
@@ -96,7 +96,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@freq_subday_type=** ] *frequency_subday_type*  
  Gibt die Einheiten für *Frequency_subday_interval*. *Frequency_subday_type* ist **Int**und hat keinen Standardwert und kann die folgenden Werte sind möglich:  
   
-|value|Beschreibung (Einheit)|  
+|Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**0x1**|Zum angegebenen Zeitpunkt|  
 |**0x4**|Minuten|  
@@ -110,7 +110,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *Frequency_relative_interval* ist **Int**und hat keinen Standardwert und kann die folgenden Werte sind möglich:  
   
-|value|Beschreibung (Einheit)|  
+|Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**1**|Erster|  
 |**2**|Zweimal|  
@@ -134,13 +134,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_start_time=** ] *active_start_time*  
  Auf einem beliebigen Tag zwischen *Active_start_date* und *Active_end_date* zum Starten der auftragsausführung. *Active_start_time* ist **Int**, hat keinen Standardwert. Die Zeit wird auf dem 24-Stunden-Format HHMMSS verwendet.  
   
- [**@active_end_time= *** Active_end_time*  
+ [  **@active_end_time=**_Active_end_time_  
  Auf einem beliebigen Tag zwischen *Active_start_date* und *Active_end_date* zum Ende der auftragsausführung. *Active_end_time* ist **Int**, hat keinen Standardwert. Die Zeit wird auf dem 24-Stunden-Format HHMMSS verwendet.  
   
- [ **@schedule_id=***schedule_id***OUTPUT**  
+ [  **@schedule_id=**_Schedule_id_**Ausgabe**  
  Die Zeitplan-ID, die dem Zeitplan zugewiesen wird, wenn er erfolgreich erstellt wird. *Schedule_id* ist eine Ausgabevariable vom Typ **Int**, hat keinen Standardwert.  
   
- [ **@schedule_uid**=] *Schedule_uid *** Ausgabe**  
+ [ **@schedule_uid**=] _Schedule_uid_**Ausgabe**  
  Ein eindeutiger Bezeichner für den Zeitplan. *Wert für schedule_uid an* ist eine Variable vom Typ **Uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

@@ -17,12 +17,12 @@ ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbcbf7f2e0a6423e9e2ea918d5bb561a9ec1c97c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e38ceb561c2b0d66cbf274e09d61fc327d8543f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076794"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372602"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Einschränkung für eindeutige Partikelzuordnung
   In XSD werden komplexe Inhaltsmodelle durch die UPA-Einschränkungsregel (Unique Particle Attribution, eindeutige Partikelzuordnung) eingeschränkt. Diese Regel verlangt, dass jedes Element in einem Instanzdokument eindeutig genau einem `<xsd:element>` - oder `<xsd:any>` -Partikel im übergeordneten Inhaltsmodell entspricht. Jedes Schema, das einen Typ mit einem potenziell mehrdeutigen Inhaltsmodell enthält, wird zurückgewiesen.  
@@ -80,13 +80,13 @@ ms.locfileid: "48076794"
 ## <a name="finding-more-information"></a>Weitere Informationsquellen  
  Das folgende Dokument wird vom W3C (World Wide Web Consortium) veröffentlicht; es enthält die technische Beschreibung der UPA-Einschränkung:  
   
- "XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation":  
+ "XML Schema Part 1: Strukturen 2. Ausgabe, vom W3C empfohlene Ausgabe":  
   
--   Section 3.8.6: Constraints on Model Group Schema Components  
+-   Section 3.8.6: Einschränkungen für Komponenten des Modellgruppenschemas  
   
--   Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative)  
+-   Appendix H: Analyse der Einschränkung für die eindeutige Partikelzuordnung (nicht-normativ)  
   
- Besuchen Sie [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?linkid=48881), um das Dokument anzuzeigen.  
+ Besuchen Sie [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881), um das Dokument anzuzeigen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Schemaauflistungen &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  

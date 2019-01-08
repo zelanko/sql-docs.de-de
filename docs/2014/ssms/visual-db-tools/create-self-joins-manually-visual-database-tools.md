@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - self-joins
@@ -14,12 +14,12 @@ ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78b17fbcdbc882041cf378a629452c57bc6c3158
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116030"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769072"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Manuelles Erstellen von Selbstjoins (Visual Database Tools)
   Sie können eine Tabelle mit sich selbst verknüpfen, auch wenn die Tabelle über keine reflexive Beziehung in der Datenbank verfügt. Mit einem Selbstjoin können Sie z. B. nach Paaren von Autoren suchen, die in derselben Stadt leben.  
@@ -116,7 +116,7 @@ Cheryl Carson       Abraham Bennet
   
 3.  Klicken Sie mit der rechten Maustaste auf die Joinlinie, und wählen Sie im Kontextmenü die Option **Eigenschaften** aus.  
   
-4.  Klicken Sie im Eigenschaftenfenster auf **Joinkondition und -typ** und anschließend auf die Auslassungszeichen **(…)** , die rechts neben der Eigenschaft angezeigt werden.  
+4.  Klicken Sie im Eigenschaftenfenster auf **Joinkondition und -typ** und anschließend auf die **Auslassungspunkte (...)**, die rechts neben der Eigenschaft angezeigt werden.  
   
 5.  Ändern Sie nach Bedarf im [Dialogfeld „Join“](join-dialog-box-visual-database-tools.md) den Vergleichsoperator zwischen den Primärschlüsseln. Sie können z. B. den Operator in "kleiner als" (<) ändern.  
   

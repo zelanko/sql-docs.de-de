@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 589d49a68a4234d52ed3a8ddcced08b2dfec37ad
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701728"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591139"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Senden von telemetriefeedback an Microsoft zu Analytics Platform System
 Analytics Platform System verfügt über eine optionale telemetriefunktion, die Admin Console-Daten an Microsoft sendet. 
@@ -26,14 +26,14 @@ Analytics Platform System verfügt über eine optionale telemetriefunktion, die 
 Um die maximale Datenschutz bereitzustellen, wird Sie ohne Aktivieren der Telemetrie APS geliefert. Lesen Sie vor dem Aktivieren des Features zuerst die [Datenschutzbestimmungen von Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=400902). Führen Sie zur Aktivierung der unten beschriebenen PowerShell-Skripts ein.  
   
 ## <a name="enable"></a>Aktivieren Sie die Telemetrie  
-**DNS-Weiterleitung:** Senden von Telemetriedaten an Microsoft Analytics Platform System für die Verbindung mit dem Internet über eine DNS-Weiterleitung benötigt. Um dieses Feature zu aktivieren, müssen Sie DNS-Weiterleitung auf allen Hosts und Workload-VMs aktivieren. Rufen Sie die `Enable-RemoteMonitoring` -Befehl mit der `SetupDnsForwarder` Option aus, um ordnungsgemäß zu DNS-Weiterleitung konfigurieren und aktivieren die Telemetrie. Rufen Sie die `Enable-RemoteMonitoring` ohne die `SetupDnsForwarder` option, wenn die DNS-Weiterleitung bereits konfiguriert ist, und Sie nur die Taktüberwachung aktivieren möchten.  
+**DNS-Weiterleitung:** Senden von Telemetriedaten an Microsoft erfordert Analytics Platform System für die Verbindung mit dem Internet über eine DNS-Weiterleitung. Um dieses Feature zu aktivieren, müssen Sie DNS-Weiterleitung auf allen Hosts und Workload-VMs aktivieren. Rufen Sie die `Enable-RemoteMonitoring` -Befehl mit der `SetupDnsForwarder` Option aus, um ordnungsgemäß zu DNS-Weiterleitung konfigurieren und aktivieren die Telemetrie. Rufen Sie die `Enable-RemoteMonitoring` ohne die `SetupDnsForwarder` option, wenn die DNS-Weiterleitung bereits konfiguriert ist, und Sie nur die Taktüberwachung aktivieren möchten.  
   
 > [!IMPORTANT]  
 > DNS-Weiterleitung aktivieren, wird die Internetverbindung für alle Hosts und Workload-VMs geöffnet.  
   
 #### <a name="to-enable-feedback"></a>Um Feedback zu aktivieren.  
   
-1.  Mit einem Domänenadministratorkonto für die Anwendung und Herstellen einer Verbindung mit dem Steuerungsknoten (***Appliance_domain *-CTL01**), und öffnen Sie eine Eingabeaufforderung unter Verwendung von Windows-Administratoranmeldeinformationen.  
+1.  Mit einem Domänenadministratorkonto für die Anwendung und Herstellen einer Verbindung mit dem Steuerungsknoten (<strong>*Appliance_domain*-CTL01</strong>), und öffnen Sie eine Eingabeaufforderung unter Verwendung von Windows-Administratoranmeldeinformationen.  
   
 2.  Navigieren Sie zum folgenden Verzeichnis: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
@@ -83,7 +83,7 @@ Deaktivieren der Telemetrie, werden alle Vorgänge beendet die Informationen üb
   
 #### <a name="to-disable-telemetry"></a>Zum Deaktivieren der Telemetrie  
   
-1.  Mit einem Domänenadministratorkonto für die Anwendung und Herstellen einer Verbindung mit dem Steuerungsknoten (***Appliance_domain *-CTL01**), und öffnen Sie ein PowerShell-Fenster mit Administratorrechten aus.  
+1.  Mit einem Domänenadministratorkonto für die Anwendung und Herstellen einer Verbindung mit dem Steuerungsknoten (<strong>*Appliance_domain*-CTL01</strong>), und öffnen Sie ein PowerShell-Fenster mit Administratorrechten aus.  
   
 2.  Navigieren Sie zum folgenden Verzeichnis: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   

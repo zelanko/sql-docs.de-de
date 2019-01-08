@@ -17,12 +17,12 @@ ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4583337cf9908f266fe1a85510d4beaae5a5af65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 641a08567e990134d49d32ae7ebecaf7d2b8de5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714372"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533083"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item-Eigenschaft (ADO MD Cellset)
 Ruft eine Zelle aus einem [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) unter Verwendung seiner Koordinaten.  
@@ -60,7 +60,7 @@ Cellset.Item ( Positions )Cellset ( Positions )
   
  Die Ordnungsposition ist eine Zahl, die Identifizierung einer Zelle innerhalb der **Cellset**. Grundsätzlich werden Zellen in nummeriert eine **Cellset** als ob die **Cellset** wurden eine *p*-, eindimensionales Array, in denen *p* ist die Anzahl der Achsen. Die Zellen werden in zeilengerichteter Reihenfolge adressiert. Es folgt die Formel zum Berechnen der Ordinalzahl einer Zelle:  
   
- Wenn Elementnamen übergeben, werden als Formatzeichenfolgen auf **Element**, müssen die Elemente in aufsteigender Reihenfolge der numerischen Achse Bezeichner aufgeführt werden. Innerhalb einer Achse, müssen die Elemente in aufsteigender Reihenfolge der Dimension Schachtelung aufgelistet sein, d. h. der äußersten Dimension-Element wird zuerst angegeben, gefolgt von einem Mitglied der internen Dimensionen. Jede Dimension durch eine separate Zeichenfolge dargestellt werden soll, und die Liste der Member-Zeichenfolgen sollten durch Kommas getrennt werden.  
+ Wenn Elementnamen übergeben, werden als Formatzeichenfolgen auf **Element**, müssen die Elemente in aufsteigender Reihenfolge der numerischen Achse Bezeichner aufgeführt werden. Innerhalb einer Achse die Elemente müssen in aufsteigender Reihenfolge aufgeführt werden, –, also der äußersten Dimension-Element wird zuerst angegeben, gefolgt von einem Mitglied der internen Dimensionen. Jede Dimension durch eine separate Zeichenfolge dargestellt werden soll, und die Liste der Member-Zeichenfolgen sollten durch Kommas getrennt werden.  
   
 > [!NOTE]
 >  Abrufen von Zellen nach Elementnamen möglicherweise nicht vom Datenanbieter unterstützt werden. Finden Sie in der Dokumentation für Ihren Anbieter, um weitere Informationen.  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ea15a8fc5eaf066b5a64cf73192f64dd0078434e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699444"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534082"
 ---
 # <a name="transparent-data-encryption"></a>Transparente Datenverschlüsselung
 Sie können verschiedene Vorsichtsmaßnahmen treffen, um eine Datenbank abzusichern, beispielsweise ein sicheres System entwerfen, vertrauliche Datenbestände verschlüsseln oder eine Firewall für die Datenbankserver einrichten. Allerdings für ein Szenario, in dem die physischen Medien (z. B. Festplatten oder Sicherungsbänder) gestohlen werden, kann eine böswillige Partei nur wiederherstellen oder Anfügen der Datenbank und die Daten durchsuchen. Eine Lösung dieses Problems besteht darin, die sensiblen Daten in der Datenbank zu verschlüsseln, und den für die Verschlüsselung der Daten verwendeten Schlüssel mit einem Zertifikat zu schützen. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  
@@ -56,7 +56,7 @@ Führen Sie folgende Schritte aus, um TDE zu verwenden: Die ersten drei Schritte
   
 Das folgende Beispiel veranschaulicht das Verschlüsseln der `AdventureWorksPDW2012` -Datenbank mithilfe eines Zertifikats namens `MyServerCert`, der in SQL Server PDW.  
   
-**Erstens: Aktivieren von TDE in SQLServer PDW.** Diese Aktion ist nur einmal erforderlich.  
+**Zuerst: Aktivieren von TDE in SQLServer PDW.** Diese Aktion ist nur einmal erforderlich.  
   
 ```sql  
 USE master;  
@@ -75,7 +75,7 @@ GO
 EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', '<password>';  
 ```  
   
-**Zweite: Erstellen Sie und Sichern Sie ein Zertifikat in der master-Datenbank.** Diese Aktion ist nur einmal erforderlich. Sie können ein separates Zertifikat für jede Datenbank (empfohlen), oder Sie können mehrere Datenbanken mit einem einzelnen Zertifikat schützen.  
+**Sekunde: Erstellen Sie und Sichern Sie ein Zertifikat in der master-Datenbank.** Diese Aktion ist nur einmal erforderlich. Sie können ein separates Zertifikat für jede Datenbank (empfohlen), oder Sie können mehrere Datenbanken mit einem einzelnen Zertifikat schützen.  
   
 ```sql  
 -- Create certificate in master  
@@ -93,7 +93,7 @@ BACKUP CERTIFICATE MyServerCert
 GO  
 ```  
   
-**Letzte: Erstellen des DEKS und verwenden Sie ALTER DATABASE zum Verschlüsseln einer Benutzerdatenbank.** Diese Aktion wird für jede Datenbank wiederholt, die TDE-Schutz ist.  
+**Die letzten: Erstellen Sie den DEK und verwenden Sie ALTER DATABASE, um eine Benutzerdatenbank zu verschlüsseln.** Diese Aktion wird für jede Datenbank wiederholt, die TDE-Schutz ist.  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -238,11 +238,11 @@ Wenn ein Datenbank-Hauptschlüssel auf dem Gerät vorhanden ist, auf dem Upgrade
   
 Beispiel: der Upgradeaktion. Ersetzen Sie dies `**********` mit Ihrem Kennwort Datenbank-Hauptschlüssel.  
   
-`setup.exe /Action=ProvisionUpgrade … DMKPassword='**********'  `  
+`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'  `  
   
 Beispiel für die Aktion, die einen virtuellen Computer zu ersetzen.  
   
-`setup.exe /Action=ReplaceVM … DMKPassword='**********'  `  
+`setup.exe /Action=ReplaceVM ... DMKPassword='**********'  `  
   
 Während des Upgrades fehl, wenn eine Benutzerdatenbank wird verschlüsselt, und das Kennwort des Datenbank-Hauptschlüssel nicht angegeben wird, die Upgradeaktion. Beim Ersetzen Sie dies Wenn das korrekte Kennwort nicht angegeben wird, wenn ein Datenbank-Hauptschlüssel vorhanden ist, wird der Vorgang den Datenbank-Hauptschlüssel Recovery Schritt überspringen. Alle anderen Schritte werden am Ende die Replace-VM-Vorgänge abgeschlossen werden, aber die Aktion Fehler am Ende melden wird, um anzugeben, dass zusätzliche Schritte erforderlich sind. In die Setupprotokolle (befindet sich in **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\< Zeitstempel > \Detail-Setup**), die folgende Warnung wird im unteren Bereich angezeigt.  
   

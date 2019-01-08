@@ -1,5 +1,6 @@
 ---
-title: Operationalisieren von R-Code in SQL Server Machine Learning Services | Microsoft-Dokumentation
+title: Operationalisieren von R-Code mit gespeicherten Prozeduren – SQL Server Machine Learning Services
+description: Einbetten von R-Sprache-Code in einer gespeicherten SQL Server-Prozedur, um es für jede Clientanwendung, die Zugriff auf SQL Server-Datenbank verfügbar zu machen.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 41da5cfe2e545bdcbc59f8d557afc599177c9d5e
-ms.sourcegitcommit: f083867f97bb740caa211ca37cb046641172b8c0
+ms.openlocfilehash: 3fc96e57fffb3e000a7e1a19887ed27651df9009
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38952463"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432183"
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>Operationalisieren von R-Code (Machine Learning-Dienste)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +43,7 @@ Konvertieren von R-Code in SQL ist natürlich einfacher, wenn einige Optimierung
 
 + [Konvertieren von R-Code für die Verwendung in R Services](converting-r-code-for-use-in-sql-server.md)
 
-+ [Generieren eine R gespeicherte Prozedur mithilfe von sqlrutils](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
++ [Arbeiten mit Hilfsfunktionen sqlrutils](ref-r-sqlrutils.md)
 
 ## <a name="integrate-r-and-python-with-applications"></a>Integrieren von R und Python in Anwendungen
 

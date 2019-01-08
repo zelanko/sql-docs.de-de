@@ -20,12 +20,12 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 834fdb8af069a43f8c0ba1c3960d4516f8400767
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a6f3951ac5b23a84424813b699b2512c15def9a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152860"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372822"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS)
   Sie können in einem Bericht eingebettetem, benutzerdefiniertem Code oder benutzerdefinierten Assemblys, die Sie erstellen und auf dem Computer speichern und auf dem Berichtsserver bereitstellen. Verwenden Sie eingebetteten Code für benutzerdefinierte Konstanten, komplexe Funktionen oder für Funktionen, die mehrfach in demselben Bericht verwendet werden. Verwenden Sie benutzerdefinierte Codeassemblys, um Code an einer einzelnen Stelle zu verwalten und ihn zur Verwendung in mehreren Berichten freizugeben. In benutzerdefiniertem Code können neue benutzerdefinierte Konstanten, Variablen, Funktionen oder Unterroutinen eingeschlossen werden. Sie können schreibgeschützte Verweise in integrierte Auflistungen, wie die Parameter-Auflistung, einbeziehen. An benutzerdefinierte Funktionen können jedoch keine Sätze von Berichtsdatenwerten übergeben werden, insbesondere werden keine benutzerdefinierten Aggregate unterstützt.  
@@ -51,16 +51,16 @@ ms.locfileid: "48152860"
 2.  Anzeigen eines Berichts in der Vorschau mit Verweisen auf benutzerdefinierte Assemblys im lokalen Modus.  
   
 ##  <a name="Common"></a> Einschließen von Verweisen auf häufig verwendete Funktionen  
- Verwenden Sie das Dialogfeld **Ausdruck** , um eine kategorisierte Liste allgemeiner, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierter Funktionen anzuzeigen. Wenn Sie **Allgemeine Funktionen** erweitern und auf eine Kategorie klicken, wird im Bereich **Element** die Liste der Funktionen angezeigt, die Sie in einen Ausdruck einschließen. Die allgemeinen Funktionen umfassen Klassen aus den Namespaces [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> und <xref:System.Convert> sowie Funktionen der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Laufzeitbibliothek. Die gängigsten Funktionen sind im Dialogfeld **Ausdruck** nach Kategorie sortiert aufgeführt: Text, Datum und Uhrzeit, Mathematische Funktionen, Qualitätskontrolle, Programmfluss, Aggregat, Finanzen, Konvertierung und Sonstiges. Weniger häufig verwendete Funktionen werden nicht in der Liste angezeigt, können jedoch auch in einem Ausdruck verwendet werden.  
+ Verwenden Sie das Dialogfeld **Ausdruck** , um eine kategorisierte Liste allgemeiner, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierter Funktionen anzuzeigen. Wenn Sie **Allgemeine Funktionen** erweitern und auf eine Kategorie klicken, wird im Bereich **Element** die Liste der Funktionen angezeigt, die Sie in einen Ausdruck einschließen. Die allgemeinen Funktionen umfassen Klassen aus den Namespaces [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> und <xref:System.Convert> sowie Funktionen der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Laufzeitbibliothek. Der Einfachheit halber können Sie anzeigen, die am häufigsten verwendeten Funktionen in der **Ausdruck** Dialogfeld, in dem sie nach Kategorie aufgelistet werden: Text, Datum und Uhrzeit, Mathematik, Überprüfung, Programmfluss, Aggregat, Finanzen, Konvertierung und Sonstiges. Weniger häufig verwendete Funktionen werden nicht in der Liste angezeigt, können jedoch auch in einem Ausdruck verwendet werden.  
   
  Um eine integrierte Funktion zu verwenden, doppelklicken Sie auf den Funktionsnamen im Bereich Element. Im Bereich Beschreibung wird eine Beschreibung der Funktion angezeigt, und ein Beispiel des Funktionsaufrufs finden Sie im Bereich Beispiel. Wenn Sie im Codebereich den Funktionsnamen und anschließend eine linke Klammer **(** eingeben, zeigt die IntelliSense-Hilfe jede gültige Syntax für diesen Funktionsaufruf an. Zur Berechnung des Höchstwerts für ein Feld mit dem Namen `Quantity` in einer Tabelle fügen Sie dem Codebereich beispielsweise den einfachen Ausdruck `=Max(` hinzu und zeigen mithilfe der Smarttags alle gültigen Syntaxmöglichkeiten für den Funktionsaufruf an. Um dieses Beispiel zu vervollständigen, geben Sie `=Max(Fields!Quantity.Value)`ein.  
   
- Weitere Informationen zu den einzelnen Funktionen finden Sie unter <xref:System.Math>, <xref:System.Convert>und [Member der Visual Basic-Laufzeitbibliothek](http://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
+ Weitere Informationen zu den einzelnen Funktionen finden Sie unter <xref:System.Math>, <xref:System.Convert>und [Member der Visual Basic-Laufzeitbibliothek](https://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
   
 ##  <a name="NotCommon"></a> Einschließen von Verweisen auf weniger häufig verwendete Funktionen  
  Um einen Verweis auf andere, weniger häufig verwendete CLR-Namespaces (Common Language Runtime) einzuschließen, verwenden Sie einen vollqualifizierten Verweis, z.B. <xref:System.Text.StringBuilder>. IntelliSense wird für die seltener verwendeten Funktionen im Codebereich des Dialogfelds **Ausdruck** nicht unterstützt.  
   
- Weitere Informationen finden Sie unter [Member der Visual Basic-Laufzeitbibliothek](http://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
+ Weitere Informationen finden Sie unter [Member der Visual Basic-Laufzeitbibliothek](https://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
   
 ##  <a name="External"></a> Einschließen von Verweisen auf externe Assemblys  
  Sie müssen die Assembly identifizieren, damit der Berichtsprozessor einen Verweis auf eine Klasse in eine externe Assembly einschließt. Geben Sie den vollqualifizierten Namen der Assembly, die dem Bericht hinzugefügt werden soll, auf der Seite **Verweise** des Dialogfelds **Berichtseigenschaften** an. Im Ausdruck müssen Sie den vollqualifizierten Namen für die Klasse in der Assembly verwenden. Klassen in einer externen Assembly werden nicht im Dialogfeld **Ausdruck** angezeigt. Geben Sie für diese Klassen den entsprechenden Namen an. Ein vollqualifizierter Name umfasst den Namespace, den Klassennamen und den Elementnamen.  
@@ -68,13 +68,13 @@ ms.locfileid: "48152860"
 ##  <a name="Embedded"></a> Einschließen von eingebettetem Code  
  Auf der Registerkarte **Code** des Dialogfelds Berichtseigenschaften können Sie einem Bericht eingebetteten Code hinzufügen. Der erstellte Codeblock kann mehrere Methoden enthalten. Methoden in eingebettetem Code müssen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] geschrieben und instanzbasiert sein. Vom Berichtsprozessor werden automatisch Verweise für den System.Convert-Namespace und den System.Math-Namespace hinzugefügt. Fügen Sie zusätzliche Assemblyverweise auf der Seite **Verweise** des Dialogfelds **Berichtseigenschaften** hinzu. Weitere Informationen finden Sie unter [Hinzufügen eines Assemblyverweises zu einem Bericht &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md).  
   
- Die Methoden im eingebetteten Code stehen über ein global definiertes `Code`-Element zur Verfügung. Zugriff auf die Methoden verweisen Sie auf die `Code` Member und den Methodennamen. Im folgenden Beispiel wird die Methode `ToUSD`, die konvertiert des Werts in der `StandardCost` in einen Dollarwert Feld:  
+ Die Methoden im eingebetteten Code stehen über ein global definiertes `Code`-Element zur Verfügung. Zum Zugriff auf die Methoden verweisen Sie auf das `Code`-Element und den Methodennamen. Im folgenden Beispiel wird die Methode `ToUSD` aufgerufen, die den Wert des `StandardCost`-Felds in einen Dollarwert konvertiert:  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
 ```  
   
- Integrierte Auflistungen in Ihren benutzerdefinierten Code verweisen möchten, enthalten einen Verweis auf die integrierte `Report` Objekt:  
+ Wenn Sie in Ihrem benutzerdefinierten Code auf integrierte Auflistungen verweisen möchten, nehmen Sie in das integrierte `Report`-Objekt einen Verweis auf.  
   
 ```  
 =Report.Parameters!Param1.Value  
@@ -89,7 +89,7 @@ Public Dim  MyVersion As String = "123.456"
 Public Dim MyDoubleVersion As Double = 123.456  
 ```  
   
- Obwohl benutzerdefinierte Konstanten nicht in der **Konstanten** -Kategorie des Dialogfelds **Ausdruck** angezeigt werden (in der nur integrierte Konstanten angezeigt werden), können Sie Verweise darauf über einen beliebigen Ausdruck hinzufügen (wie in den folgenden Beispielen veranschaulicht). In einem Ausdruck wird eine benutzerdefinierte Konstante als behandelt eine `Variant`.  
+ Obwohl benutzerdefinierte Konstanten nicht in der **Konstanten** -Kategorie des Dialogfelds **Ausdruck** angezeigt werden (in der nur integrierte Konstanten angezeigt werden), können Sie Verweise darauf über einen beliebigen Ausdruck hinzufügen (wie in den folgenden Beispielen veranschaulicht). In einem Ausdruck wird eine benutzerdefinierte Konstante als `Variant` behandelt.  
   
 ```  
 =Code.MyNote  
@@ -98,7 +98,7 @@ Public Dim MyDoubleVersion As Double = 123.456
 =Code.MyDoubleVersion  
 ```  
   
- Das folgende Beispiel schließt sowohl der Codeverweis als auch die codeimplementierung der Funktion `FixSpelling`, die den Text ersetzt `"Bicycle"` für alle Vorkommen des Texts "" in Bike der `SubCategory` Feld.  
+ In den folgenden Beispielen sind sowohl der Codeverweis als auch die Codeimplementierung der Funktion `FixSpelling` enthalten, mit der der Text "`"Bicycle"` für alle Vorkommen des Texts "Bike" im `SubCategory`-Feld ersetzt wird.  
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
@@ -130,7 +130,7 @@ End Function
 ##  <a name="Custom"></a> Einschließen von Verweisen auf Code von benutzerdefinierten Assemblys  
  Wenn Sie in einem Bericht benutzerdefinierte Assemblys verwenden möchten, müssen Sie zunächst die Assembly erstellen und für den Berichts-Designer zur Verfügung stellen. Anschließend fügen Sie im Bericht einen Verweis auf die Assembly hinzu und verwenden dann im Bericht einen Ausdruck, der auf die Methoden in dieser Assembly verweist. Beim Bereitstellen des Berichts auf dem Berichtsserver müssen Sie dort auch die benutzerdefinierte Assembly bereitstellen.  
   
- Informationen zum Erstellen einer benutzerdefinierten Assembly und Ihre Nutzung [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], finden Sie unter [Verwenden benutzerdefinierter Assemblys mit Berichten](../custom-assemblies/using-custom-assemblies-with-reports.md).  
+ Informationen zum Erstellen einer benutzerdefinierten Assembly und zu ihrer Verwendung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]finden Sie unter [Verwenden benutzerdefinierter Assemblys mit Berichten](../custom-assemblies/using-custom-assemblies-with-reports.md).  
   
  Wenn Sie in einem Ausdruck auf benutzerdefinierten Code verweisen möchten, müssen Sie das Klassenelement in der Assembly aufrufen. Die Vorgehensweise hängt davon ab, ob es sich um eine statische oder um eine instanzbasierte Methode handelt. Statische Methoden in einer benutzerdefinierten Assembly stehen global im Bericht zur Verfügung. Auf statische Methoden können Sie in Ausdrücken durch Angeben des Namespace, der Klasse und des Methodennamens zugreifen. Im folgenden Beispiel wird die Methode `ToGBP`, die konvertiert den Wert der **StandardCost** -Felds von Dollar in Pfund Sterling:  
   
@@ -152,7 +152,7 @@ End Function
 ##  <a name="collections"></a> Übergeben von integrierten Auflistungen in benutzerdefinierte Assemblys  
  Um integrierte Sammlungen wie die *Globals* - oder *Parameters* -Sammlung zur Verarbeitung an eine benutzerdefinierte Assembly zu übergeben, fügen Sie einen Assemblyverweis im Codeprojekt der Assembly hinzu, die die integrierten Auflistungen definiert, und greifen Sie auf den korrekten Namespace zu. Abhängig davon, ob Sie die benutzerdefinierte Assembly für einen auf einem Berichtsserver ausgeführten Bericht (Serverbericht) oder einen in einer .NET-Anwendung lokal ausgeführten Bericht (lokaler Bericht) entwickeln, unterscheidet sich jeweils die zu referenzierende Assembly. Weitere Details siehe unten.  
   
--   **Namespace** : Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
+-   **Namespace:** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
 -   **Assembly (lokaler Bericht):** Microsoft.ReportingServices.ProcessingObjectModel.dll  
   
@@ -163,9 +163,9 @@ End Function
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen von Code zu einem Bericht &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)   
  [Verwenden benutzerdefinierter Assemblys mit Berichten](../custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Hinzufügen eines Assemblyverweises zu einem Bericht (SSRS)](add-an-assembly-reference-to-a-report-ssrs.md)   
+ [Hinzufügen eines Assemblyverweises zu einem Bericht &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)   
  [Reporting Services-Tutorials (SSRS)](../reporting-services-tutorials-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Berichtsbeispiele (Berichts-Generator und SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [Berichtsbeispiele (Berichts-Generator und SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
   

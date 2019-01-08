@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
@@ -14,17 +13,17 @@ ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fcccefeda97346c43fd70b41653f2f125816adc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136210"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747972"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP / IP-Eigenschaften (Registerkarte "IP-Adressen")
   Verwenden Sie das Dialogfeld **TCP/IP-Eigenschaften** (Registerkarte IP-Adressen), um die TCP/IP-Protokolloptionen für eine spezielle IP-Adresse zu konfigurieren. Nur die Optionen **Dynamische TCP-Ports** und **TCP-Port** können durch Auswahl von **IPAll** für alle Adressen sofort konfiguriert werden.  
   
- Änderungen werden erst dann wirksam, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde. Informationen über das Starten und Beenden des SQL Server-Browser-Dienstes finden Sie unter "Vorgehensweise: Starten und Beenden des SQL Server-Browser-Dienstes" in der Onlinedokumentation.  
+ Änderungen werden erst dann wirksam, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde. Weitere Informationen zum Starten und Beenden des SQL Server-Browserdiensts finden Sie unter Vorgehensweise: Starten und Beenden von SQL Server-Browser-Dienst in der Onlinedokumentation.  
   
 ## <a name="static-vs-dynamic-ports"></a>Statische und Dynamische Ports  
  Die Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lauscht für eingehende Verbindungen an Port 1433. Der Port kann aus Sicherheitsgründen oder wegen Anforderungen von Clientanwendungen geändert werden. Standardmäßig werden benannte Instanzen (einschließlich SQL Server Express) zur Überwachung von dynamischen Ports konfiguriert. Lassen Sie das Feld **Dynamische TCP-Ports** leer, und geben Sie eine verfügbare Portnummer in das Feld **TCP-Port** ein, um einen statischen Port zu konfigurieren. Weitere Informationen zum Öffnen von Ports in der Firewall finden Sie unter "Konfigurieren der Windows-Firewall für den SQL Server-Zugriff" in der Onlinedokumentation.  
@@ -32,7 +31,7 @@ ms.locfileid: "48136210"
 ## <a name="dynamic-ports"></a>Dynamische Ports  
  Wenn eine Instanz beim Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Überwachung von dynamischen Ports konfiguriert ist, wird das Betriebssystem auf einen verfügbaren Port überprüft und ein Endpunkt für diesen Port geöffnet. Eingehende Verbindungen müssen diese Portnummer zum Verbinden angeben. Da sich die Portnummer bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändern kann, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser-Dienst bereit, um an den Ports zu lauschen und eingehende Verbindungen an den aktuellen Port für diese Instanz zu leiten. Das Verwenden von dynamischen Ports macht das Verbinden auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch eine Firewall schwierig, da die Portnummer sich bei einem Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändern kann. Dies erfordert Änderungen an den Firewalleinstellungen. Konfigurieren Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Verwenden eines statischen Ports, um Verbindungsprobleme durch eine Firewall zu vermeiden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Active**  
  Gibt an, dass die IP-Adresse auf dem Computer aktiviert ist. Nicht verfügbar für **IPAll**.  
   
@@ -52,10 +51,10 @@ ms.locfileid: "48136210"
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] kann an mehreren Ports auf derselben IP-Adresse lauschen. Ports werden (durch Trennzeichen getrennt) im Format 1433,1500,1501 aufgelistet. Dieses Feld ist auf 2047 Zeichen begrenzt.  
   
- Zum Konfigurieren einer einzelnen IP-Adresse zum Lauschen an mehreren Ports muss der Parameter **Auf Alle Lauschen** auch auf **Nein** festgelegt sein. Diesen finden Sie im Dialogfeld **TCP/IP-Eigenschaften** auf der Registerkarte **Protokolle**. Weitere Informationen finden Sie unter "Vorgehensweise: Konfigurieren der Datenbank-Engine zum Lauschen an mehreren TCP-Ports" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+ Zum Konfigurieren einer einzelnen IP-Adresse zum Lauschen an mehreren Ports muss der Parameter **Auf Alle Lauschen** auch auf **Nein**festgelegt sein. Diesen finden Sie im Dialogfeld **TCP/IP-Eigenschaften** auf der Registerkarte **Protokolle** . Weitere Informationen finden Sie unter "Vorgehensweise: Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Onlinedokumentation.  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Hinzufügen und Entfernen von IP-Adressen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Konfigurations-Manager zeigt die IP-Adressen, die zum Zeitpunkt verfügbar waren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wurde. Die verfügbaren IP-Adressen können sich ändern, wenn Netzwerkkarten hinzugefügt oder entfernt werden, wenn dynamisch zugewiesene IP-Adressen ablaufen, wenn die Netzwerkstruktur neu konfiguriert wird oder wenn der physische Standort des Computers geändert wird, z. B. bei einem Laptop, über das von einem anderen Gebäude aus eine Verbindung mit dem Netzwerk hergestellt wird. Zum Ändern der IP-Adresse bearbeiten Sie das Feld **IP-Adresse**, und starten Sie anschließend [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager zeigt die IP-Adressen an, die zum Zeitpunkt der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar waren. Die verfügbaren IP-Adressen können sich ändern, wenn Netzwerkkarten hinzugefügt oder entfernt werden, wenn dynamisch zugewiesene IP-Adressen ablaufen, wenn die Netzwerkstruktur neu konfiguriert wird oder wenn der physische Standort des Computers geändert wird, z. B. bei einem Laptop, über das von einem anderen Gebäude aus eine Verbindung mit dem Netzwerk hergestellt wird. Zum Ändern der IP-Adresse bearbeiten Sie das Feld **IP-Adresse**, und starten Sie anschließend [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Auswählen eines Netzwerkprotokolls](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

@@ -11,12 +11,12 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c4ac3f5504aef33661afd7c94cec2b63b0b64f0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c9a3adeb3e63c24aa7a78f5a44f1cd2692ce2b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197411"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375342"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Problembehandlung bei Berichten: Kartenberichte (Berichts-Generator und SSRS)
   Probleme mit Karten in einem Bericht können auftreten, wenn Sie dem Bericht eine Karte oder eine Kartenebene hinzufügen, wenn Sie im Bericht eine vorhandene Karte oder eine Kartenebene anpassen, wenn Sie eine Karte in einem Bericht in der Vorschau anzeigen oder wenn Sie einen Bericht mit einer Karte veröffentlichen. Dieses Thema soll Ihnen beim Behandeln der folgenden Probleme helfen.  
@@ -173,7 +173,7 @@ ms.locfileid: "48197411"
 -   Weitere Informationen finden Sie unter [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>Was bedeutet der Wert "NaN" auf der Farbskala?  
- `NaN` steht für keine Zahl. Als Farbskalawerte werden numerische Werte erwartet. Überprüfen Sie die Verteilungseinstellungen und den Legendentextwert für die der Farbskala zugeordneten Regeln. Wenn Sie benutzerdefinierte Verteilungsbereiche erstellt haben, überprüfen Sie, ob Sie die Untergrenze für den ersten Bereich und die Obergrenze für den letzten Bereich angegeben haben.  
+ `NaN` steht für "Not a Number" (keine Zahl). Als Farbskalawerte werden numerische Werte erwartet. Überprüfen Sie die Verteilungseinstellungen und den Legendentextwert für die der Farbskala zugeordneten Regeln. Wenn Sie benutzerdefinierte Verteilungsbereiche erstellt haben, überprüfen Sie, ob Sie die Untergrenze für den ersten Bereich und die Obergrenze für den letzten Bereich angegeben haben.  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>Die Farbskala wird beim Ausführen des Berichts nicht angezeigt.  
  Auf der Farbskala werden Informationen für den Benutzer angezeigt, wenn eine Kartenebene Farbregeln für Polygone, Linien oder Punkte für die gesamte Ebene oder für eingebettete Kartenelemente angibt. Wenn kein Kartenelement eine Farbregel angibt oder wenn die Farbregeln mit einer Legende statt der Farbzuordnung angegeben werden, dann wird die Farbzuordnung im gerenderten Bericht nicht angezeigt.  
@@ -194,7 +194,7 @@ ms.locfileid: "48197411"
   
 -   Die Kartenprojektion muss **Mercator**sein.  
   
--   Um die lokale Vorschau anzuzeigen, müssen Sie über Internetzugriff verfügen. Für einen Bericht, der vom Berichtsserver ausgeführt wird, muss der Berichtsserver so konfiguriert sein, dass er den Kachelhintergrund unterstützt. Weitere Informationen finden Sie unter "Planen der Unterstützung von Karten" in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
+-   Um die lokale Vorschau anzuzeigen, müssen Sie über Internetzugriff verfügen. Für einen Bericht, der vom Berichtsserver ausgeführt wird, muss der Berichtsserver so konfiguriert sein, dass er den Kachelhintergrund unterstützt. Weitere Informationen finden Sie unter "Planen der Unterstützung von Karten" in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
  Weitere Informationen zum Hinzufügen einer Kachelebene finden Sie unter [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

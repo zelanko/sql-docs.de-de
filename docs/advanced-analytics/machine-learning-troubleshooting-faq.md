@@ -1,5 +1,5 @@
 ---
-title: Problembehandlung und häufig gestellte Fragen für Machine Learning in SQL Server | Microsoft-Dokumentation
+title: Problembehandlung und häufig gestellte Fragen zu Machine Learning – SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: dc04f74c4db5c05840795caea87efb9b0001171c
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 8cc89ee500e9240ef1fff085a34d9c1792c3e80c
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877923"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432113"
 ---
 # <a name="troubleshoot-machine-learning-in-sql-server"></a>Problembehandlung bei Machine Learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Verwenden Sie diese Seite als Ausgangspunkt für die Arbeit über bekannte Probleme.
 
-**Gilt für:** SQL Server 2016 R Services, SqlServer 2017 Machine Learning-Dienste (R- und Python)
+**Gilt für:** SQL Server 2016 R Services, SQL Server 2017-Machine Learning-Dienste (R und Python)
 
 ## <a name="known-issues"></a>Bekannte Probleme
 

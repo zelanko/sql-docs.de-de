@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -22,15 +22,15 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b200fc8b534fad9e33f0b01d97d46d0bece4c988
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204940"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364182"
 ---
 # <a name="data-compression"></a>Datenkomprimierung
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt die Zeilen- und seitenkomprimierung für Rowstore-Tabellen und Indizes sowie Columnstore und die columnstore-archivierungskomprimierung für columnstore-Tabellen und Indizes unterstützt.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt die Zeilen- und Seitenkomprimierung für rowstore-Tabellen und -Indizes sowie Columnstore und die columnstore-Archivierungskomprimierung für columnstore-Tabellen und -Indizes.  
   
  Verwenden Sie für rowstore-Tabellen und -Indizes die Datenkomprimierungsfunktion, um die Größe der Datenbank zu reduzieren. Zusätzlich zum Sparen von Speicherplatz kann mithilfe der Datenkomprimierung auch die Leistung von E/A-intensiven Arbeitsauslastungen verbessert werden, da die Daten auf weniger Seiten gespeichert werden und Abfragen weniger Seiten vom Datenträger lesen müssen. Zusätzliche CPU-Ressourcen sind jedoch auf dem Datenbankserver erforderlich, um die Daten zu komprimieren und dekomprimieren, während Daten mit der Anwendung ausgetauscht werden. Sie können die Zeilen- und Seitenkomprimierung für die folgenden Datenbankobjekte konfigurieren:  
   
@@ -108,12 +108,12 @@ ms.locfileid: "48204940"
   
 ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ### <a name="basics"></a>Grundlagen  
  Columnstore-Tabellen und -Indizes werden immer mit columnstore-Komprimierung gespeichert. Sie können die Größe von columnstore-Daten weiter reduzieren, indem Sie eine zusätzliche Komprimierung, die so genannte Archivierungskomprimierung, konfigurieren.  Zur Archivierungskomprimierung führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Microsoft XPRESS-Komprimierungsalgorithmus für die Daten aus. Die Archivierungskomprimierung kann mithilfe der folgenden Datenkomprimierungstypen aktiviert bzw. deaktiviert werden:  
   
--   Verwendung `COLUMNSTORE_ARCHIVE` datenkomprimierung, columnstore-Daten mit der archivierungskomprimierung zu komprimieren.  
+-   Verwenden Sie die `COLUMNSTORE_ARCHIVE`-Datenkomprimierung, um columnstore-Daten mit der Archivierungskomprimierung zu komprimieren.  
   
 -   Verwenden Sie die **COLUMNSTORE** -Datenkomprimierung, um mit der Archivierungskomprimierung komprimierte Daten zu dekomprimieren. Die resultierenden Daten sind weiterhin mit der columnstore-Komprimierung komprimiert.  
   
@@ -169,7 +169,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   [Sys.Indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) : die `type` und `type_desc` Spalten enthalten CLUSTERED COLUMNSTORE und NONCLUSTERED COLUMNSTORE.  
   
--   [Sys.Partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) – die `data_compression` und `data_compression_desc` -Spalte umfassen COLUMNSTORE und COLUMNSTORE_ARCHIVE.  
+-   [Sys.Partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) : die `data_compression` und `data_compression_desc` -Spalte umfassen COLUMNSTORE und COLUMNSTORE_ARCHIVE.  
   
  Die Prozedur [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) gilt nicht für columnstore-Indizes.  
   

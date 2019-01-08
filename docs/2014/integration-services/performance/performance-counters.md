@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], performance counters
@@ -17,12 +16,12 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8edbd94ef143eeb4f8b029f8f8d567cc3c571a19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70694b2814ab23ad13e29a1348e7bfb73d884fbc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140740"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367672"
 ---
 # <a name="performance-counters"></a>Performance Counters
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert eine Reihe von Leistungsindikatoren, mit denen Sie die Leistung der Datenfluss-Engine überwachen können. Sie können beispielsweise den Indikator "Gespoolte Puffer" überwachen, um zu bestimmen, ob Datenpuffer vorübergehend auf den Datenträger geschrieben werden, während ein Paket ausgeführt wird. Diese Auslagerung reduziert die Leistung und weist darauf hin, dass der Computer nicht genügend Arbeitsspeicher hat.  
@@ -72,11 +71,11 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Tool, [SSIS Performance Visualization für Business Intelligence Development Studio (CodePlex-Projekt)](http://go.microsoft.com/fwlink/?LinkId=146626)auf codeplex.com.  
+-   Tool, [SSIS Performance Visualization für Business Intelligence Development Studio (CodePlex-Projekt)](https://go.microsoft.com/fwlink/?LinkId=146626) auf codeplex.com.  
   
--   Video [Messen und Verstehen der Leistung der SSIS-Pakete in Enterprise (SQL Server-Video)](http://go.microsoft.com/fwlink/?LinkId=150497)auf msdn.microsoft.com.  
+-   Video [Messen und Verstehen der Leistung der SSIS-Pakete in Enterprise (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=150497) auf msdn.microsoft.com.  
   
--   Supportartikel [Der SSIS-Leistungsindikator ist im Systemmonitor nicht mehr verfügbar, wenn Sie ein Upgrade auf Windows Server 2008 ausführen](http://go.microsoft.com/fwlink/?LinkId=235319)auf support.microsoft.com.  
+-   Supportartikel [Der SSIS-Leistungsindikator ist im Systemmonitor nicht mehr verfügbar, wenn Sie ein Upgrade auf Windows Server 2008 ausführen](https://go.microsoft.com/fwlink/?LinkId=235319)auf support.microsoft.com.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausführung von Projekten und Paketen](../packages/run-integration-services-ssis-packages.md)  

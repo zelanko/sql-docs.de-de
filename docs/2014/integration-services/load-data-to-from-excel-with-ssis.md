@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fedf74029c0e1bf50e87b10c30d354c80786650
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: 90accbf1e7d5cc683b862707e0688c5b32d86242
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991253"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778312"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS)
 
@@ -41,7 +41,7 @@ Dieser Artikel enthält Informationen, die Sie benötigen, um Excel erfolgreich 
 
 Bevor Sie Daten aus Excel importieren oder in Excel exportieren können, müssen Sie möglicherweise die Konnektivitätskomponenten für Excel herunterladen, sofern diese nicht bereits installiert sind. Die Konnektivitätskomponenten für Excel sind nicht standardmäßig installiert.
 
-Die neueste Version der Konnektivitätskomponenten für Excel stehen unter [Microsoft Access Database Engine 2016 Redistributable (Microsoft Access Database Engine 2016 – Weitervertreibbare Komponente)](https://www.microsoft.com/download/details.aspx?id=54920) zum Download bereit.
+Laden Sie hier die neueste Version der Konnektivitätskomponenten für Excel: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
   
 Die aktuelle Version der Komponenten dient zum Öffnen von Dateien, die in früheren Versionen von Excel erstellt wurden.
 
@@ -53,7 +53,7 @@ Wenn Sie über ein Office 365-Abonnement verfügen, wird möglicherweise eine Fe
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-Wenn Sie Probleme beim Installieren der weitervertreibbaren Komponente 2016 haben, installieren Sie die weitervertreibbare Komponente 2010: [Microsoft Access Database Engine 2010 Redistributable (Microsoft Access Database Engine 2010 – Weitervertreibbare Komponente)](https://www.microsoft.com/download/details.aspx?id=13255). (Es gibt keine weitervertreibbare Komponente für Excel 2013.)
+Wenn Sie Probleme beim Installieren der weitervertreibbaren Komponente 2016 haben, installieren Sie von hier aus die weitervertreibbare Komponente 2010: [Microsoft Access-Datenbank-Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). (Es gibt keine weitervertreibbare Komponente für Excel 2013.)
 
 ## <a name="specify-excel"></a> Angeben von Excel
 
@@ -161,17 +161,17 @@ Sobald Sie die zu importierenden oder exportierenden Excel-Objekte ausgewählt o
 
 Der Excel-Treiber erkennt nur einen begrenzten Satz von Datentypen. Beispielsweise werden alle numerischen Spalten als Werte mit doppelter Genauigkeit (DT_R8) interpretiert, und alle Zeichenfolgenspalten (außer Memospalten) werden als Unicode-Zeichenfolgen mit 255 Zeichen (DT_WSTR) interpretiert. SSIS ordnet die Excel-Datentypen folgendermaßen zu:
 
--   Numerisch – Gleitkommawert mit doppelter Genauigkeit (DT_R8)
+-   Numerisch: Gleitkommawert mit doppelter Genauigkeit (DT_R8)
 
--   Währung – Währung (DT_CY)
+-   Währung: Währung (DT_CY)
 
--   Boolesch – Boolesch (DT_BOOL)
+-   Boolesch: Boolesch (DT_BOOL)
 
--   Datum/Uhrzeit – DateTime (DT_DATE)
+-   Datum/Uhrzeit: DateTime (DT_DATE)
 
--   Zeichenfolge – Unicode-Zeichenfolge, Länge 255 (DT_WSTR)
+-   Zeichenfolge: Unicode-Zeichenfolge, Länge 255 (DT_WSTR)
 
--   Memo – Unicode-Textdatenstrom (DT_NTEXT)
+-   Memo: Unicode-Textdatenstrom (DT_NTEXT)
 
 ### <a name="data-type-and-length-conversions"></a>Datentyp- und Längenkonvertierungen
 

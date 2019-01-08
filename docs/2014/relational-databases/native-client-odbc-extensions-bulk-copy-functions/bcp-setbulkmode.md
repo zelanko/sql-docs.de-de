@@ -12,12 +12,12 @@ ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c97466b6c216c83b133c666fa8c4134ca35005b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115100"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520510"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
   Bcp_setbulkmode ermöglicht die Angabe des Spaltenformats in einem Massenkopiervorgang, alle Spaltenattribute in einem einzigen Funktionsaufruf festlegen.  
@@ -79,10 +79,10 @@ cbRow
   
 |property|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Gibt den Zeichenausgabemodus an.<br /><br /> Entspricht der Option "– C" in BCP. EXE-Datei, und um Bcp_setcolfmt mit `BCP_FMT_TYPE` -Eigenschaftensatz auf `SQLCHARACTER`.|  
+|BCP_OUT_CHARACTER_MODE|Gibt den Zeichenausgabemodus an.<br /><br /> Entspricht der Option-c in BCP. EXE-Datei, und um Bcp_setcolfmt mit `BCP_FMT_TYPE` -Eigenschaftensatz auf `SQLCHARACTER`.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Gibt den Unicode-Ausgabemodus an.<br /><br /> Entspricht der – w-Option in BCP. EXE-Datei und Bcp_setcolfmt mit `BCP_FMT_TYPE` -Eigenschaftensatz auf `SQLNCHAR`.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Gibt systemeigene Typen für Nicht-Zeichen-Typen und Unicode für Zeichentypen an.<br /><br /> Entspricht der – N-Option in BCP. EXE-Datei und Bcp_setcolfmt mit `BCP_FMT_TYPE` -Eigenschaftensatz auf `SQLNCHAR` , wenn der Spaltentyp eine Zeichenfolge, die (standardmäßigen sofern keine Zeichenfolge) ist.|  
-|BCP_OUT_NATIVE_MODE|Gibt systemeigene Datenbanktypen an.<br /><br /> Entspricht der – n-Option in BCP. EXE-Datei und Bcp_setcolfmt mit `BCP_FMT_TYPE` -Eigenschaft auf den Standardwert festgelegt.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Gibt systemeigene Typen für Nicht-Zeichen-Typen und Unicode für Zeichentypen an.<br /><br /> Entspricht der Option-n in BCP. EXE-Datei und Bcp_setcolfmt mit `BCP_FMT_TYPE` -Eigenschaftensatz auf `SQLNCHAR` , wenn der Spaltentyp eine Zeichenfolge, die (standardmäßigen sofern keine Zeichenfolge) ist.|  
+|BCP_OUT_NATIVE_MODE|Gibt systemeigene Datenbanktypen an.<br /><br /> Entspricht der Option-n in BCP. EXE-Datei und Bcp_setcolfmt mit `BCP_FMT_TYPE` -Eigenschaft auf den Standardwert festgelegt.|  
   
  Sie sollten Bcp_setbulkmode nicht mit einer Sequenz von Funktionsaufrufen verwenden, die Bcp_setcolfmt Bcp_control und Bcp_readfmt enthält. Sie sollten z. B. nicht bcp_control(BCPTEXTFILE) und Bcp_setbulkmode aufrufen.  
   
@@ -95,30 +95,30 @@ cbRow
  Aufrufsequenz  
   
 ```  
-bcp_init(“table”, DB_IN);  
+bcp_init("table", DB_IN);  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_readfmt();  
 ```  
   
 ```  
 bcp_init(NULL, DB_OUT);  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_setcolfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_readfmt();  
 bcp_setcolfmt();  
@@ -128,18 +128,18 @@ bcp_setcolfmt();
 bcp_init(NULL, DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setbulkmode();  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_readfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_columns();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setcolfmt();  
 ```  

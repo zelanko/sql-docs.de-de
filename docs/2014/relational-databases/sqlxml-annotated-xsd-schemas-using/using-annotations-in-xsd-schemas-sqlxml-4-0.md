@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, about annotated XSD schemas
@@ -19,12 +17,12 @@ ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a0e3356b4c83832ce40adabb00bdfdc671ec8ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 46d1a7ad03b30159b2efe10c0b215665a37f5a70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099700"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756102"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>Verwenden von Anmerkungen in XSD-Schemas (SQLXML 4.0)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 unterstützt die XSD-Schemasprache Anmerkungen auf ähnliche Weise wie die in der XDR-Schemasprache (XML-Data Reduced) eingeführten Anmerkungen. Es gibt weitere in XSD eingeführte Anmerkungen, die in XDR nicht unterstützt werden.  
@@ -33,7 +31,7 @@ ms.locfileid: "48099700"
   
  Wenn Sie die Anmerkungen nicht angeben, wird die Standardzuordnung vorgenommen. Standardmäßig wird ein XSD-Element mit einem komplexen Typ einem Tabellennamen (Sichtnamen) in der angegebenen Datenbank zugeordnet, und ein Element oder Attribut mit einem einfachen Typ wird der Spalte mit demselben Namen wie das Element oder Attribut zugeordnet.  
   
- Diese Anmerkungen können auch zur Angabe der hierarchischen Beziehungen in XML verwendet werden und somit die Beziehungen in der Datenbank darstellen, denn ein XSD-Schema ist nicht anderes als eine XML-Sicht relationaler Daten.  
+ Diese Anmerkungen können auch dazu verwendet werden, geben Sie die hierarchischen Beziehungen in XML-somit die Beziehungen in der Datenbank darstellen, da ein XSD-Schema einfach eine XML-Sicht relationaler Daten ist.  
   
  Dieser Abschnitt enthält Beschreibungen der Anmerkungen, die Sie mit XSD-Schemas verwenden können, sowie Anwendungsbeispiele.  
   

@@ -1,46 +1,45 @@
 ---
-title: Transformieren von Daten mithilfe von R (SQL und R deep Dive) | Microsoft Docs
+title: Transformieren von Daten mithilfe von RxDataStep von RevoScaleR - SQL Server-Machine Learning
+description: Exemplarische Vorgehensweise im Lernprogramm zum Transformieren von Daten, die Verwendung der Sprache R auf SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 80472b3328c392d886733aad97adf1aa6eeae4ba
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e124825e29392111a453cae0c41b49e8984c9906
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31204623"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645389"
 ---
-# <a name="transform-data-using-r-sql-and-r-deep-dive"></a>Transformieren von Daten mithilfe von R (SQL und R deep Dive)
+# <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Transformieren von Daten mithilfe von R (SQL Server und die RevoScaleR-Lernprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel ist Teil des Lernprogramms Data Science Deep Dive zur Verwendung von ["revoscaler"](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Diese Lektion ist Teil der [RevoScaleR Tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-Das **RevoScaleR** -Paket stellt mehrere Funktionen zum Transformieren von Daten in verschiedenen Phasen der Analyse bereit:
+In dieser Lektion erfahren Sie mehr über die **RevoScaleR** Funktionen zum Transformieren von Daten in verschiedenen Phasen der Analyse.
 
-- **rxDataStep** kann zum Erstellen und Transformieren von Datenteilmengen verwendet werden.
+> [!div class="checklist"]
+> * Verwendung **RxDataStep** zum Erstellen und eine Datenteilmenge zu transformieren
+> * Verwendung **RxImport** zum Transformieren von bei der Übertragung von Daten in oder aus einer XDF-Datei oder einen in-Memory-Datenrahmen während des Imports
 
-- **rxImport** unterstützt das Transformieren von Daten, da Daten in eine XDF-Datei importiert oder aus dieser exportiert oder in einen Datenrahmen im Arbeitsspeicher importiert werden.
+Obwohl die Funktionen **rxSummary**, **rxCube**, **rxLinMod**und **rxLogit** nicht speziell für die Datenverschiebung vorgesehen sind, unterstützen sie jedoch alle dynamische Datentransformationen.
 
-- Obwohl die Funktionen **rxSummary**, **rxCube**, **rxLinMod**und **rxLogit** nicht speziell für die Datenverschiebung vorgesehen sind, unterstützen sie jedoch alle dynamische Datentransformationen.
+## <a name="use-rxdatastep-to-transform-variables"></a>Verwenden von RxDataStep zum Transformieren von Variablen
 
-In diesem Abschnitt erfahren Sie, wie Sie diese Funktionen verwenden. Beginnen wir mit [RxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep).
+Die Funktion [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) verarbeitet Daten abschnittsweise und liest aus einer Datenquelle und schreibt in eine andere. Sie können die Spalten angeben, die transformiert werden sollen, die zu ladenden Transformationen usw.
 
-## <a name="use-rxdatastep-to-transform-variables"></a>Verwenden Sie RxDataStep zum Transformieren von Variablen
+Um dieses Beispiel interessant zu machen, verwenden Sie wir eine Funktion aus einem anderen R-Paket zum Transformieren der Daten. Das Paket **boot** stellt eines der „empfohlenen“ Pakete dar, was bedeutet, dass **Start** in jeder Verteilung von R enthalten ist, jedoch nicht automatisch beim Starten geladen wird. Aus diesem Grund das Paket muss bereits zur Verfügung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, für die R-Integration konfiguriert ist.
 
-Die Funktion **rxDataStep** verarbeitet Daten abschnittsweise und liest aus einer Datenquelle und schreibt in eine andere. Sie können die Spalten angeben, die transformiert werden sollen, die zu ladenden Transformationen usw.
-
-Um dieses Beispiel interessant zu machen, ermöglicht die Verwendung einer Funktion aus einem anderen R-Paket zum Transformieren der Daten.  Das Paket **boot** stellt eines der „empfohlenen“ Pakete dar, was bedeutet, dass **Start** in jeder Verteilung von R enthalten ist, jedoch nicht automatisch beim Starten geladen wird. Aus diesem Grund sollte das Paket schon auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verfügbar sein, die Sie mit [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]verwenden.
-
-Aus der **Boot** Verpacken, verwenden Sie die Funktion `inv.logit`, berechnet den Kehrwert der eine Logit. Das bedeutet, dass die Funktion `inv.logit` ein Logit zurück zu einer Wahrscheinlichkeit auf der Skala [0,1] konvertiert.
+Von der **Boot** packen, verwenden Sie die Funktion **inv.logit**, die die Umkehrfunktion eines Logit berechnet. Das bedeutet, dass die Funktion **inv.logit** ein Logit zurück zu einer Wahrscheinlichkeit auf der Skala [0,1] konvertiert.
 
 > [!TIP] 
-> Eine weitere Möglichkeit zum Abrufen von Vorhersagen in diesem Maßstab wäre, legen Sie die *Typ* Parameter **Antwort** in den ursprünglichen Aufruf von RxPredict.
+> Eine andere Möglichkeit, Vorhersagen auf dieser Skala zu erhalten, wäre den Parameter *type* auf **response** im ursprünglichen Aufruf von **rxPredict**festzulegen.
 
-1. Starten Sie durch das Erstellen einer Datenquelle zum Speichern der Daten für die Tabelle bestimmt `ccScoreOutput`.
+1. Zunächst erstellen Sie eine Datenquelle aus, um die Daten für die Tabelle `ccScoreOutput`.
   
     ```R
     sqlOutScoreDS <- RxSqlServerData( table =  "ccScoreOutput",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
@@ -52,7 +51,7 @@ Aus der **Boot** Verpacken, verwenden Sie die Funktion `inv.logit`, berechnet de
     sqlOutScoreDS2 <- RxSqlServerData( table =  "ccScoreOutput2",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
     ```
   
-    Speichern Sie in der neuen Tabelle alle Variablen aus dem vorherigen `ccScoreOutput` Tabelle sowie die neu erstellte Variable.
+    In der neuen Tabelle speichern Sie alle Variablen aus dem vorherigen `ccScoreOutput` Tabelle sowie die neu erstellte Variable.
   
 3. Legen Sie den Computekontext auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz fest.
   
@@ -60,7 +59,7 @@ Aus der **Boot** Verpacken, verwenden Sie die Funktion `inv.logit`, berechnet de
     rxSetComputeContext(sqlCompute)
     ```
   
-4. Verwenden Sie die Funktion **RxSqlServerTableExists** zu überprüfen, ob die Ausgabetabelle `ccScoreOutput2` bereits vorhanden ist und wenn dies der Fall ist, verwenden Sie die Funktion **RxSqlServerDropTable** auf die Tabelle zu löschen.
+4. Verwenden Sie die Funktion **RxSqlServerTableExists** um zu überprüfen, ob die Ausgabetabelle `ccScoreOutput2` bereits vorhanden ist und wenn dies der Fall ist, verwenden Sie die Funktion **RxSqlServerDropTable** auf die Tabelle zu löschen.
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput2"))     rxSqlServerDropTable("ccScoreOutput2")
@@ -76,42 +75,33 @@ Aus der **Boot** Verpacken, verwenden Sie die Funktion `inv.logit`, berechnet de
         overwrite = TRUE)
     ```
 
-    Wenn Sie die Transformationen definieren, die für die einzelnen Spalten angewendet werden, können Sie auch alle zusätzlichen R-Pakete angeben, die für die Durchführung der Transformationen notwendig sind.  Weitere Informationen zu den Arten von Transformationen, die Sie ausführen können, finden Sie unter [Transformation und Teilmenge von Daten mithilfe von RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform).
+    Wenn Sie die Transformationen definieren, die für die einzelnen Spalten angewendet werden, können Sie auch alle zusätzlichen R-Pakete angeben, die für die Durchführung der Transformationen notwendig sind.  Weitere Informationen zu den Arten von Transformationen, die Sie ausführen können, finden Sie unter [transformieren und die Teilmenge von Daten mithilfe von RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform).
   
 6. Rufen Sie **rxGetVarInfo** auf, um eine Zusammenfassung der Variablen im neuen Dataset anzuzeigen.
   
-    ```R
-    rxGetVarInfo(sqlOutScoreDS2)
-    ```
+```R
+rxGetVarInfo(sqlOutScoreDS2)
+```
 
-    **Ergebnisse**
-    
-    *Var 1: ccFraudLogitScore, Type: numeric*
-    
-    *Var 2: state, Type: character*
-    
-    *Var 3: gender, Type: character*
-    
-    *Var 4: cardholder, Type: character*
-    
-    *Var 5: balance, Type: integer*
-    
-    *Var 6: numTrans, Type: integer*
-    
-    *Var 7: numIntlTrans, Type: integer*
-    
-    *Var 8: creditLine, Type: integer*
-    
-    *Var 9: ccFraudProb, Type: numeric*
+**Ergebnisse**
+
+```R
+Var 1: ccFraudLogitScore, Type: numeric
+Var 2: state, Type: character
+Var 3: gender, Type: character
+Var 4: cardholder, Type: character
+Var 5: balance, Type: integer
+Var 6: numTrans, Type: integer
+Var 7: numIntlTrans, Type: integer
+Var 8: creditLine, Type: integer
+Var 9: ccFraudProb, Type: numeric
+```
 
 Die ursprünglichen Logit-Ergebnisse werden beibehalten, jedoch wurde eine neue Spalte, *ccFraudProb*, hinzugefügt, in der die Logit-Ergebnisse als Werte zwischen 0 und 1 dargestellt sind.
 
-Beachten Sie, die die Faktor Variablen in die Tabelle geschrieben wurden `ccScoreOutput2` als Zeichendaten. Um diese als Faktoren in nachfolgenden Analysen zu verwenden, geben Sie die Ebenen mit dem Parameter *colInfo* an.
+Beachten Sie, die die faktorvariablen auf die Tabelle geschrieben wurden `ccScoreOutput2` als Zeichendaten. Um diese als Faktoren in nachfolgenden Analysen zu verwenden, geben Sie die Ebenen mit dem Parameter *colInfo* an.
 
-## <a name="next-step"></a>Nächster Schritt
+## <a name="next-steps"></a>Nächste Schritte
 
-[Laden von Daten in den Arbeitsspeicher mit rxImport](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
-
-## <a name="previous-step"></a>Vorherigen Schritt
-
-[Erstellen und Ausführen von R-Skripts](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
+> [!div class="nextstepaction"]
+> [Laden von Daten in den Arbeitsspeicher mit rxImport](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)

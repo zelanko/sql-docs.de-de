@@ -15,12 +15,12 @@ ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd05102a9a146a4aa9439e86a76212872556a08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ae427f9f8d3391d8a8fcd0bff06a6ea3b97044c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071000"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375712"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>Anzeigen oder Ändern von registrierten Filtern und Wörtertrennungen
   Nach dem Installieren oder Deinstallieren von Wörtertrennungen oder Filtern werden die Änderungen nicht automatisch auf Serverinstanzen wirksam. In diesem Thema wird beschrieben, wie die zurzeit registrierte Wörtertrennung oder die Filter angezeigt werden und wie neu installierte Wörtertrennungen und Filter auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]registriert werden.  
@@ -78,7 +78,7 @@ ms.locfileid: "48071000"
   
      **So installieren und laden Sie Microsoft Filter Pack IFilters**  
   
-    -   [So registrieren Sie Microsoft Filter Pack IFilters bei SQL Server](http://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [So registrieren Sie Microsoft Filter Pack IFilters bei SQL Server](https://go.microsoft.com/fwlink/?LinkId=130439)  
   
 4.  Verwenden Sie zum Laden neu installierter Wörtertrennungen und Filter in die Serverinstanz **sp_fulltext_service** wie folgt:  
   

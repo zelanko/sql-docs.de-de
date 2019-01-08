@@ -14,17 +14,17 @@ ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fe868eb16b48afd83fdd5af7dcd146157338947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92da788205213394edc75257d8266752a2a9d8df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788468"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535782"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Ermitteln der Ziel-DBMS und Zieltreiber
 Ist die nächste Frage zu berücksichtigen, was das Ziel-DBMS-Systeme für die Anwendung sind, und welche Treiber zur Verfügung stehen unterstützen, die die DBMS-Systeme? Da generische Anwendungen sind hochgradig interoperabel tendenziell, ist die Frage der Ziel-DBMS-Systeme am besten geeignete benutzerdefinierte und vertikale Anwendungen. Gilt jedoch die Frage der Zieltreiber für alle Anwendungen, da der Treiber in der Geschwindigkeit, Qualität, Unterstützung von Funktionen und Verfügbarkeit variieren. Auch wenn die Treiber sind mit der Anwendung verteilt werden, die Kosten und die Verfügbarkeit von lizenzierungsplänen berücksichtigt werden müssen.  
   
- Für viele benutzerdefinierte Anwendungen, die Ziel-DBMS-Systeme sind offensichtlich: sie vorhandene DBMS-Systeme, die die Anwendung, um entwickelt wurde Zugriff auf. DBMS-Systeme auf die Migration in der Zukunft geplant ist, sollten ebenfalls berücksichtigt werden. Allerdings ist die wesentliche Frage für diese Anwendungen welche Treiber oder Treiber für die Verwendung mit diesem Typ verwenden. Für andere benutzerdefinierten Anwendungen, denen, die nicht auf eine vorhandene DBMS entwickelt wurden – das Ziel-DBMS-Systeme kann basierend auf Feature-Unterstützung, Unterstützung für gleichzeitige Benutzer, Verfügbarkeit und Erschwinglichkeit ausgewählt werden.  
+ Bei vielen benutzerdefinierten Anwendungen sind das Ziel-DBMS offensichtlich: Sie vorhandene DBMS-Systeme, die die Anwendung, um entwickelt wurde Zugriff auf. DBMS-Systeme auf die Migration in der Zukunft geplant ist, sollten ebenfalls berücksichtigt werden. Allerdings ist die wesentliche Frage für diese Anwendungen welche Treiber oder Treiber für die Verwendung mit diesem Typ verwenden. Für andere benutzerdefinierten Anwendungen – diejenigen, bei denen nicht auf eine vorhandene DBMS entwickelt wurden – kann das Ziel-DBMS basierend auf Feature-Unterstützung, Unterstützung für gleichzeitige Benutzer, Verfügbarkeit von Gerätetreibern und kostengünstige ausgewählt werden.  
   
  Für vertikale Anwendungen auf Grundlage des Ziel-DBMS-Systeme in der Regel ausgewählt werden Feature-Unterstützung und Verfügbarkeit von Gerätetreibern Markt. Eine vertikale Anwendung, die für kleine Unternehmen konzipiert muss z. B. DBMS abzielen, die diesen Unternehmen kostengünstige sind; eine vertikale Anwendung, die als Add-on zu vorhandenen DBMS häufig beziehen muss konzipiert wird DBMS verwendet.  
   

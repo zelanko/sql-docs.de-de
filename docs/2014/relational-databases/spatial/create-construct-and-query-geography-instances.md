@@ -14,12 +14,12 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a576a6d047148675fd50730bcb4a5e76a5684b14
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 0224f32fde76aa406d90c98fe7280237d09a04e5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018745"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369492"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Erstellen, Aufbauen und Abfragen von geography-Instanzen
   Der räumliche `geography`-Datentyp stellt Daten in einem Erdkugel-Koordinatensystem dar. Dieser Datentyp wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]als .NET CLR-Datentyp (Common Language Runtime) implementiert. Der `geography`-Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert ellipsenähnliche (Erdkugel-)Daten, wie z. B. GPS-Breiten- und Längenkoordinaten.  
@@ -105,7 +105,7 @@ ms.locfileid: "51018745"
 ###  <a name="gml"></a> Erstellen einer geography-Instanz anhand einer GML-Texteingabe  
  Die `geography` -Datentyp stellt eine Methode eine `geography` -Instanz aus GML bereit, eine XML-Darstellung einer `geography` Instanz. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eine Teilmenge von GML.  
   
- Weitere Informationen über Geography Markup Language finden Sie in der OGC-Spezifikation: [OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ Weitere Informationen über Geography Markup Language finden Sie in der OGC-Spezifikation: [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
  **So erstellen Sie einen beliebigen geography-Instanztyp anhand einer GML-Eingabe**  
  [GeomFromGML &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  

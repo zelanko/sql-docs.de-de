@@ -13,19 +13,19 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5be9f005c7bbfbbd931b2947ce61cc91e1d9969b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192871"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364422"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Massenkopieren von Daten aus Programmvariablen (ODBC)
-  In diesem Beispiel wird gezeigt, wie mit Massenkopierfunktionen Massenkopieren von Daten aus Programmvariablen mit SQL Server `bcp_bind` und `bcp_sendrow`. (Zur Vereinfachung dieses Beispiels wurde der Fehlerprüfcode entfernt.)  
+  In diesem Beispiel wird gezeigt, wie mit Massenkopierfunktionen unter Verwendung von `bcp_bind` und `bcp_sendrow` Daten aus Programmvariablen nach SQL Server massenkopiert werden. (Zur Vereinfachung dieses Beispiels wurde der Fehlerprüfcode entfernt.)  
   
  Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
   
- **Sicherheitshinweis** Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen persistent speichern müssen, sollten Sie sie mit der [Win32 Crypto-API](http://go.microsoft.com/fwlink/?LinkId=9504)verschlüsseln.  
+ **Sicherheitshinweis** Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen persistent speichern müssen, sollten Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=9504)verschlüsseln.  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>So verwenden Sie Funktionen zum Massenkopieren direkt für Programmvariablen  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48192871"
   
 3.  Stellen Sie eine Verbindung mit SQL Server her.  
   
-4.  Rufen Sie [Bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) auf die folgenden Informationen festzulegen:  
+4.  Rufen Sie [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) auf, um die folgenden Informationen festzulegen:  
   
     -   Name der Tabelle oder Sicht, aus der bzw. in die massenkopiert werden soll  
   
@@ -43,22 +43,22 @@ ms.locfileid: "48192871"
   
     -   Name einer Datendatei, in die Fehlermeldungen zum Massenkopiervorgang ausgegeben werden sollen (geben Sie NULL an, wenn keine Meldungsdatei erstellt werden soll)  
   
-    -   Die Kopierrichtung: DB_IN von der Anwendung in die Sicht oder Tabelle bzw. DB_OUT von der Tabelle oder Sicht in die Anwendung  
+    -   Die Richtung der Kopie: DB_IN von der Anwendung an die Sicht oder Tabelle bzw. DB_OUT an die Anwendung aus der Tabelle oder Sicht.  
   
-5.  Rufen Sie [Bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) für jede Spalte im Massenkopiervorgang auf, die die Spalte an eine Programmvariable zu binden.  
+5.  Rufen Sie [bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) für jede Spalte im Massenkopiervorgang auf, um die Spalte an eine Programmvariable zu binden.  
   
-6.  Füllen Sie die Programmvariablen mit Daten, und rufen [Bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) um eine Datenzeile zu senden.  
+6.  Füllen Sie die Programmvariablen mit Daten, und rufen Sie [bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) auf, um eine Datenzeile zu senden.  
   
-7.  Nachdem mehrere Zeilen gesendet wurden, rufen [Bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) Prüfpunkt, die bereits Zeilen gesendeten. Es wird empfohlen, die aufzurufende [Bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) mindestens einmal nach jeweils 1000 Zeilen.  
+7.  Nachdem mehrere Zeilen gesendet wurden, rufen Sie [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) auf, um einen Prüfpunkt für die bereits gesendeten Zeilen einzufügen. Es wird empfohlen, [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) mindestens einmal nach jeweils 1000 Zeilen aufzurufen.  
   
-8.  Nachdem alle Zeilen gesendet wurden, rufen [Bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) zum Abschließen des Vorgangs.  
+8.  Nachdem alle Zeilen gesendet wurden, rufen Sie [bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) auf, um den Vorgang abzuschließen.  
   
- Sie können die Position und Länge der Programmvariablen während eines Massenkopiervorgangs variieren, durch den Aufruf [Bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) und [Bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Verwendung [Bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) Festlegen verschiedener Massenkopieroptionen. Verwendung [Bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) zum Senden von `text`, `ntext`, und `image` Daten in Segmenten an den Server.  
+ Position und Länge der Programmvariablen können während eines Massenkopiervorgangs durch Aufrufe von [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) und [bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)abgeändert werden. Verwenden Sie [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) zum Festlegen verschiedener Massenkopieroptionen. Verwendung [Bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) zum Senden von `text`, `ntext`, und `image` Daten in Segmenten an den Server.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
- Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Homepage [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treibername lautet "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
+ Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treibername lautet "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48192871"
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und odbcbcp.lib. Wenn Sie das Beispiel mit MSBuild.exe erstellt haben, kopieren Sie zuerst Bcpfmt.fmt und Bcpodbc.bcp aus dem Projektverzeichnis in das Verzeichnis mit der EXE-Datei, und rufen Sie dann die EXE-Datei auf.  
   
- Führen Sie das dritte ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die Tabellen zu löschen, die im Beispiel verwendete code.  
+ Führen Sie das dritte Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die im Beispiel verwendeten Tabellen zu löschen.  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  

@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 1053f3a11bed9efbf75d7270f677c9f226221a3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674197"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626320"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Bereitstellen eines SQL Server-Containers in Kubernetes mit Azure Kubernetes-Dienste (AKS)
 
@@ -41,11 +41,11 @@ Im obigen Diagramm `mssql-server` ist ein Container in einem [Pod](https://kuber
 
 Im folgenden Diagramm stellen die `mssql-server` Container ein Fehler aufgetreten. Als Orchestrator garantiert Kubernetes die richtige Anzahl von fehlerfreien Instanzen im Replikat festgelegt, und startet einen neuen Container entsprechend der Konfiguration. Der Orchestrator startet einen neuen Pod auf denselben Knoten und `mssql-server` Verbindung mit dem gleichen permanenten Speicher. Der Dienst eine Verbindung herstellt, auf das neu erstellte `mssql-server`.
 
-![Diagramm der SQL Server von Kubernetes-cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Diagramm der SQL Server von Kubernetes-cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 Im folgenden Diagramm das hosting der Knoten die `mssql-server` Container ein Fehler aufgetreten. Der Orchestrator startet den neuen Pod auf einem anderen Knoten, und `mssql-server` Verbindung mit dem gleichen permanenten Speicher. Der Dienst eine Verbindung herstellt, auf das neu erstellte `mssql-server`.
 
-![Diagramm der SQL Server von Kubernetes-cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Diagramm der SQL Server von Kubernetes-cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -174,13 +174,15 @@ In diesem Schritt erstellen Sie ein Manifest, um den Container basierend auf dem
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server:2017-latest
            ports:
            - containerPort: 1433
            env:
+           - name: MSSQL_PID
+             value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: SA_PASSWORD
+           - name: MSSQL_SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql
@@ -209,14 +211,14 @@ In diesem Schritt erstellen Sie ein Manifest, um den Container basierend auf dem
 
    Kopieren Sie den vorherigen Code in eine neue Datei mit dem Namen `sqldeployment.yaml`. Aktualisieren Sie die folgenden Werte ein: 
 
-   * `value: "Developer"`: Legt fest, den Container zum Ausführen von SQL Server Developer Edition. Developer-Edition ist nicht für die Produktion lizenziert. Wenn die Bereitstellung für die Produktion ist, legen Sie die passende Edition (`Enterprise`, `Standard`, oder `Express`). 
+   * MSSQL_PID `value: "Developer"`: Legt fest, den Container zum Ausführen von SQL Server Developer Edition. Developer-Edition ist nicht für die Produktion lizenziert. Wenn die Bereitstellung für die Produktion ist, legen Sie die passende Edition (`Enterprise`, `Standard`, oder `Express`). 
 
       >[!NOTE]
       >Weitere Informationen finden Sie unter [wie SQL Server-Lizenz](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
 
    * `persistentVolumeClaim`: Dieser Wert ist erforderlich, einen Eintrag für `claimName:` , der den Namen für die permanenter volumeanspruch zugeordnet. Dieses Tutorial verwendet `mssql-data`. 
 
-   * `name: SA_PASSWORD`: Das containerimage entsprechend das SA-Kennwort konfiguriert, wie in diesem Abschnitt definiert.
+   * `name: SA_PASSWORD`: Konfiguriert das Container-Bild, um das SA-Kennwort festlegen, wie in diesem Abschnitt definiert.
 
      ```yaml
      valueFrom:

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtrans.f1
@@ -26,22 +25,22 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f0b1fc213fb1916421b1c9b0f02bb82b5553770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0108e55f6038b234d78f3fd66d9bae243af28a9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123004"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357357"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation für Fuzzygruppierung
   Die Transformation für Fuzzygruppierung führt Datenbereinigungsaufgaben durch, indem Datenzeilen identifiziert werden, die wahrscheinlich Duplikate sind, und eine kanonische Datenzeile ausgewählt wird, die zum Standardisieren der Daten verwendet wird.  
   
 > [!NOTE]  
->  Ausführliche Informationen zu den Transformationen für Fuzzygruppierung wie Leistungs- und Speicherbeschränkungen finden Sie im Whitepaper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(Fuzzysuche und Fuzzygruppierungen in SQL Server Integration Services 2005).  
+>  Ausführliche Informationen zu den Transformationen für Fuzzygruppierung wie Leistungs- und Speicherbeschränkungen finden Sie im Whitepaper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(Fuzzysuche und Fuzzygruppierungen in SQL Server Integration Services 2005).  
   
  Für die Transformation der Fuzzygruppierung ist eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erforderlich, damit die temporären [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Tabellen erstellt werden können, die der Transformationsalgorithmus zur Durchführung benötigt. Die Verbindung muss für einen Benutzer aufgelöst sein, der die Berechtigung zum Erstellen von Tabellen in der Datenbank besitzt.  
   
- Um die Transformation zu konfigurieren, müssen Sie die Eingabespalten auswählen, die zum Identifizieren von Duplikaten verwendet werden sollen, und Sie müssen für jede Spalte den Typ der Übereinstimmung auswählen – entweder fuzzy oder genau. Mit einer genauen Übereinstimmung wird garantiert, dass nur Zeilen mit identischen Werten in dieser Spalte gruppiert werden. Die genaue Übereinstimmung kann für Spalten aller [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Datentypen verwendet werden, mit Ausnahme von DT_TEXT, DT_NTEXT und DT_IMAGE. Bei der Fuzzyübereinstimmung werden Zeilen gruppiert, die annähernd dieselben Werte aufweisen. Die Methode zur Ermittlung der annähernden Übereinstimmung von Daten basiert auf einem vom Benutzer angegebenen Ähnlichkeitsergebnis. Zur Fuzzyübereinstimmung können nur Spalten mit den Datentypen DT_WSTR und DT_STR verwendet werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../integration-services-data-types.md).  
+ Um die Transformation zu konfigurieren, müssen Sie die Eingabespalten auswählen, die zum Identifizieren von Duplikaten verwendet werden sollen, und Sie müssen für jede Spalte den Typ der Übereinstimmung auswählen, entweder fuzzy oder genau. Mit einer genauen Übereinstimmung wird garantiert, dass nur Zeilen mit identischen Werten in dieser Spalte gruppiert werden. Die genaue Übereinstimmung kann für Spalten aller [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Datentypen verwendet werden, mit Ausnahme von DT_TEXT, DT_NTEXT und DT_IMAGE. Bei der Fuzzyübereinstimmung werden Zeilen gruppiert, die annähernd dieselben Werte aufweisen. Die Methode zur Ermittlung der annähernden Übereinstimmung von Daten basiert auf einem vom Benutzer angegebenen Ähnlichkeitsergebnis. Zur Fuzzyübereinstimmung können nur Spalten mit den Datentypen DT_WSTR und DT_STR verwendet werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../integration-services-data-types.md).  
   
  Die Transformationsausgabe umfasst alle Eingabespalten, eine oder mehrere Spalten mit standardisierten Daten sowie eine Spalte, die das Ähnlichkeitsergebnis enthält. Das Ergebnis ist ein Dezimalwert zwischen 0 und 1. Die kanonische Zeile weist ein Ergebnis von 1 auf. Andere Zeilen in der Fuzzygruppierung weisen Ergebnisse auf, die angeben, wie stark die Zeile mit der kanonischen Zeile übereinstimmt. Je näher das Ergebnis an 1 liegt, desto genauer stimmt die Zeile mit der kanonischen Zeile überein. Wenn die Fuzzygruppierung Zeilen enthält, die genaue Duplikate der kanonischen Zeile sind, besitzen diese Zeilen ebenfalls das Ergebnis 1. Die Transformation entfernt doppelte Zeilen nicht, sondern gruppiert diese, indem ein Schlüssel erstellt wird, der die kanonische Zeile in Bezug zu ähnlichen Zeilen stellt.  
   
@@ -84,11 +83,11 @@ ms.locfileid: "48123004"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Fuzzygruppierung** festlegen können:  
   
--   [Editor für Fuzzygruppierung Transformation &#40;Registerkarte Verbindungs-Manager&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [Transformations-Editor für Fuzzygruppierung &#40;Registerkarte „Verbindungs-Manager“&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [Editor für Fuzzygruppierung Transformation &#40;Registerkarte "Spalten"&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [Transformations-Editor für Fuzzygruppierung &#40;Registerkarte „Spalten“&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [Editor für Fuzzygruppierung Transformation &#40;Registerkarte "Erweitert"&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [Transformations-Editor für Fuzzygruppierung &#40;Registerkarte „Erweitert“&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   

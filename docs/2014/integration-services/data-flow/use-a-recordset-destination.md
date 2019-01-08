@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
@@ -13,12 +12,12 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4d3afbb967238cfef049b491f6ab871f830708b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04c63477a53de07777806aa8efb1fda78ef44264
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102460"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791102"
 ---
 # <a name="use-a-recordset-destination"></a>Verwenden eines Recordsetziels
   Das Recordsetziel speichert keine Daten in einer externen Datenquelle. Stattdessen speichert das Recordsetziel Daten im Speicher eines Recordsets, das in einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketvariablen des Datentyps `Object` gespeichert ist. Nachdem die Daten vom Recordsetziel gespeichert wurden, verwenden Sie typischerweise einen Foreach-Schleifencontainer mit dem Foreach-ADO-Enumerator zum Verarbeiten jeweils einer Zeile des Recordsets. Der Foreach-ADO-Enumerator speichert den Wert jeder einzelnen Spalte für die aktuelle Zeile in einer separaten Paketvariablen. Anschließend lesen die im Foreach-Schleifencontainer konfigurierten Tasks diese Werte in den Variablen und führen für diese Aktionen aus.  
@@ -38,7 +37,7 @@ ms.locfileid: "48102460"
   
 1.  Erstellen oder öffnen Sie ein [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Paket in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  Erstellen Sie eine Variable aus, das vom recordsetziel im Speicher das recordsetziel gespeichert, und legen den Wert der Variablen auf `Object`.  
+2.  Erstellen Sie eine Variable für das vom Recordsetziel im Speicher gespeicherte Recordset, und legen Sie den Variablentyp auf `Object` fest.  
   
 3.  Erstellen Sie zusätzliche Variablen der entsprechenden Typen für die Werte der einzelnen Spalten im zu verwendenden Recordset.  
   
@@ -69,21 +68,21 @@ ms.locfileid: "48102460"
   
 3.  Erstellen Sie im Fenster **Variablen** die Variablen für das Recordset sowie die Spaltenwerte in der aktuellen Zeile:  
   
-    1.  Erstellen Sie eine Variable mit dem Namen `BonusRecordset`, und legen Sie deren Typ auf `Object`.  
+    1.  Erstellen Sie die Variable `BonusRecordset`, und legen Sie deren Typ auf `Object` fest.  
   
-         Die `BonusRecordset` Variable enthält das Recordset.  
+         Die Variable `BonusRecordset` enthält das Recordset.  
   
-    2.  Erstellen Sie eine Variable mit dem Namen `EmailAddress`, und legen Sie deren Typ auf `String`.  
+    2.  Erstellen Sie die Variable `EmailAddress`, und legen Sie deren Typ auf `String` fest.  
   
-         Die `EmailAddress` Variable enthält die e-Mail-Adresse der vertriebsperson.  
+         Die Variable `EmailAddress` enthält die E-Mail-Adresse der Vertriebsperson.  
   
-    3.  Erstellen Sie eine Variable mit dem Namen `FirstName`, und legen Sie deren Typ auf `String`.  
+    3.  Erstellen Sie die Variable `FirstName`, und legen Sie deren Typ auf `String` fest.  
   
-         Die `FirstName` Variable enthält den Vornamen der vertriebsperson.  
+         Die Variable `FirstName` enthält den Vornamen der Vertriebsperson.  
   
-    4.  Erstellen Sie eine Variable mit dem Namen `Bonus`, und legen Sie deren Typ auf `Double`.  
+    4.  Erstellen Sie die Variable `Bonus`, und legen Sie deren Typ auf `Double` fest.  
   
-         Die `Bonus` Variable enthält den Betrag für den Bonus der vertriebsperson.  
+         Die Variable `Bonus` enthält den Betrag für den Bonus der Vertriebsperson.  
   
 #### <a name="to-configure-the-connection-managers"></a>So konfigurieren Sie die Verbindungs-Manager  
   

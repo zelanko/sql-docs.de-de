@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank | Microsoft Docs
+title: Herstellen einer Verbindung einer Analysis Services-Datenbank für tabellarische Modelle mit | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ce70f8ac3e22e31f0420762019c94fc629951a4b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 239559dc7d5bfdabe3a3f9060bc92059982c8dae
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045294"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072417"
 ---
-# <a name="connect-to-a-tabular-model-database"></a>Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank  
+# <a name="connect-to-a-tabular-model-database"></a>Herstellen einer Verbindung mit einer Datenbank für tabellarische Modelle  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Nachdem Sie ein tabellarisches Modell erstellt und auf einem Analysis Services-Tabellenmodus-Server bereitgestellt haben, müssen Sie Berechtigungen festlegen, die es für Clientanwendungen verfügbar machen. In diesem Artikel wird erläutert, wie Sie Berechtigungen und beim Verbindungsaufbau mit einer Datenbank ausgehend von Clientanwendungen.  
+  Nachdem Sie ein tabellarisches Modell erstellt und auf einem Analysis Services-Tabellenmodus-Server bereitgestellt haben, müssen Sie Berechtigungen festlegen, die es für Clientanwendungen verfügbar machen. In diesem Artikel wird erläutert, wie Sie Berechtigungen und von Clientanwendungen eine Verbindung mit einer Datenbank.  
   
 > [!NOTE]  
 >  Remoteverbindungen mit Analysis Services sind standardmäßig erst dann verfügbar, wenn Sie die Firewall konfiguriert haben. Stellen Sie sicher, dass Sie den entsprechenden Port geöffnet haben, wenn Sie eine benannte oder eine Standardinstanz für Clientverbindungen konfigurieren. Weitere Informationen finden Sie unter [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "34045294"
 ##  <a name="bkmk_userpermissions"></a> Benutzerberechtigungen für die Datenbank  
  Benutzer, die eine Verbindung mit Tabellendatenbanken herstellen, müssen die Mitgliedschaft in einer Datenbankrolle besitzen, die einen Lesezugriff festlegt.  
   
- Rollen, und gelegentlich auch die Rollenmitgliedschaft, werden definiert, wenn ein Modell in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wird, oder über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Falle von bereitgestellten Modellen. Weitere Informationen zum Erstellen von Rollen mithilfe von Rollen-Manager in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], finden Sie unter [erstellen und Verwalten von Rollen](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md). Weitere Informationen zum Erstellen und Verwalten von Rollen für ein bereitgestelltes Modell finden Sie unter [Rollen für tabellarische Modelle](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Rollen, und gelegentlich auch die Rollenmitgliedschaft, werden definiert, wenn ein Modell in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wird, oder über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Falle von bereitgestellten Modellen. Weitere Informationen zum Erstellen von Rollen mithilfe des Rollen-Manager in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], finden Sie unter [erstellen und Verwalten von Rollen](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md). Weitere Informationen zum Erstellen und Verwalten von Rollen für ein bereitgestelltes Modell finden Sie unter [Rollen tabellarischer Modelle](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 > [!CAUTION]  
 >  Wenn ein tabellarisches Modellprojekt, dessen Rollen mithilfe des Rollen-Managers in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] definiert wurden, erneut bereitgestellt wird, dann werden die in einem bereitgestellten tabellarischen Modell definierten Rollen überschrieben.  
@@ -40,7 +40,7 @@ ms.locfileid: "34045294"
   
 1.  Öffnen Sie in der Zentraladministration die Seite "Dienstkonten konfigurieren".  
   
-2.  Wählen Sie den von Excel Services verwendeten Dienstanwendungspool aus. Dies kann **Dienstanwendungspool – Systemstandard für SharePoint-Webdienste** oder ein benutzerdefinierter Anwendungspool sein. Das von Excel Services verwendete verwaltete Konto wird auf der Seite angezeigt.  
+2.  Wählen Sie den von Excel Services verwendeten Dienstanwendungspool aus. Dies kann **Dienstanwendungspool – Systemstandard für SharePoint-Webdienste** oder einen benutzerdefinierten Anwendungspool. Das von Excel Services verwendete verwaltete Konto wird auf der Seite angezeigt.  
   
      Bei SharePoint-Farmen, die Reporting Services im SharePoint-Modus umfassen, müssen Sie die Kontoinformationen für die Reporting Services-Dienstanwendung ebenfalls abrufen.  
   
@@ -89,13 +89,13 @@ ms.locfileid: "34045294"
   
  **Der Datenverbindungs-Assistent kann keine Liste von Datenbanken aus der angegebenen Datenquelle abrufen.**  
   
- Beim Importieren von Daten tritt dieser Microsoft Excel-Fehler auf, wenn Sie versuchen, den Assistenten zum Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank auf einem Analysis Services-Remoteserver verwenden und Sie verfügen nicht über ausreichende Berechtigungen. Um diesen Fehler zu beheben, müssen Sie über Benutzerzugriffsrechte für die Datenbank verfügen. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Benutzerzugriff auf Daten.  
+ Beim Importieren von Daten tritt dieser Microsoft Excel-Fehler auf, wenn Sie versuchen, den Assistenten zum Herstellen einer Verbindung zu einer tabellarischen Modelldatenbank auf einem Analysis Services-Remoteserver verwenden, und Sie verfügen nicht über ausreichende Berechtigungen. Um diesen Fehler zu beheben, müssen Sie über Benutzerzugriffsrechte für die Datenbank verfügen. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Benutzerzugriff auf Daten.  
   
  **Während des Herstellens einer Verbindung mit der externen Datenquelle ist ein Fehler aufgetreten. Die folgenden Verbindungen wurden nicht aktualisiert: \<Modellname >-Sandbox**  
   
  In SharePoint tritt dieser Microsoft Excel-Fehler auf, wenn Sie eine Dateninteraktion, z. B. das Filtern von Daten, in einer PivotTable durchführen, die Modelldaten verwendet. Der Fehler tritt auf, da Sie nicht über ausreichende Berechtigungen für den Analysis Services-Remoteserver verfügen. Um diesen Fehler zu beheben, müssen Sie über Benutzerzugriffsrechte für die Datenbank verfügen. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Benutzerzugriff auf Daten.  
   
- **Fehler beim Ausführen dieses Vorgangs. Laden Sie die Arbeitsmappe erneut, und wiederholen Sie dann zum Ausführen dieses Vorgangs erneut.**  
+ **Fehler beim Ausführen dieses Vorgangs. Laden Sie die Arbeitsmappe erneut, und wiederholen Sie dann, um diesen Vorgang erneut auszuführen.**  
   
  In SharePoint tritt dieser Microsoft Excel-Fehler auf, wenn Sie eine Dateninteraktion, z. B. das Filtern von Daten, in einer PivotTable durchführen, die Modelldaten verwendet. Der Fehler tritt auf, da Excel Services nicht von der Analysis Services-Instanz vertraut wird, in der die Modelldaten bereitgestellt werden. Um diesen Fehler zu beheben, gewähren Sie Excel Services Administratorberechtigung für die Analysis Services-Instanz. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Administratorberechtigungen. Wenn der Fehler weiterhin auftritt, verwenden Sie wieder den Excel Services-Anwendungspool.  
   

@@ -10,12 +10,12 @@ ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7125a7b90a8b47c3c9a71a05dd724b452170a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64de082cd12c967f3f3c90ca3cb99c51985ed41a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110420"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508995"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Implementieren des OR-Operators in systemintern kompilierten gespeicherten Prozeduren
   OR-Operatoren werden in Abfrageprädikaten systemintern kompilierter gespeicherter Prozeduren nicht unterstützt. Da NOT-Operatoren in Abfrageprädikaten systemintern kompilierter gespeicherter Prozeduren ebenfalls nicht unterstützt werden, können die Auswirkungen der OR-Operatoren nicht allein durch Verwendung der entsprechenden logischen Operatoren simuliert werden. Die Auswirkungen eines OR-Operators können jedoch anhand von speicheroptimierten Tabellenvariablen simuliert werden.  
@@ -46,7 +46,7 @@ ms.locfileid: "48110420"
   
 5.  Verwenden Sie den Inhalt der speicheroptimierten Tabellenvariablen als Ergebnis der Abfrage.  
   
- Im folgenden Beispiel werden Tabellen aus der AdventureWorks2012-Datenbank verwendet, die für [!INCLUDE[hek_2](../includes/hek-2-md.md)]aktualisiert wurden. Um die Dateien für dieses Beispiel herunterzuladen, rufen Sie [AdventureWorks-Datenbanken – 2012, 2008R2 und 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587)auf. Um das [!INCLUDE[hek_2](../includes/hek-2-md.md)] -Codebeispiel auf AdventureWorks2012 anzuwenden, rufen Sie [Beispiel zu SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491)auf.  
+ Im folgenden Beispiel werden Tabellen aus der AdventureWorks2012-Datenbank verwendet, die für [!INCLUDE[hek_2](../includes/hek-2-md.md)]aktualisiert wurden. Zum Herunterladen der Dateien in diesem Beispiel "GoTo" [AdventureWorks-Datenbanken – 2012, 2008R2 und 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Um das [!INCLUDE[hek_2](../includes/hek-2-md.md)] -Codebeispiel auf AdventureWorks2012 anzuwenden, rufen Sie [Beispiel zu SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491)auf.  
   
  Fügen Sie der Datenbank die folgende gespeicherte Prozedur hinzu. Diese gespeicherte Prozedur wird konvertiert, sodass sie die systeminterne Kompilierung verwendet.  
   
@@ -161,7 +161,7 @@ GO
   
 5.  Verwenden Sie den Inhalt der speicheroptimierten Tabellenvariablen als Ergebnis der Abfrage.  
   
- Im folgenden Beispiel werden Tabellen aus der AdventureWorks2012-Datenbank verwendet, die für [!INCLUDE[hek_2](../includes/hek-2-md.md)]aktualisiert wurden. Um die Dateien für dieses Beispiel herunterzuladen, rufen Sie [AdventureWorks-Datenbanken – 2012, 2008R2 und 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587)auf. Um das [!INCLUDE[hek_2](../includes/hek-2-md.md)] -Codebeispiel auf AdventureWorks2012 anzuwenden, rufen Sie [Beispiel zu SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491)auf.  
+ Im folgenden Beispiel werden Tabellen aus der AdventureWorks2012-Datenbank verwendet, die für [!INCLUDE[hek_2](../includes/hek-2-md.md)]aktualisiert wurden. Zum Herunterladen der Dateien in diesem Beispiel "GoTo" [AdventureWorks-Datenbanken – 2012, 2008R2 und 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Um das [!INCLUDE[hek_2](../includes/hek-2-md.md)] -Codebeispiel auf AdventureWorks2012 anzuwenden, rufen Sie [Beispiel zu SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491)auf.  
   
  Fügen Sie der Datenbank die folgende gespeicherte Prozedur hinzu. Diese gespeicherte Prozedur wird konvertiert, sodass sie die systeminterne Kompilierung verwendet. In diesem Beispiel werden INNER JOIN-Bedingungen verwendet.  
   

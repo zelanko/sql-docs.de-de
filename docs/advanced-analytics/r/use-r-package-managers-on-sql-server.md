@@ -1,6 +1,6 @@
 ---
-title: Installieren Sie neue R-Pakete auf SQL Server Machine Learning Services | Microsoft-Dokumentation
-description: Fügen Sie neue R-Pakete auf SQL Server 2016 R Services oder SQL Server 2017-Machine Learning Services (Datenbankintern)
+title: Verwenden von R-Paket-Manager - SQL Server Machine Learning Services
+description: Verwenden Sie R-Standardbefehle wie install.packages, um neue R-Pakete auf SQL Server 2016 R Services oder SQL Server 2017-Machine Learning Services (Datenbankintern) hinzuzufügen.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5eb14dde38f9ef7804c62adeaa3cdc1df0f5552b
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: a7ef1d63394da8bf084fabb93382ee565208e137
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864348"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432883"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Verwenden von R-Paket-Manager zum Installieren von R-Pakete auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ Diese Prozedur verwendet RGui, jedoch können RTerm oder ein anderes R Befehlsze
 
 1. Mit der rechten Maustaste RGui.exe, und wählen **als Administrator ausführen**. Wenn Sie nicht über die erforderlichen Berechtigungen verfügen, wenden Sie sich an den Datenbankadministrator, und geben Sie eine Liste der Pakete, die Sie benötigen.
 
-1. Über die Befehlszeile, wenn Sie wissen, dass der Paketname, können Sie eingeben: `install.packages("the_package-name")` doppelte Anführungszeichen sind erforderlich, für den Paketnamen ein.
+1. Über die Befehlszeile Wenn Sie wissen, dass der Paketname, können Sie eingeben: `install.packages("the_package-name")` Doppelte Anführungszeichen sind erforderlich, für den Paketnamen ein.
 
 1. Wenn nach einer gespiegelten Site gefragt werden, wählen Sie einen Standort, der für Ihren Standort zweckmäßig ist.
 

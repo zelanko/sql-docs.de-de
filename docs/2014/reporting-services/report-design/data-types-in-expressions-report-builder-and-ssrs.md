@@ -11,12 +11,12 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f48846f1cb78a8ea8a21be5a7114bf11017f5ca5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be3f95c1a0c395c412479d3a8836e9126fb0373f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147920"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374652"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Datentypen in Ausdrücken (Berichts-Generator und SSRS)
   Datentypen stellen verschiedene Arten von Daten dar, die auf diese Weise effizient gespeichert und verarbeitet werden können. Zu den gängigen Datentypen gehören Text (auch String oder Zeichenfolge genannt), Zahlen mit oder ohne Dezimalstellen, Datum und Uhrzeit sowie Bilder. Werte in einem Bericht müssen dem RDL-Datentyp (Report Definition Language) entsprechen. Sie können einen Wert beliebig formatieren, wenn Sie ihn in einem Bericht anzeigen. So kann ein Feld, das eine Währung darstellt, als Gleitkommazahl in der Berichtsdefinition gespeichert, jedoch je nach gewählter Formatierungseigenschaft in verschiedenen Formaten angezeigt werden.  
@@ -31,11 +31,11 @@ ms.locfileid: "48147920"
   
 |RDL-Typ|CLR-Typen|  
 |--------------|---------------|  
-|Zeichenfolge|Standard: String<br /><br /> Chart, GUID, Timespan|  
-|Boolean|Standard: Boolesch|  
+|Zeichenfolge|Standard: Zeichenfolge<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Standard: Boolean|  
 |Integer|Standard: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|datetime|Standard: DateTime<br /><br /> DateTimeOffset|  
-|Float|Standard: Double<br /><br /> Single, Decimal|  
+|datetime|Standard: datetime<br /><br /> DateTimeOffset|  
+|float|Standard: Double<br /><br /> Single, Decimal|  
 |Binär (Binary)|Standard: Byte[]|  
 |Variant|Beliebiger Wert von oben außer Byte []|  
 |VariantArray|Array von Variant|  
@@ -57,7 +57,7 @@ ms.locfileid: "48147920"
 -   Konvertieren eines aus der Datenquelle abgerufenen Werts von einem Datentyp in einen anderen Datentyp  
   
 ## <a name="determining-the-data-type-of-report-data"></a>Ermitteln des Datentyps von Berichtsdaten  
- Zum Ermitteln des Datentyps von Berichtselementen können Sie einen Ausdruck schreiben, der den Datentyp zurückgibt. Wenn Sie beispielsweise den Datentyp des Felds `MyField`anzeigen möchten, fügen Sie einer Tabellenzelle den folgenden Ausdruck hinzu: `=Fields!MyField.Value.GetType().ToString()`. Das Ergebnis zeigt den CLR-Datentyp verwendet, um darzustellen `MyField`, z. B. `System.String` oder `System.DateTime`.  
+ Zum Ermitteln des Datentyps von Berichtselementen können Sie einen Ausdruck schreiben, der den Datentyp zurückgibt. Wenn Sie beispielsweise den Datentyp des Felds `MyField`anzeigen möchten, fügen Sie einer Tabellenzelle den folgenden Ausdruck hinzu: `=Fields!MyField.Value.GetType().ToString()`. Das Ergebnis zeigt den CLR-Datentyp an, der `MyField` darstellt, zum Beispiel `System.String` oder `System.DateTime`.  
   
 ## <a name="converting-dataset-fields-to-a-different-data-type"></a>Konvertieren von Datasetfeldern in einen anderen Datentyp  
  Sie können auch Datasetfelder konvertieren, bevor sie in einem Bericht verwendet werden. Im Folgenden werden Methoden beschrieben, mit denen Sie ein vorhandenes Datasetfeld konvertieren können:  
@@ -69,7 +69,7 @@ ms.locfileid: "48147920"
 -   Überprüfen Sie, ob die verwendete Datenverarbeitungserweiterung Metadaten zum Abrufen von vorformatierten Daten enthält. So enthält beispielsweise eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage die erweiterte Eigenschaft FORMATTED_VALUE für Cube-Werte, die bereits während der Verarbeitung des Cubes formatiert wurden. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Parameterdatentypen  
- Berichtsparameter müssen einen der folgenden Datentypen aufweisen: Boolesch (Boolean), Datum/Zeit (DateTime), Ganzzahl (Integer), Gleitkomma (Float) oder Text (String). Wenn eine Datasetabfrage Abfrageparameter enthält, werden automatisch Berichtsparameter erstellt und mit den Abfrageparametern verknüpft. Der Standarddatentyp für einen Berichtsparameter lautet String. Wenn Sie den Standarddatentyp eines Berichtsparameters ändern möchten, wählen Sie im Dialogfeld **Berichtsparametereigenschaften** auf der Seite **Allgemein** in der Dropdownliste **Datentyp** den gewünschten Wert aus.  
+ Berichtsparameter muss eine der folgenden Datentypen aufweisen: Boolescher Wert, "DateTime", Integer, Float oder Text (auch bezeichnet als Zeichenfolge). Wenn eine Datasetabfrage Abfrageparameter enthält, werden automatisch Berichtsparameter erstellt und mit den Abfrageparametern verknüpft. Der Standarddatentyp für einen Berichtsparameter lautet String. Wenn Sie den Standarddatentyp eines Berichtsparameters ändern möchten, wählen Sie im Dialogfeld **Berichtsparametereigenschaften** auf der Seite **Allgemein** in der Dropdownliste **Datentyp** den gewünschten Wert aus.  
   
 > [!NOTE]  
 >  Berichtsparameter mit einem DateTime-Datentyp unterstützen keine Millisekunden. Sie können zwar einen Parameter erstellen, der auf Werten mit Millisekunden basiert, in der Dropdownliste mit den verfügbaren Werten kann jedoch kein Wert ausgewählt werden, der Datums- oder Zeitwerte mit Millisekunden enthält.  
@@ -90,7 +90,7 @@ ms.locfileid: "48147920"
 |Nur der Datums-/Uhrzeitanteil (DateTime) des DateTimeOffset-Werts|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |Nur der Zeitverschiebungsanteil (Offset) des DateTimeOffset-Werts|`=Fields!MyDatetimeOffset.Value.Offset`|  
   
- Mit der Formatierungsfunktion können Sie zudem das Anzeigeformat des Werts steuern. Weitere Informationen finden Sie unter [Funktionen (Visual Basic)](http://go.microsoft.com/fwlink/?linkid=111483).  
+ Mit der Formatierungsfunktion können Sie zudem das Anzeigeformat des Werts steuern. Weitere Informationen finden Sie unter [Funktionen (Visual Basic)](https://go.microsoft.com/fwlink/?linkid=111483).  
   
 ## <a name="advanced-examples"></a>Komplexere Beispiele  
  Wenn Sie eine Datenquelle mit einem Datenanbieter verbinden, der nicht die Konvertierung aller Datentypen in der Datenquelle unterstützt, wird standardmäßig für alle nicht unterstützten Datentypen der Datentyp String verwendet. In den folgenden Beispielen finden Sie Lösungen für bestimmte Datentypen, die als Zeichenfolge (String) zurückgegeben werden.  
@@ -105,7 +105,7 @@ ms.locfileid: "48147920"
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- Dieses Beispiel zeigt das Datum (1. Juli 2008), gefolgt von der Uhrzeit mit 7-stelliger Präzision (6:05:07.9999999), gefolgt von der UTC-Zeitzonenverschiebung in Stunden und Minuten (plus 8 Stunden, 0 Minuten). Für den folgenden Beispielen wird dieser Wert befindet sich in einem `String` Feld mit dem Namen `MyDateTime.Value`.  
+ Dieses Beispiel zeigt das Datum (1. Juli 2008), gefolgt von der Uhrzeit mit 7-stelliger Präzision (6:05:07.9999999), gefolgt von der UTC-Zeitzonenverschiebung in Stunden und Minuten (plus 8 Stunden, 0 Minuten). In den folgenden Beispielen befindet sich dieser Wert im `String`-Feld `MyDateTime.Value`.  
   
  Sie können diese Daten mit einer der folgenden Methoden in einen oder mehrere CLR-Werte konvertieren:  
   
@@ -117,9 +117,9 @@ ms.locfileid: "48147920"
   
     -   Mit dem folgenden Ausdruck wird die Zeichenfolge in einen Datums- und Uhrzeitwert konvertiert: `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         Falls die Zeichenfolge `MyDateTime.Value` eine UTC-Zeitverschiebung aufweist, passt die Funktion `DateTime.Parse` zunächst die UTC-Zeitverschiebung an (7:00 - [`+08:00`] zur UTC-Zeit 23:00 in der vorherigen Nacht). Anschließend wendet die Funktion `DateTime.Parse` die UTC-Zeitverschiebung des lokalen Berichtsservers an und passt die Zeit ggf. noch einmal an die Sommerzeit an. So ist zum Beispiel in Redmond, Washington/USA die lokale Zeitverschiebung, angepasst an die Sommerzeit, `[-07:00]`, das heißt 7 Stunden früher als 23:00. Daraus ergibt sich der folgende `DateTime`-Wert: `2007-07-06 04:07:07 PM` (6. Juli 2007, 16:07).  
+         Falls die Zeichenfolge `MyDateTime.Value` eine UTC-Zeitverschiebung aufweist, passt die Funktion `DateTime.Parse` zunächst die UTC-Zeitverschiebung an (7:00 - [`+08:00`] zur UTC-Zeit 23:00 in der vorherigen Nacht). Anschließend wendet die Funktion `DateTime.Parse` die UTC-Zeitverschiebung des lokalen Berichtsservers an und passt die Zeit ggf. noch einmal an die Sommerzeit an. So ist zum Beispiel in Redmond, Washington/USA die lokale Zeitverschiebung, angepasst an die Sommerzeit, `[-07:00]`, das heißt 7 Stunden früher als 23:00. Das Ergebnis wird der folgende `DateTime` Wert: `2007-07-06 04:07:07 PM` (6. Juli 2007 unter 4:07 Uhr).  
   
- Weitere Informationen zum Konvertieren von Zeichenfolgen, die `DateTime` -Datentypen finden Sie unter [Analysieren von Zeichenfolgen für Datum und Uhrzeit](http://go.microsoft.com/fwlink/?LinkId=89703), [Formatieren von Datum und Uhrzeit für eine bestimmte Kultur](http://go.microsoft.com/fwlink/?LinkId=89704), und [auswählen Zwischen DateTime, DateTimeOffset und TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) auf MSDN.  
+ Weitere Informationen zum Konvertieren von Zeichenfolgen, die `DateTime` -Datentypen finden Sie unter [Analysieren von Zeichenfolgen für Datum und Uhrzeit](https://go.microsoft.com/fwlink/?LinkId=89703), [Formatieren von Datum und Uhrzeit für eine bestimmte Kultur](https://go.microsoft.com/fwlink/?LinkId=89704), und [auswählen Zwischen DateTime, DateTimeOffset und TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) auf MSDN.  
   
 -   Fügen Sie ein neues berechnetes Feld dem Berichtsdataset hinzu, das einen Ausdruck verwendet, mit dem Teile der Zeichenfolge extrahiert werden. Weitere Informationen finden Sie unter [Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich &#40;Berichts-Generator und SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
@@ -139,9 +139,9 @@ ms.locfileid: "48147920"
   
      `2008-07-01 06:05:07             2008                   480`  
   
- Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanktypen finden Sie unter [Datentypen (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql) und [Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanktypen finden Sie unter [Datentypen (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql) und [Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=120955).  
   
- Weitere Informationen zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datentypen fin derden Sie unter [Datentypen in der Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) in der [SQL Server Books Onlin dere](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Weitere Informationen zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datentypen fin derden Sie unter [Datentypen in der Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) in der [SQL Server Books Onlin dere](https://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Formatieren von Berichtselementen &#40;Berichts-Generator und SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  

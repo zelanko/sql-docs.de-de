@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e47126e626c76f25d6c376a3c4247e2caf6de9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e89bfac90a0658c8f5ba839632451187ffa9760d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089850"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810952"
 ---
 # <a name="replicate-identity-columns"></a>Replizieren von Identitätsspalten
   Wenn Sie einer Spalte eine IDENTITY-Eigenschaft zuweisen, generiert [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für neue Zeilen, die in die Tabelle, die die Identitätsspalte enthält, eingefügt werden, automatisch sequenzielle Zahlwerte. Weitere Informationen finden Sie unter [IDENTITY &#40;Eigenschaft&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Da Identitätsspalten als Teil des Primärschlüssels aufgenommen werden können, ist es wichtig, dass die Identitätsspalten keine doppelten Werte enthalten. Wenn Identitätsspalten in einer Replikationstopologie verwendet werden sollen, die an mehreren Knoten Updates besitzt, muss jeder Knoten in der Replikationstopologie einen anderen Bereich von Identitätswerten verwenden, damit es nicht zu Dopplungen kommt.  
@@ -57,7 +56,7 @@ ms.locfileid: "48089850"
  Wenn der Verleger nach einer Einfügung seinen Identitätsbereich ausgeschöpft hat, kann er automatisch einen neuen Bereich zuweisen, wenn die Einfügung von einem Mitglied mit der festen **db_owner** -Datenbankrolle ausgeführt wurde. Wenn die Einfügung von einem Benutzer mit einer anderen Rolle ausgeführt wird, muss der Protokolllese-Agent, der Merge-Agent oder ein Benutzer, der Mitglied der **db_owner**-Rolle ist, [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql) ausführen. Bei Transaktionsveröffentlichungen muss der Protokolllese-Agent ausgeführt werden, damit automatisch ein neuer Bereich zugeordnet wird (der Agent wird standardmäßig ununterbrochen ausgeführt).  
   
 > [!WARNING]  
->  Während einer umfangreichen Batcheinfügung wird der Replikationstrigger nur einmal und nicht für jede eingefügte Zeile ausgelöst. Dies kann zu einem Fehler der Insert-Anweisung führen, wenn ein Identitätsbereich während einer umfangreichen Einfügung, z. B. erschöpft ist ein `INSERT INTO` Anweisung.  
+>  Während einer umfangreichen Batcheinfügung wird der Replikationstrigger nur einmal und nicht für jede eingefügte Zeile ausgelöst. Dies kann zu einem Fehler bei der INSERT-Anweisung führen, wenn ein Identitätsbereich während einer umfangreichen Einfügung, z. B. einer `INSERT INTO`-Anweisung, ausgeschöpft ist.  
   
 |Datentyp|Bereich|  
 |---------------|-----------|  
@@ -99,7 +98,7 @@ ms.locfileid: "48089850"
  So könnten Sie z. B. für **@pub_identity_range**10.000, für **@identity_range** 1.000 (unter der Annahme einer geringeren Anzahl von Updates auf dem Abonnenten) und für **@threshold**. Nach 800 Einfügungen auf einem Abonnenten (80 Prozent von 1.000) wird einem Abonnenten ein neuer Bereich zugewiesen. Nach 8.000 Einfügungen auf dem Verleger wird dem Verleger ein neuer Bereich zugewiesen. Beim Zuweisen eines neuen Bereichs ergibt sich jedoch eine Lücke in den Identitätsbereichswerten in der Tabelle. Durch Angabe eines höheren Schwellenwerts fallen diese Lücken zwar kleiner aus, das System ist dann aber auch weniger fehlertolerant, d. h., wenn der Verteilungs-Agent aus irgendeinem Grund nicht ausgeführt werden kann, gehen einem Abonnenten möglicherweise schneller die Identitäten aus.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Zuweisen von Bereichen für die manuelle Identitätsbereichsverwaltung  
- Wenn Sie die manuelle Identitätsbereichsverwaltung angeben, müssen Sie sicherstellen, dass der Verleger und alle Abonnenten verschiedene Identitätsbereiche verwenden. Stellen Sie sich z. B. eine Tabelle auf dem Verleger mit einer als `IDENTITY(1,1)`definierten Identitätsspalte vor: Die Identitätsspalte beginnt mit 1 und erhöht sich bei jeder neu eingefügten Zeile um 1. Wenn die Tabelle auf dem Verleger 5.000 Zeilen besitzt und Sie für den weiteren Entwicklungsverlauf der Anwendung eine gewisse Vergrößerung der Tabelle erwarten, könnte der Verleger den Bereich 1-10.000 verwenden. Bei Vorhandensein von zwei Abonnenten könnte der Abonnent A den Bereich 10.001-20.000 und der Abonnent B den Bereich 20.001-30.000 verwenden.  
+ Wenn Sie die manuelle Identitätsbereichsverwaltung angeben, müssen Sie sicherstellen, dass der Verleger und alle Abonnenten verschiedene Identitätsbereiche verwenden. Stellen Sie sich z. B. eine Tabelle auf dem Verleger mit einer als `IDENTITY(1,1)`definierten Identitätsspalte vor: Die Identitätsspalte beginnt mit 1 und erhöht sich bei jeder neu eingefügten Zeile um 1. Wenn die Tabelle auf dem Verleger 5.000 Zeilen besitzt und Sie für den weiteren Entwicklungsverlauf der Anwendung eine gewisse Vergrößerung der Tabelle erwarten, könnte der Verleger den Bereich 1-10.000 verwenden. Bei Vorhandensein zweier Abonnenten könnte der Abonnent A den Bereich 10.001 bis 20.000 und der Abonnent B den Bereich 20.001 bis 30.000 verwenden.  
   
  Nachdem ein Abonnent mit einer Momentaufnahme oder auf andere Weise initialisiert wurde, führen Sie DBCC CHECKIDENT aus, um dem Abonnenten einen Anfangspunkt für dessen Identitätsbereich zuzuweisen. Auf Abonnent A würden Sie dazu z. B. `DBCC CHECKIDENT('<TableName>','reseed',10001)`ausführen. Auf Abonnent B ist dann `CHECKIDENT('<TableName>','reseed',20001)`auszuführen.  
   

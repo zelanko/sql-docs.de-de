@@ -9,12 +9,12 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.date: 08/10/2017
-ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6993b1fa53bc6aa3d0b6de95ca9feff4eb34ad51
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604060"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351855"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrieren einer Reporting Services-Installation (einheitlicher Modus)
 
@@ -26,7 +26,7 @@ ms.locfileid: "51604060"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Weitere Schritte erforderlich, finden Sie unter [können keine SQL Server 2005 zum Hosten von Berichtsserver 2014-Datenbanken](http://support.microsoft.com/kb/2796721).  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Weitere Schritte erforderlich, finden Sie unter [können keine SQL Server 2005 zum Hosten von Berichtsserver 2014-Datenbanken](https://support.microsoft.com/kb/2796721).  
   
 ||  
 |-|  
@@ -184,7 +184,7 @@ ms.locfileid: "51604060"
   
     1.  [Bereitstellen einer benutzerdefinierten Assembly](../custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2.  [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2.  [So wird es gemacht: Bereitstellen eines benutzerdefinierten Berichtselements](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3.  [Bereitstellen von Datenverarbeitungserweiterungen](../extensions/data-processing/deploying-a-data-processing-extension.md)  
   

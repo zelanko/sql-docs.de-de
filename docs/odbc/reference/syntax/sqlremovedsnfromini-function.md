@@ -20,16 +20,16 @@ ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 396c1b8c2e7ef3b407253fd0fbde04de34065ea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbd405189d17051c4f1a6f07c943f77d6a6289c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769748"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207799"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 1.0  
+ Eingeführt in Version: ODBC 1.0  
   
  **Zusammenfassung**  
  **SQLRemoveDSNFromIni** entfernt eine Datenquelle aus der Systeminformationen.  
@@ -39,7 +39,7 @@ ms.locfileid: "47769748"
 ```  
   
 BOOL SQLRemoveDSNFromIni(  
-     LPCSTR   lpszDSN);  
+     LPCSTR   lpszDSN);  
 ```  
   
 ## <a name="arguments"></a>Argumente  

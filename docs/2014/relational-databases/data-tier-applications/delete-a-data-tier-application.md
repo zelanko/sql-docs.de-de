@@ -20,19 +20,19 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f92e05d76fc3d3c585667045261649f91ce303d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183700"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532510"
 ---
 # <a name="delete-a-data-tier-application"></a>Löschen einer Datenebenenanwendung
   Sie können eine Datenebenenanwendung entweder mit dem Assistenten zum Löschen von Datenebenenanwendungen oder mit einem Windows PowerShell-Skript löschen. Sie können angeben, ob die zugeordnete Datenbank beibehalten, getrennt oder gelöscht wird.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  
   
--   **So aktualisieren Sie eine DAC mit:**  [dem Assistenten zum Registrieren von Datenebenenanwendungen](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
+-   **So aktualisieren Sie eine DAC mit:**  [Die Assistenten zum Registrieren von datenebenenanwendungen](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Wenn Sie eine Instanz einer Datenebenenanwendung (Data-Tier Application, DAC) löschen, legen Sie mit einer von drei Optionen fest, wie mit der der Datenebenenanwendung zugeordneten Datenbank verfahren werden soll. Durch alle drei Optionen werden die Metadaten der DAC-Definition gelöscht. Die Optionen unterscheiden sich in der Art, wie mit der Datenbank, die der Datenebenenanwendung zugeordnet ist, verfahren wird. Der Assistent löscht keine der Objekte auf Instanzebene, wie Anmeldenamen, die der DAC oder Datenbank zugeordnet sind.  
@@ -132,22 +132,22 @@ ms.locfileid: "48183700"
   
 1.  Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Instanz fest, die die zu löschende DAC enthält.  
   
-2.  Öffnen einer `ServerConnection` Objekt und eine Verbindung mit der gleichen Instanz.  
+2.  Öffnen Sie ein `ServerConnection`-Objekt, und stellen Sie eine Verbindung mit derselben Instanz her.  
   
-3.  Verwendung `add_DacActionStarted` und `add_DacActionFinished` zum Abonnieren die DAC-Aktualisierungsereignisse.  
+3.  Verwenden Sie `add_DacActionStarted` und `add_DacActionFinished`, um die DAC-Aktualisierungsereignisse zu abonnieren.  
   
 4.  Geben Sie die zu löschende DAC an.  
   
 5.  Verwenden Sie je nach geeigneter Löschoption einen dieser drei Codesätze:  
   
-    -   Um die DAC-Registrierung zu löschen, aber die Datenbank intakt bleibt, verwenden Sie die `Unmanage()` Methode.  
+    -   Verwenden Sie die `Unmanage()`-Methode, um die DAC-Registrierung zu löschen, während die Datenbank intakt bleibt.  
   
     -   Verwenden, um die DAC-Registrierung zu löschen, und trennen Sie die Datenbank, die `Uninstall()` Methode, und geben Sie `DetachDatabase`.  
   
-    -   Um die DAC-Registrierung zu löschen und die Datenbank löschen, verwenden Sie die `Uninstall()` Methode, und geben Sie `DropDatabase`.  
+    -   Verwenden Sie die `Uninstall()`-Methode, und geben Sie `DropDatabase` an, um die DAC-Registrierung zu löschen und die Datenbank zu trennen.  
   
 ### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>Beispiel für das Löschen der DAC und Belassen der Datenbank (PowerShell)  
- Im folgenden Beispiel wird eine DAC "MyApplication" mithilfe der `Unmanage()` Methode, um die DAC zu löschen, aber die Datenbank intakt bleibt.  
+ Im folgenden Beispiel wird die DAC MyApplication mithilfe der `Unmanage()`-Methode gelöscht. Dabei wird die DAC gelöscht, die Datenbank bleibt jedoch intakt.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -171,7 +171,7 @@ $dacstore.Unmanage($dacName)
 ```  
   
 ### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>Beispiel für das Löschen einer DAC und Trennen der Datenbank (PowerShell)  
- Im folgenden Beispiel wird eine DAC "MyApplication" mithilfe der `Uninstall()` Methode zum Löschen der DAC und trennen Sie die Datenbank.  
+ Im folgenden Beispiel wird die DAC MyApplication mithilfe der `Uninstall()`-Methode gelöscht und die Datenbank getrennt.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

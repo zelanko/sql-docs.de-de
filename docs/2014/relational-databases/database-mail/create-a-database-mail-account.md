@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], accounts
@@ -14,23 +13,23 @@ ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d066f107460e9671d4f5840271d8c4a466eb968
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081385"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798362"
 ---
 # <a name="create-a-database-mail-account"></a>Erstellen eines Kontos für Datenbank-E-Mail
   Verwenden Sie entweder den **Assistenten zum Konfigurieren von Datenbank-E-Mail** oder [!INCLUDE[tsql](../../includes/tsql-md.md)] , um ein Datenbank-E-Mail-Konto zu erstellen.  
   
--   **Vorbereitungen:**  [Voraussetzungen](#Prerequisites)  
+-   **Vorbereitungen:**  [Erforderliche Komponenten](#Prerequisites)  
   
--   **Erstellen eines Datenbank-E-Mail-Kontos mit:**  [Assistenten zum Konfigurieren von Datenbank-E-Mail](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **So erstellen Sie eine Datenbank-Mail-Kontos mit:**  [E-Mail-Datenbankkonfigurations-Assistent](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung:**  [Nächste Schritte zum Konfigurieren von Datenbank-E-Mail](#FollowUp)  
+-   **Nachverfolgung:**  [Nächste Schritte zum Konfigurieren der Datenbank-e-Mails](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
@@ -85,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nächste Schritte zum Konfigurieren von Datenbank-E-Mail  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nächste Schritte zum Konfigurieren der Datenbank-e-Mails  
   
 -   [Erstellen eines Profils für Datenbank-E-Mail](create-a-database-mail-profile.md)  
   

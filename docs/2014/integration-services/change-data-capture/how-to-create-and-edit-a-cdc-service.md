@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4fdd0df76d4b61896abd3c0478472f20384b05c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64204c8eb91d17a266e10f0a2b7fb938a0148397
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153412"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779912"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>Erstellen und Bearbeiten eines CDC Service
   In diesen Verfahren wird beschrieben, wie Sie über die CDC Service Configuration Console einen neuen Oracle CDC Service erstellen und bearbeiten.  
@@ -63,6 +62,6 @@ ms.locfileid: "48153412"
   
 ## <a name="see-also"></a>Siehe auch  
  [Change Data Capture Designer für Oracle von Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
- [Erstellen und Bearbeiten eines Oracle CDC Service](create-and-edit-an-oracle-cdc-service.md)  
+ [Create and Edit an Oracle CDC Service](create-and-edit-an-oracle-cdc-service.md)  
   
   

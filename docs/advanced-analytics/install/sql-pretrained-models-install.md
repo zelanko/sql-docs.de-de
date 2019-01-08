@@ -1,5 +1,5 @@
 ---
-title: Installieren von vorab trainierten Machine Learning-Modelle in SQL Server | Microsoft-Dokumentation
+title: Installieren Sie die vorab trainiertes Machine learning-Modelle – SQL Server Machine Learning
 description: SQL Server 2017 Machine Learning Services (R oder Python) oder SQL Server 2016 R Services vortrainierte Modelle für Sentiment Analysis "und" Image-featurebereitstellung hinzugefügt.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b2dfee04a7c0c9c39b7969551a85a49d441f30e5
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: 901ab45ea727ec03a439f07ac2b4a971c98060f2
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216831"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645439"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installieren von vorab trainierten Machine learning-Modelle in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -104,7 +104,7 @@ Auf eine Internetverbindung SQL Server 2017-Machine-Learning-Standardinstanz mit
 
 2. Fügen Sie in den folgenden R-Skript an der Eingabeaufforderung ein.
 
-    ```r
+    ```R
     # Create the data
     CustomerReviews <- data.frame(Review = c(
     "I really did not like the taste of it",
@@ -126,7 +126,7 @@ Auf eine Internetverbindung SQL Server 2017-Machine-Learning-Standardinstanz mit
 
 3. Drücken Sie EINGABETASTE, um die Stimmung Ergebnisse anzuzeigen. Ausgabe sollte wie folgt aussehen:
 
-    ```
+    ```R
     > sentimentScores
                                             Review SentimentScore
     1           I really did not like the taste of it      0.4617899
@@ -168,7 +168,7 @@ Auf eine Internetverbindung SQL Server 2017-Machine-Learning-Standardinstanz mit
 
 3. Drücken Sie EINGABETASTE, um die besten Ergebnisse zu drucken. Ausgabe sollte wie folgt aussehen:
 
-    ```
+    ```python
     >>> print(sentiment_scores)
                                                 review    scores         eval
     0            I really did not like the taste of it  0.461790         BLAH

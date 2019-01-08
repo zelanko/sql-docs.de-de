@@ -12,12 +12,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 25559152ebb3b748cee44a3a04dec2c23b7432b8
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072034"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772342"
 ---
 # <a name="ddl-triggers"></a>DDL-Trigger
   DDL-Trigger werden als Reaktion auf verschiedene DDL-Ereignisse (Data Definition Language, Datendefinitionssprache) ausgeführt. Diese Ereignisse entsprechen hauptsächlich [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die mit den Schlüsselwörtern CREATE, ALTER, DROP, GRANT, DENY, REVOKE oder UPDATE STATISTICS beginnen. Bestimmte gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können ebenfalls DDL-Trigger auslösen.  
@@ -35,7 +35,7 @@ ms.locfileid: "49072034"
   
 ## <a name="types-of-ddl-triggers"></a>DDL-Triggertypen  
  DDL-Trigger für Transact-SQL  
- Eine besondere Art von [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozedur, die eine oder mehrere führt [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung als Reaktion auf ein Ereignis im Gültigkeitsbereich des Servers oder der Datenbank. Beispielsweise wird ein DDL-Trigger möglicherweise ausgelöst, wenn z. B. eine ALTER SERVER CONFIGURATION-Anweisung ausgeführt wird, oder wenn eine Tabelle mit DROP TABLE gelöscht wird.  
+ Ein besonderer Typ der gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur, der mindestens eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung als Reaktion auf ein Ereignis aus dem Bereich des Servers oder der Datenbank ausführt. Beispielsweise wird ein DDL-Trigger möglicherweise ausgelöst, wenn z. B. eine ALTER SERVER CONFIGURATION-Anweisung ausgeführt wird, oder wenn eine Tabelle mit DROP TABLE gelöscht wird.  
   
  CLR-DDL-Trigger  
  Anstatt eine gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur auszuführen, führt ein CLR-Trigger eine oder mehrere Methoden aus, die in verwaltetem Code geschrieben wurden und Elemente einer Assembly sind, die in .NET Framework erstellt und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hochgeladen werden.  
@@ -110,7 +110,7 @@ GO
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Task|Thema|  
+|Aufgabe|Thema|  
 |----------|-----------|  
 |Beschreibt, wie DDL-Trigger erstellt, geändert, gelöscht oder deaktiviert werden.|[Implementieren von DDL-Triggern](implement-ddl-triggers.md)|  
 |Beschreibt, wie ein CLR-DDL-Trigger erstellt wird.|[Erstellen von CLR-Triggern](create-clr-triggers.md)|  

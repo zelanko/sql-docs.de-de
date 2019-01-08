@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41a23e9885a2d5bd49d074dc72699601eb08a6d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90705da83013de65423aa2984293f8f780194de0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850558"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588934"
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +43,26 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication =** ] **'***publication***'**  
+ [  **@publication =** ] **"**_Veröffentlichung_**"**  
  Der Name der zugeordneten Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**, dem alle Abonnementinformationen für diesen Server zurückgegeben.  
   
- [  **@article=** ] **"***Artikel***"**  
+ [  **@article=** ] **"**_Artikel_**"**  
  Der Name des Artikels. *Artikel* ist **Sysname**, hat den Standardwert **%**, dem alle Abonnementinformationen für die ausgewählten Veröffentlichungen und Abonnenten zurückgegeben. Wenn **alle**, nur einen Eintrag für das vollständige Abonnement für eine Veröffentlichung zurückgegeben.  
   
- [  **@subscriber=** ] **"***Abonnenten***"**  
+ [  **@subscriber=** ] **"**_Abonnenten_**"**  
  Der Name des Abonnenten, für den Abonnementinformationen abgerufen werden sollen. *Abonnenten* ist **Sysname**, hat den Standardwert **%**, dem alle Abonnementinformationen für die ausgewählten Veröffentlichungen und Artikel zurückgegeben.  
   
- [  **@destination_db=** ] **"***Destination_db***"**  
+ [  **@destination_db=** ] **"**_Destination_db_**"**  
  Der Name der Zieldatenbank. *Destination_db* ist **Sysname**, hat den Standardwert **%**.  
   
- [  **@found=** ] **"***gefunden***"** Ausgabe  
+ [  **@found=** ] **"**_gefunden_**"** Ausgabe  
  Ein Flag zur Angabe zurückgegebener Zeilen. *finden Sie*ist **Int** und ein OUTPUT-Parameter mit dem Standardwert 23456.  
   
  **1** gibt an, die Veröffentlichung gefunden wurde.  
   
  **0** gibt an, die Veröffentlichung wurde nicht gefunden.  
   
- [ **@publisher**=] **"***Verleger***"**  
+ [ **@publisher**=] **"**_Verleger_**"**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, und der Standardwert ist der Name des aktuellen Servers.  
   
 > [!NOTE]  
@@ -91,9 +90,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**dts_package_location**|**int**|Speicherort des DTS-Pakets, wenn dem Abonnement eines zugewiesen wurde. Wenn ein Paket, ein Wert vorhanden ist **0** gibt den Speicherort des Pakets auf die **Verteiler**. Der Wert **1** gibt an, die **Abonnenten**.|  
 |**subscriber_security_mode**|**smallint**|Der Sicherheitsmodus auf dem Abonnenten, in denen **1** Windows-Authentifizierung und **0** bedeutet, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
 |**subscriber_login**|**sysname**|Der Anmeldename auf dem Abonnenten.|  
-|**subscriber_password**||Das tatsächliche Abonnentenkennwort wird nie zurückgegeben. Das Ergebnis ist maskiert, indem eine "**\*\*\*\*\*\***" Zeichenfolge.|  
+|**subscriber_password**||Das tatsächliche Abonnentenkennwort wird nie zurückgegeben. Das Ergebnis ist maskiert, indem eine "**&#42;&#42;&#42;&#42;&#42;&#42;**" Zeichenfolge.|  
 |**job_login-Wert**|**sysname**|Name des Windows-Kontos, unter dem der Verteilungs-Agent ausgeführt wird.|  
-|**job_password**||Das tatsächliche Auftragskennwort wird nie zurückgegeben. Das Ergebnis ist maskiert, indem eine "**\*\*\*\*\*\***" Zeichenfolge.|  
+|**job_password**||Das tatsächliche Auftragskennwort wird nie zurückgegeben. Das Ergebnis ist maskiert, indem eine "**&#42;&#42;&#42;&#42;&#42;&#42;**" Zeichenfolge.|  
 |**distrib_agent_name**|**nvarchar(100)**|Name des Agentauftrags, der das Abonnement synchronisiert.|  
 |**subscriber_type kann**|**tinyint**|Typ des Abonnenten. Folgende Werte sind möglich:<br /><br /> **0** = SQL Server-Abonnenten<br /><br /> **1** = ODBC-Datenquellenserver<br /><br /> **2** = Microsoft JET-Datenbank (veraltet)<br /><br /> **3** = OLE DB-Anbieter|  
 |**subscriber_provider**|**sysname**|Eindeutiger Programmbezeichner (PROGID, Programmatic Identifier), mit dem der OLE DB-Anbieter für die Nicht-SQL Server-Datenquelle registriert wird.|  

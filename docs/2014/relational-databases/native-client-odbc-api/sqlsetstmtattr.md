@@ -14,12 +14,12 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edd96f9927a5fe698dd47489beffc738b5456708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208516"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361285"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt das gemischte Cursormodell (keysetgesteuert/dynamisch) nicht. Der Versuch, die Keysetgröße mit SQL_ATTR_KEYSET_SIZE festzulegen, schlägt fehl, wenn der festgelegte Wert ungleich 0 (null) ist.  
@@ -64,7 +64,7 @@ ms.locfileid: "48208516"
   
 |*ValuePtr* Wert|Description|  
 |----------------------|-----------------|  
-|SQL_DP_ON|Standard. Nach dem Aufruf [SQLPrepare-Funktion](http://go.microsoft.com/fwlink/?LinkId=59360), die anweisungsvorbereitung verzögert, bis **SQLExecute** aufgerufen wird oder der metaeigenschaftsvorgang (**SQLDescribeCol** oder **SQLDescribeParam**) ausgeführt wird.|  
+|SQL_DP_ON|Standard. Nach dem Aufruf [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360), die anweisungsvorbereitung verzögert, bis **SQLExecute** aufgerufen wird oder der metaeigenschaftsvorgang (**SQLDescribeCol** oder **SQLDescribeParam**) ausgeführt wird.|  
 |SQL_DP_OFF|Die Anweisung wird vorbereitet, sobald **SQLPrepare** ausgeführt wird.|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -122,7 +122,7 @@ ms.locfileid: "48208516"
   
  Der Typ für SQL_SOPT_SS_PARAM_FOCUS lautet SQLULEN.  
   
- Der Standardwert ist 0 (null). Das bedeutet, dass diese Aufrufe sich an Parameter richten, die Parametermarkierungen in der SQL-Anweisung entsprechen. Wenn diese Aufrufe auf die Parameternummer eines Tabellenwertparameters festgelegt sind, adressieren sie Spalten dieses Tabellenwertparameters. Wenn sie auf einen anderen Wert als die Parameternummer eines Tabellenwertparameters festgelegt sind, geben diese Aufrufe den Fehler IM020 zurück: "Parameterfokus verweist nicht auf einen Tabellenwertparameter."  
+ Der Standardwert ist 0 (null). Das bedeutet, dass diese Aufrufe sich an Parameter richten, die Parametermarkierungen in der SQL-Anweisung entsprechen. Wenn diese Aufrufe auf die Parameternummer eines Tabellenwertparameters festgelegt sind, adressieren sie Spalten dieses Tabellenwertparameters. Wenn auf einen Wert, der nicht die Parameternummer des einem Tabellenwertparameter ist festgelegt, diese Aufrufe, die den Fehler IM020 zurück: "Parameterfokus verweist nicht auf einen Tabellenwertparameter".  
   
 ### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
  Das SQL_SOPT_SS_NAME_SCOPE-Attribut gibt den Namensbereich für nachfolgende Katalogfunktionsaufrufe an. Von SQLColumns zurückgegebene Resultset hängt von der Einstellung von SQL_SOPT_SS_NAME_SCOPE ab.  
@@ -146,7 +146,7 @@ ms.locfileid: "48208516"
  Wenn Sie ein Katalog dann SQLTables SQLColumns oder SQLPrimaryKeys aufgerufen wird, wenn SQL_SOPT_SS_NAME_SCOPE einen Wert aufweist, die anders als andere funktionieren wird SQL_SS_NAME_SCOPE_TABLE, wird SQL_ERROR zurückgegeben. Ein Diagnosedatensatz mit SQLSTATE HY010 und der Meldung "Fehler in der Funktionsreihenfolge (SQL_SOPT_SS_NAME_SCOPE ist nicht auf SQL_SS_NAME_SCOPE_TABLE festgelegt)" wird generiert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLGetStmtAttr-Funktion](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr-Funktion](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
   
   

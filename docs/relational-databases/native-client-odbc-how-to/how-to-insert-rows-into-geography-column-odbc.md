@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Einfügen von Zeilen in eine Geografiespalte (ODBC) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Einfügen von Zeilen in eine Geografiespalte (ODBC) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24785ff7f4b708b615280231b13a86009aeaebb0
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: cc99a6dc997dd5cad589784446235a2ea1011d7d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753458"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206279"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Vorgehensweise: Einfügen von Zeilen in eine Geografiespalte (ODBC)
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Gewusst wie: Einfügen von Zeilen in eine Geografiespalte (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In diesem Beispiel werden unter Verwendung zweier verschiedener Bindungen (SQLCCHAR und SQLCBINARY) zwei Zeilen in eine Tabelle mit einer geography-Spalte aus einem WellKnownBinary (WKB) eingefügt. Daraufhin wird im Beispiel eine Zeile aus der Tabelle ausgewählt und mit ::STAsText() angezeigt. Das WKB ist 0x01010000000700ECFAD03A4C4001008000B5DF07C0, und die Anwendung gibt POINT(56.4595 -2.9842) auf der Konsole aus.  
+  In diesem Beispiel werden unter Verwendung zweier verschiedener Bindungen (SQLCCHAR und SQLCBINARY) zwei Zeilen in eine Tabelle mit einer geography-Spalte aus einem WellKnownBinary (WKB) eingefügt. Anschließend wird eine Zeile aus der Tabelle ausgewählt und verwendet:: STAsText(), um es anzuzeigen. Das WKB ist 0x01010000000700ECFAD03A4C4001008000B5DF07C0, und die Anwendung in der Konsole ausgegeben: POINT (56.4595-2.9842).  
   
  Dieses Beispiel erfordert keine ODBC-Datenquelle, es wird jedoch standardmäßig auf der lokalen Instanz von SQL Server ausgeführt.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "50753458"
  Weitere Informationen zu räumlicher Speicherung finden Sie unter [räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Beispiel  
- Das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine im Beispiel verwendete Tabelle.  
+ Die erste ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) Codebeispiel erstellt eine Tabelle, die von diesem Beispiel verwendet.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und user32.lib. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "50753458"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Mit dem dritten Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) wird die im Beispiel verwendete Tabelle gelöscht.  
+ Das dritte ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht die in diesem Beispiel verwendete Tabelle.  
   
 ```sql
 use tempdb  

@@ -10,12 +10,12 @@ ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d2be16142733fe7c54558781e6f916d3c17e7484
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717018"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392474"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Project Settings (Conversion) (DB2ToSQL)
 Die Seite die **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA für DB2-Syntax, um konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Syntax.  
@@ -69,13 +69,13 @@ Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folge
 ### <a name="default-schema-mapping"></a>Standardmäßige Schemazuordnung  
 Diese Einstellung gibt an, wie die DB2-Schemas in SQL Server-Schemas zugeordnet werden. In dieser Einstellung stehen zwei Optionen zur Auswahl:  
   
-1.  **Schema für die Datenbank:** In diesem Modus DB2 wird standardmäßig "Dbo" SQL Server-Datenbankschemas in SQL Server-Datenbank "sch1" Schema'sch1' zugeordnet werden.  
+1.  **Schema in Datenbank:** In diesem Modus DB2-Schema wird standardmäßig "Dbo" SQL Server-Datenbankschemas in SQL Server-Datenbank'sch1' "sch1" zugeordnet.  
   
 2.  **Schema zum Schema:** Schema "sch1" wird In diesem Modus DB2 standardmäßig auf "sch1" SQL Server-Datenbankschemas in SQL Server-Standarddatenbank bereitgestellt, die im Verbindungsdialogfeld zugeordnet werden.  
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic/Full-Modus:** Schema in der Datenbank  
+**Standard/optimistische/Full-Modus:** Schema für die Datenbank  
   
 ### <a name="conversion-ways-of-merge-statement"></a>Möglichkeiten der Konvertierung des MERGE-Anweisung  
   
@@ -88,7 +88,7 @@ Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folge
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic/Full-Modus:** mit MERGE Anweisung  
+**Standard/optimistische/Full-Modus:** Verwenden von MERGE-Anweisung  
   
 ### <a name="convert-calls-to-subprograms-that-use-default-arguments"></a>Konvertieren Sie Aufrufe von Unterprogramme, mit denen Standardargumente  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funktionen unterstützen nicht die Auslassung der Parameter im Funktionsaufruf. Darüber hinaus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funktionen und Prozeduren unterstützen keine Ausdrücke als Parameter Standardwerte.  
@@ -151,7 +151,7 @@ SSMA kann Aufrufe von der Wrapperfunktion in Aufrufe an die Prozedur konvertiere
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic/Full-Modus:** möglichst  
+**Standard/optimistische/Full-Modus:** Wenn möglich  
   
 ### <a name="convert-lock-table-statements"></a>LOCK-TABLE-Anweisungen konvertieren  
 SSMA kann viele SPERREN TABLE-Anweisungen in Tabellenhinweise konvertieren. SSMA kann nicht konvertiert werden alle SPERREN TABLE-Anweisungen, die PARTITION, SUBPARTITION, enthalten @dblink, und NOWAIT-Klauseln, und kennzeichnet diese Anweisungen mit Fehlermeldungen für die Konvertierung.  
@@ -264,9 +264,9 @@ SSMA kann DB2 TO_CHAR(date, format) in Prozeduren aus der Sysdb Datenbank konver
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** Using TO_CHAR_DATE Funktion  
+**Standard/vollständigen-Modus:** Verwenden von TO_CHAR_DATE-Funktion  
   
-**Vollmodus:** Using TO_CHAR_DATE_LS Funktion (NLS Care)  
+**Vollmodus:** Verwenden von TO_CHAR_DATE_LS-Funktion (NLS Care)  
   
 ### <a name="convert-transaction-processing-statements"></a>Konvertieren des Transaction Processing-Anweisungen  
 SSMA kann DB2 Transaction Processing-Anweisungen konvertieren:  
@@ -338,7 +338,7 @@ Wenn SSMA erstellt Tabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   
-**Standard/Optimistic-Modus:** ROWID für Tabellen mit Triggern hinzufügen  
+**Standard/vollständigen-Modus:** Fügen Sie die ROWID für Tabellen mit Triggern  
   
 **Vollmodus:** Ja  
   

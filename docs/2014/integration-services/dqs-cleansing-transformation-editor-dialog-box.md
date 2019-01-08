@@ -14,12 +14,12 @@ ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b262cea6362c1f6cb3c69c8b9e96e2bb09aa3e14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0de01fcb7f694331eb9ab4df33429f9a32ee1308
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062468"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978416"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Transformations-Editor für die DQS-Bereinigung (Dialogfeld)
   Im Dialogfeld **Transformations-Editor für die DQS-Bereinigung** können Sie Daten mithilfe von Data Quality Services (DQS) korrigieren. Weitere Informationen finden Sie unter [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "48062468"
  Wählen Sie eine vorhandene DQS-Wissensdatenbank für die verbundene Datenquelle aus. Weitere Informationen zur DQS-Wissensdatenbank finden Sie unter [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Verschlüsseln der Verbindung**  
- Gibt an, ob die Verbindung verschlüsselt wird, um die Datenübertragung zwischen dem DQS-Server und [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]zu verschlüsseln.  
+ Gibt an, ob die Verbindung verschlüsselt wird, um die Datenübertragung zwischen dem DQS-Server zu verschlüsseln und [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  **Verfügbare Domänen**  
  Listet die verfügbaren Domänen für die ausgewählte Wissensdatenbank auf. Es gibt zwei Typen von Domänen: einzelne Domänen und Verbunddomänen, die aus mindestens zwei einzelnen Domänen bestehen.  

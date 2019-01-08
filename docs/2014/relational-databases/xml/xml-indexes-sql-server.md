@@ -33,15 +33,15 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bb1fc2c37d56750a9ed66442e56dd7f9a22b8cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09aaf68c28e9f647f2f682de09e3f681bc3d739f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106960"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368122"
 ---
 # <a name="xml-indexes-sql-server"></a>XML-Indizes (SQL Server)
-  XML-Indizes können erstellt werden, auf `xml` Spalten vom Typ. Sie indizieren alle Tags, Werte und Pfade für die XML-Instanzen in der Spalte. Die Indizierung verbessert zudem die Abfrageleistung. Ihre Anwendung kann in folgenden Situationen von einem XML-Index profitieren:  
+  XML-Indizes können für `xml`-Datentypspalten erstellt werden. Sie indizieren alle Tags, Werte und Pfade für die XML-Instanzen in der Spalte. Die Indizierung verbessert zudem die Abfrageleistung. Ihre Anwendung kann in folgenden Situationen von einem XML-Index profitieren:  
   
 -   In Ihren Arbeitsauslastungen sind Abfragen von XML-Spalten üblich. Die Wartungskosten für den XML-Index während der Datenänderung müssen berücksichtigt werden.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48106960"
   
 -   Sekundärer XML-Index  
   
- Der erste Index für die Spalte des Datentyps `xml` muss der primäre XML-Index sein. Mithilfe des primären XML-Indexes werden drei Arten sekundärer Indizes unterstützt: PATH, VALUE und PROPERTY. Abhängig vom Typ der Abfragen können diese sekundären Indizes die Abfrageleistung steigern.  
+ Der erste Index für die Spalte des Datentyps `xml` muss der primäre XML-Index sein. Verwenden den primären XML-Index, werden die folgenden Typen von sekundären Indizes unterstützt: PATH, VALUE und PROPERTY. Abhängig vom Typ der Abfragen können diese sekundären Indizes die Abfrageleistung steigern.  
   
 > [!NOTE]  
 >  Sie können einen XML-Index nur dann erstellen oder bearbeiten, wenn die Datenbankoptionen korrekt für die Arbeit mit dem `xml`-Datentyp festgelegt sind. Weitere Informationen finden Sie unter [Verwenden der Volltextsuche mit XML-Spalten](use-full-text-search-with-xml-columns.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "48106960"
  XML-Instanzen werden in Spalten vom Typ `xml` als BLOBs (Binary Large Objects) gespeichert. Diese XML-Instanzen können groß sein, und die gespeicherte binäre Darstellung von Instanzen vom Datentyp `xml` kann bis zu 2 GB groß sein. Ohne Index werden diese BLOBs zur Laufzeit aufgeteilt, um eine Abfrage auszuwerten. Diese Aufteilung kann zeitaufwändig sein. Angenommen, beispielsweise liegt die folgende Abfrage vor:  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -72,12 +72,12 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  Um die XML-Instanzen auszuwählen, die die Bedingung in der `WHERE` -Klausel erfüllen, wird der XML-BLOB (Binary Large Object) in jeder Zeile der `Production.ProductModel` -Tabelle zur Laufzeit aufgeteilt. Dann wird der Ausdruck `(/PD:ProductDescription/@ProductModelID[.="19"]`) in der `exist()` -Methode ausgewertet. Diese Aufteilung zur Laufzeit kann abhängig von der Größe und Anzahl der in der Spalte gespeicherten Instanzen kostenintensiv sein.  
   
- Wenn Abfragen von XML-binary large Objects (BLOBs) in Ihrer anwendungsumgebung häufig vorkommt, ist in Index werden dadurch die `xml` Spalten vom Typ. Das Verwalten des Indexes während der Datenänderung verursacht jedoch auch Kosten.  
+ Wenn das Abfragen von XML-BLOBs in Ihrer Anwendungsumgebung häufig vorkommt, ist das Indizieren der Spalten des Datentyps `xml` hilfreich. Das Verwalten des Indexes während der Datenänderung verursacht jedoch auch Kosten.  
   
 ## <a name="primary-xml-index"></a>Primärer XML-Index  
  Der primäre XML-Index indiziert alle Tags, Werte und Pfade innerhalb der XML-Instanzen in einer XML-Spalte. Damit ein primärer XML-Index erstellt werden kann, muss die Tabelle, in der die XML-Spalte enthalten ist, einen gruppierten Index für den Primärschlüssel der Tabelle aufweisen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet diesen Primärschlüssel zum Korrelieren von Zeilen im primären XML-Index mit Zeilen in der Tabelle, in der die XML-Spalte enthalten ist.  
   
- Der primäre XML-Index ist eine aufgeteilte und persistente Darstellung der XML-BLOBs in den `xml` -Datentypspalte. Für jeden XML-BLOB in der Spalte erstellt der Index mehrere Datenzeilen. Die Anzahl der Zeilen im Index entspricht ungefähr der Anzahl der Knoten im XML-BLOB. Wenn eine Abfrage die vollständige XML-Instanz abruft, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Instanz aus der XML-Spalte bereit. Abfragen innerhalb der XML-Instanzen verwenden den primären XML-Index und können Skalarwerte oder XML-Teilbäume zurückgeben, indem der Index selbst verwendet wird.  
+ Der primäre XML-Index ist eine aufgeteilte und persistente Darstellung der XML-BLOBs in der `xml`-Datentypspalte. Für jeden XML-BLOB in der Spalte erstellt der Index mehrere Datenzeilen. Die Anzahl der Zeilen im Index entspricht ungefähr der Anzahl der Knoten im XML-BLOB. Wenn eine Abfrage die vollständige XML-Instanz abruft, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Instanz aus der XML-Spalte bereit. Abfragen innerhalb der XML-Instanzen verwenden den primären XML-Index und können Skalarwerte oder XML-Teilbäume zurückgeben, indem der Index selbst verwendet wird.  
   
  Jede Zeile speichert die folgenden Knoteninformationen:  
   
@@ -106,7 +106,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
  Die folgende Abfrage gibt z. B. gespeicherte Zusammenfassungsinformationen der `CatalogDescription``xml` Type-Spalte in der `ProductModel` Tabelle. Die Abfrage gibt <`Summary`>-Informationen nur für die Produktmodelle zurück, deren Katalogbeschreibung auch die <`Features`>-Beschreibung speichert.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
  Hinsichtlich des primären XML-Indexes werden die einzelnen XML-BLOB-Instanzen in der Basistabelle nicht aufgeteilt, sondern die Zeilen in dem Index, der dem jeweiligen XML-BLOB entspricht, werden sequenziell nach dem in der `exist()`-Methode angegebenen Ausdruck durchsucht. Wenn der Pfad in der Path-Spalte im Index gefunden wird, wird das <`Summary`>-Element mit seinen Unterstrukturen aus dem primären XML-Index abgerufen und in einen XML-BLOB als Ergebnis der `query()`-Methode konvertiert.  
@@ -148,7 +148,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
  Die folgende Abfrage zeigt, in welchen Fällen der PATH-Index hilfreich ist:  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -172,8 +172,8 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
   
 SELECT ContactID   
 FROM   Person.Contact  
@@ -190,7 +190,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  Die folgende Abfrage ruft z. B. für Produktmodell `19`die folgenden `ProductModelID` - und `ProductModelName` -Attributwerte mithilfe der `value()` -Methode ab. Der PROPERTY-Index kann eine schnellere Ausführung als die Verwendung des primären XML-Indexes oder der anderen sekundären XML-Indizes bereitstellen.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.value('(/PD:ProductDescription/@ProductModelID)[1]', 'int') as ModelID,  
        CatalogDescription.value('(/PD:ProductDescription/@ProductModelName)[1]', 'varchar(30)') as ModelName          

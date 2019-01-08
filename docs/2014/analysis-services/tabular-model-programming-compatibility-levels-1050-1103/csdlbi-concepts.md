@@ -12,19 +12,19 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 57ab374fb8ba0e5a75fc9a97300dace76452174b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146516"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377002"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI-Konzepte
   Die konzeptionelle Schemadefinitionssprache mit BI-Anmerkungen (CSDLBI) basiert auf Entity Data Framework, einer Abstraktion zum Darstellen von Daten, die es ermöglicht, dass unterschiedliche Datasets programmgesteuert aufgerufen, abgefragt oder exportiert werden können. CSDLBI wird verwendet, um mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellte Datenmodelle darzustellen, weil diese Sprache umfangreiche datengesteuerte Berichterstellungsfunktionen und Anwendungen unterstützt.  
   
  In diesem Abschnitt wird erläutert, wie die CSDLBI-Darstellung (tabellarischen und mehrdimensionalen) [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenmodellen zugeordnet wird, und es werden Beispiele für die einzelnen Modelltypen bereitgestellt.  
   
- Die Beispiele zur Veranschaulichung dieser Konzepte wurden aus der Beispieldatenbank AdventureWorks, verfügbar auf CodePlex, entnommen. Weitere Informationen zu den Beispielen finden Sie unter [Adventure Works-Beispiele für SQL Server](http://go.microsoft.com/fwlink/?linkID=220093).  
+ Die Beispiele zur Veranschaulichung dieser Konzepte wurden aus der Beispieldatenbank AdventureWorks, verfügbar auf CodePlex, entnommen. Weitere Informationen zu den Beispielen finden Sie unter [Adventure Works-Beispiele für SQL Server](https://go.microsoft.com/fwlink/?linkID=220093).  
   
 ## <a name="structure-of-a-tabular-model-in-csdlbi"></a>Struktur eines tabellarischen Modells in CSDLBI  
  Ein CSDLBI-Dokument, in dem ein Berichtsmodell und seine Daten beschrieben werden, beginnt mit der xsd-Anweisung, gefolgt von der Definition eines Modells.  
@@ -114,7 +114,7 @@ ms.locfileid: "50146516"
   
  Wenn Sie mit den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Tools ein Modell generieren, folgen die Namen, die für Objekte erstellt werden, den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Konventionen für Objektbenennung und Namenseindeutigkeit. Da jedoch CSDLBI auf dem Entity Data Framework (EDF) basiert, welches erfordert, dass Namen die Konventionen für C#-Bezeichner einhalten, nimmt der Server, wenn er die CSDLBI-Ausgabe für ein Modell erstellt, die innerhalb des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Schemas verwendeten Namen und erstellt automatisch neue Objektnamen, die den EDF-Anforderungen entsprechen. In der folgenden Tabelle werden die Vorgänge, durch die die neuen Namen generiert werden, beschrieben.  
   
-|Regel|Aktion|  
+|Rule|Aktion|  
 |----------|------------|  
 |Keine unzulässigen Zeichen|Unzulässige Zeichen werden durch Unterstriche ersetzt.|  
 |Namen müssen eindeutig sein|Wenn zwei Zeichenfolgen gleich sind, wird an eine ein Unterstrich plus eine Zahl angefügt, um sie eindeutig zu machen|  
@@ -125,27 +125,27 @@ ms.locfileid: "50146516"
 ## <a name="additions-to-support-multidimensional-models"></a>Ergänzungen zur Unterstützung mehrdimensionaler Modelle  
  In Version 1.0 der CSDLBI-Anmerkungen wurden nur tabellarische Modelle unterstützt. Version 1.1. wurde durch die Unterstützung mehrdimensionaler Modelle (OLAP-Cubes) erweitert, die mithilfe herkömmlicher BI-Entwicklungstools erstellt wurden. Daher können nun zur Berichterstellung XML-Anforderungen für ein mehrdimensionales Modell ausgeben werden und eine CSDLBI-Definition des Modells kann empfangen werden.  
   
- **Cubes:** einer SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabellarische Datenbank kann nur einen Modus umfassen. Im Gegensatz dazu kann jede mehrdimensionale Datenbank mehrere Cubes enthalten, wobei jede Datenbank einem Standardcube zugeordnet ist. Wenn Sie eine XML-Anforderung für einen mehrdimensionalen Server ausgeben, muss daher der Cube angegeben werden; andernfalls wird das XML für den Standardcube zurückgegeben.  
+ **Cubes:** Eine SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabellarische Datenbank kann nur einen Modus umfassen. Im Gegensatz dazu kann jede mehrdimensionale Datenbank mehrere Cubes enthalten, wobei jede Datenbank einem Standardcube zugeordnet ist. Wenn Sie eine XML-Anforderung für einen mehrdimensionalen Server ausgeben, muss daher der Cube angegeben werden; andernfalls wird das XML für den Standardcube zurückgegeben.  
   
  Die Darstellung eines Cubes ähnelt ansonsten sehr stark der einer tabellarischen Modelldatenbank. Der Cubename und der Cube entsprechen dem Namen und dem Bezeichner der tabellarischen Datenbank.  
   
- **Dimensionen:** eine Dimension wird in CSDLBI als Entität (Tabelle) mit Spalten und Eigenschaften dargestellt. Beachten Sie, dass eine Dimension im Modell, auch wenn sie nicht in einer Perspektive enthalten ist, in der CSDL-Ausgabe zwar dargestellt wird, jedoch als `Hidden` gekennzeichnet ist.  
+ **Dimensionen:** Eine Dimension wird in CSDLBI als Entität (Tabelle) mit Spalten und Eigenschaften dargestellt. Beachten Sie, dass eine Dimension im Modell, auch wenn sie nicht in einer Perspektive enthalten ist, in der CSDL-Ausgabe zwar dargestellt wird, jedoch als `Hidden` gekennzeichnet ist.  
   
- **Perspektiven:** ein Client kann CSDL für einzelne Perspektiven anfordern. Weitere Informationen finden Sie unter [DISCOVER_CSDL_METADATA-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
+ **Perspektiven:** Ein Client kann CSDL für einzelne Perspektiven anfordern. Weitere Informationen finden Sie unter [DISCOVER_CSDL_METADATA-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
- **Hierarchien:** Hierarchien unterstützt und in CSDLBI als Satz von Ebenen dargestellt werden.  
+ **Hierarchien:** Hierarchien werden unterstützt und wird in CSDLBI als Satz von Ebenen dargestellt.  
   
- **Member:** Unterstützung für das Standardelement wurde hinzugefügt, und Standardwerten werden die CSDLBI-Ausgabe automatisch hinzugefügt.  
+ **Mitglieder:** Unterstützung für das Standardelement wurde hinzugefügt, und Standardwerten werden die CSDLBI-Ausgabe automatisch hinzugefügt.  
   
- **Berechnete Elemente:** mehrdimensionale Modelle unterstützen berechnete Elemente für untergeordnetes Element des **alle** mit einem einzelnen realen Element.  
+ **Berechnete Elemente:** Mehrdimensionale Modelle unterstützen berechnete Elemente für untergeordnetes Element des **alle** mit einem einzelnen realen Element.  
   
- **Dimension-Attribute:** In CSDLBI-Ausgabe Dimensionsattribute unterstützt und automatisch als nicht aggregierbar gekennzeichnet sind.  
+ **Dimensionsattribute:** Dimensionsattribute werden in CSDLBI-Ausgabe unterstützt und automatisch als nicht aggregierbar gekennzeichnet.  
   
  **KPIs:** KPIs wurden in CSDLBI, Version 1.1 unterstützt, aber die Darstellung geändert hat. Bisher war ein KPI eine Eigenschaft eines Measures. In Version 1.1 kann das KPI-Element einem Measure hinzugefügt werden.  
   
- **Neue Eigenschaften:** zusätzliche Attribute wurden hinzugefügt, um DirectQuery-Modelle zu unterstützen.  
+ **Neue Eigenschaften:** Zusätzliche Attribute wurden hinzugefügt, um DirectQuery-Modelle zu unterstützen.  
   
- **Einschränkungen:** zellensicherheit wird nicht unterstützt.  
+ **Einschränkungen:** Zellensicherheit wird nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  

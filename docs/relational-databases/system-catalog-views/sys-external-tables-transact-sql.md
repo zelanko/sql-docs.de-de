@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58c86f9eed16b83d9cc63c54f907f50dda1aab4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd6b9c144df14f9480ff825726fc918deb86f6cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702718"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516290"
 ---
 # <a name="sysexternaltables-transact-sql"></a>Sys.external_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47702718"
 |reject_type|**tinyint**|Für externe Tabellen über eine externe Datenquelle HADOOP ist dies die Möglichkeit, abgelehnte Zeilen gezählt werden, wenn externe Daten Abfragen.|Wert: die Anzahl der abgelehnten Zeilen.<br /><br /> Prozentsatz – der Prozentsatz der abgelehnten Zeilen.|  
 |reject_value|**float**|Für externe Tabellen über eine externe Datenquelle HADOOP:<br /><br /> Für *Reject_type =* Wert, dies ist die Anzahl der ablehnungen von Zeile zu ermöglichen, bevor die Abfrage fehlschlägt.<br /><br /> Für *Reject_type* = Prozentsatz, dies ist der Prozentsatz von Zeilen ablehnungen zu ermöglichen, bevor die Abfrage fehlschlägt.||  
 |reject_sample_value|**int**|Für *Reject_type* = Prozentsatz, dies ist die Anzahl der Zeilen an, entweder erfolgreich oder erfolglos, laden, bevor Sie den Prozentsatz der abgelehnten Zeilen zu berechnen.|NULL, wenn Reject_type = Wert.|  
-|distribution_type|**int**|Für externe Tabellen über eine externe Datenquelle für SHARD_MAP_MANAGER ist dies die Verteilung der Daten der Zeilen in der zugrunde liegenden Basistabellen.|0 – Sharded<br /><br /> 1 – repliziert<br /><br /> 2 – Roundrobin|  
+|distribution_type|**int**|Für externe Tabellen über eine externe Datenquelle für SHARD_MAP_MANAGER ist dies die Verteilung der Daten der Zeilen in der zugrunde liegenden Basistabellen.|0 – Sharding<br /><br /> 1 - Replikation<br /><br /> 2: Round-Robin-|  
 |distribution_desc|**nvarchar(120)**|Für externe Tabellen über eine externe Datenquelle für SHARD_MAP_MANAGER ist dies den Verteilungstyp, die als Zeichenfolge angezeigt.||  
 |sharding_column_id|**int**|Für externe Tabellen über eine externe Datenquelle für SHARD_MAP_MANAGER und sharded-Verteilung ist dies die Spalten-ID der Spalte, die die Sharding-Schlüsselwerte enthält.||  
 |remote_schema_name|**sysname**|Für externe Tabellen über eine externe Datenquelle für SHARD_MAP_MANAGER ist dies das Schema, in denen die Basistabelle in den Remotedatenbanken (falls abweichend aus dem Schema, in die externe Tabelle definiert ist) befindet.||  

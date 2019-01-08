@@ -1,6 +1,6 @@
 ---
-title: Überwachen von SQL Server Machine Learning Services mit dynamischen Verwaltungssichten (DMVs) | Microsoft-Dokumentation
-description: Verwenden Sie dynamische Verwaltungssichten (DMVs), um SQL Server-Machine Learning-Dienste überwachen.
+title: 'Überwachung von R und Python-skriptausführung mit dynamischen Verwaltungssichten (DMVs): SQL Server-Machine Learning'
+description: Verwenden Sie dynamische Verwaltungssichten (DMVs), um R und Python externen skriptausführung in SQL Server-Machine Learning-Dienste überwachen.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: aa05c78f8bac4af5187b815126e0ec9e4b6fff4e
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743453"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645549"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Überwachen von SQL Server Machine Learning Services mit dynamischen Verwaltungssichten (DMVs)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +58,7 @@ Zeigen Sie die Machine Learning Services Installation-Einstellung und Konfigurat
 
 Führen Sie die Abfrage unten, um diese Ausgabe. Weitere Informationen zu den Sichten und Funktionen, die verwendet werden, finden Sie unter [dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md), [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), und [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md).
 
-```SQL
+```sql
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
     , CAST(value_in_use AS INT) AS ExternalScriptsEnabled
     , COALESCE(SIGN(SUSER_ID(CONCAT (
@@ -93,7 +93,7 @@ Zeigen Sie die aktiven Sitzungen, die Ausführung externer Skripts.
 
 Führen Sie die Abfrage unten, um diese Ausgabe. Weitere Informationen zu den dynamischen Verwaltungssichten verwendet, finden Sie unter [Sys. dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), [Sys. dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), und [Sys. dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).
 
-```SQL
+```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
     , s.login_name, r.wait_time, r.wait_type, r.last_wait_type, r.total_elapsed_time, r.cpu_time
     , r.reads, r.logical_reads, r.writes, er.language, er.degree_of_parallelism, er.external_user_name
@@ -133,7 +133,7 @@ Anzeigen der Ausführungsstatistiken für die externe-Laufzeit für R und Python
 
 Führen Sie die Abfrage unten, um diese Ausgabe. Weitere Informationen zu der dynamischen verwaltungssicht verwendet, finden Sie unter [dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). Die Abfrage gibt nur die Funktionen, die mehr als einmal ausgeführt wurden.
 
-```SQL
+```sql
 SELECT language, counter_name, counter_value
 FROM sys.dm_external_script_execution_stats
 WHERE counter_value > 0
@@ -156,7 +156,7 @@ Zeigen Sie die Leistungsindikatoren im Zusammenhang mit der Ausführung externer
 
 Führen Sie die Abfrage unten, um diese Ausgabe. Weitere Informationen zu der dynamischen verwaltungssicht verwendet, finden Sie unter [dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md).
 
-```SQL
+```sql
 SELECT counter_name, cntr_value
 FROM sys.dm_os_performance_counters 
 WHERE object_name LIKE '%External Scripts%'
@@ -182,7 +182,7 @@ Zeigen Sie Informationen zu den vom Betriebssystem, SQL Server und die externen 
 
 Führen Sie die Abfrage unten, um diese Ausgabe. Weitere Informationen zu den dynamischen Verwaltungssichten verwendet, finden Sie unter [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) und [Sys. dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md).
 
-```SQL
+```sql
 SELECT physical_memory_kb, committed_kb
     , (SELECT SUM(peak_memory_kb)
         FROM sys.dm_resource_governor_external_resource_pools AS ep
@@ -200,13 +200,13 @@ Die Abfrage gibt die folgenden Spalten zurück:
 
 ## <a name="memory-configuration"></a>Konfiguration des Arbeitsspeichers
 
-Informationen über die Konfiguration der maximalen Arbeitsspeicher in Prozent von SQL Server und externen Ressourcenpools anzeigen. Wenn SQL Server hat den Standardwert läuft `max server memory (MB)`, gilt dies als 100 % des Arbeitsspeichers OS.
+Informationen über die Konfiguration der maximalen Arbeitsspeicher in Prozent von SQL Server und externen Ressourcenpools anzeigen. Wenn SQL Server, mit dem Standardwert von ausgeführt wird `max server memory (MB)`, gilt dies als 100 % des Arbeitsspeichers OS.
 
 ![Die Ausgabe der Abfrage der Speicher-Konfiguration](media/dmv-memory-configuration.png "Ausgabe der Abfrage der Speicher-Konfiguration")
 
 Führen Sie die Abfrage unten, um diese Ausgabe. Weitere Informationen zu den Ansichten verwendet, finden Sie unter [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) und [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
 
-```SQL
+```sql
 SELECT 'SQL Server' AS name
     , CASE CAST(c.value AS BIGINT)
         WHEN 2147483647 THEN 100
@@ -234,7 +234,7 @@ In [SQL Server-Ressourcenkontrolle](../../relational-databases/resource-governor
 
 Führen Sie die Abfrage unten, um diese Ausgabe. Weitere Informationen zu den dynamischen Verwaltungssichten verwendet, finden Sie unter [Sys. dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) und [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
 
-```SQL
+```sql
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
     , p.total_cpu_usage_ms, p.read_io_completed_total, p.write_io_completed_total
 FROM sys.dm_resource_governor_resource_pools AS p
@@ -265,7 +265,7 @@ Zeigen Sie die R-Pakete in SQL Server-Machine Learning-Dienste installiert.
 
 Führen Sie die Abfrage unten, um diese Ausgabe. Die Verwendung der Abfrage ein R-Skript, um R-Pakete zu ermitteln, die mit SQL Server installiert werden.
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R'
 , @script = N'
 OutputDataSet <- data.frame(installed.packages()[,c("Package", "Version", "Depends", "License", "LibPath")]);'
@@ -277,7 +277,7 @@ Spalten, die zurückgegeben werden:
 
 | Spalte | Description |
 |--------|-------------|
-| Paket | Der Name des installierten Pakets. |
+| Package | Der Name des installierten Pakets. |
 | Version | Die Version des Pakets. |
 | Depends (Abhängig) | Listet die Pakete, von denen das installierte Paket abhängt. |
 | License (Lizenz) | Die Lizenz für das installierte Paket. |
@@ -291,7 +291,7 @@ Zeigen Sie die Python-Pakete, die in SQL Server-Machine Learning-Dienste install
 
 Führen Sie die Abfrage unten, um diese Ausgabe. Die Abfrage verwenden ein Python-Skript, um zu bestimmen, die Python-Pakete, die mit SQL Server installiert.
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'Python'
 , @script = N'
 import pip
@@ -303,7 +303,7 @@ Spalten, die zurückgegeben werden:
 
 | Spalte | Description |
 |--------|-------------|
-| Paket | Der Name des installierten Pakets. |
+| Package | Der Name des installierten Pakets. |
 | Version | Die Version des Pakets. |
 | Speicherort | Das Verzeichnis, in dem Sie das Paket finden können. |
 

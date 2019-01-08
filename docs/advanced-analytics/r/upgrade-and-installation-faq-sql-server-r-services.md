@@ -1,5 +1,5 @@
 ---
-title: Upgrade und Installation – häufig gestellte Fragen für SQL Server Machine Learning | Microsoft-Dokumentation
+title: 'Upgrade und Installation gestellte häufig Fragen (FAQ): SQL Server Machine Learning Services'
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: 37cd28b895c66d6ddcf1517e79ef6bf4537e2a96
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: dd92ba0e080da0dd8ed387ae0a9f3d431232c896
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712302"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432853"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Upgrade und Installation – häufig gestellte Fragen für SQL Server-Machine-Learning oder R-Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ Dieses Thema enthält Antworten auf einige häufig gestellte Fragen zur Installa
 + Einige Probleme auftreten, nur für Upgrades von Vorabversionen. Aus diesem Grund empfehlen wir, dass Sie die Version und-Edition zunächst identifizieren vor dem Lesen die Anmerkungen zu dieser. Führen Sie zum Abrufen von Versionsinformationen `@@VERSION` in einer Abfrage von SQL Server Management Studio.
 + Aktualisieren Sie auf die aktuellste Version oder die Dienstversion so bald wie möglich auf die Behandlung von Problemen, die in neueren Versionen behoben wurden.
 
-**Gilt für:** SQL Server 2016 R Services, SqlServer 2017 Machine Learning-Dienste (Datenbankintern)
+**Gilt für:** SQL Server 2016 R Services, SQL Server 2017-Machine-Learning-Services (Datenbankintern)
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>Anforderungen und Einschränkungen bei älteren Versionen von SQL Server 2016 
 

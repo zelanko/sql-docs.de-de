@@ -14,12 +14,12 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f4398efa6d8132800926c18d74bbcd7b9a524e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181320"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360952"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns` Gibt SQL_SUCCESS zurück, unabhängig davon, ob Werte vorhanden sind, für die *CatalogName*, *TableName*, oder *ColumnName* Parameter. **SQLFetch** gibt SQL_NO_DATA zurück, wenn in diesen Parametern ungültige Werte verwendet werden.  
@@ -29,7 +29,7 @@ ms.locfileid: "48181320"
   
  `SQLColumns` kann in einem statischen Servercursor ausgeführt werden. Wenn `SQLColumns` in einem aktualisierbaren Cursor (dynamischer Cursor oder Keysetcursor) ausgeführt wird, wird SQL_SUCCESS_WITH_INFO zurückgegeben. Das bedeutet, dass der Cursortyp geändert wurde.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt Meldung von Informationen für Tabellen auf Verbindungsservern, indem er einen zweiteiligen Namen für die *CatalogName* Parameter: *linked_server_name*.  
+ Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt Meldung von Informationen für Tabellen auf Verbindungsservern, indem er einen zweiteiligen Namen für die *CatalogName* Parameter: *Linked_server_name*.  
   
  Für ODBC 2. *x* Anwendungen, die nicht mithilfe von Platzhaltern in *TableName*, `SQLColumns` gibt Informationen über alle Tabellen, deren Namen übereinstimmen *TableName* und von der aktuellen gehören der Benutzer. Wenn der aktuelle Benutzer keine Tabelle besitzt, dessen Name, der *TableName* Parameter `SQLColumns` gibt Informationen über alle Tabellen, deren Besitzer andere Benutzer entspricht, in dem der Tabellenname der *TableName* der Parameter. Für ODBC 2. *x* Anwendungen mithilfe von Platzhaltern, `SQLColumns` alle Tabellen, deren Namen Übereinstimmung zurück *TableName*. Für ODBC 3. *x* Anwendungen `SQLColumns` alle Tabellen, deren Namen Übereinstimmung zurück *TableName* unabhängig vom Besitzer oder gibt an, ob Platzhalter verwendet werden.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48181320"
  Weitere Informationen über sparsespalten in ODBC finden Sie unter [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLColumns-Funktion](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns-Funktion](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
   
   

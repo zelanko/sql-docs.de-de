@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -17,19 +16,19 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 050f82b51537cc7d375ddd04a86e67b8e48a9f06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2a8dba54a8e638da5777456341321d38abbb01f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192170"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352320"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services-Ausdrücke (SSIS)
   Ein Ausdruck ist eine Kombination aus Symbolen (Bezeichner, Literale, Funktionen und Operatoren), die einen einzelnen Datenwert ergeben. Einfache Ausdrücke können aus einer einzelnen Konstante, Variable oder Funktion bestehen. Meist sind Ausdrücke jedoch komplex, verwenden mehrere Operatoren und Funktionen und verweisen auf mehrere Spalten und Variablen. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Ausdrücke zum Definieren von Bedingungen für CASE-Anweisungen, Erstellen und Aktualisieren von Werten in Datenspalten, Zuweisen von Werten zu Variablen, Aktualisieren oder Auffüllen von Eigenschaften zur Laufzeit, Definieren von Einschränkungen in Rangfolgeneinschränkungen sowie zum Bereitstellen von Ausdrücken für den For-Schleifencontainer verwendet werden.  
   
  Ausdrücke basieren auf einer Ausdruckssprache und der Ausdrucksauswertung. Die Ausdrucksauswertung analysiert Ausdrücke und ermittelt, ob sich Ausdrücke an die Regeln der Ausdruckssprache halten. Weitere Informationen zur Ausdruckssyntax und zu unterstützten Literalen und Bezeichnern finden Sie in den folgenden Themen.  
   
--   [Die Syntax &#40;SSIS&#41;](syntax-ssis.md)  
+-   [Syntax &#40;SSIS&#41;](syntax-ssis.md)  
   
 -   [Literale &#40;SSIS&#41;](numeric-string-and-boolean-literals.md)  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48192170"
   
 -   Variablen, deren Wert mit einem Ausdruck festgelegt werden kann. Die Variable GETDATE() legt z. B. den Wert der Variablen auf das aktuelle Datum fest.  
   
--   Rangfolgeneinschränkungen, bei denen mithilfe von Ausdrücken die Bedingungen angegeben werden können, die festlegen, ob der eingeschränkte Task oder Container eines Pakets ausgeführt wird. In einer rangfolgeneinschränkung verwendete Ausdrücke müssen zu ausgewertet `true` oder `false`. Der Ausdruck \@A > \@B z. B. vergleicht zwei benutzerdefinierte Variablen, um zu bestimmen, ob der eingeschränkte Task ausgeführt wird.  
+-   Rangfolgeneinschränkungen, bei denen mithilfe von Ausdrücken die Bedingungen angegeben werden können, die festlegen, ob der eingeschränkte Task oder Container eines Pakets ausgeführt wird. In einer Rangfolgeneinschränkung verwendete Ausdrücke müssen zu `true` oder `false` ausgewertet werden. Der Ausdruck \@A > \@B z. B. vergleicht zwei benutzerdefinierte Variablen, um zu bestimmen, ob der eingeschränkte Task ausgeführt wird.  
   
 -   For-Schleifen-Container, bei denen mithilfe von Ausdrücken Initialisierungs-, Auswertungs- und Inkrementanweisungen erstellt werden können, die von der Schleifenstruktur verwendet werden. Der Ausdruck \@Counter = 1 z. B. initialisiert den Schleifenzähler.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48192170"
  [Verwenden eines Ausdrucks in einer Datenflusskomponente](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Technischer Artikel, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
+ Technischer Artikel, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

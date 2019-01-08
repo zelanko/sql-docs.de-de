@@ -18,12 +18,12 @@ ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34a3ea4ac63a0ace769af174bbdbf433ad63b433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.openlocfilehash: 29fbce7f3e8fee200384f6162b28576d96593b37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700528"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502982"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +58,19 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Löscht die Planhinweisliste, die anhand des *Plan_guide_name*. Nachdem eine Planhinweisliste gelöscht wurde, werden zukünftige Ausführungen einer Abfrage, die zuvor mit der Planhinweisliste übereingestimmt hat, nicht von dieser Liste beeinflusst.  
   
  DROP ALL  
- Löscht alle Planhinweislisten in der aktuellen Datenbank. **N'*** Plan_guide_name* kann nicht angegeben werden, wenn DROP ALL angegeben wird.  
+ Löscht alle Planhinweislisten in der aktuellen Datenbank. **N'**_Plan_guide_name_ kann nicht angegeben werden, wenn DROP ALL angegeben wird.  
   
  DISABLE  
  Deaktiviert die Planhinweisliste, die anhand des *Plan_guide_name*. Nachdem eine Planhinweisliste deaktiviert wurde, werden zukünftige Ausführungen einer Abfrage, die zuvor mit der Planhinweisliste übereingestimmt hat, nicht von dieser Liste beeinflusst.  
   
  DISABLE ALL  
- Deaktiviert alle Planhinweislisten in der aktuellen Datenbank. **N'*** Plan_guide_name* kann nicht angegeben werden, wenn DISABLE ALL angegeben wird.  
+ Deaktiviert alle Planhinweislisten in der aktuellen Datenbank. **N'**_Plan_guide_name_ kann nicht angegeben werden, wenn DISABLE ALL angegeben wird.  
   
  ENABLE  
  Ermöglicht die Planhinweisliste, die anhand des *Plan_guide_name*. Eine aktivierte Planhinweisliste kann mit einer geeigneten Abfrage abgeglichen werden. Planhinweislisten werden standardmäßig bei ihrer Erstellung aktiviert.  
   
  ENABLE ALL  
- Aktiviert alle Planhinweislisten in der aktuellen Datenbank. **N'***Plan_guide_name***"** kann nicht angegeben werden, wenn ENABLE ALL angegeben wird.  
+ Aktiviert alle Planhinweislisten in der aktuellen Datenbank. **N'**_Plan_guide_name_**"** kann nicht angegeben werden, wenn ENABLE ALL angegeben wird.  
   
 ## <a name="remarks"></a>Hinweise  
  Das Löschen oder Ändern einer Funktion, einer gespeicherten Prozedur oder eines DML-Triggers, auf die bzw. den in einer Planhinweisliste verwiesen wird, verursacht einen Fehler.  

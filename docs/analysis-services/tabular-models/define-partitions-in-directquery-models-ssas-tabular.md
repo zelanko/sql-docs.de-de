@@ -1,5 +1,5 @@
 ---
-title: Definieren von Partitionen im DirectQuery-Modelle | Microsoft Docs
+title: Definieren von Partitionen in Analysis Services-DirectQuery-Modellen | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 599e2f97991bc6256132861f335ac7bd0b0aa592
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f6de0417055adc506fc6d9940aa3fa349f59c658
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044614"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072277"
 ---
 # <a name="define-partitions-in-directquery-models"></a>Definieren von Partitionen im DirectQuery-Modellen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

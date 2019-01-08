@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce74bb210e3d5d3cd01120b0bd406672db6dd5ed
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975098"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785821"
 ---
 # <a name="server-properties-in-analysis-services"></a>Servereigenschaften in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -30,7 +30,7 @@ Eigenschaftenseiten in SQL Server Management Studio zeigen eine Teilmenge der Ei
 > 
 > Zu anderen Eigenschaften, die die Serverkonfiguration beeinflussen, gehören Bereitstellungskonfigurationseigenschaften in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Weitere Informationen zu diesen Eigenschaften finden Sie unter [Angeben der Konfigurationseinstellungen für die Lösungsbereitstellung](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  
-##  <a name="bkmk_config"></a> Konfigurieren von Eigenschaften in Management Studio 
+## <a name="configure-properties-in-management-studio"></a>Konfigurieren von Eigenschaften in Management Studio 
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz her.  
   
@@ -40,12 +40,11 @@ Eigenschaftenseiten in SQL Server Management Studio zeigen eine Teilmenge der Ei
   
      Das Ändern von Servereigenschaften wird nur für Server im tabellarischen Modus und mehrdimensionalen Modus unterstützt. Wenn Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]installiert haben, verwenden Sie, sofern vom Microsoft-Support nicht anders angegeben, immer die Standardwerte.  
   
-     Anweisungen zum Behandeln von Funktions- oder Leistungsproblemen mithilfe von Servereigenschaften finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
-     Informationen zu Servereigenschaften (die in den letzten Versionen größtenteils unverändert geblieben sind) finden Sie auch im Microsoft-Whitepaper [SQL Server 2005 Analysis Services (SSAS) Server Properties](http://go.microsoft.com/fwlink/?LinkID=199102)(SQL Server 2005 Analysis Services-Servereigenschaften (SSAS)).    
+## <a name="configure-properties-in-msmdsrvini"></a>Konfigurieren von Eigenschaften in „msmdsrv.ini“
   
-##  <a name="bkmk_msmdsrvini"></a> Konfigurieren von Eigenschaften in „msmdsrv.ini“
-  Einige Eigenschaften können nur in der Datei msmdsrv.ini festgelegt werden. Wenn die gewünschte Eigenschaft auch nach dem Einblenden der erweiterten Eigenschaften nicht angezeigt wird, müssen Sie ggf. die Datei msmdsrv.ini direkt bearbeiten.
+Einige Eigenschaften können nur in der Datei msmdsrv.ini festgelegt werden. Diese Eigenschaften gelten nicht für Azure Analysis Services.
+Wenn die gewünschte Eigenschaft auch nach dem Einblenden der erweiterten Eigenschaften nicht angezeigt wird, müssen Sie ggf. die Datei msmdsrv.ini direkt bearbeiten. 
   
 1.  Überprüfen Sie die **DataDir** -Eigenschaft auf der Eigenschaftenseite „Allgemein“ in Management Studio, um den Speicherort der Analysis Services-Programmdateien zu bestätigen (einschließlich der Datei „msmdsrv.ini“).
 
@@ -59,7 +58,7 @@ Eigenschaftenseiten in SQL Server Management Studio zeigen eine Teilmenge der Ei
   
 5.  Speichern Sie die Datei, und starten Sie den Dienst erneut.  
   
-##  <a name="bkmk_ref"></a> Referenz zu Servereigenschaften  
+##  <a name="server-property-reference"></a>Referenz zu Servereigenschaften  
   
  In den folgenden Themen werden die verschiedenen Konfigurationseigenschaften von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] beschrieben:  
   

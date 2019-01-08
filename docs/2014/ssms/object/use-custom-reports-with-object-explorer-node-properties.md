@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
@@ -12,18 +12,18 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7198118f9eadbf58bab83727ed45899f5fd2a0df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09f3cf66d28a70eecd82adde490d02b521fd80ed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167670"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374402"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Verwenden benutzerdefinierter Berichte mit Eigenschaften von Objekt-Explorer-Knoten
   Benutzerdefinierte Berichte können im Kontext eines ausgewählten Objekt-Explorer-Knotens ausgeführt werden, wenn mit den benutzerdefinierten Berichten auf die Berichtsparameter dieses Knotens verwiesen wird. Dadurch kann für einen benutzerdefinierten Bericht der aktuelle Kontext verwendet werden, beispielsweise die aktuelle Datenbank oder ein Datenbank- bzw. Serverobjekt.  
   
 ## <a name="report-samples"></a>Beispielberichte  
- [Beispielberichte](http://go.microsoft.com/fwlink/?LinkId=81792), einschließlich der durch [!INCLUDE[msCoName](../../includes/msconame-md.md)]erstellten Standardberichte, stehen zum Herunterladen zur Verfügung. Diese Beispiele können mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geändert werden.  
+ [Beispielberichte](https://go.microsoft.com/fwlink/?LinkId=81792), einschließlich der durch [!INCLUDE[msCoName](../../includes/msconame-md.md)]erstellten Standardberichte, stehen zum Herunterladen zur Verfügung. Diese Beispiele können mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geändert werden.  
   
 ## <a name="object-explorer-node-report-parameters"></a>Berichtsparameter für Objekt-Explorer-Knoten  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48167670"
   
  `<?xml version="1.0" encoding="utf-8"?>`  
   
- `<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">`  
+ `<Report xmlns="https://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="https://schemas.microsoft.com/SQLServer/reporting/reportdesigner">`  
   
  `<ReportParameters>`  
   

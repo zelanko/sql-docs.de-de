@@ -17,12 +17,12 @@ ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e79e83263ab498a86a82fcdc65d56f6f8910d497
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f16cadbb06d1d25000aefada172a783a5a19c79c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222962"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368102"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Zulassen von teilweise vertrauenswürdigen Aufrufern
   Die gemeinsame Nutzung von Codebibliotheken ist bei der CLR-Integration gängige Praxis. Hierbei greift eine Assembly oder Anwendung häufig auf eine andere Assembly zu, die einen benutzerdefinierten Typ, eine gespeicherte Prozedur, eine benutzerdefinierte Funktion, ein benutzerdefiniertes Aggregat, einen Trigger oder eine Hilfsprogrammklasse enthält. Codebibliotheken, die von mehreren Anwendungen genutzt werden sollen, müssen mit einem starken Namen signiert werden.  
@@ -62,7 +62,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  In diesem Beispiel wird veranschaulicht, wie mithilfe des Attributs "Allow partially trusted callers" angegeben wird, dass es sich bei der Resultset-Assembly um eine Bibliothek handelt, die von anderen Assemblys auf sichere Weise aufgerufen werden kann. Diese Vorgehensweise ist etwas komplexer, jedoch sicherer als das Registrieren der aufrufenden Assembly mithilfe der UNSAFE-Berechtigung. Sie ist sicherer, weil durch das Registrieren der aufrufenden Assembly als SAFE die aufrufende Assembly lediglich auf für den Server externe Ressourcen zugreift und Beschädigungen der Integrität des Servers verhindert werden.  
   
- In den Erstellungsanweisungen für dieses Beispiel wird davon ausgegangen, dass die Quellcodedateien in einem Verzeichnis mit dem Namen c:\samples enthalten sind.  Wenn Sie ein anderes Verzeichnis verwenden, müssen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts ändern. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts erfordern außerdem die AdventureWorks-Datenbank. Sie können die AdventureWorks-Beispieldatenbank von der [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) auf der Startseite.  
+ In den Erstellungsanweisungen für dieses Beispiel wird davon ausgegangen, dass die Quellcodedateien in einem Verzeichnis mit dem Namen c:\samples enthalten sind.  Wenn Sie ein anderes Verzeichnis verwenden, müssen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts ändern. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts erfordern außerdem die AdventureWorks-Datenbank. Sie können die AdventureWorks-Beispieldatenbank von der [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) auf der Startseite.  
   
  Um das Beispiel zu erstellen und auszuführen, fügen Sie das erste Codelisting in eine Datei mit dem Namen ResultSet.cs ein, und kompilieren Sie mit csc /target:library ResultSet.cs.  
   

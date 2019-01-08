@@ -13,12 +13,12 @@ ms.assetid: b964300c-b220-4244-9fa6-c0c6a57760f6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ad655c6ff2fd6452ce82d87189de02980385ca73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38c18c948ea8c30817bdeb49b00a2334b2fd3d4a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158380"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369452"
 ---
 # <a name="report-server-database-is-not-configured-upgrade-advisor"></a>Berichtsserver-Datenbank ist nicht konfiguriert (Upgrade Advisor)
   Das Upgrade wird aufgrund einer unvollständigen Berichtsserverkonfiguration blockiert. Die Berichtsserver-Datenbank ist nicht konfiguriert.  
@@ -36,7 +36,7 @@ ms.locfileid: "48158380"
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Wenn Sie die Berichtsserver-Datenbank nicht konfiguriert haben, ist der Berichtsserver nicht betriebsbereit und muss vor dem Upgrade entfernt werden.  
   
- Weitere Informationen zum Deinstallieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , finden Sie unter [Deinstallieren von Reporting Services 2012](http://technet.microsoft.com/library/hh479745.aspx\(v=sql.11\)). Im Thema wird beschrieben, wie eine bestimmte Version deinstalliert wird; die Vorgehensweise dabei ist für frühere Versionen ähnlich.  
+ Weitere Informationen zum Deinstallieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , finden Sie unter [Deinstallieren von Reporting Services 2012](https://technet.microsoft.com/library/hh479745.aspx\(v=sql.11\)). Im Thema wird beschrieben, wie eine bestimmte Version deinstalliert wird; die Vorgehensweise dabei ist für frühere Versionen ähnlich.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Upgradeprobleme bei Reporting Services &#40;Upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

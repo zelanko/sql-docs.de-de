@@ -13,12 +13,12 @@ ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 279c83692b507c3031d3fbe638ad2e8dee4f591a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81be4bb3802888a8471308135775723c9ba0fd9e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184950"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419861"
 ---
 # <a name="configure-report-manager-native-mode"></a>Konfigurieren des Berichts-Managers (einheitlicher Modus)
   Der Berichts-Manager ist eine Front-End-Webanwendung, in der Sie Berichte anzeigen, Berichtsserverinhalt verwalten und den Benutzerzugriff auf einen Berichtsserver im einheitlichen Modus gewähren können. Der Berichts-Manager wird mit dem Berichtsserver-Webdienst in derselben Berichtsserverinstanz installiert und kann konfiguriert werden, wenn Sie in Setup die Option **Standardkonfiguration im einheitlichen Modus installieren** auswählen. Sie können den Berichts-Manager auch nach der Installation konfigurieren. Dieses Thema enthält Informationen zu den folgenden Berichts-Manager-Konfigurationsszenarios:  
@@ -55,7 +55,7 @@ ms.locfileid: "48184950"
   
 -   Sie müssen einen minimal konfigurierten Berichtsserver haben. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers &#40;einheitlicher Reporting Services-Modus&#41;](configure-a-report-server-reporting-services-native-mode.md).  
   
--   Der Berichtsserver muss im einheitlichen Modus ausgeführt werden. Der Berichts-Manager kann mit einem Berichtsserver, der für den integrierten SharePoint-Modus konfiguriert ist, nicht verwendet werden. In SQL Server 2012 kann ein Berichtsserver nicht von einem Modus in den anderen wechseln. Wenn Sie den von der Umgebung verwendeten Berichtsservertyp ändern möchten, müssen Sie den gewünschten Berichtsservermodus installieren und dann die Berichtselemente vom alten Berichtsserver zum neuen Berichtsserver kopieren oder verschieben. Dieser Prozess wird in der Regel als "Migration" bezeichnet. Die für das Migrieren erforderlichen Schritte hängen vom Modus ab, zu dem Sie migrieren, und von der Version, von der Sie migrieren. Weitere Informationen finden Sie unter [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).  
+-   Der Berichtsserver muss im einheitlichen Modus ausgeführt werden. Der Berichts-Manager kann mit einem Berichtsserver, der für den integrierten SharePoint-Modus konfiguriert ist, nicht verwendet werden. In SQL Server 2012 kann ein Berichtsserver nicht von einem Modus in den anderen wechseln. Wenn Sie den von der Umgebung verwendeten Berichtsservertyp ändern möchten, müssen Sie den gewünschten Berichtsservermodus installieren und dann die Berichtselemente vom alten Berichtsserver zum neuen Berichtsserver kopieren oder verschieben. Dieser Prozess wird in der Regel als „Migration“ bezeichnet. Die für das Migrieren erforderlichen Schritte hängen vom Modus ab, zu dem Sie migrieren, und von der Version, von der Sie migrieren. Weitere Informationen finden Sie unter [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).  
   
 -   Außerdem benötigen Sie Internet Explorer 7.0 oder höher mit aktivierter Skripterstellung. Weitere Informationen finden Sie unter [Planung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48184950"
   
 1.  Öffnen Sie die Datei **RSReportServer.config** in einem Text-Editor. Standardmäßig befindet sich diese Datei unter \Programme\Microsoft SQL Server\MSRS12.\<*instanzname*>\Reporting Services\ReportServer.  
   
-2.  Suchen `ReportServerURL`.  
+2.  Suchen Sie `ReportServerURL`.  
   
 3.  Ersetzen Sie die URL durch die URL der Berichtsserverinstanz.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48184950"
   
     1.  Öffnen Sie RSReportServer.config in einem Text-Editor. Standardmäßig befindet er sich im Ordner \Programme\Microsoft SQL Server\MSRS11. \< *Instancename*> \reporting.  
   
-    2.  Suchen `ReportServerURL`.  
+    2.  Suchen Sie `ReportServerURL`.  
   
     3.  Ersetzen Sie die URL durch die URL der Remote-Berichtsserverinstanz.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48184950"
   
     -   Deaktivieren Sie auf dem Berichts-Manager-Computer `WebServiceAndHTTPAccessEnabled` und `ScheduleEventsAndReportDeliveryEnabled`.  
   
-    -   Deaktivieren Sie auf die Berichtsserver-Computer `ReportManagerEnabled`.  
+    -   Deaktivieren Sie auf dem Berichtsserver-Computer `ReportManagerEnabled`.  
   
  Weitere Informationen zu Deaktivieren von Funktionen finden Sie im Abschnitt [Aktivieren und Deaktivieren der Reporting Services-Funktionen](turn-reporting-services-features-on-or-off.md).  
   
@@ -177,9 +177,9 @@ ms.locfileid: "48184950"
  [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Überprüfen einer Installation von Reporting Services](../install-windows/verify-a-reporting-services-installation.md)   
  [Anpassen von Stylesheets für den HTML-Viewer und Berichts-Manager](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
- [Aktivieren Sie und Deaktivieren der Reporting Services-Funktionen](turn-reporting-services-features-on-or-off.md)   
- [Verwalten eines Reporting Services im einheitlichen Modus-Berichtsservers](manage-a-reporting-services-native-mode-report-server.md)   
+ [Aktivieren und Deaktivieren der Reporting Services-Funktionen](turn-reporting-services-features-on-or-off.md)   
+ [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](manage-a-reporting-services-native-mode-report-server.md)   
  [RSReportServer-Konfigurationsdatei](rsreportserver-config-configuration-file.md)   
- [Konfigurieren Sie einen Berichtsserver im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+ [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   
   
