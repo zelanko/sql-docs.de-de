@@ -10,12 +10,12 @@ ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 759c2eb56bb437f17c06229b7b6a85f22b040319
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f271f8c3c2d3371326b1ffe8d7f1f55bf5ee89c4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031797"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396537"
 ---
 # <a name="data-matching"></a>Datenabgleich
   Der [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Datenabgleichsprozesse ermöglichen es Ihnen, Datenduplizierung zu reduzieren und Datengenauigkeit in einer Datenquelle zu verbessern. Der Abgleich analysiert den Grad der Duplizierung in allen Datensätzen einer einzelnen Datenquelle und gibt gewichtete Wahrscheinlichkeiten einer Übereinstimmung zwischen den einzelnen verglichenen Datensatzgruppen zurück. Sie können dann entscheiden, welche Datensätze Übereinstimmungen sind und die entsprechende Aktion für die Quelldaten ergreifen.  
@@ -64,7 +64,7 @@ ms.locfileid: "51031797"
   
  Ein Datenabgleichsprojekt besteht aus einem computerunterstützten Prozess und einem interaktiven Prozess. Das Abgleichsprojekt wendet die Abgleichsregeln in der Abgleichsrichtlinie auf die zu bewertende Datenquelle an. Dieser Prozess bewertet die Wahrscheinlichkeit, dass zwei beliebige Zeilen basierend auf einer Treffergenauigkeit übereinstimmen. Nur die Datensätze mit einer Wahrscheinlichkeit für eine Übereinstimmung, die größer als ein vom Data Steward in der Abgleichsrichtlinie festgelegter Wert ist, wird als Übereinstimmung angesehen.  
   
- Wenn DQS die Abgleichsanalyse ausführt, werden Cluster aus Datensätzen erstellt, die DQS als Übereinstimmungen ansieht. DQS identifiziert zufällig einen der Datensätze in jedem Cluster als Pivotdatensatz bzw. führenden Datensatz. Der Data Steward überprüft die Abgleichsergebnisse und lehnt jeden Datensatz ab, der keine entsprechende Übereinstimmung für einen Cluster aufweist. Der Data Steward wählt dann eine Survivorship-Regel aus, mit der DQS den Datensatz bestimmt, der den Abgleichsprozess überdauert und die übereinstimmenden Datensätze ersetzt. Die Survivorship-Regel kann „Pivotdatensatz“ (der Standard), „Vollständigster und längster Datensatz“, „Vollständigster Datensatz“ oder „Längster Datensatz“ sein. DQS bestimmt den (führenden) Survivor-Datensatz in jedem Cluster basierend darauf, welcher Datensatz den Kriterien bzw. dem Kriterium in der Survivorship-Regel am ehesten entspricht. Wenn mehrere Datensätze in einem angegebenen Cluster die Survivorship-Regel einhalten, wählt DQS zufällig einen dieser Datensätze aus. DQS ermöglicht es Ihnen, Cluster mit gemeinsamen Datensätzen als einzelnen Cluster anzuzeigen, indem Sie „Nicht überlappende Cluster anzeigen“ auswählen. Sie müssen den Abgleichsprozess ausführen, um die Ergebnisse gemäß dieser Einstellung anzuzeigen.  
+ Wenn DQS die Abgleichsanalyse ausführt, werden Cluster aus Datensätzen erstellt, die DQS als Übereinstimmungen ansieht. DQS identifiziert zufällig einen der Datensätze in jedem Cluster als Pivotdatensatz bzw. führenden Datensatz. Der Data Steward überprüft die Abgleichsergebnisse und lehnt jeden Datensatz ab, der keine entsprechende Übereinstimmung für einen Cluster aufweist. Der Data Steward wählt dann eine Survivorship-Regel aus, mit der DQS den Datensatz bestimmt, der den Abgleichsprozess überdauert und die übereinstimmenden Datensätze ersetzt. Die Survivorship-Regel kann „Pivotdatensatz“ (der Standardwert), „Vollständigster und längster Datensatz“, „Vollständigster Datensatz“ oder „Längster Datensatz“ sein. DQS bestimmt den (führenden) Survivor-Datensatz in jedem Cluster basierend darauf, welcher Datensatz den Kriterien bzw. dem Kriterium in der Survivorship-Regel am ehesten entspricht. Wenn mehrere Datensätze in einem angegebenen Cluster die Survivorship-Regel einhalten, wählt DQS zufällig einen dieser Datensätze aus. DQS ermöglicht es Ihnen, Cluster mit gemeinsamen Datensätzen als einzelnen Cluster anzuzeigen, indem Sie „Nicht überlappende Cluster anzeigen“ auswählen. Sie müssen den Abgleichsprozess ausführen, um die Ergebnisse gemäß dieser Einstellung anzuzeigen.  
   
  Sie können die Ergebnisse des Abgleichsprozesses in eine SQL Server-Tabelle oder eine CSV-Datei exportieren. Sie können Abgleichsergebnisse in zwei Formen exportieren: erstens die übereinstimmenden und die nicht übereinstimmenden Datensätze und zweitens Survivorship-Datensätze, die nur den Survivor-Datensatz für einen Cluster und die Ergebnisse ohne Übereinstimmung enthalten. Wenn in den Survivorship-Datensätzen der gleiche Datensatz als Survivor-Datensatz für mehrere Cluster identifiziert wird, wird dieser Datensatz nur einmal exportiert.  
   

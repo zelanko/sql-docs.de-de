@@ -11,12 +11,12 @@ ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec4b197c6c9588194531c2cc29ee1ba79d51fa6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669488"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543408"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Asynchrone Ausführung (Benachrichtigungsmethode)
 ODBC ermöglicht die asynchrone Ausführung der Verbindungs- und Vorgänge der Anweisung. Ein Thread der Anwendung kann eine ODBC-Funktion aufrufen, im asynchronen Modus aus, und die Funktion zurückgeben kann, bevor der Vorgang abgeschlossen ist, ermöglicht dem Thread der Anwendung für andere Aufgaben ist. In der Windows 7-SDK für asynchrone-Anweisung oder Verbindungsvorgängen sendet bestimmt eine Anwendung an, dass der asynchrone Vorgang abgeschlossen ist, verwenden der Abrufmethode war. Weitere Informationen finden Sie unter [asynchrone Ausführung (Methode abrufen)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Ab Windows 8 SDK, können Sie feststellen, dass ein asynchroner Vorgang abgeschlossen ist, verwenden die Benachrichtigungsmethode ist.  
@@ -48,7 +48,7 @@ ODBC ermöglicht die asynchrone Ausführung der Verbindungs- und Vorgänge der A
   
  Eine Anwendung sollte die Treiber-Manager-Version überprüfen Sie vor Verwendung dieses Features. Andernfalls ist, wenn ein fehlerhaft geschriebener Treiber keine Fehler führt und der Treiber-Manager-Version vor ODBC 3.81, Verhalten undefiniert.  
   
-## <a name="use-cases"></a>Einsatzgebiete  
+## <a name="use-cases"></a>Anwendungsfälle  
  Dieser Abschnitt zeigt die Anwendungsfälle für die asynchrone Ausführung und der Abrufmechanismus.  
   
 ### <a name="integrate-data-from-multiple-odbc-sources"></a>Integrieren von Daten aus mehreren ODBC-Datenquellen  
@@ -327,7 +327,7 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
  Verbindungsattribute SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE und SQL_ATTR_ASYNC_DBC_EVENT bestimmen, ob ODBC im asynchronen Modus ausgeführt wird, und gibt an, ob ODBC Benachrichtigungsmodus für ein Verbindungshandle ermöglicht. Anweisungsattribute SQL_ATTR_ASYNC_ENABLE und SQL_ATTR_ASYNC_STMT_EVENT bestimmen, ob ODBC im asynchronen Modus ausgeführt wird, und gibt an, ob ODBC Benachrichtigungsmodus für ein Anweisungshandle ermöglicht.  
   
-|SQL_ATTR_ASYNC_ENABLE oder SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT oder SQL_ATTR_ASYNC_DBC_EVENT|Mode|  
+|SQL_ATTR_ASYNC_ENABLE oder SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT oder SQL_ATTR_ASYNC_DBC_EVENT|Modus|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |Aktivieren|ungleich null|Asynchrone Benachrichtigung|  
 |Aktivieren|NULL|Asynchrone Abruf|  

@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f990d8fef80320a887c0d333619aae2f1d895aa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050032"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510023"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen
   In vielen Szenarien müssen Sie die Transaktionsisolationsstufe angeben. Transaktionsisolation für speicheroptimierte Tabellen unterscheidet sich von Transaktionsisolation für datenträgerbasierte Tabellen.  
@@ -32,12 +32,12 @@ ms.locfileid: "48050032"
   
 -   Transaktionen mit langer Laufzeit sollten bei speicheroptimierten Tabellen vermieden werden. Derartige Transaktionen erhöhen die Wahrscheinlichkeit, dass Konflikte auftreten und Transaktionen infolgedessen beendet werden. Eine Transaktion mit langer Ausführungszeit verzögert außerdem die Garbage Collection. Je länger eine Transaktion ausgeführt wird, desto länger werden zuletzt gelöschte Zeilenversionen von In-Memory OLTP beibehalten, wodurch die Suchleistung bei neuen Transaktionen beeinträchtigt werden kann.  
   
- Bei datenträgerbasierten Tabellen werden für die Transaktionsisolation normalerweise Sperren und Blockierungen eingesetzt. Speicheroptimierte Tabellen basieren auf Multiversionsverwaltung und Konflikterkennung, um Isolation sicherzustellen. Weitere Informationen finden Sie im Abschnitt für die Konflikterkennung, Überprüfung und Commitabhängigkeitsüberprüfungen unter [Transaktionen in speicheroptimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Bei datenträgerbasierten Tabellen werden für die Transaktionsisolation normalerweise Sperren und Blockierungen eingesetzt. Speicheroptimierte Tabellen basieren auf Multiversionsverwaltung und Konflikterkennung, um Isolation sicherzustellen. Ausführliche Informationen finden Sie im Abschnitt zur Konflikterkennung, zur Überprüfung und zu Commitabhängigkeitsüberprüfungen unter [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Datenträgerbasierte Tabellen ermöglichen Multiversionsverwaltung mit den Isolationsstufen SNAPSHOT und READ_COMMITTED_SNAPSHOT. Bei speicheroptimierten Tabellen sind alle Isolationsstufen multiversionsbasiert, einschließlich REPEATABLE READ und SERIALIZABLE.  
   
 ## <a name="types-of-transactions"></a>Transaktionstypen  
- Jede Abfrage in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] im Kontext einer Transaktion ausgeführt wird.  
+ Jede Abfrage in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird im Kontext einer Transaktion ausgeführt.  
   
  Es gibt drei Typen von Transaktionen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48050032"
 -   Implizite Transaktionen. Wenn die Option IMPLICIT_TRANSACTIONS auf ON festgelegt ist, wird eine Transaktion implizit gestartet, wenn der Benutzer eine Anweisung ausführt und es keinen aktiven Transaktionskontext gibt. Die Transaktion wird durch eine explizite COMMIT- und ROLLBACK-Anweisung abgeschlossen.  
   
 ## <a name="baseline-read-committed-isolation"></a>READ COMMITTED-Basislinienisolation  
- READ COMMITTED ist die Standardisolationsstufe in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Die Standardisolationsstufe in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ist READ COMMITTED.  
   
  Die READ COMMITTED-Isolationsstufe gewährleistet, dass Transaktionen nicht auf Daten zugreifen, für die nach einer Änderung außerhalb der aktuellen Transaktion noch kein Commit ausgeführt wurde. Die Transaktion liest also nur Daten, für die ein Commit in der Datenbank ausgeführt wurde oder die von der aktuellen Transaktion geändert wurden.  
   
@@ -80,7 +80,7 @@ BEGIN TRAN
 SELECT * FROM dbo.Customers c with (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] oh   
     ON c.customer_id=oh.customer_id  
-…  
+...  
 COMMIT  
 ```  
   
@@ -97,7 +97,7 @@ COMMIT
   
      Ein Tabellenabruf mithilfe einer WHILE-Schleife, bis eine neue Zeile gefunden wurde, ist ein Beispiel für ein Anwendungsmuster, das diese Annahme verwendet. Bei jeder Iteration der Schleife werden der Abfrage die neuesten Updates in der Datenbank angezeigt.  
   
-     **Richtlinie:** Wenn eine Anwendung eine speicheroptimierte Tabelle abrufen muss, um die neuesten Zeilen zu erhalten, die in die Tabelle geschrieben wurden, verschieben Sie die Abrufschleife aus der Transaktion heraus.  
+     **Richtlinie:** Wenn eine Anwendung eine Speicheroptimierte Tabelle zum Abrufen der letzten Zeilen in die Tabelle geschrieben wurden muss, verschieben Sie die Abrufschleife außerhalb des Bereichs der Transaktion aus.  
   
      Es folgt ein Beispiel für ein Anwendungsmuster, das die folgende Annahme verwendet: Abrufen einer Tabelle mithilfe einer WHILE-Schleife, bis eine neue Zeile gefunden wird. In jeder Schleifeniteration greift die Abfrage auf die neuesten Updates in der Datenbank zu.  
   

@@ -11,17 +11,17 @@ ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5d3fcc03b588cd5d014a23a291e04ff9c32f205
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 53e9fdb135b46cedaad6e79fa4ff12c06a4c3ea8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662976"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503947"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
 Die Microsoft Open Database Connectivity (ODBC)-Schnittstelle ist eine C-Sprache Programmierschnittstelle, die für Anwendungen, um Daten aus einer Vielzahl von Datenbank-Managementsystemen (DBMS) zugreifen kann. ODBC ist eine Schnittstelle auf niedriger Ebene hohe Leistung, die speziell für relationale Datenspeicher entworfen wurde.  
   
- Die ODBC-Schnittstelle ermöglicht maximale Interoperabilität – eine Anwendung kann Daten in verschiedenen DBMS-Systeme über eine einzelne Schnittstelle zugreifen. Darüber hinaus wird die Anwendung unabhängig von der alle DBMS können aus dem Zugriff auf Daten. Benutzer der Anwendung können wird aufgerufen, Treibern, die Schnittstelle zwischen einer Anwendung und ein bestimmtes DBMS-Software-Komponenten hinzufügen.  
+ Die ODBC-Schnittstelle ermöglicht, dass maximale Interoperabilität eine Anwendung Daten in verschiedenen DBMS-Systeme über eine einzelne Schnittstelle zugreifen kann. Darüber hinaus wird die Anwendung unabhängig von der alle DBMS können aus dem Zugriff auf Daten. Benutzer der Anwendung können wird aufgerufen, Treibern, die Schnittstelle zwischen einer Anwendung und ein bestimmtes DBMS-Software-Komponenten hinzufügen.  
   
 ## <a name="documentation"></a>Dokumentation  
  [ODBC-Programmierreferenz](../odbc/reference/odbc-programmer-s-reference.md)  

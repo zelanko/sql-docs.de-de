@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 350f3af1bfd6e2765f74d074727577541378d2e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00cfd52bfd6293e6875054fb7b7746b1ac52a7cb
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733835"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947654"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>Sys. database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "47733835"
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|Die ID der Konfigurationsoption.|  
 |**name**|**nvarchar(60)**|Der Name der Konfigurationsoption. Weitere Informationen zu den möglichen Konfigurationen, finden Sie unter [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
-|**Wert**|**sqlvariant**|Der Wert für diese Konfigurationsoption für das primäre Replikat.|  
+|**value**|**sqlvariant**|Der Wert für diese Konfigurationsoption für das primäre Replikat.|  
 |**value_for_secondary**|**sqlvariant**|Der Wert für diese Konfigurationsoption für die sekundären Replikate.|  
-|**gültige elevate_online**|**nvarchar(60)** |Die datenbankweit gültige Standardsatz für die online-Option für Indexvorgänge |
+|**is_value_default**|**bit** |Gibt an, ob der festgelegte Wert der Standardwert ist.|
 |**datenbankweit gültige elevate_resumable**|nvarchar(60)|Die datenbankweit gültige Standardsatz für die resumable-Option für Indexvorgänge| 
   
 ##  <a name="Permissions"></a> Berechtigungen  

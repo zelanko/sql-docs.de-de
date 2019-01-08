@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - extracting data [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 92bc7c34c7581f41a1ad814923aa350df4da4cfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1d68856ff161a46d9ee74d0ac7e252c532b136a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222500"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793832"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>Extrahieren von Daten mithilfe der XML-Quelle
   Um eine XML-Quelle hinzuzufügen und zu konfigurieren, muss das Paket bereits mindestens einen Datenflusstask enthalten.  
@@ -64,7 +63,7 @@ ms.locfileid: "48222500"
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Quelle](xml-source.md)   
- [Integration Services-Transformationen](transformations/integration-services-transformations.md)   
+ [SQL Server Integration Services-Transformationen](transformations/integration-services-transformations.md)   
  [SQL Server Integration Services-Pfade](integration-services-paths.md)   
  [Datenflusstask](../control-flow/data-flow-task.md)  
   

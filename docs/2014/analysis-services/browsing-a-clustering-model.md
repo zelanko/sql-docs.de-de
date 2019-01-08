@@ -16,12 +16,12 @@ ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c994b43bda37981d7073d0ee16f32369677e244e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a0fd00201f782bba8b06ddde8753a86aeb89046
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060410"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535726"
 ---
 # <a name="browsing-a-clustering-model"></a>Durchsuchen eines Clustermodells
   Wenn Sie öffnen ein Clusteringmodell mit **Durchsuchen**, das Modell wird angezeigt, in einem interaktiven Viewer, der clustering-Viewer in etwa wie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Die Viewer unterstützt Sie dabei, die erstellten Cluster zu untersuchen und die Clustermerkmale zu verstehen. Darüber hinaus können Sie einzelne Segmente mit anderen Segmenten oder mit der Grundgesamtheit vergleichen und die Unterschiede untersuchen.  
@@ -121,7 +121,7 @@ ms.locfileid: "48060410"
   
     -   Die Breite der Raute gibt die Varianz des Attributs in diesem Knoten an. Eine schlankere Raute sagt also aus, dass mithilfe des Knotens eine genauere Vorhersage getroffen werden kann.  
   
-5.  Um mehr Platz im Diagramm schaffen, Maustaste einen Cluster, die Sie nicht benötigen, um sofort anzuzeigen, und wählen **Spalte ausblenden**. Dadurch wird der Cluster nicht aus dem Modell gelöscht, sondern nur vorübergehend in der Spalte ausgeblendet.  
+5.  Um mehr Platz im Diagramm schaffen, Maustaste einen Cluster, die Sie nicht benötigen, um sofort anzuzeigen, und wählen **Spalte ausblenden**. Dies nicht aus dem Modell gelöscht, reduzieren die Spalte nur vorübergehend.  
   
      Um Cluster anzuzeigen, die Sie ausgeblendet haben, können Sie auf, und ziehen Sie den Spaltenrand oder wählen Sie den Namen des Clusters aus der Liste, **mehr Cluster**.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "48060410"
   
 -   Mit der rechten Maustaste in der Clusterspalte Spaltenüberschrift, und wählen **Drillthroughs zu Strukturdaten** um ausführliche Informationen zu Clusterelementen abzurufen, die im Modell enthalten waren.  
   
-     Wenn Sie Kundenprofile erstellen, können Sie die Kontaktinformationen z. B. in den zugrunde liegenden Daten (der Miningstruktur) belassen, ohne sie in das Modell einzuschließen, da sie für die Analyse nicht relevant sind. Nachdem die Kunden den Clustern zugewiesen wurden, können Sie die detaillierten Daten jedoch mithilfe eines Drillthrough-Vorgangs anzeigen.  
+     Z. B. Wenn Sie Kundenprofile erstellen, Sie die Kontaktinformationen in der zugrunde liegenden Daten (der Miningstruktur) belassen, jedoch nicht im Modell enthalten, da er nicht für die Analyse hilfreich ist. Nachdem die Kunden den Clustern zugewiesen wurden, können Sie die detaillierten Daten jedoch mithilfe eines Drillthrough-Vorgangs anzeigen.  
   
  [Zurück zum Anfang](#BKMK_Tabs)  
   
@@ -176,11 +176,11 @@ ms.locfileid: "48060410"
   
 5.  Klicken Sie auf **nach Excel kopieren**.  
   
-     Das neue Clustermerkmaldiagramm wird auf einem eigenen Arbeitsblatt hinzugefügt. Sie können es in dasselbe Arbeitsblatt verschieben wie das andere Profil, um den Vergleich zwischen beiden zu vereinfachen. Im nächsten Schritt nehmen Sie den Vergleich vor.  
+     Das neue Clustermerkmaldiagramm wird auf einem eigenen Arbeitsblatt hinzugefügt. Sie können es auf dem Arbeitsblatt mit dem anderen Profil zu vereinfachen, sie zu vergleichen, was im nächsten Schritt fortfahren.  
   
  **Tipps**  
   
--   Kunden im Cluster Über 65 zeichnen sich durch das primäre Merkmal aus, dass sie Ihr Produkt nicht kaufen! Wenn Sie wissen möchten, warum das so ist, können Sie die Cluster durchsuchen und Gruppen vergleichen. Oder Sie erstellen ein verwandtes Modell mithilfe eines Algorithmus, der sich für die Untersuchung von Ursachen und Ergebnissen eignet, z. B. ein Entscheidungsstrukturmodell oder ein Naïve Bayes-Modell.  
+-   Beachten Sie, dass das primäre Merkmal des Kunden in den Cluster über 65 ist, dass sie Ihr Produkt nicht kaufen! Wenn Sie wissen möchten, warum das so ist, können Sie die Cluster durchsuchen und Gruppen vergleichen. Oder Sie erstellen ein verwandtes Modell mithilfe eines Algorithmus, der sich für die Untersuchung von Ursachen und Ergebnissen eignet, z. B. ein Entscheidungsstrukturmodell oder ein Naïve Bayes-Modell.  
   
 -   Wenn Sie eine vollständige Liste der Attribute und Wahrscheinlichkeitswerte für diesen Cluster (oder alle Cluster) abrufen möchten, können Sie eine Abfrage erstellen. Beispiele für Abfragen für Clustermodelle, finden Sie unter [Clusteringmodellabfragen](data-mining/clustering-model-query-examples.md).  
   
@@ -205,7 +205,7 @@ ms.locfileid: "48060410"
   
      Beachten Sie, dass im Hintergrund die **Clusterunterscheidung** Viewer sendet komplexe Abfragen an die Datamining-Server, um die Attribute zu extrahieren, die wichtigsten beim unterscheiden zwischen den beiden Gruppen, erleichtert Ihnen die zu vergleichende sind, zwei Gruppen von Kunden.  
   
-2.  Klicken Sie auf eines der **begünstigt...** Spalten auf.  
+2.  Klicken Sie auf eines der **begünstigt...**  Spalten.  
   
      Der Balken rechts neben der Attribut- und Werteliste zeigt, welchen Funktionen oder Werte das wichtigste Merkmal des ausgewählten Clusters sind.  
   

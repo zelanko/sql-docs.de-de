@@ -11,12 +11,12 @@ ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c4fe81ed240f210157e450b6c54fe370e22bcb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b34ff1ef4f204b2c4a753366aa6e84f678c9ea8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094130"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397764"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Erste Schritte mit dem Data Mining (Data Mining-Add-Ins für Excel)
   Data Mining ist ein Vorgang zum Ermitteln wichtiger Muster in Daten. Data Mining ergänzt auf natürliche Weise das Untersuchen und Auswerten Ihrer Daten durch herkömmliche Business Intelligence. Mit Computeralgorithmen können große Datenmengen verarbeitet und Muster und Trends entdeckt werden, die andernfalls verborgen bleiben würden.  
@@ -52,19 +52,19 @@ ms.locfileid: "48094130"
 ## <a name="define-your-goal"></a>Definieren Ihres Ziels  
  Nehmen Sie sich zunächst einen Moment Zeit, um sich über die Frage klar zu werden, auf die Sie eine Antwort suchen. Das Durchsuchen von Daten an sich ist aufschlussreich, wenn Sie jedoch Ihre Erkenntnisse auf neue Daten anwenden möchten, müssen Sie in der Lage sein, klar zu umreißen, welche Ergebnisse Sie vom Modell erwarten und wie Sie bewerten können, ob das Modell Ihren Zielen gerecht wird.  
   
- Formulieren Sie als Ziel nicht "Gewinnen neuer Kunden", sondern definieren Sie Ihr Ziel etwas konkreter, z. B. "Bestimmen des demografischen Hintergrunds potenzieller Kunden, die unser Produkt mit einer Wahrscheinlichkeit von mindestens 65 % kaufen werden".  
+ Klären Sie z. B. als Ziel "Gewinnen neuer Kunden", nicht Ihr Ziel etwas konkreter, z. B. "Bestimmen des demografischen Hintergrunds potenzieller Kunden, die wahrscheinlich unser Produkt mit einer Wahrscheinlichkeit von mindestens 65 % kaufen werden".  
   
--   Ihr Dataset sollte mindestens ein "Ergebnisattribut" enthalten, das Sie für Training und Vorhersage verwenden können. Ist kein solches Attribut vorhanden, können Sie Trainingsdaten manuell so kennzeichnen oder andere Spalten nutzen, um eine Proxy-Variable für das Ergebnis zu erhalten.  
+-   Ihr Dataset sollte mindestens ein "Ergebnisattribut" enthalten, die Sie für Training und Vorhersage verwenden können. Ist kein solches Attribut vorhanden, können Sie Trainingsdaten manuell so kennzeichnen oder andere Spalten nutzen, um eine Proxy-Variable für das Ergebnis zu erhalten.  
   
-     Wenn Sie beispielsweise "die besten potenziellen Kunden" vorhersagen möchten, sollten Sie vorhandene Kunden bereits im Vorfeld anhand einer Geschäftsregel kennzeichnen, damit das Data Mining von den bereitgestellten Beispielen "lernen" kann.  
+     Z. B. Wenn Sie "die besten potenziellen Kunden" vorhersagen möchten, sollten Sie einer Geschäftsregel zuvor vorhandene Kunden, anwenden, damit Sie Datamining von den Beispielen lernen kann, die Sie bereitstellen.  
   
 -   Wenn Sie mit einem Wert arbeiten, der sich im Laufe der Zeit verändert und Sie ggf. zukünftige Trends vorhersagen möchten, denken Sie über die gewünschte Granularität der Ergebnisse nach. Möchten Sie Vorhersagen auf Grundlage eines Tages, Monats oder Jahres erstellen? Ihre Daten müssen mit den gleichen Einheiten analysiert werden, die Sie auch vorhersagen möchten.  
   
-     Wenn Sie bei zyklischen Mustern keine aussagekräftigen Ergebnisse mit täglichen Daten erhalten, versuchen Sie es mit anderen zeitlichen Segmenten, oder versuchen Sie, Wochentage, Monate oder sogar Feiertage zugrunde zu legen.  
+     Bei zyklischen Mustern, wenn Sie keine aussagekräftigen Ergebnisse mit täglichen Daten erhalten, versuchen Sie es anderen zeitlichen Segmenten, oder versuchen Sie es mit der Wochentage, Monate oder sogar Feiertage.  
   
 -   Ehe Sie einen Assistenten starten, um neue Korrelationen in den Daten aufzudecken, nehmen Sie Ihre Daten eingehender unter die Lupe, und überlegen Sie, welche Art von bestehenden Beziehungen u. U. im Dataset vorhanden ist. Gibt es uneindeutige Variablen? Gibt es Duplikate oder Proxys?  
   
--   Mit welchen Metriken wird der Erfolg des Modells ausgewertet? Wie wissen Sie, dass das Modell ausreichend ist?  
+-   Was sind die Metriken, die mit denen der Erfolg des Modells ausgewertet werden soll? Wie wissen Sie, dass das Modell "gut genug"?  
   
 -   Möchten Sie mit dem Data Mining-Modell Vorhersagen machen oder nur interessante Muster oder Zusammenhänge aufdecken?  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48094130"
   
  Nehmen Sie sich etwas Zeit, um die Verteilung der Werte zu überprüfen und potenzielle Probleme wie fehlende Werte oder Platzhalter zu bestimmen.  
   
- Wenn Sie beabsichtigen, das Data Mining für ein Dataset auszuführen, das für die Analyse mit anderen Methoden zu groß oder komplex war, sollten Sie eine Stichprobenentnahme oder eine Reduzierung der Datenmenge in Betracht ziehen.  
+ Wenn Sie zum Ausführen von Datamining für ein Dataset, das war zu groß oder komplex, dass Sie sie mit anderen Methoden analysieren konnte nicht planen, sollten Sie Sie Sampling oder eine Reduzierung der Datenmenge.  
   
 -   Wie sind die Daten gestreut?  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48094130"
  [Durchsuchen und Bereinigen von Daten](exploring-and-cleaning-data.md)  
   
 ## <a name="validate-your-model"></a>Überprüfen des Modells  
- Wenn Sie die einzelnen Assistenten und Tools ausführen, analysiert der Algorithmus die Inhalte der Daten und bestimmt, ob ein statistisch gültiges Muster vorliegt. Wenn der Algorithmus keine gültigen Muster finden kann, wird eine Fehlermeldung ausgegeben. Selbst wenn ein Modell erfolgreich erstellt wurde, empfiehlt es sich, dieses zu testen, um die Richtigkeit Ihrer Annahmen zu überprüfen. Können Sie Tools wie z. B. die [Genauigkeitsdiagramm &#40;SQL Server Data Mining-Add-ins&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) oder [Kreuzvalidierung &#40;SQL Server Data Mining-Add-ins&#41; ](cross-validation-sql-server-data-mining-add-ins.md) um statistische zu erzeugen. Measures zur modellqualität.  
+ Wenn Sie die einzelnen Assistenten und Tools ausführen, analysiert der Algorithmus die Inhalte der Daten und bestimmt, ob ein statistisch gültiges Muster vorliegt. Wenn der Algorithmus keine gültigen Muster finden kann, erhalten Sie eine Fehlermeldung angezeigt. Auch wenn ein Modell erfolgreich erstellt wurde, sollten Sie jedoch testen, um festzustellen, ob Ihre Annahmen bestätigt. Können Sie Tools wie z. B. die [Genauigkeitsdiagramm &#40;SQL Server Data Mining-Add-ins&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) oder [Kreuzvalidierung &#40;SQL Server Data Mining-Add-ins&#41; ](cross-validation-sql-server-data-mining-add-ins.md) um statistische zu erzeugen. Measures zur modellqualität.  
   
  Stellen Sie sich Fragen wie die Folgenden, während Sie die Ergebnisse des ersten Modells beurteilen:  
   

@@ -13,12 +13,12 @@ ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4034beae4e022379de1cb9cac83f982f512bdc7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbd151b0fa8682865e44615c22a9fdd7577014ea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688298"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405917"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Auswählen und Konfigurieren von betroffenen Objekten (OracleToSQL)
 Auf dieser Seite können Sie Tabellen auswählen und die foreign key, Änderungen in der verglichen werden soll, wenn SSMA wird überprüft, die Ergebnisse der Ausführung für die Objekte, die im vorherigen Schritt ausgewählt ob. Darüber hinaus können Sie die Überprüfung der Parameter anpassen.  
@@ -39,9 +39,9 @@ Die Registerkarte der Tabelle enthält die Rasteransicht der ausgewählten Tabel
   
 -   Dezimalstellen  
   
--   Regel  
+-   Rule  
   
--   Default  
+-   Standard  
   
 -   Identität  
   
@@ -50,7 +50,7 @@ Die Registerkarte der Tabelle enthält die Rasteransicht der ausgewählten Tabel
 ## <a name="sql"></a>Sql  
 Registerkarte "SQL" enthält die Tabelle"erstellen" SQL der ausgewählten Tabelle.  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Daten  
 Registerkarte "Daten" zeigt Daten in die ausgewählte Tabelle an.  
   
 ## <a name="properties"></a>Eigenschaften  

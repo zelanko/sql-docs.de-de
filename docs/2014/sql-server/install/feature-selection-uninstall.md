@@ -11,17 +11,17 @@ ms.assetid: 33fa3b75-3257-44e1-919e-3d2ff12accbc
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fccd17f475f1ca48214ff3deb61e5bca4ce89e47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 020d9dbadc323aa751a90a0b0cbd886ba503d637
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102390"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536812"
 ---
 # <a name="feature-selection-uninstall"></a>Funktionsauswahl (Deinstallieren)
-  Auf der Seite Funktionsauswahl – Deinstallieren können Sie Funktionen auswählen, die aus der ausgewählten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt werden sollen.  
+  Die Funktionsauswahl – deinstallieren Sie die Seite zum Auswählen von Funktionen zum Entfernen aus der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Sie können jede beliebige Kombination von Funktionen auswählen.  
   
   

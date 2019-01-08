@@ -18,12 +18,12 @@ ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07145e608c850a877a984c7467da6b8974f0d151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8978c40141d0cd6031b9569ab0daa945666e7e85
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744598"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415157"
 ---
 # <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47744598"
  Der Name der Datenbank, in der der selektive XML-Index aktiviert oder deaktiviert wird. Wenn *Db_name* NULL ist, wird die aktuelle Datenbank angenommen.  
   
  [  **@action =** ] **"***Aktion***"**  
- Bestimmt, ob der Index aktivieren oder deaktiviert wird. Wenn ein anderer Wert außer 'on', 'true', 'off', oder 'false' übergeben wird, wird ein Fehler ausgelöst.  
+ Bestimmt, ob der Index aktivieren oder deaktiviert wird. Wenn ein anderer Wert außer 'on', 'true', 'off' oder 'false' übergeben wird, wird ein Fehler ausgelöst.  
   
 ```  
   

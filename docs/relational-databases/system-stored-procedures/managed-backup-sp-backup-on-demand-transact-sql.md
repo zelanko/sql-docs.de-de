@@ -21,12 +21,12 @@ ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1a82c376481b5c0bb563ea5c48be8053d70f0d52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8945ba72471855b2c3de5b169b12bea4cc2b656e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636568"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391345"
 ---
 # <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,18 +54,18 @@ EXEC managed_backup.sp_backup_on_demand
  Der Name der Datenbank, für die die Sicherung ausgeführt werden soll. Die @database_name ist **SYSNAME**.  
   
  @type  
- Der Typ der auszuführenden Sicherung: Datenbank- oder Protokollsicherung. Die @type Parameter **NVARCHAR(32)**.  
+ Der Typ des auszuführenden Sicherungsvorgangs:  Datenbank- oder Protokollsicherung. Die @type Parameter **NVARCHAR(32)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in **Db_backupoperator** -Datenbankrolle mit **ALTER ANY CREDENTIAL** Berechtigungen und **EXECUTE** Berechtigungen für **Sp_delete_ Backuphistory**gespeicherte Prozedur.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird eine Datenbanksicherungsanforderung für die Datenbank "TestDB" ausgegeben. Für diese Datenbank ist [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] aktiviert.  
+ Im folgenden Beispiel wird eine datenbanksicherungsanforderung für die Datenbank "TestDB". Für diese Datenbank ist [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] aktiviert.  
   
 ```  
 Use MSDB  

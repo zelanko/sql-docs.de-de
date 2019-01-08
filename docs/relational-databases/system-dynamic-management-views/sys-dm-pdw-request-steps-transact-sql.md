@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ac7c933c9ae730810b198266cb9b2b3086169092
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8543933aa102a6962846164b7267fad7df222cdd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832118"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393594"
 ---
 # <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47832118"
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Anforderungs-ID und Step_index stellen Sie den Schlüssel für diese Sicht.<br /><br /> Eindeutige numerische Id der Anforderung zugeordnet ist.|Finden Sie im Anforderungs-ID [dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Anforderungs-ID und Step_index stellen Sie den Schlüssel für diese Sicht.<br /><br /> Die Position dieses Schritts in der Reihenfolge der Schritte, aus denen die Anforderung besteht.|0, um (n-1) für eine Anforderung mit n Schritten.|  
-|operation_type|**nvarchar(35)**|Typ des Vorgangs, der durch diesen Schritt dargestellt.|**DMS Abfragevorgänge Plan:** "ReturnOperation", 'PartitionMoveOperation', "MoveOperation", "BroadcastMoveOperation", "ShuffleMoveOperation", "TrimMoveOperation", "CopyOperation", "DistributeReplicatedTableMoveOperation"<br /><br /> **SQL-Abfrage-Plan-Vorgänge:** 'OnOperation', "RemoteOperation"<br /><br /> **Weitere Abfragevorgänge für den Plan:** 'MetaDataCreateOperation', "RandomIDOperation"<br /><br /> **Externe Vorgänge für Lesevorgänge:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', "HadoopBroadcastOperation"<br /><br /> **Externe Vorgänge für MapReduce:** 'HadoopJobOperation', "HdfsDeleteOperation"<br /><br /> **Externe Vorgänge für Schreibvorgänge:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', "ExternalExportControlOperation"<br /><br /> Weitere Informationen finden Sie unter "Grundlegendes zu Abfragepläne" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
+|operation_type|**nvarchar(35)**|Typ des Vorgangs, der durch diesen Schritt dargestellt.|**DMS Query Plan Operations:** 'ReturnOperation', "PartitionMoveOperation", "MoveOperation", "BroadcastMoveOperation", "ShuffleMoveOperation", "TrimMoveOperation", "CopyOperation", "DistributeReplicatedTableMoveOperation"<br /><br /> **SQL-Abfrage-Plan-Vorgänge:** "OnOperation',"RemoteOperation"<br /><br /> **Andere Vorgänge für den Abfrage-Plan:** "MetaDataCreateOperation',"RandomIDOperation"<br /><br /> **Externe Vorgänge für Lesevorgänge:** "HadoopShuffleOperation', 'HadoopRoundRobinOperation',"HadoopBroadcastOperation"<br /><br /> **Externe für MapReduce-Vorgänge:** "HadoopJobOperation',"HdfsDeleteOperation"<br /><br /> **Externe Vorgänge für Schreibvorgänge:** "ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation',"ExternalExportControlOperation"<br /><br /> Weitere Informationen finden Sie unter "Grundlegendes zu Abfragepläne" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
 |distribution_type|**nvarchar(32)**|Die Art der Verteilung, die ausgeführt wird, dass Sie diesen Schritt.|"AllNodes", "AllDistributions", "AllComputeNodes", "ComputeNode", 'Distribution', "SubsetNodes", "SubsetDistributions", "Nicht angegeben"|  
 |location_type|**nvarchar(32)**|Gibt an, in dem der Schritt ausgeführt wird.|'Berechnen', 'Control', "DMS"|  
 |status|**nvarchar(32)**|Der Status dieses Schritts.|Ausstehend "," wird ausgeführt, abgeschlossen, Fehler, UndoFailed, PendingCancel abgebrochen, rückgängig gemacht werden, wurde abgebrochen|  

@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: 90742e38b3948a0fc64df4908d6a0daadf0793e9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ee28eb36fcd9e14210bc2a1411460100156f4a2f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076971"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544352"
 ---
 # <a name="create-roles"></a>Erstellen von Rollen
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-In dieser Lektion erstellen Sie Rollen. Rollen bieten Model-Datenbank modelldatenbankobjekt- und datensicherheit durch Einschränken des Zugriffs auf diejenigen Benutzer, die Mitglieder der Rolle sind. Jede Rolle wird mit einer einzelnen Berechtigung definiert: Keine, Lesen, Lesen und verarbeiten, Verarbeiten oder Administrator. Rollen können während der Modellerstellung mithilfe des Rollen-Manager definiert werden. Nachdem ein Modell bereitgestellt wurde, können Sie Rollen mithilfe von SQL Server Management Studio (SSMS) verwalten. Weitere Informationen finden Sie unter [Rollen](../tabular-models/roles-ssas-tabular.md).
+In dieser Lektion erstellen Sie Rollen. Rollen bieten Model-Datenbank modelldatenbankobjekt- und datensicherheit durch Einschränken des Zugriffs auf diejenigen Benutzer, die Mitglieder der Rolle sind. Jede Rolle wird mit einer einzigen Berechtigung definiert: Keine, lesen, lesen und verarbeiten, Prozess oder Administrator. Rollen können während der Modellerstellung mithilfe des Rollen-Manager definiert werden. Nachdem ein Modell bereitgestellt wurde, können Sie Rollen mithilfe von SQL Server Management Studio (SSMS) verwalten. Weitere Informationen finden Sie unter [Rollen](../tabular-models/roles-ssas-tabular.md)während der Modellerstellung im Dialogfeld Rollen-Manager definiert werden.
   
 > [!NOTE]  
 > Das Erstellen von Rollen ist zum Abschließen dieses Lernprogramms nicht erforderlich. Standardmäßig verfügt das Konto, dem Sie derzeit angemeldet sind Administratorrechte für das Modell. Für andere Benutzer in Ihrer Organisation mit einem berichterstellungsclient durchsuchen, müssen Sie allerdings mindestens eine Rolle mit Leseberechtigungen erstellen und diese Benutzer als Mitglieder hinzugefügt.  
@@ -33,13 +33,13 @@ Sie erstellen drei Rollen:
   
 -   **Administrator** – diese Rolle kann Benutzer für die Administratorberechtigung, sind der unbegrenzten Zugriff und Berechtigungen zum Ausführen von administrativer Aufgaben für die Modelldatenbank beinhalten.  
   
-Da Windows-Benutzer- und -Gruppenkonten in der Organisation eindeutig sind, können Sie Mitgliedern Konten aus Ihrer Organisation hinzufügen. In diesem Lernprogramm können Sie die Angaben zu den Mitgliedern auch weglassen. Sie testen die Auswirkungen der einzelnen Rollen weiter unten in der Lektion 12: Analysieren in Excel.  
+Da Windows-Benutzer- und -Gruppenkonten in der Organisation eindeutig sind, können Sie Mitgliedern Konten aus Ihrer Organisation hinzufügen. In diesem Lernprogramm können Sie die Angaben zu den Mitgliedern auch weglassen. Testen Sie die Auswirkungen der einzelnen Rollen weiter unten in der Lektion 12: In Excel analysieren.  
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 
-Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 10: Erstellen von Partitionen](../tutorial-tabular-1400/as-lesson-10-create-partitions.md).  
+Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 10: Erstellen von Partitionen](../tutorial-tabular-1400/as-lesson-10-create-partitions.md).  
   
 ## <a name="create-roles"></a>Erstellen von Rollen  
   
@@ -89,7 +89,7 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
   
 ## <a name="whats-next"></a>Wie geht es weiter?
 
-[Lektion 12: Analysieren in Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).
+[Lektion 12: In Excel analysieren](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).
 
   
   

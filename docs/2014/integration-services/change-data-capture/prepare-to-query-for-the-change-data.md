@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
@@ -13,12 +12,12 @@ ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79d862aa5fa2327a6b88ff1936d92e1c3f45f090
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 831e44cb232dea7f0730c73d360cd787f3895878
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173250"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756992"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Vorbereiten zur Abfrage der Änderungsdaten
   In der Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, besteht der dritte und letzte Task darin, die Abfrage der Änderungsdaten vorzubereiten und einen Datenflusstask hinzuzufügen.  
@@ -125,7 +124,7 @@ ms.locfileid: "48173250"
   
         ```  
   
-5.  Verlassen Sie die standardcodezeile gibt `DtsExecResult.Success` aus der Ausführung des Skripts.  
+5.  Verlassen Sie die Standardcodezeile, die `DtsExecResult.Success` aus der Ausführung des Skripts zurückgibt.  
   
 6.  Schließen Sie die Skriptentwicklungsumgebung und den **Skripttask-Editor**.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "48173250"
         ```  
   
         > [!NOTE]  
-        >  Die `else` -Klausel in diesem Beispiel generiert eine Abfrage für das erste Laden der Änderungsdaten, indem ein null-Wert für das Datum und die Startzeit übergeben. Dieses Beispiel befasst sich nicht mit dem Szenario, in dem Änderungen, die vor der Aktivierung von Change Data Capture vorgenommen wurden, auch ins Data Warehouse hochgeladen werden müssen.  
+        >  Die `else`-Klausel in diesem Beispiel generiert eine Abfrage für das erste Laden der Änderungsdaten, indem für das Startdatum und die Startzeit ein NULL-Wert übergeben wird. Dieses Beispiel befasst sich nicht mit dem Szenario, in dem Änderungen, die vor der Aktivierung von Change Data Capture vorgenommen wurden, auch ins Data Warehouse hochgeladen werden müssen.  
   
 3.  Nehmen Sie auf der Seite **Parameterzuordnung** vom **Editor für den Task 'SQL ausführen'** die folgende Zuordnung vor:  
   
