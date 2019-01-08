@@ -1,21 +1,22 @@
 ---
-title: Configure SQL Server AlwaysOn-Verfügbarkeitsgruppe für hochverfügbarkeit bei Linux | Microsoft-Dokumentation
-description: ''
+title: Configure SQL Server AlwaysOn-Verfügbarkeitsgruppe für hochverfügbarkeit bei Linux
+titleSuffix: SQL Server
+description: Informationen Sie zum Erstellen einer SQL Server immer auf Availability Group (AG) für hohe Verfügbarkeit unter Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 56a61a4bc319c06becc104db0bd846871a533d1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f88178450fb5ca19e52703ad02e29d107ca562a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621078"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201959"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configure SQL Server AlwaysOn-Verfügbarkeitsgruppe für hochverfügbarkeit bei Linux
 
@@ -177,8 +178,8 @@ Führen Sie **nur eine** der folgenden Skripts aus:
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
       ),
-      N'node2' WITH ( 
-         ENDPOINT_URL = N'tcp://node2:5022', 
+      N'node2' WITH ( 
+         ENDPOINT_URL = N'tcp://node2:5022', 
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
@@ -210,7 +211,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->Nachdem Sie die Verfügbarkeitsgruppe erstellt haben, müssen Sie die Integration mit einer Clustertechnologie wie Pacemaker für hohe Verfügbarkeit konfigurieren. Für eine schreibgeschützte-Konfiguration mithilfe von Verfügbarkeitsgruppen, beginnend mit [!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)], Einrichten eines Clusters ist nicht erforderlich.
+>Nachdem Sie die Verfügbarkeitsgruppe erstellt haben, müssen Sie die Integration mit einer Clustertechnologie wie Pacemaker für hohe Verfügbarkeit konfigurieren. Für eine schreibgeschützte-Konfiguration mithilfe von Verfügbarkeitsgruppen, beginnend mit [!INCLUDE [SQL Server version](../includes/sssqlv14-md.md)], Einrichten eines Clusters ist nicht erforderlich.
 
 Wenn Sie die in diesem Dokument beschriebenen Schritte ausführen, müssen Sie eine Verfügbarkeitsgruppe, die noch nicht gruppiert ist. Der nächste Schritt ist, um den Cluster hinzuzufügen. Diese Konfiguration ist für Read leseskalierung/zum Lastenausgleich Szenarien gültig, es ist nicht vollständig für hohe Verfügbarkeit. Für hohe Verfügbarkeit müssen Sie die Verfügbarkeitsgruppe als Clusterressource hinzufügen. Finden Sie unter [nächste Schritte](#next-steps) Anweisungen. 
 

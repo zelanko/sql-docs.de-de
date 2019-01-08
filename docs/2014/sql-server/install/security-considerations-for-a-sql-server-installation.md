@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [SQL Server]
@@ -27,12 +26,12 @@ ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c486dfe6e1d41d18274bb5825c3ed63dc4598a0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093590"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762912"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Überlegungen zur Sicherheit bei SQL Server-Installationen
   Sicherheit ist für jedes Produkt und jedes Geschäft wichtig. Indem Sie einige einfache bewährte Methoden verwenden, können Sie viele Sicherheitsrisiken vermeiden. In diesem Thema werden einige bewährte Sicherheitsmethoden behandelt, die Sie vor dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und nach dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]berücksichtigen sollten. Sicherheitshinweise für bestimmte Funktionen sind in den Referenzthemen für diese Funktionen enthalten.  
@@ -81,7 +80,7 @@ ms.locfileid: "48093590"
 ###  <a name="isolated_services"></a> Isolate Services  
  Durch das Isolieren von Diensten reduzieren Sie das Risiko, dass durch einen gefährdeten Dienst andere Dienste ebenfalls gefährdet werden. Beachten Sie beim Isolieren von Diensten die folgenden Richtlinien:  
   
--   Führen Sie separate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste unter separaten Windows-Konten aus. Verwenden Sie für die einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste wo immer das möglich ist separate Windows-Benutzerkonten oder separate lokale Benutzerkonten mit geringen Rechten. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Führen Sie separate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste unter separaten Windows-Konten aus. Verwenden Sie für die einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste wo immer das möglich ist separate Windows-Benutzerkonten oder separate lokale Benutzerkonten mit geringen Rechten. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)betreffen.  
   
 ###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
  Die Verwendung des richtigen Dateisystems erhöht die Sicherheit. Folgende Aufgaben sollten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationen ausgeführt werden:  
@@ -134,7 +133,7 @@ ms.locfileid: "48093590"
   
 -   Ordnen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste Windows-Benutzerkonten oder lokalen Benutzerkonten mit geringen Berechtigungen zu.  
   
--   Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)betreffen.  
   
  **Authentifizierungsmodus**  
   
@@ -144,7 +143,7 @@ ms.locfileid: "48093590"
   
  **Sichere Kennwörter**  
   
--   Weisen Sie immer ein sicheres Kennwort zu den `sa` Konto.  
+-   Weisen Sie dem `sa`-Konto immer ein sicheres Kennwort zu.  
   
 -   Aktivieren Sie immer die Richtlinienüberprüfung für Kennwörter, um die Sicherheit und das Ablaufdatum der Kennwörter.  
   

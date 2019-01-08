@@ -15,12 +15,12 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d67bcc157d069d180a7fd8295ece9f2139d5499c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 33858c9cc0778e550bf90f574e4443dff033c5d1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604640"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209050"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB Simple-Anbieter (Übersicht)
 Der Microsoft OLE DB Simple Anbieter (OSP) ermöglicht ADO auf Daten zugreifen, für die ein Anbieter geschrieben wurde mithilfe, der [OLE DB Simple Anbieter (OSP) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Einfache Anbieter dienen zum Zugreifen auf Datenquellen, die nur grundlegende OLE DB-Unterstützung, z. B. in-Memory-Arrays oder XML-Dokumenten erfordern.
@@ -57,13 +57,13 @@ MSDAOSP
 
 ```console
 Portfolio
-   Stock
-      Shares
-      Symbol
-      Price
-      Info
-         Company Name
-         WebSite
+   Stock
+      Shares
+      Symbol
+      Price
+      Info
+         Company Name
+         WebSite
 ```
 
  Das XML-DSO verwendet integrierte Heuristiken, um die Knoten in einer XML-Struktur zu Kapiteln in einer hierarchischen konvertieren **Recordset**.
@@ -73,8 +73,8 @@ Portfolio
 ```console
 Parent Recordset
 Shares, Symbol, Price, $Text
-   Child Recordset
-      Company Name, WebSite, $Text
+   Child Recordset
+      Company Name, WebSite, $Text
 ```
 
  Beachten Sie, dass die Portfolio und Info-Tags nicht, in der hierarchischen dargestellt werden **Recordset**. Eine Erläuterung, wie das XML-DSO XML-Strukturen in hierarchisch konvertiert **Recordsets**, finden Sie unter den folgenden Regeln. Die Spalte $Text wird im folgenden Abschnitt erläutert.

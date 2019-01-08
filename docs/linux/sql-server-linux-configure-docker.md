@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 1a4b517374e19ab959a8c00b732d62643c32cff3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4078d2d660a2690983e34c6db024df3a93df97eb
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657984"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266061"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Konfigurieren von SQL Server-Container-Images in Docker
 
@@ -46,11 +46,11 @@ Gesamte Dokumentation zu SQL Server Linux-containerimages zeigen Sie auf der Ubu
 Beispielsweise ruft der folgende Befehl aus der neuesten SQL Server-2019-Vorschau-Container, der RHEL verwendet:
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ::: moniker-end
@@ -253,7 +253,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 Dieser Technik können auch zum Freigeben und zeigen Sie die Dateien auf dem Docker-Host.
 
 > [!IMPORTANT]
-> Host-volumezuordnung für Docker auf dem Mac mit dem SQL Server auf Linux-Image wird zu diesem Zeitpunkt nicht unterstützt. Verwenden Sie stattdessen datenvolumecontainer. Diese Einschränkung bezieht sich auf die `/var/opt/mssql` Verzeichnis. Lesen aus der eine bereitgestellte Verzeichnis funktioniert gut. Sie können z. B. mit – V auf einem Mac-Hostverzeichnis bereitzustellen und die Wiederherstellung einer Sicherung von einer bak-Datei, die auf dem Host befindet.
+> Host-volumezuordnung für Docker auf dem Mac mit dem SQL Server auf Linux-Image wird zu diesem Zeitpunkt nicht unterstützt. Verwenden Sie stattdessen datenvolumecontainer. Diese Einschränkung bezieht sich auf die `/var/opt/mssql` Verzeichnis. Lesen aus der eine bereitgestellte Verzeichnis funktioniert gut. Sie können z. B. mithilfe von - V auf einem Mac-Hostverzeichnis bereitzustellen und die Wiederherstellung einer Sicherung von einer bak-Datei, die auf dem Host befindet.
 
 ### <a name="use-data-volume-containers"></a>Datenvolumecontainer verwenden
 

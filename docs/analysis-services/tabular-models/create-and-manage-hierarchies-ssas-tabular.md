@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Verwalten von Hierarchien | Microsoft Docs
+title: Erstellen und Verwalten von Hierarchien in tabellenmodellen von Analysis Services | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c9282c3b28ca5998cc21d2906f06d50f862e49a9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e9e5fc942aa7b03cd4cb9a15d8b474a12f12a8d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044834"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072597"
 ---
 # <a name="create-and-manage-hierarchies"></a>Erstellen und Verwalten von Hierarchien 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Hierarchien können in der Diagrammsicht des Modell-Designers erstellt und verwaltet werden. Um den Modell-Designer in der Diagrammsicht in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]anzuzeigen, klicken Sie auf das Menü **Modell** , zeigen Sie dann auf **Modellansicht**, und klicken Sie dann auf **Diagrammsicht**.  
   
- Dieser Artikel umfasst die folgenden Aufgaben:  
+ Dieser Artikel enthält die folgenden Aufgaben:  
   
 -   [Erstellen einer Hierarchie](#bkmk_create)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34044834"
   
 2.  Geben Sie einen Namen für die Hierarchie ein.  
   
- Sie können zusätzliche Spalten in die übergeordnete Ebene der Hierarchie ziehen, wodurch die Spalten kopiert werden. Legen Sie die untergeordnete Ebene an der Stelle ab, an der sie in der Hierarchie angezeigt werden soll.  
+ Sie können zusätzliche Spalten in der Hierarchie übergeordneten Ebene ziehen, die wodurch die Spalten kopiert. Legen Sie die untergeordnete Ebene an der Stelle ab, an der sie in der Hierarchie angezeigt werden soll.  
   
 > [!NOTE]  
 >  Wenn Sie ein Measure zusammen mit mindestens einer Spalte auswählen oder Spalten aus mehreren Tabellen auswählen, ist der Befehl Hierarchie erstellen im Kontextmenü deaktiviert.  

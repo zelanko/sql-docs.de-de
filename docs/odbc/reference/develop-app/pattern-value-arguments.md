@@ -15,12 +15,12 @@ ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9e99ab1646d5a3aff79bad0af7e0b9ab418668e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792398"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208330"
 ---
 # <a name="pattern-value-arguments"></a>Argumente des Musterwerts
 Einige Argumente im Katalog-Funktionen, wie die *TableName* -Argument in **SQLTables**, Suchmuster akzeptieren. Diese Argumente akzeptieren, Suchmuster, wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_FALSE; festgelegt ist Sie sind bezeichnerargumente, die einem Suchmuster nicht akzeptiert werden, wenn dieses Attribut auf SQL_TRUE festgelegt ist.  
@@ -44,7 +44,7 @@ Einige Argumente im Katalog-Funktionen, wie die *TableName* -Argument in **SQLTa
   
  Spezielle muss darauf geachtet werden Muster der Suchzeichenfolge in-Argumente mit Escapezeichen versehen, die Suchmuster zu akzeptieren. Dies gilt insbesondere für den Unterstrich, der häufig in Bezeichnern verwendet wird. Ein häufiger Fehler in Anwendungen ist das Abrufen eines Werts aus einer Katalogfunktion, und übergeben Sie diesen Wert auf ein Suchmusterargument in einer anderen Katalogfunktion. Nehmen wir beispielsweise an, die eine Anwendung ruft den Namen der Tabelle MY_TABLE aus dem Ergebnis legen Sie für **SQLTables** und übergibt Sie diese Option, um **SQLColumns** zum Abrufen einer Liste der Spalten im MY_TABLE. Anstelle der Spalten für MY_TABLE abrufen, erhalten die Anwendung die Spalten für alle Tabellen, die das Suchmuster MY_TABLE, z. B. MY_TABLE, MY1TABLE, MY2TABLE und So weiter zu entsprechen.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC-2. *x* Treiber unterstützen keine Suchmuster in der *CatalogName* -Argument in **SQLTables**. ODBC 3.*.x* Treiber Suchmustern, die in diesem Argument akzeptieren, wenn umgebungsattributs SQL_ATTR_ ODBC_VERSION auf SQL_OV_ODBC3 festgelegt ist; sie akzeptieren keine Suchmustern, die in diesem Argument, wenn er auf SQL_OV_ODBC2 festgelegt ist.  
   
- Übergeben einen null-Zeiger auf ein Suchmusterargument schränkt die Suche für dieses Argument nicht; d. h. sind ein null-Zeiger und die Suche Muster% (Zeichen) Äquivalent. Jedoch eine leere Muster suchen – d. h. ein gültiger Zeiger auf eine Zeichenfolge der Länge 0 (null) – entspricht nur die leere Zeichenfolge ("").
+ Übergeben einen null-Zeiger auf ein Suchmusterargument schränkt die Suche für dieses Argument nicht; d. h. sind ein null-Zeiger und die Suche Muster% (Zeichen) Äquivalent. Eine Zeichenfolge der Länge Null Suchmuster – d. h. ein gültiger Zeiger auf eine Zeichenfolge der Länge 0 (null) - entspricht jedoch nur die leere Zeichenfolge ("").

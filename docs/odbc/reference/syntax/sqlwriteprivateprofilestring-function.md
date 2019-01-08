@@ -20,16 +20,16 @@ ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aeff68aaa4e4901820054a9bf3079efc7d74cebc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f070b1494cb54d026d65f5a432c5faf834c38aa
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818848"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201739"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 2.0  
+ Eingeführt in Version: ODBC 2.0  
   
  **Zusammenfassung**  
  **SQLWritePrivateProfileString** schreibt eine Wertnamen und die Daten in der Odbc.ini Unterschlüssel der Systeminformationen.  
@@ -39,10 +39,10 @@ ms.locfileid: "47818848"
 ```  
   
 BOOL SQLWritePrivateProfileString(  
-     LPCSTR     lpszSection,  
-     LPCSTR     lpszEntry,  
-     LPCSTR     lpszString,  
-     LPCSTR     lpszFilename);  
+     LPCSTR     lpszSection,  
+     LPCSTR     lpszEntry,  
+     LPCSTR     lpszString,  
+     LPCSTR     lpszFilename);  
 ```  
   
 ## <a name="arguments"></a>Argumente  

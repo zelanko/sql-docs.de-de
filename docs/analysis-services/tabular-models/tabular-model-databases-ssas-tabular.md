@@ -1,5 +1,5 @@
 ---
-title: Tabellarische Modelldatenbanken | Microsoft Docs
+title: Analysis Services tabular model-Datenbanken | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6c6a806dc87afa7e1d26d2bf9070debcdaf53144
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1e53a719c4fef684f4b7ec81f2e5c9266adf942b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045964"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072247"
 ---
-# <a name="manage-deployed-tabular-model-databases"></a>Verwalten von bereitgestellten Tabellenmodell-Datenbanken
+# <a name="manage-deployed-tabular-model-databases"></a>Verwalten von Datenbanken für bereitgestellte tabellarische Modelle
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Eine tabellarische Modelldatenbank ist eine Analysis Services-Datenbank, die Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellen, der die tabellarische Analysis Services-Modell-Projektvorlage verwendet, wobei Tabellen und Beziehungen die primären Strukturen zum Darstellen von Daten sind.  
   
@@ -34,15 +34,13 @@ ms.locfileid: "34045964"
 
     
 ## <a name="see-also"></a>Siehe auch  
- [Projektmappen für tabellarische Modelle](../../analysis-services/tabular-models/tabular-models-ssas.md)  
-  
- [Datenzugriff für tabellarische Modelle](../../analysis-services/tabular-models/tabular-model-data-access.md)  
+ [Tabellenmodelllösungen](../../analysis-services/tabular-models/tabular-models-ssas.md)  
 
-[Verschieben einer Analysis Services-Datenbank](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)  
+[Verschieben einer Analysis Services Datenbank](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)  
   
  [Synchronisieren von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [Umschalten Sie in einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  [Ändern oder Löschen einer Analysis Services-Datenbank](../../analysis-services/multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   

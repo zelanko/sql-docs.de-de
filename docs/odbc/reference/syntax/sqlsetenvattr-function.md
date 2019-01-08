@@ -20,16 +20,16 @@ ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 944741e3ef923af8ed5624ada56c62b3e0254539
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61b83ee255e580c557bfae9923d67735c63c3912
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621228"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202156"
 ---
 # <a name="sqlsetenvattr-function"></a>SQLSetEnvAttr-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
   
  **Zusammenfassung**  
  **SQLSetEnvAttr** legt diese fest, die Aspekte der Umgebungen zu steuern.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL
@@ -13,12 +13,12 @@ ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8569a2b229e4fa23f99f47fe0694291bfa5d70b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b65f5a5d337877010c4704b6ac067ced655e99f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194900"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764242"
 ---
 # <a name="options-environment-keyboard-page"></a>Optionen (Umgebung – Tastatur Seite)
   Mithilfe des Dialogfelds **Optionen** können Sie das Tastaturschema für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] anpassen. Verwenden Sie diese Option, um ein Tastaturschema auszuwählen. Wenn Sie auf diese Seite zugreifen möchten, klicken Sie im Menü **Extras** auf **Optionen** , wählen Sie den Ordner **Umgebung** aus, und klicken Sie dann auf **Tastatur**.  

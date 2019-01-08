@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1e4c878004f3cdcc492637d338e8ff6c8d92937
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104171"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350011"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen (SQL Server)
   Das [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Zustandsmodell wertet eine Reihe vordefinierter Richtlinien der richtlinienbasierten Verwaltung aus. Sie können Thesen verwenden, um den Zustand einer Verfügbarkeitsgruppe sowie deren Verfügbarkeitsreplikate und Datenbanken in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]anzuzeigen.  
@@ -48,20 +48,20 @@ ms.locfileid: "48104171"
   
 |Richtlinienname|Problem|Kategorie**<sup>*</sup>**|Facet|  
 |-----------------|-----------|------------------------------|-----------|  
-|WSFC-Clusterstatus|[WSFC cluster service is offline](wsfc-cluster-service-is-offline.md).|Kritisch|SQL Server-Instanz|  
-|Onlinezustand der Verfügbarkeitsgruppe|[Availability group is offline](availability-group-is-offline.md).|Kritisch|Verfügbarkeitsgruppe|  
-|Bereitschaft der Verfügbarkeitsgruppe für automatisches Failover|[Availability group is not ready for automatic failover](availability-group-is-not-ready-for-automatic-failover.md).|Kritisch|Verfügbarkeitsgruppe|  
-|Datensynchronisierungsstatus der Verfügbarkeitsreplikate|[Some availability replicas are not synchronizing data](some-availability-replicas-are-not-synchronizing-data.md).|Warnung|Verfügbarkeitsgruppe|  
-|Datensynchronisierungsstatus synchroner Replikate|[Some synchronous replicas are not synchronized](some-synchronous-replicas-are-not-synchronized.md).|Warnung|Verfügbarkeitsgruppe|  
-|Verfügbarkeitsreplikat-Rollenstatus|[Some availability replicas do not have a healthy role](some-availability-replicas-do-not-have-a-healthy-role.md).|Warnung|Verfügbarkeitsgruppe|  
-|Verbindungsstatus von Verfügbarkeitsreplikaten|[Some availability replicas are disconnected](some-availability-replicas-are-disconnected.md).|Warnung|Verfügbarkeitsgruppe|  
-|Verfügbarkeitsreplikat-Rollenstatus|[Availability replica does not have a healthy role](availability-replica-does-not-have-a-healthy-role.md).|Kritisch|Verfügbarkeitsreplikat|  
-|Verfügbarkeitsreplikat-Verbindungsstatus|[Availability replica is disconnected](availability-replica-is-disconnected.md).|Kritisch|Verfügbarkeitsreplikat|  
+|WSFC-Clusterstatus|[WSFC-Clusterdienst ist offline](wsfc-cluster-service-is-offline.md).|Kritisch|SQL Server-Instanz|  
+|Onlinezustand der Verfügbarkeitsgruppe|[Verfügbarkeitsgruppe ist offline](availability-group-is-offline.md).|Kritisch|Verfügbarkeitsgruppe|  
+|Bereitschaft der Verfügbarkeitsgruppe für automatisches Failover|[Verfügbarkeitsgruppe nicht bereit für automatischen Failover](availability-group-is-not-ready-for-automatic-failover.md).|Kritisch|Verfügbarkeitsgruppe|  
+|Datensynchronisierungsstatus der Verfügbarkeitsreplikate|[Einige Verfügbarkeitsreplikate synchronisieren keine Daten](some-availability-replicas-are-not-synchronizing-data.md).|Warnung|Verfügbarkeitsgruppe|  
+|Datensynchronisierungsstatus synchroner Replikate|[Einige synchrone Replikate wurden nicht synchronisiert](some-synchronous-replicas-are-not-synchronized.md).|Warnung|Verfügbarkeitsgruppe|  
+|Verfügbarkeitsreplikat-Rollenstatus|[Einige Verfügbarkeitsreplikate haben keine fehlerfreie Rolle](some-availability-replicas-do-not-have-a-healthy-role.md).|Warnung|Verfügbarkeitsgruppe|  
+|Verbindungsstatus von Verfügbarkeitsreplikaten|[Einige Verfügbarkeitsreplikate sind getrennt](some-availability-replicas-are-disconnected.md).|Warnung|Verfügbarkeitsgruppe|  
+|Verfügbarkeitsreplikat-Rollenstatus|[Verfügbarkeitsreplikat hat keine fehlerfreie Rolle](availability-replica-does-not-have-a-healthy-role.md).|Kritisch|Verfügbarkeitsreplikat|  
+|Verfügbarkeitsreplikat-Verbindungsstatus|[Verfügbarkeitsreplikat wird getrennt](availability-replica-is-disconnected.md).|Kritisch|Verfügbarkeitsreplikat|  
 |Joinzustand des Verfügbarkeitsreplikats|[Verfügbarkeitsreplikat ist nicht verknüpft](availability-replica-is-not-joined.md).|Warnung|Verfügbarkeitsreplikat|  
-|Datensynchronisierungsstatus des Verfügbarkeitsreplikats|[Data synchronization state of some availability database is not healthy](data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Warnung|Verfügbarkeitsreplikat|  
-|Verfügbarkeitsdatenbank im angehaltenen Zustand|[Availability database is suspended](availability-database-is-suspended.md).|Warnung|Verfügbarkeitsdatenbank|  
-|Joinzustand der Verfügbarkeitsdatenbank|[Secondary database is not joined](secondary-database-is-not-joined.md).|Warnung|Verfügbarkeitsdatenbank|  
-|Datensynchronisierungsstatus der Verfügbarkeitsdatenbank|[Data synchronization state of availability database is not healthy](data-synchronization-state-of-availability-database-is-not-healthy.md).|Warnung|Verfügbarkeitsdatenbank|  
+|Datensynchronisierungsstatus des Verfügbarkeitsreplikats|[Datensynchronisierungsstatus einer Verfügbarkeitsdatenbank ist nicht fehlerfrei](data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Warnung|Verfügbarkeitsreplikat|  
+|Verfügbarkeitsdatenbank im angehaltenen Zustand|[Verfügbarkeitsdatenbank angehalten](availability-database-is-suspended.md).|Warnung|Verfügbarkeitsdatenbank|  
+|Joinzustand der Verfügbarkeitsdatenbank|[Sekundäre Datenbank ist nicht verknüpft](secondary-database-is-not-joined.md).|Warnung|Verfügbarkeitsdatenbank|  
+|Datensynchronisierungsstatus der Verfügbarkeitsdatenbank|[Datensynchronisierungsstatus der Verfügbarkeitsdatenbank ist nicht fehlerfrei](data-synchronization-state-of-availability-database-is-not-healthy.md).|Warnung|Verfügbarkeitsdatenbank|  
   
 > [!IMPORTANT]  
 >  **<sup>*</sup>**  Für AlwaysOn-Richtlinien werden die Kategorienamen als IDs verwendet. Durch die Änderung des Namens einer AlwaysOn-Kategorie wird die Funktion zur Integritätsüberprüfung unterbrochen. Ändern Sie die Namen von AlwaysOn-Kategorien daher nicht.  
@@ -84,9 +84,9 @@ ms.locfileid: "48104171"
 ##  <a name="ExtendHealthModel"></a> Erweitern des Always On-Zustandsmodells  
  Die Erweiterung des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Zustandsmodells bezieht sich darauf, dass Sie eigene benutzerdefinierte Richtlinien erstellen und diese je nach überwachtem Objekttyp bestimmten Kategorien zuweisen können.  Nachdem Sie einige Einstellungen geändert haben, wertet das AlwaysOn-Dashboard automatisch eigene benutzerdefinierte Richtlinien sowie vordefinierte AlwaysOn-Richtlinien aus.  
   
- Eine benutzerdefinierte Richtlinie kann beliebige der verfügbaren PBM-Facets verwenden, einschließlich der von vordefinierten AlwaysOn-Richtlinien verwendeten Facets (siehe [Vordefinierte Richtlinien und Probleme](#AlwaysOnPBM)weiter oben in diesem Thema). Das serverfacet stellt die folgenden Eigenschaften für die Überwachung [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Integrität: (`IsHadrEnabled` und `HadrManagerStatus`). Das Serverfacet stellt auch Eigenschaften der folgenden Richtlinien zum Überwachen der WSFC-Clusterkonfiguration bereit: `ClusterQuorumType` und `ClusterQuorumState`.  
+ Eine benutzerdefinierte Richtlinie kann beliebige der verfügbaren PBM-Facets verwenden, einschließlich der von vordefinierten AlwaysOn-Richtlinien verwendeten Facets (siehe [Vordefinierte Richtlinien und Probleme](#AlwaysOnPBM)weiter oben in diesem Thema). Das Serverfacet stellt die folgenden Eigenschaften zum Überwachen des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Zustands bereit: (`IsHadrEnabled` und `HadrManagerStatus`). Das Serverfacet stellt auch Eigenschaften der folgenden Richtlinien zum Überwachen der WSFC-Clusterkonfiguration bereit: `ClusterQuorumType` und `ClusterQuorumState`.  
   
- Weitere Informationen finden Sie unter [Das AlwaysOn-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (ein SQL Server AlwaysOn-Teamblog).  
+ Weitere Informationen finden Sie unter [Das AlwaysOn-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (ein SQL Server AlwaysOn-Teamblog).  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -104,11 +104,11 @@ ms.locfileid: "48104171"
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Das AlwaysOn-Zustandsmodell Teil 1 – Zustandsmodellarchitektur](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [Das AlwaysOn-Zustandsmodell Teil 1 – Zustandsmodellarchitektur](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [Das AlwaysOn-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [Das AlwaysOn-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>Siehe auch  
  [AlwaysOn-Verfügbarkeitsgruppen (SQLServer)](always-on-availability-groups-sql-server.md)   

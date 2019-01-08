@@ -20,16 +20,16 @@ ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b56a96ce4796f8d4409b6b347b58870039e15d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0878b7c0d6e7cea6f1dcdc90fa7e78a2680546b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666248"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204889"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
   
  **Zusammenfassung**  
  **SQLGetInfo** Gibt allgemeine Informationen zu den Treiber und die Datenquelle eine Verbindung zugeordnet.  
@@ -244,7 +244,7 @@ SQLRETURN SQLGetInfo(
 |SQL_MAX_CURSOR_NAME_LEN|SQL_MAX_USER_NAME_LEN|  
   
 ## <a name="scalar-function-information"></a>Skalarfunktion-Informationen  
- Die folgenden Werte aus der *Informationsart* Argument Zurückgeben von Informationen zu den skalaren Funktionen, die von der Datenquelle und der Treiber unterstützt werden. Weitere Informationen zu den skalaren Funktionen, finden Sie unter [Anhang E:-Skalarfunktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).  
+ Die folgenden Werte aus der *Informationsart* Argument Zurückgeben von Informationen zu den skalaren Funktionen, die von der Datenquelle und der Treiber unterstützt werden. Weitere Informationen zu den skalaren Funktionen, finden Sie unter [Anhang E: Skalare Funktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).  
   
 |||  
 |-|-|  
@@ -338,7 +338,7 @@ SQLRETURN SQLGetInfo(
  SQL_CATALOG_USAGE  
   
 ## <a name="information-types-deprecated-in-odbc-3x"></a>Informationstypen, die als veraltet markiert, in ODBC 3.x  
- Die folgenden Werte aus der *Informationsart* Argument sind veraltet in ODBC 3.*.x*. ODBC 3.*.x* Treiber müssen weiterhin unterstützen diese Typen von Informationen zur Abwärtskompatibilität mit ODBC 2.*.x* Anwendungen. (Weitere Informationen zu diesen Projekttypen finden Sie unter [SQLGetInfo-Unterstützung](../../../odbc/reference/appendixes/sqlgetinfo-support.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität.)  
+ Die folgenden Werte aus der *Informationsart* Argument sind veraltet in ODBC 3.*.x*. ODBC 3.*.x* Treiber müssen weiterhin unterstützen diese Typen von Informationen zur Abwärtskompatibilität mit ODBC 2.*.x* Anwendungen. (Weitere Informationen zu diesen Projekttypen finden Sie unter [SQLGetInfo-Unterstützung](../../../odbc/reference/appendixes/sqlgetinfo-support.md) in Anhang G: Treiber-Richtlinien für Abwärtskompatibilität.)  
   
 |||  
 |-|-|  
@@ -351,7 +351,7 @@ SQLRETURN SQLGetInfo(
  Die folgende Tabelle enthält alphabetisch jeden Datentyp, der Version von ODBC in der sie eingeführt wurde und eine Beschreibung ein.  
   
  SQL_ACCESSIBLE_PROCEDURES (ODBC 1.0)  
- Eine Zeichenfolge: "Y", wenn der Benutzer alle Prozeduren, die vom ausführen kann **SQLProcedures**; "N", wenn Prozeduren möglicherweise zurückgegeben, dass der Benutzer nicht ausgeführt werden kann.  
+ Eine Zeichenfolge: Wenn der Benutzer alle Prozeduren, die vom ausgeführt werden können "J" **SQLProcedures**; "N", wenn Prozeduren möglicherweise zurückgegeben, dass der Benutzer nicht ausgeführt werden kann.  
   
  SQL_ACCESSIBLE_TABLES (ODBC 1.0)  
  Eine Zeichenfolge: "Y", wenn der Benutzer **wählen** Berechtigungen, um alle Tabellen, die vom **SQLTables**; "N", wenn Tabellen möglicherweise zurückgegeben, dass der Benutzer zugreifen kann.  
@@ -364,10 +364,10 @@ SQLRETURN SQLGetInfo(
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
   
- Ein SQL-92-Eintrag-Ebene – konforme-Treiber wird immer all diese Optionen zurückgegeben, da unterstützt.  
+ Ein Level-konformen-Treiber für SQL-92-Eintrag wird immer alle diese Optionen zurückgegeben, da unterstützt.  
   
  SQL_ALTER_DOMAIN (ODBC 3.0)  
- Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **ALTER DOMAIN** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert. Ein vollständige SQL-92-Level-kompatible Treiber wird alle die Bitmasken immer zurückgegeben werden. Ein Rückgabewert von "0" bedeutet, dass die **ALTER DOMAIN** Anweisung wird nicht unterstützt.  
+ Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **ALTER DOMAIN** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert. Ein vollständige SQL-92-Ebene-kompatiblen Treiber wird alle die Bitmasken immer zurückgegeben werden. Ein Rückgabewert von "0" bedeutet, dass die **ALTER DOMAIN** Anweisung wird nicht unterstützt.  
   
  Der SQL-92 oder FIPS-Konformitätsgrad, an dem diese Funktion unterstützt werden muss, wird neben jeder Bitmaske in Klammern angezeigt.  
   
@@ -491,26 +491,26 @@ SQLRETURN SQLGetInfo(
   
  Beispielsweise gibt ein Xbase-Treiber SQL_CL_START zurück, da der Name des Verzeichnisses (Katalog) am Anfang der Tabellenname, wie \EMPDATA\EMP ist. DBF. Ein ORACLE-Server-Treiber gibt SQL_CL_END zurück, da es sich bei der Katalog am Ende den Namen der Tabelle in diesem Beispiel ist ADMIN.EMP@EMPDATA.  
   
- Ein vollständige SQL-92 Ebene –-konforme Funktion Treiber wird SQL_CL_START immer zurückgegeben werden. Der Wert 0 wird zurückgegeben, wenn Kataloge nicht von der Datenquelle unterstützt werden. Um zu bestimmen, ob Kataloge unterstützt werden, eine Anwendung ruft **SQLGetInfo** mit dem Typ der SQL_CATALOG_NAME-Informationen.  
+ Ein vollständige SQL-92 Level-konformen Treiber wird SQL_CL_START immer zurückgegeben werden. Der Wert 0 wird zurückgegeben, wenn Kataloge nicht von der Datenquelle unterstützt werden. Um zu bestimmen, ob Kataloge unterstützt werden, eine Anwendung ruft **SQLGetInfo** mit dem Typ der SQL_CATALOG_NAME-Informationen.  
   
  Dies *Informationsart* für ODBC 3.0 von der ODBC 2.0 umbenannt wurde *Informationsart* SQL_QUALIFIER_LOCATION.  
   
  SQL_CATALOG_NAME (ODBC 3.0)  
  Eine Zeichenfolge: "Y", wenn der Server Katalognamen oder "N" unterstützt, wenn dies nicht der Fall.  
   
- Ein SQL-92-Full-Ebene – konforme-Treiber wird immer mit "Y" zurückgegeben.  
+ Ein vollständige SQL-92 Level-konformen-Treiber wird immer mit "Y" zurückgegeben.  
   
  SQL_CATALOG_NAME_SEPARATOR (ODBC 1.0)  
  Eine Zeichenfolge: das Zeichen oder Zeichen an, die die Datenquelle definiert wird, als Trennzeichen zwischen einen Katalognamen und der qualifizierte Name-Element, das folgt, oder er vorangestellt ist.  
   
- Wenn Kataloge nicht von der Datenquelle unterstützt werden, wird eine leere Zeichenfolge zurückgegeben. Um zu bestimmen, ob Kataloge unterstützt werden, eine Anwendung ruft **SQLGetInfo** mit dem Typ der SQL_CATALOG_NAME-Informationen. Ein SQL-92-Full-Ebene – konforme-Treiber wird immer zurückgegeben. ".".  
+ Wenn Kataloge nicht von der Datenquelle unterstützt werden, wird eine leere Zeichenfolge zurückgegeben. Um zu bestimmen, ob Kataloge unterstützt werden, eine Anwendung ruft **SQLGetInfo** mit dem Typ der SQL_CATALOG_NAME-Informationen. Ein vollständige SQL-92-Level-konformen-Treiber gibt immer zurück. ".".  
   
  Dies *Informationsart* für ODBC 3.0 von der ODBC 2.0 umbenannt wurde *Informationsart* SQL_QUALIFIER_NAME_SEPARATOR.  
   
  SQL_CATALOG_TERM (ODBC 1.0)  
  Eine Zeichenfolge mit den Datenquelle Herstellernamen für einen Katalog; z. B. "Datenbank" oder "Directory". Diese Zeichenfolge kann in der oberen, unteren, oder eine gemischte Groß-sein.  
   
- Wenn Kataloge nicht von der Datenquelle unterstützt werden, wird eine leere Zeichenfolge zurückgegeben. Um zu bestimmen, ob Kataloge unterstützt werden, eine Anwendung ruft **SQLGetInfo** mit dem Typ der SQL_CATALOG_NAME-Informationen. Ein SQL-92-Full-Ebene – konforme-Treiber gibt immer "Catalog" zurück.  
+ Wenn Kataloge nicht von der Datenquelle unterstützt werden, wird eine leere Zeichenfolge zurückgegeben. Um zu bestimmen, ob Kataloge unterstützt werden, eine Anwendung ruft **SQLGetInfo** mit dem Typ der SQL_CATALOG_NAME-Informationen. Ein vollständige SQL-92 Level-konformen-Treiber wird immer zurückgegeben "catalog".  
   
  Dies *Informationsart* für ODBC 3.0 von der ODBC 2.0 umbenannt wurde *Informationsart* SQL_QUALIFIER_TERM.  
   
@@ -519,27 +519,27 @@ SQLRETURN SQLGetInfo(
   
  Die folgenden Bitmasken werden verwendet, um zu bestimmen, wo die Kataloge verwendet werden kann:  
   
- SQL_CU_DML_STATEMENTS = Volltextkataloge werden in allen Data Manipulation Language-Anweisungen unterstützt: **wählen**, **einfügen**, **UPDATE**, **löschen**, und falls unterstützt, **wählen Sie für UPDATE** positioniert Update und delete-Anweisungen.  
+ SQL_CU_DML_STATEMENTS = Volltextkataloge werden in allen Data Manipulation Language-Anweisungen unterstützt: **Wählen Sie**, **einfügen**, **aktualisieren**, **löschen**, und falls unterstützt, **wählen Sie für UPDATE** und positioniert, Update- und Delete -Anweisungen.  
   
  SQL_CU_PROCEDURE_INVOCATION = Volltextkataloge werden in der aufrufanweisung für ODBC-Prozeduren unterstützt.  
   
- SQL_CU_TABLE_DEFINITION = Volltextkataloge werden in allen Table-Anweisungen der Definition unterstützt: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE** , und **DROP VIEW**.  
+ SQL_CU_TABLE_DEFINITION = Volltextkataloge werden in allen Table-Anweisungen der Definition unterstützt: **ERSTELLT eine Tabelle**, **ERSTELLUNGSANSICHT**, **ALTER TABLE**, **TABELLENLÖSCHUNG**, und **DROP VIEW**.  
   
- SQL_CU_INDEX_DEFINITION = Volltextkataloge werden in alle indexanweisungen Definition unterstützt: **CREATE INDEX** und **DROP INDEX**.  
+ SQL_CU_INDEX_DEFINITION = Volltextkataloge werden in alle indexanweisungen Definition unterstützt: **INDEXERSTELLUNG** und **DROP INDEX**.  
   
  SQL_CU_PRIVILEGE_DEFINITION = Volltextkataloge werden in alle Berechtigungen datendefinitionsanweisungen unterstützt: **GRANT** und **widerrufen**.  
   
- Der Wert 0 wird zurückgegeben, wenn Kataloge nicht von der Datenquelle unterstützt werden. Um zu bestimmen, ob Kataloge unterstützt werden, eine Anwendung ruft **SQLGetInfo** mit dem Typ der SQL_CATALOG_NAME-Informationen. Ein SQL-92-Full-Ebene – konforme-Treiber gibt immer eine Bitmaske mit allen diesen festgelegten Bits zurück.  
+ Der Wert 0 wird zurückgegeben, wenn Kataloge nicht von der Datenquelle unterstützt werden. Um zu bestimmen, ob Kataloge unterstützt werden, eine Anwendung ruft **SQLGetInfo** mit dem Typ der SQL_CATALOG_NAME-Informationen. Ein vollständige SQL-92 Level-konformen-Treiber gibt immer eine Bitmaske mit allen diesen festgelegten Bits zurück.  
   
  Dies *Informationsart* für ODBC 3.0 von der ODBC 2.0 umbenannt wurde *Informationsart* SQL_QUALIFIER_USAGE.  
   
  SQL_COLLATION_SEQ (ODBC 3.0)  
- Der Name der die Sortierreihenfolge. Dies ist eine Zeichenfolge, die den Namen der standardsortierung für den Standardzeichensatz für diesen Server angibt (z. B. "ISO 8859-1" oder EBCDIC). Wenn dies nicht bekannt ist, wird eine leere Zeichenfolge zurückgegeben. Ein SQL-92-Full-Ebene – konforme-Treiber wird immer eine nicht leere Zeichenfolge zurückgegeben.  
+ Der Name der die Sortierreihenfolge. Dies ist eine Zeichenfolge, die den Namen der standardsortierung für den Standardzeichensatz für diesen Server angibt (z. B. "ISO 8859-1" oder EBCDIC). Wenn dies nicht bekannt ist, wird eine leere Zeichenfolge zurückgegeben. Ein vollständige SQL-92 Level-konformen-Treiber wird immer eine nicht leere Zeichenfolge zurückgegeben.  
   
  SQL_COLUMN_ALIAS (ODBC 2.0)  
- Eine Zeichenfolge: "Y", wenn die Datenquelle Spaltenaliase; unterstützt. andernfalls "N".  
+ Eine Zeichenfolge: "Y", wenn die Datenquelle Spaltenaliase unterstützt; andernfalls "N".  
   
- Ein Spaltenalias ist ein alternativer Name, der für eine Spalte in der select-Liste mit einer AS-Klausel angegeben werden kann. Ein SQL-92-Eintrag-Ebene – konforme-Treiber wird immer mit "Y" zurückgegeben.  
+ Ein Spaltenalias ist ein alternativer Name, der für eine Spalte in der select-Liste mit einer AS-Klausel angegeben werden kann. Ein Level-konformen-Treiber für SQL-92-Eintrag wird immer mit "Y" zurückgegeben.  
   
  SQL_CONCAT_NULL_BEHAVIOR (ODBC 1.0)  
  Ein SQLUSMALLINT-Wert, der angibt, wie die Datenquelle für die Verkettung von NULL behandelt valued Zeichendatenspalten mit Werten ungleich NULL-Zeichen-datentypspalten:  
@@ -548,7 +548,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CB_NON_NULL = Ergebnis ist die Verkettung von Werten ungleich NULL-Spalte oder Spalten.  
   
- Ein SQL-92-Eintrag Ebene – konforme Treiber wird SQL_CB_NULL immer zurückgegeben werden.  
+ Ein SQL-92-Eintrag auf konformen Treiber wird SQL_CB_NULL immer zurückgegeben werden.  
   
  SQL_CONVERT_BIGINTSQL_CONVERT_BINARYSQL_CONVERT_BIT SQL_CONVERT_CHAR SQL_CONVERT_GUIDSQL_CONVERT_DATESQL_CONVERT_DECIMALSQL_CONVERT_DOUBLESQL_CONVERT_FLOATSQL_CONVERT_INTEGERSQL_CONVERT_INTERVAL_YEAR_MONTHSQL_CONVERT_INTERVAL_ DAY_TIMESQL_CONVERT_LONGVARBINARYSQL_CONVERT_LONGVARCHARSQL_CONVERT_NUMERICSQL_CONVERT_REALSQL_CONVERT_SMALLINTSQL_CONVERT_TIMESQL_CONVERT_TIMESTAMPSQL_CONVERT_TINYINTSQL_CONVERT_VARBINARYSQL_CONVERT_VARCHAR (ODBC 1.0)  
  Eine Bitmaske SQLUINTEGER. Die Bitmaske gibt an, die Konvertierungen, die von der Datenquelle unterstützten Daten mit der **konvertieren** Skalarfunktion für Daten des Typs mit dem Namen in der *Informationsart*. Wenn die Bitmaske gleich NULL ist, unterstützt die Datenquelle eine Konvertierung von Daten des genannten Typs, einschließlich der Konvertierung in den gleichen Datentyp nicht.  
@@ -575,7 +575,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CN_ANY = Korrelation Namen werden unterstützt und können einen beliebigen gültigen benutzerdefinierten Namen.  
   
- Ein SQL-92-Eintrag Ebene – konforme Treiber wird SQL_CN_ANY immer zurückgegeben werden.  
+ Ein SQL-92-Eintrag auf konformen Treiber wird SQL_CN_ANY immer zurückgegeben werden.  
   
  SQL_CREATE_ASSERTION (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **erstellen ASSERTION** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert.  
@@ -588,7 +588,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CA_CONSTRAINT_INITIALLY_DEFERREDSQL_CA_CONSTRAINT_INITIALLY_IMMEDIATESQL_CA_CONSTRAINT_DEFERRABLESQL_CA_CONSTRAINT_NON_DEFERRABLE  
   
- Ein Treiber für SQL-92-Full Ebene –-konforme Funktion gibt immer all diese Optionen zurück, da unterstützt. Ein Rückgabewert von "0" bedeutet, dass die **erstellen ASSERTION** Anweisung wird nicht unterstützt.  
+ Ein vollständige SQL-92 Level-konformen-Treiber wird immer all diese Optionen zurückgegeben, als unterstützt. Ein Rückgabewert von "0" bedeutet, dass die **erstellen ASSERTION** Anweisung wird nicht unterstützt.  
   
  SQL_CREATE_CHARACTER_SET (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **ZEICHENSATZ erstellen** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert.  
@@ -597,7 +597,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CCS_CREATE_CHARACTER_SETSQL_CCS_COLLATE_CLAUSESQL_CCS_LIMITED_COLLATION  
   
- Ein Treiber für SQL-92-Full Ebene –-konforme Funktion gibt immer all diese Optionen zurück, da unterstützt. Ein Rückgabewert von "0" bedeutet, dass die **ZEICHENSATZ erstellen** Anweisung wird nicht unterstützt.  
+ Ein vollständige SQL-92 Level-konformen-Treiber wird immer all diese Optionen zurückgegeben, als unterstützt. Ein Rückgabewert von "0" bedeutet, dass die **ZEICHENSATZ erstellen** Anweisung wird nicht unterstützt.  
   
  SQL_CREATE_COLLATION (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **erstellen SORTIERUNG** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert.  
@@ -606,7 +606,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CCOL_CREATE_COLLATION  
   
- Diese Option wird ein SQL-92-Full Ebene – konforme Treiber wie unterstützt immer zurückgegeben werden. Ein Rückgabewert von "0" bedeutet, dass die **SORTIERREIHENFOLGE erstellen** Anweisung wird nicht unterstützt.  
+ Diese Option wird ein vollständige SQL-92 Level-konformen Treiber wie unterstützt immer zurückgegeben werden. Ein Rückgabewert von "0" bedeutet, dass die **SORTIERREIHENFOLGE erstellen** Anweisung wird nicht unterstützt.  
   
  SQL_CREATE_DOMAIN (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **Domäne erstellen** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert.  
@@ -632,7 +632,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CS_CREATE_SCHEMASQL_CS_AUTHORIZATIONSQL_CS_DEFAULT_CHARACTER_SET  
   
- Ein Treiber für SQL-92-Intermediate Ebene –-konforme Funktion gibt die Optionen SQL_CS_CREATE_SCHEMA und SQL_CS_AUTHORIZATION unterstützt immer zurück. Diese müssen auch auf der Ebene der SQL-92-Eintrag, aber nicht unbedingt als SQL-Anweisungen unterstützt werden. Ein Treiber für SQL-92-Full Ebene –-konforme Funktion gibt immer all diese Optionen zurück, da unterstützt.  
+ Ein SQL-92-Intermediate-Ebene-konformen-Treiber wird immer die Optionen SQL_CS_CREATE_SCHEMA und SQL_CS_AUTHORIZATION zurückgegeben, als unterstützt. Diese müssen auch auf der Ebene der SQL-92-Eintrag, aber nicht unbedingt als SQL-Anweisungen unterstützt werden. Ein vollständige SQL-92 Level-konformen-Treiber wird immer all diese Optionen zurückgegeben, als unterstützt.  
   
  SQL_CREATE_TABLE (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **CREATE TABLE** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert.  
@@ -666,7 +666,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CTR_CREATE_TRANSLATION  
   
- Ein Treiber für SQL-92-Full Ebene –-konforme Funktion wird immer diese Optionen zurückgegeben, da unterstützt. Ein Rückgabewert von "0" bedeutet, dass die **erstellen Übersetzung** Anweisung wird nicht unterstützt.  
+ Ein vollständige SQL-92 Level-konformen-Treiber wird immer diese Optionen zurückgegeben, als unterstützt. Ein Rückgabewert von "0" bedeutet, dass die **erstellen Übersetzung** Anweisung wird nicht unterstützt.  
   
  SQL_CREATE_VIEW (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **CREATE VIEW** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert.  
@@ -677,14 +677,14 @@ SQLRETURN SQLGetInfo(
   
  Ein Rückgabewert von "0" bedeutet, dass die **CREATE VIEW** Anweisung wird nicht unterstützt.  
   
- Ein SQL-92-Eintrag-Ebene – konforme-Treiber gibt immer die Optionen SQL_CV_CREATE_VIEW und SQL_CV_CHECK_OPTION unterstützt zurück.  
+ Ein Level-konformen-Treiber für SQL-92-Eintrag wird immer die Optionen SQL_CV_CREATE_VIEW und SQL_CV_CHECK_OPTION zurückgegeben, da unterstützt.  
   
- Ein Treiber für SQL-92-Full Ebene –-konforme Funktion gibt immer all diese Optionen zurück, da unterstützt.  
+ Ein vollständige SQL-92 Level-konformen-Treiber wird immer all diese Optionen zurückgegeben, als unterstützt.  
   
  SQL_CURSOR_COMMIT_BEHAVIOR (ODBC 1.0)  
  Ein SQLUSMALLINT-Wert, der angibt wie eine **COMMIT** Vorgang wirkt sich auf Cursor und vorbereitete Anweisungen in der Datenquelle (das Verhalten der Datenquelle beim commit einer Transaktion).  
   
- Der Wert dieses Attributs spiegeln den aktuellen Status der Einstellung für die nächsten: sql_copt_ss_preserve_cursors bestimmt.  
+ Der Wert dieses Attributs spiegeln den aktuellen Status der Einstellung für die nächsten: SQL_COPT_SS_PRESERVE_CURSORS BESTIMMT.  
   
  SQL_CB_DELETE = Close Cursor und vorbereitete Anweisungen zu löschen. Um den Cursor zu verwenden. in diesem Fall die Anwendung muss reprepare und führen Sie die Anweisung erneut aus.  
   
@@ -710,9 +710,9 @@ SQLRETURN SQLGetInfo(
   
  SQL_SENSITIVE = Cursor sind empfindlich gegenüber Änderungen, die von anderen Cursorn innerhalb derselben Transaktion vorgenommen wurden.  
   
- Ein SQL-92-Eintrag-Ebene – konforme-Treiber gibt stets die SQL_UNSPECIFIED-Option unterstützt.  
+ Ein Level-konformen-Treiber für SQL-92-Eintrag wird immer die Option SQL_UNSPECIFIED zurückgegeben, da unterstützt.  
   
- Ein Treiber für SQL-92-Full Ebene –-konforme Funktion wird immer die Option SQL_INSENSITIVE zurückgegeben, als unterstützt.  
+ Ein vollständige SQL-92 Level-konformen-Treiber wird immer die Option SQL_INSENSITIVE zurückgegeben, unterstützt.  
   
  SQL_DATA_SOURCE_NAME (ODBC 1.0)  
  Eine Zeichenfolge mit dem-Datenquellennamen, die während der Verbindung verwendet wurde. Wenn die Anwendung aufgerufen **SQLConnect**, dies ist der Wert, der die *SzDSN* Argument. Wenn die Anwendung namens **SQLDriverConnect** oder **SQLBrowseConnect**, dies ist der Wert, der das DSN-Schlüsselwort in der Verbindungszeichenfolge, die an den Treiber übergeben. Wenn die Verbindungszeichenfolge nicht enthalten hat der **DSN** Schlüsselwort (z. B. wenn es enthält die **Treiber** Schlüsselwort), dies ist eine leere Zeichenfolge.  
@@ -725,13 +725,13 @@ SQLRETURN SQLGetInfo(
  SQL_DATABASE_NAME (ODBC 1.0)  
  Eine Zeichenfolge mit dem Namen der aktuellen Datenbank verwendet werden, wenn die Datenquelle ein benanntes Objekt, das Namen "Database" definiert.  
   
-> [!NOTE]  
+> [!NOTE]
 >  In ODBC 3.*.x*, der zurückgegebene Wert für diesen *Informationsart* kann auch zurückgegeben werden, indem **SQLGetConnectAttr** mit einer *Attribut* ein Argument vom SQL_ATTR_CURRENT_CATALOG.  
   
  SQL_DATETIME_LITERALS (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske Aufzählen der SQL-92-Datetime-Literale, die von der Datenquelle unterstützt. Beachten Sie, dass diese die Datetime-Literale, die in der SQL-92-Spezifikation aufgelistet werden und sind getrennt von der mit "DateTime" literal Escape-Klauseln von ODBC definiert. Weitere Informationen zu Literalen ODBC Datetime-Escape-Klauseln, finden Sie unter [Date, Time und Timestamp-Literale](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   
- Ein FIPS Transitional Ebene – konforme-Treiber gibt immer den Wert "1" in der Bitmaske für die Bits in der folgenden Liste zurück. Ein Wert von "0" bedeutet, dass SQL-92-Datetime-Literale nicht unterstützt werden.  
+ Ein FIPS Transitional Level-konformen-Treiber gibt immer den Wert "1" in der Bitmaske für die Bits in der folgenden Liste zurück. Ein Wert von "0" bedeutet, dass SQL-92-Datetime-Literale nicht unterstützt werden.  
   
  Die folgenden Bitmasken werden verwendet, um zu bestimmen, welche Literale unterstützt werden:  
   
@@ -772,7 +772,7 @@ SQLRETURN SQLGetInfo(
  SQL_DESCRIBE_PARAMETER (ODBC 3.0)  
  Eine Zeichenfolge: "Y", wenn die Parameter beschrieben werden können; "N", ist dies nicht.  
   
- Ein vollständige SQL-92-Ebene –-konforme Funktion-Treiber gibt "Y" in der Regel zurück, da unterstützt wird die **BESCHREIBEN Eingabe** Anweisung. Da dies die zugrunde liegenden SQL-Unterstützung nicht direkt angegeben ist, kann jedoch beschreiben Parameter nicht, auch in einen SQL-92-Full-Ebene – konforme-Treiber unterstützt.  
+ Ein vollständige SQL-92 Level-konformen-Treiber gibt "Y" in der Regel zurück, da unterstützt wird die **BESCHREIBEN Eingabe** Anweisung. Da dies die zugrunde liegenden SQL-Unterstützung nicht direkt angegeben ist, kann jedoch, die Parameter beschreibt nicht, auch in einen vollständigen SQL-92-Level-konformen-Treiber unterstützt.  
   
  SQL_DM_VER (ODBC 3.0)  
  Eine Zeichenfolge mit der Version des Treiber-Managers. Die Version des Formulars wird ##. ##. ###. ###, wobei:  
@@ -838,7 +838,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DA_DROP_ASSERTION  
   
- Diese Option wird ein SQL-92-Full Ebene – konforme Treiber wie unterstützt immer zurückgegeben werden.  
+ Diese Option wird ein vollständige SQL-92 Level-konformen Treiber wie unterstützt immer zurückgegeben werden.  
   
  SQL_DROP_CHARACTER_SET (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **ZEICHENSATZ löschen** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert.  
@@ -847,7 +847,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DCS_DROP_CHARACTER_SET  
   
- Diese Option wird ein SQL-92-Full Ebene – konforme Treiber wie unterstützt immer zurückgegeben werden.  
+ Diese Option wird ein vollständige SQL-92 Level-konformen Treiber wie unterstützt immer zurückgegeben werden.  
   
  SQL_DROP_COLLATION (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **ablegen-SORTIERUNG** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert.  
@@ -856,7 +856,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DC_DROP_COLLATION  
   
- Diese Option wird ein SQL-92-Full Ebene – konforme Treiber wie unterstützt immer zurückgegeben werden.  
+ Diese Option wird ein vollständige SQL-92 Level-konformen Treiber wie unterstützt immer zurückgegeben werden.  
   
  SQL_DROP_DOMAIN (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **DROP DOMAIN** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert.  
@@ -865,7 +865,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DD_DROP_DOMAINSQL_DD_CASCADESQL_DD_RESTRICT  
   
- Ein Treiber für SQL-92-Intermediate Ebene –-konforme Funktion wird immer alle diese Optionen zurückgegeben, da unterstützt.  
+ Ein Treiber für SQL-92-Intermediate Level-konformen wird immer all diese Optionen zurückgegeben, da unterstützt.  
   
  SQL_DROP_SCHEMA (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **DROP SCHEMA** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert.  
@@ -874,7 +874,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DS_DROP_SCHEMASQL_DS_CASCADESQL_DS_RESTRICT  
   
- Ein Treiber für SQL-92-Intermediate Ebene –-konforme Funktion wird immer alle diese Optionen zurückgegeben, da unterstützt.  
+ Ein Treiber für SQL-92-Intermediate Level-konformen wird immer all diese Optionen zurückgegeben, da unterstützt.  
   
  SQL_DROP_TABLE (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **DROP TABLE** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert.  
@@ -883,7 +883,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DT_DROP_TABLESQL_DT_CASCADESQL_DT_RESTRICT  
   
- Ein FIPS Transitional Ebene – konforme-Treiber wird immer all diese Optionen zurückgegeben, als unterstützt.  
+ Ein FIPS Transitional Level-konformen-Treiber wird immer all diese Optionen zurückgegeben, als unterstützt.  
   
  SQL_DROP_TRANSLATION (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **löschen Übersetzung** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert.  
@@ -892,7 +892,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DTR_DROP_TRANSLATION  
   
- Diese Option wird ein SQL-92-Full Ebene – konforme Treiber wie unterstützt immer zurückgegeben werden.  
+ Diese Option wird ein vollständige SQL-92 Level-konformen Treiber wie unterstützt immer zurückgegeben werden.  
   
  SQL_DROP_VIEW (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **DROP VIEW** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert.  
@@ -901,7 +901,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DV_DROP_VIEWSQL_DV_CASCADESQL_DV_RESTRICT  
   
- Ein FIPS Transitional Ebene – konforme-Treiber wird immer all diese Optionen zurückgegeben, als unterstützt.  
+ Ein FIPS Transitional Level-konformen-Treiber wird immer all diese Optionen zurückgegeben, als unterstützt.  
   
  SQL_DYNAMIC_CURSOR_ATTRIBUTES1(ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Attribute eines dynamischen Cursors beschreibt, die vom Treiber unterstützt werden. Diese Bitmaske enthält der ersten Teilmenge von Attributen. die zweite Untergruppe finden Sie unter SQL_DYNAMIC_CURSOR_ATTRIBUTES2.  
@@ -930,11 +930,11 @@ SQLRETURN SQLGetInfo(
   
  SQL_CA1_POS_REFRESH = ein *Vorgang* Argument SQL_REFRESH wird unterstützt, in einem Aufruf von **SQLSetPos** Wenn der Cursor ist ein dynamischer Cursor.  
   
- SQL_CA1_POSITIONED_UPDATE = ein UPDATE, in dem aktuellen der SQL-Anweisung wird unterstützt, wenn der Cursor befindet sich ein dynamic-Cursor. (Ein SQL-92-Eintrag-Ebene – konforme-Treiber diese Option gibt stets als unterstützt.)  
+ SQL_CA1_POSITIONED_UPDATE = ein UPDATE, in dem aktuellen der SQL-Anweisung wird unterstützt, wenn der Cursor befindet sich ein dynamic-Cursor. (Ein Level-konformen-Treiber für SQL-92-Eintrag diese Option gibt stets als unterstützt.)  
   
- SQL_CA1_POSITIONED_DELETE = A löschen, in dem aktuellen der SQL-Anweisung wird unterstützt, wenn der Cursor befindet sich ein dynamic-Cursor. (Ein SQL-92-Eintrag-Ebene – konforme-Treiber diese Option gibt stets als unterstützt.)  
+ SQL_CA1_POSITIONED_DELETE = A löschen, in dem aktuellen der SQL-Anweisung wird unterstützt, wenn der Cursor befindet sich ein dynamic-Cursor. (Ein Level-konformen-Treiber für SQL-92-Eintrag diese Option gibt stets als unterstützt.)  
   
- SQL_CA1_SELECT_FOR_UPDATE = eine SELECT-Anweisung aus, für die UPDATE-SQL-Anweisung unterstützt wird, wenn der Cursor befindet sich ein dynamic-Cursor. (Ein SQL-92-Eintrag-Ebene – konforme-Treiber diese Option gibt stets als unterstützt.)  
+ SQL_CA1_SELECT_FOR_UPDATE = eine SELECT-Anweisung aus, für die UPDATE-SQL-Anweisung unterstützt wird, wenn der Cursor befindet sich ein dynamic-Cursor. (Ein Level-konformen-Treiber für SQL-92-Eintrag diese Option gibt stets als unterstützt.)  
   
  SQL_CA1_BULK_ADD = ein *Vorgang* Argument SQL_ADD wird unterstützt, in einem Aufruf von **SQLBulkOperations** Wenn der Cursor ist ein dynamischer Cursor.  
   
@@ -944,7 +944,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CA1_BULK_FETCH_BY_BOOKMARK = ein *Vorgang* Argument SQL_FETCH_BY_BOOKMARK wird unterstützt, in einem Aufruf von **SQLBulkOperations** Wenn der Cursor ist ein dynamischer Cursor.  
   
- Ein Treiber für SQL-92-Intermediate Ebene –-konforme Funktion wird in der Regel die SQL_CA1_NEXT SQL_CA1_ABSOLUTE und SQL_CA1_RELATIVE Optionen wie zurückgegeben werden unterstützt, da es sich um scrollfähige Cursor über die eingebettete SQL FETCH-Anweisung unterstützt. Da dies nicht der zugrunde liegenden SQL-Unterstützung direkt bestimmt, möglicherweise jedoch scrollfähige Cursor nicht, auch für einen SQL-92-Intermediate Ebene – konforme-Treiber unterstützt.  
+ Ein SQL-92-Intermediate-Ebene-konformen-Treiber wird in der Regel die SQL_CA1_NEXT SQL_CA1_ABSOLUTE und SQL_CA1_RELATIVE Optionen wie zurückgegeben werden unterstützt, da scrollfähige Cursor über die eingebettete SQL FETCH-Anweisung unterstützt. Da dies nicht der zugrunde liegenden SQL-Unterstützung direkt bestimmt, möglicherweise jedoch scrollfähige Cursor nicht, auch für einen SQL-92-Intermediate-Ebene-konformen-Treiber unterstützt.  
   
  SQL_DYNAMIC_CURSOR_ATTRIBUTES2(ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Attribute eines dynamischen Cursors beschreibt, die vom Treiber unterstützt werden. Diese Bitmaske enthält der zweite Teilmenge von Attributen. die erste Untergruppe finden Sie unter SQL_DYNAMIC_CURSOR_ATTRIBUTES1.  
@@ -1053,7 +1053,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_GB_NO_RELATION = die Spalten in der **GROUP BY** -Klausel und die select-Liste beziehen sich nicht. Die Bedeutung der nongrouped, zusammengesetzten Spalten in der select-Liste ist datenquellenabhängig. Z. B. **wählen DEPT, Gehalt von EMPLOYEE-Gruppe BY DEPT, dem Alter**. ODBC (2.0)  
   
- Ein SQL-92-Eintrag-Ebene – konforme-Treiber gibt stets die SQL_GB_GROUP_BY_EQUALS_SELECT-Option unterstützt. Ein Treiber für SQL-92-Full Ebene –-konforme Funktion wird immer die Option SQL_GB_COLLATE zurückgegeben, als unterstützt. Wenn keine der Optionen unterstützt wird, die **GROUP BY** -Klausel wird von der Datenquelle nicht unterstützt.  
+ Ein Level-konformen-Treiber für SQL-92-Eintrag wird immer die Option SQL_GB_GROUP_BY_EQUALS_SELECT zurückgegeben, da unterstützt. Ein vollständige SQL-92 Level-konformen-Treiber wird immer die Option SQL_GB_COLLATE zurückgegeben, unterstützt. Wenn keine der Optionen unterstützt wird, die **GROUP BY** -Klausel wird von der Datenquelle nicht unterstützt.  
   
  SQL_IDENTIFIER_CASE (ODBC 1.0)  
  Ein SQLUSMALLINT-Wert wie folgt aus:  
@@ -1150,10 +1150,10 @@ SQLRETURN SQLGetInfo(
   
  SQL_IS_SELECT_INTO  
   
- Ein SQL-92-Eintrag-Ebene – konforme-Treiber wird immer all diese Optionen zurückgegeben, da unterstützt.  
+ Ein Level-konformen-Treiber für SQL-92-Eintrag wird immer alle diese Optionen zurückgegeben, da unterstützt.  
   
  SQL_INTEGRITY (ODBC 1.0)  
- Eine Zeichenfolge: "Y", wenn die Datenquelle;-Integritätserweiterungsfunktion unterstützt. "N", wenn dies nicht der Fall.  
+ Eine Zeichenfolge: "Y", wenn die Datenquelle die Integritätserweiterungsfunktion unterstützt; "N", wenn dies nicht der Fall.  
   
  Dies *Informationsart* für ODBC 3.0 von der ODBC 2.0 umbenannt wurde *Informationsart* SQL_ODBC_SQL_OPT_IEF.  
   
@@ -1166,7 +1166,7 @@ SQLRETURN SQLGetInfo(
   
  Beschreibungen dieser Bitmasken finden Sie unter SQL_DYNAMIC_CURSOR_ATTRIBUTES1 (und Ersetzen Sie "keysetgesteuerte Cursor" für "dynamische Cursor" in den Beschreibungen).  
   
- Ein Treiber für SQL-92-Intermediate Ebene –-konforme Funktion wird in der Regel die SQL_CA1_NEXT SQL_CA1_ABSOLUTE und SQL_CA1_RELATIVE Optionen wie zurückgegeben werden unterstützt, da der Treiber scrollfähige Cursor über die eingebettete SQL FETCH-Anweisung unterstützt. Da dies nicht der zugrunde liegenden SQL-Unterstützung direkt bestimmt, möglicherweise jedoch scrollfähige Cursor nicht, auch für einen SQL-92-Intermediate Ebene – konforme-Treiber unterstützt.  
+ Ein Treiber für SQL-92-Intermediate Level-konformen wird in der Regel die SQL_CA1_NEXT SQL_CA1_ABSOLUTE und SQL_CA1_RELATIVE Optionen wie zurückgegeben werden unterstützt, da der Treiber scrollfähige Cursor über die eingebettete SQL FETCH-Anweisung unterstützt. Da dies nicht der zugrunde liegenden SQL-Unterstützung direkt bestimmt, möglicherweise jedoch scrollfähige Cursor nicht, auch für einen SQL-92-Intermediate-Ebene-konformen-Treiber unterstützt.  
   
  SQL_KEYSET_CURSOR_ATTRIBUTES2(ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Attribute des ein Keyset-Cursor wird beschrieben, die vom Treiber unterstützt werden. Diese Bitmaske enthält der zweite Teilmenge von Attributen. die erste Untergruppe finden Sie unter SQL_KEYSET_CURSOR_ATTRIBUTES1.  
@@ -1182,10 +1182,10 @@ SQLRETURN SQLGetInfo(
   
  Eine Liste mit Schlüsselwörtern für ODBC, finden Sie unter [reservierte Schlüsselwörter](../../../odbc/reference/appendixes/reserved-keywords.md) in [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Die **#define** Wert SQL_ODBC_KEYWORDS enthält eine durch Trennzeichen getrennte Liste von Schlüsselwörtern für ODBC.  
   
- Anhang C: SQL-Grammatik  
+ Anhang C: SQL-Grammatik  
   
  SQL_LIKE_ESCAPE_CLAUSE (ODBC 2.0)  
- Eine Zeichenfolge: "Y", wenn die Datenquelle ein Escapezeichen unterstützt, für das Prozentzeichen (%) und Unterstrich (_) enthalten, einem **wie** Prädikat und der Treiber die ODBC-Syntax zum Definieren von unterstützt eine **wie** Prädikat Escapezeichen; "N" andernfalls.  
+ Eine Zeichenfolge: Zeichen Sie "Y", wenn die Datenquelle ein Escapezeichen unterstützt, für das Prozentzeichen (%) und Unterstrich (_) in einer **wie** Prädikat und der Treiber die ODBC-Syntax zum Definieren von unterstützt eine **wie** Prädikat Escapezeichen; "N" andernfalls.  
   
  SQL_MAX_ASYNC_CONCURRENT_STATEMENTS (ODBC 3.0)  
  Eine SQLUINTEGER-Wert, der die maximale Anzahl der aktiven gleichzeitigen Anweisungen im asynchronen Modus gibt an, die der Treiber auf eine bestimmte Verbindung unterstützt. Wenn es keine bestimmte Beschränkung gibt oder der Grenzwert unbekannt ist, ist dieser Wert 0 (null).  
@@ -1196,7 +1196,7 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_CATALOG_NAME_LEN (ODBC 1.0)  
  Ein SQLUSMALLINT-Wert, der die maximale Länge des ein Katalogname in der Datenquelle angibt. Wenn keine maximale Länge oder die Länge unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
- Ein FIPS vollständige Ebene – konforme-Treiber wird mindestens 128 zurückgegeben.  
+ Ein vollständige FIPS Level-konformen-Treiber wird mindestens 128 zurückgegeben.  
   
  Dies *Informationsart* für ODBC 3.0 von der ODBC 2.0 umbenannt wurde *Informationsart* SQL_MAX_QUALIFIER_NAME_LEN.  
   
@@ -1206,12 +1206,12 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_COLUMN_NAME_LEN (ODBC 1.0)  
  Ein SQLUSMALLINT-Wert, der die maximale Länge für einen Spaltennamen in der Datenquelle angibt. Wenn keine maximale Länge oder die Länge unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
- Ein FIPS-Eintrag-Ebene – konforme-Treiber gibt mindestens 18 zurück. Ein FIPS Intermediate Ebene – konforme-Treiber wird mindestens 128 zurückgegeben.  
+ Ein FIPS-Eintrag-Level-konformen-Treiber gibt mindestens 18 zurück. Ein Intermediate FIPS-Level-konformen-Treiber wird mindestens 128 zurückgegeben.  
   
  SQL_MAX_COLUMNS_IN_GROUP_BY (ODBC 2.0)  
  Ein SQLUSMALLINT-Wert, der angibt, die maximale Anzahl zulässiger Spalten in einer **GROUP BY** Klausel. Wenn es keine angegebenen Beschränkung gibt oder der Grenzwert unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
- Ein FIPS-Eintrag-Ebene – konforme-Treiber gibt mindestens 6 zurück. Ein Intermediate FIPS Ebene – konforme-Treiber gibt mindestens 15 zurück.  
+ Ein FIPS-Eintrag-Level-konformen-Treiber gibt mindestens 6 zurück. Ein Intermediate FIPS-Level-konformen-Treiber gibt mindestens 15 zurück.  
   
  SQL_MAX_COLUMNS_IN_INDEX (ODBC 2.0)  
  Ein SQLUSMALLINT-Wert, der die maximale Anzahl zulässiger Spalten in einem Index angibt. Wenn es keine angegebenen Beschränkung gibt oder der Grenzwert unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
@@ -1219,17 +1219,17 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_COLUMNS_IN_ORDER_BY (ODBC 2.0)  
  Ein SQLUSMALLINT-Wert, der angibt, die maximale Anzahl zulässiger Spalten in einer **ORDER BY** Klausel. Wenn es keine angegebenen Beschränkung gibt oder der Grenzwert unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
- Ein FIPS-Eintrag-Ebene – konforme-Treiber gibt mindestens 6 zurück. Ein Intermediate FIPS Ebene – konforme-Treiber gibt mindestens 15 zurück.  
+ Ein FIPS-Eintrag-Level-konformen-Treiber gibt mindestens 6 zurück. Ein Intermediate FIPS-Level-konformen-Treiber gibt mindestens 15 zurück.  
   
  SQL_MAX_COLUMNS_IN_SELECT (ODBC 2.0)  
  Ein SQLUSMALLINT-Wert, der die maximale Anzahl der zulässigen Spalten in einer select-Liste angibt. Wenn es keine angegebenen Beschränkung gibt oder der Grenzwert unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
- Ein FIPS-Eintrag-Ebene – konforme-Treiber gibt mindestens 100 zurück. Ein Intermediate FIPS Ebene – konforme-Treiber gibt mindestens 250 zurück.  
+ Ein FIPS-Eintrag-Level-konformen-Treiber gibt mindestens 100 zurück. Ein Intermediate FIPS-Level-konformen-Treiber gibt mindestens 250 zurück.  
   
  SQL_MAX_COLUMNS_IN_TABLE (ODBC 2.0)  
  Ein SQLUSMALLINT-Wert, der die maximale Anzahl zulässiger Spalten in einer Tabelle angibt. Wenn es keine angegebenen Beschränkung gibt oder der Grenzwert unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
- Ein FIPS-Eintrag-Ebene – konforme-Treiber gibt mindestens 100 zurück. Ein Intermediate FIPS Ebene – konforme-Treiber gibt mindestens 250 zurück.  
+ Ein FIPS-Eintrag-Level-konformen-Treiber gibt mindestens 100 zurück. Ein Intermediate FIPS-Level-konformen-Treiber gibt mindestens 250 zurück.  
   
  SQL_MAX_CONCURRENT_ACTIVITIES (ODBC 1.0)  
  Ein SQLUSMALLINT-Wert, der die maximale Anzahl aktiver Anweisungen angibt, die der Treiber für eine Verbindung unterstützt werden. Eine Anweisung als aktiv definiert ist, wenn sie die Ergebnisse wartet, mit dem Begriff "Ergebnisse" Bedeutung Zeilen verfügt eine **wählen** Vorgang oder von betroffenen Zeilen eine **einfügen**, **UPDATE**, oder **Löschen** Vorgang (z. B. eine Zeilenanzahl) oder in einem NEED_DATA Zustand ist. Dieser Wert kann es sich um eine Einschränkung auferlegt, indem Sie entweder den Treiber oder der Datenquelle widerspiegeln. Wenn es keine angegebenen Beschränkung gibt oder der Grenzwert unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
@@ -1239,7 +1239,7 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_CURSOR_NAME_LEN (ODBC 1.0)  
  Ein SQLUSMALLINT-Wert, der maximal ein Cursorname in der Datenquelle angibt. Wenn keine maximale Länge oder die Länge unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
- Ein FIPS-Eintrag-Ebene – konforme-Treiber gibt mindestens 18 zurück. Ein FIPS Intermediate Ebene – konforme-Treiber wird mindestens 128 zurückgegeben.  
+ Ein FIPS-Eintrag-Level-konformen-Treiber gibt mindestens 18 zurück. Ein Intermediate FIPS-Level-konformen-Treiber wird mindestens 128 zurückgegeben.  
   
  SQL_MAX_DRIVER_CONNECTIONS (ODBC 1.0)  
  Ein SQLUSMALLINT-Wert, der die maximale Anzahl der aktiven Verbindungen angibt, die der Treiber für eine Umgebung unterstützen kann. Dieser Wert kann es sich um eine Einschränkung auferlegt, indem Sie entweder den Treiber oder der Datenquelle widerspiegeln. Wenn es keine angegebenen Beschränkung gibt oder der Grenzwert unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
@@ -1249,7 +1249,7 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_IDENTIFIER_LEN (ODBC 3.0)  
  Ein SQLUSMALLINT, der die maximale Größe in Zeichen angibt, die die Datenquelle für den benutzerdefinierten Namen unterstützt.  
   
- Ein FIPS-Eintrag-Ebene – konforme-Treiber gibt mindestens 18 zurück. Ein FIPS Intermediate Ebene – konforme-Treiber wird mindestens 128 zurückgegeben.  
+ Ein FIPS-Eintrag-Level-konformen-Treiber gibt mindestens 18 zurück. Ein Intermediate FIPS-Level-konformen-Treiber wird mindestens 128 zurückgegeben.  
   
  SQL_MAX_INDEX_SIZE (ODBC 2.0)  
  Eine SQLUINTEGER-Wert, der die maximale Anzahl von Bytes in den kombinierten Feldern eines Index angibt. Wenn es keine angegebenen Beschränkung gibt oder der Grenzwert unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
@@ -1260,15 +1260,15 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_ROW_SIZE (ODBC 2.0)  
  Eine SQLUINTEGER-Wert, der die maximale Länge einer einzelnen Zeile in einer Tabelle angibt. Wenn es keine angegebenen Beschränkung gibt oder der Grenzwert unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
- Ein FIPS-Eintrag-Ebene – konforme-Treiber gibt mindestens 2.000 zurück. Ein FIPS Intermediate Ebene – konforme-Treiber gibt mindestens 8.000 zurück.  
+ Ein FIPS-Eintrag-Level-konformen-Treiber gibt mindestens 2.000 zurück. Ein Intermediate FIPS-Level-konformen-Treiber gibt mindestens 8.000 zurück.  
   
  SQL_MAX_ROW_SIZE_INCLUDES_LONG (ODBC 3.0)  
- Eine Zeichenfolge: "Y", wenn die maximale Zeilengröße zurückgegeben, für den Informationstyp SQL_MAX_ROW_SIZE die Länge aller SQL_LONGVARCHAR und SQL_LONGVARBINARY Spalten in der Zeile enthält. "N" andernfalls.  
+ Eine Zeichenfolge: "Y", wenn die maximale Zeilengröße für den Informationstyp SQL_MAX_ROW_SIZE zurückgegeben umfasst die Länge der Spalten für alle SQL_LONGVARCHAR und SQL_LONGVARBINARY in der Zeile. "N" andernfalls.  
   
  SQL_MAX_SCHEMA_NAME_LEN (ODBC 1.0)  
  Ein SQLUSMALLINT-Wert, der die maximale Länge des Namens eines Schemas in der Datenquelle angibt. Wenn keine maximale Länge oder die Länge unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
- Ein FIPS-Eintrag-Ebene – konforme-Treiber gibt mindestens 18 zurück. Ein FIPS Intermediate Ebene – konforme-Treiber wird mindestens 128 zurückgegeben.  
+ Ein FIPS-Eintrag-Level-konformen-Treiber gibt mindestens 18 zurück. Ein Intermediate FIPS-Level-konformen-Treiber wird mindestens 128 zurückgegeben.  
   
  Dies *Informationsart* für ODBC 3.0 von der ODBC 2.0 umbenannt wurde *Informationsart* SQL_MAX_OWNER_NAME_LEN.  
   
@@ -1278,12 +1278,12 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_TABLE_NAME_LEN (ODBC 1.0)  
  Ein SQLUSMALLINT-Wert, der die maximale Länge des Namen einer Tabelle in der Datenquelle angibt. Wenn keine maximale Länge oder die Länge unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
- Ein FIPS-Eintrag-Ebene – konforme-Treiber gibt mindestens 18 zurück. Ein FIPS Intermediate Ebene – konforme-Treiber wird mindestens 128 zurückgegeben.  
+ Ein FIPS-Eintrag-Level-konformen-Treiber gibt mindestens 18 zurück. Ein Intermediate FIPS-Level-konformen-Treiber wird mindestens 128 zurückgegeben.  
   
  SQL_MAX_TABLES_IN_SELECT (ODBC 2.0)  
  Ein SQLUSMALLINT-Wert, der angibt, die maximale Anzahl von Tabellen, die innerhalb der **FROM** -Klausel eine **wählen** Anweisung. Wenn es keine angegebenen Beschränkung gibt oder der Grenzwert unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
- Ein FIPS-Eintrag-Ebene – konforme-Treiber gibt mindestens 15 zurück. Ein Intermediate FIPS Ebene – konforme-Treiber gibt mindestens 50 zurück.  
+ Ein FIPS-Eintrag-Level-konformen-Treiber gibt mindestens 15 zurück. Ein Intermediate FIPS-Level-konformen-Treiber gibt mindestens 50 zurück.  
   
  SQL_MAX_USER_NAME_LEN (ODBC 2.0)  
  Ein SQLUSMALLINT-Wert, der die maximale Länge des einen Benutzernamen in der Datenquelle angibt. Wenn keine maximale Länge oder die Länge unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
@@ -1299,7 +1299,7 @@ SQLRETURN SQLGetInfo(
  Die Informationen zurückgegeben, die für diesen Informationstyp gilt nicht bei verteilten Transaktionen.  
   
  SQL_NEED_LONG_DATA_LEN (ODBC 2.0)  
- Eine Zeichenfolge: "Y", wenn die Datenquelle, die Länge eines long-Daten-Werts benötigt (der Datentyp ist SQL_LONGVARCHAR, SQL_LONGVARBINARY oder einen long-Daten datenquellenspezifischen-Datentyp), bevor Sie diesen Wert wird an die Datenquelle, "N" gesendet, wenn dies nicht der Fall. Weitere Informationen finden Sie unter [SQLBindParameter-Funktion](../../../odbc/reference/syntax/sqlbindparameter-function.md) und [SQLSetPos-Funktion](../../../odbc/reference/syntax/sqlsetpos-function.md).  
+ Eine Zeichenfolge: "Y", wenn die Datenquelle, die Länge eines long-Daten-Werts benötigt (der Datentyp ist SQL_LONGVARCHAR, SQL_LONGVARBINARY oder einen long-Daten datenquellenspezifische-Datentyp), bevor Sie diesen Wert wird an die Datenquelle "N" gesendet, wenn dies nicht der Fall. Weitere Informationen finden Sie unter [SQLBindParameter-Funktion](../../../odbc/reference/syntax/sqlbindparameter-function.md) und [SQLSetPos-Funktion](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
  SQL_NON_NULLABLE_COLUMNS (ODBC 1.0)  
  Ein SQLUSMALLINT-Wert, der angibt, ob die Datenquelle NOT NULL in Spalten unterstützt:  
@@ -1308,7 +1308,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_NNC_NON_NULL = Spalten darf nicht NULL sein. (Die Datenquelle unterstützt die **NOT NULL** spalteneinschränkung in **CREATE TABLE** Anweisungen.)  
   
- Ein SQL-92-Eintrag-Ebene – konforme-Treiber gibt SQL_NNC_NON_NULL zurück.  
+ Ein SQL-92-Eintrag-Level-konformen-Treiber gibt SQL_NNC_NON_NULL zurück.  
   
  SQL_NULL_COLLATION (ODBC 2.0)  
  Ein SQLUSMALLINT-Wert, der angibt, in denen NULL-Werte in einem Resultset sortiert werden:  
@@ -1322,7 +1322,7 @@ SQLRETURN SQLGetInfo(
  SQL_NC_START = NULL-Werte werden am Anfang des Resultsets festgelegt, unabhängig von den ASC oder DESC-Schlüsselwörter sortiert.  
   
  SQL_NUMERIC_FUNCTIONS (ODBC 1.0)  
- Hinweis: Die Informationstyp wurde in ODBC-1.0 eingeführt. Jede Bitmaske ist mit der Version mit der Bezeichnung in der sie eingeführt wurde.  
+ Hinweis: Der Informationstyp wurde in ODBC-1.0 eingeführt. Jede Bitmaske ist mit der Version mit der Bezeichnung in der sie eingeführt wurde.  
   
  Eine SQLUINTEGER-Bitmaske Auflisten von den skalaren numerischen Funktionen, die von der Treiber und der zugeordneten Datenquelle unterstützt.  
   
@@ -1333,9 +1333,9 @@ SQLRETURN SQLGetInfo(
  SQL_ODBC_INTERFACE_CONFORMANCE (ODBC 3.0)  
  Eine SQLUINTEGER-Wert, der das Maß der ODBC 3. angibt *.x* -Schnittstelle, die mit der Treiber kompatibel ist.  
   
- SQL_OIC_CORE: Entsprechen die Mindestebene, die alle ODBC-Treiber sind erwartet. Diese Ebene enthält grundlegende Benutzeroberflächenelemente wie z. B. das Verbindungsfunktionen, Funktionen für das Vorbereiten und Ausführen einer SQL-Anweisung, grundlegenden Satz Metadatenfunktionen, grundlegende Katalogfunktionen und So weiter.  
+ SQL_OIC_CORE: Die Mindestebene, die alle ODBC-Treiber sind zur Einhaltung erwartet. Diese Ebene enthält grundlegende Benutzeroberflächenelemente wie z. B. das Verbindungsfunktionen, Funktionen für das Vorbereiten und Ausführen einer SQL-Anweisung, grundlegenden Satz Metadatenfunktionen, grundlegende Katalogfunktionen und So weiter.  
   
- SQL_OIC_LEVEL1: Eine Ebene, einschließlich Core Standards Compliance-Level-Funktionen sowie bildlauffähige Cursor, Lesezeichen, positioniert aktualisiert löscht und so weiter.  
+ SQL_OIC_LEVEL1: Eine Ebene, einschließlich Core Standards Compliance-Level-Funktionen sowie bildlauffähige Cursor, Lesezeichen, positioniert aktualisiert und löscht und so weiter.  
   
  SQL_OIC_LEVEL2: Eine Ebene, einschließlich der Ebene 1 Standards Compliance-Level-Funktionen sowie erweiterte Features wie z. B. Sensitivcursor; Aktualisieren Sie, löschen Sie und aktualisieren Sie, indem Sie Lesezeichen; Unterstützung für gespeicherte Prozeduren; Katalogfunktionen für die Primär-und Fremdschlüssel; Unterstützung von Multi-Katalog Und so weiter.  
   
@@ -1388,7 +1388,7 @@ SQLRETURN SQLGetInfo(
  Eine Zeichenfolge mit den Datenquelle Herstellernamen für eine Prozedur; z. B. "Datenbankprozedur", "gespeicherte Prozedur", "Procedure", "Package" oder "gespeicherte Abfrage".  
   
  SQL_PROCEDURES (ODBC 1.0)  
- Eine Zeichenfolge: "Y", wenn die Datenquelle, Prozeduren unterstützt und der Treiber die Aufrufsyntax für den ODBC-Prozedur unterstützt; "N" andernfalls.  
+ Eine Zeichenfolge: "Y", wenn die Datenquelle, Prozeduren unterstützt und der Treiber die ODBC-Prozedur der Aufrufsyntax unterstützt; "N" andernfalls.  
   
  SQL_POS_OPERATIONS (ODBC 2.0)  
  Eine SQLINTEGER-Bitmaske, die die Supportvorgänge in auflisten **SQLSetPos**.  
@@ -1408,39 +1408,39 @@ SQLRETURN SQLGetInfo(
   
  SQL_IC_MIXED = in Anführungszeichen Bezeichner in SQL Groß-/Kleinschreibung nicht und werden in gemischter Schreibung im Systemkatalog gespeichert.  
   
- Ein SQL-92-Eintrag Ebene – konforme Treiber wird SQL_IC_SENSITIVE immer zurückgegeben werden.  
+ Ein SQL-92-Eintrag auf konformen Treiber wird SQL_IC_SENSITIVE immer zurückgegeben werden.  
   
  SQL_ROW_UPDATES (ODBC 1.0)  
- Eine Zeichenfolge: "Y", wenn ein keysetgesteuerter oder eine gemischter Cursor Zeilenversionen verwaltet oder Werte für alle abgerufenen Zeilen und erkennt daher alle Updates, die auf eine Zeile von einem Benutzer vorgenommen wurden, seitdem die Zeile zuletzt abgerufen wurde. (Dies gilt nur für Updates, löschungen oder einfügungen). Der Treiber kann das SQL_ROW_UPDATED Flag zurück, auf den Zeilenstatus bei array **SQLFetchScroll** aufgerufen wird. Andernfalls "N".  
+ Eine Zeichenfolge: "Y", wenn ein keysetgesteuerter oder eine gemischter Cursor Zeilenversionen oder Werte für alle verwaltet abgerufenen Zeilen und erkennt daher alle Updates, die auf eine Zeile von einem Benutzer vorgenommen wurden, seitdem die Zeile zuletzt abgerufen wurde. (Dies gilt nur für Updates, löschungen oder einfügungen). Der Treiber kann das SQL_ROW_UPDATED Flag zurück, auf den Zeilenstatus bei array **SQLFetchScroll** aufgerufen wird. Andernfalls "N".  
   
  SQL_SCHEMA_TERM (ODBC 1.0)  
  Eine Zeichenfolge mit den Datenquelle Herstellernamen für ein Schema; beispielsweise "Besitzer", "Autorisierungs-ID" oder "Schema".  
   
  Die Zeichenfolge kann in der oberen, unteren, oder eine gemischte Groß-zurückgegeben werden.  
   
- Ein SQL-92-Eintrag-Ebene – konforme-Treiber gibt immer "Schema" zurück.  
+ Ein Level-konformen-Treiber für SQL-92-Eintrag wird immer auf "Schema" zurückgegeben.  
   
  Dies *Informationsart* für ODBC 3.0 von der ODBC 2.0 umbenannt wurde *Informationsart* SQL_OWNER_TERM.  
   
  SQL_SCHEMA_USAGE (ODBC 2.0)  
  Eine SQLUINTEGER-Bitmaske aufzählen die Anweisungen in denen Schemas verwendet werden können:  
   
- SQL_SU_DML_STATEMENTS = Schemas werden in allen Data Manipulation Language-Anweisungen unterstützt: **wählen**, **einfügen**, **UPDATE**, **löschen**, und falls unterstützt, **wählen Sie für UPDATE** positioniert Update und delete-Anweisungen.  
+ SQL_SU_DML_STATEMENTS = Schemas werden in allen Data Manipulation Language-Anweisungen unterstützt: **Wählen Sie**, **einfügen**, **aktualisieren**, **löschen**, und falls unterstützt, **wählen Sie für UPDATE** und positioniert, Update- und Delete -Anweisungen.  
   
  SQL_SU_PROCEDURE_INVOCATION = Schemas werden in der aufrufanweisung für ODBC-Prozeduren unterstützt.  
   
- SQL_SU_TABLE_DEFINITION = Schemas werden in allen Table-Anweisungen der Definition unterstützt: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE** , und **DROP VIEW**.  
+ SQL_SU_TABLE_DEFINITION = Schemas werden in allen Table-Anweisungen der Definition unterstützt: **ERSTELLT eine Tabelle**, **ERSTELLUNGSANSICHT**, **ALTER TABLE**, **TABELLENLÖSCHUNG**, und **DROP VIEW**.  
   
- SQL_SU_INDEX_DEFINITION = Schemas werden in alle indexanweisungen Definition unterstützt: **CREATE INDEX** und **DROP INDEX**.  
+ SQL_SU_INDEX_DEFINITION = Schemas werden in alle indexanweisungen Definition unterstützt: **INDEXERSTELLUNG** und **DROP INDEX**.  
   
  SQL_SU_PRIVILEGE_DEFINITION = Schemas werden in alle Berechtigungen datendefinitionsanweisungen unterstützt: **GRANT** und **widerrufen**.  
   
- Ein SQL-92-Eintrag-Ebene – konforme-Treiber wird immer die SQL_SU_DML_STATEMENTS SQL_SU_TABLE_DEFINITION und SQL_SU_PRIVILEGE_DEFINITION Optionen zurückgegeben, als unterstützt.  
+ Ein Level-konformen-Treiber für SQL-92-Eintrag wird immer die SQL_SU_DML_STATEMENTS SQL_SU_TABLE_DEFINITION und SQL_SU_PRIVILEGE_DEFINITION Optionen zurückgegeben, da unterstützt.  
   
  Dies *Informationsart* für ODBC 3.0 von der ODBC 2.0 umbenannt wurde *Informationsart* SQL_OWNER_USAGE.  
   
  SQL_SCROLL_OPTIONS (ODBC 1.0)  
- Hinweis: Die Informationstyp wurde in ODBC-1.0 eingeführt. Jede Bitmaske ist mit der Version mit der Bezeichnung in der sie eingeführt wurde.  
+ Hinweis: Der Informationstyp wurde in ODBC-1.0 eingeführt. Jede Bitmaske ist mit der Version mit der Bezeichnung in der sie eingeführt wurde.  
   
  Eine SQLUINTEGER-Bitmaske, die die Bildlauf-Optionen für scrollfähige Cursor unterstützt auflisten.  
   
@@ -1466,7 +1466,7 @@ SQLRETURN SQLGetInfo(
  Dies *Informationsart* auf Katalogfunktionen beschränkt ist. Eine Beschreibung der Verwendung des Escapezeichens in Suchzeichenfolgen-Muster finden Sie unter [Musterwerts](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   
  SQL_SERVER-NAME (ODBC 1.0)  
- Eine Zeichenfolge mit dem Namen der tatsächlichen Daten datenquellenspezifischen Server; ist nützlich, wenn der Name der Datenquelle verwendet wird, während der **SQLConnect**, **SQLDriverConnect**, und **SQLBrowseConnect**.  
+ Eine Zeichenfolge mit dem Namen der tatsächlichen Daten datenquellenspezifische Server; ist nützlich, wenn der Name der Datenquelle verwendet wird, während der **SQLConnect**, **SQLDriverConnect**, und **SQLBrowseConnect**.  
   
  SQL_SPECIAL_CHARACTERS (ODBC 2.0)  
  Eine Zeichenfolge, die alle Sonderzeichen (d. h. alle Zeichen mit Ausnahme von a bis Z, A bis Z, 0 bis 9 und Unterstrich) enthält, die in einem ID-Namen, wie z. B. einen Tabellennamen, Spaltennamen oder Indexname, für die Datenquelle verwendet werden können. Z. B. "#$^". Wenn ein Bezeichner über eine oder mehrere der folgenden Zeichen enthält, muss der Bezeichner ein Begrenzungsbezeichner sein.  
@@ -1496,7 +1496,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_SFKD_CASCADESQL_SFKD_NO_ACTIONSQL_SFKD_SET_DEFAULTSQL_SFKD_SET_NULL  
   
- Ein FIPS Transitional Ebene – konforme-Treiber wird immer all diese Optionen zurückgegeben, als unterstützt.  
+ Ein FIPS Transitional Level-konformen-Treiber wird immer all diese Optionen zurückgegeben, als unterstützt.  
   
  SQL_SQL92_FOREIGN_KEY_UPDATE_RULE(ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske Auflisten von den Regeln für einen Fremdschlüssel in unterstützt eine **UPDATE** gemäß SQL-92-Anweisung.  
@@ -1505,7 +1505,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_SFKU_CASCADESQL_SFKU_NO_ACTIONSQL_SFKU_SET_DEFAULTSQL_SFKU_SET_NULL  
   
- Ein Treiber für SQL-92-Full Ebene –-konforme Funktion gibt immer all diese Optionen zurück, da unterstützt.  
+ Ein vollständige SQL-92 Level-konformen-Treiber wird immer all diese Optionen zurückgegeben, als unterstützt.  
   
  SQL_SQL92_GRANT(ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Klauseln in unterstützt Aufzählen der **GRANT** gemäß SQL-92-Anweisung.  
@@ -1576,9 +1576,9 @@ SQLRETURN SQLGetInfo(
  SQL_STANDARD_CLI_CONFORMANCE (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, auflisten, die CLI-Standard oder Standards, zu denen der Treiber entspricht. Die folgenden Bitmasken werden verwendet, um zu bestimmen, welche Ebenen der Treiber erfüllt:  
   
- SQL_SCC_XOPEN_CLI_VERSION1: Der Treiber entspricht der Open Group-CLI-Version 1.  
+ SQL_SCC_XOPEN_CLI_VERSION1: Der Treiber entspricht die Open Group-CLI-Version 1.  
   
- SQL_SCC_ISO92_CLI: Der Treiber entspricht der ISO-92-CLI.  
+ SQL_SCC_ISO92_CLI: Der Treiber ist mit der ISO-92-CLI.  
   
  SQL_STATIC_CURSOR_ATTRIBUTES1(ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Attribute eines statischen Cursors wird beschrieben, die vom Treiber unterstützt werden. Diese Bitmaske enthält der ersten Teilmenge von Attributen. die zweite Untergruppe finden Sie unter SQL_STATIC_CURSOR_ATTRIBUTES2.  
@@ -1589,7 +1589,7 @@ SQLRETURN SQLGetInfo(
   
  Beschreibungen dieser Bitmasken finden Sie unter SQL_DYNAMIC_CURSOR_ATTRIBUTES1 (und Ersetzen Sie "statische Cursor" für "dynamische Cursor" in den Beschreibungen).  
   
- Ein Treiber für SQL-92-Intermediate Ebene –-konforme Funktion wird in der Regel die SQL_CA1_NEXT SQL_CA1_ABSOLUTE und SQL_CA1_RELATIVE Optionen wie zurückgegeben werden unterstützt, da der Treiber scrollfähige Cursor über die eingebettete SQL FETCH-Anweisung unterstützt. Da dies nicht der zugrunde liegenden SQL-Unterstützung direkt bestimmt, möglicherweise jedoch scrollfähige Cursor nicht, auch für einen SQL-92-Intermediate Ebene – konforme-Treiber unterstützt.  
+ Ein Treiber für SQL-92-Intermediate Level-konformen wird in der Regel die SQL_CA1_NEXT SQL_CA1_ABSOLUTE und SQL_CA1_RELATIVE Optionen wie zurückgegeben werden unterstützt, da der Treiber scrollfähige Cursor über die eingebettete SQL FETCH-Anweisung unterstützt. Da dies nicht der zugrunde liegenden SQL-Unterstützung direkt bestimmt, möglicherweise jedoch scrollfähige Cursor nicht, auch für einen SQL-92-Intermediate-Ebene-konformen-Treiber unterstützt.  
   
  SQL_STATIC_CURSOR_ATTRIBUTES2(ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Attribute eines statischen Cursors wird beschrieben, die vom Treiber unterstützt werden. Diese Bitmaske enthält der zweite Teilmenge von Attributen. die erste Untergruppe finden Sie unter SQL_STATIC_CURSOR_ATTRIBUTES1.  
@@ -1601,7 +1601,7 @@ SQLRETURN SQLGetInfo(
  Beschreibungen dieser Bitmasken finden Sie unter SQL_DYNAMIC_CURSOR_ATTRIBUTES2 (und Ersetzen Sie "statische Cursor" für "dynamische Cursor" in den Beschreibungen).  
   
  SQL_STRING_FUNCTIONS (ODBC 1.0)  
- Hinweis: Die Informationstyp wurde in ODBC-1.0 eingeführt. Jede Bitmaske ist mit der Version mit der Bezeichnung in der sie eingeführt wurde.  
+ Hinweis: Der Informationstyp wurde in ODBC-1.0 eingeführt. Jede Bitmaske ist mit der Version mit der Bezeichnung in der sie eingeführt wurde.  
   
  Eine SQLUINTEGER-Bitmaske Aufzählen der skalaren String-Funktionen, die von der Treiber und der zugeordneten Datenquelle unterstützt.  
   
@@ -1620,7 +1620,7 @@ SQLRETURN SQLGetInfo(
   
  Die Bitmaske SQL_SQ_CORRELATED_SUBQUERIES gibt an, dass alle Prädikate, die Unterabfragen unterstützen die korrelierte Unterabfragen unterstützt.  
   
- Ein SQL-92-Eintrag-Ebene – konforme-Treiber gibt immer eine Bitmaske zurück, in der alle diese Bits festgelegt sind.  
+ Ein SQL-92-Eintrag-Level-konformen-Treiber gibt immer eine Bitmaske zurück, in der alle diese Bits festgelegt sind.  
   
  SQL_SYSTEM_FUNCTIONS (ODBC 1.0)  
  Eine SQLUINTEGER-Bitmaske Aufzählen der skalare Systemfunktionen, die von der Treiber und der zugeordneten Datenquelle unterstützt.  
@@ -1634,7 +1634,7 @@ SQLRETURN SQLGetInfo(
   
  Diese Zeichenfolge kann in der oberen, unteren, oder eine gemischte Groß-sein.  
   
- Ein SQL-92-Eintrag-Ebene – konforme-Treiber wird immer mit "Table" zurückgegeben.  
+ Ein Level-konformen-Treiber für SQL-92-Eintrag wird immer zurückgegeben "table".  
   
  SQL_TIMEDATE_ADD_INTERVALS (ODBC 2.0)  
  Eine SQLUINTEGER-Bitmaske, die Timestamp-Intervalle, die vom Treiber und zugeordnete Datenquelle für die Skalarfunktion TIMESTAMPADD unterstützt auflisten.  
@@ -1643,7 +1643,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_FN_TSI_FRAC_SECONDSQL_FN_TSI_SECONDSQL_FN_TSI_MINUTESQL_FN_TSI_HOURSQL_FN_TSI_DAYSQL_FN_TSI_WEEKSQL_FN_TSI_MONTHSQL_FN_TSI_QUARTERSQL_FN_TSI_YEAR  
   
- Ein FIPS Transitional Ebene – konforme-Treiber gibt immer eine Bitmaske zurück, in der alle diese Bits festgelegt sind.  
+ Ein FIPS Transitional Level-konformen-Treiber gibt immer eine Bitmaske zurück, in der alle diese Bits festgelegt sind.  
   
  SQL_TIMEDATE_DIFF_INTERVALS (ODBC 2.0)  
  Eine SQLUINTEGER-Bitmaske, die Timestamp-Intervalle, die vom Treiber und zugeordnete Datenquelle für die Skalarfunktion TIMESTAMPDIFF unterstützt auflisten.  
@@ -1652,10 +1652,10 @@ SQLRETURN SQLGetInfo(
   
  SQL_FN_TSI_FRAC_SECONDSQL_FN_TSI_SECONDSQL_FN_TSI_MINUTESQL_FN_TSI_HOURSQL_FN_TSI_DAYSQL_FN_TSI_WEEKSQL_FN_TSI_MONTHSQL_FN_TSI_QUARTERSQL_FN_TSI_YEAR  
   
- Ein FIPS Transitional Ebene – konforme-Treiber gibt immer eine Bitmaske zurück, in der alle diese Bits festgelegt sind.  
+ Ein FIPS Transitional Level-konformen-Treiber gibt immer eine Bitmaske zurück, in der alle diese Bits festgelegt sind.  
   
  SQL_TIMEDATE_FUNCTIONS (ODBC 1.0)  
- Hinweis: Die Informationstyp wurde in ODBC-1.0 eingeführt. Jede Bitmaske ist mit der Version mit der Bezeichnung in der sie eingeführt wurde.  
+ Hinweis: Der Informationstyp wurde in ODBC-1.0 eingeführt. Jede Bitmaske ist mit der Version mit der Bezeichnung in der sie eingeführt wurde.  
   
  Eine SQLUINTEGER-Bitmaske Auflisten von der skalaren Datum und Uhrzeit-Funktionen, die von der Treiber und der zugeordneten Datenquelle unterstützt.  
   
@@ -1664,7 +1664,7 @@ SQLRETURN SQLGetInfo(
  SQL_FN_TD_CURRENT_DATE ODBC 3.0) SQL_FN_TD_CURRENT_TIME (ODBC 3.0) SQL_FN_TD_CURRENT_TIMESTAMP (ODBC 3.0) SQL_FN_TD_CURDATE (ODBC 1.0) SQL_FN_TD_CURTIME (ODBC 1.0) SQL_FN_TD_DAYNAME (ODBC 2.0) SQL_FN_TD_DAYOFMONTH (ODBC 1.0) SQL_FN_TD_DAYOFWEEK () ODBC 1.0) SQL_FN_TD_DAYOFYEAR (ODBC 1.0) SQL_FN_TD_EXTRACT (ODBC 3.0) SQL_FN_TD_HOUR (ODBC 1.0) SQL_FN_TD_MINUTE (ODBC 1.0) SQL_FN_TD_MONTH (ODBC 1.0) SQL_FN_TD_MONTHNAME (ODBC 2.0) SQL_FN_TD_NOW (ODBC 1.0) SQL_FN_TD_QUARTER (ODBC 1.0) SQL_FN_TD_ ZWEITE (ODBC 1.0) SQL_FN_TD_TIMESTAMPADD (ODBC 2.0) SQL_FN_TD_TIMESTAMPDIFF (ODBC 2.0) SQL_FN_TD_WEEK (ODBC 1.0) SQL_FN_TD_YEAR (ODBC 1.0)  
   
  SQL_TXN_CAPABLE (ODBC 1.0)  
- Hinweis: Die Informationstyp wurde in ODBC-1.0 eingeführt. jede zurückgegebene Wert ist mit der Version mit der Bezeichnung in der sie eingeführt wurde.  
+ Hinweis: Der Informationstyp wurde in ODBC-1.0 eingeführt. jede zurückgegebene Wert ist mit der Version mit der Bezeichnung in der sie eingeführt wurde.  
   
  Ein SQLUSMALLINT-Wert, der die transaktionsunterstützung in das Treiber oder die Datenquelle beschreibt:  
   
@@ -1691,7 +1691,7 @@ SQLRETURN SQLGetInfo(
   
  Zum Festlegen der Isolationsstufe für Transaktionen, die eine Anwendung ruft **SQLSetConnectAttr** das SQL_ATTR_TXN_ISOLATION-Attribut festgelegt. Weitere Informationen finden Sie unter [SQLSetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
   
- Ein SQL-92-Eintrag-Ebene – konforme-Treiber gibt stets sql_txn_serializable festgelegt sind, unterstützt. Ein FIPS Transitional Ebene – konforme-Treiber wird immer all diese Optionen zurückgegeben, als unterstützt.  
+ Ein SQL-92-Eintrag-Level-konformen-Treiber gibt stets sql_txn_serializable festgelegt sind, unterstützt. Ein FIPS Transitional Level-konformen-Treiber wird immer all diese Optionen zurückgegeben, als unterstützt.  
   
  SQL_UNION (ODBC 2.0)  
  Eine SQLUINTEGER-Bitmaske, die die Unterstützung für Aufzählen der **UNION** Klausel:  
@@ -1700,7 +1700,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_U_UNION_ALL = der Datenquelle unterstützt die **alle** -Schlüsselwort in der **UNION** Klausel. (**SQLGetInfo** sowohl SQL_U_UNION und SQL_U_UNION_ALL in diesem Fall gibt.)  
   
- Ein SQL-92-Eintrag-Ebene – konforme-Treiber wird immer beide Optionen zurückgegeben, da unterstützt.  
+ Ein Level-konformen-Treiber für SQL-92-Eintrag wird immer diese beiden Optionen zurückgegeben, da unterstützt.  
   
  SQL_USER_NAME (ODBC 1.0)  
  Eine Zeichenfolge, mit dem Namen in einer bestimmten Datenbank, die sich von der Anmeldename möglicherweise verwendet werden soll.  
@@ -1709,7 +1709,7 @@ SQLRETURN SQLGetInfo(
  Eine Zeichenfolge, die das Jahr der Veröffentlichung ab, der Open Group-Spezifikation gibt an, mit denen die Version des ODBC-Treiber-Managers vollständig kompatibel ist.  
   
  SQL_ACCESSIBLE_PROCEDURES (ODBC 1.0)  
- Eine Zeichenfolge: "Y", wenn der Benutzer alle Prozeduren, die vom ausführen kann **SQLProcedures**; "N", wenn Prozeduren möglicherweise zurückgegeben, dass der Benutzer nicht ausgeführt werden kann.  
+ Eine Zeichenfolge: Wenn der Benutzer alle Prozeduren, die vom ausgeführt werden können "J" **SQLProcedures**; "N", wenn Prozeduren möglicherweise zurückgegeben, dass der Benutzer nicht ausgeführt werden kann.  
   
  SQL_ACCESSIBLE_TABLES (ODBC 1.0)  
  Eine Zeichenfolge: "Y", wenn der Benutzer **wählen** Berechtigungen, um alle Tabellen, die vom **SQLTables**; "N", wenn Tabellen möglicherweise zurückgegeben, dass der Benutzer zugreifen kann.  
@@ -1722,10 +1722,10 @@ SQLRETURN SQLGetInfo(
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
   
- Ein SQL-92-Eintrag-Ebene – konforme-Treiber wird immer all diese Optionen zurückgegeben, da unterstützt.  
+ Ein Level-konformen-Treiber für SQL-92-Eintrag wird immer alle diese Optionen zurückgegeben, da unterstützt.  
   
  SQL_ALTER_DOMAIN (ODBC 3.0)  
- Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **ALTER DOMAIN** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert. Ein vollständige SQL-92-Level-kompatible Treiber wird immer mit all den Bitmasken zurückgegeben. Ein Rückgabewert von "0" bedeutet, dass die **ALTER DOMAIN** Anweisung wird nicht unterstützt.  
+ Eine SQLUINTEGER-Bitmaske, die die Klauseln in Aufzählen der **ALTER DOMAIN** -Anweisung, wie in der SQL-92, von der Datenquelle unterstützten Daten definiert. Ein vollständige SQL-92-Ebene-kompatiblen Treiber wird immer mit all den Bitmasken zurückgegeben. Ein Rückgabewert von "0" bedeutet, dass die **ALTER DOMAIN** Anweisung wird nicht unterstützt.  
   
  Der SQL-92 oder FIPS-Konformitätsgrad, an dem diese Funktion unterstützt werden muss, wird neben jeder Bitmaske in Klammern angezeigt.  
   

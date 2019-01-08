@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e1ada8f652b88e0cb3570f1fada7f4f50d28e35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7494577b9af11f8000fd2676dd56ee3b8c960756
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756238"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213459"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47756238"
   
 -   Partitionsfunktionen  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -91,13 +91,13 @@ sys.dm_sql_referenced_entities (
 |referenced_class|**tinyint**|Klasse der Entität, auf die verwiesen wird.<br /><br /> 1 = Objekt oder Spalte<br /><br /> 6 = Typ<br /><br /> 10 = XML-Schemaauflistung<br /><br /> 21 = Partitionsfunktion|  
 |referenced_class_desc|**nvarchar(60)**|Klassenbeschreibung der Entität, auf die verwiesen wird.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|Gibt an, dass die Schemabindung für die Entität, auf die verwiesen wird, zur Laufzeit erfolgt. Deshalb hängt die Auflösung der Entitäts-ID vom Schema des Aufrufers ab. Dies ist der Fall, wenn es sich bei der Entität, auf die verwiesen wird, um eine gespeicherte Prozedur, eine erweiterte gespeicherte Prozedur oder um eine benutzerdefinierte Funktion handelt, die in einer EXECUTE-Anweisung aufgerufen wird.<br /><br /> 1 = Die Entität, auf die verwiesen wird, hängt vom Aufrufer ab und wird zur Laufzeit aufgelöst. In diesem Fall ist referenced_id gleich NULL.<br /><br /> 0 = Die Entitäts-ID, auf die verwiesen wird, ist nicht aufruferabhängig. Immer 0 für schemagebundene Verweise sowie für datenbankübergreifende und serverübergreifende Verweise, die explizit einen Schemanamen angeben. Zum Beispiel ist ein Verweis auf eine Entität im Format `EXEC MyDatabase.MySchema.MyProc` nicht aufruferabhängig. Ein Verweis im Format `EXEC MyDatabase..MyProc` ist jedoch aufruferabhängig.|  
-|is_ambiguous|**bit**|Gibt an, der Verweis ist mehrdeutig und kann zur Laufzeit in eine benutzerdefinierte Funktion, einen benutzerdefinierten Typ (UDT) oder einen Xquery-Verweis auf eine Spalte vom Typ auflösen **Xml**. Nehmen wir beispielsweise an die Anweisung `SELECT Sales.GetOrder() FROM Sales.MySales` in einer gespeicherten Prozedur definiert ist. Bis zur Ausführung der gespeicherten Prozedur ist unbekannt, ob `Sales.GetOrder()` eine benutzerdefinierte Funktion im Schema `Sales` oder in der Spalte namens `Sales` vom Typ UDT mit einer Methode namens `GetOrder()` ist.<br /><br /> 1 = Verweis auf eine benutzerdefinierte Funktion oder Spalte, für die die benutzerdefinierte Typmethode (UDT) mehrdeutig ist.<br /><br /> 0 = Verweis ist eindeutig, oder die Entität kann beim Aufruf der Funktion erfolgreich gebunden werden.<br /><br /> Immer 0 für schemagebundene Verweise.|  
+|is_ambiguous|**bit**|Gibt an, der Verweis ist mehrdeutig und kann zur Laufzeit in eine benutzerdefinierte Funktion, einen benutzerdefinierten Typ (UDT) oder einen Xquery-Verweis auf eine Spalte vom Typ auflösen **Xml**. Angenommen, die `SELECT Sales.GetOrder() FROM Sales.MySales`-Anweisung ist in einer gespeicherten Prozedur definiert. Bis zur Ausführung der gespeicherten Prozedur ist unbekannt, ob `Sales.GetOrder()` eine benutzerdefinierte Funktion im Schema `Sales` oder in der Spalte namens `Sales` vom Typ UDT mit einer Methode namens `GetOrder()` ist.<br /><br /> 1 = Verweis auf eine benutzerdefinierte Funktion oder Spalte, für die die benutzerdefinierte Typmethode (UDT) mehrdeutig ist.<br /><br /> 0 = Verweis ist eindeutig, oder die Entität kann beim Aufruf der Funktion erfolgreich gebunden werden.<br /><br /> Immer 0 für schemagebundene Verweise.|  
 |is_selected|**bit**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Gibt an, dass das Objekt oder die Spalte ausgewählt ist.|  
 |is_updated|**bit**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Gibt an, dass das Objekt oder die Spalte geändert wurde.|  
 |is_select_all|**bit**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Gibt an, dass das Objekt in einer SELECT *-Klausel verwendet wird (nur auf Objektebene).|  
 |is_all_columns_found|**bit**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Alle Spaltenabhängigkeiten für das Objekt konnten gefunden werden.<br /><br /> 0 = Spaltenabhängigkeiten für das Objekt konnten nicht gefunden werden.|
 |is_insert_all|**bit**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = das Objekt wird verwendet, in einer INSERT-Anweisung ohne Spaltenliste (nur Objektebene).|  
-|is_incomplete|**bit**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = das Objekt oder Spalte hat einen Bindungsfehler und nicht abgeschlossen wurde.|
+|is_incomplete|**bit**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = das Objekt oder Spalte hat einen Bindungsfehler und nicht abgeschlossen wurde.|
   
 ## <a name="exceptions"></a>Ausnahmen  
  Gibt unter den folgenden Bedingungen ein leeres Resultset zurück:  
@@ -121,22 +121,22 @@ sys.dm_sql_referenced_entities (
   
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
-|Tabelle|Ja*|Benutzerkontensteuerung|  
-|Anzeigen|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Gespeicherte CLR-Prozedur|nein|Benutzerkontensteuerung|  
-|Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|CLR-benutzerdefinierte Funktion|nein|Benutzerkontensteuerung|  
-|CLR-Trigger (DML und DDL)|nein|nein|  
-|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|nein|  
-|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|nein|  
-|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|nein|  
-|Erweiterte gespeicherte Prozeduren|nein|Benutzerkontensteuerung|  
-|Warteschlange|nein|Benutzerkontensteuerung|  
-|Synonym|nein|Benutzerkontensteuerung|  
-|Typ (Alias und CLR-benutzerdefinierter Typ)|nein|Benutzerkontensteuerung|  
-|XML-Schemaauflistung|nein|Benutzerkontensteuerung|  
-|Partitionsfunktion|nein|Benutzerkontensteuerung|  
+|Tabelle|Ja*|Ja|  
+|Sicht|Ja|Ja|  
+|In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|Ja|Ja|  
+|Gespeicherte CLR-Prozedur|Nein|Ja|  
+|Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Ja|  
+|CLR-benutzerdefinierte Funktion|Nein|Ja|  
+|CLR-Trigger (DML und DDL)|Nein|Nein|  
+|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
+|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
+|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
+|Erweiterte gespeicherte Prozeduren|Nein|Ja|  
+|Warteschlange|Nein|Ja|  
+|Synonym|Nein|Ja|  
+|Typ (Alias und CLR-benutzerdefinierter Typ)|Nein|Ja|  
+|XML-Schemaauflistung|Nein|Ja|  
+|Partitionsfunktion|Nein|Ja|  
   
  \* Eine Tabelle als verweisende Entität nachverfolgt wird, nur dann, wenn er verweist auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Modul, einen benutzerdefinierten Typ oder XML-schemaauflistung in der Definition einer berechneten Spalte, einer CHECK-Einschränkung oder einer DEFAULT-Einschränkung.  
   
@@ -266,7 +266,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. Zurückgeben von Objekten und Spalten (Verwendung)  
- Im folgenden Beispiel werden die Objekte und die Spaltenabhängigkeiten der gespeicherten Prozedur `HumanResources.uspUpdateEmployeePersonalInfo` zurückgegeben. Diese Prozedur aktualisiert die Spalten `NationalIDNumber`, `BirthDate,``MaritalStatus`, und `Gender` von der `Employee` Tabelle auf der Grundlage eines angegebenen `BusinessEntityID` Wert. Eine andere gespeicherte Prozedur, `upsLogError`, wird in einem Block vom Typ "TRY…CATCH" definiert, um Ausführungsfehler zu erfassen. Die Spalten `is_selected`, `is_updated` und `is_select_all` geben Informationen darüber zurück, wie diese Objekte und Spalten innerhalb des verweisenden Objekts verwendet werden. Die Tabelle und geänderten Spalten werden mit 1 in der Spalte "is_updated" angegeben. Die Spalte `BusinessEntityID` wird nur ausgewählt und die gespeicherte Prozedur `uspLogError` wird weder ausgewählt noch geändert.  
+ Im folgenden Beispiel werden die Objekte und die Spaltenabhängigkeiten der gespeicherten Prozedur `HumanResources.uspUpdateEmployeePersonalInfo` zurückgegeben. Diese Prozedur aktualisiert die Spalten `NationalIDNumber`, `BirthDate,``MaritalStatus`, und `Gender` von der `Employee` Tabelle auf der Grundlage eines angegebenen `BusinessEntityID` Wert. Eine andere gespeicherte Prozedur, `upsLogError` wird definiert, in einem... CATCH-Block, um Ausführungsfehler zu erfassen. Die Spalten `is_selected`, `is_updated` und `is_select_all` geben Informationen darüber zurück, wie diese Objekte und Spalten innerhalb des verweisenden Objekts verwendet werden. Die Tabelle und geänderten Spalten werden mit 1 in der Spalte "is_updated" angegeben. Die Spalte `BusinessEntityID` wird nur ausgewählt und die gespeicherte Prozedur `uspLogError` wird weder ausgewählt noch geändert.  
   
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

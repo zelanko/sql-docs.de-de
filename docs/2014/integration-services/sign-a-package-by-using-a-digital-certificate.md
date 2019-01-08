@@ -15,12 +15,12 @@ ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f0e98d0653bf73c96448291d4c25654cdf5ea753
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7a971b96de66cf766541b741c48f5477cf9db65
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177471"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350429"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Signieren eines Pakets mit einem digitalen Zertifikat
   In diesem Thema wird beschrieben, wie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket mit einem digitalen Zertifikat signiert wird. Mit einer digitalen Signatur in Verbindung mit anderen Einstellungen können Sie verhindern, dass ein ungültiges Paket geladen und ausgeführt wird.  
@@ -33,11 +33,11 @@ ms.locfileid: "48177471"
   
     -   Rufen Sie ein Zertifikat von einer öffentlichen, kommerziellen Zertifizierungsstelle ab, die Zertifikate ausgibt.  
   
-    -   Rufen Sie ein Zertifikat von einem Zertifikatserver ab, mit dem eine Organisation Zertifikate intern ausstellen kann. Sie müssen das Stammzertifikat, mit dem das Zertifikat signiert wird, zum Speicher für **Vertrauenswürdige Stammzertifizierungsstellen** hinzufügen. Zum Hinzufügen des Stammzertifikats verwenden Sie das Zertifikate-Snap-In für die [!INCLUDE[msCoName](../includes/msconame-md.md)] -Verwaltungskonsole (MMC). Weitere Informationen finden Sie im Thema "[Certificate Services](http://go.microsoft.com/fwlink/?LinkId=100755)" (möglicherweise nur in englischer Sprache) in der MSDN Library.  
+    -   Rufen Sie ein Zertifikat von einem Zertifikatserver ab, mit dem eine Organisation Zertifikate intern ausstellen kann. Sie müssen das Stammzertifikat, mit dem das Zertifikat signiert wird, zum Speicher für **Vertrauenswürdige Stammzertifizierungsstellen** hinzufügen. Zum Hinzufügen des Stammzertifikats verwenden Sie das Zertifikate-Snap-In für die [!INCLUDE[msCoName](../includes/msconame-md.md)] -Verwaltungskonsole (MMC). Weitere Informationen finden Sie im Thema "[Certificate Services](https://go.microsoft.com/fwlink/?LinkId=100755)" (möglicherweise nur in englischer Sprache) in der MSDN Library.  
   
-    -   Erstellen Sie ein eigenes Zertifikat nur für Testzwecke. Das Certificate Creation-Tool (Makecert.exe) generiert X.509-Zertifikate für Testzwecke. Weitere Informationen finden Sie im Thema „[Certificate Creation Tool (Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)“ in der MSDN Library.  
+    -   Erstellen Sie ein eigenes Zertifikat nur für Testzwecke. Das Certificate Creation-Tool (Makecert.exe) generiert X.509-Zertifikate für Testzwecke. Weitere Informationen finden Sie im Thema „[Certificate Creation Tool (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)“ in der MSDN Library.  
   
-     Weitere Informationen über Zertifikate finden Sie in der Onlinehilfe für das Zertifikate-Snap-In. Weitere Informationen zum Signieren von Digital Assets finden Sie im Thema "[Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)" (möglicherweise nur in englischer Sprache) in der MSDN Library.  
+     Weitere Informationen über Zertifikate finden Sie in der Onlinehilfe für das Zertifikate-Snap-In. Weitere Informationen zum Signieren von Digital Assets finden Sie im Thema "[Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)" (möglicherweise nur in englischer Sprache) in der MSDN Library.  
   
 -   Stellen Sie sicher, dass das Zertifikat für Codesignaturen aktiviert wurde. Überprüfen Sie die Eigenschaften des Zertifikats im Zertifikate-Snap-In, um festzustellen, ob ein Zertifikat zum Signieren von Code aktiviert ist.  
   
@@ -68,6 +68,6 @@ ms.locfileid: "48177471"
      Obwohl das Paket signiert wurde, müssen Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nun so konfigurieren, dass die digitale Signatur vor dem Laden des Pakets geprüft oder verifiziert wird. Weitere Informationen finden Sie unter [Identifizieren der Quelle von Paketen mit digitalen Signaturen](security/identify-the-source-of-packages-with-digital-signatures.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Sicherheit &#40;Integrationsdienste&#41;](security/security-overview-integration-services.md)  
+ [Sicherheitsübersicht &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   
