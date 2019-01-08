@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], about administrators
@@ -16,12 +15,12 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ca34e83b313a267f607ee9e45f8bf68fd1b0b357
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 85ad4589ef25042498b132475af39cb36fd1b2bc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418771"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783192"
 ---
 # <a name="administrators-master-data-services"></a>Administratoren (Master Data Services)
 
@@ -75,7 +74,7 @@ ms.locfileid: "52418771"
 ## <a name="external-resources"></a>Externe Ressourcen  
  Blogbeitrag [Sicherheitsverbesserungen](https://go.microsoft.com/fwlink/p/?LinkId=615376), auf msdn.com.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen eines Modelladministrators &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Erstellen einer Master Data Services-Datenbank](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
