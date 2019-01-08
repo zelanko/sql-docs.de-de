@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpullsubscription_agent
@@ -17,12 +16,12 @@ ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c1ba5e237a9e652e0ef33e359cad0858420abbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cd847b9c3f5bcbc24260632ed632f42ad6840c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649630"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808762"
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,22 +80,22 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **"**_Verleger_**"**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher_db=**] **"*** Publisher_db'*  
+ [  **@publisher_db=**] **"**_Publisher_db'_  
  Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert NULL. *Publisher_db* wird von Oracle-Verlegern ignoriert.  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@subscriber=**] **"***Abonnenten***"**  
+ [  **@subscriber=**] **"**_Abonnenten_**"**  
  Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten.  
   
- [  **@subscriber_db=**] **"***Subscriber_db***"**  
+ [  **@subscriber_db=**] **"**_Subscriber_db_**"**  
  Ist der Name der Abonnementdatenbank. *Subscriber_db* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -108,22 +107,22 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Der Verteilungs-Agent stellt eine Verbindung mit dem lokalen Abonnenten immer mithilfe der Windows-Authentifizierung her. Wenn ein anderer Wert als NULL oder **1** angegeben ist für diesen Parameter wird eine Warnmeldung zurückgegeben.  
   
- [  **@subscriber_login =**] **"***Subscriber_login***"**  
+ [  **@subscriber_login =**] **"**_Subscriber_login_**"**  
  Ist der Anmeldename des Abonnenten beim Herstellen einer Verbindung an einen Abonnenten, bei der Synchronisierung verwendet. *Subscriber_login* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Wird für diesen Parameter ein Wert angegeben, wird eine Warnmeldung zurückgegeben, der Wert jedoch ignoriert.  
   
- [  **@subscriber_password=**] **"***Subscriber_password***"**  
+ [  **@subscriber_password=**] **"**_Subscriber_password_**"**  
  Das Kennwort des Abonnenten. *Subscriber_password* ist erforderlich, wenn *Subscriber_security_mode* nastaven NA hodnotu **0**. *Subscriber_password* ist **Sysname**, hat den Standardwert NULL. Bei Verwendung eines Abonnentenkennworts wird dieses automatisch verschlüsselt.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Wird für diesen Parameter ein Wert angegeben, wird eine Warnmeldung zurückgegeben, der Wert jedoch ignoriert.  
   
- [  **@distributor=**] **"***Verteiler***"**  
+ [  **@distributor=**] **"**_Verteiler_**"**  
  Entspricht dem Namen des Verteilers. *Verteiler* ist **Sysname**, hat den Standardwert der Wert von *Verleger*.  
   
- [  **@distribution_db=**] **"***Distribution_db***"**  
+ [  **@distribution_db=**] **"**_Distribution_db_**"**  
  Ist der Name der Verteilungsdatenbank. *Distribution_db* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@distributor_security_mode=**] *Distributor_security_mode*  
@@ -132,22 +131,22 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@distributor_login=**] **"***Distributor_login***"**  
+ [  **@distributor_login=**] **"**_Distributor_login_**"**  
  Der Verteileranmeldename, der beim Synchronisieren zum Herstellen der Verbindung mit einem Verteiler verwendet wird. *Distributor_login* ist erforderlich, wenn *Distributor_security_mode* nastaven NA hodnotu **0**. *Distributor_login* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@distributor_password =**] **"***Distributor_password***"**  
+ [  **@distributor_password =**] **"**_Distributor_password_**"**  
  Das Verteilerkennwort. *Distributor_password* ist erforderlich, wenn *Distributor_security_mode* nastaven NA hodnotu **0**. *Distributor_password* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort. Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
- [  **@optional_command_line=**] **"***Standardwert***"**  
+ [  **@optional_command_line=**] **"**_Standardwert_**"**  
  Eine optionale Befehlszeile des Verteilungs-Agents. Z. B. **- DefinitionFile** C:\Distdef.txt oder **- CommitBatchSize** 10. *Der Standardwert* ist **nvarchar(4000)**, Standardwert ist eine leere Zeichenfolge.  
   
  [  **@frequency_type=**] *Frequency_type*  
  Die Häufigkeit für die Zeitplanung des Verteilungs-Agents. *Frequency_type* ist **Int**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**2** (Standardwert)|Bedarfsgesteuert|  
@@ -167,7 +166,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@frequency_relative_interval=**] *Frequency_relative_interval*  
  Das Datum des Verteilungs-Agents. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1** (Standard)|Erster|  
 |**2**|Zweimal|  
@@ -181,7 +180,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@frequency_subday=**] *Frequency_subday*  
  Die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1** (Standard)|Einmal|  
 |**2**|Zweimal|  
@@ -203,52 +202,52 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@active_end_date=**] *Active_end_date*  
  Das Datum, ab dem der Verteilungs-Agent nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date* ist **Int**, hat den Standardwert **0**.  
   
- [  **@distribution_jobid =**] *Distribution_jobid *** Ausgabe**  
+ [  **@distribution_jobid =**] _Distribution_jobid_**Ausgabe**  
  Die ID des Verteilungs-Agents für diesen Auftrag. *Distribution_jobid* ist **'binary(16)'**, hat den Standardwert NULL, und es ist ein OUTPUT-Parameter.  
   
  [  **@encrypted_distributor_password=**] *Encrypted_distributor_password*  
  Festlegen von *Encrypted_distributor_password* wird nicht mehr unterstützt. Es wird versucht, diese festgelegt **Bit** Parameter **1** führt zu einem Fehler.  
   
- [  **@enabled_for_syncmgr=**] **"***Enabled_for_syncmgr***"**  
+ [  **@enabled_for_syncmgr=**] **"**_Enabled_for_syncmgr_**"**  
  Gibt an, ob das Abonnement über synchronisiert werden kann [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronisierungs-Manager. *Enabled_for_syncmgr* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"false"**, das Abonnement ist nicht mit der Synchronisierungsverwaltung registriert. Wenn **"true"**, das Abonnement mit der Synchronisierungsverwaltung registriert und kann synchronisiert werden, ohne Starten des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- [  **@ftp_address=**] **"***Ftp_address***"**  
+ [  **@ftp_address=**] **"**_Ftp_address_**"**  
  Nur aus Gründen der Abwärtskompatibilität beibehalten  
   
  [  **@ftp_port=**] *Ftp_port*  
  Nur aus Gründen der Abwärtskompatibilität beibehalten  
   
- [  **@ftp_login=**] **"***Ftp_login***"**  
+ [  **@ftp_login=**] **"**_Ftp_login_**"**  
  Nur aus Gründen der Abwärtskompatibilität beibehalten  
   
- [  **@ftp_password=**] **"***Ftp_password***"**  
+ [  **@ftp_password=**] **"**_Ftp_password_**"**  
  Nur aus Gründen der Abwärtskompatibilität beibehalten  
   
- [  **@alt_snapshot_folder=** ] **"*** Alternate_snapshot_folder"*  
+ [  **@alt_snapshot_folder=** ] **"**_Alternate_snapshot_folder"_  
  Gibt den Speicherort des anderen Ordners für die Momentaufnahme an. *Alternate_snapshot_folder* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
- [ **@working_directory**=] **"***Working_director***"**  
+ [ **@working_directory**=] **"**_Working_director_**"**  
  Der Name des Arbeitsverzeichnisses, das zum Speichern von Daten- und Schemadateien für die Veröffentlichung verwendet wird. *Working_directory* ist **nvarchar(255)**, hat den Standardwert NULL. Dieser Name sollte im UNC-Format angegeben werden.  
   
- [ **@use_ftp**=] **"***Use_ftp***"**  
+ [ **@use_ftp**=] **"**_Use_ftp_**"**  
  Gibt anstelle des normalen Protokolls FTP an, um Momentaufnahmen abzurufen. *Use_ftp* ist **nvarchar(5)**, hat den Standardwert "false".  
   
  [ **@publication_type**=] *Publication_type*  
  Gibt den Replikationstyp der Veröffentlichung an. *Publication_type* ist eine **Tinyint** hat den Standardwert **0**. Wenn **0**, handelt es sich eine Transaktion. Wenn **1**, handelt es sich Momentaufnahme. Wenn **2**, handelt es sich zusammenführen.  
   
- [ **@dts_package_name**=] **"***Dts_package_name***"**  
+ [ **@dts_package_name**=] **"**_Dts_package_name_**"**  
  Gibt den Namen des DTS-Pakets an. *Dts_package_name* ist eine **Sysname** hat den Standardwert NULL. Zum Angeben eines Pakets mit dem Namen `DTSPub_Package` wird beispielsweise der `@dts_package_name = N'DTSPub_Package'`-Parameter verwendet.  
   
- [ **@dts_package_password**=] **"***Dts_package_password***"**  
+ [ **@dts_package_password**=] **"**_Dts_package_password_**"**  
  Gibt gegebenenfalls das Kennwort des Pakets an. *Dts_package_password* ist **Sysname** hat den Standardwert NULL, was bedeutet es ist kein Kennwort für das Paket.  
   
 > [!NOTE]  
 >  Sie müssen ein Kennwort angeben, wenn *Dts_package_name* angegeben ist.  
   
- [ **@dts_package_location**=] **"***Dts_package_location***"**  
+ [ **@dts_package_location**=] **"**_Dts_package_location_**"**  
  Gibt den Paketspeicherort an. *Dts_package_location* ist eine **nvarchar(12)**, hat den Standardwert **Abonnenten**. Der Speicherort des Pakets kann sein **Verteiler** oder **Abonnenten**.  
   
- [ **@reserved**=] **"***reservierte***"**  
+ [ **@reserved**=] **"**_reservierte_**"**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@offloadagent**=] '*Remote_agent_activation*"  
@@ -262,10 +261,10 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [ **@job_name**=] '*Job_name*"  
  Der Name eines vorhandenen Agentauftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter wird nur angegeben, wenn das Abonnement mithilfe eines vorhandenen Auftrags statt mit einem neu erstellten Auftrag (Standard) synchronisiert wird. Wenn Sie nicht Mitglied der sind die **Sysadmin** festen Serverrolle an, Sie müssen angeben, *Job_login* und *Job_password* beim Angeben von *Job_name*.  
   
- [ **@job_login**=] **"***Job_login***"**  
+ [ **@job_login**=] **"**_Job_login_**"**  
  Der Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)**, hat keinen Standardwert. Dieses Windows-Konto wird immer für Agent-Verbindungen mit dem Abonnenten verwendet.  
   
- [ **@job_password**=] **"***Job_password***"**  
+ [ **@job_password**=] **"**_Job_password_**"**  
  Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_password* ist **Sysname**, hat keinen Standardwert.  
   
 > [!IMPORTANT]  
@@ -285,7 +284,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>Siehe auch  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
  [Sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [Sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
  [Sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   

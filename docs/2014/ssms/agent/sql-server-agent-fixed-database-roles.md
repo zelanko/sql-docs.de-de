@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
@@ -19,12 +19,12 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a94f0a88442051597a845623c26e4cc9fe782d31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168760"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773772"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Feste Datenbankrollen des SQL Server-Agents
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über die folgenden festen **msdb** -Datenbankrollen, mit denen Administratoren den Zugriff auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent besser steuern können. In der folgenden Auflistung sind die Rollen von den niedrigsten bis hin zu den höchsten Zugriffsberechtigungen enthalten:  
@@ -50,14 +50,14 @@ ms.locfileid: "48168760"
   
 |Aktion|Operatoren|Lokale Aufträge<br /><br /> (nur Aufträge mit Besitzern)|Auftragszeitpläne<br /><br /> (nur Zeitpläne mit Besitzern)|Proxys|  
 |------------|---------------|----------------------------------------|------------------------------------------------|-------------|  
-|Erstellen/Ändern/Löschen|nein|Ja <sup>1</sup>|Benutzerkontensteuerung|nein|  
-|Liste anzeigen (aufzählen)|Ja <sup>2</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja <sup>3</sup>|  
-|Aktivieren/Deaktivieren|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht verfügbar|  
-|Eigenschaften anzeigen|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
-|Ausführen/Beenden/Starten|Nicht verfügbar|Benutzerkontensteuerung|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf anzeigen|Nicht verfügbar|Benutzerkontensteuerung|Nicht verfügbar|Nicht verfügbar|  
+|Erstellen/Ändern/Löschen|Nein|Ja <sup>1</sup>|Ja|Nein|  
+|Liste anzeigen (aufzählen)|Ja <sup>2</sup>|Ja|Ja|Ja <sup>3</sup>|  
+|Aktivieren/Deaktivieren|Nein|Ja|Ja|Nicht verfügbar|  
+|Eigenschaften anzeigen|Nein|Ja|Ja|Nein|  
+|Ausführen/Beenden/Starten|Nicht verfügbar|Ja|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf anzeigen|Nicht verfügbar|Ja|Nicht verfügbar|Nicht verfügbar|  
 |Auftragsverlauf löschen|Nicht verfügbar|Keine <sup>4</sup>|Nicht verfügbar|Nicht verfügbar|  
-|Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Benutzerkontensteuerung|Nicht verfügbar|  
+|Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Ja|Nicht verfügbar|  
   
  <sup>1</sup> Auftragsbesitz nicht ändern.  
   
@@ -77,14 +77,14 @@ ms.locfileid: "48168760"
   
 |Aktion|Operatoren|Lokale Aufträge|Multiserveraufträge|Auftragszeitpläne|Proxys|  
 |------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Erstellen/Ändern/Löschen|nein|Ja <sup>1</sup> (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
-|Liste anzeigen (aufzählen)|Ja <sup>2</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja <sup>3</sup>|  
-|Aktivieren/Deaktivieren|nein|Ja (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
-|Eigenschaften anzeigen|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
-|Eigenschaften bearbeiten|nein|Ja (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
-|Ausführen/Beenden/Starten|Nicht verfügbar|Ja (nur Aufträge mit Besitzer)|nein|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf anzeigen|Nicht verfügbar|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf löschen|Nicht verfügbar|Keine <sup>4</sup>|nein|Nicht verfügbar|Nicht verfügbar|  
+|Erstellen/Ändern/Löschen|Nein|Ja <sup>1</sup> (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
+|Liste anzeigen (aufzählen)|Ja <sup>2</sup>|Ja|Ja|Ja|Ja <sup>3</sup>|  
+|Aktivieren/Deaktivieren|Nein|Ja (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
+|Eigenschaften anzeigen|Nein|Ja|Ja|Ja|Nein|  
+|Eigenschaften bearbeiten|Nein|Ja (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
+|Ausführen/Beenden/Starten|Nicht verfügbar|Ja (nur Aufträge mit Besitzer)|Nein|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf anzeigen|Nicht verfügbar|Ja|Ja|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf löschen|Nicht verfügbar|Keine <sup>4</sup>|Nein|Nicht verfügbar|Nicht verfügbar|  
 |Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
   
  <sup>1</sup> Auftragsbesitz nicht ändern.  
@@ -107,16 +107,16 @@ ms.locfileid: "48168760"
   
  Die folgende Tabelle enthält einen Überblick über die **SQLAgentOperatorRole** -Berechtigungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Objekte.  
   
-|Aktion|Warnungen|Operatoren|Lokale Aufträge|Multiserveraufträge|Auftragszeitpläne|Proxys|  
+|Aktion|Benachrichtigungen|Operatoren|Lokale Aufträge|Multiserveraufträge|Auftragszeitpläne|Proxys|  
 |------------|------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Erstellen/Ändern/Löschen|nein|nein|Ja <sup>2</sup> (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
-|Liste anzeigen (aufzählen)|Benutzerkontensteuerung|Ja <sup>1</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Aktivieren/Deaktivieren|nein|nein|Ja <sup>3</sup>|nein|Ja <sup>4</sup>|Nicht verfügbar|  
-|Eigenschaften anzeigen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Eigenschaften bearbeiten|nein|nein|Ja (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
-|Ausführen/Beenden/Starten|Nicht verfügbar|Nicht verfügbar|Benutzerkontensteuerung|nein|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf anzeigen|Nicht verfügbar|Nicht verfügbar|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf löschen|Nicht verfügbar|Nicht verfügbar|Benutzerkontensteuerung|nein|Nicht verfügbar|Nicht verfügbar|  
+|Erstellen/Ändern/Löschen|Nein|Nein|Ja <sup>2</sup> (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
+|Liste anzeigen (aufzählen)|Ja|Ja <sup>1</sup>|Ja|Ja|Ja|Ja|  
+|Aktivieren/Deaktivieren|Nein|Nein|Ja <sup>3</sup>|Nein|Ja <sup>4</sup>|Nicht verfügbar|  
+|Eigenschaften anzeigen|Ja|Ja|Ja|Ja|Ja|Ja|  
+|Eigenschaften bearbeiten|Nein|Nein|Ja (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
+|Ausführen/Beenden/Starten|Nicht verfügbar|Nicht verfügbar|Ja|Nein|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf anzeigen|Nicht verfügbar|Nicht verfügbar|Ja|Ja|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf löschen|Nicht verfügbar|Nicht verfügbar|Ja|Nein|Nicht verfügbar|Nicht verfügbar|  
 |Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
   
  <sup>1</sup> können Sie die Liste der verfügbaren Operatoren für die Verwendung in abrufen **Sp_notify_operator** und **Auftragseigenschaften** Dialogfeld von Management Studio.  

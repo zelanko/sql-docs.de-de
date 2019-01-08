@@ -14,12 +14,12 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1dc7379ef20846309872c6faf707aab04fb6a364
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 37a65dc6a237803822f2d3214e7209f60e89d6bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033117"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539641"
 ---
 # <a name="create-a-matching-policy"></a>Erstellen einer Abgleichsrichtlinie
   In diesem Thema wird beschrieben, wie eine Abgleichsrichtlinie eine Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Sie bereiten den Abgleichsprozess in DQS vor, indem Sie die Abgleichsrichtlinienaktivität für Beispieldaten ausführen. In dieser Aktivität erstellen und testen Sie eine oder mehrere Abgleichsregeln in der Richtlinie und veröffentlichen dann die Wissensdatenbank, um die Abgleichsregeln zur Verwendung öffentlich verfügbar zu machen. Es kann nur eine Abgleichsrichtlinie in einer Wissensdatenbank geben, aber diese Richtlinie kann mehrere Abgleichsregeln enthalten.  
@@ -41,15 +41,15 @@ ms.locfileid: "51033117"
   
  Die Faktoren, die Sie in einer Abgleichsregel eingeben, schließen Folgendes ein:  
   
--   Gewichtung: Geben Sie für jede Domäne in der Regel eine numerische Gewichtung ein, die bestimmt, wie die Abgleichsanalyse für die Domäne mit der für jede andere Domäne in der Regel verglichen wird. Die Gewichtung gibt den Beitrag des Feldergebnisses zur Gesamttreffergenauigkeit zwischen zwei Datensätzen an. Die jedem Quellfeld zugewiesenen berechneten Ergebnisse werden für eine zusammengesetzte Treffergenauigkeit für die zwei Datensätze zusammengezählt. Legen Sie die Gewichtung zwischen 10 und 100 für jedes Feld fest, das keine erforderliche Komponente (mit einer genauen oder ähnlichen Entsprechung) ist. Die Summe der Gewichtungen der Domänen, die keine Voraussetzungen sind, muss gleich 100 sein. Wenn der Wert eine Voraussetzung ist, wird die Gewichtung auf 0 festgelegt und kann nicht geändert werden.  
+-   Gewichtung: Geben Sie für jede Domäne in der Regel eine numerische Gewichtung ein, die bestimmt, wie die abgleichsanalyse für die Domäne für jede andere Domäne in der Regel mit dem verglichen werden. Die Gewichtung gibt den Beitrag des Feldergebnisses zur Gesamttreffergenauigkeit zwischen zwei Datensätzen an. Die jedem Quellfeld zugewiesenen berechneten Ergebnisse werden für eine zusammengesetzte Treffergenauigkeit für die zwei Datensätze zusammengezählt. Legen Sie die Gewichtung zwischen 10 und 100 für jedes Feld fest, das keine erforderliche Komponente (mit einer genauen oder ähnlichen Entsprechung) ist. Die Summe der Gewichtungen der Domänen, die keine Voraussetzungen sind, muss gleich 100 sein. Wenn der Wert eine Voraussetzung ist, wird die Gewichtung auf 0 festgelegt und kann nicht geändert werden.  
   
--   Ähnlichkeit von Genau: Wählen Sie **Genau** aus, wenn die Werte im gleichen Feld von zwei verschiedenen Datensätzen für die Werte, die betrachtet werden sollen, identisch sein müssen, um als übereinstimmend angesehen zu werden. Falls die Werte identisch sind, wird die Treffergenauigkeit für diese Domäne auf „100“ festgelegt, und DQS verwendet dieses Ergebnis und die Ergebnisse für die anderen Domänen in der Regel, um die gesamte Treffergenauigkeit zu bestimmen. Falls die Werte nicht identisch sind, wird die Treffergenauigkeit für diese Domäne auf „0“ festgelegt, und die Verarbeitung der Regel schreitet zur nächsten Bedingung voran. Wenn Sie eine Abgleichsregel für eine numerische Domäne einrichten und **Ähnlich**auswählen, können Sie eine Toleranz als Prozentsatz oder als ganze Zahl eingeben. Für eine Domäne vom Typ Datum können Sie eine Toleranz als Tag, Monat oder Jahr (ganze Zahl) eingeben, wenn Sie **Ähnlich**auswählen; für eine Datumsdomäne gibt es keine Prozenttoleranz. Wenn Sie **Genau**auswählen, haben Sie diese Option nicht.  
+-   Ähnlichkeit von genau: Wählen Sie **Exact** , wenn die Werte im gleichen Feld von zwei verschiedenen Datensätzen für die Werte, die berücksichtigt werden, um als übereinstimmend angesehen identisch sein müssen. Falls die Werte identisch sind, wird die Treffergenauigkeit für diese Domäne auf „100“ festgelegt, und DQS verwendet dieses Ergebnis und die Ergebnisse für die anderen Domänen in der Regel, um die gesamte Treffergenauigkeit zu bestimmen. Falls die Werte nicht identisch sind, wird die Treffergenauigkeit für diese Domäne auf „0“ festgelegt, und die Verarbeitung der Regel schreitet zur nächsten Bedingung voran. Wenn Sie eine Abgleichsregel für eine numerische Domäne einrichten und **Ähnlich**auswählen, können Sie eine Toleranz als Prozentsatz oder als ganze Zahl eingeben. Für eine Domäne vom Typ Datum können Sie eine Toleranz als Tag, Monat oder Jahr (ganze Zahl) eingeben, wenn Sie **Ähnlich**auswählen; für eine Datumsdomäne gibt es keine Prozenttoleranz. Wenn Sie **Genau**auswählen, haben Sie diese Option nicht.  
   
--   Ähnlichkeit von Ähnlich: Wählen Sie **Ähnlich** aus, wenn zwei Werte im gleichen Feld von zwei verschiedenen Datensätzen auch dann als übereinstimmend angesehen werden können, wenn die Werte nicht identisch sind. Wenn DQS die Regel ausführt, wird eine Treffergenauigkeit für diese Domäne berechnet dieses Ergebnis und die Ergebnisse für die anderen Domänen in der Regel verwendet, um die gesamte Treffergenauigkeit zu bestimmen. Die minimale Ähnlichkeit zwischen den Werten eines Felds ist 60 %. Wenn die berechnete Treffergenauigkeit für ein Feld von zwei Datensätzen kleiner als 60 ist, wird das Ähnlichkeitsergebnis automatisch auf 0 festgelegt. Wenn Sie eine Abgleichsregel für ein numerisches Feld einrichten und **Ähnlich**auswählen, können Sie eine Toleranz als Prozentsatz oder als ganze Zahl eingeben. Wenn Sie eine Abgleichsregel für ein Datumsfeld einrichten und **Ähnlich**auswählen, können Sie eine numerische Toleranz eingeben.  
+-   Ähnlichkeit von ähnlich: Wählen Sie **ähnlich** Wenn zwei Werte im gleichen Feld von zwei verschiedenen Datensätzen als übereinstimmend angesehen werden können, selbst wenn die Werte nicht identisch sind. Wenn DQS die Regel ausführt, wird eine Treffergenauigkeit für diese Domäne berechnet dieses Ergebnis und die Ergebnisse für die anderen Domänen in der Regel verwendet, um die gesamte Treffergenauigkeit zu bestimmen. Die minimale Ähnlichkeit zwischen den Werten eines Felds ist 60 %. Wenn die berechnete Treffergenauigkeit für ein Feld von zwei Datensätzen kleiner als 60 ist, wird das Ähnlichkeitsergebnis automatisch auf 0 festgelegt. Wenn Sie eine Abgleichsregel für ein numerisches Feld einrichten und **Ähnlich**auswählen, können Sie eine Toleranz als Prozentsatz oder als ganze Zahl eingeben. Wenn Sie eine Abgleichsregel für ein Datumsfeld einrichten und **Ähnlich**auswählen, können Sie eine numerische Toleranz eingeben.  
   
--   Voraussetzung: Wählen Sie **Voraussetzung** aus, um anzugeben, dass die Werte im gleichen Feld in zwei verschiedenen Datensätzen eine 100 %-Übereinstimmung zurückgeben müssen. Andernfalls werden die Datensätze nicht als Übereinstimmung angesehen, und die anderen Klauseln in der Regel werden ignoriert. Wenn **Voraussetzung** ausgewählt wird, wird das Gewichtungsfeld für die Domäne entfernt, sodass Sie keine Gewichtung für die Domäne definieren können. Sie müssen mindestens eine Domänengewichtung zurücksetzen, sodass die Summe der Gewichtungen gleich 100 ist. Voraussetzungsdomänen tragen nicht zur Datensatztreffergenauigkeit bei. Die Datensatztreffergenauigkeit wird durch das Vergleichen der Werte in Feldern, für die die Ähnlichkeit auf „Ähnlich“ oder „Genau“ festgelegt wurde, bestimmt. Wenn Sie ein Feld zu einer Voraussetzung machen, wird die Ähnlichkeit für diese Domäne automatisch auf „Genau“ festgelegt.  
+-   Voraussetzung: Wählen Sie **erforderliche** an, dass die Werte im gleichen Feld in zwei verschiedenen Datensätzen eine 100 %-Übereinstimmung, zurückgeben oder die Datensätze werden kein Übereinstimmung angesehen, und die anderen Klauseln in der Regel werden ignoriert. Wenn **Voraussetzung** ausgewählt wird, wird das Gewichtungsfeld für die Domäne entfernt, sodass Sie keine Gewichtung für die Domäne definieren können. Sie müssen mindestens eine Domänengewichtung zurücksetzen, sodass die Summe der Gewichtungen gleich 100 ist. Voraussetzungsdomänen tragen nicht zur Datensatztreffergenauigkeit bei. Die Datensatztreffergenauigkeit wird durch das Vergleichen der Werte in Feldern, für die die Ähnlichkeit auf „Ähnlich“ oder „Genau“ festgelegt wurde, bestimmt. Wenn Sie ein Feld zu einer Voraussetzung machen, wird die Ähnlichkeit für diese Domäne automatisch auf „Genau“ festgelegt.  
   
- Die minimale Treffergenauigkeit ist der Schwellenwert ab dem zwei Datensätze als Übereinstimmung angesehen werden (der Status für die Datensätze wird auf „Matched“ festgelegt). Geben Sie einen ganzzahligen Wert in Schritten von „1“ ein, oder klicken Sie auf den Pfeil nach oben oder nach unten, um den Wert in Schritten von "10" zu vergrößern oder zu verringern. Der Mindestwert beträgt 80. Wenn die Treffergenauigkeit unter 80 liegt, werden die zwei Datensätze nicht als übereinstimmend angesehen. Sie können den Bereich der minimalen Treffergenauigkeit auf dieser Seite nicht ändern. Die niedrigste minimale Treffergenauigkeit ist 80. Sie können allerdings die niedrigste minimale Treffergenauigkeit auf der Verwaltungsseite ändern (wenn Sie DQS-Administrator sind).  
+ Die minimale Treffergenauigkeit ist der Schwellenwert ab dem zwei Datensätze als Übereinstimmung angesehen werden (der Status für die Datensätze wird auf „Matched“ festgelegt). Geben Sie einen ganzzahligen Wert in Schritten von „1“ ein, oder klicken Sie auf den Pfeil nach oben oder nach unten, um den Wert in Schritten von „10“ zu vergrößern oder zu verringern. Der Mindestwert beträgt 80. Wenn die Treffergenauigkeit unter 80 liegt, werden die zwei Datensätze nicht als übereinstimmend angesehen. Sie können den Bereich der minimalen Treffergenauigkeit auf dieser Seite nicht ändern. Die niedrigste minimale Treffergenauigkeit ist 80. Sie können allerdings die niedrigste minimale Treffergenauigkeit auf der Verwaltungsseite ändern (wenn Sie DQS-Administrator sind).  
   
  Das Erstellen einer Abgleichsregel ist ein iterativer Prozess, da Sie möglicherweise die relativen Gewichtungen der Domänen in der Regel oder die Ähnlichkeit oder die erforderliche Eigenschaft für eine Domäne oder die minimale Treffergenauigkeit für die Regel ändern müssen, um die gewünschten Ergebnisse zu erzielen. Möglicherweise stellen Sie auch fest, dass Sie mehrere Regeln erstellen müssen, von denen jede ausgeführt wird, um die Treffergenauigkeit zu erstellen. Es ist möglicherweise schwierig, das benötigte Ergebnis mit nur einer Regel zu erzielen. Mehrere Regeln stellen andere Sichten einer erforderlichen Übereinstimmung bereit. Mit mehreren Regeln sind Sie möglicherweise in der Lage, weniger Domänen in die einzelnen Regeln einzuschließen, höhere Gewichtungen für die einzelnen Domänen zu verwenden und bessere Ergebnisse zu erzielen. Wenn die Daten weniger genau und weniger vollständig sind, benötigen Sie möglicherweise mehr Regeln, um erforderliche Übereinstimmungen zu finden. Wenn die Daten genauer und vollständiger sind, benötigen Sie weniger Regeln.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "51033117"
     > [!NOTE]  
     >  Sie können beim Erstellen einer Abgleichsrichtlinie Ihren Quelldaten nur dann einer DQS-Domäne zuordnen, wenn der Quelldatentyp in DQS unterstützt wird und mit dem DQS-Domänendatentyp übereinstimmt. Informationen zu in DQS unterstützten Datentypen finden Sie unter [Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-5.  Klicken Sie auf das Plussteuerelement **(+)** , um der Zuordnungstabellen eine Zeile hinzuzufügen, oder auf das Minussteuerelement **(-)** , um eine Zeile zu entfernen.  
+5.  Klicken Sie auf das Plussteuerelement **(+)**, um der Zuordnungstabelle eine Zeile hinzuzufügen, oder auf das Minussteuerelement **(-)**, um eine Zeile zu entfernen.  
   
 6.  Klicken Sie auf **Vorschau der Datenquelle** , um die Daten in der ausgewählten SQL Server-Tabelle oder -Sicht oder im ausgewählten Excel-Arbeitsblatt anzuzeigen.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "51033117"
   
 6.  Wählen Sie für **Ähnlichkeit**die Option **Ähnlich** aus, wenn zwei Werte im gleichen Feld von zwei verschiedenen Datensätzen auch dann als übereinstimmend angesehen werden können, wenn sie nicht identisch sind. Wählen Sie **Genau** aus, wenn zwei Werte im gleichen Feld von zwei verschiedenen Datensätzen identisch sein müssen, um als übereinstimmend angesehen zu werden. (Weitere Informationen finden Sie unter [So legen Sie Abgleichsregelparameter fest](#MatchingRules).)  
   
-7.  Geben Sie für **Gewichtung**einen Wert ein, der den Beitrag der Treffergenauigkeit einer Domäne zur Gesamttreffergenauigkeit für zwei Datensätze bestimmt.  
+7.  Geben Sie für **Gewichtung** einen Wert ein, der den Beitrag der Treffergenauigkeit einer Domäne zur Gesamttreffergenauigkeit für zwei Datensätze bestimmt.  
   
     > [!NOTE]  
     >  Wenn Sie eine Gewichtung für eine Verbunddomäne definieren, können Sie eine andere Gewichtung für jede Einzeldomäne in der Verbunddomäne eingeben. In diesem Fall erhält die Verbunddomäne keine separate Gewichtung. Sie können auch eine einzelne Gewichtung für die Verbunddomäne eingeben, in der die Einzeldomänen keine separaten Gewichtungen erhalten.  
@@ -173,20 +173,20 @@ ms.locfileid: "51033117"
   
 7.  Wenn Sie mit den Ergebnissen aller Regeln zufrieden sind, klicken Sie auf **Fertig stellen** , um den Abgleichsrichtlinienprozess abzuschließen, und klicken Sie auf eine der folgenden Optionen:  
   
-    -   **Ja – Wissensdatenbank veröffentlichen und beenden**: Die Wissensdatenbank wird veröffentlicht und kann vom aktuellen Benutzer oder von anderen Benutzern verwendet werden. Die Wissensdatenbank wird nicht gesperrt, der Status der Wissensdatenbank (in der Wissensdatenbanktabelle) wird auf leer festgelegt, und die Aktivitäten für die Domänenverwaltung sowie die Wissensermittlung sind verfügbar. Sie kehren zur Seite „Wissensdatenbank öffnen“ zurück.  
+    -   **Veröffentlichen Sie Ja – Wissensdatenbank und beenden**: Die Wissensdatenbank wird für den aktuellen Benutzer oder von anderen Benutzern verwenden veröffentlicht werden. Die Wissensdatenbank wird nicht gesperrt, der Status der Wissensdatenbank (in der Wissensdatenbanktabelle) wird auf leer festgelegt, und die Aktivitäten für die Domänenverwaltung sowie die Wissensermittlung sind verfügbar. Sie kehren zur Seite „Wissensdatenbank öffnen“ zurück.  
   
-    -   **Nein – Arbeit in der Wissensdatenbank speichern und beenden**: Ihre Arbeit wird gespeichert, die Wissensdatenbank bleibt gesperrt, und der Status der Wissensdatenbank wird auf **In Arbeit**festgelegt. Sowohl die Domänenverwaltungs- als auch die Wissensermittlungsaktivitäten sind verfügbar. Sie kehren zur Startseite zurück.  
+    -   **Nein – Arbeit in die Wissensdatenbank, und Beenden speichern**: Ihre Arbeit wird gespeichert, die Wissensdatenbank bleibt gesperrt, und der Status der Wissensdatenbank wird auf festgelegt **Arbeit**. Sowohl die Domänenverwaltungs- als auch die Wissensermittlungsaktivitäten sind verfügbar. Sie kehren zur Startseite zurück.  
   
-    -   **Abbrechen – Im aktuellen Fenster bleiben**: Das Popupfenster wird geschlossen, und Sie kehren zum Fenster „Domänenverwaltung“ zurück.  
+    -   **Abbrechen – im aktuellen Fenster bleiben**: Das Popupfenster wird geschlossen, und Sie kehren zum Fenster "Domänenverwaltung".  
   
-8.  Klicken Sie auf **Schließen** , um die Arbeit zu speichern, und kehren Sie zur DQS-Startseite zurück. Der Status der Wissensdatenbank zeigt die Zeichenfolge „Abgleichsrichtlinie - “ und den aktuellen Status an. Wenn Sie auf **Schließen** klicken, während Sie auf dem Bildschirm **Abgleichsergebnis** sind, zeigt der Status Folgendes an: „Abgleichsrichtlinie - Ergebnisse“. Wenn Sie auf „Schließen“ klicken, während Sie auf dem Bildschirm **Abgleichsrichtlinie** sind, zeigt der Status Folgendes an: „Abgleichsrichtlinie - Abgleichsrichtlinie“. Nachdem Sie auf **Schließen**geklickt haben, um die **Wissensermittlungsaktivität** auszuführen, müssen Sie zur Aktivität **Abgleichsrichtlinie** zurückkehren, auf **Fertig stellen**klicken und dann auf **Ja** klicken, um die Wissensdatenbank zu veröffentlichen, oder auf **Nein** , um die Arbeit an der Wissensdatenbank zu speichern und zu beenden.  
+8.  Klicken Sie auf **Schließen** , um die Arbeit zu speichern, und kehren Sie zur DQS-Startseite zurück. Der Status der Wissensdatenbank zeigt die Zeichenfolge „Abgleichsrichtlinie – “ und den aktuellen Status an. Wenn Sie auf **schließen** während Sie auf die **Abgleichsergebnis** -Bildschirm, der Status wird angezeigt: "Abgleichsrichtlinie - Ergebnisse". Wenn Sie auf Schließen geklickt wird, während Sie auf die **Abgleichsrichtlinie** -Bildschirm, der Status wird angezeigt: "Abgleichsrichtlinie - Abgleichsrichtlinie". Nachdem Sie auf **Schließen**geklickt haben, um die **Wissensermittlungsaktivität** auszuführen, müssen Sie zur Aktivität **Abgleichsrichtlinie** zurückkehren, auf **Fertig stellen**klicken und dann auf **Ja** klicken, um die Wissensdatenbank zu veröffentlichen, oder auf **Nein** , um die Arbeit an der Wissensdatenbank zu speichern und zu beenden.  
   
     > [!NOTE]  
     >  Wenn Sie auf **Schließen** klicken, während ein Abgleichsprozess ausgeführt wird, wird der Abgleichsprozess nicht beendet, wenn Sie auf **Schließen**klicken. Sie können die Wissensdatenbank erneut öffnen und sehen, dass der Prozess immer noch ausgeführt wird oder dass die Ergebnisse angezeigt werden, falls er abgeschlossen wurde. Wenn der Prozess nicht abgeschlossen wurde, wird der Fortschritt auf dem Bildschirm angezeigt.  
   
 9. Klicken Sie auf **Abbrechen** , um die Abgleichsrichtlinienaktivität abzubrechen, ohne die Ergebnisse zu speichern, und um zur DQS-Startseite zurückzukehren.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen einer Abgleichsrichtlinie  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Erstellen einer Abgleichsrichtlinie  
  Nachdem Sie eine Abgleichsrichtlinie erstellt haben, können Sie ein Abgleichsprojekt basierend auf der Wissensdatenbank, die die Abgleichsrichtlinie enthält, ausführen. Weitere Informationen finden Sie unter [Ausführen eines Abgleichsprojekts](../../2014/data-quality-services/run-a-matching-project.md).  
   
 ##  <a name="Tabs"></a> Profiler and Results Tabs  
@@ -203,11 +203,11 @@ ms.locfileid: "51033117"
   
 -   **Gesamtwerte**: Die Gesamtzahl der Werte in den Feldern der Datenquelle  
   
--   **Neue Werte**: Die Gesamtzahl der Werte, die seit der vorherigen Ausführung neu sind, und ihr prozentualer Anteil am Ganzen  
+-   **Neue Werte**: Die Gesamtzahl der Werte, die neue seit der vorherigen Ausführung, und ihr prozentualer Anteil am ganzen  
   
--   **Eindeutige Werte**: Die Gesamtzahl der eindeutigen Werte in den Feldern und ihr prozentualer Anteil am Ganzen  
+-   **Eindeutige Werte**: Die Gesamtanzahl der eindeutigen Werte in den Feldern und ihr prozentualer Anteil am ganzen  
   
--   **Neue eindeutige Werte**: Die Gesamtzahl der eindeutigen Werte, die neu in den Feldern sind, und ihr prozentualer Anteil am Ganzen  
+-   **Neue eindeutige Werte**: Die Gesamtanzahl der eindeutigen Werte, die neu in den Feldern und ihr prozentualer Anteil am ganzen  
   
  Die Feldstatistiken umfassen Folgendes:  
   
@@ -215,9 +215,9 @@ ms.locfileid: "51033117"
   
 -   **Domänenname**  
   
--   **Neu**: Die Anzahl der neuen Werte und die Prozentzahlen neuer Werte im Vergleich zu vorhandenen Werten in der Domäne  
+-   **Neue**: Die Anzahl der neuen Werte und die Prozentzahlen neuer Werte im Vergleich zu vorhandenen Werten in der Domäne  
   
--   **Eindeutig**: Die Gesamtzahl der eindeutigen Datensätze in den Feldern und ihr prozentualer Anteil am Ganzen  
+-   **Eindeutige**: Die Anzahl der eindeutigen Datensätze in den Feldern und ihr prozentualer Anteil am Gesamtwert  
   
 -   **Vollständigkeit**: Die Vollständigkeit jedes Quellfelds, das für den Abgleich zugeordnet ist  
   

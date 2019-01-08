@@ -16,12 +16,12 @@ ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f5c441081c5e185494c693c44b5f7665529c9b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1259cc627ef53d8f5a201e42772a9dba390824cc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210440"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537177"
 ---
 # <a name="browsing-an-association-rules-model"></a>Durchsuchen eines Association Rules-Modells
   Beim Öffnen einer Zuordnung Modell mit **Durchsuchen**, das Modell wird angezeigt, in einem interaktiven Viewer, ähnelt dem Viewer für Zuordnungsregeln in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  Im Viewer sehen Sie auf einen Blick, welche Elemente untereinander korreliert wurden. Außerdem können Sie Regeln anzeigen, die Sie für Vorhersagen oder Empfehlungen verwenden können.  
@@ -91,17 +91,17 @@ ms.locfileid: "48210440"
   
  *Wahrscheinlichkeit* stellt den Anteil der Fälle im Dataset, die die gewünschte Kombination von Elementen enthalten. Wahrscheinlichkeit ähnelt dem statistischen Konzept des *vertrauen*, und bietet Ihnen ein Überblick über die wie wahrscheinlich das Ergebnis einer Regel ausgeführt werden soll. Sie können den Wert der ändern **minimale Wahrscheinlichkeit** in diesem Bereich zum Filtern der Regeln, die angezeigt werden.  
   
- Der Wert für **minimale Wahrscheinlichkeit** am Anfang unter ist der Schwellenwert, der vom Algorithmus beim Erstellen des Modells verwendet. Wenn das Modell vollständig ist, können Sie diesen Wert nicht mehr verringern. Sie können ihn jedoch erhöhen, sodass nur die Elemente mit höherer Wahrscheinlichkeit angezeigt werden.  
+ Der Wert für **minimale Wahrscheinlichkeit** am Anfang unter ist der Schwellenwert, der vom Algorithmus beim Erstellen des Modells verwendet. Nachdem das Modell vollständig ist, kann können Sie nicht diesen Wert verringern, aber erhöht werden, um nur die Elemente mit höherer Wahrscheinlichkeit angezeigt.  
   
  *Wichtigkeit* wurde entwickelt, um die Nützlichkeit einer Regel zu messen. Eine sehr häufig verwendete Regel könnte so allgemein sein, dass sie nur wenig Informationswert hat. Je größer die Wichtigkeit ist, umso bedeutender ist die Regel für die Vorhersage des Ergebnisses. In der [Warenkorbanalyse &#40;Tabellenanalysetools für Excel&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md) Tool Wichtigkeit kann kombiniert werden, mit dem Preis von Elementen, die die Bündel zu ermitteln, die im Hinblick auf Verkäufe möglicherweise besonders hilfreich sind.  
   
 ##### <a name="explore-the-rules-list"></a>Untersuchen der Liste "Regeln"  
   
-1.  Klicken Sie auf die Spaltenüberschriften – **Wahrscheinlichkeit**, **Wichtigkeit**, und **Regel** , um festzustellen, wie die Daten geändert.  
+1.  Klicken Sie auf die Spalte Überschriften - **Wahrscheinlichkeit**, **Wichtigkeit**, und **Regel** : um festzustellen, wie die Daten geändert.  
   
 2.  Verwenden der **Filterregel** Option Geben Sie Werte aus, und konzentrieren Sie sich auf gewünschte Regeln.  
   
-     Wenn Sie beispielsweise alle Regeln anzeigen möchten, die vorhersagen, welche Elemente die Kunden höchstwahrscheinlich zusammen mit Handschuhen kaufen, geben Sie im Textfeld "Gloves" ein, und aktualisieren Sie den Bereich.  
+     Beispielsweise wenn Sie alle Regeln anzuzeigen, die Vorhersagen, welche Kunden wahrscheinlich zusammen mit Handschuhen kaufen möchten, geben Sie im Textfeld "Gloves", und aktualisieren Sie den Bereich.  
   
      Über die Option **Filteritemset** wird auch eine Liste der zuvor verwendeten Filter angezeigt.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48210440"
   
 5.  Legen Sie den Wert für die **maximale Zeilenanzahl** auf 100 aus, und klicken Sie dann auf **nach Excel kopieren**.  
   
-     Die Änderung dieses Werts wirkt sich nicht auf die Datenmenge im Modell aus, sondern legt nur die Anzahl der Zeilen in der Anzeigeliste fest. Diese Option kann bei der Arbeit mit sehr großen Modellen nützlich sein.  
+     Beachten Sie, dass durch Ändern dieses Werts keine Auswirkungen auf die Menge der Daten im Modell nicht. Es steuert lediglich die Anzahl der Zeilen in der Anzeigeliste. Diese Option kann bei der Arbeit mit sehr großen Modellen nützlich sein.  
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
@@ -124,13 +124,13 @@ ms.locfileid: "48210440"
   
 1.  Klicken Sie auf die **finden** und legen Sie mit der **Knoten suchen** Dialogfeld Geben Sie ein Element von Interesse sind.  
   
-     Geben Sie beispielsweise "Gloves" ein, und maximieren Sie dann das Diagramm im Fenster, sodass die Ergebnisse leicht ersichtlich sind.  
+     Geben Sie z. B. "Gloves" ein, und Maximieren Sie das Diagramm im Fenster, damit Sie die Ergebnisse leicht erkennen können.  
   
      Der Knoten, der das Element enthält, ist hervorgehoben, während die Pfeile, die auf den Knoten zeigen, eine Regel darstellen, die die Elemente verbindet.  
   
-     Die Richtung der Pfeile gibt die Richtung der Regel an. Wenn zum Beispiel ein Kunde, der Handschuhe kauft, höchstwahrscheinlich auch eine Weste erwerben wird, startet der Pfeil am Knoten "Gloves" und endet am Knoten "Vest".  
+     Die Richtung der Pfeile gibt die Richtung der Regel an. Wenn eine Person, die Handschuhe kauft auch eine Weste erwerben wahrscheinlich ist, wird der Pfeil z. B. aus dem Knoten "Glove" starten und beenden auf dem Knoten "Vest".  
   
-     Um zusätzliche Statistiken über diese Regel zu erhalten, klicken Sie auf die **Regeln** Registerkarte und eine Regel mit der Beschreibung "Glove - Existing" -> "Steht Ihnen zu – vorhandene.")  
+     Um zusätzliche Statistiken über diese Regel zu erhalten, klicken Sie auf die **Regeln** Registerkarte und suchen Sie nach einer Regel mit der Beschreibung "Glove - vorhandenen" -> "Steht Ihnen zu - vorhandene.")  
   
 2.  Klicken Sie auf den Schieberegler auf der linken Seite des Viewers, und ziehen Sie ihn.  
   
@@ -149,9 +149,9 @@ ms.locfileid: "48210440"
   
  Wenn Sie erweiterte Parameter festzulegen oder alter mindestwahrscheinlichkeit und-Unterstützung, verwenden möchten die [Assistenten zum Zuordnen von &#40;Data Mining-Client für Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) -Assistenten, oder erstellen Sie Ihr eigenes Modell mit den [Modell hinzufügen Struktur &#40;Data Mining-Add-ins für Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) modellierungsoption.  
   
--   **Itemsets:** bei der Erstellung des Modells können Sie auch steuern, auf die Anzahl der Itemsets, die durch das Zuweisen eines Werts zum Parameter MINIMUM_PROBABILITY generiert werden. Dieser Parameter ist im Dialogfeld Algorithmusparameter verfügbar.  
+-   **Itemsets:** Beim Erstellen des Modells können Sie die Anzahl der Itemsets steuern, die durch Zuordnen von Werten zum Parameter MINIMUM_PROBABILITY generiert werden. Dieser Parameter ist im Dialogfeld Algorithmusparameter verfügbar.  
   
--   **Regeln:** der [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules-Algorithmus werden Wahrscheinlichkeitswerte verwendet, um die Anzahl der Regeln zu beschränken, die generiert werden. Sie können die Anzahl der Regeln steuern, indem Sie die Parameter `MINIMUM_PROBABILITY` oder `MINIMUM _IMPORTANCE` festlegen.  
+-   **Regeln:** Vom [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules-Algorithmus werden Wahrscheinlichkeitswerte verwendet, um die Anzahl der generierten Regeln zu beschränken. Sie können die Anzahl der Regeln steuern, indem Sie die Parameter `MINIMUM_PROBABILITY` oder `MINIMUM _IMPORTANCE` festlegen.  
   
  Weitere Informationen zum Konfigurieren erweiterter Parameter finden Sie unter [Data Mining-Algorithmen &#40;SQL Server Data Mining-Add-ins&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md).  
   

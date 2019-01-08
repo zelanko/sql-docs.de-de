@@ -20,12 +20,12 @@ ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c45471990d3eac42c8805fc9c6ba820a9762627
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc9d003fc4c1f3b3cd32e8f23fe635d56e48555e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105170"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510904"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Erteilen von benutzerdefiniertem Zugriff auf Zellendaten (Analysis Services)
   Zellensicherheit wird verwendet, um den Zugriff auf Measuredaten innerhalb eines Cubes zuzulassen oder zu verweigern. Die folgende Abbildung zeigt eine Kombination zugelassener und verweigerter Measures in einer PivotTable, wenn ein Benutzer angemeldet ist, dessen Rolle nur den Zugriff auf bestimmte Measures erlaubt. In diesem Beispiel sind der **Betrag der Verkäufe des Wiederverkäufers** und die **Gesamtproduktkosten des Wiederverkäufers** die einzigen über diese Rolle verfügbaren Measures. Alle anderen Measures werden implizit abgelehnt (im unten stehenden Abschnitt "Zulassen des Zugriffs auf bestimmte Measures" sind die Schritte zu diesem Ergebnis beschrieben).  
@@ -34,7 +34,7 @@ ms.locfileid: "48105170"
   
  Zellenberechtigungen gelten für Daten innerhalb der Zelle, nicht für deren Metadaten. Sie sehen, dass die Zelle in den Ergebnissen einer Abfrage immer noch sichtbar ist und den Wert `#N/A` anstelle des tatsächlichen Zellenwerts anzeigt. Die `#N/A` -Wert in der Zelle angezeigt wird, es sei denn, die Clientanwendung den Wert übersetzt oder einen anderen Wert durch Festlegen der Secured Cell Value-Eigenschaft in der Verbindungszeichenfolge angegeben ist.  
   
- Um die Zelle ganz auszublenden, müssen Sie die Elemente (Dimensionen, Dimensionsattribute und Dimensionsattributelemente), die angezeigt werden können, einschränken. Weiter Informationen finden Sie unter [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md).  
+ Um die Zelle ganz auszublenden, müssen Sie die Member-Dimensionen, Dimensionsattribute und dimensionsattributelementen beschränken –, die angezeigt werden. Weiter Informationen finden Sie unter [Erteilen eines benutzerdefinierten Zugriffs auf Dimensionsdaten &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md).  
   
  Als Administrator können Sie angeben, ob Rollenmitglieder über Leseberechtigungen, Berechtigungen für abhängiges Lesen oder Lese-/Schreibberechtigungen für Zellen innerhalb eines Cubes verfügen. Berechtigungen für eine Zelle zu vergeben, ist die geringste zulässige Sicherheitsstufe. Bevor Sie also Berechtigungen auf dieser Ebene anwenden, sollten Sie folgende Aspekte berücksichtigen:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48105170"
 ## <a name="allow-access-to-specific-measures"></a>Zulassen des Zugriffs auf bestimmte Measures  
  Sie können Zellensicherheit verwenden, um explizit anzugeben, welche Measures verfügbar sind. Nachdem Sie die Elemente, die zulässig sind, eindeutig identifiziert haben, sind alle weiteren Measures nicht mehr verfügbar. Dies stellt möglicherweise das einfachste Szenario für die Implementierung via MDX-Skript dar, wie folgende Schritte zeigen.  
   
-1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz her, wählen Sie eine Datenbank aus, öffnen Sie den Ordner **Rollen** , und klicken Sie anschließend auf eine Datenbankrolle (oder erstellen Sie eine neue Datenbankrolle). Mitgliedschaft sollte bereits angegeben werden, und die Rolle sollte `Read` Zugriff auf den Cube. Weitere Informationen finden Sie unter [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) .  
+1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz her, wählen Sie eine Datenbank aus, öffnen Sie den Ordner **Rollen** , und klicken Sie anschließend auf eine Datenbankrolle (oder erstellen Sie eine neue Datenbankrolle). Die Mitgliedschaft sollte bereits angegeben worden sein, und die Rolle sollte `Read`-Zugriff auf den Cube haben. Weitere Informationen finden Sie unter [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) .  
   
 2.  Überprüfen Sie unter **Zellendaten**die Cubeauswahl, um sich zu vergewissern, dass Sie den richtigen Cube ausgewählt haben. Wählen Sie anschließend **Leseberechtigungen aktivieren**aus.  
   
@@ -98,11 +98,11 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  Lese-/Schreibberechtigungen für eine Zelle werden verwendet, um das Rückschreiben zu ermöglichen, vorausgesetzt, die Elemente verfügen über Lese-/Schreibberechtigungen für den Cube selbst. Auf Zellenebene erteilte Berechtigungen können nicht höher sein, als die auf Cubeebene erteilten Berechtigungen. Weitere Informationen finden Sie unter [Einrichten des Rückschreibens von Partitionen](set-partition-writeback.md) .  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Generator &#40;Analysis Services – mehrdimensionale Daten&#41;](../mdx-builder-analysis-services-multidimensional-data.md)   
+ [MDX-Generator &#40;Analysis Services – Mehrdimensionale Daten&#41;](../mdx-builder-analysis-services-multidimensional-data.md)   
  [Grundlegendes MDX-Skript &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
- [Erteilen von verarbeitungsberechtigungen &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
- [Erteilen von Berechtigungen für eine Dimension &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
+ [Erteilen von Berechtigungen zum Verarbeiten &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
+ [Gewähren von Berechtigungen in einer Dimension &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
  [Erteilen von benutzerdefiniertem Zugriff auf Dimensionsdaten &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Erteilen von Cube-oder modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+ [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
   

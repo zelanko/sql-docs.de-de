@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8777a346fe95f8399d14651fb00517fe0f599496
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 7267097b1a06cb44c801ed20cbfd206c330328ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147955"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509474"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Objektbenennungsregeln (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "50147955"
   
  Die folgenden Regeln gelten für **Namen** und **ID** Eigenschaften.  
   
--   Bei den Namen wird die Groß-/Kleinschreibung nicht berücksichtigt. Ein Cube mit dem Namen "sales" und ein anderer mit dem Namen "Sales" können nicht gleichzeitig in derselben Datenbank vorhanden sein.  
+-   Bei den Namen wird die Groß-/Kleinschreibung nicht berücksichtigt. Sie können einen Cube mit dem Namen "Sales" keine und eine andere mit dem Namen "Sales" in der gleichen Datenbank.  
   
 -   Führende oder nachfolgende Leerzeichen sind in Objektnamen nicht zulässig. Innerhalb des Namens können Leerzeichen verwendet werden. Führende und nachfolgende Leerzeichen werden implizit abgeschnitten. Dies gilt für die **Namen** und **ID** eines Objekts.  
   
@@ -78,10 +78,10 @@ ms.locfileid: "50147955"
   
 |Servermodus und Datenbank-Kompatibilitätsgrad|Reservierte Zeichen zulässig?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (alle Versionen)|nein|  
-|Tabellarischer Modus - 1050|nein|  
-|Tabellarischer Modus - 1100|nein|  
-|Tabellarischer Modus – 1130 und höher|Benutzerkontensteuerung|  
+|MOLAP (alle Versionen)|Nein|  
+|Tabellarischer Modus - 1050|Nein|  
+|Tabellarischer Modus - 1100|Nein|  
+|Tabellarischer Modus – 1130 und höher|Ja|  
   
  Für Datenbanken kann als ModelType Default angegeben sein. Default ist äquivalent zu Multidimensional, und die Verwendung von reservierten Zeichen in Spaltennamen wird in diesem Fall nicht unterstützt.  
   

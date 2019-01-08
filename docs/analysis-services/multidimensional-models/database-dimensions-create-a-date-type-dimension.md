@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine datumstypdimension | Microsoft Docs
+title: Erstellen eines datumstyps Dimension | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 957f47bbb185f6d9029b9dfbb036aa3738448098
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d92f7748478695ccb9cfe8a6474eb83839170657
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024507"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524371"
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>Datenbankdimensionen – Erstellen einer datumstypdimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34024507"
 ### <a name="calendars"></a>Kalender  
  In einer Zeitdimension oder einer Serverzeitdimension werden die Zeitraumattribute in Hierarchien miteinander gruppiert. Diese Hierarchien werden im Allgemeinen als Kalender bezeichnet.  
   
- Business Intelligence-Anwendungen benötigen oft mehrere Kalenderdefinitionen. Eine Personalabteilung verwaltet die Mitarbeiter z.B. mit einem *Standard* -Kalender – einem auf zwölf Monaten basierenden gregorianischen Kalender, der am 1. Januar beginnt und am 31. Dezember endet. Dieselbe Personalabteilung kann Ausgaben aber über einen *Geschäfts* -Kalender verfolgen – einen zwölfmonatigen Kalender, der das vom Unternehmen verwendete Geschäftsjahr definiert.  
+ Business Intelligence-Anwendungen benötigen oft mehrere Kalenderdefinitionen. Beispielsweise kann eine Personalabteilung Mitarbeiter verfolgen, indem Sie mit einem *standard* Kalender ein zwölfmonatiger gregorianischen Kalender am 1. Januar beginnt und endet am 31. Dezember. Allerdings, dieselbe Personalabteilung kann Ausgaben mit Nachverfolgen einer *Geschäftskalender* Kalender einen zwölfmonatigen Kalender, der das vom Unternehmen verwendete Geschäftsjahr definiert.  
   
  Diese verschiedenen Kalender können Sie manuell im Dimensions-Designer erstellen. Der Dimensions-Assistent stellt jedoch verschiedene Hierarchievorlagen bereit, mit denen Sie automatisch verschiedene Kalendertypen generieren können, wenn Sie eine Zeitdimension oder eine Serverzeitdimension erstellen. Die folgende Tabelle beschreibt die verschiedenen Kalender, die mit dem Dimensions-Assistenten generiert werden können.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "34024507"
 |--------------|-----------------|  
 |Standardkalender|Ein zwölfmonatiger gregorianischer Kalender, der am 1. Januar beginnt und am 31. Dezember endet.<br /><br /> Unabhängig davon, ob Sie mit dem Dimensions-Assistenten eine Zeitdimension oder eine Serverzeitdimension erstellen, generiert der Assistent eine Hierarchie für einen Standardkalender, nachdem Sie die Attribute definiert haben, die die Zeiträume der Dimension darstellen. Wenn Sie mit dem Dimensions-Assistenten eine Serverzeitdimension erstellen, können Sie das Anfangsdatum des Standardkalenders auf einen anderen Tag als den 1. Januar legen.|  
 |Geschäftskalender|Ein zwölfmonatiger Geschäftskalender. Wenn Sie diesen Kalender auswählen, müssen Sie den Anfangstag des vom Unternehmen verwendeten Geschäftsjahres angeben.<br /><br /> Hinweis: Dieser Kalender ist nur verfügbar, wenn Sie mit dem Dimensions-Assistenten eine Serverzeitdimension erstellen.|  
-|Berichtskalender (oder Marketingkalender)|Ein zwölfmonatiger Berichtskalender, der in einem dreimonatigen (quartalsweisen) Muster zwei Monate mit vier und einen Monat mit fünf Wochen enthält. Wenn Sie diesen Kalender auswählen, müssen Sie den Anfangstag und den Anfangsmonat des Dreimonatsmusters mit 4-4-5, 4-5-4 oder 5-4-4 Wochen angeben, wobei diese Zahlen die in einem Monat enthaltenen Wochen darstellen.<br /><br /> Hinweis: Dieser Kalender ist nur verfügbar, wenn Sie mit dem Dimensions-Assistenten eine Serverzeitdimension erstellen.|  
+|Berichtskalender (oder Marketingkalender)|Ein zwölfmonatiger Berichtskalender, der in einem dreimonatigen (quartalsweisen) Muster zwei Monate mit vier und einen Monat mit fünf Wochen enthält. Wenn Sie diesen Kalender auswählen, geben Sie den Anfangstag und den drei Monate 4-4-5, 4-5-4 oder 5-4-4 Wochen, wobei jede Ziffer für die Anzahl der Wochen in einem Monat darstellt.<br /><br /> Hinweis: Dieser Kalender ist nur verfügbar, wenn Sie mit dem Dimensions-Assistenten eine Serverzeitdimension erstellen.|  
 |Produktionskalender|Ein Kalender, der 13 aus vier Wochen bestehende Perioden verwendet, die in drei Quartale mit drei Perioden und ein Quartal mit vier Perioden unterteilt sind. Wenn Sie diesen Kalender auswählen, müssen Sie die Anfangswoche (zwischen 1 und 4) und den Anfangsmonat des von Ihrem Unternehmen verwendeten Produktionsjahres angeben und festlegen, welches Quartal vier Perioden enthält.<br /><br /> Hinweis: Dieser Kalender ist nur verfügbar, wenn Sie mit dem Dimensions-Assistenten eine Serverzeitdimension erstellen.|  
 |ISO 8601-Kalender|Der Standardkalender für die Daten- und Zeitdarstellung (8601) der Internationalen Organisation für Normung (International Organization for Standardization, ISO). Dieser Kalender besitzt eine integrale Anzahl von 7-Tage-Wochen. Das neue Jahr kann mehrere Wochen vor oder nach dem Beginn des neuen Jahres auf der Basis des gregorianischen Kalenders anfangen. Die erste Woche dieses Kalenders wird durch die erste Woche des gregorianischen Kalenders bestimmt, die einen Donnerstag enthält. Aus diesem Grund kann es sein, dass der erste Tag dieser Woche – der Sonntag – noch im Vorjahr liegt.<br /><br /> Hinweis: Dieser Kalender ist nur verfügbar, wenn Sie mit dem Dimensions-Assistenten eine Serverzeitdimension erstellen.|  
   
- Wenn Sie eine Serverzeitdimension erstellen und die Zeiträume und Kalender angeben, die in der Dimension verwendet werden sollen, fügt der Dimensions-Assistent die jeweils für die angegebenen Kalender geeigneten Attribute hinzu. Wenn Sie z. B. eine Serverzeitdimension erstellen, die als Zeitraum "Jahre" verwendet und sowohl Geschäfts- als auch Berichtskalender enthält, fügt der Assistent dann der Dimension die Attribute FiscalYear und ReportingYear sowie das Standardattribut Years hinzu. Eine Serverzeitdimension besitzt außerdem Attribute für Kombinationen ausgewählter Zeiträume, wie das Attribut DayOfWeek für eine Dimension, die Days und Weeks enthält. Der Dimensions-Assistent erstellt eine Kalenderhierarchie, indem er Attribute kombiniert, die zu einem einzelnen Kalendertyp gehören. Eine Finanzkalenderhierarchie kann die folgenden Ebenen enthalten: Geschäftsjahr, Geschäftshalbjahr, Geschäftsquartal, Geschäftsmonat und Geschäftstag.  
+ Wenn Sie eine Serverzeitdimension erstellen und die Zeiträume und Kalender angeben, die in der Dimension verwendet werden sollen, fügt der Dimensions-Assistent die jeweils für die angegebenen Kalender geeigneten Attribute hinzu. Wenn Sie z. B. eine Serverzeitdimension erstellen, die als Zeitraum "Jahre" verwendet und sowohl Geschäfts- als auch Berichtskalender enthält, fügt der Assistent dann der Dimension die Attribute FiscalYear und ReportingYear sowie das Standardattribut Years hinzu. Eine Serverzeitdimension besitzt außerdem Attribute für Kombinationen ausgewählter Zeiträume, wie das Attribut DayOfWeek für eine Dimension, die Days und Weeks enthält. Der Dimensions-Assistent erstellt eine Kalenderhierarchie, indem er Attribute kombiniert, die zu einem einzelnen Kalendertyp gehören. Eine Finanzkalenderhierarchie kann z. B. die folgenden Ebenen enthalten: Geschäftsjahr, Geschäftshalbjahr, Geschäftsquartal, Geschäftsmonat und Geschäftstag.  
   
 ## <a name="adding-time-intelligence-with-the-business-intelligence-wizard"></a>Hinzufügen von Zeitintelligenz mit dem Business Intelligence-Assistenten  
  Nachdem Sie eine Zeitdimension definiert und diese Dimension einem Cube hinzugefügt haben, können Sie mit dem Business Intelligence-Assistenten eine Zeitintelligenzfunktion hinzufügen, wie Vergleiche zwischen Zeitraum und Datum, Zeitraum und Zeitraum und Measures für einen gleitenden Durchschnitt. Weitere Informationen finden Sie unter [Definieren von Zeitintelligenzberechnungen mithilfe des Business Intelligence-Assistenten](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "34024507"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen einer Zeitdimension durch Generieren einer Zeittabelle](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [Business Intelligence-Assistent F1-Hilfe](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
+ [Business Intelligence-Assistent (F1-Hilfe)](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
  [Dimensionstypen](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

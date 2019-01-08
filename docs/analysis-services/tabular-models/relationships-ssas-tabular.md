@@ -1,5 +1,5 @@
 ---
-title: Beziehungen | Microsoft Docs
+title: Beziehungen in tabellarischen Modellen von Analysis Services | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b704b7e2fdc299006d77e08314d2b16ffd750a0a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6314331be3a844b86ff8790c8c38abb4c0d3758e
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045304"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072527"
 ---
 # <a name="relationships"></a>Beziehungen 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "34045304"
 ##  <a name="what"></a> Vorteile  
  Eine Beziehung ist eine Verbindung zwischen zwei Datentabellen, die auf mindestens einer Spalte in jeder Tabelle basiert. Um zu verstehen, warum Beziehungen nützlich sind, stellen Sie sich vor, dass Sie in Ihrem Unternehmen die Daten für Kundenbestellungen verfolgen möchten. Sie könnten alle Daten in einer einzelnen Tabelle verfolgen, die über eine Struktur wie die folgende verfügt:  
   
-|CustomerID|Name|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|Name|EMail|DiscountRate|OrderID|OrderDate|Produkt|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
- Dieser Ansatz kann umgesetzt werden, bedeutet aber, dass viele redundante Daten gespeichert werden müssen, z. B. die Kunden-E-Mail-Adresse für jede Bestellung. Speicher ist zwar billig, aber wenn sich die E-Mail-Adresse eines Kunden ändert, müssen Sie sicherstellen, dass jede Zeile für diesen Kunden aktualisiert wird. Eine Lösung für dieses Problem ist, die Daten in mehrere Tabellen aufzuteilen und zwischen diesen Tabellen Beziehungen zu definieren. Dies ist der Ansatz wird in *relationalen Datenbanken* wie SQL Server. Eine Datenbank, die Sie in ein Modell importieren, könnte die Bestelldaten z. B. mit drei verknüpften Tabellen darstellen:  
+ Dieser Ansatz kann umgesetzt werden, bedeutet aber, dass viele redundante Daten gespeichert werden müssen, z. B. die Kunden-E-Mail-Adresse für jede Bestellung. Speicher ist zwar billig, aber wenn sich die E-Mail-Adresse eines Kunden ändert, müssen Sie sicherstellen, dass jede Zeile für diesen Kunden aktualisiert wird. Eine Lösung für dieses Problem ist, die Daten in mehrere Tabellen aufzuteilen und zwischen diesen Tabellen Beziehungen zu definieren. Dies ist der Ansatz verwendet *relationale Datenbanken* wie z.B. SQL Server. Eine Datenbank, die Sie in ein Modell importieren, könnte die Bestelldaten z. B. mit drei verknüpften Tabellen darstellen:  
   
 ### <a name="customers"></a>Customers  
   
@@ -55,13 +55,13 @@ ms.locfileid: "34045304"
   
 ### <a name="orders"></a>Orders  
   
-|[CustomerID]|OrderID|OrderDate|Product|Quantity|  
+|[CustomerID]|OrderID|OrderDate|Produkt|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|2010-01-07|Compact Digital|11|  
 |1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
- Wenn Sie diese Tabellen aus derselben Datenbank importieren, kann der Tabellenimport-Assistent die Beziehungen zwischen den Tabellen anhand der Spalten ermitteln, die in eckigen Klammern stehen, und diese Beziehungen im Modell-Designer reproduzieren. Weitere Informationen finden Sie unter " [Automatische Erkennung und Inferenz von Beziehungen](#detection) " in diesem Thema. Wenn Sie Tabellen aus mehreren Quellen importieren, können Sie manuell erstellen Beziehungen in beschriebenen [Erstellen einer Beziehung zwischen zwei Tabellen](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
+ Wenn Sie diese Tabellen aus derselben Datenbank importieren, kann der Tabellenimport-Assistent die Beziehungen zwischen den Tabellen anhand der Spalten ermitteln, die in eckigen Klammern stehen, und diese Beziehungen im Modell-Designer reproduzieren. Weitere Informationen finden Sie unter " [Automatische Erkennung und Inferenz von Beziehungen](#detection) " in diesem Thema. Wenn Sie Tabellen aus mehreren Quellen importieren, Sie können Beziehungen manuell erstellen wie in beschrieben [Erstellen einer Beziehung zwischen zwei Tabellen](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
   
 ### <a name="columns-and-keys"></a>Spalten und Schlüssel  
  Beziehungen basieren auf den Spalten in jeder Tabelle, die die gleichen Daten enthalten. Die Tabellen "Customers" und "Orders" können z. B. miteinander verknüpft werden, da beide eine Spalte enthalten, in der eine Kundennummer (CustomerID) gespeichert ist. Im Beispiel sind die Spaltennamen identisch, dies ist jedoch keine Voraussetzung. Eine Spalte kann beispielsweise den Namen "CustomerID" und die andere "CustomerNumber" besitzen, sofern alle Zeilen in der Tabelle "Orders" eine ID enthalten, die auch in der Tabelle "Customers" gespeichert ist.  
@@ -95,9 +95,9 @@ ms.locfileid: "34045304"
  Beim Erstellen von Beziehungen müssen im Modell-Designer mehrere Anforderungen beachtet werden:  
   
 ### <a name="single-active-relationship-between-tables"></a>Nur eine aktive Beziehung zwischen zwei Tabellen  
- Mehrere Beziehungen können zu mehrdeutigen Abhängigkeiten zwischen Tabellen führen. Um genaue Berechnungen zu erstellen, benötigen Sie einen einzelnen Pfad von einer Tabelle zur nächsten Tabelle. Daher kann es zwischen jedem Tabellenpaar nur eine aktive Beziehung geben. Beispiel: In AdventureWorks DW 2012 enthält die Tabelle DimDate eine Spalte DateKey, die mit drei verschiedenen Spalten in der Tabelle FactInternetSales verknüpft ist: OrderDate, DueDate und ShipDate. Wenn Sie versuchen, diese Tabellen zu importieren, wird die erste Beziehung erfolgreich erstellt, bei den darauf folgenden Beziehungen, die dieselbe Spalte verwenden, wird jedoch der folgende Fehler ausgelöst:  
+ Mehrere Beziehungen können zu mehrdeutigen Abhängigkeiten zwischen Tabellen führen. Um genaue Berechnungen zu erstellen, benötigen Sie einen einzelnen Pfad von einer Tabelle zur nächsten Tabelle. Daher kann es zwischen jedem Tabellenpaar nur eine aktive Beziehung geben. In AdventureWorks DW 2012 enthält beispielsweise die Tabelle DimDate eine Spalte DateKey, die mit drei verschiedenen Spalten in der Tabelle FactInternetSales verknüpft ist: OrderDate, DueDate und ShipDate. Wenn Sie versuchen, diese Tabellen zu importieren, wird die erste Beziehung erfolgreich erstellt, bei den darauf folgenden Beziehungen, die dieselbe Spalte verwenden, wird jedoch der folgende Fehler ausgelöst:  
   
- \* Beziehung:-Tabelle [Spalte 1] -> Tabelle [Spalte 2] - Status: Fehler - Ursache: eine Beziehung kann nicht erstellt werden, zwischen Tabellen \<Tabelle 1 > und \<Tabelle 2 >. Zwischen zwei Tabellen kann nur eine direkte oder indirekte Beziehung vorhanden sein.  
+ \* Beziehung: Table [Spalte 1] -> Table [Spalte 2] - Status: Fehler - Ursache: Eine Beziehung kann nicht erstellt werden, zwischen Tabellen \<Tabelle 1 > und \<in Tabelle 2 >. Zwischen zwei Tabellen kann nur eine direkte oder indirekte Beziehung vorhanden sein.  
   
  Wenn Sie zwei Tabellen mit mehreren Beziehungen zueinander haben, müssen Sie mehrere Kopien der Tabelle importieren, die die Suchspalte enthält, und dann eine Beziehung zwischen jedem Tabellenpaar erstellen.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34045304"
 ### <a name="one-relationship-for-each-source-column"></a>Eine Beziehung pro Quellspalte  
  Eine Quellspalte kann nicht an mehreren Beziehungen beteiligt sein. Wenn Sie eine Spalte bereits als Quellspalte in einer Beziehung verwendet haben, diese Spalte jedoch mit einer anderen zugehörigen Suchspalte in einer anderen Tabelle verknüpfen möchten, erstellen Sie eine Kopie der Spalte, und verwenden Sie diese Spalte für die neue Beziehung.  
   
- Mithilfe einer DAX-Formel in einer berechneten Spalte kann problemlos eine Kopie einer Spalte mit exakt gleichen Werten erstellt werden. Weitere Informationen finden Sie unter [erstellen Sie eine berechnete Spalte](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md).  
+ Mithilfe einer DAX-Formel in einer berechneten Spalte kann problemlos eine Kopie einer Spalte mit exakt gleichen Werten erstellt werden. Weitere Informationen finden Sie unter [Erstellen einer berechneten Spalte](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md).  
   
 ### <a name="unique-identifier-for-each-table"></a>Eindeutiger Bezeichner für jede Tabelle  
  Jede Tabelle muss eine einzelne Spalte enthalten, die jede Zeile in dieser Tabelle eindeutig identifiziert. Diese Spalte wird oft als Primärschlüssel bezeichnet.  
@@ -125,7 +125,7 @@ ms.locfileid: "34045304"
 ###  <a name="bkmk_many_to_many"></a> Many-to-Many relationships  
  Tabellarische Modelle unterstützen keine m:n-Beziehungen und im Modell-Designer können keine *Verknüpfungstabellen* hinzugefügt werden. Sie können jedoch DAX-Funktionen verwenden, um m:n-Beziehungen zu modellieren.  
   
- Sie können auch versuchen, mit einem bidirektionalen Kreuzfilter das gleiche Ziel zu erreichen. In einigen Fällen kann die Anforderung von m: n-Beziehung mittels kreuzfilter erfüllt werden, die einen Filterkontext über mehrere tabellenbeziehungen beibehalten. Weitere Informationen finden Sie unter [Bidirektionale Kreuzfilter für tabellarische Modelle in SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) .  
+ Sie können auch versuchen, mit einem bidirektionalen Kreuzfilter das gleiche Ziel zu erreichen. Manchmal kann die Anforderung von m: n Beziehung mittels kreuzfilter erfüllt werden, die einen Filterkontext über mehrere tabellenbeziehungen beibehalten werden. Weitere Informationen finden Sie unter [Bidirektionale Kreuzfilter für tabellarische Modelle in SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) .  
   
 ### <a name="self-joins-and-loops"></a>Selbstjoins und Schleifen  
  Selbstjoins sind in Tabellenmodelltabellen nicht zulässig. Ein Selbstjoin ist eine rekursive Beziehung einer Tabelle mit sich selbst. Selbstjoins werden oft verwendet, um Über-/Unterordnungshierarchien zu definieren. Sie könnten z.B. eine Employees-Tabelle mit sich selbst verknüpfen, um eine Hierarchie zu erzeugen, die die Managementkette in einem Unternehmen anzeigt.  

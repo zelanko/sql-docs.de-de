@@ -1,5 +1,5 @@
 ---
-title: Ändern die Customer-Dimension | Microsoft Docs
+title: Ändern der Customer-Dimension | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9f922dfcc073ce72834515b42691bef2e3c90d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d777d39bed047ac1807ebb2413eec3539d70428
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019047"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514708"
 ---
-# <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lektion 3-2-ändern die Customer-Dimension
+# <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lektion 3-2: Ändern der Customer-Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Es gibt viele verschiedene Möglichkeiten zum Verbessern der Benutzerfreundlichkeit und Funktionalität der Dimensionen in einem Cube. Mit den Schritten in diesem Thema ändern Sie die Customer-Dimension.  
@@ -32,11 +32,11 @@ Sie können Attributnamen auf der Registerkarte **Dimensionsstruktur** des Dimen
   
 3.  Ändern Sie die Namen der folgenden Attribute auf die gleiche Art:  
   
-    -   **English Education** -Attribut – ändern zu **Education**  
+    -   **English Education** -Attribut – ändern Sie in **Education**  
   
-    -   **English Occupation** -Attribut – ändern zu **Occupation**  
+    -   **English Occupation** -Attribut – ändern Sie in **"Occupation"**  
   
-    -   **State Province Name** -Attribut – ändern zu **State-Province**  
+    -   **State Province Name** -Attribut – ändern Sie in **State-Province**  
   
 4.  Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
@@ -106,7 +106,7 @@ Nachdem Sie eine benannte Berechnung in der Datenquellensicht erstellt haben, k�
   
 4.  Geben Sie im Eigenschaftenfeld **Name** **Full Name**ein.  
   
-5.  Klicken Sie unten in das Eigenschaftenfeld **NameColumn** und anschließend auf die Schaltfläche zum Durchsuchen (**…**), um das Dialogfeld **Namensspalte** zu öffnen.  
+5.  Klicken Sie in der **NameColumn** Eigenschaftenfeld am unteren Rand, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
   
 6.  Wählen Sie **FullName** weiter unten in der Liste **Quellspalte** aus, und klicken Sie auf **OK**.  
   
@@ -262,7 +262,7 @@ Nach dem Ändern von Attributen und Hierarchien müssen Sie die Änderungen bere
   
 7.  Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Ändern der Product-Dimension](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
   
 ## <a name="see-also"></a>Siehe auch  

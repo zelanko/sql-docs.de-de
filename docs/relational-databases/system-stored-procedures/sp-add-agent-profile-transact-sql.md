@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_add_agent_profile
@@ -17,12 +16,12 @@ ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b5c6b2c03ff9956a58bf7da8426c87b692d5f879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edb5fc6c24ce8e59c82b35ac10e6dddb67adeaf4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670434"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752152"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +46,13 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
  [ **@profile_id=** ] *profile_id*  
  Die dem neu eingefügten Profil zugeordnete ID. *Profile_id* ist **Int** und ist ein optionaler OUTPUT-Parameter. Wenn profile_id angegeben wird, wird der Wert auf die ID des neuen Profils festgelegt.  
   
- [  **@profile_name=** ] **"***Profile_name***"**  
+ [  **@profile_name=** ] **"**_Profile_name_**"**  
  Der Name des Profils. *profile_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [ **@agent_type=** ] **'***agent_type***'**  
+ [  **@agent_type=** ] **"**_Agent_type_**"**  
  Der Typ des Replikations-Agents. *Agent_type* ist **Int**und hat keinen Standardwert und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|Momentaufnahme-Agent|  
 |**2**|Protokolllese-Agent|  
@@ -66,7 +65,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
  **0** bezeichnet ein Systemprofil. **1** bezeichnet ein benutzerdefiniertes Profil. Mit dieser gespeicherten Prozedur können nur benutzerdefinierte Profile erstellt werden. aus diesem Grund ist der einzige gültige Wert **1**. Nur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt Systemprofile.  
   
- [  **@description=** ] **"***Beschreibung***"**  
+ [  **@description=** ] **"**_Beschreibung_**"**  
  Eine Beschreibung des Profils. *Beschreibung* ist **nvarchar(3000)**, hat keinen Standardwert.  
   
  [  **@default=** ] *Standard*  

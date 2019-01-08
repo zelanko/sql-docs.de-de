@@ -1,18 +1,20 @@
 ---
-title: Was sind SQL Server-2019 big Data-Cluster? | Microsoft-Dokumentation
+title: Was sind big Data-Cluster?
+titleSuffix: SQL Server 2019 big data clusters
 description: Informationen Sie zu SQL Server-2019 big Data-Clustern (Vorschau), die auf Kubernetes ausgeführt, und geben Sie Optionen für horizontales Skalieren für relationale und HDFS-Daten.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: e8cdfff0efe8164df7487b3ba2a5bee6cbf0b940
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 5a44fe9001b7a3bffb67cb3f213bed2ac1065970
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221706"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030044"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>Was sind SQL Server-2019 big Data-Cluster?
 
@@ -75,13 +77,13 @@ Kubernetes ist ein open-Source-containerorchestrator, die containerbereitstellun
 |--|--|
 | **Cluster** | Ein Kubernetes-Cluster ist eine Gruppe von Computern, die als Knoten bezeichnet. Ein Knoten den Cluster steuert und ist den Masterknoten festgelegt; die verbleibenden Knoten sind Worker-Knoten. Der Kubernetes-Master ist verantwortlich für die Verteilung von Arbeit zwischen den Workern sicherzustellen und für die Überwachung der Integrität des Clusters. |
 | **Node** | Ein Knoten wird die Anwendungen in Containern ausgeführt. Es kann entweder auf einem physischen Computer oder auf einem virtuellen Computer sein. Ein Kubernetes-Cluster kann es sich um eine Mischung aus physischen Computer und VM-Knoten enthalten. |
-| **Pod** | Ein Pod-Typ ist der atomare Bereitstellungseinheit von Kubernetes. Ein Pod-Typ ist eine logische Gruppe von einem oder mehreren Containern – und die zugehörigen Ressourcen – zum Ausführen einer Anwendung erforderlich sind. Jedem Pod auf einem Knoten ausgeführt wird; ein Knoten kann einem oder mehreren Pods ausgeführt. Der Kubernetes-Master wird der Knoten im Cluster automatisch Pods zugewiesen. |
+| **Pod** | Ein Pod-Typ ist der atomare Bereitstellungseinheit von Kubernetes. Ein Pod-Typ ist eine logische Gruppe von einem oder mehreren Containern – und die zugehörigen Ressourcen zum Ausführen einer Anwendung benötigt. Jedem Pod auf einem Knoten ausgeführt wird; ein Knoten kann einem oder mehreren Pods ausgeführt. Der Kubernetes-Master wird der Knoten im Cluster automatisch Pods zugewiesen. |
 
 In SQL Server-big Data-Cluster ist Kubernetes verantwortlich für den Status der SQL Server-big Data-Cluster. Kubernetes erstellt und konfiguriert die Clusterknoten, weist der Pods zu Knoten und überwacht die Integrität des Clusters.
 
 ### <a name="big-data-clusters-architecture"></a>Big Data-Cluster-Architektur
 
-Knoten im Cluster werden in drei logische Ebenen angeordnet: die Steuerungsebene, die Compute-Bereich und die Datenebene. Jede Ebene hat verschiedene Aufgaben im Cluster. Alle Kubernetes-Knoten in einer SQL Server-big Data-Cluster hostet Pods für Komponenten, der mindestens eine Ebene.
+Knoten im Cluster werden in drei logische Ebenen angeordnet: die Steuerungsebene, die Compute-Ebene und die Datenebene. Jede Ebene hat verschiedene Aufgaben im Cluster. Alle Kubernetes-Knoten in einer SQL Server-big Data-Cluster hostet Pods für Komponenten, der mindestens eine Ebene.
 
 ![Übersicht über die Architektur](media/big-data-cluster-overview/architecture-diagram-planes.png)
 
@@ -91,7 +93,7 @@ Die Steuerungsebene ermöglicht eine Verwaltung und Sicherheit für den Cluster.
 
 ### <a id="computeplane"></a> Compute-Ebene
 
-Die Compute-Ebene enthält die Compute-Ressourcen für den Cluster. Knoten mit SQL Server auf Linux-Pods enthält. Die Pods in der Compute-Ebene sind unterteilt in *computepools* für bestimmte Verarbeitungsaufgaben. Ein Compute-Pool kann als eine [PolyBase](../relational-databases/polybase/polybase-guide.md) Erweiterungsgruppe für verteilte Abfragen in verschiedenen Datenquellen – z. B. HDFS, Oracle, MongoDB oder Teradata.
+Die Compute-Ebene enthält die Compute-Ressourcen für den Cluster. Knoten mit SQL Server auf Linux-Pods enthält. Die Pods in der Compute-Ebene sind unterteilt in *computepools* für bestimmte Verarbeitungsaufgaben. Ein Compute-Pool kann als eine [PolyBase](../relational-databases/polybase/polybase-guide.md) Erweiterungsgruppe für verteilte Abfragen über verschiedene Quellen wie z. wie HDFS, Oracle, MongoDB oder Teradata.
 
 ### <a id="dataplane"></a> Datenebene
 

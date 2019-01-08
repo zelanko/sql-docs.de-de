@@ -20,16 +20,16 @@ ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc2ab4b2e97b9e1a83e0b00404010195b08f0dc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ab7046e036a6f50f8009a481f92345d7ce12aea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654927"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502551"
 ---
 # <a name="sqlrowcount-function"></a>SQLRowCount-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
   
  **Zusammenfassung**  
  **SQLRowCount** gibt die Anzahl der von betroffenen Zeilen eine **UPDATE**, **einfügen**, oder **löschen** Anweisung; eine SQL_ADD, SQL_UPDATE_BY_BOOKMARK oder SQL_ Vorgang DELETE_BY_BOOKMARK **SQLBulkOperations**; oder einen Vorgang SQL_UPDATE oder SQL_DELETE in **SQLSetPos**.  
@@ -48,7 +48,7 @@ SQLRETURN SQLRowCount(
  [Eingabe] Anweisungshandle.  
   
  *RowCountPtr*  
- [Ausgabe] Verweist auf einen Puffer, in die die Zeilenanzahl zurückgegeben werden sollen. Für **UPDATE**, **einfügen**, und **löschen** -Anweisungen für die Vorgänge SQL_ADD SQL_UPDATE_BY_BOOKMARK und SQL_DELETE_BY_BOOKMARK in  **SQLBulkOperations**, und für die SQL_UPDATE oder SQL_DELETE Vorgänge im **SQLSetPos**, zurückgegebene Wert in **RowCountPtr* ist entweder die Anzahl der von betroffenen Zeilen die Anforderung oder – 1, wenn die Anzahl der betroffenen Zeilen nicht verfügbar ist.  
+ [Ausgabe] Verweist auf einen Puffer, in die die Zeilenanzahl zurückgegeben werden sollen. Für **UPDATE**, **einfügen**, und **löschen** -Anweisungen für die Vorgänge SQL_ADD SQL_UPDATE_BY_BOOKMARK und SQL_DELETE_BY_BOOKMARK in  **SQLBulkOperations**, und für die SQL_UPDATE oder SQL_DELETE Vorgänge im **SQLSetPos**, zurückgegebene Wert in **RowCountPtr* ist entweder die Anzahl der von betroffenen Zeilen die Anforderung oder -1, wenn die Anzahl der betroffenen Zeilen nicht verfügbar ist.  
   
  Wenn **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, **SQLSetPos oder SQLMoreResults** aufgerufen wird, wird die SQL_DIAG_ROW_COUNT -Feld der Struktur diagnostische Daten auf die Anzahl der Zeilen festgelegt ist, und die Anzahl der Zeilen in eine Möglichkeit der Implementierung abhängige zwischengespeichert ist. **SQLRowCount** gibt der Wert für die zwischengespeicherten Zeile. Der Wert für die zwischengespeicherten Zeile ist gültig, bis das Anweisungshandle wieder in den vorbereiteten oder zugeordneten Zustand festgelegt wird, wird die Anweisung erneut ausgeführt, oder **SQLCloseCursor** aufgerufen wird. Beachten Sie, dass eine Funktion aufgerufen wurde, da das Feld SQL_DIAG_ROW_COUNT festgelegt wurde, der Wert von zurückgegeben **SQLRowCount** möglicherweise verschiedene, von dem Wert in das Feld "SQL_DIAG_ROW_COUNT" auf das Feld "SQL_DIAG_ROW_COUNT" zurückgesetzt wird 0 von einem beliebigen Funktionsaufruf.  
   

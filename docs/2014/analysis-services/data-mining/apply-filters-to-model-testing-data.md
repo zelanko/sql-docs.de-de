@@ -15,12 +15,12 @@ ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eeb95d0fb8d1e89fe5c2dc66362641c96f2230af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 967de27eb9bc1f191b138e8b5962b04c145fe191
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114438"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510746"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Anwenden von Filtern zum Modellieren von Testdaten
   Wenn Sie eine externe Datenquelle angeben, die beim Testen eines verwendet werden soll, können Sie optional einen Filter anwenden, um die Eingabedaten einzuschränken. Sie möchten das Modell zum Beispiel speziell für Vorhersagen zu Kunden in einem bestimmten Einkommensbereich testen.  
@@ -47,7 +47,7 @@ ms.locfileid: "48114438"
   
  Um zu bestimmen, ob ein Modell einen vordefinierten Filter enthält, der sich auf die Ergebnisse auswirken könnte, können Sie nach der **Filter** -Eigenschaft im **Eigenschaftenbereich** suchen, oder Sie können das Modell abfragen, indem Sie die Data Mining-Schemarowsets verwenden. Zum Beispiel wird bei der folgenden Abfrage der Filtertext für das angegebene Modell zurückgegeben:  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  Wenn Sie den Filter aus einem vorhandenen Miningmodell entfernen oder die Filterbedingungen ändern möchten, müssen Sie das Miningmodell erneut verarbeiten.  
@@ -62,7 +62,7 @@ ms.locfileid: "48114438"
   
 3.  Wählen Sie auf der Registerkarte **Eingabeauswahl** unter **Dataset auswählen, das für das Genauigkeitsdiagramm verwendet werden soll**die Option **Anderes Dataset verwenden**.  
   
-4.  Klicken Sie auf die Durchsuchen-Schaltfläche **(...)** , um ein Dialogfeld zu öffnen, und wählen Sie das externe Dataset aus.  
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**  ein Dialogfeld geöffnet, und wählen das externe DataSet.  
   
 5.  Wählen Sie die Falltabelle aus, und fügen Sie ggf. eine geschachtelte Tabelle hinzu. Ordnen Sie Spalten im Modell nach Bedarf Spalten im externen Dataset zu. Schließen Sie das Dialogfeld **Spaltenzuordnung angeben** , um die Quelltabellendefinition zu speichern.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48114438"
   
 9. Klicken Sie auf das Textfeld **Und/Oder** , und wählen Sie einen logischen Operator aus, um zu definieren, wie mehrere Bedingungen kombiniert werden.  
   
-10. Optional können Sie auf die Schaltfläche zum Durchsuchen **(…)** rechts neben dem Textfeld **Wert** klicken, um das Dialogfeld **Filter** zu öffnen und Bedingungen für die geschachtelte Tabelle oder die einzelnen Spalten der Falltabelle festzulegen.  
+10. Klicken Sie optional auf die Schaltfläche zum Durchsuchen **(...)**  am rechten Rand der **Wert** Textfeld zum Öffnen der **Filter** Dialogfeld und legen Sie Bedingungen für die geschachtelte Tabelle oder für die einzelnen Tabellenspalten für Groß-/Kleinschreibung.  
   
 11. Überprüfen Sie, dass die fertig gestellten Filterbedingungen richtig sind, indem Sie den Text im Bereich **Ausdruck** anzeigen.  
   
@@ -93,6 +93,6 @@ ms.locfileid: "48114438"
 ## <a name="see-also"></a>Siehe auch  
  [Auswählen und Zuordnen von Modelltestdaten](choose-and-map-model-testing-data.md)   
  [Verwenden von geschachtelten Tabellendaten als Eingabe für ein Genauigkeitsdiagramm](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
- [Auswählen eines Genauigkeitsdiagrammtyps und Festlegen von Diagrammoptionen](choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [Auswählen eines Genauigkeitsdiagrammtyps Festlegen von Diagrammoptionen](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

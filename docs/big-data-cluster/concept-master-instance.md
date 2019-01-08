@@ -1,22 +1,24 @@
 ---
-title: Was ist, dass die SQL Server-big Data-Cluster master-Instanz? | Microsoft-Dokumentation
-description: Dieser Artikel beschreibt die Masterinstanz in einer SQL Server-2019 big Data-Cluster.
+title: Was ist der Masterinstanz?
+titleSuffix: SQL Server 2019 big data clusters
+description: Dieser Artikel beschreibt die SQL Server-Masterinstanz in einer SQL Server-2019 big Data-Cluster (Vorschau).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 50955f8c781dcf370aa3f48ed72a0ed993854655
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 2ea25aeb5c7c39c5b00e545bc39974073132b1b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221596"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208169"
 ---
-# <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>Was ist, dass großen SQL Server-Daten cluster Masterinstanz?
+# <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>Was ist die Masterinstanz in einer SQL Server-2019 big Data-Cluster?
 
-Dieser Artikel beschreibt die Rolle der *SQL Server-Masterinstanz* in einem SQL Server-2019 big Ata-Cluster. Die master-Instanz ist eine SQL Server-Instanz, die in einer SQL Server-big Data-Cluster ausgeführt [Steuerungsebene](big-data-cluster-overview.md#controlplane).
+Dieser Artikel beschreibt die Rolle der *SQL Server-Masterinstanz* in einer SQL Server-2019 big Data-Cluster. Die master-Instanz ist eine SQL Server-Instanz, die in einer SQL Server-big Data-Cluster ausgeführt [Steuerungsebene](big-data-cluster-overview.md#controlplane).
 
 Die SQL Server-Masterinstanz bietet die folgenden Funktionen:
 
@@ -26,7 +28,7 @@ Master SQL Server-Instanz wird ein extern zugänglichen TDS-Endpunkt für den Cl
 
 ## <a name="scale-out-query-management"></a>Verwaltung von hochskalierungsabfragen
 
-Master SQL Server-Instanz enthält, die horizontale Skalierung-Abfrage-Engine, die verwendet wird, um Abfragen zu SQL Server-Instanzen auf Knoten im Verteilen der [compute Pool](concept-compute-pool.md). Die horizontale Skalierung-Abfrage-Engine bietet auch Zugriff über Transact-SQL auf alle Hive-Tabellen im Cluster ohne zusätzliche Konfiguration. (Unterstützung für Hive-Tabellen ist nicht in der CTP-Version 2.1)
+Master SQL Server-Instanz enthält, die horizontale Skalierung-Abfrage-Engine, die verwendet wird, um Abfragen zu SQL Server-Instanzen auf Knoten im Verteilen der [compute Pool](concept-compute-pool.md). Die horizontale Skalierung-Abfrage-Engine bietet auch Zugriff über Transact-SQL auf alle Hive-Tabellen im Cluster ohne zusätzliche Konfiguration. (Unterstützung für Hive-Tabellen ist nicht in der CTP-Version 2.2)
 
 ## <a name="metadata-and-user-databases"></a>Metadaten und Benutzerdatenbanken
 
@@ -43,7 +45,7 @@ Sie können auch Ihre eigenen Benutzerdatenbanken master SQL Server-Instanz hinz
 
 SQL Server-Machine learning-Dienste ist ein Add-On-Feature der Datenbank-Engine, die zum Ausführen von Java, R und Python-Code in SQL Server verwendet. Dieses Feature basiert auf dem SQL Server Extensibility Framework, die isoliert von externer Prozessen von der Kern-Engine-Prozesse, aber die vollständige Integration mit relationalen Daten als gespeicherte Prozeduren, wie T-SQL-Skript, R oder Python-Anweisungen enthält, oder als Java, R oder T-SQL mit Python-Code.
 
-Als Teil einer SQL Server-big Data-Cluster stehen Machine Learning-Dienste für die master Serevr für SQL-Instanz in der Standardeinstellung. Dies bedeutet, dass nach der Ausführung des externen Skripts für die master SQL Server-Instanz aktiviert ist, es ist möglich, Java, R- und Python-Skripts, die mithilfe von Sp_execute_external_script auszuführen ist.
+Als Teil einer SQL Server-big Data-Cluster stehen Machine Learning-Dienste für die master SQL Server-Instanz in der Standardeinstellung. Dies bedeutet, dass nach der Ausführung des externen Skripts für die master SQL Server-Instanz aktiviert ist, es ist möglich, Java, R- und Python-Skripts, die mithilfe von Sp_execute_external_script auszuführen ist.
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Vorteile von Machine Learning-Dienste in einer big Data-cluster
 

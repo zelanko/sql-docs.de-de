@@ -11,12 +11,12 @@ ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f61c87bdb1790b254ca024132d7ed1f90aa5e985
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3e0cdae7e9f57a7bfd62a3a0e947c43ced0b8c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164270"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530657"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>PowerPivot-Konfiguration mit Windows PowerShell
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthält Windows PowerShell-Cmdlets, mit denen Sie eine Installation von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]konfigurieren können. Für die vollständige Konfiguration einer Installation mit PowerShell ist die Verwendung von SharePoint-Cmdlets und PowerPivot für SharePoint-Cmdlets erforderlich. Ein Großteil der Konfiguration kann mithilfe eines der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Tools ausgeführt werden. Weitere Informationen zu den Tools finden Sie unter [PowerPivot-Konfigurationstools](power-pivot-configuration-tools.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "48164270"
   
     -   17 Cmdlets mit SQL Server 2012 Analysis Services-Server, der im SharePoint-Modus konfiguriert ist, und SharePoint 2010.  
   
-     Wenn keine Befehle in der Liste zurückgegeben werden oder eine ähnliche Fehlermeldung wie "`get-help could not find *powerpivot* in a help file in this session.`" angezeigt wird, finden Sie im nächsten Abschnitt dieses Themas Anweisungen dazu, wie die PowerPivot-Cmdlets auf dem Server aktiviert werden.  
+     Wenn keine Befehle in der Liste zurückgegeben werden, oder Sie eine Fehlermeldung ähnlich wie sehen "`get-help could not find *powerpivot* in a help file in this session.`", finden Sie im nächsten Abschnitt dieses Themas Anweisungen zum Aktivieren der PowerPivot-Cmdlets auf dem Server.  
   
      Alle Cmdlets verfügen über eine Onlinehilfe. Im folgenden Beispiel wird erläutert, wie die Onlinehilfe für das `New-PowerPivotServiceApplication`-Cmdlet angezeigt wird:  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48164270"
 2.  Führen Sie das erste Cmdlet aus:  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      Das Cmdlet gibt den Namen der Lösung, deren Lösungs-ID und "Deployed=False" zurück. Im nächsten Schritt wird die Lösung bereitgestellt.  
@@ -76,7 +76,7 @@ ms.locfileid: "48164270"
 3.  Führen Sie das zweite Cmdlet aus, um die Lösung bereitzustellen:  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
 4.  Schließen Sie das Fenster. Öffnen Sie es erneut mit der Option **Als Administrator ausführen** .  

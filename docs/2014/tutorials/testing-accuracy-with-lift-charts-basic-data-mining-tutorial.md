@@ -11,12 +11,12 @@ ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01142090276214f28e523dfc1c969747d5de60a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5311f08e9ec6b31fd0eabc1395baa31319eff64
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222240"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412207"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Überprüfen der Genauigkeit mit Prognosegütediagrammen (Lernprogramm zu Data Mining-Grundlagen)
   Auf der **Mininggenauigkeitsdiagramm** Registerkarte des Data Mining-Designer können Sie berechnen, wie gut jeder Ihrer Modelle Vorhersagen trifft und die Ergebnisse der einzelnen Modelle direkt mit den Ergebnissen der anderen Modelle vergleichen. Diese Methode des Vergleichs wird als bezeichnet ein *prognosegütediagramm*. In der Regel wird die Vorhersagegenauigkeit eines Miningmodells mit dem Lift oder der Klassifizierungsgenauigkeit gemessen. In diesem Lernprogramm wird nur das Prognosegütediagramm verwendet.  
@@ -45,9 +45,9 @@ ms.locfileid: "48222240"
   
 -   Welches vorhersagbare Attribut soll gemessen werden? Einige Modelle verfügen u. U. über mehrere Ziele, allerdings kann mit jedem Diagramm jeweils nur ein Ergebnis gemessen werden.  
   
-     Verwenden Sie eine Spalte als die **Name der vorhersagbaren Spalte** die Spalten müssen in einem Genauigkeitsdiagramm, den Verwendungstyp des `Predict` oder `Predict Only`. Darüber hinaus der Inhaltstyp der Zielspalte muss entweder `Discrete` oder `Discretized`. Dies bedeutet, dass die Genauigkeit nicht unter Verwendung kontinuierlicher numerischer Ergebnisse mit dem Prognosegütediagramm gemessen werden kann.  
+     Verwenden Sie eine Spalte als die **Name der vorhersagbaren Spalte** die Spalten müssen in einem Genauigkeitsdiagramm, den Verwendungstyp des `Predict` oder `Predict Only`. Darüber hinaus muss der Inhaltstyp der Zielspalte entweder `Discrete` oder `Discretized` lauten. Dies bedeutet, dass die Genauigkeit nicht unter Verwendung kontinuierlicher numerischer Ergebnisse mit dem Prognosegütediagramm gemessen werden kann.  
   
--   Möchten Sie die allgemeine Genauigkeit des Modells oder dessen Genauigkeit bei der Vorhersage eines bestimmten Werts messen (z. B. [Bike Buyer] = "Yes")?  
+-   Möchten Sie die allgemeine Genauigkeit des Modells und seine Genauigkeit der Vorhersage eines bestimmten Werts messen (z. B. [Bike Buyer] = "Yes")  
   
 #### <a name="to-generate-the-lift-chart"></a>So erstellen Sie das Prognosegütediagramm  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48222240"
  [Testen eines gefilterten Modells &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Prognosegütediagramm &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [Prognosegütediagramm &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [Prognosegütediagrammtyp (Registerkarte) &#40;Mininggenauigkeitsdiagrammsicht&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)  
   
   

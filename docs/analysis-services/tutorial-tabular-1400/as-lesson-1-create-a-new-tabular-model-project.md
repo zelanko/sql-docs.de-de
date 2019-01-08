@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services-Tutorial – Lektion 1: erstellen ein neuen tabellarischen modellprojekts | Microsoft-Dokumentation'
+title: 'Analysis Services-Tutorial – Lektion 1: Erstellen ein neuen tabellarischen modellprojekts | Microsoft-Dokumentation'
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df9595071c60680db94a18dc373ce24f1f9b4ea5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9135df30afcec9bdae307d9b12aec6810baa98ec
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43108669"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417231"
 ---
 # <a name="create-a-tabular-model-project"></a>Erstellen Sie ein Projekt für tabellarische Modelle
 

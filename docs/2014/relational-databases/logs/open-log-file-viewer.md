@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, opening
@@ -13,12 +12,12 @@ ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84f624ce603a852bed3527b45c942f1ffa00fdbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170242"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818119"
 ---
 # <a name="open-log-file-viewer"></a>Öffnen des Protokolldatei-Viewers
   Sie können mithilfe des Protokolldatei-Viewers in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auf Informationen zu Fehlern und Ereignissen zugreifen, die in folgenden Protokollen aufgezeichnet wurden:  
@@ -46,7 +45,7 @@ ms.locfileid: "48170242"
   
  Zum Zugreifen auf Protokolldateien für Offlineinstanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen Sie über Lesezugriff für den WMI-Namespace **Root\Microsoft\SqlServer\ComputerManagement10** und den Ordner mit den Protokolldateien verfügen. Weitere Informationen finden Sie im Abschnitt „Sicherheit“ des Themas [Anzeigen von Offlineprotokolldateien](view-offline-log-files.md).  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicherheit  
  Erfordert die Mitgliedschaft in der festen Serverrolle securityadmin.  
   
 ### <a name="view-log-files"></a>Anzeigen von Protokolldateien  

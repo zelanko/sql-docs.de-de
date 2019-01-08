@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef82f1aafddd60eeaeae3abd7ec65b51e209670f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050206"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801292"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Verwalten von Ereignissitzungen im Objekt-Explorer
   In diesem Thema werden die Aktionen erläutert, die Sie im **Objekt-Explorer** ausführen können und die sich auf erweiterte Ereignisse auswirken:  
@@ -83,7 +82,7 @@ STATE = STOP
 ## <a name="import-an-extended-events-session-template"></a>Importieren einer Sitzungsvorlage für erweiterte Ereignisse  
  Sie können mit dem **Objekt-Explorer**eine Vorlage für eine Sitzung für erweiterte Ereignisse importieren. Dies ist beispielsweise hilfreich, um eine Sitzung aus einer Vorlage zu erstellen, die aus einer anderen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]exportiert wurde.  
   
- Um eine Sitzung für erweiterte Ereignisse importieren zu können, benötigen Sie die erforderlichen `ALTER ANY EVENT SESSION` Berechtigungen.  
+ Zum Importieren einer Sitzung für erweiterte Ereignisse müssen Sie über die erforderlichen `ALTER ANY EVENT SESSION`-Berechtigungen verfügen.  
   
  Bevor Sie eine Vorlagendatei importieren, stellen Sie sicher, dass die Datei aus einer vertrauenswürdigen Quelle stammt. Die Vorlagendateien sollten an einem Speicherort gespeichert werden, bei dem das NTFS-Dateisystem verwendet und der Zugriff auf Benutzer eingeschränkt wird, die zum Anzeigen der Informationen autorisiert sind.  
   
@@ -97,7 +96,7 @@ STATE = STOP
   
 4.  Erweitern Sie das Dropdownfeld **Vorlage** .  
   
-5.  Klicken Sie auf **\<Aus Datei…>Öffnen** und suchen Sie nach der Sitzung (XML-Datei), die Sie importieren möchten.  
+5.  Klicken Sie auf **\<Aus Datei…> Öffnen**, und suchen Sie nach der Sitzung (XML-Datei), die Sie importieren möchten.  
   
  Die Sitzung wird unter dem Knoten **Sitzungen** angezeigt. Standardmäßig die Sitzung nicht gestartet.  
   

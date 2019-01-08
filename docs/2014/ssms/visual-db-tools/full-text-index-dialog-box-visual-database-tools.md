@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.fulltextindex
@@ -12,12 +12,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aac010a0dc1d9d6cd23b6ccdfbff5358455cddd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080430"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822744"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Volltextindex (Dialogfeld) (Visual Database Tools)
   Mit diesem Dialogfeld können Sie einen Volltextindex für Volltextsuchen in textbasierten Spalten von Datenbanktabellen erstellen. Da ein Volltextindex auf einem regulären Index basiert, müssen Sie zuerst einen regulären Index erstellen. Der reguläre Index muss für eine einzelne Nicht-NULL-Spalte erstellt werden. Am besten wählen Sie eine Spalte mit kleinen Werten anstatt einer Spalte mit großen Werten aus.  
@@ -28,7 +28,7 @@ ms.locfileid: "48080430"
 > [!NOTE]  
 >  Eine Volltextindex-Funktionalität ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Ausgewählter Volltextindex**  
  Listet vorhandene Volltextindizes auf. Wählen Sie einen Index aus, um seine Eigenschaften im Datenblatt rechts anzuzeigen. Wenn die Liste leer ist, wurden bisher keine Volltextbeziehungen für die Tabelle definiert.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48080430"
  Wenn die Kategorie erweitert ist, werden **Spalten** und **Volltextkatalogname**angezeigt.  
   
  **Spalten**  
- Zeigt eine durch Trennzeichen getrennte Liste mit den Namen volltextdurchsuchbarer Spalten an. Um die Liste vollständig anzuzeigen, klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**) links neben dem Eigenschaftenfeld.  
+ Zeigt eine durch Trennzeichen getrennte Liste mit den Namen volltextdurchsuchbarer Spalten an. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**) links neben dem Eigenschaftenfeld, um die Liste vollständig anzuzeigen.  
   
  **Full-Text Catalog Name**  
  Zeigt den Namen des Volltextkatalogs an, für den dieser Volltextindex gespeichert wird. Um den Index für einen anderen Katalog zu speichern, klicken Sie auf den Katalognamen, und wählen Sie aus der Dropdownliste den gewünschten Katalog aus.  
@@ -63,7 +63,7 @@ ms.locfileid: "48080430"
  Gibt an, ob Sie zurzeit mit diesem Volltextindex eine Volltextsuche ausführen können.  
   
  **Einstellung für das Nachverfolgen von Änderungen**  
- Beschreibt den Status der Änderungsnachverfolgung für den Index: Manuell, Automatisch oder Aus.  
+ Beschreibt den Status der änderungsnachverfolgung für diesen Index an: Manuell, automatisch oder aus.  
   
  **Die Durchforstung ist abgeschlossen**  
  Zeigt an, ob die zuletzt gestartete Durchforstung abgeschlossen ist. Wenn der Wert dieser Eigenschaft No ist, wird gerade eine Durchforstung ausgeführt.  
@@ -87,7 +87,7 @@ ms.locfileid: "48080430"
  Zeigt Datum und Zeit des nächsten Durchforstungsstarts an.  
   
  **Typ der aktuellen oder letzten Durchforstung**  
- Zeigt den Typ der aktuellen oder letzten Durchforstung an: Vollständig, Inkrementell, Aktualisieren oder Automatische Propagierung.  
+ Zeigt den Typ der aktuellen oder letzten Durchforstung an: Vollständig, inkrementell, aktualisieren oder Automatische Propagierung.  
   
  **Eindeutiger Indexname**  
  Zeigt eine Liste der Namen aller Spalten in dieser Datenbank an, die einen eindeutigen, einspaltigen Index haben. Diese Spalten können verwendet werden, um einen Volltextindex zu erstellen.  

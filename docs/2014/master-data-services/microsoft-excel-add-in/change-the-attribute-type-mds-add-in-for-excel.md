@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ce5905026d2a64df3180828e5ee2983f88a5aa06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f86645a542e4c215a3675d7a0cbf9cfbd45cc2e9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056080"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783942"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Ändern des Attributtyps (MDS-Add-in für Excel)
   Im [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]können Administratoren den Attributtyp ändern, wenn der Datentyp oder die Anzahl zulässiger Zeichen falsch ist.  
@@ -31,7 +30,7 @@ ms.locfileid: "48056080"
   
 -   Sie müssen über die Berechtigung verfügen, auf die Funktionsbereiche **Systemverwaltung** und **Explorer** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../administrators-master-data-services.md)zuzugreifen.  
   
 -   Modell, Entität und Attribut müssen vorhanden sein.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48056080"
   
 -   Der Datentyp des Attributs wird geändert.  
   
--   Es wird eine Kopie des Attributs mit dem Suffix _old generiert, die keinen Wert enthält. Dies wird als bezeichnet ein **veraltet** Attribut.  
+-   Generieren Sie eine Kopie des Attributs mit dem Suffix "_old", die nicht über einen beliebigen Wert enthält. Dies wird als bezeichnet ein **veraltet** Attribut.  
   
  Alle vorhandenen Abhängigkeiten vom ursprünglichen Attribut verweisen jedoch auf das veraltete Attribut und nicht auf das geänderte.  
   

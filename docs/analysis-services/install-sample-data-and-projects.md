@@ -1,5 +1,5 @@
 ---
-title: Installieren von Beispieldaten und-Projekten | Microsoft-Dokumentation
+title: Installieren von Analysis Services-Beispieldaten und-Projekten | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,30 +9,30 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0ec266a98e3a27dd277ccd9f790ae73d1793ec38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: df7311aad9c356376fffafc8a4882af8e29e746b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057968"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072727"
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>Installieren von Beispieldaten und mehrdimensionale Projekte 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
 
 Verwenden Sie die Anweisungen und Links in diesem Artikel, um die in der Analysis Services-Tutorials verwendeten Daten- und Projektdateien-Dateien zu installieren. 
   
-## <a name="step-1-install-prerequisites"></a>Schritt 1: Installieren der Voraussetzungen 
+## <a name="step-1-install-prerequisites"></a>Schritt 1: Installieren der erforderlichen Komponenten 
 In den Lektionen dieses Lernprogramms wird vorausgesetzt, dass Sie folgende Software installiert haben. Sie können alle Features auf einem einzelnen Computer installieren. Um diese Funktionen zu installieren, führen Sie SQL Server-Setup aus, und wählen Sie auf der Seite Funktionsauswahl diese Funktionen aus.  
   
 -   SQL Server-Datenbank-Engine  
   
 -   SQL Server Analysis Services (SSAS) 
   
-    Analysis Services ist nur in der Evaluation, Enterprise, Business Intelligence und Standard Edition verfügbar. Mehrdimensionale Modelle werden in Azure Analysis Services nicht unterstützt.
+    Analysis Services ist in diesen Editionen nur zur Verfügung: Evaluation, Enterprise, Business Intelligence, Standard. Mehrdimensionale Modelle werden in Azure Analysis Services nicht unterstützt.
   
     Standardmäßig wird der Analysis Services 2016 und höher als tabellarische Instanz, die Sie überschreiben können, durch Auswählen von mehrdimensionalen Servermodus auf dem Server Configuration-Seite des Installations-Assistenten installiert.
   
-## <a name="step-2-download-and-install-developer-and-management-tools"></a>Schritt 2: Herunterladen Sie und installieren Sie, Entwickler und Verwaltungstools
+## <a name="step-2-download-and-install-developer-and-management-tools"></a>Schritt 2: Herunterladen Sie und installieren Sie die Entwickler und Verwaltungstools
 SQL Server Data Tools (SSDT) für Visual Studio ist heruntergeladen und getrennt von anderen SQL Server-Funktionen installiert. Der Designer und Projektvorlagen zum Erstellen von BI-Modelle und Berichte befinden sich im SSDT für Visual Studio 2015 oder als [Nuget-Pakete](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) für Visual Studio 2017.  
   
 [Laden Sie SQL Server Data Tools (SSDT) herunter](http://go.microsoft.com/fwlink/?LinkID=827542).   
@@ -45,7 +45,7 @@ Sie können Excel optional installieren, um mehrdimensionale Daten zu durchsuche
   
 Alternativ können Sie Daten mithilfe des integrierten MDX-Abfrage-Designers durchsuchen, der in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]integriert ist. Der Abfrage-Designer gibt die gleichen Daten zurück, jedoch werden die Daten als flaches Rowset dargestellt.  
   
-## <a name="step-3-install-databases"></a>Schritt 3: Installieren von Datenbanken  
+## <a name="step-3-install-databases"></a>Schritt 3: Installieren von Datenbanken  
 In einem mehrdimensionalen Analysis Services-Modell werden Transaktionsdaten verwendet, die Sie aus einem Managementsystem für relationale Datenbanken importieren. Für die Zwecke dieses Tutorials verwenden Sie die folgende relationale Datenbank als Datenquelle aus.  
   
 -   **AdventureWorksDW2012 oder höher** – Dies ist ein relationales Datawarehouse, die in einer-Engine-Datenbankmodulinstanz ausgeführt wird. Es enthält die ursprünglichen Daten, die von der Analysis Services-Datenbanken und -Projekte, die Sie erstellen und bereitstellen, die im Lernprogramm verwendet werden. Dieses Tutorial setzt voraus, AdventureWorksDW2012 kann, jedoch höher funktionieren.
@@ -80,7 +80,7 @@ In den Beispielprojekten werden Einstellungen für den Datenquellenidentitätswe
   
 6.  Aktivieren Sie das Kontrollkästchen neben den **"AdventureWorksDW"** Datenbank. Zu den Mitgliedern der Rolle sollten automatisch **db_datareader** und **public**gehören. Klicken Sie auf **OK** , um die Standardeinstellungen zu übernehmen.  
   
-## <a name="step-5-install-projects"></a>Schritt 5: Installieren Sie-Projekte  
+## <a name="step-5-install-projects"></a>Schritt 5: Installieren von Projekten  
 
 Das Lernprogramm enthält Beispielprojekte, damit Sie Ihre Ergebnisse mit einem fertigen Projekt vergleichen oder eine fortgeschrittenere Lektion beginnen können.  
   
@@ -88,7 +88,7 @@ Das Lernprogramm enthält Beispielprojekte, damit Sie Ihre Ergebnisse mit einem 
   
     Die Lernprogrammprojekte funktionieren für [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] und höher.  
   
-2.  Verschieben Sie die ZIP-Datei in einen Ordner direkt unterhalb des Stammlaufwerks (beispielsweise C:\Tutorial). Dieser Schritt bewirkt, dass weniger Fehler der Art "Pfad zu lang" auftreten; diese werden manchmal ausgegeben, wenn Sie versuchen, die Dateien in den Ordner Downloads zu entzippen.  
+2.  Verschieben Sie die ZIP-Datei in einen Ordner direkt unterhalb des Stammlaufwerks (beispielsweise C:\Tutorial). Dadurch verringert, den "Pfad zu lang"-Fehler, der manchmal ausgegeben, wenn Sie versuchen, die Dateien im Ordner Downloads zu Entzippen.  
   
 3.  Entzippen der Beispielprojekte: Klicken Sie mit der rechten Maustaste auf die Datei, und wählen Sie **Alle extrahieren**aus. Nach dem Entpacken der Dateien, müssen Sie die Ordner Lektion 1, 2, 3, 5, 6, 7, 8, 9, 10 abschließen und Lesson 4 Start. 
   

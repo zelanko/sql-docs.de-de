@@ -1,22 +1,21 @@
 ---
-title: 'Tutorial: SQL Server-Datendateien im Windows Azure-Speicherdienst | Microsoft-Dokumentation'
+title: 'Lernprogramm: SQL Server-Datendateien im Windows Azure-Speicherdienst | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b30ee8f664f88f0fcd59a3801c1aa612926d1dad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3d33209cd6dfe261a5deced345adac70b46961f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095480"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810972"
 ---
 # <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>Lernprogramm: SQL Server-Datendateien im Windows Azure-Speicher
   Willkommen beim Lernprogramm für SQL Server-Datendateien im Windows Azure-Speicher. Dieses Lernprogramm hilft Ihnen, zu verstehen, wie Sie SQL Server-Datendateien direkt im Windows Azure-BLOB-Speicherdienst speichern.  

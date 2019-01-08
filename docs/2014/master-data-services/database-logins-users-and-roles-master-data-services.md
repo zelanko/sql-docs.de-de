@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], database roles
@@ -18,12 +17,12 @@ ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f7fd2e31b87725419f7b9c9bf6b5e76249e9def1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b7430a12c64ab669182ab2877bb6620b42b2f48
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208990"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795414"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Datenbankanmeldenamen, -benutzer und -rollen (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] enthält Anmeldenamen, Benutzer und Rollen, die automatisch auf der [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Instanz installiert werden, die die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank hostet. Diese Anmeldenamen, Benutzer und Rollen sollten nicht geändert werden.  
@@ -40,7 +39,7 @@ ms.locfileid: "48208990"
 |Benutzer|Description|  
 |----------|-----------------|  
 |`mds_clr_user`|Wird nicht verwendet.<br /><br /> Wird mds_dlp_login zugeordnet.|  
-|`mds_email_user`|Wird für Benachrichtigungen verwendet.<br /><br /> Wird mds_email_login zugeordnet.<br /><br /> Ist ein Element der Rolle DatabaseMailUserRole.|  
+|`mds_email_user`|Wird für Benachrichtigungen verwendet.<br /><br /> Wird mds_email_login zugeordnet.<br /><br /> Ist ein Mitglied der Rolle: DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services-Datenbankbenutzer  
   
@@ -52,13 +51,13 @@ ms.locfileid: "48208990"
   
 ## <a name="master-data-services-database-role"></a>Master Data Services-Datenbankrolle  
   
-|-Rolle|Description|  
+|Rolle|Description|  
 |----------|-----------------|  
 |`mds_exec`|Diese Rolle enthält das Konto, das Sie in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] festlegen, wenn Sie eine [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung erstellen und ein Konto für den Anwendungspool festlegen. Die Rolle mds_exec verfügt über die nachfolgenden Berechtigungen.<br /><br /> **EXECUTE** -Berechtigung für alle Schemas.<br /><br /> **ALTER**, **einfügen**, und **wählen** -Berechtigung für diese Tabellen:<br />mdm.tblStgMember<br />mdm.tblStgMemberAttribute<br />mdm.tbleStgRelationship<br /><br /> **Wählen Sie** -Berechtigung für diese Tabellen:<br />mdm.tblUser<br />mdm.tblUserGroup<br />mdm.tblUserPreference<br /><br /> **Wählen Sie** Berechtigung für die folgenden Sichten:<br />mdm.viw_SYSTEM_SECURITY_NAVIGATION<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br />mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>Schemas  
   
-|-Rolle|Description|  
+|Rolle|Description|  
 |----------|-----------------|  
 |`mdm`|Enthält alle [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank- und Service Broker-Objekte außer die im mdq-Schema enthaltenen Funktionen.|  
 |`mdq`|Enthält [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbankfunktionen, die sich auf das Filtern von Elementergebnissen auf Grundlage von regulären Ausdrücken oder Ähnlichkeiten beziehen und die zum Formatieren von Benachrichtigungs-E-Mails vorgesehen sind.|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - associativity [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 998cafdb3fb13cdb11c97ec62f8291ea78ab6456
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e901af56ad4bc4b337d8df2ece7ff7a724e2bf28
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195380"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799952"
 ---
 # <a name="operator-precedence-and-associativity"></a>Operatorenrangfolge und -assoziativität
   Jeder Operator, der von der Ausdrucksauswertung unterstützt wird, weist eine zugewiesene Rangfolge in der Rangfolgenhierarchie auf und enthält eine bestimmte Auswertungsrichtung. Die Auswertungsrichtung für einen Operator ist die Operatorassoziativität. Operatoren mit einer höheren Position in der Rangfolge werden vor Operatoren mit einer niedrigeren Position in der Rangfolge ausgewertet. Besitzt ein komplexer Ausdruck mehrere Operatoren, bestimmt die Operatorenrangfolge die Reihenfolge, in der die einzelnen Operationen ausgeführt werden. Die Ausführungsreihenfolge kann sich entscheidend auf das Ergebnis auswirken. Manche Operatoren weisen die gleiche Rangfolge auf. Falls ein Ausdruck mehrere Operatoren mit gleicher Rangfolge enthält, werden die Operatoren von links nach rechts bzw. von rechts nach links ausgewertet.  
@@ -29,10 +28,10 @@ ms.locfileid: "48195380"
 |Operatorsymbol|Vorgangstyp|Assoziativität|  
 |---------------------|-----------------------|-------------------|  
 |( )|expression|Von links nach rechts|  
-|–, !, ~|Unäroperatoren|Von rechts nach links|  
+|-, !, ~|Unäroperatoren|Von rechts nach links|  
 |Umwandlungen|Unäroperatoren|Von rechts nach links|  
 |*, / ,%|Multiplikativ|Von links nach rechts|  
-|+, –|Additiv|Von links nach rechts|  
+|+, -|Additiv|Von links nach rechts|  
 |\<, >, \<=, >=|Relational|Von links nach rechts|  
 |==, !=|Gleichheit|Von links nach rechts|  
 |&|Bitweises AND|Von links nach rechts|  

@@ -15,12 +15,12 @@ ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01de6a3707ea2ed96399c678625f3e94c13fc5db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7487d073b95190418ee7f6900390a2d60ce42e13
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649568"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516866"
 ---
 # <a name="desktop-database-drivers-architecture"></a>Architektur der Desktop-Datenbanktreiber
 Diese Treiber sind für die Verwendung unter Microsoft Windows 95 oder höher oder Windows NT 4.0 und Windows 2000 vorgesehen. Nur 32-Bit-Anwendungen werden unter Windows 95 oder höher unterstützt. 16-Bit- und 32-Bit-Anwendungen werden unter Windows NT 4.0 und Windows 2000 unterstützt.  
@@ -40,9 +40,9 @@ Diese Treiber sind für die Verwendung unter Microsoft Windows 95 oder höher od
   
  ![App&#47;Treiberarchitektur: NT 4.0 und Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
- Die Desktop-Datenbanktreiber sind zwei-Ebenen-Treiber. In einer Konfiguration mit zwei Ebenen führt der Treiber nicht den Prozess der Analyse, Überprüfung, optimieren und Ausführen der Abfrage aus. Microsoft Jet stattdessen führt folgende Aufgaben aus. Er verarbeitet die ODBC-API-Aufrufe und fungiert als eine SQL-Engine. Microsoft Jet ist ein integraler, untrennbar Teil der Treiber geworden: Es ist im Lieferumfang der Treiber und mit den Treibern befindet, auch wenn keine andere Anwendung auf dem Computer verwendet.  
+ Die Desktop-Datenbanktreiber sind zwei-Ebenen-Treiber. In einer Konfiguration mit zwei Ebenen führt der Treiber nicht den Prozess der Analyse, Überprüfung, optimieren und Ausführen der Abfrage aus. Microsoft Jet stattdessen führt folgende Aufgaben aus. Er verarbeitet die ODBC-API-Aufrufe und fungiert als eine SQL-Engine. Microsoft Jet ist ein integraler, untrennbar Teil der Treiber werden: Es ist im Lieferumfang der Treiber und mit den Treibern befindet, auch wenn keine andere Anwendung auf dem Computer verwendet.  
   
- Die Desktop-Datenbanktreiber bestehen aus sechs verschiedenen-Treiber – oder, genauer gesagt, einen Treiber (Odbcjt32.dll) Datei, die die ODBC [-Treiber-Manager](../../odbc/reference/the-driver-manager.md) auf sechs verschiedene Arten verwendet. Das DRIVERID-Flag in der Registrierung für eine Datenquelle bestimmt, welche Treiber in Odbcjt32.dll des Treiber-Managers verwendet. Eine Anwendung übergibt dieses Flag in der Verbindungszeichenfolge enthalten, die in einem Aufruf von **SQLDriverConnect**. Standardmäßig ist das Flag für die ID der dem Microsoft Access-Treiber.  
+ Die Desktop-Datenbanktreiber bestehen aus sechs verschiedenen Treibern – oder, genauer gesagt, eine Datei des Treibers (Odbcjt32.dll), die ODBC [-Treiber-Manager](../../odbc/reference/the-driver-manager.md) auf sechs verschiedene Arten verwendet. Das DRIVERID-Flag in der Registrierung für eine Datenquelle bestimmt, welche Treiber in Odbcjt32.dll des Treiber-Managers verwendet. Eine Anwendung übergibt dieses Flag in der Verbindungszeichenfolge enthalten, die in einem Aufruf von **SQLDriverConnect**. Standardmäßig ist das Flag für die ID der dem Microsoft Access-Treiber.  
   
  Die Setup-Treiberdatei ändert das DRIVERID-Flag beim Setup. Alle Treiber, mit Ausnahme von der Microsoft Access-Treiber müssen ein Setup-DLL verknüpft. Beim Klicken auf **Setup** in die [Microsoft ODBC-Datenquellenadministrator](../../odbc/admin/odbc-data-source-administrator.md) für eine Datenquelle, lädt der ODBC-Installationsprogramm-DLL (die Datei Odbcinst.dll) der Setup-DLL. Der Setup-DLL exportiert, die ODBC-Installer-Funktion **SQLConfigDataSource**. Wenn ein Fensterhandle, um übergeben wird **SQLConfigDataSource**, diese Funktion zeigt ein Setup-Fenster und ändert das DRIVERID-Flag entsprechend der Treiber, die von der Benutzeroberfläche ausgewählt.  
   

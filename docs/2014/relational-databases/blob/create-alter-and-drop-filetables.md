@@ -14,12 +14,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d515496ec264e4b6331021d385a8d42a981fbbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 373cee8bf85815db18c50eb2919600ffec258f0b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058360"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516500"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Erstellen, Ändern und Löschen von FileTables
   Beschreibt, wie eine neue FileTable erstellt bzw. eine vorhandene FileTable geändert oder gelöscht wird.  
@@ -35,7 +35,7 @@ ms.locfileid: "48058360"
   
 -   Die Namen, die für die 3 automatisch erstellten PRIMARY KEY- und UNIQUE-Einschränkungen verwendet werden sollen.  
   
-###  <a name="HowToCreate"></a> Vorgehensweise: Erstellen einer FileTable  
+###  <a name="HowToCreate"></a> So wird es gemacht: Erstellen einer FileTable  
  **Erstellen einer FileTable mit Transact-SQL**  
  Erstellen Sie eine FileTable, indem Sie die Option [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) mit der Option **AS FileTable** aufrufen. Da eine FileTable ein festes Schema hat, müssen Sie keine Liste von Spalten angeben. Sie können die folgenden beiden Einstellungen für die neue FileTable angeben:  
   
@@ -96,7 +96,7 @@ GO
   
 -   Da eine FileTable eine FILESTREAM-Spalte enthält, erfordert eine FileTable eine gültige FILESTREAM-Dateigruppe. Zum Erstellen einer FileTable können Sie optional eine gültige FILESTREAM-Dateigruppe als Teil des **CREATE TABLE** -Befehls angeben. Wenn Sie keine Dateigruppe angeben, verwendet die FileTable die Standard-FILESTREAM-Dateigruppe für die Datenbank. Wenn die Datenbank keine FILESTREAM-Dateigruppe aufweist, wird ein Fehler ausgelöst.  
   
--   Als Teil der **CREATE TABLE…AS FILETABLE** -Anweisung kann keine Tabelleneinschränkung erstellt werden. Sie können die Einschränkung jedoch später mit einer **ALTER TABLE** -Anweisung hinzufügen.  
+-   Sie können keinen Tabellenconstraint als Teil einer **CREATE TABLE...AS FILETABLE**-Anweisung erstellen. Sie können die Einschränkung jedoch später mit einer **ALTER TABLE** -Anweisung hinzufügen.  
   
 -   Sie können keine FileTable in der **tempdb** -Datenbank oder in einer der anderen Systemdatenbanken erstellen.  
   
@@ -107,7 +107,7 @@ GO
   
  Informationen zum Aktivieren bzw. Deaktivieren des FileTable-Namespace (einschließlich der systemdefinierten Einschränkungen) mithilfe der ALTER TABLE-Anweisung finden Sie unter [Verwalten von FileTables](manage-filetables.md).  
   
-###  <a name="HowToChange"></a> Vorgehensweise: Ändern des Verzeichnisses für eine FileTable  
+###  <a name="HowToChange"></a> So wird es gemacht: Ändern des Verzeichnisses für Filetables  
  **Ändern des Verzeichnisses für eine FileTable mit Transact-SQL**  
  Rufen Sie die ALTER TABLE-Anweisung auf, und geben Sie einen gültigen neuen Wert für die SET-Option von **FILETABLE_DIRECTORY** an.  
   
@@ -135,11 +135,11 @@ GO
   
  Beim Löschen einer FileTable werden auch die folgenden Objekte gelöscht:  
   
--   Alle Spalten der FileTable und alle der Tabelle zugeordneten Objekte, z. B. Indizes, Einschränkungen und Trigger, werden ebenfalls gelöscht.  
+-   Alle Spalten der FileTable und alle der Tabelle zugeordneten Objekte, z. B. Indizes, Einschränkungen und Trigger, werden ebenfalls gelöscht.  
   
 -   Das FileTable-Verzeichnis und die Unterverzeichnisse, die es enthielt, aus der FILESTREAM-Datei und der Verzeichnishierarchie der Datenbank.  
   
- Der DROP TABLE-Befehl schlägt fehl, wenn geöffnete Dateihandles im Dateinamespace der FileTable vorhanden sind. Informationen zum Schließen von geöffneten Handles finden Sie unter [Verwalten von FileTables](manage-filetables.md).  
+ Der DROP TABLE-Befehl schlägt fehl, wenn geöffnete Dateihandles im Dateinamespace der Dateitabelle vorhanden sind. Informationen zum Schließen von geöffneten Handles finden Sie unter [Verwalten von FileTables](manage-filetables.md).  
   
 ##  <a name="BasicsOtherObjects"></a> Beim Erstellen einer FileTable werden andere Datenbankobjekte erstellt  
  Wenn Sie eine neue FileTable erstellen, werden auch einige systemdefinierte Indizes und Einschränkungen erstellt. Sie können diese Objekte nicht ändern oder löschen; sie verschwinden nur, wenn die FileTable selbst gelöscht wird. Um eine Liste dieser Objekte anzuzeigen, fragen Sie die Katalogsicht [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql) ab.  

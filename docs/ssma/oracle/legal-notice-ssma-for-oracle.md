@@ -10,12 +10,12 @@ ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 0857669590f5d81c7ab6aa585de4a4aa052ca492
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff3acde2d4257412c743958311a050a7879ed2a4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657457"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514610"
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>Rechtliche Hinweise (SSMA für Oracle)
 Diese Dokumentation, einschließlich der darin enthaltenen Beispielanwendungen, wird nur zu Informationszwecken zur Verfügung gestellt. Es werden keine Gewährleistungen übernommen, weder ausdrücklich noch konkludent. Die in dieser Dokumentation enthaltenen Angaben und Daten, einschließlich URLs und anderen Verweisen auf Internetwebsites, können ohne vorherige Ankündigung geändert werden. Das vollständige Risiko der Nutzung oder der Ergebnisse der Nutzung dieser Dokumentation liegt bei dem Benutzer.  
@@ -35,7 +35,7 @@ SAP NetWeaver ist eine eingetragene Marke der SAP AG in Deutschland und/oder and
 Alle anderen Marken sind Eigentum ihrer jeweiligen Inhaber.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Dokumentationsrichtlinie für den Support von und das Upgrade auf SQL Server  
-In der SQL Server-Dokumentation werden Inhalte erst veröffentlicht, nachdem ausreichend Tests durchgeführt wurden. Die Produktdokumentation – SQL Server-Onlinedokumentation, Infodateien, Dokumente zu bekannten Problemen und Knowledge Base-Artikel – umfasst Inhalte zu SQL Server-Features und -Funktionen, die robust genug sind, um generell von allen Kunden sicher verwendet zu werden. Diese Richtlinie gilt für alle SQL Server-Dokumentationen, einschließlich der Infodateien zu Versionen und Service Packs. Eine Infodatei wird als Erweiterung der Onlinedokumentation betrachtet.  
+In der SQL Server-Dokumentation werden Inhalte erst veröffentlicht, nachdem ausreichend Tests durchgeführt wurden. Produktdokumentation – SQL Server-Onlinedokumentation, Infodateien, Dokumenten zu bekannten Problemen und Knowledge Base-Artikel – enthält die Inhalte zu SQL Server-Features und Funktionen, die robust genug für die allgemeine Verwendung von allen Kunden sicher sein. Diese Richtlinie gilt für alle SQL Server-Dokumentationen, einschließlich der Infodateien zu Versionen und Service Packs. Eine Infodatei wird als Erweiterung der Onlinedokumentation betrachtet.  
   
 Es gibt Fälle, in denen bestimmte Funktionen von Kunden nicht direkt verwendet werden sollten, weshalb diese nicht dokumentiert sind. Sofern ein Feature nicht auch in der SQL Server-Dokumentation von Microsoft beschrieben wird, werden Inhalte in Dokumentationen oder auf Websites von Drittanbietern vom Microsoft-Kundendienst nicht unterstützt und sollte nicht in Produktionsdatenbanken oder Anwendungen verwendet werden.  
   

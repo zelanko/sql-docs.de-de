@@ -1,20 +1,21 @@
 ---
-title: Debuggen und Diagnostizieren von Spark-Anwendungen in Clustern von SQL Server big Data in Spark-Verlaufsserver
-description: Debuggen und Diagnostizieren von Spark-Anwendungen in Clustern von SQL Server big Data in Spark-Verlaufsserver
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: Diagnostizieren Sie/Debuggen von Spark-Anwendungen
+titleSuffix: SQL Server 2019 big data clusters
+description: Verwenden von Spark-Verlaufsserver zum Debuggen und Diagnostizieren von Spark-Anwendungen, die unter SQL Server-2019 big Data-Cluster.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 09d22e5d3b55f48ab1873507e6f474f07d842801
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: a9416f774e84d6b458e14aeb28db2ab39ad8543e
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460865"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029744"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Debuggen und Diagnostizieren von Spark-Anwendungen in Clustern von SQL Server big Data in Spark-Verlaufsserver
 
@@ -25,7 +26,7 @@ Dieser Artikel enthält Anleitungen zur Verwendung von erweiterten Spark-Verlauf
 Mit Informationen, die Auftrags-spezifische Daten und interaktive Visualisierung des Auftrags Graph und Datenfluss für big Data-Cluster enthält, wird die benutzerfreundlichkeit von open Source-Spark History Server erweitert. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Öffnen Sie die Spark History Server-Benutzeroberfläche URL
-Öffnen der Spark-Verlaufsserver durch Navigieren zu der folgenden URL ersetzen `<Ipaddress>` und `<Port>` mit big Data-Cluster spezifischen Informationen. Weitere Informationen kann verwiesen werden: [Bereitstellen von SQL Server-big Data-Cluster](quickstart-big-data-cluster-deploy.md)
+Öffnen der Spark-Verlaufsserver durch Navigieren zu der folgenden URL ersetzen `<Ipaddress>` und `<Port>` mit big Data-Cluster spezifischen Informationen. Weitere Informationen kann bezeichnet werden: [Bereitstellen von SQL Server-big Data-cluster](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -41,31 +42,31 @@ Wählen Sie die Auftrags-ID, und klicken Sie auf **Daten** im Menü des Tools, u
 
 + Überprüfen Sie die **Eingaben**, **Ausgaben**, und **Tabellenvorgänge** durch Registerkarten getrennt auswählen.
 
-    ![Datenregisterkarten](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
+    ![Registerkarten der Spark-Verlaufsserver-Daten](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
 
 + Kopieren Sie alle Zeilen, indem Sie auf die Schaltfläche **Kopie**.
 
-    ![Kopieren von Daten](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
+    ![Kopieren Sie alle Zeilen](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
 
 + Speichern Sie alle Daten als CSV-Datei, indem Sie auf die Schaltfläche **Csv**.
 
-    ![Daten speichern](./media/apache-azure-spark-history-server/sparkui-data-save.png)
+    ![Speichern Sie Daten als CSV-Dateien](./media/apache-azure-spark-history-server/sparkui-data-save.png)
 
 + Suche durch Eingeben von Schlüsselwörtern im Feld **Suche**, das Suchergebnis wird sofort angezeigt.
 
-    ![Suchen von Daten](./media/apache-azure-spark-history-server/sparkui-data-search.png)
+    ![Mit den Schlüsselwörtern suchen](./media/apache-azure-spark-history-server/sparkui-data-search.png)
 
 + Klicken Sie auf die Spaltenüberschrift, um die Tabelle sortieren, klicken Sie auf das Pluszeichen, um eine Zeile, um weitere Details anzeigen zu erweitern, oder klicken Sie auf das Minuszeichen (-) um eine Zeile zu reduzieren.
 
-    ![Datentabelle](./media/apache-azure-spark-history-server/sparkui-data-table.png)
+    ![Data Table-Funktionen](./media/apache-azure-spark-history-server/sparkui-data-table.png)
 
 + Herunterladen einer einzelnen Datei durch Klicken auf Schaltfläche **teilweise herunterladen** , die auf der rechten Seite platzieren, und klicken Sie dann die ausgewählte Datei an lokalen Ort heruntergeladen wird. Wenn die Datei nicht mehr vorhanden ist, wird eine neue Registerkarte zum Anzeigen von Fehlermeldungen geöffnet.
 
-    ![Download der Datenzeile](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
+    ![Herunterladen einer Datenzeile](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
 
 + Kopieren Sie den vollständigen oder relativen Pfad durch Auswählen der **Vollständiger_pfad kopieren**, **relativen Pfad kopieren** , die erweitert wird, aus dem Menü "herunterladen". Für Azure Data Lake-Speicher-Dateien **in Azure Storage-Explorer öffnen** startet Azure Storage-Explorer. Und suchen Sie bei der Anmeldung auf den genauen Ordnernamen.
 
-    ![Pfad für Daten kopieren](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
+    ![Einen vollständigen oder relativen Pfad kopieren](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
 
 + Klicken Sie auf die Zahl unterhalb der Tabelle an, navigieren Seiten Wenn zu viele Zeilen auf einer Seite angezeigt. 
 
@@ -99,11 +100,11 @@ Wählen Sie die Auftrags-ID, und klicken Sie auf **Graph** im Menü des Tools, u
 
 + Wiedergeben für den Auftrag aus, indem Sie auf die **Wiedergabe** Schaltfläche und jederzeit beenden, indem Sie auf die Schaltfläche "Beenden". Die Task-Anzeige in der Farbe an, die verschiedene Status angezeigt, bei der Wiedergabe:
 
-    + Grün für Erfolg: der Auftrag erfolgreich abgeschlossen.
-    + Orange für versucht,: Instanzen von Aufgaben, Fehler, aber wirken sich nicht auf das endgültige Ergebnis des Auftrags. Diese Aufgaben haben doppelte oder wiederholungsinstanzen, die später möglicherweise erfolgreich.
-    + Für die Ausführung Blau: der Task wird ausgeführt.
-    + Für das Warten weiß oder übersprungen: die Aufgabe wartet, ausgeführt oder die Phase wurde übersprungen.
-    + Rot: Fehler: Fehler des Tasks.
+    + Grün für Erfolg: Der Auftrag wurde erfolgreich abgeschlossen.
+    + Orange für wiederholt: Instanzen von Aufgaben, die Fehler, aber wirken sich nicht auf das endgültige Ergebnis des Auftrags. Diese Aufgaben haben doppelte oder wiederholungsinstanzen, die später möglicherweise erfolgreich.
+    + Blau, für die Ausführung: Der Task wird ausgeführt.
+    + Für das Warten weiß oder übersprungen: Die Aufgabe wartet, ausgeführt, oder die Phase wurde übersprungen.
+    + Fehler bei der Rot für: Fehler des Tasks.
 
     ![Farbbeispiel Graph, ausgeführt wird](./media/apache-azure-spark-history-server/sparkui-graph-color-running.png)
  
@@ -161,7 +162,7 @@ Wählen Sie die Auftrags-ID, und klicken Sie auf **Diagnose** im Menü des Tools
 ### <a name="data-skew"></a>Datenschiefe
 Klicken Sie auf **Datenschiefe** der entsprechenden Registerkarte Schiefe Aufgaben werden basierend auf den angegebenen Parametern angezeigt. 
 
-+ **Geben Sie Parameter** -der erste Abschnitt zeigt die Parameter, die verwendet werden, um Probleme durch Datenschiefe zu erkennen. Ist die integrierte Regelsätze: Task-Datenlesevorgänge ist größer als dreimal das durchschnittliche Task-Datenlesevorgänge und das Task-Datenlesevorgänge ist größer als 10 MB. Wenn Sie eine eigene Regel für den schiefen Tasks definieren möchten, können Sie die Parametern, die **verzerrt Phase**, und **neigen Char** Abschnitt entsprechend aktualisiert werden. 
++ **Geben Sie Parameter** -der erste Abschnitt zeigt die Parameter, die verwendet werden, um Probleme durch Datenschiefe zu erkennen. Die integrierte Regel lautet: Task-Datenlesevorgänge ist größer als dreimal das durchschnittliche Task-Datenlesevorgänge, und das Task-Datenlesevorgänge ist größer als 10 MB. Wenn Sie eine eigene Regel für den schiefen Tasks definieren möchten, können Sie die Parametern, die **verzerrt Phase**, und **neigen Char** Abschnitt entsprechend aktualisiert werden. 
 
 + **Phase verzerrt** – der zweite Abschnitt zeigt die Phasen, mit der Schiefe Aufgaben, die die oben angegebenen Kriterien erfüllen. Wenn mehr als eine verfälschte Aufgabe in einer Phase vorhanden ist, zeigt die Schiefe Phase-Tabelle nur die am häufigsten Schiefe Aufgabe (z. B. die größten Data für datenschiefe). 
 

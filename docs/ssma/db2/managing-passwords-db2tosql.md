@@ -10,12 +10,12 @@ ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2a2ba7cfb16c4df96fa40edb23d9bccea3599005
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 92cff6191f9b606a5394edaac36706328ab52bc3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675654"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510163"
 ---
 # <a name="managing-passwords-db2tosql"></a>Verwalten von Kennwörtern (DB2ToSQL)
 In diesem Abschnitt wird zum Schützen von Kennwörter für die Datenbanken und das Verfahren zum Importieren oder exportieren diese auf Servern:  
@@ -31,15 +31,15 @@ Verwenden Sie wie folgt vor, um eine sichere Verbindung zu implementieren:
   
 Geben Sie ein gültiges Kennwort ein, die mit einer der drei folgenden Methoden:  
   
-1.  **Klartext:** Geben Sie das Datenbankkennwort, in der Value-Attribut des Knotens 'Password'. Es befindet sich unter dem Serverknoten für die Definition im Abschnitt "Server" des Server-Verbindungsdatei oder Skriptdatei.  
+1.  **Löschen Sie Text ein:** Geben Sie das Datenbankkennwort, in der Value-Attribut des Knotens 'Password'. Es befindet sich unter dem Serverknoten für die Definition im Abschnitt "Server" des Server-Verbindungsdatei oder Skriptdatei.  
   
-    Kennwörter in Klartext sind nicht sicher. Aus diesem Grund tritt die folgende Warnmeldung in der Konsolenausgabe: *"Server &lt;Server-Id&gt; Kennwort dient als nicht sicheren Klartext, SSMA-Console-Anwendung eine Option zum Schutz bietet der das Kennwort, Verschlüsselung, informieren Sie sich – Securepassword Option in der SSMA-Hilfedatei für Weitere Informationen."*  
+    Kennwörter in Klartext sind nicht sicher. Aus diesem Grund wird die folgende Warnmeldung in der Konsolenausgabe auftreten: *"Server &lt;Server-Id&gt; dient das Kennwort in Klartext nicht sicheren Form-Anwendung SSMA-Konsole bietet eine Option zum Schützen Sie das Kennwort, Verschlüsselung, finden Sie unter Securepassword - Option in SSMA-Hilfedatei für Weitere die Informationen."*  
   
-    **Verschlüsselte Kennwörter:** das angegebene Kennwort ist, wird in diesem Fall in verschlüsselter Form auf dem lokalen Computer im ProtectedStorage.ssma gespeichert.  
+    **Verschlüsselte Kennwörter:** Das angegebene Kennwort ist in diesem Fall in verschlüsselter Form auf dem lokalen Computer im ProtectedStorage.ssma gespeichert.  
   
     -   **Schützen von Kennwörtern**  
   
-        -   Führen Sie die `SSMAforDB2Console.exe` mit der `–securepassword` und Schalter in die Befehlszeile übergeben den Server-Verbindung oder ein Skript-Datei, die mit dem kennwortknoten im Abschnitt Definition Server hinzufügen.  
+        -   Führen Sie die `SSMAforDB2Console.exe` mit der `-securepassword` und Schalter in die Befehlszeile übergeben den Server-Verbindung oder ein Skript-Datei, die mit dem kennwortknoten im Abschnitt Definition Server hinzufügen.  
   
         -   An der Eingabeaufforderung wird der Benutzer aufgefordert, um das Datenbankkennwort, und bestätigen Sie es.  
   
@@ -48,7 +48,7 @@ Geben Sie ein gültiges Kennwort ein, die mit einer der drei folgenden Methoden:
             Beispiel 1:
             
                 Specify password
-                C:\SSMA\SSMAforDB2Console.EXE –securepassword –add all –s "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\AssessmentReportGenerationSample.xml" –v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml"
+                C:\SSMA\SSMAforDB2Console.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml"
                 
                 Enter password for server_id 'XXX_1': xxxxxxx
                 
@@ -56,7 +56,7 @@ Geben Sie ein gültiges Kennwort ein, die mit einer der drei folgenden Methoden:
             
             Beispiel 2:
             
-                C:\SSMA\SSMAforDB2Console.EXE –securepassword –add "source_1,target_1" –c "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ServersConnectionFileSample.xml" – v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml" -o
+                C:\SSMA\SSMAforDB2Console.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 
                 Enter password for server_id 'source_1': xxxxxxx
                 
@@ -68,20 +68,20 @@ Geben Sie ein gültiges Kennwort ein, die mit einer der drei folgenden Methoden:
     
     -   **Verschlüsselte Kennwörter entfernen**  
   
-        Führen Sie die `SSMAforDB2Console.exe` mit der`–securepassword` und `–remove` -Schalter an der Befehlszeile übergeben den Server-Ids, um die verschlüsselten Kennwörter aus der geschützten Speicherdatei vorhanden auf dem lokalen Computer zu entfernen.  
+        Führen Sie die `SSMAforDB2Console.exe` mit der`-securepassword` und `-remove` -Schalter an der Befehlszeile übergeben den Server-Ids, um die verschlüsselten Kennwörter aus der geschützten Speicherdatei vorhanden auf dem lokalen Computer zu entfernen.  
   
         Beispiel:  
         
-            C:\SSMA\SSMAforDB2Console.EXE –securepassword –remove all
-            C:\SSMA\SSMAforDB2Console.EXE –securepassword –remove "source_1,target_1"  
+            C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove all
+            C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove "source_1,target_1"  
   
     -   **Auflisten von Server-Ids, deren Kennwörter verschlüsselt sind**  
   
-        Führen Sie die `SSMAforDB2Console.exe` mit der `–securepassword` und `–list` -Schalter an der Befehlszeile aus, um alle Server-Ids auflisten, deren Kennwörter verschlüsselt wurden.  
+        Führen Sie die `SSMAforDB2Console.exe` mit der `-securepassword` und `-list` -Schalter an der Befehlszeile aus, um alle Server-Ids auflisten, deren Kennwörter verschlüsselt wurden.  
   
         Beispiel:  
         
-            C:\SSMA\SSMAforDB2Console.EXE –securepassword –list  
+            C:\SSMA\SSMAforDB2Console.EXE -securepassword -list  
 
   
     > [!NOTE]  
@@ -97,13 +97,13 @@ Beispiel:
     
     Enter password for protecting the exported file
     
-    C:\SSMA\SSMAforDB2Console.EXE –securepassword –export all "machine1passwords.file"
+    C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforDB2Console.EXE –p –e "DB2DB_1_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
@@ -115,13 +115,13 @@ Beispiel:
     
     Enter password for protecting the imported file
     
-    C:\SSMA\SSMAforDB2Console.EXE –securepassword –import all "machine1passwords.file"
+    C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforDB2Console.EXE –p –i "DB2DB_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     

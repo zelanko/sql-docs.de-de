@@ -16,12 +16,12 @@ ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b98c237b7cc8aaf58c177ee151e7a1398a4fd5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55bdeb41ed62fd727a6e5eb637734a67d21660fe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079710"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391232"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Entscheidung Exemplarische Vorgehensweise (Data Mining-Add-ins)
   Wenn Sie ein Entscheidungsstrukturmodell erstellt haben, können Sie ein benutzerdefiniertes Diagramm in Visio erstellen. Dazu stehen Ihnen die Shapes Entscheidungsstruktur und Abhängigkeitsnetzwerk zur Verfügung. In diesem Thema wird beschrieben, die Anpassungen, die Sie ausführen können, mit der **Entscheidungsstruktur** Form und diese Steuerelemente:  
@@ -55,7 +55,7 @@ ms.locfileid: "48079710"
   
 6.  Auf der **Entscheidungsstruktur auswählen** Seite, und wählen Sie eine individuelle Struktur anzeigen.  
   
-     In einer Struktur werden die Interaktionen abgebildet, die zu einem bestimmten modellierten Ergebnis geführt haben. Deshalb können Sie jeweils nur eine Struktur anzeigen, auch wenn das Modell mehrere Ergebnisse enthält.  
+     Eine Struktur modelliert die Interaktionen, die zu einem bestimmten Ergebnis führen, die Sie erstellt haben, auch wenn das Modell mehrere Ergebnisse enthält, können Sie nur eine Struktur gleichzeitig anzeigen.  
   
 7.  In der **Entscheidungsstruktur auswählen** im Dialogfeld können Sie auch folgenden Renderingoptionen festlegen:  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
@@ -15,12 +14,12 @@ ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4460b94a758a60abe27d8e9f3a90567ecbcbaa13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163510"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785622"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff
   In einem Szenario, in dem ein Server eine Verbindung zu mindestens zwei Netzwerken oder Netzwerksubnetzen bereitstellen muss, wird normalerweise ein mehrfach vernetzter Computer verwendet. Häufig befindet sich dieser Computer in einem Umkreisnetzwerk (auch als DMZ, Demilitarized Zone oder überwachtes Subnetz bezeichnet). In diesem Thema wird beschrieben, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Windows-Firewall mit erweiterter Sicherheit konfiguriert werden, um Netzwerkverbindungen zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer mehrfach vernetzten Umgebung bereitzustellen.  
@@ -58,7 +57,7 @@ ms.locfileid: "48163510"
   
 1.  Auf dem Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist installiert, klicken Sie auf **starten**, klicken Sie auf **ausführen**, Typ `cmd` und dann [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-2.  Geben Sie im Eingabeaufforderungsfenster Befehl `ipconfig,` und drücken Sie dann die EINGABETASTE, um die IP-Adressen auf diesem Computer verfügbaren aufzulisten.  
+2.  Geben Sie im Eingabeaufforderungsfenster `ipconfig,` ein, und drücken Sie anschließend die EINGABETASTE, um die auf diesem Computer verfügbaren IP-Adressen aufzulisten.  
   
     > [!NOTE]  
     >  Durch den **ipconfig** -Befehl werden manchmal zahlreiche mögliche Verbindungen aufgelistet, einschließlich getrennter Verbindungen. Der **ipconfig** -Befehl kann sowohl IPv4- als auch IPv6-Adressen auflisten.  
@@ -100,7 +99,7 @@ ms.locfileid: "48163510"
   
 8.  Wählen Sie auf der Seite **Protokolle und Ports** die Option **TCP**aus.  
   
-9. Wählen Sie **Angegebene lokale Ports**aus. Geben Sie die durch Kommas getrennten Portnummern ein, und klicken Sie anschließend auf **Weiter**. In diesem Beispiel konfigurieren Sie den Standardport; Geben Sie daher, `1433`.  
+9. Wählen Sie **Angegebene lokale Ports**aus. Geben Sie die durch Kommas getrennten Portnummern ein, und klicken Sie anschließend auf **Weiter**. In diesem Beispiel konfigurieren Sie den Standardport, geben Sie daher `1433` ein.  
   
 10. Überprüfen Sie die Optionen auf der Seite **Aktion** . In diesem Beispiel verwenden Sie nicht die Firewall, um sichere Verbindungen zu gewährleisten. Klicken Sie daher auf **Verbindung zulassen**und anschließend auf **Weiter**.  
   

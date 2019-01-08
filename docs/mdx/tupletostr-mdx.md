@@ -1,5 +1,5 @@
 ---
-title: TupleToStr (MDX) | Microsoft Docs
+title: TupleToStr (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b31c84cf028141943d4d726d96c48d926792814e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 5f07e71e5b8314320f76be4496744da5a9d9e81a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743259"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535249"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 
 
-  Gibt eine Zeichenfolge im MDX-Format (Multidimensional Expressions) zurück, die einem angegebenen Tupel entspricht.  
+  Gibt eine Multidimensional Expressions MDX-formatierte Zeichenfolge, die entspricht einem angegebenen Tupel zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,7 +33,7 @@ TupleToStr(Tuple_Expression)
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Tupel zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Funktion wird zum Übertragen der Zeichenfolgendarstellung eines Tupels an eine externe Funktion zur Analyse verwendet. Die Zeichenfolge, die zurückgegeben wird, wird in geschweifte Klammern eingeschlossen {} und jedes Element, wenn mehr als eine nicht ausdrücklich im Tupel, definiert ist, wird durch ein Komma getrennt.  
+ Diese Funktion wird zum Übertragen der Zeichenfolgendarstellung eines Tupels an eine externe Funktion zur Analyse verwendet. Die Zeichenfolge, die zurückgegeben wird, wird in geschweifte Klammern eingeschlossen {} und jedes Element, wenn mehr als eine ausdrücklich im Tupel definiert ist, wird durch ein Komma getrennt.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Zeichenfolge ([Datum].[Kalenderjahr].&[2001],[Geography].[Geography].[Country].&[United States]) zurückgegeben:  

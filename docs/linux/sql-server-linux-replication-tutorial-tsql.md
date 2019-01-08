@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 13359f151ef1453a7bc8b2020dc4cd8db9a13b80
-ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
+ms.openlocfilehash: 9b1d86b56e836a9b9b7bf575d5e9353a962894ce
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49390832"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405315"
 ---
 # <a name="configure-replication-with-t-sql"></a>Konfigurieren der Replikation mit T-SQL
 
@@ -291,6 +291,6 @@ Ausführliche Informationen zur Replikation finden Sie unter [Dokumentation zu S
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Konzepte: SQLServer-Replikation unter Linux](sql-server-linux-replication.md)
+[Konzepte: SQL Server-Replikation unter Linux](sql-server-linux-replication.md)
 
 [Gespeicherte Replikationsprozeduren](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).

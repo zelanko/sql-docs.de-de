@@ -13,12 +13,12 @@ ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e55050d8ed845f4255c6eebbdada9930f4d140c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 867d476c0132bedf39f709497e035b8264f2b022
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074520"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390605"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Importieren aus PowerPivot (SSAS – tabellarisch)
   In diesem Thema wird beschrieben, wie So erstellen Sie ein neues tabellarisches Modellprojekt Importieren von Metadaten und Daten aus einer PowerPivot-Arbeitsmappe mit dem Import aus PowerPivot-Projektvorlage in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -29,11 +29,11 @@ ms.locfileid: "48074520"
 > [!NOTE]  
 >  Verknüpfte Tabellen werden in tabellarischen Modellen nicht unterstützt. Wenn Daten aus einer PowerPivot-Arbeitsmappe importiert werden, die eine verknüpfte Tabelle enthält, werden die Daten der verknüpften Tabelle wie kopierte/eingefügte Daten behandelt und in der Datei Model.bim gespeichert. Wenn Sie Eigenschaften für eine kopierte/eingefügte Tabelle anzeigen, sind die Eigenschaft **Quelldaten** und das Dialogfeld **Tabelleneigenschaften** im Menü **Tabelle** deaktiviert.  
 >   
->  Die Anzahl der Zeilen, die den im Modell eingebetteten Daten hinzugefügt werden können, ist auf 10.000 Zeilen beschränkt. Wenn Sie ein Modell aus PowerPivot importieren und der Fehler "Daten wurden abgeschnitten. Eingefügte Tabellen dürfen nicht mehr als 10000 Zeilen umfassen" angezeigt wird, überprüfen Sie das PowerPivot-Modell, indem Sie die eingebetteten Daten in eine andere Datenquelle, beispielsweise eine Tabelle in SQL Server, verschieben und einen Neuimport ausführen.  
+>  Die Anzahl der Zeilen, die den im Modell eingebetteten Daten hinzugefügt werden können, ist auf 10.000 Zeilen beschränkt. Wenn Sie ein Modell aus PowerPivot importieren und der Fehler "Daten wurden abgeschnitten. Eingefügte Tabellen mehr als 10000 Zeilen enthalten darf nicht"sollten Sie bearbeiten Sie das PowerPivot-Modell, indem Sie die eingebetteten Daten in einer anderen Datenquelle, z. B. eine Tabelle in SQL Server verschieben und dann erneut importieren.  
   
  Abhängig davon, ob die Arbeitsbereichsdatenbank auf einer Analysis Services-Instanz auf demselben Computer (lokal) wie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder auf einer Analysis Services-Remoteinstanz gespeichert ist, müssen bestimmte Punkte berücksichtigt werden.  
   
- Wenn die Arbeitsbereichsdatenbank auf einer lokalen Instanz von Analysis Services gespeichert ist, können Sie sowohl die Metadaten als auch die Daten aus der PowerPivot-Arbeitsmappe importieren. Die Metadaten werden aus der Arbeitsmappe kopiert und zum Erstellen des tabellarischen Modellprojekts verwendet. Anschließend werden die Daten aus der Arbeitsmappe kopiert und in der Arbeitsbereichsdatenbank des Projekts gespeichert (mit Ausnahme von kopierten/eingefügten Daten, die in der Datei Model.bim gespeichert werden).  
+ Wenn die Arbeitsbereichsdatenbank auf einer lokalen Instanz von Analysis Services gespeichert ist, können Sie sowohl die Metadaten als auch die Daten aus der PowerPivot-Arbeitsmappe importieren. Die Metadaten werden aus der Arbeitsmappe kopiert und zum Erstellen des tabellarischen Modellprojekts verwendet. Die Daten dann aus der Arbeitsmappe kopiert und in der Sie in der arbeitsbereichsdatenbank des Projekts (mit Ausnahme von kopierten/eingefügten Daten, die in der Datei Model.bim gespeichert wird) gespeichert.  
   
  Wenn die Arbeitsbereichsdatenbank auf einer Analysis Services-Remoteinstanz gespeichert ist, können Sie keine Daten aus einer PowerPivot für Excel-Arbeitsmappe importieren. Sie können jedoch die Metadaten der Arbeitsmappe importieren. Zu diesem Zweck wird ein Skript auf der Analysis Services-Remoteinstanz ausgeführt. Sie sollten nur Metadaten aus einer vertrauenswürdigen PowerPivot-Arbeitsmappe importieren. Die Daten müssen aus den in den Datenquellenverbindungen definierten Quellen importiert werden. Kopierte/eingefügte Daten und Daten aus verknüpften Tabellen in der PowerPivot-Arbeitsmappe müssen kopiert und in das tabellarische Modellprojekt eingefügt werden.  
   

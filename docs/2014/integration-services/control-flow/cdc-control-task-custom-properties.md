@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70ad2bc83f1a77bc9649e3747c309ad6522b2007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 327e02721efaeb480d2b816de6af8135e1d1a80f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196360"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771102"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Benutzerdefinierte Eigenschaften des CDC-Steuerungstasks
   In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften des CDC-Steuerungstasks beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
@@ -34,7 +33,7 @@ ms.locfileid: "48196360"
 |CommandTimeout|integer|Dieser Wert gibt beim Kommunizieren mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank das Timeout (in Sekunden) an. Dieser Wert wird verwendet, wenn die Antwortzeit der Datenbank sehr langsam ist und der Standardwert (30 Sekunden) nicht ausreicht.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [CDC-Steuerungstask](cdc-control-task.md)   
+ [CDC Control Task](cdc-control-task.md)   
  [CDC Control Task Editor](../cdc-control-task-editor.md)  
   
   

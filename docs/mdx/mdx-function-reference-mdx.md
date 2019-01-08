@@ -1,5 +1,5 @@
 ---
-title: MDX-Funktionsreferenz (MDX) | Microsoft Docs
+title: MDX-Funktionsreferenz (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9137655ce59efbfa13466fe50f8142987b0ec81a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 5e38d37eae107c713ced69857898c604a77af297
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742009"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542477"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX-Funktionsreferenz (MDX)
 
@@ -70,8 +70,8 @@ ms.locfileid: "34742009"
 |[Lag &#40;MDX&#41;](../mdx/lag-mdx.md)|Gibt das Element zurück, das eine angegebene Anzahl von Positionen vor einem angegebenen Element entlang der Dimension des Elements liegt.|  
 |[LastChild &#40;MDX&#41;](../mdx/lastchild-mdx.md)|Gibt das letzte untergeordnete Element eines Elements zurück.|  
 |[LastSibling &#40;MDX&#41;](../mdx/lastsibling-mdx.md)|Gibt das letzte untergeordnete Element des übergeordneten Elements eines angegebenen Elements zurück.|  
-|[Lead &#40;MDX&#41;](../mdx/lead-mdx.md)|Gibt das Element zurück, das eine angegebene Anzahl von Positionen auf ein angegebenes Element entlang der Dimension des Elements folgt.|  
-|[LinkMember &#40;MDX&#41;](../mdx/linkmember-mdx.md)|Gibt das Element zurück, das in einer angegebenen Hierarchie gleichbedeutend mit dem angegebenen Element ist.|  
+|[Führen &#40;MDX&#41;](../mdx/lead-mdx.md)|Gibt das Element zurück, das eine angegebene Anzahl von Positionen auf ein angegebenes Element entlang der Dimension des Elements folgt.|  
+|[Mit ' LinkMember ' &#40;MDX&#41;](../mdx/linkmember-mdx.md)|Gibt das Element zurück, das in einer angegebenen Hierarchie gleichbedeutend mit dem angegebenen Element ist.|  
 |[Mitglieder &#40;Zeichenfolge&#41; &#40;MDX&#41;](../mdx/members-string-mdx.md)|Gibt ein durch einen Zeichenfolgenausdruck angegebenes Element zurück.|  
 |[NextMember &#40;MDX&#41;](../mdx/nextmember-mdx.md)|Gibt das nächste Element in der Ebene zurück, die ein angegebenes Element enthält.|  
 |[OpeningPeriod &#40;MDX&#41;](../mdx/openingperiod-mdx.md)|Gibt das erste gleichgeordnete Element unter den nachfolgenden Werten einer angegebenen Ebene optional bei einem angegebenen Element zurück.|  
@@ -87,7 +87,7 @@ ms.locfileid: "34742009"
 |Funktion|Description|  
 |--------------|-----------------|  
 |[Aggregierte &#40;MDX&#41;](../mdx/aggregate-mdx.md)|Gibt einen Skalarwert zurück, der durch Aggregieren von Measures oder eines optional angegebenen numerischen Ausdrucks über den Tupeln einer angegebenen Menge berechnet wird.|  
-|[AVG &#40;MDX&#41;](../mdx/avg-mdx.md)|Gibt den Mittelwert von Measures oder eines optionalen numerischen Ausdrucks, ausgewertet über einer angegebenen Menge, zurück.|  
+|[Durchschn. &#40;MDX&#41;](../mdx/avg-mdx.md)|Gibt den Mittelwert von Measures oder eines optionalen numerischen Ausdrucks, ausgewertet über einer angegebenen Menge, zurück.|  
 |[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Gibt den aktuellen Berechnungsdurchlauf eines Cubes für den angegebenen Abfragekontext zurück.|  
 |[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Gibt den Wert eines MDX-Ausdrucks zurück, der über dem angegebenen Berechnungsdurchlauf eines Cubes ausgewertet wird.|  
 |[CoalesceEmpty &#40;MDX&#41;](../mdx/coalesceempty-mdx.md)|Koaliert einen leeren Zellwert mit einer Zahl oder einer Zeichenfolge und gibt den koalierten Wert zurück.|  
@@ -104,11 +104,11 @@ ms.locfileid: "34742009"
 |[LinRegPoint &#40;MDX&#41;](../mdx/linregpoint-mdx.md)|Berechnet die lineare Regression einer Menge und gibt den Wert der *y* in der regressionsgleichung y = Ax + b.|  
 |[LinRegR2 &#40;MDX&#41;](../mdx/linregr2-mdx.md)|Berechnet die lineare Regression einer Menge und gibt den Bestimmungskoeffizienten, R2, zurück.|  
 |[LinRegSlope &#40;MDX&#41;](../mdx/linregslope-mdx.md)|Berechnet die lineare Regression einer Menge und gibt den Wert des Regressionskoeffizienten in der regressionsgleichung y = Ax + b.|  
-|[LinRegVariance &#40;MDX&#41;](../mdx/linregvariance-mdx.md)|Berechnet die lineare Regression einer Menge und gibt die Varianz der regressionsgleichung zugeordnete y = Ax + b.|  
+|[LinRegVariance &#40;MDX&#41;](../mdx/linregvariance-mdx.md)|Berechnet die lineare Regression einer Menge und gibt die Varianz zurück zugeordneten der regressionsgleichung y = Ax + b.|  
 |[LookupCube &#40;MDX&#41;](../mdx/lookupcube-mdx.md)|Gibt den Wert eines MDX-Ausdrucks zurück, der über einem anderen angegebenen Cube in derselben Datenbank ausgewertet wird.|  
 |[Max. &#40;MDX&#41;](../mdx/max-mdx.md)|Gibt den Maximalwert eines numerischen Ausdrucks zurück, der über einer Menge ausgewertet wird.|  
 |[Median &#40;MDX&#41;](../mdx/median-mdx.md)|Gibt den Median eines numerischen Ausdrucks zurück, der über einer Menge ausgewertet wird.|  
-|[Min &#40;MDX&#41;](../mdx/min-mdx.md)|Gibt den Minimalwert eines numerischen Ausdrucks zurück, der über einer Menge ausgewertet wird.|  
+|[Min. &#40;MDX&#41;](../mdx/min-mdx.md)|Gibt den Minimalwert eines numerischen Ausdrucks zurück, der über einer Menge ausgewertet wird.|  
 |[Ordnungszahl &#40;MDX&#41;](../mdx/ordinal-mdx.md)|Gibt den nullbasierten Ordinalwert, der einer Ebene zugeordnet ist, zurück.|  
 |[Vorhersagen &#40;MDX&#41;](../mdx/predict-mdx.md)|Gibt einen Wert eines numerischen Ausdrucks zurück, der über einem Data Mining-Modell ausgewertet wurde.|  
 |[Rang &#40;MDX&#41;](../mdx/rank-mdx.md)|Gibt den einsbasierten Rang eines angegebenen Tupels in einer angegebenen Menge zurück.|  
@@ -117,7 +117,7 @@ ms.locfileid: "34742009"
 |[StddevP &#40;MDX&#41;](../mdx/stddevp-mdx.md)|Alias für [StdevP &#40;MDX&#41;](../mdx/stdevp-mdx.md).|  
 |[StDev &#40;MDX&#41;](../mdx/stdev-mdx.md)|Gibt die Stichproben-Standardabweichung eines numerischen Ausdrucks zurück, die über einer Menge mithilfe der Formel für die ausgewogene Auffüllung berechnet wurde.|  
 |[StdevP &#40;MDX&#41;](../mdx/stdevp-mdx.md)|Gibt die Standardabweichung eines numerischen Ausdrucks bezüglich der Gesamtheit zurück, die über einer Menge mithilfe der Formel für die unausgewogene Auffüllung berechnet wurde.|  
-|[StrToValue &#40;MDX&#41;](../mdx/strtovalue-mdx.md)|Gibt den durch eine Zeichenfolge im MDX-Format angegebenen Wert zurück.|  
+|[StrToValue &#40;MDX&#41;](../mdx/strtovalue-mdx.md)|Gibt den Wert, der durch eine Zeichenfolge im MDX-Format angegeben.|  
 |[Summe &#40;MDX&#41;](../mdx/sum-mdx.md)|Gibt die Summe eines numerischen Ausdrucks zurück, der über einer Menge ausgewertet wird.|  
 |[Wert &#40;MDX&#41;](../mdx/value-mdx.md)|Gibt den Wert eines Measures zurück.|  
 |[Var &#40;MDX&#41;](../mdx/var-mdx.md)|Gibt die Stichprobenvarianz eines numerischen Ausdrucks zurück, der über einer Menge mithilfe der Formel für die ausgewogene Auffüllung berechnet wurde.|  
@@ -147,25 +147,25 @@ ms.locfileid: "34742009"
 |[DrilldownLevelTop &#40;MDX&#41;](../mdx/drilldownleveltop-mdx.md)|Führt einen Drilldown der obersten Elemente einer Menge auf einer bestimmten Ebene in eine darunter liegende Ebene aus.|  
 |[DrilldownMember &#40;MDX&#41;](../mdx/drilldownmember-mdx.md)|Führt einen Drilldown für Elemente in einer angegebenen Menge aus, die in einer angegebenen zweiten Menge vorhanden sind. Alternativ führt die Funktion einen Drilldown für eine Menge von Tupeln aus.|  
 |[DrilldownMemberBottom &#40;MDX&#41;](../mdx/drilldownmemberbottom-mdx.md)|Führt einen Drilldown bei Elementen in einer angegebenen Menge aus, die in einer angegebenen zweiten Menge vorhanden sind, wobei das Resultset auf eine angegebene Anzahl von Elementen beschränkt wird. Alternativ führt die Funktion auch einen Drilldown für eine Menge von Tupeln aus.|  
-|[DrilldownMemberTop &#40;MDX&#41;](../mdx/drilldownmembertop-mdx.md)|Führt einen Drilldown bei Elementen in einer angegebenen Menge aus, die in einer angegebenen zweiten Menge vorhanden sind, wobei das Resultset auf eine angegebene Anzahl von Elementen beschränkt wird. Alternativ können Sie diese Funktion einen Drilldown für eine Menge von Tupeln.|  
+|[DrilldownMemberTop &#40;MDX&#41;](../mdx/drilldownmembertop-mdx.md)|Führt einen Drilldown bei Elementen in einer angegebenen Menge aus, die in einer angegebenen zweiten Menge vorhanden sind, wobei das Resultset auf eine angegebene Anzahl von Elementen beschränkt wird. Sie können auch diese Funktion einen Drilldown für eine Menge von Tupeln.|  
 |[DrillupLevel &#40;MDX&#41;](../mdx/drilluplevel-mdx.md)|Führt einen Drillup bei Elementen einer Menge aus, die sich unterhalb einer angegebenen Ebene befinden.|  
 |[DrillupMember &#40;MDX&#41;](../mdx/drillupmember-mdx.md)|Führt einen Drillup für die Elemente einer angegebenen Menge aus, die in einer zweiten angegebenen Menge vorhanden sind.|  
 |[Mit Ausnahme von &#40;MDX&#41;](../mdx/except-mdx-function.md)|Gibt die Differenzmenge zweier Mengen zurück. Optional werden doppelte Werte beibehalten.|  
-|[Existiert &#40;MDX&#41;](../mdx/exists-mdx.md)|Gibt die Menge der Elemente einer Menge zurück, die mit mindestens einem Tupel mindestens einer anderen Menge vorhanden sind.|  
+|[Vorhanden &#40;MDX&#41;](../mdx/exists-mdx.md)|Gibt die Menge der Elemente einer Menge zurück, die mit mindestens einem Tupel mindestens einer anderen Menge vorhanden sind.|  
 |[Extrahieren Sie &#40;MDX&#41;](../mdx/extract-mdx.md)|Gibt eine Menge von Tupeln aus extrahierten Dimensionselementen zurück.|  
 |[Filter &#40;MDX&#41;](../mdx/filter-mdx.md)|Filtert eine angegebene Menge basierend auf einer Suchbedingung und gibt dann das Resultset zurück.|  
 |[Generieren von &#40;MDX&#41;](../mdx/generate-mdx.md)|Wendet eine Menge auf jedes Element einer anderen Menge an und verknüpft dann die entstehenden Mengen durch den Vereinigungsoperator. Alternativ gibt die Funktion eine verkettete Zeichenfolge zurück, die durch Auswerten eines Zeichenfolgenausdrucks über einer Menge erstellt wurde.|  
 |[Head &#40;MDX&#41;](../mdx/head-mdx.md)|Gibt die erste angegebene Anzahl von Elementen aus einer Menge zurück, wobei doppelte Werte beibehalten werden.|  
 |[HIERARCHIZE &#40;MDX&#41;](../mdx/hierarchize-mdx.md)|Ordnet die Elemente einer Menge hierarchisch an.|  
-|[Intersect &#40;MDX&#41;](../mdx/intersect-mdx.md)|Gibt die Schnittmenge zweier Eingabesets zurück. Optional werden doppelte Werte beibehalten.|  
+|[Intersect- &#40;MDX&#41;](../mdx/intersect-mdx.md)|Gibt die Schnittmenge zweier Eingabesets zurück. Optional werden doppelte Werte beibehalten.|  
 |[LastPeriods &#40;MDX&#41;](../mdx/lastperiods-mdx.md)|Gibt eine Menge von Elementen bis zu einem angegebenen Element, einschließlich des Elements, zurück.|  
 |[Mitglieder &#40;festgelegt&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)|Gibt die Menge der Elemente in einer Dimension, Ebene oder Hierarchie zurück.|  
 |[MTd &#40;MDX&#41;](../mdx/mtd-mdx.md)|Gibt eine Menge von gleichgeordneten Elementen zurück, die derselben Ebene angehören wie ein angegebenes Element. Die Menge beginnt mit dem ersten gleichgeordneten Element und endet mit dem angegebenen Element, entsprechend der Einschränkung durch die Year-Ebene in der Time-Dimension.|  
-|[NameToSet &#40;MDX&#41;](../mdx/nametoset-mdx.md)|Gibt eine Menge zurück, die das durch eine Zeichenfolge im MDX-Format angegebene Element enthält.|  
+|[NameToSet &#40;MDX&#41;](../mdx/nametoset-mdx.md)|Gibt einen zurück, das das durch eine Zeichenfolge im MDX-Format angegebene Element enthält.|  
 |[NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)|Gibt das Kreuzprodukt mindestens einer Menge als eine Menge zurück, wobei leere Tupel und Tupel ohne zugeordnete Daten einer Faktentabelle ausgeschlossen werden.|  
 |[Reihenfolge &#40;MDX&#41;](../mdx/order-mdx.md)|Ordnet die Elemente einer angegebenen Menge an, wobei die Hierarchie optional beibehalten wird oder nicht.|  
 |[PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)|Gibt eine Menge von gleichgeordneten Elementen zurück, die derselben Ebene angehören wie ein angegebenes Element. Die Menge beginnt mit dem ersten gleichgeordneten Element und endet mit dem angegebenen Element, entsprechend der Einschränkung durch die angegebene Ebene in der Time-Dimension.|  
-|[QTD &#40;MDX&#41;](../mdx/qtd-mdx.md)|Gibt einen Satz von gleichgeordneten Elementen aus der gleichen Ebene wie ein angegebenes Element aus, beginnend mit dem ersten gleichgeordneten Element und endend mit dem angegebenen Element, entsprechend der Einschränkung durch die *Quartal* in der Zeitdimension.|  
+|[QTD &#40;MDX&#41;](../mdx/qtd-mdx.md)|Gibt einen Satz von gleichgeordneten Elementen aus der gleichen Ebene wie ein angegebenes Element, mit dem ersten gleichgeordneten Element beginnend und endend mit dem angegebenen Element, entsprechend der Einschränkung durch die *Quartal* Ebene in der Time-Dimension.|  
 |[Gleichgeordnete Elemente &#40;MDX&#41;](../mdx/siblings-mdx.md)|Gibt die gleichgeordneten Elemente eines angegebenen Elements zurück, einschließlich des Elements selbst.|  
 |[StripCalculatedMembers &#40;MDX&#41;](../mdx/stripcalculatedmembers-mdx.md)|Gibt eine Menge zurück, die durch Entfernen berechneter Elemente aus einer angegebenen Menge entsteht.|  
 |[StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)|Gibt die durch eine Zeichenfolge im MDX-Format angegebene Menge zurück.|  
@@ -179,7 +179,7 @@ ms.locfileid: "34742009"
 |[Unorder &#40;MDX&#41;](../mdx/unorder-mdx.md)|Entfernt eine erzwungene Reihenfolge von einer angegebenen Menge.|  
 |[VisualTotals &#40;MDX&#41;](../mdx/visualtotals-mdx.md)|Gibt eine Menge zurück, die durch dynamische Gesamtwertbildung der untergeordneten Elemente in einer angegebenen Menge generiert wird. Optional wird im resultierenden Cellset ein Muster für den Namen des übergeordneten Elements verwendet.|  
 |[WTD &#40;MDX&#41;](../mdx/wtd-mdx.md)|Gibt eine Menge von gleichgeordneten Elementen zurück, die derselben Ebene angehören wie ein angegebenes Element. Die Menge beginnt mit dem ersten gleichgeordneten Element und endet mit dem angegebenen Element, entsprechend der Einschränkung durch die Week-Ebene in der Time-Dimension.|  
-|[YTD &#40;MDX&#41;](../mdx/ytd-mdx.md)|Gibt einen Satz von gleichgeordneten Elementen aus der gleichen Ebene wie ein angegebenes Element aus, beginnend mit dem ersten gleichgeordneten Element und endend mit dem angegebenen Element, entsprechend der Einschränkung durch die *Jahr* in der Zeitdimension.|  
+|[Seit Jahresbeginn &#40;MDX&#41;](../mdx/ytd-mdx.md)|Gibt einen Satz von gleichgeordneten Elementen aus der gleichen Ebene wie ein angegebenes Element, mit dem ersten gleichgeordneten Element beginnend und endend mit dem angegebenen Element, entsprechend der Einschränkung durch die *Jahr* Ebene in der Time-Dimension.|  
   
 ## <a name="string-functions"></a>Zeichenfolgenfunktionen  
   
@@ -190,11 +190,11 @@ ms.locfileid: "34742009"
 |[Generieren von &#40;MDX&#41;](../mdx/generate-mdx.md)|Wendet eine Menge auf jedes Element einer anderen Menge an und verknüpft dann die entstehenden Mengen durch den Vereinigungsoperator. Alternativ gibt die Funktion eine verkettete Zeichenfolge zurück, die durch Auswerten eines Zeichenfolgenausdrucks über einer Menge erstellt wurde.|  
 |[IIf &#40;MDX&#41;](../mdx/iif-mdx.md)|Gibt in Abhängigkeit von einem logischen Test einen von zwei Werten zurück.|  
 |[LookupCube &#40;MDX&#41;](../mdx/lookupcube-mdx.md)|Gibt den Wert eines MDX-Ausdrucks zurück, der über einem anderen angegebenen Cube in derselben Datenbank ausgewertet wird.|  
-|[MemberToStr &#40;MDX&#41;](../mdx/membertostr-mdx.md)|Gibt eine Zeichenfolge im MDX-Format zurück, die einem angegebenen Element entspricht.|  
+|[MemberToStr &#40;MDX&#41;](../mdx/membertostr-mdx.md)|Gibt eine Zeichenfolge im MDX-Format, die entspricht für einen angegebenen Member zurück.|  
 |[Namen &#40;MDX&#41;](../mdx/name-mdx.md)|Gibt den Namen einer Dimension, einer Hierarchie, einer Ebene oder eines Elements zurück.|  
-|[Eigenschaften &#40;MDX&#41;](../mdx/properties-mdx.md)|Gibt eine Zeichenfolge oder einen stark typisierten Wert zurück, der den Wert einer Elementeigenschaft enthält.|  
+|[Properties &#40;MDX&#41;](../mdx/properties-mdx.md)|Gibt eine Zeichenfolge oder einen stark typisierten Wert zurück, der den Wert einer Elementeigenschaft enthält.|  
 |[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)|Gibt eine Zeichenfolge im MDX-Format zurück, die einer angegebenen Menge entspricht.|  
-|[TupleToStr &#40;MDX&#41;](../mdx/tupletostr-mdx.md)|Gibt eine Zeichenfolge im MDX-Format zurück, die einem angegebenen Tupel entspricht.|  
+|[TupleToStr &#40;MDX&#41;](../mdx/tupletostr-mdx.md)|Gibt eine Zeichenfolge im MDX-Format, die entspricht angegebenen Tupel zurück.|  
 |[UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)|Gibt den eindeutigen Namen einer angegebenen Dimension, Hierarchie, Ebene oder eines angegebenen Elements zurück.|  
 |[Benutzername &#40;MDX&#41;](../mdx/username-mdx.md)|Gibt den Domänennamen und den Benutzernamen der aktuellen Verbindung zurück.|  
   
@@ -202,7 +202,7 @@ ms.locfileid: "34742009"
   
 |Funktion|Description|  
 |--------------|-----------------|  
-|[Dies &#40;MDX&#41;](../mdx/this-mdx.md)|Gibt den aktuellen Teilcube zurück.|  
+|[This &#40;MDX&#41;](../mdx/this-mdx.md)|Gibt den aktuellen Teilcube zurück.|  
 |[Bewirkt, dass &#40;MDX&#41;](../mdx/leaves-mdx.md)|Gibt die Menge der Blattelemente in der angegebenen Dimension, im angegebenen Element oder Tupel zurück.|  
   
 ## <a name="tuple-functions"></a>Tupelfunktionen  
@@ -211,14 +211,14 @@ ms.locfileid: "34742009"
 |--------------|-----------------|  
 |[Aktuelle &#40;MDX&#41;](../mdx/current-mdx.md)|Gibt das aktuelle Tupel in einer Menge während einer Iteration zurück.|  
 |[Element &#40;Tupel&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)|Gibt ein Tupel aus einer Menge zurück.|  
-|[Stamm &#40;MDX&#41;](../mdx/root-mdx.md)|Gibt ein Tupel, aus denen besteht die **alle** Elemente aus jeder Attributhierarchie in einem Cube, Dimension oder Tupel.|  
+|[Stamm &#40;MDX&#41;](../mdx/root-mdx.md)|Gibt ein Tupel, das umfasst die **alle** Member aus jeder Attributhierarchie in einem Cube, Dimension oder Tupel.|  
 |[StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md)|Gibt das durch eine Zeichenfolge im MDX-Format angegebene Tupel zurück.|  
   
 ## <a name="other-functions"></a>Weitere Funktionen  
   
 |Funktion|Description|  
 |--------------|-----------------|  
-|[Fehler beim &#40;MDX&#41;](../mdx/error-mdx.md)|Löst einen Fehler aus. Optional wird eine angegebene Fehlermeldung ausgegeben.|  
+|[Fehler &#40;MDX&#41;](../mdx/error-mdx.md)|Löst einen Fehler aus. Optional wird eine angegebene Fehlermeldung ausgegeben.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [MDX-Sprachreferenz &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  

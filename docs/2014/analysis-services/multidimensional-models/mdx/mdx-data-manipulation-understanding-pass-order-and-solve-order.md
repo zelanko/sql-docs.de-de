@@ -19,12 +19,12 @@ ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d8d1797bc1ffdf937e37fb1ffae075691a892ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9531b22e8154796f4f36a5b5bca04d510877d0ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083010"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511007"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Grundlegendes zu Durchlauf- und Lösungsreihenfolge (MDX)
   Wird ein Cube als Ergebnis eines MDX-Skripts berechnet, durchläuft er, abhängig von der Verwendung verschiedener Berechnungsfunktionen, möglicherweise viele Berechnungsphasen. Jede Phase bezeichnet man als Berechnungsdurchlauf.  
@@ -70,7 +70,7 @@ ms.locfileid: "48083010"
 > [!NOTE]  
 >  Sie können diese MDX-Abfragen unter Verwendung der mehrdimensionalen Adventure Works-Beispieldatenbank ausführen. Sie können das Beispiel zu [AdventureWorks Multidimensional Models SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) von der Codeplex-Website herunterladen.  
   
-### <a name="query-1differences-in-income-and-expenses"></a>Abfrage 1 – Differenzen zwischen Income und Expenses  
+### <a name="query-1-differences-in-income-and-expenses"></a>Abfrage 1 – Differenzen zwischen Income und Expenses  
  Mit der ersten MDX-Abfrage berechnen Sie die Differenz zwischen Umsätzen und Kosten für jedes Jahr, indem Sie eine einfache MDX-Abfrage wie im folgenden Beispiel erstellen:  
   
 ```  
@@ -95,7 +95,7 @@ FROM [Adventure Works]
 |**KJ 2008**|$9,770,899.74|$5,721,205.24|  
 |**Year Difference**|($20,160.56)|$2,878.06|  
   
-### <a name="query-2percentage-of-income-after-expenses"></a>Abfrage 2 – Prozentsatz von Income nach Abzug von Expenses  
+### <a name="query-2-percentage-of-income-after-expenses"></a>Abfrage 2 – Prozentsatz von Income nach Abzug von Expenses  
  Mit der zweiten Abfrage berechnen Sie den Prozentsatz des Einkommens nach Abzug der Ausgaben für jedes Jahr. Verwenden Sie dazu die folgende MDX-Abfrage:  
   
 ```  
@@ -123,10 +123,10 @@ FROM [Adventure Works]
   
  Der Grund für die unterschiedlichen Resultsets aus der ersten und der zweiten Abfrage ist eine andere Platzierung des berechneten Elements. In der ersten Abfrage ist das berechnete Element Teil der ROWS-Achse und nicht der COLUMNS-Achse, wie in der zweiten Abfrage. Diese unterschiedliche Platzierung gewinnt in der nächsten Abfrage an Bedeutung, wenn die beiden berechneten Elemente in einer einzigen MDX-Abfrage kombiniert werden.  
   
-### <a name="query-3combined-year-difference-and-net-income-calculations"></a>Abfrage 3 – Kombinierte Berechnungen für Year Difference und Net Income  
- In dieser letzten Abfrage, in der die beiden vorherigen Beispiele in einer MDX-Abfrage kombiniert werden, ist die Lösungsreihenfolge von Bedeutung, da Berechnungen sowohl für Spalten als auch für Zeilen ausgeführt werden. Um sicherzustellen, dass die Berechnungen in der richtigen Reihenfolge vorgenommen, definieren Sie die Reihenfolge, in dem die Berechnungen erfolgen, mit, der `SOLVE_ORDER` Schlüsselwort.  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>Abfrage 3 – kombinierte Year Difference und Net Income Berechnungen  
+ In dieser letzten Abfrage, in der die beiden vorherigen Beispiele in einer MDX-Abfrage kombiniert werden, ist die Lösungsreihenfolge von Bedeutung, da Berechnungen sowohl für Spalten als auch für Zeilen ausgeführt werden. Um sicherzustellen, dass die Berechnungen in der richtigen Reihenfolge vorgenommen werden, definieren Sie diese Reihenfolge mithilfe des `SOLVE_ORDER`-Schlüsselworts.  
   
- Das `SOLVE_ORDER`-Schlüsselwort gibt die Lösungsreihenfolge der berechneten Elemente in einer MDX-Abfrage oder einem `CREATE MEMBER`-Befehl an. Die ganzzahligen Werte verwendet, mit der `SOLVE_ORDER` Schlüsselwort sind relativ, beginnen bei 0 (null), und müssen nicht aufeinander folgen. Der Wert weist MDX lediglich an, ein Element auf der Grundlage von Werten zu berechnen, die aus der Berechnung von Elementen mit einem höheren Wert abgeleitet sind. Wenn ein berechnetes Element, ohne definiert ist die `SOLVE_ORDER` -Schlüsselwort, der Standardwert, der 0 (null).  
+ Das `SOLVE_ORDER`-Schlüsselwort gibt die Lösungsreihenfolge der berechneten Elemente in einer MDX-Abfrage oder einem `CREATE MEMBER`-Befehl an. Die mit dem `SOLVE_ORDER`-Schlüsselwort verwendeten ganzzahligen Werte sind relativ, müssen nicht mit 0 beginnen und nicht aufeinander folgen. Der Wert weist MDX lediglich an, ein Element auf der Grundlage von Werten zu berechnen, die aus der Berechnung von Elementen mit einem höheren Wert abgeleitet sind. Wird ein berechnetes Element ohne das `SOLVE_ORDER`-Schlüsselwort definiert, lautet sein Standardwert 0.  
   
  Wenn Sie beispielsweise die in den ersten beiden Beispielabfragen verwendeten Berechnungen kombinieren, überschneiden sich die beiden berechneten Elemente `Year Difference` und `Profit Margin`in einer einzelnen Zelle im Resultdataset der MDX-Beispielabfrage. Nur anhand der Lösungsreihenfolge lässt sich bestimmen, wie [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] diese Zelle auswertet. Die Formeln, mit denen diese Zelle erstellt wird, erzeugen je nach Lösungsreihenfolge der beiden berechneten Elemente unterschiedliche Ergebnisse.  
   

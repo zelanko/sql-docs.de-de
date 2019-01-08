@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Einführung in Ausdrücke | Microsoft-Dokumentation'
+title: 'Lernprogramm: Einführung in Ausdrücke | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 73bcce5c157ad412fabb677302eeddbd40a8b54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 096a0678ccb86c232d4eaca792aa143379710fea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075850"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399334"
 ---
 # <a name="tutorial-introducing-expressions"></a>Lernprogramm: Einführung in Ausdrücke
   Mit Ausdrücken können Sie leistungsfähige und flexible Berichte erstellen. In diesem Lernprogramm erfahren Sie, wie Sie Ausdrücke mit allgemeinen Funktionen und Operatoren erstellen und implementieren. Verwenden Sie die **Ausdruck** Ausdrücke schreiben, die Namen von Werten in einem separaten Dataset zu, suchen verketten im Dialogfeld angezeigt, verschiedene Bilder anhand von Feldwerten und So weiter.  
@@ -54,7 +54,7 @@ ms.locfileid: "48075850"
   
 -   [Speichern des Berichts](#Save)  
   
- Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
+ Ungefähre Dauer dieses Lernprogramms: 30 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -66,7 +66,7 @@ ms.locfileid: "48075850"
 >  In diesem Lernprogramm sind die Datenwerte in der Abfrage enthalten, sodass keine externe Datenquelle benötigt wird. Die Abfrage ist daher relativ lang. In einer Geschäftsumgebung wären die Daten nicht in der Abfrage enthalten. Dieses Szenario dient nur zu Lernzwecken.  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Schrittweise Anweisungen zum Navigieren zu einem Berichtsserver Auswählen einer Datenquelle, und erstellen Sie ein Dataset, finden Sie im erste Lernprogramm dieser Reihe: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 #### <a name="to-create-a-new-table-report"></a>So erstellen Sie einen neuen Tabellenbericht  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48075850"
   
      Die Abfrage spezifiziert Spaltennamen mit Geburtsname, Vorname, Nachname, Bundesland oder Kanton, Bezeichner für Land bzw. Region, Geschlecht sowie Käufe des laufenden Jahrs.  
   
-10. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**). Das Resultset umfasst 20 Zeilen mit Daten und umfasst folgenden Spalten: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase und LastPurchase.  
+10. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**). Das Resultset enthält 20 Datenzeilen und enthält die folgenden Spalten: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase und LastPurchase.  
   
 11. Klicken Sie auf **Weiter**.  
   
@@ -343,7 +343,7 @@ ms.locfileid: "48075850"
   
 #### <a name="to-look-up-values-in-the-countryregion-dataset"></a>So schlagen Sie Werte im CountryRegion-Dataset nach  
   
-1.  Klicken Sie auf den Spaltentitel **Country Region ID** und löschen Sie den Text „ID“.  
+1.  Klicken Sie auf die **Country Region ID** Spaltentitel und löschen Sie den Text: -ID.  
   
 2.  Klicken Sie mit der rechten Maustaste in die Datenzelle der Spalte **Country Region** und klicken Sie auf **Ausdruck**.  
   
@@ -372,7 +372,7 @@ ms.locfileid: "48075850"
 11. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
 ##  <a name="Count"></a> 6. Ermitteln der vergangenen Tage seit dem letzten Kauf  
- Fügen Sie eine Spalte hinzu, und verwenden Sie anschließend die **Now**-Funktion oder die integrierte globale Variable `ExecutionTime`, um die Anzahl der Tage seit dem letzten Einkauf (ab heute) für eine Person zu berechnen.  
+ Fügen Sie eine Spalte aus, und verwenden Sie dann die **jetzt** Funktion oder die `ExecutionTime` integrierte globale Variable, um die Anzahl der Tage ab heute zu berechnen, da eine Person dem letzten erwirbt.  
   
 #### <a name="to-add-the-days-ago-column"></a>So fügen Sie die Spalte "Vor (n) Tagen)" hinzu  
   
@@ -418,9 +418,9 @@ ms.locfileid: "48075850"
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Indicator"></a> 7. Verwenden eines Indikators zur Anzeige des Umsatzvergleichs  
- Fügen Sie eine neue Spalte hinzu, und verwenden Sie einen Indikator, um anzuzeigen, ob die Käufe im laufenden Jahr oberhalb oder unterhalb des Durchschnitts liegen. Die Funktion **Round** entfernt die Dezimalstellen aus den Werten.  
+ Fügen Sie eine neue Spalte hinzu, und verwenden Sie einen Indikator, um anzuzeigen, ob eine Person Jahr-bis-heute (seit Jahresbeginn) Käufe oberhalb oder unterhalb des Durchschnitts, die seit Jahresbeginn. Die Funktion **Round** entfernt die Dezimalstellen aus den Werten.  
   
- Für die Konfiguration des Indikators und seiner Zustände sind mehrere Schritte erforderlich. Sie können die Prozedur „So konfigurieren Sie das Kennzeichen“ überspringen und die fertigen Ausdrücke aus diesem Tutorial in das Dialogfeld **Ausdruck** kopieren.  
+ Für die Konfiguration des Indikators und seiner Zustände sind mehrere Schritte erforderlich. Wenn Sie im Verfahren "So konfigurieren den Indikator" wollen können Sie fortfahren und kopieren und Einfügen die fertigen Ausdrücke aus diesem Lernprogramm in der **Ausdruck** Dialogfeld.  
   
 #### <a name="to-add-the--or---avg-sales-column"></a>So fügen Sie die Spalte "+/- durchschnittl. Käufe" hinzu  
   
@@ -522,7 +522,7 @@ ms.locfileid: "48075850"
   
 38. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="GreenBar"></a> 8. Umwandeln des Berichts in einen Bericht mit grün-weißen Balken  
+##  <a name="GreenBar"></a> 8. Stellen Sie den Bericht aus, den eine "Grün-weißen Balken gemeldet.  
  Verwenden Sie einen Parameter, um die Farbe zu bestimmen, die abwechselnd auf die Zeilen im Bericht angewendet wird, um einen Balkenbericht zu erstellen.  
   
 #### <a name="to-add-a-parameter"></a>So fügen Sie einen Parameter hinzu  
@@ -543,7 +543,7 @@ ms.locfileid: "48075850"
   
 7.  Klicken Sie auf **Hinzufügen**.  
   
-8.  Geben Sie im Feld **Bezeichnung** Folgendes ein: **Gelb**  
+8.  In der **Bezeichnung** geben: **Gelb**  
   
 9. Geben Sie im Feld **Wert** Folgendes ein: **Gelb**  
   
@@ -601,7 +601,7 @@ ms.locfileid: "48075850"
   
 15. Wenn der Cursor nicht bereits unmittelbar nach `Count(` platziert ist, korrigieren Sie das.  
   
-16. Löschen Sie die linke Klammer und geben Sie **“Expressions”)** ein  
+16. Löschen Sie die linke Klammer, und geben Sie dann **, "Expressions")**  
   
     > [!NOTE]  
     >  "Ausdrücke" ist der Name des Datasets, das zum Zählen der Datenzeilen verwendet wird.  
@@ -621,7 +621,7 @@ ms.locfileid: "48075850"
   
 22. Wenn der Cursor nicht bereits unmittelbar nach `Parameters!RowColor.Value` platziert ist, korrigieren Sie das.  
   
-23. Geben Sie **, “White”)** ein  
+23. Geben Sie **, "White")**  
   
      Der vollständige Ausdruck lautet wie folgt: `=IIf(RunningValue(Fields!FirstName.Value,Count, "Expressions") Mod 2 =0, Parameters!RowColor.Value, "White")`  
   

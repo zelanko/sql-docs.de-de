@@ -12,18 +12,18 @@ ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 95a6724ab836fb3dddb54fadc82821ad68f29e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3fd443ff2ad58aa503fac2960016cb55f35b8a7f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746358"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514938"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>Erstellen von Testfällen (SybaseToSQL)
 Verwenden Sie den Testfall-Assistenten, um einen Test zu erstellen. Mit diesem Assistenten können Sie die Testfälle erstellen, durch Auswählen von Objekten überprüft und getestet und die Test-Parameter angeben.  
   
 ## <a name="starting-the-test-case-wizard"></a>Starten des Assistenten für Testfall  
-Zum Starten der Testfall-Assistenten auf **Neuer Testfall...** von der **Tester** Menü.  
+Zum Starten der Testfall-Assistenten auf **Neuer Testfall...**  aus der **Tester** Menü.  
   
 Beim Starten, sucht der Assistent Datenbank ssmatester2005db oder ssmatester2008db (je nach Projekttyp) auf dem Quellserver für die Sybase. Es ist die Tester Erweiterungsschema zum Speichern von zusätzlichen Objekte verwendet. Wenn der Assistent Testfall ssmatester2005db oder ssmatester2008db finden kann, wird ein Dialogfeld an, die zum Erstellen der Tester Erweiterung-Datenbank vorgeschlagen angezeigt. (Diesem Fall geschieht in der Regel während der ersten Ausführung der SSMA-Tester.)  
   

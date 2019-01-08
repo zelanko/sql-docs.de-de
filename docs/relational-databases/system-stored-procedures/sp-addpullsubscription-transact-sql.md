@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpullsubscription
@@ -17,12 +16,12 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d3c09a2d625f8b1a8c92d3fc55d8b571336a020
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c003b103c7957e737f53eb8733022e68073b3aef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857028"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802502"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  Gibt an, ob ein eigenständiger Verteilungs-Agent für diese Veröffentlichung vorhanden ist. *Independent_agent* ist **nvarchar(5)**, hat den Standardwert "true". Wenn **"true"**, ein eigenständiger Verteilungs-Agent für diese Veröffentlichung vorhanden ist. Wenn **"false"**, es gibt für jedes Verlegerdatenbank und Abonnentendatenbank-Paar ein Verteilungs-Agent. *Independent_agent* ist eine Eigenschaft der Veröffentlichung und muss den gleichen Wert aufweisen, wie sie auf dem Verleger übereinstimmt.  
   
  [  **@subscription_type=**] **"***Subscription_type***"**  
- Ist der Typ des Abonnements. *Subscription_type* ist **vom Datentyp nvarchar(9)**, hat den Standardwert **anonyme**. Geben Sie einen Wert von **Pull** für *Subscription_type*, es sei denn, Sie möchten ein Abonnement erstellen, ohne das Abonnement auf dem Verleger zu registrieren. Sie müssen in diesem Fall geben Sie den Wert **anonyme**. Dies ist notwendig für Fälle, in dem Sie können nicht erstellt werden, ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] während der abonnementkonfiguration Verbindung mit dem Verleger.  
+ Ist der Typ des Abonnements. *Subscription_type* ist **vom Datentyp nvarchar(9)**, hat den Standardwert **anonyme**. Geben Sie einen Wert von **Pull** für *Subscription_type*, es sei denn, Sie möchten ein Abonnement erstellen, ohne das Abonnement auf dem Verleger zu registrieren. Sie müssen in diesem Fall geben Sie den Wert **anonyme**. Dies ist notwendig für Fälle, in denen Sie während der Abonnementkonfiguration keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindung mit dem Verleger herstellen können.  
   
  [  **@description=**] **"***Beschreibung***"**  
  Ist die Beschreibung der Veröffentlichung. *Beschreibung* ist **nvarchar(100)**, hat den Standardwert NULL.  
@@ -67,7 +66,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  [  **@update_mode=**] **"***Update_mode***"**  
  Der Updatetyp. *Update_mode* ist **nvarchar(30)**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Schreibgeschützt** (Standard)|Das Abonnement ist schreibgeschützt. Änderungen am Abonnenten werden nicht an den Verleger zurückgesendet. Sollte verwendet werden, wenn Updates nicht auf dem Abonnenten vorgenommen werden.|  
 |**Synctran**|Aktiviert die Unterstützung für das sofortige Aktualisieren von Abonnements.|  

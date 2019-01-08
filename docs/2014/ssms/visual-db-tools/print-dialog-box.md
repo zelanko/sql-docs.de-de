@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.Print
@@ -12,12 +12,12 @@ ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4692f5c0ceddea6f8a67ea9aacbcb1efe523db7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180600"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768922"
 ---
 # <a name="print-dialog-box"></a>Drucken (Dialogfeld)
   Sie können angeben, wie ein Dokument gedruckt werden soll, indem Sie Optionen im Dialogfeld **Drucken** auswählen.  
@@ -27,7 +27,7 @@ ms.locfileid: "48180600"
  Gibt den Drucker an. Wählen Sie in der Liste einen Drucker aus. Der ausgewählte Drucker wird als Standarddrucker festgelegt, bis Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] schließen oder einen anderen Drucker auswählen. Die Informationen, die in den Feldern unterhalb der Liste angezeigt werden, gelten für den ausgewählten Drucker.  
   
  **Status**  
- Beschreibt den Status des ausgewählten Druckers, wie z. B. ausgelastet oder bereit.  
+ Beschreibt den Status des ausgewählten Druckers, wie z. B. beschäftigt oder bereit.  
   
  **Typ**  
  Identifiziert den ausgewählten Drucker.  

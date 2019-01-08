@@ -13,12 +13,12 @@ ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b58446a00300548b0b61defefb71d3207359787a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d5704a43e1ede850a225c4ec2b4df9a3563606b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770770"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540112"
 ---
 # <a name="what-is-a-cursor"></a>Was ist ein Cursor?
 Vorgänge in einer relationalen Datenbank beziehen sich immer auf eine vollständige Gruppe von Zeilen. Die von einer SELECT-Anweisung zurückgegebene Gruppe von Zeilen besteht aus allen Zeilen, die die Bedingungen der WHERE-Klausel der Anweisung erfüllen. Diese vollständige Gruppe von Zeilen, die von der Anweisung zurückgegeben wird, wird als Resultset bezeichnet. Anwendungen, insbesondere über diejenigen, die interaktiv und online ist, sind bearbeitet nicht immer effektiv das gesamte Resultset als eine Einheit. Diese Anwendungen benötigen einen Mechanismus, um jeweils eine Zeile oder einen kleinen Zeilenblock zu bearbeiten. Cursor sind eine Erweiterung zu Resultsets und stellen diesen Mechanismus bereit.  
@@ -61,7 +61,7 @@ Vorgänge in einer relationalen Datenbank beziehen sich immer auf eine vollstän
   
  Nur-Lese Cursor unterstützen von Benutzern über das Resultset navigieren und Lese-/Schreibzugriff, dass Cursor einzelne zeilenupdates implementieren können. Komplexe Cursor können mit Keysets definiert werden, die verweisen zurück auf die Tabellenzeilen basieren. Obwohl einige Cursor vorwärts, schreibgeschützt sind, können andere hin-und herwechseln und geben Sie eine dynamische Aktualisierung des Resultsets basierend auf Änderungen, die auf anderen Anwendungen in der Datenbank alle.  
   
- Nicht alle Anwendungen müssen Cursor an, die Zugriff oder Aktualisieren von Daten verwenden. Einige Abfragen erfordern keine einfach das Umleiten der Zeile zu aktualisieren, durch Verwenden eines Cursors. Cursor muss eine der letzten Techniken, die Sie auswählen, um Daten abzurufen, und wählen Sie dann den geringsten Auswirkungen Cursor möglich. Wenn Sie ein Resultset mit einer gespeicherten Prozedur erstellen, ist das Resultset nicht aktualisierbare Cursor verwenden bearbeiten oder Methoden zu aktualisieren.  
+ Nicht alle Anwendungen müssen Cursor an, die Zugriff oder Aktualisieren von Daten verwenden. Einige Abfragen erfordern keine einfach das Umleiten der Zeile zu aktualisieren, durch Verwenden eines Cursors. Cursor muss eines der letzten Verfahren Sie zum Abrufen von Daten auswählen – und Sie sollten den geringsten Auswirkungen Cursor möglich auswählen. Wenn Sie ein Resultset mit einer gespeicherten Prozedur erstellen, ist das Resultset nicht aktualisierbare Cursor verwenden bearbeiten oder Methoden zu aktualisieren.  
   
 ## <a name="concurrency"></a>Parallelität  
  In einigen Anwendungen von mehreren Benutzern ist es sehr wichtig, für die Daten angezeigt, die für den Endbenutzer so aktuell wie möglich sein. Ein klassisches Beispiel eines solchen Systems ist ein Fluglinien-Reservierungssystem, in denen viele Benutzer Absicherung werden können, für den gleichen Platz für einen bestimmten Flug (und somit einen einzelnen Datensatz). In einem Fall wie folgt muss das Anwendungsdesign gleichzeitige Vorgänge auf einem einzelnen Datensatz behandeln.  

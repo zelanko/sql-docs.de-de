@@ -11,12 +11,12 @@ ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a99d28697a25e2b8fc6d1550765e03e52a8fdc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106870"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400654"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Verwandte Projekte für Data Mining-Lösungen
   Eine Data Mining-Projektmappe erfordert mindestens das Data Mining-Projekt, in dem Datenquellen, Datenquellenansichten, Miningstrukturen und Miningmodelle definiert werden. Wenn Data Mining-Modelle jedoch für die tägliche Entscheidungsfindung eingesetzt werden, ist es wichtig, Data Mining in andere Teile der vorhersagenden Analytiklösung zu integrieren, die die folgenden Prozesse und Komponenten enthalten kann:  
@@ -162,7 +162,7 @@ ms.locfileid: "48106870"
   
  Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- Die Version eines Worts, das nach der Volltextindizierung gespeichert wird, ist ein Token in komprimierter Form. Nachfolgende Abfragen für den Volltextindex generieren mehrere flektierte Formen eines bestimmten Worts, und zwar anhand der Regeln dieser Sprache, um sicherzustellen, dass alle wahrscheinlichen Abgleiche vorgenommen wurden. Obwohl das gespeicherte Token beispielsweise „lesen“ sein kann, sucht die Abfrage-Engine auch nach den Begriffen „gelesen“, „las“ und „Leser“, da es sich bei diesen um die regulär abgeleitete morphologische Abweichung des Wortstamms „run“ handelt.  
+ Die Version eines Worts, das nach der Volltextindizierung gespeichert wird, ist ein Token in komprimierter Form. Nachfolgende Abfragen für den Volltextindex generieren mehrere flektierte Formen eines bestimmten Worts, und zwar anhand der Regeln dieser Sprache, um sicherzustellen, dass alle wahrscheinlichen Abgleiche vorgenommen wurden. Beispielsweise, obwohl das gespeicherte Token "ausgeführt werden kann", sucht die Abfrage-Engine auch für die Begriffe "running", "ran" und "gelaufen", da diese regulär abgeleitete morphologische Abweichung des Wortstamms "run" sind.  
   
  Sie können auch einen Benutzerthesaurus erstellen, um Synonyme zu speichern und um bessere Suchergebnisse oder eine bessere Kategorisierung der Begriffe zu ermöglichen Indem Sie einen Thesaurus entwickeln, der genau auf Ihre Volltextdaten abgestimmt ist, können Sie den Bereich der Volltextabfragen für diese Daten effektiv erweitern. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
@@ -203,6 +203,6 @@ ms.locfileid: "48106870"
   
 ## <a name="see-also"></a>Siehe auch  
  [Mehrdimensionale Modelllösungen &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Projektmappen für tabellarische Modelle &#40;SSAS – tabellarisch&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 60145b2433d7b9d2b6cda4453e2d91599b865a86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643948"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410407"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Neuerungen im Datenmigrations-Assistenten
 Dieser Artikel beschreibt die Ergänzungen in jeder Version von Data Migration Assistant (DMA).
@@ -33,9 +33,9 @@ Der Workflow für die Bewertung können Sie die folgenden Probleme zu erkennen, 
 
 - **Probleme mit der Anwendungskompatibilität**. DMA identifiziert auch Kompatibilitätsprobleme, die im Zusammenhang mit den folgenden Bereichen:
 
-    - Wichtige Änderungen: die bestimmten Schemaobjekten, die die Funktionalität, die Migration in die Zieldatenbank unterbrechen können.  Es wird empfohlen, diese Schemaobjekte nach der Datenbankmigration beheben.
-    - Änderungen am Verhalten: die Schemaobjekte gemeldet möglicherweise weiterhin, jedoch möglicherweise weisen sie ein anderes Verhalten, z. B. eine Verringerung der Leistung.
-    - Nur zu Informationszwecken Probleme: Diese Objekte wirkt sich nicht auf die Migration aber möglicherweise sind von der Funktion, die SQL Server-Versionen veraltet.
+    - Wichtige Änderungen an:  Die bestimmten Schemaobjekten, die die Funktionalität, die Migration in die Zieldatenbank unterbrechen können.  Es wird empfohlen, diese Schemaobjekte nach der Datenbankmigration beheben.
+    - Änderungen am Verhalten: Die Schemaobjekte gemeldet möglicherweise weiterhin funktionsfähig, aber möglicherweise weisen sie ein anderes Verhalten, z. B. eine Verringerung der Leistung.
+    - Nur zu Informationszwecken Probleme:  Diese Objekte wirkt sich nicht auf die Migration aber möglicherweise sind von der Funktion, die SQL Server-Versionen veraltet.
 
 Nachdem die Bewertung abgeschlossen ist, verwenden Sie unsere [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) zum Durchführen der Migration von SQL Server-Datenbanken zu Azure SQL-Datenbank verwaltete Instanz.  DMS unterstützt beide [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (einmalig) und [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (minimaler Ausfallzeit) datenbankmigrationen zu Azure verwaltete SQL-Datenbankinstanz.
 
@@ -121,7 +121,7 @@ Die v1. 0-Version von DMA ist die erste Version, und bietet für:
     - Veraltete Features
 - Ermittlung von neuen Funktionen in der SQL Server-Zielplattform, die ein Upgrade die Datenbank profitieren kann. Alle Ergebnisse werden als Vorschläge zu Features beschrieben, und sie können die folgenden Bereiche unterteilt:
     - Leistung
-    - Security
+    - Sicherheit
     - Speicherung
 -   Moderne Benutzeroberfläche zum Ausführen von Bewertungen.
 

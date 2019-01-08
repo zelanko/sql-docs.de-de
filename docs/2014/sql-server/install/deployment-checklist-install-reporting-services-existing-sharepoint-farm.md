@@ -1,5 +1,5 @@
 ---
-title: 'Bereitstellungsprüfliste: Installieren von Reporting Services in eine vorhandene SharePoint-Farm | Microsoft-Dokumentation'
+title: 'Prüfliste für die Bereitstellung: Installieren von Reporting Services in eine vorhandene SharePoint-Farm | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,15 @@ ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6bf76bca14e7ae1dbf96cfd9c0123bad42e31a94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27e6b4a1fb9726496ac4ae99a08b2e47a9136562
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220520"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399663"
 ---
-# <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Bereitstellungsprüfliste: Installieren von Reporting Services in eine vorhandene SharePoint-Farm
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Berichtsserver im SharePoint können in eine neue SharePoint-Farm oder einer vorhandenen Sharepointfarm installiert werden. In diesem Thema wird beschrieben, die möglichen Szenarien und bewährte Methoden für die Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in vorhandene SharePoint- Farm.  
+# <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Prüfliste für die Bereitstellung: Installieren von Reporting Services in eine vorhandene SharePoint-Farm
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Berichtsserver können in eine neue SharePoint-Farm oder eine vorhandene SharePoint-Farm installiert werden. Dieses Thema beschreibt die möglichen Szenarien und Best Practices zum Installieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in eine vorhandene SharePoint-Farm.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Bevor Sie Setup ausführen, machen Sie sich mit den folgenden Informationen vertraut:  
@@ -27,12 +27,12 @@ ms.locfileid: "48220520"
 |Schritt|Link|  
 |----------|----------|  
 |Erstellen oder identifizieren Sie die Konten, die in einer Berichtsserverbereitstellung verwendet werden. Sie müssen über ein Dienstkonto für den Berichtsserverdienst und über Anmeldeinformationen zum Herstellen einer Verbindung mit der Berichtsserver-Datenbank verfügen.||  
-|Entscheiden Sie sich für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Hosten der Berichtsserver-Datenbank. Sie können eine lokale oder remote-Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie sollten eine Instanz auf einem Computer auswählen, der über ausreichend Speicherkapazität für Ihre Berichte verfügt.||  
+|Wählen Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Hosten der Berichtsserver-Datenbank aus. Sie können eine lokale oder eine Remoteinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Sie sollten eine Instanz auf einem Computer auswählen, der über ausreichend Speicherkapazität für Ihre Berichte verfügt.||  
 |(Optional) Wenn Sie in Abonnements Berichtsserver-E-Mails verwenden möchten, suchen Sie den Namen des SMTP-Servers oder -Gateways, der/das den E-Mail-Dienst für Ihre Organisation bereitstellt.|[Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)|  
-|Hinweis: Wenn Sie einen Computer von einer früheren CTP-Version aktualisieren [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und benutzerdefinierte Änderungen an den Konfigurationsdateien vorgenommen haben, müssen Sie die gleichen Änderungen an den Konfigurationsdateien vornehmen nach dem Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Die betroffenen Dateien sind **"Web.config"** und **client.config**.||  
+|Hinweis: Wenn Sie einen Computer von einer vorherigen CTP-Version von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] aktualisieren und benutzerdefinierte Änderungen an den Konfigurationsdateien vorgenommen haben, müssen Sie die gleichen Änderungen an den Konfigurationsdateien nach dem Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vornehmen. Die betroffenen Dateien sind **"Web.config"** und **client.config**.||  
   
 ## <a name="installation-scenarios"></a>Installationsszenarien  
- Die folgende Tabelle beschreibt die möglichen Szenarien, bei der Installation werden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in vorhandene SharePoint- Farm. Im lokaler Modus kann Berichte lokal von ohne Kombination mit der SharePoint-Dokumentbibliothek gerendert werden eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Berichtsserver. Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte ist erforderlich, ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver jedoch nicht. Weitere Informationen zum lokalen Modus finden Sie unter [Berichte im lokalen Modus im Vergleich mit Berichten im Berichts-Viewer &#40;Reporting Services im SharePoint-Modus&#41; ](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) und [, wo Sie das Reporting Services-add-in für SharePoint-Produkte finden](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+ In der folgenden Tabelle werden die möglichen Szenarien beim Installieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in eine vorhandene SharePoint-Farm beschrieben. Im lokalen Modus können Berichte lokal von der SharePoint-Dokumentbibliothek bereitgestellt werden, ohne das eine Integration in einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver erfolgen muss. Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte ist erforderlich, ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver jedoch nicht. Weitere Informationen zum lokalen Modus finden Sie unter [Berichte im lokalen Modus im Vergleich mit Berichten im Berichts-Viewer &#40;Reporting Services im SharePoint-Modus&#41; ](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) und [, wo Sie das Reporting Services-add-in für SharePoint-Produkte finden](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 |Starten der Konfiguration|Workflow|Beenden der Konfiguration|Kommentare|  
 |----------------------------|--------------|--------------------------|--------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "48220520"
 |**Zusätzliche Konfiguration**||  
 |Hinzufügen von SSRS-Inhaltstypen zu Ihrer Dokumentbibliothek.|[Hinzufügen von Berichtsserver-Inhaltstypen zu einer Bibliothek &#40;integrierten Reporting Services im SharePoint-Modus&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)|  
 |Bereitstellen des SQL Server-Agent|[Provision Subscriptions and Alerts for SSRS Service Applications (Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen)](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)|  
-|Konfigurieren von E-Mail-Einstellungen für die Dienstanwendung|[Konfigurieren von E-mail für eine Reporting-Dienstanwendung Services &#40;SharePoint 2010 und SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
+|Konfigurieren von E-Mail-Einstellungen für die Dienstanwendung|[Konfigurieren von E-Mail für eine Reporting Services-Dienstanwendung &#40;SharePoint 2010 und SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
 |Konfigurieren des Claims to Windows Token Service (c2WTS)|[Claims to Windows Token Service &#40;C2WTS&#41; und Reporting Services](../../../2014/sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)|  
   
 ## <a name="migration-checklist"></a>Migrationsprüfliste  
@@ -60,12 +60,12 @@ ms.locfileid: "48220520"
   
 |Schritt|Link|  
 |----------|----------|  
-|Installieren und konfigurieren Sie den neuen Server. Dazu gehören:<br /><br /> Vorbereitungstool für SharePoint-Produkte<br /><br /> SharePoint 2010-Produkt<br /><br /> SharePoint 2010 SP1<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In für SharePoint 2010-Produkte|[Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
-|Erstellen Sie mindestens eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienstanwendung||  
-|Sicherung [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Datenbanken||  
-|Sicherung [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Verschlüsselungsschlüssel||  
-|Stellen Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Datenbank und -Verschlüsselungsschlüssel wieder her||  
-|Ordnen Sie alle Webanwendungen neuen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-dienstanwendung(en)|Die neue Installation **ist jetzt funktional**|  
+|Installieren und konfigurieren Sie den neuen Server. Dazu gehören:<br /><br /> Vorbereitungstool für SharePoint-Produkte<br /><br /> SharePoint 2010-Produkt<br /><br /> SharePoint 2010 SP1<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint-Modus<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In für SharePoint 2010-Produkte|[Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
+|Erstellen Sie mindestens eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung||  
+|Sichern Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenbanken||  
+|Sichern Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Verschlüsselungsschlüssel.||  
+|Stellen Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenbank und -Verschlüsselungsschlüssel wieder her||  
+|Ordnen Sie alle Webanwendungen neuen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienstanwendungen zu|Die neue Installation **ist jetzt funktional**|  
 |Entfernen Sie die Integrations-URL auf dem alten Server.|Klicken Sie in der SharePoint-Zentraladministration auf der Seite **Allgemeine Anwendungseinstellungen** auf **Reporting Services-Integration**.|  
 |Deinstallieren Sie bei Bedarf [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] von der alten Installation.||  
   

@@ -18,12 +18,12 @@ ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d9b9e174df4eef55a474e27613ac3101c3bfcaa1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3370356deb8585dcff41e8509d4d119dd1597650
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170992"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418396"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung
   Bei einem im integrierten SharePoint-Modus ausgeführten Berichtsserver wird durch die für die SharePoint-Website definierten Sicherheitseinstellungen bestimmt, wie Sie Berichte, Berichtsmodelle und freigegebene Datenquellen anzeigen und verwalten. Wenn Sie die standardmäßigen SharePoint-Gruppen, Berechtigungsebenen und Berechtigungszuweisungen verwenden, können Sie mit Berichten und anderen Dokumenten arbeiten und die aktuellen Sicherheitseinstellungen verwenden.  
@@ -52,12 +52,12 @@ ms.locfileid: "48170992"
   
  Wenn Sie vordefinierte Berechtigungsebenen verwenden, ist keine Aktion erforderlich, da die oben genannten Berechtigungen bereits in Full Control, Design, Contribute, Read und Limited Access enthalten sind. Wenn Sie jedoch benutzerdefinierte Berechtigungsebenen verwenden oder die einem bestimmten Benutzer oder einer Gruppe zugewiesenen Berechtigungen bearbeiten, müssen Sie die Berechtigung manuell hinzufügen.  
   
- Die Berechtigung "Benutzerinformationen durchsuchen" ermöglicht dem Berichtsserver die Rückgabe von Informationen zum Ersteller des Elements und zum Benutzer, der das Element zuletzt geändert hat. Ohne diese Berechtigung gibt der Berichtsserver die folgenden Fehler zurück. Bei Suchvorgängen lautet der Fehler: "SharePoint-Fehler beim Berichtsserver. ---> System.UnauthorizedAccessException: Der Zugriff wird verweigert.“ Bei Veröffentlichungsvorgängen lautet der Fehler: „The permissions granted to user ‘\<domain>\\<user\>' are insufficient for performing this operation.“ (Die dem Benutzer '<Domain>\<Benutzer>' erteilten Berechtigungen reichen zum Ausführen des Vorgangs nicht aus.)  
+ Die Berechtigung "Benutzerinformationen durchsuchen" ermöglicht dem Berichtsserver die Rückgabe von Informationen zum Ersteller des Elements und zum Benutzer, der das Element zuletzt geändert hat. Ohne diese Berechtigung gibt der Berichtsserver die folgenden Fehler zurück. Bei Suchvorgängen lautet ist der Fehler: "Report Server ist einen SharePoint-Fehler aufgetreten. ---> System.UnauthorizedAccessException: Zugriff verweigert". Bei Veröffentlichungsvorgängen lautet der Fehler lautet: "Die Berechtigungen für Benutzer '\<Domäne >\\< Benutzer\>" zum Ausführen des Vorgangs unzureichend sind. "  
   
 ##  <a name="permissionReports"></a> Berechtigungen zum Anzeigen und Verwalten von Berichten  
  Berechtigungen für Berichtsdefinitionen werden über Listenberechtigungen für die Bibliothek definiert, die den Bericht enthält. Sie können Berechtigungen jedoch für einzelne Berichte festlegen, wenn Sie den Zugriff einschränken möchten. Die folgende Tabelle enthält eine Liste von Aufgaben und der Berechtigungen, die diese jeweils unterstützen.  
   
-|Task|Berechtigung|  
+|Aufgabe|Berechtigung|  
 |----------|----------------|  
 |Anzeigen eines Berichts.|**Elemente lesen** für die Bibliothek, die die Dateien enthält, oder für den einzelnen Bericht.|  
 |Anzeigen eines Berichts mit Durchklicken, für den ein Berichtsmodell als Datenquelle verwendet wird.|**Elemente lesen** für die Bibliothek, die den Bericht und das Berichtsmodell enthält, oder für den einzelnen Bericht und das einzelne Modell. Wenn Sie keine Berechtigungen zum Anzeigen des Modells besitzen, können Sie den Bericht zwar öffnen, jedoch kein Ad-hoc-Durchsuchen der Daten ausführen.<br /><br /> Wenn für das Berichtsmodell die Modellelementsicherheit verwendet wird, muss der Benutzer auch über die Berechtigung **Berechtigungen auflisten** für das Berichtsmodell verfügen.|  
@@ -80,7 +80,7 @@ ms.locfileid: "48170992"
   
  Die folgende Tabelle enthält eine Liste von Aufgaben zum Erstellen von Berichten und Verwenden des Berichts-Generators sowie Berechtigungen, die diese jeweils unterstützen:  
   
-|Task|Berechtigung|  
+|Aufgabe|Berechtigung|  
 |----------|----------------|  
 |Starten des Berichts-Generators.|Es sind keine Berechtigungen vorhanden, die explizit zum Steuern des Zugriffs für die Verwendung des Berichts-Generators verwendet werden. Der Berichts-Generator ist verfügbar, wenn die Berichtsserverintegration konfiguriert ist und Sie die Berechtigung zum Hinzufügen von Elementen in einer Bibliothek besitzen. Zum Starten des Berichts-Generators über das Menü **Neu** in der Bibliothek müssen Sie den Berichts-Generator-Inhaltstyp registrieren. Weitere Informationen finden Sie unter [hinzufügen Berichtsserver-Inhaltstypen zu einer Bibliothek &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
 |Hochladen eines Modells oder einer freigegebenen Datenquelle.|**Elemente hinzufügen** für die Bibliothek, die die Dateien enthalten wird.|  
@@ -98,7 +98,7 @@ ms.locfileid: "48170992"
   
  Die folgende Tabelle enthält eine Liste von Aufgaben und Berechtigungen zum Erstellen, Verwalten und Verwenden freigegebener Zeitpläne:  
   
-|Task|Berechtigung|  
+|Aufgabe|Berechtigung|  
 |----------|----------------|  
 |Erstellen, Bearbeiten oder Löschen eines freigegebenen Zeitplans.|**Website verwalten** für die Website.|  
 |Auswählen eines freigegebenen Zeitplans für die Abonnementverarbeitung oder das Abrufen von Daten.|**Öffnen** für die Website, die die Bibliothek enthält.|  
@@ -108,7 +108,7 @@ ms.locfileid: "48170992"
   
  Die folgende Tabelle enthält eine Liste von Aufgaben und Berechtigungen zum Erstellen, Verwalten und Verwenden von Abonnements:  
   
-|Task|Berechtigung|  
+|Aufgabe|Berechtigung|  
 |----------|----------------|  
 |Erstellen, Bearbeiten oder Löschen eines im Besitz eines Benutzers befindlichen Abonnements für einen bestimmten Bericht.|**Elemente bearbeiten** für den Bericht oder für die Bibliothek, die den Bericht enthält. Elemente lesen ist eine abhängige Berechtigung und wird automatisch in die Berechtigungsebene eingeschlossen. Benutzer, die ein Abonnement erstellen können, können auch benutzerdefinierte Zeitpläne zum Ausführen dieses Abonnements erstellen.|  
 |Auswählen eines freigegebenen Zeitplans für die Verwendung mit dem Abonnement.|**Öffnen** für die Website, die die Bibliothek enthält.|  
@@ -134,8 +134,8 @@ ms.locfileid: "48170992"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und Berechtigungen](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Use Built-in Security in Windows SharePoint Services for Report Server Items (Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente)](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   

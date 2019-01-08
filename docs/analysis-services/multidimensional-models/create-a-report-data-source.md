@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine Berichtsdatenquelle | Microsoft Docs
+title: Erstellen eine Berichtsdatenquelle | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bf4b8048392121c37b6f4f13584aa2fd18a90984
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b6e811f9114a484f7b0b68ca9782b9b60e366383
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026967"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393323"
 ---
 # <a name="create-a-report-data-source"></a>Erstellen einer Berichtsdatenquelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,14 +50,14 @@ ms.locfileid: "34026967"
   
 5.  Geben Sie unter **Verbindungszeichenfolge**den Namen des Analysis Services-Servers, den Datenbanknamen, den Cubenamen sowie alle optionalen Einstellungen an.  
   
-     Verbindungszeichenfolge: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’`  
+     Verbindungszeichenfolge: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
     > [!NOTE]  
     >  Wenn mehrere Cubes vorhanden sind, müssen Sie einen Cubenamen angeben.  
   
-     (Optional) Cubes können über Perspektiven verfügen, die den Benutzern eine Auswahlsicht bereitstellen, in der nur bestimmte Dimensionen und/oder Measuregruppen im Client sichtbar sind. Um eine Perspektive anzugeben, geben Sie den Perspektivennamen als Wert für die Cube-Eigenschaft ein: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>’`  
+     (Optional) Cubes können über Perspektiven verfügen, die den Benutzern eine Auswahlsicht bereitstellen, in der nur bestimmte Dimensionen und/oder Measuregruppen im Client sichtbar sind. Um eine Perspektive anzugeben, geben Sie den Perspektivennamen als Wert für die Cube-Eigenschaft ein: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (Optional) In Cubes können Metadaten und Datenübersetzungen für unterschiedliche Sprachen innerhalb des Modells angegeben werden. Damit die Übersetzungen (Daten und Metadaten) angezeigt werden, müssen Sie der Verbindungszeichenfolge die Locale Identifier-Eigenschaft hinzufügen: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’; Locale Identifier=<identifier number>`  
+     (Optional) In Cubes können Metadaten und Datenübersetzungen für unterschiedliche Sprachen innerhalb des Modells angegeben werden. Damit die Übersetzungen (Daten und Metadaten) angezeigt, müssen Sie die "Locale Identifier-Eigenschaft der Verbindungszeichenfolge hinzu: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  Geben Sie in **Anmeldeinformationen**an, wie der Berichtsserver Anmeldeinformationen für den Zugriff auf die externe Datenquelle erhält.  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37ef852cea67ee021cee7dd182dc4a11132abcea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d491467d16b34207ab74f6ec4d892747e26165e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201260"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802042"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Quellen-Editor für SAP BW (Seite Verbindungs-Manager)
   Auf der Seite **Verbindungs-Manager** des Dialogfelds **Quellen-Editor für SAP BW** können Sie den SAP BW-Verbindungs-Manager für die SAP BW-Quelle auswählen. Auf dieser Seite wählen Sie außerdem den Ausführungsmodus und die Parameter aus, mit denen Sie die Daten aus dem SAP NetWeaver BW-System extrahieren.  
@@ -84,7 +83,7 @@ ms.locfileid: "48201260"
  Geben Sie den Servernamen oder die IP-Adresse des Gatewayhosts ein. Normalerweise ist der Name oder die IP-Adresse identisch mit dem SAP-Anwendungsserver.  
   
  **Gatewaydienst**  
- Geben Sie den Namen des Gatewaydiensts im Format `sapgwNN`, wobei `NN` der Systemnummer entspricht.  
+ Geben Sie den Namen des Gatewaydiensts im Format `sapgwNN` ein, wobei `NN` der Systemnummer entspricht.  
   
  **Programm-ID**  
  Geben Sie die Programm-ID ein, die dem RFC-Ziel zugeordnet ist.  
@@ -110,7 +109,7 @@ ms.locfileid: "48201260"
  Geben Sie den Servernamen oder die IP-Adresse des Gatewayhosts ein. Normalerweise ist der Name oder die IP-Adresse identisch mit dem SAP-Anwendungsserver.  
   
  **Gatewaydienst**  
- Geben Sie den Namen des Gatewaydiensts im Format `sapgwNN`, wobei `NN` der Systemnummer entspricht.  
+ Geben Sie den Namen des Gatewaydiensts im Format `sapgwNN` ein, wobei `NN` der Systemnummer entspricht.  
   
  **Programm-ID**  
  Geben Sie die Programm-ID ein, die dem RFC-Ziel zugeordnet ist.  
@@ -123,7 +122,7 @@ ms.locfileid: "48201260"
  Geben Sie die Anforderungs-ID ein, die der Extrahierung zugeordnet ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Quellen-Editor für SAP BW &#40;Seite "Spalten"&#41;](sap-bw-source-editor-columns-page.md)   
+ [Quellen-Editor für SAP BW &#40;Seite Spalten&#41;](sap-bw-source-editor-columns-page.md)   
  [Quellen-Editor für SAP BW &#40;Seite „Fehlerausgabe“&#41;](sap-bw-source-editor-error-output-page.md)   
  [Quellen-Editor für SAP BW &#40;Seite „Erweitert“&#41;](sap-bw-source-editor-advanced-page.md)   
  [F1-Hilfe zu Microsoft Connector 1.1 für SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  

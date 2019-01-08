@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e1bf58c9477cc06855d332ec3bd69b50a6bf19dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b6f552f009a93caab2437a5ae6a1533833d6054b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992410"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412817"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,11 +49,11 @@ StructureColumn('structure column name')
 ## <a name="error-messages"></a>Fehlermeldungen  
  Der folgende Sicherheitsfehler wird ausgegeben, wenn der Benutzer keine Drillthroughberechtigungen für die übergeordnete Miningstruktur hat.  
   
- Der Benutzer '%{user/}' verfügt nicht über die Berechtigung zum Durchführen eines Drillthrough in der übergeordneten Miningstruktur des Miningmodells ‘%{model/}’.  
+ Die ' % {Benutzer /}' Benutzer verfügt nicht über die Berechtigung zum Ausführen eines Drillthroughs für die übergeordnete Miningstruktur des der ' % {Modell /}' Mining-Modell.  
   
  Die folgende Fehlermeldung wird ausgegeben, wenn ein ungültiger Strukturspaltenname angegeben wird:  
   
- Die Miningstrukturtabelle ‘%{structure-column-name/}’ wurde in der übergeordneten Miningstruktur ‘%{structure/}’ im aktuellen Kontext (line %{line/}, column %{column/}) nicht gefunden.  
+ Die ' % {Structure-Column-Name /}' Miningstruktur-Spalte wurde nicht gefunden, der ' % {Struktur /}' übergeordneten Miningstruktur im aktuellen Kontext (Zeile % {Zeile /}, Spalte % {Spalte /}).  
   
 ## <a name="examples"></a>Beispiele  
  Für diese Beispiele wird die folgende Miningstruktur verwendet. Beachten Sie, dass die Miningstruktur zwei geschachtelte Tabellenspalten, `Products` und `Hobbies` enthält. Die geschachtelte Tabelle in der `Hobbies`-Spalte enthält eine einzige Spalte, die als Schlüssel für die geschachtelte Tabelle verwendet wird. Die geschachtelte Tabelle in der `Products`-Spalte ist eine komplex geschachtelte Tabelle mit einer Schlüsselspalte und weiteren Spalten, die für die Eingabe verwendet werden. Die folgenden Beispiele zeigen, wie eine Data Mining-Struktur so entworfen werden kann, dass sie viele unterschiedliche Spalten enthält, auch wenn nicht jedes Modell jede Spalte verwenden darf. Einige dieser Spalten sind auf der Modellebene zum Generalisieren von Mustern möglicherweise nicht von Nutzen, können jedoch sehr hilfreich für den Drillthrough sein.  
@@ -94,11 +94,11 @@ ProductName
 WITH FILTER(EXISTS (Products))  
 ```  
   
-### <a name="sample-query-1-returning-a-column-from-the-mining-structure"></a>Beispielabfrage 1: Zurückgeben einer Spalte der Miningstruktur  
+### <a name="sample-query-1-returning-a-column-from-the-mining-structure"></a>Beispielabfrage 1: Zurückgeben einer Spalte aus der Miningstruktur  
  Die folgende Beispielabfrage gibt die Spalten `CustomerName` und `Age` zurück, die als Teil des Miningmodells definiert sind. Die Abfrage gibt außerdem die Spalte `Age` zurück, die zwar Teil der Struktur, nicht aber Teil des Miningmodells ist.  
   
 ```  
-SELECT CustomerName, Age, StructureColumn(‘Occupation’) FROM MyModel.CASES   
+SELECT CustomerName, Age, StructureColumn('Occupation') FROM MyModel.CASES   
 WHERE Age > 30  
 ```  
   
@@ -109,13 +109,13 @@ WHERE Age > 30
   
 ```  
 SELECT CustomerName, Age,  
-(SELECT ProductName, StructureColumn(‘Quantity’) FROM Products) FROM MA.CASES   
-WHERE StructureColumn(‘Occupation’) = ‘Architect’  
+(SELECT ProductName, StructureColumn('Quantity') FROM Products) FROM MA.CASES   
+WHERE StructureColumn('Occupation') = 'Architect'  
 ```  
   
- Beachten Sie, dass in diesem Beispiel ein Filter, auf die strukturspalte angewendet wird auf die Fälle auf Kunden beschränken, deren "Occupation" ist 'Architect' (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`). Da das Anwenden der Modellfilterbedingung auf Fälle immer während der Erstellung des Modells stattfindet, werden nur die Fälle in die Modellfälle aufgenommen, die in der `Products`-Tabelle mindestens eine qualifizierende Zeile enthalten. Aus diesem Grund werden sowohl der Filter für die geschachtelte `Products`-Tabelle als auch der Filter für den `(‘Occupation’)`-Fall angewendet.  
+ Beachten Sie, dass in diesem Beispiel ein Filter, auf die strukturspalte angewendet wird auf die Fälle auf Kunden beschränken, deren "Occupation" ist 'Architect' (`WHERE StructureColumn('Occupation') = 'Architect'`). Da das Anwenden der Modellfilterbedingung auf Fälle immer während der Erstellung des Modells stattfindet, werden nur die Fälle in die Modellfälle aufgenommen, die in der `Products`-Tabelle mindestens eine qualifizierende Zeile enthalten. Aus diesem Grund werden sowohl der Filter für die geschachtelte `Products`-Tabelle als auch der Filter für den `('Occupation')`-Fall angewendet.  
   
-### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Beispielabfrage 3: Auswählen von Spalten einer geschachtelten Tabelle  
+### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Beispielabfrage 3: Auswählen von Spalten in einer geschachtelten Tabelle  
  Die folgende Beispielabfrage gibt die Namen der Kunden zurück, die als Trainingsfälle des Modells verwendet wurden. Für jeden Kunden gibt die Abfrage auch eine geschachtelte Tabelle zurück, die die Kaufdetails enthält. Obwohl das Modell enthält die `ProductName` Spalte des Modells verwendet nicht den Wert des der `ProductName` Spalte. Das Modell überprüft nur, wenn das Produkt zu den üblichen erworben wurde (`NOT``OnSale`) Preis. Diese Abfrage gibt nicht nur den Produktnamen zurück, sondern auch die erworbene Menge, die nicht im Modell enthalten ist.  
   
 ```  
@@ -126,7 +126,7 @@ FROM MyModel.CASES
   
  Beachten Sie, dass sowohl die `ProductName`-Spalte als auch die `Quantity`-Spalte nur dann zurückgegeben werden, wenn Drillthrough für das Miningmodell aktiviert ist.  
   
-### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>Beispielabfrage 4: Filtern auf und Zurückgeben von geschachtelten Tabellenspalten  
+### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>Beispielabfrage 4: Filtern auf und Zurückgeben von geschachtelten Tabellenspalten  
  Die folgende Beispielabfrage gibt die Fallspalten und die Spalten der geschachtelten Tabelle zurück, die zwar in der Miningstruktur, nicht aber im Modell enthalten sind. Das Modell wurde durch Filtern bereits auf `OnSale`-Produkte beschränkt. Die folgende Abfrage wendet zusätzlich noch einen Filter auf die `Quantity`-Spalte der Miningstruktur an:  
   
 ```  

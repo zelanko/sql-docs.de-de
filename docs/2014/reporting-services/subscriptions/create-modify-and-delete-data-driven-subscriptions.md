@@ -16,12 +16,12 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09b48e20683256eddd7d2619e8f4cbe912c6f0a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fc3ab4ce541e194f9768cc710993db0119eaefd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207576"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410187"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Erstellen, Ändern und Löschen eines datengesteuerten Abonnements
   Ein datengesteuertes Abonnement ist ein abfragebasiertes Abonnement, das die Datenwerte abfragt, die zum Verarbeiten des Abonnements zur Laufzeit verwendet werden. Wenn das Abonnement ausgelöst wird, wird eine Abfrage verarbeitet, die aktuelle Informationen über Empfänger, Berichtsübermittlungsoptionen, Renderingformate und Parametereinstellungen abruft. Die Abfrageergebnisse werden mit der Abonnementdefinition kombiniert. Dabei wird ein dynamisches Abonnement erstellt, das  Daten verwendet, die bereits in einer Mitarbeiterdatenbank, einer Kundendatenbank oder einer beliebigen Datenbank liegen und Informationen enthalten,  die als Abonnentendaten verwendbar sind.  
@@ -65,7 +65,7 @@ ms.locfileid: "48207576"
   
 2.  Wählen Sie die Registerkarte **Abonnements** aus. Alternativ können Sie auf den Link **Meine Abonnements** oben im Berichts-Manager klicken.  
   
-3.  Wählen Sie das Abonnement aus, das Sie ändern möchten. Das folgende Symbol markiert ein datengesteuertes Abonnement: ![Datengesteuertes Abonnement-Symbol](../media/hlp-16subscriptiondd.gif "Data-driven subscription icon")  
+3.  Wählen Sie das Abonnement aus, das Sie ändern möchten. Das folgende Symbol weist auf ein datengesteuertes Abonnement hin: ![Symbol für datengesteuertes Abonnement](../media/hlp-16subscriptiondd.gif "datengesteuerten Abonnement (Symbol)")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>So ändern Sie ein vorhandenes datengesteuertes Abonnement (SharePoint-Modus)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48207576"
   
 -   **Datenanforderungen**. Es muss eine externe Datenquelle mit Abonnentendaten vorhanden sein, auf die zugegriffen werden kann.  
   
--   **Benutzeranforderungen**. Der Autor des Abonnements benötigt die Berechtigungen "Berichte verwalten" sowie "Alle Abonnements verwalten". Weitere Informationen zu Berechtigungen für die Elementebene finden Sie unter [Aufgaben und Berechtigungen](../security/tasks-and-permissions.md). Außerdem muss er über die notwendigen Anmeldeinformationen für den Zugriff auf die externe Datenquelle mit Abonnentendaten verfügen.  
+-   **Benutzeranforderungen**. Der Autor des Abonnements benötigt die Berechtigungen "Berichte verwalten" sowie "Alle Abonnements verwalten". Weitere Informationen zu Berechtigungen auf Elementebene finden Sie unter [Aufgaben und Berechtigungen](../security/tasks-and-permissions.md). Außerdem muss er über die notwendigen Anmeldeinformationen für den Zugriff auf die externe Datenquelle mit Abonnentendaten verfügen.  
   
 ##  <a name="bkmk_define_query"></a> Definieren Sie eine Abfrage, die Abonnementinformationen abruft.  
  Für ein datengesteuertes Abonnement muss eine Abfrage oder ein Befehl zum Abrufen von Abonnentendaten angegeben werden. Die Abfrage sollte pro Abonnent eine Zeile generieren. Falls Sie die E-Mail-Übermittlungserweiterung verwenden, sollte die Abfrage für jeden Abonnenten einen gültigen E-Mail-Alias zurückgeben. Die Anzahl von durchgeführten Übermittlungen basiert auf der Anzahl der von der Abfrage zurückgegebenen Zeilen. Besteht das Rowset aus 10.000 Zeilen, übermittelt das Abonnement 10.000 Berichte.  
@@ -98,12 +98,12 @@ ms.locfileid: "48207576"
 ##  <a name="bkmk_run_subscription"></a> Ein Abonnement auszuführen  
  Konfigurieren Sie die Bedingungen für die Abonnementausführung. Sie können einen Zeitplan konfigurieren, oder mit den Updates einer Momentaufnahme zur Berichtsausführung die Verarbeitung des Abonnements auslösen.  
   
- ![Beachten Sie](../media/rs-fyinote.png "Hinweis") zwar gibt es kein Feature in der Benutzeroberfläche, die Sie zum sofortigen Ausführung eines Abonnements verwenden können, können Sie ein einfache Windows PowerShell-Skript zum Ausführen eines Abonnements auslösen. Weitere Informationen finden Sie unter dem "Skript: ausführen (auslösen) eines einzelnen Abonnements" im Abschnitt [mithilfe von PowerShell ändern "und" List Reporting Services Subscription Owners "und" Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
+ ![Beachten Sie](../media/rs-fyinote.png "Hinweis") zwar gibt es kein Feature in der Benutzeroberfläche, die Sie zum sofortigen Ausführung eines Abonnements verwenden können, können Sie ein einfache Windows PowerShell-Skript zum Ausführen eines Abonnements auslösen. Weitere Informationen finden Sie unter dem "Skript: Ausführen (auslösen) eines einzelnen Abonnements"im Abschnitt [mithilfe von PowerShell ändern" und "List Reporting Services Subscription Owners" und "Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  Zeitplan und Bedingungen für die Ausführung datengesteuerter Abonnements sind mit der Verarbeitung von Standardabonnements identisch.  
   
 ##  <a name="bkmk_manage_and_delete"></a> Verwalten und Löschen eines datengesteuerten Abonnements  
- Ein datengesteuertes Abonnement, das gerade verarbeitet wird, kann auf der Seite Aufträge verwalten des Berichts-Managers nicht beendet oder gelöscht werden. Aus diesem Grund ist es vorteilhaft, einen freigegebenen Zeitplan zu verwenden, um ein datengesteuertes Abonnement auszulösen. Falls Sie die Verarbeitung eines Abonnements vorübergehend unterbinden möchten, können Sie den Zeitplan anhalten, mit dem das Abonnement ausgelöst wird. Weitere Informationen finden Sie unter [erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../create-manage-subscriptions-native-mode-report-servers.md).  
+ Ein datengesteuertes Abonnement, das gerade verarbeitet wird, kann auf der Seite Aufträge verwalten des Berichts-Managers nicht beendet oder gelöscht werden. Aus diesem Grund ist es vorteilhaft, einen freigegebenen Zeitplan zu verwenden, um ein datengesteuertes Abonnement auszulösen. Falls Sie die Verarbeitung eines Abonnements vorübergehend unterbinden möchten, können Sie den Zeitplan anhalten, mit dem das Abonnement ausgelöst wird. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../create-manage-subscriptions-native-mode-report-servers.md).  
   
  Um ein datengesteuertes Abonnement zu löschen, wählen Sie dieses auf der Seite „Meine Abonnements“ oder auf der Seite „Abonnements“ aus, und klicken Sie anschließend auf **Löschen**.  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server replication]
@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90dcc76466709b1cc3e76406029ea2fffaaea1f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167188"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768452"
 ---
 # <a name="manage-job-steps"></a>Verwalten von Auftragsschritten
   Ein Auftragsschritt ist eine Aktion, die der Auftrag auf einer Datenbank oder einem Server ausführt. Jeder Auftrag muss mindestens einen Auftragsschritt aufweisen. Folgende Auftragsschritte sind möglich:  
@@ -57,7 +57,7 @@ ms.locfileid: "48167188"
   
 -   Ausführbare Programme und Betriebssystembefehle.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen verwendet werden.  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Aufgaben.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48167188"
   
 -   Den Prozessexitcode, der zurückgegeben wird, wenn der Befehl erfolgreich ausgeführt wurde.  
   
--   Den auszuführenden Befehl. Beim Ausführen eines Betriebssystembefehls handelt es sich hierbei einfach um den Befehl selbst. Bei einem externen Programm ist dies der Name des Programms und die Argumente für das Programm, z. B.: **C:\Programme\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**.  
+-   Den auszuführenden Befehl. Beim Ausführen eines Betriebssystembefehls handelt es sich hierbei einfach um den Befehl selbst. Bei einem externen Programm ist dies der Name des Programms und die Argumente für das Programm, z. B.: **C:\Programme\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e --q "Sp_who"**  
   
     > [!NOTE]  
     >  Sie müssen den vollständigen Pfad zur ausführbaren Datei angeben, wenn diese sich nicht in dem Verzeichnis befindet, das im Systempfad oder dem Pfad für den Benutzer angegeben ist, als der der Auftragsschritt ausgeführt wird.  
@@ -206,7 +206,7 @@ Set oServer = nothing
 |Beschreibt, wie Optionen für Transact-SQL-Auftragsschritte für den Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent erstellt werden.|[Definieren von Optionen für Transact-SQL-Auftragsschritte](define-transact-sql-job-step-options.md)|  
 |Beschreibt, wie ein ActiveX-Skript-Auftragsschritt erstellt wird.|[Erstellen eines ActiveX-Skript-Auftragsschritts](create-an-activex-script-job-step.md)|  
 |Beschreibt, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragsschritte erstellt und definiert werden, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services-Befehle und -Abfragen ausführen.|[Erstellen eines Analysis Services-Auftragsschritts](create-an-analysis-services-job-step.md)|  
-|Beschreibt, welche Aktion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen sollte, wenn während der Auftragsausführung ein Fehler auftritt.|[Festlegen der Vorgehensweise nach Erfolg oder Fehlschlagen eines Auftragsschritts](set-job-step-success-or-failure-flow.md)|  
+|Beschreibt, welche Aktion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen sollte, wenn während der Auftragsausführung ein Fehler auftritt.|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
 |Beschreibt, wie Auftragsschrittdetails im Dialogfeld Auftragsschritt-Eigenschaften angezeigt werden.|[Anzeigen von Auftragsschrittinformationen](view-job-step-information.md)|  
 |Beschreibt, wie ein Auftragsschrittprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents gelöscht wird.|[Löschen eines Auftragsschrittprotokolls](delete-a-job-step-log.md)|  
   

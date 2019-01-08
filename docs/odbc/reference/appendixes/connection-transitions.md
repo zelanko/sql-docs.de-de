@@ -15,12 +15,12 @@ ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46d480683a2d10f760a02049ab28bc590353fcbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f808460a1421a9ab4cb3a76c2810d810b9636b11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619098"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537500"
 ---
 # <a name="connection-transitions"></a>Verbindungsübergänge
 ODBC-Verbindungen werden die folgenden Status haben.  
@@ -266,7 +266,7 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
  [1] für die Verbindung im Autocommit Modus wurde, oder die Datenquelle wurde nicht gestartet, eine Transaktion.  
   
- [2] für die Verbindung wurde im Manualcommit-Modus, und die Datenquelle wurde eine Transaktion gestartet.  
+ [2] für die Verbindung wurde im Manualcommit Modus, und die Datenquelle wurde eine Transaktion gestartet.  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   

@@ -20,12 +20,12 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b8b642797808b023e200f1f59ae162f09cea514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 061636210c76bace7ae483e277c624bb291cdeb8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780318"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509994"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47780318"
 |**server_specification_id**|**Int**|ID der **Server_specification**.|  
 |**create_date**|**Datetime**|Datum, an dem die Überwachungsserverspezifikation erstellt wurde.|  
 |**modified_date**|**Datetime**|Datum, an dem die Überwachungsserverspezifikation zuletzt geändert wurde.|  
-|**is_state_enabled**|**tinyint**|Überwachungsspezifikationsstatus:<br /><br /> 0 – DEAKTIVIERT<br /><br /> 1 –ENABLED|  
+|**is_state_enabled**|**tinyint**|Überwachungsspezifikationsstatus:<br /><br /> 0 – DEAKTIVIERT<br /><br /> 1 - AKTIVIERT|  
 |**audit_GUID**|**uniqueidentifier**|GUID für die Überwachung, die diese Spezifikation enthält. Wird während der Enumeration der Elementserver-Überwachungsspezifikationen beim Serverstart verwendet.|  
   
 ## <a name="permissions"></a>Berechtigungen  

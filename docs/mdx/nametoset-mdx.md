@@ -1,5 +1,5 @@
 ---
-title: NameToSet (MDX) | Microsoft Docs
+title: NameToSet (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5bb38614d9c83b0624d76f9f09c377c9fcbf82fb
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: d42a94ce4e878a3f4ac0ef14a48872bf5d32a144
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742359"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542463"
 ---
 # <a name="nametoset-mdx"></a>NameToSet (MDX)
 
 
-  Gibt eine Menge zurück, die das durch eine Zeichenfolge im MDX-Format (Multidimensional Expressions) angegebene Element enthält.  
+  Gibt einen zurück, das das durch eine Multidimensional Expressions MDX-formatierte Zeichenfolge angegebene Element enthält.  
   
 ## <a name="syntax"></a>Syntax  
   

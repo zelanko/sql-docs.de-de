@@ -15,17 +15,17 @@ ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0cd386cad85726707f1ce3ea9f7931bda4e66c25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c9018dcf8ae02d939f7ba3bc29d46231ef39d1f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140500"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545551"
 ---
 # <a name="save-copy-of-package"></a>Kopie des Pakets speichern
   Verwenden Sie das in **verfügbare Dialogfeld** Kopie des Pakets speichern [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], um eine Kopie eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakets aus [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] an einem anderen Speicherort zu speichern und dabei optional die Schutzebene des Pakets zu ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Paketspeicherort**  
  Wählen Sie den Typ des Speicherortes aus, an dem das Paket gespeichert werden soll. Die folgenden Optionen stehen zur Verfügung:  
   
@@ -54,13 +54,13 @@ ms.locfileid: "48140500"
  Geben Sie ein Kennwort an, falls Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Paketpfad**  
- Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um nach dem Ordner zu suchen, in dem das Paket gespeichert werden soll.  
+ Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**  Schaltfläche, und suchen Sie den Ordner, in dem das Paket gespeichert.  
   
  **Schutzebene**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , und aktualisieren Sie im Dialogfeld **Paketschutzebene** die Schutzebene. Weitere Informationen finden Sie unter [Dialogfeld „Paket- und Projektschutzebene“](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**  und Aktualisieren der Schutzebene in die **Paketschutzebene** Dialogfeld. Weitere Informationen finden Sie unter [Dialogfeld „Paket- und Projektschutzebene“](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Referenz zur Benutzeroberfläche des Import-Paket Dialogfelds](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+ [Referenz zur Benutzeroberfläche für Dialogfeld "Paket importieren"](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [Referenz zur Benutzeroberfläche des Dialogfelds Paket exportieren](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Speichern von Paketen](save-packages.md)   
  [Importieren und Exportieren von Paketen &#40;SSIS-Dienst&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  

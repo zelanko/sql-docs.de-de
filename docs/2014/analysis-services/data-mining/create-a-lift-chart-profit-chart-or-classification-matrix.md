@@ -13,12 +13,12 @@ ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67399a724001cbd1f04a24f0558f2618aafd155a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e183c1e25aa81b05c897674fc5c9f4a2dd8d0c5b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069430"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529356"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Erstellen von Prognosegütediagrammen, Gewinndiagrammen oder Klassifikationsmatrizen
   Sie können für ein Data Mining-Modell in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mit fünf grundlegenden Schritten ein Genauigkeitsdiagramm erstellen:  
@@ -70,7 +70,7 @@ ms.locfileid: "48069430"
   
     -   Wählen Sie die Option **Miningstrukturtestfälle verwenden**aus, um den vollständigen Satz der Testfälle zu verwenden, die als Teil des zurückgehaltenen Datasets der Miningstrukturen definiert wurden.  
   
-    -   Aktivieren Sie die Option **Anderes Dataset verwenden**, wenn Sie externe Daten verwenden möchten.  Das Dataset muss als Datenquellensicht verfügbar sein.   Klicken Sie auf die Schaltfläche zum Durchsuchen (**…**), um die Datentabellen auszuwählen, die Sie für das Genauigkeitsdiagramm verwenden möchten. Weitere Informationen finden Sie unter [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
+    -   Aktivieren Sie die Option **Anderes Dataset verwenden**, wenn Sie externe Daten verwenden möchten.  Das Dataset muss als Datenquellensicht verfügbar sein.   Klicken Sie auf die Schaltfläche zum Durchsuchen (**...** ) Schaltfläche, um die Datentabellen auszuwählen, für das Genauigkeitsdiagramm verwenden möchten. Weitere Informationen finden Sie unter [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
   
          Wenn Sie ein externes Dataset verwenden, können Sie das Eingabedataset optional filtern. Weitere Informationen finden Sie unter [Anwenden von Filtern zum Modellieren von Testdaten](apply-filters-to-model-testing-data.md).  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48069430"
      Die Höhe des mit einem erfolgreichen Verkauf verbundenen Umsatzes.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Prognosegütediagramm &#40;Analysis Services – Datamining&#41;](lift-chart-analysis-services-data-mining.md)   
- [Klassifikationsmatrix &#40;Analysis Services – Datamining&#41;](classification-matrix-analysis-services-data-mining.md)  
+ [Prognosegütediagramm &#40;Analysis Services – Data Mining&#41;](lift-chart-analysis-services-data-mining.md)   
+ [Klassifikationsmatrix &#40;Analysis Services – Data Mining&#41;](classification-matrix-analysis-services-data-mining.md)  
   
   

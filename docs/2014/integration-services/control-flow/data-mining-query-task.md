@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytask.f1
@@ -16,12 +15,12 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4eddd53df9d9a373a9a4101686dd016a09d20e38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa3e66397a61dc6cf5679e089bc03ce0e2d252cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225160"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785032"
 ---
 # <a name="data-mining-query-task"></a>Data Mining-Abfragetask
   Der Data Mining-Abfragetask führt Vorhersageabfragen basierend auf in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellten Data Mining-Modellen aus. Die Vorhersageabfrage erstellt mithilfe von Miningmodellen eine Vorhersage für neue Daten. Beispielsweise kann eine Vorhersageabfrage vorhersagen, wie viele Segelboote in den Sommermonaten voraussichtlich verkauft werden, oder sie kann eine Liste potenzieller Kunden generieren, die mit hoher Wahrscheinlichkeit ein Segelboot kaufen werden.  
@@ -52,11 +51,11 @@ ms.locfileid: "48225160"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für Data Mining-Abfragetasks &#40;Mining-Registerkarte "Modell"&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
+-   [Editor für Data Mining-Abfragetasks &#40;Registerkarte „Miningmodell“&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
   
--   [Editor für Data Mining-Abfragetasks &#40;Abfrage (Registerkarte)&#41;](../data-mining-query-task-editor-query-tab.md)  
+-   [Editor für Data Mining-Abfragetasks &#40;Registerkarte „Abfrage“&#41;](../data-mining-query-task-editor-query-tab.md)  
   
--   [Editor für Data Mining-Abfragetasks &#40;Registerkarte Ausgabe&#41;](../data-mining-query-task-editor-output-tab.md)  
+-   [Editor für Data Mining-Abfragetasks &#40;Registerkarte „Ausgabe“&#41;](../data-mining-query-task-editor-output-tab.md)  
   
 > [!NOTE]  
 >  Der Transformations-Editor für Data Mining-Abfragen weist keine Seite mit Ausdrücken auf. Verwenden Sie stattdessen das Fenster **Eigenschaften** für den Zugriff auf die Tools zum Erstellen und Verwalten von Eigenschaftsausdrücken für Eigenschaften des Data Mining-Abfragetasks.  

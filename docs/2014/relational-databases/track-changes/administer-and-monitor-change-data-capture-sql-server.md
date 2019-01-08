@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
@@ -15,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dc1702fd89a232d6b939dc8300e42925a0da293b
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560167"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788902"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
   In diesem Thema wird beschrieben, wie Sie Change Data Capture verwalten und überwachen können.  
@@ -32,7 +31,7 @@ ms.locfileid: "51560167"
  Um das Verhalten von Aufzeichnungsaufträgen zu verstehen, müssen Sie verstehen, wie die konfigurierbaren Parameter von `sp_cdc_scan` verwendet werden.  
   
 #### <a name="maxtrans-parameter"></a>maxtrans-Parameter  
- Der *maxtrans* -Parameter gibt die maximale Anzahl von Transaktionen an, die während eines einzelnen Scanzyklus des Protokolls verarbeitet werden kann. Wenn Sie die Anzahl der zu verarbeitenden Transaktionen während der Überprüfung wird dieser Grenzwert erreicht, sind keine weiteren Transaktionen in den aktuellen Scan enthalten. Wenn ein Scanzyklus abgeschlossen ist, ist die Anzahl der verarbeiteten Transaktionen immer kleiner als oder gleich *maxtrans*.  
+ Der *maxtrans* -Parameter gibt die maximale Anzahl von Transaktionen an, die während eines einzelnen Scanzyklus des Protokolls verarbeitet werden kann. Wenn während des Scans die Anzahl der zu verarbeitenden Transaktionen diese Grenze erreicht, werden keine zusätzlichen Transaktionen in den aktuellen Scan eingeschlossen. Wenn ein Scanzyklus abgeschlossen ist, ist die Anzahl der verarbeiteten Transaktionen immer kleiner als oder gleich *maxtrans*.  
   
 #### <a name="maxscans-parameter"></a>maxscans-Parameter  
  Der Parameter *maxscans* gibt die maximale Anzahl der Scanzyklen an, die vor dem Zurückkehren (kontinuierlich = 0) oder dem Ausführen einer Waitfor-Anweisung (kontinuierlich = 1) auszuführen versucht werden, um das Protokoll zu leeren.  
@@ -76,7 +75,7 @@ ms.locfileid: "51560167"
  Wenn ein Cleanup ausgeführt wird, wird die Untergrenzenmarkierung für alle Aufzeichnungsinstanzen zunächst in einer einzelnen Transaktion aktualisiert. Anschließend wird versucht, veraltete Einträge aus den Änderungstabellen und der Tabelle cdc.lsn_time_mapping zu entfernen. Der konfigurierbare Schwellenwert begrenzt, wie viele Einträge in jeder einzelnen Anweisung gelöscht werden. Das Fehlschlagen des Löschvorgangs für einzelne Tabellen führt nicht dazu, dass die Ausführung des Vorgangs nicht für die übrigen Tabellen versucht wird.  
   
 ### <a name="cleanup-job-customization"></a>Anpassen eines Cleanupauftrags  
- Die Anpassungsmöglichkeiten für den Cleanupauftrag bestehen in der Strategie, die verwendet wird, um zu bestimmen, welche Einträge in der Änderungstabelle verworfen werden sollen. Im übermittelten Cleanupauftrag wird nur eine zeitbasierte Strategie unterstützt. In diesem Fall wird die neue Untergrenzenmarkierung durch Subtrahieren der zulässigen Beibehaltungsdauer von der Commitzeit der letzten verarbeiteten Transaktion berechnet. Da die zugrunde liegenden Cleanup-Prozeduren auf basieren `lsn` statt auf Zeit basieren, eine beliebige Anzahl von Strategien kann verwendet werden, um den kleinsten bestimmen `lsn` , die in den Änderungstabellen bewahrt. Nur einige von diesen sind streng zeitbasiert. Es könnte z. B. Wissen über die Clients zum Bereitstellen einer Sicherung verwendet werden, wenn nachfolgende Prozesse, die Zugriff auf die Änderungstabellen erfordern, nicht ausgeführt werden können. Obwohl die Standardstrategie denselben `lsn` für das Cleanup aller Änderungstabellen der Datenbank verwendet, kann auch die zugrunde liegende Cleanupprozedur für das Cleanup auf Aufzeichnungsinstanzebene aufgerufen werden.  
+ Die Anpassungsmöglichkeiten für den Cleanupauftrag bestehen in der Strategie, die verwendet wird, um zu bestimmen, welche Einträge in der Änderungstabelle verworfen werden sollen. Im übermittelten Cleanupauftrag wird nur eine zeitbasierte Strategie unterstützt. In diesem Fall wird die neue Untergrenzenmarkierung durch Subtrahieren der zulässigen Beibehaltungsdauer von der Commitzeit der letzten verarbeiteten Transaktion berechnet. Da die zugrunde liegenden Cleanup-Prozeduren auf basieren `lsn` statt auf Zeit basieren, eine beliebige Anzahl von Strategien kann verwendet werden, um den kleinsten bestimmen `lsn` , die in den Änderungstabellen bewahrt. Nur einige von diesen sind streng zeitbasiert. Es könnte z. B. Wissen über die Clients zum Bereitstellen einer Sicherung verwendet werden, wenn nachfolgende Prozesse, die Zugriff auf die Änderungstabellen erfordern, nicht ausgeführt werden können. Darüber hinaus, obwohl die Standardstrategie gleich `lsn` für das Cleanup der Änderungstabellen für die Datenbanken kann die zugrunde liegende cleanupprozedur auch Cleanup auf aufzeichnungsinstanzebene aufgerufen werden.  
   
 ##  <a name="Monitor"></a> Überwachen des Change Data Capture-Prozesses  
  Indem Sie den Change Data Capture-Prozess überwachen, können Sie ermitteln, ob Änderungen korrekt und mit einer akzeptablen Latenzzeit in die Änderungstabellen geschrieben werden. Das Überwachen kann Ihnen auch dabei helfen, jegliche Fehler zu identifizieren, die auftreten könnten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über zwei dynamische Verwaltungssichten, womit Sie Change Data Capture überwachen können: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) und [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  

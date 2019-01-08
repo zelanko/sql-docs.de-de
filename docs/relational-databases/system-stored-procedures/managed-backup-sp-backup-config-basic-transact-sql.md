@@ -21,12 +21,12 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7722193dc643b4fd5afaa9a21559febe137cba6b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f3345e2b27a14285f3b9a3bfffd1ec95549ef124
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662849"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201819"
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup. sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -65,13 +65,13 @@ EXEC managed_backup.sp_backup_config_basic
  @credential_name  
  Der Name der SQL-Anmeldeinformationen, der zur Authentifizierung beim Windows Azure-Speicherkonto verwendet wird. @credentail_name ist **SYSNAME**. Wenn angegeben, wird die Sicherung in ein Seiten-Blob gespeichert. Wenn dieser Parameter NULL ist, wird die Sicherung als Block-Blob gespeichert werden. Seiten-Blob-Sicherung ist veraltet, sodass sie bevorzugt wird, verwenden Sie die neuen Block-BLOB-backup-Funktionen. Bei Verwendung zum Ändern der [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Konfiguration ist dieser Parameter optional. Wenn nicht angegeben, werden dann die vorhandenen Konfigurationswerte beibehalten.  
   
-> [!WARNING]  
+> [!WARNING]
 >  Die **@credential_name** Parameter wird derzeit nicht unterstützt. Nur block-BLOB-Sicherung wird unterstützt, erfordert dieser Parameter gleich NULL sein.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in **Db_backupoperator** -Datenbankrolle mit **ALTER ANY CREDENTIAL** Berechtigungen und **EXECUTE** Berechtigungen für **Sp_delete_ Backuphistory** gespeicherte Prozedur.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: search
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
@@ -12,15 +12,15 @@ ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ef3beb381aa9cb5f6638920826d92bf01624e96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144190"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788642"
 ---
 # <a name="full-text-search"></a>Volltextsuche
-  Mit der Volltextsuche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] können Benutzer und Anwendungen Volltextabfragen für zeichenbasierte Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen ausführen. Bevor Sie Volltextabfragen für eine bestimmte Tabelle ausführen können, muss der Datenbankadministrator einen Volltextindex für die Tabelle erstellen. Der Volltextindex umfasst eine oder mehrere zeichenbasierte Spalten der Tabelle. Diese Spalten können jeden der folgenden Datentypen aufweisen: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, oder `varbinary(max)` und FILESTREAM. Jeder Volltextindex indiziert mindestens eine Spalte aus der Basistabelle. Für jede Spalte kann hierbei eine eigene Sprache verwendet werden.  
+  Mit der Volltextsuche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] können Benutzer und Anwendungen Volltextabfragen für zeichenbasierte Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen ausführen. Bevor Sie Volltextabfragen für eine bestimmte Tabelle ausführen können, muss der Datenbankadministrator einen Volltextindex für die Tabelle erstellen. Der Volltextindex umfasst eine oder mehrere zeichenbasierte Spalten der Tabelle. Diese Spalten können jeden der folgenden Datentypen aufweisen: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` oder `varbinary(max)` und FILESTREAM. Jeder Volltextindex indiziert mindestens eine Spalte aus der Basistabelle. Für jede Spalte kann hierbei eine eigene Sprache verwendet werden.  
   
  Volltextabfragen führen linguistische Suchvorgänge für Textdaten in Volltextindizes durch. Dabei werden Wörter und Ausdrücke anhand von Regeln einer bestimmten Sprache (z. B. Englisch oder Japanisch) verarbeitet. Volltextabfragen können einfache Wörter und Ausdrücke oder mehrere Formen eines Worts bzw. Ausdrucks enthalten. Eine Volltextabfrage gibt alle Dokumente zurück, die mindestens eine Übereinstimmung (auch als *Treffer*bezeichnet) enthalten. Eine Übereinstimmung wird gefunden, wenn ein Zieldokument alle in der Volltextabfrage angegebenen Begriffe enthält und alle sonstigen Suchbedingungen erfüllt sind, z. B. der Abstand zwischen den übereinstimmenden Begriffen.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "48144190"
 >  Die Volltextsuche ist eine optionale Komponente der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine. Weitere Informationen finden Sie unter [Installieren von SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).  
   
 ##  <a name="benefits"></a> Was kann ich mit der Volltextsuche tun?  
- Die Volltextsuche kann in einer breiten Palette von Geschäftsszenarios verwendet werden: z. B. im e-Business mit dem Suchen nach Elementen auf einer Website, in Anwaltskanzleien mit dem Suchen nach Fallverläufen in einem Rechtsdatenrepository oder in Personalabteilungen beim Vergleichen von Arbeitsplatzbeschreibungen mit gespeicherten Lebensläufen. Die grundlegenden Administrator- und Entwicklungsaufgaben der Volltextsuche bleiben unabhängig vom Geschäftsszenario unverändert. In einem bestimmten Geschäftsszenario können Volltextindex und Abfragen jedoch verfeinert werden, um die Geschäftsziele zu erreichen. In einem e-Business kann das Maximieren der Leistung beispielsweise wichtiger als das Ordnen von Ergebnissen, die Rückrufgenauigkeit (die Anzahl der tatsächlich von einer Volltextabfrage zurückgegebenen vorhandenen Übereinstimmungen) oder die Unterstützung mehrerer Sprachen sein. Für eine Anwaltskanzlei hingegen kann die Rückgabe jedes möglichen Treffers (der *Gesamtrückruf* von Informationen) der wichtigste Aspekt sein.  
+ Volltextsuche ist für eine Vielzahl von Geschäftsszenarien wie z.B. e – Unternehmen – suchen nach Elementen auf einer Website. Gesetz Firmen-suchen nach fallverläufen in einem Repository Legal-Daten; oder Personalwesen Abteilungen übereinstimmende auftragsbeschreibungen mit gespeicherten Lebensläufen. Die grundlegenden Administrator- und Entwicklungsaufgaben der Volltextsuche bleiben unabhängig vom Geschäftsszenario unverändert. In einem bestimmten Geschäftsszenario können Volltextindex und Abfragen jedoch verfeinert werden, um die Geschäftsziele zu erreichen. In einem e-Business kann das Maximieren der Leistung beispielsweise wichtiger als das Ordnen von Ergebnissen, die Rückrufgenauigkeit (die Anzahl der tatsächlich von einer Volltextabfrage zurückgegebenen vorhandenen Übereinstimmungen) oder die Unterstützung mehrerer Sprachen sein. Für eine Anwaltskanzlei hingegen kann die Rückgabe jedes möglichen Treffers (der *Gesamtrückruf* von Informationen) der wichtigste Aspekt sein.  
   
  [In diesem Thema](#top)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48144190"
   
  Volltextabfragen verwenden eine geringe Anzahl von [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Prädikaten (CONTAINS und FREETEXT) und -Funktionen (CONTAINSTABLE und FREETEXTTABLE). Die Suchziele des jeweiligen Geschäftsszenarios beeinflussen jedoch die Struktur von Volltextabfragen. Zum Beispiel:  
   
--   e-Business – Suchen nach einem Produkt auf einer Website:  
+-   E-Business: Suchen nach einem Produkt auf einer Website:  
   
     ```  
     SELECT product_id   
@@ -62,7 +62,7 @@ ms.locfileid: "48144190"
     AND product_cost < 200 ;  
     ```  
   
--   Einstellungsszenario – Suchen nach Jobkandidaten, die bereits mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gearbeitet haben:  
+-   Einstellungsszenario: Suchen nach Jobkandidaten, die bereits mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gearbeitet haben:  
   
     ```  
     SELECT candidate_name,SSN   

@@ -11,12 +11,12 @@ ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74e98548349d073cf5f008c6015ce55ac3768acb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40b08c40b8b327ad26bb2974627e81000846a1b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067195"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350653"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Löschen des Zwischenspeichers von Analysis Services
   Zur Verbesserung der Abfrageleistung werden Daten von Analysis Services zwischengespeichert. In diesem Thema sind Empfehlungen für die Verwendung des XMLA ClearCache-Befehls enthalten. Der Befehl dient dazu, Zwischenspeicher zu leeren, die als Antwort auf eine MDX-Abfrage erstellt wurden. Die Auswirkungen der Ausführung von ClearCache sind abhängig davon, ob Sie ein tabellarisches oder ein mehrdimensionales Modell verwenden.  
@@ -33,7 +33,7 @@ ms.locfileid: "48067195"
   
  Durch das Ausführen von ClearCache wird auch der speicherinterne Cache in der xVelocity-Engine für Datenanalyse im Arbeitsspeicher (VertiPaq) gelöscht. Die xVelocity-Engine behält einen kleinen Satz zwischengespeicherter Ergebnisse bei. Durch das Ausführen von ClearCache werden diese Zwischenspeicher in der xVelocity-Engine ungültig.  
   
- Zum Schluss das Ausführen von ClearCache auch restliche Daten entfernt sind, die verbleibt im Arbeitsspeicher, wenn ein tabellarisches Modell für neu konfiguriert wird `DirectQuery` Modus. Dies ist besonders wichtig, wenn das Modell sensible Daten enthält, die engen Kontrollen unterliegen. In diesem Fall ist das Ausführen von ClearCache eine vorbeugende Aktion, die Sie ergreifen können, um sicherzustellen, dass sensible Daten nur dort vorhanden sind, wo Sie sie erwarten. Das manuelle Löschen des Zwischenspeichers ist notwendig, wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwenden, um das Modell bereitzustellen und den Abfragemodus zu ändern. Demgegenüber wird durch die Verwendung von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zur Bestimmung von `DirectQuery` auf dem Modell der Zwischenspeicher durch die Partitionen automatisch gelöscht, wenn Sie das Modell umschalten, um diesen Abfragemodus zu verwenden.  
+ Schließlich werden durch das Ausführen von ClearCache auch restliche Daten entfernt, die im Arbeitsspeicher übrig sind, wenn ein tabellarisches Modell für den `DirectQuery`-Modus neu konfiguriert wird. Dies ist besonders wichtig, wenn das Modell sensible Daten enthält, die engen Kontrollen unterliegen. In diesem Fall ist das Ausführen von ClearCache eine vorbeugende Aktion, die Sie ergreifen können, um sicherzustellen, dass sensible Daten nur dort vorhanden sind, wo Sie sie erwarten. Das manuelle Löschen des Zwischenspeichers ist notwendig, wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwenden, um das Modell bereitzustellen und den Abfragemodus zu ändern. Demgegenüber wird durch die Verwendung von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zur Bestimmung von `DirectQuery` auf dem Modell der Zwischenspeicher durch die Partitionen automatisch gelöscht, wenn Sie das Modell umschalten, um diesen Abfragemodus zu verwenden.  
   
  Verglichen mit den Empfehlungen zum Löschen von mehrdimensionalen Modellzwischenspeichern während der Leistungstests gibt es keine umfassende Empfehlung zum Löschen von tabellarische Modellzwischenspeichern. Wenn Sie die Bereitstellung eines tabellarischen Modells nicht verwalten, das sensible Daten enthält, gibt es keine bestimmte administrative Aufgabe, die erfordert, den Zwischenspeicher zu löschen.  
   
@@ -41,26 +41,26 @@ ms.locfileid: "48067195"
  Verwenden Sie XMLA und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um den Zwischenspeicher zu löschen. Sie können den Zwischenspeicher auf Datenbank-, Cube-, Dimensions-, Tabellen- oder Measuregruppenebene löschen. Die folgenden Schritte zum Löschen des Zwischenspeichers auf Datenbankebene gelten für mehrdimensionale und tabellarische Modelle.  
   
 > [!NOTE]  
->  Rigorose Leistungstests könnten einen umfassenderen Ansatz zum Löschen des Zwischenspeichers erfordern. Anweisungen zum Leeren von Analysis Services- und Dateisystemzwischenspeichern finden Sie im Abschnitt zum Löschen von Zwischenspeichern im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?linkID=http://go.microsoft.com/fwlink/?LinkID=225539).  
+>  Rigorose Leistungstests könnten einen umfassenderen Ansatz zum Löschen des Zwischenspeichers erfordern. Anweisungen zum Leeren von Analysis Services- und Dateisystemzwischenspeichern finden Sie im Abschnitt zum Löschen von Zwischenspeichern im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](https://go.microsoft.com/fwlink/?linkID=https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Sowohl für mehrdimensionale als auch für tabellarische Modelle kann das Löschen dieser Zwischenspeicher ein zweistufiger Vorgang sein. Durch das Ausführen von ClearCache wird der Zwischenspeicher zunächst ungültig, und anschließend wird der Zwischenspeicher geleert, wenn die nächste Abfrage erhalten wird. Eine Verkleinerung an Arbeitsspeichernutzung ist nur offensichtlich, nachdem der Zwischenspeicher tatsächlich geleert wurde.  
   
  Zum Löschen des Zwischenspeichers müssen Sie einen Objektbezeichner für die `ClearCache`-Anweisung in einer XMLA-Abfrage bereitstellen. Im ersten Schritt in diesem Thema erfahren Sie, wie ein Objektbezeichner abgerufen wird.  
   
-#### <a name="step-1-get-the-object-identifier"></a>Schritt 1: Abrufen des Objektbezeichners  
+#### <a name="step-1-get-the-object-identifier"></a>Schritt 1: Rufen Sie die Objekt-ID  
   
 1.  Klicken Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf ein Objekt, wählen Sie **Eigenschaften**aus, und kopieren Sie den Wert aus der ID-Eigenschaft im Bereich **Eigenschaften** . Dieser Ansatz funktioniert für die Datenbank, Cube, Dimension oder Tabelle.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die Measuregruppe, und wählen Sie **Skript für Measuregruppe als**aus, um die Measuregruppen-ID abzurufen. Wählen Sie entweder **Erstellen** oder **Ändern**, und senden Sie die Abfrage an ein Fenster. Die ID der Measuregruppe ist in der Objektdefinition sichtbar. Kopieren Sie die ID der Objektdefinition.  
   
-#### <a name="step-2-run-the-query"></a>Schritt 2: Ausführen der Abfrage  
+#### <a name="step-2-run-the-query"></a>Schritt 2: Führen Sie die Abfrage  
   
 1.  Klicken Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf eine Datenbank, zeigen Sie auf **Neue Abfrage**, und wählen Sie anschließend **XMLA**aus.  
   
-2.  Kopieren Sie das folgende Codebeispiel in das XMLA-Abfragefenster. Änderung `DatabaseID` auf die ID der Datenbank auf die aktuelle Verbindung.  
+2.  Kopieren Sie das folgende Codebeispiel in das XMLA-Abfragefenster. Ändern Sie `DatabaseID` in die ID der Datenbank auf der aktuellen Verbindung.  
   
     ```  
-    <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <ClearCache xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
       <Object>  
         <DatabaseID> Adventure Works DW Multidimensional</DatabaseID>  
       </Object>  
@@ -71,7 +71,7 @@ ms.locfileid: "48067195"
      Alternativ können Sie einen Pfad eines untergeordneten Objekts, z. B. eine Measuregruppe, angeben, um den Zwischenspeicher nur für dieses Objekt zu löschen.  
   
     ```  
-    <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <ClearCache xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
       <Object>  
         <DatabaseID>Adventure Works DW Multidimensional</DatabaseID>  
             <CubeID>Adventure Works</CubeID>  

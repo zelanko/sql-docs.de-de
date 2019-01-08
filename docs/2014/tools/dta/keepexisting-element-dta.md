@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8691e57b9750447b1740c79337b75500febd9549
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc3ae8c7e11a3f5a4aa71e91463cbe80ab70c7e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070740"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751552"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting-Element (DTA)
   Gibt die physischen Entwurfsstrukturen (Indizes, indizierte Sichten oder Partitionierung) an, die der Datenbankoptimierungsratgeber beim Generieren der Empfehlung beibehalten muss.  
@@ -42,7 +41,7 @@ ms.locfileid: "48070740"
 |**Datentyp und -länge**|`string`, Grenzwert für die Länge wird vom Server erzwungen.|  
 |**Zulässige Werte**|**NONE**<br /> Keine vorhandenen Strukturen.<br /><br /> **ALL**<br /> Alle vorhandenen Strukturen.<br /><br /> **ALIGNED**<br /> Alle Strukturen mit ausgerichteten Partitionen.<br /><br /> **CL_IDX**<br /> Alle gruppierten Indizes für Tabellen.<br /><br /> **IDX**<br /> Alle gruppierten und nicht gruppierten Indizes für Tabellen.<br /><br /> Verwenden Sie nur einen dieser Werte mit diesem Element.|  
 |**Standardwert**|Keine.|  
-|**Vorkommen**|Optional. Können Sie nur einmal für jede `TuningOptions` Element.|  
+|**Vorkommen**|Dies ist optional. Nur einmalige Verwendung pro `TuningOptions`-Element möglich.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   

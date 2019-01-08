@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 3: Auffüllen der Listenfelds "Fields" | Microsoft-Dokumentation'
+title: 'Schritt 3: Auffüllen des Listenfelds "Fields" | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9bf639f5b624c222ca115b443ec327b45b836b82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1aecb94fd7367b12ed2c1aaca06ffe26f586e604
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784008"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206889"
 ---
-# <a name="step-3-populate-the-fields-list-box"></a>Schritt 3: Auffüllen des Listenfelds „Fields“
+# <a name="step-3-populate-the-fields-list-box"></a>Schritt 3: Auffüllen des Listenfelds "Fields"
 Fügen Sie zum Auffüllen der Listenfelds "Fields" den folgenden Code in der Click-Ereignishandler der `lstMain`:  
   
 ```  
@@ -60,4 +60,4 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [Internet Publishing-Szenario](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Schritt 2: Initialisieren der wichtigsten Listenfelder](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
- [Schritt 4: Auffüllen des Texfelds „Details“](../../../ado/guide/data/step-4-populate-the-details-text-box.md)
+ [Schritt 4: Auffüllen des Texfelds "Details"](../../../ado/guide/data/step-4-populate-the-details-text-box.md)

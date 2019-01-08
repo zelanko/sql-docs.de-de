@@ -20,16 +20,16 @@ ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12fe4ceda2a6ee219763b2d07b23e73508e84363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0a075b96e7a29cef4a10f034147732bf03f64b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778368"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538862"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
   
  **Zusammenfassung**  
  **SQLAllocHandle** reserviert ein Handle-Umgebung, Verbindung, Anweisung oder -Deskriptor.  
@@ -79,7 +79,7 @@ SQLRETURN SQLAllocHandle(
   
  Wenn der Treiber-Manager für die speicherbelegung kann nicht  *\*OutputHandlePtr* beim **SQLAllocHandle** mit einem *HandleType* SQL_HANDLE_ENV auf, aufgerufen wird, oder die Anwendung enthält einen null-Zeiger für *OutputHandlePtr*, **SQLAllocHandle** gibt SQL_ERROR zurück. Der Treiber-Manager legt **OutputHandlePtr* zu SQL_NULL_HENV (es sei denn, die die Anwendung einen null-Zeiger, die SQL_ERROR zurückgibt bereitgestellt). Es gibt kein Handle mit dem zusätzliche Diagnoseinformationen zugeordnet werden soll.  
   
- Der Treiber-Manager wird nicht die Zuordnungsfunktion für auf Treiberebene Umgebung Handle aufgerufen, bis die Anwendung ruft **SQLConnect**, **SQLBrowseConnect**, oder **SQLDriverConnect**. Wenn ein Fehler, in der Treiber auftritt **SQLAllocHandle** -Funktion, und klicken Sie dann auf die Treiber-Manager – Ebene **SQLConnect**, **SQLBrowseConnect**, oder  **SQLDriverConnect** Funktion gibt SQL_ERROR zurück. Die Diagnosedaten-Struktur enthält SQLSTATE IM004 (des Treibers **SQLAllocHandle** Fehler). Der Fehler wird für ein Verbindungshandle zurückgegeben.  
+ Der Treiber-Manager wird nicht die Zuordnungsfunktion für auf Treiberebene Umgebung Handle aufgerufen, bis die Anwendung ruft **SQLConnect**, **SQLBrowseConnect**, oder **SQLDriverConnect**. Wenn ein Fehler, in der Treiber auftritt **SQLAllocHandle** -Funktion, und klicken Sie dann auf der Ebene der Treiber-Manager **SQLConnect**, **SQLBrowseConnect**, oder  **SQLDriverConnect** Funktion gibt SQL_ERROR zurück. Die Diagnosedaten-Struktur enthält SQLSTATE IM004 (des Treibers **SQLAllocHandle** Fehler). Der Fehler wird für ein Verbindungshandle zurückgegeben.  
   
  Weitere Informationen zu den Fluss der Funktionsaufrufe zwischen der Treiber-Manager und einem Treiber, finden Sie unter [SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
@@ -96,7 +96,7 @@ SQLRETURN SQLAllocHandle(
 |HY010|Fehler in der Funktionsreihenfolge|(DM) die *HandleType* Argument war SQL_HANDLE_DBC auf, und **SQLSetEnvAttr** nicht aufgerufen wurde, um das SQL_ODBC_VERSION Umgebung-Attribut festgelegt.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, die **InputHandle** und wurde noch ausgeführt, wenn die **SQLAllocHandle** Funktion aufgerufen wurde, wobei **HandleType** festlegen SQL_HANDLE_STMT auf oder SQL_HANDLE_DESC.|  
 |HY013|Fehler bei arbeitsspeicherverwaltung|Die *HandleType* Argument war SQL_HANDLE_DBC auf, SQL_HANDLE_STMT auf oder SQL_HANDLE_DESC; und der Funktionsaufruf konnte nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichenden Arbeitsspeicher konnte nicht zugegriffen werden Bedingungen.|  
 |HY014|Grenzwert für die Anzahl von Handles wurde überschritten|Vom Treiber definierte Grenzwert für die Anzahl der Handles, die den Typ des Handles verwendet werden kann, angegeben durch die *HandleType* Argument wurde erreicht.|  
-|HY092|Ungültiger Attribut-/Optionsbezeichner|(DM) die *HandleType* Argument war kein: SQL_HANDLE_ENV auf SQL_HANDLE_DBC auf, SQL_HANDLE_STMT auf oder SQL_HANDLE_DESC.|  
+|HY092|Ungültiger Attribut-/Optionsbezeichner|(DM) die *HandleType* Argument war nicht: SQL_HANDLE_ENV auf, SQL_HANDLE_DBC auf, SQL_HANDLE_STMT auf, oder SQL_HANDLE_DESC.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYC00|Optionales Feature nicht implementiert.|Die *HandleType* Argument war SQL_HANDLE_DESC und der Treiber wurde von einer ODBC 2. *X* Treiber.|  
 |HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  

@@ -5,8 +5,7 @@ ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddistributiondb_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2ba920af692d85cbe8df1df69169fcde01a5c78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c55e0f8d7c2e102b18f7c17fb263c8f76658ede
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610118"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765802"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +57,19 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@database=**] *Datenbank '*  
  Entspricht dem Namen der zu erstellenden Verteilungsdatenbank. *Datenbank* ist **Sysname**, hat keinen Standardwert. Wenn die angegebene Datenbank bereits vorhanden und noch nicht als Verteilungsdatenbank gekennzeichnet ist, werden die zum Aktivieren der Verteilung erforderlichen Objekte installiert, und die Datenbank wird als Verteilungsdatenbank gekennzeichnet. Wenn die angegebene Datenbank bereits als Verteilungsdatenbank aktiviert wurde, wird ein Fehler zurückgegeben.  
   
- [  **@data_folder=**] **"*** Data_folder"*  
+ [  **@data_folder=**] **"**_Data_folder"_  
  Entspricht dem Namen des Verzeichnisses zum Speichern der Datendatei für die Verteilungsdatenbank. *Data_folder* ist **nvarchar(255)**, hat den Standardwert NULL. Bei NULL wird das Datenverzeichnis für diese Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, beispielsweise `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
   
- [  **@data_file=**] **"***Data_file***"**  
+ [  **@data_file=**] **"**_Data_file_**"**  
  Entspricht dem Namen der Datenbankdatei. *Data_file* ist **nvarchar(255)**, hat den Standardwert **Datenbank**. Bei NULL erstellt die gespeicherte Prozedur einen Dateinamen mithilfe des Datenbanknamens.  
   
  [  **@data_file_size=**] *Data_file_size*  
  Ist die ursprüngliche Datendateigröße in Megabytes (MB). *Data_file_size ich*s **Int**, hat den Standardwert 5 MB.  
   
- [  **@log_folder=**] **"***Log_folder***"**  
+ [  **@log_folder=**] **"**_Log_folder_**"**  
  Entspricht dem Namen des Verzeichnisses für die Datenbankprotokolldatei. *Log_folder* ist **nvarchar(255)**, hat den Standardwert NULL. Bei NULL wird das Datenverzeichnis für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet (beispielsweise `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
   
- [  **@log_file=**] **"***Log_file***"**  
+ [  **@log_file=**] **"**_Log_file_**"**  
  Entspricht dem Namen der Protokolldatei. *Log_file* ist **nvarchar(255)**, hat den Standardwert NULL. Bei NULL erstellt die gespeicherte Prozedur einen Dateinamen mithilfe des Datenbanknamens.  
   
  [  **@log_file_size=**] *Log_file_size*  
@@ -88,16 +87,16 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@security_mode=**] *Security_mode*  
  Der Sicherheitsmodus, der zum Herstellen der Verbindung mit einem Verteiler verwendet wird. *Security_mode* ist **Int**, hat den Standardwert 1. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung; **1** gibt die integrierte Windows-Authentifizierung.  
   
- [  **@login=**] **"***Anmeldung***"**  
+ [  **@login=**] **"**_Anmeldung_**"**  
  Der Anmeldename, der bei der Verbindungsherstellung zum Verteiler für die Erstellung der Verteilungsdatenbank verwendet wird. Dies ist erforderlich, wenn *Security_mode* nastaven NA hodnotu **0**. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
- [  **@password=**] **"***Kennwort***"**  
+ [  **@password=**] **"**_Kennwort_**"**  
  Das Kennwort, das bei der Verbindungsherstellung zum Verteiler verwendet wird. Dies ist erforderlich, wenn *Security_mode* nastaven NA hodnotu **0**. *Kennwort* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@createmode=**] *Createmode*  
  *Createmode* ist **Int**, hat den Standardwert 1, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** (Standard)|CREATE DATABASE oder Verwenden einer vorhandenen Datenbank und anschließendes Anwenden **instdist.sql** Datei, um Replikationsobjekte in der Verteilungsdatenbank zu erstellen.|  

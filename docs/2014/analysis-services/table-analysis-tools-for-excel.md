@@ -14,12 +14,12 @@ ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da1d5ceae73ae17f9e3689a13c21619dac5fbc93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049070"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391898"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Tabellenanalysetools für Excel
   Die Datamining-Tools in der **analysieren** Symbolleiste sind die einfachste Möglichkeit, erste Schritte mit Datamining. Jedes Tool analysiert automatisch die Verteilung und den Typ der Daten und legt die Parameter fest, um die Gültigkeit der Ergebnisse sicherzustellen. Sie müssen keine Algorithmen auswählen oder komplexe Parameter konfigurieren.  
@@ -34,7 +34,7 @@ ms.locfileid: "48049070"
  Die **wichtige Einflussfaktoren analysieren** Tool wird der Microsoft Naïve Bayes-Algorithmus verwendet.  
   
  [Kategorien erkennen &#40;Tabellenanalysetools für Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  
- Mit diesem Tool können Sie ein beliebiges Dataset hinzufügen und das Clustering anwenden, um Gruppierungen von Daten zu bestimmen. Es empfiehlt sich zum Ermitteln von Ähnlichkeiten sowie zum Erstellen von Gruppen, die weiter analysiert werden können.  
+ Mit diesem Tool können Sie ein beliebiges Dataset hinzufügen und das Clustering anwenden, um Gruppierungen von Daten zu bestimmen. Es ist nützlich zum Ermitteln von ähnlichkeiten sowie zum Erstellen von Gruppen, weiter zu analysieren.  
   
  Die **Kategorien erkennen** Tool verwendet den Microsoft Clustering-Algorithmus.  
   

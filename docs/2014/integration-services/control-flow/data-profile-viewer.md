@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 009ac57e854323c1340d600063dd1aee7fda2875
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b05c023e8b0c54f0037af7829421f8f69f2595d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905742"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805002"
 ---
 # <a name="data-profile-viewer"></a>Datenprofil-Viewer
   Das Anzeigen und Analysieren der Datenprofile ist der nächste Schritt bei der Datenprofilerstellung. Sie können diese Profile anzeigen, nachdem Sie den Datenprofilerstellungs-Task innerhalb eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets ausgeführt und die Datenprofile berechnet haben. Weitere Informationen zum Verwenden und Einrichten und Ausführen der Datenprofilerstellungs-Tasks finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](data-profiling-task.md).  
@@ -61,7 +60,7 @@ ms.locfileid: "48905742"
 > [!IMPORTANT]  
 >  Die Drilldownfunktion, die im Datenprofil-Viewer verfügbar ist, sendet Live-Abfragen an die ursprüngliche Datenquelle. Diese Abfragen haben möglicherweise negative Auswirkungen auf die Leistung des Servers.  
 >   
->  Wenn Sie aus einer Ausgabedatei Drilldown ausführen, die nicht vor kurzem erstellt wurde, können die drilldownabfragen einen anderen Satz von Zeilen zurück, auf denen die ursprüngliche Ausgabe berechnet wurde.  
+>  Wenn Sie einen Drilldown für eine Ausgabedatei ausführen, die nicht vor kurzem erstellt wurde, geben die Drilldownabfragen möglicherweise nicht die Gruppe von Zeilen zurück, mit denen die ursprüngliche Ausgabe berechnet wurde.  
   
  Weitere Informationen zur Benutzeroberfläche des Datenprofil-Viewers finden Sie unter [Data Profile Viewer F1 Help](../data-profile-viewer-f1-help.md).  
   

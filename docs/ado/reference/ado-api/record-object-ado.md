@@ -16,12 +16,12 @@ ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c3688bcd713eab1fed94efab0a5c88f41b7c529
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d719ebf47757a48b034d2a0cadd0ed68f51f0ee5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758838"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538773"
 ---
 # <a name="record-object-ado"></a>Record-Objekt (ADO)
 Stellt eine Zeile aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder der Datenanbieter oder ein Objekt, das von einem Anbieter von teilweise strukturierten Daten, z. B. einer Datei oder eines Verzeichnisses zurückgegeben.  
@@ -60,7 +60,7 @@ Stellt eine Zeile aus einer [Recordset](../../../ado/reference/ado-api/recordset
   
 -   Geben Sie den aktuellen Status der **Datensatz** mit der [Zustand](../../../ado/reference/ado-api/state-property-ado.md) Eigenschaft.  
   
--   Geben Sie den Typ der **Datensatz** – *einfache*, *Auflistung*, oder *strukturiertes Dokument* – mit der ["RecordType"](../../../ado/reference/ado-api/recordtype-property-ado.md)Eigenschaft.  
+-   Geben Sie den Typ der **Datensatz** - *einfache*, *Auflistung*, oder *strukturiertes Dokument* – mit der [ "RecordType"](../../../ado/reference/ado-api/recordtype-property-ado.md)Eigenschaft.  
   
 -   Beendet einen asynchronen Vorgang mit der [Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md) Methode.  
   

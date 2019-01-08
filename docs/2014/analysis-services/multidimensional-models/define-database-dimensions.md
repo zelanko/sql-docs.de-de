@@ -13,12 +13,12 @@ ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa283164549ba6c675632b65e40cfe636a0491eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6225e17feef079fba352b0656fb8fc9d28c86748
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177820"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518976"
 ---
 # <a name="define-database-dimensions"></a>Definieren von Datenbankdimensionen
   Verwenden Sie den Dimensions-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , um eine vorhandene Datenbankdimension in einem Projekt bzw. in einer Datenbank von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zu konfigurieren. Sie können den Dimensions-Designer für die folgenden Aufgaben verwenden:  
@@ -43,7 +43,7 @@ ms.locfileid: "48177820"
   
 |Registerkarte|Description|  
 |---------|-----------------|  
-|**Dimensionsstruktur**|Auf dieser Registerkarte können Sie die Struktur einer Dimension bearbeiten, um das Schema der Datenquellensicht für eine Dimension zu überprüfen oder zu erstellen, um Attribute zu verwenden und um Attribute in benutzerdefinierten Hierarchien zu strukturieren.|  
+|**Dimensionsstruktur**|Verwenden Sie diese Registerkarte, um das Arbeiten mit der Struktur einer Dimension zu überprüfen oder zu erstellen das Schema der Datenquellensicht angezeigt bei einer Dimension, für die Arbeit mit Attributen und Attribute in benutzerdefinierten Hierarchien zu organisieren.|  
 |**Attributbeziehungen**|Verwenden Sie diese Registerkarte, um die Attributbeziehungen einer Dimension zu erstellen, zu ändern oder zu löschen.|  
 |**Übersetzungen**|Auf dieser Registerkarte können Sie Übersetzungen von Dimensionsmetadaten in unterschiedliche Sprachen hinzufügen und bearbeiten.|  
 |**Browser**|Auf dieser Registerkarte können Sie die Elemente einer verarbeiteten Dimension sowie die Übersetzungen von Dimensionsmetadaten überprüfen.|  

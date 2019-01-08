@@ -13,12 +13,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e3df0527e02bd69bfbb198888e82045d067a61a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3141146842bd568336033073f07b41c636129ee7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091620"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543583"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Datenbankspiegelung und Replikation (SQL Server)
   Die Datenbankspiegelung kann in Verbindung mit der Replikation verwendet werden, um die Verfügbarkeit der Veröffentlichungsdatenbank zu verbessern. Bei der Datenbankspiegelung sind zwei Kopien einer einzigen Datenbank vorhanden, die normalerweise auf verschiedenen Computern gespeichert sind. Für die Clients ist immer nur eine Kopie der Datenbank verfügbar. Diese Kopie wird als Prinzipaldatenbank bezeichnet. Updates, die Clients an der Prinzipaldatenbank vornehmen, werden in der anderen Kopie der Datenbank angewendet, die als Spiegeldatenbank bezeichnet wird. Beim Spiegeln wird das Transaktionsprotokoll von jedem Einfüge-, Update- oder Löschvorgang, der an der Prinzipaldatenbank vorgenommen wird, auf die Spiegeldatenbank angewandt.  
@@ -75,7 +75,7 @@ ms.locfileid: "48091620"
   
     -   Setzen Sie den Wert des **@working_directory** -Parameters auf den Momentaufnahmeordner fest, der von dem Prinzipal verwendet wird.  
   
-4.  Geben Sie den Spiegeldatenbanknamen für den **–PublisherFailoverPartner** -Parameter des Agents an. Dieser Parameter ist für die folgenden Agents erforderlich, um die Spiegeldatenbank nach einem Failover zu identifizieren:  
+4.  Geben Sie den Spiegeldatenbanknamen für den Parameter **-PublisherFailoverPartner** des Agents an. Dieser Parameter ist für die folgenden Agents erforderlich, um die Spiegeldatenbank nach einem Failover zu identifizieren:  
   
     -   Momentaufnahme-Agent (für alle Veröffentlichungen)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48091620"
   
     -   [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     Es wird empfohlen, zunächst den **–PublisherFailoverPartner** -Parameter zu einem Agent-Profil hinzuzufügen und anschließend den Spiegeldatenbanknamen im Profil anzugeben. Wenn Sie z. B. die Replikation mit gespeicherten Prozeduren konfigurieren:  
+     Es wird empfohlen, zunächst den Parameter **-PublisherFailoverPartner** zu einem Agent-Profil hinzuzufügen und anschließend den Spiegeldatenbanknamen im Profil anzugeben. Wenn Sie z. B. die Replikation mit gespeicherten Prozeduren konfigurieren:  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

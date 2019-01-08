@@ -11,23 +11,23 @@ ms.assetid: 64174d54-edee-49b8-9b43-039574bf2ca1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f36ac52021644d901a6586f3b265e6916b897a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb472e106438aee781bf54fd6216d2ed32f7f190
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167420"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531845"
 ---
 # <a name="cluster-node-configuration-complete"></a>Clusterknotenkonfiguration (Vollständig)
   Auf der Seite Clusterknotenkonfiguration (Vollständig) können Sie eine vorhandene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angeben, die für das Clustering vorbereitet wurde. Zum Installieren oder Aktualisieren eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusters müssen Sie das Setupprogramm für jeden einzelnen Knoten des Failoverclusters ausführen. Zum Hinzufügen eines Knotens zu einem vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster müssen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup für den Knoten ausführen, der der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz hinzugefügt werden soll.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Auswahl aus den Dropdownfeldern:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzname – Wählen Sie den Namen der Instanz für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failovercluster aus.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanzname: Wählen Sie den Instanznamen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failovercluster.  
   
--   Name dieses Knotens – Dieses Feld wird mit dem Namen des Computers aufgefüllt, auf dem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup ausgeführt wird.  
+-   Name dieses Knotens – dieses Feld wird mit den Namen des Computers aufgefüllt, in denen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup-Programm ausgeführt wird.  
   
--   Netzwerkname des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusters – Dieses Feld ist nicht im Voraus ausgefüllt. Geben Sie den Netzwerknamen für die neue Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusters an. Anhand dieses Namens wird die Failoverclusterinstanz im Netzwerk identifiziert.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Netzwerkname des Failoverclusters – dieses Feld ist nicht vorab ausgefüllt. Geben Sie den Netzwerknamen für die neue Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusters an. Anhand dieses Namens wird die Failoverclusterinstanz im Netzwerk identifiziert.  
   
   

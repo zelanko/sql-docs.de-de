@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fbab3ea6efe0c1e5b896febeef4d1f38877b8965
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f4bd21ab1463d40b0eb9b83e5686951e43dee885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145655"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542201"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -67,7 +67,7 @@ SELECT DRILLDOWNLEVEL({[Product].[Product Categories]} * {[Sales Territory].[Sal
 FROM [Adventure Works]  
 ```  
   
- Beispiel 2 – Alternative Syntax mit expliziter Indexebene  
+ Beispiel 2 – alternative Syntax mit expliziter Indexebene  
   
  Dieses Beispiel zeigt die alternative Syntax. Hier wird die Indexebene über einen numerischen Ausdruck festgelegt. In diesem Fall ist die Indexebene 0. Für einen nullbasierten Index ist das die unterste Ebene.  
   
@@ -79,7 +79,7 @@ FROM [Adventure Works]
   
  Beachten Sie, dass das Resultset mit der vorherigen Abfrage identisch ist. Allgemein gilt, ein Festlegen der Indexebene ist unnötig, es sei denn, der Drilldown soll auf einer bestimmten Ebene beginnen. Führen Sie die vorherige Abfrage erneut aus, und legen Sie einen Indexwert von 1 und dann von 2 fest. Ist der Indexwert auf 1 festgelegt, beginnt der Drilldown auf der zweiten Ebene der Hierarchie. Ist der Indexwert auf 2 festgelegt, beginnt der Drilldown auf der dritten Ebene, der höchsten Ebene in diesem Beispiel. Je höher der numerische Ausdruck, desto höher die Indexebene.  
   
- **Beispiel 3 – zeigt einen Ebenenausdruck**  
+ **Beispiel 3: Zeigt einen Ebenenausdruck**  
   
  Im folgenden Beispiel wird die Verwendung eines Ebenenausdrucks veranschaulicht. Wenn eine Menge vorliegt, die eine hierarchische Struktur darstellt, können Sie mit einem Ebenenausdruck eine Ebene in der Hierarchie auswählen, auf der der Drilldown beginnen soll.  
   
@@ -98,7 +98,7 @@ SELECT [Measures].[Internet Sales Amount] ON COLUMNS,
 FROM [Adventure Works]  
 ```  
   
- **Beispiel 4 – einschließen berechneter Elemente**  
+ **Beispiel 4 – einschließlich berechneter Elemente**  
   
  Das letzte Beispiel zeigt ein berechnetes Element, das am Ende das Ergebnis angezeigt wird. Legen Sie beim Hinzufügen der **Include_calculated_members** Flag. Beachten Sie, dass das Flag als vierter Parameter festgelegt ist.  
   

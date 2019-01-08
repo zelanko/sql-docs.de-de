@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Datenquelle (SSAS – mehrdimensional) | Microsoft Docs
+title: Erstellen einer Datenquelle (SSAS – mehrdimensional) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c461f38e7e2d0cf43cf206fee0c474f6fd74d35a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d22e4b3b9c53aa02a7666c929fcba25d2c17ced
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027047"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410317"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Erstellen einer Datenquelle (SSAS – mehrdimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34027047"
  [Hinzufügen mehrerer Datenquellen zu einem Modell](#bkmk_multipleDS)  
   
 ##  <a name="bkmk_provider"></a> Auswählen eines Datenanbieters  
- Die Verbindung können Sie mit einem verwaltetem [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework- oder einem systemeigenem OLE DB-Anbieter herstellen. Als Datenanbieter wird für SQL Server-Datenquellen SQL Server Native Client empfohlen, da dieser meist eine bessere Leistung bietet.  
+ Die Verbindung können Sie mit einem verwaltetem [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework- oder einem systemeigenem OLE DB-Anbieter herstellen. Als Datenanbieter wird für SQL Server-Datenquellen SQL Server Native Client empfohlen, da dieser meist eine bessere Leistung bietet.  
   
  Bei Oracle- und anderen Datenquellen von Drittanbietern überprüfen Sie, ob der Drittanbieter einen systemeigenen OLE DB-Anbieter bereitstellt, mit dem Sie es als Erstes probieren. Bei Fehlern versuchen Sie es mit einem anderen .NET-Anbieter oder systemeigenen OLE DB-Anbieter, der im Verbindungs-Manager aufgeführt wird. Stellen Sie sicher, dass jeder von Ihnen verwendete Datenanbieter auf allen Computern installiert ist, die zum Entwickeln und Ausführen der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Lösung verwendet werden.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "34027047"
   
 3.  Klicken Sie auf der Seite **Wählen Sie aus, wie die Verbindung definiert werden soll** auf **Eine Datenquelle basierend auf einer vorhandenen oder neuen Verbindung erstellen** , und klicken Sie dann auf **Neu** , um den **Verbindungs-Manager**zu öffnen.  
   
-     Neue Verbindungen werden im Verbindungs-Manager erstellt. Wählen Sie im Verbindungs-Manager einen Anbieter aus, und geben Sie dann die von diesem Anbieter verwendeten Verbindungszeichenfolgeneigenschaften an, um eine Verbindung mit den zugrunde liegenden Daten herzustellen. Welche Informationen hier genau erforderlich sind, hängt vom ausgewählten Anbieter ab. Im Allgemeinen gehören hierzu ein Server oder eine Dienstinstanz, Angaben zur Anmeldung am Server oder an der Dienstinstanz, ein Datenbank- oder Dateiname sowie andere anbieterspezifische Einstellungen. Im weiteren Verlauf dieser Prozedur wird eine SQL Server-Datenbankverbindung angenommen.  
+     Neue Verbindungen werden im Verbindungs-Manager erstellt. Wählen Sie im Verbindungs-Manager einen Anbieter aus, und geben Sie dann die von diesem Anbieter verwendeten Verbindungszeichenfolgeneigenschaften an, um eine Verbindung mit den zugrunde liegenden Daten herzustellen. Welche Informationen hier genau erforderlich sind, hängt vom ausgewählten Anbieter ab. Im Allgemeinen gehören hierzu ein Server oder eine Dienstinstanz, Angaben zur Anmeldung am Server oder an der Dienstinstanz, ein Datenbank- oder Dateiname sowie andere anbieterspezifische Einstellungen. Für den Rest dieses Verfahrens wird eine SQL Server-datenbankverbindung angenommen.  
   
 4.  Wählen Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework- oder den systemeigenen OLE DB-Anbieter aus, der für die Verbindung verwendet werden soll.  
   
@@ -78,8 +78,7 @@ ms.locfileid: "34027047"
   
 5.  Geben Sie die für den ausgewählten Anbieter angeforderten Informationen ein, um eine Verbindung mit der zugrunde liegenden Datenquelle herzustellen. Wenn Sie den Anbieter **Native OLE DB\SQL Server Native Client** ausgewählt haben, geben Sie die folgenden Informationen ein:  
   
-    1.  
-  **Servername** ist der Netzwerkname der Datenbank-Engine-Instanz. Er kann als IP-Adresse, NETBIOS-Name des Computers oder als vollqualifizierter Domänenname angegeben werden. Wenn der Server als benannte Instanz installiert ist, müssen Sie den Instanznamen beinhalten (z. B. \<Computername >\\< Instancename\>).  
+    1.  **Servername** ist der Netzwerkname der Datenbank-Engine-Instanz. Er kann als IP-Adresse, NETBIOS-Name des Computers oder als vollqualifizierter Domänenname angegeben werden. Wenn der Server als benannte Instanz installiert ist, müssen Sie den Namen der Instanz einschließen (z. B. \<Computername >\\< Instancename\>).  
   
     2.  **Am Server anmelden** gibt an, wie die Verbindung authentifiziert wird. **Windows-Authentifizierung verwenden** verwendet die Windows-Authentifizierung. Mit**SQL Server-Authentifizierung verwenden** wird eine Datenbank-Benutzeranmeldung für eine Windows Azure SQL-Datenbank- oder SQL Server-Instanz angegeben, die eine Authentifizierung im gemischten Modus unterstützt.  
   

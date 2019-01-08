@@ -13,12 +13,12 @@ ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a6c68680152199e0a6605d87701cb68eb3fe0e0c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d827a48f76639b15cc63e295e7f40190b60a4694
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670229"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399823"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>Erstellen der Datenbankverbindungsdateien (MySqlToSql)
 Informationen zum Server kann entweder in den Bereich "Server", der Skriptdatei oder in eine separate Verbindung Serverdatei angegeben werden. Der Parameter über die Befehlszeile für die Server-Verbindungsdatei ist, `-c <serverconnectionfile>`. Wenn die gleiche Id in die Skriptdatei und die Server-Connection-Datei vorhanden ist, wird die Definition des Servers in der Skriptdatei als betrachtet.  

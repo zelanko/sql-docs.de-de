@@ -1,5 +1,5 @@
 ---
-title: Unregelmäßige Hierarchien | Microsoft Docs
+title: Unregelmäßige Hierarchien | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c5eb53a8ae3ff25b7c0b4d390d9c5ffc896e542
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cf8844188330a408c29c8b959994637e097f7043
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023097"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529339"
 ---
-# <a name="user-defined-hierarchies---ragged-hierarchies"></a>Benutzerdefinierte Hierarchien - unregelmäßige Hierarchien
+# <a name="user-defined-hierarchies---ragged-hierarchies"></a>Benutzerdefinierte Hierarchien – unregelmäßige Hierarchien
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Eine unregelmäßige Hierarchie ist eine benutzerdefinierte Hierarchie, die über eine ungerade Anzahl von Ebenen verfügt. Typische Beispiele dafür sind ein Organigramm, bei dem einer hochrangigen Führungskraft sowohl Abteilungsleiter als auch Nicht-Abteilungsleiter unterstellt sind, oder geografische Hierarchien aus Ländern, Regionen und Städten, bei denen einige Städte keinen übergeordneten Bundesstaat bzw. keine übergeordnete Provinz aufweisen, z. B. Washington D. C., Vatikanstadt oder Neu-Delhi.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34023097"
   
 -   Erstellen Sie eine Über-/Unterordnungshierarchie, von der die Ebenenelemente explizit verwaltet werden. Eine grafische Darstellung dieser Methode finden Sie im Blogbeitrag [Ragged Hierarchy in SSAS](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)(Unregelmäßige SSAS-Hierarchie). Weitere Informationen finden Sie in der Onlinedokumentation unter [Über- und untergeordnete Dimensionen](../../analysis-services/multidimensional-models/parent-child-dimension.md). Die Erstellung einer Über-/Unterordnungshierarchie hat den Nachteil, dass Sie pro Dimension nur eine solche Hierarchie erstellen können. Darüber hinaus treten in der Regel Leistungsprobleme auf, wenn Sie Aggregationen für Zwischenelemente berechnen.  
   
- Wenn die Dimension mehr als eine unregelmäßige Hierarchie enthält, sollten Sie die erste Methode verwenden, also **HideMemberIf**festlegen. BI-Entwickler, die bereits praktische Erfahrungen mit unregelmäßigen Hierarchien gesammelt haben, würden sogar zusätzliche Änderungen in den physischen Datentabellen befürworten und getrennte Tabellen für jede Ebene erstellen. Ausführliche Informationen zu diesem Verfahren finden Sie im Blog von Martin Mason [Financial Cube–Part 1a–Ragged Hierarchies](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) (Finanzcube, Teil 1a, Unregelmäßige Hierarchien).  
+ Wenn die Dimension mehr als eine unregelmäßige Hierarchie enthält, sollten Sie die erste Methode verwenden, also **HideMemberIf**festlegen. BI-Entwickler, die bereits praktische Erfahrungen mit unregelmäßigen Hierarchien gesammelt haben, würden sogar zusätzliche Änderungen in den physischen Datentabellen befürworten und getrennte Tabellen für jede Ebene erstellen. Finden Sie unter [die finanziellen SSAS-Cube-Part 1a – unregelmäßige Hierarchien (Blog) Blog von Martin Mason](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) ausführliche Informationen zu diesem Verfahren.  
   
 ##  <a name="bkmk_Hide"></a> Festlegen von "HideMemberIf" zum Ausblenden von Elementen in einer regulären Hierarchie  
  In der Tabelle einer unregelmäßigen Dimension können logisch fehlende Elemente auf verschiedene Weise dargestellt werden. Die Tabellenzellen können NULL-Werte oder leere Zeichenfolgen enthalten. Sie können jedoch auch denselben Wert wie das übergeordnete Objekt enthalten, der in diesem Fall als Platzhalter dient. Die Darstellung von Platzhaltern wird vom Platzhalterstatus der untergeordneten Elemente gemäß der **HideMemberIf** -Eigenschaft und der **MDX Compatibility** -Verbindungszeichenfolgen-Eigenschaft für die Clientanwendung festgelegt.  
@@ -71,7 +71,7 @@ ms.locfileid: "34023097"
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von benutzerdefinierten Hierarchien](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Benutzerhierarchien](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
- [Über-und untergeordneten Dimensionen](../../analysis-services/multidimensional-models/parent-child-dimension.md)   
- [Verbindungszeichenfolgen-Eigenschaften & #40; Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Über- und untergeordnete Dimensionen](../../analysis-services/multidimensional-models/parent-child-dimension.md)   
+ [Verbindungszeichenfolgen-Eigenschaften &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

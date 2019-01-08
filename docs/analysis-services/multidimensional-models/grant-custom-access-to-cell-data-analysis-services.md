@@ -1,5 +1,5 @@
 ---
-title: Erteilen von benutzerdefiniertem Zugriff auf Zellendaten (Analysis Services) | Microsoft Docs
+title: Erteilen von benutzerdefiniertem Zugriff auf Zellendaten (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e3b354d2bd4f4561962391bf3f0495b63833290
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42348298676334a84d9c4d3664aec2eeda4feed6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025240"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539016"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Erteilen von benutzerdefiniertem Zugriff auf Zellendaten (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34025240"
   
  Zellenberechtigungen gelten für Daten innerhalb der Zelle, nicht für deren Metadaten. Sie sehen, dass die Zelle in den Ergebnissen einer Abfrage immer noch sichtbar ist und den Wert **#N/A** anstelle des tatsächlichen Zellenwerts anzeigt. Der Wert **#N/A** wird in der Zelle angezeigt, bis die Clientanwendung den Wert übersetzt oder in der Eigenschaft „Secured Cell Value“ (Wert der gesicherten Zelle) in der Verbindungszeichenfolge ein anderer Wert angegeben wird.  
   
- Um die Zelle ganz auszublenden, müssen Sie die Elemente (Dimensionen, Dimensionsattribute und Dimensionsattributelemente), die angezeigt werden können, einschränken. Weiter Informationen finden Sie unter [Erteilen eines benutzerdefinierten Zugriffs auf Dimensionsdaten &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md).  
+ Um die Zelle ganz auszublenden, müssen Sie die Member-Dimensionen, Dimensionsattribute und dimensionsattributelementen beschränken –, die angezeigt werden. Weiter Informationen finden Sie unter [Erteilen eines benutzerdefinierten Zugriffs auf Dimensionsdaten &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md).  
   
  Als Administrator können Sie angeben, ob Rollenmitglieder über Leseberechtigungen, Berechtigungen für abhängiges Lesen oder Lese-/Schreibberechtigungen für Zellen innerhalb eines Cubes verfügen. Berechtigungen für eine Zelle zu vergeben, ist die geringste zulässige Sicherheitsstufe. Bevor Sie also Berechtigungen auf dieser Ebene anwenden, sollten Sie folgende Aspekte berücksichtigen:  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34025240"
   
  In Excel wird die Zellensicherheit in folgender Abbildung veranschaulicht:  
   
- ![Excel-Spalten ausblenden nicht verfügbarer Zellen](../../analysis-services/multidimensional-models/media/ssas-permscellshidemeasure.png "in Excel-Spalten ausblenden nicht verfügbarer Zellen")  
+ ![Excel-Zellen nicht verfügbarer angezeigte Spalten](../../analysis-services/multidimensional-models/media/ssas-permscellshidemeasure.png "Excel-Zellen nicht verfügbarer angezeigte Spalten")  
   
 ## <a name="set-read-permissions-on-calculated-measures"></a>Festlegen von Leseberechtigungen für berechnete Measures  
  Berechtigungen für eine berechnete Measure können unabhängig von den Teilen, aus denen sie besteht, festgelegt werden. Fahren Sie mit dem nächsten Abschnitt zu den Berechtigungen für abhängiges Lesen fort, wenn Sie Berechtigungen zwischen einer berechneten Measure und ihren abhängigen Measures koordinieren möchten.  
@@ -74,7 +74,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
  Stellen Sie in Excel mit der aktuellen Rolle eine Verbindung zum Cube her, und wählen Sie alle drei Measures aus, um die Auswirkungen der Zellensicherheit anzuzeigen. Sie sehen, dass Measures des abgelehnten Satzes nicht verfügbar sind, während die berechnete Measure vom Benutzer angezeigt werden kann.  
   
- ![Excel-Tabelle mit verfügbaren und nicht verfügbaren Zellen](../../analysis-services/multidimensional-models/media/ssas-permscalculatedcells.png "Excel-Tabelle mit verfügbaren und nicht verfügbaren Zellen")  
+ ![Excel-Tabelle mit verfügbar sind und nicht verfügbaren Zellen](../../analysis-services/multidimensional-models/media/ssas-permscalculatedcells.png "Excel-Tabelle mit verfügbar sind und nicht verfügbaren Zellen")  
   
 ## <a name="set-read-contingent-permissions-on-calculated-measures"></a>Festlegen von Berechtigungen für abhängiges Lesen für berechnete Measures  
  Zellensicherheit bietet mit den Berechtigungen für abhängiges Lesen eine Alternative für das Festlegen von Berechtigungen für die Zellen, die zu einer Berechnung gehören. Schauen wir uns erneut das Beispiel **Reseller Gross Profit** an. Wenn Sie den gleichen MDX-Ausdruck wie im vorherigen Abschnitt eingeben, jetzt allerdings im zweiten Textbereich des Dialogfelds **Rolle erstellen**  |  **Zellendaten** (im Textbereich unter **Lesen des Zelleninhalts abhängig von der Zellensicherheit zulassen**), wird das Ergebnis in Excel angezeigt. Da **Reseller Gross Profit** vom **Betrag der Verkäufe des Wiederverkäufers** und von den **Gesamtproduktkosten des Wiederverkäufers** abhängig ist, kann auf den Bruttoertrag nun nicht mehr zugegriffen werden, weil seine Bestandteile nicht zugänglich sind.  
@@ -89,10 +89,10 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
 ## <a name="see-also"></a>Siehe auch  
  [MDX-Generator &#40;Analysis Services – Mehrdimensionale Daten&#41;](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)   
- [Die grundlegende MDX-Skripts & #40; MDX & #41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [Grundlegendes MDX-Skript &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
  [Erteilen von Berechtigungen zum Verarbeiten &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
- [Erteilen von Berechtigungen für eine Dimension &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
- [Erteilen von benutzerdefiniertem Zugriff auf die dimension von Daten & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Gewähren von Cube oder modellberechtigungen & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
+ [Gewähren von Berechtigungen in einer Dimension &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
+ [Erteilen von benutzerdefiniertem Zugriff auf Dimensionsdaten &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
   

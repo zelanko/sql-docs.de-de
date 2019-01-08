@@ -1,5 +1,5 @@
 ---
-title: Vergleichen von tabellarischen und mehrdimensionalen Lösungen (SSAS) | Microsoft Docs
+title: Vergleichen von tabellarischen und mehrdimensionalen Modellen von Analysis Services | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,42 +9,42 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e6a5941b33d2d73ee8bd86e33a710e065a21ae1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d36c20e0278a90bc5afcbd312afea2cb596e9c51
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018897"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072541"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Vergleichen von tabellarischen und mehrdimensionalen Lösungen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  SQL Server Analysis Services bietet mehrere Ansätze zum Erstellen eines Business Intelligence-Semantikmodells: tabellarische, mehrdimensionale und Power Pivot für SharePoint.
+  SQL Server Analysis Services bietet mehrere Ansätze zum Erstellen eines Business Intelligence-Semantikmodells: Tabellarische, mehrdimensionale und Power Pivot für SharePoint.
   
  Mehr als ein Ansatz ermöglicht eine Modellierungsumgebung, die auf unterschiedliche Geschäfts- und Benutzeranforderungen zugeschnitten ist. Das mehrdimensionale Modell ist eine auf offenen Standards basierende ausgereifte Technologie, die von zahlreichen Herstellern von BI-Software genutzt wird, aber nur schwer zu meistern ist. Das tabellarische Modell bietet einen relationalen Modellierungsansatz, den viele Entwickler intuitiver finden. Das Power Pivot-Modell ist noch einfacher und bietet eine visuelle Datenmodellierung in Excel sowie Serverunterstützung, die über SharePoint bereitgestellt wird.  
   
  Alle Modelle werden als Datenbanken bereitgestellt, die in einer Analysis Services-Instanz ausgeführt werden. Der Zugriff auf die Modelle erfolgt durch Clienttools unter Verwendung einer einzelnen Gruppe von Datenanbietern. Die Visualisierung erfolgt in interaktiven und statischen Berichten über Excel, Reporting Services, Power BI und BI-Tools anderer Hersteller.  
   
- Tabellarische und mehrdimensionale Lösungen mithilfe von SSDT erstellt und dienen der für Unternehmens-BI-, die auf einem eigenständigen ausgeführt Projekte [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz lokal, und für tabellarische Modelle ein [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) Server in der die Cloud. Beide Lösungen stellen hochleistungsfähige analytische Datenbanken bereit, die einfach in BI-Clients integriert werden können. Die einzelnen Lösungen unterscheiden sich jedoch darin, wie sie erstellt, verwendet und bereitgestellt werden. Dieses Thema beschäftigt sich hauptsächlich mit diesen beiden Typen, damit Sie den für Sie richtigen Ansatz bestimmen können.  
+ Tabellarische und mehrdimensionale Lösungen werden mithilfe von SSDT erstellt und dienen der für Unternehmens-BI-, die ausgeführt werden, auf einem eigenständigen Projekte [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz lokal, und für tabellarische Modelle ein [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) -Server in der die Cloud. Beide Lösungen stellen hochleistungsfähige analytische Datenbanken bereit, die einfach in BI-Clients integriert werden können. Die einzelnen Lösungen unterscheiden sich jedoch darin, wie sie erstellt, verwendet und bereitgestellt werden. Dieses Thema beschäftigt sich hauptsächlich mit diesen beiden Typen, damit Sie den für Sie richtigen Ansatz bestimmen können.  
   
- Bei neuen Projekten empfiehlt es sich im Allgemeinen tabellarische Modelle. Tabellarische Modelle sind schneller zu entwerfen, testen und bereitstellen. und arbeitet reibungsloser mit den neuesten Self-service BI-Anwendungen, und cloud-Dienste von Microsoft.  
+ Bei neuen Projekten im Allgemeinen empfohlen tabellarische Modelle. Tabellarische Modelle sind schneller zu entwerfen, testen und bereitstellen. wird funktionieren besser mit den neuesten Self-service BI-Anwendungen und Clouddiensten von Microsoft.  
   
 ##  <a name="bkmk_overview"></a> Übersicht über die Modellierungstypen  
  Neu bei Analysis Services? Die folgende Tabelle enthält eine Übersicht über die verschiedenen Modelle, den jeweiligen Ansatz sowie die entsprechende Software, in der das Modell erstmals eingeführt wurde.  
  
  > [!NOTE]  
->  **Azure Analysis Services** tabellarische Modelle mit dem Kompatibilitätsgrad 1200 oder höher unterstützt. Nicht alle in diesem Thema beschriebenen tabellarischer Modelle-Funktionalität wird jedoch in Azure Analysis Services unterstützt. Zwar erstellen und Bereitstellen von tabellarischen Modellen mit Azure Analysis Services ähnlich wie bei einer lokalen, ist es wichtig, die Unterschiede zu verstehen. Weitere Informationen finden Sie unter [was Azure Analysis Services ist?](https://docs.microsoft.com/azure/analysis-services/analysis-services-overview)
+>  **Azure Analysis Services** unterstützt tabellarische Modelle mit den Kompatibilitätsgraden 1200 und höher. Nicht alle in diesem Thema beschriebenen tabellarischer Modelle-Funktionalität wird jedoch in Azure Analysis Services unterstützt. Beim Erstellen und Bereitstellen von tabellarischen Modellen in Azure Analysis Services ähnlich ist wie für lokale, ist es wichtig, die Unterschiede zu verstehen. Weitere Informationen finden Sie unter [Neuigkeiten von Azure Analysis Services?](https://docs.microsoft.com/azure/analysis-services/analysis-services-overview)
   
 ||||  
 |-|-|-|  
-|**Typ**|**Beschreibung der Modellierung**|**Eingeführt mit**|  
+|**Typ**|**Beschreibung der Modellierung**|**Veröffentlicht**|  
 |Tabellarisch|Relationale Modellierungskonstrukte (Modell, Tabellen, Spalten). Intern werden Metadaten von OLAP-Modellierungskonstrukten (Cubes, Dimensionen, Measures) geerbt. Code und Skripts nutzen OLAP-Metadaten.|SQL Server 2012 und höher (Kompatibilitätsgrade 1050-1103) <sup>1</sup>|  
-|Tabellarisch in SQL Server 2016|Relationalen modellierungskonstrukten (Modell, Tabellen, Spalten), gegliedert in Objektdefinitionen in tabellarischen Metadaten [Tabular Model Scripting Language (TMSL)](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) und [tabellarisches Objekt Model (TOM)](../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md) Code.|SQL Server 2016 (Kompatibilitätsgrad 1200)| 
-|Tabellarisch in SQLServer 2017|Relationalen modellierungskonstrukten (Modell, Tabellen, Spalten), gegliedert in Objektdefinitionen in tabellarischen Metadaten [Tabular Model Scripting Language (TMSL)](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) und [tabellarisches Objekt Model (TOM)](../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md) Code.|SQL Server-2017 (Kompatibilitätsgrad 1400)| 
+|Tabellarisch in SQL Server 2016|Relationalen modellierungskonstrukten (Modell, Tabellen, Spalten), gegliedert in Objektdefinitionen für tabellarische Metadaten in [Tabular Model Scripting Language (TMSL)](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) und [Tabular Object Model (TOM)](../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md) Code.|SQL Server 2016 (Kompatibilitätsgrad 1200)| 
+|Tabellarisch in SQLServer 2017|Relationalen modellierungskonstrukten (Modell, Tabellen, Spalten), gegliedert in Objektdefinitionen für tabellarische Metadaten in [Tabular Model Scripting Language (TMSL)](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) und [Tabular Object Model (TOM)](../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md) Code.|SQL Server 2017 (Kompatibilitätsgrad 1400)| 
 |Multidimensional|OLAP-Modellierungskonstrukte (Cubes, Dimensionen, Measures).|SQL Server 2000 und höher|  
 |Power Pivot|Ursprünglich ein Add-In, aber nun vollständig in Excel integriert. Nur visuelle Modellierung einer internen tabellarischen Infrastruktur. Sie können ein Power Pivot-Modell in SSDT importieren, um ein neues tabellarisches Modell zu erstellen, das in einer Analysis Services-Instanz ausgeführt wird.|Über Excel und Power Pivot BI Desktop|  
   
- <sup>1</sup> Kompatibilitätsgrade sind von Bedeutung in der aktuellen Version aufgrund von tabellarischen metadatenmoduls und Unterstützung für das Szenario aktivieren Funktionen, die nur auf der höheren Ebene verfügbar sind. Höhere Versionen unterstützen früheren Kompatibilitätsgraden funktionsfähig, aber es wird empfohlen, neue Modelle erstellen oder aktualisieren vorhandene Modelle auf der höchsten Kompatibilitätsgrad, die von der Serverversion unterstützt.
+ <sup>1</sup> Kompatibilitätsgrade sind in der aktuellen Version aufgrund der tabellarischen Metadaten-Engine und Unterstützung für das ermöglichen von Szenarien besonders wichtig, Funktionen, die nur auf dem höheren Grad verfügbar sind. Höhere Versionen unterstützen den älteren Kompatibilitätsgraden funktionsfähig, aber es wird empfohlen, Sie neue Modelle zu erstellen oder aktualisieren vorhandene Modelle auf den höchsten Kompatibilitätsgrad von Serverversion unterstützt.
   
 ##  <a name="bkmk_models"></a> Modellfunktionen  
   In der folgenden Tabelle wird die Funktionsverfügbarkeit auf der Modellebene zusammengefasst. Überprüfen Sie diese Liste, um sicherzustellen, dass das Feature, das Sie verwenden möchten, im Typ des Modells verfügbar ist, das Sie erstellen möchten.  
@@ -52,33 +52,33 @@ ms.locfileid: "34018897"
 |||| 
 |-|-|-|
 ||Multidimensional|Tabellarisch|
-|Aktionen|ja|nein|
-|Aggregationen|ja|nein|
-|Berechnete Spalte|nein|ja|  
-|Berechnete Measures|ja|ja| 
-|Berechnete Tabellen|nein|Ja<sup>1</sup>|  
-|Benutzerdefinierte Assemblys|ja|nein|
-|Benutzerdefinierte Rollups|ja|nein| 
-|Standardelement|ja|nein|  
-|Anzeigeordner|ja|Ja<sup>1</sup>|  
-|Distinct Count|ja|Ja (über DAX)|
-|Drillthroughberichte|ja|Ja (hängt mit Client-Anwendung)|
-|Hierarchien|ja|ja|
-|KPIs (Key Performance Indicators)|ja|ja| 
-|Verknüpfte Objekte|ja|Ja (verknüpfte Tabellen)|
-|M-Ausdrücke|nein|Ja<sup>1</sup>|
-|m:n-Beziehungen|ja|Nein (es gibt jedoch [bidirektionale kreuzfilter](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) Kompatibilitätsgrade 1200 oder höher)| 
-|Benannte Mengen|ja|nein| 
-|Unregelmäßige Hierarchien|ja|Ja<sup>1</sup>|  
-|Über- und untergeordnete Hierarchien|ja|Ja (über DAX)|
-|Partitionen|ja|ja| 
-|Perspektiven|ja|ja|
-|Sicherheit auf Zeilenebene|ja|ja| 
-|Sicherheit auf Nachrichtenebene-Objekt|ja|Ja<sup>1</sup>|
-|Semiadditive Measures|ja|ja| 
-|Übersetzungen|[Ja](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|ja| 
-|Benutzerdefinierte Hierarchien|ja|ja|
-|Rückschreiben|ja|nein| 
+|Aktionen|Ja|Nein|
+|Aggregations|Ja|Nein|
+|Berechnete Spalte|Nein|Ja|  
+|Berechnete Measures|Ja|Ja| 
+|Berechnete Tabellen|Nein|Ja<sup>1</sup>|  
+|Benutzerdefinierte Assemblys|Ja|Nein|
+|Benutzerdefinierte Rollups|Ja|Nein| 
+|Standardelement|Ja|Nein|  
+|Anzeigeordner|Ja|Ja<sup>1</sup>|  
+|Distinct Count|Ja|Ja (über DAX)|
+|Drillthrough ausführen|Ja|Ja (je nach Client-Anwendung)|
+|Hierarchien|Ja|Ja|
+|KPIs (Key Performance Indicators)|Ja|Ja| 
+|Verknüpfte Objekte|Ja|Ja (verknüpfte Tabellen)|
+|M-Ausdrücke|Nein|Ja<sup>1</sup>|
+|m:n-Beziehungen|Ja|Nein (es gibt jedoch [bidirektionale kreuzfilter](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) mit Kompatibilitätsgrad 1200 und höher)| 
+|Benannte Mengen|Ja|Nein| 
+|Unregelmäßige Hierarchien|Ja|Ja<sup>1</sup>|  
+|Über- und untergeordnete Hierarchien|Ja|Ja (über DAX)|
+|Partitionen|Ja|Ja| 
+|Perspektiven|Ja|Ja|
+|Sicherheit auf Zeilenebene|Ja|Ja| 
+|Sicherheit auf Zeilenebene-Objekt|Ja|Ja<sup>1</sup>|
+|Semiadditive Measures|Ja|Ja| 
+|Translations|[Ja](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Ja| 
+|Benutzerdefinierte Hierarchien|Ja|Ja|
+|Rückschreiben|Ja|Nein| 
   
  <sup>1</sup> finden Sie unter [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) für Informationen zu funktionalen Unterschieden zwischen den Kompatibilitätsgraden funktionsfähig.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "34018897"
   
  Die Größe einer Analysis Services-Datenbank wird nur durch die Ressourcen eingeschränkt, die für ihre Ausführung verfügbar sind. Der Modelltyp und Speichermodus spielen auch eine Rolle, in welchem Umfang die Datenbank anwachsen kann.  
   
- Tabellarische Datenbanken werden entweder im Arbeitsspeicher oder im DirectQuery-Modus ausgeführt, der die Ausführung von Abfragen an eine externe Datenbank verlagert. Für tabellarischen in-Memory-Analysen wird die Datenbank vollständig im Arbeitsspeicher gespeichert, was bedeutet, dass Sie ausreichend Arbeitsspeicher nicht nur geladen werden alle Daten, sondern auch zusätzliche Datenstrukturen, die zur Unterstützung von Abfragen erstellt haben, müssen.  
+ Tabellarische Datenbanken werden entweder im Arbeitsspeicher oder im DirectQuery-Modus ausgeführt, der die Ausführung von Abfragen an eine externe Datenbank verlagert. Für tabellarische in-Memory-Analysen wird die Datenbank vollständig im Arbeitsspeicher gespeichert, was, dass Sie ausreichend Arbeitsspeicher nicht nur alle Daten, sondern auch zusätzliche Datenstrukturen erstellt bedeutet, um die Unterstützung von Abfragen Laden benötigen.  
   
- In SQL Server 2016 überarbeitete DirectQuery hat weniger Einschränkungen als bisher und eine bessere Leistung. Durch das Nutzen der relationalen Back-End-Datenbank für die Speicherung und Ausführung von Abfragen ist das Erstellen eines großen tabellarischen Modells einfacher als bisher zu realisieren.  
+ SQL Server 2016, überarbeitete DirectQuery hat weniger Einschränkungen als bisher und eine bessere Leistung. Durch das Nutzen der relationalen Back-End-Datenbank für die Speicherung und Ausführung von Abfragen ist das Erstellen eines großen tabellarischen Modells einfacher als bisher zu realisieren.  
   
- In der Vergangenheit befinden sich größten in der Produktion mehrdimensionalen, mit der Verarbeitung als auch das abfragearbeitsauslastungen unabhängig auf dedizierter Hardware, optimiert für den jeweiligen Zweck ausgeführt.  Tabellarische Datenbanken holen rasch auf, und neue Weiterentwicklungen bei DirectQuery helfen, die Lücke noch schneller zu schließen.  
+ In der Vergangenheit sind in der Produktion großen Datenbanken vergehen oft mit Verarbeitungs- und abfragearbeitsauslastungen unabhängig auf dedizierter Hardware, für den jeweiligen Zweck optimiert ausgeführt mehrdimensionale.  Tabellarische Datenbanken holen rasch auf, und neue Weiterentwicklungen bei DirectQuery helfen, die Lücke noch schneller zu schließen.  
   
- Für mehrdimensionale Verschiebung Datenspeicher und Abfrage ist die Ausführung über ROLAP möglich.   Rowsets können auf einem Abfrageserver im Cache zwischengespeichert werden, veraltete Rowsets können ausgelagert werden. Aufgrund der effizienten und ausgewogenen Nutzung von Arbeitsspeicher- und Datenträgerressourcen entscheiden sich Kunden häufig für mehrdimensionale Lösungen.  
+ Für mehrdimensionale Verschiebung datenspeicherung und die Abfrage ist die Ausführung über ROLAP möglich.   Rowsets können auf einem Abfrageserver im Cache zwischengespeichert werden, veraltete Rowsets können ausgelagert werden. Aufgrund der effizienten und ausgewogenen Nutzung von Arbeitsspeicher- und Datenträgerressourcen entscheiden sich Kunden häufig für mehrdimensionale Lösungen.  
   
  Unter Belastung ist davon auszugehen, dass die Kapazitätsanforderungen sowohl an den Datenträger als auch an den Arbeitsspeicher steigen, weil Daten von Analysis Services zwischengespeichert, gespeichert, durchsucht und abgefragt werden. Weitere Informationen zu Speicherauslagerungsoptionen finden Sie unter [Memory Properties](../analysis-services/server-properties/memory-properties.md)(Speichereigenschaften). Weitere Informationen zum Skalieren finden Sie unter [Hohe Verfügbarkeit und Skalierbarkeit in Analysis Services](../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "34018897"
   
  **Unterstützte Datenquellen**  
   
- Tabellarische Modelle sind in der Lage, Daten aus relationalen Datenquellen, Datenfeeds und einigen Dokumentformaten zu importieren. Sie können auch OLE DB für ODBC-Anbieter mit tabellarischen Modellen verwenden. Tabellarische Modelle mit Kompatibilitätsgrad 1400 bieten einen beträchtlichen Anstieg der Vielzahl von Datenquellen, die aus denen Sie von importieren können. Dies ist aufgrund der Einführung der moderne abrufen Daten Daten Abfragen und-Importfunktionen in SSDT unter Verwendung der Formel Abfragesprache M.   
+ Tabellarische Modelle sind in der Lage, Daten aus relationalen Datenquellen, Datenfeeds und einigen Dokumentformaten zu importieren. Sie können auch den OLE DB für ODBC-Anbieter mit tabellarischen Modellen verwenden. Tabellarische Modelle mit Kompatibilitätsgrad 1400 bieten eine starke Zunahme der Vielzahl von Datenquellen, die von denen Sie von importieren können. Dies liegt an der Einführung der moderne Get Data Daten Abfragen und Funktionen in SSDT, die mit der Sprache der M-formelabfragesprache importieren.   
 
   Mehrdimensionale Lösungen sind in der Lage, Daten mit nativen und verwalteten OLE DB-Anbietern aus relationalen Datenquellen zu importieren.  
   
@@ -117,14 +117,14 @@ ms.locfileid: "34018897"
   
 -   [Unterstützte Datenquellen](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
 
--   [Unterstützte Datenquellen &#40;SSAS – Mehrdimensional&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+-   [Unterstützte Datenquellen &#40;SSAS – mehrdimensional&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
 
   
 ##  <a name="bkmk_lang"></a> Unterstützung für Abfrage und Skriptsprache  
  Analysis Services schließen MDX, DMX, DAX, XML/A, ASSL und TMSL ein. Die Unterstützung für diese Sprachen kann je nach Modelltyp variieren. Wenn Anforderungen für die Abfrage und Skriptsprache in Betracht kommen, überprüfen Sie die folgende Liste.  
 
--   Tabellarische Modelldatenbanken unterstützen DAX-Berechnungen, DAX-Abfragen und MDX-Abfragen. Dies gilt für alle Kompatibilitätsgrade. Skriptsprachen sind ASSL (über XMLA) für die Kompatibilitätsgrade 1050-1103 und TMSL (über XMLA) für den Kompatibilitätsgrad 1200 oder höher. 
+-   Tabellarische Modelldatenbanken unterstützen DAX-Berechnungen, DAX-Abfragen und MDX-Abfragen. Dies gilt für alle Kompatibilitätsgrade. Skriptsprachen sind ASSL (über XMLA) für die Kompatibilitätsgrade 1050-1103 und TMSL (über XMLA) für den Kompatibilitätsgrad 1200 und höher. 
 
 -   PowerPivot-Arbeitsmappen verwenden DAX für Berechnungen und DAX oder MDX für Abfragen.  
   
@@ -140,9 +140,9 @@ ms.locfileid: "34018897"
  Alle Analysis Services-Projektmappen können auf Datenbankebene gesichert werden. Präzisere Sicherheitsoptionen variieren je nach Modus. Wenn präzise Sicherheitseinstellungen für die Projektmappe erforderlich sind, überprüfen Sie die folgende Liste, um sicherzustellen, dass die Sicherheitsstufe, die Sie möchten, für den zu erstellenden Projektmappentyp unterstützt wird:  
 
   
--   Tabellarische modelldatenbanken können Sicherheit auf Zeilenebene mit rollenbasierten Berechtigungen verwenden.  
+-   Tabellarische modelldatenbanken können Sicherheit auf Zeilenebene mithilfe rollenbasierter Berechtigungen verwenden.  
   
--   Mehrdimensionale modelldatenbanken können Dimension und die Sicherheit auf Zellenebene mit rollenbasierten Berechtigungen verwendet.  
+-   Mehrdimensionale modelldatenbanken können Dimension und die Sicherheit auf Zellenebene mit rollenbasierten Berechtigungen verwenden.  
 
 -   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappen werden mit SharePoint-Berechtigungen auf Dateiebene gesichert.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "34018897"
 |[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] für Excel|Verwenden Sie diese Funktion, um eine [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappe zu erstellen, die Sie später in einer SharePoint-Farm bereitstellen, die über eine Installation von [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] für SharePoint verfügt. [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] für Excel hat einen separaten Anwendungsarbeitsbereich, der über Excel geöffnet wird. Es werden die gleichen visuellen Metaphern (Seiten im Registerkartenformat, Rasterlayout und Bearbeitungsleiste) wie in Excel verwendet. Benutzer, die in Excel versiert sind, werden dieses Tool gegenüber [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]bevorzugen.|  
   
 ##  <a name="bkmk_client"></a> Unterstützung für Clientanwendungen  
- Im Allgemeinen, tabellarische und mehrdimensionale Lösungen unterstützen Clientanwendungen, die mit einem oder mehreren der Analysis Services-Clientbibliotheken (MSOLAP, AMOMD, ADOMD). Z. B. Excel, Power BI Desktop und benutzerdefinierten Anwendungen.   
+ Im Allgemeinen, tabellarische und mehrdimensionale Lösungen unterstützen Clientanwendungen mithilfe einer oder mehrerer der Analysis Services-Clientbibliotheken (MSOLAP, AMOMD, ADOMD). Z. B. Excel, Power BI Desktop und benutzerdefinierte Anwendungen.   
  
  Wenn Sie Reporting Services verwenden, variiert die Verfügbarkeit der Berichtsfunktion je nach Edition und Servermodus. Aus diesem Grund kann sich der zu erstellende Berichtstyp auf den zu installierenden Servermodus auswirken.  
   
