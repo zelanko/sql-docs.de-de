@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changearticle
@@ -17,12 +16,12 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 064465e133e5b122ef532fa09a7601a81f5606ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 582eb67d72941e24c135d3cd1690ab23aaca5acc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705988"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208159"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_table**||Die neue Zieltabelle.|  
 |**destination_owner**||Name des Besitzers des Zielobjekts.|  
 |**filter**||Die neue gespeicherte Prozedur, mit der die Tabelle gefiltert werden soll (horizontales Filtern). Die Standardeinstellung ist NULL. Kann bei der Peer-zu-Peer-Replikation für Veröffentlichungen nicht geändert werden.|  
-|**fire_triggers_on_snapshot**|**true**|Replizierte Benutzertrigger werden ausgeführt, wenn die Anfangsmomentaufnahme angewendet wird.<br /><br /> Hinweis: für Trigger repliziert werden der Bitmaskenwert von *Schema_option* muss den Wert enthalten **0 x 100**.|  
+|**fire_triggers_on_snapshot**|**true**|Replizierte Benutzertrigger werden ausgeführt, wenn die Anfangsmomentaufnahme angewendet wird.<br /><br /> Hinweis: Damit Trigger repliziert werden der Bitmaskenwert von *Schema_option* muss den Wert enthalten **0 x 100**.|  
 ||**false**|Replizierte Benutzertrigger werden nicht ausgeführt, wenn die Anfangsmomentaufnahme angewendet wird.|  
 |**identity_range**||Steuert die Größe der zugeordneten Identitätsbereiche, die am Abonnent zugeordnet wurden. Wird für die Peer-zu-Peer-Replikation nicht unterstützt.|  
 |**ins_cmd**||Die auszuführende INSERT-Anweisung; andernfalls wird die Operation aus dem Protokoll hergeleitet.|  
@@ -95,7 +94,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0 x 1000**|Repliziert die Sortierung auf Spaltenebene.|  
 ||**0 x 2000**|Repliziert erweiterte Eigenschaften, die dem Quellobjekt des veröffentlichten Artikels zugeordnet sind.|  
 ||**0 x 4000**|Repliziert eindeutige Schlüssel, wenn auf einem Tabellenartikel definiert.|  
-||**0 x 8000**|Repliziert den Primärschlüssel und eindeutige Schlüssel eines Tabellenartikels als Einschränkungen mithilfe von ALTER TABLE-Anweisungen.<br /><br /> Hinweis: Diese Option ist veraltet. Verwendung **0 x 80** und **0 x 4000** stattdessen.|  
+||**0 x 8000**|Repliziert den Primärschlüssel und eindeutige Schlüssel eines Tabellenartikels als Einschränkungen mithilfe von ALTER TABLE-Anweisungen.<br /><br /> Hinweis: Diese Option wurde als veraltet markiert. Verwendung **0 x 80** und **0 x 4000** stattdessen.|  
 ||**0 x 10000**|Repliziert CHECK-Einschränkungen als NOT FOR REPLICATION, sodass die Einschränkungen während der Synchronisierung nicht erzwungen werden.|  
 ||**0 x 20000**|Repliziert FOREIGN KEY-Einschränkungen als NOT FOR REPLICATION, sodass diese Einschränkungen bei der Synchronisierung nicht erzwungen werden.|  
 ||**0 x 40000**|Repliziert Dateigruppen, die mit einer partitionierten Tabelle oder einem Index verbunden sind.|  
@@ -166,7 +165,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  Weitere Informationen zu den Eigenschaften, bei deren Änderung die erneute Initialisierung aller vorhandenen Abonnements erforderlich ist, finden Sie im Abschnitt "Hinweise".  
   
  [ **@publisher**=] **"***Verleger***"**  
- Gibt einen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+ Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht verwendet werden, beim Ändern von Artikeleigenschaften auf einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
@@ -236,8 +235,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**nur Func schema**|**0 x 01**, **0 x 20**, **0 x 2000**, **0 x 400000**, **0 x 800000**, **0x2000000**, **0x8000000**, **0 x 10000000**, **0 x 20000000**, **0 x 40000000**, und **0 x 80000000**|**0 x 01**, **0 x 20**, **0 x 2000**, **0 x 400000**, **0 x 800000**, **0x2000000**, **0x8000000**, **0 x 10000000**, **0 x 20000000**, **0 x 40000000**, und **0 x 80000000**|  
 |**Nur indizierte sichtschema**|**0 x 01**, **0x010**, **0 x 020**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 100000**, **0x200000**, **0 x 400000**, **0 x 800000**,  **0x2000000**, **0x8000000**, **0 x 40000000**, und **0 x 80000000**|**0 x 01**, **0x010**, **0 x 020**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 100000**, **0x200000**, **0 x 400000**, **0 x 800000**,  **0x2000000**, **0x8000000**, **0 x 40000000**, und **0 x 80000000**|  
   
-> [!NOTE]  
->  Für Veröffentlichungen mit in der Warteschlange die *Schema_option* Wert **0 x 80** muss aktiviert sein. Die unterstützten *Schema_option* -Werte für nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Veröffentlichungen werden: **0 x 01**, **0 x 02**, **0 x 10**,  **0 x 40**, **0 x 80**, **0 x 1000** und **0 x 4000**.  
+> [!NOTE]
+>  Für Veröffentlichungen mit in der Warteschlange die *Schema_option* Wert **0 x 80** muss aktiviert sein. Die unterstützten *Schema_option* -Werte für nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Veröffentlichungen werden: **0 x 01**, **0 x 02**, **0 x 10**, **0 x 40**, **0 x 80**, **0 x 1000** und  **0 x 4000**.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  

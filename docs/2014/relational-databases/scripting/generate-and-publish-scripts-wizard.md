@@ -43,25 +43,25 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc5ba07db49ac27ff5f36762abe6c1f1bcfac1d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d7c1da71445659d61fa95dc30bc7f128a1e1d40
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192856"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373612"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
   Sie können mit dem **Assistenten zum Generieren und Veröffentlichen von Skripts** Skripts zur Übertragung einer Datenbank zwischen Instanzen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] oder [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]erstellen. Sie können Skripts für eine Datenbank auf einer Datenbank-Engine-Instanz im lokalen Netzwerk oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aus generieren. Die generierten Skripts können auf einer anderen Datenbank-Engine-Instanz oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aus ausgeführt werden. Sie können den Assistenten außerdem dazu verwenden, den Inhalt einer Datenbank direkt in einem Webdienst zu veröffentlichen, der mit den Datenbank-Veröffentlichungsdiensten erstellt wurde. Sie können Skripts für eine gesamte Datenbank oder für eine Auswahl bestimmter Objekte erstellen.  
   
 1.  **Vorbereitungen:**  [Veröffentlichen in einem gehosteten Dienst](#PubHostSvc), [Berechtigungen](#Permissions)  
   
-2.  **Generieren oder Veröffentlichen eines Skripts mithilfe von:**  [Der Assistent zum Generieren und Veröffentlichen von Skripts](#GenPubScriptWiz)  
+2.  **Zum Generieren oder Veröffentlichen eines Skripts verwenden:**  [Das Generieren und Veröffentlichen von Skripts-Assistenten](#GenPubScriptWiz)  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Die Quell- und Zieldatenbank können sich auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] befinden, die mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher ausgeführt wird.  
   
 ###  <a name="PubHostSvc"></a> Veröffentlichen in einem gehosteten Dienst  
- Der **Assistent zum Generieren und Veröffentlichen von Skripts** kann nicht nur zum Erstellen von Skripts, sondern auch zum Veröffentlichen einer Datenbank in einem bestimmten gehosteten SQL Server-Webdienst verwendet werden. Das SQL Server Hosting Toolkit stellt auf der CodePlex-Website Datenbank-Veröffentlichungsdienste als freigegebenes Quellprojekt zur Verfügung. Das Projekt für Datenbank-Veröffentlichungsdienste kann von Webhostinganbietern zum Erstellen einer Gruppe von Webdiensten verwendet werden, mit denen deren Kunden Datenbanken problemlos für den Webdienst bereitstellen können. Weitere Informationen zum Herunterladen des SQL Server Hosting Toolkits finden Sie unter [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025).  
+ Der **Assistent zum Generieren und Veröffentlichen von Skripts** kann nicht nur zum Erstellen von Skripts, sondern auch zum Veröffentlichen einer Datenbank in einem bestimmten gehosteten SQL Server-Webdienst verwendet werden. Das SQL Server Hosting Toolkit stellt auf der CodePlex-Website Datenbank-Veröffentlichungsdienste als freigegebenes Quellprojekt zur Verfügung. Das Projekt für Datenbank-Veröffentlichungsdienste kann von Webhostinganbietern zum Erstellen einer Gruppe von Webdiensten verwendet werden, mit denen deren Kunden Datenbanken problemlos für den Webdienst bereitstellen können. Weitere Informationen zum Herunterladen des SQL Server Hosting Toolkits finden Sie unter [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025).  
   
  Aktivieren Sie zum Veröffentlichen einer Datenbank in einem Webhostingdienst auf der Seite **Skripterstellungsoptionen festlegen** des Assistenten die Option **In Webdienst veröffentlichen** .  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48192856"
  **Abbrechen** – Beendet den Assistenten, ohne ein Skript aus der Datenbank zu generieren oder veröffentlichen.  
   
 ###  <a name="ChooseObjects"></a> Seite "Objekte auswählen"  
- Wählen Sie auf dieser Seite aus, welche Objekte in die von diesem Assistenten generierten Skripts eingeschlossen werden sollen. Auf der folgenden Seite des Assistenten können Sie diese Skripts am Speicherort Ihrer Wahl speichern oder sie verwenden, um Datenbankobjekte an einen Remotewebhostinganbieter zu veröffentlichen, bei dem die [SQL Server-Datenbank-Veröffentlichungsdienste](http://go.microsoft.com/fwlink/?LinkId=142025)installiert sind.  
+ Wählen Sie auf dieser Seite aus, welche Objekte in die von diesem Assistenten generierten Skripts eingeschlossen werden sollen. Auf der folgenden Seite des Assistenten können Sie diese Skripts am Speicherort Ihrer Wahl speichern oder sie verwenden, um Datenbankobjekte an einen Remotewebhostinganbieter zu veröffentlichen, bei dem die [SQL Server-Datenbank-Veröffentlichungsdienste](https://go.microsoft.com/fwlink/?LinkId=142025)installiert sind.  
   
  **Option „Skript für gesamte Datenbank erstellen“** – Klicken Sie hier, um Skripts für alle Objekte in der Datenbank zu generieren und ein Skript für die Datenbank selbst einzuschließen.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48192856"
   
  **Optionen** – Wenn der Assistent Skripts an einem Speicherort Ihrer Wahl speichern soll, wählen Sie **Skripts an einem bestimmten Speicherort speichern**aus. Sie können die Skripts später für eine Datenbank-Engine-Instanz oder für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ausführen. Wenn der Assistent die Datenbankobjekte in einem Remote-Webhostinganbieter veröffentlichen soll, wählen Sie **In Webdienst veröffentlichen**aus.  
   
- **Skripts an einem bestimmten Speicherort speichern** – Speichern Sie mindestens eine Transact-SQL-Skriptdatei an einem angegebenen Speicherort.  
+ **Skripts an einem bestimmten Speicherort speichern** – speichern Sie eine oder mehrere. Transact-SQL-Skriptdateien an einem Speicherort Geben Sie an.  
   
 -   **Erweitert** – Zeigt das Dialogfeld **Erweiterte Skripterstellungsoptionen** an, in dem Sie erweiterte Optionen für die Skripterstellung auswählen können.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48192856"
   
  **Optionen** – Sie können erweiterte Skriptoptionen angeben, indem Sie einen Wert aus der Liste der verfügbaren Einstellungen rechts neben den einzelnen Optionen auswählen.  
   
- **Allgemein** – Die folgenden Optionen gelten für das ganze Skript:  
+ **Allgemein**: Die folgenden Optionen gelten für das ganze Skript.  
   
 -   **ANSI-Auffüllung** -enthält `ANSI PADDING ON` im Skript. Der Standardwert ist **True**.  
   
@@ -191,15 +191,15 @@ ms.locfileid: "48192856"
   
 -   **Skripterstellung für Statistiken** : bei Festlegung auf **Skripterstellung für Statistiken**, schließt diese Option die `CREATE STATISTICS` -Anweisung zum erneuten Erstellen von Statistiken für das Objekt. Mit der Option **Skripterstellung für Statistiken und Histogramme** können auch Histogramminformationen erstellt werden. Der Standardwert ist **Keine Skripterstellung für Statistiken**. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
--   **Skripterstellung für USE DATABASE** -fügt die `USE DATABASE` Anweisung, um das Skript. Um sicherzustellen, dass Datenbankobjekte in der richtigen Datenbank erstellt werden, enthalten die `USE DATABASE` Anweisung. Wenn das Skript in einer anderen Datenbank verwendet werden soll, wählen Sie **"false"** zum Auslassen der `USE DATABASE` Anweisung. Der Standardwert ist **True**. Weitere Informationen finden Sie unter [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
+-   **Skripterstellung für USE DATABASE** -fügt die `USE DATABASE` Anweisung, um das Skript. Die `USE DATABASE`-Anweisung muss enthalten sein, um sicherzustellen, dass Datenbankobjekte in der richtigen Datenbank erstellt werden. Wenn das Skript in einer anderen Datenbank verwendet werden soll, wählen Sie **"false"** zum Auslassen der `USE DATABASE` Anweisung. Der Standardwert ist **True**. Weitere Informationen finden Sie unter [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
--   **Datentypen, für die ein Skript erstellt wird** – Wählt aus, wofür ein Skript erstellt werden soll: **Nur Daten**, **Nur Schema** oder beides. Der Standard ist **Nur Schema**.  
+-   **Typen von Skript** -wählt aus, was geskriptet werden soll: **Nur Daten**, **nur Schema**, oder beides. Der Standard ist **Nur Schema**.  
   
  **Tabellen-/Sichtoptionen** – Die folgenden Optionen gelten nur für Skripts für Tabellen oder Sichten.  
   
 -   **Skript für Änderungsnachverfolgung erstellen** – Die Änderungsnachverfolgung für Skripts wird in der Ursprungsdatenbank oder in den Tabellen in der Ursprungsdatenbank aktiviert. Der Standardwert ist **False**. Weitere Informationen finden Sie unter [Informationen zur Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
--   **Skripterstellung für Check-Einschränkungen** – Adds `CHECK` Einschränkungen an das Skript. Der Standardwert ist **True**. `CHECK` Einschränkungen erfordern Daten, die in einer Tabelle in eine angegebene Bedingung erfüllen eingegeben werden. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+-   **Skripterstellung für Check-Einschränkungen** -fügt `CHECK` Einschränkungen an das Skript. Der Standardwert ist **True**. Für `CHECK`-Einschränkungen ist es erforderlich, dass Daten, die in eine Tabelle eingegeben werden, eine angegebene Bedingung erfüllen. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 -   **Skripterstellung für Datenkomprimierungsoptionen** – Schließt Datenkomprimierungsoptionen ein, wenn sie in der Ursprungsdatenbank oder den Tabellen in der Ursprungsdatenbank konfiguriert werden. Weitere Informationen finden Sie unter [Data Compression](../data-compression/data-compression.md). Der Standardwert ist **False**.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "48192856"
   
  **Optionen** – Sie können erweiterte Skriptoptionen angeben, indem Sie einen Wert aus der Liste der verfügbaren Einstellungen rechts neben den einzelnen Optionen auswählen.  
   
- **Allgemein** – Die folgenden Optionen gelten für die gesamte Veröffentlichung:  
+ **Allgemein**: Die folgenden Optionen gelten für die gesamte Veröffentlichung.  
   
 1.  **UDDTs in Basistypen konvertieren** – Im Falle von **True**werden benutzerdefinierte Datentypen (UDDT) in die zugrunde liegenden Basisdatentypen konvertiert, die zu ihrer Erstellung verwendet wurden. Verwenden Sie **True** , wenn der UDDT in der Datenbank, in der das Skript ausgeführt wird, nicht vorhanden ist. Im Falle von **False**werden UDDTs verwendet. Der Standardwert ist **False**.  
   
@@ -261,15 +261,15 @@ ms.locfileid: "48192856"
   
 11. **Skriptbindung** – Schließt die Bindung für Standard- und Regelobjekte im Skript ein, das zum Veröffentlichen an den Anbieter gesendet wird. Der Standardwert ist **True**. Weitere Informationen finden Sie unter [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) und [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql).  
   
-12. **Zu veröffentliche Datentypen** – Wählt aus, wofür ein Skript erstellt werden soll: **Nur Daten**, **Nur Schema** oder beides. Der Standard ist **Schema und Daten**.  
+12. **Typen der zu veröffentlichenden Daten** -wählt aus, was geskriptet werden soll: **Nur Daten**, **nur Schema**, oder beides. Der Standard ist **Schema und Daten**.  
   
- **Veröffentlichungsoptionen** – Gibt an, ob beim Veröffentlichen auf dem Webhostinganbieter Transaktionen verwendet werden sollen.  
+ **Veröffentlichungsoptionen**: Gibt an, ob beim Veröffentlichen auf dem Webhostinganbieter Transaktionen verwendet werden sollen.  
   
 1.  **Mithilfe einer Transaktion veröffentlichen** – Verwendet Transaktionen beim Veröffentlichen zu einem Remote-Webhostinganbieter. Wenn die Zieldatenbank die Veröffentlichung nicht abschließen kann, werden die Transaktionen zurückgesetzt. Der Standardwert ist **True**.  
   
  **Tabellen-/Sichtoptionen** – Die folgenden Optionen gelten nur für Tabellen oder Sichten.  
   
-1.  **Check-Einschränkungen veröffentlichen** -schließt die Erstellung von `CHECK` Einschränkungen in den Veröffentlichungsprozess. Der Standardwert ist **True**. `CHECK` Einschränkungen erfordern Daten, die in einer Tabelle in eine angegebene Bedingung erfüllen eingegeben werden. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+1.  **Check-Einschränkungen veröffentlichen** -schließt die Erstellung von `CHECK` Einschränkungen in den Veröffentlichungsprozess. Der Standardwert ist **True**. Für `CHECK`-Einschränkungen ist es erforderlich, dass Daten, die in eine Tabelle eingegeben werden, eine angegebene Bedingung erfüllen. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 2.  **Fremdschlüssel veröffentlichen** – Schließt die Erstellung von Fremdschlüsseln in den Veröffentlichungsprozess ein. Der Standardwert ist **True**. Mit Fremdschlüsseln können Beziehungen zwischen Tabellen angezeigt und erzwungen werden. Weitere Informationen finden Sie unter [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   

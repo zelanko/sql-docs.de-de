@@ -20,16 +20,16 @@ ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c26111571eb505640acee035cba37d617b43c481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a680f5579b241f6b279f5ecc994d32c8fad784f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849938"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205359"
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ODBC  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLMoreResults** bestimmt, ob weitere Ergebnisse anzeigt, die sich auf eine Anweisung mit verfügbaren **wählen**, **UPDATE**, **einfügen**, oder  **Löschen Sie** Anweisungen und, wenn dies der Fall ist, initialisiert verarbeiten, um diese Ergebnisse zu erzielen.  
@@ -39,7 +39,7 @@ ms.locfileid: "47849938"
 ```  
   
 SQLRETURN SQLMoreResults(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -73,7 +73,7 @@ SQLRETURN SQLMoreResults(
 ## <a name="comments"></a>Kommentare  
  **Wählen Sie** Anweisungen Resultsets zurückgeben. **UPDATE**, **einfügen**, und **löschen** Anweisungen die Anzahl der betroffenen Zeilen zurückgegeben. Wenn eine dieser Anweisungen zusammengefasst werden, mit Arrays von Parametern (nummeriert in aufsteigender Reihenfolge der Parameter in der Reihenfolge, die sie in den Batch angezeigt werden) oder in Prozeduren gesendet, sie können mehrere Resultsets zurückgeben oder Zeilenanzahl. Weitere Informationen zu Batches von Anweisungen und Arrays von Parametern, finden Sie unter [Batches von SQL-Anweisungen](../../../odbc/reference/develop-app/batches-of-sql-statements.md) und [Arrays von Parameterwerten](../../../odbc/reference/develop-app/arrays-of-parameter-values.md).  
   
- Nach dem Ausführen des Batches, wird die Anwendung auf das erste Resultset positioniert. Die Anwendung kann Aufrufen **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll** , **SQLSetPos**, und alle Metadatenfunktionen, auf das erste oder alle nachfolgenden Resultset mit Vorwärtscursor, wie es gäbe es nur ein einzelnes Resultset. Wenn sie mit dem ersten Resultset abgeschlossen ist, ruft die Anwendung **SQLMoreResults** , in das nächste Resultset zu verschieben. Wenn ein anderes Resultset oder Count verfügbar ist, **SQLMoreResults** gibt SQL_SUCCESS zurück, und initialisiert die Resultset oder die Anzahl für die weitere Verarbeitung. Zeile Count – Generieren von Anweisungen angezeigt, in der Zwischenzeit führen Set – Generieren von Anweisungen, sie können durch Aufrufen von ausgeführt werden **SQLMoreResults**. Nach dem Aufruf **SQLMoreResults** für **UPDATE**, **einfügen**, oder **löschen** -Anweisungen, die eine Anwendung kann eine Aufrufen **SQLRowCount**.  
+ Nach dem Ausführen des Batches, wird die Anwendung auf das erste Resultset positioniert. Die Anwendung kann Aufrufen **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll** , **SQLSetPos**, und alle Metadatenfunktionen, auf das erste oder alle nachfolgenden Resultset mit Vorwärtscursor, wie es gäbe es nur ein einzelnes Resultset. Wenn sie mit dem ersten Resultset abgeschlossen ist, ruft die Anwendung **SQLMoreResults** , in das nächste Resultset zu verschieben. Wenn ein anderes Resultset oder Count verfügbar ist, **SQLMoreResults** gibt SQL_SUCCESS zurück, und initialisiert die Resultset oder die Anzahl für die weitere Verarbeitung. Zeile Count – Generieren von Anweisungen angezeigt, in der Zwischenzeit generiert Set-Anweisungen führen, sie können ausgeführt werden, durch Aufrufen von **SQLMoreResults**. Nach dem Aufruf **SQLMoreResults** für **UPDATE**, **einfügen**, oder **löschen** -Anweisungen, die eine Anwendung kann eine Aufrufen **SQLRowCount**.  
   
  Wenn es eine aktuelle Resultset mit Zeilen Resultsetzeile wurde, **SQLMoreResults** verwirft das Resultset und das nächste Resultset oder zählen verfügbar macht. Wenn alle Ergebnisse verarbeitet wurden, **SQLMoreResults** SQL_NO_DATA zurückgibt. Für einige Treiber sind Output-Parameter und Rückgabewerte nicht verfügbar, bis alle Resultsets und Zeilen verarbeitet wurden. Für solche Treiber, Ausgabeparameter und Rückgabewerte, die beim verfügbar **SQLMoreResults** SQL_NO_DATA zurückgibt.  
   
@@ -89,14 +89,14 @@ SQLRETURN SQLMoreResults(
   
  Wenn eine gesuchte aktualisieren, insert oder-Anweisung in DELETE ein Batch von Anweisungen hat keine Auswirkungen auf alle Zeilen in der Datenquelle **SQLMoreResults** gibt SQL_SUCCESS zurück. Dies unterscheidet sich von die Groß-/Kleinschreibung ein gesuchtes Update, insert oder delete-Anweisung, die ausgeführt wird, über **SQLExecDirect**, **SQLExecute**, oder **SQLParamData**, Gibt SQL_NO_DATA zurück, wenn sie alle Zeilen in der Datenquelle nicht beeinträchtigt wird. Wenn eine Anwendung ruft **SQLRowCount** zum Abrufen der Anzahl der Zeilen nach einem Aufruf von **SQLMoreResults** Zeilen hat keine Auswirkungen **SQLRowCount** gibt SQL_NO_DATA zurück.  
   
- Weitere Informationen zu den gültigen Sequenzierung der ergebnisverarbeitung Funktionen, finden Sie unter [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Weitere Informationen zu den gültigen Sequenzierung der ergebnisverarbeitung Funktionen, finden Sie unter [Anhang B: ODBC-Übergang Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Weitere Informationen über SQL_PARAM_DATA_AVAILABLE und gestreamte Output-Parameter, finden Sie unter [Abrufen von Ausgabeparametern mit SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
 ## <a name="availability-of-row-counts"></a>Verfügbarkeit von Zeilenanzahlen  
  Wenn ein Batch mehrere aufeinander folgende Zeile Count – Generieren von Anweisungen enthält, ist es möglich, dass diese Zeilenanzahl in nur einem Zeilenanzahl Rollup enthalten sind. Beispielsweise verfügt ein Batch einfügen fünf Anweisungen, und dann bestimmte Datenquellen von fünf einzelne Zeilenanzahl zurückgegeben werden. Bestimmte Daten aus anderen Quellen zurückgeben, nur eine Zeilenanzahl, die die Summe der fünf einzelne Zeilenanzahlen darstellt.  
   
- Wenn ein Batch eine Kombination von Set – Generieren von Ergebnis und Zeile Count – Generieren von Anweisungen enthält, Zeilenanzahl oder möglicherweise nicht zur Verfügung zu. Das Verhalten des Treibers in Bezug auf die Verfügbarkeit der Zeilenanzahl wird aufgelistet, in den Typ der SQL_BATCH_ROW_COUNT-Informationen zur Verfügung, durch einen Aufruf von **SQLGetInfo**. Nehmen wir beispielsweise an, dass der Batch enthält eine **wählen**, gefolgt von zwei **einfügen**s und einen anderen **wählen**. Klicken Sie dann sind die folgenden Fälle möglich:  
+ Wenn ein Batch eine Kombination von Set generiertem Ergebnis und Zeile Count – Generieren von Anweisungen enthält, Zeilenanzahl oder möglicherweise nicht zur Verfügung zu. Das Verhalten des Treibers in Bezug auf die Verfügbarkeit der Zeilenanzahl wird aufgelistet, in den Typ der SQL_BATCH_ROW_COUNT-Informationen zur Verfügung, durch einen Aufruf von **SQLGetInfo**. Nehmen wir beispielsweise an, dass der Batch enthält eine **wählen**, gefolgt von zwei **einfügen**s und einen anderen **wählen**. Klicken Sie dann sind die folgenden Fälle möglich:  
   
 -   Die Zeilenanzahl, die die beiden entspricht **einfügen** Anweisungen sind überhaupt nicht verfügbar. Der erste Aufruf **SQLMoreResults** positionieren Sie für das Resultset des zweiten **wählen** Anweisung.  
   

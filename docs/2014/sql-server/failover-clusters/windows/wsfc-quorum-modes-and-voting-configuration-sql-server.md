@@ -14,15 +14,15 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26e5c4cdbc181012d72f02f4bc05b122a4e722ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111480"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349932"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)
-  Beide [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] und AlwaysOn-Failoverclusterinstanzen (FCIS) nutzen Windows Server Failover Clustering (WSFC) als plattformtechnologie.  WSFC verwendet einen auf Quorum basierenden Ansatz zum Überwachen des Gesamtclusterzustands und Maximieren der Fehlertoleranz auf Knotenebene. Umfassende Kenntnisse in Bezug auf WSFC-Quorummodi und die Knotenabstimmungskonfiguration sind sehr wichtig für das Entwerfen, Betreiben und Warten (Fehlerbehandlung) der AlwaysOn-Lösung für Hochverfügbarkeit und für die Notfallwiederherstellung.  
+  Sowohl [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] als auch AlwaysOn-Failoverclusterinstanzen (FCIs) nutzen Windows Server Failover Clustering (WSFC) als Plattformtechnologie.  WSFC verwendet einen auf Quorum basierenden Ansatz zum Überwachen des Gesamtclusterzustands und Maximieren der Fehlertoleranz auf Knotenebene. Umfassende Kenntnisse in Bezug auf WSFC-Quorummodi und die Knotenabstimmungskonfiguration sind sehr wichtig für das Entwerfen, Betreiben und Warten (Fehlerbehandlung) der AlwaysOn-Lösung für Hochverfügbarkeit und für die Notfallwiederherstellung.  
   
  **In diesem Thema:**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48111480"
 > [!IMPORTANT]  
 >  Wenn ein WSFC-Cluster aufgrund eines Quorumfehlers in den Offlinezustand versetzt wird, ist ein manueller Eingriff erforderlich, um den Onlinezustand wiederherzustellen.  
 >   
->  Informationen zur Erzwingung des Quorums finden Sie unter [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)ermittelt.  
+>  Weitere Informationen finden Sie in den folgenden Themen: [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQLServer&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 ##  <a name="QuorumModes"></a> Quorummodi  
  Ein *Quorummodus* wird auf der WSFC-Clusterebene konfiguriert, mit dem die Methodik für die Quorumabstimmung vorgegeben wird.  Das Failovercluster-Manager-Hilfsprogramm empfiehlt basierend auf der Anzahl von Knoten im Cluster einen Quorummodus.  
@@ -73,7 +73,7 @@ ms.locfileid: "48111480"
   
  Kein einzelner Knoten in einem WSFC-Cluster kann definitiv bestimmen, dass der Cluster als Ganzes fehlerfrei oder nicht fehlerfrei ist.  Aus Sicht der einzelnen Knoten können einige andere Knoten jederzeit offline sein, sich in einem Failoverprozess befinden oder aufgrund eines Netzwerkkommunikationsfehlers nicht reagieren.  Eine Hauptfunktion der Quorumabstimmung ist die Ermittlung, ob der scheinbare Status der einzelnen Knoten im WSFC-Cluster tatsächlich dem Ist-Zustand dieser Knoten entspricht.  
   
- Für alle Quorummodelle mit Ausnahme von Nur Datenträger hängt die Effektivität einer Quorumabstimmung von einer zuverlässigen Kommunikation zwischen allen Abstimmungsknoten im Cluster ab. Die Netzwerkkommunikation zwischen Knoten in demselben physischen Subnetz sollte als zuverlässig angesehen werden. Die Quorumabstimmung sollte als vertrauenswürdig eingestuft werden.  
+ Für alle Quorummodelle mit Ausnahme von „Nur Datenträger“ hängt die Effektivität einer Quorumabstimmung von einer zuverlässigen Kommunikation zwischen allen Abstimmungsknoten im Cluster ab. Die Netzwerkkommunikation zwischen Knoten in demselben physischen Subnetz sollte als zuverlässig angesehen werden. Die Quorumabstimmung sollte als vertrauenswürdig eingestuft werden.  
   
  Wenn ein Knoten in einem anderen Subnetz für eine Quorumabstimmung jedoch als nicht reagierend angesehen wird, während der Knoten eigentlich online und auch sonst fehlerfrei ist, liegt dies in den meisten Fällen an einem Netzwerkkommunikationsfehler zwischen Subnetzen.  Je nach Clustertopologie, Quorummodus und Konfiguration der Failoverrichtlinien kann bei dem Netzwerkkommunikationsfehler ggf. mehr als ein Satz (oder eine Teilmenge) mit Abstimmungsknoten erstellt werden.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48111480"
 > [!IMPORTANT]  
 >  Um NodeWeight-Einstellungen zu verwenden, muss der folgende Hotfix im WSFC-Cluster für alle Server übernommen werden:  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): Ein Hotfix ist verfügbar, mit dem sich ein Clusterknoten konfigurieren lässt, der keine Quorumabstimmung in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] und in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): Ein Hotfix ist verfügbar, mit dem sich ein Clusterknoten konfigurieren lässt, der keine Quorumabstimmung in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] und in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] enthält.  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Empfohlene Anpassungen an der Quorumabstimmung  
  Beachten Sie beim Aktivieren oder Deaktivieren der Stimmberechtigung eines bestimmten WSFC-Knotens folgende Richtlinien:  
@@ -104,16 +104,16 @@ ms.locfileid: "48111480"
   
 -   **Bewerten Sie die Stimmenzuweisungen nach einem Failover neu.** Es ist nicht wünschenswert, ein Failover in eine Clusterkonfiguration auszuführen, die kein fehlerfreies Quorum unterstützt.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Bei der Überprüfung der Konfiguration der WSFC-Quorumabstimmung zeigt der AlwaysOn-Verfügbarkeitsgruppen-Assistent eine Warnung an, wenn eine der folgenden Bedingungen zutrifft:  
->   
+> 
 >  -   Der Clusterknoten, von dem das primäre Replikat gehostet wird, verfügt über keine Stimme.  
 > -   Ein sekundäres Replikat ist für das automatische Failover konfiguriert, und der zugehörige Clusterknoten verfügt über keine Stimme.  
-> -   [KB2494036](http://support.microsoft.com/kb/2494036) ist nicht auf allen Clusterknoten installiert, die Verfügbarkeitsreplikate hosten. Das Patch ist erforderlich, um Clusterknoten in standortübergreifenden Bereitstellungen Stimmen zu gewähren bzw. Stimmen zu entziehen. In Bereitstellungen mit einem Standort ist das Patch in der Regel nicht erforderlich, und die Warnung kann ignoriert werden.  
-  
-> [!TIP]  
+> -   [KB2494036](https://support.microsoft.com/kb/2494036) ist nicht auf allen Clusterknoten installiert, die Verfügbarkeitsreplikate hosten. Das Patch ist erforderlich, um Clusterknoten in standortübergreifenden Bereitstellungen Stimmen zu gewähren bzw. Stimmen zu entziehen. In Bereitstellungen mit einem Standort ist das Patch in der Regel nicht erforderlich, und die Warnung kann ignoriert werden.  
+> 
+> [!TIP]
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Es werden mehrere dynamische Verwaltungssichten (DMVs) für das System verfügbar gemacht, mit denen Sie Einstellungen in Bezug auf die WSFC-Clusterkonfiguration und die Knotenquorumabstimmung verwalten können.  
->   
+> 
 >  Weitere Informationen finden Sie unter  [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql), [sys.dm_os_cluster_nodes](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-nodes-transact-sql), [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql).  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
@@ -124,13 +124,13 @@ ms.locfileid: "48111480"
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Überprüfung der Konfiguration der quorumabstimmung in Always On-Verfügbarkeitsgruppen-Assistenten](http://blogs.msdn.com/b/sqlalwayson/archive/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing.aspx)  
+-   [Überprüfung der Konfiguration der quorumabstimmung in Always On-Verfügbarkeitsgruppen-Assistenten](https://blogs.msdn.com/b/sqlalwayson/archive/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing.aspx)  
   
--   [Windows Server-Technologien: Failovercluster](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server-Technologien:  Failovercluster](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Schritt-für-Schritt-Anleitung für Failovercluster: Konfigurieren des Quorums in einem Failovercluster](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Schrittweise Anleitung für Failovercluster: Konfigurieren des Quorums in einem Failovercluster](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
  [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

@@ -14,12 +14,12 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 41369eae8034fc7723d8b5517c525313c0feca72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da49fc88b7736bbe161bab4dfec39ab7fdb43c82
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167910"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350113"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS)
   Ein Datenpunkt stellt die kleinste Entität im Diagramm dar. In Nicht-Formdiagrammen werden Datenpunkte entsprechend dem Diagrammtyp dargestellt. Eine Linienreihe besteht beispielsweise aus einem oder mehreren verbundenen Datenpunkten. In Formdiagrammen werden Datenpunkte durch einzelne Slices oder Segmente dargestellt, aus denen sich das gesamte Diagramm zusammensetzt. In einem Kreisdiagramm ist z. B. jedes Teil ein Datenpunkt. Weitere Informationen finden Sie unter [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](chart-types-report-builder-and-ssrs.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "48167910"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>Positionieren von Datenpunktbezeichnungen in einem Diagramm  
  In allen Diagrammtypen können Sie Datenpunktbezeichnungen anzeigen, indem Sie mit der rechten Maustaste auf das Diagramm klicken und die Option **Datenbezeichnungen anzeigen**auswählen. Die Position der Datenpunktbezeichnungen wird entsprechend dem Diagrammtyp angegeben:  
   
--   In einem Balkendiagramm können Sie die Datenpunktbezeichnung mithilfe des benutzerdefinierten **BarLabelStyle** -Attributs neu positionieren. Es gibt vier mögliche Positionen: Außen, Links, Zentriert und Rechts. Wenn Sie die Balkenbezeichnungsart auf Außen festlegen, werden die Bezeichnungen außerhalb des Balkens platziert, sofern sie in den Diagrammbereich passen. Wenn die Bezeichnung nicht außerhalb des Balkens und im Diagrammbereich positioniert werden kann, wird sie im Balken positioniert.  
+-   In einem Balkendiagramm können Sie die Datenpunktbezeichnung mithilfe des benutzerdefinierten **BarLabelStyle** -Attributs neu positionieren. Es gibt vier mögliche Positionen: Außen, links, zentriert und rechts. Wenn Sie die Balkenbezeichnungsart auf Außen festlegen, werden die Bezeichnungen außerhalb des Balkens platziert, sofern sie in den Diagrammbereich passen. Wenn die Bezeichnung nicht außerhalb des Balkens und im Diagrammbereich positioniert werden kann, wird sie im Balken positioniert.  
   
 -   In einem Kreisdiagramm können Sie die Datenpunktbezeichnung mithilfe des benutzerdefinierten **PieLabelStyle** -Attributs neu positionieren. Beim Positionieren von Datenpunktbezeichnungen um ein Kreisdiagramm sind viele Aspekte zu berücksichtigen, u. a. die Größe des Kreisdiagramms, der verfügbare Platz zwischen dem Kreisdiagramm und der entsprechenden Legende sowie die Größe der Bezeichnungen. Weitere Informationen finden Sie unter [Anzeigen von Datenpunktbezeichnungen außerhalb eines Kreisdiagramms &#40;Berichts-Generator und SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md).  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48167910"
 |#MAX|Maximum aller Y-Werte in der Reihe|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|Der Erste aller Y-Werte in der Reihe|All|`=First(Fields!MyDataField.Value)`|  
   
- Schließen Sie zum Formatieren des Schlüsselworts eine [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolge in Klammern ein. Wenn Sie beispielsweise den Wert des Datenpunkts in einer QuickInfo als Zahl mit zwei Dezimalstellen anzeigen möchten, schließen Sie die Formatzeichenfolge „N2“ in geschweifte Klammern ein, z.B. „#VALY{N2}“ für die **ToolTip** -Eigenschaft der Reihe. Weitere Informationen zu [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolgen finden Sie auf MSDN unter [Formatierung von Typen](http://go.microsoft.com/fwlink/?LinkId=112024) . Weitere Informationen zum Formatieren von Zahlen in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS)](formatting-numbers-and-dates-report-builder-and-ssrs.md).  
+ Schließen Sie zum Formatieren des Schlüsselworts eine [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolge in Klammern ein. Wenn Sie beispielsweise den Wert des Datenpunkts in einer QuickInfo als Zahl mit zwei Dezimalstellen anzeigen möchten, schließen Sie die Formatzeichenfolge „N2“ in geschweifte Klammern ein, z.B. „#VALY{N2}“ für die **ToolTip** -Eigenschaft der Reihe. Weitere Informationen zu [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolgen finden Sie auf MSDN unter [Formatierung von Typen](https://go.microsoft.com/fwlink/?LinkId=112024) . Weitere Informationen zum Formatieren von Zahlen in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS)](formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
  Weitere Informationen zum Hinzufügen von Schlüsselwörtern zu einem Diagramm finden Sie unter [Anzeigen von QuickInfos für eine Reihe (Berichts-Generator und SSRS)](show-tooltips-on-a-series-report-builder-and-ssrs.md) und [Ändern des Texts eines Legendenelements (Berichts-Generator und SSRS)](chart-legend-change-item-text-report-builder.md).  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48167910"
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator und SSRS)](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   

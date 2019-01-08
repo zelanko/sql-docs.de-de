@@ -1,5 +1,5 @@
 ---
-title: Sichern und Wiederherstellen von Analysis Services-Datenbanken | Microsoft Docs
+title: Sichern und Wiederherstellen von Analysis Services-Datenbanken | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e43357e843f28133f7bb2f5cd9db078ee4bace27
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aa0e023b32418cd5eabee04819213955c517e0ee
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024447"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984001"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Sichern und Wiederherstellen von Analysis Services-Datenbanken
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34024447"
   
  Eine vollständige Sicherung einschließlich der Quelldaten erfordert das Sichern der Datenbank, die Detaildaten enthält. Insbesondere, wenn Sie ROLAP- oder DirectQuery-Datenbankspeicher verwenden, werden Detaildaten in einer externen relationalen SQL Server-Datenbank gespeichert, die sich von der Analysis Services-Datenbank unterscheidet. Wenn alle Objekte demgegenüber tabellarisch oder mehrdimensional sind, schließt die Analysis Services-Sicherung sowohl die Metadaten als auch die Quelldaten ein.  
   
- Ein eindeutiger Vorzug der automatischen Sicherung besteht darin, dass die Datenmomentaufnahme stets so aktuell ist wie durch die automatisch gesteuerte Sicherungshäufigkeit vorgegeben. Automatische Planer stellen sicher, dass das Sichern nicht vergessen wird. Auch das Wiederherstellen einer Datenbank kann automatisiert werden. Dies ist gleichzeitig eine gute Möglichkeit zum Replizieren der Daten, doch achten Sie stets darauf, die Verschlüsselungsschlüsseldatei auf der Instanz, die die replizierten Daten erhält, ebenfalls zu sichern. Die Synchronisierungsfunktion ist für die Replizierung von Datenbanken von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt, doch sie erfasst nur veraltete Daten. Alle der hier genannten Funktionen können über die Benutzerschnittstelle implementiert werden, und zwar über XML/A-Befehle oder programmgesteuert über AMO. Weitere Informationen zu Sicherungsstrategien finden Sie unter [Backup Strategies with SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81888)(Sicherungsstrategien mit SQL Server 2005 Analysis Services).  
+ Ein eindeutiger Vorzug der automatischen Sicherung besteht darin, dass die Datenmomentaufnahme stets so aktuell ist wie durch die automatisch gesteuerte Sicherungshäufigkeit vorgegeben. Automatische Planer stellen sicher, dass das Sichern nicht vergessen wird. Auch das Wiederherstellen einer Datenbank kann automatisiert werden. Dies ist gleichzeitig eine gute Möglichkeit zum Replizieren der Daten, doch achten Sie stets darauf, die Verschlüsselungsschlüsseldatei auf der Instanz, die die replizierten Daten erhält, ebenfalls zu sichern. Die Synchronisierungsfunktion ist für die Replizierung von Datenbanken von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt, doch sie erfasst nur veraltete Daten. Alle der hier genannten Funktionen können über die Benutzerschnittstelle implementiert werden, und zwar über XML/A-Befehle oder programmgesteuert über AMO.
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34024447"
  Administratoren können eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank unabhängig von der Datenbankgröße in einer einzelnen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Sicherungsdatei (.abf) sichern. Schritt-für-Schritt-Anweisungen finden Sie auf der TechMantra-Seite unter [How to Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) (Sichern einer Analysis Services-Datenbank) und unter [Automate Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)(Automatische Sicherung einer Analysis Services-Datenbank).  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], zum Laden und Abfragen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenmodelle in einer SharePoint-Umgebung werden die Modelle aus SharePoint-Inhaltsdatenbanken geladen. Diese Inhaltsdatenbanken sind relational und werden in der relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine ausgeführt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet folglich keine Sicherungs-/Wiederherstellungsstrategie für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodelle. Wenn Sie einen Notfallwiederherstellungsplan für SharePoint-Inhalte eingerichtet haben, umfasst der Plan die in den Inhaltsdatenbanken gespeicherten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodelle.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]wird zum Laden und Abfragen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodellen in einer SharePoint-Umgebung verwendet und lädt die zugehörigen Modelle aus SharePoint-Inhaltsdatenbanken. Diese Inhaltsdatenbanken sind relational und werden in der relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine ausgeführt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet folglich keine Sicherungs-/Wiederherstellungsstrategie für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodelle. Wenn Sie einen Notfallwiederherstellungsplan für SharePoint-Inhalte eingerichtet haben, umfasst der Plan die in den Inhaltsdatenbanken gespeicherten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodelle.  
   
  **Remotepartitionen**  
   
@@ -105,7 +105,7 @@ ms.locfileid: "34024447"
 -   Sie können auswählen, ob der Wiederherstellungsbefehl den Wiederherstellungsordner für jede wiederherzustellende Partition ändern soll. Lokale Partitionen können an jedem Ordnerstandort wiederhergestellt werden, der für die Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , auf der die Datenbank wiederhergestellt wird, als lokal gilt. Remotepartitionen können in jedem Ordner und auf jedem Server außer dem lokalen Server wiederhergestellt werden. Remotepartitionen können nicht zu lokalen Partitionen werden.  
   
     > [!IMPORTANT]  
-    >  Für jede Sicherungsdatei muss der Benutzer, der den Wiederherstellungsbefehl ausführt, über die Berechtigung zum Lesen von dem für jede Datei angegebenen Sicherungsspeicherort verfügen. Zum Wiederherstellen einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank, die nicht auf dem Server installiert ist, muss der Benutzer zusätzlich Mitglied der Serverrolle für die betreffende [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz sein. Zum Überschreiben einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank muss der Benutzer entweder Mitglied der Serverrolle für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz oder Mitglied einer Datenbankrolle mit den Berechtigungen "Vollzugriff" (Administrator) für die wiederherzustellende Datenbank sein.  
+    >  Für jede Sicherungsdatei muss der Benutzer, der den Wiederherstellungsbefehl ausführt, über die Berechtigung zum Lesen von dem für jede Datei angegebenen Sicherungsspeicherort verfügen. Zum Wiederherstellen einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank, die nicht auf dem Server installiert ist, muss der Benutzer zusätzlich Mitglied der Serverrolle für die betreffende [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz sein. Zum Überschreiben einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank muss der Benutzer entweder Mitglied der Serverrolle für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz oder Mitglied einer Datenbankrolle mit der Berechtigung „Vollzugriff“ (Administrator) für die wiederherzustellende Datenbank sein.  
   
     > [!NOTE]  
     >  Nach dem Wiederherstellen einer vorhandenen Datenbank verliert der Benutzer, der die Datenbank wiederhergestellt hat, möglicherweise den Zugriff auf diese Datenbank. Dies ist u. U. der Fall, wenn der Benutzer zum Zeitpunkt der Sicherung kein Mitglied der Serverrolle oder der Datenbankrolle mit der Berechtigung "Vollzugriff (Administrator)" war.  

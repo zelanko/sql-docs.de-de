@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - output data [Integration Services]
@@ -18,12 +17,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3df6a97e37f301c4ac55b8e662e81098023a5064
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 038fdb6f07604d3fac1fcbd8e9ee632e3af2fbdc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159510"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360242"
 ---
 # <a name="data-flow"></a>Datenfluss
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt drei verschiedene Arten von Datenflusskomponenten bereit: Quellen, Transformationen und Ziele. Quellen extrahieren Daten aus Datenspeichern, wie z. B. Tabellen und Sichten in relationalen Datenbanken, Dateien und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken. Mit Transformationen werden Daten geändert, zusammengefasst und bereinigt. Mit Zielen werden Daten in Datenspeicher geladen oder Datasets im Arbeitsspeicher erstellt.  
@@ -68,7 +67,7 @@ ms.locfileid: "48159510"
  Wenn die Registerkarte **Datenfluss** aktiv ist, enthält die Toolbox die Quellen, Transformationen und Ziele, die Sie dem Datenfluss hinzufügen können.  
   
 ## <a name="expressions"></a>Ausdrücke  
- Eine Reihe von Datenflusskomponenten – hierzu zählen Quellen, Transformationen und Ziele – unterstützen die Verwendung von Eigenschaftsausdrücken mit einigen ihrer Eigenschaften. Ein Eigenschaftsausdruck ist ein Ausdruck, der beim Laden des Pakets den Wert der Eigenschaft ersetzt. Zur Laufzeit verwendet das Paket die aktualisierten Eigenschaftswerte. Die Ausdrücke werden mithilfe der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Ausdruckssyntax erstellt und können [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Funktionen, -Operatoren, -Bezeichner und -Variablen enthalten. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md), [Integration Services-Ausdrücke &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md) und [Verwenden von Eigenschaftsausdrücken in Paketen](../expressions/use-property-expressions-in-packages.md).  
+ Eine Reihe von Datenflusskomponenten (Quellen, Transformationen und Ziele) unterstützen die Verwendung von Eigenschaftsausdrücken mit einigen ihrer Eigenschaften. Ein Eigenschaftsausdruck ist ein Ausdruck, der beim Laden des Pakets den Wert der Eigenschaft ersetzt. Zur Laufzeit verwendet das Paket die aktualisierten Eigenschaftswerte. Die Ausdrücke werden mithilfe der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Ausdruckssyntax erstellt und können [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Funktionen, -Operatoren, -Bezeichner und -Variablen enthalten. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md), [Integration Services-Ausdrücke &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md) und [Verwenden von Eigenschaftsausdrücken in Paketen](../expressions/use-property-expressions-in-packages.md).  
   
  Wenn Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ein Paket erstellen, werden die Eigenschaften aller Datenflusskomponenten, die Eigenschaftsausdrücke unterstützen, im zugehörigen Datenflusstask verfügbar gemacht. Klicken Sie zum Hinzufügen, Ändern oder Entfernen von Eigenschaftsausdrücken der Datenflusskomponenten auf den Datenflusstask, und verwenden Sie dann das Eigenschaftenfenster oder den Editor für den Task, um Eigenschaftsausdrücke hinzuzufügen, zu ändern oder zu löschen. Die Eigenschaftsausdrücke für den Datenflusstask selbst werden vom Eigenschaftenfenster aus verwaltet.  
   
@@ -100,16 +99,16 @@ ms.locfileid: "48159510"
   
 |Source|Description|  
 |------------|-----------------|  
-|Oracle-Quelle|Die Oracle-Quelle ist die Quellkomponente von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Oracle von Attunity. Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Oracle von Attunity umfasst auch einen Verbindungs-Manager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors für Oracle und Teradata von Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
-|SAP BI-Quelle|Die SAP BI-Quelle ist die Quellkomponente des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für SAP BI. Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für SAP BI enthält außerdem einen Verbindungsmanager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=110393).|  
-|Teradata-Quelle|Die Teradata-Quelle ist die Quellkomponente des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Teradata von Attunity. Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Teradata von Attunity umfasst auch einen Verbindungs-Manager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors für Oracle und Teradata von Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
+|Oracle-Quelle|Die Oracle-Quelle ist die Quellkomponente von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Oracle von Attunity. Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Oracle von Attunity umfasst auch einen Verbindungs-Manager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors für Oracle und Teradata von Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
+|SAP BI-Quelle|Die SAP BI-Quelle ist die Quellkomponente des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für SAP BI. Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für SAP BI enthält außerdem einen Verbindungsmanager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393).|  
+|Teradata-Quelle|Die Teradata-Quelle ist die Quellkomponente des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Teradata von Attunity. Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Teradata von Attunity umfasst auch einen Verbindungs-Manager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
   
- Wie Sie die Leistungsverbesserungen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Oracle von Attunity nutzen, wird unter [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369)(Leistung von Microsoft Connector für Oracle von Attunity) veranschaulicht.  
+ Wie Sie die Leistungsverbesserungen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Oracle von Attunity nutzen, wird unter [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Leistung von Microsoft Connector für Oracle von Attunity) veranschaulicht.  
   
 ## <a name="transformations"></a>Transformationen  
  Die Funktionalität von Transformationen variiert erheblich. Mit Transformationen können Aufgaben wie z. B. das Aktualisieren, Zusammenfassen, Bereinigen, Zusammenführen und Verteilen von Daten ausgeführt werden. Sie können Werte in Spalten ändern, Werte in Tabellen nachschlagen, Daten bereinigen und Spaltenwerte aggregieren.  
   
- Die Eingaben und Ausgaben einer Transformation definieren die Spalten von ein- und ausgehenden Daten. Abhängig vom Vorgang, der für die Daten ausgeführt wird, weisen manche Transformationen eine einzige Eingabe und mehrere Ausgaben auf, während andere Transformationen mehrere Eingaben und eine einzige Ausgabe aufweisen. Transformationen können außerdem Fehlerausgaben enthalten, mit denen Informationen zum aufgetretenen Fehler sowie die fehlerhaften Daten bereitgestellt werde; beispielsweise Zeichenfolgendaten, die nicht in einen integer-Datentyp konvertiert werden konnten. Mit dem Objektmodell von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] wird die Anzahl von Eingaben, regulären Ausgaben und Fehlerausgaben, die Transformationen enthalten, nicht eingeschränkt. Sie können benutzerdefinierte Transformationen erstellen, die eine beliebige Kombination aus mehreren Eingaben, regulären Ausgaben und Fehlerausgaben implementieren.  
+ Die Eingaben und Ausgaben einer Transformation definieren die Spalten von ein- und ausgehenden Daten. Abhängig vom Vorgang, der für die Daten ausgeführt wird, weisen manche Transformationen eine einzige Eingabe und mehrere Ausgaben auf, während andere Transformationen mehrere Eingaben und eine einzige Ausgabe aufweisen. Transformationen können außerdem Fehlerausgaben enthalten, die Informationen zu diesem Fehler, die bereitstellen, zusammen mit den Daten aufgetretenen Fehler: Beispielsweise Zeichenfolgendaten Sie, die nicht in einen Integer-Datentyp konvertiert werden kann. Mit dem Objektmodell von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] wird die Anzahl von Eingaben, regulären Ausgaben und Fehlerausgaben, die Transformationen enthalten, nicht eingeschränkt. Sie können benutzerdefinierte Transformationen erstellen, die eine beliebige Kombination aus mehreren Eingaben, regulären Ausgaben und Fehlerausgaben implementieren.  
   
  Die Eingabe einer Transformation ist als mindestens eine Eingabespalte definiert. Manche [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Transformationen können auch auf externe Spalten als Eingabe verweisen. Beispielsweise enthält die Eingabe der Transformation für OLE DB-Befehl externe Spalten. Eine Ausgabespalte ist eine Spalte, die von der Transformation dem Datenfluss hinzugefügt wird. Reguläre Ausgaben und Fehlerausgaben enthalten Ausgabespalten. Diese Ausgabespalten dienen wiederum als Eingabespalten für die nächste Komponente im Datenfluss, entweder eine andere Transformation oder ein Ziel.  
   
@@ -161,11 +160,11 @@ ms.locfileid: "48159510"
   
 |Source|Description|  
 |------------|-----------------|  
-|Oracle-Ziel|Das Oracle-Ziel ist die Zielkomponente von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Oracle von Attunity. Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Oracle von Attunity enthält auch einen Verbindungs-Manager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors für Oracle und Teradata von Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
-|SAP BI-Ziel|Das SAP BI-Ziel ist die Zielkomponente des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connectors für SAP BI. Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für SAP BI enthält auch einen Verbindungsmanager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=110393).|  
-|Teradata-Ziel|Das Teradata-Ziel ist die Zielkomponente des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connectors für Teradata von Attunity. Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Teradata von Attunity enthält auch einen Verbindungs-Manager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors für Oracle und Teradata von Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
+|Oracle-Ziel|Das Oracle-Ziel ist die Zielkomponente von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Oracle von Attunity. Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Oracle von Attunity enthält auch einen Verbindungs-Manager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
+|SAP BI-Ziel|Das SAP BI-Ziel ist die Zielkomponente des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connectors für SAP BI. Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für SAP BI enthält auch einen Verbindungsmanager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393).|  
+|Teradata-Ziel|Das Teradata-Ziel ist die Zielkomponente des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connectors für Teradata von Attunity. Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Teradata von Attunity enthält auch einen Verbindungs-Manager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors für Oracle und Teradata von Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
   
- Wie Sie die Leistungsverbesserungen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Oracle von Attunity nutzen, wird unter [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369)(Leistung von Microsoft Connector für Oracle von Attunity) veranschaulicht.  
+ Wie Sie die Leistungsverbesserungen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector für Oracle von Attunity nutzen, wird unter [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Leistung von Microsoft Connector für Oracle von Attunity) veranschaulicht.  
   
 ## <a name="connection-managers"></a>Verbindungs-Manager  
  Viele Datenflusskomponenten stellen eine Verbindung mit Datenquellen her, und Sie müssen dem Paket die Verbindungs-Manager hinzufügen, die die Komponenten benötigen, damit die Komponente ordnungsgemäß konfiguriert werden kann. Sie können die Verbindungs-Manager beim Erstellen des Datenflusses hinzufügen, oder bevor Sie mit dem Erstellen des Datenflusses beginnen. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../connection-manager/integration-services-ssis-connections.md) und [Erstellen von Verbindungs-Managern](../create-connection-managers.md).  
@@ -179,7 +178,7 @@ ms.locfileid: "48159510"
  Quellen haben Ausgaben, Ziele haben Eingaben, und Transformationen haben Eingaben und Ausgaben. Darüber hinaus kann für viele Datenflusskomponenten die Verwendung einer Fehlerausgabe konfiguriert werden.  
   
 ### <a name="inputs"></a>Eingaben  
- Ziele und Transformationen weisen Eingaben auf. Eine Eingabe enthält mindestens eine Eingabespalte, die auf externe Spalten verweisen kann, falls für die Datenflusskomponente die Verwendung externer Spalten konfiguriert wurde. Eingaben können so konfiguriert werden, dass sie den Datenfluss überwachen und steuern. Beispielsweise können Sie angeben, ob die Komponente bei einem Fehler abgebrochen, der Fehler ignoriert oder Fehlerzeilen an die Fehlerausgabe umgeleitet werden sollen. Darüber hinaus können Sie der Eingabe eine Beschreibung zuweisen oder den Eingabenamen aktualisieren. Im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer werden Eingaben im Dialogfeld **Erweiterter Editor** konfiguriert. Weitere Informationen zu **Erweiterter Editor** finden Sie unter [Integration Services User Interface](../integration-services-user-interface.md).  
+ Ziele und Transformationen weisen Eingaben auf. Eine Eingabe enthält mindestens eine Eingabespalte, die auf externe Spalten verweisen kann, falls für die Datenflusskomponente die Verwendung externer Spalten konfiguriert wurde. Eingaben können so konfiguriert werden, um zu überwachen und steuern den Fluss der Daten: Beispielsweise können Sie angeben, wenn die Komponente sollte als Reaktion auf einen Fehler, Fehler ignorieren oder Fehlerzeilen an die Fehlerausgabe umleiten. Darüber hinaus können Sie der Eingabe eine Beschreibung zuweisen oder den Eingabenamen aktualisieren. Im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer werden Eingaben im Dialogfeld **Erweiterter Editor** konfiguriert. Weitere Informationen zu **Erweiterter Editor** finden Sie unter [Integration Services User Interface](../integration-services-user-interface.md).  
   
 ### <a name="outputs"></a>Ausgaben  
  Quellen und Transformationen weisen immer Ausgaben auf. Eine Ausgabe enthält mindestens eine Ausgabespalte, die auf externe Spalten verweisen kann, falls für die Datenflusskomponente die Verwendung externer Spalten konfiguriert wurde. Für Ausgaben kann konfiguriert werden, dass sie Informationen bereitstellen, die für die Downstreamverarbeitung von Daten hilfreich sind. Beispielsweise können Sie anzeigen, ob die Ausgabe sortiert werden soll. Außerdem können Sie für die Ausgabe eine Beschreibung bereitstellen oder den Ausgabenamen aktualisieren. Im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer werden Ausgaben im Dialogfeld **Erweiterter Editor** konfiguriert.  
@@ -190,7 +189,7 @@ ms.locfileid: "48159510"
  Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](error-handling-in-data.md).  
   
 ### <a name="columns"></a>Spalte  
- Eingaben, Ausgaben und Fehlerausgaben sind Auflistungen von Spalten. Alle Spalten sind konfigurierbar, und je nach Spaltentyp – Eingabe, Ausgabe oder extern – stellt[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] unterschiedliche Eigenschaften für die jeweilige Spalte bereit. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt drei verschiedene Möglichkeiten zum Festlegen von Spalteneigenschaften bereit: programmgesteuert, durch die Verwendung komponentenspezifischer Dialogfelder oder durch die Verwendung des Dialogfelds **Erweiterter Editor**.  
+ Eingaben, Ausgaben und Fehlerausgaben sind Auflistungen von Spalten. Jede Spalte ist konfigurierbar und je nach den Eingaben vom Typ der Spalte, Ausgabe oder extern – [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] unterschiedliche Eigenschaften für die Spalte bereitstellt. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt drei verschiedene Möglichkeiten zum Festlegen von Spalteneigenschaften bereit: programmgesteuert, durch die Verwendung komponentenspezifischer Dialogfelder oder durch die Verwendung des Dialogfelds **Erweiterter Editor**.  
   
 ## <a name="paths"></a>Pfade  
  Mit Pfaden werden Datenflusskomponenten verbunden. Im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer können Sie die Pfadeigenschaften anzeigen und ändern, die Ausgabemetadaten für den Ausgangspunkt des Pfads anzeigen sowie einem Pfad Daten-Viewer anfügen.  
@@ -217,8 +216,8 @@ ms.locfileid: "48159510"
 -   [Verbinden von Komponenten in einem Datenfluss](connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Video [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369)(Leistung von Microsoft Connector für Oracle von Attunity) auf technet.microsoft.com.  
+ Video [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Leistung von Microsoft Connector für Oracle von Attunity) auf technet.microsoft.com.  
   
- Curated Answers, [Erstellen einer dynamischen Verbindungszeichenfolge in SSIS](http://go.microsoft.com/fwlink/?LinkId=321994)auf curatedviews.cloudapp.net.  
+ Curated Answers, [Erstellen einer dynamischen Verbindungszeichenfolge in SSIS](https://go.microsoft.com/fwlink/?LinkId=321994)auf curatedviews.cloudapp.net.  
   
   

@@ -12,12 +12,12 @@ ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12e5afd378f09a0fa7d624c6842e907211bc4212
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0119d51332dde13ae77a67fb82f293495a4fefdf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194730"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375142"
 ---
 # <a name="currency-type-and-conversion-function"></a>Currency-Typ und Konvertierungsfunktion
   In diesem Beispiel wird ein benutzerdefinierter Currency-Datentyp mithilfe von C# definiert. Dieser benutzerdefinierte Datentyp kapselt sowohl einen Betrag als auch ein Gebietsschema ein, um die richtige Wiedergabe des Betrags als Währungswert in diesem Gebietsschema zu bestimmen. Dieses Beispiel stellt außerdem eine Währungsumrechnungsfunktion bereit, die eine Instanz des benutzerdefinierten Currency-Typs zurückgibt. Wenn die AdventureWorks-Datenbank über einen Umrechnungskurs von US-Dollar (USD) in die Währung der angegebenen Kultur verfügt, gibt die Umrechnungsfunktion einen benutzerdefinierten Currency-Datentyp mit dem konvertierten Kurs und einer Kultur zurück, die der angeforderten Kultur entspricht. Andernfalls wird ein benutzerdefinierter Currency-Datentyp mit dem ursprünglichen Betrag zurückgegeben, d. h. ein USD-Betrag mit der Kultur `en-us`. Das Beispiel veranschaulicht auch, wie Sie mithilfe von Transact-SQL CLR (Common Language Runtime)-Methoden und Assemblys registrieren und die Registrierung von CLR-Methoden und Assemblys aufheben können.  
@@ -28,9 +28,9 @@ ms.locfileid: "48194730"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](http://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](https://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
   
--   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](http://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
+-   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
 -   .NET Framework SDK 2.0 oder höher oder Microsoft Visual Studio 2005 oder höher. Das .NET Framework SDK ist kostenlos erhältlich.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48194730"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie die `ALTER SETTINGS`-Serverberechtigung, die Mitglieder der festen Serverrollen `sysadmin` und `serveradmin` implizit erhalten.  
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   

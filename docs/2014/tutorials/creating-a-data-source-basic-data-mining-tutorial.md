@@ -11,18 +11,18 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f576ceb6b465dd8238972d29456300a01837df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e216aa5da4ef837da632ba83d4cf6e14edb40b1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128170"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376452"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Erstellen einer Datenquelle (Lernprogramm zu Data Mining-Grundlagen)
-  Ein *Datenquelle* ist eine Datenverbindung, die gespeichert und in Ihrem Projekt verwaltet und bereitgestellt werden, um Ihre [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenbank. Die Datenquelle umfasst neben anderen erforderlichen Verbindungseigenschaften den Servernamen und den Namen der Datenbank, auf dem sich Ihre Quelldaten befinden.  
+  A *Datenquelle* ist eine Datenverbindung, die innerhalb Ihres Projekts gespeichert sowie verwaltet und für Ihre [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank bereitgestellt wird. Die Datenquelle umfasst neben anderen erforderlichen Verbindungseigenschaften den Servernamen und den Namen der Datenbank, auf dem sich Ihre Quelldaten befinden.  
   
 > [!IMPORTANT]  
->  Der Name der Datenbank lautet [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Wenn Sie diese Datenbank nicht bereits installiert haben, finden Sie auf der Seite [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) weitere Informationen.  
+>  Der Name der Datenbank lautet [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Wenn Sie diese Datenbank nicht bereits installiert haben, finden Sie auf der Seite [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) weitere Informationen.  
   
 ### <a name="to-create-a-data-source"></a>So erstellen Sie eine Datenquelle  
   
@@ -30,11 +30,11 @@ ms.locfileid: "48128170"
   
 2.  Klicken Sie auf der Seite **Willkommen** auf **Weiter**.  
   
-3.  Auf der **auswählen, wie die Verbindung definiert** auf **neu** eine Verbindung zum Hinzufügen der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Datenbank.  
+3.  Klicken Sie auf der Seite **Wählen Sie aus, wie die Verbindung definiert werden soll** auf **Neu** , um eine Verbindung zur [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank hinzuzufügen.  
   
 4.  Wählen Sie im **Verbindungs-Manager** in der Liste **Anbieter**die Option **Native OLE DB\SQL Server Native Client 11.0**aus.  
   
-5.  In der **Servernamen** Feld ein, oder wählen Sie den Namen des Servers, auf dem Sie installiert [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)].  
+5.  Geben Sie im Feld **Servername** den Namen des Servers ein, auf dem [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]installiert wurde, oder wählen Sie diesen aus.  
   
      Geben Sie beispielsweise **localhost** ein,  wenn die Datenbank auf dem lokalen Server gehostet wird.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48128170"
     > [!IMPORTANT]  
     >  Die Windows-Authentifizierung sollte wenn immer möglich verwendet werden, da hiermit eine größere Sicherheit als bei der SQL Server-Authentifizierung verbunden ist. Die SQL Server-Authentifizierung wird aus Gründen der Abwärtskompatibilität bereitgestellt. Weitere Informationen zu Authentifizierungsmethoden finden Sie unter [-Datenbank-Engine-Konfiguration - Kontobereitstellung](../../2014/sql-server/install/database-engine-configuration-account-provisioning.md).  
   
-7.  In der **auswählen oder Eingeben eines Datenbanknamens** wählen [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , und klicken Sie dann auf **OK**.  
+7.  Wählen Sie in der Liste **Datenbanknamen eingeben oder auswählen** den Eintrag [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] aus, und klicken Sie dann auf **OK**.  
   
 8.  Klicken Sie auf **Weiter**.  
   

@@ -1,7 +1,8 @@
 ---
-title: Erweitern die Funktionalität von Azure Data Studio | Microsoft-Dokumentation
-description: Informationen Sie zum Erweitern von Azure Data Studio
-ms.custom: tools|sos
+title: Hinzufügen von zusätzlichen Funktionen über Erweiterbarkeit
+titleSuffix: Azure Data Studio
+description: Erfahren Sie mehr über das Erweiterbarkeitsmodell und die wichtigsten Erweiterungen Bereiche zum Erweitern der Funktionalität von Azure Data Studio
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d218f80067c3dd5a03ced864b815c68aa84a582e
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: b595a353859ed7d69ccb6ad61ef6e5dc2a7073f3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460245"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030014"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Erste Schritte mit [!INCLUDE[name-sos](../includes/name-sos-short.md)] Erweiterbarkeit
 
@@ -68,7 +69,7 @@ Dashboard.Tabs wird die Registerkarte Abschnitte in der Dashboard-Seite erstellt
     "when": "connectionProvider == 'MSSQL' && !mssql:iscloud",
     "alwaysShow": true,
     "container": {
-        …
+        ...
     }
 }
 ]
@@ -83,13 +84,13 @@ Anstatt Dashboard Container Inline (im Rahmen der dashboard.tab). Sie können de
 {
     "id": "innerTab1",
     "container": {
-        …
+        ...
     }
 },
 {
     "id": "innerTab2",
     "container": {
-       …
+       ...
     }
 }
 ]
@@ -112,7 +113,7 @@ Geben Sie zum Verweisen auf den registrierten Container. die Id des Containers
 
 `dashboard.insights`
 
-Sie können mithilfe von dashboard.insights Insights registrieren. Dies ist vergleichbar mit [Tutorial: erstellen ein benutzerdefinierten Einblicks-Widgets](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+Sie können mithilfe von dashboard.insights Insights registrieren. Dies ist vergleichbar mit [Lernprogramm: Erstellen eines benutzerdefinierten Einblicks-Widgets](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {
@@ -241,7 +242,7 @@ Derzeit stehen vier unterstützten Containertypen:
                     "dark": "./icons/tab1Icon_dark.svg"
                 }
                 "container": {
-                    …
+                    ...
                 }
             },
             {
@@ -252,7 +253,7 @@ Derzeit stehen vier unterstützten Containertypen:
                     "dark": "./icons/tab2Icon_dark.svg"
                 }
                 "container": {
-                    …
+                    ...
                 }
             }
         ]

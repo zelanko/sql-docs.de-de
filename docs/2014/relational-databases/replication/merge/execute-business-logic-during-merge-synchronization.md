@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - custom error resolution [SQL Server replication]
@@ -18,19 +17,19 @@ ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fafdf2b889cd978a65f8bce2e087b6121bfb88c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050524"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822184"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Ausführen der Geschäftslogik während der Mergesynchronisierung
   Im Geschäftslogikhandler können Sie eine Assembly in verwaltetem Code schreiben, die während des Mergesynchronisierungsvorgangs aufgerufen wird. Die Assembly enthält Geschäftslogik, die auf viele Bedingungen während der Synchronisierung reagieren kann: Datenänderungen, Konflikte und Fehler. Das Geschäftslogikhandler-Framework stellt ein einfaches Programmiermodell bereit. Dabei weisen die Daten, die der Mergeprozess an Ihre Assembly übergibt, das Format eines ADO.NET-Datasets auf. Auf diese Weise können Sie auf Ihren Kenntnissen von ADO.NET aufbauen und müssen sich mit keiner neuen proprietären Schnittstelle vertraut machen. Weitere Informationen zum Programmieren von Geschäftslogikhandlern finden Sie hier:  
   
 -   In der API-Referenz (Application Programming Interface, Schnittstelle für Anwendungsprogrammierung): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   Anweisungen zum Implementieren eines Geschäftslogikhandlers: [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../implement-a-business-logic-handler-for-a-merge-article.md)  
+-   Anweisungen zum Implementieren eines geschäftslogikhandlers: [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>Verwendungsmöglichkeiten für Geschäftslogikhandler  
  Bei der Mergesynchronisierung können Geschäftslogikhandler für folgende Zwecke aufgerufen werden:  
@@ -49,7 +48,7 @@ ms.locfileid: "48050524"
   
 -   Daten ablehnen  
   
-     Das ist bei Anwendungen nützlich, bei denen keine Änderungen von einem oder an einen bestimmten Abonnenten weitergegeben werden sollen. Ein Administrator kann z. B. Einfügungen herausfiltern, die nicht in die Partition des Abonnenten gehören, oder Löschungen ablehnen, die auf einem Abonnenten ausgeführt werden. Ein weiteres Beispiel ist eine Anwendung, die eine Bestellung ablehnt, die auf einem Abonnenten eingegeben wird, weil der Bestand nicht mehr verfügbar ist.  
+     Das ist bei Anwendungen nützlich, bei denen keine Änderungen von einem oder an einen bestimmten Abonnenten weitergegeben werden sollen. Ein Administrator kann z.B. Einfügungen herausfiltern, die nicht in die Partition des Abonnenten gehören, oder Löschungen ablehnen, die auf einem Abonnenten ausgeführt werden. Ein weiteres Beispiel ist eine Anwendung, die eine Bestellung ablehnt, die auf einem Abonnenten eingegeben wird, weil der Bestand nicht mehr verfügbar ist.  
   
 -   Daten annehmen  
   

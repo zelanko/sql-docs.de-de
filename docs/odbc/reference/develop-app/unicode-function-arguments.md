@@ -14,12 +14,12 @@ ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0e67f437cd629411230daed17f6a39f24b7103d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3caa5feb387a7acdfa682f048bf77f2d999b560
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669458"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201839"
 ---
 # <a name="unicode-function-arguments"></a>Unicode-Funktionsargumente
 Der ODBC 3.5 (oder höher)-Treiber-Manager unterstützt die ANSI- und Unicode-Versionen aller Funktionen, die Zeiger auf Zeichenfolgen oder SQLPOINTER in ihren Argumenten zu akzeptieren. Die Unicode-Funktionen werden als Funktionen implementiert (mit dem Suffix *W*) und nicht als Makros. ANSI-Funktionen (die aufgerufen werden kann, mit oder ohne Suffix *ein*) sind identisch mit der aktuellen ODBC API-Funktionen.  
@@ -65,7 +65,7 @@ Der ODBC 3.5 (oder höher)-Treiber-Manager unterstützt die ANSI- und Unicode-Ve
 |**SQLGetTranslator**|**SQLWriteDSNToINI**|  
 |**SQLInstallDriver**||  
   
-> [!NOTE]  
+> [!NOTE]
 >  Als veraltet markierte Funktionen verfügen über Unterstützung für Unicode-in-ANSI--Zuordnung aus, da die ODBC 3.*.x* -Treiber-Manager unterstützt die erneute Kompilierung ODBC 2. *X* Anwendungen mit der Unicode- **#define**.  
   
  Dieser Abschnitt enthält die folgenden Themen.  

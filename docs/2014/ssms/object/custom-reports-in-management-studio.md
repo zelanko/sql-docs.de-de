@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.new.custom.report.f1
@@ -14,12 +14,12 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1a1f66753b1ff002a43f59fb065134967e15254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3417b4905fd43734fb058d05db81f7318d87539d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208893"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354687"
 ---
 # <a name="custom-reports-in-management-studio"></a>Benutzerdefinierte Berichte in Management Studio
   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wird von vielen Objekt-Explorer-Knoten ein Satz von Standardberichten angezeigt, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] erstellt werden. In diesen Berichten werden häufig angeforderte Serverinformationen zusammengefasst. Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 können in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]erstellte benutzerdefinierte Berichte von Administratoren ausgeführt werden.  
@@ -71,7 +71,7 @@ ms.locfileid: "48208893"
 >  Jede gültige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung kann in einem Bericht eingebettet und von einem Bericht aus ausgeführt werden. Durch das Ausführen eines Berichts unter einem Benutzerkonto mit hohen Privilegien wird die problemlose Ausführung dieser eingebetteten Anweisungen ermöglicht.  
   
 ## <a name="report-samples"></a>Beispielberichte  
- [Beispielberichte](http://go.microsoft.com/fwlink/?LinkId=81792), einschließlich der Standardberichte, die vom erstellten [!INCLUDE[msCoName](../../includes/msconame-md.md)], sind zum Download zur Verfügung. Diese Beispiele können mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geändert werden.  
+ [Beispielberichte](https://go.microsoft.com/fwlink/?LinkId=81792), einschließlich der Standardberichte, die vom erstellten [!INCLUDE[msCoName](../../includes/msconame-md.md)], sind zum Download zur Verfügung. Diese Beispiele können mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geändert werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen eines benutzerdefinierten Berichts zu Management Studio](add-a-custom-report-to-management-studio.md)   

@@ -1,5 +1,5 @@
 ---
-title: Migrieren von PowerPivot für SharePoint 2013 | Microsoft Docs
+title: Migrieren von PowerPivot für SharePoint 2013 | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 877697915df0bd082ea4972464572f4236556e36
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8df7cc04ea0682212f5a046ca4c614e83ebe9c86
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018457"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206819"
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>Migrieren von Power Pivot zu SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,29 +33,29 @@ ms.locfileid: "34018457"
   
 ##  <a name="bkmk_prepare_sharepoint2013"></a>Vorbereiten der SharePoint 2013-Farm  
   
-  > [!TIP]  
-    >  Überprüfen Sie die Authentifizierungsmethode, die in vorhandenen Webanwendungen konfiguriert wurde. SharePoint 2013-Webanwendungen verwenden standardmäßig die anspruchsbasierte Authentifizierung. Für den klassischen Authentifizierungsmodus konfigurierte SharePoint 2010-Webanwendungen erfordern zusätzliche Schritte, um Datenbanken von SharePoint 2010 zu SharePoint 2013 zu migrieren. Wenn die Webanwendungen für den klassischen Authentifizierungsmodus konfiguriert sind, lesen Sie die SharePoint 2013-Dokumentation.  
+> [!TIP]
+>  Überprüfen Sie die Authentifizierungsmethode, die in vorhandenen Webanwendungen konfiguriert wurde. SharePoint 2013-Webanwendungen verwenden standardmäßig die anspruchsbasierte Authentifizierung. Für den klassischen Authentifizierungsmodus konfigurierte SharePoint 2010-Webanwendungen erfordern zusätzliche Schritte, um Datenbanken von SharePoint 2010 zu SharePoint 2013 zu migrieren. Wenn die Webanwendungen für den klassischen Authentifizierungsmodus konfiguriert sind, lesen Sie die SharePoint 2013-Dokumentation.  
   
 1.  Installieren Sie eine neue SharePoint Server 2013-Farm.  
   
 2.  Installieren Sie eine Instanz eines [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers im SharePoint-Modus. Weitere Informationen finden Sie unter [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-3.  Führen Sie das [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013-Installationspaket **spPowerPivot.msi** auf jedem Server in der SharePoint-Farm aus. Weitere Informationen finden Sie unter [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-In &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)zu deinstallieren.  
+3.  Führen Sie das [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013-Installationspaket **spPowerPivot.msi** auf jedem Server in der SharePoint-Farm aus. Weitere Informationen finden Sie unter [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-In &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
-4.  Konfigurieren Sie in der SharePoint 2013-Zentraladministration die Excel Services-Dienstanwendung in der Weise, dass sie den im vorangehenden Schritt erstellten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Server im SharePoint-Modus verwendet. Weitere Informationen finden Sie im Abschnitt "Konfigurieren einer grundlegenden Analysis Services-SharePoint-Integration" in [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+4.  Konfigurieren Sie in der SharePoint 2013-Zentraladministration die Excel Services-Dienstanwendung in der Weise, dass sie den im vorangehenden Schritt erstellten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server im SharePoint-Modus verwendet. Weitere Informationen finden Sie im Abschnitt "Konfigurieren einer grundlegenden Analysis Services SharePoint Integration" [Installieren von Analysis Services im PowerPivot-Modus](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
 ##  <a name="bkmk_backup_restore"></a>Sichern, kopieren und Wiederherstellen der Datenbanken  
- Der Prozess „SharePoint-Upgrade mit Anfügen der Datenbanken“ umfasst eine Abfolge von Schritten, mit denen [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -bezogene Inhalts- und Dienstanwendungsdatenbanken auf der SharePoint 2013-Farm gesichert, kopiert und wiederhergestellt werden.  
+ Der Prozess "SharePoint-Datenbank-Upgrade mit anfügen" ist eine Abfolge von Schritten zu sichern, kopieren und Wiederherstellen [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -bezogene Inhalts- und dienstanwendungsdatenbanken auf SharePoint 2013-Farm.  
   
-1.  **Schreibgeschützte Datenbank:** Klicken Sie in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf den Datenbanknamen, und klicken Sie auf **Eigenschaften**. Legen Sie auf der Seite **Optionen** die Eigenschaft **Datenbank schreibgeschützt** auf **True**fest.  
+1.  **Datenbank wird auf schreibgeschützt festgelegt:** In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf den Datenbanknamen, und klicken Sie auf **Eigenschaften**. Legen Sie auf der Seite **Optionen** die Eigenschaft **Datenbank schreibgeschützt** auf **True**fest.  
   
-2.  **Sichern:** Sichern Sie jede Inhaltsdatenbank und jede Dienstanwendungsdatenbank, die Sie zur SharePoint 2013-Farm migrieren möchten. Klicken Sie in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf den Datenbanknamen, und klicken Sie auf **Tasks**und dann auf **Sichern**.  
+2.  **Sichern Sie:** Sichern Sie jede Inhaltsdatenbank und jede dienstanwendungsdatenbank, die Sie zur SharePoint 2013-Farm migrieren möchten. Klicken Sie in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf den Datenbanknamen, und klicken Sie auf **Tasks**und dann auf **Sichern**.  
   
 3.  Kopieren Sie die Datenbank-Sicherungsdateien (.bak) auf den gewünschten Zielserver.  
   
-4.  **Wiederherstellen:** Stellen Sie die Datenbanken auf dem Ziel- [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]wieder her. Dieser Schritt kann mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]ausgeführt werden.  
+4.  **Wiederherstellung:** Stellen Sie die Datenbanken auf dem Ziel- [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. Dieser Schritt kann mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]ausgeführt werden.  
   
-5.  **Datenbank mit Lese-/Schreibzugriff:** Legen Sie **Datenbank schreibgeschützt** auf **False**fest.  
+5.  **Legen Sie die Datenbank mit Lese-/ Schreibzugriff:** Legen Sie die **Datenbank schreibgeschützt** zu **"false"**.  
   
 ##  <a name="bkmk_prepare_mount_databases"></a>Vorbereiten von Webanwendungen und Einbinden von Inhaltsdatenbanken  
  Eine ausführlichere Erläuterung der folgenden Verfahren werden soll, finden Sie unter [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
@@ -76,7 +76,7 @@ ms.locfileid: "34018457"
   
 -   **Inhaltsdatenbanken einbinden:**  
   
-     Verwenden Sie PowerShell-Cmdlets in der SharePoint 2013-Verwaltungsshell, um die migrierte Inhaltsdatenbank einzubinden. Die dienstanwendungsdatenbank muss nicht eingebunden werden, sondern nur die Inhaltsdatenbanken: ![PowerShell-Inhalt](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt")  
+     Verwenden Sie PowerShell-Cmdlets in der SharePoint 2013-Verwaltungsshell, um die migrierte Inhaltsdatenbank einzubinden. Die Dienstanwendungsdatenbank muss nicht eingebunden werden, sondern nur die Inhaltsdatenbanken: ![PowerShell-Inhalt](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
   
     ```  
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
@@ -84,7 +84,7 @@ ms.locfileid: "34018457"
   
      Weitere Informationen finden Sie unter [anfügen oder Trennen von Inhaltsdatenbanken (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx).  
   
-     **Status nach Ausführung des Schritts:**  Nachdem die Inhaltsdatenbanken eingebunden wurden, sehen Benutzer die Dateien, die in der alten Inhaltsdatenbank enthalten waren. Folglich können Benutzer die Arbeitsmappen in der Dokumentbibliothek anzeigen und öffnen.  
+     **Status, wenn der Schritt abgeschlossen ist:**  Wenn der Bereitstellungsvorgang abgeschlossen ist, sehen Benutzer die Dateien, die in der alten Inhaltsdatenbank enthalten waren. Folglich können Benutzer die Arbeitsmappen in der Dokumentbibliothek anzeigen und öffnen.  
   
     -   > [!TIP]  
         >  An dieser Stelle im Migrationsvorgang besteht die Möglichkeit, neue Zeitpläne für die migrierten Arbeitsmappen zu erstellen. Die Zeitpläne werden jedoch in der neuen Datenbank der [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Dienstanwendung erstellt und nicht in der Datenbank, die Sie aus der alten SharePoint-Farm kopiert haben. Daher enthält die Datenbank keinen der alten Zeitpläne. Nachdem Sie die folgenden Schritte ausgeführt haben, um die alte Datenbank zu verwenden und die alten Zeitpläne zu migrieren, sind die neuen Zeitpläne nicht verfügbar.  
@@ -94,7 +94,7 @@ ms.locfileid: "34018457"
   
 1.  **Authentifizierungsfehler:** Wenn Authentifizierungsfehler auftreten, überprüfen Sie den Authentifizierungsmodus, der von den Quellwebanwendungen verwendet wird. Der Fehler könnte durch einen Authentifizierungskonflikt zwischen der SharePoint 2013-Webanwendung und der SharePoint 2010-Webanwendung verursacht werden. Weitere Informationen finden Sie unter [1) Vorbereiten der SharePoint 2013-Farm](#bkmk_prepare_sharepoint2013) .  
   
-2.  **Fehlende PowerPivot-Dateien:** Wenn Fehler bezüglich fehlender [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -DLLs angezeigt werden, wurde entweder **spPowerPivot.msi** nicht installiert, oder zur Konfiguration von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] wurde nicht das [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Konfigurationstool verwendet.  
+2.  **Fehlende PowerPivot-Dateien:** Wenn Fehler bezüglich fehlender [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] DLLs, die **spPowerPivot.msi** wurde nicht installiert oder die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Konfigurationstool so konfigurieren Sie nicht verwendet wurde [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
   
 ##  <a name="bkmk_upgrade_powerpivot_schedules"></a>Aktualisieren von PowerPivot-Zeitplänen  
  In diesem Abschnitt werden die Details und Optionen zum Migrieren von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Zeitplänen beschrieben. Die Migration von Zeitplänen erfolgt in zwei Schritten. Konfigurieren Sie zuerst die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Dienstanwendung für die Verwendung der migrierten Dienstanwendungsdatenbank. Als Nächstes wählen Sie eine der beiden Optionen zur Migration von Zeitplänen aus.  
@@ -105,7 +105,7 @@ ms.locfileid: "34018457"
   
 1.  Klicken Sie in der SharePoint-Zentraladministration auf **Dienstanwendungen verwalten**.  
   
-2.  Suchen Sie die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Dienstanwendung, z. B. „ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Standarddienstanwendung“, klicken Sie auf den Namen der Dienstanwendung, und klicken Sie im SharePoint-Menüband auf **Eigenschaften** .  
+2.  Suchen der [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -dienstanwendung, z. B. "Default [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Dienstanwendung", klicken Sie auf den Namen der dienstanwendung, und klicken Sie auf **Eigenschaften** im SharePoint-Menüband.  
   
 3.  Aktualisieren Sie die Datenbankservernamensinstanz und den Datenbanknamen. Verwenden Sie die Namen der Datenbank, die Sie gesichert, kopiert und wiederhergestellt haben. Nachdem Sie auf **OK**geklickt haben, wird die Dienstanwendungsdatenbank aktualisiert. Etwaige Fehler können Sie dem ULS-Protokoll entnehmen.  
   
@@ -113,9 +113,9 @@ ms.locfileid: "34018457"
   
  Konfigurieren Sie die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Dienstanwendung für die Migration von Aktualisierungszeitplänen.  
   
--   **Option 1 zum Migrieren von Zeitplänen: SharePoint-Farmadministrator**  
+-   **Migrieren von Zeitplänen option1: SharePoint-Farmadministrator**  
   
-    1.  Führen Sie in der SharePoint 2013 Verwaltung der `Set-PowerPivotServiceApplication` Cmdlet mit dem `-StartMigratingRefreshSchedules` Switch So aktivieren Sie automatische bedarfsorientierte Migration von Zeitplänen ![PowerShell-Inhalt](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt"). Im folgenden Windows PowerShell-Skript wird davon ausgegangen, dass nur eine [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Dienstanwendung vorhanden ist.  
+    1.  In der SharePoint 2013-Management-Ausführung der `Set-PowerPivotServiceApplication` Cmdlet mit der `-StartMigratingRefreshSchedules` Switch So aktivieren Sie automatische bedarfsorientierte Migration von Zeitplänen ![PowerShell related Content](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related Content"). Im folgenden Windows PowerShell-Skript wird davon ausgegangen, dass nur eine [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Dienstanwendung vorhanden ist.  
   
         ```  
         $app=Get-PowerPivotServiceApplication  
@@ -132,7 +132,7 @@ ms.locfileid: "34018457"
         Get-PowerPivotServiceApplication $appp | format-table -property displayname,id,StartMigratingRefreshSchedules  
         ```  
   
-     **Option 2 zum Migrieren von Zeitplänen: Aktualisierung jeder Arbeitsmappe durch den Benutzer**  
+     **Migrieren von Zeitplänen option2: Benutzer Aktualisierung jeder Arbeitsmappe**  
   
     1.  Eine andere Möglichkeit zum Migrieren von Zeitplänen besteht darin, die Zeitplanaktualisierung für jede Arbeitsmappe zu aktivieren. Navigieren Sie zu der Dokumentbibliothek, in der die Arbeitsmappen enthalten sind.  
   

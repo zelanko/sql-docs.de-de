@@ -13,12 +13,12 @@ ms.assetid: e1ffb6d7-fbc5-4695-b538-cc2302d1a17d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e6f8fbd3ffbfcee4db212a22d4aef223450e41c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17723cfd2c1c694f21130e985b6bd65736f90236
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174460"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373933"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>Aufgabe 2: Testen und Veröffentlichen der Abgleichsrichtlinie
   In dieser Aufgabe testen und veröffentlichen die **Remove Duplicate Suppliers** Abgleichsrichtlinie.  
@@ -27,11 +27,11 @@ ms.locfileid: "48174460"
   
 2.  Prüfen Sie alle übereinstimmenden Datensätze und ihre Treffergenauigkeit im Listenfeld. Ein Datensatz mit einem **Grün** zugeordnete Symbol ist ein Duplikat des pivotdatensatzes, der ihm vorausgeht. Hier einige Beispiele:  
   
-    1.  Der Datensatz mit **Datensatz-ID: 1000005** ist eine Übereinstimmung des Datensatzes mit der **Datensatz-Id: 1000004** mit **Ergebnis: 100 %** da sowohl die Datensätze die gleichen Werte für **SupplierID (Voraussetzung)**, **Lieferantenname**, und **ContactEmailAddress-Spalten**. DQS wählt nach dem Zufallsprinzip einen Datensatz als Pivotdatensatz für einen Cluster aus.  
+    1.  Der Datensatz mit der **Datensatz-ID: 1000005** ist eine Übereinstimmung des Datensatzes mit der **Datensatz-Id: 1000004** mit **Bewertung: 100 %** da sowohl die Datensätze die gleichen Werte für **SupplierID (Voraussetzung)**, **Lieferantenname**, und **ContactEmailAddress-Spalten**. DQS wählt nach dem Zufallsprinzip einen Datensatz als Pivotdatensatz für einen Cluster aus.  
   
-    2.  Der Datensatz **1000023** ist eine Übereinstimmung des Datensatzes **1000022** mit die treffergenauigkeit: 93 %, da die beiden Datensätze die gleichen Werte für haben **SupplierID (Voraussetzung)** und  **Lieferantenname** Spalten aber unterschiedliche Werte für die **ContactEmailAddress** Spalte.  
+    2.  Der Datensatz **1000023** ist eine Übereinstimmung des Datensatzes **1000022** mit die treffergenauigkeit: 93 %, da die beiden Datensätze die gleichen Werte für haben **SupplierID (Voraussetzung)** und **Lieferantenname** Spalten aber unterschiedliche Werte für die **ContactEmailAddress** die Spalte.  
   
-    3.  Führen Sie einen Bildlauf zum unteren Rand der Liste, um zwei Datensätze mit folgenden Datensatz-IDs finden Sie unter: **1000051** und **1000052**. Datensatz **1000052** als Übereinstimmung mit einer treffergenauigkeit **91 %** da die beiden Datensätze die gleichen Werte für die **SupplierID** und  **ContactEmailAddress** Spalten aber unterschiedliche Werte für die **Lieferantenname** Spalte.  
+    3.  Führen Sie einen Bildlauf zum Ende der Liste durch, um zwei Datensätze mit folgenden Datensatz-IDs anzuzeigen: **1000051** und **1000052**. Datensatz **1000052** als Übereinstimmung mit einer treffergenauigkeit **91 %** da die beiden Datensätze die gleichen Werte für die **SupplierID** und  **ContactEmailAddress** Spalten aber unterschiedliche Werte für die **Lieferantenname** Spalte.  
   
      ![Richtliniendefinition – Richtlinienergebnisse](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-01.jpg "Richtliniendefinition – Richtlinienergebnisse")  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48174460"
   
 4.  Klicken Sie auf **schließen** schließen die **Details zur Treffergenauigkeit** Dialogfeld.  
   
-5.  Klicken Sie auf **Abgleichsergebnisse** Registerkarte am unteren Rand der Seite. Diese Registerkarte enthält Details wie die Anzahl der übereinstimmenden Datensätze, die Anzahl der nicht übereinstimmenden Datensätze, die Anzahl der Cluster mit übereinstimmenden Datensätzen, die durchschnittliche Clustergröße, die minimale Clustergröße und die maximale Clustergröße. Finden Sie unter [Erstellen einer Abgleichsrichtlinie](http://msdn.microsoft.com/library/hh270290.aspx) Weitere Details. Sie können die Ergebnisse dieser Aktivität nicht exportieren. Sie definieren lediglich eine Abgleichsrichtlinie, indem Sie die Beispieldaten verwenden, um Regeln und die Richtlinie unter Verwendung der Beispieldaten zu testen.  
+5.  Klicken Sie auf **Abgleichsergebnisse** Registerkarte am unteren Rand der Seite. Diese Registerkarte enthält Details wie die Anzahl der übereinstimmenden Datensätze, die Anzahl der nicht übereinstimmenden Datensätze, die Anzahl der Cluster mit übereinstimmenden Datensätzen, die durchschnittliche Clustergröße, die minimale Clustergröße und die maximale Clustergröße. Finden Sie unter [Erstellen einer Abgleichsrichtlinie](https://msdn.microsoft.com/library/hh270290.aspx) Weitere Details. Sie können die Ergebnisse dieser Aktivität nicht exportieren. Sie definieren lediglich eine Abgleichsrichtlinie, indem Sie die Beispieldaten verwenden, um Regeln und die Richtlinie unter Verwendung der Beispieldaten zu testen.  
   
      ![Registerkarte "Ergebnisse" übereinstimmende](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-03.jpg "Abgleich der Registerkarte \"Ergebnisse\"")  
   
@@ -53,6 +53,6 @@ ms.locfileid: "48174460"
 7.  Klicken Sie in der SQL Server Data Quality Services-Dialogfeld auf **veröffentlichen** , und klicken Sie auf **OK** im Meldungsfeld auf. Nun wird der von Ihnen definierte Abgleichsrichtlinie veröffentlicht, in der **Lieferanten** Knowledge Base. Sie können die Wissensdatenbank verwenden, um den Abgleichsprozess für eine Eingabedatei auszuführen, mit dem Ziel, Duplikate zu identifizieren und zu entfernen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 3: Erstellen und Ausführen eines Data Quality-Projekts für den Abgleich](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
+ [Aufgabe 3: Erstellen und Ausführen von Data Quality-Projekten für den Abgleich](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
   
   

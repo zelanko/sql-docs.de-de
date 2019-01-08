@@ -11,19 +11,19 @@ ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 95b59bf6b406a4dcbaabc956147f4216cfdda0e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8afbe5f3bd711aac8ac1d7a0dd3d3258a6d4305d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095380"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522379"
 ---
 # <a name="glossary-report-builder"></a>Glossar (Berichts-Generator)
   
   
 |Begriff|Definition|  
 |----------|----------------|  
-|.NET Framework|Eine integrierte Windows-Komponente, die die Entwicklung, Bereitstellung und Ausführung von Anwendungen und Webdiensten der nächsten Generation unterstützt. .NET Framework bietet eine äußerst produktive, standardbasierte, mehrsprachige Umgebung für die Integrierung vorhandener Investitionen in Anwendungen und Dienste der nächsten Generation sowie die Möglichkeit, die Herausforderungen der Bereitstellung und des Betriebs internetweiter Anwendungen zu meistern. .NET Framework setzt sich aus drei Hauptteilen zusammen: Common Language Runtime (CLR), hierarchisch strukturierte, vereinheitlichte Klassenbibliotheken und eine als Komponente aufbereitete Version von ASP mit dem Namen ASP.NET. Siehe auch: ASP.NET, Common Language Runtime, .NET Framework-Klassenbibliothek.|  
+|.NET Framework|Eine integrierte Windows-Komponente, die die Entwicklung, Bereitstellung und Ausführung von Anwendungen und Webdiensten der nächsten Generation unterstützt. .NET Framework bietet eine äußerst produktive, standardbasierte, mehrsprachige Umgebung für die Integrierung vorhandener Investitionen in Anwendungen und Dienste der nächsten Generation sowie die Möglichkeit, die Herausforderungen der Bereitstellung und des Betriebs internetweiter Anwendungen zu meistern. .NET Framework setzt sich aus drei Hauptteilen zusammen: Common Language Runtime (CLR), hierarchisch strukturierte, vereinheitlichte Klassenbibliotheken und eine als Komponente aufbereitete Version von ASP mit dem Namen ASP.NET. Siehe auch: ASP.NET, common Language Runtime, .NET Framework-Klassenbibliothek.|  
 |ActiveX-Datenobjekte|Component Object Model-Objekte, die den Zugriff auf Datenquellen ermöglichen. Diese API bildet eine Ebene zwischen OLE DB und Programmiersprachen wie Visual Basic, Visual Basic für Applikationen, Active Server Pages und Visual Basic Scripting für Microsoft Internet Explorer.|  
 |Ad-hoc-Bericht (ad hoc report)|Ein mit Berichts-Generator 1.0 erstellter Bericht mit der Dateierweiterung RDL, der auf Berichtsmodelle zugreift.|  
 |Zusatzelement (adornment)|Ein am Rand eines Fensters oder Fensterbereichs angefügtes Steuerelement oder ein angefügter Statusbereich wie eine Symbolleiste oder ein Lineal.|  
@@ -143,7 +143,7 @@ ms.locfileid: "48095380"
 |Fehlerprotokoll|1. In SQL Server eine Textdatei, die Systeminformationen aufzeichnet. 2. In Integration Services ein Protokoll von Fehlern, Warnungen und Ereignissen, die von mehreren Protokollanbietern, wie SQL Server Profiler, dem Windows-Ereignisprotokoll oder SQL Server, in dieser Datei gespeichert werden können.|  
 |Fehlerzustandsnummer|Eine Nummer, die mit SQL Server-Meldungen verknüpft ist, mit deren Hilfe Microsoft-Supporttechniker den entsprechenden Code finden, der die Meldung ausgelöst hat.|  
 |Escapezeichen (escape character)|Mit diesem Zeichen wird festgelegt, dass ein anderes Zeichen innerhalb eines Ausdrucks in seiner eigentlichen Bedeutung und nicht als Operator verstanden werden soll.|  
-|SHP-Datei von ESRI (ESRI .shp file)|Offene Spezifikation für räumliche Daten, die vom Environmental Systems Research Institute, Inc. (ESRI) entwickelt wurde.|  
+|SHP-Datei von ESRI (ESRI .shp file)|Eine von Environmental Systems Research Institute, Inc. (ESRI) entwickelte offene Spezifikation für räumliche Daten.|  
 |ESRI-Shape-Datei (ESRI Shapefile)|Eine von Environmental Systems Research Institute, Inc. (ESRI) entwickelte offene Spezifikation für räumliche Daten.|  
 |Ereignis|Ein signifikantes Vorkommnis im System oder in einer Anwendung, über das Benutzer benachrichtigt werden müssen oder für das dem Protokoll ein Eintrag hinzugefügt werden muss.|  
 |Ereignishandler|1. Eine Softwareroutine, die als Reaktion auf ein Ereignis ausgeführt wird. 2. In Integration Services eine Ablaufsteuerung, die als Reaktion auf ein Laufzeitereignis ausgeführt wird.|  
@@ -158,7 +158,7 @@ ms.locfileid: "48095380"
 |Messgerät (gauge)|Ein Messgerät ist ein Datenbereich, in dem ein Bereich von Daten dargestellt wird und ein Indikator auf einen bestimmten Wert innerhalb des Bereichs zeigt.|  
 |Messgerätbereich (gauge panel)|Der Messgerätbereich ist das umfassende äußere Element, das ein oder mehrere radiale und lineare Messgeräte enthält.  Verwenden Sie den Messgerätbereich, um Eigenschaften zu definieren, die für alle Messgeräte in einem Messgerätbereich gültig sind.|  
 |Messgerätzeiger (gauge pointer)|Ein Messgerätzeiger ist eine Nadel, eine Markierung oder eine Leiste, die den aktuellen Wert auf dem Messgerät anzeigt.  Ein Messgerätzeiger wird immer an eine Skalierung des Messgeräts angefügt.|  
-|Messgerätbereich (gauge range)|Ein Messgerätbereich ist ein farbiger Bereich, der eine "wichtige Zone" darstellt und stets durch einen Startwert und einen Endwert auf der Skalierung des Messgeräts begrenzt ist.|  
+|Messgerätbereich (gauge range)|Ein Messgerätbereich ist ein farbiger Bereich, der eine „wichtige Zone“ darstellt und stets durch einen Startwert und einen Endwert auf der Skalierung des Messgeräts begrenzt ist.|  
 |Messgerätskala (gauge scale)|Eine Messgerätskala ist der durch einen Minimalwert und einen Maximalwert begrenzte Bereich von Werten, die auf dem Messgerät angezeigt werden.  In der Regel enthält die Skalierung eines Messgeräts Messgerätbezeichnungen und -teilstriche, die das exakte Ablesen des Messgerätzeigers ermöglichen.|  
 |Geodätische Daten (geodesic data)|Daten, die Punkte, Linien oder Bereiche auf einer gekrümmten Oberfläche angeben.|  
 |Geografiedaten (geography data)|Ein SQL-Datentyp für räumliche Daten, der Daten in einem Erdkugel-Koordinatensystem darstellt, beispielsweise GPS-Koordinaten in Längen- und Breitengraden.|  
@@ -169,7 +169,7 @@ ms.locfileid: "48095380"
 |Temperaturverteilungskarte|Ein Typ einer Kartendarstellung, bei der die Intensität der Farbe für jedes Polygon den verknüpften analytischen Daten entspricht. Beispielsweise werden niedrige Werte in einem Bereich blau (kalt) und hohe Werte rot (heiß) dargestellt.|  
 |Hierarchie (hierarchy)|Eine logische Baumstruktur, die die Elemente einer Dimension so anordnet, dass jedes Element ein übergeordnetes Element und null oder mehr untergeordnete Elemente aufweist.|  
 |Hochverfügbarkeit|Status einer Ressource, die die meiste Zeit funktionstüchtig ist, von Clients genutzt werden kann und dabei einen sehr geringen Prozentsatz an Fehlern aufweist, die den Dienst unterbrechen.|  
-|HTML|Siehe anderen Begriff: Hypertext Markup Language|  
+|HTML|Siehe anderen Begriff: Hypertext Markup Language (HTML)|  
 |HTML-Viewer|Eine Benutzeroberfläche, die aus einer Berichtssymbolleiste und anderen Steuerelementen zur Bearbeitung eines Berichts besteht.|  
 |Hypertext Markup Language (HTML)|Eine Textmarkupsprache, die zum Erstellen von Dokumenten für das Web verwendet wird. HTML definiert die Struktur und das Layout eines Webdokuments mittels verschiedener Tags und Attribute.|  
 |Bezeichner (identifier)|Der Name eines Objekts in einer Datenbank.|  
@@ -180,29 +180,29 @@ ms.locfileid: "48095380"
 |Instanz|1. Eine Kopie von SQL Server, die auf einem Computer ausgeführt wird. 2. Eine spezifische Kopie eines Berichtselements, z. B. eines Berichtsteils, Unterberichts, dynamischen Elements oder einer Gruppe.|  
 |integer|Eine numerische Datentypkategorie, zu der die Datentypen bigint, int, smallint und tinyint gehören.|  
 |Internetprotokollsicherheit|Regeln für Computer, die eine vertrauliche und sichere Kommunikation über IP-Netzwerke (IP, Internet Protocol) mittels kryptografischer Sicherheitsdienste sicherstellen.|  
-|IPsec|Siehe anderen Begriff: Internet Protocol Security (IPSec)|  
+|IPsec|Siehe anderen Begriff: Internetprotokollsicherheit|  
 |ISO|Eine von zwei internationalen Institutionen, die für die Entwicklung internationaler Datenübertragungsstandards verantwortlich sind. Die Internationale Organisation für Normung (International Organization for Standardization, ISO) arbeitet eng mit der Internationalen Elektrotechnischen Kommission (International Electrotechnical Commission, IEC) zusammen, um Standards für das Computing zu definieren. Gemeinsam haben sie den ISO/IEC SQL-92-Standard für SQL veröffentlicht.|  
 |Rollenzuweisung auf Elementebene|Eine Sicherheitsrichtlinie, die für ein Element im Berichtsserverordner gilt.|  
 |Rollendefinition auf Elementebene|Eine Sicherheitsvorlage, die eine Rolle definiert, mit der der Zugriff auf oder die Interaktion mit einem Element im Ordnernamespace des Berichtsservers gesteuert wird.|  
 |Key Performance Indicator|(KPI) Eine quantifizierbare, standardisierte Metrik, die eine wichtige Geschäftsvariable (z. B. den Marktanteil) in Abhängigkeit von der Zeit wiedergibt.|  
-|Schlüsselwort (keyword)|Ein reserviertes Wort in SQL Server, das eine bestimmte Funktion ausführt, z. B. das Definieren oder Ändern von Datenbankobjekten oder das Zugreifen auf Datenbankobjekte. Beispiel: SELECT, FROM und AND.|  
+|Schlüsselwort (keyword)|Ein reserviertes Wort in SQL Server, das eine bestimmte Funktion ausführt, z. B. das Definieren oder Ändern von Datenbankobjekten oder das Zugreifen auf Datenbankobjekte. Zum Beispiel: SELECT, FROM, und and.|  
 |KPI|Siehe anderen Begriff: Key Performance Indicator (KPI)|  
 |Bezeichnungsfeld (label field)|Ein Berichtsdataset-Feld, das eine Bezeichnung für ein entsprechendes Schlüsselfeld identifiziert. Die Bezeichnung für ein Schlüsselfeld kann anstelle des Werts in Parametern und Datenbereichen angezeigt werden.|  
 |latency|Die Zeit, die zwischen dem Abschluss einer Datenänderung auf einem Server und der Anzeige dieser Änderung auf einem anderen Server verstreicht.|  
-|Breitengrad (latitude)|Die Breitengradkoordinate als dezimaler Gradwert in einem WGS 84-Bezug (World Geodetic System). Der gültige Wertebereich liegt zwischen –90,0 und +90,0.|  
+|Breitengrad (latitude)|Die Breitengradkoordinate als dezimaler Gradwert in einem WGS 84-Bezug (World Geodetic System). Der gültige Wertebereich liegt zwischen -90,0 und +90,0.|  
 |Ebene (layer)|In einem Kartenberichtselement gibt eine Ebene den Typ und die Darstellung eines einzelnen Typs von räumlichen Daten an. Ein Kartenberichtselement ist ein Container für mehrere Ebenen.|  
 |LCID|Eine Nummer, die ein Windows-basiertes Gebietsschema identifiziert.|  
 |Legende (legend)|Ein Element in einem Berichtsdiagramm, einer Karte oder einem Messgerätdatenbereich, das den Zusammenhang zwischen den dargestellten Daten und den zugrunde liegenden Datenwerten erläutert.|  
 |Linienebene|Eine Ebene in einem Kartenberichtselement, die räumliche Daten als Linien darstellt, z. B. für Wege oder Routen.|  
 |Verknüpfter Bericht (linked report)|Ein Bericht, der mittels unterschiedlicher Parameterwerte oder Eigenschaften auf eine vorhandene Berichtsdefinition verweist. Ein verknüpfter Bericht ist ein Berichtsserverelement, das einen Zugriffspunkt auf einen vorhandenen Bericht bereitstellt. Grundsätzlich ist er mit einer Programmverknüpfung vergleichbar, die Sie verwenden, um ein Programm auszuführen oder eine Datei zu öffnen.|  
-|Listendatenbereich (list data region)|Ein Datenbereich in einem Berichtslayout, der mit jeder Gruppe oder Zeile im Berichtsdataset wiederholt wird. Eine Liste kann verwendet werden, um Freiformberichte oder -formulare, z. B. Rechnungen, oder Berichte und Formulare in Verbindung mit anderen Datenbereichen zu erstellen.|  
+|Listendatenbereich (list data region)|Ein Datenbereich in einem Berichtslayout, der mit jeder Gruppe oder Zeile im Berichtsdataset wiederholt wird. Eine Liste kann verwendet werden, um Freiformberichte oder -formulare, z. B. Rechnungen, oder Berichte und Formulare in Verbindung mit anderen Datenbereichen zu erstellen.|  
 |Lokaler Server (local server)|1. Bei SQL Server-Verbindungen eine Instanz von SQL Server, die auf demselben Computer wie die Anwendung ausgeführt wird. <br />2. Beim Auflösen von Verweisen auf die Datenbankobjekte in einer Transact-SQL-Anweisung ist dies die Instanz von SQL Server, die die Anweisung ausführt. <br />3. Bei verteilten Abfragen von SQL Server ist dies die Instanz von SQL Server, die die verteilte Abfrage ausführt. Der lokale Server greift dann auf die Verbindungsserver zu, auf die in der Abfrage verwiesen wird.|  
 |Gebietsschema|Das Attribut des Windows-Betriebssystems, das bestimmte Verhaltensweisen im Zusammenhang mit der Sprache definiert.|  
 |Gebietsschema-ID (LCID) (locale identifier, LCID)|Eine Nummer, die ein Windows-basiertes Gebietsschema identifiziert.|  
 |Protokolldatei (log file)|Eine Datei oder ein Dateisatz mit Aufzeichnungen zu den Änderungen, die in einer Datenbank vorgenommen wurden.|  
 |Logischer Name|Eine Name, der von SQL Server verwendet wird, um eine Datei zu identifizieren.|  
 |Logische Operatoren (logical operators)|Die Operatoren AND, OR und NOT. Logische Operatoren werden verwendet, um Suchbedingungen in WHERE-Klauseln zu verbinden.|  
-|Längengrad (longitude)|Die Längenkoordinate als dezimaler Gradwert nach dem World Geodetic System (WGS 84). Der gültige Wertebereich liegt zwischen –180,0 und +180,0.|  
+|Längengrad (longitude)|Die Längenkoordinate als dezimaler Gradwert nach dem World Geodetic System (WGS 84). Der gültige Wertebereich liegt zwischen -180,0 und +180,0.|  
 |m:n-Beziehung (many-to-many relationship)|Eine Beziehung zwischen zwei Tabellen, bei der Zeilen in jeder der beiden Tabellen mehrere übereinstimmende Zeilen in der verknüpften Tabelle aufweisen. Beispielsweise können in einer Rechnung mehrere Produkte aufgeführt sein, aber ein Produkt kann in mehreren Rechnungen enthalten sein.|  
 |m:1-Beziehung|Eine Beziehung zwischen zwei Tabellen, bei der eine Zeile in einer Tabelle mit vielen Zeilen in einer anderen Tabelle verknüpft sein kann.|  
 |Zuordnen|Ein Berichtselement, das als Container für Titel, verschiedene Typen von Legenden und Kartenebenen dient.|  
@@ -213,7 +213,7 @@ ms.locfileid: "48095380"
 |Masterdatei|Die Datei, die mit früheren Versionen von SQL Server installiert wurde und zum Speichern von Systemdatenbanken und Transaktionsprotokollen des Typs "master", "model" und "tempdb" sowie der Beispieldatenbank und des Transaktionsprotokolls des Typs "pubs" dient.|  
 |Übereinstimmende Felder (match fields)|Ein Satz von Feldern, die werden verwendet, um eine Beziehung zwischen analytischen Daten und räumlichen Daten herzustellen.|  
 |Matrixdatenbereich|Ein Datenbereich in einem Berichtslayout, der ähnliche Funktionen wie Kreuztabellen- und PivotTable-Berichte bereitstellt. Wenn zur Laufzeit die Berichtsdaten und Datenbereiche kombiniert werden, wächst die Matrix auf der Seite horizontal und vertikal. Werte in Matrixzellen zeigen aggregierte Werte für die Schnittmenge der Zeilen- und Spaltengruppen, zu denen die Zelle gehört.|  
-|MDX|Siehe anderen Begriff: Mehrdimensionale Ausdrücke (MDX)|  
+|MDX|Siehe anderen Begriff: Multidimensional Expressions (MDX)|  
 |Mercator-Projektion (Mercator projection)|Eine zylindrische Kartenprojektion in einem Kartenberichtselement, die 1569 von Gerardus Mercator erfunden wurde.|  
 |Metadaten|Informationen zu den Eigenschaften von Daten, z. B. der Datentyp in einer Spalte (numerisch, Text usw.) oder die Länge der Spalte, Informationen zu einer Datei, z. B. Titel, Beschreibung, Erstellungsdatum und Datum der letzten Änderung, oder Informationen zur Struktur von Daten oder Informationen, die den Entwurf von Objekten angeben, z. B. Cubes oder Dimensionen.|  
 |Methode|Eine Funktion, die eine Aktion mithilfe eines COM-Objekts (Component Object Model) ausführt, wie z. B. in SQL-DMO, OLE DB und ActiveX-Datenobjekte (ADO).|  
@@ -264,7 +264,7 @@ ms.locfileid: "48095380"
 |Protokoll|Ein Satz von Standardformaten und -prozeduren, die Computern ermöglichen, Informationen auszutauschen.|  
 |Provider|1. Ein OLE DB-Anbieter. 2. Eine prozessinterne DLL (Dynamic Link Library), die den Zugriff auf eine Datenbank ermöglicht.|  
 |Abfrageparameter (query parameters)|Parameter, die in einer Datasetabfrage angegeben werden, z. B. einer Transact-SQL-Abfrage.|  
-|RDL|Siehe anderen Begriff: Berichtsdefinitionssprache (Report Definition Language, RDL)|  
+|RDL|Siehe anderen Begriff: Report Definition Language|  
 |Datensatz (record)|Eine Gruppe verwandter Felder (Spalten) mit Informationen, die als Einheit behandelt wird. In einer relationalen Datenbank wird ein Datensatz in der Regel als Zeile bezeichnet.|  
 |Rechteck|Ein Berichtselement, das als Container für mehrere Berichtselemente oder als grafisches Element in einem Bericht verwendet werden kann.|  
 |Rekursive Hierarchie|1. Eine Hierarchie von Daten aus einem Berichtsdataset, das mehrere hierarchische Ebenen in eine Hierarchiestruktur einschließt, zum Beispiel eine Berichtsstruktur für die Beziehung zwischen Managern und Mitarbeitern in der Hierarchie einer Organisation. 2. In Master Data Services eine abgeleitete Hierarchie, die eine rekursive Beziehung einschließt. Eine rekursive Beziehung liegt vor, wenn eine Entität über ein domänenbasiertes Attribut verfügt, das auf der Entität selbst basiert.|  
@@ -332,18 +332,18 @@ ms.locfileid: "48095380"
 |SKU|Eine Möglichkeit, andere Editionen eines Produkts zu identifizieren, auch das Akronym für Stock Keeping Unit (gebräuchliche Geschäftsterminologie).|  
 |Slice|Eine Teilmenge der Daten in einem Cube, die durch die Beschränkung mindestens einer Dimension durch Elemente der entsprechenden Dimension angegeben wird.|  
 |Smarttag (smart tag)|Ein Smarttag macht Schlüsselkonfigurationen direkt für die Entwurfsoberfläche verfügbar, um die allgemeine Entwurfszeit-Produktivität in Visual Studio 2005 zu optimieren.|  
-|SMDL (SDML)|Siehe anderen Begriff: Semantic Model Definition Language (SMDL)|  
+|SMDL (SDML)|Siehe anderen Begriff: Semantic Model Definition Language (SMDL) (Semantic Model Definition Language, SMDL)|  
 |Momentaufnahme|Siehe anderen Begriff: Berichtsmomentaufnahme|  
 |Sortierreihenfolge|Der Satz von Regeln in einer Sortierung, der definiert, wie Zeichen in Vergleichsvorgängen ausgewertet werden und in welcher Reihenfolge sie sortiert werden.|  
 |Räumliche Daten|Daten, die Positionen von Objekten auf einer ebenen oder gekrümmten Oberfläche angeben. Räumliche Daten können Punkte, Linien oder Polygone sein.|  
 |Räumliche Datentypen (spatial data types)|Gibt Daten an, die geometrische (planare) oder geografische (geodätische) Informationen darstellen.|  
-|SQL|Siehe anderen Begriff: Structured Query Language (SQL)|  
+|SQL|Siehe anderen Begriff: Structured Query Language (SQL) (Structured Query Language, SQL)|  
 |SQL-Abfrage (SQL query)|Eine SQL-Anweisung wie SELECT, INSERT, UPDATE, DELETE oder CREATE TABLE.|  
 |SQL Server-Authentifizierung|Der Mechanismus, mit dem eine Verbindungsherstellung mit einer Instanz von SQL Server überprüft wird, indem eine SQL Server-Anmelde-ID und ein Kennwort angegeben werden.|  
 |SQL Server-Anmeldung|Ein Konto, das in SQL Server gespeichert wird und über das Benutzer eine Verbindung mit SQL Server herstellen können.|  
 |SQL-Anweisung|Ein SQL- oder Transact-SQL-Befehl wie SELECT oder DELETE, der für Daten eine Aktion ausführt.|  
 |Statische Verbindungszeichenfolge (static connection string)|Ein Satz von Werten, der verwendet wird, um bei jeder Berichtsausführung eine Verbindung mit derselben Datenquelle herzustellen.|  
-|Zeichenfolge|Ein Datentyp, der Buchstaben, Zahlen und die meisten Zeichen beinhaltet. Zahlen in einem Zeichenfolgenfeld, bei dem es sich um ein Feld mit dem Datentyp "String" handelt, stehen nicht für numerische Berechnungen zur Verfügung. Sie müssen einen numerischen Datentyp verwenden, beispielsweise "Integer" oder "Float", um numerische Berechnungen auszuführen. Für einen Parameter ist "String" mit dem Datentyp "Text" identisch.|  
+|String|Ein Datentyp, der Buchstaben, Zahlen und die meisten Zeichen beinhaltet. Zahlen in einem Zeichenfolgenfeld, bei dem es sich um ein Feld mit dem Datentyp "String" handelt, stehen nicht für numerische Berechnungen zur Verfügung. Sie müssen einen numerischen Datentyp verwenden, beispielsweise "Integer" oder "Float", um numerische Berechnungen auszuführen. Für einen Parameter ist "String" mit dem Datentyp "Text" identisch.|  
 |Zeichenfolgenfunktionen (string-Funktionen)|Funktionen, die Vorgänge mit Zeichen- oder Binärzeichenfolgen ausführen.|  
 |Structured Query Language (SQL) (Structured Query Language, SQL)|Eine Sprache zum Einfügen, Abrufen, Ändern und Löschen von Daten in einer relationalen Datenbank, die speziell für Datenbankabfragen entworfen wurde.|  
 |Unterbericht|Ein Unterbericht ist ein Steuerelement, das im Text eines übergeordneten Berichts eingebettet ist. Im Prinzip ist ein Unterbericht mit dem Frame einer Webseite vergleichbar, der einen Container für anderen Webseiteninhalt bereitstellt. Der Unterbericht wird im übergeordneten Bericht gerendert, in dem er enthalten ist. Beide Berichte werden verarbeitet und gleichzeitig angezeigt.|  
@@ -371,6 +371,6 @@ ms.locfileid: "48095380"
 |y-Achse (y-axis)|Siehe anderen Begriff: Wertachse (y)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichtserstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

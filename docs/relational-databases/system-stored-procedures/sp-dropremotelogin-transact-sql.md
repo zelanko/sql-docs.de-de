@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a834dbb26bfc8c712531084e528f82bba50cd05e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa52c7e66a690b54c33330e09fe4373962ea2f9b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800698"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589314"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Entfernt einen Remoteanmeldenamen, der einem lokalen Anmeldenamen zugeordnet ist, mit dem gespeicherte Remoteprozeduren auf dem lokalen Server mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden.  
+  Entfernt einen Remoteanmeldenamen, der einem lokalen Anmeldenamen zugeordnet ist, mit dem gespeicherte Remoteprozeduren auf dem lokalen Server mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Verwenden Sie stattdessen Verbindungsserver und gespeicherte Prozeduren verknüpfte Server.  
@@ -44,13 +44,13 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@remoteserver =** ] **"***Remoteserver***"**  
+ [  **@remoteserver =** ] **"**_Remoteserver_**"**  
  Der Name des Remoteservers, der dem zu entfernenden Remoteanmeldenamen zugeordnet ist. *remoteserver* ist vom Datentyp **sysname**und hat keinen Standardwert. Der*remoteserver* muss bereits vorhanden sein.  
   
- [ **@loginame =** ] **'***login***'**  
+ [  **@loginame =** ] **"**_Anmeldung_**"**  
  Der optionale Anmeldename für den lokalen Server, der dem Remoteserver zugeordnet ist. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. *login* muss ggf. bereits vorhanden sein.  
   
- [  **@remotename =** ] **"***Remote_name***"**  
+ [  **@remotename =** ] **"**_Remote_name_**"**  
  Der optionale Name der Remoteanmeldung, die beim Anmelden vom Remoteserver *login* zugeordnet wird. *remote_name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -61,7 +61,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
  Mithilfe von **sp_addlogin**fügen Sie Benutzer lokaler Server hinzu. Mithilfe von **sp_droplogin**entfernen Sie Benutzer lokaler Server.  
   
- Remoteanmeldenamen sind nur erforderlich, wenn Sie frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Version 7.0 und höher, werden stattdessen Anmeldenamen für den Verbindungsserver verwendet. Verwenden Sie **sp_addlinkedsrvlogin** und **sp_droplinkedsrvlogin** , um Verbindungsserver-Anmeldenamen hinzuzufügen und zu entfernen.  
+ Remoteanmeldenamen sind nur erforderlich, wenn Sie frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Version 7.0 und höher, werden stattdessen Anmeldenamen für den Verbindungsserver verwendet. Verwenden Sie **sp_addlinkedsrvlogin** und **sp_droplinkedsrvlogin** , um Verbindungsserver-Anmeldenamen hinzuzufügen und zu entfernen.  
   
  **sp_dropremotelogin** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   

@@ -13,12 +13,12 @@ ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b809b633bb040755ac3d211b33804fd469fcb0a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1742c706d4a89999c28c5cb29d260eed2c0d0334
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104590"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362402"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services-Tutorials (SSRS)
   Dieser Abschnitt enthält Lernprogramme für [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -26,7 +26,7 @@ ms.locfileid: "48104590"
  [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ermöglicht datengesteuerte Abonnements, sodass Sie die Verteilung eines Berichts auf der Basis einer dynamischen Liste von Abonnenten, die den Bericht erhalten, anpassen können. Datengesteuerte Abonnements werden normalerweise von einem Berichtsserveradministrator erstellt und verwaltet. Für das Anlegen von datengesteuerten Abonnements sind Erfahrungen im Erstellen von Abfragen, Kenntnisse darüber, welche Datenquellen Abonnentendaten enthalten, und erhöhte Berechtigungen auf einem Berichtsserver erforderlich.  
   
- [Erstellen ein einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
+ [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
  Führen Sie dieses Lernprogramm aus, um sich mit dem Erstellen von Berichten vertraut zu machen. Sie erfahren, wie Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] einsetzen, um eine Datenverbindung (Datenquelle) zu erstellen, eine einfache Abfrage (Dataset) zu definieren und einen Datenbereich zu konfigurieren, der die Daten aufnimmt.  
   
  [Zugreifen auf die Berichtsserver-Webdienst mit Visual Basic oder Visual C#&#35; &#40;SSRS-Tutorial&#41;](../tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
@@ -39,9 +39,9 @@ ms.locfileid: "48104590"
  Führen Sie die Schritte in diesem Lernprogramm aus, um zu erfahren, wie ein Drillthroughbericht mit Parametern und einem Filter mithilfe des ReportViewer-Steuerelements erstellt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [AdventureWorks für SQLServer 2012](http://go.microsoft.com/fwlink/?LinkId=245471)   
- [Reporting Services Samples on CodePlex)http://go.microsoft.com/fwlink/?LinkId=198283)](http://go.microsoft.com/fwlink/?LinkId=198283)   
- [TechNet-WIKI: SQL Server 2012-Beispiele ()http://go.microsoft.com/fwlink/?linkID=220734)](http://go.microsoft.com/fwlink/?linkID=220734)   
- [Picnic-Dataset (Beispieldaten) ()http://go.microsoft.com/fwlink/?linkID=219108)](http://go.microsoft.com/fwlink/?linkID=219108)  
+ [AdventureWorks für SQLServer 2012](https://go.microsoft.com/fwlink/?LinkId=245471)   
+ [Reporting Services Samples on CodePlex)https://go.microsoft.com/fwlink/?LinkId=198283)](https://go.microsoft.com/fwlink/?LinkId=198283)   
+ [TechNet-WIKI: SQL Server 2012-Beispiele (https://go.microsoft.com/fwlink/?linkID=220734)](https://go.microsoft.com/fwlink/?linkID=220734)   
+ [Picnic-Dataset (Beispieldaten) ()https://go.microsoft.com/fwlink/?linkID=219108)](https://go.microsoft.com/fwlink/?linkID=219108)  
   
   

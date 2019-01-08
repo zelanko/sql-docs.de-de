@@ -1,6 +1,6 @@
 ---
-title: Anwenden von Hotfixes Analytics Platform System | Microsoft Docs
-description: In diesem Artikel erläutert, wie das Anwenden von Hotfixes auf dem Softwareupdatepunkt Analytics Platform System.
+title: Anwenden von Hotfixes für Analytics Platform System | Microsoft-Dokumentation
+description: Dieser Artikel beschreibt, wie Sie die Hotfixes für Analytics Platform System-Software gelten.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,61 +9,61 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b3a7a31ce791fbe44c38d1d30ce408235720e241
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31544872"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531652"
 ---
-# <a name="apply-analytics-platform-system-hotfixes"></a>Anwenden von Hotfixes Analytics Platform System
-In diesem Artikel erläutert, wie das Anwenden von Hotfixes auf dem Softwareupdatepunkt Analytics Platform System.  
+# <a name="apply-analytics-platform-system-hotfixes"></a>Anwenden von Hotfixes für Analytics Platform System
+Dieser Artikel beschreibt, wie Sie die Hotfixes für Analytics Platform System-Software gelten.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
   
 > [!WARNING]  
-> Versuchen Sie nicht, einen Analytics Platform System-Hotfix installieren, wird dem Gerät oder eine beliebige Komponente Appliance heruntergefahren oder in einem fehlerhaften Zustand. In diesem Fall erhalten Sie Support um Unterstützung zu erhalten.  
+> Versuchen Sie nicht, einen Hotfix für Analytics Platform System anwenden, ist dem Gerät oder eine appliancekomponente heruntergefahren oder in einem fehlerhaften Zustand. In diesem Fall erhalten Sie Support um Unterstützung zu erhalten.  
   
 > [!WARNING]  
-> Einen Hotfix Analytics Platform System nicht angewendet, während das Gerät verwendet wird. Anwendung eines Hotfixes kann dazu führen, dass Appliance Knoten neu starten. Der Hotfix sollte während eines Wartungsfensters übernommen werden, wenn das Gerät nicht verwendet wird.  
+> Einen Hotfix für Analytics Platform System werden nicht angewendet werden, während das Gerät verwendet wird. Anwendung eines Hotfixes kann dazu führen, dass applianceknoten neu starten. Der Hotfix sollte während eines Wartungsfensters übernommen werden, wenn das Gerät nicht verwendet wird.  
   
 ### <a name="prerequisites"></a>Erforderliche Komponenten  
-Um diese Schritte ausführen zu können, benötigen Sie Folgendes:  
+Diese Schritte ausführen zu können, benötigen Sie:  
   
--   Eine Analytics Platform System Anmeldung mit Zugriffsberechtigungen für die Admin-Konsole, um den Anwendungszustand zu überwachen. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
+-   Eine Analytics Platform System Anmeldenamen mit Berechtigungen für die Verwaltungskonsole zum Überwachen des Status des Geräts zugreifen. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   Kenntnisse über die Fabric-Domänenadministratorkonto zum Herstellen von Verbindungen die *< Domänenname > ***-HST01** Knoten.  
+-   Kenntnisse über die Fabric-Domänenadministratorkonto für die Verbindung der _< Domänenname >_**-HST01** Knoten.  
   
-## <a name="HowToInstallPDW"></a>Zum Installieren eines Hotfixes Analytics Platform System  
-Im Gegensatz zu den Microsoft-Updates werden die Hotfixes für die Software Analytics Platform System nicht über WSUS behandelt. Sie haben einen anderen Workflownamen und durch Ausführen eines Hotfixpakets installiert werden.  
+## <a name="HowToInstallPDW"></a>Zum Installieren eines Hotfixes für Analytics Platform System  
+Im Gegensatz zu den Microsoft-Updates werden die Hotfixes für Analytics Platform System-Software nicht über WSUS behandelt. Ein anderer Workflow, und durch Ausführen eines Hotfixpakets installiert sind.  
   
-1.  **Vergewissern Sie sich Statusindikatoren Appliance.**  
+1.  **Überprüfen Sie die Appliance Statusindikatoren.**  
   
-    1.  Öffnen Sie die Admin-Konsole, und navigieren Sie zu der Seite "Anwendungszustand". Weitere Informationen finden Sie unter [überwachen Sie die Anwendung mithilfe der Verwaltungskonsole &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+    1.  Öffnen Sie die Admin-Konsole, und navigieren Sie zu der Seite "Status der Appliance". Weitere Informationen finden Sie unter [Überwachen der Appliance mithilfe der Verwaltungskonsole &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
-    2.  Alle rote oder gelbe Indikatoren müssen geklärt werden, bevor Sie mit dem nächsten Schritt fortfahren. Einige Ausnahmen sind:  
+    2.  Alle rote oder gelbe Indikatoren müssen aufgelöst werden, bevor Sie mit dem nächsten Schritt fortfahren. Einige Ausnahmen sind:  
   
-        -   Wenn Datenträgerfehler sind, verwenden der Admin-Konsole Warnungsseite, stellen Sie sicher, dass nicht mehr als ein Fehler auf dem Datenträger in jedem Server oder SAN-Array vorhanden ist. Ist nicht mehr als ein Datenträgerfehler in jedem Server oder SAN-Array, können Sie vor der Behebung der Datenträger der Dateien mit dem nächsten Schritt fortfahren. Achten Sie darauf, wenden Sie sich an Microsoft Support, um die Datenträger Fehler(n) so bald wie möglich zu beheben.  
+        -   Wenn Datenträgerfehler sind, verwenden Sie der Seite "Admin-Konsole Warnungen", um sicherstellen, dass derzeit nicht mehr als ein Fehler auf dem Datenträger in jedem Server oder die SAN-Array. Ist nicht mehr als einen Datenträgerfehler in jedem Server oder die SAN-Array, können Sie vor dem Korrigieren der Fehler(n) Datenträger mit dem nächsten Schritt fortfahren. Achten Sie darauf, dass Sie den Microsoft-Support, um die Fehler(n) Datenträger so bald wie möglich zu beheben.  
   
-        -   Ist ein unkritische (gelb) Volume Datenträgerfehler, der nicht auf dem Laufwerk C:\ ist, können Sie vor dem Lösen der Datenträgerfehler Volume mit dem nächsten Schritt fortfahren.  
+        -   Ist ein nicht kritische (gelb) Volume Datenträgerfehler, der nicht auf dem Laufwerk C:\ ist, können Sie vor dem Beheben des Fehlers der Datenträger-Volume mit dem nächsten Schritt fortfahren.  
   
-2.  **Installieren Sie den Hotfix Analytics Platform System**  
+2.  **Installieren Sie den Hotfix für Analytics Platform System**  
   
     1.  Melden Sie sich die <*Appliance_domain*>-HST01 Knoten als Domänenadministrator an.  
   
-    2.  Verwenden der **als Administrator ausführen** Option aus, um ein Eingabeaufforderungsfenster zu öffnen.  
+    2.  Verwenden der **als Administrator ausführen** Option, um eine Eingabeaufforderung zu öffnen.  
   
-    3.  Führen Sie den folgenden Befehl ein, und Ersetzen Sie dabei *<HotfixPackageName>* mit dem Namen des ausführbaren Hotfixpakets und anderen Platzhalter Elemente ersetzen *< >* mit den entsprechenden Informationen.  
+    3.  Führen Sie den folgenden Befehl aus, und Ersetzen Sie dabei *<HotfixPackageName>* durch den Namen der ausführbaren Datei Hotfix-Paket, und Ersetzen Sie die anderen Elemente der Platzhalter *< >* durch die entsprechenden Informationen.  
   
         ```  
         <HotfixPackageName> /DomainAdminPassword="<password>"  
         ```  
   
-    4.  Führen Sie die Schritte, dargestellt durch das Hotfixpaket.  
+    4.  Führen Sie die Schritte aus, wie durch das Hotfix-Paket angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Herunterladen und Anwenden von Microsoft-Updates &#40;Analyseplattformsystem&#41;](download-and-apply-microsoft-updates.md)  
-[Deinstallieren Sie Microsoft Updates &#40;Analyseplattformsystem&#41;](uninstall-microsoft-updates.md)  
-[Deinstallieren Sie Analytics Platform System Hotfixes &#40;Analyseplattformsystem&#41;](uninstall-analytics-platform-system-hotfixes.md)  
-[Wartung von Software &#40;Analyseplattformsystem&#41;](software-servicing.md)  
+[Microsoft-Updates herunterzuladen und anzuwenden &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
+[Deinstallieren von Microsoft-Updates &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
+[Deinstallieren von Hotfixes für Analytics Platform System &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
+[Softwarewartung &#40;Analytics Platform System&#41;](software-servicing.md)  
   

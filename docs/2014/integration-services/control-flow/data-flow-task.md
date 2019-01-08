@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
@@ -19,12 +18,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48a40f38706ad9562f5dde3f4ec5472e678250c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2afaa918e25c9473513dfdac82cde3223e83df38
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069580"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366862"
 ---
 # <a name="data-flow-task"></a>Datenflusstask
   Der Datenflusstask kapselt die Datenfluss-Engine, mit dem Daten zwischen Quellen und Zielen verschoben werden, und ermöglicht dem Benutzer das Transformieren, Bereinigen und Ändern von Daten beim Verschieben. Durch das Hinzufügen eines Datenflusstasks zu einer Paketablaufsteuerung kann das Paket Daten extrahieren, transformieren und laden.  
@@ -45,18 +44,18 @@ ms.locfileid: "48069580"
  ![Datenflüsse](../media/mw-dts-09.gif "Datenflüsse")  
   
 ## <a name="log-entries"></a>Protokolleinträge  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt für alle Tasks einen Satz Protokollereignisse zur Verfügung. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt auch viele Tasks benutzerdefinierte Protokolleinträge bereit. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md). Der Datenflusstask enthält die folgenden benutzerdefinierten Protokolleinträge:  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt für alle Tasks einen Satz Protokollereignisse zur Verfügung. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] für viele Tasks benutzerdefinierte Protokolleinträge bereit. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md). Der Datenflusstask enthält die folgenden benutzerdefinierten Protokolleinträge:  
   
 |Protokolleintrag|Description|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Zeigt an, dass der Datenflusstask die Größe des Puffers geändert hat. Der Protokolleintrag beschreibt die Gründe für die Größenänderung und listet die temporäre neue Puffergröße auf.|  
-|`OnPipelinePostEndOfRowset`|Gibt an, dass eine Komponente das Signal Ende des Rowsets erhalten hat durch den letzten Aufruf von festgelegt ist die `ProcessInput` Methode. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
-|`OnPipelinePostPrimeOutput`|Gibt an, dass die Komponente ihren letzten Aufruf abgeschlossen wurde die `PrimeOutput` Methode. Je nach Datenfluss werden möglicherweise mehrere Protokolleinträge geschrieben. Wenn es sich bei der Komponente um eine Quelle handelt, bedeutet dieser Protokolleintrag, dass die Komponente die Zeilenverarbeitung abgeschlossen hat.|  
-|`OnPipelinePreEndOfRowset`|Gibt an, dass eine Komponente das Signal für Ende des Rowsets, der durch den letzten Aufruf der festgelegt wird, erhalten die `ProcessInput` Methode. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
+|`OnPipelinePostEndOfRowset`|Gibt an, dass eine Komponente das Signal für das Ende des Rowsets erhalten hat. Dieses Signal wird durch den letzten Aufruf der `ProcessInput`-Methode festgelegt. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
+|`OnPipelinePostPrimeOutput`|Zeigt an, dass die Komponente ihren letzten Aufruf der `PrimeOutput`-Methode abgeschlossen hat. Je nach Datenfluss werden möglicherweise mehrere Protokolleinträge geschrieben. Wenn es sich bei der Komponente um eine Quelle handelt, bedeutet dieser Protokolleintrag, dass die Komponente die Zeilenverarbeitung abgeschlossen hat.|  
+|`OnPipelinePreEndOfRowset`|Zeigt an, dass eine Komponente das Signal für das Ende des Rowsets erhalten soll. Dieses Signal wird durch den letzten Aufruf der `ProcessInput`-Methode festgelegt. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
 |`OnPipelinePrePrimeOutput`|Zeigt an, dass die Komponente einen Aufruf aus der `PrimeOutput`-Methode erhalten soll. Je nach Datenfluss werden möglicherweise mehrere Protokolleinträge geschrieben.|  
 |`OnPipelineRowsSent`|Berichtet die Anzahl von Zeilen, die einer Komponenteneingabe durch einen Aufruf der `ProcessInput`-Methode bereitgestellt wurden. Der Protokolleintrag enthält den Komponentennamen.|  
 |`PipelineBufferLeak`|Stellt Informationen zu Komponenten bereit, die Puffer aufrechterhalten haben, nachdem der Puffer-Manager beendet wurde. Aufrechterhaltene Puffer blockieren die Freigabe von Pufferressourcen und können Speicherverluste verursachen. Der Protokolleintrag stellt den Namen der Komponente und die ID des Puffers bereit.|  
-|`PipelineComponentTime`|Meldet den Zeitaufwand in Millisekunden, den die Komponente für jeden der Hauptverarbeitungsschritte "Validate", "PreExecute", "PostExecute", "ProcessInput" und "ProcessOutput" benötigt.|  
+|`PipelineComponentTime`|Meldet den Zeitaufwand in Millisekunden, den die Komponente für jeden der Hauptverarbeitungsschritte „Validate“, „PreExecute“, „PostExecute“, „ProcessInput“ und „ProcessOutput“ benötigt.|  
 |`PipelineExecutionPlan`|Berichtet den Ausführungsplan des Datenflusses. Der Ausführungsplan stellt Informationen dazu bereit, wie Puffer an Komponenten gesendet werden. Diese Informationen beschreiben in Kombination mit dem PipelineExecutionTrees-Protokolleintrag, was innerhalb des Datenflusstasks geschieht.|  
 |`PipelineExecutionTrees`|Berichtet die Ausführungsstrukturen des Layouts im Datenfluss. Die Datenfluss-Engine-Planung verwendet die Strukturen zum Erstellen des Ausführungsplans des Datenflusses.|  
 |`PipelineInitialization`|Bietet Initialisierungsinformationen zu dem Task. Zu diesen Informationen gehören die Verzeichnisse für die temporäre Speicherung von BLOB-Daten, die Standardpuffergröße und die Zeilenanzahl in einem Puffer. Je nach der Konfiguration des Datenflusstasks werden möglicherweise mehrere Protokolleinträge geschrieben.|  
@@ -65,9 +64,9 @@ ms.locfileid: "48069580"
   
  Weitere Informationen zur Verwendung dieser Protokolleinträge zum Überwachen und Verbessern der Leistung des Datenflusses finden Sie in einem der folgenden Themen:  
   
--   [Leistungsindikatoren](../performance/performance-counters.md)  
+-   [Performance Counters](../performance/performance-counters.md)  
   
--   [Funktionen für die Datenflussleistung](../data-flow/data-flow-performance-features.md)  
+-   [Data Flow Performance Features](../data-flow/data-flow-performance-features.md)  
   
 ### <a name="sample-messages-from-a-data-flow-task"></a>Beispielmeldungen aus einem Datenflusstask  
  In der folgenden Tabelle werden Beispielmeldungen für Protokolleinträge für ein sehr einfaches Paket aufgelistet. Das Paket verwendet eine OLE DB-Quelle zum Extrahieren von Daten aus einer Tabelle, eine Transformation zum Sortieren, um die Daten zu sortieren, und ein OLE DB-Ziel, um die Daten in eine andere Tabelle zu schreiben.  
@@ -87,12 +86,12 @@ ms.locfileid: "48069580"
   
  Bei vielen Protokollereignissen werden mehrere Einträge in das Protokoll geschrieben, und die Meldungen für eine Reihe von Protokolleinträgen enthalten komplexe Daten. Damit es einfacher wird, den Inhalt komplexer Meldungen zu verstehen und zu kommunizieren, können Sie den Meldungstext analysieren. Je nach Speicherort des Protokolls können Sie Transact-SQL-Anweisungen oder Skriptkomponenten verwenden, um den komplexen Text in Spalten oder andere zweckmäßigere Formate zu zerlegen.  
   
- Die folgende Tabelle enthält z. B. die als Spalten analysierte Meldung "Die Zeilen wurden als Eingabe für eine Datenflusskomponente bereitgestellt. :  : 1185 : Ausgabe der OLE DB-Quelle : 1180 : Sort : 1181 : Sortiereingabe : 76". Die Meldung wurde vom `OnPipelineRowsSent`-Ereignis geschrieben, als Zeilen von der OLE DB-Quelle an die Transformation zum Sortieren gesendet wurden.  
+ Die folgende Tabelle enthält z. B. die als Spalten analysierte Meldung "Die Zeilen wurden als Eingabe für eine Datenflusskomponente bereitgestellt. :  : 1185: Ausgabe der OLE DB-Quelle: 1180: Sortieren: 1181: Sortiereingabe: 76" in den Spalten analysiert. Die Meldung wurde vom `OnPipelineRowsSent`-Ereignis geschrieben, als Zeilen von der OLE DB-Quelle an die Transformation zum Sortieren gesendet wurden.  
   
-|Spalte|Description|value|  
+|Spalte|Description|Wert|  
 |------------|-----------------|-----------|  
-|**PathID**|Der Wert aus der `ID` Eigenschaft des Pfads zwischen der OLE DB-Quelle und die Transformation zum Sortieren.|1185|  
-|**PathName**|Der Wert aus der `Name` Eigenschaft des Pfads.|Ausgabe der OLE DB-Quelle|  
+|**PathID**|Der Wert der `ID`-Eigenschaft des Pfads zwischen der OLE DB-Quelle und der Transformation zum Sortieren.|1185|  
+|**PathName**|Der Wert der `Name`-Eigenschaft des Pfads.|Ausgabe der OLE DB-Quelle|  
 |**ComponentID**|Der Wert des der `ID` Eigenschaft der Transformation zum Sortieren.|1180|  
 |**ComponentName**|Der Wert der `Name`-Eigenschaft der Transformation zum Sortieren.|Sort|  
 |**InputID**|Der Wert der `ID`-Eigenschaft der Eingabe der Transformation zum Sortieren.|1181|  
@@ -115,6 +114,6 @@ ms.locfileid: "48069580"
  [Festlegen der Eigenschaften eines Tasks oder Containers](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Video [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)auf technet.microsoft.com  
+ Video [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)auf technet.microsoft.com  
   
   

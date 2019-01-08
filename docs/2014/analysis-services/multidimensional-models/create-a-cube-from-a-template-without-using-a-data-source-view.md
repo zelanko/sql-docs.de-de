@@ -11,12 +11,12 @@ ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 19006a02476591ef4f5e01d4a58f0f2e2894b0b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0125550f8ec4a3fa290ea29df3d33cc3bebe3c7e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104890"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504977"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Erstellen eines Cubes aus einer Vorlage, ohne eine Datenquellensicht zu verwenden
   Wählen Sie **Cube ohne eine Datenquelle erstellen** auf der ersten Seite des Cube-Assistenten aus, um einen Cube ohne Verwendung einer Datenquellensicht zu erstellen. Später können Sie das relationale Schema für die Datenquellensicht mit dem Schemagenerierungs-Assistenten auf der Grundlage der Cubestruktur und möglicherweise anderer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte generieren. Weitere Informationen zum Generieren eines Schemas finden Sie unter [Schemagenerierungs-Assistent &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
@@ -42,10 +42,10 @@ ms.locfileid: "48104890"
   
 |Spalte|Description|  
 |------------|-----------------|  
-|**Measurename**|Durch einen Wert in dieser Spalte wird der Name eines im Cube enthaltenen Measures definiert. Klicken Sie auf einen Wert in dieser Spalte, um einen Namen einzugeben. Klicken Sie in dieser Spalte auf **Neues Measure hinzufügen** , um ein neues Measure zu erstellen. Diese Spalte wird die `Name` Eigenschaft des Measure-Objekts.|  
-|**Measuregruppe**|Der Name der Measuregruppe, in der das Measure enthalten ist. Klicken Sie auf diesen Wert, um einen Namen auszuwählen oder einzugeben. Wenn Sie alle Measures löschen, die zu einer bestimmten Measuregruppe gehören, wird die Measuregruppe ebenfalls entfernt. Diese Spalte wird die `Name` -Eigenschaft für das measuregruppenobjekt.|  
-|**Datentyp**|Der Datentyp des Measures. Klicken Sie auf diesen Wert, um den Datentyp zu ändern. Die Standardeinstellung beim Erstellen eines Measures ist `Single`. Diese Spalte wird die `DataType` Eigenschaft des Measure-Objekts.|  
-|**Aggregation**|Die Standardaggregation des Measures. Klicken Sie auf diese Zelle, um eine der Standardaggregationen für das Measure (oder **keine**) anzugeben. Die Standardeinstellung beim Erstellen eines Measures ist `Sum`. Diese Spalte wird die `AggregationFunction` Eigenschaft des Measure-Objekts.|  
+|**Measurename**|Durch einen Wert in dieser Spalte wird der Name eines im Cube enthaltenen Measures definiert. Klicken Sie auf einen Wert in dieser Spalte, um einen Namen einzugeben. Klicken Sie in dieser Spalte auf **Neues Measure hinzufügen** , um ein neues Measure zu erstellen. In dieser Spalte wird die `Name`-Eigenschaft für das Measureobjekt festgelegt.|  
+|**Measuregruppe**|Der Name der Measuregruppe, in der das Measure enthalten ist. Klicken Sie auf diesen Wert, um einen Namen auszuwählen oder einzugeben. Wenn Sie alle Measures löschen, die zu einer bestimmten Measuregruppe gehören, wird die Measuregruppe ebenfalls entfernt. In dieser Spalte wird die `Name`-Eigenschaft für das Measuregruppenobjekt festgelegt.|  
+|**Datentyp**|Der Datentyp des Measures. Klicken Sie auf diesen Wert, um den Datentyp zu ändern. Der Standardwert bei der Erstellung eines Measures ist `Single`. In dieser Spalte wird die `DataType`-Eigenschaft für das Measureobjekt festgelegt.|  
+|**Aggregation**|Die Standardaggregation des Measures. Klicken Sie auf diese Zelle, um eine der Standardaggregationen für das Measure (oder **keine**) anzugeben. Der Standardwert bei der Erstellung eines Measures ist `Sum`. In dieser Spalte wird die `AggregationFunction`-Eigenschaft für das Measureobjekt festgelegt.|  
   
 ## <a name="defining-new-dimensions"></a>Definieren neuer Dimensionen  
  Verwenden Sie die Seite **Neue Dimensionen definieren** des Assistenten, um die Dimensionen im neuen Cube anzugeben.  
@@ -64,7 +64,7 @@ ms.locfileid: "48104890"
 |**Attribute**|Zeigt die Attribute an, die für die Dimension erstellt werden sollen. Jedem Attributnamen in der Liste wird der Dimensionsname vorangestellt. Diese Liste ist schreibgeschützt. Nachdem Sie den Assistenten abgeschlossen haben, können Sie die Attribute mithilfe des Dimensions-Designers ändern.|  
   
 ## <a name="defining-time-periods"></a>Definieren von Zeiträumen  
- Geben Sie den Datumsbereich, der in der Dimension enthalten sein soll, mithilfe der Seite **Zeiträume definieren** des Assistenten an. Beispielsweise können Sie einen Bereich auswählen, der in Ihren Daten am 1. Januar des ersten Jahres beginnt, und die Jahreszahlen bis über die aktuelle Transaktion hinaus ausweiten. Transaktionen, die außerhalb dieses Bereichs werden entweder nicht angezeigt werden oder werden als unbekannte Elemente in der Dimension, die je nach den `UnknownMemberVisible` eigenschafteneinstellung für die Dimension. Die `UnknownMemberName` -Eigenschaft gibt die Beschriftung für das unbekannte Element. Sie können auch den in Ihren Daten verwendeten Wochenbeginn ändern. (Der Standard ist Sonntag.)  
+ Geben Sie den Datumsbereich, der in der Dimension enthalten sein soll, mithilfe der Seite **Zeiträume definieren** des Assistenten an. Beispielsweise können Sie einen Bereich auswählen, der in Ihren Daten am 1. Januar des ersten Jahres beginnt, und die Jahreszahlen bis über die aktuelle Transaktion hinaus ausweiten. Transaktionen außerhalb dieses Bereichs werden entweder nicht angezeigt, oder sie werden als unbekannte Elemente in der Dimension angezeigt, abhängig von der Einstellung der `UnknownMemberVisible`-Eigenschaft für die Dimension. Die `UnknownMemberName`-Eigenschaft gibt die Beschriftung für das unbekannte Element an. Sie können auch den in Ihren Daten verwendeten Wochenbeginn ändern. (Der Standard ist Sonntag.)  
   
 > [!NOTE]  
 >  Die Seite **Zeiträume definieren** wird nur angezeigt, wenn Sie auf der Seite **Neue Dimensionen definieren** des Assistenten eine Zeitdimension in den Cube aufnehmen.  
@@ -83,7 +83,7 @@ ms.locfileid: "48104890"
 |Kalender|Description|  
 |--------------|-----------------|  
 |Geschäftskalender|Ein zwölfmonatiger Geschäftskalender. Wenn Sie diesen Kalender auswählen, müssen Sie den Anfangstag des vom Unternehmen verwendeten Geschäftsjahres angeben.|  
-|Berichtskalender (oder Marketingkalender)|Ein zwölfmonatiger Berichtskalender, der in einem sich wiederholenden dreimonatigen (quartalsweisen) Muster zwei Monate mit vier und einen Monat mit fünf Wochen enthält. Wenn Sie diesen Kalender auswählen, müssen Sie den Anfangstag und den Anfangsmonat des Dreimonatsmusters mit 4-4-5, 4-5-4 oder 5-4-4 Wochen angeben, wobei diese Zahlen die in einem Monat enthaltenen Wochen darstellen.|  
+|Berichtskalender (oder Marketingkalender)|Ein zwölfmonatiger Berichtskalender, der in einem sich wiederholenden dreimonatigen (quartalsweisen) Muster zwei Monate mit vier und einen Monat mit fünf Wochen enthält. Wenn Sie diesen Kalender auswählen, geben Sie den Anfangstag und den drei Monate 4-4-5, 4-5-4 oder 5-4-4 Wochen, wobei jede Ziffer für die Anzahl der Wochen in einem Monat darstellt.|  
 |Produktionskalender|Ein Kalender, der 13 aus vier Wochen bestehende Zeiträume verwendet, die in drei Quartale mit vier Zeiträumen und ein Quartal mit fünf Zeiträumen unterteilt sind. Wenn Sie diesen Kalender auswählen, geben Sie die Startwoche (zwischen 1 und 4) und den Monat für das Herstellungsjahr und das Quartal mit zusätzlichen Zeiträumen an.|  
 |ISO 8601-Kalender|Der Standardkalender für die Daten- und Zeitdarstellung (8601) der Internationalen Organisation für Normung (International Organization for Standardization, ISO). Dieser Kalender besitzt eine integrale Anzahl von 7-Tage-Wochen. Um zu vermeiden, dass eine Woche unterteilt wird, kann ein neues Jahr im Kalender bis zu einige Tage vor oder nach dem 1. Januar starten.|  
   

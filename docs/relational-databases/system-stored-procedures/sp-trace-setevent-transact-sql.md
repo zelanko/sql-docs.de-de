@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59351e8ec30cf02dc74b2d47d6ef160cd5aff74e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739908"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266101"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -208,18 +208,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |177|Audit Server Principal Management Event|Tritt auf, wenn Serverprinzipale erstellt, geändert oder gelöscht werden.|  
 |178|Audit Database Operation Event|Tritt auf, wenn Datenbankvorgänge auftreten, wie z. B. CHECKPOINT oder SUBSCRIBE QUERY NOTIFICATIONS.|  
 |180|Audit Database Object Access Event|Tritt auf beim Zugriff auf Datenbankobjekte, wie z. B. Schemas.|  
-|181|TM: Begin Tran starting|Tritt auf, wenn eine BEGIN TRANSACTION-Anforderung gestartet wird.|  
-|182|TM: Begin Tran completed|Tritt auf, wenn eine BEGIN TRANSACTION-Anforderung abgeschlossen wird.|  
-|183|TM: Promote Tran starting|Tritt auf, wenn eine PROMOTE TRANSACTION-Anforderung gestartet wird.|  
-|184|TM: Promote Tran completed|Tritt auf, wenn eine PROMOTE TRANSACTION-Anforderung abgeschlossen wird.|  
+|181|TM: BEGIN TRAN starting)|Tritt auf, wenn eine BEGIN TRANSACTION-Anforderung gestartet wird.|  
+|182|TM: BEGIN TRAN-Anweisung abgeschlossen|Tritt auf, wenn eine BEGIN TRANSACTION-Anforderung abgeschlossen wird.|  
+|183|TM: Heraufstufen Tran starting|Tritt auf, wenn eine PROMOTE TRANSACTION-Anforderung gestartet wird.|  
+|184|TM: Promote Tran abgeschlossen|Tritt auf, wenn eine PROMOTE TRANSACTION-Anforderung abgeschlossen wird.|  
 |185|TM: Commit Tran starting|Tritt auf, wenn eine COMMIT TRANSACTION-Anforderung gestartet wird.|  
-|186|TM: Commit Tran completed|Tritt auf, wenn eine COMMIT TRANSACTION-Anforderung abgeschlossen wird.|  
-|187|TM: Rollback Tran starting|Tritt auf, wenn eine ROLLBACK TRANSACTION-Anforderung gestartet wird.|  
-|188|TM: Rollback Tran completed|Tritt auf, wenn eine ROLLBACK TRANSACTION-Anforderung abgeschlossen wird.|  
+|186|TM: Commit Tran abgeschlossen|Tritt auf, wenn eine COMMIT TRANSACTION-Anforderung abgeschlossen wird.|  
+|187|TM: Rollback Tran starting-|Tritt auf, wenn eine ROLLBACK TRANSACTION-Anforderung gestartet wird.|  
+|188|TM: Rollback Tran abgeschlossen|Tritt auf, wenn eine ROLLBACK TRANSACTION-Anforderung abgeschlossen wird.|  
 |189|Lock:Timeout (timeout > 0)|Tritt auf bei einer Zeitüberschreitung für eine Anforderung einer Sperre auf eine Ressource, wie z. B. eine Seite.|  
-|190|Progress Report: Online Index Operation|Meldet den Fortschritt einer Onlineindexerstellung, während der Erstellungsprozess ausgeführt wird.|  
-|191|TM: Save Tran starting|Tritt auf, wenn eine SAVE TRANSACTION-Anforderung gestartet wird.|  
-|192|TM: Save Tran completed|Tritt auf, wenn eine SAVE TRANSACTION-Anforderung abgeschlossen wird.|  
+|190|Progress Report: Online-Indexvorgang|Meldet den Fortschritt einer Onlineindexerstellung, während der Erstellungsprozess ausgeführt wird.|  
+|191|TM: Save Tran Beginn|Tritt auf, wenn eine SAVE TRANSACTION-Anforderung gestartet wird.|  
+|192|TM: Save Tran abgeschlossen|Tritt auf, wenn eine SAVE TRANSACTION-Anforderung abgeschlossen wird.|  
 |193|Background Job Error|Tritt auf, wenn ein Hintergrundauftrag fehlerbedingt beendet wurde.|  
 |194|OLEDB Provider Information|Tritt auf, wenn eine verteilte Abfrage ausgeführt wird und Informationen sammelt, die sich auf die Anbieterverbindung beziehen.|  
 |195|Mount Tape|Tritt auf, wenn eine Anforderung zur Bandeinlegung empfangen wird.|  
@@ -233,7 +233,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |212|Bitmapwarnung|Zeigt an, wenn Bitmap-Filter in einer Abfrage deaktiviert wurden.|  
 |213|Database Suspect Data Page|Gibt an, wenn eine Seite hinzugefügt wird, auf die **Suspect_pages** -Tabelle **Msdb**.|  
 |214|CPU threshold exceeded|Zeigt an, dass die Ressourcenkontrolle erkannt hat, dass eine Abfrage den CPU-Grenzwert (REQUEST_MAX_CPU_TIME_SEC) überschritten hat.|  
-|215|Zeigt an, dass die Ausführung eines LOGON-Triggers oder einer Klassifizierungsfunktion der Ressourcenkontrolle beginnt.|Zeigt an, dass die Ausführung eines LOGON-Triggers oder einer Klassifizierungsfunktion der Ressourcenkontrolle beginnt.|  
+|215|PreConnect:Starting|Zeigt an, dass die Ausführung eines LOGON-Triggers oder einer Klassifizierungsfunktion der Ressourcenkontrolle beginnt.|  
 |216|PreConnect:Completed|Gibt an, wenn ein LOGON-Trigger oder einer Klassifizierungsfunktion der Ressourcenkontrolle die Ausführung abgeschlossen ist.|  
 |217|Plan Guide Successful|Zeigt an, dass SQL Server erfolgreich einen Ausführungsplan für eine Abfrage oder einen Batch mit einer Planhinweisliste erzeugt hat.|  
 |218|Plan Guide Unsuccessful|Zeigt an, dass SQL Server keinen Ausführungsplan für eine Abfrage oder einen Batch mit einer Planhinweisliste erzeugen konnte. SQL Server hat versucht, einen Ausführungsplan für diese Abfrage oder den Batch zu generieren, ohne die Planhinweisliste anzuwenden. Eine ungültige Planhinweisliste ist möglicherweise die Ursache dieses Problems. Die neue Systemfunktion "sys.fn_validate_plan_guide" kann zur Überprüfung einer Planhinweisliste verwendet werden.|  
@@ -275,7 +275,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |27|**EventClass**|Typ der aufgezeichneten Ereignisklasse.|  
 |28|**ObjectType**|Der Typ des Objekts, z. B. Tabelle, Funktion oder gespeicherte Prozedur.|  
 |29|**NestLevel**|Die Schachtelungsebene, auf der diese gespeicherte Prozedur ausgeführt wird. Finden Sie unter [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
-|30|**Status**|Der Serverstatus im Fall eines Fehlers.|  
+|30|**Zustand**|Der Serverstatus im Fall eines Fehlers.|  
 |31|**Fehler**|Fehlernummer.|  
 |32|**Mode**|Der Sperrmodus der aktivierten Sperre. Diese Spalte wird nicht aufgefüllt, indem die **Sperre: veröffentlicht** Ereignis.|  
 |33|**Handle**|Das Handle des Objekts, auf das im Ereignis verwiesen wird.|  

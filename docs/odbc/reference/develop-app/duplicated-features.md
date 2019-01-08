@@ -17,17 +17,17 @@ ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c88175f314290c06c4239a9ca855ce41512be2b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84752b7e23c5394757764bf5ade57cb54004b01a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707228"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208309"
 ---
 # <a name="duplicated-features"></a>Doppelte Funktionen
 Die folgenden ODBC-2. *x* Funktionen wurden von ODBC 3. verdoppelt. *X* Funktionen. Als Ergebnis der ODBC-2. *x* Funktionen sind veraltet, in ODBC 3. *X*. Der ODBC-3. *x* Funktionen werden als Ersatzfunktionen bezeichnet.  
   
- Wenn eine Anwendung eine als veraltet markierte ODBC 2. verwendet. *x* -Funktion und der zugrunde liegenden Treiber ist ein ODBC-3. *X* Treiber, der Treiber-Manager ordnet den Funktionsaufruf mit der entsprechenden Ersatz-Funktion. Die einzige Ausnahme dieser Regel wird **SQLExtendedFetch**. (Siehe die Fußnote am Ende der in der folgenden Tabelle.) Weitere Informationen zu diesen Zuordnungen finden Sie unter [veraltete Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität.  
+ Wenn eine Anwendung eine als veraltet markierte ODBC 2. verwendet. *x* -Funktion und der zugrunde liegenden Treiber ist ein ODBC-3. *X* Treiber, der Treiber-Manager ordnet den Funktionsaufruf mit der entsprechenden Ersatz-Funktion. Die einzige Ausnahme dieser Regel wird **SQLExtendedFetch**. (Siehe die Fußnote am Ende der in der folgenden Tabelle.) Weitere Informationen zu diesen Zuordnungen finden Sie unter [veraltete Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
   
  Wenn eine Anwendung ein Ersatz-Funktion und der zugrunde liegenden Treiber verwendet, ist ein ODBC-2. *x* -Treiber verwenden, wird der Treiber-Manager den Funktionsaufruf an die entsprechende als veraltet markierte Funktion zugeordnet.  
   
@@ -49,7 +49,7 @@ Die folgenden ODBC-2. *x* Funktionen wurden von ODBC 3. verdoppelt. *X* Funktion
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] der Funktion **SQLExtendedFetch** sind doppelte Funktionen; **SQLFetchScroll** bietet dieselbe Funktionalität in ODBC 3. *X*. Der Treiber-Manager ordnet jedoch nicht **SQLExtendedFetch** zu **SQLFetchScroll** Wenn für eine ODBC 3. *X* Treiber. Weitere Informationen finden Sie unter [was der Treiber-Manager macht](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität. Der Treiber-Manager zugeordnet **SQLFetchScroll** zu **SQLExtendedFetch** Wenn mit einer ODBC 2. *X* Treiber.  
+ [1] der Funktion **SQLExtendedFetch** sind doppelte Funktionen; **SQLFetchScroll** bietet dieselbe Funktionalität in ODBC 3. *X*. Der Treiber-Manager ordnet jedoch nicht **SQLExtendedFetch** zu **SQLFetchScroll** Wenn für eine ODBC 3. *X* Treiber. Weitere Informationen finden Sie unter [was der Treiber-Manager macht](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten. Der Treiber-Manager zugeordnet **SQLFetchScroll** zu **SQLExtendedFetch** Wenn mit einer ODBC 2. *X* Treiber.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Die Funktion **SQLBindParam** ist ein besonderer Fall. **SQLBindParam** sind doppelte Funktionen. Dies ist keiner ODBC 2.*.x* -Funktion, aber eine Funktion, die in den Open Group und ISO-Standards vorhanden ist. Die Funktionalität, die von dieser Funktion wird vollständig von der klassifiziert **SQLBindParameter**. Daher ordnet der Treiber-Manager einen Aufruf von **SQLBindParam** zu **SQLBindParameter** beim zugrunde liegenden Treiber ist ein ODBC 3. *X* Treiber. Wenn der zugrunde liegenden Treiber ist jedoch einer ODBC 2.*.x* -Treiber verwenden, der Treiber-Manager führt keine diese Zuordnung.

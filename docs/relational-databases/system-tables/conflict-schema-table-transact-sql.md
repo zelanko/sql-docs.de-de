@@ -5,8 +5,7 @@ ms.date: 01/15/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - conflict_
@@ -19,12 +18,12 @@ ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1341b9e9b1f00494c655ed5a91943fadfbd5b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614138"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808902"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>Conflict_&lt;Schema&gt;_&lt;Tabelle&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +37,11 @@ ms.locfileid: "47614138"
 |__$originator_id|**int**|ID des Knotens, aus dem die konfliktverursachende Änderung stammt. Führen Sie eine Liste von IDs, [Sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md).|  
 |__$origin_datasource|**int**|Knoten, aus dem die konfliktverursachende Änderung stammt.|  
 |__$tranid|**Nvarchar (40)**|Protokollsequenznummer (LSN) der den Konflikt verursachenden Änderung bei der Anwendung auf __$origin_datasource.|  
-|__$conflict_type|**int**|Typ des Konflikts. Die folgenden Werte sind möglich:<br /><br /> 1: Ein Update ist fehlgeschlagen, da die lokale Zeile durch ein anderes Update geändert wurde oder gelöscht und dann erneut eingefügt wurde.<br /><br /> 2: Ein Update ist fehlgeschlagen, da die lokale Zeile bereits gelöscht wurde.<br /><br /> 3: Ein Löschvorgang ist fehlgeschlagen, da die lokale Zeile durch ein anderes Update geändert wurde oder gelöscht und dann erneut eingefügt wurde.<br /><br /> 4: Ein Löschvorgang ist fehlgeschlagen, da die lokale Zeile bereits gelöscht wurde.<br /><br /> 5: Ein Einfügevorgang ist fehlgeschlagen, da die lokale Zeile bereits eingefügt wurde oder eingefügt und anschließend aktualisiert wurde.|  
+|__$conflict_type|**int**|Typ des Konflikts. Die folgenden Werte sind möglich:<br /><br /> 1: Ein Update ist fehlgeschlagen, da die lokale Zeile durch eine andere aktualisieren oder es geändert wurde, gelöscht und dann erneut eingefügt wurde.<br /><br /> 2: Ein Update ist fehlgeschlagen, da die lokale Zeile bereits gelöscht wurde.<br /><br /> 3: Ein Löschvorgang ist fehlgeschlagen, da die lokale Zeile durch eine andere aktualisieren oder es geändert wurde, gelöscht und dann erneut eingefügt wurde.<br /><br /> 4: Ein Löschvorgang ist fehlgeschlagen, da die lokale Zeile bereits gelöscht wurde.<br /><br /> 5: Ein Einfügevorgang ist fehlgeschlagen, da die lokale Zeile bereits eingefügt wurde oder eingefügt und anschließend aktualisiert.|  
 |__$is_winner|**bit**|Gibt an, ob die Zeile in dieser Tabelle der Konfliktgewinner war. Das bedeutet, dass sie auf den lokalen Knoten angewendet wurde.|  
 |__$pre_version|**Varbinary (32)**|Version der Datenbank, aus der die konfliktverursachende Änderung stammt.|  
-|__$reason_code|**int**|Auflösungscode für den Konflikt. Folgende Werte sind möglich:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Weitere Informationen finden Sie unter **__ $Reason_text**.|  
-|__$reason_text|**Nvarchar (720)**|Auflösung für den Konflikt. Folgende Werte sind möglich:<br /><br /> Aufgelöst (1)<br /><br /> Nicht aufgelöst (2)<br /><br /> Unbekannt (0)|  
+|__$reason_code|**int**|Auflösungscode für den Konflikt. Kann einer der folgenden Werte sein:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Weitere Informationen finden Sie unter **__ $Reason_text**.|  
+|__$reason_text|**Nvarchar (720)**|Auflösung für den Konflikt. Kann einer der folgenden Werte sein:<br /><br /> Aufgelöst (1)<br /><br /> Nicht aufgelöst (2)<br /><br /> Unbekannt (0)|  
 |__$update_bitmap|**Varbinary (** *n* **)**. Größe variiert je nach Inhalt.|Bitmap, die angibt, welche Spalten im Fall eines UPDATE/UPDATE-Konflikts aktualisiert wurden.|  
 |__$inserted_date|**datetime**|Datum und Uhrzeit, zu der die Konfliktzeile in diese Tabelle eingefügt wurde.|  
 |__$row_id|**timestamp**|Zeilenversion, die mit der Zeile verknüpft ist, die den Konflikt verursacht hat.|  

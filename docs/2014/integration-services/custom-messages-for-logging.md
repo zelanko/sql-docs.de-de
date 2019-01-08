@@ -16,19 +16,19 @@ ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28e4b5a405279b1aaede6fc9db96cf9024a59b96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f55c99ad60dd449a3f5b591adf09f325127258b6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148050"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366572"
 ---
 # <a name="custom-messages-for-logging"></a>Benutzerdefinierte Meldungen für die Protokollierung
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Stellt einen umfangreichen Satz an benutzerdefinierten Ereignissen zum Schreiben von Protokolleinträgen für Pakete und viele Tasks bereit. Sie können diese Einträge verwenden, um detaillierte Informationen zum Fortschritt sowie über die Ergebnisse und Probleme der Ausführung zu speichern, indem Sie vordefinierte Ereignisse bzw. benutzerdefinierte Meldungen für die spätere Analyse erfassen. Sie können beispielsweise Beginn und Ende eines Masseneinfügungsvorgangs erfassen, um Leistungsprobleme beim Ausführen des Pakets zu identifizieren.  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt einen umfangreichen Satz an benutzerdefinierten Ereignissen zum Schreiben von Protokolleinträgen für Pakete und für mehrere Tasks bereit. Sie können diese Einträge verwenden, um detaillierte Informationen zum Fortschritt sowie über die Ergebnisse und Probleme der Ausführung zu speichern, indem Sie vordefinierte Ereignisse bzw. benutzerdefinierte Meldungen für die spätere Analyse erfassen. Sie können beispielsweise Beginn und Ende eines Masseneinfügungsvorgangs erfassen, um Leistungsprobleme beim Ausführen des Pakets zu identifizieren.  
   
  Die benutzerdefinierten Protokolleinträge unterscheiden sich von den für Pakete und alle Container und Tasks verfügbaren Standardprotokollierungsereignissen. Die benutzerdefinierten Protokolleinträge dienen zum Erfassen nützlicher Informationen zu einem bestimmten Task eines Pakets. Beispielsweise zeichnet einer der benutzerdefinierten Protokolleinträge für den Task SQL ausführen die von dem Task ausgeführte SQL-Anweisung im Protokoll auf.  
   
- In allen Protokolleinträgen sind jeweils das Datum und die Uhrzeit enthalten, einschließlich der beim Beginnen und Beenden eines Pakets automatisch geschriebenen Protokolleinträge. Bei vielen Protokollereignissen werden mehrere Einträge in das Protokoll geschrieben. In der Regel tritt dies dann auf, wenn ein Ereignis verschiedene Phasen aufweist. Z. B. die `ExecuteSQLExecutingQuery` -Protokollereignis drei Einträge: einen Eintrag, nachdem der Task eine Verbindung mit der Datenbank, einen weiteren, nachdem die Aufgabe bereiten Sie die SQL-Anweisung und eine weitere nach Abschluss die Ausführung der SQL-Anweisung beginnt.  
+ In allen Protokolleinträgen sind jeweils das Datum und die Uhrzeit enthalten, einschließlich der beim Beginnen und Beenden eines Pakets automatisch geschriebenen Protokolleinträge. Bei vielen Protokollereignissen werden mehrere Einträge in das Protokoll geschrieben. In der Regel tritt dies dann auf, wenn ein Ereignis verschiedene Phasen aufweist. Beispielsweise schreibt das `ExecuteSQLExecutingQuery`-Protokollereignis drei Einträge: einen Eintrag, nachdem der Task eine Verbindung mit der Datenbank erhalten hat; einen weiteren, nachdem der Task begonnen hat, die SQL-Anweisung vorzubereiten; und noch einen, nachdem die Ausführung der SQL-Anweisung abgeschlossen wurde.  
   
  Die folgenden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objekte verfügen über benutzerdefinierte Protokolleinträge:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48148050"
 |---------------|-----------------|  
 |`PackageStart`|Zeigt den Beginn der Paketausführung an.<br /><br /> Hinweis: Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
 |`PackageEnd`|Zeigt den Abschluss der Paketausführung an.<br /><br /> Hinweis: Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
-|`Diagnostic`|Enthält Informationen zur Systemkonfiguration, die sich auf die Paketausführung auswirken, wie z. B. die Anzahl ausführbarer Dateien, die gleichzeitig ausgeführt werden können.<br /><br /> Die `Diagnostic` Protokolleintrag enthält auch vorherige und nachfolgende Einträge für Aufrufe an externe Datenanbieter. Weitere Informationen finden Sie unter [Troubleshooting Tools Package Connectivity](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
+|`Diagnostic`|Enthält Informationen zur Systemkonfiguration, die sich auf die Paketausführung auswirken, wie z. B. die Anzahl ausführbarer Dateien, die gleichzeitig ausgeführt werden können.<br /><br /> Der Protokolleintrag `Diagnostic` enthält auch vorherige und nachfolgende Einträge für Aufrufe von externen Datenanbietern. Weitere Informationen finden Sie unter [Troubleshooting Tools Package Connectivity](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
   
 ###  <a name="BulkInsert"></a> Masseneinfügungstask  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Masseneinfügungstask aufgelistet.  
@@ -100,9 +100,9 @@ ms.locfileid: "48148050"
 |Protokolleintrag|Description|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Zeigt an, dass der Datenflusstask die Größe des Puffers geändert hat. Der Protokolleintrag beschreibt die Gründe für die Größenänderung und listet die temporäre neue Puffergröße auf.|  
-|`OnPipelinePostEndOfRowset`|Gibt an, dass eine Komponente das Signal Ende des Rowsets erhalten hat durch den letzten Aufruf von festgelegt ist die `ProcessInput` Methode. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
-|`OnPipelinePostPrimeOutput`|Gibt an, dass die Komponente ihren letzten Aufruf abgeschlossen wurde die `PrimeOutput` Methode. Je nach Datenfluss werden möglicherweise mehrere Protokolleinträge geschrieben. Wenn es sich bei der Komponente um eine Quelle handelt, bedeutet das, dass die von der Komponente durchgeführte Zeilenverarbeitung fertig gestellt wurde.|  
-|`OnPipelinePreEndOfRowset`|Gibt an, dass eine Komponente das Signal für Ende des Rowsets, der durch den letzten Aufruf der festgelegt wird, erhalten die `ProcessInput` Methode. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
+|`OnPipelinePostEndOfRowset`|Gibt an, dass eine Komponente das Signal für das Ende des Rowsets erhalten hat. Dieses Signal wird durch den letzten Aufruf der `ProcessInput`-Methode festgelegt. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
+|`OnPipelinePostPrimeOutput`|Zeigt an, dass die Komponente ihren letzten Aufruf der `PrimeOutput`-Methode abgeschlossen hat. Je nach Datenfluss werden möglicherweise mehrere Protokolleinträge geschrieben. Wenn es sich bei der Komponente um eine Quelle handelt, bedeutet das, dass die von der Komponente durchgeführte Zeilenverarbeitung fertig gestellt wurde.|  
+|`OnPipelinePreEndOfRowset`|Zeigt an, dass eine Komponente das Signal für das Ende des Rowsets erhalten soll. Dieses Signal wird durch den letzten Aufruf der `ProcessInput`-Methode festgelegt. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
 |`OnPipelinePrePrimeOutput`|Zeigt an, dass die Komponente einen Aufruf aus der `PrimeOutput`-Methode erhalten soll. Je nach Datenfluss werden möglicherweise mehrere Protokolleinträge geschrieben.|  
 |`OnPipelineRowsSent`|Berichtet die Anzahl von Zeilen, die einer Komponenteneingabe durch einen Aufruf der `ProcessInput`-Methode bereitgestellt wurden. Der Protokolleintrag enthält den Komponentennamen.|  
 |`PipelineBufferLeak`|Stellt Informationen zu Komponenten bereit, die Puffer aufrechterhalten haben, nachdem der Puffer-Manager beendet wurde. Das bedeutet, dass Pufferressourcen nicht freigegeben wurden, was zu Speicherverlusten führen kann. Der Protokolleintrag stellt den Namen der Komponente und die ID des Puffers bereit.|  
@@ -169,7 +169,7 @@ ms.locfileid: "48148050"
   
 |Protokolleintrag|Description|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|Gibt die Ergebnisse des Implementierens der Protokollierung innerhalb des Skripts an. Ein Protokolleintrag wird geschrieben, bei jedem Aufruf der `Log` Methode der `Dts` Objekt. Der Eintrag wird beim Ausführen des Codes geschrieben. Weitere Informationen finden Sie unter [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md).|  
+|`ScriptTaskLogEntry`|Gibt die Ergebnisse des Implementierens der Protokollierung innerhalb des Skripts an. Für jeden Aufruf der `Log`-Methode des `Dts`-Objekts wird jeweils ein Protokolleintrag geschrieben. Der Eintrag wird beim Ausführen des Codes geschrieben. Weitere Informationen finden Sie unter [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
 ###  <a name="SendMail"></a> Mail senden (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task 'Mail senden' aufgelistet.  
@@ -262,7 +262,7 @@ ms.locfileid: "48148050"
 |`XMLOperation`|Stellt Informationen über den vom Task durchgeführten Vorgang bereit.|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Blog-Artikel, [Logging custom events for Integration Services tasks](http://go.microsoft.com/fwlink/?LinkId=150580)(Protokollieren von benutzerdefinierten Ereignissen für Integration Services-Tasks), auf dougbert.com  
+ Blog-Artikel, [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=150580)(Protokollieren von benutzerdefinierten Ereignissen für Integration Services-Tasks), auf dougbert.com  
   
 ## <a name="see-also"></a>Siehe auch  
  [Integration Services-Protokollierung &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  

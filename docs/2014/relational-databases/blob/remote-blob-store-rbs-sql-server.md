@@ -13,12 +13,12 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e0b80a483032b1be28780297bacc998a2be0b51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d9711b5b9d079df0396ba9874b203a89f26344f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181470"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373013"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Remote BLOB-Speicher (RBS) ist eine optionale Add-On-Komponente, mit der Datenbankadministratoren Binary Large Objects in Speicherlösungen statt direkt auf dem Hauptdatenbankserver speichern können.  
@@ -50,22 +50,22 @@ ms.locfileid: "48181470"
 ## <a name="rbs-requirements"></a>RSB-Anforderungen  
  RSB erfordert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise für den Hauptdatenbankserver, in dem die BLOB-Metadaten gespeichert werden. Wenn Sie jedoch den bereitgestellten FILESTREAM-Anbieter verwenden, können Sie die BLOBs selbst auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard speichern.  
   
- RBS beinhaltet einen FILESTREAM-Anbieter, mit dem Sie BLOBs mithilfe von RBS auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]speichern können. Wenn Sie BLOBs mithilfe von RBS in einer anderen Speicherlösung speichern möchten, müssen Sie einen für diese Speicherlösung entwickelten RSB-Anbieter eines Drittanbieters verwenden oder einen benutzerdefinierten RBS-Anbieter mithilfe der RBS-API entwickeln. Ein Beispielanbieter, der BLOBs im NTFS-Dateisystem speichert, steht als Lernressource auf [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)zur Verfügung.  
+ RBS beinhaltet einen FILESTREAM-Anbieter, mit dem Sie BLOBs mithilfe von RBS auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]speichern können. Wenn Sie BLOBs mithilfe von RBS in einer anderen Speicherlösung speichern möchten, müssen Sie einen für diese Speicherlösung entwickelten RSB-Anbieter eines Drittanbieters verwenden oder einen benutzerdefinierten RBS-Anbieter mithilfe der RBS-API entwickeln. Ein Beispielanbieter, der BLOBs im NTFS-Dateisystem speichert, steht als Lernressource auf [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)zur Verfügung.  
   
 ## <a name="rbs-security"></a>RSB-Sicherheit  
- Wenn Sie einen benutzerdefinierten Anbieter verwenden, zum Speichern von BLOBs außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], befinden sich diese möglicherweise für andere Prozesse, die die umgehen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherheitssystem. Stellen Sie sicher, dass die gespeicherten BLOBs anhand von Berechtigungen und Verschlüsselungsoptionen geschützt sind, die für das vom benutzerdefinierten Anbieter verwendete Speichermedium geeignet sind.  
+ Wenn Sie einen benutzerdefinierten Anbieter verwenden, um BLOBs außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu speichern, stehen diese möglicherweise auch anderen Prozessen, die das[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherheitssystem umgehen, zur Verfügung. Stellen Sie sicher, dass die gespeicherten BLOBs anhand von Berechtigungen und Verschlüsselungsoptionen geschützt sind, die für das vom benutzerdefinierten Anbieter verwendete Speichermedium geeignet sind.  
   
 ##  <a name="rbsresources"></a> RSB-Ressourcen  
  **RBS-Dokumentation**  
- Die RBS-Dokumentation ist im Windows Installer-Paket enthalten. Wenn Sie die RBS-Dokumentation durchlesen möchten, ohne RBS zu installieren, können Sie die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] -Version der Dokumentation auch [online in der MSDN Library](http://go.microsoft.com/fwlink/?LinkId=210192)anzeigen.  
+ Die RBS-Dokumentation ist im Windows Installer-Paket enthalten. Wenn Sie die RBS-Dokumentation durchlesen möchten, ohne RBS zu installieren, können Sie die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] -Version der Dokumentation auch [online in der MSDN Library](https://go.microsoft.com/fwlink/?LinkId=210192)anzeigen.  
   
  **RSB-Whitepaper**  
- Das Whitepaper [Remote BLOB Storage](http://go.microsoft.com/fwlink/?LinkId=210422), das als Microsoft Word-Dokument in englischer Sprache zum Download zur Verfügung steht, bietet ausführliche Informationen zur Installation und Konfiguration von RBS.  
+ Das Whitepaper [Remote BLOB Storage](https://go.microsoft.com/fwlink/?LinkId=210422), das als Microsoft Word-Dokument in englischer Sprache zum Download zur Verfügung steht, bietet ausführliche Informationen zur Installation und Konfiguration von RBS.  
   
  **RSB-Beispiele**  
- In den auf [CodePlex](http://go.microsoft.com/fwlink/?LinkId=210190) verfügbaren RSB-Beispielen wird veranschaulicht, wie Sie eine RBS-Anwendung entwickeln und einen benutzerdefinierten RBS-Anbieter installieren.  
+ In den auf [CodePlex](https://go.microsoft.com/fwlink/?LinkId=210190) verfügbaren RSB-Beispielen wird veranschaulicht, wie Sie eine RBS-Anwendung entwickeln und einen benutzerdefinierten RBS-Anbieter installieren.  
   
  **RBS-Blog**  
- Der [RBS-Blog](http://go.microsoft.com/fwlink/?LinkId=210315) bietet zusätzliche Informationen, durch die Sie RBS besser verstehen, bereitstellen und verwalten können.  
+ Der [RBS-Blog](https://go.microsoft.com/fwlink/?LinkId=210315) bietet zusätzliche Informationen, durch die Sie RBS besser verstehen, bereitstellen und verwalten können.  
   
   

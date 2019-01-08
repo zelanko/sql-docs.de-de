@@ -1,5 +1,5 @@
 ---
-title: In Excel analysieren | Microsoft Docs
+title: Tabellarische Analysis Services-Modellen in Excel analysieren | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9823e6493e59440407ac847c9c8233983e0ca236
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: abd910573f512e32ee58c6c3afabac17664f4b24
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042134"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983871"
 ---
 # <a name="analyze-in-excel"></a>In Excel analysieren
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Die Funktion in Excel analysieren, in SSDT Entwicklern erleichtert tabellarischer Modelle eine Möglichkeit, die schnelle Analyse von Modellprojekten während der Entwicklung. Über die Funktion In Excel analysieren wird Microsoft Excel geöffnet; sie stellt eine Datenquellenverbindung mit der Arbeitsbereichsdatenbank des Modells her und fügt automatisch eine PivotTable in das Arbeitsblatt ein. Objekte der Arbeitsbereichsdatenbank (Tabellen, Spalten und Measures) sind als Felder in der PivotTable-Feldliste enthalten. Objekte und Daten können dann innerhalb des Kontexts des effektiven Benutzers oder der Rolle und Perspektive angezeigt werden.  
+  Die Funktion in Excel analysieren, in SSDT-Entwickler von tabellarischen Modellen bietet eine Möglichkeit, die schnelle Analyse von Modellprojekten während der Entwicklung. Über die Funktion In Excel analysieren wird Microsoft Excel geöffnet; sie stellt eine Datenquellenverbindung mit der Arbeitsbereichsdatenbank des Modells her und fügt automatisch eine PivotTable in das Arbeitsblatt ein. Objekte der Arbeitsbereichsdatenbank (Tabellen, Spalten und Measures) sind als Felder in der PivotTable-Feldliste enthalten. Objekte und Daten können dann innerhalb des Kontexts des effektiven Benutzers oder der Rolle und Perspektive angezeigt werden.  
   
  In diesem Artikel wird davon ausgegangen, dass Sie bereits mit Microsoft Excel, PivotTables und PivotCharts vertraut sind. Weitere Informationen zur Verwendung von Excel finden Sie in der Excel-Hilfe.  
   
 ##  <a name="bkmk_benefits"></a> Vorteile  
- Die Funktion In Excel analysieren bietet Modellentwicklern die Möglichkeit, die Effizienz eines Modellprojekts unter Verwendung der verbreiteten Datenanalyseanwendung Microsoft Excel zu testen. Um Funktion in Excel analysieren zu verwenden, müssen Sie Microsoft Office 2003 oder höher auf demselben Computer wie SSDT installiert.  
+ Die Funktion In Excel analysieren bietet Modellentwicklern die Möglichkeit, die Effizienz eines Modellprojekts unter Verwendung der verbreiteten Datenanalyseanwendung Microsoft Excel zu testen. Um die Funktion in Excel analysieren zu verwenden, Sie müssen Microsoft Office 2003 oder höher auf demselben Computer wie SSDT installiert.  
   
  Durch die Funktion In Excel analysieren wird Excel geöffnet und eine neue Excel-Arbeitsmappe (.xls) erstellt. Eine Datenverbindung von der Arbeitsmappe zur Modellarbeitsbereichsdatenbank wird erstellt. Dem Arbeitsblatt wird eine leere PivotTable hinzugefügt, und die PivotTable-Feldliste wird mit Modellobjektmetadaten aufgefüllt. Sie können der PivotTable anschließend Anzeigedaten und Slicer hinzufügen.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "34042134"
  **Rolle**  
  Eine Rolle wird verwendet, um Benutzerberechtigungen für die Objektmetadaten und die Daten zu definieren. Rollen werden normalerweise für einen bestimmten Windows-Benutzer oder eine Windows-Benutzergruppe definiert. Bestimmte Rollen können zusätzliche Filter auf Zeilenebene einschließen, die in einer DAX-Formel definiert sind. Wenn Sie die Funktion In Excel analysieren verwenden, können Sie optional eine zu verwendende Rolle auswählen. Objektmetadaten und Datensichten werden durch Berechtigungen und Filter eingeschränkt, die für die Rolle definiert sind. Weitere Informationen finden Sie unter [erstellen und Verwalten von Rollen](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
- Zusätzlich zum effektiven Benutzer oder der Rolle können Sie eine Perspektive angeben. Perspektiven ermöglichen Modellentwicklern die Definition von Modellobjekt- und Datensichten für bestimmte Geschäftsszenarien. Standardmäßig wird keine Perspektive verwendet. Um eine Perspektive mit in Excel analysieren zu verwenden, müssen Perspektiven bereits mit dem Dialogfeld Perspektiven in SSDT definiert werden. Wenn eine Perspektive angegeben wird, enthält die PivotTable-Liste nur die in der Perspektive ausgewählten Objekte. Weitere Informationen finden Sie unter [erstellen und Verwalten von Perspektiven](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md).  
+ Zusätzlich zum effektiven Benutzer oder der Rolle können Sie eine Perspektive angeben. Perspektiven ermöglichen Modellentwicklern die Definition von Modellobjekt- und Datensichten für bestimmte Geschäftsszenarien. Standardmäßig wird keine Perspektive verwendet. Um eine Perspektive mit in Excel analysieren verwenden, müssen Perspektiven bereits mit dem Dialogfeld Perspektiven in SSDT definiert werden. Wenn eine Perspektive angegeben wird, enthält die PivotTable-Liste nur die in der Perspektive ausgewählten Objekte. Weitere Informationen finden Sie unter [erstellen und Verwalten von Perspektiven](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md).  
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   
 |**Thema**|**Beschreibung**|  
 |---------------|---------------------|  
-|[Analysieren eines tabellarischen Modells in Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|Dieser Artikel beschreibt, wie die analysieren in Excel-Funktion im Modell-Designer verwenden, um Excel zu öffnen, erstellen eine datenquellenverbindung mit der arbeitsbereichsdatenbank des Modells und Hinzufügen einer PivotTable zum Arbeitsblatt.|  
+|[Analysieren eines tabellarischen Modells in Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|Dieser Artikel beschreibt, wie Sie die analysieren in Excel-Funktion im Modell-Designer verwenden, um Excel zu öffnen, erstellen eine datenquellenverbindung mit der arbeitsbereichsdatenbank des Modells und eine PivotTable zum Arbeitsblatt hinzuzufügen.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysieren eines Tabellenmodells in Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   

@@ -10,17 +10,17 @@ ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 68acf1991e3d1b5af44f6335f59635fcc1eacefc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144520"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361302"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>Was&#39;Neues in SQL Server Native Client
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] installiert [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. Es gibt keinen [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client.  
   
- Der ODBC-Treiber in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client wird nicht mehr aktualisiert. Die Folgeversion des ODBC-Treibers in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC-Treiber 11 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] – Windows heißt, wird mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] installiert. Weitere Informationen zu den [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Windows, finden Sie unter [Microsoft ODBC Driver 11 für SQL Server - Windows](http://www.microsoft.com/download/details.aspx?id=36434).  
+ Der ODBC-Treiber in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client wird nicht mehr aktualisiert. Die Folgeversion des ODBC-Treibers in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC-Treiber 11 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] – Windows heißt, wird mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] installiert. Weitere Informationen zu den [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Windows, finden Sie unter [Microsoft ODBC Driver 11 für SQL Server - Windows](https://www.microsoft.com/download/details.aspx?id=36434).  
   
  Der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client wurde zuletzt in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client aktualisiert. Entwickler, die einen OLE DB-Anbieter für Verbindungen mit der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden möchten, müssen den in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client enthaltenen OLE DB-Anbieter verwenden.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "48144520"
   
  Außerdem unterstützt ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client jetzt drei Funktionen, die im Windows 7-SDK der ODBC-Standardfunktionalität hinzugefügt wurden:  
   
--   Asynchrone Ausführung von Vorgängen mit Verbindungen. Weitere Informationen finden Sie unter [asynchrone Ausführung](http://go.microsoft.com/fwlink/?LinkID=191493).  
+-   Asynchrone Ausführung von Vorgängen mit Verbindungen. Weitere Informationen finden Sie unter [asynchrone Ausführung](https://go.microsoft.com/fwlink/?LinkID=191493).  
   
--   Erweiterbarkeit von C-Datentypen. Weitere Informationen finden Sie unter [C-Datentypen in ODBC](http://go.microsoft.com/fwlink/?LinkID=191495).  
+-   Erweiterbarkeit von C-Datentypen. Weitere Informationen finden Sie unter [C-Datentypen in ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
   
      Zur Unterstützung dieser Funktion in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client SQLGetDescField kann zurückgeben `SQL_C_SS_TIME2` (für `time` Typen) oder `SQL_C_SS_TIMESTAMPOFFSET` (für `datetimeoffset`) anstelle von `SQL_C_BINARY`, wenn die Anwendung ODBC 3.8 verwendet. Weitere Informationen finden Sie unter [Datentypunterstützung für ODBC-Datum und Uhrzeit-Verbesserungen](features/date-and-time-improvements.md).  
   
--   Mehrfaches Aufrufen von `SQLGetData` mit einem kleinen Puffer, um einen großen Parameterwert abzurufen. Weitere Informationen finden Sie unter [Abrufen von Ausgabeparametern mit SQLGetData](http://go.microsoft.com/fwlink/?LinkID=191494).  
+-   Mehrfaches Aufrufen von `SQLGetData` mit einem kleinen Puffer, um einen großen Parameterwert abzurufen. Weitere Informationen finden Sie unter [Abrufen von Ausgabeparametern mit SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
   
  In den folgenden Themen werden Änderungen des Verhaltens von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] beschrieben.  
   

@@ -20,16 +20,16 @@ ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df0021bf5b3ac905ddf63ede8d4dfd65710662aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad8aec58fea182c080d55217db94ea2cda08184b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789908"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590434"
 ---
 # <a name="sqlexecute-function"></a>SQLExecute-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
   
  **Zusammenfassung**  
  **SQLExecute** führt eine vorbereitete Anweisung, die die aktuellen Werte der Variablen Marker Parameter verwenden, wenn einem Parametermarker in der Anweisung vorhanden sind.  
@@ -39,7 +39,7 @@ ms.locfileid: "47789908"
 ```  
   
 SQLRETURN SQLExecute(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -77,7 +77,7 @@ SQLRETURN SQLExecute(
 |22015|Überlauf bei Intervallfeld|*\*StatementText* einen genauen numerischen oder Intervall-Parameter enthalten, wenn auf ein Intervall von SQL-Datentyp konvertiert wird, verursacht einen Verlust signifikanter Ziffern.<br /><br /> *\*StatementText* einen intervallparameter mit mehr als ein Feld enthalten, bei der Konvertierung in einen numerischen Datentyp in einer Spalte keine Entsprechung in der numerische Datentyp haben.<br /><br /> *\*StatementText* enthaltenen Parameterdaten, die auf ein Intervall von SQL-Typ zugewiesen wurde, und es war keine Darstellung des Werts von der C-Typ in der SQL-Typ-Intervall.<br /><br /> Zuweisen von ein Eingabe-/Ausgabe- oder Ausgabe-Parameter, die einen genauen numerischen oder Intervall SQL-Typ in einen C Intervalltyp, der einen Verlust signifikanter Ziffern verursacht wurde.<br /><br /> Wenn ein Eingabe-/Ausgabe- oder Ausgabe-Parameter auf eine C-Intervall-Struktur zugewiesen wurde, gab es keine Entsprechung für die Daten in der Datenstruktur Intervall.|  
 |22018|Ungültiger Zeichenwert für Konvertierungsangabe|*\*StatementText* einen C-Typ enthalten, das war eine genaue oder ungefähre numerische, einen datetime-Wert oder ein Intervall-Datentyp; der SQL-Typ der Spalte einen Zeichendatentyp; und der Wert in der Spalte nicht wurde ein gültiger Literal des gebundenen Typen aus C.<br /><br /> Wenn ein Eingabe-/Ausgabe- oder Ausgabe-Parameter zurückgegeben wurde, war der SQL-Typ eine genaue oder ungefähre numerische, einen datetime-Wert oder ein Intervall-Datentyp. der C-Typ wurde SQL_C_CHAR; und kein Wert in der Spalte wurde ein gültiger Literal des gebundenen Typen aus SQL.|  
 |22019|Ungültiges Escapezeichen|Der vorbereiteten Anweisung zugeordnet *StatementHandle* enthalten eine **wie** Prädikat mit einer **mit Escapezeichen versehen** in die **, in denen** -Klausel, und die Länge der Escape-Zeichen folgenden **ESCAPE** war nicht gleich 1.|  
-|22025|Ungültige Escapesequenz|Die vorbereitete Anweisung zugeordneten *StatementHandle* enthaltenen "**wie** *Musterwert* **ESCAPE** *Escapezeichen Zeichen*"in der **, in denen** -Klausel und das Zeichen, die das Escapezeichen im Musterwert war keiner der"%"oder"_".|  
+|22025|Ungültige Escapesequenz|Die vorbereitete Anweisung zugeordneten *StatementHandle* enthaltenen "**wie** _Musterwert_ **ESCAPE** _Escapezeichen Zeichen_"in der **, in denen** -Klausel und das Zeichen, die das Escapezeichen im Musterwert war keiner der"%"oder"_".|  
 |23000|Verletzung der integritätseinschränkung|Die vorbereitete Anweisung zugeordneten der *StatementHandle* enthalten einen Parameter. Der Wert des Parameters wurde NULL für eine Spalte als NOT NULL in der zugeordneten Spalte definiert, ein doppelter Wert wurde angegeben, für eine Spalte beschränkt auf die nur eindeutige Werte enthalten, oder einige andere integritätseinschränkung verletzt wurde.|  
 |24000|Ungültiger Cursorstatus|Ein Cursor positioniert wurde, auf die *StatementHandle* von **SQLFetch** oder **SQLFetchScroll**. Dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** wurden keine SQL_NO_DATA zurückgegeben wird, und wird vom Treiber zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** SQL_NO_DATA zurückgegeben hat.<br /><br /> Ein Cursor geöffnet, auf war die *StatementHandle*.<br /><br /> Die vorbereitete Anweisung zugeordneten der *StatementHandle* enthalten ein positioniertes Update oder Delete-Statemen "," t "und" den Cursor vor dem Start des Resultsets oder nach dem Ende des Resultsets positioniert wurde.|  
 |40001|Serialisierungsfehler|Die Transaktion wurde aufgrund eines Deadlocks Ressource mit einer anderen Transaktion ein Rollback ausgeführt.|  
@@ -89,7 +89,7 @@ SQLRETURN SQLExecute(
 |HY008|Der Vorgang wurde abgebrochen|Die asynchrone Verarbeitung wurde aktiviert, für die *StatementHandle*. Die Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*. Und dann die Funktion erneut aufgerufen wurde, auf die *StatementHandle*.<br /><br /> Die Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle* von einem anderen Thread in einem Multithread-Anwendung.|  
 |HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn die **SQLExecute** Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.<br /><br /> (DM) die *StatementHandle* wurde nicht vorbereitet.|  
 |HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|Legen Sie ein Parameterwert mit **SQLBindParameter**wurde ein null-Zeiger und die Länge der Parameterwert lag nicht 0, SQL_NULL_DATA, SQL_DATA_AT_EXEC, SQL_DEFAULT_PARAM oder kleiner als oder gleich SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Legen Sie ein Parameterwert mit **SQLBindParameter**, war es sich nicht um ein null-Zeiger; wurde von der C-Datentyp SQL_C_BINARY oder SQL_C_CHAR; und der Wert des Parameters Länge war kleiner als 0, aber nicht SQL_NTS, SQL_NULL_DATA, SQL_DEFAULT_PARAM oder SQL_DATA_ AT_EXEC, oder kleiner als oder gleich SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Ein Längenwert für den Parameter gebunden wird, indem **SQLBindParameter** auf SQL_DATA_AT_EXEC festgelegt wurde, wurde des SQL-Typs, SQL_LONGVARCHAR, SQL_LONGVARBINARY, oder ein long-Daten Datenquelle spezifischen Datentyp und die SQL_NEED_LONG_DATA_LEN-Informationen Geben Sie in **SQLGetInfo** wurde von "Y".|  
+|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|Legen Sie ein Parameterwert mit **SQLBindParameter**wurde ein null-Zeiger und die Länge der Parameterwert lag nicht 0, SQL_NULL_DATA, SQL_DATA_AT_EXEC, SQL_DEFAULT_PARAM oder kleiner als oder gleich SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Legen Sie ein Parameterwert mit **SQLBindParameter**, war es sich nicht um ein null-Zeiger; wurde von der C-Datentyp SQL_C_BINARY oder SQL_C_CHAR; und der Wert des Parameters Länge war kleiner als 0, aber nicht SQL_NTS, SQL_NULL_DATA, SQL_DEFAULT_PARAM oder SQL_DATA_ AT_EXEC, oder kleiner als oder gleich SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Ein Längenwert für den Parameter gebunden wird, indem **SQLBindParameter** auf SQL_DATA_AT_EXEC festgelegt wurde, wurde des SQL-Typs, SQL_LONGVARCHAR, SQL_LONGVARBINARY, oder ein long-Daten datenquellenspezifische Datentyp und die SQL_NEED_LONG_DATA_LEN-Informationen Geben Sie in **SQLGetInfo** wurde von "Y".|  
 |HY105|Ungültiger Parametertyp|Der angegebene Wert für das Argument *InputOutputType* in **SQLBindParameter** war SQL_PARAM_OUTPUT und des Parameters ein Eingabeparameter.|  
 |HY109|Ungültige Cursorposition|Die vorbereitete Anweisung wurde ein positioniertes Update oder Delete-Anweisung und der Cursor positioniert wurde (durch **SQLSetPos** oder **SQLFetchScroll**) in einer Zeile, die hatte, wurde gelöscht oder konnte nicht abgerufen werden.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -120,7 +120,7 @@ SQLRETURN SQLExecute(
  Wenn Lesezeichen aktiviert sind, und eine Abfrage ausgeführt wird, kann nicht die Lesezeichen unterstützen, der Treiber sollten versuchen, von der Umgebung zu einem umgewandelt werden soll, die Lesezeichen unterstützt, indem Sie einen Attributwert und Rückgabe von SQLSTATE 01 s 02 (der Optionswert wurde geändert). Wenn das Attribut kann nicht geändert werden, sollte der Treiber SQLSTATE HY024 zurück (ungültige Attribut-Wert).  
   
 > [!NOTE]  
->  Wenn Sie Verbindungspooling verwenden, muss eine Anwendung nicht SQL-Anweisungen, die die Datenbank oder im Kontext der Datenbank, wie z. B. ändern Ausführen der **verwenden** *Datenbank* -Anweisung in SQL Server, der Änderungen der Katalog, die von einer Datenquelle verwendet wird.  
+>  Wenn Sie Verbindungspooling verwenden, muss eine Anwendung nicht SQL-Anweisungen, die die Datenbank oder im Kontext der Datenbank, wie z. B. ändern Ausführen der **verwenden** _Datenbank_ -Anweisung in SQL Server, der Änderungen der Katalog, die von einer Datenquelle verwendet wird.  
   
 ## <a name="code-example"></a>Codebeispiel  
  Finden Sie unter [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md), [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md), und [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  

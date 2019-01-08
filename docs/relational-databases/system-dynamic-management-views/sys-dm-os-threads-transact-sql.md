@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bda588201965644089d3918c687095bb97d31d45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 022113a9cabe678e3136d50beb3a87cd29fa07d4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610208"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205829"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
   
  Mit der folgenden Abfrage werden Arbeitsthreads zusammen mit der jeweiligen Ausführungszeit ermittelt, die nicht von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartete Threads ausführen.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Aus Gründen der Kürze wird in der folgenden Abfrage ein Sternchen (`*`) in der `SELECT`-Anweisung verwendet. Vermeiden Sie die Verwendung des Sternchens (*) insbesondere für Katalogsichten, dynamische Verwaltungssichten und Systemfunktionen mit Tabellenrückgabe. Zukünftige Upgrades und Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Spalten hinzufügen und ändern Sie die Reihenfolge der Spalten in diesen Sichten und Funktionen. Diese Änderungen könnten zur Funktionsunfähigkeit von Anwendungen führen, die eine bestimmte Reihenfolge und Anzahl von Spalten erwarten.  
   
 ```  

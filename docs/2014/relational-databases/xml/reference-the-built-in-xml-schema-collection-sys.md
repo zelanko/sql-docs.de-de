@@ -16,12 +16,12 @@ ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1cd826013df93bff905134f18d58eb50ac962917
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b9c91e26c7c797bcde837d59c9447bc50d7d435
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143990"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376052"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Verweisen auf die integrierte XML-Schemaauflistung (sys)
   Jede Datenbank, die Sie erstellen, besitzt eine vordefinierte **sys** -XML-Schemaauflistung im relationalen **sys** -Schema. Es reserviert diese vordefinierten Schemas, und der Zugriff darauf kann aus einer beliebigen, von einem Benutzer erstellten XML-Schemaauflistung erfolgen. Die in diesen vordefinierten Schemas verwendeten Präfixe sind in XQuery von Bedeutung. Nur **xml** ist ein reserviertes Präfix.  
@@ -31,13 +31,13 @@ xml = http://www.w3.org/XML/1998/namespace
 xs = http://www.w3.org/2001/XMLSchema  
 xsi = http://www.w3.org/2001/XMLSchema-instance  
 fn = http://www.w3.org/2004/07/xpath-functions  
-sqltypes = http://schemas.microsoft.com/sqlserver/2004/sqltypes  
+sqltypes = https://schemas.microsoft.com/sqlserver/2004/sqltypes  
 xdt = http://www.w3.org/2004/07/xpath-datatypes  
 (no prefix) = urn:schemas-microsoft-com:xml-sql  
-(no prefix) = http://schemas.microsoft.com/sqlserver/2004/SOAP  
+(no prefix) = https://schemas.microsoft.com/sqlserver/2004/SOAP  
 ```  
   
- Beachten Sie, dass der **sqltypes** -Namespace Komponenten enthält, auf die aus jeder beliebigen, von einem Benutzer erstellten XML-Schemaauflistung verwiesen werden kann. Sie können das **sqltypes** -Schema von dieser [Microsoft-Website](http://go.microsoft.com/fwlink/?linkid=31850)herunterladen. Die folgenden Komponenten sind z. B. integriert:  
+ Beachten Sie, dass der **sqltypes** -Namespace Komponenten enthält, auf die aus jeder beliebigen, von einem Benutzer erstellten XML-Schemaauflistung verwiesen werden kann. Sie können das **sqltypes** -Schema von dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?linkid=31850)herunterladen. Die folgenden Komponenten sind z. B. integriert:  
   
 -   XSD-Typen  
   
@@ -65,9 +65,9 @@ CREATE XML SCHEMA COLLECTION SC AS '
    xmlns="http://www.w3.org/2001/XMLSchema"   
    targetNamespace="myNS"  
    xmlns:ns="myNS"  
-   xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
+   xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
    <import namespace="http://www.w3.org/XML/1998/namespace"/>  
-   <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+   <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
    <element name="root">  
       <complexType>  
           <sequence>  
@@ -98,7 +98,7 @@ GO
     CREATE XML SCHEMA COLLECTION SC AS '  
     <schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace    
-        ="http://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
+        ="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
           <element name="root" type="string"/>  
     </schema>'  
     GO  
@@ -123,9 +123,9 @@ GO
 CREATE XML SCHEMA COLLECTION SC AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"   
         targetNamespace="myNS" xmlns:ns="myNS"  
-        xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+        xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
    <import     
-     namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+     namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
       <simpleType name="myType">  
             <restriction base="s:varchar">  
                   <maxLength value="20"/>  
@@ -141,7 +141,7 @@ go
 ```  
 DECLARE @var XML(SC)  
 SET @var = '<root xmlns="myNS">My data</root>'  
-SELECT @var.query('declare namespace sqltypes = "http://schemas.microsoft.com/sqlserver/2004/sqltypes";  
+SELECT @var.query('declare namespace sqltypes = "https://schemas.microsoft.com/sqlserver/2004/sqltypes";  
 declare namespace ns="myNS";   
 data(/ns:root[1]) instance of sqltypes:varchar?')  
 GO  

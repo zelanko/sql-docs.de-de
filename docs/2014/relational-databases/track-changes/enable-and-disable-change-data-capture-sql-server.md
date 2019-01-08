@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], enabling tables
@@ -16,12 +15,12 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ebbfd8c66737afb03564dee557757f4406a5c5a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e4756834e28ad07e42f57235a30e59fd924da22
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057560"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202109"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Aktivieren und Deaktivieren von Change Data Capture (SQL Server)
   In diesem Thema wird beschrieben, wie Sie Change Data Capture für Datenbanken und Tabelle aktivieren und deaktivieren können.  
@@ -29,7 +28,7 @@ ms.locfileid: "48057560"
 ## <a name="enable-change-data-capture-for-a-database"></a>Aktivieren von Change Data Capture für eine Datenbank  
  Bevor eine Aufzeichnungsinstanz für einzelne Tabellen erstellt werden kann, muss ein Mitglied der festen Serverrolle `sysadmin` zuerst die Datenbank für Change Data Capture aktivieren. Dies erfolgt durch Ausführen der gespeicherten Prozedur [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) im Kontext der Datenbank. Um zu bestimmen, ob die Datenbank bereits aktiviert ist, fragen Sie die `is_cdc_enabled`-Spalte in der `sys.databases`-Katalogsicht ab.  
   
- Wenn eine Datenbank für Change Data Capture aktiviert ist die `cdc` Schema `cdc` Benutzer, Metadatentabellen und andere Systemobjekte für die Datenbank erstellt werden. Die `cdc` Schema enthält, die Change Data Capture-Metadatentabellen und, nachdem die Quelltabellen für Change Data Capture aktiviert wurden, dienen die einzelnen Änderungstabellen als Repository für Change Data. Die `cdc` -Schema enthält außerdem zugeordnete Systemfunktionen, die verwendet, um Änderungsdaten abzufragen.  
+ Wenn eine Datenbank für Change Data Capture aktiviert ist, werden das `cdc`-Schema, der `cdc`-Benutzer, Metadatentabellen und andere Systemobjekte für die Datenbank erstellt. Das `cdc`-Schema enthält die Metadatentabellen für Change Data Capture, und sobald die Quelltabellen für Change Data Capture aktiviert wurden, dienen die einzelnen Änderungstabellen als Repository für die Änderungsdaten. Das `cdc`-Schema enthält außerdem zugeordnete Systemfunktionen, die verwendet werden, um Änderungsdaten abzufragen.  
   
  Change Data Capture erfordert die exklusive Verwendung des `cdc`-Schemas und des `cdc`-Benutzers. Wenn entweder ein Schema oder ein Datenbankbenutzer namens *cdc* schon in der Datenbank vorhanden ist, kann diese so lange für Change Data Capture nicht aktiviert werden, bis das Schema oder der Benutzer gelöscht oder umbenannt wird.  
   
@@ -49,7 +48,7 @@ GO
 ```  
   
 ## <a name="disable-change-data-capture-for-a-database"></a>Deaktivieren von Change Data Capture für eine Datenbank  
- Ein Mitglied der `sysadmin` -Serverrolle kann die gespeicherte Prozedur ausführen [Sys. sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) im Kontext Datenbank, um Change Data Capture für eine Datenbank zu deaktivieren. Es ist nicht notwendig, einzelne Tabellen zu deaktivieren, bevor Sie die Datenbank deaktivieren. Durch das Deaktivieren der Datenbank entfernt alle ihr verbundenen Change Data Capture-Metadaten, einschließlich der `cdc` -Benutzers und-Schemas und der Change Data capture-Aufträge. Durch Change Data Capture erstellte Gatingrollen werden jedoch nicht automatisch entfernt und müssen explizit gelöscht werden. Um zu bestimmen, ob die Datenbank aktiviert ist, fragen Sie die `is_cdc_enabled`-Spalte in der sys.databases-Katalogsicht ab.  
+ Ein Mitglied der `sysadmin` -Serverrolle kann die gespeicherte Prozedur ausführen [Sys. sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) im Kontext Datenbank, um Change Data Capture für eine Datenbank zu deaktivieren. Es ist nicht notwendig, einzelne Tabellen zu deaktivieren, bevor Sie die Datenbank deaktivieren. Durch das Deaktivieren der Datenbank werden alle mit ihr verbundenen Change Data Capture-Metadaten entfernt, einschließlich des `cdc`-Benutzers und -Schemas und der Change Data Capture-Aufträge. Durch Change Data Capture erstellte Gatingrollen werden jedoch nicht automatisch entfernt und müssen explizit gelöscht werden. Um zu bestimmen, ob die Datenbank aktiviert ist, fragen Sie die `is_cdc_enabled`-Spalte in der sys.databases-Katalogsicht ab.  
   
  Wenn eine Datenbank, für die Change Data Capture aktiviert ist, gelöscht wird, werden Change Data Capture-Aufträge automatisch entfernt.  
   
@@ -69,7 +68,7 @@ GO
 ```  
   
 ## <a name="enable-change-data-capture-for-a-table"></a>Aktivieren von Change Data Capture für eine Tabelle  
- Nach der Aktivierung einer Datenbank für Change Data Capture, Mitglied der `db_owner` festen Datenbankrolle kann eine Aufzeichnungsinstanz für einzelne Quelltabellen erstellen, indem Sie mit der gespeicherten Prozedur `sys.sp_cdc_enable_table`. Um zu bestimmen, ob eine Quelltabelle bereits für Change Data Capture aktiviert ist, überprüfen Sie die is_tracked_by_cdc column-Spalte in der`sys.tables`-Katalogsicht.  
+ Nachdem eine Datenbank für Change Data Capture aktiviert ist, können Mitglieder der festen Datenbankrolle `db_owner` eine Aufzeichnungsinstanz für einzelne Quelltabellen mithilfe der gespeicherten Prozedur `sys.sp_cdc_enable_table` erstellen. Um zu bestimmen, ob eine Quelltabelle bereits für Change Data Capture aktiviert ist, überprüfen Sie die is_tracked_by_cdc column-Spalte in der`sys.tables`-Katalogsicht.  
   
  Wenn Sie eine Aufzeichnungsinstanz erstellen, können Sie die folgenden Optionen angeben:  
   
@@ -99,7 +98,7 @@ GO
   
  `A role for controlling access to a change table.`  
   
- Der Zweck der benannten Rolle besteht darin, den Zugriff auf die Änderungsdaten zu steuern. Die angegebene Rolle kann eine vorhandene feste Serverrolle oder eine Datenbankrolle sein. Wenn die angegebene Rolle nicht bereits vorhanden ist, wird automatisch eine Datenbankrolle mit diesem Namen erstellt. Mitglieder der Rollen `sysadmin` oder `db_owner` haben vollen Zugriff auf die Daten in den Änderungstabellen. Alle anderen Benutzer müssen über die SELECT-Berechtigung für alle aufgezeichneten Spalten der Quelltabelle verfügen. Wenn darüber hinaus eine Rolle angegeben wird, Benutzer, die nicht Mitglieder der Rollen der `sysadmin` oder `db_owner` Rolle muss Mitglieder der angegebenen Rolle sein.  
+ Der Zweck der benannten Rolle besteht darin, den Zugriff auf die Änderungsdaten zu steuern. Die angegebene Rolle kann eine vorhandene feste Serverrolle oder eine Datenbankrolle sein. Wenn die angegebene Rolle nicht bereits vorhanden ist, wird automatisch eine Datenbankrolle mit diesem Namen erstellt. Mitglieder der Rollen `sysadmin` oder `db_owner` haben vollen Zugriff auf die Daten in den Änderungstabellen. Alle anderen Benutzer müssen über die SELECT-Berechtigung für alle aufgezeichneten Spalten der Quelltabelle verfügen. Ist eine Rolle angegeben, müssen Benutzer, die nicht Mitglieder der Rollen `sysadmin` oder `db_owner` sind, darüber hinaus Mitglieder der angegebenen Rolle sein.  
   
  Wenn Sie keine Gatingrolle verwenden möchten, legen Sie den *@role_name* -Parameter explizit auf NULL fest. Ein Beispiel für das Aktivieren einer Tabelle ohne Gatingrolle finden Sie unter `Enable a Table Without Using a Gating Role`.  
   
@@ -142,11 +141,11 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  Wenn Change Data Capture für eine Tabelle mit einem vorhandenen Primärschlüssel aktiviert ist und der *@index_name* -Parameter nicht zum Identifizieren eines alternativen eindeutigen Indexes verwendet wird, verwendet die Change Data Capture-Funktion den Primärschlüssel. Nachfolgende Änderungen am Primärschlüssel sind nicht zulässig, ohne zuerst Change Data Capture für die Tabelle zu deaktivieren. Dies gilt unabhängig davon, ob Unterstützung für Abfragen für Nettoänderungen angefordert wurde, als Change Data Capture konfiguriert wurde. Wenn zum Zeitpunkt der Aktivierung für Change Data Capture für eine Tabelle kein Primärschlüssel vorhanden ist, wird das nachträgliche Hinzufügen eines Primärschlüssels von Change Data Capture ignoriert. Da Change Data Capture keinen Primärschlüssel verwendet, der nach der Aktivierung der Tabelle erstellt wurde, können der Schlüssel und die Schlüsselspalten ohne Einschränkungen entfernt werden.  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>Deaktivieren von Change Data Capture für eine Tabelle  
- Mitglieder der `db_owner` festen Datenbankrolle kann eine Aufzeichnungsinstanz für einzelne Quelltabellen mithilfe der gespeicherten Prozedur entfernen `sys.sp_cdc_disable_table`. Um zu bestimmen, ob eine Quelltabelle zurzeit für Change Data Capture aktiviert ist, überprüfen Sie die `is_tracked_by_cdc`-Spalte in der`sys.tables`-Katalogsicht. Wenn nach dem Deaktivieren keine Tabelle für die Datenbank aktiviert sind, werden die Change Data Capture-Aufträge ebenfalls entfernt.  
+ Mitglieder der festen Datenbankrolle `db_owner` können eine Aufzeichnungsinstanz für einzelne Quelltabellen mithilfe der gespeicherten Prozedur `sys.sp_cdc_disable_table` entfernen. Um zu bestimmen, ob eine Quelltabelle zurzeit für Change Data Capture aktiviert ist, überprüfen Sie die `is_tracked_by_cdc`-Spalte in der`sys.tables`-Katalogsicht. Wenn nach dem Deaktivieren keine Tabelle für die Datenbank aktiviert sind, werden die Change Data Capture-Aufträge ebenfalls entfernt.  
   
  Wenn eine Tabelle, für die Change Data Capture aktiviert ist, gelöscht wird, werden Change Data Capture-Metadaten, die mit der Tabelle verbunden sind, automatisch entfernt.  
   

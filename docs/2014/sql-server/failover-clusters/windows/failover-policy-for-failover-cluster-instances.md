@@ -12,12 +12,12 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2114b180a1ecabf3f792437a113b9f4bedef8a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9df2b0158504577630caa6830687a2665c91327
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218220"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365782"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failoverrichtlinie für Failoverclusterinstanzen
   In einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz (FCI) kann jeweils nur ein Knoten Besitzer der WSFC-Clusterressourcengruppe (Windows Server Failover Cluster) sein. Die Clientanforderungen werden durch diesen Knoten in der FCI behandelt. Falls ein Fehler auftritt und kein erfolgreicher Neustart möglich ist, geht die Gruppe in den Besitz eines anderen WSFC-Knotens in der FCI über. Dieser Prozess wird als Failover bezeichnet. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] erhöht die Zuverlässigkeit der Fehlererkennung und bietet eine flexible Failoverrichtlinie.  
@@ -76,7 +76,7 @@ ms.locfileid: "48218220"
   
 4.  io_subsystem  
   
-5.  Ereignisse  
+5.  -Ereignisse  
   
  Das System, die Ressource und der Abfrageprozess werden für die Fehlererkennung verwendet. Die io_subsytem und die Ereignisse werden nur zu Diagnosezwecken verwendet.  
   
@@ -97,14 +97,14 @@ ms.locfileid: "48218220"
 |0|Kein automatischer Failover oder Neustart|Gibt an, dass bei einer Fehlerbedingung nicht automatisch ein Failover oder Neustart ausgelöst wird. Diese Ebene ist nur für die Systemwartung vorgesehen.|  
 |1|Failover oder Neustart bei Serverausfall|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn die folgende Bedingung zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.|  
 |2|Failover oder Neustart bei nicht reagierendem Server|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.<br /><br /> SQL Server-Instanz reagiert nicht (die Ressourcen-DLL kann von sp_server_diagnostics keine Daten innerhalb der durch die HealthCheckTimeout-Einstellungen vorgegebenen Zeit empfangen).|  
-|3*|Failover oder Neustart bei wichtigen Serverfehlern|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.<br /><br /> SQL Server-Instanz reagiert nicht (die Ressourcen-DLL kann von sp_server_diagnostics keine Daten innerhalb der durch die HealthCheckTimeout-Einstellungen vorgegebenen Zeit empfangen).<br /><br /> Gespeicherte Systemprozedur sp_server_diagnostics gibt einen Systemfehler zurück.|  
-|4|Failover oder Neustart auf mittelschweren Serverfehlern|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.<br /><br /> SQL Server-Instanz reagiert nicht (die Ressourcen-DLL kann von sp_server_diagnostics keine Daten innerhalb der durch die HealthCheckTimeout-Einstellungen vorgegebenen Zeit empfangen).<br /><br /> Gespeicherte Systemprozedur sp_server_diagnostics gibt einen Systemfehler zurück.<br /><br /> Gespeicherte Systemprozedur sp_server_diagnostics gibt einen Ressourcenfehler zurück.|  
-|5|Failover oder Neustart bei qualifizierten Fehlerbedingungen|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.<br /><br /> SQL Server-Instanz reagiert nicht (die Ressourcen-DLL kann von sp_server_diagnostics keine Daten innerhalb der durch die HealthCheckTimeout-Einstellungen vorgegebenen Zeit empfangen).<br /><br /> Gespeicherte Systemprozedur sp_server_diagnostics gibt einen Systemfehler zurück.<br /><br /> Gespeicherte Systemprozedur sp_server_diagnostics gibt einen Ressourcenfehler zurück.<br /><br /> Gespeicherte Systemprozedur sp_server_diagnostics gibt Fehler bei der Abfrageverarbeitung zurück.|  
+|3*|Failover oder Neustart bei wichtigen Serverfehlern|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.<br /><br /> SQL Server-Instanz reagiert nicht (die Ressourcen-DLL kann von sp_server_diagnostics keine Daten innerhalb der durch die HealthCheckTimeout-Einstellungen vorgegebenen Zeit empfangen).<br /><br /> Die gespeicherte Systemprozedur sp_server_diagnostics gibt einen Systemfehler zurück.|  
+|4|Failover oder Neustart auf mittelschweren Serverfehlern|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.<br /><br /> SQL Server-Instanz reagiert nicht (die Ressourcen-DLL kann von sp_server_diagnostics keine Daten innerhalb der durch die HealthCheckTimeout-Einstellungen vorgegebenen Zeit empfangen).<br /><br /> Die gespeicherte Systemprozedur sp_server_diagnostics gibt einen Systemfehler zurück.<br /><br /> Die gespeicherte Systemprozedur sp_server_diagnostics gibt einen Ressourcenfehler zurück.|  
+|5|Failover oder Neustart bei qualifizierten Fehlerbedingungen|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.<br /><br /> SQL Server-Instanz reagiert nicht (die Ressourcen-DLL kann von sp_server_diagnostics keine Daten innerhalb der durch die HealthCheckTimeout-Einstellungen vorgegebenen Zeit empfangen).<br /><br /> Die gespeicherte Systemprozedur sp_server_diagnostics gibt einen Systemfehler zurück.<br /><br /> Die gespeicherte Systemprozedur sp_server_diagnostics gibt einen Ressourcenfehler zurück.<br /><br /> Die gespeicherte Systemprozedur sp_server_diagnostics gibt einen Fehler bei der Abfrageverarbeitung zurück.|  
   
  *Standardwert  
   
 ####  <a name="respond"></a> Reagieren auf Fehler  
- Wie der WSFC-Dienst auf die erkannten Fehlerbedingungen reagiert, hängt vom WSFC-Quorumstatus sowie von den Neustart- und Failovereinstellungen der FCI-Ressourcengruppe ab. Wenn die FCI das WSFC-Quorum verloren hat, wird die gesamte FCI offline geschaltet und weist keine Hochverfügbarkeit mehr auf. Wenn die FCI noch über das WSFC-Quorum verfügt, reagiert der WSFC-Dienst u. U. wie folgt: Zunächst wird versucht, den fehlerhaften Knoten neu zu starten, und dann ein Failover ausgeführt, falls die Neustarts nicht erfolgreich sind. Die Neustart- und Failovereinstellungen werden im Failovercluster-Manager-Snap-In konfiguriert. Weitere Informationen zu diesen Einstellungen finden Sie unter [\<Eigenschaften von <Ressource>: Richtlinien (Registerkarte)](http://technet.microsoft.com/library/cc725685.aspx).  
+ Wie der WSFC-Dienst auf die erkannten Fehlerbedingungen reagiert, hängt vom WSFC-Quorumstatus sowie von den Neustart- und Failovereinstellungen der FCI-Ressourcengruppe ab. Wenn die FCI das WSFC-Quorum verloren hat, wird die gesamte FCI offline geschaltet und weist keine Hochverfügbarkeit mehr auf. Wenn die FCI noch über das WSFC-Quorum verfügt, reagiert der WSFC-Dienst u. U. wie folgt: Zunächst wird versucht, den fehlerhaften Knoten neu zu starten, und dann ein Failover ausgeführt, falls die Neustarts nicht erfolgreich sind. Die Neustart- und Failovereinstellungen werden im Failovercluster-Manager-Snap-In konfiguriert. Weitere Informationen finden Sie unter diesen Einstellungen [ \<Ressource > Eigenschaften: Registerkarte "Richtlinien"](https://technet.microsoft.com/library/cc725685.aspx).  
   
  Informationen zum Verwalten der Quorumintegrität finden Sie unter [WSFC-Quorummodi und Abstimmungskonfiguration &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   

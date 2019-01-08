@@ -1,7 +1,7 @@
 ---
 title: SQL Server Migration Assistant | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/30/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -10,12 +10,12 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a90d7bd53433bd0db027787cdcd83f53b8227804
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
+ms.sourcegitcommit: d040bab6f826f0c37cd207a6c7cef04a8963c5d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668400"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031716"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) ist ein Tool zur Automatisierung der Datenbankmigration zu SQL Server aus Microsoft Access, DB2, MySQL, Oracle und SAP ASE.  
@@ -38,13 +38,14 @@ Microsoft SQL Server Migration Assistant (SSMA) ist ein Tool zur Automatisierung
 Die folgende Zielversionen werden für SSMA unterstützt.
 
 - SQL Server 2008
-- SQL Server 2008 R2
+- SQL Server 2008 R2
 - SQL Server 2012
 - SQLServer 2014
 - SQL Server 2016
+- SQLServer 2017 unter Windows und Linux
+- SQLServer 2019 unter Windows und Linux
 - Azure SQL-Datenbank
-- SQLServer 2017 unter Windows und Linux (Vorschau)
-- ** Azure SQL Datawarehouse
+- Azure SQL Data Warehouse **
 
 ** Dieses Ziel wird nur von SSMA für Oracle unterstützt.
  
@@ -70,7 +71,7 @@ Die folgende Zielversionen werden für SSMA unterstützt.
   
 -   Premier-Support – Wenn man einen Premier-Vertrag, erhalten Sie Premier auf unterstützen die [Premier-Onlineportal](https://premier.microsoft.com/).  
   
--   Beratungsdienste – für Partner unterstützte Migrationen, wechseln Sie die [Partnerportal](https://www.platformmodernization.org/Pages/default.aspx).  
+-   Consulting Services - Partner unterstützte Migrationen, wechseln Sie die [Partnerportal](https://www.platformmodernization.org/Pages/default.aspx).  
   
 ## <a name="legal-notice-ssma"></a>Rechtliche Hinweise (SSMA)  
 Diese Dokumentation, einschließlich der darin enthaltenen Beispielanwendungen, wird nur zu Informationszwecken zur Verfügung gestellt. Es werden keine Gewährleistungen übernommen, weder ausdrücklich noch konkludent. Die in dieser Dokumentation enthaltenen Angaben und Daten, einschließlich URLs und anderen Verweisen auf Internetwebsites, können ohne vorherige Ankündigung geändert werden. Das vollständige Risiko der Nutzung oder der Ergebnisse der Nutzung dieser Dokumentation liegt bei dem Benutzer.  
@@ -81,7 +82,7 @@ Die in den Beispielen verwendeten Namen von Firmen, Organisationen, Produkten, D
   
 Es ist möglich, dass Microsoft Rechte an Patenten bzw. angemeldeten Patenten, an Marken, Urheberrechten oder sonstigem geistigen Eigentum besitzt, die sich auf den fachlichen Inhalt dieser Dokumentation beziehen. Das Bereitstellen dieser Dokumentation gibt Ihnen jedoch keinen Anspruch auf diese Patente, Marken, Urheberrechte oder auf sonstiges geistiges Eigentum, es sei denn, dies wird ausdrücklich in den schriftlichen Lizenzverträgen von Microsoft eingeräumt.  
   
-© 2017 Microsoft Corporation. Alle Rechte vorbehalten.  
+© Microsoft Corporation. 2019. Alle Rechte vorbehalten.  
   
 Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System und WinFX sind entweder eingetragene Marken oder Marken der Microsoft Corporation in den USA und/oder anderen Ländern und Regionen.  
   
@@ -90,7 +91,7 @@ SAP NetWeaver ist eine eingetragene Marke der SAP AG in Deutschland und/oder and
 Alle anderen Marken sind Eigentum ihrer jeweiligen Inhaber.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Dokumentationsrichtlinie für den Support von und das Upgrade auf SQL Server  
-In der SQL Server-Dokumentation werden Inhalte erst veröffentlicht, nachdem ausreichend Tests durchgeführt wurden. Die Produktdokumentation – SQL Server-Onlinedokumentation, Infodateien, Dokumente zu bekannten Problemen und Knowledge Base-Artikel – umfasst Inhalte zu SQL Server-Features und -Funktionen, die robust genug sind, um generell von allen Kunden sicher verwendet zu werden. Diese Richtlinie gilt für alle SQL Server-Dokumentationen, einschließlich der Infodateien zu Versionen und Service Packs. Eine Infodatei wird als Erweiterung der Onlinedokumentation betrachtet.  
+In der SQL Server-Dokumentation werden Inhalte erst veröffentlicht, nachdem ausreichend Tests durchgeführt wurden. Produktdokumentation – SQL Server-Onlinedokumentation, Infodateien, Dokumenten zu bekannten Problemen und Knowledge Base-Artikel – enthält die Inhalte zu SQL Server-Features und Funktionen, die robust genug für die allgemeine Verwendung von allen Kunden sicher sein. Diese Richtlinie gilt für alle SQL Server-Dokumentationen, einschließlich der Infodateien zu Versionen und Service Packs. Eine Infodatei wird als Erweiterung der Onlinedokumentation betrachtet.  
   
 Es gibt Fälle, in denen bestimmte Funktionen von Kunden nicht direkt verwendet werden sollten, weshalb diese nicht dokumentiert sind. Sofern ein Feature nicht auch in der SQL Server-Dokumentation von Microsoft beschrieben wird, werden Inhalte in Dokumentationen oder auf Websites von Drittanbietern vom Microsoft-Kundendienst nicht unterstützt und sollte nicht in Produktionsdatenbanken oder Anwendungen verwendet werden.  
   

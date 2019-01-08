@@ -18,12 +18,12 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7224a4e301565dc1bc6f6968da3477792b8cfc22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf644b6a8795e9c68e0053eaed0023c4b9299b6
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781489"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588404"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +45,22 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@table_server =** ] **"***Table_server***"**  
+ [  **@table_server =** ] **"**_Table_server_**"**  
  Der Name des Verbindungsservers, für den Spalteninformationen zurückgegeben werden sollen. *Table_server* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@table_name =** ] **"***Table_name***"**  
+ [  **@table_name =** ] **"**_Table_name_**"**  
  Der Name der Tabelle, für die Spalteninformationen zurückgegeben werden sollen. *TABLE_NAME* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@table_schema =** ] **"***Table_schema***"**  
+ [  **@table_schema =** ] **"**_Table_schema_**"**  
  Der Schemaname der Tabelle, für die Spalteninformationen zurückgegeben werden sollen. *TABLE_SCHEMA* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@table_catalog =** ] **"***Table_catalog***"**  
+ [  **@table_catalog =** ] **"**_Table_catalog_**"**  
  Der Katalogname der Tabelle, für die Spalteninformationen zurückgegeben werden sollen. *TABLE_CATALOG* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@column_name =** ] **"***Spalte***"**  
+ [  **@column_name =** ] **"**_Spalte_**"**  
  Der Name der Datenbankspalte, für die Informationen bereitgestellt werden sollen. *Spalte* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@ODBCVer =** ] **"***ODBCVer***"**  
+ [  **@ODBCVer =** ] **"**_ODBCVer_**"**  
  Ist die Version von ODBC, der verwendet wird. *ODBCVer* ist **Int**, hat den Standardwert von 2. Dieser gibt ODBC, Version 2, an. Gültige Werte sind 2 oder 3. Informationen zu den Verhaltensunterschieden zwischen den Versionen 2 und 3 finden Sie in der SQLColumns-Spezifikation von ODBC.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -70,7 +70,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Der Name des Qualifizierers für die Tabelle oder Sicht. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer ***.*** Besitzer ***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte dem Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
+|**TABLE_CAT**|**sysname**|Der Name des Qualifizierers für die Tabelle oder Sicht. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (_Qualifizierer_**.** _Besitzer_**.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte dem Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
 |**NACH "TABLE_SCHEM"**|**sysname**|Der Name des Besitzers der Tabelle oder Sicht. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Namen des Datenbankbenutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Der Name der Tabelle oder Sicht. Dieses Feld gibt immer einen Wert zurück.|  
 |**COLUMN_NAME**|**sysname**|Name der Spalte für jede Spalte von der **TABLE_NAME** zurückgegeben. Dieses Feld gibt immer einen Wert zurück.|  

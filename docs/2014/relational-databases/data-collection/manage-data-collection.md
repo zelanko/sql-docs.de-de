@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
@@ -14,18 +14,18 @@ ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2209c8de9c65e5740b9a6ebdd62972c93596e396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104860"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768292"
 ---
 # <a name="manage-data-collection"></a>Verwalten von Datensammlungen
-  Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozeduren und Funktionen, um unterschiedliche Aspekte der Datensammlung zu verwalten, wie z. B. das Aktivieren oder Deaktivieren der Datensammlung, das Ändern einer sammlungssatzkonfiguration oder das Anzeigen von Daten im Verwaltungs-Datawarehouse .  
+  Sie können gespeicherten Prozeduren und Funktionen von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] verwenden, um unterschiedliche Aspekte der Datensammlung zu verwalten, beispielsweise das Aktivieren oder Deaktivieren der Datensammlung, das Ändern einer Sammlungssatzkonfiguration oder das Anzeigen von Daten im Verwaltungs-Data Warehouse.  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>Verwalten der Datensammlung mit SQL Server Management Studio  
- Sie können die folgenden Daten datensammlerbezogenen Tasks ausführen, indem Sie mithilfe des Objekt-Explorers in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+ Sie können die folgenden datensammlerbezogenen Tasks ausführen, indem Sie den Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden.  
   
 -   [Konfigurieren des Verwaltungs-Data Warehouses &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48104860"
 > [!IMPORTANT]  
 >  Im Gegensatz zu regulären gespeicherten Prozeduren verwenden die gespeicherten Prozeduren des Datensammlers genau eingegebene Parameter und unterstützen die automatische Datentypkonvertierung nicht. Wenn diese Parameter nicht mit den richtigen Datentypen für Eingabeparameter aufgerufen werden, wie in der Argumentbeschreibung angegeben, gibt die gespeicherte Prozedur einen Fehler zurück.  
   
- Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellen und führen Sie die bereitgestellten Codebeispiele. Weitere Informationen finden Sie unter [Objekt-Explorer](../../ssms/object/object-explorer.md). Alternativ können Sie die Abfrage in einem Editor erstellen und in einer Textdatei mit der Dateinamenerweiterung ".sql" speichern. Sie können die Abfrage ausführen, von der Windows-Eingabeaufforderung unter Verwendung der `sqlcmd` Hilfsprogramm. Weitere Informationen finden Sie unter [Verwenden des Hilfsprogramms „sqlcmd“](../scripting/sqlcmd-use-the-utility.md).  
+ Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden, um die bereitgestellten Codebeispiele zu erstellen und auszuführen. Weitere Informationen finden Sie unter [Objekt-Explorer](../../ssms/object/object-explorer.md). Alternativ können Sie die Abfrage in einem Editor erstellen und in einer Textdatei mit der Dateinamenerweiterung ".sql" speichern. Sie können die Abfrage mithilfe des Hilfsprogramms `sqlcmd` von der Windows-Eingabeaufforderung aus ausführen. Weitere Informationen finden Sie unter [Verwenden des Hilfsprogramms sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
   
 ### <a name="stored-procedures-and-views"></a>Gespeicherte Prozeduren und Sichten  
  **Arbeiten mit dem Datensammler**  

@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Verwalten von Rollen | Microsoft-Dokumentation
+title: Erstellen und Verwalten von Rollen in tabellarischen Modellen von Analysis Services | Microsoft-Dokumentation
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 883eab47796f5cb09d5993fa2b2570cdda3cd2ae
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 093197db8257cf9be261658f1828783fa01d7cc2
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099651"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072217"
 ---
 # <a name="create-and-manage-roles"></a>Erstellen und Verwalten von Rollen 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "50099651"
   
  Die Aufgaben in diesem Artikel wird beschrieben, wie zum Erstellen und Verwalten von Rollen während der Modellerstellung mithilfe des Rollen-Manager-Dialogfelds in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Informationen zum Verwalten von Rollen in einer bereitgestellten Modelldatenbank finden Sie unter [Rollen tabellarischer Modelle](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
-## <a name="tasks"></a>Aufgaben  
+## <a name="tasks"></a>Richtlinienübersicht  
  Zum Erstellen, Bearbeiten, Kopieren und Löschen von Rollen verwenden Sie das Dialogfeld **Rollen-Manager** . Klicken Sie zum Anzeigen des Dialogfelds **Rollen-Manager** in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]auf das Menü **Modell** und anschließend auf **Rollen-Manager**.  
   
 ###  <a name="bkmk_new_role"></a> So erstellen Sie eine neue Rolle  

@@ -5,8 +5,7 @@ ms.date: 03/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f19ad878499d9739745f29aa8c2f749fe2b3132
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41e5f03dbe8619ca2e00d70b2c569d90f75d2d2f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843378"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211280"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ sp_table_validation [ @table = ] 'table'
  [  **@full_or_fast=**] *Full_or_fast*  
  Die Methode, mit der die Zeilenanzahl berechnet wird. *Full_or_fast* ist **Tinyint**, hat den Standardwert **2**, und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**0**|Führt eine vollständige Zählung mit COUNT(*) durch.|  
 |**1**|Führt eine schnelle Zählung von **sysindexes.rows**. Zählen der Zeilen im **"sysindexes"** ist wesentlich schneller als das Zählen von Zeilen in der eigentlichen Tabelle. Aber da **"sysindexes"** nur verzögert aktualisiert, die Zeilenanzahl möglicherweise nicht ganz genau.|  
@@ -98,7 +97,7 @@ sp_table_validation [ @table = ] 'table'
   
  Beim Ausführen einer Prüfsummenberechnung muss die Struktur der Tabelle auf den beiden Servern identisch sein. Das heißt, für die Tabellen müssen dieselben Spalten in derselben Reihenfolge vorhanden sein, dieselben Datentypen und Längen, und sie müssen dieselben NULL- bzw. NOT NULL-Bedingungen aufweisen. Wenn auf dem Verleger beispielsweise CREATE TABLE und dann ALTER TABLE zum Hinzufügen von Spalten ausgeführt wurden, aber das auf dem Abonnenten angewendete Skript ein einfaches CREATE für eine Tabelle darstellt, dann ist die Struktur nicht dieselbe. Wenn Sie nicht sicher sind, dass die Struktur der beiden Tabellen identisch ist, sehen Sie sich [Syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) und vergewissern Sie sich, dass der Offset in den einzelnen Tabellen identisch ist.  
   
- Gleitkommawerte sind wahrscheinlich Prüfsumme Unterschiede zu generieren, wenn im Zeichenmodus **Bcp** verwendet wurde, dies ist der Fall, wenn die Veröffentlichung nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten. Diese Unterschiede sind durch geringfügige und unvermeidbare Genauigkeitsunterschiede bedingt, die auftreten, wenn Konvertierungen in den und aus dem Zeichenmodus durchgeführt werden.  
+ Gleitkommawerte sind wahrscheinlich Prüfsumme Unterschiede zu generieren, wenn im Zeichenmodus **Bcp** verwendet wurde, dies ist der Fall, wenn die Veröffentlichung nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten. Diese Unterschiede sind durch geringfügige und unvermeidbare Genauigkeitsunterschiede bedingt, die auftreten, wenn Konvertierungen in den und aus dem Zeichenmodus durchgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Auszuführende **Sp_table_validation**, benötigen Sie SELECT-Berechtigungen für die Tabelle, die überprüft wird.  

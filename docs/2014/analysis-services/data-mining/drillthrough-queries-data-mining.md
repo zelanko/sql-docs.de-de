@@ -15,12 +15,12 @@ ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a84857925cd4f9db7088ec922a3cceccb0d64895
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 89900ccb182c58041af7b428af336ddab217d245
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147616"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538894"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Drillthroughabfragen (Data Mining)
   Mithilfe einer *Drillthroughabfrage* können Sie Details aus zugrunde liegenden Fällen oder Strukturdaten abrufen, indem Sie eine Anfrage an das Miningmodell senden. Ein Drillthrough ist hilfreich, wenn Sie die Fälle anzeigen möchten, die zum Trainieren des Modells verwendet wurden, und nicht die Fälle, die zum Testen des Modells verwendet wurden, oder wenn Sie zusätzliche Details aus den Falldaten einsehen möchten.  
@@ -29,7 +29,7 @@ ms.locfileid: "50147616"
   
 -   Drillthrough zu den **Fällen im Modell**  
   
-     Drillthroughs zu Modellfällen werden ausgeführt, wenn Sie bei einem bestimmten Muster im Modell beginnen – z. B. bei einem Cluster oder einer Verzweigung einer Entscheidungsstruktur – und Details zu den einzelnen Fällen anzeigen möchten.  
+     Drillthrough zu modellfällen wird verwendet, wenn Sie von einem bestimmten Muster im Modell – etwa als einen Cluster oder eine Verzweigung einer Entscheidungsstruktur wechseln möchten – und Details zu den einzelnen Fällen anzeigen.  
   
 -   Drillthrough zu den **Fällen in der Struktur**  
   
@@ -92,7 +92,7 @@ ms.locfileid: "50147616"
 ##  <a name="bkmk_Tasks"></a> Verwandte Aufgaben  
  Verwenden Sie die folgenden Links, um in bestimmten Szenarien mit Drillthroughs zu arbeiten.  
   
-|Task|Link|  
+|Aufgabe|Link|  
 |----------|----------|  
 |Schritte zur Verwendung von Drillthroughs im Data Mining-Designer|[Ausführen von Drillthroughs für Falldaten aus einem Miningmodell](drill-through-to-case-data-from-a-mining-model.md)|  
 |So ändern Sie ein vorhandenes Miningmodell, um Drillthroughs zu ermöglichen|[Aktivieren von Drillthrough für ein Miningmodell](enable-drillthrough-for-a-mining-model.md)|  

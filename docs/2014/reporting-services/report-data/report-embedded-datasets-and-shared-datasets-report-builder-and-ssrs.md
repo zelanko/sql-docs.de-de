@@ -13,12 +13,12 @@ ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cee911569d1b90751e6c553b365a08bbaa3108eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 278cbff64973a76afd82ae7f01e8c81d12f20e5a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138270"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373392"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Erstellen von Berichten zu eingebetteten und freigegebenen Datasets (Berichts-Generator und SSRS)
   Ein Dataset gibt die Daten aus einer Datenverbindung an, die Sie verwenden möchten. Ein Dataset basiert auf einer Datenverbindung, die im Bericht als eine eingebettete Datenquelle oder ein Verweis auf eine freigegebene Datenquelle auf einem Berichtsserver gespeichert wurde. Das Dataset enthält eine Abfrage, die einen Satz von Feldern angibt. Wie Sie diese Felder in die Entwurfsoberfläche ziehen, erstellen Sie Ausdrücke, die die tatsächlichen Daten ergeben, wenn der Bericht ausgeführt wird.  
@@ -74,13 +74,13 @@ ms.locfileid: "48138270"
   
 -   Ein vereinfachtes Resultset aus XML-Datenquellen, u. a. XML-Elemente, deren Attribute und deren untergeordnete Elemente.  
   
--   Ein Resultset von einem beliebigen registrierten und konfigurierten [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Datenanbieter.  
+-   Ein Resultset von einem beliebigen registrierten und konfigurierten [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] -Datenanbieter.  
   
--   Daten aus einem Berichtsmodell, das für eine bestimmte Datenquelle entworfen wurde, mit vordefinierten Entitäten, Entitätenbeziehungen und Feldern. Weitere Informationen finden Sie unter "**Verwenden von Berichtsmodellen** als Datenquellen" in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
+-   Daten aus einem Berichtsmodell, das für eine bestimmte Datenquelle entworfen wurde, mit vordefinierten Entitäten, Entitätenbeziehungen und Feldern. Weitere Informationen finden Sie unter "**Verwenden von Berichtsmodellen** als Datenquellen" in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
- Wenn der Bericht zur Laufzeit verarbeitet wird, kann das tatsächlich für eine Abfrage zurückgegebene Resultset null oder mehr Zeilen enthalten. Zudem ist es möglich, dass die in der Abfrage definierten Spalten in der Datenquelle fehlen. NULL-Werte aus der Datenquelle zugeordnet sind die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Wert `System.DBNull.Value`.  
+ Wenn der Bericht zur Laufzeit verarbeitet wird, kann das tatsächlich für eine Abfrage zurückgegebene Resultset null oder mehr Zeilen enthalten. Zudem ist es möglich, dass die in der Abfrage definierten Spalten in der Datenquelle fehlen. NULL-Werte aus der Datenquelle werden dem [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Wert `System.DBNull.Value` zugeordnet.  
   
- Weitere Informationen über Datasetfelder finden Sie unter [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Weitere Informationen zu Datasetfeldern finden Sie unter [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="dataset-query"></a>Datasetabfrage  
  Wenn Sie zur Entwurfszeit eine Datasetabfrage in einem Abfrage-Designer ausführen, wird ein Rowset mit den Beispieldaten angezeigt, das aus der Datenquelle stammt. Wenn ein Benutzer zur Laufzeit den Bericht angezeigt, führt die Datasetabfrage möglicherweise zu anderen Werten, da die Daten in der Datenquelle geändert wurden. Bei jeder Berichtsverarbeitung werden möglicherweise neue Daten angezeigt.  
@@ -89,7 +89,7 @@ ms.locfileid: "48138270"
   
  In einem Abfrage-Designer können Sie wie folgt vorgehen:  
   
--   Schalten Sie zwischen grafischer und textbasierter Abfragesicht um. Mit der grafischen Abfragesicht können Sie Schemas, Tabellen, Sichten und gespeicherte Prozeduren der Datenquelle anzeigen. Verwenden Sie die textbasierte Sicht, um eine Abfrage einzugeben oder eine vorhandene Abfrage einzufügen bzw. anzuzeigen. Dies wird hauptsächlich für komplexe Abfragen verwendet, die nicht im grafischen Abfrage-Designer angezeigt werden können. Sie können z. B. eine Abfrage aus einer [!INCLUDE[tsql](../../../includes/tsql-md.md)] (.sql)-Datei, einem anderen Bericht auf dem Berichtsserver oder einer Berichtsdefinitionsdatei (.rdl) aus einer Dateifreigabe importieren.  
+-   Schalten Sie zwischen grafischer und textbasierter Abfragesicht um. Mit der grafischen Abfragesicht können Sie Schemas, Tabellen, Sichten und gespeicherte Prozeduren der Datenquelle anzeigen. Verwenden Sie die textbasierte Sicht, um eine Abfrage einzugeben oder eine vorhandene Abfrage einzufügen bzw. anzuzeigen. Dies wird hauptsächlich für komplexe Abfragen verwendet, die nicht im grafischen Abfrage-Designer angezeigt werden können. Sie können z. B. eine Abfrage aus einer [!INCLUDE[tsql](../../../includes/tsql-md.md)] (.sql)-Datei, einem anderen Bericht auf dem Berichtsserver oder einer Berichtsdefinitionsdatei (.rdl) aus einer Dateifreigabe importieren.  
   
 -   Führen Sie die Abfrage aus, um die Daten anzuzeigen. Die Abfrage gibt ein Resultset zurück. Die Spalten im Resultset werden zur Feldauflistung des Datasets. Die Zeilen des Ergebnisses werden zu den Daten des Datasets. Sie können mit der Abfrage arbeiten, bis Sie die gewünschten Spalten erhalten.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48138270"
   
  Wenn Sie einem Bericht ein freigegebenes Dataset hinzufügen, wird die Datasetfeldauflistung auf die aktuelle Definition auf dem Berichtsserver aktualisiert. Sie empfangen keine Updatebenachrichtigungen, wenn Änderungen auf dem Berichtsserver vorgenommen werden. Um eine lokale Kopie der Feldauflistung mit Änderungen zu synchronisieren, die an der Definition des freigegebenen Datasets auf dem Berichtsserver vorgenommen wurden, müssen Sie die lokale Feldauflistung aktualisieren. Weitere Informationen finden Sie unter [Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich &#40;Berichts-Generator und SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
- Veröffentlichte Berichtselemente enthalten die eingebetteten und freigegebenen Datasets, von denen sie abhängen. Weitere Informationen finden Sie unter [Berichtsteile und Datasets in Berichts-Generator](report-parts-and-datasets-in-report-builder.md).  
+ Veröffentlichte Berichtselemente enthalten die eingebetteten und freigegebenen Datasets, von denen sie abhängen. Weitere Informationen finden Sie unter [Berichtsteile und Datasets](report-parts-and-datasets-in-report-builder.md).  
   
  Der Unterschied zwischen den eingebetteten und den freigegebenen Datenquellen ist die Art der Erstellung, Speicherung und Verwaltung. In der folgenden Tabelle werden die Unterschiede zwischen eingebetteten und freigegebenen Datenquellen zusammengefasst:  
   
@@ -152,7 +152,7 @@ ms.locfileid: "48138270"
 |Felder|Felder im Abfragebefehl<br /><br /> Berechnete Felder sind kein Teil der Datasetdefinition.|Felder anzeigen, aber nicht ändern<br /><br /> Die Feldauflistung ist statisch und basiert auf der Abfrage, die beim Hinzufügen des freigegebenen Datasets zum Berichts vorlag. Klicken Sie im Dialogfeld **Dataseteigenschaften** auf **Felder aktualisieren** , um die Auflistung zu aktualisieren. Die tatsächliche Feldauflistung entspricht dem Rückgabeergebnis der aktuellen Abfrage in der Definition.<br /><br /> Berechnete Felder hinzufügen|  
 |Dataset|Datenoptionen wie z. B. die Berücksichtigung der Groß- und Kleinschreibung|Datenoptionen in der Instanz können überschrieben werden.|  
   
- Weitere Informationen zum Erstellen von Datasets finden Sie unter [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) und [Reporting Services-Tools](../tools/reporting-services-tools.md) in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) der SQL Server-Onlinedokumentation.  
+ Weitere Informationen zum Erstellen von Datasets finden Sie unter [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) und [Reporting Services-Tools](../tools/reporting-services-tools.md) in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) der SQL Server-Onlinedokumentation.  
   
 ##  <a name="SortGroupFilter"></a> Filtern, Sortieren und Gruppieren von Daten in einem Dataset  
  Die Daten in einem Dataset stammen aus einer externen Datenquelle, für die ein Abfragebefehl ausgeführt wurde. Die Abfragebefehlssyntax für eine Datenerweiterung bestimmt, ob Daten sortiert oder gruppiert werden können. Das Sortierend und Gruppieren findet in der Abfrage statt, bevor die Daten für einen Bericht abgerufen werden. Das Filtern findet statt, nachdem die Daten für einen Bericht abgerufen wurden.  
@@ -164,14 +164,14 @@ ms.locfileid: "48138270"
   
  Filter sind Teil der Definition eines freigegebenen Datasets. Filter freigegebener Datasets wirken sich auf alle Berichte aus, die das freigegebene Dataset enthalten. Nachdem Sie dem Bericht ein freigegebenes Dataset oder eine Komponente mit einem abhängigen freigegebenen Dataset hinzugefügt haben, können Sie weitere Datasetfilter erstellen. Von Ihnen erstellte Filter werden nur in Ihrem Bericht verwendet, sie sind nicht Teil der Definition des freigegebenen Datasets auf dem Berichtsserver.  
   
- Sie können weitere Filter für einen Datenbereich oder eine Datenbereichsgruppe festlegen. Sie können auch eine Kombination von Parametern und Filtern verwenden, um Benutzern zu ermöglichen, die Daten auszuwählen, die sie in einem Bericht anzeigen möchten. Weitere Informationen finden Sie unter [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Sie können weitere Filter für einen Datenbereich oder eine Datenbereichsgruppe festlegen. Sie können auch eine Kombination von Parametern und Filtern verwenden, um Benutzern zu ermöglichen, die Daten auszuwählen, die sie in einem Bericht anzeigen möchten. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)" basiert.  
   
 ### <a name="sorting-data-in-a-dataset"></a>Sortieren von Daten in einem Dataset  
- In einem Dataset ist die Reihenfolge der Daten die Reihenfolge, in der sie aus der externen Datenquelle abgerufen werden. Dies ist die gleiche Reihenfolge, die Sie sehen, wenn Sie die Abfrage im Abfrage-Designer ausführen. Wenn die Abfragebefehlssyntax das Sortieren unterstützt, können Sie die Abfrage so bearbeiten, dass die Daten an der Quelle sortiert werden, bevor sie als Berichtsdaten zurückgegeben werden. Bei einer [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Abfrage steuert z. B. die ORDER BY-Anweisung die Sortierreihenfolge.  
+ In einem Dataset ist die Reihenfolge der Daten die Reihenfolge, in der sie aus der externen Datenquelle abgerufen werden. Dies ist die gleiche Reihenfolge, die Sie sehen, wenn Sie die Abfrage im Abfrage-Designer ausführen. Wenn die Abfragebefehlssyntax das Sortieren unterstützt, können Sie die Abfrage so bearbeiten, dass die Daten an der Quelle sortiert werden, bevor sie als Berichtsdaten zurückgegeben werden. Bei einer [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfrage steuert z. B. die ORDER BY-Anweisung die Sortierreihenfolge.  
   
  Um Daten zu sortieren, nachdem sie an den Bericht zurückgegeben wurden, definieren Sie Sortierungsausdrücke für Datenbereiche und Datenbereichsgruppen. Weitere Informationen finden Sie im Artikel über den jeweiligen Datenbereichstyp, z.B. [Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
- Sie können auch eine Kombination von Parametern und Sortierungsausdrücken verwenden, um Benutzern zu ermöglichen, die Sortierreihenfolge der Daten in einem Bericht auszuwählen. Weitere Informationen finden Sie unter [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Sie können auch eine Kombination von Parametern und Sortierungsausdrücken verwenden, um Benutzern zu ermöglichen, die Sortierreihenfolge der Daten in einem Bericht auszuwählen. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)" basiert.  
   
 ### <a name="grouping-data-in-a-dataset"></a>Gruppieren von Daten in einem Dataset  
  Sie können keine Daten in einem Dataset gruppieren. Um Daten in einem Dataset zu aggregieren, können Sie den Abfragebefehl so bearbeiten, dass Aggregate berechnet werden, bevor die Daten für einen Bericht abgerufen werden. Diese Werte werden als *Serveraggregate*bezeichnet. Verwenden Sie in Ausdrücken die Aggregatfunktion, um diese Werte als vorausberechnete Aggregate zu identifizieren. Weitere Informationen finden Sie unter [Aggregatfunktion &#40;Berichts-Generator und SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md).  
@@ -206,9 +206,9 @@ ms.locfileid: "48138270"
   
 -   Sie zeigen die Daten aus jedem Dataset mithilfe eines separaten Datenbereichs an. Weitere Informationen finden Sie unter [Data Regions and Maps (Report Builder and SSRS) (Datenbereiche und Karten (Berichts-Generator und SSRS))](../report-design/data-regions-and-maps-report-builder-and-ssrs.md).  
   
--   Sie können mit einem Dataset mehr als einen Datenbereich verknüpfen und mehrere Sichten derselben Daten bereitzustellen. Weitere Informationen finden Sie unter [Verknüpfen mehrerer Datenbereiche mit dem gleichen Dataset &#40;Berichts-Generator und SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+-   Sie können mit einem Dataset mehr als einen Datenbereich verknüpfen und mehrere Sichten derselben Daten bereitzustellen. Weitere Informationen finden Sie unter [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
--   Mithilfe von Datasets können Sie eine Dropdownliste verfügbarer Werte oder Standardwerte für einen Berichtsparameter bereitstellen. Weitere Informationen finden Sie unter [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+-   Mithilfe von Datasets können Sie eine Dropdownliste verfügbarer Werte oder Standardwerte für einen Berichtsparameter bereitstellen. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)" basiert.  
   
 -   Mithilfe von Abfrageparametern und Drillthroughberichten oder Unterberichten können Sie aufeinander bezogene Daten in mehreren Datasets miteinander verknüpfen. Beispielsweise kann ein Verkaufsbericht Zusammenfassungsdaten für alle Filialen aufweisen, und ein Drillthroughlink kann die Geschäfts-ID als Parameter für einen Bericht mit einer Datasetabfrage angeben, mit der die einzelnen Verkäufe für den betreffende Filiale abgerufen werden. Weitere Informationen finden Sie unter [Drillthrough, Drilldown, Subreports, and Nested Data Regions (Report Builder and SSRS) (Drillthrough, Drilldown, Unterberichte und geschachtelte Datenbereiche (Berichts-Generator und SSRS))](../report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md) und [Subreports (Report Builder and SSRS) (Unterberichte (Berichts-Generator und SSRS))](../report-design/subreports-report-builder-and-ssrs.md).  
   
@@ -218,7 +218,7 @@ ms.locfileid: "48138270"
  Wenn während der Berichtsverarbeitung die Abfrage für ein Dataset ausgeführt wird, enthält das Resultset möglicherweise keine Zeilen. Im gerenderten Bericht wird ein mit einem leeren Dataset verknüpfter Datenbereich als leerer Datenbereich angezeigt. Sie können Text angeben, der im gerenderten Bericht anstelle des leeren Datenbereichs angezeigt werden soll. Wenn die Abfragen für sämtliche Datasets zur Laufzeit keine Daten zurückgeben, können Sie auch eine Meldung für Unterberichte festlegen. Weitere Informationen finden Sie unter [Festlegen einer Meldung über fehlende Daten für einen Datenbereich &#40;Berichts-Generator und SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
 ##  <a name="Options"></a> Festlegen von Datasetoptionen  
- Bei Datenquellen, die internationale Daten unterstützen, müssen Sie möglicherweise die Eigenschaften für ein Dataset anpassen, die sich auf die Sortierreihenfolge, internationale Zeicheneigenschaften und Berücksichtigung der Groß- und Kleinschreibung auswirken. Zu diesen Eigenschaften zählen Groß-/Kleinschreibung, Kanatyp, Breite, Akzent und Sortierung. Weitere Informationen finden Sie in „Internationale Überlegungen zu Datenbanken und Datenbank-Engine-Anwendungen“ und „Arbeiten mit Sortierungen“ in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=98335). Weitere Informationen zum Festlegen dieser Eigenschaften finden Sie unter [Dataset Properties Dialog Box, Options (Report Builder) (Dataseteigenschaften (Dialogfeld), Optionen (Berichts-Generator))](dataset-properties-dialog-box-options-report-builder.md).  
+ Bei Datenquellen, die internationale Daten unterstützen, müssen Sie möglicherweise die Eigenschaften für ein Dataset anpassen, die sich auf die Sortierreihenfolge, internationale Zeicheneigenschaften und Berücksichtigung der Groß- und Kleinschreibung auswirken. Zu diesen Eigenschaften zählen Groß-/Kleinschreibung, Kanatyp, Breite, Akzent und Sortierung. Weitere Informationen finden Sie in „Internationale Überlegungen zu Datenbanken und Datenbank-Engine-Anwendungen“ und „Arbeiten mit Sortierungen“ in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=98335). Weitere Informationen zum Festlegen dieser Eigenschaften finden Sie unter [Dataset Properties Dialog Box, Options (Report Builder) (Dataseteigenschaften (Dialogfeld), Optionen (Berichts-Generator))](dataset-properties-dialog-box-options-report-builder.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   

@@ -20,16 +20,16 @@ ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a41829e9cb1f905c82e7cd5f8b179e5e1f777741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70fe1ca95f5160f801eaf3528e625116705eda6d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771678"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203809"
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
   
  **Zusammenfassung**  
  **SQLGetEnvAttr** die aktuelle Einstellung eines Umgebung-Attributs zurück.  
@@ -88,7 +88,7 @@ SQLRETURN SQLGetEnvAttr(
   
  **SQLGetEnvAttr** kann zu einem beliebigen Zeitpunkt zwischen der Zuordnung und die Freigabe des ein Umgebungshandle aufgerufen werden. Alle Umgebungsattribute, die von der Anwendung für die Umgebung wurde erfolgreich festgelegt bleiben, bis **SQLFreeHandle** aufgerufen wird, auf die *EnvironmentHandle* mit einer *HandleType*SQL_HANDLE_ENV auf. Mehr als ein Umgebungshandle kann gleichzeitig zugeordnet werden, in ODBC 3.*.x*. Ein Umgebungsattribut für eine Umgebung ist nicht betroffen, wenn eine andere Umgebung zugeordnet wurde.  
   
-> [!NOTE]  
+> [!NOTE]
 >  SQL_ATTR_OUTPUT_NTS umgebungsattributs wird von den Standards entsprechende Anwendungen unterstützt. Wenn **SQLGetEnvAttr** aufgerufen wird, wird die ODBC 3.*.x* -Treiber-Manager gibt SQL_TRUE immer für dieses Attribut zurück. SQL_ATTR_OUTPUT_NTS kann auf SQL_TRUE festgelegt werden, nur durch einen Aufruf von **SQLSetEnvAttr**.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  

@@ -10,17 +10,17 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100411"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363782"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP
     
 ## <a name="overview"></a>Übersicht  
- Dieses Beispiel veranschaulicht die neue [!INCLUDE[hek_2](../includes/hek-2-md.md)]-Funktion in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] sowie die neuen speicheroptimierten Tabellen und systemintern kompilierten gespeicherten Prozeduren. Darüber hinaus kann es verwendet werden, um die Leistungsvorteile von [!INCLUDE[hek_2](../includes/hek-2-md.md)]nachzuweisen.  
+ Dieses Beispiel veranschaulicht die neue [!INCLUDE[hek_2](../includes/hek-2-md.md)] -Funktion in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] sowie die neuen speicheroptimierten Tabellen und systemintern kompilierten gespeicherten Prozeduren. Darüber hinaus kann es verwendet werden, um die Leistungsvorteile von [!INCLUDE[hek_2](../includes/hek-2-md.md)]nachzuweisen.  
   
 > [!NOTE]  
 >  Informationen zum Anzeigen dieses Themas für SQL Server 2016 finden Sie unter [Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP](https://msdn.microsoft.com/library/mt465764.aspx)  
@@ -35,9 +35,9 @@ ms.locfileid: "50100411"
   
 -   Anweisungen für [Installieren des In-Memory OLTP-Beispiels basierend auf AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
--   [Beschreibung der Beispieltabellen und -prozeduren](#Descriptionofthesampletablesandprocedures) einschließlich der Tabellen und der Verfahren, die AdventureWorks durch das [!INCLUDE[hek_2](../includes/hek-2-md.md)] -Beispiel hinzugefügt werden, sowie Überlegungen zur Migration einiger ursprünglicher AdventureWorks-Tabellen zu speicheroptimierten Tabellen  
+-   [Beschreibung der Beispieltabellen und-Prozeduren](#Descriptionofthesampletablesandprocedures) – einschließlich der Tabellen und Prozeduren hinzugefügt, die AdventureWorks durch das [!INCLUDE[hek_2](../includes/hek-2-md.md)] Beispiel sowie Überlegungen zur Migration einiger der ursprünglichen Tabellen AdventureWorks Speicheroptimierte  
   
--   Anweisungen zur Ausführung von [Leistungsmessungen anhand der exemplarischen Arbeitsauslastung](#PerformanceMeasurementsusingtheDemoWorkload) , einschließlich Anweisungen zur Installation und Ausführung von OSTRESS (einem Tool zum Steuern der Arbeitsauslastung) sowie zur Ausführung der exemplarischen Arbeitsauslastung selbst  
+-   Anweisungen zur Ausführung von [Leistungsmessungen anhand der exemplarischen Arbeitsauslastung](#PerformanceMeasurementsusingtheDemoWorkload), einschließlich Anweisungen zur Installation und Ausführung von OSTRESS (einem Tool zum Steuern der Arbeitsauslastung) sowie zur Ausführung der exemplarischen Arbeitsauslastung selbst  
   
 -   [Arbeitsspeicher- und Datenträgernutzung im Beispiel](#MemoryandDiskSpaceUtilizationintheSample)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "50100411"
   
          "h:\DATA\AdventureWorks2014_Data.mdf"  
   
-    2.  Geben Sie den Zielordner und Dateinamen für die Protokolldatei an, z. B.  
+    2.  Geben Sie den Zielordner und Dateinamen für die Protokolldatei an, z. B.  
   
          "i:\DATA\AdventureWorks2014_log.ldf"  
   
@@ -87,13 +87,13 @@ ms.locfileid: "50100411"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Laden Sie das Beispielskript[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql unter [Beispiel zu In-Memory OLTP in SQL Server 2014 RTM](http://go.microsoft.com/fwlink/?LinkID=396372) in einen lokalen Ordner herunter.  
+5.  Laden Sie das Beispielskript "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql" von [SQL Server 2014 RTM In-Memory-OLTP-Beispiel](https://go.microsoft.com/fwlink/?LinkID=396372) in einen lokalen Ordner.  
   
-6.  Aktualisieren Sie den Wert der Variablen checkpoint_files_location im Skript[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql, sodass sie auf den Zielspeicherort der [!INCLUDE[hek_2](../includes/hek-2-md.md)] -Prüfpunktdateien verweist. Die Prüfpunktdateien sollten auf einem Laufwerk mit ausreichender sequenzieller E/A-Leistung gespeichert werden.  
+6.  Aktualisieren Sie den Wert für die Variable "Checkpoint_files_location" in das Skript "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql", zeigen Sie an den Zielspeicherort für die [!INCLUDE[hek_2](../includes/hek-2-md.md)] Prüfpunktdateien. Die Prüfpunktdateien sollten auf einem Laufwerk mit ausreichender sequenzieller E/A-Leistung gespeichert werden.  
   
      Aktualisieren Sie den Wert der Variablen "database_name", sodass sie auf die AdventureWorks2014-Datenbank verweist.  
   
-    1.  Vergessen Sie nicht den umgekehrten Schrägstrich "\" im Pfadnamen.  
+    1.  Achten Sie darauf, dass Sie den umgekehrten Schrägstrich '\' als Teil des Pfadnamens  
   
     2.  Beispiel:  
   
@@ -108,23 +108,23 @@ ms.locfileid: "50100411"
     1.  Befehlszeilen-Hilfsprogramm "sqlcmd" Führen Sie im Ordner mit dem Skript an der Eingabeaufforderung beispielsweise folgenden Befehl aus:  
   
         ```  
-        sqlcmd –S . –E –i "ssSQL14 RTM hek_2 Sample.sql"  
+        sqlcmd -S . -E -i "ssSQL14 RTM hek_2 Sample.sql"  
         ```  
   
     2.  Management Studio  
   
-        1.  Öffnen Sie das Skript[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql in einem Abfragefenster.  
+        1.  Öffnen Sie das Skript "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql" in einem Abfragefenster  
   
         2.  Stellen Sie eine Verbindung mit dem Zielserver her, auf dem die AdventureWorks2014-Datenbank gespeichert ist.  
   
-        3.  Aktivieren Sie den SQLCMD-Modus, indem Sie auf Abfrage -> SQLCMD-Modus klicken.  
+        3.  Aktivieren von SQLCMD-Modus durch Klicken auf "Abfrage -> SQLCMD-Modus"  
   
-        4.  Klicken Sie auf die Schaltfläche Ausführen, um das Skript auszuführen.  
+        4.  Klicken Sie auf die Schaltfläche "Ausführen" zum Ausführen des Skripts  
   
 ##  <a name="Descriptionofthesampletablesandprocedures"></a> Beschreibung der Beispieltabellen und -prozeduren  
  Im Beispiel werden neue Tabellen für Produkte und Verkaufsaufträge auf Grundlage vorhandener AdventureWorks-Tabellen erstellt. Das Schema der neuen Tabellen entspricht bis auf die nachfolgend beschriebenen Unterschiede dem der vorhandenen Tabellen.  
   
- Die neuen speicheroptimierten Tabellen verfügen über das Suffix "_inmem". Zusätzlich umfasst das Beispiel entsprechende Tabellen mit dem Suffix "_ondisk". Mithilfe dieser Tabellen können 1:1-Vergleiche zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen im System angestellt werden.  
+ Die neuen speicheroptimierten Tabellen haben das Suffix „_inmem“. Zusätzlich umfasst das Beispiel entsprechende Tabellen mit dem Suffix „_ondisk“. Mithilfe dieser Tabellen können 1:1-Vergleiche zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen im System angestellt werden.  
   
  Beachten Sie, dass die in der Arbeitsauslastung für Leistungsvergleiche verwendeten speicheroptimierten Tabellen vollständig dauerhaft und vollständig protokolliert sind, d. h., dass Leistungsvorteile nicht auf Kosten der Dauerhaftigkeit oder Zuverlässigkeit erzielt werden.  
   
@@ -206,9 +206,9 @@ ms.locfileid: "50100411"
   
  Sales.SalesOrderDetail  
   
--   *Standardeinschränkungen* : Ähnlich wie SalesOrderHeader wird die Standardeinschränkung, die das Systemdatum bzw. die Systemzeit erfordert, nicht migriert. Stattdessen wird das aktuelle Systemdatum bzw. die aktuelle Systemzeit von der gespeicherten Prozedur, die Verkaufsaufträge einfügt, beim ersten Einfügevorgang hinzugefügt.  
+-   *Standardeinschränkungen*: Ähnlich wie SalesOrderHeader wird die Standardeinschränkung, die das Systemdatum bzw. die Systemzeit erfordert, nicht migriert. Stattdessen wird das aktuelle Systemdatum bzw. die aktuelle Systemzeit von der gespeicherten Prozedur, die Verkaufsaufträge einfügt, beim ersten Einfügevorgang hinzugefügt.  
   
--   *Berechnete Spalten* : Die berechnete Spalte „LineTotal“ wurde nicht migriert, weil berechnete Spalten bei speicheroptimierten Tabellen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]nicht unterstützt werden. Um auf diese Spalte zuzugreifen, verwenden Sie die Sicht Sales.vSalesOrderDetail_extended_inmem.  
+-   *Berechnete Spalten*: Die berechnete Spalte „LineTotal“ wurde nicht migriert, weil berechnete Spalten bei speicheroptimierten Tabellen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]nicht unterstützt werden. Um auf diese Spalte zuzugreifen, verwenden Sie die Sicht Sales.vSalesOrderDetail_extended_inmem.  
   
 -   *Rowguid* : Die rowguid-Spalte wird nicht verwendet. Ausführliche Informationen finden Sie in der Beschreibung zur Tabelle SalesOrderHeader.  
   
@@ -221,9 +221,9 @@ ms.locfileid: "50100411"
   
  Production.Product  
   
--   *Alias-UDTs* : Die ursprüngliche Tabelle verwendet den benutzerdefinierten Datentyp „dbo.Flag“, der dem Systemdatentyp „bit“ entspricht. Die migrierte Tabelle verwendet stattdessen den Datentyp bit.  
+-   *Alias-UDTs*: Die ursprüngliche Tabelle verwendet den benutzerdefinierten Datentyp „dbo.Flag“, der dem Systemdatentyp „bit“ entspricht. Die migrierte Tabelle verwendet stattdessen den Datentyp bit.  
   
--   *BIN2-Sortierung* : Die Spalten Name und ProductNumber sind in Indexschlüsseln enthalten und müssen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]folglich über eine BIN2-Sortierung verfügen. Hier wird davon ausgegangen, dass die App nicht von Sortiereigenschaften abhängig ist, z. B. nicht nach Groß-/Kleinschreibung unterschieden wird.  
+-   *BIN2-Sortierung* – die Spalten Name und ProductNumber sind in Indexschlüsseln enthalten und müssen daher BIN2-Sortierungen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Hier wird davon ausgegangen, dass die App nicht von Sortiereigenschaften abhängig ist, z. B. nicht nach Groß-/Kleinschreibung unterschieden wird.  
   
 -   *Rowguid* : Die rowguid-Spalte wird nicht verwendet. Ausführliche Informationen finden Sie in der Beschreibung zur Tabelle SalesOrderHeader.  
   
@@ -263,7 +263,7 @@ ms.locfileid: "50100411"
   
  Mit HASH-Indizes kann die Arbeitsauslastung weiter optimiert werden, da sie speziell für Punktsuchen und Zeileneinfügungen optimiert sind. Allerdings unterstützen sie keine Bereichsscans, sortierte Scans oder Suchen in führenden Indexschlüsselspalten. Daher sollten diese Indizes mit Vorsicht verwendet werden. Außerdem muss während der Erstellung der bucket_count-Wert angegeben werden. Die Bucketanzahl sollte normalerweise auf einen Wert zwischen der einfachen und doppelten Anzahl von Indexschlüsselwerten festgelegt werden. Ein zu hoher Wert stellt in der Regel aber auch kein Problem dar.  
   
- Weitere Informationen zu [Indexrichtlinien](http://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) und Richtlinien zum [Auswählen des geeigneten bucket_count-Werts](http://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)finden Sie in der Onlinedokumentation.  
+ Weitere Informationen zu [Indexrichtlinien](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) und Richtlinien zum [Auswählen des geeigneten bucket_count-Werts](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)finden Sie in der Onlinedokumentation.  
   
  Die Indizes der migrierten Tabellen wurden für die exemplarische Arbeitsauslastung, die zur Abwicklung von Verkaufsaufträgen eingesetzt wird, optimiert. Die Arbeitsauslastung basiert auf Einfügungen und Punktsuchen in den Tabellen Sales.SalesOrderHeader_inmem und Sales.SalesOrderDetail_inmem sowie auf Punktsuchen in den Primärschlüsselspalten der Tabellen Production.Product_inmem und Sales.SpecialOffer_inmem.  
   
@@ -295,7 +295,7 @@ ms.locfileid: "50100411"
   
  Da in der exemplarischen Arbeitsauslastung nicht auf Sales.SpecialOfferProduct_inmem verwiesen wird, ist es nicht erforderlich, HASH-Indizes für die Tabelle zu verwenden, um die Arbeitsauslastung zu optimieren. Für (SpecialOfferID, ProductID) und (ProductID) werden NONCLUSTERED-Indizes verwendet.  
   
- Beachten Sie, dass einige der oben genannten Bucketanzahlen zu hoch angesetzt sind. Auf die Bucketanzahlen für die Indizes von SalesOrderHeader_inmem und SalesOrderDetail_inmem trifft dies jedoch nicht zu, da sie auf eine Anzahl von 10 Millionen Verkaufsaufträgen beschränkt sind. Auf diese Weise kann das Beispiel auch auf Systemen mit geringerer Arbeitsspeicherkapazität installiert werden. In diesen Fällen verursacht die exemplarische Arbeitsauslastung jedoch einen Fehler vom Typ "Nicht genügend Arbeitsspeicher". Wenn Sie einen Wert festlegen möchten, der 10 Millionen Verkaufsaufträge erheblich überschreitet, können Sie die Bucketanzahlen einfach entsprechend erhöhen.  
+ Beachten Sie, dass einige der oben genannten Bucketanzahlen zu hoch angesetzt sind. Auf die Bucketanzahlen für die Indizes von SalesOrderHeader_inmem und SalesOrderDetail_inmem trifft dies jedoch nicht zu, da sie auf eine Anzahl von 10 Millionen Verkaufsaufträgen beschränkt sind. Auf diese Weise kann das Beispiel auch auf Systemen mit geringerer Arbeitsspeicherkapazität installiert werden. In diesen Fällen verursacht die exemplarische Arbeitsauslastung jedoch einen Fehler vom Typ "Nicht genügend Arbeitsspeicher". Wenn Sie einen Wert festlegen möchten, der 10 Millionen Verkaufsaufträge erheblich überschreitet, können Sie die Bucketanzahlen einfach entsprechend erhöhen.  
   
 #### <a name="considerations-for-memory-utilization"></a>Überlegungen zur Arbeitsspeichernutzung  
  Die Arbeitsspeichernutzung der Beispieldatenbank vor und nach der Ausführung der exemplarischen Arbeitsauslastung wird im Abschnitt [Arbeitsspeichernutzung für speicheroptimierte Tabellen](#Memoryutilizationforthememory-optimizedtables)erörtert.  
@@ -309,7 +309,7 @@ ms.locfileid: "50100411"
   
     -   Ausgabeparameter:  
   
-        -   @SalesOrderID int – SalesOrderID für den gerade eingefügten Verkaufsauftrag  
+        -   @SalesOrderID int: SalesOrderID für den gerade eingefügten Verkaufsauftrag  
   
     -   Eingabeparameter (erforderlich):  
   
@@ -323,7 +323,7 @@ ms.locfileid: "50100411"
   
         -   @ShipMethodID [int]  
   
-        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem – Tabellenwertparameter (TVP), der die Einzelposten des Auftrags enthält  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem: Tabellenwertparameter, der die Einzelposten des Auftrags enthält  
   
     -   Eingabeparameter (optional):  
   
@@ -351,7 +351,7 @@ ms.locfileid: "50100411"
   
     -   Aktualisiert die Versandinformationen für einen bestimmten Verkaufsauftrag. Gleichzeitig werden auch die Versandinformationen für alle Einzelposten des Verkaufsauftrags aktualisiert.  
   
-    -   Dies ist eine Wrapperprozedur für die systemintern kompilierte gespeicherte Prozedur Sales.usp_UpdateSalesOrderShipInfo_native. Sie verfügt über eine Wiederholungslogik zur Behandlung (unerwarteter) potenzieller Konflikte mit Transaktionen, die gleichzeitig ausgeführt werden und denselben Auftrag aktualisieren. Weitere Informationen zur Wiederholungslogik finden Sie in [diesem Thema](http://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)in der Onlinedokumentation.  
+    -   Dies ist eine Wrapperprozedur für die systemintern kompilierte gespeicherte Prozedur Sales.usp_UpdateSalesOrderShipInfo_native. Sie verfügt über eine Wiederholungslogik zur Behandlung (unerwarteter) potenzieller Konflikte mit Transaktionen, die gleichzeitig ausgeführt werden und denselben Auftrag aktualisieren. Weitere Informationen zur Wiederholungslogik finden Sie in [diesem Thema](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)in der Onlinedokumentation.  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -379,7 +379,7 @@ ms.locfileid: "50100411"
   
 1.  dbo.usp_ValidateIntegrity  
   
-    -   Optionaler Parameter: @object_id – ID des Objekts, dessen Integrität überprüft werden soll  
+    -   Optionaler Parameter: @object_id: ID des Objekts, dessen Integrität überprüft werden soll  
   
     -   Diese Prozedur ermittelt anhand der Tabellen dbo.DomainIntegrity, dbo.ReferentialIntegrity und dbo.UniqueIntegrity, welche Integritätsregeln überprüft werden müssen. Im Beispiel werden diese Tabellen auf der Grundlage der CHECK-, FOREIGN KEY- und UNIQUE-Einschränkungen der ursprünglichen Tabellen in der AdventureWorks-Datenbank aufgefüllt.  
   
@@ -393,16 +393,16 @@ ms.locfileid: "50100411"
   
  Installationsschritte:  
   
-1.  Laden Sie die x64-Version des Installationspakets für die RML-Hilfsprogramme von folgender Seite herunter, und führen Sie das Paket aus: [http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx).  
+1.  Laden Sie die x64-Version des Installationspakets für die RML-Hilfsprogramme von folgender Seite herunter, und führen Sie das Paket aus: [https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx).  
   
-2.  Falls Sie in einem Dialogfeld darauf hingewiesen werden, dass bestimmte Dateien gerade verwendet werden, klicken Sie auf Weiter:  
+2.  Falls Sie in einem Dialogfeld darauf hingewiesen werden, dass bestimmte Dateien gerade verwendet werden, klicken Sie auf „Weiter“.  
   
 ### <a name="running-ostress"></a>Ausführen von OSTRESS  
  OSTRESS wird an der Eingabeaufforderung ausgeführt. Am einfachsten lässt sich das Tool über die RML-Eingabeaufforderung ausführen, die mit den RML-Hilfsprogrammen installiert wird.  
   
  Führen Sie die folgenden Schritte aus, um die RML-Eingabeaufforderung zu öffnen:  
   
- Öffnen Sie in Windows Server 2012 [R2] sowie in Windows 8 und 8.1 das Startmenü, indem Sie die Windows-Taste drücken, und geben Sie rml ein. Klicken Sie auf die in der Liste der Suchergebnisse angezeigte RML-Eingabeaufforderung (RML Cmd Prompt).  
+ Öffnen Sie in Windows Server 2012 [R2] sowie in Windows 8 und 8.1 das Startmenü, indem Sie die Windows-Taste drücken, und geben Sie „rml“ ein. Klicken Sie auf die in der Liste der Suchergebnisse angezeigte RML-Eingabeaufforderung (RML Cmd Prompt).  
   
  Vergewissern Sie sich, dass sich die Eingabeaufforderung im Installationsordner für die RML-Hilfsprogramme befindet. Zum Beispiel:  
   
@@ -412,7 +412,7 @@ ms.locfileid: "50100411"
   
 -   -S: Der Name der [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz, mit der eine Verbindung hergestellt werden soll.  
   
--   -E: Verwendet die Windows-Authentifizierung für Verbindungen (Standard). Bei Verwendung der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Authentifizierung können Sie mit den Optionen –U und –P den Benutzernamen bzw. das Kennwort angeben.  
+-   -E: verwendet die Windows-Authentifizierung für Verbindungen (Standard); Bei Verwendung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentifizierung, verwenden Sie die Optionen – und – P den Benutzernamen und Kennwort, das angeben  
   
 -   -d: Der Name der Datenbank, in diesem Beispiel "AdventureWorks2014".  
   
@@ -457,9 +457,9 @@ END
   
  Mit diesem Skript wird jeder erstellte Beispielauftrag durch 20 in einer WHILE-Schleife ausgeführte gespeicherte Prozeduren 20 Mal eingefügt. Die Schleife wird verwendet, weil die Datenbank zum Erstellen des Beispielauftrags verwendet wird. In einer typischen Produktionsumgebung wird der einzufügende Verkaufsauftrag durch die Mid-Tier-Anwendung erstellt.  
   
- Durch das oben angegebene Skript werden Verkaufsaufträge in speicheroptimierte Tabellen eingefügt. Sie erhalten das Skript zum Einfügen von Verkaufsaufträgen in datenträgerbasierte Tabellen, indem Sie die beiden Suffixe _inmem in _ondisk ändern.  
+ Durch das oben angegebene Skript werden Verkaufsaufträge in speicheroptimierte Tabellen eingefügt. Sie erhalten das Skript zum Einfügen von Verkaufsaufträgen in datenträgerbasierte Tabellen, indem Sie die beiden Suffixe „_inmem in _ondisk“ ändern.  
   
- Wir verwenden das OSTRESS-Tool, um die Skripts unter Verwendung mehrerer gleichzeitiger Verbindungen auszuführen. Dabei wird mit dem Parameter -n gesteuert, wie viele Verbindungen verwendet werden, und mit dem Parameter -r, wie oft das Skript für jede Verbindung ausgeführt wird.  
+ Wir verwenden das OSTRESS-Tool, um die Skripts unter Verwendung mehrerer gleichzeitiger Verbindungen auszuführen. Dabei wird mit dem Parameter „-n“ gesteuert, wie viele Verbindungen verwendet werden, und mit dem Parameter „-r“, wie oft das Skript für jede Verbindung ausgeführt wird.  
   
 #### <a name="functional-validation-of-the-workload"></a>Testen der Arbeitsauslastung  
  Um zu überprüfen, alles funktioniert, führen wir einen Testdurchlauf mit 10 gleichzeitigen Verbindungen und 5 Iterationen, Einfügen von insgesamt 10 * 5 \* 20 = 1000 Verkaufsauftrag.  
@@ -471,7 +471,7 @@ END
  Klicken Sie auf die Schaltfläche zum Kopieren, um den Befehl zu kopieren, und fügen Sie ihn in die Eingabeaufforderung der RML-Hilfsprogramme ein.  
   
 ```  
-ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  Wenn der Befehl erwartungsgemäß funktioniert, sollte das Befehlsfenster etwa wie folgt aussehen. Fehlermeldungen sind nicht zu erwarten.  
@@ -483,11 +483,11 @@ ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
  Klicken Sie auf die Schaltfläche zum Kopieren, um den Befehl zu kopieren, und fügen Sie ihn in die Eingabeaufforderung der RML-Hilfsprogramme ein.  
   
 ```  
-ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
 #### <a name="running-the-workload"></a>Ausführen der Arbeitsauslastung  
- Um das Verhalten in einem größeren Szenario zu testen, fügen wir unter Verwendung von 100 Verbindungen 10 Millionen Verkaufsaufträge ein. Bei einem einfach ausgestatteten Server (z. B. mit 8 physischen und 16 logischen Kernen) und SSD-Basisspeicher für das Protokoll liefert der Test zufriedenstellende Ergebnisse. Falls der Test mit Ihrer Hardware nicht gut abschneidet, sollten Sie sich im Abschnitt [Problembehandlung bei langsamer Testausführung](#Troubleshootingslow-runningtests)informieren. Wenn Sie das Belastungsniveau für diesen Test verringern möchten, reduzieren Sie die Anzahl der Verbindungen, indem Sie den Parameter -n ändern. Um die Anzahl der Verbindungen z. B. auf 40 zu verringern, ändern Sie den Parameter -n100 in -n40.  
+ Um das Verhalten in einem größeren Szenario zu testen, fügen wir unter Verwendung von 100 Verbindungen 10 Millionen Verkaufsaufträge ein. Bei einem einfach ausgestatteten Server (z. B. mit 8 physischen und 16 logischen Kernen) und SSD-Basisspeicher für das Protokoll liefert der Test zufriedenstellende Ergebnisse. Falls der Test mit Ihrer Hardware nicht gut abschneidet, sollten Sie sich im Abschnitt [Problembehandlung bei langsamer Testausführung](#Troubleshootingslow-runningtests) informieren. Wenn Sie das Belastungsniveau für diesen Test verringern möchten, reduzieren Sie die Anzahl der Verbindungen, indem Sie den Parameter „-n“ ändern. Um die Anzahl der Verbindungen z. B. auf 40 zu verringern, ändern Sie den Parameter „-n100“ in „-n40“.  
   
  Als Leistungskennzahl für die Arbeitsauslastung wird die Zeitspanne verwendet, die von ostress.exe nach Ausführung der Arbeitsauslastung gemeldet wird.  
   
@@ -499,7 +499,7 @@ ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
  Klicken Sie auf die Schaltfläche zum Kopieren, um den Befehl zu kopieren, und fügen Sie ihn in die Eingabeaufforderung der RML-Hilfsprogramme ein.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  Auf einem Testserver mit insgesamt 8 physischen (16 logischen) Kernen betrug die Dauer zwei Minuten und fünf Sekunden. Auf einem zweiten Testserver mit 24 physischen (48 logischen) Kernen dauerte der Vorgang eine Minute und 0 (null) Sekunden.  
@@ -514,16 +514,16 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 
  Klicken Sie auf die Schaltfläche zum Kopieren, um den Befehl zu kopieren, und fügen Sie ihn in die Eingabeaufforderung der RML-Hilfsprogramme ein.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  Auf einem Testserver mit insgesamt 8 physischen (16 logischen) Kernen betrugt die Dauer 41 Minuten und 25 Sekunden. Auf einem zweiten Testserver mit 24 physischen (48 logischen) Kernen dauerte der Vorgang 52 Minuten und 16 Sekunden.  
   
- Der Hauptunterschied zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen in diesem Test besteht darin, dass die CPU bei Verwendung datenträgerbasierter Tabellen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht voll ausgenutzt werden kann. Die Ursache sind Latchkonflikte: Wenn gleichzeitige Transaktionen versuchen, Daten in dieselbe Datenseite zu schreiben, wird mithilfe von Latches sichergestellt, dass jeweils nur eine Transaktion Schreibzugriff auf eine Seite hat. Die [!INCLUDE[hek_2](../includes/hek-2-md.md)]-Engine verwendet keine Latches, und Datenzeilen sind nicht seitenweise angeordnet. Da sich Einfügungen gleichzeitiger Transaktionen nicht gegenseitig blockieren, kann die CPU-Leistung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] voll ausgeschöpft werden.  
+ Der Hauptunterschied zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen in diesem Test besteht darin, dass die CPU bei Verwendung datenträgerbasierter Tabellen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht voll ausgenutzt werden kann. Die Ursache sind Latchkonflikte: Wenn gleichzeitige Transaktionen versuchen, Daten in dieselbe Datenseite zu schreiben, wird mithilfe von Latches sichergestellt, dass jeweils nur eine Transaktion Schreibzugriff auf eine Seite hat. Die [!INCLUDE[hek_2](../includes/hek-2-md.md)]-Engine verwendet keine Latches, und Datenzeilen sind nicht seitenweise angeordnet. Gleichzeitige Transaktionen blockieren daher keine einfügungen, sodass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die CPU vollständig nutzen zu können.  
   
- Sie können die CPU-Auslastung bei der Ausführung der Arbeitsauslastung beispielsweise mit dem Task-Manager beobachten. Sie werden feststellen, dass die CPU-Auslastung bei Verwendung datenträgerbasierter Tabellen weit von 100 % entfernt ist. In einer Testkonfiguration mit 16 logischen Prozessoren würde sich die Auslastung um 24 % bewegen.  
+ Sie können die CPU-Auslastung bei der Ausführung der Arbeitsauslastung beispielsweise mit dem Task-Manager beobachten. Sie werden feststellen, dass die CPU-Auslastung bei Verwendung datenträgerbasierter Tabellen weit von 100 % entfernt ist. In einer Testkonfiguration mit 16 logischen Prozessoren würde sich die Auslastung um 24 % bewegen.  
   
- Optional können Sie den Leistungsindikator \SQL Server:Latches\Latchwartevorgänge/Sekunde im Systemmonitor verwenden, um die Anzahl der Latchwartevorgänge pro Sekunde anzuzeigen.  
+ Optional können Sie den Leistungsindikator „\SQL Server:Latches\Latchwartevorgänge/Sekunde“ im Systemmonitor verwenden, um die Anzahl der Latchwartevorgänge pro Sekunde anzuzeigen.  
   
 #### <a name="resetting-the-demo"></a>Zurücksetzen der exemplarischen Arbeitsauslastung  
  Um die exemplarische Arbeitsauslastung zurückzusetzen, öffnen Sie die RML-Eingabeaufforderung und führen folgenden Befehl aus:  
@@ -541,7 +541,7 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
 -   Anzahl gleichzeitiger Transaktionen: Wenn die Arbeitsauslastung in einem einzelnen Thread ausgeführt wird, liegt der Leistungsgewinn von [!INCLUDE[hek_2](../includes/hek-2-md.md)] wahrscheinlich unter dem zweifachen Wert. Latchkonflikte stellen nur bei einem hohen Parallelitätsgrad ein wirkliches Problem dar.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]arbeitet mit einer geringen Anzahl von Kernen: Dies bedeutet, dass das System einen geringen Parallelitätsgrad aufweist, da nur so viele Transaktionen gleichzeitig ausgeführt werden können, wie Kerne für SQL verfügbar sind.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] arbeitet mit einer geringen Anzahl von Kernen: Dies bedeutet, dass das System einen geringen Parallelitätsgrad aufweist, da nur so viele Transaktionen gleichzeitig ausgeführt werden können, wie Kerne für SQL verfügbar sind.  
   
     -   Symptom: Wenn die CPU-Auslastung beim Ausführen der Arbeitsauslastung für datenträgerbasierte Tabellen hoch ist, liegen normalerweise wenig Konflikte vor, was auf eine fehlende Parallelität hinweist.  
   
@@ -569,10 +569,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|94|  
+|MEMORYCLERK_XTP|Standard|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Standard|0|  
+|MEMORYCLERK_XTP|Standard|0|  
   
  Die standardmäßigen Arbeitsspeicherclerks basieren auf systemweiten Strukturen und sind relativ klein. Der Arbeitsspeicherclerk für die Benutzerdatenbank, d. h. die Datenbank mit der ID 5, umfasst etwa 900 MB.  
   
@@ -601,7 +601,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- Sie erkennen, dass die Tabellen relativ klein sind: SalesOrderHeader_inmem umfasst ca. 7 MB und SalesOrderDetail_inmem ca. 15 MB.  
+ Sie erkennen, dass die Tabellen relativ klein sind: SalesOrderHeader_inmem umfasst ca. 7 MB und SalesOrderDetail_inmem ca. 15 MB.  
   
  Hier fällt auf, dass die den Indizes zugeordnete Arbeitsspeicherkapazität deutlich über der Kapazität der Tabellendaten liegt. Dies liegt daran, dass die Datengröße für die Hashindizes im Beispiel vorab auf einen höheren Wert festgelegt wurde. Da Hashindizes über eine feste Größe verfügen, wachsen sie nicht mit der Größe der Daten in der Tabelle mit.  
   
@@ -618,10 +618,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|146|  
+|MEMORYCLERK_XTP|Standard|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Standard|0|  
+|MEMORYCLERK_XTP|Standard|0|  
   
  Sie sehen, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] etwas weniger als 8 GB für die speicheroptimierten Tabellen und Indizes in der Beispieldatenbank belegt.  
   
@@ -664,10 +664,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|2261|  
+|MEMORYCLERK_XTP|Standard|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Standard|0|  
+|MEMORYCLERK_XTP|Standard|0|  
   
  Erwartetes Verhalten: Der Arbeitsspeicher wird beim Ausführen der Transaktionsarbeitsauslastung freigegeben.  
   
@@ -683,10 +683,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|1863|  
+|MEMORYCLERK_XTP|Standard|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Standard|0|  
+|MEMORYCLERK_XTP|Standard|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Datenträgernutzung für speicheroptimierte Tabellen  
  Mithilfe der folgenden Abfrage können Sie ermitteln, wie viel Gesamtspeicherplatz die Prüfpunktdateien einer Datenbank zu einem bestimmten Zeitpunkt auf dem Datenträger belegen:  
@@ -872,7 +872,7 @@ ORDER BY state, file_type
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
   
- In diesem Fall gibt es zwei Prüfpunktdateipaare mit dem Status UNDER CONSTRUCTION. Das legt die Vermutung nahe, dass aufgrund des hohen Parallelitätsgrads der Arbeitsauslastung mehrere Dateipaare in den Status UNDER CONSTRUCTION versetzt wurden. Mehrere gleichzeitige Threads erforderten also zur selben Zeit ein neues Dateipaar, wodurch sich der Status eines Paares von PRECREATED in UNDER CONSTRUCTION geändert hat.  
+ In diesem Fall gibt es zwei Prüfpunktdateipaare mit dem Status „under construction“. Das legt die Vermutung nahe, dass aufgrund des hohen Parallelitätsgrads der Arbeitsauslastung mehrere Dateipaare in den Status „under construction“ versetzt wurden. Mehrere gleichzeitige Threads erforderten also zur selben Zeit ein neues Dateipaar, wodurch sich der Status eines Paares von „precreated“ in „under construction“ geändert hat.  
   
 ## <a name="see-also"></a>Siehe auch  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

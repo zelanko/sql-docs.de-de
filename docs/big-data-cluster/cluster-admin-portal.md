@@ -1,20 +1,22 @@
 ---
-title: Überwachen von SQL Server-big Data-Clustern (Vorschau) mit dem Cluster-Verwaltungsportal | Microsoft-Dokumentation
+title: Cluster-Verwaltungsportal
+titleSuffix: SQL Server 2019 big data clusters
 description: Erfahren Sie, wie das Verwaltungsportal für den Cluster zum Überwachen von SQL Server-2019 big Data-Clustern (Vorschau) verwenden.
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: eaff715d1fe29e1484dec7bde24de6bb16449458
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 46d2565ac90bfd007bbe0f3c9e8a2382ca5eeb74
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221466"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215536"
 ---
-# <a name="introduction-to-the-cluster-administration-portal"></a>Einführung in das Verwaltungsportal für cluster
+# <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Wie Sie das Cluster-Verwaltungsportal verwenden, um eine SQL Server-big Data-Cluster zu überwachen
 
 Wenn Sie überwachen oder Ihre SQL Server-2019 big Data-Cluster (Vorschauversion) behandeln möchten, verwenden Sie das Verwaltungsportal für den Cluster.
 
@@ -29,10 +31,10 @@ Das Cluster-Verwaltungsportal können Sie:
 
 Führen Sie die [schnellstartanleitung aus, um Ihre big Data-Cluster bereitstellen](quickstart-big-data-cluster-deploy.md) bis Sie auf die **Cluster Verwaltungsportal** Abschnitt. Nachdem Sie die big Data-Cluster mit Mssqlctl ausgeführt haben, gehen Sie wie folgt vor:
 
-Sobald der Controller-Pod ausgeführt wird, können Sie das Cluster-Verwaltungsportal, zum Überwachen der Bereitstellung. Sie können den Portalzugriff mithilfe der externen IP-Adresse und den Port für die `service-proxy-lb` (z. B.: **https://\<Ip-Adresse\>: 30777**). Anmeldeinformationen für den Zugriff auf die Administratorportal die Werte sind `CONTROLLER_USERNAME` und `CONTROLLER_PASSWORD` oben angegebenen Umgebungsvariablen.
+Sobald der Controller-Pod ausgeführt wird, können Sie das Cluster-Verwaltungsportal, zum Überwachen der Bereitstellung. Sie können den Portalzugriff mithilfe der externen IP-Adresse und den Port für die `service-proxy-lb` (z. B.: **https://\<Ip-Adresse\>: 30777/Portal**). Anmeldeinformationen für den Zugriff auf die Administratorportal die Werte sind `CONTROLLER_USERNAME` und `CONTROLLER_PASSWORD` oben angegebenen Umgebungsvariablen.
 
 > [!NOTE]
-> Für CTP 2.1 ist eine sicherheitswarnung angezeigt, wenn die Webseite zugreifen, da sie automatisch generierte SSL-Zertifikate verwendet wird.
+> Für CTP-Version 2.2 besteht eine sicherheitswarnung angezeigt, wenn die Webseite zugreifen, da sie automatisch generierte SSL-Zertifikate verwendet wird.
 
 ## <a name="overview"></a>Übersicht
 

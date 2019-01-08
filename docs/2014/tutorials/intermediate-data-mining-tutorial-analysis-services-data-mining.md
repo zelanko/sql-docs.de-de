@@ -11,12 +11,12 @@ ms.assetid: 404b31d5-27f4-4875-bd60-7b2b8613eb1b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61c81668f2bac2f25b75a6b58efb9e1b97da4144
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e8418bf91dff36a512db57c45f1d19ad18fde02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119650"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369012"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Data Mining-Lernprogramm für Fortgeschrittene (Analysis Services - Data Mining)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet eine integrierte Umgebung zum Erstellen und Arbeiten mit Datamining-Modellen. Sie können ohne Weiteres eine Bindung an Datenquellen herstellen, mehrere Modelle für die gleichen Daten erstellen und testen und Modelle für Vorhersageanalysen bereitstellen.  
@@ -34,13 +34,13 @@ ms.locfileid: "48119650"
 ## <a name="lesson-scenarios"></a>Lektionsszenarien  
  Nachdem Sie sich erfolgreich mit der Targeted Mailing-Kampagne beschäftigt haben, wurden Sie gebeten, Ihre Data Mining-Kenntnisse in die Entwicklung mehrerer neuer Modelle für die Unternehmensplanung einfließen zu lassen. Dabei handelt es sich um die folgenden Aufgaben:  
   
--   **Forecasting:** erstellen Sie eine *Zeitreihen* Modells können Sie den Verkauf von Produkten in unterschiedlichen Regionen auf der ganzen Welt zu prognostizieren. Sie entwickeln einzelne Modelle für jede Region und erfahren Sie, wie Sie mit *kreuzvorhersagen*.  
+-   **Vorhersagen:** Erstellen Sie eine *Zeitreihen* Modells können Sie den Verkauf von Produkten in unterschiedlichen Regionen auf der ganzen Welt zu prognostizieren. Sie entwickeln einzelne Modelle für jede Region und erfahren Sie, wie Sie mit *kreuzvorhersagen*.  
   
--   **Market Basket-Analyse:** erstellen Sie eine *Zuordnungsmodell*, um Gruppierungen von Produkten zu analysieren, die bei besuchen erworben werden die [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] e-Commerce-Website. Auf Grundlage dieses Market Basket-Modells können Sie Kunden Produkte empfehlen.  
+-   **Market Basket-Analyse:** Erstellen Sie eine *Zuordnungsmodell*, um Gruppierungen von Produkten zu analysieren, die bei besuchen erworben werden die [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] e-Commerce-Website. Auf Grundlage dieses Market Basket-Modells können Sie Kunden Produkte empfehlen.  
   
 -   **Sequenzanalyse:** Sie erstellen eine *Sequence clustering-Modell*, um die Reihenfolge zu analysieren, in der Kunden Produkte kaufen. Auf Grundlage dieses Modells können Sie Änderungen im Websitedesign vornehmen oder neue Produkte anbieten.  
   
--   **Faktorenanalyse:** Sie verwenden eine *neuronales Netzwerk* Modell, um die möglichen Ursachen schlechter Dienstqualität in callcenterdaten zu untersuchen. Basierend auf den Erkenntnissen aus dem vorläufigen Modell, erstellen Sie eine *Logistisches Regressionsmodell* Strategien zum Verbessern der kundenerfahrung vorherzusagen.  
+-   **Faktoranalyse:** Sie verwenden eine *neuronales Netzwerk* Modell, um die möglichen Ursachen schlechter Dienstqualität in callcenterdaten zu untersuchen. Basierend auf den Erkenntnissen aus dem vorläufigen Modell, erstellen Sie eine *Logistisches Regressionsmodell* Strategien zum Verbessern der kundenerfahrung vorherzusagen.  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
  In diesem Lernprogramm erfahren Sie, wie Sie verschiedene Typen von Data Mining-Algorithmen anlegen und mit diesen arbeiten. Dieses Lernprogramm ist in die folgenden Lektionen aufgeteilt:  
@@ -71,10 +71,10 @@ ms.locfileid: "48119650"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank.  
   
- Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert. So installieren Sie die offiziellen Beispieldatenbanken für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], besuchen Sie die [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) Seite und wählen Sie die entsprechende Version der-Beispieldatenbank.  
+ Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert. So installieren Sie die offiziellen Beispieldatenbanken für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], besuchen Sie die [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) Seite und wählen Sie die entsprechende Version der-Beispieldatenbank.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Lernprogramm zu Datamining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Lernprogramm zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Bike Buyer DMX Tutorial](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [DMX Market Basket-Tutorial](../../2014/tutorials/market-basket-dmx-tutorial.md)  
   

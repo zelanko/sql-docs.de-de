@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5812bed862ef2538c89308e72829b1a5e3b339f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30a14fbc60de7f06ead34e85140a903e4206544e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200460"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364402"
 ---
 # <a name="storage-system-input-output-time-out"></a>Speichersystem – E/A-Timeout
   Diese Regel überprüft das Systemereignisprotokoll auf EventId 9. Durch diese Meldung wird angegeben, dass im Speichersystem ein E/A-Timeout aufgetreten ist.  
@@ -25,11 +25,11 @@ ms.locfileid: "48200460"
 ## <a name="best-practices-recommendations"></a>Empfehlungen zu Best Practices  
  Weitere Informationen über das Beheben dieses Fehlers finden Sie in den folgenden Microsoft Knowledge Base-Artikeln:  
   
--   [Microsoft Knowledge Base-Artikel 259237](http://go.microsoft.com/fwlink/?linkid=117746)  
+-   [Microsoft Knowledge Base-Artikel 259237](https://go.microsoft.com/fwlink/?linkid=117746)  
   
--   [Microsoft Knowledge Base-Artikel 154690](http://go.microsoft.com/fwlink/?LinkId=117747)  
+-   [Microsoft Knowledge Base-Artikel 154690](https://go.microsoft.com/fwlink/?LinkId=117747)  
   
 ## <a name="for-more-information"></a>Weitere Informationen  
- [SQL Server I/O Basics, Chapter 2 (in Englisch)](http://go.microsoft.com/fwlink/?LinkId=69370)  
+ [SQL Server I/O Basics, Chapter 2 (in Englisch)](https://go.microsoft.com/fwlink/?LinkId=69370)  
   
   

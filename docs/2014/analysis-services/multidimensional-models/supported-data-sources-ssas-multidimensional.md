@@ -17,12 +17,12 @@ ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c80d2736082e99d2e08f4c30fe311d98beff137a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a88d312d2764d04d1766371463a1735737973164
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169640"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349745"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Datenquellen unterstützt (SSAS – mehrdimensional)
   In diesem Thema werden die Datenquellentypen beschrieben, die Sie in einem tabellarischen Modell verwenden können.  
@@ -47,9 +47,9 @@ ms.locfileid: "48169640"
   
  <sup>1</sup> ODBC-Datenquellen werden für mehrdimensionale Lösungen nicht unterstützt. Zwar wird die Verbindung von Analysis Services selbst behandelt, doch können die in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zum Erstellen von Lösungen verwendeten Designer keine Verbindung mit einer ODBC-Datenquelle auch dann nicht herstellen, wenn der MSDASQL-Treiber verwendet wird. Wenn die Geschäftsanforderungen eine ODBC-Datenquelle umfassen, erwägen Sie, stattdessen eine tabellarische Lösung zu erstellen.  
   
- <sup>2</sup> Weitere Informationen finden Sie unter [!INCLUDE[ssSDS](../../includes/sssds-md.md)]auf ["Azure.Microsoft.com"](http://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> Weitere Informationen finden Sie unter [!INCLUDE[ssSDS](../../includes/sssds-md.md)]auf ["Azure.Microsoft.com"](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> für Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW finden Sie unter [SQL Server Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> für Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW finden Sie unter [SQL Server Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
  <sup>4</sup> in einigen Fällen die Verwendung des MSDAORA-OLE DB-Anbieters kann zu Verbindungsfehlern, insbesondere bei neueren Versionen von Oracle. Treten Fehler auf, empfiehlt es sich, einen der anderen für Oracle aufgeführten Anbieter zu verwenden.  
   

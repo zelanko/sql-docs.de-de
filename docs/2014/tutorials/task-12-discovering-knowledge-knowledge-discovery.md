@@ -13,17 +13,17 @@ ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d38af78e59a88e05fe874e4b4748b1f6f8b5049c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf933017b77bf8f0c1980c00f8f669d92483a1c6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167700"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367182"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Aufgabe 12: Ermitteln von Wissen (Wissensermittlung)
   In dieser Aufgabe führen Sie die **Wissensermittlung** auf **Supplier ID** und **Lieferantenname** Domänen. In diesem Szenario importiert der Wissensermittlungsprozess hauptsächlich Werte für diese zwei Domänen.  
   
- In diesem Lernprogramm haben Sie eine Wissensdatenbank von Grund auf neu erstellt. Sie können eine Wissensdatenbank auch durch Ausführen einer Wissensermittlungsaktivität erstellen. Beim Klicken auf **Erstellen einer Wissensdatenbank** in der Hauptseite des DQS-Client gelangen Sie auf eine Seite mit **Domänenverwaltung** -Aktivität für die Aktivität ausgewählt. Sie können ändern, die **Aktivität** zu **Wissensermittlung** , und klicken Sie dann Sie auf der nächsten Seite Domänen, als Teil des wissensermittlungsprozesses erstellen. Finden Sie unter [Durchführen der Wissensermittlung](http://msdn.microsoft.com/library/hh510398.aspx) Weitere Details.  
+ In diesem Lernprogramm haben Sie eine Wissensdatenbank von Grund auf neu erstellt. Sie können eine Wissensdatenbank auch durch Ausführen einer Wissensermittlungsaktivität erstellen. Beim Klicken auf **Erstellen einer Wissensdatenbank** in der Hauptseite des DQS-Client gelangen Sie auf eine Seite mit **Domänenverwaltung** -Aktivität für die Aktivität ausgewählt. Sie können ändern, die **Aktivität** zu **Wissensermittlung** , und klicken Sie dann Sie auf der nächsten Seite Domänen, als Teil des wissensermittlungsprozesses erstellen. Finden Sie unter [Durchführen der Wissensermittlung](https://msdn.microsoft.com/library/hh510398.aspx) Weitere Details.  
   
 1.  Auf der Hauptseite der DQS-Client in der **zuletzt verwendete Wissensdatenbank** auf **nach rechts weisenden Pfeil** neben der **Lieferanten** Knowledge Base, und klicken Sie auf **Knowledge Ermittlung**. Alternativ können Sie klicken **Wissensdatenbank öffnen**Option **Lieferanten** aus der **Liste der Wissensdatenbanken**Option **Wissensermittlung**als **Aktivität** , und klicken Sie auf **Weiter**.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "48167700"
      Sie haben die erste Lektion des Lernprogramms abgeschlossen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 2: Bereinigung von Lieferantendaten mithilfe der Wissensdatenbank „Suppliers“](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
+ [Lektion 2: Bereinigung von Lieferantendaten mithilfe der Wissensdatenbank ' Suppliers '](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
   
   

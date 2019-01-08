@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - VIA protocol
@@ -34,12 +33,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9d5d292421616d9c3d6043cf792345a8de0d8840
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27eb70cb687553b11fefae423a7544609836c5c8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135290"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357025"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014
   In diesem Thema werden die [!INCLUDE[ssDE](../includes/ssde-md.md)] -Funktionen beschrieben, die in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]nicht mehr verfügbar sind.  
@@ -69,14 +68,14 @@ ms.locfileid: "48135290"
 |Programmierbarkeit|SQL Server-Distributed Management Objects (SQL-DMO)|SQL Server Management Objects (SMO)|  
 |Abfragehinweise|`FASTFIRSTROW`-Hinweis|`OPTION (FAST` *n* `)`.|  
 |Remoteserver|Das Erstellen neuer Remoteserver durch Benutzer mithilfe von `sp_addserver` wird eingestellt. `sp_addserver` mit der Option "local" bleibt erhalten. Während des Upgrades beibehaltene oder durch Replikation erstellte Remoteserver können verwendet werden.|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern.|  
-|Security|`sp_dropalias`|Ersetzen Sie Aliase durch eine Kombination von Benutzerkonten und Datenbankrollen. Verwendung `sp_dropalias` um Aliase in aktualisierten Datenbanken zu entfernen.|  
-|Security|Der Versionsparameter von **PWDCOMPARE** Darstellung eines Werts von einer Anmeldung vor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 wird nicht mehr unterstützt.|None|  
+|Sicherheit|`sp_dropalias`|Ersetzen Sie Aliase durch eine Kombination von Benutzerkonten und Datenbankrollen. Verwenden Sie `sp_dropalias`, um Aliase in aktualisierten Datenbanken zu entfernen.|  
+|Sicherheit|Der Versionsparameter von **PWDCOMPARE** Darstellung eines Werts von einer Anmeldung vor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 wird nicht mehr unterstützt.|None|  
 |Service Broker-Programmierbarkeit in SMO|Die **Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** -Klasse implementiert nicht mehr die **Microsoft.SqlServer.Management.Smo.IObjectPermission** Schnittstelle.||  
 |SET-Optionen|`SET DISABLE_DEF_CNST_CHK`|Keine.|  
 |Systemtabellen|sys.database_principal_aliases|Verwenden Sie anstelle von Aliasen Rollen.|  
 |Transact-SQL|`RAISERROR` im Format `RAISERROR integer 'string'` wird eingestellt.|Schreiben Sie die Anweisung unter Verwendung der aktuellen **RAISERROR(…)**  Syntax.|  
 |Transact-SQL-Syntax|`COMPUTE / COMPUTE BY`|Verwendung von `ROLLUP`|  
-|Transact-SQL-Syntax|Verwenden von **\* =** und **=\***|Verwenden Sie die ANSI-Joinsyntax. Weitere Informationen finden Sie unter [FROM (Transact-SQL).](http://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Transact-SQL-Syntax|Verwenden von **\* =** und **=\***|Verwenden Sie die ANSI-Joinsyntax. Weitere Informationen finden Sie unter [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|Databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Database_file_size_change-Ereignis, Database_file_size_change ersetzt<br /><br /> database_file_size_change-Ereignis<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Zusätzliche XEvent-Änderungen**  

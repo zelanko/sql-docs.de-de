@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], location paths
@@ -17,12 +15,12 @@ ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d70223df27f8f75c6e3a4d354d8f57f9ee8f150a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7450810f45d81dd1530699677a80a052840ed867
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124981"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806002"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Angeben eines Knotentests unter dem Speicherortpfad (SQLXML 4.0)
   Ein Knotentest gibt den vom Positionsschritt ausgewählten Knotentyp an. Jede Achse (`child`, `parent`, `attribute`, oder `self`) hat einen Hauptknotentyp. Für die `attribute` Achse, der primäre Knotentyp ist  **\<Attribut >**. Für die `parent`, `child`, und `self` Achsen, der primäre Knotentyp ist  **\<Element >**.  

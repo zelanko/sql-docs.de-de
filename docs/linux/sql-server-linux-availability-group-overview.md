@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 6bc375492034f4e9b05eda85805cd452fe6d3557
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723188"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206619"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On-Verfügbarkeitsgruppen unter Linux
 
@@ -43,7 +43,7 @@ Lesbare sekundäre Replikate werden nur unterstützt, mit [!INCLUDE[ssenterprise
 
 ## <a name="cluster-type-and-failover-mode"></a>Cluster-Typ und Failover-Modus
 
-Neu bei [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] ist die Einführung eines clustertyps für Verfügbarkeitsgruppen. Für Linux gibt es zwei gültige Werte sind: externe und keine. Ein clustertyps externer bedeutet, dass Pacemaker unter der Verfügbarkeitsgruppe verwendet wird. Verwenden von externen für Clustertyp erfordert, dass der Failover-Modus als auch externe festgelegt werden (ebenfalls neu in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]). Automatisches Failover wird unterstützt, aber im Gegensatz zu einem WSFC ist Failovermodus mit externen, nicht automatisch festgelegt, wenn Pacemaker verwendet wird. Im Gegensatz zu einem WSFC wird der Pacemaker-Teil der Verfügbarkeitsgruppe erstellt, nachdem die Verfügbarkeitsgruppe konfiguriert wurde.
+Neu bei [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] ist die Einführung eines clustertyps für Verfügbarkeitsgruppen. Für Linux gibt es zwei gültige Werte: Externe und keine. Ein clustertyps externer bedeutet, dass Pacemaker unter der Verfügbarkeitsgruppe verwendet wird. Verwenden von externen für Clustertyp erfordert, dass der Failover-Modus als auch externe festgelegt werden (ebenfalls neu in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]). Automatisches Failover wird unterstützt, aber im Gegensatz zu einem WSFC ist Failovermodus mit externen, nicht automatisch festgelegt, wenn Pacemaker verwendet wird. Im Gegensatz zu einem WSFC wird der Pacemaker-Teil der Verfügbarkeitsgruppe erstellt, nachdem die Verfügbarkeitsgruppe konfiguriert wurde.
 
 Ein Clustertyp ' None ' bedeutet, dass keine Notwendigkeit für besteht, und die Verfügbarkeitsgruppe verwendet wird, Pacemaker. Auch auf Servern, die pacemaker konfiguriert wurde, ist eine Verfügbarkeitsgruppe so konfiguriert, mit dem Clustertyp None, Pacemaker nicht sehen oder verwalten diese Verfügbarkeitsgruppe. Ein Clustertyp ' None ' unterstützt nur Manuelles Failover von einem primären zu einem sekundären Replikat. Eine Verfügbarkeitsgruppe erstellt haben, mit dem keine ist in erster Linie für die schreibgeschützte horizontale Skalierung, Szenario sowie Upgrades vorgesehen. Während es in Szenarien wie die Wiederherstellung im Notfall oder lokalen verfügbarkeitsgruppe arbeiten kann, in denen kein automatisches Failover erforderlich ist, wird nicht empfohlen. Die Listener-Geschichte ist auch eine komplexere ohne Pacemaker.
 
@@ -51,7 +51,7 @@ Clustertyp befindet sich in der [!INCLUDE[ssnoversion-md](../includes/ssnoversio
 
 ## <a name="requiredsynchronizedsecondariestocommit"></a>erforderliche\_synchronisiert\_sekundäre Replikate\_zu\_Commit
 
-Neu bei [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] ist eine Einstellung, mit dem Verfügbarkeitsgruppen-wird aufgerufen, `required_synchronized_secondaries_to_commit`. Dadurch wird der Verfügbarkeitsgruppe auf die Anzahl der sekundären Replikate, die im Gleichschritt mit der primären sein müssen. Dies ermöglicht Dinge wie automatische Failover (nur bei Pacemaker mit dem Clustertyp External integriert) und das Verhalten der Dinge wie die Verfügbarkeit der primären Datenbank steuert, ob die richtige Anzahl von sekundären Replikaten entweder online oder offline ist. Weitere Informationen hierzu finden Sie unter [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Die `required_synchronized_secondaries_to_commit` Wert ist standardmäßig festgelegt und von Pacemaker verwaltet /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Sie können diesen Wert manuell überschreiben.
+Neu bei [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] ist eine Einstellung, mit dem Verfügbarkeitsgruppen-wird aufgerufen, `required_synchronized_secondaries_to_commit`. Dadurch wird der Verfügbarkeitsgruppe auf die Anzahl der sekundären Replikate, die im Gleichschritt mit der primären sein müssen. Dies ermöglicht Dinge wie automatische Failover (nur bei Pacemaker mit dem Clustertyp External integriert) und das Verhalten der Dinge wie die Verfügbarkeit der primären Datenbank steuert, ob die richtige Anzahl von sekundären Replikaten entweder online oder offline ist. Weitere Informationen hierzu finden Sie unter [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Die `required_synchronized_secondaries_to_commit` Wert ist standardmäßig festgelegt und von Pacemaker verwaltet / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Sie können diesen Wert manuell überschreiben.
 
 Die Kombination von `required_synchronized_secondaries_to_commit` und die neue Sequenznummer (befindet sich in `sys.availability_groups`) informiert Sie Pacemaker und [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] , z. B. Automatisches Failover auftreten kann. In diesem Fall müsste ein sekundäres Replikat gleichen Sequenznummer wie die primäre Datenbank, was bedeutet, dass es mit der aktuellen Konfigurationsinformationen auf dem neuesten Stand ist.
 
@@ -87,7 +87,7 @@ Automatisches Failover einer Verfügbarkeitsgruppe ist möglich, wenn die folgen
 -   Die primäre und das sekundäre Replikat werden zur synchronen datenverschiebung festgelegt.
 -   Die sekundäre Datenbank dem Status synchronisiert (nicht synchronisiert), was bedeutet, dass derselbe Zeitpunkt Daten handelt es sich um.
 -   Der Typ des Clusters ist auf External festgelegt. Automatisches Failover ist nicht möglich, mit dem Clustertyp None.
--   Die `sequence_number` des sekundären Replikats zu der Primärschlüssel verfügt die höchste Sequenznummer – das heißt, des sekundären Replikats des `sequence_number` entspricht, die über das ursprüngliche primäre Replikat.
+-   Die `sequence_number` des sekundären Replikats zu der primären die höchste Sequenznummer - hat also des sekundären Replikats des `sequence_number` entspricht, die über das ursprüngliche primäre Replikat.
 
 Wenn diese Bedingungen erfüllt sind, und der Server, die das primäre Replikat hostet, ein Fehler auftritt, wird in die Verfügbarkeitsgruppe auf ein synchrones Replikat Besitz geändert werden. Das Verhalten für synchronen Replikaten (der es drei stehen gesamt: ein primäres und zwei sekundäre Replikate) können von weiteren gesteuert werden `required_synchronized_secondaries_to_commit`. Dies funktioniert mit Verfügbarkeitsgruppen unter Windows und Linux, aber es ist vollkommen unterschiedlich konfiguriert. Unter Linux wird der Wert automatisch vom Cluster für die AG-Ressource selbst konfiguriert werden.
 
@@ -151,7 +151,7 @@ Eine verteilte Verfügbarkeitsgruppe kann auch OS-Grenzen überschreiten. Die zu
 
 ![Hybrid-Dist-Verfügbarkeitsgruppe](./media/sql-server-linux-availability-group-overview/image2.png)
 
-<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article “x”].
+<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article "x"].
 
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->

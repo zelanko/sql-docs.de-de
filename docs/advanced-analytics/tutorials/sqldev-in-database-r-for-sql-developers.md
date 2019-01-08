@@ -1,33 +1,28 @@
 ---
-title: Tutorial für datenbankinterne Analysen mit R und SQL Server-Machine Learning | Microsoft-Dokumentation
+title: Tutorial für datenbankinterne Analysen mit R – SQL Server-Machine Learning
 description: Informationen Sie zum Einbetten von R programming Language-Code in SQL Server gespeicherte Prozeduren und T-SQL-Funktionen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 12/18/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 80c4d39e87984b022340079be4d944ed6ad963e3
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8e5b0bc8633e956817e778a1d5a2d75a86df8588
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030647"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596342"
 ---
-# <a name="tutorial-in-database-r-analytics-for-sql-developers"></a>Tutorial: In-Database R Analytics für SQL-Entwickler
+# <a name="tutorial-in-database-analytics-for-sql-developers-using-r"></a>Lernprogramm: Datenbankinterne Analysen für SQL-Entwickler, die mithilfe von R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Tutorial für die SQL-Programmierer erfahren Sie mehr über R-Integration durch die Erstellung und Bereitstellung einer R-basierte-Machine learning-Lösung mit einem [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) Datenbank auf SQL Server. 
 
-Dieses Tutorial führt Sie in R-Funktionen, die in einem Workflow der Modellierung verwendet. Schritte schließen das Durchsuchen von Daten, erstellen und Trainieren ein binärklassifizierungsmodell für und Bereitstellung eines Modells. Verwenden Sie Beispieldaten aus der New York City Taxi und Limosine Kommission und das Modell, das Sie erstellen vorhersagt, ob eine Fahrt wahrscheinlich zu einer QuickInfo, die basierend auf dem der Tag, Wegstrecke und einstiegsort ist. Alle in diesem Tutorial verwendeten R-Code ist eingeschlossen in gespeicherten Prozeduren, die Sie erstellen, und führen Sie in Management Studio.
+Dieses Tutorial führt Sie in R-Funktionen, die in einem Workflow der Modellierung verwendet. Schritte schließen das Durchsuchen von Daten, erstellen und Trainieren ein binärklassifizierungsmodell für und Bereitstellung eines Modells. Das Modell, das Sie erstellen vorhersagt, ob eine Fahrt wahrscheinlich zu einer QuickInfo, die basierend auf dem der Tag, Wegstrecke und einstiegsort ist. Alle in diesem Tutorial verwendeten R-Code ist eingeschlossen in gespeicherten Prozeduren, die Sie erstellen, und führen Sie in Management Studio.
 
-
-> [!NOTE]
-> 
-> Dieses Tutorial ist in R und Python verfügbar. Die Python-Version finden Sie unter [datenbankinterne Analysen für Python-Entwickler](../tutorials/sqldev-in-database-python-for-sql-developers.md).
-
-## <a name="overview"></a>Übersicht
+## <a name="background-for-sql-developers"></a>Hintergrund für SQL-Entwickler
 
 Der Prozess der Erstellung einer Machine Learning-Lösung ist ein komplexes, die mehrere Tools und die Koordination von Experten in mehreren Phasen umfassen können:
 
@@ -36,15 +31,15 @@ Der Prozess der Erstellung einer Machine Learning-Lösung ist ein komplexes, die
 + Trainieren und Optimieren des Modells
 + Bereitstellung in der Produktion
 
-Entwickeln und Testen von den tatsächlichen Code, wird am besten mit einer dedizierten Umgebung ausgeführt. Allerdings nachdem das Skript vollständig getestet ist, können Sie ganz einfach bereitstellen damit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozeduren in der vertrauten Umgebung von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+Entwickeln und Testen von den eigentlichen Code erfolgt am besten das über eine dedizierte R-Entwicklungsumgebung. Allerdings nachdem das Skript vollständig getestet ist, können Sie ganz einfach bereitstellen damit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozeduren in der vertrauten Umgebung von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-Führt, ob Sie ein SQL-Programmierer, die keine Erfahrung mit R, oder ein R-Entwickler, die noch nicht mit SQL, diesem mehrteiligen Tutorial wird einen typischen Workflow für die Durchführung von in-Database-Analyse mit R und SQL Server. 
+Der Zweck dieses mehrteilige Tutorial bietet eine Einführung in ein typischer Workflow für die Migration von "Fertig R-Code" für SQL Server. 
 
-- [Lektion 1: Untersuchen und Visualisieren von Daten-Shapes und die Verteilung durch den Aufruf von R-Funktionen in gespeicherten Prozeduren](../tutorials/sqldev-explore-and-visualize-the-data.md)
+- [Lektion 1: Untersuchen und Visualisieren von Daten-Shapes und die Verteilung durch Aufrufen von R-Funktionen in gespeicherten Prozeduren](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
 - [Lektion 2: Erstellen von Datenfunktionen mit R in T-SQL-Funktionen](sqldev-create-data-features-using-t-sql.md)
   
-- [Lektion 3: Trainieren Sie und speichern Sie eine R-Modells mithilfe von Funktionen und gespeicherten Prozeduren](sqldev-train-and-save-a-model-using-t-sql.md)
+- [Lektion 3: Trainieren und Speichern eines R-Modells mithilfe von Funktionen und gespeicherten Prozeduren](sqldev-train-and-save-a-model-using-t-sql.md)
   
 - [Lektion 4: Vorhersagen von möglichen Ergebnissen, die mithilfe eines R-Modells in einer gespeicherten Prozedur](../tutorials/sqldev-operationalize-the-model.md)
 

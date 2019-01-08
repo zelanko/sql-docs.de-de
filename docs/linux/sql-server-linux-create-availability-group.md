@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: d1e1254f8a3b3cd994c31f252ca61a0384dc9bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692138"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205749"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Erstellen Sie und konfigurieren Sie eine verfügbarkeitsgruppe für SQL Server unter Linux
 
@@ -71,7 +71,7 @@ sudo systemctl restart mssql-server
 
 Eine verfügbarkeitsgruppe verwendet TCP-Endpunkte für die Kommunikation. Unter Linux werden die Endpunkte für eine Verfügbarkeitsgruppe nur unterstützt, wenn Zertifikate für die Authentifizierung verwendet werden. Dies bedeutet, dass das Zertifikat von einer Instanz muss auf allen anderen Instanzen wiederhergestellt werden, die Replikate, die in derselben Verfügbarkeitsgruppe beteiligt werden. Der Prozess ist auch für eine reine konfigurationsreplikat erforderlich. 
 
-Erstellen von Endpunkten und Wiederherstellen von Zertifikaten können nur über Transact-SQL erfolgen. Sie können nicht[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-generierte Zertifikate auch. Sie benötigen auch einen Prozess zum Verwalten, und Ersetzen Sie alle Zertifikate, die ablaufen.
+Erstellen von Endpunkten und Wiederherstellen von Zertifikaten können nur über Transact-SQL erfolgen. Sie können nicht [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-generierte Zertifikate auch. Sie benötigen auch einen Prozess zum Verwalten, und Ersetzen Sie alle Zertifikate, die ablaufen.
 
 > [!IMPORTANT]
 > Wenn Sie planen, verwenden Sie die [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] Assistenten zum Erstellen der Verfügbarkeitsgruppe, Sie trotzdem müssen zum Erstellen und Wiederherstellen der Zertifikate mithilfe von Transact-SQL unter Linux.
@@ -353,9 +353,9 @@ In diesem Abschnitt zeigt, wie zum Erstellen einer Verfügbarkeitsgruppe mit dem
 
 11. Wenn ein Listener für lesbare Szenarien erstellt wird, kann SSMS 17.3 oder höher die Erstellung des schreibgeschützten Routings im Assistenten aus. Sie können auch später über SSMS oder Transact-SQL-hinzugefügt werden. So fügen Sie schreibgeschütztes routing jetzt hinzu
 
-    A.  Wählen Sie die Registerkarte des schreibgeschützten Routing.
+    a.  Wählen Sie die Registerkarte des schreibgeschützten Routing.
 
-    B.  Geben Sie die URLs für den schreibgeschützten Replikaten ein. Diese URLs sind Endpunkte zu ähnlich, außer sie den Port der Instanz nicht auf den Endpunkt zu verwenden.
+    b.  Geben Sie die URLs für den schreibgeschützten Replikaten ein. Diese URLs sind Endpunkte zu ähnlich, außer sie den Port der Instanz nicht auf den Endpunkt zu verwenden.
 
     c.  Wählen Sie jede URL, und wählen Sie im unteren Bereich die lesbaren Replikate. Halten Sie um mehrere Metriken auszuwählen UMSCHALT oder klicken und ziehen.
 
@@ -378,7 +378,7 @@ Dieser Abschnitt zeigt Beispiele für die Erstellung einer Verfügbarkeitsgruppe
 -   [Konfigurieren des schreibgeschützten Routings für eine Verfügbarkeitsgruppe (SQLServer)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
 -   [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners (SQLServer)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-#### <a name="example-one--two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>Beispiel 1: zwei Replikate mit einem Replikat für reines konfigurationsreplikat (externen Cluster-Typ)
+#### <a name="example-one---two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>Beispiel 1: 2 Replikate mit einem Replikat für reines konfigurationsreplikat (externen Cluster-Typ)
 
 Dieses Beispiel zeigt, wie Sie eine Verfügbarkeitsgruppe zwei Replikaten erstellen, die ein reines konfigurationsreplikat Replikat verwendet wird.
 
@@ -424,7 +424,7 @@ Dieses Beispiel zeigt, wie Sie eine Verfügbarkeitsgruppe zwei Replikaten erstel
     GO
    ```
 
-#### <a name="example-two--three-replicas-with-read-only-routing-external-cluster-type"></a>Beispiel 2 – 3 Replikate mit schreibgeschütztes routing (externen Cluster-Typ)
+#### <a name="example-two---three-replicas-with-read-only-routing-external-cluster-type"></a>Beispiel für zwei bis drei Replikate mit schreibgeschütztes routing (externen Cluster-Typ)
 
 Dieses Beispiel zeigt drei vollständige, dass die Replikate und wie schreibgeschütztes routing im Rahmen der anfänglichen Erstellung der Verfügbarkeitsgruppe konfiguriert werden können.
 
@@ -482,7 +482,7 @@ Dieses Beispiel zeigt drei vollständige, dass die Replikate und wie schreibgesc
     
 3.  Wiederholen Sie Schritt2 für das dritte Replikat aus.
 
-#### <a name="example-three--two-replicas-with-read-only-routing-none-cluster-type"></a>Beispiel 3 – zwei Replikate mit schreibgeschütztes routing (kein cluster-Typ)
+#### <a name="example-three---two-replicas-with-read-only-routing-none-cluster-type"></a>Beispiel 3: 2 Replikate mit schreibgeschütztes routing (kein cluster-Typ)
 
 Dieses Beispiel zeigt die Erstellung einer Konfiguration mit zwei Replikaten mithilfe eines clustertyps ' None '. Es wird für das Szenario leseskalierung verwendet wird, auf dem kein Failover erwartet. Dadurch wird den Listener, der tatsächlich auf dem primären Replikat als auch das schreibgeschützte routing ist die Verwendung der Roundrobin-Funktionalität erstellt.
 

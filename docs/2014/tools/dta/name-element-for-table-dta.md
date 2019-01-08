@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 513a3751baa41293c6a8dd84ab03af5f3d5a3103
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16e5145ff3338cb597813e26e480d92aa899a1c7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206320"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759652"
 ---
 # <a name="name-element-for-table-dta"></a>Name-Element für Tabelle (DTA)
   Gibt einen Tabellennamen zur Optimierung an.  
@@ -40,13 +39,13 @@ ms.locfileid: "48206320"
 |--------------------|-----------------|  
 |**Datentyp und -länge**|`string`, 1 bis 255 Zeichen.|  
 |**Standardwert**|Keine.|  
-|**Vorkommen**|Erforderlich. Einmal für jedes `Table` Element.|  
+|**Vorkommen**|Erforderlich. Einmalig pro `Table`-Element.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[Element für Schema Tabelle &#40;DTA&#41;](table-element-for-schema-dta.md)|  
+|**Übergeordnetes Element**|[Table-Element für Schema &#40;DTA&#41;](table-element-for-schema-dta.md)|  
 |**Untergeordnete Elemente**|Keine.|  
   
 ## <a name="example"></a>Beispiel  

@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697010"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413087"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Datenbankkonsistenzprüfung (DBCC) für Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   DBCC ermöglicht bei Bedarf Datenbanküberprüfungen für mehrdimensionale und tabellarische Datenbanken auf einer Analysis Services-Instanz. Sie können DBCC in einem MDX- oder XMLA-Abfragefenster in SQL Server Management Studio (SSMS) ausführen und die DBCC-Ausgabe in SQL Server Profiler- oder XEvent-Sitzungen in SSMS verfolgen.  
-Der Befehl verwendet eine Objektdefinition und gibt ein leeres Resultset oder ausführliche Fehlerinformationen zurück, wenn das Objekt beschädigt ist.   In diesem Artikel erfahren Sie, wie Sie den Befehl ausführen, die Ergebnisse analysieren und auftretende Probleme behandeln.  
+Der Befehl verwendet eine Objektdefinition und gibt ein leeres Resultset oder ausführliche Fehlerinformationen zurück, wenn das Objekt beschädigt ist.   In diesem Artikel werden Sie erfahren, wie Sie den Befehl ausführen, die Ergebnisse analysieren und Probleme, die auftreten können.  
   
  Bei tabellarischen Datenbanken entsprechen die von DBCC ausgeführten Konsistenzprüfungen der integrierten Überprüfung, die automatisch jedes Mal auftritt, wenn Sie eine Datenbank erneut laden, synchronisieren oder wiederherstellen.  Im Gegensatz dazu fallen Konsistenzprüfungen für mehrdimensionale Datenbanken nur an, wenn Sie DBCC bei Bedarf ausführen.  
   
@@ -35,7 +35,7 @@ Der Befehl verwendet eine Objektdefinition und gibt ein leeres Resultset oder au
  DBCC für Analysis Services kann für eine Analysis Services-Datenbank mit jedem Kompatibilitätsgrad ausgeführt, solange die Datenbank auf einer SQL Server 2016-Instanz ausgeführt wird. Achten Sie darauf, dass Sie die richtige Befehlssyntax für die einzelnen Datenbanktypen verwenden.  
   
 > [!NOTE]  
->  Wenn Sie mit [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md) vertraut sind, werden Sie schnell feststellen, dass DBCC in Analysis Services einen wesentlich geringeren Umfang hat. DBCC in Analysis Services ist ein einzelner Befehl, der ausschließlich Datenbeschädigungen in der gesamten Datenbank oder für einzelne Objekte angibt. Wenn Sie noch andere Aufgaben ausführen möchten, z. B. das Sammeln von Informationen, verwenden Sie stattdessen AMO PowerShell- oder XMLA-Skripts.
+>  Wenn Sie sich mit vertraut [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), Sie schnell feststellen, dass DBCC in Analysis Services einen wesentlich geringeren Umfang hat. DBCC in Analysis Services ist ein einzelner Befehl, der ausschließlich Datenbeschädigungen in der gesamten Datenbank oder für einzelne Objekte angibt. Wenn Sie noch andere Aufgaben ausführen möchten, z. B. das Sammeln von Informationen, verwenden Sie stattdessen AMO PowerShell- oder XMLA-Skripts.
   
 ## <a name="permission-requirements"></a>Berechtigungsanforderungen  
  Sie müssen Datenbank- oder Serveradministrator für Analysis Services (Mitglied der Serverrolle) sein, um den Befehl auszuführen. Anweisungen finden Sie unter [Erteilen von Datenbankberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) oder [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
@@ -72,7 +72,7 @@ Der Befehl verwendet eine Objektdefinition und gibt ein leeres Resultset oder au
   
 ```  
   
- Löschen Sie alle Objekt-ID-Elemente auf niedrigeren Ebenen, die Sie nicht benötigen, um DBCC für Objekte weiter oben in der Objektkette auszuführen:  
+ Löschen Sie alle Low-Level-Objekt-ID-Elemente, die Sie nicht benötigen, um DBCC für Objekte, die weiter oben in der Objektkette auszuführen:  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

@@ -20,16 +20,16 @@ ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c1f199d5f3318181aa03499c31d9597f2348fec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d65b7f31010aeb768f7b04c06753f185d3cc792f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655378"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210091"
 ---
 # <a name="configdsn-function"></a>ConfigDSN-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 1.0  
+ Eingeführt in Version: ODBC 1.0  
   
  **Zusammenfassung**  
  **ConfigDSN** hinzufügt, ändert oder löscht Sie Datenquellen aus der Systeminformationen. Sie können den Benutzer zur Verbindungsinformationen aufgefordert. Es kann in die Treiber-DLL oder eine separate Setup-DLL sein.  

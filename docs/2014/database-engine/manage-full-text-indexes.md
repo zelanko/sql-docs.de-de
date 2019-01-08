@@ -10,12 +10,12 @@ ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d55a1a8bef5e3d4a74aa2bb09c27e3f7c2a8dc82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066806"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591834"
 ---
 # <a name="manage-full-text-indexes"></a>Verwalten von Volltextindizes
      
@@ -35,9 +35,9 @@ ms.locfileid: "48066806"
   
     |Seite|Description|  
     |----------|-----------------|  
-    |**Allgemein**|Ändert die grundlegenden Eigenschaften des Volltextindex. Beinhaltet mehrere änderbare Eigenschaften und eine Reihe von nicht änderbaren Eigenschaften, wie z. B. Datenbankname, Tabellenname und den Namen der Volltextschlüsselspalte. Die änderbaren Eigenschaften lauten:<br /><br /> **Volltextindex-Stoppliste**<br /><br /> **Volltextindizierung aktiviert**<br /><br /> **Änderungsnachverfolgung**<br /><br /> **Sucheigenschaftenliste**<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Volltextindex Eigenschaften &#40;Seite "Allgemein"&#41;](full-text-index-properties-general-page.md).|  
-    |**Spalten**|Zeigt die Tabellenspalten an, die für die Volltextindizierung verfügbar sind. Die ausgewählte Spalte bzw. die Spalten werden volltextindiziert. Sie können beliebig viele verfügbare Spalten auswählen und in den Volltextindex aufnehmen. Weitere Informationen finden Sie unter [Volltextindex Eigenschaften &#40;Seite "Spalten"&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
-    |**Zeitpläne**|Verwenden Sie diese Seite, um Zeitpläne für einen SQL Server-Agent-Auftrag zu erstellen oder zu verwalten, der eine inkrementelle Tabellenauffüllung für die Auffüllungen des Volltextindexes beginnt. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../relational-databases/indexes/indexes.md).<br /><br /> **\*\* Wichtige \* \***  nach dem Beenden der **Volltextindex Eigenschaften** Dialogfeld alle neu erstellten Zeitpläne einem SQL Server-Agent-Auftrag (Start Incremental Table Population on zugeordnetist*Database_name*. *TABLE_NAME*).|  
+    |**Allgemein**|Ändert die grundlegenden Eigenschaften des Volltextindex. Beinhaltet mehrere änderbare Eigenschaften und eine Reihe von nicht änderbaren Eigenschaften, wie z. B. Datenbankname, Tabellenname und den Namen der Volltextschlüsselspalte. Die änderbaren Eigenschaften lauten:<br /><br /> **Volltextindex-Stoppliste**<br /><br /> **Volltextindizierung aktiviert**<br /><br /> **Änderungsnachverfolgung**<br /><br /> **Sucheigenschaftenliste**<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Volltextindex-Eigenschaften &#40;Seite 'Allgemein'&#41;](full-text-index-properties-general-page.md).|  
+    |**Spalten**|Zeigt die Tabellenspalten an, die für die Volltextindizierung verfügbar sind. Die ausgewählte Spalte bzw. die Spalten werden volltextindiziert. Sie können beliebig viele verfügbare Spalten auswählen und in den Volltextindex aufnehmen. Weitere Informationen finden Sie unter [Volltextindex-Eigenschaften &#40;Seite "Spalten"&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
+    |**Zeitpläne**|Verwenden Sie diese Seite, um Zeitpläne für einen SQL Server-Agent-Auftrag zu erstellen oder zu verwalten, der eine inkrementelle Tabellenauffüllung für die Auffüllungen des Volltextindexes beginnt. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../relational-databases/indexes/indexes.md).<br /><br /> <strong>\*\* Wichtige \* \*</strong>  nach dem Beenden der **Volltextindex Eigenschaften** Dialogfeld alle neu erstellten Zeitpläne einem SQL Server-Agent-Auftrag (Start Incremental Table Population on zugeordnetist*Database_name*. *TABLE_NAME*).|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] um vorgenommene Änderungen zu speichern und das Dialogfeld **Volltextindexeigenschaften** zu schließen.  
   
@@ -128,7 +128,7 @@ GO
 ##  <a name="disable"></a> Das Deaktivieren oder erneutes Aktivieren einer Tabelle für Volltextindizierung  
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sind standardmäßig alle von Benutzern erstellten Datenbanken volltextfähig. Zudem wird eine einzelne Tabelle automatisch für die Volltextindizierung aktiviert, sobald ein Volltextindex für die Tabelle erstellt wird und dem Index eine Spalte hinzugefügt wird. Eine Tabelle wird für die Volltextindizierung automatisch deaktiviert, wenn die letzte Spalte aus dem Volltextindex der Tabelle entfernt wird.  
   
- Für eine Tabelle mit einem Volltextindex können Sie mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] eine Tabelle für die Volltextindizierung manuell deaktivieren und erneut aktivieren.  
+ Für eine Tabelle mit einem Volltextindex können Sie mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]eine Tabelle für die Volltextindizierung manuell deaktivieren und erneut aktivieren.  
   
 #### <a name="to-enable-a-table-for-full-text-indexing"></a>So aktivieren Sie eine Tabelle für Volltextindizierung  
   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 4bd04ee62af21255f40363de602c6461aeb350a6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3686ab7df82a3241ee97948ab2ffa9a0b1d41df3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677915"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215456"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Problembehandlung bei SQLServer unter Linux
 
@@ -105,7 +105,7 @@ Der Installer protokolliert hier: / Var/opt/Mssql/Setup-< Zeitstempel, der Zeitp
 Falls gewünscht, können Sie auch die Dateien in UTF-8 mit eingelesen konvertieren "more" oder "kleiner", mit dem folgenden Befehl:
    
    ```bash
-   sudo iconv –f UTF-16LE –t UTF-8 <errorlog> -o <output errorlog file>
+   sudo iconv -f UTF-16LE -t UTF-8 <errorlog> -o <output errorlog file>
    ```
 ## <a name="extended-events"></a>Erweiterte Ereignisse
 
@@ -118,9 +118,9 @@ Suchen Sie nach der Absturzabbilder in das Protokollverzeichnis unter Linux. Üb
 Für kernspeicherabbilder 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
-For SQL dumps 
+Für SQL-dumps 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -205,7 +205,7 @@ Es gibt viele Faktoren, die Leistung zu erzielen, einschließlich Datenbankentwu
 
    Finden Sie im Abschnitt zur Problembehandlung im Artikel [Herstellen einer Verbindung mit SQL Server unter Linux](#connection).
 
-2. Fehler: Die Hostnamen muss sein 15 Zeichen oder weniger.
+2. FEHLER: Hostname darf 15 Zeichen sein oder weniger.
 
    Dies ist eine bekannte Problem, das ausgeführt wird, wenn der Name des Computers, der versucht, installieren das Debian-Paket von SQLServer mehr als 15 Zeichen ist. Es gibt derzeit keine problemumgehungen als den Namen des Computers ändern. Eine Möglichkeit, dies zu erreichen, ist durch Bearbeiten der Hostname-Datei und Neustarten des Computers. Die folgenden [Website Handbuch](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) wird dies ausführlich erläutert.
 

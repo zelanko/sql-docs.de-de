@@ -20,16 +20,16 @@ ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4606c9f525517d51312fc9a105076691dcda682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab81694fb0234a896a7e9fd09d338e8db43360eb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683025"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207509"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
   
  **Zusammenfassung**  
  **SQLGetDiagRec** gibt die aktuellen Werte aus mehreren Feldern, der ein Diagnosedatensatz, die Fehler, Warnung und Statusinformationen enthält. Im Gegensatz zu **SQLGetDiagField**, womit eine diagnosefeld pro Aufruf **SQLGetDiagRec** gibt verschiedene, häufig verwendete Felder des ein Diagnosedatensatz, einschließlich SQLSTATE, der systemeigene Fehlercode, und der diagnosemeldung Text.  
@@ -94,13 +94,13 @@ SQLRETURN SQLGetDiagRec(
 ## <a name="diagnostics"></a>Diagnose  
  **SQLGetDiagRec** veröffentlichen DiagnoseDatensätze nicht für sich selbst. Sie können die folgenden Rückgabewerte verwendet, um das Ergebnis seiner eigenen Ausführung zu melden:  
   
--   SQL_SUCCESS: Die Funktion wurde erfolgreich zurückgegeben Diagnoseinformationen zu erhalten.  
+-   SQL_SUCCESS: Diagnoseinformationen wird von die Funktion wurde erfolgreich zurückgegeben.  
   
 -   SQL_SUCCESS_WITH_INFO: Die \* *MessageText* Puffer war zu klein für die angeforderte diagnosemeldung. Es wurden keine DiagnoseDatensätze generiert. Um zu bestimmen, dass durch das Abschneiden aufgetreten ist, vergleichen Sie die Anwendung muss *Pufferlänge* auf die tatsächliche Anzahl von Bytes verfügbar ist, das wird **StringLengthPtr*.  
   
--   SQL_INVALID_HANDLE: Durch das Handle angegeben *HandleType* und *behandeln* war es sich nicht um ein gültiges Handle.  
+-   SQL_INVALID_HANDLE: Das Handle angegeben wird, indem *HandleType* und *behandeln* war es sich nicht um ein gültiges Handle.  
   
--   SQL_ERROR: Eine der folgenden aufgetreten ist:  
+-   SQL_ERROR ZURÜCK: Eine der folgenden aufgetreten ist:  
   
     -   *RecNumber* war negativ oder 0.  
   
@@ -108,7 +108,7 @@ SQLRETURN SQLGetDiagRec(
   
     -   Wenn Sie asynchrone Benachrichtigung verwenden zu können, war der asynchrone Vorgang auf den Ziehpunkt nicht abgeschlossen werden.  
   
--   SQL_NO_DATA: *RecNumber* war größer als die Zahl der DiagnoseDatensätze, die für das Handle, das im angegebenen vorhanden waren *behandeln.* Die Funktion gibt SQL_NO_DATA auch für eine beliebige Positive *RecNumber* treten keine DiagnoseDatensätze für *behandeln*.  
+-   SQL_NO_DATA ZURÜCKGIBT: *RecNumber* war größer als die Zahl der DiagnoseDatensätze, die für das Handle, das im angegebenen vorhanden waren *behandeln.* Die Funktion gibt SQL_NO_DATA auch für eine beliebige Positive *RecNumber* treten keine DiagnoseDatensätze für *behandeln*.  
   
 ## <a name="comments"></a>Kommentare  
  Ruft eine Anwendung in der Regel **SQLGetDiagRec** Wenn ein vorherigen Aufruf von einer ODBC-Funktion SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgegeben hat. Aber da eine ODBC-Funktion keine oder mehrere DiagnoseDatensätze jedes Mal buchen können sie aufgerufen wird, kann eine Anwendung aufrufen **SQLGetDiagRec** nach jedem Aufruf der ODBC-Funktion. Kann eine Anwendung aufrufen **SQLGetDiagRec** mehrere Male auf, um einige oder alle Datensätze in der Struktur diagnostische Daten zurückzugeben. ODBC erzwingt keine Begrenzung der Anzahl der DiagnoseDatensätze, die zu jedem Zeitpunkt gespeichert werden können.  

@@ -14,12 +14,12 @@ ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a6654b7ec23e2aae071a7e4ce6cd360b7ef10e4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 292baa254bffc16650376dbbc30e7193b8bc367c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107490"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358822"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement
   Die Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement ist eine Steuerung, die in der Berichts-Designer-Umgebung von Visual Studio verwendet werden kann. Diese Komponente bietet eine aktivierte Entwurfsoberfläche, die Drag und Drop-Vorgänge, Integration in den Eigenschaftenbrowser von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] und die Möglichkeit zum Bereitstellen von Editoren für benutzerdefinierte Eigenschaften zulassen.  
@@ -29,9 +29,9 @@ ms.locfileid: "48107490"
  Die mit der Entwurfszeitkomponente der Entwicklungsumgebung festgelegten Eigenschaften werden von der Host-Entwurfsumgebung serialisiert und deserialisiert und dann als Elemente in der RDL-Datei (Report Definition Language, Berichtsdefinitionssprache) gespeichert. Wenn der Bericht vom Berichtsprozessor ausgeführt wird, werden die mit der Entwurfszeitkomponente festgelegten Eigenschaften vom Berichtsprozessor an eine Laufzeitkomponente für ein benutzerdefiniertes Berichtselement übergeben, die das benutzerdefinierte Berichtselement rendert und wieder an den Berichtsprozessor zurückgibt.  
   
 > [!NOTE]  
->  Die Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement wird als [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Komponente implementiert. In diesem Dokument werden Implementierungsdetails beschrieben, die für die Entwurfszeitkomponente eines benutzerdefinierten Berichtselements spezifisch sind. Weitere Informationen zum Entwickeln von Komponenten mit [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] finden Sie in der MSDN Library unter [Komponenten in Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576).  
+>  Die Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement wird als [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Komponente implementiert. In diesem Dokument werden Implementierungsdetails beschrieben, die für die Entwurfszeitkomponente eines benutzerdefinierten Berichtselements spezifisch sind. Weitere Informationen zum Entwickeln von Komponenten mit [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] finden Sie in der MSDN Library unter [Komponenten in Visual Studio](https://go.microsoft.com/fwlink/?LinkId=116576).  
   
- Ein Beispiel für ein vollständig implementiertes benutzerdefiniertes Berichtselement finden Sie unter [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Ein Beispiel für ein vollständig implementiertes benutzerdefiniertes Berichtselement finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="implementing-a-design-time-component"></a>Implementieren einer Entwurfszeitkomponente  
  Die Hauptklasse einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement wird von der `Microsoft.ReportDesigner.CustomReportItemDesigner`-Klasse geerbt. Zusätzlich zu den Standardattributen für eine [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Steuerung sollte die Komponentenklasse ein `CustomReportItem`-Attribut definieren. Dieses Attribut muss dem in der Datei reportserver.config festgelegten Namen des benutzerdefinierten Berichtselements entsprechen. Eine Liste der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Attribute finden Sie unter "Attribute" in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-SDK-Dokumentation.  
@@ -186,7 +186,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Verwenden von Randsteuerelementen  
- Klassen für ein benutzerdefiniertes Berichtselement können auch eine `Microsoft.ReportDesigner.Design.Adornment`-Klasse implementieren. Ein Randsteuerelement ermöglicht es der Steuerung für ein benutzerdefiniertes Berichtselement, Bereiche außerhalb des Hauptrechtecks der Entwurfsoberfläche bereitzustellen. Diese Bereiche behandeln Benutzeroberflächenereignisse wie Mausklicks und Drag und Drop-Vorgänge. Die `Adornment` -Klasse, die in definiert ist die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` -Namespace ist eine Pass-Through-Implementierung der <xref:System.Windows.Forms.Design.Behavior.Adorner> Klasse finden Sie in Windows Forms. Vollständige Dokumentation für die `Adorner` Klasse, finden Sie unter [Verhaltensdienst – Übersicht](http://go.microsoft.com/fwlink/?LinkId=116673) in der MSDN Library. Beispielcode, der implementiert eine `Microsoft.ReportDesigner.Design.Adornment` Klasse, finden Sie unter [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Klassen für ein benutzerdefiniertes Berichtselement können auch eine `Microsoft.ReportDesigner.Design.Adornment`-Klasse implementieren. Ein Randsteuerelement ermöglicht es der Steuerung für ein benutzerdefiniertes Berichtselement, Bereiche außerhalb des Hauptrechtecks der Entwurfsoberfläche bereitzustellen. Diese Bereiche behandeln Benutzeroberflächenereignisse wie Mausklicks und Drag und Drop-Vorgänge. Die `Adornment` -Klasse, die in definiert ist die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` -Namespace ist eine Pass-Through-Implementierung der <xref:System.Windows.Forms.Design.Behavior.Adorner> Klasse finden Sie in Windows Forms. Vollständige Dokumentation für die `Adorner` Klasse, finden Sie unter [Verhaltensdienst – Übersicht](https://go.microsoft.com/fwlink/?LinkId=116673) in der MSDN Library. Beispielcode, der implementiert eine `Microsoft.ReportDesigner.Design.Adornment` Klasse, finden Sie unter [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Weitere Informationen zum Programmieren und Verwenden von Windows Forms in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] finden Sie in diesen Themen in der MSDN Library:  
   
@@ -194,12 +194,12 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Komponenten in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
--   Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktionen nutzt  
+-   Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das von Visual Studio-Entwurfszeitfunktionen nutzt  
   
 ## <a name="see-also"></a>Siehe auch  
  [Custom Report Item Architecture (Architektur des benutzerdefinierten Berichtselements)](custom-report-item-architecture.md)   
  [Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichtselement](creating-a-custom-report-item-run-time-component.md)   
  [Custom Report Item Class Libraries (Klassenbibliotheken für ein benutzerdefiniertes Berichtselement)](custom-report-item-class-libraries.md)   
- [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements](how-to-deploy-a-custom-report-item.md)  
+ [So wird es gemacht: Bereitstellen eines benutzerdefinierten Berichtselements](how-to-deploy-a-custom-report-item.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Beispieldaten zu einem DirectQuery-Modell im Entwurfsmodus | Microsoft Docs
+title: Hinzufügen von Beispieldaten zu einem Analysis Services-DirectQuery-Modell im Entwurfsmodus | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ca4c4c2a00eed80e709602084cf5de427134977
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: db5ef518a715553b1eecbeeaf5a5ba248b365bf5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041634"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071537"
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Hinzufügen von Beispieldaten zu einem DirectQuery-Modell im Entwurfsmodus
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -40,7 +40,7 @@ Sie können jedoch eine kleinere Menge an Beispieldaten der Arbeitsdatenbank Ihr
   
 4.  Wählen Sie die Partition aus, und klicken Sie anschließend auf **Kopieren**.  
 
-    Dadurch wird eine Kopie der Standardpartition erstellt. Diese Kopie enthält jedoch Beispieldaten, die Sie in einer Abfrage angeben. Beispiel:
+    Dadurch wird eine Kopie der Standardpartition erstellt. Diese Kopie enthält jedoch Beispieldaten, die Sie in einer Abfrage angeben. Zum Beispiel:
   
      ![Ssas_tabularproject_copypartition](../../analysis-services/tabular-models/media/ssas-tabularproject-copypartition.jpg "Ssas_tabularproject_copypartition")  
   

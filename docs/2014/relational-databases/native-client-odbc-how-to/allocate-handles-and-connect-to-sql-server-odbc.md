@@ -14,12 +14,12 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7983b5ef294fadbad7fe5fdbfafc1170f1ac485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083200"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376355"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Zuordnen von Handles und Herstellen einer Verbindung mit SQL Server (ODBC)
     
@@ -29,13 +29,13 @@ ms.locfileid: "48083200"
   
 2.  Schließen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-treiberspezifische Headerdatei Odbcss.h ein.  
   
-3.  Rufen Sie [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) mit einem `HandleType` SQL_HANDLE_ENV auf, um ODBC zu initialisieren und ein Umgebungshandle zuzuordnen.  
+3.  Rufen Sie [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) mit einem `HandleType` SQL_HANDLE_ENV auf, um ODBC zu initialisieren und ein Umgebungshandle zuzuordnen.  
   
 4.  Rufen Sie [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) mit `Attribute` festgelegt auf SQL_ATTR_ODBC_VERSION und `ValuePtr` auf SQL_OV_ODBC3 festgelegt ist, um anzugeben, die Anwendung ODBC 3.x-Format-Funktionsaufrufe verwendet.  
   
-5.  Rufen Sie optional [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) anderen Umgebungen festgelegt, oder rufen [SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403) um Umgebungsoptionen abzurufen.  
+5.  Rufen Sie optional [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) anderen Umgebungen festgelegt, oder rufen [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) um Umgebungsoptionen abzurufen.  
   
-6.  Rufen Sie [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) mit einem `HandleType` SQL_HANDLE_DBC auf, um ein Verbindungshandle zuzuordnen.  
+6.  Rufen Sie [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) mit einem `HandleType` SQL_HANDLE_DBC auf, um ein Verbindungshandle zuzuordnen.  
   
 7.  Rufen Sie optional [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) um Verbindungsoptionen festzulegen, oder rufen [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) um Optionen zu erhalten.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48083200"
 13. Rufen Sie `SQLFreeHandle` mit dem `HandleType` SQL_HANDLE_ENV auf, um das Umgebungshandle wieder freizugeben.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird ein Aufruf von `SQLDriverConnect` zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gezeigt, bei der keine vorhandene ODBC-Datenquelle erforderlich ist. Die Übergabe einer unvollständigen Verbindungszeichenfolge an `SQLDriverConnect` führt dazu, dass der ODBC-Treiber den Benutzer dazu auffordert, die fehlenden Informationen einzugeben.  

@@ -26,15 +26,15 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b5e644e2e255e23cc00d71f4434a4d0f9b861985
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a5b13d9d2095df5d464b7102e1527c21c36c4f5c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810276"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376182"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank
-  Importieren Sie eine Datei einer Datenebenenanwendung (DAC) (eine BACPAC-Datei), um eine Kopie der ursprünglichen Datenbank mit den Daten auf einer neuen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]oder auf [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]zu erstellen. Die Export-/Importvorgänge können kombiniert werden, um eine DAC oder Datenbank zwischen Instanzen zu migrieren oder eine logische Sicherung zu erstellen. Dazu gehört z. B. das Erstellen einer lokalen Kopie einer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]bereitgestellten Datenbank.  
+  Importieren Sie eine Datei einer Datenebenenanwendung (eine BACPAC-Datei), um eine Kopie der ursprünglichen Datenbank mit den Daten auf einer neuen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder auf [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] zu erstellen. Die Export-/Importvorgänge können kombiniert werden, um eine DAC oder Datenbank zwischen Instanzen zu migrieren oder eine logische Sicherung zu erstellen. Dazu gehört z. B. das Erstellen einer lokalen Kopie einer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]bereitgestellten Datenbank.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Beim Importvorgang wird in zwei Phasen eine neue DAC erstellt.  
@@ -43,7 +43,7 @@ ms.locfileid: "43810276"
   
 2.  Beim Import werden die Daten per Massenkopieren in die Exportdatei kopiert.  
   
- In den [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Übungseinheiten steht eine Beispielanwendung zur Verfügung, mit denen das Exportieren und Importieren von DACs und Datenbanken getestet werden kann. Anweisungen zum Herunterladen und Verwenden des Beispiels finden Sie unter [Datenbankimport und -export bei Windows Azure SQL-Datenbanken](http://go.microsoft.com/fwlink/?LinkId=219404).  
+ In den [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Übungseinheiten steht eine Beispielanwendung zur Verfügung, mit denen das Exportieren und Importieren von DACs und Datenbanken getestet werden kann. Anweisungen zum Herunterladen und Verwenden des Beispiels finden Sie unter [Datenbankimport und -export bei Windows Azure SQL-Datenbanken](https://go.microsoft.com/fwlink/?LinkId=219404).  
   
 ## <a name="sql-server-utility"></a>SQL Server-Hilfsprogramm  
  Beim Importieren einer DAC in eine verwaltete Instanz der Datenbank-Engine wird die importierte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann unter dem Knoten **Bereitgestellte Datenebenenanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Bereitgestellte Datenebenenanwendungen** details page.  
@@ -59,7 +59,7 @@ ms.locfileid: "43810276"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Das Importieren einer DAC-Exportdatei aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche Dateien können schädlichen Code enthalten, der möglicherweise unbeabsichtigten Transact-SQL-Code ausführt oder Fehler verursacht, indem er das Schema ändert. Bevor Sie eine Exportdatei aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, entpacken Sie die DAC, und untersuchen Sie den Code, z. B. gespeicherte Prozeduren und anderen benutzerdefinierten Code. Weitere Informationen zum Ausführen dieser Tests finden Sie unter [Validate a DAC Package](validate-a-dac-package.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
  Zur Erhöhung der Sicherheit werden die Anmeldenamen für die SQL Server-Authentifizierung ohne Kennwort in eine DAC-Exportdatei gespeichert. Sobald die Datei importiert wird, wird der Anmeldename als deaktivierter Anmeldename mit einem generierten Kennwort erstellt. Um die Anmeldenamen zu aktivieren, melden Sie sich unter einem Anmeldenamen an, der über die ALTER ANY LOGIN-Berechtigung verfügt, und verwenden ALTER LOGIN, um den Anmeldenamen zu aktivieren und ein neues Kennwort zuzuweisen, das dem Benutzer mitgeteilt werden kann. Dies ist für Anmeldenamen der Windows-Authentifizierung nicht erforderlich, da die zugehörigen Kennwörter nicht von SQL Server verwaltet werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -93,16 +93,16 @@ ms.locfileid: "43810276"
   
 -   **Diese Seite nicht mehr anzeigen.** – Aktivieren Sie dieses Kontrollkästchen, damit die Einführungsseite in Zukunft nicht mehr angezeigt wird.  
   
--   Durch**Weiter** gelangen Sie zur Seite **Importeinstellungen** .  
+-   Durch **Weiter** gelangen Sie zur Seite **Importeinstellungen**.  
   
--   **Abbrechen** – bricht den Vorgang ab und schließt den Assistenten.  
+-   **Abbrechen**: Bricht den Vorgang ab und schließt den Assistenten.  
   
 ###  <a name="Import_settings"></a> Importeinstellungen (Seite)  
  Verwenden Sie diese Seite, um den Speicherort der zu importierenden BACPAC-Datei anzugeben.  
   
--   **Vom lokalen Datenträger importieren** – Klicken Sie auf **Durchsuchen** , um den lokalen Computer zu durchsuchen, oder geben Sie den Pfad im dafür vorgesehenen Feld an. Der Pfadname muss einen Dateinamen und die Erweiterung BACPAC enthalten.  
+-   **Vom lokalen Datenträger importieren**: Klicken Sie auf **Durchsuchen...**, um den lokalen Computer zu durchsuchen, oder geben Sie den Pfad im dafür vorgesehenen Feld an. Der Pfadname muss einen Dateinamen und die Erweiterung BACPAC enthalten.  
   
--   **Aus Windows Azure importieren** – Importiert eine BACPAC-Datei aus einem Windows Azure-Container. Sie müssen eine Verbindung mit einem Windows Azure-Container herstellen, um diese Option zu überprüfen. Beachten Sie, dass diese Option auch erfordert, dass Sie ein lokales Verzeichnis für die temporäre Datei angeben. Die temporäre Datei wird am angegebenen Speicherort erstellt und verbleibt dort, nachdem der Vorgang abgeschlossen wurde.  
+-   **Aus Windows Azure importieren** -importiert eine bacpac-Datei aus einem Windows Azure-Container. Sie müssen eine Verbindung mit einem Windows Azure-Container herstellen, um diese Option zu überprüfen. Beachten Sie, dass diese Option auch erfordert, dass Sie ein lokales Verzeichnis für die temporäre Datei angeben. Die temporäre Datei wird am angegebenen Speicherort erstellt und verbleibt dort, nachdem der Vorgang abgeschlossen wurde.  
   
      Wenn Sie Windows Azure durchsuchen, können Sie zwischen Containern innerhalb eines Kontos wechseln. Sie müssen eine einzelne BACPAC-Datei angeben, um den Importvorgang fortzusetzen. Beachten Sie, dass Sie Spalten nach **Name**, **Größe**oder **Geändert am**sortieren können.  
   
@@ -113,21 +113,21 @@ ms.locfileid: "43810276"
   
  **Für eine lokale Instanz von SQL Server:**  
   
--   **Neuer Datenbankname** – Geben Sie einen Namen für die importierte Datenbank an.  
+-   **Neuer Datenbankname**: Geben Sie einen Namen für die importierte Datenbank an.  
   
--   **Datendateipfad** - Stellen Sie ein lokales Verzeichnis für Datendateien bereit. Klicken Sie auf **Durchsuchen** , um den lokalen Computer zu durchsuchen, oder geben Sie den Pfad im dafür vorgesehenen Feld an.  
+-   **Datendateipfad**: Stellen Sie ein lokales Verzeichnis für Datendateien bereit. Klicken Sie auf **Durchsuchen...**, um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
   
--   **Protokolldateipfad** – Geben Sie ein lokales Verzeichnis für Protokolldateien an. Klicken Sie auf **Durchsuchen** , um den lokalen Computer zu durchsuchen, oder geben Sie den Pfad im dafür vorgesehenen Feld an.  
+-   **Protokolldateipfad**: Geben Sie ein lokales Verzeichnis für Protokolldateien an. Klicken Sie auf **Durchsuchen...**, um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
  **Für eine SQL-Datenbank:**  
   
--   **Neuer Datenbankname** – Geben Sie einen Namen für die importierte Datenbank an.  
+-   **Neuer Datenbankname**: Geben Sie einen Namen für die importierte Datenbank an.  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Edition**: Geben Sie [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web an. Weitere Informationen zu den Editionen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]finden Sie auf der Website zu [SQL-Datenbanken](http://www.windowsazure.com/home/tour/database/) .  
+-   **Edition von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -Geben Sie [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Weitere Informationen zu den Editionen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]finden Sie auf der Website zu [SQL-Datenbanken](http://www.windowsazure.com/home/tour/database/) .  
   
--   **Maximale Datenbankgröße (GB)** – Geben Sie die maximale Datenbankgröße mithilfe des Dropdownmenüs an.  
+-   **Maximale Datenbankgröße (GB)** -verwenden Sie im Dropdown-Menü, um die maximale Größe für Ihre Datenbank anzugeben.  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   

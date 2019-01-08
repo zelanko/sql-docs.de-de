@@ -13,12 +13,12 @@ ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 99a4e638ddacc5b112ef819826c3eae7f42c5078
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d75a44c44442917f61b52c7aa0f2e770dcdf5d83
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226590"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590564"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lektion 1: Veröffentlichen von Daten mithilfe der Transaktionsreplikation
   In dieser Lektion erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Transaktionsveröffentlichung, um eine gefilterte Teilmenge der **Product** -Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank zu veröffentlichen. Außerdem fügen Sie der Veröffentlichungszugriffsliste (Publication Access List, PAL) die vom Verteilungs-Agent verwendete SQL Server-Anmeldung hinzu. Bevor Sie dieses Tutorial starten, sollten Sie das vorherige Tutorial ( [Vorbereiten des Servers für die Replikation](tutorial-preparing-the-server-for-replication.md)) abgeschlossen haben.  
@@ -51,7 +51,7 @@ ms.locfileid: "48226590"
   
 10. Deaktivieren Sie auf der Seite „Agentsicherheit“ das Kontrollkästchen **Sicherheitseinstellungen des Momentaufnahme-Agents verwenden** .  
   
-11. Klicken Sie für den Momentaufnahmen-Agent auf **Sicherheitseinstellungen**, geben Sie \<*Computername>***\repl_snapshot** im Feld **Prozesskonto** ein, geben Sie das Kennwort für dieses Konto ein, und klicken Sie anschließend auf **OK**.  
+11. Klicken Sie für den Momentaufnahme-Agent auf **Sicherheitseinstellungen**, geben Sie \<_Machine_Name>_**\repl_snapshot** im Feld **Prozesskonto** ein, geben Sie das Kennwort für dieses Konto ein und klicken Sie anschließend auf **OK**.  
   
 12. Wiederholen Sie den vorherigen Schritt, um repl_logreader als Prozesskonto für den Protokolllese-Agenten festzulegen, und klicken Sie anschließend auf **Fertig stellen**.  
   
@@ -77,10 +77,10 @@ ms.locfileid: "48226590"
   
 3.  Wählen Sie die Seite **Veröffentlichungszugriffsliste** aus und klicken Sie auf **Hinzufügen**.  
   
-4.  Klicken Sie im Dialogfeld **Veröffentlichungszugriff hinzufügen** auf *<Computername>***\repl_distribution**, und klicken Sie auf **OK**. Klicken Sie auf **OK**.  
+4.  Wählen Sie im Dialogfeld **Veröffentlichungszugriff hinzufügen** die Anmeldung _<Computername>_**\repl_distribution** aus und klicken Sie auf **OK**. Klicken Sie auf **OK**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Sie haben die Transaktionsveröffentlichung erfolgreich erstellt. Als Nächstes abonnieren Sie diese Veröffentlichung. Siehe [Lektion 2: Erstellen eines Abonnements für die Transaktionsveröffentlichung](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
+ Sie haben die Transaktionsveröffentlichung erfolgreich erstellt. Als Nächstes abonnieren Sie diese Veröffentlichung. Finden Sie unter [Lektion 2: Erstellen eines Abonnements für die Transaktionsveröffentlichung](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Filtern von veröffentlichten Daten](publish/filter-published-data.md)   

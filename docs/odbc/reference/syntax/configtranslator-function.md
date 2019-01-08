@@ -20,16 +20,16 @@ ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f38a9c6814c65593ab452e646a8b1f184e2095de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edcffe36c0185276fae89f800e1bbcfc5bc33b33
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676578"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214521"
 ---
 # <a name="configtranslator-function"></a>ConfigTranslator-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 2.0  
+ Eingeführt in Version: ODBC 2.0  
   
  **Zusammenfassung**  
  **ConfigTranslator** eine Standardoption für die Übersetzung für einen Übersetzer zurückgegeben. Es kann in die Translator-DLL oder eine separate Setup-DLL sein.  

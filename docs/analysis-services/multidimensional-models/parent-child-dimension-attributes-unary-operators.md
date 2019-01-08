@@ -1,5 +1,5 @@
 ---
-title: Unäre Operatoren in über-und untergeordneten Dimensionen | Microsoft Docs
+title: Unäre Operatoren in über-und untergeordnete Dimensionen | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b7f38bb378650fbd243441086df043295376581
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7d4938bc0eac0d3a5568f668b181af1b4169de27
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023127"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539743"
 ---
-# <a name="parent-child-dimension-attributes---unary-operators"></a>Über-und untergeordneten Dimensionsattribute - unäre Operatoren
+# <a name="parent-child-dimension-attributes---unary-operators"></a>Über- und untergeordnete Dimensionsattribute – unäre Operatoren
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  In einer Dimension, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Über-/Unterordnungsbeziehung enthält, geben Sie eine unäre Operatorspalte (oder eine benutzerdefinierte Rollup-Operatorspalte) an, die den benutzerdefinierten Rollup für alle nicht berechneten Elemente des übergeordneten Attributs bestimmt. Der unäre Operator wird immer dann auf die Elemente angewendet, wenn die Werte des übergeordneten Elements ausgewertet werden. Die **UnaryOperatorColumn** -Eigenschaft für ein übergeordnetes Attribut (**Usage**=Parent) gibt die Spalte einer Tabelle in der Datenquellensicht an, die unäre Operatoren enthält. Werte für die benutzerdefinierten Rollup-Operatoren, die in dieser Spalte gespeichert sind, werden auf die einzelnen Elemente des Attributs angewendet.  
+  In einer Dimension, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]eine Über-/Unterordnungsbeziehung enthält, geben Sie eine unäre Operatorspalte (oder eine benutzerdefinierte Rollup-Operatorspalte) an, die den benutzerdefinierten Rollup für alle nicht berechneten Elemente des übergeordneten Attributs bestimmt. Der unäre Operator wird immer dann auf die Elemente angewendet, wenn die Werte des übergeordneten Elements ausgewertet werden. Die **UnaryOperatorColumn** -Eigenschaft für ein übergeordnetes Attribut (**Usage**=Parent) gibt die Spalte einer Tabelle in der Datenquellensicht an, die unäre Operatoren enthält. Werte für die benutzerdefinierten Rollup-Operatoren, die in dieser Spalte gespeichert sind, werden auf die einzelnen Elemente des Attributs angewendet.  
   
  Sie können eine benannte Berechnung für eine Dimensionstabelle in der Datenquellensicht als unäre Operatorspalte erstellen und angeben. Der einfachste Ausdruck, z. B. '+', gibt denselben Operator für alle Elemente zurück. Aber Sie können jeden beliebigen Ausdruck verwenden, solange er einen Operator für jedes Element zurückgibt.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34023127"
   
 ## <a name="see-also"></a>Siehe auch  
  [Dimensionsattributeigenschaftenverweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
- [Benutzerdefinierte Rollupoperatoren in über-und untergeordneten Dimensionen](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)   
- [Starten Sie Business Intelligence-Assistenten im Dimensions-Designer](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  
+ [Benutzerdefinierte Rollupoperatoren in über- und untergeordneten Dimensionen](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)   
+ [Starten des Business Intelligence-Assistenten im Dimensions-Designer](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  
   
   

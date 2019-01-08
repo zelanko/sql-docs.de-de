@@ -1,5 +1,5 @@
 ---
-title: Definieren einer referenzierten Beziehung | Microsoft Docs
+title: Definieren einer referenzierten Beziehung | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e7d27a648f91448cd6c53f34149851b255aa6aa2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 032756aefd5b84e030435152cc759a0b86c2fa18
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018687"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507617"
 ---
-# <a name="lesson-5-1---defining-a-referenced-relationship"></a>Lektion 5-1: Definieren einer referenzierten Beziehung
+# <a name="lesson-5-1---defining-a-referenced-relationship"></a>Lektion 5 – 1: Definieren einer referenzierten Beziehung
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Bis zu diesem Punkt im Lernprogramm basierte jede von Ihnen definierte Cubedimension auf einer Tabelle, die direkt mit der Faktentabelle für eine Measuregruppe durch eine Primärschlüssel/Fremdschlüssel-Beziehung verknüpft war. In den Aufgaben in diesem Thema verknüpfen Sie die **Geography** -Dimension mit der Faktentabelle für Händlerverkäufe über die **Reseller** -Dimension, die als *Referenzdimension*bezeichnet wird. Dadurch können Benutzer Händlerverkäufe nach Geografie dimensionieren. Weitere Informationen finden Sie unter [Definieren einer Beziehung, auf die verwiesen wird, und deren Eigenschaften](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
@@ -47,17 +47,17 @@ Bis zu diesem Punkt im Lernprogramm basierte jede von Ihnen definierte Cubedimen
   
     Beachten Sie, dass die Cubedimension **Geography** aktuell keine Beziehung zur **Internet Sales** -oder **Reseller Sales** -Measuregruppe aufweist.  
   
-8.  Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**) in der Zelle **Full Name** am Schnittpunkt der **Customer** -Dimension und der **Internet Sales** -Measuregruppe.  
+8.  Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**...** ) in der **vollständigen Namen** Zelle am Schnittpunkt der der **Kunden** Dimension und die **Internetverkäufe** Measuregruppe.  
   
     Beachten Sie im Dialogfeld **Beziehung definieren** , dass eine Beziehung vom Typ **Regulär** zwischen der **DimCustomer** -Dimensionstabelle und der **FactInternetSales** -Measuregruppentabelle basierend auf der **CustomerKey** -Spalte in jeder dieser Tabellen definiert ist. Alle von Ihnen innerhalb dieses Lernprogramms bis zu diesem Punkt definierten Beziehungen waren reguläre Beziehungen.  
   
     Die folgende Abbildung zeigt das Dialogfeld **Beziehung definieren** mit einer regulären Beziehung zwischen der **DimCustomer** -Dimensionstabelle und der **FactInternetSales** -Measuregruppentabelle.  
   
-    ![Das Dialogfeld Beziehung definieren](../analysis-services/media/l5-referencedrelationship-4.gif "Beziehung definieren (Dialogfeld)")  
+    ![Das Dialogfeld Beziehung definieren](../analysis-services/media/l5-referencedrelationship-4.gif "Dialogfeld Beziehung definieren")  
   
 9. Klicken Sie auf **Abbrechen**.  
   
-10. Klicken Sie auf die Schaltfläche mit den drei Punkten (**…**) in der unbenannten Zelle am Schnittpunkt der **Geography** -Dimension und der **Reseller Sales** -Measuregruppe.  
+10. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**...** ) in der unbenannten Zelle am Schnittpunkt der **Geography** Dimension und die **Verkäufe des Wiederverkäufers** Measuregruppe.  
   
     Beachten Sie im Dialogfeld **Beziehung definieren** , dass aktuell keine Beziehung zwischen der Geography-Cubedimension und der Reseller Sales-Measuregruppe definiert ist. Sie können keine reguläre Beziehung definieren, weil keine direkte Beziehung zwischen der Dimensionstabelle für die Geography-Dimension und der Faktentabelle für die Reseller Sales-Measuregruppe vorhanden ist.  
   
@@ -89,7 +89,7 @@ In der nächsten Aufgabe lösen Sie dieses Problem, indem Sie ein Attribut defin
   
     Das Geography Key-Attribut in der Reseller-Dimension wird nur zum Verknüpfen der Geography-Dimension mit der Reseller Sales-Faktentabelle verwendet. Weil es nicht zum Durchsuchen verwendet wird, gibt es keinen Grund dafür, diese Attributhierarchie als sichtbar zu definieren. Zusätzlich wirkt sich das Sortieren und Optimieren der Attributhierarchie nur negativ auf die Verarbeitungsleistung aus. Allerdings muss das Attribut als der Link zwischen den zwei Dimensionen aktiviert sein.  
   
-4.  Wechseln Sie zum Cube-Designer für den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube, klicken Sie auf die Registerkarte **Dimensionsverwendung** und anschließend auf die Schaltfläche mit den drei Punkten (**…**) am Schnittpunkt der **Reseller Sales** -Measuregruppe und der **Geography** -Cubedimension.  
+4.  Wechseln Sie zum Cube-Designer für die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube, klicken Sie auf die **Dimensionsverwendung** Registerkarte, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (**...** ) am Schnittpunkt der **Verkäufe des Wiederverkäufers** Measuregruppe und der **Geography** Cubedimension.  
   
 5.  Wählen Sie in der Liste **Beziehungstyp auswählen** die Option **Referenziert**.  
   
@@ -119,9 +119,9 @@ In der nächsten Aufgabe lösen Sie dieses Problem, indem Sie ein Attribut defin
   
     Beachten Sie, dass das **Reseller Sales-Sales Amount** -Measure jetzt durch das **Country-Region** -Attribut in der benutzerdefinierten **Geographies** -Hierarchie richtig dimensioniert ist, wie in der folgenden Abbildung dargestellt.  
   
-    ![Das Dialogfeld Beziehung definieren](../analysis-services/media/l5-referencedrelationship-5.gif "Beziehung definieren (Dialogfeld)")  
+    ![Das Dialogfeld Beziehung definieren](../analysis-services/media/l5-referencedrelationship-5.gif "Dialogfeld Beziehung definieren")  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Definieren einer Faktenbeziehung](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -1,5 +1,5 @@
 ---
-title: Mehrdimensionales Modell Assemblys-Verwaltung | Microsoft Docs
+title: Verwaltung von mehrdimensionalen Modellassemblys | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df015e99df80915c68fa8f45e9f31ec475e22bc2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5b7b04f074dcd11eec022a689f865454681d2ae8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025667"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215789"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Verwaltung von mehrdimensionalen Modellassemblys
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt viele systeminterne Funktionen bereit, mit den Sprachen Multidimensional Expressions (MDX) und Data Mining Extensions (DMX), die entwickelt, um die standardmäßige statistische Berechnungen wie zum durchlaufenden der Elemente in einer Hierarchie zu erreichen. Wie bei jedem komplexen und robusten Produkt gibt es jedoch immer die Bestrebung, die Funktionalität des Produkts zu erweitern.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt viele systeminterne Funktionen bereit, die mit den Sprachen MDX (Multidimensional Expressions) und DMX (Data Mining Extensions) verwendet werden können. Diese sind für standardmäßige statistische Berechnungen ebenso geeignet wie für das Durchlaufen der Elemente in einer Hierarchie. Wie bei jedem komplexen und robusten Produkt gibt es jedoch immer die Bestrebung, die Funktionalität des Produkts zu erweitern.  
   
  Deshalb bietet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Möglichkeit, einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz oder -Datenbank Assemblys hinzuzufügen. Mithilfe von Assemblys können Sie mit einer beliebigen CLR-Sprache (Common Language Runtime), z. B. Microsoft Visual Basic .NET oder Microsoft Visual C#, externe benutzerdefinierte Funktionen erstellen. Darüber hinaus können Sie COM-Automatisierungssprachen (Component Object Model) wie Microsoft Visual Basic oder Microsoft Visual C++ verwenden.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "34025667"
   
  Dem Server kann eine Assembly mit neuen Prozeduren und Funktionen hinzugefügt werden. Sie können Assemblys verwenden, um benutzerdefinierte Funktionen zu verbessern oder hinzuzufügen, die nicht vom Server bereitgestellt werden. Mithilfe von Assemblys können Sie mehrdimensionalen Ausdrücken (MDX), Data Mining-Erweiterungen oder gespeicherten Prozeduren neue Funktionen hinzufügen. Assemblys werden von der Position geladen, auf der die benutzerdefinierte Anwendung ausgeführt wird. Eine Kopie der Binärdateien der Assembly wird zusammen mit den Datenbankdaten auf dem Server gespeichert. Wenn eine Assembly entfernt wird, wird die kopierte Assembly ebenfalls vom Server entfernt.  
   
- Assemblys können von zwei verschiedenen Typen sein: COM und CLR. CLR-Assemblys sind Assemblys, die in .NET Framework-Programmiersprachen wie C#, Visual Basic .NET und Managed C++ entwickelt wurden. COM-Assemblys sind COM-Bibliotheken, die auf dem Server registriert werden müssen.  
+ Assemblys können zwei unterschiedliche Typen aufweisen: COM und CLR. CLR-Assemblys sind Assemblys, die in .NET Framework-Programmiersprachen wie C#, Visual Basic .NET und Managed C++ entwickelt wurden. COM-Assemblys sind COM-Bibliotheken, die auf dem Server registriert werden müssen.  
   
  Assemblys können <xref:Microsoft.AnalysisServices.Server> - oder <xref:Microsoft.AnalysisServices.Database> -Objekten hinzugefügt werden. Serverassemblys können von allen mit dem Server verbundenen Benutzern und allen Objekten auf dem Server aufgerufen werden. Datenbankassemblys können nur von <xref:Microsoft.AnalysisServices.Database> -Objekten aufgerufen werden oder von Benutzern, die mit der Datenbank verbunden sind.  
   
@@ -68,12 +68,12 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  *Assemblyname*!*Schnittstellen-ID*!*Prozedurname*(*Argument1*, *Argument2*, ...)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
  Die Sicherheit für Assemblys basiert auf dem .NET Framework-Sicherheitsmodell, bei dem es sich um ein Codezugriffs-Sicherheitsmodell handelt. .NET Framework unterstützt einen Codezugriffs-Sicherheitsmechanismus, der annimmt, dass die Laufzeit sowohl vollständig vertrauenswürdigen als auch teilweise vertrauenswürdigen Code hosten kann. Die durch die .NET Framework-Codezugriffssicherheit geschützten Ressourcen sind üblicherweise von verwaltetem Code umgeben, der die entsprechenden Berechtigungen anfordert, bevor er den Zugriff auf die Ressource ermöglicht. Die Anforderung der Berechtigung ist nur dann erfüllt, wenn alle aufrufenden Prozesse (auf Assemblyebene) in der Aufrufliste über die entsprechende Ressourcenberechtigung verfügen.  
   
- Für Assemblys wird die Ausführungsberechtigung mit der **PermissionSet** -Eigenschaft des **Assembly** -Objekts erteilt. Die Berechtigungen, die der verwaltete Code erhält, hängen von der gültigen Sicherheitsrichtlinie ab. In einer nicht von[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gehosteten Umgebung werden drei Richtlinienebenen unterschieden: Unternehmen, Computer und Benutzer. Die gültige Berechtigungsliste, die der Code erhält, hängt von der Schnittmenge der Berechtigungen auf diesen drei Ebenen ab.  
+ Für Assemblys wird die Ausführungsberechtigung mit der **PermissionSet** -Eigenschaft des **Assembly** -Objekts erteilt. Die Berechtigungen, die der verwaltete Code erhält, hängen von der gültigen Sicherheitsrichtlinie ab. Es sind bereits in einer nicht - drei Richtlinienebenen unterschieden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gehosteten Umgebung: Unternehmen, Computer und Benutzer. Die gültige Berechtigungsliste, die der Code erhält, hängt von der Schnittmenge der Berechtigungen auf diesen drei Ebenen ab.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt für die gehostete CLR eine Sicherheitsrichtlinie auf Hostebene bereit; diese Richtlinie stellt eine zusätzliche Richtlinienebene unterhalb der drei Richtlinienebenen dar, die immer gültig sind. Die Richtlinie wird für jede Anwendungsdomäne festgelegt, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt wird.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt für die gehostete CLR eine Sicherheitsrichtlinie auf Hostebene bereit. Diese Richtlinie stellt eine zusätzliche Richtlinienebene unterhalb der drei Richtlinienebenen dar, die immer gültig sind. Die Richtlinie wird für jede Anwendungsdomäne festgelegt, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt wird.  
   
  Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Richtlinie auf Hostebene ist eine Kombination der festen Richtlinie von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für Systemassemblys und der benutzerdefinierten Richtlinie für Benutzerassemblys. Der benutzerdefinierte Teil der Hostrichtlinie von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] basiert darauf, dass der Assemblybesitzer einen von drei Berechtigungsbuckets für jede Assembly angibt:  
   

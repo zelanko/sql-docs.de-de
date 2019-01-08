@@ -1,5 +1,5 @@
 ---
-title: Festlegen des Datentyps einer Spalte | Microsoft Docs
+title: Spaltendatentyp in einem tabellarischen Modell von Analysis Services | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18aa18d9c9ee7fbc0291d9961e144263053710dd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 595f2cf0c95cf09241dd2189c380deb3ce7b5760
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045804"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071957"
 ---
 # <a name="set-the-data-type-of-a-column"></a>Einstellung des Datentyps einer Spalte 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "34045804"
   
  Wenn der Datentyp unterstützt wird, der Modell-Designer jedoch Werte findet, die vom neuen Datentyp nicht unterstützt werden, erhalten Sie eine weitere Fehlermeldung. Sie müssen die Datenwerte korrigieren, bevor Sie fortfahren.  
   
- Ausführliche Informationen zu den Datentypen in Business Intelligence-Semantikmodellen verwendet Verwandtschaft implizit konvertiert und wie verschiedene Datentypen in Formeln verwendet werden, finden Sie unter [unterstützte Datentypen](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
+ Ausführliche Informationen zu den Datentypen in Business Intelligence-Semantikmodellen verwendet werden, wie sie implizit konvertiert und wie verschiedene Datentypen sind in Formeln verwendet werden, finden Sie unter [unterstützte Datentypen](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Unterstützte Datentypen](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  

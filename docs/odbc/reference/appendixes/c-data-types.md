@@ -16,12 +16,12 @@ ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1372b868499bc6b903dd7fb6c4022e724870b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782198"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208460"
 ---
 # <a name="c-data-types"></a>C-Datentypen
 ODBC C-Datentypen anzugeben, den den Datentyp des C-Puffer zum Speichern von Daten in der Anwendung verwendet wird.  
@@ -109,7 +109,7 @@ struct tagSQL_NUMERIC_STRUCT {
    SQLCHAR precision;  
    SQLSCHAR scale;  
    SQLCHAR sign[g];  
-   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
+   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
 } SQL_NUMERIC_STRUCT;  
 ```  
   
@@ -138,7 +138,7 @@ struct tagSQLGUID {
   
  [e] eine Anzahl befindet sich in der *Val* -Feld der Struktur SQL_NUMERIC_STRUCT als skaliert eine ganze Zahl im little-endian-Modus (das am weitesten links stehende Byte das niederwertigste Byte). Beispielsweise wird die Anzahl 10,001 Basis 10, mit einer Skala von 4, in eine ganze Zahl von 100010 skaliert. Da dies 186AA im Hexadezimalformat angegeben ist, wäre der Wert in SQL_NUMERIC_STRUCT "AA 86 01 00 00... 00", mit der Anzahl von Bytes, die durch die SQL_MAX_NUMERIC_LEN definierten **#define**.  
   
- Weitere Informationen zu **SQL_NUMERIC_STRUCT**, finden Sie unter [Gewusst wie: Abrufen von numerischen Daten mit SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
+ Weitere Informationen zu **SQL_NUMERIC_STRUCT**, finden Sie unter [so wird's gemacht: Abrufen von numerischen Daten mit SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
   
  [f] Felder für Genauigkeit und Dezimalstellenanzahl SQL_C_NUMERIC Daten geben Areused für die Eingabe aus einer Anwendung und für die Ausgabe aus dem Treiber für die Anwendung. Wenn der Treiber einen numerischen Wert in der SQL_NUMERIC_STRUCT schreibt, verwendet einen eigenen Treiber-spezifische standardmäßig als Wert für die *Genauigkeit* Feld, und es wird verwenden Sie den Wert im Feld SQL_DESC_SCALE von der Anwendung Deskriptor ( Standardwert: 0) für die *Skalierung* Feld. Eine Anwendung kann eigene Werte für Genauigkeit und Dezimalstellen angeben, durch die SQL_DESC_PRECISION und SQL_DESC_SCALE Felder den Anwendungsdienst-Deskriptor.  
   
@@ -148,7 +148,7 @@ struct tagSQLGUID {
   
  [i] _SQL_C_BOOKMARK veraltet in ODBC 3.*.x*.  
   
- [j] _SQL_C_SHORT SQL_C_LONG und SQL_C_TINYINT wurden in ODBC durch ersetzt Typen mit und ohne Vorzeichen: SQL_C_SSHORT und SQL_C_USHORT, SQL_C_SLONG und SQL_C_ULONG, und SQL_C_STINYINT und SQL_C_UTINYINT. Eine ODBC 3.*.x* Treiber, die mit ODBC 2. funktionieren sollte. *X* Anwendungen sollten SQL_C_SHORT, SQL_C_LONG und SQL_C_TINYINT, unterstützen, da Wenn sie aufgerufen werden, der Treiber-Manager über an den Treiber übergeben.  
+ [j] _SQL_C_SHORT SQL_C_LONG und SQL_C_TINYINT wurden in ODBC von signierten und nicht signierten Typen ersetzt: SQL_C_SSHORT und SQL_C_USHORT, SQL_C_SLONG und SQL_C_ULONG, und SQL_C_STINYINT und SQL_C_UTINYINT. Eine ODBC 3.*.x* Treiber, die mit ODBC 2. funktionieren sollte. *X* Anwendungen sollten SQL_C_SHORT, SQL_C_LONG und SQL_C_TINYINT, unterstützen, da Wenn sie aufgerufen werden, der Treiber-Manager über an den Treiber übergeben.  
   
  [k] SQL_C_GUID kann nur für SQL_CHAR oder SQL_WCHAR konvertiert werden.  
   

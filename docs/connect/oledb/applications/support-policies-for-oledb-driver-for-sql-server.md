@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 140bd1e82540ab7f8869ae64173d7d5431ea9233
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 782745fa9957cd611aa875bec2f9b740b489f210
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774738"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202009"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Unterstützungsrichtlinien des OLE DB-Treibers für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47774738"
   Dieser Artikel beschreibt die Verwendung verschiedener Datenzugriffskomponenten mit OLE DB-Treiber für SQL Server verwendet werden können.  
 
 ## <a name="server-support"></a>Serverunterstützung  
- OLE DB-Treiber für SQL Server unterstützt Verbindungen mit [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)],[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)], und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+ OLE DB-Treiber für SQL Server unterstützt Verbindungen mit [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)], und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ## <a name="supported-operating-system-versions"></a>Unterstützte Betriebssystemversionen  
  Die folgende Tabelle enthält die Unterstützung von Betriebssystemen OLE DB-Treiber für SQL Server.  
@@ -43,5 +43,5 @@ ms.locfileid: "47774738"
 ## <a name="ole-db-support-policies"></a>Richtlinien zur OLE DB-Unterstützung  
 Anwendungen können den im Windows-Betriebssystem enthaltenen OLE DB-Anbieter (SQLOLEDB) verwenden. Allerdings, die in den Wartungsmodus versetzt wird und nicht mehr aktualisiert. Sie sollten die OLE DB-Treiber für SQL Server (MSOLEDBSQL) verwenden.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

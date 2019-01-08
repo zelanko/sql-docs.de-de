@@ -1,21 +1,22 @@
 ---
-title: SLES-Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren | Microsoft-Dokumentation
-description: ''
+title: Konfigurieren Sie SLES-Cluster für SQL Server-Verfügbarkeitsgruppe
+titleSuffix: SQL Server
+description: Erfahren Sie, wie Sie Availability Group-Cluster für SQL Server unter SUSE Linux Enterprise Server (SLES) erstellen.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670619"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160628"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Konfigurieren Sie SLES-Cluster für SQL Server-Verfügbarkeitsgruppe
 
@@ -118,9 +119,9 @@ Konfigurieren Sie auf Linux-Servern die verfügbarkeitsgruppe, und konfigurieren
 
 3. So konfigurieren Sie die clusterkommunikationsebene (Corosync): 
 
-   A. Geben Sie eine Netzwerkadresse zum Binden an. In der Standardeinstellung schlägt das Skript die Netzwerkadresse des "eth0". Alternativ geben Sie eine andere Netzwerkadresse, z. B. die Adresse des bond0 aus. 
+   a. Geben Sie eine Netzwerkadresse zum Binden an. In der Standardeinstellung schlägt das Skript die Netzwerkadresse des "eth0". Alternativ geben Sie eine andere Netzwerkadresse, z. B. die Adresse des bond0 aus. 
 
-   B. Geben Sie eine Multicastadresse. Das Skript schlägt eine zufällige Adresse, die Sie als Standard verwenden können. 
+   b. Geben Sie eine Multicastadresse. Das Skript schlägt eine zufällige Adresse, die Sie als Standard verwenden können. 
 
    c. Geben Sie einen multicast-Port ein. Das Skript schlägt 5405 als Standard. 
 

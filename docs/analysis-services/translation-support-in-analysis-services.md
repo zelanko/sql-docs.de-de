@@ -1,5 +1,5 @@
 ---
-title: Unterstützung für Übersetzungen in Analysis Services | Microsoft Docs
+title: Unterstützung für Übersetzungen in Analysis Services | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 882434c2bd0a194a2ecbe21a62d3b22964b30f09
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 18b0dd9990c863d6630e63969250bc60b3287255
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041834"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213629"
 ---
 # <a name="translation-support-in-analysis-services"></a>Unterstützung für Übersetzungen in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "34041834"
   
 ## <a name="see-also"></a>Siehe auch  
  [Globalisierungsszenarien für Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Sprachen und Sortierungen & #40; Analysis Services & #41;](../analysis-services/languages-and-collations-analysis-services.md)   
+ [Sprachen und Sortierungen &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)   
  [Festlegen oder Ändern der Spaltensortierung](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Globalisierung Tipps und Best Practices & #40; Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
+ [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
   
   

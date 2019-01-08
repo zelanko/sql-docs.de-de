@@ -1,5 +1,5 @@
 ---
-title: Sicherheit für SQL Server-Machine Learning | Microsoft-Dokumentation
+title: Übersicht über die Sicherheit für R und Python-Erweiterungen – SQL Server-Machine Learning
 description: Übersicht über die Sicherheit für das Extensibility Framework in SQL Server-Machine Learning-Dienste. Sicherheit für die Anmeldung und Benutzerkonten, SQL Server Launchpad-Dienst, workerkonten, die mehrere Skripts und Dateiberechtigungen ausgeführt.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a5d109e16c81481f9e4267dc4963ecea74cfa736
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 5fd8850271ab4ebf7ac69ff32cfa0877394f1d89
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419375"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596571"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Übersicht über die Sicherheit für das Extensibility Framework in SQL Server Machine Learning Services
 
@@ -71,7 +71,7 @@ Aus diesem Grund müssen alle externen Skripts, die von einem Remoteclient aus i
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Dienste, die in externen Verarbeitung (Launchpad) verwendet werden.
 
-Das Extensibility Framework Fügt eine neuen NT-Dienst, um die [Liste mit den Diensten](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in einer SQL Server-Installation: [ **SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
+Das Extensibility Framework Fügt eine neuen NT-Dienst, um die [Liste mit den Diensten](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in einer SQL Server-Installation: [**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 Die Datenbank-Engine verwendet den SQL Server Launchpad-Dienst eine R- oder Python-Sitzung als separater Prozess instanziiert. Der Prozess unter einem Konto mit geringen Rechten ausgeführt wird; unterscheiden Sie SQL Server, Launchpad selbst und die Identität des Benutzers, unter der die gespeicherte Prozedur oder Host-Abfrage ausgeführt wurde. Ausführen von Skripts in einem separaten Prozess, unter dem Konto mit niedrigen Berechtigungen, bildet die Grundlage des Modells, Sicherheit und Isolation für R und Python in SQL Server.
 

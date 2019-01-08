@@ -1,5 +1,5 @@
 ---
-title: Aktivieren des DirectQuery-Modus in SSMS | Microsoft-Dokumentation
+title: Aktivieren Sie in Analysis Services-DirectQuery-Modus in SSMS | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c0a6ddb7b06cf325235f3d3998b0f57d640667a9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 27e704e6274910e2c9e3f77fe235e02918d95425
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700588"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072207"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Aktivieren des DirectQuery-Modus in SSMS
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51700588"
   
 -   Bestätigen Sie im letzten Schritt , dass der DirectQuery-Modus betriebsbereit ist, indem Sie eine Abfrage ausführen.  
   
-## <a name="step-1-check-the-compatibility-level"></a>Schritt 1: Überprüfen des Kompatibilitätsgrads  
+## <a name="step-1-check-the-compatibility-level"></a>Schritt 1: Überprüfen des Kompatibilitätsgrads  
  Eigenschaften, die den Datenzugriff definieren, sind je nach Kompatibilitätsgrad unterschiedlich. Ein einleitender Schritt ist das Überprüfen des Kompatibilitätsgrads der Datenbank.  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] eine Verbindung mit der Instanz mit dem tabellarischen Modell her.  
@@ -55,7 +55,7 @@ ms.locfileid: "51700588"
   
  Wenn Sie ein tabellarisches Modell in den DirectQuery-Modus ändern, wird der neue Datenspeichermodus sofort wirksam.  
   
-## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>Schritt 2a: Ändern einer tabellarischen Datenbank mit Kompatibilitätsgrad 1200 in den DirectQuery-Modus  
+## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>Schritt 2a: Eine Datenbank für tabellarische 1200 zu DirectQuery-Modus wechseln  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank > **Eigenschaften** > **Modell** > **Standardmodus**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "51700588"
     |**DirectQuery**|Abfragen werden auf eine relationale Back-End-Datenbank angewendet, wofür die für das Modell definierte Datenquellenverbindung verwendet wird.<br /><br /> Abfragen des Modells werden in native Datenbankabfragen konvertiert und an die Datenquelle umgeleitet.<br /><br /> Bei der Verarbeitung eines Modells im DirectQuery-Modus werden nur Metadaten kompiliert und bereitgestellt. Die Daten selbst befinden sich außerhalb des Modells in den Datenbankdateien der betriebsbereiten Datenquelle.|  
     |**Importieren**|Abfragen werden auf die tabellarische Datenbank in MDX oder DAX angewendet.<br /><br /> Wenn Sie ein Modell im Importmodus verarbeiten, werden Daten aus einer Back-End-Datenquelle abgerufen und auf dem Datenträger gespeichert. Beim Laden der Datenbank werden die Daten vollständig in den Arbeitsspeicher geladen, um sehr schnelle Tabellenscans und Abfragen zu ermöglichen.<br /><br /> Dies ist der Standardmodus für tabellarische Modelle und der einzige Modus für bestimmte (nicht relationale) Datenquellen.|  
   
-## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>Schritt 2b: Ändern einer tabellarischen Datenbank mit Kompatibilitätsgrad 1100-1103 in den DirectQuery-Modus  
+## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>Schritt 2 b: Umschalten einer tabellarischen Kompatibilitätsgrad 1100-1103-Datenbank in den DirectQuery-Modus  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank > **Eigenschaften** > **Datenbank** > **DirectQueryMode**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "51700588"
   
 -   Nach der Bereitstellung des Modells können Sie die bevorzugte Verbindungsmethode ändern. Sie können zum Beispiel einen Hybridmodus für Tests verwenden und den Modus **Nur DirectQuery** für das Modell erst nach gründlichen Tests von Berichten oder Abfragen, für die das Modell verwendet wird, festlegen. Weitere Informationen finden Sie unter [Festlegen oder Ändern der bevorzugten Verbindungsmethode für DirectQuery](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751).  
   
-## <a name="step-3-check-the-connection-properties-on-the-database"></a>Schritt 3: Überprüfen der Eigenschaften der Verbindung mit der Datenbank  
+## <a name="step-3-check-the-connection-properties-on-the-database"></a>Schritt 3: Überprüfen Sie die Verbindungseigenschaften für die Datenbank  
  Abhängig davon, wie die Datenquellenverbindung eingerichtet ist, kann sich beim Umschalten zu DirectQuery der Sicherheitskontext der Verbindung ändern. Überprüfen Sie beim Ändern des Datenzugriffsmodus die Identitätswechsel- und Verbindungszeichenfolgen-Eigenschaften, um festzustellen, ob die Anmeldung für fortlaufende Verbindungen mit der Back-End-Datenbank gültig ist.  
   
  Überprüfen Sie unter **Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung** den Abschnitt [Konfigurieren von Analysis Services für die vertrauenswürdige Delegierung](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) auf Hintergrundinformationen zur Delegierung einer Benutzeridentität für DirectQuery-Szenarios.  

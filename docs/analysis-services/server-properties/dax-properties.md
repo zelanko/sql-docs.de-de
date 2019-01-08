@@ -1,5 +1,5 @@
 ---
-title: DAX-Eigenschaften | Microsoft-Dokumentation
+title: Analysis Services-DAX-Eigenschaften | Microsoft-Dokumentation
 ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 794caf245e0cc3494713991159c5a911a187afae
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 20a6df833f8c525c24abdf3bb51278d0067db951
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264863"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071897"
 ---
 # <a name="dax-properties"></a>DAX-Eigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
@@ -43,7 +43,7 @@ Um die Obergrenze zu erhöhen, legen Sie die Konfigurationseinstellung **MaxInte
 
 ## <a name="property-descriptions"></a>Eigenschaftsbeschreibungen
 
-Einstellung |value |Description
+Einstellung |Wert |Description
 --------|-------|-----------
 MaxIntermediateRowsetSize | 1000000 | Maximale Anzahl von in einer DAX-Abfrage zurückgegebenen Zeilen. Fügen Sie diesen Eintrag manuell zur Datei „msmdsrv.ini“ hinzu, und erhöhen Sie den Wert, wenn die Standardeinstellung zu niedrig ist.
 PredicateCheckSpoolCardinalityThreshold| 5000 | Eine erweiterte Eigenschaft, die nur unter Anleitung des Microsoft-Supports geändert werden sollte.

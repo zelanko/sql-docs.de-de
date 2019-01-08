@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f20575da48685a2f6c2b990169da1baba54ed667
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9397dd268d767fd8c4bad9056455c21b9be65398
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212110"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769772"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>Deinstallieren von PowerPivot für SharePoint
   Die Deinstallation einer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Installation ist ein Vorgang mit mehreren Schritten, der die Vorbereitung auf die Deinstallation, das Entfernen von Funktionen und Lösungen aus der Farm und das Entfernen von Programmdateien und Registrierungseinstellungen umfasst.  
@@ -31,7 +30,7 @@ ms.locfileid: "48212110"
   
 -   [Schritt 2: Entfernen von Funktionen und Lösungen von SharePoint](#bkmk_remove)  
   
--   [Schritt 3: Ausführen des SQL Server-Setups zum Entfernen von Programmen vom lokalen Computer](#bkmk_uninstall)  
+-   [Schritt 3: Führen Sie SQL Server-Setup zum Entfernen von Programmen vom lokalen Computer](#bkmk_uninstall)  
   
 -   [Schritt 4: Deinstallieren des PowerPivot für SharePoint-add-in](#bkmk_addin)  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48212110"
 -   Sie müssen Analysis Services-Systemadministrator und Mitglied der lokalen Administratorengruppe sein, um Analysis Services und [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]zu deinstallieren.  
   
 ##  <a name="bkmk_before"></a> Schritt 1: Prüfliste vor der Deinstallation  
- Der PowerPivot-Datenzugriff wird deaktiviert, sobald die Software, die die Abfrage- und -Datenverarbeitung unterstützt, aus der Farm entfernt wird. Als ersten Schritt sollten Sie die Dateien und Bibliotheken, die nicht mehr funktionsfähig sein werden, präventiv löschen. Auf diese Weise können Sie Fragen oder Bedenken hinsichtlich "fehlender Daten" bereits vor der Deinstallation der Software klären.  
+ Der PowerPivot-Datenzugriff wird deaktiviert, sobald die Software, die die Abfrage- und -Datenverarbeitung unterstützt, aus der Farm entfernt wird. Als ersten Schritt sollten Sie die Dateien und Bibliotheken, die nicht mehr funktionsfähig sein werden, präventiv löschen. Auf diese Weise können Sie Fragen oder Bedenken hinsichtlich „fehlender Daten“ bereits vor der Deinstallation der Software klären.  
   
 1.  Löschen Sie alle PowerPivot-Arbeitsmappen, -Dokumente und -Bibliotheken, die mit einer PowerPivot für SharePoint-Installation verknüpft sind. Weder die Bibliotheken noch die Dokumente sind nach der Deinstallation der Software funktionsfähig.  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48212110"
   
 -   Überprüfen Sie, ob der SharePoint-Verwaltungsdienst ausgeführt wird.  
   
-1.  **Ausführen des Konfigurationstools:** Beachten Sie, dass die Konfigurationstools nur dann aufgeführt werden, wenn [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf dem lokalen Server installiert ist. Zeigen Sie im Menü **Start** auf **Alle Programme**, klicken Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], auf **Konfigurationstools**und dann auf eine der folgenden Optionen:  
+1.  **Führen Sie das Konfigurationstool:** Beachten Sie, dass die Konfigurationstools aufgelisteten nur dann, wenn [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf dem lokalen Server installiert ist. Auf der **starten** , zeigen Sie auf **Programme**, klicken Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], klicken Sie auf **Konfigurationstools**, und klicken Sie dann auf einen der folgenden:  
   
     -   **PowerPivot für SharePoint 2013-Konfigurationstool**  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48212110"
   
 6.  Klicken Sie auf **Überprüfen** , um zu überprüfen, ob jede Aktion gültig ist. Wenn **Überprüfen** nicht verfügbar ist, bedeutet das, dass alle Aktionen für das System gültig sind.  
   
-7.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen**klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: "Alle im Tool als gültig gekennzeichneten Konfigurationseinstellungen werden auf die SharePoint-Farm angewendet. Möchten Sie den Vorgang fortsetzen?"  
+7.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Beim Klicken auf **ausführen**, die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: "Alle Konfigurationseinstellungen, die im das Tool als gültig gekennzeichnet sind wird auf der SharePoint-Farm angewendet werden. Möchten Sie den Vorgang fortsetzen?“  
   
 8.  Klicken Sie zum Fortsetzen des Vorgangs auf **Ja** .  
   
@@ -118,25 +117,25 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 2.  Starten Sie die SharePoint-Verwaltungsshell als Administrator, und führen Sie dann den folgenden Befehl aus, um Aufträge in der Warteschlange anzuzeigen:  
   
     ```  
-    Stsadm –o enumdeployments  
+    Stsadm -o enumdeployments  
     ```  
   
-3.  Überprüfen Sie vorhandene Bereitstellungen auf die folgenden Informationen: **Typ** ist "Zurückziehung" oder "Bereitstellung", **Datei** ist "powerpivotwebapp.wsp" oder "powerpivotfarm.wsp".  
+3.  Überprüfen Sie vorhandene Bereitstellungen auf die folgenden Informationen: **Typ** ist Zurückziehung "oder" Bereitstellung **Datei** ist "powerpivotwebapp.wsp" oder "powerpivotfarm.wsp".  
   
-4.  Kopieren Sie bei Bereitstellungen oder Zurückziehungen von PowerPivot-Lösungen den GUID-Wert für **JobId** , und fügen Sie ihn in den folgenden Befehl ein (verwenden Sie zum Kopieren der GUID im Bearbeitungsmenü der Shell die Befehle zum Markieren, Kopieren und Einfügen):  
+4.  Bei Bereitstellungen oder zurückziehungen von PowerPivot-Lösungen, kopieren Sie den GUID-Wert für **"JobID"** und fügen Sie ihn in den folgenden Befehl aus (verwenden Sie die Befehle zum Markieren, kopieren und Einfügen im Bearbeitungsmenü der Shell zum Kopieren der GUID):  
   
     ```  
-    Stsadm –o canceldeployment –id “<GUID>”  
+    Stsadm -o canceldeployment -id "<GUID>"  
     ```  
   
 5.  Wiederholen Sie den Task im Konfigurationstool, indem Sie auf **Überprüfen** und **Ausführen**klicken.  
   
  Sie können alternativ Funktionen und Lösungen von der Farm mithilfe von PowerShell entfernen. Weitere Informationen finden Sie unter [PowerShell-Referenz für PowerPivot für SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
   
-##  <a name="bkmk_uninstall"></a> Schritt 3: Ausführen des SQL Server-Setups zum Entfernen von Programmen vom lokalen Computer  
+##  <a name="bkmk_uninstall"></a> Schritt 3: Führen Sie SQL Server-Setup zum Entfernen von Programmen vom lokalen Computer  
  Programmdateien zu löschen erfordert, dass Sie SQL Server-Setup ausführen, um die Software zu deinstallieren. Durch das Deinstallieren werden die Dateien und die von Setup erstellten Registrierungseinträge entfernt. Sie können die Seite Programme und Funktionen verwenden, um die Software zu deinstallieren. Eine Installation von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ist Teil einer SQL Server-Installation.  
   
- Sie können einen Teil einer Installation deinstallieren, ohne dabei andere SQL Server-Instanzen (oder Funktionen in der gleichen Instanz) zu beeinflussen, die bereits installiert sind. Sie können z. B. PowerPivot für SharePoint deinstallieren, aber andere Komponenten, wie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oder die Datenbank-Engine, installiert lassen.  
+ Sie können einen Teil einer Installation deinstallieren, ohne dabei andere SQL Server-Instanzen (oder Funktionen in der gleichen Instanz) zu beeinflussen, die bereits installiert sind. Sie können z. B. PowerPivot für SharePoint deinstallieren, aber andere Komponenten, wie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oder die Datenbank-Engine, installiert lassen.  
   
 1.  Wählen Sie **Microsoft SQL Server 2014 (64-Bit)** aus der Programmliste aus.  
   
@@ -153,9 +152,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 1.  Stellen Sie in der Zentraladministration unter **Dienste auf dem Server verwalten**eine Verbindung mit dem Server her, von dem aus Sie PowerPivot für SharePoint deinstalliert haben.  
   
-2.  -   Wenn Sie deinstalliert [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013, überprüfen Sie, ob **SQL Server PowerPivot-Systemdienst** nicht mehr in der Liste angezeigt.  
+2.  -   Wenn Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 deinstalliert haben, vergewissern Sie sich, dass **SQL Server PowerPivot-Systemdienst** nicht mehr in der Liste aufgeführt wird.  
   
-    -   Wenn Sie deinstalliert [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, überprüfen Sie, ob **SQL Server Analysis Services** und **SQL Server PowerPivot-Systemdienst** nicht mehr in der Liste angezeigt.  
+    -   Wenn Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 deinstalliert haben, vergewissern Sie sich, dass **SQL Server Analysis Services** und **SQL Server PowerPivot-Systemdienst** nicht mehr in der Liste aufgeführt werden.  
   
 3.  Nachdem Sie den letzten PowerPivot für SharePoint-Server in der Farm deinstalliert haben, gehen Sie wie folgt vor:  
   

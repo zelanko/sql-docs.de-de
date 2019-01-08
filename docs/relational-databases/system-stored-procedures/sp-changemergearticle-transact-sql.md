@@ -5,8 +5,7 @@ ms.date: 11/09/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergearticle_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b9a298cb35b21559e6f89c42c61ca606674b504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04a142b477749c9de20c4bac0d7cb17be243a359
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752268"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823144"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0 x 10**|Berechtigungen auf Tabellenebene werden beim Verleger überprüft, bevor beim Abonnenten ausgeführte INSERT-Anweisungen auf den Verleger angewendet werden.|  
 ||**0 x 20**|Berechtigungen auf Tabellenebene werden beim Verleger überprüft, bevor beim Abonnenten ausgeführte UPDATE-Anweisungen auf den Verleger angewendet werden.|  
 ||**0 x 40**|Berechtigungen auf Tabellenebene werden beim Verleger überprüft, bevor DELETE-Anweisungen beim Abonnenten auf den Verleger angewendet werden.|  
-|**column_tracking**|**true**|Aktiviert die Protokollierung auf Spaltenebene. Gilt nur für einen Tabellenartikel.<br /><br /> Hinweis: Nachverfolgung auf Spaltenebene kann nicht verwendet werden, wenn die Veröffentlichung mit mehr als 246 Spalten Tabellen.|  
+|**column_tracking**|**true**|Aktiviert die Protokollierung auf Spaltenebene. Gilt nur für einen Tabellenartikel.<br /><br /> Hinweis: Nachverfolgung auf Spaltenebene kann nicht verwendet werden, wenn Tabellen mit mehr als 246 Spalten veröffentlicht werden.|  
 ||**false**|Deaktiviert die Protokollierung auf Spaltenebene und belässt die Konflikterkennung auf der Zeilenebene. Gilt nur für einen Tabellenartikel.|  
 |**compensate_for_errors**|**true**|Wenn bei der Synchronisierung Fehler auftreten, werden kompensierende Aktionen ausgeführt. Weitere Informationen finden Sie unter [Sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 ||**false**|Es werden keine kompensierenden Aktionen ausgeführt. Dies ist das Standardverhalten. Weitere Informationen finden Sie unter [Sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).<br /><br /> **\*\* Wichtige \* \***  Obwohl Daten in der betroffenen Zeilen angezeigt werden können, werden nicht mehr konvergent, sobald Sie alle Fehler beheben, können Änderungen übernommen werden und Daten zusammengeführt werden. Wenn die Quelltabelle eines Artikels bereits, in einer anderen Veröffentlichung, und klicken Sie dann auf den Wert der veröffentlicht wurde *Compensate_for_errors* muss für beide Artikel gleich sein.|  
@@ -150,7 +149,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0**|Die digitale Signatur in einem benutzerdefinierten Konfliktlöser wird nicht überprüft, um festzustellen, ob er aus einer vertrauenswürdigen Quelle stammt.|  
 |NULL (Standard)||Gibt die Liste der unterstützten Werte für *Eigenschaft*.|  
   
- [  **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
  Bestätigt, dass durch die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine vorhandene Momentaufnahme ungültig wird. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Mergeartikel bewirken nicht, die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  
