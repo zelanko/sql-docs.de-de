@@ -25,26 +25,26 @@ ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c1e77011b43887518b6a452d9bbe1091e651008
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9d40c7624cff181d9955dae461e4d0e534dbb02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098240"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355495"
 ---
 # <a name="use-xml-data-in-applications"></a>Verwenden von XML-Daten in Anwendungen
-  Dieses Thema beschreibt die Optionen, die Sie für die Arbeit mit verfügbar sind die `xml` -Datentyp in der Anwendung. Das Thema enthält Informationen zu Folgendem:  
+  In diesem Thema werden die Optionen beschrieben, die Ihnen bei der Arbeit mit dem `xml`-Datentyp in Ihrer Anwendung zur Verfügung stehen. Das Thema enthält Informationen zu Folgendem:  
   
 -   Verarbeiten von XML in einer Spalte vom Typ `xml` mithilfe von ADO und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
--   Verarbeiten von XML in eine `xml` Typspalte mithilfe von ADO.NET  
+-   Verarbeiten von XML in einer Spalte vom Typ `xml` mithilfe von ADO.NET  
   
 -   Verarbeiten des `xml`-Typs in Parametern mithilfe von ADO.NET  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-ado-and-sql-server-native-client"></a>Verarbeiten von XML in einer Spalte vom Typ xml mithilfe von ADO und SQL Server Native Client  
  Damit mit MDAC-Komponenten auf Typen und Funktionen zugegriffen werden kann, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]eingeführt wurden, müssen Sie die „DataTypeCompatibility“-Initialisierungseigenschaft in der ADO-Verbindungszeichenfolge festlegen.  
   
- Z. B. im folgende Visual Basic Scripting Edition (VBScript)-Beispiel zeigt die Ergebnisse der Abfrage eine `xml` -Datentypspalte, `Demographics`in die `Sales.Store` Tabelle mit den `AdventureWorks2012` -Beispieldatenbank. Die Abfrage sucht insbesondere nach dem Instanzwert dieser Spalte für die Zeile, in der die `CustomerID` gleich dem Wert `3`ist.  
+ Im folgenden VBScript-Beispiel werden die Ergebnisse der Abfrage einer `xml`-Datentypspalte, `Demographics`, in der `Sales.Store`-Tabelle der `AdventureWorks2012`-Beispieldatenbank angezeigt. Die Abfrage sucht insbesondere nach dem Instanzwert dieser Spalte für die Zeile, in der die `CustomerID` gleich dem Wert `3`ist.  
   
 ```  
 Const DS = "MyServer"  
@@ -88,7 +88,7 @@ Set objRs = Nothing
 Set objConn = Nothing  
 ```  
   
- In diesem Beispiel wird dargestellt, wie die Datentyp-Kompatibilitätseigenschaft festgelegt wird. Sie ist standardmäßig auf 0 (null) festgelegt, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verwenden. Wenn Sie den Wert auf 80 festgelegt haben die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Anbieter dafür, dass `xml` und UDT-Spalten werden als [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] -Datentypen. Dabei handelt es sich um DBTYPE_WSTR und DBTYPE_BYTES.  
+ In diesem Beispiel wird dargestellt, wie die Datentyp-Kompatibilitätseigenschaft festgelegt wird. Sie ist standardmäßig auf 0 (null) festgelegt, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verwenden. Wenn Sie den Wert auf 80 festgelegt haben, sorgt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Anbieter dafür, dass `xml`-Spalten und Spalten eines benutzerdefinierten Typs als [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Datentypen angezeigt werden. Dabei handelt es sich um DBTYPE_WSTR und DBTYPE_BYTES.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client muss ebenfalls auf dem Clientcomputer installiert und in der Verbindungszeichenfolge mit „`Provider=SQLNCLI11;...`“ zur Verwendung als Datenanbieter angegeben sein.  
   
@@ -115,7 +115,7 @@ Set objConn = Nothing
 ```  
 Row 1  
   
-<StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+<StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
   <AnnualSales>1500000</AnnualSales>  
   <AnnualRevenue>150000</AnnualRevenue>  
   <BankName>Primary International</BankName>  
@@ -130,7 +130,7 @@ Row 1
   
 Row 2  
   
-<StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+<StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
   <AnnualSales>300000</AnnualSales>  
   <AnnualRevenue>30000</AnnualRevenue>  
   <BankName>United Security</BankName>  
@@ -145,12 +145,12 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>Verarbeiten von XML in einer Spalte vom Typ xml mithilfe von ADO.NET  
- Um XML in einer `xml`-Datentypspalte mithilfe von ADO.NET und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] zu verarbeiten, können Sie das Standardverhalten der `SqlCommand`-Klasse verwenden. Z. B. eine `xml` Data Type Column und seine Werte in der gleichen Weise in einer beliebigen SQL-Spalte abgerufen, mithilfe von wird abgerufen werden können eine `SqlDataReader`. Jedoch sollten Sie mit dem Inhalt der Arbeiten eine `xml` Spalte vom Datentyp XML-Format, zunächst müssen Sie weisen Sie den Inhalt in ein `XmlReader` Typ.  
+ Um XML in einer `xml`-Datentypspalte mithilfe von ADO.NET und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] zu verarbeiten, können Sie das Standardverhalten der `SqlCommand`-Klasse verwenden. Eine `xml`-Datentypspalte und ihre Werte können z. B. mit einem `SqlDataReader` auf dieselbe Weise abgerufen werden wie eine beliebige SQL-Spalte. Wenn Sie jedoch mit dem Inhalt einer `xml`-Datentypspalte als XML arbeiten möchten, müssen Sie den Inhalt zunächst einem `XmlReader`-Typ zuweisen.  
   
  Weitere Informationen sowie einen Beispielcode finden Sie im Abschnitt über die XML-Spaltenwerte in einem Datenleser in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] -SDK-Dokumentation.  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>Verarbeiten einer Spalte vom Typ xml in Parametern mithilfe von ADO.NET  
- Um einen xml-Datentyp, der als Parameter in ADO.NET und [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] übergeben wird, zu verarbeiten, können Sie den Wert als eine Instanz des `SqlXml`-Datentyps angeben. Keine besondere Verarbeitung erforderlich ist, da `xml` -datentypspalten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parameterwerte annehmen können auf die gleiche Weise wie andere Spalten und Datentypen, z. B. `string` oder `integer`.  
+ Um einen xml-Datentyp, der als Parameter in ADO.NET und [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] übergeben wird, zu verarbeiten, können Sie den Wert als eine Instanz des `SqlXml`-Datentyps angeben. Es ist keine besondere Verarbeitung erforderlich, da die `xml`-Datentypspalten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parameterwerte auf dieselbe Weise annehmen können wie andere Spalten und Datentypen, z. B. `string` oder `integer`.  
   
  Weitere Informationen sowie einen Beispielcode finden Sie im Abschnitt über die als Befehlsparameter verwendeten XML-Werte in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] -SDK-Dokumentation.  
   

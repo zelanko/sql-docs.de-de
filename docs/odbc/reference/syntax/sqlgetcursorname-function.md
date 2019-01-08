@@ -20,16 +20,16 @@ ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1316ad29a31872d149201f31d60ede14a8a9051
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855078"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591814"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
   
  **Zusammenfassung**  
  **SQLGetCursorName** gibt zurück, der Name des Cursors eine angegebene Anweisung zugeordnet.  
@@ -81,9 +81,9 @@ SQLRETURN SQLGetCursorName(
 |IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *StatementHandle* die Funktion nicht unterstützt.|  
   
 ## <a name="comments"></a>Kommentare  
- Cursor werden verwendet, nur in positioniertes Update und delete-Anweisungen (z. B. **aktualisieren** *Tabellenname* ... **WHERE CURRENT OF** *Cursorname*). Weitere Informationen finden Sie unter [positioniert Update- und Delete-Anweisungen](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Wenn die Anwendung nicht aufruft **SQLSetCursorName** um einen Cursornamen zu definieren, generiert der Treiber einen Namen. Dieser Name beginnt mit den Buchstaben SQL_CUR.  
+ Cursor werden verwendet, nur in positioniertes Update und delete-Anweisungen (z. B. **aktualisieren** _Tabellenname_ ... **WHERE CURRENT OF** _Cursorname_). Weitere Informationen finden Sie unter [positioniert Update- und Delete-Anweisungen](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Wenn die Anwendung nicht aufruft **SQLSetCursorName** um einen Cursornamen zu definieren, generiert der Treiber einen Namen. Dieser Name beginnt mit den Buchstaben SQL_CUR.  
   
-> [!NOTE]  
+> [!NOTE]
 >  In ODBC 2.*.x*beim gab es keinen geöffneten Cursor und kein Name wurde, durch einen Aufruf von festgelegt hatte **SQLSetCursorName**, einen Aufruf von **SQLGetCursorName** SQLSTATE HY015 zurückgegeben (es ist kein Cursorname verfügbar). In ODBC 3.*.x*, dies ist nicht mehr "true", unabhängig davon, wann **SQLGetCursorName** wird aufgerufen, gibt der Treiber den Cursornamen.  
   
  **SQLGetCursorName** gibt den Namen eines Cursors, und zwar unabhängig davon, ob der Name explizit oder implizit erstellt wurde. Ein Name des Cursors wird implizit generiert, wenn **SQLSetCursorName** wird nicht aufgerufen. **SQLSetCursorName** aufgerufen werden, um ein Cursor für eine Anweisung umbenennen, solange der Cursor in einem Zustand zugeordnet oder vorbereitet ist.  

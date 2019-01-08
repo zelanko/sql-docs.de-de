@@ -18,12 +18,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03233cc3a35818352c3a8875f62610b5a0814522
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050476"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362812"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Bereitstellen einer Datenbank mit DAC
   Verwenden Sie den Assistenten zum **Bereitstellen von Datenbanken auf SQL Azure** , um eine Datenbank zwischen einer [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz und einem [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] -Server bzw. zwischen zwei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Servern bereitzustellen.  
@@ -66,7 +66,7 @@ ms.locfileid: "48050476"
   
 3.  Erweitern Sie den Knoten **Datenbanken** .  
   
-4.  Klicken Sie mit der rechten Maustaste auf die Datenbank, die Sie bereitstellen möchten, wählen Sie **Tasks**und dann **Datenbank in SQL Azure bereitstellen**aus.  
+4.  Klicken Sie mit der rechten Maustaste auf die Datenbank, die Sie bereitstellen möchten, klicken Sie auf **Tasks** und dann auf **Datenbank in SQL Azure bereitstellen**.  
   
 5.  Abschließen der Dialogfelder des Assistenten  
   
@@ -87,22 +87,22 @@ ms.locfileid: "48050476"
   
 -   **Weiter** – führt Sie zur Seite **Bereitstellungseinstellungen** .  
   
--   **Abbrechen** – bricht den Vorgang ab und schließt den Assistenten.  
+-   **Abbrechen:** bricht den Vorgang ab und schließt den Assistenten.  
   
 ##  <a name="Deployment_settings"></a> Bereitstellungseinstellungen (Seite)  
  Auf dieser Seite können Sie den Zielserver angeben sowie Details zur neuen Datenbank bereitstellen.  
   
  **Lokaler Host:**  
   
--   **Serververbindungen** – Geben Sie Serververbindungsdetails an, und klicken Sie dann auf **Verbinden** , um die Verbindung zu überprüfen.  
+-   **Serververbindungen:** Geben Sie Serververbindungsdetails an, und klicken Sie dann auf **Verbinden**, um die Verbindung zu überprüfen.  
   
--   **Neuer Datenbankname** – Geben Sie einen Namen für die neue Datenbank an.  
+-   **Neuer Datenbankname:** Geben Sie einen Namen für die neue Datenbank an.  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Datenbankeinstellungen:**  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Edition** – Wählen Sie die Edition von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] im Dropdownmenü aus.  
+-   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Edition:** Wählen Sie die Edition von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] im Dropdownmenü aus.  
   
--   **Maximale Datenbankgröße** – Wählen Sie die maximale Datenbankgröße im Dropdownmenü aus.  
+-   **Maximale Datenbankgröße:** Wählen Sie die maximale Datenbankgröße im Dropdownmenü aus.  
   
  **Andere Einstellungen:**  
   
@@ -122,19 +122,19 @@ ms.locfileid: "48050476"
 ## <a name="using-a-net-framework-application"></a>Verwenden einer .NET Framework-Anwendung  
  **Stellen Sie eine Datenbank mithilfe der Methoden DacStoreExport() und Import() in einer .NET Framework-Anwendung bereit.**  
   
- Laden Sie zum Anzeigen eines Codebeispiels die DAC-Beispielanwendung unter [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)herunter.  
+ Laden Sie zum Anzeigen eines Codebeispiels die DAC-Beispielanwendung unter [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)herunter.  
   
 1.  Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Instanz oder den Server fest, die bzw. der die bereitzustellende Datenbank enthält.  
   
-2.  Öffnen einer `ServerConnection` Objekt und eine Verbindung mit der gleichen Instanz.  
+2.  Öffnen Sie ein `ServerConnection`-Objekt, und stellen Sie eine Verbindung mit derselben Instanz her.  
   
-3.  Verwenden der `Export` Methode der `Microsoft.SqlServer.Management.Dac.DacStore` Typ, der die Datenbank in eine bacpac-Datei exportieren. Geben Sie den Namen der zu exportierenden Datenbank sowie den Pfad zum Ordner an, in dem die BACPAC-Datei abgelegt werden soll.  
+3.  Verwenden Sie die `Export`-Methode des `Microsoft.SqlServer.Management.Dac.DacStore`-Typs, um die Datenbank in eine BACPAC-Datei zu exportieren. Geben Sie den Namen der zu exportierenden Datenbank sowie den Pfad zum Ordner an, in dem die BACPAC-Datei abgelegt werden soll.  
   
 4.  Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Zielinstanz oder den Zielserver fest.  
   
-5.  Öffnen einer `ServerConnection` Objekt und eine Verbindung mit der gleichen Instanz.  
+5.  Öffnen Sie ein `ServerConnection`-Objekt, und stellen Sie eine Verbindung mit derselben Instanz her.  
   
-6.  Verwenden der `Import` Methode der `Microsoft.SqlServer.Management.Dac.DacStore` Typs, um die bacpac-Datei zu importieren. Geben Sie die beim Exportvorgang erstellte BACPAC-Datei an.  
+6.  Verwenden Sie die `Import`-Methode des `Microsoft.SqlServer.Management.Dac.DacStore`-Typs, um die BACPAC-Datei zu importieren. Geben Sie die beim Exportvorgang erstellte BACPAC-Datei an.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenebenenanwendungen](data-tier-applications.md)   

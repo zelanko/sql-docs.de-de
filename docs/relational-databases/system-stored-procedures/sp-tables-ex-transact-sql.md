@@ -18,12 +18,12 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44ffbbfdac8e1976df99be35ecbed7dd94e3ee61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f034b1247f9865b83077ed11f644d6fdbbc4cecd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745438"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589385"
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +45,22 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@table_server=** ] **"***Table_server***"**  
+ [  **@table_server=** ] **"**_Table_server_**"**  
  Der Name des Verbindungsservers, für den Tabelleninformationen zurückgegeben werden sollen. *Table_server* ist **Sysname**, hat keinen Standardwert.  
   
- [ **,** [  **@table_name=** ] **"***Table_name***"**]  
+ [ **,** [  **@table_name=** ] **"**_Table_name_**"**]  
  Der Name der Tabelle, für die Datentypinformationen zurückgegeben werden sollen. *TABLE_NAME*ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@table_schema=** ] **"***Table_schema***"**]  
+ [  **@table_schema=** ] **"**_Table_schema_**"**]  
  Das Tabellenschema. *TABLE_SCHEMA*ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@table_catalog=** ] **"***Table_catalog***"**  
+ [  **@table_catalog=** ] **"**_Table_catalog_**"**  
  Der Name der Datenbank, in der angegebenen *Table_name* befindet. *TABLE_CATALOG* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@table_type=** ] **"***Table_type***"**  
+ [  **@table_type=** ] **"**_Table_type_**"**  
  Der Typ der zurückzugebenden Tabelle. *TABLE_TYPE* ist **Sysname**, hat den Standardwert NULL und kann einen der folgenden Werte aufweisen.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**ALIAS**|Der Name eines Alias|  
 |**GLOBALE TEMPORÄRE**|Der Name einer systemweit verfügbaren temporären Tabelle|  
@@ -71,7 +71,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|Der Name einer Benutzertabelle|  
 |**VIEW**|Der Name einer Sicht|  
   
- [  **@fUsePattern=** ] **"***fUsePattern***"**  
+ [  **@fUsePattern=** ] **"**_fUsePattern_**"**  
  Bestimmt, ob die Zeichen **_**, **%**, **[**, und **]** als Platzhalterzeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -81,7 +81,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Name des Qualifizierers Tabelle. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer ***.*** Besitzer ***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. In einigen anderen Produkten stellt sie den Servernamen der datenbankumgebung, von der Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
+|**TABLE_CAT**|**sysname**|Name des Qualifizierers Tabelle. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (_Qualifizierer_**.** _Besitzer_**.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. In einigen anderen Produkten stellt sie den Servernamen der datenbankumgebung, von der Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
 |**NACH "TABLE_SCHEM"**|**sysname**|Name des Tabellenbesitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte dar, den Namen des Datenbankbenutzers, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_TYPE**|**varchar(32)**|Tabelle, Systemtabelle oder Sicht.|  

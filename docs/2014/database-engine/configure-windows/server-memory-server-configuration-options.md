@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
@@ -22,12 +21,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e7b7fb74610afb89c0c493b6f2b3480377df7f8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199406"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376682"
 ---
 # <a name="server-memory-server-configuration-options"></a>Serverkonfigurationsoptionen für den Serverarbeitsspeicher
   Mit den beiden Arbeitsspeicheroptionen für den Server, **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher**, können Sie die Größe des Arbeitsspeichers (in Megabytes) umkonfigurieren, der vom SQL Server-Speicher-Manager für einen von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendeten SQL Server-Prozess verwaltet wird.  
@@ -35,7 +34,7 @@ ms.locfileid: "48199406"
  Die Standardeinstellung für **Min. Serverarbeitsspeicher** ist 0, die für **Max. Serverarbeitsspeicher** 2147483647 MB. Standardmäßig können die Arbeitsspeicheranforderungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anhand der verfügbaren Systemressourcen dynamisch geändert werden.  
   
 > [!NOTE]  
->  Wenn die Option **Max. Serverarbeitsspeicher** auf den Minimalwert festgelegt ist, kann dies die Leistung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erheblich einschränken und sogar den Start von SQL Server verhindern. Wenn sich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach dem Ändern dieser Option nicht starten lässt, müssen Sie es mithilfe der Startoption **–f** starten und die Option **Max. Serverarbeitsspeicher** auf ihren vorherigen Wert zurücksetzen. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md).  
+>  Wenn die Option **Max. Serverarbeitsspeicher** auf den Minimalwert festgelegt ist, kann dies die Leistung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erheblich einschränken und sogar den Start von SQL Server verhindern. Wenn sich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach dem Ändern dieser Option nicht starten lässt, müssen Sie es mithilfe der Startoption **-f** starten und die Option **Max. Serverarbeitsspeicher** auf ihren vorherigen Wert zurücksetzen. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md).  
   
  Bei dynamischer Verwendung des Arbeitsspeichers von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der im System verfügbare Arbeitsspeicher in regelmäßigen Abständen abgefragt. Bei Beibehaltung dieses freien Arbeitsspeichers werden Auslagerungsvorgänge durch das Betriebssystem verhindert. Wenn weniger freier Arbeitsspeicher vorhanden ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Arbeitsspeicher für das Betriebssystem frei. Wenn mehr Arbeitsspeicher frei ist, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auch mehr Speicher reservieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fügt Arbeitsspeicher nur dann hinzu, wenn durch die Arbeitsauslastung mehr Arbeitsspeicher erforderlich ist. Bei einem ruhenden Server wird die Größe seines virtuellen Adressraums nicht vergrößert.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48199406"
 ## <a name="lock-pages-in-memory"></a>Sperren von Seiten im Speicher  
  Mit dieser Windows-Richtlinie werden die Konten bestimmt, die einen Prozess zum Speichern von Daten im physischen Speicher verwenden können, um das systemgesteuerte Auslagern der Daten in den virtuellen Arbeitsspeicher zu vermeiden. Durch Sperren von Seiten im Arbeitsspeicher können Sie die Reaktionsfähigkeit des Servers möglicherweise auch nach Auslagerung von Arbeitsspeicherdaten auf die Festplatte aufrechterhalten. Die SQL Server **Lock Pages in Memory** Option auf ON festgelegt ist, im 32-Bit- und 64-Bit-Instanzen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition und höher, wenn das Konto mit Privilegien zum Ausführen von sqlservr.exe der Windows erteilt wurde "Locked Pages in Memory"(LPIM) Benutzerrecht. In früheren Versionen von SQL Server ist beim Festlegen der Option zum Sperren von Seiten für eine 32-Bit-Instanz von SQL Server erforderlich, dass das Konto mit den Privilegien zum Ausführen von "sqlservr.exe" das LPIM-Benutzerrecht besitzt und die awe_enabled-Konfigurationsoption auf ON festgelegt wird.  
   
- Entfernen Sie zum Deaktivieren der Option **Sperren von Seiten im Speicher** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]das Benutzerrecht "Lock Pages in Memory" für das SQL Server-Startkonto.  
+ So deaktivieren Sie die **Lock Pages In Memory** option [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], entfernen Sie den Benutzer "Lock Pages in Memory" für das SQL Server-Startkonto.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>So deaktivieren Sie die Option "Sperren von Seiten im Speicher"  
  **So deaktivieren Sie die Sperren von Seiten im Speicheroption:**  
@@ -135,9 +134,9 @@ ms.locfileid: "48199406"
 |-|-------------|-------------|  
 |Konventioneller Arbeitsspeicher|Bis zu der für den virtuellen Prozessadressraum geltenden Beschränkung in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 2 GB<br /><br /> 3 GB mit **/3 gb** starten Parameter *<br /><br /> 4 GB unter WOW64\*\*|Bis zu der für den virtuellen Prozessadressraum geltenden Beschränkung in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 8 TB in einer x64-Architektur|  
   
- ***/3gb** ist ein Startparameter des Betriebssystems. Weitere Informationen finden Sie in der [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ ***/3gb** ist ein Startparameter des Betriebssystems. Weitere Informationen finden Sie in der [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- ** WOW64 (Windows on Windows 64) ist ein Modus, in der 32-Bit- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem 64-Bit-Betriebssystem ausgeführt wird. Weitere Informationen finden Sie in der [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ ** WOW64 (Windows on Windows 64) ist ein Modus, in der 32-Bit- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem 64-Bit-Betriebssystem ausgeführt wird. Weitere Informationen finden Sie in der [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## <a name="examples"></a>Beispiele  
   

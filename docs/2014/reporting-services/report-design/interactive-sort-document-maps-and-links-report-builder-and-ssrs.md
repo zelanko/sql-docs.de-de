@@ -11,12 +11,12 @@ ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6bc556d6da6461fbd159cd09102d5b9c82bc2dc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68e73b7fc2d7b1982724da4040c4912473f30d78
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210245"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352572"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Interaktive Sortierung, Dokumentstrukturen und Links (Berichts-Generator und SSRS)
   In webbasierten Umgebungen können Sie eine Reihe von Funktionen hinzufügen, über die Benutzer mit Berichten interagieren können. Die Benutzer können die Sortierreihenfolge der Werte im Bericht ändern, Elemente im Bericht anzeigen oder ausblenden oder auf Links klicken, die zu anderen Berichten oder Webseiten führen. Sie können auch ein Inhaltsverzeichnis oder eine Dokumentstruktur hinzufügen. Die Berichtsbenutzer können auf Elemente im Inhaltsverzeichnis oder in der Dokumentstruktur klicken, um zu Bereichen in einem Bericht zu springen.  
@@ -30,7 +30,7 @@ ms.locfileid: "48210245"
 -   **Drillthroughberichtslinks:** Wechseln zu anderen Berichten auf demselben Berichtsserver. Weitere Informationen finden Sie unter [Drillthroughberichte (Berichts-Generator und SSRS)](drillthrough-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Links, die an Datasetfelder gebunden sind, sind unter Umständen anfällig für böswillige Manipulationen. Weitere Informationen finden Sie unter [Sichern von Berichten und Ressourcen](../security/secure-reports-and-resources.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=154888) auf msdn.microsoft.com.  
+>  Links, die an Datasetfelder gebunden sind, sind unter Umständen anfällig für böswillige Manipulationen. Weitere Informationen finden Sie unter [Sichern von Berichten und Ressourcen](../security/secure-reports-and-resources.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=154888) auf msdn.microsoft.com.  
   
  Durch Entwerfen von Ausdrücken mit Parameterverweisen für Sortierung, Filter und Sichtbarkeit können Sie Benutzern das Anzeigen von Berichten und Inhalten ermöglichen. Weitere Informationen finden Sie unter [Berichtsparameter (Berichts-Generator und Berichts-Designer)](report-parameters-report-builder-and-report-designer.md), [Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator und SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md) und [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern (Berichts-Generator und SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md).  
   

@@ -22,12 +22,12 @@ ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32068cf03a971cd6b8010618d7b74d1a613ec856
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109893"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376742"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Senden von Feedback zu SQL Server 2014
   [!INCLUDE[msCoName](../includes/msconame-md.md)] möchte Ihnen dafür danken, dass Sie sich die Zeit nehmen, uns beim Verbessern unserer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Produkte und der zugehörigen Dokumentation zu helfen. Sie können Vorschläge zu den Produktfunktionen und zur Benutzeroberfläche sowie Fehlerberichte weitergeben, Feedback zur Dokumentation geben und sich dazu entschließen, Fehlerberichte und Verwendungsdaten automatisch an [!INCLUDE[msCoName](../includes/msconame-md.md)] zu senden. Jede dieser drei Feedbackoptionen wird hier beschrieben.  
@@ -37,7 +37,7 @@ ms.locfileid: "48109893"
   
  Sie können auf viele verschiedene Arten auf die [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Feedbackseite zugreifen.  
   
--   Gehen Sie auf die [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Feedback-[Webseite](http://go.microsoft.com/fwlink/?linkid=34178).  
+-   Gehen Sie auf die [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Feedback-[Webseite](https://go.microsoft.com/fwlink/?linkid=34178).  
   
 -   Klicken Sie in der Hilfesymbolleiste von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] auf die Schaltfläche **Feedback senden**, oder wählen Sie den Befehl **Community/Feedback senden** aus.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48109893"
   
 -   Greifen Sie vom Hilfsprogramm aus auf die Hilfe zu.  
   
--   Aktivieren Sie das Kontrollkästchen **Hilfe** auf der Registerkarte **Symbolleisten** des Befehls **Extras/Anpassen…** .  
+-   Wählen Sie die **Hilfe** auf das Kontrollkästchen der **Symbolleisten** Registerkarte die **Extras/Anpassen…...**  Befehl.  
   
 ## <a name="automatic-error-and-usage-reporting"></a>Automatische Fehler- und Verwendungsberichte  
  Sie können festlegen, dass automatisch Fehlerberichte und Daten über Ihre Nutzung der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Software und -Dienste an Microsoft gesendet werden. [!INCLUDE[msCoName](../includes/msconame-md.md)] verwendet diese Informationen, um die Funktionalität von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu verbessern. Alle Daten werden vertraulich behandelt.  

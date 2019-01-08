@@ -11,19 +11,19 @@ ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1f113778433e13e68b8847e5f54f1d9ae2bdc6e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b22f958a0b4bb78e297e23665db36b8c16fe74e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074468"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363142"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Hinzufügen eines aus mehreren Werten bestehenden Parameters zu einem Bericht
   Sie können einem Bericht einen Parameter hinzufügen, der dem Benutzer die Auswahl mehrerer Werte für den Parameter ermöglicht.  
   
- Sie können mehrere Parameterwerte innerhalb der Berichts-URL an den Bericht übergeben. Eine URL ist beispielsweise einen mehrwertigen Parameter enthält, finden Sie unter [übergeben von Berichtsparametern innerhalb einer URL](../pass-a-report-parameter-within-a-url.md).  
+ Sie können mehrere Parameterwerte innerhalb der Berichts-URL an den Bericht übergeben. Ein URL-Beispiel mit einem mehrwertigen Parameter finden Sie unter [Übergeben von Berichtsparametern innerhalb einer URL](../pass-a-report-parameter-within-a-url.md).  
   
- Informationen dazu, wie mehrere Parameterwerte an eine gespeicherte Prozedur übergeben werden, finden Sie unter [Verwenden von Mehrfachauswahl-Parametern für SSRS-Berichte](http://go.microsoft.com/fwlink/?LinkId=321529) auf mssqltips.com.  
+ Informationen dazu, wie mehrere Parameterwerte an eine gespeicherte Prozedur übergeben werden, finden Sie unter [Verwenden von Mehrfachauswahl-Parametern für SSRS-Berichte](https://go.microsoft.com/fwlink/?LinkId=321529) auf mssqltips.com.  
   
 ### <a name="to-add-a-multi-value-parameter"></a>So fügen Sie einen aus mehreren Werten bestehenden Parameter hinzu  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48074468"
     ```  
   
     > [!IMPORTANT]  
-    >  Wenn Sie die Variable nicht wie oben dargestellt in Klammern einschließen, wird der Bericht nicht gerendert und der Fehler "Die Skalarvariable muss deklariert werden" angezeigt.  
+    >  Wenn Sie wie oben gezeigt die Klammern um die Variable nicht einschließen, der Bericht nicht gerendert und der Fehler "die Skalarvariable muss deklariert werden" wird angezeigt.  
   
      Für die Abfragevariable wird automatisch ein Datasetparameter für ein eingebettetes Dataset oder ein freigegebenes Dataset erstellt. Für den Datasetparameter wird automatisch ein Berichtsparameter erstellt.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48074468"
     ```  
   
     > [!IMPORTANT]  
-    >  Wenn Sie die Variable nicht wie oben dargestellt in Klammern einschließen, wird der Bericht nicht gerendert und der Fehler "Die Skalarvariable muss deklariert werden" angezeigt.  
+    >  Wenn Sie wie oben gezeigt die Klammern um die Variable nicht einschließen, der Bericht nicht gerendert und der Fehler "die Skalarvariable muss deklariert werden" wird angezeigt.  
   
      Für die Abfragevariable wird automatisch ein Datasetparameter für ein eingebettetes Dataset oder ein freigegebenes Dataset erstellt. Für den Datasetparameter wird automatisch ein Berichtsparameter erstellt.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "48074468"
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen von kaskadierenden Parametern zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Hinzufügen, ändern oder Löschen von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+ [Hinzufügen, Ändern oder Löschen von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   

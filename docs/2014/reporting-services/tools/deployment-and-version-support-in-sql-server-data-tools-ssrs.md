@@ -11,12 +11,12 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa6994d4bcf01cc1de7036a45d52a7a090af80b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 251ec4db1d1f1cb4ddebe447e095c3c2338ee0bb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218170"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352146"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Bereitstellung und Versionsunterstützung in  SQL Server Data Tools (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] unterstützt die folgenden Szenarien:  
@@ -42,7 +42,7 @@ ms.locfileid: "48218170"
   
 -   OutputPath ist eine Erstellungseigenschaft, die den Pfad von Ordnern angibt, unter denen die für die Erstellungsüberprüfung, Bereitstellung und Berichtsvorschau verwendete Berichtsdefinition gespeichert wird.  
   
--   ErrorLevel ist eine Erstellungseigenschaft, die den Schweregrad der Erstellungsprobleme identifiziert, die als Fehler gemeldet werden. Probleme mit einem Schweregrad kleiner oder gleich dem Wert von ErrorLevel werden als Fehler gemeldet. Andernfalls werden die Probleme als Warnungen gemeldet. Weitere Informationen finden Sie im Abschnitt „Berichtsüberprüfung und Fehlerebenen“ im Artikel [Entwerfen von Berichten mit dem Berichts-Designer (SSRS)](design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel ist eine Erstellungseigenschaft, die den Schweregrad der Erstellungsprobleme identifiziert, die als Fehler gemeldet werden. Probleme mit einem Schweregrad kleiner oder gleich dem Wert von ErrorLevel werden als Fehler gemeldet. Andernfalls werden die Probleme als Warnungen gemeldet. Weitere Informationen finden Sie im Abschnitt „Berichtsüberprüfung und Fehlerebenen“ im Artikel [Entwerfen von Berichten mit dem Berichts-Designer &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   TargetServerVersion ist eine Bereitstellungseigenschaft, die die erwartete Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] identifiziert, die auf dem in der Eigenschaft „TargetServerURL“ angegebenen Zielberichtsserver installiert ist.  
   
@@ -68,12 +68,12 @@ ms.locfileid: "48218170"
 |Berichtsserverprojekt<br /><br /> oder<br /><br /> Berichtsserver-Assistenten-Projekt|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008-RDL-Schema|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver|Aktualisiert 2003 RDL und 2005 RDL lokal auf das 2008 RDL-Schema.|  
 |Berichtsserverprojekt<br /><br /> oder<br /><br /> Berichtsserver-Assistenten-Projekt|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|2005-RDL-Schema|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Berichtsserver||  
 |Berichtsserverprojekt|[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|2003-RDL-Schema|Nicht unterstützt||  
-|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] RDLC-Berichts-Designer|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|2005-RDL-Schema|Nicht unterstützt|2008-RDL-Schema wird nicht unterstützt.|  
-|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Viewer-Steuerelementen|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|2008-RDL wird im lokalen Modus nicht unterstützt|–|Anzeige von 2008-RDL-Berichten auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver im Servermodus möglich.|  
+|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-RDLC-Berichts-Designer|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|2005-RDL-Schema|Nicht unterstützt|2008-RDL-Schema wird nicht unterstützt.|  
+|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Viewer-Steuerelemente|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|2008-RDL wird im lokalen Modus nicht unterstützt|Nicht zutreffend|Anzeige von 2008-RDL-Berichten auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver im Servermodus möglich.|  
   
- Weitere Informationen über das Öffnen von Berichten in einer vorherigen Version des Berichtsdefinitionsschemas finden Sie unter [Aktualisieren von Berichten](../install-windows/upgrade-reports.md). Weitere Informationen zu spezifischen Berichtsdefinitionsschemata finden Sie im [Thema zum Angeben der Berichtsdefinitionssprache](http://go.microsoft.com/fwlink/?linkid=116865).  
+ Weitere Informationen über das Öffnen von Berichten in einer vorherigen Version des Berichtsdefinitionsschemas finden Sie unter [Aktualisieren von Berichten](../install-windows/upgrade-reports.md). Weitere Informationen zu spezifischen Berichtsdefinitionsschemata finden Sie im [Thema zum Angeben der Berichtsdefinitionssprache](https://go.microsoft.com/fwlink/?linkid=116865).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Publishing Data Sources and Reports (Veröffentlichen von Datenquellen und Berichten)](../reports/publishing-data-sources-and-reports.md)  
+ [Veröffentlichen von Datenquellen und Berichten](../reports/publishing-data-sources-and-reports.md)  
   
   

@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addarticle
@@ -17,12 +16,12 @@ ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ae9bb433018d5a329fda378c1f8aa13e171b5742
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 732e8a03742e6e2ccc66c158c300222a0701e0c0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830370"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591914"
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,31 +69,31 @@ sp_addarticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication =** ] **'***publication***'**  
+ [  **@publication =** ] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung, die den Artikel enthält. Der Name muss in der Datenbank eindeutig sein. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article =** ] **"***Artikel***"**  
+ [  **@article =** ] **"**_Artikel_**"**  
  Der Name des Artikels. Der Name muss innerhalb der Veröffentlichung eindeutig sein. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@source_table =** ] **"***Source_table***"**  
+ [  **@source_table =** ] **"**_Source_table_**"**  
  Dieser Parameter wurde als veraltet markiert; Verwenden Sie *Source_object* stattdessen.  
   
  *Dieser Parameter wird nicht für Oracle-Verleger unterstützt.*  
   
- [  **@destination_table =** ] **"***Destination_table***"**  
+ [  **@destination_table =** ] **"**_Destination_table_**"**  
  Ist der Name der Zieltabelle (Abonnement), wenn sich von *Source_table*oder der gespeicherten Prozedur. *Destination_table* ist **Sysname**, hat den Standardwert NULL, was bedeutet, dass *Source_table* gleich *Destination_table **.*  
   
- [  **@vertical_partition =** ] **"***Vertical_partition***"**  
+ [  **@vertical_partition =** ] **"**_Vertical_partition_**"**  
  Aktiviert und deaktiviert die Spaltenfilterung für einen Tabellenartikel. *Vertical_partition* ist **nchar(5)**, hat den Standardwert "false".  
   
  **"false"** zeigt an, dass keine vertikale Filterung und alle Spalten veröffentlicht.  
   
  **"true"** löscht alle Spalten außer dem deklarierten Primärschlüssel, auf NULL festlegbare Spalten hat keinen Standardwert und Spalten für eindeutige Schlüssel. Spalten werden mit hinzugefügt [Sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md).  
   
- [ **@type =** ] **'***type***'**  
+ [  **@type =** ] **"**_Typ_**"**  
  Entspricht dem Artikeltyp. *Typ* ist **Sysname**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**nur Aggregatschemas**|Aggregatfunktion vom Typ schema only.|  
 |**nur Func schema**|Funktion vom Typ schema only.|  
@@ -112,67 +111,67 @@ sp_addarticle [ @publication = ] 'publication'
 |**Serializable Proc exec**|Repliziert die Ausführung der gespeicherten Prozedur nur, wenn die Prozedur im Kontext einer serialisierbaren Transaktion ausgeführt wird. Diese Option wird für Oracle-Verleger nicht unterstützt.<br /><br /> Die Prozedur muss innerhalb einer expliziten Transaktion für die Ausführung der Prozedur repliziert wird, werden auch ausgeführt werden.|  
 |**nur Schema anzeigen**|Sicht vom Typ schema only. Diese Option wird für Oracle-Verleger nicht unterstützt. Wenn diese Option verwendet wird, müssen Sie auch die Basistabelle veröffentlichen.|  
   
- [  **@filter =** ] **"***Filter***"**  
+ [  **@filter =** ] **"**_Filter_**"**  
  Entspricht der gespeicherten Prozedur (erstellt mit FOR REPLICATION), mit der die Tabelle horizontal gefiltert wird. *Filter* ist **nvarchar(386)**, hat den Standardwert NULL. [Sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) und [Sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) müssen manuell zum Erstellen der Ansicht, und Filtern die gespeicherte Prozedur ausgeführt werden. Bei einem Wert ungleich NULL wird die Filterprozedur nicht erstellt (es wird angenommen, dass die gespeicherte Prozedur manuell erstellt wird).  
   
- [  **@sync_object =** ] **"***Sync_object***"**  
+ [  **@sync_object =** ] **"**_Sync_object_**"**  
  Entspricht dem Namen der Tabelle oder Sicht, die zum Erzeugen der Datendatei dient, mit der die Momentaufnahme für diesen Artikel dargestellt wird. *Sync_object* ist **nvarchar(386)**, hat den Standardwert NULL. Wenn der Wert NULL, [Sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) wird aufgerufen, um automatisch die Ansicht verwendet, um die Generierung der Ausgabedatei zu erstellen. Dieser Schritt erfolgt nach jedem Hinzufügen von Spalten mit [Sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Bei einem Wert ungleich NULL wird keine Sicht erstellt (es wird angenommen, dass die Sicht manuell erstellt wird).  
   
- [  **@ins_cmd =** ] **"***Ins_cmd***"**  
+ [  **@ins_cmd =** ] **"**_Ins_cmd_**"**  
  Ist der Replikationsbefehlstyp, der zum Replizieren von Einfügungen für diesen Artikel dient. *Ins_cmd* ist **nvarchar(255)**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**NONE**|Es wird keine Aktion ausgeführt.|  
-|**CALL sp_MSins_**<br /> ***Tabelle*** (Standard)<br /><br /> -oder-<br /><br /> **Rufen Sie custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure_name* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. **Sp_MSins_ * Tabelle*** enthält den Namen der Zieltabelle anstelle des dem *_tabulky* -Teils des Parameters. Wenn *Destination_owner* angegeben ist, wird er dem Namen der Zieltabelle vorangestellt wird. Z. B. für die **"ProductCategory"** -Tabelle im Besitz der **Produktion** Schema auf dem Abonnenten, der-Parameter wäre `CALL sp_MSins_ProductionProductCategory`. Für einen Artikel in einer Peer-zu-Peer-Replikationstopologie *_tabulky* mit einem GUID-Wert angefügt. Angeben von *custom_stored_procedure_name* wird für Updateabonnenten nicht unterstützt.|  
+|**CALL sp_MSins_**<br /> **_Tabelle_**  (Standard)<br /><br /> -oder-<br /><br /> **Rufen Sie custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure_name* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>Sp_MSins_*Tabelle*</strong>  enthält den Namen der Zieltabelle anstelle des dem *_tabulky* -Teils des Parameters. Wenn *Destination_owner* angegeben ist, wird er dem Namen der Zieltabelle vorangestellt wird. Z. B. für die **"ProductCategory"** -Tabelle im Besitz der **Produktion** Schema auf dem Abonnenten, der-Parameter wäre `CALL sp_MSins_ProductionProductCategory`. Für einen Artikel in einer Peer-zu-Peer-Replikationstopologie *_tabulky* mit einem GUID-Wert angefügt. Angeben von *custom_stored_procedure_name* wird für Updateabonnenten nicht unterstützt.|  
 |**SQL** oder NULL|Repliziert eine INSERT-Anweisung. Für die INSERT-Anweisung werden Werte für alle in dem Artikel veröffentlichten Spalten bereitgestellt. Der folgende Befehl wird bei Einfügungen repliziert:<br /><br /> `INSERT INTO <table name> VALUES (c1value, c2value, c3value, ..., cnvalue)`|  
   
  Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)  
   
- [  **@del_cmd =**] **"***Del_cmd***"**  
+ [  **@del_cmd =**] **"**_Del_cmd_**"**  
  Ist der Replikationsbefehlstyp, der zum Replizieren von Löschungen für diesen Artikel dient. *Del_cmd* ist **nvarchar(255)**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**NONE**|Es wird keine Aktion ausgeführt.|  
-|**CALLsp_MSdel_**<br /> ***Tabelle*** (Standard)<br /><br /> -oder-<br /><br /> **Rufen Sie custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure_name* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. **Sp_MSdel_ * Tabelle*** enthält den Namen der Zieltabelle anstelle des dem *_tabulky* -Teils des Parameters. Wenn *Destination_owner* angegeben ist, wird er dem Namen der Zieltabelle vorangestellt wird. Z. B. für die **"ProductCategory"** -Tabelle im Besitz der **Produktion** Schema auf dem Abonnenten, der-Parameter wäre `CALL sp_MSdel_ProductionProductCategory`. Für einen Artikel in einer Peer-zu-Peer-Replikationstopologie *_tabulky* mit einem GUID-Wert angefügt. Angeben von *custom_stored_procedure_name* wird für Updateabonnenten nicht unterstützt.|  
-|**XCALL sp_MSdel_**<br /> ***table***<br /><br /> -oder-<br /><br /> **XCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die XCALL-Parameter akzeptiert. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
+|**CALLsp_MSdel_**<br /> **_Tabelle_**  (Standard)<br /><br /> -oder-<br /><br /> **Rufen Sie custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure_name* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>Sp_MSdel_*Tabelle*</strong>  enthält den Namen der Zieltabelle anstelle des dem *_tabulky* -Teils des Parameters. Wenn *Destination_owner* angegeben ist, wird er dem Namen der Zieltabelle vorangestellt wird. Z. B. für die **"ProductCategory"** -Tabelle im Besitz der **Produktion** Schema auf dem Abonnenten, der-Parameter wäre `CALL sp_MSdel_ProductionProductCategory`. Für einen Artikel in einer Peer-zu-Peer-Replikationstopologie *_tabulky* mit einem GUID-Wert angefügt. Angeben von *custom_stored_procedure_name* wird für Updateabonnenten nicht unterstützt.|  
+|**XCALL sp_MSdel_**<br /> **_Tabelle_**<br /><br /> -oder-<br /><br /> **XCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die XCALL-Parameter akzeptiert. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
 |**SQL** oder NULL|Repliziert eine DELETE-Anweisung. Für die DELETE-Anweisung werden alle Spaltenwerte der Primärschlüssel bereitgestellt. Der folgende Befehl wird bei Löschungen repliziert:<br /><br /> `DELETE FROM <table name> WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
  Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)  
   
- [  **@upd_cmd =**] **"***Upd_cmd***"**  
+ [  **@upd_cmd =**] **"**_Upd_cmd_**"**  
  Ist der Replikationsbefehlstyp, der zum Replizieren von Updates für diesen Artikel dient. *Upd_cmd* ist **nvarchar(255)**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**NONE**|Es wird keine Aktion ausgeführt.|  
-|**CALL sp_MSupd_**<br /> ***table***<br /><br /> -oder-<br /><br /> **Rufen Sie custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels.|  
-|**MCALL sp_MSupd_**<br /> ***table***<br /><br /> -oder-<br /><br /> **MCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die MCALL-Parameter akzeptiert. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure_name* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. **Sp_MSupd_ * Tabelle*** enthält den Namen der Zieltabelle anstelle des dem *_tabulky* -Teils des Parameters. Wenn *Destination_owner* angegeben ist, wird er dem Namen der Zieltabelle vorangestellt wird. Z. B. für die **"ProductCategory"** -Tabelle im Besitz der **Produktion** Schema auf dem Abonnenten, der-Parameter wäre `MCALL sp_MSupd_ProductionProductCategory`. Für einen Artikel in einer Peer-zu-Peer-Replikationstopologie *_tabulky* mit einem GUID-Wert angefügt. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
-|**SCALL sp_MSupd_**<br /> ***Tabelle*** (Standard)<br /><br /> -oder-<br /><br /> **SCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die SCALL-Parameter akzeptiert. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure_name* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. **Sp_MSupd_ * Tabelle*** enthält den Namen der Zieltabelle anstelle des dem *_tabulky* -Teils des Parameters. Wenn *Destination_owner* angegeben ist, wird er dem Namen der Zieltabelle vorangestellt wird. Z. B. für die **"ProductCategory"** -Tabelle im Besitz der **Produktion** Schema auf dem Abonnenten, der-Parameter wäre `SCALL sp_MSupd_ProductionProductCategory`. Für einen Artikel in einer Peer-zu-Peer-Replikationstopologie *_tabulky* mit einem GUID-Wert angefügt. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
-|**XCALL sp_MSupd_**<br /> ***table***<br /><br /> -oder-<br /><br /> **XCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die XCALL-Parameter akzeptiert. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
+|**CALL sp_MSupd_**<br /> **_Tabelle_**<br /><br /> -oder-<br /><br /> **Rufen Sie custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels.|  
+|**MCALL sp_MSupd_**<br /> **_Tabelle_**<br /><br /> -oder-<br /><br /> **MCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die MCALL-Parameter akzeptiert. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure_name* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>Sp_MSupd_*Tabelle*</strong>  enthält den Namen der Zieltabelle anstelle des dem *_tabulky* -Teils des Parameters. Wenn *Destination_owner* angegeben ist, wird er dem Namen der Zieltabelle vorangestellt wird. Z. B. für die **"ProductCategory"** -Tabelle im Besitz der **Produktion** Schema auf dem Abonnenten, der-Parameter wäre `MCALL sp_MSupd_ProductionProductCategory`. Für einen Artikel in einer Peer-zu-Peer-Replikationstopologie *_tabulky* mit einem GUID-Wert angefügt. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
+|**SCALL sp_MSupd_**<br /> **_Tabelle_**  (Standard)<br /><br /> -oder-<br /><br /> **SCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die SCALL-Parameter akzeptiert. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure_name* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>Sp_MSupd_*Tabelle*</strong>  enthält den Namen der Zieltabelle anstelle des dem *_tabulky* -Teils des Parameters. Wenn *Destination_owner* angegeben ist, wird er dem Namen der Zieltabelle vorangestellt wird. Z. B. für die **"ProductCategory"** -Tabelle im Besitz der **Produktion** Schema auf dem Abonnenten, der-Parameter wäre `SCALL sp_MSupd_ProductionProductCategory`. Für einen Artikel in einer Peer-zu-Peer-Replikationstopologie *_tabulky* mit einem GUID-Wert angefügt. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
+|**XCALL sp_MSupd_**<br /> **_Tabelle_**<br /><br /> -oder-<br /><br /> **XCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die XCALL-Parameter akzeptiert. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
 |**SQL** oder NULL|Repliziert eine UPDATE-Anweisung. Die UPDATE-Anweisung wird für alle Spaltenwerte und für die Spaltenwerte der Primärschlüssel bereitgestellt. Der folgende Befehl wird bei Updates repliziert:<br /><br /> `UPDATE <table name> SET c1 = c1value, SET c2 = c2value, SET cn = cnvalue WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
 > [!NOTE]  
 >  Die CALL-, MCALL-, SCALL- und XCALL-Syntax variiert den Umfang der Daten, die an den Abonnenten weitergegeben werden. Die CALL-Syntax übergibt alle Werte für alle eingefügten und gelöschten Spalten. Die SCALL-Syntax übergibt nur die Werte für betroffene Spalten. Die XCALL-Syntax übergibt die Werte für alle Spalten, unabhängig davon, ob diese geändert wurden, einschließlich des vorherigen Werts der Spalte. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)  
   
- [  **@creation_script =**] **"***Creation_script***"**  
+ [  **@creation_script =**] **"**_Creation_script_**"**  
  Entspricht dem Pfad und Namen eines optionalen Artikelschemaskripts, mit dem der Artikel in der Abonnementdatenbank erstellt wird. *Creation_script* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
- [ **@description =**] **'***description***'**  
+ [  **@description =**] **"**_Beschreibung_**"**  
  Ist ein beschreibender Eintrag für den Artikel. *Beschreibung* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
- [  **@pre_creation_cmd =**] **"***Pre_creation_cmd***"**  
+ [  **@pre_creation_cmd =**] **"**_Pre_creation_cmd_**"**  
  Gibt die vom System durchzuführenden Schritte an, wenn es beim Anwenden der Momentaufnahme für diesen Artikel ein vorhandenes Objekt mit demselben Namen beim Abonnenten erkennt. *Pre_creation_cmd* ist **nvarchar(10)**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Keine**|Verwendet keinen Befehl.|  
 |**delete**|Löscht Daten aus der Zieltabelle vor dem Anwenden der Momentaufnahme. Wird der Artikel horizontal gefiltert, werden nur Daten in Spalten gelöscht, die von der Filterklausel angegeben werden. Wird von Oracle-Verlegern nicht unterstützt, wenn ein horizontaler Filter definiert wurde.|  
 |**Drop** (Standard)|Entfernt die Zieltabelle.|  
 |**truncate**|Schneidet die Zieltabelle ab. Gilt nicht für ODBC- oder OLE DB-Abonnenten.|  
   
- [  **@filter_clause=**] **"***Filter_clause***"**  
+ [  **@filter_clause=**] **"**_Filter_clause_**"**  
  Eine Einschränkungsklausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort, in dem. *Filter_clause* ist **Ntext**, hat den Standardwert NULL. Weitere Informationen finden Sie unter [Filtern von veröffentlichten Daten](../../relational-databases/replication/publish/filter-published-data.md).  
   
  [  **@schema_option =**] *Schema_option*  
@@ -181,7 +180,7 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Ist dieser Wert NULL, generiert das System automatisch eine gültige Schemaoption für den Artikel, abhängig von anderen Artikeleigenschaften. Die **Default Schema Options** Tabelle, die in den Hinweisen angegebene wird der Wert, der ausgewählt wird, auf der Grundlage der Kombination des Artikeltyps und des Replikationstyps.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**0 x 00**|Deaktiviert die Skripterstellung durch den Momentaufnahme-Agent und verwendet *Creation_script*.|  
 |**0 x 01**|Generiert das Objekterstellungsskript (CREATE TABLE, CREATE PROCEDURE usw.). Dies ist der Standardwert für alle Artikel mit gespeicherten Prozeduren.|  
@@ -196,7 +195,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0 x 200**|Repliziert Fremdschlüsseleinschränkungen. Wenn die Tabelle, auf die verwiesen wird, nicht Teil einer Veröffentlichung ist, werden keine Fremdschlüsseleinschränkungen für eine veröffentlichte Tabelle repliziert. *Nicht für Oracle-Verleger unterstützt*.|  
 |**0 x 400**|Repliziert CHECK-Einschränkungen. *Nicht für Oracle-Verleger unterstützt*.|  
 |**0 x 800**|Repliziert Standards. *Nicht für Oracle-Verleger unterstützt*.|  
-|**0 x 1000**|Repliziert die Sortierung auf Spaltenebene.<br /><br /> **Hinweis:** diese Option sollte für Oracle-Verleger, um Groß-/Kleinschreibung Vergleiche festgelegt werden.|  
+|**0 x 1000**|Repliziert die Sortierung auf Spaltenebene.<br /><br /> **Hinweis**: Dieser Option sollte für Oracle-Verleger eingerichtet werden, um Vergleiche zu ermöglichen, die nach Groß-/Kleinschreibung unterscheiden.|  
 |**0 x 2000**|Repliziert erweiterte Eigenschaften, die dem Quellobjekt des veröffentlichten Artikels zugeordnet sind. *Nicht für Oracle-Verleger unterstützt*.|  
 |**0 x 4000**|Repliziert UNIQUE-Einschränkungen. Alle Indizes bezüglich der Einschränkung werden ebenfalls repliziert, auch wenn Optionen **0 x 10** und **0 x 40** sind nicht aktiviert.|  
 |**0 x 8000**|Diese Option ist für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Verleger nicht gültig.|  
@@ -234,7 +233,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  Nicht alle *Schema_option* Werte sind für alle Replikations- oder Artikeltyp gültig. Die **Valid Schema Options** Tabelle im Abschnitt "Hinweise" zeigt die gültigen Schemaoptionen an, die ausgewählt werden können, auf der Grundlage der Kombination des Artikeltyps und des Replikationstyps.  
   
- [  **@destination_owner =**] **"***Destination_owner***"**  
+ [  **@destination_owner =**] **"**_Destination_owner_**"**  
  Entspricht dem Namen des Eigentümers des Zielobjekts. *Destination_owner* ist **Sysname**, hat den Standardwert NULL. Wenn *Destination_owner* nicht angegeben ist, wird der Besitzer angegeben ist, automatisch basierend auf den folgenden Regeln:  
   
 |Bedingung|Zielobjektbesitzer|  
@@ -243,12 +242,12 @@ sp_addarticle [ @publication = ] 'publication'
 |Veröffentlicht von einem Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger.|Standardmäßig wird der Besitzer der Zieldatenbank verwendet.|  
 |Die Veröffentlichung generiert die Anfangsmomentaufnahme, die Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten unterstützt, über das Massenkopieren im Zeichenmodus.|Nicht zugewiesen.|  
   
- Unterstützung von nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten *Destination_owner* muss NULL sein.  
+ Unterstützung von nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten *Destination_owner* muss NULL sein.  
   
  [  **@status=**] *Status*  
  Gibt an, ob der Artikel aktiv ist. Zudem werden zusätzliche Optionen für die Weitergabe von Änderungen angegeben. *Status* ist **Tinyint**, und kann die [| (Bitweises OR) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) Produkt eine oder mehrere der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|Der Artikel ist aktiv.|  
 |**8**|Bezieht den Spaltennamen in INSERT-Anweisungen mit ein.|  
@@ -258,25 +257,25 @@ sp_addarticle [ @publication = ] 'publication'
   
  Ein aktiver Artikel, der parametrisierte Anweisungen verwendet, würde in dieser Spalte beispielsweise den Wert 17 anzeigen. Der Wert **0** bedeutet, dass der Artikel inaktiv ist und keine zusätzlichen Eigenschaften definiert wurden.  
   
- [  **@source_owner =**] **"***der Standardwert***"**  
+ [  **@source_owner =**] **"**_der Standardwert_**"**  
  Ist der Besitzer des Quellobjekts. *Der Standardwert* ist **Sysname**, hat den Standardwert NULL. *Der Standardwert* für Oracle-Verleger muss angegeben werden.  
   
- [  **@sync_object_owner =**] **"***der Standardwert***"**  
+ [  **@sync_object_owner =**] **"**_der Standardwert_**"**  
  Entspricht dem Namen des Eigentümers, der den veröffentlichten Artikel definiert. *Der Standardwert* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@filter_owner =**] **"***der Standardwert***"**  
+ [  **@filter_owner =**] **"**_der Standardwert_**"**  
  Ist der Eigentümer des Filters. *Der Standardwert* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@source_object =**] **"***Source_object***"**  
+ [  **@source_object =**] **"**_Source_object_**"**  
  Entspricht dem zu veröffentlichenden Datenbankobjekt. *Source_object* ist **Sysname**, hat den Standardwert NULL. Wenn *Source_table* NULL ist, *Source_object* darf nicht NULL sein. *Source_object* sollte verwendet werden, anstelle von *Source_table*. Weitere Informationen zu den Typen von Objekten, die mit der Momentaufnahme- oder Transaktionsreplikation veröffentlicht werden können, finden Sie unter [Veröffentlichen von Daten und Datenbankobjekte](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
- [  **@artid =** ] *Article_ID* **Ausgabe**  
+ [  **@artid =** ] _Article_ID_ **Ausgabe**  
  Entspricht der Artikel-ID des neuen Artikels. *Article_id* ist **Int** hat den Standardwert NULL, und es ist ein OUTPUT-Parameter.  
   
- [  **@auto_identity_range =** ] **"***Auto_identity_range***"**  
+ [  **@auto_identity_range =** ] **"**_Auto_identity_range_**"**  
  Aktiviert und deaktiviert auf Veröffentlichungsebene die automatische Handhabung von Identitätsbereichen zum Zeitpunkt der Veröffentlichungserstellung. *Auto_identity_range* ist **nvarchar(5)**, und kann einen der folgenden Werte:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**true**|Aktiviert die automatische Behandlung von Identitätsbereichen|  
 |**false**|Deaktiviert die automatische Behandlung von Identitätsbereichen|  
@@ -294,7 +293,7 @@ sp_addarticle [ @publication = ] 'publication'
  [  **@threshold =** ] *Schwellenwert*  
  Ist der Prozentsatz-Wert, der steuert, wann der Verteilungs-Agent einen neuen Identitätsbereich zuweist. Wenn der Prozentsatz der Werte in angegebenen *Schwellenwert* wird verwendet, erstellt der Verteilungs-Agent einen neuen Identitätsbereich. *Schwellenwert für* ist **Bigint**, hat den Standardwert NULL. Wird verwendet, wenn *Identityrangemanagementoption* nastaven NA hodnotu **automatisch** oder *Auto_identity_range* nastaven NA hodnotu **"true"**. *Nicht für Oracle-Verleger unterstützt*.  
   
- [  **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
  Bestätigt, dass durch die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine vorhandene Momentaufnahme ungültig wird. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert 0.  
   
  **0** gibt an, dass das Hinzufügen eines Artikels nicht die Momentaufnahme ungültig werden kann. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf, und es werden keine Änderungen durchgeführt.  
@@ -316,7 +315,7 @@ sp_addarticle [ @publication = ] 'publication'
  [  **@identityrangemanagementoption =** ] *Identityrangemanagementoption*  
  Gibt an, wie die Identitätsbereichsverwaltung für den Artikel gehandhabt wird. *Identityrangemanagementoption* ist **nvarchar(10)**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Keine**|Die Replikation führt keine explizite Identitätsbereichsverwaltung aus. Diese Option wird nur aus Gründen der Abwärtskompatibilität mit früheren Versionen von SQL Server verwendet. Ist für die Peer-Replikation nicht zulässig.|  
 |**Manuell**|Markiert die Identitätsspalte mithilfe von NOT FOR REPLICATION, um die manuelle Identitätsbereichsverwaltung zu ermöglichen.|  
@@ -327,13 +326,13 @@ sp_addarticle [ @publication = ] 'publication'
   
  Weitere Informationen finden Sie unter [Replizieren von Identitätsspalten](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
- [  **@publisher =** ] **"***Verleger***"**  
- Gibt einen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+ [  **@publisher =** ] **"**_Verleger_**"**  
+ Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht verwendet werden, wenn ein Artikel hinzugefügt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
   
- [  **@fire_triggers_on_snapshot =** ] **"***Fire_triggers_on_snapshot***"**  
+ [  **@fire_triggers_on_snapshot =** ] **"**_Fire_triggers_on_snapshot_**"**  
  Gibt an, ob replizierte Benutzertrigger beim Anwenden der Anfangsmomentaufnahme ausgeführt werden. *Fire_triggers_on_snapshot* ist **nvarchar(5)**, hat den Standardwert "false". **"true"** bedeutet, dass Benutzertrigger für eine replizierte Tabelle ausgeführt werden, wenn die Momentaufnahme angewendet wird. In der Reihenfolge, damit Trigger repliziert werden der Bitmaskenwert von *Schema_option* muss den Wert enthalten **0 x 100**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -393,8 +392,8 @@ sp_addarticle [ @publication = ] 'publication'
 |**Serializable Proc exec**|**0 x 01**|**0 x 01**|  
 |**nur Schema anzeigen**|**0 x 01**|**0 x 01**|  
   
-> [!NOTE]  
->  Wenn eine Veröffentlichung aktiviert ist, für das verzögerte Update eine *Schema_option* Wert **0 x 80** hinzugefügt wird, auf den Standardwert, der in der Tabelle dargestellt. Der Standardwert *Schema_option* für einen nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Veröffentlichung **0x050D3**.  
+> [!NOTE]
+>  Wenn eine Veröffentlichung aktiviert ist, für das verzögerte Update eine *Schema_option* Wert **0 x 80** hinzugefügt wird, auf den Standardwert, der in der Tabelle dargestellt. Der Standardwert *Schema_option* für einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Veröffentlichung **0x050D3**.  
   
 ## <a name="valid-schema-options"></a>Valid Schema Options  
  Diese Tabelle beschreibt die zulässigen Werte von *Schema_option* basierend auf dem Replikationstyp (oben dargestellt) und den Artikeltyp (in der ersten Spalte angezeigt).  
@@ -416,8 +415,8 @@ sp_addarticle [ @publication = ] 'publication'
 |**nur Func schema**|**0 x 01**, **0 x 20**, **0 x 2000**, **0 x 400000**, **0 x 800000**, **0x2000000**, **0x8000000**, **0 x 10000000**, **0 x 20000000**, **0 x 40000000**, und **0 x 80000000**|**0 x 01**, **0 x 20**, **0 x 2000**, **0 x 400000**, **0 x 800000**, **0x2000000**, **0x8000000**, **0 x 10000000**, **0 x 20000000**, **0 x 40000000**, und **0 x 80000000**|  
 |**Nur indizierte sichtschema**|**0 x 01**, **0x010**, **0 x 020**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 100000**, **0x200000**, **0 x 400000**, **0 x 800000**,  **0x2000000**, **0x8000000**, **0 x 40000000**, und **0 x 80000000**|**0 x 01**, **0x010**, **0 x 020**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 100000**, **0x200000**, **0 x 400000**, **0 x 800000**,  **0x2000000**, **0x8000000**, **0 x 40000000**, und **0 x 80000000**|  
   
-> [!NOTE]  
->  Für Veröffentlichungen mit in der Warteschlange die *Schema_option* Werte **0 x 8000** und **0 x 80** muss aktiviert sein. Die unterstützten *Schema_option* -Werte für nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Veröffentlichungen werden: **0 x 01**, **0 x 02**, **0 x 10**,  **0 x 40**, **0 x 80**, **0 x 1000**, **0 x 4000** und **0 x 8000**.  
+> [!NOTE]
+>  Für Veröffentlichungen mit in der Warteschlange die *Schema_option* Werte **0 x 8000** und **0 x 80** muss aktiviert sein. Die unterstützten *Schema_option* -Werte für nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Veröffentlichungen werden: **0 x 01**, **0 x 02**, **0 x 10**, **0 x 40**, **0 x 80**, **0 x 1000**,  **0 x 4000** und **0 x 8000**.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-addarticle-transact-sql_1.sql)]  

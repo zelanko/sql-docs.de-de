@@ -17,12 +17,12 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b6837fdc076db7abfe4a085c2bb98201e1a298d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea6a5ef9a9ced2399ba5539f8117cc40e5c13db0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055260"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352029"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet eine Vielzahl von sofort zu bedienende Tools und Dienste können Sie das Erstellen, bereitstellen und Verwalten von Berichten für Ihre Organisation an. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] umfasst Programmierfunktionen, mit denen die Berichtsfunktionen erweitert und angepasst werden können.  
@@ -67,6 +67,6 @@ ms.locfileid: "48055260"
  ![Symbol "Ordner"](media/hlp-16folder.gif "Ordnersymbol") [Funktionsreferenz &#40;Reporting Services&#41;](feature-reference-reporting-services.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Ressourcencenter](http://go.microsoft.com/fwlink/?linkID=219676)  
+ [SQL Server-Ressourcencenter](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

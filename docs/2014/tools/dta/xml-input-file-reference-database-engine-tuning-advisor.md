@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -17,19 +16,19 @@ ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4dfcae2c6d18b295919a3b843efe2edd95062d01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b560b36eb98ec73723a4ce25cb3c647f4962b634
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126190"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368572"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML-Eingabedateireferenz (Datenbankoptimierungsratgeber)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber kann mithilfe einer XML-Eingabedatei eine Datenbank optimieren. Anhand dieser XML-Datei wird festgelegt, welche Datenbanken, Tabellen, Arbeitsauslastungsdateien oder -tabellen und Optimierungsoptionen für die Optimierungssitzung verwendet werden sollen. Außerdem können Sie mit dieser Datei eine vom Benutzer angegebene Konfiguration zum Ausführen von Was-wäre-wenn-Analysen festlegen.  
   
  In XML-Eingabedateien des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers befinden sich hierarchisch angeordnete XML-Elemente mit Text oder anderen Elementen, die die Einstellungen der Optimierungssitzung angeben. Die XML-Eingabedatei des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers muss den Standards für wohlgeformte XML-Dokumente entsprechen, d. h., dass bei allen Elementnamen die Groß-/Kleinschreibung beachtet wird. Die Groß-/Kleinschreibung der Elemente ist wie in Pascal. Das bedeutet, dass das erste Zeichen ein Großbuchstabe und der erste Buchstabe eines nachfolgenden verketteten Worts ein Großbuchstabe ist.  
   
- Alle Elementwerte müssen den XML-Benennungskonventionen entsprechen. Weitere Informationen zu diesen Konventionen finden Sie unter [XML-Textinhalt](http://go.microsoft.com/fwlink/?LinkId=7614) in der MSDN Library.  
+ Alle Elementwerte müssen den XML-Benennungskonventionen entsprechen. Weitere Informationen zu diesen Konventionen finden Sie unter [XML-Textinhalt](https://go.microsoft.com/fwlink/?LinkId=7614) in der MSDN Library.  
   
  Beachten Sie, dass dies keine vollständige Referenz ist. Informationen zu allen Elementen, die Sie zum Definieren von XML-Eingabedateien verwenden können, finden Sie im XML-Schema DTASchema.xsd des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers.  
   
@@ -51,19 +50,19 @@ ms.locfileid: "48126190"
   
 -   [TuningOptions-Element &#40;DTA&#41;](tuningoptions-element-dta.md)  
   
--   [Konfigurationselement &#40;DTA&#41;](configuration-element-dta.md)  
+-   [Configuration-Element &#40;DTA&#41;](configuration-element-dta.md)  
   
 ## <a name="server-elements"></a>Serverelemente  
   
--   [Benennen Sie Element für Server &#40;DTA&#41;](name-element-for-server-dta.md)  
+-   [Name-Element für Server &#40;DTA&#41;](name-element-for-server-dta.md)  
   
 -   [Database-Element für Server &#40;DTA&#41;](database-element-for-server-dta.md)  
   
 ## <a name="workload-elements"></a>Arbeitsauslastungselemente  
   
--   [File Element &#40;DTA&#41;](file-element-dta.md)  
+-   [File-Element &#40;DTA&#41;](file-element-dta.md)  
   
--   [Database-Element für die Arbeitsauslastung &#40;DTA&#41;](database-element-for-workload-dta.md)  
+-   [Database-Element zur Arbeitsauslastung &#40;DTA&#41;](database-element-for-workload-dta.md)  
   
 -   [EventString-Element &#40;DTA&#41;](eventstring-element-dta.md)  
   
@@ -95,29 +94,29 @@ ms.locfileid: "48126190"
   
 -   [Recommendation-Element &#40;DTA&#41;](recommendation-element-dta.md)  
   
--   [Create-Element &#40;DTA&#41;](create-element-dta.md)  
+-   [Create Element &#40;DTA&#41;](create-element-dta.md)  
   
 -   [Index-Element &#40;DTA&#41;](index-element-dta.md)  
   
--   [Benennen Sie Element für Index &#40;DTA&#41;](name-element-for-index-dta.md)  
+-   [Name-Element für Index &#40;DTA&#41;](name-element-for-index-dta.md)  
   
 -   [Column-Element für Index &#40;DTA&#41;](column-element-for-index-dta.md)  
   
--   [Benennen Sie Element für Spalte &#40;DTA&#41;](name-element-for-column-dta.md)  
+-   [Name-Element für Spalte &#40;DTA&#41;](name-element-for-column-dta.md)  
   
--   [FileGroup-Element für Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)  
+-   [Filegroup-Element für Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)  
   
 ## <a name="database-elements"></a>Datenbankelemente  
   
--   [Namen von Element für Datenbank &#40;DTA&#41;](name-element-for-database-dta.md)  
+-   [Name-Element für Datenbank &#40;DTA&#41;](name-element-for-database-dta.md)  
   
 -   [Schema-Element für Datenbank &#40;DTA&#41;](schema-element-for-database-dta.md)  
   
--   [Benennen Sie Element für Schema &#40;DTA&#41;](name-element-for-schema-dta.md)  
+-   [Namen-Element für Schema &#40;DTA&#41;](name-element-for-schema-dta.md)  
   
--   [Element für Schema Tabelle &#40;DTA&#41;](table-element-for-schema-dta.md)  
+-   [Table-Element für Schema &#40;DTA&#41;](table-element-for-schema-dta.md)  
   
--   [Benennen Sie Element für Tabelle &#40;DTA&#41;](name-element-for-table-dta.md)  
+-   [Name-Element für Tabelle &#40;DTA&#41;](name-element-for-table-dta.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)  

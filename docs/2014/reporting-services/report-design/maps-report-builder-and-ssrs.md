@@ -18,12 +18,12 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c0c65216c2a74653cb2752d0183b3d0635a6c3cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 320737c3a84eb1f01899c14dfb2f4c1eefb60856
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187960"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354463"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Karten (Berichts-Generator und SSRS)
   Um Geschäftsdaten anhand eines geografischen Hintergrunds visuell darzustellen, können Sie dem Bericht eine Karte hinzufügen. Welchen Kartentyp Sie auswählen sollten, hängt davon ab, was für Informationen Sie im Bericht mitteilen möchten. Sie können eine Karte hinzufügen, die nur Orte anzeigt, oder eine Blasendiagrammkarte, bei der die Blasengröße von der Anzahl der Haushalte für einen Bereich abhängt, oder eine Markerkarte, bei der das Markerformat vom gewinnbringendsten Produkt für jeden Laden abhängt, oder eine Linienkarte, die Routen zwischen Läden anzeigt.  
@@ -32,7 +32,7 @@ ms.locfileid: "48187960"
   
  ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
- Informationen dazu, wie Sie sofort mit der Verwendung einer Karte beginnen, finden Sie unter [Tutorial: Kartenbericht &#40;Berichts-Generator&#41;](../tutorial-map-report-report-builder.md) oder [Berichtsbeispiele (Berichts-Generator und SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Um zu starten, eine Zuordnung sofort zu verwenden, finden Sie unter [Lernprogramm: Kartenbericht &#40;Berichts-Generator&#41; ](../tutorial-map-report-report-builder.md) oder [Beispielberichte (Berichts-Generator und SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  Karten können getrennt von einem Bericht als Berichtsteile gespeichert werden.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -53,7 +53,7 @@ ms.locfileid: "48187960"
   
 -   Nachdem Sie die Karte im Bericht in der Vorschau angezeigt haben, sollten Sie möglicherweise die Kartenansicht anpassen, die unterschiedliche Anzeige der einzelnen Datenebenen verändern, Legenden bereitstellen, die den Benutzern die Interpretation der Daten erleichtern, und die Auflösung anpassen, um die Anzeige benutzerfreundlich zu gestalten.  
   
- Weitere Informationen finden Sie unter [Hinzufügen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md).  
+ Weitere Informationen finden Sie unter [Planen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md).  
   
 
   
@@ -83,13 +83,13 @@ ms.locfileid: "48187960"
     > [!NOTE]  
     >  Für diese [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Kartenfunktion werden Daten aus TIGER/Line-Shape-Dateien verwendet, die vom U.S. Census Bureau ([http://www.census.gov/](http://www.census.gov/)). TIGER/Line-Shape-Dateien sind ein Auszug aus ausgewählten geografischen und kartographischen Informationen aus der Census MAF/TIGER-Datenbank. TIGER/Line-Shape-Dateien sind kostenfrei vom amerikanischen Volkszählungsbüro verfügbar. Weitere Informationen zu den TIGER/Line-Shape-Dateien finden Sie unter [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Die Informationen zu geografischen Grenzen in den TIGER/Line-Shape-Dateien dienen nur der Sammlung statistischer Daten und der Tabellierung. Ihre Darstellung und Verwendung zu statistischen Zwecken bedeutet keine Aussage einer Rechtsprechungsbehörde, begründet keine Eigentumsrechte oder Rechtsansprüche und stellt keine rechtsverbindlichen Landbeschreibungen dar. Census TIGER und TIGER/Line sind eingetragene Marken des U.S. Bureau of the Census.  
   
--   **ESRI-Shape-Dateien.** ESRI-Shape-Dateien enthalten Daten, die dem Format für räumliche Daten in Shape-Dateien des Environmental Systems Research Institute, Inc. (ESRI) entsprechen. ESRI-Shape-Dateien verweisen auf einen Satz von Dateien. Daten in der SHP-Datei geben die geografischen oder geometrischen Formen an. Daten in der DBF-Datei stellen Attribute für die Formen bereit. Damit Sie eine Karte in der Entwurfsansicht anzeigen oder vom Berichtsserver ausführen können, müssen sich beide Dateien im gleichen Ordner befinden. Wenn Sie räumliche Daten aus einer SHP-Datei zum lokalen Dateisystem hinzufügen, werden sie in den Bericht eingebettet. Um zur Laufzeit räumliche Daten dynamisch abzurufen, laden Sie die Shape-Dateien auf den Berichtsserver, und geben Sie diese dann als die Quelle räumlicher Daten an. Weitere Informationen finden Sie unter [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814).  
+-   **ESRI-Shape-Dateien.** ESRI-Shape-Dateien enthalten Daten, die dem Format für räumliche Daten in Shape-Dateien des Environmental Systems Research Institute, Inc. (ESRI) entsprechen. ESRI-Shape-Dateien verweisen auf einen Satz von Dateien. Daten in der SHP-Datei geben die geografischen oder geometrischen Formen an. Daten in der DBF-Datei stellen Attribute für die Formen bereit. Damit Sie eine Karte in der Entwurfsansicht anzeigen oder vom Berichtsserver ausführen können, müssen sich beide Dateien im gleichen Ordner befinden. Wenn Sie räumliche Daten aus einer SHP-Datei zum lokalen Dateisystem hinzufügen, werden sie in den Bericht eingebettet. Um zur Laufzeit räumliche Daten dynamisch abzurufen, laden Sie die Shape-Dateien auf den Berichtsserver, und geben Sie diese dann als die Quelle räumlicher Daten an. Weitere Informationen finden Sie unter [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814).  
   
--   **In einer Datenbank gespeicherte räumliche SQL Server-Daten.** Sie können eine Abfrage verwenden, die Daten vom Typ `SQLGeometry` oder `SQLGeography` aus einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank angibt. Weitere Informationen finden Sie in der [Übersicht über Typen räumlicher Daten](../../relational-databases/spatial/spatial-data-types-overview.md) in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=98335).  
+-   **In einer Datenbank gespeicherte räumliche SQL Server-Daten.** Sie können eine Abfrage verwenden, die Daten vom Typ `SQLGeometry` oder `SQLGeography` aus einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank angibt. Weitere Informationen finden Sie in der [Übersicht über Typen räumlicher Daten](../../relational-databases/spatial/spatial-data-types-overview.md) in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=98335).  
   
      Im Resultset, das im Abfrage-Designer angezeigt wird, wird jede Zeile räumlicher Daten als Einheit behandelt und in einem einzelnen Kartenelement gespeichert. Wenn beispielsweise in einer Zeile im Resultset mehrere Punkte definiert werden, gelten Anzeigeeigenschaften für alle Punkte in diesem Kartenelement.  
   
--   **Benutzerdefinierte Orte, die Sie erstellen.** Sie können Orte manuell einer Punktebene als eingebettete Punkte hinzufügen. Weitere Informationen finden Sie unter [Hinzufügen benutzerdefinierter Orte zu einer Zuordnung &#40;Berichts-Generator und SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
+-   **Benutzerdefinierte Orte, die Sie erstellen.** Sie können Orte manuell einer Punktebene als eingebettete Punkte hinzufügen. Weitere Informationen finden Sie unter [Hinzufügen benutzerdefinierter Orte zu einer Karte &#40;Berichts-Generator und SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
   
 #### <a name="spatial-data-in-design-view"></a>Räumliche Daten in der Entwurfsansicht  
  In der Entwurfsansicht des Berichtsprozessors werden räumliche Beispieldaten angezeigt, um den Entwurf der Kartenebene zu erleichtern. Die angezeigten Daten hängen von der Verfügbarkeit der räumlichen Daten ab:  
@@ -172,9 +172,9 @@ ms.locfileid: "48187960"
   
 -   Gibt an, ob eine sichere Verbindung verwendet werden soll, um die Kacheln vom Bing Maps-Webdienst abzurufen.  
   
- Schrittweise Anweisungen finden Sie unter [hinzufügen, ändern oder Löschen einer Karte oder Kartenebene &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Eine detaillierte Anleitung finden Sie unter [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Weitere Informationen zu Kacheln finden Sie im Thema zum [Bing-Kartenkachelsystem](http://go.microsoft.com/fwlink/?linkid=147315)(möglicherweise in englischer Sprache). Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](http://go.microsoft.com/fwlink/?LinkId=151371) und der [Datenschutzerklärung](http://go.microsoft.com/fwlink/?LinkId=151372).  
+ Weitere Informationen zu Kacheln finden Sie im Thema zum [Bing-Kartenkachelsystem](https://go.microsoft.com/fwlink/?linkid=147315)(möglicherweise in englischer Sprache). Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](https://go.microsoft.com/fwlink/?LinkId=151371) und der [Datenschutzerklärung](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
  
   
@@ -197,7 +197,7 @@ ms.locfileid: "48187960"
   
  ![RS_Kartenebenenbereich](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- Weitere Informationen zu Kartenebenen finden Sie unter [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Weitere Informationen zu Kartenebenen finden Sie unter [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ### <a name="varying-display-properties-for-points-lines-and-polygons"></a>Verändern von Anzeigeeigenschaften für Punkte, Linien und Polygone  
  Anzeigeoptionen für Kartenelemente können für jede Ebene, mithilfe von Ebenenregeln oder für einzelne Elemente festgelegt werden. Sie können beispielsweise Anzeigeeigenschaften für alle Punkte auf einer Ebene festlegen, oder Sie können Regeln festlegen, die die Anzeigeeigenschaften für alle (eingebetteten und sonstigen) Punkte auf einer Ebene steuern, oder Sie können Anzeigeeigenschafteneinstellungen für bestimmte eingebettete Punkte überschreiben.  
@@ -244,18 +244,18 @@ ms.locfileid: "48187960"
   
  Wenn ein Kartenbericht nicht wie gewünscht angezeigt wird, sind zahlreiche Probleme als Ursache möglich. Damit Sie jedes Problem leichter isolieren und verstehen können, sollten Sie jeweils nur mit einer Ebene arbeiten. Verwenden Sie den Kartenbereich, um eine Ebene auszuwählen und ihre Sichtbarkeit mühelos umzuschalten.  
   
- Weitere Informationen zu Problemen bei Kartenberichten finden Sie unter [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md).  
+ Weitere Informationen zu Problemen bei kartenberichten finden Sie unter [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 
   
 ##  <a name="HowTo"></a> Themen zur Vorgehensweise  
  Dieser Abschnitt enthält Verfahren, die schrittweise zeigen, wie Sie mit Karten und Kartenebenen in Berichten arbeiten.  
   
--   [Hinzufügen, ändern oder Löschen einer Karte oder Kartenebene &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
 -   [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [Hinzufügen benutzerdefinierter Orte zu einer Zuordnung &#40;Berichts-Generator und SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [Hinzufügen benutzerdefinierter Orte zu einer Karte &#40;Berichts-Generator und SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
@@ -264,15 +264,15 @@ ms.locfileid: "48187960"
   
  [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [Anpassen der Daten und die Anzeige einer Karte oder Kartenebene &#40;Berichts-Generator und SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [Hinzufügen, ändern oder Löschen einer Karte oder Kartenebene &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [Hinzufügen benutzerdefinierter Orte zu einer Zuordnung &#40;Berichts-Generator und SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [Hinzufügen benutzerdefinierter Orte zu einer Karte &#40;Berichts-Generator und SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   

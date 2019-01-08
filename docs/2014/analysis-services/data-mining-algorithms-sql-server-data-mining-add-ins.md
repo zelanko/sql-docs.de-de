@@ -24,12 +24,12 @@ ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc9d8f4396be64de2160b39b57374dd1ab1bf3cf
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 47bb42b4709c7978c9319e0021bac4d188d29fab
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099271"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371562"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Data Mining-Algorithmen (SQL Server Data Mining-Add-Ins)
   Die Data Mining-Add-Ins für Office unterstützen das Erstellen von Analysemodellen mithilfe der folgenden Data Mining-Algorithmen. Alle Algorithmen basieren auf bekannten Computerlernmethoden und wurden von Microsoft Research implementiert.  
@@ -38,14 +38,14 @@ ms.locfileid: "50099271"
   
 |Computerlernmethode|Funktionsweise|  
 |-----------------------------|------------------|  
-|Microsoft Association Rules-Algorithmus|Ermitteln, welche Produkte zusammen gekauft werden oder welche Ereignisse zusammen auftreten und Erstellen von Empfehlungen auf Grundlage des Modells.<br /><br /> [http://msdn.microsoft.com/library/ms174916.aspx](http://msdn.microsoft.com/library/ms174916.aspx)|  
-|Microsoft Clustering-Algorithmus|Definieren von Marktsegmenten, automatisches Gruppieren verbundener Kunden oder Suchen von Beziehungen in Daten zur weiteren Verwendung im Data Mining.<br /><br /> [http://msdn.microsoft.com/library/ms174879.aspx](http://msdn.microsoft.com/library/ms174879.aspx)|  
-|Microsoft Decision Trees-Algorithmus|Identifizieren zuvor unbekannter Beziehungen zwischen verschiedenen Datenelementen, um informiertere Entscheidungen zu treffen, oder Suchen von Faktoren, die bestimmte Ergebnisse bedingen.<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
-|Microsoft Linear Regression-Algorithmus|Ermitteln einer mathematischen Formel zur Beschreibung der Faktoren, die zu einem numerischen Ergebnis beitragen.<br /><br /> [http://msdn.microsoft.com/library/ms174824.aspx](http://msdn.microsoft.com/library/ms174824.aspx)|  
-|Microsoft Logistic Regression-Algorithmus|Identifizieren der Faktoren, die binäre Ergebnisse beeinflussen, und Ermitteln, wie Ergebnisse durch diese Faktoren beeinflusst werden können.<br /><br /> [http://msdn.microsoft.com/library/ms174828.aspx](http://msdn.microsoft.com/library/ms174828.aspx)|  
-|Microsoft Naive Bayes-Algorithmus|Analysieren dateninterner Beziehungen und Suchen der Beziehungen, die am stärksten mit einem Ergebnis korrelieren.<br /><br /> [http://msdn.microsoft.com/library/ms174806.aspx](http://msdn.microsoft.com/library/ms174806.aspx)|  
-|Microsoft Neural Network-Algorithmus|Suchen verborgener Beziehungen zwischen mehreren Eingaben und sogar mehreren Ausgaben. Zum Durchsuchen von Daten sowie für Vorhersagen geeignet.<br /><br /> [http://msdn.microsoft.com/library/ms174941.aspx](http://msdn.microsoft.com/library/ms174941.aspx)|  
-|Microsoft Time Series-Algorithmus|Vorhersagen zukünftiger Werte anhand von Vergangenheitsdaten.<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
+|Microsoft Association Rules-Algorithmus|Ermitteln, welche Produkte zusammen gekauft werden oder welche Ereignisse zusammen auftreten und Erstellen von Empfehlungen auf Grundlage des Modells.<br /><br /> [https://msdn.microsoft.com/library/ms174916.aspx](https://msdn.microsoft.com/library/ms174916.aspx)|  
+|Microsoft Clustering-Algorithmus|Definieren von Marktsegmenten, automatisches Gruppieren verbundener Kunden oder Suchen von Beziehungen in Daten zur weiteren Verwendung im Data Mining.<br /><br /> [https://msdn.microsoft.com/library/ms174879.aspx](https://msdn.microsoft.com/library/ms174879.aspx)|  
+|Microsoft Decision Trees-Algorithmus|Identifizieren zuvor unbekannter Beziehungen zwischen verschiedenen Datenelementen, um informiertere Entscheidungen zu treffen, oder Suchen von Faktoren, die bestimmte Ergebnisse bedingen.<br /><br /> [https://msdn.microsoft.com/library/ms174923.aspx](https://msdn.microsoft.com/library/ms174923.aspx)|  
+|Microsoft Linear Regression-Algorithmus|Ermitteln einer mathematischen Formel zur Beschreibung der Faktoren, die zu einem numerischen Ergebnis beitragen.<br /><br /> [https://msdn.microsoft.com/library/ms174824.aspx](https://msdn.microsoft.com/library/ms174824.aspx)|  
+|Microsoft Logistic Regression-Algorithmus|Identifizieren der Faktoren, die binäre Ergebnisse beeinflussen, und Ermitteln, wie Ergebnisse durch diese Faktoren beeinflusst werden können.<br /><br /> [https://msdn.microsoft.com/library/ms174828.aspx](https://msdn.microsoft.com/library/ms174828.aspx)|  
+|Microsoft Naive Bayes-Algorithmus|Analysieren dateninterner Beziehungen und Suchen der Beziehungen, die am stärksten mit einem Ergebnis korrelieren.<br /><br /> [https://msdn.microsoft.com/library/ms174806.aspx](https://msdn.microsoft.com/library/ms174806.aspx)|  
+|Microsoft Neural Network-Algorithmus|Suchen verborgener Beziehungen zwischen mehreren Eingaben und sogar mehreren Ausgaben. Zum Durchsuchen von Daten sowie für Vorhersagen geeignet.<br /><br /> [https://msdn.microsoft.com/library/ms174941.aspx](https://msdn.microsoft.com/library/ms174941.aspx)|  
+|Microsoft Time Series-Algorithmus|Vorhersagen zukünftiger Werte anhand von Vergangenheitsdaten.<br /><br /> [https://msdn.microsoft.com/library/ms174923.aspx](https://msdn.microsoft.com/library/ms174923.aspx)|  
   
 ## <a name="advanced-options"></a>Erweiterte Optionen  
  Wenn Sie den Data Mining-Client für Excel verwenden, können Sie eigene Data Mining-Strukturen und -Modelle erstellen oder die Parameter der Algorithmen optimieren.  

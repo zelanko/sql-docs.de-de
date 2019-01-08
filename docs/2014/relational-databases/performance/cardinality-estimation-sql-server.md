@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
@@ -15,21 +14,21 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 393c4f88f9ab60f3a25ddaab5bb091fb298e1e02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200610"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363792"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
-  Die Logik der kardinalitätsschätzung, wird im neu entworfenen [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] zur Verbesserung der Qualität von Abfrageplänen und somit auch um die abfrageleistung zu verbessern. Die neue Kardinalitätsschätzung umfasst Annahmen und Algorithmen, die sich optimal mit den heutigen OLTP- und Data Warehouse-Arbeitsauslastungen ergänzen. Sie basiert auf intensiven Forschungen zum Verhalten der Kardinalitätsschätzung in heutigen Arbeitsauslastungen sowie auf unseren eigenen Erkenntnissen, die wir in den letzten 15 Jahren bei der Optimierung der SQL Server-Kardinalitätsschätzung gewonnen haben. Das Feedback unserer Kunden zeigt, dass die meisten Abfragen von den Änderungen profitieren oder mindestens mit gleicher Leistung ausgeführt werden. Bei einer geringen Zahl von Abfragen kann jedoch eine Verschlechterung gegenüber der früheren Kardinalitätsschätzung auftreten.  
+  Die Logik der Kardinalitätsschätzung wurde in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] überarbeitet, um die Qualität von Abfrageplänen und somit die Abfrageleistung zu verbessern. Die neue Kardinalitätsschätzung umfasst Annahmen und Algorithmen, die sich optimal mit den heutigen OLTP- und Data Warehouse-Arbeitsauslastungen ergänzen. Sie basiert auf intensiven Forschungen zum Verhalten der Kardinalitätsschätzung in heutigen Arbeitsauslastungen sowie auf unseren eigenen Erkenntnissen, die wir in den letzten 15 Jahren bei der Optimierung der SQL Server-Kardinalitätsschätzung gewonnen haben. Das Feedback unserer Kunden zeigt, dass die meisten Abfragen von den Änderungen profitieren oder mindestens mit gleicher Leistung ausgeführt werden. Bei einer geringen Zahl von Abfragen kann jedoch eine Verschlechterung gegenüber der früheren Kardinalitätsschätzung auftreten.  
   
 > [!NOTE]  
 >  Bei einer Kardinalitätsschätzung wird die Anzahl der Zeilen im Abfrageergebnis vorhergesagt. Der Abfrageoptimierer verwendet diese Schätzungen, um einen Plan für die Abfrageausführung auszuwählen. Die Qualität des Abfrageplans wirkt sich direkt optimierend auf die Abfrageleistung aus.  
   
 ## <a name="performance-testing-and-tuning-recommendations"></a>Empfehlungen für das Testen und Optimieren der Leistung  
- Die neue Kardinalitätsschätzung kann für alle neuen Datenbanken verwendet werden, die in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] erstellt werden. Allerdings ist es nicht möglich, die neue Kardinalitätsschätzung nach einem Upgrade auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] für bestehende Datenbanken zu verwenden.  
+ Die neue Kardinalitätsschätzung kann für alle neuen Datenbanken verwendet werden, die in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]erstellt werden. Allerdings ist es nicht möglich, die neue Kardinalitätsschätzung nach einem Upgrade auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] für bestehende Datenbanken zu verwenden.  
   
  Um optimale Abfrageleistung zu gewährleisten, sollten Sie diesen Empfehlungen folgen, um Ihre Arbeitsauslastung mit der neuen Kardinalitätsschätzung zu testen, bevor Sie sie in das produktive System übernehmen.  
   
@@ -37,11 +36,11 @@ ms.locfileid: "48200610"
   
 2.  Führen Sie die Testarbeitsauslastung mit der neuen Kardinalitätsschätzung aus, und beheben Sie etwaige neu auftretende Leistungsprobleme mithilfe derselben Methoden, die sie üblicherweise bei Leistungsproblemen anwenden.  
   
-3.  Nachdem die arbeitsauslastung ausgeführt wird, mit der neuen kardinalitätsschätzung (Datenbank-Kompatibilitätsgrad 120 (SQL Server 2014)) und einer bestimmte Abfrage verschlechtert, können Sie die Abfrage ausführen, mit dem Ablaufverfolgungsflag 9481 ausführen, um die Version der kardinalitätsschätzung zu verwendet[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]und früheren Versionen. Informationen zum Ausführen einer Abfrage mit einem Ablaufverfolgungsflag finden Sie im KB-Artikel [Aktivieren eines SQL Server-Abfrageoptimiererverhaltens, das Pläne beeinflusst und über verschiedene Ablaufverfolgungsflags auf einer spezifischen Abfrageebene gesteuert werden kann](http://support.microsoft.com/kb/2801413).  
+3.  Wenn sich die Leistung einer bestimmten Abfrage verschlechtert, nachdem Sie die Arbeitsauslastung auf die neue Kardinalitätsschätzung (Datenbank-Kompatibilitätsgrad 120 (SQL Server 2014)) umgestellt haben, können Sie die Abfrage mit dem Ablaufverfolgungsflag 9481 ausführen, um die Version der Kardinalitätsschätzung zu verwenden, die in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und früheren Versionen verwendet wurde. Informationen zum Ausführen einer Abfrage mit einem Ablaufverfolgungsflag finden Sie im KB-Artikel [Aktivieren eines SQL Server-Abfrageoptimiererverhaltens, das Pläne beeinflusst und über verschiedene Ablaufverfolgungsflags auf einer spezifischen Abfrageebene gesteuert werden kann](https://support.microsoft.com/kb/2801413).  
   
 4.  Wenn Sie nicht, dass alle Datenbanken sofort auf die neue kardinalitätsschätzung zu verwenden ändern, können Sie die frühere kardinalitätsschätzung für alle Datenbanken verwenden, indem [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) auf die Datenbank-Kompatibilitätsgrad auf 110 festgelegt.  
   
-5.  Wenn die Arbeitsauslastung mit dem Datenbank-Kompatibilitätsgrad 110 ausgeführt wird und Sie eine bestimmte Abfrage mit der neuen Kardinalitätsschätzung testen oder ausführen möchten, können Sie sie mit dem Ablaufverfolgungsflag 2312 ausführen, um die SQL Server 2014-Version der Kardinalitätsschätzung zu verwenden.  Informationen zum Ausführen einer Abfrage mit einem Ablaufverfolgungsflag finden Sie im KB-Artikel [Aktivieren eines SQL Server-Abfrageoptimiererverhaltens, das Pläne beeinflusst und über verschiedene Ablaufverfolgungsflags auf einer spezifischen Abfrageebene gesteuert werden kann](http://support.microsoft.com/kb/2801413).  
+5.  Wenn die Arbeitsauslastung mit dem Datenbank-Kompatibilitätsgrad 110 ausgeführt wird und Sie eine bestimmte Abfrage mit der neuen Kardinalitätsschätzung testen oder ausführen möchten, können Sie sie mit dem Ablaufverfolgungsflag 2312 ausführen, um die SQL Server 2014-Version der Kardinalitätsschätzung zu verwenden.  Informationen zum Ausführen einer Abfrage mit einem Ablaufverfolgungsflag finden Sie im KB-Artikel [Aktivieren eines SQL Server-Abfrageoptimiererverhaltens, das Pläne beeinflusst und über verschiedene Ablaufverfolgungsflags auf einer spezifischen Abfrageebene gesteuert werden kann](https://support.microsoft.com/kb/2801413).  
   
 ## <a name="new-xevents"></a>Neue XEvents  
  Es gibt zwei neue query_optimizer_estimate_cardinality-XEvents zur Unterstützung der neuen Abfragepläne.  

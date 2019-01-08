@@ -11,12 +11,12 @@ ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8813dba9c266c6a7930a636da27015c300426c79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c91d12665ac8637f9de407896aed435a02af6940
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220086"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365169"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Suchen und Anzeigen von Berichten mit einem Browser (Berichts-Generator und SSRS)
   Mit jedem unterstützten Webbrowser kann ein Bericht über eine Direktverbindung mit einem Berichtsserver angezeigt werden. Für jeden Bericht gibt es auf einem Berichtsserver eine URL-Adresse. Sie können die Webadresse eines Berichts eingeben, um ihn in einem Browserfenster unabhängig von der Webanwendung zu öffnen. Der Bericht wird im HTML-Format geöffnet und enthält die Berichtssymbolleiste, sodass Sie auf Seiten navigieren oder Datenwerte innerhalb des Berichts suchen können. Sie können in der URL Parameter festlegen, um die Symbolleiste auszublenden oder das Ausgabeformat des Berichts auszuwählen.  
@@ -31,7 +31,7 @@ Ordner in einem Browser
 > [!NOTE]  
 >  Wenn Sie von einem Handheldgerät auf einen Bericht zugreifen, müssen Sie einen Browser zum Öffnen des Berichts verwenden. Berichts-Manager ist nicht für Handheldgeräte ausgelegt.  
   
- Weitere Informationen über die Browsertypen, die Sie verwenden können, finden Sie unter "Von Reporting Services unterstützte Browser-Typen" in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
+ Weitere Informationen über die Browsertypen, die Sie verwenden können, finden Sie unter "Von Reporting Services unterstützte Browser-Typen" in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -54,9 +54,9 @@ Ordner in einem Browser
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
- Eine URL darf in Internet Explorer maximal 2.083 Zeichen enthalten. Weitere Informationen finden Sie unter [URL-Länge in Internet Explorer](http://support.microsoft.com/kb/208427).  
+ Eine URL darf in Internet Explorer maximal 2.083 Zeichen enthalten. Weitere Informationen finden Sie unter [URL-Länge in Internet Explorer](https://support.microsoft.com/kb/208427).  
   
- Weitere Informationen über den Zugriff auf einen Bericht über eine URL, einschließlich Informationen über den Aufbau einer URL finden Sie unter "URL-Zugriff" in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
+ Weitere Informationen über den Zugriff auf einen Bericht über eine URL, einschließlich Informationen über den Aufbau einer URL finden Sie unter "URL-Zugriff" in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Suchen und Anzeigen von Berichten im Berichts-Manager &#40;Berichts-Generator und SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  

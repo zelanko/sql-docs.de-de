@@ -17,12 +17,12 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b22d42d48b3357cc004c89886ebaaaca42c35f96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dfc8e272479c9fb2a3a5082624bdda926547212
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084660"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372502"
 ---
 # <a name="process-large-reports"></a>Verarbeiten von großen Berichten
   Die Verarbeitung umfangreicher Berichte stellt eine Herausforderung dar und erfordert bestimmte Konfigurationseinstellungen, damit die Berichte ordnungsgemäß ausgeführt werden können. Sie sollten nur dann bedarfsgesteuert ausgeführt werden, wenn sie die Paginierung unterstützen.  
@@ -34,7 +34,7 @@ ms.locfileid: "48084660"
   
  Bei Berichten, die flüchtige Daten enthalten, kann die Berichtsgröße von Bericht zu Bericht erheblich variieren. In diesem Fall sollten Sie die Datenquelle überwachen, um zu bestimmen, welche Auswirkungen die Flüchtigkeit der Daten auf Ihren Bericht hat und ob Sie sich an die in diesem Abschnitt beschriebenen Schritte halten müssen.  
   
- Weitere Informationen und Tipps für die Diagnose von Timeoutfehlern und Fehlern aufgrund von unzureichendem Speicher finden Sie im Artikel [How to diagnose issues when running reports in the report server](http://go.microsoft.com/fwlink/?LinkId=85634) (Gewusst wie: Diagnose von Problemen bei der Ausführung von Berichten im Berichtsserver) unter blogs.msdn.com.  
+ Weitere Informationen und Tipps für die Diagnose von Timeoutfehlern und Fehlern aufgrund von unzureichendem Speicher finden Sie im Artikel [Gewusst wie: Diagnose von Problemen bei der Ausführung von Berichten im Berichtsserver](https://go.microsoft.com/fwlink/?LinkId=85634) unter blogs.msdn.com.  
   
 ## <a name="configuration-recommendations"></a>Konfigurationsempfehlungen  
  Für das Ausführen und Rendern von Berichten sowie für den Zugriff auf Berichte gelten die folgenden Empfehlungen:  

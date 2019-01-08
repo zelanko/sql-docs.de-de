@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
@@ -21,12 +20,12 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c610f28e0b36e6dcf0ad34345c78868d09a4f1eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee169caab78d3b83d647a1a9cd20a2e88507fde2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058880"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377622"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services-Pakete (SSIS)
   Bei einem Paket handelt es sich um eine organisierte Auflistung von Verbindungen, Ablaufsteuerungselementen, Datenflusselementen, Ereignishandlern, Variablen, Parametern und Konfigurationen, die Sie entweder mit den grafischen Designtools von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oder programmgesteuert erstellen.  Sie speichern dann das fertige Paket in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem, oder Sie können das ssISnoversion-Projekt auf dem Server [!INCLUDE[ssIS](../includes/ssis-md.md)] bereitstellen. Das Paket ist jene Arbeitseinheit, die abgerufen, ausgeführt und gespeichert wird.  
@@ -51,9 +50,9 @@ ms.locfileid: "48058880"
 ## <a name="package-templates"></a>Paketvorlagen  
  Pakete werden häufig als Vorlagen zum Erstellen von Paketen verwendet, die gemeinsam eine Basisfunktionalität verwenden. Sie können das Basispaket erstellen und dann kopieren. Sie haben auch die Möglichkeit, das Paket als Vorlage festzulegen. Ein Paket, mit dem beispielsweise Dateien heruntergeladen und kopiert und dann die Daten extrahiert werden, kann die Tasks FTP und Dateisystem in einer Foreach-Schleife beinhalten, mit der Dateien in einem Ordner aufgezählt werden. Ebenso kann das Paket Verbindungs-Manager für Flatfiles für den Zugriff auf die Daten sowie Flatfilequellen zum Extrahieren der Daten beinhalten. Das Ziel der Daten variiert. Nach dem Kopieren aus dem Basispaket wird das Ziel jedem neuen Paket hinzugefügt. Sie können auch Pakete erstellen und diese als Vorlagen für die neuen Pakete verwenden, die Sie einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt hinzufügen. Weitere Informationen finden Sie unter [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md).  
   
- Wenn ein Paket zuerst entweder programmgesteuert oder mithilfe von SSIS-Designer erstellt wird, wird eine GUID hinzugefügt seine `ID` Eigenschaft und einen Namen für die `Name` Eigenschaft. Beim Erstellen eines neuen Pakets durch Kopieren eines vorhandenen Pakets oder mithilfe eines Vorlagenpakets werden Name und GUID ebenfalls kopiert. Dies kann problematisch werden, wenn Sie die Protokollierung verwenden, da der GUID und Name des Pakets in die Protokolle geschrieben werden, um das Paket zu identifizieren, zu dem die protokollierten Informationen gehören. Sie sollten daher den Namen und GUID der neuen Pakete aktualisieren, um diese von jenen Paketen zu unterscheiden, von denen sie kopiert wurden, und um in den Protokolldaten eine Unterscheidung untereinander zu ermöglichen.  
+ Wenn ein Paket zum ersten Mal erstellt wird, entweder programmgesteuert oder mithilfe des SSIS-Designers, wird ein GUID (Globally Unique Indentifier) der `ID`-Eigenschaft und ein Name der `Name`-Eigenschaft hinzugefügt. Beim Erstellen eines neuen Pakets durch Kopieren eines vorhandenen Pakets oder mithilfe eines Vorlagenpakets werden Name und GUID ebenfalls kopiert. Dies kann problematisch werden, wenn Sie die Protokollierung verwenden, da der GUID und Name des Pakets in die Protokolle geschrieben werden, um das Paket zu identifizieren, zu dem die protokollierten Informationen gehören. Sie sollten daher den Namen und GUID der neuen Pakete aktualisieren, um diese von jenen Paketen zu unterscheiden, von denen sie kopiert wurden, und um in den Protokolldaten eine Unterscheidung untereinander zu ermöglichen.  
   
- Zum Ändern des Paket-GUIDs müssen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] im Eigenschaftenfenster einen GUID in der `ID`-Eigenschaft neu generieren. Um den Paketnamen zu ändern, können Sie den Wert des Aktualisieren der `Name` Eigenschaft im Eigenschaftenfenster angezeigt. Sie können auch die **dtutil** -Eingabeaufforderung verwenden oder die GUID und Namen programmgesteuert aktualisieren. Weitere Informationen finden Sie unter [Festlegen von Paketeigenschaften](set-package-properties.md) und [dtutil (Hilfsprogramm)](dtutil-utility.md).  
+ Zum Ändern des Paket-GUIDs müssen Sie in `ID` im Eigenschaftenfenster einen GUID in der [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]-Eigenschaft neu generieren. Zum Ändern des Paketnamens können Sie im Eigenschaftenfenster den Wert der `Name`-Eigenschaft aktualisieren. Sie können auch die **dtutil** -Eingabeaufforderung verwenden oder die GUID und Namen programmgesteuert aktualisieren. Weitere Informationen finden Sie unter [Festlegen von Paketeigenschaften](set-package-properties.md) und [dtutil (Hilfsprogramm)](dtutil-utility.md).  
   
 ## <a name="objects-that-extend-package-functionality"></a>Objekte, die die Paketfunktionalität erweitern  
  Pakete können zusätzliche Objekte einschließen, die erweiterte Funktionen bereitstellen oder vorhandene Funktionalität erweitern, wie z. B. Ereignishandler, Konfigurationen, Protokollierung und Variablen.  
@@ -72,7 +71,7 @@ ms.locfileid: "48058880"
 ### <a name="variables"></a>Variablen  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt Systemvariablen und benutzerdefinierte Variablen. Die Systemvariablen stellen nützliche Informationen zu Paketobjekten zur Laufzeit bereit, und mit benutzerdefinierten Variablen werden benutzerdefinierte Szenarios in Paketen unterstützt. Beiden Arten von Variablen können in Ausdrücken, Skripts und Konfigurationen verwendet werden.  
   
- Die Variablen auf Paketebene schließen die vordefinierten Systemvariablen ein, die für ein Paket verfügbar sind, und die benutzerdefinierten Variablen für den Paketbereich. Weitere Informationen finden Sie unter [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ Die Variablen auf Paketebene schließen die vordefinierten Systemvariablen ein, die für ein Paket verfügbar sind, und die benutzerdefinierten Variablen für den Paketbereich. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
 ### <a name="parameters"></a>Parameter  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Parametern können Sie Eigenschaften in Paketen zur Zeit der Paketausführung Werte zuweisen. Sie können *Projektparameter* auf Projektebene und *Paketparameter* auf Paketebene erstellen. Projektparameter werden verwendet, um jegliche externen Eingaben bereitzustellen, die das Projekt für ein oder mehrere Pakete im Projekt empfängt. Mit Paketparametern können Sie die Paketausführung ändern, ohne das Paket bearbeiten und erneut bereitstellen zu müssen. Weitere Informationen finden Sie unter [Integration Services-Parameter &#40;SSIS&#41;](integration-services-ssis-package-and-project-parameters.md).  
@@ -81,7 +80,7 @@ ms.locfileid: "48058880"
  Das Paketobjekt kann so konfiguriert werden, dass Funktionen, wie z. B. das erneute Starten des Pakets an Prüfpunkten, das Signieren des Pakets mit einem digitalen Zertifikat, das Festlegen der Paketschutzebene und das Sicherstellen der Datenintegrität, mithilfe von Transaktionen unterstützt werden.  
   
 ### <a name="restarting-packages"></a>Erneutes Starten von Paketen  
- Das Paket schließt Prüfpunkteigenschaften ein, mit denen Sie das Paket neu starten können, wenn bei Tasks ein Fehler auftritt. Wenn z. B. ein Paket zwei Datenflusstasks aufweist, die zwei verschiedene Tabellen aktualisieren, und beim zweiten Task ein Fehler auftritt, kann das Paket erneut ausgeführt werden, ohne den ersten Datenflusstask zu wiederholen. Das erneute Starten eines Pakets kann bei zeitaufwändigen Paketen Zeit sparen. Neustart bedeutet, dass nicht das gesamte Paket erneut ausgeführt werden muss, sondern nur ab dem fehlerhaften Task. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](packages/restart-packages-by-using-checkpoints.md).  
+ Das Paket schließt Prüfpunkteigenschaften ein, mit denen Sie das Paket neu starten können, wenn bei Tasks ein Fehler auftritt. Wenn z. B. ein Paket zwei Datenflusstasks aufweist, die zwei verschiedene Tabellen aktualisieren, und beim zweiten Task ein Fehler auftritt, kann das Paket erneut ausgeführt werden, ohne den ersten Datenflusstask zu wiederholen. Das erneute Starten eines Pakets kann bei zeitaufwändigen Paketen Zeit sparen. Neustart bedeutet, dass nicht das gesamte Paket erneut ausgeführt werden muss, sondern nur ab dem fehlerhaften Task. Weitere Informationen finden Sie unter [Restart Packages by Using Checkpoints](packages/restart-packages-by-using-checkpoints.md).  
   
 ### <a name="securing-packages"></a>Sichern von Paketen  
  Ein Paket kann mit einer digitalen Signatur signiert und mit einem Kennwort oder Benutzerschlüssel verschlüsselt werden. Mit einer digitalen Signatur wird die Quelle des Pakets authentifiziert. Sie müssen jedoch auch [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] konfigurieren, um die digitale Signatur zu überprüfen, wenn das Paket lädt. Weitere Informationen finden Sie unter [Identifizieren der Quelle von Paketen mit digitalen Signaturen](security/identify-the-source-of-packages-with-digital-signatures.md) und [Zugriffssteuerung für vertrauliche Daten in Paketen](security/access-control-for-sensitive-data-in-packages.md).  
@@ -101,7 +100,7 @@ ms.locfileid: "48058880"
 ## <a name="configuration-of-packages"></a>Konfiguration von Paketen  
  Eigenschaften können Sie im Fenster **Eigenschaften** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] oder programmgesteuert festlegen.  
   
- Informationen zum Festlegen dieser Eigenschaften mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] finden Sie unter [Festlegen von Paketeigenschaften](set-package-properties.md).  
+ Informationen zum Festlegen dieser Eigenschaften mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]finden Sie unter [Festlegen von Paketeigenschaften](set-package-properties.md).  
   
  Weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.Package>.  
   
@@ -116,8 +115,8 @@ ms.locfileid: "48058880"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Implementieren von SQL Server Integration Services mit Microsoft Dynamics Mobile](http://msdn.microsoft.com/library/cc563950)  
+-   [Implementieren von SQL Server Integration Services mit Microsoft Dynamics Mobile](https://msdn.microsoft.com/library/cc563950)  
   
--   [Vorgehensweise: Konfigurieren von SQL Server Integration Services-Paket für Microsoft Dynamics AX](http://msdn.microsoft.com/library/bb986852)  
+-   [So wird es gemacht: Konfigurieren von SQL Server Integration Services-Paket für Microsoft Dynamics AX](https://msdn.microsoft.com/library/bb986852)  
   
   

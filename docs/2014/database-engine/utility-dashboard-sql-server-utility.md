@@ -10,12 +10,12 @@ ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d423dc8eb00dfce0434c680046f39e0fb9dfa8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101510"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351654"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Dashboard des Hilfsprogramms (SQL Server-Hilfsprogramm)
   Um Daten im Dashboard des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Hilfsprogramms anzuzeigen, wählen Sie den obersten Knoten in der Struktur des Hilfsprogramm-Explorers aus: Hilfsprogramm<UCP_Name>\\(ComputerName\UCP). Das Dashboard enthält Zusammenfassungs- und Detaildaten aus allen verwalteten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und allen Datenebenenanwendungen im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Hilfsprogramm. Zum Aktualisieren der Dashboarddaten klicken Sie mit der rechten Maustaste auf den obersten Knoten in der Struktur des Hilfsprogramm-Explorers und wählen dann **Aktualisieren**aus.  
@@ -83,7 +83,7 @@ ms.locfileid: "48101510"
  Der ausführliche Status für Zustandsparameter kann an verschiebbaren Indikatoren abgelesen werden. Der Teil rechts neben den verschiebbaren Indikatoren zeigt an, wie viele Datenebenenanwendungen in jeder Statuskategorie enthalten sind. Weitere Informationen zum Anzeigen des Zustands einzelner Datenebenenanwendungen bzw. zum Anzeigen oder Ändern der Richtlinienkonfigurationseinstellungen finden Sie unter [Details zu bereitgestellten Datenebenenanwendungen &#40;SQL Server-Hilfsprogramm&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md).  
   
  Verlauf der Auslastung des Hilfsprogrammspeichers  
- Der Verlauf der Auslastung wird in einem Zeitdiagramm unten im Dashboard des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramms angezeigt. Die Zeitangaben zeigen das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) in der SQL Server-Onlinedokumentation. Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) in der SQL Server-Onlinedokumentation.  
+ Der Verlauf der Auslastung wird in einem Zeitdiagramm unten im Dashboard des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramms angezeigt. Die Zeitangaben zeigen das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) in der SQL Server-Onlinedokumentation. Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) in der SQL Server-Onlinedokumentation.  
   
  Verwenden Sie die Optionsfelder links neben dem Anzeigebereich, um den Berichtszeitraum für das Diagramm zu ändern.  
   

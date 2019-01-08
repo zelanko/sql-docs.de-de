@@ -11,17 +11,17 @@ ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2d1807caf5b5ef2687121dd465e87eb55b9fd2df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14be04840683999430fc4bd1fd65ce35ea13eb2a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056210"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355485"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Voraussetzungen für Lernprogramme (Berichts-Generator)
   Die Lernprogramme zum Berichts-Generator setzen voraus, dass Sie Berichte auf einem Berichtsserver oder einer in einen Berichtsserver integrierten SharePoint-Website anzeigen und speichern können. Für Daten werden in allen Lernprogrammen wörtliche Abfragen verwendet, die von einer [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Instanz verarbeitet werden müssen.  
   
- Wenn Sie keinen Zugriff auf einen Berichtsserver, eine Website oder eine Datenquelle haben, können Sie sich mit Berichts-Generator vertraut machen, indem Sie einen Offlinebericht erstellen. Siehe [Tutorial: Create a Quick Chart Report Offline (Report Builder) (Tutorial: Erstellen eines Quick-Diagrammberichts offline (Berichts-Generator))](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Wenn Sie keinen Zugriff auf einen Berichtsserver, eine Website oder eine Datenquelle haben, können Sie sich mit Berichts-Generator vertraut machen, indem Sie einen Offlinebericht erstellen. Finden Sie unter [Lernprogramm: Erstellen ein Quick-Diagrammberichts Offline &#40;Berichts-Generator&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  Für die Ausführung der Lernprogramme zum Berichts-Generator gelten die folgenden Voraussetzungen:  
@@ -36,9 +36,9 @@ ms.locfileid: "48056210"
   
 -   Der Name des eine [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Instanz und Anmeldeinformationen für den schreibgeschützten Zugriff auf eine beliebige Datenbank. In den Datasetabfragen im Lernprogramm werden zwar Literaldaten verwendet, die Abfrage muss jedoch von einer [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Instanz verarbeitet werden, um die für ein Berichtsdataset erforderlichen Metadaten zurückzugeben. Die folgende Verbindungszeichenfolge gibt z. B. nur einen Server an: `data source=<servername>`. Sie müssen Lesezugriff auf die Standarddatenbank besitzen, die Ihnen vom Systemadministrator zugewiesen wird, der Ihnen die Berechtigung für den Zugriff auf den Server gewährt. Sie können auch eine Datenbank entsprechend der folgenden Verbindungszeichenfolge angeben: `data source=<servername>;initial catalog=<database>`.  
   
--   Für das Lernprogramm, in dem eine Karte verwendet wird, muss der Berichtsserver zur Unterstützung von Bing Maps als Hintergrund konfiguriert werden. Weitere Informationen finden Sie unter [Planen der Unterstützung für Kartenberichte](plan-for-map-report-support.md) in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Dokumentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) auf "MSDN.Microsoft.com".  
+-   Für das Lernprogramm, in dem eine Karte verwendet wird, muss der Berichtsserver zur Unterstützung von Bing Maps als Hintergrund konfiguriert werden. Weitere Informationen finden Sie unter [Planen der Unterstützung für Kartenberichte](plan-for-map-report-support.md) in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Dokumentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?LinkId=154888) auf "MSDN.Microsoft.com".  
   
--   Das Tutorial [Tutorial: Erstellen von Drillthrough- und Hauptberichten &#40;Berichts-Generator&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), verwendet das Contoso Business Intelligence-Demodataset. Dieses Dataset besteht aus dem Data Warehouse ContosoDW und der OLAP (Online Analytical Processing)-Datenbank Contoso_Retail. Die Berichte, die Sie in diesem Lernprogramm erstellen, rufen Berichtsdaten aus dem Contoso Sales-Cube ab. Die OLAP-Datenbank Contoso_Retail kann vom [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=191575)heruntergeladen werden. Sie brauchen lediglich die Datei ContosoBIdemoABF.exe herunterzuladen. Diese Datei enthält die OLAP-Datenbank.  
+-   Das Tutorial [Lernprogramm: Erstellen von Drillthrough- und Hauptberichten &#40;Berichts-Generator&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), verwendet das Contoso Business Intelligence-Demodataset. Dieses Dataset besteht aus dem Data Warehouse ContosoDW und der OLAP (Online Analytical Processing)-Datenbank Contoso_Retail. Die Berichte, die Sie in diesem Lernprogramm erstellen, rufen Berichtsdaten aus dem Contoso Sales-Cube ab. Die OLAP-Datenbank Contoso_Retail kann vom [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=191575)heruntergeladen werden. Sie brauchen lediglich die Datei ContosoBIdemoABF.exe herunterzuladen. Diese Datei enthält die OLAP-Datenbank.  
   
      Die andere Datei, ContosoBIdemoBAK.exe, ist für das Data Warehouse ContosoDW bestimmt, das in diesem Lernprogramm nicht verwendet wird.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48056210"
   
      Sie benötigen Zugriff auf eine Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], auf der die OLAP-Datenbank installiert werden soll.  
   
- Konfigurieren der Berichtsserver-Administrator müssen Sie die erforderlichen Berechtigungen für den Berichtsserver gewähren [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] Speicherorte für Berichtsordner und Standardoptionen für Berichts-Generator konfigurieren. Weitere Informationen finden Sie unter [Installation, Deinstallation und Unterstützung von Berichts-Generator](install-uninstall-and-report-builder-support.md).  
+ Der Berichtsserveradministrator muss Ihnen die erforderlichen Berechtigungen für den Berichtsserver erteilen und die Orte für die [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] -Ordner sowie die Standardoptionen für den Berichts-Generator konfigurieren. Weitere Informationen finden Sie unter [Installation, Deinstallation und Unterstützung von Berichts-Generator](install-uninstall-and-report-builder-support.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Lernprogramme &#40;Berichts-Generator&#41;](report-builder-tutorials.md)  

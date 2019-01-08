@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicetask.f1
@@ -15,12 +14,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a83900ff92611778bb5b71574a7e98ce5e6df18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee28bbfa3cea482f934b3491f51e0caf601f5465
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189186"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363162"
 ---
 # <a name="web-service-task"></a>Webdienst (Task)
   Der Task "Webdienst" führt eine Webdienstmethode aus. Der Task "Webdienst" kann für folgende Zwecke verwendet werden:  
@@ -83,8 +82,8 @@ ms.locfileid: "48189186"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Video [Vorgehensweise: Aufrufen eines Webdiensts mit dem Task 'Webdienst' (SQL Server-Video)](http://go.microsoft.com/fwlink/?LinkId=259642) auf technet.microsoft.com.  
+ Video [Vorgehensweise: Aufrufen eines Webdiensts mithilfe der Task ' Webdienst ' (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=259642), auf technet.microsoft.com.  
   
- Curated Answers, [Verarbeiten von Webdiensten in SSIS mit Skripts](http://go.microsoft.com/fwlink/?LinkId=321996)auf curatedviews.cloudapp.net.  
+ Curated Answers, [Verarbeiten von Webdiensten in SSIS mit Skripts](https://go.microsoft.com/fwlink/?LinkId=321996)auf curatedviews.cloudapp.net.  
   
   

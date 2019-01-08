@@ -1,6 +1,6 @@
 ---
-title: Erstellen einer berechneten Tabelle | Microsoft Docs
-ms.date: 05/07/2018
+title: Erstellen einer berechneten Tabelle in tabellarischen Modellen von Analysis Services | Microsoft-Dokumentation
+ms.date: 12/19/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,27 +9,27 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f920d7ef7ae8a8fb5016e4bb4833b3637b325f8a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 199096efcdf9212e19e1055f1276079eddfb1a75
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041994"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626259"
 ---
 # <a name="create-a-calculated-table"></a>Erstellen einer berechneten Tabelle 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Eine *berechnete Tabelle* ist ein berechnetes Objekt, basierend entweder auf einer DAX-Abfrage oder einem -Ausdruck, abgeleitet aus ganzen oder Teilen anderer Tabellen im gleichen Modell.  
   
- Ein weit verbreitetes Entwurfsproblem, das berechnete Tabellen lösen können, ist das Hervorholen einer Dimension mit unterschiedlichen Rollen in einem bestimmten Kontext, damit Sie diese als eine Abfragestruktur in Clientanwendungen anzeigen können.  Möglicherweise erinnern Sie sich daran, dass eine Dimension mit unterschiedlichen Rollen einfach eine Tabelle ist, die in mehreren Kontexten aufgezeigt wird. Ein klassisches Beispiel ist Date-Tabelle, angezeigt als OrderDate, ShipDate, oder DueDate, je nach Fremdschlüsselbeziehung. Indem Sie explizit für „ShipDate“ eine berechnete Tabelle erstellen, erhalten Sie eine eigenständige Tabelle, die für Abfragen zur Verfügung steht und genauso vollständig ausgeführt werden kann wie jede andere Tabelle.  
+ Ein weit verbreitetes Entwurfsproblem, das berechnete Tabellen lösen können, ist das Hervorholen einer Dimension mit unterschiedlichen Rollen in einem bestimmten Kontext, damit Sie diese als eine Abfragestruktur in Clientanwendungen anzeigen können.  Möglicherweise erinnern Sie sich daran, dass eine Dimension mit unterschiedlichen Rollen einfach eine Tabelle ist, die in mehreren Kontexten aufgezeigt wird. Ein klassisches Beispiel ist Date-Tabelle, angezeigt als OrderDate, ShipDate, oder DueDate, je nach Fremdschlüsselbeziehung. Indem Sie explizit für „ShipDate“ eine berechnete Tabelle erstellen, erhalten Sie eine eigenständige Tabelle, die für Abfragen zur Verfügung steht und genauso vollständig ausgeführt werden kann wie jede andere Tabelle. Eine weitere Verwendungsmöglichkeit umfasst das Konfigurieren eines gefilterten Rowset, einer Teilmenge oder Obermenge der Spalten aus anderen vorhandenen Tabellen. Dadurch können Sie die ursprüngliche Tabelle intakt halten, während Sie Varianten dieser Tabelle erstellen, um verschiedenen Szenarios zu unterstützen.  
   
- Eine zweite Verwendungsmöglichkeit für eine berechnete Tabelle beinhaltet das Konfigurieren eines gefilterten Rowset oder einer Teilmenge oder einer Obermenge der Spalten aus anderen vorhandenen Tabellen. Dadurch können Sie die ursprüngliche Tabelle intakt halten, während Sie Varianten dieser Tabelle erstellen, um verschiedenen Szenarios zu unterstützen.  
-  
- Die Verwendung von berechneten Tabellen zur optimalen Vorteilserzielung erfordert, dass Sie sich zumindest etwas mit DAX auskennen. Beim Arbeiten mit den Ausdrücken für Ihre Tabelle ist es möglicherweise hilfreich zu wissen, dass eine berechnete Tabelle eine einzelne Partition mit DAX-Quelle enthält, wobei der Ausdruck ein DAX-Ausdruck ist.  
-Es gibt für jede, vom Ausdruck zurückgegebene Spalte eine CalculatedTableColumn, bei der die SourceColumn der Name der zurückgegebenen Spalte ist (ähnlich zu DataColumns in nicht berechneten Tabellen).  
+ Die Verwendung von berechneten Tabellen zur optimalen Vorteilserzielung erfordert, dass Sie sich zumindest etwas mit DAX auskennen. Wie Sie für die Tabelle mit Ausdrücken arbeiten, ist es möglicherweise hilfreich um zu wissen, dass eine berechnete Tabelle eine einzelne Partition mit DAX-Quelle enthält, in dem der Ausdruck ein DAX-Ausdruck ist.  
+Es gibt für jede, vom Ausdruck zurückgegebene Spalte eine CalculatedTableColumn, bei der die SourceColumn der Name der zurückgegebenen Spalte ist (ähnlich zu DataColumns in nicht berechneten Tabellen). 
+
+Mindestens eine Tabelle muss bereits vorhanden sein, bevor Sie eine berechnete Tabelle erstellen können. Wenn Sie eine berechnete Tabelle als eigenständiges Objekt berechnete Tabelle erstellen, können Sie zuerst eine Tabelle erstellen, durch das Importieren aus einer Dateidatenquelle (Csv, Xls, Xml). Die Datei, die importiert werden kann es sich um eine einzelne Spalte und einen einzelnen Wert enthalten. Sie können diese Tabelle ausblenden. 
   
 ## <a name="how-to-create-a-calculated-table"></a>So erstellen Sie eine berechnete Tabelle  
   
-1.  Überprüfen Sie, dass das tabellarische Modell einen Kompatibilitätsgrad von 1200 oder höher aufweist. Sie können die **Kompatibilitätsgrad** -Eigenschaft für das Modell in SSDT überprüfen.  
+1.  Stellen Sie zunächst sicher, dass das tabellarische Modell einen Kompatibilitätsgrad von 1200 oder höher verfügt. Sie können die **Kompatibilitätsgrad** -Eigenschaft für das Modell in SSDT überprüfen.  
   
 2.  Wechseln Sie zur Datensicht. Sie können in der Diagrammansicht keine berechnete Tabelle erstellen.  
   

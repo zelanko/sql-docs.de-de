@@ -14,12 +14,12 @@ ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 25f917dc3831f0915b87c4a93dbb4197a3d25df0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ac0e67e4e1c48fd1ccdd8d8b4021541b0bf4c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053366"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366312"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Resultsets im Task „SQL ausführen“
   In einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket ist es vom Typ des von dem Task verwendeten SQL-Befehls abhängig, ob an den Task „SQL ausführen“ ein Resultset zurückgegeben wird. Beispielsweise gibt eine SELECT-Anweisung in der Regel ein Resultset zurück, eine INSERT-Anweisung jedoch nicht.  
@@ -58,18 +58,18 @@ ms.locfileid: "48053366"
   
  Wenn Sie eine Variable einem Resultset mit dem Resultsettyp **Einzelne Zeile** zuordnen, muss die Variable einen Datentyp haben, der mit dem Datentyp der Spalte im Resultset kompatibel ist. So kann beispielsweise ein Resultset, das eine Spalte mit einem `String`-Datentyp enthält, keiner Variable mit einem numerischen Datentyp zugeordnet werden. Beim Festlegen der **TypeConversionMode** Eigenschaft `Allowed`, versucht der Task SQL ausführen, die Output-Parameter zu konvertieren und Abfrageergebnisse in den Datentyp der Variablen, die Ergebnisse zugewiesen sind.  
   
- Ein XML-Resultset kann nur einer Variable mit dem Datentyp `String` oder `Object` zugeordnet werden. Hat die Variable der `String` -Datentyp, der Task SQL ausführen gibt eine Zeichenfolge und die XML-Quelle können die XML-Daten verwenden. Hat die Variable der `Object` -Datentyp ist, gibt der Task SQL ausführen ein (DOM = Document Object Model)-Objekt zurück.  
+ Ein XML-Resultset kann nur einer Variable mit dem Datentyp `String` oder `Object` zugeordnet werden. Hat die Variable den `String`-Datentyp, gibt der Task SQL ausführen eine Zeichenfolge zurück, und die XML-Quelle kann die XML-Daten verwenden. Hat die Variable den `Object`-Datentyp, gibt der Task SQL ausführen ein DOM-Objekt (Document Object Model) zurück.  
   
- Ein **vollständiges Resultset** müssen zu einer Variablen zuordnen der `Object` -Datentyp. Als Ergebnis wird ein Rowsetobjekt zurückgegeben. Sie können einen Foreach-Schleifen-Container verwenden, um die Tabellenzeilenwerte, die in der Objektvariable gespeichert sind, in Paketvariablen zu extrahieren. Verwenden Sie dann ein Skripttask, um die Daten, die in Paketvariablen gespeichert sind, in eine Datei zu schreiben. Eine Demonstration zur Durchführung dieses Vorgangs unter Verwendung eines Foreach-Schleifen-Containers und eines Skripttasks finden Sie im CodePlex-Beispiel [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863)(Ausführen von SQL-Parametern und Resultsets, in englischer Sprache), auf msftisprodsamples.codeplex.com.  
+ Ein **vollständiges Resultset** müssen zu einer Variablen zuordnen der `Object` -Datentyp. Als Ergebnis wird ein Rowsetobjekt zurückgegeben. Sie können einen Foreach-Schleifen-Container verwenden, um die Tabellenzeilenwerte, die in der Objektvariable gespeichert sind, in Paketvariablen zu extrahieren. Verwenden Sie dann ein Skripttask, um die Daten, die in Paketvariablen gespeichert sind, in eine Datei zu schreiben. Eine Demonstration zur Durchführung dieses Vorgangs unter Verwendung eines Foreach-Schleifen-Containers und eines Skripttasks finden Sie im CodePlex-Beispiel [Execute SQL Parameters and Result Sets](https://go.microsoft.com/fwlink/?LinkId=157863)(Ausführen von SQL-Parametern und Resultsets, in englischer Sprache), auf msftisprodsamples.codeplex.com.  
   
  In der folgenden Tabelle werden die Datentypen von Variablen zusammengefasst, die Resultsets zugeordnet werden können.  
   
 |Typ des Resultsets|Datentyp der Variablen|Typ des Objekts|  
 |---------------------|---------------------------|--------------------|  
 |Einzelne Zeile|Jeder mit der Typspalte im Resultset kompatible Typ|Nicht verfügbar|  
-|Vollständiges Resultset|`Object`|Wenn der Task einen systemeigenen Verbindungs-Manager, einschließlich der ADO, OLE DB, Excel und ODBC-Verbindungs-Manager, verwendet das zurückgegebene Objekt ist ein ADO `Recordset`.<br /><br /> Wenn der Task einen verwalteten Verbindungs-Manager, wie z. B. verwendet die [!INCLUDE[vstecado](../includes/vstecado-md.md)] Verbindungs-Manager, und klicken Sie dann auf das zurückgegebene Objekt ist ein `System.Data.DataSet`.<br /><br /> Sie können einen Skripttask verwenden, den Zugriff auf die `System.Data.DataSet` Objekt, wie im folgenden Beispiel gezeigt.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
+|Vollständiges Resultset|`Object`|Wenn der Task einen systemeigenen Verbindungs-Manager, wie z. B. einen ADO-, OLE DB-, Excel- oder ODBC-Verbindungs-Manager, verwendet, wird als Objekt ein ADO-`Recordset` zurückgegeben.<br /><br /> Wenn der Task einen verwalteten Verbindungs-Manager, wie z. B. den [!INCLUDE[vstecado](../includes/vstecado-md.md)]-Verbindungs-Manager, verwendet, wird als Objekt ein `System.Data.DataSet` zurückgegeben.<br /><br /> Sie können mithilfe eines Skripttasks auf das `System.Data.DataSet`-Objekt zugreifen, wie im folgenden Beispiel veranschaulicht.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|Wenn der Task einen systemeigenen Verbindungs-Manager, einschließlich der ADO, OLE DB, Excel und ODBC-Verbindungs-Manager, verwendet das zurückgegebene Objekt ist ein `MSXML6.IXMLDOMDocument`.<br /><br /> Wenn der Task einen verwalteten Verbindungs-Manager, wie z. B. verwendet die [!INCLUDE[vstecado](../includes/vstecado-md.md)] Verbindungs-Manager das zurückgegebene Objekt ist ein `System.Xml.XmlDocument`.|  
+|XML|`Object`|Wenn der Task einen systemeigenen Verbindungs-Manager, wie z. B. einen ADO-, OLE DB-, Excel- oder ODBC-Verbindungs-Manager, verwendet, wird als Objekt ein `MSXML6.IXMLDOMDocument` zurückgegeben.<br /><br /> Wenn der Task einen verwalteten Verbindungs-Manager, wie z. B. verwendet die [!INCLUDE[vstecado](../includes/vstecado-md.md)] Verbindungs-Manager das zurückgegebene Objekt ist ein `System.Xml.XmlDocument`.|  
   
  Die Variable kann im Bereich des Tasks SQL ausführen oder des Pakets definiert werden. Falls die Variable einen Paketbereich aufweist, ist das Resultset für andere Tasks und Container innerhalb des Pakets verfügbar sowie für alle Pakete, die von den Tasks "Paket ausführen" oder "DTS 2000-Paket ausführen" ausgeführt werden.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "48053366"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   CodePlex-Beispiel [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863)(Ausführen von SQL-Parametern und Resultsets) auf msftisprodsamples.codeplex.com  
+-   CodePlex-Beispiel [Execute SQL Parameters and Result Sets](https://go.microsoft.com/fwlink/?LinkId=157863)(Ausführen von SQL-Parametern und Resultsets) auf msftisprodsamples.codeplex.com  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], public profiles
@@ -15,12 +14,12 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 667dbd4e0b323f50721af716a30709ba9ea6d5c8
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071814"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979136"
 ---
 # <a name="create-a-database-mail-profile"></a>Erstellen eines Profils für Datenbank-E-Mail
   Verwenden Sie den **Assistenten zum Konfigurieren von Datenbank-E-Mail** oder [!INCLUDE[tsql](../../includes/tsql-md.md)] , um öffentliche und private Datenbank-E-Mail-Profile zu erstellen.  
@@ -53,7 +52,7 @@ ms.locfileid: "49071814"
   
 -   Aktivieren Sie auf der Seite **Profile und Konten verwalten** , aktivieren Sie die Option **Neues Profil erstellen** , und klicken Sie auf **Weiter**.  
   
--   Geben Sie auf der Seite **Neues Profil** den Profilnamen und die Beschreibung ein, und fügen Sie die ins Profil einzuschließenden Konten hinzu. Klicken Sie anschließend auf **Weiter**.  
+-   Auf der **neues Profil** Seite Geben Sie den Profilnamen, Beschreibung und Hinzufügen von Konten im Profil enthalten sein, und klicken Sie auf **Weiter**.  
   
 -   Überprüfen Sie auf der Seite **Assistenten abschließen** die auszuführenden Aktionen, und klicken Sie auf **Fertig stellen** , um die Erstellung des neuen Profils abzuschließen.  
   
@@ -191,7 +190,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*Standardprofilstatus* '  
   
-     in denen *@profile_name* ist der Name des Profils und *@principal_name* um anzugeben, dass dieses Profil öffentlich, *@is_default* bestimmt, ob dies Profil ist der Standardwert für den Datenbankbenutzer oder die Rolle.  
+     Dabei steht *@profile_name* für den Namen des Profils und *@principal_name* weist darauf hin, dass es sich um ein öffentliches Profil handelt. *@is_default* legt fest, ob dieses Profil das Standardprofil für den Datenbankbenutzer oder die Datenbankrolle darstellt.  
   
  Im folgenden Beispiel werden ein Datenbank-E-Mail-Konto und ein privates Profil für Datenbank-E-Mail erstellt. Anschließend wird das Konto zum Profil hinzugefügt und öffentlicher Zugriff auf das Profil erteilt.  
   

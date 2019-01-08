@@ -43,15 +43,15 @@ ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c17e29b5a41930f954e5cad6b67fccbaa1cc086d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40f1bf8c37ab27bc00fd291d6687737215519259
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207530"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357892"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Bereitstellen einer SQL Server-Datenbank auf einem virtuellen Microsoft Azure-Computer
-  Verwenden Sie den Assistenten **SQL Server-Datenbank auf Microsoft Azure-VM bereitstellen**, um eine Datenbank von einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem virtuellen Microsoft Azure-Computer (VM) bereitzustellen. Der Assistent führt eine vollständige Datenbanksicherung durch und kopiert somit immer das vollständige Datenbankschema und alle Daten einer SQL Server-Benutzerdatenbank. Der Assistent übernimmt außerdem die gesamte Azure-VM-Konfiguration, sodass keine Vorkonfiguration der VM erforderlich ist.  
+  Verwenden Sie den Assistenten **SQL Server-Datenbank auf Windows Azure-VM bereitstellen** , um eine Datenbank von einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem virtuellen Windows Azure-Computer (VM) bereitzustellen. Der Assistent führt eine vollständige Datenbanksicherung durch und kopiert somit immer das vollständige Datenbankschema und alle Daten einer SQL Server-Benutzerdatenbank. Der Assistent übernimmt außerdem die gesamte Azure-VM-Konfiguration, sodass keine Vorkonfiguration der VM erforderlich ist.  
   
  Sie können den Assistenten nicht für differenzielle Sicherungen verwenden, da der Assistent keine vorhandene Datenbank überschreibt, die denselben Datenbanknamen hat. Um eine vorhandene Datenbank auf der VM zu ersetzen, müssen Sie zuerst die vorhandene Datenbank löschen oder den Datenbanknamen ändern. Falls ein Namenskonflikt zwischen dem Datenbanknamen eines aktiven Bereitstellungsvorgangs und dem einer vorhandenen Datenbank auf der VM auftritt, schlägt der Assistent ein Namenssuffix für den Namen der bereitzustellenden Datenbank vor, sodass der Vorgang erfolgreich abgeschlossen werden kann.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48207530"
 -   Ihr Windows Azure-Veröffentlichungsprofil.  
   
     > [!CAUTION]  
-    >  SQL Server unterstützt derzeit die Version 2.0 des Veröffentlichungsprofils. Weitere Informationen zum Herunterladen der unterstützten Version des Veröffentlichungsprofils finden Sie unter [Herunterladen des Veröffentlichungsprofils 2.0](http://go.microsoft.com/fwlink/?LinkId=396421).  
+    >  SQL Server unterstützt derzeit die Version 2.0 des Veröffentlichungsprofils. Weitere Informationen zum Herunterladen der unterstützten Version des Veröffentlichungsprofils finden Sie unter [Herunterladen des Veröffentlichungsprofils 2.0](https://go.microsoft.com/fwlink/?LinkId=396421).  
   
 -   Das Verwaltungszertifikat wurde in das Windows Azure-Abonnement hochgeladen.  
   
@@ -85,13 +85,13 @@ ms.locfileid: "48207530"
   
 -   Anmeldeinformationen mit Sicherungsoperatorprivilegien für die bereitzustellende Datenbank, aus der Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Weitere Informationen zu SQL Server auf Windows Azure-Computern ausgeführt wird, finden Sie unter [bereit für die Migration zu SQL Server in Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133142.aspx).  
+ Weitere Informationen zur Ausführung von SQL Server auf virtuellen Windows Azure-Computern finden Sie unter [Vorbereitung auf die Migration zu SQL Server auf virtuellen Windows Azure-Computern](https://msdn.microsoft.com/library/dn133142.aspx).  
   
  Auf Computern, auf denen ein Windows Server-Betriebssystem ausgeführt wird, müssen Sie zur Ausführung dieses Assistenten die folgenden Konfigurationseinstellungen vornehmen:  
   
--   Deaktivieren Sie die verstärkte Sicherheitskonfiguration: Wählen Sie „Server-Manager > Lokaler Server“, und geben Sie für „Verstärkte Sicherheitskonfiguration für Internet Explorer“ den Wert **AUS** an.  
+-   Deaktivieren Sie die verstärkte Sicherheitskonfiguration:  Verwenden Sie Server-Manager > lokaler Server Sicherheitskonfiguration für Internet Explorer verbessert (ESC) einrichten, um **OFF**.  
   
--   Aktivieren Sie JavaScript: Internet Explorer > Internetoptionen > Sicherheit > Stufe anpassen > Skripting > Active Scripting: **Aktivieren**.  
+-   Aktivieren Sie JavaScript:  Internet Explorer > Internetoptionen > Sicherheit > Stufe anpassen > Skripting > Active Scripting: **Aktivieren Sie**.  
   
 ###  <a name="limitations"></a> Einschränkungen  
  Die Datenbankgröße für diesen Vorgang ist auf 1 TB beschränkt.  
@@ -106,7 +106,7 @@ ms.locfileid: "48207530"
   
 -   SQL Server 2008  
   
--   SQL Server 2008 R2  
+-   SQL Server 2008 R2  
   
 -   SQL Server 2012  
   
@@ -123,9 +123,9 @@ ms.locfileid: "48207530"
 ###  <a name="filestream"></a> Überlegungen zur Bereitstellung einer FILESTREAM-aktivierten Datenbank in einer Azure-VM  
  Beachten Sie die folgenden Richtlinien und Einschränkungen, wenn Sie Datenbanken bereitstellen, in denen BLOBs in FILESTREAM-Objekten gespeichert sind:  
   
--   Die Bereitstellungsfunktion kann eine FILESTREAM-aktivierte Datenbank nicht in einer neuen VM bereitstellen. Wenn FILESTREAM vor dem Ausführen des Assistenten in der VM nicht aktiviert wurde, schlägt der Vorgang zur Datenbankwiederherstellung fehl, und der Assistentenvorgang kann nicht erfolgreich abgeschlossen werden. Um eine Datenbank, die FILESTREAM verwendet, erfolgreich bereitzustellen, aktivieren Sie FILESTREAM in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf der Host-VM, bevor Sie den Assistenten starten. Weitere Informationen finden Sie unter [FILESTREAM (SQL Server)](http://msdn.microsoft.com/library/gg471497.aspx).  
+-   Die Bereitstellungsfunktion kann eine FILESTREAM-aktivierte Datenbank nicht in einer neuen VM bereitstellen. Wenn FILESTREAM vor dem Ausführen des Assistenten in der VM nicht aktiviert wurde, schlägt der Vorgang zur Datenbankwiederherstellung fehl, und der Assistentenvorgang kann nicht erfolgreich abgeschlossen werden. Um eine Datenbank, die FILESTREAM verwendet, erfolgreich bereitzustellen, aktivieren Sie FILESTREAM in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf der Host-VM, bevor Sie den Assistenten starten. Weitere Informationen finden Sie unter [FILESTREAM (SQL Server)](https://msdn.microsoft.com/library/gg471497.aspx).  
   
--   Wenn die Datenbank In-Memory OLTP verwendet, können Sie die Datenbank ohne Änderungen an der Datenbank in einer Azure-VM bereitstellen. Weitere Informationen finden Sie unter [In-Memory OLTP (Speicheroptimierung)](http://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
+-   Wenn die Datenbank In-Memory OLTP verwendet, können Sie die Datenbank ohne Änderungen an der Datenbank in einer Azure-VM bereitstellen. Weitere Informationen finden Sie unter [In-Memory OLTP (Speicheroptimierung)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
   
 ###  <a name="geography"></a> Überlegungen zur geografischen Verteilung von Ressourcen  
  Beachten Sie, dass sich die folgenden Ressourcen in der gleichen geografischen Region befinden müssen:  
@@ -179,7 +179,7 @@ ms.locfileid: "48207530"
   
 2.  Erweitern Sie im **Objekt-Explorer**den Instanznamen und dann den Knoten **Datenbanken** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, die Sie bereitstellen möchten, wählen Sie **Tasks**und dann **Datenbank in Windows Azure-VM bereitstellen**aus.  
+3.  Mit der rechten Maustaste in der Datenbank, die Sie bereitstellen möchten, wählen Sie **Aufgaben**, und wählen Sie dann **Datenbank in Windows Azure-VM bereitstellen...**  
   
 
   
@@ -192,16 +192,16 @@ ms.locfileid: "48207530"
   
 -   Durch**Weiter** gelangen Sie zur Seite **Quelleinstellungen** .  
   
--   **Abbrechen** – bricht den Vorgang ab und schließt den Assistenten.  
+-   **Abbrechen**: Bricht den Vorgang ab und schließt den Assistenten.  
   
--   **Hilfe** – Startet das MSDN-Hilfethema für den Assistenten.  
+-   **Hilfe** – startet das MSDN-Hilfethema für den Assistenten.  
   
 ##  <a name="Source_settings"></a> Quelleinstellungen  
  Auf dieser Seite stellen Sie eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, die die Datenbank hostet, die Sie in der Windows Azure-VM bereitstellen möchten. Hier geben Sie zudem einen temporären Speicherort für die Speicherung der Dateien auf dem lokalen Computer, bevor sie mit Windows Azure übertragen werden. Dies kann ein freigegebener Netzwerkspeicherort sein.  
   
  **Optionen**  
   
--   Klicken Sie auf **Verbinden…** und geben Sie Verbindungsdetails für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die die bereitzustellende Datenbank hostet.  
+-   Klicken Sie auf **verbinden...**  und geben Sie Verbindungsdetails für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die bereitzustellende Datenbank hostet.  
   
 -   Wählen Sie in der Dropdownliste **Datenbank auswählen** diejenige Datenbank aus, die bereitgestellt werden soll.  
   
@@ -212,34 +212,34 @@ ms.locfileid: "48207530"
   
  **Optionen**  
   
--   **Verwaltungszertifikat** – Mit dieser Option geben Sie ein Zertifikat aus dem lokalen Zertifikatspeicher an, das mit dem Verwaltungszertifikat von Windows Azure übereinstimmt.  
+-   **Verwaltungszertifikat** -verwenden Sie diese Option ein Zertifikat aus dem lokalen Zertifikatspeicher an, die die mit dem Verwaltungszertifikat von Windows Azure übereinstimmt.  
   
--   **Veröffentlichungsprofil** – Verwenden Sie diese Option, wenn auf Ihren Computer bereits ein Veröffentlichungsprofil heruntergeladen ist.  
+-   **Veröffentlichungsprofil** -verwenden Sie diese Option aus, wenn Sie bereits ein Veröffentlichungsprofil auf Ihren Computer heruntergeladen haben.  
   
--   **Anmelden** – Über diese Option melden Sie sich mit einem Microsoft-Konto bei Windows Azure an – beispielsweise mit einer Live ID oder einem Hotmail-Konto –, um ein neues Verwaltungszertifikat zu generieren und herunterzuladen. Beachten Sie, dass die Anzahl von Zertifikaten pro Abonnement beschränkt ist.  
+-   **Anmeldung** - verwenden Sie diese Option, um die Anmeldung bei Windows Azure mit einem Microsoft-Konto – z. B. eine Live ID oder einem Hotmail-Konto - um generiert und ein neues Verwaltungszertifikat heruntergeladen haben. Beachten Sie, dass die Anzahl von Zertifikaten pro Abonnement beschränkt ist.  
   
--   **Abonnement** – Wählen Sie die zugehörige Windows Azure-Abonnement-ID für das Verwaltungszertifikat aus dem lokalen Zertifikatspeicher oder für ein Veröffentlichungsprofil, oder geben bzw. fügen Sie sie ein.  
+-   **Abonnement** – auswählen, geben oder fügen Sie Ihre Windows Azure-Abonnement-ID, die das Verwaltungszertifikat aus dem lokalen Zertifikatspeicher oder ein Veröffentlichungsprofil.  
   
 ##  <a name="Deployment_settings"></a> Bereitstellungseinstellungen (Seite)  
  Auf dieser Seite können Sie den Zielserver angeben sowie Details zur neuen Datenbank bereitstellen.  
   
  **Optionen**  
   
--   **Virtuelle Windows Azure-Maschine** – Geben Sie Details für die VM an, die die SQL Server-Datenbank hostet:  
+-   **Azure VM** -Geben Sie Details für den virtuellen Computer, auf denen SQL Server-Datenbank gehostet wird:  
   
--   **Clouddienstname** – Geben Sie den Namen des Diensts an, der die VM hostet. Um einen neuen Clouddienst zu erstellen, geben Sie einen Namen für den neuen Clouddienst an.  
+-   **Cloud-Dienstnamen** -Geben Sie den Namen des Diensts, der den virtuellen Computer hostet. Um einen neuen Clouddienst zu erstellen, geben Sie einen Namen für den neuen Clouddienst an.  
   
--   **Name der virtuellen Machine** – Geben Sie den Namen der VM an, die die SQL Server-Datenbank hostet. Um eine neue Windows Azure-VM zu erstellen, geben Sie einen Namen für die neue VM an.  
+-   **Name des virtuellen Computers** -Geben Sie den Namen des virtuellen Computers, auf denen SQL Server-Datenbank gehostet wird. Um eine neue Windows Azure-VM zu erstellen, geben Sie einen Namen für die neue VM an.  
   
--   **Einstellungen** – Erstellen Sie über die Schaltfläche Einstellungen eine neue VM, die dann die SQL Server-Datenbank hostet. Wenn Sie eine vorhandene VM verwenden, werden die angegebenen Informationen verwendet, um Ihre Anmeldeinformationen zu authentifizieren.  
+-   **Einstellungen** -verwenden Sie die Schaltfläche "Einstellungen", um einen neuen virtuellen Computer zum Hosten der SQL Server-Datenbank zu erstellen. Wenn Sie eine vorhandene VM verwenden, werden die angegebenen Informationen verwendet, um Ihre Anmeldeinformationen zu authentifizieren.  
   
--   **Speicherkonto** – Wählen Sie aus der Dropdownliste das Speicherkonto aus. Um ein neues Speicherkonto zu erstellen, geben Sie einen Namen für das neue Konto an. Beachten Sie, dass Speicherkonten, die einer Affinitätsgruppe zugeordnet sind, nicht in der Dropdownliste verfügbar sind.  
+-   **Storage-Konto** -wählen Sie das Speicherkonto aus der Dropdown-Liste. Um ein neues Speicherkonto zu erstellen, geben Sie einen Namen für das neue Konto an. Beachten Sie, dass Speicherkonten, die einer Affinitätsgruppe zugeordnet sind, nicht in der Dropdownliste verfügbar sind.  
   
--   **Zieldatenbank** – Geben Sie Details zur Zieldatenbank an.  
+-   **Zieldatenbank** -Geben Sie Details für die Zieldatenbank.  
   
--   **Serververbindung** – Verbindungsdetails für den Server.  
+-   **Serververbindung** -Verbindungsdetails für den Server.  
   
--   **Datenbank** – Bestätigen oder geben Sie den Namen einer neuen Datenbank an. Wenn der Datenbankname auf der SQL Server-Zielinstanz bereits vorhanden ist, wird empfohlen, einen anderen Datenbanknamen anzugeben.  
+-   **Datenbank** : Geben Sie, oder bestätigen Sie den Namen einer neuen Datenbank. Wenn der Datenbankname auf der SQL Server-Zielinstanz bereits vorhanden ist, wird empfohlen, einen anderen Datenbanknamen anzugeben.  
   
 ##  <a name="Summary"></a> Seite "Zusammenfassung"  
  Auf dieser Seite können Sie die für den Vorgang angegebenen Einstellungen überprüfen. Klicken Sie auf **Fertig stellen**, um den Bereitstellungsvorgang mithilfe der angegebenen Einstellungen abzuschließen. Klicken Sie auf **Abbrechen**, um den Bereitstellungsvorgang abzubrechen und den Assistenten zu beenden.  
@@ -257,7 +257,7 @@ ms.locfileid: "48207530"
  [Exportieren einer Datenebenenanwendung](../data-tier-applications/export-a-data-tier-application.md)   
  [Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank](../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
  [Sichern und Wiederherstellen von Azure SQL-Datenbanken](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
- [SQL Server-Bereitstellung in Microsoft Azure Virtual Machines](http://msdn.microsoft.com/library/dn133141.aspx)   
- [Vorbereitung auf die Migration zu SQL Server auf Microsoft Azure Virtual Machines](http://msdn.microsoft.com/library/dn133142.aspx)  
+ [SQL Server-Bereitstellung in Microsoft Azure Virtual Machines](https://msdn.microsoft.com/library/dn133141.aspx)   
+ [Vorbereitung auf die Migration zu SQL Server auf Microsoft Azure Virtual Machines](https://msdn.microsoft.com/library/dn133142.aspx)  
   
   

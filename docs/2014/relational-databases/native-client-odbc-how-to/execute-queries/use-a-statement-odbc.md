@@ -12,32 +12,32 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 195b38804045c26053771d263d650cfaa2efecde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227010"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361142"
 ---
 # <a name="use-a-statement-odbc"></a>Verwenden einer Anweisung (ODBC)
     
 ### <a name="to-use-a-statement"></a>So verwenden Sie eine Anweisung  
   
-1.  Rufen Sie [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) mit einem *HandleType* von SQL_HANDLE_STMT auf, um ein Anweisungshandle zuzuweisen.  
+1.  Rufen Sie [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) mit einem *HandleType* von SQL_HANDLE_STMT auf, um ein Anweisungshandle zuzuweisen.  
   
 2.  Rufen Sie optional [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) auf, um Anweisungsoptionen festzulegen, oder [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md), um Anweisungsattribute abzurufen.  
   
      Um Servercursor zu verwenden, müssen Sie die Cursorattribute auf Werte setzen, die von den Standardwerten abweichen.  
   
-3.  Bereiten Sie optional die Anweisung mit der [SQLPrepare-Funktion](http://go.microsoft.com/fwlink/?LinkId=59360)auf die Ausführung vor, wenn die Anweisung mehrmals ausgeführt wird.  
+3.  Bereiten Sie optional die Anweisung mit der [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360)auf die Ausführung vor, wenn die Anweisung mehrmals ausgeführt wird.  
   
-4.  Binden Sie optional mit [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md)die Parametermarkierungen an Programmvariablen, wenn die Anweisung über gebundene Parametermarkierungen verfügt. Wenn die Anweisung vorbereitet wurde, können Sie [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) und [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) to find the number und characteristics of the parameters.  
+4.  Binden Sie optional mit [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md)die Parametermarkierungen an Programmvariablen, wenn die Anweisung über gebundene Parametermarkierungen verfügt. Wenn die Anweisung vorbereitet wurde, können Sie [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) und [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) to find the number und characteristics of the parameters.  
   
 5.  Führen Sie eine Anweisung direkt mit SQLExecDirect aus.  
   
      \- oder –  
   
-     Wenn die Anweisung vorbereitet wurde, führen Sie sie mehrmals mit [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)aus.  
+     Wenn die Anweisung vorbereitet wurde, führen Sie sie mehrmals mit [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)aus.  
   
      \- oder –  
   

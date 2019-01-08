@@ -11,12 +11,12 @@ ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 606d597bd539da9e50b1c0452d9126e2f4671731
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054370"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371312"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   In diesem Thema werden die Datenquellentypen beschrieben, die mit tabellarischen Modellen verwendet werden können.  
@@ -53,9 +53,9 @@ ms.locfileid: "48054370"
   
  <sup>1</sup> Sie können auch den OLE DB-Anbieter für ODBC verwenden.  
   
- <sup>2</sup> finden Sie weitere Informationen zu SQL Azure, die Website [SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> finden Sie weitere Informationen zu SQL Azure, die Website [SQL Azure](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> Weitere Informationen zu SQL Server PDW finden Sie unter der Website [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> Weitere Informationen zu SQL Server PDW finden Sie unter der Website [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
  <sup>4</sup> in einigen Fällen die Verwendung des MSDAORA-OLE DB-Anbieters kann zu Verbindungsfehlern, insbesondere bei neueren Versionen von Oracle. Treten Fehler auf, empfiehlt es sich, einen der anderen für Oracle aufgeführten Anbieter zu verwenden.  
   

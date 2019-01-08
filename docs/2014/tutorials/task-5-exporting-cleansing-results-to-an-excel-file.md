@@ -13,15 +13,15 @@ ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2d52304ff9a8dae16e74d9d5aa7324adb2aac4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b01c9394419a4e526969c4a8ecccaf262f576d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138170"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368212"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Aufgabe 5: Exportieren der Bereinigungsergebnisse in eine Excel-Datei
-  In dieser Aufgabe exportieren Sie Ergebnisse aus der Bereinigungsaktivität in eine Excel-Datei. Finden Sie unter [Exportphase](http://msdn.microsoft.com/library/hh213061.aspx#Export) Weitere Informationen.  
+  In dieser Aufgabe exportieren Sie Ergebnisse aus der Bereinigungsaktivität in eine Excel-Datei. Finden Sie unter [Exportphase](https://msdn.microsoft.com/library/hh213061.aspx#Export) Weitere Informationen.  
   
 1.  Wählen Sie im rechten Bereich **Excel** für die **Zieltyp**.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48138170"
   
 7.  Öffnen der **Cleansed Supplier List.xls** und gehen Sie folgendermaßen vor:  
   
-    1.  Stellen Sie sicher, dass keine E-Mail-Adressen vorhanden sind, die mit adventure-work.com (ohne "s") enden, indem Sie im Arbeitsblatt nach adventure-work.com suchen.  
+    1.  Sicherstellen, dass es keine e-Mail-Adressen, die mit Adventure-work.com (ohne die Zeichen ") durch Suchen nach Adventure-work.com im Arbeitsblatt.  
   
     2.  Vorhanden ist keine **USA** Wert in der **Land** Spalte.  
   

@@ -11,12 +11,12 @@ ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3ece9c53c271d21a19046f989b5f032fd3fc8340
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ca6fb72455683ee3c98d1911d75840e5f7dcaf3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140256"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352642"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Hohe Verfügbarkeit und Notfallwiederherstellung für PowerPivot (SQL Server 2014)
   Pläne für Notfallwiederherstellung und Verfügbarkeit sind bei [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] in erster Linie abhängig vom Entwurf der SharePoint-Farm, von der für verschiedene Komponenten akzeptablen Ausfallzeit und von den Tools und Best Practices, die Sie zur Gewährleistung der Verfügbarkeit von SharePoint implementieren. In diesem Thema finden Sie eine Übersicht der Technologien und Beispiele für Topologiediagramme, die beim Planen der Verfügbarkeit und der Notfallwiederherstellung für eine Bereitstellung von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] hilfreich sein können.  
@@ -48,7 +48,7 @@ ms.locfileid: "48140256"
   
 -   **(3)** Die Dienste für Excel-Berechnungen werden auf jedem Anwendungsserver ausgeführt, sodass die Dienstanwendung auf mehreren Anwendungsservern ausgeführt werden kann. Wenn ein einzelner Anwendungsserver offline geschaltet wird, bleiben die Dienste für Excel-Berechnungen weiterhin verfügbar.  
   
--   **(4)**  und **(6)** Instanzen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ins SharePoint-Modus werden auf Servern außerhalb der SharePoint-Farm ausgeführt, einschließlich der Windows-Dienst **SQL Server Analysis Services (POWERPIVOT)**. Jede dieser Instanzen ist in Excel Services **(3)** registriert. Excel Services verwaltet den Lastenausgleich der Anforderungen an die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Server. Die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013-Architektur ermöglicht es Ihnen, mehrere Server für [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] einzurichten, sodass Sie bei Bedarf problemlos weitere Instanzen hinzufügen können. Weitere Informationen finden Sie unter [Verwalten von Excel Services-Datenmodelleinstellungen (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
+-   **(4)** und **(6)** Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im SharePoint-Modus werden auf Servern außerhalb der SharePoint-Farm ausgeführt. Dies beinhaltet auch den Windows-Dienst **SQL Server Analysis Services (POWERPIVOT)**. Jede dieser Instanzen ist in Excel Services **(3)** registriert. Excel Services verwaltet den Lastenausgleich der Anforderungen an die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Server. Die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013-Architektur ermöglicht es Ihnen, mehrere Server für [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] einzurichten, sodass Sie bei Bedarf problemlos weitere Instanzen hinzufügen können. Weitere Informationen finden Sie unter [Verwalten von Excel Services-Datenmodelleinstellungen (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
   
 -   **(5)** SQL Server-Datenbanken, die für Inhalts-, Konfigurations- und Anwendungsdatenbanken verwendet werden. Diese enthalten auch die Datenbank für die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung. In Ihrem Plan für die Notfallwiederherstellung muss auch die Datenbankebene berücksichtigt werden. In diesem Entwurf werden die Datenbanken auf demselben Server wie **(4)** eine der [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Instanzen ausgeführt. **(4)** und **(5)** können sich aber auch auf unterschiedlichen Servern befinden.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48140256"
   
 -   **(1)** Die Web-Front-End-Server. Installieren Sie die Datenanbieter auf jedem Server. Weitere Informationen finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
--   **(2)**  Die beiden [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] gemeinsame Dienste und **(4)** der Windows-Dienst **SQL Server Analysis Services (POWERPIVOT)** auf den SharePoint-Anwendungsservern installiert sind.  
+-   **(2)** Die zwei gemeinsamen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienste und **(4)** der Windows-Dienst **SQL Server Analysis Services (POWERPIVOT)** werden auf den SharePoint-Anwendungsservern installiert.  
   
      Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst wird **auf jedem** Anwendungsserver ausgeführt, sodass die Dienstanwendung **auf mehreren** Anwendungsservern ausgeführt werden kann. Wenn ein einzelner Anwendungsserver offline geschaltet wird, bleibt die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Dienstanwendung weiterhin verfügbar.  
   
@@ -76,11 +76,11 @@ ms.locfileid: "48140256"
 -   **(6)** Sicherung oder Redundanz für die SQL Server-Datenbank.  
   
 ##  <a name="bkmk_sql_server_technologies"></a> PowerPivot Dienstanwendungsdatenbank und die Verfügbarkeits- und Wiederherstellungstechnologien in SQL Server  
- Schließen Sie die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Dienstanwendungsdatenbank in Ihre Hochverfügbarkeitsplanung von SharePoint ein. Der Standardname dieser Datenbank lautet `DefaultPowerPivotServiceApplicationDB-<GUID>`. Im Folgenden finden Sie eine Zusammenfassung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verfügbarkeitstechnologien und Empfehlungen, die Sie mit der [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] Datenbank einsetzen können. Weitere Informationen finden Sie unter [Unterstützte Hochverfügbarkeits- und Notfallwiederherstellungsoptionen für SharePoint-Datenbanken (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx).  
+ Schließen Sie die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Dienstanwendungsdatenbank in Ihre Hochverfügbarkeitsplanung von SharePoint ein. Der Standardname dieser Datenbank lautet `DefaultPowerPivotServiceApplicationDB-<GUID>`. Im Folgenden finden Sie eine Zusammenfassung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verfügbarkeitstechnologien und Empfehlungen, die Sie mit der [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] Datenbank einsetzen können. Weitere Informationen finden Sie unter [Unterstützte Hochverfügbarkeits- und Notfallwiederherstellungsoptionen für SharePoint-Datenbanken (SharePoint 2013)](https://technet.microsoft.com/library/jj841106.aspx).  
   
 ||Kommentare|  
 |-|--------------|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] synchrone Spiegelung in einer Farm für die Verfügbarkeit.|Unterstützt, aber nicht empfohlen. Es wird empfohlen, AlwaysOn im synchronen Commit-Modus zu verwenden.|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] synchrone Spiegelung in einer Farm für die Verfügbarkeit.|Unterstützt, aber nicht empfohlen. Es wird empfohlen, AlwaysOn im synchronen - Commit-Modus zu verwenden.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] im synchronen Commit-Modus|Unterstützt und empfohlen.|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] asynchrone Spiegelung oder Protokollversand an eine andere Farm für die Notfallwiederherstellung.|Unterstützt.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] mit asynchronem Commit für die Notfallwiederherstellung|Supported|  
@@ -89,20 +89,20 @@ ms.locfileid: "48140256"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Protokollversand  
   
- Weitere Informationen zum Planen eines verzögerten Standbyszenarios für [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]finden Sie unter [PowerPivot-Notfallwiederherstellung](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx).  
+ Weitere Informationen zum Planen eines verzögerten Standbyszenarios für [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]finden Sie unter [PowerPivot-Notfallwiederherstellung](https://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx).  
   
 ## <a name="verification"></a>Überprüfung  
  Anweisungen und Skripts zur Überprüfung einer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Bereitstellung vor und nach einer notfallwiederherstellung, finden Sie unter [Prüfliste: Verwenden von PowerShell zum Überprüfen von PowerPivot für SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_more_resources"></a> Links zu weiteren Informationen  
   
--   [Unterstützte Hochverfügbarkeits- und Notfallwiederherstellungsoptionen für SharePoint-Datenbanken (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
+-   [Unterstützte Hochverfügbarkeits- und Notfallwiederherstellungsoptionen für SharePoint-Datenbanken (SharePoint 2013)](https://technet.microsoft.com/library/jj841106.aspx)  
   
--   [Planen der Notfallwiederherstellung (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
+-   [Planen der Notfallwiederherstellung (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
   
--   [Whitepaper zu Cloud-Sicherung und -Wiederherstellung](http://www.microsoft.com/server-cloud/solutions/cloud-backup-recovery.aspx?WT.srch=1&WT.mc_ID=SEM_BING_USEvergreenSearch_Unassigned&CR_CC=Unassigned#fbid=RjU2Nbzu2dT)  
+-   [Whitepaper zu Cloud-Sicherung und -Wiederherstellung](https://www.microsoft.com/server-cloud/solutions/cloud-backup-recovery.aspx?WT.srch=1&WT.mc_ID=SEM_BING_USEvergreenSearch_Unassigned&CR_CC=Unassigned#fbid=RjU2Nbzu2dT)  
   
--   [Microsoft® SQL Server Backup to Microsoft Windows® Azure®Tool](http://www.microsoft.com/download/details.aspx?id=40740)  
+-   [Microsoft® SQL Server Backup to Microsoft Windows® Azure®Tool](https://www.microsoft.com/download/details.aspx?id=40740)  
   
  **Community-Inhalt**  
   

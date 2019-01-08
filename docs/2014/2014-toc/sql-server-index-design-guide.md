@@ -10,17 +10,17 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3d939e8d1576e31de3ba42eaa7deba59a2801bb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9af1d66612485f3a790de1ebc8149b7a9e374103
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178256"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360412"
 ---
 # <a name="sql-server-index-design-guide"></a>Handbuch zum SQL Server Indexentwurf
   Schlecht entworfene oder fehlende Indizes sind die Hauptquellen für Engpässe der Datenbankanwendung. Ein effizienter Indexentwurf ist zum Erzielen einer guten Datenbank- und Anwendungsleistung unabdinglich. Die in diesem Handbuch zum SQL Server Indexentwurf enthaltenen Informationen und Best Practices unterstützen Sie beim Entwerfen effizienter Indizes, die den Anforderungen Ihrer Anwendung entsprechen.  
   
-**Gilt für**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] über [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , sofern nichts anderes angegeben ist.  
+**Gilt für**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] bis [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , sofern nichts anderes angegeben ist.  
   
  In diesem Handbuch wird davon ausgegangen, dass der Leser grundsätzlich mit den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbaren Indextypen vertraut ist. Eine allgemeine Beschreibung zu Indextypen finden Sie unter [Indextypen](../relational-databases/indexes/indexes.md).  
   
@@ -152,7 +152,7 @@ ms.locfileid: "48178256"
   
 -   Schnellere und effizientere Ausführung von Abfragen. Wenn Abfragen auf mehrere Partitionen eines Indexes zugreifen, kann der Abfrageoptimierer einzelne Partitionen gleichzeitig verarbeiten und Partitionen ausschließen, die nicht von der Abfrage betroffen sind.  
   
- Weitere Informationen finden Sie unter [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Entwurfsrichtlinien zur Sortierreihenfolge von Indizes  
  Beim Definieren von Indizes sollten Sie berücksichtigen, ob die Daten für die Indexschlüsselspalte in aufsteigender oder absteigender Reihenfolge gespeichert werden sollen. Die Standardreihenfolge ist aufsteigend. Hierbei wird auch die Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]beibehalten. Die Syntax der CREATE INDEX-, CREATE TABLE- und ALTER TABLE-Anweisungen unterstützt die Schüsselwörter ASC (aufsteigend) und DESC (absteigend) für einzelne Spalten in Indizes und Einschränkungen:  
@@ -389,7 +389,7 @@ INCLUDE (FileName);
   
     -   Ändern der NULL-Zulässigkeit der Spalte von NOT NULL in NULL.  
   
-    -   Vergrößern der Länge von `varchar`, `nvarchar`, oder `varbinary` Spalten.  
+    -   Vergrößern der Länge von `varchar`-, `nvarchar`- oder `varbinary`-Spalten.  
   
         > [!NOTE]  
         >  Diese Einschränkungen hinsichtlich der Spaltenänderung gelten für Indexschlüsselspalten.  
@@ -549,7 +549,7 @@ SELECT ComponentID, StartDate FROM Production.BillOfMaterials
 WHERE EndDate IS NOT NULL;   
 ```  
   
- Eine Spalte im gefilterten Indexausdruck sollte in der gefilterten Indexdefinition eine Schlüsselspalte oder eingeschlossene Spalte sein, wenn das Abfrageprädikat die Spalte in einem Vergleich verwendet, der nicht dem gefilterten Indexausdruck entspricht. Zum Beispiel ist `FIBillOfMaterialsWithEndDate` für die folgende Abfrage gültig, da damit aus dem gefilterten Index eine Teilmenge von Zeilen ausgewählt wird. Damit wird jedoch nicht die folgende Abfrage abgedeckt, da `EndDate` im Vergleich `EndDate > '20040101'`verwendet wird, der nicht dem gefilterten Indexausdruck entspricht. Der Abfrageprozessor kann diese Abfrage nicht ausführen, ohne die Werte von `EndDate`abzurufen. Deshalb sollte `EndDate` eine Schlüsselspalte oder eingeschlossene Spalte in der Definition des gefilterten Indexes darstellen.  
+ Eine Spalte im gefilterten Indexausdruck sollte in der Definition des gefilterten Indexes eine Schlüsselspalte oder eingeschlossene Spalte sein, wenn das Abfrageprädikat die Spalte in einem Vergleich verwendet, der nicht dem gefilterten Indexausdruck entspricht. Zum Beispiel ist `FIBillOfMaterialsWithEndDate` für die folgende Abfrage gültig, da damit aus dem gefilterten Index eine Teilmenge von Zeilen ausgewählt wird. Damit wird jedoch nicht die folgende Abfrage abgedeckt, da `EndDate` im Vergleich `EndDate > '20040101'`verwendet wird, der nicht dem gefilterten Indexausdruck entspricht. Der Abfrageprozessor kann diese Abfrage nicht ausführen, ohne die Werte von `EndDate`abzurufen. Deshalb sollte `EndDate` eine Schlüsselspalte oder eingeschlossene Spalte in der Definition des gefilterten Indexes darstellen.  
   
 ```sql
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
@@ -595,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
  ![Pfeilsymbol mit Rückverweis auf den obersten](media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In dieser Anleitung](#Top)  
   
 ##  <a name="Additional_Reading"></a> Zusätzliches Lesematerial  
- [Verbessern der Leistung mit indizierten Sichten in SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+ [Verbessern der Leistung mit indizierten Sichten in SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
  [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   

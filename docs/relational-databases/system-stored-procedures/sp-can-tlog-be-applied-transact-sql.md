@@ -18,17 +18,17 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e8d29c2a9b273425510342d87349091348c1c7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd0273e27ec20f23d683347f9501b72355f560d6
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806809"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588601"
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Überprüft, ob eine Sicherung des Transaktionsprotokolls kann, um angewendet werden eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank. **sp_can_tlog_be_applied** setzt voraus, dass sich die Datenbank im Wiederherstellungsstatus befindet.  
+  Überprüft, ob die Sicherung eines Transaktionsprotokolls auf eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank angewendet werden kann. **sp_can_tlog_be_applied** setzt voraus, dass sich die Datenbank im Wiederherstellungsstatus befindet.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +42,13 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@backup_file_name=** ] **"***Backup_file_name***"**  
+ [  **@backup_file_name=** ] **"**_Backup_file_name_**"**  
  Der Name einer Sicherungsdatei. *backup_file_name* ist **nvarchar(128)**  
   
- [ **@database_name=** ] **'***database_name***'**  
+ [  **@database_name=** ] **"**_Database_name_**"**  
  Der Name der Datenbank. *database_name* ist **sysname**  
   
- [  **@result=** ] *Ergebnis* **Ausgabe**  
+ [  **@result=** ] _Ergebnis_ **Ausgabe**  
  Gibt an, ob das Transaktionsprotokoll auf die Datenbank angewendet werden kann. *result* ist **bit**  
   
  1 = Das Protokoll kann angewendet werden.  

@@ -15,12 +15,12 @@ ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26c645a134d962daff989e7f7a88b7ae9dcd67bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cb1fad6ffa7fcb8dcf1330079b12aa77f06705d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071460"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362762"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services (Berichts-Generator)
   Berichts-Generator stellt einen grafischen Abfrage-Designer für das Erstellen von MDX-Abfragen (Multidimensional Expression) für eine [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenquelle bereit. Der grafische MDX-Abfrage-Designer verfügt über zwei Modi: Entwurfsmodus und Abfragemodus. Jeder Modus stellt einen Metadatenbereich bereit, in dem Sie Elemente aus den ausgewählten Cubes ziehen können, um eine MDX-Abfrage zu erstellen, die beim Verarbeiten des Berichts Daten abruft.  
@@ -58,7 +58,7 @@ ms.locfileid: "48071460"
  Um eigene zusätzliche Eigenschaften anzugeben, müssen Sie die MDX-Abfrage im Abfragemodus manuell bearbeiten.  
   
 > [!NOTE]  
->  Weitere Informationen über MDX und allgemeine Informationen über den MDX-Abfrage-Designer finden Sie in "MDX-Abfrage-Editor (Analysis Services – Mehrdimensionale Daten)" in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=98335). Damit jedoch Daten aus einer MDX-Abfrage in einem Bericht angezeigt werden können, müssen Sie die Abfrage mit dem MDX-Abfrage-Designer erstellen, der mit Berichts-Generator geliefert wird. Das Importieren einer MDX-Abfrage aus einer Datei wird nicht unterstützt.  
+>  Weitere Informationen über MDX und allgemeine Informationen über den MDX-Abfrage-Designer finden Sie in "MDX-Abfrage-Editor (Analysis Services – Mehrdimensionale Daten)" in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=98335). Damit jedoch Daten aus einer MDX-Abfrage in einem Bericht angezeigt werden können, müssen Sie die Abfrage mit dem MDX-Abfrage-Designer erstellen, der mit Berichts-Generator geliefert wird. Das Importieren einer MDX-Abfrage aus einer Datei wird nicht unterstützt.  
   
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>Symbolleiste des grafischen MDX-Abfrage-Designers im Entwurfsmodus  
  Die Symbolleiste des Abfrage-Designers stellt Schaltflächen bereit, die Ihnen beim Entwurf von MDX-Abfragen mit der grafischen Oberfläche helfen. In der folgenden Tabelle sind die Schaltflächen und ihre Funktionen aufgeführt.  
@@ -69,11 +69,11 @@ ms.locfileid: "48071460"
 |**Importieren**|Importieren einer vorhandenen Abfrage aus einer Berichtsdefinitionsdatei (.rdl) im Dateisystem.|  
 |![Wechseln zur MDX-Abfrageansicht](../analysis-services/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|Wechselt zum MDX-Befehlstyp.|  
 |![Aktualisieren der Ergebnisdaten](../analysis-services/media/rsqdicon-refresh.gif "Refresh result data")|Aktualisieren von Metadaten aus der Datenquelle.|  
-|![Berechnetes Element hinzufügen](../analysis-services/media/rsqdicon-addcalculatedmember.gif "berechnetes Element hinzufügen")|Zeigt das Dialogfeld **Generator für berechnete Elemente** an.|  
+|![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Zeigt das Dialogfeld **Generator für berechnete Elemente** an.|  
 |![Umschalten zum Anzeigen von leeren Zellen](../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Schaltet zwischen dem Anzeigen und Nichtanzeigen von leeren Zellen im Datenbereich um. (Dies entspricht dem Verwenden der NON EMPTY-Klausel in MDX.)|  
 |![Automatisches Ausführen der Abfrage](../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|Bei jeder Änderung wird die Abfrage automatisch ausgeführt, und das Ergebnis wird angezeigt. Die Ergebnisse werden im Datenbereich angezeigt.|  
 |![Anzeigen der Schaltfläche „Aggregationen“](../analysis-services/media/rsqdicon-showaggregations.gif "Show Aggregations button")|Zeigt Aggregationen im Datenbereich an.|  
-|![Löschen Sie](../analysis-services/media/rsqdicon-delete.gif "löschen")|Löschen der ausgewählten Spalte im Datenbereich aus der Abfrage.|  
+|![Löschen](../analysis-services/media/rsqdicon-delete.gif "Löschen")|Löschen der ausgewählten Spalte im Datenbereich aus der Abfrage.|  
 |![Symbol für das Dialogfeld „Abfrageparameter“](../analysis-services/media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|Anzeigen des Dialogfelds **Abfrageparameter** . Bei der Angabe von Werten für einen Abfrageparameter wird automatisch ein Berichtsparameter mit demselben Namen erstellt. Der Wert des Abfrageparameters wird auf einen Ausdruck festgelegt, der auf den Berichtsparameter verweist.|  
 |![Schaltfläche „Abfrage vorbereiten“](../analysis-services/media/rsqdicon-preparequery.gif "Prepare Query button")|Bereitet die Abfrage vor.|  
 |![Führen Sie die Abfrage aus](../analysis-services/media/rsqdicon-run.gif "Run the query")|Führt die Abfrage aus und zeigt die Ergebnisse im Datenbereich an.|  
@@ -107,7 +107,7 @@ ms.locfileid: "48071460"
   
 -   **Als Text bearbeiten**  
   
--   **Berechnetes Element hinzufügen** (![berechnetes Element hinzufügen](../analysis-services/media/rsqdicon-addcalculatedmember.gif "berechnetes Element hinzufügen"))  
+-   **Berechnetes Element hinzufügen** (![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **Leere Zellen anzeigen** (![Umschalten zum Anzeigen von leeren Zellen](../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells"))  
   

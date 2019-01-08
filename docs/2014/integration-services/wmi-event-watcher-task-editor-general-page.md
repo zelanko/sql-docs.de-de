@@ -15,19 +15,19 @@ ms.assetid: 5813279b-52ca-4232-8826-38001467d9bd
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b284f16b082c174b0e3f335819fd11e6800f24f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 598ce51e4270e419e925d7aa82516e27ed3bf230
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189310"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370732"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>Editor für den Task 'WMI-Ereignisüberwachung' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task 'WMI-Ereignisüberwachung'** können Sie einen Namen und eine Beschreibung für den Task 'WMI-Ereignisüberwachung' angeben.  
   
- Informationen, um sich mit diesem Thema vertraut zu machen, finden Sie unter [WMI Event Watcher Task](control-flow/wmi-event-watcher-task.md). Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) unter [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Abfragen mit WQL) in der MSDN Library.  
+ Informationen, um sich mit diesem Thema vertraut zu machen, finden Sie unter [WMI Event Watcher Task](control-flow/wmi-event-watcher-task.md). Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) unter [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(Abfragen mit WQL) in der MSDN Library.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Task 'WMI-Ereignisüberwachung' an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -38,8 +38,8 @@ ms.locfileid: "48189310"
  Geben Sie eine Beschreibung für den Task 'WMI-Ereignisüberwachung' ein.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Task-Editor für WMI-Ereignisüberwachung &#40;WMI, Seite "Optionen"&#41;](../../2014/integration-services/wmi-event-watcher-task-editor-wmi-options-page.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor für den Task „WMI-Ereignisüberwachung“ &#40;Seite „WMI-Optionen“&#41;](../../2014/integration-services/wmi-event-watcher-task-editor-wmi-options-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)   
  [WMI-Datenleser (Task)](control-flow/wmi-data-reader-task.md)  
   

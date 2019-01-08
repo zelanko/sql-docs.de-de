@@ -14,15 +14,15 @@ ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 798660cb396ca34f856653a7e65fda13d4d023a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 638570c8a2be779b11b0ec852d17ea4815960054
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093960"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356410"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Fehler- und Ereignisreferenz (Datenbank-Engine)
-  Die [Events and Errors Message Center](http://go.microsoft.com/fwlink/?LinkId=47660) auf TechNet-Website ist die primäre Informationsquelle für Fehlermeldungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. und verbessert die Benutzerfreundlichkeit bei der Suche nach Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlermeldungen sowie anderen Microsoft-Produkten. Hier sind Volltextsuchvorgänge möglich, und Ergebnisse können auf der Grundlage von Produkt, Version, Quelle und numerischen oder symbolischen Identifizierern gefiltert werden. Zusätzlich unterstützt die neue Schnittstelle mehrere Sprachen. Das Center wird fortlaufend mit neuen Informationen zur Problembehandlung häufig auftretender Fehler aktualisiert.  
+  Die [Events and Errors Message Center](https://go.microsoft.com/fwlink/?LinkId=47660) auf TechNet-Website ist die primäre Informationsquelle für Fehlermeldungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. und verbessert die Benutzerfreundlichkeit bei der Suche nach Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlermeldungen sowie anderen Microsoft-Produkten. Hier sind Volltextsuchvorgänge möglich, und Ergebnisse können auf der Grundlage von Produkt, Version, Quelle und numerischen oder symbolischen Identifizierern gefiltert werden. Zusätzlich unterstützt die neue Schnittstelle mehrere Sprachen. Das Center wird fortlaufend mit neuen Informationen zur Problembehandlung häufig auftretender Fehler aktualisiert.  
   
  In zukünftigen Verbesserungen am Events and Errors Message Center werden Informationen zur Problembehandlung in herunterladbarer Form verfügbar sein. Damit stehen diese Informationen auch dann zur Verfügung, wenn der Computer nicht mit dem Internet verbunden ist.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "48093960"
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[SQL Server-Community](http://go.microsoft.com/fwlink/?LinkId=42455)|Diese Site bietet Links zu Newsgroups und Foren, die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community überwacht werden. Hier sind auch Community-Informationsquellen aufgeführt, z. B. Blogs und Websites. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community ist bei Problemen ausgesprochen hilfreich, obwohl die Beantwortung von Fragen nicht unbedingt sichergestellt ist.|  
-|[SQL Server Developer Center-Community](http://go.microsoft.com/fwlink/?LinkId=42456)|Diese Site ist speziell auf Newsgroups, Foren und andere Communityressourcen ausgerichtet, die für Entwickler von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Interesse sind.|  
-|[Microsoft Hilfe- und Supportcenter](http://go.microsoft.com/fwlink/?linkid=16419)|Verwenden Sie diese Website, um sich mit einer Frage an einen Supportmitarbeiter von [!INCLUDE[msCoName](../../includes/msconame-md.md)] zu wenden.|  
+|[SQL Server-Community](https://go.microsoft.com/fwlink/?LinkId=42455)|Diese Site bietet Links zu Newsgroups und Foren, die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community überwacht werden. Hier sind auch Community-Informationsquellen aufgeführt, z. B. Blogs und Websites. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community ist bei Problemen ausgesprochen hilfreich, obwohl die Beantwortung von Fragen nicht unbedingt sichergestellt ist.|  
+|[SQL Server Developer Center-Community](https://go.microsoft.com/fwlink/?LinkId=42456)|Diese Site ist speziell auf Newsgroups, Foren und andere Communityressourcen ausgerichtet, die für Entwickler von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Interesse sind.|  
+|[Microsoft Hilfe- und Supportcenter](https://go.microsoft.com/fwlink/?linkid=16419)|Verwenden Sie diese Website, um sich mit einer Frage an einen Supportmitarbeiter von [!INCLUDE[msCoName](../../includes/msconame-md.md)] zu wenden.|  
   
   

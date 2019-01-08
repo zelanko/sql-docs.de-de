@@ -14,29 +14,29 @@ ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 348ee13872db0ae6e9900290404d8db88122b123
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4271188149c8bafaaf256fa5056dd25ffc39aa38
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194530"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354599"
 ---
 # <a name="about-the-sql-server-license-terms"></a>Informationen zu den SQL Server-Lizenzbedingungen
   Die [!INCLUDE[msCoName](../includes/msconame-md.md)]-Softwarelizenzbedingungen werden während der Installation von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf den lokalen Computer kopiert. Wenn mehrere Instanzen derselben Edition und Sprache von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf demselben Computer installiert sind, gelten die Lizenzbedingungen für alle Instanzen dieser Edition und Sprache. Die Dateien geschrieben werden: % ProgramFiles%\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\license oder % ProgramFiles(x86) % \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Begriffe\\.  
   
- Wenn mehrere Instanzen des gleichen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edition und Sprache, die auf dem gleichen Computer installiert sind, eine einzelne Kopie der Lizenzbedingungen gelten für alle Instanzen dieser Edition und Sprache.  
+ Wenn mehrere Instanzen derselben Edition und Sprache von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf demselben Computer installiert sind, gelten die Lizenzbedingungen für alle Instanzen dieser Edition und Sprache.  
   
- Der Name der Datei mit den Lizenzbedingungen gibt die Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und die installierte Sprachversion von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] an. Der Name der Datei Lizenzbedingungen wird im Format: SQLServer2014_License_Edition_\<TYPE > _\<LCID > RTF. Zum Beispiel:  
+ Der Name der Datei mit den Lizenzbedingungen gibt die Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und die installierte Sprachversion von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] an. Der Name der Datei Lizenzbedingungen besitzt folgendes Format: SQLServer2014_License_Edition_\<TYPE > _\<LCID > RTF. Zum Beispiel:  
   
--   SQLServer2014_License_DEV_1033.rtf für [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer in der Sprachversion Englisch.  
+-   SQLServer2014_License_DEV_1033.rtf[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] für  Developer in der Sprachversion Englisch.  
   
--   SQLServer2014_License_EXPR_1033.rtf für [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Express in der Sprachversion Englisch.  
+-   SQLServer2014_License_EXPR_1033.rtf[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] für  Express in der Sprachversion Englisch.  
   
  TYPE gibt die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Edition an. Die folgenden Dateinamensegmente werden zum Identifizieren der Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet:  
   
--   ENT – Enterprise Edition: Server-/Clientzugriffslizenzen  
+-   ENT – Enterprise Edition: Server/Clientzugriffslizenz-Lizenzierung  
   
--   ENTCORE – Enterprise Edition: Core-basierte Lizenzierung  
+-   ENTCORE – Enterprise Edition: Core-based Licensing  
   
 -   BI – Business Intelligence  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48194530"
 |Russisch|RUS|1049|  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Lizenzierungsoptionen  
- Weitere Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Preis- und Lizenzierungsoptionen, finden Sie unter den [Microsoft SQL Server](http://www.microsoft.com/sqlserver/sql-server-2014.aspx) (http://www.microsoft.com/sqlserver/sql-server-2014.aspx) Website.  
+ Weitere Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Preis- und Lizenzierungsoptionen, finden Sie unter den [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (https://www.microsoft.com/sqlserver/sql-server-2014.aspx) Website.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Lizenzierungsüberlegungen für SQLServer](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   

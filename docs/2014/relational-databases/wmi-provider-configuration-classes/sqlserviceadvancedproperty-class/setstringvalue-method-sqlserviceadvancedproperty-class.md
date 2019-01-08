@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetStringValue Method (SqlServiceAdvancedProperty Class )
@@ -20,12 +18,12 @@ ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9f02ab6929e21c2d4f0d73bfdf55f0cdf18cc67e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0209f3d8e77cfe893a0e462fc9ccf3761da8dfa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076830"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373752"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>SetStringValue-Methode (SqlServiceAdvancedProperty-Klasse)
   Legt den Zeichenfolgenwert einer Eigenschaft fest.  
@@ -52,12 +50,12 @@ StrValue
 |*strValue gespeichert*|Ein Zeichenfolgenwert, der den Wert der erweiterten Eigenschaft angibt.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein `uint32` -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
+ Ein `uint32`-Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Eigenschaftswerttyp muss `string` damit die Eigenschaft auf einen Zeichenfolgenwert festgelegt werden kann.  
+ Der Eigenschaftswert muss dem Typ `string` entsprechen, damit die Eigenschaft auf einen Zeichenfolgenwert festgelegt werden kann.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Starten und Beenden von Diensten](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

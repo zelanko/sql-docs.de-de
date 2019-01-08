@@ -11,18 +11,18 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 6e3d145290ac0fb416df91c99337d0e5dc2e30a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018675"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373222"
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt räumliche Daten und räumliche Indizes. Ein *räumlicher Index* ist ein erweiterter Index, der es Ihnen ermöglicht, eine räumliche Spalte zu indizieren. Eine räumliche Spalte ist eine Tabellenspalte mit Daten eines räumlichen Datentyps wie beispielsweise `geometry` oder `geography`.  
   
 > [!IMPORTANT]  
->  Um eine ausführliche Beschreibung und Beispiele der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführten räumlichen Funktionen (z.B. Funktionen, die räumliche Indizes beeinflussen) zu erhalten, laden Sie das Whitepaper [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407)(Neue räumliche Funktionen in SQL Server 2012) herunter.  
+>  Um eine ausführliche Beschreibung und Beispiele der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführten räumlichen Funktionen (z.B. Funktionen, die räumliche Indizes beeinflussen) zu erhalten, laden Sie das Whitepaper [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(Neue räumliche Funktionen in SQL Server 2012) herunter.  
   
 ##  <a name="about"></a> Informationen zu räumlichen Indizes  
   
@@ -106,7 +106,7 @@ ms.locfileid: "51018675"
 #### <a name="deepest-cell-rule"></a>Tiefste-Zelle-Regel  
  Bei der Tiefste-Zelle-Regel wird die Tatsache genutzt, dass jede Zelle einer untergeordneten Ebene zu der ihr übergeordneten Zelle gehört: Eine Zelle auf Ebene 4 gehört zu einer Zelle auf Ebene 3, eine Zelle auf Ebene 3 gehört zu einer Zelle auf Ebene 2, und eine Zelle auf Ebene 2 gehört zu einer Zelle auf Ebene 1. Zum Beispiel gehört ein Objekt, das zu Zelle 1.1.1.1 gehört, auch zu Zelle 1.1.1, Zelle 1.1 und Zelle 1. Die Kenntnis solcher Beziehungen in der Zellenhierarchie wurde in den Abfrageprozessor integriert. Daher müssen nur die Zellen der tiefsten Ebene im Index verzeichnet werden, sodass im Index nur die minimale Menge an Informationen gespeichert werden muss.  
   
- In der folgenden Abbildung wird ein relativ kleines rautenförmiges Polygon durch den Mosaikprozess unterteilt. Für den Index wird der vordefinierte Zellen-pro-Objekt-Grenzwert 16 verwendet, die bei diesem kleinen Objekt nicht erreicht wird. Deshalb wird der Mosaikprozess bis zu Ebene 4 fortgesetzt. Das Polygon befindet sich in den folgenden Zellen der Ebene 1 bis Ebene 3: 4, 4.4, 4.4.10 und 4.4.14. Bei Verwendung der Tiefste-Zelle-Regel zählt das Mosaik jedoch nur die 12 Zellen auf Ebene 4: 4.4.10.13-15, 4.4.14.1-3, 4.4.14.5-7 und 4.4.14.9-11.  
+ In der folgenden Abbildung wird ein relativ kleines rautenförmiges Polygon durch den Mosaikprozess unterteilt. Für den Index wird der vordefinierte Zellen-pro-Objekt-Grenzwert 16 verwendet, die bei diesem kleinen Objekt nicht erreicht wird. Deshalb wird der Mosaikprozess bis zu Ebene 4 fortgesetzt. Das Polygon befindet sich in den folgenden Zellen der Ebene 1 bis Ebene 3: 4, 4.4 und 4.4.10 und 4.4.14. Bei Verwendung der Tiefste-Zelle-Regel zählt das Mosaik jedoch nur die 12 Zellen auf Ebene 4: 4.4.10.13-15 und 4.4.14.1-3, 4.4.14.5-7 und 4.4.14.9-11.  
   
  ![Tiefste-Zelle-Optimierung](../../database-engine/media/spndx-opt-deepest-cell.gif "Deepest-cell optimization")  
   
@@ -121,7 +121,7 @@ ms.locfileid: "51018675"
 >  Die **tessellation_scheme** -Einstellung eines räumlichen Index wird in der [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) -Katalogansicht angezeigt.  
   
 #### <a name="geometry-grid-tessellation-scheme"></a>Geometrieraster-Mosaikschema  
- Das GEOMETRY_AUTO_GRID-Mosaik ist das Standardschema für den `geometry`-Datentyp für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und höher.  Das GEOMETRY_GRID-Mosaik ist das einzige Mosaikschema, das für geometry-Datentypen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar ist. In diesem Abschnitt werden die Aspekte des Geometrierastermosaikschemas behandelt, die für die Arbeit mit räumlichen Indizes relevant sind: unterstützte Methoden und umgebende Felder.  
+ Das GEOMETRY_AUTO_GRID-Mosaik ist das Standardschema für den `geometry`-Datentyp für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und höher.  Das GEOMETRY_GRID-Mosaik ist das einzige Mosaikschema, das für geometry-Datentypen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verfügbar ist. In diesem Abschnitt werden die Aspekte des Geometrierastermosaikschemas behandelt, die für die Arbeit mit räumlichen Indizes relevant sind: unterstützte Methoden und umgebende Felder.  
   
 > [!NOTE]  
 >  Dieses Mosaikschema kann mit der USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID)-Klausel der [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung explizit angegeben werden.  
@@ -179,7 +179,7 @@ ms.locfileid: "51018675"
 ##  <a name="methods"></a> Von räumlichen Indizes unterstützte Methoden  
   
 ###  <a name="geometry"></a> Von räumlichen Indizes unterstützte geometry-Methoden  
- Räumliche Indizes unterstützen unter bestimmten Bedingungen die folgenden mengenorientierten geometry-Methoden: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() und STWithin(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel oder JOIN ON-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:  
+ Räumliche Indizes unterstützen unter bestimmten Bedingungen die folgenden mengenorientierten Geometry-Methoden: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() und STWithin(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel oder JOIN ON-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:  
   
  *geometrie1*.*Methodenname*(*geometrie2*)*Vergleichsoperator**gültige_Zahl*  
   
@@ -204,7 +204,7 @@ ms.locfileid: "51018675"
 -   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> Von räumlichen Indizes unterstützte geography-Methoden  
- Unter bestimmten Bedingungen unterstützen räumliche Indizes die folgenden mengenorientierten geography-Methoden: STIntersects(),STEquals() und STDistance(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:  
+ Unter bestimmten Bedingungen unterstützen räumliche Indizes die folgenden mengenorientierten Geography-Methoden: STIntersects(),STEquals() und STDistance(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:  
   
  *geographie1*.*Methodenname*(*geographie2*)*Vergleichsoperator**gültige_Zahl*  
   

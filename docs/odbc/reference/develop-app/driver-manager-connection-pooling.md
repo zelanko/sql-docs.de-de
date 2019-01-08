@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c247ab2681f2ff1b0891c15e0348a088f08e42c1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677579"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590934"
 ---
 # <a name="driver-manager-connection-pooling"></a>Verbindungspooling des Treiber-Managers
 Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool von Verbindungen verwendet werden, die nicht für jede Verwendung neu eingerichtet werden müssen. Sobald eine Verbindung erstellt und in einen Pool aufgenommen wurde, kann eine Anwendung diese Verbindung wiederverwenden, ohne den Prozess für die Verbindung abgeschlossen.  
@@ -30,12 +30,13 @@ Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool vo
   
  Neben der Leistung verbessert wurde können der Verbindungspooling-Architektur, eine Umgebung und die zugeordneten Verbindungen von mehreren Komponenten in einem einzigen Prozess verwendet werden. Dies bedeutet, dass eigenständige Komponenten im selben Prozess miteinander interagieren können, ohne die Sensibilisierung für einander. Eine Verbindung in einem Verbindungspool kann wiederholt von mehreren Komponenten verwendet werden.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Verbindungspooling kann von einer ODBC-Anwendung, die mit ODBC 2. verwendet werden. *x* Verhalten, solange die Anwendung aufrufen kann *SQLSetEnvAttr*. Verwendung von Verbindungspooling die Anwendung muss nicht ausführen, SQL-Anweisungen, die ändern, die Datenbank oder im Kontext der Datenbank, z. B. das Ändern der \< *Datenbank ** Name*>, geändert wird, die den Katalog ein, die eine die Datenquelle.  
-  
+
+
  Ein ODBC-Treiber muss vollständig threadsicher sein, und Verbindungen darf keinen Thread-Affinität, um Verbindungspooling zu unterstützen. Dies bedeutet, dass der Treiber ist einen Aufruf für einen Thread zu einem beliebigen Zeitpunkt zu verarbeiten und in einem Thread, um die Verbindung in einem anderen Thread verwendet werden, und klicken Sie auf ein dritter Thread getrennt eine Verbindung herstellen kann.  
   
- Der Verbindungspool wird vom Treiber-Manager verwaltet werden. Verbindungen aus dem Pool entnommen werden, wenn die Anwendung aufruft **SQLConnect** oder **SQLDriverConnect** und an den Pool zurückgegeben werden, wenn die Anwendung aufruft **SQLDisconnect**. Die Größe des Pools wird dynamisch, basierend auf die angeforderte Ressource-Zuordnungen. Verkleinert wird basierend auf das Timeout bei Inaktivität: Wenn eine Verbindung für eine bestimmte Zeitdauer inaktiv ist (er nicht verwendet wurde in einer Verbindung), wird Sie aus dem Pool entfernt. Die Größe des Pools wird nur durch Arbeitsspeicher und Einschränkungen auf dem Server beschränkt.  
+ Der Verbindungspool wird vom Treiber-Manager verwaltet werden. Verbindungen aus dem Pool entnommen werden, wenn die Anwendung aufruft **SQLConnect** oder **SQLDriverConnect** und an den Pool zurückgegeben werden, wenn die Anwendung aufruft **SQLDisconnect**. Die Größe des Pools wird dynamisch, basierend auf die angeforderte Ressource-Zuordnungen. Diese verkleinert basierend auf das Timeout bei Inaktivität: Wenn eine Verbindung für eine bestimmte Zeitdauer inaktiv ist (es wurde nicht in einer Verbindung verwendet), wird er aus dem Pool entfernt. Die Größe des Pools wird nur durch Arbeitsspeicher und Einschränkungen auf dem Server beschränkt.  
   
  Der Treiber-Manager bestimmt, ob eine bestimmte Verbindung in einem Pool soll, gemäß den übergebenen Argumenten verwendet werden **SQLConnect** oder **SQLDriverConnect**, und gemäß der Verbindungsattribute festgelegt, nachdem die Verbindung zugewiesen wurde.  
   

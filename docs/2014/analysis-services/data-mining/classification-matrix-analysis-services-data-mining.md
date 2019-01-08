@@ -19,12 +19,12 @@ ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2bb84f3ba798ba8d1af4132f6553e6428365ca9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7949729f3ebee87d06e5e591c46513c111b70016
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171300"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358892"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Klassifikationsmatrix (Analysis Services   Data Mining)
   In einer *Klassifikationsmatrix* werden alle im Modell enthaltenen Fälle in Kategorien unterteilt. Dabei wird festgestellt, ob der vorhergesagte Wert mit dem Istwert übereinstimmt. Alle Fälle in jeder Kategorie werden dann gezählt und die Summen in der Matrix angezeigt. Die Klassifikationsmatrix ist ein Standardtool für die Auswertung statistischer Modelle und auch unter dem Namen *Verwirrungsmatrix*bekannt.  
@@ -67,7 +67,7 @@ ms.locfileid: "48171300"
 |1|2|123|17|  
 |2|19|0|20|  
   
- Auch wenn der Bericht durch die zusätzlichen Spalten komplexer wird, können die zusätzlichen Angaben sehr nützlich sein, wenn Sie die kumulierten Kosten einer falschen Vorhersage beurteilen möchten. Um Summen für die Diagonalen zu erstellen oder die Ergebnisse verschiedener Zeilenkombinationen zu vergleichen, klicken Sie auf der Registerkarte **Klassifikationsmatrix** auf die Schaltfläche **Kopieren** , und fügen Sie den Bericht in Excel ein. Sie können auch einen Client wie den Data Mining-Client für Excel verwenden, der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höhere Versionen unterstützt, um direkt in Excel einen Klassifikationsbericht zu erstellen, der Zahlen und Prozentangaben enthält. Weitere Informationen finden Sie unter [SQL Server Data Mining](http://go.microsoft.com/fwlink/?LinkID=77733).  
+ Auch wenn der Bericht durch die zusätzlichen Spalten komplexer wird, können die zusätzlichen Angaben sehr nützlich sein, wenn Sie die kumulierten Kosten einer falschen Vorhersage beurteilen möchten. Um Summen für die Diagonalen zu erstellen oder die Ergebnisse verschiedener Zeilenkombinationen zu vergleichen, klicken Sie auf der Registerkarte **Klassifikationsmatrix** auf die Schaltfläche **Kopieren** , und fügen Sie den Bericht in Excel ein. Sie können auch einen Client wie den Data Mining-Client für Excel verwenden, der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höhere Versionen unterstützt, um direkt in Excel einen Klassifikationsbericht zu erstellen, der Zahlen und Prozentangaben enthält. Weitere Informationen finden Sie unter [SQL Server Data Mining](https://go.microsoft.com/fwlink/?LinkID=77733).  
   
 ## <a name="restrictions-on-the-classification-matrix"></a>Einschränkungen der Klassifikationsmatrix  
  Eine Klassifikationsmatrix kann nur mit diskreten vorhersagbaren Attributen verwendet werden.  
@@ -79,12 +79,12 @@ ms.locfileid: "48171300"
   
 |Thema|Links|  
 |------------|-----------|  
-|Bietet eine exemplarische Vorgehensweise zum Erstellen eines Prognosegütediagramms für das Targeted Mailing-Modell.|[Tutorial zu Data Mining-Grundlagen](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Überprüfen der Genauigkeit mit Prognosegütediagrammen &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|Erläutert verwandte Diagrammtypen.|[Prognosegütediagramm &#40;Analysis Services – Datamining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gewinndiagramm &#40;Analysis Services – Datamining&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Punktdiagramm &#40;Analysis Services – Datamining&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Beschreibt die Verwendungsmöglichkeiten für die Kreuzvalidierung bei Miningmodellen und Miningstrukturen.|[Übergreifende Überprüfung &#40;Analysis Services – Datamining&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Beschreibt Schritte zum Erstellen von Prognosegütediagrammen und anderen Genauigkeitsdiagrammen.|[Tests und Überprüfung miningmodelltasks und Anweisungen &#40;Datamining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Bietet eine exemplarische Vorgehensweise zum Erstellen eines Prognosegütediagramms für das Targeted Mailing-Modell.|[Lernprogramm zu Data Mining-Grundlagen](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Überprüfen der Genauigkeit mit Prognosegütediagrammen &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Erläutert verwandte Diagrammtypen.|[Prognosegütediagramm &#40;Analysis Services – Data Mining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gewinndiagramm &#40;Analysis Services – Data Mining&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Punktdiagramm &#40;Analysis Services – Data Mining&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Beschreibt die Verwendungsmöglichkeiten für die Kreuzvalidierung bei Miningmodellen und Miningstrukturen.|[Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Beschreibt Schritte zum Erstellen von Prognosegütediagrammen und anderen Genauigkeitsdiagrammen.|[Tasks und Anweisungen für Test und Überprüfung &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tests und Überprüfung &#40;Datamining&#41;](testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
   
   

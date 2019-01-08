@@ -1,5 +1,5 @@
 ---
-title: In-Database Python Analytics für SQL-Entwickler | Microsoft-Dokumentation
+title: Tutorial für datenbankinterne Python-Analyse für SQL-Entwickler – SQL Server-Machine Learning
 description: Informationen Sie zum Einbetten von Python-Code in SQL Server gespeicherte Prozeduren und T-SQL-Funktionen.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 728ab56a844a6c7a14f5de7e39abc5d38146c85a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560377"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596681"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Tutorial: In-Database Python Analytics für SQL-Entwickler
+# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Lernprogramm: In-Database Python Analytics für SQL-Entwickler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Tutorial für die SQL-Programmierer erfahren Sie mehr über Python-Integration durch Erstellen und Bereitstellen einer Python-basiertes-Machine learning-Lösung mit einem [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) Datenbank auf SQL Server. 
@@ -42,7 +42,7 @@ Ob Sie eine SQL-Programmierer noch nicht mit Python oder ein Python-Entwickler, 
 
 + [Lektion 2: Erstellen von Datenfunktionen mit benutzerdefinierten SQL-Funktionen](sqldev-py4-create-data-features-using-t-sql.md)
 
-+ [Lektion 3: Trainieren Sie und speichern Sie ein Python-Modell mithilfe von T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
++ [Lektion 3: Trainieren und Speichern eines Python-Modells mit T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 + [Lektion 4: Vorhersagen von möglichen Ergebnissen, die mit einem Python-Modell in einer gespeicherten Prozedur](sqldev-py6-operationalize-the-model.md)
 

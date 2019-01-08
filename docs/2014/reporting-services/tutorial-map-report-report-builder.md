@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Kartenbericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Kartenbericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2218fdb184fb4fe67d110b95c42f10f761ef3975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098850"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359862"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Lernprogramm: Kartenbericht (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie mehr über die Kartenfunktionen, mit denen Sie Berichtsdaten vor einem geografischen Hintergrund anzeigen können.  
@@ -63,9 +63,9 @@ ms.locfileid: "48098850"
 10. [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Im ersten Tutorial dieser Reihe erhalten Sie ausführliche Anweisungen zum Navigieren zu einem Berichtsserver, Auswählen einer Datenquelle, Erstellen eines Datasets und Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Schrittweise Anweisungen zum Navigieren zu einem Berichtsserver Auswählen einer Datenquelle, erstellen Sie ein Dataset, und führen Sie den Assistenten, finden Sie im erste Lernprogramm dieser Reihe: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
+ Ungefähre Dauer dieses Lernprogramms: 30 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -194,7 +194,7 @@ ms.locfileid: "48098850"
   
 9. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**).  
   
-     Das Resultset enthält sieben Spalten: "StoreKey", "StoreName", "SellingArea", "City", "County", "Sales" und "SpatialLocation". Diese Daten stellen einen Satz von Geschäften im Bundesstaat New York dar, in denen Verbrauchsgüter verkauft werden. Jede Zeile im Resultset enthält eine Geschäfts-ID, den Geschäftsnamen, die für die Produkte verfügbare Ausstellfläche, den Ort und das County, in dem sich das Geschäft befindet, den Jahresumsatz und die räumliche Position in Längen- und Breitengrad. Die Ausstellfläche liegt zwischen 455 Quadratfuß und 1125 Quadratfuß.  
+     Das Resultset werden sieben Spalten angezeigt: StoreKey "StoreName", den SellingArea, City, County, Vertrieb und SpatialLocation. Diese Daten stellen einen Satz von Geschäften im Bundesstaat New York dar, in denen Verbrauchsgüter verkauft werden. Jede Zeile im Resultset enthält eine Geschäfts-ID, den Geschäftsnamen, die für die Produkte verfügbare Ausstellfläche, den Ort und das County, in dem sich das Geschäft befindet, den Jahresumsatz und die räumliche Position in Längen- und Breitengrad. Die Ausstellfläche liegt zwischen 455 Quadratfuß und 1125 Quadratfuß.  
   
 10. Klicken Sie auf **Weiter**.  
   
@@ -581,7 +581,7 @@ ms.locfileid: "48098850"
 ## <a name="next-steps"></a>Nächste Schritte  
  Damit ist die exemplarische Vorgehensweise für das Hinzufügen einer Karte zum Bericht abgeschlossen.  
   
- Weitere Informationen finden Sie unter [Maps &#40;Berichts-Generator und SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) und im Blogeintrag [kartografischen Anpassung räumlicher Daten für SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) auf blogs.msdn.com.  
+ Weitere Informationen finden Sie unter [Maps &#40;Berichts-Generator und SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) und im Blogeintrag [kartografischen Anpassung räumlicher Daten für SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=152771) auf blogs.msdn.com.  
   
  Weitere Lernprogramme finden Sie unter [Tutorials &#40;Berichts-Generator&#41;](report-builder-tutorials.md).  
   

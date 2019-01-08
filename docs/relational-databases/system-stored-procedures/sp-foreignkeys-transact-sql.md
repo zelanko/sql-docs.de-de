@@ -18,12 +18,12 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c3ef9f2aa7ec6f5608e55f84efd35af25c1776a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0fc8552157e9864ed45306ec268fefb4eec87bf
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605178"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589945"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,32 +46,32 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@table_server =** ] **"***Table_server***"**  
+ [  **@table_server =** ] **"**_Table_server_**"**  
  Der Name des Verbindungsservers, für den Tabelleninformationen zurückgegeben werden sollen. *Table_server* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@pktab_name =** ] **"***Pktab_name***"**  
+ [  **@pktab_name =** ] **"**_Pktab_name_**"**  
  Der Name der Tabelle mit einem Primärschlüssel. *Pktab_name* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@pktab_schema =** ] **"***Pktab_schema***"**  
+ [  **@pktab_schema =** ] **"**_Pktab_schema_**"**  
  Der Name des Schemas mit einem Primärschlüssel. *Pktab_schema*ist **Sysname**, hat den Standardwert NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält dies den Namen des Besitzers.  
   
- [  **@pktab_catalog =** ] **"***Pktab_catalog***"**  
+ [  **@pktab_catalog =** ] **"**_Pktab_catalog_**"**  
  Der Name des Katalogs mit einem Primärschlüssel. *Pktab_catalog*ist **Sysname**, hat den Standardwert NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält dies den Namen der Datenbank.  
   
- [  **@fktab_name =** ] **"***Fktab_name***"**  
+ [  **@fktab_name =** ] **"**_Fktab_name_**"**  
  Der Name der Tabelle mit einem Fremdschlüssel. *Fktab_name*ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@fktab_schema =** ] **"***Fktab_schema***"**  
+ [  **@fktab_schema =** ] **"**_Fktab_schema_**"**  
  Der Name des Schemas mit einem Fremdschlüssel. *Fktab_schema*ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@fktab_catalog =** ] **"***Fktab_catalog***"**  
+ [  **@fktab_catalog =** ] **"**_Fktab_catalog_**"**  
  Der Name des Katalogs mit einem Fremdschlüssel. *Fktab_catalog*ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  None  
   
 ## <a name="result-sets"></a>Resultsets  
- Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Katalog ***.*** Schema ***.*** Tabelle*), die im Resultset dargestellt wird.  
+ Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (_Katalog_**.** _Schema_**.** _Tabelle_), die im Resultset dargestellt wird.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  

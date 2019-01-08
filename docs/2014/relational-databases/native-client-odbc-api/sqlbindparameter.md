@@ -14,12 +14,12 @@ ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3bea7e5bac71c3e4fdd90253f30a503dc44f44d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209000"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364692"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter` kann der Aufwand der Datenkonvertierung, wenn verwendet, um das Bereitstellen von Daten für beseitigen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber, was zu deutlichen Leistungszuwachs für sowohl die Client- und Serverkomponenten von Anwendungen. Zu den weiteren Vorteilen gehören geringere Verluste der Genauigkeit, wenn ungefähre numerische Datentypen eingefügt oder aktualisiert werden.  
@@ -57,6 +57,6 @@ ms.locfileid: "48209000"
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)   
- [SQLBindParameter-Funktion](http://go.microsoft.com/fwlink/?LinkId=59328)  
+ [SQLBindParameter-Funktion](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

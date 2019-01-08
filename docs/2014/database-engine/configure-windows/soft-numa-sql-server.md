@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/12/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
@@ -14,12 +13,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f6a14942e60e38405fa24f9b49e7a4ca34d72991
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9acd3857115a2f6fc13e74d4129630286a27323
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225050"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356131"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Konfigurieren von SQL Server zur Verwendung von Soft-NUMA (SQL Server)
 Moderne Prozessoren verfügen über mehrere bis viele Kerne pro Socket. Jeder Socket wird in der Regel als ein einzelner NUMA-Knoten dargestellt. Die SQL Server-Datenbank-Engine partitioniert pro NUMA-Knoten verschiedene interne Strukturen und Dienstthreads für Partitionen. Erhöht sich mit Prozessoren, die 10 oder mehr Kernen pro Socket enthält, verwenden die Software NUMA (Soft-NUMA), um die Hardware-NUMA-Knoten in der Regel aufgeteilt, Skalierbarkeit und Leistung.   
@@ -39,14 +38,14 @@ Die folgende Abbildung zeigt die Art der Informationen zu Soft-NUMA, die Sie in 
 
 ## <a name="manual-soft-numa"></a>Manueller Soft-NUMA
   
-So konfigurieren Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um Soft-NUMA manuell verwenden zu können, müssen Sie die Registrierung, um eine Affinitätsmaske für die Knoten-Konfiguration hinzufügen bearbeiten. Die Soft-NUMA-Maske kann als binärer Eintrag, als DWORD-Registrierungseintrag (hexadezimal oder dezimal) oder als QWORD-Registrierungseintrag (hexadezimal oder dezimal) angegeben werden. Verwenden Sie QWORD- oder BINARY-Registrierungseinträge, um mehr als die ersten 32 CPUs zu konfigurieren. (Die Verwendung von QWORD-Werten ist in Versionen vor Version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht möglich.) Zum Konfigurieren von Soft-NUMA müssen Sie [!INCLUDE[ssDE](../../includes/ssde-md.md)] neu starten.  
+So konfigurieren Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um Soft-NUMA manuell verwenden zu können, müssen Sie die Registrierung, um eine Affinitätsmaske für die Knoten-Konfiguration hinzufügen bearbeiten. Die Soft-NUMA-Maske kann als binärer Eintrag, als DWORD-Registrierungseintrag (hexadezimal oder dezimal) oder als QWORD-Registrierungseintrag (hexadezimal oder dezimal) angegeben werden. Verwenden Sie QWORD- oder BINARY-Registrierungseinträge, um mehr als die ersten 32 CPUs zu konfigurieren. (Die Verwendung von QWORD-Werten ist in Versionen vor Version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht möglich.) Zum Konfigurieren von Soft-NUMA müssen Sie [!INCLUDE[ssDE](../../includes/ssde-md.md)] neu starten.  
   
 > [!TIP]  
 >  Die Nummerierung der CPUs beginnt mit 0.  
   
  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- Betrachten Sie das folgende Beispiel. Ein Computer mit acht CPUs verfügt über keine NUMA-Hardware. Drei Soft-NUMA-Knoten werden konfiguriert. [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz A wird für die Verwendung der CPUs 0 bis 3 konfiguriert. Eine zweite [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz wird installiert und für die Verwendung der CPUs 4 bis 7 konfiguriert. Das Beispiel kann wie folgt visuell dargestellt werden:  
+ Betrachten Sie das folgende Beispiel. Ein Computer mit acht CPUs verfügt über keine NUMA-Hardware. Drei Soft-NUMA-Knoten werden konfiguriert. [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz A wird für die Verwendung der CPUs 0 bis 3 konfiguriert. Eine zweite [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz wird installiert und für die Verwendung der CPUs 4 bis 7 konfiguriert. Das Beispiel kann wie folgt visuell dargestellt werden:  
   
  `CPUs          0  1  2  3  4  5  6  7`  
   
@@ -56,7 +55,7 @@ So konfigurieren Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u
   
  Instanz A, auf der ein hohes Maß an E/A-Aktivität stattfindet, verfügt nun über zwei E/A-Threads und einen Thread für LAZY WRITER-Prozesse (verzögertes Schreiben), während Instanz B, auf der prozessorintensive Vorgänge ausgeführt werden, nur über einen E/A-Thread und einen Thread für LAZY WRITER-Prozesse verfügt. Den Instanzen können zwar unterschiedliche Mengen an Arbeitsspeicher zugewiesen werden, aber im Unterschied zu Hardware-NUMA erhalten beide Instanzen den Arbeitsspeicher aus demselben Betriebssystem-Speicherblock und es ist keine Speicher-Prozessor-Affinität vorhanden.  
   
- Der LAZY WRITER-Thread ist an die SQL OS-Sicht der physischen NUMA-Arbeitsspeicherknoten gebunden. Daher entsprechen die physischen NUMA-Knoten der Hardware der Anzahl der erstellten LAZY WRITER-Threads. Weitere Informationen finden Sie unter [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ Der LAZY WRITER-Thread ist an die SQL OS-Sicht der physischen NUMA-Arbeitsspeicherknoten gebunden. Daher entsprechen die physischen NUMA-Knoten der Hardware der Anzahl der erstellten LAZY WRITER-Threads. Weitere Informationen finden Sie unter [How It Works: Soft-NUMA, e/a-Abschlussthread, Lazy Writer-Worker und Speicherknoten](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]  
 >  Die **Soft-NUMA** -Registrierungsschlüssel werden nicht kopiert, wenn Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

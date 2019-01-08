@@ -11,12 +11,12 @@ ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5b33d4c3e7f5ea10efc89fc5b7234bf2faaf0c7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: b2f65e31a6a1c42d4d2bfd79f6daf0139edcd49f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146750"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358422"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt einen Satz von Vorlagen bereit, mit deren Hilfe Sie schnell XMLA-Skripts oder DMX/MDX-Abfragen erstellen, KPIs in einem Cube oder einem tabellarischen Modell erstellen, Skripts für Sicherungs- und Wiederherstellungsvorgänge schreiben und viele andere Tasks ausführen können. Die Vorlagen befinden sich im **Vorlagen-Explorer** von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -57,7 +57,7 @@ ms.locfileid: "50146750"
      Wechseln Sie auf die Registerkarte **Meldungen** , um die Anzahl der zurückgegebenen Datensätze, Fehler, Abfrageanweisungen und andere beliebige Meldungen anzuzeigen, die mit der Ausführung der Abfrage verbunden sind. Wenn Sie z. B. eine DAX-Anweisung für ein Modell ausführen, das im Direct Query-Modus ausgeführt wird, wird die von der xVelocity-Engine für Datenanalyse im Arbeitsspeicher (VertiPaq) generierte Transact-SQL-Anweisung angezeigt.  
   
 ##  <a name="BKMK_Building_Queries"></a> Erstellen und Ausführen einer MDX-Abfrage für ein tabellarisches Modell mit einer Vorlage  
- In diesem Beispiel wird verdeutlicht, wie Sie in SQL Server Management Studio eine MDX-Abfrage erstellen, indem Sie eine tabellarische Modelldatenbank als Datenquelle verwenden. Um dieses Beispiel auf Ihrem Computer zu wiederholen, können Sie das [Adventureworks-Beispielprojekt mit einem tabellarischen Modell herunterladen](http://go.microsoft.com/fwlink/?LinkId=231183).  
+ In diesem Beispiel wird verdeutlicht, wie Sie in SQL Server Management Studio eine MDX-Abfrage erstellen, indem Sie eine tabellarische Modelldatenbank als Datenquelle verwenden. Um dieses Beispiel auf Ihrem Computer zu wiederholen, können Sie das [Adventureworks-Beispielprojekt mit einem tabellarischen Modell herunterladen](https://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
 >  Es ist nicht möglich, MDX-Abfragen für tabellarische Modelle zu verwenden, die im DirectQuery-Modus bereitgestellt werden. Sie können jedoch äquivalente Abfragen senden, indem Sie die DAX-Tabellenabfragen in Verbindung mit dem EVALUATE-Befehl verwenden. Weitere Informationen finden Sie unter [Parameter für DAX-Abfragen](https://msdn.microsoft.com/library/gg492200(v=sql.120).aspx).  
@@ -214,7 +214,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Process Partition|Zeigt, wie Sie mithilfe des XMLA `Batch`-Befehls in Verbindung mit dem `Parallel`-Element und dem `Process`-Befehl eine Partition durch eine parallele Stapeloperation vollständig verarbeiten.|  
 ||Wiederherstellung|Zeigt, wie Sie mithilfe des XMLA `Restore`-Befehls eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank aus einer vorhandenen Sicherungsdatei wiederherstellen.|  
 ||Synchronisieren|Zeigt, wie Sie den XMLA-Befehl `Synchronize` verwenden können, um eine andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank mit der aktuellen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank mithilfe der Option SkipMembership für das SynchronizeSecurity-Tag zu synchronisieren.|  
-|XMLA\Schemarowsets|Discover Schema Rowsets|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt eines DISCOVER_SCHEMA_ROWSETS-Schemarowsets abrufen.|  
+|XMLA\Schemarowsets|Ermitteln von Schemarowsets|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt eines DISCOVER_SCHEMA_ROWSETS-Schemarowsets abrufen.|  
 |XMLA\Serverstatus|Verbindungen|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt eines DISCOVER_CONNECTIONS-Schemarowsets abrufen.|  
 ||Jobs|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt eines DISCOVER_JOBS-Schemarowsets abrufen.|  
 ||Speicherorte|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt des DISCOVER_LOCATIONS-Schemarowsets unter Angabe des Pfades zum Standort der Sicherungsdateien abrufen.|  

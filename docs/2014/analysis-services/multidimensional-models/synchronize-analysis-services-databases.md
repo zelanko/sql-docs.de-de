@@ -16,12 +16,12 @@ ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bede06ab45511cbb1ec96aefb7e933f077bbe92c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3b80a13d61e1ddb1187f8114f756484dd608ad7b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147855"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352160"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchronisieren von Analysis Services-Datenbanken
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] umfasst eine Funktion für die Datenbanksynchronisierung, mit der zwei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken auf den gleichen Stand gebracht werden, indem die Daten und Metadaten aus einer Datenbank auf einem Quellserver in eine Datenbank auf einem Zielserver kopiert werden. Die Funktion für die Datenbanksynchronisierung kann für folgende Aufgaben verwendet werden:  
@@ -41,7 +41,7 @@ ms.locfileid: "50147855"
  Zum Synchronisieren von Datenbanken führen Sie den Assistenten zum Synchronisieren einer Datenbank aus, um die Datenbanken sofort zu synchronisieren, oder Sie generieren mit dem Assistenten ein Synchronisierungsskript, das Sie später ausführen können. Die Verfügbarkeit und Skalierbarkeit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken und des Cubes können mit beiden Verfahren gesteigert werden.  
   
 > [!NOTE]  
->  Die folgenden Whitepapers beziehen sich zwar auf frühere Versionen von Analysis Services, gelten aber weiterhin für skalierbare mehrdimensionale Lösungen, die mit SQL Server 2012 erstellt wurden. Weitere Informationen finden Sie unter [Horizontale Skalierung bei Abfragen für Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253136) und [Horizontale Skalierung bei Abfragen für Analysis Services mit schreibgeschützten Datenbanken](http://go.microsoft.com/fwlink/?LinkId=253137.)  
+>  Die folgenden Whitepapers beziehen sich zwar auf frühere Versionen von Analysis Services, gelten aber weiterhin für skalierbare mehrdimensionale Lösungen, die mit SQL Server 2012 erstellt wurden. Weitere Informationen finden Sie unter [Horizontale Skalierung bei Abfragen für Analysis Services](https://go.microsoft.com/fwlink/?LinkId=253136) und [Horizontale Skalierung bei Abfragen für Analysis Services mit schreibgeschützten Datenbanken](https://go.microsoft.com/fwlink/?LinkId=253137.)  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Auf dem Zielserver, auf dem die Datenbanksynchronisierung initiiert wird, müssen Sie Mitglied der Serveradministratorrolle von Analysis Services sein. Auf dem Quellserver muss das Windows-Benutzerkonto über Vollzugriff auf die Quelldatenbank verfügen. Wenn Sie die Datenbank interaktiv synchronisieren, sollten Sie beachten, dass die Synchronisierung im Sicherheitskontext der Windows-Benutzeridentität ausgeführt wird. Wenn dem Konto der Zugriff auf bestimmte Objekte verweigert wurde, werden diese Objekte aus dem Vorgang ausgeschlossen. Weitere Informationen zu serveradministratorrollen und Datenbankberechtigungen finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) und [Erteilen von Datenbankberechtigungen &#40; Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "50147855"
  Deaktivieren Sie die verzögerte Aggregationsverarbeitung, falls sie auf dem Quellserver verwendet wird. Im Hintergrund verarbeitete Aggregationen können die Datenbanksynchronisierung beeinträchtigen. Weitere Informationen zum Festlegen dieser Servereigenschaft finden Sie unter [OLAP Properties](../server-properties/olap-properties.md).  
   
 > [!NOTE]  
->  Die Datenbankgröße trägt maßgeblich zur Entscheidung bei, ob die Synchronisierung ein geeigneter Ansatz ist. Es gibt keine festen Anforderungen, wenn die Synchronisierung jedoch zu langsam verläuft, sollten Sie die parallele Synchronisierung mehrerer Server in Betracht ziehen, die im technischen Artikel [Bewährte Methoden für die Synchronisierung in Analysis Services](http://go.microsoft.com/fwlink/?LinkID=253136)beschrieben wird.  
+>  Die Datenbankgröße trägt maßgeblich zur Entscheidung bei, ob die Synchronisierung ein geeigneter Ansatz ist. Es gibt keine festen Anforderungen, aber wenn die Synchronisierung zu langsam verläuft, sollten Sie Synchronisierung mehrerer Server gleichzeitig, wie im technischen Artikel beschrieben: [Bewährte Methoden für die Synchronisierung von Analysis Services](https://go.microsoft.com/fwlink/?LinkID=253136).  
   
 ## <a name="synchronize-database-wizard"></a>Assistent zum Synchronisieren einer Datenbank  
  Verwenden Sie den Assistenten zum Synchronisieren einer Datenbank, um eine unidirektionale Synchronisierung von einer Quell- zu einer Zieldatenbank auszuführen oder um ein Skript zu generieren, in dem ein Datenbanksynchronisierungsvorgang angegeben ist. Während des Synchronisierungsvorgangs können Sie sowohl lokale als auch Remotepartitionen synchronisieren und auswählen, ob Rollen eingeschlossen werden sollen.  

@@ -1,22 +1,24 @@
 ---
-title: Wie in HDFS der Abfrage in einer SQL Server-big Data-Cluster | Microsoft-Dokumentation
+title: Abfragen von HDFS-Daten im Speicherpool
+titleSuffix: SQL Server 2019 big data clusters
 description: Dieses Tutorial veranschaulicht, wie Sie HDFS-Daten in eine SQL Server-2019 big Data-Cluster (Vorschau) Abfragen. Sie erstellen eine externe Tabelle für Daten im Speicherpool und anschließend eine Abfrage ausführen.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/11/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: c6f0f01936d5b6e570c2bff53d19ae7a64f151ab
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 78b78fafa8b2dce197fae98ef42b763cc0fa2f4e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644170"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432173"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Abfragen von HDFS in eine SQL Server-big Data-cluster
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Lernprogramm: HDFS-Abfrage in einer SQL Server-big Data-cluster
 
-Dieses Tutorial veranschaulicht, wie Sie HDFS-Daten in eine SQL Server-2019 big Data-Cluster Abfragen.
+Dieses Tutorial veranschaulicht, wie Sie HDFS-Daten in eine SQL Server-2019 big Data-Cluster (Vorschau) Abfragen.
 
 In diesem Tutorial erfahren Sie, wie Sie:
 
@@ -27,19 +29,19 @@ In diesem Tutorial erfahren Sie, wie Sie:
 > [!TIP]
 > Falls gewünscht, können Sie herunterladen und Ausführen eines Skripts für die Befehle in diesem Tutorial. Anweisungen finden Sie in der [Virtualisierung Datenstichproben](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) auf GitHub.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a id="prereqs"></a> Erforderliche Komponenten
 
-- [Bereitstellen einen big Data-Cluster in Kubernetes](deployment-guidance.md).
-- [Installieren Sie Studio für Azure Data und die Erweiterung für SQL Server-2019](deploy-big-data-tools.md).
-- [Laden Sie Beispieldaten in den Cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Big Data-tools](deploy-big-data-tools.md)
+   - **"kubectl"**
+   - **Azure Data Studio**
+   - **SQL Server-2019-Erweiterung**
+- [Laden Sie Beispieldaten in Ihre big Data-cluster](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-to-hdfs"></a>Erstellen einer externen Tabelle in HDFS
 
 Der Speicherpool enthält Web Clickstream-Daten in eine CSV-Datei in HDFS gespeichert. Verwenden Sie die folgenden Schritte aus, um eine externe Tabelle zu definieren, die die Daten in dieser Datei zugreifen kann.
 
-1. Verbinden Sie in Azure Data Studio mit der SQL Server-Masterinstanz von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](deploy-big-data-tools.md#master).
+1. Verbinden Sie in Azure Data Studio mit der SQL Server-Masterinstanz von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](connect-to-big-data-cluster.md#master).
 
 2. Doppelklicken Sie auf die Verbindung in der **Server** Fenster im Server-Dashboard für die master-SQL Server-Instanz angezeigt wird. Wählen Sie **neue Abfrage**.
 

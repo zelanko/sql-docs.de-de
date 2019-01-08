@@ -10,20 +10,20 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bfcac13965456203cbdea0fdad55fd83f8f5fae1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018155"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353216"
 ---
 # <a name="upgrade-data-quality-services"></a>Aktualisieren von Data Quality Services
   Dieses Thema enthält Informationen dazu, wie Sie die vorhandene Data Quality Services-Installation (DQS) auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 aktualisieren. Während des Upgrades des Data Quality-Servers in DQS auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]muss auch das DQS-Datenbankschema aktualisiert werden.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   Sie müssen die DQS-Datenbanken sichern, bevor Sie DQS aktualisieren, um versehentliche Datenverluste während des Schemaupgrades zu verhindern. Informationen zum Sichern von DQS-Datenbanken finden Sie unter [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   Um eine Verbindung mit der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version des Data Quality-Servers herzustellen und Data Quality-Aufgaben auszuführen, können Sie die aktuelle oder eine frühere Version des Data Quality-Clients oder die [DQS-Bereinigungstransformation](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services verwenden.  
-> -   Nachdem Data Quality Services und Master Data Services auf [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 aktualisiert wurden, kann die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1-Version des Master Data Services-Add-Ins für Excel weiterverwendet werden. Frühere Versionen des Master Data Services-Add-Ins für Excel sind nach einem Upgrade auf SQL Server 2014 CTP2 jedoch nicht funktionsfähig. Sie können die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services-Add-Ins für Excel [hier](http://go.microsoft.com/fwlink/?LinkId=328664)herunterladen.  
+> -   Nachdem Data Quality Services und Master Data Services auf [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 aktualisiert wurden, kann die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1-Version des Master Data Services-Add-Ins für Excel weiterverwendet werden. Frühere Versionen des Master Data Services-Add-Ins für Excel sind nach einem Upgrade auf SQL Server 2014 CTP2 jedoch nicht funktionsfähig. Sie können die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services-Add-Ins für Excel [hier](https://go.microsoft.com/fwlink/?LinkId=328664)herunterladen.  
   
 ##  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
@@ -70,7 +70,7 @@ ms.locfileid: "51018155"
     5.  Nach dem erfolgreichen Upgrade des DQS-Datenbankschemas wird eine Abschlussmeldung angezeigt.  
   
 ##  <a name="Verify"></a> Überprüfen des Upgrades des DQS-Datenbankschemas  
- Um sicherzustellen, dass das DQS-Datenbankschema erfolgreich aktualisiert wurde, können Sie die aktuelle Version in den Datenbanken DQS_MAIN und DQS_PROJECTS überprüfen, indem Sie die A_DB_VERSION-Tabelle in der jeweiligen Datenbank abfragen. Gehen Sie folgendermaßen vor:  
+ Um sicherzustellen, dass das DQS-Datenbankschema erfolgreich aktualisiert wurde, können Sie die aktuelle Version in den Datenbanken DQS_MAIN und DQS_PROJECTS überprüfen, indem Sie die A_DB_VERSION-Tabelle in der jeweiligen Datenbank abfragen. Gehen Sie hierzu wie folgt vor:  
   
 1.  Starten Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der SQL Server-Instanz her, die das aktualisierte DQS-Datenbankschema enthält.  
   

@@ -11,12 +11,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d570104b705c55c926d3cf8e4c15af4111be29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a68fb27df3c1a00ca5b4cf615963d7d9ce4bf2d3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094450"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357163"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Konzepte von Reporting Services (SSRS)
   Dieses Thema bietet eine kurze Einführung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konzepte.  
@@ -58,7 +58,7 @@ ms.locfileid: "48094450"
  Verwenden Sie die SharePoint-Websiteadministratorseite auf einer SharePoint-Website, um Zugriffsberechtigungen für Berichte und berichtsbezogene Websiteinhalte zu verwalten.  
   
  **Zeitpläne**  
- Auf einem systemeigenen Berichtsserver können Zeitpläne für Berichte, freigegebene Datasets und Abonnements zum Abrufen von Daten und Übermitteln von Berichten und Datasetabfragen zu bestimmten Zeitpunkten oder außerhalb von Spitzenzeiten festgelegt werden. Zeitpläne können einmal oder kontinuierlich in stündlichen, täglichen, wöchentlichen oder monatlichen Intervallen ausgeführt werden. Weitere Informationen finden Sie unter [Zeitpläne](subscriptions/schedules.md).  
+ Auf einem systemeigenen Berichtsserver können Zeitpläne für Berichte, freigegebene Datasets und Abonnements zum Abrufen von Daten und Übermitteln von Berichten und Datasetabfragen zu bestimmten Zeitpunkten oder außerhalb von Spitzenzeiten festgelegt werden. Zeitpläne können einmal oder kontinuierlich in stündlichen, täglichen, wöchentlichen oder monatlichen Intervallen ausgeführt werden. Weitere Informationen finden Sie unter [Schedules](subscriptions/schedules.md).  
   
  **Subscriptions and delivery (Abonnements und Übermittlung)**  
  Ein Abonnement ist eine Anforderung zur Übermittlung eines Berichts zu einem bestimmten Zeitpunkt oder als Reaktion auf ein Ereignis in dem im Abonnement angegebenen Anwendungsdateiformat. Abonnements stellen eine Alternative zum Ausführen eines Berichts bei Bedarf bereit. Jedes Mal, wenn Sie einen bedarfsgesteuerten Bericht anzeigen möchten, müssen Sie den Bericht aktiv auswählen. Im Gegensatz dazu können Abonnements dazu verwendet werden, die Übermittlung eines Berichts zu planen und zu automatisieren. Sie können Berichte an einen E-Mail-Posteingang oder eine Dateifreigabe übermitteln. Weitere Informationen finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "48094450"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt eine erweiterbare Architektur bereit, mit der Sie Berichtslösungen anpassen können. Der Berichtsserver unterstützt benutzerdefinierte Authentifizierungserweiterungen, Datenverarbeitungserweiterungen, Berichtsverarbeitungserweiterungen, Renderingerweiterungen und Übermittlungserweiterungen, und die Erweiterungen, die den Benutzern zur Verfügung stehen, sind in der Konfigurationsdatei "RSReportServer.config" konfigurierbar. Sie können z. B. die Exportformate, die der Berichts-Viewer verwenden darf, einschränken. Übermittlungserweiterungen und Berichtsverarbeitungserweiterungen sind zwar optional, jedoch erforderlich, wenn Sie die Berichtsverteilung oder benutzerdefinierte Steuerelemente unterstützen möchten. Weitere Informationen finden Sie unter [Erweiterungen &#40;SSRS&#41;](extensions-ssrs.md).  
   
  **Berichtszugriff**  
- Beim bedarfsgesteuerten Zugreifen können Benutzer die Berichte aus einem Berichtanzeigetool auswählen. Je nach Konfiguration des Berichtsservers, können Sie Berichts-Manager eine [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0-Webpart, eine SharePoint-Bibliothek beim [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installiert ist, im integrierten SharePoint-Modus, ein eingebettetes ReportViewer-Steuerelement oder einen Browser mit URL Zugriff. Weitere Informationen zum bedarfsgesteuerten Zugriff auf Berichte finden Sie unter [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ Beim bedarfsgesteuerten Zugreifen können Benutzer die Berichte aus einem Berichtanzeigetool auswählen. Je nach Berichtsserverkonfiguration können Sie den Berichts-Manager, einen [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0-Webpart, eine SharePoint-Bibliothek (sofern [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im integrierten SharePoint-Modus installiert ist), ein eingebettetes ReportViewer-Steuerelement oder einen Browser verwenden. Weitere Informationen zum bedarfsgesteuerten Zugriff auf Berichte finden Sie unter [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
  Abonnements stellen eine Alternative zum Ausführen eines Berichts bei Bedarf bereit. Weitere Informationen finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48094450"
  **Berichte und Berichtsdefinitionen**  
  **RDL.** Eine Berichtsdefinition ist eine XML-Datei, die einer XML-Grammatik entspricht, der so genannten Berichtsdefinitionssprache (RDL, Report Definition Language). In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]erstellen Sie eine Berichtsdefinition in einem Tool, zum Beispiel im Berichts-Generator oder im Berichts-Designer. Es enthält Elemente, die Datenquellenverbindungen, Abfragen zum Abrufen von Daten, Ausdrücken, Parametern, Bildern, Textfeldern, Tabellen und einem beliebigen anderen Entwurfszeitlayout definieren. Weitere Informationen finden Sie unter [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
- **RDLX.** Eine Berichtsdefinition in RDLX ist eine RDL-Datei mit internen Erweiterungen, die die [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Visualisierungserfahrung ermöglichen. Weitere Informationen finden Sie unter [Power View-Übersicht](http://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
+ **RDLX.** Eine Berichtsdefinition in RDLX ist eine RDL-Datei mit internen Erweiterungen, die die [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Visualisierungserfahrung ermöglichen. Weitere Informationen finden Sie unter [Power View-Übersicht](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
   
  **RDLC.** Der Visual Studio-Berichts-Designer erzeugt Clientberichtsdefinitionsdateien (Dateierweiterung .rdlc) im XML-Format zur Verwendung mit dem ReportViewer-Steuerelement.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "48094450"
   
 -   **Diagramm.** Ein Diagramm stellt Daten grafisch dar. Beispiele für Diagramme sind Balken-, Kreis- und Liniendiagramme, es werden jedoch weit mehr Arten unterstützt. Weitere Informationen finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](report-design/charts-report-builder-and-ssrs.md).  
   
--   **Messgerät.** Ein Messgerät präsentiert Daten als Bereich mit einem Indikator, der auf einen bestimmten Wert innerhalb des Bereichs zeigt. Messgeräte werden verwendet, um Key Performance Indicators (KPIs) und andere Daten anzuzeigen. Beispiele für Messgeräte umfassen lineare und runde Ausführungen. Weitere Informationen finden Sie unter [Gauges &#40;Report Builder and SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md).  
+-   **Messgerät.** Ein Messgerät präsentiert Daten als Bereich mit einem Indikator, der auf einen bestimmten Wert innerhalb des Bereichs zeigt. Messgeräte werden verwendet, um Key Performance Indicators (KPIs) und andere Daten anzuzeigen. Beispiele für Messgeräte umfassen lineare und runde Ausführungen. Weitere Informationen finden Sie unter [Messgeräte &#40;Berichts-Generator und SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md).  
   
 -   **Karte.** Mit einer Karte können Daten vor einem geografischen Hintergrund präsentiert werden. Kartendaten können räumliche Daten aus einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Abfrage, einer ESRI-Shape-Datei oder aus [!INCLUDE[msCoName](../includes/msconame-md.md)] Bing-Kartenkacheln sein. Räumliche Daten bestehen aus Sätzen von Koordinaten zur Definition von Polygonen, die Formen oder Bereiche darstellen, von Linien, die Routen oder Pfade darstellen, und von Punkten, die durch Marker dargestellt werden. Sie können aggregierte Daten Kartenelementen zuordnen, um deren Farbe und Größe automatisch zu verändern. So kann der Markertyp für ein Geschäft auf Grundlage der Umsätze oder die Farbe für eine Straße auf Grundlage der Geschwindigkeitsbegrenzung variieren. Weitere Informationen finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
   
@@ -219,8 +219,8 @@ Diagramm für die Berichtsverarbeitung
  Ein exportierter Bericht ist ein vollständig ausgelagerter und in einem bestimmten Dateiformat gespeicherter Bericht. Exportformate hängen von installierten Renderingerweiterungen ab und können angepasst werden. Standardmäßig schließen Exportformate Excel, Word, XML, PDF, TIFF und CSV ein. Weitere Informationen finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Reporting Services-Funktionen und Tasks &#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   
- [Technische Referenz (SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)   
+ [Reporting Services-Funktionen und -Tasks &#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   
+ [Technische Referenz &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

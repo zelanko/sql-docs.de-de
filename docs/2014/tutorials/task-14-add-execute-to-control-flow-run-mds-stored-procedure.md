@@ -13,15 +13,15 @@ ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9e2f62236d844a6ded850f33207bad9da082ce62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75529b9880183a644abdbdce1f6174c375245ba2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177290"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355843"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Aufgabe 14: Hinzufügen von Execute SQL Task zur Ablaufsteuerung, um die gespeicherte Prozedur für MDS auszuführen
-  Nachdem Sie Daten in die Stagingtabellen von MDS geladen haben, müssen Sie eine gespeicherte Prozedur ausführen, die der Tabelle zugeordnet ist, um die Daten aus dem Staging in die entsprechenden Tabellen in der MDS-Datenbank zu laden. Diese gespeicherte Prozedur hat zwei erforderliche Parameter, die Sie übergeben müssen: LogFlag und VersionName. LogFlag gibt an, ob Transaktionen während des Stagingprozesses protokolliert werden, und VersionName gibt die Version des Modells an. Finden Sie unter [gespeicherte Stagingprozedur](http://msdn.microsoft.com/library/hh231028.aspx) Weitere Informationen.  
+  Nachdem Sie Daten in die Stagingtabellen von MDS geladen haben, müssen Sie eine gespeicherte Prozedur ausführen, die der Tabelle zugeordnet ist, um die Daten aus dem Staging in die entsprechenden Tabellen in der MDS-Datenbank zu laden. Diese gespeicherte Prozedur hat zwei erforderliche Parameter, die Sie übergeben müssen: LogFlag und VersionName. LogFlag gibt an, ob Transaktionen während des Stagingprozesses protokolliert werden, und VersionName gibt die Version des Modells an. Finden Sie unter [gespeicherte Stagingprozedur](https://msdn.microsoft.com/library/hh231028.aspx) Weitere Informationen.  
   
  In dieser Aufgabe fügen Sie der Ablaufsteuerung den Task "SQL ausführen" hinzu, um die gespeicherte Prozedur aufzurufen und die bereitgestellten Daten in die entsprechenden MDS-Tabellen zu laden.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48177290"
   
 5.  Mithilfe der **Variablen** Fenster, fügen Sie zwei neue Variablen mit den folgenden Einstellungen hinzu. Wenn Sie nicht sehen die **Variablen** Fenster klicken Sie auf **SSIS** auf der Menüleiste und auf **Variablen**.  
   
-    |Name|Datentyp|value|  
+    |Name|Datentyp|Wert|  
     |----------|---------------|-----------|  
     |LogFlag|Int32|1|  
     |VersionName|Zeichenfolge|VERSION_1|  

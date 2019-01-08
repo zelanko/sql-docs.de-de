@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
@@ -13,19 +12,19 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc83fa7dc0d9692456cf99f5a77d3723a137963f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40f234a7091d923dd08c943ca884d6075d953fb3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117005"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360887"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Ziel auswählen (SQL Server-Import/Export-Assistent)
   Verwenden der **wählen Sie ein Ziel** Seite an das Ziel der Daten, die Sie kopieren möchten.  
   
  Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import / Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Weitere Informationen zu den Optionen zum Starten des Assistenten als auch die Berechtigungen erforderlich, um den Assistenten erfolgreich ausführen, finden Sie unter [führen Sie die SQL Server-Import / Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
   
- Der Zweck der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import / Export-Assistenten Daten aus einer Quelle in ein Ziel kopiert werden. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ Mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="static-options"></a>Statische Optionen  
  **Ziel**  
@@ -47,10 +46,10 @@ ms.locfileid: "48117005"
  Gibt an, ob das Paket die Microsoft Windows-Authentifizierung verwenden soll, um sich bei der Datenbank anzumelden. Im Sinne einer größeren Sicherheit wird die Windows-Authentifizierung empfohlen.  
   
  **SQL Server-Authentifizierung verwenden**  
- Gibt an, ob das Paket zu verwendende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung für die Anmeldung an der Datenbank. Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, müssen Sie einen Benutzernamen und ein Kennwort angeben.  
+ Gibt an, ob das Paket die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden soll, um sich bei der Datenbank anzumelden. Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, müssen Sie einen Benutzernamen und ein Kennwort angeben.  
   
  **Benutzername**  
- Geben Sie einen Benutzernamen für die Verbindung mit der bei Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.  
+ Geben Sie einen Benutzernamen für die Datenbankverbindung an, wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden.  
   
  **Kennwort**  
  Geben Sie das Kennwort für die Datenbankverbindung ein, wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden.  
@@ -83,7 +82,7 @@ ms.locfileid: "48117005"
  **Format**  
  Gibt an, ob die Datei Formatierung mit Trennzeichen, fester Breite oder rechtem Flatterrand verwendet.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |Mit Trennzeichen|Als Trennzeichen für Spalten von einem Trennzeichen, angegeben auf der **Spalten** Seite.|  
 |Feste Breite|Spalten haben eine feste Breite.|  
@@ -110,7 +109,7 @@ ms.locfileid: "48117005"
  Wählen Sie die Version von Excel aus, die von der Zielarbeitsmappe verwendet wird.  
   
 > [!NOTE]  
->  Beim Exportieren von Daten in einem [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] Ziel, verwendet der Assistent die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Excel-Zielkomponente. Informationen zu einige Überlegungen zur Verwendung und bekannten Problemen finden Sie unter [Excel-Ziel](../data-flow/excel-destination.md).  
+>  Wenn Sie Daten in ein [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]-Ziel exportieren, verwendet der Assistent die Excel-Zielkomponente von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Informationen zu einige Überlegungen zur Verwendung und bekannten Problemen finden Sie unter [Excel-Ziel](../data-flow/excel-destination.md).  
   
 ### <a name="destination--microsoft-access"></a>Ziel = Microsoft Access  
   
@@ -130,6 +129,6 @@ ms.locfileid: "48117005"
  Geben Sie das Kennwort des Benutzers für die Datenbankverbindung an, wenn der Datenbank eine Informationsdatei für die Arbeitsgruppe zugeordnet ist. Jedoch, wenn die Datenbank mit einem einzigen Kennwort für alle Benutzer geschützt ist, müssen Sie angeben dieses Werts in der **Datenlinkeigenschaften** Dialogfeld aus zugegriffen werden kann die **erweitert** Schaltfläche.  
   
  **Erweitert:**  
- Mithilfe des Dialogfelds **Datenlinkeigenschaften** geben Sie erweiterte Optionen an, z.B. das Datenbankkennwort oder eine nicht standardmäßige Informationsdatei für Arbeitsgruppen. Weitere Informationen zu OLE DB-Anbieter-Eigenschaften, suchen Sie im Abschnitt "Datenzugriff" des der [MSDN-Bibliothek](http://go.microsoft.com/fwlink/?linkid=62553).  
+ Mithilfe des Dialogfelds **Datenlinkeigenschaften** geben Sie erweiterte Optionen an, z.B. das Datenbankkennwort oder eine nicht standardmäßige Informationsdatei für Arbeitsgruppen. Weitere Informationen zu OLE DB-Anbieter-Eigenschaften, suchen Sie im Abschnitt "Datenzugriff" des der [MSDN-Bibliothek](https://go.microsoft.com/fwlink/?linkid=62553).  
   
   

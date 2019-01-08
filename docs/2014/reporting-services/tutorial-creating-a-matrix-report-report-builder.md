@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Erstellen eines Matrixberichts (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Erstellen eines Matrixberichts (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 659afc2b2d1536abcf34dad5a40a48efe0f17169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45e488f189cf9068531b927b1b28bfde621555da
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159500"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353397"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Lernprogramm: Erstellen eines Matrixberichts (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie, wie Sie auf Grundlage von Beispielumsatzdaten einen einfachen Matrixbericht erstellen. Die Matrix besitzt geschachtelte Zeilen- und Spaltengruppen und eine angrenzende Spaltengruppe. Sie erhalten auch Informationen zum Formatieren von Spalten und zum Drehen von Text. Die folgende Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den Sie erstellen werden.  
   
  ![Rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "Rs_CreateMatixReportTutorial")  
   
- Eine erweiterte Version des Berichts Sie in diesem Tutorial erstellen wird als ein Beispiel verfügbar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Berichts-Generator-Bericht. Weitere Informationen zum Herunterladen dieses Beispielberichts und anderer finden Sie unter [Beispielberichte für Berichts-Generator](http://go.microsoft.com/fwlink/?LinkId=184851).  
+ Eine erweiterte Version des Berichts Sie in diesem Tutorial erstellen wird als ein Beispiel verfügbar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Berichts-Generator-Bericht. Weitere Informationen zum Herunterladen dieses Beispielberichts und anderer finden Sie unter [Beispielberichte für Berichts-Generator](https://go.microsoft.com/fwlink/?LinkId=184851).  
   
 ##  <a name="BackToTop"></a> Lernziele  
  In diesem Tutorial lernen Sie Folgendes:  
@@ -74,7 +74,7 @@ ms.locfileid: "48159500"
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  Auf der **wählen Sie eine Verbindung mit einer Datenquelle** Seite, wählen Sie eine vorhandene Datenquelle oder auf dem Berichtsserver suchen und wählen Sie dann auf eine Datenquelle. Falls keine Datenquelle verfügbar ist oder Sie über keinen Zugriff auf einen Berichtsserver verfügen, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen zum Erstellen einer eingebetteten Datenquelle finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Auf der **wählen Sie eine Verbindung mit einer Datenquelle** Seite, wählen Sie eine vorhandene Datenquelle oder auf dem Berichtsserver suchen und wählen Sie dann auf eine Datenquelle. Falls keine Datenquelle verfügbar ist oder Sie über keinen Zugriff auf einen Berichtsserver verfügen, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen zum Erstellen einer eingebetteten Datenquelle finden Sie unter [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Klicken Sie auf **Weiter**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "48159500"
   
 13. Klicken Sie auf **Fertig stellen**.  
   
-     Die Matrix wird der Entwurfsoberfläche hinzugefügt. Im Bereich Zeilengruppen werden zwei Zeilengruppen angezeigt: Territory und SalesDate. Im Bereich Spaltengruppen werden zwei Spaltengruppen angezeigt: Subcategory und Product. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
+     Die Matrix wird der Entwurfsoberfläche hinzugefügt. Im Bereich Zeilengruppen werden zwei Zeilengruppen angezeigt: Territory und SalesDate. Im Bereich Spaltengruppen werden zwei Spaltengruppen angezeigt: SubCategory und Product. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
   
 14. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   

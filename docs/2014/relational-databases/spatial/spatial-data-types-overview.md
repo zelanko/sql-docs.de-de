@@ -14,12 +14,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62512268f5c4ee98fc20a142d97bf870d74d9ce6
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8f792d128d8d75bdf39a2b04b104b827d74c7b63
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018205"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376422"
 ---
 # <a name="spatial-data-types-overview"></a>Übersicht über räumliche Datentypen
   Es gibt zwei Typen von räumlichen Daten. Der `geometry`-Datentyp unterstützt planare bzw. euklidische Daten. Der `geometry`-Datentyp entspricht der Open Geospatial Consortium (OGC) Simple Features for SQL Specification Version 1.1.0. und ist auch mit SQL MM (ISO-Standard) kompatibel.  
@@ -27,7 +27,7 @@ ms.locfileid: "51018205"
  Zudem unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den `geography`-Datentyp, der ellipsenförmige Daten speichert, z. B. GPS-Breiten- und Längenkoordinaten.  
   
 > [!IMPORTANT]  
->  Laden Sie für eine ausführliche Beschreibung und Beispiele der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführten räumlichen Funktionen (z.B. Erweiterungen der räumlichen Datentypen) das folgende Whitepaper herunter: [New Spatial Features in SQL Server Code-Named „Denali“](http://go.microsoft.com/fwlink/?LinkId=226407)(Neue räumliche Funktionen in SQL Server Codename „Denali“).  
+>  Laden Sie für eine ausführliche Beschreibung und Beispiele der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführten räumlichen Funktionen (z.B. Erweiterungen der räumlichen Datentypen) das folgende Whitepaper herunter: [New Spatial Features in SQL Server Code-Named „Denali“](https://go.microsoft.com/fwlink/?LinkId=226407)(Neue räumliche Funktionen in SQL Server Codename „Denali“).  
   
 ##  <a name="objects"></a> Räumliche Datenobjekte  
  Der `geometry`-Datentyp und der `geography`-Datentyp unterstützen 16 räumliche Datenobjekte bzw. Instanztypen. Nur elf dieser Instanztypen sind jedoch *instanziierbar*. Sie können diese Instanzen erstellen und Sie in einer Datenbanken bearbeiten (oder instanziieren). Diese Instanzen leiten bestimmte Eigenschaften von ihren übergeordneten Datentypen, die sie als unterscheiden `Points`, **LineStrings, CircularStrings**, `CompoundCurves`, `Polygons`, `CurvePolygons` oder als mehrere `geometry`oder `geography` -Instanzen in einer `GeometryCollection`. Der `Geography`-Typ verfügt über einen zusätzlichen Instanztyp `FullGlobe`.  
@@ -99,9 +99,9 @@ ms.locfileid: "51018205"
   
  Weitere Informationen zu den OGC-Spezifikationen finden Sie in den folgenden Themen:  
   
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](http://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 2: SQL Options (OGC-Spezifikationen, Simple Feature Access, Teil 2: SQL-Optionen)](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
   
 ##  <a name="circular"></a> Kreisbogensegmente  
@@ -149,7 +149,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
   
 ```  
 LS LengthCS Length  
-5.65685…6.28318…  
+5.65685...6.28318...  
 ```  
   
  Die folgende Abbildung zeigt, wie die einzelnen Typen gespeichert werden (rote Linie stellt `LineString``@g1`, die blaue Linie stellt `CircularString``@g2`):  

@@ -19,12 +19,12 @@ ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4121f988d8cdaa22d2249a76aeb542f80fbebd8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d69af9ad01e001394836449f97c48b4dae8dab7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086350"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376932"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Naive Bayes-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus ist ein Klassifikationsalgorithmus, der in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zum Verwenden bei der Vorhersagemodellierung bereitgestellt wird. Der Algorithmus berechnet die bedingte Wahrscheinlichkeit zwischen Eingabespalten und vorhersagbaren Spalten und setzt die Unabhängigkeit der Spalten voraus. Diese Annahme der Unabhängigkeit führt zum Namen Naive Bayes.  
@@ -32,7 +32,7 @@ ms.locfileid: "48086350"
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Implementierung des Microsoft Naive Bayes-Algorithmus  
  Der Rechenaufwand für diesen Algorithmus ist geringer als der der anderen [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Algorithmen und ist daher hilfreich für das schnelle Generieren von Miningmodellen, um Beziehungen zwischen Eingabespalten und vorhersagbaren Spalten zu ermitteln. Der Algorithmus berücksichtigt jedes Eingabeattributwertpaar und Ausgabeattributwertpaar.  
   
- Eine Beschreibung der mathematischen Eigenschaften des Bayes-Theorems würde den Rahmen dieser Dokumentation sprengen. Weitere Informationen finden Sie unter Microsoft Research im Dokument mit dem Titel [Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=207029).  
+ Eine Beschreibung der mathematischen Eigenschaften des Bayes-Theorems ist über den Rahmen dieser Dokumentation hinaus. Weitere Informationen finden Sie unter Microsoft Research, die mit dem Titel im Dokument [Learning Bayesian Networks: Die Kombination aus wissen und statistischen Daten](https://go.microsoft.com/fwlink/?LinkId=207029).  
   
  Eine Beschreibung, wie Wahrscheinlichkeiten in allen Modellen angepasst werden, um potenzielle fehlende Werte zu berücksichtigen, finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48086350"
  Der Standardwert ist 0,5.  
   
  *MAXIMUM_STATES*  
- Gibt die maximale Anzahl der vom Algorithmus unterstützten Attributstatus an. Wenn die Anzahl der Status eines Attributs größer als die maximale Anzahl der Status ist, verwendet der Algorithmus die gebräuchlichsten Status und behandelt die restlichen Status als fehlend.  
+ Gibt die maximale Anzahl der vom Algorithmus unterstützten Attributstatus an. Wenn die Anzahl der Status ein Attributs größer als die maximale Anzahl von Status ist, wird der Algorithmus verwendet das Attribut die gebräuchlichsten Status und behandelt die restlichen Status als fehlend.  
   
  Der Standardwert ist 100.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48086350"
   
 |Modellierungsflag|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|Dies bedeutet, dass die Spalte zwei mögliche Statuswerte haben kann: Missing und Existing. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalte.|  
+|MODEL_EXISTENCE_ONLY|Dies bedeutet, dass für die Spalte zwei mögliche Zustände vorliegen können: fehlender und vorhandener Wert. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalte.|  
 |NOT NULL|Gibt an, dass die Spalte keinen NULL-Wert enthalten kann. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalte.|  
   
 ## <a name="requirements"></a>Anforderungen  
@@ -101,7 +101,7 @@ ms.locfileid: "48086350"
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Naive Bayes-Algorithmus](microsoft-naive-bayes-algorithm.md)   
- [Beispiele für Naive Bayes-Modells](naive-bayes-model-query-examples.md)   
- [Mingingmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Beispiele für Naive Bayes-Modellabfrage](naive-bayes-model-query-examples.md)   
+ [Miningmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da1a73aebef6637b97d400de19379f37a60315a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27c6e8b8a1eca70a9f6d7753c2c0c943444f65d7
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688508"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589778"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,24 +49,24 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@table_name=** ] **'***name***'**  
+ [  **@table_name=** ] **"**_Namen_**"**  
  Die Tabelle zum Zurückgeben von Kataloginformationen. *Namen* ist **nvarchar(384)**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
- [  **@table_owner=** ] **"***Besitzer***"**  
+ [  **@table_owner=** ] **"**_Besitzer_**"**  
  Der Tabellenbesitzer für die Tabelle zum Zurückgeben von Kataloginformationen. *Besitzer* ist **nvarchar(384)**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn der Besitzer nicht angegeben ist, werden die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden DBMS angewendet.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Spalten einer Tabelle zurückgegeben, wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt. Falls der Besitzer nicht angegeben ist und der aktuelle Benutzer keine Tabelle mit dem angegebenen Namen besitzt, wird nach einer Tabelle mit dem angegebenen Namen gesucht, deren Besitzer der Datenbankbesitzer ist. Wenn eine vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
   
- [  **@table_qualifier=** ] **"***Qualifizierer***"**  
- Der Name des Tabellenqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer ***.*** Besitzer ***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+ [  **@table_qualifier=** ] **"**_Qualifizierer_**"**  
+ Der Name des Tabellenqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (_Qualifizierer_**.** _Besitzer_**.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
- [ **,** [  **@table_type=** ] **"'***Typ***"**, **"** Typ **'"** ]  
+ [ **,** [  **@table_type=** ] **"'**_Typ_**"**, **"** Typ **'"** ]  
  Eine Liste mit Werten, getrennt durch Kommas, zum Abrufen von Informationen zu allen Tabellen des angegebenen Tabellentyps. Dazu gehören **Tabelle**, **SYSTEMTABLE**, und **Ansicht**. *Typ* ist **varchar(100)**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Jeder Tabellentyp muss in einfache Anführungszeichen und der gesamte Parameter in doppelte Anführungszeichen eingeschlossen werden. Für Tabellentypen müssen Großbuchstaben verwendet werden. Wenn SET QUOTED_IDENTIFIER auf ON festgelegt ist, müssen alle einfachen Anführungszeichen in doppelte Anführungszeichen geändert werden, und der gesamte Parameter muss in einfache Anführungszeichen eingeschlossen werden.  
   
- [  **@fUsePattern =** ] **"***fUsePattern***"**  
+ [  **@fUsePattern =** ] **"**_fUsePattern_**"**  
  Bestimmt, ob der Unterstrich (_), das Prozentzeichen (%) und eckige Klammern ([ oder ]) als Platzhalterzeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

@@ -21,15 +21,15 @@ ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 050a7e4b7b89eb52d9fcb8f9d7a6b8a911eaa825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a9c7a8152896aa3bd9f75cf483aaf29429a5638
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134620"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355814"
 ---
 # <a name="choosing-data-for-data-mining"></a>Auswählen von Daten für das Data Mining
-  Beim Einstieg in das Data Mining stellen sich Ihnen möglicherweise die folgenden Fragen: „Wie viele Daten benötige ich“ und „Welche Anforderungen gelten bezüglich der Bereinigung oder Formatierung meiner Daten?“  
+  Wenn Sie Datamining beginnen, Sie können jetzt Fragen "wie viele Daten benötige ich?" oder "Gibt es besonderen Anforderungen, die, denen ich kennen sollte, Bereinigung oder Formatierung meiner Daten?"  
   
  Neueinsteiger im Bereich Data Mining stoßen insbesondere im Zusammenhang mit Excel-Daten häufig auf Probleme. Beispielsweise, wenn sie Daten innerhalb von Spalten konsistent formatieren, fehlende Werte bereinigen oder Zahlen klassifizieren müssen. In diesem Abschnitt sind die Datenanforderungen für bestimmte Modellarten aufgeführt.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48134620"
 ### <a name="how-much-data-do-i-need"></a>Wie viele Daten benötige ich?  
  Als Faustregel gilt, dass eine Anzahl von 50-100 Datenzeilen bei den einfachsten Modelltypen und Szenarien nicht unterschritten werden darf. Wenn Sie beispielsweise ein einzelnes Attribut mithilfe eines Naive Bayes-Modells vorhersagen und das Dataset wohl geformt ist, lässt sich mit 50-100 Datenzeilen bereits eine ziemlich genaue Vorhersage treffen.  
   
- Zuordnungsmodelle erfordern normalerweise deutlich mehr Daten. Tausend Zeilen sind möglicherweise nicht ausreichend, wenn Sie eine Vielzahl von Attributen (z. B. Zuordnungen zwischen Produkten) analysieren. Wenn das Dataset zu groß oder zu klein ist, erzielen Sie in einigen Fällen bessere Ergebnisse, indem Sie Zeilen in Kategorien unterteilen. Anstatt die Zuordnungen zwischen einzelnen Produkten zu analysieren, könnten Sie die Produkte z. B. kategorisieren.  
+ Sie benötigen in der Regel viel größere Datenmenge - tausend Zeilen sind möglicherweise nicht ausreichend, wenn Sie viele Attribute, z. B. Zuordnungen zwischen Produkten analysieren, zuordnungsmodelle. Wenn das Dataset zu groß oder zu klein ist, erzielen Sie in einigen Fällen bessere Ergebnisse, indem Sie Zeilen in Kategorien unterteilen. Anstatt die Zuordnungen zwischen einzelnen Produkten zu analysieren, könnten Sie die Produkte z. B. kategorisieren.  
   
  Wenn Sie über ein Dataset in der richtigen Größe verfügen, sollten Sie sich stärker auf die Datenqualität konzentrieren, anstatt laufend weitere Daten hinzuzufügen. An einem bestimmten Punkt sind alle statistisch aussagekräftigen Muster ermittelt, und das Hinzufügen weiterer Daten bringt keine zusätzlichen Vorteile. Im Gegenteil kann eine größere Datenmenge in einigen Fällen zu unbeabsichtigten Korrelationen führen.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48134620"
 ##  <a name="bkmk_CommonDataProblems"></a> Allgemeine Datenprobleme  
   
 ### <a name="excel-number-formats"></a>Excel-Zahlenformate  
- Excel ist ein benutzerfreundliches Tool, das dem Anwender nur wenig Beschränkungen auferlegt. Er kann Daten jeden Typs überall platzieren. Wenn Sie jedoch nach Mustern suchen und Korrelationen analysieren, müssen Sie für die Daten eine bestimmte Struktur bzw. Einschränkungen festlegen.  
+ Excel ist ein benutzerfreundliches Tool, das verwendet werden, da es geringe Beschränkungen auferlegt nur: Sie können praktisch jede Art von Daten überall platzieren. Wenn Sie jedoch nach Mustern suchen und Korrelationen analysieren, müssen Sie für die Daten eine bestimmte Struktur bzw. Einschränkungen festlegen.  
   
  Wenn Sie numerische Daten in [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel importieren, werden die Zahlen standardmäßig in einem Dezimalformat mit zwei Dezimalstellen gespeichert. Wenn dies kein geeignetes Zahlenformat ist, sollten Sie ein anderes numerisches Format verwenden oder die Anzahl der Dezimalstellen ändern.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "48134620"
   
  Wenn sich z. B. die Zahlen in einer Spalte in bestimmten Abständen wiederholen, mit denen die Wochentage angegeben werden, können Sie den Inhaltstyp dieser Spalte als `Cyclical` angeben.  
   
- Sie müssen sich über Inhaltstypen keine Gedanken machen, wenn Sie die in den Add-Ins bereitgestellten Assistenten und Tools verwenden. Allerdings bei Verwendung der [Modell einer Struktur hinzufügen &#40;Data Mining-Add-ins für Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) modellieren die Option aus, um ein neues Modell auf vorhandene Daten hinzufügen, erhalten Sie möglicherweise eine Fehlermeldung in Bezug auf Inhaltstypen.  
+ Sie haben keine Inhaltstypen kümmern, wenn Sie den Assistenten und in den Add-Ins bereitgestellten Tools verwenden. Allerdings bei Verwendung der [Modell einer Struktur hinzufügen &#40;Data Mining-Add-ins für Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) modellieren die Option aus, um ein neues Modell auf vorhandene Daten hinzufügen, erhalten Sie möglicherweise eine Fehlermeldung in Bezug auf Inhaltstypen.  
   
  Dies ist darauf zurückzuführen, dass einige Modelltypen eine bestimmte Art von Daten (z. B. einen Timestamp) erfordern. Die Tools verarbeiten diese Spalten entsprechend den jeweiligen Anforderungen und fügen zudem eine Inhaltstypeigenschaft hinzu. Wenn Sie die Daten mit einem vollkommen anderen Algorithmus erneut verwenden, müssen Sie deshalb ggf. den Datentyp oder den Inhaltstyp ändern.  
   
@@ -206,14 +206,14 @@ ms.locfileid: "48134620"
   
  In der Regel ist die Schlüsselspalte ein numerischer Bezeichner oder ein Textbezeichner, der nur für das Verfolgen von Datensätzen und nicht für die Analyse genutzt werden sollte. Ausnahmen sind Zeitreihenschlüssel und Sequenzschlüssel.  
   
- **Schlüssel für geschachtelte Tabellen** dienen nur als wenn Sie Daten aus einer externen Datenquelle abgerufen definiert wurde ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenquellensicht. Weitere Informationen zu geschachtelten Tabellen finden Sie unter [ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
+ **Schlüssel für geschachtelte Tabellen** dienen nur als wenn Sie Daten aus einer externen Datenquelle abgerufen definiert wurde ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenquellensicht. Weitere Informationen zu geschachtelten Tabellen finden Sie unter [ https://msdn.microsoft.com/library/ms175659.aspx ](https://msdn.microsoft.com/library/ms175659.aspx):  
   
  Dieser Inhaltstyp kann mit den folgenden Datentypen verwendet werden: `Date`, `Double`, `Long` und `Text`.  
   
  **Tastenkombination**  
  Die Spalte enthält Werte, die eine Folge von Ereignissen darstellen. Die Werte sind sortiert, aber die Abstände zwischen den Werte müssen nicht gleich groß sein.  
   
- Dieser Inhaltstyp wird von folgenden Datentypen unterstützt: `Double`, `Long`, `Text`, und `Date`.  
+ Dieser Inhaltstyp wird von folgenden Datentypen unterstützt: `Double`, `Long`, `Text` und `Date`.  
   
  **Schlüsselzeit**  
  Die Spalte enthält Werte, die sortiert sind und eine Zeitskala darstellen. Sie können den Key Time-Inhaltstyp nur verwenden, wenn das Modell ein Zeitreihenmodell oder ein Sequenzclustermodell ist.  

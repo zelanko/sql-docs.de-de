@@ -13,12 +13,12 @@ ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 287392869ef22492f0f3b5ac850ec4ecd58515ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 623b0139d70cec0574aaf9b68e37a1ad6f4f9eaf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084630"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355212"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM-Kompatibilität mit anderen SQL Server-Funktionen
   Da sich die FILESTREAM-Daten im Dateisystem befinden, werden in diesem Thema Informationen, Richtlinien und Einschränkungen in Bezug auf die Verwendung von FILESTREAM mit den folgenden Funktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beschrieben.  
@@ -69,7 +69,7 @@ ms.locfileid: "48084630"
  Eine `varbinary(max)`-Spalte, für die das FILESTREAM-Attribut auf dem Verleger aktiviert ist, kann für einen Abonnenten mit oder ohne FILESTREAM-Attribut repliziert werden. Verwenden Sie das Dialogfeld **Artikeleigenschaften - \<Artikel>** oder den @schema_option-Parameter von [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) oder [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), um die Methode für die Replikation der Spalte anzugeben. Daten, die in einer `varbinary(max)`-Spalte ohne FILESTREAM-Attribute repliziert werden, dürfen den 2 GB-Grenzwert für diesen Datentyp nicht überschreiten, da anderenfalls ein Laufzeitfehler ausgelöst wird. Es wird empfohlen, dass Sie das FILESTREAM-Attribut replizieren, wenn Sie Daten replizieren [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] Abonnenten nicht unterstützt wird, unabhängig von der Schemaoption, die angegeben wird.  
   
 > [!NOTE]  
->  Das Replizieren von großen Datenwerten von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nach [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] -Abonnenten ist auf maximal 256 MB beschränkt. Weitere Informationen finden Sie unter [Maximum Capacity Specifications](http://go.microsoft.com/fwlink/?LinkId=103810).  
+>  Das Replizieren von großen Datenwerten von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nach [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] -Abonnenten ist auf maximal 256 MB beschränkt. Weitere Informationen finden Sie unter [Maximum Capacity Specifications](https://go.microsoft.com/fwlink/?LinkId=103810).  
   
 ### <a name="considerations-for-transactional-replication"></a>Überlegungen zur Transaktionsreplikation  
  Wenn Sie FILESTREAM-Spalten in Tabellen verwenden, die zur Transaktionsreplikation veröffentlicht werden, beachten Sie Folgendes:  
@@ -78,18 +78,18 @@ ms.locfileid: "48084630"
   
 -   Die max text repl size-Option gibt die maximale Datenmenge an, die in eine Spalte eingefügt werden kann, die zur Replikation veröffentlicht wird. Diese Option kann verwendet werden, um die Größe von FILESTREAM-Daten zu kontrollieren, die repliziert werden.  
   
--   Wenn Sie angeben, dass die Schemaoption auf die FILESTREAM-Attribut replizieren, aber Sie herausfiltern der `uniqueidentifier` Spalte, die FILESTREAM erfordert oder Sie angeben, dass die UNIQUE-Einschränkung für die Spalte zu replizieren, die FILESTREAM wird von der Replikation nicht repliziert -Attribut. Die Spalte wird nur als `varbinary(max)`-Spalte repliziert.  
+-   Wenn Sie die Schemaoption für die Replikation des FILESTREAM-Attributs angeben, aber die von FILESTREAM benötigte `uniqueidentifier`-Spalte herausfiltern oder angeben, dass die UNIQUE-Einschränkung für die Spalte nicht repliziert werden soll, wird das FILESTREAM-Attribut bei der Replikation nicht repliziert. Die Spalte wird nur als `varbinary(max)`-Spalte repliziert.  
   
 ### <a name="considerations-for-merge-replication"></a>Überlegungen hinsichtlich der Mergereplikation  
  Wenn Sie FILESTREAM-Spalten in Tabellen verwenden, die zur Mergereplikation veröffentlicht werden, beachten Sie Folgendes:  
   
--   Sowohl die Mergereplikation als auch FILESTREAM erfordern eine Spalte des Datentyps `uniqueidentifier` zum Identifizieren jeder Zeile in einer Tabelle. Die Mergereplikation fügt automatisch eine Spalte hinzu, wenn die Tabelle sie nicht besitzt. Die Mergereplikation erfordert es, dass die ROWGUIDCOL-Eigenschaft für die Spalte festgelegt ist und der Standardwert NEWID() oder NEWSEQUENTIALID() lautet. Zusätzlich zu diesen Anforderungen erfordert es FILESTREAM, dass eine UNIQUE-Einschränkung für die Spalte definiert wird. Diese Anforderungen bringen Folgendes mit sich:  
+-   Sowohl die Mergereplikation als auch FILESTREAM erfordern eine Spalte des Datentyps `uniqueidentifier`, um die einzelnen Zeilen in einer Tabelle zu identifizieren. Die Mergereplikation fügt automatisch eine Spalte hinzu, wenn die Tabelle sie nicht besitzt. Die Mergereplikation erfordert es, dass die ROWGUIDCOL-Eigenschaft für die Spalte festgelegt ist und der Standardwert NEWID() oder NEWSEQUENTIALID() lautet. Zusätzlich zu diesen Anforderungen erfordert es FILESTREAM, dass eine UNIQUE-Einschränkung für die Spalte definiert wird. Diese Anforderungen bringen Folgendes mit sich:  
   
     -   Wenn Sie eine FILESTREAM-Spalte einer Tabelle hinzufügen, die bereits zur Mergereplikation veröffentlicht wurde, vergewissern Sie sich, dass die `uniqueidentifier`-Spalte über eine UNIQUE-Einschränkung verfügt. Wenn sie über keine UNIQUE-Einschränkung verfügt, fügen Sie der Tabelle in der Veröffentlichungsdatenbank eine benannte Einschränkung hinzu. Standardmäßig veröffentlicht die Mergreplikation diese Schemaänderung, die dann auf jede Abonnentendatenbank angewendet wird.  
   
          Wenn Sie eine UNIQUE-Einschränkung manuell wie beschrieben hinzufügen und die Mergereplikation entfernen möchten, müssen Sie zuerst die UNIQUE-Einschränkung entfernen, da die Replikation ansonsten nicht entfernt wird.  
   
-    -   Standardmäßig verwendet die Mergereplikation NEWSEQUENTIALID(), da ihre Leistungsfähigkeit gegenüber NEWID() höher ist. Wenn Sie beim Hinzufügen einer `uniqueidentifier` Spalte einer Tabelle, die für die Mergereplikation veröffentlicht wird, geben Sie NEWSEQUENTIALID() als Standardwert.  
+    -   Standardmäßig verwendet die Mergereplikation NEWSEQUENTIALID(), da ihre Leistungsfähigkeit gegenüber NEWID() höher ist. Wenn Sie eine `uniqueidentifier`-Spalte einer Tabelle hinzufügen, die für die Mergereplikation veröffentlicht wird, geben Sie NEWSEQUENTIALID() als Standardwert an.  
   
 -   Die Mergereplikation schließt eine Optimierung zum Replizieren von Typen großer Objekte ein. Diese Optimierung wird durch den @stream_blob_columns-Parameter von [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) gesteuert. Wenn Sie die Schemaoption auf die Replikation des FILESTREAM-Attributs festlegen, wird der Wert des @stream_blob_columns-Parameters auf `true` festgelegt. Diese Optimierung kann mit [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)überschrieben werden. Mit dieser gespeicherten Prozedur können Sie @stream_blob_columns auf `false` festlegen. Wenn Sie eine FILESTREAM-Spalte einer Tabelle hinzufügen, die bereits für die Mergereplikation veröffentlicht wurde, sollten Sie die Option mit sp_changemergearticle auf `true` festlegen.  
   

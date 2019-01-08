@@ -10,12 +10,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ea86d548e509650f0ec237bb77097e3fb4b267ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143791"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367997"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Aufrufen von systemintern kompilierten gespeicherten Prozeduren über Datenzugriffsanwendungen
   Dieses Thema enthält Informationen zum Aufrufen systemintern kompilierter gespeicherter Prozeduren über Datenzugriffsanwendungen.  
@@ -36,7 +36,7 @@ ms.locfileid: "48143791"
   
  Die folgenden Empfehlungen gelten für Aufrufe der systemintern kompilierten gespeicherten Prozedur mithilfe des ODBC-Treibers in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- Die effizienteste Methode, eine gespeicherte Prozedur einmal aufzurufen ist, geben Sie einen direkten RPC-Aufruf mithilfe `SQLExecDirect` und ODBC CALL-Klauseln. Verwenden Sie nicht die [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` Anweisung. Wenn eine gespeicherte Prozedur mehrmals aufgerufen wird, ist die vorbereitete Ausführung effizienter.  
+ Die effizienteste Methode, eine gespeicherte Prozedur einmal aufzurufen ist, einen direkten RPC-Aufruf mithilfe von `SQLExecDirect` und ODBC CALL-Klauseln auszugeben. Verwenden Sie nicht die [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` Anweisung. Wenn eine gespeicherte Prozedur mehrmals aufgerufen wird, ist die vorbereitete Ausführung effizienter.  
   
  Das effizienteste Verfahren, um eine gespeicherte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Prozedur mehrmals aufrufen ist, vorbereitete RPC-Prozeduraufrufe zu verwenden. Vorbereitete RPC-Aufrufe werden mithilfe des ODBC-Treibers von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client folgendermaßen ausgeführt:  
   
@@ -61,7 +61,7 @@ if (returnCode != SQL_SUCCESS && returnCode != SQL_SUCCESS_WITH_INFO) {
 }  
   
 // 2, 3, 4 - ItemNo, ProdCode, Qty  
-…  
+...  
   
 // Prepare stored procedure  
 returnCode = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),SQL_NTS);  
@@ -87,7 +87,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 1.  Erstellen Sie eine Beispieldatenbank mit einer speicheroptimierten Datendateigruppe. Informationen zum Erstellen einer Datenbank mithilfe einer speicheroptimierten Datendateigruppe finden Sie unter [Erstellen einer speicheroptimierten Tabelle und einer nativ kompilierten gespeicherten Prozedur](creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
-2.  Erstellen Sie eine ODBC-Datenquelle mit dem Namen PrepExecSample, die auf die Datenbank zeigt. Verwenden Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Treiber. Sie können das Beispiel auch ändern und den [Microsoft ODBC-Treiber für SQL Server](http://msdn.microsoft.com/library/jj730314.aspx)verwenden.  
+2.  Erstellen Sie eine ODBC-Datenquelle mit dem Namen PrepExecSample, die auf die Datenbank zeigt. Verwenden Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Treiber. Sie können das Beispiel auch ändern und den [Microsoft ODBC-Treiber für SQL Server](https://msdn.microsoft.com/library/jj730314.aspx)verwenden.  
   
 3.  Führen Sie das [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript (unten) in der Beispieldatenbank aus.  
   

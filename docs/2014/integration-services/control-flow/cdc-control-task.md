@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.f1
@@ -13,12 +12,12 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f178c968a6460841e12aa3d0e675bc7f4de56e2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbac13f1d65a984a90ffbeb3ee0b1ae4e0cec719
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086370"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376082"
 ---
 # <a name="cdc-control-task"></a>CDC-Steuerungstask
   Der CDC-Steuerungstask wird verwendet, um den Lebenszyklus von Change Data Capture-Paketen (CDC) zu steuern. Er behandelt die CDC-Paketsynchronisierung mit dem Paket des erstmaligen Ladens, also die Verwaltung der Bereiche von Protokollfolgenummern (LSNs), die bei einer Ausführung eines CDC-Pakets verarbeitet werden. Außerdem wird der CDC-Steuerungstask für Fehlerszenarien und für die Wiederherstellung verwendet.  
@@ -41,14 +40,14 @@ ms.locfileid: "48086370"
 |Vorgang|Description|  
 |---------------|-----------------|  
 |GetProcessingRange|Dieser Vorgang wird vor dem Aufrufen des Datenflusses verwendet, der den CDC-Quelldatenfluss nutzt. Dabei wird ein Bereich von LSNs eingerichtet, der vom CDC-Quelldatenfluss nach dem Aufrufen gelesen wird. Der Bereich wird in einer SSIS-Paketvariablen gespeichert, die von der CDC-Quelle während der Datenflussverarbeitung verwendet wird.<br /><br /> Weitere Informationen zu den gespeicherten Status finden Sie unter [Definieren einer Statusvariablen](../data-flow/define-a-state-variable.md).|  
-|MarkProcessedRange|Dieser Vorgang wird nach jeder CDC-Ausführung ausgeführt (nachdem der CDC-Datenfluss erfolgreich abgeschlossen wurde), um die letzte LSN aufzuzeichnen, die bei der CDC-Ausführung vollständig verarbeitet wurde. Bei der nächsten Ausführung von GetProcessingRange dient diese Position als Startpunkt für den Verarbeitungsbereich.|  
+|MarkProcessedRange|decodiert werden: Dieser Vorgang wird nach jeder CDC-Ausführung (nachdem der CDC-Datenfluss erfolgreich abgeschlossen wurde), um die letzte LSN aufzuzeichnen, die vollständig verarbeitet war in der CDC-Ausführung ausgeführt. Bei der nächsten Ausführung von GetProcessingRange dient diese Position als Startpunkt für den Verarbeitungsbereich.|  
   
 ## <a name="handling-cdc-state-persistency"></a>Behandeln von CDC-Statuspersistenz  
  Der CDC-Steuerungstask behält zwischen Aktivierungen einen persistenten Status bei. Die im CDC-Status gespeicherten Informationen werden verwendet, um den Verarbeitungsbereich für das CDC-Paket zu bestimmen und zu verwalten und Fehlerzustände zu erkennen. Der persistente Status wird als Zeichenfolge gespeichert. Weitere Informationen finden Sie unter [Definieren einer Statusvariablen](../data-flow/define-a-state-variable.md).  
   
  Der CDC-Steuerungstask unterstützt zwei Typen der Statuspersistenz:  
   
--   Manuelle Statuspersistenz: In diesem Fall verwaltet der CDC-Steuerungstask den in einer Paketvariablen gespeicherten Status. Der Paketentwickler muss die Variable vor dem Aufrufen der CDC-Steuerung jedoch aus einem persistenten Speicher lesen und dann in diesen persistenten Speicher zurückschreiben, nachdem die CDC-Steuerung zuletzt aufgerufen und die CDC-Ausführung abgeschlossen wurde.  
+-   Manuelle Statuspersistenz: In diesem Fall der CDC-Steuerungstask verwaltet den Zustand, der in einer Paketvariablen gespeichert aber Paketentwickler muss die Variable aus einem persistenten Speicher lesen, vor dem Aufrufen der CDC-Steuerung und dann schreiben sie in diesen persistenten Speicher zurück, nachdem der CDC-Steuerung zuletzt aufgeführt wird aufgerufen und der CDC-Ausführung abgeschlossen ist.  
   
 -   Automatische Statuspersistenz: Der CDC-Status wird in einer Tabelle in einer Datenbank gespeichert. Der Status wird unter einem in der **StateName** -Eigenschaft angegebenen Namen in einer Tabelle gespeichert, die in der **Tabelle für Speicherstatus** -Eigenschaft angegeben ist. Sie befindet sich in einem ausgewählten Verbindungs-Manager zum Speichern des Status. Die Standardeinstellung ist der Quellverbindungs-Manager, aber häufig wird der Zielverbindungs-Manager verwendet. Der CDC-Steuerungstask aktualisiert den Statuswert in der Statustabelle, und dafür wird als Teil der Ambient-Transaktion ein Commit ausgeführt.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48086370"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [CDC Control Task Editor](../cdc-control-task-editor.md)  
+-   [Task-Editor für CDC-Steuerelement](../cdc-control-task-editor.md)  
   
 -   [Benutzerdefinierte Eigenschaften des CDC-Steuerungstasks](cdc-control-task-custom-properties.md)  
   
@@ -79,10 +78,10 @@ ms.locfileid: "48086370"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Technischer Artikel [Installieren von Microsoft SQL Server 2012 Change Data Capture für Oracle von Attunity](http://go.microsoft.com/fwlink/?LinkId=252958)auf social.technet.microsoft.com.  
+-   Technischer Artikel [Installieren von Microsoft SQL Server 2012 Change Data Capture für Oracle von Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)auf social.technet.microsoft.com.  
   
--   Technischer Artikel [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252960)(Behandeln von Konfigurationsproblemen in Microsoft Change Data Capture für Oracle von Attunity) auf social.technet.microsoft.com.  
+-   Technischer Artikel [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252960)(Behandeln von Konfigurationsproblemen in Microsoft Change Data Capture für Oracle von Attunity) auf social.technet.microsoft.com.  
   
--   Technischer Artikel [Behandeln von Fehlern bei CDC-Instanzen in Microsoft Change Data Capture für Oracle von Attunity](http://go.microsoft.com/fwlink/?LinkId=252961)auf social.technet.microsoft.com.  
+-   Technischer Artikel [Behandeln von Fehlern bei CDC-Instanzen in Microsoft Change Data Capture für Oracle von Attunity](https://go.microsoft.com/fwlink/?LinkId=252961)auf social.technet.microsoft.com.  
   
   

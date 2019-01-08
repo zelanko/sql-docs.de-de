@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15f862ceff618fb3c0f20d6e2bdf8d9d5b276801
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97c7159682e421005385fd830ceed4380086089c
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806838"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432263"
 ---
-#<a name="installing-smo"></a>Installieren von SMO
+# <a name="installing-smo"></a>Installieren von SMO
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
@@ -38,11 +38,11 @@ Dies ist ein Ersatz für SharedManagementObjects.msi, die zuvor als Teil der SQL
 >>[!Important]
 >>Wie erwähnt die [Dateien und Versionsnummern](files-and-version-numbers.md) Seite, Sie sollten nicht die SMO-Assemblys im globalen Assemblycache installieren. Auf diese Weise kann dazu führen, dass Probleme mit anderen Anwendungen, die ebenfalls diese Versionen von SMO verwenden (z. B. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio).
 
-##<a name="installing-the-package"></a>Installieren des Pakets
+## <a name="installing-the-package"></a>Installieren des Pakets
 
 Finden Sie unter [NuGet Schnellstart - Verwenden eines Pakets](https://docs.microsoft.com/nuget/quickstart/use-a-package) Anweisungen und Beispiele für die Installation und Verwendung eines NuGet-Pakets. 
   
 ## <a name="system-requirements"></a>Systemanforderungen
   
- SMO erfordert [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 ausführen, sodass alle Anwendungen verwenden, sicherstellen müssen, dass Clientcomputer die Version oder höher installiert.
+ SMO erfordert [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 ausführen, sodass alle Anwendungen verwenden, sicherstellen müssen, dass Clientcomputer die Version oder höher installiert. Einige nativen-Binärdateien installiert, die mit den NetFx SMO-Bibliotheken erfordern auch die VC++ 2013 Runtime installiert werden; dieser Laufzeit ist nicht im Paket enthalten. Sie können die entsprechenden, auf der Zielarchitektur aus Redist herunterladen. https://www.microsoft.com/download/details.aspx?id=40784
   

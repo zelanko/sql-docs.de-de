@@ -17,15 +17,15 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3bf28d011f1b1387bfbf04358d4575232c768d6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dccbdee0e7db72a9946e92229d06dce519ca94a1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200330"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369872"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQL Server)
-  Dieses Thema enthält Informationen zu Überlegungen hinsichtlich [!INCLUDE[ssHADR](../includes/sshadr-md.md)] -Clientkonnektivität und Anwendungsfailoverfunktionalität.  
+  Dieses Thema enthält Informationen zu Überlegungen hinsichtlich [!INCLUDE[ssHADR](../includes/sshadr-md.md)]-Clientkonnektivität und Anwendungsfailoverfunktionalität.  
   
 > [!NOTE]  
 >  Für den Großteil der allgemeinen Listenerkonfigurationen können Sie einfach den ersten Verfügbarkeitsgruppenlistener mit [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen oder PowerShell-Cmdlets erstellen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Verwandte Aufgaben](#RelatedTasks).  
@@ -47,7 +47,7 @@ ms.locfileid: "48200330"
  Ein Verfügbarkeitsgruppenlistener wird definiert, indem Folgendes angegeben wird:  
   
  Eindeutiger DNS-Name  
- Dieser wird auch als virtueller Netzwerkname (Virtual Network Name, VNN) bezeichnet. Es gelten die Active Directory-Benennungsregeln für DNS-Hostnamen. Weitere Informationen finden Sie im KB-Artikel [Namenskonventionen in Active Directory für Computer, Domänen, Standorte und Organisationseinheiten](http://support.microsoft.com/kb/909264) .  
+ Dieser wird auch als virtueller Netzwerkname (Virtual Network Name, VNN) bezeichnet. Es gelten die Active Directory-Benennungsregeln für DNS-Hostnamen. Weitere Informationen finden Sie im KB-Artikel [Namenskonventionen in Active Directory für Computer, Domänen, Standorte und Organisationseinheiten](https://support.microsoft.com/kb/909264) .  
   
  Mindestens eine virtuelle IP-Adresse (Virtual IP address, VIP)  
  VIPs werden für mindestens ein Subnetz konfiguriert, in dem ein Failover der Verfügbarkeitsgruppe erfolgen kann.  
@@ -66,11 +66,11 @@ ms.locfileid: "48200330"
  Hybride Netzwerkkonfigurationen und DHCP in mehreren Subnetzen werden nicht für Verfügbarkeitsgruppenlistener unterstützt. Das liegt daran, dass im Fall eines Failovers eine dynamische IP abgelaufen sein könnte oder freigegeben wird, wodurch die hohe Verfügbarkeit insgesamt gefährdet wird.  
   
 ###  <a name="SelectListenerPort"></a> Auswählen eines Ports für Verfügbarkeitsgruppenlistener  
- Wenn Sie einen Verfügbarkeitsgruppenlistener konfigurieren, müssen Sie einen Port festlegen.  Sie können den Standardport auf 1433 konfigurieren, um Clientverbindungszeichenfolgen einfach zu gestalten. Wenn Sie 1433 verwenden, müssen Sie keine Portnummer in einer Verbindungszeichenfolge festlegen.   Da jeder Verfügbarkeitsgruppenlistener einen separaten virtuellen Netzwerknamen besitzt, kann außerdem jeder für einen WSFC-Cluster konfigurierte Verfügbarkeitsgruppenlistener für den Verweis auf Port 1433 konfiguriert werden.  
+ Wenn Sie einen Verfügbarkeitsgruppenlistener konfigurieren, müssen Sie einen Port festlegen.  Sie können den Standardport auf 1433 konfigurieren, um Clientverbindungszeichenfolgen einfach zu gestalten. Wenn Sie 1433 verwenden, müssen Sie keine Portnummer in einer Verbindungszeichenfolge festlegen.   Da jeder Verfügbarkeitsgruppenlistener einen separaten virtuellen Netzwerknamen besitzt, kann außerdem jeder für einen WSFC-Cluster konfigurierte Verfügbarkeitsgruppenlistener für den Verweis auf Port 1433 konfiguriert werden.  
   
  Sie können auch einen nicht standardmäßigen Listenerport festlegen. Dies bedeutet jedoch, dass Sie auch in der Verbindungszeichenfolge immer dann explizit einen Zielport angeben müssen, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener herstellen.  Darüber hinaus müssen Sie die Berechtigung für die Firewall für den nicht standardmäßigen Port öffnen.  
   
- Wenn Sie den Standardport 1433 für die virtuellen Netzwerknamen der Verfügbarkeitsgruppenlistener verwenden, müssen Sie dennoch sicherstellen, dass keine anderen Dienste im Clusterknoten diesen Port verwenden. Andernfalls tritt ein Portkonflikt auf.  
+ Wenn Sie den Standardport 1433 für die virtuellen Netzwerknamen der Verfügbarkeitsgruppenlistener verwenden, müssen Sie dennoch sicherstellen, dass keine anderen Dienste im Clusterknoten diesen Port verwenden. Andernfalls tritt ein Portkonflikt auf.  
   
  Wenn eine der Instanzen von SQL Server bereits über den Instanzlistener TCP-Port 1433 überwacht und keine anderen Dienste (einschließlich weitere Instanzen von SQL Server) auf dem Computer Port 1433 überwachen, wird kein Portkonflikt mit dem Verfügbarkeitsgruppenlistener verursacht.  Das liegt daran, dass der Verfügbarkeitsgruppenlistener den selben TCP-Port im gleichen Dienstprozess freigeben kann.  Mehrere Instanzen von SQL Server (parallel) sollten jedoch nicht für die Überwachung desselben Ports konfiguriert werden.  
   
@@ -124,7 +124,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  Hinweis: Die Anwendungsabsicht kann von einem Clienttreiber an eine Downlevelinstanz von SQL Server gesendet werden.  In diesem Fall wird die schreibgeschützte Anwendungsabsicht ignoriert, und die Verbindung bleibt normal bestehen.  
   
- Sie können Sie umgehen, schreibgeschütztes routing, indem Verbindungseigenschaft der anwendungsabsicht nicht auf `ReadOnly` (bei keiner Angabe, wird der Standardwert ist `ReadWrite` während der Anmeldung) oder eine Verbindung direkt mit der primären Replikatinstanz von SQL Server herstellen, statt der verfügbarkeitsgruppenlistener-Namen.  Schreibgeschütztes Routing erfolgt auch dann nicht, wenn Sie eine direkte Verbindung mit einem schreibgeschützten Replikat herstellen.  
+ Sie können schreibgeschütztes Routing umgehen, indem Sie die Verbindungseigenschaft der Anwendungsabsicht nicht auf `ReadOnly` festlegen (bei keiner Angabe während der Anmeldung lautet der Standard `ReadWrite`), oder indem Sie direkt eine Verbindung mit der primären Replikatinstanz von SQL Server herstellen, statt den Namen des Verfügbarkeitsgruppenlisteners zu verwenden.  Schreibgeschütztes Routing erfolgt auch dann nicht, wenn Sie eine direkte Verbindung mit einem schreibgeschützten Replikat herstellen.  
   
 ####  <a name="RelatedTasksApps"></a> Verwandte Aufgaben  
   
@@ -152,12 +152,12 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  Wenn die Verfügbarkeitsgruppe während des Verbindungsversuchs einer Clientanwendung, jedoch vor dem Verbindungstimeout online geschaltet wird, stellt der Clienttreiber möglicherweise während einer der internen Wiederholungsversuche erfolgreich eine Verbindung her. In diesem Fall wird kein Fehler an die Anwendung ausgegeben.  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> Unterstützen von Multisubnetz-Failovern für Verfügbarkeitsgruppen  
- Wenn Sie Clientbibliotheken verwenden, die die MultiSubnetFailover-Verbindungsoption in der Verbindungszeichenfolge unterstützen, können Sie das Verfügbarkeitsgruppenfailover auf ein anderes Subnetz optimieren, indem Sie MultiSubnetFailover je nach Syntax des verwendeten Anbieters auf "True" oder "Ja" festlegen.  
+ Wenn Sie Clientbibliotheken verwenden, die die Verbindungsoption „MultiSubnetFailover“ in der Verbindungszeichenfolge unterstützen, können Sie das Verfügbarkeitsgruppenfailover auf ein anderes Subnetz optimieren, indem Sie „MultiSubnetFailover“ je nach Syntax des verwendeten Anbieters auf „True“ oder „Yes“ festlegen.  
   
 > [!NOTE]  
 >  Diese Einstellung wird für Verbindungen mit einem Subnetz und mehreren Subnetzen mit den Namen von Verfügbarkeitslistenern und SQL Server-Failoverclusterinstanzen empfohlen.  Wenn Sie diese Option aktivieren, stehen auch für Szenarien mit einem Subnetz weitere Optimierungen zur Verfügung.  
   
- Die `MultiSubnetFailover` -Verbindungsoption funktioniert nur mit dem TCP-Netzwerkprotokoll und wird nur unterstützt, wenn Sie einen verfügbarkeitsgruppenlistener und für alle virtuellen Netzwerknamen zum Herstellen einer Verbindung [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ Die `MultiSubnetFailover`-Verbindungsoption funktioniert nur mit dem TCP-Netzwerkprotokoll und wird nur beim Herstellen einer Verbindung mit einem Verfügbarkeitsgruppenlistener und für beliebige virtuelle Netzwerknamen unterstützt, die eine Verbindung mit [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] herstellen.  
   
  Beispiel für eine Verbindungszeichenfolge für den ADO.NET-Anbieter (System.Data.SqlClient) mit aktiviertem Multisubnetzfailover:  
   
@@ -165,7 +165,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
 ```  
   
- Die `MultiSubnetFailover` -Verbindungsoption sollte festgelegt werden, um `True` , auch wenn die verfügbarkeitsgruppe nur ein einzelnes Subnetz umfasst.  Dies ermöglicht es Ihnen, neue Clients vorzukonfigurieren, um künftig weitere Subnetze zu unterstützen, ohne dass die Clientverbindungszeichenfolgen geändert werden müssen. Darüber hinaus wird die Failoverleistung für Failover in einem Subnetz optimiert.  Während der `MultiSubnetFailover` -Verbindungsoption ist nicht erforderlich, bietet jedoch den Vorteil eines schnelleren subnetzfailovers.  Das liegt daran, dass der Clienttreiber versucht, parallel ein TCP-Socket für alle der Verfügbarkeitsgruppe zugeordneten IP-Adressen zu öffnen.  Der Clienttreiber wartet, bis die erste IP erfolgreich antwortet, und verwendet diese dann für die Verbindung.  
+ Die `MultiSubnetFailover`-Verbindungsoption sollte auf `True` festgelegt werden, auch wenn die Verfügbarkeitsgruppe nur ein einzelnes Subnetz umfasst.  Dies ermöglicht es Ihnen, neue Clients vorzukonfigurieren, um künftig weitere Subnetze zu unterstützen, ohne dass die Clientverbindungszeichenfolgen geändert werden müssen. Darüber hinaus wird die Failoverleistung für Failover in einem Subnetz optimiert.  Die `MultiSubnetFailover`-Verbindungsoption ist zwar nicht erforderlich, bietet jedoch den Vorteil eines schnelleren Subnetzfailovers.  Das liegt daran, dass der Clienttreiber versucht, parallel ein TCP-Socket für alle der Verfügbarkeitsgruppe zugeordneten IP-Adressen zu öffnen.  Der Clienttreiber wartet, bis die erste IP erfolgreich antwortet, und verwendet diese dann für die Verbindung.  
   
 ##  <a name="SSLcertificates"></a> Verfügbarkeitsgruppenlistener und SSL-Zertifikate  
  Wenn beim Herstellen einer Verbindung mit einem Verfügbarkeitsgruppenlistener die beteiligten Instanzen von SQL Server SSL-Zertifikate zusammen mit Sitzungsverschlüsselung verwenden, muss der Clienttreiber den alternativen Antragstellernamen im SSL-Zertifikat unterstützen, um die Verschlüsselung zu erzwingen.  SQL Server-Treiberunterstützung für den alternativen Antragstellernamen des Zertifikats ist für ADO.NET (SqlClient), Microsoft JDBC und SQL Native Client (SNAC) geplant.  
@@ -206,11 +206,11 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Einführung in den Verfügbarkeitsgruppenlistener](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (SQL Server AlwaysOn-Teamblog)  
+-   [Einführung in den Verfügbarkeitsgruppenlistener](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (SQL Server AlwaysOn-Teamblog)  
   
--   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

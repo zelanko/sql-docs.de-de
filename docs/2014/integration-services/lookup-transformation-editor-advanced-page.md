@@ -15,19 +15,19 @@ ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa56e9366fdc60a5b411e19b200706f0404e7312
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2991d6b79c9cbfbd37466484e1c4394b6e0fb804
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209730"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369362"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>Transformations-Editor für Suche (Seite 'Erweitert')
   Auf der Seite **Erweitert** des Dialogfelds **Transformations-Editor für Suche** können Sie die teilweise Zwischenspeicherung konfigurieren und die SQL-Anweisung für die Suchtransformation ändern.  
   
  Weitere Informationen zur Transformation für Suche finden Sie unter [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Cachegröße (32-Bit)**  
  Passen Sie die Cachegröße (in Megabytes) für 32-Bit-Computer an. Der Standardwert ist 5 Megabytes.  
   
@@ -50,14 +50,14 @@ ms.locfileid: "48209730"
  Ordnen Sie mithilfe des Dialogfelds **Abfrageparameter festlegen** die Eingabespalten den Parametern zu.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogeintrag [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (Suchcachemodi) auf blogs.msdn.com  
+ Blogeintrag [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) (Suchcachemodi) auf blogs.msdn.com  
   
 ## <a name="see-also"></a>Siehe auch  
- [Transformations-Editor &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
- [Transformations-Editor &#40;Seite "Verbindung"&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [Transformations-Editor für Suche &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)   
+ [Transformations-Editor für Suche &#40;Seite „Verbindung“&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [Transformations-Editor für Suche &#40;Seite „Spalten“&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [Transformations-Editor &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Transformations-Editor für Suche &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Transformation für Fuzzysuche](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

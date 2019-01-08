@@ -11,12 +11,12 @@ ms.assetid: d253bb05-9166-4b50-bd4a-27b818f514e0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39fc136bc29813c01c237289debbc6474f7d291d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6a5301a972775d262f0b7d4640880610bef3b9d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161358"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361052"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>Die Volltextsuche wurde seit SQL Server 2008 geändert.
   Der Upgrade Advisor hat erkannt, dass für die Volltextsuche ein Upgrade vorgesehen ist. Viele Volltextsuchoptionen und -einstellungen haben sich geändert. Aus diesem Grund kann es erforderlich sein, einige Einstellungen zu ändern, wenn Sie ein Upgrade auf die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Volltextsuche durchführen.  
@@ -33,7 +33,7 @@ ms.locfileid: "48161358"
 ## <a name="external-resources"></a>Externe Ressourcen  
  [Abwärtskompatibilität der Volltextsuche](../../../2014/database-engine/full-text-search-backward-compatibility.md)  
   
- [Upgrade der Volltextsuche](http://go.microsoft.com/fwlink/?LinkId=112291)  
+ [Upgrade der Volltextsuche](https://go.microsoft.com/fwlink/?LinkId=112291)  
   
  [Breaking Changes in der Volltextsuche](../../../2014/database-engine/breaking-changes-to-full-text-search.md)  
   

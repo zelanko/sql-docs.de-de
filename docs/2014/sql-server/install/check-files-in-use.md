@@ -11,12 +11,12 @@ ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c18860cf43c31096b984d45b18fba7828de6ea90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065660"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367772"
 ---
 # <a name="check-files-in-use"></a>Verwendete Dateien überprüfen
   Verwenden Sie zum Vermeiden eines Neustarts von Windows nach dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Updates die Seite Verwendete Dateien überprüfen zum Identifizieren von Vorgängen, die vom Setupprogramm für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Update benötigte Dateien blockieren.  
@@ -27,7 +27,7 @@ ms.locfileid: "48065660"
   
  Damit der Computer nach der Installation nicht neu gestartet werden muss, zeigt das Setup eine Liste der Prozesse an, die Dateien sperren. Beenden Sie die in der Liste aufgeführten Prozesse und Anwendungen. Klicken Sie dann auf **Überprüfung aktualisieren** , um die Überprüfung erneut auszuführen. Klicken Sie zum Beenden einer gerade ausgeführten Überprüfung auf **Überprüfung beenden** . Wenn keine blockierten Dateien gefunden wurden, ist die Tabelle leer. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen, wenn alle blockierten Vorgänge beendet wurden.  
   
- Die Informationen werden vom Setup in den Protokolldateien protokolliert. Weitere Informationen zum Anzeigen der Protokolldateien finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) und [Vorgehensweise: Lesen einer Setupprotokolldatei von SQL Server](http://go.microsoft.com/fwlink/?LinkID=134490).  
+ Die Informationen werden vom Setup in den Protokolldateien protokolliert. Weitere Informationen zum Anzeigen der Protokolldateien finden Sie unter [anzeigen und Lesen SQL Server-Setup-Protokolldateien](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) und [Vorgehensweise: Lesen eine Setupprotokolldatei von SQL Server](https://go.microsoft.com/fwlink/?LinkID=134490).  
   
  Die Protokolldatei enthält die folgenden Informationen:  
   

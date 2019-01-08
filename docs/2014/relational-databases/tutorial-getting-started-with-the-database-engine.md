@@ -1,11 +1,10 @@
 ---
-title: 'Tutorial: Erste Schritte mit der Datenbank-Engine | Microsoft-Dokumentation'
+title: 'Lernprogramm: Erste Schritte mit der Datenbank-Engine | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [connecting]
@@ -17,14 +16,14 @@ ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4809250a2b2fe963d32d66c62e2e71b3bea2c365
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119450"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355197"
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Erste Schritte mit der Datenbank-Engine
+# <a name="tutorial-getting-started-with-the-database-engine"></a>Lernprogramm: Erste Schritte mit der Datenbank-Engine
   Willkommen bei den ersten Schritten im Lernprogramm zu [!INCLUDE[ssDE](../includes/ssde-md.md)] . Dieses Lernprogramm richtet sich an Benutzer, die noch nicht mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vertraut sind und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oder [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]installiert haben. Dieses kurze Lernprogramm hilft Ihnen bei den ersten Schritten mit [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
@@ -43,7 +42,7 @@ ms.locfileid: "48119450"
   
  Auf Ihrem System müssen zum Verwenden dieses Lernprogramms folgende Anwendungen installiert sein:  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]installiert haben. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] kann installiert werden, indem Sie das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Setup ausführen oder das Paket vom [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346)herunterladen und installieren.  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]installiert haben. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] kann installiert werden, indem Sie das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Setup ausführen oder das Paket vom [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=144346)herunterladen und installieren.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  

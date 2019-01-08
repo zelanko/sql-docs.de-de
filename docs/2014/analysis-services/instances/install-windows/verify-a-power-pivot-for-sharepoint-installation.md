@@ -11,12 +11,12 @@ ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0830a6be96cbfdf85d53976b0a7c3ac2ec86b80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0be629b4c2b8c47ed191651260bf1a722b40f007
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214780"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355085"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Überprüfen der PowerPivot für SharePoint-Installation
   Eine Instanz von PowerPivot für SharePoint, die Sie in einer SharePoint-Farm installieren, wird über die SharePoint-Zentraladministration verwaltet. Sie können zumindest die Seiten in der Zentraladministration und auf SharePoint-Websites überprüfen, um zu überprüfen, ob PowerPivot-Serverkomponenten und -funktionen verfügbar sind. Um jedoch eine Installation vollständig zu überprüfen, müssen Sie eine PowerPivot-Arbeitsmappe haben, die Sie in SharePoint veröffentlichen können und auf die Sie über eine Bibliothek zugreifen können. Zu Testzwecken können Sie eine Beispielarbeitsmappe veröffentlichen, die bereits PowerPivot-Daten enthält, und damit überprüfen, ob die SharePoint-Integration ordnungsgemäß konfiguriert wurde.  
@@ -41,7 +41,7 @@ ms.locfileid: "48214780"
     5.  Klicken Sie auf **Schließen**und dann auf **OK**.  
   
         > [!NOTE]  
-        >  Die Dokumentation zur SharePoint-Installation enthält weitere Anweisungen zum Umgehen von Proxyserverfehlern und Deaktivieren der verstärkten Sicherheitskonfiguration für Internet Explorer, damit Updates heruntergeladen und installiert werden können. Weitere Informationen finden Sie im Abschnitt **Ausführen zusätzlicher Aufgaben** unter [Bereitstellen eines einzelnen Servers mit SQL Server](http://go.microsoft.com/fwlink/?LinkId=177754) auf der Microsoft-Website.  
+        >  Die Dokumentation zur SharePoint-Installation enthält weitere Anweisungen zum Umgehen von Proxyserverfehlern und Deaktivieren der verstärkten Sicherheitskonfiguration für Internet Explorer, damit Updates heruntergeladen und installiert werden können. Weitere Informationen finden Sie im Abschnitt **Ausführen zusätzlicher Aufgaben** unter [Bereitstellen eines einzelnen Servers mit SQL Server](https://go.microsoft.com/fwlink/?LinkId=177754) auf der Microsoft-Website.  
   
 3.  Klicken Sie in der Zentraladministration unter Systemeinstellungen auf **Farmfunktionen verwalten**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48214780"
 ## <a name="verify-data-access-on-the-server"></a>Überprüfen des Datenzugriffs auf dem Server  
  Um den PowerPivot-Datenzugriff auf dem Server zu überprüfen, gehen Sie wie folgt vor:  
   
-1.  [Laden Sie das Datenbeispiel „Picnic“ herunter](http://go.microsoft.com/fwlink/?LinkID=219108) , das zu einem Reporting Services-Tutorial gehört. Sie verwenden die Beispielarbeitsmappe in diesem Download, um den PowerPivot-Datenzugriff zu überprüfen. Extrahieren Sie die Dateien.  
+1.  [Laden Sie das Datenbeispiel „Picnic“ herunter](https://go.microsoft.com/fwlink/?LinkID=219108) , das zu einem Reporting Services-Tutorial gehört. Sie verwenden die Beispielarbeitsmappe in diesem Download, um den PowerPivot-Datenzugriff zu überprüfen. Extrahieren Sie die Dateien.  
   
 2.  Laden Sie die Excel-Arbeitsmappe (.xlsx) in die freigegebenen Dokumente hoch. Die Arbeitsmappe enthält eingebettete PowerPivot-Daten.  
   

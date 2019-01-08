@@ -11,12 +11,12 @@ ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c12e62d3a74ca1112ac7983fa6480b49171c308
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73ee3f7f86203f4fa0ac2e4da86fecee0e2b4cf5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149420"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365083"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung (PowerPivot für SharePoint)
   PowerPivot-Datenaktualisierungsaufträge können mit jedem Windows-Benutzerkonto ausgeführt werden, sofern Sie eine Zielanwendung in Secure Store Service erstellen, um die Anmeldeinformationen zu speichern, die Sie verwenden möchten. Auf dieselbe Weise können Sie die Anmeldeinformationen einer Secure Store Service-Zielanwendung zuordnen und die Zielanwendung in einem Datenaktualisierungszeitplan angeben, wenn Sie eine andere Datenbankanmeldung als die zum Importieren der Daten in PowerPivot für Excel verwendete bereitstellen möchten.  
@@ -35,7 +35,7 @@ ms.locfileid: "48149420"
   
  [Konfigurieren eines vordefinierten Kontos für den Zugriff auf externe Datenquellen oder Drittanbieter-Datenquellen](#config3rd)  
   
- Wenn Sie Probleme beim Konfigurieren oder Verwenden der datenaktualisierung haben, finden Sie in der [Problembehandlung bei der PowerPivot-Datenaktualisierung](http://go.microsoft.com/fwlink/?LinkID=223279) Seite nach möglichen Lösungen im TechNet-Wiki.  
+ Wenn Sie Probleme beim Konfigurieren oder Verwenden der datenaktualisierung haben, finden Sie in der [Problembehandlung bei der PowerPivot-Datenaktualisierung](https://go.microsoft.com/fwlink/?LinkID=223279) Seite nach möglichen Lösungen im TechNet-Wiki.  
   
 ##  <a name="configAny"></a> Konfigurieren Sie ein Windows-Konto für datenaktualisierung  
  Wenn ein SharePoint-Benutzer einen Datenaktualisierungszeitplan definiert, muss die Benutzeridentität angegeben werden, unter der die Datenaktualisierung durchgeführt wird. Zu den Optionen gehören das Eingeben des Windows-Domänenbenutzerkontos, das Auswählen des unbeaufsichtigten Datenaktualisierungskontos für PowerPivot oder das Eingeben eines anderen Windows-Benutzerkontos für Datenaktualisierungszwecke. Die Schritte in diesem Abschnitt sind für die letzte Option: Angeben eines anderen Windows-Kontos.  
@@ -55,7 +55,7 @@ ms.locfileid: "48149420"
   
 -   Überprüfen Sie, ob die Datenaktualisierung funktioniert, wenn diese Zielanwendung in einem Datenaktualisierungszeitplan angegeben wird.  
   
-### <a name="step-1-create-a-target-application"></a>Schritt 1: Erstellen einer Zielanwendung  
+### <a name="step-1-create-a-target-application"></a>Schritt 1: Erstellen einer Zielanwendung  
   
 1.  Klicken Sie in der Zentraladministration unter Anwendungsverwaltung auf **Dienstanwendungen verwalten**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48149420"
   
  Daher müssen Sie dem Konto Leseberechtigungen für alle externen Datenquellen erteilen, die bei der Datenaktualisierung verwendet werden.  
   
- Wenn Sie Administrator für die in der Organisation verwendeten Datenquellen sind, können Sie eine Anmeldung erstellen und die erforderlichen Berechtigungen zuweisen. Andernfalls müssen Sie sich an die Besitzer der Daten wenden und die Kontoinformationen angeben. Sie müssen das Windows-Domänenbenutzerkonto angeben, das der Zielanwendung zugeordnet wird. Dies ist das Konto, das Sie in "Schritt 1: Erstellen einer Zielanwendung" angegeben haben.  
+ Wenn Sie Administrator für die in der Organisation verwendeten Datenquellen sind, können Sie eine Anmeldung erstellen und die erforderlichen Berechtigungen zuweisen. Andernfalls müssen Sie sich an die Besitzer der Daten wenden und die Kontoinformationen angeben. Sie müssen das Windows-Domänenbenutzerkonto angeben, das der Zielanwendung zugeordnet wird. Dies ist das Konto, das Sie, in angegeben "Schritt 1: Erstellen einer Zielanwendung"in diesem Thema.  
   
 ###  <a name="bkmk_verify"></a> Schritt 4: Überprüfen der kontoverfügbarkeit datenaktualisierungskonfigurationsseiten  
   
@@ -138,7 +138,7 @@ ms.locfileid: "48149420"
   
  Wenn ein Fehler auftritt, können Sie klicken **Zeitplan konfigurieren** aktualisieren Sie in den Daten die Seite "Verlauf", um verschiedene Anmeldeinformationen auszuprobieren. Sie müssen ggf. auch die Anmeldeinformationen der Datenquelle in der ursprünglichen Arbeitsmappe prüfen, um die Verbindungszeichenfolge anzuzeigen, die bei der Datenaktualisierung verwendet wird. Die Verbindungszeichenfolge enthält Informationen zum Serverstandort und der Datenbank, die Sie zur Problembehandlung verwenden können.  
   
- Weitere Informationen zur Problembehandlung finden Sie unter [Problembehandlung bei der PowerPivot-Datenaktualisierung](http://go.microsoft.com/fwlink/p/?LinkID=223279) im TechNet Wiki.  
+ Weitere Informationen zur Problembehandlung finden Sie unter [Problembehandlung bei der PowerPivot-Datenaktualisierung](https://go.microsoft.com/fwlink/p/?LinkID=223279) im TechNet Wiki.  
   
 ##  <a name="config3rd"></a> Konfigurieren eines vordefinierten Kontos für den Zugriff auf externe Datenquellen oder Drittanbieter-Datenquellen  
  Datenbankserver werden oft mit eigenen Authentifizierungsmethoden ausgeliefert. Wenn Sie über eine PowerPivot-Arbeitsmappe verfügen, die für den Zugriff auf eine externe Datenquelle während der Datenaktualisierung Datenbank-Anmeldeinformationen erfordert, können Sie eine Zielanwendungs-ID für die Anmeldeinformationen erstellen und dieser Zielanwendung dann Datenbank-Anmeldeinformationen zuordnen.   

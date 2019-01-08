@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
@@ -14,12 +13,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2045476886e136f5956f8805308f95c2e905bea4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a65ec13f342dc890511e7b99258a41456cd989b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052740"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362392"
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bietet Change Data Capture eine effektive Lösung für die Herausforderung, inkrementelles Laden aus Quelltabellen in Data Marts und Data Warehouses effizient auszuführen.  
@@ -29,8 +28,8 @@ ms.locfileid: "48052740"
   
  Die Change Data Capture-Funktion von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erfasst Einfüge-, Update- und Löschvorgänge, die auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Tabellen angewendet werden, und stellt die einzelnen Änderungen in einem leicht verwendbaren relationalen Format zur Verfügung. Die von Change Data Capture verwendeten Änderungstabellen enthalten Spalten, die die Spaltenstruktur der nachverfolgten Quelltabellen widerspiegeln, sowie die Metadaten, die zum Verständnis der zeilenweise vorgenommenen Änderungen erforderlich sind.  
   
-> [!NOTE]  
->  Change Data Capture ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+> [!NOTE]
+>  Change Data Capture ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="how-change-data-capture-works-in-integration-services"></a>Funktionsweise von Change Data Capture in Integration Services  
  Von einem [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Paket können auf einfache Weise die Änderungsdaten in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank gesammelt werden, um ein effizientes inkrementelles Laden in ein Data Warehouse auszuführen. Bevor Sie jedoch mit [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Änderungsdaten laden können, muss Change Data Capture von einem Administrator in der Datenbank und den Tabellen aktiviert werden, von denen Sie Änderungen erfassen möchten. Weitere Informationen zum Konfigurieren von Change Data Capture in einer Datenbank finden Sie unter [Aktivieren und Deaktivieren von Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md).  
@@ -44,30 +43,30 @@ ms.locfileid: "48052740"
  **Schritt 1: Entwerfen der Ablaufsteuerung**  
  In der Ablaufsteuerung vom Paket müssen die folgenden Tasks definiert werden:  
   
--   Berechnen Sie die Start- und endend `datetime` Werte für das Intervall der Änderungen an den Quelldaten, die Sie abrufen möchten.  
+-   Berechnen Sie die `datetime`-Werte für den Anfang und das Ende des Intervalls der Änderungen an den Quelldaten, die Sie abrufen möchten.  
   
-     Um diese Werte zu berechnen, verwenden Sie einen Task SQL ausführen oder [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Ausdrücke mit `datetime` Funktionen. Speichern Sie dann diese Endpunkte in Paketvariablen für die spätere Verwendung im Paket.  
+     Verwenden Sie einen Task "SQL ausführen" oder [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Ausdrücke mit `datetime`-Funktionen, um diese Werte zu berechnen. Speichern Sie dann diese Endpunkte in Paketvariablen für die spätere Verwendung im Paket.  
   
-     **Weitere Informationen:**[angeben eines Intervalls von Änderungsdaten  ](specify-an-interval-of-change-data.md)  
+     **Weitere Informationen:**  [Angeben eines Intervalls von Änderungsdaten](specify-an-interval-of-change-data.md)  
   
 -   Bestimmen Sie, ob die Änderungsdaten für das ausgewählte Intervall bereit sind. Dieser Schritt ist notwendig, da der asynchrone Aufzeichnungsprozess möglicherweise noch nicht den ausgewählten Endpunkt erreicht hat.  
   
      Wenn Sie bestimmen möchten, ob die Daten bereit sind, beginnen Sie mit einem For-Schleifencontainer, um die Ausführung bei Bedarf so lange zu verzögern, bis die Änderungsdaten für das ausgewählte Intervall bereit sind. Verwenden Sie innerhalb des Schleifencontainers einen Task "SQL ausführen", um die Time-Mapping-Tabellen abzufragen, die von Change Data Capture verwaltet werden. Verwenden Sie dann einen Skripttask, der die `Thread.Sleep`-Methode aufruft oder einen weiteren Task "SQL ausführen" mit einer `WAITFOR`-Anweisung, um die Ausführung des Pakets bei Bedarf vorübergehend zu verzögern. Verwenden Sie optional einen weiteren Skripttask, um eine Fehlerbedingung oder ein Timeout zu protokollieren.  
   
-     **Weitere Informationen:**[zu bestimmen, ob die Änderung bereit sind  ](determine-whether-the-change-data-is-ready.md)  
+     **Weitere Informationen:**  [Bestimmen, ob die Änderungsdaten bereit sind](determine-whether-the-change-data-is-ready.md)  
   
 -   Bereiten Sie die Abfragezeichenfolge vor, mit der die Änderungsdaten abgefragt werden.  
   
      Verwenden Sie einen Skripttask oder einen Task "SQL ausführen", um die SQL-Anweisung zusammenzustellen, mit der Änderungen abgefragt werden.  
   
-     **Weitere Informationen:**[Vorbereiten zur Abfrage der Änderungsdaten  ](prepare-to-query-for-the-change-data.md)  
+     **Weitere Informationen:**  [Vorbereiten zur Abfrage der Änderungsdaten](prepare-to-query-for-the-change-data.md)  
   
  **Schritt 2: Einrichten der Abfrage von Änderungsdaten**  
  Erstellen Sie die Tabellenwertfunktion, die die Daten abfragt.  
   
  Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um die Abfrage zu entwickeln und zu speichern.  
   
- **Weitere Informationen:**[abrufen und Verstehen der Änderungsdaten  ](retrieve-and-understand-the-change-data.md)  
+ **Weitere Informationen:**  [Abrufen und Verstehen der Änderungsdaten](retrieve-and-understand-the-change-data.md)  
   
  **Schritt 3: Entwerfen des Datenflusses**  
  Im Datenfluss des Pakets müssen die folgenden Tasks definiert werden:  
@@ -76,29 +75,29 @@ ms.locfileid: "48052740"
   
      Verwenden Sie eine Quellkomponente, um die Änderungstabellen nach den Änderungen abzufragen, die innerhalb des ausgewählten Intervalls liegen, um die Daten abzurufen. Die Quelle ruft eine Transact-SQL-Tabellenwertfunktion auf, die Sie zuvor erstellt haben müssen.  
   
-     **Weitere Informationen:**[abrufen und Verstehen der Änderungsdaten  ](retrieve-and-understand-the-change-data.md)  
+     **Weitere Informationen:**  [Abrufen und Verstehen der Änderungsdaten](retrieve-and-understand-the-change-data.md)  
   
 -   Teilen Sie die Änderungen zur Verarbeitung in Einfügungen, Updates und Löschungen auf.  
   
      Wenn Sie die Änderungen aufteilen möchten, verwenden Sie eine Transformation für bedingtes Teilen, um Einfügungen, Updates und Löschungen an verschiedene Ausgaben zur entsprechenden Verarbeitung weiterzuleiten.  
   
-     **Weitere Informationen:**[Verarbeiten von Einfügungen, Updates und Löschungen  ](process-inserts-updates-and-deletes.md)  
+     **Weitere Informationen:**  [Verarbeiten von Einfügungen, Updates und Löschungen](process-inserts-updates-and-deletes.md)  
   
 -   Wenden Sie die Einfügungen, Löschungen und Updates auf das Ziel an.  
   
      Wenn Sie die Änderungen auf das Ziel anwenden möchten, verwenden Sie eine Zielkomponente, um die Einfügungen auf das Ziel anzuwenden. Verwenden Sie außerdem Transformationen für OLE DB-Befehl mit parametrisierten UPDATE- und DELETE-Anweisungen, um Updates und Löschungen auf das Ziel anzuwenden. Sie können Updates und Löschungen auch anwenden, indem Sie Zielkomponenten verwenden, um die Zeilen in temporäre Tabellen zu speichern. Verwenden Sie dann Tasks "SQL ausführen", um Massenupdates und Massenlöschungen auf dem Ziel von den temporären Tabellen auszuführen.  
   
-     **Weitere Informationen:**[Anwenden der Änderungen auf das Ziel  ](apply-the-changes-to-the-destination.md)  
+     **Weitere Informationen:**  [Anwenden der Änderungen auf das Ziel](apply-the-changes-to-the-destination.md)  
   
 ### <a name="change-data-from-multiple-tables"></a>Ändern von Daten von mehreren Tabellen  
  Der im vorherigen Diagramm und den Schritten beschriebene Prozess umfasst ein inkrementelles Laden aus einer einzelnen Tabelle. Wenn Sie ein inkrementelles Laden aus mehreren Tabellen ausführen müssen, ist der Gesamtprozess identisch. Der Entwurf des Pakets muss jedoch geändert werden, damit die Verarbeitung von mehreren Tabellen unterstützt wird. Weitere Informationen zum Erstellen eines Pakets, das ein inkrementelles Laden aus mehreren Tabellen ausführt, finden Sie unter [Ausführen eines inkrementellen Ladens von mehreren Tabellen](perform-an-incremental-load-of-multiple-tables.md).  
   
 ## <a name="samples-of-change-data-capture-packages"></a>Beispiele für Change Data Capture-Pakete  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt zwei Beispiele, die veranschaulichen, wie Sie mit Data Capture in Paketen. Weitere Informationen finden Sie in folgenden Themen:  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt zwei Beispiele bereit, in denen veranschaulicht wird, wie Change Data Capture in Paketen verwendet wird. Weitere Informationen finden Sie unter den folgenden Themen:  
   
--   [Readme_Change Data Capture-Paketbeispiel für angegebenes Intervall](http://go.microsoft.com/fwlink/?LinkId=133507)  
+-   [Readme_Change Data Capture-Paketbeispiel für angegebenes Intervall](https://go.microsoft.com/fwlink/?LinkId=133507)  
   
--   [Readme_Change Data Capture since Last Request (Paketbeispiel)](http://go.microsoft.com/fwlink/?LinkId=133508)  
+-   [Readme_Change Data Capture since Last Request (Paketbeispiel)](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -119,6 +118,6 @@ ms.locfileid: "48052740"
 -   [Ausführen eines inkrementellen Ladens von mehreren Tabellen](perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag zu [SSIS-Entwurfsmuster – Inkrementelles Laden](http://go.microsoft.com/fwlink/?LinkId=217679)auf sqlblog.com  
+ Blogbeitrag zum Thema [SSIS-Entwurfsmuster: Inkrementelles Laden](https://go.microsoft.com/fwlink/?LinkId=217679) auf sqlblog.com  
   
   

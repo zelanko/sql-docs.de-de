@@ -4,25 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 31c3d4cdac735aea203a88aa51154ae7c14c95a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45eabd88d5753721b081c79d3dab03b0a6134c78
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210490"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355641"
 ---
 # <a name="lesson-1-creating-database-objects"></a>Lektion 1: Erstellen von Datenbankobjekten
   In dieser Lektion erfahren Sie, wie Sie eine Datenbank erstellen, eine Tabelle in der Datenbank erstellen und dann auf die Daten in der Tabelle zugreifen und diese ändern können. Weil diese Lektion eine Einführung in die Verwendung von [!INCLUDE[tsql](../includes/tsql-md.md)]darstellt, werden viele der für diese Anweisungen verfügbaren Optionen nicht verwendet bzw. beschrieben.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen können wie folgt geschrieben und an die [!INCLUDE[ssDE](../includes/ssde-md.md)] übertragen werden:  
   
--   Mithilfe von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In diesem Lernprogramm wird vorausgesetzt, dass Sie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]verwenden. Sie können jedoch auch [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express verwenden, das als kostenloser Download im [Microsoft Download Center](http://go.microsoft.com/fwlink/?linkid=67359)zur Verfügung steht.  
+-   Mithilfe von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In diesem Lernprogramm wird vorausgesetzt, dass Sie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]verwenden. Sie können jedoch auch [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express verwenden, das als kostenloser Download im [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=67359)zur Verfügung steht.  
   
 -   Mithilfe des [Hilfsprogramms sqlcmd](../tools/sqlcmd-utility.md).  
   

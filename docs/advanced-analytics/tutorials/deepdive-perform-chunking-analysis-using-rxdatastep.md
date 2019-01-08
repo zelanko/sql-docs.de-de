@@ -1,34 +1,35 @@
 ---
-title: Aufteilung RxDataStep (SQL und R deep Dive) mit Analysen ausführen | Microsoft Docs
+title: Blockweises mithilfe von RxDataStep von RevoScaleR - SQL Server-Machine Learning
+description: Exemplarische Vorgehensweise im Lernprogramm zum Aufteilen von Daten für die verteilte Analyse, die Verwendung der Sprache R auf SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5db0acfb90c200442489cd7c3ec464223195eec6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c5d3b50af1f7db3a39dec0e475aa00582bc77e0a
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31204422"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596031"
 ---
-# <a name="perform-chunking-analysis-using-rxdatastep-sql-and-r-deep-dive"></a>Ausführen von Aufteilung Analysen mit RxDataStep (SQL und R deep Dive)
+# <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Blockweises mithilfe von RxDataStep (SQL Server und die RevoScaleR-Lernprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel ist Teil des Lernprogramms Data Science Deep Dive zur Verwendung von ["revoscaler"](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Diese Lektion ist Teil der [RevoScaleR Tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-In dieser Lektion verwenden Sie die **RxDataStep** erfordern, dass das gesamte Dataset in den Arbeitsspeicher geladen und wie bei herkömmlichen r gleichzeitig verarbeitet werden, statt zum Verarbeiten von Daten in Segmenten-Funktion Die **RxDataStep** Funktionen liest die Daten im Segment, gilt R-Funktionen wiederum für jedes Segment von Daten und speichert dann die Zusammenfassung der Ergebnisse für jedes Segment in eine gemeinsame [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle. Wenn alle Daten gelesen wurden, werden die Ergebnisse kombiniert.
+In dieser Lektion verwenden Sie die **RxDataStep** zum Verarbeiten von Daten in Blöcken von Funktion, statt Sie zu erfordern, dass das gesamte Dataset in den Arbeitsspeicher geladen und gleichzeitig ausführen möchten, wie in r traditionell der Fall verarbeitet werden Die **RxDataStep** Funktionen liest die Daten im Segment, gilt R-Funktionen für jeden Datenblock wiederum und speichert dann die Ergebnisse der Zusammenfassung für jeden Block in eine allgemeine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle. Wenn alle Daten gelesen wurden, werden die Ergebnisse kombiniert.
 
 > [!TIP]
-> In dieser Lektion berechnen Sie eine Notfall-Tabelle anhand der `table` -Funktion in R. In diesem Beispiel dient nur der Veranschaulichung. 
+> In dieser Lektion berechnen Sie eine kontingenztafel mithilfe der **Tabelle** -Funktion in R. In diesem Beispiel dient nur zu Lehrzwecken. 
 > 
-> Wenn Sie reale Datasets zu Tabellarisieren müssen, wir empfehlen die Verwendung der **RxCrossTabs** oder **RxCube** Funktionen in **"revoscaler"**, die sind optimiert für diese Art von der Vorgang.
+> Wenn Sie reale Datensätze tabellarisch ordnen müssen, sollten Sie verwenden die **RxCrossTabs** oder **RxCube** -Funktionen in **RevoScaleR**, optimiert sind für diese Art von der Vorgang.
 
 ## <a name="partition-data-by-values"></a>Partitionieren von Daten nach Werten
 
-1. Erstellen Sie eine benutzerdefinierte R-Funktion, die R aufruft `table` -Funktion auf jedes Segment von Daten, und nennen Sie die neue Funktion `ProcessChunk`.
+1. Erstellen Sie eine benutzerdefinierte R-Funktion, die R aufruft **Tabelle** -Funktion für jeden Datenblock, und nennen Sie die neue Funktion **ProcessChunk**.
   
     ```R
     ProcessChunk <- function( dataList) {
@@ -50,11 +51,10 @@ In dieser Lektion verwenden Sie die **RxDataStep** erfordern, dass das gesamte D
 2. Legen Sie den Computekontext auf den Server fest.
   
     ```R
-    rxSetComputeContext( sqlCompute )
+    rxSetComputeContext(sqlCompute)
     ```
   
-3. Definieren Sie eine SQL Server-Datenquelle, um die Daten aufzunehmen, die Sie verarbeiten möchten. Beginnen Sie, indem Sie einer Variablen eine SQL-Abfrage zuweisen. Verwenden Sie dann diese Variable in der *SqlQuery* Argument eines neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle.
-  
+3. Definieren Sie eine SQL Server-Datenquelle zum Speichern der Daten, die Sie verarbeiten können. Beginnen Sie, indem Sie einer Variablen eine SQL-Abfrage zuweisen. Verwenden Sie dann die Variable in der *SqlQuery* Argument einer neuen SQL Server-Datenquelle.
   
     ```R
     dayQuery <-  "SELECT DayOfWeek FROM AirDemoSmallTest"
@@ -64,9 +64,10 @@ In dieser Lektion verwenden Sie die **RxDataStep** erfordern, dass das gesamte D
         colInfo = list(DayOfWeek = list(type = "factor",
             levels = as.character(1:7))))
     ```
-4. Sie können optional ausführen **von RxGetVarInfo** für diese Datenquelle. Zu diesem Zeitpunkt enthält es eine einzelne Spalte: *Var 1: Geben Sie einen Wochentag: verlagern, keine Faktor Ebenen verfügbar*
+
+4. Sie können optional ausführen **RxGetVarInfo** für diese Datenquelle. An diesem Punkt enthält es eine einzelne Spalte: *Var 1: DayOfWeek, Type: Factor, keine Faktorebenen verfügbar*
      
-5. Erstellen Sie vor dem Anwenden dieser Faktorvariablen auf die Quelldaten eine separate Tabelle für die Zwischenergebnisse. Erneut, verwenden Sie einfach die RxSqlServerData-Funktion zum Definieren der Daten Makign sicher, dass alle vorhandenen Tabellen mit demselben Namen zu löschen.
+5. Erstellen Sie vor dem Anwenden dieser Faktorvariablen auf die Quelldaten eine separate Tabelle für die Zwischenergebnisse. In diesem Fall verwenden Sie einfach die **RxSqlServerData** Funktion zum Definieren der Daten, sodass Sie sicher, dass alle vorhandenen Tabellen mit demselben Namen zu löschen.
   
     ```R
     iroDataSource = RxSqlServerData(table = "iroResults",   connectionString = sqlConnString)
@@ -74,25 +75,25 @@ In dieser Lektion verwenden Sie die **RxDataStep** erfordern, dass das gesamte D
     if (rxSqlServerTableExists(table = "iroResults",  connectionString = sqlConnString))  { rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString) }
     ```
   
-7.  Rufen Sie die benutzerdefinierte Funktion `ProcessChunk` zum Transformieren der Daten, sobald sie gelesen wird, indem Sie diesen als die *"transformfunc"* Argument an die **RxDataStep** Funktion.
+7.  Rufen Sie die benutzerdefinierte Funktion **ProcessChunk** zum Transformieren der Daten, wie sie durch die Verwendung als gelesen wird, die *TransformFunc* Argument für die **RxDataStep** Funktion.
   
     ```R
     rxDataStep( inData = inDataSource, outFile = iroDataSource, transformFunc = ProcessChunk, overwrite = TRUE)
     ```
   
-8.  Zwischenergebnisse von anzeigen `ProcessChunk`, weisen die Ergebnisse der **RxImport** einer Variablen zu, und klicken Sie dann die Ergebnisse werden an die Konsole ausgegeben.
+8.  Um Zwischenergebnisse von anzuzeigen **ProcessChunk**, weisen Sie die Ergebnisse der **RxImport** auf eine Variable, und klicken Sie dann die Ergebnisse an die Konsole ausgegeben.
   
     ```R
     iroResults <- rxImport(iroDataSource)
     iroResults
     ```
 
-**Teilergebnisse**
+    **Teilergebnisse**
 
-|      |    1  |   2   |  3   |  4   |  5  |   6   |  7 |
-| --- | ---  | --- | ---  |  ---  | ---  | ---  | --- |
-| 1 | 8228 | 8924 | 6916 | 6932 | 6944 | 5602 | 6454 |
-| 2  | 8321  | 5351 | 7329 | 7411 | 7409 | 6487 | 7692 |
+    |      |    1  |   2   |  3   |  4   |  5  |   6   |  7 |
+    | --- | ---  | --- | ---  |  ---  | ---  | ---  | --- |
+    | 1 | 8228 | 8924 | 6916 | 6932 | 6944 | 5602 | 6454 |
+    | 2  | 8321  | 5351 | 7329 | 7411 | 7409 | 6487 | 7692 |
 
 9. Summieren Sie die Spalten, und zeigen Sie die Ergebnisse in der Konsole an, um die Endergebnisse aller Blöcke zu berechnen.
 
@@ -101,21 +102,19 @@ In dieser Lektion verwenden Sie die **RxDataStep** erfordern, dass das gesamte D
     finalResults
     ```
 
- **Ergebnisse**
-  1  |   2  |   3  |   4  |   5  |   6  |   7
----  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
-97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
+    **Ergebnisse**
 
-10. Um die Zwischenergebnisse-Tabelle zu entfernen, stellen Sie einen Aufruf von **RxSqlServerDropTable**.
+    1  |   2  |   3  |   4  |   5  |   6  |   7
+    ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
+    97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
+
+10. Um die Tabelle mit Zwischenergebnissen zu entfernen, stellen Sie einen Aufruf von **RxSqlServerDropTable**.
   
     ```R
     rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString)
     ```
 
-## <a name="next-step"></a>Nächster Schritt
+## <a name="next-steps"></a>Nächste Schritte
 
-[Analysieren von Daten in einem lokalen Rechenkontext](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
-
-## <a name="previous-step"></a>Vorherigen Schritt
-
-[Erstellen einer neuen SQL Server-Tabelle mit rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
+> [!div class="nextstepaction"]
+> [R-Tutorials für SQL Server](sql-server-r-tutorials.md)

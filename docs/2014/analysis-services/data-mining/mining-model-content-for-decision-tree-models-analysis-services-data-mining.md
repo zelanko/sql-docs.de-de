@@ -15,15 +15,15 @@ ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dbd89984e64ac3ca37c3ac9ec31e19191606dc9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 960a435500f243598f9db078644950d38d7869f2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217570"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351953"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Miningmodellinhalt von Entscheidungsstrukturmodellen (Analysis Services – Data Mining)
-  In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus verwenden. Eine allgemeine Erläuterung der Miningmodellinhalte für alle Modelltypen finden Sie unter [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). Sie sollten stets bedenken, dass der Microsoft Decision Trees-Algorithmus ein hybrider Algorithmus ist, der Modelle mit sehr unterschiedlichen Funktionen erstellen kann: Eine Entscheidungsstruktur kann Zuordnungen, Regeln oder gar lineare Regression darstellen. Der Aufbau der Struktur ist grundsätzlich gleich. Allerdings hängt die Art und Weise, in der Sie die Informationen interpretieren, vom Zweck ab, für den Sie das Modell erstellen.  
+  In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus verwenden. Eine allgemeine Erläuterung der Miningmodellinhalte für alle Modelltypen finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). Sie sollten stets bedenken, dass der Microsoft Decision Trees-Algorithmus ein hybrider Algorithmus ist, der Modelle mit sehr unterschiedlichen Funktionen erstellen kann: Eine Entscheidungsstruktur kann Zuordnungen, Regeln oder gar lineare Regression darstellen. Der Aufbau der Struktur ist grundsätzlich gleich. Allerdings hängt die Art und Weise, in der Sie die Informationen interpretieren, vom Zweck ab, für den Sie das Modell erstellen.  
   
 ##  <a name="bkmk_Top"></a> Grundlegendes zur Struktur von Entscheidungsstrukturmodellen  
  Ein Entscheidungsstrukturmodell verfügt über einen einzelnen übergeordneten Knoten, der das Modell und die zugehörigen Metadaten darstellt. Unterhalb des übergeordneten Knotens befinden sich unabhängige Strukturen, die die vorhersagbaren Attribute darstellen, die Sie auswählen. Wenn Sie beispielsweise Ihr Entscheidungsstrukturmodell darauf einrichten, vorherzusagen, welche Kunden etwas kaufen werden, und Angaben zu Geschlecht und Einkommen eingeben, würde das Modell eine einzelne Struktur für das Einkaufsattribut erstellen, wobei viele Zweige in Bedingungen hinsichtlich Geschlecht und Einkommen unterteilt wären.  
@@ -262,7 +262,7 @@ ms.locfileid: "48217570"
   
  Für alle anderen Knoten in der Struktur (ausgenommen der Blattknoten) stellt das Ergebnis eines jeden Knotens das beste Teilungsergebnis für den aktuellen Knoten minus dem Teilungsergebnis für den übergeordneten Knoten dar. Üblicherweise sollte das Teilungsergebnis für einen übergeordneten Knoten immer besser sein als das Teilungsergebnis auf seinen untergeordneten Knoten. Grund hierfür ist, dass ein Entscheidungsstrukturmodell idealerweise zuerst auf den wichtigsten Attributen teilt.  
   
- Je nach gewähltem Algorithmusparameter gibt es viele Möglichkeiten, ein Ergebnis für eine Teilung zu berechnen. Eine Erläuterung dazu, wie Ergebnisse für jede Bewertungsmethode berechnet werden, würde den Rahmen dieses Themas sprengen. Weitere Informationen finden Sie unter "[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=45963)" auf der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research-Website.  
+ Je nach gewähltem Algorithmusparameter gibt es viele Möglichkeiten, ein Ergebnis für eine Teilung zu berechnen. Eine Erläuterung dazu, wie Ergebnisse für jede Bewertungsmethode berechnet werden, würde den Rahmen dieses Themas sprengen. Weitere Informationen finden Sie unter "[Learning Bayesian Networks: Die Combination of Knowledge and Statistical Data](https://go.microsoft.com/fwlink/?LinkId=45963)"auf die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research-Website.  
   
 > [!NOTE]  
 >  Wenn Sie ein Entscheidungsstrukturmodell erstellen, das sowohl über kontinuierliche als auch diskrete vorhersagbare Attribute verfügt, erhalten Sie völlig unterschiedliche Ergebnisse auf den Knoten (Alle), die jeden Strukturknoten darstellen. Jedes Modell sollte unabhängig voneinander berücksichtigt werden, und die für die Bewertungsregression verwendeten Methoden unterscheiden sich vollständig von denen, die für die Bewertungsklassifzierung verwendet werden. Die Knotenergebniswerte können nicht verglichen werden.  
@@ -283,9 +283,9 @@ ms.locfileid: "48217570"
  Weitere Informationen zu Regressionsknoten finden Sie unter [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt &#40;Analysis Services – Datamining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Datamining-Modell-Viewer](data-mining-model-viewers.md)   
- [Datamining-Abfragen](data-mining-queries.md)   
+ [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining-Modell-Viewer](data-mining-model-viewers.md)   
+ [Data Mining-Abfrage](data-mining-queries.md)   
  [Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm.md)  
   
   

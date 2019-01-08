@@ -18,12 +18,12 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fa647aabd7e2048c6f56e5518dde8a2edc12dde
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eeff4b38e3736241e0dd56729e42c5e7207f310f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661228"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591804"
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_update_schedule
  [ **@schedule_id =** ] *schedule_id*  
  Der Bezeichner des Zeitplans, der geändert werden soll. *Schedule_id* ist **Int**, hat keinen Standardwert. Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden.  
   
- [  **@name =** ] **"***Schedule_name***"**  
+ [  **@name =** ] **"**_Schedule_name_**"**  
  Der Name des zu ändernden Zeitplan. *Schedule_name*ist **Sysname**, hat keinen Standardwert. Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden.  
   
  [ **@new_name**=] *New_name*  
@@ -71,7 +71,7 @@ sp_update_schedule
  [ **@freq_type =** ] *freq_type*  
  Ein Wert, der angibt, wann ein Auftrag ausgeführt werden soll. *Freq_type*ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**4**|Täglich|  
@@ -97,7 +97,7 @@ sp_update_schedule
  [ **@freq_subday_type =** ] *freq_subday_type*  
  Gibt die Einheiten für *Freq_subday_interval **.* *Freq_subday_type*ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
   
-|value|Beschreibung (Einheit)|  
+|Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**0x1**|Zum angegebenen Zeitpunkt|  
 |**0x2**|Sekunden|  
@@ -110,7 +110,7 @@ sp_update_schedule
  [ **@freq_relative_interval =** ] *freq_relative_interval*  
  Vorhandensein eines Auftrags *Freq_interval* in jedem Monat, wenn *Freq_interval* ist **32** (mit relativem Monatsintervall). *Freq_relative_interval*ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
   
-|value|Beschreibung (Einheit)|  
+|Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**1**|Erster|  
 |**2**|Zweimal|  
@@ -135,7 +135,7 @@ sp_update_schedule
  [ **@active_end_time =** ] *active_end_time*  
  Die Zeit auf einem beliebigen Tag zwischen *Active_start_date* und *Active_end_date* zu der die Ausführung eines Auftrags. *Active_end_time*ist **Int**, hat den Standardwert **235959**, womit 23:59:59 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [ **@owner_login_name**=] **"***Owner_login_name***"**]  
+ [ **@owner_login_name**=] **"**_Owner_login_name_**"**]  
  Der Name des Serverprinzipals, der Besitzer des Zeitplans ist. *Owner_login_name* ist **Sysname**, hat den Standardwert NULL, gibt an, dass der Ersteller des Zeitplans Besitz ist.  
   
  [ **@automatic_post =**] *automatic_post*  

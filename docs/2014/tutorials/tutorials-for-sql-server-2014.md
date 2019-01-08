@@ -18,35 +18,35 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b3a2a4fb654603e783a50e46b212f746226132ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07ff9e3ed413b3cb73a4dbfb84bac6961acb1759
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194470"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368062"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Lernprogramme für SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] führt viele neue Technologien und Funktionen ein.  
   
- Es wird geplant, künftig weitere Lernprogramme bereitzustellen. In der Zwischenzeit können Sie sich mit den [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]-Lernprogrammen weiter fortbilden. In manchen Fällen stellen Sie möglicherweise kleine Unterschiede zwischen der Benutzeroberfläche in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] fest, und Voraussetzungen für die Lernprogramme können sich ebenfalls leicht unterscheiden. Wenn ein Lernprogramm eine der [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Datenbanken verwendet, laden Sie die Version [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] herunter verwenden Sie diese.  
+ Es wird geplant, künftig weitere Lernprogramme bereitzustellen. In der Zwischenzeit können Sie sich mit den [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Lernprogrammen weiter fortbilden. In manchen Fällen stellen Sie möglicherweise kleine Unterschiede zwischen der Benutzeroberfläche in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] fest, und Voraussetzungen für die Lernprogramme können sich ebenfalls leicht unterscheiden. Wenn ein Lernprogramm eine der [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Datenbanken verwendet, laden Sie die Version [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] herunter verwenden Sie diese.  
   
- Wenn Sie einen [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Server verwenden, haben Sie die [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Datenanbieter installiert. Damit die Lernprogramme funktionieren, benötigen Sie entweder die [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Beispieldatenbanken, die diese Anbieter unterstützen, oder Sie benötigen die [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]-Datenanbieter, die die [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]-Version der Beispieldatenbanken unterstützen.  
+ Wenn Sie einen [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Server verwenden, haben Sie die [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Datenanbieter installiert. Damit die Lernprogramme funktionieren, benötigen Sie entweder die [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Beispieldatenbanken, die diese Anbieter unterstützen, oder Sie benötigen die [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Datenanbieter, die die [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Version der Beispieldatenbanken unterstützen.  
   
--   Zum Herunterladen [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Beispiele, die anhand von Tutorials, wechseln Sie zu [Beispiele für SQL Server](http://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) auf CodePlex.  
+-   Um [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Beispiele für die Verwendung in den Lernprogrammen herunterzuladen, rufen Sie die Seite mit [Beispielen für SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) auf CodePlex auf.  
   
--   Zum Herunterladen einer [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Arbeitsmappe und [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Berichte zur Verwendung mit [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Lernprogrammen unter [Image Files for HelloWorldPicnic Sample Model in PowerPivot und Power View](http://www.microsoft.com/download/details.aspx?id=26719).  
+-   Um ein [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsbuch und [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Berichte zur Verwendung mit [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Lernprogrammen herunterzuladen, gehen Sie zu [Image Files for HelloWorldPicnic Sample Model in PowerPivot and Power View](https://www.microsoft.com/download/details.aspx?id=26719)(in englischer Sprache).  
   
     > [!NOTE]  
     >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] ist ein Feature von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
   
--   Zum Herunterladen [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Versionen [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] Datenbanken, wechseln Sie zu [Adventure Works 2014 Sample Databases](http://msftdbprodsamples.codeplex.com/releases/view/125550) auf CodePlex.  
+-   Um [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] -Versionen von [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Datenbanken herunterzuladen, rufen Sie [Adventure Works 2014 Sample Databases](http://msftdbprodsamples.codeplex.com/releases/view/125550) (in englischer Sprache) auf CodePlex auf.  
   
--   Zum Herunterladen [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Versionen [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] Datenbanken, wechseln Sie zu [Adventure Works für SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) auf CodePlex.  
+-   Um [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] -Versionen von [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Datenbanken herunterzuladen, rufen Sie [Adventure Works for SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) (in englischer Sprache) auf CodePlex auf.  
   
--   Um eine Liste der [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Lernprogrammen unter [Tutorials](http://msdn.microsoft.com/library/ms167593.aspx) in MSDN-Bibliothek.  
+-   Eine Liste mit [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Lernprogrammen finden Sie auf der Seite für [Lernprogramme](https://msdn.microsoft.com/library/ms167593.aspx) in der MSDN Library.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- Für die folgenden [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]-Technologien sind Lernprogramme verfügbar.  
+ Für die folgenden [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] -Technologien sind Lernprogramme verfügbar.  
   
 |Technologie|Description|  
 |----------------|-----------------|  

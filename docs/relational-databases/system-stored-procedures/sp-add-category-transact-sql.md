@@ -18,12 +18,12 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 047b936bf608be86407c93860078758d43ebbb2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 295f29b86e53a8d58622e4c79c1b36734acdbe3e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792067"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591014"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,25 +43,25 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@class =** ] **"***Klasse***"**  
+ [  **@class =** ] **"**_Klasse_**"**  
  Die Klasse der Kategorie, die hinzugefügt werden soll. *Klasse* ist **varchar(8)** hat den Standardwert des AUFTRAGS, und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |JOB|Fügt eine Auftragskategorie hinzu|  
 |ALERT|Fügt eine Warnungskategorie hinzu|  
 |OPERATOR|Fügt eine Operatorkategorie hinzu|  
   
- [ **@type =** ] **'***type***'**  
+ [  **@type =** ] **"**_Typ_**"**  
  Der Typ der Kategorie, die hinzugefügt werden soll. *Typ* ist **varchar(12)**, hat den Standardwert des **lokalen**, und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |LOCAL|Lokale Auftragskategorie|  
 |MIT MEHREREN SERVERN|Multiserver-Auftragskategorie.|  
 |Keine|Eine Kategorie für eine Klasse als JOB **.**|  
   
- [ **@name =** ] **'***name***'**  
+ [  **@name =** ] **"**_Namen_**"**  
  Der Name der Kategorie, die hinzugefügt werden soll. Der Name muss innerhalb der angegebenen Klasse eindeutig sein. *Namen* ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

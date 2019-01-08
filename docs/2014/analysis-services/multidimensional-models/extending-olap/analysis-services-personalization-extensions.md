@@ -14,12 +14,12 @@ ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90b8f11b303c72eedbf116ae4154ce9d611a401c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1d563b4cefc2e074c437fa0ab3b66bfea9796fb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164860"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372222"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Personalisierungserweiterungen für Analysis Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -personalisierungserweiterungen sind die Grundlage für das Konzept der Implementierung einer Plug-in-Architektur. In einer Plug-In-Architektur können Sie neue Cubeobjekte und -funktionalitäten dynamisch entwickeln und problemlos für andere Entwickler freigeben. Daher [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalisierungserweiterungen bieten die Funktionalität, die Folgendes erreicht werden können:  
@@ -43,7 +43,7 @@ ms.locfileid: "48164860"
  Beim Starten des Diensts, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] lädt die erforderlichen Assemblys und bestimmt, welche Klassen das <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> benutzerdefinierten Attributs.  
   
 > [!NOTE]  
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definiert benutzerdefinierte Attribute als Möglichkeit, den Code zu beschreiben und das Laufzeitverhalten zu beeinflussen. Weitere Informationen finden Sie unter "[Übersicht über Attribute](http://go.microsoft.com/fwlink/?LinkId=82929)," in der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Developer's Guide auf MSDN.  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definiert benutzerdefinierte Attribute als Möglichkeit, den Code zu beschreiben und das Laufzeitverhalten zu beeinflussen. Weitere Informationen finden Sie unter "[Übersicht über Attribute](https://go.microsoft.com/fwlink/?LinkId=82929)," in der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Developer's Guide auf MSDN.  
   
  Für alle Klassen, mit der <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> benutzerdefinierte Attribut [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Standardkonstruktoren aufruft. Aufrufen aller Konstruktoren beim Start bietet einen gebräuchlichen Ort aus die neue Objekte erstellt und von Benutzeraktivitäten unabhängig ist.  
   
@@ -141,10 +141,10 @@ ms.locfileid: "48164860"
  Die Befehle CREATE KPI und DROP KPI werden der MDX-Syntax hinzugefügt. KPIs können dynamisch aus einem beliebigen MDX-Skript erstellt werden.  
   
 ### <a name="schema-rowsets-extensions"></a>Schemarowset-Erweiterungen  
- MDSCHEMA_MEMBERS *Bereich* Spalte hinzugefügt wird. Die Bereichswerte lauten wie folgt: MDMEMBER_SCOPE_GLOBAL=1, MDMEMBER_SCOPE_SESSION=2.  
+ MDSCHEMA_MEMBERS *Bereich* Spalte hinzugefügt wird. Bereichswerte lauten wie folgt aus: MDMEMBER_SCOPE_GLOBAL = 1, MDMEMBER_SCOPE_SESSION = 2.  
   
- Mdschema_sets *Set_evaluation_context* Spalte hinzugefügt wird. Die Satzauswertungs-Kontextwerte lauten wie folgt: MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
+ Mdschema_sets *Set_evaluation_context* Spalte hinzugefügt wird. Satzauswertungs-Kontextwerte lauten wie folgt aus: MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
   
- MDSCHEMA_KPIS wird eine scope-Spalte hinzugefügt. Die Bereichswerte lauten wie folgt: MDKPI_SCOPE_GLOBAL=1, MDKPI_SCOPE_SESSION=2.  
+ MDSCHEMA_KPIS wird eine scope-Spalte hinzugefügt. Bereichswerte lauten wie folgt aus: MDKPI_SCOPE_GLOBAL = 1, MDKPI_SCOPE_SESSION = 2.  
   
   

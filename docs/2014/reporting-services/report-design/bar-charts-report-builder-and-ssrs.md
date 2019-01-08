@@ -11,17 +11,17 @@ ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5407fdc291cd1d0d0a533466b0e45dd0cbce320b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc40f29ec61c1818a4cdb1186a4ceccf3553a107
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106100"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365912"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Balkendiagramme (Berichts-Generator und SSRS)
   Ein Balkendiagramm zeigt Reihen als Sätze horizontaler Balken an. Das einfache Balkendiagramm ist eng mit dem Säulendiagramm und dem Bereichsbalkendiagramm verbunden. Das Säulendiagramm zeigt Reihen als Sätze vertikaler Balken an, während das Bereichsbalkendiagramm Reihen als Sätze horizontaler Balken mit verschiedenen Anfangs- und Endpunkten darstellt.  
   
- Das Balkendiagramm ist der einzige Diagrammtyp, der Daten horizontal anzeigt. Aus diesem Grund wird ein Balkendiagramm häufig zur Darstellung von Daten verwendet, die über einen Zeitraum hinweg auftreten, der ein festes Anfangs- und Enddatum hat. Es wird auch häufig zum Anzeigen von Kategorieinformationen herangezogen, da die Kategorien horizontal angezeigt werden können. Weitere Informationen zum Hinzufügen von Daten in ein Balkendiagramm, finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Das Balkendiagramm ist der einzige Diagrammtyp, der Daten horizontal anzeigt. Aus diesem Grund wird ein Balkendiagramm häufig zur Darstellung von Daten verwendet, die über einen Zeitraum hinweg auftreten, der ein festes Anfangs- und Enddatum hat. Es wird auch häufig zum Anzeigen von Kategorieinformationen herangezogen, da die Kategorien horizontal angezeigt werden können. Weitere Informationen zu Hinzufügen von Daten zu einem Ballkendiagramm finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  Die folgende Abbildung zeigt ein Balkendiagramm. Das Balkendiagramm ist für diese Daten ausgezeichnet geeignet, da alle drei Reihen einen gemeinsamen Zeitraum verwenden und so zuverlässige Vergleiche vorgenommen werden können.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "48106100"
   
 -   In einem Balkendiagramm werden Werte von links nach rechts angezeigt, was beim Anzeigen von Daten bezogen auf die Dauer intuitiver sein kann.  
   
--   Wenn Sie Balken zu einer Tabelle oder Matrix innerhalb des Berichts hinzufügen möchten, sollten Sie erwägen, ein lineares Messgerät statt eines Balkendiagramms zu verwenden. Das lineare Messgerät ist für die Anzeige eines Werts statt mehrerer Gruppen konzipiert, sodass es für die Verwendung innerhalb einer Liste oder eines Tabellendatenbereichs mehr Flexibilität bietet. Weitere Informationen finden Sie unter [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md).  
+-   Wenn Sie Balken zu einer Tabelle oder Matrix innerhalb des Berichts hinzufügen möchten, sollten Sie erwägen, ein lineares Messgerät statt eines Balkendiagramms zu verwenden. Das lineare Messgerät ist für die Anzeige eines Werts statt mehrerer Gruppen konzipiert, sodass es für die Verwendung innerhalb einer Liste oder eines Tabellendatenbereichs mehr Flexibilität bietet. Weitere Informationen finden Sie unter [Messgeräte &#40;Berichts-Generator und SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
--   Sie können den einzelnen Balken eines Balkendiagramms besondere Zeichnungsformate hinzufügen, um die visuelle Wirkung zu erhöhen. Zeichnungsarten schließen Keil, Prägen, Zylinder und Helligkeitsabstufungen ein. Diese Effekte sollen die Darstellung des 2D-Diagramms verbessern. Bei Verwendung eines 3D-Diagramms werden die Zeichnungsarten zwar ebenfalls übernommen, sie haben jedoch möglicherweise nicht den gleichen Effekt. Weitere Informationen zur Vorgehensweise beim Hinzufügen einer Zeichnungsart zu einem Balkendiagramm finden Sie unter [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
+-   Sie können den einzelnen Balken eines Balkendiagramms besondere Zeichnungsformate hinzufügen, um die visuelle Wirkung zu erhöhen. Zeichnungsarten schließen Keil, Prägen, Zylinder und Helligkeitsabstufungen ein. Diese Effekte sollen die Darstellung des 2D-Diagramms verbessern. Bei Verwendung eines 3D-Diagramms werden die Zeichnungsarten zwar ebenfalls übernommen, sie haben jedoch möglicherweise nicht den gleichen Effekt. Weitere Informationen zum Hinzufügen einer Zeichnungsart zu einem Diagramm finden Sie unter [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
 -   Bei gestapelten Balkendiagrammen werden Reihen aufeinander gestapelt, sodass sie einen mehrteiligen Stapel ergeben. Sie können das gestapelte Balkendiagramm für jede Kategorie in mehrere Gruppen von Stapeln unterteilen. Die gruppierten gestapelten Diagramme werden nebeneinander angezeigt. Ein Diagramm kann beliebig viele gruppierte Stapelfolgen enthalten.  
   
@@ -61,14 +61,14 @@ ms.locfileid: "48106100"
 ## <a name="see-also"></a>Siehe auch  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [Leere und NULL-Datenpunkte in Diagrammen (Berichts-Generator und SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Leere und NULL-Datenpunkte in Diagrammen &#40;Berichts-Generator und SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Säulendiagramme (Berichts-Generator und SSRS)](column-charts-report-builder-and-ssrs.md)   
  [Bereichsdiagramme &#40;Berichts-Generator und SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
  [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatieren der Legende in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm (Berichts-Generator und SSRS)](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

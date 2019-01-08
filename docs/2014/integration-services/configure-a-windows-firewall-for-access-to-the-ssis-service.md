@@ -19,12 +19,12 @@ ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 246441fba2e72c95004baa3cdb75320b32648e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7160e4622cea397f7b300a1221797349107d38d5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154740"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369992"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Konfigurieren einer Windows-Firewall für den Zugriff auf den SSIS-Dienst
     
@@ -36,7 +36,7 @@ ms.locfileid: "48154740"
 > [!IMPORTANT]  
 >  Zum Verwalten von Paketen auf einem Remoteserver müssen Sie keine Verbindung mit der Instanz des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts auf dem betreffenden Remoteserver herstellen. Bearbeiten Sie stattdessen die Konfigurationsdatei für den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst, sodass die auf dem Remoteserver gespeicherten Pakete von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] angezeigt werden. Weitere Informationen finden Sie unter [Configuring the Integration Services Service &#40;SSIS Service&#41;](configuring-the-integration-services-service-ssis-service.md).  
   
- Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst verwendet das DCOM-Protokoll. Weitere Informationen zur Funktionsweise des DCOM-Protokolls über Firewalls finden Sie im Artikel "[Using Distributed COM with Firewalls](http://go.microsoft.com/fwlink/?LinkId=12490)" in der MSDN Library.  
+ Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst verwendet das DCOM-Protokoll. Weitere Informationen zur Funktionsweise des DCOM-Protokolls über Firewalls finden Sie im Artikel "[Using Distributed COM with Firewalls](https://go.microsoft.com/fwlink/?LinkId=12490)" in der MSDN Library.  
   
  Es gibt zahlreiche verschiedene Firewallsysteme auf dem Markt. Wenn Sie nicht die Windows-Firewall, sondern eine andere Firewall ausführen, suchen Sie in der Firewalldokumentation nach Informationen, die sich auf das von Ihnen verwendete System beziehen.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48154740"
     >  In dieser Prozedur wird die Systemsteuerungsoption **Windows-Firewall** verwendet, um die Windows-Firewall zu konfigurieren. Über die Option **Windows-Firewall** wird nur die Firewall für das Profil des aktuellen Netzwerkspeicherorts konfiguriert. Sie können die Windows-Firewall jedoch auch mithilfe des **netsh** -Befehlszeilentools oder des MMC-Snap-Ins ( [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console) namens „Windows-Firewall mit erweiterter Sicherheit“ konfigurieren. Weitere Informationen über diese Tools finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren der Integration Services-Dienst &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md)   
+ [Konfigurieren des Integration Services-Diensts &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md)   
  [Integration Services-Dienst &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md)  
   
   

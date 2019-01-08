@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - web configuration file [Master Data Services]
@@ -13,12 +12,12 @@ ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2f52ca10bd9d857d4e87a54f19cfaa87f1e92575
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8712497d6732bc979f128ccb9acf859cc2e2748
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130960"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363412"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Webkonfigurationsreferenz (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] benutzt die Datei „Web.config“, die die Konfigurationseinstellungen enthält, die Internetinformationsdienste (IIS) aktivieren, um die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung und den entsprechenden Webdienst zu hosten. Diese Datei Web.config Datei befindet sich im Ordner WebApplication des [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Installationspfads. Weitere Informationen zu Pfaden und Berechtigungen finden Sie unter [Ordner- und Dateiberechtigungen &#40;Master Data Services&#41;](folder-and-file-permissions-master-data-services.md).  
@@ -29,16 +28,16 @@ ms.locfileid: "48130960"
 |Konfigurationselement|Description|  
 |---------------------------|-----------------|  
 |`masterDataServices`|Benutzerdefiniertes Element. Verbindet den [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Web-Service mit einer [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank.|  
-|`connectionStrings`|ASP.NET-Element. Weitere Informationen finden Sie unter [connectionStrings-Element (ASP.NET-Einstellungsschema)](http://go.microsoft.com/fwlink/?LinkId=178347) in der MSDN Library.|  
-|`system.web`|ASP.NET-Element. Weitere Informationen finden Sie unter [system.web-Element (ASP.NET-Einstellungsschema)](http://go.microsoft.com/fwlink/?LinkId=178348) in der MSDN Library.|  
-|`startup`|.NET Framework-Element. Weitere Informationen finden Sie unter [\<startup>-Element](http://go.microsoft.com/fwlink/?LinkId=178349) in der MSDN-Bibliothek.|  
-|`runtime`|.NET Framework-Element. Weitere Informationen finden Sie unter [\<runtime>-Element](http://go.microsoft.com/fwlink/?LinkId=178350) in der MSDN-Bibliothek.|  
-|`system.codedom`|.NET Framework-Element. Weitere Informationen finden Sie unter [\<system.codedom>-Element](http://go.microsoft.com/fwlink/?LinkId=178351) in der MSDN-Bibliothek.|  
-|`system.web.extensions`|ASP.NET-Element. Weitere Informationen finden Sie unter [system.web.extensions-Element (ASP.NET-Einstellungsschema)](http://go.microsoft.com/fwlink/?LinkId=178352) in der MSDN Library.|  
-|`system.webServer`|Abschnittsgruppe, die IIS-Elemente enthält. Weitere Informationen finden Sie unter [system.webServer Section Group \[IIS 7 Settings Schema\]](http://go.microsoft.com/fwlink/?LinkId=178353) (Abschnittsgruppe „system.webServer“ [IIS 7-Einstellungsschema]) in der MSDN Library.|  
-|`system.serviceModel`|WCF-Element. Weitere Informationen finden Sie unter [\<system.serviceModel>](http://go.microsoft.com/fwlink/?LinkId=178354) in der MSDN-Bibliothek.|  
-|`system.diagnostics`|.NET Framework-Element. Weitere Informationen finden Sie unter [\<system.diagnostics>-Element](http://go.microsoft.com/fwlink/?LinkId=178355) in der MSDN-Bibliothek.|  
-|`appSettings`|ASP.NET-Element. Weitere Informationen finden Sie unter [appSettings-Element (allgemeines Einstellungsschema)](http://go.microsoft.com/fwlink/?LinkId=178356) in der MSDN Library.|  
+|`connectionStrings`|ASP.NET-Element. Weitere Informationen finden Sie unter [connectionStrings-Element (ASP.NET-Einstellungsschema)](https://go.microsoft.com/fwlink/?LinkId=178347) in der MSDN Library.|  
+|`system.web`|ASP.NET-Element. Weitere Informationen finden Sie unter [system.web-Element (ASP.NET-Einstellungsschema)](https://go.microsoft.com/fwlink/?LinkId=178348) in der MSDN Library.|  
+|`startup`|.NET Framework-Element. Weitere Informationen finden Sie unter [\<startup>-Element](https://go.microsoft.com/fwlink/?LinkId=178349) in der MSDN-Bibliothek.|  
+|`runtime`|.NET Framework-Element. Weitere Informationen finden Sie unter [\<runtime>-Element](https://go.microsoft.com/fwlink/?LinkId=178350) in der MSDN-Bibliothek.|  
+|`system.codedom`|.NET Framework-Element. Weitere Informationen finden Sie unter [\<system.codedom>-Element](https://go.microsoft.com/fwlink/?LinkId=178351) in der MSDN-Bibliothek.|  
+|`system.web.extensions`|ASP.NET-Element. Weitere Informationen finden Sie unter [system.web.extensions-Element (ASP.NET-Einstellungsschema)](https://go.microsoft.com/fwlink/?LinkId=178352) in der MSDN Library.|  
+|`system.webServer`|Abschnittsgruppe, die IIS-Elemente enthält. Weitere Informationen finden Sie unter [system.webServer Section Group \[IIS 7 Settings Schema\]](https://go.microsoft.com/fwlink/?LinkId=178353) (Abschnittsgruppe „system.webServer“ [IIS 7-Einstellungsschema]) in der MSDN Library.|  
+|`system.serviceModel`|WCF-Element. Weitere Informationen finden Sie unter [\<system.serviceModel>](https://go.microsoft.com/fwlink/?LinkId=178354) in der MSDN-Bibliothek.|  
+|`system.diagnostics`|.NET Framework-Element. Weitere Informationen finden Sie unter [\<system.diagnostics>-Element](https://go.microsoft.com/fwlink/?LinkId=178355) in der MSDN-Bibliothek.|  
+|`appSettings`|ASP.NET-Element. Weitere Informationen finden Sie unter [appSettings-Element (allgemeines Einstellungsschema)](https://go.microsoft.com/fwlink/?LinkId=178356) in der MSDN Library.|  
   
 ## <a name="masterdataservices-element"></a>masterDataServices-Element  
  Das **\<masterDataServices>**-Element ist ein benutzerdefiniertes Element, das verwendet wird, um einen [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Webdienst mit einer [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Datenbank zu verbinden.  
