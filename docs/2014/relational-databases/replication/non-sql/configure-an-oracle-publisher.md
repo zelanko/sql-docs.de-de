@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
@@ -13,12 +12,12 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a84224e68be8b5d4c5ad9fcd3f2be1ddce78fdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057460"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804444"
 ---
 # <a name="configure-an-oracle-publisher"></a>Konfigurieren eines Oracle-Verlegers
   Veröffentlichungen von Oracle-Verlegern werden auf dieselbe Weise erstellt wie gängige Momentaufnahme- und Transaktionsveröffentlichungen. Vor der Erstellung einer Veröffentlichung eines Oracle-Verlegers müssen jedoch folgende Schritte ausgeführt werden (die Schritte eins, drei und vier werden in diesem Thema ausführlich beschrieben):  
@@ -123,7 +122,7 @@ ms.locfileid: "48057460"
 > [!NOTE]  
 >  Ein Oracle-Verleger darf nicht denselben Namen aufweisen wie der zugehörige [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler oder wie ein anderer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verleger, der denselben Verteiler verwendet.  
   
- Wenn Sie die Oracle-Datenbank als Verleger identifizieren, müssen Sie eine Oracle-Veröffentlichungsoption auswählen: Vollständig oder Oracle-Gateway. Nachdem ein Verleger identifiziert wurde, kann diese Option nicht mehr geändert werden, ohne dass der Verleger gelöscht und neu konfiguriert wird. Bei Verwendung der Option Vollständig werden Momentaufnahme- und Transaktionsveröffentlichungen mit dem vollständigen Satz der unterstützten Funktionen für das Veröffentlichen mit Oracle bereitgestellt. Die Oracle-Gateway-Option bietet spezifische Entwurfsoptimierungen für die Verbesserung der Leistung für den Fall, dass die Replikation als Gateway zwischen Systemen fungiert.  
+ Wenn Sie die Oracle-Datenbank als Verleger identifizieren, müssen Sie eine Oracle-Veröffentlichungsoption auswählen auswählen: Vollständige oder Oracle-Gateway. Nachdem ein Verleger identifiziert wurde, kann diese Option nicht mehr geändert werden, ohne dass der Verleger gelöscht und neu konfiguriert wird. Bei Verwendung der Option Vollständig werden Momentaufnahme- und Transaktionsveröffentlichungen mit dem vollständigen Satz der unterstützten Funktionen für das Veröffentlichen mit Oracle bereitgestellt. Die Oracle-Gateway-Option bietet spezifische Entwurfsoptimierungen für die Verbesserung der Leistung für den Fall, dass die Replikation als Gateway zwischen Systemen fungiert.  
   
  Nachdem der Oracle-Verleger auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler identifiziert wurde, erstellt die Replikation einen Verbindungsserver mit dem Namen des TNS-Dienstes der Oracle-Datenbank. Dieser Verbindungsserver kann ausschließlich von der Replikation verwendet werden. Wenn Sie über eine Verbindungsserververbindung eine Verbindung mit dem Oracle-Verleger herstellen müssen, erstellen Sie einen anderen TNS-Dienstnamen, und verwenden Sie dann diesen Namen für den Aufruf von [p_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   

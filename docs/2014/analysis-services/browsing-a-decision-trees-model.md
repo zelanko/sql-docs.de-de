@@ -18,12 +18,12 @@ ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9e1ccaf9e000779485be93e476f9114817529a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137050"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525559"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Durchsuchen eines Entscheidungsstrukturmodells
   Beim Öffnen ein klassifizierungsmodell mit **Durchsuchen**, das Modell wird angezeigt, in einem interaktiven Entscheidungsstruktur-Viewer, ähnlich wie die [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees-Viewer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Im Viewer werden die Ergebnisse der Klassifizierung als Diagramm angezeigt. Darin sind die Kriterien hervorgehoben, die verschiedene Datengruppen voneinander unterscheiden. Sie können auch einen Drilldown auf einzelne Teilmengen der Struktur ausführen und die zugrunde liegenden Daten abrufen.  
@@ -92,13 +92,13 @@ ms.locfileid: "48137050"
   
          Fälle gesamt: 1150  
   
-         Wahrscheinlichkeit eines fahrradkaufs: 18 %  
+         Bike Buyer Wahrscheinlichkeit: 18 %  
   
     -   Age > = 32 und \< 53 und jährlichen Einkommen > = 26000 und Kinder nicht = 0 und Familienstand = "Single"  
   
          Fälle gesamt: 402  
   
-         Wahrscheinlichkeit eines Fahrradkaufs: 16 %  
+         Bike Buyer Wahrscheinlichkeit: 16 %  
   
 7.  Ändern Sie den Wert für **Hintergrund** aus **Ja** zu **keine** und festzustellen, wie das Diagramm ändert.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48137050"
   
 -   Wenn die Daten in mehrere Reihen aufgeteilt werden können, wird für jedes Dataset, das Sie modellieren möchten, ein anderes Modell erstellt.  
   
--   Das Beispieldatenmodell enthält nur das vorhersagbare Ergebnis "Bike Buyer". Stellen Sie sich nun vor, Sie hätten Informationen darüber, ob der Kunde einen Wartungsvertrag abgeschlossen hat und möchten auch dazu eine Vorhersage treffen. In diesem Fall würden sich die Daten in einer separaten Spalte befinden und zwei vorhersagbare Attribute aus dem Modell enthalten.  
+-   Im Daten-Beispielmodell gibt es nur ein vorhersagbares Ergebnis - Bike Buyer - aber nehmen wir an, dass Sie die Informationen, ob der Kunde einen Wartungsvertrag und vorhergesagt werden soll, die auch mussten. In diesem Fall würden sich die Daten in einer separaten Spalte befinden und zwei vorhersagbare Attribute aus dem Modell enthalten.  
   
      Klicken Sie auf die **Histogramm** Option in der oben links im Bereich Decision Tree so ändern Sie die maximale Anzahl von Zuständen, die im Histogramm der Struktur angezeigt werden können. Dies ist sinnvoll, wenn die vorhersagbaren Attribute viele Status haben. Die Status werden von links nach rechts in einem Histogramm in Reihenfolge der Verwendungshäufigkeit angezeigt.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48137050"
   
     -   **Drillthrough für Modell**. Durch diese Option werden die zum ausgewählten Knoten gehörenden Fälle abgerufen und in einer Excel-Tabelle gespeichert. Sie rufen nur die Datenspalten ab, die tatsächlich zur Modellerstellung verwendet wurden.  
   
-    -   **Drillthrough für Strukturspalten**. Durch diese Option werden die zum ausgewählten Knoten gehörenden Fälle abgerufen und in einer Excel-Tabelle gespeichert. Sie rufen alle Informationen ab, die bei der Erstellung in den zugrunde liegenden Daten verfügbar waren, auch wenn eine Spalte nicht im Modell verwendet wurde. Möglicherweise haben Sie die Kundenadresse und die Postleitzahl ausgeschlossen, weil sie zu Analysezwecken nicht hilfreich sind; trotzdem wurden sie in der Struktur beibehalten.  
+    -   **Drillthrough für Strukturspalten**. Durch diese Option werden die zum ausgewählten Knoten gehörenden Fälle abgerufen und in einer Excel-Tabelle gespeichert. Sie rufen alle Informationen, die zur Verfügung, in der zugrunde liegenden Daten, wenn Sie es noch eine Spalte erstellt wurde nicht im Modell verwendet. Möglicherweise haben Sie die Kundenadresse und die Postleitzahl ausgeschlossen, weil sie zu Analysezwecken nicht hilfreich sind; trotzdem wurden sie in der Struktur beibehalten.  
   
      Kehren Sie zu Excel zurück, um die Daten anzuzeigen. In der Anzeige Durchsuchen wird eine Abfrage ausgeführt, die Daten werden in einer Tabelle eines neuen Arbeitsblatts gespeichert und die Ergebnisse mit Beschriftungen versehen.  
   

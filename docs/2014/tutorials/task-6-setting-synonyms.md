@@ -13,15 +13,15 @@ ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a028a8cc32003dfb44f6ce449a5f6313492fcfd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00640766d7a19c91f517d8e96e6de9f863d5ed54
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211401"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365702"
 ---
 # <a name="task-6-setting-synonyms"></a>Aufgabe 6: Festlegen von Synonymen
-  In dieser Aufgabe legen Sie zwei Domänenwerte, **USA** und **USA**, der die **Land** Domäne als Synonyme mit **USA** wie die führender Wert. Da die **führende Werte** ausgewählt war beim Erstellen der **Land** Domäne alle **USA** Werte für die **Land** Domäne Gibt als **USA** (wie der Vereinigten Staaten der führende Wert ist). Finden Sie unter [Change Domain Values](http://msdn.microsoft.com/library/hh510408.aspx) Weitere Details.  
+  In dieser Aufgabe legen Sie zwei Domänenwerte, **USA** und **USA**, der die **Land** Domäne als Synonyme mit **USA** wie die führender Wert. Da die **führende Werte** ausgewählt war beim Erstellen der **Land** Domäne alle **USA** Werte für die **Land** Domäne Gibt als **USA** (wie der Vereinigten Staaten der führende Wert ist). Finden Sie unter [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) Weitere Details.  
   
 1.  Wählen Sie **Land** aus der Liste der Domänen.  
   
@@ -40,6 +40,6 @@ ms.locfileid: "48211401"
      ![Vereinigte Staaten und USA als Synonyme](../../2014/tutorials/media/et-settingsynonyms-02.jpg "Vereinigte Staaten und USA als Synonyme")  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 7: Erstellen einer Verbunddomänenregel](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
+ [Aufgabe 7: Erstellen einer Verbunddomäne](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
   
   

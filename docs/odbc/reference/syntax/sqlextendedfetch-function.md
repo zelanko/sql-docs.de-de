@@ -20,22 +20,22 @@ ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1896ec473caf1af8a3fa2bdaa4156ddca3c0a6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e8844d3152f9465c8bb61acca9351f58834087f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697049"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204039"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: als veraltet markiert  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: Als veraltet markiert  
   
  **Zusammenfassung**  
  **SQLExtendedFetch** angegebene Rowset von Daten aus dem Resultset abruft, und gibt Daten für alle gebundenen Spalten zurück. Rowsets können an eine absolute oder relative Position oder durch Lesezeichen angegeben werden.  
   
-> [!NOTE]  
->  In ODBC 3.*.x*, **SQLExtendedFetch** wurde ersetzt durch **SQLFetchScroll**. ODBC 3.*.x* Anwendungen sollten nicht aufrufen **SQLExtendedFetch**; sie sollten stattdessen Aufrufen **SQLFetchScroll**. Der Treiber-Manager zugeordnet **SQLFetchScroll** zu **SQLExtendedFetch** bei der Arbeit mit einer ODBC 2.*.x* Treiber. ODBC 3.*.x* Treiber unterstützen sollten **SQLExtendedFetch** bei Bedarf zum Arbeiten mit ODBC 2.*.x* Anwendungen, die sie aufrufen. Weitere Informationen finden Sie unter "Kommentare" und [Blockcursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität.  
+> [!NOTE]
+>  In ODBC 3.*.x*, **SQLExtendedFetch** wurde ersetzt durch **SQLFetchScroll**. ODBC 3.*.x* Anwendungen sollten nicht aufrufen **SQLExtendedFetch**; sie sollten stattdessen Aufrufen **SQLFetchScroll**. Der Treiber-Manager zugeordnet **SQLFetchScroll** zu **SQLExtendedFetch** bei der Arbeit mit einer ODBC 2.*.x* Treiber. ODBC 3.*.x* Treiber unterstützen sollten **SQLExtendedFetch** bei Bedarf zum Arbeiten mit ODBC 2.*.x* Anwendungen, die sie aufrufen. Weitere Informationen finden Sie unter "Kommentare" und [Blockcursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,7 +65,7 @@ SQLRETURN SQLExtendedFetch(
  *RowStatusArray*  
  [Ausgabe] Zeiger auf ein Array, in dem den Status der einzelnen Zeilen zurückgegeben. Dieses Array wird in die gleiche Weise wie das Array, das durch das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR angegeben verwendet.  
   
- Die Adresse dieses Arrays ist jedoch nicht in das Feld SQL_DESC_STATUS_ARRAY_PTR IRD gespeichert werden. Darüber hinaus diesem Array werden nur von **SQLExtendedFetch** und **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD oder **SQLSetPos**bei Aufruf nach **SQLExtendedFetch**. Er wird nicht verwendet, indem **SQLFetch** oder **SQLFetchScroll**, und es ist nicht vom verwendet **SQLBulkOperations** oder **SQLSetPos** bei ihrem Aufruf nach **SQLFetch** oder **SQLFetchScroll**. Es ist auch nicht verwendet, wenn **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD wird aufgerufen, bevor alle Fetch-Funktion aufgerufen wird. Das heißt, ist es nur in der Anweisung Zustand S7 verwendet. Es wird nicht in der Anweisung Zustände S5 oder S6 verwendet. Weitere Informationen finden Sie unter [Statusübergänge](../../../odbc/reference/appendixes/statement-transitions.md) in Anhang B: ODBC-Status-Übergang-Tabellen.  
+ Die Adresse dieses Arrays ist jedoch nicht in das Feld SQL_DESC_STATUS_ARRAY_PTR IRD gespeichert werden. Darüber hinaus diesem Array werden nur von **SQLExtendedFetch** und **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD oder **SQLSetPos**bei Aufruf nach **SQLExtendedFetch**. Er wird nicht verwendet, indem **SQLFetch** oder **SQLFetchScroll**, und es ist nicht vom verwendet **SQLBulkOperations** oder **SQLSetPos** bei ihrem Aufruf nach **SQLFetch** oder **SQLFetchScroll**. Es ist auch nicht verwendet, wenn **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD wird aufgerufen, bevor alle Fetch-Funktion aufgerufen wird. Das heißt, ist es nur in der Anweisung Zustand S7 verwendet. Es wird nicht in der Anweisung Zustände S5 oder S6 verwendet. Weitere Informationen finden Sie unter [Statusübergänge](../../../odbc/reference/appendixes/statement-transitions.md) in Anhang B: ODBC-Übergang Statustabellen.  
   
  Anwendungen sollten Geben Sie einen gültigen Zeiger in den *RowStatusArray* -Argument; Falls nicht, das Verhalten der **SQLExtendedFetch** und das Verhalten von Aufrufen an **SQLBulkOperations**oder **SQLSetPos** nachdem durch ein Cursor positioniert ist **SQLExtendedFetch** sind nicht definiert.  
   
@@ -86,7 +86,7 @@ SQLRETURN SQLExtendedFetch(
 |07009|Ungültiger Deskriptorindex|Spalte 0 gebunden wurde **SQLBindCol**, und das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_OFF festgelegt wurde.|  
 |08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die mit der der Treiber verbunden wurde, Fehler vor der Verarbeitung für die Funktion abgeschlossen.|  
 |22002|Anzeigevariable erforderlich, aber nicht angegeben|NULL-Daten wurde abgerufen in einer Spalte, deren *StrLen_or_IndPtr* festlegen, indem **SQLBindCol** wurde ein null-Zeiger.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|22003|Numerischer Wert außerhalb des gültigen Bereichs|Den numerischen Wert (als numerisch oder Zeichenfolge) zurückgegeben, für eine oder mehrere Spalten würde den gesamten (im Gegensatz zu Bruch) Teil der Zahl abgeschnitten wird verursacht.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> Weitere Informationen finden Sie unter [Richtlinien für das Intervall und numerische Datentypen](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md) in Anhang D:-Datentypen.|  
+|22003|Numerischer Wert außerhalb des gültigen Bereichs|Den numerischen Wert (als numerisch oder Zeichenfolge) zurückgegeben, für eine oder mehrere Spalten würde den gesamten (im Gegensatz zu Bruch) Teil der Zahl abgeschnitten wird verursacht.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> Weitere Informationen finden Sie unter [Richtlinien für das Intervall und numerische Datentypen](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md) in Anhang D: Datentypen.|  
 |22007|Ungültiges Datetime-format|Im Resultset eine Spalte mit dem Zeichen um ein Datum, Uhrzeit oder Zeitstempel C-Struktur gebunden wurde, und ein Wert in der Spalte wurde, bzw. ein ungültiges Datum, Uhrzeit oder Zeitstempel.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |22012|Division durch 0 (null)|Ein Wert aus einem arithmetischen Ausdruck wurde von 0 (null) zurückgegeben Division geführt hat.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |22015|Überlauf bei Intervallfeld|Intervalltyp C aus einer genauen numerischen oder Intervall SQL-Typ zuweisen, verursacht einen Verlust signifikanter Ziffern im Feld führende.<br /><br /> Beim Abrufen von Daten in ein C-Intervalltyp, gab es keine Darstellung des Werts von der SQL-Typ in den Intervalltyp C.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
@@ -121,7 +121,7 @@ SQLRETURN SQLExtendedFetch(
   
 -   **SQLExtendedFetch** Bindung-Offsets (das SQL_ATTR_ROW_BIND_OFFSET_PTR-Anweisungsattribut) wird nicht unterstützt.  
   
--   Aufrufe von **SQLExtendedFetch** können nicht kombiniert werden, mit Aufrufen von **SQLFetch** oder **SQLFetchScroll**, und wenn **SQLBulkOperations** aufgerufen wird vor jede Fetch-Funktion aufgerufen wird, **SQLExtendedFetch** kann nicht aufgerufen werden, bis der Cursor geschlossen und erneut geöffnet wird. D. h. **SQLExtendedFetch** können nur auf Anweisung Zustand S7 aufgerufen werden. Weitere Informationen finden Sie unter [Statusübergänge](../../../odbc/reference/appendixes/statement-transitions.md) in Anhang B: ODBC-Status-Übergang-Tabellen.  
+-   Aufrufe von **SQLExtendedFetch** können nicht kombiniert werden, mit Aufrufen von **SQLFetch** oder **SQLFetchScroll**, und wenn **SQLBulkOperations** aufgerufen wird vor jede Fetch-Funktion aufgerufen wird, **SQLExtendedFetch** kann nicht aufgerufen werden, bis der Cursor geschlossen und erneut geöffnet wird. D. h. **SQLExtendedFetch** können nur auf Anweisung Zustand S7 aufgerufen werden. Weitere Informationen finden Sie unter [Statusübergänge](../../../odbc/reference/appendixes/statement-transitions.md) in Anhang B: ODBC-Übergang Statustabellen.  
   
  Wenn eine Anwendung ruft **SQLFetchScroll** bei der Verwendung von einer ODBC 2.*.x* -Treiber verwenden, der Treiber-Manager zugeordnet wird dieser Aufruf **SQLExtendedFetch**. Weitere Informationen finden Sie unter "SQLFetchScroll und ODBC 2 *.x* Treiber" im [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
   

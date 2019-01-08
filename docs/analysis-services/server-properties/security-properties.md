@@ -1,5 +1,5 @@
 ---
-title: Sicherheitseigenschaften | Microsoft-Dokumentation
+title: Analysis Services-Sicherheitseigenschaften | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 99678bc9a4a335ef39e10e41112551c751701b8f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 31191e266b017400b8b8aceb2eb912f9bebca3d5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991462"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071727"
 ---
 # <a name="security-properties"></a>Sicherheitseigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in der folgenden Tabelle aufgeführten Sicherheitseigenschaften des Servers aufgeführt. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Gilt für:** mehrdimensionalen und Tabellenservermodus  
+ **Gilt für:** Mehrdimensionaler und tabellarischer Servermodus  
   
 ## <a name="properties"></a>Eigenschaften  
  **RequireClientAuthentication**  
@@ -51,7 +51,7 @@ ms.locfileid: "37991462"
  **DataProtection\RequiredProtectionLevel**  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die die erforderliche Schutzebene für alle Clientanforderungen definiert. Diese Eigenschaft hat einen der in der folgenden Tabelle aufgeführten Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |*0*|Keine, Klartext ist zulässig|  
 |*1*|(Standard) Verschlüsselung erforderlich, keine Klartextprotokollierung|  

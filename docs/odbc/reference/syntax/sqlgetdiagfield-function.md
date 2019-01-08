@@ -20,16 +20,16 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22ccf063486df9a8afc810d4adeffeb96041a8b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826198"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203979"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
   
  **Zusammenfassung**  
  **SQLGetDiagField** gibt den aktuellen Wert eines Felds eines Datensatzes von der Diagnosedaten-Struktur (mit einem angegebenen Handle zugeordnete), Fehler-, Warnungs-und Statusinformationen enthält.  
@@ -100,13 +100,13 @@ SQLRETURN SQLGetDiagField(
 ## <a name="diagnostics"></a>Diagnose  
  **SQLGetDiagField** veröffentlichen DiagnoseDatensätze nicht für sich selbst. Sie können die folgenden Rückgabewerte verwendet, um das Ergebnis seiner eigenen Ausführung zu melden:  
   
--   SQL_SUCCESS: Die Funktion wurde erfolgreich zurückgegeben Diagnoseinformationen zu erhalten.  
+-   SQL_SUCCESS: Diagnoseinformationen wird von die Funktion wurde erfolgreich zurückgegeben.  
   
--   SQL_SUCCESS_WITH_INFO: \* *DiagInfoPtr* war zu klein für das angeforderte Feld für die Diagnose. Aus diesem Grund wurden die Daten in das diagnosefeld abgeschnitten. Um zu bestimmen, dass durch das Abschneiden aufgetreten ist, vergleichen Sie die Anwendung muss *Pufferlänge* auf die tatsächliche Anzahl von Bytes verfügbar ist, das wird **StringLengthPtr*.  
+-   SQL_SUCCESS_WITH_INFO: \**DiagInfoPtr* war zu klein für das angeforderte Feld für die Diagnose. Aus diesem Grund wurden die Daten in das diagnosefeld abgeschnitten. Um zu bestimmen, dass durch das Abschneiden aufgetreten ist, vergleichen Sie die Anwendung muss *Pufferlänge* auf die tatsächliche Anzahl von Bytes verfügbar ist, das wird **StringLengthPtr*.  
   
--   SQL_INVALID_HANDLE: Durch das Handle angegeben *HandleType* und *behandeln* war es sich nicht um ein gültiges Handle.  
+-   SQL_INVALID_HANDLE: Das Handle angegeben wird, indem *HandleType* und *behandeln* war es sich nicht um ein gültiges Handle.  
   
--   SQL_ERROR: Eine der folgenden aufgetreten ist:  
+-   SQL_ERROR ZURÜCK: Eine der folgenden aufgetreten ist:  
   
     -   *Die DiagIdentifier* Argument war keiner der gültigen Werte.  
   
@@ -118,7 +118,7 @@ SQLRETURN SQLGetDiagField(
   
     -   Wenn Sie asynchrone Benachrichtigung verwenden zu können, war der asynchrone Vorgang auf den Ziehpunkt nicht abgeschlossen werden.  
   
--   SQL_NO_DATA: *RecNumber* war größer als die Zahl der DiagnoseDatensätze, die für das Handle, das im angegebenen vorhanden waren *behandeln.* Die Funktion gibt SQL_NO_DATA auch für eine beliebige Positive *RecNumber* treten keine DiagnoseDatensätze für *behandeln*.  
+-   SQL_NO_DATA ZURÜCKGIBT: *RecNumber* war größer als die Zahl der DiagnoseDatensätze, die für das Handle, das im angegebenen vorhanden waren *behandeln.* Die Funktion gibt SQL_NO_DATA auch für eine beliebige Positive *RecNumber* treten keine DiagnoseDatensätze für *behandeln*.  
   
 ## <a name="comments"></a>Kommentare  
  Ruft eine Anwendung in der Regel **SQLGetDiagField** um eines der drei Ziele erreichen:  
@@ -178,7 +178,7 @@ SQLRETURN SQLGetDiagField(
 |SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|Wenn das Feld "SQL_DIAG_ROW_NUMBER" eine gültige Zeilennummer, in ein Rowset oder einen Satz von Parametern ist, enthält dieses Feld den Wert, der die Nummer der Spalte im Resultset oder die Anzahl der Parameter in den Satz von Parametern darstellt. Resultset-Spalte, die die Versionsnummern immer bei 1 beginnen; Wenn dieser Status-Datensatz zu einer Lesezeichenspalte bezieht, kann das Feld NULL sein. Parameter-Versionsnummern beginnen bei 1. Es hat es sich um den Wert SQL_NO_COLUMN_NUMBER, wenn der Status-Datensatz nicht Nummer der Spalte oder Parameter Nr. zugeordnet ist. Wenn der Treiber nicht ermitteln kann, die Nummer der Spalte oder Parameter mit der Nummer, die diesem Datensatz zugeordnet ist, ist dieses Feld den Wert SQL_COLUMN_NUMBER_UNKNOWN an.<br /><br /> Die Inhalte dieser Felder werden nur für Anweisungshandles definiert.|  
 |SQL_DIAG_CONNECTION_NAME|SQLCHAR *|Eine Zeichenfolge, die den Namen der Verbindung gibt an, die mit dem Diagnosedatensatz verknüpft. Dieses Feld ist treiberdefinierten. Für Diagnosedaten-Strukturen, die das Umgebungshandle zugeordnet und für die Diagnose, die nicht auf eine beliebige Verbindung beziehen, ist dieses Feld eine Zeichenfolge der Länge 0 (null).|  
 |SQL_DIAG_MESSAGE_TEXT|SQLCHAR *|Eine informationsmeldung für den Fehler oder die Warnung. Dieses Feld wird formatiert, siehe [Diagnosemeldungen](../../../odbc/reference/develop-app/diagnostic-messages.md). Es gibt keine maximale Länge für den Text für die diagnosemeldung ein.|  
-|SQL_DIAG_NATIVE|SQLINTEGER|Ein Treiber/Data datenquellenspezifischen systemeigener Fehlercode. Es ist kein systemeigener Fehlercode, gibt der Treiber 0 zurück.|  
+|SQL_DIAG_NATIVE|SQLINTEGER|Ein Treiber/Data Source-spezifische systemeigener Fehlercode. Es ist kein systemeigener Fehlercode, gibt der Treiber 0 zurück.|  
 |SQL_DIAG_ROW_NUMBER|SQLLEN|Dieses Feld enthält die Nummer der Zeile im Rowset oder die Anzahl der Parameter in der Menge aus Parametern, mit denen der Status-Datensatz zugeordnet ist. Beginnen mit 1, Zeilennummern und Parameter-Zahlen. Dieses Feld hat den Wert SQL_NO_ROW_NUMBER auf, wenn dieser Status-Datensatz keine Zeilennummer oder Parameter zugeordnet ist. Wenn der Treiber nicht ermitteln kann, die Nummer der Zeile oder einen Parameter mit der Nummer, die diesem Datensatz zugeordnet ist, ist dieses Feld den Wert SQL_ROW_NUMBER_UNKNOWN an.<br /><br /> Die Inhalte dieser Felder werden nur für Anweisungshandles definiert.|  
 |SQL_DIAG_SERVER_NAME|SQLCHAR *|Eine Zeichenfolge, die den Namen des Servers, dem angibt mit dem Diagnosedatensatz verknüpft. Es ist identisch mit den Rückgabewert für einen Aufruf von **SQLGetInfo** mit der Option SQL_DATA_SOURCE_NAME. Für Diagnosedaten-Strukturen, die das Umgebungshandle zugeordnet und für die Diagnose, die nicht auf einem beliebigen Server beziehen, ist dieses Feld eine Zeichenfolge der Länge 0 (null).|  
 |SQL_DIAG_SQLSTATE|SQLCHAR *|Ein fünfstelligen SQLSTATE Diagnose Code. Weitere Informationen finden Sie unter [SQLSTATEs](../../../odbc/reference/develop-app/sqlstates.md).|  
@@ -227,13 +227,13 @@ n-Definition *|"ERSTELLEN SIE DOMÄNE"|SQL_DIAG_CREATE_DOMAIN|
   
  Wenn mindestens zwei Statusdatensätze vorhanden sind, wird die Reihenfolge der Datensätze zuerst durch Nummer der Zeile bestimmt. Die folgenden Regeln gelten für die zur Bestimmung der Reihenfolge von Diagnosedatensätzen von Zeile:  
   
--   Datensätze, die nicht auf eine beliebige Zeile entsprechen angezeigt vor Datensätze, die einer bestimmten Zeile, entsprechen, da es sich bei SQL_NO_ROW_NUMBER definiert ist, dass – 1.  
+-   Datensätze, die nicht auf eine beliebige Zeile entsprechen angezeigt vor Datensätze, die einer bestimmten Zeile, entsprechen, da es sich bei SQL_NO_ROW_NUMBER definiert ist, dass-1 sein.  
   
--   Datensätze, die für die Nummer der Zeile unbekannt ist werden vor allen anderen Datensätzen angezeigt, da es sich bei SQL_ROW_NUMBER_UNKNOWN definiert ist, dass – 2 werden.  
+-   Datensätze, die für die Nummer der Zeile unbekannt ist werden vor allen anderen Datensätzen angezeigt, da es sich bei SQL_ROW_NUMBER_UNKNOWN definiert ist, dass-2 werden.  
   
 -   Für alle Datensätze, die bestimmte Zeilen betreffen, werden die Datensätze durch den Wert in das Feld "SQL_DIAG_ROW_NUMBER" sortiert. Alle Fehler und Warnungen der ersten Zeile betroffen sind aufgeführt, und klicken Sie dann alle Fehler und Warnungen der nächsten Zeile betroffenen und so weiter.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Die ODBC 3.*.x* -Treiber-Manager sortiert nicht Statusdatensätze in der Warteschlange diagnostische Wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, von einer ODBC 2.*.x* Treiber oder, wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird durch ODBC zurückgegeben 3 *.x* Treiber beim **SQLExtendedFetch** aufgerufen wird oder **SQLSetPos** aufgerufen wird, auf einen Cursor, der mit positioniert ist **SQLExtendedFetch** .  
   
  Innerhalb jeder Zeile, oder für alle Datensätze, die für die Nummer der Zeile unbekannt ist oder eine Zeile nicht entsprechen, oder für alle Datensätze mit einer Zeilennummer SQL_NO_ROW_NUMBER gleich, wird der erste Datensatz aufgeführten bestimmt mithilfe eines Satzes von Regeln zu sortieren. Nach dem des ersten Datensatzes ist die Reihenfolge von den anderen Datensätzen, die Auswirkungen auf eine Zeile nicht definiert. Eine Anwendung kann nicht davon ausgehen, dass der Fehler, Warnungen nach dem ersten Datensatz vorangestellt sein. Anwendungen sollten die vollständige Diagnosedaten-Struktur, um vollständige Informationen zu einer nicht erfolgreichen Aufruf einer Funktion erhalten überprüfen.  

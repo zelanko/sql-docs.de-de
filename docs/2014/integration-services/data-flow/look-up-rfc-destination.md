@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 043ae99502b8f1f128ca892dbfe4e3f84c4af14d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efe8e9e468bca96605e3c9cfc771e78cb4b78cce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191840"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823704"
 ---
 # <a name="look-up-rfc-destination"></a>RFC-Ziel suchen
   Verwenden Sie das Dialogfeld **RFC-Ziel suchen** , um ein RFC-Ziel zu suchen, das im SAP NetWeaver BW-System definiert ist. Wenn die Liste der verfügbaren RFC-Ziele angezeigt wird, wählen Sie das gewünschte Ziel aus. Daraufhin werden die zugehörigen Optionen von der Komponente mit den erforderlichen Werten aufgefüllt.  
@@ -38,7 +37,7 @@ ms.locfileid: "48191840"
   
      Das Gruppenfeld **RFC-Ziel**wird im **Quellen-Editor für SAP BW** nur angezeigt, wenn der Wert für **Ausführungsmodus** **P - Prozesskette auslösen** oder **W - Benachrichtigung abwarten**lautet.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Ziel**  
  Zeigt den Namen des RFC-Ziels an, das im SAP NetWeaver BW-System definiert ist.  
   
@@ -46,14 +45,14 @@ ms.locfileid: "48191840"
  Zeigt den Servernamen oder die IP-Adresse des Gatewayhosts an. Normalerweise ist der Name oder die IP-Adresse identisch mit dem SAP-Anwendungsserver.  
   
  **Gatewaydienst**  
- Zeigt den Namen des Gatewaydiensts im Format `sapgwNN`, wobei `NN` der Systemnummer entspricht.  
+ Zeigt den Namen des Gatewaydiensts im Format `sapgwNN` an, wobei `NN` der Systemnummer entspricht.  
   
  **Programm-ID**  
  Zeigt die Programm-ID an, die dem RFC-Ziel zugeordnet ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Quellen-Editor für SAP BW &#40;Seite Verbindungs-Manager&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [Ziel-Editor für SAP BW &#40;Seite Verbindungs-Manager&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [Quellen-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [Ziel-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [F1-Hilfe zu Microsoft Connector 1.1 für SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

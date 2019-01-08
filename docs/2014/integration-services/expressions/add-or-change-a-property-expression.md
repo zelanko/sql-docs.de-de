@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], creating
@@ -14,12 +13,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c571f92879a31399c0db4c7bc0acacc1355e169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8144f0a050afd484d77a12c13780de461587513b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178500"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807382"
 ---
 # <a name="add-or-change-a-property-expression"></a>Hinzufügen oder Ändern eines Eigenschaftsausdrucks
   Sie können Eigenschaftsausdrücke für Pakete, Tasks, Foreach-Schleifencontainer, For-Schleifencontainer, Sequenzcontainer, Ereignishandler, Verbindungs-Manager auf Paket- und Projektebene sowie für Protokollanbieter erstellen.  
@@ -38,15 +37,15 @@ ms.locfileid: "48178500"
   
     -   Klicken Sie mit der rechten Maustaste auf das Element, und klicken Sie dann auf **Eigenschaften**.  
   
-3.  Klicken Sie in das Feld **Ausdrücke** und dann auf die Auslassungspunkte (…).  
+3.  Klicken Sie in das Feld **Ausdrücke**, und klicken Sie dann auf die Auslassungspunkte (…).  
   
 4.  Wählen Sie im **Eigenschaftsausdrucks-Editor**eine Eigenschaft in der Liste **Eigenschaft** aus, und gehen Sie dann wie folgt vor:  
   
     -   Geben Sie in die Spalte **Ausdruck** direkt einen Ausdruck ein oder ändern Sie ihn, und klicken Sie dann auf **OK**.  
   
-         – oder –  
+         -oder-  
   
-    -   Klicken Sie in der Ausdruckszeile der Eigenschaft auf die Auslassungspunkte (…), um den **Ausdrucks-Generator**zu öffnen.  
+    -   Klicken Sie in der Ausdruckszeile der Eigenschaft auf die Auslassungspunkte (...), um den **Ausdrucks-Generator** zu öffnen.  
   
 5.  (Optional) Führen Sie im **Ausdrucks-Generator**eine der folgenden Aufgaben aus:  
   
@@ -68,11 +67,11 @@ ms.locfileid: "48178500"
 ## <a name="see-also"></a>Siehe auch  
  [Integration Services-Ausdrücke &#40;SSIS&#41;](integration-services-ssis-expressions.md)   
  [Verwenden von Eigenschaftsausdrücken in Paketen](use-property-expressions-in-packages.md)   
- [Integrationsdienste &#40;SSIS&#41; Pakete](../integration-services-ssis-packages.md)   
- [Integration Services-Container](../control-flow/integration-services-containers.md)   
+ [Integration Services-Pakete &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
+ [SQL Server Integration Services-Container](../control-flow/integration-services-containers.md)   
  [Integration Services-Tasks](../control-flow/integration-services-tasks.md)   
  [Integration Services-Ereignishandler &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md)   
- [Integration Services (SSIS) Connections (Integration Services-Verbindungen (SSIS))](../connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services-Verbindungen &#40;SSIS&#41;](../connection-manager/integration-services-ssis-connections.md)   
  [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md)  
   
   

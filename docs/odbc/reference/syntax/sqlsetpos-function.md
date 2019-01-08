@@ -20,16 +20,16 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99d7f84f2153f57cc9bc392c22d79739deaf6b1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599618"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211989"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ODBC  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLSetPos** legt die Cursorposition in einem Rowset fest und ermöglicht es einer Anwendung, um Daten im Rowset zu aktualisieren oder zu aktualisieren oder Löschen von Daten im Resultset.  
@@ -49,7 +49,7 @@ SQLRETURN SQLSetPos(
  *StatementHandle*  
  [Eingabe] Anweisungshandle.  
   
- *' RowNumber '*  
+ *RowNumber*  
  [Eingabe] Die Position der Zeile im Rowset für das Ausführen des Vorgangs angegeben, mit der *Vorgang* Argument. Wenn *RowNumber* gleich 0 ist, der Vorgang gilt für jede Zeile im Rowset.  
   
  Weitere Informationen finden Sie unter "Kommentare".  
@@ -59,7 +59,7 @@ SQLRETURN SQLSetPos(
   
  SQL_POSITION SQL_REFRESH SQL_UPDATE AUF SQL_DELETE  
   
-> [!NOTE]  
+> [!NOTE]
 >  Der SQL_ADD-Wert für die *Vorgang* Argument ist veraltet für ODBC 3.*.x*. ODBC 3. *x* Treiber müssen SQL_ADD für die Abwärtskompatibilität zu unterstützen. Diese Funktionalität wurde ersetzt durch einen Aufruf von **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD. Wenn eine ODBC-3. *x* Anwendung funktioniert mit einer ODBC 2. *X* Treiber, der Treiber-Manager ordnet einen Aufruf von **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD auf **SQLSetPos** mit einer  *Vorgang* von SQL_ADD.  
   
  Weitere Informationen finden Sie unter "Kommentare".  
@@ -108,7 +108,7 @@ SQLRETURN SQLSetPos(
 |HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Diese asynchronen Funktion wurde noch ausgeführt werden, wenn die SQLSetPos-Funktion aufgerufen wurde.<br /><br /> (DM) der angegebenen *StatementHandle* war nicht in einem ausgeführten Zustand befindet. Die Funktion wurde aufgerufen, ohne den ersten Aufruf **SQLExecDirect**, **SQLExecute**, oder eine Katalogfunktion auf.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.<br /><br /> (DM) der Treiber wurde eine ODBC-2. *x* -Treiber und **SQLSetPos** wurde aufgerufen, eine *StatementHandle* nach **SQLFetch** aufgerufen wurde.|  
 |HY011|Attribut kann jetzt nicht festgelegt werden|(DM) der Treiber wurde eine ODBC-2. *x* -Treiber; die SQL_ATTR_ROW_STATUS_PTR Anweisung-Attribut festgelegt wurde, klicken Sie dann **SQLSetPos** war aufgerufen, bevor **SQLFetch**, **SQLFetchScroll**, oder **SQLExtendedFetch** aufgerufen wurde.|  
 |HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|Die *Vorgang* Argument SQL_UPDATE auf, ein Datenwert wurde ein null-Zeiger, und der Spaltenwert für die Länge nicht wurde SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NULL_DATA, 0 oder kleiner als oder gleich SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Die *Vorgang* Argument SQL_UPDATE; ein Datenwert war es sich nicht um einen null-Zeiger; wurde von der C-Datentyp SQL_C_BINARY oder SQL_C_CHAR; und der Spaltenwert für die Länge war kleiner als 0, aber nicht gleich auf SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE , SQL_NTS lauten oder SQL_NULL_DATA oder kleiner als oder gleich SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Der Wert in ein Längen-/Indikatorpuffer war SQL_DATA_AT_EXEC. der SQL-Typ wurde einem SQL_LONGVARCHAR SQL_LONGVARBINARY oder einen long-Daten Datenquelle spezifischen Datentyp; und welche Informationen SQL_NEED_LONG_DATA_LEN in **SQLGetInfo** wurde von "Y".|  
+|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|Die *Vorgang* Argument SQL_UPDATE auf, ein Datenwert wurde ein null-Zeiger, und der Spaltenwert für die Länge nicht wurde SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NULL_DATA, 0 oder kleiner als oder gleich SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Die *Vorgang* Argument SQL_UPDATE; ein Datenwert war es sich nicht um einen null-Zeiger; wurde von der C-Datentyp SQL_C_BINARY oder SQL_C_CHAR; und der Spaltenwert für die Länge war kleiner als 0, aber nicht gleich auf SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE , SQL_NTS lauten oder SQL_NULL_DATA oder kleiner als oder gleich SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Der Wert in ein Längen-/Indikatorpuffer war SQL_DATA_AT_EXEC. der SQL-Typ wurde einem SQL_LONGVARCHAR SQL_LONGVARBINARY oder einen long-Daten datenquellenspezifische Datentyp; und welche Informationen SQL_NEED_LONG_DATA_LEN in **SQLGetInfo** wurde von "Y".|  
 |HY092|Ungültiges Attribut-ID|(DM) der angegebene Wert für die *Vorgang* Argument war ungültig.<br /><br /> (DM) der angegebene Wert für die *LockType* Argument war ungültig.<br /><br /> Die *Vorgang* Argument war SQL_UPDATE oder SQL_DELETE und das SQL_ATTR_CONCURRENCY-Anweisungsattribut SQL_ATTR_CONCUR_READ_ONLY.|  
 |HY107|Zeilenwert außerhalb des gültigen Bereichs|Der angegebene Wert für das Argument *RowNumber* war größer als die Anzahl der Zeilen im Rowset.|  
 |HY109|Ungültige Cursorposition|Die zugeordneten Cursor der *StatementHandle* wurde als Vorwärtscursor, definiert, damit der Cursor nicht im Rowset positioniert werden kann. Siehe die Beschreibung für das SQL_ATTR_CURSOR_TYPE-Attribut im **SQLSetStmtAttr**.<br /><br /> Die *Vorgang* Argument war SQL_UPDATE auf SQL_DELETE oder SQL_REFRESH und die Zeile durch identifiziert die *RowNumber* Argument wurde gelöscht haben oder hatten, wurden nicht abgerufen.<br /><br /> (DM) die *RowNumber* Argument wurde 0 (null) und die *Vorgang* Argument war SQL_POSITION.<br /><br /> **SQLSetPos** wurde aufgerufen, nachdem **SQLBulkOperations** aufgerufen wurde und bevor **SQLFetchScroll** oder **SQLFetch** aufgerufen wurde.|  
@@ -122,7 +122,7 @@ SQLRETURN SQLSetPos(
   
 ## <a name="comments"></a>Kommentare  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  Für Informationen über die Anweisung gibt an, die **SQLSetPos** in aufgerufen werden kann und was sie muss für die Kompatibilität mit ODBC 2.*.x* -Anwendungen finden Sie unter [Blockcursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
   
 ## <a name="rownumber-argument"></a>RowNumber-Argument  
@@ -226,7 +226,7 @@ SQLRETURN SQLSetPos(
   
     -   Für Data-at-Execution-Spalten wird die Anwendung einen anwendungsdefinierten Wert, z. B. die Nummer der Spalte, in der  *\*TargetValuePtr* Puffer. Der Wert kann später verwendet werden, um die Spalte identifizieren.  
   
-         Die Anwendung platziert, das Ergebnis der SQL_LEN_DATA_AT_EXEC (*Länge*)-Makro in der **StrLen_or_IndPtr* Puffer. Wenn der SQL-Datentyp der Spalte SQL_LONGVARBINARY, SQL_LONGVARCHAR oder einem long-Datentyp Datenquelle spezifischen Daten und "Y" für den Typ der SQL_NEED_LONG_DATA_LEN Informationen in der Treiber gibt **SQLGetInfo**, *Länge*  ist die Anzahl der Datenbytes, die für den Parameter; gesendet werden andernfalls muss ein Wert nicht negativ sein und wird ignoriert.  
+         Die Anwendung platziert, das Ergebnis der SQL_LEN_DATA_AT_EXEC (*Länge*)-Makro in der **StrLen_or_IndPtr* Puffer. Wenn der SQL-Datentyp der Spalte SQL_LONGVARBINARY, SQL_LONGVARCHAR oder einem long-Datentyp datenquellenspezifische Daten und "Y" für den Typ der SQL_NEED_LONG_DATA_LEN Informationen in der Treiber gibt **SQLGetInfo**, *Länge*  ist die Anzahl der Datenbytes, die für den Parameter; gesendet werden andernfalls muss ein Wert nicht negativ sein und wird ignoriert.  
   
 2.  Aufrufe **SQLSetPos** mit der *Vorgang* Argument, die auf SQL_UPDATE auf festgelegt ist, um die Zeile der Daten zu aktualisieren.  
   
@@ -245,7 +245,7 @@ SQLRETURN SQLSetPos(
     > [!NOTE]  
     >  Data-at-Execution-Spalten in einem Rowset, für die Daten mit gesendet werden, sind **SQLPutData** beim Aktualisieren einer Zeile mit **SQLSetPos**. Sie sind mit gebunden **SQLBindCol**. Der Rückgabewert von **SQLParamData** ist die Adresse der Zeile in der **TargetValuePtr* Puffer, der verarbeitet wird.  
   
-4.  Aufrufe **SQLPutData** einmal oder mehrmals, um Daten für die Spalte zu senden. Mehrere ist erforderlich, wenn alle Datenwerte in zurückgegeben werden, können die  *\*TargetValuePtr* im angegebenen Puffer **SQLPutData**; mehrere Aufrufe **SQLPutData** für dieselbe Spalte dürfen nur beim Senden von Zeichendaten C an eine Spalte mit einem Zeichen oder den binären Datenquelle spezifischen Datentyp oder beim Senden von Binärdaten C an eine Spalte mit einem Zeichen, binär, oder geben Sie die Datenquelle spezifischen Daten.  
+4.  Aufrufe **SQLPutData** einmal oder mehrmals, um Daten für die Spalte zu senden. Mehrere ist erforderlich, wenn alle Datenwerte in zurückgegeben werden, können die  *\*TargetValuePtr* im angegebenen Puffer **SQLPutData**; mehrere Aufrufe **SQLPutData** für dieselbe Spalte dürfen nur beim Senden von Zeichendaten C an eine Spalte mit einem Zeichen oder den binären datenquellenspezifische Datentyp oder beim Senden von Binärdaten C an eine Spalte mit einem Zeichen, binär, oder geben Sie die spezifischen Daten.  
   
 5.  Aufrufe **SQLParamData** erneut aus, um zu signalisieren, dass alle Daten für die Spalte gesendet wurde.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.backupdatabasetask.f1
@@ -19,12 +18,12 @@ ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fff65b87c5497a28945c5133d543346c657c6953
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0114616524f4fe169dcd2a251132684fde5a0c76
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063570"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804907"
 ---
 # <a name="back-up-database-task"></a>Datenbank sichern (Task)
   Der Task Datenbank sichern führt verschiedene Arten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanksicherungen aus. Weitere Informationen finden Sie unter [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
@@ -36,9 +35,9 @@ ms.locfileid: "48063570"
   
 |Wiederherstellungsmodell|Datenbank|Datenbank - differenziell|Transaktionsprotokoll|Datei oder differenzielle Datei|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|Einfach|Required|Optional|Nicht unterstützt|Nicht unterstützt|  
-|Vollständig|Required|Optional|Required|Optional|  
-|Massenprotokolliert|Required|Optional|Required|Optional|  
+|Einfach|Erforderlich|Optional|Nicht unterstützt|Nicht unterstützt|  
+|Vollständig|Erforderlich|Optional|Erforderlich|Optional|  
+|Massenprotokolliert|Erforderlich|Optional|Erforderlich|Optional|  
   
  Der Task Datenbank sichern kapselt eine BACKUP-Anweisung von Transact-SQL. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   

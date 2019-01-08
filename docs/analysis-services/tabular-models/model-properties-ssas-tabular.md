@@ -1,5 +1,5 @@
 ---
-title: Modelleigenschaften | Microsoft Docs
+title: Analysis Services tabellarisch Modelleigenschaften | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 56b0e5595887cb8da627ba0864c624f89a6857a6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d9251a09039d93d473963ced235669c66f99431b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044494"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072187"
 ---
 # <a name="model-properties"></a>Modelleigenschaften 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "34044494"
   
 -   [Konfigurieren der Eigenschafteneinstellungen für Modelle](#bkmk_conf_model_prop)  
   
-##  <a name="bkmk_model_properties"></a> Modelleigenschaften  
- **Erweitert**  
+##  <a name="bkmk_model_properties"></a> Eigenschaften des Modells  
+ **Erweitert:**  
   
 |Eigenschaft|Standardeinstellung|Description|  
 |--------------|---------------------|-----------------|  
-|**Buildvorgang**|Kompilieren|Diese Eigenschaft gibt die Funktion der Datei beim Erstellungs- und Bereitstellungsprozess an. Für diese Eigenschafteneinstellung gibt es die folgenden Optionen:<br /><br /> **Kompilieren** – Ein normaler Buildvorgang wird ausgeführt. Definitionen für Modellobjekte werden in die ASDATABASE-Datei geschrieben.<br /><br /> **Keine** – Die Ausgabe in die ASDATABASE-Datei ist leer.|  
-|**In Ausgabeverzeichnis kopieren**|Nicht kopieren|Diese Eigenschaft gibt an, dass die Quelldatei in das Ausgabeverzeichnis kopiert wird. Für diese Eigenschafteneinstellung gibt es die folgenden Optionen:<br /><br /> **Nicht kopieren** – Im Ausgabeverzeichnis wird keine Kopie erstellt.<br /><br /> **Immer kopieren** – Im Ausgabeverzeichnis wird immer eine Kopie erstellt.<br /><br /> **Kopieren, wenn neuer** – Im Ausgabeverzeichnis wird nur eine Kopie erstellt, wenn die Datei „model.bim“ geändert wurde.|  
+|**Buildvorgang**|Kompilieren|Diese Eigenschaft gibt die Funktion der Datei beim Erstellungs- und Bereitstellungsprozess an. Für diese Eigenschafteneinstellung gibt es die folgenden Optionen:<br /><br /> **Kompilieren Sie** – ein normaler Buildvorgang wird ausgeführt. Definitionen für Modellobjekte werden in die ASDATABASE-Datei geschrieben.<br /><br /> **Keine** – die Ausgabe in die asdatabase-Datei ist leer sein.|  
+|**In Ausgabeverzeichnis kopieren**|Nicht kopieren|Diese Eigenschaft gibt an, dass die Quelldatei in das Ausgabeverzeichnis kopiert wird. Für diese Eigenschafteneinstellung gibt es die folgenden Optionen:<br /><br /> **Kopieren Sie nicht** – im Ausgabeverzeichnis wird keine Kopie erstellt.<br /><br /> **Immer kopieren** – im Ausgabeverzeichnis wird immer eine Kopie erstellt.<br /><br /> **Kopieren, wenn neuer** – Im Ausgabeverzeichnis wird nur eine Kopie erstellt, wenn die Datei „model.bim“ geändert wurde.|  
   
  **Sonstiges**  
   
@@ -40,14 +40,14 @@ ms.locfileid: "34044494"
 >  Manche Eigenschaften werden beim Erstellen des Modells automatisch festgelegt und können nicht geändert werden.  
   
 > [!NOTE]  
->  Auf die Eigenschaften Arbeitsbereichsserver, Arbeitsbereich beibehalten und Datensicherung werden beim Erstellen eines neuen Modellprojekts die Standardeinstellungen angewendet. Die Standardeinstellungen für neue Modelle können in den Einstellungen für Analysis-Server im Dialogfeld Extras/Optionen auf der Seite Datenmodellierung geändert werden. Diese und andere Eigenschaften können auch für jedes Modell im Eigenschaftenfenster festgelegt werden. Weitere Informationen finden Sie unter [modellierungs- und Bereitstellungseigenschaften Standardeigenschaften konfigurieren](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
+>  Auf die Eigenschaften Arbeitsbereichsserver, Arbeitsbereich beibehalten und Datensicherung werden beim Erstellen eines neuen Modellprojekts die Standardeinstellungen angewendet. Die Standardeinstellungen für neue Modelle können in den Einstellungen für Analysis-Server im Dialogfeld Extras/Optionen auf der Seite Datenmodellierung geändert werden. Diese und andere Eigenschaften können auch für jedes Modell im Eigenschaftenfenster festgelegt werden. Weitere Informationen finden Sie unter [konfigurieren Sie die Modellierung und Bereitstellung Standardeigenschaften](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
 |Eigenschaft|Standardeinstellung|Description|  
 |--------------|---------------------|-----------------|  
 |**Sortierung**|Die Standardsortierung für den Computer, für den Visual Studio installiert wurde.|Der Sortierungskennzeichner für das Modell.|  
 |**Kompatibilitätsgrad**|Standardmäßiger oder anderer Wert ist beim Erstellen des Projekts ausgewählt.|Gilt für SQL Server 2012 Analysis Services SP1 oder höher. Gibt die für dieses Modell verfügbaren Funktionen und Einstellungen an. Weitere Informationen finden Sie unter [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
 |**Datensicherung**|Nicht auf Datenträger sichern|Gibt an, ob eine Sicherung der Modelldaten in einer Sicherungsdatei beibehalten wird. Für diese Eigenschafteneinstellung gibt es die folgenden Optionen:<br /><br /> **Auf Datenträger sichern** – Gibt an, dass eine Sicherung der Modelldaten auf dem Datenträger beibehalten wird. Wenn das Modell gespeichert wird, werden die Daten auch in der Sicherungsdatei (ABF) gespeichert. Wenn diese Option ausgewählt wird, dauert es möglicherweise länger, Modelle zu speichern und zu laden.<br /><br /> **Nicht auf Datenträger sichern** – Gibt an, dass keine Sicherung der Modelldaten auf dem Datenträger beibehalten wird. Diese Option minimiert die Speicher- und Ladezeiten für Modelle.<br /><br /> <br /><br /> Die Standardeinstellung für diese Eigenschaft kann in den Einstellungen für Analysis-Server im Dialogfeld Extras/Optionen auf der Seite Datenmodellierung geändert werden.| 
-|**Standardfilterrichtung**|Die Richtung|Bestimmt die standardfilterrichtung für Beziehungen.| 
+|**Standardfilterrichtung**|Einzelne Richtung|Bestimmt die standardfilterrichtung für neue Beziehungen.| 
 |**DirectQuery-Modus**|Off|Gibt an, ob dieses Modell im DirectQuery-Modus ausgeführt wird. Weitere Informationen finden Sie unter [DirectQuery-Modus](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).|  
 |**Dateiname**|Model.bim|Gibt den Namen der BIM-Datei an. Der Dateiname sollte nicht geändert werden.|  
 |**Vollständiger Pfad**|Der beim Erstellen des Projekts angegebene Pfad.|Der Speicherort von model.bim. Diese Eigenschaft kann nicht im Eigenschaftenfenster festgelegt werden.|  
@@ -63,7 +63,7 @@ ms.locfileid: "34044494"
 2.  Klicken Sie im Fenster **Eigenschaften** auf eine Eigenschaft, und geben Sie dann einen Wert ein, oder klicken Sie auf den Pfeil nach unten, um eine Einstellungsoption auszuwählen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Modellierungs- und Bereitstellungseigenschaften Standardeigenschaften konfigurieren](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Konfigurieren Sie die Modellierung und Bereitstellung Standardeigenschaften](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
  [Projekteigenschaften](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

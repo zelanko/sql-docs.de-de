@@ -23,19 +23,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c02ea165ceec8af546d092d955e9275dcc96b240
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 78604c723c4c19e68a6c29fd3113de3d69d36d44
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661186"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532786"
 ---
 # <a name="sysdmexecdistributedrequests-transact-sql"></a>Sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Enthält Informationen zu Anforderungen, die alle zurzeit oder zuletzt in der PolyBase-Abfragen aktiv. Sie enthält eine Zeile für jede Anforderung bzw. die Abfrage.  
   
- Basierend auf der Sitzung und Anforderungs-ID, ein Benutzer kann dann abrufen, die tatsächlichen verteilte Anforderungen generiert, um über sys.dm_exec_distributed_requests – ausgeführt werden. Beispielsweise wird eine Abfrage, die im Zusammenhang mit regulären SQL und externe SQL-Tabellen in verschiedenen Anweisungen/Anforderungen, die über die verschiedenen Computeknoten ausgeführt zerlegt werden. Um die verteilte Schritte auf allen Computeknoten nachzuverfolgen, führen wir eine 'global' ausführungs-ID, mit dem verfolgen alle Vorgänge auf den Computeknoten, die eine bestimmte Anforderung und Operator bzw. zugeordnet werden kann.  
+ Basierend auf der Sitzung und Anforderungs-ID, ein Benutzer kann dann abrufen, die tatsächlichen verteilte Anforderungen generiert, um - die über sys.dm_exec_distributed_requests ausgeführt werden. Beispielsweise wird eine Abfrage, die im Zusammenhang mit regulären SQL und externe SQL-Tabellen in verschiedenen Anweisungen/Anforderungen, die über die verschiedenen Computeknoten ausgeführt zerlegt werden. Um die verteilte Schritte auf allen Computeknoten nachzuverfolgen, führen wir eine 'global' ausführungs-ID, mit dem verfolgen alle Vorgänge auf den Computeknoten, die eine bestimmte Anforderung und Operator bzw. zugeordnet werden kann.  
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  

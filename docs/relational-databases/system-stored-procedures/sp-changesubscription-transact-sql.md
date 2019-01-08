@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - changesubscription
@@ -19,12 +18,12 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c3b60aedb42c6d249920cb42da021c474faf5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640708"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209839"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47640708"
   Ändert die Eigenschaften eines Momentaufnahme- oder Transaktionspushabonnements bzw. eines Pullabonnements, das an einem verzögerten Update über eine Warteschlange beteiligt ist. Verwenden Sie zum Ändern der Eigenschaften aller anderen Typen von Pullabonnements [Sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **Sp_changesubscription** auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt wird.  
   
 > [!IMPORTANT]  
->  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,25 +49,25 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication**=] **"***Veröffentlichung***"**  
+ [ **@publication**=] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung, die geändert werden soll. *Veröffentlichung*ist **Sysname**, hat keinen Standardwert  
   
- [ **@article** =] **"***Artikel***"**  
+ [ **@article** =] **"**_Artikel_**"**  
  Der Name des zu ändernden Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@subscriber** =] **"***Abonnenten***"**  
+ [ **@subscriber** =] **"**_Abonnenten_**"**  
  Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@destination_db** =] **"***Destination_db***"**  
+ [ **@destination_db** =] **"**_Destination_db_**"**  
  Ist der Name der Abonnementdatenbank. *Destination_db* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@property=**] **"***Eigenschaft***"**  
+ [  **@property=**] **"**_Eigenschaft_**"**  
  Die Eigenschaft, die für das angegebene Abonnement geändert werden soll. *Eigenschaft* ist **nvarchar(30)**, und kann einen der Werte in der Tabelle.  
   
- [  **@value=**] **"***Wert***"**  
+ [  **@value=**] **"**_Wert_**"**  
  Der neue Wert für den angegebenen *Eigenschaft*. *Wert* ist **nvarchar(4000)**, und kann einen der Werte in der Tabelle.  
   
-|Eigenschaft|value|Description|  
+|Eigenschaft|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Anmeldename für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Agent ausgeführt wird.|  
 |**distrib_job_password**||Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird.|  
@@ -86,8 +85,8 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|OLE DB-Anbieter|  
 |**memory_optimized**|**bit**|Gibt an, dass das Abonnement mit speicheroptimierten Tabellen unterstützt. *Memory_optimized* ist **Bit**, 1 entspricht, in dem "true", (das Abonnement unterstützt den speicheroptimierten Tabellen).|  
   
- [  **@publisher =** ] **"***Verleger***"**  
- Gibt einen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+ [  **@publisher =** ] **"**_Verleger_**"**  
+ Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht angegeben werden, für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
