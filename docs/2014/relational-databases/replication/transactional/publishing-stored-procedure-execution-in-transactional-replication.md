@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing [SQL Server replication], stored procedure execution
@@ -15,12 +14,12 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8dcdd88d8ce974acda7363ba0a7b2199ca2dd2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195654"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763173"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Veröffentlichen der Ausführung von gespeicherten Prozeduren in der Transaktionsreplikation
   Wenn Sie gespeicherte Prozeduren verwenden, die auf dem Verleger ausgeführt werden und sich auf die veröffentlichten Tabellen auswirken, sollten Sie darüber nachdenken, diese gespeicherten Prozeduren als Artikel für die Ausführung einer gespeicherten Prozedur in Ihre Veröffentlichung aufzunehmen. Die Definition der Prozedur (die CREATE PROCEDURE-Anweisung) wird beim Initialisieren des Abonnements auf den Abonnenten repliziert. Wenn die Prozedur dann auf dem Verleger ausgeführt wird, führt die Replikation auch die entsprechende Prozedur auf dem Abonnenten aus. Dies kann in den Fällen, in denen umfangreiche Batchvorgänge ausgeführt werden, zu einer deutlichen Leistungssteigerung führen, da nur die Ausführung der Prozedur repliziert wird und sich das Replizieren der einzelnen Änderungen für jede Zeile erübrigt. Nehmen wir z. B. an, Sie erstellen in der Veröffentlichungsdatenbank die folgende gespeicherte Prozedur:  
@@ -51,7 +50,7 @@ EXEC give_raise
   
  **So veröffentlichen Sie die Ausführung einer gespeicherten Prozedur**  
   
--   SQL Server Management Studio: [Veröffentlichen der Ausführung einer gespeicherten Prozedur in einer Transaktionsveröffentlichung &#40;SQL Server Management Studio&#41;](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
+-   SQL Server Management Studio:  [Veröffentlichen der Ausführung einer gespeicherten Prozedur in einer Transaktionsveröffentlichung &#40;SQL Server Management Studio&#41;](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
 -   Replikationsprogrammierung mit Transact-SQL: Führen Sie [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) aus, und geben Sie anschließend für den **@type**-Parameter den Wert 'serializable proc exec' (empfohlen) oder 'proc exec' an. Weitere Informationen zum Definieren von Artikeln finden Sie unter [Definieren eines Artikels](../publish/define-an-article.md).  
   

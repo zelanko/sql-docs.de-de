@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 048e8d37c7988577586b996687aae9ea4b930664
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168050"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759402"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
   Bevor Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Funktion verwenden, sollten Sie die in diesem Thema beschriebenen Produktanforderungen berücksichtigen.  
@@ -42,7 +41,7 @@ ms.locfileid: "48168050"
   
 -   Einzelne Ablaufverfolgungsdatei mit der Erweiterung `.trc` .  
   
--   Ein Satz von Rollover-Ablaufverfolgungsdateien, die der Dateirollover-Benennungskonvention folgen, z. B.: `<TraceFile>.trc`, `<TraceFile>_1.trc`, `<TraceFile>_2.trc`, `<TraceFile>_3.trc`, … `<TraceFile>_n.trc`.  
+-   Ein Satz von Rollover-Ablaufverfolgungsdateien, die der Dateirollover-Benennungskonvention folgen, z. B.: `<TraceFile>.trc`, `<TraceFile>_1.trc`, `<TraceFile>_2.trc`, `<TraceFile>_3.trc`, ... `<TraceFile>_n.trc`.  
   
 ### <a name="input-trace-events-and-columns"></a>Ereignisse und Spalten in der Eingabedatei für die Ablaufverfolgung  
  Die Eingabedaten der Ablaufverfolgung müssen bestimmte Ereignisse und Spalten enthalten, die von Distributed Replay wiedergegeben werden sollen. Die Vorlage **TSQL_Replay** in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] enthält neben zusätzlichen Informationen alle erforderlichen Ereignisse und Spalten. Weitere Informationen zu dieser Vorlage finden Sie unter [Replay Requirements](../sql-server-profiler/replay-requirements.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing alerts
@@ -22,12 +21,12 @@ ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60976006bb9c26a6b3bae613ddfa96f52113dced
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129435"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762582"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Verwenden von Warnungen für Replikations-Agentereignisse
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] und der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent ermöglichen anhand von Warnungen das Überwachen von Ereignissen, wie Ereignissen des Replikations-Agents. Der[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent überwacht das Windows-Anwendungsprotokoll auf Ereignisse, die Warnungen zugeordnet sind. Bei Auftreten eines solchen Ereignisses antwortet der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent automatisch, indem er eine Aufgabe ausführt, die Sie definiert haben, und/oder eine E-Mail- oder Pager-Nachricht an den angegebenen Operator sendet. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält einen Satz vordefinierter Warnungen für Replikations-Agents ein, die Sie konfigurieren können, um eine Task auszuführen und/oder einen Operator zu benachrichtigen. Weitere Informationen zum Definieren eines auszuführenden Tasks finden Sie im Abschnitt zum Automatisieren einer Antwort auf eine Warnung in diesem Thema.  
@@ -36,15 +35,15 @@ ms.locfileid: "48129435"
   
 |Meldungs-ID|Vordefinierte Warnung|Bedingung, die die Warnung auslöst|Zusätzlich eingegebene Informationen in msdb..sysreplicationalerts|  
 |----------------|----------------------|-----------------------------------------|-----------------------------------------------------------------|  
-|14150|**Replikation: Der Agent war erfolgreich.**|Agent wird erfolgreich heruntergefahren.|Benutzerkontensteuerung|  
-|14151|**Replikation: Fehler beim Agent.**|Agent wird mit einem Fehler heruntergefahren.|Benutzerkontensteuerung|  
-|14152|**Replikation: Wiederholung des Agents.**|Der Agent wird nach dem erfolglosen erneuten Versuch einer Operation beendet (der Agent stellt einen Fehler fest, wie z. B. einen nicht verfügbaren Server, einen Deadlock, einen Verbindungsfehler oder einen Timeoutfehler).|Benutzerkontensteuerung|  
-|14157|**Replikation: Abgelaufenes Abonnement wurde gelöscht.**|Ein abgelaufenes Abonnement wurde gelöscht.|nein|  
-|20572|**Replikation: Das Abonnement wurde nach einem Überprüfungsfehler neu initialisiert.**|Antwortauftrag 'Abonnements bei Datenüberprüfungsfehler erneut initialisieren' initialisiert ein Abonnement erfolgreich erneut.|nein|  
-|20574|**Replikation: Fehler bei der Datenüberprüfung auf dem Abonnenten.**|Datenüberprüfung durch Verteilungs- oder Merge-Agent fehlgeschlagen.|Benutzerkontensteuerung|  
-|20575|**Replikation: Der Abonnent hat die Datenüberprüfung erfolgreich durchlaufen.**|Verteilungs- oder Merge-Agent durchläuft eine Datenüberprüfung.|Benutzerkontensteuerung|  
+|14150|**Replikation: Der Agent war erfolgreich.**|Agent wird erfolgreich heruntergefahren.|Ja|  
+|14151|**Replikation: Fehler beim Agent.**|Agent wird mit einem Fehler heruntergefahren.|Ja|  
+|14152|**Replikation: Wiederholung des Agents.**|Der Agent wird nach dem erfolglosen erneuten Versuch einer Operation beendet (der Agent stellt einen Fehler fest, wie z. B. einen nicht verfügbaren Server, einen Deadlock, einen Verbindungsfehler oder einen Timeoutfehler).|Ja|  
+|14157|**Replikation: Abgelaufenes Abonnement wurde gelöscht.**|Ein abgelaufenes Abonnement wurde gelöscht.|Nein|  
+|20572|**Replikation: Abonnement wurde nach einem Überprüfungsfehler neu initialisiert**|Antwortauftrag 'Abonnements bei Datenüberprüfungsfehler erneut initialisieren' initialisiert ein Abonnement erfolgreich erneut.|Nein|  
+|20574|**Replikation: Abonnenten hat Fehler bei der datenüberprüfung**|Datenüberprüfung durch Verteilungs- oder Merge-Agent fehlgeschlagen.|Ja|  
+|20575|**Replikation: Abonnent hat die datenüberprüfung erfolgreich durchlaufen.**|Verteilungs- oder Merge-Agent durchläuft eine Datenüberprüfung.|Ja|  
 |20578|**Replikation: Der Agent wurde benutzerdefiniert heruntergefahren.**|||  
-|22815|**Peer-zu-Peer-Konflikterkennungswarnung**|Der Verteilungs-Agent hat bei dem Versuch, eine Änderung an einem Peer-zu-Peer-Knoten vorzunehmen, einen Konflikt erkannt.|Benutzerkontensteuerung|  
+|22815|**Peer-zu-Peer-Konflikterkennungswarnung**|Der Verteilungs-Agent hat bei dem Versuch, eine Änderung an einem Peer-zu-Peer-Knoten vorzunehmen, einen Konflikt erkannt.|Ja|  
   
  Zusätzlich zu diesen Warnungen bietet der Replikationsmonitor eine Reihe von status- und leistungsbezogenen Warnungen. Weitere Informationen finden Sie unter [Festlegen von Schwellenwerten und Warnungen im Replikationsmonitor](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) Benachrichtigungsinfrastruktur. Weitere Informationen finden Sie unter [Erstellen eines benutzerdefinierten Ereignisses](../../../ssms/agent/create-a-user-defined-event.md).  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48129435"
 ### <a name="framework-for-automating-responses"></a>Framework für automatische Antworten  
  Wenn eine Warnung auftritt, sind in der Regel die einzigen Informationen, mit deren Hilfe Sie verstehen können, was die Warnung auslöste und welche entsprechende Maßnahme ergriffen werden sollte, in der Warnmeldung enthalten. Eine Analyse dieser Informationen kann sich als fehleranfällig und zeitraubend erweisen. Die Replikation vereinfacht automatische Antworten, da in der **sysreplicationalerts** -Systemtabelle zusätzliche Informationen zur Warnung bereitgestellt werden. Diese Informationen sind bereits so analysiert, dass sie einfach in benutzerdefinierten Programmen verwendet werden können.  
   
- Wenn z. B. die Daten in der **Sales.SalesOrderHeader** -Tabelle auf dem Abonnenten A die Gültigkeitsüberprüfung nicht bestehen, löst [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Warnmeldung 20574 aus, in der Sie über dieses Fehlschlagen benachrichtigt werden. Sie empfangen die folgende Meldung: "Fehler bei der Datenüberprüfung für das Abonnement des Abonnenten 'A', für den 'SalesOrderHeader'-Artikel in der in der 'MyPublication'-Veröffentlichung."  
+ Wenn z. B. die Daten in der **Sales.SalesOrderHeader** -Tabelle auf dem Abonnenten A die Gültigkeitsüberprüfung nicht bestehen, löst [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Warnmeldung 20574 aus, in der Sie über dieses Fehlschlagen benachrichtigt werden. Die Nachricht, die Sie empfangen werden: "Abonnenten 'A', Fehler bei der Abonnements für den 'SalesOrderHeader'-Artikel in der 'MyPublication'-Veröffentlichung datenüberprüfung."  
   
  Wenn Sie eine Antwort basierend auf dieser Meldung erstellen, müssen Sie den Namen des Abonnenten, den Artikelnamen, den Veröffentlichungsnamen und den Fehler aus der Meldung manuell analysieren. Da der Verteilungs-Agent und der Merge-Agent aber die gleichen Informationen in **sysreplicationalerts** schreiben, zusammen mit Details wie Agenttyp, Zeitpunkt der Warnung, Veröffentlichungsdatenbank und Veröffentlichungstyp, kann der Antwortauftrag die relevanten Informationen direkt aus der Tabelle abfragen. Obwohl die genaue Zeile nicht einer spezifischen Warnungsinstanz zugeordnet werden kann, kann die **status** -Spalte in der Tabelle zum Nachverfolgen der Diensteinträge verwendet werden. Die Einträge in dieser Tabelle werden während der Beibehaltungsdauer für den Verlauf beibehalten.  
   

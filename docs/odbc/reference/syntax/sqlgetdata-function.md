@@ -20,16 +20,16 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70ee26274d101d1b18b00c83a89bd0c946da6742
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855814"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212449"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
   
  **Zusammenfassung**  
  **SQLGetData** Ruft Daten für eine einzelne Spalte im Resultset oder für einen einzelnen Parameter nach **SQLParamData** SQL_PARAM_DATA_AVAILABLE zurückgibt. Es kann mehrere Male aufgerufen werden zum Abrufen von Daten mit variabler Länge in Teilen.  
@@ -57,7 +57,7 @@ SQLRETURN SQLGetData(
  Zum Abrufen von Daten von Parametern, ist es die Ordnungszahl des Parameters, der bei 1 beginnt.  
   
  *TargetType*  
- [Eingabe] Der Typ-ID für die C-Datentyp, der die **TargetValuePtr* Puffer. Eine Liste der gültigen C-Datentypen und Typ-IDs, finden Sie unter den [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) Abschnitt in Anhang D:-Datentypen.  
+ [Eingabe] Der Typ-ID für die C-Datentyp, der die **TargetValuePtr* Puffer. Eine Liste der gültigen C-Datentypen und Typ-IDs, finden Sie unter den [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) Abschnitt in Anhang D: Datentypen.  
   
  Wenn *TargetType* SQL_ARD_TYPE, verwendet der Treiber, die Typ-ID im Feld SQL_DESC_CONCISE_TYPE der ARD angegeben, ist. Wenn *TargetType* ist SQL_APD_TYPE, **SQLGetData** verwendet die gleichen C-Datentyp, der im angegebenen **SQLBindParameter**. Andernfalls die C-Datentyp angegeben, **SQLGetData** überschreibt die C-Datentyp, der im angegebenen **SQLBindParameter**. Wenn es sich um SQL_C_DEFAULT ist, wählt der Treiber die Standard-C-Datentyp basierend auf dem SQL-Datentyp, der die Quelle an.  
   
@@ -121,7 +121,7 @@ SQLRETURN SQLGetData(
 |HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) für Argument angegebene Wert *Pufferlänge* war kleiner als 0.<br /><br /> Für Argument angegebene Wert *Pufferlänge* kleiner als 4 wurde die *Col_or_Param_Num* Argument auf 0 festgelegt wurde, und der Treiber wurde von einer ODBC 2.*.x* Treiber.|  
 |HY109|Ungültige Cursorposition|Der Cursor positioniert wurde (durch **SQLSetPos**, **SQLFetch**, **SQLFetchScroll**, oder **SQLBulkOperations**) in einer Zeile, die gelöscht wurde oder konnte nicht abgerufen werden.<br /><br /> Der Cursor wurde ein Vorwärtscursor, und die Rowsetgröße war größer als 1.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Optionales Feature nicht implementiert.|Die Treiber oder die Datenquelle unterstützt keine Verwendung von **SQLGetData** mit mehreren Zeilen in **SQLFetchScroll**. Diese Beschreibung wird nicht für Treiber, die die Bitmaske SQL_GD_BLOCK SQL_GETDATA_EXTENSIONS Option wird im zurückgeben **SQLGetInfo**.<br /><br /> Die Treiber oder die Datenquelle unterstützt nicht die Konvertierung angegeben wird, durch die Kombination der *TargetType* Argument und der SQL-Datentyp der entsprechenden Spalte. Dieser Fehler tritt nur bei der SQL-Datentyp der Spalte mit einem treiberspezifischen SQL-Datentyp zugeordnet war.<br /><br /> Der Treiber unterstützt nur ODBC 2.*.x*, und das Argument *TargetType* war eines der folgenden:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> und keines der Intervalldatentypen C im [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) in Anhang D:-Datentypen.<br /><br /> Der Treiber unterstützt nur die ODBC-Versionen vor, und das Argument zum Preis von 3,50 *TargetType* SQL_C_GUID wurde.|  
+|HYC00|Optionales Feature nicht implementiert.|Die Treiber oder die Datenquelle unterstützt keine Verwendung von **SQLGetData** mit mehreren Zeilen in **SQLFetchScroll**. Diese Beschreibung wird nicht für Treiber, die die Bitmaske SQL_GD_BLOCK SQL_GETDATA_EXTENSIONS Option wird im zurückgeben **SQLGetInfo**.<br /><br /> Die Treiber oder die Datenquelle unterstützt nicht die Konvertierung angegeben wird, durch die Kombination der *TargetType* Argument und der SQL-Datentyp der entsprechenden Spalte. Dieser Fehler tritt nur bei der SQL-Datentyp der Spalte mit einem treiberspezifischen SQL-Datentyp zugeordnet war.<br /><br /> Der Treiber unterstützt nur ODBC 2.*.x*, und das Argument *TargetType* war eines der folgenden:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> und keines der Intervalldatentypen C im [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) in Anhang D: Datentypen.<br /><br /> Der Treiber unterstützt nur die ODBC-Versionen vor, und das Argument zum Preis von 3,50 *TargetType* SQL_C_GUID wurde.|  
 |HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber entspricht der *StatementHandle* die Funktion nicht unterstützt.|  
 |IM017|Abruf ist im Modus für asynchrone Benachrichtigung deaktiviert|Wenn das Benachrichtigungsmodell verwendet wird, ist Abruf deaktiviert.|  
@@ -153,11 +153,11 @@ SQLRETURN SQLGetData(
   
  Wenn die *TargetType* Argument ist ein Intervall Datentyp für die standardmäßige Intervall führende Genauigkeit (2) und die standardmäßige Intervall Sekunden Genauigkeit (6), wie in den Feldern SQL_DESC_DATETIME_INTERVAL_PRECISION und SQL_DESC_PRECISION des festgelegt die ARD sind verwendet bzw. für die Daten. Wenn die *TargetType* Argument ist ein SQL_C_NUMERIC-Datentyp, der die standardmäßige Genauigkeit von (treiberdefinierten) und Standard skalieren (0), wie in die Felder der ARD SQL_DESC_PRECISION und SQL_DESC_SCALE festgelegt, für die Daten verwendet werden. Wenn alle Standardwerte für die Genauigkeit oder Dezimalstellenanzahl nicht geeignet ist, die Anwendung sollte explizit festlegen der entsprechenden Deskriptorfeld durch einen Aufruf von **SQLSetDescField** oder **SQLSetDescRec**. Er kann das Feld "SQL_DESC_CONCISE_TYPE" festgelegt, auf SQL_C_NUMERIC, und rufen **SQLGetData** mit eine *TargetType* Argument SQL_ARD_TYPE, der die Genauigkeit und Dezimalstellenanzahl Werte in die deskriptorfelder verursacht verwendet werden.  
   
-> [!NOTE]  
+> [!NOTE]
 >  In ODBC 2.*.x*, Anwendungen legen *TargetType* SQL_C_DATE, SQL_C_TIME oder SQL_C_TIMESTAMP an, dass \* *TargetValuePtr* ist ein Datum und die Uhrzeit oder Timestamp-Struktur. In ODBC 3.*.x*, Anwendungen legen *TargetType* SQL_C_TYPE_DATE, SQL_C_TYPE_TIME oder SQL_C_TYPE_TIMESTAMP. Der Treiber-Manager macht passenden Zuordnungen bei Bedarf basierend auf der Anwendungs- und Treiberinstallation-Version.  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>Abrufen von Daten mit variabler Länge in Teilen  
- **SQLGetData** kann verwendet werden, zum Abrufen von Daten aus einer Spalte, die Daten mit variabler Länge in Teilen enthält, wenn der Bezeichner der dem SQL-Datentyp der Spalte wird SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL_ WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY oder ein Treiber-spezifischen Bezeichner für einen Typ mit variabler Länge.  
+ **SQLGetData** kann zum Abrufen von Daten aus einer Spalte, die Daten mit variabler Länge in Teilen –, also enthält, wenn der Bezeichner der dem SQL-Datentyp der Spalte SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL_ ist verwendet werden WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY oder ein Treiber-spezifischen Bezeichner für einen Typ mit variabler Länge.  
   
  Ruft die Anwendung zum Abrufen von Daten aus einer Spalte in Teilen **SQLGetData** mehrmals hintereinander für dieselbe Spalte. Bei jedem Aufruf **SQLGetData** gibt zurück, den nächsten Teil der Daten. Es ist Aufgabe der Anwendung, die Teile, die Null-Terminierungszeichen aus intermediate Teilen von Zeichendaten entfernen wieder zusammensetzen. Wenn weitere Daten, die zurückgegeben wird oder nicht genügend Puffer für das abschließende Zeichen, belegt wurde **SQLGetData** SQL_SUCCESS_WITH_INFO und SQLSTATE 01004 (Daten wurden abgeschnitten). Bei der Rückgabe des letzten Teils der Daten **SQLGetData** gibt SQL_SUCCESS zurück. Weder SQL_NO_TOTAL als auch 0 (null) kann auf dem letzten gültigen Aufruf zum Abrufen von Daten aus einer Spalte, zurückgegeben werden, da die Anwendung dann, dass keine Möglichkeit festzustellen müsste, welcher Anteil der Daten in den Anwendungspuffer gültig ist. Wenn **SQLGetData** wird aufgerufen, anschließend, es gibt SQL_NO_DATA zurück. Weitere Informationen finden Sie im nächsten Abschnitt, "Abrufen von Daten mit SQLGetData".  
   
@@ -194,7 +194,7 @@ SQLRETURN SQLGetData(
   
 7.  Legt die Länge der Daten in \* *StrLen_or_IndPtr*. Wenn *StrLen_or_IndPtr* wurde ein null-Zeiger **SQLGetData** gibt nicht die Länge zurück.  
   
-    -   Für Zeichen- oder Binärdaten, dies ist die Länge der Daten nach der Konvertierung und vor der Kürzung aufgrund von *Pufferlänge*. Wenn der Treiber die Länge der Daten nach der Konvertierung nicht ermitteln kann als manchmal bei long-Daten der Fall ist, gibt SQL_SUCCESS_WITH_INFO zurück und legt die Länge um SQL_NO_TOTAL fest. (Dem letzten Aufruf von **SQLGetData** muss immer die Länge der Daten, nicht 0 (null) oder SQL_NO_TOTAL zurück.) Wenn Daten abgeschnitten wurden, da die Anweisung SQL_ATTR_MAX_LENGTH Attribut ist, wird den Wert dieses Attributs – im Gegensatz zu die tatsächliche Länge: befindet sich im \* *StrLen_or_IndPtr*. Dies ist dieses Attribut ist darauf ausgelegt, zum Abschneiden von Daten auf dem Server vor der Konvertierung, damit der Treiber keine Möglichkeit herauszufinden hat, welche die tatsächliche Länge ist. Wenn **SQLGetData** ist die gleiche Spalte mehrmals nacheinander aufgerufen, dies ist die Länge der Daten, die zu Beginn des aktuellen Aufrufs zur Verfügung, d. h., die Länge verringert mit jedem nachfolgenden Aufruf.  
+    -   Für Zeichen- oder Binärdaten, dies ist die Länge der Daten nach der Konvertierung und vor der Kürzung aufgrund von *Pufferlänge*. Wenn der Treiber die Länge der Daten nach der Konvertierung nicht ermitteln kann als manchmal bei long-Daten der Fall ist, gibt SQL_SUCCESS_WITH_INFO zurück und legt die Länge um SQL_NO_TOTAL fest. (Dem letzten Aufruf von **SQLGetData** muss immer die Länge der Daten, nicht 0 (null) oder SQL_NO_TOTAL zurück.) Wenn Daten aufgrund der SQL_ATTR_MAX_LENGTH-Anweisungsattribut abgeschnitten wurde, befindet sich der Wert dieses Attributs - im Gegensatz zu die tatsächliche Länge: \* *StrLen_or_IndPtr*. Dies ist dieses Attribut ist darauf ausgelegt, zum Abschneiden von Daten auf dem Server vor der Konvertierung, damit der Treiber keine Möglichkeit herauszufinden hat, welche die tatsächliche Länge ist. Wenn **SQLGetData** ist die gleiche Spalte mehrmals nacheinander aufgerufen, dies ist die Länge der Daten, die zu Beginn des aktuellen Aufrufs zur Verfügung, d. h., die Länge verringert mit jedem nachfolgenden Aufruf.  
   
     -   Für alle anderen Datentypen ist dies die Länge der Daten, nach der Konvertierung; Das heißt, ist es die Größe des Typs, der die Daten konvertiert wurden.  
   
