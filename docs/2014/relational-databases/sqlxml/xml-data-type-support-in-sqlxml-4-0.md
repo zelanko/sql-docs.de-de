@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, xml data type support
@@ -15,12 +13,12 @@ ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: edf15eb12a2ca994ab178f58e9bcdfd1ccf20075
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a0fa49a1dac16ed366c66c72f7d800ccc4aed8e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157350"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750620"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>XML-Datentypunterstützung für SQLXML 4.0
   Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Eingabe von XML-Daten mithilfe des `xml`-Datentyps. Dieses Thema enthält Informationen, wie SQLXML 4.0 Instanzen von `xml`-Datentyp erkennt und unterstützt.  
@@ -28,7 +26,7 @@ ms.locfileid: "48157350"
 ## <a name="working-with-xml-data-types"></a>Arbeiten mit XML-Datentypen  
  Die folgenden Beispiele zeigen, wie Sie mit SQL-Tabellen arbeiten, die Spalten des `xml`-Datentyps implementieren.  
   
-|Task|Beispiel|Thema|  
+|Aufgabe|Beispiel|Thema|  
 |----------|-------------|-----------|  
 |So ordnen Sie eine `xml`-Spalte einer XML-Sicht zu und schließen diese in die Sicht ein|"Zuordnen eines XML-Elements zu einer XML-Datentypspalte"|[Standardzuordnung von XSD-Elementen und-Attributen zu Tabellen und Spalten &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
 |So fügen Sie Daten in eine `xml`-Spalte mit Updategrams ein|"Einfügen von Daten in eine XML-Datentypspalte"|[Einfügen von Daten mit XML-Updategrams &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  

@@ -13,12 +13,12 @@ ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c00c15a0f5e1c6bc45dbf1d19c216feb468e41fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 252d8c44921db82cc634e17e1628f72f18a066e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194910"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396364"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Assistent für die Konvertierung von Integration Services-Projekten
   Der Assistent für die Konvertierung von **Integration Services-Projekten** konvertiert ein Projekt ins Projektbereitstellungsmodell.  
@@ -198,14 +198,14 @@ ms.locfileid: "48194910"
  **Parametername**  
  Listet den Namen des Parameters auf.  
   
- **Scope**  
+ **Bereich**  
  Wählen Sie den Bereich des Parameters aus, und zwar entweder Paket oder Projekt.  
   
 ##  <a name="configureParameters"></a> Festlegen von Optionen auf der Seite "Parameter konfigurieren"  
  **Name**  
  Listet den Namen des Parameters auf.  
   
- **Scope**  
+ **Bereich**  
  Listet den Bereich des Parameters auf.  
   
  **Wert**  
@@ -222,7 +222,7 @@ ms.locfileid: "48194910"
 ##  <a name="review"></a> Festlegen der Optionen auf der Seite zum Überprüfen  
  Verwenden Sie die Seite für die **Überprüfung**, um die Optionen zu bestätigen, die Sie für die Konvertierung des Projekts ausgewählt haben.  
   
- **Previous**  
+ **Vorherige**  
  Klicken Sie, um eine Option zu ändern.  
   
  **Konvertieren**  
@@ -243,6 +243,6 @@ ms.locfileid: "48194910"
  Klicken Sie, um in einer XML-Datei eine Zusammenfassung der Projektkonvertierung zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bereitstellen von Projekten auf dem Integration Services-Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
+ [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

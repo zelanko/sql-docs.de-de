@@ -10,12 +10,12 @@ ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17461cb9fcde8e37118a275512b332085beb5313
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40420db76ee8ce5b1fcf1d085a78d7b17690105d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112120"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538592"
 ---
 # <a name="cross-container-transactions"></a>Containerübergreifende Transaktionen
   Containerübergreifende Transaktionen sind entweder implizite oder explizite Benutzertransaktionen, die Aufrufe von systemintern kompilierten gespeicherten Prozeduren oder Vorgängen für speicheroptimierte Tabellen enthalten.  
@@ -37,13 +37,13 @@ set transaction isolation level serializable
 go  
   
 begin transaction  
- ……  
+ ......  
   set transaction isolation level repeatable read  
   
   insert t3 select * from t1 join t2 on t1.id=t2.id  
   
   set transaction isolation level serializable  
- ……  
+ ......  
 commit  
 ```  
   
@@ -54,11 +54,11 @@ set transaction isolation level read committed
 go  
   
 begin transaction  
- ……  
+ ......  
   
   insert t3 select * from t1 (serializable) join t2 (snapshot) on t1.id=t2.id  
   
-  ……  
+  ......  
 commit  
 ```  
   
@@ -80,7 +80,7 @@ commit
  Transaktionskonsistenz für einen Satz von Lesevorgängen bezieht sich auf die Frage, ob alle gelesenen Zeilenversionen garantiert Updates aus exakt demselben Transaktionssatz enthalten.  
   
  Stabilitätsgarantien, die das System der Transaktion T im Hinblick auf den Lesevorgang gewährt.  
- Stabilität bezieht sich auf die Frage, ob die Lesevorgänge der Transaktion wiederholbar sind. Würden die Lesevorgänge bei einer Wiederholung dieselben Zeilen und Zeilenversionen zurückgeben?  
+ Stabilität bezieht sich auf gibt an, ob die Lesevorgänge der Transaktion wiederholbar sind. Würden die Lesevorgänge bei einer Wiederholung dieselben Zeilen und Zeilenversionen zurückgeben?  
   
  Bestimmte Garantien beziehen sich auf die logische Beendigungszeit der Transaktion. In der Regel ist die logische Beendigungszeit der Zeitpunkt, zu dem für die Transaktion ein Commit in der Datenbank ausgeführt wird. Wenn die Transaktion auf speicheroptimierte Tabellen zugreift, ist die logische Beendigungszeit technisch gesehen der Anfang der Überprüfungsphase. (Weitere Informationen finden Sie in der Erörterung zur transaktionslebensdauer unter [Transaktionen in speicheroptimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   

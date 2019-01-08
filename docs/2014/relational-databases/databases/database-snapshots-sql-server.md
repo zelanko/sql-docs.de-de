@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - static database views
@@ -19,12 +18,12 @@ ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 475a631c3155d116ef0530992503d3f7fd7cbfc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d15db702cb196842a5ddba25dbc3fa9cc18df5f9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213920"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774402"
 ---
 # <a name="database-snapshots-sql-server"></a>Datenbank-Momentaufnahmen (SQL Server)
   Eine Datenbankmomentaufnahme ist eine schreibgeschützte statische Sicht einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank (die *Quelldatenbank*). Die Datenbankmomentaufnahme ist hinsichtlich der Transaktionen mit der Quelldatenbank zum Zeitpunkt der Momentaufnahmeerstellung konsistent. Eine Datenbankmomentaufnahme befindet sich immer auf derselben Serverinstanz wie ihre Quelldatenbank. Beim Aktualisieren der Quelldatenbank wird auch die Datenbankmomentaufnahme aktualisiert. Daher wird wahrscheinlich der verfügbare Speicherplatz aufgebraucht, je länger eine Datenbankmomentaufnahme besteht.  

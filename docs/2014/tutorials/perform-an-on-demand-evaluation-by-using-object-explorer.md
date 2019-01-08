@@ -11,12 +11,12 @@ ms.assetid: ee6d3b79-18bc-49d3-8a1d-0c0905b990f0
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f950b99b7de4b7e81d75ed9decee47f74a785206
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ddb0eeb783f2bdb617ba5c2ac2b18896c23abdcc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098110"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536561"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Ausführen einer bedarfsgesteuerten Auswertung mit dem Objekt-Explorer
   In dieser Aufgabe verwenden Sie den Objekt-Explorer, um eine bedarfsgesteuerte Auswertung von Best Practices-Richtlinien für [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] auf einer einzelnen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz auszuführen.  
@@ -32,7 +32,7 @@ ms.locfileid: "48098110"
   
 ### <a name="to-perform-an-on-demand-evaluation-by-using-object-explorer"></a>So führen Sie eine bedarfsgesteuerte Auswertung mit dem Objekt-Explorer aus  
   
-1.  Starten Sie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], und stellen Sie dann eine Verbindung mit dem [!INCLUDE[ssDE](../includes/ssde-md.md)] her.  
+1.  Starten Sie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], und stellen Sie dann eine Verbindung mit dem [!INCLUDE[ssDE](../includes/ssde-md.md)]her.  
   
 2.  Erweitern Sie im Objekt-Explorer **Management**, erweitern Sie **richtlinienverwaltung**, mit der rechten Maustaste **Richtlinien**, und klicken Sie dann auf **auswerten**.  
   

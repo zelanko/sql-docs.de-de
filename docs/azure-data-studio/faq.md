@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio – häufig gestellte Fragen | Microsoft-Dokumentation
-description: Häufig gestellte Fragen (FAQ) zu Azure Data Studio.
-ms.custom: tools|sos
+title: HÄUFIG GESTELLTE FRAGEN
+titleSuffix: Azure Data Studio
+description: Häufig gestellte Fragen (FAQ) zu Azure Data Studio ein.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b34723e800d3dc21928dcdbb5dc9871ecbbcdb5f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356351"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030331"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] HÄUFIG GESTELLTE FRAGEN
 
@@ -82,49 +83,49 @@ Nein. Zusätzlich zu die nächste Generation von betriebssystemübergreifenden u
 
 |Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Azure-Anmeldung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Dashboard|Benutzerkontensteuerung| |
-|Erweiterungen|Benutzerkontensteuerung| |
-|Integriertes Terminal|Benutzerkontensteuerung||
-|Objekt-Explorer|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Skripterstellung für Objekte|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Projektsystem|Benutzerkontensteuerung||
-|Wählen Sie aus der Tabelle|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Quellcodeverwaltung|Benutzerkontensteuerung||
-|Aufgabenbereich|Benutzerkontensteuerung||
-|Design|Benutzerkontensteuerung||
-|Dunkel-Modus|Benutzerkontensteuerung||
+|Azure-Anmeldung|Ja|Ja|
+|Dashboard|Ja| |
+|Erweiterungen|Ja| |
+|Integriertes Terminal|Ja||
+|Objekt-Explorer|Ja|Ja|
+|Skripterstellung für Objekte|Ja|Ja|
+|Projektsystem|Ja||
+|Wählen Sie aus der Tabelle|Ja|Ja|
+|Quellcodeverwaltung|Ja||
+|Aufgabenbereich|Ja||
+|Design|Ja||
+|Dunkel-Modus|Ja||
 |Azure-Ressourcen-Explorer|Vorschau||
-|Assistent zum Generieren von Skripts||Benutzerkontensteuerung
-|Importieren/Exportieren DACPAC-Datei||Benutzerkontensteuerung|
-|Objekt – Eigenschaften||Benutzerkontensteuerung|
-|Tabellen-Designer||Benutzerkontensteuerung|
+|Assistent zum Generieren von Skripts||Ja
+|Importieren/Exportieren DACPAC-Datei||Ja|
+|Objekt – Eigenschaften||Ja|
+|Tabellen-Designer||Ja|
 
 ### <a name="query-editor"></a>Abfrage-Editor
 
 |Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Diagramm-Viewer|Benutzerkontensteuerung||
-|Exportieren Sie Ergebnisse in CSV, JSON, XLSX|Benutzerkontensteuerung||
-|IntelliSense|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Codeausschnitte|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Plan angezeigt werden|Vorschau|Benutzerkontensteuerung|
-|Clientstatistiken||Benutzerkontensteuerung|
-|Live-Abfragestatistik||Benutzerkontensteuerung|
-|Abfrageoptionen||Benutzerkontensteuerung|
-|Ergebnisse in Datei||Benutzerkontensteuerung|
-|Ergebnisse in Text||Benutzerkontensteuerung|
-|Räumliche Viewer||Benutzerkontensteuerung|
-|SQLCMD||Benutzerkontensteuerung|
-|T-SQL-Debugger||Benutzerkontensteuerung|
+|Diagramm-Viewer|Ja||
+|Exportieren Sie Ergebnisse in CSV, JSON, XLSX|Ja||
+|IntelliSense|Ja|Ja|
+|Codeausschnitte|Ja|Ja|
+|Plan angezeigt werden|Vorschau|Ja|
+|Clientstatistiken||Ja|
+|Live-Abfragestatistik||Ja|
+|Abfrageoptionen||Ja|
+|Ergebnisse in Datei||Ja|
+|Ergebnisse in Text||Ja|
+|Räumliche Viewer||Ja|
+|SQLCMD||Ja|
+|T-SQL-Debugger||Ja|
 
 ### <a name="operating-system-support"></a>Betriebssystemunterstützung
 
 |Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Windows|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|macOS|Benutzerkontensteuerung||
-|Linux|Benutzerkontensteuerung||
+|Windows|Ja|Ja|
+|macOS|Ja||
+|Linux|Ja||
 
 ### <a name="data-engineering"></a>Datentechnik
 
@@ -138,29 +139,29 @@ Nein. Zusätzlich zu die nächste Generation von betriebssystemübergreifenden u
 
 |Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Sicherung / Wiederherstellung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Flatfile-Datei importieren|Vorschau|Benutzerkontensteuerung|
-|SQL-Agent|Vorschau|Benutzerkontensteuerung|
-|SQL Profiler|Vorschau|Benutzerkontensteuerung|
-|Always On||Benutzerkontensteuerung|
-|Always Encrypted||Benutzerkontensteuerung|
-|Assistent zum Kopieren von Daten||Benutzerkontensteuerung|
-|Daten-Datenbankoptimierungsratgeber||Benutzerkontensteuerung|
-|Datenbankdiagramme||Benutzerkontensteuerung|
-|Fehler-Protokoll-Viewer||Benutzerkontensteuerung|
-|Wartungspläne||Benutzerkontensteuerung|
-|Multi-Server-Abfrage||Benutzerkontensteuerung|
-|Richtlinienbasierte Verwaltung||Benutzerkontensteuerung|
-|PolyBase||Benutzerkontensteuerung|
-|Abfragespeicher||Benutzerkontensteuerung|
-|Registrierte Server||Benutzerkontensteuerung|
-|Replikation||Benutzerkontensteuerung|
-|Sicherheitsverwaltung||Benutzerkontensteuerung|
-|Service Broker||Benutzerkontensteuerung|
-|SQL Mail||Benutzerkontensteuerung|
-|Template Explorer||Benutzerkontensteuerung|
-|Sicherheitsrisikobewertung||Benutzerkontensteuerung|
-|XEvent-Verwaltung||Benutzerkontensteuerung|
+|Sicherung / Wiederherstellung|Ja|Ja|
+|Flatfile-Datei importieren|Vorschau|Ja|
+|SQL-Agent|Vorschau|Ja|
+|SQL Profiler|Vorschau|Ja|
+|Always On||Ja|
+|Always Encrypted||Ja|
+|Assistent zum Kopieren von Daten||Ja|
+|Daten-Datenbankoptimierungsratgeber||Ja|
+|Datenbankdiagramme||Ja|
+|Fehler-Protokoll-Viewer||Ja|
+|Wartungspläne||Ja|
+|Multi-Server-Abfrage||Ja|
+|Richtlinienbasierte Verwaltung||Ja|
+|PolyBase||Ja|
+|Abfragespeicher||Ja|
+|Registrierte Server||Ja|
+|Replikation||Ja|
+|Sicherheitsverwaltung||Ja|
+|Service Broker||Ja|
+|SQL Mail||Ja|
+|Template Explorer||Ja|
+|Sicherheitsrisikobewertung||Ja|
+|XEvent-Verwaltung||Ja|
 
 
 ## <a name="azure-data-studio-is-missing-a-feature-that-is-in-ssmsssdt-will-you-add-it"></a>Azure Data Studio fehlt ein Feature, das in SSMS/SSDT ist. Fügen Sie sie hinzu?

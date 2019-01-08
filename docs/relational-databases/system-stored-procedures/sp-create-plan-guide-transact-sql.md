@@ -18,12 +18,12 @@ ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 909fd7c82e91f90b24b643a555ddd8d8d93c639f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734098"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202566"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  Das Löschen oder Ändern einer Funktion, einer gespeicherten Prozedur oder eines DML-Triggers, auf die bzw. den in einer Planhinweisliste verwiesen wird, verursacht einen Fehler. Auch der Versuch, eine Tabelle mit einem Trigger zu löschen, auf den eine Planhinweisliste verweist, führt zu einem Fehler.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Planhinweislisten können nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Planhinweislisten sind in jeder Edition sichtbar. Sie können auch in allen Versionen eine Datenbank anfügen, die Planhinweislisten enthält. Planhinweislisten bleiben beim Wiederherstellen oder Anfügen einer Datenbank in einer aktualisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erhalten. Nach dem Serverupgrade sollten Sie in jeder Datenbank prüfen, ob die Planhinweislisten wirklich erwünscht sind.  
   
 ## <a name="plan-guide-matching-requirements"></a>Voraussetzungen für den Planhinweislistenabgleich  

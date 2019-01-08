@@ -12,12 +12,12 @@ ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a9be71a421bf27aa3a492af1790ab085f404d3ea
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 5baacbca2f7882314ac62c1ef98e22ba6eca9aa8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032027"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507544"
 ---
 # <a name="open-a-knowledge-base"></a>Öffnen einer Wissensdatenbank
   In diesem Thema wird beschrieben, wie eine vorhandene Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) geöffnet und auf die Domänenverwaltung, die Wissensermittlung und das Hinzufügen einer Abgleichsrichtlinie vorbereitet wird.  
@@ -68,7 +68,7 @@ ms.locfileid: "51032027"
   
 -   Um eine von einer anderen Person gesperrte Wissensdatenbank in der Liste zuletzt geöffneter Wissensdatenbanken zu öffnen, kontaktieren Sie diese Person, und lassen Sie sie die Wissensdatenbank entsperren.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Öffnen einer Wissensdatenbank  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Öffnen einer Wissensdatenbank  
  Nachdem Sie eine Wissensdatenbank geöffnet haben, wird die Wissensdatenbank in den Status versetzt, der in der Statusspalte der Wissensdatenbanktabelle angezeigt wird. Für die Wissensermittlung und die Abgleichsrichtlinienaktivitäten wird die Wissensdatenbank auf einer bestimmten Assistentenseite geöffnet. Für die Domänenverwaltungsaktivität wird die Wissensdatenbank auf der Domänenverwaltungsseite geöffnet. Weitere Informationen zu den Statuswerten finden Sie unter [Durchführen der Wissensermittlung](../../2014/data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../../2014/data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Locked"></a> Wenn die Wissensdatenbank gesperrt ist  
@@ -77,20 +77,20 @@ ms.locfileid: "51032027"
 ##  <a name="State"></a> Status einer Wissensdatenbank  
  Das Statusfeld gibt an, in welcher Phase einer Aktivität sich die Wissensdatenbank befindet. Wenn Sie die Wissensdatenbank öffnen, wird sie in dieser Phase geöffnet.  
   
--   **\<Leer>**: Das Statusfeld für eine Wissensdatenbank ist leer, wenn sie durch Klicken auf die Option **Veröffentlichen** in der Domänenverwaltungsaktivität und auf **Yes – Publish the knowledge base and exit** (Ja – Wissensdatenbank veröffentlichen und beenden) veröffentlicht wurde.  
+-   **\<Leer >**: Das Feld "State" ist für eine Wissensdatenbank leer, wenn durch Klicken auf die Wissensdatenbank veröffentlicht wurde **veröffentlichen** in der domänenverwaltungsaktivität und auf **Ja – veröffentlichen Sie die Wissensdatenbank, und beenden**.  
   
--   **In Arbeit**: Die Bearbeitung der Wissensdatenbank wurde durch Klicken auf die Option **Veröffentlichen** in der Domänenverwaltungsaktivität und auf **Nein – Arbeit in der Wissensdatenbank speichern und beenden**gespeichert.  
+-   **In Arbeit**: Bearbeitung der Wissensdatenbank wurde durch Klicken auf gespeichert **veröffentlichen** in der domänenverwaltungsaktivität und auf **Nein – Arbeit in die Wissensdatenbank, und Beenden speichern**.  
   
--   **Domänenverwaltung**: Daten wurden für eine Domäne in der Wissensdatenbank eingegeben, aber die Wissensdatenbank wurde nicht veröffentlicht, und die Arbeit bleibt in der Domänenverwaltungsaktivität erhalten. Die Wissensermittlungsaktivität ist nicht verfügbar. Dieser Fall tritt auf, wenn Sie im Bildschirm **Domänenverwaltung** auf **Schließen** klicken.  
+-   **Domänenverwaltung**: Daten wurden für eine Domäne in der Wissensdatenbank eingegeben, aber die Wissensdatenbank wurde nicht veröffentlicht, und die Arbeit bleibt in der domänenverwaltungsaktivität erhalten. Die Wissensermittlungsaktivität ist nicht verfügbar. Dieser Fall tritt auf, wenn Sie im Bildschirm **Domänenverwaltung** auf **Schließen** klicken.  
   
--   **Ermittlung – Zuordnung**: Die Wissensdatenbank wurde auf der Seite **Wissensdatenbank-Verwaltung: Zuordnung** geschlossen. Die Wissensdatenbank ist gesperrt, und die Domänenverwaltungs- und die Abgleichsaktivitäten sind nicht verfügbar.  
+-   **Ermittlung – Zuordnung**: Die Wissensdatenbank geschlossen wurde, auf die **Wissensdatenbank-Verwaltung: Zuordnen von** Seite. Die Wissensdatenbank ist gesperrt, und die Domänenverwaltungs- und die Abgleichsaktivitäten sind nicht verfügbar.  
   
--   **Ermittlung – Ermitteln**: Die Wissensdatenbank wurde auf der Seite **Wissensdatenbank-Verwaltung: Analysieren** geschlossen. Die Wissensdatenbank ist gesperrt, und die Domänenverwaltungsaktivität ist nicht verfügbar.  
+-   **Ermittlung – ermitteln**: Die Wissensdatenbank geschlossen wurde, auf die **Wissensdatenbank-Verwaltung: Analysieren von** Seite. Die Wissensdatenbank ist gesperrt, und die Domänenverwaltungsaktivität ist nicht verfügbar.  
   
--   **Ermittlung – Werteverwaltung**: Die Wissensdatenbank wurde auf der Seite **Wissensdatenbank-Verwaltung: Domänenbegriffe verwalten** geschlossen. Die Wissensdatenbank ist gesperrt, und die Domänenverwaltungsaktivität ist nicht verfügbar.  
+-   **Ermittlung – Werteverwaltung**: Die Wissensdatenbank geschlossen wurde, auf die **Wissensdatenbank-Verwaltung: Domänenbegriffe verwalten** Seite. Die Wissensdatenbank ist gesperrt, und die Domänenverwaltungsaktivität ist nicht verfügbar.  
   
--   **Abgleichsrichtlinie - Abgleichen**: Die Wissensdatenbank wurde auf der Seite **Abgleichsrichtlinie - Abgleichen** geschlossen. Die Wissensdatenbank ist gesperrt, und die Wissensermittlungs- und die Domänenverwaltungsaktivitäten sind nicht verfügbar.  
+-   **Abgleichsrichtlinie - Abgleichsrichtlinie**: Die Wissensdatenbank geschlossen wurde, auf die **Abgleichsrichtlinie - abgleichen** Seite. Die Wissensdatenbank ist gesperrt, und die Wissensermittlungs- und die Domänenverwaltungsaktivitäten sind nicht verfügbar.  
   
--   **Abgleichsrichtlinie - Abgleichsergebnisse**: Die Wissensdatenbank wurde auf der Seite **Abgleichsrichtlinie - Abgleichsergebnisse** geschlossen. Die Wissensdatenbank ist gesperrt, und die Wissensermittlungs- und die Domänenverwaltungsaktivitäten sind nicht verfügbar.  
+-   **Abgleichsrichtlinie - Abgleichsergebnisse**: Die Wissensdatenbank geschlossen wurde, auf die **Abgleichsrichtlinie - Abgleichsergebnisse** Seite. Die Wissensdatenbank ist gesperrt, und die Wissensermittlungs- und die Domänenverwaltungsaktivitäten sind nicht verfügbar.  
   
   

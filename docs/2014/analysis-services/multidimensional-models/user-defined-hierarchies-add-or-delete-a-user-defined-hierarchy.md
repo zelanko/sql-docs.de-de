@@ -17,12 +17,12 @@ ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 79c6f928f8f3931960dcfa7ee72b8b3f237cf1e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08531e4b0ecfcda02fa1dd1e2c3125b557e41cb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183980"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514510"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>Hinzufügen oder Löschen einer benutzerdefinierten Hierarchie
   Zum Hinzufügen oder Entfernen einer benutzerdefinierten Hierarchie zu bzw. aus einer Dimension verwenden Sie die Registerkarte **Dimensionsstruktur** im Dimensions-Designer von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -54,11 +54,11 @@ ms.locfileid: "48183980"
   
 -   Klicken Sie auf der Registerkarte **Dimensionsstruktur** im Bereich **Hierarchien** auf die benutzerdefinierte Hierarchie, die Sie entfernen möchten. Klicken Sie auf der Symbolleiste auf **Löschen**.  
   
-     – oder –  
+     - oder –  
   
 -   Klicken Sie im Bereich **Hierarchien** mit der rechten Maustaste auf die benutzerdefinierte Hierarchie, die Sie entfernen möchten, und klicken Sie anschließend auf **Löschen**.  
   
-     – oder –  
+     - oder –  
   
 -   Ziehen Sie die benutzerdefinierte Hierarchie von der Entwurfsoberfläche weg.  
   

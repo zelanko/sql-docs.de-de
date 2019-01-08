@@ -14,15 +14,15 @@ ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e0c243dcacf653167477137e26f0767985f6fa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef0dfbb1c0e62bbe5301f769ee0f3e4d585b06b6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150870"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521257"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Erstellen einer Sitzung für erweiterte Ereignisse mit dem Abfrage-Editor
-  Eine Sitzung für erweiterte Ereignisse können Sie mit dem Abfrage-Editor erstellen, können aber auch im Objekt-Explorer eine Sitzung erstellen. Im Objekt-Explorer werden für erweiterte Ereignisse zwei Benutzeroberflächen bereitgestellt, in denen Sie Ereignissitzungsdaten erstellen, ändern und anzeigen können – ein Assistent, der Sie durch die Ereignissitzungserstellung führt, und eine Benutzeroberfläche für neue Sitzungen, die erweiterte Konfigurationsoptionen bereitstellt. Sie können Sitzungen für erweiterte Ereignisse erstellen, um die SQL Server-Ablaufverfolgung zu diagnostizieren, sodass Sie z. B. folgende Aufgaben ausführen können:  
+  Eine Sitzung für erweiterte Ereignisse können Sie mit dem Abfrage-Editor erstellen, können aber auch im Objekt-Explorer eine Sitzung erstellen. Im Objekt-Explorer bietet erweiterte Ereignisse zwei Benutzeroberflächen, die Sie verwenden können, erstellen, ändern und Anzeigen von ereignissitzungsdaten - einen Assistenten, der Sie durch den Prozess der Ereignis-Sitzung führt, und eine Benutzeroberfläche für neue Sitzungen, die erweiterte Konfigurationsoptionen bereitstellt. Sie können Sitzungen für erweiterte Ereignisse erstellen, um die SQL Server-Ablaufverfolgung zu diagnostizieren, sodass Sie z. B. folgende Aufgaben ausführen können:  
   
 -   Suchen der aufwendigsten Abfragen  
   

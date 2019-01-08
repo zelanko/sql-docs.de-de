@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - loading data
@@ -15,12 +14,12 @@ ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b1c32cfebdfb1ca3237764d88eedfd70803652d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 865ff640cb64fe212afa5ece8bbdaa7f0be4a14c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072738"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749507"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Laden von Daten mithilfe des OLE DB-Ziels
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie ein OLE DB-Ziel hinzufügen und konfigurieren können.  
@@ -43,7 +42,7 @@ ms.locfileid: "48072738"
   
     -   **Tabelle oder Sicht** Wählen Sie eine Tabelle oder Sicht in der Datenbank aus, die die Daten enthält.  
   
-    -   **Tabelle oder Sicht – schnelles Laden** Wählen Sie eine Tabelle oder Sicht in der Datenbank aus, die die Daten enthält, und legen Sie dann die Optionen für schnelles Laden fest: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **Einschränkungen überprüfen**, **Zeilen pro Batch**oder **Maximale Einfügungscommitgröße**.  
+    -   **Tabelle oder Sicht – schnelles Laden** wählen Sie eine Tabelle oder Sicht in der Datenbank, die die Daten enthält, und legen Sie dann die Optionen für schnelles Laden: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **Check-Einschränkung**, **Zeilen pro Batch**, oder **maximale Fügen Sie die Commitgröße**.  
   
     -   **Variable für Tabellenname oder Sichtname** Wählen Sie die benutzerdefinierte Variable aus, die den Namen einer Tabelle oder Sicht in der Datenbank enthält.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48072738"
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Ziel](ole-db-destination.md)   
- [Integration Services-Transformationen](transformations/integration-services-transformations.md)   
+ [SQL Server Integration Services-Transformationen](transformations/integration-services-transformations.md)   
  [SQL Server Integration Services-Pfade](integration-services-paths.md)   
  [Datenflusstask](../control-flow/data-flow-task.md)  
   

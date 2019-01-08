@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 920729184dff2b770eb4cc702a437c6771e3ac91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf1f5b633b432d24ea143d857dcd7fbdf72968fd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754738"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204539"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47754738"
   
 -   DDL-Trigger auf Serverebene  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -102,22 +102,22 @@ sys.dm_sql_referencing_entities (
   
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
-|Tabelle|Ja*|Benutzerkontensteuerung|  
-|Anzeigen|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Gespeicherte CLR-Prozedur|nein|Benutzerkontensteuerung|  
-|Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|CLR-benutzerdefinierte Funktion|nein|Benutzerkontensteuerung|  
-|CLR-Trigger (DML und DDL)|nein|nein|  
-|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|nein|  
-|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|nein|  
-|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|nein|  
-|Erweiterte gespeicherte Prozeduren|nein|Benutzerkontensteuerung|  
-|Warteschlange|nein|Benutzerkontensteuerung|  
-|Synonym|nein|Benutzerkontensteuerung|  
-|Typ (Alias und CLR-benutzerdefinierter Typ)|nein|Benutzerkontensteuerung|  
-|XML-Schemaauflistung|nein|Benutzerkontensteuerung|  
-|Partitionsfunktion|nein|Benutzerkontensteuerung|  
+|Tabelle|Ja*|Ja|  
+|Sicht|Ja|Ja|  
+|In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|Ja|Ja|  
+|Gespeicherte CLR-Prozedur|Nein|Ja|  
+|Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Ja|  
+|CLR-benutzerdefinierte Funktion|Nein|Ja|  
+|CLR-Trigger (DML und DDL)|Nein|Nein|  
+|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
+|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
+|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
+|Erweiterte gespeicherte Prozeduren|Nein|Ja|  
+|Warteschlange|Nein|Ja|  
+|Synonym|Nein|Ja|  
+|Typ (Alias und CLR-benutzerdefinierter Typ)|Nein|Ja|  
+|XML-Schemaauflistung|Nein|Ja|  
+|Partitionsfunktion|Nein|Ja|  
   
  \* Eine Tabelle als verweisende Entität nachverfolgt wird, nur dann, wenn er verweist auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Modul, einen benutzerdefinierten Typ oder XML-schemaauflistung in der Definition einer berechneten Spalte, einer CHECK-Einschränkung oder einer DEFAULT-Einschränkung.  
   
@@ -125,7 +125,7 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="permissions"></a>Berechtigungen  
   
-### <a name="includesskatmaiincludessskatmai-mdmd--includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] – [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+### <a name="includesskatmaiincludessskatmai-mdmd---includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 -   Erfordert die CONTROL-Berechtigung für das Objekt, auf das verwiesen wird. Wenn es sich bei der Entität, auf die verwiesen wird, um eine Partitionsfunktion handelt, ist die CONTROL-Berechtigung für die Datenbank erforderlich.  
   

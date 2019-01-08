@@ -11,12 +11,12 @@ ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f768d03f52adcf6bd17b4a97c7e509f4fb6922d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6920be084265c010b6666559e8c66cc82085f9d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202740"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537773"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>Hinzufügen eines Hintergrundbilds (Berichts-Generator und SSRS)
   Sie können einem Berichtselement, z. B. einem Rechteck, Textfeld, einer Liste, Matrix, Tabelle und einigen Teilen eines Diagramms, oder einem Berichtsabschnitt, z. B. dem Seitenkopf, Seitenfuß oder Berichtshauptteil, ein Hintergrundbild hinzufügen. Sie können ein Hintergrundbild für jedes ausgewählte Element in der Berichtsentwurfsoberfläche definieren, für das **BackgroundImage** im Bereich Eigenschaften angezeigt wird. Bei dem Hintergrundbild kann es sich wie bei anderen Bildern um eine URL zu einem Bild auf dem Berichtsserver handeln, ein Bild aus einem Datasetfeld oder ein in die Berichtsdefinition eingebettetes Bild. Wenn Sie ein in den Bericht eingebettetes Bild verwenden möchten, müssen Sie es der Berichtsdefinition hinzufügen, bevor Sie es der Entwurfsoberfläche hinzufügen können.  
@@ -59,7 +59,7 @@ ms.locfileid: "48202740"
   
          Legen Sie für **Value** den Namen eines Felds im Berichtsdataset fest. Weitere Informationen finden Sie unter [Hinzufügen eines datengebundenen Bilds (Berichts-Generator und SSRS)](add-a-data-bound-image-report-builder-and-ssrs.md).  
   
-         Wählen Sie für **MIMEType**oder als Dateiformat den entsprechenden MIME-Typ für das Bild aus – beispielsweise BMP.  
+         Wählen Sie für **MIMEType** oder als Dateiformat den entsprechenden MIME-Typ für das Bild aus, beispielsweise BMP.  
   
         > [!NOTE]  
         >  Die MIMEType-Eigenschaft trifft nur dann zu, wenn die **Source** -Eigenschaft auf **Database**festgelegt ist. Wenn die **Source** -Eigenschaft auf **External** oder **Embedded**festgelegt ist, wird der Wert von **MIMEType** ignoriert.  
@@ -69,7 +69,7 @@ ms.locfileid: "48202740"
          Für Hintergrundbilder in einem Diagramm kann **BackgroundRepeat** auf **Default**, **Repeat**, **Fit**und **Clip**festgelegt werden, jedoch nicht auf **RepeatX** oder **RepeatY**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Images &#40;Berichts-Generator und SSRS&#41;](images-report-builder-and-ssrs.md)   
+ [Bilder &#40;Berichts-Generator und SSRS&#41;](images-report-builder-and-ssrs.md)   
  [Bildeigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

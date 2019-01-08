@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.savedtspackage.f1
@@ -13,12 +12,12 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b8ef62839d7379c35b55af7bcb65ab46e4b455d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23a8211f27d3ea5377d0f68375ecb75aca5a83e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048231"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747942"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>SSIS-Paket speichern (SQL Server-Import/Export-Assistent)
   Verwenden der **SSIS-Paket speichern** Seite zu benennen, beschreiben und speichern Sie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) Paket die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` Datenbank oder in eine Datei mit der DTSX die Erweiterung.  
@@ -38,7 +37,7 @@ ms.locfileid: "48048231"
  Geben Sie eine Beschreibung für das Paket an. Die bewährte Methode ist hierbei, das Paket zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und leichter zu verwalten sind.  
   
  **Target**  
- Zeigen Sie das Ziel ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Datei), die zuvor für die Zieldatei angegeben wurde.  
+ Zeigen Sie das Ziel an ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Datei), das zuvor für die Zieldatei angegeben wurde.  
   
 ## <a name="target-dynamic-options"></a>Dynamische Zieloptionen  
   
@@ -50,13 +49,13 @@ ms.locfileid: "48048231"
  Wenn Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ziel ausgewählt haben, gibt diese Option an, ob die Verbindung mit dem Server mithilfe der integrierten Windows-Authentifizierung hergestellt werden soll. Dies ist die bevorzugte Authentifizierungsmethode.  
   
  **SQL Server-Authentifizierung verwenden**  
- Wenn Sie ausgewählt haben eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziel angeben, ob die Verbindung mit dem Server mit SQL Server-Authentifizierung.  
+ Wenn Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ziel ausgewählt haben, gibt diese Option an, ob die Verbindung mit dem Server mithilfe der SQL Server-Authentifizierung hergestellt werden soll.  
   
  **Benutzername**  
- Wenn Sie ausgewählt haben eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziel und SQL Server-Authentifizierung Typ angegeben haben die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Benutzernamen ein.  
+ Wenn Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ziel ausgewählt und die SQL-Authentifizierung angegeben haben, geben Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzernamen ein.  
   
  **Kennwort**  
- Wenn Sie ausgewählt haben eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziel und SQL Server-Authentifizierung Typ angegeben haben die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Kennwort.  
+ Wenn Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ziel ausgewählt und die SQL-Authentifizierung angegeben haben, geben Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Kennwort ein.  
   
 ### <a name="target--file-system"></a>Ziel = Dateisystem  
  **Dateiname**  

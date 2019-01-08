@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfermasterspstask.f1
@@ -15,12 +14,12 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b7763c8aeffe60c361a9f54ac3c9657653af40a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 734c659186f749b740bbde5ef7caa59b6925fa9f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150230"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761852"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>In master gespeicherte Prozeduren übertragen (Task)
   Der Task „In 'master' gespeicherte Prozeduren übertragen“ überträgt mindestens eine benutzerdefinierte gespeicherte Prozedur zwischen den **master** -Datenbanken der Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um eine gespeicherte Prozedur von der **master** -Datenbank zu übertragen, muss dbo der Besitzer der gespeicherten Prozedur sein.  
@@ -46,7 +45,7 @@ ms.locfileid: "48150230"
  Der Task "In 'master' gespeicherte Prozeduren übertragen" meldet keinen schrittweisen Fortschritt der Anmeldeübertragung; er meldet nur 0 % und 100 % der Ausführung.  
   
 ## <a name="execution-value"></a>Ausführungswert  
- Der Ausführungswert, definiert in der `ExecutionValue` -Eigenschaft des Tasks, gibt die Anzahl der übertragenen gespeicherten Prozeduren zurück. Durch eine benutzerdefinierte Variable zugewiesen der `ExecValueVariable` -Eigenschaft des Tasks Übertragung in Master gespeicherte Prozeduren, Informationen über die gespeicherte Prozedur kann zur Verfügung gestellt werden auf andere Objekte im Paket. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](../use-variables-in-packages.md).  
+ Der Ausführungswert, definiert in der `ExecutionValue`-Eigenschaft des Tasks, gibt die Anzahl der übertragenen gespeicherten Prozeduren zurück. Indem der `ExecValueVariable`-Eigenschaft des Tasks "In 'master' gespeicherte Prozeduren übertragen" eine benutzerdefinierte Variable zugewiesen wird, können Informationen über die gespeicherten Prozeduren anderen Objekten im Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Protokolleinträge  
  Der Task "In 'master' gespeicherte Prozeduren übertragen" enthält die folgenden benutzerdefinierten Protokolleinträge:  
@@ -55,7 +54,7 @@ ms.locfileid: "48150230"
   
 -   TransferSStoredProceduresTaskFinishedTransferringObjects  Dieser Protokolleintrag meldet, dass die Übertragung abgeschlossen ist. Der Protokolleintrag enthält die Beendigungszeit.  
   
- Außerdem wird ein Protokolleintrag für die `OnInformation` -Ereignis meldet die Anzahl der übertragenen gespeicherten Prozeduren und ein Protokolleintrag für die `OnWarning` Ereignis wird für jede gespeicherte Prozedur auf dem Ziel, die überschrieben wird geschrieben.  
+ Außerdem meldet ein Protokolleintrag für das `OnInformation`-Ereignis die Anzahl der übertragenen gespeicherten Prozeduren, und für das `OnWarning`-Ereignis wird ein Protokolleintrag für jede gespeicherte Prozedur am Ziel geschrieben, der überschrieben wird.  
   
 ## <a name="security-and-permissions"></a>Sicherheit und Berechtigungen  
  Der Benutzer muss über die Berechtigung zum Anzeigen der Liste mit gespeicherten Prozeduren in der **master** -Datenbank der Quelle verfügen und Mitglied der sysadmin-Serverrolle sein oder über Berechtigungen zum Erstellen von gespeicherten Prozeduren in der **master** -Datenbank auf dem Zielserver verfügen.  
@@ -65,9 +64,9 @@ ms.locfileid: "48150230"
   
  Klicken Sie auf eines der folgenden Themen, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Task-Editor für Master gespeicherte Prozeduren übertragen &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task „In 'master' gespeicherte Prozeduren übertragen“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Task-Editor für Master gespeicherte Prozeduren übertragen &#40;gespeicherte Prozeduren-Seite&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+-   [Editor für den Task „In master gespeicherte Prozeduren übertragen“ &#40;Seite „Gespeicherte Prozeduren“&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48150230"
 -   [Festlegen der Eigenschaften eines Tasks oder Containers](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Task von SQL Server-Objekte übertragen](transfer-sql-server-objects-task.md)   
+ [SQL Server-Objekte kopieren (Task)](transfer-sql-server-objects-task.md)   
  [Integration Services-Tasks](integration-services-tasks.md)   
  [Ablaufsteuerung](control-flow.md)  
   

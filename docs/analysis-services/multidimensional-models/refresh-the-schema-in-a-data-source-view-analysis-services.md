@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren des Schemas in einer Datenquellensicht (Analysis Services) | Microsoft Docs
+title: Aktualisieren des Schemas in einer Datenquellensicht (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b175cf4b0a01235ec9356d2e71d71839da9ae1a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4d9e783db5d60c5633026509ffedb831bcbffa42
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022877"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514265"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Aktualisieren des Schemas in einer Datenquellensicht (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "34022877"
   
 -   Hinzufügen neuer eindeutiger Einschränkungen. Wenn für eine Tabelle in der Datenquellensicht ein logischer Primärschlüssel vorhanden ist und der Tabelle in der Datenquelle ein physischer Schlüssel hinzugefügt wird, wird der logische Schlüssel entfernt und durch den physischen Schlüssel ersetzt.  
   
- Bei der Aktualisierung werden einer Datenquellensicht nie neue Tabellen hinzugefügt. Wenn Sie eine neue Tabelle hinzufügen möchten, muss dieser Schritt manuell erfolgen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
+ Bei der Aktualisierung werden einer Datenquellensicht nie neue Tabellen hinzugefügt. Wenn Sie eine neue Tabelle hinzufügen möchten, muss dieser Schritt manuell erfolgen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)aus.  
   
 ##  <a name="bkmk_DSVrefresh"></a> Aktualisieren einer Datenquellensicht in SQL Server Data Tools  
- Um eine Datenquellensicht zu aktualisieren, doppelklicken Sie auf die Datenquellensicht im Projektmappen-Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  Dies startet den Datenquellensicht-Designer.  Klicken Sie dann klicken Sie auf die Schaltfläche Datenquellensicht aktualisieren im Designer, oder wählen Sie **aktualisieren** aus dem Menü Datenquellensicht an.  
+ Um eine Datenquellensicht zu aktualisieren, doppelklicken Sie auf die Datenquellensicht im Projektmappen-Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  Dies startet den Datenquellensicht-Designer.  Klicken Sie dann klicken Sie auf die Schaltfläche "Datenquellensicht aktualisieren" im Designer, oder wählen Sie **aktualisieren** im Menü Datenquellensicht an.  
   
  Während einer Aktualisierung fragt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] alle zugrunde liegenden relationalen Datenquellen ab, um zu ermitteln, ob Änderungen in Tabellen/Sichten vorliegen, die in der Datenquellensicht enthalten sind. Falls mit den zugrunde liegenden Datenquellen keine Verbindungen hergestellt werden können und Änderungen vorgenommen wurden, können diese im Dialogfenster **Datenquellensicht aktualisieren** angezeigt werden.  
   
- ![Aktualisieren der Datenquellensicht (Dialogfeld)](../../analysis-services/multidimensional-models/media/ssas-olapdsv-refresh.gif "Datenquellensicht aktualisieren (Dialogfeld)")  
+ ![Aktualisieren der Datenquellensicht (Dialogfeld)](../../analysis-services/multidimensional-models/media/ssas-olapdsv-refresh.gif "Dialogfeld für die Datenquellensicht aktualisieren")  
   
  Im Dialogfeld sind Tabellen, Spalten, Einschränkungen und Beziehungen aufgelistet, die in der Datenquellensicht gelöscht oder hinzugefügt werden. Darüber hinaus werden in diesem Bericht alle benannten Abfragen oder Berechnungen aufgeführt, die nicht erfolgreich vorbereitet werden können. Die betroffenen Objekte werden in einer Strukturansicht aufgelistet. Dabei werden Spalten und Beziehungen unterhalb der Tabellen geschachtelt dargestellt, und die Art der Änderung (Löschung oder Hinzufügung) wird für jedes Objekt angezeigt. Die Objektsymbole der Standard-Datenquellensicht zeigen an, welcher Objekttyp betroffen ist.  
   
- Das Aktualisieren basiert vollständig auf den Namen der zugrunde liegenden Objekte. Wenn ein zugrunde liegendes Objekt in der Datenquelle umbenannt wird, behandelt der Datenquellensicht-Designer deshalb das umbenannte Objekt wie zwei separate Vorgänge - eine Löschung und eine Hinzufügung. In diesem Fall müssen Sie die umbenannten Objekte bei Bedarf manuell wieder in die Datenquellensicht einfügen. Möglicherweise müssen auch Beziehungen oder logische Primärschlüssel neu erstellt werden.  
+ Das Aktualisieren basiert vollständig auf den Namen der zugrunde liegenden Objekte. Wenn ein zugrunde liegendes Objekt in der Datenquelle umbenannt wird, behandelt Datenquellensicht-Designer deshalb das umbenannte Objekt als zwei separate Vorgänge-eine Löschung und eine Hinzufügung. In diesem Fall müssen Sie die umbenannten Objekte bei Bedarf manuell wieder in die Datenquellensicht einfügen. Möglicherweise müssen auch Beziehungen oder logische Primärschlüssel neu erstellt werden.  
   
 > [!IMPORTANT]  
 >  Wenn Sie wissen, dass eine Tabelle in einer Datenquelle umbenannt wurde, können Sie den Befehl **Tabelle ersetzen** verwenden, um die Tabelle durch die umbenannte Tabelle zu ersetzen, bevor Sie die Datenquellensicht aktualisieren. Weitere Informationen finden Sie unter [Ersetzen einer Tabelle oder einer benannten Abfrage in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md).  

@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a7c3756e6c8c35472b760d9fa3100b4f40ecfdc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034679"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401635"
 ---
 # <a name="lesson-2-add-data"></a>Lektion 2: Hinzufügen von Daten
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 In dieser Lektion verwenden Sie den Tabellenimport-Assistenten in SSDT mit der Beispieldatenbank AdventureWorksDW SQL, wählen Sie Daten, Vorschau anzeigen und Filtern Sie die Daten, und klicken Sie dann in den Modellarbeitsbereich zu importieren.  
   
-Mit dem Tabellenimport-Assistenten können Sie Daten aus einer Reihe verschiedener relationaler Quellen importieren: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata usw. Die Schritte zum Importieren von Daten aus jeder dieser relationalen Quellen sind sehr ähnlich und mit dem unten beschriebenen Vorgang vergleichbar. Daten können auch mithilfe einer gespeicherten Prozedur ausgewählt werden. Weitere Informationen finden Sie Informationen zum Importieren von Daten und die verschiedenen Typen von Datenquellen, die Sie aus importieren können, finden Sie unter [Datenquellen](../analysis-services/tabular-models/data-sources-ssas-tabular.md).  
+Mit dem Tabellenimport-Assistenten können Sie Daten aus einer Vielzahl relationaler Quellen importieren: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata und mehr. Die Schritte zum Importieren von Daten aus jeder dieser relationalen Quellen sind sehr ähnlich und mit dem unten beschriebenen Vorgang vergleichbar. Daten können auch mithilfe einer gespeicherten Prozedur ausgewählt werden. Weitere Informationen finden Sie Informationen zum Importieren von Daten und die verschiedenen Typen von Datenquellen, die Sie aus importieren können, finden Sie unter [Datenquellen](../analysis-services/tabular-models/data-sources-ssas-tabular.md).  
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **20 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
-Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 1: Erstellen eines neuen Tabellenmodellprojekts](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
+Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 1: Erstellen ein neuen tabellarischen Modellprojekts](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Erstellen einer Verbindung  
   
@@ -38,7 +38,7 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
     
     ![als-tabellarische-lesson2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
 
-    Hinweis: Wenn Sie Ihr Modell mit Kompatibilitätsgrad 1400 erstellen, wird Ihnen die neue Daten abrufen-Oberfläche anstelle des Tabellenimport-Assistenten angezeigt. Die Dialogfelder, erscheint ein wenig anders, als die folgenden Schritte aus, aber Sie werden weiterhin in der nachvollziehen können. 
+    Hinweis: Wenn Sie Ihr Modell mit Kompatibilitätsgrad 1400 erstellen, sehen Sie die neue datenabruffunktion anstelle des Tabellenimport-Assistenten. Die Dialogfelder, erscheint ein wenig anders, als die folgenden Schritte aus, aber Sie werden weiterhin in der nachvollziehen können. 
   
 2.  In den Tabellenimport-Assistent unter **relationale Datenbanken**, klicken Sie auf **Microsoft SQL Server** > **Weiter**.  
   
@@ -57,7 +57,7 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
   
 7.  Überprüfen Sie auf der Seite **Auswählen, wie die Daten importiert werden sollen** , ob die Option **Aus einer Liste von Tabellen und Sichten auswählen, um die zu importierenden Daten zu bestimmen** ausgewählt ist. Sie möchten in einer Liste von Tabellen und Sichten eine Auswahl treffen. Klicken Sie daher auf **Weiter** , um eine Liste aller Quelltabellen in der Quelldatenbank anzuzeigen.  
   
-8.  Aktivieren Sie auf der Seite **Tabellen und Sichten auswählen** das Kontrollkästchen für die folgenden Tabellen: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**und **FactInternetSales**.  
+8.  In der **Tabellen und Sichten auswählen** Seite, wählen Sie das Kontrollkästchen für die folgenden Tabellen: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, und **"factinternetsales"**.  
   
     Klicken Sie**NICHT** auf **Fertig stellen**.  
   
@@ -76,7 +76,7 @@ Die DimCustomer-Tabelle, die Sie aus der Beispieldatenbank importieren, enthält
   
 3.  Überprüfen Sie, ob alle anderen Spalten aktiviert sind, und klicken Sie anschließend auf **OK**.  
   
-    Die Wörter **Angewendete Filter** werden nun in der Spalte **Filterdetails** in der Zeile **DimCustomer** angezeigt. Wenn Sie auf diesen Link klicken, sehen Sie eine Textbeschreibung der Filter, die Sie soeben angewendet haben.  
+    Beachten Sie, dass die Wörter **angewendete Filter** werden jetzt angezeigt, der **Filterdetails** -Spalte in der **DimCustomer** Zeile; Wenn Sie auf diesen Link klicken, Sie eine textbeschreibung sehen, der Filter, die Sie soeben angewendet.  
     
     ![als-tabellarische-lesson2-angewendete-Filter](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
     
@@ -164,7 +164,7 @@ Es ist wichtig, um das Modellprojekt häufig zu speichern.
 -   Click **Datei** > **Alle speichern**.  
   
 ## <a name="whats-next"></a>Wie geht es weiter?
-Wechseln Sie zur nächsten Lektion: [Lektion 3: Markieren als Datumstabelle](../analysis-services/lesson-3-mark-as-date-table.md).
+Wechseln Sie zur nächsten Lektion: [Lektion 3: Als Datumstabelle markieren](../analysis-services/lesson-3-mark-as-date-table.md).
 
   
   

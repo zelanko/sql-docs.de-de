@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f017c96bd10feb0ac794041d11c449b199ce196b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147410"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757712"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>Erstellen einer Ablaufverfolgung (SQL Server Profiler)
   In diesem Thema wird beschrieben, wie Sie mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] eine Ablaufverfolgung erstellen können.  
@@ -51,7 +50,7 @@ ms.locfileid: "48147410"
   
 5.  Aktivieren Sie optional das Kontrollkästchen **Beendigungszeit für Ablaufverfolgung aktivieren** , und geben Sie das Datum und die Uhrzeit zum Beenden der Ablaufverfolgung an.  
   
-6.  Klicken Sie auf die Registerkarte **Ereignisauswahl**, um Ereignisse, Datenspalten oder Filter hinzuzufügen oder zu entfernen. Weitere Informationen finden Sie unter [Angeben von Ereignissen und Datenspalten für eine Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](sql-server-profiler.md).  
+6.  Klicken Sie auf die Registerkarte **Ereignisauswahl**, um Ereignisse, Datenspalten oder Filter hinzuzufügen oder zu entfernen. Weitere Informationen finden Sie in den folgenden Themen: [Angeben von Ereignissen und Datenspalten für eine Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](sql-server-profiler.md)  
   
 7.  Klicken Sie auf **Ausführen** , um die Ablaufverfolgung zu starten.  
   

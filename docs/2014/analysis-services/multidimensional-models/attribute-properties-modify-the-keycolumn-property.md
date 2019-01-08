@@ -15,12 +15,12 @@ ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b833e41e4fbce47b892bba5d2b3792eeb2771b14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92624d18c0e8aae6a549f0769277e5fd4fdd0c34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068760"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524361"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>Ändern der KeyColumns-Eigenschaft eines Attributs
   Sie können die **KeyColumns** -Eigenschaft eines Attributs ändern. Nehmen wir beispielsweise an, Sie möchten einen zusammengesetzten Schlüssel statt eines einzelnen Schlüssels für das Attribut verwenden.  
@@ -33,7 +33,7 @@ ms.locfileid: "48068760"
   
     -   Klicken Sie im **Projektmappen-Explorer**im Ordner **Dimensionen** mit der rechten Maustaste auf die Dimension, und klicken Sie anschließend entweder auf **Öffnen** oder **Sicht-Designer**.  
   
-         – oder –  
+         -oder-  
   
     -   Im Cube-Designer auf die **Cubestruktur** Registerkarte, erweitern Sie dann die Cubedimension in der **Dimensionen** Bereich, und klicken Sie auf **bearbeiten \<Dimension >**.  
   
@@ -55,6 +55,6 @@ ms.locfileid: "48068760"
 8.  Um die Reihenfolge von Schlüsselspalten zu ändern, wählen Sie eine Spalte aus und klicken dann auf die Schaltfläche **Nach oben** oder **Nach unten** .  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dimensionsattributeigenschaften-Verweis](dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)  
   
   

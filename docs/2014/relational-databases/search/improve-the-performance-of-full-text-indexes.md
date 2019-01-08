@@ -17,12 +17,12 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9131bda927e123d3b718d9a769ef59efff157903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a93abdc2c20b2aabc9da09ce875817ab92789b8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111564"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350866"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Verbessern der Leistung von Volltextindizes
   Die Leistung für Volltextindizes und Volltextabfragen wird von den Hardwareressourcen wie Arbeitsspeicher, Datenträgergeschwindigkeit, CPU-Geschwindigkeit und Computerarchitektur beeinflusst.  
@@ -64,7 +64,7 @@ ms.locfileid: "48111564"
   
 -   Aktualisieren Sie die Statistiken der Basistabelle mithilfe der [UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql) -Anweisung. Noch wichtiger ist das Aktualisieren der Statistik für den gruppierten Index bzw. des Volltextschlüssels für eine vollständige Auffüllung. Dies unterstützt eine Mehrbereichsauffüllung beim Erzeugen guter Partitionen in der Tabelle.  
   
--   Erstellen Sie einen sekundären Index für eine `timestamp` Spalte, wenn Sie die Leistung der inkrementellen Auffüllung verbessern möchten.  
+-   Erstellen Sie einen zweiten Index in einer `timestamp`-Spalte, wenn Sie die Leistung der inkrementellen Auffüllung verbessern möchten.  
   
 -   Bevor Sie eine vollständige Auffüllung auf einem großen Multi-CPU-Computer ausführen, sollten Sie die Größe des Pufferpools vorübergehend einschränken, indem Sie den `max server memory`-Wert so festlegen, dass noch genug Speicher für den fdhost.exe-Prozess und die Betriebssystemprozesse verfügbar ist. Weitere Informationen finden Sie unter "Schätzen der Arbeitsspeicheranforderungen des Filterdaemon-Hostprozesses (fdhost.exe)" weiter unten in diesem Thema.  
   
@@ -126,12 +126,12 @@ ms.locfileid: "48111564"
 > [!IMPORTANT]  
 >  Wichtige Informationen zu den Formeln finden Sie unter <sup>1</sup>, <sup>2</sup>, und <sup>3</sup>weiter unten.  
   
-|Platform|Schätzen der arbeitsspeicheranforderungen von fdhost.exe in MB –*F*<sup>1</sup>|Formel zum Berechnen des Max. Serverarbeitsspeicher –*M*<sup>2</sup>|  
+|Platform|Schätzen der arbeitsspeicheranforderungen von fdhost.exe in MB -*F*<sup>1</sup>|Formel zum Berechnen von max Server Memory -*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= Minimum (** *T* **,** 2000 **) –*`F`*–** 500|  
-|x64|*F* **=** *Anzahl der Durchforstungsbereiche* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
+|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= Minimum (** *T* **,** 2000 **)-*`F`* -**  500|  
+|x64|*F* **=** *Anzahl der Durchforstungsbereiche* **\*** 10 **\*** 8|*M* **=** *T* **-** *F* **-** 500|  
   
- <sup>1</sup> Wenn mehrere vollständige Auffüllungen ausgeführt werden, berechnen Sie die arbeitsspeicheranforderungen von fdhost.exe aller separat, *F1*, *F2*und so weiter. Berechnen Sie anschließend *M* als *T***–** Sigma **(***F*i**)**.  
+ <sup>1</sup> Wenn mehrere vollständige Auffüllungen ausgeführt werden, berechnen Sie die arbeitsspeicheranforderungen von fdhost.exe aller separat, *F1*, *F2*und so weiter. Anschließend berechnen *M* als *T ***-** Sigma **(***F*ich**) **.  
   
  <sup>2</sup> 500 MB ist eine Schätzung des Arbeitsspeichers durch andere Prozesse im System erforderlich. Wenn das System noch weitere Aufgaben durchführt, sollten Sie diesen Wert entsprechend erhöhen.  
   
@@ -139,15 +139,15 @@ ms.locfileid: "48111564"
   
  **Beispiel: Schätzen der Arbeitsspeicheranforderungen von fdhost.exe**  
   
- Dieses Beispiel gilt für einen AMD64-Computer mit 8 GB Arbeitsspeicher und 4 Dual Core-Prozessoren. Die erste Berechnung schätzt den Speicher, der von fdhost.exe benötigt wird: *F*. Die Anzahl der Durchforstungsbereiche beträgt `8`.  
+ Dieses Beispiel gilt für einen AMD64-Computer mit 8 GB Arbeitsspeicher und 4 Dual Core-Prozessoren. Die erste Berechnung schätzt den Speicher, der von „fdhost.exe“ benötigt wird: *F*. Die Anzahl der Durchforstungsbereiche beträgt `8`.  
   
  `F = 8*10*8=640`  
   
- Die nächste Berechnung ergibt den optimalen Wert für `max server memory`–*M*. *Der* gesamte physische Speicher für dieses System in MB –*T*– beträgt `8192`.  
+ Die nächste Berechnung ergibt den optimalen Wert für `max server memory` - *M*. *T*der gesamte physische Speicher auf diesem System in MB verfügbar*T*-ist `8192`.  
   
  `M = 8192-640-500=7052`  
   
- **Beispiel: Option Max. Serverarbeitsspeicher festzulegen.**  
+ **Beispiel: Festlegen von max. Serverarbeitsspeicher**  
   
  Dieses Beispiel verwendet die [Sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) und [neu konfigurieren](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisungen festzulegende `max server memory` auf den Wert für berechnet *M* im vorherigen Beispiel , `7052`:  
   
@@ -203,7 +203,7 @@ GO
   
  Aus Sicherheitsgründen werden Filter mit Filterdaemon-Hostprozessen geladen. Eine Serverinstanz verwendet einen Multithreadprozess für alle Multithreadfilter und einen Singlethreadprozess für alle Filter mit einem einzigen Thread. Wenn in einem Dokument, für das ein Multithreadfilter verwendet wird, ein Dokument eingebettet ist, für das ein Filter mit einem einzigen Thread verwendet wird, startet die Volltext-Engine einen Singlethreadprozess für das eingebettete Dokument. Beispiel: Bei einem Word-Dokument, das ein PDF-Dokument enthält, verwendet die Volltext-Engine einen Multithreadprozess für den Inhalt des Word-Dokuments und einen Singlethreadprozess für den Inhalt des PDF-Dokuments. Ein Filter mit einem einzigen Thread funktioniert in dieser Umgebung jedoch möglicherweise nicht ordnungsgemäß und kann die Stabilität des Filterprozesses gefährden. Unter bestimmten Umständen mit vielen eingebetteten Dokumenten kann dies zum Absturz des Filterprozesses führen. In diesem Fall verbindet die Volltext-Engine alle Dokumente, bei denen Fehler auftraten (z. B. ein Word-Dokument mit eingebettetem PDF-Inhalt), erneut mit dem Singlethread-Filterprozess. Kommt dies häufig vor, hat das eine Leistungsminderung des Volltextindizierungsprozesses zur Folge.  
   
- Sie müssen den Filter für das Containerdokument (hier das Word-Dokument) als Filter mit einem einzigen Thread kennzeichnen, um dieses Problem zu umgehen. Sie können den Filterregistrierungswert ändern, um einen gegebenen Filter als Filter mit einem einzigen Thread zu kennzeichnen. Um einen Filter als Filter mit einem einzelnen Thread kennzeichnen möchten, müssen Sie die **ThreadingModel** Registrierungswert für den Filter auf `Apartment Threaded`. Informationen zu Singlethreadapartments finden Sie im Whitepaper [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159)(Grundlegendes zur Verwendung von COM-Threadingmodellen).  
+ Sie müssen den Filter für das Containerdokument (hier das Word-Dokument) als Filter mit einem einzigen Thread kennzeichnen, um dieses Problem zu umgehen. Sie können den Filterregistrierungswert ändern, um einen gegebenen Filter als Filter mit einem einzigen Thread zu kennzeichnen. Um einen Filter als Filter mit einem einzelnen Thread kennzeichnen möchten, müssen Sie die **ThreadingModel** Registrierungswert für den Filter auf `Apartment Threaded`. Informationen zu Singlethreadapartments finden Sie im Whitepaper [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(Grundlegendes zur Verwendung von COM-Threadingmodellen).  
   
   
   

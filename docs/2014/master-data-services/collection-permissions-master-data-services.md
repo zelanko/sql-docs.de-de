@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], permissions
@@ -14,12 +13,12 @@ ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 717a54bb084240671d376313d85e27d375c3a448
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f85a8baf6eb40ad6ed268db0eae4b1060469d2f4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131560"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783437"
 ---
 # <a name="collection-permissions-master-data-services"></a>Auflistungsberechtigungen (Master Data Services)
   Auflistungsberechtigungen gelten für alle Auflistungen in einer Entität. Es kann keine Berechtigung für eine bestimmte Auflistung erteilt werden; Berechtigungen gelten für alle Auflistungen.  

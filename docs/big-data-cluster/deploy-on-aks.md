@@ -1,22 +1,24 @@
 ---
-title: Konfigurieren von Azure Kubernetes Service für SQL Server-2019 big Data-Cluster-Bereitstellungen | Microsoft-Dokumentation
+title: Konfigurieren von Azure Kubernetes Service
+titleSuffix: SQL Server 2019 big data clusters
 description: Erfahren Sie, wie Sie Azure Kubernetes Service (AKS) für SQL Server-2019 big Data-Cluster (Vorschau)-Bereitstellungen konfigurieren.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 0eda19b4a241a066771afff1cfb682fa7234f81e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.custom: seodec18
+ms.openlocfilehash: b36a81b4fa99cf6c7db2c1638f63cd464646badf
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700384"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246559"
 ---
-# <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Konfigurieren von Azure Kubernetes Service für Bereitstellungen von SQL Server-2019 (Vorschau)
+# <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Konfigurieren von Azure Kubernetes Service für SQL Server-2019 big Data-Cluster (Vorschau)-Bereitstellungen
 
-Dieser Artikel beschreibt, wie Sie Azure Kubernetes Service (AKS) für SQL Server-2019 big Data-Cluster (Vorschau)-Bereitstellungen konfigurieren. 
+Dieser Artikel beschreibt, wie Sie Azure Kubernetes Service (AKS) für SQL Server-2019 big Data-Cluster (Vorschau)-Bereitstellungen konfigurieren.
 
 ACS vereinfacht das Erstellen, konfigurieren und Verwalten eines Clusters mit virtuellen Computern, die vorkonfiguriert sind mit einem Kubernetes-Cluster zum Ausführen von Anwendungen in Container. Dies können Sie Ihre vorhandenen Kenntnisse nutzen bzw. auf ein umfangreiches und stetig wachsendes Community Fachgebiet tätig und zur Bereitstellung und Verwaltung containerbasierter Anwendungen in Microsoft Azure.
 
@@ -27,18 +29,15 @@ Dieser Artikel beschreibt die Schritte zum Bereitstellen von Kubernetes in AKS m
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Für eine Umgebung mit AKS für eine optimale Leistung beim Überprüfen von grundlegenden Szenarien empfehlen wir mindestens drei Agent-VMs (zusätzlich zum Master), mit mindestens 4 vCPUs und 32 GB Arbeitsspeicher, die jeder. Azure-Infrastruktur bietet mehrere Optionen für die Größe für virtuelle Computer, finden Sie unter [hier](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) für die Auswahl in der Region, die Sie bereitstellen möchten.
-  
-- In diesem Abschnitt erfordert, dass Sie der Azure CLI Version 2.0.4 oder höher. Bei Bedarf installieren oder aktualisieren, finden Sie unter [Installieren der Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Führen Sie `az --version` auf die Version zu ermitteln, bei Bedarf.
+- [Bereitstellen der SQL Server-2019 big Data-Tools](deploy-big-data-tools.md):
+   - **"kubectl"**
+   - **Azure Data Studio**
+   - **SQL Server-2019-Erweiterung**
+   - **Azure-Befehlszeilenschnittstelle**
 
-- Installieren Sie ["kubectl"](https://kubernetes.io/docs/tasks/tools/install-kubectl/) mindestens mit Version 1.10. Wenn Sie eine bestimmte Version auf "kubectl"-Client installieren möchten, finden Sie unter [Installieren von Kubectl über Curl binäre](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
+- 1.10 Mindestversion für Kubernetes-Server. Für AKS, müssen Sie `--kubernetes-version` Parameter, um eine andere als die standardmäßige Version anzugeben.
 
-- Minimale Version der gleichen 1,10 gilt für Kubernetes-Server. Für AKS, müssen Sie `--kubernetes-version` Parameter, um eine andere als die standardmäßige Version anzugeben.
-
-> [!NOTE]
-Beachten Sie, die die Client/Server-Version, Verzerren wird +/-1 Nebenversion unterstützt. Die Kubernetes-Dokumentation gibt an, dass "ein Client Schiefe nicht mehr als eine Nebenversion aus dem Master-muss, aber bis zu einer Nebenversion den Master führen kann. Z. B. v1. 3 Master sollte funktionieren mit v1. 1, v1. 2 und v1. 3-Knoten, und sollte mit Version 1.2, v1. 3 und v1. 4-Clients funktionieren." Weitere Informationen finden Sie unter [Kubernetes unterstützte Versionen und Komponenten, die datenschiefe](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
-
-Beachten Sie außerdem, dass `az aks kubernetes install-cli` Kubectl-Client mit einer Version installiert. senken, die erforderlichen 1.10. Führen Sie die obigen Anweisungen, um die richtige Version der Kubectl-Client zu installieren.
+- Für eine Umgebung mit AKS für eine optimale Leistung bei der Überprüfung des grundlegenden Szenarien empfehlen wir mindestens drei Agent-VMs mit mindestens 4 vCPUs und 32 GB Arbeitsspeicher, die jeder. Azure-Infrastruktur bietet mehrere Optionen für die Größe für virtuelle Computer, finden Sie unter [hier](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) für die Auswahl in der Region, die Sie bereitstellen möchten.
 
 ## <a name="create-a-resource-group"></a>Erstellen einer Ressourcengruppe
 
@@ -73,20 +72,20 @@ Eine Azure-Ressourcengruppe ist eine logische Gruppe, in dem, die Azure Ressourc
 
 ## <a name="create-a-kubernetes-cluster"></a>Erstellen Sie einen Kubernetes-cluster
 
-1. Erstellen Sie einen Kubernetes-Cluster in AKS mit den [az Aks erstellen](https://docs.microsoft.com/cli/azure/aks) Befehl. Das folgende Beispiel erstellt einen Kubernetes-Cluster mit dem Namen *Kubcluster* mit einem Linux-Masterknoten und zwei Linux-Agent-Knoten. Stellen Sie sicher, dass den AKS-Cluster in der gleichen Ressourcengruppe zu erstellen, die Sie in den vorherigen Abschnitten verwendet.
+1. Erstellen Sie einen Kubernetes-Cluster in AKS mit den [az Aks erstellen](https://docs.microsoft.com/cli/azure/aks) Befehl. Das folgende Beispiel erstellt einen Kubernetes-Cluster mit dem Namen *Kubcluster* mit drei Linux-Agent-Knoten. Stellen Sie sicher, dass den AKS-Cluster in der gleichen Ressourcengruppe zu erstellen, die Sie in den vorherigen Abschnitten verwendet.
 
     ```bash
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_E4s_v3 \
+    --node-vm-size Standard_L4s \
     --node-count 3 \
     --kubernetes-version 1.10.8
     ```
 
-    Sie können erhöhen oder verringern Sie die Anzahl von Kubernetes-Agent-Knoten durch Ändern der `--node-count <n>` , in denen `<n>` ist die Anzahl von Agent-Knoten, die Sie möchten, welche It enthält keine den Masterknoten des Kubernetes. Also im obigen Beispiel wird **4** virtuelle Computer der Größe **Standard_E4s_v3** für den AKS-Cluster verwendet: **1** für den Master und **3** für die Agent-Knoten.
+   Sie können erhöhen oder verringern Sie die Anzahl von Kubernetes-Agent-Knoten durch Ändern der `--node-count <n>` , in denen `<n>` ist die Anzahl von Agent-Knoten, die Sie verwenden möchten. Dies schließt nicht den Hauptschlüssel Kubernetes-Knoten, der hinter den Kulissen von AKS verwaltet wird. Im Beispiel oben stehen **3** virtuelle Computer der Größe **Standard_L4s** für die Agent-Knoten Ihres AKS-Clusters verwendet.
 
-    Nach einigen Minuten ist der Befehl abgeschlossen ist, und gibt Informationen zum Cluster im JSON-Format.
+   Nach einigen Minuten ist der Befehl abgeschlossen ist, und gibt Informationen zum Cluster im JSON-Format.
 
 1. Speichern Sie die JSON-Ausgabe aus dem vorherigen Befehl für die spätere Verwendung.
 

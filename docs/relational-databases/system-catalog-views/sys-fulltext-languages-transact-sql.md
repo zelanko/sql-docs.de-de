@@ -22,21 +22,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f77ccdfc7c236d1f009ff872712991a4c104fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3fac82c2fd669bb1a7dd3f45b5a614738fdf189
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779688"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529886"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Diese Katalogsicht enthält eine Zeile pro Sprache, deren Wörtertrennungen bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden. Jede Zeile zeigt die LCID und den Namen der Sprache an. Wenn Wörtertrennungen für eine Sprache registriert werden, werden ihre übrigen sprachlichen Ressourcen – Wortstammerkennung, Füllwörter (Stoppwörter) und Thesaurusdateien – für Volltextindizierungs- oder Volltextabfragevorgänge verfügbar. Der Wert des **Namen** oder **Lcid** kann angegeben werden, in der Volltextabfragen und der Volltextindex [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen.  
+  Diese Katalogsicht enthält eine Zeile pro Sprache, deren Wörtertrennungen bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden. Jede Zeile zeigt die LCID und den Namen der Sprache an. Wenn wörtertrennungen für eine Sprache, die andere sprachlichen Ressourcen – wortstammerkennung, Füllwörter (Stoppwörter) und Thesaurus-Dateien werden registriert sind für die Volltext-volltextindizierungs-oder volltextabfragevorgänge verfügbar. Der Wert des **Namen** oder **Lcid** kann angegeben werden, in der Volltextabfragen und der Volltextindex [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen.  
    
 |Spalte|Datentyp|Description|  
 |------------|---------------|-----------------|  
-|**LCID**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschemabezeichner (Locale Identifier, LCID) für die Sprache.|  
+|**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschemabezeichner (Locale Identifier, LCID) für die Sprache.|  
 |**name**|**sysname**|Der Wert des Alias in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) entsprechend dem Wert des **Lcid** oder die Zeichenfolgendarstellung des numerischen LCID-WERTS.|  
   
 ## <a name="values-returned-for-default-languages"></a>Werte, die für Standardsprachen zurückgegeben wurden  

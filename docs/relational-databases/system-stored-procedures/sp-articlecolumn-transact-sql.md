@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_articlecolumn
@@ -17,12 +16,12 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72d9238e5b0f8ad5480e05ded3a0154eb5510904
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 636a0a23c70170ce625b9e462e2715c1c884bda7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640718"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210119"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +48,16 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung, die diesen Artikel enthält. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article=**] **"***Artikel***"**  
+ [  **@article=**] **"**_Artikel_**"**  
  Der Name des Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@column=**] **"***Spalte***"**  
+ [  **@column=**] **"**_Spalte_**"**  
  Der Name der Spalte, die hinzugefügt oder gelöscht werden soll. *Spalte* ist **Sysname**, hat den Standardwert NULL. Bei NULL werden alle Spalten veröffentlicht.  
   
- [  **@operation=**] **"***Vorgang***"**  
+ [  **@operation=**] **"**_Vorgang_**"**  
  Gibt an, ob Spalten in einem Artikel hinzugefügt oder gelöscht werden sollen. *Vorgang* ist **nvarchar(5)**, hat den Standardwert Add. **Hinzufügen** markiert die Spalte für die Replikation. **Drop** hebt die Markierung der Spalte.  
   
  [  **@refresh_synctran_procs=**] *Refresh_synctran_procs*  
@@ -70,7 +69,7 @@ sp_articlecolumn [ @publication = ] 'publication'
  [  **@change_active =** ] *Change_active*  
  Ermöglicht das Ändern der Spalten in Veröffentlichungen, für die Abonnements vorhanden sind. *Change_active* ist ein **Int** hat den Standardwert **0**. Wenn **0**, Spalten nicht geändert werden. Wenn **1**, Spalten hinzugefügt oder aus der aktiven Artikeln, die Abonnements gelöscht werden können.  
   
- [  **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
  Bestätigt, dass durch die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine vorhandene Momentaufnahme ungültig wird. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Artikel bewirken nicht, die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  
@@ -82,13 +81,13 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **0** gibt an, dass Änderungen am Artikel bewirken nicht, das Abonnement erneut initialisiert werden. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die erneute Initialisierung von Abonnements erfordert, wird ein Fehler auftritt und keine Änderungen vorgenommen werden. **1** gibt an, dass Änderungen am Artikel dazu führen, vorhandene Abonnements erneut initialisiert werden dass, und erteilt die Berechtigung für die Initialisierung des Abonnements erfolgen.  
   
- [  **@publisher=** ] **"***Verleger***"**  
- Gibt einen nicht-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+ [  **@publisher=** ] **"**_Verleger_**"**  
+ Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht verwendet werden, mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
   
- [  **@internal=** ] **"***interne***"**  
+ [  **@internal=** ] **"**_interne_**"**  
  Nur interne Verwendung.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

@@ -24,12 +24,12 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 9b565fb16621760a69e2462680444db5f0ea3916
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120477"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519483"
 ---
 # <a name="glossary"></a>Glossar
   
@@ -39,7 +39,7 @@ ms.locfileid: "49120477"
 |Begriff|Definition|  
 |----------|----------------|  
 |action|Ein vom Endbenutzer initiierter Vorgang, der auf einem ausgewählten Cube oder Teil eines Cubes ausgeführt wird.|  
-|ActiveX-Datenobjekte|Eine Datenzugriffsschnittstelle, die mit OLE DB-kompatiblen Datenquellen kommuniziert und zur Herstellung einer Datenverbindung sowie zum Abrufen, Ändern und Aktualisieren von Daten dient.|  
+|ActiveX-Datenobjekte|Eine Datenzugriffsschnittstelle, die mit OLE DB-konformen Datenquellen kommuniziert und zur Herstellung einer Datenverbindung sowie zum Abrufen, Ändern und Aktualisieren von Daten dient.|  
 |ActiveX-Datenobjekte (Multidimensional)|Ein sprachenunabhängiger Satz von objektbasierten Datenzugriffsschnittstellen auf höherer Ebene, der für mehrdimensionale Datenanwendungen optimiert wurde.|  
 |Adapterhost|Der Stammabstrakt-Klassenadapter, der die Übergabe zwischen dem Adapter und dem StreamInsight-Server am ENQUEUE-Interaktionspunkt definiert. Er stellt alle erforderlichen Adapterdienste bereit, z. B. die Speicherverwaltung und die Ausnahmebehandlung.|  
 |ADO|Eine Datenzugriffsschnittstelle, die mit OLE DB-kompatiblen Datenquellen kommuniziert und zur Herstellung einer Datenverbindung sowie zum Abrufen, Ändern und Aktualisieren von Daten dient.|  
@@ -175,10 +175,10 @@ ms.locfileid: "49120477"
 |Zertifikataussteller|Die Zertifizierungsstelle, die das Zertifikat für den entsprechenden Zweck ausgestellt hat.|  
 |Certificate Lifecycle Manager Client|Eine Suite von CLM-Clienttools (Certificate Lifecycle Manager), durch die Endbenutzer Smartcards einfacher verwalten können. Die Tools umfassen die Smart Card Self Service Control, die Smart Card Personalization Control und die Certificate Profile Update Control. Weitere Informationen erhalten Sie unter "Smart Card Self-Service Control", "Smart Card Personalization Control" und "Certificate Profile Update Control".|  
 |Zertifikat-Manager|Ein CLM-Benutzer (Certificate Lifecycle Manager), der über die entsprechenden CLM-Berechtigungen verfügt, um entweder andere CLM-Benutzer oder die CLM-Anwendung selbst zu verwalten.|  
-|Zertifikat-Manager-Webportal|Eine Webanwendung, die auf dem CLM-Server (Certificate Lifecycle Manager) ausgeführt wird. Dieses Portal ermöglicht Zertifikatadministratoren, die Zertifikate und Smartcards anderer Benutzer zu verwalten. Der Zugriff auf die Webportale für Zertifikatabonnenten und Zertifikat-Manager erfolgt über dieselbe URL (Universal Resource Locator). Der angezeigte Inhalt basiert jedoch auf den Rollen und Berechtigungen eines Benutzers.|  
+|Zertifikat-Manager-Webportal|Eine Webanwendung, die auf dem CLM-Server (Certificate Lifecycle Manager) ausgeführt wird. Dieses Portal ermöglicht, Zertifikate und Smartcards anderer Benutzer zu verwalten. Der Zugriff auf die Webportale für Zertifikatabonnenten und Zertifikat-Manager erfolgt über dieselbe URL (Universal Resource Locator). Der angezeigte Inhalt basiert jedoch auf den Rollen und Berechtigungen eines Benutzers.|  
 |Certificate Profile Update Control|Ein ActiveX-Steuerelement zur Automatisierung des Updates von CLM-Profilen (Certificate Lifecycle Manager) auf Clientcomputern.|  
 |Zertifikatsperre|Der Prozess der Sperrung eines digitalen Zertifikats.|  
-|Zertifikatabonnent|Ein Benutzer, der Zertifikate mit oder ohne Smartcards benötigt. Zertifikatabonnenten können auf einige wenige Funktionen zugreifen, die sich nur im Rahmen der eigenen Zertifikate des Benutzers ausführen lassen.|  
+|Zertifikatabonnent|Ein Benutzer, der Zertifikate mit oder ohne Smartcards benötigt. Zertifikatabonnenten können auf eine kleine Anzahl von Funktionen zugreifen, die nur für die Zertifikate des Benutzers ausgeführt werden können.|  
 |Zertifikatabonnent-Webportal|Eine Webanwendung, die auf dem CLM-Server (Certificate Lifecycle Manager) ausgeführt wird. Diese Komponente des CLM-Servers interagiert direkt in einem Self-Service-Modus mit Benutzern. Die spezifische Funktionalität basiert auf Mitgliedschaften und Berechtigungen für Active Directory-Gruppen. Der Zugriff auf die Webportale für Zertifikatabonnenten und Zertifikat-Manager erfolgt über dieselbe URL (Universal Resource Locator). Der angezeigte Inhalt basiert jedoch auf den Rollen und Berechtigungen eines Benutzers.|  
 |Zertifikatvorlage|Ein Windows-basiertes Konstrukt, das das Format und den Inhalt von Zertifikaten auf Grundlage ihres Zwecks angibt. Bei der Anforderung eines Zertifikats über eine Windows-Unternehmenszertifizierungsstelle steht Zertifikatanforderern eine Vielzahl von Zertifikattypen zur Auswahl zur Verfügung, die auf Zertifikatvorlagen basieren.|  
 |Änderungsanwender|Ein Objekt, durch das die Konflikterkennung, Konfliktbehandlung und Änderungsanwendung für einen Änderungsbatch ausgeführt werden.|  
@@ -212,16 +212,16 @@ ms.locfileid: "49120477"
 |CLM Audit|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Erstellung und Anzeige von CLM-Richtlinienvorlagen, die Definition von Verwaltungsrichtlinien in einer Profilvorlage und die Erstellung von CLM-Berichten ermöglicht.|  
 |CLM-Anmeldeinformationen|Benutzerkontoinformationen zur Authentifizierung eines Benutzers für Certificate Lifecycle Manager (CLM). Diese Anmeldeinformationen können als Domänenanmeldeinformationen oder als Einmalkennwörter vorliegen.|  
 |CLM Enroll|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die Benutzern die Angabe von Workflows und der zu sammelnden Daten im Rahmen der Zertifikatausgabe mithilfe einer Vorlage ermöglicht. Diese erweiterte Berechtigung gilt nur für Profilvorlagen.|  
-|CLM Enrollment Agent|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die einem Benutzer oder einer Gruppe das Ausführen von Zertifikatanforderungen für einen anderen Benutzer ermöglicht. Der Betreff des ausgestellten Zertifikats enthält den Namen des Zielbenutzers (nicht den Namen des Anforderers).|  
+|CLM Enrollment Agent|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die einem Benutzer oder einer Gruppe das Ausführen von Zertifikatanforderungen für einen anderen Benutzer ermöglicht. Antragsteller des ausgestellten Zertifikats enthält den Namen statt der anfordernden Person-Name.|  
 |CLM Recover|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Initiierung der Wiederherstellung eines Verschlüsselungsschlüssels von der Datenbank der Zertifizierungsstelle ermöglicht.|  
-|CLM Renew|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Initiierung, Ausführung oder den Abschluss einer Registrierungsanforderung ermöglicht. Durch die Erneuerungsanforderung wird ein Benutzerzertifikat, dessen Gültigkeit demnächst abläuft, durch ein neues Zertifikat mit einer neuen Gültigkeitsdauer ersetzt.|  
+|CLM Renew|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Initiierung, Ausführung oder den Abschluss einer Registrierungsanforderung ermöglicht. Die erneuerungsanforderung wird ein Benutzerzertifikat, dessen Ablaufdatum mit einem neuen Zertifikat, die eine neuen Gültigkeitsdauer ersetzt.|  
 |CLM-Berichte|Überwachungsinformationen für Aktivitäten zur Anmeldeinformationsverwaltung in Certificate Lifecycle Manager (CLM).|  
 |CLM Request Enroll|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Initiierung, Ausführung oder den Abschluss einer Registrierungsanforderung ermöglicht.|  
 |CLM Request Recover|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Initiierung der Wiederherstellung eines Verschlüsselungsschlüssels von der Datenbank der Zertifizierungsstelle ermöglicht.|  
-|CLM Request Renew|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Initiierung, Ausführung oder den Abschluss einer Registrierungsanforderung ermöglicht. Durch die Erneuerungsanforderung wird ein Benutzerzertifikat, dessen Gültigkeit demnächst abläuft, durch ein neues Zertifikat mit einer neuen Gültigkeitsdauer ersetzt.|  
-|CLM Request Revoke|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Sperrung eines Zertifikats vor dem Ablauf der Gültigkeit des Zertifikats ermöglicht. Die Sperrung ist beispielsweise erforderlich, wenn der Computer oder die Smartcard eines Benutzers manipuliert (oder gestohlen) wurde.|  
-|CLM Request Unblock Smart Card|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die das Zurücksetzen der Personal Identification Number (PIN) des Benutzers einer Smartcard und den Zugriff auf das Schlüsselmaterial einer Smartcard sowie eine erneute Erstellung dieses Materials ermöglicht.|  
-|CLM Revoke|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Sperrung eines Zertifikats vor dem Ablauf der Gültigkeit des Zertifikats ermöglicht. Die Sperrung ist beispielsweise erforderlich, wenn der Computer oder die Smartcard eines Benutzers manipuliert (oder gestohlen) wurde.|  
+|CLM Request Renew|Eine erweiterte CLM-Berechtigung (Certificate Lifecycle Manager) in Active Directory, die die Initiierung, Ausführung oder den Abschluss einer Registrierungsanforderung ermöglicht. Die erneuerungsanforderung wird ein Benutzerzertifikat, dessen Ablaufdatum mit einem neuen Zertifikat, die eine neuen Gültigkeitsdauer ersetzt.|  
+|CLM Request Revoke|Eine Certificate Lifecycle Manager (CLM) erweiterte-Berechtigung in den Active Directory, die Sperrung eines Zertifikats vor dem Ablauf der Gültigkeitsdauer des Zertifikats ermöglicht. Ein Beispiel erforderlich ist, wenn Computer eines Benutzers oder einer Smartcard (gestohlene) gefährdet ist.|  
+|CLM Request Unblock Smart Card|Eine Certificate Lifecycle Manager (CLM) erweiterte-Berechtigung in den Active Directory, einer Smartcard Benutzer Anzahl PIN (Personal Identification) zurückgesetzt werden sollen, können, gewähren des Zugriffs auf das Schlüsselmaterial einer Smartcard anmelden und dieses Materials erneut eingerichtet werden.|  
+|CLM Revoke|Eine Certificate Lifecycle Manager (CLM) erweiterte-Berechtigung in den Active Directory, die Sperrung eines Zertifikats vor dem Ablauf der Gültigkeitsdauer des Zertifikats ermöglicht. Ein Beispiel erforderlich ist, wenn Computer eines Benutzers oder einer Smartcard (gestohlene) gefährdet ist.|  
 |Taktvektor|Eine Auflistung von Taktvektorelementen, die Updates zu einem Replikat darstellt. Jede Änderung, die zwischen 0 und der Taktanzahl auftritt, ist im Vektor enthalten.|  
 |Taktvektorelement|Ein Wertepaar, das aus einem Replikatschlüssel und einer Taktanzahl besteht und die Änderung an einem Replikat darstellt.|  
 |CLR-Funktion|Eine Funktion, die für eine SQL Server-Assembly erstellt wird, deren Implementierung in einer Assembly definiert ist, die in der .NET Framework Common Language Runtime (CLR) erstellt wurde.|  
@@ -623,7 +623,7 @@ ms.locfileid: "49120477"
 |Extrahieren|Das Erstellen einer DAC-Paketdatei, die die Definitionen aller Objekte in einer Datenbank sowie der Datenbank zugeordnete Instanzobjekte enthält.|  
 |Extrahieren, Transformieren und Laden|Das Extrahieren von Daten aus verschiedenen Quellen, Transformieren von Daten in konsistente Typen und Laden der transformierten Daten für die Verwendung in Anwendungen.|  
 |Facet|Ein Satz logischer vordefinierter Eigenschaften, die das Verhalten oder die Merkmale für bestimmte Typen verwalteter Ziele (z. B. eine Datenbank, Tabelle, Anmeldung, Sicht usw.) im Rahmen von richtlinienbasierter Verwaltung modellieren.|  
-|Facet|Ein Satz logischer vordefinierter Eigenschaften, die das Verhalten oder die Merkmale für bestimmte Typen verwalteter Ziele (z. B. eine Datenbank, Tabelle, Anmeldung, Sicht usw.) im Rahmen von richtlinienbasierter Verwaltung modellieren.|  
+|Facet|Ein Satz logischer vordefinierter Eigenschaften, die das Verhalten oder die Merkmale für bestimmte Typen verwalteter Ziele (z. B. eine Datenbank, Tabelle, Anmeldung, Sicht usw.) im Rahmen von richtlinienbasierter Verwaltung modellieren.|  
 |Faceteigenschaft|Eine vordefinierte Eigenschaft, die in richtlinienbasierter Verwaltung für ein bestimmtes Facet gilt.|  
 |Fakt|Eine Zeile in einer Faktentabelle in einem Data Warehouse. Ein Fakt enthält Werte, die ein Datenereignis definieren, z. B. eine Verkaufstransaktion.|  
 |Faktendimension|Eine Beziehung zwischen einer Dimension und einer Measuregruppe, in der die Haupttabelle für die Dimension mit der Haupttabelle für die Measuregruppe identisch ist.|  
@@ -737,7 +737,7 @@ ms.locfileid: "49120477"
 |Oberer Whisker|Der höchste Wert, der kein Ausreißer auf einem Boxplotdiagramm ist.|  
 |Tipp|Tipps sind Optionen oder Strategien, die angegeben werden, um durch den SQL Server-Abfrageprozessor für SELECT-, INSERT-, UPDATE- oder DELETE-Anweisungen erzwungen zu werden. Der Tipp überschreibt jeden Ausführungsplan, den der Abfrageoptimierer möglicherweise für eine Abfrage auswählt.|  
 |Verlauf|Eine Liste mit den Aktionen eines Benutzers in einem Programm. Diese Liste kann beispielsweise Befehle enthalten, die in einer Betriebssystemshell eingegeben wurden, sowie mithilfe von Gopher weitergeleitete Menüs oder Links, die in einem Webbrowser verwendet wurden.|  
-|Holdability|Verweist auf die Möglichkeit, Resultsets geöffnet ("gehalten") zu lassen, die verarbeitet wurden und anschließend normalerweise geschlossen werden. Beispiel: "SQL Server unterstützt die Holdability-Eigenschaft nur auf Verbindungsebene."|  
+|Holdability|Verweist auf die Möglichkeit, Resultsets geöffnet ("gehalten") zu lassen, die verarbeitet wurden und anschließend normalerweise geschlossen werden. Zum Beispiel:  "SQL Server unterstützt die Holdability-Eigenschaft nur auf Verbindungsebene."|  
 |Zurückgehaltene Daten|Ein Prozentsatz von Trainingsdaten, der für die Messung der Genauigkeit der Struktur des Data Mining-Modells reserviert ist.|  
 |Zurückhalten von Daten|Ein Prozentsatz von Trainingsdaten, der für die Messung der Genauigkeit der Struktur des Data Mining-Modells reserviert ist.|  
 |Speicher für zurückgehaltene Daten|Die Data Mining-Struktur, die verwendet wird, um die zurückgehaltenen Daten zwischenzuspeichern. Sie enthält Verweise auf die zurückgehaltenen Daten.|  
@@ -782,7 +782,7 @@ ms.locfileid: "49120477"
 |Anfangsband|In einem Mediensatz, der Bandsicherungsmedien verwendet, das erste Band in einer Medienfamilie.|  
 |Innerer Join|Ein Vorgang, bei dem Zeilen aus mehreren Quelltabellen abgerufen werden, indem die Werte aus in den Quelltabellen gemeinsam genutzten Spalten verglichen werden. Mit einem inneren Join werden Zeilen einer Quelltabelle ausgeschlossen, für die in den anderen Quelltabellen keine übereinstimmenden Zeilen vorhanden sind.|  
 |Persönliche Authentifizierung|Die physische Authentifizierung zum Abschließen einer Zertifikatanforderungstransaktion. Beispiel: Ein Endbenutzer, der die Aufhebung der Blockierung seiner Geheimzahl (PIN) anfordert, sucht einen Zertifikat-Manager auf, um sich durch Identifikation persönlich zu authentifizieren, z. B. anhand eines Mitarbeiterausweises oder eines Führerscheins.|  
-|InProc|Eine Situation, in der der Code des COM-Objekts über eine DLL-Datei geladen wird und sich im gleichen Prozess wie der Client befindet.|  
+|InProc|Eine Situation, in denen das COM-Objekt-Code wird aus einer DLL-Datei geladen und befindet sich im selben Prozess wie der Client.|  
 |Eingabeadapter|Ein Adapter, der eingehende Ereignisdatenströme von externen Quellen (z. B. Datenbanken, Dateien, Tickerfeeds, Netzwerkports, Herstellungsgeräte usw.) akzeptiert.|  
 |Eingabeelement|Ein Element, dessen Wert direkt aus der Datenquelle geladen wird, statt aus anderen Daten berechnet zu werden.|  
 |Eingabeset|Die Datenmenge, die für einen Wertausdruck mit mehrdimensionalen Ausdrücken (MDX, Multidimensional Expressions) bereitgestellt wird und mit der dieser Ausdruck operiert.|  
@@ -841,11 +841,11 @@ ms.locfileid: "49120477"
 |Key Performance Indicator|Ein vordefiniertes Measure zur Nachverfolgung der Leistung strategischer Ziele, Pläne, Initiativen oder Geschäftsprozesse. Ein Key Performance Indicator (KPI) wird für ein Ziel ausgewertet. Ein expliziter und messbarer Wert, der direkt von einer Datenquelle abgerufen wird. KPIs werden verwendet, um die Leistung in einem bestimmten Bereich zu messen, z. B. Einnahmen pro Kunde.|  
 |Schlüsselbereichssperre|Eine Sperre, die zum Sperren von Bereichen zwischen Datensätzen in einer Tabelle verwendet wird, um auf diese Weise Phantomeinfügungen oder -löschungen in einer Gruppe von Datensätzen zu vermeiden. Durch Schlüsselbereichssperren werden serialisierbare Transaktionen ermöglicht.|  
 |Schlüsselwiederherstellung|Das Wiederherstellen des privaten Schlüssels eines Benutzers.|  
-|Key Recovery Agent|Ein bestimmter Benutzer, der mit einem Zertifikatadministrator zusammenarbeitet, um den privaten Schlüssel eines Benutzers wiederherzustellen. Eine bestimmte Zertifikatvorlage wird für einen Key Recovery Agent angewendet.|  
+|Key Recovery Agent|Ein bestimmter Benutzer, die mit einem zertifikatadministrator zum privaten Schlüssel eines Benutzers wiederherstellen. Eine bestimmte Zertifikatvorlage wird für einen Key Recovery Agent angewendet.|  
 |Keysetgesteuerter Cursor|Ein Cursor, der die Auswirkungen von Updates anzeigt, die von anderen Benutzern an den im Cursor enthaltenen Zeilen vorgenommen werden, während der Cursor geöffnet ist. Die Auswirkungen von Einfügungen oder Löschvorgängen werden jedoch nicht angezeigt.|  
 |Wissen|Die Metadaten zu allen Änderungen, die bei einem Teilnehmer aufgetreten sind und die dieser verwaltet.|  
 |KPI|Ein vordefiniertes Measure zur Nachverfolgung der Leistung strategischer Ziele, Pläne, Initiativen oder Geschäftsprozesse. Ein Key Performance Indicator (KPI) wird für ein Ziel ausgewertet. Ein expliziter und messbarer Wert, der direkt von einer Datenquelle abgerufen wird. KPIs werden verwendet, um die Leistung in einem bestimmten Bereich zu messen, z. B. Einnahmen pro Kunde.|  
-|KRA|Ein bestimmter Benutzer, der mit einem Zertifikatadministrator zusammenarbeitet, um den privaten Schlüssel eines Benutzers wiederherzustellen. Eine bestimmte Zertifikatvorlage wird für einen Key Recovery Agent angewendet.|  
+|KRA|Ein bestimmter Benutzer, die mit einem zertifikatadministrator zum privaten Schlüssel eines Benutzers wiederherstellen. Eine bestimmte Zertifikatvorlage wird für einen Key Recovery Agent angewendet.|  
 |Sprache für Programme, die Unicode nicht unterstützen|Eine Einstellung unter "Regions- und Sprachoptionen", die die Standardcodepages und die zugehörigen Bitmapschriftdateien für einen bestimmten Computer angibt. Diese Einstellung betrifft alle Benutzer des entsprechenden Computers. Dank der Standardcodepages und Schriftarten kann eine Nicht-Unicode-Anwendung, die für eine bestimmte Betriebssystemsprachversion geschrieben wurde, ordnungsgemäß unter einer anderen Betriebssystemsprachversion ausgeführt werden.|  
 |Sprachdienstparser|Eine Komponente zur Beschreibung der Funktionen und des Bereichs von Token in Quellcode.|  
 |Sprachdienstscanner|Eine Komponente zur Identifizierung der Tokentypen in Quellcode. Diese Informationen werden zur Syntaxhervorhebung und zum schnellen Identifizieren von Tokentypen verwendet, die andere Vorgänge auslösen können (z. B. übereinstimmende Klammern).|  
@@ -969,7 +969,7 @@ ms.locfileid: "49120477"
 |Microsoft SQL Server|Eine Familie von Verwaltungs- und Analysesystemen für relationale Datenbanken von Microsoft für E-Commerce-, Branchen- und Data Warehousing-Lösungen.|  
 |Microsoft SQL Server 2008 Express|Eine integrierbare Lightweight-Version von Microsoft SQL Server 2008.|  
 |Microsoft SQL Server 2008 Express with Advanced Services|Ein Entwurfs- und Verwaltungssystem für relationale Datenbanken von Microsoft für E-Commerce-, Branchen- und Data Warehousing-Lösungen.|  
-|Microsoft SQL Server 2008 Express with Tools|Eine kostenfreie, benutzerfreundliche Version der SQL Server Express-Datenplattform, die das grafische Verwaltungstool umfasst (SQL Server Management Studio (SMSS) Express).|  
+|Microsoft SQL Server 2008 Express with Tools|Eine kostenfreie, benutzerfreundliche Version der SQL Server Express-Datenplattform, die das grafische Verwaltungstool umfasst: SQL Server Management Studio (SMSS) Express.|  
 |Microsoft SQL Server-Onlinedokumentation|Eine Sammlung elektronischer Dokumentation, die die vollständige Dokumentation enthält, die mit Microsoft SQL Server geliefert wird.|  
 |Microsoft SQL Server Business Intelligence|Die auf Microsoft SQL Server basierende Dateninfrastruktur und Business Intelligence-Plattform, die aus Microsoft SQL Server Integration Services, der relationalen Engine, Master Data Services, Reporting Services und Analysis Services bestehen.|  
 |Microsoft SQL Server Compact|Ein Verwaltungs- und Analysesystem für relationale Datenbanken von Microsoft für E-Commerce-, Branchen- und Data Warehousing-Lösungen.|  
@@ -1186,7 +1186,7 @@ ms.locfileid: "49120477"
 |Privater Schlüssel|Die geheime Hälfte eines kryptografischen Schlüsselpaars, das mit einem Algorithmus für öffentliche Schlüssel verwendet wird. Private Schlüssel werden in der Regel verwendet, um einen symmetrischen Sitzungsschlüssel zu entschlüsseln, Daten digital zu signieren oder mit dem entsprechenden öffentlichen Schlüssel verschlüsselte Daten zu entschlüsseln.|  
 |Proaktives Zwischenspeichern|Ein System, das das Veralten von Daten in einem Cube verwaltet und mit dem Objekte in einem MOLAP-Speicher automatisch aktualisiert und im Cache verarbeitet werden, während Abfragen an einen ROLAP-Speicher umgeleitet werden.|  
 |Prozedurcache|Der Teil des SQL Server-Arbeitsspeicherpools, der zum Speichern von Ausführungsplänen für Transact-SQL-Batches, gespeicherte Prozeduren und Trigger verwendet wird.|  
-|Profilvorlage|Die zentrale Komponente aller CLM-Verwaltungsaktivitäten (Certificate Lifecycle Manager). Die Profilvorlage stellt eine einzelne Verwaltungseinheit bereit, die alle Informationen enthält, die zur Verwaltung mehrerer Zertifikate erforderlich sind, die während des Lebenszyklus des Zertifikats von einer Benutzercommunity benötigt werden könnten. Dies gilt auch für Informationen zum endgültigen Speicherort dieser Zertifikate. Diese können softwarebasiert (Speicherung auf dem lokalen Computer) oder hardwarebasiert (Speicherung auf einer Smartcard) sein. Eine Profilvorlage kann nicht sowohl softwarebasierte als auch smartcardbasierte Zertifikate enthalten.|  
+|Profilvorlage|Die zentrale Komponente aller CLM-Verwaltungsaktivitäten (Certificate Lifecycle Manager). Die Profilvorlage stellt eine einzelne Verwaltungseinheit, die enthält alle Informationen, die erforderlich sind, um mehrere Zertifikate zu verwalten, die unter Umständen von einer Benutzercommunity während des Lebenszyklus des Zertifikats erforderlich sind. Dies gilt auch für Informationen zum endgültigen Speicherort dieser Zertifikate. Diese können softwarebasiert (Speicherung auf dem lokalen Computer) oder hardwarebasiert (Speicherung auf einer Smartcard) sein. Eine Profilvorlage kann nicht sowohl softwarebasierte als auch smartcardbasierte Zertifikate enthalten.|  
 |Gewinndiagramm|Ein Diagramm, in dem die theoretisch mögliche Gewinnsteigerung dargestellt wird, die sich aus der Verwendung verschiedener Datenmodelle ergibt.|  
 |Programmierbar|Die Fähigkeit, Anweisungen zum Ausführen eines Tasks oder eines Vorgangs zu akzeptieren. Programmierbarkeit ist ein Merkmal von Computern.|  
 |Eigenschaftenseite|Ein Dialogfeld, das Informationen über ein Objekt in der Schnittstelle anzeigt.|  
@@ -1196,7 +1196,7 @@ ms.locfileid: "49120477"
 |Geschützter Computer|Ein Computer mit Datenquellen, bei denen es sich um Schutzgruppenelemente handelt.|  
 |Geschützter Member|Eine Datenquelle innerhalb einer Schutzgruppe.|  
 |Protokoll|Ein Satz von Standardformaten und -prozeduren, die Computern ermöglichen, Informationen auszutauschen.|  
-|Anbieter|Eine prozessinterne DLL (Dynamic Link Library), die den Zugriff auf eine Datenbank ermöglicht.|  
+|Provider|Eine prozessinterne DLL (Dynamic Link Library), die den Zugriff auf eine Datenbank ermöglicht.|  
 |Provider|Eine Softwarekomponente, die einem Replikat ermöglicht, seine Daten mit anderen Replikaten zu synchronisieren.|  
 |Anbieterobjekt|Ein Objekt, das Teil eines Datenanbieters ist, z. B. Oracle-Anbieter für SQL Server.|  
 |NEAR-Suche|Eine Volltextabfrage, die nach denjenigen Vorkommen sucht, in denen sich die angegebenen Wörter nah beieinander befinden.|  
@@ -1329,7 +1329,7 @@ ms.locfileid: "49120477"
 |Report Server-Webdienst|Ein Webdienst, der Berichte hostet, verarbeitet und übermittelt.|  
 |Berichtsmomentaufnahme|Ein statischer Bericht mit Daten, die zu einem bestimmten Zeitpunkt erfasst wurden.|  
 |Berichtsspezifischer Zeitplan|Zeitplan, der in einem Bericht inline definiert ist. Berichtsspezifische Zeitpläne werden im Kontext eines bestimmten Berichts, Abonnements oder eines bestimmten Vorgangs für die Berichtsausführung definiert, um den Ablaufzeitpunkt des Caches oder Momentaufnahmeupdates zu bestimmen.|  
-|Repository|Eine Datenbank, die Informationsmodelle enthält, die in Verbindung mit ausführbarer Software die Datenbank verwalten.|  
+|repository|Eine Datenbank, die Informationsmodelle enthält, die in Verbindung mit ausführbarer Software die Datenbank verwalten.|  
 |Repository-Engine|Objektorientierte Software, die Verwaltungsunterstützung für und Kundenzugriff auf eine Repositorydatenbank bereitstellt.|  
 |Repositoryobjekt|Ein COM-Objekt, das ein in einer Repositorytypbibliothek gespeichertes Datenkonstrukt darstellt.|  
 |Repository-SQL-Schema|Ein Satz von Standardtabellen, anhand dessen die Repository-Engine alle Objekte, Beziehungen und Auflistungen im Repository verwaltet.|  
@@ -1464,10 +1464,10 @@ ms.locfileid: "49120477"
 |sleep|Das Anhalten eines Vorgangs, ohne dass dieser beendet wird.|  
 |Slice|Eine Teilmenge der Daten in einem Cube, die durch die Beschränkung mindestens einer Dimension durch Elemente der entsprechenden Dimension angegeben wird.|  
 |Slicer|Eine Funktion, die per Mausklick aktivierbare Filtersteuerelemente bereitstellt, die das einfache Beschränken der Anzeigedaten eines Datasets ermöglichen.|  
-|Gleitendes Fenster|Ein Fenster einer festen Länge L, das sich entlang einer Zeitachse entsprechend den Ereignissen des Datenstroms bewegt. Mit jedem Ereignis auf der Zeitachse wird ein neues Fenster erstellt, beginnend mit der Startzeit des Ereignisses.|  
+|Gleitendes Fenster|Ein Fenster einer festen Länge L, der sich entlang einer Zeitachse entsprechend den Ereignissen des Datenstroms bewegt. Ein neues Fenster wird mit jedem Ereignis auf der Zeitachse erstellt und Startzeit des Ereignisses ab.|  
 |Slipstream|Das Integrieren von Updates, Patches oder Service Packs in die grundlegenden Installationsdateien der ursprünglichen Software. Hierdurch wird es möglich, die aktualisierte Software mithilfe der resultierenden Dateien in einem einzigen Schritt zu installieren.|  
 |Slipstreaminstallation|Ein Installationstyp, bei dem die grundlegenden Installationsdateien für ein Betriebssystem oder Programm mit den zugehörigen Service Packs, Updates oder Patches eingeschlossen sind, sodass diese Komponenten in einem einzigen Schritt installiert werden können.|  
-|Smartcard|Ein kreditkartengroßes oder kleineres Kunststoffgerät mit eingebettetem Mikroprozessor und einer kleinen Menge an Speicher, das in Verbindung mit einem Zugriffscode die zertifikatbasierte Authentifizierung ermöglicht. Auf Smartcards werden Zertifikate, öffentliche und private Schlüssel, Kennwörter und andere Arten von persönlichen Informationen sicher gespeichert.|  
+|Smartcard|Ein Kunststoff (kreditkartengroßes oder kleiner) Gerät mit eingebettetem Mikroprozessor und einer kleinen Menge an Speicherplatz, die mit einem Zugriffscode, verwendet wird, um zertifikatbasierte Authentifizierung zu aktivieren. Auf Smartcards werden Zertifikate, öffentliche und private Schlüssel, Kennwörter und andere Arten von persönlichen Informationen sicher gespeichert.|  
 |Smart Card Personalization Control|Ein ActiveX-Steuerelement, das alle Verwaltungsaktivitäten für CLM-Smartcardanwendungen (Certificate Lifecycle Manager) auf einem Clientcomputer ausführt.|  
 |Smartcardprofil|Ein CLM-Profil (Certificate Lifecycle Manager), das bei der Ausführung einer Anforderung mit einer Profilvorlage erstellt wird, die nur auf Smartcards basierende Zertifikatvorlagen einschließt.|  
 |Smartcardleser|Ein Gerät, das in Computer eingebaut ist, um die Verwendung von Smartcards für verbesserte Sicherheitsfunktionen zu ermöglichen.|  
@@ -1588,7 +1588,7 @@ ms.locfileid: "49120477"
 |StreamInsight-Ereignisflussdebugger|Ein eigenständiges Tool in der Microsoft StreamInsight-Plattform, das Ereignisflussdebugging und -analyse bereitstellt.|  
 |StreamInsight-Plattform|Die Plattform, die aus dem StreamInsight-Server, dem Ereignisfluss-Debugtool, der Visual Studio-IDE und anderen Komponenten für die Entwicklung komplexer Ereignisverarbeitungsanwendungen besteht.|  
 |StreamInsight-Server|Die Kern-Engine und die Adapterframeworkkomponenten von Microsoft StreamInsight. Der StreamInsight-Server kann verwendet werden, um die einer komplexen Ereignisverarbeitungsanwendung zugeordneten Ereignisdatenstroms zu verarbeiten und zu analysieren.|  
-|Zeichenfolge|Eine Gruppe von Zeichen oder Zeichenbytes, die als einzelne Entität behandelt werden. Computerprogramme verwenden Zeichenfolgen, um Daten und Befehle zu speichern und zu senden. Bei den meisten Programmiersprachen wird eine Unterscheidung zwischen Zeichenfolgen (z. B. "2674:gstmn") und numerischen Werten (z. B. "470924") gemacht.|  
+|String|Eine Gruppe von Zeichen oder Zeichenbytes, die als einzelne Entität behandelt werden. Computerprogramme verwenden Zeichenfolgen, um Daten und Befehle zu speichern und zu senden. Bei den meisten Programmiersprachen wird eine Unterscheidung zwischen Zeichenfolgen (z. B. "2674:gstmn") und numerischen Werten (z. B. "470924") gemacht.|  
 |Bereichsstreifen|Horizontale oder vertikale Bereiche, die das Hintergrundmuster des Diagramms in regelmäßigen oder benutzerdefinierten Abständen festlegen. Mithilfe von Bereichsstreifen können Sie die Lesbarkeit für das Suchen nach einzelnen Werten im Diagramm verbessern, Termine hervorheben, die in regelmäßigen Abständen auftreten, oder einen bestimmten Schlüsselbereich hervorheben.|  
 |Bereichsstreifen|Horizontale oder vertikale Bereiche, die das Hintergrundmuster des Diagramms in regelmäßigen oder benutzerdefinierten Abständen festlegen. Mithilfe von Bereichsstreifen können Sie die Lesbarkeit für das Suchen nach einzelnen Werten im Diagramm verbessern, Termine hervorheben, die in regelmäßigen Abständen auftreten, oder einen bestimmten Schlüsselbereich hervorheben.|  
 |Stripesetmedien|Ein Mediensatz, der mehrere Medien verwendet, auf die die einzelnen Sicherungen verteilt werden.|  
@@ -1775,7 +1775,7 @@ ms.locfileid: "49120477"
 |Zeugenserver|In der Datenbankspiegelung die Serverinstanz, die den Status des Prinzipalservers und des Spiegelservers überwacht und die bei einem Ausfall des Prinzipalservers standardmäßig das automatische Failover initiieren kann. Bei einer Datenbank-Spiegelungssitzung kann nur ein Zeugenserver (der "Zeuge") eingesetzt werden, und der Einsatz ist optional.|  
 |WMI|Die Microsoft-Erweiterung für die WBEM-Initiative (Web-Based Enterprise Management) der DMTF (Distributed Management Task Force).|  
 |WMI Query Language|Eine Teilmenge von ANSI SQL mit an Windows-Verwaltungsinstrumentation (WMI, Windows Management Instrumentation) angepassten semantischen Änderungen.|  
-|Arbeitsmappe|Eine Datei in einem Tabellenkalkulationsprogramm, die eine Reihe zusammengehöriger Arbeitsblätter enthält.|  
+|-Arbeitsmappe|Eine Datei in einem Tabellenkalkulationsprogramm, die eine Reihe zusammengehöriger Arbeitsblätter enthält.|  
 |Arbeitsauslastungskontrolle|Ein Microsoft SQL Server-Tool, das dazu dient, die Leistung einer Instanz der Datenbank-Engine immer dann einzuschränken, wenn mehr als acht Vorgänge gleichzeitig aktiv sind.|  
 |Arbeitsauslastungsgruppe|In der Arbeitsauslastungskontrolle ein Container für Sitzungsanforderungen, die sich gemäß den auf die einzelnen Anforderungen angewendeten Klassifizierungsregeln ähneln. Eine Arbeitsauslastungsgruppe ermöglicht die Überwachung des aggregierten Ressourcenverbrauchs und einer einheitlichen Richtlinie, die auf alle Anforderungen in einer Gruppe angewendet wird.|  
 |Arbeitsstation|Ein Mikrocomputer oder Terminal, der bzw. das mit einem Netzwerk verbunden ist.|  
@@ -1785,7 +1785,7 @@ ms.locfileid: "49120477"
 |x-Achse|Die horizontale Bezugslinie in einem Raster oder Diagramm, das über horizontale und vertikale Dimensionen verfügt.|  
 |XML für Analysis|Eine Spezifikation, die einen offenen Standard beschreibt, der den Datenzugriff auf Datenquellen im World Wide Web unterstützt.|  
 |XMLA|Eine Spezifikation, die einen offenen Standard beschreibt, der den Datenzugriff auf Datenquellen im World Wide Web unterstützt.|  
-|XQuery|Eine funktionale Abfragesprache, die auf eine Vielzahl von XML-Datentypen, die von Quilt, XPath und XQL abgeleitet werden, allgemein anwendbar ist. Sowohl Ipedo als auch Software AG implementieren ihre eigenen Versionen der vom W3C vorgeschlagenen Spezifikation für die XQuery-Sprache. Diese Sprache wird auch XML Query und XQL genannt.|  
+|XQuery|Eine funktionale Abfragesprache, die auf eine Vielzahl von XML-Datentypen, die von Quilt, XPath und XQL abgeleitet werden, allgemein anwendbar ist. Sowohl Ipedo als auch Software AG implementieren ihre eigenen Versionen der vom W3C vorgeschlagenen Spezifikation für die XQuery-Sprache. Auch bezeichnet als: XML Query, XQL.|  
 |XSL|Ein XML-Vokabular, mit dem XML-Daten mithilfe eines Stylesheets, in dem die Präsentationsregeln definiert sind, in ein anderes Format, z. B. HTML, umgewandelt, d. h. transformiert werden können.|  
 |XSL-Transformation|Eine deklarative, XML-basierte Sprache, die zur Darstellung oder Transformation von XML-Daten dient.|  
 |XSLT|Eine deklarative, XML-basierte Sprache, die zur Darstellung oder Transformation von XML-Daten dient.|  

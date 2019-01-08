@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
@@ -13,12 +12,12 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5540401d4b0a05c3ebe87742f902e6e16b59498a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54de95fe39ea6b99139ee040b93160a1a93ff1bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208220"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776462"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Topologie konfigurieren (Peer-zu-Peer-Replikation)
   Auf der Seite **Topologie konfigurieren** können Sie allgemeine Konfigurationsaufgaben ausführen, z. B. neue Knoten hinzufügen, Knoten löschen und neue Verbindungen zwischen vorhandenen Knoten hinzufügen. Auf der Entwurfsoberfläche wird der Knoten angezeigt, den Sie auf der Seite **Veröffentlichung** des Assistenten ausgewählt haben. Zum Angeben von Konfigurationsoptionen klicken Sie mit der rechten Maustaste auf einen Knoten, eine Verbindung oder die Entwurfsoberfläche.  
@@ -26,7 +25,7 @@ ms.locfileid: "48208220"
 > [!NOTE]  
 >  Der Assistent zum Konfigurieren der Peer-zu-Peer-Topologie fordert Topologieinformationen an, wenn der Assistent geschlossen wird. Wenn der Assistent geschlossen und erneut geöffnet wird, bevor alle Knoten auf die Anforderung von Informationen reagiert haben, zeigt der Assistent möglicherweise ein Teilnetzwerk an.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Die Seite **Topologie konfigurieren** enthält Oberflächenelemente und Optionen, die verfügbar sind, wenn Sie mit der rechten Maustaste auf ein Element klicken. In der folgenden Tabelle werden die einzelnen Oberflächenelemente beschrieben.  
   
 |Oberflächenelement|Description|  
@@ -34,7 +33,7 @@ ms.locfileid: "48208220"
 |Entwurfsoberfläche|Zeigt andere Oberflächenelemente an. Zum Hinzufügen von Elementen klicken Sie mit der rechten Maustaste auf die Entwurfsoberfläche.|  
 |![Der erste Knoten in einer Topologie](media/p2pwizard-firstnode.gif "The first node in a topology")|Der ursprüngliche Knoten in der Topologie. Neue Knoten werden mit einer Kopie der Veröffentlichungsdatenbank vom ursprünglichen Knoten initialisiert.|  
 |![Ein Knoten für den vollständige Informationen haben](media/p2pwizard-complete.gif "einen Knoten, die für den vollständige Informationen haben") oder eine höhere Version, die für die Replikation den vollständige Informationen vorhanden. Zum Angeben von Konfigurationsoptionen klicken Sie mit der rechten Maustaste auf den Knoten.|  
-|![Ein Knoten, für den unvollständige Informationen vorhanden sind](media/p2pwizard-incomplete.gif "A node for which we have incomplete information")|Ein Knoten, für den unvollständige Informationen für die Replikation vorhanden sind. Zum Angeben von Konfigurationsoptionen klicken Sie mit der rechten Maustaste auf den Knoten. Die Informationen für die Replikation können aus einem der folgenden Gründe unvollständig sein:<br /><br /> Der Knoten wird eine Instanz ausführen [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], der nicht alle vom Assistenten erforderlichen Metadaten gespeichert.<br /><br /> Auf dem Knoten wird eine höhere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt, aber die Replikation kann keine Abonnementinformationen von dem Knoten abrufen. So beheben Sie dieses Problem:<br />-Stellen Sie sicher, dass die Datenbank auf dem Knoten online ist und Sie eine Verbindung, herstellen können mit den gleichen Anmeldeinformationen wie die Verteilungs-Agents, die auf den Knoten verbinden.<br />-Stellen Sie sicher, dass der Protokolllese-Agent und alle Verteilungs-Agents, die Verbindungen mit dem Knoten ausgeführt werden.<br />-Stellen Sie sicher, dass das Aktualisierungstimeout hoch genug, um alle Topologieinformationen zu erfassen festgelegt ist. Klicken Sie zum Festlegen des Timeouts mit der rechten Maustaste auf die Entwurfsoberfläche, und klicken Sie dann auf **Aktualisierungstimeout festlegen**.|  
+|![Ein Knoten, für den unvollständige Informationen vorhanden sind](media/p2pwizard-incomplete.gif "A node for which we have incomplete information")|Ein Knoten, für den unvollständige Informationen für die Replikation vorhanden sind. Zum Angeben von Konfigurationsoptionen klicken Sie mit der rechten Maustaste auf den Knoten. Die Informationen für die Replikation können aus einem der folgenden Gründe unvollständig sein:<br /><br /> Auf dem Knoten wird eine Instanz von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ausgeführt, von der nicht alle für den Assistenten erforderlichen Metadaten gespeichert werden.<br /><br /> Auf dem Knoten wird eine höhere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt, aber die Replikation kann keine Abonnementinformationen von dem Knoten abrufen. So beheben Sie dieses Problem:<br />-Stellen Sie sicher, dass die Datenbank auf dem Knoten online ist und Sie eine Verbindung, herstellen können mit den gleichen Anmeldeinformationen wie die Verteilungs-Agents, die auf den Knoten verbinden.<br />-Stellen Sie sicher, dass der Protokolllese-Agent und alle Verteilungs-Agents, die Verbindungen mit dem Knoten ausgeführt werden.<br />-Stellen Sie sicher, dass das Aktualisierungstimeout hoch genug, um alle Topologieinformationen zu erfassen festgelegt ist. Klicken Sie zum Festlegen des Timeouts mit der rechten Maustaste auf die Entwurfsoberfläche, und klicken Sie dann auf **Aktualisierungstimeout festlegen**.|  
 |Graue Linie mit Pfeilen|Die Verbindung zwischen zwei Knoten. Klicken Sie zum Hinzufügen einer Verbindung mit der rechten Maustaste auf einen der Knoten, die Sie verbinden möchten. Zum Entfernen einer Verbindung klicken Sie mit der rechten Maustaste auf diese Verbindung.<br /><br /> Wenn die Linie nur einen Pfeil aufweist, sind für einen der Knoten unvollständige Informationen für die Replikation vorhanden.|  
   
 ### <a name="options-for-the-design-surface"></a>Optionen für die Entwurfsoberfläche  
@@ -63,7 +62,7 @@ ms.locfileid: "48208220"
   
 ### <a name="options-for-each-node"></a>Optionen für einzelne Knoten  
  **Neue Peerverbindung hinzufügen**  
- Fügen Sie eine Verbindung zwischen zwei Knoten hinzu. Wenn Sie z. B. eine Verbindung zwischen Knoten A und Knoten B hinzufügen, werden bei der Replikation zwei Abonnements hinzugefügt. Durch das erste Abonnement wird Knoten A in die Lage versetzt, Änderungen der Veröffentlichung auf Knoten B zu empfangen, während durch das zweite Abonnement Knoten B in die Lage versetzt wird, Änderungen der Veröffentlichung auf Knoten A zu empfangen.  
+ Fügen Sie eine Verbindung zwischen zwei Knoten hinzu. Wenn Sie eine Verbindung zwischen Knoten A und Knoten B hinzufügen, fügt die Replikation z. B. zwei Abonnements: Die erste Optimierung ermöglicht Knoten A auf Änderungen der Veröffentlichung auf Knoten B zu empfangen und die zweite Optimierung ermöglicht das Knoten B zu Änderungen der Veröffentlichung auf Knoten a zu empfangen.  
   
  **Peerknoten löschen**  
  Entfernt einen Knoten aus der Topologie. Wenn Sie z. B. Knoten C entfernen, wird die Veröffentlichung auf diesem Knoten entfernt. Abonnements zwischen Knoten A und Knoten C sowie zwischen Knoten B und Knoten C werden ebenfalls entfernt. Die Datenbank auf Knoten C wird nicht gelöscht, und Veröffentlichung und Verteilung werden nicht deaktiviert.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], MONTH
@@ -14,12 +13,12 @@ ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4106fed90fd370ee30a6bb3a5ad2be5324caddf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83175d463c8b6fa54e88d17945def36a76b6fcfe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102480"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800032"
 ---
 # <a name="month-ssis-expression"></a>MONTH (SSIS-Ausdruck)
   Gibt eine ganze Zahl zurück, die den datepart-Wert für die Monatsangabe in einem Datum darstellt.  

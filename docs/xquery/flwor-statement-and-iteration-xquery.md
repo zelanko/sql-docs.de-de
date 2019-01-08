@@ -24,12 +24,12 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3ac773ea8c68be65a0b60aaff3d542df0b6dc6e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c95d86b64c28bbf78b111f21de7afd58b44616f
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662880"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858665"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR-Anweisung und -Iteration (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "51662880"
   
 -   Einer optionalen `order by`-Klausel.  
   
--   Einem `return`-Ausdruck. Der Ausdruck in der `return`-Klausel erstellt das Ergebnis der FLWOR-Anweisung.  
+-   Ein `return`-Ausdruck. Der Ausdruck in der `return`-Klausel erstellt das Ergebnis der FLWOR-Anweisung.  
   
  Die folgende Abfrage führt z. B. eine Iteration durch die <`Step`>-Elemente am ersten Produktionsstandort durch und gibt den Zeichenfolgenwert der <`Step`>-Knoten zurück:  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -82,7 +82,7 @@ Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1
   
  Die folgende Abfrage ähnelt der vorherigen Abfrage, wird jedoch für die Instructions-Spalte, eine typisierte xml-Spalte, der ProductModel-Tabelle angegeben. Die Abfrage führt eine Iteration durch alle Fertigungsschritte (die <`step`>-Elemente) am ersten Arbeitsplatzstandort für ein bestimmtes Produkt aus.  
   
-```  
+```sql
 SELECT Instructions.query('  
    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $Step in //AWMI:root/AWMI:Location[1]/AWMI:step  
@@ -115,7 +115,7 @@ the aluminum sheet. ....
   
  Die folgenden Beispiele zeigen weitere zusätzliche Eingabesequenzen, die zulässig sind:  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 SELECT @x.query('  
@@ -146,7 +146,7 @@ SELECT @x.query('
   
  In der AdventureWorks-Beispieldatenbank, die produktionsanweisungen gespeichert, der **Anweisungen** Spalte die **Production.ProductModel** Tabelle folgende Form aufweisen:  
   
-```  
+```xml
 <Location LocationID="10" LaborHours="1.2"   
             SetupHours=".2" MachineHours=".1">  
   <step>describes 1st manu step</step>  
@@ -158,11 +158,11 @@ SELECT @x.query('
   
  Die folgende Abfrage erstellt neues XML, in dem die <`Location`>-Elemente mit den Arbeitsplatzstandort-Attributen als untergeordnete Elemente zurückgegeben werden:  
   
-```  
+```xml
 <Location>  
    <LocationID>10</LocationID>  
    <LaborHours>1.2</LaborHours>  
-   <SetupHours>.2</SteupHours>  
+   <SetupHours>.2</SetupHours>  
    <MachineHours>.1</MachineHours>  
 </Location>  
 ...  
@@ -170,7 +170,7 @@ SELECT @x.query('
   
  Im Folgenden wird die Abfrage aufgeführt:  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $WC in /AWMI:root/AWMI:Location  
@@ -196,7 +196,7 @@ where ProductModelID=7
   
  Dies ist ein Teilergebnis gezeigt:  
   
-```  
+```xml
 <Location>  
   <LocationID>10</LocationID>  
   <LaborHours>2.5</LaborHours>  
@@ -214,7 +214,7 @@ where ProductModelID=7
   
  In der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]-Datenbank enthalten die Produktionsanweisungen Informationen zu den erforderlichen Tools und der Position, an der die Tools verwendet werden. In der folgenden Abfrage wird die `let`-Klausel verwendet, um die Tools, die zum Erstellen eines Produktionsmodells erforderlich sind, sowie die Positionen aufzulisten, an denen die einzelnen Tools benötigt werden.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $T in //AWMI:tool  
@@ -227,11 +227,11 @@ where ProductModelID=7
 ```  
   
 ## <a name="using-the-where-clause"></a>Verwenden der where-Klausel  
- Mit der `where`-Klausel können Sie die Ergebnisse einer Iteration filtern. Dies wird im folgenden Beispiel veranschaulicht.  
+ Sie können die `where` -Klausel, um die Ergebnisse einer Iteration zu filtern. Dies wird im folgenden Beispiel veranschaulicht.  
   
  Bei der Produktion eines Fahrrades durchläuft der Produktionsprozess eine Reihe von Arbeitsplatzstandorten. Jeder Arbeitsplatzstandort definiert eine Sequenz von Produktionsschritten. Die folgende Abfrage ruft nur die Arbeitsplatzstandorte ab, die ein Fahrradmodell fertigen und weniger als drei Produktionsschritte verwenden. Dies bedeutet, dass sie weniger als drei <`step`>-Elemente besitzen.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location  
@@ -270,7 +270,7 @@ where ProductModelID=7
 ## <a name="multiple-variable-binding-in-flwor"></a>Binden mehrerer Variablen in FLWOR  
  Sie können einen einzelnen FLWOR-Ausdruck verwenden, um mehrere Variablen an Eingabesequenzen zu binden. Im folgenden Beispiel wird die Abfrage z. B. für eine nicht typisierte xml-Variable angegeben. Der FLOWR-Ausdruck gibt das erste untergeordnete <`Step`>-Element in jedem <`Location`>-Element zurück.  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -311,7 +311,7 @@ Manu step 1 at Loc 2
   
  Die folgende Abfrage ist ähnlich, außer dass sie für die Instructions-Spalte, die typisierte angegeben ist **Xml** Spalte, der die **ProductModel** Tabelle. [XML-Konstruktion (XQuery)](../xquery/xml-construction-xquery.md) wird verwendet, um den XML-Code zu generieren, die Sie möchten.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /root/Location,  
@@ -335,7 +335,7 @@ WHERE ProductModelID=7
   
  Dies ist das Teilergebnis:  
   
-```  
+```xml
 <Step xmlns=  
     "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"     
   LocationID="10">  
@@ -360,7 +360,7 @@ WHERE ProductModelID=7
   
  Die folgende Abfrage ruft alle Rufnummern für einen bestimmten Kunden aus der AdditionalContactInfo-Spalte ab. Die Ergebnisse werden nach Rufnummer sortiert.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT AdditionalContactInfo.query('  
@@ -382,7 +382,7 @@ order by data($a/act:number[1]) descending
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3334</act:number>  
 </act:telephoneNumber>  
@@ -393,7 +393,7 @@ order by data($a/act:number[1]) descending
   
  Statt die Namespaces im Abfrageprolog zu deklarieren, können Sie diese auch mithilfe von WITH XMLNAMESPACES deklarieren.  
   
-```  
+```sql
 WITH XMLNAMESPACES (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo'  AS aci)  
@@ -409,7 +409,7 @@ WHERE BusinessEntityID=291;
   
  Sie können auch nach Attributwert sortieren. Die folgende Abfrage ruft z. B. die neu erstellten <`Location`>-Elemente ab, deren LocationID- und LaborHours-Attribute nach dem LaborHours-Attribut in absteigender Reihenfolge sortiert sind. Als Ergebnis dieses Vorgangs werden die Arbeitsplatzstandorte, die die größte Anzahl von Arbeitsstunden aufweisen, zuerst zurückgegeben.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location   
@@ -437,7 +437,7 @@ WHERE ProductModelID=7;
   
  In der folgenden Abfrage werden die Ergebnisse nach dem Elementnamen sortiert. Die Abfrage ruft die Spezifikationen eines bestimmten Produkts aus dem Produktkatalog ab. Die Spezifikationen sind die untergeordneten Elemente des <`Specifications`>-Elements.  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace  
  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -457,7 +457,7 @@ where ProductModelID=19;
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <Color>Available in most colors</Color>  
 <Material>Almuminum Alloy</Material>  
 <ProductLine>Mountain bike</ProductLine>  
@@ -467,7 +467,7 @@ where ProductModelID=19;
   
  Knoten, in denen der Sortierausdruck leer zurückgegeben wird, werden an den Beginn der Sequenz sortiert, wie das folgende Beispiel zeigt:  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Person Name="A" />  
@@ -484,7 +484,7 @@ select @x.query('
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <Person />  
 <Person Name="A" />  
 <Person Name="B" />  
@@ -492,7 +492,7 @@ select @x.query('
   
  Sie können mehrere Sortierkriterien angeben, wie im folgenden Beispiel gezeigt wird. Die Abfrage in diesem Beispiel sortiert <`Employee`>-Elemente zuerst nach den Title- und dann nach den Administrator-Attributwerten.  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Employee ID="10" Title="Teacher"        Gender="M" />  
@@ -513,7 +513,7 @@ order by $e/@Title ascending, $e/@Gender descending
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <Employee ID="8" Title="Administrator" Gender="M" />  
 <Employee ID="4" Title="Administrator" Gender="F" />  
 <Employee ID="125" Title="Administrator" Gender="F" />  

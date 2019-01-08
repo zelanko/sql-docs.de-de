@@ -12,12 +12,12 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6553984255843cf940b48d745d4494522b357159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d56d6068b842256bd450844c7b163727e5d35f3d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680828"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525060"
 ---
 # <a name="odbc-api-reference"></a>ODBC-API-Referenz
 In die Themen in diesem Abschnitt beschreiben die einzelnen ODBC-Funktion in alphabetischer Reihenfolge. Jede Funktion wird als eine C-Funktion "Language" Programmierschnittstelle definiert. Die folgenden: Beschreibungen  
@@ -42,7 +42,7 @@ In die Themen in diesem Abschnitt beschreiben die einzelnen ODBC-Funktion in alp
   
 -   Verweise auf verwandte Funktionen  
   
- Der standard CLI-Konformitätsgrad kann einen der folgenden sein: ISO-92, Open Group, ODBC oder veraltet. Eine Funktion, die wie ISO-92-konforme Funktion auch in Version 1, öffnen Sie die angezeigt wird markiert, da die Open Group eine reine der ISO-92 ist. Eine Funktion, die als "Open Group-kompatibel" gekennzeichnet, die auch in ODBC 3. angezeigt werden. *x*, da ODBC 3. *X* ist eine reine Obermenge der öffnen Sie die Version 1. Eine Funktion, die gekennzeichnet werden, wie in keiner der beiden standardmäßigen ODBC-konformen angezeigt wird. Eine Funktion, die markiert, als veraltet, wurde in ODBC 3. als veraltet markiert. *x*.  
+ Der standard CLI-Konformitätsgrad kann einen der folgenden sein: ISO-92, ODBC-Gruppe zu öffnen oder als veraltet markiert. Eine Funktion, die wie ISO-92-konformen auch in Version 1, öffnen Sie die angezeigt wird markiert, da die Open Group eine reine der ISO-92 ist. Eine Funktion, die als "Open Group-kompatibel" gekennzeichnet, die auch in ODBC 3. angezeigt werden. *x*, da ODBC 3. *X* ist eine reine Obermenge der öffnen Sie die Version 1. Eine Funktion, die gekennzeichnet werden, wie in keiner der beiden standardmäßigen ODBC-konformen angezeigt wird. Eine Funktion, die markiert, als veraltet, wurde in ODBC 3. als veraltet markiert. *x*.  
   
  Behandlung von Diagnoseinformationen finden Sie auf die [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) funktionsbeschreibung. Der SQLSTATE-Werten zugeordnete Text enthalten eine Beschreibung der Bedingung ist jedoch dient nicht zum Schreiben von bestimmtem Text vor.  
   
