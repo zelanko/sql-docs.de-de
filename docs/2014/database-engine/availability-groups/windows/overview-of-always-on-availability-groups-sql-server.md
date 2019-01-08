@@ -16,12 +16,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2d0db051e473a5b84bef5139137e33b91b62d2d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 749aaffe61033564649f9cd70871f2cb01340757
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559380"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363592"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>Übersicht über AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   In diesem Thema werden die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Konzepte eingeführt, die zum Konfigurieren und Verwalten von einer oder mehr Verfügbarkeitsgruppen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]wichtig sind. Eine Zusammenfassung der Vorteile von Verfügbarkeitsgruppen und eine Übersicht über die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Terminologie finden Sie unter [AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md).  
@@ -29,9 +29,9 @@ ms.locfileid: "51559380"
  Eine *Verfügbarkeitsgruppe* unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzerdatenbanken (als *Verfügbarkeitsdatenbanken*bezeichnet), die zusammen ein Failover ausführen. Eine Verfügbarkeitsgruppe unterstützt einen Satz primärer Datenbanken und einen bis acht Sätze entsprechender sekundärer Datenbanken. Sekundäre Datenbanken stellen *keine* Sicherungen dar. Die Datenbanken und deren Transaktionsprotokolle sollten weiterhin regelmäßig gesichert werden.  
   
 > [!TIP]  
->  Von einer primären Datenbank können beliebige Sicherungstypen erstellt werden. Alternativ können Sie Protokollsicherungen und vollständige Kopiesicherungen von sekundären Datenbanken erstellen. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Von einer primären Datenbank können beliebige Sicherungstypen erstellt werden. Alternativ können Sie Protokollsicherungen und vollständige Kopiesicherungen von sekundären Datenbanken erstellen. Weitere Informationen finden Sie unter [aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
- Jeder Satz von Verfügbarkeitsdatenbanken wird von einem *Verfügbarkeitsreplikat*gehostet. Es gibt zwei Typen von Verfügbarkeitsreplikaten: ein einzelnes *primäres Replikat*, das die primären Datenbanken hostet, und ein bis acht *sekundäre Replikate*, die jeweils einen Satz sekundärer Datenbanken hosten und als mögliche Failoverziele für die Verfügbarkeitsgruppe dienen. Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats ein Failover aus. Ein Verfügbarkeitsreplikat gewährleistet nur Redundanz auf Datenbankebene, und zwar für den in einer Verfügbarkeitsgruppe enthaltenen Satz von Datenbanken. Failover werden nicht durch Datenbankprobleme verursacht, z. B. wenn eine Datenbank aufgrund eines Verlusts einer Datendatei oder der Beschädigung eines Transaktionsprotokolls fehlerverdächtig wird.  
+ Jeder Satz von Verfügbarkeitsdatenbanken wird von einem *Verfügbarkeitsreplikat*gehostet. Es gibt zwei Typen von Verfügbarkeitsreplikaten: ein einzelnes *primäres Replikat*, das die primären Datenbanken hostet, und ein bis acht *sekundäre Replikate*, die jeweils einen Satz sekundärer Datenbanken hosten und als mögliche Failoverziele für die Verfügbarkeitsgruppe dienen. Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats ein Failover aus. Ein Verfügbarkeitsreplikat gewährleistet nur Redundanz auf Datenbankebene, und zwar für die in einer Verfügbarkeitsgruppe enthaltenen Datenbanken. Failover werden nicht durch Datenbankprobleme verursacht, z. B. wenn eine Datenbank aufgrund eines Verlusts einer Datendatei oder der Beschädigung eines Transaktionsprotokolls fehlerverdächtig wird.  
   
  Das primäre Replikat stellt die primären Datenbanken für Lese-/Schreibverbindungen von Clients bereit. Dies geschieht auch in einem als *Datensynchronisierung*bezeichneten Verfahren auf Datenbankebene. Vom primären Replikat werden Transaktionsprotokoll-Datensätze jeder primären Datenbank an jede sekundäre Datenbank gesendet. Die Transaktionsprotokoll-Datensätze werden von jedem sekundären Replikat zwischengespeichert (das Protokoll wird*festgeschrieben* ) und anschließend auf die entsprechende sekundäre Datenbank angewendet. Die Datensynchronisierung erfolgt zwischen der primären Datenbank und jeder verbundenen sekundären Datenbank unabhängig von den anderen Datenbanken. Daher kann eine sekundäre Datenbank angehalten werden oder einen Fehler verursachen, ohne andere sekundäre Datenbanken zu beeinträchtigen, und eine primäre Datenbank kann angehalten werden oder einen Fehler verursachen, ohne andere primäre Datenbanken zu beeinträchtigen.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "51559380"
 >  Eine Verfügbarkeitsdatenbank wird manchmal als *Datenbankreplikat* in [!INCLUDE[tsql](../../../includes/tsql-md.md)]-, PowerShell- und SQL Server Management Objects-Namen (SMO) bezeichnet. Der Begriff-"Datenbankreplikat" wird z. B. in den Namen der dynamischen AlwaysOn-Verwaltungssichten verwendet, die Informationen zu Verfügbarkeitsdatenbanken zurückgeben:  **sys.dm_hadr_database_replica_states** und **sys.dm_hadr_database_replica_cluster_states**. In der SQL Server-Onlinedokumentation bezieht sich der Begriff "Replikat" jedoch in der Regel auf Verfügbarkeitsreplikate. Zum Beispiel sind mit "primäres Replikat" und "sekundäres Replikat" stets Verfügbarkeitsreplikate gemeint.  
   
 ##  <a name="AGsARsADBs"></a> Verfügbarkeitsreplikate  
- Jede Verfügbarkeitsgruppe definiert einen Satz von zwei oder mehr Failoverpartnern, bekannt als Verfügbarkeitsreplikate. *Verfügbarkeitsreplikate* sind Komponenten der Verfügbarkeitsgruppe. Jedes Verfügbarkeitsreplikat hostet eine Kopie der Verfügbarkeitsdatenbanken in der Verfügbarkeitsgruppe. Die Verfügbarkeitsreplikate der jeweiligen Verfügbarkeitsgruppe müssen von getrennten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen gehostet werden, die sich in unterschiedlichen Knoten eines WSFC-Clusters befinden. Jede der Serverinstanzen muss für AlwaysOn aktiviert sein.  
+ Jede Verfügbarkeitsgruppe definiert einen Satz von zwei oder mehr Failoverpartnern, bekannt als Verfügbarkeitsreplikate. *Verfügbarkeitsreplikate* sind Komponenten der Verfügbarkeitsgruppe. Jedes Verfügbarkeitsreplikat hostet eine Kopie der Verfügbarkeitsdatenbanken in der Verfügbarkeitsgruppe. Die Verfügbarkeitsreplikate der jeweiligen Verfügbarkeitsgruppe müssen von getrennten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzen gehostet werden, die sich in unterschiedlichen Knoten eines WSFC-Clusters befinden. Jede der Serverinstanzen muss für AlwaysOn aktiviert sein.  
   
  Eine Instanz kann nur ein Verfügbarkeitsreplikat pro Verfügbarkeitsgruppe hosten. Allerdings kann jede Instanz für zahlreiche Verfügbarkeitsgruppen verwendet werden. Eine Instanz kann entweder eine eigenständige Instanz oder eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz (FCI) sein. Falls Sie Redundanz auf Serverebene benötigen, verwenden Sie Failoverclusterinstanzen.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51559380"
 >  Wenn die Rolle eines Verfügbarkeitsreplikats unbestimmt ist, z. B. während eines Failovers, befinden sich seine Datenbanken vorübergehend im NOT SYNCHRONIZING-Status. Ihre Rolle wird auf RESOLVING festgelegt, bis die Rolle des Verfügbarkeitsreplikats aufgelöst wurde. Wird ein Verfügbarkeitsreplikat zur primären Rolle aufgelöst, werden seine Datenbanken zu primären Datenbanken. Wird ein Verfügbarkeitsreplikat zur sekundären Rolle aufgelöst, werden seine Datenbanken sekundäre Datenbanken.  
   
 ##  <a name="AvailabilityModes"></a> Verfügbarkeitsmodi  
- Der Verfügbarkeitsmodus ist eine Eigenschaft jedes Verfügbarkeitsreplikats. Der Verfügbarkeitsmodus legt fest, ob das primäre Replikat mit dem Commit der Transaktionen für eine Datenbank wartet, bis ein bestimmtes sekundäres Replikat die Transaktionsprotokoll-Datensätze auf den Datenträger geschrieben hat. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unterstützt zwei Verfügbarkeitsmodi:*asynchroner Commit-Modus* und *synchroner Commit-Modus*.  
+ Der Verfügbarkeitsmodus ist eine Eigenschaft jedes Verfügbarkeitsreplikats. Der Verfügbarkeitsmodus legt fest, ob das primäre Replikat mit dem Commit der Transaktionen für eine Datenbank wartet, bis ein bestimmtes sekundäres Replikat die Transaktionsprotokoll-Datensätze auf den Datenträger geschrieben hat. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unterstützt zwei Verfügbarkeitsmodi: *asynchroner Commit-Modus* und *synchroner Commit-Modus*.  
   
 -   **Asynchronous-commit mode**  
   
@@ -118,11 +118,11 @@ ms.locfileid: "51559380"
   
 -   **Ausführen von Sicherungsvorgängen auf sekundären Replikaten**  
   
-     Die sekundären Replikate unterstützen das Ausführen von Protokollsicherungen und [Kopiesicherungen](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) einer vollständigen Datenbank, Datei oder Dateigruppe. Sie können die Verfügbarkeitsgruppe konfigurieren, um eine Einstellung dafür anzugeben, wo Sicherungen ausgeführt werden sollen. Die Einstellung wird nicht von SQL Server erzwungen und weist deshalb keine Auswirkungen auf Ad-hoc-Sicherungen auf. Die Interpretation dieser Einstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für alle Datenbanken in einer angegebenen Verfügbarkeitsgruppe integriert haben. Für einzelne Verfügbarkeitsreplikate können Sie die Priorität für die Ausführung von Sicherungen auf diesem Replikat in Relation zu den anderen Replikaten in derselben Verfügbarkeitsgruppe angeben. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Die sekundären Replikate unterstützen das Ausführen von Protokollsicherungen und [Kopiesicherungen](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) einer vollständigen Datenbank, Datei oder Dateigruppe. Sie können die Verfügbarkeitsgruppe konfigurieren, um eine Einstellung dafür anzugeben, wo Sicherungen ausgeführt werden sollen. Die Einstellung wird nicht von SQL Server erzwungen und weist deshalb keine Auswirkungen auf Ad-hoc-Sicherungen auf. Die Interpretation dieser Einstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für alle Datenbanken in einer angegebenen Verfügbarkeitsgruppe integriert haben. Für einzelne Verfügbarkeitsreplikate können Sie die Priorität für die Ausführung von Sicherungen auf diesem Replikat in Relation zu den anderen Replikaten in derselben Verfügbarkeitsgruppe angeben. Weitere Informationen finden Sie unter [aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Schreibgeschützter Zugriff auf ein oder mehrere sekundäre Replikate (lesbare sekundäre Replikate)**  
   
-     In der sekundären Rolle kann jedes Verfügbarkeitsreplikat für den schreibgeschützten Zugriff auf die zugehörige lokale Datenbank konfiguriert werden, jedoch werden dabei einige Vorgänge nicht vollständig unterstützt. Wenn Sie verhindern möchten, dass schreibgeschützte Arbeitslasten auf dem primären Replikat ausgeführt werden, können Sie zudem die Replikate bei Ausführung in der primären Rolle für den ausschließlichen Lese-/Schreib-Zugriff konfigurieren. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+     In der sekundären Rolle kann jedes Verfügbarkeitsreplikat für den schreibgeschützten Zugriff auf die zugehörige lokale Datenbank konfiguriert werden, jedoch werden dabei einige Vorgänge nicht vollständig unterstützt. Wenn Sie verhindern möchten, dass schreibgeschützte Arbeitslasten auf dem primären Replikat ausgeführt werden, können Sie zudem die Replikate bei Ausführung in der primären Rolle für den ausschließlichen Lese-/Schreib-Zugriff konfigurieren. Weitere Informationen finden Sie unter [aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
      Wenn eine Verfügbarkeitsgruppe derzeit einen Verfügbarkeitsgruppenlistener und mindestens ein lesbares sekundäres Replikat besitzt, können Verbindungsanforderungen für beabsichtigte Lesevorgänge von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an eines dieser Replikate weitergeleitet werden (*schreibgeschütztes Routing*). Weitere Informationen finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)wichtig sind.  
   
@@ -149,11 +149,11 @@ ms.locfileid: "51559380"
   
 -   **Blogs:**  
   
-     [AlwaysON - HADRON-Lernreihe: Nutzung des Arbeitsthreadpools für HADRON-fähige Datenbanken](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON - HADRON-Lernreihe: Nutzung des Arbeitsthreadpools für HADRON-fähige Datenbanken](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server-Technikblogs](https://blogs.msdn.com/b/psssql/)  
   
 -   **Videos:**  
   
@@ -163,9 +163,9 @@ ms.locfileid: "51559380"
   
 -   **Whitepaper:**  
   
-     [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Microsoft-Whitepapers für SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft-Whitepapers für SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Whitepapers des SQL Server-Kundenberatungsteams](http://sqlcat.com/)  
   

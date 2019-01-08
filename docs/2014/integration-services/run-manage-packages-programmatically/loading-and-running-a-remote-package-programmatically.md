@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - Integration Services packages, running
@@ -16,12 +14,12 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4baf6550273218cd8d560ef9ea3950924fab544
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0cefe1fa46cda13a177f07ebcbf19c02efa8337
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138750"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370392"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Programmgesteuertes Laden und Ausführen eines Remotepakets
   Um Remotepakete auf einem lokalen Computer auszuführen, auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht installiert ist, starten Sie die Pakete, sodass sie auf dem Remotecomputer ausgeführt werden, auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert ist. Hierzu muss auf dem lokalen Computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent, ein Webdienst oder eine Remotekomponente zum Starten der Pakete auf dem Remotecomputer verwendet werden. Wenn Sie versuchen, die Remotepakete direkt auf dem lokalen Computer zu starten, werden die Pakete geladen, und es wird versucht, die Pakete auf dem lokalen Computer auszuführen. Wenn [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht auf dem lokalen Computer installiert ist, werden die Pakete nicht ausgeführt.  
@@ -46,7 +44,7 @@ ms.locfileid: "48138750"
 > [!NOTE]  
 >  Der Rückgabewert der gespeicherten Prozedur **sp_start_job** gibt an, ob die gespeicherte Prozedur den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftrag starten konnte. Der Rückgabewert gibt nicht an, ob beim Ausführen des Pakets ein Fehler aufgetreten ist.  
   
- Weitere Informationen zur Problembehandlung bei der Ausführung von Paketen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Aufträgen finden Sie im Microsoft-Artikel [Beim Aufrufen aus einem SQL Server-Agent-Auftragsschritt wird ein SSIS-Paket nicht ausgeführt ](http://support.microsoft.com/kb/918760).  
+ Weitere Informationen zur Problembehandlung bei der Ausführung von Paketen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Aufträgen finden Sie im Microsoft-Artikel [Beim Aufrufen aus einem SQL Server-Agent-Auftragsschritt wird ein SSIS-Paket nicht ausgeführt ](https://support.microsoft.com/kb/918760).  
   
 ### <a name="sample-code"></a>Beispielcode  
   
@@ -160,7 +158,7 @@ namespace LaunchSSISPackageAgent_CS
  In den folgenden Codebeispielen wird gezeigt, wie der Webdienst erstellt und getestet wird.  
   
 #### <a name="creating-the-web-service"></a>Erstellen des Webdiensts  
- Ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket kann direkt aus einer Datei, direkt aus SQL Server oder aus dem SSIS-Paketspeicher geladen werden, der die Paketspeicherung sowohl in SQL Server-Ordnern als auch in speziellen Dateisystemordnern verwaltet. Dieses Beispiel unterstützt alle verfügbaren Optionen mithilfe eines `Select Case`- oder eines `switch`-Konstrukts, damit die geeignete Syntax zum Starten des Pakets ausgewählt wird und die Eingabeargumente entsprechend verkettet werden können. Die LaunchPackage-Webdienstmethode gibt das Ergebnis der Paketausführung als ganze Zahl zurück und nicht als <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Wert, sodass Clientcomputers keinen Verweis auf [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Assemblys benötigen.  
+ Ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket kann direkt aus einer Datei, direkt aus SQL Server oder aus dem SSIS-Paketspeicher geladen werden, der die Paketspeicherung sowohl in SQL Server-Ordnern als auch in speziellen Dateisystemordnern verwaltet. Dieses Beispiel unterstützt alle verfügbaren Optionen mithilfe eines `Select Case`- oder eines `switch`-Konstrukts, damit die geeignete Syntax zum Starten des Pakets ausgewählt wird und die Eingabeargumente entsprechend verkettet werden können. Die LaunchPackage<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Webdienstmethode gibt das Ergebnis der Paketausführung als ganze Zahl zurück und nicht als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Wert, sodass Clientcomputers keinen Verweis auf -Assemblys benötigen.  
   
 ###### <a name="to-create-a-web-service-to-run-packages-on-the-server-programmatically"></a>So erstellen Sie einen Webdienst zum programmgesteuerten Ausführen von Paketen auf dem Server  
   
@@ -333,7 +331,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
 ```  
   
 #### <a name="testing-the-web-service"></a>Testen des Webdiensts  
- Im folgenden Beispiel für eine Konsolenanwendung wird der Webdienst zum Ausführen eines Pakets verwendet. Die LaunchPackage-Methode des Webdiensts gibt das Ergebnis der Paketausführung als ganze Zahl zurück und nicht als <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Wert, sodass Clientcomputers keinen Verweis auf [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Assemblys benötigen. Mit dem Beispiel wird zum Melden der Ausführungsergebnisse eine private Enumeration erstellt, deren Werte die <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Werte spiegeln.  
+ Im folgenden Beispiel für eine Konsolenanwendung wird der Webdienst zum Ausführen eines Pakets verwendet. Die LaunchPackage<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Methode des Webdiensts gibt das Ergebnis der Paketausführung als ganze Zahl zurück und nicht als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Wert, sodass Clientcomputers keinen Verweis auf -Assemblys benötigen. Mit dem Beispiel wird zum Melden der Ausführungsergebnisse eine private Enumeration erstellt, deren Werte die <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Werte spiegeln.  
   
 ###### <a name="to-create-a-console-application-to-test-the-web-service"></a>So erstellen Sie eine Konsolenanwendung zum Testen des Webdiensts  
   
@@ -345,7 +343,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
   
 4.  Fügen Sie den Beispielcode für die Hauptroutine und die private Enumeration in den Code ein. (Im Beispiel ist der gesamte Inhalt des Codefensters dargestellt.)  
   
-5.  Bearbeiten Sie die Codezeile, die die LaunchPackage-Methode aufruft, um eine Reihe gültiger Werte für die Eingabeargumente bereitzustellen, die auf ein vorhandenes Paket zeigen. Beispiel: Wenn package1.dtsx auf dem Server im Verzeichnis C:\My Packages gespeichert ist, übergeben Sie "file" als Wert von `sourceType`, "C:\My Packages" als Wert von `sourceLocation` und "package1" (ohne Erweiterung) als Wert von `packageName`.  
+5.  Bearbeiten Sie die Codezeile, die die LaunchPackage-Methode aufruft, um eine Reihe gültiger Werte für die Eingabeargumente bereitzustellen, die auf ein vorhandenes Paket zeigen. Beispiel: Wenn package1.dtsx`sourceType` auf dem Server im Verzeichnis C:\My Packages`sourceLocation` gespeichert ist, übergeben Sie "file" als Wert von `packageName`, "C:\My Packages" als Wert von  und "package1" (ohne Erweiterung) als Wert von .  
   
 ```vb  
 Module LaunchSSISPackageTest  
@@ -422,9 +420,9 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   Video [Vorgehensweise: Automatisieren der SSIS-Paketausführung mit dem SQL Server-Agent (SQL Server-Video)](http://technet.microsoft.com/sqlserver/ff686764.aspx) auf technet.microsoft.com  
+-   Video [Vorgehensweise: Automatisieren der SSIS-Paketausführung mit SQL Server-Agent (SQL Server-Video)](https://technet.microsoft.com/sqlserver/ff686764.aspx), auf technet.microsoft.com  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Grundlegendes zu den Unterschieden zwischen der lokalen und der Remoteausführung](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

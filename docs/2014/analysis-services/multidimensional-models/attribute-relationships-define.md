@@ -14,12 +14,12 @@ ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d71677c8fa1908a4fba50f95769802061a0b0da2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93e3ca09b1d1d20be103db8bbd92aa15e3a1ba5a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187910"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360432"
 ---
 # <a name="define-attribute-relationships"></a>Definieren von Attributbeziehungen
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]sind Attribute der grundlegende Baustein einer Dimension. Eine Dimension enthält einen Satz von Attributen, die auf Basis von Attributbeziehungen organisiert sind.  
@@ -35,12 +35,12 @@ ms.locfileid: "48187910"
 -   Sie führt aufgrund der Aggregationsentwurfsalgorithmen zur Auswahl effektiverer Aggregate, sofern benutzerdefinierte Hierarchien entlang den Beziehungspfaden definiert wurden.  
   
     > [!NOTE]  
-    >  Weitere Informationen über die Bedeutung und die Auswirkungen der Definition und Konfiguration von Attributbeziehungen finden Sie im Abschnitt „Enhancing query performance“ (Verbessern der Abfrageleistung) im [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621).  
+    >  Weitere Informationen über die Bedeutung und Auswirkungen der Definition und Konfiguration von attributbeziehungen finden Sie im Abschnitt "Enhancing Query Performance" in der [SQL Server 2005 Analysis Services Performance Guide](https://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="attribute-relationship-considerations"></a>Überlegungen zu Attributbeziehungen  
  Sofern die zugrunde liegenden Daten dies unterstützen, sollten Sie auch eindeutige Attributbeziehungen zwischen Attributen definieren. Um eindeutige Attributbeziehungen zu definieren, verwenden Sie die Registerkarte **Attributbeziehungen** des Dimensions-Designers.  
   
- Jedes Attribut, das über eine ausgehende Beziehung verfügt, muss über einen eindeutigen Schlüssel relativ zu seinem verknüpften Attribut verfügen. Anders ausgedrückt darf ein Element in einem Quellattribut nur ein Element in einem verknüpften Attribut identifizieren. Betrachten Sie z. B. die Beziehung "City -> State". In dieser Beziehung ist "City" das Quellattribut und "State" das verknüpfte Attribut. Das Quellattribut entspricht der Seite "m" und die verknüpfte Seite entspricht der Seite "1" der m:1-Beziehung. Der Schlüssel für das Quellattribut lautet "City + Status". Weitere Informationen finden Sie unter [Gewusst wie: Erstellen, Ändern oder Löschen einer Attributbeziehung](attribute-relationships-create-modify-or-delete-relationship.md).  
+ Jedes Attribut, das über eine ausgehende Beziehung verfügt, muss über einen eindeutigen Schlüssel relativ zu seinem verknüpften Attribut verfügen. Anders ausgedrückt darf ein Element in einem Quellattribut nur ein Element in einem verknüpften Attribut identifizieren. Betrachten Sie z. B. die Beziehung "City -> State". In dieser Beziehung ist "City" das Quellattribut und "State" das verknüpfte Attribut. Das Quellattribut ist der n-Seite, und die verknüpfte Seite entspricht der Seite "1", der viele-zu-eins-Beziehung. Der Schlüssel für das Quellattribut lautet "City + Status". Weitere Informationen finden Sie unter [Gewusst wie: Erstellen, Ändern oder Löschen einer Attributbeziehung](attribute-relationships-create-modify-or-delete-relationship.md).  
   
  Weitere Informationen zu Eigenschaften einer Attributbeziehung finden Sie unter [Konfigurieren von Attributbeziehungseigenschaften](attribute-relationships-configure-attribute-properties.md).  
   

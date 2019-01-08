@@ -12,27 +12,27 @@ ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 374ba32b5cc79a503333b691b4708921f507004a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fa2edb4437b2d97a5a78da609838c6fcaaadda3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182770"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353584"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Volltextkatalog-Eigenschaften (Seite 'Allgemein')
   In diesem Abschnitt sind die auf der Seite **Allgemein** des Dialogfelds **Volltextkatalog-Eigenschaften** verfügbaren Optionen und ihre Funktionen aufgeführt.  
   
 > [!NOTE]  
->  Für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Datenbanken ein Volltextkatalog ist ein logisches Konzept, das auf eine Gruppe von Volltextindizes verweist. Ein Volltextkatalog ist ein virtuelles Objekt und gehört keiner Dateigruppe an.  
+>  Im Zusammenhang mit [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Datenbanken ist ein Volltextkatalog ein logisches Konzept, das auf eine Gruppe von Volltextindizes verweist. Ein Volltextkatalog ist ein virtuelles Objekt und gehört keiner Dateigruppe an.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="properties"></a>Eigenschaften  
  **Standardkatalog**  
  Zeigt an, ob es sich bei dem Katalog um den Standardkatalog der Datenbank handelt.  
   
  **Auffüllungsstatus**  
- Zeigt den Status des Katalogs an. Folgende Werte sind möglich:  
+ Zeigt den Status des Katalogs an. Dabei sind folgende Werte möglich:  
   
 -   **Im Leerlauf**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48182770"
   
 -   **Index wird erstellt**  
   
--   **Der Datenträger ist voll — angehalten**  
+-   **Datenträger ist voll-angehalten**  
   
 -   **Change tracking**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48182770"
   
 -   **ja**  
   
--   Weitere Informationen zu diakritischen Zeichen, finden Sie unter [diakritisches](http://go.microsoft.com/fwlink/?LinkId=154091) in der MSN Encarta-Enzyklopädie.  
+-   Weitere Informationen zu diakritischen Zeichen, finden Sie unter [diakritisches](https://go.microsoft.com/fwlink/?LinkId=154091) in der MSN Encarta-Enzyklopädie.  
   
  **Letzte Auffüllung am**  
  Zeigt das Datum an, an dem der Katalog zuletzt aufgefüllt wurde.  

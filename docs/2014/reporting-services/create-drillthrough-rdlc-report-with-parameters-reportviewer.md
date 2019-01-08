@@ -11,24 +11,24 @@ ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3618f3bef198a4ad92f8fd92f48911ee0c935c13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04a797540abdde31411978ca05b776ee7693bd5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106880"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352070"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>Erstellen eines Drillthroughberichts (RDLC) mit Parametern mithilfe von ReportViewer (SSRS-Lernprogramm)
-  Ein [Drillthroughbericht](http://technet.microsoft.com/library/ff519554.aspx) ist ein Bericht, der geöffnet werden kann, indem der Benutzer auf einen Link in einem anderen Bericht klickt. Drillthroughberichte enthalten in der Regel Details zu einem Element im ursprünglichen Zusammenfassungsbericht. Dieses Tutorial führt Sie in den folgenden Lektionen durch die Schritte zum Erstellen eines Drillthroughberichts mit Parametern und einer Abfrage. Dabei wird die [Berichterstellung im lokalen Modus](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) verwendet.  
+  Ein [Drillthroughbericht](https://technet.microsoft.com/library/ff519554.aspx) ist ein Bericht, der geöffnet werden kann, indem der Benutzer auf einen Link in einem anderen Bericht klickt. Drillthroughberichte enthalten in der Regel Details zu einem Element im ursprünglichen Zusammenfassungsbericht. Dieses Tutorial führt Sie in den folgenden Lektionen durch die Schritte zum Erstellen eines Drillthroughberichts mit Parametern und einer Abfrage. Dabei wird die [Berichterstellung im lokalen Modus](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)verwendet.  
   
 ## <a name="requirements"></a>Anforderungen  
- Zur Verwendung dieser exemplarischen Vorgehensweise benötigen Sie Zugriff auf die Beispieldatenbank **AdventureWorks2008** . Die in dieser exemplarischen Vorgehensweise verwendete Abfrage kann auch mit der Datenbank **AdventureWorks2012** verwendet werden. Weitere Informationen zum Abrufen der **AdventureWorks2008** Beispieldatenbank, finden Sie unter [Exemplarische Vorgehensweise: Installieren der AdventureWorks-Datenbank](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) für Microsoft Visual Studio 2010.  
+ Zur Verwendung dieser exemplarischen Vorgehensweise benötigen Sie Zugriff auf die Beispieldatenbank **AdventureWorks2008** . Die in dieser exemplarischen Vorgehensweise verwendete Abfrage kann auch mit der Datenbank **AdventureWorks2012** verwendet werden. Weitere Informationen zum Abrufen der **AdventureWorks2008** Beispieldatenbank, finden Sie unter [Exemplarische Vorgehensweise: Installieren der AdventureWorks-Datenbank](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) für Microsoft Visual Studio 2010.  
   
- In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie mit Transaction-SQL-Abfragen und den ADO.NET-Objekten vertraut sind [DataSet](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) und [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) Objekte.  
+ Bei dieser exemplarischen Vorgehensweise wird vorausgesetzt, dass Sie mit Transaction-SQL-Abfragen und den ADO.NET-Objekten [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) und [DataTable](https://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) vertraut sind.  
   
  Verwenden Sie Visual Studio 2010 oder Visual Studio 2012 und die ASP.NET-Websitevorlage, um eine ASP.NET-Webseite mit einem ReportViewer-Steuerelement zu erstellen. Das Steuerelement wird für die Anzeige eines erstellten Berichts konfiguriert. Mithilfe dieser exemplarischen Vorgehensweise erstellen Sie die Anwendung in Microsoft Visual C#.  
   
-## <a name="tasks"></a>Aufgaben  
+## <a name="tasks"></a>Richtlinienübersicht  
  [Lektion 1: Erstellen einer neuen Website](../reporting-services/lesson-1-create-a-new-web-site.md)   
  [Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)   
  [Lektion 3: Entwerfen des übergeordneten Berichts mithilfe des Berichts-Assistenten](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)   
@@ -37,7 +37,7 @@ ms.locfileid: "48106880"
  [Lektion 6: Hinzufügen eines ReportViewer-Steuerelements zur Anwendung](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)   
  [Lektion 7: Hinzufügen einer Drillthroughaktion für den übergeordneten Bericht](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)   
  [Lektion 8: Erstellen eines Datenfilters](../reporting-services/lesson-8-create-a-data-filter.md)   
- [Lesson 9: Build and Run the Application (Lektion 9: Erstellen und Ausführen der Anwendung)](../reporting-services/lesson-9-build-and-run-the-application.md)  
+ [Lektion 9: Erstellen und Ausführen der Anwendung](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Reporting Services-Tutorials (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)   

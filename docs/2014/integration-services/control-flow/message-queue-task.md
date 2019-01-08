@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.messagequeuetask.f1
@@ -18,12 +17,12 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31175748ef4f7998eae15dcd2a2c03e878abe071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b144e8e3ca5bcf96b588e8579dcdb52faa9e4f9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165150"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360922"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   Mit dem Task „Nachrichtenwarteschlange“ können Sie Message Queuing (MSMQ) verwenden, um Nachrichten zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen zu senden und zu empfangen oder um Nachrichten an eine Anwendungswarteschlange zu senden, die von einer benutzerdefinierten Anwendung verarbeitet wird. Bei diesen Nachrichten kann es sich um einfachen Text, Dateien oder Variablen und deren Werte handeln.  
@@ -38,7 +37,7 @@ ms.locfileid: "48165150"
   
  Beim Senden oder Empfangen von Nachrichten verwendet der Task Nachrichtenwarteschlange einen von vier Nachrichtentypen: Datendatei, Zeichenfolge, Zeichenfolgennachricht an Variable oder Variable. Der Nachrichtentyp Zeichenfolgennachricht an Variable kann nur zum Empfangen von Nachrichten verwendet werden.  
   
- Dieser Task verwendet einen MSMQ-Verbindungs-Manager, um eine Verbindung mit einer Nachrichtenwarteschlange herzustellen. Weitere Informationen finden Sie unter [MSMQ-Verbindungs-Manager](../connection-manager/msmq-connection-manager.md). Weitere Informationen zu Message Queuing finden Sie in der [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ Dieser Task verwendet einen MSMQ-Verbindungs-Manager, um eine Verbindung mit einer Nachrichtenwarteschlange herzustellen. Weitere Informationen finden Sie unter [MSMQ-Verbindungs-Manager](../connection-manager/msmq-connection-manager.md). Weitere Informationen zu Message Queuing finden Sie in der [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
  Für den Task Nachrichtenwarteschlange muss der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst installiert sein. Manche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten, die Sie für die Installation auf der Seite **Zu installierende Komponenten** oder der Seite **Funktionsauswahl** des Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen können, installieren eine Teilmenge der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponenten. Diese Komponenten sind für bestimmte Tasks hilfreich, aber die Funktionalität von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ist begrenzt. Beispielsweise installiert die [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Option [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponenten, die zum Entwerfen eines Pakets erforderlich sind, aber der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst wird nicht installiert. Deshalb kann der Task Nachrichtenwarteschlange nicht ausgeführt werden. Um eine vollständige Installation von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]sicherzustellen, müssen Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf der Seite **Zu installierende Komponenten** auswählen. Weitere Informationen zum Installieren und Ausführen des Tasks „Nachrichtenwarteschlange“ finden Sie unter [Installieren von Integration Services](../install-windows/install-integration-services.md).  
   
@@ -48,13 +47,13 @@ ms.locfileid: "48165150"
 ## <a name="message-types"></a>Nachrichtentypen  
  Es gibt folgende Möglichkeiten, um die Nachrichtentypen zu konfigurieren, die der Task Nachrichtenwarteschlange bereitstellt:  
   
--   `Data file` Meldung gibt an, dass eine Datei die Nachricht enthält. Wenn Sie Nachrichten empfangen, können Sie den Task so konfigurieren, dass die Datei gespeichert wird und eine vorhandene Datei überschreiben wird, und das Paket angeben, von dem der Task Nachrichten empfangen kann.  
+-   `Data file` gibt an, dass eine Datei die Nachricht enthält. Wenn Sie Nachrichten empfangen, können Sie den Task so konfigurieren, dass die Datei gespeichert wird und eine vorhandene Datei überschreiben wird, und das Paket angeben, von dem der Task Nachrichten empfangen kann.  
   
 -   `String` definiert die Nachricht als Zeichenfolge. Wenn Sie Nachrichten empfangen, können Sie den Task so konfigurieren, dass die empfangene Zeichenfolge mit einer benutzerdefinierten Zeichenfolge verglichen und abhängig vom Vergleich die entsprechende Maßnahme ergriffen wird. Ein Zeichenfolgenvergleich kann genau sein, die Groß-/Kleinschreibung beachten oder die Groß-/Kleinschreibung ignorieren sowie eine Teilzeichenfolge verwenden.  
   
--   `String message to variable` Gibt die Quellnachricht als Zeichenfolge, die an eine Zielvariable gesendet wird. Sie können den Task so konfigurieren, dass die empfangene Zeichenfolge mit einer benutzerdefinierten Zeichenfolge mithilfe eines genauen Vergleichs, eines Vergleichs mit Beachtung der Groß-/Kleinschreibung oder eines Teilzeichenfolge-Vergleichs verglichen wird. Dieser Nachrichtentyp ist nur verfügbar, wenn der Task Nachrichten empfängt.  
+-   `String message to variable` gibt die Quellnachricht als Zeichenfolge an, die an eine Zielvariable gesendet wird. Sie können den Task so konfigurieren, dass die empfangene Zeichenfolge mit einer benutzerdefinierten Zeichenfolge mithilfe eines genauen Vergleichs, eines Vergleichs mit Beachtung der Groß-/Kleinschreibung oder eines Teilzeichenfolge-Vergleichs verglichen wird. Dieser Nachrichtentyp ist nur verfügbar, wenn der Task Nachrichten empfängt.  
   
--   `Variable` Gibt an, dass die Nachricht eine oder mehrere Variablen enthält. Sie können den Task so konfigurieren, dass die in der Nachricht enthaltenen Namen der Variablen angegeben werden. Wenn Sie Nachrichten empfangen, können Sie den Task so konfigurieren, dass sowohl das Paket, von dem Nachrichten empfangen werden können, als auch die Variable, die das Ziel der Nachricht ist, angegeben werden.  
+-   `Variable` gibt an, dass die Nachricht mindestens eine Variable enthält. Sie können den Task so konfigurieren, dass die in der Nachricht enthaltenen Namen der Variablen angegeben werden. Wenn Sie Nachrichten empfangen, können Sie den Task so konfigurieren, dass sowohl das Paket, von dem Nachrichten empfangen werden können, als auch die Variable, die das Ziel der Nachricht ist, angegeben werden.  
   
 ## <a name="sending-messages"></a>Senden von Nachrichten  
  Beim Konfigurieren des Tasks Nachrichtenwarteschlange zum Senden von Nachrichten können Sie einen der zurzeit von der Message Queuing-Technologie unterstützten Verschlüsselungsalgorithmen, RC2 und RC4, zum Verschlüsseln der Nachricht verwenden. Diese Verschlüsselungsalgorithmen werden inzwischen im Vergleich zu neueren Algorithmen, die von der Message Queuing-Technologie noch nicht unterstützt werden, beide als kryptografisch schwach betrachtet. Daher sollten Sie Ihren Kryptografiebedarf sorgfältig überdenken, wenn Sie Nachrichten mithilfe des Tasks Nachrichtenwarteschlange senden.  
@@ -70,7 +69,7 @@ ms.locfileid: "48165150"
   
 -   Überschreiben einer vorhandenen Datei, falls die Nachricht in einer `Data file` gespeichert ist.  
   
--   Die eingabeinstanznachrichten-Datei auf einen anderen Dateinamen an, speichern, wenn die Nachricht wird die `Data file message` Typ.  
+-   Speichern der Nachrichtendatei unter einem anderen Dateinamen, falls die Nachricht den Typ `Data file message` verwendet.  
   
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den Task 'Nachrichtenwarteschlange'  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Nachrichtenwarteschlange aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
@@ -89,11 +88,11 @@ ms.locfileid: "48165150"
 ## <a name="configuration-of-the-message-queue-task"></a>Konfiguration des Tasks "Nachrichtenwarteschlange"  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen. Klicken Sie auf eines der folgenden Themen, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task Nachrichtenwarteschlange &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task „Nachrichtenwarteschlange“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor für den Task Nachrichtenwarteschlange &#40;Seite&#41;](../message-queue-task-editor-receive-page.md)  
+-   [Editor für den Task „Nachrichtenwarteschlange“ &#40;Seite „Empfangen“&#41;](../message-queue-task-editor-receive-page.md)  
   
--   [Editor für den Task Nachrichtenwarteschlange &#40;Seite "Senden"&#41;](../message-queue-task-editor-send-page.md)  
+-   [Editor für den Task „Nachrichtenwarteschlange“ &#40;Seite „Senden“&#41;](../message-queue-task-editor-send-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

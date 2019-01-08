@@ -18,12 +18,12 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a195a39d30becaef2404a4ae50953a4ffb12159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0ca437ccef3a986d4db7bf72d6017e0e2f515d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636898"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588463"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@sp_name =** ] **'***name***'**  
+ [  **@sp_name =** ] **"**_Namen_**"**  
  Der Name der Prozedur zur Rückgabe von Kataloginformationen. *name* ist vom Datentyp **nvarchar(390)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
- [  **@sp_owner =** ] **"***Schema***"**  
+ [  **@sp_owner =** ] **"**_Schema_**"**  
  Der Name des Schemas, zu dem die Prozedur gehört. *schema* ist vom Datentyp **nvarchar(384)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *owner* nicht angegeben wird, gelten die Standardregeln für die Sichtbarkeit von Prozeduren des zugrunde liegenden DBMS.  
   
- Wenn das aktuelle Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Prozedur mit dem angegebenen Namen enthält, wird diese Prozedur zurückgegeben. Wird ein nicht gekennzeichneter Name einer gespeicherten Prozedur angegeben, durchsucht [!INCLUDE[ssDE](../../includes/ssde-md.md)] die folgenden Schemas in der angegebenen Reihenfolge nach der Prozedur:  
+ Wenn das aktuelle Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Prozedur mit dem angegebenen Namen enthält, wird diese Prozedur zurückgegeben. Wird ein nicht gekennzeichneter Name einer gespeicherten Prozedur angegeben, durchsucht [!INCLUDE[ssDE](../../includes/ssde-md.md)] die folgenden Schemas in der angegebenen Reihenfolge nach der Prozedur:  
   
 -   Das **sys** -Schema der aktuellen Datenbank.  
   
@@ -57,10 +57,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   Das **dbo** -Schema in der aktuellen Datenbank  
   
- [  **@qualifier =** ] **"***Qualifizierer***"**  
- Der Name des Prozedurqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen in der Form (*Qualifizierer ***.*** Schema ***.*** Namen*. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *Qualifizierer* stellt den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+ [  **@qualifier =** ] **"**_Qualifizierer_**"**  
+ Der Name des Prozedurqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen im Format (_qualifier_**.**_schema_**.**_name_. Wenn das aktuelle Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt *qualifier* den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
- [  **@fUsePattern =** ] **"***fUsePattern***"**  
+ [  **@fUsePattern =** ] **"**_fUsePattern_**"**  
  Legt fest, ob Unterstrich (_), Prozent (%) oder Klammern ([ oder ]) als Platzhalterzeichen interpretiert werden. *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
   
  **0** = Mustervergleich ist deaktiviert.  
@@ -86,7 +86,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ## <a name="remarks"></a>Hinweise  
  Für eine optimale Interoperabilität sollte der Gatewayclient nur einen SQL-Standardmustervergleich voraussetzen (die Platzhalterzeichen Prozent (%) und Unterstrich (_)).  
   
- Da die Berechtigungen des aktuellen Benutzers zum Ausführungszugriff auf eine bestimmte gespeicherte Prozedur nicht unbedingt überprüft werden, ist der Zugriff nicht unter allen Umständen sichergestellt. Beachten Sie, dass nur eine dreiteilige Benennung verwendet wird. Dies bedeutet, dass nur lokal gespeicherte Prozeduren, werden keine remote gespeicherte Prozeduren (die vierteilige Benennung erfordern), zurückgegeben, wenn sie ausgeführt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn das Serverattribut ACCESSIBLE_SPROC im Resultset von **sp_server_info**den Wert Y hat, werden nur Informationen zu den gespeicherten Prozeduren zurückgegeben, die der aktuelle Benutzer ausführen kann.  
+ Da die Berechtigungen des aktuellen Benutzers zum Ausführungszugriff auf eine bestimmte gespeicherte Prozedur nicht unbedingt überprüft werden, ist der Zugriff nicht unter allen Umständen sichergestellt. Beachten Sie, dass nur eine dreiteilige Benennung verwendet wird. Daher werden nur Informationen zu lokalen gespeicherten Prozeduren und nicht zu remote gespeicherten Prozeduren (die eine vierteilige Benennung erfordern) zurückgegeben, wenn diese für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden. Wenn das Serverattribut ACCESSIBLE_SPROC im Resultset von **sp_server_info**den Wert Y hat, werden nur Informationen zu den gespeicherten Prozeduren zurückgegeben, die der aktuelle Benutzer ausführen kann.  
   
  **sp_stored_procedures** entspricht **SQLProcedures** in ODBC. Die zurückgegebenen Informationen werden nach **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**und **PROCEDURE_NAME**geordnet.  
   
@@ -96,7 +96,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-returning-all-stored-procedures-in-the-current-database"></a>A. Zurückgeben aller gespeicherten Prozeduren in der aktuellen Datenbank  
- Im folgenden Beispiel werden alle gespeicherten Prozeduren in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben.  
+ Im folgenden Beispiel werden alle gespeicherten Prozeduren in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank zurückgegeben.  
   
 ```  
 USE AdventureWorks2012;  

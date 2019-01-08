@@ -13,19 +13,19 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c83c2d1aa07a93ff4b6109d43f074f5c0da1d0db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07db329a7ba6cb65e5beb94d34f90d1e55582915
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222420"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367782"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>Anzeigen von Cluster-Quorum-NodeWeight-Einstellungen
   In diesem Thema wird beschrieben, wie NodeWeight-Einstellungen für jeden Elementknoten in einem Windows Server-Failoverclustering-Cluster angezeigt werden. NodeWeight-Einstellungen werden während der Quorumabstimmung verwendet, um Notfallwiederherstellungs- und Multisubnetzszenarien für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] - und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen zu unterstützen.  
   
--   **Vorbereitungen:**  [Erforderliche Komponenten](#Prerequisites), [Sicherheit](#Security)  
+-   **Bevor Sie beginnen:**  [Erforderliche Komponenten](#Prerequisites), [Sicherheit](#Security)  
   
--   **Anzeigen von Quorum-NodeWeight-Einstellungen mit:** [Verwenden von Transact-SQL](#TsqlProcedure), [Verwenden von PowerShell](#PowerShellProcedure), [Verwenden von Cluster.exe](#CommandPromptProcedure)  
+-   **Anzeigen von Quorum-NodeWeight-Einstellungen mit:** [Mithilfe von Transact-SQL](#TsqlProcedure), [mithilfe von Powershell](#PowerShellProcedure), [mithilfe von Cluster.exe](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48222420"
 > [!IMPORTANT]  
 >  Um NodeWeight-Einstellungen zu verwenden, muss der folgende Hotfix im WSFC-Cluster für alle Server übernommen werden:  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): Ein Hotfix ist verfügbar, mit dem sich ein Clusterknoten konfigurieren lässt, der keine Quorumabstimmung in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] und in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): Ein Hotfix ist verfügbar, mit dem sich ein Clusterknoten konfigurieren lässt, der keine Quorumabstimmung in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] und in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] enthält.  
   
 > [!TIP]  
 >  Ist dieser Hotfix nicht installiert, geben die Beispiele in diesem Thema leere Werte oder NULL-Werte für NodeWeight zurück.  
@@ -52,7 +52,7 @@ ms.locfileid: "48222420"
 2.  Fragen Sie die Sicht "[sys].[dm_hadr_cluster_members]" ab.  
   
 ### <a name="example-transact-sql"></a>Beispiel (Transact-SQL)  
- Im folgenden Beispiel wird eine Systemsicht zur Rückgabe von Werten für alle Knoten im betreffenden Cluster der Instanz abgefragt.  
+ Im folgenden Beispiel wird eine Systemansicht zur Rückgabe von Werten für alle Knoten im betreffenden Cluster der Instanz abgefragt.  
   
 ```tsql  
 SELECT  member_name, member_state_desc, number_of_quorum_votes  
@@ -72,7 +72,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
 4.  Geben Sie die Clusterknoteneigenschaften in einem lesbaren Format aus.  
   
 ### <a name="example-powershell"></a>Beispiel (PowerShell)  
- Im folgenden Beispiel wurden einige der Knoteneigenschaften für den Cluster "Cluster001" ausgegeben.  
+ Im folgenden Beispiel werden einige der Knoteneigenschaften für den Cluster „Cluster001“ ausgegeben.  
   
 ```powershell  
 Import-Module FailoverClusters  
@@ -86,7 +86,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ##  <a name="CommandPromptProcedure"></a> Verwenden von Cluster.exe  
   
 > [!NOTE]  
->  Das Hilfsprogramm von cluster.exe ist in der [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] -Version veraltet.  Verwenden Sie PowerShell mit Failoverclustering für künftige Entwicklungen.  Das Hilfsprogramm von cluster.exe wird in der nächsten Version von Windows Server entfernt. Weitere Informationen finden Sie unter [Zuordnen von Cluster.exe-Befehlen zu Windows PowerShell-Cmdlets für Failovercluster](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
+>  Das Hilfsprogramm von cluster.exe ist in der [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] -Version veraltet.  Verwenden Sie PowerShell mit Failoverclustering für künftige Entwicklungen.  Das Hilfsprogramm von cluster.exe wird in der nächsten Version von Windows Server entfernt. Weitere Informationen finden Sie unter [Zuordnen von Cluster.exe-Befehlen zu Windows PowerShell-Cmdlets für Failovercluster](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
   
 ##### <a name="to-view-nodeweight-settings"></a>So zeigen Sie NodeWeight-Einstellungen an  
   
@@ -95,7 +95,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  Verwenden Sie **cluster.exe** , um Knotenstatus- und NodeWeight-Werte zurückzugeben.  
   
 ### <a name="example-clusterexe"></a>Beispiel (Cluster.exe)  
- Im folgenden Beispiel werden einige der Knoteneigenschaften für den Cluster "Cluster001" ausgegeben.  
+ Im folgenden Beispiel werden einige der Knoteneigenschaften für den Cluster „Cluster001“ ausgegeben.  
   
 ```ms-dos  
 cluster.exe Cluster001 node /status /properties  
@@ -105,6 +105,6 @@ cluster.exe Cluster001 node /status /properties
  [WSFC-Quorummodi und Abstimmungskonfiguration &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Konfigurieren von Cluster-Quorum-NodeWeight-Einstellungen](configure-cluster-quorum-nodeweight-settings.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)   
- [Failovercluster-Cmdlets in Windows PowerShell, aufgelistet nach Taskfokus](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [Failovercluster-Cmdlets in Windows PowerShell, aufgelistet nach Taskfokus](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbe9d1338e3b64bf829eec0be1cf33bee3d8591e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161940"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364392"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Voraussetzungen für das Migrieren vom Protokollversand zu AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   In diesem Thema werden die erforderlichen Komponenten zum Konvertieren einer primären Datenbank für den Protokollversand zusammen mit einer oder mehreren sekundären Datenbanken in eine primäre AlwaysOn-Datenbank und sekundäre Datenbank(en) beschrieben.  
@@ -66,7 +66,7 @@ ms.locfileid: "48161940"
   
  **Weitere Informationen:**  
   
- [Konvertieren einer Protokollversandkonfiguration in eine Verfügbarkeitsgruppe](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (ein SQL Server-Blog)  
+ [Konvertieren einer Protokollversandkonfiguration in eine Verfügbarkeitsgruppe](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (ein SQL Server-Blog)  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
  **Protokollversand**  
@@ -93,19 +93,19 @@ ms.locfileid: "48161940"
   
 -   **Blogs:**  
   
-     [Konvertieren einer Protokollversandkonfiguration in eine Verfügbarkeitsgruppe](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
+     [Konvertieren einer Protokollversandkonfiguration in eine Verfügbarkeitsgruppe](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
   
-     [Hinzufügen einer primären Datenbank für den Protokollversand und mindestens einer sekundären Datenbank zu einer vorhandenen Verfügbarkeitsgruppe](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
+     [Hinzufügen einer primären Datenbank für den Protokollversand und mindestens einer sekundären Datenbank zu einer vorhandenen Verfügbarkeitsgruppe](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
   
-     [SQL Server AlwaysOn-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server-Technikblogs](https://blogs.msdn.com/b/psssql/)  
   
 -   **Whitepaper:**  
   
-     [Migrationshandbuch: Migrieren zu AlwaysOn-Verfügbarkeitsgruppen von vorherigen Bereitstellungen, die Kombination von Datenbankspiegelung und Protokollversand](http://msdn.microsoft.com/library/jj635217)  
+     [Migrationshandbuch: Migrieren zu AlwaysOn-Verfügbarkeitsgruppen von vorherigen Bereitstellungen, die Kombination von Datenbankspiegelung und Protokollversand](https://msdn.microsoft.com/library/jj635217)  
   
-     [Microsoft-Whitepapers für SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft-Whitepapers für SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Whitepapers des SQL Server-Kundenberatungsteams](http://sqlcat.com/)  
   

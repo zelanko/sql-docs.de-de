@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,12 +16,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87a5abc4377007558787595a2d2368ca5e5c5bb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7e8d3f735a096eeaf60ecdb376d02d046112a25
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149470"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375362"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel
   In diesem Thema wird beschrieben, wie ein benutzerdefinierter Konfliktlöser für einen Mergeartikel [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]mit[!INCLUDE[tsql](../../includes/tsql-md.md)] oder einem [COM-basierten benutzerdefinierten Konfliktlöser](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) in implementiert wird.  
@@ -71,7 +70,7 @@ ms.locfileid: "48149470"
 2.  Führen Sie [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus, wobei Sie **@publication**, **@article**, den Wert **resolver_info** für **@property**und den Namen der gespeicherten Prozedur, mit der die Konfliktlöserlogik implementiert wird, für **@value**implementiert wird.  
   
 ##  <a name="COM"></a> Verwenden eines COM-basierten benutzerdefinierten Konfliktlösers  
- Der <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> -Namespace implementiert eine Schnittstelle, mit der Sie eine komplexe Geschäftslogik zum Verarbeiten von Ereignissen und zur Lösung von Konflikten schreiben können, die während der Synchronisierung der Mergereplikation eintreten. Weitere Informationen finden Sie unter [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md). Sie können auch eine eigene, auf systemeigenem Code basierende benutzerdefinierte Geschäftslogik zur Lösung von Konflikten schreiben. Diese Logik wird mithilfe von Produkten wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ als COM-Komponente konzipiert und in DLLs (Dynamic-Link Libraries) kompiliert. Ein solcher COM-basierter benutzerdefinierter Konfliktlöser muss die **ICustomResolver** -Schnittstelle implementieren, die speziell für die Konfliktlösung entworfen wurde.  
+ Der <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> -Namespace implementiert eine Schnittstelle, mit der Sie eine komplexe Geschäftslogik zum Verarbeiten von Ereignissen und zur Lösung von Konflikten schreiben können, die während der Synchronisierung der Mergereplikation eintreten. Weitere Informationen finden Sie unter [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](implement-a-business-logic-handler-for-a-merge-article.md). Sie können auch eine eigene, auf systemeigenem Code basierende benutzerdefinierte Geschäftslogik zur Lösung von Konflikten schreiben. Diese Logik wird mithilfe von Produkten wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ als COM-Komponente konzipiert und in DLLs (Dynamic-Link Libraries) kompiliert. Ein solcher COM-basierter benutzerdefinierter Konfliktlöser muss die **ICustomResolver**-Schnittstelle implementieren, die speziell für die Konfliktlösung entworfen wurde.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>So erstellen und registrieren Sie einen COM-basierten benutzerdefinierten Konfliktlöser  
   
@@ -109,7 +108,7 @@ ms.locfileid: "48149470"
   
 1.  Führen Sie auf dem Verleger [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) aus, und achten Sie auf den Anzeigenamen des gewünschten Konfliktlösers.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) zur Definition eines Artikels aus. Geben Sie den Anzeigenamen des Artikelkonfliktlösers aus Schritt&nbsp;1 für **@article_resolver**implementiert wird. Weitere Informationen finden Sie unter [Define an Article](publish/define-an-article.md).  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) zur Definition eines Artikels aus. Geben Sie den Anzeigenamen des Artikelkonfliktlösers aus Schritt&nbsp;1 für **@article_resolver**implementiert wird. Weitere Informationen finden Sie unter [Definieren eines Artikels](publish/define-an-article.md).  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>So verwenden Sie einen benutzerdefinierten Konfliktlöser mit einem vorhandenen Tabellenartikel  
   
@@ -119,7 +118,7 @@ ms.locfileid: "48149470"
   
 #### <a name="viewing-a-sample-custom-resolver"></a>Anzeigen eines Beispiels für einen benutzerdefinierten Konfliktlöser  
   
-1.  Ein Beispiel ist in SQL Server 2000-Beispieldateien verfügbar. Laden Sie **sql2000samples.cab** von [Aktualisierte Beispiele für SQL Server 2000 Service Pack 3](http://www.microsoft.com/download/details.aspx?id=8560)herunter. Dadurch werden acht Dateien mit einer Gesamtkapazität von 6,9 MB heruntergeladen.  
+1.  Ein Beispiel ist in SQL Server 2000-Beispieldateien verfügbar. Laden Sie **sql2000samples.cab** von [Aktualisierte Beispiele für SQL Server 2000 Service Pack 3](https://www.microsoft.com/download/details.aspx?id=8560)herunter. Dadurch werden acht Dateien mit einer Gesamtkapazität von 6,9 MB heruntergeladen.  
   
 2.  Extrahieren Sie die Dateien aus der heruntergeladenen komprimierten CAB-Datei.  
   
@@ -140,6 +139,6 @@ ms.locfileid: "48149470"
 ## <a name="see-also"></a>Siehe auch  
  [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [COM-Based Custom Resolvers](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)  
+ [Bewährte Methoden für die Replikationssicherheit](security/replication-security-best-practices.md)  
   
   

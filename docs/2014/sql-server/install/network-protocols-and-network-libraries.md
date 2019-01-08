@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server]
@@ -22,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ed7ab99c94a2b6618a97d4e167344b0ca2cb0f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4649f6a5abd9726a1b01e3ed30d6cabf88aef9e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056331"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371822"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Netzwerkprotokolle und Netzwerkbibliotheken
   Ein Server kann gleichzeitig auf mehreren Netzwerkprotokollen lauschen bzw. diese überwachen. Jedes Protokoll muss jedoch konfiguriert sein. Wenn ein bestimmtes Protokoll nicht konfiguriert ist, kann der Server auf diesem Protokoll nicht lauschen. Nach der Installation können diese Protokollkonfigurationen mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers geändert werden.  
@@ -35,16 +34,16 @@ ms.locfileid: "48056331"
 ## <a name="default-sql-server-network-configuration"></a>Standardnetzwerkkonfiguration von SQL Server  
  Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz wird konfiguriert für TCP/IP, Port 1433 und die Named Pipe „ \\\\.\pipe\sql\query“. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden für dynamische TCP-Ports konfiguriert, wobei eine Portnummer vom Betriebssystem zugewiesen wird.  
   
- Wenn Sie keine dynamischen Portadressen verwenden können (beispielsweise wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verbindungen über einen Firewallserver weitergeleitet werden, der für die Verwendung bestimmter Portadressen konfiguriert ist). Wählen Sie eine nicht zugewiesene Portnummer aus. Portnummernzuweisungen werden von der Internet Assigned Numbers Authority verwaltet und sind unter [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844) aufgelistet.  
+ Wenn Sie keine dynamischen Portadressen verwenden können (beispielsweise wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verbindungen über einen Firewallserver weitergeleitet werden, der für die Verwendung bestimmter Portadressen konfiguriert ist). Wählen Sie eine nicht zugewiesene Portnummer aus. Portnummernzuweisungen werden von der Internet Assigned Numbers Authority verwaltet und sind unter [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844) aufgelistet.  
   
  Zur Verbesserung der Sicherheit wird die Netzwerkkonnektivität bei der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht vollständig aktiviert. Um Netzwerkprotokolle nach Abschluss des Setups zu aktivieren, zu deaktivieren und zu konfigurieren, verwenden Sie den Bereich für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Netzwerkkonfiguration des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers.  
   
 ## <a name="server-message-block-protocol"></a>SMB (Server Message-Block)-Protokoll  
  Bei Servern im Umkreisnetzwerk sollten alle nicht benötigten Protokolle deaktiviert sein, einschließlich des SMB (Server Message Block). Webserver und DNS-Server (Domain Name System) benötigen SMB nicht. Dieses Protokoll sollte deaktiviert sein, um der Gefahr der Benutzerenumeration vorzubeugen.  
   
-> [!WARNING]  
+> [!WARNING]
 >  Durch das Deaktivieren von Server Message Block wird der Zugriff auf die Remotedateifreigabe durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder durch den Windows-Clusterdienst blockiert. Deaktivieren Sie SMB nicht, wenn Sie einen der folgenden Schritte ausführen möchten:  
->   
+> 
 >  -   Verwenden des Mehrheitsquorummodus für Windows-Clusterknoten und Dateifreigaben  
 > -   Angeben einer SMB-Dateifreigabe als Datenverzeichnis während der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation  
 > -   Erstellen einer Datenbankdatei auf einer SMB-Dateifreigabe  
@@ -80,7 +79,7 @@ ms.locfileid: "48056331"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] Default TCP  
   
- Weitere Informationen über Endpunkte finden Sie unter [Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) und [Endpunkte-Katalogsichten &amp;#40;Transact-SQL&amp;#41;](/sql/relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql).  
+ Weitere Informationen über Endpunkte finden Sie unter [Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) und [Endpunkte-Katalogsichten &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql).  
   
  Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Netzwerkkonfigurationen finden Sie in den folgenden Themen in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation:  
   

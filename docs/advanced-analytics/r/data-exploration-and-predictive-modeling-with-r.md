@@ -1,5 +1,5 @@
 ---
-title: Datensuche und vorhersagemodellierung mit R in SQL Server-Machine Learning | Microsoft-Dokumentation
+title: Datensuche und vorhersagemodellierung mit R – SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 60a899de027f2e9de591a70971dbee3f4300d87d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c6c0e07f48dee271fee61bc59b47f49683ff8832
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984712"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432343"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Datensuche und vorhersagemodellierung mit R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel beschreibt die Verbesserungen der Data Science-Prozess, die durch die Integration in SQL Server möglich sind.
 
-Gilt für: SQL Server 2016 R Services, SQL Server 2017-Machine Learning ein Dienste
+Betrifft: SQL Server 2016 R Services, SQL Server 2017-Machine Learning ein Dienste
 
 ## <a name="the-data-science-process"></a>Data Science-Prozess
 
@@ -30,7 +30,7 @@ Dieser Ansatz hat jedoch viele Nachteile mit sich, diese Hae beeinträchtigt die
 + Verschieben von Daten kann langsam, ineffizient oder unsicher sein.
 + R weist Einschränkungen hinsichtlich Leistung und Skalierung
 
-Diese Nachteile werden deutlicher, wenn Sie große Datenmengen verschieben und analysieren müssen, oder Datasets verwenden, die nicht in den auf dem Computer verfügbaren Arbeitsspeicher passen.
+Diese Nachteile werden deutlicher, wenn Sie zum Verschieben und Analysieren große Mengen von Daten oder Verwenden von Datasets, die nicht in den auf dem Computer verfügbaren Arbeitsspeicher passen, müssen.
 
 Die neue, skalierbare-Pakete und R-Funktionen, die in enthaltenen [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] können Sie viele dieser Herausforderungen zu überwinden. 
 
@@ -62,15 +62,15 @@ Zusätzlich zu den proprietären R-Bibliotheken mit Microsoft Machine Learning e
   
      Weitere Informationen zu diesen Paketen und deren Verwendung finden Sie unter [neuerungen von RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction) und [erste Schritte mit RevoPemaR](https://msdn.microsoft.com/microsoft-r/pemar-getting-started). 
 
-+ **MicrosoftML** enthält eine Auflistung von hochgradig optimierten Machine Learning-Algorithmen und Transformieren von Daten aus dem Microsoft Data Science-Team. Viele der Algorithmen werden auch in Azure Machine Learning verwendet. Weitere Informationen finden Sie unter [Verwenden des MicrosoftML-Pakets](../../advanced-analytics/using-the-microsoftml-package.md).
++ **MicrosoftML** enthält eine Auflistung von hochgradig optimierten Machine Learning-Algorithmen und Transformieren von Daten aus dem Microsoft Data Science-Team. Viele der Algorithmen werden auch in Azure Machine Learning verwendet. Weitere Informationen finden Sie unter [MicrosoftML in SQL Server](ref-r-microsoftml.md).
 
 ### <a name="r-development-tools"></a>R-Entwicklungstools
 
 Wenn Ihre R-Lösung entwickeln möchten, achten Sie darauf, dass Sie zum Herunterladen von Microsoft R Client. Dieser kostenlose Download umfasst die Bibliotheken benötigt, um remoterechenkontexte und skalierbare Alorithms zu unterstützen:
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** Eine Verteilung des R-Laufzeitmoduls und einer Reihe von Paketen, z.B. die mathematische Kernelbibliothek von Intel, die die Leistung von R-Standardfunktionen steigern.  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** Eine Verteilung von R-Laufzeitmoduls und einer Reihe von Paketen, z. B. der Intel Math Kernel-Bibliothek, die die Leistung von R-Standardfunktionen steigern.  
   
-+ **RevoScaleR:** Ein R-Paket, mit dem Sie Berechnungen auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verlagern können. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]neuen skalierbaren Pakete und R-Funktionen verwenden. Es enthält auch einen Satz von allgemeinen R-Funktionen, die neu gestaltet wurden, um eine bessere Leistung und Skalierbarkeit zu bieten. Sie können diese verbesserten Funktionen am Präfix **rx** erkennen. Darüber hinaus sind verbesserte Datenanbieter für eine Vielzahl von Quellen enthalten; diese Funktionen haben das Präfix **Rx**.
++ **RevoScaleR:** Ein R-Paket, das Sie können mithilfe von Push übertragen Berechnungen mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]. installiert haben. Es enthält auch einen Satz von allgemeinen R-Funktionen, die neu gestaltet wurden, um eine bessere Leistung und Skalierbarkeit zu bieten. Sie können diese verbesserten Funktionen am Präfix **rx** erkennen. Darüber hinaus sind verbesserte Datenanbieter für eine Vielzahl von Quellen enthalten; diese Funktionen haben das Präfix **Rx**.
 
 Können Sie einem beliebigen Windows-basierten Code-Editor, die R, z. B. unterstützt [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] oder RStudio. Der Download von [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] umfasst zudem allgemeine Befehlszeilentools für R, z.B. „RGui.exe.“
 
@@ -103,4 +103,4 @@ Normalerweise beginnt der Bereitstellungsprozess mit dem Bereinigen Ihres Skript
 
 [Comparison of Base R and ScaleR Functions (Grundlegende R- und ScaleR-Funktionen im Vergleich)](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 
-[ScaleR Functions for Working with SQL Server (ScaleR-Funktionen für das Arbeiten mit SQL Server)](../../advanced-analytics/r/scaler-functions-for-working-with-sql-server-data.md)
+[RevoScaleR-Bibliothek in SQL Server](ref-r-revoscaler.md)

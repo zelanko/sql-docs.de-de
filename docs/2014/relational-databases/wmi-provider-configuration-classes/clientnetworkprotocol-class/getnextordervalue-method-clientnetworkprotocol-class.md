@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - GetNextOrderValue Method (ClientNetworkProtocol Class)
@@ -20,12 +18,12 @@ ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9615c7a3c416aae7ead2bcfd77c58c9dd5ab0496
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f5d7f8efe305be71a311b822c51ff1ede9afdf9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165380"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351424"
 ---
 # <a name="getnextordervalue-method-clientnetworkprotocol-class"></a>GetNextOrderValue-Methode (ClientNetworkProtocol-Klasse)
   Wählt das Protokoll aus, das sich in der Protokollliste an der nächsten Position befindet.  
@@ -44,12 +42,12 @@ object
  A [ClientNetworkProtocol-Klassenobjekt](clientnetworkprotocol-class.md) , das das vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Client verwendete Netzwerkprotokoll darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein `uint32` -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
+ Ein `uint32`-Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Clientprotokollen](http://technet.microsoft.com/library/ms181035.aspx)   
- [Konfigurieren von Clientnetzwerkprotokollen und Netzwerkbibliotheken](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)   
+ [Konfigurieren von Clientnetzwerkprotokollen und Netzwerkbibliotheken](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

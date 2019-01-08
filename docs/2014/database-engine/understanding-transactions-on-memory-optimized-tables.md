@@ -10,17 +10,17 @@ ms.assetid: 06075248-705e-4563-9371-b64cd609793c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aaefdcd2739b2036703cdb7235fe56865ff1fed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ceedcedae64bf2ec8f8ede0ccbb99350b979fd7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064630"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369952"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>Grundlegendes zu Transaktionen in speicheroptimierten Tabellen
   Transaktionen greifen über eine Form der Multiversionsverwaltung und optimistischen Nebenläufigkeitssteuerung auf speicheroptimierte Tabellen zu. Dies bedeutet, dass es zwei verschiedene Datenversionen gibt. Jede Transaktion verwendet ihre eigene, im Hinblick auf Transaktionen konsistente Datenbankversion, und zwar unabhängig von anderen gleichzeitig ausgeführten Transaktionen. Darüber hinaus werden Transaktionen unter der optimistischen Annahme ausgeführt, dass keine Konflikte mit anderen, gleichzeitig laufenden Transaktionen bestehen. Einerseits entfällt dadurch die Notwendigkeit von Sperren, andererseits muss das System die Konflikte erkennen und eine der konfliktverursachenden Transaktionen beenden. Konflikte können nur bei Write-Write-Transaktionen und Read-Write-Transaktionen auftreten. Wenn ein Write-Write-Konflikt auftritt, wird eine Schreibtransaktion beendet.  
   
- Es gibt Ähnlichkeiten zwischen der Parallelitätssteuerung für speicheroptimierte Tabellen und der Parallelitätssteuerung für datenträgerbasierte Tabellen mit der Transaktionsisolationsstufe READ_COMMITTED_SNAPSHOT oder SNAPSHOT. (Weitere Informationen zu datenträgerbasierten Tabellen, finden Sie unter [auf Zeilenversionsverwaltung basierende Isolation Levels in der Datenbank-Engine](http://msdn.microsoft.com/library/ms177404\(v=sql.100\).aspx).)  
+ Es gibt Ähnlichkeiten zwischen der Parallelitätssteuerung für speicheroptimierte Tabellen und der Parallelitätssteuerung für datenträgerbasierte Tabellen mit der Transaktionsisolationsstufe READ_COMMITTED_SNAPSHOT oder SNAPSHOT. (Weitere Informationen zu datenträgerbasierten Tabellen, finden Sie unter [auf Zeilenversionsverwaltung basierende Isolation Levels in der Datenbank-Engine](https://msdn.microsoft.com/library/ms177404\(v=sql.100\).aspx).)  
   
 ## <a name="topics-in-this-section"></a>Themen in diesem Abschnitt  
  Dieser Abschnitt über Transaktionen in speicheroptimierten Tabellen enthält folgende Themen:  

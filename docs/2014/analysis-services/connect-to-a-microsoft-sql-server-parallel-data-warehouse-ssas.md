@@ -13,17 +13,17 @@ ms.assetid: 98c879ee-7257-40c9-bc85-6766bd3b4885
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b13e56895a9880a8bffc319c247769b4f5b2911
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e8dd851604203a9a6c02959c3d11002145f9dc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191070"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354318"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>Verbindung mit Microsoft SQL Server Parallel Data Warehouse herstellen (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie Einstellungen angeben, um eine Verbindung mit Microsoft SQL Server Parallel Data Warehouse (PDW) herzustellen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
   
- SQL Server PDW ist eine hochskalierbare Anwendung, die Leistung zu niedrigen Preisen durch massive Parallelverarbeitung bietet. Weitere Informationen zu SQL Server PDW finden Sie auf der Website [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895). Sie stellen mithilfe der SQL Server-Authentifizierung eine Verbindung mit dem Data Warehouse her. Der entsprechende Anbieter muss auf dem Computer installiert sein, um eine Verbindung mit einer Datenquelle herzustellen.  
+ SQL Server PDW ist eine hochskalierbare Anwendung, die Leistung zu niedrigen Preisen durch massive Parallelverarbeitung bietet. Weitere Informationen zu SQL Server PDW finden Sie auf der Website [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895). Sie stellen mithilfe der SQL Server-Authentifizierung eine Verbindung mit dem Data Warehouse her. Der entsprechende Anbieter muss auf dem Computer installiert sein, um eine Verbindung mit einer Datenquelle herzustellen.  
   
 > [!NOTE]  
 >  Beim Auswählen einer Datenbank auf dieser Seite werden die Anmeldeinformationen des aktuellen Benutzers verwendet. Der Import ist jedoch nicht erfolgreich, wenn der auf der Seite Identitätswechselinformationen angegebene Benutzer nicht über ausreichend Berechtigungen zum Lesen aus der ausgewählten Datenbank verfügt.  

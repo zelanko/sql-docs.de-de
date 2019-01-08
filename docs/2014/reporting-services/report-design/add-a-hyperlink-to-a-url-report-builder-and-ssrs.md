@@ -11,12 +11,12 @@ ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b29f10762f421c76dd7adbbd341038771f135a04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1219998db8ec07de6e03aa14b3aefaee6515e235
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086616"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366172"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Hinzufügen eines Links zu einer URL (Berichts-Generator und SSRS)
   Sie können einem Berichtselement einen Hyperlink hinzufügen, wenn Benutzer in der Lage sein sollen, in einem Bericht auf einen Link zu klicken und einen Browser mit der von Ihnen angegebenen URL zu öffnen. Ein Link kann eine statische URL sein oder ein Ausdruck, der zu einer URL ausgewertet wird. Wenn ein Feld in einer Datenbank URLs enthält, kann der Ausdruck dieses Feld enthalten, wodurch eine dynamische Liste von Links in dem Bericht entsteht. Links können Textfeldern, Bildern, Diagrammen und Messgeräten hinzugefügt werden. Sie müssen sicherstellen, dass der Benutzer Zugriff auf die URL hat, die Sie bereitstellen.  
@@ -24,14 +24,14 @@ ms.locfileid: "48086616"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Sie können auch URLs zu Berichten auf beliebigen Berichtsservern angeben, für die Sie und Ihre Benutzer über eine Leseberechtigung verfügen, indem Sie URL-Anforderungen an den Berichtsserver verwenden. Sie können z. B. einen Bericht angeben und die Dokumentstruktur für Benutzer ausblenden, wenn diese den Bericht zum ersten Mal anzeigen. Weitere Informationen finden Sie unter [URL-Zugriff &#40;SSRS&#41;](../url-access-ssrs.md) in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+ Sie können auch URLs zu Berichten auf beliebigen Berichtsservern angeben, für die Sie und Ihre Benutzer über eine Leseberechtigung verfügen, indem Sie URL-Anforderungen an den Berichtsserver verwenden. Sie können z. B. einen Bericht angeben und die Dokumentstruktur für Benutzer ausblenden, wenn diese den Bericht zum ersten Mal anzeigen. Weitere Informationen finden Sie unter [URL-Zugriff &#40;SSRS&#41;](../url-access-ssrs.md) in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
  Ein Link zu einer URL kann jedem Element hinzugefügt werden, das über eine **Action** -Eigenschaft verfügt, z. B. ein Textfeld, ein Bild oder eine berechnete Reihe in einem Diagramm. Wenn der Benutzer auf das Berichtselement klickt, wird die von Ihnen definierte Aktion ausgeführt. Weitere Informationen finden Sie unter [Aktionseigenschaften &#40;Dialogfeld, Berichts-Generator und SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md) und [Angeben von Pfaden zu externen Elementen &#40;Berichts-Generator und SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
- Eine schnelle Einführung finden Sie unter [Tutorial: Formatieren von Text &#40;Berichts-Generator&#41;](../tutorial-format-text-report-builder.md).  
+ Zum schnellen Einstieg finden Sie unter [Lernprogramm: Formatieren von Text &#40;Berichts-Generator&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
->  Links, die an Datasetfelder gebunden sind, sind unter Umständen anfällig für böswillige Manipulationen. Weitere Informationen finden Sie unter [Sichern von Berichten und Ressourcen](../security/secure-reports-and-resources.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=154888) auf msdn.microsoft.com.  
+>  Links, die an Datasetfelder gebunden sind, sind unter Umständen anfällig für böswillige Manipulationen. Weitere Informationen finden Sie unter [Sichern von Berichten und Ressourcen](../security/secure-reports-and-resources.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=154888) auf msdn.microsoft.com.  
   
 ### <a name="to-add-a-hyperlink"></a>So fügen Sie einen Link hinzu  
   

@@ -14,12 +14,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9422afe49ecd31512b22995767ead61b7e9f4cce
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018465"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352517"
 ---
 # <a name="migrate-query-plans"></a>Migrieren von Abfrageplänen
   Im Allgemeinen führt das Upgrade einer Datenbank auf die aktuellste Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu einer besseren Abfrageleistung. Bei unternehmenswichtigen Abfragen, deren Leistung sorgfältig optimiert wurde, möchten Sie jedoch möglicherweise vor dem Upgrade die entsprechenden Abfragepläne aufzeichnen. Zu diesem Zweck können Sie für jede Abfrage eine Planhinweisliste erstellen. Falls der Abfrageoptimierer nach der Aktualisierung für immer mehr Abfragen einen weniger effizienten Plan wählt, können Sie die Planhinweislisten aktivieren und den Abfrageoptimierer zwingen, die alten Pläne zu verwenden.  
@@ -41,7 +41,7 @@ ms.locfileid: "51018465"
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie Sie vor der Aktualisierung durch Erstellen einer Planhinweisliste den Plan für eine Abfrage aufzeichnen können.  
   
-### <a name="step-1-collect-the-plan"></a>Schritt 1: Abrufen des Plans  
+### <a name="step-1-collect-the-plan"></a>Schritt 1: Abrufen des Plans  
  Der in der Planhinweisliste aufgezeichnete Abfrageplan muss im XML-Format vorliegen. Abfragepläne im XML-Format können auf folgende Weise erstellt werden:  
   
 -   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
@@ -79,16 +79,16 @@ EXECUTE sp_create_plan_guide
 @type = N'SQL',  
 @module_or_batch = NULL,  
 @params = NULL,  
-@hints = N'OPTION(USE PLAN N''<ShowPlanXML xmlns=''''http://schemas.microsoft.com/sqlserver/2004/07/showplan''''   
+@hints = N'OPTION(USE PLAN N''<ShowPlanXML xmlns=''''https://schemas.microsoft.com/sqlserver/2004/07/showplan''''   
     Version=''''0.5'''' Build=''''9.00.1116''''>  
     <BatchSequence><Batch><Statements><StmtSimple>  
-    …  
+    ...  
     </StmtSimple></Statements></Batch>  
     </BatchSequence></ShowPlanXML>'')';  
 GO  
 ```  
   
-### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Schritt 3: Überprüfen, ob die Planhinweisliste auf die Abfrage angewendet wird  
+### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Schritt 3: Stellen Sie sicher, dass die Planhinweisliste auf die Abfrage angewendet wird  
  Führen Sie die Abfrage noch einmal aus, und überprüfen Sie den erzeugten Abfrageplan. Dieser Plan sollte mit dem in der Planhinweisliste angegebenen Plan übereinstimmen.  
   
 ## <a name="see-also"></a>Siehe auch  

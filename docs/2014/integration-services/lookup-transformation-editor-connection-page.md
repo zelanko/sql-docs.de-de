@@ -15,19 +15,19 @@ ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ecacc7fa89256cf5efb42ee792a08251a9af013
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37d42dde548394599cec00020a91383fde97e034
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063710"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371542"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>Transformations-Editor für Suche (Seite 'Verbindung')
   Auf der Seite **Verbindung** des Dialogfelds **Transformations-Editor für Suche** können Sie einen Verbindungs-Manager auswählen. Wenn Sie einen OLE DB-Verbindungs-Manager auswählen, wählen Sie auch eine Abfrage, Tabelle oder Sicht zum Generieren des Verweisdatasets aus.  
   
  Weitere Informationen zur Transformation für Suche finden Sie unter [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Die folgenden Optionen sind verfügbar, wenn Sie im Dialogfeld **Transformations-Editor für Suche** auf der Seite **Allgemein** die Optionen **Vollcache** und Cacheverbindungs-Manager auswählen.  
   
  **Allgemein**  
@@ -69,13 +69,13 @@ ms.locfileid: "48063710"
  Zeigen Sie mithilfe des Dialogfelds **Vorschau der Abfrageergebnisse anzeigen** eine Vorschau der Ergebnisse an. Diese Option zeigt bis zu 200 Zeilen an.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogeintrag [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (Suchcachemodi) auf blogs.msdn.com  
+ Blogeintrag [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) (Suchcachemodi) auf blogs.msdn.com  
   
 ## <a name="see-also"></a>Siehe auch  
- [Transformations-Editor &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Transformations-Editor für Suche &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)   
  [Transformations-Editor für Suche &#40;Seite „Spalten“&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [Transformations-Editor &#40;Seite "Erweitert"&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Transformations-Editor &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [Transformations-Editor für Suche &#40;Seite „Erweitert“&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [Transformations-Editor für Suche &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [Transformation für Fuzzysuche](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

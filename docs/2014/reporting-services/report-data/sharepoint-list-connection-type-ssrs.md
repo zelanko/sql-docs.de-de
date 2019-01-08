@@ -11,15 +11,15 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09adbf8ca6fb16becd98b94c15f93052c003abb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d218103d5a8de6b10ad5b1981f13ac4526f59aee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116346"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358242"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint-Listenverbindungstyp (SSRS)
-  Wenn Sie Daten aus einer Microsoft SharePoint-Liste in den Bericht einschließen möchten, müssen Sie ein Dataset hinzufügen oder erstellen, das auf einer Berichtsdatenquelle vom Typ "Microsoft SharePoint-Liste" basiert. Dies ist ein integrierter Datenquellentyp, der auf der Microsoft SQL Server Reporting Services-Datenerweiterung für die SharePoint-Liste basiert. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]-, [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]-, [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0- und [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007-Websites herzustellen und Listendaten abzurufen.  
+  Wenn Sie Daten aus einer Microsoft SharePoint-Liste in den Bericht einschließen möchten, müssen Sie ein Dataset hinzufügen oder erstellen, das auf einer Berichtsdatenquelle vom Typ "Microsoft SharePoint-Liste" basiert. Dies ist ein integrierter Datenquellentyp, der auf der Microsoft SQL Server Reporting Services-Datenerweiterung für die SharePoint-Liste basiert. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]-, [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]-, [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0- und [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007-Websites herzustellen und Listendaten abzurufen.  
   
  Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Schrittweise Anweisungen finden Sie unter [hinzufügen und Prüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
@@ -41,19 +41,19 @@ ms.locfileid: "48116346"
   
 ||Unterstützte Anmeldeinformationen|Windows-Authentifizierung im klassischen Modus|<sup>3</sup> Anspruchsauthentifizierung|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
-|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|Benutzerkontensteuerung|nein|  
-|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|Keine<sup>2</sup>|  
-||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|Benutzerkontensteuerung|Keine<sup>2</sup>|  
+|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Ja|Ja|  
+||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|Ja|Nein|  
+|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Ja|Keine<sup>2</sup>|  
+||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|Ja|Keine<sup>2</sup>|  
   
  **Tabelle 2**  
   
 ||Unterstützte Anmeldeinformationen|Windows-Authentifizierung im klassischen Modus|<sup>3</sup> Anspruchsauthentifizierung|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
-|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|nein|nein|  
-|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|Keine<sup>2</sup>|  
-||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|nein|Keine<sup>2</sup>|  
+|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Ja|Ja|  
+||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|Nein|Nein|  
+|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Ja|Keine<sup>2</sup>|  
+||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|Nein|Keine<sup>2</sup>|  
   
  <sup>1</sup> gespeicherte Anmeldeinformationen oder Eingabeaufforderung Anmeldeinformationen werden bei nicht-Windows-Anmeldeinformationen wird nicht unterstützt.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48116346"
  **Anmeldeinformationen sind nicht erforderlich (keine Anmeldeinformationen verwenden):**  
  Diese Option setzt voraus, dass zuvor das Konto für die unbeaufsichtigte Ausführung auf dem Berichtsserver konfiguriert wird. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung (SSRS-Konfigurations-Manager)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
- Weitere Informationen zur Unterstützung der anspruchsbasierten Authentifizierung in der Microsoft BI-Struktur finden Sie unter [Verwenden der anspruchsbasierten Authentifizierung in der Microsoft BI-Struktur](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
+ Weitere Informationen zur Unterstützung der anspruchsbasierten Authentifizierung in der Microsoft BI-Struktur finden Sie unter [Verwenden der anspruchsbasierten Authentifizierung in der Microsoft BI-Struktur](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
  Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md), [angeben von Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md), und [von unterstützte Datenquellen Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -182,7 +182,7 @@ ms.locfileid: "48116346"
  [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Enthält Informationen zur von der Abfrage generierten Datasetfeldauflistung.  
   
- [Von Reporting Services unterstützte Datenquellen (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312) zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Von Reporting Services unterstützte Datenquellen (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=121312) zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Enthält ausführliche Informationen zur Plattform- und Versionsunterstützung für die einzelnen Datenerweiterungen.  
   
   

@@ -13,19 +13,19 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d616312ffec682ad7c37da62c23c4ada1eb98f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140990"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359272"
 ---
 # <a name="memory-optimization-advisor"></a>Ratgeber für die Speicheroptimierung
   Das Berichtstool für Transaktionsleistung (siehe [Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informiert Sie darüber, welche Tabellen in der Datenbank von einer Portierung zu In-Memory OLTP profitieren. Nachdem Sie eine Tabelle identifiziert haben, die Sie zur Verwendung In-Memory OLTP portieren möchten, können Sie den Ratgeber für die Speicheroptimierung verwenden, der Sie bei der Migration der datenträgerbasierten Datenbanktabelle zu In-Memory OLTP unterstützt.  
   
  Stellen Sie zunächst eine Verbindung mit der Instanz her, die die datenträgerbasierte Datenbanktabelle enthält. Die Verbindung kann mit einer Instanz von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hergestellt werden. Wenn Sie jedoch einen Migrationsvorgang mit dem Ratgeber ausführen möchten, müssen Sie eine Verbindung mit einer [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] -Instanz herstellen, für die In-Memory OLTP aktiviert ist. Weitere Informationen zu den Anforderungen für In-Memory OLTP finden Sie unter [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md).  
   
- Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory OLTP − Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory OLTP - Common Workload Patterns and Migration Considerations (In-Memory-OLTP: Allgemeine Workloadmuster und Überlegungen zur Migration)](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Exemplarische Vorgehensweise: Ratgeber für die Speicheroptimierung  
  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Tabelle, die Sie konvertieren möchten, und wählen Sie **Ratgeber für die Speicheroptimierung**aus. Daraufhin wird die Willkommensseite für **Ratgeber für die Speicheroptimierung von Tabellen**angezeigt.  

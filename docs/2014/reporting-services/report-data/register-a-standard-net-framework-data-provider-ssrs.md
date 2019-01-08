@@ -18,12 +18,12 @@ ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 24482f0120f9d33fc4fe9442b770d7ca8656ac80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a4cd4b35fc0a788137d2a82c7082dfe26b0c45e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107360"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364002"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrieren eines .NET Framework-Standarddatenproviders (SSRS)
   Wenn Sie zum Abrufen von Daten für ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Berichtsdataset einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenanbieter eines Drittanbieters verwenden möchten, müssen Sie die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieterassembly an zwei Speicherorten bereitstellen und registrieren: auf dem Berichterstellungsclient und auf dem Berichtsserver. Auf dem Berichterstellungsclient müssen Sie den Datenanbieter als Datenquellentyp registrieren und einem Abfrage-Designer zuordnen. Beim Erstellen eines Berichtsdatasets können Sie diesen Datenanbieter als Datenquellentyp auswählen. Der zugeordnete Abfrage-Designer wird geöffnet, um das Erstellen von Abfragen für diesen Datenquellentyp zu erleichtern. Der Datenanbieter muss auf dem Berichtsserver als Datenquellentyp registriert werden. Anschließend können Sie veröffentlichte Berichte verarbeiten, für die mithilfe dieses Datenanbieters Daten von einer Datenquelle abgerufen werden.  
@@ -39,15 +39,15 @@ ms.locfileid: "48107360"
   
 1.  Navigieren Sie zum Standardspeicherort des BIN-Verzeichnisses auf dem Berichtsserver, auf dem Sie den [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter verwenden möchten. Standardmäßig wird das Verzeichnis „bin“ des Berichtsservers unter dem *\<Laufwerk>*:\Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin gespeichert.  
   
-2.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das BIN-Verzeichnis des Berichtsservers. Sie können die Assembly im globalen Assemblycache (Global Assembly Cache, GAC) laden. Weitere Informationen finden Sie unter dem Thema [Arbeiten mit Assemblys und dem globalen Assemblycache](http://go.microsoft.com/fwlink/?linkid=63912) in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK-Dokumentation zur Plattform MSDN.  
+2.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das BIN-Verzeichnis des Berichtsservers. Sie können die Assembly im globalen Assemblycache (Global Assembly Cache, GAC) laden. Weitere Informationen finden Sie unter dem Thema [Arbeiten mit Assemblys und dem globalen Assemblycache](https://go.microsoft.com/fwlink/?linkid=63912) in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK-Dokumentation zur Plattform MSDN.  
   
 #### <a name="to-register-a-net-data-provider-on-the-report-server"></a>So registrieren Sie einen .NET-Datenanbieter auf dem Berichtsserver  
   
 1.  Erstellen Sie in dem ReportServer-Verzeichnis, das dem BIN-Verzeichnis übergeordnet ist, eine Sicherungskopie der Datei RSReportServer.config.  
   
-2.  Öffnen Sie die Datei "RSReportServer.config". Sie können die Konfigurationsdatei mit öffnen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder einem einfachen Text-Editor, z. B. Editor.  
+2.  Öffnen Sie die Datei "RSReportServer.config". Sie können die Konfigurationsdatei mit [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder in einem einfachen Text-Editor wie Editor öffnen.  
   
-3.  Suchen Sie die `Data` Element in der Datei "rsreportserver.config". Im folgenden Verzeichnis muss ein Eintrag für den [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter erstellt werden:  
+3.  Suchen Sie das `Data`-Element in der Datei RSReportServer.config. Im folgenden Verzeichnis muss ein Eintrag für den [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter erstellt werden:  
   
     ```  
     <Extensions>  
@@ -59,9 +59,9 @@ ms.locfileid: "48107360"
   
 4.  Fügen Sie einen Eintrag für den [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter hinzu.  
   
-    |attribute|Description|  
+    |Attribut|Description|  
     |---------------|-----------------|  
-    |`Name`|Geben Sie einen eindeutigen Namen für den Datenanbieter an, z. B. **MyNETDataProvider**. Die maximale Länge für das `Name`-Attribut beträgt 255 Zeichen. Der Name muss eindeutig für sämtliche Einträge im sein der `Extension` -Element einer Konfigurationsdatei. Der hier eingeschlossene Wert wird beim Erstellen einer neuen Datenquelle in der Dropdownliste der Datenquellentypen angezeigt.|  
+    |`Name`|Geben Sie einen eindeutigen Namen für den Datenanbieter an, z. B. **MyNETDataProvider**. Die maximale Länge für das `Name`-Attribut beträgt 255 Zeichen. Der Name muss für sämtliche Einträge im `Extension`-Element einer Konfigurationsdatei eindeutig sein. Der hier eingeschlossene Wert wird beim Erstellen einer neuen Datenquelle in der Dropdownliste der Datenquellentypen angezeigt.|  
     |`Type`|Geben Sie eine durch Trennzeichen getrennte Liste ein, die den vollqualifizierten Namespace der Klasse enthält, die die <xref:System.Data.IDbConnection> -Schnittstelle implementiert, gefolgt vom Namen der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieterassembly (ohne die Dateinamenerweiterung DLL).|  
   
      Für eine im BIN-Verzeichnis des Berichtsservers bereitgestellte DLL-Datei kann der Eintrag beispielsweise dem Folgenden ähneln:  
@@ -84,7 +84,7 @@ ms.locfileid: "48107360"
   
 3.  Suchen Sie das `CodeGroup`-Element in der Datei rssrvpolicy.config.  
   
-4.  Fügen Sie eine Codegruppe hinzu, für die datenanbieterassembly an, die gewährt `FullTrust` Berechtigung. Die Codegruppe könnte beispielsweise der Folgenden ähneln:  
+4.  Fügen Sie eine Codegruppe für die Datenanbieterassembly hinzu, durch die die Berechtigung `FullTrust` erteilt wird. Die Codegruppe könnte beispielsweise der Folgenden ähneln:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -112,7 +112,7 @@ ms.locfileid: "48107360"
   
 1.  Navigieren Sie zum Standardspeicherort des Verzeichnisses PrivateAssemblies auf dem Berichts-Designer-Client, auf dem Sie den [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter verwenden möchten. Standardmäßig wird das Verzeichnis „PrivateAssemblies“ unter *\<Laufwerk>*:\Programme\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies gespeichert.  
   
-2.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das Verzeichnis PrivateAssemblies des Berichts-Designer-Clients. Sie können die Assembly im globalen Assemblycache (Global Assembly Cache, GAC) laden. Weitere Informationen finden Sie unter dem Thema [Arbeiten mit Assemblys und dem globalen Assemblycache](http://go.microsoft.com/fwlink/?linkid=63912) in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK-Dokumentation zur Plattform MSDN.  
+2.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das Verzeichnis PrivateAssemblies des Berichts-Designer-Clients. Sie können die Assembly im globalen Assemblycache (Global Assembly Cache, GAC) laden. Weitere Informationen finden Sie unter dem Thema [Arbeiten mit Assemblys und dem globalen Assemblycache](https://go.microsoft.com/fwlink/?linkid=63912) in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK-Dokumentation zur Plattform MSDN.  
   
 #### <a name="to-register-a-net-data-provider-on-the-report-designer-client"></a>So registrieren Sie einen .NET-Datenanbieter auf dem Berichts-Designer-Client  
   
@@ -132,9 +132,9 @@ ms.locfileid: "48107360"
   
 4.  Fügen Sie einen Eintrag für den Datenanbieter hinzu.  
   
-    |attribute|Description|  
+    |Attribut|Description|  
     |---------------|-----------------|  
-    |`Name`|Geben Sie einen eindeutigen Namen für den Datenanbieter an, z. B. **MyNETDataProvider**. Die maximale Länge für das `Name`-Attribut beträgt 255 Zeichen. Der Name muss eindeutig für sämtliche Einträge im sein der `Extension` -Element einer Konfigurationsdatei. Der hier eingeschlossene Wert wird beim Erstellen einer neuen Datenquelle in der Dropdownliste der Datenquellentypen angezeigt.|  
+    |`Name`|Geben Sie einen eindeutigen Namen für den Datenanbieter an, z. B. **MyNETDataProvider**. Die maximale Länge für das `Name`-Attribut beträgt 255 Zeichen. Der Name muss für sämtliche Einträge im `Extension`-Element einer Konfigurationsdatei eindeutig sein. Der hier eingeschlossene Wert wird beim Erstellen einer neuen Datenquelle in der Dropdownliste der Datenquellentypen angezeigt.|  
     |`Type`|Geben Sie eine durch Trennzeichen getrennte Liste ein, die den vollqualifizierten Namespace der Klasse enthält, die die <xref:System.Data.IDbConnection> -Schnittstelle implementiert, gefolgt vom Namen der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieterassembly (ohne die Dateinamenerweiterung DLL).|  
   
      Für eine im Verzeichnis PrivateAssemblies von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] bereitgestellte DLL-Datei kann der Eintrag beispielsweise dem Folgenden ähneln:  
@@ -159,7 +159,7 @@ ms.locfileid: "48107360"
     </Extensions>  
     ```  
   
-6.  Fügen Sie den folgenden Eintrag zur Datei RSReportDesigner.config unter dem `Designer` Element. Sie müssen nur ersetzen die `Name` Attribut mit dem Namen, die Sie in vorhergehenden Einträgen angegeben.  
+6.  Fügen Sie der Datei RSReportDesigner.config unter dem `Designer`-Element den folgenden Eintrag hinzu. Sie müssen nur das `Name`-Attribut durch den in früheren Einträgen angegebenen Namen ersetzen.  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  
@@ -169,11 +169,11 @@ ms.locfileid: "48107360"
   
 1.  Erstellen Sie eine Sicherungskopie der Datei "RSPreviewPolicy.config" im Verzeichnis "PrivateAssemblies".  
   
-2.  Öffnen Sie RSPreviewPolicy.config in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder einem einfachen Text-Editor, z. B. Editor.  
+2.  Öffnen Sie RSPreviewPolicy.config in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder einem einfachen Text-Editor, z. B. im Windows-Editor.  
   
 3.  Suchen Sie das `CodeGroup`-Element in der Datei RSPreviewPolicy.config.  
   
-4.  Fügen Sie eine Codegruppe für die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -datenanbieterassembly an, die gewährt `FullTrust` Berechtigung. Die Codegruppe könnte beispielsweise der Folgenden ähneln:  
+4.  Fügen Sie eine Codegruppe für die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Datenanbieterassembly hinzu, durch die die Berechtigung `FullTrust` erteilt wird. Die Codegruppe könnte beispielsweise der Folgenden ähneln:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -192,7 +192,7 @@ ms.locfileid: "48107360"
  Die URL-Mitgliedschaft ist eine der vielen Mitgliedschaftsbedingungen, die Sie für den Datenanbieter auswählen können.  
   
 ### <a name="verifying-the-deployment-and-registration-on-the-report-designer-client"></a>Überprüfen der Bereitstellung und der Registrierung auf dem Berichts-Designer-Client  
- Sie können die Bereitstellung erst überprüfen, wenn Sie alle Instanzen von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] auf Ihrem lokalen Computer geschlossen haben. Wenn Sie alle aktuelle Sitzungen beendet haben, können Sie überprüfen, ob es sich bei Ihren Datenanbieter erfolgreich auf Berichts-Designer bereitgestellt wurde, erstellen Sie ein neues Berichtsprojekt in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Der Datenanbieter sollte beim Erstellen eines neuen Datasets für den Bericht in der Liste der verfügbaren Datenquellentypen aufgeführt werden.  
+ Sie können die Bereitstellung erst überprüfen, wenn Sie alle Instanzen von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] auf Ihrem lokalen Computer geschlossen haben. Wenn Sie alle aktuellen Sitzungen beendet haben, können Sie überprüfen, ob der Datenanbieter erfolgreich für den Berichts-Designer bereitgestellt wurde, indem Sie in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]ein neues Berichtsprojekt erstellen. Der Datenanbieter sollte beim Erstellen eines neuen Datasets für den Bericht in der Liste der verfügbaren Datenquellentypen aufgeführt werden.  
   
 ## <a name="platform-considerations"></a>Bedingungen bezüglich der Plattform  
  Auf einer 64-Bit-Plattform (x64) wird [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] im 32-Bit-WOW-Modus ausgeführt. Wenn Sie Berichte auf einer x64-Plattform erstellen, müssen auf dem Berichterstellungsclient 32-Bit-Datenanbieter installiert sein, um eine Vorschau der Berichte zu ermöglichen. Wenn Sie den Bericht in demselben System veröffentlichen, benötigen Sie x64-Datenanbieter zum Anzeigen des Berichts im Berichts-Manager.  
@@ -205,6 +205,6 @@ ms.locfileid: "48107360"
  [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Implementieren von Datenverarbeitungserweiterungen](../extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services-Konfigurationsdateien](../report-server/reporting-services-configuration-files.md)   
- [Code Access Security in Reporting Services (Codezugriffssicherheit in Reporting Services)](../extensions/secure-development/code-access-security-in-reporting-services.md)  
+ [Codezugriffssicherheit in Reporting Services](../extensions/secure-development/code-access-security-in-reporting-services.md)  
   
   

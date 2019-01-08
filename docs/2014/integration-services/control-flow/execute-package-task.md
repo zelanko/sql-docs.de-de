@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.f1
@@ -17,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af7dc60469f088f2023365f638666056bdf6e412
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5927cbe753cf0035c37f9a826c6bf89e9c963ae8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129136"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365772"
 ---
 # <a name="execute-package-task"></a>Paket ausführen (Task)
   Der Task Paket ausführen erweitert die Unternehmensfunktionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , indem Paketen das Ausführen anderer Pakete als Teil eines Workflows ermöglicht wird.  
@@ -57,7 +56,7 @@ ms.locfileid: "48129136"
   
  Alternativ kann es vorkommen, dass in bestimmten Situationen das übergeordnete und das untergeordnete Paket gemeinsam einen Fehler erzeugen sollen, oder Sie möchten den zusätzlichen Verarbeitungsaufwand eines anderen Prozesses übernehmen. Wenn z. B. bei einem untergeordneten Prozess ein Fehler auftritt und die nachfolgende Verarbeitung im übergeordneten Prozess des Pakets vom Erfolg des untergeordneten Prozesses abhängt, sollte das untergeordnete Paket im Prozess des übergeordneten Pakets ausgeführt werden.  
   
- In der Standardeinstellung die ExecuteOutOfProcess-Eigenschaft des Tasks Paket ausführen festgelegt ist, um `False`, und das untergeordnete Paket ausgeführt wird, im selben Prozess wie das übergeordnete Paket. Wenn Sie diese Eigenschaft auf `True` festlegen, wird das untergeordnete Paket in einem separaten Prozess ausgeführt. Dadurch kann sich der Start des untergeordneten Pakets verlangsamen. Darüber hinaus, wenn Sie die Eigenschaft festlegen, um `True`, Sie können das Paket in einer Installation, nur die Tools nicht debuggen. Sie müssen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installieren. Weitere Informationen finden Sie unter [Installieren von Integration Services](../install-windows/install-integration-services.md).  
+ In der Standardeinstellung die ExecuteOutOfProcess-Eigenschaft des Tasks Paket ausführen festgelegt ist, um `False`, und das untergeordnete Paket ausgeführt wird, im selben Prozess wie das übergeordnete Paket. Wenn Sie diese Eigenschaft auf `True` festlegen, wird das untergeordnete Paket in einem separaten Prozess ausgeführt. Dadurch kann sich der Start des untergeordneten Pakets verlangsamen. Wenn Sie die Eigenschaft auf `True` festlegen, ist das Debuggen des Pakets in einer Installation, die nur die Tools enthält, außerdem nicht möglich. Sie müssen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installieren. Weitere Informationen finden Sie unter [Installieren von Integration Services](../install-windows/install-integration-services.md).  
   
 ## <a name="extending-transactions"></a>Erweitern von Transaktionen  
  Die vom übergeordneten Paket verwendete Transaktion kann auf das untergeordnete Paket erweitert werden. Deshalb kann für die von beiden Paketen ausgeführte Arbeit ein Commit oder Rollback ausgeführt werden. Beispielsweise kann für Datenbankeinfügungen, die vom übergeordneten Paket ausgeführt werden, ein Commit oder Rollback ausgeführt werden, und zwar in Abhängigkeit von den vom untergeordneten Paket ausgeführten Datenbankeinfügungen und umgekehrt. Weitere Informationen finden Sie unter [Inherited Transactions](../inherited-transactions.md).  
@@ -98,14 +97,14 @@ ms.locfileid: "48129136"
  Weitere Informationen finden Sie unter [Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### <a name="accessing-parent-package-variables"></a>Zugriff auf Variablen für übergeordnete Pakete  
- Untergeordnete Pakete greifen über den Skripttask auf Variablen für übergeordnete Pakete zu. Wenn Sie den Namen der Variablen für das übergeordnete Paket im **Skripttask-Editor** auf der Seite **Skript**eingeben, lassen Sie **Benutzer:** im Variablennamen aus. Andernfalls wird die Variable beim Ausführen des übergeordneten Pakets vom untergeordneten Paket nicht gesucht. Weitere Informationen zu den Skripttask auf Variablen für übergeordnete Pakete verwenden, finden Sie unter diesem Blogeintrag [SSIS: Zugriff auf Variablen in einem übergeordneten Paket](http://go.microsoft.com/fwlink/?LinkId=257729), auf consultingblogs.emc.com.  
+ Untergeordnete Pakete greifen über den Skripttask auf Variablen für übergeordnete Pakete zu. Wenn Sie im **Skripttask-Editor** auf der Seite **Skript** den Namen der Variablen für das übergeordnete Paket eingeben, lassen Sie **Benutzer:** im Variablennamen aus. Andernfalls wird die Variable beim Ausführen des übergeordneten Pakets vom untergeordneten Paket nicht gesucht. Weitere Informationen zu den Skripttask auf Variablen für übergeordnete Pakete verwenden, finden Sie unter diesem Blogeintrag [SSIS: Zugriff auf Variablen in einem übergeordneten Paket](https://go.microsoft.com/fwlink/?LinkId=257729), auf consultingblogs.emc.com.  
   
 ## <a name="configuring-the-execute-package-task"></a>Konfigurieren des Tasks Paket ausführen  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task „Paket ausführen“](../execute-package-task-editor.md)  
+-   [Execute Package Task Editor](../execute-package-task-editor.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   
@@ -117,8 +116,8 @@ ms.locfileid: "48129136"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Blogeintrag, [SSIS: sollten Sie untergeordnete Pakete prozessintern oder Out-of-Process ausführen?](http://go.microsoft.com/fwlink/?LinkId=220819), auf consultingblogs.emc.com.  
+-   Blogeintrag, [SSIS: Untergeordnete Pakete prozessintern oder Out-of-Process ausgeführt werden soll? ](https://go.microsoft.com/fwlink/?LinkId=220819), auf consultingblogs.emc.com.  
   
--   Blogeintrag, [SSIS: Zugriff auf Variablen in einem übergeordneten Paket](http://go.microsoft.com/fwlink/?LinkId=257729), auf consultingblogs.emc.com.  
+-   Blogeintrag, [SSIS: Zugriff auf Variablen in einem übergeordneten Paket](https://go.microsoft.com/fwlink/?LinkId=257729), auf consultingblogs.emc.com.  
   
   

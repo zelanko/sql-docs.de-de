@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - permissions [WMI]
@@ -21,12 +19,12 @@ ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2722d608b4f373de92c49f1d75b887c658417e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183238"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351792"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Arbeiten mit dem WMI-Anbieter für die Konfigurationsverwaltung
   Beachten Sie vor dem Programmieren mit dem WMI-Anbieter für die Computerverwaltung die folgenden Punkte:  
@@ -34,7 +32,7 @@ ms.locfileid: "48183238"
 ## <a name="binding"></a>Bindung  
  Der WMI-Anbieter für die Konfigurationsverwaltung ist ein COM-Objektmodell und unterstützt frühes und spätes Binden. Mit spätem Binden können Sie Skriptsprachen wie VBScript verwenden, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste, Netzwerkeinstellungen und Aliasnamen programmgesteuert zu bearbeiten.  
   
- Weitere Informationen über das Programmieren von WMI-anbieterimplementierungen mit Skriptsprachen finden Sie unter den [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Website](http://go.microsoft.com/fwlink/?linkid=15426).  
+ Weitere Informationen über das Programmieren von WMI-anbieterimplementierungen mit Skriptsprachen finden Sie unter den [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Website](https://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="specifying-a-connection-string"></a>Angeben einer Verbindungszeichenfolge  
  Anwendungen leiten den WMI-Anbieter für die Konfigurationsverwaltung an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weiter, indem sie eine Verbindung zu einem vom Anbieter definierten WMI-Namespace herstellen. Der Windows-WMI-Dienst ordnet der Anbieter-DLL diesen Namespace zu und lädt sie in den Arbeitsspeicher. Alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mit einem einzigen WMI-Namespace dargestellt. Der Namespace lautet standardmäßig  
@@ -45,7 +43,7 @@ ms.locfileid: "48183238"
   
  wobei `instance_name` in einer Standardinstallation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standardmäßig auf `MSSQLSERVER` festgelegt wird.  
   
- **Hinweis:** , wenn Sie über Windows-Firewall eine Verbindung herstellen müssen Sie sicherstellen, dass Ihre Computer ordnungsgemäß konfiguriert sind. Finden Sie im Artikel "Connecting Through Windows Firewall" in der Dokumentation zu Windows-Verwaltungsinstrumentation [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Website](http://go.microsoft.com/fwlink/?linkid=15426).  
+ **Hinweis**: Wenn Sie über Windows-Firewall herstellen müssen Sie sicherstellen, dass Ihr Computer geeignet konfiguriert sind. Finden Sie im Artikel "Connecting Through Windows Firewall" in der Dokumentation zu Windows-Verwaltungsinstrumentation [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Website](https://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="permissions-and-server-authentication"></a>Berechtigungen und Serverauthentifizierung  
  Für den Zugriff auf den WMI-Anbieter für die Konfigurationsverwaltung muss das WMI-Verwaltungsskript des Clients im Kontext eines Administrators auf dem Zielcomputer ausgeführt werden. Sie müssen ein Mitglied der lokalen Windows-Administratorengruppe auf dem Computer sein, den Sie verwalten möchten.  

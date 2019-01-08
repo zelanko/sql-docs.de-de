@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 489c9e0b34ac0653e30e563a847e873b0f9b488d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a81993eff54c38ae0249e5e1dfbdc92f623d08e3
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613788"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979544"
 ---
 # <a name="implementing-full-text-search"></a>Einbinden einer Volltextsuche
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Volltextsuche ist pro Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar und wird durch das <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A>-Objekt in SMO dargestellt. Die <xref:Microsoft.SqlServer.Management.Smo.FullTextService> -Objekt befindet sich unter dem **Server** Objekt. Es wird verwendet, um die Konfigurationsoptionen für den Dienst [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Volltextsuche zu verwalten. Das <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection>-Objekt gehört zum <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt und ist eine Auflistung von <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog>-Objekten, die Volltextkataloge darstellen, die für die Datenbank definiert sind. Im Gegensatz zu normalen Indizes kann nur ein Volltextindex für jede Tabelle definiert sein. Dies wird durch ein <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn>-Objekt im <xref:Microsoft.SqlServer.Management.Smo.Table>-Objekt dargestellt.  
+  Volltextsuche ist pro Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar und wird durch das <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A>-Objekt in SMO dargestellt. Die <xref:Microsoft.SqlServer.Management.Smo.FullTextService> -Objekt befindet sich unter dem **Server** Objekt. Es wird verwendet, um die Konfigurationsoptionen für den Dienst [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Volltextsuche zu verwalten. Das <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection>-Objekt gehört zum <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt und ist eine Auflistung von <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog>-Objekten, die Volltextkataloge darstellen, die für die Datenbank definiert sind. Im Gegensatz zu normalen Indizes kann nur ein Volltextindex für jede Tabelle definiert sein. Dies wird durch ein <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn>-Objekt im <xref:Microsoft.SqlServer.Management.Smo.Table>-Objekt dargestellt.  
   
  Um einen Volltextsuchdienst zu erstellen, muss auf der Datenbank ein Volltextkatalog und in einer der Tabellen in der Datenbank ein Index für die Volltextsuche definiert sein.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "47613788"
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>Erstellen eines Volltextsuchdiensts in Visual Basic  
- Dieses Codebeispiel erstellt einen Full-Text-Search-Katalog für die `ProductCategory` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Beispieldatenbank. Anschließend wird für die Name-Spalte in der `ProductCategory` -Tabelle ein Index für die Volltextsuche erstellt. Der Index für die Volltextsuche erfordert, dass bereits ein eindeutiger Index für die Spalte definiert ist.  
+ In diesem Codebeispiel wird ein Volltextsuchkatalog für die `ProductCategory` -Tabelle in der Beispieldatenbank [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] erstellt. Anschließend wird für die Name-Spalte in der `ProductCategory` -Tabelle ein Index für die Volltextsuche erstellt. Der Index für die Volltextsuche erfordert, dass bereits ein eindeutiger Index für die Spalte definiert ist.  
   
 ```  
 ' compile with:   
@@ -73,7 +73,7 @@ Public Class A
       Dim fti As FullTextIndex = Nothing  
       fti = New FullTextIndex(tb)  
   
-      ' Define a FullTextIndexColumn object variable by supplying the parent index and column name arguements in the constructor.  
+      ' Define a FullTextIndexColumn object variable by supplying the parent index and column name arguments in the constructor.  
       Dim ftic As FullTextIndexColumn = Nothing  
       ftic = New FullTextIndexColumn(fti, "Name")  
   
@@ -94,7 +94,7 @@ End Class
 ```  
   
 ## <a name="creating-a-full-text-search-service-in-visual-c"></a>Erstellen eines Volltextsuchdiensts in Visual C#  
- Dieses Codebeispiel erstellt einen Full-Text-Search-Katalog für die `ProductCategory` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Beispieldatenbank. Anschließend wird für die Name-Spalte in der `ProductCategory` -Tabelle ein Index für die Volltextsuche erstellt. Der Index für die Volltextsuche erfordert, dass bereits ein eindeutiger Index für die Spalte definiert ist.  
+ In diesem Codebeispiel wird ein Volltextsuchkatalog für die `ProductCategory` -Tabelle in der Beispieldatenbank [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] erstellt. Anschließend wird für die Name-Spalte in der `ProductCategory` -Tabelle ein Index für die Volltextsuche erstellt. Der Index für die Volltextsuche erfordert, dass bereits ein eindeutiger Index für die Spalte definiert ist.  
   
 ```  
 // compile with:   
@@ -133,7 +133,7 @@ public class A {
       FullTextIndex fti = default(FullTextIndex);  
       fti = new FullTextIndex(tb);  
   
-      // Define a FullTextIndexColumn object variable by supplying the parent index and column name arguements in the constructor.  
+      // Define a FullTextIndexColumn object variable by supplying the parent index and column name arguments in the constructor.  
       FullTextIndexColumn ftic = default(FullTextIndexColumn);  
       ftic = new FullTextIndexColumn(fti, "Name");  
   
@@ -154,7 +154,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-full-text-search-service-in-powershell"></a>Erstellen eines Volltextsuchdiensts in PowerShell  
- Dieses Codebeispiel erstellt einen Full-Text-Search-Katalog für die `ProductCategory` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Beispieldatenbank. Anschließend wird für die Name-Spalte in der `ProductCategory` -Tabelle ein Index für die Volltextsuche erstellt. Der Index für die Volltextsuche erfordert, dass bereits ein eindeutiger Index für die Spalte definiert ist.  
+ In diesem Codebeispiel wird ein Volltextsuchkatalog für die `ProductCategory` -Tabelle in der Beispieldatenbank [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] erstellt. Anschließend wird für die Name-Spalte in der `ProductCategory` -Tabelle ein Index für die Volltextsuche erstellt. Der Index für die Volltextsuche erfordert, dass bereits ein eindeutiger Index für die Spalte definiert ist.  
   
 ```  
 # Example of implementing a full text search on the default instance.  

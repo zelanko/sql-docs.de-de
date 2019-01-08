@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.f1
@@ -19,20 +18,20 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43e7e3e85567b74b2195214c37f9761cde5f0d91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b672d602666fd51f98cf1854917dd2a035157d5e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072160"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352115"
 ---
 # <a name="ado-net-source"></a>ADO NET-Quelle
   Die ADO NET-Quelle verwendet Daten von einem .NET-Anbieter und stellt sie dem Datenfluss zur Verfügung.  
   
- Sie können mithilfe der ADO.NET-Quelle eine Verbindung mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]herstellen. Das Herstellen einer Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] über OLE DB wird nicht unterstützt. Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)]finden Sie unter [Azure SQL-Datenbanken – Allgemeine Einschränkungen und Leitlinien](http://go.microsoft.com/fwlink/?LinkId=248228).  
+ Sie können mithilfe der ADO.NET-Quelle eine Verbindung mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]herstellen. Das Herstellen einer Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] über OLE DB wird nicht unterstützt. Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)]finden Sie unter [Azure SQL-Datenbanken – Allgemeine Einschränkungen und Leitlinien](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Datentypunterstützung  
- Die Quelle konvertiert alle Datentypen, die nicht einem bestimmten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp zugeordnet sind, in den DT_NTEXT-Datentyp von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Diese Konvertierung findet statt, selbst wenn der Datentyp `System.Object`.  
+ Die Quelle konvertiert alle Datentypen, die nicht einem bestimmten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp zugeordnet sind, in den DT_NTEXT-Datentyp von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Diese Konvertierung findet auch dann statt, wenn der Datentyp `System.Object` ist.  
   
  Sie können den Datentyp DT_NTEXT in den Datentyp DT_WSTR oder DT_WSTR in DT_NTEXT ändern. Datentypen werden durch Festlegen der Eigenschaft **DataType** im Dialogfeld **Erweiterter Editor** der ADO NET-Quelle geändert. Weitere Informationen finden Sie unter [Common Properties](../common-properties.md).  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48072160"
  Weitere Informationen zur Zuordnung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen zu verwalteten Datentypen finden Sie unter [Verwenden von Datentypen im Datenfluss](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## <a name="ado-net-source-troubleshooting"></a>Problembehandlung der ADO NET-Quelle  
- Sie können die von der ADO NET-Quelle an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktion können Sie Probleme beim Laden von Daten aus externen Datenquellen durch die ADO NET-Quelle behandeln. Aktivieren Sie zum Protokollieren der von der ADO NET-Quelle an externe Datenanbieter gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandeln von Problemen mit Paketausführungstools](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
+ Sie können die von der ADO NET-Quelle an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktion können Sie Probleme beim Laden von Daten aus externen Datenquellen durch die ADO NET-Quelle behandeln. Aktivieren Sie zum Protokollieren der von der ADO NET-Quelle an externe Datenanbieter gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandlung von Problemen mit Paketausführungstools](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="ado-net-source-configuration"></a>ADO NET-Quellkonfiguration  
  Zum Konfigurieren der ADO NET-Quelle geben Sie die SQL-Anweisung an, die das Resultset definiert. Beispielsweise extrahiert eine ADO NET-Quelle, die eine Verbindung mit der [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] -Datenbank herstellt und die SQL-Anweisung `SELECT * FROM Production.Product` verwendet, alle Zeilen aus der **Production.Product** -Tabelle und stellt das Dataset einer Downstreamkomponente bereit.  
@@ -68,7 +67,7 @@ ms.locfileid: "48072160"
 >  Wenn Sie mithilfe einer SQL-Anweisung eine gespeicherte Prozedur aufrufen, die Ergebnisse von einer temporären Tabelle zurückgibt, verwenden Sie die Option WITH RESULT SETS, um Metadaten für das Resultset zu definieren.  
   
 > [!NOTE]  
->  Wenn Sie verwenden eine SQL-Anweisung aus, um eine gespeicherte Prozedur auszuführen und das Paket mit folgendem Fehler fehlschlägt, möglicherweise zum Beheben des Fehlers durch Hinzufügen der `SET FMTONLY OFF` Anweisung vor der Exec-Anweisung.  
+>  Wenn Sie zum Ausführen einer gespeicherten Prozedur eine SQL-Anweisung verwenden und der folgende Paketfehler auftritt, können Sie den Fehler u. U. beheben, indem Sie die `SET FMTONLY OFF`-Anweisung vor der EXEC-Anweisung hinzufügen.  
 >   
 >  **Die Spalte <Spaltenname> wurde in der Datenquelle nicht gefunden.**  
   
@@ -84,10 +83,10 @@ ms.locfileid: "48072160"
   
 -   [Benutzerdefinierte Eigenschaften von ADO.NET](ado-net-custom-properties.md)  
   
- Informationen zum Festlegen von Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](set-the-properties-of-a-data-flow-component.md).  
+ Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [DataReader-Ziels](datareader-destination.md)   
+ [DataReader-Ziel](datareader-destination.md)   
  [ADO NET-Ziel](ado-net-destination.md)   
  [Datenfluss](data-flow.md)  
   

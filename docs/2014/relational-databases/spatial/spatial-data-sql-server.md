@@ -17,12 +17,12 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f18e84ac46d4647c3bcd884b98196faf58bef636
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: fb30ce3e7115bad41d26dd126b6f8b9ae9e0b934
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018095"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373949"
 ---
 # <a name="spatial-data-sql-server"></a>Räumliche Daten (SQL Server)
   Räumliche Daten stellen Informationen über die physische Position und die Form geometrischer Objekte dar. Bei diesen Objekten kann es sich um Punktpositionen oder komplexere Objekte handeln, z.&nbsp;B. Länder, Straßen oder Seen.  
@@ -36,7 +36,7 @@ ms.locfileid: "51018095"
  Beide Datentypen werden als .NET CLR (Common Language Runtime)-Datentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]implementiert.  
   
 > [!IMPORTANT]  
->  Laden Sie für eine ausführliche Beschreibung und Beispiele der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführten räumlichen Funktionen das Whitepaper [Neue räumliche Funktionen in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407)herunter.  
+>  Laden Sie für eine ausführliche Beschreibung und Beispiele der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführten räumlichen Funktionen das Whitepaper [Neue räumliche Funktionen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)herunter.  
   
 ##  <a name="reltasks"></a> Verwandte Aufgaben  
  [Erstellen, Aufbauen und Abfragen von geometry-Instanzen](create-construct-and-query-geometry-instances.md)  

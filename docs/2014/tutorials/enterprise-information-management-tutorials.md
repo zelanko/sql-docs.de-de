@@ -13,12 +13,12 @@ ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbbf4bc264e9dbff37c6dd06ceb1c6f4063e6c2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e40202ef0230fbbdddd1c596e5dc41b4d44a0fe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176380"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373992"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Enterprise Information Management-Lernprogramme
   Dieser Abschnitt enthält Lernprogramme zum Verwalten von Informationen in einem Unternehmen, indem in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] enthaltene Enterprise Information Management (EIM)-Technologien verwendet werden. Enterprise Integration Management (EIM) stellt ein Portfolio von Lösungen zur Verfügung, die es Organisationen ermöglichen, der Glaubwürdigkeit und Konsistenz ihrer Daten zu vertrauen, sodass sie wichtige Geschäftsentscheidungen treffen können. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] bietet die folgenden Technologien, die Ihnen helfen, EIM-Lösungen in Ihrem Unternehmen zu implementieren.  
@@ -33,6 +33,6 @@ ms.locfileid: "48176380"
  In diesem Lernprogramm erfahren Sie, wie Sie SSIS, MDS und DQS zusammen verwenden, um eine Enterprise Information Management (EIM)-Beispiellösung zu implementieren. Zunächst erstellen Sie mithilfe von DQS eine Wissensdatenbank, die Informationen zu den Lieferantendaten (Metadaten) enthält. Dann bereinigen Sie die Daten in einer Excel-Datei anhand der Wissensdatenbank und gleichen die Daten ab, um Duplikate in den Daten zu identifizieren und zu entfernen. Als Nächstes verwenden Sie das MDS-Add-In für Excel, um die bereinigten und abgeglichenen Daten in MDS hochzuladen. Dann automatisieren Sie den gesamten Prozess, indem Sie eine SSIS-Lösung verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Enterprise-Informationsmanagement – Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=270871)  
+ [Enterprise Informationsmanagement - Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=270871)  
   
   

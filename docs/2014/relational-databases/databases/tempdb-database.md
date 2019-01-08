@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -16,12 +15,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81d2bf84e758ccfd8664408a760e77700a323e0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1db606c086624610a158b6a87576188fa14aefaa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141060"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357837"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
   Die **tempdb** -Systemdatenbank ist eine globale Ressource, die für alle Benutzer verfügbar ist, die mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbunden sind. In der Datenbank sind die folgenden Elemente enthalten:  
@@ -39,7 +38,7 @@ ms.locfileid: "48141060"
 ## <a name="physical-properties-of-tempdb"></a>physische Eigenschaften von tempdb  
  Die folgende Tabelle listet die anfänglichen Konfigurationswerte der **tempdb** -Daten- und Protokolldateien auf. Die Größe dieser Dateien kann sich in den verschiedenen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geringfügig unterscheiden.  
   
-|File|Logischer Name (logical name)|Physischer Name (physical name)|Dateivergrößerung (file growth)|  
+|Datei|Logischer Name (logical name)|Physischer Name (physical name)|Dateivergrößerung (file growth)|  
 |----------|------------------|-------------------|-----------------|  
 |Primäre Daten|tempdev|tempdb.mdf|Automatische Vergrößerung um 10 Prozent, bis der Datenträger voll ist|  
 |Log|templog|templog.ldf|Automatische Vergrößerung um 10 Prozent bis maximal 2 TB|  
@@ -65,34 +64,34 @@ ms.locfileid: "48141060"
   
 |Datenbankoption|Standardwert|Kann geändert werden.|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|Benutzerkontensteuerung|  
-|ANSI_NULL_DEFAULT|OFF|Benutzerkontensteuerung|  
-|ANSI_NULLS|OFF|Benutzerkontensteuerung|  
-|ANSI_PADDING|OFF|Benutzerkontensteuerung|  
-|ANSI_WARNINGS|OFF|Benutzerkontensteuerung|  
-|ARITHABORT|OFF|Benutzerkontensteuerung|  
-|AUTO_CLOSE|OFF|nein|  
-|AUTO_CREATE_STATISTICS|ON|Benutzerkontensteuerung|  
-|AUTO_SHRINK|OFF|nein|  
-|AUTO_UPDATE_STATISTICS|ON|Benutzerkontensteuerung|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Benutzerkontensteuerung|  
-|CHANGE_TRACKING|OFF|nein|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Benutzerkontensteuerung|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Benutzerkontensteuerung|  
-|CURSOR_DEFAULT|GLOBAL|Benutzerkontensteuerung|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|nein<br /><br /> nein<br /><br /> nein|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Benutzerkontensteuerung|  
-|DB_CHAINING|ON|nein|  
-|ENCRYPTION|OFF|nein|  
-|NUMERIC_ROUNDABORT|OFF|Benutzerkontensteuerung|  
-|PAGE_VERIFY|CHECKSUM für neue Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE für Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Benutzerkontensteuerung|  
-|PARAMETERIZATION|SIMPLE|Benutzerkontensteuerung|  
-|QUOTED_IDENTIFIER|OFF|Benutzerkontensteuerung|  
-|READ_COMMITTED_SNAPSHOT|OFF|nein|  
-|RECOVERY|SIMPLE|nein|  
-|RECURSIVE_TRIGGERS|OFF|Benutzerkontensteuerung|  
-|Service Broker-Optionen|ENABLE_BROKER|Benutzerkontensteuerung|  
-|TRUSTWORTHY|OFF|nein|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|Ja|  
+|ANSI_NULL_DEFAULT|OFF|Ja|  
+|ANSI_NULLS|OFF|Ja|  
+|ANSI_PADDING|OFF|Ja|  
+|ANSI_WARNINGS|OFF|Ja|  
+|ARITHABORT|OFF|Ja|  
+|AUTO_CLOSE|OFF|Nein|  
+|AUTO_CREATE_STATISTICS|ON|Ja|  
+|AUTO_SHRINK|OFF|Nein|  
+|AUTO_UPDATE_STATISTICS|ON|Ja|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Ja|  
+|CHANGE_TRACKING|OFF|Nein|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Ja|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Ja|  
+|CURSOR_DEFAULT|GLOBAL|Ja|  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Nein<br /><br /> Nein|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Ja|  
+|DB_CHAINING|ON|Nein|  
+|ENCRYPTION|OFF|Nein|  
+|NUMERIC_ROUNDABORT|OFF|Ja|  
+|PAGE_VERIFY|CHECKSUM für neue Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE für Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Ja|  
+|PARAMETERIZATION|SIMPLE|Ja|  
+|QUOTED_IDENTIFIER|OFF|Ja|  
+|READ_COMMITTED_SNAPSHOT|OFF|Nein|  
+|RECOVERY|SIMPLE|Nein|  
+|RECURSIVE_TRIGGERS|OFF|Ja|  
+|Service Broker-Optionen|ENABLE_BROKER|Ja|  
+|TRUSTWORTHY|OFF|Nein|  
   
  Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
@@ -144,6 +143,6 @@ ms.locfileid: "48141060"
  [Verschieben von Datenbankdateien](move-database-files.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von tempdb in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81216)  
+ [Verwenden von tempdb in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81216)  
   
   

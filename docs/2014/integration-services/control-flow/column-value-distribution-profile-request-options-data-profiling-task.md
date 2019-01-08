@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,15 +12,15 @@ ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a28070a2229e016bbc03b90d559252bd8851ac78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6768eba62eec59bc37ce360014d9c000aa01c724
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215140"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375202"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Optionen für Anforderung für Verteilungsprofil für Spaltenwert (Datenprofilerstellungs-Task)
-  Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Verteilungsprofil für Spaltenwert** festzulegen. Ein Verteilungsprofil für Spaltenwert dokumentiert alle eindeutigen Längen von Zeichenfolgenwerten in der ausgewählten Spalte sowie den Prozentsatz der Zeilen in der Tabelle, die jeder Wert darstellt. Das Profil kann auch Werte melden, die mehr als einen angegebenen Prozentwert der Zeilen in der Tabelle darstellen. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. eine falsche Anzahl eindeutiger Werte in einer Spalte. Beispiel: Sie erstellen ein Profil für eine Spalte mit US-Bundesstaaten und ermitteln mehr als 50 unterschiedliche Werte.  
+  Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Verteilungsprofil für Spaltenwert** festzulegen. Ein Verteilungsprofil für Spaltenwert dokumentiert alle eindeutigen Längen von Zeichenfolgenwerten in der ausgewählten Spalte sowie den Prozentsatz der Zeilen in der Tabelle, die jeder Wert darstellt. Das Profil kann auch Werte melden, die mehr als einen angegebenen Prozentwert der Zeilen in der Tabelle darstellen. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. eine falsche Anzahl eindeutiger Werte in einer Spalte. Beispiel: Sie erstellen ein Profil für eine Spalte mit US-Bundesstaaten und ermitteln mehr als 50 unterschiedliche Werte.  
   
 > [!NOTE]  
 >  Die in diesem Thema beschriebenen Optionen werden auf der Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task**angezeigt. Weitere Informationen zu dieser Seite des Editors finden Sie unter [Editor für den Datenprofilerstellungs-Task &#40;Seite „Profilanforderungen“&#41;](data-profiling-task-editor-profile-requests-page.md).  
@@ -71,7 +70,7 @@ ms.locfileid: "48215140"
 > [!NOTE]  
 >  Wenn Sie den Platzhalter **(\*)** für **ColumnName** verwenden, ist **CompareOptions** schreibgeschützt und auf die **Default**-Einstellung festgelegt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Default**|Sortiert und vergleicht Daten anhand der Sortierung der Spalte in der Quelltabelle.|  
 |**BinarySort**|Sortiert und vergleicht Daten anhand der für jedes Zeichen definierten Bitmuster. Die binäre Sortierreihenfolge unterscheidet nach Groß- und Kleinschreibung und nach Akzent. Die Option Binär ist zudem die schnellste Sortierreihenfolge.|  
@@ -79,7 +78,7 @@ ms.locfileid: "48215140"
   
  Wenn Sie **DictionarySort**auswählen, können Sie auch jede Kombination der in der folgenden Tabelle aufgelisteten Optionen auswählen. Standardmäßig ist keine dieser zusätzlichen Optionen ausgewählt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Gibt an, ob beim Vergleichen zwischen Groß- und Kleinbuchstaben unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich die Groß-/Kleinschreibung. Beispielsweise ist dann "ABC" mit "abc" identisch.|  
 |**IgnoreNonSpace**|Gibt an, ob beim Vergleichen zwischen Zeichen mit Zwischenraum und diakritischen Zeichen unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich diakritische Zeichen. Beispielsweise ist dann "å" mit "a" identisch.|  
@@ -90,11 +89,11 @@ ms.locfileid: "48215140"
  **RequestID**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **ValueDistributionOption**  
  Geben Sie an, ob die Verteilung für alle Spaltenwerte berechnet werden soll. Der Standardwert für diese Option ist **FrequentValues**.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**AllValues**|Die Verteilung wird für alle Spaltenwerte berechnet.|  
 |**FrequentValues**|Die Verteilung wird nur für Werte berechnet, deren Frequenz den in **FrequentValueThreshold**angegebenen minimalen Wert übersteigt. Werte, die nicht dem Wert von **FrequentValueThreshold** entsprechen, werden im Ausgabebericht ausgeschlossen.|  
@@ -103,7 +102,7 @@ ms.locfileid: "48215140"
  Geben Sie (mit einem Wert zwischen 0 und 1) den Schwellenwert an, bei dessen Überschreiten der Spaltenwert gemeldet werden sollte. Diese Option wird deaktiviert, wenn Sie **AllValues** als **ValueDistributionOption**auswählen. Der Standardwert dieser Option ist 0,001.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Der Datenprofilerstellungs-Task-Editor &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

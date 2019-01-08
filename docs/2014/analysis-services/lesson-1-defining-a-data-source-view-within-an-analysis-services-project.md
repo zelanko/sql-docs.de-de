@@ -11,12 +11,12 @@ ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9fe97795be77255412ecac2dbcda11214369c9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a34938d97b26691dad0f1c4800b98af48434d7f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218710"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365163"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lektion 1: Definieren einer Datenquellensicht innerhalb eines Analysis Services-Projekts
   Der Entwurf einer Business Intelligence-Anwendung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beginnt mit dem Erstellen eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekts in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Innerhalb dieses Projekts definieren Sie alle Elemente in Ihrer Projektmappe beginnend mit einer Datenquellensicht.  
@@ -35,13 +35,13 @@ ms.locfileid: "48218710"
  [Ändern von Standardtabellennamen](lesson-1-4-modifying-default-table-names.md)  
  In dieser Aufgabe ändern Sie Tabellennamen in der Datenquellensicht, sodass die Namen von nachfolgenden [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekten, die Sie definieren, benutzerfreundlicher werden.  
   
- Vergleichen Sie die Ergebnisse mit einer Beispielprojektdatei, die für diese Lektion erstellt wurde. Weitere Informationen zum Herunterladen der Beispielprojekte für dieses Lernprogramm finden Sie auf der Codeplex-Website auf der Seite mit Produktbeispielen unter [SSAS Multidimensional Model Projects for SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) .  
+ Vergleichen Sie die Ergebnisse mit einer Beispielprojektdatei, die für diese Lektion erstellt wurde. Weitere Informationen zum Herunterladen der Beispielprojekte für dieses Lernprogramm finden Sie auf der Codeplex-Website auf der Seite mit Produktbeispielen unter [SSAS Multidimensional Model Projects for SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866) .  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
  [Lektion 2: Definieren und Bereitstellen eines Cubes](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen ein Analysis Services-Projekts &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
+ [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [Unterstützte Datenquellen &#40;SSAS – mehrdimensional&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [Datenquellsichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Analysis Services-Lernprogrammszenario](analysis-services-tutorial-scenario.md)   

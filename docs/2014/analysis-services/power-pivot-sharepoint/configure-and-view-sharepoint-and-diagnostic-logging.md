@@ -11,15 +11,15 @@ ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7099282f8fef9d8d029249ba5637eba6fa6bf1f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6196466246529521f356c193c3e8cc0ee688c197
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188350"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354705"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Konfigurieren und Anzeigen der SharePoint-Protokolldateien und -Diagnoseprotokollierung (PowerPivot für SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server-Vorgänge, Ereignisse und Meldungen werden in der SharePoint-Protokolldateien aufgezeichnet. Verwenden Sie die Informationen in diesem Thema, um Protokolliergrade zu konfigurieren und Protokolldatei-Informationen anzuzeigen. Sie können steuern, welche [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Serverereignisse in einer Datei protokolliert werden. Sie können auch den Schweregrad von Meldungen steuern, die protokolliert werden. Weitere Informationen finden Sie unter [konfigurieren Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server-Vorgänge, Ereignisse und Meldungen werden in SharePoint-Protokolldateien aufgezeichnet. Verwenden Sie die Informationen in diesem Thema, um Protokolliergrade zu konfigurieren und Protokolldatei-Informationen anzuzeigen. Sie können steuern, welche [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Serverereignisse in einer Datei protokolliert werden. Sie können auch den Schweregrad von Meldungen steuern, die protokolliert werden. Weitere Informationen finden Sie unter [konfigurieren Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  In diesem Thema:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48188350"
   
 4.  Erweitern Sie die Kategorie, und wählen Sie einzelne Kategorien aus:  
   
-     **Anwendung Seitenanforderung** gibt Ereignisse, die von der dienstanwendung ausgelöst werden, wenn eine [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] zum Laden einer PowerPivot-Datenquelle und kommunizieren mit anderen Servern in der Farm.  
+     Unter**Anwendungsseitenanforderung** werden Ereignisse angegeben, die beim Suchen eines [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] s zum Laden einer PowerPivot-Datenquelle und Kommunizieren mit anderen Servern in der Farm von der Dienstanwendung ausgelöst werden.  
   
      Unter**Anforderungsverarbeitung** werden Ereignisse angegeben, die durch Abfrageanforderungen für eine auf einem Server in der Farm geladene PowerPivot-Datenbank ausgelöst wurden.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48188350"
   
  Die folgenden Anweisungen enthalten Links zu gängigen SharePoint ULS Protokoll-Viewern, die Sie aus CodePlex herunterladen können.  
   
-1.  Gehen Sie zu [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com) oder [SharePoint ULS Log Viewer](http://go.microsoft.com/fwlink/?LinkId=150052) auf der Codeplex-Website.  
+1.  Gehen Sie zu [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com) oder [SharePoint ULS Log Viewer](https://go.microsoft.com/fwlink/?LinkId=150052) auf der Codeplex-Website.  
   
 2.  Klicken Sie auf die Registerkarte **Downloads** .  
   

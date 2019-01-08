@@ -11,12 +11,12 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b49907bb7cb9c2d33d7672570f161cbd98432d45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d88e1fa7853c1207f1a8c95da2f96bb77dd7d49c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170074"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355335"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>Lektion 7: Verschieben von Datendateien in den Windows Azure-Speicher
   In dieser Lektion erfahren Sie, wie Sie die Datendateien in den Windows Azure-Speicher verschieben (nicht jedoch die SQL Server-Instanz). Für diese Lektion müssen Sie Lektion 4, 5 und 6 nicht abschließen.  
@@ -64,7 +64,7 @@ ms.locfileid: "48170074"
   
     ```  
   
-3.  Es wird folgende Meldung angezeigt: "Date Datei "TestDB1Alter" wurde im Systemkatalog geändert. Der neue Pfad wird beim nächsten Start der Datenbank verwendet."  
+3.  Wenn Sie dies ausführen, wird folgende Meldung angezeigt: "Die Datei"TestDB1Alter"wurde im Systemkatalog geändert. Der neue Pfad wird das nächste Mal, die, das der Datenbank, verwendet werden."  
   
 4.  Schalten Sie dann die Datenbank offline.  
   
@@ -75,9 +75,9 @@ ms.locfileid: "48170074"
   
     ```  
   
-5.  Jetzt müssen Sie die Datendateien in Windows Azure Storage zu kopieren, mit einer der folgenden Methoden: [AzCopy-Tool](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [Referenz zur Speicherclientbibliothek](https://msdn.microsoft.com/library/azure/dn261237.aspx), oder ein Drittanbieter-Speicher-Explorer-Tool.  
+5.  Kopieren Sie jetzt die Datendateien in den Windows Azure-Speicher, und verwenden Sie dabei eine der folgenden Methoden: [AzCopy-Tool](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [Referenz zur Speicherclientbibliothek](https://msdn.microsoft.com/library/azure/dn261237.aspx), oder ein Drittanbieter-Speicher-Explorer-Tool.  
   
-     **Wichtig:** Wenn Sie diese neue Erweiterung verwenden, stellen Sie immer sicher, dass Sie kein Block-Blob einen Seitenblob erstellen.  
+     **Wichtig:** Wenn Sie diese neue Erweiterung verwenden, stellen Sie immer sicher, dass Sie ein Seitenblob und kein Blockblob erstellen.  
   
 6.  Schalten Sie dann die Datenbank online.  
   

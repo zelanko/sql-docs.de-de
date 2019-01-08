@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62a4a0737f57d6040d2c166847f191f13d435071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ff1883c8940e791d35dfe97c33acc1fe4f4a0e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229483"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359369"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lektion 1: Erstellen des Projekts und Basispakets
   In dieser Lektion erstellen Sie ein einfaches ETL-Paket, durch das Daten aus einer einzelnen Flatfilequelle extrahiert, Daten mithilfe zweier Transformationskomponenten für die Suche transformiert und diese Daten in die **FactCurrency** -Faktentabelle in **AdventureWorksDW2012**geschrieben werden. Als Teil dieser Lektion lernen Sie das Erstellen neuer Pakete, das Hinzufügen und Konfigurieren von Datenquellen- und Datenzielverbindungen sowie das Arbeiten mit neuen Ablaufsteuerungs- und Datenflusskomponenten.  
   
 > [!IMPORTANT]  
->  Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zum Installieren und Bereitstellen von **AdventureWorksDW2012**finden Sie unter [Reporting Services Produktbeispiel-Projekt auf CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=52691).  
+>  Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zum Installieren und Bereitstellen von **AdventureWorksDW2012**finden Sie unter [Reporting Services Produktbeispiel-Projekt auf CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=52691).  
   
 ## <a name="understanding-the-package-requirements"></a>Grundlegendes zu Paketanforderungen  
  Dieses Lernprogramm erfordert Microsoft SQL Server Data Tools.  
@@ -83,9 +82,9 @@ ms.locfileid: "48229483"
   
 -   [Schritt 1: Erstellen eines neuen Integration Services-Projekts](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Schritt 2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Schritt 2: Hinzufügen und konfigurieren ein Flat File Connection Manager](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Schritt 3: Hinzufügen und Konfigurieren eines OLE DB-Verbindungs-Managers](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [Schritt 3: Hinzufügen und konfigurieren einen OLE DB-Verbindungs-Manager](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 -   [Schritt 4: Hinzufügen eines Datenflusstasks zum Paket](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
@@ -95,9 +94,9 @@ ms.locfileid: "48229483"
   
 -   [Schritt 7: Hinzufügen und Konfigurieren des OLE DB-Ziels](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Schritt 8: Vereinfachen des Layouts des Pakets aus Lektion 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Schritt 8: Vereinfachen des Pakets aus Lektion 1 zu verstehen](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Schritt 9: Testen des Tutorialpakets aus Lektion 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Schritt 9: Testen des Lektion 1-Lernprogrammpakets](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Lektion beginnen  
  [Schritt 1: Erstellen eines neuen Integration Services-Projekts](lesson-1-1-creating-a-new-integration-services-project.md)  

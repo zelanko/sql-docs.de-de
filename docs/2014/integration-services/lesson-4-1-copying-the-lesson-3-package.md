@@ -1,24 +1,23 @@
 ---
-title: 'Schritt 1: Kopieren des Pakets aus Lektion 3 | Microsoft-Dokumentation'
+title: 'Schritt 1: Kopieren des Pakets aus Lektion 3 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f530061bcc4956391a79b78e656233812a877d1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c4dc82149a8906159c25c620aab6842b3444959
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229410"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364052"
 ---
-# <a name="step-1-copying-the-lesson-3-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 3
+# <a name="step-1-copying-the-lesson-3-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 3
   In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 3 erstellten Pakets Lesson 3.dtsx. Wenn Sie Lektion 3 nicht abgeschlossen haben, können Sie stattdessen das vollständige Lektion 3-Paket, das im Lernprogramm des Projekts enthalten ist, hinzufügen und dann kopieren. Sie verwenden diese neue Kopie im gesamten Rest der Lektion 4.  
   
 ### <a name="to-create-the-lesson-4-package"></a>So erstellen Sie das Lektion 4-Paket  
@@ -47,13 +46,13 @@ ms.locfileid: "48229410"
   
 2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **SSIS-Pakete**, und klicken Sie auf **Vorhandenes Paket hinzufügen**.  
   
-3.  Wählen Sie im Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** unter **Paketspeicherort** die Option **Dateisystem** aus.  
+3.  Wählen Sie im Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** unter **Paketspeicherort**die Option **Dateisystem**aus.  
   
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , navigieren Sie zu Lesson 3.dtsx auf Ihrem Computer, und klicken Sie anschließend auf **Öffnen**.  
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, navigieren Sie zu „Lesson 3.dtsx“ auf Ihrem Computer, und klicken Sie anschließend auf **Öffnen**.  
   
      Um alle Lektionspakete für dieses Lernprogramm herunterzuladen, gehen Sie wie folgt vor.  
   
-    1.  Klicken Sie [hier](http://go.microsoft.com/fwlink/?LinkId=275027), um zur Seite Integration Services Product Samples zu gelangen  
+    1.  Klicken Sie [hier](https://go.microsoft.com/fwlink/?LinkId=275027), um zur Seite Integration Services Product Samples zu gelangen  
   
     2.  Klicken Sie auf die Registerkarte **DOWNLOADS** .  
   

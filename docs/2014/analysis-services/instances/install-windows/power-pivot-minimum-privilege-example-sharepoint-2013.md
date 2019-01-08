@@ -11,18 +11,18 @@ ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99ca1f404297c9897fde4c257872c6088d540654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b79b9c6662b40b860cfacd85d77b09dbfb04117d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193940"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368392"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Beispiel für eine PowerPivot für SharePoint 2013-Konfiguration mit Mindestberechtigungen
   In diesem Thema wird eine PowerPivot für SharePoint 2013-Konfiguration mit Mindestberechtigungen anhand eines Beispiels veranschaulicht. Bei der Konfiguration wird für jede der drei Komponenten ein anderes Konto verwendet, von denen jedes über Mindestberechtigungen verfügt.  
   
 ## <a name="summary-of-accounts"></a>Übersicht der Konten  
- PowerPivot für SharePoint 2013 unterstützt die Verwendung des Netzwerkdienstkontos für das Analysis Services-Dienstkonto. Das Netzwerkdienstkonto ist kein unterstütztes Szenario unter SharePoint 2010. Weitere Informationen zu Dienstkonten finden Sie unter [konfigurieren Windows-Dienstkonten und-Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ PowerPivot für SharePoint 2013 unterstützt die Verwendung des Netzwerkdienstkontos für das Analysis Services-Dienstkonto. Das Netzwerkdienstkonto ist kein unterstütztes Szenario unter SharePoint 2010. Weitere Informationen zu Dienstkonten finden Sie unter [konfigurieren Windows-Dienstkonten und-Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (https://msdn.microsoft.com/library/ms143504.aspx).  
   
  In der folgenden Tabelle werden die Eigenschaften der drei Konten zusammengefasst, die in diesem Beispiel für eine Konfiguration mit Mindestberechtigungen verwendet werden.  
   
