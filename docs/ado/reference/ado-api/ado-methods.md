@@ -14,12 +14,12 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb7cf0945eb15d0f741e5b5fcba6c6e28fbe4955
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660588"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530240"
 ---
 # <a name="ado-methods"></a>ADO-Methoden
 |||  
@@ -27,7 +27,7 @@ ms.locfileid: "47660588"
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Erstellt einen neuen Datensatz für einen aktualisierbaren **Recordset** Objekt.|  
 |[Anfügen](../../../ado/reference/ado-api/append-method-ado.md)|Fügt ein Objekt einer Auflistung an. Wenn die Auflistung **Felder**, ein neues **Feld** Objekt kann erstellt werden, bevor es der Auflistung angehängt wird.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Fügt Daten an eine große Text- oder Binärdaten **Feld**, oder auf eine **Parameter** Objekt.|  
-|[BeginTrans, CommitTrans und RollbackTrans-Methode](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Verwaltet die transaktionsverarbeitung in einem **Verbindung** -Objekt wie folgt:<br /><br /> **BeginTrans** – eine neue Transaktion begonnen.<br /><br /> **CommitTrans** – speichert alle Änderungen, und beendet die aktuelle Transaktion. Sie können auch eine neue Transaktion starten.<br /><br /> **RollbackTrans** – verwirft alle Änderungen, und beendet die aktuelle Transaktion. Sie können auch eine neue Transaktion starten.|  
+|[BeginTrans, CommitTrans und RollbackTrans-Methode](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Verwaltet die transaktionsverarbeitung in einem **Verbindung** -Objekt wie folgt:<br /><br /> **BeginTrans** -beginnt eine neue Transaktion.<br /><br /> **CommitTrans** – speichert alle Änderungen, und beendet die aktuelle Transaktion. Sie können auch eine neue Transaktion starten.<br /><br /> **RollbackTrans** – verwirft alle Änderungen, und beendet die aktuelle Transaktion. Sie können auch eine neue Transaktion starten.|  
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Bricht die Ausführung einer ausstehenden asynchronen Methodenaufrufs aufgerufen.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Bricht eine ausstehende Batchaktualisierung ab.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Verwirft alle Änderungen, die an der aktuellen oder der neuen Zeile vorgenommen wurden eine **Recordset** -Objekt, oder die **Felder** Auflistung von einer **Datensatz** Objekt vor dem Aufruf der  **Update** Methode.|  

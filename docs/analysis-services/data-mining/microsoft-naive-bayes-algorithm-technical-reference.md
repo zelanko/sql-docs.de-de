@@ -1,5 +1,5 @@
 ---
-title: Technische Referenz für den Microsoft Naive Bayes-Algorithmus | Microsoft Docs
+title: Technische Referenz für den Microsoft Naive Bayes-Algorithmus | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 900da37bf40f22f039146dfeb8219930b8661887
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4e571e817caf566a919b5cce453566f4ace2a649
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015887"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399643"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Naive Bayes-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34015887"
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Implementierung des Microsoft Naive Bayes-Algorithmus  
  Der Rechenaufwand für diesen Algorithmus ist geringer als der der anderen [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Algorithmen und ist daher hilfreich für das schnelle Generieren von Miningmodellen, um Beziehungen zwischen Eingabespalten und vorhersagbaren Spalten zu ermitteln. Der Algorithmus berücksichtigt jedes Eingabeattributwertpaar und Ausgabeattributwertpaar.  
   
- Eine Beschreibung der mathematischen Eigenschaften des Bayes-Theorems würde den Rahmen dieser Dokumentation sprengen. Weitere Informationen finden Sie unter Microsoft Research im Dokument mit dem Titel [Bayesianische Netzwerke lernen: Die Kombination von Wissen und statistischen Daten](http://go.microsoft.com/fwlink/?LinkId=207029).  
+ Eine Beschreibung der mathematischen Eigenschaften des Bayes-Theorems ist über den Rahmen dieser Dokumentation hinaus. Weitere Informationen finden Sie unter Microsoft Research, die mit dem Titel im Dokument [Learning Bayesian Networks: Die Kombination aus wissen und statistischen Daten](http://go.microsoft.com/fwlink/?LinkId=207029).  
   
  Eine Beschreibung, wie Wahrscheinlichkeiten in allen Modellen angepasst werden, um potenzielle fehlende Werte zu berücksichtigen, finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34015887"
  Der Standardwert ist 0,5.  
   
  *MAXIMUM_STATES*  
- Gibt die maximale Anzahl der vom Algorithmus unterstützten Attributstatus an. Wenn die Anzahl der Status eines Attributs größer als die maximale Anzahl der Status ist, verwendet der Algorithmus die gebräuchlichsten Status und behandelt die restlichen Status als fehlend.  
+ Gibt die maximale Anzahl der vom Algorithmus unterstützten Attributstatus an. Wenn die Anzahl der Status ein Attributs größer als die maximale Anzahl von Status ist, wird der Algorithmus verwendet das Attribut die gebräuchlichsten Status und behandelt die restlichen Status als fehlend.  
   
  Der Standardwert ist 100.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34015887"
   
 |Modellierungsflag|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|Dies bedeutet, dass die Spalte zwei mögliche Statuswerte haben kann: Missing und Existing. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalte.|  
+|MODEL_EXISTENCE_ONLY|Dies bedeutet, dass für die Spalte zwei mögliche Zustände vorliegen können: fehlender und vorhandener Wert. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalte.|  
 |NOT NULL|Gibt an, dass die Spalte keinen NULL-Wert enthalten kann. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalte.|  
   
 ## <a name="requirements"></a>Anforderungen  
@@ -82,7 +82,7 @@ ms.locfileid: "34015887"
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Column|Inhaltstypen|  
+|Spalte|Inhaltstypen|  
 |------------|-------------------|  
 |Eingabeattribut|Cyclical, Discrete, Discretized, Key, Table und Ordered|  
 |Vorhersagbares Attribut|Cyclical, Discrete, Discretized, Table und Ordered|  
@@ -92,7 +92,7 @@ ms.locfileid: "34015887"
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Naive Bayes-Algorithmus](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
- [Beispiele für Naive Bayes-Modell](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
- [Miningmodellinhalt von Naive Bayes-Modelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Beispiele für Naive Bayes-Modellabfrage](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
+ [Miningmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

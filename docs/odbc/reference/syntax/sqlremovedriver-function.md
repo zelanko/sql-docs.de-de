@@ -20,16 +20,16 @@ ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b531feb33d9d555296f428fb01778a7b7627d851
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ef98000391ec6c39012603795b7f11a34c68183
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778878"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208139"
 ---
 # <a name="sqlremovedriver-function"></a>SQLRemoveDriver-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3.0  
+ Eingeführt in Version: ODBC 3.0  
   
  **Zusammenfassung**  
  **SQLRemoveDriver** ändert oder Informationen über den Treiber aus dem Eintrag "Odbcinst.ini" in den Systeminformationen entfernt.  
@@ -51,7 +51,7 @@ BOOL SQLRemoveDriver(
  *fRemoveDSN*  
  [Eingabe] Gültige Werte sind:  
   
- "True": Entfernen von DSNs im Zusammenhang mit dem Treiber, die im angegebenen *LpszDriver*. "False": Entfernen Sie nicht verknüpft ist, mit dem Treiber, die im angegebenen DSNs *LpszDriver*.  
+ "TRUE": Entfernen DSNs im Zusammenhang mit dem Treiber, die im angegebenen *LpszDriver*. "FALSE": Entfernen nicht verknüpft ist, mit dem Treiber, die im angegebenen DSNs *LpszDriver*.  
   
  *lpdwUsageCount*  
  [Ausgabe] Die Verwendungsanzahl des Treibers nach dieser Funktion aufgerufen wurde.  

@@ -1,7 +1,8 @@
 ---
-title: Verwenden Sie Active Directory-Authentifizierung (Kerberos), bei der Verbindung mit Azure Data Studio | Microsoft-Dokumentation
+title: Verwenden Sie Active Directory-Authentifizierung (Kerberos)
+titleSuffix: Azure Data Studio
 description: Informationen Sie zum Aktivieren von Kerberos verwendet Active Directory-Authentifizierung für Azure Data Studio
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: d773810ebaa544e40af99de8b5559ac44c1f5d5f
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: b73e144dd362691ea93b3312f6dc10ce542f1c43
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50098916"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030214"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Herstellen einer mit [!INCLUDE[name-sos](../includes/name-sos-short.md)] zu Ihrem SQL Server mithilfe der Windows-Authentifizierung – Kerberos 
 
@@ -42,7 +43,7 @@ Suchen Sie den Konfigurationswert für die Kerberos-KDC (Key Distribution Center
 Starten Sie `cmd.exe` , und führen Sie `nltest`.
 
 ```
-nltest /dsgetdc:DOMAIN.COMPANY.COM (where “DOMAIN.COMPANY.COM” maps to your domain’s name)
+nltest /dsgetdc:DOMAIN.COMPANY.COM (where "DOMAIN.COMPANY.COM" maps to your domain's name)
 
 Sample Output
 DC: \\dc-33.domain.company.com
@@ -125,7 +126,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ### <a name="macos"></a>macOS
 
-- Fügen Sie die Active Directory-Domänencontroller von MacOS- [folgendermaßen](https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
+- Verbinden Sie Ihr MacOS mit der Active Directory-Domänencontroller, mit folgenden Schritten:
 
 
 

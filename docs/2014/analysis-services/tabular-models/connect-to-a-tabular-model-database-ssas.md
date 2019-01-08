@@ -11,12 +11,12 @@ ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b272d35b7d8796cd67f17a045def480cc2ade14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0f278f5d0d036bac02e53263acc023dcae7d808
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100090"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538133"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank (SSAS)
   Nachdem Sie ein tabellarisches Modell erstellt und auf einem Analysis Services-Tabellenmodus-Server bereitgestellt haben, müssen Sie Berechtigungen festlegen, die es für Clientanwendungen verfügbar machen. Dieses Thema erläutert die Vorgehensweise bei Berechtigungen und beim Verbindungsaufbau mit einer Datenbank ausgehend von Clientanwendungen.  
@@ -51,7 +51,7 @@ ms.locfileid: "48100090"
   
 1.  Öffnen Sie in der Zentraladministration die Seite "Dienstkonten konfigurieren".  
   
-2.  Wählen Sie den von Excel Services verwendeten Dienstanwendungspool aus. Dies kann **Dienstanwendungspool – Systemstandard für SharePoint-Webdienste** oder ein benutzerdefinierter Anwendungspool sein. Das von Excel Services verwendete verwaltete Konto wird auf der Seite angezeigt.  
+2.  Wählen Sie den von Excel Services verwendeten Dienstanwendungspool aus. Dies kann **Dienstanwendungspool – Systemstandard für SharePoint-Webdienste** oder einen benutzerdefinierten Anwendungspool. Das von Excel Services verwendete verwaltete Konto wird auf der Seite angezeigt.  
   
      Bei SharePoint-Farmen, die Reporting Services im SharePoint-Modus umfassen, müssen Sie die Kontoinformationen für die Reporting Services-Dienstanwendung ebenfalls abrufen.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48100090"
   
 5.  Wählen Sie die Datenbank aus. Eine gültige Auswahl zeigt einen einzelnen **Modell** -Cube für die Datenbank an. Klicken Sie auf **Weiter** und anschließend auf **Fertig stellen**.  
   
- Nachdem die Verbindung hergestellt wurde, können Sie mithilfe der Daten eine PivotTable oder ein PivotChart erstellen. Weitere Informationen finden Sie unter [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](analyze-in-excel-ssas-tabular.md).  
+ Nachdem die Verbindung hergestellt wurde, können Sie mithilfe der Daten eine PivotTable oder ein PivotChart erstellen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](analyze-in-excel-ssas-tabular.md)definieren.  
   
 ##  <a name="bkmk_sharepoint"></a> Herstellen einer Verbindung von SharePoint aus  
  Wenn Sie PowerPivot für SharePoint verwenden, können Sie eine BI-Semantikmodell-Verbindungsdatei in SharePoint erstellen, die die Umleitung zu einer Datenbank ermöglicht, die auf einem Analysis Services-Server im tabellarischen Modus ausgeführt wird. Eine BI-Semantikmodell-Verbindung stellt einen HTTP-Endpunkt für eine Datenbank bereit. Sie vereinfacht auch den Tabellenmodell-Zugriff für Wissensarbeiter, die routinemäßig Dokumente auf einer SharePoint-Website verwenden. Wissensarbeiter müssen nur den Speicherort der BI-Semantikmodell-Verbindungsdatei oder die URL kennen, um auf Tabellenmodell-Datenbanken zuzugreifen. Details zum Serverspeicherort oder Datenbanknamen werden in der BI-Semantikmodell-Verbindung gekapselt. Weitere Informationen zum Erstellen und Verwenden von BI-Semantikmodell-Verbindungsdateien finden Sie unter [PowerPivot BI-Semantikmodellverbindung &#40;bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) und [eine BI-Semantikmodell-Verbindung mit einem tabellarischen Modell erstellen Datenbank](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  

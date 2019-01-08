@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHsyscolumns
@@ -19,12 +18,12 @@ ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0e9e69891e759468ab0ae62a59c2fc61a19a9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74116af7883c4b9a3f27c2afed88d16c993198ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668878"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747885"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47668878"
 |**xtype**|**tinyint**|Der Typ des physischen Speichers aus [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|Die ID des erweiterten benutzerdefinierten Datentyps.|  
-|**Länge**|**bigint**|Die maximale physische Speicherlänge aus [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**length**|**bigint**|Die maximale physische Speicherlänge aus [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**xprec**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**int**|Die Spalten- oder Parameter-ID.|  
@@ -48,7 +47,7 @@ ms.locfileid: "47668878"
 |**colstat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|Die ID des Standards für diese Spalte.|  
 |**Domäne**|**int**|Die ID der Regel oder der CHECK-Einschränkung für diese Spalte.|  
-|**Anzahl**|**int**|Die Nummer der Unterprozedur, wenn die Prozedur gruppiert ist (**0** für Einträge).|  
+|**number**|**int**|Die Nummer der Unterprozedur, wenn die Prozedur gruppiert ist (**0** für Einträge).|  
 |**colorder**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|Der Offset in die Zeile, in der diese Spalte angezeigt wird.|  
@@ -59,7 +58,7 @@ ms.locfileid: "47668878"
 |**usertype**|**tinyint**|Die ID des benutzerdefinierten Datentyps aus [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|Der Genauigkeitsgrad für diese Spalte.|  
-|**Skalieren**|**int**|Die Dezimalstellen in dieser Spalte.|  
+|**scale**|**int**|Die Dezimalstellen in dieser Spalte.|  
 |**iscomputed**|**int**|Das Flag, das anzeigt, ob die Spalte berechnet ist:<br /><br /> **0** = nicht berechnet.<br /><br /> **1** = berechnet.|  
 |**isoutparam**|**int**|Gibt an, ob der Prozedurparameter ein Ausgabeparameter ist.<br /><br /> **1** = "true".<br /><br /> **0** = "false".|  
 |**IsNullable**|**int**|Gibt an, ob die Spalte NULL-Werte zulässt.<br /><br /> **1** = "true".<br /><br /> **0** = "false".|  

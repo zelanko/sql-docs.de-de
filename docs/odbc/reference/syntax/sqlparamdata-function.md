@@ -20,16 +20,16 @@ ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ffba9afd0609bab57cdaa182b650f7bd5a0fb34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec0038e0ec6c87dba403bbe62441815dfa6d0251
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606815"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205179"
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
   
  **Zusammenfassung**  
  **SQLParamData** zusammen mit **SQLPutData** Parameterdaten während der Ausführung der Anweisung, und klicken Sie mit bereitstellen **SQLGetData** gestreamte ausgabeparameterdaten abrufen.  
@@ -61,7 +61,7 @@ SQLRETURN SQLParamData(
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07006|Attributverletzung eingeschränkter Daten|Der Wert von identifiziert die *ValueType* -Argument in **SQLBindParameter** für der gebundene Parameter nicht in der identifizierte Datentyp konvertiert werden kann die *ParameterType*-Argument in **SQLBindParameter**.<br /><br /> Der Wert zurückgegeben, für einen Parameter gebunden wird, wie SQL_PARAM_INPUT_OUTPUT oder SQL_PARAM_OUTPUT nicht in der identifizierte Datentyp konvertiert werden konnte die *ValueType* -Argument in **SQLBindParameter**.<br /><br /> (Wenn die Datenwerte für eine oder mehrere Zeilen nicht konvertiert werden konnte, aber eine oder mehrere Zeilen wurden erfolgreich zurückgegeben, diese Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die mit der der Treiber verbunden wurde, Fehler vor der Verarbeitung für die Funktion abgeschlossen.|  
-|22026|Zeichenfolgendaten, nicht übereinstimmende Länge|Der Typ des SQL_NEED_LONG_DATA_LEN-Informationen in **SQLGetInfo** wurde von "Y", und weniger Daten für einen Parameter "long" (der Datentyp wurde SQL_LONGVARCHAR, SQL_LONGVARBINARY oder einen long-Daten datenquellenspezifischen-Datentyp) gesendet wurde, als angegeben wurde mit der *StrLen_or_IndPtr* -Argument in **SQLBindParameter**.<br /><br /> Der Typ des SQL_NEED_LONG_DATA_LEN-Informationen in **SQLGetInfo** wurde von "Y", und weniger Daten für eine lange Spalte (der Datentyp wurde SQL_LONGVARCHAR, SQL_LONGVARBINARY oder einen long-Daten datenquellenspezifischen-Datentyp) gesendet wurde, als im angegebenen die Puffer der Länge für eine Spalte in eine Zeile mit Daten, die hinzugefügt oder aktualisiert wurde **SQLBulkOperations** oder mit aktualisierten **SQLSetPos**.|  
+|22026|Zeichenfolgendaten, nicht übereinstimmende Länge|Der Typ des SQL_NEED_LONG_DATA_LEN-Informationen in **SQLGetInfo** wurde von "Y", und weniger Daten für einen Parameter "long" (der Datentyp wurde SQL_LONGVARCHAR, SQL_LONGVARBINARY oder einen long-Daten datenquellenspezifische-Datentyp) gesendet wurde, als angegeben wurde mit der *StrLen_or_IndPtr* -Argument in **SQLBindParameter**.<br /><br /> Der Typ des SQL_NEED_LONG_DATA_LEN-Informationen in **SQLGetInfo** wurde von "Y", und weniger Daten für eine lange Spalte (der Datentyp wurde SQL_LONGVARCHAR, SQL_LONGVARBINARY oder einen long-Daten datenquellenspezifische-Datentyp) gesendet wurde, als im angegebenen die Puffer der Länge für eine Spalte in eine Zeile mit Daten, die hinzugefügt oder aktualisiert wurde **SQLBulkOperations** oder mit aktualisierten **SQLSetPos**.|  
 |40001|Serialisierungsfehler|Die Transaktion wurde wegen eines Deadlocks Ressource mit einer anderen Transaktion ein Rollback ausgeführt.|  
 |40003|Unbekannter Anweisungsabschluss|Fehler bei der zugeordnete Verbindung während der Ausführung dieser Funktion und der Status der Transaktion kann nicht bestimmt werden.|  
 |HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
@@ -82,7 +82,7 @@ SQLRETURN SQLParamData(
   
  Wenn eine Anwendung ruft **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos**, gibt der Treiber SQL_NEED_ Daten, wenn sie Data-at-Execution-Daten. Klicken Sie dann eine Anwendung ruft **SQLParamData** um zu bestimmen, welche die zu sendenden Daten. Wenn der Treiber die Parameterdaten erforderlich ist, gibt der Treiber der  *\*ValuePtrPtr* Ausgabe puffert den Wert, der die Anwendung im Rowset Puffer abgelegt. Die Anwendung kann diesen Wert verwenden, um zu bestimmen, welche Parameterdaten des Treibers anfordert. Wenn der Treiber die Daten der Spalte erforderlich ist, gibt der Treiber der  *\*ValuePtrPtr* Puffern Sie die Adresse, die die Spalte ursprünglich wie folgt, gebunden wurde:  
   
- *Adresse gebunden* + *Bindung Offset* + ((*Zeilennummer* – 1) X *Elementgröße*)  
+ *Adresse gebunden* + *Bindung Offset* + ((*Zeilennummer* - 1) X *Elementgröße*)  
   
  auf die Variablen definiert werden, wie in der folgenden Tabelle angegeben.  
   

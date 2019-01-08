@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58d2d159d0788d3a32c793899b253b66c62a0dbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9a24c843ed45a42fe4072b47c5642d81520a75e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703303"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214139"
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>"sp_refresh_parameter_encryption" (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 Der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *MODULE_NAME* darf nicht sein, eine common Language Runtime (CLR) gespeicherte Prozedur oder eine CLR-Funktion. *MODULE_NAME* darf nicht schemagebunden sein. *MODULE_NAME* ist `nvarchar`, hat keinen Standardwert. *MODULE_NAME* kann ein mehrteiliger Bezeichner sein, aber nur auf Objekte in der aktuellen Datenbank verweisen kann.
 
 [  **@namespace =** ] **"** < Klasse > **"**   
-Klasse des angegebenen Moduls. Wenn *Module_name* ein DDL-Triggers ist `<class>` ist erforderlich. `<class>` ist `nvarchar(20)`. Gültige Eingaben sind `DATABASE_DDL_TRIGGER` und `SERVER_DDL_TRIGGER`.    
+Klasse des angegebenen Moduls. Wenn *Module_name* ein DDL-Triggers ist `<class>` ist erforderlich. `<class>` ist `nvarchar(20)` Gültige Eingaben sind `DATABASE_DDL_TRIGGER` und `SERVER_DDL_TRIGGER`.    
 
 ## <a name="return-code-values"></a>Rückgabecodewerte  
 
@@ -70,7 +70,7 @@ Wenn die der Verschlüsselungseigenschaften einer Tabelle geändert werden, `sp_
 
 Um einen DDL-Trigger auf Serverebene zu aktualisieren, führen Sie diese gespeicherte Prozedur aus dem Kontext einer beliebigen Datenbank aus.
 
->  [!NOTE]   
+> [!NOTE]
 >  Alle Signaturen, die dem Objekt zugeordnet sind werden gelöscht, beim Ausführen von `sp_refresh_parameter_encryption`.
 
 ## <a name="permissions"></a>Berechtigungen

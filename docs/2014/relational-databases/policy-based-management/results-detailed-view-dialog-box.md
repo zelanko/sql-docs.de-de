@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.results.f1
@@ -13,17 +13,17 @@ ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c304f672ddcead8ac2077f27d02b65033c4b1b77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143430"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762212"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Ergebnisse, Detailansicht (Dialogfeld)
   In diesem Dialogfeld werden die Ergebnisse der Richtlinienauswertung angezeigt, wenn Sie eine Richtlinie mit dem Dialogfeld **Richtlinien auswerten** ausgeführt und auf **Auswerten**geklickt haben. Dieses Dialogfeld ist schreibgeschützt und hilft Ihnen dabei zu ermitteln, welcher Teil eines Eigenschaftsausdrucks fehlschlagen könnte.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **And/Or**  
  Wenn mehr als ein Eigenschaftsausdruck vorhanden ist, wird hiermit angegeben, ob die Eigenschaftsausdrücke kumuliert oder alternativ sind.  
   
