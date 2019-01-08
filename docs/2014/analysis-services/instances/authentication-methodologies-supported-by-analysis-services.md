@@ -11,12 +11,12 @@ ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 729780b737502557830e6f1ccdea39203b0154ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6d96efaa23d50042ea4f4501b89b4a5cc1dd31
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077830"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365044"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Von Analysis Services unterstützte Authentifizierungsmethoden
   Verbindungen zwischen einer Clientanwendung und einer Analysis Services-Instanz erfordern die (integrierte) Windows-Authentifizierung. Sie können eine Windows-Benutzeridentität mithilfe einer der folgenden Methoden angeben:  
@@ -33,7 +33,7 @@ ms.locfileid: "48077830"
   
  Beachten Sie, dass die anspruchsbasierte Authentifizierung nicht unterstützt wird. Sie können kein anspruchsbasiertes Windows-Token für den Zugriff auf Analysis Services verwenden. Die Analysis Services-Clientbibliotheken funktionieren nur mit Windows-Sicherheitsprinzipalen. Wenn die BI-Lösung Forderungsidentitäten umfasst, benötigen Sie für jeden Benutzer Schattenkonten für Windows-Identitäten. Alternativ können Sie gespeicherte Anmeldeinformationen für den Zugriff auf Analysis Services-Daten verwenden.  
   
- Weitere Informationen zu BI- und Analysis Services-Authentifizierungsabläufen finden Sie unter [Microsoft BI-Authentifizierung und Identitätsdelegierung](http://go.microsoft.com/fwlink/?LinkID=286576).  
+ Weitere Informationen zu BI- und Analysis Services-Authentifizierungsabläufen finden Sie unter [Microsoft BI-Authentifizierung und Identitätsdelegierung](https://go.microsoft.com/fwlink/?LinkID=286576).  
   
 ##  <a name="bkmk_auth"></a> Grundlegendes zu alternativen Authentifizierungsformen  
  Verbindungen mit einer Analysis Services-Datenbank erfordern eine Windows-Benutzeridentität bzw. die Mitgliedschaft in einer Windows-Gruppe sowie die zugehörigen Berechtigungen. Die Identität kann allgemeingültig sein, wenn sich ein Benutzer z. B. anmeldet, um einen Bericht anzuzeigen. Das wahrscheinlichere Szenario ist jedoch, die den einzelnen Benutzern zugewiesenen Identitäten zu verwenden.  
@@ -63,7 +63,7 @@ ms.locfileid: "48077830"
   
  EffectiveUserName ist eine Verbindungszeichenfolgen-Eigenschaft, die für die Übergabe von Identitätsinformationen an Analysis Services verwendet wird. PowerPivot für SharePoint verwendet die Eigenschaft, um Benutzeraktivitäten in Nutzungsprotokollen zu erfassen. Excel Services und PerformancePoint Services ermöglichen das Abrufen von Daten, die von Arbeitsmappen oder Dashboards in SharePoint verwendet werden. Sie können auch in benutzerdefinierten Anwendungen oder Skripts verwendet werden, die Vorgänge für eine Analysis Services-Instanz ausführen.  
   
- Weitere Informationen zur Verwendung von EffectiveUserName in SharePoint finden Sie unter [Verwenden von "EffectiveUserName" der Analysis Services in SharePoint Server 2010](http://go.microsoft.com/fwlink/?LinkId=311905).  
+ Weitere Informationen zur Verwendung von EffectiveUserName in SharePoint finden Sie unter [Verwenden von "EffectiveUserName" der Analysis Services in SharePoint Server 2010](https://go.microsoft.com/fwlink/?LinkId=311905).  
   
  **Standardauthentifizierung und anonyme Authentifizierung**  
   
@@ -77,13 +77,13 @@ ms.locfileid: "48077830"
   
  Die meisten Anwendungsdienste der mittleren Ebene umfassen Funktionen zum Speichern von Benutzernamen und Kennwörtern, die anschließend verwendet werden, um Daten aus einem untergeordneten Datenspeicher wie Analysis Services oder der relationalen SQL Server-Engine abzurufen. So gesehen bieten gespeicherte Anmeldeinformationen eine fünfte Alternative zum Abrufen von Daten. Die Beschränkungen dieser Vorgehensweise liegen im erhöhten Wartungsaufwand, der mit der Aktualisierung von Benutzernamen und Kennwörtern verbunden ist, und der Verwendung einer einzelnen Identität für die Verbindung. Wenn Ihre Lösung die Identität des ursprünglichen Aufrufers erfordert, sind gespeicherte Anmeldeinformationen keine geeignete Alternative.  
   
- Weitere Informationen zu gespeicherten Anmeldeinformationen finden Sie unter [Erstellen, Ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) und [Verwenden von Excel Services mit Secure Store Service in SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869).  
+ Weitere Informationen zu gespeicherten Anmeldeinformationen finden Sie unter [Erstellen, Ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) und [Verwenden von Excel Services mit Secure Store Service in SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkID=309869).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden des Identitätswechsels mit Transportsicherheit](http://go.microsoft.com/fwlink/?LinkId=311727)   
+ [Verwenden des Identitätswechsels mit Transportsicherheit](https://go.microsoft.com/fwlink/?LinkId=311727)   
  [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung](configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [SPN-Registrierung für Analysis Services-Instanz](spn-registration-for-an-analysis-services-instance.md)   
+ [SPN-Registrierung für eine Analysis Services-Instanz](spn-registration-for-an-analysis-services-instance.md)   
  [Verbindung mit Analysis Services herstellen](connect-to-analysis-services.md)  
   
   

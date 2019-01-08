@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server destination
@@ -17,12 +16,12 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67e78121e3e55cb921da9e48618b67bc997dba28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24f0adb1564882697bf862407cda8dfaee44cd23
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201280"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791022"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Massenladen von Daten mithilfe des SQL Server-Ziels
   Das Paket muss bereits mindestens einen Datenflusstask und eine Datenquelle enthalten, damit Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ziel hinzufügen und konfigurieren können.  
@@ -55,7 +54,7 @@ ms.locfileid: "48201280"
     > [!NOTE]  
     >  Vom Ziel werden automatisch gleichnamige Spalten zugeordnet.  
   
-9. Klicken Sie auf **Erweitert** , und legen Sie die Optionen für das Massenladen fest: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **Einschränkungen überprüfen**und **Trigger auslösen**.  
+9. Klicken Sie auf **erweitert** und legen Sie die Optionen für das Massenladen: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **Check-Einschränkungen**, und **Trigger auslösen**.  
   
      Optional können Sie die erste und letzte einzufügende Eingabezeile, die maximal zulässige Anzahl von Fehlern, nach der der Einfügevorgang beendet wird, sowie die Spalten, nach der der Einfügevorgang sortiert wird, angeben.  
   
@@ -67,8 +66,8 @@ ms.locfileid: "48201280"
 11. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Ziels](sql-server-destination.md)   
- [Integration Services-Transformationen](transformations/integration-services-transformations.md)   
+ [SQL Server Destination](sql-server-destination.md)   
+ [SQL Server Integration Services-Transformationen](transformations/integration-services-transformations.md)   
  [SQL Server Integration Services-Pfade](integration-services-paths.md)   
  [Datenflusstask](../control-flow/data-flow-task.md)  
   

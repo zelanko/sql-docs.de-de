@@ -14,12 +14,12 @@ ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ee2297f01ef2cc0a4dc94beca66939bf6ae9030
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c9614a71c0015d17178a57d33c5fd0d9b62433c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145650"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358852"
 ---
 # <a name="sqlfetchscroll"></a>SQLFetchScroll
   **SQLFetchScroll** ein Rowset von Daten an die Anwendung zurück. Die Größe des Rowsets wird mit festgelegt [SQLSetStmtAttr](sqlsetstmtattr.md). Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt alle definierten abrufanweisungen (beispielsweise SQL_FETCH_RELATIVE) mit folgenden Einschränkungen:  
@@ -37,7 +37,7 @@ ms.locfileid: "48145650"
  **SQLFetchScroll** unterstützt große CLR-benutzerdefinierte Typen (UDTs). Weitere Informationen finden Sie unter [Large CLR User-Defined Typen &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLFetchScroll-Funktion](http://go.microsoft.com/fwlink/?LinkId=59343)   
+ [SQLFetchScroll-Funktion](https://go.microsoft.com/fwlink/?LinkId=59343)   
  [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
   
   

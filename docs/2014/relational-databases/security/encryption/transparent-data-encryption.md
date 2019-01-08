@@ -18,23 +18,23 @@ ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 03971bcd487016fbc1fadc07203ebe2ab73555d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40bf5851663840dac27252aa5cdfdadb0e76da93
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163170"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205699"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparente Datenverschlüsselung (TDE)
   *Transparente Datenverschlüsselung* (TDE) verschlüsselt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] -Datendateien, bekannt als "Verschlüsselung ruhender Daten". Sie können verschiedene Vorsichtsmaßnahmen treffen, um eine Datenbank abzusichern, beispielsweise ein sicheres System entwerfen, vertrauliche Datenbestände verschlüsseln oder eine Firewall für die Datenbankserver einrichten. Wenn jedoch physische Medien (etwa Laufwerke oder Sicherungsbänder) gestohlen werden, muss ein böswilliger Benutzer die Datenbank einfach nur wieder herstellen und kann dann die Daten durchsuchen. Eine Lösung dieses Problems besteht darin, die sensiblen Daten in der Datenbank zu verschlüsseln, und den für die Verschlüsselung der Daten verwendeten Schlüssel mit einem Zertifikat zu schützen. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  
   
  Die TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten und der Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Verschlüsselungsschlüssel für die Datenbank (Database Encryption Key, DEK), der in der Datenbankstartseite gespeichert wird, damit er während der Wiederherstellung verfügbar ist. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der Masterdatenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird. TDE schützt die "ruhenden" Daten, also die Daten- und die Protokolldateien. Sie entspricht den in vielen Branchen etablierten Gesetzen, Bestimmungen und Richtlinien. Dadurch können Softwareentwickler Daten mithilfe der AES- und 3DES-Verschlüsselungsalgorithmen verschlüsseln, ohne vorhandene Anwendungen ändern zu müssen.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  TDE stellt keine Verschlüsselung über Kommunikationskanäle bereit. Weitere Informationen zum Verschlüsseln von Daten über Kommunikationskanäle finden Sie unter [Aktivieren von verschlüsselten Verbindungen für die Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
->   
+> 
 >  **Verwandte Themen:**  
->   
+> 
 >  -   [Transparente Datenverschlüsselung in Azure SQL-Datenbank](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
 > -   [Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server](move-a-tde-protected-database-to-another-sql-server.md)  
 > -   [Aktivieren von TDE mit EKM](enable-tde-on-sql-server-using-ekm.md)  
@@ -218,7 +218,7 @@ GO
  Die tempdb-Systemdatenbank wird verschlüsselt, wenn eine beliebige andere Datenbank in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz mithilfe von TDE verschlüsselt ist. Dies könnte sich auf die Leistung unverschlüsselter Datenbanken der gleichen Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]auswirken. Weitere Informationen über die tempdb-Systemdatenbank finden Sie unter [tempdb-Datenbank](../../databases/tempdb-database.md).  
   
 ### <a name="transparent-data-encryption-and-replication"></a>Transparente Datenverschlüsselung und Replikation  
- Daten aus einer TDE-aktivierten Datenbank werden bei der Replikation nicht automatisch in einer verschlüsselten Form repliziert. Sie müssen TDE separat aktivieren, wenn Sie die Verteilungs- und Abonnentendatenbanken schützen möchten. Bei der Snapshotreplikation sowie bei der ursprünglichen Verteilung von Daten für die Transaktions- und Mergereplikation können Daten in unverschlüsselten Zwischendateien gespeichert werden – dies sind z. B. die BCP-Dateien.  Während der Transaktions- oder Mergereplikation kann die Verschlüsselung aktiviert werden, um den Kommunikationskanal zu schützen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+ Daten aus einer TDE-aktivierten Datenbank werden bei der Replikation nicht automatisch in einer verschlüsselten Form repliziert. Sie müssen TDE separat aktivieren, wenn Sie die Verteilungs- und Abonnentendatenbanken schützen möchten. Bei der Snapshotreplikation sowie bei der ursprünglichen Verteilung von Daten für die Transaktions- und Mergereplikation können Daten in unverschlüsselten Zwischendateien gespeichert werden – dies sind z. B. die BCP-Dateien.  Während der Transaktions- oder Mergereplikation kann die Verschlüsselung aktiviert werden, um den Kommunikationskanal zu schützen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ### <a name="transparent-data-encryption-and-filestream-data"></a>Transparente Datenverschlüsselung und FILESTREAM-Daten  
  FILESTREAM-Daten werden nicht verschlüsselt, auch dann nicht, wenn TDE aktiviert ist.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - republishing data
@@ -15,12 +14,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 08b24f4f2c881424c6e6bb5c1a9fb1e4217b74eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 976520f5000d3a0f96ee3bdea25bcc9802939d36
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057050"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794192"
 ---
 # <a name="republish-data"></a>Erneutes Veröffentlichen von Daten
   In einem Wiederveröffentlichungsmodell sendet der Verleger Daten an einen Abonnenten, der diese wiederum für eine beliebige Anzahl von Abonnenten erneut veröffentlicht. Dies ist hilfreich, wenn ein Verleger Daten an Abonnenten über eine langsame oder teure Kommunikationsverbindung senden muss. Falls es eine Reihe von Abonnenten am äußersten Ende dieser Verbindung gibt, kann das Verwenden eines Neuverlegers einen Großteil der Verteilungslast auf diese Seite der Verbindung auslagern.  
@@ -46,7 +45,7 @@ ms.locfileid: "48057050"
   
  ![Republishing data](media/repl-06a.gif "Republishing data")  
   
- Jeder Server kann als Verleger und als Abonnent fungieren. Nehmen Sie das folgende Diagramm als Beispiel. Es enthält die Veröffentlichung einer Tabelle in London, die an vier verschiedene Städte in den USA verteilt werden muss: Chicago, New York, San Diego und Seattle. Der Server in New York wird ausgewählt, die aus London stammende veröffentlichte Tabelle zu abonnieren, da der Standort in New York die folgenden Bedingungen erfüllt:  
+ Jeder Server kann als Verleger und als Abonnent fungieren. Betrachten Sie beispielsweise das folgende Diagramm, in dem eine Veröffentlichung aus einer Tabelle in London vorhanden ist und an vier verschiedene Städte in den USA verteilt werden muss: Chicago, New York, San Diego und Seattle. Der Server in New York wird ausgewählt, die aus London stammende veröffentlichte Tabelle zu abonnieren, da der Standort in New York die folgenden Bedingungen erfüllt:  
   
 -   Die Netzwerkverbindung zurück nach London ist relativ zuverlässig.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48057050"
 ## <a name="see-also"></a>Siehe auch  
  [Verteilung konfigurieren](configure-distribution.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)   
  [Initialize a Subscription](initialize-a-subscription.md)   
  [Synchronisieren von Daten](synchronize-data.md)  
   

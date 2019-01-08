@@ -14,12 +14,12 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6bf6502b459cf8f81a3137d73402b73ab6b6e9c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05404740b18f28a4c47e791fd321af39be1b757f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182260"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367612"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>Problembehandlung für die AlwaysOn-Verfügbarkeitsgruppenkonfiguration (SQL Server)
   Dieses Thema enthält Informationen, um Sie beim Beheben typischer Probleme beim Konfigurieren von Serverinstanzen für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]zu unterstützen. Typische Konfigurationsprobleme: [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist deaktiviert, Konten werden falsch konfiguriert, der Datenbankspiegelungs-Endpunkt ist nicht vorhanden, auf den Endpunkt kann nicht zugegriffen werden (SQL Server-Fehler 1418), Netzwerkzugriff ist nicht vorhanden und der Befehl zum Verknüpfen der Datenbank schlägt fehl (SQL Server-Fehler 35250).  
@@ -130,14 +130,14 @@ ms.locfileid: "48182260"
 ##  <a name="ROR"></a> Schreibgeschütztes Routing funktioniert nicht ordnungsgemäß  
  Überprüfen Sie die folgenden Konfigurationswerteinstellungen und korrigieren Sie sie gegebenenfalls.  
   
-||Bei...|Aktion|Kommentare|Link|  
+||Am...|Aktion|Kommentare|Link|  
 |------|---------|------------|--------------|----------|  
 |![Kontrollkästchen](../../media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|dem aktuellen primären Replikat|Stellen Sie sicher, dass der Listener der Verfügbarkeitsgruppe online ist.|**So überprüfen Sie, ob der Listener online ist:**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **So starten Sie einen Offlinelistener neu:**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![Kontrollkästchen](../../media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|dem aktuellen primären Replikat|Stellen Sie sicher, dass READ_ONLY_ROUTING_LIST nur Serverinstanzen enthält, die ein lesbares sekundäres Replikat hosten.|**So identifizieren Sie lesbare sekundäre Replikate:** sys.availability_replicas (Spalte**econdary_role_allow_connections_desc** )<br /><br /> **So zeigen Sie eine schreibgeschützte Routingliste an:** sys.availability_read_only_routing_lists<br /><br /> **So ändern Sie eine schreibgeschützte Routingliste:** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
-|![Kontrollkästchen](../../media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|jedem Replikat in read_only_routing_list|Stellen Sie sicher, dass die Windows-Firewall den Port READ_ONLY_ROUTING_URL nicht blockiert.|—|[Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
-|![Kontrollkästchen](../../media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|jedem Replikat in read_only_routing_list|Überprüfen Sie in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager die folgenden Aspekte:<br /><br /> SQL Server-Remoteverbindung ist aktiviert.<br /><br /> TCP/IP ist aktiviert.<br /><br /> Die IP-Adressen sind ordnungsgemäß konfiguriert.|—|[Anzeigen oder Ändern von Servereigenschaften &#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports &#40;SQL Server-Konfigurations-Manager&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![Kontrollkästchen](../../media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|jedem Replikat in read_only_routing_list|Stellen Sie sicher, dass die READ_ONLY_ROUTING_URL (TCP **://*`system-address`*: *** Port*) enthält, den richtigen vollqualifizierten Domänennamen (FQDN) und die Portnummer.|—|[Berechnen von Read_only_routing_url für AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
-|![Kontrollkästchen](../../media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Clientsystem|Überprüfen Sie, ob der Clienttreiber schreibgeschütztes Routing unterstützt.|—|[AlwaysOn-Clientkonnektivität (SQLServer)](always-on-client-connectivity-sql-server.md)|  
+|![Kontrollkästchen](../../media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|jedem Replikat in read_only_routing_list|Stellen Sie sicher, dass die Windows-Firewall den Port READ_ONLY_ROUTING_URL nicht blockiert.|-|[Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
+|![Kontrollkästchen](../../media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|jedem Replikat in read_only_routing_list|Überprüfen Sie in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager die folgenden Aspekte:<br /><br /> SQL Server-Remoteverbindung ist aktiviert.<br /><br /> TCP/IP ist aktiviert.<br /><br /> Die IP-Adressen sind ordnungsgemäß konfiguriert.|-|[Anzeigen oder Ändern von Servereigenschaften &#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports &#40;SQL Server-Konfigurations-Manager&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
+|![Kontrollkästchen](../../media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|jedem Replikat in read_only_routing_list|Stellen Sie sicher, dass die READ_ONLY_ROUTING_URL (TCP **://*`system-address`*: *** Port*) enthält, den richtigen vollqualifizierten Domänennamen (FQDN) und die Portnummer.|-|[Berechnen von Read_only_routing_url für AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![Kontrollkästchen](../../media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Clientsystem|Überprüfen Sie, ob der Clienttreiber schreibgeschütztes Routing unterstützt.|-|[AlwaysOn-Clientkonnektivität (SQLServer)](always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -157,11 +157,11 @@ ms.locfileid: "48182260"
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog-Failovercluster-Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog-Failovercluster-Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

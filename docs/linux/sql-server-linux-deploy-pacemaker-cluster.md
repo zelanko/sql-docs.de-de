@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 25fb50dbd858007a29d2a10a94053884620ed68b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49f5e3fd6250d3a9bb20ff68927bc66fa1e5d426
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750588"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211539"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Bereitstellen eines Pacemaker-Clusters für SQL Server unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieses Tutorial beschreibt die erforderlichen Aufgaben zum Bereitstellen eines Linux Pacemaker-Clusters für eine [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On-verfügbarkeitsgruppe (AG) oder einer Failoverclusterinstanz (FCI). Im Gegensatz zu den eng verknüpfte Windows-Server /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Stapel, Erstellung eines Pacemaker-Clusters als auch (AG) Konfiguration von Verfügbarkeitsgruppen unter Linux kann durchgeführt werden, vor oder nach der Installation von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Die Integration und die Konfiguration von Ressourcen für den Pacemaker-Teil einer Verfügbarkeitsgruppe oder einer FCI-Bereitstellung wird ausgeführt, nachdem der Cluster konfiguriert ist.
+Dieses Tutorial beschreibt die erforderlichen Aufgaben zum Bereitstellen eines Linux Pacemaker-Clusters für eine [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On-verfügbarkeitsgruppe (AG) oder einer Failoverclusterinstanz (FCI). Im Gegensatz zu den eng verknüpfte Windows-Server / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Stapel, Erstellung eines Pacemaker-Clusters als auch (AG) Konfiguration von Verfügbarkeitsgruppen unter Linux kann durchgeführt werden, vor oder nach der Installation von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Die Integration und die Konfiguration von Ressourcen für den Pacemaker-Teil einer Verfügbarkeitsgruppe oder einer FCI-Bereitstellung wird ausgeführt, nachdem der Cluster konfiguriert ist.
 > [!IMPORTANT]
 > Eine Verfügbarkeitsgruppe mit dem Clustertyp None ist *nicht* erfordern einen Pacemaker-Cluster, noch kann er von Pacemaker verwaltet werden. 
 
@@ -126,7 +126,7 @@ Dieser Abschnitt beschreibt das Erstellen und Konfigurieren des Clusters für je
 1. Autorisieren Sie die Knoten
    
    ```bash
-   sudo pcs cluster auth <Node1 Node2 … NodeN> -u hacluster
+   sudo pcs cluster auth <Node1 Node2 ... NodeN> -u hacluster
    ```
    
    wo *NodeX* ist der Name des Knotens.

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
@@ -12,12 +12,12 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d057ee45a14550b1ba56b9b15b9e7011e5238db1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143440"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798692"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Verwenden von SQL Server Profiler zum Erstellen eines Sammlungssatzes für die SQL-Ablaufverfolgung (SQL Server Management Studio)
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] können Sie die serverseitigen Ablaufverfolgungsfunktionen von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] nutzen, um eine Ablaufverfolgungsdefinition für das Erstellen eines Sammlungssatzes zu exportieren, der den generischen Sammlertyp für die SQL-Ablaufverfolgung verwendet. Dieser Vorgang besteht aus zwei Teilen:  
@@ -94,9 +94,9 @@ ms.locfileid: "48143440"
   
 3.  Führen Sie einen Bildlauf durch das Skript durch, und nehmen Sie die folgenden Ersetzungen vor, wie im Text des Skriptkommentars angegeben:  
   
-    -   Ersetzen Sie **SQLTrace Collection Set Name Here** durch den Namen, den Sie für den Sammlungssatz verwenden möchten. Benennen Sie in diesem Beispiel den Sammlungssatz `SPROC_CollectionSet`.  
+    -   Ersetzen Sie **SQLTrace Collection Set Name Here** durch den Namen, den Sie für den Sammlungssatz verwenden möchten. Benennen Sie in diesem Beispiel den Sammlungssatz mit `SPROC_CollectionSet`.  
   
-    -   Ersetzen Sie **SQLTrace Collection Item Name Here** durch den Namen, den Sie für das Sammelelement verwenden möchten. Benennen Sie in diesem Beispiel das sammelelement `SPROC_Collection_Item`.  
+    -   Ersetzen Sie **SQLTrace Collection Item Name Here** durch den Namen, den Sie für das Sammelelement verwenden möchten. Benennen Sie in diesem Beispiel das Sammelelement mit `SPROC_Collection_Item`.  
   
 4.  Klicken Sie auf **Ausführen** , um die Abfrage auszuführen und den Sammlungssatz zu erstellen.  
   

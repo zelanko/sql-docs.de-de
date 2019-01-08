@@ -20,16 +20,16 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 02bc4c6d30fc6f8fa9d77e3da5f10664fd5a2704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cd0503b9f0169a19179bcee545132279903ea10
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693898"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207549"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
   
  **Zusammenfassung**  
  **SQLStatistics** Ruft eine Liste der Statistiken zu einer einzelnen Tabelle und die Indizes der Tabelle zugeordnet. Der Treiber gibt zurück, die Informationen als Resultset.  
@@ -79,7 +79,7 @@ SQLRETURN SQLStatistics(
  [Eingabe] Länge in Zeichen des **TableName*.  
   
  *Eindeutig*  
- [Eingabe] Typ des Indexes: SQL_INDEX_UNIQUE oder SQL_INDEX_ALL.  
+ [Eingabe] Der Typ des Indexes: SQL_INDEX_UNIQUE oder SQL_INDEX_ALL.  
   
  *Reserved*  
  [Eingabe] Gibt die Bedeutung der KARDINALITÄT und Seiten Spalten im Resultset an. Die folgenden Optionen Einfluss auf die Rückgabe von nur die KARDINALITÄT und Seiten Spalten. Informationen zu Indizes wird zurückgegeben, auch wenn die KARDINALITÄT und Seiten nicht zurückgegeben werden.  
@@ -148,7 +148,7 @@ SQLRETURN SQLStatistics(
 |TYP (ODBC 1.0)|7|Smallint nicht NULL|Typ der Informationen zurückgegeben werden:<br /><br /> SQL_TABLE_STAT zeigt eine Statistik für die Tabelle (in der Spalte "KARDINALITÄT" oder "Seiten") an.<br /><br /> SQL_INDEX_BTREE gibt einen B-Strukturindex an.<br /><br /> SQL_INDEX_CLUSTERED gibt an, einen gruppierten Index.<br /><br /> SQL_INDEX_CONTENT gibt einen Inhaltsindex an.<br /><br /> SQL_INDEX_HASHED gibt einen Hashindex an.<br /><br /> SQL_INDEX_OTHER gibt einen anderen Typ des Indexes an.|  
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|Sequenz-Nummer der Spalte im Index (beginnend mit 1); Wenn Typ SQL_TABLE_STAT ist, wird NULL zurückgegeben.|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|Name der Spalte. Wenn die Spalte auf einem Ausdruck basiert, z. B. Gehalt + Vorteile, der Ausdruck zurückgegeben. Wenn der Ausdruck kann nicht bestimmt werden, wird eine leere Zeichenfolge zurückgegeben. Wenn Typ SQL_TABLE_STAT ist, wird NULL zurückgegeben.|  
-|ASC_OR_DESC (ODBC 1.0)|10|char(1)|Sequenz für die Spalte zu sortieren: "A" für eine aufsteigende; "D" für eine absteigende; NULL wird zurückgegeben, wenn die Sortierreihenfolge der Spalte von der Datenquelle nicht unterstützt wird oder SQL_TABLE_STAT ist.|  
+|ASC_OR_DESC (ODBC 1.0)|10|char(1)|Die Sortierreihenfolge für die Spalte: "A" für eine aufsteigende; "D" für eine absteigende; NULL wird zurückgegeben, wenn die Sortierreihenfolge der Spalte von der Datenquelle nicht unterstützt wird oder SQL_TABLE_STAT ist.|  
 |KARDINALITÄTSSCHÄTZUNG (ODBC 1.0)|11|Integer|Die Kardinalität der Tabelle oder eines Indexes; die Anzahl der Zeilen in Tabelle, wenn der Typ SQL_TABLE_STAT ist; die Anzahl der eindeutigen Werte in der Index, wenn der Typ nicht SQL_TABLE_STAT ist; NULL wird zurückgegeben, wenn der Wert aus der Datenquelle nicht verfügbar ist.|  
 |SEITEN (ODBC 1.0)|12|Integer|Die Anzahl der Seiten, die zum Speichern des Indexes oder der Tabelle; die Anzahl der Seiten für die Tabelle, sofern der Typ SQL_TABLE_STAT ist; die Anzahl der Seiten, die für den Index, wenn der Typ nicht SQL_TABLE_STAT ist; NULL wird zurückgegeben, wenn der Wert aus der Datenquelle nicht verfügbar ist, oder wenn mit der Datenquelle nicht anwendbar.|  
 |FILTERBEDINGUNG (ODBC 2.0)|13|Varchar|Wenn der Index ein gefilterter Index ist, ist dies die filterbedingung, z. B. Gehalt > 30000 ist Wenn die filterbedingung nicht bestimmt werden kann, ist dies eine leere Zeichenfolge.<br /><br /> NULL, wenn der Index nicht über ein gefilterter Index ist, kann nicht bestimmt werden, ob der Index ein gefilterter Index ist oder Typ SQL_TABLE_STAT.|  

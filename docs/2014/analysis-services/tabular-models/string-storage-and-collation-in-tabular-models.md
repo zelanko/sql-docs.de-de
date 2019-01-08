@@ -11,12 +11,12 @@ ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8b451134d621c8f151fa43ec4214317ab087918
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9bc74d7ac6c1e3fb826e2a1b3ebdc0122fd2720
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072731"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353777"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Zeichenfolgenspeicher und -sortierung in Tabellenmodellen
   Zeichenfolgen (Textwerte) werden in einem stark komprimierten Format in Tabellenmodellen gespeichert. Aufgrund dieser Komprimierung erhalten Sie unter Umständen unerwartete Ergebnisse, wenn Sie vollständige Zeichenfolgen oder Teilzeichenfolgen abrufen. Da das Zeichenfolgengebietsschema und die Sortierungen hierarchisch vom nächsten übergeordneten Objekt geerbt werden, wenn die Zeichenfolgensprache nicht explizit definiert wird, können das Gebietsschema und die Sortierung des übergeordneten Objekts beeinflussen, wie die einzelnen Zeichenfolgen gespeichert werden, und ob die Zeichenfolge entsprechend der übergeordneten Sortierung eindeutig ist oder mit ähnlichen Zeichenfolgen zusammengefügt wurde.  
@@ -55,7 +55,7 @@ ms.locfileid: "48072731"
 |trEE|  
 |PlAnT|  
   
- Wenn Sie im Modell die Spalte **Klassifizierung - Englisch**verwenden, werden beim Anzeigen der Pflanzenklassifizierung nicht die ursprünglichen Werte mit ihren diversen unterschiedlichen Schreibweisen angezeigt, sondern es erscheint lediglich das erste Vorkommen. Der Grund hierfür ist, dass alle Groß- und Kleinschreibungsvarianten von **tree** in dieser Sortierung und diesem Gebietsschema als äquivalent betrachtet werden. Daher wurde nur eine Zeichenfolge beibehalten, und die erste Instanz der Zeichenfolge, die vom System gefunden wird, wird gespeichert.  
+ Bei Verwendung die Spalte **Klassifizierung - Englisch**, in Ihrem Modell dem, Anzeigen der pflanzenklassifizierung sehen Sie nicht die ursprünglichen Werte, die verschiedene Einsatzbereiche der oberen und Kleinbuchstaben, sondern nur die erste Instanz. Der Grund hierfür ist, dass alle Groß- und Kleinschreibungsvarianten von **tree** in dieser Sortierung und diesem Gebietsschema als äquivalent betrachtet werden. Daher wurde nur eine Zeichenfolge beibehalten, und die erste Instanz der Zeichenfolge, die vom System gefunden wird, wird gespeichert.  
   
 > [!WARNING]  
 >  Möglicherweise möchten Sie festlegen, welche Zeichenfolge als erste gespeichert werden soll (unter Berücksichtigung der von Ihnen als korrekt eingestuften Schreibweise), doch dies kann sich als sehr schwierig erweisen. Es existiert keine einfache Möglichkeit, im Voraus zu bestimmen, welche Zeile zuerst von der Engine verarbeitet werden soll, vorausgesetzt, dass alle Werte als identisch eingestuft werden. Stattdessen sollten beim Festlegen des Standardwerts alle Zeichenfolgen bereinigt werden, bevor das Modell geladen wird.  
@@ -71,7 +71,7 @@ ms.locfileid: "48072731"
   
 -   Die Sortierung definiert die Reihenfolge der Zeichen und ihrer Äquivalenz.  
   
- Wichtig: Eine Sprachen-ID kennzeichnet nicht nur eine Sprache, sondern auch das Land oder die Region, in dem bzw. der die Sprache verwendet wird. Jede Sprachen-ID weist auch eine Standardsortierungsspezifikation auf. Weitere Informationen zu Sprachen-IDs finden Sie unter [Von Microsoft zugewiesene Gebietsschemabezeichner (LCIDs)](http://msdn.microsoft.com/goglobal/bb964664.aspx). Sie können die LCID DEC-Spalte verwenden, um die richtige ID zu erhalten, wenn Sie einen Wert manuell einfügen. Weitere Informationen zum SQL-Konzept von Sortierungen finden Sie unter [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations). Informationen zu den Sortierungskennzeichnern und den Vergleichsstilen für Windows-Sortierungsnamen finden Sie unter [Name der Windows-Sortierung &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql). Das Thema [SQL Server-Sortierungsname &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql) ordnet die Namen der Windows-Sortierung den für SQL verwendeten Namen zu.  
+ Wichtig: Eine Sprachen-ID kennzeichnet nicht nur eine Sprache, sondern auch das Land oder die Region, in dem bzw. der die Sprache verwendet wird. Jede Sprachen-ID weist auch eine Standardsortierungsspezifikation auf. Weitere Informationen zu Sprachen-IDs finden Sie unter [Von Microsoft zugewiesene Gebietsschemabezeichner (LCIDs)](https://msdn.microsoft.com/goglobal/bb964664.aspx). Sie können die LCID DEC-Spalte verwenden, um die richtige ID zu erhalten, wenn Sie einen Wert manuell einfügen. Weitere Informationen zum SQL-Konzept von Sortierungen finden Sie unter [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations). Informationen zu den Sortierungskennzeichnern und den Vergleichsstilen für Windows-Sortierungsnamen finden Sie unter [Name der Windows-Sortierung &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql). Das Thema [SQL Server-Sortierungsname &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql) ordnet die Namen der Windows-Sortierung den für SQL verwendeten Namen zu.  
   
  Sobald die Tabellenmodelldatenbank erstellt wurde, erben alle neuen Objekte im Modell die Sprach- und Sortierattribute von den Datenbankattributen. Dies gilt für alle Objekte. Der Vererbungspfad beginnt beim Objekt und sucht das übergeordnete Element für jedes zu erbende Sprach- und Sortierattribut. Wenn keine Attribute gefunden werden, wird der Vorgang am Anfang fortgesetzt, und die Sprach- und Sortierattribute werden auf der Datenbankebene gesucht. Anders ausgedrückt: Wenn Sie keine Sprach-und Sortierattribute für ein Objekt angeben, erbt das Objekt standardmäßig die Attribute des nächsten übergeordneten Elements.  
   

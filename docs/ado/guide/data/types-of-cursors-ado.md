@@ -13,15 +13,15 @@ ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ecf079c86362aeae78b7c9ceaad640b0ad1519c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db77de95e83e596a8a301fa65885ee640c742a71
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786958"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543564"
 ---
 # <a name="types-of-cursors-ado"></a>Cursortypen (ADO)
-Als allgemeine Regel sollte Ihre Anwendung den einfachsten Cursor verwenden, der den Zugriff erforderlichen Daten bereitstellt. Jedes Merkmal zusätzliche Cursor über die Grundlagen (Scrollen Vorwärtscursor, schreibgeschützte, statische ungepufferter) hat einen Preis – in den Clientspeicher, Netzwerkauslastung oder Leistung. In vielen Fällen generiert die Standardcursoroptionen einen komplexeren Cursor als die Anwendung tatsächlich benötigt.  
+Als allgemeine Regel sollte Ihre Anwendung den einfachsten Cursor verwenden, der den Zugriff erforderlichen Daten bereitstellt. Jedes Merkmal zusätzliche Cursor über die Grundlagen (Vorwärtscursor, schreibgeschützte, statische, scrollen, ungepufferte) hat es sich um einen Preis – in den Clientspeicher, Netzwerkauslastung oder Leistung. In vielen Fällen generiert die Standardcursoroptionen einen komplexeren Cursor als die Anwendung tatsächlich benötigt.  
   
  Ihrer Wahl des Cursortyps hängt wie das Resultset von der Anwendung verwendet und auch auf mehrere entwurfsüberlegungen, einschließlich der Größe der das Resultset auf, der Prozentsatz der Daten wahrscheinlich verwendet werden, die Sensitivität gegenüber datenänderungen und Leistung der Anwendung ab. Anforderungen an.  
   

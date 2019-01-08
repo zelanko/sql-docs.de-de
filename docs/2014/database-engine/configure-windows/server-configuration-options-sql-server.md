@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - surface area configuration [SQL Server], sp_configure
@@ -28,12 +27,12 @@ ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a903a3246b8a91a8ff0b42862b7bbf4046497c3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088710"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640551"
 ---
 # <a name="server-configuration-options-sql-server"></a>Serverkonfigurationsoptionen (SQL Server)
   Sie können die Ressourcen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über Konfigurationsoptionen verwalten und optimieren, indem Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder die gespeicherte Systemprozedur sp_configure verwenden. Die am häufigsten verwendeten Serverkonfigurationsoptionen stehen über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zur Verfügung. Mit sp_configure kann auf alle Konfigurationsoptionen zugegriffen werden. Sie sollten vor dem Festlegen dieser Optionen die Auswirkungen auf Ihr System sorgfältig überdenken. Weitere Informationen finden Sie unter [Anzeigen oder Ändern von Servereigenschaften &#40;SQL Server&#41;](view-or-change-server-properties-sql-server.md).  
@@ -65,7 +64,7 @@ ms.locfileid: "48088710"
   
 -   SC (Self-Configuring) = Selbstkonfigurierende Optionen.  
   
-    |Konfigurationsoption|Mindestwert|Höchstwert|Default|  
+    |Konfigurationsoption|Mindestwert|Höchstwert|Standard|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[AccessCheckCache-Bucketanzahl](access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[AccessCheckCache-Kontingent](access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  

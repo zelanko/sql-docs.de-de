@@ -1,5 +1,6 @@
 ---
-title: Erste Schritte mit SQL Server unter Ubuntu | Microsoft-Dokumentation
+title: Erste Schritte mit SQL Server unter Ubuntu
+titleSuffix: SQL Server
 description: Dieser Schnellstart veranschaulicht das Installieren von SQL Server 2017 oder SQL Server-2019 unter Ubuntu und klicken Sie dann zu erstellen und Abfragen einer Datenbank mit Sqlcmd.
 author: rothja
 ms.author: jroth
@@ -7,15 +8,15 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 917e43dd6a9c78e5199967df58a2d46c4843cf13
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 83f5cdf3f02ffc9a51dfa954347cc57f78e004dd
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677946"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160548"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Schnellstart: Installieren von SQL Server, und erstellen Sie eine Datenbank unter Ubuntu
 
@@ -88,7 +89,7 @@ Führen Sie die folgenden Befehle in einem Terminal zu installieren, um SQL Serv
    ```
 
    > [!TIP]
-   > Die folgenden Editionen von SQL Server 2017 kostenlos lizenziert sind: Evaluation, Developer und Express.
+   > Die folgenden Editionen von SQL Server 2017 sind kostenlos lizenziert: Evaluation, Developer und Express.
 
    > [!NOTE]
    > Stellen Sie sicher, dass ein sicheres Kennwort für das SA-Konto (minimale Länge von 8-Zeichen, wie z. B. Groß- und Kleinbuchstaben, Basis 10-Ziffern und/oder nicht-alphanumerischen Zeichen) an.

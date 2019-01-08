@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.advancedtuningoptions.f1
@@ -20,18 +19,18 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d587b8cd2fb4342ddba42ac85a1d595d6b7b23c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097820"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356386"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
   In diesem Thema wird beschrieben, wie der Datenbankoptimierungsratgeber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gestartet und verwendet wird. Informationen zum Anzeigen der Ergebnisse und Arbeiten mit den Ergebnissen nach dem Optimieren einer Datenbank finden Sie unter [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Initialisieren des Datenbankoptimierungsratgebers  
- Bei der ersten Verwendung muss ein Benutzer, der Mitglied der festen Serverrolle **sysadmin** ist, den Datenbankoptimierungsratgeber starten. Dies ist, da mehrere Systemtabellen in erstellt werden, müssen die `msdb` Datenbank optimierende von Vorgängen zu unterstützen. Die Initialisierung ermöglicht darüber hinaus Benutzern, die Mitglieder der festen Datenbankrolle **db_owner** sind, Arbeitsauslastungen für Tabellen in Datenbanken zu optimieren, die sie besitzen.  
+ Bei der ersten Verwendung muss ein Benutzer, der Mitglied der festen Serverrolle **sysadmin** ist, den Datenbankoptimierungsratgeber starten. Das liegt daran, dass mehrere Systemtabellen in der Datenbank `msdb` erstellt werden müssen, um das Optimieren von Vorgängen zu unterstützen. Die Initialisierung ermöglicht darüber hinaus Benutzern, die Mitglieder der festen Datenbankrolle **db_owner** sind, Arbeitsauslastungen für Tabellen in Datenbanken zu optimieren, die sie besitzen.  
   
  Ein Benutzer mit Systemadministratorberechtigungen muss eine der folgenden Aktionen ausführen.  
   
@@ -213,7 +212,7 @@ ms.locfileid: "48097820"
 >  Das Anhalten des Datenbankoptimierungsratgebers wird nicht unterstützt. Wenn Sie auf die Symbolleistenschaltfläche **Analyse starten** klicken, nachdem Sie auf eine der beiden Symbolleistenschaltflächen **Analyse beenden** oder **Analyse beenden (mit Empfehlungen)** geklickt haben, startet der Datenbankoptimierungsratgeber eine neue Optimierungssitzung.  
   
 ###  <a name="dta"></a> Verwenden des dta-Hilfsprogramms  
- Das Hilfsprogramm [dta](../../tools/dta/dta-utility.md) stellt eine ausführbare Datei für Eingabeaufforderungen zur Verfügung, mit der Datenbanken optimiert werden können. Sie können auf diese Weise den Datenbankoptimierungsratgeber in Batchdateien und Skripts verwenden. Das Hilfsprogramm **dta** akzeptiert Plancacheeinträge, Ablaufverfolgungsdateien und -tabellen sowie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts als Arbeitsauslastung. Außerdem akzeptiert es XML-Eingaben, die dem XML-Schema des Datenbankoptimierungsratgebers entsprechen. Dieses Schema steht auf dieser [Microsoft-Website](http://go.microsoft.com/fwlink/?linkid=43100)zur Verfügung.  
+ Das Hilfsprogramm [dta](../../tools/dta/dta-utility.md) stellt eine ausführbare Datei für Eingabeaufforderungen zur Verfügung, mit der Datenbanken optimiert werden können. Sie können auf diese Weise den Datenbankoptimierungsratgeber in Batchdateien und Skripts verwenden. Das Hilfsprogramm **dta** akzeptiert Plancacheeinträge, Ablaufverfolgungsdateien und -tabellen sowie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts als Arbeitsauslastung. Außerdem akzeptiert es XML-Eingaben, die dem XML-Schema des Datenbankoptimierungsratgebers entsprechen. Dieses Schema steht auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?linkid=43100)zur Verfügung.  
   
  Beachten Sie Folgendes, bevor Sie eine Arbeitsauslastung mit dem Hilfsprogramm **dta** optimieren:  
   
@@ -238,13 +237,13 @@ ms.locfileid: "48097820"
 2.  Geben Sie zum Ändern der Anzahl der für die Analyse zu verwendenden Ereignisse die Option **–n** an. Im folgenden Beispiel wird die Anzahl der Cacheeinträge auf 2.000 erhöht.  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  Geben Sie zum Analysieren der Ereignisse aller Datenbanken in der Instanz die Option **-ipf** an.  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>So optimieren Sie eine Datenbank mithilfe einer Arbeitsauslastung und den Standardeinstellungen des dta-Hilfsprogramms  
@@ -303,7 +302,7 @@ ms.locfileid: "48097820"
   
  C:\Programme\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- Das XML-Schema des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers ist auch online auf dieser [Microsoft-Website](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)verfügbar.  
+ Das XML-Schema des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers ist auch online auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)verfügbar.  
   
  Diese URL öffnet eine Seite, auf der viele [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -XML-Schemas verfügbar sind. Führen Sie auf der Seite einen Bildlauf nach unten aus, bis Sie die Zeile für den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber erreichen.  
   
@@ -444,7 +443,7 @@ database_name.owner_name.table_name
  Empfehlungen werden nur zum Hinzufügen indizierter Sichten eingeschlossen. Für gruppierte und nicht gruppierte Indizes werden keine Empfehlungen gegeben.  
   
  **Gefilterte Indizes einschließen**  
- Enthält Empfehlungen zum Hinzufügen von gefilterten Indizes. Diese Option ist verfügbar, wenn Sie eine dieser physischen Entwurfsstrukturen auswählen: **Indizes und indizierte Sichten**, **Indizes**oder **Nicht gruppierte Indizes**.  
+ Enthält Empfehlungen zum Hinzufügen von gefilterten Indizes. Diese Option ist verfügbar, wenn Sie eine dieser physischen Entwurfsstrukturen auswählen: **Indizes und indizierte Sichten**, **Indizes**, oder **nicht gruppierte Indizes**.  
   
  **Indizes**  
  Empfehlungen werden nur zum Hinzufügen gruppierter und nicht gruppierter Indizes eingeschlossen. Für indizierte Sichten werden keine Empfehlungen gegeben.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, user configuration
@@ -15,31 +15,31 @@ ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f46d4f84686a805412020bfb55b46d2d1790221d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a62f6c2e1ef86a6fcd5e532b2ef413d8142698e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121980"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796142"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Konfigurieren eines Benutzers zum Erstellen und Verwalten von SQL Server-Agent-Aufträgen
   In diesem Thema wird beschrieben, wie Sie einen Benutzer zum Erstellen oder Ausführen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträgen konfigurieren.  
   
 -   **Vorbereitungen:**  [Sicherheit](#Security)  
   
--   **Konfigurieren eines Benutzers zum Erstellen und Verwalten von SQL Server-Agent-Aufträgen mit:**  [SQL Server Management Studio](#SSMS)  
+-   **So konfigurieren Sie einen Benutzer zum Erstellen und Verwalten von SQL Server-Agent-Aufträge, die mithilfe von:**  [SQL Server Management Studio](#SSMS)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
- Um einen Benutzer für das Erstellen oder Ausführen von Aufträgen des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents zu konfigurieren, müssen Sie zunächst einen vorhandenen SQL Server-Anmeldenamen oder eine msdb-Rolle einer der folgenden festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents in der msdb-Datenbank hinzufügen: SQLAgentUserRole, SQLAgentReaderRole oder SQLAgentOperatorRole.  
+ Konfigurieren eines Benutzers zum Erstellen oder ausführen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Agent-Aufträge müssen Sie zunächst eine vorhandene SQL Server-Anmeldenamen oder eine Msdb-Rolle hinzufügen, um eine der folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der Msdb-Datenbank: SQLAgentUserRole, SQLAgentReaderRole oder SQLAgentOperatorRole.  
   
  Standardmäßig können Mitglieder dieser Datenbankrollen ihre eigenen Auftragsschritte erstellen, die unter ihrem Konto ausgeführt werden. Falls Benutzer, die keine Administratoren sind, Aufträge ausführen möchten, mit denen andere Arten von Auftragsschritten ausgeführt werden (z. B. [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Pakete), benötigen sie Zugriff auf ein Proxykonto. Alle Mitglieder der festen Serverrolle sysadmin haben die Berechtigung zum Erstellen, Ändern und Löschen von Proxykonten. Weitere Informationen zu den Berechtigungen, die jeder dieser festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen zugeordnet sind, finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](sql-server-agent-fixed-database-roles.md).  
   
 ####  <a name="Permissions"></a> Berechtigungen  
- Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
  **So fügen Sie einer festen Datenbankrolle des SQL Server-Agents einen SQL-Anmeldenamen oder eine msdb-Rolle hinzu**  
   
 1.  Erweitern Sie im **Objekt-Explorer**einen Server.  

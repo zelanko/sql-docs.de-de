@@ -15,30 +15,30 @@ ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0f20619f4f1bbd1632539f3675c8e955e1073130
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13e52520b78796f41f94e5bf783e99a9bca3b3e3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187550"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366772"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Suchen der Berichtsdefinitions-Schemaversion (SSRS)
   In einer Berichtsdefinitionsdatei ist der RDL-Namespace für die Version des Berichtsdefinitionsschemas angegeben, das zur Überprüfung der RDL-Datei verwendet wird. Wenn Sie eine RDL-Datei in einer Berichterstellungsumgebung wie dem Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder dem Berichts-Generator öffnen und der Bericht für einen vorherigen Namespace erstellt wurde, wird automatisch eine Sicherungsdatei erstellt und der Bericht auf den aktuellen Namespace aktualisiert. Wenn Sie die aktualisierte Berichtsdefinition speichern, haben Sie die konvertierte RDL-Datei gespeichert. Dies ist die einzige Möglichkeit, eine Berichtsdefinition zu aktualisieren. Die Berichtsdefinition selbst wird auf einem Berichtsserver nicht aktualisiert. Der kompilierte Bericht wird auf einem Berichtsserver aktualisiert. Weitere Informationen finden Sie unter [Upgrade Reports](../install-windows/upgrade-reports.md).  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Vorgehensweise: Identifizieren der RDL-Schemaversion eines Berichts  
+### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Gewusst wie: Identifizieren der RDL-Schemaversion eines Berichts  
   
 1.  Öffnen Sie die RDL-Berichtsdatei in einer Anwendung wie dem Editor oder XML Notepad 2007, in der Sie XML anzeigen können.  
   
      Das XML-Berichtselement gibt den Schemanamespace an. Zum Beispiel gibt das folgende Berichtselement den Namespace für den Berichts-Designer und den Namespace für die Berichtsdefinition an.  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     Der Berichtsdefinitionsnamespace wird von der folgenden URL angegeben: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
+     Der Berichtsdefinitionsnamespace wird von der folgenden URL angegeben: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Vorgehensweise: Identifizieren der RDL-Schemaversion des Berichts-Designers  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Gewusst wie: Identifizieren der RDL-Schemaversion des Berichts-Designers  
   
 1.  Öffnen Sie ein neues Projekt. Die Version des ausgewählten Projekts bestimmt die Version des RDL-Schemas. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]werden mehrere Schemaversionen unterstützt. Weitere Informationen finden Sie unter [Bereitstellung und Versionsunterstützung in SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)enthalten.  
   
@@ -55,13 +55,13 @@ ms.locfileid: "48187550"
      Das XML-Berichtselement gibt den Schemanamespace an. Zum Beispiel gibt das folgende Berichtselement den Namespace für den Berichts-Designer und den Namespace für die Berichtsdefinition an.  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     Der Berichtsdefinitionsnamespace wird von der folgenden URL angegeben: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     Der Berichtsdefinitionsnamespace wird von der folgenden URL angegeben: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Vorgehensweise: Identifizieren der RDL-Schemaversion auf dem Berichtsserver  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Gewusst wie: Identifizieren der RDL-Schemaversion auf dem Berichtsserver  
   
 -   Geben Sie im Berichts-Manager die URL für den Berichtsserver ein. Die folgende URL gibt z. B. einen Berichtsserver auf dem lokalen Computer an:  
   
@@ -73,16 +73,16 @@ ms.locfileid: "48187550"
   
     ```  
     <xsd:schema   
-    targetNamespace="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    targetNamespace="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
     elementFormDefault="qualified">  
     ```  
   
-     Der Berichtsdefinitionsnamespace wird von der folgenden URL angegeben: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     Der Berichtsdefinitionsnamespace wird von der folgenden URL angegeben: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Upgrade erstellte Berichte](../install-windows/upgrade-reports.md)   
- [Berichtsdefinitionssprache (SSRS)](report-definition-language-ssrs.md)  
+ [Upgrade Reports](../install-windows/upgrade-reports.md)   
+ [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](report-definition-language-ssrs.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e560cae97a647b484bc75936db31434dc08864a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1e86eec76a94a3858ede48fc0fb1b0703de4508
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177010"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356255"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Always On-Verfügbarkeitsgruppen (SQL Server)
   Die Funktion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, die eine Alternative zur Datenbankspiegelung auf Unternehmensebene bietet. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]wurden in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] eingeführt und maximieren die Verfügbarkeit einer Gruppe von Benutzerdatenbanken für ein Unternehmen. Eine *Verfügbarkeitsgruppe* unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzerdatenbanken (als *Verfügbarkeitsdatenbanken*bezeichnet), die zusammen ein Failover ausführen. Eine Verfügbarkeitsgruppe unterstützt einen Satz primärer Datenbanken mit Lese-/Schreibzugriff und einen bis acht Sätze entsprechender sekundärer Datenbanken. Optional können sekundäre Datenbanken für schreibgeschützten Zugriff und/oder einige Sicherungsvorgänge verfügbar gemacht werden.  
@@ -49,7 +49,7 @@ ms.locfileid: "48177010"
   
 -   Ermöglicht es Ihnen, ein angegebenes Verfügbarkeitsreplikat so zu konfigurieren, dass es entweder eines oder beide der folgenden Funktionen für aktive sekundäre Replikate unterstützt:  
   
-    -   Lesezugriff, der es schreibgeschützten Verbindungen erlaubt, auf das Replikat zuzugreifen und dessen Datenbanken zu lesen, wenn es als sekundäres Replikat ausgeführt wird. Weitere Informationen finden Sie unter [aktive sekundäre Replikate: lesbare sekundäre Replikate; Always On-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/ff878253.aspx)).  
+    -   Lesezugriff, der es schreibgeschützten Verbindungen erlaubt, auf das Replikat zuzugreifen und dessen Datenbanken zu lesen, wenn es als sekundäres Replikat ausgeführt wird. Weitere Informationen finden Sie unter [aktive sekundäre Replikate: Lesbare sekundäre Replikate; Always On-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/ff878253.aspx)).  
   
     -   Das Ausführen von Sicherungsvorgängen für seine Datenbanken, wenn es als sekundäres Replikat ausgeführt wird. Weitere Informationen finden Sie unter [aktive sekundäre Replikate: Sicherung auf sekundären Replikaten](https://msdn.microsoft.com/library/ff878253.aspx)).  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48177010"
   
         -   Der [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] initiiert ein manuelles Failover für eine Verfügbarkeitsgruppe. Abhängig von der Konfiguration und dem Zustand des sekundären Replikats, das Sie als Failoverziel angeben, kann der Assistent entweder ein geplantes oder ein erzwungenes manuelles Failover ausführen. Weitere Informationen finden Sie unter [verwenden Sie den Fehler über Verfügbarkeitsgruppen-Assistenten; SQL Server Management Studio an; ](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
-    -   Die [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] überwacht AlwaysOn-Verfügbarkeitsgruppen, verfügbarkeitsreplikate und verfügbarkeitsdatenbanken und wertet Ergebnisse für AlwaysOn-Richtlinien. Weitere Informationen finden Sie unter [verwenden das AlwaysOn-Dashboard; SQL Server Management Studio an; ](use-the-always-on-dashboard-sql-server-management-studio.md).  
+    -   Der [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] überwacht AlwaysOn-Verfügbarkeitsgruppen, Verfügbarkeitsreplikate und Verfügbarkeitsdatenbanken und wertet Ergebnisse für AlwaysOn-Richtlinien aus. Weitere Informationen finden Sie unter [verwenden das AlwaysOn-Dashboard; SQL Server Management Studio an; ](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
     -   Der Detailbereich im Objekt-Explorer zeigt grundlegende Informationen zu vorhandenen Verfügbarkeitsgruppen an. Weitere Informationen finden Sie unter [verwenden Sie die Details zum Objekt-Explorer mit der Verfügbarkeitsgruppe "Monitor"; SQL Server Management Studio an; ](use-object-explorer-details-to-monitor-availability-groups.md).  
   
@@ -151,19 +151,19 @@ ms.locfileid: "48177010"
   
 -   **Blogs:**  
   
-     [SQL-Server immer ' aus, On-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQLServer Always On-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server-Technikblogs](https://blogs.msdn.com/b/psssql/)  
   
 -   **Videos:**  
   
-     [Microsoft SQL Server Codename „Denali“ Always On-Reihe, Teil 1:Introducing the Next Generation High Availability Solution (Einführung in die nächste Generation von Lösungen mit hoher Verfügbarkeit)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Codename "Denali" AlwaysOn Series, Teil 1: Einführung in die nächste Generation von Lösungen mit Hochverfügbarkeit](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server Codename "Denali" AlwaysOn Series, Teil 2: Erstellen einer Lösung für unternehmenskritische hohe Verfügbarkeit mit AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Whitepaper:**  
   
-     [Microsoft SQL Server AlwaysOn-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
   
   

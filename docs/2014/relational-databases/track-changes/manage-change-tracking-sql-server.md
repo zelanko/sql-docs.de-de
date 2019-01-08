@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tracking data changes [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 97ed62336cad7f3e1bc0bbe70edd895384336205
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be3f9c61d3c035959def4a46f91eff605e475569
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197750"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808802"
 ---
 # <a name="manage-change-tracking-sql-server"></a>Verwalten der Änderungsnachverfolgung (SQL Server)
   In diesem Thema wird beschrieben, wie die Änderungsnachverfolgung verwaltet wird. Außerdem werden die Vorgehensweisen zum Konfigurieren der Sicherheit und zum Ermitteln der Auswirkungen der Änderungsnachverfolgung auf Speicherung und Leistung beschrieben.  
@@ -38,7 +37,7 @@ ms.locfileid: "48197750"
   
  Zusätzlich werden in der [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) -Katalogsicht die internen Tabellen aufgeführt, die bei aktivierter Änderungsnachverfolgung für eine Benutzertabelle erstellt werden.  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicherheit  
  Für den Zugriff auf Änderungsnachverfolgungsinformationen mit den [Änderungsnachverfolgungsfunktionen](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)muss der Prinzipal über die folgenden Berechtigungen verfügen:  
   
 -   SELECT-Berechtigung mindestens für die wichtigsten Schlüsselspalten der änderungsnachverfolgten Tabelle zur abgefragten Tabelle.  

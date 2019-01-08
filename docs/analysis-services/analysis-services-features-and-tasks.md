@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-Funktionen und Tasks im | Microsoft Docs
+title: Analysis Services-Funktionen und-Tasks | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 50a0649891fa26a01a83bf633d4f8cea60cef213
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: db75799b3f26543f1e4a3ba9995fee99a909ee1d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014007"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206941"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Analysis Services-Funktionen und -Tasks
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

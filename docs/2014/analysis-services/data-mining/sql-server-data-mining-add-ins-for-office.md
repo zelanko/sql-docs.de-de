@@ -11,12 +11,12 @@ ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1f27a9834fb8a33ab98f9a8e7c6d309d10056484
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 3126726849b0f434eb0edb33c9f97cb227ca5b2e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099881"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357247"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>SQL Server Data Mining-Add-Ins für Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Bei den Data Mining-Add-Ins für Office handelt es sich um ein kompaktes Set von Tools für Vorhersageanalysen, mit denen Sie auf der Grundlage von Daten in Excel analytische Modelle für Vorhersagezwecke, Empfehlungen oder Untersuchungen erstellen können.  
@@ -43,11 +43,11 @@ ms.locfileid: "50099881"
   
      Erfahrene Benutzer können benutzerdefinierte DMX-Abfragen mit dem **erweiterten Abfrage-Editor**per Drag &amp; Drop erstellen oder mit Excel VBA Vorhersagen automatisieren.  
   
--   **Dokumentieren und Verwalten.** Nachdem Sie ein Dataset und einige Modelle erstellt haben, dokumentieren Sie Ihre Arbeit und Ihre Ergebnisse, indem Sie eine statistische Zusammenfassung der Daten und Modellparameter generieren.  
+-   **Dokumentieren und Verwalten.** Nachdem Sie ein Dataset erstellt und einige Modelle haben, dokumentieren Sie Ihre Arbeit und Ihre Erkenntnisse durch Generieren einer statistischen Zusammenfassung der Daten und des Modells Parameter.  
   
--   **Untersuchen und visuelles Darstellen.** Das Data Mining ist keine Aktivität, die komplett automatisiert werden kann. Sie müssen die Ergebnisse untersuchen und verstehen, um sinnvolle Maßnahmen ergreifen zu können. Die Add-Ins unterstützen Sie bei der Untersuchung. Sie bieten interaktive Viewer in Excel, Visio-Vorlagen, mit denen Sie Modelldiagramme anpassen können, sowie die Möglichkeit, Diagramme und Tabellen in Excel für weiteres Filtern oder Ändern zu exportieren.  
+-   **Untersuchen und visuelles Darstellen.** Datamining ist keine Aktivität, die vollständig automatisiert werden kann – müssen Sie untersuchen und verstehen Ihre Ergebnisse, um sinnvolle Maßnahmen ergreifen. Die Add-Ins unterstützen Sie bei der Untersuchung. Sie bieten interaktive Viewer in Excel, Visio-Vorlagen, mit denen Sie Modelldiagramme anpassen können, sowie die Möglichkeit, Diagramme und Tabellen in Excel für weiteres Filtern oder Ändern zu exportieren.  
   
--   **Bereitstellen und Integrieren.** Wenn Sie ein nützliches Modell erstellt haben, können Sie damit arbeiten. Exportieren Sie es dazu mit den Verwaltungstools von Ihrem Testserver in eine andere Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Bereitstellen und Integrieren.** Wenn Sie ein nützliches Modell das Modell in der Produktion mithilfe der Verwaltungstools So exportieren Sie das Modell von Ihrem Testserver in eine andere Instanz von erstellt haben [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
      Sie können das Modell auch auf dem Server belassen, auf dem es erstellt wurde, sollten aber die Trainingsdaten aktualisieren und Vorhersagen mithilfe von Integration Services- oder DMX-Skripts ausführen.  
   
@@ -84,6 +84,6 @@ ms.locfileid: "50099881"
   
  Je nach der Edition der SQL Server Analysis Services, mit denen Sie eine Verbindung herstellen, sind einige erweiterte Algorithmen u. U. nicht verfügbar. Weitere Informationen finden Sie unter [von den SQL Server 2014-Editionen unterstützte Funktionen](https://msdn.microsoft.com/library/cc645993.aspx).  
   
- Weitere Hilfe zur Installation finden Sie unter dieser Seite im Download Center: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ Weitere Hilfe zur Installation finden Sie unter dieser Seite im Download Center: [https://www.microsoft.com/download/details.aspx?id=29061](https://www.microsoft.com/download/details.aspx?id=29061)  
   
   

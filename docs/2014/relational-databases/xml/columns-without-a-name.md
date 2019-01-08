@@ -12,15 +12,15 @@ ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d36934be00b7d4be6b28a6ed1748f99ded2d310e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83e7687e310f0a1d9abf12eb6101f4e78e5a7b68
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226993"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357270"
 ---
 # <a name="columns-without-a-name"></a>Spalten ohne Namen
-  Spalten ohne Namen werden als Inlinespalten betrachtet. Beispielsweise werden namenlose Spalten für berechnete Spalten oder geschachtelte skalare Abfragen, die keinen Spaltenalias angeben, generiert. Wenn die Spalte `xml` Typ, den Inhalt dieser Datentypinstanz eingefügt wird. Anderenfalls wird der Inhalt der Spalte als Textknoten eingefügt.  
+  Spalten ohne Namen werden als Inlinespalten betrachtet. Beispielsweise werden namenlose Spalten für berechnete Spalten oder geschachtelte skalare Abfragen, die keinen Spaltenalias angeben, generiert. Wenn die Spalte vom Typ `xml` ist, wird der Inhalt dieser Datentypinstanz eingefügt. Anderenfalls wird der Inhalt der Spalte als Textknoten eingefügt.  
   
 ```  
 SELECT 2+2  
@@ -38,7 +38,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ')   
 FROM Production.ProductModel  

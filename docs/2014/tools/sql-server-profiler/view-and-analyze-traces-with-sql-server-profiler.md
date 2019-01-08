@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], viewing traces
@@ -20,12 +19,12 @@ ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e6739f427642151bec0fd193c26d40a16af51e94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd9b95821ee673e259273f880aefe8606fe81d71
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213430"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797022"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Anzeigen und Analysieren von Ablaufverfolgungen mit SQL Server Profiler
   Verwenden Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , um aufgezeichnete Ereignisdaten in einer Ablaufverfolgung anzuzeigen. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt Daten je nach definierten Ablaufverfolgungseigenschaften an. Eine Möglichkeit, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten zu analysieren, besteht darin, die Daten in ein anderes Programm wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder den Optimierungsratgeber von [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu kopieren. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Wenn bei der Ablaufverfolgung die **Text** -Datenspalte einbezogen wird, kann der Optimierungsratgeber eine Ablaufverfolgungsdatei mit SQL-Batch- und RPC-Ereignissen verwenden. Verwenden Sie die im Lieferumfang von [!INCLUDE[ssDE](../../includes/ssde-md.md)] enthaltene vordefinierte Optimierungsvorlage, um sicherzustellen, dass für den Optimierungsratgeber von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]die richtigen Ereignisse und Spalten aufgezeichnet werden.  
@@ -70,7 +69,7 @@ AND     CPU < (Duration * 1000)
   
 2.  Suchen Sie nach den Zielereignissen.  
   
-    -   Öffnen Sie die Ablaufverfolgungsdatei oder -tabelle, und erweitern Sie den Knoten der gewünschten Ereignisklasse, z.B. **Deadlock Chain**. Weitere Informationen finden Sie unter [Öffnen einer Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) oder unter [Öffnen einer Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
+    -   Öffnen Sie die Ablaufverfolgungsdatei oder -tabelle, und erweitern Sie den Knoten der gewünschten Ereignisklasse, z.B. **Deadlock Chain**. Weitere Informationen finden Sie unter [Öffnen einer Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) oder den Optimierungsratgeber von [Öffnen einer Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)die richtigen Ereignisse und Spalten aufgezeichnet werden.  
   
     -   Durchsuchen Sie die Daten der Ablaufverfolgung, bis Sie die gesuchten Ereignisse finden (klicken Sie in **im Menü** Bearbeiten **auf** Suchen [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , um nach Werten in der Ablaufverfolgung zu suchen). Beachten Sie bei den Ereignissen, für die Sie die Ablaufverfolgung durchführen, die Werte in den Datenspalten **ClientProcessID** und **StartTime** .  
   

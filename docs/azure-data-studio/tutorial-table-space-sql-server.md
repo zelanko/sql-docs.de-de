@@ -1,7 +1,8 @@
 ---
-title: 'Tutorial: Aktivieren der Tabelle Platz Nutzung Beispiel Einblicke Widgets in Studio für Azure Data | Microsoft-Dokumentation'
+title: 'Lernprogramm: Aktivieren Sie das Tabelle Speicherplatz Nutzung Beispiel Insight-widget'
+titleSuffix: Azure Data Studio
 description: In diesem Tutorial veranschaulicht, wie die Tabelle Speicherplatz Nutzung Beispiel Einblicke Widget auf dem Studio für Azure Data-Datenbank-Dashboard.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55d6c96cc328f21d1b51ce7186c8396ab278ee6f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355991"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030354"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Tutorial: Aktivieren der Speicherplatz Nutzung Beispiel Einblicke Widget verwenden [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Lernprogramm: Aktivieren der Tabelle Speicherplatz Nutzung Beispiel Insight Widgets mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Dieses Tutorial veranschaulicht, wie ein Insight-Widget auf die Datenbank-Dashboard, eine Ansicht auf einen Blick zur speicherplatznutzung von für alle Tabellen in einer Datenbank bereitstellen. In diesem Tutorial erfahren Sie, wie Sie:
 
@@ -38,7 +39,7 @@ In diesem Lernprogramm der SQL Server- oder Azure SQL-Datenbank *"tutorialdb"*. 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] verfügt über ein integriertes Widget zur Überwachung des Speicherplatzes von Tabellen in einer Datenbank.
 
 1. Öffnen Sie *Benutzereinstellungen* durch Drücken von **STRG + UMSCHALT + P** zum Öffnen der *Befehlspalette*.
-2. Typ *Einstellungen* in das Suchfeld ein, und wählen **Voreinstellungen: Öffnen der Benutzereinstellungen**.
+2. Typ *Einstellungen* in das Suchfeld ein, und wählen **Einstellungen: Öffnen Sie die Benutzereinstellungen**.
 2. Typ *Dashboard* Eingabefeld in der Suche der Einstellungen, und suchen Sie **dashboard.database.widgets**.
 
 3. Anpassen der **dashboard.database.widgets** Einstellungen, die Sie bearbeiten müssen die **dashboard.database.widgets** Eintrag in der **BENUTZEREINSTELLUNGEN** Abschnitt (die Spalte in der Rechte Seite). Liegt keine **dashboard.database.widgets** in die **BENUTZEREINSTELLUNGEN** Abschnitt, zeigen Sie auf die **dashboard.database.widgets** Text in den Standardeinstellungen-Spalte und klicken Sie auf das Stiftsymbol aus, das wird angezeigt, auf der linken Seite von Text und klicken Sie auf das **in Einstellungen kopieren**. Wenn das Popup angezeigt **ersetzen Sie in den Einstellungen**, nicht darauf klicken. Wechseln Sie zu der **BENUTZEREINSTELLUNGEN** Spalte rechts, und suchen Sie die **dashboard.database.widgets** Abschnitt und fahren Sie mit dem nächsten Schritt fort.
@@ -82,7 +83,7 @@ Die **dashboard.database.widgets** Abschnitt sollte wie in der folgenden Abbildu
 
 
 ## <a name="next-steps"></a>Nächste Schritte
-In diesem Tutorial haben Sie gelernt, wie Sie:
+In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 > * Schalten Sie schnell eine Insight Widgets mithilfe einer Stichprobe von integrierten Insight-Widget aus.
 > * Zeigen Sie die Details der Speicherplatzverwendung für die Tabelle ein.

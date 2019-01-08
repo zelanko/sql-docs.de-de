@@ -20,19 +20,19 @@ ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35c8786c571936a27570166c8d331cbd2a641b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 329cad1c2d60b40d3f8e448a1ea92b8ee5bebfb9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204650"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591434"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Ausfüllen (Dialogfeld) (Berichts-Generator und SSRS)
   Auf der Registerkarte **Ausfüllen** können Sie Farboptionen für den Hintergrund einer oder mehrerer Zellen in einem Datenbereich oder einem Textfeld angeben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Füllfarbe**  
- Klicken Sie auf die Farbschaltfläche, um eine Füllfarbe für das Rechteck auszuwählen. Klicken Sie auf der **Expression***(fx)* Schaltfläche, um den Ausdruck zu bearbeiten, die einen Hexadezimalwert für die RGB-Farbe oder eine der vordefinierten Farben, die im bereitgestellt werden möglicherweise die **Ausdruck** Dialogfeld. Um eine Liste vordefinierter Farben anzuzeigen, wählen Sie **Web** im Bereich **Element**aus. Die im Bereich **Titel** aufgelisteten Farbnamen können in den Ausdruckstextbereich eingegeben werden. Verwenden Sie bei der Eingabe des Farbnamens kein Gleichheitszeichen (=) oder Anführungszeichen ("").  
+ Klicken Sie auf die Farbschaltfläche, um eine Füllfarbe für das Rechteck auszuwählen. Klicken Sie auf die Ausdrucksschaltfläche (**fx**), um den _Ausdruck_ zu bearbeiten. Hierbei kann es sich um einen Hexadezimalwert für die RGB-Farbe oder eine der vordefinierten Farben im Dialogfeld **Ausdruck** handeln. Um eine Liste vordefinierter Farben anzuzeigen, wählen Sie **Web** im Bereich **Element**aus. Die im Bereich **Titel** aufgelisteten Farbnamen können in den Ausdruckstextbereich eingegeben werden. Verwenden Sie bei der Eingabe des Farbnamens kein Gleichheitszeichen (=) oder Anführungszeichen ("").  
   
  **Bildquelle auswählen**  
  Geben Sie den Speicherort des Bilds an, sodass der Berichtsprozessor dieses beim Rendern des Berichts anzeigen kann.  
@@ -62,6 +62,6 @@ ms.locfileid: "48204650"
 ## <a name="see-also"></a>Siehe auch  
  [Formatieren von Berichtselementen (Berichts-Generator und SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Images &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
+ [Bilder &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
   
   

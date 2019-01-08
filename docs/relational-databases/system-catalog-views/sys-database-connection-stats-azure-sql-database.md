@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8b395998b8c0408b264ab2ffe7fe7f3390405cf6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 801074dd7e82f5e1564564125486e0845e2303fb
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676349"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589483"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "51676349"
 |**success_count**|**int**|Anzahl erfolgreicher Verbindungen.|  
 |**total_failure_count**|**int**|Gesamtzahl fehlerhafter Verbindungen. Dies ist die Summe der **Connection_failure_count**, **Terminated_connection_count**, und **Throttled_connection_count**, und schließt keine Deadlockereignisse.|  
 |**connection_failure_count**|**int**|Anzahl der Anmeldefehler.|  
-|**terminated_connection_count**|**int**|***Gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Anzahl beendeter Verbindungen.|  
-|**throttled_connection_count**|**int**|***Gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Anzahl gedrosselter Verbindungen.|  
+|**terminated_connection_count**|**int**|**_Gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Anzahl beendeter Verbindungen.|  
+|**throttled_connection_count**|**int**|**_Gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Anzahl gedrosselter Verbindungen.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -57,7 +57,7 @@ ms.locfileid: "51676349"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>start_time und end_time des Intervalls  
- Ein Ereignis wird in ein aggregationsintervall eingefügt, wenn das Ereignis tritt auf, *auf* oder *nach *** Start_time** und *vor *** End_time** für dieses Intervall. Beispielsweise würde ein Ereignis, das genau zum Zeitpunkt `2012-10-30 19:25:00.0000000` eintritt, nur im zweiten unten gezeigten Intervall aufgenommen werden:  
+ Ein Ereignis wird in ein aggregationsintervall eingefügt, wenn das Ereignis tritt auf, *auf* oder _nach_**Start_time** und _vor_  **End_time** für dieses Intervall. Beispielsweise würde ein Ereignis, das genau zum Zeitpunkt `2012-10-30 19:25:00.0000000` eintritt, nur im zweiten unten gezeigten Intervall aufgenommen werden:  
   
 ```  
   

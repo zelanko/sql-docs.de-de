@@ -11,12 +11,12 @@ ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebe649261a1f97093f40ad2aa3f20f96306fd1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fcf32b558d34340d727a357136884b8d6530887b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219120"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363762"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>Festlegen des Kompatibilitätsgrads einer mehrdimensionalen Datenbank (Analysis Services)
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]wird die Funktionsebene einer Datenbank durch die Eigenschaft „Datenbank-Kompatibilitätsgrad“ bestimmt. Kompatibilitätsgrade sind für jeden Modelltyp spezifisch. Z. B. einen Kompatibilitätsgrad von `1100` hat eine andere Bedeutung, je nachdem, ob die Datenbank mehrdimensional oder Tabellarisch ist.  
@@ -24,7 +24,7 @@ ms.locfileid: "48219120"
  In diesem Thema wird nur der Kompatibilitätsgrad für mehrdimensionale Datenbanken beschrieben. Weitere Informationen zu tabellarischen Lösungen finden Sie unter [Kompatibilitätsgrad &#40;SSAS – tabellarisch, SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
   
 > [!NOTE]  
->  Tabellarische Modelle verfügen über zusätzliche Datenbank-Kompatibilitätsgrade, die für mehrdimensionale Modelle nicht gelten. Kompatibilitätsgrad `1103` für mehrdimensionale Modelle nicht vorhanden. Finden Sie unter [neuerungen beim tabellarischen Modell in SQL Server 2012 SP1 und dem Kompatibilitätsgrad](http://go.microsoft.com/fwlink/?LinkId=301727) für Weitere Informationen zu `1103` für tabellarische Lösungen.  
+>  Tabellarische Modelle verfügen über zusätzliche Datenbank-Kompatibilitätsgrade, die für mehrdimensionale Modelle nicht gelten. Bei mehrdimensionalen Modellen gibt es keinen Kompatibilitätsgrad `1103`. Finden Sie unter [neuerungen beim tabellarischen Modell in SQL Server 2012 SP1 und dem Kompatibilitätsgrad](https://go.microsoft.com/fwlink/?LinkId=301727) für Weitere Informationen zu `1103` für tabellarische Lösungen.  
   
  **Kompatibilitätsgrade für mehrdimensionale Datenbanken**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48219120"
 ## <a name="determine-the-existing-database-compatibility-level-for-a-multidimensional-database"></a>Bestimmen des bestehenden Datenbank-Kompatibilitätsgrads für eine mehrdimensionale Datenbank  
  XMLA ist die einzige Möglichkeit, den Datenbank-Kompatibilitätsgrad anzuzeigen oder zu ändern. Das XMLA-Skript, durch das die Datenbank in SQL Server Management Studio angegeben wird, kann angezeigt oder geändert werden.  
   
- Wenn Sie die XMLA-Definition einer Datenbank für die Eigenschaft suchen `CompatibilityLevel` und ist nicht vorhanden, Sie haben wahrscheinlich eine Datenbank mit dem die `1050` Ebene.  
+ Wenn Sie die XMLA-Definition einer Datenbank nach der `CompatibilityLevel`-Eigenschaft durchsuchen, diese aber nicht vorhanden ist, verfügt die Datenbank höchstwahrscheinlich über den Kompatibilitätsgrad `1050`.  
   
  Anweisungen zum Anzeigen und Ändern des XMLA-Skripts finden Sie im nächsten Abschnitt.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "48219120"
 3.  Das Synchronisieren von Servern wird nur für Server unterstützt, die dieselbe Version und denselben Datenbank-Kompatibilitätsgrad verwenden.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Nachdem Sie die Datenbank-Kompatibilitätsgrad erhöhen, können Sie festlegen der `StringStoresCompatibilityLevel` -Eigenschaft in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Dadurch wird der Zeichenfolgenspeicher für Measures und Dimensionen vergrößert. Weitere Informationen zu dieser Funktion finden Sie unter [Konfigurieren des Zeichenfolgenspeichers für Dimensionen und Partitionen](configure-string-storage-for-dimensions-and-partitions.md).  
+ Nachdem Sie den Datenbank-Kompatibilitätsgrad erhöht haben, können Sie die `StringStoresCompatibilityLevel`-Eigenschaft in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] festlegen. Dadurch wird der Zeichenfolgenspeicher für Measures und Dimensionen vergrößert. Weitere Informationen zu dieser Funktion finden Sie unter [Konfigurieren des Zeichenfolgenspeichers für Dimensionen und Partitionen](configure-string-storage-for-dimensions-and-partitions.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sichern, wiederherstellen und Synchronisieren von Datenbanken &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [Sichern, Wiederherstellen und Synchronisieren von Datenbanken &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

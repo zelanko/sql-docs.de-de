@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren Sie R- und Python-Komponenten in SQL Server-Instanzen (Machine Learning-Dienste) | Microsoft-Dokumentation
+title: Upgrade von R und Python-Komponenten – SQL Server Machine Learning Services
 description: Aktualisieren Sie R- und Python in SQL Server 2016-Services oder SQL Server 2017 Machine Learning Services verwenden von sqlbindr.exe zum Binden an Machine Learning-Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2677885719c0b9a54a39b1609a0c2652728820f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 897f83e7272a47428d696802adf79ff816805486
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078890"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645449"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Aktualisieren von Machine learning (R- und Python) Komponenten in SQL Server-Instanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +28,7 @@ Bindung ist ein Installationsprozess, die tauscht den Inhalt der Ordner R_SERVIC
 
 Zusammen mit aktualisierten Komponenten an, einen Switch im Wartungsmodus Modelle enthält. Anstelle von der [Produktlebenszyklus für SQL Server](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017), mit [kumulativen Updates für SQL Server](https://support.microsoft.com/help/4047329/sql-server-2017-build-versions), Ihre Dienstupdates entsprechen nun die [support-Ablauffristen für Microsoft R Server und Computer Erlernen von Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) auf die [modernen Lebenszyklus](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 
-Mit Ausnahme der Versionen einer Komponente und Dienstupdates, Bindung ändert nicht die Grundlagen der Installation: Integration von R und Python gehört immer noch zu einer Datenbank-Engine-Instanz, Lizenzierung, bleibt unverändert (keine zusätzlichen Kosten Bindung), und SQL Server-Support-Richtlinien enthalten weiterhin für die Datenbank-Engine. Im weiteren Verlauf dieses Artikels wird der Mechanismus für die Bindung und deren Funktionsweise für jede Version von SQL Server erläutert.
+Mit Ausnahme der Versionen einer Komponente und Dienstupdates wird die Bindung nicht die Grundlagen der Installation geändert: Integration von R und Python gehört immer noch zu einer Datenbank-Engine-Instanz, Lizenzierung, bleibt unverändert (keine zusätzlichen Kosten Bindung) und SQL Server-Support-Richtlinien enthalten jedoch weiterhin für die Datenbank-Engine. Im weiteren Verlauf dieses Artikels wird der Mechanismus für die Bindung und deren Funktionsweise für jede Version von SQL Server erläutert.
 
 > [!NOTE]
 > Bindung gilt für (In-Database)-Instanzen, die mit SQL Server-Instanz gebunden sind. Bindung ist nicht relevant, für die Installation (Standalone).
@@ -109,7 +109,7 @@ Setup für Microsoft Machine Learning erkennt die vorhandenen Features und die S
 
 1. Überprüfen Sie die Version von R-Basis "und" RevoScaleR-Pakete ", um zu bestätigen, dass die vorhandenen Versionen sind kleiner, was durch die sie ersetzt werden sollen. Klicken Sie für SQL Server 2016 R Services R-Base-Paket ist 3.2.2, und RevoScaleR ist 8.0.3 kompatibel.
 
-    ```SQL
+    ```sql
     EXECUTE sp_execute_external_script
     @language=N'R'
     ,@script = N'str(OutputDataSet);
@@ -139,7 +139,7 @@ Setup für Microsoft Machine Learning erkennt die vorhandenen Features und die S
 
    Wählen Sie auf der rechten Seite das Kontrollkästchen neben den Namen der Instanz ein. Wenn keine Instanzen aufgelistet werden, müssen Sie eine Kombination nicht kompatibel. Wenn Sie keine Instanz auswählen, wird eine neue eigenständige Installation von Machine Learning Server erstellt, und die SQL Server-Bibliotheken sind unverändert. Wenn Sie eine Instanz nicht auswählen, möglicherweise nicht auf [SP1 CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1). 
 
-    ![Microsoft Machine Learning Server-Setup-Assistenten](media/mls-931-installer-mssql13.png)
+    ![Schritt bei der Installation konfigurieren](media/mls-931-installer-mssql13.png)
 
 1. Auf der **-Lizenzvertrag** Seite **ich akzeptiere diese Lizenzbedingungen** , akzeptieren die Lizenzbedingungen für Machine Learning-Server. 
 
@@ -151,7 +151,7 @@ Setup für Microsoft Machine Learning erkennt die vorhandenen Features und die S
 
 Während der Installation alle von SQL Server verwendeten R oder Python-Bibliotheken werden ersetzt, und Launchpad wird aktualisiert, um die Verwendung der neueren Komponenten. Daher werden, wenn die Instanz im Standardordner R_SERVICES zuvor Bibliotheken verwendet, diese Bibliotheken werden nach dem Upgrade entfernt, und die Eigenschaften für den Launchpad-Dienst geändert werden, um die Bibliotheken in den neuen Speicherort zu verwenden.
 
-Bindung wirkt sich auf den Inhalt dieser Ordner: c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library wird mit dem Inhalt der c:\programme\microsoft\ml Server\R_SERVER ersetzt. Der zweite Ordner und dessen Inhalt werden von Microsoft Machine Learning Server-Setup erstellt. 
+Bindung wirkt sich auf den Inhalt dieser Ordner: C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library wird mit dem Inhalt der c:\programme\microsoft\ml Server\R_SERVER ersetzt. Der zweite Ordner und dessen Inhalt werden von Microsoft Machine Learning Server-Setup erstellt. 
 
 Wenn Sie Upgrades ein Fehler auftritt, überprüfen Sie [SqlBindR-Fehlercodes](#sqlbindr-error-codes) für Weitere Informationen.
 
@@ -159,7 +159,7 @@ Wenn Sie Upgrades ein Fehler auftritt, überprüfen Sie [SqlBindR-Fehlercodes](#
 
 Überprüfen Sie die Version von R "und" RevoScaleR ", um zu bestätigen, dass Sie neuere Versionen haben. Verwenden Sie die R-Konsole mit der R-Pakete in der Datenbank-Engine-Instanz verteilt, um die Paketinformationen abzurufen:
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
 @language=N'R'
 ,@script = N'str(OutputDataSet);
@@ -226,13 +226,13 @@ Nach dem Ausführen von Microsoft Machine Learning Server wird ein Befehlszeilen
 
 Sie können eine gebundene Instanz zu einer anfänglichen Installation der R und Python-Komponenten hergestellt, indem SQL Server-Setup wiederherstellen. Es gibt drei Teile beim Wiederherstellen auf der SQL Server-Wartung.
 
-+ [Schritt 1: Aufheben der Bindung von Microsoft Machine Learning Server](#step-1-unbind)
-+ [Schritt 2: Wiederherstellen der Instanz auf den ursprünglichen status](#step-2-restore)
++ [Schritt 1: Trennt die Verbindung von Microsoft Machine Learning Server](#step-1-unbind)
++ [Schritt 2: Die Instanz zum ursprünglichen Zustand wiederherstellen](#step-2-restore)
 + [Schritt 3: Installieren Sie alle Pakete, die Sie die Installation hinzugefügt](#step-3-reinstall-packages)
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>Schritt 1: Aufheben der Bindung
+### <a name="step-1-unbind"></a>Schritt 1: Bindung aufheben
 
 Sie haben zwei Optionen für ein Rollback für die Bindung: Führen Sie Setup erneut erneut aus, oder verwenden Sie SqlBindR-Befehlszeilen-Hilfsprogramm.
 
@@ -265,7 +265,7 @@ Sie können auch dies mehr Arbeit ist, aber Sie könnten auch vollständig deins
 
 <a name="step-3-reinstall-packages"></a> 
 
-### <a name="step-3-add-any-third-party-packages"></a>Schritt 3: Fügen Sie hinzu, alle Pakete von Drittanbietern
+### <a name="step-3-add-any-third-party-packages"></a>Schritt 3: Fügen Sie alle Pakete von Drittanbietern
 
 Sie können andere Pakete Open Source- oder von Drittanbietern Ihre paketbibliothek hinzugefügt haben. Da die Bindung umkehren den Speicherort des Standard-paketbibliothek wechselt, müssen Sie die Pakete in der Bibliothek neu installieren, die R- und Python jetzt verwenden. Weitere Informationen finden Sie unter [Pakete standardmäßig](installing-and-managing-r-packages.md), [Installieren neuer R-Pakete](install-additional-r-packages-on-sql-server.md), und [Installieren neuer Python-Pakete](../python/install-additional-python-packages-on-sql-server.md).
 
@@ -283,7 +283,7 @@ Sie können andere Pakete Open Source- oder von Drittanbietern Ihre paketbibliot
 |*bind*| Aktualisiert die angegebene SQL-Datenbankinstanz auf die neueste Version von R Server und stellt sicher, dass die Instanz automatisch zukünftige Upgrades von R Server erhält|
 |*unbind*|Die neueste Version von R Server wird auf der angegebenen SQL-Datenbankinstanz deinstalliert, und es wird verhindert, dass zukünftige R Server-Upgrades auf die Instanz angewandt werden|
 
-<a name="sqlbinder-error-codes"><a/>
+<a name="sqlbindr-error-codes"><a/>
 
 ## <a name="binding-errors"></a>Bindungsfehler
 
@@ -328,7 +328,7 @@ Microsoft Machine Learning Server 9.2.1 und 9.3, verfügen nicht über dieses Pr
 ### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>Binden bzw. Aufheben der Bindung bewirkt, dass mehrere temporärer Ordner
 
 Gelegentlich sogar die Bindung und die Bindung Vorgänge zum Bereinigen von temporären Ordner.
-Wenn Sie Ordner mit einem Namen wie folgt zu finden, können Sie es entfernen, nachdem die Installation abgeschlossen ist: R_SERVICES_<guid>
+Wenn Sie Ordner mit einem Namen wie folgt zu finden, können Sie diese entfernen, nachdem die Installation abgeschlossen ist: R_SERVICES_<guid>
 
 > [!NOTE]
 > Achten Sie darauf warten, bis die Installation abgeschlossen ist. Es dauert sehr lange zum Entfernen von R-Bibliotheken, die mit einer bestimmten Version verknüpft ist, und fügen Sie dann die neuen R-Bibliotheken hinzu. Wenn der Vorgang abgeschlossen ist, werden die temporären Ordner entfernt.

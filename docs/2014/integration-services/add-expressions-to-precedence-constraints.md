@@ -18,23 +18,23 @@ ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cee9f40b308c545a9ebc74f2e4f1a88618d5008
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fee423c1000d2be7ebc70f2cfb40e3d83ba24150
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208280"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370982"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen
-  Eine Rangfolgeneinschränkung kann mithilfe eines Ausdrucks die Einschränkung zwischen zwei ausführbaren Dateien definieren, nämlich der ausführbaren Datei der Rangfolge und der eingeschränkten ausführbaren Datei. Bei den ausführbaren Dateien kann es sich um Tasks oder Container handeln. Der Ausdruck kann separat oder in Kombination mit dem Ausführungsergebnis der ausführbaren Datei der Rangfolge verwendet werden. Das Ausführungsergebnis einer ausführbaren Datei ist Erfolg oder Fehler. Wenn Sie das Ausführungsergebnis einer Rangfolgeneinschränkung konfigurieren, können Sie das Ausführungsergebnis auf `Success`, `Failure` oder `Completion` festlegen. Für `Success` muss die ausführbare Datei der Rangfolge erfolgreich ausgeführt werden, für `Failure` muss die ausführbare Datei der Rangfolge mit einem Fehler ausgeführt werden. `Completion` zeigt an, dass die eingeschränkte ausführbare Datei unabhängig von einer erfolgreichen Ausführung des Rangfolgentasks ausgeführt werden sollte. Weitere Informationen finden Sie unter [Precedence Constraints](control-flow/precedence-constraints.md).  
+  Eine Rangfolgeneinschränkung kann mithilfe eines Ausdrucks die Einschränkung zwischen zwei ausführbaren Dateien definieren, nämlich der ausführbaren Datei der Rangfolge und der eingeschränkten ausführbaren Datei. Bei den ausführbaren Dateien kann es sich um Tasks oder Container handeln. Der Ausdruck kann separat oder in Kombination mit dem Ausführungsergebnis der ausführbaren Datei der Rangfolge verwendet werden. Das Ausführungsergebnis einer ausführbaren Datei ist Erfolg oder Fehler. Wenn Sie das Ausführungsergebnis einer Rangfolgeneinschränkung konfigurieren, können Sie das Ausführungsergebnis auf `Success`, `Failure` oder `Completion` festlegen. Für `Success` muss die ausführbare Datei der Rangfolge erfolgreich ausgeführt werden, für `Failure` muss die ausführbare Datei der Rangfolge mit einem Fehler ausgeführt werden. `Completion` zeigt an, dass die eingeschränkte ausführbare Datei unabhängig von einer erfolgreichen Ausführung des Rangfolgentasks ausgeführt werden sollte. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](control-flow/precedence-constraints.md).  
   
- Der Ausdruck muss zu  `True` oder `False` ausgewertet werden, und er muss ein gültiger [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Ausdruck sein. Für diesen Ausdruck sind Literale, Systemvariablen und benutzerdefinierte Variablen sowie die Funktionen und Operatoren zulässig, die von der [!INCLUDE[ssIS](../includes/ssis-md.md)] -Ausdrucksgrammatik bereitgestellt werden. Beispielsweise verwendet der Ausdruck `@Count == SQRT(144) + 10` die `Count`-Variable, die SQRT-Funktion und die Operatoren Gleich (==) und Hinzufügen (+) . Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
+ Der Ausdruck muss zu  `True` oder `False` ausgewertet werden, und er muss ein gültiger [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Ausdruck sein. Für diesen Ausdruck sind Literale, Systemvariablen und benutzerdefinierte Variablen sowie die Funktionen und Operatoren zulässig, die von der [!INCLUDE[ssIS](../includes/ssis-md.md)] -Ausdrucksgrammatik bereitgestellt werden. Beispielsweise verwendet der Ausdruck `@Count == SQRT(144) + 10` die `Count`-Variable, die SQRT-Funktion und die Operatoren Gleich (==) und Hinzufügen (+) . Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)ausgewertet wird.  
   
  In der folgenden Abbildung sind Task A und Task B durch eine Rangfolgeneinschränkung miteinander verlinkt, die ein Ausführungsergebnis und einen Ausdruck verwendet. Der Einschränkungswert ist auf `Success` festgelegt, und der Ausdruck lautet `@X >== @Z`. Task B, der eingeschränkte Task, wird nur ausgeführt, wenn Task A erfolgreich abgeschlossen wird und der Wert der `X`-Variablen größer oder gleich dem Wert der `Z`-Variablen ist.  
   
  ![Rangfolgeneinschränkung zwischen zwei Tasks](media/mw-dts-03.gif "Rangfolgeneinschränkung zwischen zwei Tasks")  
   
- Ausführbare Dateien können auch mithilfe mehrerer Rangfolgeneinschränkungen miteinander verlinkt werden, die unterschiedliche Ausdrücke enthalten. Beispielsweise sind in der folgenden Abbildung Task B und Task C mit Task A durch Rangfolgeneinschränkungen verlinkt, die Ausführungsergebnisse und Ausdrücke verwenden. Beide Einschränkungswerte sind festgelegt, um `Success.` eine rangfolgeneinschränkung enthält den Ausdruck `@X >== @Z`, und die andere rangfolgeneinschränkung des Ausdrucks `@X < @Z`. In Abhängigkeit von den Werten der `X`-Variablen und der `Z`-Variablen wird Task C oder Task B ausgeführt.  
+ Ausführbare Dateien können auch mithilfe mehrerer Rangfolgeneinschränkungen miteinander verlinkt werden, die unterschiedliche Ausdrücke enthalten. Beispielsweise sind in der folgenden Abbildung Task B und Task C mit Task A durch Rangfolgeneinschränkungen verlinkt, die Ausführungsergebnisse und Ausdrücke verwenden. Beide Einschränkungswerte sind auf `Success.` festgelegt. Eine Rangfolgeneinschränkung enthält den Ausdruck `@X >== @Z`, und die andere Rangfolgeneinschränkung den Ausdruck `@X < @Z`. In Abhängigkeit von den Werten der `X`-Variablen und der `Z`-Variablen wird Task C oder Task B ausgeführt.  
   
  ![Ausdrücke für Rangfolgeneinschränkungen](media/mw-dts-04.gif "Ausdrücke für Rangfolgeneinschränkungen")  
   
@@ -47,12 +47,12 @@ ms.locfileid: "48208280"
   
 |Auswertungsvorgang|Einschränkung wird ausgewertet zu|Ausdruck wird ausgewertet zu|Eingeschränkte ausführbare Datei wird ausgeführt|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|Einschränkung|Wahr|–|Wahr|  
+|Einschränkung|Wahr|Nicht zutreffend|Wahr|  
 |Einschränkung|False|–|False|  
-|expression|–|Wahr|Wahr|  
-|expression|–|False|False|  
+|expression|Nicht zutreffend|Wahr|Wahr|  
+|expression|Nicht zutreffend|False|False|  
 |Einschränkung und Ausdruck|Wahr|Wahr|Wahr|  
-|Einschränkung und Ausdruck|Wahr|Falsch|False|  
+|Einschränkung und Ausdruck|Wahr|False|False|  
 |Einschränkung und Ausdruck|False|Wahr|False|  
 |Einschränkung und Ausdruck|False|False|False|  
 |Einschränkung oder Ausdruck|Wahr|Wahr|Wahr|  
@@ -67,7 +67,7 @@ ms.locfileid: "48208280"
 -   [Festlegen der Eigenschaften von Rangfolgeneinschränkungen](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Technischer Artikel, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
+ Technischer Artikel, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Siehe auch  
  [Mehrere Rangfolgeneinschränkungen](../../2014/integration-services/multiple-precedence-constraints.md)   

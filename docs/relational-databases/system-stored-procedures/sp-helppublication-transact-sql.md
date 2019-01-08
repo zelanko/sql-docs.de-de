@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helppublication_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1293084c422c73bba83ee66e2242b9416368db6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a0e823731ff80c714bc31a54210dbcd0e0fea18
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624218"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205209"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  Ein Flag zur Angabe zurückgegebener Zeilen. *finden Sie*ist **Int** und ein OUTPUT-Parameter hat den Standardwert **23456**. **1** gibt an, die Veröffentlichung gefunden wurde. **0** gibt an, die Veröffentlichung wurde nicht gefunden.  
   
  [ **@publisher** = ] **'***publisher***'**  
- Gibt einen nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist vom Datentyp Sysname und hat den Standardwert NULL.  
+ Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist vom Datentyp Sysname und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht angegeben werden, beim Anfordern von Veröffentlichungsinformationen von einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
@@ -92,9 +91,9 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |centralized_conflicts|**bit**|Gibt an, ob Konfliktdatensätze auf dem Verleger gespeichert werden:<br /><br /> **0** = die Konfliktdatensätze gespeichert werden, auf dem Verleger und auf dem Abonnenten, die den Konflikt verursacht hat.<br /><br /> **1** = die Konfliktdatensätze auf dem Verleger gespeichert werden.|  
 |conflict_retention|**int**|Gibt die Konfliktaufbewahrungsdauer in Tagen an.|  
 |conflict_policy|**int**|Gibt die Richtlinie zur Konfliktlösung an, die für die Option zur verzögerten Aktualisierung über eine Warteschlange verwendet wird. Dabei kann es sich um einen der folgenden Werte sein:<br /><br /> **1** = der Verleger gewinnt den Konflikt.<br /><br /> **2** = der Abonnent gewinnt den Konflikt.<br /><br /> **3** = Abonnement wird erneut initialisiert.|  
-|queue_type||Gibt an, welcher Wartenschlangentyp verwendet wird. Dabei kann es sich um einen der folgenden Werte sein:<br /><br /> **MSMQ** = verwenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing zum Speichern von Transaktionen.<br /><br /> **SQL** = verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen.<br /><br /> Hinweis: Unterstützung für Message Queuing wurde eingestellt.|  
+|queue_type||Gibt an, welcher Wartenschlangentyp verwendet wird. Dabei kann es sich um einen der folgenden Werte sein:<br /><br /> **MSMQ** = verwenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing zum Speichern von Transaktionen.<br /><br /> **SQL** = verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen.<br /><br /> Hinweis: Message Queuing wird nicht mehr unterstützt.|  
 |backward_comp_level||Der Datenbank-Kompatibilitätsgrad. Folgende Werte sind möglich:<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|publish_to_AD|**bit**|Gibt an, ob die Veröffentlichung in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory™ veröffentlicht wird. Der Wert **1** gibt an, dass sie veröffentlicht wird, und den Wert **0** gibt an, dass sie nicht veröffentlicht wird.|  
+|publish_to_AD|**bit**|Gibt an, ob die Veröffentlichung, in veröffentlicht wird der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory Zuweisen von gruppenlizenzen finden. Der Wert **1** gibt an, dass sie veröffentlicht wird, und den Wert **0** gibt an, dass sie nicht veröffentlicht wird.|  
 |allow_initialize_from_backup|**bit**|Gibt an, ob Abonnenten ein Abonnement für diese Veröffentlichung über eine Sicherung anstelle einer Anfangsmomentaufnahme initialisieren können. **1** bedeutet, dass Abonnements aus einer Sicherung initialisiert werden können und **0** bedeutet, die sie nicht. Weitere Informationen finden Sie unter [Initialisieren einer Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) eine transaktionale Abonnenten ohne Momentaufnahme.|  
 |replicate_ddl|**int**|Gibt an, ob es sich bei der Schemareplikation für die Veröffentlichung unterstützt wird. **1** gibt an, dass die Anweisungen des Data Definition Language (DDL) wird ausgeführt, auf dem Verleger repliziert werden, und **0** gibt an, dass DDL-Anweisungen nicht repliziert werden. Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
 |enabled_for_p2p|**int**|Gibt an, ob die Veröffentlichung in einer Peer-zu-Peer-Replikationstopologie verwendet werden kann. **1** gibt an, dass die Veröffentlichung Peer-zu-Peer-Replikation unterstützt. Weitere Informationen finden Sie unter [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
@@ -103,8 +102,8 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |enabled_for_p2p_conflictdetection|**int**|Gibt an, ob der Verteilungs-Agent Konflikte für eine Veröffentlichung erkennt, die für die Peer-zu-Peer-Replikation aktiviert ist. Der Wert **1** bedeutet, dass Konflikte erkannt werden. Weitere Informationen finden Sie unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |originator_id|**int**|Gibt eine ID für einen Knoten in einer Peer-zu-Peer-Topologie an. Diese ID wird für die konflikterkennung verwendet, wenn **enabled_for_p2p_conflictdetection** nastaven NA hodnotu **1**. Zum Anzeigen einer Liste der bereits verwendeten IDs fragen Sie die [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) -Systemtabelle ab.|  
 |p2p_continue_onconflict|**int**|Gibt an, ob der Verteilungs-Agent bei Erkennung eines Konflikts die Verarbeitung von Änderungen fortsetzt. Der Wert **1** bedeutet, dass der Agent die Verarbeitung von Änderungen fortsetzt.<br /><br /> **\*\* Vorsicht \* \***  es wird empfohlen, dass Sie den Standardwert verwenden **0**. Wenn diese Option festgelegt ist, um **1**, den Verteilungs-Agent versucht, die Datenkonvergenz in der Topologie durch Anwenden von die Konfliktzeile aus dem Knoten mit der höchsten Absender-ID. Bei dieser Methode ist keine Konvergenz garantiert. Sie sollten sicherstellen, dass die Topologie nach der Erkennung eines Konflikts konsistent ist. Weitere Informationen finden Sie im Abschnitt "Konfliktbehandlung" unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
-|allow_partition_switch|**int**|Gibt an, ob ALTER TABLE…SWITCH-Anweisungen für die veröffentlichte Datenbank ausgeführt werden können. Weitere Informationen finden Sie unter [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-|replicate_partition_switch|**int**|Gibt an, ob ALTER TABLE…SWITCH-Anweisungen, die für die veröffentlichte Datenbank ausgeführt werden, auf Abonnenten repliziert werden sollen. Diese Option gilt nur, wenn *Allow_partition_switch* nastaven NA hodnotu **1**.|  
+|allow_partition_switch|**int**|Gibt an, ob ALTER TABLE... SWITCH-Anweisungen können für die veröffentlichte Datenbank ausgeführt werden. Weitere Informationen finden Sie unter [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+|replicate_partition_switch|**int**|Gibt an, ob ALTER TABLE... SWITCH-Anweisungen, die für die veröffentlichte Datenbank ausgeführt werden, sollten auf Abonnenten repliziert werden. Diese Option gilt nur, wenn *Allow_partition_switch* nastaven NA hodnotu **1**.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -120,7 +119,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Serverrolle "Sysadmin" auf dem Verleger oder Mitglieder der Db_owner-Datenbankrolle behoben, für die Veröffentlichungsdatenbank oder der Benutzer in der veröffentlichungszugriffsliste (PAL) können ' sp_helppublication ' aus ausführen.  
   
- Für einen nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger festen nur Mitglieder der Sysadmin-Serverrolle auf dem Verteiler oder Mitglied der festen Datenbankrolle "Db_owner" für die Verteilungsdatenbank oder der Benutzer in der VERÖFFENTLICHUNGSZUGRIFFSLISTE können ' sp_helppublication ' aus ausführen.  
+ Für einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger festen nur Mitglieder der Sysadmin-Serverrolle auf dem Verteiler oder Mitglied der festen Datenbankrolle "Db_owner" für die Verteilungsdatenbank oder der Benutzer in der VERÖFFENTLICHUNGSZUGRIFFSLISTE können ' sp_helppublication ' aus ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

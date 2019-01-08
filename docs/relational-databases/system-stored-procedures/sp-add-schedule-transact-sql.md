@@ -18,12 +18,12 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d4f057351f6d3c4713c616c90748c2c6e43524f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fc52fd7af36d2238c53d8cbd877b7a6d43cd1dd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837758"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591484"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@schedule_name =** ] **'***schedule_name***'**  
+ [  **@schedule_name =** ] **"**_Schedule_name_**"**  
  Der Name des Zeitplans. *Schedule_name* ist **Sysname**, hat keinen Standardwert.  
   
  [ **@enabled =** ] *enabled*  
@@ -64,7 +64,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@freq_type =** ] *freq_type*  
  Ein Wert, der angibt, wann ein Auftrag ausgeführt werden soll. *Freq_type* ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**4**|Täglich|  
@@ -90,7 +90,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@freq_subday_type =** ] *freq_subday_type*  
  Gibt die Einheiten für *Freq_subday_interval*. *Freq_subday_type* ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
   
-|value|Beschreibung (Einheit)|  
+|Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**0x1**|Zum angegebenen Zeitpunkt|  
 |**0x2**|Sekunden|  
@@ -98,12 +98,12 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x8**|Stunden|  
   
  [ **@freq_subday_interval =** ] *freq_subday_interval*  
- Die Anzahl der *Freq_subday_type* -Perioden zwischen den einzelnen Ausführungen eines Auftrags. *Freq_subday_interval* ist **Int**, hat den Standardwert **0**. Hinweis: Das Intervall sollte nicht länger als 10 Sekunden sein. *Freq_subday_interval* wird ignoriert, in diesen Fällen, in denen *Freq_subday_type* gleich **1**.  
+ Die Anzahl der *Freq_subday_type* -Perioden zwischen den einzelnen Ausführungen eines Auftrags. *Freq_subday_interval* ist **Int**, hat den Standardwert **0**. Hinweis: Intervall muss länger als 10 Sekunden betragen. *Freq_subday_interval* wird ignoriert, in diesen Fällen, in denen *Freq_subday_type* gleich **1**.  
   
  [ **@freq_relative_interval =** ] *freq_relative_interval*  
  Vorhandensein eines Auftrags *Freq_interval* in jedem Monat, wenn *Freq_interval* beträgt 32 (monatlich, relativ). *Freq_relative_interval* ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein. *Freq_relative_interval* wird ignoriert, in diesen Fällen, in denen *Freq_type* ist nicht gleich 32.  
   
-|value|Beschreibung (Einheit)|  
+|Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**1**|Erster|  
 |**2**|Zweimal|  
@@ -130,13 +130,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@active_end_time =** ] *active_end_time*  
  Die Zeit auf einem beliebigen Tag zwischen *Active_start_date* und *Active_end_date* zu der die Ausführung eines Auftrags. *Active_end_time* ist **Int**, hat den Standardwert **235959**, womit 23:59:59 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [ **@owner_login_name**=] **"***Owner_login_name***"**  
+ [ **@owner_login_name**=] **"**_Owner_login_name_**"**  
  Der Name des Serverprinzipals, der Besitzer des Zeitplans ist. *Owner_login_name* ist **Sysname**, hat den Standardwert NULL, gibt an, dass der Ersteller des Zeitplans Besitz ist.  
   
- [ **@schedule_uid**=] *Schedule_uid *** Ausgabe**  
+ [ **@schedule_uid**=] _Schedule_uid_**Ausgabe**  
  Ein eindeutiger Bezeichner für den Zeitplan. *Wert für schedule_uid an* ist eine Variable vom Typ **Uniqueidentifier**.  
   
- [ **@schedule_id**= ] *schedule_id***OUTPUT**  
+ [ **@schedule_id**=] _Schedule_id_**Ausgabe**  
  Ein Bezeichner für den Zeitplan. *Schedule_id* ist eine Variable vom Typ **Int**.  
   
  [ **@originating_server**=] *Servername*  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Log Reader Agent, executables
@@ -16,12 +15,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 892f89c0c2d3161b0df16ad9337237ce14bef159
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: fa69b87466d11c317e73a69454768b0f5396532f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226342"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800472"
 ---
 # <a name="replication-log-reader-agent"></a>Replikationsprotokolllese-Agent
   Der Replikationsprotokolllese-Agent ist eine ausführbare Datei, die das Transaktionsprotokoll jeder für die Transaktionsreplikation konfigurierten Datenbank überwacht und die für die Replikation markierten Transaktionen aus dem Transaktionsprotokoll in die Verteilungsdatenbank kopiert.  
@@ -103,7 +102,7 @@ ms.locfileid: "50226342"
 |**2**|Gibt an, dass SSL verwendet und das Zertifikat überprüft wird.|  
 
  > [!NOTE]  
- >  Ein gültiges SSL-Zertifikat ist mit einem vollqualifizierten Domänennamen der SQL Server definiert. Erstellen Sie einen Alias in der Reihenfolge, bis der Agent eine Verbindung herstellen, wenn Sie - EncryptionLevel auf 2 festlegen auf dem lokalen SQL Server. Der Parameter "-Alias-Name" muss den Namen des Servers und der Parameter "Server" sollte festgelegt werden, um den vollqualifizierten Namen der SQL Server.
+ >  Ein gültiges SSL-Zertifikat wird mit dem vollqualifizierten Domänennamen der SQL Server-Instanz definiert. Damit der Agent die Verbindung erfolgreich herstellen kann, wenn „-EncryptionLevel“ auf 2 festgelegt ist, sollten Sie einen Alias auf der lokalen SQL Server-Instanz erstellen. Der Parameter „Alias Name“ sollte den Servernamen enthalten, und für den Parameter „Server“ sollte der vollqualifizierte Name der SQL Server-Instanz festgelegt werden.
  
  Weitere Informationen finden Sie unter [Sicherheitsübersicht &#40;Replikation&#41;](../security/security-overview-replication.md).  
   

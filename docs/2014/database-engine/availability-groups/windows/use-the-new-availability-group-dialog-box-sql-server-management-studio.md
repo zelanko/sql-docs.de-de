@@ -12,12 +12,12 @@ ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66f36164c6199d51d8a01916d84f1085d479235a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fda7911dc9e62741ba846e8a166bb0e3312f3425
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051680"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373172"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe (SQL Server Management Studio)
   Dieses Thema enthält Informationen zum Verwenden des Dialogfelds **Neue Verfügbarkeitsgruppe** von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , um auf Instanzen von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , die für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]aktiviert sind, eine AlwaysOn-Verfügbarkeitsgruppe zu erstellen. Eine *Verfügbarkeitsgruppe* definiert einen Satz von Benutzerdatenbanken, für die als eine einzelne Einheit ein Failover ausgeführt wird, sowie einen Satz von Failoverpartnern, die als *Verfügbarkeitsreplikate*bezeichnet werden, die Failover unterstützen.  
@@ -30,14 +30,14 @@ ms.locfileid: "48051680"
 > [!NOTE]  
 >  Informationen zu alternativen Möglichkeiten zum Erstellen einer Verfügbarkeitsgruppe finden Sie in [Verwandte Aufgaben](#RelatedTasks)später in diesem Thema.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Es wird dringend empfohlen, dass Sie diesen Abschnitt lesen, bevor Sie versuchen, Ihre erste Verfügbarkeitsgruppe zu erstellen.  
   
 ###  <a name="PrerequisitesRestrictions"></a> Erforderliche Komponenten  
   
 -   Überprüfen Sie vor dem Erstellen einer Verfügbarkeitsgruppe, ob sich die Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die Verfügbarkeitsreplikate hosten, auf verschiedenen WSFC-Konten (Windows Server Failover Clustering) des gleichen WSFC-Failoverclusters befinden. Stellen Sie außerdem sicher, dass alle Serverinstanzen für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktiviert sind und alle anderen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Voraussetzungen erfüllen. Wenn Sie weitere Informationen wünschen, sollten Sie unbedingt [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md) lesen.  
   
--   Vor dem Erstellen einer Verfügbarkeitsgruppe muss gewährleistet sein, dass jede Serverinstanz, die ein Verfügbarkeitsreplikat hostet, einen voll funktionsfähigen Datenbankspiegelungs-Endpunkt besitzt. Weitere Informationen finden Sie unter [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
+-   Vor dem Erstellen einer Verfügbarkeitsgruppe muss gewährleistet sein, dass jede Serverinstanz, die ein Verfügbarkeitsreplikat hostet, einen voll funktionsfähigen Datenbankspiegelungs-Endpunkt besitzt. Weitere Informationen finden Sie unter [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)aktiviert sind, eine Always On-Verfügbarkeitsgruppe zu erstellen.  
   
 -   Zur Verwendung des Dialogfelds **Neue Verfügbarkeitsgruppe** müssen Sie die Namen der Serverinstanzen kennen, die Verfügbarkeitsreplikate hosten. Zudem müssen Sie die Namen sämtlicher Datenbanken kennen, die Sie der neuen Verfügbarkeitsgruppe hinzufügen möchten, und gewährleisten, dass diese Datenbanken die Voraussetzungen und Einschränkungen der Verfügbarkeitsdatenbank erfüllen, die unter [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md) beschrieben sind. Wenn Sie ungültige Werte eingeben, funktioniert die neue Verfügbarkeitsgruppe nicht.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48051680"
   
 -   Ausführen einer anfänglichen Datensynchronisierung  
   
- Informationen zu diesen Konfigurationstasks finden Sie unter [Nachverfolgung: Nach dem Erstellen einer Verfügbarkeitsgruppe](#FollowUp)später in diesem Thema.  
+ Weitere Informationen zu diesen Konfigurationsaufgaben finden Sie unter [nachverfolgung: Nach dem Erstellen einer Verfügbarkeitsgruppe](#FollowUp)weiter unten in diesem Thema.  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -77,13 +77,13 @@ ms.locfileid: "48051680"
     > [!TIP]  
     >  Wenn Sie ein Replikat hinzugefügt haben und keine Verbindung zur Hostserverinstanz herstellen können, können Sie das Replikat entfernen und ein neues hinzufügen. Weitere Informationen finden Sie unter [Entfernen eines sekundären Replikats aus einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md) und [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-8.  Klicken Sie im Bereich **Seite auswählen** des Dialogfelds auf **Sicherungseinstellungen**. Geben Sie dann auf der Seite **Sicherungseinstellungen** auf Grundlage der Replikatrolle an, wo die Sicherungen erstellt werden sollen, weisen Sie den einzelnen Serverinstanzen, die ein Verfügbarkeitsreplikat für diese Verfügbarkeitsgruppe hosten, Sicherungsprioritäten zu. Weitere Informationen finden Sie unter [Eigenschaften der Verfügbarkeitsgruppe: Neue Verfügbarkeitsgruppe &#40;Seite Sicherungseinstellungen&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md).  
+8.  Klicken Sie im Bereich **Seite auswählen** des Dialogfelds auf **Sicherungseinstellungen**. Geben Sie dann auf der Seite **Sicherungseinstellungen** auf Grundlage der Replikatrolle an, wo die Sicherungen erstellt werden sollen, weisen Sie den einzelnen Serverinstanzen, die ein Verfügbarkeitsreplikat für diese Verfügbarkeitsgruppe hosten, Sicherungsprioritäten zu. Weitere Informationen finden Sie unter [Eigenschaften der Verfügbarkeitsgruppe: Neue Verfügbarkeitsgruppe &#40;sichern Sie die Seite "Einstellungen"&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md).  
   
 9. Klicken Sie auf **OK**, um die Verfügbarkeitsgruppe zu erstellen. Dadurch überprüft das Dialogfeld, ob die angegebenen Datenbanken die erforderlichen Komponenten erfüllen.  
   
      Um das Dialogfeld zu beenden, ohne die Verfügbarkeitsgruppe zu erstellen, klicken Sie auf **Abbrechen**.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen einer Verfügbarkeitsgruppe mithilfe des Dialogfelds Neue Verfügbarkeitsgruppe  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Erstellen einer Verfügbarkeitsgruppe mithilfe des Dialogfelds neue Verfügbarkeitsgruppe  
   
 -   Sie wiederum müssen eine Verbindung zu jeder Serverinstanz herstellen, die ein sekundäres Replikat für die Verfügbarkeitsgruppe hostet, und die folgenden Schritte ausführen:  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48051680"
   
     3.  Verknüpfen Sie jede neu vorbereitete sekundäre Datenbank sofort mit der Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)aktiviert sind, eine Always On-Verfügbarkeitsgruppe zu erstellen.  
   
--   Wir empfehlen das Erstellen eines Verfügbarkeitsgruppenlisteners für die neue Verfügbarkeitsgruppe. Dazu müssen Sie mit der Serverinstanz verbunden sein, auf der das aktuelle primäre Replikat gehostet wird. Weitere Informationen finden Sie unter [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
+-   Wir empfehlen das Erstellen eines Verfügbarkeitsgruppenlisteners für die neue Verfügbarkeitsgruppe. Dazu müssen Sie mit der Serverinstanz verbunden sein, auf der das aktuelle primäre Replikat gehostet wird. Weitere Informationen finden Sie unter [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)aktiviert sind, eine Always On-Verfügbarkeitsgruppe zu erstellen.  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So konfigurieren Sie Verfügbarkeitsgruppen- und Replikateigenschaften**  
@@ -156,7 +156,7 @@ ms.locfileid: "48051680"
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   

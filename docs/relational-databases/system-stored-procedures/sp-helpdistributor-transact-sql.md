@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdistributor_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a73e458f6ecdab249ea0aae1301dd2d5ee0e6c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63441a20a5ac4f6faed366c06fc55638073b09f4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790268"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591394"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,43 +50,43 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@distributor=**] **"***Verteiler***"** Ausgabe  
+ [  **@distributor=**] **"**_Verteiler_**"** Ausgabe  
  Entspricht dem Namen des Verteilers. Verteiler **Sysname**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
- [  **@distribdb=**] **"***Distribdb***"** Ausgabe  
+ [  **@distribdb=**] **"**_Distribdb_**"** Ausgabe  
  Ist der Name der Verteilungsdatenbank. *Distribdb* ist **Sysname**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
- [  **@directory=**] **"***Directory***"** Ausgabe  
+ [  **@directory=**] **"**_Directory_**"** Ausgabe  
  Ist das Arbeitsverzeichnis an. *Directory* ist **nvarchar(255)**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
- [  **@account=**] **"***Konto***' Ausgabe**  
+ [  **@account=**] **"**_Konto_**' Ausgabe**  
  Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzerkonto. *Konto*ist **nvarchar(255)**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
- [  **@min_distretention=**] *Min_distretention *** Ausgabe**  
+ [  **@min_distretention=**] _Min_distretention_**Ausgabe**  
  Die minimale Beibehaltungsdauer (in Stunden) für die Verteilung. *Min_distretention* ist **Int**, hat den Standardwert **-1**.  
   
- [  **@max_distretention=**] *Max_distretention *** Ausgabe**  
+ [  **@max_distretention=**] _Max_distretention_**Ausgabe**  
  Die maximale Beibehaltungsdauer (in Stunden) für die Verteilung. *Max_distretention* ist **Int**, hat den Standardwert **-1**.  
   
- [  **@history_retention=**] *History_retention *** Ausgabe**  
+ [  **@history_retention=**] _History_retention_**Ausgabe**  
  Die Beibehaltungsdauer (in Stunden) für den Verlauf. *History_retention* ist **Int**, hat den Standardwert **-1**.  
   
- [  **@history_cleanupagent=**] **"***History_cleanupagent***' Ausgabe**  
+ [  **@history_cleanupagent=**] **"**_History_cleanupagent_**' Ausgabe**  
  Ist der Name des Verlaufscleanup-Agents. *History_cleanupagent* ist **nvarchar(100)**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
- [  **@distrib_cleanupagent =**] **"***Distrib_cleanupagent***' Ausgabe**  
+ [  **@distrib_cleanupagent =**] **"**_Distrib_cleanupagent_**' Ausgabe**  
  Ist der Name des der Verteilungscleanup-Agent. *Distrib_cleanupagent* ist **nvarchar(100)**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **"**_Verleger_**"**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@local=**] **"***lokalen***"**  
+ [  **@local=**] **"**_lokalen_**"**  
  Gibt an, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lokale Serverwerte abruft. *lokale* ist **nvarchar(5)**, hat den Standardwert NULL.  
   
- [  **@rpcsrvname=**] **"***Rpcsrvname***' Ausgabe**  
+ [  **@rpcsrvname=**] **"**_Rpcsrvname_**' Ausgabe**  
  Der Name des Servers, der Remoteprozeduraufrufe ausgibt. *Rpcsrvname* ist **Sysname**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
- [ **@publisher_type**=] **"***Publisher_type***' Ausgabe**  
+ [ **@publisher_type**=] **"**_Publisher_type_**' Ausgabe**  
  Der Verlegertyp des Verlegers. *Publisher_type* ist **Sysname**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
 ## <a name="result-sets"></a>Resultsets  

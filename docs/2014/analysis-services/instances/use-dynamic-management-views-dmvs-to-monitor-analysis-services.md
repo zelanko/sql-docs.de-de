@@ -11,12 +11,12 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56e2626f2d8e452c34f57ad883720eb96d140b27
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 9047458e09e5dd24fa255122d06d211d2c315877
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148119"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376612"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Verwenden von dynamischen Verwaltungssichten (DMVs) zum Überwachen von Analysis Services
   Dynamische Verwaltungssichten (DMV) von Analysis Services sind Abfragestrukturen, die Informationen zu lokalen Servervorgängen und zum Serverstatus verfügbar machen. Die Abfragestruktur stellt eine Schnittstelle zu Schemarowsets dar, die Metadaten und Überwachungsinformationen zu einer Analysis Services-Instanz zurückgeben.  
@@ -47,9 +47,9 @@ SELECT * FROM $System.<schemaRowset>
  DMV-Abfragen stellen eine Alternative zur Ausführung von XML/A-Discover-Befehlen dar. Für die meisten Administratoren ist das Schreiben einer DMV-Abfrage einfacher, weil die Abfragesyntax auf SQL basiert. Außerdem wird das Resultset in einem tabellarischen Format zurückgegeben, das besser lesbar ist und aus dem besser kopiert werden kann.  
   
 ##  <a name="bkmk_ex"></a> Beispiele und Szenarien  
- Eine DMV-Abfrage kann Ihnen helfen, Fragen zu aktiven Sitzungen und Verbindungen sowie die Frage zu beantworten, welche Objekte zu einem bestimmten Zeitpunkt den höchsten CPU-Anteil oder den meisten Arbeitsspeicher nutzen. Dieser Abschnitt enthält Beispiele für die Szenarien, in denen DMV-Abfragen am häufigsten verwendet werden. Weitere Informationen zur Verwendung von DMV-Abfragen für die Überwachung einer Serverinstanz finden Sie auch im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) .  
+ Eine DMV-Abfrage kann Ihnen helfen, Fragen zu aktiven Sitzungen und Verbindungen sowie die Frage zu beantworten, welche Objekte zu einem bestimmten Zeitpunkt den höchsten CPU-Anteil oder den meisten Arbeitsspeicher nutzen. Dieser Abschnitt enthält Beispiele für die Szenarien, in denen DMV-Abfragen am häufigsten verwendet werden. Weitere Informationen zur Verwendung von DMV-Abfragen für die Überwachung einer Serverinstanz finden Sie auch im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) .  
   
- `Select * from $System.discover_object_activity` /** Diese Abfrage erstellt einen Bericht zu der Objektaktivität seit dem letzten Start des Diensts. Beispielabfragen auf Grundlage dieser DMV-Abfrage finden Sie unter [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322).  
+ `Select * from $System.discover_object_activity` /** Diese Abfrage erstellt einen Bericht zu der Objektaktivität seit dem letzten Start des Diensts. Beispielabfragen auf Grundlage dieser DMV-Abfrage finden Sie unter [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322).  
   
  `Select * from $System.discover_object_memory_usage` /** Diese Abfrage erstellt einen Bericht zum Arbeitsspeicherverbrauch nach Objekt.  
   
@@ -60,7 +60,7 @@ SELECT * FROM $System.<schemaRowset>
 ##  <a name="bkmk_syn"></a> Abfragesyntax  
  Die Abfrage-Engine für DMVs ist der Data Mining-Parser. Die DMV-Abfragesyntax basiert auf der [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx)-Anweisung.  
   
- Obwohl die DMV-Abfragesyntax auf einer SELECT-SQL-Anweisung basiert, bietet sie keine vollständige Unterstützung einer SELECT-Anweisung. JOIN, GROUP BY, LIKE, CAST und CONVERT werden z. B. nicht unterstützt.  
+ Obwohl die DMV-Abfragesyntax auf einer SELECT-SQL-Anweisung basiert, bietet sie keine vollständige Unterstützung einer SELECT-Anweisung. JOIN, GROUP BY, LIKE, CAST und CONVERT werden z. B. nicht unterstützt.  
   
 ```  
 SELECT [DISTINCT] [TOP <n>] <select list>  
@@ -99,7 +99,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Wenn eine DMV für ein angegebenes Rowset nicht vorliegen, gibt der Server folgender Fehler zurückgegeben: "die \<Schemarowset > wurde vom Server nicht erkannt". Alle anderen Fehler weisen auf Probleme mit der Syntax hin.  
+>  Wenn eine DMV für ein angegebenes Rowset nicht vorliegen, gibt der Server den folgenden Fehler zurück: "Die \<Schemarowset > wurde vom Server nicht erkannt". Alle anderen Fehler weisen auf Probleme mit der Syntax hin.  
   
 |Rowset|Description|  
 |------------|-----------------|  
@@ -164,8 +164,8 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_SETS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|Gibt eine Liste mit den Sätzen zurück, die unter der aktuellen Verbindung definiert sind.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [Neue SYSTEMRESTRICTEDSCHEMA-Funktion für eingeschränkte Rowsets und DMVs](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+ [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
+ [Neue SYSTEMRESTRICTEDSCHEMA-Funktion für eingeschränkte Rowsets und DMVs](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

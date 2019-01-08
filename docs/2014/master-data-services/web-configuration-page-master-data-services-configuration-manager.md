@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.webconfigpg.f1
@@ -13,12 +12,12 @@ ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ebab5de453d383b20e55e52ec3d57b10cfaebcf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f45eef12a81ada02a26a0f4c2318523de31cbf0d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200864"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357774"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Webkonfiguration (Seite im Konfigurations-Manager für Master Data Sevices)
   Verwenden Sie die Seite **Webkonfiguration** , um eine neue Website zu erstellen oder eine neue Website oder eine Webanwendung zu erstellen. Nachdem Sie eine [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung ausgewählt haben, können Sie die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank der Anwendung angeben und Data Quality Services aktivieren.  
@@ -49,6 +48,6 @@ ms.locfileid: "48200864"
  [Einrichten der Datenbank und Website für Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Anforderungen für die Webanwendung &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [Erstellen einer Master Data Manager-Webanwendung &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [MDS 2014 und "Dienst nicht verfügbar"](http://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
+ [MDS 2014 und "Dienst nicht verfügbar"](https://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.subproperties.publisher.f1
@@ -15,12 +14,12 @@ ms.assetid: d4b2bc8b-0431-4331-8305-8992c96d0d34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b3d6b8de35ff65d0ea715ecaa9940e3f75ee42f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5213c07fcdf84db3297ae5737d1d8726f4355257
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081440"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794442"
 ---
 # <a name="subscription-properties---publisher"></a>Abonnementeigenschaften - Verleger
   Im Dialogfeld **Abonnementeigenschaften** des Verlegers können Sie die Eigenschaften von Pushabonnements anzeigen und festlegen. Sie können auch bestimmte Eigenschaften von Pullabonnements anzeigen. Die übrigen Eigenschaften sind jedoch nur über das Dialogfeld **Abonnementeigenschaften** des Abonnenten verfügbar und können auch nur dort geändert werden.  
@@ -36,7 +35,7 @@ ms.locfileid: "48081440"
  Schreibgeschützte Optionen können nur beim Erstellen des Abonnements festgelegt werden. Wenn Sie Optionen festlegen möchten, die nicht im Assistenten für neue Abonnements verfügbar sind, müssen Sie das Abonnement mithilfe von gespeicherten Prozeduren erstellen. Weitere Informationen finden Sie unter [Create a Pull Subscription](create-a-pull-subscription.md) und [Create a Push Subscription](create-a-push-subscription.md).  
   
 ## <a name="options-for-all-subscriptions"></a>Optionen für alle Abonnements  
- **Security**  
+ **Sicherheit**  
  Klicken Sie in der Zeile **Agentprozesskonto** auf die **Schaltfläche mit den drei Punkten**, um das Konto zu ändern, unter dem Verteilungs-Agent oder Merge-Agent auf dem Verteiler ausgeführt werden. Wenn Sie das Konto ändern möchten, unter dem Verteilungs-Agent oder Merge-Agent eine Verbindung mit dem Abonnenten herstellen, klicken Sie auf **Abonnentenverbindung**, und klicken Sie dann auf die **Schaltfläche mit den drei Punkten**.  
   
  Weitere Informationen zu den für die einzelnen Agents erforderlichen Berechtigungen finden Sie unter [Replication Agent Security Model](security/replication-agent-security-model.md).  
@@ -50,7 +49,7 @@ ms.locfileid: "48081440"
   
 ## <a name="options-for-merge-subscriptions"></a>Optionen für Mergeabonnements  
  **Partitionsdefinition (HOST_NAME)**  
- Wenn Sie eine Mergereplikation für eine Veröffentlichung mit parametrisierten Filtern ausführen, wird bei der Synchronisierung eine der beiden Systemfunktionen, **SUSER_SNAME()** oder **HOST_NAME()**(oder beide, sofern die Filter auf beide Funktionen verweisen) ausgewertet, um festzulegen, welche Daten der Abonnent empfangen soll. **HOST_NAME()** gibt standardmäßig den Namen des Computers zurück, auf dem der Merge-Agent ausgeführt wird. Sie können diesen Wert jedoch im Assistenten für neue Abonnements überschreiben. Weitere Informationen zu parametrisierten Filtern und zum Überschreiben von **HOST_NAME()** finden Sie unter [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Für eine Veröffentlichung mit parametrisierten Filtern, wertet die Mergereplikation eine von zwei Funktionen (oder beide, sofern die Filter auf beide Funktionen verweisen) während der Synchronisierung die Daten zu ermitteln, die ein Abonnent empfangen soll: **SUSER_SNAME()** oder **HOST_NAME()**. **HOST_NAME()** gibt standardmäßig den Namen des Computers zurück, auf dem der Merge-Agent ausgeführt wird. Sie können diesen Wert jedoch im Assistenten für neue Abonnements überschreiben. Weitere Informationen zu parametrisierten Filtern und zum Überschreiben von **HOST_NAME()** finden Sie unter [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Abonnementtyp** und **Priorität**  
  Zeigt an, ob es sich bei dem Abonnement um ein Client- oder Serverabonnement handelt (kann nach Erstellen des Abonnements nicht mehr geändert werden). Bei Serverabonnements können Daten erneut für andere Abonnenten veröffentlicht und eine Priorität für die Konfliktlösung festgelegt werden.  
@@ -63,6 +62,6 @@ ms.locfileid: "48081440"
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern der Eigenschaften von Pullabonnements](view-and-modify-pull-subscription-properties.md)   
  [Anzeigen und Ändern der Eigenschaften von Pushabonnements](view-and-modify-push-subscription-properties.md)   
- [Subscribe to Publications](subscribe-to-publications.md)  
+ [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)  
   
   

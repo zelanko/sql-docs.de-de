@@ -10,21 +10,21 @@ ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fea49e73ad3a29606f8642ca144ffd71033e490c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acb2a812f2e3c29a56916c671d76d91c676272d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186442"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359613"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Konfigurieren der HealthCheckTimeout-Eigenschafteneinstellungen
-  Die HealthCheckTimeout-Einstellung wird verwendet, um die Zeitdauer in Millisekunden angegeben, die die SQL Server-Ressourcen-DLL für die zurückgegebenen Informationen warten soll die [Sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) gespeicherte Prozedur, bevor gemeldet wird, die AlwaysOn-Failoverclusterinstanz (FCI) nicht reagiert. Änderungen am Timeoutwert werden unmittelbar wirksam; ein Neustart der SQL Server-Ressource ist nicht erforderlich.  
+  Mit der HealthCheckTimeout-Einstellung wird die Zeitdauer in Millisekunden angegeben, die die Ressourcen-DLL für SQL Server auf Informationen warten soll, die von der gespeicherten Prozedur [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) zurückgegeben werden, bevor gemeldet wird, dass die AlwaysOn-Failoverclusterinstanz (FCI) nicht reagiert. Änderungen am Timeoutwert werden unmittelbar wirksam; ein Neustart der SQL Server-Ressource ist nicht erforderlich.  
   
--   **Vorbereitungen:**  [Einschränkungen](#Limits), [Sicherheit](#Security)  
+-   **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#Limits), [Sicherheit](#Security)  
   
--   **So konfigurieren Sie die HeathCheckTimeout-Einstellung mit**  [PowerShell](#PowerShellProcedure), [Failovercluster-Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
+-   **So konfigurieren Sie die HeathCheckTimeout-Einstellung:**  [PowerShell](#PowerShellProcedure), [Failovercluster-Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Limits"></a> Einschränkungen  
  Der Standardwert für diese Eigenschaft ist 60.000 Millisekunden (60 Sekunden). Der Mindestwert ist 15.000 Millisekunden (15 Sekunden).  
@@ -45,7 +45,7 @@ ms.locfileid: "48186442"
 3.  Verwenden der `Get-ClusterResource` -Cmdlet zum Ermitteln der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Ressource verwenden Sie dann `Set-ClusterParameter` Cmdlet, um die **HealthCheckTimeout** -Eigenschaft für die Failoverclusterinstanz.  
   
 > [!TIP]  
->  Jedes Mal, wenn Sie ein neues PowerShell-Fenster öffnen, müssen Sie importieren die `FailoverClusters` Modul.  
+>  Bei jedem Öffnen eines neuen PowerShell-Fensters müssen Sie das `FailoverClusters`-Modul importieren.  
   
 ### <a name="example-powershell"></a>Beispiel (PowerShell)  
  Im folgenden Beispiel wird die Einstellung HealthCheckTimeout auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource "`SQL Server (INST1)`" zu 60.000 Millisekunden geändert.  
@@ -60,11 +60,11 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ### <a name="related-content-powershell"></a>Verwandte Inhalte (PowerShell)  
   
--   [Clustering and High-Availability](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Clustering und hohe Verfügbarkeit) (Failoverclustering und Netzwerklastenausgleichs-Teamblog)  
+-   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Clustering und hohe Verfügbarkeit) (Failoverclustering und Netzwerklastenausgleichs-Teamblog)  
   
--   [Erste Schritte mit Windows PowerShell auf einem Failovercluster](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [Erste Schritte mit Windows PowerShell auf einem Failovercluster](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Clusterressourcenbefehle und entsprechende Windows PowerShell-Cmdlets](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Clusterressourcenbefehle und entsprechende Windows PowerShell-Cmdlets](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ##  <a name="WSFC"></a> Verwenden des Failovercluster-Manager-Snap-Ins  
  **So konfigurieren Sie die HealthCheckTimeout-Einstellung**  

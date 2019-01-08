@@ -18,12 +18,12 @@ ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ed37d62e887bcb9820496a66d65108cb69fbe10
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 97ad8e64260d337135a1b0d5cda739d8c81b1799
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669839"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980246"
 ---
 # <a name="clr-table-valued-functions"></a>CLR-Tabellenwertfunktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "51669839"
  Tabellenwertparameter sind benutzerdefinierte Tabellentypen, die an eine Prozedur oder Funktion übergeben werden, und bieten eine effiziente Methode zum Übergeben mehrerer Datenzeilen an den Server. Tabellenwertparameter verfügen über eine ähnliche Funktionalität wie Parameterarrays, bieten jedoch größere Flexibilität und engere Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)]. Außerdem verfügen sie auch über ein besseres Leistungspotenzial. Außerdem tragen Tabellenwertparameter dazu bei, die Anzahl von Roundtrips zum Server zu reduzieren. Anstatt mehrere Anforderungen an den Server zu senden, wie beispielsweise bei einer Liste von skalaren Parametern, können Daten als Tabellenwertparameter an den Server gesendet werden. Ein benutzerdefinierter Tabellentyp kann nicht als Tabellenwertparameter an eine verwaltete gespeicherte Prozedur oder Funktion übergeben werden, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess ausgeführt wird, oder von einer solchen Prozedur oder Funktion zurückgegeben werden. Weitere Informationen zu Tabellenwertparametern finden Sie unter [Use Table-Valued Parameters &#40;Database Engine&#41; (Verwenden von Tabellenwertparametern &#40;Datenbank-Engine&#41;)](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>Ausgabeparameter und Tabellenwertfunktionen  
- Informationen können aus Tabellenwertfunktionen möglicherweise mit Ausgabeparametern zurückgegeben werden. Der entsprechende Parameter im Implementierungscode der Tabellenwertfunktion sollte einen als Verweis zu übergebenden Parameter als Argument verwenden. Beachten Sie, dass Visual Basic Ausgabeparameter nicht auf die gleiche Weise unterstützt wie Visual C#. Sie müssen den Parameter als Verweis und Anwenden der \<Out() > Attribut aus, einen Output-Parameter, wie im folgenden dargestellt:  
+ Informationen können aus Tabellenwertfunktionen möglicherweise mit Ausgabeparametern zurückgegeben werden. Der entsprechende Parameter im Implementierungscode der Tabellenwertfunktion sollte einen als Verweis zu übergebenden Parameter als Argument verwenden. Beachten Sie, dass Visual Basic Ausgabeparameter nicht auf die gleiche Weise unterstützt wie Visual C#. Sie müssen Geben Sie den Parameter als Verweis und Anwenden der \<Out() > Attribut aus, einen Output-Parameter, wie im folgenden dargestellt:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
-…  
+...  
 Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)  
 ```  
   
@@ -162,7 +162,7 @@ GO
   
  Visual C++-Datenbankobjekte, die mit /clr:pure kompiliert wurden, können nicht in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ausgeführt werden. Zu solchen Datenbankobjekten gehören beispielsweise Tabellenwertfunktionen.  
   
- Führen Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code aus, um das Beispiel zu testen:  
+ Führen Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code aus, um das Beispiel zu testen:  
   
 ```  
 -- Select the top 100 events,  
@@ -177,7 +177,7 @@ WHERE T.Category = N'Logon/Logoff';
 go  
 ```  
   
-## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Beispiel: Zurückgeben der Ergebnisse einer SQL Server-Abfrage  
+## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Beispiel: Zurückgeben der Ergebnisse der SQL Server-Abfrage  
  Im folgenden Beispiel wird eine Tabellenwertfunktion gezeigt, die eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank abfragt. In diesem Beispiel wird die AdventureWorks Datenbank Light aus [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]verwendet. Finden Sie unter [ https://www.codeplex.com/sqlserversamples ](https://go.microsoft.com/fwlink/?LinkId=87843) für Weitere Informationen zum Herunterladen von AdventureWorks.  
   
  Nennen Sie die Quellcodedatei FindInvalidEmails.cs bzw. FindInvalidEmails.vb.  

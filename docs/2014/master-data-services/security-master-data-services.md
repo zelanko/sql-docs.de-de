@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7fbafebfe9cd80a40c6bf575be97e1ccd6e694cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee6fd4fbf047ecb29dae4f35fe3bbbf5a3f9da61
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131220"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778382"
 ---
 # <a name="security-master-data-services"></a>Sicherheit (Master Data Services)
   Verwenden Sie die Sicherheitseinstellungen in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um dafür zu sorgen, dass Benutzer auf die speziellen Masterdaten zugreifen können, die sie für ihre Arbeit benötigen, nicht jedoch auf Daten, für die sie nicht zuständig sind.  
@@ -39,11 +38,11 @@ ms.locfileid: "48131220"
   
 -   [Zugriff auf Funktionsbereiche](../../2014/master-data-services/functional-area-permissions-master-data-services.md). Damit wird bestimmt, auf welche der fünf Funktionsbereiche der Benutzeroberfläche ein Benutzer zugreifen kann.  
   
--   [Berechtigungen für Modellobjekte](../../2014/master-data-services/model-object-permissions-master-data-services.md), ermitteln, welche die Attribute, die ein Benutzer zugreifen kann, und den Typ der Zugriffstyp (Lesen oder aktualisieren) aus, die der Benutzer für diese Attribute besitzt.  
+-   [Modellobjektberechtigungen](../../2014/master-data-services/model-object-permissions-master-data-services.md). Damit werden die Attribute bestimmt, auf die ein Benutzer zugreifen kann, und der Zugriffstyp (Lesen oder Aktualisieren), den der Benutzer für diese Attribute besitzt.  
   
--   Optional [Berechtigungen für Hierarchieelemente](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md), bestimmen die Member, die ein Benutzer zugreifen kann, und der Zugriffstyp (Lesen oder aktualisieren) der Benutzer besitzt auf diese Elemente.  
+-   [Hierarchieelementberechtigungen](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)(optional). Damit werden die Elemente bestimmt, auf die ein Benutzer zugreifen kann, und der Zugriffstyp (Lesen oder Aktualisieren), den der Benutzer für diese Elemente besitzt.  
   
- Wenn Sie Attributen und Elementen Berechtigungen zuweisen, überschneiden sich die Berechtigungen. Dabei bestimmen Regeln, welche Berechtigung Vorrang hat. Weitere Informationen finden Sie unter [How Permissions Are Determined &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md).  
+ Wenn Sie Attributen und Elementen Berechtigungen zuweisen, überschneiden sich die Berechtigungen. Dabei bestimmen Regeln, welche Berechtigung Vorrang hat. Weitere Informationen finden Sie unter [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md).  
   
  Zum Implementieren der Sicherheit auf Datensatzebene erstellen Sie eine Hierarchie für eine Entität, und weisen Sie Elementen der Hierarchie Benutzerberechtigungen zu. Elemente sind Datensätze.  Berechtigungen für Hierarchieelemente sollten nur verwendet werden, wenn ein Benutzer beschränkten Zugriff auf bestimmte Elemente erhalten soll.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48131220"
 |Fügen Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine Active Directory-Gruppe hinzu; dies ist der erste Schritt darin, einer Gruppe die Berechtigung für den Zugriff auf Daten in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Webanwendung zu erteilen.|[Hinzufügen einer Gruppe &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)|  
 |Weisen Sie die Berechtigung einem Funktionsbereich der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Webanwendung zu.|[Zuweisen von Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)|  
 |Weisen Sie die Berechtigung Attributwerten zu, indem Sie die Berechtigung zum Modellieren von Objekten zuweisen.|[Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
-|Weisen Sie die Berechtigung Elementwerten zu, indem Sie die Berechtigung Hierarchieknoten zuweisen.|[Zuweisen von Berechtigungen für Hierarchieelemente &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
+|Weisen Sie die Berechtigung Elementwerten zu, indem Sie die Berechtigung Hierarchieknoten zuweisen.|[Zuweisen von Hierarchieelementberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Administratoren &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)   
@@ -76,6 +75,6 @@ ms.locfileid: "48131220"
  [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   
  [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Berechtigungen für Hierarchieelemente &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Wie Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], Flat File
@@ -18,12 +17,12 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a87cf5f7f9f6b81a989b67b2a68484280498aba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65cebbe74b1be5cc0d625a70c8c5b87e8f515150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147165"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815292"
 ---
 # <a name="flat-file-connection-manager"></a>Verbindungs-Manager für Flatfiles
   Mit einem Verbindungs-Manager für Flatfiles kann ein Paket auf Daten in einer Flatfile zugreifen. Beispielsweise können die Flatfilequellen und -ziele Verbindungs-Manager für Flatfiles zum Extrahieren und Laden von Daten verwenden.  
@@ -38,7 +37,7 @@ ms.locfileid: "48147165"
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>Konfiguration des Verbindungs-Managers für Flatfiles  
  Wenn Sie einen Flatfile-Verbindungs-Manager einem Paket hinzufügen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, die in eine Flatfile-Verbindung zur Laufzeit aufgelöst wird, legt die Eigenschaften der Flatfile-Verbindung und fügt den Flatfile-Verbindungs-Manager, erstellt der `Connections` -Sammlung des Pakets.  
   
- Die `ConnectionManagerType` Eigenschaft des Verbindungs-Managers nastaven NA hodnotu `FLATFILE`.  
+ Die `ConnectionManagerType`-Eigenschaft des Verbindungs-Managers ist auf `FLATFILE` festgelegt.  
   
  Standardmäßig sucht der Verbindungs-Manager für Flatfiles immer nach einem Zeilentrennzeichen in Daten ohne Anführungszeichen und startet eine neue Zeile, wenn ein Zeilentrennzeichen gefunden wird. Dadurch kann der Verbindungs-Manager für Flatfiles Dateien mit Zeilen, in denen Spaltenfelder fehlen, ordnungsgemäß analysieren.  
   
@@ -78,8 +77,8 @@ ms.locfileid: "48147165"
   
 -   [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Erweitert&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
--   [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Vorschau&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+-   [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Vorschau“&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
- Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
   
   

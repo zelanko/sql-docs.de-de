@@ -13,22 +13,22 @@ ms.assetid: 79d5989f-2fb1-424b-be50-d89c8e39c51b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 769ae8cd5abab02fd2ae253e6165ad4d6b89b974
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87f2ed4ff5bac29d65e9fe6132b2593580aa6639
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182090"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511555"
 ---
 # <a name="select-instance"></a>Auswählen einer Instanz
   Verwenden Sie die Seite Instanz auswählen des Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Instanz von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] anzugeben, die auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]aktualisiert werden soll.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Geben Sie mithilfe der Optionsfelder an, ob die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die zugehörigen freigegebenen Komponenten oder nur die freigegebenen Komponenten aktualisiert werden sollen. Diese [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version weist folgende freigegebene Komponenten auf:  
   
 -   Verwaltungstools - Einfach  
   
--   Verwaltungstools - Vollständig  
+-   Verwaltungstools – Vollständig  
   
 -   Konnektivität der Clienttools  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - sql:relationship
@@ -16,15 +14,15 @@ ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55ec5dab60311e06f09e1d1d5b4a9d1258a32565
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71eef27236a42f7e1869cb619b7ba557785ba4e7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121820"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787182"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship und die Schlüsselsortierregel (SQLXML 4.0)
-  Da XML-Massenladen Datensätze generiert, wenn ihre Knoten in den Bereich gelangen, und die Datensätze an Microsoft sendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wie ihre Knoten den Bereich verlassen, müssen die Daten für den Datensatz innerhalb des Bereichs des Knotens vorhanden sein.  
+  Da das XML-Massenladen Datensätze generiert, wenn ihre Knoten in den Bereich gelangen, und diese Datensätze an Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sendet, wenn ihre Knoten den Bereich verlassen, müssen die Daten für den Datensatz im Bereich des Knotens vorhanden sein.  
   
  Betrachten Sie das folgende XSD-Schema, in dem die 1: n Beziehung zwischen  **\<Kunden >** und  **\<Reihenfolge >** -Elementen (ein Kunde kann viele Aufträge vergeben) ist. angegeben unter Verwendung der `<sql:relationship>` Element:  
   
@@ -105,7 +103,7 @@ ms.locfileid: "48121820"
     </ROOT>  
     ```  
   
-3.  Um XML-Massenladen auszuführen, speichern, und führen Sie den folgenden [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) Beispiel mysample.vbs:  
+3.  Speichern Sie folgendes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript)-Beispiel unter dem Dateinamen MySample.vbs, und führen Sie es aus, um das XML-Massenladen auszuführen:  
   
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -117,7 +115,7 @@ ms.locfileid: "48121820"
     set objBL=Nothing  
     ```  
   
-     Als Ergebnis fügt das XML-Massenladen einen NULL-Wert in die CustomerID-Fremdschlüsselspalte der CustOrder-Tabelle ein. Wenn Sie die XML-Beispieldaten überarbeiten, damit die  **\<"CustomerID" >** untergeordnetes Element angezeigt wird, bevor Sie die  **\<Reihenfolge >** untergeordnetes Element darstellt, erhalten Sie das erwartete Ergebnis: XML-Massenladen Fügt den angegebenen Fremdschlüsselwert in die Spalte an.  
+     Als Ergebnis fügt das XML-Massenladen einen NULL-Wert in die CustomerID-Fremdschlüsselspalte der CustOrder-Tabelle ein. Wenn Sie die XML-Beispieldaten überarbeiten, damit die  **\<"CustomerID" >** untergeordnetes Element angezeigt wird, bevor Sie die  **\<Reihenfolge >** untergeordnetes Element darstellt, erhalten Sie das erwartete Ergebnis: XML-Massenladen fügt den angegebenen Fremdschlüsselwert in die Spalte an.  
   
  Dies ist das entsprechende XDR-Schema:  
   

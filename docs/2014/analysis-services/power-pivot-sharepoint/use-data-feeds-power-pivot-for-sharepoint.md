@@ -11,12 +11,12 @@ ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f5e41f1dac0c9c0048b5751439209e17e289f4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178130"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365012"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Datenfeeds verwenden (PowerPivot für SharePoint)
   Datenfeeds sind einzelne oder mehrere Datenströme, die von einer Onlinedatenquelle generiert und in ein Zieldokument oder eine Zielanwendung gestreamt werden. Wenn Sie PowerPivot für Excel verwenden, können Datenfeeds Ihnen helfen, vorhandene Unternehmens- oder Geschäftsdaten von beliebigen Datenquellen in das Fenster PowerPivot in Ihrer Excel 2010-Arbeitsmappe abzurufen. Nachdem Sie einen Datenfeed in eine Arbeitsmappe importiert haben, können Sie später in allen Datenaktualisierungsvorgängen, die Sie auf einem SharePoint Server planen, darauf verweisen.  
@@ -63,7 +63,7 @@ ms.locfileid: "48178130"
 ##  <a name="rsreport"></a> Erstellen eines Datenfeeds aus einem Reporting Services-Bericht  
  Wenn Sie über eine SQL Server 2008 R2 Reporting Services-Bereitstellung verfügen, können Sie einen Datenfeed mithilfe der neuen Atom-Renderingerweiterung aus einem vorhandenen Bericht generieren. Um optimale Ergebnisse zu erzielen, sollte Excel 2010 mit dem PowerPivot-für Excel-Add-In auf der Arbeitsstation ausgeführt werden. Die PowerPivot-Clientanwendung wird in Reaktion auf den Datenfeedexport gestartet und fügt automatisch die gestreamten Tabellen und Spalten hinzu und verknüpft diese.  
   
- Anweisungen zum Exportieren eines Datenfeeds aus einem Bericht finden Sie unter [Generieren von Datenfeeds aus einem Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) in der [Hilfedatei zum Berichts-Generator](http://go.microsoft.com/fwlink/?LinkId=154494).  
+ Anweisungen zum Exportieren eines Datenfeeds aus einem Bericht finden Sie unter [Generieren von Datenfeeds aus einem Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) in der [Hilfedatei zum Berichts-Generator](https://go.microsoft.com/fwlink/?LinkId=154494).  
   
 > [!NOTE]  
 >  Zum Einrichten eines Zeitplans mit wiederholter Datenaktualisierung, durch den Berichtsdaten in eine in einer SharePoint-Bibliothek veröffentlichte PowerPivot-Arbeitsmappe erneut importiert werden, muss der Berichtsserver für die SharePoint-Integration konfiguriert sein. Weitere Informationen zum Verwenden von PowerPivot für SharePoint und Reporting Services zusammen finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  

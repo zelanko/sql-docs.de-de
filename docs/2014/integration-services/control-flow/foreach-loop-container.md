@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
@@ -18,27 +17,27 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3d67e256b6dca357db45cd831b2f9eab3ff93dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 664a338dd1d34126717b3953c54b175ffccd63e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103453"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355713"
 ---
 # <a name="foreach-loop-container"></a>Foreach-Schleifencontainer
   Der Foreach-Schleifencontainer definiert die Wiederholung einer Ablaufsteuerung in einem Paket. Die Schleifenimplementierung ist mit der **Foreach** -Schleifenstruktur in Programmiersprachen zu vergleichen. In einem Paket wird die Schleife mithilfe eines Foreach-Enumerators ermöglicht.  Der Foreach-Schleifencontainer wiederholt die Ablaufsteuerung für jedes Mitglied eines angegebenen Enumerators.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Stellt die folgenden Enumeratortypen bereit:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt die folgenden Enumeratortypen bereit:  
   
 -   Foreach-ADO-Enumerator zum Aufzählen von Zeilen in Tabellen. Beispielsweise können Sie die Zeilen in einem ADO-Recordset abrufen.  
   
-     Speichert das recordsetziel Daten im Speicher eines Recordsets, die in der Paketvariablen gespeichert wird `Object` -Datentyp. Sie verwenden typischerweise einen Foreach-Schleifencontainer mit dem Foreach-ADO-Enumerator zum Verarbeiten jeweils einer Zeile des Recordsets. Die für den Foreach-ADO-Enumerator angegebene Variable muss den Datentyp <ui>Object>/ui> haben. Weitere Informationen zum Recordsetziel finden Sie unter [Use a Recordset Destination](../data-flow/recordset-destination.md).  
+     Stattdessen speichert das Recordsetziel Daten im Speicher eines Recordsets, das in einer `Object`-Paketvariablen des Datentyps gespeichert ist. Sie verwenden typischerweise einen Foreach-Schleifencontainer mit dem Foreach-ADO-Enumerator zum Verarbeiten jeweils einer Zeile des Recordsets. Die für den Foreach-ADO-Enumerator angegebene Variable muss den Datentyp <ui>Object>/ui> haben. Weitere Informationen zum Recordsetziel finden Sie unter [Use a Recordset Destination](../data-flow/recordset-destination.md).  
   
 -   Enumerator für Foreach-ADO.NET-Schemarowset zum Aufzählen der Schemainformationen zu einer Datenquelle. Beispielsweise können Sie die Tabellen in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank aufzählen und eine Liste dafür abrufen.  
   
 -   Foreach-Dateienumerator zum Aufzählen von Dateien in einem Ordner. Der Enumerator kann Unterordner durchsuchen. Beispielsweise können Sie alle Dateien mit der Dateinamenerweiterung *.LOG im Windows-Ordner und deren Unterordner lesen.  
   
--   Foreach-Enumerator für Daten aus Variable zum Aufzählen des aufzählbaren Objekts, das eine angegebene Variable enthält. Das aufzählbare Objekt kann ein Array, ein ADO.NET sein `DataTable`, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Enumerator und So weiter. Beispielsweise können Sie die Werte eines Arrays aufzählen, das den Namen der Server enthält.  
+-   Foreach-Enumerator für Daten aus Variable zum Aufzählen des aufzählbaren Objekts, das eine angegebene Variable enthält. Das aufzählbare Objekt kann z. B. ein Array, ein ADO.NET `DataTable`-Objekt oder ein [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Enumerator sein. Beispielsweise können Sie die Werte eines Arrays aufzählen, das den Namen der Server enthält.  
   
 -   Foreach Item-Enumerator zum Aufzählen von Elementen, bei denen es sich um Auflistungen handelt. Beispielsweise können Sie die Namen der ausführbaren Dateien und Arbeitsverzeichnisse aufzählen, die ein Task Prozess ausführen verwendet.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "48103453"
 -   <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag, [SSIS For Each Node List Enumerator](http://go.microsoft.com/fwlink/?LinkId=220671), auf bidn.com.  
+ Blogeintrag, [SSIS For Each Node List Enumerator](https://go.microsoft.com/fwlink/?LinkId=220671), auf bidn.com.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ablaufsteuerung](control-flow.md)   

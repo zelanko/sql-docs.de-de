@@ -22,17 +22,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5b4eb865c8c0498e72943c128ff0106638005166
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018335"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980046"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt Informationen von einer Überwachungsdatei zurück, die von einer Serverüberwachung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurde. Weitere Informationen finden Sie unter [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Gibt Informationen von einer Überwachungsdatei zurück, die von einer Serverüberwachung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurde. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -117,8 +117,8 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Benutzerdefinierte Ereignis-Id als Argument übergebenen **Sp_audit_write**. **NULL** für Systemereignisse (Standard) und ungleich 0 für ein benutzerdefiniertes Ereignis. Weitere Informationen finden Sie unter [Sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Verwendet, um zusätzliche Informationen zu erfassen, die der Benutzer möchte aufzeichnen |Überwachungsprotokoll mit dem **Sp_audit_write** gespeicherte Prozedur.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | **Gilt für**: nur SQL Server (ab 2016) |  
-|transaction_id |**bigint** | **Gilt für**: nur SQL Server (ab 2016) |  
+|sequence_group_id |**varbinary** | **Gilt für**: Nur SQL Server (ab 2016) |  
+|transaction_id |**bigint** | **Gilt für**: Nur SQL Server (ab 2016) |  
 |client_ip |**nvarchar(128)** | **Gilt für**: Azure SQL-Datenbank und SQL Server (ab 2017) |  
 |application_name |**nvarchar(128)** | **Gilt für**: Azure SQL-Datenbank und SQL Server (ab 2017) |  
 |duration_milliseconds |**bigint** | **Gilt für**: Azure SQL-Datenbank |  
@@ -131,8 +131,8 @@ fn_get_audit_file ( file_pattern,
  Wenn die *File_pattern* Argument übergeben wird, um **Fn_get_audit_file** verweist auf einen Pfad oder die Datei, die nicht vorhanden ist, oder wenn die Datei nicht um eine Überwachungsdatei ist die **MSG_INVALID_AUDIT_FILE**Fehlermeldung wird zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- - **SQL Server**: erfordert die **CONTROL SERVER** Berechtigung.  
- - **Azure SQL-Datenbank**: erfordert die **CONTROL DATABASE** Berechtigung.     
+ - **SQL Server**: Erfordert die **CONTROL SERVER** -Berechtigung.  
+ - **Azure SQL-Datenbank**: Erfordert die **CONTROL DATABASE** Berechtigung.     
     - Server-Administratoren können die Überwachungsprotokolle aller Datenbanken auf dem Server zugreifen.
     - Nicht-Server-Administratoren können die Überwachungsprotokolle nur aus der aktuellen Datenbank zugreifen.
     - BLOBs, die die oben genannten Kriterien nicht erfüllen übersprungen werden (eine Liste der übersprungenen Blobs werden in der Ausgabenachricht der Abfrage angezeigt werden), und die Funktion zurück Protokolle nur aus Blobs, die für die der Zugriff ist zulässig.  
@@ -141,10 +141,10 @@ fn_get_audit_file ( file_pattern,
 
 - **SQL Server**
 
-  Dieses Beispiel liest aus einer Datei namens `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`.  
+  Dieses Beispiel liest aus einer Datei namens `\\serverName\Audit\HIPAA_AUDIT.sqlaudit`.  
   
   ```  
-  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPAA_AUDIT.sqlaudit',default,default);  
   GO  
   ```  
 

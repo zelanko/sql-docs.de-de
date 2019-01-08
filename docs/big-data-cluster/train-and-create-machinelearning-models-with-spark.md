@@ -1,25 +1,27 @@
 ---
-title: Trainieren und Erstellen von Machine Learning-Modellen mit Spark
-description: Verwenden Sie zum Trainieren und Erstellen von Machine Learning-Modelle für die Spark PySpark | SqlServer
-services: SQL Server 2019 Big Data Cluster Spark
-ms.service: SQL Server 2019 Big Data Cluster Spark
+title: Train/Create ML-Modellen mit Spark
+titleSuffix: SQL Server 2019 big data clusters
+description: Verwenden Sie PySpark wird zum Trainieren und erstellen Sie mit Spark Machine Learning-Modelle in SQL Server-big Data-Clustern (Vorschau).
 author: lgongmsft
 ms.author: shivprashant
+ms.manager: craigg
 ms.reviewer: jroth
-ms.custom: ''
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/10/2018
-ms.openlocfilehash: fceced831ba7b100f29e2fc70811f50c95b1b715
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: c1a23ebb390c2276d1ce47c2936b8fe682a4e9b7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753487"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213099"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>Trainieren und Erstellen von Machine Learning-Modellen mit Spark
+
 Spark in SQL Server-big Data-Cluster ermöglicht künstliche Intelligenz und Machine Learning. Im Beispiel wird veranschaulicht, wie zum Trainieren eines Machine learning-Modell mithilfe von Python in Spark (PySpark), die mithilfe von Daten in HDFS gespeichert. 
 
-Das Beispiel ist eine schrittweise Anleitung zur mit Codeausschnitten, die verwendet werden kann, eine Studio-Notebook in Azure Daten und jede Zelle um einen Schritt ausführen, zu einem Zeitpunkt. Weitere Informationen zur Verbindung mit Spark über Notebook finden Sie [Hier] (Notebooks-guidance.md)
+Das Beispiel ist eine schrittweise Anleitung zur mit Codeausschnitten, die verwendet werden kann, eine Studio-Notebook in Azure Daten und jede Zelle um einen Schritt ausführen, zu einem Zeitpunkt. Weitere Informationen zur Verbindung mit Spark über Notebook finden Sie unter [hier](notebooks-guidance.md)
 
 Im Beispiel:
 
@@ -33,11 +35,9 @@ Im Beispiel:
 
 E2E-Machine Learning umfasst mehrere zusätzliche Schritte, z. B., Durchsuchen von Daten, Feature Auswahl und Principal Komponente Analysis, Modellauswahl. Viele dieser Schritte werden hier aus Gründen der Übersichtlichkeit ignoriert.
 
-
 ## <a name="step-1---understanding-the-data-and-prediction-desired"></a>Schritt 1: Grundlegendes zu den Daten und die gewünschten Vorhersage
 
 Dieses Beispiel verwendet die adult Census Income Daten aus [hier]( https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv ). In `AdultCensusIncome.csv`, jede Zeile steht für Income bewegen und andere Merkmale wie, Stunden pro Woche, Education, "Occupation" usw. für einen bestimmten Erwachsener age. Erstellen Sie ein Modell, das Vorhersagen kann, wenn die Income bewegen. Das Modell übernimmt Age "und" Stunden pro Woche als Funktionen und Vorhersagen, ob das Einkommen wäre > 50 K oder < 50 k beträgt. 
-
 
 ## <a name="step-2---upload-the-data-to-hdfs-and-basic-explorations-on-data"></a>Schritt 2: Hochladen der Daten in HDFS und grundlegende auswertungen für Daten
 Aus Azure Data Studio eine Verbindung mit dem HDFS/Spark-Gateway herstellen, und erstellen Sie ein Verzeichnis namens `spark_ml` unter HDFS. Herunterladen [AdultCensusIncome.csv]( https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv ) auf Ihrem lokalen Computer, und in HDFS hochzuladen. Hochladen von `AdultCensusIncome.csv` zu dem Ordner, die Sie erstellt haben.
@@ -85,7 +85,6 @@ data = data_all.select(select_cols)
 
 ```
 
-
 ## <a name="step-4---split-as-training-and-test-set"></a>Schritt 4: als Trainings- und Testsätze aufteilen
 
 Verwenden von 75 % der Zeilen trainiert das Modell und die restlichen 25 %, um die das Modell zu bewerten. Darüber hinaus das Trainieren beibehalten und testdatasets in den HDFS-Speicher. Der Schritt ist nicht erforderlich, aber zur Veranschaulichung gezeigt speichern und Laden von ORC-Format. Andere Formate, z. B. `Parquet `kann ebenfalls verwendet werden.
@@ -109,9 +108,8 @@ print("train and test datasets saved to {} and {}".format(train_data_path, test_
 
 ```
 
-
 ## <a name="step-5---put-together-a-pipeline-and-build-a-model"></a>Schritt 5: zusammengestellt, die eine Pipeline aus, und Erstellen eines Modells
-[Spark ML-Pipeline] ( https://spark.apache.org/docs/2.3.1/ml-pipeline.html ) können alle Schritte als Workflow sequenzieren und erleichtern das Experimentieren mit verschiedenen Algorithmen und ihren Parametern. Der folgende Code erstellt zunächst die Phasen und setzt diese Phasen zusammen in Ml-Pipeline.  LogisticRegression wird verwendet, um das Modell zu erstellen.
+[Spark ML-Pipeline](https://spark.apache.org/docs/2.3.1/ml-pipeline.html) können alle Schritte als Workflow sequenzieren und erleichtern das Experimentieren mit verschiedenen Algorithmen und ihren Parametern. Der folgende Code erstellt zunächst die Phasen und setzt diese Phasen zusammen in Ml-Pipeline.  LogisticRegression wird verwendet, um das Modell zu erstellen.
 
 ```python
 from pyspark.ml import Pipeline, PipelineModel
@@ -211,6 +209,6 @@ assert str(model2) == str(model)
 print("loaded model from {}".format(model_fs))
 ```
 
-## <a name="references"></a>Verweise
-1. Erste Schritte mit PySpark Notebooks finden Sie unter [hier.](notebooks-guidance.md)
+## <a name="next-steps"></a>Nächste Schritte
 
+Weitere Informationen zum Einstieg in das PySpark-Notebooks finden Sie unter [Verwendung von Notebooks](notebooks-guidance.md).

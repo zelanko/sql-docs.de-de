@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergepullsubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e6e3a2ddd7c046051b0d7f89097c7c0a075ca6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98d31c0d4895573059104d43a1ebddd879ba1967
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659013"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813122"
 ---
 # <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,28 +44,28 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **"**_Verleger_**"**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert der Name des lokalen Servers. Der Verleger muss ein gültiger Server sein.  
   
- [  **@publisher_db =**] **"***Publisher_db***"**  
+ [  **@publisher_db =**] **"**_Publisher_db_**"**  
  Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@subscriber_type=**] **"***Subscriber_type***"**  
+ [  **@subscriber_type=**] **"**_Subscriber_type_**"**  
  Der Typ des Abonnenten. *subscriber_type kann* ist **nvarchar(15)**, und kann **globale**, **lokalen** oder **anonyme**. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen werden lokale Abonnements als Clientabonnements bezeichnet und globale Abonnements als serverabonnements bezeichnet.  
   
  [  **@subscription_priority=**] *Subscription_priority*  
  Die Abonnementpriorität. *Subscription_priority*ist **echte**, hat den Standardwert NULL. Für lokale und anonyme Abonnements, die Priorität ist **0,0**. Die Priorität wird vom Standardresolver verwendet, um einen Gewinner zu ermitteln, wenn Konflikte erkannt werden. Für globale Abonnenten muss die Abonnementpriorität kleiner als 100 sein. Dieser Wert gibt die Priorität des Verlegers an.  
   
- [  **@sync_type=**] **"***Sync_type***"**  
+ [  **@sync_type=**] **"**_Sync_type_**"**  
  Der Synchronisierungstyp des Abonnements. *Sync_type*ist **nvarchar(15)**, hat den Standardwert **automatische**. Kann **automatische** oder **keine**. Wenn **automatische**, das Schema und die Ausgangsdaten für veröffentlichte Tabellen zuerst an den Abonnenten übertragen werden. Wenn **keine**, es wird davon ausgegangen, dass der Abonnent hat bereits das Schema und die Ausgangsdaten für veröffentlichte Tabellen. Systemtabellen und Daten werden immer übertragen.  
   
 > [!NOTE]  
 >  Es wird nicht empfohlen, geben Sie einen Wert **keine**.  
   
- [  **@description=**] **"***Beschreibung***"**  
+ [  **@description=**] **"**_Beschreibung_**"**  
  Eine kurze Beschreibung dieses Pullabonnements. *Beschreibung*ist **nvarchar(255)**, hat den Standardwert NULL. Dieser Wert wird angezeigt, vom Replikationsmonitor in der **Anzeigenamen** Spalte, die zum Sortieren von Abonnements für eine überwachte Veröffentlichung verwendet werden kann.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -87,7 +86,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Siehe auch  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
  [Sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
  [Sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
  [Sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   

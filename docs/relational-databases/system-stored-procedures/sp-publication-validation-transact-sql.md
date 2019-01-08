@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_publication_validation
@@ -17,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f90e172030193cf3ae1209829aa58512cf56fd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608678"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591404"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +42,22 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [**@publication=**] **"*** Veröffentlichung"*  
+ [**@publication=**] **"**_Veröffentlichung"_  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
  [**@rowcount_only=**] *Rowcount_only*  
  Gibt an, ob nur die Zeilenanzahl für die Tabelle zurückgegeben werden soll. *Rowcount_only* ist **Smallint** und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
-|**0**|Führt eine mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 kompatible Prüfsummenberechnung durch.<br /><br /> Hinweis: Wenn ein Artikel horizontal gefiltert wird, wird ein Vorgang bezüglich der Zeilenanzahl anstelle einer prüfsummenberechnung ausgeführt.|  
+|**0**|Führt eine mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 kompatible Prüfsummenberechnung durch.<br /><br /> Hinweis: Wird ein Artikel horizontal gefiltert, wird eine Überprüfung der Zeilenanzahl anstelle einer Prüfsummenberechnung durchgeführt.|  
 |**1** (Standard)|Führt nur eine Überprüfung der Zeilenanzahl aus.|  
-|**2**|Führt eine Überprüfung der Zeilenanzahl und der binären Prüfsumme aus.<br /><br /> Hinweis: Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0-Abonnenten können nur eine Überprüfung der Zeilenanzahl wird ausgeführt.|  
+|**2**|Führt eine Überprüfung der Zeilenanzahl und der binären Prüfsumme aus.<br /><br /> Hinweis: Für Abonnenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Version 7.0, wird nur eine Überprüfung der Zeilenanzahl ausgeführt.|  
   
  [**@full_or_fast=**] *Full_or_fast*  
  Die Methode, mit der die Zeilenanzahl berechnet wird. *Full_or_fast* ist **Tinyint** und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**0**|Führt eine vollständige Zählung mit COUNT(*) durch.|  
 |**1**|Führt eine schnelle Zählung von **sysindexes.rows**. Zählen der Zeilen im [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) ist wesentlich schneller als das Zählen von Zeilen in der eigentlichen Tabelle. Aber da [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) nur verzögert aktualisiert, die Zeilenanzahl möglicherweise nicht ganz genau.|  
@@ -67,8 +66,8 @@ sp_publication_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *Shutdown_agent*  
  Gibt an, ob der Verteilungs-Agent sofort nach dem Abschluss der Überprüfung beendet werden soll. *Shutdown_agent* ist **Bit**, hat den Standardwert **0**. Wenn **0**, Replikations-Agent nicht heruntergefahren. Wenn **1**, Replikations-Agent nach der Überprüfung des letzten Artikels beendet.  
   
- [ **@publisher** = ] **'***publisher***'**  
- Gibt einen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+ [ **@publisher** =] **"**_Verleger_**"**  
+ Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht verwendet werden, bei der Überprüfung auf Anforderung eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  

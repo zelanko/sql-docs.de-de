@@ -15,12 +15,12 @@ ms.assetid: c60120c6-0af1-45c5-90d1-0a99b878ff18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6b20fd2659fc68e6745c5ccef08aaac177207c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51afb2516da54ce63d170619edd4c5429fd85144
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089940"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410947"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>Problembehandlung für Data Mining-Diagramme in Visio (SQL Server Data Mining-Add-Ins)
   Dieses Thema enthält zusätzliche Informationen, die bei der Problembehandlung für Visio-Data Mining-Diagramme hilfreich sein können.  
@@ -33,7 +33,7 @@ ms.locfileid: "48089940"
 ## <a name="common-issues"></a>Häufige Probleme  
  Es kann keine Verbindung mit dem Modell hergestellt werden  
   Es wird kein Inhalt angezeigt  
-  Die Details werden nicht angezeigt  
+  Die Details nicht angezeigt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen von Datamining-Modellen in Visio &#40;Data Mining-Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   

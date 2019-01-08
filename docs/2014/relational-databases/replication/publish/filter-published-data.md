@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication]
@@ -21,12 +20,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac56fd795f819fe308dee9980e12883e73b0172d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222626"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810642"
 ---
 # <a name="filter-published-data"></a>Filtern von veröffentlichten Daten
   Das Filtern von Tabellenartikeln ermöglicht es Ihnen, Datenpartitionen zu erstellen, die veröffentlicht werden können. Das Filtern von veröffentlichten Daten bietet folgende Möglichkeiten:  
@@ -73,7 +72,7 @@ ms.locfileid: "48222626"
     > [!NOTE]  
     >  Zeilenfilter in Transaktionsveröffentlichungen können den Verwaltungsaufwand erheblich vergrößern, da die Klausel zur Artikelfilterung für jede Protokollzeile ausgewertet wird, die für eine veröffentlichte Tabelle geschrieben wurde, um zu bestimmen, ob die Zeile repliziert werden soll. Vermeiden Sie Zeilenfilter in Transaktionsveröffentlichungen, wenn die einzelnen Replikationsknoten alle Daten vollständig laden können und die gesamte Datengruppe nicht allzu groß ist.  
   
--   Erstellen Sie bei der Mergereplikation nicht mehrere Veröffentlichungen mit statischen Zeilenfiltern, sondern verwenden Sie vielmehr parametrisierte Zeilenfilter. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../merge/parameterized-filters-parameterized-row-filters.md).  
+-   Erstellen Sie bei der Mergereplikation nicht mehrere Veröffentlichungen mit statischen Zeilenfiltern, sondern verwenden Sie vielmehr parametrisierte Zeilenfilter. Weitere Informationen finden Sie unter [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  Informationen zum Definieren oder Ändern eines statischen Zeilenfilters finden Sie unter [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
@@ -130,7 +129,7 @@ ms.locfileid: "48222626"
   
 -   Bei der Transaktionsreplikation können Sie eine indizierte Sicht als Sicht oder als Tabelle replizieren. Wenn Sie die Sicht als Tabelle replizieren, können Sie keine Spalten aus der Tabelle filtern.  
   
- Zeilenfilter sind nicht für den datenbankübergreifenden Einsatz konzipiert. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] absichtlich beschränkt die Ausführung von `sp_replcmds` (für Filter) auf den Datenbankbesitzer (`dbo`). Die `dbo` besitzt keine datenbankübergreifenden Berechtigungen. Aufgrund der CDC (Change Data Capture)-Erweiterung in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] füllt die `sp_replcmds`-Logik die Änderungsnachverfolgungtabellen mit Informationen auf, auf die der Benutzer zu Abfragezwecken zurückgreifen kann. Aus Sicherheitsgründen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beschränkt die Ausführung dieser Logik, damit ein böswilliger `dbo` missbräuchlich dieser Ausführungspfad kann nicht verwendet werden kann. Beispielsweise könnte ein böswilliger `dbo` Trigger für CDC-Tabellen einschleusen, die dann ausgeführt werden, wenn der Benutzer `sp_replcmds` aufruft (in diesem Fall der logreader-Agent).  Wenn das Konto, unter dem der Agent ausgeführt wird, über höhere Berechtigungen verfügt, könnte der böswillige `dbo` seine Berechtigungen ausweiten.  
+ Zeilenfilter sind nicht für den datenbankübergreifenden Einsatz konzipiert. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beschränkt die Ausführung von `sp_replcmds` (für Filter) mit Absicht auf den Datenbankbesitzer (`dbo`). Der`dbo` besitzt keine datenbankübergreifenden Berechtigungen. Aufgrund der CDC (Change Data Capture)-Erweiterung in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] füllt die `sp_replcmds`-Logik die Änderungsnachverfolgungtabellen mit Informationen auf, auf die der Benutzer zu Abfragezwecken zurückgreifen kann. Aus Sicherheitsgründen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beschränkt die Ausführung dieser Logik, damit ein böswilliger `dbo` missbräuchlich dieser Ausführungspfad kann nicht verwendet werden kann. Beispielsweise könnte ein böswilliger `dbo` Trigger für CDC-Tabellen einschleusen, die dann ausgeführt werden, wenn der Benutzer `sp_replcmds` aufruft (in diesem Fall der logreader-Agent).  Wenn das Konto, unter dem der Agent ausgeführt wird, über höhere Berechtigungen verfügt, könnte der böswillige `dbo` seine Berechtigungen ausweiten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Veröffentlichen von Daten und Datenbankobjekten](publish-data-and-database-objects.md)  

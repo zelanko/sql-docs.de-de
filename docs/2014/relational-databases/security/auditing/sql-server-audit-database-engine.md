@@ -15,12 +15,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 36aeb6f1b8b2b90dce737e3e815b3385429e84f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175350"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373522"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbank-Engine)
   Die*Überwachung* einer Instanz von [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] oder einer einzelnen Datenbank umfasst die Nachverfolgung und Protokollierung von Ereignissen, die in [!INCLUDE[ssDE](../../../includes/ssde-md.md)]auftreten. Mithilfe von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit können Serverüberwachungen erstellt werden, die Serverüberwachungsspezifikationen für Ereignisse auf Serverebene sowie Datenbank-Überwachungsspezifikationen für Ereignisse auf Datenbankebene beinhalten können. Überwachte Ereignisse können in die Ereignisprotokolle oder Überwachungsdateien geschrieben werden.  
@@ -61,7 +61,7 @@ ms.locfileid: "48175350"
 > [!IMPORTANT]  
 >  Jeder authentifizierte Benutzer kann das Windows-Anwendungsereignisprotokoll lesen und Datensätze darin schreiben. Für das Anwendungsereignisprotokoll sind niedrigere Berechtigungen als für das Windows-Sicherheitsereignisprotokoll erforderlich, daher ist es jedoch auch weniger sicher als das Windows-Sicherheitsereignisprotokoll.  
   
- Wenn Sie einen Datensatz im Windows-Sicherheitsprotokoll schreiben möchten, muss das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonto der Richtlinie **Generieren von Sicherheitsüberwachungen** hinzugefügt werden. Standardmäßig sind das lokale System, der lokale Dienst und der Netzwerkdienst ein Teil dieser Richtlinie. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. Darüber hinaus muss die Sicherheitsrichtlinie **Objektzugriffsversuche überwachen** sowohl für **Erfolg** als auch für **Fehler**aktiviert sein. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] oder Windows Server 2008, Sie können festlegen, die eine feiner abgestimmte **generierte Anwendung** Richtlinie über die Befehlszeile mit dem überwachungsrichtlinienprogramm (`AuditPol.exe)`. Weitere Informationen zu den Schritten zum Aktivieren des Schreibens in das Windows-Sicherheitsprotokoll finden Sie unter [Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll](write-sql-server-audit-events-to-the-security-log.md). Weitere Informationen über das Programm Auditpol.exe finden Sie im Knowledge Base-Artikel 921469, [How to use Group Policy to configure detailed security auditing](http://support.microsoft.com/kb/921469/)(in englischer Sprache). Die Windows-Ereignisprotokolle gelten global für das Windows-Betriebssystem. Weitere Informationen zu den Windows-Ereignisprotokollen finden Sie unter [Ereignisanzeige (Übersicht)](http://go.microsoft.com/fwlink/?LinkId=101455). Wenn Sie präzisere Berechtigungen für die Überwachung benötigen, verwenden Sie das Binärdateiziel.  
+ Wenn Sie einen Datensatz im Windows-Sicherheitsprotokoll schreiben möchten, muss das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonto der Richtlinie **Generieren von Sicherheitsüberwachungen** hinzugefügt werden. Standardmäßig sind das lokale System, der lokale Dienst und der Netzwerkdienst ein Teil dieser Richtlinie. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. Darüber hinaus muss die Sicherheitsrichtlinie **Objektzugriffsversuche überwachen** sowohl für **Erfolg** als auch für **Fehler**aktiviert sein. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] oder Windows Server 2008, Sie können festlegen, die eine feiner abgestimmte **generierte Anwendung** Richtlinie über die Befehlszeile mit dem überwachungsrichtlinienprogramm (`AuditPol.exe)`. Weitere Informationen zu den Schritten zum Aktivieren des Schreibens in das Windows-Sicherheitsprotokoll finden Sie unter [Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll](write-sql-server-audit-events-to-the-security-log.md). Weitere Informationen über das Programm Auditpol.exe finden Sie im Knowledge Base-Artikel 921469, [How to use Group Policy to configure detailed security auditing](https://support.microsoft.com/kb/921469/)(in englischer Sprache). Die Windows-Ereignisprotokolle gelten global für das Windows-Betriebssystem. Weitere Informationen zu den Windows-Ereignisprotokollen finden Sie unter [Ereignisanzeige (Übersicht)](https://go.microsoft.com/fwlink/?LinkId=101455). Wenn Sie präzisere Berechtigungen für die Überwachung benötigen, verwenden Sie das Binärdateiziel.  
   
  Um beim Speichern von Überwachungsinformationen in eine Datei Manipulationen zu verhindern, können Sie den Zugriff auf deren Speicherort auf folgende Weise einschränken:  
   
@@ -77,9 +77,9 @@ ms.locfileid: "48175350"
   
  Wenn ein Überwachungsadministrator die Datei an einen anderen Ort kopiert (zur Archivierung usw.), sollten die ACLs am neuen Ort auf die folgenden Berechtigungen beschränkt werden:  
   
--   Überwachungsadministrator - Lesen/Schreiben  
+-   Überwachungsadministrator – Lesen/Schreiben  
   
--   Überwachungsleser - Lesen  
+-   Überwachungsleser – Lesen  
   
  Es wird empfohlen, Überwachungsberichte auf einer separaten Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu erstellen, z.B. einer Instanz von [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], auf die nur Überwachungsadministratoren und -leser Zugriff haben. Durch Verwenden einer separaten Instanz von [!INCLUDE[ssDE](../../../includes/ssde-md.md)] zur Berichterstellung können Sie dazu beitragen, unautorisierte Benutzer am Zugriff auf die Überwachungsdatei zu hindern.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "48175350"
  Weitere Informationen zur Überwachung finden Sie unter [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](create-a-server-audit-and-server-audit-specification.md) sowie [Erstellen einer Server- und Datenbank-Überwachungsspezifikation](create-a-server-audit-and-database-audit-specification.md).  
   
 ## <a name="considerations"></a>Weitere Überlegungen  
- Wenn während der Überwachungseinleitung ein Fehler auftritt, wird der Server nicht gestartet. In diesem Fall kann der Server gestartet werden, indem Sie in die Befehlszeile die Option **–f** eingeben.  
+ Wenn während der Überwachungseinleitung ein Fehler auftritt, wird der Server nicht gestartet. In diesem Fall kann der Server gestartet werden, indem Sie in die Befehlszeile die Option **-f** eingeben.  
   
- Wenn aufgrund eines Überwachungsfehlers der Server heruntergefahren wird oder nicht startet, da für die Überwachung ON_FAILURE=SHUTDOWN festgelegt wurde, wird das Ereignis MSG_AUDIT_FORCED_SHUTDOWN in das Protokoll geschrieben. Da der Server schon beim ersten Auftreten dieser Einstellung heruntergefahren wird, wird das Ereignis nur einmal im Protokoll aufgezeichnet. Das Ereignis wird erst nach der Fehlermeldung für die Überwachung, die das Herunterfahren verursacht, geschrieben. Ein Administrator kann ein durch eine Überwachung verursachtes Herunterfahren umgehen, indem er [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Flag **–m** im Einzelbenutzermodus startet. Wenn Sie sich im Einzelbenutzermodus anmelden, wird jede Überwachung herabgestuft, für die festgelegt wurde, dass ON_FAILURE=SHUTDOWN in dieser Sitzung als ON_FAILURE=CONTINUE ausgeführt wird. Wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Flag **–m** gestartet wird, wird die Meldung MSG_AUDIT_SHUTDOWN_BYPASSED im Fehlerprotokoll aufgezeichnet.  
+ Wenn aufgrund eines Überwachungsfehlers der Server heruntergefahren wird oder nicht startet, da für die Überwachung ON_FAILURE=SHUTDOWN festgelegt wurde, wird das Ereignis MSG_AUDIT_FORCED_SHUTDOWN in das Protokoll geschrieben. Da der Server schon beim ersten Auftreten dieser Einstellung heruntergefahren wird, wird das Ereignis nur einmal im Protokoll aufgezeichnet. Das Ereignis wird erst nach der Fehlermeldung für die Überwachung, die das Herunterfahren verursacht, geschrieben. Ein Administrator kann ein durch eine Überwachung verursachtes Herunterfahren umgehen, indem er [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Flag **-m** im Einzelbenutzermodus startet. Wenn Sie sich im Einzelbenutzermodus anmelden, wird jede Überwachung herabgestuft, für die festgelegt wurde, dass ON_FAILURE=SHUTDOWN in dieser Sitzung als ON_FAILURE=CONTINUE ausgeführt wird. Wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Flag **-m** gestartet wird, wird die Meldung MSG_AUDIT_SHUTDOWN_BYPASSED im Fehlerprotokoll aufgezeichnet.  
   
  Weitere Informationen zu Dienststartoptionen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](../../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
@@ -213,7 +213,7 @@ ms.locfileid: "48175350"
  [DDL-Trigger](../../triggers/ddl-triggers.md)  
  Erklärt, wie Sie DDL-Trigger (Data Definition Language) zum Nachverfolgen von Änderungen an den Datenbanken verwenden können.  
   
- [Microsoft TechNet: SQL Server-TechCenter: SQL Server 2005 – Sicherheit und Schutz](http://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server-TechCenter: SQL Server 2005 – Sicherheit und Schutz](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Stellt aktuelle Informationen zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sicherheit bereit.  
   
 ## <a name="see-also"></a>Siehe auch  

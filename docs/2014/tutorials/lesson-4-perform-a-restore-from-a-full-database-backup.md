@@ -11,22 +11,22 @@ ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e239526f0a5e77ad57122e8e9ddbaa163f040827
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3af76a0ec664a10d5457dc3d106de3727740ce19
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162920"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523656"
 ---
-# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Lektion 4: Ausführen einer Wiederherstellung von einer vollständigen Datenbanksicherung
+# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Lektion 4: Ausführen einer Wiederherstellung von einer vollständigen Datenbanksicherung
   In dieser Lektion wird veranschaulicht, wie mithilfe einer T-SQL-Anweisung eine Wiederherstellung von einer vollständigen Datenbanksicherung ausgeführt wird, die in der vorherigen Lektion erstellt wurde.  
   
 ## <a name="perform-a-restore-of-a-database-backup"></a>Ausführen einer Wiederherstellung von einer Datenbanksicherung  
  Führen Sie die folgenden Schritte aus, um eine vollständige Datenbanksicherung wiederherzustellen:  
   
-1.  Herstellen einer Verbindung mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Stellen Sie eine Verbindung mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]her.  
   
-2.  In der **Objekt-Explorer**, eine Verbindung mit der Instanz [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+2.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Instanz her.  
   
 3.  Klicken Sie auf der Standardmenüleiste auf **Neue Abfrage**.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48162920"
     RESTORE DATABASE AdventureWorks2012   
     FROM URL = 'https://mystorageaccount.blob.core.windows.net/privatecontainertest/AdventureWorks2012.bak'   
     WITH CREDENTIAL = 'mycredential';  
-    , STATS = 5 – use this to see monitor the progress  
+    , STATS = 5 - use this to see monitor the progress  
     GO  
   
     ```  

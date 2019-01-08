@@ -13,22 +13,22 @@ ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18c950015de84ac6b4204e657dfd52f894b6bced
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21fad41528bfc47ae2b117db68e73320109c98be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207430"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374745"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Datenquelleigenschaften (Dialogfeld), Anmeldeinformationen (Berichts-Generator)
   Wählen Sie im Dialogfeld **Datenquelleneigenschaften** die Option **Anmeldeinformationen** aus, um die Anmeldeinformationen für eine eingebettete Datenquelle im Bericht anzuzeigen und zu ändern. Die von Ihnen bereitgestellten Anmeldeinformationen werden für den Zugriff auf die Datenquelle für die Berichtsvorschau verwendet. Weitere Informationen zu Anmeldeinformationen finden Sie unter [Angeben von Anmeldeinformationen im Berichts-Generator](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verwenden Sie Windows-Authentifizierung (integrierte Sicherheit)**  
  Wählen Sie diese Option aus, um die Windows-Authentifizierung zu verwenden.  
   
  **Verwenden Sie diesen Benutzernamen und Kennwort**  
- Wählen Sie diese Option aus, um einen bestimmten Benutzernamen und ein bestimmtes Kennwort bereitzustellen. Für eingebettete Datenquellen gilt Folgendes: Wenn Sie das Berichtsserverprojekt auf dem Zielserver veröffentlichen, werden der Benutzername und das Kennwort als gespeicherte Anmeldeinformationen für die Datenbank gesichert. Wenn Sie den Benutzernamen und das Kennwort als Windows-Anmeldeinformationen verwenden möchten, können Sie die Eigenschaften für die veröffentlichte freigegebene Datenquelle auf dem Zielserver ändern. Weitere Informationen finden Sie unter [Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) in der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dokumentation in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Wählen Sie diese Option aus, um einen bestimmten Benutzernamen und ein bestimmtes Kennwort bereitzustellen. Für eingebettete Datenquellen gilt Folgendes: Wenn Sie das Berichtsserverprojekt auf dem Zielserver veröffentlichen, werden der Benutzername und das Kennwort als gespeicherte Anmeldeinformationen für die Datenbank gesichert. Wenn Sie den Benutzernamen und das Kennwort als Windows-Anmeldeinformationen verwenden möchten, können Sie die Eigenschaften für die veröffentlichte freigegebene Datenquelle auf dem Zielserver ändern. Weitere Informationen finden Sie unter [Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) in der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dokumentation in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=121312).  
   
  **Benutzername**  
  Geben Sie einen Benutzernamen ein, um sich bei der Datenquelle anzumelden.  
@@ -47,7 +47,7 @@ ms.locfileid: "48207430"
   
  Bei einigen Datenerweiterungen muss das Konto für die unbeaufsichtigte Ausführung auf dem Berichtsserver konfiguriert werden.  
   
- Weitere Informationen finden Sie im Thema für die entsprechenden Datenquelle in [Hinzufügen von Daten aus externen Datenquellen &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) und [Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;SSRS-Konfigurations-Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dokumentation in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Weitere Informationen finden Sie im Thema für die entsprechenden Datenquelle in [Hinzufügen von Daten aus externen Datenquellen &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) und [Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;SSRS-Konfigurations-Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dokumentation in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   

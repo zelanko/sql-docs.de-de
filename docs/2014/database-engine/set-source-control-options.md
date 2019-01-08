@@ -16,12 +16,12 @@ ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f31c521c7e6bd8229af2a46d0e7a6e1443d3911
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101990"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589894"
 ---
 # <a name="set-source-control-options"></a>Festlegen von Quellcodeverwaltungsoptionen
   Bevor Sie die Funktionen der in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] integrierten Quellcodeverwaltung nutzen können, sollten Sie die Quellcodeverwaltungsoptionen für die unterschiedlichen Umgebungen konfigurieren, in denen Sie arbeiten.  
@@ -50,7 +50,7 @@ ms.locfileid: "48101990"
      **Rollenbeschreibung**  
      Wenn Sie eine dieser Rollen auswählen, werden die entsprechenden Quellcodeverwaltungsoptionen automatisch ausgewählt.  
   
-    |-Rolle|Description|  
+    |Rolle|Description|  
     |----------|-----------------|  
     |**Visual SourceSafe**|Gibt an, dass Sie die Einstellungen, die am häufigsten verwendet wird, indem Sie verwenden möchten [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe-Benutzern.|  
     |**Unabhängiger Entwickler**|Gibt an, dass Sie unabhängig arbeiten.|  
@@ -74,7 +74,7 @@ ms.locfileid: "48101990"
      **Umgebungseinstellungen für quellcodeverwaltung**  
      Gibt die Rolle an, die Sie verwenden möchten. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] definiert die folgenden Rollen.  
   
-    |-Rolle|Description|  
+    |Rolle|Description|  
     |----------|-----------------|  
     |**Visual SourceSafe**|Gibt an, dass Sie die Einstellungen, die am häufigsten verwendet wird, indem Sie verwenden möchten [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe-Benutzern.|  
     |**Unabhängiger Entwickler**|Gibt an, dass Sie unabhängig arbeiten.|  
@@ -83,7 +83,7 @@ ms.locfileid: "48101990"
      Wenn Sie eine dieser Rollen auswählen, werden die entsprechenden Quellcodeverwaltungsoptionen automatisch ausgewählt.  
   
      **Lassen Sie Elemente beim Einchecken ausgecheckt**  
-     Gibt an, dass die Elemente für Sie ausgecheckt bleiben, wenn Sie Elemente zum Aktualisieren des Quellcodeverwaltungsspeichers einchecken. Wenn Sie diese Option für einen bestimmten Eincheckvorgang ändern möchten, klicken Sie auf der **Optionen** Pfeil in der **Einchecken** (Dialogfeld), und deaktivieren Sie die **beibehalten *** ausgecheckt** das Kontrollkästchen.  
+     Gibt an, dass die Elemente für Sie ausgecheckt bleiben, wenn Sie Elemente zum Aktualisieren des Quellcodeverwaltungsspeichers einchecken. Wenn Sie diese Option für einen bestimmten Eincheckvorgang ändern möchten, klicken Sie auf die **Optionen** Pfeil in der **Einchecken** (Dialogfeld), und deaktivieren Sie die **ausgecheckt lassen** Kontrollkästchen.  
   
      **Eingecheckte Elemente**  
      Zeigt eine Liste der Optionen an, durch die das Verhalten von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] angegeben wird, wenn Sie ein nicht ausgechecktes Element zu bearbeiten versuchen. In den folgenden Tabellen werden die verfügbaren Optionen beschrieben.  

@@ -16,15 +16,15 @@ ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3eb6bbc5a3c08ca8668219dd3a11354c2fed2ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0899922eb2cdec88e73901f14ebeb6dfe953622
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056510"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367213"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Parameter und Rückgabecodes im Task 'SQL ausführen'
-  SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig `input` Parameter `output` Parametern und Rückgabecodes. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt der Task „SQL ausführen“ die Parametertypen `Input`, `Output` und `ReturnValue`. Sie verwenden die `Input` Typ für Eingabeparameter, `Output` für Ausgabeparameter und `ReturnValue` Rückgabecodes.  
+  SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig `input`-Parameter, `output`-Parameter und Rückgabecodes. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt der Task „SQL ausführen“ die Parametertypen `Input`, `Output` und `ReturnValue`. Sie können den `Input`-Typ für Eingabeparameter, den `Output`-Typ für Ausgabeparameter und den `ReturnValue`-Typ für Rückgabecodes verwenden.  
   
 > [!NOTE]  
 >  Parameter können in einem Task SQL ausführen nur verwendet werden, wenn dies vom Datenanbieter unterstützt wird.  
@@ -56,8 +56,8 @@ ms.locfileid: "48056510"
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<Parametername>|\@\<Parametername>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|EXCEL und OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|EXCEL und OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 ### <a name="using-parameters-with-adonet-and-ado-connection-managers"></a>Verwenden von Parametern mit ADO.NET- und ADO-Verbindungs-Managern  
  [!INCLUDE[vstecado](../includes/vstecado-md.md)]- und ADO-Verbindungs-Manager besitzen besondere Anforderungen für SQL-Befehle, die Parameter verwenden:  
@@ -76,29 +76,29 @@ ms.locfileid: "48056510"
  Einige OLE DB-Datentypen werden, abhängig vom Anbieter, den der Verbindungs-Manager verwendet, nicht unterstützt. Beispielsweise erkennt der Excel-Treiber nur einen begrenzten Satz von Datentypen. Weitere Informationen zum Verhalten des Jet-Anbieters mit dem Excel-Treiber finden Sie unter [Excel Source](data-flow/excel-source.md).  
   
 #### <a name="using-parameters-with-ole-db-connection-managers"></a>Verwenden von Parametern mit OLE DB-Verbindungs-Managern  
- Wenn der Task „SQL ausführen“ den OLE DB-Verbindungs-Manager verwendet, ist die BypassPrepare-Eigenschaft des Tasks verfügbar. Sie sollten diese Eigenschaft festlegen, um `true` Wenn der Task SQL ausführen einen SQL-Anweisungen mit Parametern verwendet.  
+ Wenn der Task „SQL ausführen“ den OLE DB-Verbindungs-Manager verwendet, ist die BypassPrepare-Eigenschaft des Tasks verfügbar. Sie sollten für diese Eigenschaft `true` festlegen, wenn der Task „SQL ausführen“ SQL-Anweisungen mit Parametern verwendet.  
   
  Bei Verwendung eines OLE DB-Verbindungs-Managers können Sie keine parametrisierten Unterabfragen verwenden, da der Task „SQL ausführen“ keine Parameterinformationen über den OLE DB-Anbieter ableiten kann. Sie können jedoch einen Ausdruck verwenden, um die Parameterwerte in der Abfragezeichenfolge zu verketten und die SqlStatementSource-Eigenschaft des Tasks festzulegen.  
   
 ##  <a name="Date_and_time_data_types"></a> Verwenden von Parametern mit Datums- und Uhrzeitdatentypen  
   
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Verwenden von Datums- und Zeitparametern mit ADO.NET- und ADO-Verbindungs-Managern  
- Beim Lesen von Daten von der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Typen `time` und `datetimeoffset`, einen Task SQL ausführen, die entweder verwendet eine [!INCLUDE[vstecado](../includes/vstecado-md.md)] oder ADO-Verbindungs-Manager hat die folgenden zusätzlichen Anforderungen:  
+ Beim Lesen von Daten der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Typen `time` und `datetimeoffset` gelten für einen Task „SQL ausführen“, der einen [!INCLUDE[vstecado](../includes/vstecado-md.md)]- oder ADO-Verbindungs-Manager verwendet, folgende zusätzliche Anforderungen:  
   
 -   Für `time` Daten eine [!INCLUDE[vstecado](../includes/vstecado-md.md)] Verbindungs-Manager benötigt diese Daten in einem Parameter gespeichert werden, dessen Parametertyp `Input` oder `Output`, und mit dem Datentyp `string`.  
   
--   Für `datetimeoffset` Daten eine [!INCLUDE[vstecado](../includes/vstecado-md.md)] Verbindungs-Manager gefordert, dass diese Daten in einem der folgenden Parameter gespeichert werden:  
+-   Für `datetimeoffset`-Daten verlangt ein [!INCLUDE[vstecado](../includes/vstecado-md.md)]-Verbindungs-Manager, dass diese Daten in einem der folgenden Parameter gespeichert werden:  
   
     -   Ein Parameter mit dem Parametertyp `Input` und dem Datentyp `string`.  
   
-    -   Ein Parameter mit dem Parametertyp `Output` oder `ReturnValue`, und mit dem Datentyp `datetimeoffset`, `string`, oder `datetime2`. Wenn Sie einen Parameter auswählen, dessen Datentyp entweder `string` oder `datetime2`, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in den Datentyp String bzw. datetime2 konvertiert.  
+    -   Ein Parameter mit dem Parametertyp `Output` oder `ReturnValue` und dem Datentyp `datetimeoffset`, `string` oder `datetime2`. Wenn Sie einen Parameter auswählen, dessen Datentyp `string` oder `datetime2` ist, werden die Daten von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in den Datentyp string bzw. datetime2 konvertiert.  
   
 -   Für einen ADO-Verbindungs-Manager ist es erforderlich, dass `time`-Daten oder `datetimeoffset`-Daten in einem Parameter mit dem Parametertyp `Input` oder `Output` und dem Datentyp `adVarWchar` gespeichert werden.  
   
  Weitere Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datentypen sowie deren Zuordnung zu [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Datentypen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) und [SQL Server Integration Services-Datentypen](data-flow/integration-services-data-types.md).  
   
 ### <a name="using-date-and-time-parameters-with-ole-db-connection-managers"></a>Verwenden von Datums- und Zeitparametern mit dem OLE DB-Verbindungs-Manager  
- Wenn Sie einen OLE DB-Verbindungs-Manager verwenden zu können, hat ein Task SQL ausführen bestimmte speicheranforderungen für Daten von der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Datentypen `date`, `time`, `datetime`, `datetime2`, und `datetimeoffset`. Sie müssen diese Daten in einem der folgenden Parametertypen speichern:  
+ Bei der Verwendung eines OLE DB-Verbindungs-Managers besitzt ein Task „SQL ausführen“ bestimmte Speicheranforderungen für Daten mit den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datentypen `date`, `time`, `datetime`, `datetime2` und `datetimeoffset`. Sie müssen diese Daten in einem der folgenden Parametertypen speichern:  
   
 -   In einem Eingabeparameter mit dem Datentyp NVARCHAR  
   
@@ -114,11 +114,11 @@ ms.locfileid: "48056510"
  Wenn die Daten nicht im entsprechenden Eingabe- oder Ausgabeparameter gespeichert werden, erzeugt das Paket einen Fehler.  
   
 ### <a name="using-date-and-time-parameters-with-odbc-connection-managers"></a>Verwenden von Datums- und Zeitparametern mit dem ODBC-Verbindungs-Manager  
- Wenn Sie einen ODBC-Verbindungs-Manager verwenden zu können, hat ein Task SQL ausführen bestimmte speicheranforderungen für Daten mit der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Datentypen `date`, `time`, `datetime`, `datetime2`, oder `datetimeoffset`. Sie müssen diese Daten in einem der folgenden Parametertypen speichern:  
+ Bei der Verwendung eines ODBC-Verbindungs-Managers besitzt ein Task „SQL ausführen“ bestimmte Speicheranforderungen für Daten mit den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datentypen `date`, `time`, `datetime`, `datetime2` oder `datetimeoffset`. Sie müssen diese Daten in einem der folgenden Parametertypen speichern:  
   
 -   Ein `input`-Parameter mit dem Datentyp SQL_WVARCHAR  
   
--   Ein `output` Parameter mit den entsprechenden Datentyp, wie in der folgenden Tabelle aufgeführt.  
+-   Ein `output`-Parameter mit dem entsprechenden Datentyp, wie in der folgenden Tabelle aufgeführt  
   
     |Parametertyp `Output`|Date-Datumstyp|  
     |-------------------------------|--------------------|  
@@ -158,7 +158,7 @@ ms.locfileid: "48056510"
 |Verbindungstyp|EXEC-Syntax|  
 |---------------------|-----------------|  
 |EXCEL und OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Weitere Informationen über die ODBC-Aufrufsyntax finden Sie im Thema [Prozedurparameter](http://go.microsoft.com/fwlink/?LinkId=89462)in der ODBC Programmer's Reference in der MSDN Library.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Weitere Informationen über die ODBC-Aufrufsyntax finden Sie im Thema [Prozedurparameter](https://go.microsoft.com/fwlink/?LinkId=89462)in der ODBC Programmer's Reference in der MSDN Library.|  
 |ADO|Wenn IsQueryStoredProcedure auf ist `False`, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Wenn IsQueryStoredProcedure auf ist `True`, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Wenn IsQueryStoredProcedure auf ist `False`, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Wenn IsQueryStoredProcedure auf ist `True`, `uspGetBillOfMaterials`|  
   
@@ -167,16 +167,16 @@ ms.locfileid: "48056510"
  Weitere Informationen zum Verwenden von Eingabe- und Ausgabeparametern mit gespeicherten Prozeduren von Transact-SQL finden Sie unter [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
 ##  <a name="Return_codes"></a> Abrufen von Werten von Rückgabecodes  
- Eine gespeicherte Prozedur kann einen ganzzahligen Wert zurückgeben, der als Rückgabecode bezeichnet wird, um den Ausführungsstatus einer Prozedur anzuzeigen. Um der Rückgabecodes im Task SQL ausführen zu implementieren, verwenden Sie die Parameter des der `ReturnValue` Typ.  
+ Eine gespeicherte Prozedur kann einen ganzzahligen Wert zurückgeben, der als Rückgabecode bezeichnet wird, um den Ausführungsstatus einer Prozedur anzuzeigen. Verwenden Sie Parameter des `ReturnValue`-Typs, um Rückgabecodes im Task SQL ausführen zu implementieren.  
   
- In der folgenden Tabelle finden Sie eine Auflistung einiger Beispiele des EXEC-Befehls nach verschiedenen Verbindungstypen, die Rückgabecodes implementieren. In alle Beispiele wird ein `input`-Parameter verwendet. Die Regeln für die Verwendung von parametermarkierungen und Parameternamen sind identisch für alle Parametertypen –`Input`, `Output`, und `ReturnValue`.  
+ In der folgenden Tabelle finden Sie eine Auflistung einiger Beispiele des EXEC-Befehls nach verschiedenen Verbindungstypen, die Rückgabecodes implementieren. In alle Beispiele wird ein `input`-Parameter verwendet. Die Regeln für die Verwendung von parametermarkierungen und Parameternamen sind identisch für alle Parameter Typen -`Input`, `Output`, und `ReturnValue`.  
   
  Ein Teil der Syntax unterstützt keine Parameterliterale. In diesem Fall müssen Sie die Parameterwerte mithilfe einer Variablen bereitstellen.  
   
 |Verbindungstyp|EXEC-Syntax|  
 |---------------------|-----------------|  
 |EXCEL und OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Weitere Informationen über die ODBC-Aufrufsyntax finden Sie im Thema [Prozedurparameter](http://go.microsoft.com/fwlink/?LinkId=89462)in der ODBC Programmer's Reference in der MSDN Library.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Weitere Informationen über die ODBC-Aufrufsyntax finden Sie im Thema [Prozedurparameter](https://go.microsoft.com/fwlink/?LinkId=89462)in der ODBC Programmer's Reference in der MSDN Library.|  
 |ADO|Wenn IsQueryStoreProcedure auf ist `False`, `EXEC ? = myStoredProcedure 1`<br /><br /> Wenn IsQueryStoreProcedure auf ist `True`, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set isquerystoreprocedure auf `True`.<br /><br /> `myStoredProcedure`|  
   
@@ -198,9 +198,9 @@ ms.locfileid: "48056510"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Blog-Artikel [Stored procedures with output parameters](http://go.microsoft.com/fwlink/?LinkId=157786)(Gespeicherte Prozeduren mit Ausgabeparametern) unter blogs.msdn.com  
+-   Blog-Artikel [Stored procedures with output parameters](https://go.microsoft.com/fwlink/?LinkId=157786)(Gespeicherte Prozeduren mit Ausgabeparametern) unter blogs.msdn.com  
   
--   CodePlex-Beispiel [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863)(Ausführen von SQL-Parametern und Resultsets) auf msftisprodsamples.codeplex.com  
+-   CodePlex-Beispiel [Execute SQL Parameters and Result Sets](https://go.microsoft.com/fwlink/?LinkId=157863)(Ausführen von SQL-Parametern und Resultsets) auf msftisprodsamples.codeplex.com  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL ausführen (Task)](control-flow/execute-sql-task.md)   

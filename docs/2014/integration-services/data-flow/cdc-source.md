@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
@@ -13,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bf104479ab03525ed648d73911931263206d07b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af2f56c92947cd8e210b8532cb6899c52486707e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063090"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349814"
 ---
 # <a name="cdc-source"></a>CDC-Quelle
   Die CDC-Quelle liest einen Bereich mit Änderungsdaten aus [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Änderungstabellen und übermittelt die Änderungen an die anderen SSIS-Downstreamkomponenten.  
@@ -46,11 +45,11 @@ ms.locfileid: "48063090"
 ## <a name="error-handling"></a>Fehlerbehandlung  
  Die CDC-Quelle verfügt über eine Fehlerausgabe. Die Komponentenfehlerausgabe enthält die folgenden Ausgabespalten:  
   
--   **Fehlercode**: Der Wert beträgt immer -1.  
+-   **Fehlercode**: Der Wert beträgt immer-1.  
   
 -   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (für Konvertierungsfehler).  
   
--   **Fehlerzeilenspalten**: Die Datensatzdaten, die den Fehler verursachen.  
+-   **Fehlerzeilenspalten**: Die Datensatzdaten, die den Fehler verursacht hat.  
   
  Je nach Einstellung des Fehlerverhaltens unterstützt die CDC-Quelle das Zurückgeben von Fehlern (Datenkonvertierung, Abschneiden), die während des Extraktionsprozesses in der Fehlerausgabe auftreten. Weitere Informationen finden Sie unter [CDC Source Editor &#40;Error Output Page&#41;](../cdc-source-editor-error-output-page.md).  
   
@@ -98,11 +97,11 @@ use <cdc-enabled-database-name>
   
  Weitere Informationen finden Sie in einem der folgenden Themen:  
   
--   [Quellen-Editor für CDC &#40;Seite Verbindungs-Manager&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [Quellen-Editor für CDC &#40;Seite „Verbindungs-Manager“&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [Quellen-Editor für CDC &#40;Seite "Spalten"&#41;](../cdc-source-editor-columns-page.md)  
+-   [Quellen-Editor für CDC &#40;Seite „Spalten“&#41;](../cdc-source-editor-columns-page.md)  
   
--   [Quellen-Editor für CDC &#40;Seite "Fehlerausgabe"&#41;](../cdc-source-editor-error-output-page.md)  
+-   [Quellen-Editor für CDC &#40;Seite „Fehlerausgabe“&#41;](../cdc-source-editor-error-output-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können.  
   
@@ -114,18 +113,18 @@ use <cdc-enabled-database-name>
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Quellen-Editor für CDC &#40;Seite Verbindungs-Manager&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [Quellen-Editor für CDC &#40;Seite „Verbindungs-Manager“&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [Quellen-Editor für CDC &#40;Seite "Spalten"&#41;](../cdc-source-editor-columns-page.md)  
+-   [Quellen-Editor für CDC &#40;Seite „Spalten“&#41;](../cdc-source-editor-columns-page.md)  
   
--   [Quellen-Editor für CDC &#40;Seite "Fehlerausgabe"&#41;](../cdc-source-editor-error-output-page.md)  
+-   [Quellen-Editor für CDC &#40;Seite „Fehlerausgabe“&#41;](../cdc-source-editor-error-output-page.md)  
   
--   [Benutzerdefinierte Eigenschaften der CDC-Quelle](cdc-source-custom-properties.md)  
+-   [CDC Source Custom Properties](cdc-source-custom-properties.md)  
   
 -   [Extrahieren von Änderungsdaten mithilfe der CDC-Quelle](cdc-source.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Blogeintrag, [Processing Modes for the CDC Source](http://go.microsoft.com/fwlink/?LinkId=242541), auf mattmasson.com.  
+-   Blogeintrag, [Processing Modes for the CDC Source](https://go.microsoft.com/fwlink/?LinkId=242541), auf mattmasson.com.  
   
   

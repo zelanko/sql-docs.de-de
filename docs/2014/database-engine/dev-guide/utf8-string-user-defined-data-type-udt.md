@@ -12,12 +12,12 @@ ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b865adca53c432cc5347fff38d52cfeda5334c7c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e6b7555ce83cac4bba4c930965ec391ea82d457
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072690"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358932"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 String (benutzerdefinierter Datentyp, UDT)
   Das UTF8String-Beispiel für SQL Server veranschaulicht die Implementierung eines benutzerdefinierten Datentyps. Dieses Beispiel zeigt die Implementierung eines benutzerdefinierten UTF8-Datentyps, der das Typensystem der Datenbank erweitert, um UTF8-codierte Werte speichern zu können. Dieser Typ implementiert auch Code für die Konvertierung von Unicode-Zeichenfolgen in und aus UTF8.  
@@ -25,9 +25,9 @@ ms.locfileid: "48072690"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](http://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](https://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
   
--   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](http://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
+-   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
 -   .NET Framework SDK 2.0 oder höher oder Microsoft Visual Studio 2005 oder höher. Das .NET Framework SDK ist kostenlos erhältlich.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48072690"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie die `ALTER SETTINGS`-Serverberechtigung, die Mitglieder der festen Serverrollen `sysadmin` und `serveradmin` implizit erhalten.  
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
@@ -849,7 +849,7 @@ CREATE FUNCTION ResumeFullName (@Resume xml)
 RETURNS nvarchar(100)  
 AS  
 BEGIN  
-    RETURN CONVERT(nvarchar(100), @Resume.query(N'declare namespace RES="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/Resume"; for $b in /RES:Resume[1]/RES:Name/* return data($b)'));  
+    RETURN CONVERT(nvarchar(100), @Resume.query(N'declare namespace RES="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/Resume"; for $b in /RES:Resume[1]/RES:Name/* return data($b)'));  
 END  
 GO  
   

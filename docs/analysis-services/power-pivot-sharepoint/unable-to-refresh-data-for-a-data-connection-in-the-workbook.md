@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 211aecdb0158cff593c7f3f9ef241244db6ca051
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a5db5706af88a657b213e85d97777abe3ef4f744
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981712"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203139"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Daten können nicht für eine Datenverbindung in der Arbeitsmappe aktualisiert werden.
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,26 +27,26 @@ ms.locfileid: "38981712"
 |Betrifft:|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Installation|  
 |Produktversion|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Ursache|Weitere Informationen finden Sie weiter unten.|  
-|Meldungstext|Daten können nicht für eine Datenverbindung in der Arbeitsmappe aktualisiert werden. Versuchen Sie es erneut, oder wenden Sie sich an den Systemadministrator. Die folgenden Verbindungen wurden nicht aktualisiert: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten|  
+|Meldungstext|Daten können nicht für eine Datenverbindung in der Arbeitsmappe aktualisiert werden. Versuchen Sie es erneut, oder wenden Sie sich an den Systemadministrator. Die folgenden Verbindungen wurden nicht aktualisiert: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Daten|  
   
 ## <a name="explanation-and-resolution"></a>Erklärung und Behebung  
  Mit Excel Services kann keine Verbindung mit den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten hergestellt werden, bzw. diese Daten können nicht geladen werden. Bedingungen, die zum Auftreten dieses Fehlers führen:  
   
- **Szenario 1: Dienst ist nicht gestartet**  
+ **Szenario 1: Dienst wird nicht gestartet werden.**  
   
- Die SQL Server Analysis Services-Instanz ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) wurde nicht gestartet. Ein abgelaufenes Kennwort führt zum Anhalten der Ausführung des Diensts. Weitere Informationen zum Ändern des Kennworts finden Sie unter [Konfigurieren von Power Pivot-Dienstkonten](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) und [Starten oder Beenden eines Power Pivot für SharePoint-Servers](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md).  
+ Der SQL Server Analysis Services ( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) wurde nicht gestartet. Ein abgelaufenes Kennwort führt zum Anhalten der Ausführung des Diensts. Weitere Informationen zum Ändern des Kennworts finden Sie unter [Konfigurieren von Power Pivot-Dienstkonten](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) und [Starten oder Beenden eines Power Pivot für SharePoint-Servers](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md).  
   
- **Szenario 2a: Öffnen einer früheren Version der Arbeitsmappe auf dem Server**  
+ **Szenario 2a: Öffnen eine frühere Version der Arbeitsmappe auf dem server**  
   
  Die Arbeitsmappe, die Sie zu öffnen versuchen, könnte in der SQL Server 2008 R2-Version von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel erstellt worden sein. Höchstwahrscheinlich ist der in der Datenverbindungszeichenfolge angegebene Analysis Service-Datenanbieter nicht auf dem Computer vorhanden, auf dem die Abfrage verarbeitet wird.  
   
- Wenn dies der Fall ist, finden Sie diese Meldung in das ULS-Protokoll: "Fehler beim Aktualisieren der"[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t Daten "in der Arbeitsmappe '\<URL zu der Arbeitsmappe >'", gefolgt von "Es kann keine Verbindung hergestellt werden".  
+ Wenn dies der Fall ist, finden Sie eine Nachricht ähnlich der folgenden im ULS-Protokoll: "Fehler beim Aktualisieren der" [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t Daten "in der Arbeitsmappe '\<URL zu der Arbeitsmappe >'", gefolgt von "Es kann keine Verbindung hergestellt werden".  
   
  Um die Version der Arbeitsmappe zu bestimmen, öffnen Sie sie in Excel, und überprüfen Sie, welcher Datenanbieter in der Verbindungszeichenfolge angegeben ist. Eine SQL Server 2008 R2-Arbeitsmappe verwendet MSOLAP.4 als Datenanbieter.  
   
  Um dieses Problem zu umgehen, können Sie die Arbeitsmappe aktualisieren. Alternativ können Sie Clientbibliotheken von der SQL Server 2008 R2-Version von Analysis Services auf den physischen Computern installieren, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint oder Excel Services ausführen. Weitere Informationen finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
- **Szenario 2b: Excel Services werden auf einem Anwendungsserver ausgeführt, der die falsche Version der Clientbibliotheken aufweist**  
+ **Szenario 2 b: Excel Services werden auf einem Anwendungsserver ausgeführt, der die falsche Version der Clientbibliotheken aufweist**  
   
  Standardmäßig wird von SharePoint Server 2010 die SQL Server 2008-Version vom OLE DB-Anbieter für Analysis Services auf Anwendungsservern installiert, auf denen Excel Services ausgeführt wird. In einer Farm, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenzugriff unterstützt, müssen alle physischen Server, die Anwendungen ausführen, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten anfordern, z.B. Excel Services und [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint, eine höhere Version des Datenanbieters verwenden.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "38981712"
   
  Die Installation eines Domänencontrollers auf Ihrem Computer ist nützlich, wenn die Zielsetzung darin besteht, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint in einem Offlinestatus zu verwenden. Ausführliche Anweisungen zur Verwendung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] offline finden Sie im Blogeintrag "dauert Ihre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server außerhalb des Netzwerks" auf [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
   
- **Szenario 4: Instabiler Server**  
+ **Szenario 4: Instabiler server**  
   
  Ein oder mehrere Dienste könnten sich in einem inkonsistenten Status befinden. In einigen Fällen kann das Problem durch Ausführen von IISRESET behoben werden.  
   

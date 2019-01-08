@@ -13,12 +13,12 @@ ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 887f881ad6a4cefec80620ebedb2ac210692ce5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cdb70467f5844c2d2dba623c340209f495002cdd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090097"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357264"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>ADO.NET-Ziel-Editor (Seite 'Verbindungs-Manager')
   Mithilfe der Seite **Verbindungs-Manager** des Dialogfelds **ADO.NET-Ziel-Editor** können Sie die [!INCLUDE[vstecado](../includes/vstecado-md.md)] -Verbindung für das Ziel auswählen. Außerdem können Sie auf dieser Seite eine Tabelle oder Sicht aus der Datenbank auswählen.  
@@ -57,21 +57,21 @@ ms.locfileid: "48090097"
   
  Nur ADO.NET-Anbieter, die ein <xref:System.Data.SqlClient.SqlConnection> -Objekt zurückgeben, unterstützen die Verwendung der <xref:System.Data.SqlClient.SqlBulkCopy> -Schnittstelle. Der .NET-Datenanbieter für SQL Server (SqlClient) gibt ein <xref:System.Data.SqlClient.SqlConnection> -Objekt zurück, und ein benutzerdefinierter Anbieter gibt möglicherweise ein <xref:System.Data.SqlClient.SqlConnection> -Objekt zurück.  
   
- Sie können .NET-Datenanbieter für SQL Server (SqlClient) verwenden, für die Verbindung [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
+ Sie können den .NET-Datenanbieter für SQL Server (SqlClient) verwenden, um eine Verbindung mit [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]herzustellen.  
   
- Wenn Sie **Masseneinfügung verwenden, falls verfügbar**auswählen und für **Zeile umleiten** die Option **Fehler**festlegen, enthält der Datenbatch, der vom Ziel an die Fehlerausgabe umgeleitet wird, möglicherweise intakte Zeilen. Weitere Informationen zur Behandlung von Fehlern in Massenvorgängen finden Sie unter [Fehlerbehandlung in Daten](data-flow/error-handling-in-data.md). Weitere Informationen zu den **Fehler** finden Sie unter [ADO.NET-Ziel-Editor &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
+ Wenn Sie **Masseneinfügung verwenden, falls verfügbar**auswählen und für **Zeile umleiten** die Option **Fehler**festlegen, enthält der Datenbatch, der vom Ziel an die Fehlerausgabe umgeleitet wird, möglicherweise intakte Zeilen. Weitere Informationen zur Behandlung von Fehlern in Massenvorgängen finden Sie unter [Fehlerbehandlung in Daten](data-flow/error-handling-in-data.md). Weitere Informationen zur Option **Zeile umleiten** finden Sie unter [Ziel-Editor für ADO.NET &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  Wenn eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] - oder Sybase-Quelltabelle eine Identitätsspalte enthält, müssen Sie SQL ausführen-Tasks zum Ausführen einer SET IDENTITY_INSERT-Anweisung vor und nach dem ADO NET-Ziel verwenden. Die Identitätsspalteneigenschaft gibt einen inkrementellen Wert für die Spalte an. Die SET IDENTITY_INSERT-Anweisung ermöglicht, dass explizite Werte in die Identitätsspalte eingefügt werden können. Legen Sie zum Ausführen der CREATE TABLE- und SET IDENTITY-Anweisungen für die Verbindung mit der gleichen Datenbank den `RetainSameConnection` Eigenschaft der [!INCLUDE[vstecado](../includes/vstecado-md.md)] Verbindungs-Manager `True`. Verwenden Sie den gleichen [!INCLUDE[vstecado](../includes/vstecado-md.md)] -Verbindungs-Manager auch für die "SQL ausführen"-Tasks und das ADO.NET-Ziel.  
+>  Wenn eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] - oder Sybase-Quelltabelle eine Identitätsspalte enthält, müssen Sie SQL ausführen-Tasks zum Ausführen einer SET IDENTITY_INSERT-Anweisung vor und nach dem ADO NET-Ziel verwenden. Die Identitätsspalteneigenschaft gibt einen inkrementellen Wert für die Spalte an. Die SET IDENTITY_INSERT-Anweisung ermöglicht, dass explizite Werte in die Identitätsspalte eingefügt werden können. Um die CREATE TABLE- und SET IDENTITY-Anweisungen für die dieselbe Datenbankverbindung  auszuführen, legen Sie die `RetainSameConnection`-Eigenschaft des [!INCLUDE[vstecado](../includes/vstecado-md.md)]-Verbindungs-Managers auf `True` fest. Verwenden Sie den gleichen [!INCLUDE[vstecado](../includes/vstecado-md.md)] -Verbindungs-Manager auch für die "SQL ausführen"-Tasks und das ADO.NET-Ziel.  
 >   
 >  Weitere Informationen finden Sie unter [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) und [IDENTITY &#40;Eigenschaft&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property).  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Technischer Artikel [Schnelles Laden von Daten in eine Windows Azure SQL-Datenbank](http://go.microsoft.com/fwlink/?LinkId=244333)auf sqlcat.com  
+ Technischer Artikel [Schnelles Laden von Daten in eine Windows Azure SQL-Datenbank](https://go.microsoft.com/fwlink/?LinkId=244333)auf sqlcat.com  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADO.NET-Ziel-Editor &#40;Seite "Zuordnungen"&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
- [ADO.NET-Ziel-Editor &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
+ [ADO.NET-Ziel-Editor &#40;Seite „Zuordnungen“&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
+ [Ziel-Editor für ADO.NET &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
  [ADO.NET-Verbindungs-Manager](connection-manager/ado-net-connection-manager.md)   
  [SQL ausführen (Task)](control-flow/execute-sql-task.md)  
   

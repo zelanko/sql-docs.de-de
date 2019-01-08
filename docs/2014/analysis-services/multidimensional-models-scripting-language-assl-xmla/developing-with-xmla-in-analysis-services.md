@@ -19,12 +19,12 @@ ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52c03994288a54db9057fcac7c121b08b806d8db
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bb3ed3080d27a5db2cadcc9ab2b47e9a66d95a62
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145565"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374472"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Entwickeln mit XMLA in Analysis Services
   XML for Analysis (XMLA) ist ein SOAP-basiertes (Simple Object Access Protocol) XML-Protokoll, das speziell auf den universellen Datenzugriff für jede standardmäßige, mehrdimensionale Datenquelle ausgerichtet ist, auf die mit einer HTTP-Verbindung zugegriffen werden kann. Beim Kommunizieren mit Clientanwendungen wird XMLA als einziges Protokoll von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet. Im Grunde formulieren alle von Analysis Services unterstützten Clientbibliotheken Anforderungen und Antworten in XMLA.  
@@ -62,12 +62,12 @@ ms.locfileid: "50145565"
 ## <a name="namespace-and-schema"></a>Namespace und Schema  
   
 ### <a name="namespace"></a>Namespace  
- In dieser Spezifikation definierte Schema verwendet den XML-Namespace http://schemas.microsoft.com/AnalysisServices/2003/Engine und die standardabkürzung "DDL".  
+ In dieser Spezifikation definierte Schema verwendet den XML-Namespace https://schemas.microsoft.com/AnalysisServices/2003/Engine und die standardabkürzung "DDL".  
   
 ### <a name="schema"></a>Schema  
  Die Definition eines XSD-Schemas (XML Schema Definition) für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Objektdefinitionssprache basiert auf der Definition der Schemaelemente und Hierarchie in diesem Abschnitt.  
   
-## <a name="extensibility"></a>Erweiterbarkeit  
+## <a name="extensibility"></a>Erweiterungen  
  Die Erweiterung des Schemas der Objektdefinitionssprache wird über das `Annotation`-Element bereitgestellt, das in allen Objekten vorhanden ist. Dieses Element kann gemäß den folgenden Regeln jeglichen gültigen XML-Code aus jedem XML-Namespace (außer dem Zielnamespace, der den DDL definiert) enthalten:  
   
 -   XML kann nur Elemente enthalten.  

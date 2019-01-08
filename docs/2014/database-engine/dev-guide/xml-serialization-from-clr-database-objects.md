@@ -17,12 +17,12 @@ ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8125f5b8693eccfc619dd2ee3aed6f203e17dad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61f863aa3d32ae60ff1cbcac562e74250899088
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183170"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356574"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>XML-Serialisierung auf Grundlage von CLR-Datenbankobjekten
   Die XML-Serialisierung ist in zwei Szenarien erforderlich:  
@@ -37,7 +37,7 @@ ms.locfileid: "48183170"
   
 2.  Registrieren Sie die generierte Assembly mithilfe der `CREATE ASSEMBLY`-Anweisung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Informationen zu Fehlern, die beim Empfangen Sie möglicherweise Durchführen einer XML-Serialisierung, finden Sie unter den folgenden Microsoft-Support-Artikel: ["Kann nicht geladen werden dynamisch generiertes Serialisierungsassembly"](http://support.microsoft.com/kb/913668).  
+ Informationen zu Fehlern, die Sie möglicherweise beim Ausführen von XML-Serialisierung erhalten finden Sie unter den folgenden Microsoft-Support-Artikel: ["Dynamisch generiertes Serialisierungsassembly kann nicht geladen werden"](https://support.microsoft.com/kb/913668).  
   
  Informationen über Datentypen, die vom XML-Serialisierungsprogramm nicht unterstützt werden, finden Sie in der Dokumentation zu .NET Framework unter "Bindungsunterstützung für XML-Schema in .NET Framework".  
   

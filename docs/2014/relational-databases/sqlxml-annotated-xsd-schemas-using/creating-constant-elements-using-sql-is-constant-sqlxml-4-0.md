@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -20,15 +18,15 @@ ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28c95cabd8b2c47aa3d05f51526b3eb0921e4701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 03e2d3d672d0bfa407a3fb553a1139d30696971e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137300"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793472"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Erstellen von 'constant'-Elementen unter Verwendung von sql:is-constant (SQLXML 4.0)
-  Zum Festlegen eines constant-Elements, d. h. eines Elements im XSS-Schema, das keiner Datenbanktabelle oder -spalte zugeordnet werden kann, können Sie die Anmerkung `sql:is-constant` verwenden. Diese Anmerkung akzeptiert einen booleschen Wert (0 = false, 1 = true). Zulässig sind die Werte 0, 1, true und false. Die `sql:is-constant`-Anmerkung kann für ein Element angegeben werden, das über keine Attribute verfügt. Wenn sie für ein Element mit dem Wert true (oder 1) festgelegt ist, wird dieses Element nicht der Datenbank zugeordnet, aber dennoch im XML-Dokument angezeigt.  
+  Constant-Element angeben –, also ein Element in das XSD-Schema, das keiner Datenbanktabelle oder-Spalte zugeordnet ist – können Sie die `sql:is-constant` Anmerkung. Diese Anmerkung akzeptiert einen booleschen Wert (0 = false, 1 = true). Zulässig sind die Werte 0, 1, true und false. Die `sql:is-constant`-Anmerkung kann für ein Element angegeben werden, das über keine Attribute verfügt. Wenn sie für ein Element mit dem Wert true (oder 1) festgelegt ist, wird dieses Element nicht der Datenbank zugeordnet, aber dennoch im XML-Dokument angezeigt.  
   
  Die `sql:is-constant`-Anmerkung kann zu folgenden Zwecken verwendet werden:  
   

@@ -13,19 +13,19 @@ ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7a4d0b4c7bcb7867eb58618c3860d2e50ddfeccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84060846dc19862e057e55e4096df7e97fa4d825
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219240"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352884"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte (SSAS – tabellarisch)
   Wenn Sie ein tabellarisches Modell als Datenmodell für [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]verwenden, können Sie die Tabellenverhaltenseigenschaften festlegen, die Detailzeilen auf einer präziseren Ebene verfügbar machen. Das Festlegen von Tabellenverhaltenseigenschaften ändert das Gruppierungsverhalten von Detailzeilen und erzeugt eine bessere Standardplatzierung bei der Feststellung von Informationen (z. B. Namen, Foto-IDs oder Logobilder) in Kachel-, Karten- oder Diagrammlayouts.  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] unterscheidet sich von anderen Berichtsanwendungen darin, dass es Gruppenelemente automatisch während des Berichtsentwurfs gruppiert, indem die von Ihnen in der Berichtsfeldliste positionierten Spalten gegenüber dem von Ihnen verwendeten Präsentationsformat ausgewertet werden. In den meisten Fällen führt die Standardgruppierung zu einem optimalen Ergebnis. Für einige Tabellen, hauptsächlich solche, die Detaildaten enthalten, führt das Standardgruppierungsverhalten jedoch manchmal zur Gruppierung von Zeilen, bei denen dies nicht erwünscht ist. Für solche Tabellen können Sie Eigenschaften festlegen, die ändern, wie Gruppen ausgewertet werden.  
   
- Die Festlegung von Tabellenverhaltenseigenschaften wird für Tabellen empfohlen, in denen die einzelnen Zeilen von primärem Interesse sind, z. B. Mitarbeiter- oder Kundendatensätze. Im Gegensatz dazu gehören zu den Tabellen, für die sich diese Eigenschaften nicht eignen, solche, die als Nachschlagetabellen fungieren (z. B., eine Datumstabelle, eine Produktkategorietabelle oder eine Abteilungstabelle, bei denen die Tabelle aus einer relativ kleinen Anzahl von Zeilen und Spalten besteht), oder Zusammenfassungstabellen, die Zeilen enthalten, die nur zusammengefasst interessant sind (z. B., Volkszählungsdaten, für die ein Rollup nach Geschlecht, Alter oder Geografie ausgeführt wird). Für Nachschlage- und Zusammenfassungstabellen führt das Standardgruppierungsverhalten zum besten Ergebnis.  
+ Die Festlegung von Tabellenverhaltenseigenschaften wird für Tabellen empfohlen, in denen die einzelnen Zeilen von primärem Interesse sind, z. B. Mitarbeiter- oder Kundendatensätze. Im Gegensatz dazu gehören zu den Tabellen, für die sich diese Eigenschaften nicht eignen, solche, die als Nachschlagetabellen fungieren (z. B., eine Datumstabelle, eine Produktkategorietabelle oder eine Abteilungstabelle, bei denen die Tabelle aus einer relativ kleinen Anzahl von Zeilen und Spalten besteht), oder Zusammenfassungstabellen, die Zeilen enthalten, die nur zusammengefasst interessant sind (z. B., Volkszählungsdaten, für die ein Rollup nach Geschlecht, Alter oder Geografie ausgeführt wird). Für Nachschlage- und Zusammenfassungstabellen führt das Standardgruppierungsverhalten zum besten Ergebnis.  
   
 > [!NOTE]  
 >  Tabellenverhaltenseigenschaften wirken sich nur auf in [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]als Datenmodelle verwendete tabellarische Modelle aus. Tabellenverhaltenseigenschaften werden in Excel-Pivotberichten nicht unterstützt.  
@@ -41,7 +41,7 @@ ms.locfileid: "48219240"
 -   **Standardbild** – gibt an, welche Spalte ein Bild bereitstellt, das die Zeilendaten (z.B. eine Foto-ID in einem Mitarbeiterdatensatz) darstellt.  
   
 > [!NOTE]  
->  Im folgenden Abschnitt finden Sie weitere Informationen, um Layoutoptimierungen vom Standpunkt eines bestimmten Präsentationsformats aus anzugehen:  [Optimieren für bestimmte Layouts](#bkmk_optimizeforlayout).  
+>  Im folgenden Abschnitt layoutoptimierungen vom Standpunkt eines bestimmten Präsentationsformats finden Sie unter:  [Optimieren für bestimmte Layouts](#bkmk_optimizeforlayout).  
   
 ## <a name="opening-the-table-behavior-dialog-box"></a>Öffnen des Dialogfelds 'Tabellenverhalten'  
   
@@ -52,11 +52,11 @@ ms.locfileid: "48219240"
 3.  Legen Sie im Dialogfeld **Tabellenverhalten** den **Zeilenbezeichner**fest, und geben Sie dann weitere Eigenschaften in diesem Dialogfeld an.  
   
 ## <a name="setting-the-row-identifier-property"></a>Festlegen der Eigenschaft des Zeilenbezeichners  
- Innerhalb der Tabelle gibt der Zeilenbezeichner eine einzelne Spalte an, die nur eindeutige Werte und keine Leerzeichenwerte enthält. Die Eigenschaft "Row Identifier" wird verwendet, um die Gruppierung zu ändern, damit eine Gruppe nicht auf der Feldkomposition einer Zeile basiert, sondern auf einer festen Spalte, die verwendet wird, um eine Zeile eindeutig zu identifizieren, unabhängig von Feldern, die in einem bestimmten Berichtslayout verwendet werden.  
+ Innerhalb der Tabelle gibt der Zeilenbezeichner eine einzelne Spalte an, die nur eindeutige Werte und keine Leerzeichenwerte enthält. Die Zeilen-ID-Eigenschaft wird verwendet, so ändern Sie die Gruppierung, damit eine Gruppe nicht basiert auf der feldkomposition einer Zeile, sondern auf einer festen Spalte, die zur eindeutigen Identifizierung eine Zeile, unabhängig von Feldern, die in einem bestimmten Berichtslayout verwendet verwendet wird.  
   
  Wenn Sie diese Eigenschaft festlegen, ändert sich das Standardgruppierungsverhalten von dynamischer Gruppierung (basierend auf den Spalten im Arbeitsbereich) zu einem festen Gruppierungsverhalten, bei dem anhand der Zeilen-ID zusammengefasst wird. Die Änderung des Standardgruppierungsverhaltens ist relevant für Berichtslayouts, z. B. eine Matrix, die andernfalls für jede Spalte in der Zeile eine Gruppierung durchführt (oder Teilergebnisse anzeigt).  
   
- In [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]werden durch die Festlegung eines Zeilenbezeichners die folgenden zusätzlichen Eigenschaften aktiviert: die Eigenschaft zu **Eindeutige Zeilen beibehalten** , die Eigenschaft zur **Standardbeschriftung** und die Eigenschaft zum **Standardbild** .  
+ In [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], Festlegung eines zeilenbezeichners die folgenden zusätzlichen Eigenschaften aktiviert: **Eindeutige Zeilen beibehalten** Eigenschaft **Standardbeschriftung** -Eigenschaft und **Standardbild** Eigenschaft.  
   
  Sie können auch **Zeilenbezeichner** für sich als eigenständige Eigenschaft verwenden, um Folgendes zu aktivieren:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48219240"
  Durch die Einstellung der Eigenschaft **Eindeutige Zeilen beibehalten** können Sie eine oder mehrere Spalten festlegen, die immer wiederholt werden sollen, auch wenn doppelte Instanzen vorliegen. Dies soll jedes Mal der Fall sein, wenn Sie die entsprechende Spalte zu dem Berichtszeichenbereich hinzufügen. Berechnete und der Zeile zugeordnete Werte werden nun auf Grundlage jeder einzelnen Zeile zugeordnet, anstatt per Rollup in einer einzelnen Zeile gesammelt zu werden. Bei der Auswahl der Spalten für die Eigenschaft  **Eindeutige Zeilen beibehalten** müssen Sie diejenigen Spalten auswählen, die eindeutige oder beinahe eindeutige Werte enthalten.  
   
 > [!NOTE]  
->  Da sich die Spalten, die der Endbenutzer auswählt, auf die Gruppierung auswirken und somit den Filterkontext für Ausdrucksberechnungen ändern können, müssen Modell-Designer darauf achten, dass Measures erstellt werden, die die richtigen Ergebnisse zurückgeben. Weitere Informationen finden Sie unter [Häufig gestellte Fragen](http://go.microsoft.com/fwlink/?LinkId=220674).  
+>  Da sich die Spalten, die der Endbenutzer auswählt, auf die Gruppierung auswirken und somit den Filterkontext für Ausdrucksberechnungen ändern können, müssen Modell-Designer darauf achten, dass Measures erstellt werden, die die richtigen Ergebnisse zurückgeben. Weitere Informationen finden Sie unter [Häufig gestellte Fragen](https://go.microsoft.com/fwlink/?LinkId=220674).  
   
 ## <a name="setting-a-default-label"></a>Festlegen einer Standardbezeichnung  
  Diese Eigenschaft gibt eine Bezeichnung an, die in der Navigationsleiste eines Kachelberichts angezeigt wird. Sollte sie mit einem Standardbild verwendet werden, wird die Standardbezeichnung unter dem Bild angezeigt. Ohne Bild wird die Standardbezeichnung allein angezeigt. Bei der Auswahl einer Standardbezeichnung wählen Sie die Spalte aus, die die umfangreichsten Informationen zur Zeile (z. B. Name) vermittelt.  
@@ -113,7 +113,7 @@ ms.locfileid: "48219240"
   
  Vergleichen Sie die folgenden Abbildungen vorher und nachher, in denen die Auswirkung der Einstellung dieser Eigenschaft für ein Matrixlayout angezeigt wird.  
   
- **Vorher: Die Standardgruppierung auf der Grundlage von Feldern in der Matrix**  
+ **Vorher: Standardgruppierung auf der Grundlage von Feldern in der matrix**  
   
  ![Nach Zeilenbezeichner gruppiertes Matrixlayout](../media/ssas-rptprop-matrixrowid.gif "nach Zeilenbezeichner gruppiertes Matrixlayout")  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48219240"
   
  Vergleichen Sie die folgenden Abbildungen vorher und nachher, in denen die Auswirkung der Einstellung dieser Eigenschaft für ein Diagrammlayout angezeigt wird. Hierbei handelt es sich um den gleichen Bericht mit identischen Feldern und identischer Präsentation. Der einzige Unterschied besteht darin, dass in der untersten Abbildung ein Bericht angezeigt wird, nachdem der **Zeilenbezeichner** in der Elemententabelle festgelegt wurde.  
   
- **Vorher: Die Standardgruppierung auf der Grundlage von Feldern in einem Diagramm**  
+ **Vorher: Die standardgruppierung auf Grundlage der Felder in einem Diagramm**  
   
  ![Diagramm entsprechend der standardgruppierung auf Feldebene](../media/ssas-rptprop-chartfieldgroup.gif "Diagramm entsprechend der standardgruppierung auf Feldebene")  
   

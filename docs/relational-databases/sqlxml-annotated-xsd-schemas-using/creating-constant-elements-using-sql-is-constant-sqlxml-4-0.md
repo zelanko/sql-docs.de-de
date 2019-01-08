@@ -20,16 +20,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ca3206315b4b8c0738d9a1ce0534000b30bdd52
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f749e5c37742ac4e52a9cf0fc9dcb417d07aede0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666372"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545432"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Erstellen von 'constant'-Elementen unter Verwendung von sql:is-constant (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Constant-Element angeben –, also ein Element in das XSD-Schema, das keiner Datenbanktabelle oder-Spalte zugeordnet ist, können Sie die **Sql: ist-Constant** Anmerkung. Diese Anmerkung akzeptiert einen booleschen Wert (0 = false, 1 = true). Zulässig sind die Werte 0, 1, true und false. Die **Sql: ist Konstante** -Anmerkung kann für ein Element, das keine Attribute angegeben werden. Wenn sie für ein Element mit dem Wert true (oder 1) festgelegt ist, wird dieses Element nicht der Datenbank zugeordnet, aber dennoch im XML-Dokument angezeigt.  
+  Constant-Element angeben-, also ein Element in das XSD-Schema, das keiner Datenbanktabelle oder-Spalte zugeordnet ist – können Sie die **Sql: ist-Konstante** Anmerkung. Diese Anmerkung akzeptiert einen booleschen Wert (0 = false, 1 = true). Zulässig sind die Werte 0, 1, true und false. Die **Sql: ist Konstante** -Anmerkung kann für ein Element, das keine Attribute angegeben werden. Wenn sie für ein Element mit dem Wert true (oder 1) festgelegt ist, wird dieses Element nicht der Datenbank zugeordnet, aber dennoch im XML-Dokument angezeigt.  
   
  Die **Sql: ist Konstante** Anmerkung für verwendet werden kann:  
   

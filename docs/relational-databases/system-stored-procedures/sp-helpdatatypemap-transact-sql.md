@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdatatypemap
@@ -17,17 +16,17 @@ ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1eab8424e2ff5eb81e8d89a6ed897b7d19b5b72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1d4addec6f0b5a7faff69d513c655450202d099
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837938"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210849"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt Informationen zu den definierten datentypzuordnungen zwischen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Managementsysteme (DBMS). Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
+  Gibt Informationen zu den definierten datentypzuordnungen zwischen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Managementsysteme (DBMS). Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +47,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  [ **@source_dbms**=] **"***Source_dbms***"**  
  Der Name des Datenbank-Managementsystems (Database Management System, DBMS), aus dem die Datentypen zugeordnet werden. *Source_dbms* ist **Sysname**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Die Quelle ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**ORACLE**|Die Quelle ist eine Oracle-Datenbank.|  
@@ -62,7 +61,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  [ **@destination_dbms** =] **"***Destination_dbms***"**  
  Der Name des Ziel-DBMS. *Destination_dbms* ist **Sysname**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Das Ziel ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**ORACLE**|Das Ziel ist eine Oracle-Datenbank.|  
@@ -93,7 +92,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_helpdatatypemap** definiert datentypzuordnungen von nicht - SQL Server-Verlegern und von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verlegern zu nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.  
+ **Sp_helpdatatypemap** definiert datentypzuordnungen von nicht - SQL Server-Verlegern und von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verlegern zu nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.  
   
  Wenn die angegebene Kombination aus Quelle und Ziel-DBMS nicht unterstützt wird, **Sp_helpdatatypemap** wird ein leeres Resultset zurückgegeben.  
   

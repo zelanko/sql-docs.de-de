@@ -14,17 +14,17 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c93f9327adf0801898c45a541d935a4d3b34758c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c170fa1b302ccd0a1edec156b3b30429fc2daf8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161881"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365373"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC-Notfallwiederherstellung durch erzwungenes Quorum (SQL Server)
   Quorumfehler werden normalerweise durch eine systemische Katastrophe, einen persistenten Kommunikationsfehler oder eine fehlerhafte Konfiguration, die mehrere Knoten im WSFC-Cluster betreffen, verursacht.  Zur Beseitigung eines Quorumfehlers ist ein manueller Eingriff erforderlich.  
   
--   **Vorbereitungen:**  [Voraussetzungen](#Prerequisites), [Sicherheit](#Security)  
+-   **Bevor Sie beginnen:**  [Erforderliche Komponenten](#Prerequisites), [Sicherheit](#Security)  
   
 -   **WSFC-Notfallwiederherstellung durch die Prozedur für erzwungene Quoren** [WSFC-Notfallwiederherstellung durch die Prozedur für erzwungene Quoren](#Main)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48161881"
 > [!WARNING]  
 >  Der Benutzer sollte mit den Begriffen und Wechselwirkungen von Windows Server Failover Clustering, WSFC-Quorummodellen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]und der spezifischen Bereitstellungskonfiguration der Umgebung vertraut sein.  
 >   
->  Weitere Informationen finden Sie unter:  [Windows Server Failover Clustering (WSFC) mit SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx).  
+>  Weitere Informationen finden Sie in den folgenden Themen:  [Windows Server-Failoverclustering (WSFC) mit SQLServer](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC-Quorummodi und Abstimmungskonfiguration (SQLServer)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> Sicherheit  
  Der Benutzer muss einem Domänenkonto entsprechen, das Mitglied der lokalen Administratorgruppe an jedem Knoten des WSFC-Clusters ist.  
@@ -65,7 +65,7 @@ ms.locfileid: "48161881"
   
      Versetzen Sie den Cluster von diesem Knoten aus unter Verwendung der erzwungenen Quorumprozedur manuell in den Onlinemodus.  Um potenzielle Datenverluste zu minimieren, wählen Sie einen Knoten aus, der zuletzt ein primäres Replikat der Verfügbarkeitsgruppe gehostet hat.  
   
-     Weitere Informationen finden Sie unter:  [Erzwingen des Starts eines Clusters ohne Quorum](http://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
+     Weitere Informationen finden Sie in den folgenden Themen:  [Erzwingen des Starts eines Clusters ohne Quorum](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  Die erzwungene Quorumeinstellung bewirkt, dass im gesamten Cluster die Quorumüberprüfungen blockiert werden, bis der logische WSFC-Cluster die Mehrheit der Abstimmungsknoten erreicht und automatisch zu einem regulären Quorumbetriebsmodus übergeht.  
@@ -117,9 +117,9 @@ ms.locfileid: "48161881"
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog-Failovercluster-Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog-Failovercluster-Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  

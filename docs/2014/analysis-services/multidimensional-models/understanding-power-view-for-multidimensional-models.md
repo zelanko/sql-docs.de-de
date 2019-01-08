@@ -11,12 +11,12 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d2e51be57b608ab9befd537c997d31b893ec6a9
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f33492191deac22f416aa2f823ea501d72765b36
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148075"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362982"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Grundlegendes zu Power View für mehrdimensionale Modelle
   In diesem Artikel wird Power View für mehrdimensionale Modelle in Microsoft SQL Server 2014 beschrieben, und es werden wichtige Informationen für BI-Experten und -Administratoren zusammengefasst, die Power View für mehrdimensionale Modelle in ihrem Unternehmen implementieren möchten.  
@@ -40,14 +40,14 @@ ms.locfileid: "50148075"
   
 -   Für die Power View-Clientfunktionen ist Microsoft Silverlight 5 erforderlich. Weitere Informationen finden Sie unter [Planung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
-## <a name="features"></a>Funktionen  
+## <a name="features"></a>Features  
  **Systemeigene Unterstützung für Power View**  
   
  In dieser Version unterstützen mehrdimensionale Modelle die Analyse und Visualisierung unter Verwendung von Power View im SharePoint-Modus. Es ist keine spezielle Konfiguration für die mehrdimensionalen Modelle erforderlich. Es gibt jedoch Unterschiede zwischen der Anzeige mehrdimensionaler Modellobjekte in Power View und anderen Clienttools wie Microsoft Excel und Microsoft Performance Point. Diese Version bietet keine Unterstützung für die Analyse und Visualisierung mehrdimensionaler Modelle mithilfe von Power View in Excel 2013.  
   
  **Systemeigene Unterstützung für DAX-Abfragen**  
   
- In dieser Version unterstützen mehrdimensionale Modelle neben gängigeren MDX-Abfragen auch DAX-Abfragen und -Funktionen. Einige DAX-Funktionen, wie PATH, sind nicht auf mehrdimensionale Modelle anwendbar. Unter [Data Analysis Expressions und MDX](http://msdn.microsoft.com/library/ff487170\(SQL.105\).aspx)finden Sie weiterführende Informationen zu DAX und eine Gegenüberstellung mit MDX.  
+ In dieser Version unterstützen mehrdimensionale Modelle neben gängigeren MDX-Abfragen auch DAX-Abfragen und -Funktionen. Einige DAX-Funktionen, wie PATH, sind nicht auf mehrdimensionale Modelle anwendbar. Unter [Data Analysis Expressions und MDX](https://msdn.microsoft.com/library/ff487170\(SQL.105\).aspx)finden Sie weiterführende Informationen zu DAX und eine Gegenüberstellung mit MDX.  
   
 ## <a name="multidimensional-to-tabular-object-mapping"></a>Zuordnung zwischen mehrdimensionalen und tabellarischen Objekten  
  Analysis Services bietet eine tabellarische Darstellung der Modellmetadaten eines mehrdimensionalen Modells. Objekte in einem mehrdimensionalen Modell werden in Power View als tabellarische Objekte und in "CSDL/out" als tabellarische Objekte mit BI-Anmerkungen dargestellt.  
@@ -88,7 +88,7 @@ ms.locfileid: "50148075"
  ![Measuregruppe in Power View-Feldliste](../media/daxmd-fieldlist-group.gif "Measuregruppe in Power View-Feldliste")  
   
 ### <a name="measures-as-variants"></a>Measures als Varianten  
- Measures in mehrdimensionalen Modellen sind Varianten. Dies bedeutet, dass die Measures nicht stark typisiert sind und über unterschiedliche Datentypen verfügen können. In der folgenden Abbildung verfügt das Amount-Measure im Finanzbericht standardmäßig über den Currency-Datentyp, weist jedoch für das Teilergebnis von "Statistical Accounts" auch den Zeichenfolgenwert "NA" auf, der dem String-Datentyp entspricht. Power View erkennt bestimmte Measures als Varianten und zeigt in den verschiedenen Visualisierungen die richtigen Werte und Formatierungen an.  
+ Measures in mehrdimensionalen Modellen sind Varianten. Dies bedeutet, dass die Measures nicht stark typisiert sind und über unterschiedliche Datentypen verfügen können. Z. B. in der folgenden Abbildung die Amount-Measure im Finanzbericht standardmäßig Currency-Datentyp ist, aber verfügt auch über einen Zeichenfolgenwert "NA" für das Teilergebnis von "Statistical Accounts", die Zeichenfolgen-Datentyp ist. Power View erkennt bestimmte Measures als Varianten und zeigt in den verschiedenen Visualisierungen die richtigen Werte und Formatierungen an.  
   
  **Measure als Variante**  
   
@@ -98,7 +98,7 @@ ms.locfileid: "50148075"
  Tabellarische Modelle bieten die Möglichkeit, *implizite* Measures wie COUNT, SUM oder AVERAGE für Felder zu erstellen. Da Dimensionsattributdaten bei mehrdimensionalen Modellen auf andere Weise gespeichert werden, kann das Abfragen impliziter Measures einige Zeit in Anspruch nehmen. Aus diesem Grund sind in Power View keine impliziten Measures verfügbar.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensionen, Attribute und Hierarchien  
- Cubedimensionen werden in tabellarischen Metadaten als Tabellen verfügbar gemacht. In der Power View-Feldliste werden Dimensionsattribute als Spalten in Anzeigeordnern angezeigt.  Dimensionsattribute, deren AttributeHierarchyEnabled-Eigenschaft (vgl. das Birth Date-Attribut in der Customer-Dimension) oder AttributeHierarchyVisible-Eigenschaft auf False festgelegt ist, werden in der Power View-Feldliste nicht angezeigt. Hierarchien mit mehreren Ebenen oder Benutzerhierarchien (z. B. "Customer Geography" in der Customer-Dimension) werden in der Power View-Feldliste als Hierarchien verfügbar gemacht. Auf Hidden festgelegte UnknownMembers eines Dimensionsattributs werden in DAX-Abfragen und in Power View verfügbar gemacht.  
+ Cubedimensionen werden in tabellarischen Metadaten als Tabellen verfügbar gemacht. In der Power View-Feldliste werden Dimensionsattribute als Spalten in Anzeigeordnern angezeigt.  Die Dimensionsattribute, für die die AttributeHierarchyEnabled-Eigenschaft auf "false" festgelegt ist. Beispiel: Birth Date-Attribut in der Customer-Dimension oder AttributeHierarchyVisible-Eigenschaft auf "false" wird nicht in der Power View-Feldliste angezeigt. Hierarchien mit mehreren Ebenen oder Benutzerhierarchien (z. B. "Customer Geography" in der Customer-Dimension) werden in der Power View-Feldliste als Hierarchien verfügbar gemacht. Auf Hidden festgelegte UnknownMembers eines Dimensionsattributs werden in DAX-Abfragen und in Power View verfügbar gemacht.  
   
  **Dimensionen, Attribute und Hierarchien in SQL Server Data Tools (SSDT) und der Power View-Feldliste**  
   
@@ -122,7 +122,7 @@ ms.locfileid: "50148075"
   
  Obwohl berechnete Elemente von Benutzerhierarchien in Power View nicht verfügbar gemacht werden, sind Endbenutzer trotzdem in der Lage, eine Verbindung mit einem Cube herzustellen, der berechnete Elemente für Benutzerhierarchien enthält.  
   
- Die folgende Abbildung zeigt einen Power View-Bericht für einen Cube, der berechnete Zeitintelligenzelemente für das Dimensionsattribut "Fiscal Date Calculations" in der Date-Dimension enthält.  
+ Die folgende Abbildung zeigt einen Power View-Bericht für einen Cube, der zeitintelligenzfunktionen berechnete Elemente für das Dimensionsattribut "Fiscal Date Calculations" in der Date-Dimension enthält.  
   
  **Power View-Bericht mit berechneten Elementen**  
   
@@ -137,7 +137,7 @@ ms.locfileid: "50148075"
  Mehrdimensionale Modelle unterstützen Sicherheit auf Dimensions- und Zellenebene mithilfe von Rollen. Ein Benutzer, der über Power View eine Verbindung mit einem Cube herstellt, wird authentifiziert und auf die geeigneten Berechtigungen überprüft. Bei Sicherheit auf Dimensionsebene kann der Benutzer die jeweiligen Dimensionselemente in Power View nicht einsehen. Wurde für einen Benutzer jedoch eine Sicherheitsberechtigung auf Zellenebene definiert, bei der bestimmte Zellen eingeschränkt sind, kann er in Power View keine Verbindung mit dem Cube herstellen. In einigen Fällen können Benutzer Aggregatdaten anzeigen, wenn Teile davon aus gesicherten Daten berechnet werden.  
   
 ### <a name="non-aggregatable-attributeshierarchies"></a>Nicht aggregierbare Attribute/Hierarchien  
- Für die Attribute einer in einem mehrdimensionalen Modell enthaltenen Dimension kann die IsAggregatable-Eigenschaft auf Falsefestgelegt sein. Dies bedeutet, dass der Modellentwickler festgelegt hat, dass Daten von Clientanwendungen bei der Datenabfrage nicht hierarchieübergreifend (auf Attributebene oder auf mehreren Ebenen) aggregiert werden sollen. In Power View wird dieses Dimensionsattribut als Spalte verfügbar gemacht, für die keine Teilergebnisse verfügbar sind. Die folgende Abbildung enthält ein Beispiel für die nicht aggregierbare Hierarchie "Accounts". Die oberste Ebene der Über-/Unterordnungshierarchie "Accounts" kann im Gegensatz zu den anderen Ebenen nicht aggregiert werden. In einer Matrixvisualisierung der Hierarchie "Accounts" (erste beide Ebenen) werden Teilergebnisse für "Account Level 02", aber nicht für die oberste Ebene "Account Level 01" angezeigt.  
+ Für die Attribute einer in einem mehrdimensionalen Modell enthaltenen Dimension kann die IsAggregatable-Eigenschaft auf Falsefestgelegt sein. Dies bedeutet, dass der Modellentwickler festgelegt hat, dass Daten von Clientanwendungen bei der Datenabfrage nicht hierarchieübergreifend (auf Attributebene oder auf mehreren Ebenen) aggregiert werden sollen. In Power View wird dieses Dimensionsattribut als Spalte verfügbar gemacht, für die keine Teilergebnisse verfügbar sind. Die folgende Abbildung enthält ein Beispiel für die nicht aggregierbare Hierarchie "Konten". Die oberste Ebene der Über-/Unterordnungshierarchie "Accounts" kann im Gegensatz zu den anderen Ebenen nicht aggregiert werden. In einer Matrixvisualisierung der Hierarchie "Accounts" (erste beide Ebenen) werden Teilergebnisse für "Account Level 02", aber nicht für die oberste Ebene "Account Level 01" angezeigt.  
   
  **Nicht aggregierbare Hierarchie in Power View**  
   
@@ -158,11 +158,11 @@ ms.locfileid: "50148075"
  ![Über-/Unterordnungshierarchien](../media/daxmd-ssdt-hierarchies.gif "Über-/Unterordnungshierarchien")  
   
 ## <a name="perspectives-and-translations"></a>Perspektiven und Übersetzungen  
- Perspektiven sind Cubesichten, bei denen in Clienttools nur bestimmte Dimensionen oder Measuregruppen sichtbar sind. Sie können einen Perspektivennamen als Wert für die Verbindungszeichenfolgen-Eigenschaft Cube angeben. In der folgenden Verbindungszeichenfolge entspricht "Direct Sales" beispielsweise einer Perspektive im mehrdimensionalen Modell:  
+ Perspektiven sind Cubesichten, bei denen in Clienttools nur bestimmte Dimensionen oder Measuregruppen sichtbar sind. Sie können einen Perspektivennamen als Wert für die Verbindungszeichenfolgen-Eigenschaft Cube angeben. In der folgenden Verbindungszeichenfolge wird "Direct Sales" beispielsweise einer Perspektive im mehrdimensionalen Modell:  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Direct Sales'`  
   
- In Cubes können Metadaten und Übersetzungen für unterschiedliche Sprachen innerhalb des Modells angegeben werden. Damit die Übersetzungen (Daten und Metadaten) angezeigt werden, müssen Sie der Verbindungszeichenfolge in der RSDS-Datei die optionale Locale Identifier-Eigenschaft hinzufügen, wie unten dargestellt.  
+ In Cubes können Metadaten und Übersetzungen für unterschiedliche Sprachen innerhalb des Modells angegeben werden. Damit die Übersetzungen (Daten und Metadaten) angezeigt, müssen Sie die optionale "Locale Identifier-Eigenschaft der Verbindungszeichenfolge in der RSDS-Datei wie unten gezeigt hinzu.  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Adventure Works'; Locale Identifier=3084`  
   
@@ -178,7 +178,7 @@ ms.locfileid: "50148075"
  ![Angeheftete Filter](../media/daxmd-pinnedfilterinpowerview.gif "angeheftete Filter")  
   
 ## <a name="unsupported-features"></a>Nicht unterstützte Funktionen  
- **Power View in Excel 2013** unterstützt weder Verbindungen mit mehrdimensionalen Modellen noch das Erstellen von Berichten für mehrdimensionale Modelle. Power View für mehrdimensionale Modelle unterstützt nur browserbasierte Power View-Clients.  
+ **Power View in Excel 2013** – Herstellen einer Verbindung mit und zum Erstellen von Berichten für mehrdimensionale Modelle nicht unterstützt. Power View für mehrdimensionale Modelle unterstützt nur browserbasierte Power View-Clients.  
   
  **Aktionen** werden in Power View-Berichten oder DAX-Abfragen für mehrdimensionale Modelle nicht unterstützt.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "50148075"
 > [!NOTE]  
 >  Die fehlende Unterstützung von Aktionen und benannten Mengen hindert Benutzer nicht daran, mithilfe von Power View eine Verbindung mit mehrdimensionalen Modellen herzustellen und diese zu durchsuchen.  
   
- **Sicherheit auf Zellenebene** wird in Power View-Berichten nicht unterstützt.  
+ **Sicherheit auf Zellenebene** -wird in Power View-Berichten nicht unterstützt.  
   
 ## <a name="csdlbi-annotations"></a>CSDLBI-Anmerkungen  
  Mehrdimensionale Cubemetadaten werden als EDM (Entity Data Model)-basiertes konzeptionelles Modell durch die konzeptionelle Schemadefinitionssprache mit Business Intelligence-Anmerkungen (CSDLBI) verfügbar gemacht.  
@@ -197,13 +197,13 @@ ms.locfileid: "50148075"
  **Beispiel für eine DISCOVER_CSDL_METADATA-Anforderung**  
   
 ```  
-<Envelopexmlns=”http://schemas.xmlsoap.org/soap/envelope/”>  
+<Envelopexmlns="http://schemas.xmlsoap.org/soap/envelope/">  
    <Body>  
-      <Discoverxmlns=”urn:schemas-microsoft-com:xml-analysis”>  
+      <Discoverxmlns="urn:schemas-microsoft-com:xml-analysis">  
          <RequestType>DISCOVER_CSDL_METADATA</RequestType>  
          <Restrictions>  
             <RestrictionList>  
-              <CATALOG_NAME>”catalogname”<CATALOG_NAME>  
+              <CATALOG_NAME>"catalogname"<CATALOG_NAME>  
             </RestrictionList>  
          </Restrictions>  
          <Properties>  
@@ -218,15 +218,15 @@ ms.locfileid: "50148075"
   
  Die DISCOVER_CSDL_METADATA-Anforderung weist folgende Einschränkungen auf:  
   
-|Name|Required|Description|  
+|Name|Erforderlich|Description|  
 |----------|--------------|-----------------|  
-|CATALOG_NAME|Benutzerkontensteuerung|Der Katalog-/Datenbankname.|  
+|CATALOG_NAME|Ja|Der Katalog-/Datenbankname.|  
 |PERSPECTIVE_NAME|Ja, wenn der Cube mehr als eine Perspektive enthält. Optional, wenn nur ein Cube oder eine Standardperspektive vorhanden ist.|Der Cube- oder Perspektivenname in der mehrdimensionalen Datenbank.|  
-|VERSION|Benutzerkontensteuerung|Vom Client angeforderte CSDL-Version. Mehrdimensionale Funktionen und Konstrukte werden in Version 2.0 unterstützt.|  
+|VERSION|Ja|Vom Client angeforderte CSDL-Version. Mehrdimensionale Funktionen und Konstrukte werden in Version 2.0 unterstützt.|  
   
  Im zurückgegebenen "CSDL/out"-Dokument wird das Modell als Namespace mit Entitäten, Zuordnungen und Eigenschaften dargestellt.  
   
- Ausführlichere Informationen zu CSDLBI-Anmerkungen für tabellarische Modelle finden Sie unter [Technische Referenz für BI-Anmerkungen zu CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) auf MSDN und unter [\[MS-CSDLBI\]: Dateiformat für konzeptionelle Schemadefinitionen mit Business Intelligence-Anmerkungen](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ Ausführlichere Informationen zu CSDLBI-Anmerkungen für tabellarische Modelle finden Sie unter [technische Referenz für BI-Anmerkungen zu CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) auf MSDN und [ \[MS-CSDLBI\]: Dateiformat für konzeptionelle Schemadefinitionen mit Business Intelligence-Anmerkungen](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## <a name="client-help-on-officecom"></a>Hilfe zu Clienttools auf "Office.com"  
  In den folgenden Artikeln auf Office.com erfahren Benutzer, auf welche Weise mehrdimensionale Modellobjekte in Power View angezeigt werden und wie ein Beispielbericht erstellt wird:  

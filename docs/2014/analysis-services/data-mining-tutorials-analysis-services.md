@@ -13,12 +13,12 @@ ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8e454e12f3e3c9f4c341406596771276f120a83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d94209a4716e8e559028125899ba4e46b2d1b61
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197690"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358922"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Data Mining-Lernprogramme (Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erleichtert die hochentwickelten Datamining-Lösungen zu erstellen. Die Tools in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützen Sie dabei, Data Mining-Modelle zu entwerfen, erstellen und verwalten, die entweder mit relationalen oder Cubedaten arbeiten. Sie können den Clientzugriff auf Data Mining-Modelle verwalten und Vorhersageabfragen aus mehreren Clients erstellen.  
@@ -47,23 +47,23 @@ ms.locfileid: "48197690"
   
      Zu den in diesen Lektionen behandelten fortgeschrittenen Begriffen und Verfahren gehören das Verwenden geschachtelter Tabellen, Kreuzvorhersagen, benutzerdefinierte Datenquellenansichten, benannte Abfragen und Filtern in Data Mining-Abfragen. Sie erlangen außerdem Kenntnisse über die Verwendung der in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] enthaltenen Tools zur Vorhersageabfrage.  
   
-## <a name="reference"></a>Verweis  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="reference"></a>Referenz  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Data Mining-Tools](data-mining/data-mining-tools.md)  
   
- [Logische Architektur &#40;Analysis Services – Datamining&#41;](data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Logische Architektur &#40;Analysis Services – Data Mining&#41;](data-mining/logical-architecture-analysis-services-data-mining.md)  
   
  [Logische Architektur &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
  [Data Mining-Projekte](data-mining/data-mining-projects.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Lösungen](data-mining/data-mining-solutions.md)   
- [Microsoft SQL Server Data Mining – Ressourcen](http://go.microsoft.com/fwlink/?LinkId=97965)   
- [Erstellen und Abfragen von Datamining-Modellen mit DMX: Lernprogramme &#40;Analysis Services – Datamining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Data Mining-Projektmappen](data-mining/data-mining-solutions.md)   
+ [Microsoft SQL Server Data Mining – Ressourcen](https://go.microsoft.com/fwlink/?LinkId=97965)   
+ [Das Erstellen und Abfragen von Datamining-Modellen mit DMX: Lernprogramme &#40;Analysis Services – Datamining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

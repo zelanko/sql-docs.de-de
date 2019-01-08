@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.xmlindexes
@@ -12,17 +12,17 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d0b162e8eb232f605e837a42fa55d3d39dcccd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100080"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792274"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML-Indizes (Dialogfeld) (Visual Database Tools)
   Verwenden Sie das Dialogfeld **XML-Indizes** , um Indizes für Spalten vom Datentyp XML zu erstellen, denn diese können nicht mithilfe des Dialogfelds **Index/Schlüssel** indiziert werden. Jede XML-Spalte kann mehrere XML-Indizes aufweisen, aber der zuerst erstellte Index (der primäre Index) bildet die Basis für alle weiteren Indizes (die sekundären Indizes). Wenn Sie den primären XML-Index löschen, werden auch die sekundären Indizes gelöscht.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Ausgewählter XML-Index**  
  Listet vorhandene XML-Indizes auf. Wird ausgewählt, um die zugehörigen Eigenschaften im rechten Datenblatt anzuzeigen. Falls die Liste leer ist, sind für die Tabelle Indizes definiert worden.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48100080"
  Zeigt den Namen des XML-Indexes an. Wenn ein neuer Index erstellt wird, erhält dieser einen Standardnamen, der auf der Tabelle im aktiven Fenster des Tabellen-Designers basiert. Sie können den Namen jederzeit ändern.  
   
  **Beschreibung**  
- Beschreiben Sie den Index. Klicken Sie zum Erstellen einer detaillierteren Beschreibung auf **Beschreibung** , und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (**…**) rechts neben dem Eigenschaftenfeld. Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
+ Beschreiben Sie den Index. Klicken Sie zum Erstellen einer detaillierteren Beschreibung auf **Beschreibung**, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (**…**) rechts neben dem Eigenschaftenfeld. Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
   
  **Kategorie Tabellen-Designer**  
  Wenn die Kategorie erweitert ist, werden Informationen zu den Eigenschaften dieses XML-Indexes angezeigt.  

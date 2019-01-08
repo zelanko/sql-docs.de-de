@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9648e78567bbddf9209c53923cfe6c12d046d1a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bd9e036baa91991352d00f97fcf2c8e689bae6c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200900"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372152"
 ---
 # <a name="deployment-of-projects-and-packages"></a>Bereitstellung von Projekten und Paketen
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt zwei Bereitstellungsmodelle: das Projektbereitstellungsmodell und das Paketbereitstellungsmodell. Mithilfe des Projektbereitstellungsmodells können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen.  
   
- Weitere Informationen zum Bereitstellen eines Projekts auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server finden Sie unter [Bereitstellen von Projekten auf dem Integration Services-Server](../deploy-projects-to-integration-services-server.md).  
+ Weitere Informationen zum Bereitstellen eines Projekts auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server finden Sie unter [Bereitstellen von Projekten auf dem Integration Services-Server](../deploy-projects-to-integration-services-server.md).  
   
  Weitere Informationen zu paketbereitstellungsmodellen finden Sie unter [Paketbereitstellung &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
   
@@ -33,11 +32,11 @@ ms.locfileid: "48200900"
 |Ein Projekt stellt die Entwicklungseinheit dar.|Ein Paket ist die Bereitstellungseinheit.|  
 |Parameter werden verwendet, um Paketeigenschaften Werte zuzuweisen.|Konfigurationen werden verwendet, um Paketeigenschaften Werte zuzuweisen.|  
 |Aus einem Projekt, das Pakete und Parameter enthält, wird eine Projektbereitstellungsdatei (Erweiterung .ISPAC) erstellt.|Pakete (Erweiterung .DTSX) und Konfigurationen (Erweiterung .DTSCONFIG) werden einzeln im Dateisystem gespeichert.|  
-|Ein Projekt, das Pakete und Parameter enthält, wird im SSISDB-Katalog auf einer Instanz von SQL Server bereitgestellt.|Pakete und Konfigurationen werden in das Dateisystem auf einem anderen Computer kopiert. Pakete können auch in der MSDB-Datenbank auf einer Instanz von SQL Server gespeichert werden.|  
+|Ein Projekt, das Pakete und Parameter enthält, wird im SSISDB-Katalog auf einer Instanz von SQL Server bereitgestellt.|Pakete und Konfigurationen werden in das Dateisystem auf einem anderen Computer kopiert. Pakete können auch in der MSDB-Datenbank auf einer Instanz von SQL Server gespeichert werden.|  
 |Auf der Datenbank-Engine ist die CLR-Integration erforderlich.|Auf der Datenbank-Engine ist die CLR-Integration nicht erforderlich.|  
 |Umgebungsspezifische Parameterwerte werden in Umgebungsvariablen gespeichert.|Umgebungsspezifische Konfigurationswerte werden in Konfigurationsdateien gespeichert.|  
 |Im Katalog enthaltene Projekte und Pakete können vor der Ausführung auf dem Server überprüft werden. Sie können die Überprüfung mithilfe von SQL Server Management Studio, gespeicherten Prozeduren oder verwaltetem Code ausführen.|Pakete werden unmittelbar vor der Ausführung überprüft. Ein Paket kann auch mit dtExec oder verwaltetem Code überprüft werden.|  
-|Pakete werden ausgeführt, indem mit der Datenbank-Engine eine Ausführung gestartet wird. Einer Ausführung werden vor dem Start ein Projektbezeichner, explizite Parameterwerte (optional) und Umgebungsverweise (optional) zugewiesen.<br /><br /> Sie können Pakete mit `dtExec` ausführen.|Pakete werden ausgeführt, mit der `dtExec` und `DTExecUI` -Hilfsprogramme zur paketausführung. Anwendbare Konfigurationen werden durch Eingabeaufforderungsargumente (optional) identifiziert.|  
+|Pakete werden ausgeführt, indem mit der Datenbank-Engine eine Ausführung gestartet wird. Einer Ausführung werden vor dem Start ein Projektbezeichner, explizite Parameterwerte (optional) und Umgebungsverweise (optional) zugewiesen.<br /><br /> Sie können Pakete mit `dtExec` ausführen.|Pakete werden mit den Ausführungshilfsprogrammen `dtExec` und `DTExecUI` ausgeführt. Anwendbare Konfigurationen werden durch Eingabeaufforderungsargumente (optional) identifiziert.|  
 |Während der Ausführung werden Ereignisse, die vom Paket erzeugt werden, automatisch aufgezeichnet und im Katalog gespeichert. Sie können diese Ereignisse mit Transact-SQL-Sichten abfragen.|Während der Ausführung werden Ereignisse, die von einem Paket erzeugt werden, nicht automatisch aufgezeichnet. Dem Paket muss ein Protokollanbieter zum Aufzeichnen von Ereignissen hinzugefügt werden.|  
 |Pakete werden in einem separaten Windows-Prozess ausgeführt.|Pakete werden in einem separaten Windows-Prozess ausgeführt.|  
 |SQL Server-Agent wird verwendet, um die Paketausführung zu planen.|SQL Server-Agent wird verwendet, um die Paketausführung zu planen.|  
@@ -61,7 +60,7 @@ ms.locfileid: "48200900"
 -   [Bereitstellen von Projekten auf dem Integration Services-Server](../deploy-projects-to-integration-services-server.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag zu [Überlegungen zu Verzweigungsstrategien für SSIS-Projekte](http://go.microsoft.com/fwlink/?LinkId=245739)auf mattmasson.com.  
+ Blogeintrag zu [Überlegungen zu Verzweigungsstrategien für SSIS-Projekte](https://go.microsoft.com/fwlink/?LinkId=245739)auf mattmasson.com.  
   
 ## <a name="see-also"></a>Siehe auch  
  [dtexec (Hilfsprogramm)](dtexec-utility.md)  

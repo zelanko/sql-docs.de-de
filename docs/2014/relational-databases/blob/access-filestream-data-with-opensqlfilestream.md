@@ -16,17 +16,17 @@ ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6afb64b852ac6050a2705c1c4d7da7d2d9b52f1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c40d22c19f8398ef9499cb23c80ab80dab16b5b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059450"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353223"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream
-  Die OpenSqlFilestream-API ruft ein Win32-kompatibles Dateihandle für ein FILESTREAM binary large Object (BLOB), die im Dateisystem gespeichert sind. Das Handle kann an eine der folgenden Windows32-APIs übergeben werden: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)oder [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Wenn Sie dieses Handle an eine andere Win32-API übergeben, wird der Fehler ERROR_ACCESS_DENIED zurückgegeben. Sie müssen das Handle schließen, indem Sie es an die Win32- [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) -API übergeben, bevor für die Transaktion ein Commit oder ein Rollback ausgeführt wird. Wenn das Handle nicht geschlossen wird, treten serverseitige Ressourcenverluste auf.  
+  Die OpenSqlFilestream-API ruft ein Win32-kompatibles Dateihandle für ein FILESTREAM binary large Object (BLOB), die im Dateisystem gespeichert sind. Das Handle kann an eine der folgenden Win32-APIs übergeben werden: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), oder [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Wenn Sie dieses Handle an eine andere Win32-API übergeben, wird der Fehler ERROR_ACCESS_DENIED zurückgegeben. Sie müssen das Handle schließen, indem Sie es an die Win32- [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) -API übergeben, bevor für die Transaktion ein Commit oder ein Rollback ausgeführt wird. Wenn das Handle nicht geschlossen wird, treten serverseitige Ressourcenverluste auf.  
   
- Alle Zugriffe auf FILESTREAM-Datencontainer muss ausgeführt werden, einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Transaktion. [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen können ebenfalls in der gleichen Transaktion ausgeführt werden. Damit wird die Konsistenz zwischen SQL-Daten und FILESTREAM-BLOB gewahrt.  
+ Alle Zugriffe auf FILESTREAM-Datencontainer müssen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktion erfolgen. [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen können ebenfalls in der gleichen Transaktion ausgeführt werden. Damit wird die Konsistenz zwischen SQL-Daten und FILESTREAM-BLOB gewahrt.  
   
  Um mit Win32 auf FILESTREAM BLOB-Daten zuzugreifen, muss die [Windows-Autorisierung](../security/choose-an-authentication-mode.md) aktiviert sein.  
   
@@ -51,9 +51,9 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  [in] Ist die `nvarchar(max)` Pfad, der von zurückgegeben wird das [Pfadnamen](/sql/relational-databases/system-functions/pathname-transact-sql) Funktion. Der Aufruf von PathName muss von einem Konto erfolgen, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT- oder UPDATE-Berechtigungen für die FILESTREAM-Tabelle und -Spalte hat.  
   
  *DesiredAccess*  
- [in] Legt den verwenden Modus so fest, dass ein Zugriff auf FILESTREAM-BLOB-Daten erfolgt. Dieser Wert wird an die Funktion [DeviceIoControl](http://go.microsoft.com/fwlink/?LinkId=105527)übergeben.  
+ [in] Legt den verwenden Modus so fest, dass ein Zugriff auf FILESTREAM-BLOB-Daten erfolgt. Dieser Wert wird an die Funktion [DeviceIoControl](https://go.microsoft.com/fwlink/?LinkId=105527)übergeben.  
   
-|Name|value|Bedeutung|  
+|Name|Wert|Bedeutung|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|Aus der Datei können Daten gelesen werden.|  
 |SQL_FILESTREAM_WRITE|1|In die Datei können Daten geschrieben werden.|  
@@ -65,7 +65,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  *OpenOptions*  
  [in] Die Dateiattribute und Flags. Dieser Parameter kann auch jede Kombination der folgenden Flags umfassen.  
   
-|Flag|value|Bedeutung|  
+|Flag|Wert|Bedeutung|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_OPEN_NONE|0x00000000:|Die Datei wird geöffnet oder ohne besondere Optionen erstellt.|  
 |SQL_FILESTREAM_OPEN_FLAG_ASYNC|0x00000001L|Die Datei wird geöffnet oder für asynchrone E/A erstellt.|  
@@ -78,7 +78,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  [in] Der Wert, der von der Funktion [GET_FILESTREAM_TRANSACTION_CONTEXT](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) zurückgegeben wird.  
   
  *FilestreamTransactionContextLength*  
- [in] Anzahl der Bytes in den `varbinary(max)` Daten, die von der Funktion GET_FILESTREAM_TRANSACTION_CONTEXT zurückgegeben wird. Die Funktion gibt ein Array von n Bytes zurück. n wird von der Funktion bestimmt und ist eine Eigenschaft des Bytearrays, das zurückgegeben wird.  
+ [in] Größe der `varbinary(max)`-Daten (in Bytes), die von der GET_FILESTREAM_TRANSACTION_CONTEXT-Funktion zurückgegeben werden. Die Funktion gibt ein Array von n Bytes zurück. n wird von der Funktion bestimmt und ist eine Eigenschaft des Bytearrays, das zurückgegeben wird.  
   
  *AllocationSize*  
  [in] Bestimmt die anfängliche Zuweisungsgröße der Datendatei in Bytes. Wird im Lesemodus ignoriert. Dieser Parameter kann NULL sein; in diesem Fall wird das Standarddateisystemverhalten verwendet.  

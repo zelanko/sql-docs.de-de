@@ -13,12 +13,12 @@ ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 464f5428f9c55ffa7d634e05fc54122882067674
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7372f5457e047772febf4cf040da3f897ae033a2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077820"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362902"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services-Berichte (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Berichte sind XML-basierte Berichtsdefinitionen, die Berichtsdaten und Berichtslayoutelemente enthalten. Auf einem Clientdateisystem verfügen Berichtsdefinitionen über die Dateierweiterung ".rdl". Nachdem ein Bericht veröffentlicht wurde, wird er zu einem auf dem Berichtsserver oder der SharePoint-Website gespeicherten Berichtselement. Berichte stellen einen Teil der von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] bereitgestellten serverbasierten Berichtsplattform dar.  
@@ -64,7 +64,7 @@ ms.locfileid: "48077820"
 ## <a name="create-reports"></a>Erstellen von Berichten  
  So erstellen Sie einen Bericht  
   
--   **Bestimmen Sie den Zweck des Berichts.** Bestimmen Sie, an welche Zielgruppe sich der Bericht richtet. Ein sorgfältig geplanter Bericht vermittelt den Lesern Informationen, die fundierte Einblicke und eine Handlungsgrundlage bieten. In dieser Phase getroffene Entwurfsentscheidungen wirken sich auf die Auswahl der Berichtsparameter, den Entwurf des Berichtslayouts und auf die Lesbarkeit des Berichts aus. Weitere Informationen finden Sie unter [Planen eines Berichts &#40;Berichts-Generator&#41;](../report-design/planning-a-report-report-builder.md) und[Berichtsentwurfstipps &#40;Berichts-Generator und SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md) in der [Berichts-Generator-Dokumentation](http://go.microsoft.com/fwlink/?LinkId=154494)unter „msdn.microsoft.com“.  
+-   **Bestimmen Sie den Zweck des Berichts.** Bestimmen Sie, an welche Zielgruppe sich der Bericht richtet. Ein sorgfältig geplanter Bericht vermittelt den Lesern Informationen, die fundierte Einblicke und eine Handlungsgrundlage bieten. In dieser Phase getroffene Entwurfsentscheidungen wirken sich auf die Auswahl der Berichtsparameter, den Entwurf des Berichtslayouts und auf die Lesbarkeit des Berichts aus. Weitere Informationen finden Sie unter [Planen eines Berichts &#40;Berichts-Generator&#41;](../report-design/planning-a-report-report-builder.md) und[Berichtsentwurfstipps &#40;Berichts-Generator und SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md) in der [Berichts-Generator-Dokumentation](https://go.microsoft.com/fwlink/?LinkId=154494)unter „msdn.microsoft.com“.  
   
 -   **Wählen Sie den Abfragetyp aus.** Bestimmen Sie, ob Sie eine verallgemeinerte freigegebene Datasetabfrage oder eine für Ihren Berichtssatz spezifische Datasetabfrage verwenden. Ein freigegebenes Dataset mit einer verallgemeinerten Abfrage, die für mehrere Berichte verwendet werden kann, ist zwar einfacher zu verwalten, allerdings müssen die Daten von jedem Berichtsentwickler entsprechend dem jeweiligen Berichtssatz gefiltert werden. Weitere Informationen finden Sie unter [Berichtsdaten &#40;SSRS&#41;](../report-data/report-data-ssrs.md).  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48077820"
   
     -   **Wählen Sie aus, welche Daten aus der jeweiligen Quelle verwendet werden.** Definieren Sie für jede Datenquelle Berichtsdatasets. Jedes Dataset enthält eine Abfrage, um die zu verwendenden Daten anzugeben. Wenn Sie Berichtsparameter verwenden, definieren Sie ein Dataset, um die verfügbare Werteliste für jeden Parameter aufzufüllen. Weitere Informationen finden Sie unter [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-data/report-datasets-ssrs.md) und [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
-    -   **Wählen Sie eine Datenvisualisierung aus.** Wählen Sie für jedes Dataset aus, welcher Datenbereich zum Anzeigen der Daten verwendet werden soll. Wählen Sie aus Liste der Tabellen, Diagramme, Messgeräte und Karten aus. Weitere Informationen finden Sie in folgenden Themen:  
+    -   **Wählen Sie eine Datenvisualisierung aus.** Wählen Sie für jedes Dataset aus, welcher Datenbereich zum Anzeigen der Daten verwendet werden soll. Wählen Sie aus Liste der Tabellen, Diagramme, Messgeräte und Karten aus. Weitere Informationen finden Sie unter den folgenden Themen:  
   
         -   [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48077820"
   
         -   [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../report-design/gauges-report-builder-and-ssrs.md)  
   
-    -   **Passen Sie die Daten und das Layout an.** Entwerfen Sie das Berichtslayout. Eine Berichtsdefinition verfügt über einen Berichtshauptteil, Datenquellen, Datasets, Datenbereiche, Textfelder, Linien und Bilder. Rechtecke werden als Container für Layoutelemente sowie für visuelle Elemente verwendet. Passen Sie die einzelnen Datenbereiche an, indem Sie Ausdrücke schreiben, mit denen die Filterung, Gruppierung, Sortierung, Formatierung und Anzeige der Daten gesteuert wird. Fügen Sie Berichtsnamen, Speicherorte und andere Identifikationsinformationen hinzu, mit deren Hilfe Dutzende oder sogar Hunderte von Berichten verwaltet werden können. Fügen Sie visuelle Elemente und Container hinzu, um die Layoutelemente auf der Seite zu organisieren. Weitere Informationen finden Sie in folgenden Themen:  
+    -   **Passen Sie die Daten und das Layout an.** Entwerfen Sie das Berichtslayout. Eine Berichtsdefinition verfügt über einen Berichtshauptteil, Datenquellen, Datasets, Datenbereiche, Textfelder, Linien und Bilder. Rechtecke werden als Container für Layoutelemente sowie für visuelle Elemente verwendet. Passen Sie die einzelnen Datenbereiche an, indem Sie Ausdrücke schreiben, mit denen die Filterung, Gruppierung, Sortierung, Formatierung und Anzeige der Daten gesteuert wird. Fügen Sie Berichtsnamen, Speicherorte und andere Identifikationsinformationen hinzu, mit deren Hilfe Dutzende oder sogar Hunderte von Berichten verwaltet werden können. Fügen Sie visuelle Elemente und Container hinzu, um die Layoutelemente auf der Seite zu organisieren. Weitere Informationen finden Sie unter den folgenden Themen:  
   
-        -   [Filtern, gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
         -   [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
@@ -117,10 +117,10 @@ ms.locfileid: "48077820"
 -   **Überlegen Sie, welche Komponenten wiederverwendet werden können.**  Bestimmen Sie, ob Datenquellen oder Datasetabfragen zur erneuten Verwendung freigegeben werden können. Erstellen Sie in diesem Fall auf dem Berichtsserver oder auf der SharePoint-Website freigegebene Datenquellen und Datasets. Bestimmen Sie, ob die Datenbereiche geeignet sind, als Berichtsteile wiederverwendet zu werden. Weitere Informationen finden Sie unter [Berichtsteile im Berichts-Designer &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md).  
   
 ## <a name="preview-reports"></a>Anzeigen von Berichten in der Vorschau  
- Die Berichtsvorschau wird von allen Berichterstellungstools unterstützt. Weitere Informationen finden Sie unter [Vorschau](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview), [Berichts-Generator &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) und [Anzeigen einer Berichtsvorschau in Berichts-Generator](../report-builder/previewing-reports-in-report-builder.md) in der [Dokumentation zu Berichts-Generator](http://go.microsoft.com/fwlink/?LinkId=154494) auf „msdn.microsoft.com“.  
+ Die Berichtsvorschau wird von allen Berichterstellungstools unterstützt. Weitere Informationen finden Sie unter [Vorschau](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview), [Berichts-Generator &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) und [Anzeigen einer Berichtsvorschau in Berichts-Generator](../report-builder/previewing-reports-in-report-builder.md) in der [Dokumentation zu Berichts-Generator](https://go.microsoft.com/fwlink/?LinkId=154494) auf „msdn.microsoft.com“.  
   
 ## <a name="save-or-publish-reports"></a>Speichern oder Veröffentlichen von Berichten  
- Jedes Erstellungstool unterstützt das lokale Speichern eines Berichts oder das Veröffentlichen des Berichts auf einem Berichtsserver oder einer SharePoint-Website. Weitere Informationen finden Sie unter [Speichern und Bereitstellen](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy), [Berichts-Generator &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) und [Speichern von Berichten &#40;Berichts-Generator&#41;](../report-builder/saving-reports-report-builder.md) in der [Dokumentation zu Berichts-Generator](http://go.microsoft.com/fwlink/?LinkId=154494) auf „msdn.microsoft.com“.  
+ Jedes Erstellungstool unterstützt das lokale Speichern eines Berichts oder das Veröffentlichen des Berichts auf einem Berichtsserver oder einer SharePoint-Website. Weitere Informationen finden Sie unter [Speichern und Bereitstellen](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy), [Berichts-Generator &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) und [Speichern von Berichten &#40;Berichts-Generator&#41;](../report-builder/saving-reports-report-builder.md) in der [Dokumentation zu Berichts-Generator](https://go.microsoft.com/fwlink/?LinkId=154494) auf „msdn.microsoft.com“.  
   
 ## <a name="view-reports"></a>Anzeigen von Berichten  
  Sie können einen lokal gespeicherten oder auf einem Berichtsserver veröffentlichten Bericht nicht nur in der Vorschau anzeigen, sondern den Berichtslesern eine Vielzahl von Anzeigemöglichkeiten zur Verfügung stellen. So zeigen Sie einen Bericht an  
@@ -133,7 +133,7 @@ ms.locfileid: "48077820"
   
 -   **Drucken**  Leser können einen Bericht abhängig von der Anzeigemethode vollständig oder seitenweise drucken. Weitere Informationen finden Sie unter [Drucken von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Web Forms- oder Windows Forms-Anwendung**  Verwenden Sie Visual Studio, um eine ASP.NET AJAX-Anwendung oder Windows Forms-Anwendung zum Hosten des Steuerelements des Berichts-Viewers zu entwickeln. Das Steuerelement kann auf veröffentlichte Berichte auf einem Berichtsserver verweisen. Weitere Informationen finden Sie unter [Microsoft Reports](http://go.microsoft.com/fwlink/?LinkID=205399).  
+-   **Web Forms- oder Windows Forms-Anwendung**  Verwenden Sie Visual Studio, um eine ASP.NET AJAX-Anwendung oder Windows Forms-Anwendung zum Hosten des Steuerelements des Berichts-Viewers zu entwickeln. Das Steuerelement kann auf veröffentlichte Berichte auf einem Berichtsserver verweisen. Weitere Informationen finden Sie unter [Microsoft Reports](https://go.microsoft.com/fwlink/?LinkID=205399).  
   
 ## <a name="manage-reports"></a>Verwalten von Berichten  
  So verwalten Sie einen veröffentlichten Bericht  
@@ -157,7 +157,7 @@ ms.locfileid: "48077820"
 ##  <a name="bkmk_SecureReportsSummary"></a> Sichern von Berichten  
  So sichern Sie einen Bericht  
   
--   Erfragen Sie beim Berichtsserveradministrator, welches Autorisierungs- und Authentifizierungssystem für die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Installation verwendet wird. In der Standardeinstellung [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] wird der Windows-Authentifizierung, integrierte Sicherheit und rollenzuweisung verwendet werden, um den Zugriff auf veröffentlichte Berichte zu kontrollieren. Weitere Informationen finden Sie unter [Rollen und Berechtigungen (Reporting Services)](../security/roles-and-permissions-reporting-services.md) und [Sicherheit und Schutz für Reporting Services](../security/reporting-services-security-and-protection.md).  
+-   Erfragen Sie beim Berichtsserveradministrator, welches Autorisierungs- und Authentifizierungssystem für die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Installation verwendet wird. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet standardmäßig Windows-Authentifizierung, integrierte Sicherheit und Rollenzuweisungen, um den Zugriff auf veröffentlichte Berichte zu steuern. Weitere Informationen finden Sie unter [Rollen und Berechtigungen (Reporting Services)](../security/roles-and-permissions-reporting-services.md) und [Sicherheit und Schutz für Reporting Services](../security/reporting-services-security-and-protection.md).  
   
 ## <a name="create-notifications-based-on-report-data"></a>Erstellen von Benachrichtigungen auf Grundlage von Berichtsdaten  
  Sie können Datenwarnungen für veröffentlichte Berichte auf einer SharePoint-Website erstellen. Datenwarnungen basieren auf Datenfeeds aus Datenbereichen im Bericht. Datenbereiche werden standardmäßig automatisch benannt. Berichtsautoren können die Erstellung von Datenwarnungen in Berichten vereinfachen, indem sie Datenbereiche entsprechend ihrem geschäftlichen Zweck benennen. Wenn Sie eine Datenwarnung erstellen, werden Sie per E-Mail benachrichtigt, sobald Daten die von Ihnen angegebenen Bedingungen erfüllen. Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus Berichten (Berichts-Generator und SSRS)](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Erstellen einer Datenwarnung im Datenwarnungs-Designer](../create-a-data-alert-in-data-alert-designer.md) und [Reporting Services-Datenwarnungen](../reporting-services-data-alerts.md).  
@@ -176,12 +176,12 @@ ms.locfileid: "48077820"
   
 -   **Stellen Sie fest, wo Sie zusätzliche Informationen erhalten.** Bei einem Berichtsentwurf, der Ausdrücke umfasst, erhalten Sie im Berichts-Designer beispielsweise ausführlichere Informationen zu Problemen bei der Ausdrucksauswertung als im Berichts-Generator. Bei Problemen mit der Berichtsverarbeitung finden Sie in den Protokolldateien ausführliche Informationen.  
   
-## <a name="tasks"></a>Aufgaben  
+## <a name="tasks"></a>Richtlinienübersicht  
  Links zu Themen mit schrittweisen Anleitungen finden Sie im Abschnitt "Tasks" der in den vorherigen Abschnitten dieses Themas aufgeführten Artikel zu Funktionen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Reporting Services-Tools](../tools/reporting-services-tools.md)   
- [Erweiterungen (SSRS)](../extensions-ssrs.md)   
+ [Erweiterungen &#40;SSRS&#41;](../extensions-ssrs.md)   
  [Reporting Services-Berichtsserver](../reporting-services-report-server.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
@@ -12,17 +12,17 @@ ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89a427c841aa904565fae1fa8a0a1043778d58c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12108fb9d52081b70b87929bacb6882b3463a4a8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207230"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357168"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Hinzufügen eines benutzerdefinierten Berichts zu Management Studio
   In diesem Thema wird beschrieben, wie ein einfacher, als RDL-Datei gespeicherter [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht erstellt und anschließend [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] diese RDL-Datei als benutzerdefinierter Bericht hinzugefügt wird. [!INCLUDE[ssRS](../../includes/ssrs.md)] kann eine Vielzahl komplexer Berichte erstellen. Zum Erstellen eines Berichts mithilfe dieses Themas muss auf dem Computer [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] installiert sein. Sie müssen [!INCLUDE[ssRS](../../includes/ssrs.md)] nicht auf einem Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installieren, um einen benutzerdefinierten Bericht mithilfe von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]auszuführen.  
   
- [Beispielberichte](http://go.microsoft.com/fwlink/?LinkId=81792), einschließlich der durch [!INCLUDE[msCoName](../../includes/msconame-md.md)]erstellten Standardberichte, stehen zum Herunterladen zur Verfügung. Diese Beispiele können mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geändert werden.  
+ [Beispielberichte](https://go.microsoft.com/fwlink/?LinkId=81792), einschließlich der durch [!INCLUDE[msCoName](../../includes/msconame-md.md)]erstellten Standardberichte, stehen zum Herunterladen zur Verfügung. Diese Beispiele können mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geändert werden.  
   
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>So erstellen Sie einen als RDL-Datei gespeicherten, einfachen Bericht  
   

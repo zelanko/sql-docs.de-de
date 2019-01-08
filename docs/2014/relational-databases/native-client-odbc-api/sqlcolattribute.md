@@ -14,12 +14,12 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8029a3a2fb059ebfc764c8e29d9f893d1434b2dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204920"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361272"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   Sie können `SQLColAttribute` ein Attribut einer Resultsetspalte für vorbereitete oder ausgeführte ODBC-Anweisungen abzurufen. Aufrufen von `SQLColAttribute` für vorbereitete Anweisungen bewirkt, dass einen Roundtrip zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber erhält Resultset-Spaltendaten als Teil der anweisungsausführung, deshalb wird beim Aufrufen `SQLColAttribute` nach Abschluss des **SQLExecute** oder **SQLExecDirect** ist die Server-Roundtrip nicht beinhalten.  
@@ -107,7 +107,7 @@ ms.locfileid: "48204920"
  Weitere Informationen finden Sie unter [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLColAttribute-Funktion](http://go.microsoft.com/fwlink/?LinkId=59334)   
+ [SQLColAttribute-Funktion](https://go.microsoft.com/fwlink/?LinkId=59334)   
  [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](sqlsetstmtattr.md)  
   

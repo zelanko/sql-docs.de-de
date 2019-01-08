@@ -19,12 +19,12 @@ ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8429c02d84520524906fb0fbd411ee0a49169815
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0dcfda333d3381b1a35313c00e6c95173b869c7d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194640"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352492"
 ---
 # <a name="write-enabled-partitions"></a>Partitionen mit aktiviertem Schreibzugriff
   Die Daten in einem Cube sind im Allgemeinen schreibgeschützt. In bestimmten Szenarien kann es jedoch erwünscht sein, den Schreibzugriff für eine Partition zu aktivieren. Partitionen mit aktiviertem Schreibzugriff werden verwendet, um Benutzern im geschäftlichen Bereich das Untersuchen von Szenarien zu ermöglichen, indem sie Zellenwerte ändern und die Auswirkungen der Änderungen auf die Cubedaten analysieren. Wenn Sie den Schreibzugriff für eine Partition aktivieren, können Clientanwendungen Änderungen an den Daten in der Partition aufzeichnen. Diese Änderungen, so genannte Rückschreibedaten, werden in einer separaten Tabelle gespeichert und überschreiben keine vorhandenen Daten in einer Measuregruppe. Sie werden jedoch als Teil der Cubedaten in Abfrageergebnisse einbezogen.  
@@ -32,7 +32,7 @@ ms.locfileid: "48194640"
  Sie können den Schreibzugriff für einen gesamten Cube oder nur für bestimmte Partitionen im Cube aktivieren. Dimensionen mit aktiviertem Schreibzugriff unterscheiden sich von diesen Partitionen, aber auf ergänzende Weise. Eine Partition mit aktiviertem Schreibzugriff ermöglicht den Benutzern das Update von Partitionszellen, während eine Dimension mit aktiviertem Schreibzugriff den Benutzern das Update von Dimensionselementen ermöglicht. Sie können diese zwei Funktionen auch zusammen verwenden. So muss ein Cube oder eine Partition mit aktiviertem Schreibzugriff keine Dimensionen mit aktiviertem Schreibzugriff enthalten. **Verwandtes Thema:**[Dimensionen mit aktiviertem Schreibzugriff](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 > [!NOTE]  
->  Wenn Sie den Schreibzugriff für einen Cube aktivieren möchten, der eine Microsoft Access-Datenbank als Datenquelle verwendet, sollten Sie in den Datenquellendefinitionen des Cubes, seinen Partitionen oder seinen Dimensionen nicht Microsoft OLE DB-Anbieter für ODBC-Treiber verwenden. Stattdessen können Sie Microsoft Jet 4.0 OLE DB-Anbieter oder eine beliebige Version des Jet Service Pack, die Jet 4.0 OLE beinhaltet, verwenden. Weitere Informationen finden Sie im Microsoft Knowledge Base-Artikel [so erhalten Sie das neueste Servicepack für Microsoft Jet 4.0-Datenbank-Engine](http://support.microsoft.com/?kbid=239114).  
+>  Wenn Sie den Schreibzugriff für einen Cube aktivieren möchten, der eine Microsoft Access-Datenbank als Datenquelle verwendet, sollten Sie in den Datenquellendefinitionen des Cubes, seinen Partitionen oder seinen Dimensionen nicht Microsoft OLE DB-Anbieter für ODBC-Treiber verwenden. Stattdessen können Sie Microsoft Jet 4.0 OLE DB-Anbieter oder eine beliebige Version des Jet Service Pack, die Jet 4.0 OLE beinhaltet, verwenden. Weitere Informationen finden Sie im Microsoft Knowledge Base-Artikel [so erhalten Sie das neueste Servicepack für Microsoft Jet 4.0-Datenbank-Engine](https://support.microsoft.com/?kbid=239114).  
   
  Für einen Cube kann nur dann der Schreibzugriff aktiviert werden, wenn alle zugehörigen Measures die `Sum`-Aggregatfunktion verwenden. Für verknüpfte Measuregruppen und lokale Cubes kann der Schreibzugriff nicht aktiviert werden.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48194640"
   
 -   Verwerfen der Änderung, um die Partition in ihrem ursprünglichen Status wiederherzustellen. Durch diesen Vorgang wird der Schreibzugriff für die Partition deaktiviert.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
  Ein Anwender des Produkts im geschäftlichen Bereich darf nur dann Änderungen in der Rückschreibetabelle eines Cubes aufzeichnen, wenn er einer Rolle angehört, die über Lese-/Schreibberechtigung für die Zellen des Cubes verfügt. Sie können für jede Rolle steuern, welche Cubezellen aktualisiert werden können. Weitere Informationen finden Sie unter [Erteilen von Cube-oder modellberechtigungen &#40;Analysis Services&#41;](../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  

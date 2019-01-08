@@ -13,12 +13,12 @@ ms.assetid: 4e0344e9-1822-4698-ad22-05f1f341ced7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b81207d2cb045b330560c652e98b2488aad421b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94a830bba0339262148a0a7f826f3bcb89371274
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149210"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372892"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Mit einer Azure SQL-Datenbank verbinden (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie eine Verbindung mit einer [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] herstellen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
@@ -26,7 +26,7 @@ ms.locfileid: "48149210"
 > [!NOTE]  
 >  Wenn Sie eine Verbindung mit einem Azure DataMarket-Dataset herstellen, gehen Sie zu [Mit einem Bericht oder Datenfeed verbinden &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md).  
   
- Die [!INCLUDE[ssSDS](../includes/sssds-md.md)] ist eine gehostete, relationale Datenbank, mit der Sie eine Verbindung unter Verwendung der SQL Server-Authentifizierung herstellen. Weitere Informationen zu [!INCLUDE[ssSDS](../includes/sssds-md.md)]finden Sie auf der Website zu [SQL-Datenbanken](http://go.microsoft.com/fwlink/?LinkID=157856). Der entsprechende Anbieter muss auf dem Computer installiert sein, um eine Verbindung mit einer Datenquelle herzustellen.  
+ Die [!INCLUDE[ssSDS](../includes/sssds-md.md)] ist eine gehostete, relationale Datenbank, mit der Sie eine Verbindung unter Verwendung der SQL Server-Authentifizierung herstellen. Weitere Informationen zu [!INCLUDE[ssSDS](../includes/sssds-md.md)]finden Sie auf der Website zu [SQL-Datenbanken](https://go.microsoft.com/fwlink/?LinkID=157856). Der entsprechende Anbieter muss auf dem Computer installiert sein, um eine Verbindung mit einer Datenquelle herzustellen.  
   
 > [!NOTE]  
 >  Beim Auswählen einer Datenbank auf dieser Seite werden die Anmeldeinformationen des aktuellen Benutzers verwendet. Der Import ist jedoch nicht erfolgreich, wenn der auf der Seite Identitätswechselinformationen angegebene Benutzer nicht über ausreichend Berechtigungen zum Lesen aus der ausgewählten Datenbank verfügt.  

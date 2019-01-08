@@ -21,17 +21,17 @@ ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbcd8616fc743ee749b3adb9b30f343939fa7f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23495d6f2d18964bb35395666c3c7b867e508e20
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819238"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211219"
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Entfernt Daten basierend auf einer Beibehaltungsrichtlinie aus dem Verwaltungs-Data Warehouse. Diese Prozedur wird täglich vom Mdw_purge_data ausgeführt[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag für das Management Datawarehouse, die mit der angegebenen Instanz verknüpft ist. Sie können mit dieser gespeicherten Prozedur Daten aus dem Verwaltungs-Data Warehouse bedarfsgesteuert entfernen.  
+  Entfernt Daten basierend auf einer Beibehaltungsrichtlinie aus dem Verwaltungs-Data Warehouse. Diese Prozedur wird täglich vom mdw_purge_data-Auftrag des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents für das Verwaltungs-Data Warehouse ausgeführt, das der angegebenen Instanz zugeordnet ist. Sie können mit dieser gespeicherten Prozedur Daten aus dem Verwaltungs-Data Warehouse bedarfsgesteuert entfernen.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

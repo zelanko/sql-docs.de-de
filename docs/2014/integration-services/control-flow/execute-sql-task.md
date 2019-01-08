@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
@@ -18,12 +17,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe677e6b2fb13c3a158c78e0416142b7b15ce975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64e3a60d767c100ad66a293f1e588369a140d1e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204820"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367312"
 ---
 # <a name="execute-sql-task"></a>SQL ausführen (Task)
   Mit dem Task SQL ausführen werden SQL-Anweisungen oder gespeicherte Prozeduren aus einem Paket ausgeführt. Dieser Task kann eine oder mehrere SQL-Anweisungen enthalten, die sequenziell ausgeführt werden. Der Task SQL ausführen kann für folgende Zwecke verwendet werden:  
@@ -63,7 +62,7 @@ ms.locfileid: "48204820"
 >  Gültige SQL-Anweisungen, die außerhalb des Tasks "SQL ausführen" erstellt wurden, werden vom Task "SQL ausführen" möglicherweise nicht erfolgreich analysiert.  
   
 > [!NOTE]  
->  Der Task "SQL ausführen" verwendet den `RecognizeAll` ParseMode-Enumerationswert. Weitere Informationen finden Sie unter [ManagedBatchParser-Namespace](http://go.microsoft.com/fwlink/?LinkId=223617).  
+>  Der Task "SQL ausführen" verwendet den `RecognizeAll` ParseMode-Enumerationswert. Weitere Informationen finden Sie unter [ManagedBatchParser-Namespace](https://go.microsoft.com/fwlink/?LinkId=223617).  
   
 ## <a name="sending-multiple-statements-in-a-batch"></a>Senden mehrerer Anweisungen in einem Batch  
  Wenn Sie für den Task "SQL ausführen" mehrere Anweisungen einschließen, können Sie diese gruppieren und als Batch ausführen. Verwenden Sie den GO-Befehl, um das Ende eines Batches zu signalisieren. Alle SQL-Anweisungen zwischen zwei GO-Befehlen werden als Batch an den OLE DB-Anbieter zum Ausführen gesendet. Der SQL-Befehl kann mehrere durch GO-Befehle getrennte Batches einschließen.  
@@ -81,7 +80,7 @@ ms.locfileid: "48204820"
 -   Falls für den Task die Parameterbindung verwendet wird, müssen alle Abfragen im Batch die gleiche Anzahl und Art von Parametern aufweisen.  
   
 ## <a name="running-parameterized-sql-commands"></a>Ausführen parametrisierter SQL-Befehle  
- SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig Eingabeparameter, Ausgabeparameter und Rückgabecodes. Der Task SQL ausführen unterstützt die `Input`, `Output`, und `ReturnValue` Parametertypen. Sie verwenden die `Input` Typ für Eingabeparameter, `Output` für Ausgabeparameter und `ReturnValue` Rückgabecodes.  
+ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig Eingabeparameter, Ausgabeparameter und Rückgabecodes. Der Task SQL ausführen unterstützt die `Input`-, `Output`- und `ReturnValue`-Parametertypen. Sie können den `Input`-Typ für Eingabeparameter, den `Output`-Typ für Ausgabeparameter und den `ReturnValue`-Typ für Rückgabecodes verwenden.  
   
 > [!NOTE]  
 >  Parameter können in einem Task SQL ausführen nur verwendet werden, wenn dies vom Datenanbieter unterstützt wird.  
@@ -96,7 +95,7 @@ ms.locfileid: "48204820"
 ## <a name="troubleshooting-the-execute-sql-task"></a>Problembehandlung des Tasks SQL ausführen  
  Sie können die vom Task SQL ausführen an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktionen können Sie Probleme bei SQL-Befehlen behandeln, die vom Task SQL ausführen ausgeführt werden. Aktivieren Sie zum Protokollieren der vom Task SQL ausführen an externe Datenanbieter gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandlung von Problemen mit Paketausführungstools](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
- Gelegentlich gibt ein SQL-Befehl oder eine gespeicherte Prozedur mehrere Resultsets zurück. Diesen Resultsets gehören nicht nur Rowsets, die das Ergebnis des `SELECT` Abfragen, sondern auch einzelne Werte, die das Ergebnis von Fehlern in der `RAISERROR` oder `PRINT` Anweisungen. Ob der Task Fehler in Resultsets nach dem ersten Resultset ignoriert, hängt vom verwendeten Typ des Verbindungs-Managers ab:  
+ Gelegentlich gibt ein SQL-Befehl oder eine gespeicherte Prozedur mehrere Resultsets zurück. Zu diesen Resultsets gehören nicht nur Rowsets, die das Ergebnis von `SELECT`-Abfragen sind, sondern auch einzelne Werte als Ergebnis von Fehlern in der `RAISERROR`-Anweisung oder `PRINT`-Anweisung. Ob der Task Fehler in Resultsets nach dem ersten Resultset ignoriert, hängt vom verwendeten Typ des Verbindungs-Managers ab:  
   
 -   Wenn Sie OLE DB- und ADO-Verbindungs-Manager verwenden, ignoriert der Task die Resultsets, die nach dem ersten Resultset auftreten. Das bedeutet, dass der Task bei diesen Verbindungs-Managern einen von einem SQL-Befehl oder einer gespeicherten Prozedur zurückgegebenen Fehler ignoriert, wenn der Fehler nicht Teil des ersten Resultsets ist.  
   
@@ -122,7 +121,7 @@ ms.locfileid: "48204820"
   
 -   Geben Sie an, ob der Task die Vorbereitungsphase für die SQL-Anweisung auslässt.  
   
--   Wenn Sie den ADO-Verbindungstyp verwenden, müssen Sie angeben, ob es sich bei der SQL-Anweisung um eine gespeicherte Prozedur handelt. Für andere Verbindungstypen ist diese Eigenschaft ist schreibgeschützt und weist immer den Wert `false`.  
+-   Wenn Sie den ADO-Verbindungstyp verwenden, müssen Sie angeben, ob es sich bei der SQL-Anweisung um eine gespeicherte Prozedur handelt. Für andere Verbindungstypen ist diese Eigenschaft schreibgeschützt und weist immer den Wert `false` auf.  
   
  Eigenschaften können Sie programmgesteuert oder mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen.  
   
@@ -159,6 +158,6 @@ ms.locfileid: "48204820"
   
 -   [Transact-SQL-Referenz &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](/sql/t-sql/language-reference)  
   
--   Blogeintrag [Neue Datums- und Uhrzeitfunktionen in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=239783)auf mssqltips.com.  
+-   Blogeintrag [Neue Datums- und Uhrzeitfunktionen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=239783)auf mssqltips.com.  
   
   

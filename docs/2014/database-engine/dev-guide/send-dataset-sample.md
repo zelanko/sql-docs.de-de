@@ -12,12 +12,12 @@ ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c736cbf5a5c6fd98f3635224c21c785468ce932d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7f617c7a69925f4ddb4bf6a2c0ef34c2e43f03a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105700"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372792"
 ---
 # <a name="send-dataset-sample"></a>Beispiel für das Senden eines Datensatzes
   Das Beispiel für das Senden eines `DataSet` zeigt, wie ein ADO.NET-basiertes `DataSet` in einer serverseitigen CLR (Common Language Runtime)-basierten gespeicherten Prozedur als Resultset an den Client zurückgegeben wird. Dies ist z. B. hilfreich, wenn eine solche gespeicherte Prozedur ein `DataSet` mit den Ergebnissen einer Abfrage füllt und dann die in diesem `DataSet` enthaltenen Daten bearbeitet. Dies ist ebenfalls hilfreich, wenn die gespeicherte Prozedur ein `DataSet` von Grund auf neu erstellt und füllt. Das Beispiel besteht aus zwei Klassen, `DataSetUtilities` und `TestSendDataSet`. Mit der `SendDataSet`-Methode für die `DataSetUtilities`-Klasse wird ein allgemeines Verfahren für die Übertragung des Inhalts einer `DataSet`-Instanz an den Client implementiert. Die für die `DoTest`-Klasse definierte `TestSendDataSet`-Methode überprüft die Funktionsfähigkeit der `SendDataSet`-Methode, indem sie ein `DataSet` erstellt und mit Daten aus der gespeicherten Transact-SQL-Prozedur `uspGetTwoBOMTestData` füllt. `uspGetTwoBOMTestData` führt die gespeicherte Transact-SQL-Prozedur `uspGetBillOfMaterials` zweimal aus, um rekursiv die Stückliste für zwei Produkte abzufragen, die als Parameter für die gespeicherte Prozedur `usp_GetTwoBOMTestData` angegeben wurden. Nach dem Füllen des Datasets werden die Daten normalerweise vor dem Aufrufen von `SendDataSet` geändert, um die Daten im Dataset als Resultset an den Client zu übermitteln. Aus Gründen der Vereinfachung gibt dieses Beispiel die Daten ungeändert zurück.  
@@ -25,9 +25,9 @@ ms.locfileid: "48105700"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](http://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](https://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
   
--   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](http://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
+-   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
 -   .NET Framework SDK 2.0 oder höher oder Microsoft Visual Studio 2005 oder höher. Das .NET Framework SDK ist kostenlos erhältlich.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48105700"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie die `ALTER SETTINGS`-Serverberechtigung, die Mitglieder der festen Serverrollen `sysadmin` und `serveradmin` implizit erhalten.  
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   

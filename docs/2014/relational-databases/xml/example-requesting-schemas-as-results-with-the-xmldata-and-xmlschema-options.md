@@ -13,12 +13,12 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfbd60d67bc768eb50387ad7b86250acd9006550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2f6a8395db11179d78a6f513890fd307acbd82c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159230"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352055"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Beispiel: Anfordern von Schemas als Ergebnisse mithilfe der Optionen XMLDATA und XMLSCHEMA
   Die folgende Abfrage gibt das XML-Datenschema zurück, das die Dokumentstruktur beschreibt.  
@@ -51,7 +51,7 @@ GO
 <row xmlns="x-schema:#Schema1" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  Das <`Schema`> ist als Namespace deklariert. Damit Namespacekonflikte vermieden werden, wenn mehrere XML-Datenschemas in verschiedenen FOR XML-Abfragen angefordert werden, wird der Namespacebezeichner – in diesem Beispiel `Schema1` – bei jeder Abfrageausführung geändert. Die Namespace-ID setzt sich aus **Schema*n*** zusammen, wobei ***n*** eine ganze Zahl darstellt.  
   
  Durch Angeben der Option `XMLSCHEMA` können Sie das XSD-Schema für das Ergebnis anfordern.  
@@ -69,8 +69,8 @@ GO
  Dies ist das Ergebnis:  
   
 ```  
-<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
-  <xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
+<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
+  <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="row">  
     <xsd:complexType>  
       <xsd:attribute name="ProductModelID" type="sqltypes:int" use="required" />  
@@ -104,8 +104,8 @@ GO
  Dies ist das Ergebnis:  
   
 ```  
-<xsd:schema targetNamespace="urn:example.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
-  <xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
+<xsd:schema targetNamespace="urn:example.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
+  <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="row">  
     <xsd:complexType>  
       <xsd:attribute name="ProductModelID" type="sqltypes:int" use="required" />  

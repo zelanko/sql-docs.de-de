@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB connection manager
@@ -16,26 +15,26 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7034c52fa3f05032d6fc4585f1baf171421d0ab2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 149feca03a64839caffe0565cc46b683f265b77b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156710"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370132"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB-Verbindungs-Manager
   Durch einen OLE DB-Verbindungs-Manager kann ein Paket mithilfe eines OLE DB-Anbieters eine Verbindung mit einer Datenquelle herstellen. Beispielsweise kann ein OLE DB-Verbindungs-Manager, der eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellt, den [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden.  
   
-> [!NOTE]  
->  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB-Anbieter unterstützt die neuen Schlüsselwörter für Verbindungszeichenfolgen (MultiSubnetFailover=True) für Multisubnetz-Failoverclustering nicht. Weitere Informationen finden Sie unter den [Versionsanmerkungen zu SQL Server](http://go.microsoft.com/fwlink/?LinkId=247824) und im Blogbeitrag [AlwaysOn-Multisubnetz-Failover und SSIS](http://go.microsoft.com/fwlink/?LinkId=247825), unter www.mattmasson.com.  
+> [!NOTE]
+>  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB-Anbieter unterstützt die neuen Schlüsselwörter für Verbindungszeichenfolgen (MultiSubnetFailover=True) für Multisubnetz-Failoverclustering nicht. Weitere Informationen finden Sie unter den [Versionsanmerkungen zu SQL Server](https://go.microsoft.com/fwlink/?LinkId=247824) und im Blogbeitrag [AlwaysOn-Multisubnetz-Failover und SSIS](https://go.microsoft.com/fwlink/?LinkId=247825), unter www.mattmasson.com.  
   
  Mehrere Tasks und Datenflusskomponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwenden einen OLE DB-Verbindungs-Manager. Beispielsweise extrahieren und laden die OLE DB-Quelle und das OLE DB-Ziel mit diesem Verbindungs-Manager Daten. Und der Task SQL ausführen kann damit eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herstellen, um Abfragen auszuführen.  
   
  Der OLE DB-Verbindungs-Manager wird auch für den Zugriff auf OLE DB-Datenquellen in benutzerdefinierten Tasks verwendet, die in nicht verwaltetem Code und einer Programmiersprache wie z. B. C++ geschrieben sind.  
   
- Wenn Sie einem Paket einen OLE DB-Verbindungs-Manager hinzufügen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, die in OLE DB-Verbindung zur Laufzeit aufgelöst wird, die Verbindungs-Manager-Eigenschaften festlegt und fügt den Verbindungs-Manager erstellt die `Connections` Auflistung auf der das Paket.  
+ Wenn Sie einem Paket einen OLE DB-Verbindungs-Manager hinzufügen, erstellt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, der zur Laufzeit in eine OLE DB-Verbindung aufgelöst wird, die Eigenschaften des Verbindungs-Managers festlegt und der `Connections`-Auflistung im Paket den Verbindungs-Manager hinzufügt.  
   
- Die `ConnectionManagerType` Eigenschaft des Verbindungs-Managers nastaven NA hodnotu `OLEDB`.  
+ Die `ConnectionManagerType`-Eigenschaft des Verbindungs-Managers ist auf `OLEDB` festgelegt.  
   
  Der OLE DB-Verbindungs-Manager kann wie folgt konfiguriert werden:  
   
@@ -55,14 +54,14 @@ ms.locfileid: "48156710"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Wiki-Artikel, [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670) , auf social.technet.microsoft.com.  
+-   Wiki-Artikel, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670) , auf social.technet.microsoft.com.  
   
--   Technischer Artikel, [Connection Strings for OLE DB Providers](http://go.microsoft.com/fwlink/?LinkId=220744)(Verbindungszeichenfolgen für OLE DB-Anbieter), auf carlprothman.net.  
+-   Technischer Artikel, [Connection Strings for OLE DB Providers](https://go.microsoft.com/fwlink/?LinkId=220744)(Verbindungszeichenfolgen für OLE DB-Anbieter), auf carlprothman.net.  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Quelle](../data-flow/ole-db-source.md)   
  [OLE DB-Ziel](../data-flow/ole-db-destination.md)   
  [SQL ausführen (Task)](../control-flow/execute-sql-task.md)   
- [Integrationsdienste &#40;SSIS&#41; Verbindungen](integration-services-ssis-connections.md)  
+ [Integration Services-Verbindungen &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

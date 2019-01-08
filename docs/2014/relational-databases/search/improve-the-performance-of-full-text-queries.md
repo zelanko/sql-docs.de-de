@@ -10,12 +10,12 @@ ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bffdc944c10a534cffd58a6b9931165f556432b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ff22023f9f6f8bcbe1d2a1d0f57557676cea1cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145380"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353012"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Verbessern der Leistung von Volltextabfragen
   Die folgenden Empfehlungen sollen Ihnen dabei helfen, die Leistung von Volltextabfragen zu erhöhen.  
@@ -48,7 +48,7 @@ ms.locfileid: "48145380"
 -   Bei Anwendungen, die Prädikate mit selektiver Beziehung enthalten, funktionieren Abfragen, die selektive relationale Prädikate und nicht selektive Volltextprädikate verwenden, ggf. am besten, wenn sie für die Verwendung des Abfrageoptimierers geschrieben werden. Dann kann der Abfrageoptimierer entscheiden, ob ein Prädikats- oder Bereichs-Pushdown verwendet werden kann, um einen effektiven Abfrageplan aufzustellen. Dieser Ansatz ist einfacher und häufig auch effizienter als das Indizieren von relationalen Daten als Volltextdaten.  
   
 ## <a name="related-resources"></a>Verwandte Ressourcen  
- [SQL Server 2008-Volltextsuche: Internes und Erweiterungen](http://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 Full-Text Search: Internes und Erweiterungen](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## <a name="see-also"></a>Siehe auch  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   

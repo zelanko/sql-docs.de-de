@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -16,12 +16,12 @@ ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 009c83975aa730626858c793b53c51c309c218b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2036dd0624e8c2c6479c8ba039aa5646f374902d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222790"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356874"
 ---
 # <a name="use-tokens-in-job-steps"></a>Verwenden von Token in Auftragsschritten
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ermöglicht die Verwendung von Token in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftragsschrittskripts. Durch die Verwendung von Token verfügen Sie beim Schreiben von Auftragsschritten über dieselbe Flexibilität, die die Verwendung von Variablen beim Schreiben von Softwareprogrammen bietet. Die von Ihnen in ein Auftragsschrittskript eingefügten Token werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zur Ausführungszeit ersetzt, bevor der Auftragsschritt vom [!INCLUDE[tsql](../../includes/tsql-md.md)] -Subsystem ausgeführt wird.  
@@ -34,11 +34,11 @@ ms.locfileid: "48222790"
 ## <a name="understanding-using-tokens"></a>Grundlegendes zum Verwenden von Token  
   
 > [!IMPORTANT]  
->  Jeder Windows-Benutzer mit Schreibberechtigungen für das Windows-Ereignisprotokoll kann auf Auftragsschritte zugreifen, die durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen oder WMI-Warnungen aktiviert werden. Zur Vermeidung dieses Sicherheitsrisikos sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Tokens, die in von Warnungen aktivierten Aufträgen verwendet werden können, standardmäßig deaktiviert. Folgende Token: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**., und **WMI () *`property`*)**. Beachten Sie, dass in dieser Version die Verwendung von Token auf alle Warnungen ausgeweitet ist.  
+>  Jeder Windows-Benutzer mit Schreibberechtigungen für das Windows-Ereignisprotokoll kann auf Auftragsschritte zugreifen, die durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen oder WMI-Warnungen aktiviert werden. Zur Vermeidung dieses Sicherheitsrisikos sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Tokens, die in von Warnungen aktivierten Aufträgen verwendet werden können, standardmäßig deaktiviert. Diese Token werden: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG-**., und **WMI ( *`property`*)**. Beachten Sie, dass in dieser Version die Verwendung von Token auf alle Warnungen ausgeweitet ist.  
 >   
 >  Wenn Sie diese Token verwenden müssen, stellen Sie zuvor sicher, dass ausschließlich Mitglieder von vertrauenswürdigen Windows-Sicherheitsgruppen, wie der Administratorengruppe, über Schreibberechtigungen für das Ereignisprotokoll des Computers verfügen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Klicken Sie dann zum Aktivieren dieser Token im Objekt-Explorer mit der rechten Maustaste auf **SQL Server-Agent** , wählen Sie **Eigenschaften**, und wählen Sie anschließend auf der Seite **Warnungssystem** die Option **Token für alle Auftragsantworten auf Warnungen ersetzen** aus.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Token können einfach und effizient ersetzt werden: Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ersetzt das Token durch ein genaues Zeichenfolgenliteral. Die Groß- und Kleinschreibung ist bei Token grundsätzlich zu beachten. Dies muss in den Auftragsschritten berücksichtigt werden, damit die verwendeten Token richtig angegeben werden oder die Ersatzzeichenfolge in den richtigen Datentyp konvertiert wird.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-token können ist einfach und effizient auf: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ersetzt durch ein genaues Zeichenfolgenliteral für das Token. Die Groß- und Kleinschreibung ist bei Token grundsätzlich zu beachten. Dies muss in den Auftragsschritten berücksichtigt werden, damit die verwendeten Token richtig angegeben werden oder die Ersatzzeichenfolge in den richtigen Datentyp konvertiert wird.  
   
  Mit der folgenden Anweisung können Sie z. B. den Namen der Datenbank in einem Auftragsschritt drucken:  
   
@@ -67,13 +67,13 @@ ms.locfileid: "48222790"
 |**(A-SEV)**|Fehlerschweregrad. Wenn der Auftrag durch eine Warnung ausgeführt wird, ersetzt der Wert des Fehlerschweregrads dieses Token im Auftragsschritt automatisch.|  
 |**(A-MSG)**|Meldungstext. Wenn der Auftrag durch eine Warnung ausgeführt wird, ersetzt der Wert des Meldungstexts dieses Token im Auftragsschritt automatisch.|  
 |**(DATE)**|Das aktuelle Datum (im Format YYYYMMDD).|  
-|**(INST)**|Der Instanzname. Für eine Standardinstanz erhält dieses Token den Standardinstanznamen: MSSQLSERVER.|  
+|**(INST)**|Der Instanzname. Für eine Standardinstanz müssen dieses Token den Standardinstanznamen: MSSQLSERVER.|  
 |**(JOBID)**|Auftrags-ID.|  
 |**(MACH)**|Computername.|  
 |**(MSSA)**|Name des Master-SQLServerAgent-Diensts.|  
 |**(OSCMD)**|Das Präfix des Programms, das zur Ausführung der **CmdExec** -Auftragsschritte verwendet wird.|  
 |**(SQLDIR)**|Verzeichnis, in dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist. Der Standardwert lautet "C:\Programme\Microsoft SQL Server\MSSQL".|  
-|**(SQLLOGDIR)**|Ersetzungstoken für den Pfad des SQL Server-Fehlerprotokollordners – beispielsweise $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
+|**(SQLLOGDIR)**|Ersetzungstoken für den Pfad des SQL Server-Fehlerprotokollordners, beispielsweise $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
 |**(STEPCT)**|Die Angabe, wie oft dieser Schritt ausgeführt wurde (ohne Abbrüche). Mit diesem Token kann der Schrittbefehl den Abbruch einer aus mehreren Schritten bestehenden Schleife erzwingen.|  
 |**(STEPID)**|Schritt-ID.|  
 |**(SRVR)**|Name des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird. Wenn es sich bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz um eine benannte Instanz handelt, ist auch der Name der Instanz angegeben.|  
@@ -94,7 +94,7 @@ ms.locfileid: "48222790"
 ## <a name="updating-job-steps-to-use-macros"></a>Aktualisieren von Auftragsschritten für die Verwendung von Makros  
  Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 können Auftragsschritte, die Token ohne Escapemakros enthalten, nicht ausgeführt werden. In diesen Fällen wird eine Fehlermeldung zurückgegeben, die darauf hinweist, dass der Auftragsschritt ein oder mehrere Token enthält, die mit einem Makro versehen werden müssen, bevor der Auftrag ausgeführt werden kann.  
   
- Im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base-Artikel 915845 zu [SQL Server-Agent-Auftragsschritten mit Token, die in SQL Server 2005 Service Pack 1 nicht ausgeführt werden können](http://support.microsoft.com/kb/915845), ist ein Skript enthalten, mit dem Sie alle Ihre Auftragsschritte, in denen Token verwendet werden, mit dem Makro **ESCAPE_NONE** aktualisieren können. Nach dem Verwenden dieses Skripts sollten Sie so bald wie möglich die Auftragsschritte, in denen Token verwendet werden, überprüfen und das **ESCAPE_NONE** -Makro durch ein für den Kontext des Auftragsschritts geeignetes Escapemakro ersetzen.  
+ Ein Skript wird bereitgestellt, mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base-Artikel 915845: [SQL Server-Agent-Auftragsschritte, die Token, die in SQL Server 2005 Servicepack 1 fehlschlagen](https://support.microsoft.com/kb/915845). Sie können dieses Skript verwenden, alle Ihre Auftragsschritte aktualisieren, die Token mit den **ESCAPE_NONE** Makro. Nach dem Verwenden dieses Skripts sollten Sie so bald wie möglich die Auftragsschritte, in denen Token verwendet werden, überprüfen und das **ESCAPE_NONE** -Makro durch ein für den Kontext des Auftragsschritts geeignetes Escapemakro ersetzen.  
   
  Die folgende Tabelle beschreibt, wie die symbolische Ersetzung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent behandelt wird. Um die Tokenersetzung durch Warnungen ein- oder auszuschalten, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf **SQL Server-Agent** , wählen Sie **Eigenschaften**, und aktivieren bzw. deaktivieren Sie anschließend auf der Seite **Warnungssystem** das Kontrollkästchen **Token für alle Auftragsantworten auf Warnungen ersetzen** .  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
@@ -17,12 +16,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b518a0044c4d4778fa2b94a6643c805e7c19ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096660"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356279"
 ---
 # <a name="table-properties"></a>Tabelleneigenschaften
   In diesem Thema werden die Tabelleneigenschaften beschrieben, die im Dialogfeld "Tabelleneigenschaften" in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angezeigt werden. Weitere Informationen zum Anzeigen dieser Eigenschaften finden Sie unter [Anzeigen der Tabellendefinition](view-the-table-definition.md).  
@@ -66,7 +65,7 @@ ms.locfileid: "48096660"
  Gibt an, ob das Objekt mit der Option „Bezeichner in Anführungszeichen“ auf ON erstellt wurde. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
   
  **Sperrenausweitung**  
- Gibt die Granularität der Sperrenausweitung der Tabelle an. Weitere Informationen zum Sperren in der Datenbank-Engine finden Sie im [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung in SQL Server](http://msdn.microsoft.com/library/jj856598.aspx). Folgende Werte sind möglich:  
+ Gibt die Granularität der Sperrenausweitung der Tabelle an. Weitere Informationen zum Sperren in der Datenbank-Engine finden Sie im [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung in SQL Server](https://msdn.microsoft.com/library/jj856598.aspx). Dabei sind folgende Werte möglich:  
   
  AUTO  
  Mit dieser Option kann von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die für das Tabellenschema geeignete Granularität der Sperrenausweitung ausgewählt werden.  
@@ -86,7 +85,7 @@ ms.locfileid: "48096660"
   
 ##  <a name="ChangeTracking"></a> Seite "Änderungsnachverfolgung"  
  **Änderungsnachverfolgung**  
- Gibt an, ob die Änderungsnachverfolgung für die Tabelle aktiviert ist. Der Standardwert lautet `False`.  
+ Gibt an, ob die Änderungsnachverfolgung für die Tabelle aktiviert ist. Der Standardwert ist `False`.  
   
  Diese Option ist nur dann verfügbar, wenn die Änderungsnachverfolgung für die Datenbank aktiviert ist.  
   
@@ -136,7 +135,7 @@ ms.locfileid: "48096660"
  Mögliche Werte sind `True` und `False`.  
   
  **FILESTREAM-Dateigruppe**  
- Geben Sie den Namen der FILESTREAM-Datendateigruppe ein, wenn die Tabelle besitzt eine `varbinary(max)` Spalte, die FILESTREAM-Attribut aufweist. Der Standardwert entspricht der standardmäßigen FILESTREAM-Datendateigruppe.  
+ Geben Sie den Namen der FILESTREAM-Datendateigruppe an, wenn die Tabelle eine `varbinary(max)`-Spalte mit FILESTREAM-Attribut aufweist. Der Standardwert entspricht der standardmäßigen FILESTREAM-Datendateigruppe.  
   
  Wenn die Tabelle keine FILESTREAM-Daten enthält, ist das Feld leer.  
   
@@ -172,6 +171,6 @@ ms.locfileid: "48096660"
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen der Tabellendefinition](view-the-table-definition.md)   
- [Ändern von Spalten &amp;#40;Datenbank-Engine&amp;#41;](../tables/modify-columns-database-engine.md)  
+ [Ändern von Spalten &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../tables/modify-columns-database-engine.md)  
   
   

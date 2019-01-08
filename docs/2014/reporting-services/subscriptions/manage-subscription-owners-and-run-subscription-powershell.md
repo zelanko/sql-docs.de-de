@@ -11,15 +11,15 @@ ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b1b0c51cd8750cb83ebeccbd0520c0ace32198ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebe7f44d4e2ddc9d6da69daae7787c1b40d5b6e3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216020"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367522"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Verwenden von PowerShell, um Reporting Services-Abonnenten zu ändern und aufzulisten sowie ein Abonnement auszuführen
-  Beginnend mit [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Sie können programmgesteuert übertragen des Besitzes einer [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Abonnement von einem Benutzer in eine andere. Dieses Thema enthält mehrere Windows PowerShell-Skripts, die Sie verwenden können, um den Besitz von Abonnements zu ändern oder einfach aufzulisten. Jedes Beispiel enthält Beispielsyntax sowohl für den einheitlichen als auch den SharePoint-Modus. Wenn Sie den Abonnementbesitzer ändern, wird das Abonnement dann im Sicherheitskontext des neuen Besitzers ausgeführt, und das User!UserID-Feld des Berichts zeigt den Wert für den neuen Besitzer an. Weitere Informationen zum Objektmodell des PowerShell-Beispielaufrufs finden Sie unter <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+  Beginnend mit [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] können Sie den Besitz eines [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Abonnements programmgesteuert von einem Benutzer auf einen anderen übertragen. Dieses Thema enthält mehrere Windows PowerShell-Skripts, die Sie verwenden können, um den Besitz von Abonnements zu ändern oder einfach aufzulisten. Jedes Beispiel enthält Beispielsyntax sowohl für den einheitlichen als auch den SharePoint-Modus. Wenn Sie den Abonnementbesitzer ändern, wird das Abonnement dann im Sicherheitskontext des neuen Besitzers ausgeführt, und das User!UserID-Feld des Berichts zeigt den Wert für den neuen Besitzer an. Weitere Informationen zum Objektmodell des PowerShell-Beispielaufrufs finden Sie unter <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  ![PowerShell-Inhalt](../media/rs-powershellicon.jpg "PowerShell related content")  
   
@@ -33,32 +33,32 @@ ms.locfileid: "48216020"
   
 -   [Skript: Auflisten des Besitzes aller Abonnements](#bkmk_list_ownership_all)  
   
--   [Skript: Auflisten aller Abonnements, die ein bestimmter Benutzer besitzt](#bkmk_list_all_one_user)  
+-   [Skript: Listen Sie aller Abonnements, die ein bestimmter Benutzer besitzt auf](#bkmk_list_all_one_user)  
   
 -   [Skript: Ändern des Besitzes aller Abonnements, die ein bestimmter Benutzer besitzt](#bkmk_change_all)  
   
--   [Skript: Auflisten aller Abonnements, die mit einem bestimmten Bericht verknüpft sind](#bkmk_list_for_1_report)  
+-   [Skript: Listen Sie aller Abonnements, die mit einem bestimmten Bericht verknüpft ist auf](#bkmk_list_for_1_report)  
   
 -   [Skript: Ändern des Besitzes eines bestimmten Abonnements](#bkmk_change_all_1_subscription)  
   
--   [Skript: Ausführen (Auslösen) eines einzelnen Abonnements](#bkmk_run_1_subscription)  
+-   [Skript: Führen Sie (auslösen) eines einzelnen Abonnements aus](#bkmk_run_1_subscription)  
   
 ##  <a name="bkmk_how_to"></a> Gewusst wie: Verwenden der Skripts  
   
 ### <a name="permissions"></a>Berechtigungen  
- In diesem Abschnitt werden die erforderlichen Berechtigungsstufen für die Verwendung der Methoden für den einheitlichen und den SharePoint-Modus [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] zusammengefasst. Die Skripts in diesem Thema verwenden die folgenden [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Methoden:  
+ In diesem Abschnitt werden die erforderlichen Berechtigungsstufen für die Verwendung der Methoden für den einheitlichen und den SharePoint-Modus [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]zusammengefasst. Die Skripts in diesem Thema verwenden die folgenden [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Methoden:  
   
--   [ReportingService2010.ListSubscriptions-Methode](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+-   [ReportingService2010.ListSubscriptions Method](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
   
--   [ReportingService2010.ChangeSubscriptionOwner-Methode](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+-   [ReportingService2010.ChangeSubscriptionOwner Method](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
   
--   [ReportingService2010.ListChildren](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+-   [ReportingService2010.ListChildren](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
   
--   Die Methode [ReportingService2010.FireEvent](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) wird nur im letzten Skript verwendet, um zu veranlassen, dass ein bestimmtes Abonnement ausgeführt wird. Wenn Sie nicht vorhaben, dieses Skript zu verwenden, können Sie die Berechtigungsanforderungen für die FireEvent-Methode ignorieren.  
+-   Die Methode [ReportingService2010.FireEvent](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) wird nur im letzten Skript verwendet, um zu veranlassen, dass ein bestimmtes Abonnement ausgeführt wird. Wenn Sie nicht vorhaben, dieses Skript zu verwenden, können Sie die Berechtigungsanforderungen für die FireEvent-Methode ignorieren.  
   
  **Einheitlicher Modus :**  
   
--   Abonnements auflisten: (HYPERLINK "http://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription im Bericht und der Benutzer ist der Abonnementbesitzer) oder ReadAnySubscription  
+-   Abonnements auflisten: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription im Bericht und der Benutzer ist der Abonnementbesitzer) oder ReadAnySubscription  
   
 -   Abonnements ändern: Der Benutzer muss ein Mitglied der Gruppe "BUILTIN\Administrators" sein.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48216020"
   
  **SharePoint-Modus:**  
   
--   Abonnements auflisten: ManageAlerts oder (HYPERLINK "http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts im Bericht und der Benutzer ist der Abonnementbesitzer und das Abonnement ist ein geplantes Abonnement).  
+-   Abonnements auflisten: ManageAlerts oder (HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts im Bericht und der Benutzer ist der Abonnementbesitzer und das Abonnement ist ein geplantes Abonnement).  
   
 -   Abonnements ändern: ManageWeb  
   
@@ -134,7 +134,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ```  
   
 > [!TIP]  
->  Verwenden Sie das SharePoint-Cmdlet **Get-SPSite**, um Website-URLs im SharePoint-Modus zu verifizieren. Weitere Informationen finden Sie unter [Get-SPSite](http://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
+>  Verwenden Sie das SharePoint-Cmdlet **Get-SPSite**, um Website-URLs im SharePoint-Modus zu verifizieren. Weitere Informationen finden Sie unter [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
 ##  <a name="bkmk_list_all_one_user"></a> Skript: Auflisten aller Abonnements, die ein bestimmter Benutzer besitzt  
  Dieses Skript listet alle Abonnements auf, die ein bestimmter Benutzer besitzt. Sie können dieses Skript verwenden, um Ihre Verbindung zu testen oder um den Berichtspfad und die Abonnement-ID für die Verwendung in den anderen Skripts zu verifizieren. Dieses Skript ist hilfreich, wenn jemand Ihr Unternehmen verlässt und Sie prüfen möchten, welche Abonnements diese Person besessen hat, sodass Sie den Besitzer ändern oder das Abonnement löschen können.  
@@ -244,7 +244,7 @@ ForEach ($item in $items)
 ```  
   
 ##  <a name="bkmk_list_for_1_report"></a> Skript: Auflisten aller Abonnements, die mit einem bestimmten Bericht verknüpft sind  
- Dieses Skript listet alle Abonnements auf, die mit einem bestimmten Bericht verknüpft sind. Die Berichtspfadsyntax unterscheidet sich vom SharePoint-Modus, der eine vollständige URL erfordert. In den Syntaxbeispielen wird der Berichtsname "title only" verwendet, der ein Leerzeichen enthält und daher einfache Anführungszeichen vor und nach dem Berichtsnamen erfordert.  
+ Dieses Skript listet alle Abonnements auf, die mit einem bestimmten Bericht verknüpft sind. Die Berichtspfadsyntax unterscheidet sich vom SharePoint-Modus, der eine vollständige URL erfordert. In den Syntaxbeispielen wird der Berichtsname „title only“ verwendet, der ein Leerzeichen enthält und daher einfache Anführungszeichen vor und nach dem Berichtsnamen erfordert.  
   
  **Syntax im einheitlichen Modus:**  
   
@@ -336,9 +336,9 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  `</Event>`  
   
- Weitere Informationen zur Konfigurationsdatei finden Sie unter [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md).  
+ Weitere Informationen zur Konfigurationsdatei finden Sie unter [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
- Das Skript enthält die Verzögerungslogik "`Start-Sleep -s 6`", sodass nach Auslösen des Ereignisses Zeit bleibt, in der der aktualisierte Status mit der ListSubscription-Methode verfügbar ist.  
+ Das Skript enthält die Verzögerungslogik „`Start-Sleep -s 6`“, sodass nach Auslösen des Ereignisses Zeit bleibt, in der der aktualisierte Status mit der ListSubscription-Methode verfügbar ist.  
   
  **Syntax im einheitlichen Modus:**  
   

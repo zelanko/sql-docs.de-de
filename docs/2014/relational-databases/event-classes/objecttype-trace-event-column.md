@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -18,25 +17,25 @@ ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11726b01926ef5a7dff7157c901c7cbd73607564
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214756"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803752"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType (Spalte für Ablaufverfolgungsereignisse)
   Die ObjectType-Spalte wird für eine Vielzahl von Ablaufverfolgungsereignissen verwendet. In diesem Thema werden die möglichen Werte dieser Spalte und eine Definition des jeweiligen Wertes aufgeführt.  
   
 ## <a name="object-type-column-values"></a>Werte der ObjectType-Spalte  
   
-|value|Definition|  
+|Wert|Definition|  
 |-----------|----------------|  
 |8259|CHECK-Einschränkung|  
 |8260|Standard (Einschränkung oder eigenständig)|  
 |8262|FOREIGN KEY-Einschränkung|  
 |8272|Gespeicherte Prozedur|  
-|8274|Regel|  
+|8274|Rule|  
 |8275|Systemtabelle|  
 |8276|Trigger für Server|  
 |8277|Tabelle (benutzerdefiniert)|  
@@ -66,7 +65,7 @@ ms.locfileid: "48214756"
 |19283|ObfusKey|  
 |19521|Anmeldung mit asymmetrischem Schlüssel|  
 |19523|Anmeldung mit Zertifikat|  
-|19538|-Rolle|  
+|19538|Rolle|  
 |19539|SQL-Anmeldung|  
 |19543|Windows-Anmeldung|  
 |20034|Remotedienstbindung|  

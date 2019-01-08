@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65539
@@ -13,12 +13,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a960d003d998cfdd5d87009e7ef34f434d4f1d43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076795"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806942"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Indizes und Schlüssel (Dialogfeld) (Visual Database Tools)
   Mit diesem Dialogfeld können Sie Indizes, Primärschlüssel und eindeutige Schlüssel erstellen oder ändern. Um auf das Dialogfeld zuzugreifen, öffnen Sie die Tabellendefinition für die Tabelle mit dem Index oder Schlüssel. Klicken Sie mit der rechten Maustaste auf das Tabellendefinitions-Datenblatt, und klicken Sie dann auf **Indizes/Schlüssel**.  
@@ -26,7 +26,7 @@ ms.locfileid: "48076795"
 > [!NOTE]  
 >  Wenn die Tabelle zur Replikation veröffentlicht ist, müssen Sie mit der Transact-SQL-Anweisung [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) oder mit SMO (SQL Server Management Objects) Schemaänderungen ausführen. Wenn die Schemaänderungen mit dem Tabellen-Designer oder dem Datenbankdiagramm-Designer ausgeführt werden, wird versucht, die Tabelle zu entfernen und erneut zu erstellen. Da veröffentlichte Objekte nicht gelöscht werden können, schlägt die Schemaänderung fehl.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Ausgewählter Primärschlüssel/eindeutiger Schlüssel oder Index**  
  Listet die vorhandenen Primärschlüssel, eindeutigen Schlüssel und Indizes auf. Wenn Sie einen Index oder Schlüssel auswählen, werden dessen Eigenschaften rechts im Datenblatt angezeigt. Falls die Liste leer ist, sind für die Tabelle Indizes definiert worden.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48076795"
  Wenn diese Kategorie erweitert ist, werden die Eigenschaften **Spalten**, **Ist eindeutig**und **Typ**angezeigt.  
   
  **Spalten**  
- Listet die Sortierreihenfolgen auf, die für die im Schlüssel oder Index enthaltenen Spalten ausgewählt wurden, und bietet Zugriff auf ein Dialogfeld, in dem die Sortierreihenfolgen definiert werden können. Klicken Sie zum Anzeigen des Dialogfelds auf **Spalten** , und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (...), die rechts neben dem Eigenschaftenfeld angezeigt wird.  
+ Listet die Sortierreihenfolgen auf, die für die im Schlüssel oder Index enthaltenen Spalten ausgewählt wurden, und bietet Zugriff auf ein Dialogfeld, in dem die Sortierreihenfolgen definiert werden können. Klicken Sie zum Anzeigen des Dialogfelds auf **Spalten**, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (...), die rechts neben dem Eigenschaftenfeld angezeigt wird.  
   
  **Ist eindeutig**  
  Gibt an, ob in diesen Index oder Schlüssel eingegebene Daten eindeutig sein müssen. Diese Einstellung ist für XML-Indizes nicht verfügbar.  
@@ -55,7 +55,7 @@ ms.locfileid: "48076795"
  Zeigt den Namen des Schlüssels oder Indexes an. Wenn ein neuer Index erstellt wird, erhält dieser einen Standardnamen, der auf der Tabelle im aktiven Fenster des Tabellen-Designers basiert. Sie können den Namen jederzeit ändern.  
   
  **Beschreibung**  
- Ermöglicht die Eingabe einer Beschreibung des Schlüssels oder Index. Klicken Sie zum Erstellen einer detaillierteren Beschreibung auf **Beschreibung** , und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (**…**) rechts neben dem Eigenschaftenfeld. Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
+ Ermöglicht die Eingabe einer Beschreibung des Schlüssels oder Index. Klicken Sie zum Erstellen einer detaillierteren Beschreibung auf **Beschreibung**, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (**…**) rechts neben dem Eigenschaftenfeld. Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
   
  **Kategorie Tabellen-Designer**  
  Wenn diese Kategorie erweitert ist, werden Informationen zu **Als CLUSTERED erstellen**angezeigt.  

@@ -16,12 +16,12 @@ ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fbc636a4dcf67b6bdeaa17088405ffe079e50d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82e7d14acc5117da28b608e742ad34afa5b652a5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096960"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420331"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>Konsolidierte Berechtigungen (Master Data Services)
   Konsolidierte Berechtigungen beziehen sich auf die Attributwerte für alle konsolidierten Elemente einer Entität.  

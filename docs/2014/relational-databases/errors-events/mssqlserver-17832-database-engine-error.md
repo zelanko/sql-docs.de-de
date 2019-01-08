@@ -15,12 +15,12 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37ca0222975528efcd722ec3c39f84ca570fc08b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bda6c6038a4bdfce089d8523c2b4655d1b4d2d39
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186960"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362092"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
     
@@ -43,7 +43,7 @@ ms.locfileid: "48186960"
   
  Wenn das Token nicht ordnungsgemäß erstellt wurde oder während der Übertragung beschädigt wurde, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine weiteren Informationen über das Problem anbieten.  
   
- Wenn der Benutzer Mitglied zahlreicher Gruppen ist oder über zahlreiche Richtlinien verfügt, kann das Token bei ihrer Auflistung größer als üblich werden. Wenn das Token größer als der **MaxTokenSize**-Wert des Servercomputers wird, schlägt die Herstellung einer Verbindung durch den Client mit einem allgemeinen Netzwerkfehler (General Network Error, GNE) fehl, und es kann Fehler 17832 auftreten. Dieses Problem beeinflusst möglicherweise nur einige Benutzer: Benutzer mit vielen Gruppen oder Richtlinien. Wenn das Problem in dem **MaxTokenSize**-Wert des Servercomputers besteht, wird Fehler 17832 im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll von einem Fehler mit dem Status 9 begleitet. Weitere Einzelheiten zu Kerberos und **MaxTokenSize** finden Sie unter [KB327825](http://support.microsoft.com/kb/327825).  
+ Wenn der Benutzer Mitglied zahlreicher Gruppen ist oder über zahlreiche Richtlinien verfügt, kann das Token bei ihrer Auflistung größer als üblich werden. Wenn das Token größer als der **MaxTokenSize**-Wert des Servercomputers wird, schlägt die Herstellung einer Verbindung durch den Client mit einem allgemeinen Netzwerkfehler (General Network Error, GNE) fehl, und es kann Fehler 17832 auftreten. Dieses Problem beeinflusst möglicherweise nur einige Benutzer: Benutzer mit vielen Gruppen oder Richtlinien. Wenn das Problem in dem **MaxTokenSize**-Wert des Servercomputers besteht, wird Fehler 17832 im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll von einem Fehler mit dem Status 9 begleitet. Weitere Einzelheiten zu Kerberos und **MaxTokenSize** finden Sie unter [KB327825](https://support.microsoft.com/kb/327825).  
   
 ## <a name="user-action"></a>Benutzeraktion  
  Um dieses Problem zu beheben, erhöhen Sie den **MaxTokenSize**-Wert des Servercomputers so weit, dass er das größte Token aller Benutzer in der Organisation enthalten kann. Um die richtige Tokengröße für die Organisation zu ermitteln, ziehen Sie die Verwendung der Anwendung **Tokensz** in Erwägung.   
@@ -51,7 +51,7 @@ ms.locfileid: "48186960"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- **So ändern Sie die MaxTokenSize****auf dem Servercomputer**   
+ **So ändern Sie die MaxTokenSize****auf dem Servercomputer**  
   
 1.  Klicken Sie im Menü **Start** auf **Ausführen**.  
   

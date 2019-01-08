@@ -13,21 +13,21 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec157f7d9e0b793df6881b8fa8e110ec36838ed6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 674f6f53610c8bf864aba5a2b5c7310c10f969c2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078720"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376732"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Erzwingen des Starts eines Clusters ohne Quorum
   In diesem Thema wird beschrieben, wie der Start eines Windows Server-Failoverclustering-Clusterknotens ohne Quorum erzwungen wird.  Dies ist möglicherweise für die Notfallwiederherstellung sowie in Multisubnetzszenarien erforderlich, um Daten wiederherzustellen die hohe Verfügbarkeit für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] - und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen wieder vollständig einrichten zu können.  
   
--   **Vorbereitungen:**  [Empfehlungen](#Recommendations), [Sicherheit](#Security)  
+-   **Bevor Sie beginnen:**  [Empfehlungen](#Recommendations), [Sicherheit](#Security)  
   
--   **So erzwingen Sie den Start eines Clusters ohne Quorum:**  [Verwenden des Failovercluster-Managers](#FailoverClusterManagerProcedure), [Verwenden von PowerShell](#PowerShellProcedure), [Verwenden von Net.exe](#CommandPromptProcedure)  
+-   **So erzwingen Sie einen Cluster ohne Quorum zu starten:**  [Failovercluster-Manager](#FailoverClusterManagerProcedure), [mithilfe von Powershell](#PowerShellProcedure), [Verwenden von Net.exe](#CommandPromptProcedure)  
   
--   **Nachverfolgung:**  [Nachverfolgung: Nach dem Erzwingen des Clusterstarts ohne ein Quorum](#FollowUp)  
+-   **Zur Nachverfolgung:**  [Nachverfolgung: Nach dem Erzwingen des Clusterstarts ohne ein Quorum](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -43,11 +43,11 @@ ms.locfileid: "48078720"
   
 1.  Öffnen Sie einen Failovercluster-Manager, und stellen Sie eine Verbindung mit dem gewünschten Clusterknoten her, um dessen Onlineschaltung zu erzwingen.  
   
-2.  Klicken Sie im **Aktionsbereich** auf **Clusterstart erzwingen**, und klicken Sie dann auf **Ja – Start des Clusters erzwingen**.  
+2.  Klicken Sie im **Aktionsbereich** auf **Clusterstart erzwingen**, und klicken Sie dann auf **Yes - Force my cluster to start** (Ja, Start des Clusters erzwingen).  
   
 3.  Klicken Sie im linken Bereich in der Struktur **Failovercluster-Manager** auf den Clusternamen.  
   
-4.  Stellen Sie im Zusammenfassungsbereich sicher, dass für **Quorumkonfiguration** als aktueller Wert  **Warnung: Der Cluster wird im Status "ForceQuorum" ausgeführt**festgelegt ist.  
+4.  Klicken Sie im Zusammenfassungsbereich sicher, dass die aktuelle **Quorumkonfiguration** Wert ist:  **Warnung: Cluster wird im Status "ForceQuorum" ausgeführt**.  
   
 ##  <a name="PowerShellProcedure"></a> Verwenden von PowerShell  
   
@@ -59,9 +59,9 @@ ms.locfileid: "48078720"
   
 3.  Stellen Sie mithilfe von `Stop-ClusterNode` sicher, dass der Clusterdienst beendet wurde.  
   
-4.  Verwenden Sie `Start-ClusterNode` mit `–FixQuorum` , um den Start des Clusterdiensts zu erzwingen.  
+4.  Verwenden Sie `Start-ClusterNode` mit `-FixQuorum` , um den Start des Clusterdiensts zu erzwingen.  
   
-5.  Verwenden Sie `Get-ClusterNode` mit `–Propery NodeWieght = 1` , um den Wert festzulegen, mit dem gewährleistet wird, dass der Knoten ein Abstimmungselement des Quorums ist.  
+5.  Verwenden Sie `Get-ClusterNode` mit `-Propery NodeWieght = 1` , um den Wert festzulegen, mit dem gewährleistet wird, dass der Knoten ein Abstimmungselement des Quorums ist.  
   
 6.  Geben Sie die Clusterknoteneigenschaften in einem lesbaren Format aus.  
   
@@ -72,8 +72,8 @@ ms.locfileid: "48078720"
 Import-Module FailoverClusters  
   
 $node = "AlwaysOnSrv02"  
-Stop-ClusterNode –Name $node  
-Start-ClusterNode –Name $node -FixQuorum  
+Stop-ClusterNode -Name $node  
+Start-ClusterNode -Name $node -FixQuorum  
   
 (Get-ClusterNode $node).NodeWeight = 1  
   
@@ -102,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erzwingen des Clusterstarts ohne ein Quorum  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Erzwingen des Clusterstarts ohne ein Quorum  
   
 -   NodeWeight-Werte sind neu zu bewerten und zu konfigurieren, um vor der erneuten Onlineschaltung anderer Knoten ein neues Quorum korrekt erstellen zu können. Andernfalls wird für den Cluster u. U. wieder der Offlinemodus aktiviert.  
   
@@ -122,13 +122,13 @@ net.exe start clussvc /forcequorum
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](http://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
+-   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](https://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog-Failovercluster-Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog-Failovercluster-Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
  [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Konfigurieren von Cluster-Quorum-NodeWeight-Einstellungen](configure-cluster-quorum-nodeweight-settings.md)   
- [Failovercluster-Cmdlets in Windows PowerShell, aufgelistet nach Taskfokus](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [Failovercluster-Cmdlets in Windows PowerShell, aufgelistet nach Taskfokus](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
   
   

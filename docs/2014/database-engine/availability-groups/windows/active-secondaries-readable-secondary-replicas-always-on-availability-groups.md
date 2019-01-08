@@ -17,14 +17,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b35f34499100e8331f968d6f9297280451885290
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ac104808f5d4e0b2b612c8f3ebbd17f34fc6493
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169610"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358582"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)
+# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)
   Die Funktionen für aktive sekundäre Replikate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] umfassen Unterstützung für den schreibgeschützten Zugriff auf ein oder mehrere sekundäre Replikate (*lesbare sekundäre Replikate*). Lesbare sekundäre Replikate lassen den schreibgeschützten Zugriff auf alle eigenen sekundären Datenbanken zu. Bei lesbaren sekundären Datenbanken ist jedoch kein Schreibschutz festgelegt. Sie sind dynamisch. Eine sekundäre Datenbank wird geändert, wenn Änderungen an der zugehörigen primären Datenbank auf die sekundäre Datenbank angewendet werden. Bei einem typischen sekundären Replikat liegen die Daten in den sekundären Datenbanken nahezu in Echtzeit vor. Dies gilt auch für dauerhafte speicheroptimierte Tabellen. Weiterhin werden Volltextindizes mit den sekundären Datenbanken synchronisiert. In vielen Fällen beträgt die Datenlatenz zwischen einer primären Datenbank und der zugehörigen sekundären Datenbank nur wenige Sekunden.  
   
  Sicherheitseinstellungen, die in den primären Datenbanken auftreten, werden in den sekundären Datenbanken beibehalten. Dazu gehören Benutzer, Datenbankrollen und Anwendungsrollen sowie die jeweiligen zugehörigen Berechtigungen und die transparente Datenverschlüsselung (TDE), wenn diese in der primären Datenbank aktiviert ist.  
@@ -82,7 +82,7 @@ ms.locfileid: "48169610"
      Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Routing für eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
->  Weitere Informationen zu Verfügbarkeitsgruppenlistenern und zum schreibgeschützten Routing finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)besitzen.  
+>  Weitere Informationen zu Verfügbarkeitsgruppenlistenern und zum schreibgeschützten Routing finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
 ##  <a name="bkmk_LimitationsRestrictions"></a> Einschränkungen  
  Folgende Vorgänge werden nicht vollständig unterstützt:  
@@ -238,7 +238,7 @@ GO
     SELECT * FROM t_hk WITH (UPDLOCK)  
     ```  
   
--   Bei containerübergreifenden Transaktionen wird der Zugriff auf speicheroptimierte Tabellen für Transaktionen mit der Sitzungsisolationsstufe SNAPSHOT nicht unterstützt. Beispiel:  
+-   Bei containerübergreifenden Transaktionen momentaufnahmetransaktionen", die mit der Isolationsstufe für die Sitzung", dass der Zugriff durch Speicheroptimierte Tabellen wird nicht unterstützt. Beispiel:  
   
     ```tsql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
@@ -271,10 +271,10 @@ GO
   
     |Lesbares sekundäres Replikat?|Ist Momentaufnahmeisolation oder RCSI-Stufe aktiviert?|Primäre Datenbank|Sekundäre Datenbank|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |nein|nein|Keine Zeilenversionen oder 14-Byte-Mehraufwand|Keine Zeilenversionen oder 14-Byte-Mehraufwand|  
-    |nein|Benutzerkontensteuerung|Zeilenversionen und 14-Byte-Mehraufwand|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|  
-    |Benutzerkontensteuerung|nein|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
-    |Benutzerkontensteuerung|Benutzerkontensteuerung|Zeilenversionen und 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
+    |Nein|Nein|Keine Zeilenversionen oder 14-Byte-Mehraufwand|Keine Zeilenversionen oder 14-Byte-Mehraufwand|  
+    |Nein|Ja|Zeilenversionen und 14-Byte-Mehraufwand|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|  
+    |Ja|Nein|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
+    |Ja|Ja|Zeilenversionen und 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
   
 ##  <a name="bkmk_RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -292,7 +292,7 @@ GO
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   

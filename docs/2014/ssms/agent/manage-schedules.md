@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.manageschedules.f1
@@ -12,17 +12,17 @@ ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b0322dec826c7ecd45c31680320db199ae9bc32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213000"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794072"
 ---
 # <a name="manage-schedules"></a>Zeitpläne verwalten
   Ermöglicht Ihnen das Anzeigen und Ändern von Eigenschaften für Auftragszeitpläne des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verfügbare Zeitpläne**  
  Führt die für diesen Benutzer verfügbaren Zeitpläne auf. Ein Auftrag und ein Zeitplan müssen denselben Besitzer haben. Deshalb enthält die Liste nur Zeitpläne, die dem Besitzer des Auftrags gehören.  
   

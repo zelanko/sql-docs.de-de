@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices
@@ -13,12 +12,12 @@ ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70fb66a1b61dbbdec0fd8443ac150b32c3770818
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145525"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786142"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Bewährte Methoden für zeitbasierte Zeilenfilter
   Benutzer von Anwendungen benötigen häufig eine zeitbasierte Teilmenge der Daten in einer Tabelle. Ein Verkäufer könnte z. B. Daten zu Bestellungen der letzten Woche benötigen und ein Ereignisplaner Daten zu Ereignissen in der kommenden Woche. Anwendungen verwenden in diesen Fällen häufig Abfragen mit der `GETDATE()`-Funktion. Betrachten Sie die folgende Zeilenfilteranweisung:  
@@ -50,13 +49,13 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 ## <a name="recommendations-for-using-time-based-row-filters"></a>Empfehlungen für die Verwendung zeitbasierter Zeilenfilter  
  Die folgende Methode stellt einen leistungsfähigen und unkomplizierten Ansatz für die zeitbasierte Filterung bereit:  
   
--   Hinzufügen einer Spalte der Tabelle des Datentyps `bit`. Diese Spalte gibt an, ob eine Zeile repliziert werden soll.  
+-   Fügen Sie der Tabelle eine Spalte des `bit`-Datentyps hinzu. Diese Spalte gibt an, ob eine Zeile repliziert werden soll.  
   
 -   Verwenden Sie einen Zeilenfilter, der auf die neue Spalte und nicht auf eine zeitbasierte Spalte verweist.  
   
 -   Erstellen Sie einen SQL Server-Agent-Auftrag (oder einen Auftrag, der mithilfe eines anderen Mechanismus geplant wurde), der die Spalte vor der geplanten Ausführung des Merge-Agents aktualisiert.  
   
- Dieser Ansatz gleicht die Mängel bei der Verwendung von `GETDATE()` oder einer anderen zeitbasierten Methode und vermeidet das Problem zu bestimmen, wann Filter für Partitionen ausgewertet werden müssen. Betrachten Sie das folgende Beispiel einer **Events** -Tabelle:  
+ Dieser Ansatz gleicht die Mängel bei der Verwendung von `GETDATE()` oder einer anderen zeitbasierten Methode aus. Außerdem muss nicht bestimmt werden, wann Filter für Partitionen ausgewertet werden. Betrachten Sie das folgende Beispiel einer **Events** -Tabelle:  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replizieren**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
@@ -94,6 +93,6 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [GETDATE &#40;Transact-SQL&#41;](/sql/t-sql/functions/getdate-transact-sql)   
  [Implementieren von Aufträgen](../../../ssms/agent/implement-jobs.md)   
- [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)  
+ [Parametrisierte Zeilenfilter](parameterized-filters-parameterized-row-filters.md)  
   
   

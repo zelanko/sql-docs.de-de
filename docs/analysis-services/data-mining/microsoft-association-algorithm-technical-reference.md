@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b6b3d44410e4d3cf889bc99e7057b6c420f37d7a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 21f779f1e0b1764fd35d6399aa220e244574d576
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145905"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545592"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Association-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "50145905"
  Die Parameter für ein Miningmodell können Sie jederzeit mit dem Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ändern. Sie können Parameter auch programmgesteuert ändern, mit der <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> -Auflistung in AMO oder mit der [MiningModels-Element &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) in XMLA. In der folgenden Tabelle wird jeder Parameter beschrieben.  
   
 > [!NOTE]  
->  Sie können die Parameter in einem vorhandenen Modell nicht mit einer DMX-Anweisung ändern. Sie müssen die Parameter beim Erstellen des Modells in DMX CREATE MODEL oder ALTER STRUCTURE… ADD MODEL festlegen.  
+>  Sie können nicht die Parameter in einem vorhandenen Modell mithilfe einer DMX-Anweisung ändern; Sie müssen die Parameter in der DMX CREATE MODEL oder ALTER Structure… angeben... ADD MODEL festlegen.  
   
  *MAXIMUM_ITEMSET_COUNT*  
  Gibt die maximal zu erzeugende Anzahl von Itemsets an. Wird keine Anzahl angegeben, wird der Standardwert verwendet.  
@@ -102,7 +102,7 @@ ms.locfileid: "50145905"
  *MINIMUM_PROBABILITY*  
  Gibt die Mindestwahrscheinlichkeit an, dass eine Regel wahr ist.  
   
- Wenn Sie diesen Wert beispielsweise auf 0,5 festlegen, kann keine Regel mit einer Wahrscheinlichkeit von weniger als 50 Prozent generiert werden.  
+ Wenn Sie diesen Wert beispielsweise auf 0,5 festlegen, kann keine Regel mit einer Wahrscheinlichkeit von weniger als 50 Prozent generiert werden.  
   
  Der Standardwert ist 0,4.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "50145905"
  Gilt für die Miningstrukturspalte.  
   
  MODEL_EXISTENCE_ONLY  
- Dies bedeutet, dass die Spalte zwei mögliche Statuswerte haben kann: **Missing** und **Existing**. Ein NULL-Wert ist ein fehlender Wert.  
+ Dies bedeutet, dass für die Spalte zwei mögliche Zustände vorliegen können: **Fehlende** und **vorhandenen**. Ein NULL-Wert ist ein fehlender Wert.  
   
  Gilt für die Miningmodellspalte.  
   

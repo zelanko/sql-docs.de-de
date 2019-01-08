@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: d255d242fa2f5b8615c06097620d7e85e0b895fd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b248578015e8d821c3c76314ecbbabdf75600a52
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659209"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160528"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Was ist neu in SQL Server unter Linux
 
@@ -34,7 +34,7 @@ Vorschau der SQL Server-2019 wurde veröffentlicht. Dieser Artikel deckt nicht d
 - Unterstützung für native Linux-Pfade.
 - IPv6-Unterstützung.
 - Unterstützung für die Datenbankdateien auf NFS.
-- Aktiviert [Transparent Layer Security](sql-server-linux-encrypted-connections.md) (TLS)-Verschlüsselung.
+- Aktiviert [Transport Layer Security](sql-server-linux-encrypted-connections.md) (TLS)-Verschlüsselung.
 - Aktiviert [Active Directory-Authentifizierung](sql-server-linux-active-directory-authentication.md).
 - [Gruppen-Funktionen für Verfügbarkeit](sql-server-linux-availability-group-overview.md) für hohe Verfügbarkeit.
 - [Volltext-Suchdienst](sql-server-linux-setup-full-text-search.md) unterstützen.

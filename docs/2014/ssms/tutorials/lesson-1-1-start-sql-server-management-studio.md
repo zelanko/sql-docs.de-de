@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91b962fd3691aff2986db40f187557f54247b897
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94466dc6c069ced5b2743cbd8a14d98271303477
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159700"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373632"
 ---
 # <a name="start-sql-server-management-studio"></a>Starten von SQL Server Management Studio
   Zu Beginn dieses Lernprogramms geht es hauptsächlich um [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -24,12 +24,12 @@ ms.locfileid: "48159700"
   
 #### <a name="to-open-sql-server-management-studio"></a>So öffnen Sie SQL Server Management Studio  
   
-1.  Auf der **starten** Startmenü **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie dann auf **SQL Server Management Studio**.  
+1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie dann auf **SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist nicht standardmäßig installiert. Wenn [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nicht verfügbar ist, installieren Sie es, indem Sie Setup ausführen. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ist nicht verfügbar, mit [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express kann kostenlos von der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), weist jedoch eine andere Benutzeroberfläche als in diesem Tutorial beschrieben wird.  
+    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist nicht standardmäßig installiert. Wenn [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nicht verfügbar ist, installieren Sie es, indem Sie Setup ausführen. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ist nicht verfügbar, mit [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express kann kostenlos von der [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), weist jedoch eine andere Benutzeroberfläche als in diesem Tutorial beschrieben wird.  
   
-2.  Überprüfen Sie im Dialogfeld **Verbindung mit dem Server herstellen** die Standardeinstellungen, und klicken Sie dann auf **Verbinden**. Um eine Verbindung herzustellen, die **Servernamen** Feld muss den Namen des Computers enthalten, in denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist. Wenn die [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine benannte Instanz, die **Servernamen** Feld sollten auch den Instanznamen im Format enthalten \< *Computer_name* > \\ < *Instance_name*>.  
+2.  Überprüfen Sie im Dialogfeld **Verbindung mit dem Server herstellen** die Standardeinstellungen, und klicken Sie dann auf **Verbinden**. Damit die Verbindung hergestellt werden kann, muss das Feld **Servername** den Namen des Computers enthalten, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist. Wenn die [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine benannte Instanz, die **Servernamen** Feld sollten auch den Instanznamen im Format enthalten \< *Computer_name* > \\ < *Instance_name*>.  
   
 ## <a name="management-studio-components"></a>Management Studio-Komponenten  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] stellt seine Informationen in Fenstern bereit, die für die jeweils spezielle Art von Informationen vorgesehen sind. Datenbankinformationen werden im Fenster Objekt-Explorer sowie im Fenster für Dokumente angezeigt.  

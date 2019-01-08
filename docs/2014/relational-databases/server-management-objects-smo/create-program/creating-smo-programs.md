@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - Visual Basic [SMO]
@@ -18,12 +16,12 @@ ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 225701627364056264109b7ec7c4f0f30edae2a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ccf26cf30c53e3a336e842cbbffc1ff517075fef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198390"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807842"
 ---
 # <a name="creating-smo-programs"></a>Erstellen von SMO-Programmen
   Die allgemeinen Programmierungsaufgaben für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)-Objekte umfassen Bereiche, die allen Objekten gemein sind, wie z. B. das Ausführen von Methoden, das Einstellen von Eigenschaften oder die Bearbeitung von Auflistungen.  

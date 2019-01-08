@@ -20,12 +20,12 @@ ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e911f31751ed0ef2d6fedb17c1b79affde79eef3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 400b7ca37d5eef130df855b3519079e2ccc8799e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166160"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376122"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS)
   Sie können Zahlen und Datumsangaben in Datenbereichen formatieren, indem Sie im Dialogfeld **Eigenschaften** des betreffenden Datenbereichs auf der Seite **Zahl** ein Format auswählen.  
@@ -47,7 +47,7 @@ ms.locfileid: "48166160"
   
 -   Standardmäßig werden Zahlen so formatiert, dass sie die Kultureinstellungen auf dem Clientcomputer widerspiegeln. Geben Sie mithilfe von Formatzeichenfolgen an, wie Zahlen angezeigt werden, sodass die Formatierung unabhängig vom Aufenthaltsort der Person, die den Bericht anzeigt, einheitlich ist.  
   
--   Die auf der Seite **Zahl** angegebenen Formate bilden einen Teil der numerischen [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Standardformatzeichenfolgen. Zum Formatieren einer Zahl oder eines Datums mit einem benutzerdefinierten Format, das nicht im Dialogfeld angezeigt wird, können Sie beliebige [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolgen für Zahlen oder Datumsangaben verwenden. Weitere Informationen zu benutzerdefinierten Formatzeichenfolgen finden Sie auf MSDN im Thema [Formatierung von Typen](http://go.microsoft.com/fwlink/?LinkId=112024) .  
+-   Die auf der Seite **Zahl** angegebenen Formate bilden einen Teil der numerischen [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Standardformatzeichenfolgen. Zum Formatieren einer Zahl oder eines Datums mit einem benutzerdefinierten Format, das nicht im Dialogfeld angezeigt wird, können Sie beliebige [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolgen für Zahlen oder Datumsangaben verwenden. Weitere Informationen zu benutzerdefinierten Formatzeichenfolgen finden Sie auf MSDN im Thema [Formatierung von Typen](https://go.microsoft.com/fwlink/?LinkId=112024) .  
   
 -   Wenn eine benutzerdefinierte Formatzeichenfolge angegeben wurde, besitzt diese eine höhere Priorität als die kulturspezifischen Standardeinstellungen. Angenommen, Sie legen die benutzerdefinierte Formatzeichenfolge "#,###" fest, um die Zahl 1234 als 1,234 anzuzeigen. Für Benutzer in den Vereinigten Staaten hat diese Zeichenfolge eine andere Bedeutung als in Europa. Überlegen Sie vor dem Festlegen eines benutzerdefinierten Formats, wie sich das ausgewählte Format von Benutzern in unterschiedlichen Kulturen, die den Bericht möglicherweise anzeigen, verstanden werden kann.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48166160"
   
 -   Wenn Sie unter **Kategorie** die Option **Währung** auswählen und die Option **Werte anzeigen in**aktivieren, können Sie **Tausender**, **Millionen**oder **Milliarden** auswählen, um Zahlen in Finanzformaten anzuzeigen. Wenn der Feldwert zum Beispiel 1.789.905.394 lautet und Sie **Milliarden** auswählen und zwei Dezimalstellen angeben, wird im Bericht der Wert 1,78 angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Formatieren von Linien, Farben und Bildern (Berichts-Generator und SSRS)](images-report-builder-and-ssrs.md)   
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   

@@ -15,12 +15,12 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 31ff1f88e55905e8d67dd96c91cd80c8b6677fe2
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: fb50a9f9674e13c1032091fbae6da55170d44863
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905980"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374322"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Informationen zu URL-Reservierungen und Registrierungen (SSRS-Konfigurations-Manager)
   Anwendungen für URLs für Reporting Services werden als URL-Reservierungen in HTTP.SYS definiert. Eine URL-Reservierung definiert die Syntax eines URL-Endpunkts für eine Webanwendung. URL-Reservierungen werden sowohl für den Berichtsserver-Webdienst als auch für den Berichts-Manager beim Konfigurieren der Anwendungen auf dem Berichtsserver definiert. Beim Konfigurieren von URLs mit Setup oder mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool werden URL-Reservierungen automatisch für Sie erstellt:  
@@ -32,7 +32,7 @@ ms.locfileid: "48905980"
  Setup und das Tool weisen dem Berichtsserver-Dienst außerdem Berichtigungen für die URL zu, suchen nach doppelten Instanzen und fügen HTTP.SYS die URL-Reservierung hinzu. Erstellen oder ändern Sie URL-Reservierungen für Reporting Services niemals direkt mit HttpCfg.exe oder einem anderen Tool. Wenn Sie einen Schritt überspringen oder einen ungültigen Wert festlegen, kann es zu Problemen kommen, die schwer zu diagnostizieren oder zu beheben sind.  
   
 > [!NOTE]  
->  HTTP.SYS ist eine Komponente des Betriebssystems, die nach Netzwerkanforderungen lauscht und diese an eine Warteschlange für Anforderungen weiterleitet. In dieser Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]erstellt HTTP.SYS die Warteschlange für Anforderungen für den Berichtsserver-Webdienst und für den Berichts-Manager und verwaltet diese. Internetinformationsdienste (IIS) wird nicht mehr zum Hosten von oder Zugreifen auf [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen verwendet. Weitere Informationen über HTTP.SYS-Funktionen finden Sie unter [HTTP-Server-API](http://go.microsoft.com/fwlink/?LinkId=92652) auf MSDN.  
+>  HTTP.SYS ist eine Komponente des Betriebssystems, die nach Netzwerkanforderungen lauscht und diese an eine Warteschlange für Anforderungen weiterleitet. In dieser Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]erstellt HTTP.SYS die Warteschlange für Anforderungen für den Berichtsserver-Webdienst und für den Berichts-Manager und verwaltet diese. Internetinformationsdienste (IIS) wird nicht mehr zum Hosten von oder Zugreifen auf [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen verwendet. Weitere Informationen über HTTP.SYS-Funktionen finden Sie unter [HTTP-Server-API](https://go.microsoft.com/fwlink/?LinkId=92652) auf MSDN.  
   
 ##  <a name="ReportingServicesURLs"></a> URLs in Reporting Services  
  In einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation können Sie über URLs auf die folgenden Tools, Anwendungen und Elemente zugreifen:  
@@ -51,7 +51,7 @@ ms.locfileid: "48905980"
 >  In diesem Thema wird nicht der URL-Zugriff auf den Berichts-Generator oder auf bestimmte Berichte beschrieben, die auf dem Berichtsserver gespeichert sind. Weitere Informationen zum URL-Zugriff auf diese Elemente finden Sie in der [-Onlinedokumentation unter](../access-report-server-items-using-url-access.md) Zugreifen auf Berichtsserverelemente über den URL-Zugriff [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="URLreservation"></a> Registrierung und Reservierung für URLs  
- Eine URL-Reservierung definiert die URLs, über die auf eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendung zugegriffen werden kann. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reserviert mindestens eine URL für den Berichtsserver-Webdienst und für den Berichts-Manager in HTTP.SYS und registriert diese, wenn der Dienst gestartet wird. Die URLs für den Berichts-Generator und die Berichte basieren auf der URL-Reservierung für den Berichtsserver-Webdienst. Sie können Berichts-Generator oder Berichte über den Webdienst öffnen, indem Sie Parameter an die URL anfügen. Reservierungen und Registrierungen werden von HTTP.SYS bereitgestellt. Weitere Informationen finden Sie unter [Namespacereservierungen, Registrierung und Routing](http://go.microsoft.com/fwlink/?LinkId=92653) auf MSDN.  
+ Eine URL-Reservierung definiert die URLs, über die auf eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendung zugegriffen werden kann. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reserviert mindestens eine URL für den Berichtsserver-Webdienst und für den Berichts-Manager in HTTP.SYS und registriert diese, wenn der Dienst gestartet wird. Die URLs für den Berichts-Generator und die Berichte basieren auf der URL-Reservierung für den Berichtsserver-Webdienst. Sie können Berichts-Generator oder Berichte über den Webdienst öffnen, indem Sie Parameter an die URL anfügen. Reservierungen und Registrierungen werden von HTTP.SYS bereitgestellt. Weitere Informationen finden Sie unter [Namespacereservierungen, Registrierung und Routing](https://go.microsoft.com/fwlink/?LinkId=92653) auf MSDN.  
   
  Bei der*URL-Reservierung* wird ein URL-Endpunkt für eine Webanwendung erstellt und in HTTP.SYS gespeichert. HTTP.SYS ist das allgemeine Repository für alle URL-Reservierungen, die auf einem Computer definiert wurden, und definiert eine Reihe allgemeiner Regeln für eindeutige URL-Reservierungen.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48905980"
   
  Wenn Sie den Dienst anhalten oder die Anwendungsdomäne des Webdiensts oder des Berichts-Managers wiederverwenden, wird die Registrierung der URLs aufgehoben. Wenn Sie eine URL-Reservierung ändern, während der Dienst ausgeführt wird, wird die Anwendungsdomäne  vom Berichtsserver unmittelbar wiederverwendet, um die Registrierung der alten URL aufzuheben und die Verwendung einer neuen URL zu ermöglichen.  
   
- Mit einigen einfachen Beispielen werden das Konzept der URL-Reservierung und der Zusammenhang mit URL-Adressen für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen veranschaulicht. Ein wichtiger Punkt zu beachten ist, dass die URL-Reservierung andere Syntax als die URL, die Sie verwenden verfügt, um die Anwendung zugreifen:  
+ Mit einigen einfachen Beispielen werden das Konzept der URL-Reservierung und der Zusammenhang mit URL-Adressen für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen veranschaulicht. Beachten Sie, dass die URL-Reservierung eine andere Syntax aufweist als die URL, mit der Sie auf die Anwendung zugreifen:  
   
 |URL-Reservierung in HTTP.SYS|URL|Erklärung|  
 |---------------------------------|---------|-----------------|  

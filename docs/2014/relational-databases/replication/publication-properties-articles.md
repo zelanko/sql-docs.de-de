@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.articles.f1
@@ -13,12 +12,12 @@ ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 74fb3d14d9b4776cc7085b45bbf19c55de88d4ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f46fbc99145f9a372a2c1bf5d40919b87c782454
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136970"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804362"
 ---
 # <a name="publication-properties-articles"></a>Veröffentlichungseigenschaften (Registerkarte Artikel)
   Die Seite **Artikel** des Dialogfelds **Veröffentlichungseigenschaften** enthält Informationen zu den in einer Veröffentlichung enthaltenen Artikeln. Auf dieser Seite können Sie Artikel per Drag und Drop aus vorhandenen Veröffentlichungen hinzufügen sowie Artikeleigenschaften und Filtereinstellungen für Spalten ändern.  
@@ -48,7 +47,7 @@ ms.locfileid: "48136970"
 ## <a name="column-filters"></a>Spaltenfilter  
  Die Spalten auf dieser Seite können Sie filtern, indem Sie im Bereich **Zu veröffentlichende Objekte** eine Tabelle erweitern und dann nur die erforderlichen Spalten auswählen (Zeilen können auf der Seite **Tabellenzeilen filtern** dieses Assistenten gefiltert werden). Das Filtern von Spalten kann aus verschiedenen Gründen nützlich sein, darunter aus Sicherheitsgründen (um zu vermeiden, dass vertrauliche Daten ungewollt repliziert werden) oder aus Leistungsgründen (um beispielsweise die Replikation großer BLOB-Spalten zu vermeiden). Weitere Informationen zum Filtern von Spalten, einschließlich einer Liste von Spaltentypen, die nicht gefiltert werden können, finden Sie unter [Filtern von veröffentlichten Daten](publish/filter-published-data.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Im Bereich **Zu veröffentlichende Objekte** können Sie folgende Schritte ausführen:  
   
 -   Anzeigen aller für die Replikation verfügbaren Objekte.  

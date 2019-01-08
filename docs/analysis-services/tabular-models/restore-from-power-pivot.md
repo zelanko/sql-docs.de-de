@@ -1,5 +1,5 @@
 ---
-title: Wiederherstellen von PowerPivot | Microsoft Docs
+title: Wiederherstellen von PowerPivot in Analysis Services | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f95c1e891a218af73eb7c5bacbd1ea5a48e3a830
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 75290c6b877c3bb10cd42fbb10f1c087310791d3
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041925"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072772"
 ---
 # <a name="restore-from-power-pivot"></a>Wiederherstellen von PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34041925"
 5.  Lassen Sie unter **Optionen**das Kontrollkästchen **Sicherheitsinformationen einschließen** aktiviert. Diese Einstellung gilt nicht beim Wiederherstellen von Daten aus einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tabellenmodell-Datenbanken](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
+ [Datenbanken für tabellarische Modelle](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
  [Importieren aus PowerPivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
   
   

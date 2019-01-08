@@ -12,12 +12,12 @@ ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed705d084bc1c6e5b8d06e4a68e4dbe77f67a2b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4eead93b1c2254ee9634ef5a05b1cd5d60ce079f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115650"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375382"
 ---
 # <a name="array-parameter-sample"></a>Beispiel für einen Arrayparameter
   In bestimmten Situationen ist es hilfreich, eine Zeilenmenge zu erstellen, zu aktualisieren oder zu löschen. Für die Durchführung dieser Aufgabe gibt es mehrere Ansätze. Einer diese Ansätze besteht darin, ein Array mit Informationen mithilfe eines benutzerdefinierten Datentyps der CLR-Integration (Common Language Runtime) von einem Client an eine gespeicherte Prozedur der CLR-Integration auf dem Server zu übergeben. Aufgrund der Eigenschaften dieser benutzerdefinierten Datentypen ist die für den Server bereitgestellte Datenmenge auf 8000 Bytes begrenzt. Aus diesem Grund eignet sich dieser Ansatz nicht für große oder komplexe Datenmengen. Wenn die bearbeitete Datenmenge klein und übersichtlich ist, kann dieser Ansatz deutlich effizienter sein als das Aufrufen einer gespeicherten Prozedur pro Zeile. Durch Übergeben eines Arrays wird die Reihenfolge der Daten für Anwendungen beibehalten, wenn die Reihenfolge wichtig ist. Inhalt dieses Beispiels:  
@@ -31,9 +31,9 @@ ms.locfileid: "48115650"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](http://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](https://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
   
--   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](http://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
+-   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
 -   .NET Framework SDK 2.0 oder höher oder Microsoft Visual Studio 2005 oder höher. Das .NET Framework SDK ist kostenlos erhältlich.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48115650"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie die `ALTER SETTINGS`-Serverberechtigung, die Mitglieder der festen Serverrollen `sysadmin` und `serveradmin` implizit erhalten.  
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48115650"
   
 5.  Erstellen Sie in c:\MySample die Datei `Program.vb` (für das Visual Basic-Beispiel) oder `Program.cs` (für das C#-Beispiel), und kopieren Sie den entsprechenden Visual Basic- oder C#-Beispielcode (unten) in die Datei.  
   
-6.  Suchen Sie die entsprechende Zeile in der Datei Program (Nähe von Zeile 24), und Ersetzen `XXX` mit dem Namen Ihrer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+6.  Suchen Sie die entsprechende Zeile in der Datei Program (in der Nähe von Zeile 24), und ersetzen Sie `XXX` durch den Namen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
     -   `Dim connection As New SqlConnection("data source=XXX;initial catalog=AdventureWorks;Integrated Security=SSPI")`  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48115650"
 ## <a name="sample-code"></a>Beispielcode  
  Die Codelistings für dieses Beispiel lauten wie folgt.  
   
- Dies ist der Code für das Bibliotheks-`ContactTypeNames.`  
+ Dies ist der Code für die Bibliothek `ContactTypeNames.`  
   
  C#  
   

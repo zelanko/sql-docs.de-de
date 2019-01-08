@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ceca358e47a2cabbe01e64498d61603717a0d370
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643818"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419251"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Konfigurieren von Einstellungen für den Data Migration Assistant
 
@@ -40,7 +40,7 @@ Achten Sie darauf, dass Sie eine Kopie der ursprünglichen Konfigurationsdatei z
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Anzahl der Datenbanken parallel bewerten
 
-Data Migration Assistant bewertet wird, mehrere Datenbanken gleichzeitig. Während der Bewertung extrahiert Data Migration Assistant datenebenenanwendung (DACPAC-Datei), das Datenbankschema zu verstehen. Dieser Vorgang kann, wenn mehrere Datenbanken auf demselben Server parallel bewertet werden. 
+Data Migration Assistant bewertet wird, mehrere Datenbanken gleichzeitig. Während der Bewertung extrahiert Data Migration Assistant datenebenenanwendung (DACPAC-Datei), das Datenbankschema zu verstehen. Dieser Vorgang kann, wenn mehrere Datenbanken auf demselben Server parallel bewertet werden. 
 
 Data Migration Assistant v2. 0 ab, können Sie dies steuern durch Festlegen der ParallelDatabases Konfigurationswert. Standardwert ist 8.
 
@@ -70,7 +70,7 @@ Data Migration Assistant v2. 0 ab, wenn Sie dieses Problem auftreten, können Si
 
 <workflowSettings>
 
-<migration parallelDatabases=”8″ />
+<migration parallelDatabases="8″ />
 
 </workflowSettings>
 
@@ -87,22 +87,22 @@ Während der Bewertung extrahiert Data Migration Assistant datenebenenanwendung 
 
 - "CommandTimeout"
 
-   Dieser Parameter wird die Eigenschaft IDbCommand.CommandTimeout *Sekunden*. (Standard = 60)
+   Dieser Parameter wird die Eigenschaft IDbCommand.CommandTimeout *Sekunden*. (Standard = 60)
 
 - databaseLockTimeout
 
-   Dieser Parameter entspricht dem [SPERRE festgelegt\_TIMEOUT Timeout\_Zeitraum](../t-sql/statements/set-lock-timeout-transact-sql.md) in *Millisekunden*. (Standard = 5000)
+   Dieser Parameter entspricht dem [SPERRE festgelegt\_TIMEOUT Timeout\_Zeitraum](../t-sql/statements/set-lock-timeout-transact-sql.md) in *Millisekunden*. (Standard = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Dieser Parameter legt fest, die Anzahl der SQL-Verbindung-Pool-Verbindungen, die verwendet wird. (Standard = 8)
+  Dieser Parameter legt fest, die Anzahl der SQL-Verbindung-Pool-Verbindungen, die verwendet wird. (Standard = 8)
 
 ```
 <advisorGroup>
 
 <advisorSettings>
 
-<dacFx  commandTimeout="60" databaseLockTimeout="5000"
+<dacFx  commandTimeout="60" databaseLockTimeout="5000"
 maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorSettings>
@@ -110,7 +110,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Empfehlung Schwellenwert
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database an: Schwellenwert für die Empfehlung
 
 Mit [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), Sie können dynamisches stretching von warmen und kalten Transaktionsdaten von Microsoft SQL Server 2016 nach Azure. Stretch Database ist für Transaktionsdatenbanken mit großen Mengen an inaktiven Daten gedacht. Die Stretch Database-Empfehlung, unter der Empfehlung des Speicher-Feature, identifiziert zunächst die Tabellen, dass sie annimmt, dass von dieser Funktion profitieren, und ermittelt es Änderungen, die vorgenommen werden, um die Tabelle für dieses Feature aktivieren möchten.
 
@@ -121,7 +121,7 @@ Data Migration Assistant v2. 0 ab, können Sie diesen Schwellenwert für eine Ta
 
 <advisorSettings>
 
-<stretchDBAdvisor  recommendedNumberOfRows="100000" />
+<stretchDBAdvisor  recommendedNumberOfRows="100000" />
 
 </advisorSettings>
 
@@ -136,7 +136,7 @@ Sie können steuern, die [SQL-Verbindungstimeout](https://msdn.microsoft.com/lib
 ```
 <appSettings>
 
-<add key="ConnectionTimeout" value="15" />
+<add key="ConnectionTimeout" value="15" />
 
 </appSettings>
 ```

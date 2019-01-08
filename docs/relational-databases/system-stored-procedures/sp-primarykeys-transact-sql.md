@@ -18,12 +18,12 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d994e44e3db00921ca184ed063bcf1bdff487297
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 484890cfe30ace1c65ea45fe2d9e447a6396b52e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753598"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591454"
 ---
 # <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +43,16 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@table_server =** ] **"*** Table_server"*  
+ [  **@table_server =** ] **"**_Table_server"_  
  Der Name des Verbindungsservers, von dem Primärschlüsselinformationen zurückgegeben werden sollen. *Table_server* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@table_name =** ] **"***Table_name***"**  
+ [  **@table_name =** ] **"**_Table_name_**"**  
  Der Name der Tabelle, für die Primärschlüsselinformationen bereitgestellt werden sollen. *TABLE_NAME*ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@table_schema =** ] **"***Table_schema***"**  
+ [  **@table_schema =** ] **"**_Table_schema_**"**  
  Das Tabellenschema. *TABLE_SCHEMA* ist **Sysname**, hat den Standardwert NULL. In der Umgebung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dies dem Tabellenbesitzer.  
   
- [  **@table_catalog =** ] **"***Table_catalog***"**  
+ [  **@table_catalog =** ] **"**_Table_catalog_**"**  
  Der Name des Katalogs, zu dem das angegebene *Table_name* befindet. In der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Umgebung entspricht dies dem Datenbanknamen. *TABLE_CATALOG* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

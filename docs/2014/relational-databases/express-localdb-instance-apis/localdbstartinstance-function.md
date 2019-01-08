@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBStartInstance
@@ -18,12 +16,12 @@ ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 99bec66e77a8ac5fd742ffb85b6f87dfefe88510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad86f5989fe9ff90132637d062b708423f23eef1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159560"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799642"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance-Funktion
   Startet die angegebene SQL Server Express LocalDB-Instanz.  
@@ -111,10 +109,10 @@ HRESULT LocalDBStartInstance(
   
 |Puffer|Puffergröße|Sinn|Aktion|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|Benutzer will die Instanz starten und benötigt keinen Pipenamen.|Startet eine Instanz (keine Piperückgabe und keine erforderliche Puffergrößenrückgabe).|  
+|NULL|NULL|Benutzer möchte die Instanz starten und benötigt keinen Pipenamen Name.|Startet eine Instanz (keine Piperückgabe und keine erforderliche Puffergrößenrückgabe).|  
 |NULL|Vorhanden|Benutzer fragt nach der Ausgabepuffergröße. (Im nächsten Aufruf bittet der Benutzer wahrscheinlich um einen tatsächlichen Start.)|Gibt eine erforderliche Puffergröße (kein Start und keine Piperückgabe) zurück. Ergebnis ist S_OK.|  
 |Vorhanden|NULL|Nicht zulässig; falsche Eingabe.|Das zurückgegebene Ergebnis ist LOCALDB_ERROR_INVALID_PARAMETER.|  
-|Vorhanden|Vorhanden|Der Benutzer möchte die Instanz starten und benötigt den Pipenamen, zu dem nach dem Start eine Verbindung hergestellt wird.|Überprüft die Puffergröße, startet die Instanz und gibt den Pipenamen im Puffer zurück. <br />Das Puffergrößenargument gibt die Länge der Zeichenfolge "server=" zurück, jedoch ohne nachfolgende Nullen.|  
+|Vorhanden|Vorhanden|Der Benutzer möchte die Instanz starten und benötigt den Pipenamen, zu dem nach dem Start eine Verbindung hergestellt wird.|Überprüft die Puffergröße, startet die Instanz und gibt den Pipenamen im Puffer zurück. <br />Das puffergrößenargument gibt die Länge zurück. die "Server =" Zeichenfolge nicht mit einer NULL-Werte zu beenden.|  
   
  Ein Codebeispiel, in dem die LocalDB-API verwendet wird, finden Sie unter [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   

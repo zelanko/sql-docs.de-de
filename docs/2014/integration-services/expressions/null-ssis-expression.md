@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - NULL function
@@ -14,12 +13,12 @@ ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6659b9390f52bc27c52f82b875d50da3fd37b5ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 379706092613ae7fa3f53fccb493bf756d656b01
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102933"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823294"
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS-Ausdruck)
   Gibt einen NULL-Wert eines angeforderten Datentyps zurück.  
@@ -53,7 +52,7 @@ NULL(typespec)
 |DT_TEXT|*codepage*|(DT_TEXT,1252) wandelt einen Wert mithilfe der 1252-Codepage in den DT_TEXT-Datentyp um.|  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  
- In diesen Beispielen wird der NULL-Wert der Datentypen zurückgegeben: DT_STR, DT_DATE und DT_BOOL.  
+ In diesen Beispielen wird die null-Wert der Datentypen zurückgegeben: DT_STR, DT_DATE und DT_BOOL.  
   
 ```  
 NULL(DT_STR,10,1252)  

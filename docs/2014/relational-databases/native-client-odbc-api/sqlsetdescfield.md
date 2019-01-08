@@ -12,12 +12,12 @@ ms.assetid: de4bed15-15be-4825-994c-1046255e725a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64eb7b3dc6f058d5f061f4c015105ba4fc44f183
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f65c26e1c6b9588b770acf1a66409dfde8ea1072
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206760"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362124"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
   SQLSetDescField kann verwendet werden, um deskriptorfelder für Tabellenwertparameter und Tabellenwertparameter-Spalten festzulegen. Weitere Informationen zu den verfügbaren Feldern finden Sie unter [Deskriptorfelder für Tabellenwertparameter-Parameter](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md) und [Deskriptorfelder für Tabellenwertparameter-Parameter enthaltene Spalten](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "48206760"
  Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlsetdescfield-support-for-enhanced-date-and-time-features"></a>SQLSetDescField-Unterstützung für erweiterte Funktionen zu Datum und Uhrzeit  
- Datum/Uhrzeit-Funktionen wurden in ODBC verbessert. Informationen zu den für die neuen Datums-/Uhrzeittypen verfügbare Deskriptorfeld finden Sie unter [Parameter- und Ergebnismetadaten](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Datum/Uhrzeit-Funktionen wurden in ODBC verbessert. Informationen über das für die neuen Datum/Uhrzeittypen verfügbare Deskriptorfeld finden Sie unter [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
  Weitere Informationen finden Sie unter [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48206760"
  Weitere Informationen finden Sie unter [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLSetDescField](http://go.microsoft.com/fwlink/?LinkId=80705)   
+ [SQLSetDescField](https://go.microsoft.com/fwlink/?LinkId=80705)   
  [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
   
   

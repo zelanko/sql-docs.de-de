@@ -11,12 +11,12 @@ ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4e47b2cc13c05438ce38d1b6f63bcbcb357c60d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24804b6233e701ef0c27f113a294987156b6174c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211950"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363372"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer XML-Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ "XML" basiert. Dieser integrierte Datenquellentyp basiert auf der XML-Datenerweiterung. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit XML-Dokumenten, Webdiensten oder in die Abfrage eingebetteten XML-Daten herzustellen und Daten abzurufen.  
@@ -32,11 +32,11 @@ ms.locfileid: "48211950"
   
 |XML-Dokumenttyp|Beispiel für Verbindungszeichenfolge|  
 |-----------------------|-------------------------------|  
-|Webdienst|`http://adventure-works.com/results.aspx`|  
+|-Webdienst|`http://adventure-works.com/results.aspx`|  
 |XML-Dokument|`http://localhost/XML/Customers.xml`|  
 |Eingebettetes XML-Dokument|*Leer*|  
   
- Weitere Beispiele für Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ Weitere Informationen sowie Beispiele für Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ##  <a name="Credentials"></a> Anmeldeinformationen  
  Anmeldeinformationen sind erforderlich, um Abfragen auszuführen und den Bericht lokal oder vom Berichtsserver aus in der Vorschau anzuzeigen.  
@@ -47,7 +47,7 @@ ms.locfileid: "48211950"
   
 -   Aktueller Windows-Benutzer (auch bekannt als integrierte Sicherheit).  
   
--   Anmeldeinformationen sind nicht erforderlich. Wenn Sie keine Anmeldeinformationen auswählen, wird der anonyme Zugriff verwendet. Stellen Sie sicher, dass für die Verbindung des Berichtsservers mit einer externen Datenquelle ein Konto für die unbeaufsichtigte Ausführung definiert ist. Die XML-Datenverarbeitungserweiterung übergibt keine Anmeldeinformationen an die Ziel-URL oder den Webdienst. Die Verbindung wird nur dann hergestellt, wenn Sie das Konto für die unbeaufsichtigte Ausführung definiert haben. Weitere Informationen finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312) auf msdn.microsoft.com.  
+-   Anmeldeinformationen sind nicht erforderlich. Wenn Sie keine Anmeldeinformationen auswählen, wird der anonyme Zugriff verwendet. Stellen Sie sicher, dass für die Verbindung des Berichtsservers mit einer externen Datenquelle ein Konto für die unbeaufsichtigte Ausführung definiert ist. Die XML-Datenverarbeitungserweiterung übergibt keine Anmeldeinformationen an die Ziel-URL oder den Webdienst. Die Verbindung wird nur dann hergestellt, wenn Sie das Konto für die unbeaufsichtigte Ausführung definiert haben. Weitere Informationen finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=121312) auf msdn.microsoft.com.  
   
  Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden nicht unterstützt. Wenn Sie die integrierte Sicherheit von Windows deaktiviert haben, können Sie sie nicht zum Abrufen von Daten verwenden. Wenn Sie gespeicherte Anmeldeinformationen oder auf Anforderung einzugebende Anmeldeinformationen angeben, tritt ein Laufzeitfehler auf.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "48211950"
   
  Die möglichen Werte einer Datasetabfrage für eine Datenquelle vom Typ "XML" sind unten dargestellt.  
   
--   *Leere*: eine leere Abfrage zu verwenden, um ein Standardresultset zu erstellen. Die Standardabfrage wird erstellt, indem die Datenquelle gelesen und die XML-Knotenhierarchie bis zur ersten Blattauflistung durchsucht wird. Das Resultset enthält alle Knoten mit Textwerten und alle Knotenattribute unter diesem Pfad. Die Spalten im Resultset werden den Feldern für das Dataset zugeordnet.  
+-   *Leere*: Verwenden Sie eine leere Abfrage, um ein Standardresultset zu erstellen. Die Standardabfrage wird erstellt, indem die Datenquelle gelesen und die XML-Knotenhierarchie bis zur ersten Blattauflistung durchsucht wird. Das Resultset enthält alle Knoten mit Textwerten und alle Knotenattribute unter diesem Pfad. Die Spalten im Resultset werden den Feldern für das Dataset zugeordnet.  
   
--   Elementpfad: Gibt an, die Sequenz von Knoten, die beim Abrufen von XML-Daten aus der Datenquelle verwendet.  
+-   Elementpfad: Gibt die Sequenz von Knoten an, die beim Abrufen von XML-Daten aus der Datenquelle verwendet wird.  
   
--   Ein XML-Abfrageelement: eine XML-Abfragespezifikation mit den folgenden optionalen Elementen:  
+-   Ein XML-Abfrageelement: Eine XML-Abfragespezifikation mit den folgenden optionalen Elementen:  
   
     -   **Für einen Webdienst:**  
   
@@ -108,9 +108,9 @@ ms.locfileid: "48211950"
   
          `<ElementPath IgnoreNamespaces="true">`  *Elementpfad*  `</ElementPath>`  
   
- Weitere Informationen zur Abfragesyntax finden Sie unter [XML-Abfragesyntax für XML-Berichtsdaten &#40;SSRS&#41;](report-data-ssrs.md) in der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312) auf msdn.microsoft.com.  
+ Weitere Informationen zur Abfragesyntax finden Sie unter [XML-Abfragesyntax für XML-Berichtsdaten &#40;SSRS&#41;](report-data-ssrs.md) in der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=121312) auf msdn.microsoft.com.  
   
- Beispiele finden Sie unter [Reporting Services: Verwenden von XML und Webdienst-Datenquellen](http://go.microsoft.com/fwlink/?LinkId=81654).  
+ Beispiele finden Sie in [Reporting Services: Verwenden von XML- und Webdienstdatenquellen](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Anforderungen für das Abrufen von XML-Webdienstdaten  
  Die XML-Datenverarbeitungserweiterung kann das Schema nicht selbstständig erkennen. Daher müssen Sie über eine Möglichkeit verfügen, die SOAP-Methoden zu ermitteln, mit denen die gewünschten Daten abgerufen werden können. Sie müssen außerdem wissen, welches Adressierungsschema oder welchen Namespace der Webdienst für seine Daten verwendet.  
@@ -124,7 +124,7 @@ ms.locfileid: "48211950"
   
  Zum Angeben eines Elementpfads können Sie eine XQuery-ähnliche XML-Syntax verwenden.  
   
- Weitere Informationen finden Sie unter [Syntax für Elementpfade für XML-Berichtsdaten &#40;SSRS&#41;](element-path-syntax-for-xml-report-data-ssrs.md) in der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312) auf msdn.microsoft.com.  
+ Weitere Informationen finden Sie unter [Syntax für Elementpfade für XML-Berichtsdaten &#40;SSRS&#41;](element-path-syntax-for-xml-report-data-ssrs.md) in der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=121312) auf msdn.microsoft.com.  
   
 ##  <a name="Parameters"></a> Parameter  
  Die Abfrage wird nicht analysiert, um Parameter zu identifizieren.  
@@ -160,7 +160,7 @@ ms.locfileid: "48211950"
  [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Enthält Informationen zur von der Abfrage generierten Datasetfeldauflistung.  
   
- [Von Reporting Services unterstützte Datenquellen (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312) zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Von Reporting Services unterstützte Datenquellen (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=121312) zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Enthält ausführliche Informationen zur Plattform- und Versionsunterstützung für die einzelnen Datenerweiterungen.  
   
 ## <a name="see-also"></a>Siehe auch  

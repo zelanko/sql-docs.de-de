@@ -5,8 +5,7 @@ ms.date: 08/29/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changepublication
@@ -17,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e80f468f917a240981fc6e4c16df862d72084541
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670169"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209129"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +59,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Anonyme Abonnements können für die Veröffentlichung nicht erstellt werden. Kann für Peer-zu-Peer-Veröffentlichungen nicht geändert werden.|  
 |**allow_initialize_from_backup**|**true**|Abonnenten können ein Abonnement für diese Veröffentlichung aus einer Sicherung statt aus einer Anfangsmomentaufnahme initialisieren. Diese Eigenschaft kann nicht geändert werden, für nicht -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Veröffentlichungen.|  
 ||**false**|Abonnenten müssen die Anfangsmomentaufnahme verwenden. Diese Eigenschaft kann für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichungen nicht geändert werden.|  
-|**allow_partition_switch**|**true**|ALTER TABLE…SWITCH-Anweisungen können für die veröffentlichte Datenbank ausgeführt werden. Weitere Informationen finden Sie unter [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-||**false**|ALTER TABLE…SWITCH-Anweisungen können nicht für die veröffentlichte Datenbank ausgeführt werden.|  
+|**allow_partition_switch**|**true**|ALTER TABLE... SWITCH-Anweisungen können für die veröffentlichte Datenbank ausgeführt werden. Weitere Informationen finden Sie unter [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+||**false**|ALTER TABLE... SWITCH-Anweisungen können nicht für die veröffentlichte Datenbank ausgeführt werden.|  
 |**allow_pull**|**true**|Pullabonnements sind für die angegebene Veröffentlichung zulässig. Diese Eigenschaft kann für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichungen nicht geändert werden.|  
 ||**false**|Pullabonnements sind für die angegebene Veröffentlichung nicht zulässig. Diese Eigenschaft kann für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichungen nicht geändert werden.|  
 |**allow_push**|**true**|Pushabonnements sind für die angegebene Veröffentlichung zulässig.|  
@@ -93,7 +92,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Synchronisierungsdateien werden nur erstellt, wenn neue Abonnements vorhanden sind. Abonnenten können nicht die Synchronisierungsdateien nach der Abonnierung erhalten, bis der Momentaufnahme-Agent gestartet wird und abgeschlossen wurde.|  
 |**independent_agent**|**true**|Die Veröffentlichung verfügt über ihren eigenen dedizierten Verteilungs-Agent.|  
 ||**false**|Die Veröffentlichung verwendet einen freigegebenen Verteilungs-Agent, und jedes Paar aus Veröffentlichungsdatenbank und Abonnementdatenbank verfügt über einen freigegebenen Agent.|  
-|**p2p_continue_onconflict**|**true**|Der Verteilungs-Agent setzt bei Erkennung eines Konflikts die Verarbeitung von Änderungen fort.<br /> **Vorsicht:** es wird empfohlen, dass Sie den Standardwert verwenden `FALSE`. Wenn diese Option festgelegt ist, um `TRUE`, den Verteilungs-Agent versucht, die Datenkonvergenz in der Topologie durch Anwenden von die Konfliktzeile aus dem Knoten mit der höchsten Absender-ID. Bei dieser Methode ist keine Konvergenz garantiert. Sie sollten sicherstellen, dass die Topologie nach der Erkennung eines Konflikts konsistent ist. Weitere Informationen finden Sie im Abschnitt "Konfliktbehandlung" unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|**p2p_continue_onconflict**|**true**|Der Verteilungs-Agent setzt bei Erkennung eines Konflikts die Verarbeitung von Änderungen fort.<br /> **Vorsicht:** Es wird empfohlen, dass Sie den Standardwert verwenden `FALSE`. Wenn diese Option festgelegt ist, um `TRUE`, den Verteilungs-Agent versucht, die Datenkonvergenz in der Topologie durch Anwenden von die Konfliktzeile aus dem Knoten mit der höchsten Absender-ID. Bei dieser Methode ist keine Konvergenz garantiert. Sie sollten sicherstellen, dass die Topologie nach der Erkennung eines Konflikts konsistent ist. Weitere Informationen finden Sie im Abschnitt "Konfliktbehandlung" unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 ||**false**|Der Verteilungs-Agent beendet bei Erkennung eines Konflikts die Verarbeitung von Änderungen.|  
 |**post_snapshot_script**||Gibt den Speicherort einer Skriptdatei von [!INCLUDE[tsql](../../includes/tsql-md.md)] an, die der Verteilungs-Agent ausführt, nachdem alle anderen Skripts für replizierte Objekte und Daten während der Anfangssynchronisierung angewendet wurden.|  
 |**pre_snapshot_script**||Gibt den Speicherort einer Skriptdatei von [!INCLUDE[tsql](../../includes/tsql-md.md)] an, die der Verteilungs-Agent ausführt, bevor alle anderen Skripts für replizierte Objekte und Daten während der Anfangssynchronisierung angewendet wurden.|  
@@ -104,8 +103,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**Momentaufnahme**|Veröffentlicht nur geplante Synchronisierungsereignisse.|  
 |**replicate_ddl**|**1**|Auf dem Verleger ausgeführte Anweisungen der Datendefinitionssprache (DDL, Data Definition Language) werden repliziert. Diese Eigenschaft kann für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichungen nicht geändert werden.|  
 ||**0**|DDL-Anweisungen werden nicht repliziert. Diese Eigenschaft kann für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichungen nicht geändert werden. Die Replikation von Schemaänderungen kann nicht deaktiviert werden, wenn Peer-zu-Peer-Replikation verwendet wird.|  
-|**replicate_partition_switch**|**true**|ALTER TABLE…SWITCH-Anweisungen, die für die veröffentlichte Datenbank ausgeführt werden, sollten auf Abonnenten repliziert werden. Diese Option gilt nur, wenn *Allow_partition_switch* auf "true" festgelegt ist. Weitere Informationen finden Sie unter [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-||**false**|ALTER TABLE…SWITCH-Anweisungen sollten nicht auf Abonnenten repliziert werden.|  
+|**replicate_partition_switch**|**true**|ALTER TABLE... SWITCH-Anweisungen, die für die veröffentlichte Datenbank ausgeführt werden, sollten auf Abonnenten repliziert werden. Diese Option gilt nur, wenn *Allow_partition_switch* auf "true" festgelegt ist. Weitere Informationen finden Sie unter [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+||**false**|ALTER TABLE... SWITCH-Anweisungen sollten nicht auf Abonnenten repliziert werden.|  
 |**Beibehaltungsdauer**||**Int** , die die Beibehaltungsdauer in Stunden für Abonnementaktivitäten darstellt. Wenn ein Abonnement innerhalb der Beibehaltungsdauer nicht aktiv ist, wird es entfernt.|  
 |**snapshot_in_defaultfolder**|**true**|Momentaufnahmedateien werden im Standardmomentaufnahmeordner gespeichert. Wenn *Alt_snapshot_folder*ebenfalls angegeben wird, werden momentaufnahmedateien sowohl die Standard-als auch die alternativen Speicherorten gespeichert werden.|  
 ||**false**|Momentaufnahmedateien werden am alternativen Speicherort vom angegebenen gespeichert *Alt_snapshot_folder*.|  
@@ -116,7 +115,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**gleichzeitige**|Verwendet eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus, sperrt jedoch die Tabellen beim Generieren der Momentaufnahme nicht. Nicht für die Momentaufnahmereplikation gültig.|  
 ||**' concurrent_c '**|Verwendet eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus, sperrt jedoch die Tabellen beim Generieren der Momentaufnahme nicht. Nicht für die Momentaufnahmereplikation gültig.|  
 |**"TaskID"**||Diese Eigenschaft wurde als veraltet markiert und wird nicht mehr unterstützt.|  
-|**allow_drop**|**true**|Ermöglicht `DROP TABLE` DLL zu unterstützen, für Artikel, die Teil der Transaktionsreplikation sind. Unterstützte Mindestversion: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 oder höher und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 oder höher. Zusätzliche Referenz: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|Ermöglicht `DROP TABLE` DLL zu unterstützen, für Artikel, die Teil der Transaktionsreplikation sind. Die unterstützte Mindestversion: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 oder höher und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 oder höher. Zusätzliche Referenz: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|Deaktiviert die `DROP TABLE` DLL zu unterstützen, für Artikel, die Teil der Transaktionsreplikation sind. Dies ist die **Standard** Wert für diese Eigenschaft.|
 |**NULL** (Standard)||Gibt die Liste der unterstützten Werte für *Eigenschaft*.|  
   
@@ -132,7 +131,7 @@ Weitere Informationen zu den Eigenschaften, bei deren Änderung die Generierung 
   - **1** gibt an, dass Änderungen am Artikel bewirken, das vorhandene Abonnement erneut initialisiert werden dass, und erteilt die Berechtigung für die Initialisierung des Abonnements erfolgen.  
   
 [ **@publisher** = ] **'***publisher***'**  
- Gibt einen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+ Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
   > [!NOTE]  
   >  *Publisher* sollte nicht verwendet werden, beim Ändern von Artikeleigenschaften auf einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  

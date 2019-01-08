@@ -22,15 +22,15 @@ ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 832cd038151c3816decbc17542c805ed7e161465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a44b923f98a5e54f8907953d38bf42c37ca0968b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200920"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369502"
 ---
 # <a name="package-configurations"></a>Paketkonfigurationen
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Stellt Paketkonfigurationen, die Sie verwenden können, aktualisieren Sie die Werte der Eigenschaften, die zur Laufzeit bereit.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt Paketkonfigurationen bereit, die Sie zum Aktualisieren der Werte von Eigenschaften zur Laufzeit verwenden können.  
   
 > [!NOTE]  
 >  Konfigurationen sind für das Paketbereitstellungsmodell verfügbar. Parameter werden für das Projektbereitstellungsmodell anstelle von Konfigurationen verwendet. Mithilfe des Projektbereitstellungsmodells können Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekte auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitstellen. Weitere Informationen zu Bereitstellungsmodellen finden Sie unter [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "48200920"
   
 -   Konfigurationen machen Pakete flexibler. So kann z. B. eine Konfiguration den Wert einer Variablen aktualisieren, die in einem Eigenschaftsausdruck verwendet wird.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt verschiedene unterschiedliche Methoden zum Speichern von Paketkonfigurationen, z. B. XML-Dateien, als Tabellen in einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank und als umgebungs- und Paketvariablen.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt verschiedene unterschiedliche Methoden zum Speichern von Paketkonfigurationen, z.B. als XML-Dateien, als Tabellen in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank und als Umgebungs- und Paketvariablen.  
   
  Jede Konfiguration besteht aus einem Paar aus Eigenschaft und Wert. Die XML-Konfigurationsdatei und die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Konfigurationstypen können mehrere Konfigurationen enthalten.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48200920"
 |Umgebungsvariable|Eine Umgebungsvariable enthält die Konfiguration.|  
 |Registrierungseintrag|Ein Registrierungseintrag enthält die Konfiguration.|  
 |Variable für das übergeordnete Paket|Eine Variable im Paket enthält die Konfiguration. Dieser Konfigurationstyp wird normalerweise zum Aktualisieren von Eigenschaften in untergeordneten Paketen verwendet.|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Tabelle|Eine Tabelle in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank enthält die Konfiguration. Die Tabelle kann mehrere Konfigurationen enthalten.|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table|Eine Tabelle in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank enthält die Konfiguration. Die Tabelle kann mehrere Konfigurationen enthalten.|  
   
 ### <a name="xml-configuration-files"></a>XML-Konfigurationsdateien  
  Wenn Sie den Konfigurationstyp **XML-Konfigurationsdatei** auswählen, können Sie eine neue Konfigurationsdatei erstellen, eine vorhandene Datei erneut verwenden und neue Konfigurationen hinzufügen oder eine vorhandene Datei erneut verwenden und dabei den bisherigen Dateiinhalt überschreiben.  
@@ -122,9 +122,9 @@ ms.locfileid: "48200920"
 ```  
   
 ### <a name="registry-entry"></a>Registrierungseintrag  
- Wenn Sie zum Speichern einer Konfiguration einen Registrierungseintrag verwenden möchten, können Sie entweder einen vorhandenen Schlüssel verwenden oder einen neuen Schlüssel in HKEY_CURRENT_USER erstellen. Der Registrierungsschlüssel, die Sie verwenden, müssen einen Wert, der mit dem Namen `Value`. Bei diesem Wert kann es sich um einen Wert vom Typ DWORD oder um eine Zeichenfolge handeln.  
+ Wenn Sie zum Speichern einer Konfiguration einen Registrierungseintrag verwenden möchten, können Sie entweder einen vorhandenen Schlüssel verwenden oder einen neuen Schlüssel in HKEY_CURRENT_USER erstellen. Der verwendete Registrierungsschlüssel muss einen Wert mit dem Namen `Value` aufweisen. Bei diesem Wert kann es sich um einen Wert vom Typ DWORD oder um eine Zeichenfolge handeln.  
   
- Wenn Sie den Konfigurationstyp **Registrierungseintrag** auswählen, geben Sie den Namen des Registrierungsschlüssels im Eingabefeld Registrierung ein. Das Format lautet: \<Registrierungsschlüssel>. Wenn Sie einen Registrierungsschlüssel verwenden möchten, der nicht im Stamm von HKEY_CURRENT_USER enthalten ist, verwenden Sie das Format \<Registrierungsschlüssel\Registrierungsschlüssel\\...>, um den Schlüssel zu identifizieren. Um verwenden den Schlüssel MyPackage befindet sich in ssispackages befindet, geben Sie z. B. `SSISPackages\MyPackage`.  
+ Wenn Sie den Konfigurationstyp **Registrierungseintrag** auswählen, geben Sie den Namen des Registrierungsschlüssels im Eingabefeld Registrierung ein. Das Format lautet: \<Registrierungsschlüssel>. Wenn Sie einen Registrierungsschlüssel verwenden möchten, der nicht im Stamm von HKEY_CURRENT_USER enthalten ist, verwenden Sie das Format \<Registrierungsschlüssel\Registrierungsschlüssel\\...>, um den Schlüssel zu identifizieren. Wenn Sie beispielsweise den Schlüssel MyPackage verwenden, der sich in SSISPackages befindet, geben Sie `SSISPackages\MyPackage` ein.  
   
 ### <a name="sql-server"></a>SQL Server  
  Wenn Sie den Konfigurationstyp **SQL Server** auswählen, geben Sie die Verbindung mit der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank an, in der die Konfigurationen gespeichert werden sollen. Sie können die Konfigurationen in einer vorhandenen Tabelle speichern oder eine neue Tabelle in der angegebenen Datenbank erstellen.  
@@ -154,10 +154,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Technischer Artikel [Grundlegendes zu Integration Services-Paketkonfigurationen](http://go.microsoft.com/fwlink/?LinkId=165643)auf msdn.microsoft.com.  
+-   Technischer Artikel [Grundlegendes zu Integration Services-Paketkonfigurationen](https://go.microsoft.com/fwlink/?LinkId=165643)auf msdn.microsoft.com.  
   
--   Blogeintrag zu [Codebasiertes Erstellen von Paketen – Paketkonfigurationen](http://go.microsoft.com/fwlink/?LinkId=217663)auf www.sqlis.com.  
+-   Blogeintrag, [Erstellen von Paketen im Code - Paketkonfigurationen](https://go.microsoft.com/fwlink/?LinkId=217663), auf www.sqlis.com.  
   
--   Blogeintrag zu [API-Beispiel – Programmgesteuertes Hinzufügen einer Konfigurationsdatei zu einem Paket](http://go.microsoft.com/fwlink/?LinkId=217664)auf blogs.msdn.com.  
+-   Blogeintrag, [-API-Beispiel – Programmgesteuertes Hinzufügen eine Konfigurationsdatei zu einem Paket](https://go.microsoft.com/fwlink/?LinkId=217664), auf blogs.msdn.com.  
   
   

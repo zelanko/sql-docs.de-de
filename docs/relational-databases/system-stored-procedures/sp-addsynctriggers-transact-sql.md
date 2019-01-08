@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsynctriggers_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c69681e396065f1881ff9ea81468ef85c8b26da4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89a6a997fd272985bd60d0b5d574fea07463f54d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799718"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588285"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,46 +58,46 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@sub_table=**] **"***Sub_table***"**  
+ [  **@sub_table=**] **"**_Sub_table_**"**  
  Entspricht dem Namen der Abonnententabelle. *Sub_table* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@sub_table_owner=**] **"***Sub_table_owner***"**  
+ [  **@sub_table_owner=**] **"**_Sub_table_owner_**"**  
  Entspricht dem Namen des Eigentümers der Abonnententabelle. *Sub_table_owner* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **"**_Verleger_**"**  
  Entspricht dem Namen des Verlegerservers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **"**_Publisher_db_**"**  
  Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert. Mit NULL wird die aktuelle Datenbank verwendet.  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@ins_proc=**] **"***Ins_proc***"**  
+ [  **@ins_proc=**] **"**_Ins_proc_**"**  
  Entspricht dem Namen der gespeicherten Prozedur, die synchrone Transaktionseinfügungen auf Verlegerebene unterstützt. *Ins_proc* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@upd_proc=**] **"***Upd_proc***"**  
+ [  **@upd_proc=**] **"**_Upd_proc_**"**  
  Entspricht dem Namen der gespeicherten Prozedur, die synchrone Transaktionsupdates auf Verlegerebene unterstützt. *Ins_proc* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@del_proc=**] **"***Del_proc***"**  
+ [  **@del_proc=**] **"**_Del_proc_**"**  
  Entspricht dem Namen der gespeicherten Prozedur, die synchrone Transaktionslöschungen auf Verlegerebene unterstützt. *Ins_proc* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@cftproc =** ] **"***Cftproc***"**  
+ [  **@cftproc =** ] **"**_Cftproc_**"**  
  Entspricht dem Namen der automatisch generierten Prozedur, die von Veröffentlichungen verwendet wird, die eine verzögerte Aktualisierung ermöglichen. *Cftproc* ist **Sysname**, hat keinen Standardwert. Für Veröffentlichungen mit sofortigem Update ist dieser Wert NULL. Dieser Parameter wird auf Veröffentlichungen angewendet, die verzögerte Updates über eine Warteschlange ermöglichen (verzögertes Update über eine Warteschlange bzw. sofortiges Update mit verzögertem Update über eine Warteschlange als Failover).  
   
- [  **@proc_owner =** ] **"***Proc_owner***"**  
+ [  **@proc_owner =** ] **"**_Proc_owner_**"**  
  Gibt das Benutzerkonto auf Verlegerebene an, unter dem alle automatisch generierten gespeicherten Prozeduren zum Aktualisieren von Veröffentlichungen (verzögert und/oder unmittelbar) erstellt wurden. *Proc_owner* ist **Sysname** hat keinen Standardwert.  
   
- [  **@identity_col=**] **"***Identity_col***"**  
+ [  **@identity_col=**] **"**_Identity_col_**"**  
  Entspricht dem Namen der Identitätsspalte auf Verlegerebene. *Identity_col* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@ts_col=**] **"***Timestamp_col***"**  
+ [  **@ts_col=**] **"**_Timestamp_col_**"**  
  Der Name des der **Zeitstempel** Spalte auf dem Verleger. *Timestamp_col* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@filter_clause=**] **"***Filter_clause***"**  
+ [  **@filter_clause=**] **"**_Filter_clause_**"**  
  Eine Einschränkungsklausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort, in dem. *Filter_clause*ist **nvarchar(4000)**, hat den Standardwert NULL.  
   
- [  **@primary_key_bitmap =**] **"***Primary_key_bitmap***"**  
+ [  **@primary_key_bitmap =**] **"**_Primary_key_bitmap_**"**  
  Entspricht einer Bitmap der Primärschlüsselspalten in der Tabelle. *Primary_key_bitmap* ist **varbinary(4000)**, hat keinen Standardwert.  
   
  [  **@identity_support =** ] *Identity_support*  
@@ -107,7 +106,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@independent_agent =** ] *Independent_agent*  
  Gibt an, ob es einen einzelnen Verteilungs-Agent (einen unabhängigen Agent) für diese Veröffentlichung oder einen Verteilungs-Agent pro Paar aus Veröffentlichungsdatenbank und Abonnementdatenbank (einen freigegebenen Agent) gibt. Dieser Wert reflektiert den Wert der independent_agent-Eigenschaft von der auf Verlegerebene definierten Veröffentlichung. *Independent_agent* ähnelt ein wenig mit dem Standardwert **0**. Wenn **0**, der Agent ist ein freigegebener Agent. Wenn **1**, der Agent ist ein unabhängiger Agent.  
   
- [  **@distributor =** ] **"***Verteiler***"**  
+ [  **@distributor =** ] **"**_Verteiler_**"**  
  Entspricht dem Namen des Verteilers. *Verteiler* ist **Sysname**, hat keinen Standardwert.  
   
  [ **@pubversion**=] *Pubversion*  

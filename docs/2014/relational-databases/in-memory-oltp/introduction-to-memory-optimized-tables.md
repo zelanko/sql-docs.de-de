@@ -10,12 +10,12 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 325191a4355ec2b45a952fab72105b278b26d218
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087120"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358202"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Einführung in speicheroptimierte Tabellen
   Speicheroptimierte Tabellen sind Tabellen, die mit [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) erstellt wurden.  
@@ -54,9 +54,9 @@ ms.locfileid: "48087120"
   
 |Funktion|Zugriff mithilfe einer systemintern kompilierten gespeicherten Prozedur|Interpretierter [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff|CLR-Zugriff|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
-|Speicheroptimierte Tabellen|Benutzerkontensteuerung|Benutzerkontensteuerung|Nein <sup>1</sup>|  
-|[Speicheroptimierte Tabellenvariablen](../../database-engine/memory-optimized-table-variables.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
-|[Nativ kompilierte gespeicherte Prozeduren](http://msdn.microsoft.com/library/dn133184.aspx)|Sie können die EXECUTE-Anweisung nicht verwenden, um eine gespeicherte Prozedur über eine systemintern kompilierte gespeicherte Prozedur auszuführen.|Benutzerkontensteuerung|Nein <sup>1</sup>|  
+|Speicheroptimierte Tabellen|Ja|Ja|Nein <sup>1</sup>|  
+|[Speicheroptimierte Tabellenvariablen](../../database-engine/memory-optimized-table-variables.md)|Ja|Ja|Nein|  
+|[Nativ kompilierte gespeicherte Prozeduren](https://msdn.microsoft.com/library/dn133184.aspx)|Sie können die EXECUTE-Anweisung nicht verwenden, um eine gespeicherte Prozedur über eine systemintern kompilierte gespeicherte Prozedur auszuführen.|Ja|Nein <sup>1</sup>|  
   
  <sup>1</sup> Sie können keiner speicheroptimierten Tabelle oder systemintern kompilierte gespeicherte Prozedur zugreifen, über die kontextverbindung (die Verbindung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beim Ausführen eines CLR-Moduls). Sie können jedoch eine andere Verbindung erstellen und öffnen, über die Sie auf speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren zugreifen können. Weitere Informationen finden Sie unter [reguläre im Vergleich. Kontextverbindungen](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
   

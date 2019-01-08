@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
@@ -16,12 +15,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5008096ef5c10dbd3f14198194cec4e7795d9f4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9177aa0abe0a5f2a3746486c5cf71163bcd1e1be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202310"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791300"
 ---
 # <a name="instance-configuration"></a>Instanzkonfiguration
   Verwenden Sie die Seite **Instanzkonfiguration** des Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um anzugeben, ob eine Standardinstanz oder eine benannte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt werden soll. Wenn noch keine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Server installiert wurde, wird eine Standardinstanz erstellt, es sei denn Sie geben eine benannte Instanz an.  
@@ -37,10 +36,10 @@ ms.locfileid: "48202310"
   
  Weitere Informationen finden Sie unter [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
-## <a name="options"></a>Tastatur  
- Nur Failoverclusterinstanzen: Geben Sie den Netzwerknamen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusters an. Anhand dieses Namens wird die Failoverclusterinstanz im Netzwerk identifiziert.  
+## <a name="options"></a>Optionen  
+ Nur Failoverclusterinstanzen: Geben Sie den Netzwerknamen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusters an. Anhand dieses Namens wird die Failoverclusterinstanz im Netzwerk identifiziert.  
   
- Standardinstanz oder benannte Instanz: Bei der Entscheidung der Frage, ob eine Standardinstanz oder eine benannte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert werden soll, müssen folgende Informationen beachtet werden:  
+ Standardinstanz oder benannte Instanz: Bei der Entscheidung der Frage, ob eine Standardinstanz oder eine benannte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert werden soll, müssen folgende Informationen beachtet werden:  
   
 -   Wenn Sie eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Datenbankserver installieren möchten, sollte dies eine Standardinstanz sein.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48202310"
   
 -   Wenn Sie MSSQLServer als Instanznamen angeben, wird eine Standardinstanz erstellt.  
   
--   Eine Installation von [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] wird immer als benannte Instanz 'PowerPivot' installiert. Sie können keinen anderen Instanznamen für diese Funktionsrolle angeben.  
+-   Eine Installation von [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] wird immer als benannte Instanz von 'PowerPivot' installiert. Sie können keinen anderen Instanznamen für diese Funktionsrolle angeben.  
   
 -   Instanznamen können maximal 16 Zeichen enthalten.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "48202310"
 -   **Nur Zeichen, die in der aktuellen Windows-Codepage gültig sind, können verwendet werden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanznamen. Wenn ein nicht unterstütztes Unicodezeichen verwendet wird, wird ein Setupfehler auftreten.**  
   
  **Erkannte Instanzen und Funktionen**  
- Zeigt eine Liste der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen und Komponenten an, die auf dem Computer installiert sind, auf dem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup ausgeführt wird.  
+ Zeigt eine Liste der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen und Komponenten an, die auf dem Computer installiert sind, auf dem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup ausgeführt wird.  
   
  **Instanz-ID** – Standardmäßig wird der Instanzname als Instanz-ID verwendet. Das Ziel ist dabei, Installationsverzeichnisse und Registrierungsschlüssel für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu identifizieren. Dies ist der Fall für Standardinstanzen und benannte Instanzen. Bei einer Standardinstanz lauten Instanzname und Instanz-ID MSSQLSERVER. Um eine nicht standardmäßige Instanz-ID zu verwenden, geben Sie sie im Feld **Instanz-ID** an.  
   

@@ -17,12 +17,12 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e4e680bc7b22e31bf9da0c3502adf49d3bc8159
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153668"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352617"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate (SQL Server)
   In einer AlwaysOn-Verfügbarkeitsgruppe können Sie mindestens ein Verfügbarkeitsreplikat konfigurieren, um schreibgeschützte Verbindungen zuzulassen, wenn es unter der sekundären Rolle ausgeführt wird (d. h. bei Ausführung als sekundäres Replikat). Sie können auch jedes Verfügbarkeitsreplikat konfigurieren, um schreibgeschützte Verbindungen bei der Ausführung unter der primären Rolle zuzulassen oder auszuschließen (d. h. bei Ausführung als das primäre Replikat).  
@@ -60,7 +60,7 @@ ms.locfileid: "48153668"
  Schreibgeschützte Verbindungen zulassen  
  Die sekundären Datenbanken sind alle für Lesezugriffsverbindungen verfügbar. Diese Option ermöglicht es Clients mit älteren Versionen, eine Verbindung herzustellen.  
   
- Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)besitzen.  
+ Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
 ##  <a name="ConnectAccessForPrimary"></a> Von der primären Rolle unterstützte Verbindungszugriffstypen  
  Die primäre Rolle unterstützt die folgenden zwei Alternativen für Clientverbindungen:  
@@ -80,13 +80,13 @@ ms.locfileid: "48153668"
   
 |Replikatrolle|Auf Replikat unterstützter Verbindungszugriff|Verbindungsabsicht|Ergebnis des Verbindungsversuchs|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|Secondary|All|Beabsichtigte Lesevorgänge, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Success|  
+|Secondary|All|Beabsichtigte Lesevorgänge, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Erfolgreich|  
 |Secondary|Keine (dies ist der sekundäre Standardverhalten)|Beabsichtigte Lesevorgänge, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Failure|  
-|Secondary|Nur beabsichtigte Lesevorgänge|Beabsichtigte Lesevorgänge|Success|  
+|Secondary|Nur beabsichtigte Lesevorgänge|Beabsichtigte Lesevorgänge|Erfolgreich|  
 |Secondary|Nur beabsichtigte Lesevorgänge|Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Failure|  
-|Primär|Alle (dies ist das primäre Standardverhalten)|Schreibgeschützt, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Success|  
+|Primär|Alle (dies ist das primäre Standardverhalten)|Schreibgeschützt, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Erfolgreich|  
 |Primär|Lese-/Schreibzugriff|Nur beabsichtigte Lesevorgänge|Failure|  
-|Primär|Lese-/Schreibzugriff|Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Success|  
+|Primär|Lese-/Schreibzugriff|Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Erfolgreich|  
   
  Informationen darüber, wie Sie die Verfügbarkeitsgruppe konfigurieren müssen, damit diese Clientverbindungen zu ihren Replikaten akzeptiert, finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
@@ -118,9 +118,9 @@ ms.locfileid: "48153668"
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   

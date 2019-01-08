@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - dropping jobs
@@ -17,12 +17,12 @@ ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7954b4d7e624498a469a385406cfb23f486bf225
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123524"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365522"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
   In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] konfigurieren können, um Aufträge mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder SQL Server Management Objects automatisch zu löschen, wenn sie erfolgreich, fehlerhaft oder abgeschlossen sind.  
@@ -45,7 +45,7 @@ ms.locfileid: "48123524"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So geben Sie Auftragsantworten an mit**  
   
@@ -53,12 +53,12 @@ ms.locfileid: "48123524"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
- Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-automatically-delete-a-job"></a>So löschen Sie einen Auftrag automatisch  
   
@@ -79,6 +79,6 @@ ms.locfileid: "48123524"
 ##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
  **So löschen Sie einen Auftrag automatisch**  
   
- Verwenden der `DeleteLevel` Eigenschaft der `Job` Klasse, indem Sie eine Programmiersprache, die Sie, wie z. B. Visual Basic, Visual c# oder PowerShell auswählen. Weitere Informationen finden Sie unter [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Verwenden Sie die `DeleteLevel`-Eigenschaft der `Job`-Klasse in einer Programmiersprache Ihrer Wahl, z. B. Visual Basic, Visual C# oder PowerShell. Weitere Informationen finden Sie unter [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

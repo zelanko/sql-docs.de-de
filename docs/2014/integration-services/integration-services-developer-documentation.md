@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,12 +18,12 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: acc639a9e6df068d4f3ed446a66dc05b7d5e0b59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e18e1d1e2219dd33fe6eea241d50ff6b077fe62
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108550"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361402"
 ---
 # <a name="developer39s-guide-integration-services"></a>Entwickler&#39;Benutzerhandbuch (Integrationsservices)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] umfasst ein völlig neu konzipiertes Objektmodell mit vielen verbesserten Funktionen, um das Erweitern und Programmieren von Paketen einfacher, flexibler und leistungsstärker zu gestalten. Entwickler haben die Möglichkeit, fast jeden Aspekt von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Paketen zu erweitern und zu programmieren.  
@@ -74,7 +72,7 @@ ms.locfileid: "48108550"
  [Programmgesteuerte Ausführung und Verwaltung von Paketen](run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  Beschreibt, wie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Pakete programmgesteuert aufgezählt, ausgeführt und verwaltet werden.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  [Fehler- und Meldungsreferenz von Integration Services](integration-services-error-and-message-reference.md)  
  Listet die vordefinierten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Fehlercodes sowie ihre symbolischen Namen und Beschreibungen auf.  
   
@@ -84,7 +82,7 @@ ms.locfileid: "48108550"
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   CodePlex-Beispiele, [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkID=131204), auf www.codeplex.com/MSFTISProdSamples  
+-   CodePlex-Beispiele, [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204), auf www.codeplex.com/MSFTISProdSamples  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Integration Services](sql-server-integration-services.md)  

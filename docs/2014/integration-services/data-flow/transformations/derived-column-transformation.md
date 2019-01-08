@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.derivedcolumntrans.f1
@@ -19,12 +18,12 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06ba255f88c0938fab80c12e3f520ba418b996f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5575991201f48c48fee1b27ad95b6d07de6251ba
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204050"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373892"
 ---
 # <a name="derived-column-transformation"></a>Transformation für abgeleitete Spalten
   Mit der Transformation für abgeleitete Spalten werden neue Spaltenwerte erstellt, indem Ausdrücke auf Transformationseingabespalten angewendet werden. Ein Ausdruck kann eine beliebige Kombination von Variablen, Funktionen, Operatoren und Spalten aus der Transformationseingabe enthalten. Das Ergebnis kann als neue Spalte hinzugefügt oder in eine vorhandene Spalte als Ersatzwert eingefügt werden. Die Transformation für abgeleitete Spalten kann mehrere abgeleitete Spalten definieren, und jede Variable oder Eingabespalte kann in mehreren Ausdrücken verwendet werden.  
@@ -76,8 +75,8 @@ ms.locfileid: "48204050"
 -   [Ableiten von Spaltenwerten mithilfe der Transformation für abgeleitete Spalten](derived-column-transformation.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Technischer Artikel, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
+ Technischer Artikel, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
   
- Curated Answers, [Teilen von Spaltendaten mit SSIS](http://go.microsoft.com/fwlink/?LinkId=321995)auf curatedviews.cloudapp.net  
+ Curated Answers, [Teilen von Spaltendaten mit SSIS](https://go.microsoft.com/fwlink/?LinkId=321995)auf curatedviews.cloudapp.net  
   
   

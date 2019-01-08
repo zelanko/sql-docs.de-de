@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], about business rules
@@ -14,12 +13,12 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f32495e2e12ab56ac2adb8ad5686a669714b81dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 211434d182a0c3fd6da777b8834380a67c4d58c8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074331"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814592"
 ---
 # <a name="business-rules-master-data-services"></a>Geschäftsregeln (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ist eine Geschäftsregel ist eine Regel, mit der Sie die Qualität und Genauigkeit der Masterdaten sicherstellen. Sie können eine Geschäftsregel zum automatischen Aktualisieren von Daten, zum Senden von E-Mails oder zum Starten eines Geschäftsprozesses oder Workflows verwenden.  
@@ -72,9 +71,9 @@ ms.locfileid: "48074331"
 |Erstellen und veröffentlichen Sie eine neue Geschäftsregel.|[Erstellen und Veröffentlichen einer Geschäftsregel &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
 |Fügen Sie einer Geschäftsregel mehrere Bedingungen hinzu.|[Hinzufügen mehrerer Bedingungen zu einer Geschäftsregel &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
 |Erstellen Sie eine Geschäftsregel, damit Attribute über Werte verfügen müssen.|[Erfordern von Attributwerten &#40;Master Data Services&#41;](../../2014/master-data-services/require-attribute-values-master-data-services.md)|  
-|Erstellen Sie eine Geschäftsregel, um eine Aktion auf der Grundlage der Änderungen an Attributwerten auszuführen.|[Initiieren von Aktionen auf Grundlage von Attributwertänderungen &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Erstellen Sie eine Geschäftsregel, um eine Aktion auf der Grundlage der Änderungen an Attributwerten auszuführen.|[Initiieren von Aktionen auf der Grundlage von Attributwertänderungen &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
 |Ändern Sie den Namen einer vorhandenen Geschäftsregel.|[Ändern des Namens einer Geschäftsregel &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|Konfigurieren Sie [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , um Benachrichtigungen zu senden, wenn Geschäftsregeln angewendet werden.|[Konfigurieren von Geschäftsregeln zum Senden von Benachrichtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|Konfigurieren Sie [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , um Benachrichtigungen zu senden, wenn Geschäftsregeln angewendet werden.|[Konfigurieren von Geschäftsregeln für das Senden von Benachrichtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
 |Wenden Sie Geschäftsregeln auf bestimmte Elemente an.|[Überprüfen von bestimmten Elementen auf Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |Schließen Sie eine Geschäftsregel aus, damit sie nicht verwendet wird.|[Ausschließen einer Geschäftsregel &#40;Master Data Services&#41;](../../2014/master-data-services/exclude-a-business-rule-master-data-services.md)|  
 |Löschen Sie eine vorhandene Geschäftsregel.|[Löschen einer Geschäftsregel &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)|  

@@ -11,12 +11,12 @@ ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ccde5a1c4b79a5c67182789af7c54e2142156ad5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7288661f0971f9251d7a8acf11f448eb2229975e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160460"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361939"
 ---
 # <a name="relational-query-designer-user-interface"></a>Benutzeroberfläche des relationalen Abfrage-Designers
   Berichts-Generator in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] stellt einen grafischen Abfrage-Designer und einen textbasierten Abfrage-Designer zum Erstellen von Abfragen bereit, mit dem die Daten angegeben werden, die aus relationalen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] und [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] für ein Berichtsdataset abgerufen werden. Verwenden Sie den grafischen Abfrage-Designer zum Durchsuchen von Metadaten, interaktiven Erstellen einer Abfrage sowie zum Anzeigen der Ergebnisse der Abfrage. Verwenden Sie den textbasierten Abfrage-Designer, um die Abfrage anzuzeigen, die vom grafischen Abfrage-Designer erstellt wurde, oder um eine Abfrage zu ändern. Sie können auch eine vorhandene Abfrage aus einer Datei oder einem Bericht importieren.  
@@ -86,7 +86,7 @@ ms.locfileid: "48160460"
   
  [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] verwendet [!INCLUDE[tsql](../includes/tsql-md.md)] und [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] verwendet [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Beide Dialekte der SQL-Sprache unterstützen die Klausel, das Schlüsselwort und die Aggregate, die der Abfrage-Designer bereitstellt.  
   
- Weitere Informationen zu [!INCLUDE[tsql](../includes/tsql-md.md)] finden Sie unter [Transact-SQL-Referenz &amp;#40;Datenbank-Engine&amp;#41;](/sql/t-sql/language-reference) in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=141687) auf „msdn.microsoft.com“.  
+ Weitere Informationen zu [!INCLUDE[tsql](../includes/tsql-md.md)] finden Sie unter [Transact-SQL-Referenz &amp;#40;Datenbank-Engine&amp;#41;](/sql/t-sql/language-reference) in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=141687) auf „msdn.microsoft.com“.  
   
  In der folgenden Tabelle sind die Aggregate einschließlich einer kurzen Beschreibung aufgelistet.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48160460"
 |Max|Gibt den größten Wert in einer Gruppe zurück. Implementiert das SQL MAX-Aggregat.|  
 |StDev|Gibt die statistische Standardabweichung aller Werte in einer Gruppe zurück. Implementiert das SQL STDEV-Aggregat.|  
 |StDevP|Gibt die statistische Standardabweichung für die Auffüllung aller Werten im angegebenen Ausdruck einer Gruppe zurück. Implementiert das SQL STDEVP-Aggregat.|  
-|SUM|Gibt die Summe aller Werte in der Gruppe zurück. Implementiert das SQL SUM-Aggregat.|  
+|Summe|Gibt die Summe aller Werte in der Gruppe zurück. Implementiert das SQL SUM-Aggregat.|  
 |Var|Gibt die statistische Varianz aller Werte in der Gruppe zurück. Implementiert das SQL VAR-Aggregat.|  
 |VarP|Gibt die statistische Varianz der Auffüllung für alle Werte in der Gruppe zurück. Implementiert das SQL VARP-Aggregat.|  
 |Avg Distinct|Gibt eindeutige Durchschnittswerte zurück. Implementiert eine Kombination der AVG-Aggregation und des DISTINCT-Schlüsselworts.|  
@@ -126,7 +126,7 @@ ms.locfileid: "48160460"
 -   **Automatische Erkennung** schaltet das Feature zur automatischen Erkennung um, die Beziehungen zwischen Tabellen automatisch erstellt. Wenn die automatische Erkennung aktiviert ist, erstellt der Abfrage-Designer Beziehungen aus Fremdschlüsseln in Tabellen; andernfalls müssen Sie die Beziehungen manuell erstellen. Wenn Sie Tabellen im Bereich **Datenbanksicht** auswählen, versucht die Funktion zur automatischen Erkennung automatisch, Beziehungen zu erstellen. Wenn Sie die Funktion zur automatischen Erkennung aktivieren, nachdem Sie manuell Joins erstellt haben, werden diese Joins verworfen.  
   
     > [!IMPORTANT]  
-    >  Bei Verwendung mit [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] die zum Erstellen von Joins benötigten Metadaten nicht bereitgestellt wird und Beziehungen können nicht automatisch erkannt werden. Wenn die Abfrage Daten aus [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] abruft, müssen alle Tabellenjoins manuell erstellt werden.  
+    >  Bei der Verwendung mit [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] werden die zum Erstellen von Joins benötigten Metadaten nicht bereitgestellt, und Beziehungen können nicht automatisch erkannt werden. Wenn die Abfrage Daten aus [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]abruft, müssen alle Tabellenjoins manuell erstellt werden.  
   
 -   **Beziehung hinzufügen** Fügt der Liste **Beziehung** eine Beziehung hinzu.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "48160460"
   
 -   **Linke Tabelle** Zeigt den Namen der ersten Tabelle an, die ein Teil einer Joinbeziehung ist.  
   
--   **Jointyp** Zeigt den Typ der SQL-Anweisung JOIN an, die in der automatisch generierten Abfrage verwendet wird. Wenn eine Fremdschlüsseleinschränkung erkannt wird, wird standardmäßig INNER JOIN verwendet. Andere Jointypen können LEFT JOIN oder RIGHT JOIN sein. Wenn keiner dieser Jointypen zutrifft, wird in der Spalte **Jointyp** **Nicht verbunden**angezeigt. Für nicht verknüpfte Tabellen werden keine CROSS JOIN-Joins erstellt; stattdessen müssen Sie Beziehungen manuell erstellen, indem Sie Spalten in der linken und rechten Tabelle verknüpfen. Weitere Informationen zu JOINs finden Sie unter "Grundlegendes zu Joins" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=141687) auf "MSDN.Microsoft.com"...  
+-   **Jointyp** Zeigt den Typ der SQL-Anweisung JOIN an, die in der automatisch generierten Abfrage verwendet wird. Wenn eine Fremdschlüsseleinschränkung erkannt wird, wird standardmäßig INNER JOIN verwendet. Andere Jointypen können LEFT JOIN oder RIGHT JOIN sein. Wenn keiner dieser Jointypen zutrifft, wird in der Spalte **Jointyp** **Nicht verbunden**angezeigt. Für nicht verknüpfte Tabellen werden keine CROSS JOIN-Joins erstellt; stattdessen müssen Sie Beziehungen manuell erstellen, indem Sie Spalten in der linken und rechten Tabelle verknüpfen. Weitere Informationen zu JOINs finden Sie unter den JOIN-Grundlagen in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][Books Online](https://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
   
 -   **Rechte Tabelle** Zeigt den Namen der zweiten Tabelle in der Joinbeziehung an.  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37a7cc27f7c8773a3cee801d73d8ade5caaba2f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01bcc625a02814b0c6181cad1954eb11d961f023
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068200"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355369"
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Lektion 6: Verwenden von Parametern mit dem Projektbereitstellungsmodell
   In SQL Server 2012 wird ein neues Bereitstellungsmodell eingeführt, mit dem Sie Projekte auf dem Integration Services-Server bereitstellen können. Der Integration Services-Server ermöglicht es Ihnen, Pakete zu verwalten und auszuführen sowie Laufzeitwerte für Pakete zu konfigurieren.  
@@ -28,14 +27,14 @@ ms.locfileid: "48068200"
  Wenn Sie das Paket erneut ausführen, verwendet der Integration Services-Dienst den Parameter, um den Wert der Variablen aufzufüllen, und die Variable aktualisiert wiederum die Directory-Eigenschaft. Deshalb durchläuft das Paket die Dateien im neuen, durch den Parameterwert angegebenen Datenordner anstatt in dem Ordner, der in der Paketkonfigurationsdatei festgelegt wurde.  
   
 > [!IMPORTANT]  
->  Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zur Installation und Bereitstellung von **AdventureWorksDW2012**finden Sie unter [Überlegungen zum Installieren der SQL Server-Beispiele und -Beispieldatenbanken](http://technet.microsoft.com/library/ms161556%28v=sql.105%29).  
+>  Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zur Installation und Bereitstellung von **AdventureWorksDW2012**finden Sie unter [Überlegungen zum Installieren der SQL Server-Beispiele und -Beispieldatenbanken](https://technet.microsoft.com/library/ms161556%28v=sql.105%29).  
   
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
  Diese Lektion enthält die folgenden Aufgaben:  
   
 1.  [Schritt 1: Kopieren des Pakets aus Lektion 5](lesson-6-1-copying-the-lesson-5-package.md)  
   
-2.  [Schritt 2: Konvertieren des Projekts in das Projektbereitstellungsmodell](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+2.  [Schritt 2: Das Projekt konvertieren in das Projektbereitstellungsmodell](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
 3.  [Schritt 3: Testen des Pakets aus Lektion 6](lesson-6-3-testing-the-lesson-6-package.md)  
   
