@@ -21,19 +21,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9176be66c987d3ff4f7cdf09ac8dd70fc1447273
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba07558d4b85fabf1388f2fcafd26b3638b80f79
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411857"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979856"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Ändert ein Serverüberwachungsobjekt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit-Funktion. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -151,7 +151,7 @@ Erzwingt, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-changing-a-server-audit-name"></a>A. Ändern eines Serverüberwachungsnamens  
- Im folgenden Beispiel wird der Name der Serverüberwachung `HIPPA_Audit` in `HIPAA_Audit_Old` geändert.  
+ Im folgenden Beispiel wird der Name der Serverüberwachung `HIPAA_Audit` in `HIPAA_Audit_Old` geändert.  
   
 ```  
 USE master  
@@ -168,7 +168,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-server-audit-target"></a>B. Ändern eines Serverüberwachungsziels  
- Im folgenden Beispiel wird die Serverüberwachung namens `HIPPA_Audit` in ein Dateiziel geändert.  
+ Im folgenden Beispiel wird die Serverüberwachung namens `HIPAA_Audit` in ein Dateiziel geändert.  
   
 ```  
 USE master  
@@ -227,7 +227,7 @@ ALTER SERVER AUDIT [AuditDataAccess] WITH (STATE = ON);
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
