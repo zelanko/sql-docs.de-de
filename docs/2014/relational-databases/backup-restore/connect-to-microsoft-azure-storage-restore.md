@@ -12,12 +12,12 @@ ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 310ab71162dedf64e12ae28c8ffedf3465f1fc14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 506f074a8693e54bdc51882ab08b19e9ea3e1994
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130900"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517874"
 ---
 # <a name="connect-to-windows-azure-storage-restore"></a>Herstellen einer Verbindung mit dem Windows Azure-Speicher (Wiederherstellung)
   Über das Dialogfeld können Sie die Verbindung zum Windows Azure-Speicherkonto angeben, um den Dateispeicher im Windows Azure-Speicherkonto abzurufen. Nachdem Sie die erforderlichen Informationen angegeben haben, klicken Sie auf **Verbinden** , um die Verbindung zum Windows Azure-Speicher herzustellen.  
@@ -30,7 +30,7 @@ ms.locfileid: "48130900"
  Geben Sie den Windows Azure-Speicherkonto-Zugriffsschlüssel an.  
   
  **Sichere Endpunkte (HTTPS) verwenden** – Kontrollkästchen  
- Wählen Sie diese Option, um eine sichere Verbindung zum Windows Azure-Speicher herzustellen (empfohlen).  
+ Wählen Sie diese Option, um eine sichere Verbindung zu Azure Storage herzustellen (empfohlen).  
   
  **Kontoschlüssel speichern** – Kontrollkästchen  
  Aktivieren Sie dieses Kontrollkästchen, wenn SQL Server den Zugriffsschlüssel für dieses Speicherkonto speichern soll.  

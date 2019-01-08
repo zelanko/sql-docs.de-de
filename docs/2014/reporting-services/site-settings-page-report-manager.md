@@ -11,12 +11,12 @@ ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3bd40d6b97215329bb2cab060853fc06ef862dbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d8e61f4f82df496a475717b34f0ce54db07d4a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065293"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413690"
 ---
 # <a name="site-settings-page-report-manager"></a>Siteeinstellungen (Seite) (Berichts-Manager)
   Verwenden Sie die Seite "Siteeinstellungen", um den Anwendungstitel zu ändern, serverweite Standardeinstellungen für die Grenzwerte des Berichtsverlaufs und Timeoutwerte für die Berichtsverarbeitung festzulegen und Rollenzuweisungen auf Systemebene sowie freigegebene Zeitpläne zu verwalten. Sie müssen über Inhalts-Manager- und Systemadministratorberechtigungen verfügen, um diese Seite anzuzeigen.  
@@ -33,11 +33,11 @@ ms.locfileid: "48065293"
   
 2.  Klicken Sie oben auf der Seite auf **Siteeinstellungen**. Dadurch wird die Seite Allgemeine Eigenschaften der Website geöffnet.  
   
-     **Hinweis:** , wenn Sie nicht sehen die **Standorteinstellungen** Option im Menü Sie nicht die erforderlichen Berechtigungen, Weitere Informationen finden Sie im Abschnitt "websiteeinstellungen" [konfigurieren einen Berichtsserver im einheitlichen Modus für Lokale Verwaltung &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+     **Hinweis**: Wenn Sie nicht sehen die **Standorteinstellungen** Option im Menü Sie nicht die erforderlichen Berechtigungen, Weitere Informationen finden Sie im Abschnitt "websiteeinstellungen" [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
- Geben Sie den Titel für die Verwendung für diese Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Berichts-Manager. Der Titel ist standardmäßig "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]".  
+ Geben Sie den Titel an, der für diese Instanz des Berichts-Managers von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet werden soll. Der Titel ist standardmäßig "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]".  
   
  **Wählen Sie Standardeinstellungen für den Berichtsverlauf**  
  Wählen Sie einen Standardwert für die Anzahl von Kopien aus, die im Berichtsverlauf gespeichert werden. Mithilfe eines Standardwertes werden Anfangseinstellungen bei den Grenzwerten für den Berichtsverlauf eingerichtet. Diese Einstellungen können auf Berichtsebene geändert werden. Weitere Informationen finden Sie unter [Momentaufnahmeoptionen (Eigenschaftenseite) (Berichts-Manager)](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md).  
@@ -54,14 +54,14 @@ ms.locfileid: "48065293"
  **Start-URL für benutzerdefinierten Berichts-Generator**  
  Geben Sie eine benutzerdefinierte URL an, wenn der Berichtsserver nicht die Standard-URL des Berichts-Generators verwendet. Dies ist eine optionale Einstellung. Wenn Sie keinen Wert angeben, wird die Standard-URL verwendet, durch die der Berichts-Generator als ClickOnce-Anwendung gestartet wird. Die Standard-URL entspricht einem der folgenden Werte:  
   
- **Berichtsserver im einheitlichen Modus:** In einer Installation im einheitlichen Modus dauert die Standard-URL das Format http://\<*Computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application.  
+ **Berichtsserver im einheitlichen Modus:** Bei einer Installation im einheitlichen Modus dauert die Standard-URL das Format http://\<*Computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application.  
   
- Integrierten SharePoint-Modus: die Standard-URL dauert das Format http://\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. "  
+ Integrierten SharePoint-Modus: Die Standard-URL dauert das Format http://\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. "  
   
  **Anwenden**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen auf dem Berichtsserver zu speichern.  
   
- **Security**  
+ **Sicherheit**  
  Klicken Sie auf diesen Link, um die Seite "Systemrollenzuweisungen" zu öffnen, auf der Sie Benutzern und Gruppenkonten vordefinierte Systemrollen zuweisen können.  
   
  **Zeitpläne**  

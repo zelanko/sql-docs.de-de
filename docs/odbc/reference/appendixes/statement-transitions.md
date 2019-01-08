@@ -15,12 +15,12 @@ ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df4a73890841b4a72dbffa0d5a5ae934bf618f16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db8ec0edfa1a5ae1b6b94ed07f63c930bc896f5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649842"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523898"
 ---
 # <a name="statement-transitions"></a>Anweisungsübergänge
 ODBC-Anweisungen werden die folgenden Status haben.  
@@ -47,7 +47,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1], [5], [6]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
 |--[2], [5]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
@@ -66,25 +66,25 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|--|--|--|--|HY010|HY010|  
   
 ## <a name="sqlbindparameter"></a>SQLBindParameter  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|--|--|--|--|HY010|HY010|  
   
 ## <a name="sqlbrowseconnect-sqlconnect-and-sqldriverconnect"></a>SQLBrowseConnect SQLConnect und SQLDriverConnect  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |08002|08002|08002|08002|08002|08002|08002|  
   
 ## <a name="sqlbulkoperations"></a>SQLBulkOperations  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|HY010|HY010|24000|Siehe nächste Tabelle|HY010|Die HY010 o NS [c]|  
   
@@ -96,7 +96,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlcancel"></a>SQLCancel  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|--|--|--|--|S1 [1] S2 [Nr.] und [2] S3 [R] und [2] S5 [3] und [5] S6 ([3] oder [4]) und [6] S7 [4] und [7]|Siehe nächste Tabelle|  
   
@@ -126,13 +126,13 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|24000|24000|24000|S1 [Np] S3 [p]|HY010|HY010|  
   
 ## <a name="sqlcolattribute"></a>SQLColAttribute  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|HY010|Siehe nächste Tabelle|24000|--[s] S11 [X]|HY010|Die HY010 o NS [c]|  
   
@@ -148,7 +148,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges und SQLTables  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|S5 [s] S11 [X]|S1 [e] S5 [s] S11 [X]|S1 [e] und [1] S5 [s] und [1] S11 [X] und [1] 24000 [2]|Siehe nächste Tabelle|HY010|Die HY010 o NS [c]|  
   
@@ -166,7 +166,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlcopydesc"></a>SQLCopyDesc  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI [1]|--|--|--|--|HY010|NS [c] und [3] HY010 [o] oder [4]|  
 |BEI [2]|HY010|Siehe nächste Tabelle|24000|--S11 [s] X|HY010|NS [c] und [3] HY010 [o] oder [4]|  
@@ -189,13 +189,13 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources und SQLDrivers  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqldescribecol"></a>SQLDescribeCol  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|HY010|Siehe nächste Tabelle|24000|--[s] S11 [X]|HY010|Die HY010 o NS [c]|  
   
@@ -207,13 +207,13 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqldescribeparam"></a>SQLDescribeParam  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|HY010|--[s] S11 [X]|HY010|HY010|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqldisconnect"></a>SQLDisconnect  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|S0 [1]|S0 [1]|S0 [1]|S0 [1]|(HY010)|(HY010)|  
   
@@ -221,7 +221,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|: [2] oder [3] S1 [1]|: [3] S1 [Np] und ([1] oder [2]) S1 [p] und [1] S2 [p] und [2]|: [3] S1 [Np] und ([1] oder [2]) S1 [p] und [1] S3 [p] und [2]|(HY010)|(HY010)|  
   
@@ -233,7 +233,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlexecdirect"></a>SQLExecDirect  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|S4 [s] und [Nr.] S5 [s] und [R] [d] S8 S11 [X]|--[e] und [1] S1 [e] und [2] S4 [s] und [Nr.] S5 [s] und [R] [d] S8 S11 [X]|--[e], [1], und [3] S1 [e], [2] und [3] S4 [s], [Nr.], und [3] S5 [s], [R] und [3] S8 [d] und [3] S11 [X] und [3] 24000 [4]|Siehe nächste Tabelle|HY010|NS [c] HY010 [o]|  
   
@@ -255,7 +255,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlexecute"></a>SQLExecute  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|(HY010)|Siehe nächste Tabelle|S2 [e], p und [1] S4 [s], [p], [Nr.], und [1] S5 [s], [p], [R], und sich S8 [d] [p] von [1] und [1] S11 [x] [p] und [1] 24000 [p] und [2] HY010 [Np]|Finden Sie unter Cursor-Statustabelle|HY010|NS [c] HY010 [o]|  
   
@@ -279,7 +279,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlextendedfetch"></a>SQLExtendedFetch  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|S1010|S1010|24000|Siehe nächste Tabelle|S1010|NS [c] S1010 [o]|  
   
@@ -291,7 +291,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlfetch-and-sqlfetchscroll"></a>SQLFetch und SQLFetchScroll  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|HY010|HY010|24000|Siehe nächste Tabelle|HY010|NS [c] HY010 [o]|  
   
@@ -303,7 +303,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |-- [1]|HY010|HY010|HY010|HY010|HY010|HY010|  
 |BEI [2]|S0|S0|S0|S0|HY010|HY010|  
@@ -317,7 +317,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlfreestmt"></a>'SQLFreeStmt'  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI [1]|--|--|S1 [Np] S2 [p]|S1 [Np] S3 [p]|HY010|HY010|  
 |BEI [2]|--|--|--|--|HY010|HY010|  
@@ -328,19 +328,19 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetcursorname"></a>SQLGetCursorName  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|--|--|--|--|HY010|HY010|  
   
 ## <a name="sqlgetdata"></a>SQLGetData  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|HY010|HY010|24000|Siehe nächste Tabelle|HY010|NS [c] HY010 [o]|  
   
@@ -352,7 +352,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField und SQLGetDescRec  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|: [1] oder [2] HY010 [3]|Siehe nächste Tabelle|: [1] oder [2] 24000 [3]|: [1], [2] oder [3] S11 [3] und [X]|HY010|NS [c] oder [4] HY010 [o] und [5]|  
   
@@ -380,7 +380,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField und SQLGetDiagRec  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|--|--|--|--|--|--|  
 |BEI [2]|--[3]|--[3]|--|--|--[3]|--[3]|  
@@ -393,25 +393,25 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetfunctions"></a>SQLGetFunctions  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetinfo"></a>SQLGetInfo  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetstmtattr"></a>'SQLGetStmtAttr'  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|--[1] 24000[2]|--[1] 24000[2]|--[1] 24000[2]|Siehe nächste Tabelle|HY010|HY010|  
   
@@ -431,7 +431,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlmoreresults"></a>SQLMoreResults  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|--[1]|--[1]|--[s] und [2] S1 [nf], [Np], [4] S2 [nf], [p], [4] S5 [s] und [3] S11 [X]|S1 [nf], [Np], [4] S3 [nf], [p] und [4] S4 [s] und [2] S5 [s] und [3] S11 [X]|HY010|NS [c] HY010 [o]|  
   
@@ -445,25 +445,25 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlnativesql"></a>SQLNativeSql  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlnumparams"></a>SQLNumParams  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|HY010|--[s] S11 [X]|--[s] S11 [X]|--[s] S11 [X]|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlnumresultcols"></a>SQLNumResultCols  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|HY010|--[s] S11 [X]|--[s] S11 [X]|--[s] S11 [X]|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlparamdata"></a>SQLParamData  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|HY010|HY010|HY010|HY010|Siehe nächste Tabelle|NS [c] HY010 [o]|  
   
@@ -485,7 +485,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|S2 [s] und [Nr.] S3 [s] und [R] S11 [X]|--[s] oder ([e] und [1]) S1 [e] und [2] S11 [X]|S1 [e] und [3] S2 [s], [Nr.,] und [3] S3 [s], [R] und [3] S11 [X] und [3] 24000 [4]|Siehe nächste Tabelle|HY010|NS [c] HY010 [o]|  
   
@@ -505,7 +505,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlputdata"></a>SQLPutData  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|HY010|HY010|HY010|HY010|Siehe nächste Tabelle|NS [c] HY010 [o]|  
   
@@ -529,13 +529,13 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlrowcount"></a>SQLRowCount  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|(HY010)|(HY010)|--|--|(HY010)|(HY010)|  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|--|--|--|--[2] 24000[3]|HY010|HY010|  
   
@@ -547,13 +547,13 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlsetcursorname"></a>SQLSetCursorName  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|--|--|24000|24000|HY010|HY010|  
   
 ## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>SQLSetDescField und SQLSetDescRec  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI [1]|--|--|--|--|HY010|HY010|  
   
@@ -561,13 +561,13 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |HY011|HY011|HY011|HY011|Y011|HY01|HY011|  
   
 ## <a name="sqlsetpos"></a>SQLSetPos  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|HY010|HY010|24000|Siehe nächste Tabelle|HY010|NS [c] HY010 [o]|  
   
@@ -579,7 +579,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
   
-|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
+|S0<br /><br /> Nicht zugeordnet|S1<br /><br /> zugewiesen|S2-S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Daten erforderlich|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |BEI|--|: [1] HY011 [2]|--[1] 24000[2]|--[1] 24000[2]|HY010 [Np] oder [1] HY011 [p] und [2]|HY010 [Np] oder [1] HY011 [p] und [2]|  
   

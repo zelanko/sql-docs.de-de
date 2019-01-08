@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Diagrammen im Datenquellensicht-Designers (Analysis Services) | Microsoft Docs
+title: Verwenden von Diagrammen im Datenquellensicht-Designer (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d105d9a9d446d1868fc6999953cbbfdc90c90715
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3bd5ddc549be0750d2476673511bab4de9cdf411
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023617"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512763"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Verwenden von Diagrammen im Datenquellensicht-Designer (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "34023617"
   
  Zum Erstellen eines neuen Diagramms klicken Sie mit der rechten Maustaste auf eine beliebige Stelle im Bereich **Diagrammplaner** und klicken anschließend auf **Neues Diagramm**.  
   
- Wenn Sie eine Datenquellensicht (DSV) in einem Analysis Services-Projekt erstmalig definieren, alle Tabellen und Ansichten, die die Datenquellensicht hinzugefügt wurden hinzugefügt. die \<alle Tabellen > Diagramm. Dieses Diagramm wird im Bereich Diagrammplaner des Datenquellensicht-Designers angezeigt. Die Tabellen in diesem Diagramm (und ihre Spalten und Beziehungen) werden im Bereich Tabellen aufgelistet. Zudem werden die Tabellen in diesem Diagramm (und ihre Spalten und Beziehungen) grafisch im Schemabereich angezeigt. Allerdings als Sie hinzufügen, Tabellen, Sichten und benannte Abfrage, die die \<alle Tabellen > Diagramm, die bloße Anzahl von Objekten in diesem Diagramm ist es schwierig, Beziehungen – insbesondere als mehrere Faktentabellen werden dem Diagramm hinzugefügt, und dimension Verknüpfen von Tabellen mit mehreren Faktentabellen.  
+ Wenn Sie eine Datenquellensicht (DSV) in einem Analysis Services-Projekt erstmalig definieren, alle Tabellen und Sichten der Datenquellensicht hinzugefügt werden hinzugefügt der \<alle Tabellen > Diagramm. Dieses Diagramm wird im Bereich Diagrammplaner des Datenquellensicht-Designers angezeigt. Die Tabellen in diesem Diagramm (und ihre Spalten und Beziehungen) werden im Bereich Tabellen aufgelistet. Zudem werden die Tabellen in diesem Diagramm (und ihre Spalten und Beziehungen) grafisch im Schemabereich angezeigt. Allerdings wie Tabellen, Sichten und benannten Abfragen zum Hinzufügen, nach die \<alle Tabellen > Diagramm die bloße Anzahl von Objekten in diesem Diagramm erschwert die Aufgabe zur Visualisierung von Beziehungen, vor allem, wie mehrere Faktentabellen, um das Diagramm hinzugefügt werden und dimension Verknüpfen von Tabellen mit mehreren Faktentabellen verknüpft.  
   
  Zum Reduzieren des visuellen Durcheinanders, wenn Sie nur eine Teilmenge der Tabellen in der Datenquellensicht anzeigen möchten, können Sie Unterdiagramme (einfach Diagramme genannt) definieren, die aus ausgewählten Teilmengen der Tabellen, Sichten und benannten Abfragen in der Datenquellensicht bestehen. Sie können Diagramme verwenden, um Elemente in der Datenquellensicht gemäß den Geschäfts- oder Lösungsanforderungen zu gruppieren.  
   
- Sie können verknüpfte Tabellen und benannte Abfragen in separaten Diagrammen für geschäftliche Zwecke gruppieren. Diese Vorgehensweise eignet sich auch, um Datenquellensichten mit vielen Tabellen, Sichten und benannten Abfragen verständlicher zu gestalten. Die gleiche Tabelle oder benannte Abfrage kann in mehreren Diagrammen mit Ausnahme von enthalten die \<alle Tabellen > Diagramm. In der \<alle Tabellen > Diagramm, alle Objekte, die in der Datenquellensicht enthaltenen angezeigt genau einmal.  
+ Sie können verknüpfte Tabellen und benannte Abfragen in separaten Diagrammen für geschäftliche Zwecke gruppieren. Diese Vorgehensweise eignet sich auch, um Datenquellensichten mit vielen Tabellen, Sichten und benannten Abfragen verständlicher zu gestalten. Die gleiche Tabelle oder benannte Abfrage kann in mehreren Diagrammen, mit Ausnahme von eingeschlossen werden die \<alle Tabellen > Diagramm. In der \<alle Tabellen > Diagramm alle Objekte, die in der Datenquellensicht enthalten sind genau einmal angezeigt.  
   
 ##  <a name="bkmk_edit"></a> Bearbeitung oder Löschen eines Diagramms  
  Beim Arbeiten mit einem Diagramm sollten Sie besonders auf die Befehle achten, die zum Hinzufügen und Entfernen von Objekten verwendet werden. Wenn Sie ein Objekt aus einem Diagramm löschen, wird es beispielsweise auch aus der Datenquellensicht gelöscht. Wenn Sie das Objekt nur aus dem Diagramm löschen möchten, sollten Sie stattdessen **Tabelle ausblenden** verwenden.  
@@ -61,9 +61,9 @@ ms.locfileid: "34023617"
   
      Um die Anzeige für eine Tabelle zu zentrieren, die bereits in das Diagramm eingeschlossen ist, wählen Sie die Tabelle im Bereich **Tabellen** aus.  
   
--   Tabellenlokator im Bereich **Diagramm** – Der Tabellenlokator ist ein kreuzförmiges Pfeilsymbol und befindet sich am Schnittpunkt der vertikalen und horizontalen Bildlaufleiste in der unteren rechten Ecke des Bereichs **Diagramm** . Daraufhin wird eine Miniaturansicht des aktuellen Diagramms im Bereich Diagramm geöffnet. Mithilfe dieser Miniaturansicht können Sie die Ansicht im Bereich Diagramm ändern, um eine beliebige Stelle im Diagramm darzustellen.  
+-   Tabellenlokator im **Diagramm** Bereich – der tabellenlokator ist ein 4-Wege-Pfeilsymbol und befindet sich am Schnittpunkt der vertikalen und horizontalen Bildlaufleisten in der unteren rechten Ecke des der **Diagramm** Bereich. Daraufhin wird eine Miniaturansicht des aktuellen Diagramms im Bereich Diagramm geöffnet. Mithilfe dieser Miniaturansicht können Sie die Ansicht im Bereich Diagramm ändern, um eine beliebige Stelle im Diagramm darzustellen.  
   
--   Verwenden des Dialogfelds **Tabelle suchen** – Klicken Sie mit der rechten Maustaste auf einen offenen Bereich im Bereich Diagramm, und klicken Sie auf **Tabelle suchen**. Oder klicken Sie auf der Symbolleiste oder im Menü **Datenquellensicht** auf den Befehl **Tabelle suchen** .  
+-   Verwenden der **Tabelle suchen** Dialogfeld im Feld-Right click auf einen offenen Bereich im Diagramm-Bereich, und klicken Sie auf **Tabelle suchen**. Oder klicken Sie auf der Symbolleiste oder im Menü **Datenquellensicht** auf den Befehl **Tabelle suchen** .  
   
      Sie können Zeichenfolgen und Platzhalterzeichen in das Feld Filter eingeben, um Teilmengen der Tabellen im Diagramm anzuzeigen.  
   
@@ -83,6 +83,6 @@ ms.locfileid: "34023617"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Datenquellensicht-Designers & #40; Analysis Services – mehrdimensionale Daten & #41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
+ [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
   
   

@@ -16,17 +16,17 @@ ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80fb27aa51d6e0a44f8f006711708e24cd04bef3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db3b72b7bdaf60febdeb41eb6f6e1e86c5064f63
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632318"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507159"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Gibt einen oder mehrere Attribute einer [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|Gibt an, dass der Anbieter die Feldwerte zwischenspeichert und nachfolgende Lesevorgänge aus dem Cache erfolgen.|  
 |**adFldFixed**|0x10|Gibt an, dass das Feld-Daten fester Länge enthält.|  
@@ -38,7 +38,7 @@ Gibt einen oder mehrere Attribute einer [Feld](../../../ado/reference/ado-api/fi
 |**adFldIsRowURL**|0x10000|Gibt an, dass das Feld die URL enthält, die Namen die Ressource aus dem Datenspeicher durch den Eintrag dargestellt wird.|  
 |**adFldLong**|0x80|Gibt an, dass das Feld eine lange binäre Feld ist. Außerdem zeigt es an, dass Sie verwenden können, die [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) und [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) Methoden.|  
 |**adFldMayBeNull**|0x40|Gibt an, dass Sie null-Werte aus dem Feld lesen können.|  
-|**adFldMayDefer**|0x2|Gibt an, dass das Feld verzögert wird, d. h. die Feldwerte aus der Datenquelle mit dem gesamten Datensatz, aber nur, wenn Sie explizit darauf zugegriffen werden nicht abgerufen werden.|  
+|**adFldMayDefer**|0x2|Gibt an, dass das Feld, verzögert wird, die Feldwerte werden nicht aus der Datenquelle mit dem gesamten Datensatz, aber nur, wenn Sie explizit darauf zugegriffen werden abgerufen.|  
 |**adFldNegativeScale**|0x4000|Gibt an, dass das Feld einen numerischen Wert aus einer Spalte darstellt, die negative Skalierungswerte unterstützt. Die Skalierung wird angegeben, indem die [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) Eigenschaft.|  
 |**adFldRowID**|0x100|Gibt an, dass das Feld einen permanenten Zeilenbezeichner, der nicht geschrieben werden kann und keinen inhaltlichen Wert die Zeile (z. B. eine Datensatznummer, eindeutiger Bezeichner usw. enthält) zu identifizieren.|  
 |**adFldRowVersion**|0x200|Gibt an, dass das Feld eine Art des Stapels für Datum oder Uhrzeit verwendet, um Updates zu verfolgen enthält.|  

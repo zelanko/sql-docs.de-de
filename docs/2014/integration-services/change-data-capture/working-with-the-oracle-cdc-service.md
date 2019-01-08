@@ -4,28 +4,27 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac741a4f3c5ea5b4aecbe7943a55ec1f6bef145f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae456229482288e2fcf5e27f822e4f6f11540930
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110560"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749982"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Arbeiten mit dem Oracle CDC Service
   In diesem Abschnitt werden einige wichtige Begriffe des Oracle CDC Service beschrieben. Es werden die folgenden Begriffe behandelt:  
   
--   [Die MSXDBCDC-Datenbank](#BKMK_MSXDBCDC)  
+-   [MSXDBCDC-Datenbank](#BKMK_MSXDBCDC)  
   
      In diesem Abschnitt werden die Tabellen beschrieben, die in dieser Datenbank enthalten sind, und welche Bedeutung sie für CDC haben.  
   
--   [Die CDC-Datenbanken](#BKMK_CDCdatabas)  
+-   [CDC-Datenbanken](#BKMK_CDCdatabas)  
   
      Dieser Abschnitt enthält eine kurze Beschreibung der CDC-Datenbanken. Diese Datenbanken werden mit der Oracle CDC Designer Console erstellt. Weitere Informationen zu CDC-Datenbanken finden Sie in der Dokumentation, die im Installationsumfang der CDC Designer Console enthalten ist.  
   
@@ -58,9 +57,9 @@ ms.locfileid: "48110560"
 ### <a name="the-msxdbcdc-database-tables"></a>MSXDBCDC-Datenbanktabellen  
  In diesem Abschnitt werden die folgenden Tabellen in der MSXDBCDC-Datenbank beschrieben.  
   
--   [dbo. xdbcdc_trace](#BKMK_dboxdbcdc_trace)  
+-   [dbo.xdbcdc_trace](#BKMK_dboxdbcdc_trace)  
   
--   [dbo. xdbcdc_databases](#BKMK_dboxdbcdc_databases)  
+-   [dbo.xdbcdc_databases](#BKMK_dboxdbcdc_databases)  
   
 -   [dbo.xdbcdc_services](#BKMK_dboxdbcdc_services)  
   
@@ -115,7 +114,7 @@ ms.locfileid: "48110560"
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Gespeicherte Prozeduren der MSXDBCDC-Datenbank  
  In diesem Abschnitt werden die folgenden gespeicherten Prozeduren der MSXDBCDC-Datenbank beschrieben.  
   
--   [dbo. xcbcdc_reset_db (Datenbankname)](#BKMK_dboxcbcdc_reset_db)  
+-   [dbo.xcbcdc_reset_db(Datenbankname)](#BKMK_dboxcbcdc_reset_db)  
   
 -   [dbo.xdbcdc_disable_db(dbname)](#BKMK_dboxdbcdc_disable_db)  
   
@@ -187,9 +186,9 @@ ms.locfileid: "48110560"
 ### <a name="service-program-commands"></a>Dienstprogrammbefehle  
  Im folgenden Abschnitt werden die folgenden Befehle beschrieben, die zum Konfigurieren des CDC-Diensts verwendet werden.  
   
--   [Konfigurationsdatei](#BKMK_config)  
+-   [Config](#BKMK_config)  
   
--   [Erstellen](#BKMK_create)  
+-   [Create](#BKMK_create)  
   
 -   [Delete](#BKMK_delete)  
   
@@ -218,7 +217,7 @@ ms.locfileid: "48110560"
   
  **sql-username**und **sql-password** sind die zu aktualisierenden Anmeldeinformationen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Wenn sqlacct sowohl einen leeren Benutzernamen als auch ein leeres Kennwort aufweist, stellt der Oracle CDC Service mithilfe der Windows-Authentifizierung eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her.  
   
- **Hinweis**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
+ **Hinweis**: Alle Parameter, der Leerzeichen oder Anführungszeichen enthält, muss in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
   
 ###  <a name="BKMK_create"></a> Create  
  Verwenden Sie `Create` , um einen Oracle CDC Service aus einem Skript zu erstellen. Der Befehl muss von einem Computeradministrator ausgeführt werden. Unten ist ein Beispiel für den Befehl `Create` angegeben:  
@@ -244,7 +243,7 @@ ms.locfileid: "48110560"
   
  **sql-username**und **sql-password** sind der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Kontoname bzw. das Kennwort, der bzw. das zum Herstellen der Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verwendet wird. Wenn beide Parameter leer sind, stellt CDC Service for Oracle mithilfe der Windows-Authentifizierung eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her.  
   
- **Hinweis**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
+ **Hinweis**: Alle Parameter, der Leerzeichen oder Anführungszeichen enthält, muss in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
   
 ###  <a name="BKMK_delete"></a> Delete  
  Verwenden Sie `Delete` , um den Oracle CDC Service sauber aus einem Skript zu löschen. Dieser Befehl muss von einem Computeradministrator ausgeführt werden. Unten ist ein Beispiel für den Befehl `Delete` angegeben.  
@@ -259,10 +258,10 @@ ms.locfileid: "48110560"
   
  **cdc-service-name** ist der Name des zu löschenden CDC-Diensts.  
   
- **Hinweis**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
+ **Hinweis**: Alle Parameter, der Leerzeichen oder Anführungszeichen enthält, muss in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Verwenden der CDC Service-Befehlszeilenschnittstelle](how-to-use-the-cdc-service-command-line-interface.md)   
+ [Verwenden der CDC Service-Befehlszeilenschnittstelle](how-to-use-the-cdc-service-command-line-interface.md)   
  [Vorbereiten von SQL Server für CDC](prepare-sql-server-for-cdc.md)  
   
   

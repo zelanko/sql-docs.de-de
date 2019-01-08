@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, navigating
@@ -15,12 +15,12 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f12ed69b92922046f4a4432ed56b46d9a40904d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123184"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769162"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navigieren im Abfrage- und Sicht-Designer (Visual Database Tools)
   Sie können im Abfrage- und Sicht-Designer mit der Tastatur und mit der Maus arbeiten. In den folgenden Tabellen finden Sie spezielle Methoden.  
@@ -42,7 +42,7 @@ ms.locfileid: "48123184"
 |Wechseln zwischen den Spalten in einer Tabelle oder einem tabellenähnlich strukturierten Objekt|Pfeiltasten|Klicken Sie auf die Spalte, zu der Sie wechseln möchten.|  
 |Auswählen der Datenspalte für die Ausgabe|LEERTASTE oder PLUS|Klicken Sie auf das Kontrollkästchen neben Spaltennamen.|  
 |Entfernen der ausgewählten Datenspalte aus der Abfrageausgabe|LEERTASTE oder MINUS|Klicken Sie auf das Kontrollkästchen neben Spaltennamen.|  
-|Entfernen der ausgewählten Tabelle, des tabellenähnlich strukturierten Objekts oder der Joinlinie aus der Abfrage|Delete|Klicken mit der rechten Maustaste, und wählen Sie **Entfernen**aus.|  
+|Entfernen der ausgewählten Tabelle, des tabellenähnlich strukturierten Objekts oder der Joinlinie aus der Abfrage|DELETE|Klicken mit der rechten Maustaste, und wählen Sie **Entfernen**aus.|  
   
 > [!NOTE]  
 >  Wenn mehrere Elemente markiert sind, wirkt sich das Drücken dieser Taste auf alle ausgewählten Elemente aus. Sie können mehrere Elemente markieren, indem Sie beim Klicken STRG gedrückt halten.  
@@ -66,8 +66,8 @@ ms.locfileid: "48123184"
 |Einfügen von Text aus der Zwischenablage (im Bearbeitungsmodus)|STRG+V||  
 |Wechseln zwischen dem Einfüge- und dem Überschreibmodus beim Bearbeiten in einer Zelle|EINFG||  
 |Aktivieren bzw. Deaktivieren des Kontrollkästchens in der Ausgabespalte|LEERTASTE|Klicken Sie auf das Kontrollkästchen.|  
-|Löschen des markierten Inhalts einer Zelle|Delete||  
-|Löschen aller Werte einer markierten Spalte eines Datenblatts|Delete||  
+|Löschen des markierten Inhalts einer Zelle|DELETE||  
+|Löschen aller Werte einer markierten Spalte eines Datenblatts|DELETE||  
 |Einfügen einer Zeile zwischen vorhandenen Zeilen|EINFG, nach dem Markieren der Zeile des Datenblatts||  
 |Hinzufügen der Spalte „Oder...“|EINFG, nach dem Markieren einer Spalte „Oder...“||  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48123184"
 |Markieren bis zum letzten Zeichen in einer Zelle|UMSCHALT+ENDE||  
 |Wechseln zwischen dem Bearbeitungsmodus und dem Modus für die Zellenauswahl|F2||  
 |Wechseln zwischen dem Einfüge- und dem Überschreibmodus beim Bearbeiten in einer Zelle|EINFG||  
-|Löschen einer Zeile aus der Tabelle|Delete||  
+|Löschen einer Zeile aus der Tabelle|DELETE||  
 |Rückgängig machen von Änderungen an der aktuellen Zelle|ESC in der geänderten Zelle||  
 |Rückgängig machen von Änderungen an der aktuellen Zeile|ESC in einer nicht geänderten Zelle||  
 |Eingeben von Null in eine Zelle|STRG+0||  

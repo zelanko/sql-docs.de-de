@@ -16,12 +16,12 @@ ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cdf75e8911aaf4856092de273b332b3f4fb27aee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c9c148995dfe83d24798c31900874e4fe3e80df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225790"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405365"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Modellfiltersyntax und Beispiele (Analysis Services - Data Mining)
   Dieser Abschnitt enthält ausführliche Informationen zur Syntax von Modellfiltern sowie Beispielausdrücke.  
@@ -31,7 +31,7 @@ ms.locfileid: "48225790"
 ##  <a name="bkmk_Syntax"></a> Filter Syntax  
  Filterausdrücke entsprechen im Allgemeinen dem Inhalt einer WHERE-Klausel. Sie können mehrere Bedingungen mithilfe der logischen Operatoren `AND`, `OR` und `NOT` verbinden.  
   
- In geschachtelten Tabellen können Sie auch die `EXISTS` und `NOT EXISTS` Operatoren. Eine `EXISTS`-Bedingung ergibt `true`, wenn die Unterabfrage mindestens eine Zeile zurückgibt. Dies ist hilfreich, wenn Sie das Modell auf Fälle beschränken möchten, die in der geschachtelten Tabelle einen bestimmten Wert enthalten: beispielsweise Kunden, die einen Artikel mindestens ein Mal gekauft haben.  
+ In geschachtelten Tabellen können Sie auch die Operatoren `EXISTS` und `NOT EXISTS` verwenden. Eine `EXISTS`-Bedingung ergibt `true`, wenn die Unterabfrage mindestens eine Zeile zurückgibt. Dies ist hilfreich, wenn Sie das Modell auf Fälle beschränken möchten, die in der geschachtelten Tabelle einen bestimmten Wert enthalten: beispielsweise Kunden, die einen Artikel mindestens ein Mal gekauft haben.  
   
  Eine `NOT EXISTS`-Bedingung ergibt `true`, wenn die in der Unterabfrage angegebene Bedingung nicht vorhanden ist. Ein Beispiel dafür ist, wenn Sie das Modell auf Kunden beschränken möchten, die einen bestimmten Artikel noch nie gekauft haben.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48225790"
 -   **\<=** (kleiner oder gleich)  
   
 > [!NOTE]  
->  Diese Operatoren nicht unabhängig vom Datentyp einer Spalte mit dem Datentyp angewendet werden `Discrete`, `Discretized`, oder `Key`.  
+>  Unabhängig vom Datentyp können diese Operatoren nicht auf eine Spalte angewendet werden, die den Typ `Discrete`, `Discretized` oder `Key` besitzt.  
   
  Ein Ausdruck, der einen der folgenden Operatoren verwendet, kann nur auf eine Spalte vom Typ Continuous, Discrete, Discretized oder Key angewendet werden.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48225790"
   
  Wenn das Argument *avPredicate*für eine diskretisierte Spalte gilt, kann der im Filter verwendete Wert ein beliebiger Wert in einem bestimmten Bucket sein.  
   
- Mit anderen Worten, Sie definieren die Bedingung nicht als `AgeDisc = ’25-35’`, sondern Sie berechnen und verwenden einen Wert aus diesem Intervall.  
+ Mit anderen Worten, Sie definieren die Bedingung nicht als `AgeDisc = '25-35'`, sondern Sie berechnen und verwenden einen Wert aus diesem Intervall.  
   
  Beispiel:  `AgeDisc = 27`  bedeutet jeden Wert im gleichen Intervall wie 27, in diesem Fall also 25–35.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48225790"
 ## <a name="examples-of-filters"></a>Beispiele für Filter  
  In den folgenden Beispielen wird die Anwendung von Filtern auf ein Miningmodell veranschaulicht. Wenn Sie den Filterausdruck unter Verwendung von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellen, sehen Sie im Fenster **Eigenschaft** und im Bereich **Ausdruck** des Dialogfelds Filter nur die Zeichenfolge, die nach den WITH FILTER-Schlüsselwörtern angezeigt wird. Hier wird die Definition der Miningstruktur eingefügt, um den Spaltentyp und die Spaltenverwendung verständlicher zu machen.  
   
-###  <a name="bkmk_Ex1"></a> Beispiel 1: Typische Filterung auf Fallebene  
+###  <a name="bkmk_Ex1"></a> Beispiel 1: Typische Filterung auf:  
  Dieses Beispiel zeigt einen einfachen Filter, der die im Modell verwendeten Fälle auf Kunden mit dem Beruf Architekt und einem Alter von über 30 Jahren einschränkt.  
   
 ```  
@@ -123,12 +123,12 @@ Age,
 Occupation,  
 MaritalStatus PREDICT  
 )  
-WITH FILTER (Age > 30 AND Occupation=’Architect’)  
+WITH FILTER (Age > 30 AND Occupation='Architect')  
 ```  
   
 
   
-###  <a name="bkmk_Ex2"></a> Beispiel 2: Filterung auf Fallebene unter Verwendung von Attributen in geschachtelten Tabellen  
+###  <a name="bkmk_Ex2"></a> Beispiel 2: Filterung auf Fallebene mithilfe von Attributen in geschachtelten Tabellen  
  Wenn Ihre Miningstruktur geschachtelte Tabellen enthält, können Sie entweder auf das Vorhandensein eines Werts in einer geschachtelten Tabelle filtern oder auf Zeilen in der geschachtelten Tabelle, die einen bestimmten Wert enthalten. Dieses Beispiel schränkt die für das Modell verwendeten Fälle auf Kunden ein, die über 30 Jahre alt sind und mindestens einen Einkauf getätigt haben, der Milch enthielt.  
   
  Dieses Beispiel zeigt, dass der Filter nicht nur Spalten zu verwenden braucht, die im Modell enthalten sind. Die geschachtelte Tabelle **Products** ist Bestandteil der Miningstruktur, ist jedoch nicht im Miningmodell enthalten. Sie können jedoch auf Werte und Attribute in der geschachtelten Tabelle filtern. Um die Details dieser Fälle anzuzeigen, muss Drillthrough aktiviert werden.  
@@ -142,18 +142,18 @@ Occupation,
 MaritalStatus PREDICT  
 )  
 WITH DRILLTHROUGH,   
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’)  
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')  
 )  
 ```  
   
  
   
-###  <a name="bkmk_Ex3"></a> Beispiel 3: Filterung auf Fallebene unter Verwendung von mehreren Attributen in geschachtelten Tabellen  
+###  <a name="bkmk_Ex3"></a> Beispiel 3: Filterung auf Fallebene für mehrere geschachtelte Tabellenattribute  
  Dieses Beispiel zeigt einen dreiteiligen Filter: Eine Bedingung gilt für die Falltabelle, eine andere Bedingung für ein Attribut in der geschachtelten Tabelle und eine weitere Bedingung für einen bestimmten Wert in einer der geschachtelten Tabellenspalten.  
   
  Die erste Bedingung im Filter, `Age > 30`, gilt für eine Spalte in der Falltabelle. Die übrigen Bedingungen gelten für die geschachtelte Tabelle.  
   
- Die zweite Bedingung, `EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’`, überprüft, ob in der geschachtelten Tabelle mindestens ein Einkauf vorhanden ist, der Milch enthält. Die dritte Bedingung, `Quantity>=2`, bedeutet, dass der Kunde in einer Transaktion mindestens zwei Einheiten Milch gekauft haben muss.  
+ Die zweite Bedingung, `EXISTS (SELECT * FROM Products WHERE ProductName='Milk'`, überprüft, ob in der geschachtelten Tabelle mindestens ein Einkauf vorhanden ist, der Milch enthält. Die dritte Bedingung, `Quantity>=2`, bedeutet, dass der Kunde in einer Transaktion mindestens zwei Einheiten Milch gekauft haben muss.  
   
 ```  
 ALTER MINING STRUCTURE MyStructure  ADD MINING MODEL MyModel_3  
@@ -168,13 +168,13 @@ ProductName KEY,
 Quantity        
 )  
 )  
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity >= 2)   
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity >= 2)   
 )  
 ```  
   
 
   
-###  <a name="bkmk_Ex4"></a> Beispiel 4: Filterung auf Fallebene unter Verwendung der Abwesenheit von Attributen in der geschachtelten Tabelle  
+###  <a name="bkmk_Ex4"></a> Beispiel 4: Klicken Sie auf die Abwesenheit von Attributen in geschachtelten Tabellen Filterung auf Fallebene  
  Dieses Beispiel zeigt, wie Fälle auf Kunden beschränkt werden, die einen bestimmten Artikel nicht gekauft haben, indem auf das Nichtvorhandensein eines Attributs in der geschachtelten Tabelle gefiltert wird. In diesem Beispiel wird das Modell so eingerichtet, dass damit Kunden ermittelt werden können, die älter als 30 Jahre sind und noch nie Milch gekauft haben.  
   
 ```  
@@ -189,12 +189,12 @@ Products PREDICT
 ProductName  
 )  
 )  
-FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’) )  
+FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk') )  
 ```  
   
 
   
-###  <a name="bkmk_Ex5"></a> Beispiel 5: Filterung unter Verwendung von mehreren Werten in geschachtelten Tabellen  
+###  <a name="bkmk_Ex5"></a> Beispiel 5: Filter für mehrere geschachtelte Tabellenwerte  
  Dieses Beispiel soll das Filtern von geschachtelten Tabellen veranschaulichen. Der Filter für geschachtelte Tabellen wird nach dem Fallfilter angewendet und schränkt nur Zeilen in geschachtelten Tabellen ein.  
   
  Dieses Modell kann mehrere Fälle mit leeren geschachtelten Tabellen enthalten, da EXISTS nicht angegeben ist.  
@@ -210,14 +210,14 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 WITH DRILLTHROUGH  
 ```  
   
 
   
-###  <a name="bkmk_Ex6"></a> Beispiel 6: Filterung unter Verwendung von Attributen in geschachtelten Tabellen und EXISTS  
+###  <a name="bkmk_Ex6"></a> Beispiel 6: Filter für geschachtelte Tabellenattribute und EXISTS  
  In diesem Beispiel beschränkt der Filter für die geschachtelte Tabelle die Zeilen auf solche, die entweder Milch oder Wasser in Flaschen enthalten. Anschließend werden die Fälle im Modell mithilfe einer `EXISTS`-Anweisung eingeschränkt. Dies stellt sicher, dass die geschachtelte Tabelle nicht leer ist.  
   
 ```  
@@ -231,7 +231,7 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 FILTER (EXISTS (Products))  
 ```  
@@ -281,10 +281,10 @@ FILTER (EXISTS (Products))
   
   
   
-###  <a name="bkmk_Ex8"></a> Beispiel 8: Filtern unter Verwendung von Datumsangaben  
+###  <a name="bkmk_Ex8"></a> Beispiel 8: Filtern nach Datumsangaben  
  Sie können Eingabespalten genau wie alle anderen Daten nach Datumsangaben filtern. In einer Spalte des Typs Datum/Uhrzeit enthaltene Datumsangaben sind kontinuierliche Werte. Sie können daher mit Operatoren wie Größer als (>) oder Kleiner als (<) einen Datumsbereich festlegen. Wenn die Datenquelle Datumsangaben nicht durch einen kontinuierlichen Datentyp, sondern als Einzel- oder Textwerte darstellt, können Sie nicht nach einem Datumsbereich filtern, sondern müssen einzelne Werte angeben.  
   
- Sie können jedoch keinen Filter für die Datumsspalte in einem Zeitreihenmodell erstellen, wenn die für den Filter verwendete Datumsspalte gleichzeitig die Schlüsselspalte für das Modell ist. Dies liegt daran, dass die Datumsspalte in zeitreihenmodellen und sequenzclustermodellen als Typ verarbeitet werden kann `KeyTime` oder `KeySequence`.  
+ Sie können jedoch keinen Filter für die Datumsspalte in einem Zeitreihenmodell erstellen, wenn die für den Filter verwendete Datumsspalte gleichzeitig die Schlüsselspalte für das Modell ist. Dies liegt daran, dass die Datumsspalte in Zeitreihenmodellen und Sequenzclustermodellen als eine Spalte vom Typ `KeyTime` oder `KeySequence` verarbeitet werden kann.  
   
  Wenn Sie in einem Zeitreihenmodell nach kontinuierlichen Datumsangaben filtern müssen, können Sie in der Miningstruktur eine Kopie der Spalte erstellen und das Modell unter Verwendung der neuen Spalte filtern.  
   
@@ -293,9 +293,9 @@ FILTER (EXISTS (Products))
  `=[DateCopy] > '12:31:2003:00:00:00'`  
   
 > [!NOTE]  
->  Beachten Sie, dass sich alle zusätzlichen Spalten, die Sie dem Modell hinzufügen, auf die Ergebnisse auswirken können. Wenn Sie nicht möchten, dass die Spalte zur Berechnung der Reihe verwendet wird, sollten Sie die Spalte daher nur der Miningstruktur und nicht dem Modell hinzufügen. Sie können auch das Modellflag festlegen, für die Spalte auf `PredictOnly` oder `Ignore`. Weitere Informationen finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md).  
+>  Beachten Sie, dass sich alle zusätzlichen Spalten, die Sie dem Modell hinzufügen, auf die Ergebnisse auswirken können. Wenn Sie nicht möchten, dass die Spalte zur Berechnung der Reihe verwendet wird, sollten Sie die Spalte daher nur der Miningstruktur und nicht dem Modell hinzufügen. Sie können auch das Modellflag für die Spalte auf `PredictOnly` oder `Ignore` festlegen. Weitere Informationen finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md).  
   
- Für andere Modelltypen können Sie Datumsangaben ebenso wie jede andere Spalte als Eingabekriterien oder Filterkriterien verwenden. Jedoch wenn müssen Sie einen bestimmten Grad an Granularität, die von nicht unterstützt wird, verwenden eine `Continuous` -Datentyp, Sie können einen abgeleiteten Wert erstellen in der Datenquelle mithilfe von Ausdrücken die Einheit Filterung und Analyse zu extrahieren.  
+ Für andere Modelltypen können Sie Datumsangaben ebenso wie jede andere Spalte als Eingabekriterien oder Filterkriterien verwenden. Wenn Sie jedoch einen bestimmten Grad an Granularität benötigen, die von einem `Continuous`-Datentyp nicht unterstützt wird, können Sie einen abgeleiteten Wert in der Datenquelle erstellen, indem Sie mithilfe von Ausdrücken die Einheit extrahieren, die zur Filterung und Analyse verwendet werden soll.  
   
 > [!WARNING]  
 >  Wenn Sie Datumsangaben als Filterkriterien angeben, müssen Sie unabhängig vom Datumsformat für das aktuelle Betriebssystem das folgende Format verwenden: `mm/dd/yyyy`. Jedes andere Format führt zu einem Fehler.  
@@ -305,7 +305,7 @@ FILTER (EXISTS (Products))
  
   
 ## <a name="see-also"></a>Siehe auch  
- [Filter für Miningmodelle &#40;Analysis Services – Datamining&#41;](mining-models-analysis-services-data-mining.md)   
- [Tests und Überprüfung &#40;Datamining&#41;](testing-and-validation-data-mining.md)  
+ [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)   
+ [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
   
   

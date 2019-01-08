@@ -10,12 +10,12 @@ ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 31333a7fd1c97f6915010c874de2f55dca3cd59c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6750e17b694086cf716e32629fcf3b3f3b48f486
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659638"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395193"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Executing the SSMA Console ausführen (DB2ToSQL)
 Microsoft bietet einen robusten Satz von Skript Befehle zum Ausführen und Steuerungsaktivitäten SSMA Datei. Die folgenden Abschnitte enthalten Informationen identisch. Die Konsolenanwendung verwendet bestimmte standard Skriptbefehle für die Datei als aufgelisteten, in diesem Abschnitt.  
@@ -291,7 +291,7 @@ oder
 ```  
   
 ## <a name="migration-script-file-commands"></a>Skript-Datei-Migrationsbefehle  
-Die migrationsbefehle Schema der Zieldatenbank, die dem Quellschema zu konvertieren und Migrieren von Daten auf dem Zielserver. Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist 'Full' Ausgabebericht mit keine ausführliche berichterstellung: nur Zusammenfassung am Stammknoten Source-Objekt-Struktur.  
+Die migrationsbefehle Schema der Zieldatenbank, die dem Quellschema zu konvertieren und Migrieren von Daten auf dem Zielserver. Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist 'Full' Ausgabebericht mit keine ausführliche berichterstellung: Nur Zusammenfassung am Stammknoten Source-Objekt-Struktur.  
   
 **Befehl**  
   
@@ -361,7 +361,7 @@ oder
 ```  
 **Befehl**  
   
-Migrieren von Daten: die Quelldaten zum Ziel migriert.  
+Migrieren von Daten: Werden die Quelldaten zum Ziel migriert.  
   
 **Skript**  
   
@@ -475,7 +475,7 @@ Schemazuordnung der Quelldatenbank mit dem Zielschema.
 ## <a name="manageability-script-file-commands"></a>Datei-Skriptbefehle Verwaltbarkeit  
 Die Verwaltbarkeit Befehle helfen, die Ziel-Datenbankobjekte mit der Quelldatenbank zu synchronisieren.  
   
-Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist 'Full' Ausgabebericht mit keine ausführliche berichterstellung: nur Zusammenfassung am Stammknoten Source-Objekt-Struktur.  
+Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist 'Full' Ausgabebericht mit keine ausführliche berichterstellung: Nur Zusammenfassung am Stammknoten Source-Objekt-Struktur.  
   
 **Befehl**  
   
@@ -605,7 +605,7 @@ oder
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>Skript generieren-Skriptbefehle für Datei  
-Dual-Aufgaben mit die Befehle für die Generierung von Skripts: sie speichern die Konsolenausgabe in einer Skriptdatei; helfen und zeichnen Sie die T-SQL-Ausgabe in der Konsole oder eine Datei, die auf Grundlage des Parameters, die Sie angeben.  
+Die Generierung des Datenupdateskripts-Befehle führen zwei Aufgaben aus: Sie helfen, speichern Sie die Konsolenausgabe in einer Skriptdatei; und zeichnen Sie die T-SQL-Ausgabe in der Konsole oder eine Datei, die auf Grundlage des Parameters, die Sie angeben.  
   
 **Befehl**  
   

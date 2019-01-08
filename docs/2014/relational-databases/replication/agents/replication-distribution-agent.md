@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 29/10/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent, executables
@@ -16,12 +15,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7ba109b21eb8af1f4260aee43f8a9c5f8d3a3bdb
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: 7568e9deb0462dec9e9527d9876aeefd9ed9c543
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226332"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767662"
 ---
 # <a name="replication-distribution-agent"></a>Replikationsverteilungs-Agent
   Der Replikationsverteilungs-Agent ist eine ausführbare Datei, die die Momentaufnahme (bei der Momentaufnahme- und Transaktionsreplikation) und die in den Tabellen der Verteilungsdatenbank gespeicherten Transaktionen (bei der Transaktionsreplikation) in die Zieltabellen auf den Abonnenten verschiebt.  
@@ -142,7 +141,7 @@ ms.locfileid: "50226332"
 |**2**|Gibt an, dass SSL verwendet und das Zertifikat überprüft wird.|  
  
  > [!NOTE]  
- >  Ein gültiges SSL-Zertifikat ist mit einem vollqualifizierten Domänennamen der SQL Server definiert. Erstellen Sie einen Alias in der Reihenfolge, bis der Agent eine Verbindung herstellen, wenn Sie - EncryptionLevel auf 2 festlegen auf dem lokalen SQL Server. Der Parameter "-Alias-Name" muss den Namen des Servers und der Parameter "Server" sollte festgelegt werden, um den vollqualifizierten Namen der SQL Server.
+ >  Ein gültiges SSL-Zertifikat wird mit dem vollqualifizierten Domänennamen der SQL Server-Instanz definiert. Damit der Agent die Verbindung erfolgreich herstellen kann, wenn „-EncryptionLevel“ auf 2 festgelegt ist, sollten Sie einen Alias auf der lokalen SQL Server-Instanz erstellen. Der Parameter „Alias Name“ sollte den Servernamen enthalten, und für den Parameter „Server“ sollte der vollqualifizierte Name der SQL Server-Instanz festgelegt werden.
 
  Weitere Informationen finden Sie unter [Sicherheitsübersicht &#40;Replikation&#41;](../security/security-overview-replication.md).  
   
@@ -274,7 +273,7 @@ ms.locfileid: "50226332"
  Gibt den Abonnementtyp für die Verteilung an. Der Wert **0** steht für ein Pushabonnement, der Wert **1** für ein Pullabonnement und der Wert **2** für ein anonymes Abonnement.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Gibt das Transaktionsintervall für die Verlaufsprotokollierung an. Wenn die Anzahl von Transaktionen mit ausgeführtem Commit seit der letzten Instanz der Verlaufsprotokollierung den Wert dieser Option übersteigt, wird eine Verlaufsmeldung protokolliert. Der Standardwert ist 100. Der Wert **0** gibt unendliche **TransactionsPerHistory**an. See the preceding **–MessageInterval**parameter.  
+ Gibt das Transaktionsintervall für die Verlaufsprotokollierung an. Wenn die Anzahl von Transaktionen mit ausgeführtem Commit seit der letzten Instanz der Verlaufsprotokollierung den Wert dieser Option übersteigt, wird eine Verlaufsmeldung protokolliert. Der Standardwert ist 100. Der Wert **0** gibt unendliche **TransactionsPerHistory**an. Siehe vorherigen Parameter **-MessageInterval**.  
   
  **-UseDTS**  
  Muss als Parameter für eine Veröffentlichung angegeben werden, die eine Datentransformation ermöglicht.  

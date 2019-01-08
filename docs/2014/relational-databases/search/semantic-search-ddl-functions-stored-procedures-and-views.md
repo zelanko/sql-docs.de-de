@@ -12,12 +12,12 @@ ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d61854f57214212d079b4d32ae69b0bc6e8c5cce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76ced95f53b50c0fc0402051cff35329d39ce9f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160470"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530730"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>Semantische Such-DDL, Funktionen, gespeicherte Prozeduren und Sichten
   Im Folgenden finden Sie eine Liste der Transact-SQL-Anweisungen und Datenbankobjekte, die die statistische semantische Suche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützen.  
@@ -57,7 +57,7 @@ ms.locfileid: "48160470"
 |[sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql)|[Installieren und Konfigurieren der semantischen Suche](install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)|[Installieren und Konfigurieren der semantischen Suche](install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> Systemsichten – Katalogsichten  
+##  <a name="cv"></a> Systemsichten: Katalogsichten  
   
 |Objekt|Weitere Informationen|  
 |------------|----------------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "48160470"
 |[sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)|[Installieren und Konfigurieren der semantischen Suche](install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)|[Installieren und Konfigurieren der semantischen Suche](install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> Systemsichten – Dynamische Verwaltungssichten  
+##  <a name="dmv"></a> Systemsichten: Dynamische Verwaltungssichten  
   
 |Objekt|Weitere Informationen|  
 |------------|----------------------|  

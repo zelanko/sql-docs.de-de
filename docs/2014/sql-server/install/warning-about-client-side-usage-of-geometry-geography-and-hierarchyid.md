@@ -11,12 +11,12 @@ ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad1970ad7112910b190ee75974248405e0269646
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9ee14c39f7fee577065de934f839f9d6c88e630
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119410"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413770"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Warnung zur clientseitigen Verwendung von GEOMETRY, GEOGRAPHY und HIERARCHYID
   Die Assembly **"Microsoft.SqlServer.Types.dll"**, die die Typen von räumlichen Daten enthält, wurde aktualisiert von Version 10.0 auf Version 11.0. Benutzerdefinierte Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl, wenn bestimmte Bedingungen den Wert "true" aufweisen.  
@@ -27,9 +27,9 @@ ms.locfileid: "48119410"
 ## <a name="description"></a>Description  
  Die Assembly **"Microsoft.SqlServer.Types.dll"**, die die Typen von räumlichen Daten enthält, wurde aktualisiert von Version 10.0 auf Version 11.0. Benutzerdefinierte Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl, wenn die folgenden Bedingungen den Wert "true" aufweisen.  
   
--   Wenn Sie verschieben eine benutzerdefinierte Anwendung auf einem Computer auf dem [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] installiert wurde, an einem Computer, auf dem nur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist installiert, die Anwendung schlägt fehl, da die referenzierte Version 10.0, die von der **"SqlTypes"** Assembly ist nicht vorhanden. Möglicherweise wird folgende Fehlermeldung angezeigt: `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
+-   Wenn Sie verschieben eine benutzerdefinierte Anwendung auf einem Computer auf dem [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] installiert wurde, an einem Computer, auf dem nur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist installiert, die Anwendung schlägt fehl, da die referenzierte Version 10.0, die von der **"SqlTypes"** Assembly ist nicht vorhanden. Möglicherweise wird folgende Fehlermeldung angezeigt: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
--   Wenn Sie verweisen auf die **"SqlTypes"** Version 11.0 der Assembly und Version 10.0 ebenfalls installiert ist, können Sie die folgende Fehlermeldung angezeigt: `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
+-   Wenn Sie verweisen auf die **"SqlTypes"** Version 11.0 der Assembly und Version 10.0 ebenfalls installiert ist, können Sie die folgende Fehlermeldung angezeigt: `"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
 -   Wenn Sie verweisen auf die **"SqlTypes"** Version 11.0 der Assembly in einer benutzerdefinierten Anwendung, die auf .NET 3.5, 4 oder 4.5 abzielt, die Anwendung schlägt fehl, da SqlClient so konzipiert, Version 10.0 der Assembly lädt. Dieser Fehler tritt auf, wenn die Anwendung eine der folgenden Methoden aufruft:  
   

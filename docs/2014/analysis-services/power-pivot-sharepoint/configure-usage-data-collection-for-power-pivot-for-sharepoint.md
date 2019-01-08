@@ -11,17 +11,17 @@ ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12943c96c64c1a5d20ee94c76a9701fc7a983d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083820"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411277"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Konfigurieren der Sammlung von Verwendungsdaten für PowerPivot für SharePoint
   Die Sammlung von Verwendungsdaten ist eine SharePoint-Funktion auf Farmebene. Dieses System wird durch PowerPivot für SharePoint verwendet und ergänzt, indem Berichte im PowerPivot-Management-Dashboard bereitgestellt werden, die die Verwendung von PowerPivot-Daten und -Diensten aufzeigen. Abhängig davon, wie SharePoint installiert wird, kann die Sammlung von Verwendungsdaten für die Farm deaktiviert sein. Ein Farmadministrator muss die Verwendungsprotokollierung aktivieren, damit operative Verwendungsdaten für die Darstellung im PowerPivot-Management-Dashboard generiert werden.  
   
- Weitere Informationen zu den Verwendungsdaten im PowerPivot-Management-Dashboard finden Sie unter [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Informationen zu den Verwendungsdaten im PowerPivot-Management-Dashboard finden Sie unter [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **In diesem Thema:**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48083820"
     |**PowerPivot-Verbindungen**|Das PowerPivot-Verbindungsereignis wird zum Überwachen von PowerPivot-Serververbindungen verwendet, die im Namen eines Benutzers hergestellt werden.|  
     |**PowerPivot-Datenladevorgängen**|Die Funktion PowerPivot Load Data Usage wird zum Überwachen von Anforderungen verwendet, durch die PowerPivot-Daten in den Serverarbeitsspeicher geladen werden. Ein Ladeereignis wird für PowerPivot-Datendateien generiert, die aus einer Inhaltsdatenbank oder dem Cache geladen werden.|  
     |**Verwendung von PowerPivot-Datenentladevorgängen**|Die Funktion PowerPivot Unload Data Usages wird zur Überwachung von Anfragen zum Entladen einer PowerPivot-Datenquelle nach einem bestimmten Zeitraum der Inaktivität verwendet. Das Zwischenspeichern einer PowerPivot-Datenquelle auf einem Datenträger wird als Entladeereignis gemeldet.|  
-    |**Verwendung von PowerPivot-Abfragen**|Verwendung von PowerPivot-Abfrage dient zur Überwachung von abfrageverarbeitungszeiten für Daten, die in geladen ist ein [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] Instanz.|  
+    |**Verwendung von PowerPivot-Abfragen**|Mithilfe der Funktion Verwendung von PowerPivot-Abfragen werden Abfrageverarbeitungszeiten für Daten überwacht, die in eine [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] -Instanz geladen werden.|  
   
     > [!NOTE]  
     >  Obwohl Serverzustands- und Datenaktualisierungsvorgänge auch Verwendungsdaten generieren, ist diesen Prozessen kein Ereignis zugeordnet.  
@@ -87,9 +87,9 @@ ms.locfileid: "48083820"
 ##  <a name="jobs"></a> Konfigurieren der Zeitgeberaufträge, die bei der Sammlung von Verwendungsdaten verwendet werden  
  Die Serverstatus-und Verwendungsdaten von PowerPivot werden durch zwei Zeitgeberaufträge an unterschiedliche Stellen im System zur Sammlung von Verwendungsdaten verschoben:  
   
--   Der Zeitgeberauftrag "Import der Microsoft SharePoint Foundation-Verwendungsdaten" überträgt die PowerPivot-Verwendungsdaten in die Datenbank der PowerPivot-Dienstanwendung.  
+-   Der Zeitgeberauftrag "Microsoft SharePoint Foundation Usage Data Import" verschiebt PowerPivot-Verwendungsdaten in die Datenbank der PowerPivot-dienstanwendung.  
   
--   Der Zeitgeberauftrag für die Verarbeitung des PowerPivot-Management-Dashboards überträgt die Daten in eine PowerPivot-Arbeitsmappe, die die Datenquelle für integrierte administrative Berichte darstellt.  
+-   Der "Verarbeitung von PowerPivot-Management-Dashboard-Zeitgeberauftrag" die Daten mit PowerPivot-Arbeitsmappe, die die Datenquelle für integrierte administrative Berichte darstellt.  
   
  Wenn Sie die Administratorberichte aktualisieren müssen, die häufiger im PowerPivot-Management-Dashboard angezeigt werden, führen Sie die folgenden Schritte aus.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "48083820"
   
     -   Der Standardwert beträgt 300 Sekunden (oder fünf Minuten). Dieser Wert wird für dynamische Farmumgebungen empfohlen, in denen eine Vielzahl von Anwendungen und Diensten ausgeführt wird.  
   
-     Wenn Sie diesen Wert wesentlich heraufsetzen, können statistische Daten verloren gehen, bevor sie gemeldet werden. Ein Dienstneustart bewirkt z. B., dass Abfragestatistikdaten verloren gehen. Umgekehrt können die integrierten Aktivitätsberichte jedoch auch zu wenig Daten enthalten. In diesem Fall können Sie das Intervall verringern, damit Ereignisse für die Berichterstellung häufiger gemeldet werden.  
+     Wenn Sie diesen Wert wesentlich heraufsetzen, können statistische Daten verloren gehen, bevor sie gemeldet werden. Ein Dienstneustart bewirkt z. B., dass Abfragestatistikdaten verloren gehen. Umgekehrt können die integrierten Aktivitätsberichte jedoch auch zu wenig Daten enthalten. In diesem Fall können Sie das Intervall verringern, damit Ereignisse für die Berichterstellung häufiger gemeldet werden.  
   
 3.  Klicken Sie auf **OK**.  
   

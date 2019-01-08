@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e0e0ed3aea02ae8a79d89871f6849b1cbf40c9d0
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169326"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518272"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Konfigurieren von InfiniBand-Netzwerkadapter für Analytics Platform System
 Beschreibt, wie die InfiniBand-Netzwerkadapter auf einem Clientserver nicht zur Appliance gehört-für die Verbindung mit dem Steuerungsknoten auf Parallel Data Warehouse (PDW) zu konfigurieren. Verwenden Sie diese Anweisungen für eine hohe Verfügbarkeit und Konnektivität, sodass laden, Sicherung und andere Prozesse automatisch mit dem aktiven InfiniBand-Netzwerk zu verbinden.  
@@ -42,9 +42,9 @@ Nach dem Konfigurieren Ihrer InfiniBand-Netzwerkadapter, Clientprozesse können 
   
 Beispielsweise ist, wenn der Name des PDW-Region MyPDW ist und ist der Name des MyAPS, Dwloader Serverspezifikation zum Laden von Daten eine der folgenden:  
   
--   `dwloader –S MYPDW-SQLCTL01.MyAPS.pdw.local`  
+-   `dwloader -S MYPDW-SQLCTL01.MyAPS.pdw.local`  
   
--   `dwloader –S MYPDW-SQLCTL01`  
+-   `dwloader -S MYPDW-SQLCTL01`  
   
 ## <a name="BeforeBegin"></a>Vorbereitungen  
   
@@ -96,7 +96,7 @@ Um Ihre eigenen geschäftlichen Anforderungen zu erfüllen, können Sie die Clie
   
     Um eine nicht verwendete IP-Adresse zu suchen, öffnen Sie ein Befehlsfenster, und versuchen Sie, IP-Adressen innerhalb des Bereichs von Adressen für Ihr Gerät zu pingen. In diesem Beispiel ist die IP-Adresse des Netzwerks TeamIB2 172.16.18.30. Suchen Sie eine IP-Adresse, die mit 172.16.18 beginnt, die nicht verwendet wird. Geben Sie über die Befehlszeile z. B. "ping 172.16.18.254". Wenn der Ping-Anforderung nicht erfolgreich ist, ist die IP-Adresse verfügbar.  
   
-## <a name="Sec2"></a>Schritt 2: Konfigurieren der Adaptereinstellungen InfiniBand-Netzwerk auf dem Clientserver  
+## <a name="Sec2"></a>Schritt 2: Konfigurieren Sie die Adaptereinstellungen InfiniBand-Netzwerk, auf dem Clientserver  
 
 ### <a name="notes"></a>Hinweise  
   
@@ -161,7 +161,7 @@ Um Ihre eigenen geschäftlichen Anforderungen zu erfüllen, können Sie die Clie
   
 1.  Klicken Sie im Fenster Netzwerkverbindungen mit der rechten Maustaste auf einen der Slots Netzwerk für den Mellanox-Adapter, und wählen Sie Eigenschaften.  
   
-2.  Klicken Sie auf "Erweitert" die... aus.  
+2.  Klicken Sie auf die erweiterten....  
   
 3.  Im Fenster "Erweiterte TCP/IP-Einstellungen", wenn der Anfügevorgang diese DNS-Suffixe anhängen (in Reihenfolge)-Option nicht, abgeblendet dargestellt ist überprüfen Sie das Feld namens diese DNS-Suffixe anhängen (in Reihenfolge): Wählen Sie das Domänensuffix des Geräts, und klicken Sie auf Hinzufügen... Das Domänensuffix Appliance ist `appliance_domain.local`  
   

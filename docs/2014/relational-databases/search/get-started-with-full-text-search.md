@@ -15,12 +15,12 @@ ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 722921015886e8aed687a8bf689dd7f7d8c592ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125040"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541402"
 ---
 # <a name="get-started-with-full-text-search"></a>Erste Schritte mit der Volltextsuche
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind die Datenbanken standardmäßig volltextfähig. Wenn Sie jedoch einen Volltextindex für eine Tabelle verwenden möchten, müssen Sie die Volltextindizierungsfunktion für die Spalten der Tabellen einrichten, auf die Sie mit der Volltext-Engine zugreifen möchten.  
@@ -51,7 +51,7 @@ ms.locfileid: "48125040"
   
 2.  Erstellen eines Volltextindex für eine Tabelle oder eine indizierte Sicht.  
   
-     Ein Volltextindex ist ein besonderer Typ eines tokenbasierten funktionellen Index, der durch die Volltext-Engine erstellt und verwaltet wird. Um eine Volltextsuche für eine Tabelle oder Sicht erstellen zu können, muss ein eindeutiger, einspaltiger Index vorhanden sein, der keine NULL-Werte zulässt. Die Volltext-Engine benötigt diesen eindeutigen Index, um jeder Zeile in der Tabelle einen eindeutigen, komprimierbaren Schlüssel zuzuordnen. Ein Volltextindex kann enthalten `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, und `varbinary(max)` Spalten. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Volltextindizes](create-and-manage-full-text-indexes.md).  
+     Ein Volltextindex ist ein besonderer Typ eines tokenbasierten funktionellen Index, der durch die Volltext-Engine erstellt und verwaltet wird. Um eine Volltextsuche für eine Tabelle oder Sicht erstellen zu können, muss ein eindeutiger, einspaltiger Index vorhanden sein, der keine NULL-Werte zulässt. Die Volltext-Engine benötigt diesen eindeutigen Index, um jeder Zeile in der Tabelle einen eindeutigen, komprimierbaren Schlüssel zuzuordnen. Ein Volltextindex kann Spalten der Typen `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary` und `varbinary(max)` beinhalten. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Volltextindizes](create-and-manage-full-text-indexes.md).  
   
  Bevor Sie mehr über das Erstellen von Volltextindizes erfahren, sollten Sie die Unterschiede zu regulären [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Indizes kennen. In der folgenden Tabelle sind die Unterschiede aufgelistet.  
   
@@ -101,14 +101,14 @@ ms.locfileid: "48125040"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>Zuordnen einer Stopliste zum Volltextindex  
  Mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] werden Stoplisten eingeführt. Eine *Stoppliste* ist eine Liste von Stoppwörtern. Stoppwörter werden auch als Füllwörter bezeichnet. Jedem Volltextindex ist eine Stoppliste zugeordnet, und die Wörter der Stoppliste werden auf Volltextabfragen des Indexes angewendet. Standardmäßig ist der Systemstoppliste ein neuer Volltextindex zugeordnet. Sie können stattdessen jedoch auch eine eigene Stoppliste erstellen und verwenden. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- Beispielsweise die folgenden [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung erstellt eine neue Volltext-Stoppliste mit dem Namen myStoplist3 durch Kopieren der Systemstoppliste:  
+ Die folgende [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung erstellt z. B. durch Kopieren der Systemstoppliste eine neue Volltext-Stoppliste mit dem Namen „myStoplist3“:  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- Die folgenden [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung ändert eine stopliste mit dem Namen "mystoplist", das Wort "En" hinzugefügt, zuerst für Spanisch und dann für Französisch hinzugefügt:  
+ Die folgende [-Anweisung](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] ändert eine Stoppliste mit dem Namen „myStoplist“, indem zuerst für Spanisch und dann für Französisch das Wort „en“ hinzugefügt wird:  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -118,7 +118,7 @@ GO
   
   
 ### <a name="updating-a-full-text-index"></a>Aktualisieren eines Volltextindexes  
- Volltextindizes können wie reguläre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Indizes automatisch aktualisiert werden, sobald Daten in den zugeordneten Tabellen geändert werden. Dies ist das Standardverhalten. Alternativ dazu können Sie die Volltextindizes auch manuell auf dem aktuellen Stand halten oder in bestimmten Abständen aktualisieren lassen. Das Auffüllen eines Volltextindex kann zeitaufwändig und ressourcenintensiv sein. Aus diesem Grund wird das Indexupdate meist als asynchroner Vorgang durchgeführt, der im Hintergrund ausgeführt wird und den Volltextindex jeweils nach Änderungen in der Basistabelle aktualisiert. Das sofortige Aktualisieren eines Volltextindex nach jeder Änderung in der Basistabelle kann ressourcenintensiv sein. Bei sehr hohen Update-, Einfügungs- und Löschungsraten kann es deshalb zu einer Verringerung der Abfrageleistung kommen. In diesem Fall sollten Sie erwägen, eine manuelle Änderungsnachverfolgung und entsprechende Updates zu planen, um die zahlreichen Änderungen von Zeit zu Zeit zu bearbeiten, anstatt mit den Abfragen um Ressourcen zu wetteifern.  
+ Volltextindizes können wie reguläre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Indizes automatisch aktualisiert werden, sobald Daten in den zugeordneten Tabellen geändert werden. Dies ist das Standardverhalten. Alternativ dazu können Sie die Volltextindizes auch manuell auf dem aktuellen Stand halten oder in bestimmten Abständen aktualisieren lassen. Das Auffüllen eines Volltextindex kann zeitaufwändig und ressourcenintensiv sein. Aus diesem Grund wird das Indexupdate meist als asynchroner Vorgang durchgeführt, der im Hintergrund ausgeführt wird und den Volltextindex jeweils nach Änderungen in der Basistabelle aktualisiert. Das sofortige Aktualisieren eines Volltextindex nach jeder Änderung in der Basistabelle kann ressourcenintensiv sein. Bei sehr hohen Update-, Einfügungs- und Löschungsraten kann es deshalb zu einer Verringerung der Abfrageleistung kommen. In diesem Fall sollten Sie erwägen, eine manuelle Änderungsnachverfolgung und entsprechende Updates zu planen, um die zahlreichen Änderungen von Zeit zu Zeit zu bearbeiten, anstatt mit den Abfragen um Ressourcen zu wetteifern.  
   
  Zum Überwachen des Auffüllungsstatus verwenden Sie entweder die Funktion FULLTEXTCATALOGPROPERTY oder OBJECTPROPERTYEX. Führen Sie die folgende Anweisung aus, um den Auffüllungsstatus des Katalogs zu ermitteln:  
   
@@ -161,7 +161,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
     ```  
   
-     Die in diesem Beispiel definierte TYPE COLUMN gibt die Typspalte in der Tabelle an, die den Typ des Dokuments in der Spalte Document (binäre Spalte) enthält. In der Typspalte wird die vom Benutzer angegebene Dateierweiterung für das Dokument der betreffenden Zeile gespeichert: ".doc", ".xls" usw. Die Volltext-Engine verwendet die Erweiterung einer Zeile, um den richtigen Filter für die Analyse der Daten in dieser Zeile aufzurufen. Nachdem der Filter die binären Daten der Zeile analysiert hat, analysiert die angegebene Wörtertrennung den Inhalt (in diesem Beispiel wird die Wörtertrennung für britisches Englisch verwendet). Beachten Sie, dass der Filtervorgang nur zur Indizierungszeit ausgeführt wird bzw. wenn ein Benutzer eine Spalte in der Basistabelle einfügt oder aktualisiert, während für den Volltextindex die automatische Änderungsnachverfolgung aktiviert ist. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Filtern für die Suche](configure-and-manage-filters-for-search.md).  
+     Die in diesem Beispiel definierte TYPE COLUMN gibt die Typspalte in der Tabelle an, die den Typ des Dokuments in der Spalte Document (binäre Spalte) enthält. Die Spalte vom Typ speichert die benutzerdefinierte Datei Erweiterung – ".doc", ".xls", und usw. des Dokuments in einer angegebenen Zeile. Die Volltext-Engine verwendet die Erweiterung einer Zeile, um den richtigen Filter für die Analyse der Daten in dieser Zeile aufzurufen. Nachdem der Filter die binären Daten der Zeile analysiert hat, analysiert die angegebene Wörtertrennung den Inhalt (in diesem Beispiel wird die Wörtertrennung für britisches Englisch verwendet). Beachten Sie, dass der Filtervorgang nur zur Indizierungszeit ausgeführt wird bzw. wenn ein Benutzer eine Spalte in der Basistabelle einfügt oder aktualisiert, während für den Volltextindex die automatische Änderungsnachverfolgung aktiviert ist. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Filtern für die Suche](configure-and-manage-filters-for-search.md).  
   
   
 ##  <a name="tasks"></a> Allgemeine Aufgaben  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - resource pools [SQL Server], create
@@ -14,21 +13,21 @@ ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b62c0f104eb5e1d4afd8c495027544252cd180fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051829"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753962"
 ---
 # <a name="create-a-resource-pool"></a>Erstellen eines Ressourcenpools
   Mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]können Sie einen Ressourcenpool erstellen.  
   
--   **Vorbereitungen:**  [Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  
+-   **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  
   
--   **Zum Erstellen eines Ressourcenpools mit:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
+-   **Zum Erstellen einer Ressource Ressourcenpools mit:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="LimitationsRestrictions"></a> Einschränkungen  
  Der maximale CPU-Prozentsatz muss gleich oder höher als der minimale CPU-Prozentsatz sein. Der maximale Arbeitsspeicherprozentsatz muss gleich oder höher als der minimale Arbeitsspeicherprozentsatz sein.  
@@ -74,7 +73,7 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [Resource Governor](resource-governor.md)   
  [Aktivieren der Ressourcenkontrolle](enable-resource-governor.md)   
- [Ressourcenpool für die Ressourcenkontrolle](resource-governor-resource-pool.md)   
+ [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
  [Ändern der Einstellungen für den Ressourcenpool](change-resource-pool-settings.md)   
  [Löschen eines Ressourcenpools](delete-a-resource-pool.md)   
  [Konfigurieren der Ressourcenkontrolle mit einer Vorlage](configure-resource-governor-using-a-template.md)   

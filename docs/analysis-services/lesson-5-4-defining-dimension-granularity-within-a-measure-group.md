@@ -1,5 +1,5 @@
 ---
-title: Definieren von Dimensionsgranularität innerhalb einer Measuregruppe | Microsoft Docs
+title: Definieren von Dimensionsgranularität innerhalb einer Measuregruppe | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9faa4c869591c6885a1856fca0ec63661af7799a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e047f955f9c4ecccc02404dc139d557935e0f090
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018817"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542240"
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lektion 5-4: Definieren von Dimensionsgranularität innerhalb einer Measuregruppe
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -99,7 +99,7 @@ In den Aufgaben in diesem Thema fügen Sie eine Sales Quota-Measuregruppe hinzu 
   
 8.  Klicken Sie im Filter auf das Kontrollkästchen **Alles auswählen**, um die Auswahl aller Optionen aufzuheben, und wählen Sie anschließend nur „North America“ aus.  
   
-    ![Filterbereich für die Auswahl von North America](../analysis-services/media/l5-granularity-1b.png "Filterbereich für Nordamerika auswählen")  
+    ![Filterbereich für die Auswahl von Nordamerika](../analysis-services/media/l5-granularity-1b.png "Filterbereich für die Auswahl von Nordamerika")  
   
 9. Erweitern Sie in der PivotTable-Feldliste den Eintrag **Date**.  
   
@@ -113,7 +113,7 @@ In den Aufgaben in diesem Thema fügen Sie eine Sales Quota-Measuregruppe hinzu 
   
     Die folgende Abbildung zeigt die Werte für **Sales Amount Quota**.  
   
-    ![Werte für Sales Betrag Kontingent](../analysis-services/media/l5-granularity-3.png "Werte für Sales Betrag Kontingent")  
+    ![Werte für Sales Amount Quota](../analysis-services/media/l5-granularity-3.png "Werte für Sales Amount Quota")  
   
 ## <a name="defining-dimension-usage-properties-for-the-sales-quotas-measure-group"></a>Definieren der Dimensionsverwendungseigenschaft für die Sales Quotas-Measuregruppe  
   
@@ -127,7 +127,7 @@ In den Aufgaben in diesem Thema fügen Sie eine Sales Quota-Measuregruppe hinzu 
   
     Beachten Sie, dass die **Employee** - und **Date** -Cubedimensionen mit den **Sales Quotas- und Sales Quotas 1** -Measuregruppen durch reguläre Beziehungen verknüpft sind. Beachten Sie außerdem, dass die **Sales Territory** -Cubedimension mit keiner dieser Measuregruppen verknüpft ist.  
   
-4.  Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** -Dimension und der **Sales Quotas** -Measuregruppe und anschließend auf die Schaltfläche zum Durchsuchen (**…**). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
+4.  Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** Dimension und die **Sales Quotas** Measuregruppe, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
   
 5.  Wählen Sie in der Liste **Beziehungstyp auswählen** die Option **Referenziert**.  
   
@@ -141,7 +141,7 @@ In den Aufgaben in diesem Thema fügen Sie eine Sales Quota-Measuregruppe hinzu 
   
 10. Klicken Sie auf **OK**.  
   
-11. Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** -Dimension und der **Sales Quotas 1** -Measuregruppe und anschließend auf die Schaltfläche zum Durchsuchen (**…**). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
+11. Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** Dimension und die **Sales Quotas 1** Measuregruppe, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
   
 12. Wählen Sie in der Liste **Beziehungstyp auswählen** die Option **Referenziert**.  
   
@@ -163,7 +163,7 @@ In den Aufgaben in diesem Thema fügen Sie eine Sales Quota-Measuregruppe hinzu 
   
     Durch das Umbenennen der **Order Date** -Cubedimension in **Date** wird ihre Rolle als primäre Datendimension in diesem Cube für Benutzer leichter verständlich.  
   
-20. Klicken Sie in der Zelle am Schnittpunkt der**Sales Quotas**-Measuregruppe und der **Date** -Dimension auf die Schaltfläche zum Durchsuchen ( **…** ).  
+20. Klicken Sie auf die Schaltfläche zum Durchsuchen (**...** ) in der Zelle am Schnittpunkt der **Sales Quotas** Measuregruppe und der **Datum** Dimension.  
   
 21. Wählen Sie im Dialogfeld **Beziehung definieren** in der Liste **Beziehungstyp auswählen** den Eintrag **Regulär** aus.  
   
@@ -218,7 +218,7 @@ In den Aufgaben in diesem Thema fügen Sie eine Sales Quota-Measuregruppe hinzu 
   
     Beachten Sie, dass alle Elemente der Geschäftsquartalsebene über den gleichen Wert verfügen wie die Quartalsebene. Wenn beispielsweise **Q1 FY 2008** verwendet wird, entspricht die Vorgabe von $9,180,000.00 für **Q1 FY 2008** auch dem Wert der einzelnen Elemente. Zu diesem Verhalten kommt es, weil die Auflösung der Daten in der Faktentabelle auf der Quartalsebene und die Auflösung der Date-Dimension auch auf der Quartalsebene liegt. In Lektion 6 lernen Sie, wie die Quartalssumme proportional zu jedem Monat zugeordnet wird.  
   
-    ![Sales Quota-Measuregruppe ordnungsgemäß dimensioniert](../analysis-services/media/l5-granularity-7.gif "Sales Quota-Measuregruppe ordnungsgemäß dimensioniert")  
+    ![Sales Quota-Measuregruppe ordnungsgemäß dimensioniert](../analysis-services/media/l5-granularity-7.gif "ordnungsgemäß dimensionierte Sales Quota-Measuregruppe")  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
 [Lektion 6: Definieren von Berechnungen](../analysis-services/lesson-6-defining-calculations.md)  

@@ -10,12 +10,12 @@ ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 44169d3d7b2744b06af31eb6212383db3a0f8b36
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 7d3e0ab451344b443452052960c16f9ccfdc9462
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032777"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412947"
 ---
 # <a name="use-the-dqs-speller"></a>Verwenden der DQS-Rechtschreibprüfung
   Die [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Rechtschreibprüfung überprüft die Syntax, Rechtschreibung und Satzstruktur von Zeichenfolgenwerten in einer Domäne. Die Rechtschreibprüfung ist eine eigenständige, clientseitige Funktion, die nicht in serverseitige Engines integriert ist und keine Auswirkungen auf aktuelle Abläufe oder Status hat. Mit der Rechtschreibprüfung werden die Zeichenfolgenwerte identifiziert, bei denen es sich möglicherweise um Fehler handelt. Diese werden an der gleichen Stelle, an der andere manuelle Änderungen an Domänenwerten vorgenommen werden, mit einem roten Unterstrich markiert. Dazu gehören die folgenden Stellen:  
@@ -64,11 +64,11 @@ ms.locfileid: "51032777"
   
 6.  Wenn Sie den Wert dem Wörterbuch hinzufügen möchten, klicken Sie auf **Zum Wörterbuch hinzufügen**. Der Wert ist nicht mehr mit einem roten Unterstrich markiert.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Verwenden der Rechtschreibprüfung  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Verwenden der Rechtschreibprüfung  
  Nachdem Sie die Rechtschreibprüfung ausgeführt haben, schließen Sie die Aktivität ab, in der sich die Domäne befindet, um die von der Rechtschreibprüfung vorgeschlagenen Korrekturen zu verwenden. Wenn die Wissensermittlungs-, Domänenverwaltungs- oder Abgleichsrichtlinienaktivität durchgeführt wird, veröffentlichen Sie die Wissensdatenbank, um die Ergebnisse der Rechtschreibprüfung für die Verwendung in der Wissensdatenbank verfügbar zu machen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../../2014/data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../../2014/data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="How"></a> Funktionsweise der Rechtschreibprüfung  
- Die DQS-Rechtschreibprüfung markiert jeden potenziellen Zeichenfolgenwertfehler mit einem roten Unterstrich, der für den gesamten Wert angezeigt wird. Wenn "New York" falsch geschrieben wurde, z. B. "Neu York", zeigt die Rechtschreibprüfung einen roten Unterstrich unter "Neu York" und nicht nur unter "Neu" an. Wenn Sie mit der rechten Maustaste auf den Wert klicken, sehen Sie vorgeschlagene Korrekturen für den gesamten Wert. Wenn mehr als fünf Vorschläge vorhanden sind, können Sie auch auf **Weitere Vorschläge** klicken. Sie können einen der Vorschläge auswählen oder dem Wörterbuch einen Wert hinzufügen (auf Benutzerkontoebene), der für den ursprünglichen Wert angezeigt werden soll. Dem Wörterbuch hinzugefügte Werte gelten für alle Domänen. Nur wenn Sie einen Vorschlag explizit festlegen, wird die Korrektur in der Domäne vorgenommen. Wenn Sie einen Vorschlag im Kontextmenü der Rechtschreibprüfung auswählen, ändert sich der Werttyp in einen Fehler (oder bleibt ein Fehler). Der ausgewählte Vorschlag wird der Korrekturspalte hinzugefügt. Beachten Sie, dass der **Typ** eines Werts mit **Richtig** angegeben und trotzdem von der Rechtschreibprüfung als potenzieller Fehler markiert sein kann.  
+ Die DQS-Rechtschreibprüfung markiert jeden potenziellen Zeichenfolgenwertfehler mit einem roten Unterstrich, der für den gesamten Wert angezeigt wird. Wenn „New York“ falsch geschrieben wurde, z.B. „Neu York“, zeigt die Rechtschreibprüfung einen roten Unterstrich unter „Neu York“ und nicht nur unter „Neu“ an. Wenn Sie mit der rechten Maustaste auf den Wert klicken, sehen Sie vorgeschlagene Korrekturen für den gesamten Wert. Wenn mehr als fünf Vorschläge vorhanden sind, können Sie auch auf **Weitere Vorschläge** klicken. Sie können einen der Vorschläge auswählen oder dem Wörterbuch einen Wert hinzufügen (auf Benutzerkontoebene), der für den ursprünglichen Wert angezeigt werden soll. Dem Wörterbuch hinzugefügte Werte gelten für alle Domänen. Nur wenn Sie einen Vorschlag explizit festlegen, wird die Korrektur in der Domäne vorgenommen. Wenn Sie einen Vorschlag im Kontextmenü der Rechtschreibprüfung auswählen, ändert sich der Werttyp in einen Fehler (oder bleibt ein Fehler). Der ausgewählte Vorschlag wird der Korrekturspalte hinzugefügt. Beachten Sie, dass der **Typ** eines Werts mit **Richtig** angegeben und trotzdem von der Rechtschreibprüfung als potenzieller Fehler markiert sein kann.  
   
  DQS stellt Vorschläge für Werte sowohl in der Spalte **Wert** als auch in der Spalte **Korrigieren in** der Tabelle **Wert** bereit. Wenn Sie einen Vorschlag in der Spalte **Wert** auswählen, wird der Werttyp auf **Fehler**festgelegt, und der Vorschlag wird in die Spalte **Korrigieren in** kopiert, so als hätten Sie den Wert manuell eingefügt. Eine bereits vorhandene Korrektur wird zu einem Vorschlag. Wenn Sie auf der Seite **Ergebnisse verwalten und anzeigen** der Aktivität **Bereinigung** einen Vorschlag in der Spalte **Korrigieren in** auswählen, ersetzt DQS den derzeit ausgewählten Wert durch die Auswahl, und der derzeit ausgewählte Wert wird ein Vorschlag. Auf der Seite **Ergebnisse verwalten und anzeigen** der Aktivität **Bereinigung** werden keine Vorschläge auf Datensatzebene (das untere Raster) gemacht.  
   

@@ -14,12 +14,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f979e8de8f36027339a1af0bbe9183e67f20c597
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a03a530c83cdf492eb7c4c0fcc000a6343c9a97
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090010"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502812"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung (Transact-SQL)
   Um einen Zeugen für eine Datenbank einzurichten, weist der Datenbankbesitzer einer Instanz der Datenbank-Engine die Rolle des Zeugenservers zu. Die Zeugenserverinstanz kann auf demselben Computer wie die Prinzipal- oder Spiegelserverinstanz ausgeführt werden. Hierdurch wird jedoch die Zuverlässigkeit des automatischen Failovers erheblich reduziert.  
@@ -48,21 +48,21 @@ ms.locfileid: "48090010"
   
      Wenn für einen Zeugen kein Endpunkt vorhanden ist, informieren Sie sich unter [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
-2.  Wenn die Partnerinstanzen unter unterschiedlichen Domänenbenutzerkonten ausgeführt werden, müssen Sie in der Master-Datenbank jeder Instanz eine Anmeldung für die einzelnen Konten erstellen. Weitere Informationen finden Sie unter [Zulassen des Netzwerkzugriffs auf einen Datenbank-Spiegelungsendpunkt mithilfe der Windows-Authentifizierung &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md).  
+2.  Wenn die Partnerinstanzen unter unterschiedlichen Domänenbenutzerkonten ausgeführt werden, müssen Sie in der Master-Datenbank jeder Instanz eine Anmeldung für die einzelnen Konten erstellen. Weitere Informationen finden Sie unter [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md).  
   
 3.  Stellen Sie anhand der folgenden Anweisung eine Verbindung mit dem Prinzipalserver her:  
   
-     ALTER DATABASE *<Datenbankname>* SET WITNESS **=***<Servernetzwerkadresse>*  
+     ALTER DATABASE *<Datenbankname>* SET WITNESS **=**_<Servernetzwerkadresse>_  
   
      Dabei ist *<Datenbankname>* der Name der zu spiegelnden Datenbank (dieser Name ist auf beiden Partnern gleich), und *<Servernetzwerkadresse>* ist die Servernetzwerkadresse der Zeugenserverinstanz.  
   
      Die Syntax für eine Server-Netzwerkadresse lautet folgendermaßen:  
   
-     TCP **://**\<*Systemadresse>***:**\<* Port>*  
+     TCP **://**\<_Systemadresse>_**:**\<*Port>*  
   
      Dabei ist \<*Systemadresse>* eine Zeichenfolge, die das Zielcomputersystem eindeutig identifiziert, und \<*Port>* ist die vom Spiegelungsendpunkt der Partnerserverinstanz verwendete Portnummer. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](specify-a-server-network-address-database-mirroring.md)verwendet.  
   
-     Beispiel: Auf der Prinzipalserverinstanz wird mit folgender ALTER DATABASE-Anweisung der Zeuge festgelegt. Der Datenbankname ist **AdventureWorks**, die Systemadresse ist DBSERVER3 – der Name des Zeugensystems, und der vom Datenbankspiegelungsendpunkt des Zeugen verwendet Port ist `7022`:  
+     Beispiel: Auf der Prinzipalserverinstanz wird mit folgender ALTER DATABASE-Anweisung der Zeuge festgelegt. Der Datenbankname ist **AdventureWorks**, die Systemadresse lautet DBSERVER3, der Name des Zeugensystems, und der vom Datenbankspiegelungsendpunkt des Zeugen verwendete Port ist `7022`:  
   
     ```  
     ALTER DATABASE AdventureWorks   

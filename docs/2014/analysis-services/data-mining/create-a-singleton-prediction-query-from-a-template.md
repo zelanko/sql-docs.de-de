@@ -13,15 +13,15 @@ ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c28b74a271fc2da7c99aeb1ab7b990b11e90fd3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6bcd9aa80170719a32ff3bf75f0ac36dc83cf021
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118715"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399775"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Erstellen einer SINGLETON-Vorhersageabfrage aus einer Vorlage
-  Eine SINGLETON-Abfrage ist für Modelle hilfreich, die Sie für Vorhersagen verwenden möchten, ohne sie jedoch einem externen Eingabedataset zuzuordnen oder sie für Massenvorhersagen zu verwenden. Mit einer SINGLETON-Abfrage können Sie einen Wert oder Werte für das Modell bereitstellen und sofort den vorhergesagten Wert anzeigen.  
+  Eine Singleton-Abfrage ist nützlich, wenn Sie ein Modell, die Sie für die Vorhersage verwendet werden soll verfügen, aber nicht möchten, eine Zuordnung zu einem externen Eingabedataset oder zum treffen von massenvorhersagen. Mit einer SINGLETON-Abfrage können Sie einen Wert oder Werte für das Modell bereitstellen und sofort den vorhergesagten Wert anzeigen.  
   
  Zum Beispiel stellt die folgende DMX-Abfrage eine SINGLETON-Abfrage für das als Ziel verwendete Mailingmodell dar (TM_Decision_Tree).  
   
@@ -89,11 +89,11 @@ AS [t]
   
 10. Suchen Sie im Abfragetextbereich nach einer roten Wellenlinie unter dem Komma und den Auslassungspunkten, die Syntaxfehler anzeigt. Löschen Sie die Auslassungspunkte, und fügen Sie alle weiteren gewünschten Abfragebedingungen hinzu. Wenn Sie keine weiteren Bedingungen hinzufügen, löschen Sie das Komma.  
   
-     Für den Beispielcode am Beginn dieses Themas, die zusätzliche abfragebedingung festgelegt wurde, um `'45' as [Age]`.  
+     In dem Beispielcode am Beginn dieses Themas wurde für die zusätzliche Abfragebedingung `'45' as [Age]` eingegeben.  
   
 11. Klicken Sie auf **Ausführen**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Vorhersagen &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Erstellen von Vorhersagen &#40;Tutorial zu Data Mining-Grundlagen&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ODER (MDX) | Microsoft Docs
+title: ODER (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 668e8f1955290c31ee63ca5b81fc5e9c286d54c4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ae6b6602d7968bb444dcf4838537bb000b97dd53
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742449"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418397"
 ---
 # <a name="or-mdx"></a>OR (MDX)
 
@@ -36,10 +36,10 @@ Expression1 OR Expression2
  Ein gültiger MDX-Ausdruck, der einen numerischen Wert zurückgibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein boolescher Wert, der zurückgibt **"true"** Wenn eines oder beide Argumente ausgewertet **"true"** ist, andernfalls **"false"**.  
+ Ein boolescher Wert, der zurückgibt **"true"** Wenn eine oder beide Argumente ausgewertet **"true"** ist, andernfalls **"false"**.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **oder** -Operator behandelt beide Argumente als boolesche Werte (null, 0, als **"false"** ist, andernfalls **"true"**), bevor der Operator die logische Disjunktion ausführt. Die folgende Tabelle verdeutlicht, wie die **oder** Operator die logische Disjunktion ausführt.  
+ Die **oder** -Operator behandelt beide Argumente als boolesche Werte (null, 0 (null) als **"false"** ist, andernfalls **"true"**), bevor der Operator die logische Disjunktion ausführt. In der folgende Tabelle wird veranschaulicht, wie die **oder** Operator die logische Disjunktion ausführt.  
   
 |*Expression1*|*Expression2*|Rückgabewert|  
 |-------------------|-------------------|------------------|  
@@ -49,7 +49,7 @@ Expression1 OR Expression2
 |**false**|**false**|**false**|  
   
 ## <a name="example"></a>Beispiel  
- Die folgende Abfrage enthält ein berechnetes Measure, das die Zeichenfolge "MARRIED OR MALE" zurückgibt, wenn das aktuelle Element auf der Geschlechtshierarchie der Customer-Dimension Männlich oder das aktuelle Element auf der Ehestatushierarchy der Customer-Dimension "Married" ist. Andernfalls wird die Zeichenfolge "UNMARRIED OR FEMALE" zurückgegeben.  
+ Die folgende Abfrage enthält ein berechnetes Measure, das die Zeichenfolge zurückgibt, die "MARRIED OR MALE" ist das aktuelle Element auf der geschlechtshierarchie der Customer-Dimension männlich oder das aktuelle Element auf der ehestatushierarchy der Customer-Dimension verheiratet ist; Andernfalls wird die Zeichenfolge "UNMARRIED oder FEMALE" zurückgegeben.  
   
 ```  
 WITH  

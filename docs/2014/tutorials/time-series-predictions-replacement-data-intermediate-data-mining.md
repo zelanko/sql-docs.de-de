@@ -11,18 +11,18 @@ ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 815b50c8d687c1df76b9dc5de4b1fbe34f15f233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b7c23bec5925dbc33d2db7a547daf02f42a6cd7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120282"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419041"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Erstellen von Zeitreihenvorhersagen mit Ersetzungsdaten (Data Mining-Lernprogramm für Fortgeschrittene)
   In dieser Aufgabe erstellen Sie auf Grundlage weltweiter Umsatzdaten ein neues Modell. Sie erstellen dann eine Vorhersageabfrage, mit der Sie das weltweite Umsatzmodell auf eine einzelnen Region anwenden.  
   
 ## <a name="building-a-general-model"></a>Erstellen eines allgemeinen Modells  
- Denken Sie daran, dass die Analyse der Ergebnisse des ursprünglichen Miningmodells große Unterschiede zwischen Regionen und Produktreihen aufgedeckt hat. Das M200-Modell verzeichnete beispielsweise einen starken Umsatz für Nordamerika, was für die Verkäufe des T1000-Modells nicht der Fall war. Die Analyse wurde dadurch erschwert, dass einige Reihen nicht über aussagekräftige Daten verfügten bzw. der Zeitpunkt für den Beginn der Daten unterschiedlich war. Darüber hinaus fehlten einige Daten.  
+ Denken Sie daran, dass die Analyse der Ergebnisse des ursprünglichen Miningmodells große Unterschiede zwischen Regionen und Produktreihen aufgedeckt hat. Das M200-Modell verzeichnete beispielsweise einen starken Umsatz für Nordamerika, was für die Verkäufe des T1000-Modells nicht der Fall war. Allerdings ist die Analyse wurde dadurch erschwert, dass einige Reihen nicht viele Daten oder Daten zu einem anderen Zeitpunkt rechtzeitig gestartet hatten. Darüber hinaus fehlten einige Daten.  
   
  ![Reihenvorhersagen für Mengen M200 und T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "Reihenvorhersagen für Mengen M200 und T1000")  
   
@@ -162,7 +162,7 @@ AND
  [Vergleichen von Vorhersagen für Forecasting-Modellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Abfragebeispiel Zeitreihenmodell](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

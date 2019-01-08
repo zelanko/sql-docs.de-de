@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 322160591d1e4ce741459e3a338bca30b0ea1603
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 87bffa2c93442aabc2dd6f193373e024466ecea6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085466"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397102"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Konfigurieren Sie Failoverclusterinstanz – SQL Server unter Linux (RHEL)
 
@@ -131,7 +131,7 @@ Sie müssen Speicher bereitzustellen, die auf beiden Knoten zugreifen können. S
    sudo firewall-cmd --reload
    ```
 
-   > Wenn Sie eine andere Firewall verwenden, in die keine Konfiguration mit hoher Verfügbarkeit integriert ist, müssen die folgenden Ports geöffnet werden, damit Pacemaker mit anderen Knoten im Cluster kommunizieren kann:
+   > Wenn Sie eine andere Firewall verwenden, die nicht über eine integrierte Konfiguration mit hoher Verfügbarkeit verfügt, müssen die folgenden Ports geöffnet werden, damit Pacemaker mit anderen Knoten im Cluster kommunizieren können
    >
    > * TCP: Ports 2224, 3121, 21064
    > * UDP: Port 5405

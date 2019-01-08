@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting model object permissions [Master Data Services]
@@ -16,12 +15,12 @@ ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 418e73192b20a4d104221611a66b046b92fd022d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e05fe2b5001ce54681c8600f943f4fdb361ede5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712420"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749282"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Löschen von Berechtigungen für Modellobjekte (Master Data Services)
 
@@ -58,7 +57,7 @@ ms.locfileid: "47712420"
   
 9. Klicken Sie auf **Speichern**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

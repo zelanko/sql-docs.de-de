@@ -11,12 +11,12 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 60825f051b0e80cbd55ec36c5b3e49cf9838e77b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51f5315633939431bb6e8287773453e08de188a7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204880"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412027"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)
   Wenn Sie Ausdrücke schreiben, stellen Sie fest, dass der Begriff *Bereich* in mehreren Zusammenhängen verwendet wird. Ein Bereich kann die Daten angeben, die zum Auswerten eines Ausdrucks verwendet werden, oder den Satz von Textfeldern auf einer gerenderten Seite bzw. den Satz von Berichtselementen, die mithilfe einer Umschaltfläche ein- oder ausgeblendet werden können, bezeichnen. Sie finden den Begriff *Bereich* in Themen, die sich auf die Auswertung von Ausdrücken, Aggregatfunktionssyntax, und bedingte Sichtbarkeit beziehen, sowie in Fehlermeldungen im Zusammenhang mit diesen Bereichen. Mit den folgenden Beschreibungen können Sie feststellen, welche Bedeutung von *Bereich* zutrifft:  
@@ -71,7 +71,7 @@ ms.locfileid: "48204880"
      Der folgende Ausdruck generiert die Jahre des Intervalls zwischen SellStartDate und LastReceiptDate. Diese Felder sind in zwei unterschiedlichen Datasets enthalten, DataSet1 und DataSet2. Die Aggregatfunktion [First-Funktion (Berichts-Generator und SSRS)](report-builder-functions-first-function.md) gibt den ersten Wert von SellStartDate in DataSet1 und den ersten Wert von LastReceiptDate in DataSet2 zurück.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **Domänenbereich** Wird auch Synchronisierungsbereich genannt. Ein Datenbereichstyp, der für die Auswertung von Ausdrücken bei geschachtelten Datenbereichen verwendet wird. Mit dem Domänenbereich werden Aggregate über alle Instanzen einer Gruppe hinweg angegeben, damit geschachtelte Instanzen ausgerichtet und problemlos verglichen werden können. Sie können z. B. den Bereich und die Höhe von Sparklines ausrichten, die in eine Tabelle eingebettet sind, damit die Werte aneinandergereiht dargestellt werden.  
@@ -163,7 +163,7 @@ ms.locfileid: "48204880"
   
   
 ##  <a name="Nulls"></a> Unterdrücken von NULL- oder 0-Werten zur Laufzeit  
- In zahlreichen Berichten kann bei Berechnungen für Gruppen eine Vielzahl an Zellen mit dem Wert 0 (null) oder NULL erstellt werden. Wenn Sie Ihren Bericht übersichtlicher gestalten möchten, können Sie einen Ausdruck zum Zurückgeben von Leerräumen hinzufügen, wenn der Aggregatwert 0 (null) ist. Weitere Informationen finden Sie unter „Beispiele zur Unterdrückung von NULL- oder 0-Werten“ in [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
+ In zahlreichen Berichten kann bei Berechnungen für Gruppen eine Vielzahl an Zellen mit dem Wert 0 (null) oder NULL erstellt werden. Wenn Sie Ihren Bericht übersichtlicher gestalten möchten, können Sie einen Ausdruck zum Zurückgeben von Leerräumen hinzufügen, wenn der Aggregatwert 0 (null) ist. Weitere Informationen finden Sie unter „Beispiele zur Unterdrückung von NULL- oder 0-Werten“ in [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
   
   

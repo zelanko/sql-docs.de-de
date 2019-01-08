@@ -13,12 +13,12 @@ ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 638a79e5785c74a11cb2e424739c3d80959a4d40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 233b6824ef527a9ed4e7e02164a08e31e41f3699
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843078"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409502"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Herstellen einer Verbindung mit MySQL (MySqlToSql)
 Um MySQL-Datenbanken zu SQL Server oder SQL Azure zu migrieren, müssen Sie mit der MySQL-Datenbank verbinden, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, SSMA Ruft Metadaten über alle MySQL-Schemas ab, und anschließend in der MySQL-Metadaten-Explorer-Bereich angezeigt. SSMA speichert Informationen zu den Datenbankserver, aber die Kennwörter werden nicht gespeichert.  
@@ -62,20 +62,20 @@ Wenn Sie eine Verbindung mit einer Datenbank herstellen, SSMA liest die Datenban
   
     3.  In der **Kennwort** Geben Sie das Kennwort für den angegebenen Benutzernamen ein.  
   
-5.  **SSL:** sollten Sie sichere Verbindungen mit MySQL herzustellen, verwenden von Secure Socket Layer (SSL) anhand der **SSL** Kontrollkästchen.  
+5.  **SSL:** Wenn Sie die sichere Verbindung mit MySQL herstellen möchten, verwenden von Secure Socket Layer (SSL) anhand der **SSL** Kontrollkästchen.  
   
-6.  **So konfigurieren Sie** bietet er eine Option zum Konfigurieren der Verbindung mit MySQL über Secure Socket Layer (SSL).  
+6.  **Konfigurieren:** Es bietet eine Option aus, um die Verbindung mit MySQL über Secure Socket Layer (SSL) konfigurieren.  
   
     > [!NOTE]  
     > So aktivieren Sie **konfigurieren**, SSL muss festgelegt werden, um **"true"**.  
   
     Wird Sie durch Klicken auf die Schaltfläche "Konfigurieren", ein Dialogfeld angezeigt. Definiert [Privacy Enhanced Mail-Zertifikate (PEM)], Verschlüsselung zu verwenden, beim Herstellen einer Verbindung mit MySQL-Datenbank, Pfad, an den folgenden drei Dateien, die in das Dialogfeld vorhanden sein muss:  
   
-    -   **SSL-Zertifizierungsstelle:** gibt den Pfad zu einer Datei mit einer Liste von vertrauenswürdigen SSL-CAs an.  
+    -   **SSL-Zertifizierungsstelle:** Gibt den Pfad zu einer Datei mit einer Liste von vertrauenswürdigen Zertifizierungsstellen mit SSL.  
   
-    -   **SSL-Zertifikat:** gibt den Namen der Datei die SSL-Zertifikat zum Herstellen einer sicheren Verbindung verwendet.  
+    -   **SSL-Zertifikat:** Gibt den Namen der Datei die SSL-Zertifikat zum Herstellen einer sicheren Verbindung verwendet.  
   
-    -   **SSL-Schlüssel:** gibt den Namen des SSL-Schlüsseldatei zum Herstellen einer sicheren Verbindung verwendet.  
+    -   **SSL-SCHLÜSSEL:** Gibt den Namen der Schlüsseldatei SSL zum Herstellen einer sicheren Verbindung verwendet.  
   
     > [!NOTE]  
     > -   Die **OK** Schaltfläche ist aktiviert, wenn die erforderliche Informationen bereitgestellt wurde. Wenn die Dateipfade ungültig sind, bleiben die Schaltfläche "OK" deaktiviert.  

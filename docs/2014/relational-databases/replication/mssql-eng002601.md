@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG002601 error
@@ -13,12 +12,12 @@ ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55a175f7ac4d7d00b84ea44cf04f34d81fcb35ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176102"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760243"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
     
@@ -30,7 +29,7 @@ ms.locfileid: "48176102"
 |Ereignis-ID|2601|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|Symbolischer Name|–|  
+|Symbolischer Name|Nicht zutreffend|  
 |Meldungstext|Eine Zeile mit doppeltem Schlüssel kann nicht in das '%.*ls'-Objekt mit dem eindeutigen '%.\*ls'-Index eingefügt werden.|  
   
 ## <a name="explanation"></a>Erklärung  
@@ -42,7 +41,7 @@ ms.locfileid: "48176102"
   
 -   Es wird eine Tabelle mit einer Identitätsspalte verwendet, die Spalte wird jedoch nicht ordnungsgemäß verwaltet.  
   
--   Bei der Mergereplikation kann dieser Fehler auch während eines INSERTs in die **MSmerge_contents**-Systemtabelle ausgelöst werden; die Fehlermeldung lautet dann ungefähr folgendermaßen: Eine Zeile mit doppeltem Schlüssel kann in das 'MSmerge_contents'-Objekt mit dem eindeutigen 'ucl1SycContents'-Index nicht eingefügt werden.  
+-   Bei der Mergereplikation dieser Fehler kann auch auftreten, während eines INSERTS in die Systemtabelle **MSmerge_contents**; der Fehler wird ausgelöst, ähnelt: Zeile mit doppeltem Schlüssel kann nicht in 'MSmerge_contents'-Objekt mit dem eindeutigen Index 'ucl1SycContents.' eingefügt werden.  
   
 ## <a name="user-action"></a>Benutzeraktion  
  Die erforderliche Aktion hängt davon ab, weshalb der Fehler ausgelöst wurde:  

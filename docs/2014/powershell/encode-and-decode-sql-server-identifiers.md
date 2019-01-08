@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82045ec643ae7cd1362a28b6aecf0c36bc4d328f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57cab8512adb2f0377c932fbeb0140f1482ae454
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088840"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753152"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codierung und Decodierung von SQL Server-Bezeichnern
   Begrenzungsbezeichner von SQL Server können Zeichen enthalten, die in Windows PowerShell-Pfaden nicht unterstützt werden. Diese Zeichen können angegeben werden, indem ihre Hexadezimalwerte codiert werden.  
   
-1.  **Vorbereitungen:**  [Einschränkungen](#LimitationsRestrictions)  
+1.  **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#LimitationsRestrictions)  
   
 2.  **Zum Verarbeiten von Sonderzeichen:**  [Codieren eines Bezeichners](#EncodeIdent), [Decodieren eines Bezeichners](#DecodeIdent)  
   
@@ -31,7 +30,7 @@ ms.locfileid: "48088840"
  Das Cmdlet **Encode-SqlName** verwendet als Eingabe einen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Bezeichner. Es gibt eine Zeichenfolge mit allen nicht von der Windows PowerShell-Sprache unterstützten Zeichen, die mit "%xx" codiert sind, aus. Das Cmdlet **Decode-SqlName** verwendet einen codierten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Bezeichner als Eingabe und gibt den ursprünglichen Bezeichner zurück.  
   
 ###  <a name="LimitationsRestrictions"></a> Einschränkungen  
- Die `Encode-Sqlname` und `Decode-Sqlname` Cmdlets codieren oder Decodieren nur die Zeichen, die in SQL Server-begrenzungsbezeichnern zulässig sind, jedoch werden in PowerShell-Pfaden nicht unterstützt. Dies sind die Zeichen, die von **Encode-SqlName** codiert und von **Decode-SqlName**decodiert werden:  
+ Das `Encode-Sqlname`-Cmdlet und das `Decode-Sqlname`-Cmdlet codieren oder decodieren nur die Zeichen, die in SQL Server-Begrenzungsbezeichnern zulässig sind, jedoch nicht in PowerShell-Pfaden unterstützt werden. Dies sind die Zeichen, die von **Encode-SqlName** codiert und von **Decode-SqlName**decodiert werden:  
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
@@ -63,10 +62,10 @@ Set-Location (Encode-SqlName "Table:Test")
 ##  <a name="DecodeIdent"></a> Decodieren eines Bezeichners  
  **So decodieren Sie einen SQL Server-Bezeichner aus einem PowerShell-Pfad**  
   
- Verwenden der `Decode-Sqlname` Cmdlet, um die hexadezimalcodierungen durch die von der Codierung dargestellten Zeichen zu ersetzen.  
+ Verwenden Sie das `Decode-Sqlname`-Cmdlet, um die Hexadezimalcodierungen durch die von der Codierung dargestellten Zeichen zu ersetzen.  
   
 ### <a name="examples-decoding"></a>Beispiele (Decodierung)  
- Dieses Beispiel gibt “Table:Test” zurück:  
+ Dieses Beispiel gibt „Table:Test“ zurück:  
   
 ```  
 Decode-SqlName "Table%3ATest"  

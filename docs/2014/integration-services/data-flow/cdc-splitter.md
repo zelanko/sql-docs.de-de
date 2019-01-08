@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsplitter.f1
@@ -13,12 +12,12 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03f677f8214fb086f3feb6077608fed83d7089d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd69d23338510b08a450504c477c23d076ffaf1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086254"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754692"
 ---
 # <a name="cdc-splitter"></a>CDC-Splitter
   Der CDC-Splitter teilt einen einzelnen Fluss von Änderungszeilen aus einem CDC-Quelldatenfluss in unterschiedliche Datenflüsse für Einfüge-, Update und Löschvorgänge auf. Der Datenfluss wird basierend auf der erforderlichen Spalte `__$operation` und seinen Standardwerten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Änderungstabellen geteilt.  

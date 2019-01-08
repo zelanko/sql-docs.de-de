@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c22ac7cd34a6cc762da47ec00fd42d183dbac045
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbf267591ccd85b31bd8436a773e2337e292d0b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116250"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763204"
 ---
 # <a name="name-element-for-index-dta"></a>Name-Element für Index (DTA)
   Gibt einen Namen für einen Index in der benutzerdefinierten Konfiguration an.  
@@ -40,7 +39,7 @@ ms.locfileid: "48116250"
 |--------------------|-----------------|  
 |**Datentyp und -länge**|`string`, unbegrenzte Länge.|  
 |**Standardwert**|Keine.|  
-|**Vorkommen**|Einmalig erforderlich pro `Index` Element.|  
+|**Vorkommen**|Für jedes `Index`-Element erforderlich.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   

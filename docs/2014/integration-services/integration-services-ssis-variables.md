@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
@@ -19,12 +18,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b30ae5c49ec66b5612e1472c896084ebb92991d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6df40fef89955b792e31e0a7539a4adf9409d70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069740"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772572"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services-Variablen (SSIS)
   Variablen speichern Werte, die von einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket und dessen Containern, Tasks und Ereignishandlern zur Laufzeit verwendet werden können. Die Skripts im Skripttask und die Skriptkomponente können ebenfalls Variablen verwenden. Die Rangfolgeneinschränkungen, mit denen Tasks und Container zu einem Workflow zusammengestellt werden, können Variablen verwenden, wenn ihre Einschränkungsdefinitionen Ausdrücke einschließen.  
@@ -46,7 +45,7 @@ ms.locfileid: "48069740"
 ## <a name="system-and-user-defined-variables"></a>Systemvariablen und benutzerdefinierte Variablen  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt zwei Arten von Variablen: Benutzerdefinierte Variablen und Systemvariablen. Benutzerdefinierte Variablen werden von Paketentwicklern definiert, und Systemvariablen werden von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]definiert. Sie können so viele benutzerdefinierte Variablen erstellen, wie für das Paket erforderlich sind. Zusätzliche Systemvariablen können jedoch nicht erstellt werden.  
   
- Alle Variablen, seien es Systemvariablen oder benutzerdefinierte Variablen, können in den Parameterbindungen verwendet werden, die der Task SQL ausführen zum Zuordnen von Variablen zu Parametern in SQL-Anweisungen verwendet. Weitere Informationen finden Sie unter [SQL ausführen (Task)](control-flow/execute-sql-task.md) und [Parameter und Rückgabecodes im Task „SQL ausführen“](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
+ Alle Variablen, seien es Systemvariablen oder benutzerdefinierte Variablen, können in den Parameterbindungen verwendet werden, die der Task „SQL ausführen“ zum Zuordnen von Variablen zu Parametern in SQL-Anweisungen verwendet. Weitere Informationen finden Sie unter [SQL ausführen (Task)](control-flow/execute-sql-task.md) und [Parameter und Rückgabecodes im Task „SQL ausführen“](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 > [!NOTE]  
 >  Bei den Namen von benutzerdefinierten und Systemvariablen wird nach Groß-/Kleinschreibung unterschieden.  
@@ -127,10 +126,10 @@ ms.locfileid: "48069740"
   
  Wenn setzt das System die **IncludeInDebugDump** option `false`, den vom Benutzer ausgewählten Wert möglicherweise überschrieben.  
   
- value  
+ Wert  
  Der Wert einer benutzerdefinierten Variable kann ein Literal oder ein Ausdruck sein. Eine Variable enthält Optionen zum Festlegen des Variablenwerts und des Datentyps des Werts. Die beiden Eigenschaften müssen kompatibel sein. Beispielsweise ist das Verwenden eines string-Werts zusammen mit einem integer-Datentyp ungültig.  
   
- Falls die Variable so konfiguriert ist, dass sie als Ausdruck ausgewertet wird, müssen Sie einen Ausdruck angeben. Zur Laufzeit wird der Ausdruck ausgewertet, und die Variable wird auf das Auswertungsergebnis festgelegt. Wenn z. B. eine Variable den Ausdruck `DATEPART("month", GETDATE())` verwendet, entspricht der Wert der Variablen der Zahl des Monats im aktuellen Datum. Der Ausdruck muss ein gültiger Ausdruck sein, der die [!INCLUDE[ssIS](../includes/ssis-md.md)] -Ausdrucksgrammatiksyntax verwendet. Wenn ein Ausdruck mit Variablen verwendet wird, kann der Ausdruck Literale sowie die Operatoren und Funktionen der Ausdrucksgrammatik verwenden. Der Ausdruck kann jedoch nicht auf die Spalten in einem Datenfluss des Pakets verweisen. Die maximale Länge eines Ausdrucks beträgt 4000 Zeichen. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
+ Falls die Variable so konfiguriert ist, dass sie als Ausdruck ausgewertet wird, müssen Sie einen Ausdruck angeben. Zur Laufzeit wird der Ausdruck ausgewertet, und die Variable wird auf das Auswertungsergebnis festgelegt. Wenn z. B. eine Variable den Ausdruck `DATEPART("month", GETDATE())` verwendet, entspricht der Wert der Variablen der Zahl des Monats im aktuellen Datum. Der Ausdruck muss ein gültiger Ausdruck sein, der die [!INCLUDE[ssIS](../includes/ssis-md.md)] -Ausdrucksgrammatiksyntax verwendet. Wenn ein Ausdruck mit Variablen verwendet wird, kann der Ausdruck Literale sowie die Operatoren und Funktionen der Ausdrucksgrammatik verwenden. Der Ausdruck kann jedoch nicht auf die Spalten in einem Datenfluss des Pakets verweisen. Die maximale Länge eines Ausdrucks beträgt 4000 Zeichen. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)ausgewertet wird.  
   
  ValueType  
  > [!NOTE]  
@@ -141,9 +140,9 @@ ms.locfileid: "48069740"
 ## <a name="configuring-variables"></a>Konfigurieren von Variablen  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer festlegen können, finden Sie unter [Fenster „Variablen“](../../2014/integration-services/variables-window.md).  
+ Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer festlegen können, finden Sie unter [Fenster „Variablen“](../../2014/integration-services/variables-window.md).  
   
- Weitere Informationen zu variableneigenschaften und Weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
+ Weitere Informationen zu Variableneigenschaften und zum programmgesteuerten Festlegen dieser Eigenschaften finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  

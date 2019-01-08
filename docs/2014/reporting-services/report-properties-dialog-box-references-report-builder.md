@@ -13,22 +13,22 @@ ms.assetid: 3414c857-8ea6-4fc4-a6d5-b4883c039efa
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6222a5bfb1efe52e2b35345e7bd6364676936b2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e6f4a3f590c196731ed186f95cf5dc4078a1fc0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104580"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504142"
 ---
 # <a name="report-properties-dialog-box-references-report-builder"></a>Berichtseigenschaften (Dialogfeld), Verweise (Berichts-Generator)
   Wählen Sie die Registerkarte **Verweise** im Dialogfeld **Berichtseigenschaften** , um Verweise auf benutzerdefinierte oder andere externe Assemblys sowie benutzerdefinierte Klasseninstanzen hinzuzufügen oder zu entfernen, die von Ausdrücken in der Berichtsdefinition verwendet werden. Benutzerdefinierte Assemblys werden im lokalen Modus in Berichts-Generator nicht unterstützt. Um Berichte zu erstellen, die benutzerdefinierte Assemblys verwenden, verwenden Sie Berichts-Designer in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Assemblys hinzufügen oder entfernen**  
  Führt die Assemblys auf, auf die der Bericht verweist. Die Assembly muss auf dem Computer, auf dem das Tool zum Entwerfen des Berichts installiert ist, und auf dem Berichtsserver verfügbar sein. Der Name des Verweises muss mit dem Inhalt der  **\<CodeModule >** -Tags in der Berichtsdefinitionssprache (RDL)-Datei übereinstimmen.  
   
  **Hinzufügen**  
- Klicken Sie auf diese Option, um eine Assembly hinzuzufügen. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...), um das Dialogfeld **Öffnen** aufzurufen und die für die Berichtsverarbeitung und Ausdrucksauswertung erforderlichen Assemblys auszuwählen.  
+ Klicken Sie auf diese Option, um eine Assembly hinzuzufügen. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...), zum Öffnen der **öffnen** Dialogfeld und die für die berichtsverarbeitung und ausdrucksauswertung erforderlichen Assemblys auszuwählen.  
   
  **Entfernen**  
  Um einen Assemblyverweis aus der Liste zu entfernen, wählen Sie den Assemblynamen aus, und klicken Sie auf die Schaltfläche **Entfernen** .  
@@ -37,7 +37,7 @@ ms.locfileid: "48104580"
  Führt die vom Bericht verwendeten Klasseninstanzen auf. Die Klassenliste wird nur von instanzbasierten Elementen, nicht von statischen Elementen, verwendet.  
   
  **Hinzufügen**  
- Klicken Sie auf diese Schaltfläche, um einen Klassenverweis hinzuzufügen. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...), um das Dialogfeld **Öffnen** aufzurufen und die für die Berichtsverarbeitung und Ausdrucksauswertung erforderlichen Klassen auszuwählen.  
+ Klicken Sie auf diese Schaltfläche, um einen Klassenverweis hinzuzufügen. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...), zum Öffnen der **öffnen** Dialogfeld und die für die berichtsverarbeitung und ausdrucksauswertung erforderlichen Klassen auszuwählen.  
   
  **Entfernen**  
  Um die Klasseninstanz zu löschen, wählen Sie sie aus, und klicken Sie auf die Schaltfläche **Entfernen** .  

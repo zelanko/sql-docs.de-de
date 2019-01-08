@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML], about XML Bulk Load
@@ -15,12 +13,12 @@ ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f8bb180ef8c0b7483ce8bab27d11804ac81a387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7a569bbc5672b0fc5996507e37ed250721bd2fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082660"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774922"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Richtlinien und Einschränkungen von XML-Massenladen (SQLXML 4.0)
   Wenn Sie XML-Massenladen verwenden, sollten Sie mit den folgenden Richtlinien und Einschränkungen vertraut sein:  
@@ -31,7 +29,7 @@ ms.locfileid: "48082660"
   
 -   Es wird überprüft, ob ein XML-Dokument wohlgeformt ist, es wird jedoch nicht überprüft, ob es gültig ist.  
   
-     XML-Massenladen überprüft, ob das XML-Dokument wohlgeformt ist, d. h. es wird sichergestellt, dass das XML-Dokument den Syntaxanforderungen der Empfehlung XML 1.0 des World Wide Web Consortium entspricht. Wenn das Dokument nicht wohlgeformt ist, wird die Verarbeitung durch XML-Massenladen abgebrochen und ein Fehler zurückgegeben. Die einzige Ausnahme hierbei stellen Dokumente dar, bei denen es sich um Fragmente handelt (wenn das Dokument beispielsweise kein einzelnes Stammelement aufweist). In diesem Fall wird das Dokument durch XML-Massenladen geladen.  
+     XML-Massenladen überprüft, dass das XML-Dokument zu ermitteln, ob es well-formed, mit deren Hilfe wird um sicherzustellen, dass der XML-Code, den syntaxanforderungen der XML 1.0-Empfehlung des World Wide Web Consortium entspricht. Wenn das Dokument nicht wohlgeformt ist, wird die Verarbeitung durch XML-Massenladen abgebrochen und ein Fehler zurückgegeben. Die einzige Ausnahme hierbei stellen Dokumente dar, bei denen es sich um Fragmente handelt (wenn das Dokument beispielsweise kein einzelnes Stammelement aufweist). In diesem Fall wird das Dokument durch XML-Massenladen geladen.  
   
      XML-Massenladen überprüft das Dokument nicht im Hinblick auf XML-Daten oder DTD-Schemas, die in der XML-Datendatei definiert sind oder auf die in der XML-Datendatei verwiesen wird. XML-Massenladen überprüft die XML-Datendatei auch nicht im Hinblick auf das bereitgestellte Zuordnungsschema.  
   
@@ -159,7 +157,7 @@ ms.locfileid: "48082660"
   
      Die im Zuordnungsschema angegebenen Tabellen werden erstellt (die Datenbank muss vorhanden sein). Wenn eine oder mehrere Tabellen in der Datenbank bereits vorhanden ist, bestimmt die SGDropTables-Eigenschaft an, ob diese bereits vorhandenen Tabellen gelöscht und neu erstellt werden.  
   
--   Wenn Sie die Eigenschaft "schemagen" angeben (z. B. "schemagen" = "true"), werden die Tabellen, die im Zuordnungsschema identifiziert werden erstellt. SchemaGen erstellt jedoch keine Einschränkungen (z. B. die PRIMARY KEY/FOREIGN KEY-Einschränkungen) in diesen Tabellen mit einer Ausnahme: Wenn die XML-Knoten, die den Primärschlüssel in einer Beziehung bilden definiert werden, dass einen XML-Datentyp-ID (d. h. `type="xsd:ID"` für XSD) SGUseID-Eigenschaft auf "true" für "schemagen" festgelegt ist, und werden nicht nur Primärschlüssel aus erstellt. die ID typisierten Knoten, aber die Primär-/Fremdschlüssel-Beziehungen aus Zuordnen von Schemas Beziehungen erstellt.  
+-   Wenn Sie die Eigenschaft "schemagen" angeben (z. B. "schemagen" = "true"), werden die Tabellen, die im Zuordnungsschema identifiziert werden erstellt. Aber "schemagen" erstellt keine Einschränkungen (z. B. die PRIMARY KEY/FOREIGN KEY-Einschränkungen) in diesen Tabellen mit einer Ausnahme: Wenn die XML-Knoten, die den Primärschlüssel in einer Beziehung bilden definiert werden, dass einen XML-Datentyp-ID (d. h. `type="xsd:ID"` für XSD) SGUseID-Eigenschaft auf "true" für "schemagen" festgelegt ist, und Primärschlüssel werden nicht nur erstellt, von der ID typisierten Knoten , jedoch Primär-/Fremdschlüssel-Beziehungen aus Zuordnen von Schemas Beziehungen erstellt werden.  
   
 -   SchemaGen verwendet keinen XSD-Schema-Facets und Erweiterungen zum Generieren des relationalen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Schema.  
   

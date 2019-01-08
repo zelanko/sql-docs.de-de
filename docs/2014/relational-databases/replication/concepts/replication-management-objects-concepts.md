@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- replication
+ms.technology: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,12 +20,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ae095ec489018b7f5cfde69a5cbd65470f261ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75d4e1e4ac97683d25e00fd2cf249a8890f5edd3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082270"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772083"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   Bei Replikationsverwaltungsobjekten (RMO) handelt es sich um eine verwaltete Codeassembly, die Replikationsfunktionen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kapselt. RMO wird durch den <xref:Microsoft.SqlServer.Replication>-Namespace implementiert.  
@@ -40,7 +38,7 @@ ms.locfileid: "48082270"
  [Erstellen, Ändern und Löschen von Veröffentlichungen und Artikeln &#40;Replikation&#41;](../publish/create-modify-and-delete-publications-and-articles-replication.md)  
  Die Themen in diesem Abschnitt demonstrieren, wie mit RMO Veröffentlichungen und Artikel erstellt, gelöscht und geändert werden.  
   
- [Subscribe to Publications](../subscribe-to-publications.md)  
+ [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md)  
  Die Themen in diesem Abschnitt beschreiben, wie mit RMO Abonnements erstellt, gelöscht und geändert werden.  
   
  [Sichern einer Replikationstopologie](../security/secure-a-replication-topology.md)  

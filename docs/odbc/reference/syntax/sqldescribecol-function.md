@@ -20,19 +20,19 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0240d5fe1f701715f11adc4f68e80abed896d704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b8453d76dc2af0499dc8d8af2ca1ec3024aee83
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742688"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523811"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
   
  **Zusammenfassung**  
- **SQLDescribeCol** Deskriptor Ergebnis zurückgibt – Spaltenname, Datentyp, Spaltengröße, Dezimalstellen und NULL-Zulässigkeit – für eine Spalte im Ergebnis festgelegt. Diese Informationen sind auch in den Feldern des IRD verfügbar.  
+ **SQLDescribeCol** den Ergebnis-Deskriptor - Spaltenname, Datentyp, Spaltengröße, Dezimalstellen und NULL-Zulässigkeit - für eine Spalte im Resultset zurückgegeben. Diese Informationen sind auch in den Feldern des IRD verfügbar.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,7 +57,7 @@ SQLRETURN SQLDescribeCol(
  *ColumnNumber*  
  [Eingabe] Spaltennummer der Ergebnisdaten, sortiert sequenziell in der wachsenden Spaltenreihenfolge, beginnend mit 1. Die *ColumnNumber* Argument kann auch auf 0 festgelegt werden, um die Lesezeichenspalte zu beschreiben.  
   
- *Spaltenname*  
+ *ColumnName*  
  [Ausgabe] Zeiger auf einen Null-terminierte Puffer in den Namen der Spalte zurückgegeben. Dieser Wert wird vom IRD SQL_DESC_NAME-Felds gelesen werden. Wenn die Spalte keinen Namen hat oder den Namen der Spalte kann nicht bestimmt werden, gibt der Treiber eine leere Zeichenfolge zurück.  
   
  Wenn *ColumnName* NULL ist, *NameLengthPtr* gibt die Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen für Zeichendaten) noch verfügbar, die in den Puffer, der auf zurückgegeben *ColumnName*.  
@@ -75,13 +75,13 @@ SQLRETURN SQLDescribeCol(
   
  Beim *ColumnNumber* ist gleich 0 (für eine Lesezeichenspalte) ist, wird im SQL_BINARY zurückgegeben  *\*DataTypePtr* variabler Länge, die Lesezeichen. (SQL_INTEGER wird zurückgegeben, wenn Lesezeichen von einer ODBC-3 verwendet werden. *x* Anwendung mit einer ODBC 2. *X* Treiber oder von einer ODBC 2. *X* Anwendung mit einer ODBC 3. *X* Treiber.)  
   
- Weitere Informationen zu diesen Datentypen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) in Anhang D:-Datentypen. Informationen zu Treiber-spezifische SQL-Datentypen finden Sie in der vom Treiber-Dokumentation.  
+ Weitere Informationen zu diesen Datentypen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) in Anhang D: Datentypen. Informationen zu Treiber-spezifische SQL-Datentypen finden Sie in der vom Treiber-Dokumentation.  
   
  *ColumnSizePtr*  
- [Ausgabe] Zeiger auf einen Puffer, in die die Größe (in Zeichen) der Spalte in der Datenquelle zurückgegeben werden sollen. Wenn die Spaltengröße nicht bestimmt werden kann, gibt der Treiber 0 zurück. Weitere Informationen zu Spaltengröße, finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Anhang D:-Datentypen.  
+ [Ausgabe] Zeiger auf einen Puffer, in die die Größe (in Zeichen) der Spalte in der Datenquelle zurückgegeben werden sollen. Wenn die Spaltengröße nicht bestimmt werden kann, gibt der Treiber 0 zurück. Weitere Informationen zu Spaltengröße, finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Anhang D: Datentypen.  
   
  *DecimalDigitsPtr*  
- [Ausgabe] Zeiger auf einen Puffer, in die die Anzahl der Dezimalstellen der Spalte in der Datenquelle zurückgegeben werden sollen. Der Treiber gibt 0 zurück, wenn die Anzahl der Dezimalstellen kann nicht bestimmt werden, oder es nicht anwendbar ist. Weitere Informationen zu Dezimalstellen, finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Anhang D:-Datentypen.  
+ [Ausgabe] Zeiger auf einen Puffer, in die die Anzahl der Dezimalstellen der Spalte in der Datenquelle zurückgegeben werden sollen. Der Treiber gibt 0 zurück, wenn die Anzahl der Dezimalstellen kann nicht bestimmt werden, oder es nicht anwendbar ist. Weitere Informationen zu Dezimalstellen, finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Anhang D: Datentypen.  
   
  *NullablePtr*  
  [Ausgabe] Zeiger auf einen Puffer, in dem einen Wert zurückgegeben, der angibt, ob die Spalte NULL-Werte zulässt. Dieser Wert wird aus dem Feld SQL_DESC_NULLABLE vom IRD gelesen. Der Wert ist eine der folgenden:  
@@ -90,7 +90,7 @@ SQLRETURN SQLDescribeCol(
   
  SQL_NULLABLE: Die Spalte lässt NULL-Werte zu.  
   
- SQL_NULLABLE_UNKNOWN: Der Treiber kann nicht bestimmen, ob die Spalte NULL-Werte zulässt.  
+ SQL_NULLABLE_UNKNOWN: Der Treiber kann nicht bestimmen, wenn die Spalte NULL-Werte zulässt.  
   
 ## <a name="returns"></a>Rückgabewert  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  

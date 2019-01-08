@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acdc9600b7d1081492893f3cc8497359df65fdb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153718"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782882"
 ---
 # <a name="tables"></a>Tabellen
   Tabellen sind Datenbankobjekte, die sämtliche in einer Datenbank enthaltenen Daten umfassen. Die Daten in den Tabellen sind, ähnlich wie in einer Kalkulationstabelle, logisch in Zeilen und Spalten angeordnet. Jede Zeile stellt einen eindeutigen Datensatz und jede Spalte ein Feld im Datensatz dar. Eine Tabelle, die z. B. die Angestelltendaten für ein Unternehmen enthält, könnte eine Zeile für jeden Angestellten sowie Spalten enthalten, die Informationen zu einzelnen Angestellten angeben, wie z. B. die Mitarbeiternummer, den Namen, die Adresse, die Berufsbezeichnung und die private Telefonnummer.  
@@ -34,7 +33,7 @@ ms.locfileid: "48153718"
  Neben der Standardrolle der grundlegenden benutzerdefinierten Tabellen bietet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die folgenden Typen von Tabellen, die innerhalb einer Datenbank speziellen Zwecken dienen:  
   
  Partitionierte Tabellen  
- Partitionierte Tabellen sind Tabellen, deren Daten horizontal in Einheiten aufgeteilt sind, die über mehrere Dateigruppen innerhalb einer Datenbank verteilt sein können. Durch die Partitionierung werden große Tabellen oder Indizes einfacher verwaltbar, da Sie schnell und effizient auf Datenteilmengen zugreifen können, während die Integrität der gesamten Auflistung erhalten bleibt. Standardmäßig unterstützt [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bis zu 15.000 Partitionen. Weitere Informationen finden Sie unter [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Partitionierte Tabellen sind Tabellen, deren Daten horizontal in Einheiten aufgeteilt sind, die über mehrere Dateigruppen innerhalb einer Datenbank verteilt sein können. Durch die Partitionierung werden große Tabellen oder Indizes einfacher verwaltbar, da Sie schnell und effizient auf Datenteilmengen zugreifen können, während die Integrität der gesamten Auflistung erhalten bleibt. Standardmäßig unterstützt [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bis zu 15.000 Partitionen. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  Temporäre Tabellen  
  Temporäre Tabellen werden in `tempdb` gespeichert. Es gibt zwei Arten von temporären Tabellen: lokale und globale temporäre Tabellen. Sie unterscheiden sich hinsichtlich ihrer Namen, ihrer Sichtbarkeit und ihrer Verfügbarkeit. Lokale temporäre Tabellen weisen als erstes Zeichen ihres Namens ein einzelnes Nummernzeichen (#) auf. Sie sind nur im Rahmen der aktuellen Verbindung des Benutzers sichtbar und werden gelöscht, sobald der Benutzer die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]trennt. Globale temporäre Tabellen weisen als erste Zeichen ihres Namens zwei Nummernzeichen (##) auf. Nachdem sie erstellt wurden, sind sie für jeden Benutzer sichtbar, und sie werden gelöscht, nachdem alle Benutzer, die auf diese Tabelle verweisen, die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]getrennt haben.  
@@ -47,7 +46,7 @@ ms.locfileid: "48153718"
   
  Bei breiten Tabellen treten folgende Leistungsauswirkungen auf:  
   
--   Breite Tabellen können die Kosten für die Verwaltung der Indizes in der Tabelle erhöhen. Es ist ratsam, die Anzahl an Indizes für eine breite Tabelle auf die Indizes zu beschränken, die für die Geschäftslogik erforderlich sind. Wenn die Anzahl von Indizes zunimmt, gilt dies auch für die Anforderungen an DML-Kompilierzeit und Arbeitsspeicher. Bei nicht gruppierten Indizes sollte es sich um gefilterte Indizes handeln, die auf Datenteilmengen angewendet werden. Weitere Informationen finden Sie unter [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
+-   Breite Tabellen können die Kosten für die Verwaltung der Indizes in der Tabelle erhöhen. Es ist ratsam, die Anzahl an Indizes für eine breite Tabelle auf die Indizes zu beschränken, die für die Geschäftslogik erforderlich sind. Wenn die Anzahl von Indizes zunimmt, gilt dies auch für die Anforderungen an DML-Kompilierzeit und Arbeitsspeicher. Bei nicht gruppierten Indizes sollte es sich um gefilterte Indizes handeln, die auf Datenteilmengen angewendet werden. Weitere Informationen finden Sie unter [erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 -   Anwendungen können breiten Tabellen dynamisch Spalten hinzufügen und daraus entfernen. Wenn Spalten hinzugefügt oder entfernt werden, werden kompilierte Abfragepläne ebenfalls als ungültig erklärt. Es ist ratsam, eine Anwendung gemäß der vorhergesagten Arbeitsauslastung zu entwerfen, damit Schemaänderungen minimiert werden.  
   

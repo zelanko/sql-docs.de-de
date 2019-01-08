@@ -10,12 +10,12 @@ ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4b791f83342d02fb003a14f48861ae992ddc37df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190290"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408627"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sichern einer Datenbank mit speicheroptimierten Tabellen
   Speicheroptimierte Tabellen werden im Rahmen regelmäßiger Datenbanksicherungen gesichert. Wie bei datenträgerbasierten Tabellen wird die CHECKSUM von Daten-/Änderungsdateipaaren als Teil der Datenbanksicherung überprüft, um Speicherbeschädigungen zu erkennen.  
@@ -28,7 +28,7 @@ ms.locfileid: "48190290"
 ## <a name="full-database-backup"></a>Vollständige Datenbanksicherung  
  Diese Erläuterung bezieht sich auf Datenbanksicherungen für Datenbanken, die ausschließlich über dauerhafte speicheroptimierte Tabellen verfügen, da die Sicherung für datenträgerbasierte Tabellen identisch ist. Die Prüfpunktdateipaare in der speicheroptimierten Dateigruppe können unterschiedliche Statusphasen aufweisen. In der folgenden Tabelle wird beschrieben, welcher Teil der Dateien gesichert wird.  
   
-|Status des Prüfpunktdateipaars|Sichern|  
+|Status des Prüfpunktdateipaars|Sicherung|  
 |--------------------------------|------------|  
 |PRECREATED|Nur Dateimetadaten|  
 |UNDER CONSTRUCTION|Nur Dateimetadaten|  
@@ -48,7 +48,7 @@ ms.locfileid: "48190290"
   
  Das erste Arbeitsauslastungsszenario bezieht sich (hauptsächlich) auf Einfügevorgänge. In diesem Szenario weisen die meisten Datendateien den Status ACTIVE und einige wenige gelöschte Zeilen auf und wurden vollständig geladen. Die Größe der Datenbanksicherung entspricht in etwa der Größe der Daten im Arbeitsspeicher.  
   
- Das zweite Arbeitsauslastungsszenario bezieht sich auf häufige Einfüge-, Lösch- und Updatevorgänge: Im ungünstigsten Fall wurde jedes Prüfpunktdateipaar nach Berücksichtigung der gelöschten Zeilen zu 50 % geladen. Daher ist die Datenbanksicherung mindestens zweimal so groß wie die Daten im Arbeitsspeicher. Zusätzlich wächst die Größe der Datenbanksicherung durch einige Prüfpunktdateipaare mit dem Status „Quelle zusammenführen“ und „Für Backup/HA erforderlich“ weiter an.  
+ Das zweite Arbeitsauslastungsszenario bezieht sich auf häufige Einfüge-, Lösch- und Updatevorgänge: Im ungünstigsten Fall wurde jedes Prüfpunktdateipaar nach Berücksichtigung der gelöschten Zeilen zu 50 % geladen. Daher ist die Datenbanksicherung mindestens zweimal so groß wie die Daten im Arbeitsspeicher. Zusätzlich wächst die Größe der Datenbanksicherung durch einige Prüfpunktdateipaare mit dem Status „Quelle zusammenführen“ und „Für Backup/HA erforderlich“ weiter an.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Differenzielle Sicherungen von Datenbanken mit speicheroptimierten Tabellen  
  Der Speicher für speicheroptimierte Tabellen setzt sich zusammen aus Daten- und Änderungsdateien, wie in [Dauerhaftigkeit für speicheroptimierte Tabellen](memory-optimized-tables.md)beschrieben. Eine differenzielle Sicherung einer Datenbank mit speicheroptimierten Tabellen enthält die folgenden Daten:  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -16,12 +15,12 @@ ms.assetid: 0fe330ca-5fb5-422e-ad6f-92fb5d6a3b6c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58f9c75c13fc2b3315e4cf3fdc3ffb6e41598721
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25e0eb6e257098d075cca4fb4d36d586efa1841b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084260"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772482"
 ---
 # <a name="specify-that-deletes-should-not-be-tracked-for-merge-articles-replication-transact-sql-programming"></a>Angeben, dass Löschvorgänge für Mergeartikel nicht nachverfolgt werden sollen (Replikationsprogrammierung mit Transact-SQL)
     
@@ -35,7 +34,7 @@ ms.locfileid: "48084260"
   
 ### <a name="to-specify-that-deletes-be-ignored-for-a-new-merge-article"></a>So geben Sie an, dass Löschvorgänge für Mergeartikel ignoriert werden sollen  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) aus. Geben Sie den Wert `false` für **@delete_tracking**. Weitere Informationen finden Sie unter [Define an Article](define-an-article.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) aus. Geben Sie den Wert `false` für **@delete_tracking**. Weitere Informationen finden Sie unter [Definieren eines Artikels](define-an-article.md).  
   
     > [!NOTE]  
     >  Wenn die Quelltabelle eines Artikels bereits in einer anderen Veröffentlichung veröffentlicht wurde, muss der Wert von **delete_tracking** für beide Artikel gleich sein.  

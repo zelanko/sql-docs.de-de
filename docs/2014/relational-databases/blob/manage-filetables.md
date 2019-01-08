@@ -13,17 +13,17 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76a4c29d0fba58eb941bf26781b052966a0bd5b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfb5fa710122df0e467b27a99c08d75cc2897adf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186740"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416721"
 ---
 # <a name="manage-filetables"></a>Verwalten von FileTables
   Beschreibt allgemeine administrative Tasks zum Verwalten von FileTables.  
   
-##  <a name="HowToEnumerate"></a> Vorgehensweise: Abrufen einer Liste von FileTables und verbundenen Objekten  
+##  <a name="HowToEnumerate"></a> So wird es gemacht: Abrufen einer Liste von FileTables und verbundenen Objekten  
  Um eine Liste von FileTables abzurufen, fragen Sie eine der folgenden Katalogsichten ab:  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
@@ -79,7 +79,7 @@ GO
   
 -   Keines der Verzeichnisse auf Datenbankebene auf der Instanz ist sichtbar, wenn FILESTREAM auf Instanzebene deaktiviert ist.  
   
-###  <a name="HowToDisable"></a> Vorgehensweise: Deaktivieren und erneutes Aktivieren von nicht transaktionalem Zugriff auf Datenbankebene  
+###  <a name="HowToDisable"></a> So wird es gemacht: Deaktivieren und erneutes Aktivieren von nicht transaktionalem Zugriff auf Datenbankebene  
  Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  **So deaktivieren Sie vollständigen nicht transaktionalen Zugriff**  
@@ -106,7 +106,7 @@ ALTER DATABASE database_name
 GO  
 ```  
   
-###  <a name="visible"></a> Vorgehensweise: Sicherstellen der Sichtbarkeit der FileTables in einer Datenbank  
+###  <a name="visible"></a> So wird es gemacht: Sicherstellen der Sichtbarkeit der FileTables in einer Datenbank  
  Ein Verzeichnis auf Datenbankebene und die FileTable-Verzeichnisse darunter sind sichtbar, wenn alle folgenden Bedingungen zutreffen:  
   
 1.  FILESTREAM ist auf Instanzebene aktiviert.  
@@ -138,7 +138,7 @@ GO
   
 -   Das FileTable-Verzeichnis und die enthaltenen Dateien und Verzeichnisse werden im Dateisystem sichtbar und stehen zum Datei-E/A-Zugriff zur Verfügung.  
   
-###  <a name="HowToEnableNS"></a> Vorgehensweise: Deaktivieren und erneutes Aktivieren des FileTable-Namespaces auf Tabellenebene  
+###  <a name="HowToEnableNS"></a> So wird es gemacht: Deaktivieren und erneutes Aktivieren des FileTable-Namespaces auf Tabellenebene  
  Rufen Sie die ALTER TABLE-Anweisung mit der Option **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** auf.  
   
  **So deaktivieren Sie den FileTable-Namespace**  
@@ -161,7 +161,7 @@ GO
 > [!WARNING]  
 >  Durch das Abbrechen geöffneter Dateihandles verlieren Benutzer möglicherweise nicht gespeicherte Daten. Dieses Verhalten ist mit dem Verhalten des Dateisystems selbst konsistent.  
   
-###  <a name="HowToListOpen"></a> Vorgehensweise: Abrufen einer Liste von einer FileTable zugeordneten offenen Dateihandles  
+###  <a name="HowToListOpen"></a> So wird es gemacht: Abrufen einer Liste von einer FileTable zugeordneten Handles auf offene Dateien  
  Rufen Sie die Katalogsicht [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql) ab.  
   
 ```tsql  
@@ -169,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> Vorgehensweise: Abbrechen von einer FileTable zugeordneten offenen Dateihandles  
+###  <a name="HowToKill"></a> So wird es gemacht: Beenden einer FileTable zugeordneten Handles auf offene Dateien  
  Rufen Sie die gespeicherte Prozedur [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles) mit den entsprechenden Argumenten auf, um alle offenen Dateihandles in der Datenbank oder FileTable oder ein bestimmtes Handle abzubrechen.  
   
 ```  
@@ -188,7 +188,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> Vorgehensweise: Identifizieren der von FileTables abgehaltenen Sperren  
+###  <a name="HowToIdentifyLocks"></a> So wird es gemacht: Identifizieren Sie die Sperren von FileTables abgehaltenen  
  Die meisten von FileTables abgehaltenen Sperren entsprechen Dateien, die von Anwendungen geöffnet wurden.  
   
  **So identifizieren Sie geöffnete Dateien und die zugeordneten Sperren**  

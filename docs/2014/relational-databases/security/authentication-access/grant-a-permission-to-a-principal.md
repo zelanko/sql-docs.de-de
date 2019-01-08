@@ -12,12 +12,12 @@ ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1e24250bfd313004b81a3d512a163963c070c08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17282ecfc0c6adbb1e4d1fc97f470371f90bd3f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126347"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520802"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Erteilen einer Berechtigung für einen Prinzipal
   In diesem Thema wird beschrieben, wie Sie mit [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Berechtigungen für einen Prinzipal in [!INCLUDE[tsql](../../../includes/tsql-md.md)]gewähren können.  
@@ -28,7 +28,7 @@ ms.locfileid: "48126347"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erteilen Sie eine Berechtigung für einen Prinzipal mit**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48126347"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Mit den folgenden Best Practices wird die Verwaltung von Berechtigungen erleichtert.  
@@ -50,7 +50,7 @@ ms.locfileid: "48126347"
 ####  <a name="Permissions"></a> Berechtigungen  
  Der Berechtigende (oder der mit der AS-Option angegebene Prinzipal) muss entweder über die Berechtigung selbst mit GRANT OPTION oder über eine höhere Berechtigung verfügen, in der die erteilte Berechtigung impliziert ist. Mitglieder der festen Serverrolle **sysadmin** können beliebige Berechtigungen erteilen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-grant-permission-to-a-principal"></a>So erteilen Sie eine Berechtigung für einen Prinzipal  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48126347"
   
 4.  Klicken Sie mit der rechten Maustaste auf eine gespeicherte Prozedur, und wählen Sie **Eigenschaften**aus.  
   
-5.  Klicken Sie im Dialogfeld *Eigenschaften der gespeicherten Prozedur –***stored_procedure_name* unter „Seite auswählen“ auf die Option **Berechtigungen**. Verwenden Sie diese Seite, um der gespeicherten Prozedur Benutzer oder Rollen hinzuzufügen und um die Berechtigungen anzugeben, die diese Benutzer oder Rollen haben.  
+5.  In der **Eigenschaften der gespeicherten Prozedur-*** Stored_procedure_name* im Dialogfeld unter "auswählen" eine Seite **Berechtigungen**. Verwenden Sie diese Seite, um der gespeicherten Prozedur Benutzer oder Rollen hinzuzufügen und um die Berechtigungen anzugeben, die diese Benutzer oder Rollen haben.  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
@@ -91,6 +91,6 @@ ms.locfileid: "48126347"
  Weitere Informationen finden Sie unter [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql) und [GRANT (Objektberechtigungen)&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-object-permissions-transact-sql).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](principals-database-engine.md)  
+ [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](principals-database-engine.md)  
   
   

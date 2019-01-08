@@ -16,15 +16,15 @@ ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1675e80522feb0c0b2a46a89dfa6e3bba182198
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e892aed72ba1d74f9bdafc319c71a39546f4402
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851640"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527662"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Parametrisierte Befehle mit dazwischen liegenden COMPUTE-Befehlen
-Eine typische parametrisierte Form APPEND-Befehl hat eine Klausel, die ein übergeordnetes Element erstellt **Recordset** mit einem Abfragebefehl und eine weitere Klausel, die ein untergeordnetes Element erstellt **Recordset** mit einer parametrisierten Abfrage-Befehl: d. h. einen Befehl mit einem Platzhalter für Parameter (ein Fragezeichen, "?"). Das resultierende strukturierte **Recordset** hat zwei Ebenen, in dem das übergeordnete Element die obere Ebene belegt, und das untergeordnete Element belegt die untere Ebene.  
+Eine typische parametrisierte Form APPEND-Befehl hat eine Klausel, die ein übergeordnetes Element erstellt **Recordset** mit einem Abfragebefehl und eine weitere Klausel, die ein untergeordnetes Element erstellt **Recordset** mit einem parametrisierten Abfrage-Befehl: d. h. einen Befehl mit einem Platzhalter für Parameter (ein Fragezeichen, "?"). Das resultierende strukturierte **Recordset** hat zwei Ebenen, in dem das übergeordnete Element die obere Ebene belegt, und das untergeordnete Element belegt die untere Ebene.  
   
  Die Klausel, die das untergeordnete Element erstellt **Recordset** nun möglicherweise eine beliebige Anzahl von geschachtelten Shape COMPUTE-Befehle, die am tiefsten geschachtelte Befehl, in denen die parametrisierte Abfrage enthält. Das resultierende strukturierte **Recordset** verfügt über mehrere Ebenen aufweist, in dem das übergeordnete Element die oberste Ebene belegt, das untergeordnete Element nimmt die unterste Ebene und eine beliebige Anzahl von **Recordset**s generiert, indem Sie die Shape COMPUTE-Befehlen, die dazwischen liegenden Ebenen beanspruchen.  
   

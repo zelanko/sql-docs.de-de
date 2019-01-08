@@ -11,12 +11,12 @@ ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d40854ecff0b138fa854103650dda9691be94a41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af3b98aab31aeaa3a01b1026eca8b3098ce97bef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145100"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515973"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Bereitstellen von PowerPivot-Lösungen in SharePoint
   Verwenden Sie die folgenden Anweisungen, um zwei Lösungspakete, die einer SharePoint Server 2010-Umgebung PowerPivot-Funktionen hinzufügen, manuell bereitzustellen. Das Bereitstellen der Lösungen ist ein erforderlicher Schritt für die Konfiguration von PowerPivot für SharePoint auf einem SharePoint 2010-Server. Die vollständige Liste der erforderlichen Schritte finden Sie unter [PowerPivot-Serververwaltung und-Konfiguration in der Zentraladministration](power-pivot-server-administration-and-configuration-in-central-administration.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "48145100"
   
  Dieses Thema enthält folgende Abschnitte:  
   
- [Voraussetzung: Überprüfen, ob die Webanwendung den klassischen Authentifizierungsmodus verwendet](#bkmk_classic)  
+ [Voraussetzung: Stellen Sie sicher, dass die Webanwendung den klassischen Authentifizierungsmodus verwendet](#bkmk_classic)  
   
  [Schritt 1: Bereitstellen der Farmlösung](#bkmk_farm)  
   
@@ -58,7 +58,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 2.  Führen Sie das folgende Cmdlet aus, um die Farmlösung hinzuzufügen.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      Das Cmdlet gibt den Namen der Lösung, deren Lösungs-ID und "Deployed=False" zurück. Im nächsten Schritt wird die Lösung bereitgestellt.  
@@ -66,7 +66,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Führen Sie das nächste Cmdlet aus, um die Farmlösung bereitzustellen:  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
 ##  <a name="deployCA"></a> Schritt 2: Bereitstellen der PowerPivot-Webanwendungslösung in der Zentraladministration  
@@ -83,7 +83,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Führen Sie das folgende Cmdlet aus, um die Farmlösung hinzuzufügen.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
      Das Cmdlet gibt den Namen der Lösung, deren Lösungs-ID und "Deployed=False" zurück. Im nächsten Schritt wird die Lösung bereitgestellt.  

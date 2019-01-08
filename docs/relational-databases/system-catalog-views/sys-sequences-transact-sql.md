@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3cffdd8b6040e1740e61043433cc95ca3319f5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e33dfa78117b68d1cb67baed2aea6bd7f5487e5b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832038"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398123"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "47832038"
 |\<geerbte Spalten >||Erbt alle Spalten von [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**start_value**|**Sql_variant nicht NULL**|Der Startwert für das Sequenzobjekt. Wenn das Sequenzobjekt mit ALTER SEQUENCE neu gestartet wird, dient dieser Wert als Ausgangspunkt. Wenn das Sequenzobjekt Zyklen sie weiterhin die **Minimum_value** oder **Maximum_value**, nicht die **Start_value**.|  
 |**increment**|**Sql_variant nicht NULL**|Der Wert, um den das Sequenzobjekt nach jedem generierten Wert inkrementiert wird.|  
-|**minimum_value**|**NULL-sql_variant**|Der minimale Wert, der vom Sequenzobjekt generiert werden kann. Wenn dieser Wert erreicht wird, wird das Sequenzobjekt, das entweder einen Fehler zurück, beim Versuch, weitere Werte generieren oder neu starten, wenn die CYCLE-Option angegeben wird. Wenn kein MINVALUE angegeben wurde, wird von dieser Spalte der minimale Wert zurückgegeben, der vom Datentyp des Sequenz-Generators unterstützt wird.|  
+|**minimum_value**|**NULL-sql_variant**|Der minimale Wert, der vom Sequenzobjekt generiert werden kann. Wenn dieser Wert erreicht wird, wird das Sequenzobjekt, das entweder einen Fehler zurück, beim Versuch, weitere Werte generieren oder neu starten, wenn die CYCLE-Option angegeben wird. Wenn kein MINVALUE angegeben wurde, gibt diese Spalte den minimalen Wert vom Datentyp des Sequenz-Generators unterstützt.|  
 |**maximum_value**|**NULL-sql_variant**|Der maximale Wert, der vom Sequenzobjekt generiert werden kann. Nachdem dieser Wert erreicht wurde, wird vom Sequenzobjekt ein Fehler zurückgegeben, wenn versucht wird, weitere Werte zu generieren; wenn die CYCLE-Option angegeben wird, erfolgt ein Neustart. Wenn kein MAXVALUE angegeben wurde, wird von dieser Spalte der maximale Wert zurückgegeben, der vom Datentyp des Sequenz-Objekts unterstützt wird.|  
 |**is_cycling**|**Bit nicht NULL**|Gibt 0 zurück, wenn NO CYCLE für das Sequenzobjekt angegeben wurde, und 1, wenn CYCLE angegeben wurde.|  
 |**is_cached**|**Bit nicht NULL**|Gibt 0 zurück, wenn NO CACHE für das Sequenzobjekt angegeben wurde, und 1, wenn CACHE angegeben wurde.|  
 |**cache_size**|**Int NULL**|Gibt die angegebene Cachegröße für das Sequenzobjekt zurück. Diese Spalte enthält NULL, wenn die Sequenz mit der NO CACHE-Option erstellt oder CACHE ohne Cachegröße angegeben wurde. Wenn der von der Cachegröße angegebene Wert die maximal möglichen Rückgabewerte des Sequenzobjekts übersteigt, wird die nicht abrufbare Cachegröße weiterhin angezeigt.|  
-|**system_type_id**|**Tinyint nicht NULL**|Die ID des Systemtyps für den Datentyp des Sequenzobjekts.|  
+|**system_type_id**|**Tinyint nicht NULL**|Die ID des Systemtyps für den Datentyp des Sequenzobjekts ab.|  
 |**user_type_id**|**Int nicht NULL**|Die ID des Datentyps für das Sequenzobjekt, wie vom Benutzer definiert.|  
-|**Mit einfacher Genauigkeit**|**Tinyint nicht NULL**|Die maximale Genauigkeit des Datentyps.|  
-|**Skalieren**|**Tinyint nicht NULL**|Die maximalen Dezimalstellen des Typs. Die Dezimalstellenzahl wird zusammen mit der Genauigkeit zurückgegeben, damit Benutzer über vollständige Metadaten verfügen. Die Dezimalstellenzahl beträgt bei Sequenzobjekten immer 0, da nur ganzzahlige Typen zulässig sind.|  
+|**precision**|**Tinyint nicht NULL**|Die maximale Genauigkeit des Datentyps.|  
+|**scale**|**Tinyint nicht NULL**|Die maximalen Dezimalstellen des Typs. Die Dezimalstellenzahl wird zusammen mit der Genauigkeit zurückgegeben, damit Benutzer über vollständige Metadaten verfügen. Die Dezimalstellenzahl beträgt bei Sequenzobjekten immer 0, da nur ganzzahlige Typen zulässig sind.|  
 |**Current_value**|**Sql_variant nicht NULL**|Der letzte zurückgegebene Wert. Das heißt, der Wert zurückgegeben, von der letzten Ausführung der NEXT VALUE FOR-Funktion oder der letzten Ausführung der **Sp_sequence_get_range** Verfahren. Gibt den START WITH-Wert zurück, wenn die Sequenz noch nie verwendet wurde.|  
 |**is_exhausted**|**Bit nicht NULL**|0 gibt an, dass weitere Werte von der Sequenz generiert werden können. 1 gibt an, dass das Sequenzobjekt den MAXVALUE-Parameter erreicht hat und die Sequenz nicht auf CYCLE festgelegt wurde. Die NEXT VALUE FOR-Funktion gibt einen Fehler zurück, solange die Sequenz nicht mit ALTER SEQUENCE neu gestartet wird.|  
   

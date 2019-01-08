@@ -11,12 +11,12 @@ ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 79cb440796801e7557b59d75c07b72ed7fc06f6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11fb6cf816a665bb641671cb79b575367e63e63f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121280"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403825"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>Lektion 1: Erstellen einer neuen Website
   In dieser Lektion erfahren Sie, wie Sie ein neues Websiteprojekt mithilfe der ASP.NET-Websitevorlage für Visual C# erstellen.  

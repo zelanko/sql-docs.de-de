@@ -1,5 +1,5 @@
 ---
-title: Vorgänger (MDX) | Microsoft Docs
+title: Vorgänger (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ef9cccb488cebb08c1b9721c40cb8037ea8687a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 3122b3aa2f53da69f88e6ffad508f12c8e10da1c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739619"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404345"
 ---
 # <a name="ascendants-mdx"></a>Ascendants (MDX)
 
@@ -33,10 +33,10 @@ Ascendants(Member_Expression)
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Vorgänger** Funktion gibt alle Vorgänger eines Elements aus der Member selbst bis zum Anfang des Mitglieds der Hierarchie zurück; genauer gesagt, es führt einen Postorder-Durchlauf der Hierarchie für das angegebene Element und dann gibt alle Vorgänger der Elemente im Zusammenhang mit den Member auf, einschließlich selbst in einem Satz. Dies ist im Gegensatz zu den [Vorgänger](../mdx/ancestor-mdx.md) -Funktion, die ein bestimmtes vorausgehendes Element oder Vorgänger, auf einer bestimmten Ebene zurückgibt.  
+ Die **Vorgänger** Funktion gibt alle Vorgänger eines Elements aus das Element selbst bis zum Anfang des Elements Hierarchie zurück; genauer gesagt wird einen Durchlauf der Hierarchie für das angegebene Element aus, und klicken Sie dann Gibt zurück, der alle vorausgehenden Elemente des Elements, einschließlich selbst, in einer Gruppe verknüpft. Dies ist im Gegensatz zu den [Vorgänger](../mdx/ancestor-mdx.md) -Funktion, die ein bestimmtes vorausgehendes Element oder Vorgänger, auf einer bestimmten Ebene zurückgibt.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgende Beispiel gibt die Anzahl der Bestellungen des Wiederverkäufers für die `[Sales Territory].[Northwest]` Element und alle vorausgehenden Elemente des Elements aus der **Adventure Works** Cube. Die **Vorgänger** Funktion bildet die Menge der `[Sales Territory].[Northwest]` Element und seinen vorausgehenden Elementen für die ROWS-Achse.  
+ Das folgende Beispiel gibt die Anzahl der Bestellungen des Wiederverkäufers für das `[Sales Territory].[Northwest]` Element und alle vorausgehenden Elemente des Elements aus der **Adventure Works** Cube. Die **Vorgänger** Funktion erstellt die Menge der `[Sales Territory].[Northwest]` Element und seinen vorausgehenden Elementen für die ROWS-Achse.  
   
 ```  
 SELECT  

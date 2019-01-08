@@ -10,19 +10,19 @@ ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6d040f8d7e784650cfbf0cf8b4540c599ed9599
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059400"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502703"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Verwenden von gruppierten Columnstore-Indizes
   Tasks für die Verwendung von gruppierten Columnstore-Indizes in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- Eine Übersicht über columnstore-Indizes, finden Sie unter [Beschreibung von columnstore-Indizes](../relational-databases/indexes/columnstore-indexes-described.md).  
+ Eine Übersicht über Columnstore-Indizes finden Sie unter [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
   
- Weitere Informationen zu gruppierten columnstore-Indizes finden Sie unter [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
+ Informationen zum Verwenden von gruppierten Columnstore-Indizes finden Sie unter [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
 ## <a name="contents"></a>Inhalt  
   
@@ -60,7 +60,7 @@ GO
  Verwenden der [DROP INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql) Anweisung, um einen gruppierten columnstore-Index zu löschen. Bei diesem Vorgang wird der Index gelöscht, und die Columnstore-Tabelle wird in einen Rowstore-Heap konvertiert.  
   
 ##  <a name="load"></a> Laden von Daten in einen gruppierten columnstore-Index  
- Sie können einem vorhandenen gruppierten Columnstore-Index Daten hinzufügen, indem Sie eine der Standardladenmethoden verwenden.  Z. B. das Bcp-Massenladetool, Integration Services und INSERT... Mithilfe von SELECT können alle Daten in einen gruppierten ColumnStore-Index geladen werden.  
+ Sie können einem vorhandenen gruppierten Columnstore-Index Daten hinzufügen, indem Sie eine der Standardladenmethoden verwenden.  Z. B. Bcp massenladetool, Integration Services, und INSERT... Mithilfe von SELECT können alle Daten in einen gruppierten ColumnStore-Index geladen werden.  
   
  Gruppierte Columnstore-Indizes nutzen den Deltastore, um eine Fragmentierung der Spaltensegmente im Columnstore zu verhindern.  
   
@@ -68,7 +68,7 @@ GO
  Bei partitionierten Daten weist [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zuerst jede Zeile einer Partition zu und führt dann Columnstore-Vorgänge für die Daten innerhalb der Partition aus. Jede Partition verfügt über eigene Zeilengruppen und mindestens einen Deltastore.  
   
 ### <a name="deltastore-loading-scenarios"></a>Ladeszenarien für Deltastores  
- Zeilen werden im Deltastore gesammelt, bis ihre Anzahl die maximale Anzahl der Zeilen erreicht, die für eine Zeilengruppe zulässig sind. Wenn der Deltastore die maximale Anzahl von Zeilen pro Zeilengruppe enthält, markiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Zeilengruppe als "CLOSED". Ein Hintergrundprozess, der "Tuple Mover" genannt wird, sucht die CLOSED-Zeilengruppe und bewegt sich in den Columnstore-Index, in dem die Zeilengruppe in Spaltensegmente komprimiert wird. Die Spaltensegmente werden anschließend im Columnstore gespeichert.  
+ Zeilen werden im Deltastore gesammelt, bis ihre Anzahl die maximale Anzahl der Zeilen erreicht, die für eine Zeilengruppe zulässig sind. Wenn der Deltastore die maximale Anzahl von Zeilen pro Zeilengruppe enthält [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] markiert die Zeilengruppe als "CLOSED". Ein Hintergrundprozess, der "Tuple Mover" bezeichnet, sucht die CLOSED-Zeilengruppe und verschiebt in den Columnstore zu, in denen die Zeilengruppe in spaltensegmente komprimiert wird und die spaltensegmente im Columnstore gespeichert sind.  
   
  Für jeden gruppierten Columnstore-Index können mehrere Deltastores vorhanden sein.  
   
@@ -83,9 +83,9 @@ GO
 |Zeilen für Massenladevorgang|Dem Columnstore hinzugefügte Zeilen|Dem Deltastore hinzugefügte Zeilen|  
 |-----------------------|-----------------------------------|----------------------------------|  
 |102,000|0|102,000|  
-|145,000|145,000<br /><br /> Zeilengruppengröße: 145.000.|0|  
-|1,048,577|1,048,576<br /><br /> Zeilengruppengröße: 1.048.576.|1|  
-|2,252,152|2,252,152<br /><br /> Zeilengruppengrößen: 1.048.576, 1.048.576, 155.000.|0|  
+|145,000|145,000<br /><br /> Zeilengruppengröße: 145,000|0|  
+|1,048,577|1,048,576<br /><br /> Zeilengruppengröße: 1,048,576.|1|  
+|2,252,152|2,252,152<br /><br /> Zeilengruppengrößen: 1,048,576, 1,048,576, 155,000.|0|  
   
  Im folgenden Beispiel werden die Ergebnisse des Ladens von 1.048.577 Zeilen in eine Partition angezeigt. Aus den Ergebnissen wird ersichtlich, dass eine COMPRESSED-Zeilengruppe im Columnstore (in Form von komprimierten Spaltensegmenten) und eine Zeile im Deltastore vorhanden sind.  
   
@@ -115,12 +115,12 @@ SELECT * FROM sys.column_store_row_groups
 -   Wenn sich die Zeile im Deltastore befindet, aktualisiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Zeile im Deltastore.  
   
 ##  <a name="rebuild"></a> Erstellen Sie einen gruppierten columnstore-Index neu.  
- Verwendung [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) oder [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) , führen Sie eine vollständige Neuerstellung eines vorhandenen gruppierten columnstore-Indexes. Darüber hinaus können Sie die ALTER INDEX... REBUILD zum Neu erstellen einer bestimmten Partition.  
+ Verwendung [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) oder [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) , führen Sie eine vollständige Neuerstellung eines vorhandenen gruppierten columnstore-Indexes. Darüber hinaus können Sie ALTER INDEX... REBUILD zum Neu erstellen einer bestimmten Partition.  
   
 ### <a name="rebuild-process"></a>Neuerstellungsprozess  
  Die Neuerstellung eines gruppierten columnstore-Indexes verläuft in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wie folgt:  
   
--   Abrufen einer exklusiven Sperre für die Tabelle oder Partition, während die Neuerstellung ausgeführt wird.  Die Daten sind während der Neuerstellung "offline" und nicht verfügbar.  
+-   Abrufen einer exklusiven Sperre für die Tabelle oder Partition, während die Neuerstellung ausgeführt wird.  Die Daten sind während der Neuerstellung „offline“ und nicht verfügbar.  
   
 -   Defragmentieren des Columnstore, indem physisch Zeilen gelöscht werden, die logisch aus der Tabelle gelöscht wurden. Die gelöschten Bytes werden auf dem physischen Medium freigegeben.  
   

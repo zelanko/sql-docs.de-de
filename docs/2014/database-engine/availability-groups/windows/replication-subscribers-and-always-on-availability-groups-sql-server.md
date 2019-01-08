@@ -14,12 +14,12 @@ ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0617135d1e7a07d30f4581783cefb7add601c88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8968754a797c3f3b1a7e66886f7874c9bc13c5d3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153228"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390664"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>Replikationsabonnenten und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   Wenn für eine AlwaysOn-Verfügbarkeitsgruppe mit einer Datenbank, die einen Replikationsabonnenten darstellt, ein Failover ausgeführt wird, schlägt das Replikationsabonnement u. U. fehl. Bei Transaktionsabonnenten setzt der Verteilungs-Agent die Replikation automatisch fort, wenn für das Abonnement der Name des Verfügbarkeitsgruppenlisteners des Abonnenten verwendet wird. Bei Mergeabonnenten muss der Abonnent vom Replikationsadministrator manuell neu konfiguriert werden, indem er das Abonnement neu erstellt.  
@@ -81,7 +81,7 @@ GO
 ## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>So setzen Sie Merge-Agents nach einem Verfügbarkeitsgruppenfailover des Abonnenten fort  
  Bei einer Mergereplikation muss der Abonnent mithilfe folgender Schritte von einem Replikationsadministrator manuell neu konfiguriert werden:  
   
-1.  Führen Sie `sp_subscription_cleanup` So entfernen Sie das alte Abonnement für den Abonnenten. Führen Sie diese Aktion für das neue primäre Replikat aus (das zuvor das sekundäre Replikat war).  
+1.  Führen Sie `sp_subscription_cleanup` aus, um das alte Abonnement für den Abonnenten zu entfernen. Führen Sie diese Aktion für das neue primäre Replikat aus (das zuvor das sekundäre Replikat war).  
   
 2.  Erstellen Sie das Abonnement neu, indem Sie ein neues Abonnement auf Grundlage einer neuen Momentaufnahme erstellen.  
   

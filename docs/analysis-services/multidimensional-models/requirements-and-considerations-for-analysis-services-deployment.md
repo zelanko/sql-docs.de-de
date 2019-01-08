@@ -1,5 +1,5 @@
 ---
-title: Anforderungen und Überlegungen für Analysis Services-Bereitstellung | Microsoft Docs
+title: Anforderungen und Überlegungen für Analysis Services-Bereitstellung | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8fc21b64be49a74359dcde41e10be5524bc1d9ab
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 991fdab41b7e14e88e621927371d7cc2da3ed3c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026527"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530417"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Anforderungen und Überlegungen für die Bereitstellung von Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Die Leistung und Verfügbarkeit einer Lösung hängt von vielen Faktoren ab, einschließlich der Funktionen der zugrunde liegenden Hardware, der Topologie der Serverbereitstellung, der Eigenschaften der Lösung (z. B. die Verteilung von Partitionen auf mehreren Servern oder die Verwendung von ROLAP-Speicher, der Direktzugriff auf das relationale Modul erfordert), der Vereinbarungen zum Servicelevel und der Komplexität des Datenmodells.  
+  Die Leistung und Verfügbarkeit einer Lösung hängt von vielen Faktoren ab, einschließlich der Funktionen der zugrunde liegenden Hardware, der Topologie der Serverbereitstellung, der Eigenschaften der Lösung (z. B. die Verteilung von Partitionen auf mehreren Servern oder die Verwendung von ROLAP-Speicher, der Direktzugriff auf die relationale Engine erfordert), der Vereinbarungen zum Servicelevel und der Komplexität des Datenmodells.  
   
 ## <a name="memory-and-processor-requirements"></a>Arbeitsspeicher- und Prozessoranforderungen  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]benötigt mehr Arbeitsspeicher und Prozessoren in den folgenden Fällen:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] benötigt unter folgenden Umständen zusätzliche Arbeitsspeicher- und Prozessorressourcen:  
   
 -   Wenn große oder komplexe Cubes verarbeitet werden. Diese benötigen eine größere Menge von Arbeitsspeicher- und Prozessorressourcen als kleine oder einfache Cubes.  
   
@@ -49,8 +49,8 @@ ms.locfileid: "34026527"
  Cubes  
  Cubes, die große Faktentabellen besitzen, verlangen mehr Speicherplatz als Cubes mit kleinen Faktentabellen. Entsprechend (wenn auch in geringerem Umfang) erfordern Cubes mit zahlreichen großen Dimensionen mehr Speicherplatz als Cubes mit einer geringeren Anzahl von Dimensionselementen. Im Allgemeinen können Sie erwarten, dass eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank ungefähr 20 Prozent des Speicherplatzes erfordert, der für die gleichen Daten benötigt wird, die in der zugrunde liegenden relationalen Datenbank gespeichert sind.  
   
- Aggregationen  
- Aggregationen erfordern proportional zu den hinzugefügten Aggregationen zusätzlichen Speicherplatz – je mehr Aggregationen vorhanden sind, desto mehr Speicherplatz ist erforderlich. Wenn Sie das Erstellen nicht erforderlicher Aggregationen vermeiden, sollte der für Aggregationen benötigte Speicherplatz in der Regel ungefähr 10 Prozent der Größe der Daten nicht übersteigen, die in der zugrunde liegenden relationalen Datenbank gespeichert sind.  
+ Aggregations  
+ Aggregationen erfordern proportional zur hinzugefügt: die Aggregationen zusätzlichen Speicherplatz mehr Aggregationen vorhanden sind, desto mehr Speicherplatz erforderlich. Wenn Sie das Erstellen nicht erforderlicher Aggregationen vermeiden, sollte der für Aggregationen benötigte Speicherplatz in der Regel ungefähr 10 Prozent der Größe der Daten nicht übersteigen, die in der zugrunde liegenden relationalen Datenbank gespeichert sind.  
   
  Data Mining  
  Standardmäßig speichern Miningstrukturen das Dataset, mit dem sie trainiert werden, auf dem Datenträger zwischen. Um diese zwischengespeicherten Daten vom Datenträger zu entfernen, können Sie die Verarbeitungsoption **Klarstruktur verarbeiten** für das Miningstrukturobjekt verwenden. Weitere Informationen finden Sie unter [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "34026527"
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>Gewährleisten der Verfügbarkeit im Fall von Hardware- oder Softwarefehlern  
  Die Hardware oder Software kann aus verschiedenen Gründen ausfallen. Das Wahren der Verfügbarkeit Ihrer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Installation bezieht sich jedoch nicht nur auf die Problembehandlung der Quellen dieser Fehler, sondern auch auf das Bereitstellen alternativer Ressourcen, die dem Benutzer die weitere Verwendung des Systems ermöglichen, wenn ein Fehler auftritt. Cluster- und Lastenausgleichsserver werden normalerweise zum Bereitstellen der alternativen Ressourcen verwendet, die zum Wahren der Verfügbarkeit erforderlich sind, wenn Hardware- oder Softwarefehler auftreten.  
   
- Um die Verfügbarkeit im Fall eines Hardware- oder Softwarefehlers zu gewährleisten, sollten Sie das Bereitstellen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in einem Failovercluster in Betracht ziehen. In einem Failovercluster führt [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Clustering ein Failover auf einen sekundären Knoten durch, wenn der primäre Knoten aus einem bestimmten Grund einen Fehler aufweist oder neu gestartet werden muss. Nach dem schnell eintretenden Failover greifen Benutzer beim Ausführen einer Abfrage auf eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zu, die auf dem sekundären Knoten ausgeführt wird. Weitere Informationen zu Failoverclustern finden Sie unter [Windows Server Technologies:  Failover Clusters](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)(Windows Server-Technologien: Failovercluster).  
+ Um die Verfügbarkeit im Fall eines Hardware- oder Softwarefehlers zu gewährleisten, sollten Sie das Bereitstellen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in einem Failovercluster in Betracht ziehen. In einem Failovercluster führt [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Clustering ein Failover auf einen sekundären Knoten durch, wenn der primäre Knoten aus einem bestimmten Grund einen Fehler aufweist oder neu gestartet werden muss. Nach dem schnell eintretenden Failover greifen Benutzer beim Ausführen einer Abfrage auf eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zu, die auf dem sekundären Knoten ausgeführt wird. Weitere Informationen zu Failoverclustern finden Sie unter [Windows Server-Technologien:  Failovercluster](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx).  
   
  Eine andere Lösung bei Verfügbarkeitsproblemen besteht im Bereitstellen des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts auf zwei oder mehr Produktionsservern. Anschließend können Sie die Netzwerklastenausgleich-Funktion von Windows-Servern zum Kombinieren der Produktionsserver in einem einzigen Cluster verwenden. In einem NLB-Cluster leitet der NLB-Dienst Benutzerabfragen an die Server um, die noch verfügbar sind, wenn ein Server im Cluster aufgrund von Hardware- oder Softwareproblemen nicht verfügbar ist.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "34026527"
   
 -   Wenn eine oder mehrere relationale Datenbanken Daten für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank bereitstellen, können Sie diese Datenbanken auf einen separaten Computer verschieben. Bevor Sie die Datenbanken verschieben, berücksichtigen Sie die gegebene Netzwerkgeschwindigkeit und Bandbreite zwischen der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank und den zugrunde liegenden Datenbanken. Wenn das Netzwerk langsam oder überlastet ist, wirkt sich das Verschieben der zugrunde liegenden Datenbanken auf einen separaten Computer negativ auf die Verarbeitungsleistung aus.  
   
--   Wenn sich die Verarbeitung auf die Abfrageleistung auswirkt, die Verarbeitung jedoch nicht zu Zeiten verringerter Abfragelast durchgeführt werden kann, sollten Sie das Verschieben der Verarbeitungstasks auf einen Stagingserver in Erwägung ziehen und dann eine Onlinesynchronisierung des Produktionsservers und des Stagingservers ausführen. Weitere Informationen finden Sie unter [Synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md). Sie können die Verarbeitung mithilfe von Remotepartitionen auch auf mehrere Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verteilen. Das Verarbeiten von Remotepartitionen verwendet Prozessor- und Speicherressourcen auf dem Remoteserver anstelle von Ressourcen auf dem lokalen Computer. Weitere Informationen zur Verwaltung von Remotepartitionen finden Sie unter [Erstellen und Verwalten einer Remotepartition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md).  
+-   Wenn die Verarbeitung auf die abfrageleistung auswirkt, aber Sie können nicht zu Zeiten verringerter Abfragelast verarbeiten, sollten Sie Sie Verschieben der Verarbeitungstasks auf einem Stagingserver und dann eine onlinesynchronisierung des Produktionsservers und des stagingservers. Weitere Informationen finden Sie unter [Synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md). Sie können die Verarbeitung mithilfe von Remotepartitionen auch auf mehrere Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verteilen. Das Verarbeiten von Remotepartitionen verwendet Prozessor- und Speicherressourcen auf dem Remoteserver anstelle von Ressourcen auf dem lokalen Computer. Weitere Informationen zur Verwaltung von Remotepartitionen finden Sie unter [Erstellen und Verwalten einer Remotepartition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md).  
   
 -   Wenn die Abfrageleistung schlecht ist, die Prozessor- und Speicherressourcen auf dem lokalen Server jedoch nicht vergrößert werden können, können Sie ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt auf zwei oder mehr Produktionsservern bereitstellen. Anschließend können Sie Netzwerklastenausgleich zum Kombinieren der Server in einem einzigen Cluster verwenden. In einem NLB-Cluster werden Abfragen automatisch auf alle Server im NLB-Cluster verteilt.  
   

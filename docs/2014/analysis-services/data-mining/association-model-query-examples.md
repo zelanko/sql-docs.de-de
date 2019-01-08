@@ -17,12 +17,12 @@ ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad20cca3b87a3d3b94bef48dcdf94c55cf30a282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 268685c489d03f7e9055042ab613223146f89600
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117381"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519402"
 ---
 # <a name="association-model-query-examples"></a>Beispiele für Zuordnungsmodellabfragen
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie entweder eine Inhaltsabfrage oder eine Vorhersageabfrage auswählen. Die Inhaltsabfrage liefert Details über die während der Analyse ermittelten Regeln und Itemsets. Die Vorhersageabfrage nimmt hingegen Vorhersagen anhand der in den Daten gefundenen Zuordnungen vor. Für ein Zuordnungsmodell basieren Vorhersagen üblicherweise auf Regeln und können für Empfehlungen verwendet werden. Bei Abfragen des Inhalts wird hingegen die Beziehung zwischen Itemsets analysiert. Sie können auch Metadaten über das Modell abrufen.  
@@ -50,7 +50,7 @@ ms.locfileid: "48117381"
 ##  <a name="bkmk_top2"></a> Suchen nach Informationen über das Modell  
  Alle Miningmodelle machen den vom Algorithmus erfassten Inhalt nach einem standardisierten Schema verfügbar. Dieses Schema wird als Miningmodell-Schemarowset bezeichnet. Abfragen für das Miningmodell-Schemarowset können Sie entweder mithilfe von DMX-Anweisungen oder mit gespeicherten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Prozeduren erstellen. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie die Schemarowsets mit einer SQL-ähnlichen Syntax auch direkt als Systemtabellen abfragen.  
   
-###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellmetadaten mit DMX  
+###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellmetadaten mithilfe von DMX  
  Die folgende Abfrage gibt grundlegende Metadaten über das Zuordnungsmodell `Association`zurück, wie Name des Modells, die Datenbank, in der das Modell gespeichert ist, und die Anzahl der untergeordneten Knoten im Modell. Diese Abfrage ruft die Metadaten mithilfe einer DMX-Inhaltsabfrage vom übergeordneten Knoten des Modells ab:  
   
 ```  
@@ -74,7 +74,7 @@ WHERE NODE_TYPE = 1
 |CHILDREN_CARDINALITY|942|  
 |NODE_DESCRIPTION|Modell für Zuordnungsregeln; ITEMSET_COUNT=679; RULE_COUNT=263; MIN_SUPPORT=14; MAX_SUPPORT=4334; MIN_ITEMSET_SIZE=0; MAX_ITEMSET_SIZE=3; MIN_PROBABILITY=0.400390625; MAX_PROBABILITY=1; MIN_LIFT=0.14309369632511; MAX_LIFT=1.95758227647523|  
   
- Eine Definition der Bedeutung dieser Spalten in einem Zuordnungsmodell finden Sie unter [Mining Model Content for Association Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md).  
+ Eine Definition der Bedeutung dieser Spalten in einem Zuordnungsmodell finden Sie unter [Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md).  
   
  [Zurück zum Anfang](#bkmk_top2)  
   
@@ -101,7 +101,7 @@ WHERE MODEL_NAME = 'Association'
   
  [Zurück zum Anfang](#bkmk_top2)  
   
-###  <a name="bkmk_Query3"></a> Beispielabfrage 3: Abrufen von ursprünglichen Parametern für das Modell  
+###  <a name="bkmk_Query3"></a> Beispielabfrage 3: Abrufen von ursprünglichen Parametern für Modell  
  Die folgende Abfrage gibt eine einzelne Spalte mit Details über die Parametereinstellungen zurück, die beim Erstellen des Modells verwendet wurden.  
   
 ```  
@@ -119,7 +119,7 @@ WHERE MODEL_NAME = 'Association'
 ## <a name="finding-information-about-rules-and-itemsets"></a>Suchen nach Informationen über Regeln und Itemsets  
  Ein Zuordnungsmodell dient im Wesentlichen zwei Zwecken: dem Finden von Informationen über häufig vorhandene Itemsets und dem Extrahieren von Details über bestimmte Regeln und Itemsets. Sie können beispielsweise eine Liste der Regeln extrahieren, die als besonders interessant eingestuft wurden, oder eine Liste mit den gängigsten Itemsets erstellen. Diese Informationen rufen Sie mit einer DMX-Inhaltsabfrage ab. Sie können auch mithilfe des **Microsoft Association Viewer**nach diesen Informationen suchen.  
   
-###  <a name="bkmk_Query4"></a> Beispiel Abfrage 4: Abrufen der Liste von Itemsets und Produkten  
+###  <a name="bkmk_Query4"></a> Beispielabfrage 4: Abrufen der Liste von Itemsets und Produkten  
  Mit folgender Abfrage werden alle Itemsets sowie eine geschachtelte Tabelle abgerufen, in der die in den einzelnen Itemsets enthaltenen Produkte aufgeführt sind. Die Spalte NODE_NAME enthält die eindeutige ID des Itemsets innerhalb des Modells, während die Spalte NODE_CAPTION eine Textbeschreibung der Elemente zur Verfügung stellt. In diesem Beispiel wird die geschachtelte Tabelle vereinfacht, sodass ein Itemset, das zwei Produkte enthält, zwei Zeilen in den Ergebnissen generiert. Sie können das FLATTENED-Schlüsselwort auslassen, wenn der Client hierarchische Daten unterstützt.  
   
 ```  
@@ -166,8 +166,8 @@ WHERE NODE_TYPE = 7
   
  Ein anderes Beispiel für den sinnvollen Einsatz von Abfragen bei einem Zuordnungsmodell ist die Rückgabe des Vertrauenswerts für verschiedene Regeln und Itemsets, sodass Sie die Effektivität verschiedener Cross-Selling-Strategien vergleichen können. In den folgenden Beispielen wird gezeigt, wie derartige Abfragen erstellt werden.  
   
-###  <a name="bkmk_Query6"></a> Beispiel Abfrage 6: Vorhersagen von verknüpften Elementen  
- In diesem Beispiel wird das im [Data Mining-Tutorial für Fortgeschrittene &#40;Analysis Services – Data Mining&#41;](../../tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md) erstellte Zuordnungsmodell verwendet. Es zeigt, wie Sie eine Vorhersageabfrage erstellen, die Aufschluss darüber gibt, welche Produkte Sie einem Kunden empfehlen sollten, der ein bestimmtes Produkt gekauft hat. Dieser Abfragetyp, bei dem Sie mithilfe einer `SELECT…UNION`-Anweisung Werte für das Modell bereitstellen, wird als SINGLETON-Abfrage bezeichnet. Da es sich bei der vorhersagbaren Spalte des Modells, die den neuen Werten entspricht, um eine geschachtelte Tabelle handelt, müssen Sie eine `SELECT`-Klausel verwenden, um den neuen Wert der geschachtelten Tabellenspalte zuzuordnen, `[Model]` und eine weitere `SELECT`-Klausel, um die geschachtelte Tabellenspalte der Spalte auf Fallebene `[v Assoc Seq Line Items]` zuzuordnen. Durch Hinzufügen des Schlüsselworts INCLUDE-STATISTICS zur Abfrage können Sie die Wahrscheinlichkeit und die Unterstützung für die Empfehlungen sehen.  
+###  <a name="bkmk_Query6"></a> Beispielabfrage 6: Vorhersagen von verknüpften Elementen  
+ In diesem Beispiel wird das im [Data Mining-Tutorial für Fortgeschrittene &#40;Analysis Services – Data Mining&#41;](../../tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md) erstellte Zuordnungsmodell verwendet. Es zeigt, wie Sie eine Vorhersageabfrage erstellen, die Aufschluss darüber gibt, welche Produkte Sie einem Kunden empfehlen sollten, der ein bestimmtes Produkt gekauft hat. Dieser Abfragetyp, bei dem Sie mithilfe einer `SELECT...UNION`-Anweisung Werte für das Modell bereitstellen, wird als SINGLETON-Abfrage bezeichnet. Da es sich bei der vorhersagbaren Spalte des Modells, die den neuen Werten entspricht, um eine geschachtelte Tabelle handelt, müssen Sie eine `SELECT`-Klausel verwenden, um den neuen Wert der geschachtelten Tabellenspalte zuzuordnen, `[Model]` und eine weitere `SELECT`-Klausel, um die geschachtelte Tabellenspalte der Spalte auf Fallebene `[v Assoc Seq Line Items]` zuzuordnen. Durch Hinzufügen des Schlüsselworts INCLUDE-STATISTICS zur Abfrage können Sie die Wahrscheinlichkeit und die Unterstützung für die Empfehlungen sehen.  
   
 ```  
 SELECT PredictAssociation([Association].[vAssocSeqLineItems],INCLUDE_STATISTICS, 3)  
@@ -238,7 +238,7 @@ ORDER BY NODE_SUPPORT DESC
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Association-Algorithmus](microsoft-association-algorithm.md)   
- [Technische Referenz für die Microsoft Association-Algorithmus](microsoft-association-algorithm-technical-reference.md)   
- [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Technische Referenz für den Microsoft Association-Algorithmus](microsoft-association-algorithm-technical-reference.md)   
+ [Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

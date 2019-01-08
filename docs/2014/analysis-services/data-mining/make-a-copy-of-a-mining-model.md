@@ -16,12 +16,12 @@ ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ce5f68df0b543fb4c461fb34921ce2ee32a3357
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfae5c36cd05f7122645479980517b14bd2c328d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116240"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529095"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>Erstellen einer Kopie eines Miningmodells
   Die Erstellung einer Kopie eines Miningmodells ist hilfreich, wenn Sie schnell mehrere Miningmodelle erstellen möchten, die auf den gleichen Daten basieren. Nach dem Kopieren des Modells können Sie die neue Kopie bearbeiten, indem Sie Parameter ändern oder einen Filter hinzufügen.  
@@ -38,7 +38,7 @@ ms.locfileid: "48116240"
   
 3.  Wählen Sie das Modell aus, und klicken Sie mit der rechten Maustaste, um das Kontextmenü zu öffnen.  
   
-     – Oder –  
+     -oder-  
   
      Wählen Sie das Modell aus. Klicken Sie im Menü **Miningmodell** auf **Neues Miningmodell**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48116240"
   
 1.  Wählen Sie das Miningmodell aus.  
   
-2.  Klicken Sie im Fenster **Eigenschaften** auf das Textfeld für die **Filter** -Eigenschaft, und klicken Sie dann auf die Schaltfläche ( **…** ).  
+2.  In der **Eigenschaften** Fenster, klicken Sie auf das Textfeld für die **Filter** -Eigenschaft, und klicken Sie auf der Build **(...)**  Schaltfläche.  
   
 3.  Ändern Sie die Filterbedingungen.  
   
@@ -59,8 +59,8 @@ ms.locfileid: "48116240"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Filter für Miningmodelle &#40;Analysis Services – Datamining&#41;](mining-models-analysis-services-data-mining.md)   
- [Miningmodelltasks und Anweisungen Mining](mining-model-tasks-and-how-tos.md)   
+ [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)   
+ [Miningmodelltasks und Anweisungen](mining-model-tasks-and-how-tos.md)   
  [Löschen eines Filters aus einem Miningmodell](delete-a-filter-from-a-mining-model.md)  
   
   

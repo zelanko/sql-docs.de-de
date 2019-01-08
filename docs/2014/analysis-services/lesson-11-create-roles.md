@@ -11,33 +11,33 @@ ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d3ca1e013ede0e8bd40c1ce5af36d44ea45122d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4eec5e4f93a085ab784135593c139410f5911e1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164080"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506777"
 ---
 # <a name="lesson-12-create-roles"></a>Lektion 12: Erstellen von Rollen
-  In dieser Lektion erstellen Sie Rollen. Rollen stellen Modelldatenbankobjekt- und Datensicherheit bereit, indem sie den Zugriff auf die Windows-Benutzer einschränken, die Rollenmitglieder sind. Jede Rolle wird mit einer einzelnen Berechtigung definiert: Keine, Lesen, Lesen und verarbeiten, Verarbeiten oder Administrator. Rollen können in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]während der Modellerstellung im Dialogfeld Rollen-Manager definiert werden. Nachdem ein Modell bereitgestellt wurde, können Sie mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Rollen verwalten. Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](tabular-models/roles-ssas-tabular.md).  
+  In dieser Lektion erstellen Sie Rollen. Rollen stellen Modelldatenbankobjekt- und Datensicherheit bereit, indem sie den Zugriff auf die Windows-Benutzer einschränken, die Rollenmitglieder sind. Jede Rolle wird mit einer einzigen Berechtigung definiert: Keine, lesen, lesen und verarbeiten, Prozess oder Administrator. Rollen können in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]während der Modellerstellung im Dialogfeld Rollen-Manager definiert werden. Nachdem ein Modell bereitgestellt wurde, können Sie mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Rollen verwalten. Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](tabular-models/roles-ssas-tabular.md).  
   
 > [!NOTE]  
 >  Das Erstellen von Rollen ist zum Abschließen dieses Lernprogramms nicht erforderlich. Das Konto, über das Sie derzeit angemeldet sind, verfügt standardmäßig über Administratorberechtigungen für das Modell. Um Benutzern in Ihrer Organisation jedoch das Durchsuchen des Modells mithilfe einer Berichterstellungsclientanwendung zu ermöglichen, müssen Sie mindestens eine Rolle mit Leseberechtigung erstellen und diese Benutzer als Mitglieder hinzufügen.  
   
  Sie erstellen drei Rollen:  
   
--   Sales Manager – Diese Rolle kann Benutzer in Ihrer Organisation umfassen, für die Sie Leseberechtigungen für alle Modellobjekte und Daten benötigen.  
+-   Sales Manager – diese Rolle kann Benutzer in Ihrer Organisation umfassen für die Leseberechtigungen für alle Modellobjekte und Daten haben sollen.  
   
--   Sales Analyst US – Diese Rolle kann Benutzer in Ihrer Organisation umfassen, denen Sie lediglich das Durchsuchen von Daten zum Vertrieb in den USA ermöglichen möchten. Für diese Rolle definieren Sie mit einer DAX-Formel einen *Zeilenfilter*, der Mitgliedern der Rolle lediglich das Durchsuchen von Daten in den USA ermöglicht.  
+-   Sales Analyst US – diese Rolle kann Benutzer in Ihrer Organisation umfassen für die Sie nur Daten zum Vertrieb in den USA (Vereinigte Staaten) wechseln können möchten. Für diese Rolle definieren Sie mit einer DAX-Formel einen *Zeilenfilter*, der Mitgliedern der Rolle lediglich das Durchsuchen von Daten in den USA ermöglicht.  
   
--   Administrator – Diese Rolle kann Benutzer umfassen, für die Sie die Administratorberechtigung benötigen. Mit dieser Berechtigung sind der Zugriff und die Berechtigungen zum Ausführen von administrativen Aufgaben für die Modelldatenbank uneingeschränkt.  
+-   Administrator – diese Rolle kann Benutzer umfassen für die Administratorberechtigung verfügen, die uneingeschränkten Zugriff und Berechtigungen zum Ausführen von Verwaltungsaufgaben in der Model-Datenbank ermöglicht werden soll.  
   
- Da Windows-Benutzer- und -Gruppenkonten in der Organisation eindeutig sind, können Sie Mitgliedern Konten aus Ihrer Organisation hinzufügen. In diesem Lernprogramm können Sie die Angaben zu den Mitgliedern auch weglassen. Sie können die Auswirkungen der einzelnen Rollen immer noch in "Lektion 12: Analysieren in Excel" testen.  
+ Da Windows-Benutzer- und -Gruppenkonten in der Organisation eindeutig sind, können Sie Mitgliedern Konten aus Ihrer Organisation hinzufügen. In diesem Lernprogramm können Sie die Angaben zu den Mitgliedern auch weglassen. Sie werden können die Auswirkungen der einzelnen Rollen weiter unten in der Lektion 12 testen: In Excel analysieren.  
   
  Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 11: Erstellen von Partitionen](lesson-10-create-partitions.md).  
+ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 11: Erstellen von Partitionen](lesson-10-create-partitions.md).  
   
 ## <a name="create-roles"></a>Erstellen von Rollen  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48164080"
   
      `=Geography[Country Region Code] = "US"`  
   
-     Eine Zeilenfilterformel muss in einen booleschen Wert (TRUE/FALSE) aufgelöst werden. Mit dieser Formel legen Sie fest, dass nur Zeilen mit dem Länder-/Regionscode (Country Region Code) "US" für den Benutzer sichtbar sind.  
+     Eine Zeilenfilterformel muss in einen booleschen Wert (TRUE/FALSE) aufgelöst werden. Mit dieser Formel geben Sie an, dass nur Zeilen mit dem Wert der Länder-/ Regionscode "US" für den Benutzer sichtbar sein.  
   
      Drücken Sie nach dem Erstellen der Formel die EINGABETASTE.  
   
@@ -100,6 +100,6 @@ ms.locfileid: "48164080"
 6.  Überprüfen Sie die Auswahl, und klicken Sie anschließend auf **OK**  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Wenn Sie mit diesem Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: [Lektion 13: Analysieren in Excel](lesson-12-analyze-in-excel.md).  
+ Um dieses Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: Lektion: [Lektion 13: In Excel analysieren](lesson-12-analyze-in-excel.md).  
   
   

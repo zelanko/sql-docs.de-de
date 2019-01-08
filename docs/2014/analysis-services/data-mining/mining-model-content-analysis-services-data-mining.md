@@ -21,12 +21,12 @@ ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 355bb7a964ae5b70dd0d8bd71f371766c25e413e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3a0cb21136253767f009cb19604c8a0ea7e4c71a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148005"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503404"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Miningmodellinhalt (Analysis Services &ndash;</ph> Data Mining)
   Nachdem Sie ein Miningmodell, das Daten aus der zugrunde liegenden Miningstruktur enthält, entworfen und verarbeitet haben, ist das Miningmodell vollständig und enthält *Miningmodellinhalt*. Sie können diesen Inhalt verwenden, um Vorhersagen zu treffen oder die Daten zu analysieren.  
@@ -151,7 +151,7 @@ ms.locfileid: "50148005"
  Die geschachtelte Tabelle NODE_DISTRIBUTION enthält immer die folgenden Spalten. Der Inhalt jeder Spalte hängt vom Modelltyp ab. Weitere Informationen über bestimmte Modelltypen finden Sie unter [Miningmodellinhalt nach Algorithmustyp](#bkmk_AlgoType).  
   
  ATTRIBUTE_NAME  
- Der Inhalt ist vom Algorithmus abhängig. Dabei kann es sich um den Namen einer Spalte, z. B. ein vorhersagbares Attribut, eine Regel, ein Itemset oder eine Algorithmus-interne Information handeln, z. B. einen Teil einer Formel.  
+ Der Inhalt ist vom Algorithmus abhängig. Dabei kann es sich um den Namen einer Spalte, z. B. ein vorhersagbares Attribut, eine Regel, ein Itemset oder eine Algorithmus-interne Information handeln, z. B. einen Teil einer Formel.  
   
  Diese Spalte kann auch ein Attribut-Wert-Paar enthalten.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "50148005"
   
  So zeigt z. B. in einer Klassifizierungsstruktur der Unterstützungswert die Anzahl der Fälle an, die über die beschriebene Kombination von Attributen verfügen.  
   
- In einer Entscheidungsstruktur wird die Summe der Unterstützungswerte auf jeder Ebene einer Struktur zu den Unterstützungswerten des übergeordneten Knotens hinzuaddiert. Wenn z. B. ein Modell 1200 Fälle enthält und erst nach Geschlecht und dann wiederum nach Einkommen (Werte: Niedrig, Mittel, Hoch) gleichmäßig unterteilt ist, dann beläuft sich die Summe der untergeordneten Knoten von Knoten (2) – also der Knoten (4), (5) und (6) – immer auf die Anzahl der Fälle von Knoten (2).  
+ In einer Entscheidungsstruktur wird die Summe der Unterstützungswerte auf jeder Ebene einer Struktur zu den Unterstützungswerten des übergeordneten Knotens hinzuaddiert. Angenommen, ein Modell 1200 Fälle enthält gleichmäßig nach Geschlecht unterteilt ist, und erst dann von drei Werten für Einkommen – niedrig, Mittel und hoch: die untergeordneten Knoten des Knotens (2), die Knoten (4), (5) sind und (6), immer die gleiche Anzahl von Fällen als Knoten (2) die Summe.  
   
 |Knoten-ID und Knotenattribute|Unterstützte Anzahl|  
 |---------------------------------|-------------------|  
@@ -225,7 +225,7 @@ ms.locfileid: "50148005"
 |9|Statistik|Gibt einen numerischen Wert an, der eine Statistik für einen Regressor darstellt.|  
 |10|Eindeutiger Knotenname|Gibt an, dass der Wert weder als numerischer Wert noch als Zeichenfolge behandelt werden soll, sondern als der eindeutige Bezeichner eines anderen Inhaltsknotens in einem Model.<br /><br /> In einem neuronalen Netzwerkmodell beispielsweise verweisen IDs von Knoten in der Ausgabeebene auf Knoten in der verborgenen Ebene bzw. von Knoten in der verborgenen Ebene auf Knoten in der Eingabeebene.|  
 |11|Konstantes Glied|Gibt einen numerischen Wert an, der das konstante Glied in einer Regressionsformel darstellt.|  
-|12|Periodizität|Gibt an, dass der Wert eine periodische Struktur in einem Modell kennzeichnet.<br /><br /> Gilt für nur Zeitreihenmodelle, die ein ARIMA-Modell enthalten.<br /><br /> Hinweis: Der Microsoft Time Series-Algorithmus erkennt automatisch periodische Strukturen auf Grundlage der Trainingsdaten. Dies hat zum Ergebnis, dass die Periodizitäten im endgültigen Modell möglicherweise Periodizitätswerte enthalten, die Sie beim Erstellen des Modells nicht in Form von Parametern angegeben haben.|  
+|12|Periodizität|Gibt an, dass der Wert eine periodische Struktur in einem Modell kennzeichnet.<br /><br /> Gilt für nur Zeitreihenmodelle, die ein ARIMA-Modell enthalten.<br /><br /> Hinweis: Der Microsoft Time Series-Algorithmus erkennt automatisch periodische Strukturen auf Grundlage der Trainingsdaten. Dies hat zum Ergebnis, dass die Periodizitäten im endgültigen Modell möglicherweise Periodizitätswerte enthalten, die Sie beim Erstellen des Modells nicht in Form von Parametern angegeben haben.|  
 |13|Autoregressive Reihenfolge|Gibt an, dass der Wert die Anzahl der autoregressiven Reihen darstellt.<br /><br /> Gilt für Zeitreihenmodelle, die den ARIMA-Algorithmus verwenden.|  
 |14|Reihenfolge für gleitenden Durchschnitt|Wert, der die Anzahl der gleitenden Durchschnitte in einer Reihe angibt.<br /><br /> Gilt für Zeitreihenmodelle, die den ARIMA-Algorithmus verwenden.|  
 |15|Differenzreihenfolge|Gibt an, dass der Wert einen Wert darstellt, aus dem hervorgeht, wie oft für die Reihe eine Unterscheidung getroffen wurde.<br /><br /> Gilt für Zeitreihenmodelle, die den ARIMA-Algorithmus verwenden.|  
@@ -249,7 +249,7 @@ ms.locfileid: "50148005"
   
 -   Die**Knotenwahrscheinlichkeit** ist immer kleiner oder gleich der **marginalen Wahrscheinlichkeit**.  
   
- Wenn z. B. die Gesamtheit aller Kunden in einer Entscheidungsstruktur gleichmäßig nach Geschlecht unterteilt ist (ohne dass irgendwelche Werte fehlen), sollte die Wahrscheinlichkeit der untergeordneten Knoten .5 betragen. Für den Fall aber, dass jeder Knoten für das Geschlecht gleichmäßig nach Einkommensverhältnissen unterteilt ist (hoch, mittel und niedrig), sollte in diesem Fall das MARGINAL_PROBABILITY-Ergebnis für jeden untergeordneten Knoten immer .33 betragen. Der NODE_PROBABILTY-Wert hingegen ist das Produkt aller Wahrscheinlichkeiten, die zu diesem Knoten führen, und ist deswegen immer kleiner als der MARGINAL_PROBABILITY-Wert.  
+ Wenn z. B. die Gesamtheit aller Kunden in einer Entscheidungsstruktur gleichmäßig nach Geschlecht unterteilt ist (ohne dass irgendwelche Werte fehlen), sollte die Wahrscheinlichkeit der untergeordneten Knoten .5 betragen. Angenommen jedoch, dass alle Knoten für das Geschlecht gleichmäßig nach einkommensverhältnissen unterteilt ist: hoch, Mittel und niedrig. sollte in diesem Fall das MARGINAL_PROBABILITY-Ergebnis für jeden untergeordneten Knoten immer .33 betragen. Der NODE_PROBABILTY-Wert hingegen ist das Produkt aller Wahrscheinlichkeiten, die zu diesem Knoten führen, und ist deswegen immer kleiner als der MARGINAL_PROBABILITY-Wert.  
   
 |Ebene von Knoten/Attribut und Wert|Marginale Wahrscheinlichkeit|Knotenwahrscheinlichkeit|  
 |----------------------------------------|--------------------------|----------------------|  
@@ -267,9 +267,9 @@ ms.locfileid: "50148005"
   
  In der folgenden Tabelle finden Sie Links zu weiterführenden Informationen zum jeweiligen Algorithmustyp.  
   
--   **Themen zu Modellinhalten:** Hier wird die Bedeutung der verschiedenen Knotentypen für die verschiedenen Algorithmen erklärt, und Sie erhalten Hilfestellung bei der Frage, welche Knoten für einen bestimmten Modelltyp am besten geeignet sind.  
+-   **Modellieren von Themen zu Modellinhalten:** Erläutert die Bedeutung der verschiedenen Knotentypen für jeden Algorithmustyp, und erhalten Hilfestellung dazu, welche Knoten in einen bestimmten Modelltyp am wichtigsten sind.  
   
--   **Themen zu Abfragen:** Enthalten Beispiele von Abfragen an einen bestimmten Modelltyp und Hilfestellungen zur Auswertung der Ergebnisse.  
+-   **Themen zu Abfragen:** Bieten Sie Beispiele für Abfragen an einen bestimmten Modelltyp und Hilfestellungen zur Auswertung der Ergebnisse.  
   
 |Algorithmus oder Modelltyp|Modellinhalt|Abfragen von Mining-Modellen|  
 |-----------------------------|-------------------|----------------------------|  

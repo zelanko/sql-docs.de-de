@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimensionprocessingdest.f1
@@ -18,12 +17,12 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3cd8b33e330a2edd9d6c93cb9ab00c68783ae5bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8b3e0e7b353ad37aeb3ce87e39bdfc52d2cbcb0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135420"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749462"
 ---
 # <a name="dimension-processing-destination"></a>Ziel für Dimensionsverarbeitung
   Das Ziel für Dimensionsverarbeitung lädt und verarbeitet eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dimension. Weitere Informationen zu Dimensionen finden Sie unter [Dimensionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
@@ -47,17 +46,17 @@ ms.locfileid: "48135420"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Ziel-Editor für Dimensionsverarbeitung** festlegen können:  
   
--   [Ziel-Editor für Dimension &#40;Seite Verbindungs-Manager&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für Dimensionsverarbeitung &#40;Seite Verbindungs-Manager&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
   
--   [Ziel-Editor für Dimension &#40;Seite "Zuordnungen"&#41;](../dimension-processing-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für Dimensionsverarbeitung &#40;Seite Zuordnungen&#41;](../dimension-processing-destination-editor-mappings-page.md)  
   
--   [Ziel-Editor für Dimension &#40;Seite "Erweitert"&#41;](../dimension-processing-destination-editor-advanced-page.md)  
+-   [Ziel-Editor für Dimensionsverarbeitung &#40;Seite Erweitert&#41;](../dimension-processing-destination-editor-advanced-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften anzuzeigen, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
 -   [Common Properties](../common-properties.md)  
   
- Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](set-the-properties-of-a-data-flow-component.md).  
+ Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenfluss](data-flow.md)   

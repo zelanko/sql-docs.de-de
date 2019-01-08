@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services Tutorial ergänzende Lektion: dynamische Sicherheit | Microsoft-Dokumentation'
+title: 'Analysis Services Tutorial ergänzende Lektion: Dynamische Sicherheit | Microsoft-Dokumentation'
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: 15ff0eebd7cbbb0815544b18f0f042ef411a3657
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4abe105c2bb083ba4479d4d23418e0e73adce5f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084593"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398427"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>Ergänzende Lektion: dynamische Sicherheit
 
@@ -24,7 +24,7 @@ In dieser ergänzenden Lektion erstellen Sie eine zusätzliche Rolle, die dynami
   
 Um dynamische Sicherheit zu implementieren, fügen Sie eine Tabelle, für das Modell mit den Benutzernamen der Benutzer, die eine Verbindung mit dem Modell herstellen und Modellobjekte und Daten durchsuchen können. Das Modell, die Sie mithilfe dieses Tutorial ist im Kontext der Adventure Works; Um diese Lektion abschließen zu können, müssen Sie jedoch eine Tabelle mit Benutzern aus Ihrer eigenen Domäne hinzufügen. Sie benötigen nicht die Kennwörter für den Benutzernamen, die hinzugefügt werden. Um eine Tabelle "employeesecurity" mit einer kleinen Stichprobe von Benutzern aus Ihrer eigenen Domäne zu erstellen, verwenden Sie die Funktion zum Einfügen, Mitarbeiterdaten aus einem Excel-Arbeitsblatt. In einem realen Szenario wäre die Tabelle mit den Benutzernamen in der Regel eine Tabelle aus einer tatsächlichen Datenbank als Datenquelle; z. B. eine reale DimEmployee-Tabelle.  
   
-Um dynamische Sicherheit zu implementieren, verwenden Sie zwei DAX-Funktionen: [USERNAME-Funktion (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) und [LOOKUPVALUE-Funktion (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Diese Funktionen, die in einer Zeilenfilterformel angewendet werden, werden in einer neuen Rolle definiert. Mit der LOOKUPVALUE-Funktion, gibt die Formel einen Wert aus der Tabelle "employeesecurity" an. Die Formel übergibt Sie an, dass der Wert, der die USERNAME-Funktion, die den Namen des angemeldeten Benutzers angibt, die dieser Rolle gehört. Der Benutzer kann dann nur die von den Zeilenfiltern der Rolle festgelegten Daten durchsuchen. In diesem Fall geben Sie an, dass Verkaufsmitarbeiter nur internetumsatzdaten für die Vertriebsgebiete suchen können, in denen sie Mitglied sind.  
+Um dynamische Sicherheit zu implementieren, verwenden Sie zwei DAX-Funktionen: [USERNAME-Funktion (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) und [LOOKUPVALUE-Funktion (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Diese Funktionen, die in einer Zeilenfilterformel angewendet werden, werden in einer neuen Rolle definiert. Mit der LOOKUPVALUE-Funktion, gibt die Formel einen Wert aus der Tabelle "employeesecurity" an. Die Formel übergibt Sie an, dass der Wert, der die USERNAME-Funktion, die den Namen des angemeldeten Benutzers angibt, die dieser Rolle gehört. Der Benutzer kann dann nur Daten, die vom Zeilenfilter der Rolle angegebenen durchsuchen. In diesem Fall geben Sie an, dass Verkaufsmitarbeiter nur internetumsatzdaten für die Vertriebsgebiete suchen können, in denen sie Mitglied sind.  
   
 Aufgaben, die nur für dieses Adventure Works-Szenario für die Tabellenmodellierung relevant sind und nicht unbedingt in der realen Welt anwendbar sind, werden als solche identifiziert. Jede Aufgabe umfasst weitere Informationen, die den Zweck der Aufgabe beschreiben.  
   
@@ -42,7 +42,7 @@ Um dynamische Sicherheit für dieses Adventure Works-Szenario zu implementieren,
   
 1.  Im Tabellenmodell-Explorer > **Datenquellen**mit der rechten Maustaste auf die Verbindung, und klicken Sie dann auf **neue Tabelle importieren**.  
 
-    Wenn das Dialogfeld Identitätswechselinformationen angezeigt wird, geben Sie die Identitätswechsel-Anmeldeinformationen ein, die Sie in Lektion 2, "Hinzufügen von Daten", verwendet haben.
+    Wenn der Identitätswechsel-Anmeldeinformationen im Dialogfeld angezeigt wird, geben Sie die Identitätswechselinformationen, die Sie in Lektion 2 verwendet: Hinzufügen von Daten.
   
 2.  Wählen Sie im Navigator die **"dimsalesterritory"** Tabelle, und klicken Sie dann auf **OK**.    
   

@@ -11,21 +11,21 @@ ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3b300b51acf83f79b54b12341299ebe9a8d82c17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33a91c27f78e3bbf2dfec3aeb71f2f2230c9376d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086540"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528221"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lektion 3: Definieren eines Datasets für den Tabellenbericht (Reporting Services)
   Nachdem Sie die Datenquelle festgelegt haben, müssen Sie ein Dataset definieren. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]sind die Daten, die Sie in Berichten verwenden, in einem *Dataset*enthalten. Ein Dataset umfasst einen Zeiger auf eine Datenquelle sowie eine Abfrage, die vom Bericht verwendet werden, sowie berechnete Felder und Variablen.  
   
- Sie können den Abfrage-Designer im Berichts-Designer verwenden, um die Abfrage zu entwerfen. In diesem Tutorial erstellen Sie eine Abfrage, die Bestellinformationen aus Ruft die [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** Datenbank.  
+ Sie können den Abfrage-Designer im Berichts-Designer verwenden, um die Abfrage zu entwerfen. In diesem Lernprogramm erstellen Sie eine Abfrage, die Bestellinformationen aus der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]**2008** -Datenbank abruft.  
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>So definieren Sie eine Transact-SQL-Abfrage für Berichtsdaten  
   
-1.  Klicken Sie im **Berichtsdatenbereich** auf **Neu**und anschließend auf **Dataset...**. Das Dialogfeld **Dataseteigenschaften** wird angezeigt.  
+1.  Klicken Sie im **Berichtsdatenbereich** auf **Neu** und anschließend auf **Dataset...**. Das Dialogfeld **Dataseteigenschaften** wird angezeigt.  
   
 2.  Geben Sie in das Feld **Name** den Namen **AdventureWorksDataset**ein.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48086540"
   
 6.  (Optional) klicken Sie auf die Schaltfläche **Abfrage-Designer** . Die Abfrage wird im textbasierten Abfrage-Designer angezeigt. Sie können zum grafischen Abfrage-Designer wechseln, indem Sie auf **Als Text bearbeiten**klicken. Die Ergebnisse der Abfrage anzeigen, indem Sie auf die Ausführung **(!)**  Schaltfläche auf der Symbolleiste des Abfrage-Designers.  
   
-     Sie sehen, dass die Daten von sechs Feldern aus vier verschiedenen Tabellen in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank. Diese Abfrage nutzt Transact-SQL-Funktionen wie Aliase. Beispielsweise wird die Tabelle SalesOrderHeader als "soh" bezeichnet.  
+     Daraufhin werden die Daten von sechs Feldern aus vier verschiedenen Tabellen in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank angezeigt. Diese Abfrage nutzt Transact-SQL-Funktionen wie Aliase. Beispielsweise wird die Tabelle SalesOrderHeader als "soh" bezeichnet.  
   
      Klicken Sie auf **OK** , um den Abfrage-Designer zu schließen.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "48086540"
      Die Felder des **AdventureWorksDataset** -Datasets werden im Berichtsdatenbereich angezeigt.  
   
 ## <a name="next-task"></a>Nächste Aufgabe  
- Damit haben Sie erfolgreich eine Abfrage angegeben, die Daten für Ihren Bericht abruft. Als Nächstes erstellen Sie das Berichtslayout. Weitere Informationen finden Sie unter [Lektion 4: Hinzufügen einer Tabelle zum Bericht (Reporting Services)](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
+ Damit haben Sie erfolgreich eine Abfrage angegeben, die Daten für Ihren Bericht abruft. Als Nächstes erstellen Sie das Berichtslayout. Finden Sie unter [Lektion 4: Hinzufügen einer Tabelle zum Bericht &#40;Berichtsdienste&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Abfrageentwurfstools im Berichts-Designer SQL-Server-Datatools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [SQL Server-Verbindungstyp &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
- [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Tutorial: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

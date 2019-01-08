@@ -18,12 +18,12 @@ ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77be91eddebedcdad79f18dfd499cc26778560db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df563ae17a04d37d7d3ea667e79cf9de2c7d9a51
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198832"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407881"
 ---
 # <a name="customize-mining-models-and-structure"></a>Anpassen von Miningmodellen und -strukturen
   Nachdem Sie einen Algorithmus ausgewählt haben, der Ihren Geschäftsanforderungen entspricht, können Sie das Miningmodell mit den folgenden Verfahren anpassen, um die Ergebnisse potenziell zu verbessern.  
@@ -57,12 +57,12 @@ ms.locfileid: "48198832"
   
 -   Entfernen von Spalten mit vielen eindeutigen Werten oder Spalten, die Referenzdaten enthalten und für die Analyse nicht sinnvoll sind (z. B. Adressen oder zweite Vornamen).  
   
- Sie müssen die Spalten nicht physisch aus der Miningstruktur entfernen, sondern können die Spalte als **Ignorieren**kennzeichnen. Die Spalte wird aus dem Miningmodell entfernt, kann jedoch nach wie vor für andere Miningmodelle in der Struktur verwendet oder in einer Drillthrough-Abfrage referenziert werden.  
+ Sie müssen nicht physisch entfernen von Spalten aus der Miningstruktur. Sie können die Spalte als kennzeichnen **ignorieren**. Die Spalte wird aus dem Miningmodell entfernt, kann jedoch nach wie vor für andere Miningmodelle in der Struktur verwendet oder in einer Drillthrough-Abfrage referenziert werden.  
   
 ### <a name="creating-aliases-for-model-columns"></a>Erstellen von Aliasen für Modellspalten  
  Wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ein Miningmodell erstellt, werden die gleichen Spaltennamen verwendet, die sich in der Miningstruktur befinden. Sie können jeder Spalte im Miningmodell ein Alias hinzufügen. Auf diese Weise sind die Spalteninhalte oder deren Verwendung möglicherweise leichter zu erkennen, und der Name ist bei der Erstellung von Abfragen kürzer und damit einfacher zu handhaben. Aliase sind außerdem hilfreich, als Sie eine Kopie einer Spalte erstellen und dieser einen aussagekräftigen Namen zuweisen möchten.  
   
- Sie erstellen einen Alias, indem Sie bearbeiten die `Name` -Eigenschaft der Miningmodellspalte. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] weiterhin den ursprünglichen Namen als die ID der Spalte, und der neue Wert, den Sie für eingeben `Name` ist der Spaltenalias, und im Raster neben der Spaltenverwendung in Klammern angezeigt wird.  
+ Sie erstellen einen Alias, indem Sie die `Name`-Eigenschaft der Miningmodellspalte bearbeiten. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] weiterhin den ursprünglichen Namen als die ID der Spalte, und der neue Wert, den Sie für eingeben `Name` ist der Spaltenalias, und im Raster neben der Spaltenverwendung in Klammern angezeigt wird.  
   
  ![Aliasnamen für Mining model-Spalten](../media/modelcolumnalias-income.gif "Aliasnamen für Mining model-Spalten")  
   
@@ -95,14 +95,14 @@ ms.locfileid: "48198832"
   
  Das Thema für jeden Algorithmustyp umfasst auch die Vorhersagefunktionen, die mit Modellen, die auf diesem Algorithmus basieren, verwendet werden können.  
   
-|Eigenschaftenname|Gilt für|  
+|Eigenschaftenname|Betrifft|  
 |-------------------|----------------|  
 |AUTO_DETECT_PERIODICITY|[Technische Referenz für den Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm-technical-reference.md)|  
 |CLUSTER_COUNT|[Technische Referenz für den Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Sequence Clustering-Algorithmus](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |CLUSTER_SEED|[Technische Referenz für den Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Technische Referenz für den Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm-technical-reference.md)|  
 |COMPLEXITY_PENALTY|[Technische Referenz für den Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Technische Referenz für den Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Modellierungsflags &#40;Datamining&#41;](modeling-flags-data-mining.md)|  
+|FORCE_REGRESSOR|[Technische Referenz für den Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
 |FORECAST_METHOD|[Technische Referenz für den Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Technische Referenz für den Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Technische Referenz für den Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm-technical-reference.md)|  
@@ -134,7 +134,7 @@ ms.locfileid: "48198832"
 |STOPPING_TOLERANCE|[Technische Referenz für den Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm-technical-reference.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Physische Architektur &#40;Analysis Services – Datamining&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Physische Architektur &#40;Analysis Services – Data Mining&#41;](physical-architecture-analysis-services-data-mining.md)  
   
   

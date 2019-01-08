@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/20/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.linkedserver.properties.general.f1
@@ -18,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d4026596d06941286b137a60201ba0ee6489c34
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120207"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766612"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Erstellen von Verbindungsservern (SQL Server-Datenbank-Engine)
   In diesem Thema wird die Erstellung eines Verbindungsservers und das Zugreifen auf Daten von einem anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erläutert. Durch Erstellen eines Verbindungsservers können Sie mit Daten aus mehreren Quellen arbeiten. Der Verbindungsserver muss keine weitere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sein, allerdings ist dies ein gängiges Szenario.  
@@ -45,7 +44,7 @@ ms.locfileid: "49120207"
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>So erstellen Sie einen Verbindungsserver für eine andere Instanz von SQL Server anhand von SQL Server Management Studio  
   
@@ -82,7 +81,7 @@ ms.locfileid: "49120207"
     > [!NOTE]  
     >  Wenn die Instanz von **SQL Server** die Standardinstanz ist, geben Sie den Namen des Computers ein, auf dem die Instanz von **SQL Server**gehostet wird. Wenn der **SQL Server** eine benannte Instanz ist, geben Sie den Namen des Computers und den der Instanz ein, z.B. **Accounting\SQLExpress**.  
   
-3.  In der **Servertyp** wählen Sie im Bereich **SQL Server** um anzugeben, dass der Verbindungsserver eine weitere Instanz von **SQL Server**.  
+3.  Wählen Sie im Bereich **Servertyp** die Option **SQL Server** aus, um anzugeben, dass der Verbindungsserver eine weitere Instanz von **SQL Server** ist.  
   
 4.  Geben Sie auf der Seite **Sicherheit** den Sicherheitskontext an, der beim Herstellen einer Verbindung mit dem Verbindungsserver durch den originalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird. In einer Domänenumgebung, in der Benutzer Verbindungen anhand ihrer Domänenanmeldenamen herstellen, ist die Auswahl der Option **Im aktuellen Sicherheitskontext der Anmeldung verwendet** oft die beste Wahl. Stellen die Benutzer die Verbindung mit dem originalen **SQL Server** anhand eines **SQL Server** -Anmeldenamens her, empfiehlt sich häufig die Auswahl von **In folgendem Sicherheitskontext verwendet**, um anschließend die nötigen Anmeldeinformationen zur Authentifizierung am Verbindungsserver bereitzustellen.  
   
@@ -139,7 +138,7 @@ ms.locfileid: "49120207"
   
      Wenn True angegeben ist, wird für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquellen die Sortierung der Remotespalten und für Datenquellen, die keine[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquellen sind, die im Sortierungsnamen angegebene Sortierung verwendet.  
   
-     Wenn False angegeben ist, verwenden verteilte Abfragen immer die Standardsortierung des lokalen Servers, während der Sortierungsname und die Sortierung von Remotespalten ignoriert werden. Der Standardwert ist false.  
+     Wenn False angegeben ist, verwenden verteilte Abfragen immer die Standardsortierung des lokalen Servers, während der Sortierungsname und die Sortierung von Remotespalten ignoriert werden. Der Standardwert ist FALSE.  
   
      **Sortierungsname**  
      Gibt den Namen der von der Remotedatenquelle verwendeten Sortierung an, wenn für die Option zum Verwenden der Remotesortierung der Wert True festgelegt ist und es sich bei der Datenquelle nicht um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle handelt. Der Name muss eine von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützte Sortierung sein.  
@@ -179,7 +178,7 @@ ms.locfileid: "49120207"
      Es werden nur OLE DB-Schnittstellen der Ebene 0 mit diesem Anbieter aufgerufen.  
   
      **InProcess zulassen**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht, dass der Anbieter als In-Process-Server instanziiert wird. Wenn diese Option nicht festgelegt ist, wird der Anbieter standardmäßig außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses instanziiert. Durch Instanziieren des Anbieters außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozess vor Fehlern beim Anbieter geschützt. Wenn der Anbieter außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses instanziiert wird, sind Updates oder Einfügungen nicht zulässig, die auf Spalten mit langen Daten verweisen (`text`, `ntext`, oder `image`).  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht, dass der Anbieter als In-Process-Server instanziiert wird. Wenn diese Option nicht festgelegt ist, wird der Anbieter standardmäßig außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses instanziiert. Durch Instanziieren des Anbieters außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess vor Fehlern beim Anbieter geschützt. Wenn der Anbieter außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses instanziiert wird, sind Updates oder Einfügungen nicht zulässig, die auf Spalten mit langen Daten verweisen (`text`, `ntext`, oder `image`).  
   
      **Nicht durchgeführte Updates**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt Updates zu, selbst wenn **ITransactionLocal** nicht zur Verfügung steht. Wenn diese Option aktiviert ist, sind Updates für den Anbieter nicht wiederherstellbar, da der Anbieter keine Transaktionen unterstützt.  
@@ -221,7 +220,7 @@ ms.locfileid: "49120207"
   
     ```  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach der Erstellung eines Verbindungsservers zu unternehmende Schritte  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach der Erstellung eines Verbindungsservers zu unternehmende Schritte  
   
 #### <a name="to-test-the-linked-server"></a>So testen Sie den Verbindungsserver  
   

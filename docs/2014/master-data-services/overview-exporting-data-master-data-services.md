@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - exporting data [Master Data Services]
@@ -15,15 +14,15 @@ ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3e7a228062035772b9c394a246de0452f36239b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76a9133a013087d96f9acc102232b2340212d19f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158640"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758932"
 ---
 # <a name="exporting-data-master-data-services"></a>Exportieren von Daten (Master Data Services)
-  Sie können exportieren [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Daten in abonnementsysteme, indem Sie Abonnementsichten erstellen. Die veröffentlichten Daten in der Datenbank [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] können dann von jedem Abonnementsystem angezeigt werden. Weitere Informationen zu Sichten finden Sie unter [Sichten](../relational-databases/views/views.md).  
+  Sie können [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Daten in Abonnementsysteme exportieren, indem Sie Abonnementsichten erstellen. Die veröffentlichten Daten in der Datenbank [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] können dann von jedem Abonnementsystem angezeigt werden. Weitere Informationen zu Sichten finden Sie unter [Sichten](../relational-databases/views/views.md).  
   
 ## <a name="subscription-view-formats"></a>Abonnementsichtformate  
  Wenn Sie eine Sicht in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]erstellen, steht Ihnen eine Reihe von Standardsichtformaten in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] zur Auswahl. Mithilfe dieser Formate können Sie Sichten mit folgendem Inhalt erstellen:  

@@ -16,15 +16,15 @@ ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a54054387a57d59470bae6d982b5ce700362f483
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635388"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528865"
 ---
 # <a name="data-buffer-type"></a>Datenpuffertyp
-Die C-Datentyp eines Puffers, die von der Anwendung angegeben ist. Mit einer einzelnen Variablen geschieht dies, wenn die Anwendung die Variable weist. Mit generischen Arbeitsspeicher –, also Arbeitsspeicher verweist einen Zeiger vom Typ "void" — Dies geschieht, wenn die Anwendung den Arbeitsspeicher für eine bestimmte Art umgewandelt. Der Treiber ermittelt, dieser Typ gibt es zwei Möglichkeiten:  
+Die C-Datentyp eines Puffers, die von der Anwendung angegeben ist. Mit einer einzelnen Variablen geschieht dies, wenn die Anwendung die Variable weist. Mit generischen Arbeitsspeicher - Speicher verweist einen Zeiger vom Typ "void" - tritt auf, d. h. dies, wenn die Anwendung den Arbeitsspeicher für eine bestimmte Art umgewandelt. Der Treiber ermittelt, dieser Typ gibt es zwei Möglichkeiten:  
   
 -   **-Datentypargument Puffer.** Zur Übertragung von Parameterwerten und Resultsetdaten, verwendet werden, z. B. der Puffer mit gebundenen Puffer *TargetValuePtr* in **SQLBindCol**, besitzen in der Regel ein Argument zugeordneten Typ wie z. B. die  *TargetType* -Argument in **SQLBindCol**. In diesem Argument und übergibt die Anwendung der C-Typ-ID, die entspricht, in den Typ des Puffers. Z. B. in den folgenden Aufruf von **SQLBindCol**, der Wert SQL_C_TYPE_DATE weist den Treiber, die die *Datum* Puffer ist ein SQL_DATE_STRUCT:  
   

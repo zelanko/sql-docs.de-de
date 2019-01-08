@@ -13,12 +13,12 @@ ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a65472e57d5ecc15f0e7302aa2f0b7972e5e7c78
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 7fbc75772a48b4990ebbc31877a3f7a95b442087
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559597"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506355"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Verwenden von RDS mit ODBC-Verbindungspooling
 Wenn Sie eine ODBC-Datenquelle verwenden, können Sie der Verbindungspooling-Option in Internet Information Services (IIS), um Behandlung Clientauslastung hohe Leistung zu erzielen. Verbindungspooling ist die Ressourcen-Manager für Verbindungen, verwalten den Zustand "geöffnet" häufig verwendete Verbindung.  
@@ -49,7 +49,7 @@ Wenn Sie eine ODBC-Datenquelle verwenden, können Sie der Verbindungspooling-Opt
   
 2.  Klicken Sie zweimal auf "Weiter".  
   
-3.  In der Microsoft SQL Server – Dialogfeld "Optionen", wählen Sie die Netzwerkunterstützung ändern, und klicken Sie dann auf Weiter.  
+3.  In der Microsoft SQL Server-Dialogfeld "Optionen", wählen Sie die Netzwerkunterstützung ändern, und klicken Sie dann auf Weiter.  
   
 4.  Stellen Sie sicher, dass das TCP/IP-Sockets-Kontrollkästchen ausgewählt ist, und klicken Sie auf OK.  
   

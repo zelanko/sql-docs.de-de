@@ -19,15 +19,15 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fe8a78047be763aecb898a48a882b8f08d3bfb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734030"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407147"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt Informationen zu allen nach Klassen sortierten Latchwartevorgängen zurück.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47734030"
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|Name der Latchklasse.|  
 |waiting_requests_count|**bigint**|Anzahl der Wartevorgänge auf Latches in dieser Klasse. Dieser Leistungsindikator wird beim Starten eines Latchwartevorgangs erhöht.|  
-|wait_time_ms|**bigint**|Gesamtwartezeit auf Latches in dieser Klasse (in Millisekunden).<br /><br /> **Hinweis:** in dieser Spalte wird alle fünf Minuten während eines latchwartevorgangs und am Ende eines latchwartevorgangs aktualisiert.|  
+|wait_time_ms|**bigint**|Gesamtwartezeit auf Latches in dieser Klasse (in Millisekunden).<br /><br /> **Hinweis**: Diese Spalte wird alle 5 Minuten während eines Latchwartevorgangs sowie am Ende eines Latchwartevorgangs aktualisiert.|  
 |max_wait_time_ms|**bigint**|Maximale Zeitdauer, die ein Speicherobjekt auf diesen Latch gewartet hat. Wenn dieser Wert ungewöhnlich hoch ist, kann dies ein Hinweis auf einen internen Deadlock sein.|  
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
@@ -166,14 +166,14 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|Nur interne Verwendung.|  
 |SERVICE_BROKER_HOST_NAME|Nur interne Verwendung.|  
 |SERVICE_BROKER_READ_CACHE|Nur interne Verwendung.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Verwendet, um eine Ebene instanzzuordnung Waiter Warteschlangen zu synchronisieren. Pro Datenbank-ID, die Version der Datenbank und die Warteschlangen-ID-Tupel ist eine Warteschlange vorhanden. Konflikte bei Latches dieser Klasse kann auftreten, wenn viele Verbindungen sind: In einer WAITFOR(RECEIVE) warten Zustand Aufrufen von WAITFOR(RECEIVE); mehr als das Timeout WAITFOR; Empfangen einer Nachricht an; ein Commit oder Rollback der Transaktion, die die WAITFOR(RECEIVE) enthält; Sie können die Anzahl von Konflikten reduzieren, durch Verringern der Anzahl der Threads im Wartezustand WAITFOR(RECEIVE). |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Verwendet, um eine Ebene instanzzuordnung Waiter Warteschlangen zu synchronisieren. Pro Datenbank-ID, die Version der Datenbank und die Warteschlangen-ID-Tupel ist eine Warteschlange vorhanden. Konflikte bei Latches dieser Klasse kann auftreten, wenn viele Verbindungen sind: In einem WAITFOR(RECEIVE) Zustand zu warten. Aufrufen von WAITFOR(RECEIVE); mehr als das Timeout WAITFOR; Empfangen einer Nachricht an; ein Commit oder Rollback der Transaktion, die die WAITFOR(RECEIVE) enthält; Sie können die Anzahl von Konflikten reduzieren, durch Verringern der Anzahl der Threads im Wartezustand WAITFOR(RECEIVE). |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Nur interne Verwendung.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Nur interne Verwendung.|  
 |SERVICE_BROKER_TRANSPORT|Nur interne Verwendung.|  
 |SERVICE_BROKER_MIRROR_ROUTE|Nur interne Verwendung.|  
 |TRACE_ID|Nur interne Verwendung.|  
 |TRACE_AUDIT_ID|Nur interne Verwendung.|  
-|TRACE|Nur interne Verwendung.|  
+|Ablaufverfolgung|Nur interne Verwendung.|  
 |TRACE_CONTROLLER|Nur interne Verwendung.|  
 |TRACE_EVENT_QUEUE|Nur interne Verwendung.|  
 |TRANSACTION_DISTRIBUTED_MARK|Nur interne Verwendung.|  

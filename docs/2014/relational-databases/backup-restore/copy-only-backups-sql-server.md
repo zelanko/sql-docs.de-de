@@ -14,12 +14,12 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf2a1c84bab547e7b3dbc4bd1a930b4605f4052f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cba784ed6e81152e91b8320ac5e441187c07df9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149640"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504833"
 ---
 # <a name="copy-only-backups-sql-server"></a>Kopiesicherungen [SQL Server]
   Eine *Kopiesicherung* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherung, die unabhängig von der Sequenz herkömmlicher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungen erstellt wird. Normalerweise wird beim Erstellen einer Sicherung die Datenbank geändert, und außerdem beeinflusst dies die Art und Weise, wie spätere Sicherungen wiederhergestellt werden. Manchmal kann es sich jedoch als nützlich erweisen, eine Datensicherung für einen bestimmten Zweck vorzunehmen, ohne die allgemeinen Sicherungs- und Wiederherstellungsprozeduren für die Datenbank zu beeinflussen. Kopiesicherungen eignen sich für diesen Zweck.  
@@ -34,7 +34,7 @@ ms.locfileid: "48149640"
   
 -   Protokollkopiesicherungen (nur vollständiges und massenprotokolliertes Wiederherstellungsmodell)  
   
-     Eine Protokollkopiesicherung behält den vorhandenen Protokollarchivpunkt bei und wirkt sich daher nicht auf die Sequenz von regulären Protokollsicherungen aus. Protokollkopiesicherungen sind normalerweise nicht nötig. Erstellen Sie stattdessen eine neue routinemäßige Protokollsicherung (mithilfe von WITH NORECOVERY), und verwenden Sie dann diese Sicherung zusammen mit allen vorherigen Protokollsicherungen, die für die Wiederherstellungssequenz erforderlich sind. Eine Protokollkopiesicherung ist manchmal jedoch auch für das Ausführen einer Onlinewiederherstellung nützlich. Siehe auch [Beispiel: Onlinewiederherstellung einer Datei mit Lese-/Schreibzugriff &#40;vollständiges Wiederherstellungsmodell&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md).  
+     Eine Protokollkopiesicherung behält den vorhandenen Protokollarchivpunkt bei und wirkt sich daher nicht auf die Sequenz von regulären Protokollsicherungen aus. Protokollkopiesicherungen sind normalerweise nicht nötig. Erstellen Sie stattdessen eine neue routinemäßige Protokollsicherung (mithilfe von WITH NORECOVERY), und verwenden Sie dann diese Sicherung zusammen mit allen vorherigen Protokollsicherungen, die für die Wiederherstellungssequenz erforderlich sind. Eine Protokollkopiesicherung ist manchmal jedoch auch für das Ausführen einer Onlinewiederherstellung nützlich. Ein Beispiel hierfür finden Sie unter [Beispiel: Onlinewiederherstellung einer Datei Lese-/ Schreibzugriff &#40;vollständiges Wiederherstellungsmodell&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md).  
   
      Nach einer Kopiesicherung wird das Transaktionsprotokoll nie abgeschnitten.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48149640"
 ## <a name="to-create-a-copy-only-backup"></a>So erstellen Sie eine Kopiesicherung  
  Kopiesicherungen können mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell erstellt werden.  
   
-###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 1.  Wählen Sie im Dialogfeld **Datenbank sichern** auf der Seite **Allgemein** die Option **Kopiesicherung** aus.  
   
@@ -52,18 +52,18 @@ ms.locfileid: "48149640"
   
 -   Für eine vollständige Kopiesicherung:  
   
-     BACKUP DATABASE *Database_name* für \<Backup_device*>* ... WITH COPY_ONLY …  
+     BACKUP DATABASE *Database_name* für \<Backup_device*>* ... MIT COPY_ONLY...  
   
     > [!NOTE]  
     >  COPY_ONLY ist wirkungslos, wenn gleichzeitig die Option DIFFERENTIAL angegeben wird.  
   
 -   Für eine Protokollkopiesicherung:  
   
-     BACKUP LOG *Datenbankname* TO *\<* Sicherungsgerät*>* … WITH COPY_ONLY …  
+     BACKUP LOG *Database_name* für *\<* Backup_device*>* ... MIT COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> PowerShell  
   
-1.  Verwenden der `Backup-SqlDatabase` Cmdlet mit dem `-CopyOnly` Parameter.  
+1.  Verwenden Sie das `Backup-SqlDatabase`-Cmdlet mit dem `-CopyOnly`-Parameter.  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So erstellen Sie eine vollständige oder Protokollsicherung**  

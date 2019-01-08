@@ -22,12 +22,12 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4a1e17c424e4447e64d48bebbe25960aec165e5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b052ccbd1b91ea66f150dc0995eeeb33994a5e53
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225030"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439522"
 ---
 # <a name="report-design-view-report-builder"></a>Berichtsentwurfsansicht (Berichts-Generator)
   Das Berichts-Generator-Fenster ist so aufgebaut, dass Sie Berichtsressourcen einfach anordnen und schnell die gewünschten Berichte erstellen können. Die Entwurfsoberfläche befindet sich in der Mitte des Fensters. Darüber ist das Menüband angeordnet. Die Bereiche "Berichtsdaten", "Gruppierung" und "Eigenschaften" und der BerichtsteilKatalog befinden sich links, unter und rechts neben der Entwurfsoberfläche. Auf der Entwurfsoberfläche können Sie die Berichtselemente hinzufügen und anordnen. Auf dem Menüband sind herkömmliche Menüelemente in Kategorien angeordnet, die einfach zu finden und zu verwenden sind. In den Bereichen können Sie die Berichtsressourcen hinzufügen, auswählen und anordnen und Berichtselementeigenschaften ändern.  
@@ -37,7 +37,7 @@ ms.locfileid: "48225030"
 ##  <a name="Ribbon"></a> Menüband  
  Mit dem Menüband können Sie Befehle, die Sie zur Ausführung einer Aufgabe benötigen, schnell finden. Befehle sind in logischen Gruppen organisiert, die unter Registerkarten zusammengefasst werden. Jede Registerkarte bezieht sich auf einen Aktivitätstyp, wie das Einfügen von Berichtselementen oder das Formatieren von Text.  
   
- In der Berichtentwurfsansicht ist das Menüband in folgende Registerkarten unterteilt: "Home", "Einfügen" und "Ansicht". Wenn Sie eine Task auf dem Menüband nicht finden können, verfügen einige Menübandgruppen über ein zugehöriges Dialogfeld, das Sie öffnen können, indem Sie auf den Pfeil in der unteren rechten Ecke der Gruppe klicken. Sie können das Menüband nicht minimieren oder löschen oder durch Symbolleisten und Menüs ersetzen.  
+ In der Entwurfsansicht des Berichts ist das Menüband in folgenden Registerkarten unterteilt: Home, einfügen und Sicht. Wenn Sie eine Task auf dem Menüband nicht finden können, verfügen einige Menübandgruppen über ein zugehöriges Dialogfeld, das Sie öffnen können, indem Sie auf den Pfeil in der unteren rechten Ecke der Gruppe klicken. Sie können das Menüband nicht minimieren oder löschen oder durch Symbolleisten und Menüs ersetzen.  
   
  Im Ausführmodus ist das Menüband nur eine Registerkarte: **ausführen**.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48225030"
 ### <a name="insert-tab"></a>Registerkarte Einfügen  
  Die Registerkarte Einfügen ist eine Auflistung von Befehlen, die häufig zum Hinzufügen von Berichtselementen zum Bericht verwendet werden. Auf der Registerkarte Einfügen können Sie Assistenten verwenden, um eine Tabelle, eine Matrix, ein Diagramm oder eine Karte hinzuzufügen. Sie können diese Elemente auch ohne einen Assistenten hinzufügen. Außerdem können Sie weitere Berichtselemente wie Sparklines, Indikatoren, Textfelder, Bilder, Rechtecke, Unterberichte sowie Berichtskopf- und -ußzeilen hinzufügen.  
   
- Auf **Berichtsteile** bei Einfüge-Registerkarte wird der Berichtsteilkatalog geöffnet. Sie können Berichtsteile suchen, die auf einem Berichtsserver gespeichert sind. Weitere Informationen finden Sie unter [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
+ Auf **Berichtsteile** bei Einfüge-Registerkarte wird der Berichtsteilkatalog geöffnet. Sie können Berichtsteile suchen, die auf einem Berichtsserver gespeichert sind. Weitere Informationen finden Sie unter [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
  Nachdem Sie ein Element eingefügt haben, wechselt der Berichts-Generator automatisch zurück zur Registerkarte Home.  
   
@@ -88,24 +88,24 @@ ms.locfileid: "48225030"
   
   
 ##  <a name="ReptDataPane"></a> The Report Data Pane  
- Im Berichtsdatenbereich des Berichts-Generators können Sie die für einen Bericht benötigten Berichtsdaten und -ressourcen definieren, bevor Sie mit dem Entwurf des Berichtslayouts beginnen. Sie können dem Berichtsdatenbereich z. B. Datenquellen, Datasets, berechnete Felder, Berichtsparameter und Bilder hinzufügen.  
+ Im Berichtsdatenbereich des Berichts-Generators können Sie die für einen Bericht benötigten Berichtsdaten und -ressourcen definieren, bevor Sie mit dem Entwurf des Berichtslayouts beginnen. Sie können dem Berichtsdatenbereich z. B. Datenquellen, Datasets, berechnete Felder, Berichtsparameter und Bilder hinzufügen.  
   
  Nachdem Sie dem Berichtsdatenbereich Elemente hinzugefügt haben, können Sie Felder in Berichtselemente auf der Entwurfsoberfläche ziehen und so bestimmen, wo die Daten auf der Berichtsseite angezeigt werden.  
   
  Sie können auch integrierte Felder vom Berichtsdatenbereich in die Berichtsentwurfsoberfläche ziehen. Beim Rendern enthalten diese Felder Informationen zum Bericht, z. B. Berichtsname, Gesamtanzahl von Seiten im Bericht und aktuelle Seitennummer.  
   
- Einige Elemente werden dem Berichtsdatenbereich automatisch hinzugefügt, wenn Sie der Berichtsentwurfsoberfläche etwas hinzufügen. Wenn Sie z. B. ein Berichtsteil aus dem Berichtsteilkatalog hinzufügen und der Berichtsteil ein Datenbereich ist, wird das Dataset dem Berichtsdatenbereich automatisch hinzugefügt. Weitere Informationen finden Sie unter [Berichtsteile und Datasets in Berichts-Generator](../report-data/report-parts-and-datasets-in-report-builder.md). Wenn Sie ein Bild in den Bericht einbetten, wird es dem Ordner "Bilder" im Berichtsdatenbereich hinzugefügt.  
+ Einige Elemente werden dem Berichtsdatenbereich automatisch hinzugefügt, wenn Sie der Berichtsentwurfsoberfläche etwas hinzufügen. Wenn Sie z. B. ein Berichtsteil aus dem Berichtsteilkatalog hinzufügen und der Berichtsteil ein Datenbereich ist, wird das Dataset dem Berichtsdatenbereich automatisch hinzugefügt. Weitere Informationen finden Sie unter [Berichtsteile und Datasets](../report-data/report-parts-and-datasets-in-report-builder.md). Wenn Sie ein Bild in den Bericht einbetten, wird es dem Ordner "Bilder" im Berichtsdatenbereich hinzugefügt.  
   
 > [!NOTE]  
 >  Mit der Schaltfläche **Neu** können Sie dem Berichtsdatenbereich ein neues Element hinzufügen. Sie können dem Bericht mehrere Datasets aus derselben Datenquelle oder anderen Datenquellen hinzufügen. Außerdem können Sie dem Berichtsserver freigegebene Datasets hinzufügen. Klicken Sie mit der rechten Maustaste auf eine Datenquelle, und klicken Sie anschließend auf **Dataset hinzufügen**, um ein neues Dataset aus derselben Datenquelle hinzuzufügen.  
   
  Weitere Informationen zu den Elementen im Berichtsdatenbereich finden Sie in den folgenden Themen:  
   
--   [Integrierte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+-   [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
 -   [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Images &#40;Berichts-Generator und SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
+-   [Bilder &#40;Berichts-Generator und SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
   
 -   [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
@@ -120,7 +120,7 @@ ms.locfileid: "48225030"
 > [!NOTE]  
 >  Sie müssen eine Verbindung mit einem Server herstellen, um den Berichtsteilkatalog anzuzeigen.  
   
- Sie können die Suchergebnisse als Miniaturansichten oder in Listenform anzeigen und nach Name, Erstellungs- und Änderungsdatum und dem Ersteller sortieren. Weitere Informationen finden Sie unter [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
+ Sie können die Suchergebnisse als Miniaturansichten oder in Listenform anzeigen und nach Name, Erstellungs- und Änderungsdatum und dem Ersteller sortieren. Weitere Informationen finden Sie unter [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
   
 ##  <a name="PropertiesPane"></a> Eigenschaften (Bereich in Berichts-Generator)  
@@ -144,13 +144,13 @@ ms.locfileid: "48225030"
  Je nach Eigenschaft können Sie einen Eigenschaftswert aus einer Dropdownliste festlegen, den Wert eingeben oder auf `<Expression>` klicken, um einen Ausdruck zu erstellen.  
   
 ### <a name="changing-the-properties-pane-view"></a>Ändern der Eigenschaftenbereichsansicht  
- Standardmäßig sind die Eigenschaften, die im Eigenschaftenbereich angezeigt werden, in größere Kategorien unterteilt, wie Aktion, Rahmen, Ausfüllen, Schriftart und Allgemein. Mit jeder Kategorie ist eine Gruppe von Eigenschaften verknüpft. Beispiel: Die folgenden Eigenschaften werden in der Kategorie Schriftart aufgeführt: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight und TextDecoration. Sie können alle Eigenschaften, die im Bereich aufgeführt werden, auch alphabetisieren. In diesem Fall werden die Kategorien entfernt. Alle Eigenschaften werden ungeachtet der Kategorie in alphabetischer Reihenfolge aufgeführt.  
+ Standardmäßig sind die Eigenschaften, die im Eigenschaftenbereich angezeigt werden, in größere Kategorien unterteilt, wie Aktion, Rahmen, Ausfüllen, Schriftart und Allgemein. Mit jeder Kategorie ist eine Gruppe von Eigenschaften verknüpft. Beispielsweise sind die folgenden Eigenschaften in der Kategorie Schriftart aufgeführt: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight und TextDecoration. Sie können alle Eigenschaften, die im Bereich aufgeführt werden, auch alphabetisieren. In diesem Fall werden die Kategorien entfernt. Alle Eigenschaften werden ungeachtet der Kategorie in alphabetischer Reihenfolge aufgeführt.  
   
- Der Eigenschaftenbereich enthält drei Schaltflächen am oberen Rand: Kategorie, Alphabetisieren und Eigenschaftenseiten. Klicken Sie auf die Schaltfläche Kategorie und Alphabetisieren, um zwischen den Ansichten des Eigenschaftenbereichs zu wechseln. Klicken Sie auf die Schaltfläche **Eigenschaftenseiten** , um das Eigenschaftendialogfeld für ein ausgewähltes Berichtselement zu öffnen.  
+ Der Eigenschaftenbereich enthält drei Schaltflächen am oberen Rand angezeigt: Kategorie, auch Alphabetisieren, und Eigenschaftenseiten. Klicken Sie auf die Schaltfläche Kategorie und Alphabetisieren, um zwischen den Ansichten des Eigenschaftenbereichs zu wechseln. Klicken Sie auf die Schaltfläche **Eigenschaftenseiten** , um das Eigenschaftendialogfeld für ein ausgewähltes Berichtselement zu öffnen.  
   
   
 ##  <a name="GroupPane"></a> Gruppierung (Bereich in Berichts-Generator)  
- Gruppen werden verwendet, um die Berichtsdaten in einer visuellen Hierarchie zu organisieren und Ergebnisse zu berechnen. Sie können die Zeilen- und Spaltengruppen innerhalb eines Datenbereichs auf der Entwurfsoberflache und im Gruppierungsbereich anzeigen. Der Gruppierungsbereich enthält zwei Bereiche: Zeilengruppen und Spaltengruppen. Wenn Sie einen Datenbereich wählen, werden im Gruppierungsbereich alle Gruppen innerhalb dieses Datenbereichs in Form einer hierarchischen Liste angezeigt: Untergeordnete Gruppen werden eingerückt unter den übergeordneten Gruppen angezeigt.  
+ Gruppen werden verwendet, um die Berichtsdaten in einer visuellen Hierarchie zu organisieren und Ergebnisse zu berechnen. Sie können die Zeilen- und Spaltengruppen innerhalb eines Datenbereichs auf der Entwurfsoberflache und im Gruppierungsbereich anzeigen. Der Gruppierungsbereich enthält zwei Bereiche: Zeilengruppen und Spaltengruppen. Wenn Sie einen Datenbereich auswählen, werden im Gruppierungsbereich alle Gruppen innerhalb dieses Datenbereichs Form einer hierarchischen Liste angezeigt: Untergeordnete Gruppen werden eingerückt unter ihre übergeordneten Gruppen angezeigt.  
   
  ![Gruppierungsbereich für geschachtelte Zeilen- und Spaltengruppen](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Grouping pane for nested row and column groups")  
   

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59f65e8743dab760b54cec9b088f5feca8d49e0b
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 3fee962111dd6b1316e6740f76f02bf3862745e4
+ms.sourcegitcommit: 9e722cc8d10ecbdb93efc2fc1886fe7b20dbc13c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221536"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52282022"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "51221536"
 |**null_on_null_input**|**bit**|Das Modul wurde so deklariert, dass auf eine NULL-Eingabe eine NULL-Ausgabe folgt.|  
 |**execute_as_principal_id**|**Int**|Die ID des Datenbankprinzipals EXECUTE AS.<br /><br /> NULL als Standardwert oder bei Verwendung von EXECUTE AS CALLER.<br /><br /> ID des angegebenen Prinzipals bei EXECUTE AS SELF oder EXECUTE AS \<principal >.<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = nicht systemintern kompiliert<br /><br /> 1 = systemintern kompiliert<br /><br /> Der Standardwert ist 0.|  
-|**is_inlineable**|**bit**|**Gilt für**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] oder höher.<br/><br />Gibt an, ob das Modul inlineable oder nicht. Inlinefähigkeit basiert darauf, dass die angegebenen Bedingungen [hier](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = nicht inlineable<br /><br /> 1 = inlineable ist. <br /><br /> Für skalare benutzerdefinierte Funktionen wird der Wert 1 sein, wenn die UDF inlineable 0, andernfalls ist. Er enthält immer den Wert 1 für Inline-Tabellenwertfunktionen und 0 für alle anderen Modultypen.<br />|  
-|**inline_type**|**bit**|**Gilt für**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] oder höher.<br /><br />Gibt an, ob inlining ist derzeit für das Modul eingeschaltet. <br /><br />0 = inlining ist deaktiviert.<br /><br /> 1 = inlining ist aktiviert.<br /><br /> Für skalare benutzerdefinierte Funktionen, wird der Wert 1 sein, wenn inlining ist aktiviert (explizit oder implizit). Der Wert ist immer 1 für Inline-Tabellenwertfunktionen und 0 für andere Modultypen sein.<br />|  
+|**is_inlineable**|**bit**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] und höher.<br/><br />Gibt an, ob das Modul inlineable oder nicht. Inlinefähigkeit basiert darauf, dass die angegebenen Bedingungen [hier](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = nicht inlineable<br /><br /> 1 = inlineable ist. <br /><br /> Für skalare benutzerdefinierte Funktionen wird der Wert 1 sein, wenn die UDF inlineable 0, andernfalls ist. Er enthält immer den Wert 1 für Inline-Tabellenwertfunktionen und 0 für alle anderen Modultypen.<br />|  
+|**inline_type**|**bit**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] und höher.<br /><br />Gibt an, ob inlining ist derzeit für das Modul eingeschaltet. <br /><br />0 = inlining ist deaktiviert.<br /><br /> 1 = inlining ist aktiviert.<br /><br /> Für skalare benutzerdefinierte Funktionen, wird der Wert 1 sein, wenn inlining ist aktiviert (explizit oder implizit). Der Wert ist immer 1 für Inline-Tabellenwertfunktionen und 0 für andere Modultypen sein.<br />|  
 
   
 ## <a name="remarks"></a>Hinweise  

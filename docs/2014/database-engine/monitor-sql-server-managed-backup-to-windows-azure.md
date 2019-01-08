@@ -10,12 +10,12 @@ ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3406468961dcd5817fb88b5a30098177ec6ac67
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7b7b6cc8127b339a45a5f651af6db4d0b595b80
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073240"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529954"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>Überwachen von SQL Server Managed Backup für Windows Azure
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verfügt über integrierte Measures, um Fehler und Probleme während der Sicherungsvorgänge zu identifizieren und wenn möglich mit Korrekturmaßnahmen zu beheben.  In bestimmten Situationen ist jedoch ein Benutzereingriff erforderlich. In diesem Thema werden die Tools beschrieben, mit denen Sie den Gesamtintegritätsstatus von Sicherungen bestimmen und ggf. zu behebende Fehler ermitteln können.  
@@ -125,15 +125,15 @@ Anhand dieser aggregierten Anzahl kann die Systemintegrität überwacht werden. 
   
  **Benachrichtigungsarchitektur:**  
   
--   **Richtlinienbasierte Verwaltung:** zwei Richtlinien werden zum Überwachen der Sicherungsintegrität festgelegt: **Integritätsrichtlinie für Smart Admin**, und die **Smart Admin Integritätsrichtlinie zur Benutzeraktion**. Die Smart Admin-Richtlinie für die Systemintegrität wertet kritische Fehler wie fehlende oder ungültige SQL-Anmeldeinformationen oder Verbindungsfehler aus und meldet die Integrität des Systems. Bei diesen ist normalerweise ein manueller Eingriff erforderlich, um das zugrunde liegende Problem zu beheben. Die Smart Admin-Richtlinie für die Integrität von Benutzeraktionen wertet Warnungen aus, z. B. beschädigte Sicherungen.  Bei diesen ist möglicherweise keine Aktion erforderlich, sondern stellen lediglich eine Warnung zu einem Ereignis dar. Es wird erwartet, dass solche Probleme automatisch vom [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Agent behandelt werden.  
+-   **Richtlinienbasierte Verwaltung:** Zwei Richtlinien werden zum Überwachen der Sicherungsintegrität festgelegt: **Smart Admin Integritätsrichtlinie**, und die **Smart Admin Integritätsrichtlinie zur Benutzeraktion**. Die Smart Admin-Richtlinie für die Systemintegrität wertet kritische Fehler wie fehlende oder ungültige SQL-Anmeldeinformationen oder Verbindungsfehler aus und meldet die Integrität des Systems. Bei diesen ist normalerweise ein manueller Eingriff erforderlich, um das zugrunde liegende Problem zu beheben. Die Smart Admin-Richtlinie für die Integrität von Benutzeraktionen wertet Warnungen aus, z. B. beschädigte Sicherungen.  Bei diesen ist möglicherweise keine Aktion erforderlich, sondern stellen lediglich eine Warnung zu einem Ereignis dar. Es wird erwartet, dass solche Probleme automatisch vom [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Agent behandelt werden.  
   
--   **SQL Server-Agent** Auftrag: die Benachrichtigung erfolgt mithilfe eines SQL Server-Agent-Auftrags, der drei Auftragsschritte umfasst. Im ersten Auftragsschritt wird ermittelt, ob [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Datenbank oder eine Instanz konfiguriert ist. Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] aktiviert und konfiguriert vorgefunden wird, wird der zweite Schritt ausgeführt: Es wird ein PowerShell-Cmdlet ausgeführt, das den Integritätsstatus bewertet, indem die Verwaltungsrichtlinien auf Grundlage von SQL Server-Richtlinien ausgewertet werden. Wenn ein Fehler oder eine Warnung gefunden wird, schlägt der Vorgang fehl, und es wird der dritte Schritt ausgelöst: Eine E-Mail-Benachrichtigung mit dem Fehler-/Warnbericht wird gesendet.  Dieser SQL Server-Agent-Auftrag ist jedoch nicht standardmäßig aktiviert. Um den e-Mail-benachrichtigungsauftrag zu aktivieren, verwenden die **smart_admin.sp_set_backup_parameter** gespeicherten Systemprozedur.  Das folgende Verfahren beschreibt diese Schritte ausführlicher:  
+-   **SQL Server-Agent** Auftrag: Die Benachrichtigung erfolgt mithilfe eines SQL Server-Agent-Auftrags, das drei Auftragsschritte umfasst. Im ersten Auftragsschritt wird ermittelt, ob [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Datenbank oder eine Instanz konfiguriert ist. Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] aktiviert und konfiguriert vorgefunden wird, wird der zweite Schritt ausgeführt: Es wird ein PowerShell-Cmdlet ausgeführt, das den Integritätsstatus bewertet, indem die Verwaltungsrichtlinien auf Grundlage von SQL Server-Richtlinien ausgewertet werden. Wenn ein Fehler oder Warnung gefunden wird, schlägt fehl, die dann den dritten Schritt ausgelöst: Der dritte Schritt sendet eine e-Mail-Benachrichtigung mit dem Bericht Fehler/Warnung.  Dieser SQL Server-Agent-Auftrag ist jedoch nicht standardmäßig aktiviert. Um den e-Mail-benachrichtigungsauftrag zu aktivieren, verwenden die **smart_admin.sp_set_backup_parameter** gespeicherten Systemprozedur.  Das folgende Verfahren beschreibt diese Schritte ausführlicher:  
   
 ##### <a name="enabling-email-notification"></a>Aktivieren der E-Mail-Benachrichtigung  
   
 1.  Wenn die Datenbank-e-Mails nicht bereits konfiguriert ist, verwenden Sie die Schritte in [Konfigurieren von Datenbank-e-Mails](../relational-databases/database-mail/configure-database-mail.md).  
   
-2.  Set-Datenbank als Mailsystem für SQL Server-Warnungssystem: der rechten Maustaste auf **SQL Server-Agent**Option **Warnungssystem**, überprüfen Sie die **Mailprofil aktivieren** Feld wählen  **Datenbank-e-Mails** als die **Mailsystem**, und wählen Sie ein zuvor erstelltes e-Mail-Profil.  
+2.  Set-Datenbank als Mailsystem für SQL Server-Warnungssystem: Der rechten Maustaste auf **SQL Server-Agent**Option **Warnungssystem**, überprüfen Sie die **Mailprofil aktivieren** Feld wählen **Database Mail** als die  **E-Mail-System**, und wählen Sie ein zuvor erstelltes e-Mail-Profil.  
   
 3.  Führen Sie die folgende Abfrage in einem Abfragefenster aus, und geben Sie die E-Mail-Adresse an, an die die Benachrichtigung gesendet werden soll:  
   
@@ -199,7 +199,7 @@ EXEC msdb.smart_admin.sp_set_parameter
 ### <a name="using-powershell-to-setup-custom-health-monitoring"></a>Einrichten einer benutzerdefinierten Integritätsüberwachung mit PowerShell  
  Die **Test-SqlSmartAdmin** Cmdlet kann verwendet werden, um benutzerdefinierte Integritätsüberwachung erstellen. Beispielsweise kann die im vorhergehenden Abschnitt beschriebene Benachrichtigungsoption auf Instanzebene konfiguriert werden.  Wenn Sie mehrere SQL Server-Instanzen für die Verwendung von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] konfiguriert haben, können Sie mit dem PowerShell-Cmdlet Skripts erstellen, die den Status und die Integrität von Sicherungen für alle Instanzen erfassen.  
   
- Die **Test-SqlSmartAdmin** Cmdlet wertet die Fehler und Warnungen zurückgegeben, durch die Richtlinien von SQL Server-Verwaltung und meldet einen Rollup des Status.  Dieses Cmdlet verwendet standardmäßig die Systemrichtlinien. Mit dem `–AllowUserPolicies`-Parameter können Sie beliebige benutzerdefinierte Richtlinien einschließen.  
+ Die **Test-SqlSmartAdmin** Cmdlet wertet die Fehler und Warnungen zurückgegeben, durch die Richtlinien von SQL Server-Verwaltung und meldet einen Rollup des Status.  Dieses Cmdlet verwendet standardmäßig die Systemrichtlinien. Mit dem `-AllowUserPolicies`-Parameter können Sie beliebige benutzerdefinierte Richtlinien einschließen.  
   
  Im Folgenden ist ein PowerShell-Beispielskript aufgeführt, das einen Bericht über Fehler und Warnungen auf Grundlage der Systemrichtlinien und ggf. von erstellten Benutzerrichtlinien zurückgibt:  
   
@@ -252,14 +252,14 @@ smart_backup_files;
   
 -   **Verfügbar – A:** Dies ist eine normale Sicherungsdatei. Die Sicherung wurde abgeschlossen und auch daraufhin überprüft, ob sie im Windows Azure-Speicher verfügbar ist.  
   
--   **Kopiert – B:** dieser Status ist speziell für die Datenbanken der Verfügbarkeitsgruppe. Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] eine Unterbrechung in der Sicherungsprotokollkette feststellt, wird zunächst versucht, die Sicherung zu ermitteln, die die Unterbrechung in der Sicherungskette verursacht hat. Falls die Sicherungsdatei gefunden wird, wird sie in den Windows Azure-Speicher kopiert. Dieser Status wird angezeigt, wenn der Kopiervorgang gerade ausgeführt wird.  
+-   **Kopieren wird ausgeführt-B:** Dieser Status ist speziell für die Datenbanken der Verfügbarkeitsgruppe. Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] eine Unterbrechung in der Sicherungsprotokollkette feststellt, wird zunächst versucht, die Sicherung zu ermitteln, die die Unterbrechung in der Sicherungskette verursacht hat. Falls die Sicherungsdatei gefunden wird, wird sie in den Windows Azure-Speicher kopiert. Dieser Status wird angezeigt, wenn der Kopiervorgang gerade ausgeführt wird.  
   
--   **Kopieren Sie Fehler – F:** ähnlich wie kopieren In fortgesetzt werden, dies speziell Availability Group-Datenbanken ist. Wenn der Kopiervorgang fehlschlägt, lautet der Status F.  
+-   **Fehler beim Kopieren der-F:** Ähnlich wie im Status des Kopiervorgangs, ist dies speziell Availability Group-Datenbanken. Wenn der Kopiervorgang fehlschlägt, lautet der Status F.  
   
--   **Beschädigt – C:** Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] wird die Sicherungsdatei im Speicher zu überprüfen, indem Sie Ausführung eines RESTORE HEADER_ONLY-Befehls selbst nach mehreren Versuchen nicht, markiert diese Datei als beschädigt. Damit die beschädigte Datei keine Unterbrechung in der Sicherungskette verursacht, wird von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] eine Sicherung geplant.  
+-   **Beschädigt: "c:"** Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] wird die Sicherungsdatei im Speicher zu überprüfen, indem Sie Ausführung eines RESTORE HEADER_ONLY-Befehls selbst nach mehreren Versuchen nicht, markiert diese Datei als beschädigt. Damit die beschädigte Datei keine Unterbrechung in der Sicherungskette verursacht, wird von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] eine Sicherung geplant.  
   
--   **Gelöscht: "d:"** die entsprechende Datei wurde in Windows Azure-Speicher nicht gefunden werden. Wenn die gelöschte Datei eine Unterbrechung in der Sicherungskette verursacht, wird von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] eine Sicherung geplant.  
+-   **Gelöscht: "d:"** Die entsprechende Datei wurde in Windows Azure-Speicher nicht gefunden. Wenn die gelöschte Datei eine Unterbrechung in der Sicherungskette verursacht, wird von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] eine Sicherung geplant.  
   
--   **Unbekannt: U:** dieser Status gibt an, die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] wurde noch nicht vorhanden und seine Eigenschaften im Windows Azure-Speicher zu überprüfen. Wenn der Prozess zum nächsten Mal ausgeführt wird, d. h. alle 15 Minuten, wird dieser Status aktualisiert.  
+-   **Unknown (unbekannt) U:** Dieser Status gibt an, die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] wurde noch nicht vorhanden und seine Eigenschaften im Windows Azure-Speicher zu überprüfen. Wenn der Prozess zum nächsten Mal ausgeführt wird, d. h. alle 15 Minuten, wird dieser Status aktualisiert.  
   
   

@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_replmonitorhelppublicationthresholds
@@ -17,12 +16,12 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9e2ecc46c668f8c9cb3bd8d9a2fb21d0c9787a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99b577b27b8edd2f37f1af3a13162f1b1aaa8c42
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803208"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747652"
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
  [ **@publication_type**=] *Publication_type*  
  Der Typ der Veröffentlichung. *Publication_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**0**|Transaktionsveröffentlichung.|  
 |**1**|Momentaufnahmeveröffentlichung.|  
@@ -68,7 +67,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|ID der Replikationsleistungsmetrik. Folgende Werte sind möglich.<br /><br /> **1expiration** -überwacht den bevorstehenden Ablauf von Abonnements für transaktionsveröffentlichungen.<br /><br /> **2latency** -überwacht die Leistung von Abonnements für transaktionsveröffentlichungen.<br /><br /> **4mergeexpiration** -überwacht den bevorstehenden Ablauf von Abonnements für mergeveröffentlichungen.<br /><br /> **5mergeslowrunduration** -überwacht die Dauer von mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ).<br /><br /> **6mergefastrunduration** -überwacht die Dauer von mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN).<br /><br /> **7mergefastrunspeed** -überwacht die synchronisierungsgeschwindigkeit von mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN).<br /><br /> **8mergeslowrunspeed** -überwacht die synchronisierungsgeschwindigkeit von mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ).|  
 |**title**|**sysname**|Der Name der Replikationsleistungsmetrik.|  
-|**Wert**|**int**|Der Schwellenwert der Leistungsmetrik.|  
+|**value**|**int**|Der Schwellenwert der Leistungsmetrik.|  
 |**shouldalert**|**bit**|Ist eine Warnung generiert werden soll, wenn die Metrik den definierten Schwellenwert für diese Veröffentlichung überschreitet. der Wert **1** gibt an, dass eine Warnung ausgelöst werden soll.|  
 |**IsEnabled**|**bit**|Ist, wenn die Überwachung für die replikationsleistungsmetrik für diese Veröffentlichung aktiviert ist. der Wert **1** gibt an, dass die Überwachung aktiviert ist.|  
   

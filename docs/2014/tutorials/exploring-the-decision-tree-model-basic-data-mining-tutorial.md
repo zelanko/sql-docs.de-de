@@ -11,12 +11,12 @@ ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a8d8a5238caa09d9b4a3d85d014b2891c3f427e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45acf7bef608bb23d697fc18381872f741cc2e21
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145910"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401365"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Untersuchen des Entscheidungsstrukturmodells (Lernprogramm zu Data Mining-Grundlagen)
   Durch den [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees-Algorithmus wird anhand der übrigen Spalten im Trainingssatz vorhergesagt, welche Spalten die Entscheidung über den Kauf eines Fahrrads beeinflussen.  
@@ -28,7 +28,7 @@ ms.locfileid: "48145910"
   
  In diesem Fall sagt das Modell nur eine Spalte Bike Buyer, gibt es also nur eine Struktur zu sehen. Falls mehrere Strukturen sind, können Sie die **Struktur** Feld, um eine andere Struktur auswählen.  
   
- Wie Sie anzeigen, die `TM_Decision_Tree` Modell in den Decision Tree-Viewer, können Sie die wichtigsten Attribute auf der linken Seite des Diagramms sehen. Als wichtigste Attribute werden diejenigen beschrieben, die den größten Einfluss auf das Ergebnis haben. Die weiter unten in der Struktur (auf der rechten Diagrammseite) angezeigten Attribute weisen einen geringeren Einfluss auf.  
+ Wie Sie anzeigen, die `TM_Decision_Tree` Modell in den Decision Tree-Viewer, können Sie die wichtigsten Attribute auf der linken Seite des Diagramms sehen. "Wichtigsten" bedeutet, dass diese Attribute den größten Einfluss auf das Ergebnis. Die weiter unten in der Struktur (auf der rechten Diagrammseite) angezeigten Attribute weisen einen geringeren Einfluss auf.  
   
  In diesem Beispiel ist das Alter der wichtigste Einzelfaktor für die Vorhersage eines Fahrradkaufs. Im Modell werden Kunden nach dem Alter gruppiert, und anschließend wird das nächstwichtigere Attribut für jede Altersgruppe angezeigt. In der Kundengruppe von 34 bis 40 Jahren ist die Anzahl der Kraftfahrzeuge im Besitz des Kunden nach dem Alter der bedeutendste Vorhersagefaktor.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48145910"
  [Untersuchen des Clustering-Modells &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tasks und Anweisungen für Miningmodell-Viewer](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Registerkarte Entscheidungsstruktur &#40;Miningmodell-Viewer&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)   
  [Registerkarte Abhängigkeitsnetzwerk &#40;Miningmodell-Viewer&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)   
  [Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  

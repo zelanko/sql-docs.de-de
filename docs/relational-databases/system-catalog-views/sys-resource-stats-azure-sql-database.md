@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 83ba28d09e32f043c58bdc1c63837f5b465312f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72945aca048d322ee03c8a1d88b76650ddd1db16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723488"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392693"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47723488"
 |max_worker_percent|**decimal(5,2) wird**|Maximale gleichzeitige Worker (Anforderungen) als Prozentwert der maximalen Kapazität für die Dienstebene der Datenbank.<br /><br /> Maximale wird derzeit für die fünf-Minuten-Intervall, das basierend auf 15-Sekunden-Beispiele für die Anzahl der gleichzeitigen Worker berechnet.|  
 |max_session_percent|**decimal(5,2) wird**|Maximaler gleichzeitiger Sitzungen als Prozentwert der maximalen Kapazität für die Dienstebene der Datenbank.<br /><br /> Maximale wird derzeit für die fünf-Minuten-Intervall, das basierend auf der 15-Sekunden-Beispiele für gleichzeitige Sitzungen berechnet.|  
 |dtu_limit|**int**|Aktuelle maximale DTU datenbankeinstellung für diese Datenbank während dieses Intervalls. |  
-|allocated_storage_in_megabytes|**float**|Die Menge der formatierte Dateispeicherplatz in MB, die zum Speichern von Daten zur Verfügung gestellt. Datei-Speicherplatz wird auch als Datenspeicherplatz bezeichnet.  Weitere Informationen finden Sie unter: [adressraumverwaltung in SQL-DB-Datei](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|Die Menge der formatierte Dateispeicherplatz in MB, die zum Speichern von Daten zur Verfügung gestellt. Datei-Speicherplatz wird auch als Datenspeicherplatz bezeichnet.  Weitere Informationen finden Sie in den folgenden Themen: [Verwaltung von Übersetzungsdateien Speicherplatz in SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  Mehr Kontext zu Beschränkungen und Dienstebenen zu erhalten, finden Sie unter den Themen [Dienstebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  

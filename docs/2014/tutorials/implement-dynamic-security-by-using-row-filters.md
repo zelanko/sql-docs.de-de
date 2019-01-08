@@ -11,19 +11,19 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fa34786d8d939581c5b8fecfb54103229a2a2c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c70d749a560ff5dcc39d36d84e8c9ff09b44894f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196580"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404195"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern
   In dieser ergänzenden Lektion erstellen Sie eine zusätzliche Rolle, die dynamische Sicherheit implementiert. Dynamische Sicherheit bietet Sicherheit auf Zeilenebene basierend auf dem Benutzernamen oder der Anmelde-ID des angemeldeten Benutzers. Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
   
  Um dynamische Sicherheit zu implementieren, müssen Sie dem Modell eine Tabelle hinzufügen, die die Windows-Benutzernamen der Benutzer enthält, die eine Verbindung mit dem Modell als Datenquelle erstellen und Modellobjekte und Daten durchsuchen dürfen. In diesem Lernprogramm erstellen Sie ein Modell im Kontext der Adventure Works Corp. Sie müssen jedoch eine Tabelle mit Benutzern Ihrer Domäne hinzufügen, um diese Lektion abzuschließen. Die Kennwörter für die hinzuzufügenden Benutzernamen sind nicht erforderlich. Um die Tabelle Employee Security mit einem kleinen Teil der Benutzer Ihrer Domäne zu erstellen, verwenden Sie die Funktion Einfügen, und fügen Sie die Mitarbeiterdaten aus einem Excel-Arbeitsblatt ein. In der wirklichen Welt verwendet die Tabelle mit den Benutzernamen, die Sie einem Modell hinzugefügt haben, in der Regel eine Tabelle aus einer tatsächlichen Datenbank als Datenquelle, z. B. eine reale dimEmployee-Tabelle.  
   
- Um dynamische Sicherheit zu implementieren, verwenden Sie zwei neue DAX-Funktionen: [USERNAME-Funktion &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) und [LOOKUPVALUE-Funktion &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). Diese Funktionen, die in einer Zeilenfilterformel angewendet werden, werden in einer neuen Rolle definiert. Die Formel gibt mit der LOOKUPVALUE-Funktion einen Wert aus der Tabelle Employee Security an und übergibt diesen Wert anschließend an die USERNAME-Funktion, die den Benutzernamen des angemeldeten Benutzers angibt, der ein Mitglied dieser Rolle ist. Der Benutzer kann dann nur die von den Zeilenfiltern der Rolle festgelegten Daten durchsuchen. In diesem Szenario legen Sie fest, dass Verkaufsmitarbeiter nur nach Internetumsatzdaten für die Vertriebsgebiete, denen sie angehören, suchen können.  
+ Um dynamische Sicherheit zu implementieren, verwenden Sie zwei neue DAX-Funktionen: [USERNAME-Funktion &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) und [LOOKUPVALUE-Funktion &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). Diese Funktionen, die in einer Zeilenfilterformel angewendet werden, werden in einer neuen Rolle definiert. Die Formel gibt mit der LOOKUPVALUE-Funktion einen Wert aus der Tabelle Employee Security an und übergibt diesen Wert anschließend an die USERNAME-Funktion, die den Benutzernamen des angemeldeten Benutzers angibt, der ein Mitglied dieser Rolle ist. Der Benutzer kann dann nur Daten, die vom Zeilenfilter der Rolle angegebenen durchsuchen. In diesem Szenario legen Sie fest, dass Verkaufsmitarbeiter nur nach Internetumsatzdaten für die Vertriebsgebiete, denen sie angehören, suchen können.  
   
  In dieser ergänzenden Lektion führen Sie eine Reihe von Aufgaben durch. Aufgaben, die nur für dieses Adventure Works-Szenario für die Tabellenmodellierung relevant sind und nicht unbedingt in der realen Welt anwendbar sind, werden als solche identifiziert. Jede Aufgabe umfasst weitere Informationen, die den Zweck der Aufgabe beschreiben.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48196580"
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]im Menü **Modell** auf **Vorhandene Verbindungen**.  
   
-2.  Überprüfen Sie im Dialogfeld **Vorhandene Verbindungen**, ob die Datenquellenverbindung **Adventure Works DB from SQL** (Adventure Works-Datenbank aus SQL) ausgewählt ist, und klicken Sie anschließend auf **Öffnen**.  
+2.  Überprüfen Sie im Dialogfeld **Vorhandene Verbindungen** , ob die Datenquellenverbindung **Adventure Works DB from SQL** (Adventure Works-Datenbank aus SQL) ausgewählt ist, und klicken Sie anschließend auf **Öffnen**.  
   
-     Wenn das Dialogfeld Identitätswechselinformationen angezeigt wird, geben Sie die Identitätswechsel-Anmeldeinformationen ein, die Sie in Lektion 2, "Hinzufügen von Daten", verwendet haben.  
+     Wenn der Identitätswechsel-Anmeldeinformationen im Dialogfeld angezeigt wird, geben Sie die Identitätswechselinformationen, die Sie in Lektion 2 verwendet: Hinzufügen von Daten.  
   
 3.  Behalten Sie auf der Seite **Auswählen, wie die Daten importiert werden sollen** die Auswahl der Option **Aus einer Liste von Tabellen und Sichten auswählen, um die zu importierenden Daten zu bestimmen** bei, und klicken Sie auf **Weiter**.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48196580"
      Beachten Sie, dass die Eigenschaft Aktiv für diese Beziehung False ist, das bedeutet inaktiv. Das liegt daran, dass die Tabelle Internet Sales bereits eine andere aktive Beziehung aufweist, die in Measures verwendet wird.  
   
 ## <a name="hide-the-employee-security-table-from-client-applications"></a>Ausblenden der Employee Security-Tabelle in Clientanwendungen  
- In dieser Aufgabe blenden Sie die Tabelle Employee Security aus, sodass sie nicht in der Feldliste einer Clientanwendung angezeigt wird. Denken Sie daran, dass eine Tabelle durch Ausblenden nicht gesichert wird. Benutzer können weiterhin Daten der Tabelle Employee Security abfragen, wenn sie über die nötigen Kenntnisse verfügen. Um die Daten der Tabelle Employee Security zu sichern, damit Benutzer keine der Daten abfragen können, wenden Sie in einer späteren Aufgabe einen Filter an.  
+ In dieser Aufgabe werden Sie die Tabelle Employee Security blenden, sodass sie in der Feldliste einer Clientanwendung angezeigt werden. Denken Sie daran, dass eine Tabelle durch Ausblenden nicht gesichert wird. Benutzer können weiterhin Daten der Tabelle Employee Security abfragen, wenn sie über die nötigen Kenntnisse verfügen. Um die Daten der Tabelle Employee Security zu sichern, damit Benutzer keine der Daten abfragen können, wenden Sie in einer späteren Aufgabe einen Filter an.  
   
 #### <a name="to-hide-the-employee-table-from-client-applications"></a>So blenden Sie die Employee Security-Tabelle in Clientanwendungen aus  
   
@@ -131,7 +131,7 @@ ms.locfileid: "48196580"
  In dieser Aufgabe erstellen Sie eine neue Benutzerrolle. Diese Rolle umfasst einen Zeilenfilter, der definiert, welche Zeilen der Tabelle Sales Territory für die Benutzer sichtbar sind. Der Filter wird dann über die 1:n-Beziehung auf alle anderen Tabellen angewendet, die mit der Tabelle Sales Territory verknüpft sind. Sie wenden außerdem einen einfachen Filter an, der die vollständige Tabelle Employee Security sichert, damit keine Benutzer, die Mitglied der Rolle sind, Daten in der Tabelle abfragen können.  
   
 > [!NOTE]  
->  Die Rolle Sales Employees by Territory, die Sie in dieser Lektion erstellen, schränkt Mitglieder ein, sodass sie nur Umsatzdaten für das Vertriebsgebiet suchen (oder abfragen) können, zu dem sie gehören. Wenn Sie einen Benutzer als Mitglied zu der Rolle „Sales Employees by Territory“ (Vertriebsangestellte nach Gebiet) hinzufügen und er auch Mitglied einer Rolle ist, die unter [Lektion 12: Erstellen von Rollen](../analysis-services/lesson-11-create-roles.md) erstellt wurde, werden die Berechtigungen kombiniert. Wenn ein Benutzer Mitglied mehrerer Rollen ist, sind die für jede Rolle definierten Berechtigungen und Zeilenfilter kumulativ. Der Benutzer verfügt also um mehr Berechtigungen, entsprechend der kombinierten Rollen.  
+>  Die Rolle Sales Employees by Territory, die Sie in dieser Lektion erstellen, schränkt Mitglieder ein, sodass sie nur Umsatzdaten für das Vertriebsgebiet suchen (oder abfragen) können, zu dem sie gehören. Wenn Sie einen Benutzer als Mitglied für die Sales-Mitarbeiter nach Territory-Rolle, die auch vorhanden ist hinzufügen, wie ein Element in einer Rolle in erstellt [Lektion 12: Erstellen von Rollen](../analysis-services/lesson-11-create-roles.md), erhalten Sie eine Kombination von Berechtigungen. Wenn ein Benutzer Mitglied mehrerer Rollen ist, sind die für jede Rolle definierten Berechtigungen und Zeilenfilter kumulativ. Der Benutzer verfügt also um mehr Berechtigungen, entsprechend der kombinierten Rollen.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>So erstellen Sie die Benutzerrolle 'Sales Employees by Territory'  
   

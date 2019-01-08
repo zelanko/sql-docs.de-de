@@ -13,12 +13,12 @@ ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d10af49e419827f9fbd70b7cbef45fdf0562dea3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2307a62c05503a231c3ee16b79efb25e964f55bd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749590"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402125"
 ---
 # <a name="project-settings-azure-sql-db-accesstosql"></a>Project Settings (Azure SQL-Datenbank) (AccessToSQL)
 Die SQL Azure-projekteinstellungen können Sie konfigurieren das SQL Azure-Datenbank-Suffix in das Dialogfeld "Verbindung" hinzugefügt werden und auch erlauben taktmechanismus in Verbindung mit SQL Azure implementieren.  
@@ -29,7 +29,7 @@ Im Bereich SQL Azure finden Sie in der **Projekteinstellungen** und **Projekt St
   
 -   Verwenden Sie das Dialogfeld Projekt-Standardeinstellungen, um das Festlegen von Konfigurationsoptionen für alle Projekte. Die SQL Azure-Einstellungen für den Zugriff auf die **Tools** , wählen Sie im Menü **DefaultProject Einstellungen**, wählen Sie den Projekttyp als "SQL Azure" **Migration Zielversion** Kombinationsfeld Zugriff auf die Einstellungen in SQL Azure-Bereich, klicken Sie auf **allgemeine** am unteren Rand der linken Seite, und wählen Sie dann **SQL Azure**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ## <a name="connectivity"></a>Connectivity  
 **Taktintervall**  

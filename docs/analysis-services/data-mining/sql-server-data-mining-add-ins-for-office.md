@@ -1,5 +1,5 @@
 ---
-title: SQL Server Data Mining-Add-Ins für Office | Microsoft Docs
+title: SQL Server Data Mining-Add-Ins für Office | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2220bb48704fb29aa00236ebf1ec4ad46ecb4007
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 89986d3c8de4a1cbefbccf285a92a2dc19c6c7aa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014737"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504744"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>SQL Server Data Mining-Add-Ins für Office
 
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Bei den Data Mining-Add-Ins für Office handelt es sich um ein kompaktes Set von Tools für Vorhersageanalysen, mit denen Sie auf der Grundlage von Daten in Excel analytische Modelle für Vorhersagezwecke, Empfehlungen oder Untersuchungen erstellen können.  
   
 > [!IMPORTANT]
-> Datamining-add-in für Office ist nicht in Office 2016 oder höher unterstützt.
+> Das Datamining-add-in für Office wird nicht in Office 2016 oder höher unterstützt.
   
  Die Assistenten und die Datenverwaltungstools in den Add-Ins bieten schrittweise Anleitungen für die folgenden gängigen Data Mining-Tasks:  
   
@@ -45,11 +45,11 @@ ms.locfileid: "34014737"
   
      Erfahrene Benutzer können benutzerdefinierte DMX-Abfragen mit dem **erweiterten Abfrage-Editor**per Drag &amp; Drop erstellen oder mit Excel VBA Vorhersagen automatisieren.  
   
--   **Dokumentieren und Verwalten.** Nachdem Sie ein Dataset und einige Modelle erstellt haben, dokumentieren Sie Ihre Arbeit und Ihre Ergebnisse, indem Sie eine statistische Zusammenfassung der Daten und Modellparameter generieren.  
+-   **Dokumentieren und Verwalten.** Nachdem Sie ein Dataset erstellt und einige Modelle haben, dokumentieren Sie Ihre Arbeit und Ihre Erkenntnisse durch Generieren einer statistischen Zusammenfassung der Daten und des Modells Parameter.  
   
--   **Untersuchen und visuelles Darstellen.** Das Data Mining ist keine Aktivität, die komplett automatisiert werden kann. Sie müssen die Ergebnisse untersuchen und verstehen, um sinnvolle Maßnahmen ergreifen zu können. Die Add-Ins unterstützen Sie bei der Untersuchung. Sie bieten interaktive Viewer in Excel, Visio-Vorlagen, mit denen Sie Modelldiagramme anpassen können, sowie die Möglichkeit, Diagramme und Tabellen in Excel für weiteres Filtern oder Ändern zu exportieren.  
+-   **Untersuchen und visuelles Darstellen.** Datamining ist keine Aktivität, die vollständig automatisiert werden kann – müssen Sie untersuchen und verstehen Ihre Ergebnisse, um sinnvolle Maßnahmen ergreifen. Die Add-Ins unterstützen Sie bei der Untersuchung. Sie bieten interaktive Viewer in Excel, Visio-Vorlagen, mit denen Sie Modelldiagramme anpassen können, sowie die Möglichkeit, Diagramme und Tabellen in Excel für weiteres Filtern oder Ändern zu exportieren.  
   
--   **Bereitstellen und Integrieren.** Wenn Sie ein nützliches Modell erstellt haben, können Sie damit arbeiten. Exportieren Sie es dazu mit den Verwaltungstools von Ihrem Testserver in eine andere Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Bereitstellen und Integrieren.** Wenn Sie ein nützliches Modell das Modell in der Produktion mithilfe der Verwaltungstools So exportieren Sie das Modell von Ihrem Testserver in eine andere Instanz von erstellt haben [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
      Sie können das Modell auch auf dem Server belassen, auf dem es erstellt wurde, sollten aber die Trainingsdaten aktualisieren und Vorhersagen mithilfe von Integration Services- oder DMX-Skripts ausführen.  
   
@@ -78,6 +78,6 @@ ms.locfileid: "34014737"
   
  Je nach der Edition der SQL Server Analysis Services, mit denen Sie eine Verbindung herstellen, sind einige erweiterte Algorithmen u. U. nicht verfügbar. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   
- Weiterführende Hilfe zur Installation finden Sie auf dieser Seite im Download Center: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ Weitere Hilfe zur Installation finden Sie unter dieser Seite im Download Center: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   

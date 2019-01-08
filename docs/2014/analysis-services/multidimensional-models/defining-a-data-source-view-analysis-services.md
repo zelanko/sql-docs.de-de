@@ -16,15 +16,15 @@ ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28d7dc1fe18ff942594b070074df853c196d98f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a19c663fe646c50a977b23e219580e3d7e280945
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150390"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502961"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definieren einer Datenquellensicht (Analysis Services)
-  Eine Datenquellensicht enthält das logische Modell des Schemas, das von mehrdimensionalen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankobjekten, also Cubes, Dimensionen und Miningstrukturen, verwendet wird. Eine Datenquellensicht ist die im XML-Format gespeicherte Metadatendefinition dieser Schemaelemente, die vom UDM (Unified Dimensional Model) und von den Miningstrukturen verwendet werden. Eine Datenquellensicht:  
+  Eine Datenquellensicht enthält das logische Modell des Schemas ein, die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mehrdimensionale Datenbank Objekte, nämlich cubes, Dimensionen und Miningstrukturen. Eine Datenquellensicht ist die im XML-Format gespeicherte Metadatendefinition dieser Schemaelemente, die vom UDM (Unified Dimensional Model) und von den Miningstrukturen verwendet werden. Eine Datenquellensicht:  
   
 -   Enthält die Metadaten, die ausgewählte Objekte aus mindestens einer zugrunde liegenden Datenquelle darstellen bzw. die Metadaten, die zum Generieren eines zugrunde liegenden relationalen Datenspeichers verwendet werden, wenn zur Schemagenerierung der Top-Down-Ansatz verwendet wird.  
   
@@ -101,16 +101,16 @@ ms.locfileid: "48150390"
   
 4.  **Filtern verfügbarer Objekte**  
   
-     Wenn in der Liste Verfügbare Objekte eine Vielzahl von Objekten enthalten ist, können Sie die Liste durch einen einfachen Filter reduzieren, der eine Zeichenfolge als Auswahlkriterium angibt. Wenn Sie z. B. **dbo** eingeben und anschließend auf die Schaltfläche **Filter** klicken, werden nur die Elemente in der Liste **Verfügbare Objekte** angezeigt, die mit "dbo" beginnen. Der Filter kann eine Teilzeichenfolge ("sal" gibt z. B. Verkäufe und Gehalt zurück) sein, ist jedoch nicht in der Lage, mehrere Zeichenfolgen oder Operatoren einzuschließen.  
+     Wenn in der Liste Verfügbare Objekte eine Vielzahl von Objekten enthalten ist, können Sie die Liste durch einen einfachen Filter reduzieren, der eine Zeichenfolge als Auswahlkriterium angibt. Wenn Sie z. B. **dbo** eingeben und anschließend auf die Schaltfläche **Filter** klicken, werden nur die Elemente in der Liste **Verfügbare Objekte** angezeigt, die mit "dbo" beginnen. Der Filter kann eine Teilzeichenfolge (z. B. "Sal" gibt Verkäufe und Gehalt) werden, aber er kann nicht mehrere Zeichenfolgen oder Operatoren enthalten.  
   
 5.  Bei relationalen Datenquellen, für die keine Tabellenbeziehungen definiert sind, wird die Seite **Namensübereinstimmung** angezeigt, auf der Sie die geeignete Methode zum Abgleich von Namen auswählen können. Weitere Informationen finden Sie im Abschnitt [Angeben von Namensübereinstimmungskriterien für Beziehungen](#bkmk_NameMatch) in diesem Thema.  
   
 ##  <a name="bkmk_secondaryDS"></a> Hinzufügen einer sekundären Datenquelle  
  Wenn Sie eine Datenquellensicht definieren, die Tabellen, Sichten oder Spalten aus mehreren Datenquellen enthält, wird die erste Datenquelle, aus der Sie Objekte zur Datenquellensicht hinzufügen, als primäre Datenquelle festgelegt (nach der Definition der primären Datenquelle kann diese Festlegung nicht mehr geändert werden). Nachdem Sie eine Datenquellensicht basierend auf Objekten aus einer einzelnen Datenquelle definiert haben, können Sie Objekte aus anderen Datenquellen hinzufügen.  
   
- Wenn eine OLAP-Verarbeitungs- oder Datamining-Abfragen Daten aus mehreren Datenquellen in einer einzelnen Abfrage erforderlich sind, muss die primäre Datenquelle Remoteabfragen mithilfe unterstützen `OpenRowset`. In der Regel handelt es sich dabei um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle. Wenn Sie beispielsweise eine OLAP-Dimension entwerfen, die Attribute enthält, die an Spalten aus mehreren Datenquellen gebunden sind, wird in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine `OpenRowset`-Abfrage erstellt, um diese Dimension währen der Verarbeitung aufzufüllen. Wenn ein OLAP-Objekts aufgefüllt werden kann, oder ein Data mining-Auflösung Abfrage jedoch mithilfe einer einzelnen Datenquelle, und klicken Sie dann eine `OpenRowset` Abfrage wird nicht erstellt werden. In bestimmten Situationen kann es möglich sein, Attributbeziehungen zwischen Attributen zu definieren, sodass keine `OpenRowset`-Abfrage mehr erforderlich ist. Weitere Informationen zu attributbeziehungen finden Sie unter [Attributbeziehungen](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41; ](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) und [Definieren Sie Attributbeziehungen](attribute-relationships-define.md).  
+ Wenn für eine OLAP-Verarbeitungs- oder eine Data Mining-Abfrage Daten aus mehreren Datenquellen in einer einzelnen Abfrage erforderlich sind, muss die primäre Datenquelle Remoteabfragen mithilfe von `OpenRowset` unterstützen. In der Regel handelt es sich dabei um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle. Wenn Sie beispielsweise eine OLAP-Dimension entwerfen, die Attribute enthält, die an Spalten aus mehreren Datenquellen gebunden sind, wird in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine `OpenRowset`-Abfrage erstellt, um diese Dimension währen der Verarbeitung aufzufüllen. Wenn die Auffüllung eines OLAP-Objekts oder die Auflösung einer Data Mining-Abfrage jedoch mithilfe einer einzelnen Datenquelle möglich ist, wird keine `OpenRowset`-Abfrage erstellt. In bestimmten Situationen kann es möglich sein, Attributbeziehungen zwischen Attributen zu definieren, sodass keine `OpenRowset`-Abfrage mehr erforderlich ist. Weitere Informationen zu Attributbeziehungen finden Sie unter [Attributbeziehungen](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) und [Definieren von Attributbeziehungen](attribute-relationships-define.md)aus.  
   
- Um Tabellen und Spalten aus einer zweiten Datenquelle hinzuzufügen, doppelklicken Sie im Projektmappen-Explorer auf die Datenquellensicht, um sie im Datenquellensicht-Designer zu öffnen und verwenden dann das Dialogfeld Tabellen hinzufügen/entfernen, um Objekte aus anderen im Projekt definierten Datenquellen einzuschließen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
+ Um Tabellen und Spalten aus einer zweiten Datenquelle hinzuzufügen, doppelklicken Sie im Projektmappen-Explorer auf die Datenquellensicht, um sie im Datenquellensicht-Designer zu öffnen und verwenden dann das Dialogfeld Tabellen hinzufügen/entfernen, um Objekte aus anderen im Projekt definierten Datenquellen einzuschließen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)aus.  
   
 ##  <a name="bkmk_NameMatch"></a> Angeben von Namensübereinstimmungskriterien für Beziehungen  
  Wenn Sie eine Datenquellensicht erstellen, werden Beziehungen zwischen Tabellen erstellt, die auf FOREIGN KEY-Einschränkungen in der Datenquelle basieren. Diese Beziehungen sind erforderlich, damit die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Engine die geeigneten OLAP-Verarbeitungs- und Data Mining-Abfragen erstellen kann. Manchmal hat eine Datenquelle mit mehreren Tabellen keine FOREIGN KEY-Einschränkungen. Wenn eine Datenquelle nicht über FOREIGN KEY-Einschränkungen verfügt, werden Sie vom Datenquellensicht-Assistenten aufgefordert zu definieren, wie der Assistent Spaltennamen verschiedener Tabellen vergleichen soll.  
@@ -139,7 +139,7 @@ ms.locfileid: "48150390"
  [Ersetzen einer Tabelle oder einer benannten Abfrage in einer Datenquellensicht &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
  [Verwenden von Diagrammen im Datenquellensicht-Designer &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [Durchsuchen von Daten in einer Datenquellensicht &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
- [Löschen eine Datenquellensicht &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
+ [Löschen einer Datenquellensicht &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
  [Aktualisieren des Schemas in einer Datenquellensicht &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

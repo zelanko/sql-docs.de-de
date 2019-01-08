@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 247b89dcacc30417d01160c490010909cfbf5cfd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839078"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413411"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt Informationen zu allen Abfragen, die angefordert haben und auf eine arbeitsspeicherzuweisung warten oder eine arbeitsspeicherzuweisung erhalten haben. Abfragen, die nicht auf eine arbeitsspeicherzuweisung erforderlich ist, werden in dieser Ansicht nicht angezeigt. Z. B. sortieren und Hash Join-Vorgänge haben arbeitsspeicherzuweisungen für die abfrageausführung, während Abfragen ohne eine **ORDER BY** Klausel keinen Speicher zu gewähren.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, dass diese Informationen verfügbar gemacht werden, wird jede Zeile mit Daten, die zum verbundenen Mandanten gehören, herausgefiltert. Darüber hinaus werden die Werte in den Spalten **Scheduler_id**, **Wait_order**, **Pool_id**, **Group_id** gefiltert; der Spaltenwert wird festgelegt auf NULL.  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, diese Informationen bereitstellen, wird jede Zeile, die Daten enthält, die zum verbundenen Mandanten gehören nicht herausgefiltert. Darüber hinaus werden die Werte in den Spalten **Scheduler_id**, **Wait_order**, **Pool_id**, **Group_id** gefiltert; der Spaltenwert wird festgelegt auf NULL.  
   
 > [!NOTE]  
 > Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_exec_query_memory_grants**.  
@@ -53,7 +53,7 @@ ms.locfileid: "47839078"
 |**max_used_memory_kb**|**bigint**|Der bis zu diesem Zeitpunkt verwendete maximale physische Arbeitsspeicher in Kilobytes.|  
 |**query_cost**|**float**|Die geschätzten Abfragekosten.|  
 |**timeout_sec**|**int**|Timeout in Sekunden, nach dem die Abfrage die Anforderung der Arbeitsspeicherzuweisung aufgibt.|  
-|**resource_semaphore_id**|**smallint**|Nicht eindeutige ID des Ressourcensemaphors, auf das die Abfrage wartet.<br /><br /> **Hinweis:** diese ID ist eindeutig in Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die älter sind als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Diese Änderung kann die Abfrageausführung bei der Problembehandlung beeinflussen. Weitere Informationen finden Sie im Abschnitt "Hinweise" weiter unten in diesem Thema.|  
+|**resource_semaphore_id**|**smallint**|Nicht eindeutige ID des Ressourcensemaphors, auf das die Abfrage wartet.<br /><br /> **Hinweis**: Diese ID ist in Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor Version [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] eindeutig. Diese Änderung kann die Abfrageausführung bei der Problembehandlung beeinflussen. Weitere Informationen finden Sie im Abschnitt "Hinweise" weiter unten in diesem Thema.|  
 |**queue_id**|**smallint**|ID der Warteschlange, in der die Abfrage auf Arbeitsspeicherzuweisungen wartet. NULL, wenn der Arbeitsspeicher bereits zugewiesen wurde.|  
 |**wait_order**|**int**|Sequenzielle Position wartender Abfragen innerhalb des angegebenen **Queue_id**. Der Wert kann sich für eine Abfrage ändern, wenn andere Abfragen Arbeitsspeicherzuweisungen erhalten oder für diese ein Timeout eintritt. NULL, wenn bereits Arbeitsspeicher zugewiesen wurde.|  
 |**is_next_candidate**|**bit**|Kandidat für die nächste Arbeitsspeicherzuweisung.<br /><br /> 1 = Ja<br /><br /> 0 = Nein<br /><br /> NULL = Arbeitsspeicher wurde bereits zugewiesen|  

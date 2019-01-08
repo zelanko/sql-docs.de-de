@@ -15,15 +15,15 @@ ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc3fc5502ee76cfd6aabb98eb719ca318026b73c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802460"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504589"
 ---
 # <a name="core-interface-conformance"></a>Schnittstellenübereinstimmung auf Kernebene
-Alle ODBC-Treiber müssen mindestens ein Kernebenen-aufweisen schnittstellenübereinstimmung. Da die Funktionen der Kernebene diejenigen, die durch die meisten generischen interoperablen Anwendungen erforderlich sind, kann solche Anwendungen der Treiber verwenden. Die Funktionen der Kernebene entsprechen auch auf die Funktionen, die in der ISO-CLI-Spezifikation definiert und auf die nonoptional Funktionen, die in der Open Group-CLI-Spezifikation definiert. Ein Kernebenen-Schnittstelle:-konforme Funktion ODBC-Treiber kann die Anwendung Folgendes tun:  
+Alle ODBC-Treiber müssen mindestens ein Kernebenen-aufweisen schnittstellenübereinstimmung. Da die Funktionen der Kernebene diejenigen, die durch die meisten generischen interoperablen Anwendungen erforderlich sind, kann solche Anwendungen der Treiber verwenden. Die Funktionen der Kernebene entsprechen auch auf die Funktionen, die in der ISO-CLI-Spezifikation definiert und auf die nonoptional Funktionen, die in der Open Group-CLI-Spezifikation definiert. Ein Kernebenen-Schnittstelle-konformen ODBC-Treiber kann die Anwendung Folgendes tun:  
   
 -   Zuordnen und freigeben aller Arten von Handles, durch den Aufruf **SQLAllocHandle** und **SQLFreeHandle**.  
   

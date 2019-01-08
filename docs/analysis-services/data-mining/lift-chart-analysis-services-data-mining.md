@@ -1,5 +1,5 @@
 ---
-title: Prognosegütediagramm (Analysis Services – Datamining) | Microsoft Docs
+title: Prognosegütediagramm (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a72e7c40719511e8514c38d08cd7cd88a24055f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cd4c0ea515020067cb7dd5c49b97db69ca6a756c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016407"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401288"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Prognosegütediagramm (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34016407"
   
  Das Diagramm enthält mehrere Modelle, die auf den gleichen Daten basieren. Eines dieser Modelle wurde an bestimmte Zielkunden angepasst. Sie können ein Modell anpassen, indem Sie Filter für die Daten hinzufügen, mit denen der Modus trainiert wurde. Dieser Filter schränkt die Fälle ein, die sowohl für das Training als auch die Evaluierung für Kunden unter 30 Jahre verwendet werden. Ein Effekt der Filterung besteht darin, dass das grundlegende und das gefilterte Modell unterschiedliche Datasets verwenden. Daher unterscheidet sich auch die Anzahl der Fälle, die im Prognosegütediagramm zur Auswertung verwendet wurden. Dieser Punkt muss bei der Interpretation der Vorhersageergebnisse und anderer statistischer Daten berücksichtigt werden.  
   
- ![Lift Diagramm mit zwei Modellen](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "Lift Diagramm mit zwei Modellen")  
+ ![Lift Diagramm mit zwei Modellen](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "per Lift & Diagramm mit zwei Modellen")  
   
  Die X-Achse des Diagramms stellt den Prozentsatz des Testdatasets dar, das zum Vergleichen der Vorhersagen verwendet wird. Die Y-Achse des Diagramms stellt den Prozentsatz vorhergesagter Werte dar.  
   
@@ -115,6 +115,6 @@ ms.locfileid: "34016407"
  [Zurück zum Anfang](#bkmk_Top)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tests und Überprüfung & #40; Datamining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

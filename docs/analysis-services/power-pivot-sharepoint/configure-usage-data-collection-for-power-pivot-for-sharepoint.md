@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren der Sammlung von Verwendungsdaten für (PowerPivot für SharePoint | Microsoft Docs
+title: Konfigurieren der Sammlung von Verwendungsdaten für (Power Pivot für SharePoint | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bafa3d8b45dc2ad59314218f34959120b50e6bfe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026877"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420281"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Konfigurieren der Sammlung von Verwendungsdaten für Power Pivot für SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -86,9 +86,9 @@ ms.locfileid: "34026877"
 ##  <a name="jobs"></a> Konfigurieren der Zeitgeberaufträge, die bei der Sammlung von Verwendungsdaten verwendet werden  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Die Serverstatus- und Verwendungsdaten werden durch zwei Zeitgeberaufträge an unterschiedliche Stellen im System zur Sammlung von Verwendungsdaten verschoben:  
   
--   Der Zeitgeberauftrag für den „Import der Microsoft SharePoint Foundation-Verwendungsdaten“ überträgt die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Verwendungsdaten in die Datenbank der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung.  
+-   Verschiebt der Zeitgeberauftrag "Microsoft SharePoint Foundation Usage Data Import" [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Nutzung der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dienstanwendungs-Datenbank.  
   
--   Der „Zeitgeberauftrag für die Verarbeitung des[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboards“ überträgt die Daten in eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe, die die Datenquelle für integrierte administrative Berichte darstellt.  
+-   Die "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Verarbeitung der Management-Dashboard-Zeitgeberauftrag für den" die Daten in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Arbeitsmappe, die die Quelle der Daten für integrierte administrative Berichte darstellt.  
   
  Wenn Sie die Administratorberichte aktualisieren müssen, die häufiger im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard angezeigt werden, führen Sie die folgenden Schritte aus.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "34026877"
   
     -   Der Standardwert beträgt 300 Sekunden (oder fünf Minuten). Dieser Wert wird für dynamische Farmumgebungen empfohlen, in denen eine Vielzahl von Anwendungen und Diensten ausgeführt wird.  
   
-     Wenn Sie diesen Wert wesentlich heraufsetzen, können statistische Daten verloren gehen, bevor sie gemeldet werden. Ein Dienstneustart bewirkt z. B., dass Abfragestatistikdaten verloren gehen. Umgekehrt können die integrierten Aktivitätsberichte jedoch auch zu wenig Daten enthalten. In diesem Fall können Sie das Intervall verringern, damit Ereignisse für die Berichterstellung häufiger gemeldet werden.  
+     Wenn Sie diesen Wert wesentlich heraufsetzen, können statistische Daten verloren gehen, bevor sie gemeldet werden. Ein Dienstneustart bewirkt z. B., dass Abfragestatistikdaten verloren gehen. Umgekehrt können die integrierten Aktivitätsberichte jedoch auch zu wenig Daten enthalten. In diesem Fall können Sie das Intervall verringern, damit Ereignisse für die Berichterstellung häufiger gemeldet werden.  
   
 3.  Klicken Sie auf **OK**.  
   

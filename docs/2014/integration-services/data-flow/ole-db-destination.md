@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdest.f1
@@ -21,12 +20,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39f15609f326699c77688cfef599eed9c01adab6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0aedda782c65cbe8d28f066b7e5e97d3e7fc87cd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058130"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790772"
 ---
 # <a name="ole-db-destination"></a>OLE DB-Ziel
   Das OLE DB-Ziel lädt Daten mithilfe einer Datenbanktabelle, einer Sicht oder eines SQL-Befehls in eine Reihe von OLE DB-kompatible Datenbanken. Beispielsweise können aus der OLE DB-Quelle Daten in Tabellen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access- und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken geladen werden.  
@@ -46,7 +45,7 @@ ms.locfileid: "48058130"
 > [!NOTE]  
 >  Vom OLE DB-Ziel werden keine Parameter unterstützt. Wenn Sie eine parametrisierte INSERT-Anweisung ausführen müssen, ziehen Sie die Transformation für den OLE DB-Befehl in Betracht. Weitere Informationen finden Sie unter [OLE DB Command Transformation](transformations/ole-db-command-transformation.md).  
   
- Wenn das OLE DB-Ziel Daten lädt, die einen Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) verwenden, werden die Daten möglicherweise beschädigt, falls der Datenzugriffsmodus nicht die Option für schnelles Laden verwendet und falls der OLE DB-Verbindungs-Manager den [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB) verwendet. Um die Integrität von Doppelbyte-Zeichensatzdaten sicherzustellen, sollten Sie für den OLE DB-Verbindungs-Manager die Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client konfigurieren oder einen der Zugriffsmodi für das schnelle Laden verwenden: **Tabelle oder Sicht – schnelles Laden** oder **Variable für Tabellenname oder Sichtname – schnelles Laden**. Beide Optionen sind im Dialogfeld **Ziel-Editor für OLE DB** verfügbar. Bei der Programmierung der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Objektmodell, sollten Sie die AccessMode-Eigenschaft festlegen, um `OpenRowset Using FastLoad`, oder `OpenRowset Using FastLoad From Variable`.  
+ Wenn das OLE DB-Ziel Daten lädt, die einen Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) verwenden, werden die Daten möglicherweise beschädigt, falls der Datenzugriffsmodus nicht die Option für schnelles Laden verwendet und falls der OLE DB-Verbindungs-Manager den [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB) verwendet. Um die Integrität von Doppelbyte-Zeichensatzdaten sicherzustellen, dass Sie sollten den OLE DB-Verbindungs-Manager verwenden, konfigurieren die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oder einen der Zugriffsmodi für das schnelle Laden verwenden: **Tabelle oder Sicht – schnelles Laden** oder **oder Sichtname Variable für Tabellenname - schnelles Laden**. Beide Optionen sind im Dialogfeld **Ziel-Editor für OLE DB** verfügbar. Bei der Programmierung der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Objektmodell, sollten Sie die AccessMode-Eigenschaft festlegen, um `OpenRowset Using FastLoad`, oder `OpenRowset Using FastLoad From Variable`.  
   
 > [!NOTE]  
 >  Wenn Sie mithilfe des Dialogfelds **Ziel-Editor für OLE DB** im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer die Zieltabelle erstellen, in die das OLE DB-Ziel Daten einfügt, müssen Sie möglicherweise die neu erstellte Tabelle manuell auswählen. Die manuelle Auswahl ist erforderlich, wenn ein OLE DB-Anbieter, wie z. B. der OLE DB-Anbieter für DB2, dem Tabellennamen automatisch Schemabezeichner hinzufügt.  
@@ -102,11 +101,11 @@ ms.locfileid: "48058130"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Ziel-Editor für OLE DB** festlegen können:  
   
--   [Ziel-Editor für OLE DB &#40;Seite Verbindungs-Manager&#41;](../ole-db-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für OLE DB &#40;Seite „Verbindungs-Manager“&#41;](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [Ziel-Editor für OLE DB &#40;Seite "Zuordnungen"&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für OLE DB &#40;Seite „Zuordnungen“&#41;](../ole-db-destination-editor-mappings-page.md)  
   
--   [Ziel-Editor für OLE DB &#40;Seite "Fehlerausgabe"&#41;](../ole-db-destination-editor-error-output-page.md)  
+-   [Ziel-Editor für OLE DB &#40;Seite „Fehlerausgabe“&#41;](../ole-db-destination-editor-error-output-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
@@ -123,7 +122,7 @@ ms.locfileid: "48058130"
 ## <a name="related-content"></a>Verwandte Inhalte  
  [OLE DB-Quelle](ole-db-source.md)  
   
- [Integrationsdienste &#40;SSIS&#41; Variablen](../integration-services-ssis-variables.md)  
+ [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md)  
   
  [Datenfluss](data-flow.md)  
   

@@ -15,12 +15,12 @@ ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e2d83f77f8bb9227daab996e425d1880d1bfabd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 35e9da17a9c3980470cfd3dcbb22b4069afec640
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674414"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501755"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Einrichten von ODBC-Visual FoxPro (Dialogfeld)
 Die **ODBC-Visual FoxPro-Setup** Dialogfeld können Sie zum Hinzufügen oder Ändern einer Visual FoxPro-Datenquelle.  
@@ -60,7 +60,7 @@ Die **ODBC-Visual FoxPro-Setup** Dialogfeld können Sie zum Hinzufügen oder Än
  Wenn dieses Kontrollkästchen aktiviert ist, wird der Treiber die Visual FoxPro-Datenbank geöffnet, ausschließlich auf, wenn Sie Daten unter Verwendung der Datenquelle zugreifen. Andere Benutzer zugreifen nicht die Datenbank oder den Tabellen in der Datenbank, während die Datenbank exklusiv genutzt wird. Tabellen in der exklusiv geöffnete Datenbank werden als SHARED geöffnet. Um eine Tabelle ausschließlich zu öffnen, verwenden die [exklusiv festgelegt](../../odbc/microsoft/set-exclusive-command.md) Befehl. Ist dieses Kontrollkästchen deaktiviert, wenn **Datenbanktyp** nastaven NA hodnotu **freies**.  
   
  **NULL**  
- Bestimmt, ob Spalten mit ALTER TABLE und CREATE TABLE erstellt wurden null-Werte zulassen. Wenn Sie Null ON festlegen, fügt der INSERT-SQL einen null-Wert in jede Spalte, die nicht in einer INSERT-SQL enthalten... VALUE-Klausel. Wenn Null auf OFF festgelegt ist, wird ein Leerzeichen eingefügt. Außerdem können Sie steuern, diese Option aus, über eine übergebene Verbindungszeichenfolge wie im folgenden Code:  
+ Bestimmt, ob Spalten mit ALTER TABLE und CREATE TABLE erstellt wurden null-Werte zulassen. Wenn Sie Null ON festlegen, fügt der INSERT - SQL einen null-Wert in jede Spalte, die nicht in einer INSERT - SQL enthalten... VALUE-Klausel. Wenn Null auf OFF festgelegt ist, wird ein Leerzeichen eingefügt. Außerdem können Sie steuern, diese Option aus, über eine übergebene Verbindungszeichenfolge wie im folgenden Code:  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  

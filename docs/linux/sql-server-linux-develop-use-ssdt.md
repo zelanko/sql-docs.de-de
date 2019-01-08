@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 2053e338bf14d11f25e6e12b3d6c5aee6b8e636e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 874fd8948d4098e9003fb2c54e1feb8b5cbbe4e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033577"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750362"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Verwenden Sie Visual Studio zum Erstellen von Datenbanken für SQL Server unter Linux
 
@@ -99,7 +99,7 @@ SQL Server unter Linux wird von SSDT-Version 17.0 RC oder höher unterstützt.
 
 5. Überprüfen Sie den Veröffentlichungsstatus der **Datentoolvorgänge** Fenster.
 
-6. Klicken Sie auf **Ansicht Reulst** oder **Skript anzeigen** der Datenbank auf dem SQL Server unter Linux ergebnisveröffentlichung angezeigt.
+6. Klicken Sie auf **Anzeigen der Ergebnisse** oder **Skript anzeigen** der Datenbank auf dem SQL Server unter Linux ergebnisveröffentlichung angezeigt.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
@@ -107,12 +107,12 @@ Sie haben erfolgreich eine neue Datenbank auf SQL Server-Instanz unter Linux ers
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Unter [Lernprogramm: Schreiben von Transact-SQL-Anweisungen] und [Transact-SQL-Referenz (Datenbank-Engine)] finden Sie weitere Informationen, wenn Sie noch nicht mit T-SQL vertraut sind.
+Wenn Sie mit T-SQL vertraut sind, finden Sie unter [Tutorial: Schreiben von Transact-SQL-Anweisungen] und [Transact-SQL-Referenz (Datenbank-Engine)].
 
 Weitere Informationen zum Entwickeln von einer Datenbank mit SQL Data Tools finden Sie unter [SSDT MSDN-Dokumente]
 
 [Herunterladen Sie und installieren Sie Visual Studio]:https://www.visualstudio.com/downloads/
-[Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
+[Download and Install SSDT]:https://aka.ms/ssdt-download
 [SSDT MSDN-Dokumente]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[Lernprogramm: Schreiben von Transact-SQL-Anweisungen]:https://msdn.microsoft.com/library/ms365303.aspx
+[Tutorial: Schreiben von Transact-SQL-Anweisungen]:https://msdn.microsoft.com/library/ms365303.aspx
 [Transact-SQL-Referenz (Datenbank-Engine)]:https://msdn.microsoft.com/library/bb510741.aspx

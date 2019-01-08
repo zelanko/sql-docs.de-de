@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46572a9fac9e3d1749c65acf9370718fbc8b3dd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e4d8da5c0b352964fe9017be902557e29e1e2ed3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125502"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781422"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Ziel-Editor für SAP BW (Seite Verbindungs-Manager)
   Verwenden Sie die Seite **Verbindungs-Manager** im **Ziel-Editor für SAP BW** , um den SAP BW-Verbindungs-Manager auszuwählen, der vom SAP BW-Ziel verwendet wird. Auf dieser Seite wählen Sie außerdem die Parameter aus, die zum Laden der Daten in das SAP NetWeaver BW-System verwendet werden.  
@@ -34,7 +33,7 @@ ms.locfileid: "48125502"
   
 3.  Klicken Sie im **Ziel-Editor für SAP BW**auf **Verbindungs-Manager** , um die Seite **Verbindungs-Manager** des Editors zu öffnen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration des Ziels erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
@@ -80,7 +79,7 @@ ms.locfileid: "48125502"
  Geben Sie den Servernamen oder die IP-Adresse des Gatewayhosts ein. Normalerweise ist der Name oder die IP-Adresse identisch mit dem SAP-Anwendungsserver.  
   
  **Gatewaydienst**  
- Geben Sie den Namen des Gatewaydiensts im Format `sapgwNN`, wobei `NN` der Systemnummer entspricht.  
+ Geben Sie den Namen des Gatewaydiensts im Format `sapgwNN` ein, wobei `NN` der Systemnummer entspricht.  
   
  **Programm-ID**  
  Geben Sie die Programm-ID ein, die dem RFC-Ziel zugeordnet ist.  
@@ -111,7 +110,7 @@ ms.locfileid: "48125502"
 |**InfoPackage**|Erstellen Sie ein neues InfoPackage mithilfe des Dialogfelds **InfoPackage erstellen** . Weitere Informationen zu diesem Dialogfeld finden Sie unter [Create InfoPackage](create-infopackage.md).|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ziel-Editor für SAP BW &#40;Seite "Zuordnungen"&#41;](sap-bw-destination-editor-mappings-page.md)   
+ [Ziel-Editor für SAP BW &#40;Seite „Zuordnungen“&#41;](sap-bw-destination-editor-mappings-page.md)   
  [Ziel-Editor für SAP BW &#40;Seite „Fehlerausgabe“&#41;](sap-bw-destination-editor-error-output-page.md)   
  [Ziel-Editor für SAP BW &#40;Seite „Erweitert“&#41;](sap-bw-destination-editor-advanced-page.md)   
  [F1-Hilfe zu Microsoft Connector 1.1 für SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  

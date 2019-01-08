@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
@@ -13,12 +12,12 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: afdab0c6817e65e1562a6768394d842a8e944c8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00910fdb6800921a2c6eeae79340eb5d2a79db20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756362"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Bestimmen, ob die Änderungsdaten bereit sind
   In der Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, besteht der zweite Task darin, sicherzustellen, dass die Änderungsdaten für das ausgewählte Intervall bereit sind. Dieser Schritt ist notwendig, da der asynchrone Aufzeichnungsprozess möglicherweise noch nicht alle Änderungen bis zum ausgewählten Endpunkt verarbeitet hat.  
@@ -200,7 +199,7 @@ ms.locfileid: "48129163"
         > [!NOTE]  
         >  Die `Thread.Sleep`-Methode erwartet ein Argument, das in Millisekunden angegeben wird.  
   
-7.  Verlassen Sie die standardcodezeile gibt `DtsExecResult.Success` aus der Ausführung des Skripts.  
+7.  Verlassen Sie die Standardcodezeile, die `DtsExecResult.Success` aus der Ausführung des Skripts zurückgibt.  
   
 8.  Schließen Sie die Skriptentwicklungsumgebung und den **Skripttask-Editor**.  
   
@@ -276,7 +275,7 @@ ms.locfileid: "48129163"
   
 6.  Klicken Sie im **Skripttask-Editor**auf der Seite **Skript** auf **Skript bearbeiten** , um die Skriptentwicklungsumgebung zu öffnen.  
   
-7.  Geben Sie in der Main-Prozedur Code zum Protokollieren eines Fehlers durch Aufrufen der `Dts.Log` -Methode, oder um ein Ereignis auszulösen, durch Aufrufen einer der Methoden von der `Dts.Events` Schnittstelle. Informieren Sie das Paket über den Fehler, indem Sie `Dts.TaskResult = Dts.Results.Failure`zurückgeben.  
+7.  Geben Sie in der Main-Prozedur Code ein, um einen Fehler zu protokollieren, indem Sie die `Dts.Log`-Methode aufrufen, oder um ein Ereignis auszulösen, indem Sie eine der Methoden der `Dts.Events`-Schnittstelle aufrufen. Informieren Sie das Paket über den Fehler, indem Sie `Dts.TaskResult = Dts.Results.Failure`zurückgeben.  
   
      Im folgenden Beispiel wird gezeigt, wie eine Meldung ins Protokoll geschrieben wird. Weitere Informationen finden Sie unter [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md), [Raising Events in the Script Task](../extending-packages-scripting/task/raising-events-in-the-script-task.md)und [Returning Results from the Script Task](../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   

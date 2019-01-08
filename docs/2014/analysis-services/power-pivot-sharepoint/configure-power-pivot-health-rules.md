@@ -11,12 +11,12 @@ ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbeb44d09f9825a640bc849f4127751ef39aa72c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f96a4b976d338e7f005d0f731bac0b58f5798bb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118534"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401475"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot-Integritätsregeln − Konfigurieren
   PowerPivot für SharePoint enthält SharePoint-Integritätsregeln, mit deren Hilfe Sie Probleme mit der Serververfügbarkeit und -konfiguration überwachen und beheben können. Die für PowerPivot für SharePoint geltenden Integritätsregeln werden auf der Seite "Regeldefinitionen überprüfen" angezeigt.  
@@ -29,10 +29,10 @@ ms.locfileid: "48118534"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **Hinweis:** Integritätsregeleinstellungen werden für die SQL Server Analysis Services-Instanz und die PowerPivot-Dienstanwendung getrennt konfiguriert. Konfigurieren Sie Integritätsregeln für jeden Dienst mithilfe der Anweisungen in diesem Thema. Bei einer SharePoint 2013-Bereitstellung verwendet [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nur die Dienstanwendung. Daher werden durch [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] verschiedene Sätze von Integritätsregeln für unterschiedliche SharePoint-Versionen installiert. Finden Sie unter der Spalte "Version" des Themas [Referenz zu Integritätsregeln &#40;PowerPivot für SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), oder Sie können auf der installierten Regeln finden Sie unter den folgenden Windows PowerShell-Befehl ausführen.  
+ **Hinweis**: Integritätsregeleinstellungen werden für die SQL Server Analysis Services-Instanz und die PowerPivot-Dienstanwendung getrennt konfiguriert. Konfigurieren Sie Integritätsregeln für jeden Dienst mithilfe der Anweisungen in diesem Thema. Bei einer SharePoint 2013-Bereitstellung verwendet [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nur die Dienstanwendung. Daher werden durch [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] verschiedene Sätze von Integritätsregeln für unterschiedliche SharePoint-Versionen installiert. Finden Sie unter der Spalte "Version" des Themas [Referenz zu Integritätsregeln &#40;PowerPivot für SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), oder Sie können auf der installierten Regeln finden Sie unter den folgenden Windows PowerShell-Befehl ausführen.  
   
 ```  
-Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
+Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
 ```  
   
  **In diesem Thema:**  
@@ -74,27 +74,27 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Unzureichende CPU-Ressourcenzuteilung (Standardwert ist 80 %)  
      Diese Integritätsregel wird ausgelöst, wenn die vom Analysis Services-Serverprozess (msmdsrv.exe) verwendeten CPU-Ressourcen bei oder über 80 % für einen Zeitraum von 4 Stunden bleiben (wie durch die Einstellung für das Datensammlungsintervall angegeben).  
   
-     Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der Seite **Probleme und Lösungen überprüfen** : **PowerPivot: Analysis Services verfügt nicht über ausreichende CPU-Ressourcen, um die angeforderten Vorgänge auszuführen**.  
+     Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der **Probleme und Lösungen überprüfen** Seite: **PowerPivot: Analysis Services verfügt nicht über genügend CPU-Ressourcen, um die angeforderten Vorgänge auszuführen.**  
   
      Unzureichende CPU-Ressourcen im System (Standardwert ist 90 %)  
      Diese Integritätsregel wird ausgelöst, wenn CPU-Ressourcen für den Server über einen Zeitraum von 4 Stunden bei oder oberhalb 90 % bleiben (wie durch die Einstellung für das Datensammlungsintervall angegeben). Die CPU-Gesamtauslastung wird als Teil des zustandsbasierten Lastenausgleichsalgorithmus gemessen, der die CPU-Auslastung als Measure des Serverzustands überwacht.  
   
-     Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der Seite **Probleme und Lösungen überprüfen** : **PowerPivot: Die CPU-Gesamtauslastung ist zu hoch**.  
+     Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der **Probleme und Lösungen überprüfen** Seite: **PowerPivot: CPU-Auslastung-Gesamtauslastung ist zu hoch.**  
   
      Schwellenwert für unzureichenden Arbeitsspeicher (Standardwert ist 5 %)  
      Auf einem SharePoint-Anwendungsserver sollte eine SQL Server Analysis Services-Instanz immer über einen kleinen Arbeitsspeicher als Reserve verfügen, der nie verwendet wird. Da der Server für die meisten Vorgänge arbeitsspeichergebunden ist, läuft er am besten, wenn er nicht ganz bis zur oberen Grenze ausgeführt wird. Die 5 % nicht verwendeter Arbeitsspeicher werden als Prozentsatz des Arbeitsspeichers berechnet, der den Analysis Services zugeordnet wird. Wenn der gesamte Speicher z. B. 200 GB beträgt und Analysis Services davon 80 % (oder 160 GB) belegt, dann entsprechen die 5 % nicht verwendeter Speicher 5 % von 160 GB (oder 8 GB).  
   
-     Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der Seite **Probleme und Lösungen überprüfen** : **PowerPivot: Analysis Services verfügt nicht über genügend Arbeitsspeicher, um die angeforderten Vorgänge auszuführen**.  
+     Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der **Probleme und Lösungen überprüfen** Seite: **PowerPivot: Analysis Services verfügt nicht über genügend Arbeitsspeicher, um die angeforderten Vorgänge auszuführen.**  
   
      Maximale Anzahl von Verbindungen (Standardwert ist 100)  
      Diese Integritätsregel wird ausgelöst, wenn die Anzahl von Verbindungen zur Analysis Services-Instanz über einen Zeitraum von 4 Stunden bei oder über 100 Verbindungen bleibt (wie durch die Einstellung für das Datensammlungsintervall angegeben). Dieser Standardwert ist ein beliebiger Wert (basiert nicht auf den Hardwarespezifikationen des Servers oder auf der Benutzeraktivität), damit Sie den Wert abhängig von der Serverkapazität und Benutzeraktivität in der Umgebung herauf- oder herabsetzen können.  
   
-     Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der Seite **Probleme und Lösungen überprüfen** : **PowerPivot: Die hohe Verbindungsanzahl weist darauf hin, dass weitere Server zur Bewältigung der aktuellen Arbeitslast bereitgestellt werden sollten**.  
+     Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der **Probleme und Lösungen überprüfen** Seite: **PowerPivot: Die hohe Verbindungsanzahl weist darauf hin, dass weitere Server zur Bewältigung der aktuellen Arbeitslast bereitgestellt werden soll.**  
   
      Nicht genügend Speicherplatz (Standardwert ist 5 %)  
      Der Speicherplatz wird verwendet, um jedes Mal PowerPivot-Daten zwischenzuspeichern, wenn eine Datenbank angefordert wird. Mit dieser Regel wissen Sie, wann nicht genügend Speicherplatz zur Verfügung steht. Standardmäßig wird diese Integritätsregel ausgelöst, wenn der Speicherplatz auf dem Laufwerk mit dem Sicherungsordner geringer als 5 % ist. Weitere Informationen zur datenträgernutzung finden Sie unter [Konfigurieren der Speicherplatzverwendung &#40;PowerPivot für SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md).  
   
-     Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der Seite **Probleme und Lösungen überprüfen** : **PowerPivot: Das Laufwerk, auf dem PowerPivot-Daten zwischengespeichert werden, verfügt über unzureichenden Speicherplatz**.  
+     Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der **Probleme und Lösungen überprüfen** Seite: **PowerPivot: Speicherplatz auf dem Datenträger weist nicht genügend das Laufwerk auf dem PowerPivot-Daten zwischengespeichert werden.**  
   
      Datensammlungsintervall (in Stunden)  
      Sie können den Zeitraum der Datensammlung angeben, der zum Berechnen der Zahlen, die zum Auslösen von Integritätsregeln verwendet werden, genutzt wird. Obwohl das System ständig überwacht wird, werden die zum Auslösen von Integritätsregelwarnungen verwendeten Schwellenwerte anhand von Daten berechnet, die im Verlauf eines vordefinierten Intervalls generiert wurden. Das Standardintervall beträgt 4 Stunden. Der Server ruft System- und Verwendungsdaten ab, die in den vorherigen 4 Stunden erfasst wurden, um die Anzahl von Benutzerverbindungen, die Speicherplatzverwendung und CPU- und Arbeitsspeicherauslastungsraten auszuwerten.  
@@ -116,7 +116,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Verhältnis zwischen Lade- und Verbindungsereignissen (Standardwert ist 20 %)  
      Diese Integritätsregel wird ausgelöst, wenn die Anzahl der Ladeereignisse relativ zur Anzahl der Verbindungsereignisse hoch ist, wodurch angezeigt wird, dass der Server Datenbanken möglicherweise zu schnell entlädt oder dass die Einstellungen für die Cachereduzierung zu umfassend sind.  
   
-     Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der Seite **Probleme und Lösungen überprüfen** : **PowerPivot: Das Verhältnis zwischen Ladeereignissen und Verbindungen ist zu hoch**.  
+     Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der **Probleme und Lösungen überprüfen** Seite: **PowerPivot: Das Verhältnis von ladeereignissen Verbindungen ist zu hoch.**  
   
      Datensammlungsintervall (Standardwert ist 4 Stunden)  
      Sie können den Zeitraum der Datensammlung angeben, der zum Berechnen der Zahlen, die zum Auslösen von Integritätsregeln verwendet werden, genutzt wird. Obwohl das System ständig überwacht wird, werden die zum Auslösen von Integritätsregelwarnungen verwendeten Schwellenwerte anhand von Daten berechnet, die im Verlauf eines vordefinierten Intervalls generiert wurden. Das Standardintervall beträgt 4 Stunden. Der Server ruft System- und Verwendungsdaten ab, die in den vorherigen 4 Stunden erfasst wurden, um das Verhältnis zwischen Lade- und Verbindungsereignissen auszuwerten.  
@@ -126,7 +126,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
      Weitere Informationen zur Sammlung von Verwendungsdaten finden Sie unter [konfigurieren Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
-     Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der Seite **Probleme und Lösungen überprüfen** : **PowerPivot: Verwendungsdaten werden nicht mit der erwarteten Häufigkeit aktualisiert**.  
+     Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der **Probleme und Lösungen überprüfen** Seite: **PowerPivot: Verwendungsdaten werden nicht mit der erwarteten Häufigkeit aktualisiert.**  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren der Speicherplatzverwendung &#40;PowerPivot für SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)   

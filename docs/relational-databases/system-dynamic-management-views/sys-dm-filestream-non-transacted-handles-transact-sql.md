@@ -19,12 +19,12 @@ ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fcd30c5935b2d99d98c4bce2d9895498c509154
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b25594feb96fe10f0a04ad0ab542fd582089759
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781468"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411627"
 ---
 # <a name="sysdmfilestreamnontransactedhandles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "47781468"
 |object_id|ssNoversion|Objekt-ID der FileTable, der das Handle zugeordnet ist.|  
 |handle_id|ssNoversion|Eindeutiger Handlekontextbezeichner. Ein, die die [Sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) gespeicherten Prozedur an ein bestimmtes Handle abzubrechen.|  
 |file_object_type|ssNoversion|Typ des Handles. Gibt die Ebene der Hierarchie an, für die das Handle geöffnet wurde, d. h. die Datenbank oder das Element.|  
-|file_object_type_desc|nvarchar(120)|“UNDEFINED",<br />“SERVER_ROOT",<br />“DATABASE_ROOT",<br />“TABLE_ROOT",<br />“TABLE_ITEM"|  
+|file_object_type_desc|nvarchar(120)|"UNDEFINED"<br />"SERVER_ROOT",<br />"DATABASE_ROOT",<br />"TABLE_ROOT",<br />"TABLE_ITEM"|  
 |correlation_process_id|varbinary(8)|Enthält einen eindeutigen Bezeichner für den Prozess, von dem die Anforderung stammt.|  
 |correlation_thread_id|varbinary(8)|Enthält einen eindeutigen Bezeichner für den Thread, von dem die Anforderung stammt.|  
 |file_context|varbinary(8)|Zeiger auf das von diesem Handle verwendete Dateiobjekt.|  
 |state|ssNoversion|Der aktuelle Status des Handles. Der Status kann aktiv, geschlossen oder abgebrochen sein.|  
-|state_desc|nvarchar(120)|“ACTIVE",<br />“CLOSED",<br />“KILLED"|  
+|state_desc|nvarchar(120)|"AKTIV",<br />"GESCHLOSSEN"<br />"BEENDET"|  
 |current_workitem_type|ssNoversion|Der aktuelle Status für die Verarbeitung dieses Handles.|  
-|current_workitem_type_desc|nvarchar(120)|“NoSetWorkItemType",<br />“FFtPreCreateWorkitem",<br />“FFtGetPhysicalFileNameWorkitem",<br />“FFtPostCreateWorkitem",<br />“FFtPreCleanupWorkitem",<br />“FFtPostCleanupWorkitem",<br />“FFtPreCloseWorkitem",<br />“FFtQueryDirectoryWorkItem",<br />“FFtQueryInfoWorkItem",<br />“FFtQueryVolumeInfoWorkItem",<br />“FFtSetInfoWorkitem",<br />“FFtWriteCompletionWorkitem"|  
+|current_workitem_type_desc|nvarchar(120)|"NoSetWorkItemType",<br />"FFtPreCreateWorkitem",<br />"FFtGetPhysicalFileNameWorkitem",<br />"FFtPostCreateWorkitem",<br />"FFtPreCleanupWorkitem",<br />"FFtPostCleanupWorkitem",<br />"FFtPreCloseWorkitem",<br />"FFtQueryDirectoryWorkItem",<br />"FFtQueryInfoWorkItem",<br />"FFtQueryVolumeInfoWorkItem",<br />"FFtSetInfoWorkitem",<br />"FFtWriteCompletionWorkitem"|  
 |fcb_id|BIGINT|FileTable-Dateikontrollblock-ID.|  
 |item_id|varbinary(892)|Die Element-ID für eine Datei oder ein Verzeichnis. Ist möglicherweise NULL für Stammhandles des Servers.|  
 |is_directory|bit|Dies ist ein Verzeichnis.|  

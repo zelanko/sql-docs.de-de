@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71de5e0e883961af7737ba0aec5495fa59d2b453
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196610"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782972"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Filegroup-Element für Index (DTA)
   Gibt die Dateigruppe an, für die der Index für eine benutzerspezifische Konfiguration erstellt werden soll.  
@@ -42,7 +41,7 @@ ms.locfileid: "48196610"
 |--------------------|-----------------|  
 |**Datentyp und -länge**|`string`, unbegrenzte Länge.|  
 |**Standardwert**|Keine.|  
-|**Vorkommen**|Optional. Können Sie einmal für jede `Index` Element. Dieses Element kann nicht verwendet werden, wenn die `PartitionScheme` und `PartitionColumn` Elemente angegeben werden, für die `Index` Element.|  
+|**Vorkommen**|Dies ist optional. Einmalige Verwendung pro `Index`-Element möglich. Dieses Element kann nicht verwendet werden, wenn die `PartitionScheme`- und `PartitionColumn`-Elemente für das `Index`-Element angegeben wurden.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   

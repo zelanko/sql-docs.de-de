@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4c0c0ce3c367ad557584bfbed222e93bc616d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171072"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764572"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode-Element (DTA)
   Gibt an, dass der Datenbankoptimierungsratgeber während der Optimierungssitzung nur vorhandene Indizes, indizierte Sichten oder Partitionen löschen soll. Wenn diese Optimierungsoption angegeben ist, werden keine neuen physischen Entwurfsstrukturen berücksichtigt.  
@@ -41,7 +40,7 @@ ms.locfileid: "48171072"
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
-|**Vorkommen**|Optional. Können Sie nur einmal für jede `TuningOptions` Element. Kann nicht verwendet werden, wenn die folgenden Elemente, in angegeben werden der `TuningOptions` Element:<br /><br /> [FeatureSet-Element &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Partitioning-Element &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [KeepExisting-Element &#40;DTA&#41;](keepexisting-element-dta.md) ist auf **ALL** festgelegt|  
+|**Vorkommen**|Dies ist optional. Nur einmalige Verwendung pro `TuningOptions`-Element möglich. Keine Verwendung möglich, wenn im `TuningOptions`-Element die folgenden Elemente angegeben sind:<br /><br /> [FeatureSet-Element &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Partitioning-Element &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [KeepExisting-Element &#40;DTA&#41;](keepexisting-element-dta.md) ist auf **ALL** festgelegt|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48171072"
 |**Untergeordnete Elemente**|Keine.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt die `TuningOptions` Teil einer Datenbank-Engine Tuning Advisor XML-Eingabedatei, in denen die `DropOnlyMode` angegeben ist. In diesem Beispiel ist die Optimierungszeit auf 24 Stunden (1440 Minuten) begrenzt, und alle vorhandenen gruppierten und nicht gruppierten Indizes sollen gelöscht werden:  
+ Das folgende Beispiel veranschaulicht den `TuningOptions`-Abschnitt einer XML-Eingabedatei des Datenbankoptimierungsratgebers, wobei `DropOnlyMode` angegeben ist. In diesem Beispiel ist die Optimierungszeit auf 24 Stunden (1440 Minuten) begrenzt, und alle vorhandenen gruppierten und nicht gruppierten Indizes sollen gelöscht werden:  
   
 ```xml  
 <TuningOptions  

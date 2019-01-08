@@ -14,12 +14,12 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d5eadf38bcdb7573cf19941535182e2cc8f87f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fc706cd372f4bee0c9449b15de6d070240141bd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111500"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414787"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Erstellen, Ändern und Löschen von Standardabonnements (Reporting Services im einheitlichen Modus)
   Ein Standardabonnement wird von einzelnen Benutzern erstellt, die einen Bericht per E-Mail oder an einen freigegebenen Ordner übermitteln möchten. Ein Standardabonnement wird stets über den Bericht definiert, auf dem es basiert.  
@@ -27,7 +27,7 @@ ms.locfileid: "48111500"
  Ein Benutzer, der ein Abonnement erstellt, ist Besitzer dieses Abonnements. Jeder Benutzer kann seine eigenen Abonnements ändern oder löschen.  
   
 > [!NOTE]  
->  Beginnend mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können Sie den Besitz eines Abonnements programmgesteuert übertragen. Es gibt keine Benutzeroberfläche, mit der Sie den Besitz von Abonnements übertragen können. Weitere Informationen finden Sie unter <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  Beginnend mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können Sie den Besitz eines Abonnements programmgesteuert übertragen. Es gibt keine Benutzeroberfläche, mit der Sie den Besitz von Abonnements übertragen können. Weitere Informationen finden Sie unter <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>.  
   
  In Abhängigkeit von den Einstellungen in der Konfigurationsdatei **RSReportServer.config** können Benutzer zusätzliche Benutzer zu einem Abonnement hinzufügen (z. B. kann ein Manager die E-Mail-Adressen seiner Mitarbeiter hinzufügen, damit jeder eine Kopie des Berichts erhält). Dies wird nur unterstützt, wenn das Feld An: beim Definieren einzelner Abonnements angezeigt wird. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
@@ -58,13 +58,13 @@ ms.locfileid: "48111500"
   
 -   Zum Verwenden der Dateifreigabeübermittlung müssen bereits Zielordner definiert sein. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
- Bevor Sie einen Bericht abonnieren können, muss die Berichtsdatenquelle so konfiguriert sein, dass gespeicherte oder keine Anmeldeinformationen verwendet werden. Weitere Informationen finden Sie unter [Store-Anmeldeinformationen in einer Reporting Services-Datenquelle](../report-data/store-credentials-in-a-reporting-services-data-source.md). Wenn dies nicht der Fall ist, ist die Schaltfläche **Neues Abonnement** nicht verfügbar.  
+ Bevor Sie einen Bericht abonnieren können, muss die Berichtsdatenquelle so konfiguriert sein, dass gespeicherte oder keine Anmeldeinformationen verwendet werden. Weitere Informationen finden Sie unter [Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle](../report-data/store-credentials-in-a-reporting-services-data-source.md). Wenn dies nicht der Fall ist, ist die Schaltfläche **Neues Abonnement** nicht verfügbar.  
   
  In diesem Thema wird nicht erläutert, wie ein datengesteuertes Abonnement erstellt wird. Informationen zum Erstellen eines datengesteuerten Abonnements finden Sie unter [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) oder in der Onlinehilfe zur Seite „Erstellen eines datengesteuerten Abonnements im Berichts-Manager“.  
   
 ###  <a name="bkmk_create_fileshare_subscription"></a> So erstellen Sie ein Dateifreigabeabonnement  
   
-1.  Starten Sie [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
   
 2.  Navigieren Sie im Berichts-Manager auf der Seite **Inhalt** zum Bericht, den Sie abonnieren möchten. Klicken Sie auf den Bericht, um ihn zu öffnen.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "48111500"
 ##  <a name="bkmk_delete_subscription"></a> So löschen Sie ein Abonnement  
  So löschen Sie ein Abonnement  
   
-1.  Starten Sie [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
   
 2.  Klicken Sie im Berichts-Manager auf der globalen Symbolleiste auf **Meine Abonnements** , und navigieren Sie zu dem Abonnement, das Sie ändern oder löschen möchten.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "48111500"
  [Aufgaben und Berechtigungen](../security/tasks-and-permissions.md)   
  [Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../create-manage-subscriptions-native-mode-report-servers.md)   
- [Datengesteuerte Abonnements](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
  [Verwenden von „Meine Abonnements“](use-my-subscriptions-native-mode-report-server.md)  

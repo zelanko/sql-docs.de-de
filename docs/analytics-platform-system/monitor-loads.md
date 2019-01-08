@@ -1,6 +1,6 @@
 ---
-title: Überwachen Sie Parallel Data Warehouse lädt | Microsoft Docs
-description: Überwachen Sie aktive und aktuelle lädt mithilfe der Analytics Platform System (APS)-Verwaltungskonsole oder die Parallel Data Warehouse (PDW)-Systemsichten."
+title: Überwachen von Lasten für Parallel Data Warehouse | Microsoft-Dokumentation
+description: Überwachen Sie aktive und kürzlich vorgenommene lädt mithilfe der Analytics Platform System (APS)-Verwaltungskonsole oder Parallel Data Warehouse (PDW)-Systemsichten."
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,41 +9,41 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8980259b69dfa74c2bb27c9406553a5b5810348a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: cb840c64c2235a2f3902c45633aa5471655482dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585672"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413517"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Monitor wird in Parallel Data Warehouse geladen.
-Monitor aktiv und aktuell [Dwloader](dwloader.md) lädt mithilfe der Verwaltungskonsole Analytics Platform System (APS) oder Parallel Data Warehouse (PDW) [Systemsichten](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
+Überwachen Sie aktive und kürzlich vorgenommene [Dwloader](dwloader.md) lädt mithilfe der Verwaltungskonsole für Analytics Platform System (APS) oder Parallel Data Warehouse (PDW) [Systemsichten](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
   
 > [!TIP]  
-> Einige lädt werden mithilfe von INSERT-Anweisungen oder Business Intelligence-Tools, die SQL-Anweisungen verwenden, um die Replikatladevorgang initiiert. 
+> Mithilfe von INSERT-Anweisungen oder Business Intelligence-Tools, die SQL-Anweisungen verwenden, um den Ladevorgang durchzuführen, werden einige Lasten initiiert. 
 
 <!-- MISSING LINKS
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
-Unabhängig von der Methode, die zum Überwachen der Auslastung verwendet wird muss die Anmeldung über die Berechtigung zum Zugriff auf die zugrunde liegenden Datenquellen verfügen. 
+Unabhängig von der Methode, die zum Überwachen der Auslastung verwendet wird muss die Anmeldung den Zugriff auf die zugrunde liegenden Datenquellen Berechtigung. 
 
 <!-- MISSING LINKS
-For the permissions to grant, see “Use All of the Admin Console” in [Grant Permissions to Use the Admin Console](grant-permissions-admin-console.md). 
+For the permissions to grant, see "Use All of the Admin Console" in [Grant Permissions to Use the Admin Console](grant-permissions-admin-console.md). 
 
 --> 
   
 ## <a name="monitoring-loads"></a>Überwachen der Auslastung  
 In den folgenden Abschnitten wird beschrieben, wie Lasten zu überwachen.  
   
-### <a name="to-monitor-loads-by-using-the-admin-console"></a>Lädt mithilfe der Verwaltungskonsole überwachen  
+### <a name="to-monitor-loads-by-using-the-admin-console"></a>Lädt mit der Admin-Konsole überwachen  
   
 1.  Melden Sie sich bei der Verwaltungskonsole. <!-- MISSING LINKS See [Monitor the Appliance by Using the Admin Console;](monitor-admin-console.md) for instructions. --> 
   
-2.  Klicken Sie im oberen Menü auf **lädt**. Sie sehen, sortierbar Aufstellung aller letzten und aktiver Ladevorgänge sowie zusätzliche Informationen, z. B., ob der Auslastungstest abgeschlossen ist oder noch aktiv ist. Klicken Sie auf die Spaltenüberschriften, um die Zeilen zu sortieren.  
+2.  Klicken Sie auf die im oberen Menü auf **lädt**. Sie sehen eine sortierbare Tabelle, die mit allen aktuellen und aktiver Ladevorgänge sowie zusätzliche Informationen wie gibt an, ob der Ladevorgang abgeschlossen ist oder noch aktiv ist. Klicken Sie auf die Spaltenüberschriften, um die Zeilen sortieren.  
   
-3.  Um zusätzliche Details für eine bestimmte Auslastung anzuzeigen, klicken Sie auf die Last **ID** in der linken Spalte. In der Detailansicht können Sie zu den einzelnen Schritten des Ladevorgangs Status anzuzeigen.  
+3.  Um zusätzliche Details für eine bestimmte Auslastung anzuzeigen, klicken Sie auf der Last **ID** in der linken Spalte. In der Detailansicht sehen Sie auf die einzelnen Schritte des Ladevorgangs wird ausgeführt.  
   
 Diese Systemsichten Informationen finden Sie die Metadaten über die Last, die in der Verwaltungskonsole angezeigt wird:  
   
@@ -55,18 +55,18 @@ Diese Systemsichten Informationen finden Sie die Metadaten über die Last, die i
   
 -   [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
-### <a name="to-monitor-loads-by-using-system-views"></a>Lädt mithilfe von Systemsichten überwachen  
-Führen Sie zum Überwachen von aktiven und aktuell lädt mithilfe von SQL Server PDW-Ansichten die folgenden Schritte aus. Jede Systemsicht, die verwendet wird finden Sie in der Dokumentation für diese Sicht Informationen für die Spalten und die möglichen Werte, die von der Sicht zurückgegeben.  
+### <a name="to-monitor-loads-by-using-system-views"></a>Lädt mithilfe von Systemansichten überwachen  
+Führen Sie die folgenden Schritte aus, um aktive und kürzlich vorgenommene lädt mithilfe von SQL Server-PDW-Ansichten zu überwachen. Für jede Systemsicht, die verwendet wird finden Sie unter der Dokumentation für diese Sicht Informationen für die Spalten und die möglichen Werte, die von der Sicht zurückgegeben.  
   
-1.  Suchen der `request_id` für das Laden in das [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) Ansicht mit einer Suche nach dem Ladeprogramm Befehlszeile in der `command` Spalte für diese Ansicht.  
+1.  Suchen der `request_id` für das Laden in die [dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) Ansicht durch Suchen der Loader-Befehlszeile in die `command` Spalte für diese Ansicht.  
   
-    Beispielsweise der folgende Befehl gibt, die Befehlstext und den aktuellen Status sowie die `request_id`.  
+    Beispielsweise gibt der folgende Befehl zurück, die Befehlstext und aktueller Status, sowie die `request_id`.  
   
     ```sql  
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
     ```  
   
-2.  Verwenden der `request_id` zum Abrufen von zusätzlichen Informationen für das Laden mithilfe der [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) , und [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) Ansichten. Z. B. die folgende Abfrage gibt die `run_id` und Informationen über die starten, beenden und Dauer, wie oft die Last sowie Fehler und Informationen über die Anzahl der verarbeiteten Zeilen:  
+2.  Verwenden der `request_id` zum Abrufen zusätzlicher Informationen für das Laden mithilfe der [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) , und [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) Ansichten. Z. B. die folgende Abfrage gibt die `run_id` und Informationen zu den Start, Ende und Dauer, wie oft die Last sowie Fehler und Informationen über die Anzahl der verarbeiteten Zeilen:  
   
     ```sql  
     SELECT lbr.run_id,   
@@ -75,7 +75,7 @@ Führen Sie zum Überwachen von aktiven und aktuell lädt mithilfe von SQL Serve
     LEFT OUTER JOIN   
     sys.pdw_loader_backup_runs lbr   
     ON (er.request_id=lbr.requst_id)   
-    WHERE er.request_id=’12738’;  
+    WHERE er.request_id='12738';  
     ```  
   
 <!-- MISSING LINKS

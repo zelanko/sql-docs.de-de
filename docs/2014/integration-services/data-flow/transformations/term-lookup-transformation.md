@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookuptrans.f1
@@ -21,12 +20,12 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e721fa24a987d0978c2c89f0c0fc81046c113560
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2286ba205d6ca12f025c8ac154b77a11e1754ff2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147400"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749872"
 ---
 # <a name="term-lookup-transformation"></a>Transformation für Ausdruckssuche
   Die Transformation für Ausdruckssuche vergleicht aus Text in einer Transformationseingabespalte extrahierte Ausdrücke mit Ausdrücken in einer Verweistabelle. Anschließend wird gezählt, wie häufig ein Ausdruck in der Nachschlagetabelle im Eingabedataset vorkommt. Dieser Wert wird zusammen mit dem Ausdruck aus der Verweistabelle in Spalten in der Transformationsausgabe geschrieben. Mit dieser Transformation können Sie eine benutzerdefinierte Kennwortliste basierend auf dem Eingabetext erstellen, einschließlich Worthäufigkeitsstatistiken.  
@@ -55,15 +54,15 @@ ms.locfileid: "48147400"
   
 -   Wenn der Text in der Eingabespalte ein lemmatisierter nominaler Ausdruck ist, ist nur das letzte Wort des nominalen Ausdrucks von der Normalisierung betroffen. Die lemmatisierte Version von *doctors appointments* lautet beispielsweise *doctors appointment*.  
   
- Wenn ein Suchelement Ausdrücke enthält, die sich im Verweissatz überlappen (d. h. ein Unterausdruck ist in mehreren Verweisdatensätzen zu finden), gibt die Transformation für Ausdruckssuche nur ein Suchergebnis zurück. Das folgende Beispiel zeigt das Ergebnis für den Fall, dass ein Suchelement einen sich überlappenden Unterausdruck enthält. In diesem Fall ist *Windows*der überlappende Unterausdruck, der sich in zwei Verweisausdrücken findet. Die Transformation gibt jedoch keine zwei Ergebnisse, sondern nur einen Verweisausdruck zurück: *Windows*. Der zweite Verweisausdruck, *Windows 7 Professional*, wird nicht zurückgegeben.  
+ Wenn ein Suchelement Ausdrücke enthält, die sich im Verweissatz überlappen (d.h. ein Unterausdruck ist in mehreren Verweisdatensätzen zu finden), gibt die Transformation für Ausdruckssuche nur ein Suchergebnis zurück. Das folgende Beispiel zeigt das Ergebnis für den Fall, dass ein Suchelement einen sich überlappenden Unterausdruck enthält. In diesem Fall ist *Windows*der überlappende Unterausdruck, der sich in zwei Verweisausdrücken findet. Die Transformation gibt jedoch keine zwei Ergebnisse, sondern nur einen Verweisausdruck zurück: *Windows*. Der zweite Verweisausdruck, *Windows 7 Professional*, wird nicht zurückgegeben.  
   
-|Element|value|  
+|Element|Wert|  
 |----------|-----------|  
 |Eingabeausdruck|Windows 7 Professional|  
 |Verweisausdrücke|Windows, Windows 7 Professional|  
 |Ausgabe|Windows|  
   
- Die Transformation für Ausdruckssuche kann Nomen und nominale Ausdrücke vergleichen, die Sonderzeichen enthalten, und die Daten in der Verweistabelle können diese Zeichen enthalten. Die Sonderzeichen sind die folgenden: %, @, &, $, #, \*, :, ;, ., **,**, !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, und ‘.  
+ Die Transformation für Ausdruckssuche kann Nomen und nominale Ausdrücke vergleichen, die Sonderzeichen enthalten, und die Daten in der Verweistabelle können diese Zeichen enthalten. Folgende Sonderzeichen sind zulässig: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " und '.  
   
 ## <a name="data-types"></a>Datentypen  
  Die Transformation für Ausdruckssuche kann nur eine Spalte vom Datentyp DT_WSTR oder DT_NTEXT verwenden. Wenn eine Spalte Text enthält, aber keinen dieser Datentypen aufweist, kann die Transformation für Datenkonvertierung dem Datenfluss eine Spalte vom Datentyp DT_WSTR oder DT_NTEXT hinzufügen und die Spaltenwerte in die neue Spalte kopieren. Die Ausgabe von der Transformation für Datenkonvertierung kann dann als Eingabe für die Transformation für Ausdruckssuche verwendet werden. Weitere Informationen finden Sie unter [Data Conversion Transformation](data-conversion-transformation.md).  
@@ -79,7 +78,7 @@ ms.locfileid: "48147400"
   
  Transformations-Ausgabespalten, deren InputColumnType-Eigenschaft auf 0 oder 2 festgelegt ist, umfassen die CustomLineageID-Eigenschaft für eine Spalte, die den Herkunftsbezeichner enthält, der einer Spalte durch einen Upstreamdatenfluss-Komponenten zugewiesen wird.  
   
- Die Transformation für Ausdruckssuche erhält standardmäßig den Namen der Transformationsausgabe zwei Spalten hinzugefügt `Term` und `Frequency`. `Term` enthält einen Ausdruck aus der Nachschlagetabelle, und `Frequency` enthält die Angabe, wie häufig der Ausdruck in der Verweistabelle im Eingabedataset vorkommt. Diese Spalten beinhalten keine CustomLineageID-Eigenschaft.  
+ Die Transformation für Ausdruckssuche fügt der Transformationsausgabe zwei Spalten hinzu, die standardmäßig `Term` und `Frequency` heißen. `Term` enthält einen Ausdruck aus der Nachschlagetabelle, und `Frequency` enthält die Angabe, wie häufig der Ausdruck in der Verweistabelle im Eingabedataset vorkommt. Diese Spalten beinhalten keine CustomLineageID-Eigenschaft.  
   
  Die Nachschlagetabelle muss eine Tabelle in einer der Datenbanken von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder einer Access-Datenbank sein. Wenn die Ausgabe der Transformation für Ausdrucksextrahierung in einer Tabelle gespeichert wird, kann diese Tabelle als Verweistabelle verwendet werden, andere Tabellen können allerdings ebenfalls verwendet werden. Text in Flatfiles, Excel-Arbeitsmappen oder sonstige Quellen müssen in eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank oder eine Access-Datenbank importiert werden, bevor die Transformation für Ausdruckssuche verwendet werden kann.  
   
@@ -95,11 +94,11 @@ ms.locfileid: "48147400"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Ausdruckssuche** festlegen können:  
   
--   [Transformations-Editor Begriff &#40;verweisen auf die Registerkarte "Tabelle"&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [Transformations-Editor für Ausdruckssuche &#40;Registerkarte „Verweistabelle“&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
--   [Transformations-Editor Begriff &#40;Registerkarte Ausdruckssuche&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+-   [Transformations-Editor für Ausdruckssuche &#40;Registerkarte Ausdruckssuche&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [Transformations-Editor Begriff &#40;Registerkarte "Erweitert"&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [Transformations-Editor für Ausdruckssuche &#40;Registerkarte Erweitert&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   

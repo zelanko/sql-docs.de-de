@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 4: Erstellen von Beziehungen | Microsoft-Dokumentation'
+title: 'Lektion 4: Beziehungen erstellen | Microsoft Dokumentation'
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbddc0966729b93b2e9ac202966dff645c28c32c
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 2cfa28b4fa5575fbdda06ed64f8f52994b596186
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792030"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411297"
 ---
-# <a name="lesson-4-create-relationships"></a>Lektion 4: Erstellen von Beziehungen
+# <a name="lesson-4-create-relationships"></a>Lektion 4: Beziehungen erstellen
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 In dieser Lektion überprüfen Sie die Beziehungen, die beim Importieren von Daten automatisch erstellt wurden. Zudem fügen Sie neue Beziehungen zwischen verschiedenen Tabellen hinzu. Eine Beziehung ist eine Verbindung zwischen zwei Tabellen, die festlegt, wie die Daten in diesen Tabellen miteinander in Beziehung gesetzt werden sollen. Die DimProduct-Tabelle und die DimProductSubcategory-Tabelle haben beispielsweise eine Beziehung, die darauf beruht, dass jedes Produkt zu einer Unterkategorie gehört. Weitere Informationen finden Sie unter [Beziehungen](../analysis-services/tabular-models/relationships-ssas-tabular.md).
@@ -24,7 +24,7 @@ In dieser Lektion überprüfen Sie die Beziehungen, die beim Importieren von Dat
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **10 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
-Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 3: Markieren als Datumstabelle](../analysis-services/lesson-3-mark-as-date-table.md). 
+Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 3: Als Datumstabelle markieren](../analysis-services/lesson-3-mark-as-date-table.md). 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Überprüfen vorhandener Beziehungen und Hinzufügen neuer Beziehungen  
 Wenn Sie Daten mithilfe des Tabellenimport-Assistenten importiert haben, haben Sie sieben Tabellen aus der Datenbank "AdventureWorksDW". Wenn Sie Daten aus einer relationalen Quelle importieren, werden im Allgemeinen vorhandene Beziehungen automatisch zusammen mit den Daten importiert. Bevor Sie jedoch mit der Erstellung des Modells fortfahren, überprüfen Sie, ob die Beziehungen zwischen den Tabellen ordnungsgemäß erstellt wurden. In diesem Lernprogramm fügen Sie auch drei neue Beziehungen hinzu.  
@@ -41,7 +41,7 @@ Wenn Sie Daten mithilfe des Tabellenimport-Assistenten importiert haben, haben S
   
 2.  Klicken Sie auf die durchgezogene Linie zwischen den **DimCustomer** Tabelle und die **DimGeography** Tabelle. Die durchgezogene Linie zwischen diesen zwei Tabellen zeigt an, dass diese Beziehung aktiv ist. Sie wird folglich bei der Berechnung von DAX-Formeln standardmäßig verwendet.  
   
-    Beachten Sie, dass die **GeographyKey** -Spalte in der **DimCustomer** Tabelle und die **GeographyKey** -Spalte in der **DimGeography** Tabelle jetzt sowohl Jede in ein Feld angezeigt werden. Diese Anzeige sind die Spalten in der Beziehung verwendet. Die Eigenschaften der Beziehung werden jetzt auch im Fenster **Eigenschaften** angezeigt.  
+    Beachten Sie, dass die **GeographyKey** -Spalte in der **DimCustomer** Tabelle und die **GeographyKey** -Spalte in der **DimGeography** Tabelle jetzt sowohl Jede in ein Feld angezeigt werden. Diese Anzeige sind die Spalten in der Beziehung verwendet. Die Eigenschaften der Beziehung ist jetzt auch im angezeigt der **Eigenschaften** Fenster.  
   
     > [!TIP]  
     > Zusätzlich zur Verwendung im Modell-Designers in der Diagrammsicht können auch können das Dialogfeld "Beziehungen verwalten" Sie die Beziehungen zwischen allen Tabellen in einem Tabellenformat anzuzeigen. Mit der rechten Maustaste **Beziehungen** tabellarischer Modell-Explorer, und klicken Sie auf **Beziehungen verwalten**. Das Dialogfeld "Beziehungen verwalten" anzeigen, der Beziehungen, die beim Importieren von Daten automatisch erstellt wurden.  
@@ -50,11 +50,11 @@ Wenn Sie Daten mithilfe des Tabellenimport-Assistenten importiert haben, haben S
   
     |Active|Tabelle|Verknüpfte Suchtabelle|  
     |----------|---------|------------------------|  
-    |Benutzerkontensteuerung|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
-    |Benutzerkontensteuerung|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
-    |Benutzerkontensteuerung|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
-    |Benutzerkontensteuerung|**"Factinternetsales" [CustomerKey]**|**DimCustomer [CustomerKey]**|  
-    |Benutzerkontensteuerung|**"Factinternetsales" [ProductKey]**|**DimProduct [ProductKey]**|  
+    |Ja|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
+    |Ja|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
+    |Ja|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
+    |Ja|**"Factinternetsales" [CustomerKey]**|**DimCustomer [CustomerKey]**|  
+    |Ja|**"Factinternetsales" [ProductKey]**|**DimProduct [ProductKey]**|  
   
     Wenn die Beziehungen in der obigen Tabelle nicht vorhanden sind, stellen Sie sicher, dass Ihr Modell in den folgenden Tabellen enthält: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory und FactInternetSales. Werden Tabellen über die gleiche Datenquellenverbindung zu unterschiedlichen Zeitpunkten importiert, werden Beziehungen zwischen diesen Tabellen nicht automatisch erstellt, sondern sind manuell zu erstellen.  
 

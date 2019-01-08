@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - scripts
@@ -13,12 +12,12 @@ ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a622bdebc82f1c557a80ea43a18f474a852cca9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d4731cbc7b6b4a761de3c5d0e3777a028c8a3c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048990"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777083"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Überprüfen und Generieren ergänzender Protokollierungsskripts
   Verwenden Sie die Registerkarte **Skripts**, um ein Skript für die Oracle-Quelldatenbank auszuführen bzw. erneut auszuführen, mit dem die ergänzende Protokollierung eingerichtet wird.  
@@ -55,7 +54,7 @@ ms.locfileid: "48048990"
 2.  Geben Sie der Datei einen Namen, und klicken Sie auf **Speichern** , um die Datei zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Bearbeiten der CDC-Instanzeigenschaften](how-to-edit-the-cdc-instance-properties.md)   
- [Oracle-Anmeldeinformationen zum Ausführen von Skripts](oracle-credentials-for-running-script.md)  
+ [Bearbeiten der CDC-Instanzeigenschaften](how-to-edit-the-cdc-instance-properties.md)   
+ [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)  
   
   

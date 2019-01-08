@@ -15,19 +15,19 @@ ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3e3b99c917b6f272f4af325a35712f059313742c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85f0c099aba12fe9a4049fe787e248cfe580ff3b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172560"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400463"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Zielsucheszenario (Tabellenanalysetools für Excel)
   ![Ziel suchen-Schaltfläche in Tabellenanalysetools](media/tat-goalseek.gif "Zielsuche-Schaltfläche in Tabellenanalysetools")  
   
  Die **Zielsuche** Szenario ist eine Ergänzung zu den [was geschieht, wenn](what-if-scenario-table-analysis-tools-for-excel.md) Szenario. Die **What-If** Tool informiert Sie die Auswirkungen einer Änderung, während die **Zielsuche** Tool informiert Sie die zugrunde liegenden Faktoren, die geändert werden müssen, um ein gewünschtes Ergebnis zu erzielen.  
   
- Angenommen, Sie möchten die Kundenzufriedenheit erhöhen. Sie können **Zielsuche** Analysen, um zu bestimmen, welche Faktoren die Kundenzufriedenheit zu erhöhen, und entscheiden, ob diese Änderungen kosteneffizient sind am wahrscheinlichsten werden würde.  
+ Nehmen wir z. B. an, dass Ihr Ziel ist, um die Kundenzufriedenheit zu erhöhen. Sie können **Zielsuche** Analysen, um zu bestimmen, welche Faktoren die Kundenzufriedenheit zu erhöhen, und entscheiden, ob diese Änderungen kosteneffizient sind am wahrscheinlichsten werden würde.  
   
  Nach Abschluss der Analyse durch das Tool werden zwei neue Spalten in der Quelldatentabelle erstellt. Diese Spalten zeigen die *Wahrscheinlichkeit* , die das gewünschte Ergebnis erreicht werden kann, und ggf. die empfohlene Änderung.  
   

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 216b04e58d741d3c44cd187ba94eaac7ee791762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdb255570febc6d37bef824958c15422b6fae733
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837798"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503194"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |last_closed_checkpoint_ts|**bigint**|Zeitstempel des letzten Prüfpunkts geschlossen.|  
 |hardened_recovery_lsn|**numeric(38)**|Wiederherstellung wird von dieser LSN gestartet.|  
 |hardened_root_file_guid|**uniqueidentifier**|GUID der Datei des Stammzertifikats, die als Ergebnis der letzten abgeschlossenen Prüfpunkt festgeschrieben.|  
-|hardened_root_file_watermark|**bigint**|**Interne nur**. Wie weit-Datei des Stammzertifikats bis zu gelesen werden kann (Dies ist nur ein intern relevante Typ Startsequenznummer bezeichnet).|  
+|hardened_root_file_watermark|**bigint**|**Interne nur**. Wie weit-Datei des Stammzertifikats bis zu gelesen werden kann (Dies ist nur - eine intern relevante Typ Startsequenznummer bezeichnet).|  
 |hardened_truncation_lsn|**numeric(38)**|LSN des den Protokollkürzungspunkt dar.|  
 |log_bytes_since_last_close|**bigint**|Bytes vom letzten Schließen Sie auf das aktuelle Protokollende.|  
 |time_since_last_close_in_ms|**bigint**|Zeit seit der letzten Schließen des Prüfpunkts.|  

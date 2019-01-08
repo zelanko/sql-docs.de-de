@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjectstask.f1
@@ -15,12 +14,12 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b45c0c3d20b3b7f6405e44a456cd5ebbce6472c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 163418048c50b35bd831174d6cd516d301dfa53f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175470"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761872"
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server-Objekte kopieren (Task)
   Mit dem Task „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen“ wird mindestens ein Typ von Objekten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zwischen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übertragen. Der Task kann z. B. Tabellen und gespeicherte Prozeduren kopieren. Je nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version, die als Quelle verwendet wird, stehen verschiedene Objekttypen zum Kopieren zur Verfügung. Nur eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank enthält z.B. Schemas und benutzerdefinierte Aggregate.  
@@ -33,7 +32,7 @@ ms.locfileid: "48175470"
 |Objekt|  
 |------------|  
 |Tabellen|  
-|Sichten|  
+|Ansichten|  
 |Gespeicherte Prozeduren|  
 |Benutzerdefinierte Funktionen|  
 |Standardwerte|  
@@ -80,7 +79,7 @@ ms.locfileid: "48175470"
  Der Task „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen“ meldet keinen schrittweisen Fortschritt der Objektübertragung, sondern nur 0 % und 100 % der Ausführung.  
   
 ## <a name="execution-value"></a>Ausführungswert  
- Der Ausführungswert, gespeichert der `ExecutionValue` -Eigenschaft des Tasks, gibt die Anzahl der übertragenen Objekte zurück. Indem der `ExecValueVariable`-Eigenschaft des Tasks "SQL Server-Objekte übertragen" eine benutzerdefinierte Variable zugewiesen wird, können Informationen über die Objektübertragung anderen Objekten im Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](../use-variables-in-packages.md).  
+ Der in der `ExecutionValue`-Eigenschaft des Tasks gespeicherte Ausführungswert gibt die Anzahl der übertragenen Objekte zurück. Indem der `ExecValueVariable`-Eigenschaft des Tasks "SQL Server-Objekte übertragen" eine benutzerdefinierte Variable zugewiesen wird, können Informationen über die Objektübertragung anderen Objekten im Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Protokolleinträge  
  Der Task "SQL Server-Objekte übertragen" enthält die folgenden benutzerdefinierten Protokolleinträge:  
@@ -89,7 +88,7 @@ ms.locfileid: "48175470"
   
 -   TransferSqlServerObjectsTaskFinishedTransferringObjects: Dieser Protokolleintrag meldet, dass die Übertragung abgeschlossen ist. Der Protokolleintrag enthält die Beendigungszeit.  
   
- Außerdem meldet ein Protokolleintrag für ein `OnInformation`-Ereignis die Anzahl der Objekttypen, die für die Übertragung ausgewählt wurden, die Anzahl der Objekte, die übertragen wurden sowie Aktionen, wie die Kürzung von Tabellen bei der Übertragung von Daten mit Tabellen. Ein Protokolleintrag für das `OnWarning` Ereignis wird für jedes Objekt auf dem Ziel, die überschrieben wird geschrieben.  
+ Außerdem meldet ein Protokolleintrag für ein `OnInformation`-Ereignis die Anzahl der Objekttypen, die für die Übertragung ausgewählt wurden, die Anzahl der Objekte, die übertragen wurden sowie Aktionen, wie die Kürzung von Tabellen bei der Übertragung von Daten mit Tabellen. Für jedes Objekt am Ziel, das überschrieben wird, wird ein Protokolleintrag für das `OnWarning`-Ereignis erstellt.  
   
 ## <a name="security-and-permissions"></a>Sicherheit und Berechtigungen  
  Der Benutzer muss über die Berechtigung zum Durchsuchen von Objekten auf dem Quellserver verfügen sowie über die Berechtigung zum Löschen und Erstellen von Objekten auf dem Zielserver. Außerdem muss der Benutzer Zugriff auf die angegebene Datenbank und die Datenbankobjekte haben.  
@@ -107,9 +106,9 @@ ms.locfileid: "48175470"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Task-Editor für SQL Server-Objekte übertragen &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task „SQL Server-Objekte übertragen“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Task-Editor für SQL Server-Objekte übertragen &#40;Seite "Objekte"&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
+-   [Editor für den Task „SQL Server-Objekte übertragen“ &#40;Seite „Objekte“&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

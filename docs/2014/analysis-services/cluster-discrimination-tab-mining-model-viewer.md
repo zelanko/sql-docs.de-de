@@ -13,19 +13,19 @@ ms.assetid: ae7cfff7-ab1c-4cf5-9a91-97b21d15d85f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc00f10403f748db0802f288ca66e6582429155c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f52f1e64d46b2509ae995a1f0dfa56c4dad22f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075060"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400373"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>Registerkarte "Clusterunterscheidung" (Miningmodell-Viewer)
   Verwenden Sie die Registerkarte **Clusterunterscheidung** , um zwei in einem Clusteringmodell vorhandene Cluster zu vergleichen. Sie können sehen, wie unterschiedliche Kombinationen von Attributen und Werten innerhalb der Cluster dargestellt werden.  
   
- **Weitere Informationen:** [Microsoft Clustering-Algorithmus](data-mining/microsoft-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Weitere Informationen finden Sie unter** [Microsoft Clustering-Algorithmus](data-mining/microsoft-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -48,12 +48,12 @@ ms.locfileid: "48075060"
 |-|-|  
 |**Variablen**|Ein Attribut im Miningmodell.|  
 |**Werte**|Ein Wert des in **Variablen**ausgewählten Attributs.|  
-|**Begünstigt \<cluster 1 >**|Das Balkendiagramm auf der linken Seite stellt die Wahrscheinlichkeit dar, dass das ausgewählte Attribut/Wert-Paar für den in **Cluster 1** ausgewählten Cluster repräsentativ ist. Sie können mit der Maus auf den Balken zeigen, um einen als Prozentsatz dargestellten Wert anzuzeigen. Beachten Sie, dass ein Wert von 0 (null) nicht unbedingt bedeutet, dass das Attribut/Wert-Paar im Cluster fehlt, dies bedeutet nur, dass die Verteilung einen Cluster gegenüber dem anderen stark begünstigt.|  
+|**Begünstigt \<cluster 1 >**|Das Balkendiagramm auf der linken Seite stellt die Wahrscheinlichkeit dar, dass das ausgewählte Attribut/Wert-Paar für den in **Cluster 1** ausgewählten Cluster repräsentativ ist. Sie können mit der Maus auf den Balken zeigen, um einen als Prozentsatz dargestellten Wert anzuzeigen. Beachten Sie, dass dies auch, wenn der Wert 0 (null) ist, das Attribut / Wert bedeutet nicht fehlt unbedingt aus dem Cluster nur, dass die Verteilung auf, einen Cluster gegenüber dem anderen stark begünstigt.|  
 |**Begünstigt \<cluster 2 >**|Das Balkendiagramm auf der rechten Seite stellt die Wahrscheinlichkeit dar, dass das ausgewählte Attribut/Wert-Paar für den in **Cluster 2** ausgewählten Cluster repräsentativ ist.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

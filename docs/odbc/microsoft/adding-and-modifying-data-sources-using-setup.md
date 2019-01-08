@@ -18,18 +18,18 @@ ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28f7fb52cb4babdce6e90452f40d81ba643466ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 953563285d3c62a8523079a604cf607f2e0edf62
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767758"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526858"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Erstellen und Ändern von Datenquellen mithilfe der Einrichtung
 > [!IMPORTANT]  
 >  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
   
- Eine Datenquelle gibt einen Pfad zu den Daten, die eine Netzwerkbibliothek, Server, Datenbank und andere Attribute enthalten können — in diesem Fall die Datenquelle ist der Pfad zu einer Oracle-Datenbank. Um eine Verbindung mit einer Datenquelle herzustellen, überprüft der Treiber-Manager die Windows-Registrierung für Verbindungsinformationen an.  
+ Eine Datenquelle gibt einen Pfad zu den Daten, die eine Netzwerkbibliothek, Server, Datenbank und andere Attribute enthalten können: in diesem Fall die Datenquelle ist der Pfad zu einer Oracle-Datenbank. Um eine Verbindung mit einer Datenquelle herzustellen, überprüft der Treiber-Manager die Windows-Registrierung für Verbindungsinformationen an.  
   
  Der Registrierungseintrag, der von ODBC-Datenquellen-Administrator erstellt, wird von der ODBC-Treiber-Manager und ODBC-Treiber verwendet. Dieser Eintrag enthält Informationen über jede Datenquelle und den zugehörigen Treiber. Bevor Sie mit einer Datenquelle verbinden können, muss die Verbindungsinformationen in der Registrierung hinzugefügt werden.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "47767758"
   
 1.  Klicken Sie auf Optionen stellen weitere Angaben über den ODBC-Treiber für Oracle-Setup:  
   
-    -   **Übersetzung** – klicken Sie auf auswählen, wählen Sie einen Übersetzer geladenen Daten. Der Standardwert ist \<keine Translator >.  
+    -   **Übersetzung** -klicken Sie auf auswählen, wählen Sie einen Übersetzer geladenen Daten. Der Standardwert ist \<keine Translator >.  
   
-    -   **Leistung** – die enthalten Hinweise im Kontrollkästchen Katalogfunktionen angibt, ob es sich bei gibt der Treiber "Hinweise"-Spalten für die [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) Resultset. Der ODBC-Treiber für Oracle bietet schnelleren Zugriff auf, wenn dieser Wert nicht festgelegt ist.  
+    -   **Leistung** -der enthalten Hinweise im Kontrollkästchen Katalogfunktionen angibt, ob es sich bei gibt der Treiber "Hinweise"-Spalten für die [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) Resultset. Der ODBC-Treiber für Oracle bietet schnelleren Zugriff auf, wenn dieser Wert nicht festgelegt ist.  
   
          Die SYNONYME sind Kontrollkästchen für die SQL-Spalten gibt an, ob der Treiber die Spalteninformationen zurückgegeben. **Puffergröße** gibt die Größe in Byte zugeordnet, um die abgerufene Daten zu erhalten. Der Treiber optimiert werden abgerufen, sodass einen Abruf aus der Oracle-Server genügend Zeilen für einen Puffer mit der angegebenen Größe füllen zurückgibt. Größere Werte sind tendenziell zu erhöhen, wenn eine große Datenmenge abrufen.  
   

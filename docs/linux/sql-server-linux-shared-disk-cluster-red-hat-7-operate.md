@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 4b41e3adeaab22a958e94e373762c57a6d613f6d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2967277ca109b9ee55221a7b12f5af891a5e45a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661266"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393574"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Betreiben Sie Cluster mit freigegebenen Datenträgern Red Hat Enterprise Linux für SQL Server
 
@@ -142,7 +142,7 @@ Anzeigen der Ressourcen-Agent-Protokolle an `/var/log/cluster/corosync.log`
    ```
 
    > [!NOTE]
-   > Wenn Sie eine andere Firewall verwenden, in die keine Konfiguration mit hoher Verfügbarkeit integriert ist, müssen die folgenden Ports geöffnet werden, damit Pacemaker mit anderen Knoten im Cluster kommunizieren kann:
+   > Wenn Sie eine andere Firewall verwenden, die nicht über eine integrierte Konfiguration mit hoher Verfügbarkeit verfügt, müssen die folgenden Ports geöffnet werden, damit Pacemaker mit anderen Knoten im Cluster kommunizieren können
    >
    > * TCP: Ports 2224, 3121, 21064
    > * UDP: Port 5405
@@ -269,7 +269,7 @@ Im Beispiel `partition with quorum` bedeutet, dass ein mehrheitsquorum von Knote
 
 - **Knoten namenszuordnungen**
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 * [Clustern von Grund auf Neu](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Leitfaden für Pacemaker
 

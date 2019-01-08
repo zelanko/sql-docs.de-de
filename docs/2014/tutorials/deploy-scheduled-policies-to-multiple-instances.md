@@ -11,12 +11,12 @@ ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e0e98af473babc84863c8e0a1610107843ca76d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f69addfdda05b00ff1f322b526bb656c2c9b317
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128270"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518620"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Bereitstellen geplanter Richtlinien auf mehreren Instanzen
   Mithilfe von registrierten Servern können Sie geplante Richtlinien von einem zentralen Ort aus auf verwalteten Servern bereitstellen. Sie können geplante Richtlinien entweder über eine lokale Servergruppe oder über einen zentralen Verwaltungsserver bereitstellen.  
@@ -36,7 +36,7 @@ ms.locfileid: "48128270"
   
 -   Auf den Instanzen, auf denen Sie die geplanten Richtlinien bereitstellen möchten, muss [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] oder eine höhere Version ausgeführt werden. Die Automatisierung erfordert, dass die Richtlinien lokal gespeichert werden. Dies wird für ältere [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Versionen als [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] nicht unterstützt.  
   
--   Die Server, in dem Sie die geplanten Richtlinien bereitstellen möchten, müssen im Fenster registrierte Server registriert werden, entweder in der **lokale Servergruppen** oder **zentrale Verwaltungsserver** Knoten. Weitere Informationen finden Sie in folgenden Themen:  
+-   Die Server, in dem Sie die geplanten Richtlinien bereitstellen möchten, müssen im Fenster registrierte Server registriert werden, entweder in der **lokale Servergruppen** oder **zentrale Verwaltungsserver** Knoten. Weitere Informationen finden Sie unter den folgenden Themen:  
   
     -   [Erstellen oder Bearbeiten einer Servergruppe &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48128270"
  In diesem Lernprogramm wurde gezeigt, wie Sie für eine oder mehrere Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bedarfsgesteuerte und geplante Auswertungen der Best Practices-Richtlinien durchführen.  
   
 ## <a name="next"></a>Weiter  
- Dieses Lernprogramm ist beendet. Um zum Start zurückzukehren, finden Sie unter [Lernprogramm: Auswerten von Best Practices mit der richtlinienbasierten Verwaltung](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
+ Dieses Lernprogramm ist beendet. Um zum Start zurückzukehren, finden Sie unter [Lernprogramm: Auswerten von Best Practices mit der Richtlinie der richtlinienbasierten Verwaltung](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
   
  Um eine Liste der [!INCLUDE[ssDE](../includes/ssde-md.md)] Tutorials, klicken Sie auf [-Engine-Datenbank-Tutorials](../relational-databases/database-engine-tutorials.md).  
   

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5a49218498e173d1f6b009f24dd580d37e923afb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b614f31292999dd5424935d57e4cd1412dee864
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158060"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765462"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services - Features und Tasks
-  Erfahren Sie, wie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] verwendet wird, um die Masterdaten Ihrer Organisation zu verwalten. Erfahren Sie, wie Modellobjekte zu erstellen und zu bearbeiten sind, die als Container für Daten dienen. Erfahren Sie, wie die Masterdaten an sich organisiert und verwaltet werden. Erfahren Sie, wie Masterdaten zu importieren und exportieren sind und wie sich Modelle zwischen Test- und Produktionsumgebungen freigeben lassen. Abschließend erfahren Sie, wie sich benutzerdefinierte Anwendungen, die auf den [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Webdienst zugreifen, entwickeln lassen.  
+  Erfahren Sie, wie Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] verwenden können, um die Masterdaten Ihrer Organisation zu verwalten. Erfahren Sie, wie Modellobjekte zu erstellen und zu bearbeiten sind, die als Container für Daten dienen. Erfahren Sie, wie die Masterdaten an sich organisiert und verwaltet werden. Erfahren Sie, wie Masterdaten zu importieren und exportieren sind und wie sich Modelle zwischen Test- und Produktionsumgebungen freigeben lassen. Abschließend erfahren Sie, wie sich benutzerdefinierte Anwendungen, die auf den [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Webdienst zugreifen, entwickeln lassen.  
   
 ## <a name="create-structures-to-contain-data"></a>Erstellen von Strukturen, die Daten enthalten  
   
@@ -35,9 +34,9 @@ ms.locfileid: "48158060"
   
 ## <a name="maintain-master-data"></a>Aufbewahren von Masterdaten  
   
--   [Master Data Services-Add-in für Microsoft Excel](microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
+-   [Master Data Services-Add-In für Microsoft Excel](microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
--   [Mitglieder &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [Elemente &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
 -   [Transaktionen &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   

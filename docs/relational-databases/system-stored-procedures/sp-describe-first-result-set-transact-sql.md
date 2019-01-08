@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072064"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400633"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -69,7 +69,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**Bit nicht NULL**|Gibt an, dass es sich bei der Spalte um eine zusätzliche Spalte zum Suchen von Informationen handelt, die nicht im Resultset angezeigt wird.|  
-|**column_ordinal**|**Int nicht NULL**|Enthält die Ordnungsposition der Spalte im Resultset. Die Position der ersten Spalte wird mit 1 angegeben.|  
+|**column_ordinal**|**Int nicht NULL**|Enthält die Ordnungsposition der Spalte im Resultset. Position der ersten Spalte wird mit 1 angegeben werden.|  
 |**name**|**Sysname NULL**|Enthält den Namen der Spalte, wenn ein Name bestimmt werden kann. Andernfalls enthält er NULL.|  
 |**is_nullable**|**Bit nicht NULL**|Enthält den Wert 1, wenn die Spalte NULL-Werte zulässt, 0, wenn die Spalte keinen NULL-Werte zulässt, und 1, wenn nicht ermittelt werden kann, ob die Spalte NULL-Werte zulässt.|  
 |**system_type_id**|**Int nicht NULL**|Enthält die System_type_id des Datentyps der Spalte, wie in sys.types angegeben. Bei CLR-Typen wird von dieser Spalte der Wert 240 zurückgegeben, obwohl von der system_type_name-Spalte NULL zurückgegeben wird.|  
@@ -355,7 +355,7 @@ IF(1=1)
 EXEC(@SQL); '  
 ```  
   
- Ergebnis: Fehler. Das Ergebnis kann aufgrund von dynamischem SQL nicht ermittelt werden.  
+ Ergebnis: Error (Fehler). Das Ergebnis kann aufgrund von dynamischem SQL nicht ermittelt werden.  
   
 #### <a name="result-set-specified-by-user"></a>Vom Benutzer angegebenes Resultset  
  Das erste Resultset wird manuell vom Benutzer angegeben.  
@@ -387,7 +387,7 @@ N'
 , @params = N'@p int'  
 ```  
   
- Ergebnis: Fehler. T1 kann entweder "T1" oder "s1.t1, jeweils eine andere Anzahl von Spalten sein.  
+ Ergebnis: Error (Fehler). T1 kann entweder "T1" oder "s1.t1, jeweils eine andere Anzahl von Spalten sein.  
   
 #### <a name="result-even-with-ambiguous-result-set"></a>Ergebnis auch bei mehrdeutigem Resultset  
  Verwenden Sie die gleichen Annahmen wie im vorherigen Beispiel.  

@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine neue OLAP-Miningstruktur | Microsoft Docs
+title: Erstellen Sie eine neue OLAP-Miningstruktur | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 672b94be0aad740ddcb2659b8cf82ef0cd7ab76e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d0a12d7fad2deb138d2dac445492ffce55f1493a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015697"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390714"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Erstellen einer neuen OLAP-Miningstruktur
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "34015697"
   
      Wenn Sie geschachtelte Daten hinzufügen, müssen Sie zwei zusätzliche Spalten angeben:  
   
-    -   Der Schlüssel der geschachtelten Tabelle: Der Schlüssel sollte vorab auf der Seite **Schlüssel der geschachtelten Tabelle auswählen**ausgewählt werden.  
+    -   Der Schlüssel der geschachtelten Tabelle: Dies sollte auf der Seite vorab ausgewählt sein **Schlüssel der geschachtelten Tabelle auswählen**.  
   
-    -   Die Attribute oder für die Analyse zu verwendenden Attribute: Die Seite **Geschachtelte Tabellenspalten auswählen**enthält eine Liste der Measures und Attribute in der Auswahl der geschachtelten Tabellen.  
+    -   Die Attribute oder für die Analyse zu verwendenden Attribute: Die Seite **geschachtelte Tabellenspalten auswählen**, enthält eine Liste der Measures und Attribute in der Auswahl der geschachtelten Tabelle.  
   
         -   Überprüfen Sie für jedes Attribut, das Sie ins Modell einschließen, das Feld in der linken Spalte.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "34015697"
   
         -   Wenn Sie die Spalte als eines der vorhersagbaren Attribute für das Modell einschließen möchten, wählen Sie die Option **Vorhersagen**aus.  
   
-        -   Jedes Element, das Sie in die Struktur einschließen, aber nicht als Eingabe oder vorhersagbares Attribut angeben, wird der Struktur mit dem Kennzeichen **Ignore**hinzugefügt, d. h., dass die Daten beim Erstellen des Modells verarbeitet, jedoch nicht in der Analyse verwendet werden, sondern nur zu Drillthroughzwecken zur Verfügung stehen. Dies kann hilfreich sein, wenn Sie Details wie z. B. Kundennamen einschließen möchten, ohne sie jedoch in der Analyse zu verwenden.  
+        -   Jedes Element, das Sie in die Struktur einschließen, aber nicht als Eingabe oder vorhersagbares Attribut angeben, wird der Struktur mit dem Kennzeichen **Ignore**hinzugefügt, d. h., dass die Daten beim Erstellen des Modells verarbeitet, jedoch nicht in der Analyse verwendet werden, sondern nur zu Drillthroughzwecken zur Verfügung stehen. Dies kann hilfreich sein, wenn Sie Details wie z. B. Kundennamen einschließen möchten, aber nicht in der Analyse verwendet werden sollen.  
   
      Klicken Sie auf **Fertig stellen** , um den Teil des Assistenten zu schließen, in dem geschachtelte Tabellen verwendet werden. Sie können den Vorgang wiederholen, um mehrere geschachtelte Spalten hinzuzufügen.  
   
@@ -91,13 +91,13 @@ ms.locfileid: "34015697"
   
      Durch Aufteilen des Cubes können Sie die Daten für die Erstellung des Modells beschränken. Zum Beispiel können Sie separate Modelle für jeden Bereich erstellen, indem Sie die Hierarchien "Geografie" und  
   
-    -   **Dimension**aufteilen. Wählen Sie eine verknüpfte Dimension in der Dropdownliste aus.  
+    -   **Dimension**: Wählen Sie eine verknüpfte Dimension aus der Dropdownliste aus.  
   
-    -   **Hierarchie**: Wählen Sie die Ebene der Dimensionshierarchie aus, auf der Sie den Filter anwenden möchten. Beispiel: Wenn Sie die Aufteilung bei der Dimension [Geography] vornehmen, würden Sie z.B. eine Hierarchieebene wie [Region Country Name] auswählen.  
+    -   **Hierarchie**:  Wählen Sie die Ebene der Dimensionshierarchie aus, an der Sie den Filter anwenden möchten. Beispiel: Wenn Sie die Aufteilung bei der Dimension [Geography] vornehmen, würden Sie z.B. eine Hierarchieebene wie [Region Country Name] auswählen.  
   
-    -   **Operator**: Wählen Sie einen Operator in der Liste aus.  
+    -   **Operator**: Wählen Sie einen Operator aus der Liste aus.  
   
-    -   **Filterausdruck**: Geben Sie einen Wert oder Ausdruck ein, den Sie als Filterbedingung festlegen möchten, oder wählen Sie in der Dropdownliste einen Wert in der Liste der Elemente auf der angegebenen Ebene der Hierarchie aus.  
+    -   **Filterausdruck**: Geben Sie einen Wert oder Ausdruck ein, als filterbedingung festlegen, oder verwenden Sie die Dropdownliste, um einen Wert aus der Liste der Elemente auf der angegebenen Ebene der Hierarchie auswählen.  
   
          Beispiel: Wenn Sie als Dimension [Geography] und [Region Country Name] als Hierarchieebene ausgewählt haben, enthält die Dropdownliste alle gültigen Länder, die Sie als Filterbedingung verwenden können. Sie können mehrere Optionen auswählen. Infolgedessen werden die Daten in der Miningstruktur auf Cubedaten aus diesen geografischen Bereichen beschränkt.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "34015697"
   
     -   Microsoft Association Rules-Algorithmus  
   
-     **Miningmodelldimension erstellen**: Aktivieren Sie dieses Kontrollkästchen, und geben Sie einen Namen für die Miningmodelldimension an. Wenn Sie diese Option verwenden, wird eine neue Dimension innerhalb des ursprünglichen Cubes erstellt, mit dem die Miningstruktur erstellt wurde. Sie können diese Dimension verwenden, um einen Drilldown und weitere Analysen auszuführen. Da sich die Dimension innerhalb des Cubes befindet, wird die Dimension automatisch der Falldatendimension zugeordnet.  
+     **Miningmodelldimension erstellen**: Aktivieren Sie dieses Kontrollkästchen, und geben Sie einen Namen für das Miningmodell-Dimension. Wenn Sie diese Option verwenden, wird eine neue Dimension innerhalb des ursprünglichen Cubes erstellt, mit dem die Miningstruktur erstellt wurde. Sie können diese Dimension verwenden, um einen Drilldown und weitere Analysen auszuführen. Da sich die Dimension innerhalb des Cubes befindet, wird die Dimension automatisch der Falldatendimension zugeordnet.  
   
      **Cube mithilfe der Miningmodelldimension erstellen**: Aktivieren Sie dieses Kontrollkästchen, und geben Sie einen Namen für den neuen Cube an. Wenn Sie diese Option verwenden, wird ein neuer Cube erstellt, der sowohl die vorhandenen Dimensionen, die beim Erstellen der Struktur verwendet wurden, als auch die neue Data Mining-Dimension mit den Ergebnissen aus dem Modell beinhaltet.  
   

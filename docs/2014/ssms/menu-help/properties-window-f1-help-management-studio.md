@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - .SPID
@@ -23,19 +23,19 @@ ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77b678508867f39a37acbf640eb159a61a4f3727
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122330"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754262"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Eigenschaftenfenster (F1-Hilfe, Management Studio)
   Mithilfe des Fensters **Eigenschaften** können Sie die Eigenschaften ausgewählter Elemente anzeigen. Zudem können Sie mithilfe des Fensters **Eigenschaften** Datei-, Projekt- und Projektmappeneigenschaften anzeigen. Das Fenster **Eigenschaften** ist verfügbar, wenn Sie im Menü **Ansicht** auf **Eigenschaftenfenster** klicken.  
   
  Im Fenster **Eigenschaften** werden unterschiedliche Arten der Bearbeitung von Feldern angezeigt, je nachdem, welche Bearbeitung für die bestimmte Eigenschaft erforderlich ist. Die in Grau angezeigten Eigenschaften sind schreibgeschützt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Objektname**  
  Führt das aktuell ausgewählte Objekt bzw. die aktuell ausgewählten Objekte auf. Es werden nur die Objekte aus dem aktiven Editor oder Designer angezeigt.  
   

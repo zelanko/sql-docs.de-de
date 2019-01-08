@@ -1,5 +1,5 @@
 ---
-title: Definieren von benannten Mengen | Microsoft Docs
+title: Definieren von benannten Mengen | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 705c263d425985d23c823eee9cdd550b5a44db1f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 19bdb9c165b5bfa6c8021fe596d9591e68d517ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018227"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507663"
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>Lektion 6-2: Definieren von benannten Mengen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie zwei benannte Mengen: die ben
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-    Nachdem Sie nun die erste Menge für den Exists-Mengenausdruck definiert haben, können Sie die zweite Menge hinzufügen – die Menge von Elementen der Reseller-Dimension mit den meisten Mitarbeitern.  
+    Nun, da Sie definiert haben die erste Menge für den Exists-Mengenausdruck, können Sie die zweite Gruppe der Gruppe von Elementen der Reseller-Dimension hinzufügen, die die größte Anzahl der Mitarbeiter enthält.  
   
 7.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungstools** die Option **Number of Employees** in der Reseller-Dimension, dann **Members**und schließlich **All Resellers**.  
   
@@ -78,7 +78,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie zwei benannte Mengen: die ben
   
 9. Ändern Sie im Eigenschaftenfenster die **DiscretizationMethod**-Eigenschaft in **Automatisch**, und ändern Sie die **DiscretizationBucketCount**-Eigenschaft in **5**. Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   
-10. Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] auf **Analysis Services Tutorial bereitstellen**.  
+10. Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf **Analysis Services Tutorial bereitstellen**.  
   
 11. Wechseln Sie nach der erfolgreichen Bereitstellung zum Cube-Designer für den Cube des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Tutorials, und klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Verbindung wiederherstellen** .  
   
@@ -118,13 +118,13 @@ Im Rahmen der Tasks in diesem Thema definieren Sie zwei benannte Mengen: die ben
   
 5.  Erweitern Sie die Product-Dimension, und fügen Sie dem Zeilenbereich dann Kategorie und Unterkategorie hinzu, wie in der folgenden Abbildung dargestellt.  
   
-    ![Elemente des Subcategory-Attributs](../analysis-services/media/l6-named-set-03.gif "Elemente des Subcategory-Attributs")  
+    ![Elemente des Subcategory-Attributs](../analysis-services/media/l6-named-set-03.gif "Mitglied das Subcategory-Attribut")  
   
 6.  Ziehen Sie **Core Products** im Bereich **Metadaten** in der **Product** -Dimension in den Filterbereich.  
   
     Nur das **Bike** -Element des **Category** -Attributs und Elemente der **Bike** -Unterkategorien verbleiben im Cube. Das liegt daran, dass die benannte Menge **Core Products** (Kernprodukte) zur Definition eines Teilcubes verwendet wird. Durch diesen Teilcube werden die Elemente des **Category** -Attributs in der **Product** -Dimension innerhalb des Teilcubes auf die Elemente der benannten Menge **Core Products** beschränkt, wie in der folgenden Abbildung dargestellt.  
   
-    ![Mitglieder der Kernprodukt benannte Menge](../analysis-services/media/l6-named-set-04.gif "Mitglied Kernprodukt benannte Menge")  
+    ![Elemente im Kernprodukt benannte Menge](../analysis-services/media/l6-named-set-04.gif "Mitglieder im Kernprodukt benannte Menge")  
   
 7.  Erweitern Sie im Bereich **Metadaten** den Eintrag **Reseller**, und fügen Sie dem Filterbereich **Large Resellers** hinzu.  
   
@@ -133,7 +133,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie zwei benannte Mengen: die ben
     ![Filterbereich mit zwei benannte legt](../analysis-services/media/l6-named-set-05.gif "Filterbereich mit zwei benannte legt diese fest")  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
-[Lektion 7: Definieren von Key Performance Indicators & #40; KPIs & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[Lektion 7: Definieren Key Performance Indicators &#40;KPIs&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Siehe auch  
 [Berechnungen](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

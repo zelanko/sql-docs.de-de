@@ -1,5 +1,5 @@
 ---
-title: Planen der Datenaktualisierung mit Datenquellen – keine Windowsauthentifizierung | Microsoft Docs
+title: Planen der Datenaktualisierung mit Datenquellen – keine Windows-Authentifizierung | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4c7a5a66ff831c94129c2833d74d0eeeb65de30
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 316fe295473d106d0bea8150deed6a19c07bc3bc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027770"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408558"
 ---
-# <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Planen der Datenaktualisierung mit Datenquellen – keine Windowsauthentifizierung
+# <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Planen der Datenaktualisierung mit Datenquellen – keine Windows-Authentifizierung
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In diesem Thema wird ein Workflow für eine planmäßige Datenaktualisierung in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint beschrieben. Dabei können Datenquellen verwendet werden, die die Windows-Authentifizierung **NICHT** unterstützen, z. B. Oracle- oder IDM DB2-Datenquellen. Obwohl sich die Abbildungen und Schritte in diesem Thema auf Oracle-Datenquellen beziehen, gilt der gleiche Workflow auch für andere Datenquellen.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "34027770"
   
 -   **(2) OracleAuthentication:** Eine Secure Store-Zielanwendungs-ID, für die im SET-Befehl Oracle-Anmeldeinformationen angegeben sind.  
   
--   **(3)** Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung wird so konfiguriert, dass sie die Zielanwendung „PowerPivotDataRefresh“ für das **Unbeaufsichtigte Datenaktualisierungskonto**verwendet.  
+-   **(3)**  Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -dienstanwendung wird so konfiguriert, die Zielanwendung "PowerPivotDataRefresh" für die **unbeaufsichtigte Datenaktualisierungskonto**.  
   
 -   **(4)** Die PowerPivot-Arbeitsmappe verwendet Oracle-Daten. In den Aktualisierungseinstellungen der Arbeitsmappe ist angegeben, dass die Anmeldeinformationen von Zielanwendung **(2)** für die Datenquellenverbindung verwendet werden.  
   
@@ -54,15 +54,15 @@ ms.locfileid: "34027770"
   
 4.  Konfigurieren Sie auf der Seite **Neue Zielanwendung für einmaliges Anmelden erstellen** die folgenden Werte:  
   
-    -   **Zielanwendungs-ID:** PowerPivotDataRefresh  
+    -   **Zielanwendungs-ID:** PowerPivotDataRefresh.  
   
-    -   **Anzeigename:** PowerPivotDataRefresh  
+    -   **Anzeigename:** PowerPivotDataRefresh.  
   
     -   **Kontakt-E-Mail:** ?  
   
-    -   **Zielanwendungstyp:** Gruppe  
+    -   **Zielanwendungstyp:** Gruppe.  
   
-    -   **Seiten-URL der Zielanwendung:** Keine  
+    -   **Zielanwendungsseiten-URL:** Keine.  
   
 5.  Klicken Sie auf **Weiter**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "34027770"
   
 9. Klicken Sie auf **OK**.  
   
-10. Die neue Zielanwendungs-ID wird der Liste hinzugefügt. Wählen Sie die Zielanwendungs-ID, und klicken Sie auf **Anmeldeinformationen festlegen**![As_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "As_powerpivot_refresh_sss_set_key").  
+10. Die neue Zielanwendungs-ID wird der Liste hinzugefügt. Wählen Sie die Zielanwendungs-ID, und klicken Sie auf **Festlegen von Anmeldeinformationen**![As_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "As_powerpivot_refresh_sss_set_key").  
   
 11. Geben Sie den Windows-Benutzernamen und das Windows-Kennwort ein, und klicken Sie auf **OK**.  
   
@@ -88,15 +88,15 @@ ms.locfileid: "34027770"
   
 4.  Konfigurieren Sie auf der Seite **Neue Zielanwendung für einmaliges Anmelden erstellen** die folgenden Werte:  
   
-    -   **Zielanwendungs-ID:** OracleAuthentication  
+    -   **Zielanwendungs-ID:** OracleAuthentication.  
   
-    -   **Anzeigename:** OracleAuthentication  
+    -   **Anzeigename:** OracleAuthentication.  
   
     -   **Kontakt-E-Mail:** ?  
   
-    -   **Zielanwendungstyp:** Gruppe  
+    -   **Zielanwendungstyp:** Gruppe.  
   
-    -   **Seiten-URL der Zielanwendung:** Keine  
+    -   **Zielanwendungsseiten-URL:** Keine.  
   
 5.  Klicken Sie auf **Weiter**.  
   
@@ -110,19 +110,19 @@ ms.locfileid: "34027770"
   
 9. Klicken Sie auf **OK**.  
   
-10. Die neue Zielanwendungs-ID wird der Liste hinzugefügt. Wählen Sie die Zielanwendungs-ID, und klicken Sie auf **Anmeldeinformationen festlegen**![As_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "As_powerpivot_refresh_sss_set_key").  
+10. Die neue Zielanwendungs-ID wird der Liste hinzugefügt. Wählen Sie die Zielanwendungs-ID, und klicken Sie auf **Festlegen von Anmeldeinformationen**![As_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "As_powerpivot_refresh_sss_set_key").  
   
 11. Geben Sie die Oracle-Benutzer-ID und das Oracle-Kennwort ein, und klicken Sie auf **OK**.  
   
- Weitere Informationen finden Sie im Abschnitt "So erstellen eine Zielanwendung für die SQL Server-Authentifizierung" im [Verwenden von Secure Store mit SQL Server-Authentifizierung (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ Weitere Informationen finden Sie im Abschnitt "So erstellen eine Zielanwendung für SQL Server-Authentifizierung" im [verwendet Secure Store mit SQL Server-Authentifizierung (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
   
 ## <a name="to-configure-the-power-pivot-service-application"></a>So konfigurieren Sie die PowerPivot-Dienstanwendung  
   
 1.  Klicken Sie in der SharePoint-Zentraladministration auf Dienstanwendungen verwalten.  
   
-2.  Klicken Sie auf den Namen der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung, z.B. „ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Standarddienstanwendung“.  
+2.  Klicken Sie auf den Namen Ihrer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung, z. B. "Default [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung".  
   
-3.  Klicken Sie im Abschnitt „Aktionen“ auf **Einstellungen für Dienstanwendung konfigurieren**.  
+3.  Klicken Sie im Abschnitt „Aktionen“ auf **Einstellungen für Dienstanwendung konfigurieren** .  
   
 4.  Legen Sie die Option **Unbeaufsichtigtes Datenaktualisierungskonto für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** im Abschnitt **Datenaktualisierung** auf **PowerPivotDataRefresh** fest, und klicken Sie auf **OK**.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "34027770"
   
 ## <a name="to-configure-the-workbook"></a>So konfigurieren Sie die Arbeitsmappe  
   
-1.  Navigieren Sie zu Ihrer Arbeitsmappe in der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog, und klicken Sie auf **Datenaktualisierung verwalten**![As_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "As_powerpivot_refresh_manage_reresh").  
+1.  Navigieren Sie zu Ihrer Arbeitsmappe in der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Katalog, und klicken Sie auf **Datenaktualisierung verwalten**![As_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "As_powerpivot_refresh_manage_reresh").  
   
 2.  Sobald die Seite **Verlauf der Datenaktualisierung** angezeigt wird, klicken Sie auf **Zeitplan konfigurieren**.  
   
@@ -167,6 +167,6 @@ ms.locfileid: "34027770"
   
 -   [Konfigurieren von Secure Store Service in SharePoint 2013](http://technet.microsoft.com/library/ee806866.aspx).  
   
--   Weitere Informationen finden Sie im Abschnitt „Geplante Datenaktualisierung“ unter [PowerPivot-Datenaktualisierung mit SharePoint 2013](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
+-   Finden Sie im Abschnitt "Geplante Datenaktualisierung" [Power Pivot-Datenaktualisierung mit SharePoint 2013 und SQL Server 2012 SP1 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   
   

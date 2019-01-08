@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e13b3cde8681c4f717f0fa12d7426eea58d0caf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135890"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752083"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navigieren in SQL Server PowerShell-Pfaden
   Der [!INCLUDE[ssDE](../includes/ssde-md.md)] -PowerShell-Anbieter macht den Satz von Objekten in einer Instanz von SQL Server in einer Struktur verfügbar, die einem Dateipfad ähnelt. Sie können im Anbieterpfad mithilfe von Windows PowerShell-Cmdlets navigieren und benutzerdefinierte Laufwerke erstellen, um den Pfad zu kürzen, den Sie eingeben müssen.  
@@ -115,9 +114,9 @@ Get-ChildItem -force
 ## <a name="create-a-custom-drive"></a>Erstellen eines benutzerdefinierten Laufwerks  
  **Erstellen und Verwenden eines benutzerdefinierten Laufwerks**  
   
-1.  Verwenden Sie `New-PSDrive`, um ein benutzerdefiniertes Laufwerk zu definieren. Verwenden der `Root` Parameter, um den Pfad anzugeben, die durch den Namen des benutzerdefinierten Laufwerks dargestellt wird.  
+1.  Verwenden Sie `New-PSDrive`, um ein benutzerdefiniertes Laufwerk zu definieren. Verwenden Sie den `Root`-Parameter, um den Pfad anzugeben, der durch den Namen des benutzerdefinierten Laufwerks dargestellt wird.  
   
-2.  Verweisen auf den Namen des benutzerdefinierten Laufwerks in pfadnavigations-Cmdlets wie z. B. `Set-Location`.  
+2.  Verweisen Sie in Pfadnavigations-Cmdlets, wie z. B. `Set-Location`, auf den Namen des benutzerdefinierten Laufwerks.  
   
 ### <a name="custom-drive-example-powershell"></a>Beispiel für ein benutzerdefiniertes Laufwerk (PowerShell)  
  In diesem Beispiel wird ein virtuelles Laufwerk mit dem Namen AWDB erstellt, das dem Knoten für eine bereitgestellte Kopie der Beispieldatenbank AdventureWorks2012 zugeordnet ist. Das virtuelle Laufwerk wird dann verwendet, um zu einer Tabelle in der Datenbank zu navigieren.  

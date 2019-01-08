@@ -22,19 +22,19 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad76099b7cc6386e20b8c46f300298a13492f32b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104930"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529538"
 ---
 # <a name="deploy-a-data-tier-application"></a>Bereitstellen einer Datenebenenanwendung
   Mithilfe eines Assistenten oder eines PowerShell-Skripts können Sie eine Datenebenenanwendung (DAC) von einem DAC-Paket für eine vorhandene [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Instanz bereitstellen. Beim Bereitstellungsprozess wird eine DAC-Instanz registriert, indem die DAC-Definition in der **msdb** -Systemdatenbank (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) gespeichert und eine Datenbank erstellt wird, die anschließend mit allen in der DAC definierten Datenbankobjekten aufgefüllt wird.  
   
--   **Vorbereitungen:**  [SQL Server-Hilfsprogramm](#SQLUtility), [Datenbankoptionen und -einstellungen](#DBOptSettings), [Einschränkungen](#LimitationsRestrictions), [Voraussetzungen](#Prerequisites), [Sicherheit](#Security), [Berechtigungen](#Permissions)  
+-   **Vorbereitungen:**  [SQL Server-Hilfsprogramm](#SQLUtility), [Datenbank-Optionen und Einstellungen](#DBOptSettings), [Einschränkungen](#LimitationsRestrictions), [Voraussetzungen](#Prerequisites), [Sicherheit](#Security), [Berechtigungen](#Permissions)  
   
--   **Bereitstellen einer DAC mit:**  [Assistent zum Bereitstellen von Datenebenenanwendungen](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
+-   **Bereitstellen eine DAC mit:**  [Das Bereitstellen von Datenebenen-Anwendungs-Assistent](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> Vorbereitungen  
  Dasselbe DAC-Paket kann mehrmals für eine einzelne [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz bereitgestellt werden, die Bereitstellungen müssen jedoch einzeln ausgeführt werden. Der für die einzelnen Bereitstellungen angegebene DAC-Instanzname muss innerhalb der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]eindeutig sein.  
@@ -68,7 +68,7 @@ ms.locfileid: "48104930"
   
 1.  Erweitern Sie im **Objekt-Explorer**den Knoten für die Instanz, für die Sie die DAC bereitstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** , und wählen Sie **Datenebenenanwendung bereitstellen...** aus.  
+2.  Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken**, und wählen Sie **Datenebenenanwendung bereitstellen...** aus.  
   
 3.  Bearbeiten Sie die Dialogfenster des Assistenten:  
   
@@ -189,13 +189,13 @@ ms.locfileid: "48104930"
   
 1.  Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Instanz fest, auf der Sie die DAC bereitstellen möchten.  
   
-2.  Öffnen einer `ServerConnection` Objekt und eine Verbindung mit der gleichen Instanz.  
+2.  Öffnen Sie ein `ServerConnection`-Objekt, und stellen Sie eine Verbindung mit derselben Instanz her.  
   
-3.  Verwendung `System.IO.File` DAC-Paketdatei zu laden.  
+3.  Laden Sie die DAC-Paketdatei mithilfe von `System.IO.File`.  
   
 4.  Verwenden Sie `add_DacActionStarted` und `add_DacActionFinished`, um die DAC-Bereitstellungsereignisse zu abonnieren.  
   
-5.  Legen Sie die `DatabaseDeploymentProperties`.  
+5.  Legen Sie die `DatabaseDeploymentProperties` fest.  
   
 6.  Verwenden Sie die `DacStore.Install`-Methode zum Bereitstellen der DAC.  
   

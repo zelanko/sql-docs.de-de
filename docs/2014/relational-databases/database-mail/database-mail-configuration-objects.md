@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlimail.manageexistingaccount.f1
@@ -33,15 +32,15 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a42886a0477c6844b2e59d439cd9748adcaa4b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089670"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772634"
 ---
 # <a name="database-mail-configuration-objects"></a>Konfigurationsobjekte für Datenbank-E-Mail
-  Datenbank-E-Mail verfügt über zwei Konfigurationsobjekte: Mit den Datenbankkonfigurationsobjekten können Sie die Einstellungen konfigurieren, die von Datenbank-E-Mail beim Senden einer E-Mail von der Datenbankanwendung oder vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwendet werden sollen.  
+  Datenbank-e-Mails verfügt über zwei Konfigurationsobjekte: Der Konfigurationsobjekte für Datenbank bieten eine Möglichkeit für die Sie zum Konfigurieren der Einstellungen dieser Datenbank-e-Mails, beim Senden einer e-Mail von der datenbankanwendung verwenden sollten oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   Datenbank-E-Mail-Konten  
   
@@ -59,11 +58,11 @@ ms.locfileid: "48089670"
   
  Datenbank-E-Mail unterstützt drei Methoden der Authentifizierung für die Kommunikation mit einem SMTP-Server:  
   
--   Windows-Authentifizierung: Datenbank-E-Mail verwendet dieselben Anmeldeinformationen wie das [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] Windows-Dienstkonto zur Authentifizierung auf dem SMTP-Server.  
+-   Windows-Authentifizierung: Datenbank-e-Mails verwendet die Anmeldeinformationen der [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] Windows-Dienstkonto für die Authentifizierung auf dem SMTP-Server.  
   
--   Standardauthentifizierung: Datenbank-E-Mail verwendet den angegebenen Benutzernamen und das angegebene Kennwort zur Authentifizierung auf dem SMTP-Server.  
+-   Standardauthentifizierung:  Datenbank-e-Mails verwendet den Benutzernamen und das angegebene Kennwort zur Authentifizierung auf dem SMTP-Server.  
   
--   Anonyme Authentifizierung: Der SMTP-Server erfordert keinerlei Authentifizierung.  Datenbank-E-Mail verwendet keinerlei Anmeldeinformationen zur Authentifizierung auf dem SMTP-Server.  
+-   Anonyme Authentifizierung:  Der SMTP-Server erfordert keine Authentifizierung.  Datenbank-E-Mail verwendet keinerlei Anmeldeinformationen zur Authentifizierung auf dem SMTP-Server.  
   
  Die Kontoinformationen werden in der **msdb** -Datenbank gespeichert. Jedes Konto besteht aus den folgenden Informationen:  
   
@@ -148,7 +147,7 @@ ms.locfileid: "48089670"
 |[sysmail_update_profile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-update-profile-sp-transact-sql)|Ändert die Beschreibung oder den Namen eines Datenbank-E-Mail-Profils.|  
 |[sysmail_update_profileaccount_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql)|Aktualisiert die Sequenznummer eines Kontos innerhalb eines Datenbank-E-Mail-Profils.|  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicherheit  
   
 |Name|Description|  
 |----------|-----------------|  

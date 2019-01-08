@@ -1,5 +1,5 @@
 ---
-title: Hohe Verfügbarkeit und Skalierbarkeit in Analysis Services | Microsoft Docs
+title: Hohe Verfügbarkeit und Skalierbarkeit in Analysis Services | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700901"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439502"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Hohe Verfügbarkeit und Skalierbarkeit in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -96,13 +96,13 @@ ms.locfileid: "35700901"
 
 - Aktiv/Aktiv wird derzeit nicht unterstützt. Aktiv/Passiv (Failover) ist die einzige unterstützte WSFC-Konfiguration für Analysis Services.
 - Stellen Sie bei einer Analysis Services-Clusteringlösung sicher, dass alle Knoten im Cluster auf identischer oder sehr ähnlicher Hardware ausgeführt werden. Sorgen Sie auch dafür, dass der Betriebskontext aller Knoten in den folgenden Punkten identisch ist: Betriebssystemversion und Service Packs, Analysis Services-Version und Service Packs (oder kumulative Updates) und Servermodus.
-- Vermeiden Sie den Weiterbetrieb eines passiven Knotens als aktiven Knoten einer anderen Arbeitsauslastung. Kurzzeitige Vorteile bei der Computernutzung gehen bei einer tatsächlichen Failoversituation verloren, wenn der Knoten nicht in der Lage ist, beide Arbeitsauslastungen zu bewältigen.
+- Vermeiden Sie den Weiterbetrieb eines passiven Knotens als aktiven Knoten einer anderen arbeitsauslastung. Kurzzeitige Vorteile bei der Computernutzung gehen bei einer tatsächlichen Failoversituation verloren, wenn der Knoten nicht in der Lage ist, beide Arbeitsauslastungen zu bewältigen.
  
- Ausführliche Anweisungen und Hintergrundinformationen zum Bereitstellen von Analysis Services auf einem Failovercluster finden Sie in diesem Whitepaper: [Clustern von SQL Server Analysis Services (How to Cluster SQL Server Analysis Services)](https://msdn.microsoft.com/library/dn736073.aspx). Zwar bezieht sich diese Hilfestellung auf SQL Server 2012, sie gilt jedoch auch für die neueren Versionen von Analysis Services.  
+ In diesem Whitepaper werden ausführliche Anweisungen und Hintergrundinformationen zum Bereitstellen von Analysis Services in einem Failovercluster bereitgestellt: [Wie Sie SQL Server Analysis Services in einem Cluster](https://msdn.microsoft.com/library/dn736073.aspx). Zwar bezieht sich diese Hilfestellung auf SQL Server 2012, sie gilt jedoch auch für die neueren Versionen von Analysis Services.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Synchronisieren von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Das Erzwingen des NUMA-Affinität für tabellarische Analysis Services-Datenbanken](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
- [Eine Analysis Services-Fallstudie: Verwenden von tabellarischen Modellen in umfangreichen kommerziellen Lösung](https://msdn.microsoft.com/library/dn751533.aspx)  
+ [Durchsetzen von NUMA-Affinität für tabellarische Analysis Services-Datenbanken](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
+ [Eine Analysis Services-Fallstudie: Verwenden von tabellarischen Modellen in einer umfangreichen kommerziellen Lösung](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

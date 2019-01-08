@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], file and folder
@@ -16,12 +15,12 @@ ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e2d6833165def5c73ebe15ec77cf23cffb1c1a3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97dc32d375c34d0e4993cdd297783f44a0f28d13
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717378"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760161"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Ordner- und Dateiberechtigungen (Master Data Services)
 
@@ -66,7 +65,7 @@ ms.locfileid: "47717378"
   
  Weitere Informationen zu den Inhalten der Web.config-Datei von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] finden Sie unter [Webkonfigurationsreferenz &#40;Master Data Services&#41;](../master-data-services/web-configuration-reference-master-data-services.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren von Master Data Services](../master-data-services/install-windows/install-master-data-services.md)  
   
   

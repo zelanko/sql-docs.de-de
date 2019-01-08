@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],retrieving data
@@ -13,12 +12,12 @@ ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b19ad6aba7f81094c08a93c1bcccd1bca466f80d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc856bcee4aa873d2359c444af6147b0ca0909d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193650"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762052"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>Abrufen und Verstehen der Änderungsdaten
   Im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, besteht der erste Task darin, die Abfrage auszuführen, bei der die Änderungsdaten abgerufen werden. Sie führen diese Abfrage innerhalb einer Quellkomponente in einem Datenflusstask aus. Sie können dann Downstream-Transformationen und -Ziele verwenden, um die Änderungsdaten auf Ihr Ziel anzuwenden.  
@@ -58,6 +57,6 @@ ms.locfileid: "48193650"
 ## <a name="next-step"></a>Nächster Schritt  
  Nachdem Sie eine OLE DB-Quelle konfiguriert haben, um die Änderungsdaten abzurufen, ist der nächste Schritt der Entwurf des Datenflusses im Paket.  
   
- **Nächstes Thema** [Verarbeiten von Einfügungen, Updates und Löschungen](process-inserts-updates-and-deletes.md)  
+ **Nächstes Thema:** [Verarbeiten von Einfügungen, Updates und Löschungen](process-inserts-updates-and-deletes.md)  
   
   

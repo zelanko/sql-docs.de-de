@@ -11,12 +11,12 @@ ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4332d78fef98d653029d0913c6b7da8cfe5a75f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048256"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504693"
 ---
 # <a name="dmx-templates"></a>DMX-Vorlagen
   Die Data Mining-Vorlagen ermöglichen Ihnen das schnelle Erstellen komplexer Abfragen. Die allgemeine Syntax für DMX-Abfragen ist zwar umfassend dokumentiert, die Vorlagen erleichtern es Ihnen jedoch, Abfragen durch Klicken und Zeigen auf Argumente und Datenquellen zu erstellen.  
@@ -29,7 +29,7 @@ ms.locfileid: "48048256"
   
 3.  Auf der Seite **Modell auswählen**, klicken Sie auf **erweitert**.  
   
-     **Tipp:** , wenn Sie beabsichtigen, eine Vorhersageabfrage für ein Modell zu erstellen, können Sie zuerst das Modell auswählen, und klicken Sie dann auf **erweitert**, um die Vorlage mit dem Modellnamen aufzufüllen.  
+     **Tipp:** Wenn Sie eine Vorhersageabfrage für ein Modell erstellen möchten, können Sie zuerst das Modell auswählen, und klicken Sie dann auf **erweitert**, um die Vorlage mit dem Modellnamen aufzufüllen.  
   
 4.  In der **erweiterten Data Mining Query Editor**, klicken Sie auf **DMX-Vorlagen**, und wählen Sie eine Vorlage.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48048256"
   
  **Erstellen**  
   
- Erstellen Sie mit diesen Vorlagen benutzerdefinierte Modelle oder Datenstrukturen. Sie sind nicht auf von den Assistenten unterstützte Modelle beschränkt – Sie können beliebige Data Mining-Algorithmen verwenden, die von der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz unterstützt werden, mit der Sie verbunden sind (einschließlich von Plug-In-Algorithmen).  
+ Erstellen Sie mit diesen Vorlagen benutzerdefinierte Modelle oder Datenstrukturen. Sie sind nicht von den Assistenten unterstützte Modelle beschränkt – Sie können alle Datamining-Algorithmus unterstützt, die von der Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , der Sie verbunden sind, einschließlich von Plug-in-Algorithmen.  
   
 -   Miningmodell  
   

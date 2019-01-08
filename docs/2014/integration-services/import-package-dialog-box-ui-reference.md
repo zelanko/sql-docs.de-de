@@ -15,17 +15,17 @@ ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f7bb152f19bd2ed5e482cff2e57806c1653ef415
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1536c2fbb40fa44140cb7470db310ef633f67ede
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227730"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506789"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche für Dialogfeld "Paket importieren"
   Verwenden Sie das in **verfügbare Dialogfeld** Paket importieren [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], um ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket zu importieren und die Schutzebene des Pakets festzulegen oder zu ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Paketspeicherort**  
  Wählen Sie den Typ des Speicherortes, an den das Paket importiert werden soll. Die folgenden Optionen stehen zur Verfügung:  
   
@@ -54,13 +54,13 @@ ms.locfileid: "48227730"
  Geben Sie ein Kennwort an, falls Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Paketpfad**  
- Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche „Durchsuchen“ **(…)** , und suchen Sie das Paket.  
+ Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche „Durchsuchen“ **(…)**, und suchen Sie das Paket.  
   
  **Paketname**  
  Sie können das Paket auch umbenennen. Der Standardname ist der Name des zu importierenden Pakets.  
   
  **Schutzebene**  
- Klicken Sie auf die Schaltfläche „Durchsuchen“ **(…)** , und aktualisieren Sie im Dialogfeld **Paketschutzebene** die Schutzebene. Weitere Informationen finden Sie unter [Dialogfeld „Paket- und Projektschutzebene“](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Klicken Sie auf die Schaltfläche „Durchsuchen“ **(…)**, und aktualisieren Sie im Dialogfeld **Paketschutzebene** die Schutzebene. Weitere Informationen finden Sie unter [Dialogfeld „Paket- und Projektschutzebene“](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Kopie des Pakets speichern](../../2014/integration-services/save-copy-of-package.md)   

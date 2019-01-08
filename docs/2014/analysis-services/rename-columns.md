@@ -11,12 +11,12 @@ ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0037d13dd84f3db8243252717fad1d59fd380bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 056f386db58f01f663cc04e82ce04e0c6c6597a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152956"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416691"
 ---
 # <a name="lesson-3-rename-columns"></a>Lektion 3: Umbenennen von Spalten
   In dieser Lektion benennen Sie viele der Spalten in jeder importierten Tabelle um. Durch das Umbenennen von Spalten sind diese leichter identifizierbar und navigierbar sowohl im Modell-Designer als auch in einer Clientanwendung bei der Auswahl von Feldern durch Benutzer. Weitere Informationen finden Sie unter [Umbenennen einer Tabelle oder Spalte &#40;SSAS – tabellarisch&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "48152956"
  Geschätzte Zeit zum Bearbeiten dieser Lektion: **20 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Sie sollten vor dem Ausführen der Tasks in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 2: Hinzufügen von Daten](lesson-2-add-data.md).  
+ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 2: Hinzufügen von Daten](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Umbenennen von Spalten  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48152956"
 2.  Doppelklicken dem **CustomerKey** Spalte benennen, und geben Sie `Customer  Id`, und drücken Sie dann die EINGABETASTE.  
   
     > [!TIP]  
-    >  Sie können auch in der Eigenschaft **Spaltenname** im Fenster **Eigenschaften** oder in der Diagrammsicht eine Spalte umbenennen.  
+    >  Sie können auch umbenennen eine Spalte in der **Spaltenname** -Eigenschaft in der Spaltenwerts **Eigenschaften** Fenster oder in der Diagrammsicht angezeigt.  
   
 3.  Benennen Sie die verbleibenden Spalten in der Tabelle **Customer** sowie die Spalten in den verbleibenden Tabellen um. Ersetzen Sie dabei den Quellnamen durch den entsprechenden Anzeigenamen:  
   
@@ -144,7 +144,7 @@ ms.locfileid: "48152956"
     |EnglishProductSubcategoryName|Product Subcategory Name|  
     |ProductCategoryKey|Product Category Id|  
   
-     **Internet Sales**  
+     **Internetumsätze**  
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  
@@ -172,6 +172,6 @@ ms.locfileid: "48152956"
     |ShipDate|Ship Date|  
   
 ## <a name="next-step"></a>Nächster Schritt  
- Wenn Sie mit diesem Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: [Lektion 4: Markieren als Datumstabelle](lesson-3-mark-as-date-table.md).  
+ Um dieses Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: [Lektion 4: Als Datumstabelle markieren](lesson-3-mark-as-date-table.md).  
   
   

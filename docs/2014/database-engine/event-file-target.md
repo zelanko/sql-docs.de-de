@@ -15,12 +15,12 @@ ms.assetid: 4f0ee6ec-a0a8-4c38-aa61-8293ab6ac7fd
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66777a5db1812d1a63e100d4a02522bc1ac3b43a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ea74f0361d5152ade31a91424d594d376e513f8
+ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092852"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52267895"
 ---
 # <a name="event-file-target"></a>Event File Target
   Das Ereignisdateiziel ist ein Ziel, das vollständige Puffer auf Datenträger schreibt.  
@@ -34,7 +34,7 @@ ms.locfileid: "48092852"
 |max_rollover_files|Eine beliebige 32-Bit-Ganzzahl. Dieser Wert ist optional.|Die maximale Anzahl von Dateien, die im Dateisystem beibehalten werden. Der Standardwert ist 5.|  
 |increment|Eine beliebige 32-Bit-Ganzzahl. Dieser Wert ist optional.|Die inkrementelle Zunahme für die Datei in Megabyte (MB). Falls der Wert für <legacyBold>increment</legacyBold> nicht angegeben wurde, wird als Standardwert das Doppelte der Sitzungspuffergröße verwendet.|  
   
- Wenn ein Ereignisdateiziel zum ersten Mal erstellt wird, wird an den Dateinamen „_0\_ “ und ein langer ganzzahliger Wert angefügt. Der ganzzahlige Wert entspricht der Anzahl von Millisekunden zwischen dem 1.&nbsp;Januar&nbsp;1600 und dem Datum sowie der Uhrzeit der Dateierstellung. Nachfolgende Rolloverdateien verwenden ebenfalls dieses Format. Anhand des langen ganzzahligen Werts können Sie die neueste Datei ermitteln. Das folgende Beispiel veranschaulicht, wie Dateien in einem Szenario benannt werden, in dem die Option für den Dateinamen als C:\OutputFiles\MyOutput.xel angegeben wird:  
+ Wenn ein Ereignisdateiziel zum ersten Mal erstellt wird, wird an den Dateinamen „_0\_ “ und ein langer ganzzahliger Wert angefügt. Der ganzzahlige Wert wird berechnet, als die Anzahl der Millisekunden zwischen dem 1. Januar 1601 und das Datum und die Uhrzeit der dateierstellung. Nachfolgende Rolloverdateien verwenden ebenfalls dieses Format. Anhand des langen ganzzahligen Werts können Sie die neueste Datei ermitteln. Das folgende Beispiel veranschaulicht, wie Dateien in einem Szenario benannt werden, in dem die Option für den Dateinamen als C:\OutputFiles\MyOutput.xel angegeben wird:  
   
 -   Erste erstellte Datei: C:\OutputFiles\MyOutput_0_128500310259380000.xel  
   

@@ -13,19 +13,19 @@ ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: abc9f00432128750e4b61e971038bbc32dd85e86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e19b832bc3d7ebf1f883633491b309971cf2938e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125700"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398303"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket
   In diesen Verfahren wird beschrieben, wie eine benutzerdefinierte Variable in einem Paket mithilfe des Fensters **Variablen** hinzugefügt oder gelöscht und ihr Bereich geändert wird.  
   
- Weitere Informationen zu Variablenbereichen finden Sie unter [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ Weitere Informationen zu Variablenbereichen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bietet außerdem Systemvariablen, die Systeminformationen zur Verfügung stellen, zur Laufzeit in Containern, z. B. Paketen und Ereignishandlern verwendet werden können. Systemvariablen können nicht gelöscht werden.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt außerdem Systemvariablen bereit, die zur Laufzeit Systeminformationen zur Verfügung stellen und die in Containern, z. B. Paketen und Ereignishandlern, verwendet werden können. Systemvariablen können nicht gelöscht werden.  
   
 ### <a name="to-add-a-variable"></a>So fügen Sie eine Variable hinzu  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48125700"
   
 4.  Wählen Sie die zu löschende Variable aus, und klicken Sie dann auf **Variable löschen**.  
   
-     Wenn die Variable nicht im Fenster Variablen angezeigt wird, klicken Sie auf **Rasteroptionen** , und wählen Sie dann **Variablen aller Bereiche anzeigen**aus.  
+     Wenn die Variable nicht im Fenster „Variablen“ angezeigt wird, klicken Sie auf **Rasteroptionen**, und wählen Sie dann **Variablen aller Bereiche anzeigen** aus.  
   
 5.  Wenn das Dialogfeld **Löschen der Variablen bestätigen** aufgerufen wird, klicken Sie zur Bestätigung auf **Ja** .  
   
@@ -77,14 +77,14 @@ ms.locfileid: "48125700"
   
 4.  Wählen Sie die Variable aus, und klicken Sie dann auf **Variable verschieben**.  
   
-     Wenn die Variable nicht im Fenster Variablen angezeigt wird, klicken Sie auf **Rasteroptionen** , und wählen Sie dann **Variablen aller Bereiche anzeigen**aus.  
+     Wenn die Variable nicht im Fenster „Variablen“ angezeigt wird, klicken Sie auf **Rasteroptionen**, und wählen Sie dann **Variablen aller Bereiche anzeigen** aus.  
   
 5.  Wählen Sie im Dialogfeld **Neuen Bereich auswählen** das Paket oder einen Container, Task oder Ereignishandler im Paket aus, um den Gültigkeitsbereich der Variablen zu ändern.  
   
 6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md)   
+ [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)   
  [Legen Sie die Eigenschaften einer benutzerdefinierten Variablen](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  

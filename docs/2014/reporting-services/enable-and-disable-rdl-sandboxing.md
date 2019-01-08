@@ -11,12 +11,12 @@ ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f3acf241fbc5737daff76c408159b17b27affe9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f49c20c8efe233bb49194364943f7ebb95ed6497
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220660"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415278"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Aktivieren und Deaktivieren von RDL-Sandkasten
   Mithilfe der Sandkastenfunktion der RDL (Report Definition Language, Berichtsdefinitionssprache) können Sie die Verwendung bestimmter Ressourcentypen durch einzelne Mandanten in einer Umgebung erkennen und einschränken, in der mehrere Mandanten eine einzelne Webfarm von Berichtsservern verwenden. Ein Beispiel hierfür ist ein Szenario mit einem Hostingdienst, in dem eine einzelne Webfarm mit Berichtsservern verwaltet wird, die von mehreren Mandanten und möglicherweise auch unterschiedlichen Firmen verwendet werden. Als Berichtsserveradministrator können Sie diese Funktion aktivieren, um die folgenden Zielsetzungen zu erreichen:  
@@ -35,10 +35,10 @@ ms.locfileid: "48220660"
   
 -   Benannte Parameter in Ausdrücken.  
   
- In diesem Thema wird beschrieben, jedes Element in der <`RDLSandboxing`>-Element in der Datei "rsreportserver.config". Weitere Informationen zum Ändern dieser Datei finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). In einem Server-Ablaufverfolgungsprotokoll werden Aktivitäten aufgezeichnet, die sich auf die RDL-Sandboxingfunktion beziehen. Weitere Informationen zu Ablaufverfolgungsprotokollen finden Sie unter [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).  
+ In diesem Thema werden die einzelnen Elemente im <`RDLSandboxing`>-Element in der Datei "RSReportServer.Config" beschrieben. Weitere Informationen zum Ändern dieser Datei finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). In einem Server-Ablaufverfolgungsprotokoll werden Aktivitäten aufgezeichnet, die sich auf die RDL-Sandboxingfunktion beziehen. Weitere Informationen zu Ablaufverfolgungsprotokollen finden Sie unter [Berichtsserverdienst-Ablaufverfolgungsprotokoll](report-server/report-server-service-trace-log.md).  
   
 ## <a name="example-configuration"></a>Beispielkonfiguration  
- Das folgende Beispiel zeigt die Einstellungen und Beispielwerte für die <`RDLSandboxing`>-Element in der Datei "rsreportserver.config".  
+ Im folgenden Beispiel werden die Einstellungen und Beispielwerte für das <`RDLSandboxing`>-Element in der Datei "RSReportServer.Config" veranschaulicht.  
   
 ```  
 <RDLSandboxing>  
@@ -47,8 +47,8 @@ ms.locfileid: "48220660"
    <MaxStringResultLength>3000</MaxStringResultLength>  
    <MaxArrayResultLength>250</MaxArrayResultLength>  
    <Types>  
-      <Allow Namespace=”System.Drawing” AllowNew=”True”>Bitmap</Allow>  
-      <Allow Namespace=”TypeConverters.Custom” AllowNew=”True”>*</Allow>  
+      <Allow Namespace="System.Drawing" AllowNew="True">Bitmap</Allow>  
+      <Allow Namespace="TypeConverters.Custom" AllowNew="True">*</Allow>  
    </Types>  
    <Members>  
       <Deny>Format</Deny>  
@@ -72,7 +72,7 @@ ms.locfileid: "48220660"
 |`AllowNew`|Ein boolesches Attribut für **Allow**, mit dem gesteuert wird, ob neue Instanzen des Typs in RDL-Ausdrücken oder einem RDL-**\<Class>**-Element erstellt werden dürfen.<br /><br /> Hinweis: Wenn `RDLSandboxing` aktiviert ist, können keine neuen Arrays erstellt werden, in RDL-Ausdrücken verwendet werden, unabhängig von der Einstellung der `AllowNew`.|  
 |**Wert**|Wert für **Allow** , der den Namen des in RDL-Ausdrücken zuzulassenden Typs angibt. Der Wert **\*** gibt an, dass alle Typen im Namespace zugelassen werden. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
 |**Elemente**|Für die Liste der Typen, die im **\<Types>**-Element enthalten sind, ist dies die Liste der Elementnamen, die nicht in RDL-Ausdrücken zugelassen sind.|  
-|**Verweigern**|Der Name eines Elements, das nicht in RDL-Ausdrücken zugelassen wird. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.<br /><br /> Hinweis: Wenn **Deny** für ein Element angegeben wird, werden alle Elemente mit diesem Namen für alle Typen nicht zugelassen.|  
+|**Verweigern**|Der Name eines Elements, das nicht in RDL-Ausdrücken zugelassen wird. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.<br /><br /> Hinweis: Wenn **Deny** für ein Element angegeben wird, werden alle Elemente mit diesem Namen für keinen Typ zugelassen.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Arbeiten mit Ausdrücken bei aktiviertem RDL-Sandboxing  
  Sie können die RDL-Sandboxingfunktion auf die folgenden Weisen ändern, um die von einem Ausdruck verwendeten Ressourcen zu verwalten:  
@@ -119,7 +119,7 @@ ms.locfileid: "48220660"
   
 -   Fügen Sie der Zulassungsliste diese neue Klasse hinzu.  
   
- Hinzuzufügende [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework-Funktionen an der Zulassungsliste die entsprechenden Typen aus dem Microsoft.VisualBasic-Namespace an der Zulassungsliste hinzufügen.  
+ Um der Zulassungsliste [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] -Funktionen für .NET Framework hinzuzufügen, fügen Sie die entsprechenden Typen aus dem Namespace „Microsoft.VisualBasic“ zur Zulassungsliste hinzu.  
   
  Um der Zulassungsliste [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] -Typschlüsselwörter für .NET Framework hinzuzufügen, fügen Sie der Zulassungsliste den entsprechenden CLR-Typ hinzu. Um beispielsweise verwenden die [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework-Schlüsselwort `Integer`, fügen Sie das folgende XML-Fragment hinzu der  **\<RDLSandboxing >** Element:  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48220660"
   
  Um der Zulassungsliste einen generischen Typ oder einen [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] -Typ für .NET Framework hinzuzufügen, der NULL-Werte zulässt, führen Sie folgende Aktionen aus.  
   
--   Erstellen Sie einen Proxytyp für den generischen Typ oder den [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]-Typ für .NET Framework, der NULL-Werte zulässt.  
+-   Erstellen Sie einen Proxytyp für den generischen Typ oder den [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] -Typ für .NET Framework, der NULL-Werte zulässt.  
   
 -   Fügen Sie der Zulassungsliste den Proxytyp hinzu.  
   
@@ -142,9 +142,9 @@ ms.locfileid: "48220660"
   
 -   Wenn Sie den Typen in der Zulassungsliste Elemente hinzufügen.  
   
--   Beim Aktualisieren der [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] auf dem Berichtsserver.  
+-   Wenn Sie den [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] auf dem Berichtsserver aktualisieren.  
   
--   Wenn Sie den Berichtsserver auf eine höhere Version von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aktualisieren.  
+-   Wenn Sie den Berichtsserver auf eine höhere Version von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]aktualisieren.  
   
 -   Wenn Sie einen Berichtsserver aktualisieren, um ein späteres RDL-Schema verarbeiten zu können, da RDL-Typen möglicherweise neue Elemente hinzugefügt wurden.  
   

@@ -1,5 +1,5 @@
 ---
-title: Modellfiltersyntax und Beispiele (Analysis Services – Datamining) | Microsoft Docs
+title: Modellfiltersyntax und Beispiele (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 467d3efbe979bf2ea58c700409913ef0767457ab
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ae34f06997d1647f6345c0cf77494aa8688a8616
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018677"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393546"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Modellfiltersyntax und Beispiele (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "34018677"
  *avPredicate*  
  Filterausdruck, der nur auf skalare Miningstrukturspalten angewendet werden kann. Ein *avPredicate* -Ausdruck kann sowohl in Modellfiltern als auch in geschachtelten Tabellenfiltern verwendet werden.  
   
- Ein Ausdruck, der einen der folgenden Operatoren verwendet, kann nur auf eine kontinuierliche Spalte angewendet werden. :  
+ Ein Ausdruck, der einen der folgenden Operatoren verwendet, kann nur auf eine kontinuierliche Spalte angewendet werden. decodiert werden:  
   
 -   **\<** (kleiner als)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "34018677"
   
  Wenn das Argument *avPredicate*für eine diskretisierte Spalte gilt, kann der im Filter verwendete Wert ein beliebiger Wert in einem bestimmten Bucket sein.  
   
- Mit anderen Worten, Sie definieren die Bedingung nicht als `AgeDisc = ’25-35’`, sondern Sie berechnen und verwenden einen Wert aus diesem Intervall.  
+ Mit anderen Worten, Sie definieren die Bedingung nicht als `AgeDisc = '25-35'`, sondern Sie berechnen und verwenden einen Wert aus diesem Intervall.  
   
  Beispiel:  `AgeDisc = 27`  bedeutet jeden Wert im gleichen Intervall wie 27, in diesem Fall also 25–35.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "34018677"
 ## <a name="examples-of-filters"></a>Beispiele für Filter  
  In den folgenden Beispielen wird die Anwendung von Filtern auf ein Miningmodell veranschaulicht. Wenn Sie den Filterausdruck unter Verwendung von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellen, sehen Sie im Fenster **Eigenschaft** und im Bereich **Ausdruck** des Dialogfelds Filter nur die Zeichenfolge, die nach den WITH FILTER-Schlüsselwörtern angezeigt wird. Hier wird die Definition der Miningstruktur eingefügt, um den Spaltentyp und die Spaltenverwendung verständlicher zu machen.  
   
-###  <a name="bkmk_Ex1"></a> Beispiel 1: Typische Filterung auf Fallebene  
+###  <a name="bkmk_Ex1"></a> Beispiel 1: Typische Filterung auf:  
  Dieses Beispiel zeigt einen einfachen Filter, der die im Modell verwendeten Fälle auf Kunden mit dem Beruf Architekt und einem Alter von über 30 Jahren einschränkt.  
   
 ```  
@@ -133,11 +133,11 @@ Age,
 Occupation,  
 MaritalStatus PREDICT  
 )  
-WITH FILTER (Age > 30 AND Occupation=’Architect’)  
+WITH FILTER (Age > 30 AND Occupation='Architect')  
 ```  
   
   
-###  <a name="bkmk_Ex2"></a> Beispiel 2: Filterung auf Fallebene unter Verwendung von Attributen in geschachtelten Tabellen  
+###  <a name="bkmk_Ex2"></a> Beispiel 2: Filterung auf Fallebene mithilfe von Attributen in geschachtelten Tabellen  
  Wenn Ihre Miningstruktur geschachtelte Tabellen enthält, können Sie entweder auf das Vorhandensein eines Werts in einer geschachtelten Tabelle filtern oder auf Zeilen in der geschachtelten Tabelle, die einen bestimmten Wert enthalten. Dieses Beispiel schränkt die für das Modell verwendeten Fälle auf Kunden ein, die über 30 Jahre alt sind und mindestens einen Einkauf getätigt haben, der Milch enthielt.  
   
  Dieses Beispiel zeigt, dass der Filter nicht nur Spalten zu verwenden braucht, die im Modell enthalten sind. Die geschachtelte Tabelle **Products** ist Bestandteil der Miningstruktur, ist jedoch nicht im Miningmodell enthalten. Sie können jedoch auf Werte und Attribute in der geschachtelten Tabelle filtern. Um die Details dieser Fälle anzuzeigen, muss Drillthrough aktiviert werden.  
@@ -151,17 +151,17 @@ Occupation,
 MaritalStatus PREDICT  
 )  
 WITH DRILLTHROUGH,   
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’)  
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')  
 )  
 ```  
   
   
-###  <a name="bkmk_Ex3"></a> Beispiel 3: Filterung auf Fallebene unter Verwendung von mehreren Attributen in geschachtelten Tabellen  
+###  <a name="bkmk_Ex3"></a> Beispiel 3: Filterung auf Fallebene für mehrere geschachtelte Tabellenattribute  
  Dieses Beispiel zeigt einen dreiteiligen Filter: Eine Bedingung gilt für die Falltabelle, eine andere Bedingung für ein Attribut in der geschachtelten Tabelle und eine weitere Bedingung für einen bestimmten Wert in einer der geschachtelten Tabellenspalten.  
   
  Die erste Bedingung im Filter, `Age > 30`, gilt für eine Spalte in der Falltabelle. Die übrigen Bedingungen gelten für die geschachtelte Tabelle.  
   
- Die zweite Bedingung, `EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’`, überprüft, ob in der geschachtelten Tabelle mindestens ein Einkauf vorhanden ist, der Milch enthält. Die dritte Bedingung, `Quantity>=2`, bedeutet, dass der Kunde in einer Transaktion mindestens zwei Einheiten Milch gekauft haben muss.  
+ Die zweite Bedingung, `EXISTS (SELECT * FROM Products WHERE ProductName='Milk'`, überprüft, ob in der geschachtelten Tabelle mindestens ein Einkauf vorhanden ist, der Milch enthält. Die dritte Bedingung, `Quantity>=2`, bedeutet, dass der Kunde in einer Transaktion mindestens zwei Einheiten Milch gekauft haben muss.  
   
 ```  
 ALTER MINING STRUCTURE MyStructure  ADD MINING MODEL MyModel_3  
@@ -176,12 +176,12 @@ ProductName KEY,
 Quantity        
 )  
 )  
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity >= 2)   
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity >= 2)   
 )  
 ```  
   
   
-###  <a name="bkmk_Ex4"></a> Beispiel 4: Filterung auf Fallebene unter Verwendung der Abwesenheit von Attributen in der geschachtelten Tabelle  
+###  <a name="bkmk_Ex4"></a> Beispiel 4: Klicken Sie auf die Abwesenheit von Attributen in geschachtelten Tabellen Filterung auf Fallebene  
  Dieses Beispiel zeigt, wie Fälle auf Kunden beschränkt werden, die einen bestimmten Artikel nicht gekauft haben, indem auf das Nichtvorhandensein eines Attributs in der geschachtelten Tabelle gefiltert wird. In diesem Beispiel wird das Modell so eingerichtet, dass damit Kunden ermittelt werden können, die älter als 30 Jahre sind und noch nie Milch gekauft haben.  
   
 ```  
@@ -196,11 +196,11 @@ Products PREDICT
 ProductName  
 )  
 )  
-FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’) )  
+FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk') )  
 ```  
   
   
-###  <a name="bkmk_Ex5"></a> Beispiel 5: Filterung unter Verwendung von mehreren Werten in geschachtelten Tabellen  
+###  <a name="bkmk_Ex5"></a> Beispiel 5: Filter für mehrere geschachtelte Tabellenwerte  
  Dieses Beispiel soll das Filtern von geschachtelten Tabellen veranschaulichen. Der Filter für geschachtelte Tabellen wird nach dem Fallfilter angewendet und schränkt nur Zeilen in geschachtelten Tabellen ein.  
   
  Dieses Modell kann mehrere Fälle mit leeren geschachtelten Tabellen enthalten, da EXISTS nicht angegeben ist.  
@@ -216,13 +216,13 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 WITH DRILLTHROUGH  
 ```  
   
   
-###  <a name="bkmk_Ex6"></a> Beispiel 6: Filterung unter Verwendung von Attributen in geschachtelten Tabellen und EXISTS  
+###  <a name="bkmk_Ex6"></a> Beispiel 6: Filter für geschachtelte Tabellenattribute und EXISTS  
  In diesem Beispiel beschränkt der Filter für die geschachtelte Tabelle die Zeilen auf solche, die entweder Milch oder Wasser in Flaschen enthalten. Anschließend werden die Fälle im Modell mithilfe einer **EXISTS** -Anweisung eingeschränkt. Dies stellt sicher, dass die geschachtelte Tabelle nicht leer ist.  
   
 ```  
@@ -236,7 +236,7 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 FILTER (EXISTS (Products))  
 ```  
@@ -284,7 +284,7 @@ FILTER (EXISTS (Products))
  `FILTER (EXISTS (ProductsOnSale) AND EXISTS(ProductsNotOnSale) AND Age > 25)`  
   
   
-###  <a name="bkmk_Ex8"></a> Beispiel 8: Filtern unter Verwendung von Datumsangaben  
+###  <a name="bkmk_Ex8"></a> Beispiel 8: Filtern nach Datumsangaben  
  Sie können Eingabespalten genau wie alle anderen Daten nach Datumsangaben filtern. In einer Spalte des Typs Datum/Uhrzeit enthaltene Datumsangaben sind kontinuierliche Werte. Sie können daher mit Operatoren wie Größer als (>) oder Kleiner als (<) einen Datumsbereich festlegen. Wenn die Datenquelle Datumsangaben nicht durch einen kontinuierlichen Datentyp, sondern als Einzel- oder Textwerte darstellt, können Sie nicht nach einem Datumsbereich filtern, sondern müssen einzelne Werte angeben.  
   
  Sie können jedoch keinen Filter für die Datumsspalte in einem Zeitreihenmodell erstellen, wenn die für den Filter verwendete Datumsspalte gleichzeitig die Schlüsselspalte für das Modell ist. Dies liegt daran, dass die Datumsspalte in Zeitreihenmodellen und Sequenzclustermodellen als eine Spalte vom Typ **KeyTime** oder **KeySequence**verarbeitet werden kann.  
@@ -307,7 +307,7 @@ FILTER (EXISTS (Products))
   
   
 ## <a name="see-also"></a>Siehe auch  
- [Filter für Miningmodelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Tests und Überprüfung & #40; Datamining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

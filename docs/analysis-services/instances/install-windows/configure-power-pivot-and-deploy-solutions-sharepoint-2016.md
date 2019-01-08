@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e464a6863a45bc654b3874a5ea86945b9041c7aa
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f5b8d0b377be4282bdbdef8805b8e8683cb59cbe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984062"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400014"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Konfigurieren von Power Pivot und Bereitstellen von Lösungen (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "38984062"
  Informationen zum Installieren der [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 2016-Konfigurationstools finden Sie unter [installieren oder Deinstallieren des Power Pivot für SharePoint-Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Ausführen von Power Pivot für die Konfiguration von SharePoint 2016  
- **Hinweis:** Die folgenden Schritte können nur von einem Farmadministrator ausgeführt werden. Angenommen, eine Fehlermeldung mit etwa folgendem Wortlaut wird ausgegeben:  
+ **Hinweis**: Um die folgenden Schritte ausführen zu können, müssen Sie ein Farmadministrator sein. Angenommen, eine Fehlermeldung mit etwa folgendem Wortlaut wird ausgegeben:  
   
 -   "Der Benutzer ist kein Farmadministrator. Beheben Sie die Überprüfungsfehler, und wiederholen Sie den Vorgang."  
   
@@ -37,7 +37,7 @@ ms.locfileid: "38984062"
   
 1.  Wählen Sie im **Startmenü** **Alle Programme**aus, und wählen Sie anschließend [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]aus. Wählen Sie dann **Konfigurationstools**und anschließend **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2016**aus. Das Tool wird nur aufgeführt, wenn [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint auf dem lokalen Server installiert ist.  
   
-2.  Wählen Sie **konfigurieren oder reparieren [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint** und wählen Sie dann **OK**.  
+2.  Wählen Sie **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint konfigurieren oder reparieren** aus, und wählen Sie anschließend **OK** aus.  
   
 3.  Mithilfe des Tools wird der aktuelle Status von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] überprüft und ermittelt, welche Schritte zum Abschließen der Konfiguration erforderlich sind. Erweitern Sie das Fenster auf Vollbildgröße. Am unteren Rand des Fensters wird eine Schaltflächenleiste angezeigt, die die Befehle **Überprüfen**, **Ausführen**und **Beenden** enthält.  
   
@@ -45,14 +45,13 @@ ms.locfileid: "38984062"
   
     1.  **Benutzername für Standardkonto**: Geben Sie ein Domänenbenutzerkonto für das Standardkonto ein. Dieses Konto wird verwendet, um Dienste bereitzustellen, einschließlich des [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Dienstanwendungspools. Geben Sie kein integriertes Konto wie Network Service oder Local System an. Das Tool blockiert Konfigurationen, bei denen integrierte Konten angegeben werden.  
   
-    2.  
-  **Datenbankserver**: Sie können die für die SharePoint-Farm unterstützte SQL Server-Datenbank-Engine verwenden.  
+    2.  **Datenbankserver**: Sie können SQL Server-Datenbank-Engine verwenden, die für die SharePoint-Farm unterstützt wird.  
   
-    3.  **Passphrase**. Geben Sie eine Passphrase ein. Wenn Sie eine neue SharePoint-Farm erstellen, wird die Passphrase immer dann verwendet, wenn Sie der SharePoint-Farm einen Server oder eine Anwendung hinzufügen. Wenn die Farm bereits vorhanden ist, geben Sie die Passphrase ein, die Ihnen ermöglicht, der Farm eine Serveranwendung hinzuzufügen.  
+    3.  **Passphrase**: Geben Sie eine Passphrase ein. Wenn Sie eine neue SharePoint-Farm erstellen, wird die Passphrase immer dann verwendet, wenn Sie der SharePoint-Farm einen Server oder eine Anwendung hinzufügen. Wenn die Farm bereits vorhanden ist, geben Sie die Passphrase ein, die Ihnen ermöglicht, der Farm eine Serveranwendung hinzuzufügen.  
   
-    4.  Klicken Sie im linken Fenster auf **Websitesammlung erstellen** . Notieren Sie sich die **Website-URL** , damit Sie sie später zur Hand haben. Wenn der SharePoint-Server noch nicht konfiguriert ist, verwendet der Konfigurations-Assistent für die URL der Webanwendung und Websitesammlung standardmäßig den Stamm von `http://[ServerName]`. Um die Standardeinstellungen zu ändern, überprüfen Sie die folgenden Seiten im linken Fenster: **Standardwebanwendung erstellen** und **Webanwendungslösung bereitstellen**  
+    4.  Klicken Sie im linken Fenster auf **Websitesammlung erstellen** . Notieren Sie sich die **Website-URL** , damit Sie sie später zur Hand haben. Wenn der SharePoint-Server noch nicht konfiguriert ist, verwendet der Konfigurations-Assistent für die URL der Webanwendung und Websitesammlung standardmäßig den Stamm von `http://[ServerName]`. Zum Ändern der Standardeinstellungen finden Sie Informationen im linken Fenster die folgenden Seiten: **Erstellen Sie die standardwebanwendung** und **Webanwendungslösung bereitstellen**  
   
-5.  Überprüfen Sie optional die verbleibenden Eingabewerte, die zum Abschließen der jeweiligen Aktion verwendet werden. Klicken Sie im linken Fenster auf die einzelnen Aktionen, um die Details zur Aktion anzuzeigen und zu überprüfen. Weitere Informationen über die einzelnen Aktionen finden Sie im Abschnitt „Eingabewerte für die Serverkonfiguration“ im Artikel [Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) in diesem Thema.  
+5.  Überprüfen Sie optional die verbleibenden Eingabewerte, die zum Abschließen der jeweiligen Aktion verwendet werden. Klicken Sie im linken Fenster auf die einzelnen Aktionen, um die Details zur Aktion anzuzeigen und zu überprüfen. Weitere Informationen über die einzelnen Aktionen finden Sie im Abschnitt "Eingabewerte für die Serverkonfiguration im [konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) in diesem Thema.  
   
 6.  Entfernen Sie optional alle Aktionen, die Sie zu dieser Zeit nicht verarbeiten wollen. Wenn Sie z.B. das einmalige Anmelden später konfigurieren möchten, wählen Sie **Einmaliges Anmelden konfigurieren**aus, und deaktivieren Sie anschließend das Kontrollkästchen **Diese Aktion in Taskliste einschließen**.  
   
@@ -60,14 +59,14 @@ ms.locfileid: "38984062"
   
 8.  Wählen Sie **Ausführen** aus, um alle Aktionen in der Aufgabenliste zu verarbeiten. Beachten Sie, dass **Ausführen** verfügbar wird, nachdem Sie die Aktionen überprüft haben. Wenn **Ausführen** nicht aktiviert ist, wählen Sie zuerst **Überprüfen** aus.  
   
- Weitere Informationen finden Sie unter [Konfigurieren oder Reparieren von Power Pivot für SharePoint 2010 (Power Pivot-Konfigurationstool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Weitere Informationen finden Sie unter [Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
 ##  <a name="bkmk_verify_powerpivot"></a> Überprüfen der PowerPivot-Konfiguration  
  **Dienste:**  
   
 1.  Wählen Sie in der Zentraladministration unter „Systemeinstellungen“ **Dienste auf dem Server verwalten**aus.  
   
-2.  Überprüfen Sie, ob **SQL Server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Systemdienst** gestartet wird.  
+2.  Überprüfen Sie, ob **SQL Server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Systemdienst** gestartet wird.  
   
  **Farmfunktion:**  
   
@@ -91,7 +90,7 @@ ms.locfileid: "38984062"
   
 2.  Vergewissern Sie sich, dass der Status der Dienstanwendung **Gestartet**lautet. Der Standardname lautet **Standard-[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Dienstanwendung**.  
   
-     Wählen Sie den Namen der Dienstanwendung aus, um das [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Management-Dashboard für die Dienstanwendung zu öffnen. Bei seiner ersten Verwendung dauert das Laden des Dashboards einige Minuten.  
+     Wählen Sie den Namen der Dienstanwendung aus, um das [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Management-Dashboard für die Dienstanwendung zu öffnen. Bei seiner ersten Verwendung dauert das Laden des Dashboards einige Minuten.  
   
  Weitere Informationen finden Sie unter [Überprüfen einer Power Pivot für SharePoint-Installation](../../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).  
   

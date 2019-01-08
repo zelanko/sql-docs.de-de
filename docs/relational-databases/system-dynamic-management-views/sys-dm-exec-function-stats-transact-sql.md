@@ -19,19 +19,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3c4b57cd20addca8091bfef2bf3ecaf6e157817
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844668"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409737"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Gibt die aggregatleistungsstatistik für zwischengespeicherte Funktionen aus. Gibt die Sicht eine Zeile für jeden Plan der zwischengespeicherten Funktion zurück, und die Lebensdauer der Zeile zwischengespeichert wird, solange die Funktion befindet. Wenn eine Funktion aus dem Cache entfernt wird, wird die entsprechende Zeile aus dieser Sicht gelöscht. Zu diesem Zeitpunkt wird ein Leistungsstatistik-SQL-Ablaufverfolgungsereignis ausgelöst, das **sys.dm_exec_query_stats**entspricht. Informationen zu den skalaren Funktionen, einschließlich der in-Memory-Funktionen und CLR-Skalarfunktionen zurückgegeben. Informationen zu Tabellenwertfunktionen wird nicht zurückgegeben werden.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, dass diese Informationen verfügbar gemacht werden, wird jede Zeile mit Daten, die zum verbundenen Mandanten gehören, herausgefiltert.  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, diese Informationen bereitstellen, wird jede Zeile, die Daten enthält, die zum verbundenen Mandanten gehören nicht herausgefiltert.  
   
 > [!NOTE]
 > Erste Abfrage von **dm_exec_function_stats** kann zu ungenauen Ergebnissen führen, wenn eine arbeitsauslastung, die gerade ausgeführt wird, auf dem Server vorhanden ist. Erneutes Ausführen der Abfrage liefert unter Umständen genauere Ergebnisse.  
@@ -41,7 +41,7 @@ ms.locfileid: "47844668"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Datenbank-ID, die in der die Funktion befindet.|  
 |**object_id**|**int**|Objekt-ID der Funktion.|  
-|**type**|**char(2)**|Typ des Objekts: FN = Funktionen mit skalaren Werten|  
+|**type**|**char(2)**|Der Objekttyp:   FN = Funktionen mit skalaren Werten|  
 |**type_desc**|**nvarchar(60)**|Beschreibung des Objekttyps: SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary(64)**|Dies kann verwendet werden, um die Korrelation mit Abfragen in **Sys. dm_exec_query_stats** , die in dieser Funktion aus ausgeführt wurden.|  
 |**plan_handle**|**varbinary(64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit der dynamischen Verwaltungssicht **sys.dm_exec_cached_plans** verwendet werden.<br /><br /> Immer wird 0 x 000, wenn eine systemintern kompilierte Funktion Abfragen, die eine Speicheroptimierte Tabelle sein.|  

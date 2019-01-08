@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - assemblies [CLR integration], verifying can run
@@ -14,17 +13,17 @@ ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a796426f02c2ad9c0878c212c51eb0e90cfce8bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45c72bc5b811fec8e5532d5d03d4552cc2e0d319
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219376"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641301"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>CLR-fähig (Serverkonfigurationsoption)
   Mithilfe der Option CLR-fähig können Sie angeben, ob Benutzerassemblys von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden dürfen. Von der Option "CLR-fähig" werden folgende Werte bereitgestellt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |0|Das Ausführen von Assemblys für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist unzulässig.|  
 |1|Das Ausführen von Assemblys für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist zulässig.|  
@@ -35,7 +34,7 @@ ms.locfileid: "48219376"
 >  Wenn RECONFIGURE ausgeführt und der Ausführungswert der Option "CLR-fähig" von 1 in 0 geändert wird, werden alle Anwendungsdomänen mit Benutzerassemblys sofort entladen.  
   
 > [!NOTE]  
->  CLR (Common Language Runtime) wird beim Lightweightpooling nicht unterstützt. Deaktivieren Sie eine der beiden Optionen "CLR-fähig" oder "Lightweightpooling". Funktionen, die auf CLR basieren und nicht arbeiten ordnungsgemäß im Fibermodus, gehören die `hierarchy` -Datentyp, Replikation und Richtlinie der richtlinienbasierten Verwaltung.  
+>  CLR (Common Language Runtime) wird beim Lightweightpooling nicht unterstützt. Deaktivieren Sie eine der beiden Optionen "CLR-fähig" oder "Lightweightpooling". Zu den Funktionen, die auf CLR basieren und nicht ordnungsgemäß im Fibermodus arbeiten, gehören der `hierarchy`-Datentyp, die Replikation und die richtlinienbasierte Verwaltung.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird zunächst die aktuelle Einstellung der Option CLR-fähig angezeigt und die Option dann aktiviert, indem der Optionswert auf 1 festgelegt wird. Wenn Sie die Option deaktivieren möchten, legen Sie den Wert auf 0 fest.  

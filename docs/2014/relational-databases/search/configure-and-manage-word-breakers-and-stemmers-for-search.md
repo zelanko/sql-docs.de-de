@@ -20,12 +20,12 @@ ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0804fedde52ad335197c142b897afab8743f45b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8be3cc7da791b9ea5f950d83bd0f570ca42e686f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199446"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505841"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche
   Wörtertrennung und Wortstammerkennung führen eine linguistische Analyse aller volltextindizierten Daten aus. Zur linguistischen Analyse gehört das Auffinden von Wortgrenzen (Trennfugen) und das Konjugieren von Verben (Wortstammerkennung). Wörtertrennungen und Wortstammerkennungen sind sprachspezifisch, und die Regeln für die linguistische Analyse unterscheiden sich für verschiedene Sprachen. Für eine bestimmte Sprache identifiziert eine *Wörtertrennung* einzelne Wörter, indem die Wortgrenzen basierend auf den lexikalischen Regeln der Sprache ermittelt werden. Jedes Wort (auch bezeichnet als *Token*) wird zur Größenreduzierung in einer komprimierten Darstellung in den Volltextindex eingefügt. Die *Wortstammerkennung* generiert Flexionsformen eines bestimmten Worts basierend auf den jeweiligen Regeln der Sprache. (Zum Beispiel sind „laufend“, „lief“ und „gelaufen“ verschiedene Formen des Worts „laufen“.)  
@@ -33,14 +33,14 @@ ms.locfileid: "48199446"
  Wenn Sie sprachspezifische Wörtertrennungen verwenden, können Sie für die jeweilige Sprache genauere Ergebnisbegriffe erzielen. Wenn es eine Wörtertrennung für eine Sprachfamilie gibt, jedoch nicht für die jeweilige Untersprache, wird die Hauptsprache verwendet. Beispielsweise wird Text in kanadischem Französisch mit der Wörtertrennung für Französisch behandelt. Ist für eine Sprache keine Wörtertrennung verfügbar, wird die neutrale Wörtertrennung verwendet. Mit der neutralen Wörtertrennung werden neutrale Zeichen, wie Leerzeichen und Satzzeichen, als Wortgrenzen betrachtet.  
   
 ##  <a name="register"></a> Registrieren der Wörtertrennungen  
- Die Wörtertrennung muss für eine zu verwendende Sprache jeweils registriert sein. Bei registrierten Wörtertrennungen sind die zugeordneten sprachlichen Ressourcen – Wortstammerkennung, Füllwörter (Stoppwörter) und Thesaurusdateien – für Volltextindizierungs- und Volltextabfragevorgänge verfügbar. Wenn Sie eine Liste der Sprachen anzeigen möchten, deren Wörtertrennungen derzeit in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]registriert sind, verwenden Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung:  
+ Die Wörtertrennung muss für eine zu verwendende Sprache jeweils registriert sein. Bei registrierten wörtertrennungen sind die zugeordneten sprachlichen Ressourcen – wortstammerkennung, Füllwörter (Stoppwörter) und Thesaurusdateien – Volltextsuche volltextindizierungs- und volltextabfragevorgänge verfügbar. Wenn Sie eine Liste der Sprachen anzeigen möchten, deren Wörtertrennungen derzeit in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]registriert sind, verwenden Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung:  
   
  SELECT * FROM sys.fulltext_languages  
   
  Wenn Sie eine Wörtertrennung hinzufügen, entfernen oder ändern, müssen Sie die Liste der Microsoft Windows-Gebietsschemabezeichner (LCID) aktualisieren, die bei Volltextindizierung und -abfrage unterstützt werden. Weitere Informationen finden Sie unter [Anzeigen oder Ändern von registrierten Filtern und Wörtertrennungen](view-or-change-registered-filters-and-word-breakers.md).  
   
 ##  <a name="default"></a> Festlegen der Option Volltext-Standardsprache  
- Bei einer lokalisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt Setup die `default full-text language` option für die Sprache des Servers, wenn eine geeignete Übereinstimmung vorhanden ist. Für eine nicht lokalisierte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `default full-text language` Option Englisch ist.  
+ Bei einer lokalisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt Setup die `default full-text language` option für die Sprache des Servers, wenn eine geeignete Übereinstimmung vorhanden ist. Bei einer nicht lokalisierten Version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird Englisch für die Option `default full-text language` verwendet.  
   
  Beim Erstellen oder Ändern eines Volltextindex können Sie für jede volltextindizierte Spalte eine andere Sprache angeben. Ist für eine Spalte keine Sprache angegeben, wird standardmäßig der Wert der Konfigurationsoption `default full-text language` verwendet.  
   

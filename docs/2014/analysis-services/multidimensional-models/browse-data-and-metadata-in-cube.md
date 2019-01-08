@@ -11,19 +11,19 @@ ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e074a41f6d9f5053562dd7b6be453644cb5fa176
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c062137987a8ee1499449425d8e02df0d203050
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076630"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519890"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Durchsuchen von Daten und Metadaten in Cube
   Klicken Sie im Cube-Designer auf die Registerkarte **Browser** , um Cubedaten zu durchsuchen. Sie können diese Ansicht verwenden, um die Struktur eines Cubes zu untersuchen und die Daten, die Berechnung, die Formatierung und die Sicherheit der Datenbankobjekte zu überprüfen. Sie können schnell einen Cube untersuchen, während dieser von Endbenutzern in Berichterstellungstools oder anderen Clientanwendungen angezeigt wird. Wenn Sie Cubedaten durchsuchen, können Sie unterschiedliche Dimensionen anzeigen, einen Drilldown in Elemente ausführen und die Dimensionen in Slices aufteilen.  
   
  Bevor Sie einen Cube durchsuchen, müssen Sie ihn verarbeiten und erneut eine Verbindung damit herstellen. Nach der Verarbeitung öffnen Sie im Cube-Designer die Registerkarte **Browser** . Klicken Sie auf der Symbolleiste auf die Schaltfläche Verbindung wiederherstellen, um die Verbindung zu aktualisieren.  
   
- Die Registerkarte **Browser** verfügt über drei Bereiche: Metadaten, Filter und Daten. Verwenden Sie den Bereich Metadaten, um die Struktur des Cubes im Strukturformat zu untersuchen. Verwenden Sie den Bereich **Filter** oben auf der Registerkarte Browser, um einen beliebigen Teilcube zu definieren, den Sie durchsuchen möchten. Verwenden Sie den Bereich Daten, um das Resultset anzuzeigen und einen Drilldown durch Dimensionshierarchien auszuführen.  
+ Die **Browser** Registerkarte verfügt über drei Bereiche: Bereich Metadaten, der Bereich "Filter" und der Bereich "Daten". Verwenden Sie den Bereich Metadaten, um die Struktur des Cubes im Strukturformat zu untersuchen. Verwenden Sie den Bereich **Filter** oben auf der Registerkarte Browser, um einen beliebigen Teilcube zu definieren, den Sie durchsuchen möchten. Verwenden Sie den Bereich Daten, um das Resultset anzuzeigen und einen Drilldown durch Dimensionshierarchien auszuführen.  
   
 ## <a name="setting-up-the-browser"></a>Einrichten des Browsers  
  Um die Suche in einem Cube vorzubereiten, können Sie eine gewünschte Perspektive oder Übersetzung angeben. Fügen Sie dem Bereich Daten Measures und Dimensionen hinzu, und geben Sie im Bereich Filter Filter an.  

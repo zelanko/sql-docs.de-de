@@ -10,12 +10,12 @@ ms.assetid: d82f21fa-6be1-4723-a72e-f2526fafd1b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f7b32b9e3d87c783efe2a064714454c50a886c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214250"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407218"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>Verwalten des Arbeitsspeichers für In-Memory OLTP
   Speicheroptimierte Tabellen benötigen ausreichend verfügbaren Arbeitsspeicher, um alle Zeilen und Indizes im Arbeitsspeicher ablegen zu können. Da Arbeitsspeicher nicht unbegrenzt verfügbar ist, sollten Sie die Arbeitsspeichernutzung in Ihrem System kennen und effizient verwalten. Die Themen in diesem Abschnitt behandeln allgemeine Szenarien zur Speichernutzung und -verwaltung.  
@@ -24,7 +24,7 @@ ms.locfileid: "48214250"
   
 |Abschnitt|Description|  
 |-------------|-----------------|  
-|[Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Erläutert, wie die Arbeitsspeicheranforderungen einer Tabelle geschätzt werden.|  
+|[Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Schätzen Sie die arbeitsspeicheranforderungen einer Tabelle.|  
 |[Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)|Exemplarische Vorgehensweise, in der das Binden einer Datenbank an einen Ressourcenpool schrittweise erläutert wird.|  
 |[Überwachung und Fehlerbehebung für die Arbeitsspeicherauslastung](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)|Tools, die zur Überwachung der Arbeitsspeichernutzung verwendet werden können. Zusätzlich werden Probleme bei zu hoher Speicherauslastung behandelt.|  
 |[Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher)](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)|Schritte zum Beheben von OOM-Situationen (Out of Memory, nicht genügend Arbeitsspeicher).|  

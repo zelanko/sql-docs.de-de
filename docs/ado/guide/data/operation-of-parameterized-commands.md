@@ -14,12 +14,12 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d2d2f8fce7b70c760707bd0d384ffa9b72f7a1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751768"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516991"
 ---
 # <a name="operation-of-parameterized-commands"></a>Verarbeitung parametrisierter Befehle
 Bei Verwendung mit einem großen untergeordneten **Recordset**, insbesondere auf die Größe des übergeordneten Elements verglichene **Recordset**, müssen nur wenige untergeordnete Kapitel zugreifen, aber Sie finden es möglicherweise effizienter, verwenden eine parametrisierte Befehle.  

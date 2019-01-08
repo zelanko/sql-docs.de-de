@@ -21,12 +21,12 @@ ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4eff2dd82db75bf1dc0114477152cb18b9d715d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081eaa3995507edf20be0b83f3e0ce766135139c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681748"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416321"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>Sys.fn_net_changes_&lt;Capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  Bitflags werden dann dem Resultset für jede Spalte, die im Parameter identifiziert wird angehängt @update_flag_list. Für die **net Changes** Wrapper sind die Bitflags immer NULL sein, wenn die @row_filter_option , im Aufruf der Wrapperfunktion verwendete 'all' oder 'all with Merge' ist. Der Wert des Flags ist ebenfalls NULL, wenn die @row_filter_option auf 'all with mask' und __CDC_OPERATION auf 'D' oder 'I' gesetzt ist. Wenn \__CDC_OPERATION ist un ", wird das Flag festgelegt werden, auf 1 oder 0, je nachdem, ob die **net** Updatevorgang aufgrund eine Änderung der Spalte.  
   
- Die Change Data Capture-Konfigurationsvorlage 'Instantiate CDC Wrapper TVFs for Schema' veranschaulicht die Verwendung der gespeicherten Prozedur sp_cdc_generate_wrapper_function zum Abrufen von CREATE-Skripts für alle Wrapperfunktionen für die definierten Abfragefunktionen eines Schemas. Diese Skripts werden dann von der Vorlage erstellt. Weitere Informationen zu Vorlagen finden Sie unter [Vorlagen-Explorer](../../ssms/template/template-explorer.md).  
+ Die Change Data Capture-Konfigurationsvorlage "Instantiate CDC Wrapper TVFs for Schema" zeigt, wie Sie mit der gespeicherten Prozedur Sp_cdc_generate_wrapper_function zum Abrufen von CREATE-Skripts für alle Wrapperfunktionen für die definierten Abfragefunktionen eines Schemas. Diese Skripts werden dann von der Vorlage erstellt. Weitere Informationen zu Vorlagen finden Sie unter [Vorlagen-Explorer](../../ssms/template/template-explorer.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

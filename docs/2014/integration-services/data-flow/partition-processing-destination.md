@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partitionprocessingdest.f1
@@ -17,12 +16,12 @@ ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3405133c121901344de0bda7a6291dcdf150a2b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57c40f85bf372538db22ae3fceb9106b2cccbab0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140510"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773144"
 ---
 # <a name="partition-processing-destination"></a>Ziel für Partitionsverarbeitung
   Das Ziel für Partitionsverarbeitung lädt und verarbeitet eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Partition. Weitere Informationen zu Partitionen finden Sie unter [Partitionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
@@ -49,11 +48,11 @@ ms.locfileid: "48140510"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Ziel-Editor für Partitionsverarbeitung** festlegen können:  
   
--   [Ziel-Editor für Partition &#40;Seite Verbindungs-Manager&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für Partitionsverarbeitung &#40;Seite Verbindungs-Manager&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
   
--   [Ziel-Editor für Partition &#40;Seite "Zuordnungen"&#41;](../partition-processing-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für Partitionsverarbeitung &#40;Seite Zuordnungen&#41;](../partition-processing-destination-editor-mappings-page.md)  
   
--   [Ziel-Editor für Partition &#40;Seite "Erweitert"&#41;](../partition-processing-destination-editor-advanced-page.md)  
+-   [Ziel-Editor für Partitionsverarbeitung &#40;Seite Erweitert&#41;](../partition-processing-destination-editor-advanced-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   

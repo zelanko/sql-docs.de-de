@@ -12,12 +12,12 @@ ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00cfc0e0ff972b4078c49fb42cb386fc47d25750
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae08a79bcfe1e4befcad8559e82bdfba5b347fc2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208102"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417851"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Ausführen von Befehlen, die Tabellenwertparameter enthalten
   Die Ausführung eines Befehls, der Tabellenwertparameter enthält, erfordert zwei Phasen:  
@@ -29,7 +29,7 @@ ms.locfileid: "48208102"
 ## <a name="table-valued-parameter-specification"></a>Tabellenwertparameter-Spezifikation  
  Der Consumer kann den Typ des Tabellenwertparameters angeben. Diese Angabe enthält den Typnamen des Tabellenwertparameters. Sie umfasst auch den Schemanamen, wenn der benutzerdefinierte Tabellentyp für den Tabellenwertparameter nicht im aktuellen Standardschema für die Verbindung enthalten ist. Je nach Serverunterstützung kann der Consumer auch optionale Metadateninformationen angeben, wie beispielsweise die Sortierreihenfolge der Spalten. Zudem kann er angeben, dass alle Zeilen für bestimmte Spalten Standardwerte aufweisen sollen.  
   
- Um einen Tabellenwertparameter anzugeben, wird der Consumer ruft ISSCommandWithParamter::SetParameterInfo und ruft optional isscommandwithparameters:: SetParameterProperties. Für einen Tabellenwertparameter verfügt das *pwszDataSourceType*-Feld in der DBPARAMBINDINFO-Struktur über den Wert DBTYPE_TABLE. Die *UlParamSize* -Feld auf festgelegt wurde ~ 0, wenn diese Länge ist unbekannt. Bestimmte Eigenschaften für Tabellenwertparameter, wie z. B. Schemaname, Typname, Spaltenreihenfolge und Standardspalten, können über isscommandwithparameters:: SetParameterProperties festgelegt werden.  
+ Um einen Tabellenwertparameter anzugeben, wird der Consumer ruft ISSCommandWithParameter::SetParameterInfo und ruft optional isscommandwithparameters:: SetParameterProperties. Für einen Tabellenwertparameter verfügt das *pwszDataSourceType*-Feld in der DBPARAMBINDINFO-Struktur über den Wert DBTYPE_TABLE. Die *UlParamSize* -Feld auf festgelegt wurde ~ 0, wenn diese Länge ist unbekannt. Bestimmte Eigenschaften für Tabellenwertparameter, wie z. B. Schemaname, Typname, Spaltenreihenfolge und Standardspalten, können über isscommandwithparameters:: SetParameterProperties festgelegt werden.  
   
 ## <a name="table-valued-parameter-binding"></a>Tabellenwertparameter-Bindung  
  Ein Tabellenwertparameter kann ein beliebiges Rowsetobjekt sein. Während der Ausführung liest der Anbieter beim Senden von Tabellenwertparametern an den Server aus diesem Objekt.  

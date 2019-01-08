@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f8a5dc68eed10ea6afce1a1aa0f75c2c2e9e09a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50cf289af9c2b29f7239596ff04102308048456b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764668"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502292"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQLServer Shared Management Objects (SMO)-Lizenzbedingungen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -95,7 +95,7 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
 
 **12.   GARANTIEAUSSCHLUSS. DIE SOFTWARE WIRD „WIE BESEHEN“ LIZENZIERT. SIE TRAGEN DAS MIT DER NUTZUNG VERBUNDENE RISIKO. MICROSOFT GEWÄHRT KEINE AUSDRÜCKLICHEN GEWÄHRLEISTUNGEN, GARANTIEN ODER KONDITIONEN. MÖGLICHERWEISE HABEN SIE UNTER DEN ÖRTLICH ANWENDBAREN GESETZEN ZUSÄTZLICHE VERBRAUCHERRECHTE ODER GESETZLICHE GARANTIEN, DIE DURCH DIESEN VERTRAG NICHT ABGEÄNDERT WERDEN KÖNNEN. IM DURCH DAS ÖRTLICH ANWENDBARE RECHT ZUGELASSENEN UMFANG SCHLIESST MICROSOFT KONKLUDENTE GARANTIEN DER HANDELSÜBLICHKEIT, EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND NICHTVERLETZUNG VON RECHTEN DRITTER AUS.**
 
-**FÜR AUSTRALIEN – Gemäß australischem Verbrauchergesetz besitzen Sie gesetzliche Garantien und nichts in diesen Bedingungen soll diese Rechte einschränken.**
+**FÜR AUSTRALIEN: Gemäß australischem Verbrauchergesetz besitzen Sie gesetzliche Garantien und nichts in diesen Bestimmungen soll diese Rechte einschränken.**
 
 **13.   EINSCHRÄNKUNG UND AUSSCHLUSS VON ABHILFEMASSNAHMEN UND SCHÄDEN. SIE KÖNNEN GEGENÜBER MICROSOFT UND SEINEN ZULIEFERERN NUR DIREKTE SCHÄDEN VON BIS ZU USD 5,00 GELTEND MACHEN. SIE KÖNNEN KEINEN ERSATZ FÜR ANDERE SCHÄDEN ERHALTEN, EINSCHLIESSLICH FOLGESCHÄDEN, SCHÄDEN AUS ENTGANGENEM GEWINN, SPEZIELLE, INDIREKTE ODER ZUFÄLLIGE SCHÄDEN.**
 Diese Einschränkung gilt für

@@ -1,5 +1,5 @@
 ---
-title: Technische Referenz zu Microsoft Neural Network-Algorithmus | Microsoft Docs
+title: Technische Referenz zu Microsoft Neural Network-Algorithmus | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e71ae9c0ceb236c49df8e7fc8ec67713ef3e76
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a9895eb3e52c83c1ee3594b40fa7257fc53fd4d0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018244"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525486"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Neural Network-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus verwendet ein *mehrschichtiges Perzeptronnetzwerk*, das auch als *Netzwerk von Deltaregeln mit Rückpropagierung* bezeichnet wird. Es besteht aus bis zu drei Ebenen aus Neuronen oder *Perzeptronen*. Zu diesen Ebenen gehört eine Eingabeebene, eine optionale verborgene Ebene und eine Ausgabeebene.  
+  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus verwendet ein *mehrschichtiges Perzeptronnetzwerk* , das auch als *Netzwerk von Deltaregeln mit Rückpropagierung*bezeichnet wird. Es besteht aus bis zu drei Ebenen aus Neuronen oder *Perzeptronen*. Zu diesen Ebenen gehört eine Eingabeebene, eine optionale verborgene Ebene und eine Ausgabeebene.  
   
  Eine detaillierte Erläuterung von mehrschichtigen Perzeptronnetzwerken geht über den Rahmen dieser Dokumentation hinaus. In diesem Thema wird die grundlegende Implementierung des Algorithmus, einschließlich der Methode zum Normalisieren von Eingabe- und Ausgabewerten, erläutert sowie Funktionsauswahlverfahren zur Reduzierung der Attributkardinalität beschrieben. Das Thema enthält eine Beschreibung der Parameter und anderer Einstellungen, mit denen das Verhalten des Algorithmus angepasst wird. Ferner werden Links zu weiteren Informationen über das Abfragen von Modellen zur Verfügung gestellt.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34018244"
   
  **Diskrete Werte**  
   
- `μ = p` (die vorherige Wahrscheinlichkeit eines Status)  
+ `μ = p` -die vorherige Wahrscheinlichkeit eines Status  
   
  `StdDev  = sqrt(p(1-p))`  
   
@@ -174,7 +174,7 @@ ms.locfileid: "34018244"
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet.  
   
-|Column|Inhaltstypen|  
+|Spalte|Inhaltstypen|  
 |------------|-------------------|  
 |Eingabeattribut|Continuous, Cyclical, Discrete, Discretized, Key, Table und Ordered|  
 |Vorhersagbares Attribut|Continuous, Cyclical, Discrete, Discretized und Ordered|  
@@ -184,7 +184,7 @@ ms.locfileid: "34018244"
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Neural Network-Algorithmus](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Miningmodellinhalt, neuronale Netzwerkmodelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Neural Network-Abfragebeispiele](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Beispiele für Abfragen von neuronalen Netzwerkmodellen](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   
