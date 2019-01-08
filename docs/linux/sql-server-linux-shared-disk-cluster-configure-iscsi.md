@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 519289337d35ebd0cc8d59d54e624d1dfa819792
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c73a91a461f78687d390e4ef620416325e7672df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676339"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524910"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Konfigurieren von Failover-Clusterinstanz - iSCSI - SQL Server unter Linux
 
@@ -93,7 +93,7 @@ Weitere Informationen zu iSCSI-Initiator für die unterstützten Distributionen 
 6.  Überprüfen der angefügte iSCSI-Datenträger
 
     ```bash
-    sudo grep “Attached SCSI” /var/log/messages
+    sudo grep "Attached SCSI" /var/log/messages
     ```
     ![30-iSCSIattachedDisks][7]
 
@@ -187,7 +187,7 @@ Weitere Informationen zu iSCSI-Initiator für die unterstützten Distributionen 
    *    Löschen Sie die Dateien aus dem vorhandenen Verzeichnis der SQL Server-Daten. Sie erhalten Bestätigung nicht bei erfolgreicher Ausführung.
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    Stellen Sie sicher, dass die Dateien gelöscht wurden. Die folgende Abbildung zeigt ein Beispiel für die gesamte Sequenz von c bis h.
@@ -337,7 +337,7 @@ Weitere Informationen zu iSCSI-Initiator für die unterstützten Distributionen 
 14. Konfigurieren Sie den Server aus, damit diese nur Pacemaker die Volumegruppe aktiviert werden kann.
 
     ```bash
-    sudo lvmconf --enable-halvm --services –startstopservices
+    sudo lvmconf --enable-halvm --services -startstopservices
     ```
  
 15. Generiert eine Liste der Volumegruppen auf dem Server. Elemente aufgeführt, die nicht den iSCSI-Datenträger wird vom System, z. B. für den Betriebssystem-Datenträger verwendet.

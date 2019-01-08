@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720956a936127cf3fec82fabc4e140782fe2e0da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f76729b419fccf3d17e66ddd8ab00e8b54b1b264
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144835"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398073"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Grundlegendes zur SELECT-Anweisung (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "50144835"
   
      In diesem Fall müssen Sie einen Drillthrough zur Miningstruktur, d. h. Ihrer Datendomäne, durchführen und die einzelnen Zeilen in den Spalten (Gender, Bike Buyer usw.) untersuchen.  
   
- **Wichtig:** alles, was in der Liste mit Ausdrücken oder in enthalten ist das **, in denen** Klausel muss stammen aus der Datendomäne, die von definiert ist die **FROM** Klausel. Datendomänen können nicht gemischt werden.  
+ **WICHTIG:** Alles, was in der Liste mit Ausdrücken oder in enthalten ist das **, in denen** Klausel muss stammen aus der Datendomäne, die von definiert ist die **FROM** Klausel. Datendomänen können nicht gemischt werden.  
   
 ##  <a name="Select_Types"></a> Wählen Sie die Typen  
  Die Syntax der **wählen** -Anweisung unterstützt viele verschiedene Aufgaben. Diese Aufgaben führen Sie mithilfe der folgenden Muster aus:  

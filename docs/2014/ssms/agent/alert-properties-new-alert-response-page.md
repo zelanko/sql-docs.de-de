@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.alert.response.f1
@@ -12,17 +12,17 @@ ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 864859365dac094377ab00cb6848f3fb7c3a81f7
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906220"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773792"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>Warnung Eigenschaften – neue Warnung (Seite "Antwort")
   Verwenden Sie diese Seite, um einen Auftrag, den Sie ausführen möchten, festzulegen und um eine Liste der Operatoren abzurufen, die bei einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnung benachrichtigt werden sollen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Auftrag ausführen**  
  Aktiviert die Optionen **Auftragsliste**, **Neuer Auftrag** und **Auftrag anzeigen** .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48906220"
  Zeigt das Dialogfeld **Neuer Operator** an, in dem Sie einen neuen Operator erstellen können.  
   
  **Operator anzeigen**  
- Zeigt das Dialogfeld **Eigenschaften** für den derzeit ausgewählten Operator an. Sehen Sie und Operatoreigenschaften geändert, auf die **Operatoreigenschaften** Dialogfeld.  
+ Zeigt das Dialogfeld **Eigenschaften** für den derzeit ausgewählten Operator an. Über das Dialogfeld **Operator-Eigenschaften** können Sie die Operator-Eigenschaften anzeigen und ändern.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Warnungen](alerts.md)   

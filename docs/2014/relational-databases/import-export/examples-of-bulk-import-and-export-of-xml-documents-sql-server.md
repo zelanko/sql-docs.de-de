@@ -18,12 +18,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12201091caba40e145e6848fe25eef3b02b6b06a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d573faebbbfcaf8a501a80aa093584af7fa0307
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221040"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515851"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Beispiele für den Massenimport und -export von XML-Dokumenten (SQL Server)
     
@@ -55,7 +55,7 @@ ms.locfileid: "48221040"
 -   E. [Massenexport von XML-Daten](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. Massenimport von XML-Daten als binärer Bytedatenstrom  
- Geben Sie beim Massenimportieren von XML-Daten aus einer Datei mit einer Codierungsdeklaration, die Sie anwenden möchten, die Option SINGLE_BLOB in der OPENROWSET(BULK...)-Klausel an. Die Option SINGLE_BLOB verwenden, wird sichergestellt, dass der XML-Parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Daten gemäß dem in der XML-Deklaration angegebenen Codierungsschema importiert.  
+ Geben Sie beim Massenimportieren von XML-Daten aus einer Datei mit einer Codierungsdeklaration, die Sie anwenden möchten, die Option SINGLE_BLOB in der OPENROWSET(BULK...)-Klausel an. Mit der Option SINGLE_BLOB stellen Sie sicher, dass der XML-Parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Daten gemäß dem in der XML-Deklaration angegebenen Codierungsschema importiert.  
   
 #### <a name="sample-table"></a>Beispieltabelle  
  Zum Testen des Beispiels A müssen Sie die folgende Beispieltabelle `T`erstellen:  
@@ -151,7 +151,7 @@ GO
   
  Um dieses Problem zu umgehen, können Sie die XML-Daten aus einer Datendatei mit DTD importieren, indem Sie die `OPENROWSET(BULK...)` -Funktion verwenden und die `CONVERT` -Option in der `SELECT` -Klausel des Befehls angeben. Die Hauptsyntax für diesen Befehl lautet:  
   
- `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
+ `INSERT ... SELECT CONVERT(...) FROM OPENROWSET(BULK...)`  
   
 #### <a name="sample-data-file"></a>Beispieldatendatei  
  Bevor Sie dieses Beispiel für den Massenimport testen, müssen Sie zunächst die Datei`C:\temp\Dtdfile.xml`erstellen, die die folgende Beispielinstanz enthält:  

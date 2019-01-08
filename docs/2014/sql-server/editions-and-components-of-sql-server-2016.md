@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -34,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d3198f2d361726a3e17c152b259471062f6a297
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9610dc1cc729dc555d42c0dfe5eeb117f9cfba18
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142190"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798282"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>Editionen und Komponenten von SQL Server 2014
   Die Installationsanforderungen variieren je nach den benötigten Anwendungen. Die verschiedenen Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tragen den individuellen Leistungs-, Laufzeit- und Preisanforderungen von Organisationen und Einzelpersonen Rechnung. Welche [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Komponenten Sie installieren, hängt auch von den individuellen Anforderungen ab. In den folgenden Abschnitten erfahren Sie, wie Sie die bestmögliche Auswahl unter den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbaren Editionen und Komponenten treffen.  
@@ -49,7 +48,7 @@ ms.locfileid: "48142190"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Edition|Definition|  
 |---------------------------------------|----------------|  
-|Enterprise (64-Bit und 32-Bit)|Das Premium-Angebot, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise Edition, übermittelt umfassende hochwertige Datencenterfunktionen mit blitzschneller Performance, unbegrenzter Virtualisierung und End-to-End Business Intelligence – und bietet so hohe Servicelevel für unternehmenswichtige Arbeitslasten und Endbenutzerzugriff auf Dateneinblicke.|  
+|Enterprise (64-Bit und 32-Bit)|Das Premium-Angebot, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise Edition, übermittelt umfassende hochwertige Datencenterfunktionen mit blitzschneller Performance, unbegrenzter Virtualisierung und End-to-End Business Intelligence – und bietet so hohe Servicelevel für unternehmenswichtige Arbeitsauslastungen und Endbenutzerzugriff auf Dateneinblicke.|  
 |Business Intelligence (64-Bit und 32-Bit)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence-Edition bietet eine umfassende Plattform, die Organisationen die Erstellung und Bereitstellung von sicheren, skalierbaren und überschaubaren BI-Lösungen ermöglicht. Bietet neuartige Funktionen wie Browser-basiertes Durchsuchen und Visualisieren von Daten, leistungsstarke Datenkombinationsfunktionen und verbesserte Integrationsverwaltung.|  
 |Standard (64-Bit und 32-Bit)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard Edition stellt eine grundlegende Datenverwaltungs- und Business Intelligence-Datenbank bereit, auf der Abteilungen und kleinere Unternehmen ihre Anwendungen ausführen. Diese unterstützt allgemeine Entwicklungstools für lokale und Cloudverwendung und ermöglicht eine effektive Datenbankverwaltung mit minimalen IT-Ressourcen.|  
   

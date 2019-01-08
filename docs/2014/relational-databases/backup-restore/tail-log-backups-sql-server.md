@@ -17,12 +17,12 @@ ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bf259a06d99b06e431d735e6194e17ae9bb19180
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6da8f9de22f1b3191d6fba1918e8c05a64d062f2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135606"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507372"
 ---
 # <a name="tail-log-backups-sql-server"></a>Protokollfragmentsicherungen (SQL Server)
   Dieses Thema ist nur Sicherungen und Wiederherstellungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant, die das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwenden.  
@@ -37,7 +37,7 @@ ms.locfileid: "48135606"
 ##  <a name="TailLogScenarios"></a> Szenarien, die eine Sicherung des Protokollfragments erfordern  
  In den folgenden Szenarien wird empfohlen, eine Sicherung des Protokollfragments auszuführen:  
   
--   Wenn die Datenbank online ist und Sie einen Wiederherstellungsvorgang für die Datenbank ausführen möchten, beginnen Sie mit der Sicherung des Protokollfragments: Verwenden Sie zur Vermeidung eines Fehlers bei einer Onlinedatenbank die … MIT der NORECOVERY-Option der [Sicherung](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.  
+-   Wenn die Datenbank online ist und Sie einen Wiederherstellungsvorgang für die Datenbank ausführen möchten, beginnen Sie mit der Sicherung des Protokollfragments: Verwenden Sie zur Vermeidung eines Fehlers bei einer Onlinedatenbank … Die Option WITH NORECOVERY der [BACKUP](/sql/t-sql/statements/backup-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung.  
   
 -   Wenn eine Datenbank offline ist und nicht gestartet werden kann, Sie aber die Datenbank wiederherstellen möchten, sichern Sie zunächst das Protokollfragment. Da während dieser Zeit keine Transaktionen auftreten können, kann WITH NORECOVERY optional verwendet werden.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48135606"
 |BACKUP LOG-Option|Kommentare|  
 |-----------------------|--------------|  
 |NORECOVERY|Verwenden Sie NORECOVERY immer dann, wenn Sie vorhaben, einen Wiederherstellungsvorgang in der Datenbank fortzusetzen. Mit NORECOVERY wird die Datenbank in den Wiederherstellungszustand versetzt. Damit wird sichergestellt, dass sich die Datenbank nach der Sicherung des Protokollfragments nicht ändert.  Das Protokoll wird abgeschnitten, wenn auch die Option NO_TRUNCATE oder COPY_ONLY-Option angegeben wird.<br /><br /> **\*\* Wichtige \* \***  es wird empfohlen, dass Sie vermeiden, verwenden Sie NO_TRUNCATE nur, wenn die Datenbank beschädigt ist.|  
-|CONTINUE_AFTER_ERROR|Verwenden Sie CONTINUE_AFTER_ERROR nur dann, wenn Sie das Fragment einer beschädigten Datenbank sichern.<br /><br /> Hinweis: Wenn Sie auf eine Sicherung des Endes des Protokolls bei einer beschädigten Datenbank verwenden, einige der Metadaten, die normalerweise in protokollsicherungen erfasst möglicherweise nicht verfügbar. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Sicherungen des Protokollfragments mit unvollständigen Sicherungsmetadaten](#IncompleteMetadata).|  
+|CONTINUE_AFTER_ERROR|Verwenden Sie CONTINUE_AFTER_ERROR nur dann, wenn Sie das Fragment einer beschädigten Datenbank sichern.<br /><br /> Hinweis: Wenn Sie das Protokollfragment in einer beschädigten Datenbank sichern, sind einige der Metadaten, die normalerweise in Protokollsicherungen erfasst werden, eventuell nicht verfügbar. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Sicherungen des Protokollfragments mit unvollständigen Sicherungsmetadaten](#IncompleteMetadata).|  
   
 ##  <a name="IncompleteMetadata"></a> Sicherungen des Protokollfragments mit unvollständigen Sicherungsmetadaten  
  Eine Protokollfragmentsicherung erfasst das Protokollfragment selbst dann, wenn die Datenbank offline geschaltet oder beschädigt ist oder wenn Datendateien fehlen. Dies kann zu unvollständigen Metadaten aus den Wiederherstellungsinformationsbefehlen und aus **msdb**führen. In diesem Fall sind jedoch nur die Metadaten unvollständig; das erfasste Protokoll ist vollständig und kann verwendet werden.  

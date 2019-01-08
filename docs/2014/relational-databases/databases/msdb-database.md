@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/10/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, msdb database
@@ -16,12 +15,12 @@ ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e0862083d323131523d0e9eee03b7e4d2f52e04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058800"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811892"
 ---
 # <a name="msdb-database"></a>msdb-Datenbank
   Die **msdb** -Datenbank wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zum Planen von Warnungen und Aufträgen sowie von weiteren Funktionen (z. B. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] und Datenbank-E-Mail) verwendet.  
@@ -36,7 +35,7 @@ ms.locfileid: "48058800"
 ## <a name="physical-properties-of-msdb"></a>Physische Eigenschaften der msdb-Datenbank  
  Die folgende Tabelle zeigt die Anfangskonfigurationswerte der **msdb** -Daten und -Protokolldateien. Die Größe dieser Dateien kann sich in den verschiedenen Editionen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]geringfügig unterscheiden.  
   
-|File|Logischer Name (logical name)|Physischer Name (physical name)|Dateivergrößerung (file growth)|  
+|Datei|Logischer Name (logical name)|Physischer Name (physical name)|Dateivergrößerung (file growth)|  
 |----------|------------------|-------------------|-----------------|  
 |Primäre Daten|MSDBData|MSDBData.mdf|Automatische Vergrößerung um 10 Prozent, bis der Speicherplatz auf dem Datenträger erschöpft ist.|  
 |Log|MSDBLog|MSDBLog.ldf|Automatische Vergrößerung um 10 %, bis der Maximalwert von 2 TB erreicht wird.|  
@@ -48,34 +47,34 @@ ms.locfileid: "48058800"
   
 |Datenbankoption|Standardwert|Kann geändert werden.|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|nein|  
-|ANSI_NULL_DEFAULT|OFF|Benutzerkontensteuerung|  
-|ANSI_NULLS|OFF|Benutzerkontensteuerung|  
-|ANSI_PADDING|OFF|Benutzerkontensteuerung|  
-|ANSI_WARNINGS|OFF|Benutzerkontensteuerung|  
-|ARITHABORT|OFF|Benutzerkontensteuerung|  
-|AUTO_CLOSE|OFF|Benutzerkontensteuerung|  
-|AUTO_CREATE_STATISTICS|ON|Benutzerkontensteuerung|  
-|AUTO_SHRINK|OFF|Benutzerkontensteuerung|  
-|AUTO_UPDATE_STATISTICS|ON|Benutzerkontensteuerung|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Benutzerkontensteuerung|  
-|CHANGE_TRACKING|OFF|nein|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Benutzerkontensteuerung|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Benutzerkontensteuerung|  
-|CURSOR_DEFAULT|GLOBAL|Benutzerkontensteuerung|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|nein<br /><br /> Benutzerkontensteuerung<br /><br /> Benutzerkontensteuerung|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Benutzerkontensteuerung|  
-|DB_CHAINING|ON|Benutzerkontensteuerung|  
-|ENCRYPTION|OFF|nein|  
-|NUMERIC_ROUNDABORT|OFF|Benutzerkontensteuerung|  
-|PAGE_VERIFY|CHECKSUM|Benutzerkontensteuerung|  
-|PARAMETERIZATION|SIMPLE|Benutzerkontensteuerung|  
-|QUOTED_IDENTIFIER|OFF|Benutzerkontensteuerung|  
-|READ_COMMITTED_SNAPSHOT|OFF|nein|  
-|RECOVERY|SIMPLE|Benutzerkontensteuerung|  
-|RECURSIVE_TRIGGERS|OFF|Benutzerkontensteuerung|  
-|Service Broker-Optionen|ENABLE_BROKER|Benutzerkontensteuerung|  
-|TRUSTWORTHY|ON|Benutzerkontensteuerung|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|Nein|  
+|ANSI_NULL_DEFAULT|OFF|Ja|  
+|ANSI_NULLS|OFF|Ja|  
+|ANSI_PADDING|OFF|Ja|  
+|ANSI_WARNINGS|OFF|Ja|  
+|ARITHABORT|OFF|Ja|  
+|AUTO_CLOSE|OFF|Ja|  
+|AUTO_CREATE_STATISTICS|ON|Ja|  
+|AUTO_SHRINK|OFF|Ja|  
+|AUTO_UPDATE_STATISTICS|ON|Ja|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Ja|  
+|CHANGE_TRACKING|OFF|Nein|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Ja|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Ja|  
+|CURSOR_DEFAULT|GLOBAL|Ja|  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Ja<br /><br /> Ja|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Ja|  
+|DB_CHAINING|ON|Ja|  
+|ENCRYPTION|OFF|Nein|  
+|NUMERIC_ROUNDABORT|OFF|Ja|  
+|PAGE_VERIFY|CHECKSUM|Ja|  
+|PARAMETERIZATION|SIMPLE|Ja|  
+|QUOTED_IDENTIFIER|OFF|Ja|  
+|READ_COMMITTED_SNAPSHOT|OFF|Nein|  
+|RECOVERY|SIMPLE|Ja|  
+|RECURSIVE_TRIGGERS|OFF|Ja|  
+|Service Broker-Optionen|ENABLE_BROKER|Ja|  
+|TRUSTWORTHY|ON|Ja|  
   
  Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   

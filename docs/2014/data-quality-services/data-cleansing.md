@@ -10,12 +10,12 @@ ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45909dae2443b594b12de98a2403178bdd7ce1ca
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2f1da635e524b746bb96d0d19876285c869679e2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032707"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395513"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   Die Datenbereinigung ist der Prozess der Datenqualitätsanalyse in einer Datenquelle, wobei die Empfehlungen vom System manuell genehmigt/zurückgewiesen werden und dadurch Änderungen an den Daten vorgenommen werden. Datenbereinigung in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) schließt einen computerunterstützten Prozess ein, der analysiert, wie Daten mit den Informationen in einer Wissensdatenbank übereinstimmen, sowie einen interaktiven Prozess, mit dem der Data Steward computerunterstützte Prozessergebnisse anzeigen und ändern kann, um sicherzustellen, dass die Datenbereinigung entsprechend ausgeführt wird.  
@@ -28,7 +28,7 @@ ms.locfileid: "51032707"
   
 -   Stellt einen aus zwei Schritten bestehenden Prozess zum Bereinigen der Daten bereit: *computerunterstützt* und *interaktiv*. Vom computergestützten Prozess werden die Informationen in einer DQS-Wissensdatenbank verwendet, um die Daten automatisch zu verarbeiten und um Ersetzungen bzw. Korrekturen vorzuschlagen. Der nächste Schritt ist interaktiv. Der Data Steward kann die vom DQS während des computerunterstützten Datenbereinigungsprozesses vorgeschlagenen Änderungen genehmigen, ablehnen oder ändern.  
   
--   Standardisiert und erweitert Kundendaten mit Domänenwerten, Domänenregeln und Verweisdaten. Beispielsweise können Sie die Ausdrucksverwendung standardisieren, indem Sie "St." in "Straße" ändern oder Daten durch Ausfüllen der fehlenden Elemente anreichern: "1 Microsoft way Redmond 98006" wird in "1 Microsoft Way, Redmond, WA 98006" geändert.  
+-   Standardisiert und erweitert Kundendaten mit Domänenwerten, Domänenregeln und Verweisdaten. Beispielsweise können Sie die Ausdrucksverwendung standardisieren, indem Sie „St.“ in „Straße“ ändern oder Daten durch Ausfüllen der fehlenden Elemente anreichern: „1 Microsoft way Redmond 98006“ wird in „1 Microsoft Way, Redmond, WA 98006“ geändert.  
   
 -   Stellt dem Benutzer eine einfache, intuitive, und konsistente assistentenähnliche Oberfläche bereit, um damit in Daten zu navigieren und Fehler unter einem sehr umfangreichen Satz an Daten zu überprüfen.  
   
@@ -63,15 +63,15 @@ ms.locfileid: "51032707"
 ##  <a name="Interactive"></a> Interaktive Bereinigung  
  Auf Grundlage des computergestützten Bereinigungsprozesses stellt DQS dem Data Steward Informationen bereit, die dieser für die Bewertung von Datenänderungen benötigt. DQS kategorisiert die Daten auf den folgenden fünf Registerkarten:  
   
--   **Vorgeschlagen**: Werte, für die DQS Vorschläge gefunden hat, die einen Vertrauensgrad aufweisen, der höher als der *automatisch vorgeschlagene Schwellenwert* , aber niedriger als der *Schwellenwert für die automatische Korrektur* ist. Diese Werte sollten Sie überprüfen und genehmigen bzw. ablehnen.  
+-   **Vorgeschlagene**: Werte für die DQS Vorschläge, die einen Vertrauensgrad aufweisen, die höher als gefunden der *automatisch vorgeschlagene Schwellenwert* aber niedriger als die *Schwellenwert für die automatische Korrektur* Wert. Diese Werte sollten Sie überprüfen und genehmigen bzw. ablehnen.  
   
--   **Neu**: Gültige Werte, für die DQS nicht genug Informationen (Vorschläge) aufweist, und die daher keiner anderen Registerkarte zugeordnet werden können. Außerdem enthält diese Registerkarte auch Werte, die einen Vertrauensgrad aufweisen, der unterhalb des *automatisch vorgeschlagenen Schwellenwerts* liegt, aber hoch genug ist, um als gültig markiert zu werden.  
+-   **Neue**: Gültige Werte, für die DQS nicht genug Informationen (Vorschläge) aufweist, und die daher keiner anderen Registerkarte zugeordnet werden können. Außerdem enthält diese Registerkarte auch Werte, die einen Vertrauensgrad aufweisen, der unterhalb des *automatisch vorgeschlagenen Schwellenwerts* liegt, aber hoch genug ist, um als gültig markiert zu werden.  
   
--   **Ungültig**: Werte, die in der Domäne in der Wissensdatenbank als ungültig markiert wurden, oder Werte, die eine Domänenregel oder Verweisdaten verletzt haben. Diese Registerkarte enthält zudem Werte, die während des interaktiven Bereinigungsprozesses vom Benutzer auf einer der anderen vier Registerkarten abgelehnt wurden.  
+-   **Ungültige**: Werte, die in der Domäne in der Wissensdatenbank als ungültig markiert wurden, oder Werte, die eine Domänenregel oder Verweisdaten verletzt haben. Diese Registerkarte enthält zudem Werte, die während des interaktiven Bereinigungsprozesses vom Benutzer auf einer der anderen vier Registerkarten abgelehnt wurden.  
   
--   **Korrigiert**: Werte, die von DQS während des automatisierten Bereinigungsprozesses korrigiert wurden, da für den Wert eine Korrektur mit einem Vertrauensgrad oberhalb des *Schwellenwerts für die automatische Korrektur* gefunden wurde. Diese Registerkarte enthält auch Werte, für die der Benutzer während der interaktiven Bereinigung einen richtigen Wert in der Spalte **Korrigieren in** angegeben hat und dies dann genehmigt hat, indem er auf das Optionsfeld der Spalte **Genehmigen** in einer der anderen vier Registerkarten geklickt hat.  
+-   **Korrigiert**: Werte, die von DQS während des automatisierten Bereinigungsprozesses korrigiert wurden eine Korrektur für den Wert mit einem Vertrauensgrad, der oben genannten gefunden wurde die *Schwellenwert für die automatische Korrektur* Wert. Diese Registerkarte enthält auch Werte, für die der Benutzer während der interaktiven Bereinigung einen richtigen Wert in der Spalte **Korrigieren in** angegeben hat und dies dann genehmigt hat, indem er auf das Optionsfeld der Spalte **Genehmigen** in einer der anderen vier Registerkarten geklickt hat.  
   
--   **Richtig**: Werte, die richtig gefunden wurden. Beispielsweise stimmt der Wert mit dem Domänenwert überein. Sie können die DQS-Bereinigung bei Bedarf überschreiben, indem Sie Werte unter dieser Registerkarte ablehnen oder ein alternatives Wort in der Spalte **Korrigieren in** angeben und anschließenden auf das Optionsfeld der Spalte **Annehmen** klicken. Diese Registerkarte enthält auch Werte, die vom Benutzer während der interaktiven Bereinigung durch Klicken auf das Optionsfeld in der Spalte **Genehmigen** auf der Registerkarte **Neu** oder **Ungültig** genehmigt wurden.  
+-   **Richtige**: Werte, die richtig gefunden wurden. Beispielsweise stimmt der Wert mit dem Domänenwert überein. Sie können die DQS-Bereinigung bei Bedarf überschreiben, indem Sie Werte unter dieser Registerkarte ablehnen oder ein alternatives Wort in der Spalte **Korrigieren in** angeben und anschließenden auf das Optionsfeld der Spalte **Annehmen** klicken. Diese Registerkarte enthält auch Werte, die vom Benutzer während der interaktiven Bereinigung durch Klicken auf das Optionsfeld in der Spalte **Genehmigen** auf der Registerkarte **Neu** oder **Ungültig** genehmigt wurden.  
   
 > [!NOTE]  
 >  Auf den Registerkarten **Vorgeschlagen**, **Korrigiert**und **Richtig** zeigt DQS den führenden Wert für eine Domäne (falls anwendbar) in der Spalte **Korrigieren in** für den jeweiligen Domänenwert an.  
@@ -87,7 +87,7 @@ ms.locfileid: "51032707"
  ![Datenbereinigung im Data Quality-Client](../../2014/data-quality-services/media/dqs-cleansingindqsclient.gif "Data Cleansing in Data Quality Client")  
   
 ##  <a name="Leading"></a> Korrektur des führenden Werts  
- Die Korrektur des führenden Werts gilt für Domänenwerte, die über Synonyme verfügen, und der Benutzer möchte einen der Synonymwerte als führenden Wert anstelle von anderen für die konsistente Darstellung des Werts verwenden. Beispielsweise sind "New York", "NYC" und "Big Apple" Synonyme. Der Benutzer möchte jedoch "New York" als führenden Wert anstelle von "NYC" und "Big Apple" verwenden. DQS unterstützt während des Bereinigungsprozesses die Korrektur des führenden Werts, um Ihnen beim Standardisieren der Daten zu helfen. Die Korrektur des führenden Werts wird nur ausgeführt, wenn die Domäne für das Gleiche aktiviert wurde, als sie erstellt wurde. Standardmäßig ist bei allen Domänen die Korrektur des führenden Werts aktiviert, außer wenn Sie beim Erstellen einer Domäne das Kontrollkästchen **Führende Werte verwenden** deaktiviert haben. Weitere Informationen zu diesem Kontrollkästchen finden Sie unter [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
+ Die Korrektur des führenden Werts gilt für Domänenwerte, die über Synonyme verfügen, und der Benutzer möchte einen der Synonymwerte als führenden Wert anstelle von anderen für die konsistente Darstellung des Werts verwenden. Beispielsweise sind „New York“, „NYC“ und „Big Apple“ Synonyme. Der Benutzer möchte jedoch „New York“ als führenden Wert anstelle von „NYC“ und „Big Apple“ verwenden. DQS unterstützt während des Bereinigungsprozesses die Korrektur des führenden Werts, um Ihnen beim Standardisieren der Daten zu helfen. Die Korrektur des führenden Werts wird nur ausgeführt, wenn die Domäne für das Gleiche aktiviert wurde, als sie erstellt wurde. Standardmäßig ist bei allen Domänen die Korrektur des führenden Werts aktiviert, außer wenn Sie beim Erstellen einer Domäne das Kontrollkästchen **Führende Werte verwenden** deaktiviert haben. Weitere Informationen zu diesem Kontrollkästchen finden Sie unter [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
 ##  <a name="Standardize"></a> Standardisieren bereinigter Daten  
  Sie können auswählen, ob Sie die bereinigten Daten im standardisierten Format auf Grundlage des für Domänen definierten Ausgabeformats ausgegeben möchten. Wählen beim Erstellen einer Domäne die Formatierung aus, die beim Ausgeben der Datenwerte in der Domäne angewendet wird. Weitere Informationen zum Angeben von Ausgabeformaten einer Domäne finden Sie in der Liste **Formatausgabe** in [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  

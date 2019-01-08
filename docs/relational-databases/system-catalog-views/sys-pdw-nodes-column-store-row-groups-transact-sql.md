@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b3c09c2a1771f1fad8640031ea1c1327921f8c82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7332f9e4196c901777e0c35a349f55207e7608dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698238"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520361"
 ---
 # <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>Sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47698238"
 |**row_group_id**|**int**|ID der dieser Zeilengruppe. Diese ist innerhalb der Partition eindeutig.|  
 |**dellta_store_hobt_id**|**bigint**|Die hobt_id für Deltazeilengruppen oder NULL, wenn der Zeilengruppentyp nicht Delta ist. Eine Deltazeilengruppe ist eine Zeilengruppe mit Lese-/Schreibzugriff, die neue Datensätze akzeptiert. Eine deltazeilengruppe hat den **öffnen** Status. Eine Deltazeilengruppe befindet sich weiterhin im rowstore-Format und wurde nicht in das columnstore-Format komprimiert.|  
 |**state**|**tinyint**|Die der state_description zugeordnete ID.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**nvarchar(60)**|Beschreibung des persistenten Status der Zeilengruppe:<br /><br /> OPEN: Eine Zeilengruppe mit Lese-/Schreibzugriff, die neue Datensätze akzeptiert. Eine offene Zeilengruppe befindet sich weiterhin im rowstore-Format und wurde nicht in das columnstore-Format komprimiert.<br /><br /> CLOSED: Eine Zeilengruppe, die aufgefüllt, aber vom Tupelverschiebungsprozess noch nicht komprimiert wurde.<br /><br /> COMPRESSED: Eine Zeilengruppe, die aufgefüllt und komprimiert wurde.|  
+|**state_desccription**|**nvarchar(60)**|Beschreibung des persistenten Status der Zeilengruppe:<br /><br /> GEÖFFNET – eine Zeilengruppe für Lese-/Schreibzugriff, die neue Datensätze akzeptiert. Eine offene Zeilengruppe befindet sich weiterhin im rowstore-Format und wurde nicht in das columnstore-Format komprimiert.<br /><br /> GESCHLOSSEN – eine Zeilengruppe, die ausgefüllt wurde, aber vom tupelverschiebungsprozess noch nicht komprimiert.<br /><br /> KOMPRIMIERT: eine Zeilengruppe, die aufgefüllt und komprimiert wurde.|  
 |**total_rows**|**bigint**|Gesamtzahl der Zeilen, die in der Zeilengruppe physisch gespeichert sind. Einige wurden u. U. gelöscht, sind aber weiterhin gespeichert. Die maximale Anzahl der Zeilen in einer Zeilengruppe beträgt 1.048.576 (hexadezimal FFFFF).|  
 |**deleted_rows**|**bigint**|Anzahl der Zeilen in der Zeilengruppe physisch gespeichert, die zum Löschen markiert sind.<br /><br /> Die Zeile immer 0 für DELTA-Gruppen.|  
 |**size_in_bytes**|**int**|Kombinierte Größe in Bytes für alle Seiten in dieser Zeilengruppe. Diese Größe umfasst nicht die Größe, die zum Speichern von Metadaten oder freigegebenen Wörterbüchern erforderlich.|  

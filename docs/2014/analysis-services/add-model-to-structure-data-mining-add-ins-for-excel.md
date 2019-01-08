@@ -13,12 +13,12 @@ ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7cbbbbcd154642ef3437b0860d8346d76f84bd97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1aa72d2c9e2fcf953e8c34d7fdddd656c76b0685
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104790"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521037"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Hinzufügen eines Modells zu einer Struktur (Data Mining-Add-Ins für Excel)
   ![Hinzufügen eines Modells zu einer Struktur Schaltfläche](media/dmc-addmodel.gif "Modell einer Struktur Schaltfläche hinzufügen")  
@@ -37,11 +37,11 @@ ms.locfileid: "48104790"
   
      **Tipp**: Wenn Sie nicht sicher sind, welche Miningstruktur die Daten werden müssen, verwenden die **Dokumentmodell** Assistenten, um die Spalten und grundlegende Statistiken zu den Daten anzuzeigen.  
   
-     Wenn eine Miningstruktur nicht auffindbar ist, überprüfen Sie die derzeit verwendete Verbindung. Möglicherweise müssen Sie eine Verbindung mit einem anderen Server herstellen.  
+     Wenn Sie eine Miningstruktur nicht finden, überprüfen Sie die Verbindung, die Sie derzeit verwenden. Möglicherweise müssen Sie eine Verbindung mit einem anderen Server herstellen.  
   
 3.  In der **Miningalgorithmus auswählen** Dialogfeld Wählen ein Mining-Algorithmus in das neue Miningmodell verwenden.  
   
-     Beachten Sie, dass das Dialogfeld deutlich mehr Optionen umfasst, als in den Assistenten angezeigt werden. Sie können ein Modell mit einem beliebigen, auf dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Server unterstützten Algorithmus erstellen, sofern die Daten kompatibel sind.  
+     Beachten Sie, dass Sie das Dialogfeld bietet noch viel mehr Optionen als Sie in den Assistenten sehen werden. Sie können ein Modell mit einem beliebigen, auf dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Server unterstützten Algorithmus erstellen, sofern die Daten kompatibel sind.  
   
 4.  Es wird empfohlen, dass Sie auch auf die **Parameter** die Schaltfläche, um die **Algorithmusparameter** Dialogfeld Feld und Parameter für den Algorithmus anpassen. Mit dieser Option können am einfachsten benutzerdefinierte Miningmodelle erstellt werden.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "48104790"
 |Option|Kommentare|  
 |------------|--------------|  
 |**Struktur oder Modell auswählen** (Dialogfeld)|Wählen Sie eine vorhandene Miningstruktur aus, um sie als Grundlage für ein neues Modell zu verwenden.  Die ausgewählte Struktur muss für die aktive Verbindung verfügbar sein. Falls nicht, ändern Sie Verbindungen mit dem [Herstellen einer Verbindung mit Quelldaten &#40;Data Mining-Client für Excel&#41; ](connect-to-source-data-data-mining-client-for-excel.md) Tool.|  
-|**Wählen Sie die Mining-Algorithmus** Dialogfelds|Die Liste der Data Mining-Algorithmen hängt davon ab, mit welchem Server Sie verbunden sind. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt in der Standard und Enterprise Edition verschiedene Algorithmen bereit. Ihr Administrator verfügt möglicherweise auch über zusätzliche benutzerdefinierte Algorithmen.<br /><br /> Wenn keine Algorithmen angezeigt werden, stellen Sie sicher, dass Sie mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verbunden sind.|  
+|**Wählen Sie die Mining-Algorithmus** Dialogfelds|Die Liste der Data Mining-Algorithmen hängt davon ab, mit welchem Server Sie verbunden sind. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt in der Standard und Enterprise Edition verschiedene Algorithmen bereit. Ihr Administrator verfügt möglicherweise auch über zusätzliche benutzerdefinierte Algorithmen.<br /><br /> Wenn Sie keine Algorithmen angezeigt werden, stellen Sie sicher, dass Sie mit einer Instanz von verbunden sind [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |**Algorithmusparameter** (Dialogfeld)|Mithilfe dieser Einstellungen können Sie die einzelnen Algorithmen mit Parametern anpassen, die spezifisch für die analytische Methode sind. Sie können auch einen Ausgangswert festlegen, um sicherzustellen, dass die Ergebnisse des Modells in mehreren Trainingsdurchläufen reproduziert werden können.<br /><br /> Weitere Informationen finden Sie unter [Algorithmusparameter &#40;SQL Server Data Mining-Add-ins&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
 |**Spaltenmodellflags festlegen** (Dialogfeld)|Mithilfe von Modellierungsflags können Sie ein Modell verbessern, indem Sie angeben, wie fehlende Daten behandelt werden sollen. Weitere Informationen finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](data-mining/modeling-flags-data-mining.md).|  
   
 ###  <a name="Bkmk_mdlcolumn"></a> Festlegen der Spaltenverwendung  
- Wenn Sie einer vorhandenen Struktur ein neues Miningmodell hinzufügen, müssen Sie angeben, wie das Modell die einzelnen Datenspalten in der Miningstruktur verwendet. Möglicherweise werden Sie feststellen, dass die Optionen in diesem Assistenten wesentlich ausführlicher als die Optionen für die Miningstruktur sind. Warum?  
+ Wenn Sie einer vorhandenen Struktur ein neues Miningmodell hinzufügen, müssen Sie angeben, wie das Modell die einzelnen Datenspalten in der Miningstruktur verwendet. Sie bemerken möglicherweise, dass die Optionen in diesem Assistenten wesentlich ausführlicher als die Optionen für die Miningstruktur sind. Warum?  
   
  Dies hat folgende Ursache: Wenn Sie ein Modell zusammen mit einer Struktur unter Verwendung eines Assistenten erstellen, werden zahlreiche Optionen, die steuern, wie Daten vom Algorithmus verwendet werden, automatisch festgelegt. Wenn Sie einem vorhandenen Modell jedoch ein neues Modell hinzufügen, müssen Sie diese Optionen manuell überprüfen und angeben, ob Daten für die Analyse verwendet werden sollen, ob der Datentyp richtig ist usw.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "48104790"
   
      Clustermodelle können ohne vorhersagbaren Wert erstellt werden, andere Modelle erfordern jedoch im Allgemeinen, dass eine einzelne Spalte für die Vorhersage angegeben wird.  
   
--   Die Zusammensetzung der Daten ist mit dem ausgewählten Algorithmus nicht kompatibel.  
+-   Die Zusammensetzung der Daten ist nicht kompatibel mit dem Algorithmus, die Sie ausgewählt haben.  
   
      Einige Analysetypen erfordern Daten, die entsprechend eindeutigen Regeln sorgfältig strukturiert sind. Dies gilt beispielsweise für Vorhersagemodelle und Zuordnungsmodelle. Sie können einfach neue Modelle desselben Typs hinzufügen, die über Anpassungen verfügen können, möglicherweise funktionieren die Daten jedoch nicht mit anderen Algorithmen.  
   

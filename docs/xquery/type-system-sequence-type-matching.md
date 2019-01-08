@@ -16,12 +16,12 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e4532e52bb2efe190d962bfcfc50e65c441b5575
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3df2ef3f14cb8ca4fd7e7bcf5799b6966c16dc10
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668649"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511449"
 ---
 # <a name="type-system---sequence-type-matching"></a>Typensystem – Zuordnen des Sequenztyps
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51668649"
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>Vergleichen des Typs des von einem Ausdruck zurückgegebenen atomaren Werts  
  Wenn ein Ausdruck eine Sequenz aus atomaren Werten zurückgibt, müssen Sie eventuell herausfinden, welchen Typ der Wert in der Sequenz aufweist. Die folgenden Beispiele zeigen, wie die Sequenztypsyntax verwendet werden kann, um den Typ des von einem Ausdruck zurückgegebenen atomaren Werts auszuwerten.  
   
-### <a name="example-determining-whether-a-sequence-is-empty"></a>Beispiel: Ermitteln, ob eine Sequenz leer ist  
+### <a name="example-determining-whether-a-sequence-is-empty"></a>Beispiel: Bestimmt, ob eine Sequenz leer ist.  
  Die **empty()** Sequenztyp kann in einem sequenztypausdruck verwendet werden, um festzustellen, ob die Sequenz, die zurückgegeben werden, durch den angegebenen Ausdruck eine leere Sequenz ist.  
   
  Im folgenden Beispiel ermöglicht das XML-Schema, dass für das <`root`>-Element NULL-Werte zulässig sind:  
@@ -160,7 +160,7 @@ GO
   
  Wenn beide Bedingungen erfüllt sind, gibt der `instance of`-Ausdruck den Wert True zurück.  
   
-### <a name="example-querying-against-an-xml-type-column"></a>Beispiel: Abfragen einer Spalte vom Typ XML  
+### <a name="example-querying-against-an-xml-type-column"></a>Beispiel: Abfragen einer XML-Typspalte  
  Im folgenden Beispiel wird eine Abfrage für eine Instructions-Spalte des angegeben **Xml** Geben Sie in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank. Dies ist eine typisierte XML-Spalte, da ihr ein Schema zugeordnet ist. Das XML-Schema definiert das `LocationID`-Attribut des ganzzahligen Datentyps (integer). Aus diesem Grund im Sequenzausdruck den `instance of xs:integer?` gibt True zurück.  
   
 ```  
@@ -174,15 +174,15 @@ WHERE ProductModelID = 7
 ## <a name="comparing-the-node-type-returned-by-an-expression"></a>Vergleichen des Typs des von einem Ausdruck zurückgegebenen Knotens  
  Wenn ein Ausdruck eine Sequenz aus Knoten zurückgibt, müssen Sie eventuell herausfinden, welchen Typ der Knoten in der Sequenz aufweist. Die folgenden Beispiele zeigen, wie die Sequenztypsyntax verwendet werden kann, um den Typ des von einem Ausdruck zurückgegebenen Knotens auszuwerten. Sie können die folgenden Sequenztypen verwenden:  
   
--   **Item()** – entspricht einem beliebigen Element in der Sequenz.  
+-   **Item()** -entspricht einem beliebigen Element in der Sequenz.  
   
--   **Node()** – bestimmt, ob die Sequenz ein Knoten ist.  
+-   **Node()** -bestimmt, ob die Sequenz ein Knoten ist.  
   
--   **Processing-Instruction()** – bestimmt, ob der Ausdruck eine verarbeitungsanweisung zurückgibt.  
+-   **Processing-Instruction()** -bestimmt, ob der Ausdruck eine verarbeitungsanweisung zurückgibt.  
   
--   **Comment()** – bestimmt, ob der Ausdruck einen Kommentar zurückgibt.  
+-   **Comment()** -bestimmt, ob der Ausdruck einen Kommentar zurückgibt.  
   
--   **Document-Node()** – bestimmt, ob der Ausdruck einen Dokumentknoten zurückgibt.  
+-   **Document-Node()** -bestimmt, ob der Ausdruck einen Dokumentknoten zurückgibt.  
   
  Das folgende Beispiele veranschaulicht diese Sequenztypen.  
   
