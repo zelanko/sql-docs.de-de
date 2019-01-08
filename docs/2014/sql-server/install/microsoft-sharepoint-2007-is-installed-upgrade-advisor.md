@@ -11,12 +11,12 @@ ms.assetid: 6f1da295-d9b7-4948-99d3-ebd3587337c6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bed7c8b14faef5116b1032451016708e341562d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c5036763ba4cbc48a00e604c4498b8dc277e155
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118030"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417381"
 ---
 # <a name="microsoft-sharepoint-2007-is-installed-upgrade-advisor"></a>Microsoft SharePoint 2007 ist installiert (Upgrade Advisor)
   Der Upgrade Advisor hat eine Version eines SharePoint-Produkts bzw. einer SharePoint-Technologie erkannt, die nicht unterstützt wird.  
@@ -34,7 +34,7 @@ ms.locfileid: "48118030"
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Um das Upgrade fortzusetzen, muss SharePoint 2007 entweder deinstalliert oder ein Upgrade von SharePoint 2007 auf ein SharePoint 2010-Produkt ausgeführt werden. Führen Sie den Upgrade Advisor nach dem Upgrade der SharePoint-Installation erneut aus, um zu bestätigen, dass keine weiteren Upgradeprobleme vorliegen.  
   
- Ein direktes Upgrade von SharePoint 2007 auf SharePoint 2013 kann nicht ausgeführt werden. Sie können jedoch ein so genanntes "Doppelhopszenario" mit Anfügen von Datenbanken durchführen, um ein Upgrade von Office SharePoint Server 2007 auf SharePoint Server 2010 und anschließend von SharePoint Server 2010 auf SharePoint Server 2013 auszuführen.  
+ Ein direktes Upgrade von SharePoint 2007 auf SharePoint 2013 kann nicht ausgeführt werden. Sie können jedoch so, als "doppelhop" Datenbank anfügen, um von Office SharePoint Server 2007 auf SharePoint Server 2010 und anschließend in SharePoint Server 2010 auf SharePoint Server 2013 zu aktualisieren.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Upgradeprobleme bei Reporting Services &#40;Upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

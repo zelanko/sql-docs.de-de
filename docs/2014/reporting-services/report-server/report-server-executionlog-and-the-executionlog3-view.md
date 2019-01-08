@@ -14,22 +14,22 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 90c42f4eaafac152305c50a855f1bce1388def3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8972427f2ba2529880715ca12d85a560a02eb31f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095880"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405007"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Berichtsserverausführungsprotokoll und die ExecutionLog3-Ansicht
   Das Ausführungsprotokoll des Berichtsservers enthält Informationen zu den Berichten, die auf dem Server bzw. auf mehreren Servern in einer Bereitstellung für horizontales Skalieren im einheitlichen Modus oder einer SharePoint-Farm ausgeführt werden. Anhand des Ausführungsprotokolls des Berichtsservers können Sie feststellen, wie oft ein Bericht angefordert wird, welche Ausgabeformate am meisten verwendet werden und wie viele Millisekunden Verarbeitungszeit für die einzelnen Verarbeitungsphasen aufgewendet werden. Das Protokoll enthält Informationen über die Zeit, die für die Ausführung der Datasetabfrage eines Berichts aufgewendet wurde, und die Zeit, die für die Verarbeitung der Daten aufgewendet wurde. Wenn Sie Berichtsserveradministrator sind, können Sie die Protokollinformationen überprüfen und Aufgaben mit langer Laufzeit identifizieren sowie den Berichtsautoren zu den Bereichen des Berichts (Dataset oder Verarbeitung) Vorschläge zur Verbesserung machen.  
   
- Für den SharePoint-Modus konfigurierte Berichtsserver können auch die SharePoint-ULS-Protokolle verwenden. Weitere Informationen finden Sie unter [Gewusst wie: Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  
+ Für den SharePoint-Modus konfigurierte Berichtsserver können auch die SharePoint-ULS-Protokolle verwenden. Weitere Informationen finden Sie unter [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ##  <a name="bkmk_top"></a> Anzeigen von Protokollinformationen  
  Die Berichtsserverausführung protokolliert Daten zur Berichtsausführung in einer internen Datenbanktabelle. Die Informationen aus der Tabelle sind in SQL Server-Sichten verfügbar.  
   
- Das Berichtsausführungsprotokoll wird in der Berichtsserver-Datenbank gespeichert, die standardmäßig **ReportServer**genannt wird. Die SQL-Ansichten enthalten die Ausführungsprotokollinformationen. Die Ansichten "2" und "3" wurden in aktuelleren Versionen hinzugefügt und enthalten neue Felder, oder sie enthalten Felder mit benutzerfreundlicheren Namen als die vorherigen Versionen. Die älteren Ansichten bleiben im Produkt, sodass es keinerlei Auswirkungen auf benutzerdefinierte Anwendungen, die von ihnen abhängen, gibt. Wenn keine Abhängigkeit von einer älteren Sicht vorliegt, z.B. ExecutionLog, wird empfohlen, die neueste Sicht, ExecutionLog**3**, zu verwenden.  
+ Das Berichtsausführungsprotokoll wird in der Berichtsserver-Datenbank gespeichert, die standardmäßig **ReportServer**genannt wird. Die SQL-Ansichten enthalten die Ausführungsprotokollinformationen. Die Ansichten „2“ und „3“ wurden in aktuelleren Versionen hinzugefügt und enthalten neue Felder, oder sie enthalten Felder mit benutzerfreundlicheren Namen als die vorherigen Versionen. Die älteren Ansichten bleiben im Produkt, sodass es keinerlei Auswirkungen auf benutzerdefinierte Anwendungen, die von ihnen abhängen, gibt. Wenn keine Abhängigkeit von einer älteren Sicht vorliegt, z.B. ExecutionLog, wird empfohlen, die neueste Sicht, ExecutionLog**3**, zu verwenden.  
   
  In diesem Thema:  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48095880"
   
  **So aktivieren Sie die Protokollierung der Ausführung:**  
   
-1.  Starten Sie SQL Server Management Studio mit Administratorprivilegien. Klicken Sie z. B. mit der rechten Maustaste auf das Management Studio-Symbol, und klicken Sie auf "Ausführen als Administrator".  
+1.  Starten Sie SQL Server Management Studio mit Administratorprivilegien. Klicken Sie z. B. mit der rechten Maustaste auf das Management Studio-Symbol, und klicken Sie auf „Ausführen als Administrator“.  
   
 2.  Stellen Sie eine Verbindung mit dem gewünschten Berichtsserver her.  
   
@@ -124,7 +124,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Anzahl von Millisekunden, die zum Abrufen der Daten benötigt werden.|  
 |TimeProcessing|Anzahl von Millisekunden, die zum Verarbeiten des Berichts benötigt werden.|  
 |TimeRendering|Anzahl von Millisekunden, die zum Rendern des Berichts benötigt werden.|  
-|Source|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> **Live**<br /><br /> **Cache**: Gibt eine zwischengespeicherte Ausführung, z. B. Datasets, die Abfragen werden nicht live ausgeführt.<br /><br /> **Momentaufnahme**<br /><br /> **Verlauf**<br /><br /> **Ad-hoc-** : Gibt an, entweder einem dynamisch erstellten Berichtsmodell basierendes Modell Drillthroughbericht oder einen Berichts-Generator-Bericht, der in der Vorschau angezeigt wird, auf einem Client mithilfe des Berichtsservers zum Verarbeiten und rendern.<br /><br /> **Sitzung**: Gibt eine anschlussanforderung in einer bereits eingerichteten Sitzung.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> **RDCE**: Gibt an, eine Report Definition Customization Extension. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an die Verarbeitungs-Engine übergeben wird.|  
+|Source|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> **Live**<br /><br /> **Cache**: Gibt eine zwischengespeicherte Ausführung, z. B. Dataset, das nicht live ausgeführt werden.<br /><br /> **Momentaufnahme**<br /><br /> **Verlauf**<br /><br /> **Ad-hoc-** : Gibt entweder einen auf einem dynamisch erstellten Berichtsmodell basierenden Drillthroughbericht oder einen Berichts-Generator-Bericht an, von dem eine Vorschau auf einem Client mithilfe des Berichtsservers zum Verarbeiten und Rendern angezeigt wird.<br /><br /> **Sitzung**: Gibt eine Anschlussanforderung in einer bereits eingerichteten Sitzung an.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> **RDCE**:  Gibt eine Report Definition Customization Extension an. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an die Verarbeitungs-Engine übergeben wird.|  
 |Status|Status (entweder rsSuccess oder ein Fehlercode; beim Auftreten mehrerer Fehler wird nur der erste Fehler aufgezeichnet).|  
 |ByteCount|Größe von gerenderten Berichten in Bytes.|  
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  
@@ -225,11 +225,11 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  Im folgenden werden einige der Eigenschaften, die Sie im AdditionalInfo-Feld sehen beschrieben:  
   
--   **ProcessingEngine**: 1 = der SQL Server 2005, 2 = die neue bedarfsgesteuerte Verarbeitungs-Engine. Wenn eine Mehrzahl der Berichte immer noch den Wert 1 anzeigt, können Sie prüfen, wie sie umgestaltet werden sollen, damit sie die neuere und effizientere bedarfsgesteuerte Verarbeitungs-Engine verwenden.  
+-   **ProcessingEngine**: 1=SQL Server 2005, 2=Die neue bedarfsgesteuerte Verarbeitungs-Engine. Wenn eine Mehrzahl der Berichte immer noch den Wert 1 anzeigt, können Sie prüfen, wie sie umgestaltet werden sollen, damit sie die neuere und effizientere bedarfsgesteuerte Verarbeitungs-Engine verwenden.  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**: die Anzahl der Millisekunden, für die Durchführung skalieren verwandte Vorgänge in die ereignisverarbeitungs-Engine. Der Wert 0 gibt an, dass keine zusätzliche Zeit für Skalierungsoperationen aufgebracht wurde. Ein Wert 0 gibt auch an, dass die Anforderung nicht unter unzureichendem Arbeitsspeicher erfolgte.  
+-   **ScalabilityTime**: Die Anzahl der Millisekunden, die für skalierungsrelevante Operationen in der Verarbeitungs-Engine benötigt werden. Der Wert 0 gibt an, dass keine zusätzliche Zeit für Skalierungsoperationen aufgebracht wurde. Ein Wert 0 gibt auch an, dass die Anforderung nicht unter unzureichendem Arbeitsspeicher erfolgte.  
   
     ```  
     <ScalabilityTime>  
@@ -237,7 +237,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**: eine Schätzung des höhepunktarbeitsspeichers des Arbeitsspeichers in Kilobyte, verbraucht von jeder Komponente während einer bestimmten Anforderung.  
+-   **EstimatedMemoryUsageKB**: Eine Schätzung des Höhepunktarbeitsspeichers, in Kilobyte, verbraucht von jeder Komponente während einer bestimmten Anforderung.  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -245,7 +245,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**: die Typen von datenerweiterungen oder Datenquellen, die im Bericht verwendet. Die Zahl ist eine Anzahl von Vorkommen der speziellen Datenquelle.  
+-   **DataExtension**: Die Typen von Datenerweiterungen oder Datenquellen, die im Bericht verwendet werden. Die Zahl ist eine Anzahl von Vorkommen der speziellen Datenquelle.  
   
     ```  
     <DataExtension>  
@@ -263,7 +263,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **Verbindungen**: eine Struktur mit mehreren Ebenen. Hinzugefügt in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **Verbindungen**: Eine Struktur mit mehreren Ebenen. Hinzugefügt in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <Connections>  
@@ -311,7 +311,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |Spalte|Description|  
 |------------|-----------------|  
 |InstanceName|Name der Berichtsserverinstanz, die die Anforderung verarbeitet hat.|  
-|ReportPath|Die Pfadstruktur zum Bericht.  Zum Beispiel ein Bericht mit dem Namen "Test", der der Stammordner im Berichts-Manager ist, würde den ReportPath "/test" aufweisen.<br /><br /> Ein Bericht mit dem Namen "Test", der im Ordner "Samples" im Berichts-Manager gespeichert ist, weist den ReportPath “/Samples/test/” auf|  
+|ReportPath|Die Pfadstruktur zum Bericht.  Zum Beispiel würde ein Bericht mit dem Namen „Test“, der der Stammordner im Berichts-Manager ist, den ReportPath „/test“ aufweisen.<br /><br /> Ein Bericht mit dem Namen „Test“, der im Ordner „Samples“ im Berichts-Manager gespeichert ist, würde den ReportPath „/Samples/test/“ aufweisen.|  
 |UserName|Benutzer-ID.|  
 |ExecutionID||  
 |RequestType|Anforderungstyp (Benutzer oder System).|  

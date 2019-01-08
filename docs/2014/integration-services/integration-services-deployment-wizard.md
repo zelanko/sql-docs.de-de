@@ -13,12 +13,12 @@ ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8a5b2cea7ae8b0166c0190044524941ca28ddca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f90613d3c8e0204e2861008a5f7be0846eca64a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086296"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535882"
 ---
 # <a name="integration-services-deployment-wizard"></a>Bereitstellungs-Assistent für Integration Services
   Der Bereitstellungs-Assistent für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt Projekte im SSISDB-Katalog auf einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz bereit, die das Projektbereitstellungsmodell verwendet.  
@@ -27,11 +27,11 @@ ms.locfileid: "48086296"
   
  Der Assistent führt Sie die folgenden vier Schritte aus. Klicken Sie auf **Weiter** mit dem nächsten Schritt, verschieben oder **zurück** zum vorherigen Schritt zurückgegeben.  
   
-1.  **Wählen Sie Quelle** wählen Sie die Option der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt, das Sie bereitstellen möchten.  
+1.  **Wählen Sie Quelle** - Option der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt, das Sie bereitstellen möchten.  
   
-2.  **Wählen Sie Ziel** – wählen Sie das Projektziel.  
+2.  **Wählen Sie Ziel** -wählen Sie das Projektziel.  
   
-3.  **Überprüfen Sie** – angezeigt.  
+3.  **Überprüfen Sie** -angezeigt.  
   
 4.  **Bereitstellen/Ergebnisse** – stellt das Projekt bereit und zeigt die Ergebnisse an.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48086296"
  Klicken Sie auf **Schließen**, um den Assistenten zu beenden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bereitstellen von Projekten für Integration Services-Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
+ [Bereitstellen von Projekten auf dem Integration Services-Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [Bereitstellung von Projekten und Paketen](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   

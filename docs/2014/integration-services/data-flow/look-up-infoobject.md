@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c3fa39cde45e568ad713a3238c98e96d40f8495
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dd5bc058acf58a62c07fd5bdc65a33a43a6a7d6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155040"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749792"
 ---
 # <a name="look-up-infoobject"></a>InfoObject suchen
   Verwenden Sie das Dialogfeld **InfoObject suchen** , um ein InfoObject zu suchen, das im SAP NetWeaver BW-System definiert ist. Wenn die Liste der verfügbaren InfoObjects angezeigt wird, wählen Sie das gewünschte InfoObject aus. Daraufhin werden die zugehörigen Optionen vom SAP BW-Ziel mit den erforderlichen Werten aufgefüllt.  
@@ -84,8 +83,8 @@ ms.locfileid: "48155040"
  [InfoSource erstellen](create-infosource.md)   
  [InfoSource für Transaktionsdaten erstellen](create-infosource-for-transaction-data.md)   
  [InfoSource für Masterdaten erstellen](create-infosource-for-master-data.md)   
- [Neues InfoObject erstellen](create-new-infoobject.md)   
- [Ziel-Editor für SAP BW &#40;Seite Verbindungs-Manager&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [Hinzufügen](create-new-infoobject.md)   
+ [Ziel-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [F1-Hilfe zu Microsoft Connector 1.1 für SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

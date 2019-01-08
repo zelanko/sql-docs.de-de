@@ -11,12 +11,12 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5f6d37f88044d9888c82b5770ea1bca366423459
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea7896e5f7c394539793ca65496824691275963d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123251"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393753"
 ---
 # <a name="managing-report-parts"></a>Verwalten von Berichtsteilen
   Beginnend mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], Bericht, Teilen in anderen Berichten und von anderen Benutzern wieder verwendet, wenn sie die entsprechenden Berechtigungen verfügen und auf Berichtsservern veröffentlicht werden können.  
@@ -54,13 +54,13 @@ ms.locfileid: "48123251"
   
 |Eigenschaft|Description|Berichtsteil<br /><br /> Katalogsuchkriterien|  
 |--------------|-----------------|---------------------------------------------|  
-|Name|Dies ist eines der Kriterien, nach denen ein Benutzer im Berichtsteilkatalog suchen kann.|Benutzerkontensteuerung|  
-|Description|Möglicherweise möchten Sie Berichtsteilnamen auf eine Weise organisieren, die es für Benutzer einfacher macht, sie im Katalog zu finden. Beispielweise können Sie nach einer Beschreibung suchen, die mit "Vertrieb>>" beginnt, um alle Berichtsteile zu finden, die sich auf Vertriebsdaten und -präsentationen beziehen.|Benutzerkontensteuerung|  
-|CreatedBy|Die ID des Benutzers, der den Berichtsteil zur Berichtsserver-Datenbank hinzugefügt hat. Das genaue Format hängt von der Authentifizierungsmethode ab. Einige Authentifizierungsmethoden führen z. B. dazu, dass der vollständige Domänen-\Benutzername im CreatedBy-Feld und dem ModifiedBy-Feld angezeigt wird.|Benutzerkontensteuerung|  
-|CreationDate|Das Datum, an dem der Berichtsteil ursprünglich erstellt wurde.<br /><br /> Dies ist eines der Kriterien, nach denen ein Benutzer im Berichtsteilkatalog suchen kann.|Benutzerkontensteuerung|  
-|ModifiedBy|ModifiedBy ist der Name des Benutzers, der den Berichtsteil zuletzt geändert hat.|Benutzerkontensteuerung|  
-|ModifiedDate|Das Datum, an dem der Berichtsteil zuletzt auf dem Server geändert wurde.<br /><br /> Dieses Feld wird als Teil der Logik verwendet, mit der serverseitige Updates an einem Berichtsteil ermittelt werden. Weitere Informationen finden Sie in der Beschreibung der ComponentID weiter unten in dieser Tabelle.|Benutzerkontensteuerung|  
-|SubType (*)|SubType ist eine Zeichenfolge, die die Art des Berichtsteil angibt, nach dem gesucht werden soll, z.B. "Tablix" oder "Chart".|Benutzerkontensteuerung|  
+|Name|Dies ist eines der Kriterien, nach denen ein Benutzer im Berichtsteilkatalog suchen kann.|Ja|  
+|Description|Möglicherweise möchten Sie Berichtsteilnamen auf eine Weise organisieren, die es für Benutzer einfacher macht, sie im Katalog zu finden. Beispielweise können Sie nach einer Beschreibung suchen, die mit "Vertrieb>>" beginnt, um alle Berichtsteile zu finden, die sich auf Vertriebsdaten und -präsentationen beziehen.|Ja|  
+|CreatedBy|Die ID des Benutzers, der den Berichtsteil zur Berichtsserver-Datenbank hinzugefügt hat. Das genaue Format hängt von der Authentifizierungsmethode ab. Einige Authentifizierungsmethoden führen z. B. dazu, dass der vollständige Domänen-\Benutzername im CreatedBy-Feld und dem ModifiedBy-Feld angezeigt wird.|Ja|  
+|CreationDate|Das Datum, an dem der Berichtsteil ursprünglich erstellt wurde.<br /><br /> Dies ist eines der Kriterien, nach denen ein Benutzer im Berichtsteilkatalog suchen kann.|Ja|  
+|ModifiedBy|ModifiedBy ist der Name des Benutzers, der den Berichtsteil zuletzt geändert hat.|Ja|  
+|ModifiedDate|Das Datum, an dem der Berichtsteil zuletzt auf dem Server geändert wurde.<br /><br /> Dieses Feld wird als Teil der Logik verwendet, mit der serverseitige Updates an einem Berichtsteil ermittelt werden. Weitere Informationen finden Sie in der Beschreibung der ComponentID weiter unten in dieser Tabelle.|Ja|  
+|SubType (*)|SubType ist eine Zeichenfolge, die die Art des Berichtsteil angibt, nach dem gesucht werden soll, z.B. "Tablix" oder "Chart".|Ja|  
 |ComponentID (*)|ComponentID ist ein eindeutiger Bezeichner für den Berichtsteil. Dieses Feld wurde dem Katalog neu hinzugefügt und ist sowohl auf dem Server als auch in Berichterstellungsanwendungen wie Berichts-Generator sichtbar.<br /><br /> Dieses Feld wird von Clientanwendungen bei der Suche nach Berichtsteilupdates auf dem Server verwendet. Die Clientanwendung durchsucht den Server nach ComponentIDs, die sich im aktuellen clientseitigen Bericht befinden. Wenn eine ComponentID-Übereinstimmung gefunden wird, wird das ModifiedDate dann mit dem clientseitigen SyncDate des Berichtselements verglichen.|N0|  
   
 ## <a name="controlling-access-to-report-parts"></a>Steuern des Zugriffs auf Berichtsteile  
@@ -76,7 +76,7 @@ ms.locfileid: "48123251"
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>Server im integrierten SharePoint-Modus  
   
-|Aktionen|-Rolle|  
+|Aktionen|Rolle|  
 |-------------|----------|  
 |Hinzufügen, Löschen, Bearbeiten von Elementeigenschaften, Verwalten der Sicherheit und Herunterladen von Berichtsteilen|Vollzugriff|  
 |Hinzufügen, Löschen, Bearbeiten von Elementeigenschaften und Herunterladen von Berichtsteilen|Entwerfen<br /><br /> Mitwirken|  
@@ -89,10 +89,10 @@ ms.locfileid: "48123251"
     > [!IMPORTANT]  
     >  In jedem dieser Schritte sollte sichergestellt werden, dass die in Berichten wiederverwendeten Berichtsteile von vertrauenswürdigen Speicherorten bzw. Benutzern stammen.  
   
--   Für Berichtsteile werden die gleichen Berechtigungsrichtlinien wie für den vorhandenen Elementtyp für Ressourcen verwendet. Hinsichtlich der Vererbung von Sicherheitsberechtigungen wird innerhalb eines Ordners nicht zwischen herkömmlichen Ressourcenelementen und Berichtsteilen unterschieden. Beispielsweise erbt der Berichtsteil die gleiche Berechtigungsrichtlinie wie die Bilder im selben Ordner. Wenn diese Unterscheidung erforderlich ist, kann die Sicherheit auf Elementebene für die gewünschten Berichtsteile konfiguriert werden. Andernfalls können Sie Berichtsteile in separaten Ordnern speichern, für die die benötigten Berechtigungen konfiguriert wurden.  
+-   Für Berichtsteile werden die gleichen Berechtigungsrichtlinien wie für den vorhandenen Elementtyp „Ressource“ verwendet. Hinsichtlich der Vererbung von Sicherheitsberechtigungen wird innerhalb eines Ordners nicht zwischen herkömmlichen Ressourcenelementen und Berichtsteilen unterschieden. Beispielsweise erbt der Berichtsteil die gleiche Berechtigungsrichtlinie wie die Bilder im selben Ordner. Wenn diese Unterscheidung erforderlich ist, kann die Sicherheit auf Elementebene für die gewünschten Berichtsteile konfiguriert werden. Andernfalls können Sie Berichtsteile in separaten Ordnern speichern, für die die benötigten Berechtigungen konfiguriert wurden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichtsteile und Datasets im Berichts-Generator](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Berichtsteile und Datasets in Berichts-Generator](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Allgemeine Eigenschaftenseite Berichtsteile &#40;Berichts-Manager&#41;](../general-properties-page-report-parts-report-manager.md)   
  [Elemente verschieben-Seite &#40;Berichts-Manager&#41;](../move-items-page-report-manager.md)   
  [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   

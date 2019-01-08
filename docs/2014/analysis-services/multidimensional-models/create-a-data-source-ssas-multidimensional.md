@@ -19,12 +19,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5c6b02cba58b35472fc5d0224d7faf9534c332a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54971b2b71d37ec4b246d982429fac3d6abf5b9a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049490"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412477"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Erstellen einer Datenquelle (SSAS – mehrdimensional)
   In einem mehrdimensionalen Modell von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt ein Datenquellenobjekt eine Verbindung zu der Datenquelle dar, von der Sie Daten verarbeiten (oder importieren). Ein mehrdimensionales Modell muss mindestens ein Datenquellenobjekt enthalten, Sie können jedoch weitere hinzufügen, um Daten aus mehreren Data Warehouses zu kombinieren. Erstellen Sie anhand der Anweisungen in diesem Thema ein Datenquellenobjekt für Ihr Modell. Weitere Informationen zum Festlegen von Eigenschaften für dieses Objekt finden Sie unter [Festlegen von Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "48049490"
  [Hinzufügen mehrerer Datenquellen zu einem Modell](#bkmk_multipleDS)  
   
 ##  <a name="bkmk_provider"></a> Auswählen eines Datenanbieters  
- Die Verbindung können Sie mit einem verwaltetem [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework- oder einem systemeigenem OLE DB-Anbieter herstellen. Als Datenanbieter wird für SQL Server-Datenquellen SQL Server Native Client empfohlen, da dieser meist eine bessere Leistung bietet.  
+ Die Verbindung können Sie mit einem verwaltetem [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework- oder einem systemeigenem OLE DB-Anbieter herstellen. Als Datenanbieter wird für SQL Server-Datenquellen SQL Server Native Client empfohlen, da dieser meist eine bessere Leistung bietet.  
   
  Bei Oracle- und anderen Datenquellen von Drittanbietern überprüfen Sie, ob der Drittanbieter einen systemeigenen OLE DB-Anbieter bereitstellt, mit dem Sie es als Erstes probieren. Bei Fehlern versuchen Sie es mit einem anderen .NET-Anbieter oder systemeigenen OLE DB-Anbieter, der im Verbindungs-Manager aufgeführt wird. Stellen Sie sicher, dass jeder von Ihnen verwendete Datenanbieter auf allen Computern installiert ist, die zum Entwickeln und Ausführen der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Lösung verwendet werden.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48049490"
 >  Standardmäßig werden in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Kennwörter nicht mit der Verbindungszeichenfolge gespeichert. Wenn das Kennwort nicht gespeichert wird, werden Sie von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Eingabe des Kennworts aufgefordert, sobald es benötigt wird. Wenn Sie sich für die Speicherung des Kennworts entscheiden, wird es in verschlüsselter Form in der Datenverbindungszeichenfolge gespeichert. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verschlüsselt Kennwortinformationen für Datenquellen mithilfe des Verschlüsselungsschlüssels der Datenbank, die die Datenquelle enthält. Werden verschlüsselte Verbindungsinformationen verwendet, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager verwenden, um das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienstkonto oder das zugehörige Kennwort zu ändern; andernfalls können die verschlüsselten Informationen nicht wiederhergestellt werden. Weitere Informationen finden Sie unter [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>Definieren von Identitätswechselinformationen für Data Mining-Objekte  
- Data Mining-Abfragen können im Kontext des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienstkontos ausgeführt werden. Es ist jedoch auch möglich, sie im Kontext des Benutzers, der die Abfrage gesendet hat, oder im Kontext eines angegebenen Benutzers auszuführen. Der Kontext, in dem eine Abfrage ausgeführt wird, kann sich auf das Ergebnis der Abfrage auswirken. Für das Datamining `OPENQUERY` Vorgängen des Typs sollten Sie die Datamining-Abfrage nicht im Kontext des Dienstkontos, sondern im Kontext des aktuellen Benutzers oder im Kontext eines angegebenen Benutzers (unabhängig vom Benutzer, der die Abfrage ausführt) auszuführen. Hierdurch ist es möglich, die Abfrage mit eingeschränkten Sicherheitsanmeldeinformationen auszuführen. Wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Identität des aktuellen Benutzers oder eines angegebenen Benutzers annehmen soll, müssen Sie entweder die Option **Bestimmten Benutzernamen und bestimmtes Kennwort** oder **Anmeldeinformationen des aktuellen Benutzers** auswählen.  
+ Data Mining-Abfragen können im Kontext des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienstkontos ausgeführt werden. Es ist jedoch auch möglich, sie im Kontext des Benutzers, der die Abfrage gesendet hat, oder im Kontext eines angegebenen Benutzers auszuführen. Der Kontext, in dem eine Abfrage ausgeführt wird, kann sich auf das Ergebnis der Abfrage auswirken. Bei Data Mining-Vorgängen des Typs `OPENQUERY` kann es sich anbieten, die Data Mining-Abfrage nicht im Kontext des Dienstkontos, sondern im Kontext des aktuellen Benutzers oder im Kontext eines angegebenen Benutzers (unabhängig vom Benutzer, der die Abfrage ausführt) auszuführen. Hierdurch ist es möglich, die Abfrage mit eingeschränkten Sicherheitsanmeldeinformationen auszuführen. Wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Identität des aktuellen Benutzers oder eines angegebenen Benutzers annehmen soll, müssen Sie entweder die Option **Bestimmten Benutzernamen und bestimmtes Kennwort** oder **Anmeldeinformationen des aktuellen Benutzers** auswählen.  
   
 ##  <a name="bkmk_steps"></a> Erstellen einer Datenquelle mit dem Datenquellen-Assistent  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48049490"
   
 3.  Klicken Sie auf der Seite **Wählen Sie aus, wie die Verbindung definiert werden soll** auf **Eine Datenquelle basierend auf einer vorhandenen oder neuen Verbindung erstellen** , und klicken Sie dann auf **Neu** , um den **Verbindungs-Manager**zu öffnen.  
   
-     Neue Verbindungen werden im Verbindungs-Manager erstellt. Wählen Sie im Verbindungs-Manager einen Anbieter aus, und geben Sie dann die von diesem Anbieter verwendeten Verbindungszeichenfolgeneigenschaften an, um eine Verbindung mit den zugrunde liegenden Daten herzustellen. Welche Informationen hier genau erforderlich sind, hängt vom ausgewählten Anbieter ab. Im Allgemeinen gehören hierzu ein Server oder eine Dienstinstanz, Angaben zur Anmeldung am Server oder an der Dienstinstanz, ein Datenbank- oder Dateiname sowie andere anbieterspezifische Einstellungen. Im weiteren Verlauf dieser Prozedur wird eine SQL Server-Datenbankverbindung angenommen.  
+     Neue Verbindungen werden im Verbindungs-Manager erstellt. Wählen Sie im Verbindungs-Manager einen Anbieter aus, und geben Sie dann die von diesem Anbieter verwendeten Verbindungszeichenfolgeneigenschaften an, um eine Verbindung mit den zugrunde liegenden Daten herzustellen. Welche Informationen hier genau erforderlich sind, hängt vom ausgewählten Anbieter ab. Im Allgemeinen gehören hierzu ein Server oder eine Dienstinstanz, Angaben zur Anmeldung am Server oder an der Dienstinstanz, ein Datenbank- oder Dateiname sowie andere anbieterspezifische Einstellungen. Für den Rest dieses Verfahrens wird eine SQL Server-datenbankverbindung angenommen.  
   
 4.  Wählen Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework- oder den systemeigenen OLE DB-Anbieter aus, der für die Verbindung verwendet werden soll.  
   
@@ -152,13 +152,13 @@ ms.locfileid: "48049490"
  Sie können mehrere Datenquellenobjekte erstellen, um Verbindungen mit zusätzlichen Datenquellen zu unterstützen. Jede Datenquelle muss Spalten aufweisen, die zur Erstellung von Beziehungen verwendet werden können.  
   
 > [!NOTE]  
->  Wenn mehrere Datenquellen definiert sind und von mehreren Quellen in einer einzelnen Abfrage Daten abgefragt, z. B. für eine Schneeflockendimension, muss definiert eine Datenquelle, die Remoteabfragen mithilfe unterstützt `OpenRowset`. In der Regel ist dies eine Microsoft SQL Server-Datenquelle.  
+>  Wenn mehrere Datenquellen definiert sind und von mehreren Quellen über eine einzelne Abfrage Daten abgefragt werden, beispielsweise für eine Schneeflockendimension, muss eine Datenquelle definiert werden, die Remoteabfragen mithilfe von `OpenRowset` unterstützt. In der Regel ist dies eine Microsoft SQL Server-Datenquelle.  
   
  Für die Verwendung mehrerer Datenquellen gelten die folgenden Anforderungen:  
   
 -   Legen Sie eine Datenquelle als primäre Datenquelle fest. Die primäre Datenquelle ist diejenige, die zum Erstellen einer Datenquellensicht verwendet wurde.  
   
--   Eine primäre Datenquelle muss unterstützen die `OpenRowset` Funktion.  Weitere Informationen zu dieser Funktion in SQL Server finden Sie unter <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>.  
+-   Eine primäre Datenquelle muss die `OpenRowset`-Funktion unterstützen.  Weitere Informationen zu dieser Funktion in SQL Server finden Sie unter <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>.  
   
  Gehen Sie folgendermaßen vor, um Daten von mehreren Datenquellen zu kombinieren:  
   

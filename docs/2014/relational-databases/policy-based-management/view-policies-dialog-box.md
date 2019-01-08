@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.managepolicies.general.f1
@@ -12,17 +12,17 @@ ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6150d7b819c6cd31dbc8d09fa43d1ed66de0f8c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145084"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814992"
 ---
 # <a name="view-policies-dialog-box"></a>Dialogfeld 'Richtlinien anzeigen'
   Mithilfe dieses Dialogfelds können Sie die Richtlinien anzeigen, die für dieses Ziel gelten. In diesem Dialogfeld werden relevante Richtlinien, deren Richtlinienkategorien und Informationen über die Richtlinien angezeigt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Richtlinienzustand**  
  Gibt den Status der Richtlinie im Hinblick auf dieses Ziel an. Bleibt leer, wenn der Status unbekannt ist.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
@@ -15,12 +14,12 @@ ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 738b9179143b4c6b0c986f7f6a16464980b60f8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130338"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771392"
 ---
 # <a name="reinitialize-a-subscription"></a>Erneutes Initialisieren eines Abonnements
   In diesem Thema wird beschrieben, wie ein Abonnement in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) neu initialisiert wird. Einzelne Abonnements können für die erneute Initialisierung markiert werden, sodass während der nächsten Synchronisierung eine neue Momentaufnahme angewendet wird.  
@@ -35,7 +34,7 @@ ms.locfileid: "48130338"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Das erneute Initialisieren eines Abonnements ist ein zweistufiger Prozess:  
   
 1.  Zunächst müssen die Abonnements für eine Veröffentlichung, die erneut initialisiert werden sollen, *gekennzeichnet* werden. Das Kennzeichnen der Abonnements für die erneute Initialisierung erfolgt im Dialogfeld **Abonnements erneut initialisieren** , das über die Ordner **Lokale Veröffentlichungen** und **Lokale Abonnements** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar ist. Abonnements können darüber hinaus auch auf der Registerkarte **Alle Abonnements** und über den Veröffentlichungsknoten im Replikationsmonitor als erneut zu initialisieren gekennzeichnet werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md). Beim Kennzeichnen eines Abonnements für die erneute Initialisierung können Sie zwischen den folgenden Optionen auswählen:  
@@ -174,9 +173,9 @@ ms.locfileid: "48130338"
 3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen.  
   
     > [!NOTE]  
-    >  Wenn diese Methode zurückgibt `false`, entweder die Abonnementeigenschaften in Schritt 2 falsch definiert, oder das Pullabonnement ist nicht vorhanden.  
+    >  Wenn diese Methode `false` zurückgibt, wurden die Abonnementeigenschaften in Schritt 2 falsch definiert, oder das Pullabonnement ist nicht vorhanden.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> -Methode auf. Diese Methode markiert das Abonnement für die erneute Initialisierung.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A>-Methode auf. Diese Methode markiert das Abonnement für die erneute Initialisierung.  
   
 5.  Synchronisieren Sie das Pullabonnement. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -189,9 +188,9 @@ ms.locfileid: "48130338"
 3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen.  
   
     > [!NOTE]  
-    >  Wenn diese Methode zurückgibt `false`, entweder die Abonnementeigenschaften in Schritt 2 falsch definiert, oder das Pushabonnement ist nicht vorhanden.  
+    >  Wenn diese Methode `false` zurückgibt, wurden entweder die Abonnementeigenschaften in Schritt 2 falsch definiert, oder das Pushabonnement ist nicht vorhanden.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> -Methode auf. Diese Methode markiert das Abonnement für die erneute Initialisierung.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A>-Methode auf. Diese Methode markiert das Abonnement für die erneute Initialisierung.  
   
 5.  Synchronisieren Sie das Pushabonnement. Weitere Informationen finden Sie unter [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
@@ -204,9 +203,9 @@ ms.locfileid: "48130338"
 3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen.  
   
     > [!NOTE]  
-    >  Wenn diese Methode zurückgibt `false`, entweder die Abonnementeigenschaften in Schritt 2 falsch definiert, oder das Pullabonnement ist nicht vorhanden.  
+    >  Wenn diese Methode `false` zurückgibt, wurden die Abonnementeigenschaften in Schritt 2 falsch definiert, oder das Pullabonnement ist nicht vorhanden.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> -Methode auf. Übergeben Sie den Wert `true`, wenn vor der erneuten Initialisierung Änderungen beim Abonnenten hochgeladen werden sollen, oder übergeben Sie den Wert `false`, wenn sofort erneut initialisiert und Änderungen beim Abonnenten nicht gespeichert werden sollen. Diese Methode markiert das Abonnement für die erneute Initialisierung.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A>-Methode auf. Übergeben Sie den Wert `true`, wenn vor der erneuten Initialisierung Änderungen beim Abonnenten hochgeladen werden sollen, oder übergeben Sie den Wert `false`, wenn sofort erneut initialisiert und Änderungen beim Abonnenten nicht gespeichert werden sollen. Diese Methode markiert das Abonnement für die erneute Initialisierung.  
   
     > [!NOTE]  
     >  Änderungen können nicht hochgeladen werden, wenn das Abonnement abgelaufen ist. Weitere Informationen finden Sie unter [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  
@@ -222,9 +221,9 @@ ms.locfileid: "48130338"
 3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen.  
   
     > [!NOTE]  
-    >  Wenn diese Methode zurückgibt `false`, entweder die Abonnementeigenschaften in Schritt 2 falsch definiert, oder das Pushabonnement ist nicht vorhanden.  
+    >  Wenn diese Methode `false` zurückgibt, wurden entweder die Abonnementeigenschaften in Schritt 2 falsch definiert, oder das Pushabonnement ist nicht vorhanden.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> -Methode auf. Übergeben Sie den Wert `true`, wenn vor der erneuten Initialisierung Änderungen beim Abonnenten hochgeladen werden sollen, oder übergeben Sie den Wert `false`, wenn sofort erneut initialisiert und Änderungen beim Abonnenten nicht gespeichert werden sollen. Diese Methode markiert das Abonnement für die erneute Initialisierung.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A>-Methode auf. Übergeben Sie den Wert `true`, wenn vor der erneuten Initialisierung Änderungen beim Abonnenten hochgeladen werden sollen, oder übergeben Sie den Wert `false`, wenn sofort erneut initialisiert und Änderungen beim Abonnenten nicht gespeichert werden sollen. Diese Methode markiert das Abonnement für die erneute Initialisierung.  
   
     > [!NOTE]  
     >  Änderungen können nicht hochgeladen werden, wenn das Abonnement abgelaufen ist. Weitere Informationen finden Sie unter [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  

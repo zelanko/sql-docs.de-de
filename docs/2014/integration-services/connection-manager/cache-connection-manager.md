@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Cache connection manager
@@ -13,12 +12,12 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0d3513446c930d41ef9163708e60ad063244479
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa2c26f086ea67a83308945990375b19164a7d0d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064280"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769142"
 ---
 # <a name="cache-connection-manager"></a>Cacheverbindungs-Manager
   Der Cacheverbindungs-Manager liest Daten aus der Cachetransformation oder einer Cachedatei (.caw) und kann die Daten in einer Cachedatei speichern. Unabhängig davon, ob der Cacheverbindungs-Manager für die Verwendung einer Cachedatei konfiguriert ist, werden die Daten stets im Arbeitsspeicher gespeichert.  
@@ -55,6 +54,6 @@ ms.locfileid: "48064280"
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und unter [Programmgesteuertes Hinzufügen von Verbindungen](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Implementieren einer Suchtransformation im Vollcachemodus mit der Transformation für Cacheverbindungs-Manager](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+ [Implementieren einer Suchtransformation im Vollcachemodus mit dem Cacheverbindungs-Manager](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
   

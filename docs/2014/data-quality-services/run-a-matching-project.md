@@ -14,12 +14,12 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb23627ef869fdc4117297f43efd8ed8898820f9
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6c39c1c9651872a7e47070cfec400e77fa578a7f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031507"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512051"
 ---
 # <a name="run-a-matching-project"></a>Ausführen eines Abgleichsprojekts
   In diesem Thema wird beschrieben, wie ein Datenabgleich in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ausgeführt wird. Der Abgleichsprozess identifiziert anhand von Abgleichsregeln in der Abgleichsrichtlinie Cluster von übereinstimmenden Datensätzen, legt basierend auf einer Survivorship-Regel einen Datensatz von jedem Cluster als Survivor fest und exportiert die Ergebnisse. DQS führt den Abgleichsprozess, auch Deduplizierung genannt, in einem computerunterstützten Prozess aus, Sie erstellen die Abgleichsregeln jedoch interaktiv und wählen die Survivorship-Regel aus mehreren Optionen aus, so dass Sie den Abgleichsprozess selbst steuern können.  
@@ -62,7 +62,7 @@ ms.locfileid: "51031507"
     > [!NOTE]  
     >  Sie können die Quelldaten nur dann einer DQS-Domäne zuordnen, wenn der Quelldatentyp in DQS unterstützt wird und mit dem DQS-Domänendatentyp übereinstimmt. Informationen zu in DQS unterstützten Datentypen finden Sie unter [Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Klicken Sie auf das Plussteuerelement **(+)** , um der Zuordnungstabellen eine Zeile hinzuzufügen, oder auf das Minussteuerelement **(-)** , um eine Zeile zu entfernen.  
+4.  Klicken Sie auf das Plussteuerelement **(+)**, um der Zuordnungstabelle eine Zeile hinzuzufügen, oder auf das Minussteuerelement **(-)**, um eine Zeile zu entfernen.  
   
 5.  Klicken Sie auf **Vorschau der Datenquelle** , um die Daten in der ausgewählten SQL Server-Tabelle oder -Sicht oder im ausgewählten Excel-Arbeitsblatt anzuzeigen.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "51031507"
   
  Survivorship ist optional. Sie können die Ergebnisse auch ohne Ausführung von Survivorship exportieren. In diesem Fall verwendet DQS den Pivotdatensatz, der in der Abgleichsanalyse festgelegt wurde. Wenn zwei oder mehr Datensätze in einem Cluster die Survivorship-Regel erfüllen, wählt der Survivorship-Prozess die niedrigste Datensatz-ID in den konfliktverursachenden Datensätzen als Survivor aus. Sie können Survivor mit unterschiedlichen Survivorship-Regeln in verschiedene Dateien oder Tabellen exportieren.  
   
-1.  Wählen Sie auf der Seite **Exportieren** unter **Zieltyp**das ziel aus, in das die übereinstimmenden Daten exportiert werden sollen: **SQL Server**, **CSV-Datei**oder **Excel-Datei**.  
+1.  Auf der **exportieren** Seite, wählen Sie das Ziel, die die übereinstimmenden Daten auf die in exportiert werden sollen **Zieltyp**: **SQLServer**, **CSV-Datei**, oder **Excel-Datei**.  
   
     > [!IMPORTANT]  
     >  Wenn Sie die 64-Bit-Version von Excel verwenden, können Sie die übereinstimmenden Daten nicht in eine Excel-Datei exportieren; Sie können sie nur in eine SQL Server-Datenbank oder eine CSV-Datei exportieren.  
@@ -123,7 +123,7 @@ ms.locfileid: "51031507"
   
     -   Eine Liste der Cluster und der übereinstimmenden Datensätze in jedem Cluster, einschließlich des Regelnamens und der Genauigkeit. Der Pivotdatensatz wird als „Pivot“ markiert. Die Cluster werden als erstes in der Exportliste angezeigt.  
   
-    -   Eine Liste der nicht übereinstimmenden Datensätze mit dem Wert „NULL“ in der Spalte für die Genauigkeit und den Regelnamen. Diese Datensätze werden nach den Clustern an die Exportliste angefügt.  
+    -   Eine Liste der nicht übereinstimmenden Datensätze mit dem Wert „NULL“ in der Spalten „Score“ und „Rule Name“. Diese Datensätze werden nach den Clustern an die Exportliste angefügt.  
   
      Für Survivorship-Ergebnisse wird Folgendes exportiert:  
   
@@ -164,7 +164,7 @@ ms.locfileid: "51031507"
     > [!NOTE]  
     >  Wenn Sie ein Abgleichsprojekt beendet haben und es dann erneut verwenden, verwendet es die Wissensdatenbank in dem Zustand, als es veröffentlicht wurde. Es werden keine Änderungen berücksichtigt, die Sie seit Abschluss des Projekts an der Wissensdatenbank vorgenommen haben. Um die Änderungen oder eine neue Wissensdatenbank zu verwenden, müssen Sie ein neues Abgleichsprojekt erstellen. Wenn Sie jedoch ein Abgleichsprojekt erstellt, aber noch nicht abgeschlossen haben, werden alle an der Abgleichsrichtlinie vorgenommenen und veröffentlichten Änderungen beim Ausführen des Abgleichs in dem Projekt verwendet.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Ausführen eines Abgleichsprojekts  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Ausführen eines Abgleichsprojekts  
  Nachdem Sie ein Abgleichsprojekt ausgeführt haben, können Sie die Abgleichsrichtlinie in der Wissensdatenbank ändern und ein anderes Abgleichsprojekt basierend auf der aktualisierten Abgleichsrichtlinie erstellen und ausführen. Weitere Informationen finden Sie unter [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Profiler"></a> Registerkarten „Profiler“ und „Ergebnisse“  
@@ -179,23 +179,23 @@ ms.locfileid: "51031507"
   
 -   **Gesamtwerte**: Die Gesamtzahl der Werte in den Feldern  
   
--   **Neue Werte**: Die Gesamtzahl der Werte, die seit der vorherigen Ausführung neu sind, und ihr prozentualer Anteil am Ganzen  
+-   **Neue Werte**: Die Gesamtzahl der Werte, die neue seit der vorherigen Ausführung, und ihr prozentualer Anteil am ganzen  
   
--   **Eindeutige Werte**: Die Gesamtzahl der eindeutigen Werte in den Feldern und ihr prozentualer Anteil am Ganzen  
+-   **Eindeutige Werte**: Die Gesamtanzahl der eindeutigen Werte in den Feldern und ihr prozentualer Anteil am ganzen  
   
--   **Neue eindeutige Werte**: Die Gesamtzahl der eindeutigen Werte, die neu in den Feldern sind, und ihr prozentualer Anteil am Ganzen  
+-   **Neue eindeutige Werte**: Die Gesamtanzahl der eindeutigen Werte, die neu in den Feldern und ihr prozentualer Anteil am ganzen  
   
  Die Feldstatistiken umfassen Folgendes:  
   
--   **Feld**: Name des Felds, das in die Zuordnungen eingeschlossen wurde  
+-   **Feld**: Der Name des Felds, das in die Zuordnungen eingeschlossen wurde.  
   
--   **Domäne**: Name der Domäne, die dem Feld zugeordnet wurde  
+-   **Domäne**: Der Name der Domäne, die die dem Feld zugeordnet wurde.  
   
--   **Neu**: Die Anzahl der neuen Übereinstimmungen und ihr prozentualer Anteil am Gesamtwert  
+-   **Neue**: Die Anzahl der neuen Übereinstimmungen und ihr prozentualer Anteil am Gesamtwert  
   
--   **Eindeutig**: Die Gesamtzahl der eindeutigen Datensätze in den Feldern und ihr prozentualer Anteil am Ganzen  
+-   **Eindeutige**: Die Anzahl der eindeutigen Datensätze in den Feldern und ihr prozentualer Anteil am Gesamtwert  
   
--   **Vollständigkeit**: Der Prozentsatz, zu dem die Regelausführung abgeschlossen wurde  
+-   **Vollständigkeit**: Der Prozentsatz, dass die regelausführung abgeschlossen wurde.  
   
 ### <a name="matching-policy-notifications"></a>Abgleichsrichtlinienbenachrichtigungen  
  Für die Abgleichsrichtlinienaktivität führen die folgenden Bedingungen zu Benachrichtigungen:  

@@ -1,5 +1,5 @@
 ---
-title: Umbenennen einer Analysis Services-Instanz | Microsoft Docs
+title: Umbenennen einer Analysis Services-Instanz | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6214dbcef4036bc545a931f90ee8dca4580ef287
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7ec5f84d40c3ba0628ea111502dd2be41cc7d346
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015917"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393013"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Umbenennen einer Analysis Services-Instanz
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34015917"
   
      Das Aktualisieren eines Datenbank-Anmeldenamens oder von Dateiberechtigungen ist erforderlich, wenn Sie ein virtuelles Konto zum Bereitstellen des Diensts verwendet haben. Virtuelle Konten basieren auf dem Instanznamen. Wenn Sie die Instanz umbenennen, wird daher gleichzeitig auch das virtuelle Konto aktualisiert. Dies bedeutet, dass alle vorherigen Anmeldenamen oder Berechtigungen, die Sie für die vorherige Instanz erstellt haben, nicht mehr gültig sind.  
   
-     Dies wird im folgenden Beispiel veranschaulicht. Angenommen, Sie haben einen Server im tabellarischen Modus als Instanz mit dem Namen "Tabular" unter Verwendung des virtuellen Standardkontos installiert. Die resultierende Konfiguration sieht wie folgt aus:  
+     Dies wird im folgenden Beispiel veranschaulicht. Nehmen wir an, dass Sie einen Server im tabellarischen Modus als Instanz mit dem Namen "Tabular" mit dem virtuellen Standardkonto, was in der folgenden Konfiguration installiert:  
   
     1.  Instanzname = \<Server > \TABULAR  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34015917"
   
     3.  Virtuelles Konto = NT-Dienst\ MSOLAP$TABULAR  
   
-     Angenommen, Sie benennen die Instanz jetzt in "TAB2" um. Nach der Namensänderung würde die Konfiguration wie folgt aussehen:  
+     Jetzt nehmen Sie die Instanz in "TAB2" umbenennen. Nach der Namensänderung würde die Konfiguration wie folgt aussehen:  
   
     1.  Instanzname = \<Server > \TAB2  
   
@@ -68,6 +68,6 @@ ms.locfileid: "34015917"
   
     3.  Virtuelles Konto = NT-Dienst\ MSOLAP$TAB2  
   
-     Wie Sie sehen können, sind Datenbank- und Dateiberechtigungen, die "NT-Dienst\ MSOLAP$TABULAR" zuvor gewährt wurden, nicht mehr gültig. Um sicherzustellen, dass Tasks und Vorgänge wie zuvor vom Dienst ausgeführt werden, müssen Sie "für NT-Dienst\ MSOLAP$TAB2" neue Datenbank- und Dateiberechtigungen gewähren.  
+     Wie Sie sehen können, sind Datenbank- und Dateiberechtigungen, die "NT-dienst\ MSOLAP$ TABULAR" zuvor gewährt wurden, nicht mehr gültig. Um sicherzustellen, dass Tasks und vom Dienst ausgeführten Vorgänge ausgeführt werden, wie zuvor, nun müssen "NT-dienst\ MSOLAP$ TAB2" neue Datenbank- und Dateiberechtigungen gewähren.  
   
   

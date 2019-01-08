@@ -18,12 +18,12 @@ ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9f86f83637cbf71dd128dd262ad1621b2d58270
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b79fbbd504f7294835e92401a2210e6acac3c440
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658650"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514022"
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +44,19 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@table_server =** ] **"***Table_server***"**  
+ [  **@table_server =** ] **"**_Table_server_**"**  
  Der Name des Verbindungsservers, für den Informationen zurückgegeben werden sollen. *Table_server* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@table_name =** ] **"***Table_name***"**  
+ [  **@table_name =** ] **"**_Table_name_**"**  
  Der Name der Tabelle, die die angegebene Spalte enthält. *TABLE_NAME* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@table_schema =** ] **"***Table_schema***"**  
+ [  **@table_schema =** ] **"**_Table_schema_**"**  
  Das Tabellenschema. *TABLE_SCHEMA* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@table_catalog =** ] **"***Table_catalog***"**  
+ [  **@table_catalog =** ] **"**_Table_catalog_**"**  
  Der Name der Datenbank, in der angegebenen *Table_name* befindet. *TABLE_CATALOG* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@column_name =** ] **"***Column_name***"**  
+ [  **@column_name =** ] **"**_Column_name_**"**  
  Der Name der Spalte, für die Privilegieninformationen bereitgestellt werden sollen. *Column_name* ist **Sysname**, hat den Standardwert NULL (alle häufigen Spalten).  
   
 ## <a name="result-sets"></a>Resultsets  
@@ -64,7 +64,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Name des Qualifizierers Tabelle. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer ***.*** Besitzer ***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
+|**TABLE_CAT**|**sysname**|Name des Qualifizierers Tabelle. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (_Qualifizierer_**.** _Besitzer_**.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
 |**NACH "TABLE_SCHEM"**|**sysname**|Name des Tabellenbesitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte dar, den Namen des Datenbankbenutzers, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
 |**COLUMN_NAME**|**sysname**|Name der Spalte für jede Spalte von der **TABLE_NAME** zurückgegeben. Dieses Feld gibt immer einen Wert zurück.|  

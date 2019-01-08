@@ -12,18 +12,18 @@ ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c547fa6363ab3a60ecbee8b348c233077e17ceed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1af16003b73b76ea0d899ecacb19dda42aa867d9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097444"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538694"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>Key Performance Indicator (KPI)-Darstellung (tabellarisch)
   Ein KPI misst die Leistung eines Werts, der durch ein Basismeasure definiert wird, anhand eines Zielwerts.  
   
 ## <a name="key-performance-indicator-representation"></a>KPI (Key Performance Indicator)-Darstellung  
- Ein KPI (Key Performance Indicator) ist in tabellarischen Objektmodellen ein Measure mit zusätzlichen Informationen für die grafische Anzeige in der Clientanwendung. Ein KPI weist normalerweise folgende Informationen auf: das angestrebte Ziel, den Status des Measures im Vergleich zum Ziel sowie Informationen dazu, wie der Status grafisch im Clienttool angezeigt werden soll.  
+ In tabellarischen Modellen einen Key Performance Indicator - Kpi-ist ein Measure mit zusätzlichen Informationen für die Clientanwendung grafische Anzeige. Ein KPI weist normalerweise folgende Informationen auf: das angestrebte Ziel, den Status des Measures im Vergleich zum Ziel sowie Informationen dazu, wie der Status grafisch im Clienttool angezeigt werden soll.  
   
 ### <a name="key-performance-indicator-in-amo"></a>KPI (Key Performance Indicator) in AMO  
  Wenn AMO zum Verwalten eines KPIs für ein tabellarisches Modell verwendet wird, besteht keine 1:1-Objektentsprechung zu einem KPI in AMO. Das AMO-Objekt <xref:Microsoft.AnalysisServices.Kpi> wird nicht zu diesem Zweck verwendet. In AMO wird ein KPI für tabellarische Modelle durch eine Reihe von Objekten dargestellt, die in einem der Elemente in der <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A>-Auflistung sowie in <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> erstellt wurden.  
@@ -223,6 +223,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular-Beispiel  
- Um ein Verständnis für die Verwendung von AMO zur Erstellung und Bearbeitung von Key Performance Indicator können Sie Darstellungen des Quellcodes der AMO zum Beispiel; Prüfen Sie insbesondere die Quelldatei: AddKPIs.cs. Das Beispiel ist auf Codeplex verfügbar. Ein wichtiger Hinweis zum Code: Der Code wird nur zur Verdeutlichung für die logischen Konzepte bereitgestellt, die hier erläutert werden, und sollte nicht in einer Produktionsumgebung verwendet oder zu anderen als Lehrzwecken eingesetzt werden.  
+ Um einen Einblick in die Verwendung von AMO zur Erstellung und Bearbeitung von KPI-Darstellungen zu gewinnen, können Sie den Quellcode im AMO2Tabular-Beispiel einsehen; prüfen Sie insbesondere die folgende Quelldatei: AddKPIs.cs. Das Beispiel ist auf Codeplex verfügbar. Ein wichtiger Hinweis zum Code: Der Code wird nur zur Verdeutlichung für die logischen Konzepte bereitgestellt, die hier erläutert werden, und sollte nicht in einer Produktionsumgebung verwendet oder zu anderen als Lehrzwecken eingesetzt werden.  
   
   

@@ -15,18 +15,18 @@ ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a814b15255a485bf6fbc28ad31d4e789f8482447
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 655c3c76794b170b113442b14ae75cf977ac024c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662118"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391703"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3.8  
+ Eingeführt in Version: ODBC 3.8  
   
- Einhaltung von Standards: keine  
+ Einhaltung von Standards: None  
   
  Es wird erwartet, dass die meisten ODBC 3.8 (und höher)-Treiber werden diese Funktion zu implementieren. Wenn ein Treiber nicht, einen Aufruf von **SQLCancelHandle** mit einer Verbindung zu behandeln, der *behandeln* Parameter SQL_ERROR mit SQLSTATE von IM001 und eine Nachricht zurück "Treiber diese Funktion nicht unterstützt" einen Aufruf um **SQLCancelHandle** mit einer Anweisung zu verarbeiten, als die *behandeln* Parameter für einen Aufruf von zugeordnet **SQLCancel** vom Treiber-Manager und verarbeitet werden können, wenn der Treiber implementiert **SQLCancel**. Eine Anwendung kann mithilfe **SQLGetFunctions** zu bestimmen, ob ein Treiber unterstützt **SQLCancelHandle**.  
   

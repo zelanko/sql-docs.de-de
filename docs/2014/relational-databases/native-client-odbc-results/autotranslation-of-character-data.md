@@ -22,17 +22,17 @@ ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc96c78af702a2239b517b4fbde78f6926b8490a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076700"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806592"
 ---
 # <a name="autotranslation-of-character-data"></a>Automatische Übersetzung der Zeichendaten
   Zeichendaten, wie z. B. ANSI-Zeichen mit SQL_C_CHAR deklarierte Variablen oder Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der **Char**, **Varchar**, oder **Text** -Datentypen können Stellen Sie nur eine begrenzte Anzahl von Zeichen dar. Mit einem Byte pro Zeichen gespeicherte Zeichendaten können nur 256 Zeichen darstellen. Die in SQL_C_CHAR-Variablen gespeicherten Werte werden mithilfe der ANSI-Codepage (ACP) auf dem Clientcomputer interpretiert. Gespeicherte Werte **Char**, **Varchar**, oder **Text** Datentypen auf dem Server werden mithilfe der ACP des Servers ausgewertet.  
   
- Wenn sowohl die Server-als auch der, über die gleiche ACP verfügen, sie haben keine Probleme bei der Interpretation der in SQL_C_CHAR, gespeicherten Werte **Char**, **Varchar**, oder **Text** Objekte. SQL_C_CHAR-Daten vom Client können als ein anderes Zeichen auf dem Server interpretiert werden, wenn er in verwendet wird, wenn der Server und der Client über unterschiedliche ACP verfügen **Char**, **Varchar**, oder **Text** Spalten, Variablen oder Parameter. Beispielsweise ein Zeichen-Byte, die mit dem Wert 0xA5 als das Zeichen Ñ auf einem Computer mithilfe der Codepage 437 interpretiert wird und wie die Yen melden (¥) auf einem Computer mit der Codepage 1252 interpretiert.  
+ Wenn sowohl die Server-als auch der, über die gleiche ACP verfügen, sie haben keine Probleme bei der Interpretation der in SQL_C_CHAR, gespeicherten Werte **Char**, **Varchar**, oder **Text** Objekte. SQL_C_CHAR-Daten vom Client können als ein anderes Zeichen auf dem Server interpretiert werden, wenn er in verwendet wird, wenn der Server und der Client über unterschiedliche ACP verfügen **Char**, **Varchar**, oder **Text** Spalten, Variablen oder Parameter. Beispielsweise wird ein Zeichen-Byte, die mit dem Wert 0xA5 als Zeichen interpretiert? auf einem Computer, die mithilfe von Code Codepage 437 verwendet und wird entsprechend die Yen melden Sie sich (?) auf einem Computer mit der Codepage 1252 interpretiert.  
   
  Unicode-Daten werden mit zwei Bytes pro Zeichen gespeichert. Alle erweiterten Zeichen werden von der Unicode-Spezifikation abgedeckt, weshalb alle Unicode-Zeichen von allen Computern einheitlich interpretiert werden.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48076700"
   
  Da alle diese Konvertierungen durch erfolgen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber ausgeführt wird, auf dem Client die Server-ACP eine der auf dem Clientcomputer installierten Codepages sein muss.  
   
- Indem die Zeichenkonvertierung über Unicode durchgeführt wird, ist sichergestellt, dass alle Zeichen, die auf beiden Codepages enthalten sind, korrekt konvertiert werden. Wenn ein Zeichen jedoch nur auf einer der beiden Codepages aufgeführt ist, kann es auf der Zielcodepage nicht dargestellt werden. Zum Beispiel umfasst die Codepage 1252 das Symbol für eingetragene Marken (®), während das Symbol auf der Codepage 437 nicht enthalten ist.  
+ Indem die Zeichenkonvertierung über Unicode durchgeführt wird, ist sichergestellt, dass alle Zeichen, die auf beiden Codepages enthalten sind, korrekt konvertiert werden. Wenn ein Zeichen jedoch nur auf einer der beiden Codepages aufgeführt ist, kann es auf der Zielcodepage nicht dargestellt werden. Beispielsweise weist die Codepage 1252 das eingetragene Marke-Symbol (?), während der Codepage 437 nicht der Fall ist.  
   
  Die AutoTranslate-Einstellung wirkt sich auf die folgenden Konvertierungen nicht aus:  
   

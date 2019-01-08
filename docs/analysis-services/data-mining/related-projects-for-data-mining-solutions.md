@@ -1,5 +1,5 @@
 ---
-title: Zusammenhängende Projekte für Datamining-Lösungen | Microsoft Docs
+title: Verwandte Projekte für Datamining-Lösungen | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f884a7d70447771769ba2d6ff8928234095c7cae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e7a1934a207beebca88e3939a211667e94be976
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019457"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415607"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Verwandte Projekte für Data Mining-Lösungen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34019457"
  [Semantische Indizierung](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Stellt Komponenten und Funktionen, die für die datenvorbereitung und die trainingsphasen eines Datamining-Projekts erforderlich sind. Obwohl Sie mit anderen Tools viele Datenbereinigungs- oder Vorbereitungsaufgaben ausführen können (beispielsweise Skripte), bietet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zahlreiche Vorteile für Data Mining.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt Komponenten und Funktionen bereit, die für die Datenvorbereitung und die Trainingsphasen eines Data Mining-Projekts erforderlich sind. Obwohl Sie mit anderen Tools viele Datenbereinigungs- oder Vorbereitungsaufgaben ausführen können (beispielsweise Skripte), bietet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zahlreiche Vorteile für Data Mining.  
   
 -   Stellt Aufgaben als Teil eines Workflows dar, die wiederholt, automatisiert, verzweigt und erweitert werden können.  
   
@@ -57,15 +57,15 @@ ms.locfileid: "34019457"
   
  **Ablaufsteuerungskomponenten**  
   
--   [Analysis Services-Task "DDL ausführen"](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
+-   [DDL ausführen (Analysis Services-Task)](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Analysis Services-Verarbeitungstasks](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Analysis Services-Verarbeitungstask](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
 -   [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md)  
   
 -   [Datenbereinigung](../../data-quality-services/data-cleansing.md)  
   
--   [Datamining-Abfragetasks](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [Data Mining-Abfragetask](../../integration-services/control-flow/data-mining-query-task.md)  
   
 -   [Datenprofilerstellungs-Task](../../integration-services/control-flow/data-profiling-task.md)  
   
@@ -77,9 +77,9 @@ ms.locfileid: "34019457"
   
 -   [Transformation für Datenkonvertierung](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
--   [Datamining Model Training Destination](../../integration-services/data-flow/data-mining-model-training-destination.md)  
+-   [Ziel des Data Mining-Modelltrainings](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
--   [Transformation für Datamining-Abfragen](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
+-   [Transformation für Data Mining-Abfragen](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
 -   [Transformation für abgeleitete Spalten](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
@@ -102,11 +102,11 @@ ms.locfileid: "34019457"
   
  Weitere Informationen zum Verwenden von Reporting Services mit DMX-Abfragen als Datenquelle sind diesen Links zu entnehmen:  
   
- [Abrufen von Daten aus einer Datamining-Modell & #40; DMX & #41; & #40; SSRS & #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Abrufen von Daten aus einem Data Mining-Modell &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
- [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
+ [Benutzeroberfläche des DMX-Abfrage-Designers für Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Analysis Services-Verbindungstyp für DMX & #40; SSRS & #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Analysis Services-Verbindungstyp für DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Es ist jedoch nicht notwendig, DMX als Datenquelle zu verwenden. Die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponenten für Data Mining unterstützen auch das Speichern der Ergebnisse einer Vorhersageabfrage in einer relationalen Datenbank. Wenn Sie zum Aktualisieren von Modellen mithilfe von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]einen bewährten Workflow erstellt haben, können Sie mit beibehaltenen Vorhersagen und anderen Data Mining-Abfrageergebnissen für SQL Server [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] und andere Tools für die Berichterstellung verwenden, die nicht mit DMX verbunden sind.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "34019457"
 ##  <a name="bkmk_FTSetc"></a> Volltextsuche  
  Mit der Volltextsuche in SQL Server können von Anwendungen und Benutzern Volltextabfragen für zeichenbasierte Daten in SQL Server-Tabellen ausgeführt werden. Wenn die Volltextsuche aktiviert ist, können Sie Suchvorgänge für Textdaten ausführen, die durch sprachspezifische Regeln über mehrere Formen eines Worts oder Ausdrucks erweitert werden. Sie können auch Suchbedingungen konfigurieren, beispielsweise die Abweichung zwischen mehreren Begriffen, und Funktionen verwenden, um die Ergebnisse einzuschränken, die in Reihenfolge der Wahrscheinlichkeit zurückgegeben werden.  
   
- Da Volltextabfragen eine vom SQL Server-Modul bereitgestellte Funktion sind, können Sie parametrisierte Abfragen erstellen, benutzerdefinierte Datasets generieren oder Vektoren benennen, indem Sie Funktionen für die Volltextsuche für eine Textdatenquelle und diese Quellen in Data Mining verwenden.  
+ Da Volltextabfragen eine von der SQL Server-Engine bereitgestellte Funktion sind, können Sie parametrisierte Abfragen erstellen, benutzerdefinierte Datasets generieren oder Vektoren benennen, indem Sie Funktionen für die Volltextsuche für eine Textdatenquelle und diese Quellen in Data Mining verwenden.  
   
  Weitere Informationen über die Interaktion von Volltextabfragen mit dem Volltextindex finden Sie unter [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md).  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34019457"
   
  Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- Die Version eines Worts, das nach der Volltextindizierung gespeichert wird, ist ein Token in komprimierter Form. Nachfolgende Abfragen für den Volltextindex generieren mehrere flektierte Formen eines bestimmten Worts, und zwar anhand der Regeln dieser Sprache, um sicherzustellen, dass alle wahrscheinlichen Abgleiche vorgenommen wurden. Obwohl das gespeicherte Token beispielsweise „lesen“ sein kann, sucht das Abfragemodul auch nach den Begriffen „gelesen“, „las“ und „Leser“, da es sich bei diesen um die regulär abgeleitete morphologische Abweichung des Wortstamms „run“ handelt.  
+ Die Version eines Worts, das nach der Volltextindizierung gespeichert wird, ist ein Token in komprimierter Form. Nachfolgende Abfragen für den Volltextindex generieren mehrere flektierte Formen eines bestimmten Worts, und zwar anhand der Regeln dieser Sprache, um sicherzustellen, dass alle wahrscheinlichen Abgleiche vorgenommen wurden. Beispielsweise, obwohl das gespeicherte Token "ausgeführt werden kann", sucht die Abfrage-Engine auch für die Begriffe "running", "ran" und "gelaufen", da diese regulär abgeleitete morphologische Abweichung des Wortstamms "run" sind.  
   
  Sie können auch einen Benutzerthesaurus erstellen, um Synonyme zu speichern und um bessere Suchergebnisse oder eine bessere Kategorisierung der Begriffe zu ermöglichen Indem Sie einen Thesaurus entwickeln, der genau auf Ihre Volltextdaten abgestimmt ist, können Sie den Bereich der Volltextabfragen für diese Daten effektiv erweitern. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
@@ -202,6 +202,6 @@ ms.locfileid: "34019457"
   
 ## <a name="see-also"></a>Siehe auch  
  [Mehrdimensionale Modelllösungen ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Projektmappen für tabellarische Modelle](../../analysis-services/tabular-models/tabular-models-ssas.md)  
+ [Tabellenmodelllösungen](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
   

@@ -19,12 +19,12 @@ ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e322ca0ed99c5c5b84c764cf0d89e2f365b6ed31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2163b7a264fc782cb1f05e98d0400dbd751c8b85
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221290"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502908"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseRightsScript-Methode (WMI: MSReportServer_ConfigurationSetting)
   Generiert ein SQL-Skript, das verwendet werden kann, um einem Benutzer Berechtigungen für die Berichtsserver-Datenbank sowie für andere Datenbanken zu gewähren, die für das Ausführen eines Berichtsservers erforderlich sind. Es wird erwartet, dass der Aufrufer eine Verbindung mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankserver herstellt und das Skript ausführt.  
@@ -89,15 +89,15 @@ out Int32 HRESULT);
   
  Wenn Sie unter [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]ein integriertes Konto verwenden und es sich bei der Berichtsserver-Datenbank um eine Remotedatenbank handelt, wird ein Fehler zurückgegeben.  
   
- Wenn die `LocalService` integriertes Konto angegeben ist, und der Berichtsserver-Datenbank auf einem Remotecomputer befindet, wird ein Fehler zurückgegeben.  
+ Falls das integrierte `LocalService`-Konto angegeben wird und es sich bei der Berichtsserver-Datenbank um eine Remotedatenbank handelt, wird ein Fehler zurückgegeben.  
   
  Wenn *IsWindowsUser* auf true festgelegt ist und der in *UserName* bereitgestellte Wert übersetzt werden muss, bestimmt der WMI-Anbieter, ob sich die Berichtsserver-Datenbank auf demselben Computer oder auf einem Remotecomputer befindet. Um zu bestimmen, ob es sich um eine lokale Installation handelt, wertet der WMI-Anbieter die DatabaseServerName-Eigenschaft anhand der folgenden Werteliste aus. Wenn eine Übereinstimmung gefunden wird, handelt es sich um eine lokale Datenbank. Andernfalls ist es eine Remotedatenbank. Beim Vergleich wird die Groß- und Kleinschreibung nicht berücksichtigt.  
   
 |Wert von "DatabaseServerName"|Beispiel|  
 |---------------------------------|-------------|  
-|“.”||  
-|"(local)"||  
-|"LOCAL"||  
+|"."||  
+|„(local)“||  
+|„LOCAL“||  
 |localhost||  
 |\<Computername>|testlab14|  
 |\<ComputerFQDN>|example.redmond.microsoft.com|  
@@ -117,6 +117,6 @@ out Int32 HRESULT);
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
   
   

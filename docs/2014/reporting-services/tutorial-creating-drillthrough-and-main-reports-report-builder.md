@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3428c80e86f510b29ffb875bef604293cb1558a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093820"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512554"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie, wie Sie zwei Berichtsarten erstellen: einen Drillthroughbericht und einen Hauptbericht. Die in diesen Berichten verwendeten Beispielvertriebsdaten werden aus einem Analysis Services-Cube abgerufen. Die folgende Abbildung zeigt die Berichte, die Sie erstellen.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- Die folgende Abbildung zeigt, wie der Feldwert "Games and Toys" aus dem Hauptbericht im Titel des Drillthroughberichts angezeigt wird. Die Daten im Drillthroughbericht beziehen sich auf die Produktkategorie "Games and Toys".  
+ Die folgende Abbildung zeigt, wie der Feldwert, Games and Toys, im Hauptbericht im Titel des des Drillthroughberichts zeigt. Die Daten im Drillthroughbericht beziehen sich auf die Produktkategorie "Games and Toys".  
   
  ![Rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "Rs_DrillthroughCubeTutorialParmExpr")  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48093820"
   
 8.  [Führen Sie die Haupt- und Drillthroughberichts](#MRunReports)  
   
- Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
+ Ungefähre Dauer dieses Lernprogramms: 30 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
  Dieses Lernprogramm erfordert Zugriff auf den Contoso Sales-Cube. Diese Anforderung gilt sowohl für den Drillthrough- als auch für den Hauptbericht. Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -130,7 +130,7 @@ ms.locfileid: "48093820"
 10. Klicken Sie auf **Anmeldeinformationstyp**.  
   
     > [!NOTE]  
-    >  Abhängig davon, wie die Berechtigungen für die Datenquelle konfiguriert sind, müssen Sie u. U. die standardmäßigen Authentifizierungsoptionen ändern. Weitere Informationen finden Sie unter [ &#40;Berichts-Generator&#41;](report-builder/security-report-builder.md).  
+    >  Abhängig davon, wie die Berechtigungen für die Datenquelle konfiguriert sind, müssen Sie u. U. die standardmäßigen Authentifizierungsoptionen ändern. Weitere Informationen finden Sie unter [Sicherheit &#40;Berichts-Generator&#41;](report-builder/security-report-builder.md)erstellen.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48093820"
   
 #### <a name="to-create-query-filters"></a>So erstellen Sie Abfragefilter  
   
-1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich Metadaten auf die Schaltfläche **(...)**.  
+1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich „Metadaten“ auf die Schaltfläche **(...)**.  
   
 2.  Klicken Sie im Dialogfeld **Cubeauswahl** auf „Sales“ und anschließend auf **OK**.  
   
@@ -443,7 +443,7 @@ ms.locfileid: "48093820"
   
 #### <a name="to-create-query-filters"></a>So erstellen Sie Abfragefilter  
   
-1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich Metadaten im Cubeabschnitt auf die Schaltfläche mit den Auslassungszeichen **(...)**.  
+1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich „Metadaten“ im Cubeabschnitt auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
   
 2.  Klicken Sie im Dialogfeld **Cubeauswahl** auf „Sales“ und anschließend auf **OK**.  
   
@@ -562,7 +562,7 @@ ms.locfileid: "48093820"
   
 1.  Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen**die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
   
-     Im Vorschaubereich des Assistenten wird eine Matrix mit vier Zeilen angezeigt.  Wenn Sie den Bericht ausführen, wird jede Zeile folgendermaßen angezeigt: Die erste Zeile ist die Spaltengruppe, die zweite Zeile enthält die Spaltenüberschriften, die dritte Zeile enthält die Produktkategoriedaten (`[Sum(Net_ QTY)]` und `[Sum(Net_Sales)]`), und die vierte Zeile enthält die Ergebnisse.  
+     Im Vorschaubereich des Assistenten wird eine Matrix mit vier Zeilen angezeigt.  Bei der Ausführung des Berichts wird jede Zeile wie folgt angezeigt: Die erste Zeile ist die Spaltengruppe, die zweite Zeile enthält die Spaltenüberschriften, die dritte Zeile enthält die Produktkategoriedaten (`[Sum(Net_ QTY)]` und `[Sum(Net_Sales)]`), und die vierte Zeile enthält die Ergebnisse.  
   
 2.  Klicken Sie auf **Weiter**.  
   
@@ -685,7 +685,7 @@ ms.locfileid: "48093820"
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Geben Sie **2009 Product Category Sales: Online and Reseller Category:** ein.  
+2.  Typ **2009 Product Category Sales: Online and Reseller Category:**.  
   
 3.  Wählen Sie den eingegebenen Text aus.  
   

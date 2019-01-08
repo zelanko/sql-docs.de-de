@@ -20,16 +20,16 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 146967ebc31d5e7d8176d37ee5b8b0b97b6c0674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769490"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540811"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
   
  **Zusammenfassung**  
  **SQLFetchScroll** angegebene Rowset von Daten aus dem Resultset abruft, und gibt Daten für alle gebundenen Spalten zurück. Rowsets können an eine absolute oder relative Position oder durch Lesezeichen angegeben werden.  
@@ -122,7 +122,7 @@ SQLRETURN SQLFetchScroll(
 |IM018|**SQLCompleteAsync** nicht zum Abschließen des vorherigen asynchronen Vorgangs auf diesem Handle aufgerufen wurde.|Wenn der vorherige Funktionsaufruf auf den Ziehpunkt SQL_STILL_EXECUTING zurückgibt und Notification-Modus aktiviert ist, **SQLCompleteAsync** muss aufgerufen werden, auf den Ziehpunkt, um nach der Verarbeitung und der Vorgang abgeschlossen werden.|  
   
 ## <a name="comments"></a>Kommentare  
- **SQLFetchScroll** gibt ein Rowset angegebenen aus dem Resultset zurück. Rowsets können anhand der absolute oder relative Position oder durch Lesezeichen angegeben werden. **SQLFetchScroll** aufgerufen werden kann, nur verwendet werden, während ein Resultset vorhanden ist – d. h. nach einem Aufruf, der ein Resultset erstellt und vor dem Cursor Failover, das Resultset geschlossen ist. Wenn alle Spalten gebunden sind, werden die Daten in diesen Spalten zurückgegeben. Wenn die Anwendung einen Zeiger auf ein zeilenstatusarray oder einen Puffer, in dem Zurückgeben der Anzahl der Zeilen abgerufen, angegeben hat **SQLFetchScroll** gibt diese Informationen auch zurück. Aufrufe von **SQLFetchScroll** können kombiniert werden, mit Aufrufen von **SQLFetch** kann nicht mit Aufrufen von kombiniert werden, aber **SQLExtendedFetch**.  
+ **SQLFetchScroll** gibt ein Rowset angegebenen aus dem Resultset zurück. Rowsets können anhand der absolute oder relative Position oder durch Lesezeichen angegeben werden. **SQLFetchScroll** aufgerufen werden kann, nur während ein Resultset vorhanden ist – d. h. nach einem Aufruf, der ein Resultset erstellt und vor dem Cursor Failover, das Resultset geschlossen wird. Wenn alle Spalten gebunden sind, werden die Daten in diesen Spalten zurückgegeben. Wenn die Anwendung einen Zeiger auf ein zeilenstatusarray oder einen Puffer, in dem Zurückgeben der Anzahl der Zeilen abgerufen, angegeben hat **SQLFetchScroll** gibt diese Informationen auch zurück. Aufrufe von **SQLFetchScroll** können kombiniert werden, mit Aufrufen von **SQLFetch** kann nicht mit Aufrufen von kombiniert werden, aber **SQLExtendedFetch**.  
   
  Weitere Informationen finden Sie unter [Verwenden von Blockcursorn](../../../odbc/reference/develop-app/using-block-cursors.md) und [bildlauffähigen Cursor verwenden](../../../odbc/reference/develop-app/using-scrollable-cursors.md).  
   
@@ -141,7 +141,7 @@ SQLRETURN SQLFetchScroll(
   
  Treiber sind nicht erforderlich, um alle Fetch-Ausrichtungen unterstützen. Ruft die Anwendung **SQLGetInfo** mit dem Datentyp Informationen SQL_DYNAMIC_CURSOR_ATTRIBUTES1 SQL_KEYSET_CURSOR_ATTRIBUTES1 oder SQL_STATIC_CURSOR_ATTRIBUTES1 (je nach Art des Cursors) um zu bestimmen, welche abrufen Ausrichtungen werden vom Treiber unterstützt. Die Anwendung sollte den SQL_CA1_NEXT, SQL_CA1_RELATIVE, SQL_CA1_ABSOLUTE und WQL_CA1_BOOKMARK Bitmasken solche Informationen betrachten. Darüber hinaus, wenn der Cursor, vorwärts gerichtete befindet und FetchOrientation nicht SQL_FETCH_NEXT, **SQLFetchScroll** SQLSTATE HY106 zurückgibt (Fetchtyp außerhalb des gültigen Bereichs).  
   
- Die Anweisung SQL_ATTR_ROW_ARRAY_SIZE-Attribut gibt die Anzahl der Zeilen im Rowset an. Wenn das Rowset abgerufen wird, von **SQLFetchScroll** überschneidet sich mit dem Ende des Resultsets, **SQLFetchScroll** gibt eine partielle Rowset zurück. D. h. wenn S + R – 1 ist größer als L, wobei S der Startzeile des Rowsets wird abgerufen, R ist die Größe des Rowsets ist und L ist die letzte im Resultset, klicken Sie dann nur die ersten L – Zeile sind S + 1 Zeilen des Rowsets gültig. Die verbleibenden Zeilen sind leer und haben den Status der SQL_ROW_NOROW.  
+ Die Anweisung SQL_ATTR_ROW_ARRAY_SIZE-Attribut gibt die Anzahl der Zeilen im Rowset an. Wenn das Rowset abgerufen wird, von **SQLFetchScroll** überschneidet sich mit dem Ende des Resultsets, **SQLFetchScroll** gibt eine partielle Rowset zurück. D. h. wenn S + R – 1 ist größer als L, wobei S der Startzeile des Rowsets wird abgerufen, R ist die Größe des Rowsets ist und L ist die letzte im Resultset, klicken Sie dann nur die ersten L - Zeile sind S + 1 Zeilen des Rowsets gültig. Die verbleibenden Zeilen sind leer und haben den Status der SQL_ROW_NOROW.  
   
  Nach dem **SQLFetchScroll** zurückgegeben wird, die aktuelle Zeile ist die erste Zeile des Rowsets.  
   
@@ -178,9 +178,9 @@ SQLRETURN SQLFetchScroll(
 |*Vor dem start*|*Vor dem start*|  
 |*CurrRowsetStart = 1*|*Vor dem start*|  
 |*1 < CurrRowsetStart < = RowsetSize* <sup>[2].</sup>|*1* <sup>[1]</sup>|  
-|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart – RowsetSize* <sup>[2]</sup>|  
+|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
 |*Nach dem Ende und LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
-|*Nach dem Ende und LastResultRow > = RowsetSize* <sup>[2]</sup>|*LastResultRow – RowsetSize + 1* <sup>[2].</sup>|  
+|*Nach dem Ende und LastResultRow > = RowsetSize* <sup>[2]</sup>|*LastResultRow - RowsetSize + 1* <sup>[2].</sup>|  
   
  [1] **SQLFetchScroll** SQLSTATE 01S06 zurückgibt (versucht abzurufen, bevor das Resultset das erste Rowset zurückgegeben) und SQL_SUCCESS_WITH_INFO.  
   
@@ -236,7 +236,7 @@ SQLRETURN SQLFetchScroll(
   
 |Bedingung|Erste Zeile des neuen Rowsets|  
 |---------------|-----------------------------|  
-|*RowsetSize* <sup>[1]</sup> < = LastResultRow|*LastResultRow – RowsetSize + 1* <sup>[1]</sup>|  
+|*RowsetSize* <sup>[1]</sup> < = LastResultRow|*LastResultRow - RowsetSize + 1* <sup>[1]</sup>|  
 |*RowsetSize* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1] Wenn seit dem vorherigen Aufruf von Zeilen abzurufen, die Rowsetgröße geändert wurde, ist dies die neue Rowsetgröße.  
@@ -271,7 +271,7 @@ SQLSetPos(hstmt, 3, SQL_REFRESH, SQL_LOCK_NO_CHANGE);
 SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);  
 ```  
   
- Wenn **SQLFetchScroll** gibt ein neues Rowset, das eine Position relativ zum aktuellen Rowset wurde – FetchOrientation ist SQL_FETCH_NEXT SQL_FETCH_PRIOR oder SQL_FETCH_RELATIVE – er umfasst keine Änderungen an das aktuelle Rowset Wenn die Anfangsposition des neuen Rowsets zu berechnen. Allerdings ist diese Änderungen außerhalb der aktuellen Rowset enthalten, wenn es entdeckt werden kann. Darüber hinaus, wenn **SQLFetchScroll** gibt ein neues Rowset, das eine Position, die unabhängig von der das aktuelle Rowset wurde – FetchOrientation wird SQL_FETCH_FIRST SQL_FETCH_LAST, SQL_FETCH_ABSOLUTE oder SQL_FETCH_BOOKMARK – es enthält alle Änderungen, die erkannt werden, ist es auch, wenn sie in das aktuelle Rowset sind.  
+ Wenn **SQLFetchScroll** ein neues Rowsets, die eine Position relativ zum aktuellen Rowset - zurückgibt, also FetchOrientation ist SQL_FETCH_NEXT, SQL_FETCH_PRIOR oder SQL_FETCH_RELATIVE: er enthält keine Änderungen an das aktuelle Rowset Wenn die Anfangsposition des neuen Rowsets zu berechnen. Allerdings ist diese Änderungen außerhalb der aktuellen Rowset enthalten, wenn es entdeckt werden kann. Darüber hinaus, wenn **SQLFetchScroll** gibt ein neues Rowset, das eine Position, die unabhängig von der das aktuelle Rowset - verfügt über FetchOrientation wird SQL_FETCH_FIRST SQL_FETCH_LAST, SQL_FETCH_ABSOLUTE oder SQL_FETCH_BOOKMARK - es enthält alle Änderungen, die erkannt werden, ist es auch, wenn sie in das aktuelle Rowset sind.  
   
  Bei der Bestimmung, ob die neu hinzugefügte Zeilen innerhalb oder außerhalb der aktuellen Rowsets sind, gilt eine partielle Rowset in den letzten gültigen Zeile enden; d. h. die letzte Zeile, die für die Zeile nicht SQL_ROW_NOROW ist. Nehmen wir beispielsweise an, der Cursor befindet sich der neu hinzugefügte Zeilen erkennen kann, das aktuelle Rowset ist eine partielle Rowset, die Anwendung fügt neue Zeilen hinzu, und der Cursor fügt diese Zeilen am Ende des Resultsets. Wenn die Anwendung ruft **SQLFetchScroll** mit FetchOrientation festgelegt SQL_FETCH_NEXT, **SQLFetchScroll** gibt das Rowset, beginnend mit der ersten neu hinzugefügte Zeile zurück.  
   
@@ -327,12 +327,12 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  In jeder Gruppe der Statusdatensätze, die auf eine einzelne Zeile angewendet wird, darf der erste Status Datensatz SQLExtendedFetch zurückgegebenes SQLSTATE 01 s 01 (Fehler in Zeile;) **SQLFetchScroll** SQLSTATE wird nicht zurückgegeben. Wenn SQLExtendedFetch zusätzliche SQLSTATEs zurückgeben kann, muss sie weiterhin diese SQLSTATE zurückgeben.  
   
 ## <a name="sqlfetchscroll-and-optimistic-concurrency"></a>SQLFetchScroll und vollständige Parallelität  
- Wenn ein Cursor vollständigen Parallelität verwendet –, also das SQL_ATTR_CONCURRENCY-Anweisungsattribut den Wert SQL_CONCUR_VALUES oder SQL_CONCUR_ROWVER hat – **SQLFetchScroll** aktualisiert die optimistische nebenläufigkeit-Werte, die durch die Daten verwendet wird die Quelle zu erkennen, ob eine Zeile geändert wurde. Dies geschieht, wenn **SQLFetchScroll** ein neues Rowsets, die auch bei der es sich um das aktuelle Rowset refetches abruft. (Es heißt mit FetchOrientation auf SQL_FETCH_RELATIVE und FetchOffset legen Sie auf 0 festgelegt.)  
+ Falls ein Cursor verwendet die optimistische nebenläufigkeit –, also das SQL_ATTR_CONCURRENCY-Anweisungsattribut den Wert SQL_CONCUR_VALUES oder SQL_CONCUR_ROWVER ist - **SQLFetchScroll** aktualisiert die optimistische nebenläufigkeit-Werte, die durch die Daten verwendet wird die Quelle zu erkennen, ob eine Zeile geändert wurde. Dies geschieht, wenn **SQLFetchScroll** ein neues Rowsets, die auch bei der es sich um das aktuelle Rowset refetches abruft. (Es heißt mit FetchOrientation auf SQL_FETCH_RELATIVE und FetchOffset legen Sie auf 0 festgelegt.)  
   
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll und ODBC 2.x-Treiber  
  Wenn eine Anwendung ruft **SQLFetchScroll** in eine ODBC 2.x-Treiber ordnet der Treiber-Manager diesen Aufruf an **SQLExtendedFetch**. Sie übergibt die folgenden Werte für die Argumente der **SQLExtendedFetch**.  
   
-|SQLExtendedFetch-argument|value|  
+|SQLExtendedFetch-argument|Wert|  
 |-------------------------------|-----------|  
 |StatementHandle|StatementHandle in **SQLFetchScroll**.|  
 |FetchOrientation|FetchOrientation in **SQLFetchScroll**.|  
@@ -340,7 +340,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |RowCountPtr|Die Adresse, die durch das SQL_ATTR_ROWS_FETCHED_PTR-Attribut-Anweisung angegeben wird.|  
 |RowStatusArray|Die Adresse, die durch das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR angegeben wird.|  
   
- Weitere Informationen finden Sie unter [Blockcursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität.  
+ Weitere Informationen finden Sie unter [Blockcursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
   
 ## <a name="descriptors-and-sqlfetchscroll"></a>Deskriptoren und SQLFetchScroll  
  **SQLFetchScroll** Deskriptoren interagiert, auf die gleiche Weise wie **SQLFetch**. Weitere Informationen finden Sie im Abschnitt "Deskriptoren und SQLFetchScroll" in [SQLFetch-Funktion](../../../odbc/reference/syntax/sqlfetch-function.md).  

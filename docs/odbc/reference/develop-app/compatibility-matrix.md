@@ -19,17 +19,17 @@ ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a8c46bbcfea4c94d3dc5b4cd0f5783858f3f0fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1d0fc510c7c45dab8fbc79cc8e74001ff1855b6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715618"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528237"
 ---
 # <a name="compatibility-matrix"></a>Kompatibilitätsmatrix
 Die folgende Tabelle enthält Informationen zur Kompatibilität der Typen von Anwendungen und Treiber, die zuvor in diesem Abschnitt definiert.  
   
-|Anwendungstyp<br /><br /> und version|32-Bit-ODBC<br /><br /> 2.*x* Treiber|ODBC 3. *x*<br /><br /> Treiber|ODBC 3.8-Treiber|ISO "und" Open Group-kompatible Treiber|  
+|Anwendungstyp<br /><br /> und version|32-Bit-ODBC<br /><br /> 2.*x* Treiber|ODBC 3. *x*<br /><br /> Treiber|ODBC 3.8-Treiber|ISO "und" Open Group-kompatiblen Treiber|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |eine beliebige Version 16-Bit-Anwendung|Kompatibel|Kompatibel|Kompatibel|Kompatibel|  
 |Reine 2. *x* Anwendung|Kompatibel|Kompatibel|Kompatibel|Nicht kompatible [3]|  

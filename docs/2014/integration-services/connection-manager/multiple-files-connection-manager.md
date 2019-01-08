@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - folders [Integration Services], connections
@@ -18,12 +17,12 @@ ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0b08bcbf989f2c6fc0bc5b6cc163150b388d797
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4db032d7ab26bb2ebace555b1594500dbd116b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085950"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762132"
 ---
 # <a name="multiple-files-connection-manager"></a>Verbindungs-Manager für mehrere Dateien
   Mit einem Verbindungs-Manager für mehrere Dateien kann ein Paket auf vorhandene Dateien und Ordner verweisen oder Dateien und Ordner zur Laufzeit erstellen.  
@@ -34,9 +33,9 @@ ms.locfileid: "48085950"
 ## <a name="usage-types-of-the-multiple-files-connection-manager"></a>Verwendungstypen des Verbindungs-Managers für mehrere Dateien  
  Mit der `FileUsageType`-Eigenschaft des Verbindungs-Managers für mehrere Dateien wird angegeben, wie die Verbindung verwendet wird. Der Verbindungs-Manager für mehrere Dateien kann Dateien bzw. Ordner erstellen und vorhandene Dateien bzw. Ordner verwenden.  
   
- Die folgende Tabelle enthält die Werte der `FileUsageType`.  
+ In der folgenden Tabelle sind die Werte von `FileUsageType` aufgeführt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**0**|Der Verbindungs-Manager für mehrere Dateien verwendet eine vorhandene Datei.|  
 |**1**|Der Verbindungs-Manager für mehrere Dateien erstellt eine Datei.|  
@@ -46,7 +45,7 @@ ms.locfileid: "48085950"
 ## <a name="configuration-of-the-multiple-files-connection-manager"></a>Konfiguration des Verbindungs-Managers für mehrere Dateien  
  Wenn Sie einem Paket einen Verbindungs-Manager für mehrere Dateien hinzufügen, erstellt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, der zur Laufzeit in eine Verbindung für mehrere Dateien aufgelöst wird, die Eigenschaften der Verbindung für mehrere Dateien festlegt und der `Connections`-Auflistung des Pakets die Verbindung für mehrere Dateien hinzufügt.  
   
- Die `ConnectionManagerType` Eigenschaft des Verbindungs-Managers nastaven NA hodnotu `MULTIFILE`.  
+ Die `ConnectionManagerType`-Eigenschaft des Verbindungs-Managers ist auf `MULTIFILE` festgelegt.  
   
  Es gibt folgende Möglichkeiten, um einen Verbindungs-Manager für mehrere Dateien zu konfigurieren:  
   
@@ -66,6 +65,6 @@ ms.locfileid: "48085950"
   
  Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, finden Sie unter [Referenz zur Benutzeroberfläche des Dialogfelds Dateiverbindungs-Manager hinzufügen](add-file-connection-manager-dialog-box-ui-reference.md).  
   
- Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und unter [Programmgesteuertes Hinzufügen von Verbindungen](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

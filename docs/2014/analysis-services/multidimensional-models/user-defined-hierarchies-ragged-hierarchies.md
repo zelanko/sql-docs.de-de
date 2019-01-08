@@ -13,12 +13,12 @@ ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69c39bb516c198005246d7d3dde5c588fd68cef1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3bf372682217f177d7f5a4c8b0982f1a75c4e11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087890"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502890"
 ---
 # <a name="ragged-hierarchies"></a>Unregelmäßige Hierarchien
   Eine unregelmäßige Hierarchie ist eine benutzerdefinierte Hierarchie, die über eine ungerade Anzahl von Ebenen verfügt. Typische Beispiele dafür sind ein Organigramm, bei dem einer hochrangigen Führungskraft sowohl Abteilungsleiter als auch Nicht-Abteilungsleiter unterstellt sind, oder geografische Hierarchien aus Ländern, Regionen und Städten, bei denen einige Städte keinen übergeordneten Bundesstaat bzw. keine übergeordnete Provinz aufweisen, z. B. Washington D. C., Vatikanstadt oder Neu-Delhi.  
@@ -40,11 +40,11 @@ ms.locfileid: "48087890"
 ##  <a name="bkmk_approach"></a> Methoden zum Ändern der Drilldownnavigation in einer unregelmäßigen Hierarchie  
  Eine unregelmäßige Hierarchie wird zu einem Problem, wenn die Drilldownnavigation unerwartete Werte zurückgibt oder als wenig benutzerfreundlich empfunden wird. Die folgenden Optionen stehen Ihnen zur Verfügung, um Navigationsprobleme aufgrund unregelmäßiger Hierarchien zu beheben:  
   
--   Verwenden Sie eine reguläre Hierarchie, wobei Sie jedoch für jede Ebene die `HideMemberIf`-Eigenschaft festlegen. Dadurch geben Sie an, ob eine fehlende Ebene für den Benutzer sichtbar gemacht wird. Beim Festlegen `HideMemberIf`, sollten Sie auch festlegen `MDXCompatibility` auf die Verbindungszeichenfolge für das standardmäßige Navigationsverhalten zu überschreiben. Anweisungen zum Festlegen dieser Eigenschaften finden Sie in diesem Thema.  
+-   Verwenden Sie eine reguläre Hierarchie, wobei Sie jedoch für jede Ebene die `HideMemberIf`-Eigenschaft festlegen. Dadurch geben Sie an, ob eine fehlende Ebene für den Benutzer sichtbar gemacht wird. Wenn Sie `HideMemberIf` festlegen, sollten Sie auch `MDXCompatibility` für die Verbindungszeichenfolge festlegen, um das standardmäßige Navigationsverhalten zu überschreiben. Anweisungen zum Festlegen dieser Eigenschaften finden Sie in diesem Thema.  
   
 -   Erstellen Sie eine Über-/Unterordnungshierarchie, von der die Ebenenelemente explizit verwaltet werden. Eine grafische Darstellung dieser Methode finden Sie im Blogbeitrag [Ragged Hierarchy in SSAS](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)(Unregelmäßige SSAS-Hierarchie). Weitere Informationen in der Onlinedokumentation finden Sie unter [über-/ Unterordnungshierarchie](parent-child-dimension.md). Die Erstellung einer Über-/Unterordnungshierarchie hat den Nachteil, dass Sie pro Dimension nur eine solche Hierarchie erstellen können. Darüber hinaus treten in der Regel Leistungsprobleme auf, wenn Sie Aggregationen für Zwischenelemente berechnen.  
   
- Wenn die Dimension mehr als eine unregelmäßige Hierarchie enthält, verwenden Sie die erste Methode, die Einstellung `HideMemberIf`. BI-Entwickler, die bereits praktische Erfahrungen mit unregelmäßigen Hierarchien gesammelt haben, würden sogar zusätzliche Änderungen in den physischen Datentabellen befürworten und getrennte Tabellen für jede Ebene erstellen. Ausführliche Informationen zu diesem Verfahren finden Sie im Blog von Martin Mason [Financial Cube–Part 1a–Ragged Hierarchies](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) (Finanzcube, Teil 1a, Unregelmäßige Hierarchien).  
+ Wenn die Dimension mehr als eine unregelmäßige Hierarchie enthält, sollten Sie die erste Methode verwenden, also `HideMemberIf` festlegen. BI-Entwickler, die bereits praktische Erfahrungen mit unregelmäßigen Hierarchien gesammelt haben, würden sogar zusätzliche Änderungen in den physischen Datentabellen befürworten und getrennte Tabellen für jede Ebene erstellen. Finden Sie unter [die finanziellen SSAS-Cube-Part 1a – unregelmäßige Hierarchien (Blog) Blog von Martin Mason](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) ausführliche Informationen zu diesem Verfahren.  
   
 ##  <a name="bkmk_Hide"></a> Festlegen von "HideMemberIf" zum Ausblenden von Elementen in einer regulären Hierarchie  
  In der Tabelle einer unregelmäßigen Dimension können logisch fehlende Elemente auf verschiedene Weise dargestellt werden. Die Tabellenzellen können NULL-Werte oder leere Zeichenfolgen enthalten. Sie können jedoch auch denselben Wert wie das übergeordnete Objekt enthalten, der in diesem Fall als Platzhalter dient. Die Darstellung von Platzhaltern wird vom Platzhalterstatus der untergeordneten Elemente gemäß der `HideMemberIf`-Eigenschaft und der `MDX Compatibility`-Verbindungszeichenfolgen-Eigenschaft für die Clientanwendung festgelegt.  
@@ -64,7 +64,7 @@ ms.locfileid: "48087890"
     |**ParentName**|Ein Ebenenelement wird ausgeblendet, wenn sein Name dem seines übergeordneten Elements entspricht.|  
   
 ##  <a name="bkmk_Mdx"></a> Festlegen der MDX-Kompatibilität, um zu bestimmen, wie Platzhalter in Clientanwendungen dargestellt werden  
- Nach dem Festlegen `HideMemberIf` für eine Hierarchieebene festgelegt ist, sollten Sie auch Festlegen der `MDX Compatibility` -Eigenschaft in der von der Clientanwendung gesendeten Verbindungszeichenfolge. Die `MDX Compatibility`-Einstellung bestimmt, ob `HideMemberIf` verwendet wird.  
+ Nachdem Sie `HideMemberIf` für eine Hierarchieebene festgelegt haben, sollten Sie auch die `MDX Compatibility`-Eigenschaft in der von der Clientanwendung gesendeten Verbindungszeichenfolge festlegen. Die `MDX Compatibility`-Einstellung bestimmt, ob `HideMemberIf` verwendet wird.  
   
 |Einstellung für die MDX-Kompatibilität|Description|Verwendung|  
 |-------------------------------|-----------------|-----------|  

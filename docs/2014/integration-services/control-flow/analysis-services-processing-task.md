@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asprocessingtask.f1
@@ -16,12 +15,12 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42b8ba863f4fbe8c5ce444cd253ea06aec0c7480
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c5b5d52b1f4b2c2c260854230b53ccbe99aa641
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050012"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766542"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services-Verarbeitungstask
   Der Verarbeitungstask [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verarbeitet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte, beispielsweise tabellarische Modelle, Cubes, Dimensionen und Miningmodelle.  
@@ -67,9 +66,9 @@ ms.locfileid: "48050012"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Analysis Services-Editor-Verarbeitungstask &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Analysis Services-Verarbeitungstask &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Analysis Services-Editor-Verarbeitungstask &#40;Analysis Services (Seite)&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
+-   [Editor für den Analysis Services-Verarbeitungstask &#40;Seite „Analysis Services“&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

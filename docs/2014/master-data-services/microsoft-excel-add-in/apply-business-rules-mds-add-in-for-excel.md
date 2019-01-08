@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cd106345-f561-4966-88d3-a69139b2bd78
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eb340f0786c61ef1536b893b309bdc959108087a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2722e678de98bbfbf5a1181a69101fbe2a9427d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174030"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797922"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>Anwenden von Geschäftsregeln (MDS-Add-In für Excel)
   Wenden Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] Geschäftsregeln an, wenn Sie Daten überprüfen und bestätigen möchten, dass sie gültig sind. Sie können Überprüfungen korrigieren und die Daten erneut veröffentlichen.  

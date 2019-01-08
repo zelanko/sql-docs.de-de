@@ -11,12 +11,12 @@ ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e612fefcebd0537d13a4377484bbaddc04d086a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa33b840a985cb3053ad8868c3b6153dc53822ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064520"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515821"
 ---
 # <a name="analysis-of-data-flow"></a>Analyse des Datenflusses
   Sie können die [execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` Datenbanksicht, um den Datenfluss von Paketen zu analysieren. In dieser Sicht wird immer dann eine Zeile angezeigt, wenn eine Datenflusskomponente Daten an eine Downstreamkomponente sendet. Anhand der Informationen können Sie ein tieferes Verständnis der Zeilen erhalten, die an jede Komponente gesendet werden.  
@@ -39,9 +39,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** : Die Summe aller von der Komponente gesendeten Zeilen  
   
--   **wall_clock_time_ms** : Die insgesamt verstrichene Ausführungszeit, in Millisekunden, für jede Komponente  
+-   **wall_clock_time_ms:** Die insgesamt verstrichene Ausführungszeit, in Millisekunden, für jede Komponente  
   
--   **num_rows_per_millisecond** : Die Anzahl der pro Millisekunde von jeder Komponente gesendeten Zeilen  
+-   **num_rows_per_millisecond:** Die Anzahl der pro Millisekunde von jeder Komponente gesendeten Zeilen  
   
  Die `HAVING` Klausel wird verwendet, um Fehler aufgrund einer Division durch Null in den Berechnungen verhindert.  
   

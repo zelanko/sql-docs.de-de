@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 1 (Voraussetzung): Entfernen von Lieferantendaten in MDS | Microsoft-Dokumentation'
+title: Aufgabe 1 (Voraussetzung) Entfernen von Lieferantendaten in MDS | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74862c1db4ad3c34afc759ba94f36ba5fb896e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a922d01d0085830cde30bbc16fcd6f79e106ff03
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227700"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394241"
 ---
-# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Aufgabe 1 (Voraussetzung): Entfernen von Lieferantendaten in MDS
+# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Aufgabe 1 (Voraussetzung) Entfernen von Lieferantendaten in MDS
   In dieser Aufgabe entfernen Sie die Lieferantendaten, die in MDS gespeichert werden. Sie hochgeladen haben, die Daten manuell mit **MDS-Excel-Add-in** in der vorherigen Lektion. Das SSIS-Paket, das Sie in dieser Lektion erstellen, lädt die Daten für Sie automatisch in MDS hoch. Bevor Sie das SSIS-Paket testen, müssen Sie daher die Lieferantendaten aus MDS entfernen, die abgeleitete Hierarchie entfernen, die Entitäten "Supplier" und "State" entfernen und die Entität "Supplier" ohne Daten erstellen.  
   
 1.  Starten Sie **Master Data Manager** durch Navigieren zu **http://localhost/MDS** oder die Website und die angegebene eingabeanwendung beim Konfigurieren von MDS. Weiterhin die **Master Data Manager** öffnen, klicken Sie auf **SQL Server 2012 Master Data Services** oben, um zum Wechseln der **auf der Startseite**.  
@@ -43,7 +43,7 @@ ms.locfileid: "48227700"
   
 10. Wechseln Sie zu der Excel-Fenster, **Cleansed and Matched Suppliers.xls** Datei geöffnet. Wechseln Sie zu der **Sheet1** unten auf der Registerkarte.  
   
-11. Wählen Sie nur die **erste Zeile mit Headern**. Wählen Sie keine andere Zeile aus. Sie möchten Entitäten auf der Grundlage der Excel-Spalten erstellen, aber keine Daten hochladen. Daher wählen Sie nur die erste Zeile mit den Headern aus.  
+11. Wählen Sie nur die **erste Zeile mit Headern**. Wählen Sie keiner anderen Zeile. Sie die Entitäten, die auf Grundlage der Excel-Spalten erstellt werden soll, aber keine Daten hochgeladen werden soll. Daher wählen Sie nur die erste Zeile mit den Headern aus.  
   
 12. Klicken Sie auf **Masterdaten** in der Menüleiste.  
   

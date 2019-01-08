@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
@@ -15,12 +14,12 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f5ae5a48b7ace7d0c8e9fffe1e5993bfd232da8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e3422e1fc41069bcb1f5f88c841212b5415cacd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192580"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777562"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Übermitteln einer Momentaufnahme über FTP
   In diesem Thema wird beschrieben, wie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]eine Momentaufnahme über FTP bereitgestellt wird.  
@@ -33,7 +32,7 @@ ms.locfileid: "48192580"
   
      [Erforderliche Komponenten](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So übermitteln Sie eine Momentaufnahme über FTP mit:**  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48192580"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48192580"
   
  Die Benutzer sollten nach Möglichkeit während der Laufzeit zur Eingabe von Anmeldeinformationen aufgefordert werden. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden, müssen Sie sicherstellen, dass die Datei geschützt ist.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Geben Sie nach dem Konfigurieren des FTP-Servers im Dialogfeld **Veröffentlichungseigenschaften \<Veröffentlichung>** ein Verzeichnis und Sicherheitsinformationen für diesen Server an. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-ftp-information"></a>So geben Sie FTP-Informationen an  
@@ -140,11 +139,11 @@ ms.locfileid: "48192580"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)aus. Geben Sie einen der folgenden Werte für **@property** und einen neuen Wert für diese Einstellung für **@value**an:  
   
-    -   `ftp_address` -die Adresse des FTP-Servers verwendet, um die Übermittlung der Momentaufnahme.  
+    -   `ftp_address` &ndash; die Adresse des FTP-Servers, der für die Übermittlung der Momentaufnahme verwendet wird.  
   
-    -   `ftp_port` -der vom FTP-Server verwendete Port.  
+    -   `ftp_port` &ndash; der vom FTP-Server verwendete Port.  
   
-    -   `ftp_subdirectory` -das Unterverzeichnis des standardmäßigen FTP-Verzeichnisses für die FTP-Momentaufnahme verwendet.  
+    -   `ftp_subdirectory` &ndash; das Unterverzeichnis des einer FTP-Anmeldung zugewiesenen Standard-FTP-Verzeichnisses.  
   
     -   `ftp_login` &ndash; der Anmeldenamen, der zum Herstellen einer Verbindung mit dem FTP-Server verwendet wird.  
   
@@ -158,11 +157,11 @@ ms.locfileid: "48192580"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)aus. Geben Sie einen der folgenden Werte für **@property** und einen neuen Wert für diese Einstellung für **@value**an:  
   
-    -   `ftp_address` -die Adresse des FTP-Servers verwendet, um die Übermittlung der Momentaufnahme.  
+    -   `ftp_address` &ndash; die Adresse des FTP-Servers, der für die Übermittlung der Momentaufnahme verwendet wird.  
   
-    -   `ftp_port` -der vom FTP-Server verwendete Port.  
+    -   `ftp_port` &ndash; der vom FTP-Server verwendete Port.  
   
-    -   `ftp_subdirectory` -das Unterverzeichnis des standardmäßigen FTP-Verzeichnisses für die FTP-Momentaufnahme verwendet.  
+    -   `ftp_subdirectory` &ndash; das Unterverzeichnis des einer FTP-Anmeldung zugewiesenen Standard-FTP-Verzeichnisses.  
   
     -   `ftp_login` &ndash; der Anmeldenamen, der zum Herstellen einer Verbindung mit dem FTP-Server verwendet wird.  
   

@@ -17,12 +17,12 @@ ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 126a0814bb30018c6bcc8fca21c71dd8da84a6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3f0f24aec895c482ba357dbc4330baaf2798ba6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179520"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519413"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>Angeben der Konfigurationseinstellungen für die Lösungsbereitstellung
   Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent liest die Partitionen und Rollen Bereitstellungsoptionen, mit denen Sie im Bereitstellungsskript aus der \< *Projektname*> configsettings-Datei. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellt diese Datei, wenn Sie das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt erstellen. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwendet die Konfigurationseinstellungen des aktuellen Projekts zum Erstellen der \< *Projektname*> configsettings-Datei.  
@@ -52,17 +52,17 @@ ms.locfileid: "48179520"
   
 -   Führen Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interaktiv aus, und geben Sie auf der Seite **Konfigurationseinstellungen** die Konfigurationseinstellungen für die Objekte an, die bereitgestellt werden.  
   
-     – oder –  
+     -oder-  
   
 -   Führen Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] an der Eingabeaufforderung aus, und legen Sie fest, dass der Assistent im Antwortdateimodus ausgeführt wird. Weitere Informationen zum Antwortdateimodus finden Sie unter [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md).  
   
-     – oder –  
+     -oder-  
   
 -   Ändern der \< *Projektname*> configsettings-Datei mit einem Text-Editor.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Angeben des Installationszieles](deployment-script-files-specifying-the-installation-target.md)   
- [Angeben von Partitionen und Bereitstellungsoptionen für Rollen](deployment-script-files-partition-and-role-deployment-options.md)   
+ [Angeben von Bereitstellungsoptionen für Partitionen und Rollen](deployment-script-files-partition-and-role-deployment-options.md)   
  [Angeben von Verarbeitungsoptionen](deployment-script-files-specifying-processing-options.md)  
   
   

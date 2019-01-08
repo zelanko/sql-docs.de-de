@@ -14,17 +14,17 @@ ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 981b2b5dc1f76d879b18e5569e7fb70dbece1538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 744ae9a9541b5c73d579e097f375b4141e771fce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813078"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501764"
 ---
 # <a name="what-is-a-lock"></a>Was ist eine Sperre?
 Sperren ist der Prozess, der ein DBMS nach dem Zugriff auf eine Zeile in einer mehrbenutzerumgebung einschränkt. Wenn eine Zeile oder Spalte exklusiv gesperrt ist, sind andere Benutzer nicht zulässig, auf die gesperrten Daten zugreifen, bis die Sperre aufgehoben wird. Dadurch wird sichergestellt, dass zwei Benutzer gleichzeitig dieselbe Spalte in einer Zeile aktualisieren nicht möglich.  
   
- Sperren, können vom Standpunkt der Ressource sehr speicherintensiv sein und sollte nur bei Bedarf verwendet werden, um die Datenintegrität beizubehalten. In einer Datenbank, in denen Hunderte oder Tausende von Benutzern können werden einen Eintrag pro Sekunde zugreifen möchten, wie z. B. eine Datenbank mit dem Internet verbunden, unnötige sperren kann schnell zu Leistungseinbußen in Ihrer Anwendung führen.  
+ Sperren, können vom Standpunkt der Ressource sehr speicherintensiv sein und sollte nur bei Bedarf verwendet werden, um die Datenintegrität beizubehalten. In einer Datenbank, in denen Hunderte oder Tausende von Benutzern versuchen könnten, einen Datensatz pro Sekunde – z. B. eine Verbindung mit dem Internet - Datenbank zuzugreifen, kann das unnötige Sperren schnell zu Leistungseinbußen in Ihrer Anwendung führen.  
   
  Sie können steuern, wie die Datenquelle und die Cursorbibliothek ADO Parallelität zu verwalten die entsprechenden Sperre Option entscheiden.  
   

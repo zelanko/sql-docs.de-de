@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e21317e2019fe1530e346567a5767a1dfc18c329
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165420"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758012"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung
   Richtlinie der richtlinienbasierten Verwaltung können Sie bewährte Methoden für die Überwachung der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Stellt einer Reihe von Richtliniendateien bereit, importieren Sie als best Practice-Richtlinien, und Auswertung der Richtlinien für einen Zielsatz, der Instanzen, Instanzobjekte, Datenbanken oder Datenbankobjekte enthält. Sie können Richtlinien manuell auswerten, Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Zeitplan festlegen oder Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Ereignis angeben. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md).  
@@ -61,13 +61,13 @@ ms.locfileid: "48165420"
 |Gerätetreiber-Steuerungsfehler im Windows-Ereignisprotokoll|[Gerätetreiber-Steuerungsfehler](device-driver-control-error.md)|  
 |Fehler "Gerät nicht bereit" im Windows-Ereignisprotokoll|[Fehler 'Gerät nicht bereit'](device-not-ready-error.md)|  
 |Fehler aufgrund fehlerhafter E/A-Anforderung im Windows-Ereignisprotokoll|[Fehlerhafte Eingabe Ausgabeanforderung erkennen](detect-failed-input-and-output-requests.md)|  
-|E/A-Verzögerungswarnung im Windows-Ereignisprotokoll|[Check Disk Input and Output Subsystem for IO Delay Problems (Überprüfen des Datenträger-E/A-Subsystems auf E/A-Verzögerungen)](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
-|E/A-Fehler im Windows-Ereignisprotokoll während eines Hardwareseitenfehlers|[Input and Output Error During Hard Page Fault (Eingabe- und Ausgabefehler während eines Hardwareseitenfehlers)](input-and-output-error-during-hard-page-fault.md)|  
+|E/A-Verzögerungswarnung im Windows-Ereignisprotokoll|[Überprüfen des Datenträger-E/A-Subsystems auf E/A-Verzögerungen](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
+|E/A-Fehler im Windows-Ereignisprotokoll während eines Hardwareseitenfehlers|[Eingabe- und Ausgabefehler während eines Hardwareseitenfehlers](input-and-output-error-during-hard-page-fault.md)|  
 |Fehler beim erneuten Leseversuch im Windows-Ereignisprotokoll|[Überprüfen des Datenträger-E/A-Subsystems auf Lesewiederholungsprobleme](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |E/A-Timeoutfehler des Speichersystems im Windows-Ereignisprotokoll|[Speichersystem – E/A-Timeout](storage-system-input-output-time-out.md)|  
 |Fehler aufgrund eines Systemfehlers im Windows-Ereignisprotokoll|[Unerwartete Systemfehler](unexpected-system-failures.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Arbeiten mit Facets der richtlinienbasierten Verwaltung](working-with-policy-based-management-facets.md)  
   
   

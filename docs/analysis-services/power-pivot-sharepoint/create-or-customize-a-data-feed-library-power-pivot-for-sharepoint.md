@@ -1,5 +1,5 @@
 ---
-title: Erstellen oder Anpassen eine Datenfeedbibliothek (PowerPivot für SharePoint) | Microsoft Docs
+title: Erstellen oder Anpassen eine Datenfeedbibliothek (PowerPivot für SharePoint) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71c051d64a40f38a6514301ca3353e7627c67aaf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7586527bcd2f79b6a9a54725fcbd376bd2720096
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021250"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519096"
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Erstellen oder Anpassen einer Datenfeedbibliothek (Power Pivot für SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34021250"
   
 -   Freigeben und Verwalten von Datendienstdokumenten an einem zentralen Speicherort.  
   
--   Visuelles Kennzeichnen von datendienstdokumenten durch ein Symbol, damit dienstdokumente leicht von anderen in der gleichen Bibliothek gespeicherten Dokumenten unterschieden werden können: ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   Visuelles Kennzeichnen von Datendienstdokumenten durch ein Symbol, damit Dienstdokumente leicht von anderen in der gleichen Bibliothek gespeicherten Dokumenten unterschieden werden können: ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  Eine Datenfeedbibliothek enthält immer Datendienstdokumente (ATOMSVC-Dateien) und nie den Datenfeed selbst. Im Gegensatz zu einem Datenfeed, der aus statischen XML-Daten besteht, gibt das Datendienstdokument eine URL zu einem Dienst oder einer Anwendung an, der bzw. die auf Anforderung einen Feed generiert, und stellt wiederverwendbare Verbindungsinformationen für wiederholbare Importvorgänge bereit.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34021250"
   
  Die folgenden Schritte müssen für jede Bibliothek wiederholt werden, in der Sie Dokumente für die Datenfeedregistrierung erstellen oder bearbeiten möchten.  
   
-#### <a name="step-1-enable-content-type-management"></a>Schritt 1: Aktivieren der Inhaltstypverwaltung  
+#### <a name="step-1-enable-content-type-management"></a>Schritt 1: Aktivieren der Inhaltstypverwaltung  
   
 1.  Öffnen Sie die Dokumentbibliothek, für die Sie mehrere Inhaltstypen aktivieren möchten.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34021250"
   
 7.  Klicken Sie auf **OK**.  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>Schritt 2: Fügen Sie einen Inhaltstyp für Datendienstdokumente hinzu  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>Schritt 2: Fügen Sie die Dateninhaltstyp für Datendienstdokumente hinzu  
   
 1.  Klicken Sie im Abschnitt Inhaltstypen auf **Aus vorhandenen Websiteinhaltstypen hinzufügen**. Falls diese Seite nicht angezeigt wird, wechseln Sie zurück zur Website und klicken unter Bibliothekstools auf **Bibliothek** und dann auf **Bibliothekseinstellungen**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34021250"
   
 5.  Klicken Sie auf **OK**.  
   
-#### <a name="step-3-verify-data-service-document-configuration"></a>Schritt 3: Überprüfen der Datendienstdokumentkonfiguration  
+#### <a name="step-3-verify-data-service-document-configuration"></a>Schritt 3: Überprüfen der Datendienstdokumentkonfiguration  
   
 1.  Öffnen Sie die Homepage der Website.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "34021250"
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von Datenfeeds &#40;Power Pivot für SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   
- [Löschen einer PowerPivot-Datenfeedbibliothek](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
+ [Löschen einer Power Pivot-Datenfeedbibliothek](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
  [PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Power Pivot-Datenfeeds](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   

@@ -18,15 +18,15 @@ ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9b955f59cb1c7813be28c7edd46b32d0c8e44b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e89ebe73f7bee6f44df353afca515aca4cbbdcf2
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735468"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947621"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Liest den als Eingabe bereitgestellten XML-Text, analysiert diesen mit dem MSXML-Parser (Msxmlsql.dll) und stellt das analysierte Dokument für die Verwendung bereit. Das analysierte Dokument ist eine strukturierte Darstellung der verschiedenen Knoten im XML-Dokument: Elemente, Attribute, Text, Kommentare usw.  
   

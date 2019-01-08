@@ -8,12 +8,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.date: 10/24/2018
-ms.openlocfilehash: a1d8d4c96ec6008b66e8b1be65767e413b0a4db7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.technology: install
+ms.openlocfilehash: 44805d6fd7512a5180a2b62e2c8808b890901705
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051142"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808352"
 ---
 # <a name="install-sql-server-2014-bi-features"></a>Installieren von SQL Server 2014-BI-Funktionen
 
@@ -27,7 +28,7 @@ ms.locfileid: "50051142"
 
 In diesem Abschnitt:
   
-|Link|Task|  
+|Link|Aufgabe|  
 |----------|----------|  
 |[Prüflisten zum Installieren von BI-Features mit SharePoint](checklists-for-installing-bi-features-with-sharepoint.md)|Wenn Sie bereits wissen, was Sie installieren möchten und mit den Installationsschritten für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint vertraut sind, können Sie zu den Prüflisten übergehen, die Anhaltspunkte für die Installationsreihenfolge, Anforderungen für Konten und Berechtigungen sowie die Schritte zur Bereitstellung erweiterter Technologien (einschließlich Bereitstellungen mit mehreren Servern und Funktionen) enthalten.|  
 |[Installieren von SQL Server-BI-Funktionen mit SharePoint &#40;PowerPivot und Reporting Services&#41;](install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)|In diesem Abschnitt wird erläutert, wie Sie SQL Server-Funktionen in einer SharePoint-Umgebung installieren. Es wird aufgezeigt, welche SQL Server-Funktionen für eine bestimmte Version oder Edition von SharePoint verfügbar sind. Außerdem umfasst der Abschnitt Installationsschritte für PowerPivot für SharePoint und Reporting Services im SharePoint-Modus.|  
@@ -36,7 +37,7 @@ In diesem Abschnitt:
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
-|Link|Task|  
+|Link|Aufgabe|  
 |----------|----------|  
 |[Upgrade auf SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)<br /><br /> [Aktualisieren von Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)<br /><br /> [Upgraden von PowerPivot für SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)<br /><br /> [Aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)|Verwenden Sie die Anweisungen in diesem Abschnitt, um Server und Inhalte von einer früheren Version auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zu aktualisieren.|  
 |[Deinstallieren von SQL Server 2014](uninstall-sql-server.md)<br /><br /> [Deinstallieren von PowerPivot für SharePoint](../../../2014/sql-server/install/uninstall-power-pivot-for-sharepoint.md)<br /><br /> [Deinstallieren von Reporting Services](../../../2014/sql-server/install/uninstall-reporting-services.md)|Verwenden Sie die Anweisungen in diesem Abschnitt, um BI-Funktionen zu deinstallieren.|  

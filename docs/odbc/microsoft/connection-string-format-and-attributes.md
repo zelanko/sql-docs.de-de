@@ -14,12 +14,12 @@ ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a28c3f7128d05307afba95d288f6a20afd75aeea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98c8e18432bfd386555863a917824b18b2d11885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652468"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542781"
 ---
 # <a name="connection-string-format-and-attributes"></a>Format und Attribute von Verbindungszeichenfolgen
 > [!IMPORTANT]  
@@ -40,12 +40,12 @@ ms.locfileid: "47652468"
   
  Die Attribute für die Verbindungszeichenfolge lauten wie folgt aus:  
   
-|attribute|Description|Standardwert|  
+|Attribut|Description|Standardwert|  
 |---------------|-----------------|-------------------|  
 |DSN|Der Name der Datenquelle aufgeführt, in der Registerkarte "Treiber" der **ODBC-Datenquellenadministrator** Dialogfeld.|""|  
 |PWD|Das Kennwort für den Oracle-Server, die Sie zugreifen möchten. Dieser Treiber unterstützt die Einschränkungen, die von Oracle auf Kennwörter platziert.|""|  
 |SERVER|Die Verbindungszeichenfolge für den Oracle-Server, die Sie zugreifen möchten.|""|  
-|UID|Der Name des Oracle-Server. Je nach System, dieses Attribut kann nicht optional sein, d. h. bestimmte Datenbanken und Tabellen möglicherweise muss dieses Attribut aus Sicherheitsgründen.<br /><br /> Verwenden Sie "/" zur Verwendung von Oracle des System-Authentifizierung ausgeführt.|""|  
+|UID|Der Name des Oracle-Server. Dieses Attribut kann nicht optional sein –, also bestimmte Datenbanken und Tabellen möglicherweise muss dieses Attribut aus Sicherheitsgründen, abhängig von Ihrem System.<br /><br /> Verwenden Sie "/" zur Verwendung von Oracle des System-Authentifizierung ausgeführt.|""|  
 |PUFFERGRÖSSE|Die optimale Puffergröße, die beim Abrufen der Spalten verwendet wird.<br /><br /> Der Treiber optimiert werden abgerufen, sodass einen Abruf aus der Oracle-Server genügend Zeilen für einen Puffer dieser Größe füllen zurückgibt. Größere Werte neigen dazu, um die Leistung zu erhöhen, wenn Sie große Datenmengen abrufen.|65535|  
 |SYNONYMCOLUMNS|Wenn dieser Wert ist "true" (1), ein SQLSpalten-()-API-Aufruf gibt Spalteninformationen zurück. Andernfalls SQLSpalten-() nur die Spalten für Tabellen und Sichten. Der ODBC-Treiber für Oracle bietet schnelleren Zugriff auf, wenn dieser Wert nicht festgelegt ist.|1|  
 |REMARKS|Wenn dieser Wert ist "true" (1), gibt der Treiber "Hinweise"-Spalten für die [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) Resultset. Der ODBC-Treiber für Oracle bietet schnelleren Zugriff auf, wenn dieser Wert nicht festgelegt ist.|0|  

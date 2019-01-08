@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - <= (less than or equal to operator)
@@ -14,12 +13,12 @@ ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96575de74fcf783d4e21306770f8a31b3065a794
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d10d10388f6efa55fb2655a21b50b2ebdd58e5b2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063330"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754342"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (Kleiner als oder gleich) (SSIS-Ausdruck)
   Führt einen Vergleich aus, um zu ermitteln, ob der erste Ausdruck kleiner oder gleich dem zweiten Ausdruck ist. Die Ausdrucksauswertung konvertiert viele Datentypen automatisch vor dem Vergleich.  
@@ -59,7 +58,7 @@ expression1 <= expression2
     > [!NOTE]  
     >  Bei Zeichenfolgenvergleichen wird nach Groß-/Kleinschreibung, Akzent, Kana und Breite unterschieden.  
   
--   **Datum, Uhrzeit oder Datum/Uhrzeit** Sowohl *expression1* als auch *expression2* müssen zu einem der folgenden Datentypen ausgewertet werden: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET oder DT_FILETIME.  
+-   **Datum, Uhrzeit oder Datum/Uhrzeit** sowohl *expression1* und *expression2* muss auf einen der folgenden Datentypen ausgewertet werden: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET oder DT_FILETIME.  
   
     > [!NOTE]  
     >  Das System unterstützt keine Vergleiche zwischen einem Ausdruck, der zu einem Uhrzeitdatentyp ausgewertet wird, und einem Ausdruck, der entweder zu einem Datums- oder zu einem Datums-/Uhrzeitdatentyp ausgewertet wird. In diesem Fall wird ein Fehler generiert.  
@@ -104,10 +103,10 @@ ListPrice <= 500
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [&#62;&#40;Größer als&#41; &#40;SSIS-Ausdruck&#41;](greater-than-ssis-expression.md)   
- [&#60;&#40;Kleiner als&#41; &#40;SSIS-Ausdruck&#41;](less-than-ssis-expression.md)   
- [&#62;= &#40;Größer als oder gleich&#41; &#40;SSIS-Ausdruck&#41;](greater-than-or-equal-to-ssis-expression.md)   
- [Operatorrangfolge und Assoziativität](operator-precedence-and-associativity.md)   
+ [&#62; &#40;Größer als&#41; &#40;SSIS-Ausdruck&#41;](greater-than-ssis-expression.md)   
+ [&#60; &#40;Kleiner als&#41; &#40;SSIS-Ausdruck&#41;](less-than-ssis-expression.md)   
+ [&#62;= &#40;Größer oder gleich&#41; &#40;SSIS-Ausdruck&#41;](greater-than-or-equal-to-ssis-expression.md)   
+ [Operatorenrangfolge und -assoziativität](operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](operators-ssis-expression.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.f1
@@ -15,12 +14,12 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9926ce7d8ef85533ec7e67f0cd2800d74ee253e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2d4c308245312fa4fa80c1f320e874f89a3dec7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194650"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790972"
 ---
 # <a name="transfer-jobs-task"></a>Aufträge übertragen (Task)
   Durch die Task "Aufträge übertragen" werden ein oder mehrere Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents zwischen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übertragen.  
@@ -44,7 +43,7 @@ ms.locfileid: "48194650"
  Der Task Aufträge übertragen löst ein Informationsereignis aus, in dem die Anzahl der übertragenen Aufträge angegeben ist, und ein Warnungsereignis, wenn ein Auftrag überschrieben wird. Während der Auftrag übertragen wird, werden keine Angaben zum Fortschritt des Vorgangs gemacht – es wird lediglich 0 % und bei Abschluss 100 % angezeigt.  
   
 ## <a name="execution-value"></a>Ausführungswert  
- Der in der `ExecutionValue`-Eigenschaft des Tasks definierte Ausführungswert gibt die Anzahl der zu übertragenden Aufträge zurück. Durch eine benutzerdefinierte Variable zugewiesen der `ExecValueVariable` Eigenschaft des Tasks Übertragungsaufträge, Informationen zur auftragsübertragung kann zur Verfügung gestellt werden auf andere Objekte im Paket. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](../use-variables-in-packages.md).  
+ Der in der `ExecutionValue`-Eigenschaft des Tasks definierte Ausführungswert gibt die Anzahl der zu übertragenden Aufträge zurück. Mithilfe einer benutzerdefinierten Variable, die der `ExecValueVariable`-Eigenschaft des Tasks Aufträge übertragen zugewiesen wird, können Informationen zur Auftragsübertragung für andere Objekte des Pakets verfügbar gemacht werden. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Protokolleinträge  
  Der Task Aufträge übertragen enthält die folgenden benutzerdefinierten Protokolleinträge:  
@@ -63,7 +62,7 @@ ms.locfileid: "48194650"
   
  Klicken Sie auf eines der folgenden Themen, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task Aufträge übertragen &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task Aufträge übertragen &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor für den Task Aufträge übertragen &#40;Seite Aufträge&#41;](../transfer-jobs-task-editor-jobs-page.md)  
   

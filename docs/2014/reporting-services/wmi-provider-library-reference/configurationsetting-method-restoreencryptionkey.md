@@ -19,12 +19,12 @@ ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: baf827dbedeb8a822a729e27d08fca4fa6b7f95a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acdd99c590f05fbe21777416dcd56234a6a797d0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172090"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417441"
 ---
 # <a name="restoreencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>RestoreEncryptionKey-Methode (WMI: MSReportServer_ConfigurationSetting)
   Wendet den angegebenen Verschlüsselungsschlüssel erneut auf die Berichtsserver-Datenbank an  
@@ -64,12 +64,12 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ## <a name="remarks"></a>Hinweise  
  Wenn bereits ein Eintrag für den Berichtsserver in der Berichtsserver-Datenbank vorhanden ist, wird dieser gelöscht. Der neue Eintrag wird dann mit dem angegebenen Verschlüsselungsschlüssel und dem öffentlichen Schlüssel des Berichtsservers erstellt.  
   
- Die Methode ist am effektivsten, wenn nach dem Namen der [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) -Methode, die die Liste der Verschlüsselungsschlüssel löscht.  
+ Diese Methode ist am effektivsten, wenn sie nach der [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) -Methode aufgerufen wird, die die Liste der Verschlüsselungsschlüssel löscht.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
   
   

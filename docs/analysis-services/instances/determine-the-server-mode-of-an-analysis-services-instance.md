@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 85501a0b8899e375965a7e999ce2d4e938f14cc0
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 434996f53cefc3c30cc649411db7699ed2bd3f7e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099717"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401023"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Bestimmen des Servermodus einer Analysis Services-Instanz
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Analysis Services kann in einem von drei Servermodi installiert sein: mehrdimensional und Data Mining (Standard), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint und tabellarisch. Der Servermodus einer Analysis Services-Instanz wird während des Setups bestimmt, wenn Sie die Optionen zum Installieren des Servers auswählen.  
+  Analysis Services können in einem von drei Servermodi installiert werden: Mehrdimensionaler und Data Mining (Standard), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint und tabellarisch. Der Servermodus einer Analysis Services-Instanz wird während des Setups bestimmt, wenn Sie die Optionen zum Installieren des Servers auswählen.  
   
  Der Servermodus bestimmt den Typ der Lösung, die Sie erstellen und bereitstellen. Wenn Sie die Serversoftware nicht installiert haben und Sie wissen möchten, in welchem Modus der Server installiert ist, können Sie die Informationen aus diesem Abschnitt nutzen, um den Modus zu bestimmen. Weitere Informationen zu den verfügbaren Funktionen in einem bestimmten Modus finden Sie unter [Vergleichen von tabellarischen und mehrdimensionalen Lösungen ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -36,11 +36,11 @@ ms.locfileid: "50099717"
 >  Ändern Sie den Wert für **DeploymentMode** nicht. Die manuelle Änderung der Eigenschaft nach dem Installieren des Servers wird nicht unterstützt.  
   
 ## <a name="about-the-deploymentmode-property"></a>Informationen zur DeploymentMode-Eigenschaft  
- Die**DeploymentMode** -Eigenschaft bestimmt den operativen Kontext einer Analysis Services-Serverinstanz. Diese Eigenschaft wird in Dialogfeldern, Meldungen und Dokumentation als "Servermodus" bezeichnet. Diese Eigenschaft wird vom Setup auf Grundlage des Installationsmodus von Analysis Services initialisiert. Diese Eigenschaft sollte nur intern berücksichtigt und immer der vom Setup angegebene Wert verwendet werden.  
+ Die**DeploymentMode** -Eigenschaft bestimmt den operativen Kontext einer Analysis Services-Serverinstanz. Diese Eigenschaft wird als "Servermodus" in den Dialogfeldern, Meldungen und Dokumentation bezeichnet. Diese Eigenschaft wird vom Setup auf Grundlage des Installationsmodus von Analysis Services initialisiert. Diese Eigenschaft sollte nur intern berücksichtigt und immer der vom Setup angegebene Wert verwendet werden.  
   
  Für diese Eigenschaften gibt es u. a. folgende gültige Werte:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |0|Dies ist der Standardwert. Der mehrdimensionale Modus wird angegeben. Er dient zur Verwaltung von mehrdimensionalen Datenbanken, die MOLAP, HOLAP und ROLAP-Speicher sowie Data Mining-Modelle verwenden.|  
 |1|Gibt Analysis Services-Instanzen an, die als Teil einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Bereitstellung installiert waren. Ändern Sie die Bereitstellungsmoduseigenschaft der Analysis Services-Instanz nicht, die Teil einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Installation ist. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten nicht mehr auf dem Server ausgeführt.|  

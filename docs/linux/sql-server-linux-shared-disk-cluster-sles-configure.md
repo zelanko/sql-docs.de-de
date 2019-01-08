@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: 42af33d78a13961b7a85ae408a3c693edf759e75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667989"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408867"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Konfigurieren Sie SLES Cluster mit freigegebenen Datenträgern werden für SQL Server.
 
@@ -102,7 +102,7 @@ Eine weitere Option für Storage ist die Verwendung von SMB-Dateifreigabe:
 
 ### <a name="configure-an-nfs-server"></a>Konfigurieren Sie einen NFS-server
 
-Klicken Sie zum Konfigurieren von NFS-Server finden Sie die folgenden Schritte aus, in der SUSE-Dokumentation: [Konfigurieren von NFS-Server](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
+Um einen NFS-Server zu konfigurieren, finden Sie in die folgenden Schritte aus, in der SUSE-Dokumentation: [Konfigurieren von NFS-Server](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
 
 ### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>Konfigurieren Sie alle Knoten des Clusters für die Verbindung mit dem freigegebenen NFS-Speicher
 
@@ -123,7 +123,7 @@ Vor dem Konfigurieren des Clients NFS zum Einbinden der Pfad des SQL Server-Date
     - [Konfigurieren von Clients](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
 
     > [!NOTE]
-    > Es wird empfohlen, führen die SUSE best Practices und Empfehlungen in Bezug auf hoch verfügbaren NFS-Speicher: [hochverfügbarer NFS-Speicher mit DRBD und Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
+    > Es wird empfohlen, befolgen Sie SUSEs-best Practices und Empfehlungen in Bezug auf hoch verfügbaren NFS-Speicher: [Hochverfügbarer NFS-Speicher mit DRBD und Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
 
 2. Überprüfen Sie, dass SQL Server erfolgreich mit dem neuen Dateipfad gestartet wird. Hierzu auf jedem Knoten. An diesem Punkt sollte nur ein Knoten, über SQL Server zu einem Zeitpunkt ausführen. Sie können nicht beide gleichzeitig ausgeführt, da sie beide versuchen werden, auf die Datendateien gleichzeitig (um zu vermeiden, versehentlich Starten von SQL Server auf beiden Knoten eine Dateisystem-Clusterressource verwenden, um sicherzustellen, dass die Dateifreigabe nicht zweimal von den anderen Knoten bereitgestellt ist). Die folgenden Befehle Starten von SQL Server, den Status überprüfen und beenden Sie SQL Server.
 
@@ -196,8 +196,8 @@ An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den
 
 Die folgenden Schritte erläutern die Clusterressource für SQL Server zu konfigurieren. Es gibt zwei Einstellungen, die Sie anpassen müssen.
 
-- **SQL Server-Ressourcenname**: einen Namen für die SQL Server-Clusterressource. 
-- **Timeoutwert**: der Timeoutwert ist die Zeitspanne, die der Cluster wartet, während eine Ressource online geschaltet wird. Für SQL Server, ist dies die Zeit, die Sie erwarten, dass SQL Server ausführen, um bringen die `master` Datenbank online. 
+- **SQL Server-Ressourcenname**: Ein Name für die SQL Server-Clusterressource. 
+- **Timeoutwert**: Der Timeoutwert ist die Zeitspanne, die der Cluster wartet, während eine Ressource online geschaltet wird. Für SQL Server, ist dies die Zeit, die Sie erwarten, dass SQL Server ausführen, um bringen die `master` Datenbank online. 
 
 Aktualisieren Sie die Werte aus dem folgenden Skript für Ihre Umgebung. Führen Sie auf einem Knoten zum Konfigurieren und starten den Clusterdienst.
 
@@ -248,7 +248,7 @@ Full list of resources:
 
 ## <a name="managing-cluster-resources"></a>Verwalten von Clusterressourcen
 
-Um Ihre Clusterressourcen zu verwalten, finden Sie unter folgenden SUSE-Thema: [Clusterressourcen verwalten](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+Um Ihre Clusterressourcen zu verwalten, finden Sie in der folgende SUSE-Thema: [Verwalten von Clusterressourcen](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
 ### <a name="manual-failover"></a>Manuelles Failover
 
@@ -261,6 +261,6 @@ crm resource
 migrate mssqlha SLES2
 ```
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 [Erweiterung für SUSE Linux Enterprise hohe Verfügbarkeit – Administratorhandbuch](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html) 

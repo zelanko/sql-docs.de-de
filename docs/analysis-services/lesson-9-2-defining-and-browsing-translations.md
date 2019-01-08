@@ -1,5 +1,5 @@
 ---
-title: Definieren und Durchsuchen von Übersetzungen | Microsoft Docs
+title: Definieren und Durchsuchen von Übersetzungen | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a63fd44d7ec62b9033f4371e7e2d38306757c647
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8d5e7cd1d1696624ebb6fe919cfa3b1ba6ee5c7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018917"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535010"
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lektion 9 – 2: definieren und Durchsuchen von Übersetzungen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,9 +45,9 @@ Im Rahmen der Tasks in diesem Thema definieren Sie Metadatenübersetzungen für 
   
 6.  Geben Sie in der Zeile des **Caption** -Objekts des **Month Name** -Attributs **Mes del Año** in die Übersetzungsspalte für **Spanisch (Spanien)** und **Mois d'Année** in die Übersetzungsspalte für **Französisch (Frankreich)** ein.  
   
-    Beachten Sie, dass beim Eingeben dieser Übersetzungen Auslassungspunkte (**…**) angezeigt werden. Durch Klicken auf dieses Auslassungszeichen können Sie eine Spalte in der zugrunde liegenden Tabelle angeben, die Übersetzungen für jedes Mitglied der Attributhierarchie bereitstellt.  
+    Beachten Sie, dass beim Eingeben dieser Übersetzungen Auslassungspunkte (**...** ) angezeigt wird. Durch Klicken auf dieses Auslassungszeichen können Sie eine Spalte in der zugrunde liegenden Tabelle angeben, die Übersetzungen für jedes Mitglied der Attributhierarchie bereitstellt.  
   
-7.  Klicken Sie auf das Auslassungszeichen (**…**) für die **Spanisch (Spanien)** -Übersetzung des **Month Name** -Attributs.  
+7.  Klicken Sie auf die Auslassungspunkte (**...** ) für die **Spanisch (Spanien)** Übersetzung für die **Monatsnamen** Attribut.  
   
     Das Dialogfeld **Attributdatenübersetzung** wird angezeigt.  
   
@@ -55,7 +55,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie Metadatenübersetzungen für 
   
     ![Attribut Attributdatenübersetzung (Dialogfeld)](../analysis-services/media/l9-translations-4.gif "Attributdatenübersetzung (Dialogfeld)")  
   
-9. Klicken Sie auf **OK**und anschließend auf das Auslassungszeichen (**…**) für die **Französisch (Frankreich)** -Übersetzung des **Month Name** -Attributs.  
+9. Klicken Sie auf **OK**, und klicken Sie dann auf die Auslassungspunkte (**...** ) für die **Französisch (Frankreich)** Übersetzung für die **Monatsnamen** Attribut.  
   
 10. Wählen Sie in der Liste **Übersetzungsspalten** die Option **FrenchMonthName**aus, und klicken Sie anschließend auf **OK**.  
   
@@ -105,7 +105,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie Metadatenübersetzungen für 
   
     Die Elemente im Metadatenbereich werden erneut aufgefüllt. Nach dem erneuten Auffüllen der Elemente im Metadatenbereich wird das Internet Sales-Sales Amount-Measure nicht mehr im Internet Sales-Anzeigeordner angezeigt. Das Measure wird jetzt in Spanisch in einem neuen Anzeigeordner namens **Ventas del lnternet**wie in der folgenden Abbildung veranschaulicht dargestellt.  
   
-    ![Metadaten (Bereich) Repopulated](../analysis-services/media/l9-translations-6.gif "Repopulated-Metadaten (Bereich)")  
+    ![Metadatenbereich Repopulated](../analysis-services/media/l9-translations-6.gif "Repopulated Metadatenbereich")  
   
 6.  Klicken Sie im Metadatenbereich mit der rechten Maustaste auf **Cantidad de las Ventas del Internet** , und wählen Sie anschließend **Zu Abfrage hinzufügen**aus.  
   

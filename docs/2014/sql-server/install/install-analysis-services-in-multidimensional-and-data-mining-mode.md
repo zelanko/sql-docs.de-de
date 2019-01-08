@@ -17,12 +17,12 @@ ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 92460328b9d85ab5818679b12639618ffe2b0a14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 100bac6834825af1e22658279d26be02c30f3f39
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149900"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349264"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Installieren von Analysis Services im mehrdimensionalen Modus und im Data Mining-Modus
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet OLAP- (Online Analytical Processing, Analytische Onlineverarbeitung) und Data Mining-Funktionalität für Business Intelligence-Anwendungen. In dieser Version wird Unterstützung für OLAP-Datenbanken und Datamining-Modellen ist verfügbar, bei der Installation [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in *mehrdimensionaler Modus*. Der multidimensionale Modus ist einer von drei Servermodi, in denen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausgeführt werden kann. Es handelt sich hierbei um den Standardmodus. Wenn Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mit den Standardwerten installieren, erhalten Sie eine Instanz, die multidimensionale Datenbanken und Data Mining-Modelle ausführt.  
@@ -51,7 +51,7 @@ ms.locfileid: "48149900"
 ## <a name="installation-tasks"></a>Installationsaufgaben  
  Zur Installation gehören die folgenden Aufgaben:  
   
-|Links|Aufgaben|  
+|Links|Richtlinienübersicht|  
 |-----------|-----------|  
 |[Hardware- und Softwareanforderungen zum Installieren von SQLServer 2014](hardware-and-software-requirements-for-installing-sql-server.md) und [Konfigurieren von Windows-Dienstkonten und-Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).|Überprüfen Sie vor der Ausführung des Setups die erforderlichen Komponenten für die Installation von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], und legen Sie das Konto fest, das Sie für die Bereitstellung des Servers verwenden möchten.|  
 |[Installieren von SQLServer 2014 vom Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).|Führen Sie das SQL Server-Setup aus, um die Software zu installieren.|  
@@ -67,12 +67,12 @@ ms.locfileid: "48149900"
   
  [Bestimmen des Servermodus einer Analysis Services-Instanz](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
- [SQL Server Data Mining-Add-ins](http://go.microsoft.com/fwlink/?LinkId=197091)  
+ [SQL Server Data Mining-Add-ins](https://go.microsoft.com/fwlink/?LinkId=197091)  
   
- Standardmäßig werden Beispieldatenbanken, Beispielcode und Add-Ins für die Clientanwendung nicht als Teil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups installiert. Informationen zur Installation von Beispieldatenbanken und Beispielcode finden Sie auf der [CodePlex-Website](http://go.microsoft.com/fwlink/?LinkId=87843).  
+ Standardmäßig werden Beispieldatenbanken, Beispielcode und Add-Ins für die Clientanwendung nicht als Teil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups installiert. Informationen zur Installation von Beispieldatenbanken und Beispielcode finden Sie auf der [CodePlex-Website](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Von den SQL Server 2012-Editionen unterstützte Funktionen](http://go.microsoft.com/fwlink/?linkid=232473)   
+ [Von den SQL Server 2012-Editionen unterstützte Funktionen](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Sprachen und Sortierungen &#40;Analysis Services&#41;](../../../2014/analysis-services/languages-and-collations-analysis-services.md)   
  [Aktualisieren von Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
   

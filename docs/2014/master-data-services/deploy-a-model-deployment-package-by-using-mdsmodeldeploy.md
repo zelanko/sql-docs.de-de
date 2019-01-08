@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 048929ec4ff58def3d392df3f326f31f98fe9d83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02db491e350de93aff1015583f71566af747c878
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205870"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780262"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Bereitstellen eines Modellbereitstellungspakets mit MDSModelDeploy
   Sie verwenden in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]das Tool MDSModelDeploy, um ein Paket mit dem folgenden Inhalt bereitzustellen:  
@@ -37,7 +36,7 @@ ms.locfileid: "48205870"
   
 -   Ein Modellbereitstellungspaket muss vorhanden sein. Weitere Informationen finden Sie unter  [Erstellen eines Modellbereitstellungspakets mit MDSModelDeploy](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
--   Sie müssen Administrator in der Umgebung sein, in der Sie das Modell bereitstellen. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Sie müssen Administrator in der Umgebung sein, in der Sie das Modell bereitstellen. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen.  
   
 -   Wenn Sie ein Modell mit Daten aktualisieren, kann die von Ihnen bereitgestellte Version nicht den Status **Gesperrt** oder **Commit wurde ausgeführt** aufweisen.  
   
@@ -51,13 +50,13 @@ ms.locfileid: "48205870"
   
     -   Wenn MDS nicht am Standardspeicherort installiert wurde, suchen Sie auf dem lokalen Computer nach der Datei "MDSModelDeploy.exe".  
   
-3.  Optional. Dient zum Anzeigen der Optionen und der Hilfe.  
+3.  Dies ist optional. Dient zum Anzeigen der Optionen und der Hilfe.  
   
     -   Geben Sie `MDSModelDeploy` ein, und drücken Sie EINGABETASTE, um alle verfügbaren Optionen anzuzeigen.  
   
     -   Geben Sie Folgendes ein, um Hilfe für eine Option anzuzeigen, wobei *OptionName* der Name der Option ist: `MDSModelDeploy help OptionName`.  
   
-4.  Optional. Wenn Sie über mehrere Webanwendungen verfügen, bestimmen Sie den Namen des Diensts, für den Sie die Bereitstellung durchführen, indem Sie diesen Befehl eingeben und die EINGABETASTE drücken:  
+4.  Dies ist optional. Wenn Sie über mehrere Webanwendungen verfügen, bestimmen Sie den Namen des Diensts, für den Sie die Bereitstellung durchführen, indem Sie diesen Befehl eingeben und die EINGABETASTE drücken:  
   
     ```  
     MDSModelDeploy listservices  
@@ -70,19 +69,19 @@ ms.locfileid: "48205870"
     -   So erstellen Sie ein neues Modell:  
   
         ```  
-        MDSModelDeploy deploynew –package PackageName -model ModelName -service ServiceName  
+        MDSModelDeploy deploynew -package PackageName -model ModelName -service ServiceName  
         ```  
   
     -   So erstellen Sie einen Klon eines Modells  
   
         ```  
-        MDSModelDeploy deployclone –package PackageName  
+        MDSModelDeploy deployclone -package PackageName  
         ```  
   
     -   So aktualisieren Sie ein vorhandenes Modell samt Daten  
   
         ```  
-        MDSModelDeploy deployupdate –package PackageName –version VersionName  
+        MDSModelDeploy deployupdate -package PackageName -version VersionName  
         ```  
   
     > [!IMPORTANT]  
@@ -90,7 +89,7 @@ ms.locfileid: "48205870"
   
      Dabei gilt: *PackageName* ist der Name der Paketdatei (PKG-Datei), *ModelName* ist der Name des neuen Modells, *VersionName* ist der Name der Version, und *ServiceName* ist der Name des Diensts, der im vorherigen Schritt zurückgegeben wurde. Stellen Sie sicher, dass die Modell- und Versionsnamen nach Groß-/Kleinschreibung genau mit den Namen übereinstimmen.  
   
-6.  Nach der erfolgreichen Bereitstellung des Pakets wird eine Meldung angezeigt, die besagt, dass der MDSModelDeploy-Vorgang erfolgreich abgeschlossen wurde.  
+6.  Nach der erfolgreichen Bereitstellung des Pakets wird eine Meldung angezeigt, die angibt, dass der MDSModelDeploy-Vorgang erfolgreich abgeschlossen wurde.  
   
  **Hinweise:**  
   

@@ -11,12 +11,12 @@ ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 127e0dbeef729c21c7155d7d3d7edf6f21a444c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85d4c4d79dbddd59c3208c28b3fea50c0aa857b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182420"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514065"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Ausführen einer bedarfsgesteuerten Auswertung mithilfe von registrierten Servern
   Sie können eine bedarfsgesteuerte Auswertung von Best Practices-Richtlinien gegen eine oder mehrere Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe registrierter Server ausführen. Dazu können Sie lokale Servergruppen oder einen zentralen Verwaltungsserver verwenden.  
@@ -25,7 +25,7 @@ ms.locfileid: "48182420"
 >  Sie können eine bedarfsgesteuerte Auswertung von Best Practices-Richtlinien gegen Servergruppenmitglieder ausführen, auf denen [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] oder eine höhere Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird. Wenn jedoch einige Eigenschaften vorhanden sind, auf die von einer in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] oder [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] nicht unterstützten Richtlinie verwiesen wird, kann ein Ausnahmefehler ausgegeben werden.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- Um diese Aufgabe auszuführen, müssen Sie mindestens eine Serverregistrierung in den registrierten Servern konfiguriert haben. Weitere Informationen finden Sie in folgenden Themen:  
+ Um diese Aufgabe auszuführen, müssen Sie mindestens eine Serverregistrierung in den registrierten Servern konfiguriert haben. Weitere Informationen finden Sie unter den folgenden Themen:  
   
 -   [Erstellen oder Bearbeiten einer Servergruppe &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48182420"
 8.  Um ausführliche Ergebnisse für eine Richtlinie anzuzeigen, klicken Sie auf die Richtlinie in die **Ergebnisse** Tabelle. Die **Zieldetails** Tabelle zeigt die Details für jede Instanz.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Auswerten von Best Practices-Richtlinien auf der Basis eines Zeitplans](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lektion 2: Auswerten von Best Practices-Richtlinien auf Basis eines Zeitplans](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Überwachen und Erzwingen von Best Practices mit der Richtlinie der richtlinienbasierten Verwaltung](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   

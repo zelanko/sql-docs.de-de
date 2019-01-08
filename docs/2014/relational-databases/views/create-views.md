@@ -12,12 +12,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 550f4dbc3e733c3dee9fb200d85789931722e4f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5eaa6c702c02a3258ac66ec55081965d25a12a55
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215000"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541823"
 ---
 # <a name="create-views"></a>Erstellen von Sichten
   Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]Sichten erstellen. Eine Sicht kann für folgende Zwecke verwendet werden:  
@@ -34,7 +34,7 @@ ms.locfileid: "48215000"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie eine Sicht mit:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48215000"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Eine Sicht kann nur in der aktuellen Datenbank erstellt werden.  
@@ -54,15 +54,15 @@ ms.locfileid: "48215000"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die CREATE VIEW-Berechtigung in der Datenbank und die ALTER-Berechtigung für das Schema, in dem die Sicht erstellt wird.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-create-a-view-by-using-the-query-and-view-designer"></a>So erstellen Sie eine Sicht mit dem Abfrage- und Sicht-Designer  
   
 1.  Erweitern Sie im **Objekt-Explorer**die Datenbank, in der Sie die neue Sicht erstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sichten** , und klicken Sie anschließend auf **Neue Sicht…**.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sichten**, und klicken Sie anschließend auf **Neue Sicht…**.  
   
-3.  Wählen Sie im Dialogfeld **Tabelle hinzufügen** das Element oder die Elemente, die Sie in die neue Sicht einschließen möchten, auf einer der folgenden Registerkarten aus: Tabellen, Sichten, Funktionen und Synonyme.  
+3.  In der **Tabelle hinzufügen** Dialogfeld wählen das Element oder Elemente, die in die neue Ansicht aus einem der folgenden Registerkarten enthalten sein sollen: Tabellen, Sichten, Funktionen und Synonyme.  
   
 4.  Klicken Sie auf **Hinzufügen**und dann auf **Schließen**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48215000"
   
 #### <a name="to-create-a-view"></a>So erstellen Sie eine Sicht  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

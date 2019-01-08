@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a9d7d8e73dc61afc90485c0d5cd36b3bb009fda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b16deb7ed2bd43cc45966d27b79729897e76405c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658948"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532361"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47658948"
 |Feldabschlusszeichen|**nvarchar(10)**|Für die Format_type = DELIMITEDTEXT, dies ist das Feldabschlusszeichen.||  
 |string_delimiter|**nvarchar(10)**|Für die Format_type = DELIMITEDTEXT, dies ist das Zeichenfolgen-Trennzeichen.||  
 |date_format|**nvarchar(50)**|Für die Format_type = DELIMITEDTEXT, dies ist das benutzerdefinierte Datums- und Zeitformat.||  
-|use_type_default|**bit**|Für die Format_type = TEXT als TRENNZEICHEN, gibt an, wie fehlende Werte behandelt werden, wenn PolyBase Daten aus HDFS-Textdateien in importiert [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 – speichern Sie fehlende Werte als die Zeichenfolge 'NULL'.<br /><br /> 1 – Speichern von fehlenden Werten als der Standardwert der Spalte.|  
+|use_type_default|**bit**|Für die Format_type = TEXT als TRENNZEICHEN, gibt an, wie fehlende Werte behandelt werden, wenn PolyBase Daten aus HDFS-Textdateien in importiert [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 – speichern Sie fehlende Werte als die Zeichenfolge 'NULL'.<br /><br /> 1: Speichern Sie fehlende Werte als der Standardwert der Spalte.|  
 |serde_method|**nvarchar(255)**|Für die Format_type = RCFILE-, dies ist die Serialisierung/Deserialisierung-Methode.||  
 |Zeilenabschlusszeichen|**nvarchar(10)**|Für die Format_type = DELIMITEDTEXT, dies ist die Zeichenfolge, die jede Zeile in der externen Hadoop-Datei beendet.|Immer '\n'.|  
 |Codierung|**nvarchar(10)**|Für die Format_type = DELIMITEDTEXT, dies ist die Codierung Methode für die externen Hadoop-Datei.|Immer "UTF8".|  

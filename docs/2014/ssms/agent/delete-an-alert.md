@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
@@ -18,12 +18,12 @@ ms.assetid: c982b208-e2d1-4d34-8cee-940b9baf6586
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3f7434c7af3a4e8465bbaab1d0134bd956892c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f6da8b7376e03ff5c0ab516aeaef0e6ac538b48
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080150"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762882"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
   In diesem Thema wird beschrieben, wie Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]löschen können.  
@@ -34,7 +34,7 @@ ms.locfileid: "48080150"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So löschen Sie eine Warnung mit**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48080150"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Durch das Entfernen einer Warnung werden auch die zugeordneten Benachrichtigungen entfernt.  
@@ -52,7 +52,7 @@ ms.locfileid: "48080150"
 ####  <a name="Permissions"></a> Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** Warnungen löschen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-delete-an-alert"></a>So löschen Sie eine Warnung  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48080150"
   
 #### <a name="to-delete-an-alert"></a>So löschen Sie eine Warnung  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

@@ -11,12 +11,12 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 947cdf64fa93eadb13724220fc6684813be11fb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0f17e055f4f1ddcf7f19ba58d92c5617c891a5e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116400"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204749"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportieren nach XML (Berichts-Generator und SSRS)
   Die XML-Renderingerweiterung gibt einen Bericht im XML-Format zurück. Das Schema der Bericht-XML-Ausgabe hängt vom jeweiligen Bericht ab und enthält nur Daten. Layoutinformationen werden von der XML-Renderingerweiterung nicht gerendert, und die Paginierung wird nicht beibehalten. Der von dieser Erweiterung generierte XML-Code kann in eine Datenbank importiert, als XML-Datennachricht verwendet oder an eine benutzerdefinierte Anwendung gesendet werden.  
@@ -35,7 +35,7 @@ ms.locfileid: "48116400"
 |Textfeld|Wird als Attribut oder Element innerhalb des Containers gerendert.|  
 |Rechteck|Wird als Element innerhalb des Containers gerendert.|  
 |Matrixspaltengruppen|Werden als Elemente innerhalb von Zeilengruppen gerendert.|  
-|Karte|Wird als Element innerhalb des Elements für den Container gerendert. Kartenebenen sind untergeordnete Elemente der Karte, und jede Kartenebene umfasst Elemente für die zugehörigen Kartenelemente und Kartenelementattribute.|  
+|Zuordnung|Wird als Element innerhalb des Elements für den Container gerendert. Kartenebenen sind untergeordnete Elemente der Karte, und jede Kartenebene umfasst Elemente für die zugehörigen Kartenelemente und Kartenelementattribute.|  
 |Diagramm|Wird als Element innerhalb des Elements für den Container gerendert. Reihen sind untergeordnete Elemente des Diagramms, und Kategorien sind untergeordnete Elemente einer Reihe. Alle Diagrammbezeichnungen für jeden Diagrammwert werden gerendert. Bezeichnungen und Werte sind als Attribute eingeschlossen.|  
 |Datenbalken|Wird ähnlich einem Diagramm als Element innerhalb des Elements für den Container gerendert. Ein Datenbalken enthält normalerweise keine Hierarchien oder Bezeichnungen, sondern nur Werte.|  
 |Sparkline|Wird ähnlich einem Diagramm als Element innerhalb des Elements für den Container gerendert. Eine Sparkline enthält normalerweise keine Hierarchien oder Bezeichnungen, sondern nur Werte.|  
@@ -62,9 +62,9 @@ ms.locfileid: "48116400"
 |Wert aller Textfeldelemente|Zugewiesener Datentyp|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|`Decimal` (oder `Decimal` und jeder Integer- oder Byte-Datentyp)|**xsd:decimal**|  
-|`Float` (oder `Decimal` und jeder Integer- oder Byte-Datentyp)|**xsd:float**|  
-|`Double` (oder `Decimal` und jeder Integer- oder Byte-Datentyp)|**xsd:double**|  
+|`Decimal` (oder `Decimal` und jeder ganzzahlige oder BYTE-Datentyp)|**xsd:decimal**|  
+|`Float` (oder `Decimal` und jeder ganzzahlige oder BYTE-Datentyp)|**xsd:float**|  
+|`Double` (oder `Decimal` und jeder ganzzahlige oder BYTE-Datentyp)|**xsd:double**|  
 |`DateTime or DateTime Offset`|**xsd:dateTime**|  
 |`Time`|**xsd:string**|  
 |`Boolean`|**xsd:boolean**|  
@@ -81,11 +81,11 @@ ms.locfileid: "48116400"
   
  XML-Namespacedefinitionen und Schemareferenzattribute sind ebenfalls im Berichtselement enthalten. Variablen werden fett formatiert:  
   
- \<**Bericht** Xmlns = "**SchemaName**" xmlns: xsi = "http://www.w3.org/2001/XMLSchema-instance" Xsi:**SchemaLocation**= "**Schemanameberichturl**&amp;Rc % 3aSchema = "true" fest"Name ="Berichtname">  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  Die Werte für die Variablen lauten wie folgt:  
   
-|Name|value|  
+|Name|Wert|  
 |----------|-----------|  
 |Bericht|Report.DataElementName|  
 |ReportURL|URL-codierte absolute URL zum Bericht auf dem Server.|  
@@ -199,7 +199,7 @@ ms.locfileid: "48116400"
   
 ## <a name="see-also"></a>Siehe auch  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten (Berichts-Generator und SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

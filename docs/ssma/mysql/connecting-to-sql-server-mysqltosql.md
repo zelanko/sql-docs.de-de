@@ -13,12 +13,12 @@ ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2827824224488cbaad99df0784159a5231a7eade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64dd3fae9776c09f81571a721aa53753e34fbb17
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773938"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412287"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Herstellen einer Verbindung mit SQL Server (MySqlToSql)
 Um MySQL-Datenbanken zu SQL Server zu migrieren, müssen Sie mit der Zielinstanz von SQL Server verbinden. Wenn Sie eine Verbindung herstellen, wird SSMA Ruft Metadaten zu allen Datenbanken in der Instanz von SQL Server ab und Datenbank-Metadaten in der SQL Server-Metadaten-Explorer angezeigt. SSMA speichert Informationen von der Instanz von SQL Server Sie verbunden sind, jedoch werden keine Kennwörter gespeichert werden.  
@@ -62,7 +62,7 @@ Wenn Sie die Verbindungseigenschaften definieren, geben Sie auch die Datenbank, 
   
 5.  Für sichere Verbindung zwei Steuerelemente hinzugefügt werden, die **Verbindung verschlüsseln** und **TrustServerCertificate** Kontrollkästchen. Nur wenn **Verbindung verschlüsseln** aktiviert ist, wird die **TrustServerCertificate** Kontrollkästchen wird angezeigt. Wenn **Verbindung verschlüsseln** (true) aktiviert ist und **TrustServerCertificate** ist deaktiviert (false), er überprüft das SQL Server-SSL-Zertifikat. Das Überprüfen des Serverzertifikats ist Teil des SSL-Handshakes und stellt sicher, dass es sich bei dem Server tatsächlich um den Server handelt, mit dem eine Verbindung hergestellt werden soll. Um dies zu gewährleisten, muss ein Zertifikat auf dem Client als auch auf dem Server installiert sein.  
   
-6.  Klicken Sie auf Verbinden.  
+6.  Klicken Sie auf „Verbinden“.  
   
 **Kompatibilität mit höheren Versionen**  
   
@@ -81,12 +81,12 @@ Es ist zulässig, eine Verbindung herstellen/sich auf höhere Versionen von SQL 
 ||||||||  
 |-|-|-|-|-|-|-|  
 |**Projekt-Typ und VERSION des ZIELSERVERS**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (Version: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (Version: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014<br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Benutzerkontensteuerung|Benutzerkontensteuerung||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||Benutzerkontensteuerung||  
-|SQL Azure||||||Benutzerkontensteuerung|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Ja|Ja|Ja|Ja|Ja||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Ja|Ja|Ja|Ja||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Ja|Ja|Ja||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Ja|Ja||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||Ja||  
+|SQL Azure||||||Ja|  
   
 > [!IMPORTANT]  
 > Konvertierung der Datenbankobjekte erfolgt gemäß den Projekttyp, aber nicht gemäß der Version von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbunden. Im Fall von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005-Projekt Konvertierung erfolgt gemäß [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, obwohl Sie mit einer höheren Version verbunden sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  

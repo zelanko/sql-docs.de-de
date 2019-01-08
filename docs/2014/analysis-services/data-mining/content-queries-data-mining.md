@@ -11,12 +11,12 @@ ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc6f7db4783f1fc828c183c76563a6fed42ab2ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b500821dff03210d63007ef4831f93327b5e6bdb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209810"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530518"
 ---
 # <a name="content-queries-data-mining"></a>Inhaltsabfragen (Data Mining)
   Eine Inhaltsabfrage stellt eine Möglichkeit dar, Informationen über interne Statistiken und die Struktur des Miningmodells zu extrahieren. Mitunter enthält eine Inhaltsabfrage Details, die im Viewer nicht unmittelbar verfügbar sind. Sie können auch die Ergebnisse einer Inhaltsabfrage verwenden, um Informationen programmgesteuert zu anderen Verwendungszwecken zu extrahieren.  
@@ -135,7 +135,7 @@ ms.locfileid: "48209810"
   
  In diesem Abschnitt werden einige Beispiele bereitgestellt, die veranschaulichen, wie sich die Auswahl des Algorithmus auf die Art von Informationen auswirkt, die im Modell gespeichert werden. Weitere Informationen zu den Miningmodellinhalten und zu den spezifischen Inhalten der einzelnen Modelltypen finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Assoc"></a> Beispiel 1: Inhaltsabfrage eines Zuordnungsmodells  
+###  <a name="bkmk_Assoc"></a> Beispiel 1: Inhaltsabfrage für ein Zuordnungsmodell  
  Die Anweisung `SELECT FROM <model>.CONTENT`gibt unterschiedliche Informationen zurück, je nachdem, welcher Modelltyp abgefragt wird. Bei einem Zuordnungsmodell ist eine der wichtigsten Informationen der *Knotentyp*. Knoten sind wie Container für Informationen im Modellinhalt. In einem Zuordnungsmodell haben Knoten, die Regeln repräsentieren, den NODE_TYPE-Wert 8, während Knoten, die Itemsets darstellen, den NODE_TYPE-Wert 7 aufweisen.  
   
  Die folgende Abfrage gibt daher die obersten 10 Itemsets geordnet nach Unterstützung (Standardreihenfolge) zurück.  
@@ -145,7 +145,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- Die folgende Abfrage baut auf diesen Informationen auf. Die Abfrage gibt drei Spalten zurück: die ID des Knotens, die vollständige Regel und das Produkt auf der rechten Seite des Itemsets, das heißt, das Produkt, das für die Zuordnung mit einem anderen Produkt im Rahmen eines Itemsets vorhergesagt wird.  
+ Die folgende Abfrage baut auf diesen Informationen auf. Die Abfrage gibt drei Spalten zurück: die ID des Knotens, die vollständige Regel und das Produkt auf der rechten Seite des Itemsets – das heißt, das Produkt, das für die Zuordnung mit einem anderen Produkt im Rahmen eines Itemsets vorhergesagt wird.  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -197,7 +197,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
  Weitere Informationen zum Arbeiten mit hierarchischen Rowsets finden Sie in der OLEDB-Spezifikation von MSDN.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verstehen die DMX Select-Anweisung](/sql/dmx/understanding-the-dmx-select-statement)   
+ [Grundlegendes zur SELECT-Anweisung (DMX)](/sql/dmx/understanding-the-dmx-select-statement)   
  [Data Mining-Abfragen](data-mining-queries.md)  
   
   

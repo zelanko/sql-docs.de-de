@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu Durchlauf- und Lösungsreihenfolge (MDX) | Microsoft Docs
+title: Grundlegendes zu Durchlauf- und Lösungsreihenfolge (MDX) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4b865293cb9c76fb46e8fe12befb2a000d21907
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6a578537f5221fef314a4a732f00f99d82311bbe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025957"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545402"
 ---
-# <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX - Datenmanipulation: Grundlegendes zur Übergabe bestellen und Lösungsreihenfolge
+# <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX – Datenbearbeitung: Grundlegendes zu Durchlauf-bestellen und Lösungsreihenfolge
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Wird ein Cube als Ergebnis eines MDX-Skripts berechnet, durchläuft er, abhängig von der Verwendung verschiedener Berechnungsfunktionen, möglicherweise viele Berechnungsphasen. Jede Phase bezeichnet man als Berechnungsdurchlauf.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34025957"
 > [!NOTE]  
 >  Sie können diese MDX-Abfragen unter Verwendung der mehrdimensionalen Adventure Works-Beispieldatenbank ausführen. Sie können das Beispiel zu [AdventureWorks Multidimensional Models SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) von der Codeplex-Website herunterladen.  
   
-### <a name="query-1differences-in-income-and-expenses"></a>Abfrage 1 – Differenzen zwischen Income und Expenses  
+### <a name="query-1-differences-in-income-and-expenses"></a>Abfrage 1 – Differenzen zwischen Income und Expenses  
  Mit der ersten MDX-Abfrage berechnen Sie die Differenz zwischen Umsätzen und Kosten für jedes Jahr, indem Sie eine einfache MDX-Abfrage wie im folgenden Beispiel erstellen:  
   
 ```  
@@ -86,7 +86,7 @@ FROM [Adventure Works]
 |**KJ 2008**|$9,770,899.74|$5,721,205.24|  
 |**Year Difference**|($20,160.56)|$2,878.06|  
   
-### <a name="query-2percentage-of-income-after-expenses"></a>Abfrage 2 – Prozentsatz von Income nach Abzug von Expenses  
+### <a name="query-2-percentage-of-income-after-expenses"></a>Abfrage 2 – Prozentsatz von Income nach Abzug von Expenses  
  Mit der zweiten Abfrage berechnen Sie den Prozentsatz des Einkommens nach Abzug der Ausgaben für jedes Jahr. Verwenden Sie dazu die folgende MDX-Abfrage:  
   
 ```  
@@ -114,7 +114,7 @@ FROM [Adventure Works]
   
  Der Grund für die unterschiedlichen Resultsets aus der ersten und der zweiten Abfrage ist eine andere Platzierung des berechneten Elements. In der ersten Abfrage ist das berechnete Element Teil der ROWS-Achse und nicht der COLUMNS-Achse, wie in der zweiten Abfrage. Diese unterschiedliche Platzierung gewinnt in der nächsten Abfrage an Bedeutung, wenn die beiden berechneten Elemente in einer einzigen MDX-Abfrage kombiniert werden.  
   
-### <a name="query-3combined-year-difference-and-net-income-calculations"></a>Abfrage 3 – Kombinierte Berechnungen für Year Difference und Net Income  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>Abfrage 3 – kombinierte Year Difference und Net Income Berechnungen  
  In dieser letzten Abfrage, in der die beiden vorherigen Beispiele in einer MDX-Abfrage kombiniert werden, ist die Lösungsreihenfolge von Bedeutung, da Berechnungen sowohl für Spalten als auch für Zeilen ausgeführt werden. Um sicherzustellen, dass die Berechnungen in der richtigen Reihenfolge vorgenommen werden, definieren Sie diese Reihenfolge mithilfe des **SOLVE_ORDER** -Schlüsselworts.  
   
  Das **SOLVE_ORDER** -Schlüsselwort gibt die Lösungsreihenfolge der berechneten Elemente in einer MDX-Abfrage oder einem **CREATE MEMBER** -Befehl an. Die mit dem **SOLVE_ORDER** -Schlüsselwort verwendeten ganzzahligen Werte sind relativ, müssen nicht mit 0 beginnen und nicht aufeinander folgen. Der Wert weist MDX lediglich an, ein Element auf der Grundlage von Werten zu berechnen, die aus der Berechnung von Elementen mit einem höheren Wert abgeleitet sind. Wird ein berechnetes Element ohne das **SOLVE_ORDER** -Schlüsselwort definiert, lautet sein Standardwert 0.  
@@ -141,7 +141,7 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- In diesem Beispiel für eine kombinierte MDX-Abfrage weist `Profit Margin` die höchste Lösungsreihenfolge auf und hat daher bei der Interaktion zweier Ausdrücke Vorrang. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wertet die betreffende Zelle mit der `Profit Margin`-Formel aus. Das Ergebnis dieser geschachtelten Berechnung ist in der folgenden Tabelle dargestellt.  
+ In diesem Beispiel für eine kombinierte MDX-Abfrage weist `Profit Margin` die höchste Lösungsreihenfolge auf und hat daher bei der Interaktion zweier Ausdrücke Vorrang. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wertet die betreffende Zelle mit der `Profit Margin` -Formel aus. Das Ergebnis dieser geschachtelten Berechnung ist in der folgenden Tabelle dargestellt.  
   
 ||Internet Sales Amount|Internet Total Product Cost|Profit Margin|  
 |-|---------------------------|---------------------------------|-------------------|  
@@ -205,9 +205,9 @@ FROM [Adventure Works]
  Die Lösungsreihenfolge kann ein sehr komplexes Problem darstellen, besonders in Cubes mit einer hohen Anzahl von Dimensionen, die berechnete Elemente, benutzerdefinierte Rollupformeln oder berechnete Zellen beinhalten. Wenn [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] eine MDX-Abfrage auswertet, berücksichtigt [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] die Werte der Lösungsreihenfolge für alle Teile in einem bestimmten Durchlauf, einschließlich der Dimensionen des in der MDX-Abfrage angegebenen Cubes.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CalculationCurrentPass & #40; MDX & #41;](../../../mdx/calculationcurrentpass-mdx.md)   
- [CalculationPassValue & #40; MDX & #41;](../../../mdx/calculationpassvalue-mdx.md)   
- [Erstellen Sie MEMBER-Anweisung & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Bearbeiten von Daten & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [CalculationCurrentPass &#40;MDX&#41;](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationPassValue &#40;MDX&#41;](../../../mdx/calculationpassvalue-mdx.md)   
+ [CREATE MEMBER-Anweisung &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Bearbeiten von Daten &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

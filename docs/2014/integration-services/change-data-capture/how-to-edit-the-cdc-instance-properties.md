@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9a6df6cd1c4f96c241260be29b77560146f7f85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2d15f17b867cd02d700ce6c749edddaa2c65083
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184336"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772942"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>Bearbeiten der CDC-Instanzeigenschaften
   In diesem Verfahren wird beschrieben, wie Sie die CDC Designer Console verwenden, um die Konfigurationseigenschaften für eine CDC-Instanz zu bearbeiten.  
@@ -35,7 +34,7 @@ ms.locfileid: "48184336"
   
 5.  Bearbeiten Sie im Eigenschaften-Editor die Eigenschaften auf den folgenden Registerkarten:  
   
-    -   **Oracle**: Verwenden Sie die Registerkarte **Oracle** im Eigenschaften-Editor, um Änderungen an der Beschreibung vorzunehmen, die Sie im Assistenten für neue Instanzen auf der Seite Create CDC database angegeben haben, und um Änderungen an den Verbindungsinformationen zur Oracle Log Mining-Datenbank vorzunehmen.  
+    -   **Oracle**: Verwenden der **Oracle** Registerkarte im Eigenschaften-Editor, um die Beschreibung ändern Sie im Assistenten für neue Instanzen der Seite Create CDC Database angegeben haben und, um die Informationen zur Oracle Log Mining datenbankverbindung zu ändern.  
   
          Informationen zu den Bearbeitungsmöglichkeiten auf dieser Registerkarte finden Sie unter [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md).  
   
@@ -43,7 +42,7 @@ ms.locfileid: "48184336"
   
          Informationen zu den Bearbeitungsmöglichkeiten auf dieser Registerkarte finden Sie unter [Edit Tables](edit-tables.md).  
   
-    -   **Skripts:** Verwenden Sie die Registerkarte **Skripts** , um ein Skript für die Oracle-Quelldatenbank auszuführen bzw. erneut auszuführen, mit dem die ergänzende Protokollierung eingerichtet wird.  
+    -   **Skripts**: Verwenden der **Skripts** Registerkarte ausführen, oder führen Sie ein Skript erneut aus, für die Oracle-Quelldatenbank, die ergänzende Protokollierung eingerichtet wird.  
   
          Informationen zu den Optionen auf dieser Registerkarte finden Sie unter [Review and Generate Supplemental Logging Scripts](review-and-generate-supplemental-logging-scripts.md).  
   

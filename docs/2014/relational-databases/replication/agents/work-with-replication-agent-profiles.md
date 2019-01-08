@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
@@ -16,12 +15,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c68295673fb34c0257a9772540282b8e814df03b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169787"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772202"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Arbeiten mit Replikations-Agent-Profilen
   In diesem Thema wird beschrieben, wie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) mit Replikations-Agentprofilen gearbeitet wird. Das Verhalten der einzelnen Replikations-Agents wird durch eine Reihe von Parametern gesteuert, die über Agentprofile festgelegt werden können. Jeder Agent weist ein Standardprofil auf, und einige Agents besitzen weitere vordefinierte Profile, wobei für einen Agent jeweils immer nur ein Profil aktiv ist.  
@@ -64,7 +63,7 @@ ms.locfileid: "48169787"
   
 -   **Nachverfolgung:**  [Nach dem Ändern der Agentparameter](#FollowUp)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 ###  <a name="Access_SSMS"></a> So greifen Sie auf das Dialogfeld Agentprofile in SQL Server Management Studio zu  
   
@@ -245,7 +244,7 @@ ms.locfileid: "48169787"
   
     -   (Optional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - eine Beschreibung des Profils.  
   
-    -   (Optional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -diese Eigenschaft auf festgelegt `true` Wenn alle neuen Agentaufträge für diesen <xref:Microsoft.SqlServer.Replication.AgentType> dieses Profil standardmäßig verwenden.  
+    -   (Optional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - Legen Sie diese Eigenschaft auf `true` fest, wenn alle neuen Agentaufträge für diesen <xref:Microsoft.SqlServer.Replication.AgentType> dieses Profil standardmäßig verwenden.  
   
 4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> -Methode auf, um das Profil auf dem Server zu erstellen.  
   
@@ -259,9 +258,9 @@ ms.locfileid: "48169787"
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Klasse. Übergeben Sie das in Schritt 1 erstellte <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Objekt.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Überprüfen Sie, ob der Verteiler vorhanden ist, wenn diese Methode `false` zurückgibt.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf. Überprüfen Sie, ob der Verteiler vorhanden ist, wenn diese Methode `false` zurückgibt.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> -Methode auf. Übergeben Sie einen <xref:Microsoft.SqlServer.Replication.AgentType> -Wert, um die zurückgegebenen Profile für einen bestimmten Typ von Replikations-Agent einzugrenzen.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A>-Methode auf. Übergeben Sie einen <xref:Microsoft.SqlServer.Replication.AgentType> -Wert, um die zurückgegebenen Profile für einen bestimmten Typ von Replikations-Agent einzugrenzen.  
   
 5.  Rufen Sie das gewünschte <xref:Microsoft.SqlServer.Replication.AgentProfile> -Objekt von der zurückgegebenen <xref:System.Collections.ArrayList>ab, wobei die <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> -Eigenschaft des Objekt mit dem Profilnamen übereinstimmt.  
   
@@ -279,13 +278,13 @@ ms.locfileid: "48169787"
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.AgentProfile> -Klasse. Legen Sie den Namen des Profils für <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> und <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode zurückgibt `false`, wurde ein falscher Name angegeben, oder das Profil auf dem Server nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf. Wenn diese Methode `false` zurückgibt, wurde ein falscher Name angegeben, oder das Profil ist auf dem Server nicht vorhanden.  
   
 4.  Stellen Sie sicher, dass die <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> -Eigenschaft auf <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>festgelegt ist, womit ein Kundenprofil angegeben wird. Entfernen Sie kein Profil, das einen Wert <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> für <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>aufweist.  
   
 5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> -Methode auf, um das benutzerdefinierte Profil, das durch dieses Objekt dargestellt wird, vom Server zu entfernen.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Ändern der Agentparameter  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Ändern der Agentparameter  
  Die Änderungen der Agentparameter treten in Kraft, wenn der Agent das nächste Mal gestartet wird. Wenn der Agent ständig ausgeführt wird, müssen Sie den Agent beenden und neu starten.  
   
 ## <a name="see-also"></a>Siehe auch  

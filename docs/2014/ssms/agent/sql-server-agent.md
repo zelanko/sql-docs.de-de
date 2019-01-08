@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
@@ -13,12 +13,12 @@ ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e0f1e8f3e76ffbe84495fc7bae6229a1b590089
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211930"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783882"
 ---
 # <a name="sql-server-agent"></a>SQL Server-Agent
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ist ein Microsoft Windows-Dienst, der geplante administrative Tasks ausführt, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] als *Jobs* bezeichnet werden.  
@@ -73,7 +73,7 @@ ms.locfileid: "48211930"
   
  Weitere Informationen finden Sie unter [Anlegen und Zuweisen von Zeitplänen zu Aufträgen](create-and-attach-schedules-to-jobs.md).  
   
-### <a name="alerts"></a>Warnungen  
+### <a name="alerts"></a>Benachrichtigungen  
  Eine *Warnung* ist eine automatische Reaktion auf ein bestimmtes Ereignis. Bei einem Ereignis kann es sich z.B. um das Starten eines Auftrags oder das Erreichen eines bestimmten Schwellenwerts bei den Systemressourcen handeln. Sie definieren die Bedingungen, unter denen eine Warnung auftritt.  
   
  Eine Warnung kann als Reaktion auf eine der folgenden Bedingungen ausgegeben werden:  
@@ -139,9 +139,9 @@ ms.locfileid: "48211930"
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketausführung|Ausführen eines [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Pakets.|  
   
 > [!NOTE]  
->  Da [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auftragsschritte keine Proxys verwenden, gibt es kein Subsystem des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auftragsschritte.  
+>  Da [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftragsschritte keine Proxys verwenden, gibt es kein Subsystem des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents für [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftragsschritte.  
   
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent erzwingt Subsystemeinschränkungen auch dann, wenn der Sicherheitsprinzipal für den Proxy normalerweise über die Berechtigung zum Ausführen des Tasks im Auftragsschritt verfügen würde. Beispielsweise kann ein Proxykonto für einen Benutzer, der Mitglied der festen Serverrolle „sysadmin“ ist, nur einen [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Auftragsschritt ausführen, wenn das Proxykonto Zugriff auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Subsystem hat. Der Benutzer kann jedoch [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Pakete ausführen.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent erzwingt Subsystemeinschränkungen auch dann, wenn der Sicherheitsprinzipal für den Proxy normalerweise über die Berechtigung zum Ausführen des Tasks im Auftragsschritt verfügen würde. Beispielsweise kann ein Proxykonto für einen Benutzer, der Mitglied der festen Serverrolle „sysadmin“ ist, nur einen [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Auftragsschritt ausführen, wenn das Proxykonto Zugriff auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Subsystem hat. Der Benutzer kann jedoch [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Pakete ausführen.  
   
 ### <a name="proxies"></a>Proxys  
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet Proxys zum Verwalten von Sicherheitskontexten. Ein Proxy kann für mehrere Auftragsschritte verwendet werden. Mitglieder der `sysadmin` -Serverrolle kann Proxys erstellen.  

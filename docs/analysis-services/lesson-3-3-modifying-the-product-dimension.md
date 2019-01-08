@@ -1,5 +1,5 @@
 ---
-title: Ändern der Produktdimension | Microsoft Docs
+title: Ändern der Product-Dimension | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b35f1712af9d501ff35a92cecb0eeea068d9aac0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fd0617d5c3d79ae0cf2eb7021f730a8062bd969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019567"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525843"
 ---
-# <a name="lesson-3-3---modifying-the-product-dimension"></a>Lektion 3 – 3 – Ändern der Produktdimension
+# <a name="lesson-3-3---modifying-the-product-dimension"></a>Lektion 3-3: Ändern der Product-Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 In den Aufgaben in diesem Thema verwenden Sie eine benannte Berechnung, um aussagekräftigere Namen für Produktlinien zur Verfügung zu stellen, definieren eine Hierarchie in der Product-Dimension, und geben den (All) -Elementnamen für die Hierarchie an. Außerdem gruppieren Sie Attribute in Anzeigeordner.  
@@ -58,7 +58,7 @@ Sie können einer Tabelle in einer Datenquellensicht eine benannte Berechnung hi
   
 2.  Wählen Sie im Bereich **Attribute** der Registerkarte **Dimensionsstruktur** die Option **Product Line**aus.  
   
-3.  Klicken Sie rechts auf dem Bildschirm im Eigenschaftenfenster auf das Eigenschaftsfeld **NameColumn** und anschließend auf die Schaltfläche mit den Auslassungspunkten (**…**), um das Dialogfeld **Namensspalte** zu öffnen. (Sie müssen ggf. auf die Registerkarte **Eigenschaften** auf der rechten Seite vom Bildschirm klicken, um das Eigenschaftenfenster zu öffnen).  
+3.  Klicken Sie im Eigenschaftenfenster auf der rechten Seite des Bildschirms auf die **NameColumn** Eigenschaftenfeld am unteren Rand des Fensters, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld. (Sie müssen ggf. auf die Registerkarte **Eigenschaften** auf der rechten Seite vom Bildschirm klicken, um das Eigenschaftenfenster zu öffnen).  
   
 4.  Wählen Sie **ProductLineName** weiter unten in der Liste **Quellspalte** aus, und klicken Sie auf **OK**.  
   
@@ -66,7 +66,7 @@ Sie können einer Tabelle in einer Datenquellensicht eine benannte Berechnung hi
   
 5.  Wählen Sie im Bereich **Attribute** der Registerkarte **Dimensionsstruktur** die Option **Product Key**aus.  
   
-6.  Klicken Sie im Eigenschaftenfenster auf das Eigenschaftsfeld **NameColumn** und anschließend auf die Schaltfläche mit den Auslassungspunkten (**…**), um das Dialogfeld **Namensspalte** zu öffnen.  
+6.  Klicken Sie im Eigenschaftenfenster auf die **NameColumn** Eigenschaft ein, und klicken Sie dann auf den Auslassungspunkten (**...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
   
 7.  Wählen Sie **EnglishProductName** in der Liste **Quellspalte** aus, und klicken Sie auf **OK**.  
   
@@ -110,7 +110,7 @@ Sie können einer Tabelle in einer Datenquellensicht eine benannte Berechnung hi
   
     -   **Size Range**  
   
-    -   **Style**  
+    -   **Stil**  
   
     -   **Weight**  
   
@@ -179,11 +179,11 @@ Sofern die zugrunde liegenden Daten dies unterstützen, sollten Sie auch Attribu
   
     Beachten Sie, dass der Name des **Alle** -Elements als **All Products**angezeigt wird. Der Grund dafür ist, dass Sie die **AllMemberName** -Eigenschaft für die Hierarchie weiter oben in dieser Lektion in **All Products** geändert haben. Auch verfügen die Elemente der **Product Line** -Ebene jetzt über benutzerfreundliche Namen anstelle von Abkürzungen aus einem Buchstaben.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Ändern der Date-Dimension](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Definieren von benannten Berechnungen in einer Datenquellensicht & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [Erstellen von benutzerdefinierten Hierarchien](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [Konfigurieren der Ebene &#40;Alle&#41; für Attributhierarchien](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

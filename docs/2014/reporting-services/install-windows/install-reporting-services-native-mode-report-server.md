@@ -15,15 +15,15 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9bfbae24063bfa3daa7fbafd1004125e826f6886
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 39f3b68f816594d275f48723865c7497f5352fbb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851865"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527706"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Installieren des Reporting Services-Berichtsservers im einheitlichen Modus
-  Ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver im einheitlichen Modus kann mit dem Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder über die Befehlszeile installiert werden. Im Setup-Assistenten können Sie wahlweise 1) Dateien installieren und den Server anhand der Standardeinstellungen konfigurieren oder 2) nur die Dateien installieren, ohne dass der Server vom Installations-Assistenten konfiguriert wird. In diesem Thema wird die *Standardkonfiguration für den einheitlichen Modus* beschrieben, in der eine Berichtsserverinstanz von Setup installiert und konfiguriert wird. Nach Abschluss der Installation wird der Berichtsserver ausgeführt und ist einsatzbereit. Ein Berichtsserver im einheitlichen Modus wird als eigenständiger Anwendungsserver ausgeführt. Der einheitliche Modus ist der standardmäßige Servermodus.  
+  Ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver im einheitlichen Modus kann mit dem Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder über die Befehlszeile installiert werden. Im Setup-Assistenten können Sie wahlweise 1) Dateien installieren und den Server anhand der Standardeinstellungen konfigurieren oder 2) nur die Dateien installieren, ohne dass der Server vom Installations-Assistenten konfiguriert wird. In diesem Thema wird die *Standardkonfiguration für den einheitlichen Modus* beschrieben, in der eine Berichtsserverinstanz von Setup installiert und konfiguriert wird. Nach Abschluss der Installation wird der Berichtsserver ausgeführt und ist einsatzbereit. Ein Berichtsserver im einheitlichen Modus wird als eigenständiger Anwendungsserver ausgeführt. Der einheitliche Modus ist der standardmäßige Servermodus.  
   
 ||  
 |-|  
@@ -48,7 +48,7 @@ ms.locfileid: "48851865"
   
 -   Berichtsserver-Dienst (einschließlich des Berichtsserver-Webdienstes, der Hintergrundverarbeitungsanwendung und des Berichts-Managers)  
   
--   Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurations-Manager  
+-   Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager  
   
 -   Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Befehlszeilen-Hilfsprogramme (rsconfig.exe, rskeymgmt.exe und rs.exe)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48851865"
   
 -   Setup muss die Standardwerte für die Erstellung der Berichtsserver-Datenbanken verwenden können. Diese Werte lauten **ReportServer** und **ReportServerTempDB**. Wenn Sie über bestehende Datenbanken aus einer früheren Installation verfügen, wird das Setup blockiert, weil es den Berichtsserver nicht in der Standardkonfiguration für den einheitlichen Modus konfigurieren kann. Sie müssen die Datenbanken umbenennen, verschieben oder löschen, um die Blockierung des Setups aufzuheben.  
   
- Wenn Ihr Computer nicht alle Anforderungen für eine Standardinstallation erfüllt, müssen Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im Dateimodus installieren und dann den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationsmanager verwenden, um nach dem Setup die Konfiguration durchzuführen.  
+ Wenn Ihr Computer nicht alle Anforderungen für eine Standardinstallation erfüllt, müssen Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im Dateimodus installieren und dann den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationsmanager verwenden, um nach dem Setup die Konfiguration durchzuführen.  
   
  Versuchen Sie nicht, den Computer neu zu konfigurieren, nur um die Standardinstallation fortsetzen zu können. Dies könnte mehrere Stunden Arbeit bedeuten, was die Zeitersparnis der Installationsoption wieder zunichte machen würde. Am besten ist es, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im Dateimodus zu installieren und den Berichtsserver dann an die benutzerspezifischen Werte anzupassen.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48851865"
   
     -   **Einheitlicher Modus von Reporting Services**.  
   
-    -   **Verwaltungstools – Standard**. Die Verwaltungstools sind nicht erforderlich, sie werden jedoch empfohlen, sofern Sie über keine andere Installation von Verwaltungstools verfügen. Die standardkonfigurationsoption führt einen funktionierenden Berichtsserver, aber Sie Optionen für die Konfiguration zu einem späteren Zeitpunkt ändern möchten. Einige Optionen wie 'Meine Berichte' werden durch [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwaltet  
+    -   **Verwaltungstools – Standard**. Die Verwaltungstools sind nicht erforderlich, sie werden jedoch empfohlen, sofern Sie über keine andere Installation von Verwaltungstools verfügen. Die standardkonfigurationsoption führt einen funktionierenden Berichtsserver, aber Sie Optionen für die Konfiguration zu einem späteren Zeitpunkt ändern möchten. Einige Optionen wie 'Meine Berichte' werden über verwaltet. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
      ![Auswahl des einheitlichen SSRS-Modus bei der Funktionsauswahl](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "SSRS Native Mode Select in Feature Selection")  
   

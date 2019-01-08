@@ -16,12 +16,12 @@ ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b60e17ca95bff865d1a0786aa7da5ee398adcb7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 623f3a4724de84dbb1e355ffbd64a6868ea0f12a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170291"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518106"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Planung (Tabellenanalysetools für Excel)
   ![Planungs-Schaltfläche in der Tabelle Analysis tools Menüband](media/tat-forecast.gif "Vorhersage-Schaltfläche in Tabellenanalysetools-Menüband")  
@@ -40,7 +40,7 @@ ms.locfileid: "48170291"
   
 2.  Klicken Sie auf **prognostizieren** auf die **analysieren** Registerkarte.  
   
-3.  Geben Sie die vorherzusagenden Spalten an. Vom Tool werden automatisch die Spalten aus den Daten ausgewählt, die einen vorhersagbaren Datentyp aufweisen, d. h. kontinuierliche numerische Daten. Es kann vorkommen, dass von dem Tool bestimmte Spalten mit kontinuierlichen numerischen Daten nicht ausgewählt werden, wenn diese zahlreiche Nullwerte oder leere Werte enthalten, da die fehlenden Daten sich auf die Ergebnisse auswirken können. In diesem Fall können Sie die Daten beheben, indem Sie mit der [neu bezeichnen &#40;SQL Server Data Mining-Add-ins&#41; ](relabel-sql-server-data-mining-add-ins.md) Tool.  
+3.  Geben Sie die vorherzusagenden Spalten an. Das Tool wählt automatisch die Spalten in den Daten, die einen vorhersagbaren Datentyp aufweisen – d. h. kontinuierliche numerische Daten. Es kann vorkommen, dass von dem Tool bestimmte Spalten mit kontinuierlichen numerischen Daten nicht ausgewählt werden, wenn diese zahlreiche Nullwerte oder leere Werte enthalten, da die fehlenden Daten sich auf die Ergebnisse auswirken können. In diesem Fall können Sie die Daten beheben, indem Sie mit der [neu bezeichnen &#40;SQL Server Data Mining-Add-ins&#41; ](relabel-sql-server-data-mining-add-ins.md) Tool.  
   
 4.  Geben Sie die Spalte mit dem Datum, der Uhrzeit oder einem anderen Reihenbezeichner an. Wenn Sie die Option  **\<kein Timestamp >** vom Tool wird eine Reihe basierend auf der Reihenfolge der Zeilen in den Quelldaten erstellt.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48170291"
 ### <a name="requirements"></a>Anforderungen  
  Die von Ihnen vorhergesagten Spalten müssen kontinuierliche numerischen Daten (z. B. eine Währung oder andere Zahlen) enthalten.  
   
- Ihre Daten sollten nach Möglichkeit auch eine Spalte mit einer Zeit- oder Datumsreihe umfassen. Sie können eine numerische Reihe (1, 2, 3, ...) anstelle von Datums- oder Zeitdaten verwenden. Die Werte in der Reihenspalte müssen jedoch eindeutig sein. Ein Fehler tritt auf, wenn die **prognostizieren** Tool doppelte Werte in der reihenspalte gefunden.  
+ Ihre Daten sollten nach Möglichkeit auch eine Spalte mit einer Zeit- oder Datumsreihe umfassen. Sie können eine numerische Reihe (1,2,3…).) anstelle von Datums-und Uhrzeitdaten. Die Werte in der Reihenspalte müssen jedoch eindeutig sein. Ein Fehler tritt auf, wenn die **prognostizieren** Tool doppelte Werte in der reihenspalte gefunden.  
   
  Sie können ein Datum können nicht vorhersagen, mit der **prognostizieren** Tool. Obwohl möglicherweise kein Fehler generiert wird, wurde der Algorithmus nicht für die Verwendung von Datumswerten als vorhersagbare Werte entwickelt.  
   

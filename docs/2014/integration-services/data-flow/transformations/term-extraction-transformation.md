@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
@@ -26,12 +25,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a0e333b31bef63c0f0f8fcf3a9d54dbdba579a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d63836dbc6827eb47daaf4110bc678357012d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155130"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762438"
 ---
 # <a name="term-extraction-transformation"></a>Transformation für Ausdrucksextrahierung
   Die Transformation für Ausdrucksextrahierung extrahiert Ausdrücke aus Text in einer Transformationseingabespalte und schreibt die Ausdrücke dann in eine Transformationsausgabespalte. Diese Transformation ist nur mit englischem Text kompatibel und verwendet ein eigenes englisches Wörterbuch und linguistische Informationen für Englisch.  
@@ -54,7 +53,7 @@ ms.locfileid: "48155130"
 ## <a name="exclusion-terms"></a>Ausschlussausdrücke  
  Optional kann die Transformation für Ausdrucksextrahierung auf eine Spalte in einer Tabelle verweisen, die Ausschlussausdrücke enthält. Dabei handelt es sich um Ausdrücke, die von der Transformation beim Extrahieren von Ausdrücken aus einem Dataset ausgelassen werden sollen. Dies ist hilfreich, wenn bereits mehrere Ausdrücke in einer bestimmten Branche als belanglos identifiziert wurden. Dies ist normalerweise der Fall, wenn der Ausdruck so häufig vorkommt, dass er zu einem Füllwort wird. Wenn Sie z. B. Ausdrücke aus einem Dataset extrahieren, das Informationen zum Kundendienst für eine bestimmte Automarke enthält, könnte der Markenname selbst ausgeschlossen werden, weil er zu häufig erwähnt wird und deshalb bedeutungslos ist. Deshalb müssen die Werte in der Ausschlussliste an das von Ihnen verwendete Dataset angepasst werden.  
   
- Wenn Sie der Ausschlussliste einen Ausdruck hinzufügen, werden alle Ausdrücke – Wörter oder Substantivausdrücke –, die den Ausdruck enthalten, ebenfalls ausgeschlossen. Enthält die Ausschlussliste beispielsweise das einzelne Wort *Daten*, werden alle Ausdrücke, die dieses Worte enthalten, wie z. B. *data*, *data mining*, *data integrity*und *data validation* , ebenfalls ausgeschlossen. Wenn Sie nur zusammengesetzte Wörter ausschließen wollen, die das Wort *data*enthalten, müssen Sie diese zusammengesetzten Wörter explizit zur Ausschlussliste hinzufügen. Wenn Sie beispielsweise den Begriff *data*extrahieren, aber *data validation*ausschließen wollen, fügen Sie *data validation* der Ausschlussliste hinzu, und stellen Sie sicher, dass *data* aus der Ausschlussliste entfernt wird.  
+ Wenn Sie der Ausschlussliste einen Ausdruck hinzufügen, werden alle Ausdrücke, Wörter oder Nominalphrasen, die den Ausdruck enthalten, ebenfalls ausgeschlossen. Enthält die Ausschlussliste beispielsweise das einzelne Wort *Daten*, werden alle Ausdrücke, die dieses Worte enthalten, wie z. B. *data*, *data mining*, *data integrity*und *data validation* , ebenfalls ausgeschlossen. Wenn Sie nur zusammengesetzte Wörter ausschließen wollen, die das Wort *data*enthalten, müssen Sie diese zusammengesetzten Wörter explizit zur Ausschlussliste hinzufügen. Wenn Sie beispielsweise den Begriff *data*extrahieren, aber *data validation*ausschließen wollen, fügen Sie *data validation* der Ausschlussliste hinzu, und stellen Sie sicher, dass *data* aus der Ausschlussliste entfernt wird.  
   
  Die Verweistabelle muss eine Tabelle in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - oder einer Access-Datenbank sein. Die Transformation für Ausdrucksextrahierung verwendet eine separate OLE DB-Verbindung, um eine Verbindung mit der Verweistabelle herzustellen. Weitere Informationen finden Sie unter [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md).  
   
@@ -147,7 +146,7 @@ ms.locfileid: "48155130"
   
 -   Kombinationen aus Zahlen, Satzzeichen und Buchstaben. Beispielsweise gibt *A23B#99* den Ausdruck *A23B*zurück.  
   
--   Die Zeichen %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ und ‘.  
+-   %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " und '.  
   
     > [!NOTE]  
     >  Akronyme, die mindestens einen Punkt (.) enthalten, werden nicht in mehrere Sätze aufgeteilt.  
@@ -174,11 +173,11 @@ ms.locfileid: "48155130"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Ausdrucksextrahierung** festlegen können:  
   
--   [Transformations-Editor für Ausdrucksextrahierung Begriff &#40;Registerkarte Ausdrucksextrahierung&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [Transformations-Editor für Ausdrucksextrahierung &#40;Registerkarte „Ausdrucksextrahierung“&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Transformations-Editor für Ausdrucksextrahierung Begriff &#40;Registerkarte "Ausschluss"&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Transformations-Editor für Ausdrucksextrahierung &#40;Registerkarte „Ausschluss“&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [Transformations-Editor für Ausdrucksextrahierung Begriff &#40;Registerkarte "Erweitert"&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [Transformations-Editor für Ausdrucksextrahierung &#40;Registerkarte „Erweitert“&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   

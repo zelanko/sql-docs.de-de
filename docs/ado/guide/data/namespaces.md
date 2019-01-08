@@ -13,12 +13,12 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5553072dcea3ed64ef8454019892ac5790c7a142
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: db90ecbc083a887a9845542b73e50bae6bf61e1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600110"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534737"
 ---
 # <a name="namespaces"></a>Namespaces
 Die XML-Speicherformat in ADO verwendet die folgenden vier Namespaces.  
@@ -38,7 +38,7 @@ Die XML-Speicherformat in ADO verwendet die folgenden vier Namespaces.
 > [!IMPORTANT]
 >  Die ID für das Schematag muss "RowsetSchema lauten", und der Namespace, der zum Verweisen auf das Schema des aktuellen Rowsets muss zeigen Sie auf "#RowsetSchema."  
   
- Beachten Sie, dass das Präfix des Namespace, der Teil zwischen dem Doppelpunkt und dem Gleichheitszeichen – ist willkürlich.  
+ Beachten Sie, dass das Präfix des Namespace - den Teil zwischen dem Doppelpunkt und dem Gleichheitszeichen - beliebige ist.  
   
 ```  
 xmlns:rs="urn:schemas-microsoft-com:rowset"  

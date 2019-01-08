@@ -10,12 +10,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48fd9be77e8b72ee25211bbf52a70f7989785f52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d63ed7db1cb1f2f201100a8d75c764cca194d4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091240"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514242"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren
   Dieses Thema enthält eine Liste der unterstützten Funktionen für systemintern kompilierte gespeicherte Prozeduren ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -34,9 +34,9 @@ ms.locfileid: "48091240"
   
 -   [Einschränkungen bei der Sortierung](#los)  
   
- Informationen über unterstützte Datentypen in systemintern kompilierten gespeicherte Prozeduren, finden Sie unter [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
+ Informationen zu Datentypen, die in systemintern kompilierten gespeicherten Prozeduren unterstützt werden, finden Sie unter [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
   
- Vollständige Informationen zu nicht unterstützten Konstrukten sowie Informationen zu umgehungslösungen zu einigen der nicht unterstützten Funktionen in systemintern kompilierten gespeicherten Prozeduren finden Sie unter [Migrationsprobleme bei systemintern kompilierten gespeicherten Prozeduren](migration-issues-for-natively-compiled-stored-procedures.md). Weitere Informationen zu nicht unterstützten Funktionen finden Sie unter [Von In-Memory-OLTP nicht unterstützte Transact-SQL-Konstrukte](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+ Vollständige Informationen zu nicht unterstützten Konstrukten sowie Informationen zu Umgehungslösungen zu einigen der nicht unterstützten Funktionen in systemintern kompilierten gespeicherten Prozeduren finden Sie unter [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Weitere Informationen zu nicht unterstützten Funktionen finden Sie unter [Von In-Memory-OLTP nicht unterstützte Transact-SQL-Konstrukte](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
 ##  <a name="pncsp"></a> Programmierbarkeit in systemintern kompilierten gespeicherten Prozeduren  
  Folgende werden unterstützt:  
@@ -81,7 +81,7 @@ ms.locfileid: "48091240"
 ##  <a name="bfncsp"></a> Integrierte Funktionen in systemintern kompilierten gespeicherten Prozeduren  
  Die folgenden Funktionen werden in Standardeinschränkungen in speicheroptimierten Tabellen und in systemintern kompilierten gespeicherte Prozeduren unterstützt.  
   
--   Mathematische Funktionen: ARCCOS, ARCSIN, ARCTAN, ATN2, COS, COT, GRAD, EXP, LOG, LOG10, PI, POTENZ, BOGENMASS, ZUFALLSZAHL, SIN, WURZEL, QUADRAT und TAN  
+-   Mathematische Funktionen: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE und TAN.  
   
 -   Datumsfunktionen: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME und YEAR.  
   
@@ -134,27 +134,27 @@ ms.locfileid: "48091240"
   
  <sup>1</sup> ORDER BY und TOP werden in systemintern kompilierten gespeicherten Prozeduren mit einigen Einschränkungen unterstützt:  
   
--   Es gibt keine Unterstützung für `DISTINCT` in die `SELECT` oder `ORDER BY` Klausel.  
+-   Die `DISTINCT`-Klausel oder `SELECT`-Klausel bietet keine Unterstützung für `ORDER BY`.  
   
 -   Die `WITH TIES`-Klausel bietet keine Unterstützung für `PERCENT` oder `TOP`.  
   
--   `TOP` in Kombination mit `ORDER BY` unterstützt höchstens den Wert 8.192 bei Verwendung einer Konstante in der `TOP` Klausel. Dieser Grenzwert kann herabgesetzt werden, wenn die Abfrage Joins oder Aggregatfunktionen enthält. (Beispielsweise liegt die Beschränkung bei einem Join mit zwei Tabellen bei 4.096 Zeilen. Bei zwei Joins mit drei Tabellen lautet der Grenzwert 2.730 Zeilen).  
+-   `TOP` in Kombination mit `ORDER BY` unterstützt höchstens den Wert 8.192 bei Verwendung einer Konstante in der `TOP`-Klausel. Dieser Grenzwert kann herabgesetzt werden, wenn die Abfrage Joins oder Aggregatfunktionen enthält. (Beispielsweise liegt die Beschränkung bei einem Join mit zwei Tabellen bei 4.096 Zeilen. Bei zwei Joins mit drei Tabellen lautet der Grenzwert 2.730 Zeilen).  
   
      Sie können Ergebnisse erhalten, die größer als 8.192 sind, indem Sie die Anzahl von Zeilen in einer Variablen speichern:  
   
     ```tsql  
     DECLARE @v INT = 9000  
-    SELECT TOP (@v) … FROM … ORDER BY …  
+    SELECT TOP (@v) ... FROM ... ORDER BY ...  
     ```  
   
  Eine Konstante in der `TOP`-Klausel führt jedoch im Vergleich zur Verwendung einer Variablen zu einer besseren Leistung.  
   
- Diese Einschränkungen gelten nicht für den interpretierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff auf Speicheroptimierte Tabellen.  
+ Diese Einschränkungen gelten nicht für den interpretierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen.  
   
 ##  <a name="auditing"></a> Überwachen  
  Überwachung auf Prozedurebene wird für systemintern kompilierte gespeicherte Prozeduren unterstützt. Überwachung auf Anweisungsebene wird nicht unterstützt.  
   
- Weitere Informationen zur Überwachung finden Sie unter [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
+ Weitere Informationen zur Überwachung finden Sie unter [Erstellen einer Serverüberwachung und Datenbanküberwachungsspezifikation](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
 ##  <a name="tqh"></a> Tabelle, Abfrage und Joinhinweise  
  Folgende werden unterstützt:  
@@ -172,7 +172,7 @@ ms.locfileid: "48091240"
 ##  <a name="los"></a> Einschränkungen bei der Sortierung  
  Sie können mehr als 8.000 Zeilen in einer Abfrage sortieren, die [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) verwendet. Ohne die [ORDER BY-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) kann [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) eine Sortierung von bis zu 8.000 Zeilen durchführen (weniger Zeilen, falls es Verknüpfungen gibt).  
   
- Wenn die Abfrage jeweils den Operator [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) verwendet, können Sie bis zu 8192 Zeilen für den TOP-Operator angeben. Wenn Sie mehr als 8192 Zeilen angeben, wird die Fehlermeldung angezeigt: **Msg 41398, Level 16, State 1, Procedure *\<ProzedurName>*, Line *\<ZeilenNummer>* Der Operator TOP kann maximal 8192 Zeilen zurückgeben; *\<Zahl>* wurde angefordert.**  
+ Wenn die Abfrage jeweils den Operator [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) verwendet, können Sie bis zu 8192 Zeilen für den TOP-Operator angeben. Wenn Sie mehr als 8192 Zeilen angeben, wird die folgende Fehlermeldung angezeigt: **Msg 41398, Level 16, Status 1, Prozedur  *\<Prozedurname >*, Zeile  *\<Zeilennummer >* der Operator TOP kann maximal 8192 Zeilen zurückgeben  *\<Anzahl >* angefordert wurde.**  
   
  Wenn keine TOP-Klausel vorhanden ist, kann eine beliebige Anzahl von Zeilen mit ORDER BY sortiert werden.  
   
@@ -191,7 +191,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- Beispiel mit TOP N > 8192: Kann nicht kompiliert werden  
+ Beispiel mit TOP N > 8192: Kann nicht kompiliert werden.  
   
 ```tsql  
 CREATE PROCEDURE testTop  
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **Einschränkungen für zurückgegebene Zeilen:** Es gibt zwei Fälle, in denen sich die Anzahl der Zeilen, die vom TOP-Operator zurückgegeben werden können, u. U. verringert:  
+ **Einschränkungen für zurückgegebene Zeilen:** Es gibt zwei Fälle, in denen die Anzahl der Zeilen, die vom TOP-Operator zurückgegeben werden kann, verringert wird:  
   
 -   Verwenden von JOINs in der Abfrage  Die Auswirkungen von JOINs auf die Einschränkung sind vom Abfrageplan abhängig.  
   

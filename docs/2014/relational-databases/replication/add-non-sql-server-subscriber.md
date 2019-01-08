@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.addnonsqlsubscriber.f1
@@ -13,17 +12,17 @@ ms.assetid: 21beeaa0-4b9e-48da-be63-1b9ff14e03d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4da01da52e78d1ad8923633439ebe1272a519a87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc291a9677efe2acf875f5b5a37d9153fcb3eee3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193970"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772002"
 ---
 # <a name="add-non-sql-server-subscriber"></a>Nicht-SQL Server-Abonnenten hinzufügen
   Die Replikation unterstützt das Erstellen von Pushabonnements für Momentaufnahme- und Transaktionsveröffentlichungen für Oracle und IBM DB2-Abonnenten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Typ des hinzuzufügenden Abonnenten**  
  Wählen Sie einen Oracle-Abonnenten oder einen IBM DB2-Abonnenten aus. Weitere Informationen zur Unterstützung für diese Abonnenten finden Sie unter [Nicht-SQL Server-Abonnenten](non-sql/non-sql-server-subscribers.md).  
   
@@ -36,6 +35,6 @@ ms.locfileid: "48193970"
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten](create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
- [Subscribe to Publications](subscribe-to-publications.md)  
+ [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)  
   
   

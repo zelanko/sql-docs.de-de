@@ -18,12 +18,12 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c32bc8d9b8cca81c560e12b82f58169b257ca1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1f26ada2f116d684091f7e5e928d04e3530567f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856998"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535501"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,14 +62,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *options*  
  Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. *Optionen* benötigen Sie Folgendes **Int** Eingabewert.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Scroll (Option). *Scrollopt* ist ein optionaler Parameter, der einen der folgenden erfordert **Int** Eingabewerte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -91,7 +91,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  Option für die Parallelitätssteuerung. *Ccopt* ist ein optionaler Parameter, der einen der folgenden erfordert **Int** Eingabewerte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (vormals bekannt als LOCKCC)|  
@@ -110,11 +110,11 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="remarks"></a>Hinweise  
  Der RPC-Statusparameter entspricht einem der folgenden Werte:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
-|0|Success|  
+|0|Erfolgreich|  
 |0x0001|Failure|  
-|1FF6|Es konnten keine Metadaten zurückgegeben werden.<br /><br /> Hinweis: Der Grund dafür ist, dass die Anweisung ein Resultset nicht generiert. Beispielsweise ist es eine INSERT- oder DDL-Anweisung.|  
+|1FF6|Es konnten keine Metadaten zurückgegeben werden.<br /><br /> Hinweis: Der Grund liegt darin, dass die Anweisung kein Resultset erzeugt; es handelt sich z. B. um eine INSERT-Anweisung oder DDL-Anweisung.|  
   
 ## <a name="examples"></a>Beispiele  
  Wenn *Stmt* ist parametrisiert, und die *Scrollopt* PARAMETERIZED_STMT-Wert ist auf, die das Format der Zeichenfolge lautet wie folgt:  

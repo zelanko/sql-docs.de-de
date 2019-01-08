@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed73e9e97c34ad1bd1d3aa4e0d37a351cbac0703
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798039"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617624"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Datenbankkatalog "wideworldimporters"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ Das Datenbankschema wurde generierten Code basierend auf einer Reihe von Tabelle
 - Alle Schemas, Tabellen, Spalten, Indizes und Check-Einschränkungen besitzen eine Beschreibung, die erweiterte Eigenschaft, die verwendet werden kann, um den Zweck des Objekts oder der Spalte zu identifizieren. Speicheroptimierte Tabellen sind eine Ausnahme aus, da sie derzeit erweiterte Eigenschaften, die nicht unterstützen.
 - Alle Fremdschlüssel werden automatisch indiziert, es sei denn, es gibt einen anderen nicht gruppierten Index, der die gleiche linken Komponente verfügt.
 - In Tabellen automatischen Nummerierung basiert auf Sequenzen. Diese Sequenzen sind einfacher zu arbeiten mit verknüpften Servern und ähnlichen Umgebungen als IDENTITY-Spalten. Speicheroptimierte Tabellen verwenden IDENTITY-Spalten aus, da sie keine SQL Server 2016 unterstützen.
-- Diese Tabellen eine einzigen Sequenz (Transaktions-ID) verwendet wird: CustomerTransactions SupplierTransactions und StockItemTransactions. Dieses Beispiel veranschaulicht, wie eine Gruppe von Tabellen eine einzigen Sequenz haben kann.
+- Eine einzelne Sequenz (Transaktions-ID) ist für diese Tabellen verwendet: CustomerTransactions SupplierTransactions und StockItemTransactions. Dieses Beispiel veranschaulicht, wie eine Gruppe von Tabellen eine einzigen Sequenz haben kann.
 - Einige Spalten enthalten die entsprechenden Standardwerte.
 
 ### <a name="security-schemas"></a>Sicherheit von schemas
@@ -187,7 +187,7 @@ Simuliert eine Workload, die Verkäufe und Einkäufe einfügt. Die wichtigsten g
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|Neu die Verfahren erforderlich für Daten Simulation geladen werden. Dies ist erforderlich, für die Daten in das aktuelle Datum.|
 |Configuration_RemoveDataLoadSimulationProcedures|Dadurch werden die Verfahren wieder entfernt, nach Abschluss der Simulation von Daten.|
-|DeactiveTemporalTablesBeforeDataLoad|Die temporale Art der alle temporalen Tabellen entfernt, und falls zutreffend, ein Triggers angewendet wird, damit Änderungen vorgenommen werden können, als wären sie wurden an einem Datum als die Sys-temporären Tabellen können angewendet werden.|
+|DeactivateTemporalTablesBeforeDataLoad|Die temporale Art der alle temporalen Tabellen entfernt, und falls zutreffend, ein Triggers angewendet wird, damit Änderungen vorgenommen werden können, als wären sie wurden an einem Datum als die Sys-temporären Tabellen können angewendet werden.|
 |PopulateDataToCurrentDate|Verwendet, um die Daten dem aktuellen Stand zu bringen. Sollte vor jeder anderen Optionen für die Datenbank nach dem Wiederherstellen der Datenbank einer anfänglichen Sicherung ausgeführt werden.|
 |ReactivateTemporalTablesAfterDataLoad|Erneut wird die temporalen Tabellen, einschließlich der Überprüfung der Konsistenz von Daten. (Die zugeordneten Trigger wird entfernt).|
 

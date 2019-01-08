@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
@@ -16,12 +16,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef49a4bee27339849cd7b2ec0f5d64701804284a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120302"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757582"
 ---
 # <a name="column-properties-visual-database-tools"></a>Spalteneigenschaften (Visual Database Tools)
   Für Spalten gibt es zwei Sätze von Eigenschaften: einen vollständigen Satz, der im Tabellen-Designer auf der Registerkarte **Spalteneigenschaften** angezeigt wird (nur für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken verfügbar), und eine Teilmenge, die im Server-Explorer im Eigenschaftenfenster angezeigt wird.  
@@ -111,7 +111,7 @@ ms.locfileid: "48120302"
  Wird erweitert, um die restlichen Eigenschaften anzuzeigen.  
   
  **Sortierung**  
- Zeigt die Sortierungseinstellung der ausgewählten Spalte an. Um diese Einstellung zu ändern, klicken Sie auf **Sortierung** und dann rechts neben dem Wert auf die Schaltfläche mit den drei Punkten **(…)** .  
+ Zeigt die Sortierungseinstellung der ausgewählten Spalte an. Klicken Sie auf **Sortierung** und dann rechts neben dem Wert auf die Schaltfläche mit den Auslassungspunkten **(...)**, um diese Einstellung zu ändern.  
   
  **Spezifikationskategorie der berechneten Spalte**  
  Wird erweitert, um die Eigenschaften für **Formel** und für **Ist Persisted**anzuzeigen. Wenn die Spalte berechnet ist, wird außerdem die Formel angezeigt. Um die Formel zu bearbeiten, erweitern Sie diese Kategorie, und bearbeiten Sie sie in der **Formel** -Eigenschaft.  
@@ -126,7 +126,7 @@ ms.locfileid: "48120302"
  Zeigt die Informationen zum Felddatentyp an, im gleichen Format wie in der SQL-Anweisung CREATE TABLE. Beispiel: Ein Feld, das eine Zeichenfolge variabler Länge mit einer maximalen Länge von 20 Zeichen enthält, würde als "varchar(20)" dargestellt. Um diese Eigenschaft zu ändern, geben Sie den Wert direkt ein.  
   
  **Beschreibung**  
- Zeigt die Beschreibung der Spalte an. Um die vollständige Beschreibung anzuzeigen oder zu bearbeiten, klicken Sie auf Beschreibung und dann rechts neben der Eigenschaft auf die Schaltfläche mit den drei Punkten **(...)** .  
+ Zeigt die Beschreibung der Spalte an. Klicken Sie auf Beschreibung und dann rechts neben der Eigenschaft auf die Schaltfläche mit den Auslassungspunkten **(...)**, um die vollständige Beschreibung anzuzeigen oder zu bearbeiten.  
   
  **Kategorie Volltextspezifikation**  
  Wird erweitert, um die spezifischen Eigenschaften von Volltextspalten anzuzeigen.  

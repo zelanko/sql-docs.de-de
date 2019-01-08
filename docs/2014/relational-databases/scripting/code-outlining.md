@@ -14,18 +14,18 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1368cc570439259b7353f074ba1ecfe2744f006d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c109b96192112a914b06748654c5a7e1510569e0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060810"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541830"
 ---
 # <a name="code-outlining"></a>Codegliederung
   Sie können die Gliederungsfunktion in den [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Abfrage-Editoren verwenden, um ausgewählten Code auszublenden, wenn Sie Abfragen bearbeiten. Auf diese Weise können Sie insbesondere in großen Abfragedateien den bearbeiteten Code besser anzeigen.  
   
 ## <a name="outlining-overview"></a>Übersicht über Gliederungen  
- Standardmäßig wird der gesamte Code angezeigt, wenn Sie ein Abfrage-Editorfenster öffnen. Es ist möglich, Codebereiche zu reduzieren, sodass der Code ausgeblendet wird. Eine vertikale Linie auf der linken Seite des Editorfensters gibt anhand eines Quadrats mit einem Minuszeichen (-) den Beginn eines reduzierbaren Codebereichs an. Wenn Sie auf ein Minuszeichen klicken, wird der Text des Codebereichs durch ein Feld mit drei Punkten (…) ersetzt, und das Minuszeichen wird in ein Pluszeichen (+) geändert. Wenn Sie auf ein Pluszeichen klicken, wird der reduzierte Code angezeigt, und das Pluszeichen wird in ein Minuszeichen (-) geändert. Wenn Sie den Mauszeiger über ein Feld mit drei Punkten bewegen, wird eine QuickInfo mit dem Code im reduzierten Abschnitt angezeigt.  
+ Standardmäßig wird der gesamte Code angezeigt, wenn Sie ein Abfrage-Editorfenster öffnen. Es ist möglich, Codebereiche zu reduzieren, sodass der Code ausgeblendet wird. Eine vertikale Linie auf der linken Seite des Editorfensters gibt anhand eines Quadrats mit einem Minuszeichen (-) den Beginn eines reduzierbaren Codebereichs an. Wenn Sie auf ein Minuszeichen klicken, wird der Text des Codebereichs durch ein Feld mit drei Punkten (...) ersetzt, und das Minuszeichen wird in ein Pluszeichen (+) geändert. Wenn Sie auf ein Pluszeichen klicken, wird der reduzierte Code angezeigt, und das Pluszeichen wird in ein Minuszeichen (-) geändert. Wenn Sie den Mauszeiger über ein Feld mit drei Punkten bewegen, wird eine QuickInfo mit dem Code im reduzierten Abschnitt angezeigt.  
   
 ## <a name="system-outline-regions"></a>Gliederungsbereiche des Systems  
  Jeder [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Editor generiert einen Satz vorgegebener systemdefinierter Gliederungsbereiche.  
@@ -41,7 +41,7 @@ ms.locfileid: "48060810"
   
  ![XML-Code mit verborgenem innerem Knoten](../../database-engine/media/editoutlinexmlinnercol.gif "XML code with inner node hidden")  
   
- Wenn Sie den Mauszeiger über das Feld mit den drei Punkten (…) bewegen, wird der Code im reduzierten Bereich in einer QuickInfo angezeigt, wie in der folgenden Abbildung gezeigt.  
+ Wenn Sie den Mauszeiger über das Feld mit den drei Punkten (…) bewegen, wird der Code wie in der folgenden Abbildung gezeigt im reduzierten Bereich in einer QuickInfo angezeigt.  
   
  ![XML-Code mit QuickInfo mit verborgenem Code](../../database-engine/media/editoutlinexmlmouse.gif "XML code with tooltip showing hidden code")  
   

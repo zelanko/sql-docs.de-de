@@ -14,12 +14,12 @@ ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d99c70928dfc1d3de2ff02499c0b33a173cf888a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195140"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797742"
 ---
 # <a name="dml-triggers"></a>DML-Trigger
   Bei DML-Triggern handelt es sich um einen bestimmten Typ einer gespeicherten Prozedur, die automatisch wirksam wird, sobald ein DML-Ereignis (Data Manipulation Language, Datenbearbeitungssprache) ausgeführt wird, das sich auf die im Trigger definierte Tabelle oder Sicht auswirkt. DML-Ereignisse schließen die Anweisungen INSERT, UPDATE oder DELETE ein. DML-Trigger können zum Erzwingen von Geschäftsregeln und Datenintegrität, Abfragen anderer Tabellen und Einschließen komplexer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet werden. Der Trigger und die auslösende Anweisung werden wie eine einzige Transaktion behandelt, für die aus dem Trigger heraus ein Rollback ausgeführt werden kann. Tritt ein schwerer Fehler auf (z B. bei unzureichendem Speicherplatz), wird für die gesamte Transaktion automatisch ein Rollback ausgeführt.  
@@ -59,7 +59,7 @@ ms.locfileid: "48195140"
 |Anwendbarkeit|Tabellen|Tabellen und Sichten|  
 |Anzahl pro Tabelle oder Sicht|Mehrere Trigger pro auslösende Aktion (INSERT, UPDATE oder DELETE)|Ein Trigger pro auslösende Aktion (INSERT, UPDATE oder DELETE)|  
 |Kaskadierende Verweise|Keine Einschränkungen|INSTEAD OF UPDATE- und DELETE-Trigger sind nicht für Tabellen zulässig, die Ziel von kaskadierenden Einschränkungen für die referenzielle Integrität sind.|  
-|Ausführung|Nachher:<br /><br /> Einschränkungsverarbeitung<br />Deklarativen referenziellen Aktionen<br />Erstellung der**inserted** - und **deleted** -Tabellen<br />Der auslösenden Aktion|Vorher: Einschränkungsverarbeitung<br /><br /> Anstelle: Der auslösenden Aktion<br /><br /> Nach: Erstellung der  **inserted** - und **deleted** -Tabellen|  
+|Ausführung|Nachher:<br /><br /> Einschränkungsverarbeitung<br />Deklarativen referenziellen Aktionen<br />Erstellung der**inserted** - und **deleted** -Tabellen<br />Der auslösenden Aktion|Vorher: Einschränkungsverarbeitung<br /><br /> Anstelle:  Der auslösenden Aktion<br /><br /> Nach: Erstellung der  **inserted** - und **deleted** -Tabellen|  
 |Ausführungsreihenfolge|Der zuerst und zuletzt auszuführende Trigger kann angegeben werden.|Nicht verfügbar|  
 |`varchar(max)`, `nvarchar(max)`, und `varbinary(max)` -Spaltenverweise in **eingefügt** und **gelöscht** Tabellen|Zulässig|Zulässig|  
 |`text`, `ntext`, und `image` -Spaltenverweise in **eingefügt** und **gelöscht** Tabellen|Nicht zulässig|Zulässig|  
@@ -69,7 +69,7 @@ ms.locfileid: "48195140"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Task|Thema|  
+|Aufgabe|Thema|  
 |----------|-----------|  
 |Beschreibt, wie ein DML-Trigger erstellt wird.|[Erstellen von DML-Triggern](create-dml-triggers.md)|  
 |Beschreibt, wie ein CLR-Trigger erstellt wird.|[Erstellen von CLR-Triggern](create-clr-triggers.md)|  

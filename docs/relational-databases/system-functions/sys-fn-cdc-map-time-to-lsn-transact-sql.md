@@ -21,17 +21,17 @@ ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aa27ea82c70cd1ffa65ce2b1d04376257abd8964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c22074e686f9dff1d988d7453c0c546fa6e049b5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715990"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399934"
 ---
 # <a name="sysfncdcmaptimetolsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt den Wert der protokollfolgenummer (LSN) aus der **Start_lsn** -Spalte in der [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) Systemtabelle für die angegebene Zeit. Sie können diese Funktion verwenden, um Datetime-Bereiche systematisch dem LSN-basierten Bereich, der von den Change Data Capture-Enumerationsfunktionen benötigt zuzuordnen [CDC. fn_cdc_get_all_changes_ < Capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) und [cdc.fn _cdc_get_net_changes_ < Capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) um datenänderungen innerhalb dieses Bereichs zurückzugeben.  
+  Gibt den Wert der Protokollfolgenummer (LSN) für die angegebene Zeit in der **start_lsn** -Spalte der [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) -Systemtabelle zurück. Sie können diese Funktion verwenden, um Datetime-Bereiche systematisch dem LSN-basierten Bereich, der von den Change Data Capture-Enumerationsfunktionen benötigt zuzuordnen [CDC. fn_cdc_get_all_changes_ < Capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) und [cdc.fn _cdc_get_net_changes_ < Capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) um datenänderungen innerhalb dieses Bereichs zurückzugeben.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,13 +76,13 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
   
  `SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@begin_lsn, @end_lsn, 'all` `');`  
   
- Der relationale '`smallest greater than`'-Operator wird verwendet, um auf die Änderungen einzuschränken, die nach Mitternacht am vorangehenden Tag aufgetreten sind. Wenn mehrere Einträge mit unterschiedlichen LSN-Werten der **Tran_end_time** Wert, der als untere Grenze in identifiziert die [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) Tabelle die Funktion den kleinsten LSN, um sicherzustellen, dass zurück Es sind alle Einträge enthalten. Für die obere Grenze wird der relationale '`largest less than or equal to`'-Operator verwendet, um sicherzustellen, dass der Bereich alle Einträge für den Tag enthält, einschließlich der Einträge, die Mitternacht als ihren **tran_end_time** -Wert haben. Wenn mehrere Einträge mit unterschiedlichen LSN-Werten den Wert **tran_end_time** verwenden, der als obere Grenze identifiziert ist, wird die Funktion den größten LSN-Wert zurückgeben, um sicherzustellen, dass alle Einträge enthalten sind.  
+ Der relationale '`smallest greater than`'-Operator wird verwendet, um auf die Änderungen einzuschränken, die nach Mitternacht am vorangehenden Tag aufgetreten sind. Wenn mehrere Einträge mit unterschiedlichen LSN-Werten den Wert **tran_end_time** verwenden, der als untere Grenze in der [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) -Tabelle identifiziert ist, gibt die Funktion den kleinsten LSN-Wert zurück, um sicherzustellen, dass alle Einträge enthalten sind. Für die obere Grenze, den relationalen Operator "`largest less than or equal to`" wird verwendet, um sicherzustellen, dass der Bereich alle Einträge für den Tag, einschließlich Mitternacht als umfasst ihre **Tran_end_time** Wert. Wenn mehrere Einträge mit unterschiedlichen LSN-Werten den Wert **tran_end_time** verwenden, der als obere Grenze identifiziert ist, wird die Funktion den größten LSN-Wert zurückgeben, um sicherzustellen, dass alle Einträge enthalten sind.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die `sys.fn_cdc_map_time_lsn` Funktion, um zu bestimmen, ob alle Zeilen, die [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) -Tabelle mit einer **Tran_end_time** -Wert, der größer als oder gleich Mitternacht ist. Mit dieser Abfrage kann beispielsweise bestimmt werden, ob der Aufzeichnungsprozess bereits die Änderungen verarbeitet hat, für die bis Mitternacht des vorangehenden Tags ein Commit ausgeführt wurde, sodass mit dem Extrahieren von Änderungsdaten für diesen Tag fortgefahren werden kann.  
+ Im folgenden Beispiel wird die `sys.fn_cdc_map_time_lsn` -Funktion verwendet, um zu bestimmen, ob es in der [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) -Tabelle Zeilen mit einem **tran_end_time** -Wert gibt, der größer oder gleich Mitternacht ist. Mit dieser Abfrage kann beispielsweise bestimmt werden, ob der Aufzeichnungsprozess bereits die Änderungen verarbeitet hat, für die bis Mitternacht des vorangehenden Tags ein Commit ausgeführt wurde, sodass mit dem Extrahieren von Änderungsdaten für diesen Tag fortgefahren werden kann.  
   
 ```  
 DECLARE @extraction_time datetime, @lsn binary(10);  

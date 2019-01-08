@@ -11,12 +11,12 @@ ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ec1406b5259a68eadc821092bea3cccd10e032d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bd0382906d3ee56055cc026036816af64b55dc6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185820"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408966"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Konfigurieren des Integration Services-Diensts als Clusterressource
   Kunden, für die die Vorteile der Konfiguration des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Diensts als Clusterressource die Nachteile überwiegen, finden in diesem Abschnitt alle erforderlichen Konfigurationsanweisungen. [!INCLUDE[msCoName](../includes/msconame-md.md)] rät dennoch von einer Konfiguration des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts als Clusterressource ab.  
@@ -101,7 +101,7 @@ ms.locfileid: "48185820"
   
 2.  Erstellen Sie auf dem freigegebenen Datenträger einen neuen Ordner mit dem Namen **Packages** . Dieser soll als Paketspeicher dienen. Erteilen Sie den entsprechenden Benutzern und Gruppen Ordnerauflist- und Schreibberechtigungen für den neuen Ordner.  
   
-3.  Öffnen Sie die Konfigurationsdatei auf dem freigegebenen Datenträger in einem Text- oder XML-Editor. Ändern Sie den Wert, der die `ServerName` -Element auf den Namen des virtuellen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die sich in derselben Ressourcengruppe befinden.  
+3.  Öffnen Sie die Konfigurationsdatei auf dem freigegebenen Datenträger in einem Text- oder XML-Editor. Ändern Sie den Wert des `ServerName`-Elements in den Namen des virtuellen Servers mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], der sich in der gleichen Ressourcengruppe befindet.  
   
 4.  Ändern Sie den Wert von der `StorePath` zu den vollqualifizierten Pfad des Elements der **Pakete** Ordner auf dem freigegebenen Datenträger in einem vorherigen Schritt erstellt haben.  
   

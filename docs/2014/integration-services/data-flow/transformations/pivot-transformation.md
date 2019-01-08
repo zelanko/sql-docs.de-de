@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.pivottrans.f1
@@ -19,12 +18,12 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbca3b0ce90e56f3327e1e591a033e8d5fb212c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dd6e2b6fad2ea40c3a536b8b89eecbba441ecfd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157590"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771882"
 ---
 # <a name="pivot-transformation"></a>Transformation für Pivot
   Die Transformation für Pivot macht aus einem normalisierten Dataset eine weniger normalisierte, aber kompaktere Version, indem die Eingabedaten nach einem Spaltenwert pivotiert werden. Beispielsweise weist ein normalisiertes **Orders** -Dataset, das den Kundennamen, das Produkt und die gekaufte Menge auflistet, in der Regel mehrere Zeilen für jeden Kunden auf, der mehrere Produkte gekauft hat. Dabei zeigt jede Zeile für den betreffenden Kunden Bestelldetails für ein anderes Produkt an. Durch Pivotieren des Datasets nach der Produktspalte kann mit der Transformation für Pivot ein Dataset mit einer einzigen Zeile pro Kunde ausgegeben werden. In dieser Zeile werden alle Einkäufe des Kunden aufgelistet, wobei die Produktnamen als Spaltennamen und die Menge als Wert in der Produktspalte angezeigt werden. Da nicht jeder Kunde jedes Produkt kauft, können viele Spalten NULL-Werte enthalten.  
@@ -98,7 +97,7 @@ ms.locfileid: "48157590"
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
-|2004|Water Bottle – 30 oz.|2805.00|  
+|2004|Water Bottle - 30 oz.|2805.00|  
 |2002|Touring Tire|62364.225|  
   
  In der folgenden Tabelle wird ein Dataset nach dem Pivotieren der Daten nach der **Jahr** -Spalte angezeigt.  
@@ -107,7 +106,7 @@ ms.locfileid: "48157590"
 |-|----------|----------|----------|  
 |HL Mountain Tire|141164.10|446297.775|1504884.15|  
 |Road Tire Tube|3592.05|35920.50|89801.25|  
-|Water Bottle – 30 oz.|*NULL*|*NULL*|2805.00|  
+|Water Bottle - 30 oz.|*NULL*|*NULL*|2805.00|  
 |Touring Tire|62364.225|375051.60|1041810.00|  
   
  Zum Pivotisieren der Daten für die **Jahr** -Spalte (wie oben gezeigt) müssen die folgenden Optionen im Dialogfeld **Pivot** festgelegt werden.  

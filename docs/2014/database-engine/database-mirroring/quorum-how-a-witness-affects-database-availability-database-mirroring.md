@@ -21,12 +21,12 @@ ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3dd9b33de1ca429afbae8a8fe6ccdc7a41583a44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067550"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525030"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit (Datenbankspiegelung)
   Wenn ein Zeuge für eine Datenbank-Spiegelungssitzung festgelegt wird, ist ein *Quorum* erforderlich. Das Quorum ist eine Beziehung, die vorhanden ist, wenn zwei oder mehr Serverinstanzen in einer Datenbank-Spiegelungssitzung miteinander verbunden sind. Typischerweise sind am Quorum drei miteinander verbundene Serverinstanzen beteiligt. Wird ein Zeuge festgelegt, ist ein Quorum erforderlich, damit die Datenbank verfügbar wird. Das Quorum wurde für den Modus für hohe Sicherheit mit automatischem Failover konzipiert und stellt sicher, dass eine Datenbank zu einem bestimmten Zeitpunkt im Besitz nur jeweils eines Partners ist.  
@@ -104,7 +104,7 @@ ms.locfileid: "48067550"
 ## <a name="see-also"></a>Siehe auch  
  [Betriebsmodi der Datenbankspiegelung](database-mirroring-operating-modes.md)   
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Datenbank-Spiegelungszeuge](database-mirroring-witness.md)   
+ [Database Mirroring Witness](database-mirroring-witness.md)   
  [Mögliche Fehler während der Datenbankspiegelung](possible-failures-during-database-mirroring.md)   
  [Spiegelungsstatus &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

@@ -11,12 +11,12 @@ ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 36eb4d030933594900d4f73c180fd92cc0323d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 533514facc1b34d9a8fa03a71d983ed2f01d2137
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145772"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532402"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Suchen nach Berichten und anderen Elementen (Berichts-Generator und SSRS)
   Mithilfe des Berichts-Managers können Sie auf einem Berichtsserver nach bestimmten Elementen anhand des Namens oder einer Beschreibung suchen. Sie haben die Möglichkeit, nach veröffentlichten Berichten, Berichtsmodellen, Ordnern, freigegebenen Datenquellen und Ressourcen zu suchen. Es ist nicht möglich, nach Zeitplänen, Besitzern, Rollenzuweisungen, bestimmten Momentaufnahmen im Berichtsverlauf oder nach Abonnements zu suchen. Die Suche wird in der Berichtsserver-Datenbank ausgeführt, in der die Elemente gespeichert sind.  
@@ -26,7 +26,7 @@ ms.locfileid: "48145772"
   
 -   Geben Sie für die Suche nach Elementen im Berichts-Manager oben auf der Seite in das Textfeld **Suchen nach** eine Suchzeichenfolge ein. Suchvorgänge beginnen in der Ordnerhierarchie im Knoten der obersten Ebene und werden in den untergeordneten Zweigen fortgesetzt. Falls Sie keine Zugriffsberechtigung für einen bestimmten Zweig haben, wird dieser ausgelassen. Dies ist der Fall bei Ordnern vom Typ Meine Berichte anderer Benutzer und bei anderen Ordnern, die nicht generell verfügbar sind. Nur Berichte und Elemente, die Sie anzeigen dürfen, werden in die Suchergebnisse einbezogen.  
   
--   Um anhand des Namens oder einer Beschreibung nach einem Element zu suchen, geben Sie den gesamten Text oder einen Teil davon an. Bei der Suchzeichenfolge wird die Groß/Kleinschreibung nicht beachtet. Suchoperatoren wie z. B. Pluszeichen (+) oder Minuszeichen (–) zum Ein- oder Ausschließen von Suchkriterien sind nicht zulässig.  
+-   Um anhand des Namens oder einer Beschreibung nach einem Element zu suchen, geben Sie den gesamten Text oder einen Teil davon an. Bei der Suchzeichenfolge wird die Groß/Kleinschreibung nicht beachtet. Suchoperatoren wie z.B. Pluszeichen (+) oder Minuszeichen (–) zum Ein- oder Ausschließen von Suchkriterien sind nicht zulässig.  
   
 -   Verwenden Sie die Symbolleiste oben im Bericht, um nach Text in einem Bericht zu suchen.  
   
@@ -34,9 +34,9 @@ ms.locfileid: "48145772"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Finding and Viewing Reports in Report Manager (Report Builder and SSRS) (Suchen und Anzeigen von Berichten in Berichts-Manager (Berichts-Generator und SSRS))](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)   
- [Using My Reports (Report Builder and SSRS) (Verwenden von Meine Berichte (Berichts-Generator und SSRS))](using-my-reports-report-builder-and-ssrs.md)   
+ [Suchen und Anzeigen von Berichten in Berichts-Manager &#40;Berichts-Generator und SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)   
+ [Verwenden von Meine Berichte &#40;Berichts-Generator und SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Öffnen und Schließen eines Berichts (Berichts-Manager)](../reports/open-and-close-a-report-report-manager.md)  
+ [Öffnen und Schließen eines Berichts &#40;Berichts-Manager&#41;](../reports/open-and-close-a-report-report-manager.md)  
   
   

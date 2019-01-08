@@ -20,19 +20,19 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23a81ceda914bb43d4361e9c6fb8a2409bf2556e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f91799e5d484a763c23fcc132232a8a35fc6152c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809068"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517412"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
   
  **Zusammenfassung**  
- **SQLPutData** ermöglicht es einer Anwendung zum Senden von Daten für einen Parameter oder eine Spalte für den Treiber während der Ausführung der Anweisung. Diese Funktion kann verwendet werden, zum Senden von Zeichen- oder Binärdaten-Werten in Teilen auf eine Spalte mit einem Zeichen oder den binären datenquellenspezifischen-Datentyp (z. B. Parameter der Typen SQL_LONGVARBINARY oder SQL_LONGVARCHAR). **SQLPutData** unterstützt die Bindung an eine Unicode-C-Datentyp, selbst wenn die zugrunde liegenden Treiber Unicode-Daten nicht unterstützt.  
+ **SQLPutData** ermöglicht es einer Anwendung zum Senden von Daten für einen Parameter oder eine Spalte für den Treiber während der Ausführung der Anweisung. Diese Funktion kann verwendet werden, zum Senden von Zeichen- oder Binärdaten-Werten in Teilen auf eine Spalte mit einem Zeichen oder den binären datenquellenspezifische-Datentyp (z. B. Parameter der Typen SQL_LONGVARBINARY oder SQL_LONGVARCHAR). **SQLPutData** unterstützt die Bindung an eine Unicode-C-Datentyp, selbst wenn die zugrunde liegenden Treiber Unicode-Daten nicht unterstützt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,7 +60,7 @@ SQLRETURN SQLPutData(
   
 -   Die C-Datentyp ist SQL_C_DEFAULT; der Standard-C-Datentyp für den angegebenen SQL-Datentyp ist SQL_C_CHAR oder sql_c_binary angegeben.  
   
- Für alle anderen Typen von C-Daten Wenn *StrLen_or_Ind* ist kein SQL_NULL_DATA oder SQL_DEFAULT_PARAM der Treiber setzt voraus, dass die Größe des der \* *DataPtr* Puffer ist die Größe des angegebenen C-Datentyp mit *ValueType* oder *TargetType* und sendet den gesamten Datenwert. Weitere Informationen finden Sie unter [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) in Anhang D:-Datentypen.  
+ Für alle anderen Typen von C-Daten Wenn *StrLen_or_Ind* ist kein SQL_NULL_DATA oder SQL_DEFAULT_PARAM der Treiber setzt voraus, dass die Größe des der \* *DataPtr* Puffer ist die Größe des angegebenen C-Datentyp mit *ValueType* oder *TargetType* und sendet den gesamten Datenwert. Weitere Informationen finden Sie unter [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) in Anhang D: Datentypen.  
   
 ## <a name="returns"></a>Rückgabewert  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
@@ -75,7 +75,7 @@ SQLRETURN SQLPutData(
 |07006|Attributverletzung eingeschränkter Daten|Der Wert von identifiziert die *ValueType* -Argument in **SQLBindParameter** für der gebundene Parameter nicht in der identifizierte Datentyp konvertiert werden kann die *ParameterType*-Argument in **SQLBindParameter**.|  
 |07S01|Ungültige Verwendung des Standardparameters|Legen Sie ein Parameterwert mit **SQLBindParameter**SQL_DEFAULT_PARAM wurde und der entsprechende Parameter keinen Standardwert.|  
 |08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die mit der der Treiber verbunden wurde, Fehler vor der Verarbeitung für die Funktion abgeschlossen.|  
-|22001|Zeichenfolgendaten, rechts abgeschnitten.|Die Zuweisung von einem Zeichen- oder binären Wert einer Spalte führte das Abschneiden von NichtLeer (Zeichen), (binär) nicht-Null-Zeichen oder Bytes.<br /><br /> Der Typ des SQL_NEED_LONG_DATA_LEN-Informationen in **SQLGetInfo** wurde von "Y", und weitere Daten für einen Parameter "long" (der Datentyp wurde SQL_LONGVARCHAR, SQL_LONGVARBINARY oder einen long-Daten datenquellenspezifischen-Datentyp) gesendet wurde, als angegeben wurde mit der *StrLen_or_IndPtr* -Argument in **SQLBindParameter**.<br /><br /> Der Typ des SQL_NEED_LONG_DATA_LEN-Informationen in **SQLGetInfo** wurde von "Y", und weitere Daten für eine lange Spalte (der Datentyp wurde SQL_LONGVARCHAR, SQL_LONGVARBINARY oder einen long-Daten datenquellenspezifischen-Datentyp) gesendet wurde, als im angegebenen die Puffer der Länge für eine Spalte in eine Zeile mit Daten, die hinzugefügt oder aktualisiert wurde **SQLBulkOperations** oder mit aktualisierten **SQLSetPos**.|  
+|22001|Zeichenfolgendaten, rechts abgeschnitten.|Die Zuweisung von einem Zeichen- oder binären Wert einer Spalte führte das Abschneiden von NichtLeer (Zeichen), (binär) nicht-Null-Zeichen oder Bytes.<br /><br /> Der Typ des SQL_NEED_LONG_DATA_LEN-Informationen in **SQLGetInfo** wurde von "Y", und weitere Daten für einen Parameter "long" (der Datentyp wurde SQL_LONGVARCHAR, SQL_LONGVARBINARY oder einen long-Daten datenquellenspezifische-Datentyp) gesendet wurde, als angegeben wurde mit der *StrLen_or_IndPtr* -Argument in **SQLBindParameter**.<br /><br /> Der Typ des SQL_NEED_LONG_DATA_LEN-Informationen in **SQLGetInfo** wurde von "Y", und weitere Daten für eine lange Spalte (der Datentyp wurde SQL_LONGVARCHAR, SQL_LONGVARBINARY oder einen long-Daten datenquellenspezifische-Datentyp) gesendet wurde, als im angegebenen die Puffer der Länge für eine Spalte in eine Zeile mit Daten, die hinzugefügt oder aktualisiert wurde **SQLBulkOperations** oder mit aktualisierten **SQLSetPos**.|  
 |22003|Numerischer Wert außerhalb des gültigen Bereichs|Die Daten, die für einen gebundenen numerische Parameter gesendet oder Spalte verursacht des gesamten (im Gegensatz zu Bruch) Teils der Zahl abgeschnitten wird, wenn der zugeordnete Tabellenspalte zugewiesen.<br /><br /> Einen numerischen Wert (als numerisch oder Zeichenfolge) für einen oder mehrere Eingabe-/Ausgabe- oder Ausgabe-Parameter zurückgegeben würde den gesamten (im Gegensatz zu Bruch) Teil der Zahl abgeschnitten wird verursacht.|  
 |22007|Ungültiges Datetime-format|Die Daten für einen Parameter oder eine Spalte, die auf ein Datum, Uhrzeit oder Zeitstempel-Struktur gebunden wurde gesendet wurde, ein ungültiges Datum, Uhrzeit oder Zeitstempel.<br /><br /> Ein Eingabe-/Ausgabe- oder Ausgabe-Parameter gebunden wurde ein Datum, Uhrzeit oder Zeitstempel C-Struktur, und ein Wert in der zurückgegebenen Parameter war, jeweils ein ungültiges Datum, Uhrzeit oder Zeitstempel. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |22008|Überlauf im DateTime-Feld|Ein Datetime-Ausdruck berechnet, für die Eingabe/Ausgabe oder Ausgabeparameter führte dazu, dass ein Datum, Uhrzeit oder Zeitstempel C-Struktur, die ungültig war.|  
@@ -88,7 +88,7 @@ SQLRETURN SQLPutData(
 |HY009|Ungültige Verwendung eines null-Zeiger|(DM) das Argument *DataPtr* wurde ein null-Zeiger ist, und das Argument *StrLen_or_Ind* war nicht 0 (null) SQL_DEFAULT_PARAM oder SQL_NULL_DATA.|  
 |HY010|Fehler in der Funktionsreihenfolge|(DM) der vorherigen Funktionsaufruf war keinem Aufruf von **SQLPutData** oder **SQLParamData**.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Diese asynchronen Funktion wurde noch ausgeführt werden, wenn die SQLPutData-Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.|  
 |HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY019|Nicht-Zeichendaten und nicht binäre Daten wurden in Einzelteilen versandt|**SQLPutData** war aufgerufen mehr als einmal für einen Parameter oder eine Spalte aus, und war es nicht verwendet wird, zum Senden von Zeichendaten C an eine Spalte mit einem Zeichen oder den binären Datenquelle spezifischen Datentyp oder zum Senden von Binärdaten C an eine Spalte mit einem Zeichen , Binary oder Datentyp für die Datenquelle spezifischen Daten.|  
+|HY019|Nicht-Zeichendaten und nicht binäre Daten wurden in Einzelteilen versandt|**SQLPutData** war aufgerufen mehr als einmal für einen Parameter oder eine Spalte, und es war nicht verwendet wird, zum Senden von Zeichendaten C an eine Spalte mit einem Zeichen oder den binären datenquellenspezifische Datentyp oder zum Senden von Binärdaten C an eine Spalte mit einem Zeichen , Binär- oder Data Source-spezifische-Datentyp.|  
 |HY020 ES WURDE|Versucht, einen null-Wert zu verketten.|**SQLPutData** mehr als einmal aufgerufen wurde, seit dem Aufruf, der SQL_NEED_DATA zurückgegeben, und klicken Sie in einem dieser Aufrufe, die *StrLen_or_Ind* Argument enthalten, SQL_NULL_DATA oder SQL_DEFAULT_PARAM.|  
 |HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|Das Argument *DataPtr* war nicht, ein null-Zeiger ist, und das Argument *StrLen_or_Ind* war kleiner als 0, aber nicht gleich SQL_NTS lauten oder SQL_NULL_DATA.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -109,7 +109,7 @@ SQLRETURN SQLPutData(
  Weitere Informationen zu wie Data-at-Execution-Parameterdaten zur Ausführungszeit für die Anweisung übergeben wird, finden Sie unter "Übergeben von Parameterwerten" in [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md) und [Senden von Long-Daten](../../../odbc/reference/develop-app/sending-long-data.md). Weitere Informationen zu wie Data-at-Execution-Spalte aktualisiert oder hinzugefügt wird, finden Sie im Abschnitt "Verwenden von SQLSetPos" in [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md), "Ausführen von Massenladen Updates mithilfe von Lesezeichen" in [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), und [Long-Daten, SQLSetPos und SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   
 > [!NOTE]  
->  Eine Anwendung kann mithilfe **SQLPutData** zum Senden von Daten in Teile nur beim Senden von Zeichendaten C an eine Spalte mit einem Zeichen oder den binären Datenquelle spezifischen Datentyp oder beim Senden von Binärdaten C an eine Spalte mit einem Zeichen, binär, oder Daten Geben Sie die Datenquelle spezifischen Daten. Wenn **SQLPutData** wird aufgerufen, mehr als einmal unter anderen Bedingungen gibt SQL_ERROR zurück, und SQLSTATE HY019 (nicht-Zeichendaten und nicht binäre Daten wurden in Einzelteilen gesendet).  
+>  Eine Anwendung kann mithilfe **SQLPutData** zum Senden von Daten in Teile nur beim Senden von Zeichendaten C an eine Spalte mit einem Zeichen oder den binären datenquellenspezifische Datentyp oder beim Senden von Binärdaten C an eine Spalte mit einem Zeichen, binär, oder Daten datenquellenspezifische-Datentyp. Wenn **SQLPutData** wird aufgerufen, mehr als einmal unter anderen Bedingungen gibt SQL_ERROR zurück, und SQLSTATE HY019 (nicht-Zeichendaten und nicht binäre Daten wurden in Einzelteilen gesendet).  
   
 ## <a name="example"></a>Beispiel  
  Im folgende Beispiel wird vorausgesetzt, Name der Datenquelle namens Test. Die zugeordnete Datenbank sollte es sich um eine Tabelle verfügen, die Sie, wie folgt erstellen können:  

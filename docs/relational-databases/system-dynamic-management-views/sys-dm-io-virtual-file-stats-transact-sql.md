@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d55d63b9cfbf501750522f3f5d0ca68757ae1ab3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc6511c6a0999dfd366c87fcfa18630614215efa
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741858"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407297"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -112,11 +112,11 @@ GO
   
 ### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Zurückgeben der Statistiken für die Datei in ' tempdb '
 
-**Gilt für:** Azure SQL Datawarehouse
+**Gilt für:** Azure SQL Data Warehouse
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
-WHERE database_name = ‘tempdb’ AND file_id = 2;
+WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 

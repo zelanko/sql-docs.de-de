@@ -29,12 +29,12 @@ ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 118c20c16890edb50bdc19686da40c77b362c29d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51551dd92ee0cca193abd88041e4ad7cc183718a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217650"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521120"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Neural Network-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus verwendet ein *mehrschichtiges Perzeptronnetzwerk* , das auch als *Netzwerk von Deltaregeln mit Rückpropagierung*bezeichnet wird. Es besteht aus bis zu drei Ebenen aus Neuronen oder *Perzeptronen*. Zu diesen Ebenen gehört eine Eingabeebene, eine optionale verborgene Ebene und eine Ausgabeebene.  
@@ -103,7 +103,7 @@ ms.locfileid: "48217650"
   
  **Diskrete Werte**  
   
- Μ = p: die vorherige Wahrscheinlichkeit eines Status  
+ Μ = p - die vorherige Wahrscheinlichkeit eines Status  
   
  StdDev = sqrt(p(1-p))  
   
@@ -203,7 +203,7 @@ ms.locfileid: "48217650"
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm.md)   
- [Mingingmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Beispiele für Abfragen von neuronalen Netzwerkmodellen](neural-network-model-query-examples.md)  
   
   

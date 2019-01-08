@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
@@ -14,12 +13,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ffd797b5b59e50b97f2306c1509a01b8372c450
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef9bda4b8eeff394e44ba696e228b121015960b9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184300"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774352"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme
   Wenn Daten in einer Onlinedatenbank beschädigt werden, empfiehlt es sich gelegentlich, die Datenbank aus einer Datenbank-Momentaufnahme eines Zeitpunkts vor der Beschädigung wiederherzustellen, anstatt die Datenbank aus einer Sicherungskopie wiederherzustellen. Durch das Wiederherstellen einer Datenbank kann beispielsweise ein kürzlich zurückliegender, schwerwiegender Benutzerfehler (z. B. eine gelöschte Tabelle) rückgängig gemacht werden. Alle nach Erstellung der Momentaufnahme vorgenommenen Änderungen gehen jedoch verloren.  
@@ -30,11 +29,11 @@ ms.locfileid: "48184300"
   
      [Erforderliche Komponenten](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
--   **Wiederherstellen einer Datenbank aus einer Datenbankmomentaufnahme mit:**  [Transact-SQL](#TsqlProcedure)  
+-   **Wiederherstellen eine Datenbank mit einer Datenbankmomentaufnahme mit:**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Die Wiederherstellung wird unter folgenden Bedingungen nicht unterstützt:  
@@ -104,7 +103,7 @@ ms.locfileid: "48184300"
   
      Dabei ist *database_name* die Quelldatenbank und *database_snapshot_name* der Name der Momentaufnahmen, aus dem die Datenbank wiederhergestellt werden soll. Beachten Sie, dass Sie in dieser Anweisung einen Momentaufnahmenamen statt eines Sicherungsmediums angeben müssen.  
   
-     Weitere Informationen finden Sie unter [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)nicht wiederhergestellt werden.  
+     Weitere Informationen finden Sie unter [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
     > [!NOTE]  
     >  Während des Wiederherstellungsvorgangs stehen weder die Momentaufnahme noch die Quelldatenbank zur Verfügung. Die Quelldatenbank und die Momentaufnahme sind als von einem Wiederherstellungsvorgang betroffen gekennzeichnet. Falls während der Wiederherstellung ein Fehler auftritt, wird beim nächsten Start der Datenbank versucht, die Wiederherstellung abzuschließen.  
@@ -162,7 +161,7 @@ GO
   
 -   [Erstellen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md)  
   
--   [Anzeigen einer Datenbank-Momentaufnahme &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)  
+-   [Anzeigen einer Datenbankmomentaufnahme &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)  
   
 -   [Löschen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   

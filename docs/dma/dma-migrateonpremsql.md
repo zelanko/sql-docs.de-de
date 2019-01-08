@@ -15,18 +15,18 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 3c16c87ea79e3c80de9f93bc3571a46d0610b22d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643838"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395423"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Ein Upgrade auf einen lokalen SQL Server auf SQL Server oder SQL Server auf Azure-VMs mit den Data Migration Assistant
 
 Im Data Migration Assistant bietet nahtlose Bewertungen von einer lokalen SQL Server und -Upgrades auf höhere Versionen von SQL Server oder Migration zu SQL Server auf virtuellen Azure-Computern oder Azure SQL-Datenbank.
 
-Dieser Artikel enthält schrittweise Anleitungen zum Aktualisieren von einer lokalen SQL Server auf neuere Version von SQL Server oder SQL Server auf virtuellen Azure-Computern mithilfe von Data Migration Assistant.   
+Dieser Artikel enthält schrittweise Anleitungen zum Aktualisieren von einer lokalen SQL Server auf neuere Version von SQL Server oder SQL Server auf virtuellen Azure-Computern mithilfe von Data Migration Assistant.   
 
 ## <a name="create-a-new-migration-project"></a>Erstellen eines neuen Migrationsprojekts
 
@@ -65,9 +65,9 @@ Dieser Artikel enthält schrittweise Anleitungen zum Aktualisieren von einer lok
    > [!NOTE]
    > Sie können die migrationseinstellungen auf alle Datenbanken, die Sie migrieren, indem Sie den Server im linken Bereich auswählen, anwenden. Sie können auch eine einzelne Datenbank mit bestimmten Einstellungen konfigurieren, indem Sie die Datenbank im linken Bereich auswählen.
 
-    A. Geben Sie die **freigegebene Speicherort zugegriffen werden kann, von Quell- und Ziel-SQL-Server für den Sicherungsvorgang**. Stellen Sie sicher, dass das Dienstkonto, das die Quelle mit SQL Server-Instanz verfügt über Schreibberechtigungen auf dem freigegebenen Speicherort, und das Ziel-Dienstkonto verfügt über für den freigegebenen Speicherort Leserechte.
+    a. Geben Sie die **freigegebene Speicherort zugegriffen werden kann, von Quell- und Ziel-SQL-Server für den Sicherungsvorgang**. Stellen Sie sicher, dass das Dienstkonto, das die Quelle mit SQL Server-Instanz verfügt über Schreibberechtigungen auf dem freigegebenen Speicherort, und das Ziel-Dienstkonto verfügt über für den freigegebenen Speicherort Leserechte.
 
-    B. Geben Sie den Speicherort zum Wiederherstellen der Daten und transaktionale Protokolldateien auf dem Zielserver.
+    b. Geben Sie den Speicherort zum Wiederherstellen der Daten und transaktionale Protokolldateien auf dem Zielserver.
 
     ![Fügen Sie die Seite "Datenbanken"](../dma/media/AddDatabases.png)
 
@@ -111,5 +111,5 @@ Sie können den Migrationsstatus überwachen, auf die **Ergebnisanzeige** Seite.
 ## <a name="see-also"></a>Siehe auch
 
 - [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-- [Data Migration Assistant: Konfigurationseinstellungen für](../dma/dma-configurationsettings.md)
+- [Data Migration Assistant: Konfigurationseinstellungen](../dma/dma-configurationsettings.md)
 - [Data Migration Assistant: Bewährte Methoden](../dma/dma-bestpractices.md)

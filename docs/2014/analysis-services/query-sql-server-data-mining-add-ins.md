@@ -16,12 +16,12 @@ ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b23083870b2f60e3d844d921705f4612ecc975f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b596612d711925687087a2263013fdf13a0c491e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079420"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418461"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>Abfrage (SQL Server Data Mining-Add-Ins)
   ![Schaltfläche "Abfrage-Modell", "Data Mining-Menüband](media/dmc-query.gif "Abfragemodell-Schaltfläche, Data Mining-Menüband")  
@@ -30,7 +30,7 @@ ms.locfileid: "48079420"
   
  Die **Abfrage** Assistent bietet auch einen erweiterten Editor zum Erstellen oder Ändern von Datamining-Modellen, zum Generieren benutzerdefinierter Abfragen oder zum Arbeiten mit Strukturen, die in den anderen Tools wie z. B. geschachtelte Datasets nicht unterstützt.  
   
--   Verwenden Sie den Text-Editor, um DMX (Data Mining Extension)-Anweisungen, die Sie an anderer Stelle erstellt haben, einzugeben oder einzufügen.  
+-   Verwenden Sie den Text-Editor zu geben oder fügen in den Data Mining Extensions (DMX)-Anweisungen, die Sie an anderer Stelle erstellt haben.  
   
 -   Verwenden Sie den interaktiven Abfrage-Generator, um eine benutzerdefinierte DMX-Anweisung mithilfe von Vorlagen und Dialogfeldern zusammenzustellen.  
   

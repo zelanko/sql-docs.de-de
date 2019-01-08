@@ -10,12 +10,12 @@ ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: beb1b18d03b557aad4709ee024be888c712c2c12
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f40a2df471dc1e0593d25f96c1b04837822725d7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031857"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544532"
 ---
 # <a name="managing-a-composite-domain"></a>Verwalten einer Verbunddomäne
   In diesem Thema wird die Verwendung von Verbunddomänen in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) beschrieben. In einigen Fällen können die Daten eines Felds in einer einzelnen Domäne nicht zufriedenstellend dargestellt werden, und Sie können die Daten nur darstellen, indem Sie einzelne Domänen gruppieren. Hierzu erstellen Sie eine Verbunddomäne. Eine Verbunddomäne besteht aus zwei oder mehreren einzelnen Domänen. Sie wird einem Datenfeld zugeordnet, das aus mehreren verwandten Begriffen besteht, die nicht analysiert werden, aber in einem einzelnen zusammengesetzten Wert enthalten sind. Jeder Begriff im Wert wird durch eine andere einzelne Domäne dargestellt. Nachdem Sie einzelne Domänen in Verbunddomänen aufgenommen und dann die Verbunddomäne dem Datenfeld zugeordnet haben, können Sie Wissen zu den Daten in diesem Feld in der Wissensdatenbank erstellen, indem Sie Wissen in den einzelnen Domänen erstellen. Eine Verbunddomäne ist wie eine einzelne Domäne eine semantische Darstellung der Daten in einem einzelnen Datenfeld.  

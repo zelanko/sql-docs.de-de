@@ -1,6 +1,6 @@
 ---
-title: Überwachen von aktiven Abfragen - Parallel Data Warehouse | Microsoft Docs
-description: Verwenden Sie die-Verwaltungskonsole als auch Parallel Data Warehouse-Systemsichten auf aktive Abfragen auf Analytics Platform System überwachen.
+title: Überwachen aktive Abfragen – Parallel Data Warehouse | Microsoft-Dokumentation
+description: Verwenden Sie die Verwaltungskonsole und Parallel Data Warehouse-Systemsichten, um aktive Abfragen in Analytics Platform System überwachen.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,34 +9,34 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 057e5448b68ea7a7f8f23bc57d1a3b0308b300d2
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: d2b1ee84b2ae738d7790e1238176331a221ac473
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538700"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409867"
 ---
-# <a name="monitoring-active-queries---parallel-data-warehouse"></a>Überwachen von aktiven Abfragen - Parallel Data Warehouse
-In diesem Artikel wird gezeigt, wie die-Verwaltungskonsole und die SQL Server PDW-Systemsichten zu verwenden, um aktive Abfragen zu überwachen. Finden Sie unter [überwachen Sie die Anwendung mithilfe der Verwaltungskonsole](monitor-the-appliance-by-using-the-admin-console.md) und [Systemsichten](tsql-system-views.md) Informationen zu diesen Tools.  
+# <a name="monitoring-active-queries---parallel-data-warehouse"></a>Überwachen aktiver Abfragen – Parallel Data Warehouse
+In diesem Artikel zeigt, wie Sie mit der Verwaltungskonsole und die SQL Server-PDW-Systemsichten zum Überwachen von aktiven Abfragen. Finden Sie unter [Überwachen der Appliance mithilfe der Verwaltungskonsole](monitor-the-appliance-by-using-the-admin-console.md) und [Systemsichten](tsql-system-views.md) für Informationen zu diesen Tools.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
-Unabhängig von der Methode, die zum Überwachen von aktiven Abfragen verwendet wird, muss die Anmeldung in in "Verwenden alle von der Verwaltungskonsole" beschriebenen Berechtigungen haben [Erteilen von Berechtigungen zum Verwenden der Verwaltungskonsole](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
+Unabhängig von der Methode, die zum Überwachen von aktiven Abfragen verwendet wird, muss die Anmeldung in in "Verwenden alle von der Verwaltungskonsole" beschriebenen Berechtigungen besitzen [Erteilen von Berechtigungen zum Verwenden der Verwaltungskonsole](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
   
-## <a name="PermsAdminConsole"></a>Monitor aktive Abfragen  
-Die-Verwaltungskonsole und die SQL Server PDW-Systemsichten können verwendet werden, um aktive Abfragen zu überwachen. Führen Sie die folgenden Anweisungen aus.  
+## <a name="PermsAdminConsole"></a>Überwachen aktiver Abfragen  
+Sowohl der Verwaltungskonsole und die SQL Server-PDW-Systemsichten können verwendet werden, um aktive Abfragen zu überwachen. Führen Sie die folgenden Anweisungen aus.  
   
-### <a name="to-monitor-active-queries-by-using-the-admin-console"></a>Auf aktive Abfragen zu überwachen, indem Sie mithilfe der Verwaltungskonsole  
+### <a name="to-monitor-active-queries-by-using-the-admin-console"></a>Zum Überwachen von aktiven Abfragen mithilfe der Verwaltungskonsole  
   
-1.  Melden Sie sich bei der Verwaltungskonsole. Finden Sie unter [überwachen Sie die Anwendung mithilfe der Verwaltungskonsole](monitor-the-appliance-by-using-the-admin-console.md) Anweisungen.  
+1.  Melden Sie sich bei der Verwaltungskonsole. Finden Sie unter [Überwachen der Appliance mithilfe der Verwaltungskonsole](monitor-the-appliance-by-using-the-admin-console.md) Anweisungen.  
   
-2.  Klicken Sie im oberen Menü auf **Abfragen**. Sehen Sie eine Tabelle mit grundlegenden Informationen zu den neuesten Abfragen auf dem Gerät, einschließlich der Anmeldename, der die Abfrage, die Start- und Endzeiten für die Abfrage und den aktuellen Status der Abfrage übermittelt.  
+2.  Klicken Sie auf die im oberen Menü auf **Abfragen**. Es wird eine Tabelle mit grundlegenden Informationen zu den neuesten Abfragen angezeigt, auf dem Gerät, einschließlich der Anmeldename, übermittelt die Abfrage, die Start- und Endzeiten für die Abfrage und den aktuellen Status der Abfrage hat.  
   
-3.  Um den Abfragebefehl, zeigen Sie den Mauszeiger über den Abfrage-ID in der linken Spalte für diese Zeile anzuzeigen.  
+3.  Um den Abfragebefehl anzuzeigen, zeigen Sie mit der Maus die Abfrage-ID in der linken Spalte für diese Zeile.  
   
-    Um ausführlichere Informationen für eine bestimmte Abfrage angezeigt wird, klicken Sie auf die Abfrage-ID. Sehen Sie Informationen, einschließlich der vollständigen Abfrage und den Abfrageplan mit Statusinformationen für jeden Schritt in der Ausführung der Abfrage ein. Wenn keine Fehler zurückgegeben wurden, sehen Sie auch ausführliche Informationen zu den Fehlern. <!-- MISSING LINKS See [Understanding Query Plans &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-plans-sql-server-pdw.md) for information on how to interpret the query plan information available in the Admin Console.  -->
+    Ausführlichere Informationen für eine bestimmte Abfrage erhalten, klicken Sie auf der Abfrage-ID Informationen, die als auch die vollständige Abfrage der Abfrageplan mit Statusinformationen für jeden Schritt in die Ausführung der Abfrage wird angezeigt. Wenn keine Fehler zurückgegeben wurden, sehen Sie auch detaillierte Informationen zu den Fehlern. <!-- MISSING LINKS See [Understanding Query Plans &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-plans-sql-server-pdw.md) for information on how to interpret the query plan information available in the Admin Console.  -->
   
 ### <a name="to-monitor-active-queries-by-using-the-system-views"></a>Zum Überwachen von aktiven Abfragen mithilfe von Systemsichten  
-Ist die primäre Systemsicht verwendet, um Abfragen zu überwachen [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md). Verwenden Sie diese Systemsicht finden die `request_id` für eine aktive oder aktuelle Abfrage, die basierend auf den Text der Abfrage.  
+Die primäre Systemsicht, die zum Überwachen von Abfragen ist [dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md). Verwenden Sie diese Systemansicht zum Suchen der `request_id` für eine Abfrage aktiv "oder" letzte, basierend auf den Text der Abfrage.  
   
 Z. B. die folgende Abfrage sucht die `request_id` und der aktuelle `status` für jede Abfrage, die wählt alle Spalten aus der `memberAddresses` Tabelle.  
   
@@ -44,10 +44,10 @@ Z. B. die folgende Abfrage sucht die `request_id` und der aktuelle `status` für
 SELECT request_id, command, status   
 FROM sys.dm_pdw_exec_requests   
 WHERE command   
-LIKE ‘%SELECT * FROM db1..memberAddresses%’;  
+LIKE '%SELECT * FROM db1..memberAddresses%';  
 ```  
   
-Nach der `request_id` wurde für eine Abfrage identifiziert, verwenden Sie die anderen Informationen in den `dm_pdw_exec_requests` -Tabelle ab, um herauszufinden, zur Verarbeitung der Abfrage, oder verwenden Sie [sys.dm_pdw_request_steps](../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) Anzeigen des Status der einzelnen Abfrage Schritte für die Ausführung der Abfrage.  
+Nach der `request_id` wurde für eine Abfrage identifiziert wird, verwenden Sie die anderen Informationen in den `dm_pdw_exec_requests` -Tabelle ab, um Informationen über die Verarbeitung der Abfrage finden, oder verwenden Sie [dm_pdw_request_steps](../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) Anzeigen des Status der einzelnen Abfrage Schritte für die Ausführung der Abfrage.  
   
 <!-- MISSING LINKS 
 ## See Also  

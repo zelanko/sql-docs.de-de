@@ -16,15 +16,15 @@ ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93f138988e0b01d6408a7aec96d09ceff65a6f5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e7972fb72607edca8c1599c2d028b073c184642
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757718"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518289"
 ---
 # <a name="serializability"></a>Serialisierbarkeit
-Idealerweise sollten Transaktionen sein *serialisierbar*. Transaktionen werden als serialisierbar, wenn die Ergebnisse der Transaktionen gleichzeitig ausgeführt werden wie die Ergebnisse der seriell ausführen identisch sind, d. h. eine nach dem anderen. Es ist nicht wichtig, welcher Transaktion zuerst ausgeführt wird, die das Ergebnis Mischung der Transaktionen nicht widerspiegelt.  
+Idealerweise sollten Transaktionen sein *serialisierbar*. Transaktionen werden als serialisierbar, wenn die Ergebnisse der Transaktionen gleichzeitig ausgeführt werden wie die Ergebnisse der Ausführung dieser seriell - identisch sind, also eine nach der anderen. Es ist nicht wichtig, welcher Transaktion zuerst ausgeführt wird, die das Ergebnis Mischung der Transaktionen nicht widerspiegelt.  
   
  Nehmen wir beispielsweise an die Transaktion A Datenwerte multipliziert diesen mit 2 und Transaktion B 1 auf Datenwerte hinzugefügt. Nehmen wir nun an, dass zwei Datenwerte vorhanden sind: 0 und 10. Wenn diese Transaktionen nacheinander ausgeführt werden, werden die neuen Werte 1 und 21, wenn die Transaktion A zuerst ausgeführt wird, oder 2 und 22 sein, wenn die Transaktion B zuerst ausgeführt wird. Aber was geschieht, wenn die Reihenfolge, in der die beiden Transaktionen ausgeführt werden, für jeden Wert unterscheidet? Wenn die Transaktion, die eine erste auf dem ersten Wert ausgeführt wird und die Transaktion B zuerst auf dem zweiten Wert ausgeführt werden, werden die neuen Werte 1 und 22. Wenn Sie diese Reihenfolge umgekehrt ist, werden die neuen Werte 2 und 21. Die Transaktionen serialisierbar sind, wenn 1, 21 und 2 sind 22 die einzig mögliche Ergebnisse. Die Transaktionen sind, ist nicht serialisierbar, wenn 1, 22 oder 2, 21 ein mögliches Ergebnis.  
   

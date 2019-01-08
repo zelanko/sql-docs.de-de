@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 99d3317f25af947f042d43fdd64e4cad334ca51f
-ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.openlocfilehash: aaf90124cc7877b633a997a2c4f170057b965028
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37891001"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510933"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Parallel Data Warehouse-Komponenten - Analytics Platform System
 Dieser Artikel beschreibt die Appliance-Software und die nicht zur Appliance gehört Softwarekomponenten des Analytics Platform System.  
@@ -40,7 +40,7 @@ To learn more about Analytics Platform System, see:
   
 ![Parallel Data Warehouse-Software](media/parallel-data-warehouse-software.png "Parallel Data Warehouse-Software")  
   
-## <a name="sec1"></a>Softwareupdates – Verarbeitung und Speicherung von Abfragen  
+## <a name="sec1"></a>Softwareupdates - Verarbeitung und Speicherung von Abfragen  
   
 ### <a name="control-node"></a>Steuerknoten  
 MPP-Engine  
@@ -153,7 +153,7 @@ For more information, see [Install SQL Server database tooling  for Visual Studi
   
 <!-- MISSING LINKS
 
-If you don’t have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
+If you don't have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
 --> 
   
 ### <a name="integration-services"></a>Integration Services  

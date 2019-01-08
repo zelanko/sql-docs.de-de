@@ -14,12 +14,12 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f7db54ca3cd3b7574896bac11bce87446b6d4b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773388"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505715"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Übergeben von Parametern an einen benannten Befehl
 Genauso wie das Ergebnis des Befehls als, sich übergeben wird ein *out* Variablen des benannten Befehls, der Parameter wurde für ein parametrisierter Befehl kann als übergebenen *in* Variablen auf den benannten Befehl.  
@@ -77,21 +77,21 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- Beachten Sie, dass alle Eingabeparameter müssen alle Output-Variable vor, und die Datentypen der Parameter übereinstimmen oder konvertiert werden können, mit denen die entsprechenden Felder ein. Die folgende Anweisung aus:  
+ Beachten Sie, dass alle Eingabeparameter müssen alle Output-Variable vor, und die Datentypen der Parameter übereinstimmen oder konvertiert werden können, mit denen die entsprechenden Felder ein. Die folgende Anweisung:  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- – führt zu einem Fehler nicht übereinstimmende Datentypen, da die erforderliche Eingabeparameter ist eine **Zeichenfolge** Typ nicht von einer **ganze Zahl** Typ.  
+ -führt zu einem Fehler nicht übereinstimmende Datentypen, da die erforderliche Eingabeparameter ist eine **Zeichenfolge** Typ nicht von einer **ganze Zahl** Typ.  
   
- Der folgende Aufruf:  
+ Die folgenden Aufruf:  
   
 ```  
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- – ist gültig, aber ergibt ein leeres Resultset, weil keine solche Datensätze in der Datenbank vorhanden sind.  
+ -ist gültig, aber ergibt ein leeres Resultset, weil keine solche Datensätze in der Datenbank vorhanden sind.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

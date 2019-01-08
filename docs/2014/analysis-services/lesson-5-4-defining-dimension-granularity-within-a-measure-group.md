@@ -11,12 +11,12 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8936d7c79538f4cb609f9208c6bd458369093076
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: e1d7b619cb711938f07ae7902dc1b9544adc5890
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460925"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512292"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Definieren von Dimensionsgranularität innerhalb einer Measuregruppe
   Benutzer möchten die Möglichkeit bekommen, Faktendaten mit einer anderen Granularität oder Spezifizierung für andere Zwecke zu dimensionieren. Verkaufsdaten für Händler- oder Internetverkäufe können z. B. für jeden Tag aufgezeichnet werden, wogegen Sollvorgaben für den Verkauf möglicherweise nur auf Monats- oder Quartalsebene vorhanden sind. In diesen Szenarios möchten Benutzer eine Time-Dimension mit einer anderen oder detaillierteren Auflösung für jede dieser verschiedenen Faktentabellen verwenden. Sie könnten zwar eine neue Datenbankdimension als Time-Dimension mit dieser anderen Auflösung definieren, doch bietet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]eine einfachere Lösung.  
@@ -141,7 +141,7 @@ ms.locfileid: "49460925"
   
 10. Klicken Sie auf **OK**.  
   
-11. Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** -Dimension und der **Sales Quotas 1** -Measuregruppe und anschließend auf die Schaltfläche zum Durchsuchen (**…**). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
+11. Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** Dimension und die **Sales Quotas 1** Measuregruppe, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
   
 12. Wählen Sie in der Liste **Beziehungstyp auswählen** die Option **Referenziert**.  
   

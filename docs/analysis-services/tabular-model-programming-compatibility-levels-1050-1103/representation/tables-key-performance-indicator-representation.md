@@ -1,5 +1,5 @@
 ---
-title: Key Performance Indicator-Darstellung (tabellarisch) | Microsoft Docs
+title: Key Performance Indicator-Darstellung (tabellarisch) | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3a536272f6e41e3aaf1abe6404139b67e0e558f0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 690c82c020f509e7dec816ca64a11dc2828ad4cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039663"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513982"
 ---
-# <a name="tables---key-performance-indicator-representation"></a>Tabellen - Darstellung von Key Performance Indicator
+# <a name="tables---key-performance-indicator-representation"></a>Tabellen – Key Performance Indicator-Darstellung (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Ein KPI misst die Leistung eines Werts, der durch ein Basismeasure definiert wird, anhand eines Zielwerts.  
   
 ## <a name="key-performance-indicator-representation"></a>KPI (Key Performance Indicator)-Darstellung  
- Ein KPI (Key Performance Indicator) ist in tabellarischen Objektmodellen ein Measure mit zusätzlichen Informationen für die grafische Anzeige in der Clientanwendung. Ein KPI weist normalerweise folgende Informationen auf: das angestrebte Ziel, den Status des Measures im Vergleich zum Ziel sowie Informationen dazu, wie der Status grafisch im Clienttool angezeigt werden soll.  
+ In tabellarischen Modellen einen Key Performance Indicator - Kpi-ist ein Measure mit zusätzlichen Informationen für die Clientanwendung grafische Anzeige. Ein KPI weist normalerweise folgende Informationen auf: das angestrebte Ziel, den Status des Measures im Vergleich zum Ziel sowie Informationen dazu, wie der Status grafisch im Clienttool angezeigt werden soll.  
   
 ### <a name="key-performance-indicator-in-amo"></a>KPI (Key Performance Indicator) in AMO  
  Wenn AMO zum Verwalten eines KPIs für ein tabellarisches Modell verwendet wird, besteht keine 1:1-Objektentsprechung zu einem KPI in AMO. Das AMO-Objekt <xref:Microsoft.AnalysisServices.Kpi> wird nicht zu diesem Zweck verwendet. In AMO wird ein KPI für tabellarische Modelle durch eine Reihe von Objekten dargestellt, die in einem der Elemente in der <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A>-Auflistung sowie in <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> erstellt wurden.  
@@ -221,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular-Beispiel  
- Um ein Verständnis für die Verwendung von AMO zur Erstellung und Bearbeitung von Key Performance Indicator Darstellungen finden Sie unter den Quellcode der AMO zum Beispiel; Prüfen Sie insbesondere die Quelldatei: AddKPIs.cs. Das Beispiel ist auf Codeplex verfügbar. Ein wichtiger Hinweis zum Code: Der Code wird nur zur Verdeutlichung für die logischen Konzepte bereitgestellt, die hier erläutert werden, und sollte nicht in einer Produktionsumgebung verwendet oder zu anderen als Lehrzwecken eingesetzt werden.  
+ Um einen Einblick in die Verwendung von AMO zur Erstellung und Bearbeitung von KPI-Darstellungen zu gewinnen, können Sie den Quellcode im AMO2Tabular-Beispiel einsehen; prüfen Sie insbesondere die folgende Quelldatei: AddKPIs.cs. Das Beispiel ist auf Codeplex verfügbar. Ein wichtiger Hinweis zum Code: Der Code wird nur zur Verdeutlichung für die logischen Konzepte bereitgestellt, die hier erläutert werden, und sollte nicht in einer Produktionsumgebung verwendet oder zu anderen als Lehrzwecken eingesetzt werden.  
   
   

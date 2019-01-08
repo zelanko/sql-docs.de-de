@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Analysis Services-Projekts (SSDT) | Microsoft Docs
+title: Erstellen ein Analysis Services-Projekts (SSDT) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1634c864ba88afbcd9489732c5507800709f9931
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4fe65216ad293786496f412c9cc1451e6b92a7bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025256"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503391"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Erstellen eines Analysis Services-Projekts (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34025256"
   
 5.  Wählen Sie in der Dropdownliste **Projektmappe** die Option **Zur Projektmappe hinzufügen**aus, um das neue Projekt der vorhandenen Projektmappe hinzuzufügen.  
   
-     – oder –  
+     -oder-  
   
      Wählen Sie in der Dropdownliste **Projektmappe** die Option **Neue Projektmappe erstellen**aus, um eine neue Projektmappe zu erstellen. Aktivieren Sie das Kontrollkästchen **Projektmappenverzeichnis erstellen**, um einen neuen Ordner für die neue Projektmappe zu erstellen. Geben Sie im Feld **Projektmappenname**den Namen der neuen Projektmappe ein.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "34025256"
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verarbeitet beim Bereitstellen einer Projektmappe standardmäßig nur Objekte, die vom Bereitstellungsskript geändert wurden, sowie von ihnen abhängige Objekte. Sie können diese Funktionalität ändern, indem Sie im Dialogfeld **Eigenschaftenseiten** für das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine Änderung der Verarbeitungsoption-Konfigurationseigenschaft vornehmen.  
   
- Erstellen Sie zu Testzwecken die Projektmappe in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und stellen diese bereit. Beim Erstellen einer Projektmappe werden die Objektdefinitionen und Abhängigkeiten im Projekt überprüft und ein Bereitstellungsskript generiert. Beim Bereitstellen einer Projektmappe wird das Bereitstellungsmodul von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet, um das Bereitstellungsskript an die angegebene Instanz zu senden.  
+ Erstellen Sie zu Testzwecken die Projektmappe in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und stellen diese bereit. Beim Erstellen einer Projektmappe werden die Objektdefinitionen und Abhängigkeiten im Projekt überprüft und ein Bereitstellungsskript generiert. Beim Bereitstellen einer Projektmappe wird die Bereitstellungs-Engine von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet, um das Bereitstellungsskript an die angegebene Instanz zu senden.  
   
  Nachdem Sie das Projekt bereitgestellt haben, muss die bereitgestellte Datenbank überprüft und getestet werden. Anschließend können Sie Objektdefinitionen ändern und das Projekt erneut erstellen und bereitstellen, bis es abgeschlossen ist.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "34025256"
   
 |Ordner|Description|  
 |------------|-----------------|  
-|Datenquellen|Enthält Datenquellen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Datenquellen-Assistenten und bearbeiten Sie sie im Datenquellen-Designer.|  
+|Projektmappen-Explorer|Enthält Datenquellen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Datenquellen-Assistenten und bearbeiten Sie sie im Datenquellen-Designer.|  
 |Datenquellensichten|Enthält Datenquellensichten für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Datenquellensicht-Assistenten und bearbeiten Sie sie im Datenquellensicht-Designer.|  
 |Cubes|Enthält Cubes für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Cube-Assistenten und bearbeiten sie im Cube-Designer.|  
 |Dimensionen|Enthält Dimensionen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Dimensions-Assistenten oder dem Cube-Assistenten und bearbeiten Sie sie im Dimensions-Designer.|  
@@ -127,8 +127,8 @@ ms.locfileid: "34025256"
   
 |Dateityp|Description|  
 |---------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]der Projektdefinitionsdatei (dwproj)|Enthält Metadaten zu den Elementen, Konfigurationen und Assemblyverweisen, die im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt definiert und enthalten sind.|  
-|Benutzereinstellungen für das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Projekt (DWPROJ.USER)|Enthält Konfigurationsinformationen für das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt für einen bestimmten Benutzer.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projektdefinitionsdatei (DWPROJ)|Enthält Metadaten zu den Elementen, Konfigurationen und Assemblyverweisen, die im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt definiert und enthalten sind.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Benutzereinstellungen für das Projekt (DWPROJ.USER)|Enthält Konfigurationsinformationen für das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt für einen bestimmten Benutzer.|  
 |Datenquelldatei (DS)|Enthält die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -ASSL-Elemente (Analysis Services Scripting Language), die die Metadaten für eine Datenquelle definieren.|  
 |Datenquellen-Sichtdatei (DSV)|Enthält die ASSL-Elemente, die die Metadaten für eine Datenquellensicht definieren.|  
 |Cubedatei (CUBE)|Enthält die ASSL-Elemente, die die Metadaten für einen Cube definieren, einschließlich Measuregruppen, Measures und Cubedimensionen.|  
@@ -145,7 +145,7 @@ ms.locfileid: "34025256"
   
 |Kategorie|Elementvorlage|Description|  
 |--------------|-------------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Projektelemente|Cube|Startet den Cube-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt einen neuen Cube hinzuzufügen.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektelemente|Cube|Startet den Cube-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt einen neuen Cube hinzuzufügen.|  
 ||Datenquelle|Startet den Datenquellen-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine neue Datenquelle hinzuzufügen.|  
 ||Datenquellensicht|Startet den Datenquellensicht-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine neue Datenquellensicht hinzuzufügen.|  
 ||Datenbankrolle|Fügt dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine neue Datenbankrolle hinzu. Anschließend wird der Rollen-Designer für die neue Datenbankrolle angezeigt.|  
@@ -153,8 +153,8 @@ ms.locfileid: "34025256"
 ||Miningstruktur|Startet den Data Mining-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine neue Miningstruktur und das zugehörige Miningmodell hinzuzufügen.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Analysis Services-Projekteigenschaften & #40; SSDT & #41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
- [Erstellen von Analysis Services-Projekten & #40; SSDT & #41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Bereitstellen von Analysis Services-Projekten & #40; SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
+ [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergefilter_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d43af8f9ffc64eb7fcfaba5aff7434696376321
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c872cbafb3cb0a3a54c34e489242d9f69339b68f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704848"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748222"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  Diese Tabelle beschreibt die Eigenschaften von Artikeln und die Werte für diese Eigenschaften.  
   
-|Eigenschaft|value|Description|  
+|Eigenschaft|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Joinfilter.<br /><br /> Diese Option ist erforderlich, um [!INCLUDE[ssEW](../../includes/ssew-md.md)]-Abonnenten zu unterstützen.|  
 ||**2**|Logische Datensatzbeziehung.|  
@@ -73,7 +72,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|Der Join betrifft einen eindeutigen Schlüssel.|  
 ||**false**|Der Join betrifft nicht einen eindeutigen Schlüssel.|  
   
- [  **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
  Bestätigt, dass durch die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine vorhandene Momentaufnahme ungültig wird. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Mergeartikel bewirken nicht, die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  

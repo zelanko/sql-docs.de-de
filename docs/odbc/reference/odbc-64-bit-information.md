@@ -11,12 +11,12 @@ ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62497d2249131db94d2169e6138a67ee48e73a34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 744a31b805fb46302f4f9ad34a1bc2576a180694
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677728"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321666"
 ---
 # <a name="odbc-64-bit-information"></a>64-Bit-ODBC-Informationen
 Ab Windows Server 2003, müssen Microsoft-Betriebssystemen die 64-Bit-ODBC-Bibliotheken unterstützt. Die ODBC-Header und Bibliotheken, die zuerst im Lieferumfang von MDAC 2.7 SDK enthalten Änderungen, um Programmierern, leicht Schreiben von Code für den neuen 64-Bit-Plattformen zu ermöglichen. Sicherstellen, dass Ihr Code, die ODBC verwendet-definierten Typen, die unten aufgeführten, können Sie sowohl für 64-Bit und 32-Bit-Plattformen basierend auf demselben Quellcode kompilieren der **_WIN64** oder **WIN32** Makros.  
@@ -34,7 +34,7 @@ Ab Windows Server 2003, müssen Microsoft-Betriebssystemen die 64-Bit-ODBC-Bibli
 ## <a name="function-declaration-changes"></a>Deklaration von Funktionsänderungen  
  Die folgenden Funktionssignaturen für 64-Bit-Programmierung geändert. Die Elemente in fett formatiertem Text werden die einzelnen Parameter, die unterschiedlich sind.  
   
-```  
+```c
 SQLBindCol (SQLHSTMT StatementHandle, SQLUSMALLINT ColumnNumber,  
    SQLSMALLINT TargetType, SQLPOINTER TargetValuePtr, SQLLEN BufferLength,   SQLLEN * StrLen_or_Ind);  
   
@@ -115,7 +115,7 @@ SQLSetStmtOption (SQLHSTMT StatementHandle, SQLUSMALLINT Option,
 ## <a name="changes-in-sql-data-types"></a>Änderungen in SQL-Datentypen  
  Die folgenden vier SQL-Typen werden weiterhin auf 32-Bit unterstützt; Sie sind nicht für 64-Bit-Compiler definiert. Diese Typen werden nicht mehr für Parameter in MDAC 2.7 verwendet. Compiler-Fehler bewirkt, Verwendung dieser Typen auf 64-Bit-Plattformen.  
   
-```  
+```cpp
 #ifdef WIN32   
 typedef SQLULEN SQLROWCOUNT;   
 typedef SQLULEN SQLROWSETSIZE;   
@@ -126,7 +126,7 @@ typedef SQLLEN SQLROWOFFSET;
   
  Die Definition der SQLSETPOSIROW wurde für 32-Bit- und 64-Bit-Compiler geändert:  
   
-```  
+```c
 #ifdef _WIN64   
 typedef UINT64 SQLSETPOSIROW;   
 #else   
@@ -136,7 +136,7 @@ typedef UINT64 SQLSETPOSIROW;
   
  Die Definitionen von SQLLEN und SQLULEN erstellt wurde, wurden für 64-Bit-Compiler geändert:  
   
-```  
+```c
 #ifdef _WIN64   
 typedef INT64 SQLLEN;   
 typedef UINT64 SQLULEN;   
@@ -148,7 +148,7 @@ typedef UINT64 SQLULEN;
   
  Dieser Wert wurde geändert, obwohl SQL_C_BOOKMARK in ODBC 3.0 für 64-Bit-Compiler auf-Clients 2.0, veraltet ist:  
   
-```  
+```c
 #ifdef _WIN64   
 #define SQL_C_BOOKMARK SQL_C_UBIGINT   
 #else   
@@ -158,7 +158,7 @@ typedef UINT64 SQLULEN;
   
  Der Lesezeichen-Typ ist anders als in den neueren Headern definiert:  
   
-```  
+```c
 typedef SQLULEN BOOKMARK;  
 ```  
   
@@ -289,7 +289,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_DRIVER_HLIB  
   
- Wenn *Informationsart* verfügt über einen der folgenden Werte 2 **InfoValuePtr* ist 64-Bit für Eingabe und Ausgabe:  
+ Wenn *Informationsart* verfügt über einen der folgenden Werte 2 **InfoValuePtr* ist 64-Bit, auf die Eingabe und Ausgabe:  
   
  SQL_DRIVER_HDESC  
   

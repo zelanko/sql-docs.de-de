@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], events
@@ -17,12 +16,12 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70654d0d256b311d5e15807a3ccf6b895f00ed52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138120"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761212"
 ---
 # <a name="filter-a-trace"></a>Filtern einer Ablaufverfolgung
   Durch Filter werden die in einer Ablaufverfolgung aufgezeichneten Ereignisse eingeschränkt. Ist kein Filter eingerichtet, werden alle Ereignisse der ausgewählten Ereignisklassen in der Ablaufverfolgungsausgabe zurückgegeben. Wenn Sie z. B. die Benutzernamen von Windows in der Ablaufverfolgung auf bestimmte Benutzer beschränken, werden die Ausgabedaten auf die für Sie interessanten Benutzer reduziert.  
@@ -127,7 +126,7 @@ ms.locfileid: "48138120"
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|Verwenden Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , um die Ereignisse in dieser Datenspalte zu filtern. Weitere Informationen finden Sie unter [Filtern von Ablaufverfolgungen mit SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
-|**Status**|=, <>, >=, <=|  
+|**Zustand**|=, <>, >=, <=|  
 |**Success**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|Verwenden Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , um die Ereignisse in dieser Datenspalte zu filtern. Weitere Informationen finden Sie unter [Filtern von Ablaufverfolgungen mit SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  

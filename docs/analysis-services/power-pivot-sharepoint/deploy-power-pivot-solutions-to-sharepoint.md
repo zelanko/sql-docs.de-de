@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 94f887aa48a63fbc84e941e6259839bff1327bd3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984762"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544267"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Bereitstellen von Power Pivot-Lösungen in SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "38984762"
   
  Dieses Thema enthält folgende Abschnitte:  
   
- [Voraussetzung: Überprüfen, ob die Webanwendung den klassischen Authentifizierungsmodus verwendet](#bkmk_classic)  
+ [Voraussetzung: Stellen Sie sicher, dass die Webanwendung den klassischen Authentifizierungsmodus verwendet](#bkmk_classic)  
   
  [Schritt 1: Bereitstellen der Farmlösung](#bkmk_farm)  
   
- [Schritt 2: Bereitstellen der Power Pivot-Webanwendungslösung in der Zentraladministration](#deployCA)  
+ [Schritt 2: Bereitstellen der PowerPivot-Webanwendungslösung in der Zentraladministration](#deployCA)  
   
- [Schritt 3: Bereitstellen der Power Pivot-Webanwendungslösung auf anderen Webanwendungen](#deployUI)  
+ [Schritt 3: Bereitstellen der PowerPivot-Webanwendungslösung auf anderen Webanwendungen](#deployUI)  
   
  [Erneutes Bereitstellen oder Zurückziehen der Lösung](#retract)  
   
@@ -57,7 +57,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 2.  Führen Sie das folgende Cmdlet aus, um die Farmlösung hinzuzufügen.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      Das Cmdlet gibt den Namen der Lösung, deren Lösungs-ID und "Deployed=False" zurück. Im nächsten Schritt wird die Lösung bereitgestellt.  
@@ -65,10 +65,10 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Führen Sie das nächste Cmdlet aus, um die Farmlösung bereitzustellen:  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> Schritt 2: Bereitstellen der Power Pivot-Webanwendungslösung in der Zentraladministration  
+##  <a name="deployCA"></a> Schritt 2: Bereitstellen der PowerPivot-Webanwendungslösung in der Zentraladministration  
  Nach dem Bereitstellen der Farmlösung müssen Sie die Webanwendungslösung in der Zentraladministration bereitstellen. Durch diesen Schritt wird das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard der Zentraladministration hinzugefügt.  
   
 1.  Öffnen Sie eine SharePoint 2010-Verwaltungsshell mithilfe der Option **Als Administrator ausführen** .  
@@ -82,7 +82,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Führen Sie das folgende Cmdlet aus, um die Farmlösung hinzuzufügen.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
      Das Cmdlet gibt den Namen der Lösung, deren Lösungs-ID und "Deployed=False" zurück. Im nächsten Schritt wird die Lösung bereitgestellt.  
@@ -95,7 +95,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Da Sie nun die Webanwendungslösung in der Zentraladministration bereitgestellt haben, können Sie mithilfe der Zentraladministration alle verbleibenden Konfigurationsschritte ausführen.  
   
-##  <a name="deployUI"></a> Schritt 3: Bereitstellen der Power Pivot-Webanwendungslösung auf anderen Webanwendungen  
+##  <a name="deployUI"></a> Schritt 3: Bereitstellen der PowerPivot-Webanwendungslösung auf anderen Webanwendungen  
  In der vorherigen Aufgabe haben Sie powerpivotwebapp.wsp in der Zentraladministration bereitgestellt. In diesem Abschnitt stellen Sie die Lösung „powerpivotwebapp.wsp“ in jeder vorhandenen Webanwendung bereit, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenzugriff unterstützt. Wenn Sie später weitere Webanwendungen hinzufügen, wiederholen Sie unbedingt diesen Schritt für die zusätzlichen Webanwendungen.  
   
 1.  Klicken Sie in der Zentraladministration unter Systemeinstellungen auf **Farmlösungen verwalten**.  

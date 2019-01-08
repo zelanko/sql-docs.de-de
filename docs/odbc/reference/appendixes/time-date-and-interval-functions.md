@@ -18,12 +18,12 @@ ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52d0aba10c3e01ddd5cbcc709235f4f483907fb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1303ca724ef6790ae7bcf218ab8ed0e5da4ed38
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712614"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509272"
 ---
 # <a name="time-date-and-interval-functions"></a>Uhrzeit-, Datums- und Intervallfunktionen
 Die folgende Tabelle enthält Datum und Uhrzeit-Funktionen, die in der ODBC-Skalarfunktion Menge enthalten sind. Eine Anwendung kann bestimmen, welche Funktionen für Datum und die von einem Treiber unterstützt werden, durch den Aufruf **SQLGetInfo** mit einer *Informationstyp* von SQL_TIMEDATE_FUNCTIONS.  
@@ -43,7 +43,7 @@ Die folgende Tabelle enthält Datum und Uhrzeit-Funktionen, die in der ODBC-Skal
 |**CURRENT_TIMESTAMP**<br /> **[(** *Zeitstempel mit Genauigkeit* **)]** (ODBC-Version 3.0)|Gibt die aktuelle lokale Datum und Ortszeit als einen Timestamp-Wert zurück. Die *Zeitstempel mit Genauigkeit* Argument bestimmt die Genauigkeit des zurückgegebenen Zeitstempels.|  
 |**CURDATE ()** (ODBC 1.0)|Gibt das aktuelle Datum zurück.|  
 |**CURTIME ()** (ODBC 1.0)|Gibt die aktuelle lokale Zeit zurück.|  
-|**DAYNAME (** *"date_exp"* **)** (ODBC 2.0)|Gibt eine Zeichenfolge mit der für die Datenquelle spezifischen Namen des Tags (z. B. Sonntag bis Samstag oder so. bis Sa. für eine Datenquelle, die Englisch oder Sunday bis Saturday für eine Datenquelle verwendet, die Deutsch verwendet) für den Tagteil von *"date_exp"*.|  
+|**DAYNAME (** *"date_exp"* **)** (ODBC 2.0)|Gibt eine Zeichenfolge, die mit dem-spezifischen Namen des Tags (z. B. Sonntag bis Samstag oder so. bis Sa. für eine Datenquelle, die Englisch oder Sunday bis Saturday für eine Datenquelle verwendet, die Deutsch verwendet) für den Tagteil von *"date_exp"*.|  
 |**DAYOFMONTH (** *"date_exp"* **)** (ODBC-1.0)|Gibt den Tag des Monats basierend auf dem Monatsfeld in *"date_exp"* als ganze Zahl im Bereich von 1 bis 31.|  
 |**DAYOFWEEK (** *"date_exp"* **)** (ODBC-1.0)|Gibt den Tag der Woche, die basierend auf dem wochenfeld in *"date_exp"* als ganze Zahl im Bereich von 1 bis 7, wobei 1 steht für Sonntag.|  
 |**DAYOFYEAR (** *"date_exp"* **)** (ODBC-1.0)|Gibt den Tag des Jahres basierend auf das Jahresfeld in *"date_exp"* als ganze Zahl im Bereich von 1-366.|  
@@ -51,11 +51,11 @@ Die folgende Tabelle enthält Datum und Uhrzeit-Funktionen, die in der ODBC-Skal
 |**Stunde (** *"time_exp"* **)** (ODBC-1.0)|Gibt die Stunde basierend auf dem Stundenfeld in *"time_exp"* als ganze Zahl im Bereich von 0 bis 23.|  
 |**MINUTE (** *"time_exp"* **)** (ODBC-1.0)|Gibt die Minute basierend auf dem Minutenfeld in *"time_exp"* als ganze Zahl im Bereich von 0 bis 59.|  
 |**Monat (** *"date_exp"* **)** (ODBC-1.0)|Gibt den Monat basierend auf dem Monatsfeld in *"date_exp"* als ganze Zahl im Bereich von 1 bis 12.|  
-|**MONTHNAME (** *"date_exp"* **)** (ODBC 2.0)|Gibt eine Zeichenfolge mit der für die Datenquelle spezifischen Namen des Monats (z. B. Januar bis Dezember oder Januar bis Dezember für eine Datenquelle, die Englisch verwendet, oder January bis December für eine Datenquelle, die Deutsch verwendet) für den Monatsteil von *"date_exp"*.|  
+|**MONTHNAME (** *"date_exp"* **)** (ODBC 2.0)|Gibt eine Zeichenfolge, die mit dem-spezifischen Namen des Monats (z. B. Januar bis Dezember oder Januar bis Dezember für eine Datenquelle, die Englisch verwendet, oder January bis December für eine Datenquelle, die Deutsch verwendet) für den Monatsteil von *"date_exp"*.|  
 |**(JETZT)** (ODBC 1.0)|Gibt das aktuelle Datum und Uhrzeit als einen Timestamp-Wert zurück.|  
 |**Quartal (** *"date_exp"* **)** (ODBC-1.0)|Gibt das Quartal *"date_exp"* als ganze Zahl im Bereich von 1 bis 4, wobei 1 am 1. Januar bis 31. März darstellt.|  
 |**ZWEITE (** *"time_exp"* **)** (ODBC-1.0)|Gibt die Sekunde basierend auf dem Sekundenfeld in *"time_exp"* als ganze Zahl im Bereich von 0 bis 59.|
 |**TIMESTAMPADD (** *Intervall*, *Integer_exp*, *Timestamp_exp* **)** (ODBC 2.0)|Gibt den Zeitstempel, der durch Addition berechnet *Integer_exp* Intervalle des Typs *Intervall* zu *Timestamp_exp*. Gültige Werte für *Intervall* sind die folgenden Schlüsselwörter:<br /><br /> SQL_TSI_FRAC_SECOND<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_HOUR<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> in dem Bruchteile von Sekunden als milliardste Teil einer Sekunde ausgedrückt werden. Die folgende SQL-Anweisung gibt beispielsweise den Namen der einzelnen Mitarbeiter und seine 1-Jahres-Jahrestag zurück:<br /><br /> `SELECT NAME, {fn  TIMESTAMPADD(SQL_TSI_YEAR, 1, HIRE_DATE)} FROM  EMPLOYEES`<br /><br /> Wenn *Timestamp_exp* ist ein Uhrzeitwert und *Intervall* gibt an, Tage, Wochen, Monaten, Quartalen oder Jahren den Datumsteil des *Timestamp_exp* festgelegt ist, auf das aktuelle Datum vor den resultierenden Zeitstempel zu berechnen.<br /><br /> Wenn *Timestamp_exp* ist ein Datumswert und *Intervall* Sekundenbruchteile gibt Sekunden, Sekunden, Minuten oder Stunden, das Time-Teil eines *Timestamp_exp* auf 0 vor dem festgelegt wird den resultierenden Zeitstempel zu berechnen.<br /><br /> Eine Anwendung bestimmt die Intervalle, die eine Datenquelle unterstützt wird, durch den Aufruf **SQLGetInfo** mit der Option SQL_TIMEDATE_ADD_INTERVALS.|  
 |**TIMESTAMPDIFF (** *Intervall*, *timestamp_exp1*, *timestamp_exp2* **)** (ODBC 2.0)|Gibt die ganze Zahl der Intervalle des Typs *Intervall* mit dem *timestamp_exp2* ist größer als *timestamp_exp1*. Gültige Werte für *Intervall* sind die folgenden Schlüsselwörter:<br /><br /> SQL_TSI_FRAC_SECOND<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_HOUR<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> in dem Bruchteile von Sekunden als milliardste Teil einer Sekunde ausgedrückt werden. Die folgende SQL-Anweisung gibt z. B. den Namen der einzelnen Mitarbeiter und die Anzahl der Jahre, die er entwickelt hat:<br /><br /> `SELECT NAME, {fn  TIMESTAMPDIFF(SQL_TSI_YEAR, {fn CURDATE()}, HIRE_DATE)} FROM EMPLOYEES`<br /><br /> Falls ein Timestamp-Ausdruck einen Zeitwert ist und *Intervall* gibt an, auf das aktuelle Datum vor dem Berechnen der Differenz zwischen den Zeitstempeln Tage, Wochen, Monaten, Quartalen oder Jahren den Datumsteil des jeweiligen Zeitstempel festgelegt ist.<br /><br /> Falls ein Timestamp-Ausdruck ein Date-Wert ist und *Intervall* Sekundenbruchteile gibt Sekunden, Sekunden, Minuten oder Stunden, wird der Uhrzeitteil des jeweiligen Zeitstempel auf 0 vor dem Berechnen der Differenz zwischen den Zeitstempeln festgelegt.<br /><br /> Eine Anwendung bestimmt die Intervalle, die eine Datenquelle unterstützt wird, durch den Aufruf **SQLGetInfo** mit der Option SQL_TIMEDATE_DIFF_INTERVALS.|  
-|**Woche (** *"date_exp"* **)** (ODBC-1.0)|Gibt die Woche des Jahres basierend auf dem wochenfeld in *"date_exp"* als ganze Zahl im Bereich von 1 bis 53.|  
+|**Woche (** *"date_exp"* **)** (ODBC-1.0)|Gibt die Woche des Jahres basierend auf dem wochenfeld in *"date_exp"* als ganze Zahl im Bereich von 1-53.|  
 |**Jahr (** *"date_exp"* **)** (ODBC-1.0)|Gibt das Jahr, basierend auf das Jahresfeld in zurück *"date_exp"* als ganze Zahl. Der Bereich ist datenquellenabhängig.|

@@ -19,12 +19,12 @@ ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cde19779c178b8064e6b20a3ae39bbfb7f5b96f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25af20743a98ad674e24cf4ae028185b024697e5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847158"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395885"
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47847158"
   
 |Spalte|Typ|Description|  
 |------------|----------|-----------------|  
-|**handle_context_address**|**varbinary(8)**|Zeigt die Adresse der internen NSO-Struktur an, die der Handle des Clients zugeordnet ist. Lässt NULL-Werte zu.|  
+|**handle_context_address**|**varbinary(8)**|Zeigt die Adresse der internen NSO-Struktur, die der Handle des Clients zugeordnet. Lässt NULL-Werte zu.|  
 |**creation_request_id**|**int**|Zeigt ein Feld der REQ_PRE_CREATE-E/A-Anforderung an, die zur Erstellung dieser Handle verwendet wird. Lässt keine NULL-Werte zu.|  
 |**creation_irp_id**|**int**|Zeigt ein Feld der REQ_PRE_CREATE-E/A-Anforderung an, die zur Erstellung dieser Handle verwendet wird. Lässt keine NULL-Werte zu.|  
 |**handle_id**|**int**|Zeigt die eindeutige ID dieser Anforderung an, die vom Treiber zugewiesen ist. Lässt keine NULL-Werte zu.|  

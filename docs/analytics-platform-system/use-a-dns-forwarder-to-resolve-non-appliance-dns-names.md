@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 645e2603af6d0447aae22bc7c29b5413501b722f
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168893"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509319"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Verwenden Sie eine DNS-Weiterleitung für die nicht zur Appliance gehört DNS-namensauflösung in Analytics Platform System
 Eine DNS-Weiterleitung konfiguriert werden kann, auf den Active Directory-Domänendienste-Knoten (**_Appliance\_Domäne_-AD01** und  **_Appliance\_ Domäne_-AD02**) Ihrer Analytics Platform System Appliance, die Skripts und Anwendungen Zugriff auf externe Server zulässt.  

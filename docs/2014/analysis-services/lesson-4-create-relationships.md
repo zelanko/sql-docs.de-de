@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 5: Erstellen von Beziehungen | Microsoft-Dokumentation'
+title: 'Lektion 5: Beziehungen erstellen | Microsoft Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 935957ce0934e6b57bd7abd27bcf74fd14ee8cd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05ebc2ffa952c0b5c927d890aad70bbf55f3c5af
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113240"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409057"
 ---
-# <a name="lesson-5-create-relationships"></a>Lektion 5: Erstellen von Beziehungen
+# <a name="lesson-5-create-relationships"></a>Lektion 5: Beziehungen erstellen
   In dieser Lektion überprüfen Sie die Beziehungen, die beim Importieren von Daten automatisch erstellt wurden. Zudem fügen Sie neue Beziehungen zwischen verschiedenen Tabellen hinzu. Eine Beziehung ist eine Verbindung zwischen zwei Tabellen, die festlegt, wie die Daten in diesen Tabellen miteinander in Beziehung gesetzt werden sollen. Die Product-Tabelle und die Product Subcategory-Tabelle haben beispielsweise eine Beziehung, die darauf beruht, dass jedes Produkt zu einer Unterkategorie gehört. Weitere Informationen finden Sie unter [Beziehungen &#40;SSAS – tabellarisch&#41;](tabular-models/relationships-ssas-tabular.md).  
   
  Geschätzte Zeit zum Bearbeiten dieser Lektion: **10 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 3: Umbenennen von Spalten](rename-columns.md).  
+ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 3: Umbenennen von Spalten](rename-columns.md).  
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Überprüfen vorhandener Beziehungen und Hinzufügen neuer Beziehungen  
  Wenn Sie Daten mithilfe des Tabellenimport-Assistenten importiert haben, wurden sieben Tabellen aus der AdventureWorksDW-Datenbank importiert. Im Allgemeinen werden vorhandene Beziehungen automatisch zusammen mit den Daten importiert, wenn Sie Daten von einer relationalen Quelle importieren. Bevor Sie jedoch mit der Erstellung des Modells fortfahren, überprüfen Sie, ob die Beziehungen zwischen den Tabellen ordnungsgemäß erstellt wurden. In diesem Lernprogramm fügen Sie auch drei neue Beziehungen hinzu.  
@@ -39,7 +39,7 @@ ms.locfileid: "48113240"
   
 2.  Klicken Sie zwischen der Tabelle **Customer** und der Tabelle **Geography** auf die durchgezogene Linie. Die durchgezogene Linie zwischen diesen zwei Tabellen zeigt an, dass diese Beziehung aktiv ist. Sie wird folglich bei der Berechnung von DAX-Formeln standardmäßig verwendet.  
   
-     Beachten Sie, dass die Spalte **Geography Id** in der Tabelle **Customer** und die Spalte **Geography Id** in der Tabelle **Geography** jetzt jeweils innerhalb eines Felds angezeigt werden. Dies gibt an, dass es sich hierbei um die in der Beziehung verwendeten Spalten handelt. Die Eigenschaften der Beziehung werden jetzt auch im Fenster **Eigenschaften** angezeigt.  
+     Beachten Sie, dass die Spalte **Geography Id** in der Tabelle **Customer** und die Spalte **Geography Id** in der Tabelle **Geography** jetzt jeweils innerhalb eines Felds angezeigt werden. Dies gibt an, dass es sich hierbei um die in der Beziehung verwendeten Spalten handelt. Die Eigenschaften der Beziehung ist jetzt auch im angezeigt der **Eigenschaften** Fenster.  
   
     > [!TIP]  
     >  Zusätzlich zum Verwenden des Modell-Designers in der Diagrammsicht können Sie auch das Dialogfeld **Beziehungen verwalten** verwenden, um die Beziehungen zwischen allen Tabellen in einem Tabellenformat anzuzeigen. Klicken Sie im Menü **Tabelle** auf **Beziehungen verwalten**. Das Dialogfeld **Beziehungen verwalten** zeigt die Beziehungen an, die beim Importieren von Daten automatisch erstellt wurden.  
@@ -48,13 +48,13 @@ ms.locfileid: "48113240"
   
     |Active|Tabelle|Verknüpfte Suchtabelle|  
     |------------|-----------|--------------------------|  
-    |Benutzerkontensteuerung|**Kunden [Geography Id]**|**Geography [Geography Id]**|  
-    |Benutzerkontensteuerung|**Product [Produkt-Unterkategorie-Id]**|**Produktunterkategorie [Produkt-Unterkategorie-Id]**|  
-    |Benutzerkontensteuerung|**Produktunterkategorie [Product Category-Id]**|**Produktkategorie [Product Category-Id]**|  
-    |Benutzerkontensteuerung|**Internet Sales [Customer Id]**|**Kunden [Customer Id]**|  
-    |Benutzerkontensteuerung|**Internet Sales [ProductID]**|**Product [ProductID]**|  
+    |Ja|**Kunden [Geography Id]**|**Geography [Geography Id]**|  
+    |Ja|**Product [Produkt-Unterkategorie-Id]**|**Produktunterkategorie [Produkt-Unterkategorie-Id]**|  
+    |Ja|**Produktunterkategorie [Product Category-Id]**|**Produktkategorie [Product Category-Id]**|  
+    |Ja|**Internet Sales [Customer Id]**|**Kunden [Customer Id]**|  
+    |Ja|**Internet Sales [ProductID]**|**Product [ProductID]**|  
   
- Fehlt eine der in der oben stehenden Tabelle angegebenen Beziehungen, stellen Sie sicher, dass das Modell die folgenden Tabellen beinhaltet: Customer, Date, Geography, Product, Product Category, Product Subcategory und Internet Sales. Werden Tabellen über die gleiche Datenquellenverbindung zu unterschiedlichen Zeitpunkten importiert, werden Beziehungen zwischen diesen Tabellen nicht automatisch erstellt, sondern sind manuell zu erstellen.  
+ Wenn die Beziehungen in der obigen Tabelle nicht vorhanden sind, stellen Sie sicher, dass Ihr Modell in den folgenden Tabellen enthält: Kunden, Date, Geography, Product, Produktkategorie, Produktunterkategorie und Internet Sales. Werden Tabellen über die gleiche Datenquellenverbindung zu unterschiedlichen Zeitpunkten importiert, werden Beziehungen zwischen diesen Tabellen nicht automatisch erstellt, sondern sind manuell zu erstellen.  
   
  In einigen Fällen müssen Sie möglicherweise zusätzliche Beziehungen zwischen Tabellen im Modell erstellen, um eine bestimmte Geschäftslogik zu unterstützen. Für dieses Lernprogramm müssen Sie drei zusätzliche Beziehungen zwischen der Internet Sales-Tabelle und der Date-Tabelle erstellen.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "48113240"
      Eine gepunktete Linie wird angezeigt. Diese bedeutet, dass Sie eine inaktive Beziehung zwischen der Spalte **Ship Date** in der Tabelle **Internet Sales** und der Spalte **Date** in der Tabelle **Date** erstellt haben.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- Wenn Sie mit diesem Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: [Lektion 6: Erstellen von berechneten Spalten](lesson-5-create-calculated-columns.md).  
+ Um dieses Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: [Lektion 6: Erstellen von berechneten Spalten](lesson-5-create-calculated-columns.md).  
   
   

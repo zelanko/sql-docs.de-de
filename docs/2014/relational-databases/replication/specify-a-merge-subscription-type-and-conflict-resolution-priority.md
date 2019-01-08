@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], merge subscription resolvers
@@ -14,17 +13,17 @@ ms.assetid: 2b828d83-2341-4924-b92a-4f81a22246c0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbd6f31a08527b8a04201ffced9d03642da8a290
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ef72b3c36e1cfc7d59792056e080d1cbf2d5c55
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188560"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771412"
 ---
 # <a name="specify-a-merge-subscription-type-and-conflict-resolution-priority-sql-server-management-studio"></a>Angeben eines Mergeabonnementtyps und einer Konfliktlösungspriorität (Server Management Studio)
   Auf der Seite **Abonnementtyp** des Assistenten für neue Abonnements können Sie einen Mergeabonnementtyp und eine Konfliktlösungspriorität angeben. Weitere Informationen zum Verwenden dieses Assistenten finden Sie unter [Create a Pull Subscription](create-a-pull-subscription.md) und [Create a Push Subscription](create-a-push-subscription.md).  
   
- Der Abonnementtyp kann nicht geändert werden, nachdem ein Abonnement erstellt wurde, aber die Priorität kann im Dialogfeld **Abonnementeigenschaften - \<Publisher>: \<PublicationDatabase>** für den Serverabonnementtyp geändert werden. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md) und [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md).  
+ Abonnementtyp kann nicht geändert werden, nachdem ein Abonnement wird erstellt, aber die Priorität werden, für den serverabonnementtyp in geändert kann die **Abonnementeigenschaften - \<Verleger >: \<PublicationDatabase >** Dialogfeld. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md) und [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md).  
   
 ### <a name="to-specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>So geben Sie einen Mergeabonnementtyp und eine Konfliktlösungspriorität an  
   
@@ -34,12 +33,12 @@ ms.locfileid: "48188560"
   
 ### <a name="to-modify-the-conflict-resolution-priority"></a>So ändern Sie die Konfliktlösungspriorität  
   
-1.  Wählen Sie unter **Abonnementeigenschaften - \<Publisher>: \<PublicationDatabase>** auf dem Verleger einen Wert (0,00 bid 99,99) für die Option **Priorität** aus.  
+1.  In der **Abonnementeigenschaften - \<Verleger >: \<PublicationDatabase >** Geben Sie auf dem Verleger einen Wert (0,00 bis 99,99) für die **Priorität** Option.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte Konflikterkennung und -lösung bei der Mergereplikation](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Subscribe to Publications](subscribe-to-publications.md)  
+ [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)  
   
   

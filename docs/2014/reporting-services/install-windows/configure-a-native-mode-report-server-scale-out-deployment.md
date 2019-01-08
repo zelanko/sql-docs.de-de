@@ -15,12 +15,12 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 68951c637d0c0db1fc86bab6405868e73770aca2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606850"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395233"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)
 
@@ -42,7 +42,7 @@ ms.locfileid: "51606850"
   
 -   Überprüfen Sie [Installieren von SQL Server 2014 vom Installations-Assistenten &#40;Setup&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Onlinedokumentation Anweisungen zum Installieren von Berichtsserverinstanzen.  
   
--   Wenn Sie vorhaben, die Bereitstellung für horizontales Skalieren auf einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich) zu hosten, müssen Sie den NLB-Cluster zuerst konfigurieren. Weitere Informationen finden Sie unter [Configure a Report Server on a Network Load Balancing Cluster](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+-   Wenn Sie vorhaben, die Bereitstellung für horizontales Skalieren auf einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich) zu hosten, müssen Sie den NLB-Cluster zuerst konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers auf einem Netzwerklastenausgleich-Cluster](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 -   Machen Sie sich mit den Verfahren in diesem Thema vertraut. Hier finden Sie Anweisungen zum Freigeben einer Berichtsserver-Datenbank und zum Verknüpfen von Berichtsservern für das horizontale Skalieren.  
   
@@ -111,9 +111,9 @@ ms.locfileid: "51606850"
 3.  Wählen Sie auf der Seite Bereitstellung für horizontales Skalieren der Berichtsserverinstanz her, die darauf warten, fügen Sie die Bereitstellung, und klicken Sie auf **-Server hinzufügen**.  
   
     > [!NOTE]  
-    >  **Problem** : Wenn Sie versuchen, eine Reporting Services-Berichtsserverinstanz mit der Bereitstellung für horizontales Skalieren zu verknüpfen, wird möglicherweise eine Fehlermeldung vom Typ „Zugriff verweigert“ angezeigt.  
+    >  **Problem:** Wenn Sie versuchen, eine Reporting Services-Berichtsserverinstanz mit der Bereitstellung für horizontales Skalieren zu verknüpfen, können Fehler vom Typ "Zugriff verweigert" auftreten.  
     >   
-    >  **Problemumgehung:** Sichern Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Verschlüsselungsschlüssel von der ersten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz, und stellen Sie den Schlüssel auf dem zweiten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver wieder her. Versuchen Sie dann, den zweiten Server mit der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung für horizontales Skalieren zu verknüpfen.  
+    >  **Problemumgehung:** Sichern Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Verschlüsselungsschlüssel aus der ersten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz und den Schlüssel wiederherstellen, mit dem zweiten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Berichtsserver. Versuchen Sie dann, den zweiten Server mit der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung für horizontales Skalieren zu verknüpfen.  
   
 4.  Sie sollten jetzt feststellen können, dass beide Berichtsserverinstanzen funktionstüchtig sind. Zur Überprüfung der zweiten Instanz können Sie über das Konfigurationstool für Reporting Services eine Verbindung zum Berichtsserver herstellen und auf die URL des Report Server-Webdienstes oder des Berichts-Managers klicken.  
   

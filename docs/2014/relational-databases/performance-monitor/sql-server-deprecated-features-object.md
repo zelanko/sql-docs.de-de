@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -15,12 +15,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8296657608d2633cc57ed4b3e30a532b7a24e2b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211850"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763942"
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
   Das „SQLServer:Als veraltet markierte Funktionen“-Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Leistungsindikator bereit, um die als veraltet gekennzeichneten Funktionen zu überwachen. In jedem Fall stellt der Leistungsindikator einen Verwendungszähler bereit, der angibt, wie oft die veraltete Funktion seit dem letzten Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gefunden wurde.  
@@ -46,7 +46,7 @@ ms.locfileid: "48211850"
 |CREATE TRIGGER WITH APPEND|Eine CREATE TRIGGER-Anweisung mit der WITH APPEND-Klausel wurde gefunden. Erstellen Sie stattdessen den ganzen Trigger neu. Tritt einmal pro Verwendung in einer DDL-Anweisung auf.|  
 |CREATE_DROP_DEFAULT|Die Syntax CREATE DEFAULT oder DROP DEFAULT wurde gefunden. Schreiben Sie den Befehl unter Verwendung der DEFAULT-Option von CREATE TABLE oder ALTER TABLE um. Tritt einmal pro Kompilierung auf.|  
 |CREATE_DROP_RULE|Die Syntax CREATE RULE wurde gefunden. Schreiben Sie den Befehl unter Verwendung von Einschränkungen um. Tritt einmal pro Kompilierung auf.|  
-|Datentypen: 'text', 'ntext' oder 'image'|Die Datentypen `text`, `ntext` oder `image` wurden gefunden. Schreiben Sie Anwendungen für die Verwendung der `varchar(max)` -Datentyp und entfernt `text`, `ntext`, und `image` -datentypsyntax. Tritt einmal pro Abfrage auf.|  
+|Datentypen: 'text', 'ntext' oder 'image'|Die Datentypen `text`, `ntext` oder `image` wurden gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp `varchar(max)` verwendet und die Datentypsyntax `text`, `ntext` und `image` entfernt wird. Tritt einmal pro Abfrage auf.|  
 |Datenbank-Kompatibilitätsgrad 80|Die Gesamtzahl der Änderungen des Kompatibilitätsgrads einer Datenbank auf den Wert 80. Planen Sie, vor der nächsten Version die Datenbank und die Anwendung zu aktualisieren. Tritt auch auf, wenn eine Datenbank mit dem Kompatibilitätsgrad 80 gestartet wird.|  
 |Datenbank-Kompatibilitätsgrad 90|Die Gesamtzahl der Änderungen des Kompatibilitätsgrads einer Datenbank auf den Wert 90. Planen Sie, in einer zukünftigen Version die Datenbank und die Anwendung zu aktualisieren. Tritt auch auf, wenn eine Datenbank mit dem Kompatibilitätsgrad 90 gestartet wird.|  
 |DATABASE_MIRRORING|Es wurden Verweise für die Datenbankspiegelungsfunktion gefunden. Planen Sie, auf AlwaysOn-Verfügbarkeitsgruppen zu aktualisieren. Planen Sie alternativ zu Protokollversand zu migrieren, wenn Sie eine Edition von SQL Server ausführen, die AlwaysOn-Verfügbarkeitsgruppen nicht unterstützt.|  
@@ -112,12 +112,12 @@ ms.locfileid: "48211850"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Verweise auf die veraltete Funktionsys.numbered_procedure_parameters wurden gefunden. Darf nicht verwendet werden. Tritt einmal pro Kompilierung auf.|  
 |numbered_procedures|Verweise auf die veraltete Funktionsys.numbered_procedures wurden gefunden. Darf nicht verwendet werden. Tritt einmal pro Kompilierung auf.|  
-|Veraltete RAISEERROR-Syntax|Die veraltete RAISERROR-Syntax (Format: RAISERROR integer string) wurde gefunden. Schreiben Sie Anweisung unter Verwendung der aktuellen RAISERROR-Syntax um. Tritt einmal pro Kompilierung auf.|  
+|Veraltete RAISEERROR-Syntax|Die veraltete RAISERROR-Syntax (Format: RAISERROR Integer String) wurde gefunden. Schreiben Sie Anweisung unter Verwendung der aktuellen RAISERROR-Syntax um. Tritt einmal pro Kompilierung auf.|  
 |OLEDB für Ad-hoc-Verbindungen|SQLOLEDB wird nicht als Anbieter unterstützt. Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für Ad-hoc-Verbindungen.|  
 |PERMISSIONS|Verweise auf die systeminterne PERMISSIONS-Funktion wurden gefunden. Fragen Sie stattdessen sys.fn_my_permissions ab. Tritt einmal pro Abfrage auf.|  
 |ProcNums|Die veraltete ProcNums-Syntax wurde gefunden. Schreiben Sie die Anweisungen um, um die Verweise zu entfernen. Tritt einmal pro Kompilierung auf.|  
 |READTEXT|Die Syntax READTEXT wurde gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp `varchar(max)` verwendet und die Datentypsyntax `text` entfernt wird. Tritt einmal pro Abfrage auf.|  
-|RESTORE DATABASE oder LOG WITH DBO_ONLY|Die RESTORE ... WITH DBO_ONLY-Syntax wurde gefunden. Verwenden Sie die RESTORE ... RESTRICTED_USER-Syntax.|  
+|RESTORE DATABASE oder LOG WITH DBO_ONLY|Die RESTORE ... WITH DBO_ONLY-Syntax wurde gefunden. Verwenden Sie stattdessen die RESTORE ... RESTRICTED_USER-Syntax.|  
 |RESTORE DATABASE oder LOG WITH MEDIAPASSWORD|Die RESTORE ... WITH MEDIAPASSWORD-Syntax wurde gefunden. WITH MEDIAPASSWORD bietet keine hohe Sicherheit und sollte entfernt werden.|  
 |RESTORE DATABASE oder LOG WITH PASSWORD|Die RESTORE ... WITH PASSWORD-Syntax wurde gefunden. WITH PASSWORD bietet keine hohe Sicherheit und sollte entfernt werden.|  
 |Zurückgeben von Ergebnissen aus Triggern|Dieses Ereignis tritt einmal pro Triggeraufruf auf. Schreiben Sie den Trigger so um, dass er keine Resultsets zurückgibt.|  
@@ -156,13 +156,13 @@ ms.locfileid: "48211850"
 |sp_configure 'ft notify bandwidth (min)'|Die „ft notify bandwidth (min)“-Option von sp_configure wurde gefunden. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf.|  
 |sp_configure 'locks'|Die „locks“-Option von sp_configure wurde gefunden. Sperren sind nicht mehr konfigurierbar. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf.|  
 |sp_configure 'open objects'|Die „open objects“-Option von sp_configure wurde gefunden. Die Anzahl geöffneter Objekte ist nicht mehr konfigurierbar. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf.|  
-|sp_configure 'priority boost'|Die Option „priority boost“ von sp_configure wurde gefunden. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf. Verwenden Sie stattdessen die start /high … program.exe-Option von Windows.|  
+|sp_configure 'priority boost'|Die Option „priority boost“ von sp_configure wurde gefunden. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf. Verwenden Sie stattdessen die Windows-Option „start /high … program.exe“.|  
 |sp_configure 'remote proc trans'|Die „remote proc trans“-Option von sp_configure wurde gefunden. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf.|  
 |sp_configure 'set working set size'|Die „set working set size“-Option von sp_configure wurde gefunden. Die Workingsetgröße ist nicht mehr konfigurierbar. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf.|  
 |sp_control_dbmasterkey_password|Die gespeicherte Prozedur sp_control_dbmasterkey_password überprüft nicht, ob ein Hauptschlüssel vorhanden ist. Dies wird aus Gründen der Abwärtskompatibilität zugelassen, es wird jedoch eine Warnung angezeigt. Dieses Verhalten ist als veraltet markiert. In einer künftigen Version muss der Hauptschlüssel vorhanden sein, und das Kennwort, das in der gespeicherten Prozedur sp_control_dbmasterkey_password verwendet wird, muss einem der Kennwörter zum Verschlüsseln des Datenbank-Hauptschlüssels entsprechen.|  
 |sp_create_removable|Die Prozedur sp_create_removable wurde gefunden. Verwenden Sie stattdessen CREATE DATABASE. Tritt einmal pro Abfrage auf.|  
-|sp_db_vardecimal_storage_format|Verwenden von `vardecimal` Speicherformat festgestellt wurde. Verwenden Sie stattdessen die Datenkomprimierung.|  
-|sp_dbcmptlevel|Die Prozedur sp_dbcmptlevel wurde gefunden. Verwenden Sie ALTER DATABASE … SET COMPATIBILITY_LEVEL. Tritt einmal pro Abfrage auf.|  
+|sp_db_vardecimal_storage_format|Die Verwendung des Speicherformats `vardecimal` wurde erkannt. Verwenden Sie stattdessen die Datenkomprimierung.|  
+|sp_dbcmptlevel|Die Prozedur sp_dbcmptlevel wurde gefunden. Verwenden Sie ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Tritt einmal pro Abfrage auf.|  
 |sp_dbfixedrolepermission|Die Prozedur sp_dbfixedrolepermission wurde gefunden. Darf nicht verwendet werden. Tritt einmal pro Abfrage auf.|  
 |sp_dboption|Die Prozedur sp_dboption wurde gefunden. Verwenden Sie stattdessen ALTER DATABASE und DATABASEPROPERTYEX. Tritt einmal pro Kompilierung auf.|  
 |sp_dbremove|Die Prozedur sp_dbremove wurde gefunden. Verwenden Sie stattdessen DROP DATABASE. Tritt einmal pro Abfrage auf.|  
@@ -179,7 +179,7 @@ ms.locfileid: "48211850"
 |sp_droprole|Die Prozedur sp_droprole wurde gefunden. Verwenden Sie stattdessen DROP ROLE. Tritt einmal pro Abfrage auf.|  
 |sp_droptype|Die Prozedur sp_droptype wurde gefunden. Verwenden Sie stattdessen DROP TYPE.|  
 |sp_dropuser|Die Prozedur sp_dropuser wurde gefunden. Verwenden Sie stattdessen DROP USER. Tritt einmal pro Abfrage auf.|  
-|sp_estimated_rowsize_reduction_for_vardecimal|Verwenden von `vardecimal` Speicherformat festgestellt wurde. Verwenden Sie stattdessen Datenkomprimierung und sp_estimate_data_compression_savings.|  
+|sp_estimated_rowsize_reduction_for_vardecimal|Die Verwendung des Speicherformats `vardecimal` wurde erkannt. Verwenden Sie stattdessen Datenkomprimierung und sp_estimate_data_compression_savings.|  
 |sp_fulltext_catalog|Die Prozedur sp_fulltext_catalog wurde gefunden. Verwenden Sie stattdessen CREATE/ALTER/DROP FULLTEXT CATALOG. Tritt einmal pro Kompilierung auf.|  
 |sp_fulltext_column|Die Prozedur sp_fulltext_column wurde gefunden. Verwenden Sie stattdessen ALTER FULLTEXT INDEX. Tritt einmal pro Kompilierung auf.|  
 |sp_fulltext_database|Die Prozedur sp_fulltext_database wurde gefunden. Verwenden Sie stattdessen ALTER DATABASE. Tritt einmal pro Kompilierung auf.|  
@@ -249,13 +249,13 @@ ms.locfileid: "48211850"
 |sysusers|Verweise auf sysusers wurden gefunden. Verwenden Sie stattdessen sys.database_principals. Tritt einmal pro Kompilierung auf.|  
 |Tabellenhinweis ohne WITH|Eine Anweisung wurde gefunden, die Tabellenhinweise verwendet, jedoch nicht das WITH-Schlüsselwort. Ändern Sie Anweisungen so, dass sie das Wort WITH einschließen. Tritt einmal pro Kompilierung auf.|  
 |Tabellenoption 'text in row'|Verweise auf die Tabellenoption text in row wurden gefunden. Verwenden Sie stattdessen die „large value types out of row“-Option von sp_tableoption. Tritt einmal pro Abfrage auf.|  
-|TEXTPTR|Verweise auf die TEXTPTR-Funktion wurden gefunden. Schreiben Sie Anwendungen für die Verwendung der `varchar(max)` -Datentyp und entfernt `text`, `ntext`, und `image` -datentypsyntax. Tritt einmal pro Abfrage auf.|  
-|TEXTVALID|Verweise auf die TEXTVALID-Funktion wurden gefunden. Schreiben Sie Anwendungen für die Verwendung der `varchar(max)` -Datentyp und entfernt `text`, `ntext`, und `image` -datentypsyntax. Tritt einmal pro Abfrage auf.|  
-|timestamp|Gesamte Anzahl der Vorkommnisse des veralteten `timestamp` -Datentyp wurde in einer DDL-Anweisung gefunden. Verwenden der `rowversion` Datentyp stattdessen.|  
-|UPDATETEXT oder WRITETEXT|Die UPDATETEXT- oder WRITETEXT-Anweisung wurde gefunden. Schreiben Sie Anwendungen für die Verwendung der `varchar(max)` -Datentyp und entfernt `text`, `ntext`, und `image` -datentypsyntax. Tritt einmal pro Abfrage auf.|  
+|TEXTPTR|Verweise auf die TEXTPTR-Funktion wurden gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp `varchar(max)` verwendet und die Datentypsyntax `text`, `ntext` und `image` entfernt wird. Tritt einmal pro Abfrage auf.|  
+|TEXTVALID|Verweise auf die TEXTVALID-Funktion wurden gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp `varchar(max)` verwendet und die Datentypsyntax `text`, `ntext` und `image` entfernt wird. Tritt einmal pro Abfrage auf.|  
+|timestamp|Gesamtanzahl der gefundenen Vorkommnisse des veralteten `timestamp`-Datentyps in einer DDL-Anweisung. Verwenden Sie stattdessen den `rowversion`-Datentyp.|  
+|UPDATETEXT oder WRITETEXT|Die UPDATETEXT- oder WRITETEXT-Anweisung wurde gefunden. Schreiben Sie Anwendungen so um, dass der Datentyp `varchar(max)` verwendet und die Datentypsyntax `text`, `ntext` und `image` entfernt wird. Tritt einmal pro Abfrage auf.|  
 |USER_ID|Verweise auf die USER_ID-Funktion wurden gefunden. Verwenden Sie stattdessen die DATABASE_PRINCIPAL_ID-Funktion. Tritt einmal pro Kompilierung auf.|  
 |Verwenden von OLEDB für Verbindungsserver||  
-|Vardecimal-Speicherformat|Verwenden von `vardecimal` Speicherformat festgestellt wurde. Verwenden Sie stattdessen die Datenkomprimierung.|  
+|Vardecimal-Speicherformat|Die Verwendung des Speicherformats `vardecimal` wurde erkannt. Verwenden Sie stattdessen die Datenkomprimierung.|  
 |XMLDATA|Die Syntax FOR XML wurde gefunden. Verwenden Sie XSD-Generierung für RAW- und AUTO-Modus. Es gibt keinen Ersatz für den expliziten Modus. Tritt einmal pro Kompilierung auf.|  
 |XP_API|Eine Anweisung einer erweiterten gespeicherten Prozedur wurde gefunden. Darf nicht verwendet werden.|  
 |xp_grantlogin|Die Prozedur xp_grantlogin wurde gefunden. Verwenden Sie stattdessen CREATE LOGIN. Tritt einmal pro Kompilierung auf.|  

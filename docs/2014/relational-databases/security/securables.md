@@ -18,12 +18,12 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa9af5a2542581cad1b3a5f4be956cce9651d4f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170180"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532461"
 ---
 # <a name="securables"></a>Sicherungsfähige Elemente
   Als sicherungsfähige Elemente werden Ressourcen bezeichnet, auf die der Zugriff durch das Autorisierungssystem von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reguliert wird. Eine Tabelle ist z. B. ein sicherungsfähiges Element. Bestimmte sicherungsfähige Elemente können sich innerhalb anderer Elemente befinden. Dadurch entstehen geschachtelte Hierarchien, so genannte "Bereiche", die selbst sicherungsfähig sind. Sicherungsfähige Bereiche sind **Server**, **Datenbank**und **Schema**.  
@@ -83,7 +83,7 @@ ms.locfileid: "48170180"
   
 -   XML-Schemaauflistung  
   
--   Objekt – Die Objektklasse enthält die folgenden Elemente:  
+-   Objekt: Die Objektklasse enthält die folgenden Elemente:  
   
     -   Aggregat  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48170180"
   
     -   Tabelle  
   
-    -   Anzeigen  
+    -   Sicht  
   
 ## <a name="controlling-access-to-a-securable"></a>Steuern von Zugriff auf ein sicherungsfähiges Element  
  Die Entität, die die Berechtigung für ein sicherungsfähiges Element empfängt, wird als Prinzipal bezeichnet. Die am häufigsten auftretenden Prinzipale sind Anmeldedaten und Datenbankbenutzer. Der Zugriff auf sicherungsfähige Elemente wird durch das Gewähren oder Verweigern von Berechtigungen gesteuert, oder durch das Hinzufügen von Anmeldedaten und Benutzer zu Rollen, die über Zugriff verfügen. Informationen zum Steuern von Berechtigungen finden Sie unter [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql), [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql), [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql), [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) und [sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql).  

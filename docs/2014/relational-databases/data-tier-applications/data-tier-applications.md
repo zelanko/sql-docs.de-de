@@ -15,12 +15,12 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b3fd46b767b41e442621d7554daee713bd98abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214730"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540122"
 ---
 # <a name="data-tier-applications"></a>Datenebenenanwendungen
   Eine Datenebenenanwendung (DAC) ist eine logische Datenbankverwaltungsentität, die alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte definiert, beispielsweise Tabellen, Sichten und Instanzobjekte, einschließlich Anmeldenamen, die mit der Datenbank eines Benutzers verknüpft sind. Eine DAC ist eine in sich geschlossene Einheit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankbereitstellung, mit der Datenebenenentwickler und Datenbankadministratoren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte in ein portables Artefakt, das sog. "DAC-Paket", packen können. Selbiges ist auch als DACPAC bekannt.  
@@ -34,16 +34,16 @@ ms.locfileid: "48214730"
   
  Der Vorteil einer DAC-gesteuerten Bereitstellung im Gegensatz zu einer skriptgesteuerten Bereitstellung besteht darin, dass das Tool dem Datenbankadministrator beim Identifizieren und Überprüfen von Verhaltensweisen verschiedener Quell- und Zieldatenbanken behilflich ist. Während der Upgrades warnt das Tool den Datenbankadministrator, wenn das Upgrade Datenverlust verursachen könnte, und es stellt auch einen Upgradeplan bereit. Der Datenbankadministrator kann den Plan auswerten und dann das Tool verwenden, um mit dem Upgrade fortzufahren.  
   
- Der DAC unterstützt auch die Versionsverwaltung, um dem Entwickler und dem Datenbankadministrator zu helfen, die Datenbankherkunft während des Lebenszyklus zu warten und zu verwalten.  
+ DACs unterstützen auch die Versionsverwaltung, um dem Entwickler und dem Datenbankadministrator zu helfen, die Datenbankherkunft während des Lebenszyklus zu warten und zu verwalten.  
   
 ## <a name="dac-concepts"></a>Konzepte von DAC  
  Eine DAC vereinfacht die Entwicklung, Bereitstellung und Verwaltung der Datenebenenelemente, die eine Anwendung unterstützen:  
   
--   Eine Datenebenenanwendung (DAC) ist eine logische Datenbankverwaltungsentität, die alle SQL Server-Objekte definiert, beispielsweise Tabellen, Sichten und Instanzobjekte, einschließlich Anmeldenamen, die mit der Datenbank eines Benutzers verknüpft sind. Sie ist eine in sich geschlossene Einheit der SQL Server-Datenbankbereitstellung, mit der Datenebenenentwickler und Datenbankadministratoren SQL Server-Objekte in ein portables Artefakt, das sog. "DAC-Paket" oder die sog. DACPAC-Datei, packen können.  
+-   Eine Datenebenenanwendung (DAC) ist eine logische Datenbankverwaltungsentität, die alle SQL Server-Objekte definiert (beispielsweise Tabellen, Sichten und Instanzobjekte), die mit der Datenbank eines Benutzers verknüpft sind. Sie ist eine in sich geschlossene Einheit der SQL Server-Datenbankbereitstellung, mit der Datenebenenentwickler und Datenbankadministratoren SQL Server-Objekte in ein portables Artefakt, das sog. "DAC-Paket" oder die sog. DACPAC-Datei, packen können.  
   
--   Damit eine SQL Server-Datenbank als DAC behandelt wird, muss sie registriert werden, und zwar entweder explizit durch einen Benutzervorgang oder implizit durch eine der DAC-Vorgänge. Wenn eine Datenbank registriert wird, werden die DAC-Version und andere Eigenschaften als Teil der Metadaten der Datenbank aufgezeichnet. Umgekehrt kann die Registrierung einer Datenbank auch aufgehoben werden, wodurch die DAC-Eigenschaften entfernt werden.  
+-   Damit eine SQL Server-Datenbank als DAC behandelt wird, muss sie registriert werden, und zwar entweder explizit durch einen Benutzervorgang oder implizit durch einen der DAC-Vorgänge. Wenn eine Datenbank registriert wird, werden die DAC-Version und andere Eigenschaften als Teil der Metadaten der Datenbank aufgezeichnet. Umgekehrt kann die Registrierung einer Datenbank auch aufgehoben werden, wodurch die DAC-Eigenschaften entfernt werden.  
   
--   Im Allgemeinen können DAC-Tools DACPAC-Dateien lesen, die von DAC-Tools früherer SQL Server-Versionen generiert wurden. Zudem können von den DAC-Tools DACPAC-Dateien für frühere Versionen von SQL Server bereitgestellt werden. Demgegenüber können DAC-Tools früherer Versionen keine DACPAC-Dateien lesen, die mit höheren DAC-Tool-Versionen generiert wurden. Dies gilt insbesondere in folgenden Fällen:  
+-   Im Allgemeinen können DAC-Tools DACPAC-Dateien lesen, die von DAC-Tools früherer SQL Server-Versionen generiert wurden. Außerdem können von den DAC-Tools DACPAC-Dateien für frühere Versionen von SQL Server bereitgestellt werden. Demgegenüber können DAC-Tools früherer Versionen keine DACPAC-Dateien lesen, die mit höheren DAC-Tool-Versionen generiert wurden. Dies gilt insbesondere in folgenden Fällen:  
   
     -   DAC-Vorgänge wurden in SQL Server 2008 R2 eingeführt. Zusätzlich zu SQL Server 2008 R2-Datenbanken unterstützen die Tools die Generierung der DACPAC-Dateien von SQL Server 2008, SQL Server 2005 und SQL Server 2000-Datenbanken.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48214730"
 ## <a name="backup-package-bacpac"></a>Sicherungspaket (BACPAC)  
  Ein BACPAC ist ein Artefakt, das das Datenbankschema sowie die in der Datenbank gespeicherten Daten kapselt. Das BACPAC ist eine Windows-Datei mit einer Erweiterung BACPAC. Das BACPAC-Dateiformat ist ein offenes Dateiformat (vergleichbar mit DACPAC). Die Schemainhalte von BACPAC sind mit DACPAC identisch. Die Daten werden im JSON-Format gespeichert.  
   
- DACPAC und BACPAC sind ähnlich, aber sie zielen auf andere Szenarien ab. Ein DACPAC dient zum Erfassen und Bereitstellen von Schemas, einschließlich der Aktualisierung einer vorhandenen Datenbank. Der Hauptverwendungszweck von DACPACs besteht in der Bereitstellung eines streng definierten Schemas für Entwicklungs-, Test- und anschließend Produktionsumgebungen und umgekehrt: dem Erfassen des Produktionsschemas und dem erneuten Anwenden auf Test- und Entwicklungsumgebung.  
+ DACPAC und BACPAC sind ähnlich, aber sie zielen auf andere Szenarien ab. Ein DACPAC dient zum Erfassen und Bereitstellen von Schemas, einschließlich der Aktualisierung einer vorhandenen Datenbank. Der primäre Anwendungsfall für eine DACPAC-Datei ist zum Bereitstellen eines streng definierten Schemas zu Entwicklungs-, Test-, und klicken Sie dann produktionsumgebungen, und das Gegenteil: Erfassen des produktionsschemas und deren Anwendung auf erneut in Test- und entwicklungsumgebungen.  
   
  Ein BACPAC dient andererseits der Erfassung von Schemas und Daten. Ein BACPAC ist die logische Entsprechung einer Datenbanksicherung und kann nicht verwendet werden, um vorhandene Datenbanken zu aktualisieren. Der Hauptzweck eines BACPACs besteht darin, eine Datenbank von einem Server auf einen anderen zu verschieben – oder von einem lokalen Server in die Cloud – und eine vorhandene Datenbank in einem offenen Format zu archivieren.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48214730"
  Beide Funktionen werden von den Datenbankverwaltungstools unterstützt: Server Management Studio, das Verwaltungsportal für SQL Azure und die DACFx-API.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Sie müssen Mitglied der `dbmanager` Rolle oder zugewiesene `CREATE DATABASE` Berechtigungen zum Erstellen einer Datenbank, z. B. zum Erstellen einer Datenbank durch Bereitstellen eines DAC-Pakets. Sie müssen Mitglied der `dbmanager` -Rolle oder zugewiesen wurden `DROP DATABASE` Berechtigungen für eine Datenbank zu löschen.  
+ Sie müssen ein Mitglied der `dbmanager`-Rolle sein, oder Sie müssen der `CREATE DATABASE`-Berechtigung zugeordnet sein, um eine Datenbank zu erstellen, einschließlich dem Erstellen einer Datenbank durch Bereitstellen eines DAC-Pakets. Sie müssen ein Mitglied der `dbmanager`-Rolle sein, oder Sie müssen der `DROP DATABASE`-Berechtigung zugeordnet sein, um eine Datenbank löschen zu können.  
   
 ## <a name="data-tier-application-tasks"></a>Tasks der Datenebenenanwendung  
   

@@ -8,8 +8,6 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 f1_keywords:
-- vsregularexpressionhelp
-- vs.regularexpressionhelp
 - vs.regularexpressionbuilder
 helpviewer_keywords:
 - regular expressions [SQL Server Management Studio]
@@ -19,19 +17,19 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2014aa68bee9e78477fb4ee9993053e13a33abe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9a265979af780b1df3eedf18c14fd822a2983b1
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077630"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328313"
 ---
 # <a name="search-text-with-regular-expressions"></a>Suchen von Text mit regulären Ausdrücken
   Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ersetzen von Textmustern. Im Feld **Suchen nach** des Dialogfelds [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
   
 #### <a name="to-find-using-regular-expressions"></a>So können Sie Suchvorgänge mithilfe von regulären Ausdrücken ausführen  
   
-1.  Um die Verwendung von regulären Ausdrücken im Feld **Suchen nach** bei den Vorgängen **Schnellsuche**, **In Dateien suchen**, **Schnellersetzung**oder **In Dateien ersetzen** zu aktivieren, wählen Sie unter **Suchoptionen** die Option **Mit**und dann **Reguläre Ausdrücke**aus.  
+1.  So aktivieren Sie die Verwendung von regulären Ausdrücken in der **Suchen nach** Feld während **Schnellsuche**, **Dateien suchen**, **Schnellersetzung**, oder  **In Dateien ersetzen** Vorgänge, wählen die **verwenden** option **Suchoptionen** , und wählen Sie **reguläre Ausdrücke**.  
   
 2.  Die dreieckige Schaltfläche für die **Verweisliste** neben dem Feld **Suchen nach** ist jetzt aktiviert. Klicken Sie auf diese Schaltfläche, um eine Liste der am häufigsten verwendeten regulären Ausdrücke anzuzeigen. Wenn Sie ein Element aus dem Ausdrucks-Generator auswählen, wird es in die **Suchen nach** -Zeichenfolge eingefügt.  
   
@@ -64,10 +62,10 @@ ms.locfileid: "48077630"
   
 |expression|Syntax|Description|  
 |----------------|------------|-----------------|  
-|Minimal; 0 oder mehr|@|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
-|Minimal; ein oder mehr|#|Entspricht einem oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
-|n-mal wiederholen|^n|Entspricht n Vorkommen des vorherigen Ausdrucks. [0-9]^4 entspricht z. B. einer beliebigen Zeichenfolge aus vier Zahlen.|  
-|Grouping|()|Gruppiert einen untergeordneten Ausdruck.|  
+|Minimal - zero or more|@|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
+|Minimal - one or more|#|Entspricht einem oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
+|n-mal wiederholen|^n|Entspricht n Vorkommen des vorherigen Ausdrucks. Z. B. [0-9] ^ 4 entspricht einer beliebigen Folge von vier Ziffern.|  
+|Gruppieren|()|Gruppiert einen untergeordneten Ausdruck.|  
 |n-markierter Text|\n|Gibt in einem **Suchen und Ersetzen** -Ausdruck den Text an, der dem n-ten markierten Ausdruck entspricht, wobei n eine Zahl von 1 bis 9 ist.<br /><br /> In einem **Ersetzen** -Ausdruck wird mit „\0“ der gesamte übereinstimmende Text eingefügt.|  
 |Rechtsbündig ausgerichtetes Feld|\\(w,n)|Richtet in einem **Ersetzen** -Ausdruck den n-ten markierten Ausdruck in einem Feld um mindestens *w* Zeichen nach rechts aus.|  
 |Linksbündig ausgerichtetes Feld|\\(-w,n)|Richtet in einem **Ersetzen** -Ausdruck den n-ten markierten Ausdruck in einem Feld um mindestens *w* Zeichen nach links aus.|  
@@ -136,5 +134,3 @@ ms.locfileid: "48077630"
 ## <a name="see-also"></a>Siehe auch  
  [Suchen und Ersetzen](search-and-replace.md)   
  [Suchen von Text mit Platzhaltern](search-text-with-wildcards.md)  
-  
-  

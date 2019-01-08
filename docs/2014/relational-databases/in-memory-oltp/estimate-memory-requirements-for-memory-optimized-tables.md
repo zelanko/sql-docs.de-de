@@ -10,15 +10,15 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3471abb7a551de576dfdf01de2a5fcf980b60527
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061270"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509226"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen
-  Unabhängig davon, ob Sie eine neue speicheroptimierte [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Tabelle erstellen oder eine vorhandene datenträgerbasierte Tabelle migrieren, ist es wichtig, den Arbeitsspeicherbedarf der einzelnen Tabellen realistisch einzuschätzen, damit Sie ausreichenden Arbeitsspeicher für den Server bereitstellen können. In diesem Abschnitt wird beschrieben, wie die Speichermenge geschätzt wird, die für die Daten einer speicheroptimierten Tabelle benötigt wird.  
+  Gibt an, ob Sie ein neues erstellen [!INCLUDE[hek_2](../../includes/hek-2-md.md)] eine Speicheroptimierte Tabelle oder eine vorhandene datenträgerbasierte Tabelle zu einer speicheroptimierten Tabelle migrieren, ist es wichtig, dass der Arbeitsspeicherbedarf der einzelnen Tabellen realistisch einzuschätzen, damit Sie den Server mit ausreichend bereitstellen können Arbeitsspeicher. In diesem Abschnitt wird beschrieben, wie die Speichermenge geschätzt wird, die für die Daten einer speicheroptimierten Tabelle benötigt wird.  
   
  Wenn Sie die Migration von datenträgerbasierten zu speicheroptimierten Tabellen in Erwägung ziehen, finden Sie im Thema [Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) Informationen dazu, welche Tabellen sich am besten migrieren lassen. Anschließend können Sie mit diesem Thema fortfahren. Alle Themen unter [Migrieren zu In-Memory OLTP](migrating-to-in-memory-oltp.md) bieten eine Anleitung zum Migrieren von datenträgerbasierten zu speicheroptimierten Tabellen.  
   
@@ -77,12 +77,12 @@ GO
   
  **Arbeitsspeicher für die Zeilen der Tabelle**  
   
- Aus den vorherigen Berechnungen ergibt sich für jede Zeile in der speicheroptimierten Tabelle eine Größe von 24 + 32 + 200 oder 256 Bytes.  Da sie 5 Million Zeilen enthält, belegt die Tabelle 5.000.000 * 256 Bytes oder 1.280.000.000 Bytes, also ungefähr 1,28 GB.  
+ Aus den vorherigen Berechnungen ergibt sich für jede Zeile in der speicheroptimierten Tabelle eine Größe von 24 + 32 + 200 oder 256 Bytes.  Da sie 5 Million Zeilen enthält, belegt die Tabelle 5.000.000 * 256 Bytes oder 1.280.000.000 Bytes, also ungefähr 1,28 GB.  
   
 ##  <a name="bkmk_IndexMeemory"></a> Arbeitsspeicher für Indizes  
  **Arbeitsspeicher für jeden Hashindex**  
   
- Jeder Hashindex ist ein Hasharray aus 8-Byte-Adresszeigern.  Die Größe des Arrays wird am besten anhand der Anzahl eindeutiger Indexwerte für diesen Index bestimmt. Beispielsweise ist die Anzahl eindeutiger Col2-Werte ein guter Ausgangspunkt für die Arraygröße von "t1c2_index". Durch ein übergroßes Hasharray wird Arbeitsspeicher vergeudet.  Ein zu kleines Hasharray verlangsamt die Leistung, da zu viele Konflikte durch Indexwerte entstehen, die demselben Hashindex zugeordnet sind.  
+ Jeder Hashindex ist ein Hasharray aus 8-Byte-Adresszeigern.  Die Größe des Arrays wird am besten anhand der Anzahl eindeutiger Indexwerte für diesen Index bestimmt. Beispielsweise ist die Anzahl eindeutiger Col2-Werte ein guter Ausgangspunkt für die Arraygröße von „t1c2_index“. Durch ein übergroßes Hasharray wird Arbeitsspeicher vergeudet.  Ein zu kleines Hasharray verlangsamt die Leistung, da zu viele Konflikte durch Indexwerte entstehen, die demselben Hashindex zugeordnet sind.  
   
  Mit Hashindizes erzielen Sie sehr schnelle Übereinstimmungssuchen wie:  
   
@@ -115,7 +115,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  Informationen zur Funktionsweise von Hashindizes in speicheroptimierten [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Tabellen finden Sie unter [Hashindizes](../../database-engine/hash-indexes.md).  
   
- **Hinweis:** Sie nicht die Arraygröße des Hash-Index im Handumdrehen ändern. Um die Arraygröße des Hashindexes zu ändern, müssen Sie die Tabelle löschen, den bucket_count-Wert ändern und die Tabelle erneut erstellen.  
+ **Hinweis**: Sie können die Arraygröße des Hashindexes nicht spontan ändern. Um die Arraygröße des Hashindexes zu ändern, müssen Sie die Tabelle löschen, den bucket_count-Wert ändern und die Tabelle erneut erstellen.  
   
  **Die Arraygröße der Hash-Index festlegen**  
   

@@ -15,12 +15,12 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c00420d6bed0b49c6e136c82f03460dcaaea8a85
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604880"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541935"
 ---
 # <a name="absolute-and-relative-urls"></a>Absolute und relative URLs
 Eine URL gibt den Speicherort eines Ziels, das auf einem Computer lokal oder im Netzwerk gespeichert. Das Ziel kann sein, eine Datei, Verzeichnis, HTML-Seite, Image, Programm usw.*.*  
@@ -58,7 +58,7 @@ Eine URL gibt den Speicherort eines Ziels, das auf einem Computer lokal oder im 
  Kontext kann auch definiert werden, indem Sie öffnen ein **Datensatz** oder **Recordset** -Objekt, ein Verzeichnis darstellt, da diese Objekte bereits über einen implizit oder explizit deklarierten verfügen **Verbindung**  -Objekt, das Kontext gibt.  
   
 ## <a name="scoped-operations"></a>Bereichsbezogene Vorgänge  
- Der Kontext definiert außerdem den Bereich – das heißt, das Verzeichnis und seinen Unterverzeichnissen ein, die in nachfolgenden Vorgängen teilnehmen kann. Die **Datensatz** Objekt verfügt über mehrere Bereichsbezogene Methoden, die in einem Verzeichnis ausgeführt werden und alle Unterverzeichnisse. Dazu gehören das [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), und [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
+ Der Kontext definiert auch Bereich –, also das Verzeichnis und seinen Unterverzeichnissen ein, die in nachfolgenden Vorgängen teilnehmen kann. Die **Datensatz** Objekt verfügt über mehrere Bereichsbezogene Methoden, die in einem Verzeichnis ausgeführt werden und alle Unterverzeichnisse. Dazu gehören das [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), und [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
   
 ## <a name="relative-urls-as-command-text"></a>Relative URLs als Befehlstext  
  Können Sie angeben, einen Befehl für die Datenquelle ausgeführt werden, durch Eingabe einer Zeichenfolge in die *CommandText* Parameter der **Verbindung** des Objekts [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) -Methode, und in der  *Quelle* Parameter, der die **Recordset** des Objekts [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode.  

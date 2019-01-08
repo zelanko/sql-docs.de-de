@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Anpassen von Power Pivot-Katalogs | Microsoft Docs
+title: Erstellen und Anpassen von Power Pivot-Katalog | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3c705a54d24b358593b1f1fafec328e3d2fa6fd9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 0cc45718f864f14ade20348b5dae76286ea14f3a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025977"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417121"
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Erstellen und Anpassen des PowerPivot-Katalogs
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "34025977"
   
     > [!NOTE]  
     >  Für den Power Pivot-Katalog ist Microsoft Silverlight erforderlich.  Silverlight wird vom Microsoft Edge-Browser nicht unterstützt.   
-    > Um die Bibliotheksinhalte in Edge anzuzeigen, klicken Sie auf die Registerkarte **Bibliothek** im Power Pivot-Katalog, und ändern Sie dann die Ansicht der Dokumentbibliothek in **Alle Dokumente**.    
+    > Um die Bibliotheksinhalte in Microsoft Edge anzuzeigen, klicken Sie auf die Registerkarte **Bibliothek** im Power Pivot-Katalog, und ändern Sie dann die Ansicht der Dokumentbibliothek in **Alle Dokumente**.    
     > Um die Standardansicht zu ändern, klicken Sie auf die Registerkarte **Bibliothek** und dann auf „Ansicht ändern“. Klicken Sie auf „Zur Standardansicht machen“, und klicken Sie dann auf „OK“, um die Standardansicht zu speichern.  
-    >  Weitere Informationen zu den von Microsoft Edge unterstützten Features finden Sie im Windows-Blog, [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  Weitere Informationen zu den von Edge unterstützten, finden Sie in der Windows-Blog, [eine Unterbrechung aus der Vergangenheit, Teil 2: Sagen Goodbye to ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Sie müssen Websitebesitzer sein, um eine Bibliothek erstellen zu können.  
   
@@ -64,13 +64,13 @@ ms.locfileid: "34025977"
 ##  <a name="createlib"></a> Erstellen des PowerPivot-Katalogs  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog wird erstellt, wenn Sie [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] mithilfe der Installationsoption Neuer Server installieren. Wenn Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] einer vorhandenen Farm hinzugefügt haben oder eine zusätzliche Bibliothek benötigen, können Sie für Ihre Anwendung oder Website eine neue erstellen.  
   
-1.  1.  **SharePoint 2010**: Klicken Sie in der oberen linken Ecke der Homepage Ihrer Website auf **Websiteaktionen** .  
+1.  1.  **SharePoint 2010**: Klicken Sie auf **Websiteaktionen** auf der oberen linken Ecke der Homepage Ihrer Website.  
   
     2.  Klicken Sie auf **Weitere Optionen**.  
   
     3.  Klicken Sie unter den Bibliotheken auf den **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog**.  
   
-    1.  **SharePoint 2013**: Klicken Sie auf das Symbol "Einstellungen" ![SharePoint Einstellungen](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Einstellungen"). Klicken Sie auf **Websiteinhalt**.  
+    1.  **SharePoint 2013**: Klicken Sie auf das Symbol "Einstellungen" ![SharePoint Settings](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings"). Klicken Sie auf **Websiteinhalt**.  
   
     2.  Klicken Sie auf **App hinzufügen**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34025977"
   
 3.  **SharePoint 2010:** Klicken Sie unter Benutzerdefinierte Ansichten auf **Ansicht ändern**.  
   
-     **SharePoint 2013:** Klicken Sie unter **Ansichten verwalten**auf **Ansicht ändern**.  
+     **SharePoint 2013:** In **Ansichten verwalten**, klicken Sie auf **Ansicht ändern**.  
   
 4.  Geben Sie unter Sortieren die Kriterien an, die bestimmen, wie die Arbeitsmappen in der Liste angezeigt werden. Standardmäßig werden Dokumente in der Reihenfolge aufgeführt, in der sie hinzugefügt wurden.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "34025977"
   
  ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
- Arbeitsmappenbesitzer oder -autoren benötigen die Berechtigung **Teilnehmen** , um die Datenaktualisierung für eine Arbeitsmappe zu planen. Benutzer mit Mitwirkungsberechtigungen können die Konfigurationsseite der Arbeitsmappe öffnen und bearbeiten, um die zur Datenaktualisierung verwendeten Anmelde- und Zeitplaninformationen anzugeben.  
+ Arbeitsmappenbesitzer oder -autoren benötigen die Berechtigung **Teilnehmen** , um die Datenaktualisierung für eine Arbeitsmappe zu planen. Benutzer mit Mitwirkungsberechtigungen können öffnen und Bearbeiten von der Arbeitsmappe datenaktualisierungskonfigurationsseite zum Geben Sie die Anmeldeinformationen ein, und planen die Informationen, mit denen die Daten zu aktualisieren.  
   
  Daher können Benutzer, die lediglich über die Berechtigungsstufen **Anzeigen** oder **Lesen** verfügen, nicht auf die Schaltfläche Aktualisieren zugreifen. Die Schaltfläche Aktualisieren ist zwar sichtbar, aber deaktiviert. Weitere Informationen finden Sie unter [Benutzerberechtigungen und Berechtigungsstufen in SharePoint 2013](http://technet.microsoft.com/library/cc721640.aspx).  
   

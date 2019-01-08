@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - WMI provider [SMO]
@@ -17,22 +15,22 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc42cd7c5f7670ed3ece73ee424de03891ed5781
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d16548f201f047ba83516469050e41380b7bc6f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211660"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762202"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Verwalten von Diensten und Netzwerkeinstellungen durch die Nutzung von WMI-Anbieter
-  Der WMI-Anbieter ist eine veröffentlichte Schnittstelle, mit dem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) zum Verwalten der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Diensten und Netzwerkprotokollen. In SMO werden die <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> Objekt darstellt, der WMI-Anbieter.  
+  Der WMI-Anbieter ist eine veröffentlichte Schnittstelle, die von der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) zur Verwaltung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Diensten und Netzwerkprotokollen verwendet wird. In SMO stellt das <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>-Objekt den WMI-Anbieter dar.  
   
- Die <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> -Objekt arbeitet unabhängig von die Verbindung mit der <xref:Microsoft.SqlServer.Management.Smo.Server> Objekt mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], und Windows-Anmeldeinformationen für die Verbindung zum WMI-Dienst verwendet.  
+ Das <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>-Objekt arbeitet unabhängig von der mit dem <xref:Microsoft.SqlServer.Management.Smo.Server>-Objekt zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hergestellten Verbindung und nutzt Windows-Anmeldeinformationen für die Verbindung zum WMI-Dienst.  
   
 ## <a name="example"></a>Beispiel  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- Für Programme, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI-Anbieter, müssen Sie enthalten die `Imports` Anweisung, um den WMI-Namespace zu qualifizieren. Fügen Sie die Anweisung nach den anderen `Imports` Anweisungen, vor jeglichen Deklarationen in der Anwendung, z.B.:  
+ Für Programme, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI-Anbieter, müssen Sie enthalten die `Imports` Anweisung, um den WMI-Namespace zu qualifizieren. Fügen Sie die Anweisung nach den anderen `Imports`-Anweisungen und vor jeglichen Deklarationen in der Anwendung wie folgt ein:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

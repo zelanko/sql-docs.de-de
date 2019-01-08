@@ -18,12 +18,12 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6017cadea0039613f7e97dc6e78665e47c9e2575
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018505"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858655"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Lesen und Anzeigen der Setupprotokolldateien von SQL Server
   Jeder Ausführung von Setup erstellt Protokolldateien mit einem neuen Protokollordner unter %Programme% erstellt\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\. Das Namensformat für mit einem Zeitstempel versehene Protokollordner ist JJJJMMTT_hhmmss. Wenn Setup in einem unbeaufsichtigten Modus ausgeführt wird, werden die Protokolle unter %temp%\sqlsetup*.log erstellt. Alle Dateien in den Protokollordnern werden in der Log\*.cab-Datei im jeweiligen Protokollordner archiviert.  
@@ -141,11 +141,11 @@ ms.locfileid: "51018505"
   
  Typen von MSI-Protokolldateien:  
   
--   \<Feature>\<Architektur>\_\<Interaktion>.log  
+-   \<Feature>_\<Architektur>\_\<Interaktion>.log  
   
 -   \<Feature>_\<Architektur>\_\<Sprache>\_\<Interaktion>.log  
   
--   \<Feature>_\<Architektur>\_\<Iteration>\_\<Workflow>.log  
+-   \<Feature>_\<Architecture>\_\<Interaktion>\_\<Workflow>.log  
   
 ### <a name="location"></a>Speicherort  
  Die MSI-Protokolldateien befinden sich unter %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< YYYYMMDD_HHMM >\\< Name\>. Log.  

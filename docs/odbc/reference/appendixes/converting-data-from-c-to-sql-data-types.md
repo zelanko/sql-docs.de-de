@@ -21,12 +21,12 @@ ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f68b53dd77305163aa2595c60a1994a13bb9964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 168fa55d89488277cd17f4bdca3105f7d879c8f8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793808"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509402"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Konvertieren von Daten von C- zu SQL-Datentypen
 Wenn eine Anwendung ruft **SQLExecute** oder **SQLExecDirect**, ruft der Treiber die Daten für alle Parameter gebunden **SQLBindParameter** von Speicherorten die Anwendung. Wenn eine Anwendung ruft **SQLSetPos**, der Treiber Ruft ab, die Daten für ein Update oder Hinzufügen von Spalten mit gebunden **SQLBindCol**. Für Data-at-Execution-Parameter, die Anwendung sendet die Parameterdaten mit **SQLPutData**. Wenn erforderlich, der Treiber die Daten aus den angegebenen Datentyp konvertiert die *ValueType* -Argument in **SQLBindParameter** in den Datentyp, der gemäß der *ParameterType*-Argument in **SQLBindParameter**, und klicken Sie dann die Daten an die Datenquelle sendet.  
@@ -45,37 +45,37 @@ Wenn eine Anwendung ruft **SQLExecute** oder **SQLExecDirect**, ruft der Treiber
   
  Die folgenden Begriffe werden in den Tabellen verwendet:  
   
--   **Die Bytelänge der Daten** – Anzahl der Bytes der SQL-Daten verfügbar, mit der Datenquelle gesendet, und zwar unabhängig davon, ob Daten abgeschnitten werden, bevor sie mit der Datenquelle gesendet wird. Für eine Zeichenfolge enthält dieser Speicherplatz für die Null-Terminierungszeichen keine.  
+-   **Die Bytelänge der Daten** : Gibt die Anzahl der Bytes der SQL-Daten, die zum Senden an die Datenquelle verfügbar, unabhängig davon, ob die Daten werden abgeschnitten, bevor sie mit der Datenquelle gesendet wird. Für eine Zeichenfolge enthält dieser Speicherplatz für die Null-Terminierungszeichen keine.  
   
--   **Spalte Bytelänge** – Anzahl von Bytes zum Speichern der Daten in der Datenquelle benötigt.  
+-   **Spalte Bytelänge** -Anzahl der Bytes, die zum Speichern der Daten in der Datenquelle erforderlich sind.  
   
--   **Zeichen-Byte-Länge** – maximale Anzahl von Bytes, die zum Anzeigen von Daten in Form von Zeichen erforderlich sind. Dies ist für jeden SQL-Datentyp in gemäß [Größe anzeigen](../../../odbc/reference/appendixes/display-size.md), es sei denn Zeichen-Byte-Länge in Bytes ist, während die Größe der Anzeige in Zeichen ist.  
+-   **Zeichen-Byte-Länge** : maximale Anzahl von Bytes, die zum Anzeigen von Daten in Form von Zeichen erforderlich sind. Dies ist für jeden SQL-Datentyp in gemäß [Größe anzeigen](../../../odbc/reference/appendixes/display-size.md), es sei denn Zeichen-Byte-Länge in Bytes ist, während die Größe der Anzeige in Zeichen ist.  
   
--   **Anzahl der Ziffern** – Anzahl von Zeichen verwendet, um eine Zahl, die auch für das Minuszeichen (-), Dezimaltrennzeichen und einem Exponenten (falls erforderlich) darzustellen.  
+-   **Anzahl der Ziffern** : Gibt die Anzahl von Zeichen verwendet, um eine Zahl darzustellen, z. B. das Minuszeichen (-), Dezimaltrennzeichen und einem Exponenten (falls erforderlich).  
   
 -   **Wörter in**   
-     ***Kursiv*** – Elemente von der SQL-Grammatik. Die Syntax von grammatikelementen, finden Sie unter [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+     ***Kursiv*** -Elemente, die von der SQL-Grammatik. Die Syntax von grammatikelementen, finden Sie unter [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [C to SQL: Character (C zu SQL: Zeichen)](../../../odbc/reference/appendixes/c-to-sql-character.md)  
+-   [C to SQL: Zeichen](../../../odbc/reference/appendixes/c-to-sql-character.md)  
   
--   [C to SQL: Numeric (C zu SQL: Numerisch)](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
+-   [C to SQL: Numerisch](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
--   [C to SQL: Bit (C zu SQL: Bit)](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
+-   [C to SQL: Bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   
--   [C to SQL: Binary (C zu SQL: Binär)](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
+-   [C to SQL: Binärdatei](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
   
--   [C to SQL: Date (C zu SQL: Datum)](../../../odbc/reference/appendixes/c-to-sql-date.md)  
+-   [C to SQL: Datum](../../../odbc/reference/appendixes/c-to-sql-date.md)  
   
--   [C to SQL: GUID (C zu SQL: GUID)](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
+-   [C to SQL: GUID](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
   
--   [C to SQL: Time (C zu SQL: Zeit)](../../../odbc/reference/appendixes/c-to-sql-time.md)  
+-   [C to SQL: Zeit](../../../odbc/reference/appendixes/c-to-sql-time.md)  
   
--   [C to SQL: Timestamp (C zu SQL: Zeitstempel)](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
+-   [C to SQL: Zeitstempel](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
   
--   [C to SQL: Year-Month Intervals (C zu SQL: Jahr-Monat-Intervalle)](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
+-   [C to SQL: Jahr-Monat-Intervalle](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   
--   [C to SQL: Day-Time Intervals (C zu SQL: Taginvervalle)](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
+-   [C to SQL: Tag-Zeitintervalle](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   
 -   [C to SQL Data Conversion Examples (Beispiele für die Datenkonvertierung von C zu SQL)](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)

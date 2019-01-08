@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7ce5bc22f1cf7dd8794aaa8d65e23d0324a204d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a91275eadeebd6b996774363ab279eddc76f0f75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172130"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540009"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>Benutzerdefinierte Funktionen sind in 'system_function_schema' unzulässig
   Der Upgrade Advisor hat erkannt, benutzerdefinierte Funktionen, die nicht dokumentierte Benutzer gehören **System_function_schema**. Sie können eine benutzerdefinierte Systemfunktion erstellen, indem Sie diesen Benutzer angeben. Die **System_function_schema** Benutzername ist nicht vorhanden, und die Benutzer-ID, die diesem Namen zugeordnet ist (UID = 4) ist reserviert für die **Sys** Schema und den internen Gebrauch beschränkt ist.  

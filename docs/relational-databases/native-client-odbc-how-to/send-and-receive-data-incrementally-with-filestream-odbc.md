@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1df7792f5850ad9d312baefc374bcb9f99e904c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 685e8e2147066e8bdb1f34de3d5271bc56c7aac3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618268"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206639"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Inkrementelles Senden und Empfangen von Daten mit FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "47618268"
 ## <a name="example"></a>Beispiel  
  Bevor Sie kompilieren und dieses Beispiels ausführen, aktivieren Sie FILESTREAM-Unterstützung ([aktivieren und Konfigurieren von FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- Das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine im Beispiel verwendete Datenbank. Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss Schreibzugriff zum Ausführen dieses Skripts haben (melden Sie sich z. B. als lokales Systemkonto an).  
+ Die erste ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) Codebeispiel erstellt eine Datenbank, die von diesem Beispiel verwendeten. Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss Schreibzugriff zum Ausführen dieses Skripts haben (melden Sie sich z. B. als lokales Systemkonto an).  
   
  Das zweite Codelisting ist der C++-Code. Sie müssen einen Server angeben. Ändern Sie im C++-Codelisting "MyServer" in einen gültigen Servernamen. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält. Kompilieren Sie das C++-Codelisting mit odbc32.lib, user32.lib, /D "_UNICODE", /D "UNICODE", odbc32.lib und /EHsc.  
   
- Das dritte ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht die in diesem Beispiel verwendete Datenbank.  
+ Das dritte ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht die in diesem Beispiel verwendete Datenbank.  
   
 ```  
 USE master  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - concatenation [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 809586f89288a930a672e2f6daa45fafe7901ec6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00886e865600da44f5b1e92adf175f975d446996
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146240"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811812"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (Verketten) (SSIS-Ausdruck)
   Verkettet zwei Ausdrücke zu einem einzelnen Ausdruck.  
@@ -49,7 +48,7 @@ character_expression1 + character_expression2
   
  Beide Ausdrücke müssen vom gleichen Datentyp sein, oder es muss möglich sein, einen Ausdruck implizit in den Datentyp des anderen Ausdrucks zu konvertieren. Wenn z. B. die Zeichenfolge "Order date is " und die **OrderDate** -Spalte verkettet werden, werden die Werte in **OrderDate** implizit in einen Zeichenfolgen-Datentyp konvertiert. Um zwei numerische Werte zu verketten, müssen beide numerischen Werte explizit in einen Zeichenfolgen-Datentyp umgewandelt werden.  
   
- In einer Verkettung kann nur ein BLOB-Datentyp verwendet werden: DT_TEXT, DT_NTEXT oder DT_IMAGE.  
+ Eine Verkettung können nur eine BLOB-Datentyp: Vom Typ DT_TEXT, DT_NTEXT oder DT_IMAGE.  
   
  Wenn eines der Elemente NULL ist, ist das Ergebnis NULL.  
   
@@ -69,7 +68,7 @@ FirstName + ' ' + LastName
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Operatorrangfolge und Assoziativität](operator-precedence-and-associativity.md)   
+ [Operatorenrangfolge und -assoziativität](operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](operators-ssis-expression.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ead4e816049f6dcce6bfc560a60d8f8bafa9d61c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ffb78d301762f9b7edcb78a2ba062db6fe662f6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724688"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540022"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>API-Funktionen der Kernebene (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
@@ -38,7 +38,7 @@ ms.locfileid: "47724688"
 |**SQLCancel**|Bricht die Verarbeitung für ein Anweisungshandle Befehls beschäftigt ab. In einigen Fällen lässt Oracle nicht Abbrechen einer ausgeführten Anweisung. Dies bedeutet, dass eine ausgeführte Anweisung weiterhin Oracle Abschluss des Prozesses, zu diesem Zeitpunkt die Ergebnisse von den Anweisungen, die vom ODBC-Treiber für Oracle abgebrochen werden.|  
 |**SQLColAttributes**|Gibt Informationen der Sicherheitsbeschreibung für eine Spalte in einem Resultset zurück. Informationen der Sicherheitsbeschreibung wird als eine Zeichenfolge, eine 32-Bit-Deskriptor-abhängige Wert oder ein ganzzahliger Wert zurückgegeben.|  
 |**SQLConnect**|Eine Verbindung mit einer Datenquelle. Um Oracle-Operating System-Authentifizierung verwenden, geben Sie "/" als die *SzUID* Parameter und "" als die *SzAuthStr* Parameter.|  
-|**SQLDescribeCol**|Gibt den Namen, Typ, Genauigkeit, Dezimalstellen und NULL-Zulässigkeit der angegebenen Ergebnisspalte. **Hinweis:****SQLDescribeCol** meldet berechnete Spalten als SQL_VARCHAR.  |  
+|**SQLDescribeCol**|Gibt den Namen, Typ, Genauigkeit, Dezimalstellen und NULL-Zulässigkeit der angegebenen Ergebnisspalte. **Hinweis**:  **SQLDescribeCol** meldet berechnete Spalten als SQL_VARCHAR.|  
 |**SQLDisconnect**|Schließt eine Verbindung Wenn Verbindungspooling, für die einer freigegebenen Umgebung aktiviert ist aus, und eine Anwendung ruft **SQLDisconnect** für eine Verbindung in der Umgebung, die Verbindung an den Verbindungspool zurückgegeben werden soll, und ist weiterhin verfügbar, mit anderen Komponenten, die mithilfe von die gleichen freigegebenen Umgebung.|  
 |**SQLError**|Fehler oder Status Informationen zu den letzten Fehler zurückgegeben. Der Treiber verwaltet einen Stapel oder eine Liste von Fehlern, die für die zurückgegeben werden, können die *Befehls beschäftigt*, *Hdbc*, und *Henv* Argumente, je nachdem, wie der Aufruf von **SQLError**  erfolgt. Die Fehlerwarteschlange wird nach jeder Anweisung geleert. In der Regel ruft Sie eine Oracle-Fehlermeldung ab, und andernfalls leer ist.|  
 |**SQLExecDirect**|Führt eine neue, nicht vorbereiteter SQL­Anweisung. Der Treiber verwendet die aktuellen Werte der Variablen Marker Parameter auf, wenn alle Parameter in der Anweisung vorhanden sind. Wenn Ihre Tabelle, Sicht oder Feldnamen Leerzeichen enthalten, schließen Sie die Namen wieder in Anführungszeichen ein. Wenn Ihre Datenbank eine Tabelle namens enthält z. B. *Meine Tabelle* und das Feld *mein Feld*, schließen Sie jedes Element des Bezeichners wie folgt:<br /><br /> Wählen Sie \`meiner Tabelle\`. \`Meine "Field1"\`, \`Meiner Tabelle\`.\` Meine "Field2"\` FROM \`Meine Tabelle "|  
@@ -50,7 +50,7 @@ ms.locfileid: "47724688"
 |**SQLGetCursorName**|Gibt den Namen des Cursors Zusammenhang mit der angegebenen Befehls beschäftigt.|  
 |**SQLNumResultCols**|Gibt die Anzahl der Spalten in ein resultsetcursor zurück.|  
 |**SQLPrepare**|Bereitet eine SQL-Anweisung durch die Planung So optimieren, und führen Sie die Anweisung vor. Die SQL-Anweisung kompiliert wird, für die Ausführung von **SQLExecDirect**.<br /><br /> Wenn Ihre Tabelle, Sicht oder Feldnamen Leerzeichen enthalten, schließen Sie die Namen wieder in Anführungszeichen ein. Wenn Ihre Datenbank eine Tabelle namens enthält z. B. *Meine Tabelle* und das Feld *mein Feld*, schließen Sie jedes Element des Bezeichners wie folgt:<br /><br /> Wählen Sie \`meiner Tabelle\`.\` Mein Feld\` FROM \`Meine Tabelle "<br /><br /> Weitere Informationen zur Verwendung von Resultsets, die Arrays als formale Parameter enthält, finden Sie unter [Zurückgeben von Arrayparametern aus gespeicherten Prozeduren](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
-|**SQLRowCount**|Oracle bietet keine Möglichkeit zum Bestimmen der Anzahl von Zeilen in einem Resultset erst, nachdem Sie die letzte Zeile abrufen, sodass es – 1 zurückgibt.|  
+|**SQLRowCount**|Oracle bietet keine Möglichkeit zum Bestimmen der Anzahl von Zeilen in einem Resultset erst, nachdem Sie die letzte Zeile abrufen, sodass es-1 zurück.|  
 |**SQLSetCursorName**|Ein Handle aktive Anweisung ordnet einen Cursornamen *Befehls beschäftigt*.|  
 |**SQLSetParam**|Ersetzt durch SQLBindParameter in ODBC 2. *x*.|  
 |**SQLTransact**|Fordert einen Commit oder Rollback-Vorgang für alle aktiven Vorgänge für alle Anweisungshandles (Hstmts), der eine Verbindung zugeordnet oder für alle Verbindungen, die das Umgebungshandle zugeordnet *Henv*. Die Transaktion bleibt aktiv, wenn ein Commit im manuellen Modus fehlschlägt, Sie können auch ein Rollback der Transaktion oder wiederholen den Commitvorgang. Wenn ein Commitvorgang im Transaktionsmodus für automatische fehlschlägt, wird die Transaktion automatisch zurückgesetzt; die Transaktion darf nicht inaktiv sein.|

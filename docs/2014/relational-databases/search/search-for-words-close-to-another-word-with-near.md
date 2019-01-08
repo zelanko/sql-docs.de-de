@@ -20,15 +20,15 @@ ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82e3388321e182e866eb229c7613a1950c80eda1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149020"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502838"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR
-  Sie können in einem [CONTAINS](/sql/t-sql/queries/contains-transact-sql) -Prädikat oder in einer [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) -Funktion mithilfe eines NEAR-Begriffs nach Wörtern oder Wendungen suchen, die nahe beieinander liegen. Sie können auch die maximale Anzahl von nicht als Suchkriterium festgelegten Begriffen angeben, die zwischen dem ersten und dem letzten Suchbegriff liegen. Außerdem können Sie in einer beliebigen Reihenfolge oder in der angegebenen Reihenfolge nach Wörtern oder Ausdrücken suchen. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt sowohl den früheren [generischen NEAR-Begriff](#Generic_NEAR), der nun veraltet ist, und die [benutzerdefinierten NEAR-Begriff](#Custom_NEAR), das ist neu in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+  Sie können in einem [CONTAINS](/sql/t-sql/queries/contains-transact-sql)-Prädikat oder in einer [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)-Funktion mithilfe eines NEAR-Begriffs nach Wörtern oder Wendungen suchen, die nahe beieinander liegen. Sie können auch die maximale Anzahl von nicht als Suchkriterium festgelegten Begriffen angeben, die zwischen dem ersten und dem letzten Suchbegriff liegen. Außerdem können Sie in einer beliebigen Reihenfolge oder in der angegebenen Reihenfolge nach Wörtern oder Ausdrücken suchen. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt sowohl den früheren [generischen NEAR-Begriff](#Generic_NEAR), der nun veraltet ist, und die [benutzerdefinierten NEAR-Begriff](#Custom_NEAR), das ist neu in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ##  <a name="Custom_NEAR"></a> Der benutzerdefinierte NEAR-Begriff  
  Mit dem benutzerdefinierten NEAR-Begriff werden die folgenden neuen Funktionen eingeführt:  
@@ -51,11 +51,11 @@ ms.locfileid: "48149020"
   
  {  
   
- *search_term* [ ,…*n* ]  
+ *Search_term* [,... *n* ]  
   
  |  
   
- (*search_term* [ ,…*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
+ (*Search_term* [,... *n* ]) [, < Maximum_distance > [, < Match_order >]]  
   
  }  
   
@@ -80,7 +80,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 >  Weitere Informationen finden Sie unter[Weitere Überlegungen zu NEAR-Suchen](#Additional_Considerations)an späterer Stelle in diesem Thema.  
   
 ### <a name="how-maximum-distance-is-measured"></a>Messen des maximalen Abstands  
- Ein bestimmter maximaler Abstand (z. B. 10 oder 25) gibt an, wie viele Nicht-Suchbegriffe (einschließlich von Stoppwörtern) in einer angegebenen Zeichenfolge zwischen dem Suchbegriff und dem letzten Suchbegriff auftreten können. `NEAR((dogs, cats, "hunting mice"), 3)` gibt z. B. die folgende Zeile zurück, in der die Gesamtzahl der Nicht-Suchbegriffe gleich 3 ist ("`enjoy`", "`but`" und "`avoid`"):  
+ Ein bestimmter maximaler Abstand (z. B. 10 oder 25) gibt an, wie viele Nicht-Suchbegriffe (einschließlich von Stoppwörtern) in einer angegebenen Zeichenfolge zwischen dem Suchbegriff und dem letzten Suchbegriff auftreten können. `NEAR((dogs, cats, "hunting mice"), 3)` gibt z. B. die folgende Zeile zurück, in der die Gesamtzahl der Nicht-Suchbegriffe gleich 3 ist ("`enjoy`", "`but`" und "`avoid`"):  
   
  "`Cats` `enjoy` `hunting mice``, but avoid` `dogs``.`"  
   
@@ -107,9 +107,9 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
 ```  
   
- Sie können einen benutzerdefinierten NEAR-Begriff nicht mit einem generischen NEAR-Begriff (*Begriff1* NEAR *Begriff2*), einem Generierungsbegriff (ISABOUT …) oder einem gewichteten Begriff (FORMSOF …) kombinieren.  
+ Sie können einen benutzerdefinierten NEAR-Begriff mit einem generischen NEAR-Begriff nicht kombinieren (*Begriff1* NEAR *Begriff2*), einem Generierungsbegriff (ISABOUT …) oder einem gewichteten Begriff (FORMSOF …).  
   
-### <a name="example-using-the-custom-proximity-term"></a>Beispiel: Verwenden des benutzerdefinierten NEAR-Begriffs  
+### <a name="example-using-the-custom-proximity-term"></a>Beispiel: Verwenden der benutzerdefinierten NEAR-Begriffs  
  Im folgenden Beispiel wird die Tabelle `Production.Document` der Beispieldatenbank `AdventureWorks2012` nach allen Dokumentzusammenfassungen durchsucht, bei denen das Wort "reflector" im selben Dokument wie das Wort "bracket" enthalten ist.  
   
 ```  
@@ -160,7 +160,7 @@ GO
   
  Ein generischer NEAR-Begriff gibt an, dass die angegebenen Suchbegriffe alle in einem Dokument enthalten sein müssen, damit eine Übereinstimmung zurückgegeben wird, unabhängig von der Anzahl der nicht als Suchkriterium angegebenen Begriffe (der *Abstand*zwischen den Suchbegriffen). Die grundlegende Syntax lautet:  
   
- { *search_term* { NEAR | ~ } *search_term* } [ ,…*n* ]  
+ { *Search_term* {NEAR | ~} *Search_term* } [,... *n* ]  
   
  In den folgenden Beispielen müssen die Wörter 'fox' und 'chicken' in beliebiger Reihenfolge enthalten sein, damit eine Übereinstimmung zurückgegeben wird:  
   
@@ -184,9 +184,9 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- Sie können keinen generischen NEAR-Begriff mit einem benutzerdefinierten NEAR-Begriff (z. B. `NEAR((term1,term2),5)`), einem gewichteten Begriff (ISABOUT …) oder einem Generierungsbegriff (FORMSOF …) kombinieren.  
+ Sie können nicht kombiniert werden einen generischen NEAR-Begriff mit einem benutzerdefinierten NEAR-Begriff, z. B. `NEAR((term1,term2),5)`, einem gewichteten Begriff (ISABOUT …) oder einem Generierungsbegriff (FORMSOF …).  
   
-### <a name="example-using-the-generic-proximity-term"></a>Beispiel: Verwenden des generischen NEAR-Begriffs  
+### <a name="example-using-the-generic-proximity-term"></a>Beispiel: Mithilfe des generischen NEAR-Begriffs  
  Im folgenden Beispiel wird mit dem generischen NEAR-Begriff in dem Dokument nach dem Wort "reflector" gesucht, in dem auch das Wort "bracket" gesucht wird.  
   
 ```  

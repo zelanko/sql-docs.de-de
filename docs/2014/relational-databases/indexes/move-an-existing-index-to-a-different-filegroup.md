@@ -16,12 +16,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 65af75296064cd33e1c057126754339499f8b93f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fa11684cc9f35eb662ca41c731f11887e1bce32
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070380"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534043"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Verschieben eines vorhandenen Indexes in eine andere Dateigruppe
   In diesem Thema wird beschrieben, wie Sie einen vorhandenen Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]von der aktuellen Dateigruppe in eine andere verschieben.  
@@ -32,7 +32,7 @@ ms.locfileid: "48070380"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Verschieben eines vorhandenen Indexes in eine andere Dateigruppe mit:**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48070380"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48070380"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>So verschieben Sie einen vorhandenen Index mit dem Tabellen-Designer in eine andere Dateigruppe  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48070380"
   
 8.  Klicken Sie auf **OK**.  
   
- Die folgenden Informationen sind auf der Seite **Speicher** des Dialogfelds **Indexeigenschaften –** *Indexname* verfügbar:  
+ Die folgenden Informationen sind auf der Seite **Speicher** des Dialogfelds **Indexeigenschaften >** *Indexname* verfügbar:  
   
  **Dateigruppe**  
  Speichert den Index in der angegebenen Dateigruppe. Diese Liste enthält nur Standarddateigruppen (ROW). Die Standardauswahl in der Liste ist die PRIMARY-Dateigruppe der Datenbank.  

@@ -15,12 +15,12 @@ ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e786f699209c384f9baecbbe23a24e2ed5e3611
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb5490f023a2529d102d9ca505092b7f2bc28fec
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118300"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513030"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Konfigurieren von Analysis Services-Projekteigenschaften (SSDT)
   Ein [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt wird mit bestimmten Standardeigenschaften definiert, die sich auf das Erstellen und Bereitstellen des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts auswirken.  
@@ -38,7 +38,7 @@ ms.locfileid: "48118300"
 |Build/Kennwörter entfernen|Wahr|Gibt an, ob bekannte Kennwörter aus Verbindungszeichenfolgen entfernt werden, die während des Erstellungsprozesses in das Ausgabeverzeichnis geschrieben werden. Kennwörter werden entfernt, um eine erhöhe Sicherheit zu bieten. Werden Kennwörter entfernt, müssen sie beim Verarbeiten des bereitgestellten Projekts angegeben werden, damit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf die Quelldaten zugreifen kann.|  
 |Debuggen/Startobjekt|\<Derzeit aktives Objekt >|Bestimmt das Objekt, das gestartet wird, wenn Sie das Debuggen starten.|  
 |Bereitstellung/Bereitstellungsmodus|Nur geänderte Objekte bereitstellen|Standardmäßig werden nur die an den Projektobjekten vorgenommenen Änderungen bereitgestellt (vorausgesetzt, dass keine weiteren Änderungen an den Objekten außerhalb des Projekts direkt vorgenommen wurden). Sie haben auch die Möglichkeit, bei jeder Bereitstellung alle Projektobjekte zu berücksichtigen. Verwenden Sie die Einstellung Nur geänderte Objekte bereitstellen, um die bestmögliche Leistung zu erzielen.|  
-|Bereitstellung/Verarbeitungsoption|Default|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt standardmäßig den Verarbeitungstyp, der beim Bereitstellen der an Objekten vorgenommenen Änderungen erforderlich ist. Diese Einstellung ermöglicht im Allgemeinen die schnellste Bereitstellungszeit. Sie haben aber auch die Möglichkeit, für die jeweilige Bereitstellung die vollständige Verarbeitung oder keine Verarbeitung zu wählen.|  
+|Bereitstellung/Verarbeitungsoption|Standard|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt standardmäßig den Verarbeitungstyp, der beim Bereitstellen der an Objekten vorgenommenen Änderungen erforderlich ist. Diese Einstellung ermöglicht im Allgemeinen die schnellste Bereitstellungszeit. Sie haben aber auch die Möglichkeit, für die jeweilige Bereitstellung die vollständige Verarbeitung oder keine Verarbeitung zu wählen.|  
 |Bereitstellung/Transaktionsbereitstellung|False|Standardmäßig ist die Bereitstellung geänderter oder aller Objekte keine Transaktionsbereitstellung bei der Verarbeitung dieser bereitgestellten Objekte. Die Bereitstellung kann erfolgreich ausgeführt werden und persistent sein, auch wenn bei der Verarbeitung ein Fehler auftritt. Sie können diese Standardeinstellung ändern, um die Bereitstellung und Verarbeitung in einer einzelnen Transaktion zu integrieren.|  
 |Bereitstellung/Zielserver|localhost|Standardmäßig werden Datenbankobjekte des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts auf der Standardinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf dem lokalen Computer bereitgestellt, auf dem [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwendet wird. Ändern Sie diese Standardeinstellung, um eine benannte Instanz auf dem lokalen Computer bzw. eine beliebige Instanz auf einem beliebigen Remotecomputer anzugeben, auf dem Sie über die Berechtigung zum Erstellen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekten verfügen.|  
 |Bereitstellung/Datenbank|\<Projektname >|Der Name der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank, in der die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektobjekte nach der Bereitstellung instanziiert werden, ist standardmäßig der Name des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts zum Zeitpunkt seiner Definition. Ändern Sie diese Eigenschaft, um den Namen der Datenbank auf der über die Server-Eigenschaft angegebene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz zu ändern.|  
@@ -48,7 +48,7 @@ ms.locfileid: "48118300"
   
  Ein Projekt wird zunächst mit einer einzelnen Konfiguration mit der Bezeichnung Entwicklung erstellt. Sie können zusätzliche Konfigurationen erstellen und mithilfe des Konfigurations-Managers zwischen den Konfigurationen hin- und herschalten.  
   
- Diese häufig verwendete Konfiguration wird von allen Entwicklern verwendet, bis zusätzliche Konfigurationen erstellt werden. Jedoch kann es während der verschiedenen Phasen der Projektentwicklung, z. B. während der Erstentwicklung und beim ersten Testen eines Projekts, vorkommen, dass unterschiedliche Entwickler unterschiedliche Datenquellen verwenden und das Projekt auf unterschiedlichen Servern für unterschiedliche Zwecke bereitstellen. Konfigurationen ermöglichen es Ihnen, diese unterschiedlichen Einstellungen in unterschiedlichen Konfigurationsdateien beizubehalten.  
+ Diese häufig verwendete Konfiguration wird von allen Entwicklern verwendet, bis zusätzliche Konfigurationen erstellt werden. Jedoch während der verschiedenen Phasen des Projekt-Entwicklung – z. B. während der anfängliche Entwicklung und Testen eines Projekts - verschiedene Entwickler werden unterschiedliche Datenquellen verwenden und Bereitstellen des Projekts auf verschiedenen Servern für unterschiedliche Zwecke kann. Konfigurationen ermöglichen es Ihnen, diese unterschiedlichen Einstellungen in unterschiedlichen Konfigurationsdateien beizubehalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   

@@ -10,12 +10,12 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b5f05d5ccf1125544ddb59b77c2a6e542be852a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127890"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541234"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte
   Speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren unterstützen nicht die vollständige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Oberfläche, die von datenträgerbasierten Tabellen und interpretierten gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren unterstützt wird. Wird versucht, eine der nicht unterstützten Funktionen zu verwenden, gibt der Server einen Fehler zurück.  
@@ -50,11 +50,11 @@ ms.locfileid: "48127890"
 |----------|----------|----------------|  
 |Funktion|ON|Speicheroptimierte Tabellen können nicht in einer Dateigruppe oder einem Partitionsschema platziert werden. Entfernen Sie die ON-Klausel aus der `CREATE TABLE`-Anweisung.|  
 |Datentyp|*Datentypname*|Der angegebene Datentyp wird nicht unterstützt. Ersetzen Sie den Typ durch einen der unterstützten Datentypen. Weitere Informationen finden Sie unter [Supported Data Types](supported-data-types-for-in-memory-oltp.md).|  
-|Funktion|Berechnete Spalten|Berechnete Spalten werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die berechneten Spalten aus der `CREATE TABLE` Anweisung.|  
+|Funktion|Berechnete Spalten|Berechnete Spalten werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die berechneten Spalten aus der `CREATE TABLE`-Anweisung.|  
 |Funktion|Replikation|Replikation wird für speicheroptimierte Tabellen nicht unterstützt.|  
-|Funktion|FILESTREAM|Die FILESTREAM-Speicherung wird für Spalten von speicheroptimierten Tabellen nicht unterstützt. Entfernen Sie die `FILESTREAM` Schlüsselwort aus der Spaltendefinition.|  
-|Funktion|SPARSE|Spalten aus speicheroptimierten Tabellen können nicht als SPARSE definiert werden. Entfernen Sie die `SPARSE` Schlüsselwort aus der Spaltendefinition.|  
-|Funktion|ROWGUIDCOL|Die ROWGUIDCOL-Option wird für Spalten von speicheroptimierten Tabellen nicht unterstützt. Entfernen Sie die `ROWGUIDCOL` Schlüsselwort aus der Spaltendefinition.|  
+|Funktion|FILESTREAM|Die FILESTREAM-Speicherung wird für Spalten von speicheroptimierten Tabellen nicht unterstützt. Entfernen Sie das `FILESTREAM`-Schlüsselwort aus der Spaltendefinition.|  
+|Funktion|SPARSE|Spalten aus speicheroptimierten Tabellen können nicht als SPARSE definiert werden. Entfernen Sie das `SPARSE`-Schlüsselwort aus der Spaltendefinition.|  
+|Funktion|ROWGUIDCOL|Die ROWGUIDCOL-Option wird für Spalten von speicheroptimierten Tabellen nicht unterstützt. Entfernen Sie das `ROWGUIDCOL`-Schlüsselwort aus der Spaltendefinition.|  
 |Funktion|FOREIGN KEY|FOREIGN KEY-Einschränkungen werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die Einschränkung aus der Tabellendefinition.<br /><br /> Informationen dazu, wie die fehlende Unterstützung für Einschränkungen gemindert werden kann, finden Sie unter [überprüfen Sie die Migration und Foreign Key-Einschränkungen](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
 |Funktion|CHECK|CHECK-Einschränkungen werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die Einschränkung aus der Tabellendefinition.<br /><br /> Informationen dazu, wie die fehlende Unterstützung für Einschränkungen gemindert werden kann, finden Sie unter [überprüfen Sie die Migration und Foreign Key-Einschränkungen](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
 |Funktion|UNIQUE|UNIQUE-Einschränkungen werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die Einschränkung aus der Tabellendefinition.<br /><br /> Informationen dazu, wie die fehlende Unterstützung für Einschränkungen gemindert werden kann, finden Sie unter [überprüfen Sie die Migration und Foreign Key-Einschränkungen](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
@@ -75,18 +75,18 @@ ms.locfileid: "48127890"
 |Vorgang|ALTER AUTHORIZATION|Das Ändern des Besitzers einer vorhandenen speicheroptimierten Tabelle oder systemintern kompilierten gespeicherten Prozedur wird nicht unterstützt. Löschen Sie die Tabelle oder die Prozedur, und erstellen Sie sie neu, um den Besitzer zu ändern.|  
 |Vorgang|ALTER SCHEMA|Das Ändern des Schemas einer vorhandenen speicheroptimierten Tabelle oder systemintern kompilierten gespeicherten Prozedur wird nicht unterstützt. Löschen Sie die Tabelle oder die Prozedur, und erstellen Sie sie neu, um das Schema zu ändern.|  
 |Vorgang|DBCC CHECKTABLE|DBCC CHECKTABLE wird für speicheroptimierte Tabellen nicht unterstützt.|  
-|Funktion|ANSI_PADDING OFF|Die Sitzungsoption `ANSI_PADDING` muss beim Erstellen einer speicheroptimierten Tabellen oder systemintern gespeicherte Prozeduren kompilierte auf. Führen Sie `SET ANSI_PADDING ON` aus, bevor Sie die CREATE-Anweisung ausführen.|  
+|Funktion|ANSI_PADDING OFF|Die `ANSI_PADDING`-Sitzungsoption muss beim Erstellen von speicheroptimierten Tabellen oder systemintern kompilierten gespeicherten Prozeduren auf ON festgelegt sein. Führen Sie `SET ANSI_PADDING ON` aus, bevor Sie die CREATE-Anweisung ausführen.|  
 |Option|DATA_COMPRESSION|Die Datenkomprimierung wird für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die Option aus der Tabellendefinition.|  
 |Funktion|DTC|Auf speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren kann nicht aus verteilten Transaktionen zugegriffen werden. Verwenden Sie stattdessen SQL-Transaktionen.|  
 |Funktion|Multiple Active Result Sets (MARS)|Multiple Active Result Sets (MARS) werden für speicheroptimierte Tabellen nicht unterstützt. Dieser Fehler kann auch auf die Verwendung eines Verbindungsservers hinweisen. Ein Verbindungsserver kann MARS verwenden. Verbindungsserver werden für speicheroptimierte Tabellen nicht unterstützt. Stattdessen müssen Sie eine direkte Verbindung mit dem Server und der Datenbank herstellen, die die speicheroptimierten Tabellen hostet.|  
-|Vorgang|Speicheroptimierte Tabellen als Ziel von MERGE|Speicheroptimierte Tabellen können nicht das Ziel eines `MERGE`-Vorgangs sein. Verwendung `INSERT`, `UPDATE`, oder `DELETE` Anweisungen stattdessen.|  
+|Vorgang|Speicheroptimierte Tabellen als Ziel von MERGE|Speicheroptimierte Tabellen können nicht das Ziel eines `MERGE`-Vorgangs sein. Verwenden Sie stattdessen die Anweisungen `INSERT`, `UPDATE` und `DELETE`.|  
   
 ## <a name="indexes-on-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen  
  In der folgenden Tabelle werden die möglichen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen und -Schlüsselwörter im Meldungstext eines Fehlers mit dem Index einer speicheroptimierten Tabelle sowie die Korrekturmaßnahmen zum Beheben des Fehlers aufgelistet.  
   
 |Typ|Name|Lösung|  
 |----------|----------|----------------|  
-|Funktion|Gefilterter Index|Gefilterte Indizes werden nicht mit speicheroptimierten Tabellen unterstützt. Lassen Sie die `WHERE` -Klausel aus der indexspezifikation.|  
+|Funktion|Gefilterter Index|Gefilterte Indizes werden nicht mit speicheroptimierten Tabellen unterstützt. Lassen Sie die `WHERE`-Klausel in der Indexspezifikation aus.|  
 |Funktion|UNIQUE|Eindeutige Indizes werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie das Argument `UNIQUE` aus der Indexspezifikation.|  
 |Funktion|Spalten, die NULL zulassen|Alle Spalten im Schlüssel eines Indexes für eine speicheroptimierte Tabelle müssen als `NOT NULL` angegeben werden. Schließen Sie die `NOT NULL`-Einschränkung für alle Spalten in die Indexschlüssel ein.|  
 |Funktion|Nicht-BIN2-Sortierung|Alle Zeichenspalten im Schlüssel eines speicheroptimierten Indexes müssen mit einer BIN2-Sortierung deklariert werden. Legen Sie die Sortierung in der Spaltendefinition mit der `COLLATE`-Klausel fest. Weitere Informationen finden Sie unter [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
@@ -107,12 +107,12 @@ ms.locfileid: "48127890"
   
 |Typ|Funktion|Lösung|  
 |----------|-------------|----------------|  
-|Funktion|Inline-Tabellenvariablen|Tabellentypen können nicht inline mit Variablendeklarationen deklariert werden. Tabellentypen müssen explizit deklariert eine `CREATE TYPE` Anweisung.|  
+|Funktion|Inline-Tabellenvariablen|Tabellentypen können nicht inline mit Variablendeklarationen deklariert werden. Tabellentypen müssen explizit mit einer `CREATE TYPE`-Anweisung deklariert werden.|  
 |Funktion|Cursor|Cursor werden nicht von oder in systemintern kompilierten gespeicherten Prozeduren unterstützt.<br /><br /> – Wenn die Prozedur auf dem Client ausführen möchten, verwenden Sie RPC anstelle der Cursor-API. Vermeiden Sie bei ODBC die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung `EXECUTE`, und geben Sie stattdessen den Namen der Prozedur direkt an.<br /><br /> – Wenn die Prozedur aus einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch oder einer anderen gespeicherten Prozedur, einen Cursor mit der systemintern kompilierten gespeicherten Prozedur verwenden.<br /><br /> – Wenn Sie eine systemintern kompilierte gespeicherte Prozedur erstellen, anstatt einen Cursor, verwenden Sie setbasierte Logik oder eine `WHILE` Schleife.|  
 |Funktion|Nicht konstante Parameterstandardwerte|Beim Angeben von Standardwerten für Parameter für systemintern kompilierte gespeicherte Prozeduren müssen die Werte Konstanten sein. Entfernen Sie alle Platzhalter aus den Parameterdeklarationen.|  
 |Funktion|EXTERNAL|CLR-gespeicherte Prozeduren können nicht systemintern kompiliert werden. Entfernen Sie entweder die Klausel AS EXTERNAL oder die Option NATIVE_COMPILATIONS aus der Anweisung CREATE PROCEDURE.|  
 |Funktion|numbered_stored_procedures|Systemintern kompilierte gespeicherte Prozeduren dürfen nicht nummeriert sein. Entfernen Sie die `;` *Anzahl* aus der `CREATE PROCEDURE` Anweisung.|  
-|Funktion|Mehrzeilige INSERT ... VALUES-Anweisungen|Das Einfügen mehrerer Zeilen mit derselben `INSERT`-Anweisung in einer systemintern kompilierten gespeicherten Prozedur ist nicht möglich. Erstellen Sie `INSERT` -Anweisungen für jede Zeile.|  
+|Funktion|Mehrzeilige INSERT ... VALUES-Anweisungen|Das Einfügen mehrerer Zeilen mit derselben `INSERT`-Anweisung in einer systemintern kompilierten gespeicherten Prozedur ist nicht möglich. Erstellen Sie `INSERT`-Anweisungen für jede Zeile.|  
 |Funktion|Allgemeine Tabellenausdrücke (CTEs)|Allgemeine Tabellenausdrücke (Common Table Expressions, CTE) werden in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Schreiben Sie die Abfrage um.|  
 |Funktion|Unterabfrage|Unterabfragen (geschachtelte Abfragen innerhalb einer anderen Abfrage) werden nicht unterstützt. Schreiben Sie die Abfrage um.|  
 |Funktion|COMPUTE|Die `COMPUTE`-Klausel wird nicht unterstützt. Entfernen Sie sie aus der Abfrage.|  
@@ -124,7 +124,7 @@ ms.locfileid: "48127890"
 |Funktion|benutzerdefinierte Funktionen|Benutzerdefinierte Funktionen können nicht in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen Sie den Verweis auf die Funktion aus der Prozedurdefinition.|  
 |Funktion|Benutzerdefinierte Aggregate|Benutzerdefinierte Aggregatfunktionen können nicht in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen Sie den Verweis auf die Funktion aus der Prozedur.|  
 |Funktion|Metadaten des Durchsuchenmodus|Systemintern kompilierte gespeicherte Prozeduren unterstützen keine Metadaten des Durchsuchenmodus. Stellen Sie sicher, dass die `NO_BROWSETABLE`-Sitzungsoption auf OFF festgelegt ist.|  
-|Funktion|DELETE mit FROM-Klausel|Die `FROM`-Klausel wird für `DELETE`-Anweisungen mit einer Tabellenquelle in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt.<br /><br /> `DELETE` mit der `FROM` -Klausel unterstützt, wenn sie mit dem Löschen aus die Tabelle angegeben.|  
+|Funktion|DELETE mit FROM-Klausel|Die `FROM`-Klausel wird für `DELETE`-Anweisungen mit einer Tabellenquelle in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt.<br /><br /> `DELETE` wird mit der `FROM`-Klausel unterstützt, wenn der Vorgang die Tabelle angibt, aus der Daten gelöscht werden sollen.|  
 |Funktion|UPDATE mit FROM-Klausel|Die `FROM`-Klausel wird nicht für `UPDATE`-Anweisungen in systemintern kompilierten gespeicherten Prozeduren unterstützt.|  
 |Funktion|Temporäre Prozeduren|Temporäre gespeicherte Prozeduren können nicht systemintern kompiliert werden. Erstellen Sie entweder eine dauerhafte systemintern kompilierte gespeicherte Prozedur oder eine als temporär interpretierte gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur.|  
 |Isolationsstufe|READ UNCOMMITTED|Die Isolationsstufe READ UNCOMMITTED wird für systemintern kompilierte gespeicherte Prozeduren nicht unterstützt. Verwenden Sie eine unterstützte Isolationsstufe, beispielsweise SNAPSHOT.|  
@@ -134,7 +134,7 @@ ms.locfileid: "48127890"
 |Funktion|DTC|Auf speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren kann nicht aus verteilten Transaktionen zugegriffen werden. Verwenden Sie stattdessen SQL-Transaktionen.|  
 |Funktion|Nicht-BIN2-Sortierung|Vergleichen, Sortieren und andere Vorgänge für Zeichenfolgen in systemintern kompilierten gespeicherten Prozeduren erfordern eine BIN2-Sortierung. Geben Sie die COLLATE-Klausel an, oder verwenden Sie Spalten und Variablen mit einer entsprechenden Sortierung. Weitere Informationen finden Sie unter [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
 |Funktion|Abschneiden von Zeichenfolgen mit SC-Sortierung.|Zeichenfolgen mit einer `_SC`-Sortierung verwenden die UTF-16-Codierung. Die Konvertierung eines n(var)char-Werts in einen n(var)char-Wert mit einer gekürzten Länge involviert das Abschneiden. Dies wird für UTF-16-Werte in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Vermeiden Sie das Abschneiden von UTF-16-Zeichenfolgen.|  
-|Funktion|EXECUTE WITH RECOMPILE|Die Option `WITH RECOMPILE` wird für systemintern kompilierte gespeicherte Prozeduren nicht unterstützt.|  
+|Funktion|EXECUTE WITH RECOMPILE|Die `WITH RECOMPILE`-Option wird für systemintern kompilierte gespeicherte Prozeduren nicht unterstützt.|  
 |Funktion|LEN und SUBSTRING mit einem Argument in einer SC-Sortierung|Zeichenfolgen mit einer _SC-Sortierung verwenden die UTF-16-Codierung. Wenn die integrierten Funktionen LEN und SUBSTRING innerhalb von systemintern kompilierten gespeicherten Prozeduren verwendet werden, wird die UTF-16-Codierung nicht unterstützt. Verwenden Sie eine andere Sortierung oder vermeiden Sie die Verwendung dieser Funktionen.|  
 |Funktion|Ausführung von der dedizierten Administratorverbindung.|Systemintern kompilierte gespeicherte Prozeduren können nicht aus der dedizierten Administratorverbindung (DAC) ausgeführt werden. Verwenden Sie stattdessen eine reguläre Verbindung.|  
 |Vorgang|ALTER PROCEDURE|Systemintern kompilierte gespeicherte Prozeduren können nicht geändert werden. Löschen Sie zum Ändern der Prozedurdefinition die gespeicherte Prozedur, und erstellen Sie sie neu.|  
@@ -175,8 +175,8 @@ ms.locfileid: "48127890"
 |Jointipp|HASH, MERGE|Systemintern kompilierte Prozeduren unterstützen nur den Nested Loops-Joins. Hash- und Zusammenführungsjoins werden nicht unterstützt. Entfernen Sie den Jointipp.|  
 |Abfragetipp|*Abfragetipp*|Dieser Abfragetipp befindet sich nicht in systemintern kompilierten gespeicherten Prozeduren. Unterstützte Abfragetipps finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).|  
 |Option|DISTINCT|Diese Option wird nicht unterstützt. Entfernen Sie `DISTINCT` aus der Abfrage in der systemintern kompilierten gespeicherten Prozedur.|  
-|Option|PERCENT|Diese Option wird nicht unterstützt, mit `TOP` Klauseln. Entfernen Sie `PERCENT` aus der Abfrage in der systemintern kompilierten gespeicherten Prozedur.|  
-|Option|WITH TIES|Diese Option wird nicht unterstützt, mit `TOP` Klauseln. Entfernen Sie `WITH TIES` aus der Abfrage in der systemintern kompilierten gespeicherten Prozedur.|  
+|Option|PERCENT|Diese Option wird nicht für `TOP`-Klauseln unterstützt. Entfernen Sie `PERCENT` aus der Abfrage in der systemintern kompilierten gespeicherten Prozedur.|  
+|Option|WITH TIES|Diese Option wird nicht für `TOP`-Klauseln unterstützt. Entfernen Sie `WITH TIES` aus der Abfrage in der systemintern kompilierten gespeicherten Prozedur.|  
 |Aggregate-Funktion|*Aggregatfunktion*|Diese Klausel wird nicht unterstützt. Weitere Informationen zu Aggregate-Funktionen in systemintern kompilierten gespeicherten Prozeduren finden Sie unter [Systemintern kompilierte gespeicherte Prozeduren](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Rangfolgefunktion|*Rangfolgefunktion*|Rangfolgefunktionen werden nicht in systemintern kompilierten gespeicherten Prozeduren unterstützt. Entfernen Sie sie aus der Prozedurdefinition.|  
 |Funktion|*Funktion*|Diese Funktion wird nicht unterstützt. Entfernen Sie sie aus der systemintern kompilierten gespeicherten Prozedur.|  
@@ -193,7 +193,7 @@ ms.locfileid: "48127890"
 |Funktion|sp_recompile|Das erneute Kompilieren von systemintern kompilierten gespeicherten Prozeduren wird nicht unterstützt. Löschen Sie die Prozedur und erstellen Sie sie neu.|  
 |Funktion|EXECUTE AS CALLER|Die `EXECUTE AS`-Klausel ist erforderlich. `EXECUTE AS CALLER` wird jedoch nicht unterstützt. Verwendung `EXECUTE AS OWNER`, `EXECUTE AS` *Benutzer*, oder `EXECUTE AS SELF`.|  
 |Funktion|Datenträgerbasierte Tabellen|Auf datenträgerbasierte Tabellen kann nicht von systemintern kompilierten gespeicherten Prozeduren zugegriffen werden. Entfernen Sie Verweise auf datenträgerbasierte Tabellen aus den systemintern kompilierten gespeicherten Prozeduren. Sie können auch datenträgerbasierte Tabellen zu speicheroptimierten Tabellen migrieren.|  
-|Funktion|Sichten|Auf Sichten kann nicht von systemintern kompilierten gespeicherten Prozeduren zugegriffen werden. Verweisen Sie nicht auf Sichten, sondern auf die zugrunde liegenden Basistabellen.|  
+|Funktion|Ansichten|Auf Sichten kann nicht von systemintern kompilierten gespeicherten Prozeduren zugegriffen werden. Verweisen Sie nicht auf Sichten, sondern auf die zugrunde liegenden Basistabellen.|  
 |Funktion|Tabellenwertfunktionen|Auf Tabellenwertfunktionen kann nicht von systemintern kompilierten gespeicherten Prozeduren aus zugegriffen werden. Entfernen Sie Verweise auf Tabellenwertfunktionen aus der systemintern kompilierten gespeicherten Prozedur.|  
   
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transaktionen, die auf speicheroptimierte Tabellen zugreifen  

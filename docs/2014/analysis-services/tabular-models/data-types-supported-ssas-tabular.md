@@ -11,12 +11,12 @@ ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 083eff2195b0c8099ec4fdfb80e7224e1d42d135
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed99b26641b6d87fa6fe3bf07f47c21eacb96d89
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086900"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405475"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Unterstützte Datentypen (SSAS – tabellarisch)
   In diesem Artikel werden die Datentypen erläutert, die in tabellarischen Modellen verwendet werden können, und die implizite Konvertierung von Datentypen bei der Berechnung oder Verwendung von Daten in einer Data Analysis Expressions (DAX)-Formel beschrieben.  
@@ -45,19 +45,19 @@ ms.locfileid: "48086900"
 |Textmodus|Zeichenfolge|Eine Unicodezeichen-Datenzeichenfolge. Dies können Zeichenfolgen, Zahlen oder Datumsangaben im Textformat sein.|  
 |date|Date/Time|Datumsangaben und Uhrzeiten in einer akzeptierten Form für die Darstellung von Datum und Uhrzeit.<br /><br /> Gültig sind alle Datumsangaben nach dem 1. März 1900.|  
 |Währung|Währung|Der Währungsdatentyp lässt Werte zwischen -922 337 203 685 477,5808 und 922 337 203 685 477,5807 mit vier Dezimalstellen unveränderlicher Genauigkeit zu.|  
-|–|Leer|Ein leerer Datentyp in DAX, der SQL-NULLEN darstellt und ersetzt. Sie können mit der BLANK-Funktion ein Leerzeichen erstellen und mit der logischen ISBLANK-Funktion nach Leerzeichen suchen.|  
+|Nicht zutreffend|Leer|Ein leerer Datentyp in DAX, der SQL-NULLEN darstellt und ersetzt. Sie können mit der BLANK-Funktion ein Leerzeichen erstellen und mit der logischen ISBLANK-Funktion nach Leerzeichen suchen.|  
   
  <sup>1</sup> DAX-Formeln unterstützen keine Datentypen, die kleiner als die in der Tabelle aufgeführt sind.  
   
  <sup>2</sup> , wenn Sie versuchen, Daten zu importieren, sehr große numerische Werte enthält, kann der Importvorgang mit folgendem Fehler fehlschlagen:  
   
- In-Memory-Datenbank-Fehler: die "\<Spaltenname >" Spalte der '\<Tabellenname > "Tabelle enthält einen Wert" 1. 7976931348623157E + 308", dies wird nicht unterstützt. Der Vorgang wurde abgebrochen.  
+ In-Memory-Datenbank-Fehler: Die "\<Spaltenname >" Spalte der '\<Tabellenname > "Tabelle enthält einen Wert" 1. 7976931348623157E + 308", dies wird nicht unterstützt. Der Vorgang wurde abgebrochen.  
   
  Dieser Fehler tritt auf, da der Modell-Designer diesen Wert zur Darstellung von Nullen verwendet. Die Werte in der folgenden Liste sind zum vorherigen erwähnten Nullwert synonym:  
   
 ||  
 |-|  
-|value|  
+|Wert|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1,7976931348623158e+308|  
@@ -76,7 +76,7 @@ ms.locfileid: "48086900"
   
  Wenn die Daten in der Spalte, die Sie als Argument angeben, nicht mit dem erforderlichen Datentyp kompatibel sind, gibt DAX in vielen Fällen einen Fehler zurück. Sofern möglich, versucht DAX die Daten jedoch implizit in den erforderlichen Datentyp zu konvertieren. Zum Beispiel:  
   
--   Sie können eine Zahl, z. B. "123", als Zeichenfolge eingeben. DAX analysiert die Zeichenfolge und versucht, diese als Zahlendatentyp anzugeben.  
+-   Sie können eine Zahl ist, z. B. "123", als Zeichenfolge eingeben. DAX analysiert die Zeichenfolge und versucht, diese als Zahlendatentyp anzugeben.  
   
 -   Sie können TRUE + 1 hinzufügen und als Ergebnis 2 abrufen, da TRUE implizit in die Zahl 1 konvertiert wird und der Vorgang 1+1 ausgeführt wird.  
   

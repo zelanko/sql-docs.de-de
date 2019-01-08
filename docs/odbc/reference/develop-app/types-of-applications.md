@@ -17,12 +17,12 @@ ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e46075e55aa14784e967b3620de5855a47c4bd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d835e7d541f69c6a84129d3d6c1c8128f748a23
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676618"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541906"
 ---
 # <a name="types-of-applications"></a>Anwendungstypen
 ODBC-Anwendungen können wie folgt klassifiziert werden:  
@@ -42,7 +42,7 @@ ODBC-Anwendungen können wie folgt klassifiziert werden:
 -   **Reine ODBC 2.**  
      ***X* Unicode-Anwendung** eine reine ODBC 2. *X* neu kompiliert die Anwendung, die Unicode-kompatibel ist und verwendet den SQL_WCHAR-Datentyp.  
   
--   **Reine Open Group und ISO**–**kompatible ODBC-Anwendung** ein 32-Bit-Anwendung, die:  
+-   **Reine Open Group und ISO**-**kompatible ODBC-Anwendung** ein 32-Bit-Anwendung, die:  
   
     -   Ruft die Funktionen, die in den Open Group oder ISO-CLI-Standards definiert. (Diese Funktionen möglicherweise veraltete 3.0-Funktionen enthalten.)  
   

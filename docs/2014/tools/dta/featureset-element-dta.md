@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f489fba4c9ea113cffd608b496d04448399481a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4bf6fac03eab1e096c0ac5dc63285c11bd3f114
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191580"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754472"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet-Element (DTA)
   Enthält die physischen Entwurfsstrukturen (Indizes oder indizierte Sichten), die der Datenbankoptimierungsratgeber bei der Analyse verwenden soll.  
@@ -42,7 +41,7 @@ ms.locfileid: "48191580"
 |**Datentyp und -länge**|`string`, keine maximale Länge.|  
 |**Zulässige Werte**|**IDX_IV**<br /> Indizes und indizierte Sichten.<br /><br /> **IDX**<br /> Nur Indizes.<br /><br /> **IV**<br /> Nur indizierte Sichten.<br /><br /> **NCL_IDX**<br /> Nur nicht gruppierte Indizes.<br /><br /> Verwenden Sie einen dieser Werte mit diesem Element.|  
 |**Standardwert**|**IDX**|  
-|**Vorkommen**|Einmalig erforderlich für jedes `TuningOptions`-Element, es sei denn, das `DropOnlyMode`-Element wird verwendet. Wenn `DropOnlyMode` wird verwendet, können keine `FeatureSet`. Diese Elemente schließen sich gegenseitig aus.|  
+|**Vorkommen**|Einmalig erforderlich für jedes `TuningOptions`-Element, es sei denn, das `DropOnlyMode`-Element wird verwendet. Wird das `DropOnlyMode`-Element verwendet, kann das `FeatureSet`-Element nicht verwendet werden. Diese Elemente schließen sich gegenseitig aus.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   

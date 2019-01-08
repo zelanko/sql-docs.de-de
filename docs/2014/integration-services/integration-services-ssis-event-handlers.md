@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
@@ -22,12 +21,12 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41762bb046e5b118d7802555c2b676378e81df7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d7ea5c6424283bd7b8aaa44f8a026ea18a9db30
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122840"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751122"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services-Ereignishandler (SSIS)
   Zur Laufzeit lösen ausführbare Dateien (Pakete und Foreach-Schleifencontainer, For-Schleifencontainer, Sequenzcontainer und Taskhostcontainer) Ereignisse aus. Beispielsweise wird ein OnError-Ereignis ausgelöst, wenn ein Fehler auftritt. Sie können benutzerdefiniert Ereignishandler für diese Ereignisse erstellen, um die Paketfunktionalität zu erweitern und die Verwaltung der Pakete zur Laufzeit zu vereinfachen. Mit Ereignishandlern können folgende Aufgaben ausgeführt werden:  
@@ -46,7 +45,7 @@ ms.locfileid: "48122840"
   
  ![Paket, For-Schleife, Taskhost und Task „SQL ausführen“](media/mw-dts-eventhandlerpkg.gif "Package, For Loop, task host, and Execute SQL task")  
   
- Nur das Paket hat einen Ereignishandler, und zwar für das `OnError`-Ereignis. Wenn ein Fehler auftritt, wenn der Task SQL ausführen ausgeführt wird, die `OnError` Ereignishandler für das Paket ausgeführt wird. Das folgende Diagramm zeigt die Reihenfolge der Aufrufe, die bewirkt, dass die `OnError` -Ereignishandler für das Paket ausgeführt.  
+ Nur das Paket hat einen Ereignishandler, und zwar für das `OnError`-Ereignis. Wenn beim Ausführen des Tasks SQL ausführen ein Fehler auftritt, wird der `OnError`-Ereignishandler für das Paket ausgeführt. Im folgenden Diagramm wird die Aufrufsequenz angezeigt, durch die der `OnError`-Ereignishandler für das Paket ausgeführt wird.  
   
  ![Ereignishandlerfluss](media/mw-dts-eventhandlers.gif "Event handler flow")  
   
@@ -84,13 +83,13 @@ ms.locfileid: "48122840"
 |**OnProgress**|Der Ereignishandler für das **OnProgress** -Ereignis. Dieses Ereignis wird durch eine ausführbare Datei ausgelöst, wenn die ausführbare Datei einen messbaren Fortschritt aufweist.|  
 |**OnQueryCancel**|Der Ereignishandler für das **OnQueryCancel** -Ereignis. Dieses Ereignis wird durch eine ausführbare Datei ausgelöst, um zu bestimmen, ob deren Ausführung beendet werden soll.|  
 |**OnTaskFailed**|Der Ereignishandler für das **OnTaskFailed** -Ereignis. Dieses Ereignis wird durch einen Fehler bei einem Task ausgelöst.|  
-|**OnVariableValueChanged**|Der Ereignishandler für das **OnVariableValueChanged** -Ereignis. Dieses Ereignis wird durch eine ausführbare Datei ausgelöst, wenn sich der Wert einer Variablen ändert. Dieses Ereignis wird durch die ausführbare Datei ausgelöst, für die die Variable definiert ist. Dieses Ereignis wird nicht ausgelöst, wenn Sie festlegen, die **RaiseChangeEvent** -Eigenschaft für die Variable `False`. Weitere Informationen finden Sie unter [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).|  
+|**OnVariableValueChanged**|Der Ereignishandler für das **OnVariableValueChanged** -Ereignis. Dieses Ereignis wird durch eine ausführbare Datei ausgelöst, wenn sich der Wert einer Variablen ändert. Dieses Ereignis wird durch die ausführbare Datei ausgelöst, für die die Variable definiert ist. Dieses Ereignis wird nicht ausgelöst, wenn Sie festlegen, die **RaiseChangeEvent** -Eigenschaft für die Variable `False`. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md).|  
 |**OnWarning**|Der Ereignishandler für das **OnWarning** -Ereignis. Dieses Ereignis wird durch eine ausführbare Datei ausgelöst, wenn eine Warnung auftritt.|  
   
 ## <a name="configuration-of-an-event-handler"></a>Konfiguration eines Ereignishandlers  
  Eigenschaften können Sie im Fenster **Eigenschaften** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] oder programmgesteuert festlegen.  
   
- Informationen zum Anzeigen dieser Eigenschaften in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] finden Sie unter [Festlegen der Eigenschaften eines Tasks oder Containers](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).  
+ Informationen zum Anzeigen dieser Eigenschaften in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]finden Sie unter [Festlegen der Eigenschaften eines Tasks oder Containers](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).  
   
  Weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], provider
@@ -18,12 +17,12 @@ ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 482353df1cde22d11cb44d53611353ceb347e102
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153550"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752380"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell-Anbieter
   Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter für Windows PowerShell macht die Hierarchie von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekten auf ähnliche Weise wie in Dateisystempfaden verfügbar. Mithilfe der Pfade können Sie Objekte finden und dann Methoden der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object-Modelle (SMO) verwenden, um Aktionen für die Objekte auszuführen.  

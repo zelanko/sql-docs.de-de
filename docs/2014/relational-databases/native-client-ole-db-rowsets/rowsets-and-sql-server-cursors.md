@@ -16,12 +16,12 @@ ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c1682525f57c2a251cda46202f06737b87d030b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d87706d53190552734785b5310cba7ec81056a40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147260"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535453"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Rowsets und SQL Server-Cursor
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt Consumern Resultsets mit zwei Methoden zurück:  
@@ -60,7 +60,7 @@ ms.locfileid: "48147260"
   
  Die folgenden Rowseteigenschaften weisen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter an, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursor zu verwenden. Einige Eigenschaften können mit anderen problemlos kombiniert werden. Ein Rowset mit den Eigenschaften DBPROP_IRowsetScroll und DBPROP_IRowsetChange entspricht beispielsweise einem Lesezeichenrowset mit sofortigem Updateverhalten. Andere Eigenschaften schließen sich hingegen gegenseitig aus. Zum Beispiel kann ein Rowset, das DBPROP_OTHERINSERT aufweist, keine Lesezeichen enthalten.  
   
-|Eigenschafts-ID|value|Rowsetverhalten|  
+|Eigenschafts-ID|Wert|Rowsetverhalten|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können nicht über das Rowset aktualisiert werden. Das Rowset ist sequenziell und unterstützt nur den Bildlauf vorwärts und das Abrufen. Die relative Zeilenpositionierung wird unterstützt. Befehlstext kann eine ORDER BY-Klausel enthalten.|  
 |DBPROP_CANSCROLLBACKWARDS oder DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können nicht über das Rowset aktualisiert werden. Das Rowset unterstützt das Durchführen eines Bildlaufs und das Abrufen in beiden Richtungen. Die relative Zeilenpositionierung wird unterstützt. Befehlstext kann eine ORDER BY-Klausel enthalten.|  
@@ -89,7 +89,7 @@ ms.locfileid: "48147260"
   
  Um ein bestimmtes Cursormodell zu verwenden, suchen Sie die dem Cursormodell entsprechende Spalte, und suchen Sie alle Rowseteigenschaften mit dem Wert "T" in der Spalte. Legen Sie diese Rowseteigenschaften auf VARIANT_TRUE fest, um das gewünschte Cursormodell zu verwenden. Die Rowseteigenschaften mit dem Wert "-" können entweder auf VARIANT_TRUE oder VARIANT_FALSE festgelegt werden.  
   
-|Rowseteigenschaften/Cursormodelle|Default<br /><br /> result<br /><br /> Menge<br /><br /> (RO)|Schnell<br /><br /> forward-<br /><br /> nur<br /><br /> (RO)|STATIC-Cursor<br /><br /> (RO)|Keyset<br /><br /> driven<br /><br /> (RO)|  
+|Rowseteigenschaften/Cursormodelle|Standard<br /><br /> result<br /><br /> Menge<br /><br /> (RO)|Schnell<br /><br /> forward-<br /><br /> nur<br /><br /> (RO)|Statisch<br /><br /> (RO)|Keyset<br /><br /> driven<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|V|T|T|T|  
 |DBPROP_DEFERRED|V|V|-|-|  

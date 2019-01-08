@@ -11,23 +11,23 @@ ms.assetid: c7f64a54-c555-4d31-bf99-3abe57dc8626
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1ab486390e8da36d14d5aac1e1049a5836dd2be9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f31ea33f116cbabf1a808f30a9575ada43bae900
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081826"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392824"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Aktivieren der Berichtsserver- und Power View-Integrationsfunktionen in SharePoint
   Die Websitesammlungsfunktionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] werden in der Regel standardmäßig aktiviert, nachdem Sie das [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]-Add-In für SharePoint-Produkte installiert haben. In einigen Situationen müssen Sie die Funktionen manuell aktivieren.  
   
- Wenn Sie nach der Installation des SharePoint-Produkts das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Add-In für SharePoint 2010-Produkte installieren, werden die Berichtsserverintegrationsfunktion und die Power View-Integrationsfunktion nur für Stammwebsitesammlungen aktiviert. Für andere Websitesammlungen müssen Sie die Funktionen manuell aktivieren. Angenommen Sie haben eine Websitesammlung **http://[my Servername] [websitesammlungsname]** Sie manuell aktivieren müssen die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Websitesammlungs-Features.  
+ Wenn Sie nach der Installation des SharePoint-Produkts das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In für SharePoint 2010-Produkte installieren, werden die Berichtsserverintegrationsfunktion und die Power View-Integrationsfunktion nur für Stammwebsitesammlungen aktiviert. Für andere Websitesammlungen müssen Sie die Funktionen manuell aktivieren. Wenn Sie z. B. eine Websitesammlung von **http://[Mein Servername]/Websites/[Websitesammlungsname]** besitzen, müssen Sie die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Websitesammlungsfunktionen manuell aktivieren.  
   
- Wenn es keine Stammwebsitesammlung, ist die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -add-Ins wie die folgende Meldung protokolliert.  
+ Wenn keine Stammwebsitesammlung vorhanden ist, wird vom [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In ungefähr folgende Meldung protokolliert.  
   
  "SharePoint Web App 80 besitzt keine Stammwebsitesammlung"  
   
- Die Meldung befindet sich im Add-In-Installationsprotokoll "RS_SP_#.log", wobei "#" für eine inkrementelle Zahl steht. Die Protokolldatei befindet sich im temporären Ordner des aktuellen Benutzers, z. B. C:\Benutzer\\[Benutzername]\AppData\Local\Temp. Weitere Informationen zu Protokollierungsoptionen mit dem Add-in finden Sie unter [installieren oder deinstallieren Sie das Reporting Services-Add-in für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ Die Nachricht wird finden Sie in der Add-in-Installationsprotokoll "RS_SP_ # .log" wobei # eine inkrementelle Zahl steht. Die Protokolldatei befindet sich im temporären Ordner des aktuellen Benutzers, z. B. C:\Benutzer\\[Benutzername]\AppData\Local\Temp. Weitere Informationen zu Protokollierungsoptionen mit dem Add-in finden Sie unter [installieren oder deinstallieren Sie das Reporting Services-Add-in für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
  In diesem Thema:  
   

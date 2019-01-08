@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.addeditfilter.f1
@@ -13,12 +12,12 @@ ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f1590275aaabd47524ba969615b28ab91f2b100
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa12421f39119fbbb5e40c8c2b6dc7f103cd9a45
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195110"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758052"
 ---
 # <a name="add-or-edit-filter"></a>Hinzufügen oder Bearbeiten von Filtern
   Mithilfe der Dialogfelder **Filter hinzufügen** und **Filter bearbeiten** können Sie statische Zeilenfilter und parametrisierte Zeilenfilter hinzufügen und bearbeiten.  
@@ -30,7 +29,7 @@ ms.locfileid: "48195110"
   
  Mithilfe von Zeilenfiltern können Sie eine zu veröffentlichende Teilmenge von Zeilen aus einer Tabelle angeben. Mithilfe von Zeilenfiltern können Sie Zeilen entfernen, die Benutzern nicht angezeigt werden sollen (z. B. Zeilen mit vertraulichen oder streng vertraulichen Informationen). Mit Zeilenfiltern können Sie auch unterschiedliche Datenpartitionen erstellen, die an verschiedene Abonnenten übermittelt werden. Indem Sie unterschiedliche Datenpartitionen für verschiedene Abonnenten veröffentlichen, können Sie auch Konflikte vermeiden, die andernfalls dadurch entstehen würden, dass mehrere Abonnenten dieselben Daten aktualisieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Dieses Dialogfeld umfasst einen zweistufigen Vorgang für die Transaktions- und Momentaufnahmeveröffentlichungen sowie einen dreistufigen Vorgang für Mergeveröffentlichungen. Für alle Veröffentlichungstypen ist es erforderlich, dass Sie eine zu filternde Tabelle und eine oder mehrere Spalten auswählen, die im Filter eingeschlossen sein sollen. Der Filter wird als standardmäßige WHERE-Klausel definiert.  
   
 1.  **Wählen Sie die zu filternde Tabelle aus**  

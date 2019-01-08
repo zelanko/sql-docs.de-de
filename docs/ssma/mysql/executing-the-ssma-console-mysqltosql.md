@@ -18,12 +18,12 @@ ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fd560a17c10b5e076236195107d0a9154921422a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701808"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411257"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Ausführen der SSMA-Konsole (MySqlToSql)
 Microsoft bietet einen robusten Satz von Skript Befehle zum Ausführen und Steuerungsaktivitäten SSMA Datei.  
@@ -59,7 +59,7 @@ Die Projekt-Befehle verarbeiten, erstellen Projekte öffnen, speichern und Beend
   
    overwrite-if-exists="<true/false>"   (optional)  
   
-   project-type==”<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>”   (optional)  
+   project-type=="<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>"   (optional)  
   
 />  
 ```  
@@ -94,7 +94,7 @@ Open-Projekt:
   
 **Befehl**  
   
-Projekt speichern: speichert das Migrationsprojekt.  
+Save-Projekt: Speichert das Migrationsprojekt.  
   
 **Skript**  
   
@@ -106,7 +106,7 @@ Projekt speichern: speichert das Migrationsprojekt.
 **Befehl**  
   
 Close-Projekt  
-                  : Schließt das Migrationsprojekt.  
+                  decodiert werden: Schließt das Migrationsprojekt.  
   
 **Skript**  
   
@@ -118,7 +118,7 @@ Close-Projekt
 **Befehl**  
   
 Close-Projekt  
-                  : Schließt das Migrationsprojekt.  
+                  decodiert werden: Schließt das Migrationsprojekt.  
   
 **Skript**  
   
@@ -307,7 +307,7 @@ oder
 ## <a name="migration--script-file-commands"></a>Skript-Datei-Migrationsbefehle  
 Die migrationsbefehle Schema der Zieldatenbank, die dem Quellschema zu konvertieren und Migrieren von Daten auf dem Zielserver.  
   
-Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist 'Full' Ausgabebericht mit keine ausführliche berichterstellung: nur Zusammenfassung am Stammknoten Source-Objekt-Struktur.  
+Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist 'Full' Ausgabebericht mit keine ausführliche berichterstellung: Nur Zusammenfassung am Stammknoten Source-Objekt-Struktur.  
   
 **Befehl**  
   
@@ -402,7 +402,7 @@ Migrieren von Daten
 ```xml  
 <migrate-data  
   
-   write-summary-report-to="<file-name/folder-name>”  
+   write-summary-report-to="<file-name/folder-name>"  
   
    report-errors="true" verbose="true">  
   
@@ -429,7 +429,7 @@ oder
   
    object-type="<object-category>"  
   
-   write-summary-report-to="<file-name/folder-name>”  
+   write-summary-report-to="<file-name/folder-name>"  
   
    report-errors="true" verbose="true"/>  
 ```  
@@ -463,7 +463,7 @@ Schemazuordnung der Quelldatenbank mit dem Zielschema.
 Die Verwaltbarkeit Befehle helfen, die Ziel-Datenbankobjekte mit der Quelldatenbank zu synchronisieren.  
   
 > [!NOTE]  
-> Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist 'Full' Ausgabebericht mit keine ausführliche berichterstellung: nur Zusammenfassung am Stammknoten Source-Objekt-Struktur.  
+> Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist 'Full' Ausgabebericht mit keine ausführliche berichterstellung: Nur Zusammenfassung am Stammknoten Source-Objekt-Struktur.  
   
 **Befehl**  
   
@@ -593,7 +593,7 @@ oder
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>Skript generieren-Skriptbefehle für Datei  
-Dual-Aufgaben mit die Befehle für die Generierung von Skripts: sie speichern die Konsolenausgabe in einer Skriptdatei; helfen und zeichnen Sie die T-SQL-Ausgabe in der Konsole oder eine Datei, die auf Grundlage des Parameters, die Sie angeben.  
+Die Generierung des Datenupdateskripts-Befehle führen zwei Aufgaben aus: Sie helfen, speichern Sie die Konsolenausgabe in einer Skriptdatei; und zeichnen Sie die T-SQL-Ausgabe in der Konsole oder eine Datei, die auf Grundlage des Parameters, die Sie angeben.  
   
 **Befehl**  
   
@@ -626,7 +626,7 @@ Ist eine oder mehrere Metabase-Knoten als Befehlszeilenparameter erforderlich.
   
    object-type="<object-category>"  
   
-   destination="<file-name/folder-name>”  
+   destination="<file-name/folder-name>"  
   
    overwrite="<true/false>"   (optional)  
   
@@ -639,7 +639,7 @@ oder
   
    metabase="<source/target>"  
   
-   destination="<file-name/folder-name>”  
+   destination="<file-name/folder-name>"  
   
       <metabase-object object-name="<object-name>"  
   

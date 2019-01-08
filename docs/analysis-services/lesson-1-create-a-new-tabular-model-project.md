@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 61ac5b1a0bac9647e6163a13afd0bce6b251ac03
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040858"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410776"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lektion 1: Erstellen eines neuen Tabellenmodellprojekts
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -50,7 +50,7 @@ Dieses Thema stellt die erste Lektion in einem Lernprogramm zur Tabellenmodeller
       
     Wenn Sie SQL Server 2016 RTM (1200) im Kompatibilitätsgrad-Listenfeld nicht angezeigt wird, verwenden Sie nicht die neueste Version von SQL Server Data Tools. Sie können die neueste Version unter [Installieren von SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)herunterladen.  
 
-    Wenn Sie die neueste Version von SSDT verwenden, können Sie auch auswählen, auf SQL Server 2017 (1400). Allerdings für Lektion 13: bereitstellen, benötigen Sie einen SQL Server 2017 oder Azure-Server für die Bereitstellung.
+    Wenn Sie die neueste Version von SSDT verwenden, können Sie auch auswählen, auf SQL Server 2017 (1400). Allerdings für Lektion 13: Bereitstellen, benötigen Sie eine SQL Server 2017 oder eine Azure-Server für die Bereitstellung auf.
       
     Auswählen eines früheren Kompatibilitätsgrads wird nur empfohlen, wenn Sie Ihr abgeschlossene tabellarische Modell in einer anderen Analysis Services-Instanz, die eine frühere Version von SQL Server bereitstellen möchten. Integrierter Arbeitsbereich wird bei niedrigeren Kompatibilitätsgraden nicht unterstützt. Weitere Informationen finden Sie unter [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).   
   
@@ -82,7 +82,7 @@ Klicken Sie auf das Menü **Spalte** . Hier können Sie Spalten in einer Tabelle
 Erkunden Sie einige der Dialogfelder und Positionen für verschiedene Funktionen, die für die Erstellung von Tabellenmodellen konzipiert sind. Obwohl einige Elemente noch nicht aktiv sind, erhalten Sie dennoch einen Einblick in die Umgebung zur Tabellenmodellerstellung.  
 
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 Mehr über die verschiedenen Typen von tabellenmodellprojekten finden Sie unter [Projekte für tabellarische Modelle](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Weitere Informationen zu der Umgebung für die tabellenmodellerstellung finden Sie unter [Designer für tabellarische Modelle ](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 

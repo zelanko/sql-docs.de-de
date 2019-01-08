@@ -11,12 +11,12 @@ ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09084760637464c5e985eeb17762959c8576c5ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a66c6284ea53f65351a964e3f24492c569521af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222804"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544272"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Vorhersagen von Zuordnungen (Data Mining-Lernprogramm für Fortgeschrittene)
   Im Anschluss an die Verarbeitung der Modelle können Sie anhand der Informationen über Zuordnungen, die im Modell gespeichert sind, Vorhersagen erstellen. In der abschließenden Aufgabe der Lektion lernen Sie, Vorhersageabfragen auf Basis der erstellten Zuordnungsmodelle zu erstellen. In dieser Lektion wird davon ausgegangen, dass Sie mit der Verwendung des Generators für Vorhersageabfragen vertraut sind und lernen möchten, wie Vorhersageabfragen für Zuordnungsmodelle erstellt werden. Weitere Informationen zum Verwenden des Generators für Vorhersageabfragen finden Sie unter [Data Mining-Abfrageschnittstellen](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  
@@ -209,7 +209,7 @@ ms.locfileid: "48222804"
  Sie können versuchen, eine ähnliche Vorhersageabfrage für mehrere Modelle zu erstellen, um mögliche Auswirkungen von Filteränderungen auf die Vorhersageergebnisse zu überprüfen. Weitere Informationen zum Erstellen von Vorhersagen und anderen Typen von Abfragen finden Sie unter [Zuordnungsmodellabfragen](../../2014/analysis-services/data-mining/association-model-query-examples.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)   
  [Erstellen von Vorhersageabfragen mithilfe des Generators für Vorhersageabfragen](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   

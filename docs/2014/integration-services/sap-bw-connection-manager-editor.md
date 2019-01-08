@@ -11,12 +11,12 @@ ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e73545b8417b92abf57747441b49531736ecdd48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52a7ceaa177c223363f4c14313cf14f70a0e52f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120812"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508684"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW-Verbindungs-Manager-Editor
   Verwenden Sie den **SAP BW-Verbindungs-Manager-Editor** , um die Eigenschaften festzulegen, mit denen eine Verbindung mit einem SAP NetWeaver BW-System, Version 7, hergestellt werden soll.  
@@ -34,11 +34,11 @@ ms.locfileid: "48120812"
   
     -   Doppelklicken Sie auf den SAP BW-Verbindungs-Manager.  
   
-         – oder –  
+         -oder-  
   
     -   Klicken Sie mit der rechten Maustaste auf den SAP BW-Verbindungs-Manager, und wählen Sie dann **Bearbeiten**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration des Verbindungs-Managers erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  

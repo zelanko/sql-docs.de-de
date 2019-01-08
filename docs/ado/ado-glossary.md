@@ -13,12 +13,12 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66389b5b2d171a5d006fcddcf28523790a411d68
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291766"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528016"
 ---
 # <a name="ado-glossary-terms"></a>ADO-Glossar
 In diesem Thema werden die Begriffe, die relevant für ADO definiert.
@@ -32,7 +32,7 @@ In diesem Thema werden die Begriffe, die relevant für ADO definiert.
 
  Aggregate-Funktion In einer Abfrage, einer Funktion wie COUNT, AVG und STDEV, die einen Wert mit der alle Zeilen in einer Spalte einer Tabelle berechnet. Schreiben von Ausdrücken und beim Programmieren können Sie SQL-Aggregatfunktionen (einschließlich der drei oben aufgeführten) und Domain-Aggregatfunktionen, um verschiedene Statistiken zu ermitteln können.
 
- Alias eine alternative-Name, den Sie eine Spalte oder einen Ausdruck in einer SQL-SELECT-Anweisung, häufig kürzere oder aussagekräftigere gewähren. ///BobSales ist z. B. den Alias in der folgenden SELECT-Anweisung: "Select Wr-Sales als ///BobSales from SalesDB". Ein Alias kann verwendet werden, um dynamische Zuweisung von Spalten zu Bindungen für das DataControl-Objekt.
+ Alias eine alternative-Name, den Sie eine Spalte oder einen Ausdruck in einer SQL-SELECT-Anweisung, häufig kürzere oder aussagekräftigere gewähren. ///BobSales ist z. B. den Alias in der folgenden SELECT-Anweisung: "Wählen Sie als ///BobSales aus" SalesDB "Wr-Sales". Ein Alias kann verwendet werden, um dynamische Zuweisung von Spalten zu Bindungen für das DataControl-Objekt.
 
  Apartmentthreading ein COM-Threadingmodell, in dem alle Aufrufe an ein Objekt in einem einzelnen Thread ausgeführt. Apartmentthreading COM synchronisiert und marshallt Aufrufe. Siehe auch *COMmddefcom*.
 
@@ -74,7 +74,7 @@ In diesem Thema werden die Begriffe, die relevant für ADO definiert.
 
  COM (Component Object Model) ein binäres Standard, Objekte ermöglicht für die Zusammenarbeit in einer vernetzten Umgebung unabhängig von der Sprache, in der sie entwickelt wurden, oder auf welche Computer sie sich befinden. COM-basierte Technologien zählen ActiveX-Steuerelemente, Automatisierung und Objekt verlinken und einbetten (OLE). COM ermöglicht ein Objekt, dessen Funktionalität mit anderen Komponenten und hostanwendungen verfügbar zu machen. Sie definiert sowohl wie das Objekt selbst verfügbar macht und wie dieses Offenlegen über Prozesse und über Netzwerke hinweg funktioniert. COM definiert auch die Lebensdauer des Objekts.
 
- Binäre Datei der COM-Komponente: wie .dll, .ocx und einige .exe-Dateien –, die die COM-Standard für die Bereitstellung von Objekten unterstützt. Eine solche Datei enthält Code für eine oder mehrere Klassenfactorys, COM-Klassen, Mechanismen für Registrierungseinträge, Code zum Laden und So weiter.
+ COM-Komponente Binärdatei – wie .dll, .ocx und einige .exe-Dateien – unterstützt, die mit den COM-Standard für die Bereitstellung von Objekten. Eine solche Datei enthält Code für eine oder mehrere Klassenfactorys, COM-Klassen, Mechanismen für Registrierungseinträge, Code zum Laden und So weiter.
 
  Vergleichsoperator ein Operator, der vergleicht zwei Ausdrücke und gibt einen booleschen Wert zurück.
 

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - templates [SQLXML]
@@ -18,12 +16,12 @@ ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 060d7164aee0546e814d090718bcb21400130fdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9405bbb1eb8737b38c1e9214713b5447f1917d7c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081790"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800242"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>Ausführen von Vorlagen, die SQL-Abfragen enthalten (SQLXMLOLEDB-Anbieter)
   Dieses Beispiel veranschaulicht die Verwendung der SQLXMLOLEDB-Anbieter spezifischen ClientSideXML-Eigenschaft. In dieser clientseitigen ADO-Beispielanwendung wird eine XML-Vorlage, die aus einer einfachen SQL-Abfrage besteht, auf dem Server ausgeführt.  

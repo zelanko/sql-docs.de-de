@@ -1,5 +1,5 @@
 ---
-title: Verwenden eine geänderte Version der Analyse Services Tutorial-Projekt | Microsoft Docs
+title: Verwenden eine geänderte Version der Analyse Services-Tutorial-Projekt | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 93847b7e6cade7d77774603ba1852c16a5a783b7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4d3fb90b8823ff8a8585647bf60b87ed4098bc6e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017697"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401113"
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lektion 4-1: Verwenden einer geänderten Version des Analysis Services Tutorial-Projekts
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -25,15 +25,15 @@ Bevor Sie dieses Lernprogramm fortsetzen können, müssen Sie die erweiterte Ver
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Herunterladen und Extrahieren der Projektdatei  
   
-1.  [Klicken Sie hier](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) , um die Downloadseite mit Beispielprojekten für dieses Lernprogramm aufzurufen. Die Lernprogrammprojekte sind in enthalten die **Adventure-Works – mehrdimensionale-Lernprogramm – projects.zip** herunterladen.  
+1.  [Klicken Sie hier](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) , um die Downloadseite mit Beispielprojekten für dieses Lernprogramm aufzurufen. Die Lernprogrammprojekte sind im enthalten die **Adventure-Works-MDX-Tutorial – projects.zip** herunterladen.  
   
-2.  Klicken Sie auf **Adventure-Works – mehrdimensionale-Lernprogramm – projects.zip** um das Paket herunterzuladen, die Projekte für dieses Lernprogramm enthält.  
+2.  Klicken Sie auf **Adventure-Works-MDX-Tutorial – projects.zip** , das Paket herunterzuladen, die Projekte für dieses Tutorial enthält.  
   
     Standardmäßig wird eine ZIP-Datei im Ordner Downloads gespeichert. Sie müssen die ZIP-Datei an einen Ort mit einem kürzeren Pfadnamen verschieben (erstellen Sie z. B. einen Ordner C:\Tutorials, um die Dateien zu speichern).  Anschließend können Sie die in der ZIP-Datei enthaltenen Dateien extrahieren. Wenn Sie versuchen, die Dateien aus dem Ordner Downloads zu entzippen, der über einen längeren Pfad verfügt, wird nur Lektion 1 extrahiert.  
   
 3.  Erstellen Sie einen Unterordner auf oder nahe dem Stammlaufwerk, z. B. C:\Tutorial.  
   
-4.  Verschieben der **Adventure-Works – mehrdimensionale-Lernprogramm – projects.zip** Datei in den Unterordner.  
+4.  Verschieben der **Adventure-Works-MDX-Tutorial – projects.zip** Datei in den Unterordner.  
   
 5.  Klicken Sie mit der rechten Maustaste auf die Datei, und wählen Sie **Alle extrahieren**aus.  
   
@@ -41,7 +41,7 @@ Bevor Sie dieses Lernprogramm fortsetzen können, müssen Sie die erweiterte Ver
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Laden und Verarbeiten des erweiterten Projekts  
   
-1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]im Menü **Datei** auf **Projektmappe schließen** , um nicht benötigte Dateien zu schließen.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf die **Datei** Menü klicken Sie auf **Projektmappe schließen** , Dateien zu schließen, nicht verwendet.  
   
 2.  Zeigen Sie im Menü **Datei** auf **Öffnen**, und klicken Sie anschließend auf **Projekt/Projektmappe**.  
   
@@ -64,7 +64,7 @@ Das **Internet Sales** -Diagramm enthält die Tabellen, die mit dem Verkauf von 
   
 -   **Geography**  
   
--   **Customer**  
+-   **Kunde**  
   
 -   **Datum**  
   
@@ -114,7 +114,7 @@ Die Geography-Dimension basiert auf der **Geography** -Tabelle in der **Adventur
 #### <a name="analysis-services-cube"></a>Analysis Services-Cube  
 Der **Analysis Services Tutorial** -Cube enthält jetzt zwei Measuregruppen – die ursprüngliche Measuregruppe basierend auf der **InternetSales** -Tabelle und eine zweite Measuregruppe basierend auf der **ResellerSales** -Tabelle in der **Adventure Works DW 2012** -Datenquellensicht.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Definieren der Eigenschaften des übergeordneten Attributs in einer Über-/Unterordnungshierarchie](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
   
 ## <a name="see-also"></a>Siehe auch  

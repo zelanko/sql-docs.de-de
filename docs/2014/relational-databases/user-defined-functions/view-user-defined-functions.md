@@ -18,12 +18,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab407cac265c148b946380c58d48e2c98f231a81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73f3fcdb485d4fdfbb06392414086d25f405a77f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223170"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505454"
 ---
 # <a name="view-user-defined-functions"></a>Anzeigen benutzerdefinierter Funktionen
   Sie können Informationen zur Definition oder zu den Eigenschaften einer benutzerdefinierten Funktion in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]abrufen. Manchmal ist es erforderlich, die Definition einer Funktion anzuzeigen, um zu verstehen, wie die Daten der Funktion aus den Quelltabellen abgeleitet werden, oder um die durch die Funktion definierten Daten anzuzeigen.  
@@ -35,7 +35,7 @@ ms.locfileid: "48223170"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Abrufen von Informationen zu einer Funktion mit:**  
   
@@ -43,14 +43,14 @@ ms.locfileid: "48223170"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Das Anzeigen aller Abhängigkeiten einer Funktion mithilfe von **sys.sql_expression_dependencies** erfordert die VIEW DEFINITION-Berechtigung für die Datenbank und die SELECT-Berechtigung für **sys.sql_expression_dependencies** für die Datenbank. Systemobjektdefinitionen, wie die in OBJECT_DEFINITION zurückgegebenen Definitionen, sind öffentlich sichtbar.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>So zeigen Sie die Eigenschaften einer benutzerdefinierten Funktion an  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48223170"
   
 4.  Klicken Sie mit der rechten Maustaste auf die Funktion, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
   
-     Die folgenden Eigenschaften werden im Dialogfeld **Funktionseigenschaften** *function_name* dialog box.  
+     Die folgenden Eigenschaften werden im Dialogfeld **Funktionseigenschaften >** *Funktionsname* angezeigt.  
   
      **Datenbank**  
      Name der Datenbank, die diese Funktion enthält.  

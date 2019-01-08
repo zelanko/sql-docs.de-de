@@ -11,12 +11,12 @@ ms.assetid: 0a00f409-050f-4b92-9763-ba31a6aa3052
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ff9743774a9c05f4369cb2d24fde592bf011225
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d49bda5b1616a2052542b6047c1291dd64763e1d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150988"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401705"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Prüfen des Planungserstellungsmodells (Data Mining-Lernprogramm für Fortgeschrittene)
   Nun, dass Sie das forecasting-Miningmodell erstellt haben, können Sie die Ergebnisse überprüfen, mit der **Miningmodell-Viewer** -Registerkarte des Data Mining-Designers. Die [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series-Viewer enthält zwei Registerkarten: **Diagramme** und **Modell**.  
@@ -50,13 +50,13 @@ ms.locfileid: "48150988"
   
      Das Diagramm enthält anschließend nur die folgenden sechs Reihenzeilen, sodass Sie die Trends für die Fahrräder M200 und T1000 besser vergleichen können.  
   
-    -   **M200 Europe: Quantity**  
+    -   **M200 Europe: Menge**  
   
     -   **M200 North America: Menge**  
   
     -   **M200 Pacific: Menge**  
   
-    -   **T1000 Europe: Quantity**  
+    -   **T1000 Europe: Menge**  
   
     -   **T1000 North America: Menge**  
   
@@ -95,17 +95,17 @@ ms.locfileid: "48150988"
   
  Sie können auswählen, welche Kombination von Produktlinie, Bereich und umsatzmetrik Sie anzeigen, indem er eine Reihe von möchten die **Struktur** Dropdown-Liste auf die **Modell** Registerkarte.  
   
- Welche Einblicke gibt Ihnen also eine Anzeige des Modells als Struktur? Vergleichen wir als Beispiel zwei Modelle: eines hat mehrere Ebenen in der Struktur, und eines verfügt nur über einen einzelnen Knoten.  
+ Welche Einblicke gibt Ihnen also eine Anzeige des Modells als Struktur? Vergleichen wir als Beispiel zwei Modelle, eine, mehrere Ebenen in der Struktur hat, und eine, die über einen einzelnen Knoten verfügt.  
   
 -   Wenn ein Strukturdiagramm einen einzelnen Knoten enthält, bedeutet dies, dass der im Modell gefundene Trend im Zeitverlauf überwiegend homogen ist. Sie können diesen einzelnen Knoten mit der Bezeichnung **alle**, um die Formel anzuzeigen, die die Beziehung zwischen den Eingangsvariablen und dem Ergebnis beschreibt.  
   
 -   Wenn ein Strukturdiagramm für eine Zeitreihe mehrere Verzweigungen hat, bedeutet dies, dass die erkannte Zeitreihe zu komplex für eine Darstellung als einzelne Gleichung ist. Stattdessen das Strukturdiagramm mehrere Verzweigungen, wobei jede Verzweigung, die die Bedingungen, die aufgrund die Struktur mit der Bezeichnung enthalten möglicherweise *teilen*. Wenn sich die Struktur teilt, stellt jede Verzweigung ein Zeitsegment dar, innerhalb dessen der Trend als einzelne Gleichung beschrieben werden kann.  
   
-     Z. B. Wenn Sie das Diagramm ansehen und einen abrupten Sprung in Verkaufsvolumen ab irgendwann im September und der Vorgang fortgesetzt, bis ein Feiertag, Sie können zum Wechseln der **Modell** Ansicht finden in das genaue Datum der trendänderung. Die Verzweigungen in der Struktur, die "vor September" und "nach September" darstellen, enthalten unterschiedliche Formeln: eine Formel, die den Verkaufstrend bis zur Teilung mathematisch beschreibt, und eine andere Formel, die den Verkaufstrend von September bis zum Feiertag am Jahresende beschreibt.  
+     Z. B. Wenn Sie das Diagramm ansehen und einen abrupten Sprung in Verkaufsvolumen ab irgendwann im September und der Vorgang fortgesetzt, bis ein Feiertag, Sie können zum Wechseln der **Modell** Ansicht finden in das genaue Datum der trendänderung. Die Verzweigungen in der Struktur, die "vor September" und "nach September" darstellen, enthalten unterschiedliche Formeln: eine Formel, die den Verkaufstrend bis zur Teilung mathematisch beschreibt, und eine andere Formel, die Verkaufstrends von September bis beschreibt. Feiertag.  
   
 #### <a name="to-explore-the-decision-tree-for-a-time-series-model"></a>So untersuchen Sie die Entscheidungsstruktur für ein Zeitreihenmodell  
   
-1.  In der **Struktur** auf in der Liste der **Modell** wählen auf der Registerkarte die **T1000 Europe: Amount** Reihe.  
+1.  In der **Struktur** auf in der Liste der **Modell** wählen auf der Registerkarte die **T1000 Europe: Menge** Reihe.  
   
      Klicken Sie auf den Knoten, die mit der Bezeichnung **alle**.  
   
@@ -134,9 +134,9 @@ ms.locfileid: "48150988"
 ##  <a name="bkmk_Content"></a> (Optional) Generic Content Tree-Viewer  
  Zusätzlich zu den benutzerdefinierten Viewer für Zeitreihen stellt [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet die **MicrosoftGeneric Content Tree Viewer** für die Verwendung mit allen Datamining-Modellen. Dieser Viewer bietet einige Vorteile:  
   
--   **Microsoft Time Series-Viewer**: in dieser Ansicht werden die Ergebnisse der beiden Algorithmen zusammengeführt. Obwohl Sie jede Reihe getrennt anzeigen können, können Sie nicht bestimmen, wie die Ergebnisse jedes Algorithmus kombiniert wurden. Zudem zeigen die QuickInfos und die Mininglegende in dieser Sicht nur die wichtigsten Statistiken an.  
+-   **Microsoft Time Series-Viewer**: In dieser Ansicht werden die Ergebnisse der beiden Algorithmen zusammengeführt. Obwohl Sie jede Reihe getrennt anzeigen können, können Sie nicht bestimmen, wie die Ergebnisse jedes Algorithmus kombiniert wurden. Zudem zeigen die QuickInfos und die Mininglegende in dieser Sicht nur die wichtigsten Statistiken an.  
   
--   **Generic Content Tree Viewer**: ermöglicht Ihnen das Durchsuchen und Anzeigen der Datenreihen, die verwendet wurden alle auf einmal im Modell, und wenn Sie ein gemischtes erstellt haben, zu modellieren, die ARIMA- und ARTXP-Strukturen im gleichen Diagramm angezeigt.  
+-   **Generic Content Tree Viewer**: Ermöglicht Ihnen das Durchsuchen und Anzeigen der Datenreihen, die verwendet wurden alle auf einmal im Modell, und wenn Sie ein gemischtes erstellt haben, zu modellieren, die ARIMA- und ARTXP-Strukturen im gleichen Diagramm angezeigt.  
   
      Sie können mit diesem Viewer alle Statistiken aus beiden Algorithmen sowie die Verteilungen der Werte abrufen.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "48150988"
  [Erstellen von Zeitreihenvorhersagen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/creating-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Abfragebeispiel Zeitreihenmodell](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [Technische Referenz für den Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

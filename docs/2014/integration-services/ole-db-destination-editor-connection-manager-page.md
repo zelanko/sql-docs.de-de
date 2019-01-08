@@ -15,12 +15,12 @@ ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5db99f475b1fc1a71d36f8643dea56f99d00d0b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7688f3979f935b6d461c47fe2747eb7718835f01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188340"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504698"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Ziel-Editor für OLE DB (Seite Verbindungs-Manager)
   Mithilfe der Seite **Verbindungs-Manager** des Dialogfelds **Ziel-Editor für OLE DB** können Sie die OLE DB-Verbindung für das Ziel auswählen. Außerdem können Sie auf dieser Seite eine Tabelle oder Sicht aus der Datenbank auswählen.  
@@ -44,7 +44,7 @@ ms.locfileid: "48188340"
 |------------|-----------------|  
 |Tabelle oder Sicht|Lädt Daten in eine Tabelle oder Sicht im OLE DB-Ziel.|  
 |Tabelle oder Sicht - schnelles Laden|Lädt Daten in eine Tabelle oder Sicht im OLE DB-Ziel und verwendet die Option für das schnelle Laden. Weitere Informationen zu Datenzugriffsmodi für schnelles Laden, die für Masseneinfügungen optimiert sind, finden Sie unter [OLE DB Destination](data-flow/ole-db-destination.md).|  
-|Variable für Tabellenname oder Sichtname|Gibt den Namen der Tabelle oder Sicht in einer Variablen an.<br /><br /> **Verwandte Informationen:** [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable für Tabellenname oder Sichtname|Gibt den Namen der Tabelle oder Sicht in einer Variablen an.<br /><br /> **Verwandte Informationen**: [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)|  
 |Variable für Tabellenname oder Sichtname - schnelles Laden|Gibt den Namen der Tabelle oder Sicht in einer Variablen an und verwendet zum Laden der Daten die Option für das schnelle Laden. Weitere Informationen zu Datenzugriffsmodi für schnelles Laden, die für Masseneinfügungen optimiert sind, finden Sie unter [OLE DB Destination](data-flow/ole-db-destination.md).|  
 |SQL-Befehl|Lädt Daten mithilfe einer SQL-Abfrage in das OLE DB-Ziel.|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48188340"
 > [!NOTE]  
 >  Wenn Sie auf **Neu**klicken, generiert [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] eine Standard-CREATE TABLE-Anweisung auf Grundlage der verbundenen Datenquelle. Diese Standard-CREATE TABLE-Anweisung enthält nicht das FILESTREAM-Attribut, selbst wenn die Quelltabelle eine Spalte mit der Erklärung des FILESTREAM-Attributs enthält. Um eine [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Komponente mit dem FILESTREAM-Attribut auszuführen, implementieren Sie zunächst die FILESTREAM-Speicherung in der Zieldatenbank. Fügen Sie dann das FILESTREAM-Attribut der CREATE TABLE-Anweisung im Dialogfeld **Tabelle erstellen** hinzu. Weitere Informationen finden Sie unter [Blob-Daten &#40;Binary Large Object, SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-### <a name="data-access-mode--table-or-view--fast-load"></a>Datenzugriffsmodus = Tabelle oder Sicht – schnelles Laden  
+### <a name="data-access-mode--table-or-view---fast-load"></a>Datenzugriffsmodus = Tabelle oder Ansicht – schnelles Laden  
  **Name der Tabelle oder Sicht**  
  Wählen Sie mithilfe dieser Liste eine Tabelle oder Sicht in der Datenbank aus, oder erstellen Sie eine neue Tabelle, indem Sie auf **Neu**klicken.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48188340"
  Gibt an, ob das Ziel beim Laden von Daten Einschränkungen überprüft. Der Standardwert dieser Eigenschaft ist `true`.  
   
  **Zeilen pro Batch**  
- Geben Sie die Anzahl der Zeilen in einem Batch an. Der Standardwert dieser Eigenschaft lautet **-1**und zeigt an, dass kein Wert zugewiesen wurde.  
+ Geben Sie die Anzahl der Zeilen in einem Batch an. Der Standardwert dieser Eigenschaft lautet **-1**und bedeutet, dass kein Wert zugewiesen wurde.  
   
 > [!NOTE]  
 >  Löschen Sie im Dialogfeld **Ziel-Editor für OLE DB** den Inhalt des Textfelds, um anzugeben, dass für diese Eigenschaft kein benutzerdefinierter Wert zugewiesen werden soll.  
@@ -107,7 +107,7 @@ ms.locfileid: "48188340"
  **Variablenname**  
  Wählen Sie die Variable aus, die den Namen der Tabelle oder Sicht enthält.  
   
-### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>Datenzugriffsmodus = Variable für Tabellenname oder Sichtname – schnelles Laden  
+### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>Datenzugriffsmodus = Variable für Tabellenname oder Ansichtsname – schnelles Laden  
  **Variablenname**  
  Wählen Sie die Variable aus, die den Namen der Tabelle oder Sicht enthält.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48188340"
  Gibt an, ob Einschränkungen vom Task überprüft werden sollen. Der Standardwert dieser Eigenschaft ist `false`.  
   
  **Zeilen pro Batch**  
- Geben Sie die Anzahl der Zeilen in einem Batch an. Der Standardwert dieser Eigenschaft lautet **-1**und zeigt an, dass kein Wert zugewiesen wurde.  
+ Geben Sie die Anzahl der Zeilen in einem Batch an. Der Standardwert dieser Eigenschaft lautet **-1**und bedeutet, dass kein Wert zugewiesen wurde.  
   
 > [!NOTE]  
 >  Löschen Sie im Dialogfeld **Ziel-Editor für OLE DB** den Inhalt des Textfelds, um anzugeben, dass für diese Eigenschaft kein benutzerdefinierter Wert zugewiesen werden soll.  
@@ -158,9 +158,9 @@ ms.locfileid: "48188340"
  Überprüft die Syntax des Abfragetexts.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ziel-Editor für OLE DB &#40;Seite "Zuordnungen"&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
- [Ziel-Editor für OLE DB &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Ziel-Editor für OLE DB &#40;Seite „Zuordnungen“&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [Ziel-Editor für OLE DB &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [Laden von Daten mithilfe des OLE DB-Ziels](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

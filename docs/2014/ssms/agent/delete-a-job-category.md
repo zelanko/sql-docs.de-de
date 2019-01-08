@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
@@ -16,12 +16,12 @@ ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e98d9f168e0256b96fefdd1d1c1bf65b5b54155
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4d1ecf24b8bde6ed02557a2a0d4de722240f754
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078390"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762942"
 ---
 # <a name="delete-a-job-category"></a>Löschen einer Auftragskategorie
   In diesem Thema wird beschrieben, wie Sie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragskategorie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects löschen können.  
@@ -30,17 +30,17 @@ ms.locfileid: "48078390"
   
 
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Wenn Sie eine benutzerdefinierte Auftragskategorie löschen, werden sie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgefordert, die Aufträge neu zuzuweisen, die in einer anderen Auftragskategorie zugewiesen wurden. Sie können nur benutzerdefinierte Auftragskategorien löschen.  
   
 ###  <a name="Security"></a> Sicherheit  
- Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
 
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-delete-a-job-category"></a>So löschen Sie eine Auftragskategorie  
   
@@ -48,15 +48,15 @@ ms.locfileid: "48078390"
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge** , und wählen Sie **Auftragskategorien verwalten**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge**, und wählen Sie **Auftragskategorien verwalten** aus.  
   
-4.  Klicken Sie im Dialogfeld *Auftragskategorien verwalten***Servername* auf die zu löschende Auftragskategorie.  
+4.  Klicken Sie im _server_name_-Dialogfeld **Auftragskategorien verwalten** auf die zu löschende Auftragskategorie.  
   
 5.  Klicken Sie auf **Löschen**.  
   
 6.  Klicken Sie im Dialogfeld **Auftragskategorien** auf **Ja**.  
   
-7.  Schließen Sie das Dialogfeld **Auftragskategorien verwalten***Servername*.  
+7.  Schließen Sie das Dialogfeld **Auftragskategorien verwalten -**_Servername_ .  
   
 
   
@@ -64,7 +64,7 @@ ms.locfileid: "48078390"
   
 #### <a name="to-delete-a-job-category"></a>So löschen Sie eine Auftragskategorie  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48078390"
 ##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
  **So löschen Sie eine Auftragskategorie**  
   
- Rufen Sie die `JobCategory` Klasse, indem Sie eine Programmiersprache, die Sie, wie z. B. Visual Basic, Visual c# oder PowerShell auswählen.  
+ Rufen Sie die `JobCategory`-Klasse in einer Programmiersprache Ihrer Wahl auf, z. B. Visual Basic, Visual C# oder PowerShell.  
   
 
   

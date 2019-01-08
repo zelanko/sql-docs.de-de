@@ -14,12 +14,12 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 90bc2c9f6f268bf03904d768fd25b25b3ade3fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157990"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518257"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Cloud-Adapter für SQL Server
   Der Cloud-Adapterdienst wird bei der Bereitstellung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einer Windows Azure-VM erstellt. Der Cloud-Adapterdienst generiert bei der ersten Ausführung ein selbstsigniertes Zertifikat und wird danach unter dem Konto **Lokales System** ausgeführt. Er generiert eine Konfigurationsdatei, die für die eigene Konfiguration verwendet wird. Der Cloud-Adapter erstellt außerdem eine Windows-Firewall-Regel, um eingehende TCP-Verbindungen auf Standardport 11435 zuzulassen.  
@@ -33,7 +33,7 @@ ms.locfileid: "48157990"
   
 -   Der Cloud-Adapterwebdienst wird unter dem Konto **Lokales System** ausgeführt und überprüft die Clientanmeldeinformationen vor der Ausführung eines Tasks. Vom Client bereitgestellte Anmeldeinformationen müssen das Konto verwenden, das ein Mitglied der lokalen angehören **Administratoren** Gruppe auf dem Remotecomputer.  
   
--   Der Cloud-Adapter unterstützt nur die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Authentifizierung.  
+-   Der Cloud-Adapter unterstützt nur die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung.  
   
 -   Cloud-Adapter verwendet kein sa-Konto, sondern das lokale Administratorkonto der VM, um Befehle auf dem lokalen Computer auszuführen.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48157990"
 ## <a name="cloud-adapter-configuration-settings"></a>Cloud-Adapter-Konfigurationseinstellungen  
  Verwenden Sie die folgenden Konfigurationsdetails für Cloud-Adapter, um die Einstellungen für einen Cloud-Adapter zu ändern.  
   
--   **Standardpfad für die Konfigurationsdatei** – c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\120\Tools\CloudAdapter\  
+-   **Standardpfad für die Konfigurationsdatei** -c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\120\Tools\CloudAdapter\  
   
 -   **Konfigurationsdateiparameter** -  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48157990"
   
     -   \</ Configuration >  
   
--   **Zertifikatdetails** – Das Zertifikat enthält folgende Werte:  
+-   **Zertifikatdetails** – das Zertifikat hat die folgenden Werte:  
   
     -   Betreff – "CN = CloudAdapter\<VMName >, DC = SQLServer, DC = Microsoft"  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48157990"
   
  **Konfigurationsdateiwerte**:  
   
-|Einstellung|Werte|Default|Kommentare|  
+|Einstellung|Werte|Standard|Kommentare|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|Wenn nicht angegeben, wird 11435 verwendet.|  
 |WebServiceCertificate|Fingerabdruck|Empty|Bei einem leeren Wert wird ein neues selbstsigniertes Zertifikat generiert.|  
@@ -81,11 +81,11 @@ ms.locfileid: "48157990"
 ## <a name="cloud-adapter-troubleshooting"></a>Cloud-Adapter-Problembehandlung  
  Verwenden Sie die folgenden Informationen zur Problembehandlung beim Cloud-Adapter für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   **Fehlerbehandlung und -protokollierung** – Fehler und Statusmeldungen werden in das Anwendungsereignisprotokoll geschrieben.  
+-   **Fehlerbehandlung und-Protokollierung** -Fehler und statusmeldungen werden in das Anwendungsereignisprotokoll geschrieben.  
   
--   **Ablaufverfolgung, Ereignisse** – Ereignisse werden in das Anwendungsereignisprotokoll geschrieben.  
+-   **Ablaufverfolgung, Ereignisse** -Ereignisse werden in das Anwendungsereignisprotokoll geschrieben.  
   
--   **Steuerung, Konfiguration** – verwenden Sie die Konfigurationsdatei unter: c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
+-   **Steuerung, Konfiguration** -verwenden Sie die Konfigurationsdatei unter:  C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
   
 |Fehler|Fehler-ID|Ursache|Lösung|  
 |-----------|--------------|-----------|----------------|  

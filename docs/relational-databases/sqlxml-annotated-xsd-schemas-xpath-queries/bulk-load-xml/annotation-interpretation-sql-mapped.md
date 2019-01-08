@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59c9af7037c51490e93352849957ec57bc7e4eb3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f6af7eecb4a77adb4d53440753da1c9b6ef6e1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662299"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509820"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Interpretation von Anmerkungen – sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML-Massenladen verarbeitet die **Sql: zugeordnet** -Anmerkung im XSD-Schema wie erwartet – d. h. wenn das Zuordnungsschema **Sql: zugeordnet = "false"** für ein Element oder Attribut, XML-Massenladen nicht Es wurde versucht, die zugehörigen Daten in der entsprechenden Spalte zu speichern.  
+  XML-Massenladen verarbeitet die **Sql: zugeordnet** -Anmerkung im XSD-Schema als erwartet, mit deren Hilfe ist, wenn das Zuordnungsschema **Sql: zugeordnet = "false"** für ein Element oder Attribut, XML-Massenladen nicht Es wurde versucht, die zugehörigen Daten in der entsprechenden Spalte zu speichern.  
   
  XML-Massenladen ignoriert Elemente und Attribute, die nicht zugeordnet werden (da sie nicht im Schema beschrieben werden, oder weil sie in der XSD-Schema mit Anmerkungen versehen werden **Sql: zugeordnet = "false"**). Alle nicht zugeordnete Daten in die Überlaufspalte wechselt, wenn eine solche Spalte angegeben wird, wird mit **SQL: Overflow-Feld**.  
   

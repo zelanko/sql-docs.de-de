@@ -15,12 +15,12 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cdfb1bf06bd7b1157525ffd2beed10c4c3daf2be
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a3f3e2b41dcda79c21d3b7b4f3dc6ab7ed6573ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659379"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539874"
 ---
 # <a name="general-xquery-use-cases"></a>Allgemeine Einsatzgebiete für XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "51659379"
  Die folgende Abfrage gibt die Produktmodell-IDs und (sofern vorhanden) die Gewichtungen aus der Produktkatalogbeschreibung zurück. Die Abfrage erstellt XML in der folgenden Form:  
   
 ```  
-<Product ProductModelID="…">  
-  <Weight>…</Weight>  
+<Product ProductModelID="...">  
+  <Weight>...</Weight>  
 </Product>  
 ```  
   
@@ -95,7 +95,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
  Für Produktmodelle, deren Katalogbeschreibungen Bilder mit frontalem Blickwinkel und geringer Größe enthalten, konstruiert die Abfrage XML-Code, der die folgende Form aufweist:  
   
 ```  
-< Product ProductModelID="…">  
+< Product ProductModelID="...">  
   <Picture>  
     <Angle>front</Angle>  
     <Size>small</Size>  

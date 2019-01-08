@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 9fe0bfb4-3aa6-4eb2-a83e-c0d0e7d4e9f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 27385486005645f73cd488893c50be12ae2e704b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6c73db809e81cc9b6d1ee182227078a83688384
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066533"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767602"
 ---
 # <a name="server-element-dta"></a>Server-Element (DTA)
   Enthält die Identifikationsinformationen für den Server, auf dem sich die zu optimierenden Datenbanken befinden.  
@@ -41,17 +40,17 @@ ms.locfileid: "48066533"
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
-|**Vorkommen**|Erforderlich einmal pro `DTAInput` Element.|  
+|**Vorkommen**|Einmal pro `DTAInput`-Element erforderlich.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
 |**Übergeordnetes Element**|[DTAInput-Element &#40;DTA&#41;](dtainput-element-dta.md)|  
-|**Untergeordnete Elemente**|[Benennen Sie Element für Server &#40;DTA&#41;](name-element-for-server-dta.md)<br /><br /> [Database-Element für Server &#40;DTA&#41;](database-element-for-server-dta.md)|  
+|**Untergeordnete Elemente**|[Name-Element für Server &#40;DTA&#41;](name-element-for-server-dta.md)<br /><br /> [Database-Element für Server &#40;DTA&#41;](database-element-for-server-dta.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Geben Sie nur einen `Server` -Element für die `DTAInput` Element. Dieses Element hat im DTA-XML-Schema den Namen **ServerDetailsTypecomplexType** . Verwechseln Sie dies nicht `Server` Element mit dem das untergeordnete Element ist die `Configuration` Element. Weitere Informationen finden Sie unter [Server-Element für Konfiguration &#40;DTA&#41;](server-element-for-configuration-dta.md).  
+ Geben Sie nur einen `Server` -Element für die `DTAInput` Element. Dieses Element hat im DTA-XML-Schema den Namen **ServerDetailsTypecomplexType** . Dieses `Server`-Element ist nicht mit dem untergeordneten Element für das `Configuration`-Element identisch. Weitere Informationen finden Sie unter [Server-Element für Konfiguration &#40;DTA&#41;](server-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die **Sales.SalesPerson** -Tabelle in der **AdventureWorks** -Datenbank auf SERVER001 angegeben wird:  

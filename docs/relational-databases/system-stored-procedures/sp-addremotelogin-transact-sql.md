@@ -18,12 +18,12 @@ ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 409f3ea2229b57ef36b1e7e47f1684c914d5e50d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e23684e04d8e49d1a6456185f94ad74b71b1604c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659924"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537934"
 ---
 # <a name="spaddremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @remoteserver **=** ] **"***Remoteserver***"**  
+ [ @remoteserver **=** ] **"**_Remoteserver_**"**  
  Der Name des Remoteservers, für den der Remoteanmeldename gilt. *remoteserver* ist vom Datentyp **sysname**und hat keinen Standardwert. Wenn nur *Remoteserver* angegeben ist, allen Benutzern *Remoteserver* Anmeldungen mit demselben Namen auf dem lokalen Server zugeordnet sind. Der Server muss dem lokalen Server bekannt sein. Dies wird mithilfe von Sp_addserver hinzugefügt. Wenn Benutzer auf *Remoteserver* Verbinden mit dem lokalen Server, der ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um eine remote gespeicherte Prozedur auszuführen, die der lokalen Anmeldung, die auf ihrem eigenen Benutzernamen entspricht verbindenden *Remoteserver* . *Remoteserver* ist der Server, der den Remoteprozeduraufruf initiiert.  
   
- [ @loginame **=** ] **"***Anmeldung***"**  
+ [ @loginame **=** ] **"**_Anmeldung_**"**  
  Die Anmelde-ID des Benutzers in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. *Anmeldung*muss bereits vorhanden sein, auf der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn *Anmeldung* angegeben ist, allen Benutzern *Remoteserver* diesem lokalen Anmeldenamen zugeordnet sind. Wenn Benutzer auf *Remoteserver* Verbinden mit der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um eine remote gespeicherte Prozedur auszuführen, verbinden sie als *Anmeldung*.  
   
- [ @remotename **=** ] **"***Remote_name***"**  
+ [ @remotename **=** ] **"**_Remote_name_**"**  
  Die Anmelde-ID des Benutzers auf dem Remoteserver. *remote_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. *Remote_name* muss vorhanden sein, auf *Remoteserver*. Wenn *Remote_name* angegeben ist, den jeweiligen Benutzer *Remote_name* zugeordnet *Anmeldung* auf dem lokalen Server. Wenn *Remote_name* auf *Remoteserver* eine Verbindung mit der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um eine remote gespeicherte Prozedur auszuführen, es stellt eine Verbindung her *Anmeldung*. Die Anmelde-ID des *Remote_name* kann sich von dem Anmeldenamen auf dem Remoteserver sein *Anmeldung*.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

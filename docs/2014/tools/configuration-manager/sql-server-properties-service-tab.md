@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d69ded06359dfc7f5f7c71864d3be6b64de6f7af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f79b52e62a8080c70865ae8ebe33d1a8a87faa04
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227322"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779312"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL-Server-Eigenschaften (Registerkarte Dienst)
   Verwenden Sie im Dialogfeld **MSSQLSERVER-Eigenschaften**die Registerkarte **Dienst** , um die folgenden Optionen anzuzeigen oder anzugeben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Binärpfad**  
  Führt den Speicherort der Programmdateien auf, die von diesem Dienst verwendet werden.  
   
@@ -50,9 +49,9 @@ ms.locfileid: "48227322"
   
 -   Automatisch: Dieser Dienst wird zusammen mit dem Computer gestartet.  
   
--   Deaktiviert: Dieser Dienst kann nicht gestartet werden.  
+-   Deaktiviert: Der Dienst kann nicht gestartet werden.  
   
- **Status**  
- Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist. "**…**" gibt einen ausstehenden Statuswechsel an.  
+ **Zustand**  
+ Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist. „**…**“ gibt einen ausstehenden Statuswechsel an.  
   
   

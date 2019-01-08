@@ -14,12 +14,12 @@ ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d63a4f168c4a426c06bb00c634f89e328735332
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb1e3ca9e8576bf340560c45582c9b01bd453c14
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159760"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529043"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Konfigurieren eines Foreach-Schleifencontainers
   In diesem Verfahren wird das Konfigurieren eines Foreach-Schleifencontainers beschrieben, einschließlich der Eigenschaftsausdrücke auf Enumerator- und Containerebene.  
@@ -66,7 +66,7 @@ ms.locfileid: "48159760"
   
     -   Wenn Sie den Foreach-SMO-Enumerator verwenden möchten, wählen Sie eine vorhandene ADO.NET-Verbindung aus, oder klicken Sie in der Liste **Verbindung** auf **Neue Verbindung** , und geben Sie die zu verwendende Zeichenfolge ein, oder klicken Sie auf **Durchsuchen**. **Dadurch** haben Sie im Dialogfeld **SMO-Enumeration auswählen** die Möglichkeit, den aufzuzählenden Objekttyp und den Enumerationstyp auszuwählen. Klicken Sie dann auf **OK**.  
   
-6.  Klicken Sie optional im Textfeld **Ausdrücke** auf der Seite **Sammlung** auf die Schaltfläche mit den drei Punkten **(…)** , um Ausdrücke zu erstellen, mit denen Eigenschaftswerte aktualisiert werden. Weitere Informationen finden Sie unter [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](expressions/add-or-change-a-property-expression.md).  
+6.  Klicken Sie optional im Textfeld **Ausdrücke** auf der Seite **Sammlung** auf die Schaltfläche mit den drei Auslassungspunkten **(…)**, um Ausdrücke zu erstellen, mit denen Eigenschaftswerte aktualisiert werden. Weitere Informationen finden Sie unter [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  Die in der Liste **Eigenschaft** aufgeführten Eigenschaften hängen vom Enumerator ab.  

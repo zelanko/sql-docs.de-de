@@ -15,19 +15,19 @@ ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c4736083dedc6899a55e49926d1010ef39fc4444
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6b5c5f74ba8951bae27193b6796f09dcbdb8302
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090275"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511207"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>Ergebnis der Data Mining-Abfrage speichern (Dialogfeld - Miningmodellvorhersage-Sicht)
   Verwenden Sie das Dialogfeld **Ergebnis der Data Mining-Abfrage speichern** , um die Ergebnisse einer Data Mining-Abfrage in einer neuen Tabelle zu speichern.  
   
  Die neue Tabelle wird in der durch die Datenquelle definierten Datenbank erstellt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Data Source**  
  Wählen Sie eine Datenquelle aus dem aktuellen Projekt aus. Wenn die richtige Datenquelle nicht vorhanden ist, klicken Sie auf **Neu** , um eine neue Datenquelle zu erstellen.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "48090275"
  **Zur Datenquellensicht hinzufügen**  
  (Optional) Wählen Sie eine im Projekt enthaltene Datenquellensicht aus, wenn Sie die Tabelle einer vorhandenen Datenquelle hinzufügen möchten.  
   
- Diese Option ist hilfreich, wenn Sie alle verknüpften Tabellen für ein Modell – z. B. Trainingsdaten, Vorhersagequelldaten und Abfrageergebnisse – in derselben Datenquelle beibehalten möchten.  
+ Diese Option ist nützlich, wenn Sie alle verknüpfte Tabellen für beibehalten möchten ein Modell wie z. B. Trainingsdaten, vorhersagequelldaten und Abfrage Ergebnisse – die gleiche Datenquelle.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Generator für Vorhersageabfragen &#40;Datamining&#41;](prediction-query-builder-data-mining.md)   
+ [Generator für Vorhersageabfragen &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)   
  [Data Mining Abfrageschnittstellen](data-mining/data-mining-query-tools.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](/sql/dmx/data-mining-extensions-dmx-statements)  
   

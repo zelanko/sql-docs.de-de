@@ -16,12 +16,12 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 85bf679fe5ab9f9224a4d8b09aa8fa64643ce80b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19bdabaab24d9276386095cb8ef97b0130a13c58
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054317"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530361"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln
   Das Erstellen einer Sicherungskopie des symmetrischen Schlüssels, der zum Verschlüsseln sensibler Informationen verwendet wird, ist ein wichtiger Bestandteil der Berichtsserverkonfiguration. Eine Sicherungskopie des Schlüssels ist für viele Routinevorgänge erforderlich und ermöglicht Ihnen das Wiederverwenden einer vorhandenen Berichtsserver-Datenbank in einer neuen Installation.  
@@ -47,7 +47,7 @@ ms.locfileid: "48054317"
 ## <a name="backing-up-the-encryption-keys"></a>Sichern der Verschlüsselungsschlüssel  
  Beim Sichern des symmetrischen Schlüssels wird der Schlüssel in die von Ihnen angegebene Datei geschrieben. Anschließend wird der Schlüssel mithilfe des von Ihnen angegebenen Kennwortes verschlüsselt. Der symmetrische Schlüssel darf keinesfalls unverschlüsselt gespeichert werden, d. h., Sie müssen beim Speichern auf einem Datenträger ein Kennwort angeben, um den Schlüssel zu verschlüsseln. Sie sollten die erstellte Datei an einem sicheren Ort speichern und sich das Kennwort zum Entsperren der Datei **unbedingt merken** . Zum Sichern des symmetrischen Schlüssels können Sie die folgenden Tools verwenden:  
   
- **Einheitlicher Modus:** Entweder den Reporting Services-Konfigurations-Manager oder das Hilfsprogramm **rskeymgmt** .  
+ **Einheitlicher Modus :** Entweder der Configuration Manager für Reporting Services oder die **Rskeymgmt** Hilfsprogramm.  
   
  **SharePoint-Modus:** Die Seiten der SharePoint-Zentraladministration oder PowerShell.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48054317"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_backup_rskeymgmt"></a> Sichern von Verschlüsselungsschlüsseln mit rskeymgmt (einheitlicher Modus)  
+####  <a name="bkmk_backup_rskeymgmt"></a> Sichern von Verschlüsselungsschlüsseln mit -rskeymgmt (einheitlicher Modus)  
   
 1.  Führen Sie **rskeymgmt.exe** lokal auf dem Computer aus, der den Berichtsserver hostet. Sie müssen das Extrahierungsargument `-e` verwenden, um den Schlüssel zu kopieren, sowie einen Dateinamen und ein Kennwort angeben. Das folgende Beispiel veranschaulicht die anzugebenden Argumente:  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48054317"
   
 -   Die zuvor gespeicherten Daten für den symmetrischen Schlüssel (z. B. Schlüsselinformationen, die aus einer vorherigen Bereitstellung bereits in der Berichtsserver-Datenbank gespeichert waren) werden gelöscht.  
   
- Zum Wiederherstellen des Verschlüsselungsschlüssels benötigen Sie eine Kopie des Verschlüsselungsschlüssels in einer Datei. Außerdem müssen Sie das Kennwort zum Entsperren der gespeicherten Kopie kennen. Wenn Sie den Schlüssel und das Kennwort haben, können Sie den Schlüssel mithilfe des Reporting Services-Konfigurationstools oder des Hilfsprogramms **rskeymgmt** wiederherstellen. Beim symmetrischen Schlüssel muss es sich um denselben Schlüssel handeln, der zum Sperren oder Entsperren der verschlüsselten Daten verwendet werden kann, die zurzeit in der Berichtsserver-Datenbank gespeichert sind. Wenn Sie eine ungültige Kopie wiederherstellen, kann der Berichtsserver nicht auf die verschlüsselten Daten zugreifen, die zurzeit in der Berichtsserver-Datenbank gespeichert sind. In diesem Fall müssen Sie unter Umständen alle verschlüsselten Werte löschen, falls Sie keinen gültigen Schlüssel wiederherstellen können. Falls Sie den Verschlüsselungsschlüssel aus irgendeinem Grund nicht wiederherstellen können (z. B. wenn Sie nicht über eine Sicherungskopie verfügen), müssen Sie den vorhandenen Schlüssel und die verschlüsselten Inhalte löschen. Weitere Informationen finden Sie unter [Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Weitere Informationen zum Erstellen von symmetrischen Schlüsseln finden Sie unter [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
+ Zum Wiederherstellen des Verschlüsselungsschlüssels benötigen Sie eine Kopie des Verschlüsselungsschlüssels in einer Datei. Außerdem müssen Sie das Kennwort zum Entsperren der gespeicherten Kopie kennen. Wenn Sie den Schlüssel und das Kennwort haben, können Sie den Schlüssel mithilfe des Reporting Services-Konfigurationstools oder des Hilfsprogramms **rskeymgmt** wiederherstellen. Beim symmetrischen Schlüssel muss es sich um denselben Schlüssel handeln, der zum Sperren oder Entsperren der verschlüsselten Daten verwendet werden kann, die zurzeit in der Berichtsserver-Datenbank gespeichert sind. Wenn Sie eine ungültige Kopie wiederherstellen, kann der Berichtsserver nicht auf die verschlüsselten Daten zugreifen, die zurzeit in der Berichtsserver-Datenbank gespeichert sind. In diesem Fall müssen Sie unter Umständen alle verschlüsselten Werte löschen, falls Sie keinen gültigen Schlüssel wiederherstellen können. Falls Sie den Verschlüsselungsschlüssel aus irgendeinem Grund nicht wiederherstellen können (z. B. wenn Sie nicht über eine Sicherungskopie verfügen), müssen Sie den vorhandenen Schlüssel und die verschlüsselten Inhalte löschen. Weitere Informationen finden Sie unter [Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Weitere Informationen zum Erstellen von symmetrischen Schlüsseln finden Sie unter [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ####  <a name="bkmk_restore_configuration_manager"></a> Wiederherstellen von Verschlüsselungsschlüsseln mit dem Reporting Services-Konfigurations-Manager (einheitlicher Modus)  
   
@@ -99,9 +99,9 @@ ms.locfileid: "48054317"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_restore_rskeymgmt"></a> Wiederherstellen von Verschlüsselungsschlüsseln mit rskeymgmt (einheitlicher Modus)  
+####  <a name="bkmk_restore_rskeymgmt"></a> Wiederherstellen von Verschlüsselungsschlüsseln mit -rskeymgmt (einheitlicher Modus)  
   
-1.  Führen Sie **rskeymgmt.exe** lokal auf dem Computer aus, der den Berichtsserver hostet. Verwenden der `-a` Argument, um die Schlüssel wiederherzustellen. Sie müssen einen vollqualifizierten Dateinamen und ein Kennwort angeben. Das folgende Beispiel veranschaulicht die anzugebenden Argumente:  
+1.  Führen Sie **rskeymgmt.exe** lokal auf dem Computer aus, der den Berichtsserver hostet. Verwenden Sie das Argument `-a` zum Wiederherstellen der Schlüssel. Sie müssen einen vollqualifizierten Dateinamen und ein Kennwort angeben. Das folgende Beispiel veranschaulicht die anzugebenden Argumente:  
   
     ```  
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  

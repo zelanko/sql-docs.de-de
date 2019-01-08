@@ -10,12 +10,12 @@ ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50c29f343399e0cc7d3c65d630ac622278d10eec
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 19bac073db3de3b2944fcf6a2937ac3e350c7579
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032017"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524543"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Trennen und Anfügen von DQS-Datenbanken
   In diesem Thema wird beschrieben, wie DQS-Datenbanken getrennt und angefügt werden.  
@@ -42,7 +42,7 @@ ms.locfileid: "51032017"
 -   Sie müssen über die Rolle „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um ausgeführte Aktivitäten abzubrechen oder ausgeführte Prozesse in DQS anzuhalten.  
   
 ##  <a name="Detach"></a> Trennen von DQS-Datenbanken  
- Wenn Sie eine DQS-Datenbank unter Verwendung von SQL Server Management Studio trennen, verbleiben die getrennten Dateien auf dem Computer und können erneut an dieselbe SQL Server-Instanz angefügt oder auf einen anderen Server verschoben und dort angefügt werden. Die DQS-Datenbankdateien werden in der Regel am folgenden Speicherort auf Ihrem Computer für Data Quality Services: c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL12. *< Instance_Name >* \MSSQL\DATA.  
+ Wenn Sie eine DQS-Datenbank unter Verwendung von SQL Server Management Studio trennen, verbleiben die getrennten Dateien auf dem Computer und können erneut an dieselbe SQL Server-Instanz angefügt oder auf einen anderen Server verschoben und dort angefügt werden. Die DQS-Datenbankdateien werden am folgenden Speicherort auf dem Data Quality Services-Computer in der Regel zur Verfügung: C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL12. *< Instance_Name >* \MSSQL\DATA.  
   
 1.  Starten Sie Microsoft SQL Server Management Studio, und stellen Sie eine Verbindung mit der entsprechenden SQL Server-Instanz her.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "51032017"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  Im (unteren) Bereich **Datenbankdetails** werden die Namen der anzufügenden Dateien angezeigt. Um den Pfadnamen einer Datei zu überprüfen bzw. zu ändern, klicken Sie auf die Schaltfläche **Durchsuchen** (…).  
+5.  Im (unteren) Bereich **Datenbankdetails** werden die Namen der anzufügenden Dateien angezeigt. Klicken Sie auf die Schaltfläche zum **Durchsuchen** (…), um den Pfadnamen einer Datei zu überprüfen bzw. zu ändern.  
   
 6.  Klicken Sie auf **OK** , um die DQS_MAIN-Datenbank anzufügen.  
   

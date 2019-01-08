@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f70f0a6f6c4dc8ba4e72b30918c882c103c9410f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9d88d2084533904dcbb47aad0d629b1aa8171e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669108"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544239"
 ---
 # <a name="sysdmcolumnstoreobjectpool-transact-sql"></a>Sys.dm_column_store_object_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47669108"
 |`column_id`|`int`|ID der columnstore-Spalte. Dies ist NULL für DELETE_BITMAP.| 
 |`row_group_id`|`int`|Die ID der Zeilengruppe.|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – ein Spaltensegment. `object_id` ist die Segment-ID. Ein Segment werden alle Werte für eine Spalte innerhalb einer Zeilengruppe gespeichert. Wenn eine Tabelle 10 Spalten haben, stehen beispielsweise 10 spaltensegmente pro Zeilengruppe. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – ein globaler Wörterbuch, das Informationen für alle spaltensegmente in der Tabelle enthält.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY – ein lokales Wörterbuch, das eine Spalte zugeordnet.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – eine andere Darstellung der globalen Wörterbuch. Dies stellt eine umgekehrte Nachschlagen des Werts an Dictionary_id bereit. Zum Erstellen von komprimierte Segmente als Teil der Tuple Mover "oder" Massenladen verwendet.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP – Löscht eine Bitmap, die Segment nachverfolgt. Es gibt eine Delete-Bitmap pro Partition.|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT - ein Spaltensegment. `object_id` ist die Segment-ID. Ein Segment werden alle Werte für eine Spalte innerhalb einer Zeilengruppe gespeichert. Wenn eine Tabelle 10 Spalten haben, stehen beispielsweise 10 spaltensegmente pro Zeilengruppe. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – ein globaler Wörterbuch, das Informationen für alle spaltensegmente in der Tabelle enthält.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY – ein lokales Wörterbuch, das eine Spalte zugeordnet.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – eine andere Darstellung der globalen Wörterbuch. Dies stellt eine umgekehrte Nachschlagen des Werts an Dictionary_id bereit. Zum Erstellen von komprimierte Segmente als Teil der Tuple Mover "oder" Massenladen verwendet.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP - Löscht ein Bitmuster, mit dem Segment nachverfolgt. Es gibt eine Delete-Bitmap pro Partition.|  
 |`access_count`|`int`|Anzahl der lesen oder Schreiben greift auf dieses Objekt.|  
 |`memory_used_in_bytes`|`bigint`|Arbeitsspeicher, die von diesem Objekt im-Objektpool verwendet werden.|  
 |`object_load_time`|`datetime`|Uhrzeit für die beim Object_id in den-Objektpool eingebunden wurde.|  

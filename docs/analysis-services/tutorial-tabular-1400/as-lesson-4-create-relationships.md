@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1768bd38be49515012139f8cd93c749ac7e3c48c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063731"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394519"
 ---
 # <a name="create-relationships"></a>Erstellen von Beziehungen
 
@@ -26,7 +26,7 @@ Geschätzte Zeit zum Bearbeiten dieser Lektion: **10 Minuten**
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 
-Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 3: Markieren als Datumstabelle](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
+Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 3: Als Datumstabelle markieren](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Überprüfen vorhandener Beziehungen und Hinzufügen neuer Beziehungen  
 
@@ -50,7 +50,7 @@ Bevor Sie mit der Erstellung Ihres Modells fortfahren, sollten Sie überprüfen,
   
 2.  Klicken Sie auf die durchgezogene Linie zwischen den **DimCustomer** Tabelle und die **DimGeography** Tabelle. Die durchgezogene Linie zwischen diesen beiden Tabellen zeigt, dass diese Beziehung aktiv ist, ist es bei der Berechnung von DAX-Formeln standardmäßig verwendet wird.  
   
-    Beachten Sie, dass die **GeographyKey** -Spalte in der **DimCustomer** Tabelle und die **GeographyKey** -Spalte in der **DimGeography** Tabelle jetzt sowohl Jede in ein Feld angezeigt werden. Diese Spalten werden in der Beziehung verwendet. Die Eigenschaften der Beziehung werden jetzt auch im Fenster **Eigenschaften** angezeigt.  
+    Beachten Sie, dass die **GeographyKey** -Spalte in der **DimCustomer** Tabelle und die **GeographyKey** -Spalte in der **DimGeography** Tabelle jetzt sowohl Jede in ein Feld angezeigt werden. Diese Spalten werden in der Beziehung verwendet. Die Eigenschaften der Beziehung ist jetzt auch im angezeigt der **Eigenschaften** Fenster.  
   
     > [!TIP]  
     > Sie können auch das Dialogfeld "Beziehungen verwalten" verwenden, um die Beziehungen zwischen allen Tabellen in einem Tabellenformat anzuzeigen. Im tabellarischen Modell-Explorer mit der Maustaste **Beziehungen** > **Beziehungen verwalten**.
@@ -59,13 +59,13 @@ Bevor Sie mit der Erstellung Ihres Modells fortfahren, sollten Sie überprüfen,
   
     |Active|Tabelle|Verknüpfte Suchtabelle|  
     |----------|---------|------------------------|  
-    |Benutzerkontensteuerung|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
-    |Benutzerkontensteuerung|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
-    |Benutzerkontensteuerung|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
-    |Benutzerkontensteuerung|**"Factinternetsales" [CustomerKey]**|**DimCustomer [CustomerKey]**|  
-    |Benutzerkontensteuerung|**"Factinternetsales" [ProductKey]**|**DimProduct [ProductKey]**|  
+    |Ja|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
+    |Ja|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
+    |Ja|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
+    |Ja|**"Factinternetsales" [CustomerKey]**|**DimCustomer [CustomerKey]**|  
+    |Ja|**"Factinternetsales" [ProductKey]**|**DimProduct [ProductKey]**|  
   
-    Wenn einige dieser Beziehungen fehlen, überprüfen Sie Ihr Modell enthält die folgenden Tabellen: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory und FactInternetSales. Wenn Tabellen aus derselben datenquellenverbindung zu unterschiedlichen Zeitpunkten, Beziehungen zwischen importiert werden diese Tabellen werden nicht erstellt werden, und müssen manuell erstellt werden. Wenn keine Beziehungen angezeigt werden, bedeutet dies, dass in der Datenquelle keine Beziehungen vorhanden sind. Sie können diese manuell im Datenmodell erstellen.
+    Wenn einige dieser Beziehungen fehlen, überprüfen Sie, ob Ihr Modell in den folgenden Tabellen enthält: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory und FactInternetSales. Wenn Tabellen aus derselben datenquellenverbindung zu unterschiedlichen Zeitpunkten, Beziehungen zwischen importiert werden diese Tabellen werden nicht erstellt werden, und müssen manuell erstellt werden. Wenn keine Beziehungen angezeigt werden, bedeutet dies, dass in der Datenquelle keine Beziehungen vorhanden sind. Sie können diese manuell im Datenmodell erstellen.
 
 ### <a name="take-a-closer-look"></a>Ausführlichere Betrachtung
 

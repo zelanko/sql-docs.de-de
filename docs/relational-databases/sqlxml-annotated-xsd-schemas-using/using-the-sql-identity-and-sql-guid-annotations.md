@@ -25,12 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61d67e223ffe0a68c9f5bd92d1a4a3ef169edc9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 611e202007fb9a5b9438e3432984c3722e264bd7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855898"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522864"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Verwenden der Anmerkungen 'sql:identity' und 'sql:guid'
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47855898"
  Die **: Identity '** und **Sql:guid** Anmerkungen können für ein komplexes Inhaltselement definiert werden.  
   
 ## <a name="sqlidentity-annotation"></a>'sql:identity'-Anmerkung  
- Sie können angeben, die **: Identity '** -Anmerkung im XSD-Schema auf einem beliebigen Knoten, der einer Datenbankspalte vom Typ IDENTITY zugeordnet ist. Der für diese Anmerkung angegebene Wert definiert, wie die Spalte vom Typ IDENTITY aktualisiert wird (entweder durch Verwendung des im Updategram angegebenen Werts für die Änderung der Spalte oder durch Ignorieren des Werts, was dazu führt, dass ein von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierter Wert für diese Spalte verwendet wird).  
+ Sie können angeben, die **: Identity '** -Anmerkung im XSD-Schema auf einem beliebigen Knoten, der einer Datenbankspalte vom Typ IDENTITY zugeordnet ist. Für diese Anmerkung angegebene Wert definiert, wie die Spalte vom Typ IDENTITY aktualisiert wird (entweder mithilfe des im Updategram angegebenen Werts zum Ändern der Spalte oder durch ignorieren des Werts, in diesem Fall eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-generierter Wert für diese Spalte verwendet wird).  
   
  Die **: Identity '** -Anmerkung kann zwei Werte zugewiesen werden:  
   

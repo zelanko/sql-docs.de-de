@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89ab6ca4f8b95f4f78b1f6c8b9e33fbd1a3fa138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3ae51af994665ac4234dc44e84fb5c2c405aa1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816278"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502562"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Verwaltete SQLXML-Klassen – SqlXmlCommand-Objekt
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47816278"
 public SqlXmlCommand(string cnString)  
 ```  
   
- Wobei `cnString` der ADO- oder OLEDB-Verbindungszeichenfolge entspricht, die den Server, die Datenbank und die Anmeldeinformationen identifiziert, z. B. `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
+ In denen `cnString` ist die ADO- oder OLEDB-Verbindungszeichenfolge, die der Server, Datenbank und die Anmeldeinformationen identifiziert – z. B. `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
   
  In der Verbindungszeichenfolge muss für den `Provider` SQLOLEDB festgelegt werden, und `Data Provider` sollte nicht in der Anbieterzeichenfolge enthalten sein.  
   
@@ -109,7 +109,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Gibt den Befehlstyp an. Diese Eigenschaft wird zum Angeben des Typs des Befehls verwendet, den Sie ausführen möchten. Die Werte in der folgenden Tabelle bestimmen den Typ des Befehls. Ein Arbeitsbeispiel finden Sie unter [zugreifen auf SQLXML-Funktionalität in der .NET-Umgebung](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |SqlXmlCommandType.Sql|Führt einen SQL-Befehl aus (z. B. `SELECT * FROM Employees FOR XML AUTO`).|  
 |SqlXmlCommandType.XPath|Führt einen XPath-Befehl aus (z. B. `Employees[@EmployeeID=1]`).|  

@@ -17,15 +17,15 @@ ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b324857816df774486716978425d1332a695952a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 461b9ea2196fed61587b1a9e20cc21feced258da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708468"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535053"
 ---
 # <a name="types-of-events"></a>Ereignistypen
-Es gibt zwei grundlegende Arten von Ereignissen. "Werden Ereignisse" die aufgerufen werden, bevor ein Vorgang gestartet wird, in der Regel enthält "" in ihren Namen, z. B. **WillChangeRecordset** oder **WillConnect**. Ereignisse, die aufgerufen werden, nachdem ein Ereignis in der Regel abgeschlossen wurde der Name "Complete" enthält – z. B. **RecordChangeComplete** oder **ConnectComplete**. Ausnahmen vorhanden sind, wie z. B. **InfoMessage** , aber diese treten auf, nachdem der zugeordnete Vorgang abgeschlossen wurde.  
+Es gibt zwei grundlegende Arten von Ereignissen. "Werden Ereignisse" die aufgerufen werden, bevor ein Vorgang gestartet wird, stehen in der Regel "Wird" im Namen – beispielsweise **WillChangeRecordset** oder **WillConnect**. Ereignisse, die aufgerufen werden, nachdem ein Ereignis in der Regel abgeschlossen wurde enthalten "Abgeschlossen" im Namen – beispielsweise **RecordChangeComplete** oder **ConnectComplete**. Ausnahmen vorhanden sind – z. B. **InfoMessage** –, aber diese treten auf, nachdem der zugeordnete Vorgang abgeschlossen wurde.  
   
 ## <a name="will-events"></a>Ereignisse werden  
  -Ereignishandler wird aufgerufen, bevor der Vorgang beginnt Sie die Möglichkeit zum Untersuchen bieten oder ändern die Vorgangsparameter, und klicken Sie dann den Vorgang abbrechen oder erlauben, dass Sie abgeschlossen. Dieser Ereignishandler-Routinen haben in der Regel die Namen im Format **wird*Ereignis ***.  
@@ -36,7 +36,7 @@ Es gibt zwei grundlegende Arten von Ereignissen. "Werden Ereignisse" die aufgeru
  Wird und Ereignisse zum Abschluss werden in der Regel paarweise verwendet.  
   
 ## <a name="other-events"></a>Andere Ereignisse  
- Die anderen Ereignishandler – d.h. die Ereignisse, deren Namen nicht im Format sind **wird * Ereignis*** oder ***Ereignis * abschließen** – werden erst aufgerufen, wenn ein Vorgang abgeschlossen ist. Diese Ereignisse sind **trennen**, **EndOfRecordset**, und **InfoMessage**.  
+ Die anderen Ereignishandler – d.h. die Ereignisse, deren Namen nicht im Format sind **wird * Ereignis*** oder ***Ereignis * abschließen** -werden erst aufgerufen, wenn ein Vorgang abgeschlossen ist. Diese Ereignisse sind **trennen**, **EndOfRecordset**, und **InfoMessage**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   

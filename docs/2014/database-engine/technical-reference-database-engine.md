@@ -14,12 +14,12 @@ ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 882764275d2455f63cadaa4f72dbfd33b85fb833
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de3e5f300c5e0c955989d8282a3a1c000c615299
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052510"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533306"
 ---
 # <a name="technical-reference-database-engine"></a>Technische Referenz (Datenbank-Engine)
   Suchen Sie nach den Tools, den Sprachen und der Referenzdokumentation für die Verwaltungsprogrammierung für das [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "48052510"
   
  [SqlLocalDB-Hilfsprogramm](../tools/sqllocaldb-utility.md)  
   
- [Weitere Informationen…](../tools/command-prompt-utility-reference-database-engine.md)  
+ [Weitere Informationen...](../tools/command-prompt-utility-reference-database-engine.md)  
   
  ![Kleines Dateiordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **-Datenbank-Engine die PowerShell-Cmdlets**  
  [Invoke-PolicyEvaluation-Cmdlet](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  

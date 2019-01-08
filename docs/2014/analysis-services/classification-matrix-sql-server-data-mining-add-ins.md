@@ -16,12 +16,12 @@ ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7a4892ab57fc39f2888431b61e7b924496d9749f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f2f1f055974edc3625ed66a8d803358b8345494
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161844"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522175"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Klassifikationsmatrix (SQL Server Data Mining-Add-Ins)
   ![Matrix klassifizierungsschaltfläche, Data Mining-Menüband](media/dmc-cmatrix.gif "Klassifikationsmatrix-Schaltfläche, Data Mining-Menüband")  
@@ -31,7 +31,7 @@ ms.locfileid: "48161844"
  Verwenden Sie in diesen Add-Ins, die **Klassifikationsmatrix** Assistenten wählen Sie ein Modell, die Testdaten anzugeben, und klicken Sie anschließend eine Ergebnismatrix zu generieren.  
   
 ## <a name="how-to-read-a-classification-matrix"></a>Interpretieren einer Klassifikationsmatrix  
- Angenommen, Sie möchten ein Kundentreueprogramm entwickeln und Kunden in geeignete Kategorien einteilen, um ihnen angemessene Bonusstufen zuzuweisen. Sie haben für das Bonusprogramm die drei Stufen "Bronze", "Silber" und "Gold" implementiert und in einer Erprobungsphase an Ihre Kunden vergeben. Zusätzlich haben Sie ein Modell entworfen, mit dem Kunden analysiert und die richtigen Kategorien vorhergesagt werden. Jetzt ermitteln Sie anhand der Klassifikationsmatrix und der Testdaten, wie gut das Modell bei der Vorhersage des richtigen Angebots für alle Kunden abgeschnitten hat.  
+ Nehmen wir an, Sie möchten zum Entwerfen eines Kunden Treueprogramms, und klicken Sie dann einen Kunden in geeignete Kategorien einteilen, zuweisen, damit Sie sie mit der entsprechenden Berechtigungsebene Bonusstufen angeben können. Sie haben drei Ebenen für das Bonusprogramm: Bronze, Silber und Gold - implementiert und erhält diese sich für Kunden in einer Erprobungsphase. Zusätzlich haben Sie ein Modell entworfen, mit dem Kunden analysiert und die richtigen Kategorien vorhergesagt werden. Jetzt ermitteln Sie anhand der Klassifikationsmatrix und der Testdaten, wie gut das Modell bei der Vorhersage des richtigen Angebots für alle Kunden abgeschnitten hat.  
   
  An der Tabelle der Klassifikationsmatrix können Sie ablesen, wie viele Kunden auf Grundlage des Modells den einzelnen Kategorien zugewiesen würden, und das Ergebnis mit der Anzahl der Kunden vergleichen, die sich tatsächlich für die einzelnen Bonusstufen eingetragen haben.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48161844"
   
 3.  Wählen Sie die Spalte aus, deren Genauigkeit Sie überprüfen möchten. Sie können beim Erstellen einer Matrix nur eine Spalte auswählen, allerdings kann die Spalte mehrere Werte enthalten.  
   
-     Tipp: Die Interpretation einer Klassifikationsmatrix kann schwierig werden, wenn für die vorhersagbare Spalte viele Vergleichsspalten vorhanden sind.  
+     Tipp: Es kann schwierig sein, die Interpretation einer Klassifikationsmatrix, wenn die vorhersagbare Spalte viele vergleichsspalten vorhanden sind.  
   
      In der **Spalten auswählen, um vorhersagen** Seite Sie können auch angeben, ob die Anzahl der richtige und falsche Werte angezeigt werden soll, oder als Prozentwert angezeigt werden sollen.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48161844"
   
 -   Das untersuchte Modell muss einen Wert vorhersagen, der entweder diskret ist oder bereits diskretisiert wurde.  
   
--   Wenn Sie zusammen mit der Struktur oder dem Modell keinen Testsatz gespeichert haben, benötigen Sie ein Eingabedataset, das im Wesentlichen dieselbe Anzahl von Spalten wie das im Modell verwendete Dataset enthält und auch die entsprechenden Datentypen aufweist.  
+-   Wenn Sie die Option nicht um einen Testsatz zusammen mit der Struktur oder Modell speichern verwenden können, müssen Sie ein Eingabedataset zu erhalten, die im Wesentlichen die gleiche Anzahl von Spalten mit übereinstimmenden Datentypen, die im Modell verwendet wurde.  
   
 -   Sowohl das Data Mining-Modell als auch die neuen Daten, die Sie für den Test verwenden, müssen mindestens eine Spalte enthalten, die vorhergesagt werden kann, und die Spalten müssen denselben Datentyp enthalten.  
   

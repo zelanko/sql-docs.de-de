@@ -13,12 +13,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e5b14f73b3691bb194a0cc5b77401cb7a3fdde70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 433c50834a7dc989d706cc2f67883cd43f5788d9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072980"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508410"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung (Transact-SQL)
     
@@ -42,7 +42,7 @@ ms.locfileid: "48072980"
      Jede Serverinstanz in einer Datenbank-Spiegelungssitzung benötigt einen eigenen Datenbank-Spiegelungsendpunkt. Falls der Endpunkt nicht vorhanden ist, müssen Sie ihn erstellen.  
   
     > [!NOTE]  
-    >  Der für die Datenbankspiegelung von einer Serverinstanz verwendete Authentifizierungstyp ist eine Eigenschaft des Endpunkts der Datenbankspiegelung. Für die Datenbankspiegelung sind zwei Arten von Transportsicherheit verfügbar: die Windows-Authentifizierung oder die zertifikatbasierte Authentifizierung. Weitere Informationen finden Sie unter [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
+    >  Der für die Datenbankspiegelung von einer Serverinstanz verwendete Authentifizierungstyp ist eine Eigenschaft des Endpunkts der Datenbankspiegelung. Es stehen zwei Arten von transportsicherheit für die datenbankspiegelung zur Verfügung: Windows-Authentifizierung oder zertifikatbasierte Authentifizierung. Weitere Informationen finden Sie unter [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
      Stellen Sie sicher, dass auf allen Partnerservern ein Endpunkt für die Datenbankspiegelung vorhanden ist. Unabhängig von der Anzahl der zu unterstützenden Spiegelungssitzungen darf die Serverinstanz nur einen Endpunkt für die Datenbankspiegelung enthalten. Wenn Sie diese Serverinstanz in Sitzungen zur Datenbankspiegelung ausschließlich für Partner verwenden möchten, können Sie dem Endpunkt die Rolle Partner zuweisen (ROLE**=** PARTNER). Wenn Sie auch den Server in anderen Datenbank-Spiegelungssitzungen für Zeugen verwenden möchten, weisen Sie dem Endpunkt die Rolle ALL zu.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48072980"
   
      Dabei ist \<*Systemadresse>* eine Zeichenfolge, die das Zielcomputersystem eindeutig identifiziert, und \<*Port>* ist die vom Spiegelungsendpunkt der Partnerserverinstanz verwendete Portnummer. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](specify-a-server-network-address-database-mirroring.md)verwendet.  
   
-     Auf der Spiegelserverinstanz wird z. B. mit der folgenden ALTER DATABASE-Anweisung der Partner als ursprüngliche Prinzipalserverinstanz festgelegt. Der Datenbankname lautet **AdventureWorks**, die Systemadresse ist DBSERVER1 - der Name des Partnersystems - und der vom Endpunkt für die Datenbankspiegelung des Partners verwendete Port ist 7022:  
+     Auf der Spiegelserverinstanz wird z. B. mit der folgenden ALTER DATABASE-Anweisung der Partner als ursprüngliche Prinzipalserverinstanz festgelegt. Der Datenbankname lautet **AdventureWorks**, die Systemadresse ist „DBSERVER1“ (der Name des Partnersystems) und der vom Endpunkt für die Datenbankspiegelung des Partners verwendete Port ist 7022:  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -88,7 +88,7 @@ ms.locfileid: "48072980"
   
      Weitere Informationen finden Sie unter Schritt 4.  
   
-     Auf der Prinzipalserverinstanz wird z. B. mit der folgenden ALTER DATABASE-Anweisung der Partner als ursprüngliche Spiegelserverinstanz festgelegt. Der Datenbankname lautet **AdventureWorks**, die Systemadresse ist DBSERVER2 (der Name des Partnersystems), und der Spiegelungsendpunkt der Partnerdatenbank verwendet den Port 7025:  
+     Auf der Prinzipalserverinstanz wird z. B. mit der folgenden ALTER DATABASE-Anweisung der Partner als ursprüngliche Spiegelserverinstanz festgelegt. Der Datenbankname lautet **AdventureWorks**, die Systemadresse ist „DBSERVER2“ (der Name des Partnersystems) und der vom Endpunkt für die Datenbankspiegelung des Partners verwendete Port ist 7025:  
   
     ```  
     ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  

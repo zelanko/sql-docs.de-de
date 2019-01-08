@@ -16,12 +16,12 @@ ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abb7c01b2495ad58c14ca7e2aefede233213f963
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694448"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506084"
 ---
 # <a name="decimal-digits"></a>Dezimalstellen
 Die *Dezimalstellen* decimal und numeric-Daten-Typen als die maximale Anzahl von Ziffern rechts vom Dezimaltrennzeichen und die Skalierung der Daten definiert ist. Für die ungefähre Anzahl Gleitkomma-Spalten oder Parameter sind keine Dezimalstellen definiert, da die Anzahl der Ziffern rechts neben dem Dezimalzeichen nicht festgelegt ist. Für "DateTime" oder das Intervall-Daten, die eine Komponente für Sekunden enthält, wird als die Anzahl der Ziffern rechts vom Dezimaltrennzeichen in die Sekundenkomponente der Daten die Dezimalstellen definiert.  
@@ -33,7 +33,7 @@ Die *Dezimalstellen* decimal und numeric-Daten-Typen als die maximale Anzahl von
 |SQL-Typ|Dezimalstellen|  
 |--------------|--------------------|  
 |Alle Zeichen- und Binärtypen [a]|–|  
-|SQL_DECIMAL<br />SQL_NUMERIC|Die festgelegte Anzahl von Ziffern rechts vom Dezimaltrennzeichen an. Die Dezimalstellen einer Spalte, die als NUMERIC(10,3) definiert ist z. B. 3. Dies kann eine negative Zahl zum Speichern von sehr großen Zahlen unterstützt werden, ohne mit der Exponentialschreibweise sein; Beispielsweise könnte "12000" als "12" mit einer Skala-3 gespeichert werden.|  
+|SQL_DECIMAL<br />SQL_NUMERIC|Die festgelegte Anzahl von Ziffern rechts vom Dezimaltrennzeichen an. Die Dezimalstellen einer Spalte, die als NUMERIC(10,3) definiert ist z. B. 3. Dies kann eine negative Zahl zum Speichern von sehr großen Zahlen unterstützt werden, ohne mit der Exponentialschreibweise sein; Beispielsweise könnte "12000" als "12" mit einer Skala von-3 gespeichert werden.|  
 |Exakte numerische Typen als SQL_DECIMAL und SQL_NUMERIC [a]|0|  
 |Alle ungefähre Datentypen [a]|–|  
 |SQL_TYPE_DATE und alle Intervalltypen mit keine Sekundenkomponente [a]|–|  

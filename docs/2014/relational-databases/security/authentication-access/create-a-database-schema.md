@@ -17,12 +17,12 @@ ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3a241cc086ae7f1558f9899295496395b4959b74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c3747149b23c6217f321eff9d19621189b89b66
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147080"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541217"
 ---
 # <a name="create-a-database-schema"></a>Erstellen eines Datenbankschemas
   In diesem Thema wird beschrieben, wie ein Schema in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt wird.  
@@ -33,7 +33,7 @@ ms.locfileid: "48147080"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie ein Schema mit**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48147080"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48147080"
   
 -   Um einen anderen Benutzer als den Besitzer des zu erstellenden Schemas anzugeben, benötigt der Aufrufer die IMPERSONATE-Berechtigung für diesen Benutzer. Wenn eine Datenbankrolle als Besitzer angegeben wird, muss der Aufrufer entweder über eine Mitgliedschaft in der Rolle oder die ALTER-Berechtigung für die Rolle verfügen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 ##### <a name="to-create-a-schema"></a>So erstellen Sie ein Schema  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48147080"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Zusätzliche Optionen  
- Das Dialogfeld **Schema - Neu** verfügt zudem über Optionen auf zwei zusätzlichen Seiten: **Berechtigungen** und **Erweiterte Eigenschaften**.  
+ Die **Schema-neu** Dialogfeld verfügt zudem über Optionen auf zwei zusätzlichen Seiten: **Berechtigungen** und **erweiterte Eigenschaften**.  
   
 -   Auf der Seite **Berechtigungen** werden alle möglichen sicherungsfähigen Elemente und die Berechtigungen für diese sicherungsfähigen Elemente aufgelistet, die für die Anmeldung gewährt werden können.  
   

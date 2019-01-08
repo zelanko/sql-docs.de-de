@@ -20,17 +20,17 @@ ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b91e302c48917454ba29210a2557caf558940a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf5f584a556db9e32fcaf1f53b907adcb8d08e25
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604909"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522983"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält Informationen über die Datenbanküberwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Enthält Informationen über die Datenbanküberwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "47604909"
 |database_specification_id|**int**|Die ID der Datenbankspezifikation.|  
 |create_date|**datetime**|Datum, an dem die Überwachungsspezifikation erstellt wurde.|  
 |modified_date|**datetime**|Datum, an dem die Überwachungsspezifikation zuletzt geändert wurde.|  
-|is_state_enabled|**bit**|Überwachungsspezifikationsstatus:<br /><br /> 0 – DEAKTIVIERT<br /><br /> 1 –ENABLED|  
+|is_state_enabled|**bit**|Überwachungsspezifikationsstatus:<br /><br /> 0 – DEAKTIVIERT<br /><br /> 1 - AKTIVIERT|  
 |audit_GUID|**uniqueidentifer**|GUID für die Überwachung, die diese Spezifikation enthält. Wird während der Enumeration der Elementdatenbank-Überwachungsspezifikationen beim Anfügen/Starten der Datenbank verwendet.|  
   
 ## <a name="remarks"></a>Hinweise  

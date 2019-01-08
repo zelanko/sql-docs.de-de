@@ -16,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a562aa5947444fe149c5e24f3a5a1b9cd74fe4d3
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: d04bc4e669faad149a4dccbfc1b40a82a9a1aae0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571220"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398173"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances-Funktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Parameter  
  *pInstanceNames*  
- [Ausgabe] Enthält nach dem Zurückgeben dieser Funktion die Namen der benannten und der standardmäßigen LocalDB-Instanzen auf der Arbeitsstation des Benutzers.  
+ [Ausgabe] Wenn diese Funktion zurückkehrt, enthält die Namen der benannten und standardmäßigen LocalDB-Instanzen auf der Arbeitsstation des Benutzers.  
   
  *lpdwNumberOfInstances*  
- [Eingabe/Ausgabe] Bei Eingabe enthält dieses Objekt die Anzahl der Slots für Instanznamen im *pInstanceNames* -Puffer. Bei Ausgabe enthält dieses Objekt die Anzahl der LocalDB-Instanzen auf der Arbeitsstation des Benutzers.  
+ [Eingabe/Ausgabe] Bei Eingabe enthält dieses Objekt die Anzahl der Slots für Instanznamen im *pInstanceNames* -Puffer. Bei Ausgabe enthält die Anzahl der LocalDB-Instanzen finden Sie auf der Arbeitsstation des Benutzers ein.  
   
 ## <a name="returns"></a>Rückgabewert  
  S_OK  

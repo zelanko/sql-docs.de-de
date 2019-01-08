@@ -13,12 +13,12 @@ ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 173588769aa1697e23f0d34ca13916684d2fee59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4cc8ae36dbcc728062e2074d715673a39f95e1d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112711"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535038"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Ausführen des Bereitstellungs-Assistenten für Analysis Services
   Wenn Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zum Bereitstellen eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts verwenden, gibt es folgende Möglichkeiten, um diesen Assistenten auszuführen:  
@@ -28,7 +28,7 @@ ms.locfileid: "48112711"
 -   **Über die Eingabeaufforderung** Ausführung an der Eingabeaufforderung die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent generiert einen XML for Analysis (XMLA)-Bereitstellungsskript, die auf der Basis der Schalter, mit denen Sie den Assistenten ausführen. Der Assistent kann dann einen der folgenden Schritte ausführen: den Benutzer zur Eingabe auffordern und die Eingabedateien entsprechend der Benutzereingabe ändern, eine unbeaufsichtigte Bereitstellung mithilfe der unveränderten Eingabedateien durchführen oder ein Bereitstellungsskript erstellen, das vom Benutzer zu einem späteren Zeitpunkt verwendet werden kann.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>Interaktives Ausführen des Bereitstellungs-Assistenten für Analysis Services  
- Wenn Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interaktiv ausführen, liest er die Werte aus den Eingabedateien und präsentiert Ihnen diese Informationen. Sie können diese Eingabewerte – z. B. das Bereitstellungsziel, Konfigurationseinstellungen, Bereitstellungsoptionen und Kennwörter für Verbindungszeichenfolgen – je nach Bedarf ändern oder unverändert übernehmen. Wenn Sie Änderungen an den Eingabewerten vornehmen, verwendet der Assistent diese Änderungen beim Generieren des XMLA-Bereitstellungsskripts. Der Assistent nimmt dabei jedoch keine Änderungen an den Werten in der Eingabedatei vor.  
+ Wenn Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interaktiv ausführen, liest er die Werte aus den Eingabedateien und präsentiert Ihnen diese Informationen. Sie können diese Eingabe, die Werte wie z. als Bereitstellungsziel, Konfigurationseinstellungen, Bereitstellungsoptionen und Kennwörter für Verbindungszeichenfolgen-, oder lassen sie unverändert. Wenn Sie Änderungen an den Eingabewerten vornehmen, verwendet der Assistent diese Änderungen beim Generieren des XMLA-Bereitstellungsskripts. Der Assistent nimmt dabei jedoch keine Änderungen an den Werten in der Eingabedatei vor.  
   
 > [!NOTE]  
 >  Wenn Sie möchten, dass der Bereitstellungs-Assistent für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Änderungen an den Eingabewerten vornimmt, müssen Sie den Assistenten an der Eingabeaufforderung ausführen und dabei festlegen, dass der Assistent im Antwortmodus ausgeführt wird.  
@@ -39,7 +39,7 @@ ms.locfileid: "48112711"
   
 -   Zeigen Sie im Menü **Start**auf **Alle Programme**, zeigen Sie auf **Microsoft SQL Server**, zeigen Sie auf **Analysis Services**, und klicken Sie dann auf **Bereitstellungs-Assistent**.  
   
-     – oder –  
+     -oder-  
   
 -   In der **Projekte** Ordner die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt, doppelklicken Sie auf die  *\<Projektname >* asdatabase-Datei.  
   

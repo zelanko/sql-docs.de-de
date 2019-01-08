@@ -16,12 +16,12 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 898d2f0982ce5538f853335ea652891e7c390547
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6715c89ff3086f5031e2554929aced39d6f135db
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670049"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501906"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funktionen, die sich auf QNames beziehen – expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   Wenn die *$paramLocal* angegebene Wert nicht in der lexikalisch richtigen Form für xs: NCName-Typ, die leere Sequenz zurückgegeben, und stellt einen dynamischen Fehler.  
   
--   Das Konvertieren des Typs xs:QName in andere Typen wird in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht unterstützt. Aus diesem Grund die **expanded-QName()** Funktion kann nicht in XML-Konstruktion verwendet werden. Wenn Sie beispielsweise einen Knoten wie `<e> expanded-QName(…) </e>` konstruieren, darf der Wert nicht typisiert sein. Um dies zu erreichen, müssten Sie den von `expanded-QName()` zurückgegebenen Wert vom Typ xs:QName in xdt:untypedAtomic konvertieren. Dies wird jedoch nicht unterstützt. Eine Lösungsmöglichkeit wird nachfolgend in diesem Thema bereitgestellt.  
+-   Das Konvertieren des Typs xs:QName in andere Typen wird in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht unterstützt. Aus diesem Grund die **expanded-QName()** Funktion kann nicht in XML-Konstruktion verwendet werden. Wenn Sie beispielsweise einen Knoten wie `<e> expanded-QName(...) </e>` konstruieren, darf der Wert nicht typisiert sein. Um dies zu erreichen, müssten Sie den von `expanded-QName()` zurückgegebenen Wert vom Typ xs:QName in xdt:untypedAtomic konvertieren. Dies wird jedoch nicht unterstützt. Eine Lösungsmöglichkeit wird nachfolgend in diesem Thema bereitgestellt.  
   
 -   Sie können vorhandene Werte vom Typ QName ändern oder vergleichen. Z. B. `/root[1]/e[1] eq expanded-QName("https://nsURI" "myNS")` vergleicht den Wert des Elements <`e`>, mit der vom QName der **expanded-QName()** Funktion.  
   
@@ -201,7 +201,7 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>Implementierungseinschränkungen  
- Es gibt eine Einschränkung: die **expanded-QName()** -Funktion die leere Sequenz als zweites Argument akzeptiert und gibt zurück, statt einen Laufzeitfehler auszulösen, wenn das zweite Argument fehlerhaft ist leer.  
+ Es gibt eine Einschränkung: Die **expanded-QName()** -Funktion die leere Sequenz als zweites Argument akzeptiert und gibt zurück, statt einen Laufzeitfehler auszulösen, wenn das zweite Argument fehlerhaft ist leer.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Functions Related to QNames sich &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  

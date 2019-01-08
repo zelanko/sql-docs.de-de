@@ -13,22 +13,22 @@ ms.assetid: 0bea4831-982e-4848-86cd-e6219c860138
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cfedee8dfc4f5ece1d4502716d6a7690fa73d9cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36f09632e55bfae58a30f571c2928564f4f7beee
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193795"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507953"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>Erstellen einer benutzerdefinierten Elementformel (Dimension) (Business Intelligence-Assistent)
-  Auf der Seite **Benutzerdefinierte Elementformel erstellen** können Sie eine Dimension auswählen, mit der der Business Intelligence-Assistent Attribute mit Spalten von benutzerdefinierten Elementformeln verknüpft. Diese Spalten enthalten MDX-Anweisungen, die Elementwerte für das betreffende Attribut definieren.  
+  Verwenden der **benutzerdefinierte Elementformel erstellen** Seite, um eine Dimension auswählen, auf die der Business Intelligence-Assistent ordnet Attribute benutzerdefinierte Formel Spalten-Spalten, die MDX (Multidimensional Expressions) enthalten, Anweisungen, die Elementwerte für das betreffende Attribut definieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Dimension**  
  Wählen Sie die Dimension aus, für die der Assistent in der Dimension enthaltene Attribute mit benutzerdefinierten Elementformeln verknüpft.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Business Intelligence-Assistent F1-Hilfe](business-intelligence-wizard-f1-help.md)   
+ [Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Dimensions-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

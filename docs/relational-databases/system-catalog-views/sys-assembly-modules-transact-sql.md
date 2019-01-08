@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3003873abc04c6999f3f94c3453fb0e1b78309f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ade1adbfeb8292e894ce18db305687c7092707cf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704558"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391446"
 ---
 # <a name="sysassemblymodules-transact-sql"></a>sys.assembly_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Gibt eine Zeile für jede Funktion, jede Prozedur oder jeden Trigger zurück, die bzw. der mit einer CLR-Assembly (Common Language Runtime) definiert ist. Diese Katalogsicht ordnet CLR-gespeicherte Prozeduren, CLR-Trigger oder CLR-Funktionen der zugrunde liegenden Implementierung zu. Objekten vom Typ TA, AF, PC, FS und FT ist ein Assemblymodul zugeordnet. Um die Zuordnung zwischen dem Objekt und der Assembly zu finden, können Sie diese Katalogsicht mit anderen Katalogsichten verknüpfen. Wenn Sie z. B. eine CLR-gespeicherte Prozedur erstellen, wird diese durch eine Zeile in **sys.objects**, eine Zeile in **sys.procedures** (geerbt von **sys.objects**) und eine Zeile in **sys.assembly_modules**dargestellt. Die gespeicherte Prozedur selbst wird durch die Metadaten in **sys.objects** und **sys.procedures**dargestellt. Verweise auf die zugrunde liegende CLR-Implementierung der Prozedur finden Sie in **sys.assembly_modules**.  
+  Gibt eine Zeile für jede Funktion, jede Prozedur oder jeden Trigger zurück, die bzw. der mit einer CLR-Assembly (Common Language Runtime) definiert ist. Diese Katalogsicht ordnet CLR-gespeicherte Prozeduren, CLR-Trigger oder CLR-Funktionen der zugrunde liegenden Implementierung zu. Objekten vom Typ TA, AF, PC, FS und FT ist ein Assemblymodul zugeordnet. Um die Zuordnung zwischen dem Objekt und der Assembly zu finden, können Sie diese Katalogsicht mit anderen Katalogsichten verknüpfen. Wenn Sie z. B. eine CLR-gespeicherte Prozedur erstellen, wird diese durch eine Zeile in **sys.objects**, eine Zeile in **sys.procedures** (geerbt von **sys.objects**) und eine Zeile in **sys.assembly_modules**dargestellt. Die gespeicherte Prozedur selbst wird durch die Metadaten in **sys.objects** und **sys.procedures**dargestellt. Verweise auf der Prozedur bei der zugrunde liegenden CLR-Implementierung finden Sie in **Sys. assembly_modules**.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  

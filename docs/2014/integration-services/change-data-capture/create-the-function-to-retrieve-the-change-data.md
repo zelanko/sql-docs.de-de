@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
@@ -13,12 +12,12 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9749418654d76f542d865aad78135b1a11a987b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b49001c7b62be67097223421ef85db2b475aa1d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088600"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761892"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Erstellen der Funktion zum Abrufen der Änderungsdaten
   Nach Abschluss der Ablaufsteuerung für ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der nächste Task die Erstellung einer Tabellenwertfunktion, mit der die Änderungsdaten abgerufen werden. Sie müssen diese Funktion nur einmal vor dem ersten inkrementellen Laden erstellen.  
@@ -133,16 +132,16 @@ deallocate #hfunctions
   
 -   Alle angeforderten Spalten der Änderungsdaten  
   
--   Eine Spalte mit dem Namen __CDC_OPERATION, die ein Feld mit einem oder zwei Zeichen verwendet, um den der Zeile zugeordneten Vorgang zu kennzeichnen. Folgende Werte sind für dieses Feld gültig: „I“ für insert (einfügen), „D“ für delete (löschen), „UO“ für update old values (alte Werte aktualisieren) und „UN“ für update new values (neue Werte aktualisieren).  
+-   Eine Spalte mit dem Namen __CDC_OPERATION, die ein Feld mit einem oder zwei Zeichen verwendet, um den der Zeile zugeordneten Vorgang zu kennzeichnen. Die gültigen Werte für dieses Feld sind wie folgt aus: 'I' eingefügt werden, d "für Delete,"UO"für alte Werte und un aktualisieren" für den neuen Werten aktualisieren.  
   
--   Updateflags, wenn Sie diese anfordern, die als bit-Spalten hinter dem Vorgangscode in der vom *@update_flag_list* -Parameter festgelegten Reihenfolge angezeigt werden. Diese Spalten werden bezeichnet, indem an den zugeordneten Spaltennamen „_uflag“ angehängt wird.  
+-   Updateflags, wenn Sie diese anfordern, die als bit-Spalten hinter dem Vorgangscode in der vom *@update_flag_list* -Parameter festgelegten Reihenfolge angezeigt werden. Diese Spalten werden bezeichnet, indem „_uflag“ an den zugeordneten Spaltennamen angehängt wird.  
   
  Wenn Ihr Paket eine Wrapperfunktion aufruft, die alle Änderungen abfragt, gibt die Wrapperfunktion außerdem die Spalten __CDC_STARTLSN und \__CDC_SEQVAL zurück. Diese beiden Spalten sind die erste bzw. die zweite Spalte des Resultsets. Die Wrapperfunktion sortiert das Resultset außerdem auf der Grundlage dieser beiden Spalten.  
   
 ## <a name="writing-your-own-table-value-function"></a>Schreiben einer eigenen Tabellenwert-Funktion  
  Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auch verwenden, um eine eigene Tabellenwert-Wrapperfunktion zu schreiben, die die Change Data Capture-Abfragefunktion aufruft, und die Tabellenwert-Wrapperfunktion in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichern. Weitere Informationen zum Erstellen einer Transact-SQL-Funktion finden Sie unter [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
- Das folgende Beispiel definiert eine Tabellenwertfunktion, mit der für das angegebene Änderungsintervall Änderungen von einer Customer-Tabelle abgerufen werden. Diese Funktion verwendet Change Data Capture-Funktionen zum Zuordnen der `datetime` -Werte in das binäre Protokoll sequence (Number, LSN)-Werte, die die Änderungstabellen intern verwenden. Diese Funktion behandelt auch mehrere besondere Bedingungen:  
+ Das folgende Beispiel definiert eine Tabellenwertfunktion, mit der für das angegebene Änderungsintervall Änderungen von einer Customer-Tabelle abgerufen werden. Diese Funktion verwendet Change Data Capture-Funktionen, um die `datetime`-Werte den binären Protokollfolgenummer-Werten (Log Sequence Number, LSN) zuzuordnen, die die Änderungstabellen intern verwenden. Diese Funktion behandelt auch mehrere besondere Bedingungen:  
   
 -   Wenn für die Startzeit ein NULL-Wert übergeben wird, verwendet diese Funktion den frühesten verfügbaren Wert.  
   
@@ -220,6 +219,6 @@ go
 ## <a name="next-step"></a>Nächster Schritt  
  Nach dem Erstellen der Tabellenwertfunktion, mit der Änderungsdaten abgefragt werden, ist der nächste Schritt der Entwurf des Datenflusses im Paket.  
   
- **Nächstes Thema**[Abrufen und Verstehen der Änderungsdaten](retrieve-and-understand-the-change-data.md)  
+ **Nächstes Thema:** [Abrufen und Verstehen der Änderungsdaten](retrieve-and-understand-the-change-data.md)  
   
   

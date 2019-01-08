@@ -1,11 +1,10 @@
 ---
-title: 'Lektion 2: Verwenden des Datenbankoptimierungsratgebers | Microsoft-Dokumentation'
+title: 'Lektion 2: Mit der Datenbank des Datenbankoptimierungsratgebers | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: 3317d4f8-ed9e-4f2e-b5f1-a6bf3a9d6c8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b777845faaa1ed0df869a1dc5f5808472aa4125
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a765e7b856d79392fa9349f0f27dae89e9253248
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162370"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770212"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lektion 2: Verwenden des Datenbankoptimierungsratgebers
   Der Datenbankoptimierungsratgeber ermöglicht Ihnen das Optimieren von Datenbanken, Verwalten von Optimierungssitzungen und das Anzeigen von Empfehlungen zur Optimierung. Benutzer, die erweiterte Kenntnisse in physischen Entwurfsstrukturen haben, können mit diesem Tool eine Analyse der Datenbankoptimierung ausführen. Benutzer, die mit der Datenbankoptimierung noch nicht vertraut sind, können mithilfe dieses Tools die beste Konfiguration physischer Entwurfsstrukturen für die Arbeitsauslastung herausfinden, die sie optimieren. Diese Lektion umfasst grundlegende, praktische Hinweise für Datenbankadministratoren, die mit der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers noch nicht vertraut sind, sowie für Systemadministratoren, die möglicherweise keine umfassenden Kenntnisse physischer Entwurfsstrukturen haben.  
@@ -32,6 +31,6 @@ ms.locfileid: "48162370"
 -   Anzeigen von Optimierungsberichten  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Optimieren einer Workload](lesson-1-1-tuning-a-workload.md)  
+ [Optimieren einer Arbeitsauslastung](lesson-1-1-tuning-a-workload.md)  
   
   

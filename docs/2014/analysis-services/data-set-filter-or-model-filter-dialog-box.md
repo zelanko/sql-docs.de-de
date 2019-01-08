@@ -11,12 +11,12 @@ ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f88a82a1d59e9d41f9816b8fbc4e335ab2ad8c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 923467270901b91c35b40005c75207e7b1799194
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119300"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518972"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Datasetfilter oder Modellfilter (Dialogfeld)
   In diesem Dialogfeld können Sie die Filter erstellen, die Sie auf ein Dataset anwenden können.  Bei dem Dataset kann es sich um ein zum Testen verwendetes externes Dataset oder um die Falldaten für ein Miningmodell handeln. Der Name des Dialogfelds ändert sich je nachdem, ob der Filter für ein externes Dataset oder für ein Miningmodell gilt.  
@@ -34,16 +34,16 @@ ms.locfileid: "48119300"
   
  **Weitere Informationen:** [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Bedingungen**  
  Zeigt Tabellennamen gefolgt von Spaltennamen mit Bedingungen an.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Und/Oder**|Wählen Sie einen Operator aus, um mehrere Bedingungen zu verknüpfen.|  
 |**Miningstrukturspalte**|Klicken Sie hierauf, um eine Datenquelle auszuwählen, und klicken Sie dann im Raster auf aufeinander folgenden Zeilen, um Spalten aus der Datenquelle hinzuzufügen.<br /><br /> Die erste Zeile im Raster gibt die Datenquellensicht an. Nach Auswahl einer Datenquellensicht wird im Feld **Miningstrukturspalte** ein Tabellensymbol angezeigt, und im Feld **Wert** wird die Kombination aller Kriterien angezeigt, die Sie für diese Datenquelle definiert haben.<br /><br /> Nach Auswahl einer Datenquelle wird im Feld **Miningstrukturspalte** eine Dropdownliste mit den einzelnen Spalten in der Datenquelle angezeigt.|  
 |**Operator**|Wählen Sie in der Liste einen Operator aus.|  
-|**Wert**|Bei Tabellen wird im Feld **Wert** die Kombination aller auf die Datenquelle angewendeten Filter angezeigt. Sie können auch auf die Schaltfläche zum Erstellen ( **…** ) rechts neben dem Textfeld klicken, um das Dialogfeld **Filter** zu öffnen und eine Bedingung zu erstellen.|  
+|**Wert**|Bei Tabellen wird im Feld **Wert** die Kombination aller auf die Datenquelle angewendeten Filter angezeigt. Sie können auch den Build klicken **(...)**  Schalfläche rechts neben dem Textfeld zum Öffnen der **Filter** Dialogfeld und eine Bedingung zu erstellen.|  
   
  **Ausdruck**  
  Zeigt die Gruppe von Kriterien an, die Sie mit dem Raster erstellt haben.  

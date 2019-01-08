@@ -11,12 +11,12 @@ ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 65d4a23044084f18662c3aca1cc68bfd157ea3dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d70cf1724eb67dbf8f1a75989df5f4021b5512d6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134990"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416701"
 ---
 # <a name="workspace-database-ssas-tabular"></a>Arbeitsbereichsdatenbank (SSAS – tabellarisch)
   Die Arbeitsbereichsdatenbank für Tabellenmodelle, die während der Modellerstellung verwendet wird, wird erstellt, wenn Sie ein Projekt für Tabellenmodelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]anlegen. Die Arbeitsbereichsdatenbank befindet sich im Arbeitsspeicher auf einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz, die im tabellarischen Modus ausgeführt wird. In der Regel ist sie auf dem gleichen Computer wie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] installiert.  
@@ -78,7 +78,7 @@ ms.locfileid: "48134990"
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[Modelleigenschaften &#40;SSAS – tabellarisch&#41;](model-properties-ssas-tabular.md)|Enthält Beschreibungen und Konfigurationsschritte der Arbeitsbereichsdatenbank-Eigenschaften eines Modells.|  
+|[Modelleigenschaften &#40;SSAS – tabellarisch&#41;](model-properties-ssas-tabular.md)|Enthält Beschreibungen und Konfigurationsschritte für ein Modell für den Arbeitsbereich Datenbankeigenschaften.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften &#40;SSAS – tabellarisch&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   

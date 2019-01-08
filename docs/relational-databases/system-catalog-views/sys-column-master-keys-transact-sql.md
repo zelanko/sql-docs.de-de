@@ -26,12 +26,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af9802fbf1568e7ce9d15882a29b96bbe0ad1762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cb1740bdb0ae26d91e2a9ad9e2becb69d3b2810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711008"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518724"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "47711008"
 |**column_master_key_id**|**int**|ID des spaltenhauptschlüssels.|  
 |**create_date**|**datetime**|Datum, an den spaltenhauptschlüssel erstellt wurde.|  
 |**modify_date**|**datetime**|Datum, an den spaltenhauptschlüssel, den zuletzt geändert wurde.|  
-|**key_store_provider_name**|**sysname**|Der Name des Anbieters für den Speicher des spaltenhauptschlüssels, der den CMK enthält. Zulässige Werte sind:<br /><br /> "Mssql_certificate_store" – Wenn der Speicher des spaltenhauptschlüssels eine Zertifikat-Store ist.<br /><br /> Ein benutzerdefinierte Wert, wenn der Speicher des spaltenhauptschlüssels eines benutzerdefinierten Typs ist.|  
+|**key_store_provider_name**|**sysname**|Der Name des Anbieters für den Speicher des spaltenhauptschlüssels, der den CMK enthält. Zulässige Werte sind:<br /><br /> "Mssql_certificate_store" - ist der Speicher des spaltenhauptschlüssels eine Zertifikat-Store.<br /><br /> Ein benutzerdefinierte Wert, wenn der Speicher des spaltenhauptschlüssels eines benutzerdefinierten Typs ist.|  
 |**key_path**|**nvarchar(4000)**|Eine unternehmensspezifische Pfad des spaltenhauptschlüssels des Schlüssels. Das Format des Pfads, hängt von den Spalte Hauptschlüssel Speichertyp ab. Beispiel:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Für einen benutzerdefinierten Speicher des spaltenhauptschlüssels, der Entwickler ist dafür verantwortlich zu definieren ein Schlüsselpfad für den Speicher des benutzerdefinierten spaltenhauptschlüssels ist.|  
-|**allow_enclave_computations**|**bit**|Gibt an, ob der spaltenhauptschlüssel Enclave-fähig ist, (wenn der spaltenverschlüsselungsschlüssel, die mit dieser Hauptschlüssel verschlüsselt, die für Berechnungen in serverseitigen sichere Enclaves verwendet werden können). Weitere Informationen finden Sie unter [Always Encrypted mit sicheren Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
+|**allow_enclave_computations**|**bit**|Gibt an, ob der spaltenhauptschlüssel Enclave-fähig ist, (wenn der spaltenverschlüsselungsschlüssel, die mit dieser Hauptschlüssel verschlüsselt, die für Berechnungen in serverseitigen sichere Enclaves verwendet werden können). Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
 |**signature**|**varbinary(max)**|Eine digitale Signatur der **Key_path** und **Allow_enclave_computations**, erstellt mit dem spaltenhauptschlüssel, auf die **Key_path**.|
 
 
