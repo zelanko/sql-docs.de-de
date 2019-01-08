@@ -18,12 +18,12 @@ ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 035e206b68242316ed8a9299842920feb18dacd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86de9f970713d84fec0722a4cc3c29b0b307098f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670468"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589946"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,37 +56,37 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [ **@account_id** =] *Account_id*  
  Die ID des Kontos, das aktualisiert werden soll. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Mindestens eine der *Account_id* oder *Account_name* muss angegeben werden. Wenn beide Argumente angegeben werden, ändert die Prozedur den Namen des Kontos.  
   
- [ **@account_name** =] **"***Account_name***"**  
+ [ **@account_name** =] **"**_Account_name_**"**  
  Der Name des zu aktualisierenden Kontos. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Mindestens eine der *Account_id* oder *Account_name* muss angegeben werden. Wenn beide Argumente angegeben werden, ändert die Prozedur den Namen des Kontos.  
   
- [ **@email_address** =] **"***Email_address***"**  
+ [ **@email_address** =] **"**_Email_address_**"**  
  Die neue E-Mail-Adresse, von der die Nachricht gesendet werden soll. Bei dieser Adresse muss es sich um eine Internet-E-Mail-Adresse handeln. Der Servername ist die Adresse des Servers, der von Datenbank-E-Mail zum Senden von E-Mails von diesem Konto verwendet wird. *Email_address* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL.  
   
- [ **@display_name** =] **"***Display_name***"**  
+ [ **@display_name** =] **"**_Display_name_**"**  
  Der neue Anzeigename, der in E-Mail-Nachrichten verwendet werden soll, die von diesem Konto gesendet werden. *Display_name* ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
   
- [ **@replyto_address** =] **"***Replyto_address***"**  
+ [ **@replyto_address** =] **"**_Replyto_address_**"**  
  Die neue Adresse, die im Antwortheader von E-Mail-Nachrichten verwendet werden soll, die von diesem Konto gesendet werden. *Replyto_address* ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
   
- [ **@description** = ] **'***description***'**  
+ [ **@description** =] **"**_Beschreibung_**"**  
  Die neue Beschreibung des Kontos. *Beschreibung* ist **nvarchar(256)**, hat den Standardwert NULL.  
   
- [ **@mailserver_name** =] **"***Server_name***"**  
+ [ **@mailserver_name** =] **"**_Server_name_**"**  
  Der neue Name des SMTP-Mailservers, der für dieses Konto verwendet werden soll. Der Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen aufgelöst werden können die *Server_name* einer IP-Adresse. *Server_name* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@mailserver_type** =] **"***Server_type***"**  
+ [ **@mailserver_type** =] **"**_Server_type_**"**  
  Der neue Typ des E-Mail-Servers. *Server_type* ist **Sysname**, hat keinen Standardwert. Nur der Wert **'SMTP'** wird unterstützt.  
   
  [ **@port** =] *Port_number*  
  Die neue Portnummer des E-Mail-Servers. *Port_number* ist **Int**, hat keinen Standardwert.  
   
- [ **@timeout** =] **"***Timeout***"**  
+ [ **@timeout** =] **"**_Timeout_**"**  
  Timeoutparameter für SmtpClient. Senden einer einzelnen E-Mail-Nachricht. *Timeout* ist **Int** in Sekunden und hat keinen Standardwert.  
   
- [ **@username** =] **"***Benutzername***"**  
+ [ **@username** =] **"**_Benutzername_**"**  
  Der neue Benutzername, der für die Anmeldung beim E-Mail-Server verwendet werden soll. *Benutzername* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@password** =] **"***Kennwort***"**  
+ [ **@password** =] **"**_Kennwort_**"**  
  Das neue Kennwort, das für die Anmeldung beim E-Mail-Server verwendet werden soll. *Kennwort* ist **Sysname**, hat keinen Standardwert.  
   
  [ **@use_default_credentials** =] Use_default_credentials  

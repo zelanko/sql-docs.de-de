@@ -1,27 +1,85 @@
 ---
-title: Visualisieren von SQL Server-Daten mithilfe von R (SQL und R tieferer) | Microsoft-Dokumentation
+title: Visualisieren von SQL Server-Daten, die mithilfe von RevoScaleR RxHistogram – SQL Server-Machine Learning
+description: Exemplarische Vorgehensweise im Lernprogramm zum Visualisieren von Daten, die Verwendung der Sprache R auf SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0d34ece68c421dbb7aabd845e117c9f07e00d013
-ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
+ms.openlocfilehash: 4f8ab37cefd55cd78556ac7bbf5af24cc01dca8e
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47217515"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596471"
 ---
-#  <a name="visualize-sql-server-data-using-r-sql-and-r-deep-dive"></a>Visualisieren von SQL Server-Daten mithilfe von R (SQL und R tieferer)
+#  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualisieren von SQL Server-Daten mithilfe von R (SQL Server und die RevoScaleR-Lernprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel ist Teil des Tutorials zur Verwendung von Data Science Deep Dive [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Diese Lektion ist Teil der [RevoScaleR Tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-Die erweiterten Pakete in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] enthalten mehrere Funktionen, die für die Skalierbarkeit und die parallele Verarbeitung optimiert wurden. Diese Funktionen besitzen in der Regel das Präfix **rx** oder **Rx**.
+In dieser Lektion verwenden Sie R-Funktionen zum Anzeigen der Verteilung der Werte in der *CreditLine* -Spalte nach Geschlecht.
 
-In dieser exemplarischen Vorgehensweise verwenden Sie die **RxHistogram** Funktion zum Anzeigen der Verteilung der Werte in der _CreditLine_ -Spalte nach Geschlecht.
+> [!div class="checklist"]
+> * Min-Max-Variablen für Histogramm Eingaben erstellen
+> * Visualisieren von Daten in einem Histogramm mit **RxHistogram** aus **RevoScaleR**
+> * Visualisieren mit Punktdiagrammen mit **Levelplot** aus **Lattice** enthalten in der basisverteilung von R
+
+In dieser Lektion wird veranschaulicht, können Sie die Open Source- und Microsoft-spezifische Funktionen in das gleiche Skript kombinieren.
+
+## <a name="add-maximum-and-minimum-values"></a>Maximale und minimale Werte hinzufügen
+
+Basierend auf der berechneten zusammenfassungsstatistiken aus der vorherigen Lektion, haben Sie einige nützliche Informationen zu den Daten entdeckt, die Sie in der Datenquelle für weitere Berechnungen einfügen können. Beispielsweise können die minimalen und maximalen Werte verwendet werden, um Histogramme zu berechnen. In dieser Übung fügen Sie die hohen und niedrigen Werte der **RxSqlServerData** -Datenquelle.
+
+1. Beginnen Sie, indem Sie einige temporäre Variablen einrichten.
+  
+    ```R
+    sumDF <- sumOut$sDataFrame
+    var <- sumDF$Name
+    ```
+  
+2. Verwenden Sie die Variable *CcColInfo* , dass Sie in der vorherigen Lektion definieren Sie Spalten in der Datenquelle erstellt haben.
+  
+   Neue berechnete Spalten hinzufügen (*NumTrans*, *NumIntlTrans*, und *CreditLine*) zur Spaltensammlung, die die ursprüngliche Definition zu überschreiben. Das folgende Skript fügt basierte auf den minimalen und maximalen Werten, abgerufen aus SumOut, die die Ausgabe im Arbeitsspeicher gespeichert sind, die Faktoren **RxSummary**. 
+  
+    ```R 
+    ccColInfo <- list(
+        gender = list(type = "factor",
+          levels = c("1", "2"), 
+          newLevels = c("Male", "Female")),
+        cardholder = list(type = "factor",
+          levels = c("1", "2"), 
+          newLevels = c("Principal", "Secondary")), 
+        state = list(type = "factor", 
+          levels = as.character(1:51), 
+          newLevels = stateAbb), 
+        balance  = list(type = "numeric"),
+        numTrans = list(type = "factor", 
+          levels = as.character(sumDF[var == "numTrans", "Min"]:sumDF[var == "numTrans", "Max"])),
+        numIntlTrans = list(type = "factor",  
+            levels = as.character(sumDF[var == "numIntlTrans", "Min"]:sumDF[var =="numIntlTrans", "Max"])),
+        creditLine = list(type = "numeric")
+            )
+    ```
+  
+3. Nach dem Update der Spaltensammlung, gelten die folgende Anweisung hinzu, erstellen Sie eine aktualisierte Version der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquelle, die Sie zuvor definiert.
+  
+    ```R
+    sqlFraudDS <- RxSqlServerData(
+        connectionString = sqlConnString,
+        table = sqlFraudTable,
+        colInfo = ccColInfo,
+        rowsPerRead = sqlRowsPerRead)
+    ```
+  
+    Die Datenquelle SqlFraudDS enthält nun die neuen Spalten hinzugefügt, mit *CcColInfo*.
+  
+An diesem Punkt beeinflussen die Änderungen nur das Datenquellenobjekt in R; keine neuen Daten wurde noch in die Datenbanktabelle geschrieben. Jedoch können Sie in der Variablen SumOut die aufgezeichneten Daten, um Visualisierungen und Zusammenfassungen zu erstellen. 
+
+> [!TIP]
+> Wenn Sie vergessen Sie welchen computekontext Sie verwenden, führen Sie **rxGetComputeContext()**. Ein Rückgabewert von "RxLocalSeq Compute Context" gibt an, dass Sie in den lokalen computekontext ausgeführt werden.
 
 ## <a name="visualize-data-using-rxhistogram"></a>Visualisieren von Daten mit rxHistogram
 
@@ -37,13 +95,19 @@ In dieser exemplarischen Vorgehensweise verwenden Sie die **RxHistogram** Funkti
   
     ```R
     rxSetComputeContext(sqlCompute)
+    rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-3. Die Ergebnisse sind identisch, da Sie die gleiche Datenquelle verwenden. Die Berechnungen werden jedoch auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computer ausgeführt.  Die Ergebnisse werden anschließend an Ihre lokale Arbeitsstation zum Zeichnen zurückgegeben.
+3. Die Ergebnisse sind die gleichen genau, da Sie die gleiche Datenquelle verwenden, jedoch im zweiten Schritt werden die Berechnungen auf dem Remoteserver ausgeführt. Die Ergebnisse werden anschließend an Ihre lokale Arbeitsstation zum Zeichnen zurückgegeben.
    
-![Historgrammergebnisse](media/rsql-sue-histogramresults.jpg "histogram results")
+  ![Historgrammergebnisse](media/rsql-sue-histogramresults.jpg "histogram results")
 
-4. Sie können auch aufrufen, die **RxCube** Funktion, und die Ergebnisse zu einer R, zeichnen die Funktion übergeben.  Das folgende Beispiel verwendet z.B. **rxCube** zur Berechnung des Mittelwerts von *fraudRisk* für jede Kombination von *numTrans* und *numIntlTrans*:
+
+## <a name="visualize-with-scatter-plots"></a>Visualisieren mit Punktdiagrammen
+
+Punktdiagrammen werden häufig beim Durchsuchen von Daten verwendet, um die Beziehung zwischen zwei Variablen vergleichen. Können Sie integrierte R-Pakete zu diesem Zweck mit Eingaben vom **RevoScaleR** Funktionen.
+
+1. Rufen Sie die [RxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) Funktion berechnet den Mittelwert der *FraudRisk* für jede Kombination von *NumTrans* und *NumIntlTrans*:
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
@@ -51,9 +115,9 @@ In dieser exemplarischen Vorgehensweise verwenden Sie die **RxHistogram** Funkti
   
     Verwenden Sie zum Angeben der Gruppen, die zum Berechnen der Mittel der Gruppe verwendet werden, die Notation `F()` . In diesem Beispiel `F(numTrans):F(numIntlTrans)` gibt an, dass die ganzen Zahlen in den Variablen `numTrans` und `numIntlTrans` als kategorievariablen mit einer Ebene für jeden Ganzzahlwert behandelt werden soll.
   
-    Da die niedrigen und hohen Ebenen bereits, mit der Datenquelle hinzugefügt wurden `sqlFraudDS` (mithilfe der `colInfo` Parameter), die Ebenen automatisch im Histogramm verwendet werden.
+    Der Standardwert der Rückgabewert von **RxCube** ist ein *RxCube-Objekt*, das eine Kreuztabelle darstellt. 
   
-5. Der Standardwert der Rückgabewert von **RxCube** ist ein *RxCube-Objekt*, das eine Kreuztabelle darstellt. Sie können jedoch die Funktion [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) verwenden, um die Ergebnisse in einen Datenrahmen zu konvertieren, der leicht in einem der Standardzeichenfunktionen von R verwendet werden kann.
+2. Rufen Sie [RxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) Funktion, um die Ergebnisse in einem Datenrahmen zu konvertieren, die leicht in einem der standardzeichenfunktionen von R verwendet werden kann.
   
     ```R
     cubePlot <- rxResultsDF(cube1)
@@ -63,9 +127,9 @@ In dieser exemplarischen Vorgehensweise verwenden Sie die **RxHistogram** Funkti
     
     `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
        
-    Die Ausgabe von **rxResultsDF** ist jedoch viel genauer und behält die Namen der Quellspalten bei.
+    Allerdings die Ausgabe des **RxResultsDF** ist sauberer und behält die Namen der Quellspalten. Sie können ausführen `head(cube1)` gefolgt von `head(cubePlot)` zum Vergleichen der Ausgabe.
   
-6. Abschließend führen Sie den folgenden Code zum Erstellen eine temperaturverteilungskarte mithilfe der `levelplot` -Funktion aus der **Lattice** -Paket, das in allen R-Verteilungen enthalten ist.
+3. Erstellen Sie eine temperaturverteilungskarte mithilfe der **Levelplot** -Funktion aus der **Lattice** Paket, das in allen R-Verteilungen enthalten.
   
     ```R
     levelplot(fraudRisk~numTrans*numIntlTrans, data = cubePlot)
@@ -75,14 +139,11 @@ In dieser exemplarischen Vorgehensweise verwenden Sie die **RxHistogram** Funkti
   
     ![Punktdiagrammergebnisse](media/rsql-sue-scatterplotresults.jpg "scatterplot results")
   
-Auch aus dieser schnellen Analyse können Sie herauslesen, dass das Betrugsrisiko jeweils mit der Anzahl der Transaktionen und der Anzahl der internationalen Transaktionen ansteigt.
+In dieser schnellen Analyse sehen Sie sich, dass das Betrugsrisiko mit der Anzahl der Transaktionen und die Anzahl der internationalen Transaktionen ansteigt.
 
 Weitere Informationen zu den **RxCube** -Funktion und zu Kreuztabellen im Allgemeinen finden Sie unter [Zusammenfassungen von Daten mithilfe von RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
 
-## <a name="next-step"></a>Nächster Schritt
+## <a name="next-steps"></a>Nächste Schritte
 
-[Erstellen von R-Modelle mithilfe von SQL Server-Daten](../../advanced-analytics/tutorials/deepdive-create-models.md)
-
-## <a name="previous-step"></a>Vorherigen Schritt
-
-[Erstellen und Ausführen von R-Skripts](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
+> [!div class="nextstepaction"]
+> [Erstellen von R-Modelle mithilfe von SQL Server-Daten](../../advanced-analytics/tutorials/deepdive-create-models.md)

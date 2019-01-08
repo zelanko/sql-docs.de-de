@@ -20,16 +20,16 @@ ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cca18bef15d57aa9d2cf97999939994a6c8c7934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662128"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588974"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
   
  **Zusammenfassung**  
  **SQLSetCursorName** eine aktive Anweisung ein Cursorname zugeordnet. Wenn eine Anwendung nicht aufruft **SQLSetCursorName**, generiert der Treiber die Cursornamen nach Bedarf für die Verarbeitung von SQL-Anweisung.  
@@ -78,7 +78,7 @@ SQLRETURN SQLSetCursorName(
 |IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *StatementHandle* die Funktion nicht unterstützt.|  
   
 ## <a name="comments"></a>Kommentare  
- Cursor werden verwendet, nur in positioniertes Update und delete-Anweisungen (z. B. **aktualisieren** *Tabellenname* ... **WHERE CURRENT OF** *Cursorname*). Weitere Informationen finden Sie unter [positioniert Update- und Delete-Anweisungen](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Wenn die Anwendung nicht aufruft **SQLSetCursorName** bei der Ausführung einer abfrageanweisung ein Cursorname definiert der Treiber generiert einen Namen, die mit den Buchstaben SQL_CUR beginnt und bis zu 18 Zeichen Länge nicht überschreitet.  
+ Cursor werden verwendet, nur in positioniertes Update und delete-Anweisungen (z. B. **aktualisieren** _Tabellenname_ ... **WHERE CURRENT OF** _Cursorname_). Weitere Informationen finden Sie unter [positioniert Update- und Delete-Anweisungen](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Wenn die Anwendung nicht aufruft **SQLSetCursorName** bei der Ausführung einer abfrageanweisung ein Cursorname definiert der Treiber generiert einen Namen, die mit den Buchstaben SQL_CUR beginnt und bis zu 18 Zeichen Länge nicht überschreitet.  
   
  Alle Cursornamen innerhalb der Verbindung müssen eindeutig sein. Maximal ein Cursorname wird vom Treiber definiert. Für eine optimale Interoperabilität empfiehlt es sich, dass Anwendungen Cursornamen nicht mehr als 18 Zeichen beschränkt. In ODBC 3.*.x*, wenn ein Cursorname ein Bezeichner in Anführungszeichen ist, es die Groß-und Kleinschreibung behandelt wird und darf die Zeichen, dass die Syntax von SQL würde nicht zulässig insbesondere, wie z. B. Leerzeichen behandelt oder Schlüsselwörter reservierte. Wenn ein Cursorname in Groß-und Kleinschreibung behandelt werden muss, muss es als ein Bezeichner in Anführungszeichen übergeben werden.  
   

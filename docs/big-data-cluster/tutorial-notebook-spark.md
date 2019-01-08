@@ -1,20 +1,22 @@
 ---
-title: Führen Sie ein Beispiel-Notebook auf eine SQL Server-2019 big Data-Cluster | Microsoft-Dokumentation
+title: Ausführen eines Beispiel-Notebooks | Microsoft-Dokumentation
+titleSuffix: SQL Server 2019 big data clusters
 description: In diesem Tutorial wird gezeigt, wie Sie die einer Ausführung einer Beispiel-Spark-Notebook auf eine SQL Server-2019 big Data-Cluster (Vorschau) laden können.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/17/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 811c94615f0d69886f0f538357529ad3125e2925
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 55d37969ec3e03a635e948cdafb73eb1922a1795
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644161"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432553"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>Tutorial: Ausführen einer Beispiel-Notebook auf einem SQL Server-2019 big Data-cluster
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>Lernprogramm: Führen Sie ein Beispiel-Notebook auf eine SQL Server-2019 big Data-cluster
 
 In diesem Tutorial wird veranschaulicht, wie Laden und Ausführen eines Notebooks in Azure Data Studio auf einem SQL Server-2019 big Data-Cluster (Vorschau). Dadurch können Datenanalysten und datentechniker, Python, R oder Scala-Code für den Cluster ausführen.
 
@@ -23,11 +25,11 @@ In diesem Tutorial wird veranschaulicht, wie Laden und Ausführen eines Notebook
 
 ## <a id="prereqs"></a> Erforderliche Komponenten
 
-* [Bereitstellen einen big Data-Cluster in Kubernetes](deployment-guidance.md).
-* [Installieren Sie Studio für Azure Data und die Erweiterung für SQL Server-2019](deploy-big-data-tools.md).
-* [Laden Sie Beispieldaten in den Cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Big Data-tools](deploy-big-data-tools.md)
+   - **"kubectl"**
+   - **Azure Data Studio**
+   - **SQL Server-2019-Erweiterung**
+- [Laden Sie Beispieldaten in Ihre big Data-cluster](tutorial-load-sample-data.md)
 
 ## <a name="download-the-sample-notebook-file"></a>Laden Sie die Beispiel-Notebook-Datei
 
@@ -47,7 +49,7 @@ Gehen Sie folgendermaßen vor, um die Beispiel-Notebook-Datei laden **Spark-sql.
 
 Die folgenden Schritte zeigen, wie die Notebook-Datei in Azure Data Studio zu öffnen:
 
-1. Verbinden Sie in Azure Data Studio mit dem HDFS/Spark-Gateway von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit dem HDFS/Spark-Gateway](deploy-big-data-tools.md#hdfs).
+1. Verbinden Sie in Azure Data Studio mit dem HDFS/Spark-Gateway von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit dem HDFS/Spark-Gateway](connect-to-big-data-cluster.md#hdfs).
 
 1. Doppelklicken Sie auf das HDFS/Spark-Gateway-Verbindung in der **Server** Fenster. Wählen Sie dann **Notizbuch öffnen**.
 

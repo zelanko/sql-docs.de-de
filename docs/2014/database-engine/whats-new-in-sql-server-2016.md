@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -14,12 +13,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ac9a6a1b2d4107d420bab68659b6d05f25805a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067026"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371552"
 ---
 # <a name="what39s-new-database-engine"></a>Was&#39;s neue (Datenbank-Engine)
   Die neueste Version des [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]s enthält neue Funktionen und Erweiterungen, die die Leistungsfähigkeit und Produktivität von Architekten, Entwicklern und Administratoren erhöhen, die Datenspeichersysteme entwerfen, entwickeln und pflegen. Das [!INCLUDE[ssDE](../includes/ssde-md.md)] wurde in den folgenden Bereichen verbessert.  
@@ -35,7 +34,7 @@ ms.locfileid: "48067026"
   
   
 ###  <a name="AzureVM"></a> Hosten eine SQL Server-Datenbank in einer Windows Azure-VM  
- Verwenden der [SQL Server-Datenbank auf einem Windows Azure-Computer bereitstellen](http://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) Assistenten zum Hosten einer Datenbank von einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in einem Windows Azure-Computer.  
+ Verwenden der [SQL Server-Datenbank auf einem Windows Azure-Computer bereitstellen](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) Assistenten zum Hosten einer Datenbank von einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in einem Windows Azure-Computer.  
   
   
 ###  <a name="Backup"></a> Sicherung und Wiederherstellung-Verbesserungen  
@@ -51,11 +50,11 @@ ms.locfileid: "48067026"
   
 -   **Verschlüsselung von Sicherungen**  
   
-     Sie haben jetzt die Möglichkeit, die Sicherungsdatei während eines Sicherungsvorgangs zu verschlüsseln.  Es werden mehrere Verschlüsselungsalgorithmen unterstützt, einschließlich AES 128, AES, AES 192 256 und Triple DES. Sie müssen entweder ein Zertifikat oder einen asymmetrischen Schlüssel verwenden, um während des Sicherungsvorgangs eine Verschlüsselung auszuführen. Weitere Informationen finden Sie unter [Sicherungsverschlüsselung](../relational-databases/backup-restore/backup-encryption.md).  
+     Sie haben jetzt die Möglichkeit, die Sicherungsdatei während eines Sicherungsvorgangs zu verschlüsseln.  Es werden mehrere Verschlüsselungsalgorithmen unterstützt, einschließlich AES 128, AES, AES 192 256 und Triple DES. Sie müssen entweder ein Zertifikat oder einen asymmetrischen Schlüssel verwenden, um während des Sicherungsvorgangs eine Verschlüsselung auszuführen. Weitere Informationen finden Sie unter [Verschlüsseln der Sicherung](../relational-databases/backup-restore/backup-encryption.md).  
   
   
 ###  <a name="CE"></a> Neues Design für die Schätzung der Kardinalität  
- Die Logik der kardinalitätsschätzung, wird im neu entworfenen [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] zur Verbesserung der Qualität von Abfrageplänen und somit auch um die abfrageleistung zu verbessern. Die neue Kardinalitätsschätzung umfasst Annahmen und Algorithmen, die sich optimal mit den heutigen OLTP- und Data Warehouse-Arbeitsauslastungen ergänzen. Sie basiert auf intensiven Forschungen zum Verhalten der Kardinalitätsschätzung in heutigen Arbeitsauslastungen sowie auf unseren eigenen Erkenntnissen, die wir in den letzten 15 Jahren bei der Optimierung der SQL Server-Kardinalitätsschätzung gewonnen haben. Das Feedback unserer Kunden zeigt, dass die meisten Abfragen von den Änderungen profitieren oder mindestens mit gleicher Leistung ausgeführt werden. Bei einer geringen Zahl von Abfragen kann jedoch eine Verschlechterung gegenüber der früheren Kardinalitätsschätzung auftreten. Leistung optimieren und testen die Empfehlungen, finden Sie unter [Kardinalitätsschätzung &#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md).  
+ Die Logik der Kardinalitätsschätzung wurde in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] überarbeitet, um die Qualität von Abfrageplänen und somit die Abfrageleistung zu verbessern. Die neue Kardinalitätsschätzung umfasst Annahmen und Algorithmen, die sich optimal mit den heutigen OLTP- und Data Warehouse-Arbeitsauslastungen ergänzen. Sie basiert auf intensiven Forschungen zum Verhalten der Kardinalitätsschätzung in heutigen Arbeitsauslastungen sowie auf unseren eigenen Erkenntnissen, die wir in den letzten 15 Jahren bei der Optimierung der SQL Server-Kardinalitätsschätzung gewonnen haben. Das Feedback unserer Kunden zeigt, dass die meisten Abfragen von den Änderungen profitieren oder mindestens mit gleicher Leistung ausgeführt werden. Bei einer geringen Zahl von Abfragen kann jedoch eine Verschlechterung gegenüber der früheren Kardinalitätsschätzung auftreten. Leistung optimieren und testen die Empfehlungen, finden Sie unter [Kardinalitätsschätzung &#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md).  
    
   
 ###  <a name="Durability"></a> Verzögerte Dauerhaftigkeit  
@@ -101,7 +100,7 @@ ms.locfileid: "48067026"
   
 -   **Archivierungsdatenkomprimierung**  
   
-     ALTER INDEX … REBUILD verfügt über die neue COLUMNSTORE_ARCHIVE-Datenkomprimierungsoption, mit der die angegebenen Partitionen eines columnstore-Indexes stärker komprimiert werden. Verwenden Sie diese Option bei der Archivierung und in Situationen, in denen es auf eine geringere Datenspeichergröße und nicht auf den zusätzlichen Zeitaufwand für das Speichern und Abrufen ankommt. Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
+     ALTER INDEX ... REBUILD verfügt über die neue COLUMNSTORE_ARCHIVE-Datenkomprimierungsoption, mit der die angegebenen Partitionen eines columnstore-Indexes stärker komprimiert werden. Verwenden Sie diese Option bei der Archivierung und in Situationen, in denen es auf eine geringere Datenspeichergröße und nicht auf den zusätzlichen Zeitaufwand für das Speichern und Abrufen ankommt. Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
    
   
 ###  <a name="Buffer"></a> Pufferpoolerweiterung  
@@ -119,7 +118,7 @@ ms.locfileid: "48067026"
   
   
 ###  <a name="OnlineEvent"></a> Online Index Operation-Ereignisklasse  
- Der Statusbericht für die online Index Operation-Ereignisklasse enthält jetzt zwei neue Datenspalten: **PartitionId** und **PartitionNumber**. Weitere Informationen finden Sie unter [Progress Report: Online Index Operation-Ereignisklasse](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
+ Der Statusbericht für die Online Index Operation-Ereignisklasse enthält jetzt zwei neue Datenspalten: **PartitionId** und **PartitionNumber**. Weitere Informationen finden Sie unter [Progress Report: Online Index Operation-Ereignisklasse](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
   
   
 ###  <a name="Compat"></a> Datenbank-Kompatibilitätsgrad  
@@ -130,8 +129,8 @@ ms.locfileid: "48067026"
 ### <a name="inline-specification-of-clustered-and-nonclustered"></a>Inlinespezifikation von CLUSTERED und NONCLUSTERED  
  Die Inlinespezifikation von `CLUSTERED`- und `NONCLUSTERED`-Indizes ist jetzt für datenträgerbasierte Tabellen zulässig. Das Erstellen einer Tabelle mit Inlineindizes entspricht der Ausgabe einer CREATE TABLE-Anweisung gefolgt von den entsprechenden `CREATE INDEX`-Anweisungen. Eingeschlossene Spalten und Filterbedingungen werden bei Inlineindizes nicht unterstützt.  
   
-### <a name="select--into"></a>SELECT … INTO  
- Die `SELECT … INTO`-Anweisung wurde verbessert und kann nun parallel ausgeführt werden. Der Kompatibilitätsgrad der Datenbank muss auf mindestens 110 festgelegt werden.  
+### <a name="select--into"></a>AUSWÄHLEN... INTO  
+ Die `SELECT ... INTO`-Anweisung wurde verbessert und kann nun parallel ausgeführt werden. Der Kompatibilitätsgrad der Datenbank muss auf mindestens 110 festgelegt werden.  
   
 ### <a name="includetsqlincludestsql-mdmd-enhancements-for-in-memory-oltp"></a>[!INCLUDE[tsql](../includes/tsql-md.md)]-Erweiterungen für In-Memory OLTP  
  Informationen zu den [!INCLUDE[tsql](../includes/tsql-md.md)] Änderungen zur Unterstützung von In-Memory-OLTP finden Sie unter [Transact-SQL-Unterstützung für In-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md).  

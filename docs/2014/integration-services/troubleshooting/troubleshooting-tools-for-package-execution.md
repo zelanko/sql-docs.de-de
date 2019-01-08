@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -17,12 +16,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34270698b6035f7646d9482a82746c4ccff09d78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca170bbae969db8610e1e0ec6e61e3e68fa905f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132410"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377632"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Behandlung von Problemen mit Paketausführungstools
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Funktionen und Tools, die Sie zur Behandlung von Problemen beim Ausführen von Paketen nach deren Fertigstellung und Bereitstellung verwenden können.  
@@ -55,7 +54,7 @@ ms.locfileid: "48132410"
   
      **Fügen Sie die Beschreibung des Fehlers**. Die Fehlerbeschreibungen können sehr leicht mithilfe der Skriptkomponente nachgeschlagen werden. Weitere Informationen finden Sie unter [Erweitern einer Fehlerausgabe für die Skriptkomponente](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
-     **Fügen Sie den Namen der Fehlerspalte**. Das Abrufen des zur Spalten-ID gehörenden Spaltennamens (die Spalten-ID wird von der Fehlerausgabe gespeichert) mithilfe der Skriptkomponente ist nicht einfach und erfordert zusätzliche Arbeitsschritte. Jede Spalten-ID in einem Datenfluss ist innerhalb dieses Datenflusstasks eindeutig und wird zur Entwurfszeit permanent im Paket gespeichert. Folgende Vorgehensweise wird zum Hinzufügen des Spaltennamens zur Fehlerausgabe empfohlen. Ein Beispiel zum Verwenden dieses Ansatzes finden Sie unter [Hinzufügen des fehlerspaltennamens zu einer Fehlerausgabe](http://go.microsoft.com/fwlink/?LinkId=261546) auf dougbert.com.  
+     **Fügen Sie den Namen der Fehlerspalte**. Das Abrufen des zur Spalten-ID gehörenden Spaltennamens (die Spalten-ID wird von der Fehlerausgabe gespeichert) mithilfe der Skriptkomponente ist nicht einfach und erfordert zusätzliche Arbeitsschritte. Jede Spalten-ID in einem Datenfluss ist innerhalb dieses Datenflusstasks eindeutig und wird zur Entwurfszeit permanent im Paket gespeichert. Folgende Vorgehensweise wird zum Hinzufügen des Spaltennamens zur Fehlerausgabe empfohlen. Ein Beispiel zum Verwenden dieses Ansatzes finden Sie unter [Hinzufügen des fehlerspaltennamens zu einer Fehlerausgabe](https://go.microsoft.com/fwlink/?LinkId=261546) auf dougbert.com.  
   
     1.  **Erstellen eine Nachschlagetabelle für Spaltennamen**. Erstellen Sie eine separate Anwendung, die die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-API zum Ausführen einer Iteration durch alle gespeicherten Pakete, alle Datenflüsse im Paket, alle Objekte im Datenfluss sowie alle Eingaben und Ausgaben im Datenflussobjekt verwendet. Die Anwendung sollte die Spalten-IDs und die Namen aller Spalten in einer Nachschlagetabelle zusammen mit der ID des übergeordneten Datenflusstasks und der ID des Pakets permanent speichern.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48132410"
   
     3.  **Erwägen der Aufzeichnung von Zeilenanzahldaten**. Erwägen Sie, eine separate Tabelle mit Informationen zur Zeilenanzahl zu erstellen, in der jede Paketausführungsinstanz über ihre ExecutionID identifiziert wird. Verwenden Sie die Transformation für Zeilenanzahl, um an wichtigen Stellen im Datenfluss die Zeilenanzahl in einer Reihe von Variablen zu speichern. Verwenden Sie den Task 'SQL ausführen', um nach Beendigung des Datenflusses die Variablenreihe zur späteren Analyse und Berichterstattung in eine Zeile der Tabelle einzufügen.  
   
-     Weitere Informationen zu dieser Methode finden Sie im Abschnitt „ETL Auditing and Logging“ im [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Whitepaper [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602).  
+     Weitere Informationen zu diesem Verfahren finden Sie im Abschnitt "ETL Auditing and Logging" in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Whitepaper [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Behandlung von Problemen bei der Paketausführung mithilfe von Debugdumpdateien  
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Debugdumpdateien erstellen, die Informationen über die Ausführung eines Pakets enthalten. Weitere Informationen finden Sie unter [Generieren von Dumpdateien für die Paketausführung](generating-dump-files-for-package-execution.md).  
@@ -94,12 +93,12 @@ ms.locfileid: "48132410"
 ## <a name="troubleshoot-run-time-validation-issues"></a>Behandlung von Problemen bei der Überprüfung zur Laufzeit  
  Es kann vorkommen, dass Sie keine Verbindung mit den Datenquellen herstellen können oder Teile des Pakets erst nach der Ausführung von vorausgehenden Tasks im Paket zur Laufzeit überprüft werden können. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt die folgenden Funktionen bereit, mit denen Sie die Überprüfungsfehler, die in solchen Fällen ausgelöst werden, vermeiden können:  
   
--   **Konfigurieren der DelayValidation-Eigenschaft für Paketelemente, die beim Laden des Pakets noch nicht gültig sind**. Sie können festlegen, `DelayValidation` zu `True` für Paketelemente, deren Konfiguration nicht gültig ist, zum Verhindern von Überprüfungsfehlern beim Laden des Pakets ist. Ein Beispiel hierfür wäre ein Datenflusstask, der eine Zieltabelle verwendet, die erst zur Laufzeit durch einen Task 'SQL ausführen' erstellt wird. Die `DelayValidation` Eigenschaft kann aktiviert werden, auf Paketebene oder auf der Ebene der einzelnen Tasks und Container, die das Paket enthält.  
+-   **Konfigurieren der DelayValidation-Eigenschaft für Paketelemente, die beim Laden des Pakets noch nicht gültig sind**. Zum Verhindern von Überprüfungsfehlern beim Laden des Pakets können Sie für Paketelemente, deren Konfigurationen zur Entwurfszeit ungültig sind, `DelayValidation` auf `True` festlegen. Ein Beispiel hierfür wäre ein Datenflusstask, der eine Zieltabelle verwendet, die erst zur Laufzeit durch einen Task 'SQL ausführen' erstellt wird. Die `DelayValidation`-Eigenschaft kann auf Paketebene oder auf der Ebene der einzelnen, in den Paketen enthaltenen Tasks und Container aktiviert werden.  
   
-     Die `DelayValidation` Eigenschaft kann festgelegt werden auf einen Datenflusstask, jedoch nicht für einzelne Datenflusskomponenten verbunden. Sie erreichen für einzelne Datenflusskomponenten ein ähnliches Ergebnis, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>-Eigenschaft der Datenflusskomponenten auf `false` festlegen. Wenn der Wert dieser Eigenschaft ist jedoch `false`, die Komponente ist nicht über Änderungen an den Metadaten externer Datenquellen. Bei Festlegung auf `true`, <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> Eigenschaft kann verhindern helfen, blockierenden Probleme, die aufgrund von Sperren in der Datenbank, insbesondere, wenn das Paket Transaktionen verwendet wird.  
+     Die `DelayValidation`-Eigenschaft kann für einen Datenflusstask, jedoch nicht für einzelne Datenflusskomponenten festgelegt werden. Sie erreichen für einzelne Datenflusskomponenten ein ähnliches Ergebnis, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>-Eigenschaft der Datenflusskomponenten auf `false` festlegen. Wenn jedoch der Wert dieser Eigenschaft auf `false` festgelegt ist, erkennt die Komponente keine Änderungen der Metadaten externer Datenquellen. Wenn der Wert auf `true` festgelegt ist, können Sie Blockierungsprobleme vermeiden, die durch Verwendung der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>-Eigenschaft durch Sperren in der Datenbank verursacht werden, besonders wenn das Paket Transaktionen verwendet.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>Behandlung von Problemen mit Berechtigungen zur Laufzeit  
- Wenn beim Versuch, bereitgestellte Pakete mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents auszuführen, Fehler auftreten, verfügen die vom Agent verwendeten Konten möglicherweise nicht über die erforderlichen Berechtigungen. Informationen zur Fehlerbehebung bei Paketen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträgen ausgeführt werden, finden Sie unter [Beim Aufrufen aus einem SQL Server-Agentauftragsschritt wird ein SSIS-Paket nicht ausgeführt](http://support.microsoft.com/kb/918760). Weitere Informationen zum Ausführen von Paketen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentaufträgen finden Sie unter [Aufträge des SQL Server-Agents für Pakete](../packages/sql-server-agent-jobs-for-packages.md).  
+ Wenn beim Versuch, bereitgestellte Pakete mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents auszuführen, Fehler auftreten, verfügen die vom Agent verwendeten Konten möglicherweise nicht über die erforderlichen Berechtigungen. Informationen zur Fehlerbehebung bei Paketen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Aufträgen ausgeführt werden, finden Sie unter [Beim Aufrufen aus einem SQL Server-Agentauftragsschritt wird ein SSIS-Paket nicht ausgeführt](https://support.microsoft.com/kb/918760). Weitere Informationen zum Ausführen von Paketen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentaufträgen finden Sie unter [Aufträge des SQL Server-Agents für Pakete](../packages/sql-server-agent-jobs-for-packages.md).  
   
  Für die Verbindung mit Excel- oder Access-Datenquellen erfordert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ein Konto mit entsprechenden Berechtigungen zum Lesen, Schreiben, Erstellen und Löschen temporärer Dateien in dem Ordner, der durch die TEMP- und TMP-Umgebungsvariablen angegeben wird.  
   
@@ -114,6 +113,6 @@ ms.locfileid: "48132410"
  [Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag [Adding the error column name to an error output](http://go.microsoft.com/fwlink/?LinkId=261546)(Hinzufügen des Fehlerspaltennamens zu einer Fehlerausgabe) auf dougbert.com.  
+ Blogeintrag [Adding the error column name to an error output](https://go.microsoft.com/fwlink/?LinkId=261546)(Hinzufügen des Fehlerspaltennamens zu einer Fehlerausgabe) auf dougbert.com.  
   
   

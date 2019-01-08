@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading clusters
@@ -17,12 +16,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906490"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363712"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Aktualisieren einer SQL Server-Failoverclusterinstanz (Setup)
   Sie können einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster mithilfe des Installations-Assistenten für [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] oder mithilfe einer Eingabeaufforderung auf einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster aktualisieren.  
@@ -46,11 +45,11 @@ ms.locfileid: "48906490"
   
 -   Damit die Visual Studio-Komponente ordnungsgemäß installiert werden kann, erfordert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Installation eines Updates. Das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Setup überprüft, ob dieses Update vorhanden ist, und fordert Sie zum Herunterladen und Installieren des Updates auf, bevor Sie die Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fortsetzen. Um Unterbrechungen beim [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup zu vermeiden, können Sie das Update herunterladen und installieren, bevor Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup ausführen (oder Sie installieren alle auf Windows Update verfügbaren Updates für .NET 3.5 SP1):  
   
-     Bei der Installation [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] auf einem Computer mit dem Betriebssystem Windows Server 2008 SP2, erhalten Sie das erforderliche Update [hier](http://go.microsoft.com/fwlink/?LinkId=198093)  
+     Bei der Installation [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] auf einem Computer mit dem Betriebssystem Windows Server 2008 SP2, erhalten Sie das erforderliche Update [hier](https://go.microsoft.com/fwlink/?LinkId=198093)  
   
      Wenn Sie [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] auf einem Computer mit dem Betriebssystem [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 oder [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] SP1 installieren, ist dieses Update bereits enthalten.  
   
--   .NET Framework 3.5 SP1 wird vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Setup nicht mehr installiert; diese Version kann jedoch für die Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] erforderlich sein. Weitere Informationen finden Sie in den [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][Versionshinweise](http://go.microsoft.com/fwlink/?LinkId=296445).  
+-   .NET Framework 3.5 SP1 wird vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Setup nicht mehr installiert; diese Version kann jedoch für die Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] erforderlich sein. Weitere Informationen finden Sie in den [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][Versionshinweise](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
 -   Bei lokalen Installationen müssen Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie auf der Remotefreigabe ein Domänenkonto mit Leseberechtigungen verwenden.  
   
@@ -79,9 +78,9 @@ ms.locfileid: "48906490"
 ## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>Aktualisieren auf einen [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]-Multisubnetz-Failovercluster  
  Es gibt zwei mögliche Szenarien für Upgrades:  
   
-1.  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster ist derzeit für ein einziges Subnetz konfiguriert: Sie müssen zuerst den vorhandenen Cluster auf [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] aktualisieren, indem Sie Setup starten und die erforderlichen Upgradeschritte ausführen. Fügen Sie nach Abschluss des Upgradeprozesses für den vorhandenen Failovercluster mithilfe der AddNode-Funktion einen Knoten hinzu, der sich in einem anderen Subnetz befindet. Bestätigen Sie auf der Konfigurationsseite des Clusternetzwerks die Änderung der IP-Adressabhängigkeit in OR. Sie verfügen jetzt über einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Multisubnetz-Failovercluster.  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster ist derzeit in einem einzelnen Subnetz konfiguriert: Sie müssen zuerst den vorhandenen Cluster auf [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] aktualisieren, indem Sie Setup starten und die erforderlichen Upgradeschritte ausführen. Fügen Sie nach Abschluss des Upgradeprozesses für den vorhandenen Failovercluster mithilfe der AddNode-Funktion einen Knoten hinzu, der sich in einem anderen Subnetz befindet. Bestätigen Sie auf der Konfigurationsseite des Clusternetzwerks die Änderung der IP-Adressabhängigkeit in OR. Sie verfügen jetzt über einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Multisubnetz-Failovercluster.  
   
-2.  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster ist derzeit unter Verwendung von Stretch-V-LAN-Technologie für mehrere Subnetze konfiguriert: Sie müssen zuerst den vorhandenen Cluster auf [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] aktualisieren. Da mit der Stretch-V-LAN-Technologie ein einzelnes Subnetz konfiguriert wird, muss die Netzwerkkonfiguration in mehrere Subnetze geändert werden, und die Abhängigkeit der IP-Adressressource muss mithilfe des Failovercluster-Manager von Windows in OR geändert werden.  
+2.  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster ist derzeit unter Verwendung von Stretch-V-LAN-Technologie für mehrere Subnetze konfiguriert:  Sie müssen zuerst den vorhandenen Cluster auf [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] aktualisieren. Da mit der Stretch-V-LAN-Technologie ein einzelnes Subnetz konfiguriert wird, muss die Netzwerkkonfiguration in mehrere Subnetze geändert werden, und die Abhängigkeit der IP-Adressressource muss mithilfe des Failovercluster-Manager von Windows in OR geändert werden.  
   
 ###  <a name="BestPractices"></a> Bewährte Methoden vor dem Upgrade eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failovercluster  
  Um unerwartete Ausfallzeiten aufgrund eines Neustarts auszuschließen, installieren Sie vor dem Aktualisieren der Clusterknoten das Updatepaket (kein Neustart erforderlich) für .NET Framework 4.0 in allen Failoverclusterknoten. Für die Vorinstallation der erforderlichen Komponenten werden folgende Schritte empfohlen:  
@@ -104,7 +103,7 @@ ms.locfileid: "48906490"
   
 #### <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>So aktualisieren Sie einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster  
   
-1.  Legen Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installationsmedium ein, und doppelklicken Sie im Stammordner auf Setup.exe. Wenn Sie eine Installation über eine Netzwerkfreigabe ausführen möchten, wechseln Sie in der Freigabe zum Stammordner, und doppelklicken Sie auf Setup.exe. Möglicherweise werden Sie aufgefordert, die erforderlichen Komponenten zu installieren, falls sie nicht bereits installiert wurden.  
+1.  Legen Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationsmedium ein, und doppelklicken Sie im Stammordner auf Setup.exe. Wenn Sie eine Installation über eine Netzwerkfreigabe ausführen möchten, wechseln Sie in der Freigabe zum Stammordner, und doppelklicken Sie auf Setup.exe. Möglicherweise werden Sie aufgefordert, die erforderlichen Komponenten zu installieren, falls sie nicht bereits installiert wurden.  
   
 2.  > [!IMPORTANT]  
     >  Weitere Informationen zu den Schritten 3 und 4 finden Sie unter den [bewährte Methoden vor dem Upgrade eines Failoverclusters](#BestPractices) Abschnitt.  
@@ -153,7 +152,7 @@ ms.locfileid: "48906490"
   
 21. Wiederholen Sie die Schritte 1 bis 21 in allen anderen Knoten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failoverclusters, um den Upgradevorgang abzuschließen.  
   
-## <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>So aktualisieren Sie auf einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Multisubnetz-Failovercluster  
+## <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>So aktualisieren Sie auf einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Multisubnetz-Failovercluster  
   
 #### <a name="to-upgrade-to-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster-existing-includessnoversionincludesssnoversion-mdmd-cluster-is-a-non-multi-subnet-cluster"></a>Aktualisieren auf einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Multisubnetz-Failovercluster (vorhandener [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Cluster ist kein Multisubnetzcluster)  
   

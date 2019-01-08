@@ -1,22 +1,22 @@
 ---
-title: 'Gewusst wie: Aufrufen von Java aus SQL | Microsoft-Dokumentation'
+title: 'Gewusst wie: Aufrufen von Java aus SQL – SQL Server Machine Learning Services'
 description: Erfahren Sie, wie Sie Java-Klassen von SQL Server gespeicherte Prozeduren, die mit der Programmiersprache Java programming Language-Erweiterung in SQL Server-2019 aufrufen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08af5a18b827c783515ecd3b4ba4a802c3472f93
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 438c1096a933932e08c5cbf21722ba75874bb1dc
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715257"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644759"
 ---
-# <a name="how-to-call-java-from-sql-server-2019"></a>Gewusst wie: Aufrufen von Java aus SQL Server-2019
+# <a name="how-to-call-java-from-sql-server-2019-preview"></a>Gewusst wie: Aufrufen von Java aus SQL Server-2019 (Vorschau)
 
 Bei Verwendung der [Java-spracherweiterung](extension-java.md), [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) System gespeicherte Prozedur ist die Schnittstelle zum Aufrufen von Java Runtime verwendet. Berechtigungen für die Datenbank gelten für Ausführung von Java-Code.
 
@@ -33,7 +33,7 @@ Dieser Artikel beschreibt die Implementierungsdetails für Java-Klassen und Meth
 * "Params" wird zum Übergeben von Parametern an eine Java-Klasse. Aufrufen einer Methode, die Argumente erfordert wird nicht unterstützt Parameter, die einzige Möglichkeit, Argumentwerte an die Methode übergeben werden. 
 
 > [!Note]
-> In diesem Hinweis restates unterstützten und nicht unterstützten Vorgänge, die spezifisch für Java in CTP 2.0.
+> In diesem Hinweis restates unterstützten und nicht unterstützten Vorgänge, die spezifisch für Java in CTP-Version 2.x.
 > * Bei der gespeicherten Prozedur werden die Eingabeparameter unterstützt. Output-Parameter sind nicht auf.
 > * Streaming mit dem Parameter Sp_execute_external_script **@r_rowsPerRead** wird nicht unterstützt.
 > * Partitionierung mit **@input_data_1_partition_by_columns** wird nicht unterstützt.
@@ -41,7 +41,7 @@ Dieser Artikel beschreibt die Implementierungsdetails für Java-Klassen und Meth
 
 ## <a name="call-spexecuteexternalscript"></a>Aufrufen von sp_execute_external_script
 
-Die [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) System gespeicherte Prozedur ist die Schnittstelle zum Aufrufen von Java Runtime verwendet. Das folgende Beispiel zeigt eine Sp_execute_external_script mit Java-Erweiterung, und denselben Parametern für die Angabe von Pfad, Skripts und Ihren benutzerdefinierten Code.
+Sowohl Windows und Linux, die für die [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) System gespeicherte Prozedur ist die Schnittstelle zum Aufrufen von Java Runtime verwendet. Das folgende Beispiel zeigt eine Sp_execute_external_script mit Java-Erweiterung, und denselben Parametern für die Angabe von Pfad, Skripts und Ihren benutzerdefinierten Code.
 
 ```sql
 DECLARE @myClassPath nvarchar(30)
@@ -65,14 +65,14 @@ EXEC sp_execute_external_script
 
 Sobald Sie Ihre Java-Klasse oder Klassen kompiliert und die .class Dateien oder den JAR-Dateien in Ihre Java-Classpath platziert haben, haben Sie zwei Optionen für die Bereitstellung der SQL Server-Java-Erweiterung in des Klassenpfads:
 
-**Option 1: Als Parameter übergeben.**
+**Option 1: Als Parameter übergeben**
 
 Ein Ansatz für die Angabe eines Pfads in kompiliertem Code ist durch Festlegen des KLASSENPFADS als Eingabeparameter an die Prozedur Sp_execute_external_script. Die [Java-Beispiel](java-first-sample.md#call-method) wird diese Technik veranschaulicht. Wenn Sie diesen Ansatz wählen und mehrere Pfade umfassen, achten Sie darauf, dass Sie das Pfadtrennzeichen zu verwenden, das für das zugrunde liegende Betriebssystem gültig ist:
 
 * Trennen Sie die Pfade in den KLASSENPFAD unter Linux mit Doppelpunkt ":".
 * Auf Windows, trennen Sie die Pfade in CLASSPATH mit einem Semikolon ";"
 
-**Option 2: Registrieren einer Systemvariablen**
+**Option 2: Registrieren Sie eine Systemvariable**
 
 Ebenso, wie Sie eine Systemvariable für das JDK ausführbare Dateien erstellt haben, können Sie eine Systemvariable für Codepfade erstellen. Erstellt eine Systemumgebungsvariable "CLASSPATH" dazu
 
@@ -152,6 +152,8 @@ Diese NullMap muss aktualisiert werden, mit der erwarteten Anzahl von Spalten un
 ```java
 public static boolean[][] outputNullMap
 ```
+<a name="create-external-library"></a>
+
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -27,12 +26,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fe44b790fbf99811761041f4b81eeb3b48e96da
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d128085012c0ef3a9bc58b147f982a26d2c094b8
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641537"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591924"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   Die `sqlcmd` Dienstprogramm ermöglicht Ihnen die Eingabe [!INCLUDE[tsql](../includes/tsql-md.md)] Anweisungen, Systemprozeduren und Skriptdateien an der Eingabeaufforderung Dateien **Abfrage-Editor** im SQLCMD-Modus, in einer Windows-Skriptdatei oder in einem Auftragsschritt Betriebssystems (Cmd.exe), der eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Auftrag. Dieses Hilfsprogramm verwendet zum Ausführen von [!INCLUDE[tsql](../includes/tsql-md.md)]-Batches ODBC.  
@@ -81,10 +80,10 @@ ms.locfileid: "51641537"
  **-C**  
  Dieser Schalter wird vom Client verwendet, um ihn so zu konfigurieren, dass er dem Serverzertifikat ohne Überprüfung implizit vertraut. Diese Option entspricht der ADO.NET-Option `TRUSTSERVERCERTIFICATE = true`.  
   
- **-d** *db_name*  
+ **-d** _db_name_  
  Probleme ein `USE` *Db_name* -Anweisung, wenn Sie starten `sqlcmd`. Durch diese Option wird die `sqlcmd`-Skriptvariable SQLCMDDBNAME festgelegt. Hierdurch wird die Ausgangsdatenbank angegeben. Der Standardwert ist die Standarddatenbank-Eigenschaft der Anmelde-ID. Wenn die Datenbank nicht vorhanden ist, wird eine Fehlermeldung generiert und `sqlcmd` beendet.  
   
- **-l** *Anmeldungstimeout*  
+ **-l** _Anmeldungstimeout_  
  Gibt an, wie viele Sekunden bei der Herstellung einer Verbindung mit einem Server verstreichen dürfen, bevor für eine `sqlcmd`-Anmeldung beim ODBC-Treiber ein Timeout eintritt. Durch diese Option wird die `sqlcmd`-Skriptvariable SQLCMDLOGINTIMEOUT festgelegt. Der Standardwert für das Timeout eines `sqlcmd`-Anmeldevorgangs ist acht Sekunden. Der Timeoutwert für den Anmeldungszeitraum muss eine Zahl zwischen 0 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `sqlcmd` eine Fehlermeldung. Mit dem Wert 0 wird eine unbegrenzte Wartezeit festgelegt.  
   
  **-E**  
@@ -92,19 +91,19 @@ ms.locfileid: "51641537"
   
  Die Option **-E** ignoriert mögliche Umgebungsvariableneinstellungen für Benutzernamen und Kennwörter, z.B. SQLCMDPASSWORD. Wird die Option **-E** zusammen mit der Option **-U** oder der Option **-P** verwendet, wird eine Fehlermeldung generiert.  
   
- **-H** *Arbeitsstationsname*  
+ **-H** _Arbeitsstationsname_  
  Der Name einer Arbeitsstation. Durch diese Option wird die `sqlcmd`-Skriptvariable SQLCMDWORKSTATION festgelegt. Der Name der Arbeitsstation wird in der **hostname**-Spalte der **sys.processes**-Katalogsicht aufgeführt, und der Name kann mithilfe der gespeicherten Prozedur **sp_who** zurückgegeben werden. Wenn diese Option nicht angegeben ist, wird standardmäßig der Name des aktuellen Computers angenommen. Mithilfe dieses Namens können verschiedene `sqlcmd`-Sitzungen identifiziert werden.  
   
- **-K** *Anwendungszweck*  
- Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben wird, unterstützt das sqlcmd-Hilfsprogramm keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [aktive sekundäre Replikate: lesbare sekundäre Replikate](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ **-K** _Anwendungszweck_  
+ Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben wird, unterstützt das sqlcmd-Hilfsprogramm keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [aktive sekundäre Replikate: Lesbare sekundäre Replikate](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  `-M` *multisubnet_failover*  
- Geben Sie immer `-M` an, wenn Sie eine Verbindung mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Verfügbarkeitsgruppenlistener oder einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Failovercluster-Verfügbarkeitsgruppenlistener herstellen. `-M` gewährleistet eine schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server. Wenn `–M` nicht angegeben ist, wird `-M` deaktiviert. Weitere Informationen zu [!INCLUDE[ssHADR](../includes/sshadr-md.md)], finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQLServer&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), und [aktive sekundäre Replikate: lesbare sekundäre Replikate ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
+ Geben Sie immer `-M` an, wenn Sie eine Verbindung mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Verfügbarkeitsgruppenlistener oder einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Failovercluster-Verfügbarkeitsgruppenlistener herstellen. `-M` gewährleistet eine schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server. Wenn `-M` nicht angegeben ist, wird `-M` deaktiviert. Weitere Informationen zu [!INCLUDE[ssHADR](../includes/sshadr-md.md)], finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQLServer&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), und [aktive sekundäre Replikate: Lesbare sekundäre Replikate](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
   
  **-N**  
  Dieser Schalter wird vom Client verwendet, um eine verschlüsselte Verbindung anzufordern.  
   
- **-P** *Kennwort*  
+ **-P** _Kennwort_  
  Ein vom Benutzer angegebenes Kennwort. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Wenn die Option-u verwendet wird und die **-P** Option wird nicht verwendet werden soll, und die SQLCMDPASSWORD-Umgebungsvariable nicht festgelegt wurde, `sqlcmd` fordert den Benutzer ein Kennwort. Wenn die **-P** Option wird am Ende der Befehlszeile ohne Angabe eines Kennworts verwendet `sqlcmd` das Standardkennwort (NULL).  
   
 > [!IMPORTANT]  
@@ -136,19 +135,19 @@ ms.locfileid: "51641537"
   
  Werden nach der Option **-P** mehrere Argumente angegeben, wird eine Fehlermeldung generiert und das Programm beendet.  
   
- **-S** [*Protokoll*:]*Server*[**\\***Instance_name*] [**, ***Port*]  
+ **-S** [*Protokoll*:]*Servername*[**\\**_Instanzname_][**,**_Port_]  
  Gibt die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz an, mit der eine Verbindung hergestellt wird. Durch die Option wird die `sqlcmd`-Skriptvariable SQLCMDSERVER festgelegt.  
   
- Geben Sie *Servername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Servercomputer herzustellen. Geben Sie *Server_name* [**\\*** Instance_name* ] für die Verbindung mit einer benannten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Servercomputer. Wenn kein Servercomputer angegeben wird, stellt `sqlcmd` eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, beim Ausführen von `sqlcmd` von einem Remotecomputer im Netzwerk.  
+ Geben Sie *Servername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Servercomputer herzustellen. Geben Sie *Servername* [**\\**_Instanzname_] an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Servercomputer herzustellen. Wenn kein Servercomputer angegeben wird, stellt `sqlcmd` eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, beim Ausführen von `sqlcmd` von einem Remotecomputer im Netzwerk.  
   
  *Protokoll* kann `tcp` (TCP/IP), `lpc` (shared Memory) oder `np` (named Pipes).  
   
- Wenn Sie keinen angeben einer *Servername* [**\\*** Instance_name* ] beim Starten `sqlcmd`, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] überprüft und verwendet die SQLCMDSERVER-Umgebungsvariable.  
+ Wenn Sie nicht angeben einer *Server_name* [ **\\** _Instance_name_ ] beim Starten `sqlcmd`, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] überprüft und verwendet die SQLCMDSERVER-Umgebungsvariable.  
   
 > [!NOTE]  
 >  Die OSQLSERVER-Umgebungsvariable wurde aus Gründen der Abwärtskompatibilität beibehalten. Die SQLCMDSERVER-Umgebungsvariable hat Vorrang vor der OSQLSERVER-Umgebungsvariablen; Dies bedeutet, dass `sqlcmd` und **Osql** kann verwendeten weiter auf die jeweiligen ohne Störungen und, die alte Skripts weiterhin funktionsfähig.  
   
- **-U** *Anmelde-ID*  
+ **-U** _Anmelde-ID_  
  Die Benutzeranmelde-ID.  
   
 > [!NOTE]  
@@ -158,18 +157,18 @@ ms.locfileid: "51641537"
   
  Wird die Option **-U** zusammen mit der Option **-E** verwendet (weiter unten in diesem Thema beschrieben), wird eine Fehlermeldung generiert. Werden nach der Option **-U** mehrere Argumente angegeben, wird eine Fehlermeldung generiert und das Programm beendet.  
   
- **-z** *neues_Kennwort*  
+ **-z** _neues_Kennwort_  
  Kennwort ändern:  
   
  `sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd`  
   
- **-Z** *neues_Kennwort*  
+ **-Z** _neues_Kennwort_  
  Kennwort ändern und beenden:  
   
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **Eingabe-/Ausgabeoptionen**  
-  **-f** *codepage* | **i:***codepage*[**,o:***codepage*] | **o:***codepage*[**,i:*** codepage*]  
+  **-f** _Codepage_ | **i:**_Codepage_[**,o:**_Codepage_] | **o:**_Codepage_[**,i:**_Codepage_]  
  Gibt die Eingabe- und Ausgabecodepages an. Die Codepagenummer ist ein numerischer Wert, der eine installierte Windows-Codepage angibt.  
   
  Regeln zum Konvertieren von Codepages:  
@@ -184,7 +183,7 @@ ms.locfileid: "51641537"
   
  Geben Sie an der Eingabeaufforderung `chcp` ein, um die Codepage von Cmd.exe zu überprüfen.  
   
- **-i** *Input_file*[**, *** input_file2*...]  
+ **-i** _Eingabedatei_[**,**_Eingabedatei2_...]  
  Identifiziert die Datei, die einen Batch mit SQL-Anweisungen oder gespeicherten Prozeduren enthält. Sie können mehrere Dateien angeben, die der Reihe nach gelesen und verarbeitet werden. Verwenden Sie keine Leerzeichen zwischen Dateinamen. `sqlcmd` prüft zunächst, ob alle angegebenen Dateien vorhanden sind. Wenn eine oder mehrere Dateien nicht vorhanden sind, wird `sqlcmd` beendet. Die Optionen -i und -Q/-q schließen sich gegenseitig aus.  
   
  Beispiele für Pfade:  
@@ -197,9 +196,9 @@ ms.locfileid: "51641537"
   
  Dateipfade, die Leerzeichen enthalten, müssen in Anführungszeichen eingeschlossen werden.  
   
- Die Option **-i***input_file* **-I***I input_file* kann mehrmals verwendet werden.  
+ Diese Option kann mehrmals verwendet werden: **-i**_Eingabedatei_ **-I**_I Eingabedatei._  
   
- **-o** *Ausgabedatei*  
+ **-o** _Ausgabedatei_  
  Identifiziert die Datei, in die die Ausgabe von `sqlcmd` geschrieben wird.  
   
  Ist **-u** angegeben, wird die *Ausgabedatei* im Unicode-Format gespeichert. Wenn der Dateiname ungültig ist, wird eine Fehlermeldung generiert und `sqlcmd` beendet. `sqlcmd` unterstützt nicht das gleichzeitige Schreiben mehrerer `sqlcmd`-Prozesse in die gleiche Datei. In diesem Fall wäre die Dateiausgabe beschädigt oder fehlerhaft. Weitere Informationen zu Dateiformaten finden Sie in den Erläuterungen zum Schalter **-f** . Falls sie noch nicht vorhanden ist, wird die Datei erstellt. Eine möglicherweise aus einer früheren `sqlcmd`-Sitzung verbliebene Datei wird überschrieben. Bei der hier angegebenen Datei handelt es sich nicht um die **stdout** -Datei. Wenn eine **stdout** -Datei angegeben ist, wird diese Datei nicht verwendet.  
@@ -218,7 +217,7 @@ ms.locfileid: "51641537"
  Leitet die Ausgabe der Fehlermeldung auf den Bildschirm um (**stderr**). Wenn Sie keinen Parameter bzw. wenn Sie **0**angeben, werden nur Fehlermeldungen mit dem Schweregrad 11 oder höher umgeleitet. Wenn Sie **1**angeben, wird die gesamte Fehlermeldungsausgabe (einschließlich der Ausgabe von PRINT) umgeleitet. Dies hat keine Wirkung, wenn Sie die Option -o verwenden. Standardmäßig werden Meldungen an **stdout**gesendet.  
   
  **-R**  
- Bewirkt, dass `sqlcmd` aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] abgerufene numerische Spalten sowie Währungs-, Datums- und Zeitspalten basierend auf dem Gebietsschema des Clients lokalisiert. Standardmäßig werden diese Spalten entsprechend den regionalen Einstellungen des Servers angezeigt.  
+ Bewirkt, dass `sqlcmd` zum Lokalisieren von numerischen, währungs-, Datums- und Zeitspalten aus abgerufen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] basierend auf dem Gebietsschema des Clients. Standardmäßig werden diese Spalten entsprechend den regionalen Einstellungen des Servers angezeigt.  
   
  **-u**  
  Gibt an, dass *Ausgabedatei* unabhängig vom Format von *Eingabedatei*im Unicode-Format gespeichert wird.  
@@ -230,7 +229,7 @@ ms.locfileid: "51641537"
  **-I**  
  Legt die SET QUOTED_IDENTIFIER-Verbindungsoption auf ON fest. Die Standardeinstellung ist OFF. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).  
   
- **-q"** *Befehlszeilenabfrage* **"**  
+ **-q"** _Befehlszeilenabfrage_ **"**  
  Führt eine Abfrage aus, wenn `sqlcmd` startet, beendet `sqlcmd` jedoch nicht, nachdem die Ausführung der Abfrage abgeschlossen ist. Es können mehrere durch Semikolons getrennte Abfragen ausgeführt werden. Schließen Sie die Abfrage in Anführungszeichen ein, wie im folgenden Beispiel gezeigt wird.  
   
  Geben Sie an der Eingabeaufforderung Folgendes ein:  
@@ -244,7 +243,7 @@ ms.locfileid: "51641537"
   
  Wird `-b` zusammen mit dieser Option angegeben, wird `sqlcmd` mit einem Fehler beendet. Der Schalter `-b` wird weiter unten in diesem Thema beschrieben.  
   
- **-Q"** *Befehlszeilenabfrage* **"**  
+ **-Q"** _Befehlszeilenabfrage_ **"**  
  Führt eine Abfrage aus, wenn `sqlcmd` startet, und beendet `sqlcmd` unmittelbar im Anschluss. Es können mehrere durch Semikolons getrennte Abfragen ausgeführt werden.  
   
  Schließen Sie die Abfrage in Anführungszeichen ein, wie im folgenden Beispiel gezeigt wird.  
@@ -260,14 +259,14 @@ ms.locfileid: "51641537"
   
  Wird `-b` zusammen mit dieser Option angegeben, wird `sqlcmd` mit einem Fehler beendet. Der Schalter `-b` wird weiter unten in diesem Thema beschrieben.  
   
- **-t** *Abfragetimeout*  
+ **-t** _Abfragetimeout_  
  Gibt an, wie viele Sekunden verstreichen, bevor für einen Befehl (oder eine SQL-Anweisung) ein Timeout eintritt. Durch diese Option wird die `sqlcmd`-Skriptvariable SQLCMDSTATTIMEOUT festgelegt. Wenn für *Abfragetimeout* kein Wert angegeben ist, tritt für den Befehl kein Timeout ein. Der Wert für *query**time_out* muss eine Zahl zwischen 1 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `sqlcmd` eine Fehlermeldung.  
   
 > [!NOTE]  
 >  Der tatsächliche Timeoutwert kann einige Sekunden von dem für *Timeout* angegebenen Wert abweichen.  
   
- **-vvar =**  *Wert*[ **var =** *Wert*...]  
- Erstellt eine `sqlcmd`Skriptvariable, die verwendet werden können eine `sqlcmd` Skript. Setzen Sie den Wert in Anführungszeichen, falls er Leerzeichen enthält. Sie können angeben, dass mehrere ***Var***=**"*`values`*"** Werte. Wenn einer der angegebenen Werte fehlerhaft ist, generiert `sqlcmd` eine Fehlermeldung und wird beendet.  
+ **-Vvar =** _Wert_[ **Var =** _Wert_...]  
+ Erstellt eine `sqlcmd`Skriptvariable, die verwendet werden können eine `sqlcmd` Skript. Setzen Sie den Wert in Anführungszeichen, falls er Leerzeichen enthält. Sie können angeben, dass mehrere  **_Var_**=**"*`values`*"** Werte. Wenn einer der angegebenen Werte fehlerhaft ist, generiert `sqlcmd` eine Fehlermeldung und wird beendet.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -277,22 +276,22 @@ ms.locfileid: "51641537"
  Bewirkt, dass `sqlcmd` Skriptvariablen ignoriert. Dies erweist sich als nützlich, wenn ein Skript mehrere INSERT-Anweisungen enthält, die Zeichenfolgen im selben Format wie reguläre Variablen enthalten können, etwa $(*Variablenname*).  
   
  **Formatierungsoptionen**  
-  **-h** *headers*  
+  **-h** _headers_  
  Gibt die Anzahl der Zeilen an, die zwischen den Spaltenüberschriften ausgegeben werden. Standardmäßig werden die Überschriften für jedes Resultset der Abfrage einmal gedruckt. Diese Option wird die `sqlcmd` -Skriptvariable sqlcmdheaders festgelegt. Mit **-1** können Sie angeben, dass keine Überschriften ausgegeben werden sollen. Ein ungültiger Wert bewirkt, dass `sqlcmd` eine Fehlermeldung generiert und dann beendet wird.  
   
  **-k** [**1** | **2**]  
  Entfernt alle Steuerzeichen aus der Ausgabe, z. B. Tabstoppzeichen und Neue-Zeile-Zeichen. Hierdurch bleibt die Spaltenformatierung erhalten, wenn Daten zurückgegeben werden. Wenn 1 angegeben wird, werden die Steuerzeichen durch ein einzelnes Leerzeichen ersetzt. Wenn 2 angegeben wird, werden aufeinanderfolgende Steuerzeichen durch ein einzelnes Leerzeichen ersetzt. **-k** ist der Gleiche wie **-k1**.  
   
- **-s** *col_separator*  
+ **-s** _col_separator_  
  Gibt das Spaltentrennzeichen an. Der Standardwert ist ein Leerzeichen. Durch diese Option wird die `sqlcmd`-Skriptvariable SQLCMDCOLSEP festgelegt. Um Zeichen verwenden zu können, die für das Betriebssystem eine besondere Bedeutung haben, z. B. das kaufmännische Und-Zeichen (&) oder das Semikolon (;), müssen Sie das Zeichen in Anführungszeichen (") einschließen. Das Spaltentrennzeichen kann ein beliebiges 8-Bit-Zeichen sein.  
   
- **-w** *column_width*  
+ **-w** _column_width_  
  Gibt die Bildschirmbreite für die Ausgabe an. Durch diese Option wird die `sqlcmd`-Skriptvariable SQLCMDCOLWIDTH festgelegt. Die Spaltenbreite muss eine Zahl größer als 8 und kleiner als 65536 sein. Wenn die angegebene Spaltenbreite außerhalb dieses Bereichs liegt, generiert `sqlcmd` eine Fehlermeldung. Die Standardbreite beträgt 80 Zeichen. Wenn eine Ausgabezeile die angegebene Spaltenbreite überschreitet, wird sie in die nächste Zeile umbrochen.  
   
  **-W**  
  Mit dieser Option werden nachfolgende Leerzeichen aus einer Spalte entfernt. Verwenden Sie diese Option zusammen mit der Option **-s** , um Daten vorzubereiten, die in eine andere Anwendung exportiert werden sollen. Diese Option kann nicht mit der Option **-y** oder **-Y** verwendet werden.  
   
- **-y** *variable_Länge_Typ_Anzeigebreite*  
+ **-y** _variable_Länge_Typ_Anzeigebreite_  
  Legt die `sqlcmd`-Skriptvariable SQLCMDMAXVARTYPEWIDTH fest. Der Standardwert ist 256. Sie begrenzt die Anzahl der Zeichen, die für die großen Datentypen variabler Länge zurückgegeben werden:  
   
 -   `varchar(max)`  
@@ -318,7 +317,7 @@ ms.locfileid: "51641537"
 > [!IMPORTANT]  
 >  Verwenden Sie die Option **-y 0** mit äußerster Sorgfalt, da sie je nach Größe der zurückgegebenen Daten zu ernsthaften Leistungsproblemen auf dem Server und im Netzwerk führen kann.  
   
- **-Y** *feste_Länge_Typ_Anzeigebreite*  
+ **-Y** _feste_Länge_Typ_Anzeigebreite_  
  Legt die `sqlcmd`-Skriptvariable SQLCMDMAXFIXEDTYPEWIDTH fest. Der Standardwert ist 0 (unbegrenzt). Er begrenzt die Anzahl der zurückgegebenen Zeichen für die folgenden Datentypen:  
   
 -   `char(` *n* `)`, wobei 1 < = n < = 8000  
@@ -339,7 +338,7 @@ ms.locfileid: "51641537"
   
  Wenn das `sqlcmd`-Skript einen falschen Kommentar bzw. einen Syntaxfehler enthält oder eine Skriptvariable fehlt, wird der ERRORLEVEL-Wert 1 zurückgegeben.  
   
- **-m** *error_level*  
+ **-m** _error_level_  
  Steuert, welche Fehlermeldungen an **stdout**gesendet werden. Fehlermeldungen mit einem Schweregrad, der größer oder gleich diesem Wert ist, werden gesendet. Wenn dieser Wert auf **-1**festgelegt ist, werden alle Meldungen gesendet, einschließlich der Informationsmeldungen. Es sind keine Leerzeichen zwischen **-m** und **-1**zulässig. Beispielsweise ist **-m-1** gültig, **-m -1** jedoch nicht.  
   
  Mit dieser Option wird außerdem die `sqlcmd`-Skriptvariable SQLCMDERRORLEVEL festgelegt. Diese Variable hat den Standardwert 0.  
@@ -348,10 +347,10 @@ ms.locfileid: "51641537"
  Steuert den Schweregrad, der zur Festlegung der ERRORLEVEL-Variable verwendet wird. Für Fehlermeldungen mit einem Schweregrad, der größer oder gleich diesem Wert ist, wird ERRORLEVEL festgelegt. Werte kleiner 0 werden als 0 zurückgegeben. Batch- und CMD-Dateien können verwendet werden, um den Wert der ERRORLEVEL-Variable zu testen.  
   
  **Sonstige Optionen**  
-  **-a** *packet_size*  
+  **-a** _packet_size_  
  Fordert ein Paket einer anderen Größe an. Durch diese Option wird die `sqlcmd`-Skriptvariable SQLCMDPACKETSIZE festgelegt. *packet_size* muss einen Wert zwischen 512 und 32767 haben. Der Standardwert lautet 4096. Ein höherer Wert für die Paketgröße kann das Leistungsverhalten beim Ausführen von Skripts verbessern, die zahlreiche SQL-Anweisungen zwischen GO-Befehlen aufweisen. Sie können eine größere Paketgröße anfordern. Wird die Anforderung jedoch verweigert, verwendet `sqlcmd` die Standardeinstellung des Servers für die Paketgröße.  
   
- **-c** *Batchabschlusszeichen*  
+ **-c** _Batchabschlusszeichen_  
  Gibt das Batchabschlusszeichen an. Standardmäßig werden Befehle abgeschlossen und an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gesendet, indem das Wort „GO“ in eine eigene Zeile eingegeben wird. Wenn Sie das Batchabschlusszeichen neu festlegen, dürfen Sie keine für [!INCLUDE[tsql](../includes/tsql-md.md)] reservierten Schlüsselwörter oder Zeichen verwenden, die eine spezielle Bedeutung für das Betriebssystem haben, und zwar auch dann nicht, wenn vor dem Wort bzw. Zeichen ein umgekehrter Schrägstrich steht.  
   
  **-L**[**c**]  
@@ -392,7 +391,7 @@ ms.locfileid: "51641537"
   
 -   **ED**  
   
--   **!!** *Befehl*  
+-   **!!** _Befehl_  
   
  Die Angabe der Option `-X` verhindert, dass Umgebungsvariablen an `sqlcmd` übergeben werden. Sie verhindert darüber hinaus die Ausführung des Startskripts, das mithilfe der SQLCMDINI-Skriptvariablen angegeben wurde. Weitere Informationen zu `sqlcmd` Skriptvariablen finden Sie [Verwenden von Sqlcmd mit Skriptvariablen](../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
@@ -428,7 +427,7 @@ ms.locfileid: "51641537"
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd-Skriptvariablen  
   
-|Variable|Damit verbundene Schalter|R/W|Default|  
+|Variable|Damit verbundene Schalter|R/W|Standard|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
@@ -532,7 +531,7 @@ ms.locfileid: "51641537"
   
  **Ausgabebefehle**  
   **:Error**   
- ***\<***  *Dateiname*  ***>|* STDERR|STDOUT**  
+ **_\<_** _FileName_ **_>|_ STDERR | "STDOUT"**  
  Leitet die gesamte Fehlerausgabe in die mit *Dateiname*angegebene Datei, in **stderr** oder in **stdout**um. Der Befehl **Error** kann mehrmals in einem Skript verwendet werden. Die Fehlerausgabe wird standardmäßig an **stderr**gesendet.  
   
  *file name*  
@@ -544,10 +543,10 @@ ms.locfileid: "51641537"
  **STDOUT**  
  Leitet die Fehlerausgabe in den **stdout** -Datenstrom. Wenn dieser Datenstrom umgeleitet wurde, wird die Fehlerausgabe von dem Ziel empfangen, zu dem der Datenstrom umgeleitet wurde.  
   
- **:Out \<** *Dateiname* **>**| **STDERR**| **STDOUT**  
+ **:Out \<** _Dateiname_ **>**| **STDERR**| **STDOUT**  
  Erstellt und leitet alle Abfrageergebnisse in der bzw. an die durch *Dateiname*angegebene Datei, an **stderr** oder an **stdout**um. Standardmäßig wird die Ausgabe an **stdout**gesendet. Wenn die Datei bereits vorhanden ist, wird sie auf 0 Byte gekürzt. Der Befehl **Out** kann mehrmals in einem Skript verwendet werden.  
   
- **:Perftrace \<** *Dateiname* **>**| **STDERR**| **STDOUT**  
+ **:Perftrace \<** _Dateiname_ **>**| **STDERR**| **STDOUT**  
  Erstellt und leitet alle Informationen zur Leistungsnachverfolgung in der bzw. an die durch *Dateiname*angegebene Datei, an **stderr** oder **stdout**um. Standardmäßig wird die Ausgabe zur Leistungsnachverfolgung an **stdout**gesendet. Wenn die Datei bereits vorhanden ist, wird sie auf 0 Byte gekürzt. Der Befehl **Perftrace** kann mehrmals in einem Skript verwendet werden.  
   
  **Befehle zur Ausführungssteuerung**  
@@ -562,7 +561,7 @@ ms.locfileid: "51641537"
  Bewirkt, dass `sqlcmd` beendet wird.  
   
  [**:**] **BEENDEN**[ **(*`statement`*)** ]  
- Gibt Ihnen die Möglichkeit, das Ergebnis einer SELECT-Anweisung als Rückgabewert von `sqlcmd` zu verwenden. Wenn numerisch, wird die erste Spalte der letzten Ergebniszeile in eine 4 Byte lange ganze Zahl (Long) konvertiert. MS-DOS übergibt das niedrige Byte an den übergeordneten Prozess oder an die Fehlerebene des Betriebssystems. Windows 200x übergibt die gesamte 4 Bytes lange ganze Zahl. Die Syntax ist:  
+ Gibt Ihnen die Möglichkeit, das Ergebnis einer SELECT-Anweisung als Rückgabewert von `sqlcmd` zu verwenden. Wenn numerisch, wird die erste Spalte der letzten Ergebniszeile in eine 4 Byte lange ganze Zahl (Long) konvertiert. MS-DOS übergibt das niedrige Byte an den übergeordneten Prozess oder an die Fehlerebene des Betriebssystems. Windows 200x übergibt die gesamte 4 Bytes lange ganze Zahl. Die Syntax lautet:  
   
  `:EXIT(query)`  
   
@@ -610,13 +609,13 @@ ms.locfileid: "51641537"
  GO signalisiert sowohl das Ende eines Batches als auch die Ausführung aller zwischengespeicherten [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen. Wenn ein Wert für *Anzahl* angegeben ist, werden die zwischengespeicherten Anweisungen so oft, wie durch *Anzahl* angegeben, in Form eines einzigen Batches ausgeführt.  
   
  **Sonstige Befehle**  
-  **:r \<** *filename* **>**  
+  **:r \<** _filename_ **>**  
  Analysiert zusätzliche [!INCLUDE[tsql](../includes/tsql-md.md)] Anweisungen und `sqlcmd` Befehle aus der angegebenen Datei **< *`filename`* >** in den Anweisungscache.  
   
  Wenn die Datei [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen enthält, die nicht von **GO** gefolgt sind, müssen Sie **GO** in der ersten Zeile nach **:r** eingeben.  
   
 > [!NOTE]  
->  **\<** *FileName* **>** gelesen wird, relativ zum Startverzeichnis in der `sqlcmd` ausgeführt wurde.  
+>  **\<** _FileName_ **>** gelesen wird, relativ zum Startverzeichnis in der `sqlcmd` ausgeführt wurde.  
   
  Die Datei wird gelesen und ausgeführt, nachdem ein Batchabschlusszeichen gefunden wurde. Sie können den Befehl **:r** mehrmals verwenden. Die Datei kann beliebige `sqlcmd`-Befehle enthalten, Dies schließt das Batchabschlusszeichen **GO**ein.  
   
@@ -626,7 +625,7 @@ ms.locfileid: "51641537"
  **:Serverlist**  
  Listet die lokal konfigurierten Server sowie die Namen der Server auf, die Nachrichten über das Netzwerk senden.  
   
- **:Connect** *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **: Connect** _Server_name_[**\\**_Instance_name_] [-l *Timeout*] [-U *User_ Namen* [-P *Kennwort*]]  
  Stellt eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] her. Schließt außerdem die aktuelle Verbindung.  
   
  Timeoutoptionen:  
@@ -673,7 +672,7 @@ ms.locfileid: "51641537"
   
 -   Wenn eine Eingabedatei auf einem Remoteserver einen Laufwerksdateipfad wie z. B. :out c:\OutputFile.txt enthält und von `sqlcmd` auf einem lokalen Computer aufgerufen wird, wird die Ausgabedatei auf dem lokalen Computer und nicht auf dem Remoteserver erstellt.  
   
--   Gültige Dateipfade: "c:"\\**<*`filename`*>**, \\ \\< Server\> \\ < Freigabe$ >\\ **< *`filename`* >** und "C:\Some Ordner\\  **<  *`file name`*>**". Verwenden Sie Anführungszeichen, wenn der Pfad ein Leerzeichen enthält.  
+-   Gültige Dateipfade sind: "C:"\\**<*`filename`*>**, \\ \\< Server\>\\< Freigabe$ >\\ **< *`filename`* >** und "C:\Some Ordner\\  **< *`file name`*>**". Verwenden Sie Anführungszeichen, wenn der Pfad ein Leerzeichen enthält.  
   
 -   Mit jeder neuen `sqlcmd`-Sitzung werden eventuell schon vorhandene gleichnamige Dateien überschrieben.  
   
@@ -690,7 +689,7 @@ ms.locfileid: "51641537"
   
  `GO`  
   
- Wenn Sie die EINGABETASTE drücken, wird die folgende Informationsmeldung ausgegeben: "Der Datenbankkontext wurde auf 'AdventureWorks2012' geändert."  
+ Wenn Sie die EINGABETASTE drücken, wird die folgende informationsmeldung ausgegeben: "Geänderte Datenbankkontext wurde auf 'AdventureWorks2012'."  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Ausgabeformat von Transact-SQL-Abfragen  
  `sqlcmd` gibt zuerst eine Spaltenüberschrift aus, die die in der SELECT-Liste angegebenen Spaltennamen enthält. Die Spaltennamen werden durch das SQLCMDCOLSEP-Zeichen getrennt. Standardmäßig handelt es sich hierbei um ein Leerzeichen. Wenn der Spaltenname kürzer als die Spaltenbreite ist, wird die Ausgabe bis zur nächsten Spalte mit Leerzeichen aufgefüllt.  

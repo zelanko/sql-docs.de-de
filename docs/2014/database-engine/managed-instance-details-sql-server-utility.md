@@ -10,12 +10,12 @@ ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5677e7f5dc7a5191b2d39e6100cafee1f38e86ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185450"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374572"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Details zu verwalteten Instanzen (SQL Server-Hilfsprogramm)
   Die Informationen in der Listenansicht Verwaltete Instanzen des Hilfsprogramm-Explorers enthalten Auslastungsdaten für einzelne Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Verlaufsdaten zur CPU-Auslastung sowie Details zur Speicherplatzauslastung auf Dateiebene. Zudem können Sie hier Richtlinienschwellenwerte anzeigen und aktualisieren. Richtlinienschwellenwerte können auf der Ebene von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanzen, per Computer, für Datenbank- und Protokolldateien sowie auf der Ebene von Speichervolumes gesteuert werden. Darüber hinaus können Sie Eigenschaftendetails für einzelne verwaltete Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]anzeigen.  
@@ -68,17 +68,17 @@ ms.locfileid: "48185450"
   
 -   SQL Server-Edition:  
   
--   Gruppiert: (True oder False)  
+-   Gruppiert: ("True" oder "false")  
   
 -   Sicherungsverzeichnis:  
   
 -   Sortierung:  
   
--   Unterscheidung nach Groß-/Kleinschreibung (True oder False)  
+-   Groß-/Kleinschreibung beachten: ("True" oder "false")  
   
 -   Sprache:  
   
--   Letzter Berichtszeitpunkt: Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) in der SQL Server-Onlinedokumentation. Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) in der SQL Server-Onlinedokumentation.  
+-   Zuletzt gemeldet: In dieser Spalte wird UCP lokale Datum und Uhrzeit, die mit dem Datentyp "DateTime". Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) in der SQL Server-Onlinedokumentation. Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) in der SQL Server-Onlinedokumentation.  
   
  Registerkarte CPU-Auslastung  
  Die Registerkarte CPU-Auslastung enthält Vergleichsdiagramme mit Verlaufsdaten für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz und die CPU-Auslastung des Computers.  
@@ -96,7 +96,7 @@ ms.locfileid: "48185450"
 -   1 Jahr, in Intervallen von 1 Monat  
   
  Registerkarte Speicherauslastung  
- Die Registerkarte Speicherauslastung verfügt über eine Strukturansicht, in der Details zur Speicherauslastung angezeigt werden. Die Zeitangaben zeigen das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) in der SQL Server-Onlinedokumentation. Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) in der SQL Server-Onlinedokumentation.  
+ Die Registerkarte Speicherauslastung verfügt über eine Strukturansicht, in der Details zur Speicherauslastung angezeigt werden. Die Zeitangaben zeigen das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) in der SQL Server-Onlinedokumentation. Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) in der SQL Server-Onlinedokumentation.  
   
  Die Informationen in der Anzeige können nach Datenbank oder nach Volume gruppiert werden. Um die Datenbankstrukturansicht zu verwenden, aktivieren Sie im Auswahlbereich **Dateien gruppieren nach** das Optionsfeld **Datenbank** . Um den Status der Speicherauslastung für einzelne Datenbankdateien anzuzeigen, klicken Sie neben einem Datenbanknamen in der Strukturansicht auf das Pluszeichen. Die aufgeführten Datenbankdateien enthalten alle System- und Benutzerdatenbanken, die der verwalteten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] angehören, die Sie in der Listenansicht ausgewählt haben.  
   
@@ -165,13 +165,13 @@ ms.locfileid: "48185450"
   
 -   SQL Server-Edition:  
   
--   Gruppiert: (True oder False)  
+-   Gruppiert: ("True" oder "false")  
   
 -   Sicherungsverzeichnis:  
   
 -   Sortierung:  
   
--   Unterscheidung nach Groß-/Kleinschreibung (True oder False)  
+-   Groß-/Kleinschreibung beachten: ("True" oder "false")  
   
 -   Sprache:  
   

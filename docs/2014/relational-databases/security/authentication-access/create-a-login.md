@@ -22,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c5ee501846746dfc5bb0700039c7bef8a0e15511
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ff712cb5915493f1ff285421bfe3edc8d7981f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190490"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374762"
 ---
 # <a name="create-a-login"></a>Erstellen eines Anmeldenamens
   In diesem Thema wird beschrieben, wie eine Anmeldung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt wird. Ein Anmeldename ist die Identität von Personen oder Prozessen, die eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen.  
@@ -38,7 +38,7 @@ ms.locfileid: "48190490"
   
      [Hintergrund](#Background)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie eine Anmeldung, mit:**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48190490"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung:**  [Erforderliche Schritte nach Erstellen eines Anmeldenamens](#FollowUp)  
+-   **Nachverfolgung:**  [Schritte nach dem Erstellen eines Anmeldenamens](#FollowUp)  
   
 ##  <a name="Background"></a> Hintergrund  
  Eine Anmeldung ist ein Sicherheitsprinzipal oder eine Entität, die von einem sicheren System authentifiziert werden kann. Benutzer benötigen einen Anmeldenamen, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen zu können. Sie können auf Grundlage eines Windows-Prinzipals (z. B. ein Domänenbenutzer oder eine Windows-Domänengruppe) eine Anmeldung erstellen, oder Sie können eine Anmeldung erstellen, die nicht auf einem Windows-Prinzipal (z. B. eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung) basiert.  
@@ -54,32 +54,32 @@ ms.locfileid: "48190490"
 > [!NOTE]  
 >  Für die Verwendung der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung muss [!INCLUDE[ssDE](../../../includes/ssde-md.md)] die Authentifizierung im gemischten Modus verwenden. Weitere Informationen finden Sie unter [Auswählen eines Authentifizierungsmodus](../choose-an-authentication-mode.md).  
   
- Als Sicherheitsprinzipale können Anmeldenamen Berechtigungen gewährt werden. Der Gültigkeitsbereich eines Anmeldenamens ist das gesamte [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Um eine bestimmte Datenbank mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu verbinden, muss ein Anmeldename einem Datenbankbenutzer zugeordnet werden. Die Berechtigungen innerhalb der Datenbank werden dem Datenbankbenutzer, nicht dem Anmeldenamen, gewährt bzw. verweigert. Berechtigungen, die der Gültigkeitsbereich die gesamte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (z. B. die `CREATE ENDPOINT` Berechtigung) kann ein Anmeldename gewährt werden.  
+ Als Sicherheitsprinzipale können Anmeldenamen Berechtigungen gewährt werden. Der Gültigkeitsbereich eines Anmeldenamens ist das gesamte [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Um eine bestimmte Datenbank mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu verbinden, muss ein Anmeldename einem Datenbankbenutzer zugeordnet werden. Die Berechtigungen innerhalb der Datenbank werden dem Datenbankbenutzer, nicht dem Anmeldenamen, gewährt bzw. verweigert. Berechtigungen, bei denen der Gültigkeitsbereich die gesamte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] abdeckt (z. B. die `CREATE ENDPOINT`-Berechtigung), kann ein Anmeldung gewährt werden.  
   
 ##  <a name="Security"></a> Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die `ALTER ANY LOGIN`-Berechtigung oder die `ALTER LOGIN`-Berechtigung für den Server.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 ##### <a name="to-create-a-sql-server-login"></a>So erstellen Sie eine SQL Server-Anmeldung  
   
 1.  Erweitern Sie im Objekt-Explorer den Ordner der Serverinstanz, in dem Sie eine neue Anmeldung erstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sicherheit** , zeigen Sie auf **Neu**, und wählen Sie dann **Anmeldung**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sicherheit**, zeigen Sie auf **Neu**, und wählen Sie dann **Anmeldung...** aus.  
   
-3.  Geben Sie in das Dialogfeld **Anmeldung - Neu** auf der Seite **Allgemein** einen Benutzernamen in das Feld **Anmeldename** ein. Klicken Sie alternativ auf **Suchen** , um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
+3.  Geben Sie in das Dialogfeld **Anmeldung - Neu** auf der Seite **Allgemein** einen Benutzernamen in das Feld **Anmeldename** ein. Klicken Sie alternativ auf **Suchen...**, um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
   
-     Wenn Sie auf **Suchen**klicken:  
+     Wenn Sie auf **Suchen...** klicken:  
   
-    1.  Klicken Sie unter **Wählen Sie den Objekttyp aus**auf **Objekttypen** , um das Dialogfeld **Objekttypen** zu öffnen, und wählen Sie eine der folgenden Optionen aus: **Integrierte Sicherheitsprinzipale**, **Gruppen**und **Benutzer**. Die Optionen**Integrierte Sicherheitsprinzipale** und **Benutzer** sind standardmäßig ausgewählt. Wenn Sie fertig sind, klicken Sie auf **OK**.  
+    1.  Klicken Sie unter **diesen Objekttyp auswählen**, klicken Sie auf **Objekttypen...**  zum Öffnen der **Objekttypen** Dialogfeld und wählen Sie eine oder alle der folgenden: **Integrierte Sicherheitsprinzipale**, **Gruppen**, und **Benutzer**. Die Optionen**Integrierte Sicherheitsprinzipale** und **Benutzer** sind standardmäßig ausgewählt. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-    2.  Klicken Sie unter **Suchpfad**auf **Speicherorte** , um das Dialogfeld **Speicherorte** zu öffnen, und wählen Sie eine der verfügbaren Serverspeicherorte aus. Wenn Sie fertig sind, klicken Sie auf **OK**.  
+    2.  Klicken Sie unter **Suchpfad** auf **Speicherorte...**, um das Dialogfeld **Speicherorte** zu öffnen, und wählen Sie einen der verfügbaren Serverspeicherorte aus. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-    3.  Geben Sie unter **Geben Sie die zu verwendenden Objektnamen ein (Beispiele)** den Benutzer- oder Gruppennamen ein, den Sie suchen möchten. Weitere Informationen finden Sie unter [Benutzer, Computer oder Gruppen auswählen (Dialogfeld)](http://technet.microsoft.com/library/cc771712.aspx).  
+    3.  Geben Sie unter **Geben Sie die zu verwendenden Objektnamen ein (Beispiele)** den Benutzer- oder Gruppennamen ein, den Sie suchen möchten. Weitere Informationen finden Sie unter [Benutzer, Computer oder Gruppen auswählen (Dialogfeld)](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Klicken Sie auf **Erweitert** für erweiterte Suchoptionen. Weitere Informationen finden Sie unter [Auswählen von Benutzern, Computern oder Gruppen (Dialogfeld) – Erweitert (Seite)](http://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Klicken Sie auf **Erweitert...** für erweiterte Suchoptionen. Weitere Informationen finden Sie unter [Auswählen von Benutzern, Computern oder Gruppen (Dialogfeld) – Erweitert (Seite)](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Klicken Sie auf **OK**.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48190490"
   
 7.  Um einem eigenständigen asymmetrischen Schlüssel die Anmeldung zuzuordnen, wählen Sie **Zugeordnet zu asymmetrischem Schlüssel** aus, und wählen Sie anschließend den Namen eines vorhandenen Schlüssels aus der Liste aus.  
   
-8.  Um Sicherheitsanmeldeinformationen die Anmeldung zuzuordnen, aktivieren Sie das Kontrollkästchen **Zugeordnet zu Anmeldeinformationen** , und wählen Sie anschließend entweder einen vorhandenen Anmeldenamen aus der Liste aus, oder klicken Sie auf **Hinzufügen** , um einen neuen Anmeldenamen zu erstellen. Um eine Zuordnung zu Sicherheitsanmeldeinformationen aus der Anmeldung zu entfernen, wählen Sie die Anmeldeinformationen aus der Liste **Zugeordnete Anmeldeinformationen** aus, und klicken Sie auf **Entfernen**. Weitere Informationen über Anmeldenamen im Allgemeinen finden Sie unter [Anmeldeinformationen &amp;#40;Datenbank-Engine&amp;#41;](credentials-database-engine.md).  
+8.  Um Sicherheitsanmeldeinformationen die Anmeldung zuzuordnen, aktivieren Sie das Kontrollkästchen **Zugeordnet zu Anmeldeinformationen** , und wählen Sie anschließend entweder einen vorhandenen Anmeldenamen aus der Liste aus, oder klicken Sie auf **Hinzufügen** , um einen neuen Anmeldenamen zu erstellen. Um eine Zuordnung zu Sicherheitsanmeldeinformationen aus der Anmeldung zu entfernen, wählen Sie die Anmeldeinformationen aus der Liste **Zugeordnete Anmeldeinformationen** aus, und klicken Sie auf **Entfernen**. Weitere Informationen über Anmeldenamen im Allgemeinen finden Sie unter [Anmeldeinformationen &#40;Datenbank-Engine&#41;](credentials-database-engine.md).  
   
 9. Wählen Sie eine Standarddatenbank für die Anmeldung aus der Liste **Standarddatenbank** aus. **Master** ist der Standardwert für diese Option.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48190490"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Zusätzliche Optionen  
- Im Dialogfeld **Anmeldung – Neu** sind auch Optionen auf vier zusätzlichen Seiten verfügbar: **Serverrollen**, **Benutzerzuordnung**, **Sicherungsfähige Elemente**und **Status**.  
+ Die **Anmeldung – neu** Dialogfeld verfügt zudem über Optionen auf vier zusätzlichen Seiten: **Serverrollen**, **Benutzerzuordnung**, **sicherungsfähige Elemente**, und **Status**.  
   
 ### <a name="server-roles"></a>Serverrollen  
  Die Seite **Serverrollen** listet alle möglichen Rollen auf, die der neuen Anmeldung zugewiesen werden können. Die folgenden Optionen stehen zur Verfügung:  
@@ -176,24 +176,24 @@ ms.locfileid: "48190490"
   
 1.  Klicken Sie auf **Suchen**.  
   
-2.  Wählen Sie im Dialogfeld **Objekte hinzufügen** eine der folgenden Optionen aus: **Bestimmte Objekte...**, **Alle Objekte des Typs...** oder **The server***server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  In der **Objekte hinzufügen** (Dialogfeld), wählen Sie eine der folgenden Optionen: **Bestimmte Objekte...** , **Alle Objekte des Typs...** , oder **Server *** Server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  Auswählen von **Server *** Server_name* wird automatisch das obere Raster mit allen sicherungsfähigen Objekten Servers.  
   
-3.  Bei Auswahl der Option **Bestimmte Objekte**:  
+3.  Bei Auswahl der Option **Bestimmte Objekte...**:  
   
-    1.  Klicken Sie im Dialogfeld **Objekte auswählen** unter **Wählen Sie Objekttypen aus**auf **Objekttypen**.  
+    1.  Klicken Sie im Dialogfeld **Objekte auswählen** unter **Wählen Sie Objekttypen aus** auf **Objekttypen...**.  
   
-    2.  Wählen Sie im Dialogfeld **Objekttypen auswählen** einen der folgenden Objekttypen aus: **Endpunkte**, **Anmeldungen**, **Server**, **Verfügbarkeitsgruppen**und **Serverrollen**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  In der **Objekttypen auswählen** Dialogfeld wählen einige oder alle der folgenden Objekttypen: **Endpunkte**, **Anmeldungen**, **Server**, **Verfügbarkeitsgruppen**, und **Serverrollen**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  Klicken Sie unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** auf **Durchsuchen**.  
+    3.  Klicken Sie unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** auf **Durchsuchen...**.  
   
     4.  Wählen Sie im Dialogfeld **Nach Objekten suchen** eines der verfügbaren Objekte vom Typ aus, den Sie im Dialogfeld **Objekttypen auswählen** ausgewählt haben, und klicken Sie anschließend auf **OK**.  
   
     5.  Klicken Sie im Dialogfeld **Objekte auswählen** auf **OK**.  
   
-4.  Wenn Sie im Dialogfeld **Objekttypen auswählen**die Option **Alle Objekte des Typs** auswählen, dann wählen Sie einen der folgenden Objekttypen aus: **Endpunkte**, **Anmeldungen**, **Server**, **Verfügbarkeitsgruppen**und **Serverrollen**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Bei Auswahl von **alle Objekte des Typs...** in die **Objekttypen auswählen** Dialogfeld wählen einige oder alle der folgenden Objekttypen: **Endpunkte**, **Anmeldungen**, **Server**, **Verfügbarkeitsgruppen**, und **Serverrollen**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Name**  
  Die Namen der Prinzipale oder sicherungsfähigen Elemente, die dem Raster hinzugefügt werden.  
@@ -278,7 +278,7 @@ ms.locfileid: "48190490"
   
  Weitere Informationen finden Sie unter [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Erforderliche Schritte nach Erstellen eines Anmeldenamens  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Erforderliche Schritte nach Erstellen eines Anmeldenamens  
  Nach der Erstellung eines Anmeldenamens kann dieser zwar eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen, er verfügt jedoch nicht unbedingt über ausreichende Berechtigungen, um damit sinnvolle Aufgaben ausführen zu können. Die folgende Liste enthält Links zu häufigen Anmeldeaktionen.  
   
 -   Informationen darüber, wie ein Anmeldename einer Datenbankrolle beitreten kann, finden Sie unter [Verknüpfen einer Rolle](join-a-role.md).  

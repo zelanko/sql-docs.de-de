@@ -1,5 +1,5 @@
 ---
-title: 'Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten) | Microsoft-Dokumentation'
+title: 'Seite "Replikate" angeben (Assistent für neue Verfügbarkeitsgruppen: Hinzufügen von Replikat-Assistent) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1928b48145367e2bdd1ed183ac16230c5b7374fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172360"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371572"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite "Replikate" angeben (Assistent für neue Verfügbarkeitsgruppen: Replikat-Assistent zum Hinzufügen von)
   In diesem Thema werden die Optionen auf der Seite **Replikate angeben** beschrieben. Diese Seite gilt für: [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] und [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Verwenden Sie die Seite **Replikate angeben** , um mindestens ein Verfügbarkeitsreplikat anzugeben und zu konfigurieren und die Verfügbarkeitsgruppe hinzuzufügen. Diese Seite enthält vier Registerkarten, die in der folgenden Tabelle vorgestellt werden. Klicken Sie auf den Namen einer Registerkarte in der Tabelle, um zum entsprechenden Abschnitt weiter unten in diesem Thema zu wechseln.  
   
 |Registerkarte|Kurze Beschreibung|  
@@ -29,16 +29,16 @@ ms.locfileid: "48172360"
 |[Replikate](#ReplicasTab)|Geben Sie mit dieser Registerkarte jede Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, die ein sekundäres Replikat hosten wird oder derzeit hostet. Beachten Sie, dass die Serverinstanz, mit der Sie gerade verbunden sind, das primäre Replikat hosten muss.<br /><br /> Tipp: Bevor Sie zu den anderen Registerkarten übergehen, sollten Sie alle Replikate auf der Registerkarte **Replikate** angegeben haben.|  
 |[Endpunkte](#EndpointsTab)|Auf dieser Registerkarte können Sie vorhandene Endpunkte für die Datenbankspiegelung überprüfen und automatisch einen Endpunkt erstellen, falls er auf einer Serverinstanz fehlt, deren Dienstkonten die Windows-Authentifizierung nutzen.|  
 |[Sicherungseinstellungen](#BackupPreferencesTab)|Geben Sie mit dieser Registerkarte die Sicherungseinstellungen für die Verfügbarkeitsgruppe als Ganzes und die Sicherungsprioritäten für die einzelnen Verfügbarkeitsreplikate an.|  
-|[Listener](#Listener)|Verwenden Sie diese Registerkarte (falls verfügbar), um einen Verfügbarkeitsgruppenlistener zu erstellen. Standardmäßig wird kein Listener erstellt.<br /><br /> Hinweis: Diese Registerkarte ist nur verfügbar, wenn Sie den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] ausführen.|  
+|[Listener](#Listener)|Verwenden Sie diese Registerkarte (falls verfügbar), um einen Verfügbarkeitsgruppenlistener zu erstellen. Standardmäßig wird kein Listener erstellt.<br /><br /> Hinweis: Diese Registerkarte ist nur verfügbar, wenn Sie den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]ausführen.|  
   
 ##  <a name="ReplicasTab"></a> Registerkarte "Replikate"  
  **Serverinstanz**  
  Zeigt den Namen der Serverinstanz an, die als Host für das Verfügbarkeitsreplikat fungiert.  
   
- Falls eine Serverinstanz, mit der Sie ein sekundäres Replikat hosten, nicht im Raster **Verfügbarkeitsreplikate** aufgeführt ist, klicken Sie auf die Schaltfläche **Replikat hinzufügen** . Wenn Sie eine Verfügbarkeitsgruppe in einer hybriden IT-Umgebung konfigurieren (siehe [Hohe Verfügbarkeit und Notfallwiederherstellung für SQL Server auf virtuellen Azure-Computern](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), können Sie auf die Schaltfläche **Azure-Replikat hinzufügen** klicken, um virtuelle Computer mit sekundären Replikaten in Windows Azure zu erstellen.  
+ Falls eine Serverinstanz, mit der Sie ein sekundäres Replikat hosten, nicht im Raster **Verfügbarkeitsreplikate** aufgeführt ist, klicken Sie auf die Schaltfläche **Replikat hinzufügen** . Wenn Sie eine Verfügbarkeitsgruppe in einer hybriden IT-Umgebung konfigurieren (siehe [Hohe Verfügbarkeit und Notfallwiederherstellung für SQL Server auf virtuellen Azure-Computern](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), können Sie auf die Schaltfläche **Azure-Replikat hinzufügen** klicken, um virtuelle Computer mit sekundären Replikaten in Windows Azure zu erstellen.  
   
  **Anfangsrolle**  
- Gibt die Rolle an, die das neue Replikat anfangs aufweist: **Primär** oder **Sekundär**.  
+ Gibt die Rolle an, die das neue Replikat anfänglich ausführt: **Primäre** oder **sekundären**.  
   
  **Automatisches Failover (max. 2)**  
  Aktivieren Sie dieses Kontrollkästchen nur, wenn dieses Verfügbarkeitsreplikat ein automatischer Failoverpartner sein soll. Sie müssen zum Konfigurieren eines automatischen Failovers diese Option für das ursprüngliche primäre Replikat und ein sekundäres Replikat auswählen. Beide Replikate verwenden den Verfügbarkeitsmodus für synchrone Commits. Nur zwei Replikate können automatisches Failover unterstützen.  
@@ -66,7 +66,7 @@ ms.locfileid: "48172360"
  Klicken Sie, um ein sekundäres Replikat zur Verfügbarkeitsgruppe hinzuzufügen.  
   
  **Azure-Replikat hinzufügen**  
- Klicken Sie auf diese Option, um einen virtuellen Computer in Windows Azure zu erstellen, auf dem ein sekundäres Replikat in der Verfügbarkeitsgruppe ausgeführt wird. Diese Option ist nur auf eine Verfügbarkeitsgruppe in der hybriden IT-Umgebung anwendbar, die lokale Replikate enthält. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Notfallwiederherstellung für SQL Server auf virtuellen Windows Azure-Computern](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Klicken Sie auf diese Option, um einen virtuellen Computer in Windows Azure zu erstellen, auf dem ein sekundäres Replikat in der Verfügbarkeitsgruppe ausgeführt wird. Diese Option ist nur auf eine Verfügbarkeitsgruppe in der hybriden IT-Umgebung anwendbar, die lokale Replikate enthält. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Notfallwiederherstellung für SQL Server auf virtuellen Windows Azure-Computern](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Replikat entfernen**  
  Klicken Sie, um das ausgewählte sekundäre Replikat aus der Verfügbarkeitsgruppe zu entfernen.  
@@ -188,9 +188,9 @@ ms.locfileid: "48172360"
  **Subnetz**  
  Wenn Sie **DHCP** als Netzwerkmodus ausgewählt haben, verwenden Sie die Dropdownliste **Subnetz** , um eine Adresse für das Subnetz auszuwählen, das die Verfügbarkeitsreplikate der Verfügbarkeitsgruppe hostet.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Nach der Definition eines Verfügbarkeitsgruppenlisteners werden folgende Schritte empfohlen:  
->   
+> 
 >  -   Bitten Sie den Netzwerkadministrator, die IP-Adresse des Listeners zur exklusiven Verwendung zu reservieren. Geben Sie den DNS-Hostnamen des Listeners an Anwendungsentwickler weiter, damit diese den Namen in Verbindungszeichenfolgen zum Anfordern von Clientverbindungen mit dieser Verfügbarkeitsgruppe verwenden.  
 > -   Geben Sie den DNS-Hostnamen des Listeners an Anwendungsentwickler weiter, damit diese den Namen in Verbindungszeichenfolgen zum Anfordern von Clientverbindungen mit dieser Verfügbarkeitsgruppe verwenden.  
   

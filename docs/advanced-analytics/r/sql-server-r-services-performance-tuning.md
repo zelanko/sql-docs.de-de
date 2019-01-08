@@ -1,5 +1,5 @@
 ---
-title: Leistungsoptimierung für SQL Server R Services | Microsoft-Dokumentation
+title: SQLServer R Services Performance Tuning - SQL Server Machine Learning-Dienste
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f8f70f4f2436d30ad4a4c5083f7a6ad5a06777af
-ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
+ms.openlocfilehash: 9e43e65fc175844c5b08dbd8c435c0854397ce3e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47217555"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432293"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Leistungsoptimierung für R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ Das Ziel dieser Reihe ist Anleitung zu den Arten von Techniken, die besonders hi
 + Der dritte Artikel behandelt die Optimierungen in R-Code und Ressourcen für die operationalisierung.
 + Die vierte Artikel wird beschrieben, Testmethoden in Details und Ergebnisse für Berichte und Ihre Absichten zu ziehen.
 
-**Gilt für:** SQL Server 2016 R Services, SqlServer 2017 Machine Learning-Dienste
+**Gilt für:** SQL Server 2016 R Services, SQL Server 2017-Machine Learning-Dienste
 
 ## <a name="performance-goals-and-targeted-scenarios"></a>Leistungsziele und Zielszenarien
 
@@ -83,11 +83,11 @@ Konfiguration und Optimierung von Leistung erfordert, erstellen eine solide Grun
 
 ## <a name="articles-in-this-series"></a>Artikel in dieser Serie
 
-+ [Leistungsoptimierung für R in SQL Server - hardware](..\r\sql-server-configuration-r-services.md)
++ [Leistungsoptimierung für R in SQL Server - hardware](../r/sql-server-configuration-r-services.md)
 
-    Enthält Anleitungen zum Konfigurieren der Hardware, [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] installiert ist, auf, und klicken Sie zum Konfigurieren von SQL Server-Instanz, um externe Skripts besser zu unterstützen. Es ist besonders nützlich für **Datenbankadministratoren**.
+    Enthält Anleitungen zum Konfigurieren der Hardware, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] installiert ist, auf, und klicken Sie zum Konfigurieren von SQL Server-Instanz, um externe Skripts besser zu unterstützen. Es ist besonders nützlich für **Datenbankadministratoren**.
 
-+ [Leistungsoptimierung für R in SQL Server - Code und Daten Optimierung](..\r\r-and-data-optimization-r-services.md)
++ [Leistungsoptimierung für R in SQL Server - Code und Daten Optimierung](../r/r-and-data-optimization-r-services.md)
 
     Enthält spezifische Tipps zur Optimierung von externen Skripts um bekannte Probleme zu vermeiden. Es ist besonders nützlich für **Datenanalysten**.
 
@@ -95,6 +95,6 @@ Konfiguration und Optimierung von Leistung erfordert, erstellen eine solide Grun
     > Während der Großteil der Informationen in diesem Abschnitt für R im Allgemeinen gilt, ist einige Informationen spezifisch für analytische RevoScaleR-Funktionen. Ausführliche Leistungsleitfaden ist nicht verfügbar für **Revoscalepy** und andere unterstützte Python-Bibliotheken.
     >
 
-+ [Leistungsoptimierung für R in SQL Server - Methoden und Ergebnisse](..\r\performance-case-study-r-services.md)
++ [Leistungsoptimierung für R in SQL Server - Methoden und Ergebnisse](../r/performance-case-study-r-services.md)
 
     Fasst Daten wurde zwei Fallstudien, wie die Leistung getestet wurde und wie wirkt sich die Optimierungen Ergebnisse verwendet.

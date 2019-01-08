@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - event tracing for windows target
@@ -15,19 +14,19 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64ae07c8f8ac258730ea5de04dd0e1f304b79bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175160"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355994"
 ---
 # <a name="event-tracing-for-windows-target"></a>Ereignisablaufverfolgung für Windows-Ziel
   Bevor Sie die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) als Ziel verwenden, sollten Sie über ausreichende Kenntnisse der ETW verfügen. ETW wird entweder in Verbindung mit erweiterten Ereignissen oder als Ereignisconsumer für erweiterte Ereignisse verwendet. Über die folgenden externen Links erhalten Sie erste Hintergrundinformationen zur ETW:  
   
--   [Windows-Ereignisse](http://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Windows-Ereignisse](https://go.microsoft.com/fwlink/?LinkId=92380)  
   
--   [Verbessertes Debugging und Leistungsoptimierung mit ETW](http://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [Verbessertes Debugging und Leistungsoptimierung mit ETW](https://go.microsoft.com/fwlink/?LinkId=92381)  
   
  Das ETW-Ziel ist ein Singletonziel, auch wenn es mehreren Sitzungen hinzugefügt werden kann. Auch wenn ein Ereignis in vielen Sitzungen ausgelöst wird, wird das Ereignis nur einmal je aufgetretenem Ereignis an das ETW-Ziel weitergeleitet. Die Engine für erweiterte Ereignisse ist pro Prozess auf eine einzelne Instanz beschränkt.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "48175160"
  Das ETW-Ziel unterstützt keine Steuerung durch externe ETW-Controller, z. B. Logman.exe. Für ETW-Ablaufverfolgungen muss eine Ereignissitzung mit dem ETW-Ziel erstellt werden. Weitere Informationen finden Sie unter [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql).  
   
 > [!NOTE]  
->  Bei Aktivieren des ETW-Ziels wird eine ETW-Sitzung mit dem Namen XE_DEFAULT_ETW_SESSION erstellt. Wenn eine Sitzung mit dem Namen XE_DEFAULT_ETW_SESSION bereits vorhanden ist, wird diese ohne Änderung der Eigenschaften der vorhandenen Sitzung verwendet. XE_DEFAULT_ETW_SESSION wird von allen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gemeinsam genutzt. Nachdem Sie XE_DEFAULT_ETW_SESSION gestartet haben, müssen Sie dies mit einem ETW-Controller beenden, z. B. dem Logman-Tool. Sie können z. B. den folgenden Befehl an der Eingabeaufforderung ausführen: `logman stop XE_DEFAULT_ETW_SESSION -ets`.  
+>  Bei Aktivieren des ETW-Ziels wird eine ETW-Sitzung mit dem Namen XE_DEFAULT_ETW_SESSION erstellt. Wenn eine Sitzung mit dem Namen XE_DEFAULT_ETW_SESSION bereits vorhanden ist, wird diese ohne Änderung der Eigenschaften der vorhandenen Sitzung verwendet. XE_DEFAULT_ETW_SESSION wird von allen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gemeinsam genutzt. Nachdem Sie XE_DEFAULT_ETW_SESSION gestartet haben, müssen Sie dies mit einem ETW-Controller beenden, z. B. dem Logman-Tool. Sie können zum Beispiel den folgenden Befehl an der Eingabeaufforderung ausführen: `logman stop XE_DEFAULT_ETW_SESSION -ets`.  
   
  In der folgenden Tabelle werden die verfügbaren Optionen für das Konfigurieren des ETW-Ziels beschrieben.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48175160"
     > [!IMPORTANT]  
     >  Der Dateipfad kann nicht geändert werden, nachdem die erste Sitzung gestartet wurde.  
   
--   MOF-Dateien (Managed Object Format) befinden sich im Ordner *<Installationspfad\<* \Microsoft SQL Server\Shared. Weitere Informationen finden Sie unter [Managed Object Format](http://go.microsoft.com/fwlink/?LinkId=92851) auf der MSDN-Website.  
+-   MOF-Dateien (Managed Object Format) befinden sich im Ordner *<Installationspfad\<* \Microsoft SQL Server\Shared. Weitere Informationen finden Sie unter [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) auf der MSDN-Website.  
   
 ## <a name="adding-the-target-to-a-session"></a>Hinzufügen des Ziels zu einer Sitzung  
  Wenn Sie das ETW-Ziel einer Sitzung für erweiterte Ereignisse hinzufügen möchten, müssen Sie beim Erstellen oder Ändern einer Ereignissitzung die folgende Anweisung einschließen:  

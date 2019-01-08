@@ -20,16 +20,16 @@ ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d64f536b88d3b6fd8f10fc36b75cd3395c818af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e4c15cfe0d82fc4b68115c029334fa7d3ec7410
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814978"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590283"
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
   
  **Zusammenfassung**  
  **SQLPrepare** eine SQL-Zeichenfolge für die Ausführung vorbereitet.  
@@ -69,7 +69,7 @@ SQLRETURN SQLPrepare(
 |21S02|Spaltenzahl der abgeleiteten Tabelle stimmt nicht mit der Spaltenliste überein|\**StatementText* enthalten eine **CREATE VIEW** -Anweisung, und die Anzahl der angegebenen Namen ist nicht den gleichen Grad an, wie die abgeleitete Tabelle, die durch die Query-Spezifikation definiert.|  
 |22018|Ungültiger Zeichenwert für Konvertierungsangabe|**StatementText* enthalten eine SQL-Anweisung, die ein Literal oder die Parameter enthalten, und der Wert ist nicht kompatibel mit dem Datentyp der Spalte zugeordnete Tabelle.|  
 |22019|Ungültiges Escapezeichen|Das Argument *StatementText* enthalten eine **wie** Prädikat mit einer **ESCAPE** in die **, in denen** -Klausel und die Länge der-Escapesequenz folgende Zeichen **ESCAPEZEICHEN** war nicht gleich 1.|  
-|22025|Ungültige Escapesequenz|Das Argument *StatementText* enthaltenen "**wie** *Musterwert* **ESCAPE** *Escapezeichen*"in der **, in denen** -Klausel und das Zeichen folgt das Escape-Zeichen in der Pattern-Wert wurde weder"%"noch"_".|  
+|22025|Ungültige Escapesequenz|Das Argument *StatementText* enthaltenen "**wie** _Musterwert_ **ESCAPE** _Escapezeichen_"in der **, in denen** -Klausel und das Zeichen folgt das Escape-Zeichen in der Pattern-Wert wurde weder"%"noch"_".|  
 |24000|Ungültiger Cursorstatus|(DM) ein Cursor geöffnet, auf war die *StatementHandle*, und **SQLFetch** oder **SQLFetchScroll** war aufgerufen wurde.<br /><br /> Ein Cursor geöffnet, auf war die *StatementHandle*, aber **SQLFetch** oder **SQLFetchScroll** nicht aufgerufen wurde.|  
 |34000|Ungültiger Cursorname|\**StatementText* enthalten eine positionierte **löschen** oder eine positionierte **UPDATE**, und der Cursor die vorbereitete Anweisung verweist auf konnte nicht geöffnet werden.|  
 |3D000|Ungültiger Katalogname|Der Name des Katalogs im angegebenen *StatementText* war ungültig.|  

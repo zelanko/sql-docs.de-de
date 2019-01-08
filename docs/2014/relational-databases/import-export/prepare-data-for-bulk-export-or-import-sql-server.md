@@ -16,12 +16,12 @@ ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47c8b792158095693ea4223578ef811a2509b2a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0836d835b77241a27dfccc65528e8cda440559c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073480"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358132"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Vorbereiten von Daten für den Massenexport oder -import (SQL Server)
   In diesem Abschnitt werden Überlegungen, die beim Planen für Massenexportvorgänge relevant sind, sowie die Anforderungen für Massenimportvorgänge erläutert.  
@@ -52,7 +52,7 @@ ms.locfileid: "48073480"
   
 -   Zum Importieren von Daten mithilfe des Befehls **bcp**, einer BULK INSERT-Anweisung oder einer INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung muss die Zieltabelle bereits vorhanden sein.  
   
--   Jedes Feld in der Datendatei muss mit der entsprechenden Spalte in der Zieltabelle kompatibel sein. Z. B. eine `int` Feld kann nicht geladen werden, in einem `datetime` Spalte. Weitere Informationen finden Sie unter [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md) und [Angeben von Datenformaten für die Kompatibilität bei Verwendung von bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+-   Jedes Feld in der Datendatei muss mit der entsprechenden Spalte in der Zieltabelle kompatibel sein. Ein `int`-Feld kann z. B. nicht in eine `datetime`-Spalte geladen werden. Weitere Informationen finden Sie unter [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md) und [Angeben von Datenformaten für die Kompatibilität bei Verwendung von bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
     > [!NOTE]  
     >  Sie können den Befehl **bcp** mit dem Schalter **-F** *first_row* und/oder dem Schalter **-L** *last_row* verwenden, um anstelle der gesamten Datei eine Teilmenge von Zeilen anzugeben, die aus einer Datendatei importiert werden sollen. Weitere Informationen finden Sie unter [bcp Utility](../../tools/bcp-utility.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "48073480"
   
      Für den Massenimport von Daten aus einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro- oder Visual FoxPro-Tabellendatei (.dbf) oder einer [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Arbeitsblattdatei (.xls), müssen die Daten in eine CSV-Datei umgewandelt werden, die den vorangehenden Einschränkungen entspricht. Die Dateierweiterung lautet normalerweise .csv. Anschließend kann die Datei mit der Dateinamenerweiterung .csv als Datendatei in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Massenimportvorgang verwendet werden.  
   
-     In 32-Bit-Systemen ist es jedoch möglich, CSV-Daten mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [mit dem OLE DB-Anbieter für Jet in eine](/sql/t-sql/functions/openrowset-transact-sql) -Tabelle ohne Massenimportoptimierungen zu importieren. Jet behandelt Textdateien als Tabellen mit dem durch eine schema.ini-Datei, die sich im gleichen Verzeichnis wie die Datenquelle befindet, festgelegten Schema.  Für CSV-Daten ist einer der Parameter in der Datei schema.ini "FORMAT=CSVDelimited". Für diese Lösung ist das Verständnis der Jet Test IISAMm-Vorgänge – die Verbindungszeichenfolgensyntax, Verwendung von schema.ini, Einstellungsoptionen für die Registrierung usw. – erforderlich.  Die besten Informationsquellen hierfür sind die Microsoft Access-Hilfe und Knowledge Base (KB)-Artikel. Weitere Informationen finden Sie unter [Initializing the Text Data Source Driver](http://go.microsoft.com/fwlink/?LinkId=128503), [Verwendung eine verteilten Abfrage von SQLServer 7.0 mit einem verknüpften Server gesicherten Access-Datenbanken](http://go.microsoft.com/fwlink/?LinkId=128504)(maschinell übersetzter Artikel), [Verwendung von Jet OLE DB-Provider 4.0 an ISAM-Datenbanken](http://go.microsoft.com/fwlink/?LinkId=128505)(maschinell übersetzter Artikel) und [Gewusst wie: Öffnen Sie getrennte Textdateien mit der Jet-Provider Text IIsam (maschinell übersetzter Artikel)](http://go.microsoft.com/fwlink/?LinkId=128501).  
+     In 32-Bit-Systemen ist es jedoch möglich, CSV-Daten mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [mit dem OLE DB-Anbieter für Jet in eine](/sql/t-sql/functions/openrowset-transact-sql) -Tabelle ohne Massenimportoptimierungen zu importieren. Jet behandelt Textdateien als Tabellen mit dem durch eine schema.ini-Datei, die sich im gleichen Verzeichnis wie die Datenquelle befindet, festgelegten Schema.  Für CSV-Daten ist einer der Parameter in der Datei schema.ini "FORMAT=CSVDelimited". Für diese Lösung Kenntnisse über die Jet Test IISAMm-Vorgänge, die zugehörige Verbindungszeichenfolgensyntax, die Verwendung von „schema.ini“, die Einstellungsoptionen für die Registrierung usw., erforderlich.  Die besten Informationsquellen hierfür sind die Microsoft Access-Hilfe und Knowledge Base (KB)-Artikel. Weitere Informationen finden Sie unter [Initialisieren der Text Datenquellentreiber](https://go.microsoft.com/fwlink/?LinkId=128503), [verwenden Sie eine SQL Server 7.0 verteilter Abfragen mit einem verknüpften Server gesicherten Access-Datenbanken](https://go.microsoft.com/fwlink/?LinkId=128504), [so wird's gemacht: Verwenden von OLE DB-Provider Jet 4.0 zum Verbinden mit ISAM-Datenbanken](https://go.microsoft.com/fwlink/?LinkId=128505), und [zum Öffnen von durch Trennzeichen getrennte Textdateien mit der Jet-Provider Text IIsam](https://go.microsoft.com/fwlink/?LinkId=128501).  
   
  Darüber hinaus ist Folgendes für den Massenimport von Daten aus einer Datendatei in eine Tabelle erforderlich:  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48073480"
 >  Das Massenimportieren in eine partitionierte Sicht wird nicht unterstützt, und Versuche, einen Massenimport von Daten in eine partitionierte Sicht auszuführen, schlagen fehl.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- [Importieren von Daten aus Excel in SQL Server](http://support.microsoft.com/kb/321686)  
+ [Importieren von Daten aus Excel in SQL Server](https://support.microsoft.com/kb/321686)  
   
 ## <a name="change-history"></a>Änderungsverlauf  
   

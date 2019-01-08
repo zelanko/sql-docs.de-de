@@ -14,12 +14,12 @@ ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3417491298352ac6cc72ce5543542142a412d89e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 591fc282f6e60f97d4b900e3b88f727d554535e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176720"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366102"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver
   Reporting Services stellt eine erweiterbare Architektur zur Verfügung, mit der Sie benutzerdefinierte oder formularbasierte Authentifizierungsmodule integrieren können. Möglicherweise ist es ratsam, eine benutzerdefinierte Authentifizierungserweiterung zu implementieren, wenn die Bereitstellungsanforderungen keine Windows-integrierte Sicherheit oder grundlegende Authentifizierung umfassen. Das häufigste Szenario für die Verwendung der benutzerdefinierten Authentifizierung ist eine Unterstützung des Internet- oder Extranetzugriffs auf eine Webanwendung. Durch das Ersetzen der standardmäßigen Windows-Authentifizierungserweiterung durch eine benutzerdefinierte Erweiterung können Sie besser steuern, wie externen Benutzern Zugriff auf den Berichtsserver gewährt wird.  
@@ -29,13 +29,13 @@ ms.locfileid: "48176720"
 > [!NOTE]  
 >  Zum Erstellen einer benutzerdefinierten Authentifizierungserweiterung sind benutzerdefinierter Code und Kenntnisse der [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Sicherheit erforderlich. Wenn Sie keine benutzerdefinierte Authentifizierungserweiterung erstellen möchten, können Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory-Gruppen und -Konten verwenden, aber Sie sollten den Rahmen einer Berichtsserverbereitstellung deutlich verringern. Weitere Informationen zur benutzerdefinierten Authentifizierung finden Sie unter [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md).  
   
- Wenn Sie eine Formular- oder benutzerdefinierte Authentifizierungserweiterung in einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Umgebung verwenden möchten, die mit einem SharePoint-Produkt integriert ist, müssen Sie zusätzlich die SharePoint-Website für die Verwendung der von Ihnen gewählten Authentifizierungsmethode konfigurieren. Weitere Informationen über das Konfigurieren der Authentifizierung in SharePoint finden Sie unter [Authentication Samples](http://go.microsoft.com/fwlink/?LinkId=115575) im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Developer Network (MSDN).  
+ Wenn Sie eine Formular- oder benutzerdefinierte Authentifizierungserweiterung in einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Umgebung verwenden möchten, die mit einem SharePoint-Produkt integriert ist, müssen Sie zusätzlich die SharePoint-Website für die Verwendung der von Ihnen gewählten Authentifizierungsmethode konfigurieren. Weitere Informationen über das Konfigurieren der Authentifizierung in SharePoint finden Sie unter [Authentication Samples](https://go.microsoft.com/fwlink/?LinkId=115575) im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Developer Network (MSDN).  
   
 ### <a name="to-configure-a-report-server-to-use-custom-authentication"></a>So konfigurieren Sie einen Berichtsserver für die Verwendung der benutzerdefinierten Authentifizierung  
   
 1.  Öffnen Sie RSReportServer.config in einem Text-Editor.  
   
-2.  Finden Sie <`Authentication`>.  
+2.  Suchen Sie den Eintrag <`Authentication`>.  
   
 3.  Kopieren Sie die folgende XML-Struktur:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48176720"
     </Authentication>  
     ```  
   
-4.  Fügen Sie ihn über die vorhandenen Einträge für <`Authentication`>.  
+4.  Ersetzen Sie damit die vorhandenen Einträge für <`Authentication`>.  
   
      Beachten Sie, dass Sie `Custom` nicht mit anderen Authentifizierungstypen verwenden können.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48176720"
     <authentication mode = "Forms" />  
     ```  
   
-8.  Suchen `identity impersonate` und legen ihn auf `False`.  
+8.  Suchen Sie `identity impersonate`, und legen Sie dafür `False` fest.  
   
     ```  
     <identity impersonate = "false" />  
@@ -76,13 +76,13 @@ ms.locfileid: "48176720"
     <authentication mode = "Forms" />  
     ```  
   
-11. Suchen `identity impersonate` und legen ihn auf `False`.  
+11. Suchen Sie `identity impersonate`, und legen Sie dafür `False` fest.  
   
     ```  
     <identity impersonate = "false" />  
     ```  
   
-12. Hinzufügen der `PassThroughCookies` Elementstruktur der Konfigurationsdatei hinzu. Weitere Informationen finden Sie unter [Konfigurieren des Berichts-Managers für die Übergabe von benutzerdefinierten Authentifizierungscookies](configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
+12. Fügen Sie der Konfigurationsdatei die Elementstruktur `PassThroughCookies` hinzu. Weitere Informationen finden Sie unter [Konfigurieren des Berichts-Managers für die Übergabe von benutzerdefinierten Authentifizierungscookies](configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
   
 13. Speichern Sie die Datei.  
   
@@ -91,10 +91,10 @@ ms.locfileid: "48176720"
 15. Starten Sie den Berichtsserver neu, um alle momentan geöffneten Sitzungen zu beenden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Implementieren von Sicherheitserweiterungen](../extensions/security-extension/implementing-a-security-extension.md)   
+ [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)   
  [Authentifizierung mit dem Berichtsserver](authentication-with-the-report-server.md)   
  [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)   
  [Konfigurieren der Standardauthentifizierung auf dem Berichtsserver](configure-basic-authentication-on-the-report-server.md)   
- [Configure Windows Authentication on the Report Server (Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver)](configure-windows-authentication-on-the-report-server.md)  
+ [Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver](configure-windows-authentication-on-the-report-server.md)  
   
   

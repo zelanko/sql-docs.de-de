@@ -1,5 +1,5 @@
 ---
-title: Spalteneigenschaften | Microsoft Docs
+title: Spalteneigenschaften in tabellarischen Modellen von Analysis Services | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,28 +9,28 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4da1159bfc4582705710735c53300d9c51627398
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 95a8f86b2cf2bc3cf28a128349540183c88d7fd0
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044914"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626290"
 ---
 # <a name="column-properties"></a>Spalteneigenschaften 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Dieser Artikel beschreibt die Spalteneigenschaften für tabellarische Modelle.  
   
->  [!NOTE]  
->  Einige Eigenschaften sind in allen Kompatibilitätsgraden nicht unterstützt.    
+> [!NOTE]
+>  Einige Eigenschaften werden in allen Kompatibilitätsgraden nicht unterstützt.    
   
 ##  <a name="bkmk_properties"></a> Spalteneigenschaften  
-**Erweitert**  
+**Erweitert:**  
   
 |Eigenschaft|Standardeinstellung|Description|  
 |--------------|---------------------|-----------------|  
 |**Anzeigeordner**||Ein einzelner oder geschachtelter Ordner zum Organisieren von Spalten in der Feldliste einer Clientanwendung.|  
 
-**Standard**  
+**Grundlegend**  
   
 |Eigenschaft|Standardeinstellung|Description|  
 |--------------|---------------------|-----------------|  
@@ -40,12 +40,13 @@ ms.locfileid: "34044914"
 |**Beschreibung**||Eine Textbeschreibung für die Spalte.<br /><br /> In bestimmten Berichtserstellungsclients wird die Beschreibung als QuickInfo angezeigt, wenn der Endbenutzer den Cursor über dieser Spalte in der Feldliste hält.|  
 |**Hidden**|False|Gibt an, ob die Spalte in den Feldlisten von Berichtserstellungsclients ausgeblendet wird.<br /><br /> Legen Sie diese Eigenschaft auf **True** fest, um diese Spalte in der Anzeige auszublenden. Zum Beispiel sind Spalten, die Bezeichner oder Schlüssel enthalten, für den Endbenutzer in der Regel nicht nützlich.<br /><br /> Wenn Sie eine Spalte im Berichtserstellungsclient ausblenden, wird das Feld nicht in den Modelldaten unterdrückt. Das Feld ist immer noch sichtbar, wenn Sie eine Abfrage für das Modell erstellen. Eine ausgeblendete Spalte kann weiterhin für Gruppierungen oder Sortierungen verwendet werden.<br /><br /> Die Eigenschaft **Ausgeblendet** stellt keinerlei Datensicherheit bereit. Verwenden Sie Zeilenfilter in Rollen, wenn Sie Daten schützen möchten. Weitere Informationen finden Sie unter [Rollen](../../analysis-services/tabular-models/roles-ssas-tabular.md).|  
 |**Nach Spalte sortieren**||Gibt eine andere Spalte an, nach der die Werte in dieser Spalte sortiert werden. Zwischen den beiden Spalten muss eine Beziehung vorhanden sein.<br /><br /> Dieser Wert muss der Name einer vorhandenen Spalte sein. Sie können keine Formel oder Measure angeben.|  
+|**Eindeutig**||Kann festgelegt werden, um die Eindeutigkeit der Werte in der Spalte zu erzwingen. Immer true für berechnete Spalten, auch wenn die Eindeutigkeit auf "false" festgelegt ist.|  
 
  **Sonstige**  
   
 |Eigenschaft|Standardeinstellung|Description|  
 |--------------|---------------------|-----------------|  
-|**Codierung Hinweise**|Standardwert|Gibt die Codierung, die Verarbeitung zu optimieren. Wertcodierung kann für numerische Spalten verwendet, in der Regel in Aggregationen verbessern. Hashcodierung wird für Group by-Spalten (häufig Dimensionstabelle Werte) und Fremdschlüssel. Zeichenfolgenspalten sind immer Hash codiert.|  
+|**Codierungshinweise**|Standard|Gibt die Codierung, die Verarbeitung zu optimieren. Wertcodierung kann für numerische Spalten, die in der Regel in Aggregationen verwendet abfrageleistung. Hashcodierung ist für Group by-Spalten (häufig Dimensionstabelle Werte) und Fremdschlüssel. Zeichenfolgenspalten sind immer Hash codiert.|  
 
  **Berichterstellungseigenschaften**  
   
@@ -53,10 +54,10 @@ ms.locfileid: "34044914"
 |--------------|---------------------|-----------------|  
 |Standardbild|False|Gibt an, welche Spalte ein Bild bereitstellt, das die Zeilendaten (z. B. eine Foto-ID in einem Mitarbeiterdatensatz) darstellt.|  
 |Standardbeschriftung|False|Legt fest, welche Spalte einen Anzeigenamen angibt, um Zeilendaten (z. B. Mitarbeitername in einem Mitarbeiterdatensatz) darzustellen.|  
-|Bild-URL/Datenkategorie (SP1)|False|Gibt den Wert in dieser Spalte als Link zu einem Bild auf einem Server an. Beispiel: `http://localhost/images/image1.jpg`|  
+|Bild-URL/Datenkategorie (SP1)|False|Gibt den Wert in dieser Spalte als Link zu einem Bild auf einem Server an. Beispiel: `http://localhost/images/image1.jpg`.|  
 |Eindeutige Zeilen beibehalten|False|Gibt an, welche Spalten Werte enthalten, die als eindeutig behandelt werden sollen, auch wenn sie Duplikate sind (z. B. Mitarbeitervorname und Nachname betreffend; in jenen Fällen, bei denen zwei oder mehr Mitarbeiter den gleichen Namen haben).|  
 |Zeilenbezeichner|False|Gibt eine Spalte an, die nur eindeutige Werte enthält. Dadurch kann diese Spalte als interner Gruppierungsschlüssel verwendet werden.|  
-|Zusammenfassen nach|Standardwert|Gibt Berichtserstellungsclienttools an, die die Aggregatfunktion SUM für die Spaltenberechnungen übernehmen, wenn einer Feldliste diese Spalte hinzugefügt wird. Wählen Sie es aus der Dropdownliste aus, um die Standardberechnung zu ändern. Diese Eigenschaft gilt nur für Spalten vom aggregierbaren Typ.|  
+|Zusammenfassen nach|Standard|Gibt Berichtserstellungsclienttools an, die die Aggregatfunktion SUM für die Spaltenberechnungen übernehmen, wenn einer Feldliste diese Spalte hinzugefügt wird. Wählen Sie es aus der Dropdownliste aus, um die Standardberechnung zu ändern. Diese Eigenschaft gilt nur für Spalten vom aggregierbaren Typ.|  
 |Position der Tabellendetails|Kein Standardfeld festgelegt|Gibt diese Spalte an, oder einem Satz von Feldern von einer einzelnen Tabelle kann ein Measure hinzugefügt werden, um die Tabellenvisualisierungserfahrung in einem Berichtserstellungsclient zu verbessern.|  
   
 ##  <a name="bkmk_config_prop"></a> So konfigurieren Sie Eigenschaftseinstellungen für Spalten  

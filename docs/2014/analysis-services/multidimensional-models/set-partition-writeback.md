@@ -16,19 +16,19 @@ ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07c13662da9a558c6c9406a7659c5529114236d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54e2a0f5de93ee9f0d760adfd5a95551d19cc782
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157390"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364232"
 ---
 # <a name="set-partition-writeback"></a>Einrichten des Rückschreibens von Partitionen
   Wenn Sie den Schreibzugriff für eine Measuregruppe aktivieren, können Endbenutzer Cubedaten während des Durchsuchens ändern. Die Änderungen werden dabei in einer getrennten Tabelle, der Rückschreibetabelle, gespeichert und nicht in den Cubedaten oder Quelldaten. Endbenutzer, die eine Partition mit aktiviertem Schreibzugriff durchsuchen, können die Auswirkungen der Änderungen in der Rückschreibetabelle für die Partition anzeigen.  
   
  Sie können Rückschreibedaten anzeigen oder löschen. Rückschreibedaten können außerdem zu einer Partition konvertiert werden. Bei einer Partition mit aktiviertem Schreibzugriff können Sie Cuberollen verwenden, um Benutzern und Gruppen von Benutzern Lese-/Schreibzugriff zu gewähren und den Zugriff auf bestimmte Zellen oder Gruppen von Zellen in der Partition zu beschränken.  
   
- Ein kurzes Einführungsvideo zur Rückschreibefunktion finden Sie unter [Rückschreiben von Daten in Analysis Services mit Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394951). Ausführlichere Informationen zu dieser Funktion finden Sie in der Blogreihe [Building a Writeback Application with Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977)(Erstellen einer Rückschreibeanwendung mit Analysis Services (Blog)).  
+ Ein kurzes Einführungsvideo zur Rückschreibefunktion finden Sie unter [Rückschreiben von Daten in Analysis Services mit Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394951). Ausführlichere Informationen zu dieser Funktion finden Sie in der Blogreihe [Building a Writeback Application with Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)(Erstellen einer Rückschreibeanwendung mit Analysis Services (Blog)).  
   
 > [!NOTE]  
 >  Das Rückschreiben wird ausschließlich bei relationalen SQL Server-Datenbanken und Data Marts und nur in Verbindung mit mehrdimensionalen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modellen unterstützt.  
@@ -62,7 +62,7 @@ ms.locfileid: "48157390"
   
 ## <a name="see-also"></a>Siehe auch  
  [Partitionen mit aktiviertem Schreibzugriff](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Aktivieren des Rückschreibens in einen OLAP-Cube auf Zellebene in Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Aktivieren und Sichern der Dateneingabe mit Analysis Services-Rückschreiben](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Aktivieren des Rückschreibens in einen OLAP-Cube auf Zellebene in Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Aktivieren und Sichern der Dateneingabe mit Analysis Services-Rückschreiben](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

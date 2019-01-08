@@ -54,12 +54,12 @@ ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b72ef3d7579cdcd8e1d3be83d7caf8d202d1bca7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da1f12da9dc3ff3145e2fc1ea9f592e70cfe0c3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204840"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374592"
 ---
 # <a name="log-properties"></a>Protokolleigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in den folgenden Tabellen aufgeführten Protokollservereigenschaften unterstützt. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -86,11 +86,11 @@ ms.locfileid: "48204840"
  Diese Eigenschaft wird standardmäßig während des vom Server ausgeführten Verarbeitungsvorgangs verwendet.  
   
  **ErrorLog\KeyErrorAction**  
- Gibt an, welche Aktion der Server bei einem `KeyNotFound` Fehler auftritt. Gültige Serverreaktionen auf diesen Fehler sind:  
+ Gibt die Aktion an, die bei Auftreten eines `KeyNotFound`-Fehlers vom Server ausgeführt wird. Gültige Serverreaktionen auf diesen Fehler sind:  
   
--   `ConvertToUnknown` weist den Server an, dem unbekannten Element den Fehlerschlüsselwert zuzuordnen.  
+-   `ConvertToUnknown` weist den Server an, den Fehlerschlüsselwert dem unbekannten Element zuzuordnen.  
   
--   `DiscardRecord` weist den Server aus, um den Datensatz auszuschließen.  
+-   `DiscardRecord` weist den Server an, den Datensatz auszuschließen.  
   
  **ErrorLog\KeyErrorLogFile**  
  Dies ist ein benutzerdefinierter Dateiname, der über die Dateierweiterung .log verfügen und in einem Ordner gespeichert sein muss, für den das Dienstkonto Lese-/Schreibberechtigungen besitzt. Die Protokolldatei enthält nur Fehler, die während der Verarbeitung generiert wurden. Verwenden Sie Flight Recorder, wenn Sie ausführlichere Informationen benötigen.  
@@ -106,22 +106,22 @@ ms.locfileid: "48204840"
 -   `StopLogging` weist den Server an, die Fehlerprotokollierung bei Erreichen der Fehlergrenze zu beenden, die Verarbeitung jedoch weiterhin zuzulassen.  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
- Gibt an, welche Aktion der Server bei einem `KeyNotFound` Fehler auftritt. Gültige Serverreaktionen auf diesen Fehler sind:  
+ Gibt die Aktion an, die bei Auftreten eines `KeyNotFound`-Fehlers vom Server ausgeführt wird. Gültige Serverreaktionen auf diesen Fehler sind:  
   
--   `IgnoreError` weist den Server aus, um den Vorgang fortzusetzen Verarbeitung ohne Protokollieren des Fehlers oder der Grenzwert für Schlüsselfehler anzurechnen. Wenn Sie den Fehler ignorieren, lassen Sie einfach die weitere Verarbeitung zu, ohne dass die Fehleranzahl erhöht oder der Fehler auf dem Bildschirm angezeigt oder in der Protokolldatei erfasst wird. Der betreffende Datensatz weist ein Datenintegritätsproblem auf und kann der Datenbank nicht hinzugefügt werden. Der Datensatz entweder verworfen oder dem unbekannten Element aggregiert werden, gemäß der `KeyErrorAction` Eigenschaft.  
+-   `IgnoreError` weist den Server an, die Verarbeitung fortzusetzen, ohne den Fehler zu protokollieren oder auf den Grenzwert für Schlüsselfehler anzurechnen. Wenn Sie den Fehler ignorieren, lassen Sie einfach die weitere Verarbeitung zu, ohne dass die Fehleranzahl erhöht oder der Fehler auf dem Bildschirm angezeigt oder in der Protokolldatei erfasst wird. Der betreffende Datensatz weist ein Datenintegritätsproblem auf und kann der Datenbank nicht hinzugefügt werden. Der Datensatz wird abhängig von der `KeyErrorAction`-Eigenschaft entweder verworfen oder dem unbekannten Element hinzugefügt.  
   
 -   `ReportAndContinue` weist den Server an, den Fehler zu protokollieren, auf den Grenzwert für Schlüsselfehler anzurechnen und die Verarbeitung fortzusetzen. Der für den Fehler verantwortliche Datensatz wird verworfen oder in das unbekannte Element konvertiert.  
   
 -   `ReportAndStop` weist den Server an, den Fehler zu protokollieren und die Verarbeitung unabhängig vom Grenzwert für Schlüsselfehler sofort zu beenden. Der für den Fehler verantwortliche Datensatz wird verworfen oder in das unbekannte Element konvertiert.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
- Gibt die Aktion an, die vom Server ausgeführt wird, wenn ein doppelter Schlüssel gefunden wird. Gültige Werte sind `IgnoreError` die Verarbeitung ansonsten fortgesetzt, als ob der Fehler nicht aufgetreten; `ReportAndContinue` der Fehler wird protokolliert und die Verarbeitung fortgesetzt; und `ReportAndStop` der Fehler wird protokolliert und die Verarbeitung sofort beendet, selbst wenn die Fehleranzahl unterhalb der Fehlergrenze liegt.  
+ Gibt die Aktion an, die vom Server ausgeführt wird, wenn ein doppelter Schlüssel gefunden wird. Folgende Werte sind möglich: `IgnoreError` – die Verarbeitung wird fortgesetzt, als wäre der Fehler nicht aufgetreten; `ReportAndContinue` – der Fehler wird protokolliert und die Verarbeitung fortgesetzt; `ReportAndStop` – der Fehler wird protokolliert und die Verarbeitung sofort beendet, selbst wenn die Fehleranzahl unterhalb der Fehlergrenze liegt.  
   
  **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
- Gibt die Aktion an, die vom Server ausgeführt wird, wenn ein NULL-Schlüssel in ein unbekanntes Element konvertiert wurde. Gültige Werte sind `IgnoreError` die Verarbeitung ansonsten fortgesetzt, als ob der Fehler nicht aufgetreten; `ReportAndContinue` der Fehler wird protokolliert und die Verarbeitung fortgesetzt; und `ReportAndStop` der Fehler wird protokolliert und die Verarbeitung sofort beendet, selbst wenn die Fehleranzahl unterhalb der Fehlergrenze liegt.  
+ Gibt die Aktion an, die vom Server ausgeführt wird, wenn ein NULL-Schlüssel in ein unbekanntes Element konvertiert wurde. Folgende Werte sind möglich: `IgnoreError` – die Verarbeitung wird fortgesetzt, als wäre der Fehler nicht aufgetreten; `ReportAndContinue` – der Fehler wird protokolliert und die Verarbeitung fortgesetzt; `ReportAndStop` – der Fehler wird protokolliert und die Verarbeitung sofort beendet, selbst wenn die Fehleranzahl unterhalb der Fehlergrenze liegt.  
   
  **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
- Gibt an, welche Aktion vom Server beim `NullProcessing` nastaven NA hodnotu `Error` für ein Dimensionsattribut. Wenn für ein bestimmtes Attribut kein NULL-Wert zulässig ist, wird ein Fehler generiert. Durch diese Fehlerkonfigurationseigenschaft wird der nächste Schritt initiiert, der darin besteht, den Fehler zu melden und die Verarbeitung fortzusetzen, bis die Fehlergrenze erreicht ist. Gültige Werte sind `IgnoreError` die Verarbeitung ansonsten fortgesetzt, als ob der Fehler nicht aufgetreten; `ReportAndContinue` der Fehler wird protokolliert und die Verarbeitung fortgesetzt; und `ReportAndStop` der Fehler wird protokolliert und die Verarbeitung sofort beendet, selbst wenn die Fehleranzahl unterhalb der Fehlergrenze liegt.  
+ Gibt die Aktion an, die vom Server ausgeführt wird, wenn `NullProcessing` für ein Dimensionsattribut auf `Error` festgelegt wird. Wenn für ein bestimmtes Attribut kein NULL-Wert zulässig ist, wird ein Fehler generiert. Durch diese Fehlerkonfigurationseigenschaft wird der nächste Schritt initiiert, der darin besteht, den Fehler zu melden und die Verarbeitung fortzusetzen, bis die Fehlergrenze erreicht ist. Folgende Werte sind möglich: `IgnoreError` – die Verarbeitung wird fortgesetzt, als wäre der Fehler nicht aufgetreten; `ReportAndContinue` – der Fehler wird protokolliert und die Verarbeitung fortgesetzt; `ReportAndStop` – der Fehler wird protokolliert und die Verarbeitung sofort beendet, selbst wenn die Fehleranzahl unterhalb der Fehlergrenze liegt.  
   
  **ErrorLog\ LogErrorTypes\CalculationError**  
  Diese Eigenschaft wird standardmäßig während des vom Server ausgeführten Verarbeitungsvorgangs verwendet.  
@@ -172,7 +172,7 @@ ms.locfileid: "48204840"
  Der Standardwert für diese Eigenschaft ist leer. Dies bedeutet, dass standardmäßig die Datei FlightRecorderTraceDef.xml verwendet wird.  
   
 ## <a name="query-log"></a>Abfrageprotokoll  
- **Gilt für:** Nur mehrdimensionaler Servermodus  
+ **Gilt für:** Nur mehrdimensionaler Servermodus.  
   
  **QueryLog\QueryLogFileName**  
  Eine Zeichenfolge, die den Namen der Abfrageprotokolldatei angibt. Diese Eigenschaft gilt nur, wenn für die Protokollierung eine Datei auf dem Datenträger anstelle einer Datenbanktabelle (das Standardverhalten) verwendet wird.  
@@ -199,7 +199,7 @@ ms.locfileid: "48204840"
  Der Standardwert für diese Eigenschaft ist FALSE. Dies bedeutet, dass der Server nicht automatisch die Protokolltabelle erstellt und keine Abfrageereignisse protokolliert.  
   
 > [!NOTE]  
->  Weitere Informationen zum Konfigurieren des Abfrageprotokolls finden Sie unter [Configuring the Analysis Services Query Log](http://go.microsoft.com/fwlink/?LinkId=81890)(Konfigurieren des Abfrageprotokolls von Analysis Services).  
+>  Weitere Informationen zum Konfigurieren des Abfrageprotokolls finden Sie unter [Configuring the Analysis Services Query Log](https://go.microsoft.com/fwlink/?LinkId=81890)(Konfigurieren des Abfrageprotokolls von Analysis Services).  
   
 ## <a name="trace"></a>Ablaufverfolgung  
  **Trace\TraceBackgroundDistributionPeriod**  

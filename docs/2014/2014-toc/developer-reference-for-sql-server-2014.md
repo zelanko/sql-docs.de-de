@@ -12,12 +12,12 @@ ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fcc0962d0d810b79a788e86aa987f3b54534a41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 934262fb9f5e1e67ebf475310518f924aebbc4c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196810"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351474"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>Entwicklerverweis für SQL Server 2014
   Mit folgenden Funktionen und Technologien können Sie Anwendungen entwickeln, mit denen auf Daten in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank zugegriffen werden kann.  
@@ -25,7 +25,7 @@ ms.locfileid: "48196810"
 ## <a name="programming-reference-sections"></a>Abschnitte des Programmierverzeichnisses  
  ![Kleines Dateiordnersymbol](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Common Language Runtime &#40;CLR&#41; Programmierkonzepte für die Integration](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
- ![Kleines Dateiordnersymbol](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [systemeigene XML](http://technet.microsoft.com/library/ms191274.aspx)  
+ ![Kleines Dateiordnersymbol](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [systemeigene XML](https://technet.microsoft.com/library/ms191274.aspx)  
   
  ![Kleines Dateiordnersymbol](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Programmierung für SQL Server Native Client](../relational-databases/native-client/sql-server-native-client-programming.md)  
   
@@ -62,10 +62,10 @@ ms.locfileid: "48196810"
 ## <a name="other-programming-resources"></a>Weitere Programmierressourcen  
  Für das Entwickeln einer Datenzugriffsanwendung ist möglicherweise eine oder mehrere der folgenden Technologien erforderlich:  
   
- [Datenzugriff in Visual Studio](http://go.microsoft.com/fwlink/?LinkId=129902)  
+ [Datenzugriff in Visual Studio](https://go.microsoft.com/fwlink/?LinkId=129902)  
   
- [SQL Server-Treiber für PHP](http://go.microsoft.com/fwlink/?LinkID=119889)  
+ [SQL Server-Treiber für PHP](https://go.microsoft.com/fwlink/?LinkID=119889)  
   
- [JDBC](http://go.microsoft.com/fwlink/?LinkId=129903)  
+ [JDBC](https://go.microsoft.com/fwlink/?LinkId=129903)  
   
   

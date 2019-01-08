@@ -1,6 +1,6 @@
 ---
-title: Vergabe von Benutzerberechtigungen für SQL Server Machine Learning Services | Microsoft-Dokumentation
-description: Informationen zum Benutzer die Berechtigung zum SQL Server Machine Learning Services erteilen.
+title: Erteilen von Datenbankberechtigungen für die skriptausführung R- und Python - SQL Server Machine Learning Services
+description: Informationen zum Datenbank-Benutzerberechtigungen für die Ausführung von R und Python-Skript in SQL Server-Machine Learning-Dienste zu gewähren.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 07268386ad66350eed7f1382348fa4d698863600
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: e281f1712163aeee1846565458c2b037077c8588
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419065"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644839"
 ---
 # <a name="give-users-permission-to-sql-server-machine-learning-services"></a>Vergabe von Benutzerberechtigungen für SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ Wenn Sie installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s
 
 Die meisten Benutzer haben jedoch nicht diese erhöhten Berechtigungen. Beispielsweise sind Benutzer in einer Organisation, die SQL-Benutzernamen verwenden, um Zugriff auf die Datenbank in der Regel nicht mit erhöhten Rechten berechtigt. Aus diesem Grund müssen für jeden Benutzer, die R- oder Python verwendet wird, Sie Benutzern von Machine Learning Services gewähren die Berechtigung zum Ausführen externer Skripts, die in jeder Datenbank, in denen die Sprache verwendet wird. So sieht wie:
 
-```SQL
+```sql
 USE <database_name>
 GO
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
@@ -49,7 +49,7 @@ Für jedes Windows-Benutzerkonto oder die SQL-Anmeldung, die R- oder Python-Skri
 
 Beispielsweise die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung bietet die SQL-Anmeldung *MySQLLogin* die Rechte zum Ausführen von T-SQL-Abfragen in der *ML_Samples* Datenbank. Um diese Anweisung auszuführen, muss die SQL-Anmeldung bereits im Sicherheitskontext des Servers vorhanden sein.
 
-```SQL
+```sql
 USE ML_Samples
 GO
 EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'

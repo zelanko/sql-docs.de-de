@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: install
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -20,12 +20,12 @@ ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88dfe4836cc84b7792639817a01c026f6d3f3283
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8bbec3cd552434070d76913f72812b302440bcdb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018105"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363482"
 ---
 # <a name="upgrade-analysis-services"></a>Aktualisieren von Analysis Services
   Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup zum Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Upgrades. Ausführliche Informationen zum Aktualisieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im SharePoint-Modus finden Sie unter [Aktualisieren von PowerPivot für SharePoint](upgrade-power-pivot-for-sharepoint.md). Für Weitere Informationen zum Aktualisieren einer vorhandenen SQL Server-Instanz, finden Sie unter [ein Upgrade auf SQL Server 2014 mithilfe des Installations-Assistenten &#40;Setup&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "51018105"
 ## <a name="known-upgrade-issues"></a>Bekannte Upgradeprobleme  
  Lesen Sie vor dem Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]die folgenden Themen:  
   
--   [Versionsanmerkungen zu SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
+-   [Versionsanmerkungen zu SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 -   Informationen dazu, welche [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Features und Funktionen nicht mehr, als veraltet markiert, oder geändert wurden finden Sie unter [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md).  
   

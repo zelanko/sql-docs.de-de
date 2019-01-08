@@ -1,30 +1,30 @@
 ---
-title: Lektion 4 Predict mögliche Ergebnissen mithilfe von R-Modelle (SQL Server-Machine Learning) | Microsoft-Dokumentation
+title: Lektion 4 Predict möglichen Ergebnissen mithilfe von R-Modelle – SQL Server-Machine Learning
 description: Veranschaulicht, wie zum operationalisieren von eingebettetem R-Skript in SQL Server gespeicherte Prozeduren mit T-SQL-Funktionen
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/30/2018
+ms.date: 11/16/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8485cd4e24e067cf6a4e6feef0c39c3c3051a166
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2b22d971764be99c5542c7cd8615c11ebb3e6cba
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032537"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644780"
 ---
-# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lektion 4: Ausführen von Vorhersagen mithilfe von R, die in einer gespeicherten Prozedur eingebettet
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lektion 4: Führen Sie Vorhersagen mithilfe von R in einer gespeicherten Prozedur eingebettet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Tutorials für SQL-Entwickler zur Verwendung von R in SQL Server.
 
 In diesem Schritt erfahren Sie, um das Modell für neue Beobachtungen zu verwenden, um mögliche Ergebnisse vorherzusagen. Das Modell wird in einer gespeicherten Prozedur eingeschlossen, die direkt von anderen Anwendungen aufgerufen werden kann. Die exemplarische Vorgehensweise veranschaulicht verschiedene Möglichkeiten zum Durchführen von Bewertungen:
 
-- **Batchbewertungsmodus**: verwenden eine SELECT-Abfrage als Eingabe für die gespeicherte Prozedur. Die gespeicherte Prozedur gibt eine Tabelle mit Beobachtungen zurück, die mit den Eingabefällen übereinstimmen.
+- **Batchbewertungsmodus**: Verwenden Sie eine SELECT-Abfrage als Eingabe für die gespeicherte Prozedur. Die gespeicherte Prozedur gibt eine Tabelle mit Beobachtungen zurück, die mit den Eingabefällen übereinstimmen.
 
-- **Einzelbewertungsmodus**: Übergeben Sie einen Satz von einzelnen Parameterwerten als Eingabe.  Die gespeicherte Prozedur gibt eine einzelne Zeile oder einen Wert zurück.
+- **Einzelbewertungsmodus**: Übergeben Sie einen Satz von einzelnen Parameterwerten als Eingabe an.  Die gespeicherte Prozedur gibt eine einzelne Zeile oder einen Wert zurück.
 
 Sehen wir uns zuerst einmal an, wie die Bewertung im Allgemeinen abläuft.
 
@@ -32,12 +32,12 @@ Sehen wir uns zuerst einmal an, wie die Bewertung im Allgemeinen abläuft.
 
 Die gespeicherte Prozedur **RxPredict** veranschaulicht die grundlegende Syntax für einen Aufruf der RevoScaleR-RxPredict in einer gespeicherten Prozedur umschließen.
 
-```SQL
-CREATE PROCEDURE [dbo].[RxPredict] @inquery nvarchar(max) 
+```sql
+CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
 AS 
 BEGIN 
-  
-DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);  
+
+DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);  
 EXEC sp_execute_external_script @language = N'R',
   @script = N' 
     mod <- unserialize(as.raw(model)); 
@@ -70,7 +70,7 @@ Ein gängiges Szenario ist zum Generieren von Vorhersagen für mehrere Beobachtu
 
 1.  Zunächst eine kleinere Gruppe von Eingabedaten gearbeitet. Diese Abfrage erstellt eine „Top 10“-Liste der Fahrten mit Reisenden sowie anderen Funktionen, die benötigt werden, um eine Vorhersage zu erstellen.
   
-    ```SQL
+    ```sql
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
     
     FROM (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a
@@ -86,7 +86,7 @@ Ein gängiges Szenario ist zum Generieren von Vorhersagen für mehrere Beobachtu
 
     **Beispielergebnisse**
     
-    ```
+    ```sql
     passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime   direct_distance
     1  283 0.7 2013-03-27 14:54:50.000   0.5427964547
     1  289 0.7 2013-02-24 12:55:29.000   0.3797099614
@@ -95,12 +95,11 @@ Ein gängiges Szenario ist zum Generieren von Vorhersagen für mehrere Beobachtu
 
 2. Erstellen Sie eine gespeicherte Prozedur namens **RxPredictBatchOutput** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-    ```SQL
-    /****** Object:  StoredProcedure [dbo].[RxPredictBatchOutput]  ******/
-    CREATE PROCEDURE [dbo].[RxPredictBatchOutput] @inquery nvarchar(max)
+    ```sql
+    CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
     AS
     BEGIN
-    DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
+    DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);
     EXEC sp_execute_external_script 
       @language = N'R',
       @script = N'
@@ -119,13 +118,13 @@ Ein gängiges Szenario ist zum Generieren von Vorhersagen für mehrere Beobachtu
 
 3.  Geben Sie den Abfragetext in einer Variablen, und übergeben Sie es als Parameter an die gespeicherte Prozedur:
 
-    ```SQL
+    ```sql
     -- Define the input data
     DECLARE @query_string nvarchar(max)
     SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
-
+    
     -- Call the stored procedure for scoring and pass the input data
-    EXEC [dbo].[RxPredictBatchOutput] @inquery = @query_string;
+    EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
     ```
   
 Die gespeicherte Prozedur gibt eine Reihe von Werten, die die Vorhersage für jede der Top 10 Fahrten darstellt. Die Top Fahrten sind jedoch auch nur einem Reisenden Fahrten mit einer relativ kurzen fahrtweg, für die der Treiber es unwahrscheinlich, dass ein Trinkgeld erhalten wird.
@@ -145,12 +144,12 @@ Wenn Sie die gespeicherte Prozedur aus einer externen Anwendung aufrufen, stelle
 
 1. Erstellen einer gespeicherten Prozedur **RxPredictSingleRow**.
   
-    ```SQL
-    CREATE PROCEDURE [dbo].[RxPredictSingleRow] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+    ```sql
+    CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
     AS
     BEGIN
     DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
-    DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
+    DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);
     EXEC sp_execute_external_script  
       @language = N'R',
       @script = N'  
@@ -170,20 +169,21 @@ Wenn Sie die gespeicherte Prozedur aus einer externen Anwendung aufrufen, stelle
   
     Öffnen Sie ein neues **Abfrage** Fenster, und rufen Sie die gespeicherte Prozedur, und geben Sie Werte für jeden Parameter. Die Parameter darstellen von featurespalten, die vom Modell verwendet werden und sind erforderlich.
 
-    ```
-    EXEC [dbo].[RxPredictSingleRow] @passenger_count = 0,
+    ```sql
+    EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
+    @passenger_count = 1,
     @trip_distance = 2.5,
     @trip_time_in_secs = 631,
     @pickup_latitude = 40.763958,
     @pickup_longitude = -73.973373,
     @dropoff_latitude =  40.782139,
-    @dropoff_longitude = 73.977303
+    @dropoff_longitude = -73.977303
     ```
 
     Verwenden Sie dieses kürzere Form unterstützt [Parameter einer gespeicherten Prozedur](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
-    ```SQL
-    EXEC [dbo].[PredictRxMultipleInputs] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    ```sql
+    EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 3. Die Ergebnisse zeigen, dass die Wahrscheinlichkeit von einem Tipp niedrig ist (null) auf diese Top 10 Fahrten, da alle mit nur einem Reisenden über eine relativ kurze Entfernung sind.
@@ -194,4 +194,4 @@ Dies ist der Abschluss für das Lernprogramm. Nun, da Sie zum Einbetten von R-Co
 
 ## <a name="previous-lesson"></a>Vorherige Lektion
 
-[Lektion 3: Trainieren Sie und speichern Sie eine R-Modells mit T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
+[Lektion 3: Trainieren und Speichern eines R-Modells mit T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)

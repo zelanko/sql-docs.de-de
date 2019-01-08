@@ -20,12 +20,12 @@ ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f2aa4413bd9f226bd0bbdf5b676da0da866fde32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfbf93fc858f52cd35401bd80fe5ede7dee86a3d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705858"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591744"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +48,20 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_type=** ] **"***Job_type***"**  
+ [  **@job_type=** ] **"**_Job_type_**"**  
  Der Typ des zu ändernden Auftrags. *Der Standardwert ist* ist **nvarchar(20)** hat den Standardwert 'Capture'. Gültige Eingaben sind 'capture' und 'cleanup'.  
   
- [ **@maxtrans** ] **= *** Max_trans*  
+ [ **@maxtrans** ] **=** _Max_trans_  
  Maximale Anzahl der in jedem Scanzyklus zu verarbeitenden Transaktionen. *Max_trans* ist **Int** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt. Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
   
  *Max_trans* ist nur für aufzeichnungsaufträge gültig.  
   
- [ **@maxscans** ] **= *** Max_scans*  
+ [ **@maxscans** ] **=** _Max_scans_  
  Maximale Anzahl der Scanzyklen, die ausgeführt werden sollen, um alle Zeilen aus dem Protokoll zu extrahieren. *Max_scans* ist **Int** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt.  
   
  *Max_scan* ist nur für aufzeichnungsaufträge gültig.  
   
- [ **@continuous** ] **= *** continuous*  
+ [ **@continuous** ] **=** _continuous_  
  Gibt an, ob der Aufzeichnungsauftrag kontinuierlich (1) oder nur einmal (0) ausgeführt wird. *fortlaufende* ist **Bit** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt.  
   
  Wenn *fortlaufende* = 1, die [Sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) Auftrag überprüft das Protokoll und verarbeitet bis zu (*Max_trans* \* *Max_scans*) Transaktionen. Er wartet dann die Anzahl der Sekunden, die im angegebenen *Polling_interval* vor Beginn des nächsten protokollscans.  
@@ -74,17 +74,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *fortlaufende* ist nur für aufzeichnungsaufträge gültig.  
   
- [ **@pollinginterval** ] **= *** Polling_interval*  
+ [ **@pollinginterval** ] **=** _Polling_interval_  
  Anzahl von Sekunden zwischen den Scan des Replikationsprotokolls Prozessorzyklen. *Polling_interval* ist **Bigint** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt.  
   
  *Polling_interval* ist nur für aufzeichnungsaufträge gültig Aufträgen, wenn *fortlaufende* auf 1 festgelegt ist.  
   
- [ **@retention** ] **= *** Aufbewahrung*  
+ [ **@retention** ] **=** _Aufbewahrung_  
  Die Anzahl von Minuten, für die Änderungszeilen in Änderungstabellen beibehalten werden sollen. *Aufbewahrung* ist **Bigint** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt. Der Maximalwert beträgt 52494800 (100 Jahre). Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
   
  *Aufbewahrung* ist nur für cleanupaufträge gültig.  
   
- [  **@threshold=** ] **"***Löschgrenzwert***"**  
+ [  **@threshold=** ] **"**_Löschgrenzwert_**"**  
  Maximale Anzahl von Einträgen für Löschvorgänge, die mit einer einzelnen Anweisung beim Cleanup gelöscht werden können. *Löschgrenzwert* ist **Bigint** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt. *Löschgrenzwert* ist nur für cleanupaufträge gültig.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

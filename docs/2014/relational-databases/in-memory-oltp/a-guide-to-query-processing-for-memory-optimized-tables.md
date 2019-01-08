@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c0372c07edc32be23034a4c221e2480bd2047be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2393792341fdbc28bbc0f74657aa2f3cf54ee4d1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213080"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374822"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
   Mit In-Memory OLTP werden speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]eingeführt. Dieser Artikel gibt eine Übersicht über die Abfrageverarbeitung für speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren.  
@@ -60,7 +60,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- Zum Erstellen der in diesem Artikel dargestellten Abfragepläne werden die beiden Tabellen mit Beispieldaten aus der Northwind-Beispieldatenbank aufgefüllt. Diese können Sie von [Northwind and pubs Sample Databases for SQL Server 2000](http://www.microsoft.com/download/details.aspx?id=23654)(Northwind and pubs-Beispieldatenbanken für SQL Server 2000) herunterladen.  
+ Zum Erstellen der in diesem Artikel dargestellten Abfragepläne werden die beiden Tabellen mit Beispieldaten aus der Northwind-Beispieldatenbank aufgefüllt. Diese können Sie von [Northwind and pubs Sample Databases for SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654)(Northwind and pubs-Beispieldatenbanken für SQL Server 2000) herunterladen.  
   
  Betrachten wir die folgende Abfrage, in der die Tabellen "Customer" und "Order" verknüpft sind und die die Bestell-ID und die zugehörigen Kundeninformationen zurückgibt:  
   
@@ -79,7 +79,7 @@ Abfrageplan für einen Join datenträgerbasierter Tabellen.
   
 -   Daten aus der Reihenfolge-Tabelle werden mithilfe des nicht gruppierten Indexes für die CustomerID-Spalte abgerufen. Dieser Index enthält die Spalte CustomerID, die für diesen Join verwendet wird, und die Primärschlüsselspalte OrderID, die an den Benutzer zurückgegeben wird. Das Zurückgeben zusätzlicher Spalten aus der Order-Tabelle würde Suchen im gruppierten Index für die Order-Tabelle erfordern.  
   
--   Der logische Operator `Inner Join` wird vom physischen Operator `Merge Join` implementiert. Die anderen physischen Jointypen sind `Nested Loops` und `Hash Join`. Die `Merge Join` -Operator nutzt die Tatsache, dass beide Indizes nach der Joinspalte CustomerID sortiert werden.  
+-   Der logische Operator `Inner Join` wird vom physischen Operator `Merge Join` implementiert. Die anderen physischen Jointypen sind `Nested Loops` und `Hash Join`. Der `Merge Join`-Operator nutzt die Tatsache, dass beide Indizes nach der Joinspalte CustomerID sortiert werden.  
   
  Betrachten wir eine leichte Abwandlung dieser Abfrage, die alle Zeilen aus der Order-Tabelle zurückgibt, nicht nur OrderID:  
   
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.](../../database-engine/media/hekaton-query-plan-2.gif "Query plan for join of disk-based tables.")  
 Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.  
   
- In dieser Abfrage werden Zeilen aus der Order-Tabelle mithilfe des gruppierten Indexes abgerufen. Die `Hash Match` der physische Operator ist jetzt für verwendet die `Inner Join`. Der gruppierte Index für Order wird nicht nach CustomerID sortiert, weshalb eine `Merge Join` würde einen Sortieroperator erfordern, was die Leistung beeinträchtigen würde. Beachten Sie die relativen Kosten des `Hash Match`-Operators (75%) verglichen mit den Kosten des `Merge Join`-Operators im vorherigen Beispiel (46%). Der Optimierer berücksichtigt haben würde die `Hash Match` -Operator auch im vorherigen Beispiel, jedoch hat festgestellt, dass die `Merge Join` -Operator eine bessere Leistung bietet.  
+ In dieser Abfrage werden Zeilen aus der Order-Tabelle mithilfe des gruppierten Indexes abgerufen. Der physische Operator `Hash Match` wird jetzt für `Inner Join` verwendet. Der gruppierte Index für Order wird nicht nach CustomerID sortiert. Deshalb würde `Merge Join` einen Sortieroperator erfordern, der sich auf die Leistung auswirkt. Beachten Sie die relativen Kosten des `Hash Match`-Operators (75%) verglichen mit den Kosten des `Merge Join`-Operators im vorherigen Beispiel (46%). Der Optimierer hätte den `Hash Match`-Operator auch im vorherigen Beispiel in Betracht gezogen, hat aber festgestellt, dass der `Merge Join`-Operator eine bessere Leistung bietet.  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Abfrageverarbeitung für datenträgerbasierte Tabellen  
  Das folgende Diagramm zeigt den Abfrageverarbeitungsfluss in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für Ad-hoc-Abfragen:  
@@ -170,7 +170,7 @@ Abfrageplan für den Join speicheroptimierter Tabellen.
   
     -   Gruppierte Indizes werden nicht bei speicheroptimierten Tabellen unterstützt. Stattdessen muss jede speicheroptimierte Tabelle mindestens über einen nicht gruppierten Index verfügen, und alle Indizes für speicheroptimierte Tabellen können effizient auf alle Spalten in der Tabelle zugreifen, ohne dass sie im Index gespeichert werden müssen oder dass auf einen gruppierten Index zurückgegriffen werden muss.  
   
--   Dieser Plan enthält ein `Hash Match` anstelle eines `Merge Join`. Die Indizes der Order- und Customer-Tabelle sind Hashindizes und werden daher nicht sortiert. Ein `Merge Join` würde sortieroperatoren, die Leistung verringern würden erfordern.  
+-   Dieser Plan enthält ein `Hash Match` anstelle eines `Merge Join`. Die Indizes der Order- und Customer-Tabelle sind Hashindizes und werden daher nicht sortiert. Ein `Merge Join` würde Sortieroperatoren erfordern, die die Leistung verringern würden.  
   
 ## <a name="natively-compiled-stored-procedures"></a>Systemintern kompilierte gespeicherte Prozeduren  
  Systemintern kompilierte gespeicherte Prozeduren sind gespeicherte [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Prozeduren, die in Computercode kompiliert werden, statt durch die Abfrageausführungs-Engine interpretiert zu werden. Das folgende Skript erstellt eine systemintern kompilierte gespeicherte Prozedur, die die Beispielabfrage ausführt (aus dem Abschnitt Beispielabfrage).  
@@ -205,7 +205,7 @@ Systeminterne Kompilierung gespeicherter Prozeduren.
   
  Der Prozess lässt sich folgendermaßen beschreiben:  
   
-1.  Der Benutzer gibt eine `CREATE PROCEDURE` Anweisung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  Der Benutzer gibt eine `CREATE PROCEDURE`-Anweisung an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aus.  
   
 2.  Der Parser und die Algebraisierung erstellen den Verarbeitungsfluss für die Prozedur sowie die Abfragestrukturen für die [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfragen in der gespeicherten Prozedur.  
   
@@ -226,7 +226,7 @@ Ausführung systemintern kompilierter gespeicherten Prozeduren.
   
 2.  Der Parser extrahiert den Namen und die Parameter der gespeicherten Prozedur.  
   
-     Wenn die Anweisung vorbereitet wurde, z. B. mit `sp_prep_exec`, muss der Parser nicht den Prozedurnamen und die Parameter zur Ausführungszeit extrahieren.  
+     Wenn die Anweisung vorbereitet wurde, beispielsweise mit `sp_prep_exec`, muss der Parser den Prozedurnamen und die Parameter nicht zur Ausführungszeit extrahieren.  
   
 3.  Die In-Memory OLTP-Laufzeit sucht den DLL-Einstiegspunkt für die gespeicherte Prozedur.  
   
@@ -236,7 +236,7 @@ Ausführung systemintern kompilierter gespeicherten Prozeduren.
   
  Interpretierte gespeicherte [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Prozeduren werden im Gegensatz zu systemintern kompilierten gespeicherten Prozeduren, die zur Erstellungszeit kompiliert werden, bei der ersten Ausführung kompiliert. Wenn interpretierte gespeicherte Prozeduren beim Aufruf kompiliert werden, werden die Werte der Parameter, die für diesen Aufruf angegeben werden, bei der Erstellung des Ausführungsplans vom Abfrageoptimierer verwendet. Diese Verwendung von Parametern während der Kompilierung wird als Parameterermittlung bezeichnet.  
   
- Die Parameterermittlung wird nicht zum Kompilieren von systemintern kompilierten gespeicherten Prozeduren verwendet. Es wird angenommen, dass alle Parameter für die gespeicherte Prozedur UNBEKANNTE Werte haben. Genauso wie interpretierte gespeicherte Prozeduren, die systemintern kompilierte gespeicherte Prozeduren unterstützen die `OPTIMIZE FOR` Hinweis. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
+ Die Parameterermittlung wird nicht zum Kompilieren von systemintern kompilierten gespeicherten Prozeduren verwendet. Es wird angenommen, dass alle Parameter für die gespeicherte Prozedur UNBEKANNTE Werte haben. Systemintern kompilierte gespeicherte Prozeduren unterstützen genauso wie interpretierte gespeicherte Prozeduren den `OPTIMIZE FOR`-Hinweis. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Abrufen eines Abfrageausführungsplans für systemintern kompilierte gespeicherte Prozeduren  
  Der Abfrageausführungsplan für eine nativ kompilierte gespeicherte Prozedur kann mithilfe des **geschätzten Ausführungsplans** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]oder mithilfe der Option SHOWPLAN_XML in [!INCLUDE[tsql](../../../includes/tsql-md.md)]abgerufen werden. Zum Beispiel:  
@@ -260,7 +260,7 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`|  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`|  
-|Delete|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
+|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
 |Compute Scalar|Dieser Operator wird für systeminterne Funktionen und Typkonvertierungen verwendet. Nicht alle Funktionen und Typkonvertierungen werden in systemintern kompilierten gespeicherten Prozeduren unterstützt.<br /><br /> `SELECT OrderID+1 FROM dbo.[Order]`|  
 |Join geschachtelter Schleifen|Der Operator für geschachtelte Schleifen ist der einzige Joinoperator, der in systemintern kompilierten gespeicherten Prozeduren unterstützt wird. Alle Pläne, die Joins enthalten, verwenden den Operator für geschachtelte Schleifen, selbst wenn der Plan für die gleiche Abfrage in interpretiertem [!INCLUDE[tsql](../../../includes/tsql-md.md)] einen Hashjoin oder einen Zusammenführungsjoin enthält.<br /><br /> `SELECT o.OrderID, c.CustomerID`  <br /> `FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|  
 |Sort|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
@@ -269,7 +269,7 @@ GO
 |Stream Aggregate|Beachten Sie, dass der Hash Match-Operator keine Aggregationen unterstützt. Daher verwenden alle Aggregationen in den systemintern kompilierten gespeicherten Prozeduren den Stream Aggregate-Operator, selbst wenn der Plan für die gleiche Abfrage in interpretiertem [!INCLUDE[tsql](../../../includes/tsql-md.md)] den Hash Match-Operator verwendet.<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## <a name="column-statistics-and-joins"></a>Spaltenstatistiken und Joins  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Statistiken für Werte in den Indexschlüsselspalten beibehalten, damit die Kosten für bestimmte Vorgänge wie Indexscans und Indexsuchen geschätzt werden können. (Von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden auch Statistiken zu Nicht-Indexschlüsselspalten erstellt, wenn Sie sie explizit erstellen, oder wenn sie vom Abfrageoptimierer in Reaktion auf eine Abfrage mit einem Prädikat erstellt werden.) Das wesentliche Maß für die Kostenschätzung ist die Anzahl der Zeilen, die von einem einzelnen Operator verarbeitet werden. Beachten Sie, dass für datenträgerbasierte Tabellen die Anzahl der Seiten, auf die von einem bestimmten Operator zugegriffen wird, für die Kostenschätzung maßgeblich ist. Da die Seitenanzahl bei speicheroptimierten Tabellen jedoch nicht von Bedeutung ist (da sie immer 0 ist), steht hier die Zeilenanzahl im Vordergrund. Die Schätzung beginnt mit den Index Seek- und Index Scan-Operatoren im Plan und schließt danach die anderen Operatoren wie den Join-Operator ein. Die geschätzte Anzahl der von einem Joinoperator zu verarbeitenden Zeilen basiert auf der Schätzung für den zugrunde liegenden Index-, Seek- und Scan-Operator. Beim interpretierten [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen können Sie den tatsächlichen Ausführungsplan beobachten, um den Unterschied zwischen der geschätzten und der tatsächlichen Zeilenanzahl für die Operatoren im Plan herauszufinden.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Statistiken für Werte in den Indexschlüsselspalten beibehalten, damit die Kosten für bestimmte Vorgänge wie Indexscans und Indexsuchen geschätzt werden können. ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auch Statistiken zu nicht-Indexschlüsselspalten erstellt, wenn Sie explizit erstellen, oder wenn die Abfrageoptimierer in Reaktion auf eine Abfrage mit einem Prädikat erstellt.) Das wesentliche Maß für die Kostenschätzung ist die Anzahl der Zeilen, die von einem einzelnen Operator verarbeitet werden. Beachten Sie, dass für datenträgerbasierte Tabellen die Anzahl der Seiten, auf die von einem bestimmten Operator zugegriffen wird, für die Kostenschätzung maßgeblich ist. Da die Seitenanzahl bei speicheroptimierten Tabellen jedoch nicht von Bedeutung ist (da sie immer 0 ist), steht hier die Zeilenanzahl im Vordergrund. Die Schätzung beginnt mit den Index Seek- und Index Scan-Operatoren im Plan und schließt danach die anderen Operatoren wie den Join-Operator ein. Die geschätzte Anzahl der von einem Joinoperator zu verarbeitenden Zeilen basiert auf der Schätzung für den zugrunde liegenden Index-, Seek- und Scan-Operator. Beim interpretierten [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen können Sie den tatsächlichen Ausführungsplan beobachten, um den Unterschied zwischen der geschätzten und der tatsächlichen Zeilenanzahl für die Operatoren im Plan herauszufinden.  
   
  Für das Beispiel in Abbildung 1 gilt:  
   
@@ -300,7 +300,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   Der vollständige Indexscan für IX_CustomerID wurde durch eine Indexsuche ersetzt. Dies führte zum Scannen von 5 Zeilen anstelle der für den vollständigen Indexscan erforderlichen 830 Zeilen.  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>Statistiken und Kardinalität für speicheroptimierte Tabellen  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden auf Spaltenebene Statistiken für Speicheroptimierte Tabellen beibehalten. Darüber hinaus behält es die tatsächliche Zeilenanzahl der Tabelle bei. Im Gegensatz zu datenträgerbasierten Tabellen werden die Statistiken für speicheroptimierte Tabellen aber nicht automatisch aktualisiert. Daher müssen Statistiken nach wichtigen Änderungen an den Tabellen manuell aktualisiert werden. Weitere Informationen finden Sie unter [Statistiken für speicheroptimierte Tabellen](memory-optimized-tables.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] behält Statistiken auf Spaltenebene für speicheroptimierte Tabellen bei. Darüber hinaus behält es die tatsächliche Zeilenanzahl der Tabelle bei. Im Gegensatz zu datenträgerbasierten Tabellen werden die Statistiken für speicheroptimierte Tabellen aber nicht automatisch aktualisiert. Daher müssen Statistiken nach wichtigen Änderungen an den Tabellen manuell aktualisiert werden. Weitere Informationen finden Sie unter [Statistiken für speicheroptimierte Tabellen](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Speicheroptimierte Tabellen](memory-optimized-tables.md)  

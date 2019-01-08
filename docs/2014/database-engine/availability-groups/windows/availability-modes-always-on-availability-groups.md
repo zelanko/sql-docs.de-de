@@ -17,12 +17,12 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d993ef299f08400a54487a4e7e99b017e8e9bc55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a05f52eceb554d8f4b023a3136fd4cf8e55d4fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129040"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376312"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Verfügbarkeitsmodi (Always On-Verfügbarkeitsgruppen)
   In [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]ist der *Verfügbarkeitsmodus* eine Replikateigenschaft, die bestimmt, ob ein angegebenes Verfügbarkeitsreplikat im Modus für synchrone Commits ausgeführt werden kann. Für jedes Verfügbarkeitsreplikat muss der Verfügbarkeitsmodus konfiguriert werden, entweder als Modus für synchrone Commits oder aber als Modus für asynchrone Commits.  Wenn das primäre Replikat für den *Modus für asynchrone Commits*konfiguriert wird, wartet es nicht, bis ein sekundäres Replikat eingehende Transaktionsprotokoll-Datensätze auf den Datenträger geschrieben hat ( *Protokoll festschreiben*). Wenn ein bestimmtes sekundäres Replikat für den Modus für asynchrone Commits konfiguriert ist, wartet das primäre Replikat nicht, bis das betreffende sekundäre Replikat das Protokoll festgeschrieben hat. Wenn sowohl das primäre Replikat als auch ein angegebenes sekundäres Replikat für den *Modus für synchrone Commits*konfiguriert sind, wartet das primäre Replikat, bis das sekundäre Replikat bestätigt, dass es das Protokoll festgeschrieben hat (es sei denn, das sekundäre Replikat konnte innerhalb des *Sitzungstimeouts*für das primäre Replikat keinen Ping-Befehl an dieses senden).  
@@ -32,7 +32,7 @@ ms.locfileid: "48129040"
   
   
 ##  <a name="SupportedAvModes"></a> Unterstützte Verfügbarkeitsmodi  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unterstützt zwei Verfügbarkeitsmodi (Modus für asynchrone und synchrone Commits) wie folgt:  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unterstützt zwei Verfügbarkeit Modi-Modus mit asynchronem Commit und synchronen Commit-Modus wie folgt:  
   
 -   *Der Modus für asynchrone Commits* ist eine Wiederherstellungslösung für Notfälle, die gut funktioniert, wenn die Verfügbarkeitsreplikate über weite Entfernungen verteilt sind. Wenn jedes sekundäre Replikat im Modus für asynchrone Commits ausgeführt wird, wartet das primäre Replikat nicht, bis ein sekundäres Replikat das Protokoll festschreibt. Stattdessen sendet das primäre Replikat die Transaktionsbestätigung, unmittelbar nachdem es einen Protokolldatensatz in die lokale Protokolldatei geschrieben hat, an den Client. Das primäre Replikat wird mit minimaler Transaktionswartezeit bezogen auf ein sekundäres Replikat ausgeführt, das für den Modus für asynchrone Commits konfiguriert wurde.  Wenn das aktuelle primäre Replikat für den Verfügbarkeitsmodus "Asynchroner Commit" konfiguriert ist, führt es für alle sekundären Replikate, unabhängig von deren Verfügbarkeitsmoduseinstellungen, asynchron ein Commit für Transaktionen aus.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "48129040"
   
 |Aktuelles primäres Replikat|Automatische Failoverziele|Modus für synchrone Commits bei|Modus für asynchrone Commits bei|Automatisches Failover möglich|  
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
-|01|02|02 und 03|04|Benutzerkontensteuerung|  
-|02|01|01 und 03|04|Benutzerkontensteuerung|  
-|03||01 und 02|04|nein|  
-|04|||01, 02 und 03|nein|  
+|01|02|02 und 03|04|Ja|  
+|02|01|01 und 03|04|Ja|  
+|03||01 und 02|04|Nein|  
+|04|||01, 02 und 03|Nein|  
   
  Normalerweise wird Knoten 04 als Replikat mit asynchronem Commit an einem Standort für die Notfallwiederherstellung bereitgestellt. Die Tatsache, dass die Knoten 01, 02 und 03 nach einem Failover auf Knoten 04 im Modus für asynchrone Commits verbleiben, hilft, einen Leistungsabfall in der Verfügbarkeitsgruppe zu vermeiden, der infolge einer hohen Netzwerklatenz zwischen den beiden Standorten auftritt.  
   
@@ -149,9 +149,9 @@ ms.locfileid: "48129040"
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   

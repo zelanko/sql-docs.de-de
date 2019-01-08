@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
@@ -25,12 +24,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f3254d3356caefcd7f9e15709702970a9b064e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 244efd95d67f36ae77efb15a6fa62684606db746
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050180"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369767"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services-Protokollierung (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Protokollanbieter, mit denen Sie die Protokollierung in Paketen, Containern und Tasks implementieren können. Mit der Protokollierung können Sie Laufzeitinformationen zu einem Paket aufzeichnen, damit Sie ein Paket bei jeder Ausführung überwachen und Probleme behandeln können. Beispielsweise können in einem Protokoll der Name des Operators, der das Paket ausgeführt hat, und der Zeitpunkt, zu dem die Paketausführung begann und endete, aufgezeichnet werden.  
@@ -148,7 +147,7 @@ ms.locfileid: "48050180"
   
 1.  Aktivieren Sie das Paket und seine Tasks für die Protokollierung. Die Protokollierung kann auf Paket-, Container- und Taskebene stattfinden. Sie können verschiedene Protokolle für Pakete, Container und Tasks angeben.  
   
-2.  Wählen Sie einen Protokollanbieter aus, und fügen Sie ein Protokoll für das Paket hinzu. Protokolle können nur auf Paketebene erstellt werden, und ein Task oder Container muss eines der für das Paket erstellten Protokolle verwenden. Jedes Protokoll ist einem der folgenden Protokollanbieter zugeordnet: Textdatei, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Windows-Ereignisprotokoll oder XML-Datei. Weitere Informationen finden Sie unter [Aktivieren der Paketprotokollierung in SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
+2.  Wählen Sie einen Protokollanbieter aus, und fügen Sie ein Protokoll für das Paket hinzu. Protokolle können nur auf Paketebene erstellt werden, und ein Task oder Container muss eines der für das Paket erstellten Protokolle verwenden. Jedes Protokoll ist eine der folgenden Protokollanbieter zugeordnet: Textdatei [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Windows-Ereignisprotokoll oder XML-Datei. Weitere Informationen finden Sie unter [Aktivieren der Paketprotokollierung in SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
   
 3.  Wählen Sie die Ereignisse und die Protokollschemainformationen zu jedem Ereignis aus, das Sie im Protokoll erfassen möchten. Weitere Informationen finden Sie unter [Konfigurieren der Protokollierung mithilfe einer gespeicherten Konfigurationsdatei](../configure-logging-by-using-a-saved-configuration-file.md).  
   
@@ -199,7 +198,7 @@ ms.locfileid: "48050180"
   
 -   Die Transformation für abgeleitete Spalten mit dem Namen "Calculate LineItemTotalCost" hat 356 Millisekunden für das Durchführen von Berechnungen für eingehende Zeilen benötigt.  
   
--   Die Transformation für das Aggregieren mit dem Namen "Sum Quantity and LineItemTotalCost" hat insgesamt 220 Millisekunden &ndash; 141 für den PrimeOutput- und 79 für den ProcessInput-Schritt &ndash; benötigt, um Berechnungen durchzuführen und die Daten an die nächste Transformation zu übergeben.  
+-   Die Transformation für das Aggregieren mit dem Namen „Sum Quantity and LineItemTotalCost“ hat insgesamt 220 Millisekunden (141 für den PrimeOutput- und 79 für den ProcessInput-Schritt) benötigt, um Berechnungen durchzuführen und die Daten an die nächste Transformation zu übergeben.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Die folgende Liste enthält Links zu Themen, die die Ausführung von Tasks in Verbindung mit der Protokollierungsfunktion beschreiben.  
@@ -210,10 +209,10 @@ ms.locfileid: "48050180"
   
 -   [Aktivieren der Protokollierung für die Paketausführung auf dem SSIS-Server](../enable-logging-for-package-execution-on-the-ssis-server.md)  
   
--   [Anzeigen der Protokolleinträge im Fenster „Protokollereignisse“](../view-log-entries-in-the-log-events-window.md)  
+-   [Anzeigen der Protokolleinträge im Fenster 'Protokollereignisse'](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [DTLoggedExec-Tool für vollständige und Detailprotokollierung (CodePlex-Projekt)](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [DTLoggedExec-Tool für vollständige und Detailprotokollierung (CodePlex-Projekt)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen der Protokolleinträge im Fenster „Protokollereignisse“](../view-log-entries-in-the-log-events-window.md)  

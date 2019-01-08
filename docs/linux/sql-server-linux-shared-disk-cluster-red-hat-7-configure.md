@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: bbeeff135edbc333b6ce8b3e20cf5235710f2dc1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b5ffda90f0d4b2b85ed29af65da5ea12592e4423
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677679"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979916"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Konfigurieren Sie Red Hat Enterprise Linux Cluster mit freigegebenen Datenträgern werden für SQL Server.
 
@@ -274,7 +274,7 @@ An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den
    sudo firewall-cmd --reload
    ```
 
-   > Wenn Sie eine andere Firewall verwenden, in die keine Konfiguration mit hoher Verfügbarkeit integriert ist, müssen die folgenden Ports geöffnet werden, damit Pacemaker mit anderen Knoten im Cluster kommunizieren kann:
+   > Wenn Sie eine andere Firewall verwenden, die nicht über eine integrierte Konfiguration mit hoher Verfügbarkeit verfügt, müssen die folgenden Ports geöffnet werden, damit Pacemaker mit anderen Knoten im Cluster kommunizieren können
    >
    > * TCP: Ports 2224, 3121, 21064
    > * UDP: Port 5405
@@ -285,7 +285,7 @@ An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-   
+    
 
 2. Legen Sie das Kennwort für den Standardbenutzer fest, der beim Installieren von Pacemaker und Corosync-Paketen erstellt wird. Verwenden Sie auf beiden Knoten dasselbe Kennwort. 
 
@@ -293,7 +293,7 @@ An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den
    sudo passwd hacluster
    ```
 
-   
+    
 
 3. Aktivieren und starten Sie den `pcsd`-Dienst und Pacemaker. So können Knoten dem Cluster nach dem Neustart erneut beitreten. Führen Sie den folgenden Befehl auf beiden Knoten aus.
 
@@ -314,8 +314,8 @@ An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den
 1. Erstellen Sie auf einem der Knoten den Cluster ein.
 
    ```bash
-   sudo pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
-   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
+   sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
+   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
    ```
 
@@ -330,13 +330,13 @@ An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den
 
 2. Konfigurieren Sie die Clusterressourcen für SQL Server, Dateisystem und virtuellen IP-Ressourcen aus, und drücken Sie die Konfiguration mit dem Cluster. Sie benötigen die folgenden Informationen:
 
-   - **SQL Server-Ressourcenname**: einen Namen für die SQL Server-Clusterressource. 
-   - **Floating-IP-Ressourcennamen**: einen Namen für die virtuelle IP-Adressressource.
-   - **IP-Adresse**: die IP-Adresse, die Clients verwenden, um an der gruppierten Instanz von SQL Server eine Verbindung herstellen. 
-   - **File System-Ressourcenname**: einen Namen für die Dateisystem-Ressource.
+   - **SQL Server-Ressourcenname**: Ein Name für die SQL Server-Clusterressource. 
+   - **Floating-IP-Ressourcennamen**: Ein Name für die virtuelle IP-Adressressource.
+   - **IP-Adresse**: Die IP-Adresse, die Clients verwenden, um an der gruppierten Instanz von SQL Server eine Verbindung herstellen. 
+   - **File System-Ressourcenname**: Ein Name für die Dateisystem-Ressource.
    - **Gerät**: Pfad für die NFS-Freigabe
-   - **Gerät**: der lokale Pfad, dass sie auf die Freigabe eingebunden ist
-   - **FsType**: Freigabe Dateityp (z. B. Nfs)
+   - **Gerät**: Der lokale Pfad, dass sie auf die Freigabe eingebunden ist
+   - **FsType**: Dateityp (z. B. Nfs) freigeben
 
    Aktualisieren Sie die Werte aus dem folgenden Skript für Ihre Umgebung. Führen Sie auf einem Knoten zum Konfigurieren und starten den Clusterdienst.  
 
@@ -370,7 +370,7 @@ An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den
    sudo pcs status 
    ```
 
-   Die folgenden Beispiele zeigen, wie die Ergebnisse beim Pacemaker erfolgreich wurde gestartet, eine Clusterinstanz von SQL Server. 
+   In den folgenden Beispielen werden die Ergebnisse auf, wenn Pacemaker eine gruppierte Instanz von SQL Server wurde erfolgreich gestartet wurde. 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1
@@ -387,7 +387,7 @@ An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den
     pcsd: active/enabled
    ```
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 * [Clustern von Grund auf Neu](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Leitfaden für Pacemaker
 

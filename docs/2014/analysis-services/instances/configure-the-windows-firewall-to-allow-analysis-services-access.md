@@ -15,12 +15,12 @@ ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9073dddaf2a992ae5b735a7884bfaaa278f9d049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c5066a27097bb0919a6d0af0ffa9ad1c53e8624
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068932"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371162"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen
   Ein unverzichtbarer erster Schritt beim Verfügbarmachen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] im Netzwerk besteht darin zu bestimmen, ob die Blockierung von Ports in einer Firewall aufgehoben werden muss. Bei den meisten Installationen müssen Sie mindestens eine eingehende Firewallregel erstellen, die Verbindungen mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zulässt.  
@@ -35,7 +35,7 @@ ms.locfileid: "48068932"
   
 -   Öffnen Sie bei [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 keine Ports in der Windows-Firewall. Als SharePoint-Add-In verwendet der Dienst Ports, die für SharePoint konfiguriert sind, und stellt nur lokale Verbindungen mit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz her, von der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodelle geladen und abgefragt werden.  
   
--   Bei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanzen, die auf virtuellen Computern in Windows Azure ausgeführt werden, führen Sie andere Schritte zum Konfigurieren des Serverzugriffs aus. Weitere Informationen finden Sie unter [SQL Server Business Intelligence auf virtuellen Computern in Windows Azure](http://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
+-   Bei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanzen, die auf virtuellen Computern in Windows Azure ausgeführt werden, führen Sie andere Schritte zum Konfigurieren des Serverzugriffs aus. Weitere Informationen finden Sie unter [SQL Server Business Intelligence auf virtuellen Computern in Windows Azure](https://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
   
  Obwohl die Standardinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] TCP-Port 2383 lauscht, Sie können konfigurieren, der Server zum Lauschen an einem anderen festen Port, mit dem Server im folgenden Format: \<Servername >:\<Portnumber >.  
   
@@ -60,15 +60,15 @@ ms.locfileid: "48068932"
 ##  <a name="bkmk_checkport"></a> Überprüfen der für Analysis Services verwendeten Port- und Firewalleinstellungen  
  Unter Microsoft Windows-Betriebssystemen, die von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt werden, ist die Windows Firewall standardmäßig aktiviert und blockiert Remoteverbindungen. Sie müssen manuell einen Port in der Firewall öffnen, um eingehende Anforderungen für Analysis Services zuzulassen. Das SQL Server-Setup führt diesen Schritt nicht aus.  
   
- Porteinstellungen werden in der Datei msmdsrv.ini und in SQL Server Management Studio auf der Seite Allgemeine Eigenschaften einer Analysis Services-Instanz angegeben. Wenn `Port` festgelegt ist eine positive ganze Zahl, der Dienst einen festen Port lauscht. Wenn `Port` festgelegt ist 0, überwacht der Dienst ist auf Port 2383, wenn es sich um die Standardinstanz ist oder auf einem dynamisch zugewiesenen Port, wenn es sich um eine benannte Instanz handelt.  
+ Porteinstellungen werden in der Datei msmdsrv.ini und in SQL Server Management Studio auf der Seite Allgemeine Eigenschaften einer Analysis Services-Instanz angegeben. Wenn für `Port` eine positive ganze Zahl festgelegt wird, überwacht der Dienst einen festen Port. Wenn für `Port` der Wert 0 festgelegt wird, überwacht der Dienst den Port 2383, wenn es sich um die Standardinstanz handelt, oder einen dynamisch zugewiesenen Port, wenn es sich um eine benannte Instanz handelt.  
   
  Dynamische Portzuweisungen werden nur von benannten Instanzen verwendet. Der `MSOLAP$InstanceName`-Dienst ermittelt beim Start, welcher Port verwendet werden soll. Sie können die aktuell von einer benannten Instanz verwendete Portnummer auf folgende Weise ermitteln:  
   
 -   Starten Sie den Task-Manager, und klicken Sie dann auf **Services** die PID des abzurufenden der `MSOLAP$InstanceName`.  
   
--   Führen Sie den Befehl `netstat –ao –p TCP` über die Befehlszeile aus, um die Informationen zum TCP-Port für diese PID anzuzeigen.  
+-   Führen Sie den Befehl `netstat -ao -p TCP` über die Befehlszeile aus, um die Informationen zum TCP-Port für diese PID anzuzeigen.  
   
--   Überprüfen Sie den Port mithilfe von SQL Server Management Studio und Verbinden mit einem Analysis Services-Server im folgenden Format: \<IP-Adresse >:\<Portnumber >.  
+-   Überprüfen Sie den Port mithilfe von SQL Server Management Studio, und Verbinden mit einem Analysis Services-Server im folgenden Format: \<IP-Adresse >:\<Portnumber >.  
   
  Auch wenn eine Anwendung einen bestimmten Port überwacht, können Verbindungen nicht erfolgreich hergestellt werden, wenn eine Firewall den Zugriff blockiert. Damit Verbindungen zu einer benannten Analysis Services-Instanz hergestellt werden können, müssen Sie die Blockierung des Zugriffs auf msmdsrv.exe oder den festen Port, den die Instanz überwacht, in der Firewall aufheben. In den übrigen Abschnitten in diesem Thema finden Sie Anweisungen zur Vorgehensweise.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48068932"
   
  Wenn Sie den SQL Server-Browserdienst nicht verwenden können, müssen Sie einen festen Port in der Verbindungszeichenfolge zuweisen, wodurch Sie die Auflösung des Domänennamens umgehen. Ohne SQL Server-Browser-Dienst müssen alle Clientverbindungen die Portnummer in der Verbindungszeichenfolge enthalten (z. B. AW-SRV01:54321).  
   
- **Option 1: Verwenden dynamischer Portzuweisungen und Aufheben der Blockierung des Zugriffs auf den SQL Server-Browser-Dienst**  
+ **Option 1: Verwenden Sie dynamischer portzuweisungen und zulassen den Zugriff auf SQL Server-Browser-Dienst**  
   
  Dynamische Portzuweisungen für benannte Instanzen von Analysis Services werden durch `MSOLAP$InstanceName` eingerichtet, wenn der Dienst gestartet wird. Standardmäßig beansprucht der Dienst die erste verfügbare Portnummer, die er findet. Der Dienst verwendet bei jedem erneuten Start eine andere Portnummer.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "48068932"
   
 1.  Ermitteln Sie einen verfügbaren TCP/IP-Port, der verwendet werden soll.  
   
-     Eine Liste reservierter und registrierter Ports, die nicht verwendet werden sollten, finden Sie unter [Portnummern (IANA)](http://go.microsoft.com/fwlink/?LinkID=198469). Um eine Liste der Ports anzuzeigen, die in Ihrem System bereits verwendet werden, öffnen Sie ein Fenster zur Eingabeaufforderung, und geben Sie `netstat –a –p TCP` ein, um eine Liste der TCP-Ports anzuzeigen, die im System geöffnet sind.  
+     Eine Liste reservierter und registrierter Ports, die nicht verwendet werden sollten, finden Sie unter [Portnummern (IANA)](https://go.microsoft.com/fwlink/?LinkID=198469). Um eine Liste der Ports anzuzeigen, die in Ihrem System bereits verwendet werden, öffnen Sie ein Fenster zur Eingabeaufforderung, und geben Sie `netstat -a -p TCP` ein, um eine Liste der TCP-Ports anzuzeigen, die im System geöffnet sind.  
   
 2.  Nachdem Sie den zu verwendenden Port ermittelt haben, geben Sie den Port entweder durch Bearbeiten der `Port`-Konfigurationseinstellung in der Datei msmdsrv.ini oder in SQL Server Management Studio auf der Seite Allgemeine Eigenschaften einer Analysis Services-Instanz an.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "48068932"
 5.  Führen Sie eine Überprüfung durch, indem Sie eine lokale Verbindung herstellen (in Management Studio) und anschließend eine Remoteverbindung von einer Clientanwendung auf einem anderen Computer herstellen. Um Management Studio verwenden möchten, Herstellen einer Verbindung mit einer Standardinstanz von Analysis Services durch einen Servernamen in folgendem Format angeben: \<Servername >:\<Portnumber >. Geben Sie für eine benannte Instanz den Servernamen als \<Servername >\\< Instancename\>.  
   
 ##  <a name="bkmk_cluster"></a> Portkonfiguration für einen Analysis Services-Cluster  
- Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Failovercluster lauscht immer an TCP-Port 2383, unabhängig davon, ob er als Standardinstanz oder benannte Instanz installiert wurde. Bei der Installation in einem Windows-Failovercluster verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] keine dynamischen Portzuweisungen. Achten Sie darauf, TCP 2383 auf jedem Knoten zu öffnen, auf dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im Cluster ausgeführt wird. Weitere Informationen zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Clustern finden Sie unter [Gewusst wie: Verwenden von SQL Server Analysis Services in einem Cluster](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Failovercluster lauscht immer an TCP-Port 2383, unabhängig davon, ob er als Standardinstanz oder benannte Instanz installiert wurde. Bei der Installation in einem Windows-Failovercluster verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] keine dynamischen Portzuweisungen. Achten Sie darauf, TCP 2383 auf jedem Knoten zu öffnen, auf dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im Cluster ausgeführt wird. Weitere Informationen zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Clustern finden Sie unter [Gewusst wie: Verwenden von SQL Server Analysis Services in einem Cluster](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ##  <a name="bkmk_powerpivot"></a> Portkonfiguration für PowerPivot für SharePoint  
  Die Serverarchitektur für [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] unterscheidet sich je nach der verwendeten SharePoint-Version grundlegend.  
@@ -230,7 +230,7 @@ ms.locfileid: "48068932"
   
  **SharePoint 2010**  
   
- Wenn Sie SharePoint 2010 verwenden, müssen Sie keine Ports in der Windows-Firewall öffnen. SharePoint öffnet die Ports nach Bedarf selbst, und Add-Ins wie PowerPivot für SharePoint werden innerhalb der SharePoint-Umgebung ausgeführt. Bei einer Installation von PowerPivot für SharePoint 2010 verwendet der PowerPivot-Systemdienst exklusiv die lokale Instanz des Diensts SQL Server Analysis Services (PowerPivot), die mit ihm auf dem gleichen Computer installiert ist. Dabei werden lokale Verbindungen und keine Netzwerkverbindungen verwendet, um auf den lokalen Analysis Services-Engine-Dienst zuzugreifen, der PowerPivot-Daten auf den SharePoint-Server lädt und sie abfragt und verarbeitet. Für die Anforderung von PowerPivot-Daten von Clientanwendungen werden Anforderungen über Ports weitergeleitet, die durch das SharePoint-Setup geöffnet werden (Es werden insbesondere eingehende Regeln definiert, um den Zugriff auf "SharePoint - 80", die SharePoint-Zentraladministration v4, SharePoint-Webdienste und SPUserCodeV4 zuzulassen). Da PowerPivot-Webdienste in einer SharePoint-Farm ausgeführt werden, reichen die SharePoint-Firewallregeln für den Remotezugriff auf PowerPivot-Daten in einer SharePoint-Farm aus.  
+ Wenn Sie SharePoint 2010 verwenden, müssen Sie keine Ports in der Windows-Firewall öffnen. SharePoint öffnet die Ports nach Bedarf selbst, und Add-Ins wie PowerPivot für SharePoint werden innerhalb der SharePoint-Umgebung ausgeführt. Bei einer Installation von PowerPivot für SharePoint 2010 verwendet der PowerPivot-Systemdienst exklusiv die lokale Instanz des Diensts SQL Server Analysis Services (PowerPivot), die mit ihm auf dem gleichen Computer installiert ist. Dabei werden lokale Verbindungen und keine Netzwerkverbindungen verwendet, um auf den lokalen Analysis Services-Engine-Dienst zuzugreifen, der PowerPivot-Daten auf den SharePoint-Server lädt und sie abfragt und verarbeitet. Zum Anfordern von PowerPivot-Daten von Clientanwendungen werden Anforderungen über Ports, die von SharePoint-Setup geöffnet werden weitergeleitet (insbesondere eingehende Regeln definiert, für den Zugriff auf SharePoint - 80, SharePoint-Zentraladministration v4, SharePoint-Webdienste und SPUserCodeV4). Da PowerPivot-Webdienste in einer SharePoint-Farm ausgeführt werden, reichen die SharePoint-Firewallregeln für den Remotezugriff auf PowerPivot-Daten in einer SharePoint-Farm aus.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server-Browserdienst &amp;amp;#40;Datenbank-Engine und SSAS&amp;amp;#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   

@@ -22,12 +22,12 @@ ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e8dafc5dce762810b2348d41e84fd71fcdb2e436
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b234aba562c095d2861bddec5310cf321b5d331
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832523"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591064"
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,20 +55,20 @@ sys.sp_cdc_enable_table
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@source_schema =** ] **"***Source_schema***"**  
+ [  **@source_schema =** ] **"**_Source_schema_**"**  
  Der Name des Schemas, zu dem die Quelltabelle gehört. *Source_schema* ist **Sysname**, hat keinen Standardwert und darf nicht NULL sein.  
   
- [  **@source_name =** ] **"***Source_name***"**  
+ [  **@source_name =** ] **"**_Source_name_**"**  
  Entspricht dem Namen der Quelltabelle, in der Change Data Capture zu aktivieren ist. *Source_name* ist **Sysname**, hat keinen Standardwert und darf nicht NULL sein.  
   
  *Source_name* muss in der aktuellen Datenbank vorhanden sein. Tabellen in der **cdc** Schema kann nicht für Change Data Capture aktiviert werden.  
   
- [  **@role_name =** ] **"***Rollenname***"**  
+ [  **@role_name =** ] **"**_Rollenname_**"**  
  Entspricht dem Namen der Datenbankrolle zum Sperren des Zugriffs auf die Änderungsdaten. *Rollenname* ist **Sysname** und muss angegeben werden. Wenn der Parameter explizit auf NULL festgelegt ist, wird keine Gatingrolle verwendet, um den Zugriff auf Änderungsdaten einzuschränken.  
   
  Wenn die Rolle derzeit vorhanden ist, wird sie verwendet. Ist die Rolle nicht vorhanden, wird versucht, eine Datenbankrolle mit dem angegebenen Namen zu erstellen. Vor dem Versuch zur Erstellung der Rolle wird der Rollenname um die in der Zeichenfolge rechts befindlichen Leerstellen gekürzt. Wenn der Aufrufer nicht berechtigt ist, Rollen in der Datenbank zu erstellen, tritt bei der gespeicherten Prozedur ein Fehler auf.  
   
- [  **@capture_instance =** ] **"***Capture_instance***"**  
+ [  **@capture_instance =** ] **"**_Capture_instance_**"**  
  Entspricht dem Namen der Aufzeichnungsinstanz, die für die Benennung der instanzspezifischen Change Data Capture-Objekte verwendet wird. *Capture_instance* ist **Sysname** und darf nicht NULL sein.  
   
  Wenn nicht angegeben, wird der Name abgeleitet aus den Namen des Quellschemas sowie vom Namen der Quelltabelle im Format *Schemaname_sourcename*. *Capture_instance* darf 100 Zeichen nicht überschreiten und muss innerhalb der Datenbank eindeutig sein. Ob angegeben oder abgeleitet, *Capture_instance* befindlichen Leerstellen rechts der Zeichenfolge abgeschnitten wird.  
@@ -84,10 +84,10 @@ sys.sp_cdc_enable_table
   
  Wenn *Supports_net_changes* ist auf 1 festgelegt, *Index_name* muss angegeben werden, oder die Quelltabelle muss einen Primärschlüssel definierten.  
   
- [  **@index_name =** ] **"*** Index_name*"  
+ [  **@index_name =** ] **"**_Index_name_"  
  Entspricht dem Namen eines eindeutigen Indexes zur eindeutigen Identifizierung von Zeilen in der Quelltabelle. *Index_name* ist **Sysname** und kann NULL sein. Wenn angegeben, *Index_name* muss ein gültiger eindeutiger Index in der Quelltabelle sein. Wenn *Index_name* angegeben ist, wird die identifizierten Indexspalten Vorrang vor alle definierten Primärschlüsselspalten als eindeutiger Zeilenbezeichner für die Tabelle.  
   
- [  **@captured_column_list =** ] **"***Captured_column_list***"**  
+ [  **@captured_column_list =** ] **"**_Captured_column_list_**"**  
  Identifiziert die Quelltabellenspalten, die in die Änderungstabelle aufzunehmen sind. *Captured_column_list* ist **nvarchar(max)** und kann NULL sein. Wenn der Wert NULL ist, werden alle Spalten in der Änderungstabelle eingeschlossen.  
   
  Spaltennamen müssen gültige Spalten in der Quelltabelle sein. In einem Primärschlüsselindex definierten Spalten oder Spalten, die in einem Index verweist definiert *Index_name* eingeschlossen werden müssen.  
@@ -96,12 +96,12 @@ sys.sp_cdc_enable_table
   
  *Captured_column_list* dürfen nicht die folgenden reservierten Spaltennamen: **__ $Start_lsn**, **__ $End_lsn**, **__ $Seqval**, **__ $ Vorgang**, und **__ $Update_mask**.  
   
- [  **@filegroup_name =** ] **"***Filegroup_name***"**  
+ [  **@filegroup_name =** ] **"**_Filegroup_name_**"**  
  Entspricht der Dateigruppe, die für die Änderungstabelle zu verwenden ist, die für die Aufzeichnungsinstanz erstellt wurde. *Filegroup_name* ist **Sysname** und kann NULL sein. Wenn angegeben, *Filegroup_name* muss für die aktuelle Datenbank definiert werden. Wenn der Wert NULL ist, wird die Standarddateigruppe verwendet.  
   
  Es wird empfohlen, eine separate Dateigruppe für Change Data Capture-Änderungstabellen zu erstellen.  
   
- [  **@allow_partition_switch=** ] **"***Allow_partition_switch***"**  
+ [  **@allow_partition_switch=** ] **"**_Allow_partition_switch_**"**  
  Gibt an, ob der SWITCH PARTITION-Befehl von ALTER TABLE für eine Tabelle ausgeführt werden kann, die für Change Data Capture aktiviert ist. *Allow_partition_switch* ist **Bit**, hat den Standardwert 1.  
   
  Bei nicht partitionierten Tabellen lautet die Schaltereinstellung immer 1, und die tatsächliche Einstellung wird ignoriert. Wenn der Schalter für eine nicht partitionierte Tabelle explizit auf 0 festgelegt ist, wird Warnung 22857 ausgegeben. Dies zeigt an, dass die Schaltereinstellung ignoriert wurde. Wenn der Schalter für eine partitionierte Tabelle explizit auf 0 festgelegt ist, wird die Warnung 22356 ausgegeben. Diese zeigt an, dass SWITCH PARTITION-Vorgänge für die Quelltabelle nicht zulässig sind. Wenn die Schaltereinstellung entweder explizit auf 1 festgelegt und der Standardwert 1 zugelassen und die aktivierte Tabelle partitioniert ist, wird die Warnung 22855 ausgegeben. Diese zeigt an, dass Partitionsschalter nicht blockiert werden. Falls Partitionsschalter auftreten, werden die aus dem Schalter resultierenden Änderungen von Change Data Capture nicht nachverfolgt. Dies führt bei der Nutzung der Änderungsdaten zu Inkonsistenzen.  

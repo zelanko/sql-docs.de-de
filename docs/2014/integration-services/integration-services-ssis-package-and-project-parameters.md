@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bc06bbc38809f3ae3921fb59f11aedad0f3ce1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9358d3d7d014f7dc69dad00605ebdaaa2ef70707
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135220"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352247"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services (SSIS)-Parameter
   Mit[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -(SSIS-)Parametern können Sie Eigenschaften in Paketen zur Zeit der Paketausführung Werte zuweisen. Sie können *Projektparameter* auf Projektebene und *Paketparameter* auf Paketebene erstellen. Projektparameter werden verwendet, um jegliche externen Eingaben bereitzustellen, die das Projekt für ein oder mehrere Pakete im Projekt empfängt. Mit Paketparametern können Sie die Paketausführung ändern, ohne das Paket bearbeiten und erneut bereitstellen zu müssen.  
   
- In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] können Sie im Fenster **Project.params** Projektparameter erstellen, ändern oder löschen. Sie erstellen, ändern und löschen Paketparameter mit der Registerkarte **Parameter** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer. Im Dialogfeld **Parametrisieren** können Sie einen neuen oder vorhandenen Parameter einer Taskeigenschaft zuordnen. Weitere Informationen zum Verwenden der **Project.params** Fenster und die **Parameter** finden Sie unter [Create Parameters](create-parameters.md). Weitere Informationen zu den **parametrisieren** im Dialogfeld finden Sie unter [Parameterize Dialog Box](parameterize-dialog-box.md).  
+ In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] können Sie im Fenster **Project.params** Projektparameter erstellen, ändern oder löschen. Sie erstellen, ändern und löschen Paketparameter mit der Registerkarte **Parameter** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer. Im Dialogfeld **Parametrisieren** können Sie einen neuen oder vorhandenen Parameter einer Taskeigenschaft zuordnen. Weitere Informationen zum Verwenden des Fensters **Project.params** und der Registerkarte **Parameter** finden Sie unter [Create Parameters](create-parameters.md). Weitere Informationen zum Dialogfeld **Parametrisieren** finden Sie unter [Parameterize Dialog Box](parameterize-dialog-box.md).  
   
 ## <a name="parameters-and-package-deployment-model"></a>Parameter und Paketbereitstellungsmodell  
  Im Allgemeinen sollten Sie beim Bereitstellen eines Pakets mit dem Paketbereitstellungsmodell Konfigurationen anstelle von Parametern verwenden.  
@@ -29,7 +28,7 @@ ms.locfileid: "48135220"
  Wenn Sie mithilfe des Paketbereitstellungsmodells ein Paket bereitstellen, das Parameter enthält, und dann das Paket ausführen, werden die Parameter während der Ausführung nicht aufgerufen. Wenn das Paket Paketparameter und Ausdrücke innerhalb des Pakets enthält, verwenden Sie die Parameter, die resultierenden Werte werden zur Laufzeit übernommen. Wenn das Paket Projektparameter enthält, tritt bei der Paketausführung möglicherweise ein Fehler auf.  
   
 ## <a name="parameters-and-project-deployment-model"></a>Parameter und Projektbereitstellungsmodell  
- Wenn Sie ein Projekt auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server bereitstellen, verwenden Sie Sichten, gespeicherte Prozeduren und die [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]-Benutzeroberfläche zum Verwalten von Projekt- und Paketparametern. Weitere Informationen finden Sie in den nachfolgenden Themen.  
+ Wenn Sie ein Projekt auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitstellen, verwenden Sie Sichten, gespeicherte Prozeduren und die [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Benutzeroberfläche zum Verwalten von Projekt- und Paketparametern. Weitere Informationen finden Sie in den nachfolgenden Themen.  
   
 -   [Sichten &#40;Integration Services-Katalog&#41;](/sql/integration-services/system-views/views-integration-services-catalog)  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48135220"
 |Wertname|Description|Werttyp|  
 |----------------|-----------------|-------------------|  
 |Ausführungswert|Der Wert, der einer bestimmten Instanz der Paketausführung zugewiesen wird. Diese Zuweisung überschreibt alle anderen Werte, gilt aber nur für eine einzelne Instanz der Paketausführung.|Literal|  
-|Serverwert|Der Wert, der dem Parameter innerhalb des Projektbereichs zugewiesen wird, nachdem das Projekt auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server bereitgestellt wurde. Dieser Wert überschreibt den Entwurfsstandard.|Literaler oder Umgebungsvariablenverweis|  
+|Serverwert|Der Wert, der dem Parameter innerhalb des Projektbereichs zugewiesen wird, nachdem das Projekt auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitgestellt wurde. Dieser Wert überschreibt den Entwurfsstandard.|Literaler oder Umgebungsvariablenverweis|  
 |Entwurfswert|Der Wert, der dem Parameter zugewiesen wird, wenn das Projekt in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]erstellt oder bearbeitet wird. Dieser Wert bleibt im Projekt erhalten.|Literal|  
   
  Sie können mehreren Paketeigenschaften mithilfe eines einzelnen Parameters einen Wert zuweisen. Einer einzelnen Paketeigenschaft kann nur ein Wert aus einem einzelnen Parameter zugewiesen werden.  
@@ -83,7 +82,7 @@ ms.locfileid: "48135220"
   
  Sie können den Parameterwert auch im Dialogfeld **Paket ausführen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ändern. Weitere Informationen finden Sie unter [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md).  
   
- Sie können auch die Dtexec `/Parameter` Option aus, um Parameterwerte zu ändern. Weitere Informationen finden Sie unter [dtexec Utility](packages/dtexec-utility.md).  
+ Sie können einen Parameterwert auch mit der dtexec-Option `/Parameter` ändern. Weitere Informationen finden Sie unter [dtexec Utility](packages/dtexec-utility.md).  
   
 ### <a name="parameter-validation"></a>Parameterüberprüfung  
  Wenn Parameterwerte nicht aufgelöst werden können, schlägt die entsprechende Paketausführung fehl. Zur Fehlervermeidung können Sie Projekte und Pakete im Dialogfeld **Überprüfen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]überprüfen. Mit der Überprüfung stellen Sie sicher, dass alle Parameter über die notwendigen Werte verfügen oder die notwendigen Werte mit bestimmten Umgebungsverweisen auflösen können. Mit der Überprüfung können auch andere häufig auftretende Paketprobleme überprüft werden.  
@@ -103,6 +102,6 @@ ms.locfileid: "48135220"
  [Festlegen von Parameterwerten nach der Bereitstellung des Projekts](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag [SSIS-Quicktipp: Erforderliche Parameter](http://go.microsoft.com/fwlink/?LinkId=239781)auf mattmasson.com.  
+ Blogeintrag, [SSIS-Quicktipp: Erforderliche Parameter](https://go.microsoft.com/fwlink/?LinkId=239781), auf mattmasson.com.  
   
   

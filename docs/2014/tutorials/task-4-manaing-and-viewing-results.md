@@ -13,19 +13,19 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb0cc2f091ce6365e91dd285e553498cc595c76e
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 5062f24c679d2d85da09a1dc81d9c487d6536f1f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119871"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377532"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Aufgabe 4: Verwalten und Anzeigen der Ergebnisse
-  In dieser Aufgabe überprüfen Sie die Ergebnisse der computerunterstützten Bereinigung und führen auch die interaktive Bereinigung für Lieferantendaten aus. Finden Sie unter [interaktive Bereinigungsphase](http://msdn.microsoft.com/library/hh213061.aspx#Interactive) Weitere Details.  
+  In dieser Aufgabe überprüfen Sie die Ergebnisse der computerunterstützten Bereinigung und führen auch die interaktive Bereinigung für Lieferantendaten aus. Finden Sie unter [interaktive Bereinigungsphase](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) Weitere Details.  
   
 1.  Wählen Sie **Contact Email** Domäne aus der Liste der Domänen.  
   
-2.  Wechseln Sie zu der **ungültige** Registerkarte im rechten Bereich. Beachten Sie, dass zwei E-Mail-Adressen nicht das Zeichen "s" am Ende aufweisen. Diese beiden e-Mails, die gefunden wurden, ungültig werden gemäß der domänenregel, die alle e-Mail-Adressen mit erfordert **@adventure-works.com** (mit der "). DQS verwendet die Domänenregel bei der Bereinigung, um zu bestimmen, ob eine E-Mail gültig ist. Diese Registerkarte zeigt die Domänenwerte an, die in der Wissensdatenbank als ungültig markiert wurden oder die eine Domänenregel verletzt haben. In diesem Fall haben diese Werte die Domänenregel (E-Mail-Überprüfung) verletzt.  
+2.  Wechseln Sie zu der **ungültige** Registerkarte im rechten Bereich. Beachten Sie, dass zwei e-Mail-Adressen nicht das Zeichen des "am Ende. Diese beiden e-Mails, die gefunden wurden, ungültig werden gemäß der domänenregel, die alle e-Mail-Adressen mit erfordert **@adventure-works.com** (mit der "). DQS verwendet die Domänenregel bei der Bereinigung, um zu bestimmen, ob eine E-Mail gültig ist. Diese Registerkarte zeigt die Domänenwerte an, die in der Wissensdatenbank als ungültig markiert wurden oder die eine Domänenregel verletzt haben. In diesem Fall haben diese Werte die Domänenregel (E-Mail-Überprüfung) verletzt.  
   
 3.  In der **korrigieren in** Spalte, die richtige e-Mail-Adresse enden, Typ **@adventure-works.com** (mit der ").  
   
@@ -90,6 +90,6 @@ ms.locfileid: "49119871"
 25. Klicken Sie auf **Weiter** zum Wechseln der **exportieren** Seite.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 5: Exportieren der Bereinigungsergebnisse in eine Excel-Datei](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+ [Aufgabe 5: Exportieren der Bereinigungsergebnisse in eine Exceldatei](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

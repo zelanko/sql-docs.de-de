@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 7: Hinzufügen der DQS-Bereinigung Transformation dem Datenfluss | Microsoft-Dokumentation'
+title: 'Aufgabe 7: DQS-Bereinigung Transformation dem Datenfluss hinzufügen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63af147462b9414bd85d0a301e908df4c774c7b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaa36e392046abca935a1b67c4ee459a8b15939e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138196"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376872"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Aufgabe 7: Hinzufügen der Transformation für DQS-Bereinigung zum Datenfluss
-  In dieser Aufgabe fügen Sie dem Datenfluss eine DQS-Bereinigungstransformation hinzu, um die Eingabelieferantendaten mithilfe von DQS zu bereinigen. Finden Sie unter **[DQS-Bereinigungstransformation](http://msdn.microsoft.com/library/ee677619.aspx)** für Weitere Informationen zur Transformation.  
+  In dieser Aufgabe fügen Sie dem Datenfluss eine DQS-Bereinigungstransformation hinzu, um die Eingabelieferantendaten mithilfe von DQS zu bereinigen. Finden Sie unter **[DQS-Bereinigungstransformation](https://msdn.microsoft.com/library/ee677619.aspx)** für Weitere Informationen zur Transformation.  
   
 1.  Mit der rechten Maustaste **DQS-Bereinigung** in die **Datenfluss** Registerkarte, und klicken Sie auf **umbenennen**. Typ **Cleanse Supplier Data**, und drücken Sie die **EINGABETASTE**.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48138196"
 12. Klicken Sie auf **OK** schließen die **DQS-Bereinigung Transformations-Editor** Dialogfeld.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 8: Hinzufügen einer Transformation mit „Bedingtes Teilen“, um die Bereinigungsausgabe zu teilen](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [Aufgabe 8: Hinzufügen der Transformation für bedingtes Teilen, um die Bereinigungsausgabe zu teilen](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

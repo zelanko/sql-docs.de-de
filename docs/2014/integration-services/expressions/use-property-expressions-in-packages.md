@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -20,12 +19,12 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e14b518f8b644d9d1b2670e90bbf27b09faf049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a6dd870de31e6b3be65cac62cda84c3e9c9635c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085730"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373372"
 ---
 # <a name="use-property-expressions-in-packages"></a>Verwenden von Eigenschaftsausdrücken in Paketen
   Ein Eigenschaftsausdruck ist ein einer Eigenschaft zugewiesener Ausdruck, um das dynamische Aktualisieren der Eigenschaft zur Laufzeit zu ermöglichen. So kann ein Eigenschaftsausdruck z. B. die An-Zeile aktualisieren, die ein Task des Typs "Mail senden" verwendet, indem eine in einer Variablen gespeicherte E-Mail-Adresse eingefügt wird.  
@@ -47,16 +46,16 @@ ms.locfileid: "48085730"
 > [!NOTE]  
 >  Die Namen von benutzerdefinierten und Systemvariablen unterscheiden nach Groß-/Kleinschreibung.  
   
- Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](integration-services-ssis-expressions.md).  
+ Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](integration-services-ssis-expressions.md)ausgewertet wird.  
   
  Ein wichtiger Verwendungszweck von Eigenschaftsausdrücken ist das Anpassen von Konfigurationen für jede bereitgestellte Instanz eines Pakets. Damit wird es möglich, Paketeigenschaften dynamisch für unterschiedliche Umgebungen zu aktualisieren. So können Sie z. B. einen Eigenschaftsausdruck erstellen, der eine Variable zur Verbindungszeichenfolge eines Verbindungs-Managers hinzufügt, und dann die Variable aktualisieren, wenn das Paket bereitgestellt wird. Damit wird sichergestellt, dass die Verbindungszeichenfolge zur Laufzeit richtig ist. Paketkonfigurationen werden geladen, bevor die Eigenschaftsausdrücke ausgewertet werden.  
   
  Eine Eigenschaft kann jeweils nur einen Eigenschaftsausdruck verwenden, und ein Eigenschaftsausdruck kann nur für eine einzige Eigenschaft angewendet werden. Allerdings können Sie mehrere identische Eigenschaftsausdrücke erstellen und diese unterschiedlichen Eigenschaften zuordnen.  
   
- Einige Eigenschaften werden mithilfe von Enumeratorwerten festgelegt. Wenn Sie in einem Eigenschaftsausdruck auf das Enumeratorelement verweisen, müssen Sie den numerischen Wert verwenden, der dem Anzeigenamen des Enumeratorelements entspricht. Beispielsweise ein Eigenschaftsausdruck festgelegt die `LoggingMode` -Eigenschaft, die einen Wert von verwendet die `DTSLoggingMode` Enumeration, muss der Eigenschaftsausdruck 0, 1 oder 2 anstelle der Anzeigenamen verwenden `Enabled`, `Disabled`, oder `UseParentSetting`. Weitere Informationen finden Sie unter [Aufgezählte Konstanten in Eigenschaftsausdrücken](enumerated-constants-in-property-expressions.md).  
+ Einige Eigenschaften werden mithilfe von Enumeratorwerten festgelegt. Wenn Sie in einem Eigenschaftsausdruck auf das Enumeratorelement verweisen, müssen Sie den numerischen Wert verwenden, der dem Anzeigenamen des Enumeratorelements entspricht. Wenn beispielsweise ein Eigenschaftsausdruck die `LoggingMode`-Eigenschaft festlegt, die einen Wert der `DTSLoggingMode`-Enumeration verwendet, muss der Eigenschaftsausdruck anstelle der Anzeigenamen `Enabled`, `Disabled` oder `UseParentSetting` gleich 0, 1 oder 2 sein. Weitere Informationen finden Sie unter [Aufgezählte Konstanten in Eigenschaftsausdrücken](enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Benutzeroberfläche von Eigenschaftsausdrücken  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Stellt eine Reihe von Tools zum Erstellen und Verwalten von Eigenschaftsausdrücken bereit.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt eine Reihe von Tools zum Erstellen und Verwalten von Eigenschaftsausdrücken bereit.  
   
 -   Die **Ausdrücke** -Seite, die sich in den benutzerdefinierten Editoren für Tasks befindet, den For-Schleifen-Container und die Foreach-Container. Mit der **Ausdrücke** -Seite können Sie Ausdrücke bearbeiten und eine Liste der Eigenschaftsausdrücke anzeigen, die ein Task, eine Foreach-Schleife oder eine For-Schleife verwendet.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48085730"
   
  ![Benutzeroberfläche für Eigenschaftsausdrücke](../media/ssis-propertyexpressionui.gif "The user interface for property expressions")  
   
- Klicken Sie im **Eigenschaften** -Fenster und auf der **Ausdrücke** -Seite auf die Schaltfläche zum Durchsuchen **(…)** in der Sammlungsebene **Ausdrücke** , um das **Eigenschaftsausdruck-Editor** -Dialogfeld zu öffnen. Der Eigenschaftsausdruck-Editor ermöglicht das Zuordnen einer Eigenschaft zu einem Ausdruck und das Eingeben eines Eigenschaftsausdrucks. Wenn Sie die grafischen Ausdruckstools zum Erstellen und anschließend zum Überprüfen des Ausdrucks verwenden möchten, klicken Sie auf der Ausdrucksebene auf die Schaltfläche zum Durchsuchen **(…)** , um das **Ausdrucks-Generator** -Dialogfeld zu öffnen. Erstellen bzw. ändern Sie anschließend den Ausdruck, und überprüfen Sie ihn bei Bedarf.  
+ Klicken Sie im Fenster **Eigenschaften** und auf der Seite **Ausdrücke** auf der Sammlungsebene **Ausdrücke** auf die Schaltfläche zum Durchsuchen **(…)**, um das Dialogfeld **Eigenschaftsausdruck-Editor** zu öffnen. Der Eigenschaftsausdruck-Editor ermöglicht das Zuordnen einer Eigenschaft zu einem Ausdruck und das Eingeben eines Eigenschaftsausdrucks. Wenn Sie die grafischen Ausdruckstools zum Erstellen und anschließenden Überprüfen des Ausdrucks verwenden möchten, klicken Sie auf der Ausdrucksebene auf die Schaltfläche zum Durchsuchen **(…)**, um das Dialogfeld **Ausdrucks-Generator** zu öffnen. Erstellen bzw. ändern Sie anschließend den Ausdruck, und überprüfen Sie ihn bei Bedarf.  
   
  Sie können das **Ausdrucks-Generator** -Dialogfeld auch aus dem **Eigenschaftsausdrucks-Editor** -Dialogfeld heraus öffnen.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48085730"
   
  Sie können daher die aktualisierten Werte der Paketobjekteigenschaften, die die Eigenschaftsausdrücke des [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designers verwenden, erst anzeigen, wenn Sie das Paket speichern, das Paket ausführen oder das Paket nach dem Hinzufügen der Eigenschaftsausdrücke erneut öffnen.  
   
- Die Eigenschaftsausdrücke, die anderen Objekttypen zugeordnet sind, wie z. B. Verbindungs-Manager, Protokollanbieter und Enumeratoren, werden ebenfalls geladen, wenn spezifische Methoden des jeweiligen Objekttyps aufgerufen werden. Beispielsweise werden die Eigenschaften der Verbindungs-Manager geladen, bevor in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] eine Instanz der Verbindung erstellt wird.  
+ Die Eigenschaftsausdrücke, die anderen Objekttypen zugeordnet sind, wie z. B. Verbindungs-Manager, Protokollanbieter und Enumeratoren, werden ebenfalls geladen, wenn spezifische Methoden des jeweiligen Objekttyps aufgerufen werden. Beispielsweise werden die Eigenschaften der Verbindungs-Manager geladen, bevor in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] eine Instanz der Verbindung erstellt wird.  
   
  Eigenschaftsausdrücke werden nach dem Laden der Paketkonfigurationen geladen. Beispielsweise werden Variablen zuerst durch ihre Konfigurationen aktualisiert, und anschließend werden die Eigenschaftsausdrücke, die die Variablen verwenden, ausgewertet und geladen. Das bedeutet, dass die Eigenschaftsausdrücke immer die Werte der Variablen verwenden, die durch Konfigurationen festgelegt wurden.  
   
@@ -105,9 +104,9 @@ ms.locfileid: "48085730"
 |Foreach-Enumeratoren|Nach dem Laden von Konfigurationen<br /><br /> Vor der Prüfung<br /><br /> Vor der Ausführung<br /><br /> Vor jeder Enumeration der Schleife|  
   
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>Verwenden von Eigenschaftsausdrücken in der Foreach-Schleife  
- Es ist häufig nützlich, einen Eigenschaftsausdruck zu implementieren, um den Wert der `ConnectionString`-Eigenschaft von Verbindungs-Managern festzulegen, die im Foreach-Schleifencontainer verwendet werden. Wenn der Enumerator eine Variable für jede Iteration der Schleife seinen aktuellen Wert zuordnet, können der Eigenschaftsausdruck den Wert dieser Variablen auf das update der `ConnectionString` Eigenschaft dynamisch.  
+ Es ist häufig nützlich, einen Eigenschaftsausdruck zu implementieren, um den Wert der `ConnectionString`-Eigenschaft von Verbindungs-Managern festzulegen, die im Foreach-Schleifencontainer verwendet werden. Wenn der Enumerator bei jeder Iteration der Schleife seinen aktuellen Wert einer Variablen zuordnet, kann der Eigenschaftsausdruck den Wert dieser Variablen zum dynamischen Aktualisieren des Wertes der `ConnectionString`-Eigenschaft verwenden.  
   
- Wenn Sie Eigenschaftsausdrücke zusammen mit der `ConnectionString`-Eigenschaft von Dateiverbindungs-Managern oder von Verbindungs-Managern für mehrere Dateien, für Flatfiles oder für mehrere Flatfiles verwenden möchten, der in einer Foreach-Schleife verwendet wird, sind einige Faktoren zu beachten. Ein Paket kann so konfiguriert werden, dass mehrere ausführbare Dateien gleichzeitig ausgeführt werden, indem Sie die `MaxConcurrentExecutables`-Eigenschaft auf einen Wert größer als 1 bzw. auf den Wert -1 festlegen. Der Wert -1 lässt die maximale Anzahl gleichzeitig ausführbarer Dateien zu, die der Anzahl der Prozessoren plus zwei entspricht. Der Wert der `MaxConcurrentExecutables`-Eigenschaft sollte auf 1 festgelegt werden, um negative Auswirkungen einer parallelen Ausführung von ausführbaren Dateien zu vermeiden. Wenn `MaxConcurrentExecutables` ist nicht festgelegt, um 1, und klicken Sie dann auf den Wert des der `ConnectionString` -Eigenschaft nicht sichergestellt werden, und Ergebnisse sind unvorhersehbar.  
+ Wenn Sie Eigenschaftsausdrücke zusammen mit der `ConnectionString`-Eigenschaft von Dateiverbindungs-Managern oder von Verbindungs-Managern für mehrere Dateien, für Flatfiles oder für mehrere Flatfiles verwenden möchten, der in einer Foreach-Schleife verwendet wird, sind einige Faktoren zu beachten. Ein Paket kann so konfiguriert werden, dass mehrere ausführbare Dateien gleichzeitig ausgeführt werden, indem Sie die `MaxConcurrentExecutables`-Eigenschaft auf einen Wert größer als 1 bzw. auf den Wert -1 festlegen. Der Wert -1 lässt die maximale Anzahl gleichzeitig ausführbarer Dateien zu, die der Anzahl der Prozessoren plus zwei entspricht. Der Wert der `MaxConcurrentExecutables`-Eigenschaft sollte auf 1 festgelegt werden, um negative Auswirkungen einer parallelen Ausführung von ausführbaren Dateien zu vermeiden. Wenn die `MaxConcurrentExecutables`-Eigenschaft nicht auf 1 festgelegt ist, kann der Wert der `ConnectionString`-Eigenschaft nicht sichergestellt werden, und die Ergebnisse sind unvorhersehbar.  
   
  Stellen Sie sich z. B. eine Foreach-Schleife vor, die die im Ordner enthaltenen Dateien aufzählt, die Dateinamen abruft und anschließend einen Task 'SQL ausführen' verwendet, um die Dateinamen in eine Tabelle einzufügen. Wenn die `MaxConcurrentExecutables`-Eigenschaft nicht auf 1 festgelegt ist, können Schreibkonflikte auftreten, wenn zwei Instanzen des Tasks "SQL ausführen" versuchen, gleichzeitig in die Tabelle zu schreiben.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "48085730"
   
  Wenn der Paketname EmailRowCountPP ist, es am 4. März 2005 (3/4/2005) ausgeführt wurde und die Dauer der Ausführung 9 Sekunden betrug, wird der Ausdruck in Form der folgenden Zeichenfolge ausgewertet:  
   
- PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
+ PExpression--> Paket: (EmailRowCountPP) Gestartet: 3/4/2005 11:06:18 Uhr Dauer: 9 Sekunden.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Eigenschaftsausdruck für die Nachricht einer E-Mail-Nachricht  
  Der folgende Eigenschaftsausdruck kann verwendet werden, um die MessageSource-Eigenschaft eines Tasks vom Typ „Mail senden“ festzulegen. Der Ausdruck verwendet eine Kombination aus Zeichenfolgenliteralen, benutzerdefinierten Variablen und dem Verkettungsoperator (+). Die benutzerdefinierten Variablen tragen die Namen `nasdaqrawrows`, `nyserawrows`und `amexrawrows`. Die Zeichenfolge "\n" steht für einen Wagenrücklauf.  
@@ -168,9 +167,9 @@ ms.locfileid: "48085730"
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   [Ausdrucks- und Konfigurationshervorhebung (CodePlex-Projekt)](http://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [Ausdrucks- und Konfigurationshervorhebung (CodePlex-Projekt)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
--   Technischer Artikel, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
+-   Technischer Artikel, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von Variablen in Paketen](../use-variables-in-packages.md)  

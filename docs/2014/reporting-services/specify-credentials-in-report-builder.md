@@ -11,12 +11,12 @@ ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4a6c4af1938057652aa21ce8feef8671b2535f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f800d28a8c7e1440308761abc3d05c4d41995f00
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154100"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372122"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Angeben von Anmeldeinformationen im Berichts-Generator
   Anmeldeinformationen authentifizieren den Benutzer, der Daten von einer Datenquelle abrufen möchte. Der Besitzer der Datenquelle legt den Typ der Anmeldeinformationen fest, die verwendet werden müssen. Ein Datenbankadministrator kann zum Beispiel festlegen, dass der Benutzer einen Windows-Benutzernamen und ein Kennwort angeben muss.  
@@ -49,7 +49,7 @@ ms.locfileid: "48154100"
  Weitere Informationen finden Sie unter [Datenquelleneigenschaften, Dialogfeld „Allgemein“ (Berichts-Generator)](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md) und [Anzeigen einer Berichtsvorschau in Berichts-Generator](report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="types-of-credentials"></a>Anmeldeinformationstypen  
- Der Besitzer der Datenquelle legt den Typ der Anmeldeinformationen fest, die eine Datenquelle unterstützt. Z. B. für den Zugriff auf eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank, Sie müssen möglicherweise eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Benutzernamen und Kennwort. Um auf eine andere Datenquelle zuzugreifen, müssen Sie möglicherweise einen Windows-Benutzernamen und ein Kennwort angeben. Für einige Datenquellen sind eventuell keine Anmeldeinformationen erforderlich.  
+ Der Besitzer der Datenquelle legt den Typ der Anmeldeinformationen fest, die eine Datenquelle unterstützt. Um z. B. auf eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank zuzugreifen, müssen Sie möglicherweise einen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldebenutzernamen und ein Kennwort angeben. Um auf eine andere Datenquelle zuzugreifen, müssen Sie möglicherweise einen Windows-Benutzernamen und ein Kennwort angeben. Für einige Datenquellen sind eventuell keine Anmeldeinformationen erforderlich.  
   
 ### <a name="options-for-specifying-credentials"></a>Optionen für die Angabe von Anmeldeinformationen  
  Die folgenden Optionen sind für die Angabe von Anmeldeinformationen für eine Datenquelle verfügbar:  
@@ -66,13 +66,13 @@ ms.locfileid: "48154100"
  Wenn Sie **Windows-Authentifizierung verwenden (integrierte Sicherheit)** auswählen, wird das Sicherheitstoken des aktuellen Benutzers an die Datenquelle übergeben. In diesem Fall wird der Benutzer nicht aufgefordert, einen Benutzernamen oder ein Kennwort einzugeben. Diese Option erfordert normalerweise die Aktivierung von Delegierungsfunktionen. Wenn diese funktionen nicht aktiviert sind, können Sie diese Option nur verwenden, um auf eine Datenquelle zuzugreifen, die sich auf demselben Computer befindet.  
   
 ### <a name="user-name-and-password-login"></a>Anmeldung mit Benutzername und Kennwort  
- Wenn Sie **Diesen Benutzernamen und dieses Kennwort verwenden**auswählen, müssen Benutzername und Kennwort für den Zugriff auf die Datenquelle angegeben werden. Bei einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank sind dies möglicherweise die Anmeldeinformationen für eine Datenbankanmeldung. Die Anmeldeinformationen werden zur Authentifizierung an die Datenquelle übergeben.  
+ Wenn Sie **Diesen Benutzernamen und dieses Kennwort verwenden**auswählen, müssen Benutzername und Kennwort für den Zugriff auf die Datenquelle angegeben werden. Bei einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank sind dies möglicherweise die Anmeldeinformationen für eine Datenbankanmeldung. Die Anmeldeinformationen werden zur Authentifizierung an die Datenquelle übergeben.  
   
 ### <a name="prompted-credentials"></a>Aufforderung zur Eingabe der Anmeldeinformationen  
  Wenn Sie eine Aufforderung zur Eingabe von Anmeldeinformationen angeben, muss jeder Benutzer, der auf den Bericht zugreift, einen Benutzernamen und ein Kennwort zum Abrufen der Daten eingeben. Diese Option wird für Berichte mit vertraulichen Daten empfohlen. Bei den angeforderten Anmeldeinformationen kann es sich um die Anmeldeinformationen für ein Windows-Konto oder für eine Datenbank-Anmeldung handeln. Wenn der Datenbankserver die angegebenen Anmeldeinformationen nicht erkennt oder wenn dem angegebenen Benutzer keine Berechtigung zum Abrufen der Daten gewährt wurde, kann die Verbindung nicht hergestellt werden.  
   
 ### <a name="no-credentials"></a>Keine Anmeldeinformationen  
- Für diese Datenquelle sind keine Anmeldeinformationen erforderlich. Um diesen Bericht auf dem Berichtsserver auszuführen, muss das Konto für die unbeaufsichtigte Ausführung konfiguriert werden. Weitere Informationen finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;SSRS-Konfigurations-Manager&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Dokumentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Für diese Datenquelle sind keine Anmeldeinformationen erforderlich. Um diesen Bericht auf dem Berichtsserver auszuführen, muss das Konto für die unbeaufsichtigte Ausführung konfiguriert werden. Weitere Informationen finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;SSRS-Konfigurations-Manager&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Dokumentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Installieren und Deinstallieren von Berichts-Generator-Unterstützung](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   

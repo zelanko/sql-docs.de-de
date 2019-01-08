@@ -13,15 +13,15 @@ ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ace792a76e1bcdbcc7aa6b372d96de1f92c570f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de13dc6bcae1dbca26edec889a988b3085de9195
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072250"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590854"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lektion 2: Erstellen eines Abonnements für die Transaktionsveröffentlichung
-  In dieser Lektion erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ein Abonnement. Für diese Lektion wird vorausgesetzt, dass Sie die vorherige Lektion abgeschlossen haben: [Lektion 1: Veröffentlichen von Daten mithilfe der Transaktionsreplikation](lesson-1-publishing-data-using-transactional-replication.md).  
+  In dieser Lektion erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ein Abonnement. Diese Lektion setzt voraus, dass Sie die vorherige Lektion abgeschlossen haben [Lektion 1: Veröffentlichen von Daten mithilfe der Transaktionsreplikation](lesson-1-publishing-data-using-transactional-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>So erstellen Sie das Abonnement  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48072250"
   
 7.  Geben Sie im Dialogfeld **Neue Datenbank** den Namen **ProductReplica** in das Feld **Datenbankname** ein, klicken Sie auf **OK**, und klicken Sie dann auf **Weiter**.  
   
-8.  Klicken Sie im Dialogfeld **Sicherheit für den Verteilungs-Agent** auf die Schaltfläche mit den Auslassungspunkten (**…**), geben Sie im Feld **Prozesskonto** das Konto \<*Computername>***\repl_distribution** ein, geben Sie das Kennwort für dieses Konto ein, klicken Sie auf **OK** und anschließend auf **Weiter**.  
+8.  In der **Sicherheit für den Verteilungs-Agent** Dialogfeld klicken Sie auf die Auslassungspunkte (**...** ) Geben Sie eine Schaltfläche \< _Machine_Name >_**\repl_distribution** in die **Prozesskonto** Geben Sie das Kennwort für dieses auf **OK**, und klicken Sie dann auf **Weiter**.  
   
 9. Klicken Sie auf **Fertig stellen** , um auf den verbleibenden Seiten die Standardwerte zu übernehmen und den Assistenten zu beenden.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "48072250"
   
 2.  Klicken Sie auf der Seite **Allgemein** in der Liste **Benutzertyp** auf **Windows-Benutzer**.  
   
-3.  Wählen sie das Feld **Benutzername** aus, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...). **Geben Sie die den Objektnamen ein**, um den Feldtyp <Machine_Name>**\repl_distribution** auszuwählen, klicken Sie auf **Namen überprüfen** und anschließend auf **OK**.  
+3.  Wählen Sie die **Benutzernamen** ein, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...) in der **Geben Sie den zu verwendenden Objektnamen** Feldtyp < Machine_Name >**\repl_distribution**, klicken Sie auf  **Überprüfen Sie die Namen**, und klicken Sie dann auf **OK**.  
   
-4.  Wählen Sie auf der Seite **Mitgliedschaft** im Bereich **Mitgliedschaft in Datenbankrollen** die **db_owner**-Rolle aus, und klicken Sie anschließend auf **OK**, um den Benutzer zu erstellen.  
+4.  Wählen Sie auf der Seite **Mitgliedschaft** im Bereich **Mitgliedschaft in Datenbankrollen** die **db_owner**-Rolle aus, und klicken Sie anschließend auf **OK** , um den Benutzer zu erstellen.  
   
 ### <a name="to-view-the-synchronization-status-of-the-subscription"></a>So zeigen Sie den Synchronisierungsstatus des Abonnements an  
   
@@ -66,11 +66,11 @@ ms.locfileid: "48072250"
 3.  Wenn das Abonnement unter **AdvWorksProductTrans**nicht angezeigt wird, drücken Sie F5, um die Liste zu aktualisieren.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Sie haben erfolgreich ein Abonnement für die Transaktionsveröffentlichung erstellt. Da der Verteilungs-Agent für dieses Abonnement ständig ausgeführt wird, wird das Abonnement initialisiert, wenn es erstellt wird. Als Nächstes verwenden Sie Überwachungstoken, um zu überprüfen, ob die Änderungen auf dem Abonnenten repliziert werden, und um die Latenzzeit zu ermitteln. Siehe [Lesson 3: Validating the Subscription and Measuring Latency](lesson-3-validating-the-subscription-and-measuring-latency.md).  
+ Sie haben erfolgreich ein Abonnement für die Transaktionsveröffentlichung erstellt. Da der Verteilungs-Agent für dieses Abonnement ständig ausgeführt wird, wird das Abonnement initialisiert, wenn es erstellt wird. Als Nächstes verwenden Sie Überwachungstoken, um zu überprüfen, ob die Änderungen auf dem Abonnenten repliziert werden, und um die Latenzzeit zu ermitteln. Finden Sie unter [Lektion 3: Überprüfen des Abonnements und Messen der Latenzzeit](lesson-3-validating-the-subscription-and-measuring-latency.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Initialisieren eines Abonnements mit einer Momentaufnahme](initialize-a-subscription-with-a-snapshot.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
- [Subscribe to Publications](subscribe-to-publications.md)  
+ [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)  
   
   

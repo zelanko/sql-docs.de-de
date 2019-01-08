@@ -10,12 +10,12 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f369185b2d7d5e5d65fc98bca40ba66029ceaa8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 823967123c459112c77fb460eb10b011895110e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018665"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374553"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>Installieren von SQL Server 2014-Wartungsupdates
   Dieses Thema enthält Informationen zum Installieren von Updates für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. In diesem Abschnitt finden Sie Informationen zu den folgenden Themen:  
@@ -37,7 +37,7 @@ ms.locfileid: "51018665"
   
 -   Eine Netzwerkfreigabe  
   
- Nachdem Setup die neuesten Versionen der anwendbaren Updates gefunden hat, lädt es diese herunter und integriert sie in den aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsvorgang. Produktupdate kann ein kumulatives Update, Service Pack oder Service Pack plus kumulatives Update enthalten. Produktupdatefunktionalität ist eine Erweiterung von der [Slipstreamfunktionalität](http://go.microsoft.com/fwlink/?LinkId=219945) , die gab es in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1.  
+ Nachdem Setup die neuesten Versionen der anwendbaren Updates gefunden hat, lädt es diese herunter und integriert sie in den aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsvorgang. Produktupdate kann ein kumulatives Update, Service Pack oder Service Pack plus kumulatives Update enthalten. Produktupdatefunktionalität ist eine Erweiterung von der [Slipstreamfunktionalität](https://go.microsoft.com/fwlink/?LinkId=219945) , die gab es in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1.  
   
 ## <a name="installing-updates-for-includesscurrentincludessscurrent-mdmd-after-it-has-already-been-installed"></a>Installieren von Updates für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , nachdem es bereits installiert wurde  
  Auf einer installierten Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], es wird empfohlen, dass Sie alle verfügbaren Updates anwenden: Allgemeiner Verteilungsversionen (GDR - Sicherheit/kritische Updates), Service Packs (SP) als auch der neuesten verfügbaren kumulativen Update (CU).  

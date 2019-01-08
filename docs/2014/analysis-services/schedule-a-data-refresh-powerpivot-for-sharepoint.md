@@ -15,12 +15,12 @@ ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b2840a8c4f756ce26c5e915af6860929354bae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58764334a6ee1902a09941e9fc9bb9723e517cdf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178460"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363842"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Planen einer Datenaktualisierung (PowerPivot für SharePoint)
   Sie können die Datenaktualisierung planen, um PowerPivot-Daten in einer Excel-Arbeitsmappe, die Sie auf einer SharePoint-Website veröffentlicht haben, automatisch aktualisieren zu lassen.  
@@ -47,7 +47,7 @@ ms.locfileid: "48178460"
   
  Die Datenquelle kann kein Office-Dokument und keine Access-Datenbank sein. Office unterstützt die Verwendung der Office-Datenkonnektivitätskomponenten in einer Serverumgebung nicht. Wenn die Arbeitsmappe Daten aus diesen Quellen enthält, müssen Sie die Quellen aus der Datenquellenliste im Datenaktualisierungszeitplan entfernen.  
   
- Die Arbeitsmappe muss eine [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]-Version sein. Wenn Sie Arbeitsmappen verwenden, die in der vorherigen Version von PowerPivot für Excel erstellt wurden, funktioniert die Zeitplandatenaktualisierung nicht, außer wenn Sie die Datenbank auf die letzte Version aktualisieren.  
+ Die Arbeitsmappe muss eine [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] -Version sein. Wenn Sie Arbeitsmappen verwenden, die in der vorherigen Version von PowerPivot für Excel erstellt wurden, funktioniert die Zeitplandatenaktualisierung nicht, außer wenn Sie die Datenbank auf die letzte Version aktualisieren.  
   
  Die Arbeitsmappe muss nach Abschluss des Aktualisierungsvorgangs eingecheckt werden. Eine Arbeitsmappensperre wird am Ende der Datenaktualisierung, wenn die Datei gespeichert wird, und nicht zu Beginn der Aktualisierung für die Datei aktiviert.  
   
@@ -148,13 +148,13 @@ ms.locfileid: "48178460"
   
  Die Verlaufsseite wird mit einem vollständigen Datensatz aller Aktualisierungsaktivitäten für PowerPivot-Daten in der aktuellen Excel-Arbeitsmappe angezeigt, einschließlich des Status des letzten Datenaktualisierungsvorgangs.  
   
- In einigen Fällen können tatsächliche Verarbeitungszeiten angezeigt werden, die von den angegebenen Zeiten abweichen. Dies kann vorkommen, wenn der Server stark ausgelastet ist. Bei einer starken Auslastung wird die Datenaktualisierung von der [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]-Dienstinstanz erst gestartet, wenn wieder genügend Systemressourcen zur Verfügung stehen.  
+ In einigen Fällen können tatsächliche Verarbeitungszeiten angezeigt werden, die von den angegebenen Zeiten abweichen. Dies kann vorkommen, wenn der Server stark ausgelastet ist. Bei einer starken Auslastung wird die Datenaktualisierung von der [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Dienstinstanz erst gestartet, wenn wieder genügend Systemressourcen zur Verfügung stehen.  
   
  Die Arbeitsmappe muss nach Abschluss des Aktualisierungsvorgangs eingecheckt werden. Zu diesem Zeitpunkt wird die Arbeitsmappe mit den aktualisierten Daten gespeichert. Wenn die Datei ausgecheckt ist, wird die Datenaktualisierung bis zum nächsten geplanten Termin übersprungen.  
   
  Wenn eine unerwartete Statusmeldung angezeigt wird (wenn ein Aktualisierungsvorgang z. B. fehlgeschlagen ist oder abgebrochen wurde), können Sie das Problem untersuchen, indem Sie die Berechtigungen und Serververfügbarkeit überprüfen.  
   
- Hilfe zum Lösen von Problemen bei der Aktualisierung von PowerPivot-Daten finden Sie auf der entsprechenden TechNet-WIKI-Website. Weitere Informationen finden Sie unter [Problembehandlung bei der PowerPivot-Datenaktualisierung](http://go.microsoft.com/fwlink/?LinkId=251594).  
+ Hilfe zum Lösen von Problemen bei der Aktualisierung von PowerPivot-Daten finden Sie auf der entsprechenden TechNet-WIKI-Website. Weitere Informationen finden Sie unter [Problembehandlung bei der PowerPivot-Datenaktualisierung](https://go.microsoft.com/fwlink/?LinkId=251594).  
   
 > [!NOTE]  
 >  SharePoint-Administratoren können Ihnen helfen, Datenaktualisierungsprobleme zu lösen, indem sie die konsolidierten Datenaktualisierungsberichte im PowerPivot-Management-Dashboard in der zentralen Verwaltung anzeigen. Weitere Informationen finden Sie unter [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  

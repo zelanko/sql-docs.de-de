@@ -10,17 +10,17 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 640a1af48b83474cbeb331268fd4cf1ab808995b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155960"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357077"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Upgrade und Update von Verfügbarkeitsgruppenservern bei minimaler Downtime und minimalem Datenverlust
   Wenn Sie für SQL Server 2012-Serverinstanzen ein Update oder Upgrade auf ein Service Pack oder eine neuere Version ausführen, können Sie die Downtime einer Verfügbarkeitsgruppe auf nur einen manuellen Failover begrenzen, indem Sie ein sequenzielles Update oder Upgrade ausführen. Beim Upgrade von SQL Server-Versionen wird dieser Vorgang als paralleles Upgrade und beim Update aktueller SQL Server-Versionen anhand von Hotfixes oder Service Packs als paralleles Update bezeichnet.  
   
- Dieses Thema beschränkt sich auf Upgrades/Updates von SQL Server. Betriebssystembezogene Upgrades/Updates, die hoch verfügbare SQL Server-Instanzen ausgeführt werden, finden Sie unter [clusterübergreifende Migration von AlwaysOn-Verfügbarkeitsgruppen für Betriebssystemupgrade](http://msdn.microsoft.com/library/jj873730.aspx)  
+ Dieses Thema beschränkt sich auf Upgrades/Updates von SQL Server. Betriebssystembezogene Upgrades/Updates, die hoch verfügbare SQL Server-Instanzen ausgeführt werden, finden Sie unter [clusterübergreifende Migration von AlwaysOn-Verfügbarkeitsgruppen für Betriebssystemupgrade](https://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>Bewährte Verfahren für parallele Upgrades/Updates von AlwaysOn-Verfügbarkeitsgruppen  
  Beachten Sie beim Ausführen von Serverupgrades/-updates die folgenden bewährten Verfahren, um die Downtime und Datenverluste für Verfügbarkeitsgruppen zu minimieren:  
@@ -35,7 +35,7 @@ ms.locfileid: "48155960"
   
 -   Führen Sie das Upgrade/Update zuerst immer für die sekundären Remotereplikatknoten und dann für die lokalen sekundären Replikatknoten und zuletzt für den primären Replikatknoten aus.  
   
--   In einer Datenbank, für die gerade ein Upgrade ausgeführt wird, können keine Sicherungen erstellt werden.  Vor dem Upgrade der sekundären Replikate sollten Sie die Voreinstellung für die automatisierte Sicherung so konfigurieren, dass nur Sicherungen auf dem primären Replikat ausgeführt werden.  Vor dem Upgrade des primären Replikats sollten Sie diese Einstellung so ändern, dass nur Sicherungen auf den sekundären Replikaten ausgeführt werden.  
+-   Von einer Datenbank, für die gerade ein Upgrade ausgeführt wird, kann keine Sicherung erstellt werden.  Vor dem Aktualisieren der sekundären Replikate konfigurieren Sie die Voreinstellung für die automatisierte Sicherung, um Sicherungen nur auf dem primären Replikat auszuführen.  Vor dem Upgrade des primären Replikats sollten Sie diese Einstellung so ändern, dass nur Sicherungen auf den sekundären Replikaten ausgeführt werden.  
   
 -   Damit für die Verfügbarkeitsgruppe während des Upgrades/Updates kein unbeabsichtigter Failover ausgeführt wird, entfernen Sie den Verfügbarkeitsfailover zunächst von allen Replikaten mit synchronem Commit.  
   

@@ -34,17 +34,17 @@ ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ee4a1e9c6430cedb3d8bf34b2978e29c860685d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f68471e05ea1fd8e3b2680e81bd3e8512a2c79bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093630"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370652"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Aktionseigenschaften (Dialogfeld) (Berichts-Generator und SSRS)
   Das Dialogfeld **Aktion** kann verwendet werden, um Linkoptionen für Diagramme, Messgeräte und Kartenelemente zu aktivieren, die Links unterstützen. Definieren Sie eine Aktion, damit ein Benutzer auf den Bereicht klicken und einen Link mit einer URL, einem anderen Bericht auf demselben Berichtsserver oder auf einer SharePoint-Site, die in einen Berichtsserver integriert ist, oder mit einer anderen Stelle in demselben Bericht herstellen kann.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Als Aktion aktivieren**  
  Wählen Sie eine Option aus, um anzugeben, welche Aktion ausgeführt werden soll, wenn Benutzer auf das Element klicken.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48093630"
   
  Verwenden Sie für einen Bericht, der auf einem im integrierten SharePoint-Modus konfigurierten Berichtsserver veröffentlicht wurde, eine vollqualifizierte URL einschließlich der Dateinamenerweiterung (.rdl). Beispielsweise http://*\<SharePointservername > /\<Site >*/Dokumente/Bericht1.RDL. Relative Pfade werden nicht unterstützt.  
   
- Weitere Informationen finden Sie unter [Angeben von Pfaden zu externen Elementen &#40;Berichts-Generator und SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) in der [Dokumentation zu Report Builder](http://go.microsoft.com/fwlink/?LinkId=154494) auf msdn.microsoft.com.  
+ Weitere Informationen finden Sie unter [Angeben von Pfaden zu externen Elementen &#40;Berichts-Generator und SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) in der [Dokumentation zu Report Builder](https://go.microsoft.com/fwlink/?LinkId=154494) auf msdn.microsoft.com.  
   
  **Verwenden Sie diese Parameter zum Ausführen des Berichts**  
  Fügen Sie eine Liste von Parametern hinzu, die an den Drillthroughbericht übergeben werden sollen. Die Parameternamen müssen mit den für den Zielbericht definierten Parametern übereinstimmen. Verwenden Sie die Schaltflächen **Hinzufügen** und **Löschen** , um Parameter hinzuzufügen oder zu löschen, und sortieren Sie die Liste der Parameter mithilfe des Aufwärts- und Abwärtspfeils.  

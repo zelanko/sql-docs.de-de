@@ -11,12 +11,12 @@ ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 37620b099bf07d8c38472dc211040d9efb252992
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e549fa2b443d0ec634c6d226b79bbcc33d674a3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182040"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376132"
 ---
 # <a name="saving-reports-report-builder"></a>Speichern von Berichten (Berichts-Generator)
   Im Berichts-Generator können Sie einen Bericht auf einem Berichtsserver, in einer SharePoint-Bibliothek, in einer Dateifreigabe, für die Sie Schreibrechte haben, oder auf dem Computer speichern. Sie können einen Bericht am gleichen Speicherort speichern, an dem Sie ihn geöffnet haben, oder Sie können ihn an einem anderen Speicherort oder unter einem neuen Namen am gleichen Speicherort oder einem anderen Speicherort speichern. Standardmäßig wird ein Bericht an dem Speicherort erneut gespeichert, an dem er geöffnet wurde. Wenn Sie den Bericht speichern, speichern Sie in Wirklichkeit die Berichtsdefinition, in der das Berichtslayout beschrieben wird. Die Daten werden nicht gespeichert. Bei jeder Ausführung des Berichts werden die Berichtsdaten aktualisiert. Sie sind dann wahrscheinlich anders als bei der letzten Ausführung des Berichts.  
@@ -29,7 +29,7 @@ ms.locfileid: "48182040"
   
 -   Speichern Sie Versionen von gerenderten Berichten mithilfe des Berichtsverlaufs als Verlaufskopie.  
   
- Weitere Informationen zum Anzeigen und Verwalten von Berichten direkt auf dem Berichtsserver finden Sie unter [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) und [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=154888) auf msdn.microsoft.com.  
+ Weitere Informationen zum Anzeigen und Verwalten von Berichten direkt auf dem Berichtsserver finden Sie unter [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) und [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=154888) auf msdn.microsoft.com.  
   
 ##  <a name="SavingReportDefinitions"></a> Speichern von Berichtsdefinitionen  
  Auch wenn Sie Berichte auf dem Computer speichern können, hat das Speichern der Berichte auf einem Berichtsserver viele Vorteile.  
@@ -58,12 +58,12 @@ ms.locfileid: "48182040"
 
   
 ##  <a name="UsingFileShareDelivery"></a> Verwenden der Dateifreigabeübermittlung  
- Falls Sie viele Berichte archivieren müssen, erstellen Sie ein Abonnement, das den Bericht direkt an das Dateisystem übermittelt. Bei dieser Vorgehensweise müssen Sie für jeden Bericht ein Abonnement erstellen, einen freigegebenen Ordner zum Speichern der Berichte auswählen und einen Zeitplan definieren, der bestimmt, wann die Datei erstellt wird. Sobald Sie ein Abonnement definiert haben, kann der Berichtsserver mithilfe des bereitgestellten Zeitplanes den Bericht unbeaufsichtigt ausführen und Berichtsdateien zum Archiv hinzufügen. Darüber hinaus können Sie Zeitpläne für die einmalige Verwendung erstellen, falls Sie Berichte gelegentlich archivieren möchten. Weitere Informationen über Abonnements und die Dateifreigabeübermittlung finden Sie unter "Dateiübermittlung in Reporting Services" in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
+ Falls Sie viele Berichte archivieren müssen, erstellen Sie ein Abonnement, das den Bericht direkt an das Dateisystem übermittelt. Bei dieser Vorgehensweise müssen Sie für jeden Bericht ein Abonnement erstellen, einen freigegebenen Ordner zum Speichern der Berichte auswählen und einen Zeitplan definieren, der bestimmt, wann die Datei erstellt wird. Sobald Sie ein Abonnement definiert haben, kann der Berichtsserver mithilfe des bereitgestellten Zeitplanes den Bericht unbeaufsichtigt ausführen und Berichtsdateien zum Archiv hinzufügen. Darüber hinaus können Sie Zeitpläne für die einmalige Verwendung erstellen, falls Sie Berichte gelegentlich archivieren möchten. Weitere Informationen über Abonnements und die Dateifreigabeübermittlung finden Sie unter "Dateiübermittlung in Reporting Services" in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
 
   
 ##  <a name="UsingReportHistory"></a> Verwenden des Berichtsverlaufs  
- Mit der Funktion zum Berichtsverlauf können ebenfalls Verlaufskopien erstellt werden. Anschließend können Sie die Berichtsserver-Datenbank sichern und die Sicherungskopie für die spätere Verwendung an einem sicheren Ort aufbewahren. Alle Berichtsverläufe (zusammen mit Berichten, freigegebenen Datenquellenelementen, Ordnern, Abonnements und freigegebenen Zeitplänen) werden in der Berichtsserver-Datenbank gespeichert. Sie können eine Sicherungskopie erstellen, um eine permanente Kopie des Berichtsverlaufs und der Metadaten zu verwalten, wie z. B. Abonnementinformationen, die die Empfänger eines Berichts bezeichnen. Weitere Informationen finden Sie unter "Verwalten des Berichtsverlaufs" in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
+ Mit der Funktion zum Berichtsverlauf können ebenfalls Verlaufskopien erstellt werden. Anschließend können Sie die Berichtsserver-Datenbank sichern und die Sicherungskopie für die spätere Verwendung an einem sicheren Ort aufbewahren. Alle Berichtsverläufe (zusammen mit Berichten, freigegebenen Datenquellenelementen, Ordnern, Abonnements und freigegebenen Zeitplänen) werden in der Berichtsserver-Datenbank gespeichert. Sie können eine Sicherungskopie erstellen, um eine permanente Kopie des Berichtsverlaufs und der Metadaten zu verwalten, wie z. B. Abonnementinformationen, die die Empfänger eines Berichts bezeichnen. Weitere Informationen finden Sie unter "Verwalten des Berichtsverlaufs" in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
 
   

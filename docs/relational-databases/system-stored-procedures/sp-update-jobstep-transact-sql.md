@@ -18,12 +18,12 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aca8858c65a900c085eba9d91461c4b3dc57b7fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 102e9122b93938b8e16d2e8714eed8d1372d21ad
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772978"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591524"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,22 +65,22 @@ sp_update_jobstep
  [ **@job_id =**] *job_id*  
  Die ID des Auftrags, zu dem der Schritt gehört. *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **"**_Job_name_**"**  
  Der Name des Auftrags, zu dem der Schritt gehört. *Job_name*ist **Sysname**, hat den Standardwert NULL. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [ **@step_id =**] *step_id*  
  Die ID des Auftragsschrittes, der geändert werden soll. Diese ID kann nicht geändert werden. *Step_id*ist **Int**, hat keinen Standardwert.  
   
- [ **@step_name =**] **'***step_name***'**  
+ [  **@step_name =**] **"**_Step_name_**"**  
  Ein neuer Name für den Schritt. *Step_name*ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@subsystem =**] **'***subsystem***'**  
+ [  **@subsystem =**] **"**_Subsystem_**"**  
  Das Subsystem, das zum Ausführen von Microsoft SQL Server-Agent verwendet *Befehl*. *Subsystem* ist **nvarchar(40)**, hat den Standardwert NULL.  
   
- [ **@command =**] **'***command***'**  
+ [  **@command =**] **"**_Befehl_**"**  
  Die Befehle, die über eine ausgeführt werden *Subsystem*. *Befehl* ist **nvarchar(max)**, hat den Standardwert NULL.  
   
- [ **@additional_parameters =**] **'***parameters***'**  
+ [  **@additional_parameters =**] **"**_Parameter_**"**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@cmdexec_success_code =**] *success_code*  
@@ -89,7 +89,7 @@ sp_update_jobstep
  [ **@on_success_action =**] *success_action*  
  Die Aktion ausführen, wenn der Schritt erfolgreich ist. *Success_action* ist **Tinyint**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|value|Beschreibung (Aktion)|  
+|Wert|Beschreibung (Aktion)|  
 |-----------|----------------------------|  
 |**1**|Beenden mit Erfolg|  
 |**2**|Beenden mit Fehler|  
@@ -102,7 +102,7 @@ sp_update_jobstep
  [ **@on_fail_action =**] *fail_action*  
  Die Aktion, die ausgeführt werden soll, wenn der Schritt fehlschlägt. *fail_action gleich* ist **Tinyint**, hat den Standardwert NULL und kann einen der folgenden Werte aufweisen.  
   
-|value|Beschreibung (Aktion)|  
+|Wert|Beschreibung (Aktion)|  
 |-----------|----------------------------|  
 |**1**|Beenden mit Erfolg|  
 |**2**|Beenden mit Fehler|  
@@ -112,13 +112,13 @@ sp_update_jobstep
  [ **@on_fail_step_id =**] *fail_step_id*  
  Die ID des Schritts in diesem Auftrag ausgeführt wird, wenn der Schritt fehlschlägt und *fail_action gleich* ist **4**. *Fail_step_id* ist **Int**, hat den Standardwert NULL.  
   
- [ **@server =**] **'***server***'**  
+ [  **@server =**] **"**_Server_**"**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *Server* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL.  
   
- [ **@database_name =**] **'***database***'**  
+ [  **@database_name =**] **"**_Datenbank_**"**  
  Der Name der Datenbank, in der ein [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schritt ausgeführt werden soll. *Datenbank*ist **Sysname**. In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Der Standardwert ist NULL.  
   
- [ **@database_user_name =**] **'***user***'**  
+ [  **@database_user_name =**] **"**_Benutzer_**"**  
  Der Name des Benutzerkontos, das beim Ausführen eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schritts verwendet werden soll. *Benutzer*ist **Sysname**, hat den Standardwert NULL.  
   
  [ **@retry_attempts =**] *retry_attempts*  
@@ -130,7 +130,7 @@ sp_update_jobstep
  [ **@os_run_priority =**] *run_priority*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@output_file_name =**] **'***file_name***'**  
+ [  **@output_file_name =**] **"**_File_name_**"**  
  Der Name der Datei, in der die Ausgabe dieses Schritts gespeichert wird. *File_name* ist **nvarchar(200)-Datentyp gepackt ist**, hat den Standardwert NULL. Dieser Parameter ist nur mit Befehlen gültig, die in [!INCLUDE[tsql](../../includes/tsql-md.md)]- oder CmdExec-Subsystemen ausgeführt werden.  
   
  Um Ausgabedateiname zurück auf NULL festzulegen, müssen Sie festlegen *Ausgabedateiname* auf eine leere Zeichenfolge ("") oder in eine Zeichenfolge mit Leerzeichen, aber Sie können die **CHAR(32)** Funktion. Sie können dieses Argument z. B. wie folgt auf eine leere Zeichenfolge festlegen:  
@@ -140,7 +140,7 @@ sp_update_jobstep
  [ **@flags =**] *flags*  
  Eine Option, die das Verhalten steuert. *Flags* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**0** (Standardwert)|Ausgabedatei überschreiben.|  
 |**2**|An Ausgabedatei anfügen|  
@@ -151,7 +151,7 @@ sp_update_jobstep
  [ **@proxy_id**= ] *proxy_id*  
  Die ID des Proxys, als der der Auftragsschritt ausgeführt wird. *Proxy_id* Typ **Int**, hat den Standardwert NULL. Wenn kein *Proxy_id* angegeben ist, kein *Proxy_name* angegeben ist, und es wird kein *User_name* angegeben ist, wird der Auftragsschritt ausgeführt wird, als das Dienstkonto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
- [ **@proxy_name**=] **"***Proxy_name***"**  
+ [ **@proxy_name**=] **"**_Proxy_name_**"**  
  Der Name des Proxys, als der der Auftragsschritt ausgeführt wird. *Proxy_name* Typ **Sysname**, hat den Standardwert NULL. Wenn kein *Proxy_id* angegeben ist, kein *Proxy_name* angegeben ist, und es wird kein *User_name* angegeben ist, wird der Auftragsschritt ausgeführt wird, als das Dienstkonto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

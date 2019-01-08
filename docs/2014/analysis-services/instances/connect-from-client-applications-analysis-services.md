@@ -11,12 +11,12 @@ ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f12f91e51383607d9bbcb8dc8ce2807c71ee289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd6264834efbafe65bc323f0e7bd3f5eb7a0490e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149830"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370162"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Herstellen einer Verbindung von Clientanwendungen (Analysis Services)
   Wenn Sie noch nicht mit Analysis Services vertraut sind, verwenden Sie die Informationen in diesem Thema, um mithilfe der gängigen Tools und Anwendungen eine Verbindung mit einer vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz herzustellen. In diesem Thema wird auch erläutert, wie Sie zu Testzwecken eine Verbindung unter verschiedenen Benutzeridentitäten herstellen.  
@@ -50,7 +50,7 @@ ms.locfileid: "48149830"
   
      Bei einer benannten Instanz muss der Servername in folgendem Format angegeben werden: Servername\Instanzname. Ein Beispiel für diese Namenskonvention könnte ADV-SRV062-\Finance für einen Server sein, der den Netzwerknamen ADV-SRV062 hat, wo Analysis Services als benannte Instanz mit der Bezeichnung Finance installiert war.  
   
-     Bei Servern, die in einem Failovercluster bereitgestellt werden, stellen Sie die Verbindung über den Netzwerknamen des SSAS-Clusters her. Dieser Name wird beim SQL Server-Setup als **Name des SQL Server-Netzwerks**angegeben. Wenn Sie SSAS als benannte Instanz auf einem Windows Server-Failovercluster (WSFC) installiert haben, wird der Instanzname der Verbindung niemals hinzugefügt. Diese Vorgehensweise ist charakteristisch für SSAS. Bei einer benannten Instanz einer gruppierten relationalen Datenbank-Engine ist der Instanzname im Gegensatz dazu enthalten. Wenn Sie z. B. sowohl SSAS als auch die Datenbank-Engine als benannte Instanz (Contoso-Accounting) mit dem SQL Server-Netzwerknamen "SQL-CLU" installiert haben, würden Sie die Verbindung mit SSAS mit "SQL-CLU" und die Verbindung mit der Datenbank-Engine mit "SQL-CLU\Contoso-Accounting" herstellen. Weitere Informationen und Beispiele finden Sie unter [Verwenden von SQL Server Analysis Services in einem Cluster](http://go.microsoft.com/fwlink/p/?LinkId=396548) .  
+     Bei Servern, die in einem Failovercluster bereitgestellt werden, stellen Sie die Verbindung über den Netzwerknamen des SSAS-Clusters her. Dieser Name wird beim SQL Server-Setup als **Name des SQL Server-Netzwerks**angegeben. Wenn Sie SSAS als benannte Instanz auf einem Windows Server-Failovercluster (WSFC) installiert haben, wird der Instanzname der Verbindung niemals hinzugefügt. Diese Vorgehensweise ist charakteristisch für SSAS. Bei einer benannten Instanz einer gruppierten relationalen Datenbank-Engine ist der Instanzname im Gegensatz dazu enthalten. Wenn Sie z. B. sowohl SSAS als auch die Datenbank-Engine als benannte Instanz (Contoso-Accounting) mit dem SQL Server-Netzwerknamen "SQL-CLU" installiert haben, würden Sie die Verbindung mit SSAS mit "SQL-CLU" und die Verbindung mit der Datenbank-Engine mit "SQL-CLU\Contoso-Accounting" herstellen. Weitere Informationen und Beispiele finden Sie unter [Verwenden von SQL Server Analysis Services in einem Cluster](https://go.microsoft.com/fwlink/p/?LinkId=396548) .  
   
      Bei Servern, die in einem Cluster mit Netzwerklastenausgleich bereitgestellt werden, stellen Sie mithilfe des virtuellen Netzwerknamens des NLB-Servers eine Verbindung her.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48149830"
   
      Vermeiden Sie, **Keine**zu verwenden. Mit Analysis Services können Sie auf der Verbindungszeichenfolge weder einen Benutzernamen und noch ein Kennwort angeben, außer wenn Sie eine Verbindung mit einem Server herstellen, der für den HTTP-Zugriff konfiguriert wurde. Verwenden Sie auch nicht "SSS", außer wenn Sie bereits wissen, dass einem Satz von Windows-Benutzeranmeldeinformationen, die über Benutzerzugriff auf die Analysis Services-Datenbanken verfügen, die SSS-Zielanwendungs-ID zugeordnet ist. Für die meisten Szenarien ist die Verwendung der Standardoption für die Windows-Authentifizierung die beste Wahl für eine Analysis Services-Verbindung in Excel.  
   
- Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit oder Importieren von Daten aus SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
+ Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit oder Importieren von Daten aus SQL Server Analysis Services](https://go.microsoft.com/fwlink/?linkID=215150).  
   
 ##  <a name="bkmk_SSDT"></a> Herstellen einer Verbindung mithilfe von SQL Server Data Tools  
  SQL Server Data Tools wird zum Erstellen von BI-Lösungen, einschließlich Analysis Services-Modelle, Reporting Services-Berichte und SSIS-Pakete, verwendet. Beim Erstellen von Berichten oder Paketen müssen Sie möglicherweise eine Verbindung mit Analysis Services angeben.  
@@ -126,11 +126,11 @@ ms.locfileid: "48149830"
   
  Folgende Ressourcen können beim Beheben von Verbindungsfehlern hilfreich sein:  
   
- [Lösen allgemeiner Verbindungsprobleme in SQL Server 2005 Analysis Services – Verbindungsszenarien](http://technet.microsoft.com/library/cc917670.aspx). Obwohl dieses Dokument bereits einige Jahre älter ist, sind die enthaltenen Informationen und Methoden weiterhin gültig.  
+ [Lösen allgemeiner Verbindungsprobleme in SQL Server 2005 Analysis Services – Verbindungsszenarien](https://technet.microsoft.com/library/cc917670.aspx). Obwohl dieses Dokument bereits einige Jahre älter ist, sind die enthaltenen Informationen und Methoden weiterhin gültig.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verbinden von Analysis Services](connect-to-analysis-services.md)   
- [Von Analysis Services Unterstützte Authentifizierungsmethoden](authentication-methodologies-supported-by-analysis-services.md)   
+ [Verbindung mit Analysis Services herstellen](connect-to-analysis-services.md)   
+ [Von Analysis Services unterstützte Authentifizierungsmethoden](authentication-methodologies-supported-by-analysis-services.md)   
  [Identitätswechsel &#40;SSAS – tabellarisch&#41;](../tabular-models/impersonation-ssas-tabular.md)   
  [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   

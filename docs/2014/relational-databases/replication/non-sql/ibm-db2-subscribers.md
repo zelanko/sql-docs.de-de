@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
@@ -17,12 +16,12 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bedd4c228f540cd4277b4f77750e797b70424c30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155360"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356662"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt Pushabonnements für IBM DB2/AS 400, DB2/MVS und DB2/Universal Database über die OLE DB-Anbieter, die mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration-Server bereitgestellt werden.  
@@ -32,11 +31,11 @@ ms.locfileid: "48155360"
   
 1.  Installieren Sie die neueste Version des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB-Anbieters für DB2 auf dem Verteiler:  
   
-    -   Bei Verwendung von [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]auf die [SQL Server 2008 Downloads](http://go.microsoft.com/fwlink/?LinkId=149256) Webseite, in der **Related Downloads** auf den Link, um die neueste Version von Microsoft SQL Server 2008 Feature Pack. Suchen Sie auf der Webseite **Microsoft SQL Server 2008 Feature Pack** nach **Microsoft OLE DB Provider for DB2**(bzw. nach Microsoft OLE DB-Anbieter für DB2, falls eine deutsche Webseite vorhanden ist).  
+    -   Wenn Sie [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]verwenden, klicken Sie auf der Webseite [SQL Server 2008 Downloads](https://go.microsoft.com/fwlink/?LinkId=149256) (in Englisch) im Abschnitt **Related Downloads** auf den Link zur aktuellen Version des Microsoft SQL Server 2008 Feature Pack. Suchen Sie auf der Webseite **Microsoft SQL Server 2008 Feature Pack** nach **Microsoft OLE DB Provider for DB2**(bzw. nach Microsoft OLE DB-Anbieter für DB2, falls eine deutsche Webseite vorhanden ist).  
   
     -   Wenn Sie [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard verwenden, installieren Sie die aktuelle Version von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Server (HIS). Der Anbieter ist in diesem Produkt enthalten.  
   
-     Zusätzlich zur Installation des Anbieters, wird empfohlen, dass Sie das Data Access Tool installieren, die im nächsten Schritt verwendet wird (es wird standardmäßig installiert, mit dem Download für [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). Weitere Informationen zum Installieren und Verwenden des Data Access Tools finden Sie in der Anbieter- oder der HIS-Dokumentation.  
+     Außer dem Anbieter sollten Sie das Data Access Tool installieren, das im nächsten Schritt verwendet wird (es wird standardmäßig mit dem Download für [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise installiert). Weitere Informationen zum Installieren und Verwenden des Data Access Tools finden Sie in der Anbieter- oder der HIS-Dokumentation.  
   
 2.  Erstellen Sie eine Verbindungszeichenfolge für den Abonnenten. Die Verbindungszeichenfolge kann in einem beliebigen Text-Editor erstellt werden, Sie sollten jedoch das Data Access Tool verwenden. So erstellen Sie die Zeichenfolge im Data Access Tool  
   
@@ -131,7 +130,7 @@ ms.locfileid: "48155360"
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|–|  
+|`sql_variant`|Nicht zutreffend|  
 |`sysname`|VARCHAR(128)|  
 |`text`|VARCHAR(0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
@@ -168,6 +167,6 @@ ms.locfileid: "48155360"
   
 ## <a name="see-also"></a>Siehe auch  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
- [Subscribe to Publications](../subscribe-to-publications.md)  
+ [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md)  
   
   

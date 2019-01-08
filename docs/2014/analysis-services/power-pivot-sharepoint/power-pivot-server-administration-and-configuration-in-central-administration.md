@@ -11,12 +11,12 @@ ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0522e8e4df8d6e2cbb1a386b89f933c2f7075a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ec3264095ebdb34730f8112389b50aa6839836f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168560"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365353"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration
   Die PowerPivot-Serververwaltung und -konfiguration wird mithilfe der SharePoint-Zentraladministration von SharePoint Service-Anwendungsadministratoren ausgeführt.  
@@ -50,10 +50,10 @@ ms.locfileid: "48168560"
   
 |Link|Typ|Taskbeschreibung|  
 |----------|----------|----------------------|  
-|[Bereitstellen von PowerPivot-Lösungen in SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)|Required|Bei diesem Schritt werden die Projektmappendateien installiert, über die der Farm und den Websitesammlungen Programmdateien und Anwendungsseiten hinzugefügt werden.|  
-|[Erstellen und Konfigurieren einer PowerPivot-Dienstanwendung in der Zentraladministration](create-and-configure-power-pivot-service-application-in-ca.md)|Required|Mit diesem Schritt wird der PowerPivot-Systemdienst bereitgestellt.|  
-|[Aktivieren der PowerPivot-Funktionsintegration für Websitesammlungen in der Zentraladministration](activate-power-pivot-integration-for-site-collections-in-ca.md)|Required|Mit diesem Schritt werden PowerPivot-Funktionen auf Websitesammlungsebene aktiviert.|  
-|[Hinzufügen von MSOLAP.5 als vertrauenswürdigen Datenanbieter in Excel Services](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Required|Mit diesem Schritt wird der OLE DB-Anbieter für Analysis Services als vertrauenswürdiger Anbieter in Excel Services hinzugefügt.|  
+|[Bereitstellen von PowerPivot-Lösungen in SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)|Erforderlich|Bei diesem Schritt werden die Projektmappendateien installiert, über die der Farm und den Websitesammlungen Programmdateien und Anwendungsseiten hinzugefügt werden.|  
+|[Erstellen und Konfigurieren einer PowerPivot-Dienstanwendung in der Zentraladministration](create-and-configure-power-pivot-service-application-in-ca.md)|Erforderlich|Mit diesem Schritt wird der PowerPivot-Systemdienst bereitgestellt.|  
+|[Aktivieren der PowerPivot-Funktionsintegration für Websitesammlungen in der Zentraladministration](activate-power-pivot-integration-for-site-collections-in-ca.md)|Erforderlich|Mit diesem Schritt werden PowerPivot-Funktionen auf Websitesammlungsebene aktiviert.|  
+|[Hinzufügen von MSOLAP.5 als vertrauenswürdigen Datenanbieter in Excel Services](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Erforderlich|Mit diesem Schritt wird der OLE DB-Anbieter für Analysis Services als vertrauenswürdiger Anbieter in Excel Services hinzugefügt.|  
 |[PowerPivot-Datenaktualisierung mit SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)|Empfohlen|Eine Datenaktualisierung ist optional, wird aber empfohlen. Dies ermöglicht es Ihnen, unbeaufsichtigte Updates der PowerPivot-Daten in veröffentlichten Excel-Arbeitsmappen zu planen.|  
 |[Konfigurieren des unbeaufsichtigten PowerPivot unbeaufsichtigte Datenaktualisierungskonto &#40;PowerPivot für SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)|Empfohlen|Mit diesem Schritt wird ein zweckgebundenes Konto bereitgestellt. Dieses kann dazu verwendet werden, um Datenaktualisierungsaufträge auf dem Server auszuführen.|  
 |[Konfigurieren der Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|Optional|Die Verwendung der Datensammlung wird standardmäßig konfiguriert. Sie können die Standardeinstellungen mithilfe dieser Schritte ändern.|  
@@ -69,6 +69,6 @@ ms.locfileid: "48168560"
 ## <a name="see-also"></a>Siehe auch  
  [PowerPivot für SharePoint 2010-Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [Konfigurationseinstellungsverweis &#40;PowerPivot für SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
- [Notfallwiederherstellung für PowerPivot für SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [Notfallwiederherstellung für PowerPivot für SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

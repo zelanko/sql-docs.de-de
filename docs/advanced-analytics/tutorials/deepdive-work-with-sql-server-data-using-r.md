@@ -1,91 +1,94 @@
 ---
-title: Arbeiten mit SQL Server-Daten mithilfe von R (SQL und R tieferer) | Microsoft-Dokumentation
+title: 'Erstellen Sie eine Datenbank und Berechtigungen für RevoScaleR-Tutorials: SQL Server-Machine Learning'
+description: Exemplarische Vorgehensweise im Lernprogramm zum Erstellen von SQL Server-Datenbank für die R-Tutorials...
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a59d467417c3471fa643acf9fc65ab45d5dc7a45
-ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
+ms.openlocfilehash: 15032b604d7ea28ad03acb837f997dac3afa84b8
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44375673"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645269"
 ---
-# <a name="lesson-1-create-a-database-and-permissions"></a>Lektion 1: Erstellen einer Datenbank und Berechtigungen
+# <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Erstellen Sie eine Datenbank und Berechtigungen (SQL Server und die RevoScaleR-Lernprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel ist Teil der [RevoScaleR Tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Diese Lektion ist Teil der [RevoScaleR Tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-In dieser Lektion richten Sie die Umgebung Sie und fügen Sie die Daten zum Trainieren der Modelle und führen einige schnelle Zusammenfassungen der Daten. Als Teil des Prozesses müssen Sie diese Aufgaben durchführen:
-  
-- Erstellen einer neuen Datenbank zum Speichern der Daten für das Training und die Bewertung von zwei R-Modellen.
-  
-- Erstellen eines Kontos (entweder ein Windows-Benutzer oder ein SQL-Anmeldename), das für die Kommunikation zwischen Ihrer Arbeitsstation und dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computer verwendet wird.
-  
-- Erstellen von Datenquellen in R für die Arbeit mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten und Datenbankobjekten.
-  
-- Verwenden von R-Datenquellen zum Laden von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-  
-- Verwenden von R zum Abrufen einer Liste von Variablen und zum Ändern der Metadaten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle.
-  
-- Erstellen eines Computekontexts zum Aktivieren von Remoteausführungen von R-Code.
-  
-- (Optional) Aktivieren der Ablaufverfolgung auf dem entfernten computekontext.
-  
-## <a name="create-the-database-and-user"></a>Erstellen der Datenbank und die Benutzer
+Lektion eine ist über das Einrichten von SQL Server-Datenbank und Berechtigungen für das Abschließen dieses Lernprogramms erforderlich sind. Verwendung [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) oder eine andere Abfrage-Editor die folgenden Aufgaben ausführen:
 
-In dieser exemplarischen Vorgehensweise erstellen Sie eine neue Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], und fügen Sie eine SQL-Anmeldung mit Berechtigungen zum Schreiben und Lesen von Daten und zum Ausführen von R-Skripts hinzu.
+> [!div class="checklist"]
+> * Erstellen einer neuen Datenbank zum Speichern der Daten für Trainings- und Bewertungsschritte für zwei R-Modellen
+> * Erstellen Sie eine datenbankanmeldung für Benutzer mit Berechtigungen zum Erstellen und Verwenden von Datenbankobjekten
+  
+## <a name="create-the-database"></a>Erstellen der Datenbank
 
-> [!NOTE]
-> Wenn Sie Daten nur lesen, benötigt das Konto, das die R-Skripts ausführt SELECT-Berechtigungen (**"db_datareader"** Rolle) für die angegebene Datenbank. In diesem Tutorial müssen Sie jedoch DDL-Administratorberechtigungen vorbereiten die Datenbank, und klicken Sie zum Erstellen von Tabellen zum Speichern der Bewertungsergebnisse verfügen.
-> 
-> Wenn Sie nicht der Besitzer der Datenbank sind, benötigen Sie außerdem die Berechtigung EXECUTE ANY EXTERNAL SCRIPT, um R-Skripts ausführen.
+Dieses Lernprogramm erfordert eine Datenbank zum Speichern von Daten und Code. Wenn Sie kein Administrator sind, bitten Sie Ihr Datenbankadministrator die Datenbank und die Anmeldung für Sie erstellt. Sie benötigen Berechtigungen zum Schreiben und Lesen von Daten sowie zum Ausführen von R-Skripts.
 
-1. Wählen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die Instanz aus, bei der [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] aktiviert ist. Führen Sie einen Rechtsklick auf **Datenbanken**aus, und wählen Sie **Neue Datenbank**aus.
+1. In SQL Server Management Studio eine Verbindung mit einer R-aktivierten Datenbank-Instanz.
+
+2. Mit der rechten Maustaste **Datenbanken**, und wählen Sie **neue Datenbank**.
   
-2. Geben Sie einen Namen für die neue Datenbank ein. Sie können einen beliebigen Namen verwenden, denken Sie jedoch daran, alle [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts und R-Skripts in dieser exemplarischen Vorgehensweise dementsprechend zu bearbeiten.
+2. Geben Sie einen Namen für die neue Datenbank ein: RevoDeepDive.
   
-    > [!TIP]
-    > Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Aktualisieren** aus, um den aktualisierten Datenbanknamen anzuzeigen.
+
+## <a name="create-a-login"></a>Erstellen eines Anmeldenamens
   
-3. Klicken Sie auf **Neue Abfrage**, und legen Sie die Masterdatenbank als Datenbankkontext fest.
+1. Klicken Sie auf **Neue Abfrage**, und legen Sie die Masterdatenbank als Datenbankkontext fest.
   
-4. Führen Sie im Fenster **Abfrage** die folgenden Befehle aus, um die Benutzerkonten zu erstellen und sie der Datenbank zuzuweisen, die für dieses Tutorial verwendet wird. Achten Sie darauf, den Datenbanknamen falls nötig zu ändern.
+2. Führen Sie im Fenster **Abfrage** die folgenden Befehle aus, um die Benutzerkonten zu erstellen und sie der Datenbank zuzuweisen, die für dieses Tutorial verwendet wird. Achten Sie darauf, den Datenbanknamen falls nötig zu ändern.
+
+3. Um die Anmeldung zu überprüfen, wählen Sie die neue Datenbank aus, erweitern Sie **Sicherheit**, und erweitern Sie **Benutzer**.
   
 **Windows-Benutzer**
   
-```SQL
+```sql
  -- Create server user based on Windows account
 USE master
 GO
-CREATE LOGIN [<DOMAIN>\<user_name>] FROM WINDOWS WITH DEFAULT_DATABASE=[DeepDive]
+CREATE LOGIN [<DOMAIN>\<user_name>] FROM WINDOWS WITH DEFAULT_DATABASE=[RevoDeepDive]
 
  --Add the new user to tutorial database
-USE [DeepDive]
+USE [RevoDeepDive]
 GO
 CREATE USER [<user_name>] FOR LOGIN [<DOMAIN>\<user_name>] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
 **SQL-Anmeldename**
 
-```SQL
+```sql
 -- Create new SQL login
 USE master
 GO
-CREATE LOGIN DDUser01 WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
+CREATE LOGIN [DDUser01] WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
 
 -- Add the new SQL login to tutorial database
-USE [DeepDive]
+USE RevoDeepDive
 GO
 CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
-5. Um zu bestätigen, dass der Benutzer erstellt wurde, wählen Sie die neue Datenbank aus, und erweitern Sie **Sicherheit**und **Benutzer**.
+## <a name="assign-permissions"></a>Zuweisen von Berechtigungen
 
-## <a name="troubleshooting"></a>Problembehandlung
+Dieses Tutorial veranschaulicht das R-Skript und DDL-Vorgänge, einschließlich erstellen und Löschen von Tabellen und gespeicherten Prozeduren sowie das Ausführen von R-Skript in einem externen Prozess in SQL Server. Weisen Sie in diesem Schritt Berechtigungen, um diese Aufgaben zu ermöglichen.
+
+In diesem Beispiel wird angenommen, eine SQL-Anmeldung (DDUser01), aber wenn Sie eine Windows-Anmeldung erstellt haben, verwenden Sie stattdessen ein.
+
+```sql
+USE RevoDeepDive
+GO
+
+EXEC sp_addrolemember 'db_owner', 'DDUser01'
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO DDUser01
+GO
+```
+
+## <a name="troubleshoot-connections"></a>Problembehandlung für Verbindungen
 
 Dieser Abschnitt enthält einige häufig auftretende Probleme, denen Sie möglicherweise während der Einrichtung der Datenbank gegenüber stehen.
 
@@ -95,7 +98,7 @@ Dieser Abschnitt enthält einige häufig auftretende Probleme, denen Sie möglic
   
     Wenn Sie zusätzliche Datenbankverwaltungstools installieren möchten, können Sie eine Testverbindung zur SQL Server-Instanz erstellen, indem Sie den [ODBC-Datenquellen-Administrator](https://msdn.microsoft.com/library/ms714024.aspx) in der Systemsteuerung verwenden. Wenn die Datenbank ordnungsgemäß konfiguriert ist und Sie den richtigen Benutzernamen und das richtige Kennwort eingeben, sollten Sie die zuvor von Ihnen erstellte Datenbank sehen und diese als Ihre Standarddatenbank auswählen.
   
-    Wenn Sie keine Verbindung mit der Datenbank herstellen können, überprüfen Sie ob die Remoteverbindungen für den Server aktiviert sind und ob das Named Pipes-Protokoll aktiviert ist. Weitere Tipps zur Problembehandlung finden Sie in diesem Artikel: [Problembehandlung beim Herstellen einer Verbindung mit der SQL Server-Datenbank-Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
+    Häufige Ursachen für Verbindungsfehler sind remote Verbindungen sind nicht für den Server aktiviert und Named Pipes-Protokoll ist nicht aktiviert. Weitere Tipps zur Problembehandlung finden Sie in diesem Artikel: [Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
   
 - **Mein Tabellenname wurde mit dem Präfix DataReader versehen – warum?**
   
@@ -111,17 +114,11 @@ Dieser Abschnitt enthält einige häufig auftretende Probleme, denen Sie möglic
   
 - **Ich verfüge über keine DDL-Berechtigungen. Kann ich weiterhin das Tutorial ausführen?**
   
-    Ja. Sie müssen jedoch jemanden bitten, die Daten vorab in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen zu laden und die Abschnitte zu überspringen, in denen Sie neue Tabellen erstellen sollen. Die Funktionen, die DDL-Berechtigungen erforderlich sind in diesem Tutorial nach Möglichkeit hingewiesen.
+    Ja, aber stellen Sie eine Person zum Vorabladen von Daten in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen, und fahren Sie mit der nächsten Lektion fort. Die Funktionen, die DDL-Berechtigungen erforderlich sind in diesem Tutorial nach Möglichkeit hingewiesen.
 
     Darüber hinaus bitten Sie Ihren Administrator, um Sie über die Berechtigung EXECUTE ANY EXTERNAL SCRIPT gewähren. Es wird für R-skriptausführung benötigt, ob remote oder mithilfe von `sp_execute_external_script`.
 
-## <a name="next-step"></a>Nächster Schritt
+## <a name="next-steps"></a>Nächste Schritte
 
-[Erstellen von SQL Server-Datenobjekten mithilfe von RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-
-## <a name="overview"></a>Übersicht
-
-[Tieferer Einblick in Data Science: Verwenden der RevoScaleR-Pakete](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-
-
-
+> [!div class="nextstepaction"]
+> [Erstellen von SQL Server-Datenobjekten mithilfe von RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)

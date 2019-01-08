@@ -1,43 +1,55 @@
 ---
-title: Stellen Sie das R-Modell, und verwenden Sie es in SQL (Exemplarische Vorgehensweise) | Microsoft-Dokumentation
+title: Bereitstellen eines R-Modells für Vorhersagen zu SQL Server – SQL Server-Machine Learning
+description: Dieses Tutorial zeigt, wie zum Bereitstellen eines R-Modells in SQL Server für in-Database-Analyse.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/26/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 74a5d8b7ac8bd36a6ce76b895b2dde4a07f5ea96
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 7b14b70fc5ba8ac39535d9dd6dedbfa1bd309aa4
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085352"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645195"
 ---
-# <a name="deploy-the-r-model-and-use-it-in-sql"></a>Bereitstellen Sie das R-Modell und verwenden Sie es in SQL
+# <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Bereitstellen Sie das R-Modell und verwenden Sie sie in SQL Server (Exemplarische Vorgehensweise)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In dieser Lektion verwenden Sie R-Modelle in einer produktionsumgebung, durch den Aufruf eines trainierten Modells aus einer gespeicherten Prozedur. Rufen Sie anschließend die gespeicherte Prozedur aus R oder jeder beliebigen Anwendungsprogrammiersprache, die unterstützt [!INCLUDE[tsql](../../includes/tsql-md.md)] (z. B. c#, Java, Python usw.), um das Modell zum treffen von Vorhersagen für neue Beobachtungen zu verwenden.
+Erfahren Sie in dieser Lektion, wie R-Modelle in einer produktionsumgebung bereitstellen, durch den Aufruf eines trainierten Modells aus einer gespeicherten Prozedur. Sie können die gespeicherte Prozedur aus R oder jeder beliebigen Anwendungsprogrammiersprache, die unterstützt Aufrufen [!INCLUDE[tsql](../../includes/tsql-md.md)] (z. B. C#, Java, Python usw.) und das Modell zum treffen von Vorhersagen für neue Beobachtungen zu verwenden.
 
-Dieses Beispiel veranschaulicht die beiden am häufigsten verwendeten Arten eines Modells in der Bewertung:
+In diesem Artikel veranschaulicht die beiden am häufigsten verwendeten Arten eines Modells in der Bewertung:
 
-- **Batchbewertungsmodus** wird verwendet, wenn müssen Sie sehr schnell mehrere Vorhersagen erstellen, durch Übergeben einer SQL abzufragen oder Tabelle als Eingabe. Eine Tabelle der Ergebnisse wird zurückgegeben, die Sie direkt in eine Tabelle einfügen, oder in eine Datei schreiben können.
-
-- **Einzelbewertungsmodus** wird verwendet, wenn Sie einzelne Vorhersagen zu einem Zeitpunkt erstellen müssen. Sie haben einen Satz von einzelnen Werten an die gespeicherte Prozedur übergeben. Die Werte entsprechen den Funktionen im Modell, das Modell, die zum Erstellen einer Vorhersage verwendet werden, oder generieren ein anderes Ergebnis, wie z. B. ein Wahrscheinlichkeitswert. Sie können diesen Wert dann an die Anwendung oder den Benutzer zurückgeben.
+> [!div class="checklist"]
+> * **Batchbewertungsmodus** generiert mehrere Vorhersagen
+> * **Einzelbewertungsmodus** einzelne Vorhersagen generiert, zu einem Zeitpunkt
 
 ## <a name="batch-scoring"></a>Batchbewertung
 
-Eine gespeicherte Prozedur für die batchbewertung wurde erstellt, wenn Sie zunächst das PowerShell-Skript ausgeführt haben. Diese gespeicherte Prozedur, *PredictTipBatchMode*, bewirkt Folgendes:
+Erstellen einer gespeicherten Prozedur, *PredictTipBatchMode*, Objekt, das mehrere Vorhersagen, übergeben eine SQL-Abfrage oder Tabelle als Eingabe generiert. Eine Tabelle der Ergebnisse wird zurückgegeben, die Sie direkt in eine Tabelle einfügen, oder in eine Datei schreiben können.
 
 - Ruft einen Satz von Eingabedaten als SQL-Abfrage ab
 - Ruft das trainierte logistische Regressionsmodell auf, das Sie in der vorherigen Lektion gespeichert haben
 - Prognostiziert die Wahrscheinlichkeit, dass der Treiber NULL-Tipp wird
 
-1. Das Skript für die gespeicherte Prozedur kurz *PredictTipBatchMode*. Es veranschaulicht verschiedene Aspekte wie ein Modell mithilfe von [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]operationalisiert werden kann.
+1. Öffnen Sie in Management Studio ein neues Abfragefenster, und führen Sie das folgende T-SQL-Skript, um die PredictTipBatchMode, die gespeicherte Prozedur zu erstellen.
   
-    ```tsql
-    CREATE PROCEDURE [dbo].[PredictTipBatchMode]
-    @input nvarchar(max)
+    ```sql
+    USE [NYCTaxi_Sample]
+    GO
+
+    SET ANSI_NULLS ON
+    GO
+    SET QUOTED_IDENTIFIER ON
+    GO
+
+    IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'PredictTipBatchMode')
+    DROP PROCEDURE v
+    GO
+
+    CREATE PROCEDURE [dbo].[PredictTipBatchMode] @input nvarchar(max)
     AS
     BEGIN
       DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model  FROM nyc_taxi_models);
@@ -63,13 +75,13 @@ Eine gespeicherte Prozedur für die batchbewertung wurde erstellt, wenn Sie zun�
 
     + Die Daten, die als Eingaben verwendet werden, für die Bewertung als SQL-Abfrage definiert und als Zeichenfolge in der SQL-Variablen gespeichert  _\@Eingabe_. Wie Daten aus der Datenbank abgerufen werden, es befindet sich in einem Datenrahmen namens *"inputdataset"*, dies ist der voreingestellte Name für die Eingabedaten der [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) Prozedur; Sie können definieren, einen anderen Variablennamen an, die bei Bedarf mithilfe des Parameters   *_\@input_data_1_name_*.
 
-    + Die gespeicherte Prozedur ruft die `rxPredict` -Funktion aus der **RevoScaleR** -Bibliothek auf, um die Bewertung zu generieren.
+    + Um die besten Ergebnisse zu generieren, die gespeicherte Prozedur ruft die RxPredict-Funktion aus der **RevoScaleR** Bibliothek.
 
     + Der Rückgabewert *Bewertung*, ist die Wahrscheinlichkeit, anhand des Modells, ruft diese Treiber einen Tipp. Optional können Sie ganz einfach eine Art Filter auf die zurückgegebenen Werten die Rückgabewerte in "Trinkgeld" und "kein Trinkgeld"-Gruppen zu kategorisieren anwenden.  Eine Wahrscheinlichkeit von weniger als 0,5 bedeutet beispielsweise, dass ein Trinkgeld wahrscheinlich nicht ist.
   
-2.  Um die gespeicherte Prozedur im Batchmodus aufzurufen, definieren Sie die Abfrage als Eingabe für die gespeicherte Prozedur. Dies ist die SQL-Abfrage; Sie können ihn ausführen, in SSMS, um sicherzustellen, dass es funktioniert.
+2.  Um die gespeicherte Prozedur im Batchmodus aufzurufen, definieren Sie die Abfrage als Eingabe für die gespeicherte Prozedur. Im folgenden finden Sie die SQL-Abfrage, die Sie in SSMS, um sicherzustellen, dass er ordnungsgemäß ausgeführt werden können.
 
-    ```SQL
+    ```sql
     SELECT TOP 10
       a.passenger_count AS passenger_count,
       a.trip_time_in_secs AS trip_time_in_secs,
@@ -101,19 +113,33 @@ Eine gespeicherte Prozedur für die batchbewertung wurde erstellt, wenn Sie zun�
     sqlQuery (conn, q);
     ```
 
-    Wenn Sie einen ODBC-Fehler erhalten, überprüfen Sie die Abfragesyntax, sowie davon, ob Sie die richtige Anzahl von Anführungszeichen. 
+    Wenn Sie einen ODBC-Fehler erhalten, überprüfen Sie für Syntaxfehler sowie davon, ob Sie die richtige Anzahl von Anführungszeichen. 
     
     Wenn Sie fehlender Berechtigungen eine Fehlermeldung erhalten, stellen Sie sicher, dass es sich bei die Anmeldung die gespeicherte Prozedur ausführen kann.
 
 ## <a name="single-row-scoring"></a>Einzelzeilenbewertung
 
+Einzelbewertungsmodus generiert einzelne Vorhersagen gleichzeitig einen Satz von einzelnen Werten an die gespeicherte Prozedur als Eingabe übergeben werden. Die Werte entsprechen den Funktionen im Modell, das Modell, die zum Erstellen einer Vorhersage verwendet werden, oder generieren ein anderes Ergebnis, wie z. B. ein Wahrscheinlichkeitswert. Sie können diesen Wert dann an die Anwendung oder den Benutzer zurückgeben.
+
 Wenn Sie das Modell für die Vorhersage pro Zeile für Zeile aufrufen, übergeben Sie einen Satz von Werten, die Features für jeden einzelnen Fall darstellen. Die gespeicherte Prozedur gibt eine einzige Vorhersage oder die Wahrscheinlichkeit zurück. 
 
 Die gespeicherte Prozedur *PredictTipSingleMode* veranschaulicht diesen Ansatz. Es dauert, als mehrere Eingabeparameter, die featurewerte (z. B. Fahrgäste die Anzahl und die Wegstrecke) darstellt, bewertet diese Funktionen mit den gespeicherten R-Modells und gibt die Wahrscheinlichkeit Tipp.
 
-1. Wenn die gespeicherte Prozedur *PredictTipSingleMode* wurde nicht erstellt, vom ersten PowerShell-Skript, können Sie die folgende Transact-SQL-Anweisung aus, um ihn jetzt erstellen ausführen.
+1. Führen Sie die folgende Transact-SQL-Anweisung zum Erstellen der gespeicherten Prozedur.
 
-    ```tsql
+    ```sql
+    USE [NYCTaxi_Sample]
+    GO
+
+    SET ANSI_NULLS ON
+    GO
+    SET QUOTED_IDENTIFIER ON
+    GO
+
+    IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'PredictTipSingleMode')
+    DROP PROCEDURE v
+    GO
+
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0,
     @trip_distance float = 0,
     @trip_time_in_secs int = 0,
@@ -167,7 +193,7 @@ Die gespeicherte Prozedur *PredictTipSingleMode* veranschaulicht diesen Ansatz. 
 
 2. In SQL Server Management Studio können Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** Prozedur (oder **EXECUTE**) zum Aufrufen der gespeicherten Prozedur, und übergeben sie die erforderlichen Eingaben. Versuchen Sie beispielsweise, die diese Anweisung in Management Studio ausführen:
 
-    ```SQL
+    ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
@@ -189,32 +215,18 @@ Die gespeicherte Prozedur *PredictTipSingleMode* veranschaulicht diesen Ansatz. 
     ```
 
     >[!TIP]
-    > R Tools für Visual Studio (RTVS) bietet eine hervorragende Integration mit SQL Server und R. Weitere Beispiele für die Verwendung von RODBC mit einer SQL Server-Verbindung finden Sie unter: [arbeiten mit SQL Server und R](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
-
-## <a name="summary"></a>Zusammenfassung
-
-Jetzt wissen, Sie arbeiten mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten und trainierte R-Modellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es sollte relativ einfach für Sie neue Modelle basierend auf dieses DataSet zu erstellen. Beispielsweise können Sie versuchen, diese zusätzliche Modelle zu erstellen:
-
-- Ein Regressionsmodell, das die Höhe des Trinkgelds vorhersagt
-
-- Ein mehrklassiges klassifizierungsmodell, das vorhersagt, ob die QuickInfo groß, Mittel oder klein ist.
-
-Wir empfehlen außerdem, dass Sie sich einige dieser Beispiele und Ressourcen anschauen:
-
-+ [Szenarien für Data Science und Lösungsvorlagen](data-science-scenarios-and-solution-templates.md)
-
-+ [Datenbankinterne Advanced Analytics](sqldev-in-database-r-for-sql-developers.md)
-
-+ [Microsoft R: Eintauchen in die Datenanalyse](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
-
-+ [Zusätzliche Ressourcen](https://msdn.microsoft.com/microsoft-r/microsoft-r-more-resources)
-
-## <a name="previous-lesson"></a>Vorherige Lektion
-
-[Erstellen eines R-Modells und speichern Sie sie in SQL Server](walkthrough-build-and-save-the-model.md)
+    > R Tools für Visual Studio (RTVS) bietet eine hervorragende Integration mit SQL Server und R. Finden Sie in diesem Artikel weitere Beispiele für die Verwendung von RODBC mit einer SQL Server-Verbindung: [Arbeiten mit SQLServer und R](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[SQL Server-R-Lernprogramme](sql-server-r-tutorials.md)
+Jetzt wissen, Sie arbeiten mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten und trainierte R-Modellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es sollte relativ einfach für Sie neue Modelle basierend auf dieses DataSet zu erstellen. Beispielsweise können Sie versuchen, diese zusätzliche Modelle zu erstellen:
 
-[Gewusst wie: Erstellen einer gespeicherten Prozedur mithilfe von sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
++ Ein Regressionsmodell, das die Höhe des Trinkgelds vorhersagt
++ Ein mehrklassiges klassifizierungsmodell, das vorhersagt, ob die QuickInfo groß, Mittel oder klein ist.
+
+Möglicherweise möchten Sie auch diese Beispiele und Ressourcen zu untersuchen:
+
++ [Szenarien für Data Science und Lösungsvorlagen](data-science-scenarios-and-solution-templates.md)
++ [Datenbankinterne Advanced Analytics](sqldev-in-database-r-for-sql-developers.md)
++ [Microsoft R: Eintauchen in die Datenanalyse](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
++ [Zusätzliche Ressourcen](https://msdn.microsoft.com/microsoft-r/microsoft-r-more-resources)

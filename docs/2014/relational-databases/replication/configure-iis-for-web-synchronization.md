@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
@@ -15,26 +14,26 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca646f4df2976d75ee6665731e5c5641bbb8d982
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176070"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372752"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Konfigurieren von IIS für die Websynchronisierung
   Die Verfahren in diesem Thema sind der zweite Schritt zur Konfiguration der Websynchronisierung für die Mergereplikation. Sie führen diesen Schritt aus, nachdem Sie die Websynchronisierung für eine Veröffentlichung aktiviert haben. Eine Übersicht über den Konfigurationsprozess bietet [Websynchronisierung konfigurieren](configure-web-synchronization.md). Nachdem Sie die Verfahren in diesem Thema ausgeführt haben, fahren Sie mit dem dritten Schritt fort, in dem Sie die Websynchronisierung für ein Abonnement konfigurieren. Dieser dritte Schritt wird in den folgenden Themen beschrieben:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Vorgehensweise: Konfigurieren eines Abonnements für die Websynchronisierung \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [So wird es gemacht: Konfigurieren eines Abonnements für die Verwendung der Websynchronisierung \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Replikationsprogrammierung [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Vorgehensweise: Konfigurieren eines Abonnements für die Verwendung der Websynchronisierung (Replikationsprogrammierung mit Transact-SQL)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   Replikationsprogrammierung mit [!INCLUDE[tsql](../../includes/tsql-md.md)]: [So wird es gemacht: Konfigurieren eines Abonnements für die Verwendung der Websynchronisierung (Replikationsprogrammierung mit Transact-SQL)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [Vorgehensweise: Konfigurieren eines Abonnements für die Websynchronisierung (RMO-Programmierung)](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO:  [So wird es gemacht: Konfigurieren eines Abonnements für die Verwendung der Websynchronisierung (RMO-Programmierung)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Die Websynchronisierung verwendet einen Computer mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS (Internet Information Services), um Pullabonnements mit Mergeveröffentlichungen zu synchronisieren. Die IIS-Versionen 5.0, 6.0 und 7.0 werden unterstützt. Der Assistent zum Konfigurieren der Websynchronisierung wird auf IIS Version 7.0 nicht unterstützt.  
   
 > [!IMPORTANT]  
->  Stellen Sie sicher, dass in Ihrer Anwendung nur [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] oder höhere Versionen verwendet werden und dass keine früheren Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auf dem IIS-Server installiert sind. Frühere Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können zu Fehlern führen. Dazu zählen folgende Fehler: "Das Format einer Nachricht war während der Websynchronisierung ungültig. Stellen Sie sicher, dass die Replikationskomponenten auf dem Webserver ordnungsgemäß konfiguriert sind."  
+>  Stellen Sie sicher, dass in Ihrer Anwendung nur [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] oder höhere Versionen verwendet werden und dass keine früheren Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auf dem IIS-Server installiert sind. Frühere Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können zu Fehlern führen. Dabei handelt es sich z. B. um: "Das Format einer Nachricht war während der Websynchronisierung ungültig. Stellen Sie sicher, dass die Replikationskomponenten auf dem Webserver ordnungsgemäß konfiguriert sind."  
   
 > [!CAUTION]  
 >  Verwenden Sie WebSync und alternative Ordnerspeicherorte für Momentaufnahmen nicht gleichzeitig.  
@@ -83,7 +82,7 @@ ms.locfileid: "48176070"
   
 4.  Klicken Sie auf **OK**.  
   
- Wenn Sie kein Serverzertifikat von einer Zertifizierungsstelle erhalten können, können Sie ein Zertifikat zum Testen angeben. Installieren Sie ein Zertifikat mithilfe des Hilfsprogramms SelfSSL, um IIS 6.0 zum Testen zu konfigurieren. Dieses Hilfsprogramm ist im IIS 6.0 Resource Kit verfügbar. Sie können die Tools auch vom [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=30958)herunterladen. Für IIS&#160;5.0 wechseln Sie zum [Microsoft Hilfe- und Supportcenter](http://go.microsoft.com/fwlink/?LinkId=46229).  
+ Wenn Sie kein Serverzertifikat von einer Zertifizierungsstelle erhalten können, können Sie ein Zertifikat zum Testen angeben. Installieren Sie ein Zertifikat mithilfe des Hilfsprogramms SelfSSL, um IIS 6.0 zum Testen zu konfigurieren. Dieses Hilfsprogramm ist im IIS 6.0 Resource Kit verfügbar. Sie können die Tools auch vom [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=30958)herunterladen. Für IIS&#160;5.0 wechseln Sie zum [Microsoft Hilfe- und Supportcenter](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
 > [!NOTE]  
 >  Ein Zertifikat muss einer Website zugeordnet werden, damit die betreffende Website SSL verwenden kann. SelfSSL ordnet das Zertifikat automatisch der Standardwebsite zu. Wenn Sie bereits über ein Zertifikat verfügen oder später ein Zertifikat von einer Zertifizierungsstelle installieren, müssen Sie dieses Zertifikat explizit der Website zuordnen, die von der Websynchronisierung verwendet wird. Stellen Sie sicher, dass der Website, die zum Synchronisieren von Abonnements verwendet wird, nur ein Zertifikat zugeordnet ist. Wenn mehrere Zertifikate vorhanden sind, verwendet der Abonnent die erste verfügbare Website.  
@@ -170,7 +169,7 @@ ms.locfileid: "48176070"
   
 8.  Gehen Sie auf der Seite **Verzeichniszugriff** wie folgt vor:  
   
-    1.  Klicken Sie auf **Hinzufügen**, und fügen Sie dann im Dialogfeld **Benutzer oder Gruppen auswählen** die Konten hinzu, über die die Abonnenten die Verbindungen zu IIS herstellen werden. Hierbei handelt es sich um die Konten, die Sie auf die **Webserverinformationen** Seite des Assistenten für neue Abonnements oder als Wert für die [Sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) *@internet_login* Parameter.  
+    1.  Klicken Sie auf **Hinzufügen**, und fügen Sie dann im Dialogfeld **Benutzer oder Gruppen auswählen** die Konten hinzu, über die die Abonnenten die Verbindungen zu IIS herstellen werden. Es handelt sich dabei um die Konten, die Sie auf der Seite **Webserverinformationen** des Assistenten für neue Abonnements oder als Wert für den [-Parameter von](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)*@internet_login* eingeben.  
   
 9. Geben Sie auf der Seite **Zugriff auf Momentaufnahmefreigabe** die Momentaufnahmefreigabe ein. Die entsprechenden Berechtigungen für diese Freigabe werden so erteilt, dass die Abonnenten auf die Momentaufnahmedateien zugreifen können. Weitere Informationen zu den Berechtigungen für die Freigabe finden Sie unter [Sichern des Momentaufnahmeordners](security/secure-the-snapshot-folder.md).  
   
@@ -218,7 +217,7 @@ ms.locfileid: "48176070"
   
 #### <a name="to-configure-iis-authentication"></a>So konfigurieren Sie die IIS-Authentifizierung  
   
--   Wenn Abonnenten eine Verbindung mit IIS herstellen, muss IIS die Abonnenten authentifizieren, damit sie auf Ressourcen und Prozesse zugreifen können. IIS bietet drei Authentifizierungsarten: Anonym, Standard und Integriert. Die Authentifizierung kann sowohl auf die gesamte Website als auch nur auf das von Ihnen erstellte virtuelle Verzeichnis angewendet werden.  
+-   Wenn Abonnenten eine Verbindung mit IIS herstellen, muss IIS die Abonnenten authentifizieren, damit sie auf Ressourcen und Prozesse zugreifen können. IIS bietet drei Arten der Authentifizierung: Anonym, Standard und integriert. Die Authentifizierung kann sowohl auf die gesamte Website als auch nur auf das von Ihnen erstellte virtuelle Verzeichnis angewendet werden.  
   
      Sie sollten die Standardauthentifizierung mit SSL verwenden. SSL ist in jedem Fall und unabhängig vom verwendeten Authentifizierungstyp erforderlich. Weitere Informationen zum Konfigurieren der Authentifizierung finden Sie in der IIS-Dokumentation.  
   

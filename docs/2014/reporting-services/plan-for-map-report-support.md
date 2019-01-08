@@ -11,12 +11,12 @@ ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 243c2ba1d998acd15f92e6e995d9390c7a32c84f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc5bf036d3d00033077ad0054572c0375b6b6f55
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105880"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366599"
 ---
 # <a name="plan-for-map-report-support"></a>Planen der Unterstützung für Kartenberichte
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] unterstützt kartenberichte, die räumliche Datenquellen verwenden. Räumliche Daten können aus SQL Server-Datenbanken, aus ESRI-Shape-Dateien oder aus dem Kartenkatalog stammen, der mit Reporting Services oder Berichts-Generator installiert wird. Eine Karte kann auch einen Hintergrund aus Bing-Kartenkacheln anzeigen. Ein Berichtsautor kann es sich um einen Bericht erstellen, der angibt, räumliche Daten oder Bing-kartenkacheln dynamische und zur Laufzeit abgerufene oder als statische und in der Berichtsdefinition eingebettet.  
@@ -27,7 +27,7 @@ ms.locfileid: "48105880"
  Berichtsautoren können in jedem Bericht angeben, ob eine Secure Sockets Layer (SSL)-Verbindung verwendet werden soll, um Kacheln vom Kachelserver abzurufen. Klicken Sie hierzu im Bereich "Eigenschaften" für die Kachelebene müssen sie festlegen, die boolesche Eigenschaft UseSecureConnection auf `true`.  
   
 > [!NOTE]  
->  Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](http://go.microsoft.com/fwlink/?LinkId=151371) und der [Datenschutzerklärung](http://go.microsoft.com/fwlink/?LinkId=151372).  
+>  Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](https://go.microsoft.com/fwlink/?LinkId=151371) und der [Datenschutzerklärung](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
 ## <a name="report-design-recommendations"></a>Entwurfsempfehlungen für Berichte  
  Um gute Berichtsentwürfe für Kartenberichte zu erstellen, muss der Berichtsautor die Vor- und Nachteile statischer und dynamischer räumlicher Daten bewerten und ein Gleichgewicht finden, das für die Berichtsbenutzer von Vorteil ist. Eingebettete Kartenelemente können die Größe der Berichtsdefinition bedeutend erhöhen, aber reduzieren die Zeit, die erforderlich ist, um den Kartenbericht anzuzeigen. Dynamische kartenelemente verringern die Größe der Berichtsdefinition, aber erhöhen die Zeit, die zum Verarbeiten und Anzeigen der Karte erforderlich ist. Der Berichtsautor muss das richtige Gleichgewicht zwischen diesen entgegengesetzten Aspekten finden.  

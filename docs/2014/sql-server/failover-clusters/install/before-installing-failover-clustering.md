@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
@@ -15,12 +14,12 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87066f0d1460490312bbd2a7ca22035629b9f069
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116450"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355795"
 ---
 # <a name="before-installing-failover-clustering"></a>Vor dem Installieren des Failoverclusterings
   Bevor Sie einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster installieren, müssen Sie die Hardware und das Betriebssystem auswählen, unter dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt werden soll. Außerdem müssen Sie das Windows Server Failover Clustering (WSFC) konfigurieren und Überlegungen zu Netzwerk, Sicherheit und anderer Software überprüfen, die auf dem Failovercluster ausgeführt werden soll.  
@@ -34,27 +33,27 @@ ms.locfileid: "48116450"
 |Beschreibt Konzepte des Failoverclusterings mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und stellt Links zu relevanten Inhalten und Tasks bereit.|[AlwaysOn-Failoverclusterinstanzen (SQLServer)](../windows/always-on-failover-cluster-instances-sql-server.md)|  
 |Beschreibt Konzepte zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverrichtlinie und stellt Links zum Konfigurieren der Failoverrichtlinie in Anpassung an die Anforderungen Ihrer Organisation bereit.|[Failover Policy for Failover Cluster Instances](../windows/failover-policy-for-failover-cluster-instances.md)|  
 |Beschreibt, wie ein vorhandener [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster verwaltet wird.|[Verwaltung und Wartung von Failoverclusterinstanzen](../windows/failover-cluster-instance-administration-and-maintenance.md)|  
-|Erläutert, wie Sie [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] auf einem Windows Server-Failovercluster (WSFC) installieren.|[Verwenden von SQL Server Analysis Services in einem Cluster](http://go.microsoft.com/fwlink/p/?LinkId=396548)|  
+|Erläutert, wie Sie [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] auf einem Windows Server-Failovercluster (WSFC) installieren.|[Verwenden von SQL Server Analysis Services in einem Cluster](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
   
   
 ##  <a name="BestPractices"></a> Bewährte Methoden  
   
--   Lesen der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Versionshinweise](http://go.microsoft.com/fwlink/?LinkId=296445)  
+-   Lesen der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Versionshinweise](https://go.microsoft.com/fwlink/?LinkId=296445)  
   
 -   Installieren Sie erforderliche Software. Installieren Sie vor dem Ausführen des Setups zum Installieren von oder Aktualisieren auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]die folgenden erforderlichen Komponenten, um die Installationsdauer zu verkürzen. Sie können die erforderliche Software auf jedem Failoverclusterknoten installieren und die Knoten anschließend einmal neu starten, bevor Sie Setup ausführen.  
   
-    -   Windows PowerShell wird nicht mehr vom Setup für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert. Windows PowerShell 2.0 ist eine Voraussetzung für die Installation von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Komponenten und [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Wenn Windows PowerShell 2.0 nicht auf dem Computer vorhanden ist, können Sie die Komponente aktivieren, indem Sie die Anweisungen auf der Seite [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) befolgen.  
+    -   Windows PowerShell wird nicht mehr vom Setup für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert. Windows PowerShell 2.0 ist eine erforderliche Komponente zum Installieren von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Komponenten und [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Wenn Windows PowerShell 2.0 nicht auf dem Computer vorhanden ist, können Sie die Komponente aktivieren, indem Sie die Anweisungen auf der Seite [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) befolgen.  
   
-    -   .NET Framework 3.5 SP1 wird vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup nicht mehr installiert; diese Version kann jedoch für die Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter älteren Windows-Betriebssystemen erforderlich sein. Weitere Informationen finden Sie in den [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Versionshinweise](http://go.microsoft.com/fwlink/?LinkId=296445).  
+    -   .NET Framework 3.5 SP1 wird vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup nicht mehr installiert; diese Version kann jedoch für die Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter älteren Windows-Betriebssystemen erforderlich sein. Weitere Informationen finden Sie in den [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Versionshinweise](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update-Paket:** Damit während des Setups aufgrund der .NET Framework 4-Installation kein Neustart durchgeführt wird, ist für das [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Setup die Installation eines [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Updates auf dem Computer erforderlich.  Wird [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] unter Windows 7 SP1 oder [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 installiert, ist dieses Update bereits enthalten. Wenn Sie die Installation unter einem älteren Windows-Betriebssystem ausführen, laden Sie es von [Microsoft Update für .NET Framework 4.0 unter Windows Vista und Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=198093)herunter.  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Updatepaket:** Damit während des Setups aufgrund der .NET Framework 4-Installation kein Neustart durchgeführt wird, ist für das [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]-Setup die Installation eines [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Updates auf dem Computer erforderlich.  Wird [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] unter Windows 7 SP1 oder [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 installiert, ist dieses Update bereits enthalten. Wenn Sie die Installation unter einem älteren Windows-Betriebssystem ausführen, laden Sie es von [Microsoft Update für .NET Framework 4.0 unter Windows Vista und Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093)herunter.  
   
     -   .NET Framework 4: In einem Clusterbetriebssystem wird .NET Framework 4 von Setup installiert. Um die Installationsdauer zu reduzieren, können Sie .NET Framework 4 installieren, bevor Sie das Setup ausführen.  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Sie können diese Dateien installieren, indem Sie SqlSupport.msi ausführen, das sich auf dem [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Installationsmedium befindet.  
   
--   Stellen Sie sicher, dass auf dem WSFC-Cluster keine Antivirensoftware installiert ist. Weitere Informationen finden Sie im [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base-Artikel über [mögliche Probleme mit Clusterdiensten durch Antivirensoftware](http://go.microsoft.com/fwlink/?LinkId=116986).  
+-   Stellen Sie sicher, dass auf dem WSFC-Cluster keine Antivirensoftware installiert ist. Weitere Informationen finden Sie im [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base-Artikel über [mögliche Probleme mit Clusterdiensten durch Antivirensoftware](https://go.microsoft.com/fwlink/?LinkId=116986).  
   
 -   Beim Benennen einer Clustergruppe für die Failoverclusterinstallation dürfen Sie keine der folgenden Zeichen für den Namen der Clustergruppe verwenden:  
   
@@ -78,7 +77,7 @@ ms.locfileid: "48116450"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup legt automatisch die Abhängigkeiten zwischen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clustergruppe und den Datenträgern im Failovercluster fest. Legen Sie vor dem Ausführen von Setup keine Abhängigkeiten für Datenträger fest.  
   
-    -   Während der Installation des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusters wird ein Computerobjekt (Active Directory-Computerkonten) für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Netzwerkressourcennamen erstellt. In einem [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] -Cluster benötigt das Clusternamenkonto (Computerkonto des Clusters) Berechtigungen zum Erstellen von Computerobjekten. Weitere Informationen finden Sie unter [Konfigurieren von Konten in Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx).  
+    -   Während der Installation des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusters wird ein Computerobjekt (Active Directory-Computerkonten) für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Netzwerkressourcennamen erstellt. In einem [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] -Cluster benötigt das Clusternamenkonto (Computerkonto des Clusters) Berechtigungen zum Erstellen von Computerobjekten. Weitere Informationen finden Sie unter [Konfigurieren von Konten in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx).  
   
     -   Wenn Sie die SMB-Dateifreigabe als Speicheroption verwenden, muss das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setupkonto über die Berechtigung "SeSecurityPrivilege" auf dem Dateiserver verfügen. Diese Berechtigung weisen Sie zu, indem Sie die Konsole für lokale Sicherheitsrichtlinien auf dem Dateiserver verwenden, um das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setupkonto den Berechtigungen **Überwachungs- und Sicherheitsprotokolle verwalten** hinzuzufügen.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48116450"
   
 -   Wenn die Clusterlösung geografisch verstreute Clusterknoten enthält, müssen weitere Elemente überprüft werden, z. B. die Netzwerklatenzzeit und die Unterstützung für freigegebene Datenträger.  
   
-    -   Weitere Informationen zu [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] und [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]finden Sie unter [Prüfen der Hardware auf einen Failovercluster](http://go.microsoft.com/fwlink/?LinkId=196817) und unter [Supportrichtlinie für Failovercluster](http://go.microsoft.com/fwlink/?LinkId=196818).  
+    -   Weitere Informationen zu [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] und [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]finden Sie unter [Prüfen der Hardware auf einen Failovercluster](https://go.microsoft.com/fwlink/?LinkId=196817) und unter [Supportrichtlinie für Failovercluster](https://go.microsoft.com/fwlink/?LinkId=196818).  
   
 -   Überprüfen Sie, ob der Datenträger, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert wird, komprimiert oder verschlüsselt ist. Wenn Sie versuchen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf einem komprimierten Laufwerk oder verschlüsselten Laufwerk zu installieren, erzeugt das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup einen Fehler.  
   
@@ -120,11 +119,11 @@ ms.locfileid: "48116450"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstallation wird nur der lokale Datenträger zum Installieren der tempdb-Dateien unterstützt. Stellen Sie sicher, dass der für die tempdb-Daten und die Protokolldateien angegebene Pfad auf allen Clusterknoten gültig ist. Sind die tempdb-Verzeichnisse auf dem Failoverzielknoten während des Failovers nicht verfügbar, wird die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource nicht online geschaltet. Weitere Informationen finden Sie unter [Speichertypen für Datendateien](../../install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) und [Konfiguration der Datenbank-Engine – Datenverzeichnisse](../../install/database-engine-configuration-data-directories.md).  
   
--   Wenn Sie einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster auf Komponenten mit iSCSI-Technologie (Internet Small Computer System Interface) bereitstellen, ist es empfehlenswert, mit entsprechender Vorsicht vorzugehen. Weitere Informationen finden Sie unter [Unterstützung für SQL Server auf iSCSI-Technologiekomponenten](http://go.microsoft.com/fwlink/?LinkId=116960).  
+-   Wenn Sie einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster auf Komponenten mit iSCSI-Technologie (Internet Small Computer System Interface) bereitstellen, ist es empfehlenswert, mit entsprechender Vorsicht vorzugehen. Weitere Informationen finden Sie unter [Unterstützung für SQL Server auf iSCSI-Technologiekomponenten](https://go.microsoft.com/fwlink/?LinkId=116960).  
   
--   Weitere Informationen finden Sie unter [Microsoft SQL Server-Supportrichtlinie für Microsoft Clustering](http://go.microsoft.com/fwlink/?LinkId=116958).  
+-   Weitere Informationen finden Sie unter [Microsoft SQL Server-Supportrichtlinie für Microsoft Clustering](https://go.microsoft.com/fwlink/?LinkId=116958).  
   
--   Weitere Informationen zur ordnungsgemäßen Konfiguration von Quorumlaufwerken finden Sie unter [Quorum-Laufwerkskonfigurationsinformation](http://go.microsoft.com/fwlink/?LinkId=196816).  
+-   Weitere Informationen zur ordnungsgemäßen Konfiguration von Quorumlaufwerken finden Sie unter [Quorum-Laufwerkskonfigurationsinformation](https://go.microsoft.com/fwlink/?LinkId=196816).  
   
 -   Wenn Sie einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster installieren möchten und die Quellinstallationsdateien sowie der Cluster von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in verschiedenen Domänen enthalten sind, müssen Sie die Installationsdateien in die aktuelle Domäne kopieren, die für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster verfügbar ist.  
   
@@ -149,7 +148,7 @@ ms.locfileid: "48116450"
   
 -   Lesen Sie [Security Considerations for a SQL Server Installation](../../install/security-considerations-for-a-sql-server-installation.md).  
   
--   Informationen zum Aktivieren der Kerberos-Authentifizierung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]finden Sie in der [Knowledge Base unter](http://support.microsoft.com/kb/319723) Verwenden der Kerberos-Authentifizierung in SQL Server [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
+-   Informationen zum Aktivieren der Kerberos-Authentifizierung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]finden Sie in der [Knowledge Base unter](https://support.microsoft.com/kb/319723) Verwenden der Kerberos-Authentifizierung in SQL Server [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
   
   
@@ -191,12 +190,12 @@ ms.locfileid: "48116450"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Edition|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64-Bit) X64<sup>1</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja<sup>2</sup>|Ja<sup>2</sup>|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32-Bit)|Benutzerkontensteuerung|Benutzerkontensteuerung|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Bit) Developer (64|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja <sup>2</sup>|Ja <sup>2</sup>|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32-Bit)|Benutzerkontensteuerung|Benutzerkontensteuerung|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64-Bit)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32-Bit)|Benutzerkontensteuerung|Benutzerkontensteuerung|||  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64-Bit) X64<sup>1</sup>|Ja|Ja|Ja<sup>2</sup>|Ja<sup>2</sup>|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32-Bit)|Ja|Ja|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]-Bit) Developer (64|Ja|Ja|Ja <sup>2</sup>|Ja <sup>2</sup>|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32-Bit)|Ja|Ja|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64-Bit)|Ja|Ja|Ja|Ja|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32-Bit)|Ja|Ja|||  
   
  <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cluster werden im WOW-Modus nicht unterstützt. Dies schließt Upgrades von früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclustern ein, die ursprünglich unter WOW installiert wurden. Für diese Upgrades ist nur eine parallele Installation der neuen Version mit anschließender Migration möglich.  
   
@@ -228,7 +227,7 @@ ms.locfileid: "48116450"
      Wenn Sie mehrere IP-Adressen für ein Subnetz konfigurieren, kann es zu Fehlern bei der Clientverbindung während des Starts von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kommen.  
   
 #### <a name="related-content"></a>Verwandte Inhalte  
- Weitere Informationen über [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] -Failover für mehrere Standorte finden Sie auf der [Windows Server 2008 R2-Failoverclustering-Website](http://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) und unter [Entwurf für einen Clusterdienst oder eine Clusteranwendung in einem Failovercluster für mehrere Standorte](http://go.microsoft.com/fwlink/?LinkId=177873).  
+ Weitere Informationen über [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] -Failover für mehrere Standorte finden Sie auf der [Windows Server 2008 R2-Failoverclustering-Website](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) und unter [Entwurf für einen Clusterdienst oder eine Clusteranwendung in einem Failovercluster für mehrere Standorte](https://go.microsoft.com/fwlink/?LinkId=177873).  
   
 ##  <a name="WSFC"></a> Konfigurieren von Windows Server-Failoverclustern  
   
@@ -238,7 +237,7 @@ ms.locfileid: "48116450"
   
 -   WSFC muss mithilfe von IsAlive überprüfen können, ob die Failoverclusterinstanz ausgeführt wird. Hierzu muss über eine vertrauenswürdige Verbindung eine Verbindung mit dem Server hergestellt werden. Standardmäßig ist das Konto, unter dem der Clusterdienst ausgeführt wird, auf den Knoten im Cluster nicht als Administrator konfiguriert, und die Gruppe BUILTIN\Administratoren verfügt nicht über die Berechtigung zum Anmelden an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Diese Einstellungen werden nur dann geändert, wenn Sie die Berechtigungen für die Clusterknoten ändern.  
   
--   Konfigurieren Sie Domain Name Service (DNS) oder Windows Internet Name Service (WINS). Ein DNS-Server oder WINS-Server muss in der Umgebung ausgeführt werden, in der der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster installiert wird. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup erfordert eine DDNS-Registrierung (Dynamic Domain Name Service) des virtuellen Verweises der IP-Schnittstelle von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Die DNS-Serverkonfiguration sollte Clusterknoten die dynamische Registrierung einer Online-IP-Adresszuordnung mit dem Netzwerknamen ermöglichen. Wenn die dynamische Registrierung nicht abgeschlossen werden kann, kann das Setup nicht erfolgreich ausgeführt werden, und es wird ein Rollback der Installation ausgeführt. Weitere Informationen finden Sie [in diesem Knowledge Base-Artikel](http://support.microsoft.com/kb/947048)  
+-   Konfigurieren Sie Domain Name Service (DNS) oder Windows Internet Name Service (WINS). Ein DNS-Server oder WINS-Server muss in der Umgebung ausgeführt werden, in der der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster installiert wird. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup erfordert eine DDNS-Registrierung (Dynamic Domain Name Service) des virtuellen Verweises der IP-Schnittstelle von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Die DNS-Serverkonfiguration sollte Clusterknoten die dynamische Registrierung einer Online-IP-Adresszuordnung mit dem Netzwerknamen ermöglichen. Wenn die dynamische Registrierung nicht abgeschlossen werden kann, kann das Setup nicht erfolgreich ausgeführt werden, und es wird ein Rollback der Installation ausgeführt. Weitere Informationen finden Sie [in diesem Knowledge Base-Artikel](https://support.microsoft.com/kb/947048)  
   
   
   

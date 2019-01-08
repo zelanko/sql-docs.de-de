@@ -18,12 +18,12 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b5124a091b59ec1669f5d77cbe989f780fee46c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7819e14ccfea387a83e88f7aff8c81541968e89a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738118"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589124"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  Das Objekttoken eines OLE-Objekts, das zuvor erstellt wurde ist **Sp_OACreate** oder NULL ist. Wenn *Objecttoken* wird angegeben, die Fehlerinformationen für dieses Objekt wird zurückgegeben. Wird NULL angegeben, werden die Fehlerinformationen für den gesamten Batch zurückgegeben.  
   
- *Quelle* **Ausgabe**  
+ _Quelle_ **Ausgabe**  
  Die Quelle der Fehlerinformation. Wenn angegeben, muss es sich um eine lokale **Char**, **Nchar**, **Varchar**, oder **Nvarchar** Variable. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
   
- *Beschreibung* **Ausgabe**  
+ _Beschreibung_ **Ausgabe**  
  Ist die Beschreibung des Fehlers. Wenn angegeben, muss es sich um eine lokale **Char**, **Nchar**, **Varchar**, oder **Nvarchar** Variable. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
   
- *HelpFile* **Ausgabe**  
+ _HelpFile_ **Ausgabe**  
  Die Hilfedatei des OLE-Objekts. Wenn angegeben, muss es sich um eine lokale **Char**, **Nchar**, **Varchar**, oder **Nvarchar** Variable. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
   
- *HilfeID* **Ausgabe**  
+ _HilfeID_ **Ausgabe**  
  Die Kontext-ID für die Hilfedatei. Wenn angegeben, muss es sich um eine lokale **Int** Variable.  
   
 > [!NOTE]  
@@ -91,7 +91,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**Ausführen des Servers fehlgeschlagen (0 x 80080005)**|Das angegebene OLE-Objekt ist als lokaler OLE-Server (EXE-Datei) registriert, aber die EXE-Datei konnte nicht gefunden oder nicht ausgeführt werden.|  
 |**Das angegebene Modul wurde nicht gefunden (0x8007007e)**|Das angegebene OLE-Objekt ist als In-Process-OLE-Server (DLL-Datei) registriert, aber die DLL-Datei konnte nicht gefunden oder nicht geladen werden.|  
 |**Typenkonflikt (0 x 80020005)**|Der Datentyp einer lokalen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Variablen, die zum Speichern eines zurückgegebenen Eigenschaftswertes oder eines Rückgabewertes einer Methode verwendet wird, entspricht nicht dem [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Datentyp des Rückgabewertes der Eigenschaft oder Methode. Oder der Rückgabewert einer Eigenschaft oder einer Methode wurde angefordert, gibt jedoch keinen Wert zurück.|  
-|**Der Datentyp oder Wert des 'context'-Parameters von sp_OACreate ist ungültig. (0x8004275B)**|Der Wert des Kontextparameters sollte 1, 4 oder 5 sein.|  
+|**Der Datentyp oder Wert des 'context'-Parameters von sp_OACreate ist ungültig. (0x8004275B)**|Der Wert des Kontextparameters sollte sein: 1, 4 oder 5.|  
   
  Weitere Informationen zum Verarbeiten von HRESULT-Rückgabecodes finden Sie unter [OLE Automation Rückgabecodes und Fehlerinformationen](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   

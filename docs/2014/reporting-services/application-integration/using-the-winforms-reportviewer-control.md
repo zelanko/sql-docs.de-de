@@ -14,12 +14,12 @@ ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 01149b1f75c78ba5ca6da467abf8955adf41f2f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54a38a78f990ff4c2cc48c7277146dd0c2a07ee2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170400"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354822"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Verwenden des ReportViewer-Steuerelements in WinForms
   Zur Anzeige von Berichten, die auf einem Berichtsserver bereitgestellt werden oder die sich auf einem lokalen Dateisystem befinden, können Sie das ReportViewer-Steuerelement für WinForms verwenden, um die Berichte in eine Windows-Anwendung zu rendern.  
@@ -42,7 +42,7 @@ ms.locfileid: "48170400"
   
  Nachdem das Steuerelement zum Formular hinzugefügt wurde, wird das SmartTag **ReportViewer-Aufgaben** angezeigt, und Sie werden aufgefordert, einen Bericht auszuwählen.  
   
- Wenn der Bericht, den Sie anzeigen möchten, auf einem Berichtsserver bereitgestellt wurde, wählen Sie die Option **\<Server Report>** aus der Dropdownliste **Bericht wählen**. Nachdem die Option **\<Server Report>** aktiviert wurde, werden zwei weitere Eigenschaften angezeigt: **Berichtsserver-URL** und **Berichtspfad**. Die **Berichtsserver-URL** entspricht der Adresse des Berichtsservers, und der **Berichtspfad** entspricht dem vollen Pfad zu dem Bericht, der gerendert werden soll.  
+ Wenn der Bericht, den Sie anzeigen möchten, auf einem Berichtsserver bereitgestellt wurde, wählen Sie die Option **\<Server Report>** aus der Dropdownliste **Bericht wählen**. Nach der  **\<Serverbericht >** Option ausgewählt ist, zwei weitere Eigenschaften angezeigt: **URL des Berichtsservers** und **Berichtspfad**. Die **Berichtsserver-URL** entspricht der Adresse des Berichtsservers, und der **Berichtspfad** entspricht dem vollen Pfad zu dem Bericht, der gerendert werden soll.  
   
  ![Auswählen des Serverberichts](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Select server report")  
   
@@ -154,7 +154,7 @@ End Class
   
 3.  Wechseln Sie zu der Position, an der Sie das Projekt für [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispielberichte installiert haben.  
   
-     Zum Herunterladen der Beispielberichte navigieren Sie zu [AdventureWorks 2012-Berichtsbeispiele](http://go.microsoft.com/fwlink/?LinkId=404153).  
+     Zum Herunterladen der Beispielberichte navigieren Sie zu [AdventureWorks 2012-Berichtsbeispiele](https://go.microsoft.com/fwlink/?LinkId=404153).  
   
 4.  Wählen Sie die Datei „Sales Order Detail.rdl“ aus, und klicken Sie auf die Schaltfläche **Hinzufügen**.  
   

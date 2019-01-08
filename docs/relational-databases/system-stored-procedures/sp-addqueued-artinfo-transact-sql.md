@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addqueued_artinfo
@@ -17,12 +16,12 @@ ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2e596ecc5e6470bbcc1a62684c1fd1a6533711d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c326a8e3a5fa2bd95f536d434ff9782952ba70d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770158"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590895"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,28 +50,28 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@artid=** ] **"***Artid***"**  
+ [  **@artid=** ] **"**_Artid_**"**  
  Entspricht dem Namen der Artikel-ID. *Artid* ist **Int**, hat keinen Standardwert  
   
- [  **@article=**] **"***Artikel***"**  
+ [  **@article=**] **"**_Artikel_**"**  
  Der Name des Artikels, für den ein Skript erstellt werden soll. *Artikel* ist **Sysname**, hat keinen Standardwert  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **"**_Verleger_**"**  
  Entspricht dem Namen des Verlegerservers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **"**_Publisher_db_**"**  
  Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung, für die ein Skript erstellt werden soll. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@dest_table=** ] *"Dest_table ***"**  
+ [  **@dest_table=** ] _' Dest_table_**"**  
  Entspricht dem Namen der Zieltabelle. *Dest_table* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@owner =** ] **"***Besitzer***"**  
+ [ **@owner =** ] **"**_Besitzer_**"**  
  Entspricht dem Eigentümer des Abonnements. *Besitzer* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@cft_table=** ] **"***Cft_table***"**  
+ [  **@cft_table=** ] **"**_Cft_table_**"**  
  Entspricht dem Namen der in die Warteschlange aufgenommenen Konflikttabelle für diesen Artikel, die derzeit aktualisiert wird. *Cft_table*ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

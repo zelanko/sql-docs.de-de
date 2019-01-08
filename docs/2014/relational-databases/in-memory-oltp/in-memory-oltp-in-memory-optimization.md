@@ -13,12 +13,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0893a32d31c4f64d99503fce7e64ccdd325cea7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3be59fd99f072b7cb3a9156b92d5ee794208f1f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138510"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359532"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (Arbeitsspeicheroptimierung)
   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]wurde in [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] neu eingeführt und kann die Leistung der OLTP-Datenbank erheblich verbessern. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] ist eine speicheroptimierte Datenbank-Engine, die in die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Engine integriert und für OLTP optimiert wurde.  
@@ -39,7 +39,7 @@ ms.locfileid: "48138510"
 |Niedrige Latenz|Erfordert Geschäftstransaktionen mit niedriger Latenz, die typische Datenbanklösungen nicht erzielen können|Konfliktbeseitigung<br /><br /> Minimierung der Codeausführungszeit<br /><br /> Codeausführungszeit mit niedriger Latenz<br /><br /> Effizienter Datenabruf|  
 |Sitzungsstatusverwaltung|Häufige Einfügungen, Aktualisierungen und Punktsuchen<br /><br /> Hohe Skalierungslast durch zahlreiche statuslose Webserver|Konfliktbeseitigung<br /><br /> Effizienter Datenabruf<br /><br /> Optionale E/A-Reduzierung oder Eliminierung durch Verwendung von nicht dauerhaften Tabellen|  
   
- Weitere Informationen zu Szenarien, in denen [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] für deutlichen Leistungszuwachs sorgt, finden Sie unter [In-Memory OLTP – Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Weitere Informationen zu Szenarien, in denen [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] deutlichen Leistungszuwachs sorgt, finden Sie unter [In-Memory OLTP – allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  Durch [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] wird die Leistung vor allem bei OLTP-Transaktionen mit kurzer Ausführungsdauer verbessert.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "48138510"
   
  In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] gibt es Einschränkungen bei der [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Oberfläche, die für [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]unterstützt wird.  
   
- [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] erzielt signifikante Leistungs- und skalierbarkeitsgewinne, indem:  
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] erzielt signifikante Leistungs- und Skalierbarkeitsgewinne, indem Folgendes verwendet wird:  
   
 -   Algorithmen, die für den Zugriff auf arbeitsspeicherresidente Daten optimiert sind.  
   
 -   Optimistische Nebenläufigkeitssteuerung, die logische Sperren entfernt.  
   
--   Sperren von freien Objekten, die alle physischen Sperren und Latches eliminieren. Threads, die Transaktionsaufgaben ausführen, verwenden keine Sperren oder Latches für die Parallelitätssteuerung.  
+-   Sperren von freien Objekten, die alle physischen Sperren und Latches eliminieren. Threads, die Transaktionsaufgaben ausführen verwenden nicht sperren oder Latches für die parallelitätssteuerung.  
   
 -   Systemintern kompilierte gespeicherte Prozeduren, die beim Zugriff auf speicheroptimierte Tabellen deutlich bessere Leistung als interpretierte gespeicherte Prozeduren zeigen.  
   
@@ -79,18 +79,18 @@ ms.locfileid: "48138510"
 |[Sichern und Wiederherstellen speicheroptimierter Tabellen](restore-and-recovery-of-memory-optimized-tables.md)|Erläutert die Sicherung und Wiederherstellung von speicheroptimierten Tabellen.|  
 |[Transact-SQL-Unterstützung für In-Memory-OLTP](transact-sql-support-for-in-memory-oltp.md)|Erläutert die [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Unterstützung für [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|  
 |[Unterstützung für Hochverfügbarkeit für In-Memory-OLTP-Datenbanken](high-availability-support-for-in-memory-oltp-databases.md)|Erläutert Verfügbarkeitsgruppen und Failoverclustering in [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|  
-|[SQL Server-Unterstützung für In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)|Listet neue und aktualisierte Syntax und Funktionen auf, die speicheroptimierte Tabellen unterstützen.|  
+|[SQL Server-Unterstützung für In-Memory-OLTP](sql-server-support-for-in-memory-oltp.md)|Listet neue und aktualisierte Syntax und Funktionen auf, die speicheroptimierte Tabellen unterstützen.|  
 |[Migrieren zu In-Memory-OLTP](migrating-to-in-memory-oltp.md)|Erläutert, wie datenträgerbasierte Tabellen zu speicheroptimierten Tabellen migriert werden.|  
   
  Weitere Informationen zu [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] finden Sie unter:  
   
--   [Microsoft® SQL Server® 2014 Produkthandbuch](http://www.microsoft.com/download/confirmation.aspx?id=39269)  
+-   [Microsoft?? SqlServer? 2014 Produkthandbuch](https://www.microsoft.com/download/confirmation.aspx?id=39269)  
   
--   [In-Memory-OLTP-Blog](http://go.microsoft.com/fwlink/?LinkId=311696)  
+-   [In-Memory-OLTP-Blog](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
--   [In-Memory-OLTP – Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](http://msdn.microsoft.com/library/dn673538.aspx)  
+-   [In-Memory OLTP - Common Workload Patterns and Migration Considerations (In-Memory-OLTP: Allgemeine Workloadmuster und Überlegungen zur Migration)](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [Übersicht über die Interna von SQL Server In-Memory-OLTP](http://msdn.microsoft.com/library/dn720242.aspx)  
+-   [Übersicht über die Interna von SQL Server In-Memory-OLTP](https://msdn.microsoft.com/library/dn720242.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbankfunktionen](../database-features.md)  

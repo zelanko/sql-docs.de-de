@@ -14,12 +14,12 @@ ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f62ec88ad7dc3ad7837a73b57abd215be29c3e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089420"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375642"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber definiert treiberspezifische Verbindungsattribute. Einige der Attribute stehen `SQLGetConnectAttr`, und die Funktion wird verwendet, um ihre aktuellen Einstellungen zu melden. Die Werte gemeldete für diese Attribute erst garantiert sind, nachdem eine Verbindung hergestellt wurde, oder das Attribut wurde festgelegt mit [SQLSetConnectAttr](sqlsetconnectattr.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "48089420"
 > [!NOTE]  
 >  Das Standard-ODBC-Verbindungsattribut SQL_ATTR_CONNECTION_DEAD gibt den letzten Status der Verbindung zurück. Dabei handelt es sich nicht zwingend um den aktuellen Verbindungsstatus.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|Die Verbindung zum Server wurde unterbrochen.|  
 |SQL_CD_FALSE|Die Verbindung besteht und ist für die Anweisungsverarbeitung verfügbar.|  
@@ -48,7 +48,7 @@ ms.locfileid: "48089420"
   
  Weitere Informationen finden Sie unter [den Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |SQL_ERROR|Die Verbindung konnte nicht hergestellt werden.|  
 |SQL_SUCCESS|Die Verbindung wurde erfolgreich hergestellt. Die Clientverbindungs-ID befindet sich im Ausgabepuffer.|  
@@ -56,7 +56,7 @@ ms.locfileid: "48089420"
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  Das SQL_COPT_SS_PERF_DATA-Attribut gibt einen Zeiger auf eine SQLPERF-Struktur zurück, die die aktuellen statistischen Daten zur Treiberleistung enthält. `SQLGetConnectAttr` Gibt NULL zurück, wenn die leistungsprotokollierung nicht aktiviert ist. Die Statistik in der SQLPERF-Struktur wird nicht dynamisch vom Treiber aktualisiert. Rufen Sie `SQLGetConnectAttr` jedes Mal die Leistungsstatistik aktualisiert werden müssen.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |NULL|Die Leistungsprotokollierung wird nicht aktiviert.|  
 |Ein beliebiger anderer Wert.|Ein Zeiger auf eine SQLPERF-Struktur.|  
@@ -67,7 +67,7 @@ ms.locfileid: "48089420"
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  Das SQL_COPT_SS_USER_DATA-Attribut ruft den Benutzerdatenzeiger ab. Benutzerdaten werden im clienteigenen Arbeitsspeicher gespeichert und pro Verbindung aufgezeichnet. Wenn der Benutzerdatenzeiger nicht festgelegt wurde, wird SQL_UD_NOTSET, ein NULL-Zeiger, zurückgegeben.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Es ist kein Benutzerdatenzeiger festgelegt.|  
 |Ein beliebiger anderer Wert.|Ein Zeiger auf die Benutzerdaten.|  
@@ -82,7 +82,7 @@ ms.locfileid: "48089420"
  Weitere Informationen zu SPNs finden Sie unter [Service Principal Names &#40;SPNs&#41; in Clientverbindungen &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLGetConnectAttr-Funktion](http://go.microsoft.com/fwlink/?LinkId=59347)   
+ [SQLGetConnectAttr-Funktion](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   

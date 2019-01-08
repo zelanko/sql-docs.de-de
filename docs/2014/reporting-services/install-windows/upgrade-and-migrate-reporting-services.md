@@ -16,19 +16,19 @@ ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 16808a0bfa3956c19a0e472e778d37308b993462
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28f25620cede6c626280a8a095c66457344679d2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092306"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363012"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
-  Dieses Thema enthält eine Übersicht der Upgrade- und Migrationsoptionen für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Es gibt zwei allgemeine Vorgehensweisen beim Upgrade einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung:  
+  Dieses Thema enthält eine Übersicht der Upgrade- und Migrationsoptionen Optionen für die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Es gibt zwei allgemeine Vorgehensweisen beim Upgrade einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung:  
   
--   **Upgrade:** Sie aktualisieren die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten auf den Servern und Instanzen, auf denen sie derzeit installiert sind. Dies wird im Allgemeinen als "direktes" Upgrade bezeichnet. Direkte Upgrades zwischen verschiedenen Modi des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servers werden nicht unterstützt. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf einen Berichtsserver im SharePoint-Modus aktualisieren. Berichtselemente können allerdings zwischen verschiedenen Modi migriert werden. Weitere Informationen finden Sie im Abschnitt "Einheitlichen Modus zum SharePoint-Migration" weiter unten in diesem Dokument und im verwandten Thema [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+-   **Upgrade:** Sie aktualisieren die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponenten auf den Servern und Instanzen, auf denen sie derzeit installiert sind. Dies wird im Allgemeinen als „direktes“ Upgrade bezeichnet. Direkte Upgrades zwischen verschiedenen Modi des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servers werden nicht unterstützt. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf einen Berichtsserver im SharePoint-Modus aktualisieren. Berichtselemente können allerdings zwischen verschiedenen Modi migriert werden. Weitere Informationen finden Sie im Abschnitt "Einheitlichen Modus zum SharePoint-Migration" weiter unten in diesem Dokument und im verwandten Thema [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
--   **Migrieren:** Sie installieren und konfigurieren eine neue SharePoint-Umgebung, kopieren Ihre Berichtselemente und Ressourcen in die neue Umgebung und konfigurieren die neue Umgebung für die Verwendung der vorhandenen Inhalte. Eine einfachere Form der Migration besteht darin, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenbanken, die Konfigurationsdateien und (falls Sie den SharePoint-Modus verwenden) die SharePoint-Inhaltsdatenbanken zu kopieren.  
+-   **Migrieren von**: Sie installieren und konfigurieren eine neue SharePoint-Umgebung, kopieren Ihre Berichtselemente und Ressourcen in die neue Umgebung und konfigurieren die neue Umgebung für die Verwendung der vorhandenen Inhalte. Eine einfachere Form der Migration besteht darin, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenbanken, die Konfigurationsdateien und (falls Sie den SharePoint-Modus verwenden) die SharePoint-Inhaltsdatenbanken zu kopieren.  
   
 ||  
 |-|  
@@ -57,12 +57,12 @@ ms.locfileid: "48092306"
 ##  <a name="bkmk_known_issues"></a> Bekannte Upgradeprobleme und Best Practices  
  Eine ausführliche Liste der unterstützten Editionen und Versionen, die aktualisiert werden können, finden Sie unter [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
-> [!TIP]  
+> [!TIP]
 >  Die neuesten Informationen zu Problemen mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]finden Sie unter:  
->   
->  -   [Versionsanmerkungen zu SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
-> -   [SQL Server 2014 Reporting Services – Tipps, Tricks und Problembehandlung](http://go.microsoft.com/fwlink/?LinkID=391254).  
-> -   Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor. Weitere Informationen finden Sie unter [Reporting Services Probleme beim Upgrade &#40;Upgrade Advisor&#41; ](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md) und [Vorgehensweise: Installieren Sie Upgrade Advisor](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md).  
+> 
+>  -   [Versionsanmerkungen zu SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
+> -   [SQL Server 2014 Reporting Services – Tipps, Tricks und Problembehandlung](https://go.microsoft.com/fwlink/?LinkID=391254).  
+> -   Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor. Weitere Informationen finden Sie unter [Reporting Services Probleme beim Upgrade &#40;Upgrade Advisor&#41; ](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md) und [Vorgehensweise: Installieren des Upgrade Advisors](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md).  
   
  ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48092306"
   
 -   Lesen Sie bewährte Methoden und Anleitungen hinsichtlich der Sicherheit für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Security Considerations for a SQL Server Installation](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
--   Führen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor auf dem Berichtsservercomputer zum Ermitteln von Problemen, die erfolgreich ein Upgrade verhindern könnten. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
+-   Führen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor auf dem Berichtsservercomputer aus, um Probleme festzustellen, die ein erfolgreiches Upgrade verhindern könnten. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
 -   Sichern Sie den symmetrischen Schlüssel. Weitere Informationen finden Sie unter [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48092306"
   
 -   Sichern Sie alle Anpassungen von vorhandenen virtuellen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Verzeichnissen in IIS.  
   
--   Entfernen Sie ungültige SSL-Zertifikate.  Dies schließt Zertifikate ein, die abgelaufen sind und vor dem Upgrade von Reporting Services nicht aktualisiert werden sollen.  Ungültige Zertifikate haben Fehler beim Upgrade zur Folge, und die folgende Fehlermeldung wird in die Reporting Services-Protokolldatei geschrieben: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Ein SSL-Zertifikat (Secure Sockets Layer) ist für die Website nicht konfiguriert**.  
+-   Entfernen Sie ungültige SSL-Zertifikate.  Dies schließt Zertifikate ein, die abgelaufen sind und vor dem Upgrade von Reporting Services nicht aktualisiert werden sollen.  Ungültige Zertifikate bewirken, dass beim Upgrade zur Folge, und eine Fehlermeldung ähnlich der folgenden wird in die Reporting Services-Protokolldatei geschrieben werden: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Ein Secure Sockets Layer (SSL)-Zertifikat ist auf der Website nicht konfiguriert.** .  
   
  Bevor Sie eine Produktionsumgebung aktualisieren, führen Sie immer ein Testupgrade in einer Vorproduktionsumgebung aus, die die gleiche Konfiguration wie Ihre Produktionsumgebung aufweist.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48092306"
   
 -   Upgrade Advisor hat ein oder mehrere Probleme erkannt, die das Upgrade blockieren. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
--   Sie möchten den Typ des in der Bereitstellung verwendeten Berichtsservers ändern. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf den SharePoint-Modus aktualisieren bzw. konvertieren. Weitere Informationen finden Sie unter [Native to SharePoint Migration (SSRS) (Migration vom einheitlichen Modus zum SharePoint-Modus (SSRS))](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
+-   Sie möchten den Typ des in der Bereitstellung verwendeten Berichtsservers ändern. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf den SharePoint-Modus aktualisieren bzw. konvertieren. Weitere Informationen finden Sie unter [Migration vom einheitlichen Modus zum SharePoint-Modus (SSRS)](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
   
 -   Sie möchten die Zeit verkürzen, die der Berichtsserver während des Upgradevorgangs offline geschaltet wird. Die derzeitige Installation bleibt online, während Sie Inhaltsdaten auf eine neue Berichtsserverinstanz kopieren und die Installation testen, ohne dass der Status der vorhandenen Berichtsserverinstallation geändert wird.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "48092306"
   
  Der Upgradevorgang beginnt, wenn Sie eine vorhandene Berichtsserverinstanz für das Upgrade auswählen.  
   
-1.  Falls sich die Berichtsserver-Datenbank auf einem Remotecomputer befindet und Sie nicht über Updateberechtigungen für diese Datenbank verfügen, fordert Setup Sie zur Angabe von Anmeldeinformationen für das Upgrade auf eine Remoteberichtsserver-Datenbank auf. Achten Sie darauf, dass Sie Anmeldeinformationen bereitstellen, über `sysadmin` oder Berechtigungen für Datenbankupdates.  
+1.  Falls sich die Berichtsserver-Datenbank auf einem Remotecomputer befindet und Sie nicht über Updateberechtigungen für diese Datenbank verfügen, fordert Setup Sie zur Angabe von Anmeldeinformationen für das Upgrade auf eine Remoteberichtsserver-Datenbank auf. Achten Sie darauf, Anmeldeinformationen bereitzustellen, die über `sysadmin`-Berechtigungen oder Berechtigungen für Datenbankupdates verfügen.  
   
 2.  Setup führt eine Prüfung auf Bedingungen und Einstellungen durch, die das Upgrade verhindern, und liest Konfigurationseinstellungen ein. Beispiele hierfür sind benutzerdefinierte Erweiterungen, die auf dem Berichtsserver bereitgestellt werden. Wenn das Upgrade blockiert ist, müssen Sie entweder Ihre Installation so ändern, dass die Blockierung des Upgrades aufgehoben wird, oder eine Migration auf eine neue [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz durchführen. Weitere Informationen finden Sie in der Dokumentation von Upgrade Advisor.  
   
@@ -155,22 +155,22 @@ ms.locfileid: "48092306"
   
     3.  Andere Clienttools, wie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und die Onlinedokumentation, werden nicht aktualisiert. Um neue Versionen der Tools zu erhalten, können Sie sie beim Ausführen des Setups hinzufügen. Die früheren Versionen bleiben neben den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Versionen bestehen. Wenn Sie Beispiele installiert haben, bleibt die frühere Version erhalten. Setup unterstützt nicht das Upgrade für die SQL Server-Beispiele.  
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ist in einem separaten Download erhältlich. Weitere Informationen finden Sie unter [Microsoft SQL Server 2014 Data Tools – Business Intelligence für Microsoft Visual Studio 2012](http://go.microsoft.com/fwlink/?LinkID=325512).  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ist in einem separaten Download erhältlich. Weitere Informationen finden Sie unter [Microsoft SQL Server 2014 Data Tools – Business Intelligence für Microsoft Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=325512).  
   
 6.  Das Setup verwendet den Diensteintrag im Dienstkontroll-Manager für den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Berichtsserver-Dienst erneut. Dieser Diensteintrag enthält das Konto des Berichtserver-Windows-Diensts.  
   
 7.  Setup reserviert neue URLs auf der Grundlage von vorhandenen virtuellen Verzeichniseinstellungen in IIS. Setup entfernt möglicherweise keine virtuellen Verzeichnisse in IIS, vergessen Sie also nicht, diese nach Abschluss des Upgrades manuell zu entfernen.  
   
-8.  Das Setup aktualisiert die Berichtsserverdatenbanken auf das neue Schema und ändert `RSExecRole` durch Hinzufügen der Berechtigungen des Datenbankbesitzers zu der Rolle. Dieser Schritt erfolgt nur, wenn Sie ein Upgrade [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vor SP1.  
+8.  Das Setup aktualisiert die Berichtsserverdatenbanken auf das neue Schema und ändert `RSExecRole` durch Hinzufügen der Berechtigungen des Datenbankbesitzers zu der Rolle. Dieser Schritt wird nur beim Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vor der Installation von SP1 ausgeführt.  
   
 9. Beim Setup werden die Einstellungen in den Konfigurationsdateien zusammengeführt. Auf der Grundlage der Konfigurationsdateien aus der aktuellen Installation werden neue Einträge hinzugefügt. Veraltete Einträge werden nicht entfernt; sie werden jedoch nach Abschluss des Upgrades nicht mehr vom Berichtsserver gelesen. Beim Upgrade werden alte Protokolldateien, die veraltete Datei RSWebApplication.config oder Einstellungen für virtuelle Verzeichnisse in IIS nicht gelöscht. Beim Upgrade werden SQL Server 2005-Berichts-Designer, Management Studio und andere Clienttools nicht entfernt. Wenn Sie diese Dateien und Tools nicht mehr benötigen, müssen Sie sie nach Abschluss des Upgrades entfernen.  
   
- **Migration:** Migration von einer früheren Version einer Installation im einheitlichen Modus zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist die gleichen Schritte für alle unterstützten Versionen, die weiter oben in diesem Thema aufgeführt sind. Weitere Informationen finden Sie unter [Migrieren einer Installation von Reporting Services &#40;Einheitlicher Modus&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
+ **Migration:** Wenn Sie eine frühere Version einer Installation im einheitlichen Modus zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migrieren, sind die Schritte für alle unterstützten Versionen identisch, die oben in diesem Thema aufgeführt sind. Weitere Informationen finden Sie unter [Migrieren einer Installation von Reporting Services &#40;Einheitlicher Modus&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
  ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
 ##  <a name="bkmk_native_scaleout"></a> Aktualisieren einer Bereitstellung für horizontales Skalieren mit Reporting Services im einheitlichen Modus  
- Im Folgenden erhalten Sie eine Übersicht darüber, wie Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung im einheitlichen Modus aktualisieren, die horizontal auf mehr als einen Berichtsserver skaliert ist. Bei diesem Vorgang muss die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung außer Betrieb gesetzt werden:  
+ Im Folgenden erhalten Sie eine Übersicht darüber, wie Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bereitstellung im einheitlichen Modus aktualisieren, die horizontal auf mehr als einen Berichtsserver skaliert ist. Bei diesem Vorgang muss die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung außer Betrieb gesetzt werden:  
   
 1.  Sichern Sie die Berichtsserver-Datenbanken und die Verschlüsselungsschlüssel. Weitere Informationen finden Sie unter [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) und [Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
@@ -199,7 +199,7 @@ ms.locfileid: "48092306"
 > [!IMPORTANT]  
 >  Bei einigen der folgenden Szenarien muss die SharePoint-Umgebung heruntergefahren werden, damit die verschiedenen Technologien aktualisiert werden können. Wenn in Ihrer Umgebung keine Ausfallzeiten tolerierbar sind, müssen Sie anstelle eines direkten Upgrades eine Migration ausführen.  
   
-### <a name="includesssql11includessssql11-mdmd-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] An [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+### <a name="includesssql11includessssql11-mdmd-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  **Startumgebung:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]., SharePoint 2010.  
   
  **Endumgebung:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010 oder SharePoint 2013.  
@@ -208,11 +208,11 @@ ms.locfileid: "48092306"
   
      Wenn in der Endumgebung außerdem SharePoint 2013 ausgeführt werden soll, müssen Sie beim Aktualisieren von SharePoint 2010 auf SharePoint 2013 ein Upgrade mit Anfügen der Datenbanken ausführen.  
   
--   **2013 SharePoint 2013:** SharePoint 2013 unterstützt keine direkten Upgrades aus SharePoint 2010. Allerdings wird das **Upgrade mit Anfügen der Datenbanken unterstützt**  . Das Verhalten unterscheidet sich vom Upgrade auf SharePoint 2010, bei dem ein Kunde zwischen zwei grundlegenden Upgradeansätzen wählen kann: dem direkten Upgrade und dem Upgrade mit Anfügen der Datenbanken.  
+-   **SharePoint 2013:** SharePoint 2013 unterstützt keine direkten Upgrades aus SharePoint 2010. Allerdings wird ein **Upgrade mit Anfügen der Datenbanken unterstützt**  . Das Verhalten unterscheidet sich vom Upgrade auf SharePoint 2010, bei dem ein Kunde zwischen zwei grundlegenden Upgradeansätzen wählen kann: dem direkten Upgrade und dem Upgrade mit Anfügen der Datenbanken.  
   
      Wenn Sie über eine in SharePoint 2010 integrierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation verfügen, kann der SharePoint-Server nicht direkt aktualisiert werden. Sie haben jedoch die Möglichkeit, Inhaltsdatenbanken und Dienstanwendungsdatenbanken von der SharePoint 2010-Farm zu einer SharePoint 2013-Farm zu migrieren.  
   
-### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] An [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  **Startumgebung:** SQL Server 2008 R2, SharePoint 2010.  
   
  **Endumgebung:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010.  
@@ -221,7 +221,7 @@ ms.locfileid: "48092306"
   
 -   Installieren Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins für SharePoint auf jedem Web-Front-End in der Farm. Sie können das Add-In mit dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Installations-Assistenten oder durch Herunterladen des Add-Ins installieren.  
   
--   Führen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Installation aus, um den SharePoint-Modus für jeden 'Berichtsserver' zu aktualisieren. Der SQL Server-Installations-Assistent installiert den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst und erstellt eine neue Dienstanwendung.  
+-   Führen Sie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Installation im SharePoint-Modus für jeden 'Berichtsserver' zu aktualisieren. Die SQL Server-Installations-Assistent installiert die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Dienst, und erstellen Sie eine neue dienstanwendung.  
   
      Wenn in der Endumgebung außerdem SharePoint 2013 ausgeführt werden soll, müssen Sie beim Aktualisieren von SharePoint 2010 auf SharePoint 2013 ein Upgrade mit Anfügen der Datenbanken ausführen.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "48092306"
 -   > [!WARNING]  
     >  Nach dem SharePoint-Upgrade ist die Reporting Services-Umgebung so lange nicht funktionsfähig, bis SQL Server aktualisiert wird.  
   
--   Aktualisieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Wenn Sie den SQL Server-Installations-Assistenten ausführen, sehen Sie ein Dialogfeld zur**Authentifizierung von SQL Server Reporting Services im SharePoint-Modus**. Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst wird installiert, und anhand der Anmeldeinformationen von der Authentifizierungsseite wird ein neuer SharePoint-Anwendungspool erstellt.  
+-   Aktualisieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Wenn Sie den SQL Server-Installations-Assistenten ausführen, sehen Sie ein Dialogfeld zur**Authentifizierung von SQL Server Reporting Services im SharePoint-Modus**. Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst wird installiert, und anhand der Anmeldeinformationen von der Authentifizierungsseite wird ein neuer SharePoint-Anwendungspool erstellt.  
   
  ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
@@ -261,9 +261,9 @@ ms.locfileid: "48092306"
 -   > [!WARNING]  
     >  Nach dem SharePoint-Upgrade ist die Reporting Services-Umgebung so lange nicht funktionsfähig, bis SQL Server aktualisiert wird.  
   
--   Installieren Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-Ins für SharePoint auf allen SharePoint-Web-Front-Ends. Vom SharePoint-Installationsprogramm für erforderliche Komponenten wurde die SQL Server 2008 R2-Version des Add-Ins installiert, Sie benötigen jedoch die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version, um mit einem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Berichtsserver zu arbeiten.  
+-   Installieren Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins für SharePoint auf allen SharePoint-Web-Front-Ends. Vom SharePoint-Installationsprogramm für erforderliche Komponenten wurde die SQL Server 2008 R2-Version des Add-Ins installiert, Sie benötigen jedoch die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version, um mit einem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Berichtsserver zu arbeiten.  
   
--   Aktualisieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Wenn Sie den SQL Server-Installations-Assistenten ausführen, sehen Sie ein Dialogfeld zur Authentifizierung von SQL Server Reporting Services im SharePoint-Modus. Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst wird installiert, und anhand der Anmeldeinformationen von der Authentifizierungsseite wird ein neuer SharePoint-Anwendungspool erstellt.  
+-   Aktualisieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Wenn Sie den SQL Server-Installations-Assistenten ausführen, sehen Sie ein Dialogfeld zur Authentifizierung von SQL Server Reporting Services im SharePoint-Modus. Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst wird installiert, und anhand der Anmeldeinformationen von der Authentifizierungsseite wird ein neuer SharePoint-Anwendungspool erstellt.  
   
  ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
@@ -279,11 +279,11 @@ ms.locfileid: "48092306"
   
  Wenn eine Berichtsserver-Installation auf einen anderen Computer verschoben wird, wird der Hashcode ungültig, der die Verschlüsselungsschlüssel schützt, die für die in der Berichtsserver-Datenbank gespeicherten vertraulichen Daten verwendet werden. Jede Berichtsserver-Instanz, die die Datenbank verwendet, verfügt über eine eigene Kopie des Verschlüsselungsschlüssels, der mit der Identität des auf dem aktuellen Computer definierten Dienstkontos verschlüsselt wird. Wenn Sie die Computer wechseln, kann der Dienst auch dann nicht mehr auf seinen Schlüssel zugreifen, wenn Sie auf dem neuen Computer den gleichen Kontonamen verwenden.  
   
- Sie müssen den zuvor gesicherten Schlüssel wiederherstellen, um auf dem neuen Computer wieder eine umkehrbare Verschlüsselung einzurichten. Der komplette in der Berichtsserver-Datenbank gespeicherte Schlüsselsatz besteht aus einem symmetrischen Schlüsselwert sowie Informationen zur Dienstidentität, mit denen der Zugriff auf den Schlüssel so beschränkt wird, dass diese nur von der Berichtsserverinstanz verwendet werden können, auf denen sie gespeichert wurden. Während der Schlüsselwiederherstellung ersetzt der Berichtsserver vorhandene Kopien des Schlüssels durch neue Versionen. Die neue Version umfasst Werte für die Computer- und Dienstidentität, die auf dem aktuellen Computer definiert wurden. Weitere Informationen finden Sie in folgenden Themen:  
+ Sie müssen den zuvor gesicherten Schlüssel wiederherstellen, um auf dem neuen Computer wieder eine umkehrbare Verschlüsselung einzurichten. Der komplette in der Berichtsserver-Datenbank gespeicherte Schlüsselsatz besteht aus einem symmetrischen Schlüsselwert sowie Informationen zur Dienstidentität, mit denen der Zugriff auf den Schlüssel so beschränkt wird, dass diese nur von der Berichtsserverinstanz verwendet werden können, auf denen sie gespeichert wurden. Während der Schlüsselwiederherstellung ersetzt der Berichtsserver vorhandene Kopien des Schlüssels durch neue Versionen. Die neue Version umfasst Werte für die Computer- und Dienstidentität, die auf dem aktuellen Computer definiert wurden. Weitere Informationen finden Sie unter den folgenden Themen:  
   
--   SharePoint-Modus: finden Sie im Abschnitt "Schlüsselverwaltung" [Verwalten einer Reporting Services SharePoint-Dienstanwendung](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
+-   SharePoint-Modus: Finden Sie im Abschnitt "Schlüsselverwaltung" [Verwalten einer Reporting Services SharePoint-Dienstanwendung](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
--   Einheitlicher Modus: [Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+-   Einheitlicher Modus: Finden Sie unter [sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
  ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
@@ -305,11 +305,11 @@ ms.locfileid: "48092306"
 > [!NOTE]  
 >  Weitere Informationen zum SharePoint-Upgrade mit Anfügen der Datenbanken finden Sie unter:  
   
--   [Übersicht über den Upgradeprozess für SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688) (http://go.microsoft.com/fwlink/p/?LinkId=256688).  
+-   [Übersicht über den Upgradeprozess für SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) (https://go.microsoft.com/fwlink/p/?LinkId=256688).  
   
--   [Vorbereitende Bereinigung vor einem Upgrade auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Vorbereitende Bereinigung vor einem Upgrade auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
--   [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+-   [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
  ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   

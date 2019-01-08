@@ -18,12 +18,12 @@ ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d19c14bcda351be4f061964132f00227d3fdd40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43b7fb86b7529de3629d07d294f0fd663b93561d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206070"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368672"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Verwenden von FOR XML-Ergebnissen in Anwendungscode
   Mithilfe von FOR XML-Klauseln in SWL-Abfragen können Sie Abfrageergebnisse abrufen und sogar in XML-Daten umwandeln. Diese Funktionalität bietet Ihnen die folgenden Möglichkeiten, wenn FOR XML-Abfrageergebnisse in XML-Anwendungscode verwendet werden können:  
@@ -35,9 +35,9 @@ ms.locfileid: "48206070"
  Dieses Thema enthält Beispiele und veranschaulicht diese Vorgehensweisen.  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Abrufen von FOR XML-Daten mit ADO und XML-Dateninseln  
- Das ADO `Stream` Objekt oder andere Objekte, die die COM unterstützt `IStream` -Schnittstelle, wie z. B. der Active Server Pages (ASP) `Request` und `Response` können Objekte, um die Ergebnisse enthalten, bei der Arbeit mit FOR XML-Abfragen verwendet werden.  
+ Beim Arbeiten mit FOR XML-Abfragen kann das ADO-Objekt `Stream` oder andere Objekte, die die `IStream`-COM-Schnittstelle unterstützen, wie z. B. die ASP-Objekte (Active Server Pages) `Request` und `Response`, zum Aufnehmen der Ergebnisse verwendet werden.  
   
- Der folgende ASP-Code zeigt z. B. die Ergebnisse der Abfrage eine `xml` -Datentypspalte Demographics in der Sales.Store-Tabelle der AdventureWorks-Beispieldatenbank. Insbesondere sucht die Abfrage nach dem Instanzwert dieser Spalte für die Zeile, in der die CustomerID gleich 3 ist.  
+ Der folgende ASP-Code zeigt z. B. die Ergebnisse der Abfrage der `xml`-Datentypspalte Demographics in der Sales.Store-Tabelle der AdventureWorks-Beispieldatenbank. Insbesondere sucht die Abfrage nach dem Instanzwert dieser Spalte für die Zeile, in der die CustomerID gleich 3 ist.  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -155,19 +155,19 @@ ms.locfileid: "48206070"
   
 -   **AnnualSales:** 1500000  
   
--   **AnnualRevenue:** 150000  
+-   **AnnualRevenue:** 150000 fest  
   
--   **BankName:** Primary International  
+-   **Bankname erläutert:** Primäre International  
   
--   **BusinessType:** OS  
+-   **BusinessType:** BETRIEBSSYSTEM  
   
 -   **YearOpened:** 1974  
   
--   **Specialty:** Road  
+-   **Spezielle:** Straße  
   
 -   **SquareFeet:** 38000  
   
--   **Brands:** 3  
+-   **Marken:** 3  
   
 -   **Internet:** DSL  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48206070"
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
   <Sales.Store>  
     <Demographics>  
-      <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+      <StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
         <AnnualSales>1500000</AnnualSales>  
         <AnnualRevenue>150000</AnnualRevenue>  
         <BankName>Primary International</BankName>  
@@ -201,13 +201,13 @@ ms.locfileid: "48206070"
   
  In diesem Beispiel werden jedoch die folgenden verwalteten APIs von Microsoft .NET Framework verwendet, um das Zurückgeben und das Rendering der Ergebnisse der FOR XML-Abfrage zu erzielen.  
   
-1.  `SqlConnection` wird verwendet, um eine Verbindung mit SQL Server, basierend auf den Inhalt einer angegebenen verbindungszeichenfolgenvariablen Stconn zu öffnen.  
+1.  `SqlConnection` wird verwendet, um basierend auf dem Inhalt einer angegebenen Verbindungszeichenfolgenvariablen stConn eine Verbindung mit SQL Server zu öffnen.  
   
 2.  `SqlDataAdapter` wird dann als Datenadapter verwendet, und es verwendet die SQL-Verbindung und eine angegebene SQL-Abfragezeichenfolge, um die FOR XML-Abfrage auszuführen.  
   
-3.  Nach dem Ausführen der Abfrage, die `SqlDataAdapter.Fill` Methode wird aufgerufen und an eine Instanz von einem `DataSet,` myDataSet übergeben, um das Dataset mit der Ausgabe der FOR XML-Abfrage zu füllen.  
+3.  Nach dem Ausführen der Abfrage wird die `SqlDataAdapter.Fill`-Methode aufgerufen und an eine Instanz eines `DataSet,` MyDataSet übergeben, um das Dataset mit der Ausgabe der FOR XML-Abfrage zu füllen.  
   
-4.  Die `DataSet.GetXml` Methode wird aufgerufen, um die Ergebnisse der Abfrage als Zeichenfolge zurück, die in der Server generierten HTML-Seite angezeigt werden kann.  
+4.  Anschließend wird die `DataSet.GetXml`-Methode aufgerufen, um die Abfrageergebnisse als eine Zeichenfolge zurückzugeben, die in der vom Server generierten HTML-Seite angezeigt werden kann.  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -284,7 +284,7 @@ Page Generated @ 3/11/2006 3:36:02 PM
   
 SqlConnection opened.  
   
-<Sales.Store><Demographics><StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
+<Sales.Store><Demographics><StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
   
 SqlConnection closed.  
 ```  

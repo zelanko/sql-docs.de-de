@@ -24,19 +24,19 @@ ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 33f2e8751befd42ee0b92690a17d668ba37a4c9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3bf6919230c1621d2b81eb41cd715fc1878a90c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089720"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371522"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Clustering-Algorithmus
   In diesem Abschnitt wird die Implementierung des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus einschließlich der Parameter erklärt, mit denen Sie das Verhalten von Clustermodellen steuern können. Außerdem bietet der Abschnitt Anleitungen zur Verbesserung der Leistung beim Erstellen und Verarbeiten von Clustermodellen.  
   
  Weitere Informationen zum Verwenden von Clustermodellen finden Sie in folgenden Themen:  
   
--   [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Miningmodellinhalt von Clustermodellen &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Beispiele für Clusteringmodellabfragen](clustering-model-query-examples.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48089720"
   
  Die Microsoft-Implementierung stellt zwei Optionen bereit: skalierbares und nicht skalierbares EM. Standardmäßig werden beim skalierbaren EM die ersten 50.000 Datensätze verwendet, um dem Anfangsscan Werte zuzuweisen. Ist dieser Vorgang erfolgreich, verwendet das Modell nur diese Daten. Wenn das Modell mit 50.000 Datensätzen nicht geeignet ist, werden weitere 50.000 Datensätze gelesen. In nicht skalierbarem EM wird das ganze Dataset unabhängig von seiner Größe gelesen. Mit dieser Methode werden unter Umständen zwar genauere Cluster erstellt, die Arbeitsspeicheranforderungen können jedoch erheblich sein. Da skalierbares EM-Clustering mit einem lokalen Puffer arbeitet, erfolgt die Iteration durch die Daten deutlich schneller und der Algorithmus nutzt den CPU-Arbeitsspeichercache besser aus als das nicht skalierbare EM-Clustering. Darüber hinaus ist das skalierbare EM dreimal so schnell wie das nicht skalierbare EM, auch wenn alle Daten in den Hauptspeicher passen. In den meisten Fällen führt die Verbesserung der Leistung nicht zu einer geringeren Qualität des Gesamtmodells.  
   
- Einen technischen Bericht mit einer Beschreibung der EM-Implementierung im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus finden Sie unter [Scaling EM (Expectation Maximization) Clustering to Large Databases](http://go.microsoft.com/fwlink/?LinkId=45964)(Skalieren des EM-Clusterings in großen Datenbanken).  
+ Einen technischen Bericht mit einer Beschreibung der EM-Implementierung im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus finden Sie unter [Scaling EM (Expectation Maximization) Clustering to Large Databases](https://go.microsoft.com/fwlink/?LinkId=45964)(Skalieren des EM-Clusterings in großen Datenbanken).  
   
 ### <a name="k-means-clustering"></a>K-Means-Clustering  
  K-Means-Clustering ist eine gängige Methode zum Zuweisen der Clustermitgliedschaft, indem Unterschiede zwischen Elementen eines Clusters minimiert und die Entfernung zwischen den Clustern gleichzeitig maximiert werden. Das Wort „Means“ im Begriff K-Means bezieht sich auf den *Schwerpunkt* des Clusters. Hierbei handelt es sich um einen willkürlich ausgewählten Datenpunkt, der so lange iterativ optimiert wird, bis er das genaue arithmetische Mittel aller Datenpunkte des Clusters repräsentiert. Das "K" verweist auf eine beliebige Anzahl von Punkten, mit denen dem Clusterprozess Anfangswerte zugewiesen werden. Der K-Means-Algorithmus berechnet das Quadrat der euklidischen Entfernungen zwischen Datensätzen in einem Cluster und dem Vektor, der das arithmetische Clustermittel darstellt, und konvergiert zu einer endgültigen Menge von K-Clustern, wenn diese Summe den Mindestwert erreicht.  
@@ -95,7 +95,7 @@ ms.locfileid: "48089720"
  CLUSTERING_METHOD  
  Gibt an, welche Clustermethode vom Algorithmus verwendet wird. Die folgenden Clustermethoden stehen zur Verfügung:  
   
-|im Elementknoten &lt;Customer ID="1"|Methode|  
+|ID|Methode|  
 |--------|------------|  
 |1|EM skalierbar|  
 |2|EM nicht skalierbar|  
@@ -162,11 +162,11 @@ ms.locfileid: "48089720"
   
 |Modellierungsflag|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|Die Spalte kann zwei mögliche Statuswerte haben: Missing und Existing. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalte.|  
+|MODEL_EXISTENCE_ONLY|Die Spalte kann zwei mögliche Statuswerte haben: fehlender und vorhandener Wert. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalte.|  
 |NOT NULL|Die Spalte darf keinen NULL-Wert enthalten. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalte.|  
   
 ## <a name="requirements"></a>Anforderungen  
- Ein Clustermodell muss eine Schlüsselspalte und Eingabespalten enthalten. Sie können Eingabespalten auch als vorhersagbar definieren. Spalten `Predict Only` werden nicht verwendet werden, um Cluster zu erstellen. Die Verteilung dieser Werte in den Clustern wird berechnet, nachdem die Cluster erstellt sind.  
+ Ein Clustermodell muss eine Schlüsselspalte und Eingabespalten enthalten. Sie können Eingabespalten auch als vorhersagbar definieren. Auf `Predict Only` festgelegte Spalten werden nicht verwendet, um Cluster zu erstellen. Die Verteilung dieser Werte in den Clustern wird berechnet, nachdem die Cluster erstellt sind.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md).  
@@ -181,7 +181,7 @@ ms.locfileid: "48089720"
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm.md)   
- [Clusteringmodellabfragen](clustering-model-query-examples.md)   
- [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Beispiele für Clusteringmodellabfragen](clustering-model-query-examples.md)   
+ [Miningmodellinhalt von Clustermodellen &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

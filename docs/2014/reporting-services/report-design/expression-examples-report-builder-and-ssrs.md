@@ -26,12 +26,12 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e32c6ed01887fb47cb8051ba78fb92b6558a5abe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6453f983a2137039a1a16d115daeb9fad855f771
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099446"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358562"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Beispiele für Ausdrücke (Berichts-Generator und SSRS)
   Ausdrücke werden in Berichten häufig zum Steuern des Inhalts und der Darstellung des Berichts verwendet. Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschrieben und können integrierte Funktionen, benutzerdefinierten Code, Berichts- und Gruppenvariablen sowie benutzerdefinierte Variablen verwenden. Ausdrücke beginnen immer mit einem Gleichheitszeichen (=). Weitere Informationen zum Ausdrucks-Editor und den Verweistypen, die Sie einfügen können, finden Sie unter [Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md) und [Hinzufügen eines Ausdrucks (Berichts-Generator und SSRS)](add-an-expression-report-builder-and-ssrs.md).  
@@ -61,11 +61,11 @@ ms.locfileid: "48099446"
   
 -   [Häufig verwendete Filter &#40;Berichts-Generator und SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
   
--   [Melden und Gruppenvariablenauflistungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+-   [Verweise auf Berichts- und Gruppenvariablensammlungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
  Weitere Informationen zu einfachen und komplexen Ausdrücken, zu den Verwendungsmöglichkeiten von Ausdrücken sowie zu den Verweistypen, die Sie in einen Ausdruck einbinden können, finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md). Weitere Informationen zum Kontext, in dem Ausdrücke zum Berechnen von Aggregaten ausgewertet werden, finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Operatoren verwenden, die auch in den beispielhaften Ausdrücken in diesem Thema zum Schreiben von Berichten verwendet werden, finden Sie weitere Informationen unter [Tutorial: Introducing Expressions](../tutorial-introducing-expressions.md).  
+ Um weitere Informationen zum Schreiben von Ausdrücken, die viele der Funktionen und Operatoren, die auch ein, die Beispiele für Ausdrücke in diesem Thema, aber in den Kontext Schreiben von Berichten verwenden, finden Sie unter [Lernprogramm: Einführung in Ausdrücke](../tutorial-introducing-expressions.md).  
   
  Der Ausdrucks-Editor schließt eine hierarchische Sicht der integrierten Funktionen mit ein. Wenn Sie die Funktion auswählen, wird im Wertebereich ein Codebeispiel angezeigt. Weitere Informationen finden Sie unter den [Expression Dialog Box](../expression-dialog-box.md) oder [Expression Dialog Box &#40;Berichts-Generator&#41;](../expression-dialog-box-report-builder.md).  
   
@@ -78,19 +78,19 @@ ms.locfileid: "48099446"
  Viele Ausdrücke in einem Bericht enthalten Funktionen. Mit diesen Funktionen können Sie Daten formatieren, Code anwenden und auf Berichtsmetadaten zugreifen. Sie können Ausdrücke schreiben, die Funktionen aus der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Laufzeitbibliothek sowie aus den Namespaces <xref:System.Convert> und <xref:System.Math> verwenden. Sie können Verweise auf Funktionen aus anderen Assemblys oder benutzerdefinierten Code hinzufügen. Sie können auch Klassen aus [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]verwenden, einschließlich <xref:System.Text.RegularExpressions>.  
   
 ###  <a name="VisualBasicFunctions"></a> Visual Basic-Funktionen  
- Mit [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen können Sie die Daten bearbeiten, die in Textfeldern angezeigt oder für Parameter, Eigenschaften oder sonstige Bereiche des Berichts verwendet werden. In diesem Abschnitt werden Beispiele zur Veranschaulichung einiger dieser Funktionen bereitgestellt. Weitere Informationen finden Sie unter [Member der Visual Basic-Laufzeitbibliothek](http://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
+ Mit [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen können Sie die Daten bearbeiten, die in Textfeldern angezeigt oder für Parameter, Eigenschaften oder sonstige Bereiche des Berichts verwendet werden. In diesem Abschnitt werden Beispiele zur Veranschaulichung einiger dieser Funktionen bereitgestellt. Weitere Informationen finden Sie unter [Member der Visual Basic-Laufzeitbibliothek](https://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
   
- Der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] bietet zahlreiche benutzerdefinierte Formatoptionen, z. B. für bestimmte Datumsformate. Weitere Informationen finden Sie unter [Formatierung von Typen](http://go.microsoft.com/fwlink/?LinkId=112024) auf MSDN.  
+ Der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] bietet zahlreiche benutzerdefinierte Formatoptionen, z. B. für bestimmte Datumsformate. Weitere Informationen finden Sie unter [Formatierung von Typen](https://go.microsoft.com/fwlink/?LinkId=112024) auf MSDN.  
   
 #### <a name="math-functions"></a>Mathematische Funktionen  
   
--   Die `Round` Funktion ist nützlich, um die Zahlen auf die nächste Ganzzahl gerundet. Mit dem folgenden Ausdruck wird der Wert 1,3 auf 1 abgerundet:  
+-   Die `Round`-Funktion ermöglicht das Runden von Zahlen auf die nächste ganze Zahl. Mit dem folgenden Ausdruck wird der Wert 1,3 auf 1 abgerundet:  
   
     ```  
     = Round(1.3)  
     ```  
   
-     Sie können auch einen Ausdruck an Rundet einen Wert ein, den Sie, wie schreiben die `MRound` Funktion in Excel. Multiplizieren Sie den Wert mit einem Faktor, der eine ganze Zahl erzeugt, runden Sie die Zahl, und dividieren Sie dann durch den gleichen Faktor. Verwenden Sie z. B. den folgenden Ausdruck, um 1,3 auf das nächste Vielfache von 0,2 (1,4) zu runden:  
+     Sie können auch einen Ausdruck schreiben, um einen Wert auf ein von Ihnen angegebenes Vielfaches zu runden (vergleichbar mit der `MRound`-Funktion in Excel). Multiplizieren Sie den Wert mit einem Faktor, der eine ganze Zahl erzeugt, runden Sie die Zahl, und dividieren Sie dann durch den gleichen Faktor. Verwenden Sie z. B. den folgenden Ausdruck, um 1,3 auf das nächste Vielfache von 0,2 (1,4) zu runden:  
   
     ```  
     = Round(1.3*5)/5  
@@ -98,7 +98,7 @@ ms.locfileid: "48099446"
   
 ####  <a name="DateFunctions"></a> Datumsfunktionen  
   
--   Die `Today` Funktion stellt das aktuelle Datum bereit. Mit diesem Ausdruck können Sie in einem Textfeld das Datum im Bericht anzeigen oder aber in einem Parameter Daten basierend auf dem aktuellen Datum filtern.  
+-   Die `Today`-Funktion stellt das aktuelle Datum bereit. Mit diesem Ausdruck können Sie in einem Textfeld das Datum im Bericht anzeigen oder aber in einem Parameter Daten basierend auf dem aktuellen Datum filtern.  
   
     ```  
     =Today()  
@@ -110,7 +110,7 @@ ms.locfileid: "48099446"
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
--   Die `Year` Funktion zeigt das Jahr für ein bestimmtes Datum an. Hiermit können Sie Datumsangaben zusammenfassen oder die Jahreszahl für eine Datumsgruppe anzeigen. Dieser Ausdruck liefert das Jahr für eine bestimmte Gruppe von Bestelldaten. Die `Month` -Funktion und andere Funktionen können auch zum Bearbeiten von Daten verwendet werden. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+-   Die `Year`-Funktion zeigt das Jahr für ein bestimmtes Datum an. Hiermit können Sie Datumsangaben zusammenfassen oder die Jahreszahl für eine Datumsgruppe anzeigen. Dieser Ausdruck liefert das Jahr für eine bestimmte Gruppe von Bestelldaten. Mit der `Month`-Funktion und anderen Funktionen können Datumsangaben auch bearbeitet werden. Weitere Informationen finden Sie unter den [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Dokumentation.  
   
     ```  
     =Year(Fields!OrderDate.Value)  
@@ -138,7 +138,7 @@ ms.locfileid: "48099446"
     =FORMAT(Fields!SellStartDate.Value, "dd/MM/yyyy")  
     ```  
   
--   Die `CDate`-Funktion konvertiert den Wert in ein Datum. Die `Now` Funktion gibt einen Datumswert mit das aktuelle Datum und Uhrzeit des Systems zurück. `DateDiff` gibt einen Long-Wert zurück, der die Zahl der Zeitintervalle zwischen zwei Datumswerten angibt.  
+-   Die `CDate`-Funktion konvertiert den Wert in ein Datum. Die `Now`-Funktion gibt einen Datumswert zurück, der das aktuelle Datum und die aktuelle Uhrzeit des Systems enthält. `DateDiff` gibt einen Long-Wert zurück, der die Zahl der Zeitintervalle zwischen zwei Datumswerten angibt.  
   
      Im folgenden Beispiel wird das Anfangsdatum des aktuellen Jahres angezeigt.  
   
@@ -155,17 +155,17 @@ ms.locfileid: "48099446"
 -   Der folgende Ausdruck generiert die Jahre des Intervalls zwischen SellStartDate und LastReceiptDate. Diese Felder sind in zwei unterschiedlichen Datasets enthalten, DataSet1 und DataSet2. Die Aggregatfunktion [First-Funktion (Berichts-Generator und SSRS)](report-builder-functions-first-function.md) gibt den ersten Wert von SellStartDate in DataSet1 und den ersten Wert von LastReceiptDate in DataSet2 zurück.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
--   Die `DatePart` Funktionsergebnis ist einen Ganzzahliger Wert, der die angegebene Komponente eines bestimmten Datumswerts. Der folgende Ausdruck gibt das Jahr für den ersten Wert von SellStartDate in DataSet1 zurück. Der Datasetbereich ist angegeben, weil mehrere Datasets im Bericht enthalten sind.  
+-   Die Funktion `DatePart` gibt einen ganzzahligen Wert zurück, der die angegebene Komponente eines bestimmten Date-Werts enthält. Der folgende Ausdruck gibt das Jahr für den ersten Wert von SellStartDate in DataSet1 zurück. Der Datasetbereich ist angegeben, weil mehrere Datasets im Bericht enthalten sind.  
   
     ```  
     =Datepart("yyyy", First(Fields!SellStartDate.Value, "DataSet1"))  
   
     ```  
   
--   Die `DateSerial` Funktionsergebnis ist einen Date-Wert, der einen angegebenen Werten für Jahr, Monat und Tag, wobei die Uhrzeitinformationen auf Mitternacht festgelegten Zeitinformation darstellt. Im folgenden Beispiel wird das Enddatum des vorherigen Monats basierend auf dem aktuellen Monat angezeigt.  
+-   Die Funktion `DateSerial` gibt ein Date-Wert zurück, der das angegebene Jahr, den angegebenen Monat und Tag mit der auf Mitternacht festgelegten Zeitinformation darstellt. Im folgenden Beispiel wird das Enddatum des vorherigen Monats basierend auf dem aktuellen Monat angezeigt.  
   
     ```  
     =DateSerial(Year(Now()), Month(Now()), "1").AddDays(-1)  
@@ -219,7 +219,7 @@ ms.locfileid: "48099446"
      Das folgende Beispiel hat die gleiche Funktion wie das Beispiel oben und zeigt darüber hinaus vor der Liste der ausgewählten Werte eine Textzeichenfolge an:  
   
     ```  
-    =”Report for “ & JOIN(Parameters!MySelection.Value, “ & “)  
+    ="Report for " & JOIN(Parameters!MySelection.Value, " & ")  
   
     ```  
   
@@ -234,7 +234,7 @@ ms.locfileid: "48099446"
   
 #### <a name="lookup"></a>Suche  
   
--   Durch Angabe eines Schlüsselfelds können Sie mit der `Lookup`-Funktion einen Wert von einem Dataset für eine 1:1-Beziehung, zum Beispiel ein Schlüssel-Wert-Paar, abrufen. Der folgende Ausdruck zeigt den Produktnamen aus einem Dataset ("Product") an, wenn als Grundlage für die Übereinstimmung der Produktbezeichner angegeben ist:  
+-   Durch Angabe eines Schlüsselfelds können Sie mit der `Lookup`-Funktion einen Wert von einem Dataset für eine 1:1-Beziehung, zum Beispiel ein Schlüssel-Wert-Paar, abrufen. Der folgende Ausdruck zeigt den Produktnamen aus einem Dataset („Product“) an, wenn der Produktbezeichner als Grundlage für die Übereinstimmung angegeben ist:  
   
     ```  
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
@@ -242,7 +242,7 @@ ms.locfileid: "48099446"
   
 #### <a name="lookupset"></a>LookupSet  
   
--   Indem Sie ein Schlüsselfeld angeben, können Sie mithilfe der `LookupSet` Funktion, um einen Satz von Werten für eine 1: n Beziehung aus einem Dataset abzurufen. Beispiel: Eine Person kann mehrere Telefonnummern haben. Nehmen Sie im folgenden Beispiel an, dass das Dataset PhoneList in jeder Zeile einen Personenbezeichner und eine Telefonnummer enthält. `LookupSet` Gibt ein Array von Werten zurück. Der folgende Ausdruck kombiniert die Rückgabewerte in eine einzelne Zeichenfolge und zeigt die Liste der Telefonnummern für die mit "ContactID" angegebene Person an:  
+-   Indem Sie ein Schlüsselfeld angeben, können Sie mithilfe der `LookupSet`-Funktion einen Satz von Werten für eine 1:n-Beziehung aus einem Dataset abrufen. Beispiel: Eine Person kann mehrere Telefonnummern haben. Nehmen Sie im folgenden Beispiel an, dass das Dataset PhoneList in jeder Zeile einen Personenbezeichner und eine Telefonnummer enthält. `LookupSet` gibt ein Array von Werten zurück. Der folgende Ausdruck kombiniert die Rückgabewerte in eine einzelne Zeichenfolge und zeigt die Liste der Telefonnummern für die mit "ContactID" angegebene Person an:  
   
     ```  
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
@@ -271,7 +271,7 @@ ms.locfileid: "48099446"
     =IIF(Fields!LineTotal.Value > 100, True, False)  
     ```  
   
--   Verwenden Sie mehrere `IIF` Funktionen (auch bekannt als "geschachtelte IIf-Funktionen werden"), um einen von drei Werten abhängig vom Wert zurückzugeben `PctComplete`. Der folgende Ausdruck kann in die Füllfarbe eines Textfelds platziert werden, um die Hintergrundfarbe basierend auf dem Wert im Textfeld zu ändern.  
+-   Verwenden Sie mehrere `IIF`-Funktionen (die auch als "geschachtelte Iif-Funktionen" bezeichnet werden), um einen von drei Werten in Abhängigkeit vom Wert von `PctComplete` zurückzugeben. Der folgende Ausdruck kann in die Füllfarbe eines Textfelds platziert werden, um die Hintergrundfarbe basierend auf dem Wert im Textfeld zu ändern.  
   
     ```  
     =IIF(Fields!PctComplete.Value >= 10, "Green", IIF(Fields!PctComplete.Value >= 1, "Blue", "Red"))  
@@ -279,7 +279,7 @@ ms.locfileid: "48099446"
   
      Werte, die größer oder gleich 10 sind, werden mit einem grünen Hintergrund angezeigt. Werte zwischen 1 und 9 erhalten einen blauen Hintergrund, und Werte kleiner als 1 werden mit rotem Hintergrund dargestellt.  
   
--   Eine andere Möglichkeit, bietet dieselbe Funktionalität zu erzielen die `Switch` Funktion. Die `Switch`-Funktion ist nützlich, wenn Sie drei oder mehr Bedingungen testen müssen. Die `Switch`-Funktion gibt den Wert zurück, der mit dem ersten Ausdruck in einer Reihe verknüpft ist, die mit TRUE ausgewertet wird:  
+-   Eine andere Möglichkeit, die gleiche Funktionalität zu erhalten, bietet die `Switch`-Funktion. Die `Switch`-Funktion ist nützlich, wenn Sie drei oder mehr Bedingungen testen müssen. Die `Switch`-Funktion gibt den Wert zurück, der mit dem ersten Ausdruck in einer Reihe verknüpft ist, die mit TRUE ausgewertet wird:  
   
     ```  
     =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red",)  
@@ -293,13 +293,13 @@ ms.locfileid: "48099446"
     =IIF(DateDiff("d",Fields!ImportantDate.Value, Now())>7,"Red","Blue")  
     ```  
   
--   Testen Sie den Wert des der `PhoneNumber` Feld und "No Value" zurückgegeben wird, ist dies `null` (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]); andernfalls der Wert der Telefonnummer zurückgegeben. Mit diesem Ausdruck kann der Wert eines Textfelds in einem Berichtselement gesteuert werden.  
+-   Mit dem Ausdruck wird der Wert des Felds `PhoneNumber` geprüft und "No Value" zurückgegeben, wenn er `null` (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) ist. Andernfalls wird der Wert der Telefonnummer zurückgegeben. Mit diesem Ausdruck kann der Wert eines Textfelds in einem Berichtselement gesteuert werden.  
   
     ```  
     =IIF(Fields!PhoneNumber.Value Is Nothing,"No Value",Fields!PhoneNumber.Value)  
     ```  
   
--   Testen Sie den Wert des der `Department` Feld, und geben Sie entweder ein unterberichtsname zurück oder einen `null` (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Dieser Ausdruck kann für bedingte Drillthrough-Unterberichte verwendet werden.  
+-   Mit dem Ausdruck wird der Wert des `Department`-Felds geprüft und entweder ein Unterberichtsname oder ein `null`-Wert (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) zurückgegeben. Dieser Ausdruck kann für bedingte Drillthrough-Unterberichte verwendet werden.  
   
     ```  
     =IIF(Fields!Department.Value = "Development", "EmployeeReport", Nothing)  
@@ -323,13 +323,13 @@ ms.locfileid: "48099446"
   
 #####  <a name="Sum"></a> Sum  
   
--   Die `Sum` -Funktion gibt die Summe der Werte in einer Gruppe oder eines Datenbereichs. Diese Funktion ist hilfreich für die Kopf- oder Fußzeile einer Gruppe. Der folgende Ausdruck zeigt die Summe von Daten in der Gruppe bzw. im Datenbereich Order an:  
+-   Die `Sum`-Funktion gibt die Summe von Werten in einer Gruppe oder einem Datenbereich zurück. Diese Funktion ist hilfreich für die Kopf- oder Fußzeile einer Gruppe. Der folgende Ausdruck zeigt die Summe von Daten in der Gruppe bzw. im Datenbereich Order an:  
   
     ```  
     =Sum(Fields!LineTotal.Value, "Order")  
     ```  
   
--   Sie können auch die `Sum` -Funktion für bedingte aggregatberechnungen. Wenn ein Dataset ein Feld mit dem Namen State und den möglichen Werten Not Started, Started und Finished enthält, wird mit dem folgenden Ausdruck die Aggregatsumme bei Platzierung in einem Gruppenheader nur für den Wert Finished berechnet:  
+-   Sie können auch die `Sum`-Funktion für bedingte Aggregatberechnungen verwenden. Wenn ein Dataset ein Feld mit dem Namen State und den möglichen Werten Not Started, Started und Finished enthält, wird mit dem folgenden Ausdruck die Aggregatsumme bei Platzierung in einem Gruppenheader nur für den Wert Finished berechnet:  
   
     ```  
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
@@ -339,7 +339,7 @@ ms.locfileid: "48099446"
   
 -   Mit der `RowNumber`-Funktion, die in einem Textfeld innerhalb eines Datenbereichs verwendet wird, wird die Zeilennummer für jede Instanz des Textfelds angezeigt, in der der Ausdruck enthalten ist. Diese Funktion eignet sich, um Zeilen in einer Tabelle zu nummerieren. Sie ist auch bei komplizierteren Aufgaben hilfreich, z. B. beim Einfügen von Seitenumbrüchen auf der Grundlage der Zeilenanzahl. Weitere Informationen finden Sie weiter unten unter " [Seitenumbrüche](#PageBreaks) ".  
   
-     Der Bereich, den Sie für `RowNumber`-Steuerelemente angeben, wenn die Neunumerierung beginnt. Die `Nothing` -Schlüsselwort Gibt an, dass die Funktion die Zählung mit der ersten Zeile im äußersten Datenbereich beginnt. Wenn Sie in geschachtelten Datenbereichen mit dem Zählen beginnen möchten, verwenden Sie den Namen des Datenbereichs. Um mit dem Zählen innerhalb einer Gruppe zu beginnen, verwenden Sie den Namen der Gruppe.  
+     Der Bereich, den Sie für `RowNumber`-Steuerelemente angeben, wenn die Neunumerierung beginnt. Das `Nothing`-Schlüsselwort gibt an, dass die Funktion die Zählung mit der ersten Zeile im äußersten Datenbereich beginnt. Wenn Sie in geschachtelten Datenbereichen mit dem Zählen beginnen möchten, verwenden Sie den Namen des Datenbereichs. Um mit dem Zählen innerhalb einer Gruppe zu beginnen, verwenden Sie den Namen der Gruppe.  
   
     ```  
     =RowNumber(Nothing)  
@@ -504,9 +504,9 @@ ms.locfileid: "48099446"
  In einem Bericht kann benutzerdefinierter Code verwendet werden. Benutzerdefinierter Code ist entweder in einen Bericht eingebettet oder in einer benutzerdefinierten Assembly gespeichert, die im Bericht verwendet wird. Weitere Informationen zu benutzerdefiniertem Code finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS)](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>Verwenden von Gruppenvariablen für benutzerdefinierte Aggregation  
- Sie können den Wert für eine Gruppenvariable initialisieren, die zu einem bestimmten Gruppenbereich lokal ist, und anschließend einen Verweis auf diese Variable in den Ausdrücken einbinden. Eine der Methoden, wie Sie eine Gruppenvariable mit benutzerdefiniertem Code verwenden können, besteht darin, ein benutzerdefiniertes Aggregat zu implementieren. Weitere Informationen finden Sie unter [Gruppevariablen in Reporting Services 2008 für benutzerdefinierte Aggregation verwenden](http://go.microsoft.com/fwlink/?LinkId=128714).  
+ Sie können den Wert für eine Gruppenvariable initialisieren, die zu einem bestimmten Gruppenbereich lokal ist, und anschließend einen Verweis auf diese Variable in den Ausdrücken einbinden. Eine der Methoden, wie Sie eine Gruppenvariable mit benutzerdefiniertem Code verwenden können, besteht darin, ein benutzerdefiniertes Aggregat zu implementieren. Weitere Informationen finden Sie unter [Gruppevariablen in Reporting Services 2008 für benutzerdefinierte Aggregation verwenden](https://go.microsoft.com/fwlink/?LinkId=128714).  
   
- Weitere Informationen zu Variablen finden Sie unter [Berichts- und Gruppenvariablenauflistungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md).  
+ Weitere Informationen zu Variablen finden Sie unter [Verweise auf Berichts- und Gruppenvariablensammlungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md).  
   
 ## <a name="suppressing-null-or-zero-values-at-run-time"></a>Unterdrücken von NULL oder 0 zur Laufzeit  
  Einige Werte in einem Ausdruck können zur Berichtsverarbeitungszeit mit NULL oder "nicht definiert" ausgewertet werden. Dies kann zu Laufzeitfehlern und zur Anzeige von **#Error** im Textfeld anstelle des ausgewerteten Ausdrucks führen. Die `IIF`-Funktion ist für dieses Verhalten besonders empfindlich, da im Gegensatz zu einer If-Then-Else-Anweisung jeder Teil der `IIF`-Anweisung (einschließlich Funktionsaufrufe) ausgewertet wird, bevor er an die Routine zur Prüfung auf `true` oder `false` übergeben wird. Die Anweisung `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` generiert **#Error** im gerenderten Bericht, wenn `Fields!Sales.Value` NOTHING ist.  
@@ -533,7 +533,7 @@ ms.locfileid: "48099446"
     End Function  
     ```  
   
-     Der folgende Ausdruck veranschaulicht, wie dieser benutzerdefinierte Code aus einem Textfeld für den "ColumnGroupByYear"-Container (Gruppe bzw. Datenbereich) aufgerufen wird.  
+     Der folgende Ausdruck veranschaulicht, wie dieser benutzerdefinierte Code aus einem Textfeld für den Container „ColumnGroupByYear“ (Gruppe bzw. Datenbereich) aufgerufen wird.  
   
     ```  
     =Code.GetDeltaPercentage(Previous(Sum(Fields!Sales.Value),"ColumnGroupByYear"), Sum(Fields!Sales.Value))  

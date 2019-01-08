@@ -11,12 +11,12 @@ ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8199d7fc40da29c9fc0657ddcc242252eeace9c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a042f9f28b9be59f3f72773ae745308fe160853d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057501"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369432"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Drillthroughberichte (Berichts-Generator und SSRS)
   Ein Drillthroughbericht ist ein Bericht, der geöffnet werden kann, indem der Benutzer auf einen Link in einem anderen Bericht klickt. Drillthroughberichte enthalten in der Regel Details zu einem Element im ursprünglichen Zusammenfassungsbericht. In dieser Abbildung enthält der Verkaufszusammenfassungsbericht z. B. Verkaufsaufträge und Gesamtbeträge. Wenn ein Benutzer auf eine Auftragsnummer in der Zusammenfassungsliste klickt, wird ein weiterer Bericht mit Details zu der Bestellung geöffnet.  
@@ -28,7 +28,7 @@ ms.locfileid: "48057501"
 > [!NOTE]  
 >  Wenn Sie in Berichts-Generator arbeiten, müssen Sie mit einem Berichtsserver verbunden sein, um den Drillthroughbericht anzuzeigen, der über den Drillthroughlink im Hauptbericht geöffnet wird.  
   
- Einen schnellen Einstieg in Drillthroughberichte finden Sie im [Tutorial: Erstellen von Drillthrough- und Hauptberichten&#40;Berichts-Generator&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Drillthroughberichte stehen auch in zwei Business Intelligence-Lösungen zur Verfügung: [BI-Berichterstellung: Berichts- und Abonnementszenario](http://technet.microsoft.com/bi/ff769487.aspx) und [Unternehmensdashboards: Vertriebslösung](http://technet.microsoft.com/bi/ff643005.aspx)  
+ Um schnell mit Drillthroughberichten beginnen, finden Sie unter [Lernprogramm: Erstellen von Drillthrough- und Hauptberichten &#40;Berichts-Generator&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Drillthroughbericht ist auch in zwei Business Intelligence-Lösungen, wichtige [BI-Berichterstellung: Berichts- und Abonnementszenario](https://technet.microsoft.com/bi/ff769487.aspx) und [Unternehmensdashboards: Vertriebs-Lösung](https://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

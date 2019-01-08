@@ -1,5 +1,5 @@
 ---
-title: Leistung für SQL Server R Services - datenoptimierung | Microsoft-Dokumentation
+title: Leistungsoptimierung für die datenoptimierung – SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fda560aedb7a0e1119a0524ffefe42a476c4aed
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b6e25ec0c7bc1ce332514910cdaf5cdf9fdb9e07
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699508"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432403"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Leistung von R Services - Data-Optimierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -151,9 +151,9 @@ Weitere Anleitungen zur Optimierung von RevoScaleR finden Sie in diesen Artikeln
 
 + Support-Artikel: [Feineinstellungsoptionen für RxDForest- rxdtree](https://support.microsoft.com/kb/3104235)
 
-+ Methoden zum Steuern des Modells in einem boosted Tree-Modell passen: [schätzen Modelle mithilfe von Stochastic Gradient Boosting](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ Methoden zum Steuern des Modells in einem boosted Tree-Modell passen: [Schätzen die Modelle mit Stochastic Gradient Boosting](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
 
-+ Übersicht über das RevoScaleR verschiebt und verarbeitet Daten: [schreiben Sie benutzerdefinierte Algorithmen, die Aufteilung in ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ Übersicht über das RevoScaleR verschiebt und verarbeitet Daten: [Schreiben Sie benutzerdefinierte Algorithmen, die Aufteilung in ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 
 + Programmiermodell für RevoScaleR: [Verwalten von Threads in RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
 
@@ -173,13 +173,13 @@ Zudem wird empfohlen, dass Sie in das neue Aussehen **MicrosoftML** -Paket, das 
 
 Wenn Ihr Szenario umfasst schnelle Vorhersagen mithilfe eines gespeicherten Modells oder Machine Learning in einer Anwendung integrieren, Sie können die [operationalisierung](https://docs.microsoft.com/r-server/what-is-operationalization) Funktionen in Microsoft R Server (ehemals DeployR).
 
-+ Als eine **Data scientists**, verwenden Sie die [Mrsdeploy-Paket](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) zum Freigeben von R-Code mit anderen Computern aus, und integrieren R-Analysen in Anwendungen für Web-, Desktop-, Mobile und Dashboards: [veröffentlichen und Verwalten von R-Webdienste in R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ Als eine **Data scientists**, verwenden Sie die [Mrsdeploy-Paket](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) zum Freigeben von R-Code mit anderen Computern aus, und integrieren R-Analysen in Anwendungen für Web-, Desktop-, Mobile und Dashboards: [Veröffentlichen und Verwalten von R-Webdiensten in R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ Als ein **Administrator**, erfahren Sie, wie Sie Pakete verwalten, überwachen Sie Web-Knoten und compute-Knoten und Steuern der Sicherheit für R-Aufträge: [so interagieren, und Nutzen von Webdiensten in R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ Als ein **Administrator**, erfahren Sie, wie Sie Pakete verwalten, überwachen Sie Web-Knoten und compute-Knoten und Steuern der Sicherheit für R-Aufträge: [Wie interagieren, und Nutzen von Webdiensten in R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## <a name="articles-in-this-series"></a>Artikel in dieser Serie
 
-[Leistung optimieren für R – Einführung](sql-server-r-services-performance-tuning.md)
+[Leistung optimieren, die für R – Einführung](sql-server-r-services-performance-tuning.md)
 
 [Leistungsoptimierung für R – SQL Server-Konfiguration](sql-server-configuration-r-services.md)
 

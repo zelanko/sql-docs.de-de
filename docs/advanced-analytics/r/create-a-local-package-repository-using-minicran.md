@@ -1,5 +1,6 @@
 ---
-title: Erstellen ein lokales R-paketrepositorys mit MiniCRAN (SQL Server-Machine Learning) | Microsoft-Dokumentation
+title: Erstellen eines lokalen R-paketrepositorys mit MiniCRAN - SQL Server Machine Learning Services
+description: Können Sie erkennen, assemblieren und Installieren von R-paketabhängigkeiten in einem einzelnen konsolidierten Paket MiniCran zu.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ef84cc3c08f461745e30fa2ce65e468263ded18d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7dc2e286e6eb80fe1eef3e8b86ed1002a6344cfb
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699398"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431753"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Erstellen Sie eine lokale R-paketrepositorys mit miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,16 +33,16 @@ Das Ziel der Erstellung eines lokalen paketrepositorys ist an einem zentralen Or
 
 Package-Repositorys sind in diesen Szenarien nützlich:
 
-- **Sicherheit**: viele R-Benutzer sind es gewöhnt, zum Herunterladen und Installieren neuer R-Pakete werden von CRAN oder einer der gespiegelten Sites. Jedoch aus Sicherheitsgründen Produktionsservern ausgeführt [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] haben für gewöhnlich keine Internetverbindung.
+- **Sicherheit**: Viele R-Benutzer sind es gewöhnt, zum Herunterladen und Installieren neuer R-Pakete werden von CRAN oder einer der gespiegelten Sites. Jedoch aus Sicherheitsgründen Produktionsservern ausgeführt [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] haben für gewöhnlich keine Internetverbindung.
 
-- **Einfacher offline-Installation**: zum Installieren des Pakets mit einem offline-Server erfordert, dass Sie auch alle paketabhängigkeiten herunterladen, Using MiniCRAN erleichtert es, alle Abhängigkeiten im richtigen Format zu erhalten.
+- **Einfacher offline-Installation**: Zum Installieren des Pakets mit einem offline-Server erfordert, dass Sie auch alle paketabhängigkeiten herunterladen Using MiniCRAN erleichtert es, alle Abhängigkeiten im richtigen Format zu erhalten.
 
     Sie können mithilfe der MiniCRAN Paket abhängigkeitsfehler vermeiden, bei der Vorbereitung der Pakete für die Installation mit der [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) Anweisung.
 
-- **Verbesserte versionsverwaltung**: In einer mehrbenutzerumgebung, es gibt gute Gründe für die uneingeschränkte Installation von mehreren Versionen des Pakets auf dem Server zu vermeiden. Verwenden Sie ein lokales Repository, um einen konsistenten Satz von Paketen für die Verwendung durch Ihre Analytiker bereitzustellen. 
+- **Verbesserte versionsverwaltung**: In einer mehrbenutzerumgebung gibt es gute Gründe für die uneingeschränkte Installation von mehreren Versionen des Pakets auf dem Server zu vermeiden. Verwenden Sie ein lokales Repository, um einen konsistenten Satz von Paketen für die Verwendung durch Ihre Analytiker bereitzustellen. 
 
 > [!TIP]
-> Sie können auch MiniCRAN verwenden, um Pakete für die Verwendung in Azure Machine Learning vorbereiten. Weitere Informationen finden Sie in diesem Blog: [über von MiniCRAN in Azure ML von Michele Usuelli](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
+> Sie können auch MiniCRAN verwenden, um Pakete für die Verwendung in Azure Machine Learning vorbereiten. Weitere Informationen finden Sie in diesem Blog: [Verwenden in Azure ML von Michele Usuelli miniCRAN](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
 
 ## <a name="install-minicran"></a>Installieren von miniCRAN
 
@@ -99,7 +100,7 @@ Führen Sie **nicht** Abhängigkeiten zu dieser anfänglichen Liste hinzufügen.
     makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3");
     ```
 
-   Anhand dieser Informationen erstellt das MiniCRAN-Paket die Ordnerstruktur, die Sie benötigen, kopieren Sie die Pakete für die [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] später noch mal.
+   Anhand dieser Informationen erstellt das MiniCRAN-Paket die Ordnerstruktur, die Sie benötigen, kopieren Sie die Pakete für die [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] später noch mal.
 
 An diesem Punkt müssen Sie einen Ordner, in dem Sie die benötigten Pakete, und alle zusätzlichen Pakete, die erforderlich waren. Der Pfad sollte etwa wie folgt lauten: C:\mylocalrepo\bin\windows\contrib\3.3 und es sollte eine Auflistung von komprimierten Paketen enthalten. Entzippen Sie die Pakete nicht, und benennen Sie alle Dateien.
 

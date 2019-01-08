@@ -15,15 +15,15 @@ ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 20bf707508b8ae5cc8ad7a491d45d151eb806f1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e65ae16a2297c0f54f16e31e770623c8edd80639
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229830"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376802"
 ---
 # <a name="custom-report-item-class-libraries"></a>Klassenbibliotheken für ein benutzerdefiniertes Berichtselement
-  Benutzerdefinierte Berichtselemente verwenden Klassen aus dem `Microsoft.ReportDesigner`-Namespace. Die Klassen, die zum Implementieren eines benutzerdefinierten Berichtselements verwendet werden, können in zwei Hauptkategorien gruppiert werden: eindeutige Klassen zur Unterstützung der Infrastruktur eines benutzerdefinierten Berichtselements und verwaltete Wrapperklassen, die die Funktionalität von relevanten RDL-Elementen (Report Definition Language) kapseln. Ein Codebeispiel für die Verwendung dieser Klassen finden Sie unter [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889).  
+  Benutzerdefinierte Berichtselemente verwenden Klassen aus dem `Microsoft.ReportDesigner`-Namespace. Die Klassen, die zum Implementieren eines benutzerdefinierten Berichtselements verwendet werden, können in zwei Hauptkategorien gruppiert werden: eindeutige Klassen zur Unterstützung der Infrastruktur eines benutzerdefinierten Berichtselements und verwaltete Wrapperklassen, die die Funktionalität von relevanten RDL-Elementen (Report Definition Language) kapseln. Ein Codebeispiel für die Verwendung dieser Klassen finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="custom-report-item-infrastructure-classes"></a>Infrastrukturklassen eines benutzerdefinierten Berichtselements  
  Die folgenden Klassen werden zum Implementieren eines benutzerdefinierten Berichtselements verwendet.  
@@ -49,7 +49,7 @@ ms.locfileid: "48229830"
 |`Style`|Die Stileigenschaften für das benutzerdefinierte Berichtselement.|  
 |`Adornment`|Ein Gestaltungsfenster für die interaktive Bearbeitung der Steuerung.|  
 |`Site`|Die `ISite` der Komponente.|  
-|`DesignerVerbCollection`|Ein Array der benutzerdefinierten Verben für das Kontextmenü der Steuerung.|  
+|`DesignerVerbCollection`|Ein Array von benutzerdefinierten Verben für das Kontextmenü der Steuerung.|  
   
 #### <a name="public-methods"></a>Öffentliche Methoden  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 145adf31e3b59e846eb17369a897e4012f0177ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132392"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375302"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine
   Welche Tools beim Installieren von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]installiert werden, hängt von der Edition und den von Ihnen ausgewählten Installationsoptionen ab. In dieser Lektion werden die Haupttools vorgestellt, und Sie erfahren, wie Sie Verbindungen herstellen und eine einfache Funktion (Autorisieren zusätzlicher Benutzer) ausführen.  
@@ -28,7 +27,7 @@ ms.locfileid: "48132392"
   
 ### <a name="basic-tools"></a>Haupttools  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ist das Haupttool zum Verwalten von [!INCLUDE[ssDE](../includes/ssde-md.md)] und Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)]-Code. Es wird in der [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Shell gehostet. Es befindet sich nicht im [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] steht jedoch als separates Download vom [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ist das Haupttool zum Verwalten von [!INCLUDE[ssDE](../includes/ssde-md.md)] und Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)]-Code. Es wird in der [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Shell gehostet. Das Tool ist nicht in [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] enthalten, kann jedoch als separates Download vom [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=144346)heruntergeladen werden.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager wird sowohl mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als auch mit den Clienttools installiert. Sie können damit Serverprotokolle aktivieren, Protokolloptionen wie z. B. TCP-Ports konfigurieren, Serverdienste so konfigurieren, dass sie automatisch gestartet werden, und Clientcomputer so konfigurieren, dass sie mit dem von Ihnen bevorzugten Verfahren gestartet werden. Mit diesem Tool können erweiterte Konnektivitätselemente konfiguriert, aber keine Funktionen aktiviert werden.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "48132392"
   
 ##### <a name="to-start-sql-server-management-studio"></a>So starten Sie SQL Server Management Studio  
   
--   Auf der **starten** Startmenü **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], und klicken Sie dann auf **SQL Server Management Studio**.  
+-   Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], und klicken Sie dann auf **SQL Server Management Studio**.  
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>So starten Sie den SQL Server-Konfigurations-Manager  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48132392"
 1.  Melden Sie sich bei Windows als Mitglied der Administratorgruppe an, und öffnen Sie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
     > [!IMPORTANT]  
-    >  Wenn Sie die verbinden [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] auf [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] oder [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (oder aktuellere Versionen), müssen Sie möglicherweise mit der rechten Maustaste [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , und klicken Sie dann auf **als Administrator ausführen** zum Herstellen einer Verbindung mit Ihren Administrator Anmeldeinformationen. Als Neuerung in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] werden beim Setup ausgewählte Anmeldungen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hinzugefügt, sodass die Administratoranmeldeinformationen nicht erforderlich sind.  
+    >  Wenn Sie eine Verbindung mit  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] auf [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] oder [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (oder aktuellere Versionen) herstellen, müssen Sie ggf. mit der rechten Maustaste auf [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] und anschließend auf **Als Administrator ausführen** klicken, um eine Verbindung unter Verwendung von Administratoranmeldeinformationen herzustellen. Als Neuerung in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]werden beim Setup ausgewählte Anmeldungen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]hinzugefügt, sodass die Administratoranmeldeinformationen nicht erforderlich sind.  
   
 2.  Klicken Sie im Dialogfeld **Verbindung mit Server herstellen** auf **Abbrechen**.  
   

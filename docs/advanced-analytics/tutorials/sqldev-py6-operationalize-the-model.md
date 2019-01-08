@@ -1,5 +1,5 @@
 ---
-title: Vorhersagen von möglichen Ergebnissen, die mithilfe von Python-Modellen (SQL Server-Machine Learning) | Microsoft-Dokumentation
+title: Vorhersagen von möglichen Ergebnissen, die mithilfe von Python-Modelle – SQL Server-Machine Learning
 description: Veranschaulicht, wie zum operationalisieren von eingebetteten PYthon-Skript in SQL Server gespeicherte Prozeduren mit T-SQL-Funktionen
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3d1466fba7c659887578bf349a07968bfb580158
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9a75c25528003d0133cfd33c3eaddc20a8241692
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033677"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644769"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Führen Sie Vorhersagen mithilfe von Python in einer gespeicherten Prozedur eingebettet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,8 +26,8 @@ In diesem Szenario bedeutet die operationalisierung des Modells in einer produkt
 
 In dieser Lektion wird veranschaulicht, zwei Methoden zum Erstellen von Vorhersagen auf Grundlage eines Python-Modells: batch-Bewertung und bewerten die Zeile für Zeile.
 
-- **Batchbewertung:** um mehrere Zeilen von Eingabedaten zu gewährleisten, übergeben Sie eine SELECT-Abfrage als Argument an die gespeicherte Prozedur. Das Ergebnis ist eine Tabelle mit Beobachtungen mit den Eingabefällen entspricht.
-- **Individuelle Bewertungen:** einen Satz von einzelnen Parameterwerten als Eingabe übergeben.  Die gespeicherte Prozedur gibt eine einzelne Zeile oder einen Wert zurück.
+- **Batchbewertung:** Um mehrere Zeilen von Eingabedaten zu gewährleisten, übergeben Sie eine SELECT-Abfrage als Argument an die gespeicherte Prozedur ein. Das Ergebnis ist eine Tabelle mit Beobachtungen mit den Eingabefällen entspricht.
+- **Einzelne Bewertung:** Übergeben Sie einen Satz von einzelnen Parameterwerten als Eingabe an.  Die gespeicherte Prozedur gibt eine einzelne Zeile oder einen Wert zurück.
 
 Alle Python-Code, die erforderlich sind, für die Bewertung wird als Teil der gespeicherten Prozeduren bereitgestellt.
 
@@ -48,7 +48,7 @@ Exportspezifikation aus den folgenden T-SQL-Anweisungen, um die gespeicherten Pr
 
 + Der Datenrahmen, der mit Eingaben übergeben wird, um die `predict_proba` Funktion das logistische Regressionsmodell `mod`. Die `predict_proba` Funktion (`probArray = mod.predict_proba(X)`) gibt eine **"float"** , die die Wahrscheinlichkeit, die gewährt wird, ein Trinkgeld (beliebige Höhe) darstellt.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
 GO
 
@@ -92,7 +92,7 @@ GO
 
 Diese gespeicherte Prozedur verwendet die gleichen Eingaben und die gleiche Art von Bewertungen als die vorherige gespeicherte Prozedur erstellt, aber es werden Funktionen aus der **Revoscalepy** Paket mit SQL Server-Machine Learning bereitgestellt.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
 GO
 
@@ -142,7 +142,7 @@ Durch die Übergabe dieser Argumente an die gespeicherte Prozedur, können Sie w
 
 1. Verwenden der **Scikit-erfahren Sie,** für die Bewertung zu modellieren, rufen Sie die gespeicherte Prozedur **PredictTipSciKitPy**, übergeben Sie den Modellnamen und Abfragezeichenfolge als Eingaben.
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -157,7 +157,7 @@ Durch die Übergabe dieser Argumente an die gespeicherte Prozedur, können Sie w
 
 2. Verwenden der **Revoscalepy** für die Bewertung zu modellieren, rufen Sie die gespeicherte Prozedur **PredictTipRxPy**, übergeben Sie den Modellnamen und Abfragezeichenfolge als Eingaben.
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -188,7 +188,7 @@ Beide gespeicherten Prozeduren erstellen Sie eine Bewertung, die basierend auf d
 
 Kurz den Code der gespeicherten Prozedur zu überprüfen, der ausführt, Bewertung mithilfe der **Scikit-erfahren Sie,** Modell.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
 GO
 
@@ -255,7 +255,7 @@ GO
 
 Die folgende gespeicherte Prozedur führt Bewertungen mithilfe der **Revoscalepy** Modell.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
 GO
 
@@ -297,7 +297,7 @@ X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "dire
 probArray = rx_predict(mod, X)
 
 probList = []
-prob_list = prob_array["tipped_Pred"].values
+probList = probArray["tipped_Pred"].values
 
 # Create output data frame
 OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
@@ -335,14 +335,14 @@ Nachdem Sie die gespeicherten Prozeduren erstellt wurden, ist es einfach, eine B
 
 1. Generieren Sie eine Vorhersage mithilfe der **Revoscalepy** Modell, und führen Sie diese Anweisung:
   
-    ```SQL
+    ```sql
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 2. Generieren Sie eine Bewertung mithilfe der **Scikit-erfahren Sie,** Modell, und führen Sie diese Anweisung:
 
-    ```SQL
-    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'ScitKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    ```sql
+    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 Die Ausgabe von beiden Verfahren ist die Wahrscheinlichkeit des eine trinkgeldbereichs für die taxifahrten mit den angegebenen Parametern oder Funktionen.

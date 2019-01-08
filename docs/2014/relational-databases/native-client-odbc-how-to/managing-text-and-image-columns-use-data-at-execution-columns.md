@@ -12,12 +12,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c63ff8eada8123e3bb7dfab5f8761f66ba2d2ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efaf7e38ef829d5250c10902151024e09df1723c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227130"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374092"
 ---
 # <a name="use-data-at-execution-columns-odbc"></a>Verwenden von Data-at-Execution-Spalten (ODBC)
     
@@ -29,20 +29,20 @@ ms.locfileid: "48227130"
   
     -   Setzen Sie für den vierten Parameter eine programmdefinierte Spalten-ID.  
   
-2.  Durch Aufrufen von [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) wird SQL_NEED_DATA zurückgegeben. Dies bedeutet, dass Data-at-Execution-Spalten für die Verarbeitung bereit sind.  
+2.  Durch Aufrufen von [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) wird SQL_NEED_DATA zurückgegeben. Dies bedeutet, dass Data-at-Execution-Spalten für die Verarbeitung bereit sind.  
   
 3.  Für jede Data-at-Execution-Spalte:  
   
-    -   Rufen Sie [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) auf, um den Spaltenarrayzeiger abzurufen. Es wird SQL_NEED_DATA zurückgegeben, wenn eine andere Data-at-Execution-Spalte vorhanden ist.  
+    -   Rufen Sie [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) auf, um den Spaltenarrayzeiger abzurufen. Es wird SQL_NEED_DATA zurückgegeben, wenn eine andere Data-at-Execution-Spalte vorhanden ist.  
   
     -   Rufen Sie zum Senden der Spaltendaten [SQLPutData](../native-client-odbc-api/sqlputdata.md) mindestens einmal auf, bis die gesamte Länge gesendet wurde.  
   
-4.  Rufen Sie [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) auf, um anzugeben, dass alle Daten für die letzte Data-at-Execution-Spalte gesendet wurden. Es wird kein SQL_NEED_DATA zurückgegeben.  
+4.  Rufen Sie [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) auf, um anzugeben, dass alle Daten für die letzte Data-at-Execution-Spalte gesendet wurden. Es wird kein SQL_NEED_DATA zurückgegeben.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie mithilfe von SQLGetData SQL_LONG-Zeichendaten variabler Länge gelesen werden. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
- Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Homepage [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treibername lautet "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
+ Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treibername lautet "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   

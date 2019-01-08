@@ -13,15 +13,15 @@ ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8da6fab7797154cdb59ee83993499607f515550a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08dc61c366937c3f1b4f90e009bf8a2460a7e4d5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098860"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365902"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Diagrammtypen (Berichts-Generator und SSRS)
-  Es ist wichtig, einen geeigneten Diagrammtyp für die von Ihnen dargestellten Daten auszuwählen. Dadurch wird bestimmt, wie gut die Daten interpretiert werden können, wenn sie in Diagrammform umgesetzt werden. Wenn das Dataset beispielsweise im Verhältnis zur Größe des Diagramms viele Datenpunkte enthält, ist eine Darstellung mithilfe eines Bereichs-, Linien- oder Punktdiagramms möglicherweise vorzuziehen. Informationen dazu, wie Ihre Daten je nach ausgewähltem Diagrammtyp vorbereiten, finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
+  Es ist wichtig, einen geeigneten Diagrammtyp für die von Ihnen dargestellten Daten auszuwählen. Dadurch wird bestimmt, wie gut die Daten interpretiert werden können, wenn sie in Diagrammform umgesetzt werden. Wenn das Dataset beispielsweise im Verhältnis zur Größe des Diagramms viele Datenpunkte enthält, ist eine Darstellung mithilfe eines Bereichs-, Linien- oder Punktdiagramms möglicherweise vorzuziehen. Eine Beschreibung der Vorbereitung der Daten in Abhängigkeit vom ausgewählten Diagrammtyp finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -31,7 +31,7 @@ ms.locfileid: "48098860"
   
  Der Diagrammtyp kann nach dem Erstellen des Diagramms geändert werden. Weitere Informationen finden Sie unter [Ändern eines Diagrammtyps (Berichts-Generator und SSRS)](change-a-chart-type-report-builder-and-ssrs.md).  
   
- Beispiele für viele dieser Diagrammtypen sind als Beispielberichte verfügbar. Weitere Informationen zum Herunterladen von Beispielberichten finden Sie unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Beispielberichte für Berichts-Generator und Berichts-Designer](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Beispiele für viele dieser Diagrammtypen sind als Beispielberichte verfügbar. Weitere Informationen zum Herunterladen von Beispielberichten finden Sie unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Beispielberichte für Berichts-Generator und Berichts-Designer](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Diagrammtyp|Verhältnisdaten anzeigen|Börsendaten anzeigen|Lineare Daten anzeigen|Mehrwertige Daten anzeigen|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  

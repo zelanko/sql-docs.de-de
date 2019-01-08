@@ -13,15 +13,15 @@ ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2bfa1c59fb47a859bb680970617a81add871908e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05c8785427b905138e513ab7134d56def7cdcf4d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061750"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353075"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Aufgabe 4 (optional): Kombination, Abgleich und Veröffentlichung eines neuen Satz Daten
-  Es ist möglich, dass Sie dem MDS-Repository im Laufe der Zeit weitere Daten hinzufügen möchten. Bevor Sie Daten hinzufügen, kann es hilfreich sein, die neuen Daten an die Daten verglichen werden soll, die bereits in MDS, um sicherzustellen, dass Sie keine doppelte oder ungenaue Daten hinzufügen, werden verwaltet wird. Im Master Data Services-Add-In für Excel können Sie Daten aus zwei Arbeitsblättern kombinieren und die Daten dann vergleichen, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Die Abgleichsfunktion des MDS-Add-Ins für Excel verwendet die DQS-Abgleichsfunktionalität, um Übereinstimmungen in den Daten zu identifizieren. In dieser Aufgabe kombinieren Sie Daten aus zwei Arbeitsblättern in einem Arbeitsblatt und führen dann die Abgleichsaktivität aus, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Finden Sie unter [Data Quality-Abgleich im MDS-Add-in für Excel](http://msdn.microsoft.com/library/hh548681.aspx) und [Kombinieren von Daten](http://msdn.microsoft.com/library/hh548680.aspx) Themen Weitere Informationen.  
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Aufgabe 4 (Optional): Kombination, Abgleich und Veröffentlichung eines neuen Satz Daten
+  Es ist möglich, dass Sie dem MDS-Repository im Laufe der Zeit weitere Daten hinzufügen möchten. Bevor Sie Daten hinzufügen, kann es hilfreich sein, die neuen Daten an die Daten verglichen werden soll, die bereits in MDS, um sicherzustellen, dass Sie keine doppelte oder ungenaue Daten hinzufügen, werden verwaltet wird. Im Master Data Services-Add-In für Excel können Sie Daten aus zwei Arbeitsblättern kombinieren und die Daten dann vergleichen, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Die Abgleichsfunktion des MDS-Add-Ins für Excel verwendet die DQS-Abgleichsfunktionalität, um Übereinstimmungen in den Daten zu identifizieren. In dieser Aufgabe kombinieren Sie Daten aus zwei Arbeitsblättern in einem Arbeitsblatt und führen dann die Abgleichsaktivität aus, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Finden Sie unter [Data Quality-Abgleich im MDS-Add-in für Excel](https://msdn.microsoft.com/library/hh548681.aspx) und [Kombinieren von Daten](https://msdn.microsoft.com/library/hh548680.aspx) Themen Weitere Informationen.  
   
 1.  Starten Sie die neue Instanz der **Excel**. Klicken Sie auf **starten**, zeigen Sie auf **ausführen**, Typ **Excel**, und klicken Sie auf **OK**.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48061750"
   
 4.  Daraufhin sollte die **Master Data Explorer** rechts. Wenn Sie die Master Data Explorer nicht angezeigt werden, klicken Sie auf **Explorer anzeigen** Schaltfläche auf dem Menüband.  
   
-5.  In der **Master Data Explorer** , wählen Sie im Fenster **Lieferanten** in der Dropdown-Liste für die **Modell**. Sie sehen, dass das Modell eine Entität verfügt: **Lieferanten**.  
+5.  In der **Master Data Explorer** , wählen Sie im Fenster **Lieferanten** in der Dropdown-Liste für die **Modell**. Für das Modell sollte eine Entität angezeigt werden: **Lieferanten**.  
   
      ![Excel – Master Data Explorer-Fenster](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel – Master Data Explorer-Fenster")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48061750"
   
 8.  Open **Suppliers.xls** Datei (die ursprüngliche Eingabedatei, die in den Lernprogrammdateien enthalten ist), und kopieren Sie alle (drei) Zeilen aus der **CombineAndCleanse** Arbeitsblatt **Tabelle2**.  
   
-9. Wechseln Sie zurück zu der **Lieferanten** Stylesheets in die **Mappe1-Microsoft Excel** (nicht die **Cleansed and Lieferantenliste abgeglichen** Excel), verbunden ist **MDS**.  
+9. Wechseln Sie zurück zu der **Lieferanten** Stylesheets in die **Mappe1 - Microsoft Excel** (nicht die **Cleansed and Lieferantenliste abgeglichen** Excel), verbunden ist **MDS**.  
   
 10. Klicken Sie auf **Masterdaten** in der Menüleiste.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48061750"
   
 25. Klicken Sie auf **OK**.  
   
-26. Der Abgleichsprozess sollte ein Duplikat identifizieren, für den Lieferanten mit **Code: S1**.  
+26. Der Abgleichsprozess sollte ein Duplikat für den Lieferanten mit folgendem Code identifizieren: **S1**.  
   
      ![Excel – Abgleichsergebnisse](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel – Abgleichsergebnisse")  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48061750"
   
 33. **Sortierung** die Liste nach **Code** , und suchen Sie nach Datensätzen mit **S57** und **S66** als Codes. Sie können auch die **Filter** auf der Symbolleiste, um für einen bestimmten Datensatz in der Liste zu suchen.  
   
-34. Schließen Sie jetzt **Mappe1-Microsoft Excel** Fenster ohne Speichern der Datei.  
+34. Schließen Sie jetzt **Mappe1 - Microsoft Excel** Fenster ohne Speichern der Datei.  
   
 ## <a name="next-step"></a>Nächster Schritt  
  [Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
