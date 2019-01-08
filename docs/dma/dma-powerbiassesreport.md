@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 07fdcf0e38f6b48e70140f1ce5c7d9e29d329267
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 1094d6fd52841a65afa58768dfaee9a05aa20810
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643968"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208289"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analysieren Sie konsolidierte Bewertungsberichte erstellt, die von Data Migration Assistant mit Power BI
 
@@ -40,7 +40,7 @@ Die folgenden Berichte sind enthalten:
 
 - [Lokale Upgradebereitschaft](#on-premises-upgrade-readiness--details)
 
-  Die Datenquelle ist die UpgradeSuccessRanking-Ansicht in der Datenbank DMAReporting.  Dieser Bericht zeigt den Prozentsatz Upgrade erfolgreich für Ihre Datenbanken bewerteten.
+  Die Datenquelle ist die UpgradeSuccessRanking-Ansicht in der Datenbank DMAReporting.  Dieser Bericht zeigt den Prozentsatz Upgrade erfolgreich für Ihre Datenbanken bewerteten.
 
 - [Lokale Featureparität](#on-premise-feature-parity--details)
 
@@ -48,7 +48,7 @@ Die folgenden Berichte sind enthalten:
 
 - [Azure SQL-Datenbank mit Upgrade readiness](#azure-sql-db-upgrade-readiness--details)
 
-  Die Datenquelle ist die UpgradeSuccessRanking-Ansicht in der Datenbank DMAReporting.  Dieser Bericht zeigt den Prozentsatz Upgrade Erfolg für Datenbanken, die für Migrationen von Azure SQL-Datenbank bewertet.
+  Die Datenquelle ist die UpgradeSuccessRanking-Ansicht in der Datenbank DMAReporting.  Dieser Bericht zeigt den Prozentsatz Upgrade Erfolg für Datenbanken, die für Migrationen von Azure SQL-Datenbank bewertet.
 
 - [Azure SQL-Datenbank nicht unterstützte Funktionen](#azure-sql-db-unsupported-features--details)
 
@@ -74,17 +74,17 @@ Sie können diese Berichte in Ihrer Umgebung funktioniert, ändern Sie die Daten
 
 ![Dashboardbericht](../dma/media/DashboardReport.png)
 
-Das Dashboard zeigt Details aller Ihre Bewertungen. Sie können die Slicer auf der linken Seite verwenden, zum Filtern nach Instanz oder Datenbank. Sie können das Balkendiagramm verwenden, um einen Drilldown in bestimmte Kategorien, um festzustellen, wo die Probleme liegen.
+Das Dashboard zeigt Details aller Ihre Bewertungen. Sie können die Slicer auf der linken Seite verwenden, zum Filtern nach Instanz oder Datenbank. Sie können das Balkendiagramm verwenden, um einen Drilldown in bestimmte Kategorien, um festzustellen, wo die Probleme liegen.
 
 Um einen Drilldown ausführen möchten, wählen Sie den Kreis mit den Pfeil nach unten in der oberen rechten Ecke des Balkendiagramms.
 
 ![Drilldown für Kategorie](../dma/media/CategoryDrillDown.png)
 
-Die Drilldown-Sequenz wird festgelegt, wie in der folgenden Abbildung dargestellt (unter **Achse**). Um die Reihenfolge zu ändern, ziehen Sie die Spalten in der gewünschten Reihenfolge.
+Die Drilldown-Sequenz wird festgelegt, wie in der folgenden Abbildung dargestellt (unter **Achse**). Um die Reihenfolge zu ändern, ziehen Sie die Spalten in der gewünschten Reihenfolge.
 
 ![Visualisierungen, Balkendiagramm-Achse](../dma/media/VisualizationsAxis.png)
 
-In dieser Ansicht wird noch leistungsfähiger, wenn Sie zuerst nach einer bestimmten Datenbank filtern, und klicken Sie dann einen Drilldown für die bestimmte Kategorie Probleme. Im folgenden Beispiel wird die HR-Datenbank für die Instanz ausgewählt **SQL01** , alle Objekte anzuzeigen, die Migrationen (wichtige Änderungen) verhindern.
+In dieser Ansicht wird noch leistungsfähiger, wenn Sie zuerst nach einer bestimmten Datenbank filtern, und klicken Sie dann einen Drilldown für die bestimmte Kategorie Probleme. Im folgenden Beispiel wird die HR-Datenbank für die Instanz ausgewählt **SQL01** , alle Objekte anzuzeigen, die Migrationen (wichtige Änderungen) verhindern.
 
 ![Grundlegende Änderungen für die HR-Datenbank](../dma/media/BreakingChanges.png)
 
@@ -92,9 +92,9 @@ In dieser Ansicht wird noch leistungsfähiger, wenn Sie zuerst nach einer bestim
 
 ![Lokales aktualisieren Bericht "Testfallbereitschaft"](../dma/media/OnPremisesUpgradeReadinessReport.png)
 
-Dieser Bericht zeigt eine Momentaufnahme kann die Datenbanken sind auf eine neuere Version von SQL Server zu migrieren. Die Daten in diesem Bericht stammen aus das "Dbo". UpgradeSuccessFactor\_OnPrem-Sicht in der DMAReporting-Datenbank.
+Dieser Bericht zeigt eine Momentaufnahme kann die Datenbanken sind auf eine neuere Version von SQL Server zu migrieren. Die Daten in diesem Bericht stammen aus das "Dbo". UpgradeSuccessFactor\_OnPrem-Sicht in der DMAReporting-Datenbank.
 
-Filtern nach Instanz- und Datenbanknamen und die Bewertung Karten oben verwenden, sehen Sie die Version die Datenbank zu migriert werden kann. Z. B. Wenn Sie von der AdventureWorks 2012-Datenbank filtern, sehen Sie, dass die Datenbank bereit für alle SQL Server-Versionen, die im Bericht aufgeführt ist. Dies wird bestimmt, indem Sie sicherstellen, dass es sind keine aktuellen Änderungen für diese Datenbank und die Kompatibilität.
+Filtern nach Instanz- und Datenbanknamen und die Bewertung Karten oben verwenden, sehen Sie die Version die Datenbank zu migriert werden kann. Z. B. Wenn Sie von der AdventureWorks 2012-Datenbank filtern, sehen Sie, dass die Datenbank bereit für alle SQL Server-Versionen, die im Bericht aufgeführt ist. Dies wird bestimmt, indem Sie sicherstellen, dass es sind keine aktuellen Änderungen für diese Datenbank und die Kompatibilität.
 
 ![Aktualisieren von Erfolgsfaktor für AdventureWorks-Datenbank](../dma/media/UpgradeSuccessFactor.png)
 
@@ -104,7 +104,7 @@ Filtern nach Instanz- und Datenbanknamen und die Bewertung Karten oben verwenden
 
 Verwenden Sie diesen Bericht, um neue Features hervorzuheben, die für die Datenbank in der SQL Server-Zielversion verwendet werden kann.
 
-Wenn Sie eine Funktion in das Trichterdiagramm auswählen, werden die Daten im unteren Bereich hervorgehoben, welche Objekte von der Funktion betroffen sind. Im folgenden Beispiel die **Stretch-Datenbank zum Einsparen von Speicherkosten** Feature aktiviert ist, und eine Tabelle ist aufgeführt, die von dieser Funktion profitieren könnten.
+Wenn Sie eine Funktion in das Trichterdiagramm auswählen, werden die Daten im unteren Bereich hervorgehoben, welche Objekte von der Funktion betroffen sind. Im folgenden Beispiel die **Stretch-Datenbank zum Einsparen von Speicherkosten** Feature aktiviert ist, und eine Tabelle ist aufgeführt, die von dieser Funktion profitieren könnten.
 
 ![Feature-Empfehlung für Stretch Database](../dma/media/FeatureRecommend_StretchDatabase.png)
 
@@ -112,7 +112,7 @@ Wenn Sie eine Funktion in das Trichterdiagramm auswählen, werden die Daten im u
 
 ![Azure SQL-Datenbank mit Upgrade Readiness-Bericht](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
 
-Dieser Bericht zeigt die Datenbank-Bereitschaft zum Migrieren zu Azure SQL-Datenbank V12. Die Daten aus diesem Bericht stammen aus das "Dbo". In der Datenbank DMAReporting UpgradeSuccessRanking-Ansicht.
+Dieser Bericht zeigt die Datenbank-Bereitschaft zum Migrieren zu Azure SQL-Datenbank V12. Die Daten aus diesem Bericht stammen aus das "Dbo". In der Datenbank DMAReporting UpgradeSuccessRanking-Ansicht.
 
 ### <a name="azure-features-parity-report"></a>Azure-Features Parität Bericht
 
@@ -120,7 +120,7 @@ Dieser Bericht zeigt die Datenbank-Bereitschaft zum Migrieren zu Azure SQL-Daten
 
 Mithilfe dieses Berichts, markieren Sie die *Ebene Instanzfunktionen* , werden von Azure SQL-Datenbank V12 nicht unterstützt.
 
-Wenn Sie eine Funktion in das Trichterdiagramm auswählen, enthält die Daten am unteren Rand der Instanzen und Funktionen der Datenbank, die unterstützt werden. Im folgenden Beispiel ist dieses Feature ist aktiviert: **Always on-verfügbarkeitsgruppenkonfiguration ist nicht in Azure SQL-Datenbank unterstützt**.  
+Wenn Sie eine Funktion in das Trichterdiagramm auswählen, enthält die Daten am unteren Rand der Instanzen und Funktionen der Datenbank, die unterstützt werden. Im folgenden Beispiel wird dieses Feature ausgewählt: **Immer auf der Verfügbarkeit Konfiguration wird nicht unterstützt in Azure SQL-Datenbank**.  
 
 ![Always on-Verfügbarkeitsgruppen-Funktion](../dma/media/Feature_AlwaysOnAvailability.png)
 

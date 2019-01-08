@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b727bceb20b275128ea030f87c85872a88e931d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825668"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201909"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  [  **@keepfulltextindexfile=** ] **"***KeepFulltextIndexFile***"**  
  Gibt an, dass die Volltextindex-Datei, die der zu trennenden Datenbank zugeordnet ist, während des Trennvorgangs der Datenbank nicht gelöscht wird. *KeepFulltextIndexFile* ist eine **nvarchar(10)** hat den Standardwert des **"true"**. Wenn *KeepFulltextIndexFile* ist **"false"**, wird die Volltext-Indexdateien der Datenbank zugeordnet, und die Metadaten der der Volltextindex gelöscht, es sei denn, die Datenbank schreibgeschützt ist. Wenn der Wert NULL oder **"true"**, volltextbezogene Metadaten beibehalten werden.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Die**@keepfulltextindexfile** Parameter wird in einer zukünftigen Version entfernt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie diesen Parameter beim Entwickeln neuer Anwendungen nicht, und planen Sie so bald wie möglich das Ändern von Anwendungen, in denen er zurzeit verwendet wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -114,7 +114,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Aktuelle erzwingen, dass Benutzer aus der Datenbank sofort oder innerhalb einer angegebenen Anzahl von Sekunden, verwenden Sie auch die Option ROLLBACK: ALTER DATABASE *Database_name* SET SINGLE_USER WITH ROLLBACK *Rollback_option*. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+>  So erzwingen die aktuellen Benutzer aus der Datenbank sofort oder innerhalb einer angegebenen Anzahl von Sekunden, verwenden auch die Option ROLLBACK: ALTER DATABASE *Database_name* SET SINGLE_USER WITH ROLLBACK *Rollback_option*. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Erneutes Anfügen einer Datenbank  
  Die getrennten Dateien bleiben und können mithilfe von CREATE DATABASE (mit der FOR ATTACH oder FOR ATTACH_REBUILD_LOG-Option) erneut angefügt werden. Die Dateien können auf einen anderen Server verschoben und dort angefügt werden.  

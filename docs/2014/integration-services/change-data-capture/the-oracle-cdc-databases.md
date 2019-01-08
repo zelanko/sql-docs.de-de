@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba180417eb3a426d24ffa6ee8dc985c89fb8e0a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e35293fb7f59475ebdcfea70c1b27d4798e3b93
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205892"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370172"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC-Datenbanken
   Eine Oracle CDC-Instanz wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit dem gleichen Namen auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz zugeordnet. Diese Datenbank wird als Oracle CDC-Datenbank (oder kurz CDC-Datenbank) bezeichnet.  
@@ -31,7 +30,7 @@ ms.locfileid: "48205892"
   
 -   Einen Satz von Änderungstabellen und Änderungszugriffsfunktionen, die vom SQL Server CDC-Mechanismus generiert werden und identisch mit den Elementen sind, die beim normalen SQL Server CDC-Vorgang (nicht Oracle) verwendet werden.  
   
- Anfänglich können nur die Mitglieder der festen Datenbankrolle `cdc` dbowner **auf das** -Schema zugreifen. Der Zugriff auf die Änderungstabellen und Änderungsfunktionen wird über das gleiche Sicherheitsmodell wie für SQL Server CDC gesteuert. Weitere Informationen zum Sicherheitsmodell finden Sie unter [Sicherheitsmodell](http://go.microsoft.com/fwlink/?LinkId=231151).  
+ Anfänglich können nur die Mitglieder der festen Datenbankrolle `cdc` dbowner **auf das** -Schema zugreifen. Der Zugriff auf die Änderungstabellen und Änderungsfunktionen wird über das gleiche Sicherheitsmodell wie für SQL Server CDC gesteuert. Weitere Informationen zum Sicherheitsmodell finden Sie unter [Sicherheitsmodell](https://go.microsoft.com/fwlink/?LinkId=231151).  
   
 ## <a name="creating-the-cdc-database"></a>Erstellen der CDC-Datenbank  
  In den meisten Fällen wird die CDC-Datenbank über die CDC Designer Console erstellt, aber sie kann auch mithilfe eines CDC-Bereitstellungsskripts erstellt werden, das mit der CDC Designer Console generiert wird. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemadministrator kann die Datenbankeinstellungen bei Bedarf ändern (z. B. in Bezug auf Speicherung, Sicherheit oder Verfügbarkeit).  
@@ -51,11 +50,11 @@ ms.locfileid: "48205892"
  Die Spiegeltabellen sind leer. Darin werden keine Daten gespeichert. Sie werden verwendet, um die standardmäßige SQL Server CDC-Infrastruktur zu aktivieren, die von der Oracle CDC-Instanz verwendet wird. Um zu verhindern, dass Daten in die Spiegeltabellen eingefügt oder darin aktualisiert werden, werden alle UPDATE-, DELETE- und INSERT-Vorgänge für PUBLIC verweigert. Dadurch wird sichergestellt, dass die Daten nicht geändert werden können.  
   
 ## <a name="access-to-change-data"></a>Zugreifen auf Änderungsdaten  
- Aufgrund des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsmodells, das zur Erlangung des Zugriffs auf die Änderungsdaten verwendet wird, die einer Aufzeichnungsinstanz zugeordnet sind, muss dem Benutzer der `select` -Zugriff auf alle aufgezeichneten Spalten der zugeordneten Spiegeltabelle gewährt werden (Zugriffsberechtigungen für die ursprünglichen Oracle-Tabellen bieten keinen Zugriff auf die Änderungstabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsmodell finden Sie unter [Sicherheitsmodell](http://go.microsoft.com/fwlink/?LinkId=231151).  
+ Aufgrund des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsmodells, das zur Erlangung des Zugriffs auf die Änderungsdaten verwendet wird, die einer Aufzeichnungsinstanz zugeordnet sind, muss dem Benutzer der `select` -Zugriff auf alle aufgezeichneten Spalten der zugeordneten Spiegeltabelle gewährt werden (Zugriffsberechtigungen für die ursprünglichen Oracle-Tabellen bieten keinen Zugriff auf die Änderungstabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsmodell finden Sie unter [Sicherheitsmodell](https://go.microsoft.com/fwlink/?LinkId=231151).  
   
  Wenn bei Erstellung der Aufzeichnungsinstanz eine Gatingrolle angegeben wird, muss der Aufrufer außerdem Mitglied der angegebenen Gatingrolle sein. Andere allgemeine Change Data Capture-Funktionen für den Zugriff auf Metadaten stehen für alle Datenbankbenutzer mit der Rolle PUBLIC zur Verfügung. Der Zugriff auf die zurückgegebenen Metadaten wird jedoch in der Regel auch hier durch die Zugriffsberechtigungen auf die zugrunde liegenden Quelltabellen und die Mitgliedschaft in definierten Gatingrollen beschränkt.  
   
- Änderungsdaten können gelesen werden, indem spezielle tabellenbasierte Funktionen aufgerufen werden, die von der SQL Server CDC-Komponente beim Erstellen einer Aufzeichnungsinstanz generiert werden. Weitere Informationen zu diesen Funktionen finden Sie unter [Change Data Capture-Funktionen (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152).  
+ Änderungsdaten können gelesen werden, indem spezielle tabellenbasierte Funktionen aufgerufen werden, die von der SQL Server CDC-Komponente beim Erstellen einer Aufzeichnungsinstanz generiert werden. Weitere Informationen zu diesen Funktionen finden Sie unter [Change Data Capture-Funktionen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
   
  Der Zugriff auf die CDC-Daten über die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CDC-Quellkomponente unterliegt den gleichen Regeln.  
   
@@ -81,7 +80,7 @@ ms.locfileid: "48205892"
   
  Wenn die Aufzeichnung anfänglich für die Tabelle `<schema-name>.<table-name>`aktiviert ist, ist der Standardname der Aufzeichnungsinstanz `<schema-name>_<table-name>`. Der Standardname der Aufzeichnungsinstanz für die Oracle-Tabelle HR.EMPLOYEES ist z. B. HR_EMPLOYEES, und die zugeordnete Änderungstabelle ist [cdc]. [HR_EMPLOYEES_CT].  
   
- In die Aufzeichnungstabellen wird von der Oracle CDC-Instanz geschrieben. Sie werden mit speziellen Tabellenwertfunktionen gelesen, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Erstellen der Aufzeichnungsinstanz generiert werden. Beispiel: `fn_cdc_get_all_changes_HR_EMPLOYEES`. Weitere Informationen zu diesen CDC-Funktionen finden Sie unter [Change Data Capture-Funktionen (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152).  
+ In die Aufzeichnungstabellen wird von der Oracle CDC-Instanz geschrieben. Sie werden mit speziellen Tabellenwertfunktionen gelesen, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Erstellen der Aufzeichnungsinstanz generiert werden. Beispiel: `fn_cdc_get_all_changes_HR_EMPLOYEES`. Weitere Informationen zu diesen CDC-Funktionen finden Sie unter [Change Data Capture-Funktionen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
   
 ###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  Die Tabelle **[cdc].[lsn_time_mapping]** wird von der SQL Server-CDC-Komponente generiert. Sie wird in Verbindung mit Oracle CDC anders als sonst verwendet.  
@@ -98,8 +97,8 @@ ms.locfileid: "48205892"
 |Element|Description|  
 |----------|-----------------|  
 |version|Hiermit wird die Version der CDC-Instanzkonfiguration verfolgt. Sie wird bei jeder Aktualisierung der Tabelle und bei jeder Hinzufügung einer neuen Aufzeichnungsinstanz oder Entfernung einer vorhandenen Aufzeichnungsinstanz aktualisiert.|  
-|connect_string|Eine Oracle-Verbindungszeichenfolge. Ein grundlegendes Beispiel ist:<br /><br /> `<server>:<port>/<instance>` (z. B. `erp.contoso.com:1521/orcl`).<br /><br /> In der Verbindungszeichenfolge kann auch ein Oracle Net-Verbindungsdeskriptor angegeben werden, z. B. `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Wenn Sie einen Verzeichnisserver oder tnsnames verwenden, kann die Verbindungszeichenfolge der Name der Verbindung sein.<br /><br /> Weitere Informationen zu Oracle-Verbindungszeichenfolgen finden Sie unter [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153). Sie erhalten dort ausführliche Informationen zu Verbindungszeichenfolgen der Oracle-Datenbank für den Oracle Instant Client, der von Oracle CDC Service verwendet wird.|  
-|use_windows_authentication|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Ein Oracle-Benutzername und ein dazugehöriges Kennwort werden zur Authentifizierung bereitgestellt (Standardeinstellung).<br /><br /> **1**: Zum Herstellen einer Verbindung mit der Oracle-Datenbank wird die Windows-Authentifizierung verwendet. Sie können diese Option nur verwenden, wenn die Oracle-Datenbank für die Nutzung der Windows-Authentifizierung konfiguriert ist.|  
+|connect_string|Eine Oracle-Verbindungszeichenfolge. Ein grundlegendes Beispiel ist:<br /><br /> `<server>:<port>/<instance>` (z. B. `erp.contoso.com:1521/orcl`).<br /><br /> In der Verbindungszeichenfolge kann auch ein Oracle Net-Verbindungsdeskriptor angegeben werden, z. B. `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Wenn Sie einen Verzeichnisserver oder tnsnames verwenden, kann die Verbindungszeichenfolge der Name der Verbindung sein.<br /><br /> Weitere Informationen zu Oracle-Verbindungszeichenfolgen finden Sie unter [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153). Sie erhalten dort ausführliche Informationen zu Verbindungszeichenfolgen der Oracle-Datenbank für den Oracle Instant Client, der von Oracle CDC Service verwendet wird.|  
+|use_windows_authentication|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Eine Oracle-Benutzernamen und Kennwort werden für die Authentifizierung (Standard) bereitgestellt.<br /><br /> **1**: Windows-Authentifizierung wird verwendet, für die Verbindung zur Oracle-Datenbank. Sie können diese Option nur verwenden, wenn die Oracle-Datenbank für die Nutzung der Windows-Authentifizierung konfiguriert ist.|  
 |username|Der Name des Oracle-Datenbankbenutzers mit Log Mining-Berechtigung. Diese Angabe ist nur obligatorisch, wenn Folgendes gilt: **use_windows_authentication = 0**.|  
 |Kennwort|Das Kennwort für den Oracle Datenbankbenutzer mit Log Mining-Berechtigung. Diese Angabe ist nur obligatorisch, wenn Folgendes gilt: **use_windows_authentication = 0**.|  
 |transaction_staging_timeout|Der Zeitraum in Sekunden, während dessen eine nicht mit Commit bestätigte Oracle-Transaktion im Arbeitsspeicher verbleibt, bevor sie in die Tabelle **cdc.xdbcdc_staged_transactions** geschrieben wird. Der Standardwert ist 120 Sekunden.|  
@@ -108,7 +107,7 @@ ms.locfileid: "48205892"
   
  In der folgenden Tabelle werden die verfügbaren Optionen beschrieben.  
   
-|Name|Default|Min|Max|STATIC-Cursor|Description|  
+|Name|Standard|Min|Max|STATIC-Cursor|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |Ablaufverfolgung|False|-|-|False|Die verfügbaren Werte:<br /><br /> **Wahr**<br /><br /> **False**<br /><br /> **on**<br /><br /> **off**|  
 |cdc_update_state_interval|10|1|120|False|Die Größe von Arbeitsspeichersegmenten (in KB), die für eine Transaktion zugeordnet werden (eine Transaktion kann mehr als ein Segment zuordnen). Siehe Spalte „memory_limit“ in der [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) -Tabelle.|  
@@ -142,8 +141,8 @@ ms.locfileid: "48205892"
 |----------|-----------------|  
 |status|Der aktuelle Statuscode für die aktuelle Oracle CDC-Instanz. Der Status beschreibt den aktuellen Zustand für die CDC.|  
 |sub_status|Status der zweiten Ebene, der zusätzliche Informationen zum aktuellen Status liefert.|  
-|active|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Der Oracle CDC-Instanzprozess ist nicht aktiv.<br /><br /> **1**: Der Oracle CDC-Instanzprozess ist aktiv.|  
-|Fehler|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Der Oracle CDC-Instanzprozess befindet sich nicht in einem Fehlerzustand.<br /><br /> **1**: Die Oracle CDC-Instanz befindet sich in einem Fehlerzustand.|  
+|active|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Der Oracle CDC-instanzprozess ist nicht aktiv.<br /><br /> **1**: Der Oracle CDC-instanzprozess ist aktiv.|  
+|Fehler|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Der Oracle CDC-instanzprozess ist nicht in einem Fehlerzustand befindet.<br /><br /> **1**: Oracle CDC-Instanz ist in einem Fehlerzustand befindet.|  
 |status_message|Eine Zeichenfolge, die eine Beschreibung des Fehlers oder des Status darstellt.|  
 |timestamp|Der Zeitstempel mit der Uhrzeit (UTC), zu der der Aufzeichnungsstatus zuletzt aktualisiert wurde.|  
 |active_capture_node|Der Name des Hosts (der Host kann ein Knoten auf einem Cluster sein), auf dem momentan der Oracle CDC Service und die Oracle CDC-Instanz (auf der die Oracle-Transaktionsprotokolle verarbeitet werden) ausgeführt werden.|  

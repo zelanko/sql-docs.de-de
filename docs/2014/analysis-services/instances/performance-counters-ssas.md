@@ -11,21 +11,21 @@ ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9db2bfec3a189fcad99d72821e1415e935b1368c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7d4e13542e8361fb9f4bf4fb05509ebe01669ad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168580"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365792"
 ---
 # <a name="performance-counters-ssas"></a>Leistungsindikatoren (SSAS)
   Mit dem Systemmonitor können Sie die Leistung einer Microsoft SQL Server Analysis Services (SSAS)-Instanz mithilfe von Leistungsindikatoren überwachen.  
   
  Der Systemmonitor ist ein MMC-Snap-In ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control), das die Verwendung von Ressourcen nachverfolgt. Sie können dieses MMC-Snap-In starten, indem Sie an der Eingabeaufforderung **PerfMon** eingeben oder in der Systemsteuerung auf **Verwaltung**und anschließend auf **Systemmonitor**klicken. Mithilfe des Systemmonitors können Sie die Leistung und Aktivität von Server und Prozessen mithilfe vordefinierter Objekte und Leistungsindikatoren nachverfolgen sowie Ereignisse mithilfe benutzerdefinierter Leistungsindikatoren überwachen. Der Systemmonitor erfasst Anzahlwerte anstelle von Daten zu den Ereignissen, z. B. die Speicherauslastung, die Anzahl der aktiven Transaktionen oder die CPU-Aktivität. Für bestimmte Leistungsindikatoren können auch Schwellenwerte festgelegt werden, um Warnungen zu generieren, durch die Operatoren benachrichtigt werden.  
   
- Der Systemmonitor ist in der Lage, Remoteinstanzen und lokale Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu überwachen. Weitere Informationen finden Sie unter [Verwenden des Systemmonitors](http://technet.microsoft.com/library/cc749115.aspx).  
+ Der Systemmonitor ist in der Lage, Remoteinstanzen und lokale Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu überwachen. Weitere Informationen finden Sie unter [Verwenden des Systemmonitors](https://technet.microsoft.com/library/cc749115.aspx).  
   
- Wenn Sie die Beschreibung eines Leistungsindikators anzeigen möchten, der mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verwendet werden kann, öffnen Sie im Systemmonitor das Dialogfeld **Leistungsindikatoren hinzufügen** , wählen Sie ein Leistungsobjekt aus, und klicken Sie dann auf **Beschreibung anzeigen**. Die wichtigsten Leistungsindikatoren sind die CPU-Nutzung, die Speicherauslastung und die Datenträger-E/A-Geschwindigkeit. Es wird empfohlen, dass Sie mit diesen wichtigen Leistungsindikatoren beginnen und mit detaillierteren Indikatoren fortfahren, wenn Sie genauere Vorstellungen über die Verbesserungsmöglichkeiten durch eine Überwachung haben. Weitere Informationen zu den relevanten Leistungsindikatoren finden Sie im [SQL Server 2008 R2-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ Wenn Sie die Beschreibung eines Leistungsindikators anzeigen möchten, der mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verwendet werden kann, öffnen Sie im Systemmonitor das Dialogfeld **Leistungsindikatoren hinzufügen** , wählen Sie ein Leistungsobjekt aus, und klicken Sie dann auf **Beschreibung anzeigen**. Die wichtigsten Leistungsindikatoren sind die CPU-Nutzung, die Speicherauslastung und die Datenträger-E/A-Geschwindigkeit. Es wird empfohlen, dass Sie mit diesen wichtigen Leistungsindikatoren beginnen und mit detaillierteren Indikatoren fortfahren, wenn Sie genauere Vorstellungen über die Verbesserungsmöglichkeiten durch eine Überwachung haben. Weitere Informationen zu den relevanten Leistungsindikatoren finden Sie im [SQL Server 2008 R2-Vorgangshandbuch](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Leistungsindikatoren werden so gruppiert, dass verwandte Leistungsindikatoren leichter auffindbar sind.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "48168580"
 |Leistungsindikator|Description|  
 |-------------|-----------------|  
 |Seitenpool 64 KB zugeordnet|Von System geliehener Arbeitsspeicher in KB.  Dieser Speicher wird anderen Teilen des Servers zugewiesen.|  
-|Seitenpool 64 KB Lookaside|Aktueller Speicher in 64 KB-Lookaside-Liste (in KB).  (Zur Verwendung bereite Speicherseiten.)|  
+|Seitenpool 64 KB Lookaside|Aktueller Speicher in 64 KB-Lookaside-Liste (in KB).  (Zur Verwendung bereite Speicherseiten.)|  
 |Seitenpool 8 KB zugeordnet|Von 64 KB-Seitenpool geliehener Arbeitsspeicher (in KB).  Dieser Speicher wird anderen Teilen des Servers zugewiesen.|  
 |Seitenpool 8 KB Lookaside|Aktueller Speicher in 8 KB-Lookaside-Liste (in KB).  (Zur Verwendung bereite Speicherseiten.)|  
 |Seitenpool 1 KB zugeordnet|Von 64 KB-Seitenpool geliehener Arbeitsspeicher (in KB).  Dieser Speicher wird anderen Teilen des Servers zugewiesen.|  

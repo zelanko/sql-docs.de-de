@@ -21,12 +21,12 @@ ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df2afd988e46692f816c22e69a31b33833129ff1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00daac655f0c435c1ee22239d3d4aafa23065997
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809388"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515889"
 ---
 # <a name="character-data-and-c-strings"></a>Zeichendaten und C-Zeichenfolgen
 Eingabeparameter, die in Zeichendaten mit variabler Länge (z. B. Spaltennamen, dynamische Parameter und zeichenfolgenattributwerten) finden Sie haben einen zugeordnete Length-Parameter. Wenn die Anwendung die Zeichenfolgen mit Null-Zeichen wie üblich in C beendet wird, wird als Argument entweder die Länge in Bytes der Zeichenfolge (mit der Null-Terminator) oder SQL_NTS (Null-Terminated Zeichenfolge). Eine nicht Negative Length-Argument gibt an, die tatsächliche Länge der Zeichenfolge zugeordnet werden. Das Längenargument möglicherweise 0, um eine Zeichenfolge der Länge 0 (null), geben Sie die von einer NULL-Wert unterscheidet. Der negative Wert SQL_NTS weist den Treiber die Länge der Zeichenfolge zu bestimmen, indem Sie die Null-Terminierungszeichen suchen.  
@@ -35,10 +35,10 @@ Eingabeparameter, die in Zeichendaten mit variabler Länge (z. B. Spaltennamen, 
   
  Besondere Vorsicht durch die Anwendung und der Treiber beim Senden oder Abrufen von long-Zeichendaten in Teilen mit **SQLPutData** oder **SQLGetData**. Wenn die Daten als eine Reihe von Null-terminierte Zeichenfolgen übergeben werden, müssen die Zeichen Null-Terminierung an diesen Zeichenfolgen entfernt werden, bevor die Daten wieder zusammengesetzt werden können.  
   
- Eine Anzahl von ODBC-Programmierer haben Zeichendaten und C-Zeichenfolgen verwechselt werden. Ein Artefakt mit der Programmiersprache C, bei der Definition der ODBC-Funktionen ist dieses Problem aufgetreten ist. Wenn eine ODBC-Treiber oder eine Anwendung eine andere Sprache verwendet, beachten Sie, dass ODBC sprachunabhängige – diese Verwirrung ist weniger wahrscheinlich auftreten.  
+ Eine Anzahl von ODBC-Programmierer haben Zeichendaten und C-Zeichenfolgen verwechselt werden. Ein Artefakt mit der Programmiersprache C, bei der Definition der ODBC-Funktionen ist dieses Problem aufgetreten ist. Bedenken Sie ein ODBC-Treiber oder eine Anwendung eine andere Sprache verwendet – sollten, dass ODBC sprachunabhängig ist – diese Verwirrung ist weniger wahrscheinlich auftreten.  
   
  Wenn C-Zeichenfolgen verwendet werden, um Zeichendaten zu speichern, wird der Null-Terminierungszeichen ist nicht als Teil der Daten und zählt nicht als Teil der Bytelänge. Beispielsweise kann Zeichen Daten "ABC" als die C-Zeichenfolge "ABC\0" oder das Array von Zeichen {"A", "B", "C"} gespeichert werden. Die Bytelänge der Daten ist 3, unabhängig davon, ob es als eine Zeichenfolge oder ein Array von Zeichen behandelt wird.  
   
  Anwendungen und Treiber häufig C-Zeichenfolgen (Arrays von Zeichen Null-terminiert) verwenden, um Zeichendaten enthalten, zwar gibt es nicht zwingend vorgeschrieben. In C können Daten auch als ein Array von Zeichen (ohne Null-Terminierung vorliegt) und die Byte-Länge, die separat übergeben werden, in den Längen-/Indikatorpuffer behandelt werden.  
   
- Da Zeichendaten in einem nicht-Null-terminierte Array gespeichert werden können, und die Bytelänge separat übergeben, ist es möglich, Einbetten von Null-Zeichen in der Zeichendaten enthalten sind. Allerdings in diesem Fall ist das Verhalten der ODBC-Funktionen nicht definiert und kann treiberspezifische gibt an, ob ein Treiber dies korrekt behandelt. Interoperable Anwendungen ausführen können sollte daher immer Zeichendaten behandelt, die eingebettete Null-Zeichen als binäre Daten enthalten kann.
+ Da Zeichendaten in einer nicht-Null endendes Array gespeichert werden können, und die Bytelänge separat übergeben, ist es möglich, Einbetten von Null-Zeichen in der Zeichendaten enthalten sind. Allerdings in diesem Fall ist das Verhalten der ODBC-Funktionen nicht definiert und kann treiberspezifische gibt an, ob ein Treiber dies korrekt behandelt. Interoperable Anwendungen ausführen können sollte daher immer Zeichendaten behandelt, die eingebettete Null-Zeichen als binäre Daten enthalten kann.

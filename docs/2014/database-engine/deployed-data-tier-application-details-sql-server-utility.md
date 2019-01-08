@@ -18,12 +18,12 @@ ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb7b23b6ff9bf81d9c156f52dd93797203c1161f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073296"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354925"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Details zu bereitgestellten Datenebenenanwendungen (SQL Server-Hilfsprogramm)
   Die Informationen in der Listenansicht Bereitgestellte Datenebenenanwendungen des Hilfsprogramm-Explorers enthalten Auslastungsdaten für einzelne Datenebenenanwendungen, Verlaufsdaten zur CPU-Auslastung und Details zur Speicherplatzauslastung auf Dateiebene sowie die Möglichkeit, Richtlinienschwellenwerte anzuzeigen und zu aktualisieren. Richtlinienschwellenwerte können auf der Ebene der Datenebenenanwendung für die CPU-Auslastung sowie Datenbankdateien und Protokolldateien gesteuert werden. Sie können auch Eigenschaftendetails für einzelne Datenebenenanwendungen anzeigen.  
@@ -60,7 +60,7 @@ ms.locfileid: "48073296"
   
     -   Grüner Pfeil nach unten – Der Zustand für mindestens eine Dateigruppe oder Protokolldateigruppe ist unterausgelastet, und keine Dateigruppe oder Protokolldateigruppe ist überausgelastet.  
   
-    -   Roter Pfeil nach oben – Der Integritätsstatus für mindestens eine Dateigruppe oder die Protokolldateigruppe ist überausgelastet. Wenn eine Datenbank den Status "Notfall" aufweist, wird für den Integritätsstatus ein überausgelasteter Protokolldateispeicherplatz angezeigt.  
+    -   Roter Pfeil nach oben – Der Integritätsstatus für mindestens eine Dateigruppe oder die Protokolldateigruppe ist überausgelastet. Wenn eine Datenbank den Status „emergency“ (Notfall) aufweist, wird für den Integritätsstatus der überausgelastete Protokolldateispeicherplatz angezeigt.  
   
      Um die Richtliniengrenzwerte für den Dateispeicherplatz anzuzeigen oder zu ändern, klicken Sie auf die Registerkarte **Speicherauslastung** .  
   
@@ -76,17 +76,17 @@ ms.locfileid: "48073296"
   
 -   Bereitstellungsdatum  
   
--   Vertrauenswürdig: (True oder False)  
+-   Vertrauenswürdig: ("True" oder "false")  
   
 -   Sortierung  
   
 -   Kompatibilitätsgrad: (z. B. Version100)  
   
--   Verschlüsselung aktiviert: (True oder False)  
+-   Verschlüsselung aktiviert: ("True" oder "false")  
   
--   Wiederherstellungsmodell: (SIMPLE, FULL oder BULK_LOGGED)  
+-   Wiederherstellungsmodell: (Einfach, Full oder Bulk_logged)  
   
--   Letzter Berichtszeitpunkt: Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) in der SQL Server-Onlinedokumentation. Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) in der SQL Server-Onlinedokumentation.  
+-   Zuletzt gemeldet: In dieser Spalte wird UCP lokale Datum und Uhrzeit, die mit dem Datentyp "DateTime". Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) in der SQL Server-Onlinedokumentation. Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) in der SQL Server-Onlinedokumentation.  
   
  Registerkarte CPU-Auslastung  
  Die Registerkarte CPU-Auslastung enthält Vergleichsdiagramme mit Verlaufsdaten für die Datenebenenanwendung und die CPU-Auslastung des Computers.  
@@ -104,7 +104,7 @@ ms.locfileid: "48073296"
 -   1 Jahr, in Intervallen von 1 Monat  
   
  Registerkarte Speicherauslastung  
- Die Registerkarte Speicherauslastung verfügt über eine Strukturansicht, in der Details zur Speicherauslastung für Datenbankdateien und Protokolldateien angezeigt werden, die zu der in der Listenansicht ausgewählten Datenebenenanwendung gehören. Die Zeitangaben zeigen das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) in der SQL Server-Onlinedokumentation. Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) in der SQL Server-Onlinedokumentation.  
+ Die Registerkarte Speicherauslastung verfügt über eine Strukturansicht, in der Details zur Speicherauslastung für Datenbankdateien und Protokolldateien angezeigt werden, die zu der in der Listenansicht ausgewählten Datenebenenanwendung gehören. Die Zeitangaben zeigen das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) in der SQL Server-Onlinedokumentation. Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) in der SQL Server-Onlinedokumentation.  
   
  Die Anzeige kann nach Dateigruppe oder nach Volume gruppiert werden. Um die Strukturansicht für Dateigruppen zu verwenden, aktivieren Sie im Bereich **Dateien gruppieren nach** das Optionsfeld **Dateigruppe** .  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48073296"
   
 -   Grüner Pfeil nach unten – Die Auslastung des Dateispeicherplatzes für mindestens eine Datendatei in der Dateigruppe ist unterausgelastet, und keine Dateien in der Dateigruppe sind überausgelastet.  
   
--   Roter Pfeil nach oben – Die Auslastung des Dateispeicherplatzes für alle Datendateien in der Dateigruppe ist überausgelastet. Wenn eine Datenbank den Status "Notfall" aufweist, wird für den Integritätsstatus ein überausgelasteter Protokolldateispeicherplatz angezeigt.  
+-   Roter Pfeil nach oben – Die Auslastung des Dateispeicherplatzes für alle Datendateien in der Dateigruppe ist überausgelastet. Wenn eine Datenbank den Status „emergency“ (Notfall) aufweist, wird für den Integritätsstatus der überausgelastete Protokolldateispeicherplatz angezeigt.  
   
  Um die Dateien nach Volume anzuzeigen, aktivieren Sie im Auswahlbereich **Dateien gruppieren nach** das Optionsfeld **Volume** . Im Diagramm mit Verlaufsdaten zur Speicherplatzauslastung wird der Dateispeicherplatz dargestellt, der von allen Datendateien und Protokolldateien auf dem Speichervolume belegt wird. Erweitern Sie die Struktur, um Details zu einzelnen Datenbankdatendateien und Protokolldateien anzuzeigen.  
   
@@ -153,17 +153,17 @@ ms.locfileid: "48073296"
   
 -   Bereitstellungsdatum  
   
--   Vertrauenswürdig: (True oder False)  
+-   Vertrauenswürdig: ("True" oder "false")  
   
 -   Sortierung  
   
 -   Kompatibilitätsgrad: (z. B. Version100)  
   
--   Verschlüsselung aktiviert: (True oder False)  
+-   Verschlüsselung aktiviert: ("True" oder "false")  
   
--   Wiederherstellungsmodell: (SIMPLE, FULL oder BULK_LOGGED)  
+-   Wiederherstellungsmodell: (Einfach, Full oder Bulk_logged)  
   
--   Letzter Berichtszeitpunkt: Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) in der SQL Server-Onlinedokumentation. Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) in der SQL Server-Onlinedokumentation.  
+-   Zuletzt gemeldet: In dieser Spalte wird UCP lokale Datum und Uhrzeit, die mit dem Datentyp "DateTime". Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) in der SQL Server-Onlinedokumentation. Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) in der SQL Server-Onlinedokumentation.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Details zu verwalteten Instanzen &#40;SQL Server-Hilfsprogramm&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   

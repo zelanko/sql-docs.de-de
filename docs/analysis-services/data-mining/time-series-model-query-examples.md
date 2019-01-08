@@ -1,5 +1,5 @@
 ---
-title: Time Series-Modell Abfragebeispiele | Microsoft Docs
+title: Beispiele für die Zeitreihe zu modellieren | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fb280c856b6e7231c078bf830be4a10f9ecc4723
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f839b7e108f6398f96c302016cfc45c82a110c6d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018927"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526503"
 ---
 # <a name="time-series-model-query-examples"></a>Abfragebeispiel Zeitreihenmodell
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY = 0,1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT ={1,3},...|  
+|COMPLEXITY_PENALTY = 0,1, MINIMUM_SUPPORT = 10 "," PERIODICITY_HINT ={1,3},...|  
   
  Der Standardperiodizitätshinweis ist {1} und wird in allen Modellen angezeigt. Dieses Beispielmodell wurde mit einem zusätzlichen Hinweis erstellt, der möglicherweise nicht im endgültigen Modell vorhanden ist.  
   
@@ -88,17 +88,17 @@ WHERE NODE_NAME = 'TA00000007'
   
  Beispielergebnisse:  
   
-|Kurze Gleichung|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|Kurze Gleichung|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24...|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
- Weitere Informationen zur Interpretation dieser Information finden Sie unter [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Weitere Informationen zur Interpretation dieser Information finden Sie unter [Miningmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
   
 ###  <a name="bkmk_Query3"></a> Beispielabfrage 3: Abrufen der Gleichung für ein ARTXP-Modell  
- Bei einem ARTxp-Modell werden auf jeder Ebene der Struktur andere Informationen gespeichert. Weitere Informationen zur Struktur eines ARTxp-Modells, und wie die Information in der Gleichung interpretiert werden soll, finden Sie unter [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Bei einem ARTxp-Modell werden auf jeder Ebene der Struktur andere Informationen gespeichert. Weitere Informationen zur Struktur eines ARTxp-Modells, und wie die Information in der Gleichung interpretiert werden soll, finden Sie unter [Miningmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
  Die folgende DMX-Anweisung ruft Teilinformationen für eine ARTxp-Struktur ab, die die verkaufte Menge an R250-Modellen in Europa darstellt.  
   
@@ -115,7 +115,7 @@ WHERE NODE_ATTRIBUTE_NAME = 'R250 Europe:Quantity'
 AND NODE_TYPE = 15  
 ```  
   
- Weitere Informationen zur Interpretation dieser Information finden Sie unter [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Weitere Informationen zur Interpretation dieser Information finden Sie unter [Miningmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
   
 ## <a name="creating-predictions-on-a-time-series-model"></a>Erstellen von Vorhersagen für ein Zeitreihenmodell  
@@ -128,13 +128,13 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_ReplaceExtend"></a> Grundlegendes zum Verhalten von Vorgängen zum Ersetzen und Erweitern  
  Wenn Sie einem Zeitreihenmodell neue Daten hinzufügen, können Sie angeben, ob die Trainingsdaten erweitert oder ersetzt werden sollen:  
   
--   **Erweitern:** Wenn Sie eine Datenreihe erweitern, werden die neuen Daten von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] am Ende der vorhandenen Trainingsdaten hinzugefügt. Die Anzahl der Trainingsfälle wird ebenfalls erhöht.  
+-   **Erweitern:** Wenn Sie eine Datenreihe erweitern [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fügt die neuen Daten am Ende der vorhandenen Trainingsdaten hinzu. Die Anzahl der Trainingsfälle wird ebenfalls erhöht.  
   
-     Das Erweitern der Modellfälle ist sinnvoll für das kontinuierliche Aktualisieren des Modells mit neuen Daten. Wenn z. B. der Trainingssatz im Zeitverlauf zunehmen soll, können Sie einfach das Modell erweitern.  
+     Das Erweitern der Modellfälle ist sinnvoll für das kontinuierliche Aktualisieren des Modells mit neuen Daten. Wenn z. B. der Trainingssatz im Zeitverlauf zunehmen soll, können Sie einfach das Modell erweitern.  
   
      Zum Erweitern der Daten erstellen Sie einen **PREDICTION JOIN** für ein Zeitreihenmodell, geben die Quelle für die neuen Daten an und verwenden das **EXTEND_MODEL_CASES** -Argument.  
   
--   **Ersetzen:** Wenn Sie die Daten in der Datenreihe ersetzen, behält [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das trainierte Modell bei, verwendet jedoch die neuen Datenwerte zum Ersetzen einiger oder aller vorhandener Trainingsfälle. Die Größe der Trainingsdaten wird daher nicht geändert, die Fälle selbst werden jedoch kontinuierlich durch neuere Daten ersetzt. Wenn Sie genug neue Daten angeben, können Sie die Trainingsdaten durch eine vollkommen neue Reihe ersetzen.  
+-   **Ersetzen Sie dies:** Wenn Sie die Daten in der Datenreihe ersetzen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] behält das trainierte Modell, aber die neuen Datenwerte zum Ersetzen einiger oder aller vorhandener Trainingsfälle verwendet. Die Größe der Trainingsdaten wird daher nicht geändert, die Fälle selbst werden jedoch kontinuierlich durch neuere Daten ersetzt. Wenn Sie genug neue Daten angeben, können Sie die Trainingsdaten durch eine vollkommen neue Reihe ersetzen.  
   
      Das Ersetzen der Modellfälle ist sinnvoll, wenn Sie ein Modell mit einem Satz von Fällen trainieren und dieses Modell auf eine andere Datenreihe anwenden möchten.  
   
@@ -205,19 +205,19 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |Vorhersagefunktion|Verwendung|  
-|[Lag & #40; DMX & #41;](../../dmx/lag-dmx.md)|Gibt eine Anzahl von Zeitscheiben zwischen dem Datum des aktuellen Falls und dem letzten Datum des Trainingssatzes zurück.<br /><br /> Diese Funktion dient in der Regel dazu, neuere Trainingsfälle zu ermitteln, sodass Sie detaillierte Daten über die Fälle abrufen können.|  
-|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|Gibt die Knoten-ID für die angegebene vorhersagbare Spalte zurück.<br /><br /> Diese Funktion dient gewöhnlich zum Identifizieren des Knotens, der einen bestimmten vorhergesagten Wert generiert hat, sodass Sie die mit dem Knoten verknüpften Fälle prüfen oder die Gleichung und andere Details abrufen können.|  
-|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|Gibt die Standardabweichung der Vorhersagen in der angegebenen vorhersagbaren Spalte zurück.<br /><br /> Diese Funktion ersetzt das INCLUDE_STATISTICS-Argument, das bei Zeitreihenmodellen nicht unterstützt wird.|  
-|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|Gibt die Varianz der Vorhersagen für die angegebene vorhersagbare Spalte zurück.<br /><br /> Diese Funktion ersetzt das INCLUDE_STATISTICS-Argument, das bei Zeitreihenmodellen nicht unterstützt wird.|  
-|[PredictTimeSeries & #40; DMX & #41;](../../dmx/predicttimeseries-dmx.md)|Gibt vorhergesagte Vergangenheits- oder Zukunftswerte für eine Zeitreihe zurück.<br /><br /> Sie können Zeitreihenmodelle auch mithilfe der allgemeinen Vorhersagefunktion [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md) abfragen.|  
+|[Lag &#40;DMX&#41;](../../dmx/lag-dmx.md)|Gibt eine Anzahl von Zeitscheiben zwischen dem Datum des aktuellen Falls und dem letzten Datum des Trainingssatzes zurück.<br /><br /> Diese Funktion dient in der Regel dazu, neuere Trainingsfälle zu ermitteln, sodass Sie detaillierte Daten über die Fälle abrufen können.|  
+|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|Gibt die Knoten-ID für die angegebene vorhersagbare Spalte zurück.<br /><br /> Diese Funktion dient gewöhnlich zum Identifizieren des Knotens, der einen bestimmten vorhergesagten Wert generiert hat, sodass Sie die mit dem Knoten verknüpften Fälle prüfen oder die Gleichung und andere Details abrufen können.|  
+|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Gibt die Standardabweichung der Vorhersagen in der angegebenen vorhersagbaren Spalte zurück.<br /><br /> Diese Funktion ersetzt das INCLUDE_STATISTICS-Argument, das bei Zeitreihenmodellen nicht unterstützt wird.|  
+|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Gibt die Varianz der Vorhersagen für die angegebene vorhersagbare Spalte zurück.<br /><br /> Diese Funktion ersetzt das INCLUDE_STATISTICS-Argument, das bei Zeitreihenmodellen nicht unterstützt wird.|  
+|[PredictTimeSeries &#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md)|Gibt vorhergesagte Vergangenheits- oder Zukunftswerte für eine Zeitreihe zurück.<br /><br /> Sie können Zeitreihenmodelle auch mithilfe der allgemeinen Vorhersagefunktion [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md) abfragen.|  
   
  Eine Liste der Funktionen, die von allen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Algorithmen verwendet werden, finden Sie unter [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft Time Series-Algorithmus](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Technische Referenz für Microsoft Time Series-Algorithmus](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Miningmodellinhalt von Zeitreihenmodellen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Technische Referenz für den Microsoft Time Series-Algorithmus](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Miningmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

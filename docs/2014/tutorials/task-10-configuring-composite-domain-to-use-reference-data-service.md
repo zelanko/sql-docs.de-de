@@ -13,15 +13,15 @@ ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e4a8ef8c3b9d60040d6d9b5fcbff145a600cd88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8541ea7446fe80bf6bb0fd5f1bc3e80285912ffe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167680"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370022"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Aufgabe 10: Konfigurieren der Verbunddomäne, um Reference Data Service zu verwenden
-  In dieser Aufgabe Konfigurieren Sie die **Address Validation** verbunddomäne mit den **Melissa Data – Address Check** Service. Zur Laufzeit während der Bereinigungsaktivität gibt DQS die Werte der Domänen in der Domäne "Address Validation" zur Bereinigung an den Dienst weiter. Finden Sie unter [Zuordnung Domäne/Verbunddomäne an Verweisdaten](http://msdn.microsoft.com/library/hh213030.aspx) Weitere Details.  
+  In dieser Aufgabe Konfigurieren Sie die **Address Validation** verbunddomäne mit den **Melissa Data – Address Check** Service. Zur Laufzeit während der Bereinigungsaktivität gibt DQS die Werte der Domänen in der Domäne "Address Validation" zur Bereinigung an den Dienst weiter. Finden Sie unter [Zuordnung Domäne/Verbunddomäne an Verweisdaten](https://msdn.microsoft.com/library/hh213030.aspx) Weitere Details.  
   
 1.  Auf der Hauptseite des **DQS-Client**, klicken Sie auf **Suppliers (Domain Management)** unter **zuletzt verwendete Wissensdatenbank** zum Starten der **Domänenverwaltung**Seite.  
   

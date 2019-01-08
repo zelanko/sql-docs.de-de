@@ -1,20 +1,22 @@
 ---
-title: 'Gewusst wie: Erfassen von Daten in einen Pool des SQL Server-Daten mit Transact-SQL | Microsoft-Dokumentation'
+title: Erfassen von Daten in einem Pool der SQL Server-Daten
+titleSuffix: SQL Server 2019 big data clusters
 description: In diesem Tutorial wird veranschaulicht, wie zum Erfassen von Daten in den Datenpool von einer SQL Server-2019 big Data-Cluster (Vorschau) mit der Sp_data_pool_table_insert_data, die gespeicherte Prozedur wird.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 1f585a354175ff893869cef7f2f47b12fe244634
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 142a2db6bc841947a83ada4dc24c59de4e58df8f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221696"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432443"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Erfassen von Daten in einen Pool des SQL Server-Daten mit Transact-SQL
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Lernprogramm: Erfassen von Daten in einen Pool des SQL Server-Daten mit Transact-SQL
 
 Dieses Tutorial veranschaulicht, wie Transact-SQL zum Laden von Daten in die [Datenpool](concept-data-pool.md) von einer SQL Server-2019 big Data-Cluster (Vorschau). Mit SQL Server-big Data-Cluster können Daten aus einer Vielzahl von Quellen erfasst und Daten-poolinstanzen verteilt werden.
 
@@ -30,17 +32,17 @@ In diesem Tutorial erfahren Sie, wie Sie:
 
 ## <a id="prereqs"></a> Erforderliche Komponenten
 
-* [Bereitstellen einen big Data-Cluster in Kubernetes](deployment-guidance.md).
-* [Installieren Sie Studio für Azure Data und die Erweiterung für SQL Server-2019](deploy-big-data-tools.md).
-* [Laden Sie Beispieldaten in den Cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Big Data-tools](deploy-big-data-tools.md)
+   - **"kubectl"**
+   - **Azure Data Studio**
+   - **SQL Server-2019-Erweiterung**
+- [Laden Sie Beispieldaten in Ihre big Data-cluster](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Erstellen Sie eine externe Tabelle, in dem Datenpool
 
 Die folgenden Schritte Erstellen einer externen Tabelle, in dem Datenpool mit dem Namen **Web_clickstream_clicks_data_pool**. Diese Tabelle kann dann als einen Speicherort für die sammelerfassung von Daten in die big Data-Cluster verwendet werden.
 
-1. Verbinden Sie in Azure Data Studio mit der SQL Server-Masterinstanz von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](deploy-big-data-tools.md#master).
+1. Verbinden Sie in Azure Data Studio mit der SQL Server-Masterinstanz von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](connect-to-big-data-cluster.md#master).
 
 1. Doppelklicken Sie auf die Verbindung in der **Server** Fenster im Server-Dashboard für die master-SQL Server-Instanz angezeigt wird. Wählen Sie **neue Abfrage**.
 
@@ -66,7 +68,7 @@ Die folgenden Schritte Erstellen einer externen Tabelle, in dem Datenpool mit de
       );
    ```
   
-1. In CTP 2.1 an die Erstellung des Pools Daten ist asynchron, aber es gibt keine Möglichkeit, um zu bestimmen, wenn er noch abgeschlossen ist. Warten Sie zwei Minuten lang, um sicherzustellen, dass die Datenpool erstellt wird, bevor Sie fortfahren.
+1. In der CTP-Version 2.2 die Erstellung des Pools Daten ist asynchron, aber es gibt keine Möglichkeit, um zu bestimmen, wenn er noch abgeschlossen ist. Warten Sie zwei Minuten lang, um sicherzustellen, dass die Datenpool erstellt wird, bevor Sie fortfahren.
 
 ## <a name="load-data"></a>Laden von Daten
 

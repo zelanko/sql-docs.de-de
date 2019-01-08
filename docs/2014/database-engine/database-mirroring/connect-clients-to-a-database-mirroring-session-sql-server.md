@@ -15,15 +15,15 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59067479ebd57b8a26cf3de6ef243e0eb7072bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d4a8d29e27fae9b54a6060ec1be8f6c5a4163a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200950"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507266"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)
-  Zum Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung kann ein Client entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oder .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Wenn sie für eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank konfiguriert sind, unterstützen beide Datenzugriffsanbieter die Datenbankspiegelung. Informationen zu Programmierüberlegungen in Bezug auf das Verwenden einer gespiegelten Datenbank finden Sie unter [Verwenden der Datenbankspiegelung](../../relational-databases/native-client/features/using-database-mirroring.md). Zusätzlich muss die aktuelle Prinzipalserverinstanz verfügbar sein, und der Anmeldename des Clients muss auf der Serverinstanz erstellt worden sein. Weitere Informationen finden Sie unter [Problembehandlung bei verwaisten Benutzern &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)aus. Sofern eine Zeugenserverinstanz vorhanden ist, werden Clientverbindungen mit einer Datenbank-Spiegelungssitzung ohne Beteiligung dieser Instanz hergestellt.  
+  Zum Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung kann ein Client entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oder .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Wenn sie für eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank konfiguriert sind, unterstützen beide Datenzugriffsanbieter die Datenbankspiegelung. Informationen zu Programmierüberlegungen in Bezug auf das Verwenden einer gespiegelten Datenbank finden Sie unter [Verwenden der Datenbankspiegelung](../../relational-databases/native-client/features/using-database-mirroring.md). Zusätzlich muss die aktuelle Prinzipalserverinstanz verfügbar sein, und der Anmeldename des Clients muss auf der Serverinstanz erstellt worden sein. Weitere Informationen finden Sie unter [Problembehandlung bei verwaisten Benutzern &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Sofern eine Zeugenserverinstanz vorhanden ist, werden Clientverbindungen mit einer Datenbank-Spiegelungssitzung ohne Beteiligung dieser Instanz hergestellt.  
   
  ##  <a name="InitialConnection"></a> Herstellen der Anfangsverbindung mit einer Datenbank-Spiegelungssitzung  
  Für die Anfangsverbindung mit einer gespiegelten Datenbank muss ein Client eine Verbindungszeichenfolge bereitstellen, die zumindest den Namen einer Serverinstanz nennt. Dieser erforderliche Servername sollte die aktuelle Prinzipalserverinstanz identifizieren und wird auch als *erster Partnername*bezeichnet.  
@@ -83,7 +83,7 @@ Network=dbnmpntw;
 >  Da Named Pipes den TCP/IP-Wiederholungsalgorithmus nicht verwenden, erreicht ein Verbindungsversuch mit Named Pipes häufig zuerst ein Timeout, ehe eine Verbindung mit einer gespiegelten Datenbank hergestellt wird.  
   
 #### <a name="server-attribute"></a>Server-Attribut  
- Die Verbindungszeichenfolge darf eine `Server` -Attribut, das den Namen des ersten Partners bereitstellt, der die aktuelle Prinzipalserverinstanz identifizieren sollte.  
+ Die Verbindungszeichenfolge muss ein `Server`-Attribut enthalten, das den Namen des ersten Partners bereitstellt, der die aktuelle Prinzipalserverinstanz identifizieren sollte.  
   
  Die einfachste Art, die Serverinstanz zu identifizieren, besteht darin, ihren Namen *<Servername>*[**\\***<SQL_Server_Instanzname>*] anzugeben. Zum Beispiel:  
   
@@ -137,7 +137,7 @@ Server=123.34.45.56,4724;
 >  Wenn nur der erste Partnername angegeben wird, müssen Anwendungsentwickler weder zusätzliche Schritte ergreifen noch zusätzlichen Code schreiben, außer um wieder eine Verbindung herzustellen.  
   
 > [!NOTE]  
->  Entwickler von verwaltetem Code Anwendungen geben, der Name des Failoverpartners in der `ConnectionString` von der `SqlConnection` Objekt. Informationen zum Verwenden dieser Verbindungszeichenfolge finden Sie in der zum [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK gehörigen Dokumentation zu ADO.NET im Kapitel zur Unterstützung der Datenbankspiegelung im .NET Framework-Datenanbieter für SQL Server.  
+>  Entwickler von Anwendungen mit verwaltetem Code geben den Namen des Failoverpartners im `ConnectionString`-Objekt unter `SqlConnection` an. Informationen zum Verwenden dieser Verbindungszeichenfolge finden Sie in der zum [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK gehörigen Dokumentation zu ADO.NET im Kapitel zur Unterstützung der Datenbankspiegelung im .NET Framework-Datenanbieter für SQL Server.  
   
 #### <a name="example-connection-string"></a>Beispiel für eine Verbindungszeichenfolge  
  Um beispielsweise eine Verbindung mithilfe von TCP/IP mit der **AdventureWorks** -Datenbank auf Partner_A oder Partner_B herzustellen, kann durch eine Clientanwendung, die den ODBC-Treiber verwendet, die folgende Verbindungszeichenfolge bereitgestellt werden:  

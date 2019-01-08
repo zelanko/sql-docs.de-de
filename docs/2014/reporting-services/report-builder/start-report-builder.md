@@ -16,24 +16,24 @@ ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 30fef45662f5cfa81e88ce740e556cdc0e66cf39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57231f0455a4dafbe7dccf5eac74325411cdfdc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192500"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375322"
 ---
 # <a name="start-report-builder-report-builder"></a>Starten des Berichts-Generators (Berichts-Generator)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] umfasst eigenständige und [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] Versionen von Berichts-Generator. Die [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]-Version kann im einheitlichen Modus oder im integrierten SharePoint-Modus mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet werden.  
   
 > [!NOTE]  
->  Der Berichts-Generator kann nicht auf Itanium 64-basierten Computern installiert werden. Dies gilt für die [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] und der eigenständigen Version des Berichts-Generators.  
+>  Der Berichts-Generator kann nicht auf Itanium 64-basierten Computern installiert werden. Dies betrifft die [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] -Version und die eigenständige Version des Berichts-Generators.  
   
  Wenn die geöffnete [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]-Version von Berichts-Generator eine frühere Version von Berichts-Generator ist, sollten Sie sich an Ihren Administrator wenden, um Berichts-Manager und die SharePoint-Website für die Verwendung der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version von Berichts-Generator aktualisieren zu lassen.  
   
- Sie können auch die [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]-Version von Berichts-Generator verwenden, um Berichte zu einer in SharePoint veröffentlichten [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]-Arbeitsmappe zu erstellen. Weitere Informationen zur Verwendung von Berichts-Generator mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], finden Sie unter [Erstellen eines Reporting Services-Berichts mit PowerPivot-Daten](http://go.microsoft.com/fwlink/?LinkId=185238) auf technet.microsoft.com.  
+ Sie können auch die [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]-Version von Berichts-Generator verwenden, um Berichte zu einer in SharePoint veröffentlichten [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]-Arbeitsmappe zu erstellen. Weitere Informationen zur Verwendung von Berichts-Generator mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], finden Sie unter [Erstellen eines Reporting Services-Berichts mit PowerPivot-Daten](https://go.microsoft.com/fwlink/?LinkId=185238) auf technet.microsoft.com.  
   
- Starten Sie Berichts-Generator eigenständig über das **starten** Menü auf dem lokalen Computer, die Sie oder ein Administrator muss Berichts-Generator direkt auf dem Computer installieren, bevor das Tool verwendet werden kann. Die eigenständige Version wird nicht installiert, wenn Sie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installieren; Sie müssen sie separat herunterladen und installieren. Informationen zum Herunterladen von Berichts-Generator finden Sie unter [Microsoft® SQL Server® 2012 Berichts-Generator](http://go.microsoft.com/fwlink/?LinkId=401502).  
+ Starten Sie Berichts-Generator eigenständig über das **starten** Menü auf dem lokalen Computer, die Sie oder ein Administrator muss Berichts-Generator direkt auf dem Computer installieren, bevor das Tool verwendet werden kann. Die eigenständige Version wird nicht installiert, wenn Sie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installieren; Sie müssen sie separat herunterladen und installieren. Informationen zum Herunterladen von Berichts-Generator finden Sie unter [Microsoft® SQL Server® 2012 Berichts-Generator](https://go.microsoft.com/fwlink/?LinkId=401502).  
   
 ### <a name="to-start-report-builder-clickonce-from-report-manager"></a>So starten Sie den Berichts-Generator ClickOnce aus dem Berichts-Manager  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48192500"
   
      Der Berichts-Generator wird geöffnet, und Sie können einen Bericht erstellen oder auf dem Berichtsserver öffnen.  
   
-     **Beachten Sie** Wenn die **neues Dokument** Menü nicht aufgeführt der **Berichts-Generator-Bericht**, **Berichts-Generator-Modell**, und **Berichtsdatenquelle** Optionen müssen entsprechenden Inhaltstypen der SharePoint-Bibliothek hinzugefügt werden. Weitere Informationen finden Sie unter [hinzufügen Berichtsserver-Inhaltstypen zu einer Bibliothek &#40;Reporting Services im integrierten SharePoint-Modus&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) auf "MSDN.Microsoft.com".  
+     **Beachten Sie** Wenn die **neues Dokument** Menü nicht aufgeführt der **Berichts-Generator-Bericht**, **Berichts-Generator-Modell**, und **Berichtsdatenquelle** Optionen müssen entsprechenden Inhaltstypen der SharePoint-Bibliothek hinzugefügt werden. Weitere Informationen finden Sie unter [hinzufügen Berichtsserver-Inhaltstypen zu einer Bibliothek &#40;Reporting Services im integrierten SharePoint-Modus&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?LinkId=154888) auf "MSDN.Microsoft.com".  
   
 ### <a name="to-start-report-builder-stand-alone-from-the-start-menu"></a>So starten Sie den eigenständigen Berichts-Generator über das Menü "Start"  
   

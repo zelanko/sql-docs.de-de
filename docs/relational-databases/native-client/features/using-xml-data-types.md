@@ -31,12 +31,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e60060cd9a57bc5edc5ee89e040c2f26a3e1ae55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfbe6f41150e7d437a6ee1df20e62e41b799c8c0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835408"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395434"
 ---
 # <a name="using-xml-data-types"></a>Verwenden von XML-Datentypen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,10 +91,10 @@ ms.locfileid: "47835408"
 |DBTYPE_BSTR|Pass-Through<sup>6,10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>3</sup>|Nicht zutreffend<sup>2</sup>|  
 |DBTYPE_STR|OK<sup>6, 9, 10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>5, 6, 12</sup>|Nicht zutreffend<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|Bytedatenstrom über **ISequentialStream**<sup>7</sup>|Nicht zutreffend<sup>2</sup>|Bytedatenstrom über **ISequentialStream**<sup>11</sup>|Nicht zutreffend<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pass-Through<sup>6,7</sup>|Nicht zutreffend<sup>2</sup>|–|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pass-Through<sup>6,7</sup>|Nicht zutreffend<sup>2</sup>|Nicht zutreffend|Nicht zutreffend<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Pass-Through<sup>6,10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>3</sup>|Nicht zutreffend<sup>2</sup>|  
   
- <sup>1</sup>Wenn ein anderer Servertyp als DBTYPE_XML mit **ICommandWithParameters::SetParameterInfo** angegeben wird und der Accessortyp DBTYPE_XML ist, tritt beim Ausführen der Anweisung ein Fehler auf (DB_E_ERRORSOCCURRED, der Parameterstatus ist DBSTATUS_E_BADACCESSOR). Andernfalls werden die Daten an den Server gesendet, der Server gibt jedoch einen Fehler zurück und zeigt an, dass keine implizite Konvertierung von XML in den Parameterdatentyp erfolgt.  
+ <sup>1</sup>, wenn ein anderer Servertyp als DBTYPE_XML mit angegeben wird **ICommandWithParameters:: SetParameterInfo** und ist der Accessortyp DBTYPE_XML, ein Fehler auftritt, wenn die Anweisung ausgeführt wird (DB_E_ERRORSOCCURRED, der Parameterstatus ist DBSTATUS_E_BADACCESSOR). Andernfalls werden die Daten an den Server gesendet, aber der Server gibt einen Fehler, der angibt, dass es keine implizite Konvertierung aus XML-Datentyp des Parameters gibt zurück.  
   
  <sup>2</sup>über den Rahmen dieses Themas hinaus.  
   
@@ -216,7 +216,7 @@ ms.locfileid: "47835408"
 #### <a name="the-irowsetchange-interface"></a>Die IRowsetChange-Schnittstelle  
  Es gibt zwei Methoden, wie ein Consumer eine XML-Instanz in einer Spalte aktualisieren kann. Die erste Methode erfolgt durch das vom Anbieter erstellte Speicherobjekt **ISequentialStream**. Der Consumer kann die **ISequentialStream::Write**-Methode aufrufen, um die vom Anbieter zurückgegebene XML-Instanz direkt zu aktualisieren.  
   
- Der zweite Ansatz ist die **IRowsetChange::SetData**-Methode oder **IRowsetChange::InsertRow**-Methode. Bei dieser Vorgehensweise kann eine XML-Instanz im Consumerpuffer in einer Bindung vom Typ DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML oder DBTYPE_IUNKNOWN angegeben werden.  
+ Der zweite Ansatz ist die **IRowsetChange::SetData**-Methode oder **IRowsetChange::InsertRow**-Methode. Bei diesem Ansatz kann eine XML-Instanz im Consumerpuffer in einer Bindung vom Typ DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML oder DBTYPE_IUNKNOWN angegeben werden.  
   
  Im Falle von DBTYPE_BSTR, DBTYPE_WSTR oder DBTYPE_VARIANT speichert der Anbieter die XML-Instanz, die sich im Consumerpuffer befindet, in der entsprechenden Spalte.  
   
@@ -255,19 +255,19 @@ ms.locfileid: "47835408"
 ### <a name="supported-conversions"></a>Unterstützte Umwandlungen  
  Bei der Umwandlung von SQL- in C-Datentypen können SQL_C_WCHAR, SQL_C_BINARY und SQL_C_CHAR unter folgenden Bedingungen in SQL_SS_XML umgewandelt werden:  
   
--   SQL_C_WCHAR: Format ist UTF-16, keine Bytereihenfolge-Marke (BOM), mit NULL-Terminierung.  
+-   SQL_C_WCHAR: Format ist UTF-16, keine Bytereihenfolge-Marke (BOM), mit null-Terminierung.  
   
--   SQL_C_BINARY: Format ist UTF-16, ohne NULL-Terminierung. Den vom Server empfangenen Daten wird immer eine BOM hinzugefügt. Wenn eine leere Zeichenfolge vom Server zurückgegeben wird, wird trotzdem eine BOM an die Anwendung zurückgegeben. Wenn die Pufferlänge eine ungerade Anzahl von Bytes ist, werden die Daten ordnungsgemäß abgeschnitten. Wenn der ganze Wert in Abschnitten zurückgegeben wird, können diese verkettet werden, um wieder den richtigen Wert zusammenzusetzen.  
+-   SQL_C_BINARY: Format ist UTF-16, mit der keine null-Terminierung. Den vom Server empfangenen Daten wird immer eine BOM hinzugefügt. Wenn eine leere Zeichenfolge vom Server zurückgegeben wird, wird trotzdem eine BOM an die Anwendung zurückgegeben. Wenn die Pufferlänge eine ungerade Anzahl von Bytes ist, werden die Daten ordnungsgemäß abgeschnitten. Wenn der ganze Wert in Abschnitten zurückgegeben wird, können diese verkettet werden, um wieder den richtigen Wert zusammenzusetzen.  
   
--   SQL_C_CHAR: Format enthält Mehrbytezeichen, die in der Clientcodepage mit NULL-Terminierung codiert sind. Konvertierung aus vom Server bereitgestelltem UTF-16 verursacht möglicherweise Datenbeschädigung, daher wird diese Bindung nicht empfohlen.  
+-   SQL_C_CHAR: Format enthält Mehrbytezeichen, die in der Clientcodepage mit null-Terminierung codiert. Konvertierung aus vom Server bereitgestelltem UTF-16 verursacht möglicherweise Datenbeschädigung, daher wird diese Bindung nicht empfohlen.  
   
  Bei der Umwandlung von C- in SQL-Datentypen können SQL_C_WCHAR, SQL_C_BINARY und SQL_C_CHAR unter folgenden Bedingungen in SQL_SS_XML umgewandelt werden:  
   
--   SQL_C_WCHAR: Den an den Server gesendeten Daten wird immer eine BOM hinzugefügt. Falls die Daten bereits mit einer BOM begonnen haben, stehen dann zwei BOMs am Beginn des Puffers. Der Server verwendet die erste BOM, um die Codierung als UTF-16 zu erkennen, und verwirft sie dann. Die zweite BOM wird als geschütztes Leerzeichenzeichen mit Nullbreite interpretiert.  
+-   SQL_C_WCHAR: Eine BOM wird immer an den Server gesendeten Daten hinzugefügt werden. Falls die Daten bereits mit einer BOM begonnen haben, stehen dann zwei BOMs am Beginn des Puffers. Der Server verwendet die erste BOM, um die Codierung als UTF-16 zu erkennen, und verwirft sie dann. Die zweite BOM wird als geschütztes Leerzeichenzeichen mit Nullbreite interpretiert.  
   
--   SQL_C_BINARY: Es wird keine Konvertierung ausgeführt, und die Daten werden unverändert an den Server übergeben. UTF-16-Daten müssen mit einer BOM starten. Wenn nicht, wird die Codierung möglicherweise nicht ordnungsgemäß vom Server erkannt.  
+-   SQL_C_BINARY: Wird keine Konvertierung durchgeführt, und die Datenübertragung an den Server "unverändert." UTF-16-Daten müssen mit einer BOM starten. Wenn nicht, wird die Codierung möglicherweise nicht ordnungsgemäß vom Server erkannt.  
   
--   SQL_C_CHAR: Die Daten werden auf dem Client in UTF-16 konvertiert und als SQL_C_WCHAR an den Server gesendet (einschließlich der hinzugefügten BOM). Wenn XML nicht in der Clientcodepage codiert ist, kann dies zu Datenbeschädigungen führen.  
+-   SQL_C_CHAR: Die Daten werden auf dem Client in UTF-16 konvertiert und als SQL_C_WCHAR (einschließlich der hinzugefügten BOM) an den Server gesendet. Wenn XML nicht in der Clientcodepage codiert ist, kann dies zu Datenbeschädigungen führen.  
   
  Der XML-Standard erfordert, dass UTF-16-codiertes XML mit einer Bytereihenfolge-Marke (BOM), UTF-16-Zeichencode 0xFEFF beginnt. Bei der Verwendung von SQL_C_BINARY-Bindungen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client nicht erforderlich oder Hinzufügen von BOM, da die Codierung durch die Bindung impliziert ist. Das Hauptaugenmerk liegt auf der einfachen Zusammenarbeit mit anderen XML-Prozessoren und Speichersystemen. In diesem Fall sollte für UTF-16-codiertes XML eine BOM vorhanden sein, und die Anwendung sollte sich nicht um die eigentliche Codierung kümmern, da die Mehrheit der XML-Prozessoren (einschließlich [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) die Codierung nach Überprüfen des ersten Bytes des Wertes ableitet. XML-Daten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unter Verwendung von SQL_C_BINARY sind immer Bindungen in UTF-16 mit einer BOM und ohne eingebettete codierdeklaration codiert.  
   

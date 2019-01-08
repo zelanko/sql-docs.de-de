@@ -15,12 +15,12 @@ ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46b6f5d7e6af3726558f5cee72f00ff06e13ab89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15a3efd678d7b1f055daebc31d71d4044ad19eef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812057"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503898"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Festlegen von Optionen für ODBC-Verbindungspooling
 Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool von Verbindungen verwendet werden, die nicht für jede Verwendung erneut hergestellt werden müssen. Können Sie die **Verbindungspooling** Registerkarte die **ODBC-Datenquellenadministrator** Dialogfeld aktivieren und Deaktivieren der Überwachung der Anwendungsleistung. Doppelklicken Sie auf ein Treibername den Timeoutzeitraum festlegen.  
@@ -36,7 +36,7 @@ Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool vo
 |-------------|----------------|  
 |ODBC-feste Verbindung Indikator pro Sekunde|Die Anzahl der tatsächlichen Verbindungen pro Sekunde, die mit dem Server hergestellt werden. Beim ersten Ihrer Umgebung ausgelastet ist, führt geht dieser Leistungsindikator sehr schnell einrichten. Nach wenigen Sekunden löscht er 0 (null). Dies ist die normale Situation an, wenn Verbindungspooling funktioniert. Wenn die Verbindungen mit dem Server festgelegt wurden, werden sie verwendet und im Pool für die Wiederverwendung platziert werden.|  
 |ODBC schwer trennen Indikator pro Sekunde|Die Anzahl der hard trennt die Verbindung pro Sekunde an den Server ausgegeben. Hierbei handelt es sich um tatsächliche Verbindungen mit dem Server, die vom Verbindungspooling veröffentlicht werden. Dieser Wert wird 0 (null) erhöhen, wenn Sie alle Clients auf dem System beenden und starten Sie die Verbindungen zu einem Timeout.|  
-|ODBC-vorläufig Verbindung Indikator pro Sekunde|Die Anzahl der Verbindungen, die durch den Pool pro Sekunde erfüllt – das heißt, Verbindungen aus dem Pool, die an Benutzer ausgegeben wurden. Dieser Leistungsindikator gibt an, ob Verbindungspooling ausgeführt wird. Abhängig von der Last auf dem Server ist es nicht ungewöhnlich, dass diese Option, um einen weichen zwischen 40 und 60-Verbindungen pro Sekunde angezeigt.|  
+|ODBC-vorläufig Verbindung Indikator pro Sekunde|Die Anzahl der Verbindungen, die durch den Pool pro Sekunde in anderen Worten, Verbindungen, von dem Speicherpool zufrieden waren Benutzer übergeben. Dieser Leistungsindikator gibt an, ob Verbindungspooling ausgeführt wird. Abhängig von der Last auf dem Server ist es nicht ungewöhnlich, dass diese Option, um soft 40 bis 60-Verbindungen pro Sekunde angezeigt.|  
 |ODBC-vorläufig Trennung Indikator pro Sekunde|Die Anzahl der pro Sekunde, die von den Anwendungen ausgegeben trennt die Verbindung. Wenn die Anwendung frei, oder trennt die Verbindung, wird die Verbindung wieder in den Pool platziert.|  
 |ODBC-Indikator für aktuellen aktive Verbindung|Die Anzahl der Verbindungen im Pool, die derzeit verwendet werden.|  
 |ODBC-Indikator für aktuellen freien|Die aktuelle Anzahl der freien verfügbaren Verbindungen im Pool. Hierbei handelt es sich um live-Verbindungen, die für die Verwendung verfügbar sind.|  

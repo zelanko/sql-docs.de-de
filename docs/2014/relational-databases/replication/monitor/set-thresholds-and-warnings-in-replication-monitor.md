@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3934f596eecf9f0c431814c9e55823f876e51a7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133250"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781192"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Festlegen von Schwellenwerten und Warnungen im Replikationsmonitor
   Im Replikationsmonitor von[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Statusinformationen für Veröffentlichungen und Abonnements angezeigt. Standardmäßig zeigt der Replikationsmonitor Warnungen nur für nicht initialisierte Abonnements an. Sie können Warnungen jedoch auch für andere Bedingungen aktivieren. Sie sollten Warnungen für Ihre Topologie aktivieren, damit Sie rechtzeitig über Status und Leistung informiert werden.  
@@ -62,11 +61,11 @@ ms.locfileid: "48133250"
   
 2.  Klicken Sie auf die Registerkarte **Warnungen** . Wenn Sie weitere Informationen zu den Optionen auf dieser Registerkarte benötigen, klicken Sie auf der Menüleiste auf **Hilfe** .  
   
-3.  Aktivieren Sie eine Warnung, indem Sie das entsprechende Kontrollkästchen aktivieren: **Warnung, wenn ein Abonnement innerhalb des Schwellenwerts abläuft** oder **Warnung, wenn die Latenzzeit den Schwellenwert überschreitet**.  
+3.  Aktivieren Sie eine Warnung, indem Sie das entsprechende Kontrollkästchen aktivieren: **Warnhinweis anzeigen, wenn ein Abonnement innerhalb des Schwellenwerts abläuft** oder **warnen, wenn die Latenzzeit den Schwellenwert überschreitet**.  
   
 4.  Legen Sie in der **Schwellenwert** -Spalte einen Schwellenwert für die Warnungen fest. Wenn Sie z. B. unter Schritt 3 die Option **Warnung, wenn die Latenzzeit den Schwellenwert überschreitet** ausgewählt haben, können Sie in der **Schwellenwert** -Spalte eine Latenzzeit von **60 Sekunden** angeben.  
   
-5.  Klicken Sie auf **Änderungen speichern**.  
+5.  Klicken Sie auf **speichern Änderungen**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>So konfigurieren Sie eine Warnung für einen Schwellenwert  
   
@@ -140,7 +139,7 @@ ms.locfileid: "48133250"
   
 4.  Legen Sie in der **Schwellenwert** -Spalte einen Schwellenwert für die Warnung fest Sie können z.B. einen Wert von **70%** in der **Schwellenwert**-Spalte auswählen.  
   
-5.  Klicken Sie auf **Änderungen speichern**.  
+5.  Klicken Sie auf **speichern Änderungen**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>So konfigurieren Sie eine Warnung für einen Schwellenwert  
   

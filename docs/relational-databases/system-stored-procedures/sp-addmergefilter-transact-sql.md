@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergefilter
@@ -17,12 +16,12 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72d29fca659426075f4c7ee07f82ac6507fc0709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31ada2bfb184e24011ee91dde82fc9abfb319320
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595209"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777912"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=** ] **"***Veröffentlichung***"**  
+ [  **@publication=** ] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung, in der der Mergefilter hinzugefügt wird. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article=** ] **"***Artikel***"**  
+ [  **@article=** ] **"**_Artikel_**"**  
  Der Name des Artikels, für den der Mergefilter hinzugefügt wird. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@filtername=** ] **"***Filtername***"**  
+ [  **@filtername=** ] **"**_Filtername_**"**  
  Der Name des Filters. *Filtername* ist ein erforderlicher Parameter. *Filtername*ist **Sysname**, hat keinen Standardwert.  
   
- [  **@join_articlename=** ] **"***Join_articlename***"**  
+ [  **@join_articlename=** ] **"**_Join_articlename_**"**  
  Ist der übergeordnete Artikel, der gemäß der untergeordneten Artikel, *Artikel*, muss hinzugefügt werden, mithilfe der Join-Klausel, die anhand des *Join_filterclause*, um die Zeilen im untergeordneten Artikel zu bestimmen, die erfüllen das Filterkriterium des Mergefilters. *Join_articlename* ist **Sysname**, hat keinen Standardwert. Der Artikel muss sich in der Veröffentlichung, die vom *Veröffentlichung*.  
   
  [  **@join_filterclause=** ] *Join_filterclause*  
@@ -85,7 +84,7 @@ sp_addmergefilter [ @publication = ] 'publication'
  [  **@filter_type=** ] *Filter_type*  
  Gibt den Typ des Filters an, der hinzugefügt wird. *Filter_type* ist **Tinyint**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|Nur Joinfilter. Zur Unterstützung von erforderlich [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten.|  
 |**2**|Nur logische Datensatzbeziehung.|  

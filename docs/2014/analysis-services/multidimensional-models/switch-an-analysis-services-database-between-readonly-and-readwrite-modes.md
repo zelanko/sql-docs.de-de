@@ -15,12 +15,12 @@ ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b271d597f9941e83e9ad8ce6993831a738108e7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 48bb00cba9a01029da31146f9e98e2ef8b3627d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147875"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362612"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus
   In vielen Situationen muss vom [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankadministrator (DBA) der Lese-/Schreibmodus einer tabellarischen oder mehrdimensionalen Datenbank geändert werden. Diese Situationen hängen in der Regel von Geschäftsforderungen ab, z. B. der Freigabe der Datenbank für einen Pool von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Servern zur Vereinfachung der Nutzung.  
@@ -44,7 +44,7 @@ ms.locfileid: "50147875"
     > [!IMPORTANT]  
     >  Sobald die Datenbank getrennt ist, kann [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Ihnen nicht mehr dabei helfen, den Datenbankspeicherort abzurufen.  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, und wählen Sie **Trennen…** aus.  
+3.  Mit der rechten Maustaste in der Datenbank, und wählen Sie **trennen...**  
   
 4.  Weisen Sie der Datenbank, die getrennt werden soll, ein Kennwort zu, und klicken Sie anschließend auf **OK** , um den Befehl zum Trennen auszuführen.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "50147875"
   
 6.  Mit der rechten Maustaste die **Datenbanken** Ordner, und wählen **anfügen...**  
   
-7.  Geben Sie im Textfeld **Ordner** den ursprünglichen Speicherort des Datenbankordners ein. Alternativ können Sie über die Schaltfläche zum Durchsuchen (**…**) nach dem Datenbankordner suchen.  
+7.  Geben Sie im Textfeld **Ordner** den ursprünglichen Speicherort des Datenbankordners ein. Alternativ können Sie die Schaltfläche zum Durchsuchen (**...** ) nach dem Datenbankordner suchen.  
   
 8.  Wählen Sie den Lese-/Schreibmodus für die Datenbank aus.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "50147875"
   
 4.  Kopieren Sie die folgende Skriptvorlage für XMLA:  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -155,11 +155,11 @@ ms.locfileid: "50147875"
   
 3.  Kopieren Sie die folgende Skriptvorlage für XMLA in eine neue XMLA-Registerkarte:  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

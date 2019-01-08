@@ -17,12 +17,12 @@ ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a1377552b3e50fe5c536ae0d7d854346ccb062d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7695f971504744d42056d0067217e102ef3d990
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140350"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368453"
 ---
 # <a name="linked-measure-groups"></a>Verknüpfte Measuregruppen
   Eine verknüpfte Measuregruppe basiert auf einer anderen Measuregruppe in einem anderen Cube innerhalb derselben Datenbank oder einer anderen Analysis Services-Datenbank. Eine verknüpfte Measuregruppe kann z. B. verwendet werden, wenn Sie einen Satz von Measures und die entsprechenden Datenwerte in mehreren Cubes wiederverwenden möchten.  
@@ -47,7 +47,7 @@ ms.locfileid: "48140350"
   
 -   Das Rückschreiben wird in verknüpften Measuregruppen nicht unterstützt.  
   
--   Verknüpfte Measuregruppen können nicht in mehreren m:n-Beziehungen verwendet werden, insbesondere wenn sich diese Beziehungen in verschiedenen Cubes befinden. Andernfalls können mehrdeutige Aggregationen entstehen. Weitere Informationen finden Sie unter [Falsche Mengen für verknüpfte Measures in Cubes mit m:n-Beziehungen](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
+-   Verknüpfte Measuregruppen können nicht in mehreren m:n-Beziehungen verwendet werden, insbesondere wenn sich diese Beziehungen in verschiedenen Cubes befinden. Andernfalls können mehrdeutige Aggregationen entstehen. Weitere Informationen finden Sie unter [Falsche Mengen für verknüpfte Measures in Cubes mit m:n-Beziehungen](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
   
  Die in einer verknüpften Measuregruppe enthaltenen Measures können nur anhand von verknüpften Dimensionen direkt organisiert werden, die aus derselben [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank abgerufen wurden. Mithilfe von berechneten Elementen können Sie jedoch Informationen aus verknüpften Measuregruppen mit anderen, nicht verknüpften Dimensionen im Cube verbinden. Sie können auch eine indirekte Beziehung wie einen Verweis oder eine m:n-Beziehung verwenden, um nicht verknüpfte Dimensionen mit einer verknüpften Measuregruppe zu verbinden.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48140350"
 ## <a name="secure-a-linked-measure"></a>Schützen eines verknüpften Measures  
  Nachdem der Link definiert wurde, wird der Zugriff auf die Measures in einer verknüpften Measuregruppe auf dieselbe Weise wie andere Measuregruppen verwaltet. Ein verknüpftes Objekt wird im Rollen-Designer neben dessen nicht verknüpften Gegenstücken angezeigt. Weitere Informationen zum Verwalten der Sicherheit für eine Measuregruppe finden Sie unter [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
- Um zu definieren, oder verwenden eine verknüpfte Measuregruppe, die Windows-Dienstkonto für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz Mitglied einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbankrolle mit `ReadDefinition` und `Read` Zugriffsrechte für die Quelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz, auf die Source Cube und Measuregruppe, oder es muss Mitglied der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] "Administratoren" für die Quelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz.  
+ Um eine verknüpfte Measuregruppe zu definieren oder zu verwenden, muss das Windows-Dienstkonto für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz Mitglied einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankrolle sein, die über `ReadDefinition`- und `Read`-Zugriffsrechte für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Quellinstanz auf den Quellcube und die Measuregruppe verfügt, oder es muss Mitglied der Rolle der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Administratoren für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Quellinstanz sein.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Definieren von verknüpften Dimensionen](define-linked-dimensions.md)  

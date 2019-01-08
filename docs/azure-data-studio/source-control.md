@@ -1,7 +1,8 @@
 ---
-title: Quellcodeverwaltung in Azure Data Studio | Microsoft-Dokumentation
-description: Informationen Sie zum Konfigurieren von Datenquellen-Steuerelement in Azure Data Studio.
-ms.custom: tools|sos
+title: Quellcodeverwaltung
+titleSuffix: Azure Data Studio
+description: Informationen Sie zum Konfigurieren der quellcodeverwaltung in Azure Data Studio
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 956ead73c4fe28a045f5ff24280012ed32937f9c
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 5fb3c8dea11e570bba4452e181626625e31acbe0
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356311"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030674"
 ---
 #  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Verwenden der quellcodeverwaltung in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

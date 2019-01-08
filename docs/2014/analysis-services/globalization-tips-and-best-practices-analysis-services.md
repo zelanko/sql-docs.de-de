@@ -17,12 +17,12 @@ ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 026c1bf822a6493c6605128582f7142178ad6776
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8713ed58df138efbaacd8f6ff4b5d31ef0708d85
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188260"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357309"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Tipps und Best Practices für die Globalisierung (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Nur Multidimensional  
@@ -50,7 +50,7 @@ ms.locfileid: "48188260"
   
  Das Leerzeichen ist ein besonderer Fall, da es in Unicode als Single-Byte- (SBCS) oder Double-Byte-Zeichensatz (DBCS) dargestellt werden kann. In der relationalen Engine werden zwei durch ein Leerzeichen getrennte, zusammengesetzte Zeichenfolgen – eine in SBCS, die andere in DBCS – als identisch betrachtet. In Analysis Services sind während der Verarbeitung die gleichen zwei zusammengesetzten Zeichenfolgen nicht identisch, und die zweite Instanz wird als Duplikat gekennzeichnet.  
   
- Weitere Details und mögliche Problemumgehungen finden Sie unter [Leerzeichen in einer Unicode-Zeichenfolge liefern je nach Sortierung unterschiedliche Verarbeitungsergebnisse](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
+ Weitere Details und mögliche Problemumgehungen finden Sie unter [Leerzeichen in einer Unicode-Zeichenfolge liefern je nach Sortierung unterschiedliche Verarbeitungsergebnisse](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
   
 ##  <a name="bkmk_recos"></a> Allgemeine Empfehlungen für die Sortierung  
  Analysis Services stellt immer die vollständige Liste aller verfügbaren Sprachen und Sortierungen bereit; die Sortierungen werden nicht anhand der ausgewählten Sprache gefiltert. Achten Sie darauf, eine praktikable Kombination auswählen.  
@@ -69,7 +69,7 @@ ms.locfileid: "48188260"
   
      In der Volksrepublik China und Singapur wird vom Microsoft Support vornehmlich vereinfachtes Chinesisch beobachtet, mit Pinyin als bevorzugter Sortierreihenfolge. Die empfohlenen Sortierungen sind Chinese_PRC (für SQL Server 2000), Chinese_PRC_90 (für SQL Server 2005) oder Chinese_Simplified_Pinyin_100 (für SQL Server 2008 und höher).  
   
-     In Taiwan kommt häufiger traditionelles Chinesisch vor, bei dem die empfohlene Sortierreihenfolge auf der Anzahl der Striche basiert: Chinese_Taiwan_Stroke (für SQL Server 2000), Chinese_Taiwan_Stroke_90 (für SQL Server 2005) oder Chinese_Traditional_Stroke_Count_100 (für SQL Server 2008 und höher).  
+     In Taiwan ist traditionelles Chinesisch üblicher, wobei die empfohlene Sortierreihenfolge auf Strichzählung basiert: Chinese_Taiwan_Stroke (für SQL Server 2000), Chinese_Taiwan_Stroke_90 (für SQL Server 2005) oder Chinese_Traditional_Stroke_Count_100 (für SQL Server 2008 und höher).  
   
      Auch andere Regionen (z. B. Hongkong und Macau) verwenden traditionelles Chinesisch. Für Sortierungen in Hongkong wird häufig Chinese_Hong_Kong_Stroke_90 (in SQL Server 2005) verwendet. In Macau wird Chinese_Traditional_Stroke_Count_100 (in SQL Server 2008 und höher) recht häufig verwendet.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48188260"
   
 |Sprachschrift|Unterscheidung nach Groß-/Kleinschreibung|  
 |---------------------|----------------------|  
-|**Standardlateinisches Alphabet**|Bei Objektbezeichnern in lateinischer Schrift (beliebige der 26 englischen Groß- oder Kleinbuchstaben) wird unabhängig von der Sortierung die Groß-und Kleinschreibung nicht unterschieden. Beispielsweise werden die folgenden Objekt-IDs als identisch angesehen: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Intern werden in Analysis Services die Zeichen in der Zeichenfolge behandelt, als wären alle Großbuchstaben, und dann wird ein einfacher Bytevergleich ausgeführt, der unabhängig von der Sprache ist.<br /><br /> Beachten Sie, dass nur die 26 Zeichen betroffen sind. Wenn die Sprache Westeuropäisch ist, jedoch skandinavische Zeichen verwendet, wird das zusätzliche Zeichen nicht groß geschrieben.|  
+|**Standardlateinisches Alphabet**|Bei Objektbezeichnern in lateinischer Schrift (beliebige der 26 englischen Groß- oder Kleinbuchstaben) wird unabhängig von der Sortierung die Groß-und Kleinschreibung nicht unterschieden. Beispielsweise werden die folgenden Objekt-IDs als identisch betrachtet: 54321**Abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Intern werden in Analysis Services die Zeichen in der Zeichenfolge behandelt, als wären alle Großbuchstaben, und dann wird ein einfacher Bytevergleich ausgeführt, der unabhängig von der Sprache ist.<br /><br /> Beachten Sie, dass nur die 26 Zeichen betroffen sind. Wenn die Sprache Westeuropäisch ist, jedoch skandinavische Zeichen verwendet, wird das zusätzliche Zeichen nicht groß geschrieben.|  
 |**Kyrillisch, Griechisch, Koptisch, Armenisch**|Bei Objektbezeichnern in nicht-lateinischer Schrift mit Groß-/Kleinschreibung, z. B. Kyrillisch, wird immer nach Groß-/Kleinschreibung unterschieden. Beispielsweise werden Измерение und измерение als zwei unterschiedliche Werte betrachtet, obwohl der einzige Unterschied die Großschreibung des ersten Buchstabens ist.|  
   
  **Auswirkungen der Unterscheidung nach Groß-/Kleinschreibung für Objektkennungen**  
@@ -140,7 +140,7 @@ ms.locfileid: "48188260"
   
 3.  **Verwenden der ISO-Datumsformate für universelle Datums- und Uhrzeitangaben**  
   
-     Ein [Analysis Services-Experte](http://geekswithblogs.net/darrengosbell/Default.aspx) hat diese Empfehlung: "Ich verwende für Datumszeichenfolgen, die ich an SQL- oder MDX-Abfragen übergebe, immer das ISO-Datumsformat yyyy-mm-dd, da es eindeutig ist und unabhängig von den regionalen Einstellungen des Clients oder Servers funktioniert. Ich stimme zu, dass der Server bei der Analyse eines mehrdeutigen Datumsformats auf seine regionalen Einstellungen zurückgreifen sollte. Aber ich denke auch, wenn Sie eine Möglichkeit haben, die nicht der Interpretationen unterworfen ist, sollten Sie besser diese wählen".  
+     Eine [Analysis Services-Experte](http://geekswithblogs.net/darrengosbell/Default.aspx) hat diese Empfehlung: „Ich verwende immer das ISO-Datumsformat jjjj-mm-tt für Datumszeichenfolgen, die ich an SQL- oder MDX-Abfragen übergebe, da es eindeutig ist und unabhängig von den Ländereinstellungen des Clients oder Servers funktioniert. Ich stimme zu, dass der Server bei der Analyse eines mehrdeutigen Datumsformats auf seine regionalen Einstellungen zurückgreifen sollte. Aber ich denke auch, wenn Sie eine Möglichkeit haben, die nicht der Interpretationen unterworfen ist, sollten Sie besser diese wählen".  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   
