@@ -14,12 +14,12 @@ ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4dafadd6ba64fa08f0329cd73114b4f85a1e376a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ede93e1552451f7db8e286ac28284fed79ddef0c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141510"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355531"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
   In der Regel sollten Sie die Auswirkungen der Verwendung von **SQLBindCol** zur Datenkonvertierung. Bindungskonvertierungen sind Clientprozesse. Wenn Sie beispielsweise einen Gleitkommawert, der an eine Zeichenspalte gebunden ist, abrufen, führt der Treiber die Gleitkomma-in-Zeichen-Konvertierung lokal durch, wenn eine Zeile abgerufen wird. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT-Funktion kann zum Übertragen der Kosten einer Datenkonvertierung auf den Server verwendet werden.  
@@ -30,7 +30,7 @@ ms.locfileid: "48141510"
   
  Berichterstattung über die datenabschneidung ist ein kostengünstiger Prozess für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber. Sie können das Abschneiden vermeiden, indem Sie sicherstellen, dass alle gebundenen Datenpuffer weit genug sind, um Daten zurückzugeben. Bei Zeichendaten sollte die Breite ausreichend Platz für ein Zeichenfolgeabschlusszeichen bieten, wenn das Standardtreiberverhalten für den Zeichenfolgenabschluss verwendet wird. Binden Sie z. B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char(5)** Spalte in ein Array mit fünf Zeichen verursacht Abschneidung jedes abgerufenen Werts. Wenn Sie die gleiche Spalte an ein Array mit sechs Zeichen binden, wird die Abschneidung vermieden, indem ein Zeichenelement bereitgestellt wird, in dem das Null-Abschlusszeichen gespeichert werden soll. [SQLGetData](sqlgetdata.md) können verwendet werden, um lange Zeichenfolgen und binäre Daten ohne Abschneidung effizient abrufen.  
   
- Wenn der vom Benutzer bereitgestellte Puffer nicht groß genug ist, um den gesamten Wert der Spalte zu umfassen, wird bei großen Wertdatentypen `SQL_SUCCESS_WITH_INFO` zurückgegeben und die Warnung "Zeichenfolgendaten werden rechts abgeschnitten" wird ausgegeben. Das `StrLen_or_IndPtr`-Argument enthält die Anzahl der im Puffer gespeicherten Zeichen/Bytes.  
+ Für große Datenwerttypen, wenn der Benutzer bereitgestellte Puffer nicht groß genug für den gesamten Wert der Spalte ist `SQL_SUCCESS_WITH_INFO` wird zurückgegeben, und die "die Zeichenfolgedaten; rechts abgeschnitten"wird ausgegeben. Das `StrLen_or_IndPtr`-Argument enthält die Anzahl der im Puffer gespeicherten Zeichen/Bytes.  
   
 ## <a name="sqlbindcol-support-for-enhanced-date-and-time-features"></a>SQLBindCol-Unterstützung für verbesserte Funktionen für Datum/Uhrzeit  
  Ergebnisspaltenwerte von Datum-/Uhrzeit-Typen werden konvertiert, wie in beschrieben [Konvertierungen von SQL-in C](../native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). Beachten Sie, dass zum Abrufen von Time und Datetimeoffset-Spalten als entsprechenden Strukturen (`SQL_SS_TIME2_STRUCT` und **sql_ss_timestampoffset_struct-Wert**), *TargetType* muss angegeben werden, als `SQL_C_DEFAULT` oder `SQL_C_BINARY`.  
@@ -41,7 +41,7 @@ ms.locfileid: "48141510"
  **SQLBindCol** unterstützt große CLR-benutzerdefinierte Typen (UDTs). Weitere Informationen finden Sie unter [Large CLR User-Defined Typen &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLBindCol-Funktion](http://go.microsoft.com/fwlink/?LinkId=59327)   
+ [SQLBindCol-Funktion](https://go.microsoft.com/fwlink/?LinkId=59327)   
  [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
   
   

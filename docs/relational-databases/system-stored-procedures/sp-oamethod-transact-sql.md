@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b0e2e11dd905f48eaed16e0c083f11bde103a80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 525a66fa00981c4360295ee9c704102cd1224220
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704438"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591464"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_OAMethod objecttoken , methodname
  *Methodenname*  
  Der Name der Methode des OLE-Objekts, das aufgerufen wird.  
   
- *ReturnValue***Ausgabe**  
+ _ReturnValue_**Ausgabe**  
  Der Rückgabewert der Methode des OLE-Objekts. Wenn angegeben, muss es sich um eine lokale Variable vom entsprechenden Datentyp handeln.  
   
  Wenn die Methode einen einzelnen Wert zurückgibt, geben Sie entweder eine lokale Variable für *Returnvalue*, Rückgabewert in der lokalen Variablen die Methode zurückgegeben, oder geben Sie keine *Returnvalue*, gibt die Methode der Wert an den Client als einspaltiges, einzeiliges Resultset zurückgeben.  
@@ -65,17 +65,17 @@ sp_OAMethod objecttoken , methodname
   
 -   Die Methode gibt ein Array als Ausgabeparameter zurück.  
   
- [  *@parametername*** =**] *Parameter*[ **Ausgabe** ]  
+ [ _@parametername_ **=** ] *Parameter*[ **Ausgabe** ]  
  Ein Parameter der Methode. Wenn angegeben, *Parameter* muss ein Wert, der den entsprechenden Datentyp sein.  
   
  Zum Abrufen des Rückgabewert eines Ausgabeparameters *Parameter* muss eine lokale Variable vom entsprechenden Datentyp zurück, und **Ausgabe** muss angegeben werden. Wenn Sie ein konstanter Parameter angegeben wird oder wenn **Ausgabe** nicht angegeben ist, Rückgabewert Wert aus einer Output-Parameter wird ignoriert.  
   
- Wenn angegeben, *Parametername* muss der Namen der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] benannte Parameter. Beachten Sie, dass  **@** *Parametername*keine [!INCLUDE[tsql](../../includes/tsql-md.md)] lokale Variable. Das at-Zeichen (**@**) wird entfernt, und *Parametername*an OLE-Objekts als der Name des Parameters übergeben wird. Alle benannten Parameter müssen nach den Positionsparametern angegeben werden.  
+ Wenn angegeben, *Parametername* muss der Namen der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] benannte Parameter. Beachten Sie, dass **@**_parametername_is keine [!INCLUDE[tsql](../../includes/tsql-md.md)] lokale Variable. Das at-Zeichen (**@**) wird entfernt, und *Parametername*an OLE-Objekts als der Name des Parameters übergeben wird. Alle benannten Parameter müssen nach den Positionsparametern angegeben werden.  
   
  *n*  
  Ein Platzhalter, der anzeigt, dass mehrere Parameter angegeben werden können.  
   
-> [!NOTE]  
+> [!NOTE]
 >  *@parametername* ein benannter Parameter kann sein, da sie Teil der angegebenen Methode und wird an das Objekt übergeben. Die anderen Parameter für diese gespeicherte Prozedur werden nicht nach dem Namen, sondern nach der Position angegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

@@ -20,12 +20,12 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adf5cc81979d8efe9426c082464cb7d7bba52c14
-ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
+ms.openlocfilehash: 37c334f5c5107b2716601916517e888d90164226
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150201"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732077"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>Sys.dm_db_page_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -118,7 +118,7 @@ Die `sys.dm_db_page_info` dynamische Verwaltungsfunktion gibt Informationen wie 
 `sys.dm_db_page_info` kann verwendet werden, anstelle von der `DBCC PAGE` -Anweisung in vielen Fällen, aber es gibt nur die Seite Headerinformationen, nicht den Text der Seite zurück. `DBCC PAGE` wird für Anwendungsfälle weiterhin benötigt, wenn der gesamte Inhalt der Seite erforderlich sind.
 
 ## <a name="using-in-conjunction-with-other-dmvs"></a>Verwendung in Verbindung mit anderen DMVs
-Der wichtige Anwendungsfälle von `sys.dm_db_page_info` besteht darin, es mit anderen DMVs einzubinden, die Informationen verfügbar machen.  Um diesen Anwendungsfall zu ermöglichen, eine neue Spalte namens `page_resource` der Informationen in einem 8-Byte-hex-Format verfügbar macht hinzugefügt wurde. Diese Spalte wurde zu `sys.dm_exec_processes` und `sys.sysprocesses` und andere DMVs in der Zukunft nach Bedarf hinzugefügt.
+Der wichtige Anwendungsfälle von `sys.dm_db_page_info` besteht darin, es mit anderen DMVs einzubinden, die Informationen verfügbar machen.  Um diesen Anwendungsfall zu ermöglichen, eine neue Spalte namens `page_resource` der Informationen in einem 8-Byte-hex-Format verfügbar macht hinzugefügt wurde. Diese Spalte wurde zu `sys.dm_exec_requests` und `sys.sysprocesses` und andere DMVs in der Zukunft nach Bedarf hinzugefügt.
 
 Eine neue Funktion, `sys.fn_PageResCracker`, dauert die `page_resource` als Eingabe und gibt eine einzelne Zeile, die enthält `database_id`, `file_id` und `page_id`.  Diese Funktion kann dann verwendet werden, um die Joins zwischen zu vereinfachen `sys.dm_exec_requests` oder `sys.sysprocesses` und `sys.dm_db_page_info`.
 

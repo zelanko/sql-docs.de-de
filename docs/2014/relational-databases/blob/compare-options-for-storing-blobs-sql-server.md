@@ -10,17 +10,17 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48a46b3f35b8ce19382996bf8c0667b6222dc5c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c90dd764a04b3eb470f0cf76d29e2ee2002d6b97
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059730"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364708"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Vergleichen von Optionen zum Speichern von Blobs (SQL Server)
   Erläutert und vergleicht die Optionen, die zum Speichern von Dateien und Dokumenten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar sind.  
   
-##  <a name="Expectations"></a> Speichern von Dateien in der Datenbank – Vorteile und Erwartungen  
+##  <a name="Expectations"></a> Speichern von Dateien in der Datenbank: Vorteile und Erwartungen  
  Ein großer Prozentsatz der Unternehmensdaten ist unstrukturiert und wird in der Regel als Dateien und Dokumente in Dateisystemen gespeichert. Der Großteil dieser Daten wird von Anwendungen generiert, verwaltet und benötigt, die über Windows-APIs auf die Dateien zugreifen. Unternehmen speichern diese Daten in der Regel im Dateisystem, wohingegen die verwandten Metadaten für die Dateien in einer relationalen Datenbank gespeichert werden.  
   
  Die Integration unstrukturierter Daten in die relationale Datenbank bietet bedeutende Vorteile. Dazu gehören folgende Vorteile:  
@@ -47,16 +47,16 @@ ms.locfileid: "48059730"
   
 |Funktion|Dateiserver und Datenbanklösung|FILESTREAM-Lösung|FileTable-Lösung|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Einzelne Story für Verwaltungstasks**|nein|Benutzerkontensteuerung|**ja**|  
-|**Einzelner Satz von Diensten**: Suche, Berichterstellung, Abfrage usw.|nein|Benutzerkontensteuerung|**ja**|  
-|**Integriertes Sicherheitsmodell**|nein|Benutzerkontensteuerung|**Ja**|  
-|**Direkte Updates der FILESTREAM-Daten**|Benutzerkontensteuerung|nein|**ja**|  
-|**In der Datenbank beibehaltene Datei- und Verzeichnishierarchie**|nein|nein|**ja**|  
-|**Windows-Anwendungskompatibilität**|Benutzerkontensteuerung|nein|**Ja**|  
-|**Relationaler Zugriff auf Dateiattribute**|nein|nein|**ja**|  
+|**Einzelne Story für Verwaltungstasks**|Nein|Ja|**ja**|  
+|**Einzelner Satz von Diensten**: Suche, Berichterstellung, Abfrage usw.|Nein|Ja|**ja**|  
+|**Integriertes Sicherheitsmodell**|Nein|Ja|**Ja**|  
+|**Direkte Updates der FILESTREAM-Daten**|Ja|Nein|**ja**|  
+|**In der Datenbank beibehaltene Datei- und Verzeichnishierarchie**|Nein|Nein|**ja**|  
+|**Windows-Anwendungskompatibilität**|Ja|Nein|**Ja**|  
+|**Relationaler Zugriff auf Dateiattribute**|Nein|Nein|**ja**|  
   
 ##  <a name="CompareRBS"></a> Vergleichen von FILESTREAM und Remote BLOB-Speicher (RBS)  
- Einen Vergleich dieser beiden Funktionen finden Sie in diesem Blogbeitrag vom RBS-Team: [SQL Server Remote BLOB-Speicher und FILESTREAM-Funktion – Vergleich](http://go.microsoft.com/fwlink/?LinkId=210317).  
+ Einen Vergleich dieser beiden Features finden Sie in diesem Blogbeitrag vom RBS-Team: [SQL Server Remote BLOB Store "und" FILESTREAM-Funktion – Vergleich](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
 ##  <a name="more"></a> Weitere Informationen  
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  

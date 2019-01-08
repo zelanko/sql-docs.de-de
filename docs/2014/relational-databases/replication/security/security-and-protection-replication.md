@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec3dacd98a872373bc1b17e5e525c674d9749b58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bc9bc0312b347b10650bb9bb41a4015b6fc94f0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223769"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806112"
 ---
 # <a name="security-and-protection-replication"></a>Sicherheit und Schutz (Replikation)
   Schützen Sie die Replikationsszenarien, die Sie in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] bereitstellen, vor böswilligen Angriffen, und verbessern Sie die Sicherheit Ihrer Daten.  
@@ -33,16 +32,16 @@ ms.locfileid: "48223769"
   
  [Identität und Zugriffssteuerung &#40;Replikation&#41;](identity-and-access-control-replication.md)  
   
- [Weitere Informationen…](security-overview-replication.md)  
+ [Weitere Informationen...](security-overview-replication.md)  
   
  ![Kleines Dateiordnersymbol](../../../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") **Sichere Entwicklung**  
- [Replication Agent Security Model](replication-agent-security-model.md)  
+ [Sicherheitsmodell des Replikations-Agents](replication-agent-security-model.md)  
   
  [Security Role Requirements for Replication](security-role-requirements-for-replication.md)  
   
- [Replication Security Best Practices](replication-security-best-practices.md)  
+ [Bewährte Methoden für die Replikationssicherheit](replication-security-best-practices.md)  
   
- [Weitere Informationen…](secure-development-replication.md)  
+ [Weitere Informationen...](secure-development-replication.md)  
   
  ![Kleines Dateiordnersymbol](../../../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") **Sichere Bereitstellung**  
  [Schützen des Verteilers](secure-the-distributor.md)  
@@ -53,9 +52,9 @@ ms.locfileid: "48223769"
   
  [Sichern des Momentaufnahmeordners](secure-the-snapshot-folder.md)  
   
- [Securing Replication Over the Internet](securing-replication-over-the-internet.md)  
+ [Absichern der Replikation über das Internet](securing-replication-over-the-internet.md)  
   
- [Weitere Informationen…](secure-deployment-replication.md)  
+ [Weitere Informationen...](secure-deployment-replication.md)  
   
  ![Kleines Dateiordnersymbol](../../../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") **Sichere Bereitstellung**  
  [Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation](manage-logins-and-passwords-in-replication.md)  

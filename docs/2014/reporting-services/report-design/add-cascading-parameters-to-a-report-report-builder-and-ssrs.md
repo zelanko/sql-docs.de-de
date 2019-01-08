@@ -11,12 +11,12 @@ ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a4d5a4f3fb3fcc60e7d576b98ccacf88d027d287
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eaddc16b25bc7ed1129cc89b67ae92ddb7aa129
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078348"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376442"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Hinzufügen von kaskadierenden Parametern zu einem Bericht (Berichts-Generator und SSRS)
   Kaskadierende Parameter ermöglichen das Verwalten großer Berichtsdatenmengen. Sie können einen Satz von abhängigen Parametern definieren, sodass die Liste der Werte für einen Parameter von dem Wert abhängt, der in einem anderen Parameter ausgewählt wurde. Der erste Parameter ist beispielsweise unabhängig und stellt eine Liste von Produktkategorien dar. Wenn der Benutzer eine Kategorie auswählt, hängt der zweite Parameter vom Wert des ersten Parameters ab. Seine Werte werden mit einer Liste von Unterkategorien innerhalb der ausgewählten Kategorie aktualisiert. Wenn der Benutzer den Bericht anzeigt, werden die Berichtsdaten mit den Parameterwerten für die Kategorie und die Unterkategorien gefiltert.  
@@ -28,7 +28,7 @@ ms.locfileid: "48078348"
   
  Die Reihenfolge ist für kaskadierende Parameter relevant, da die Datasetabfrage für einen Parameter weiter unten in der Liste einen Verweis auf jeden Parameter weiter oben in der Liste enthält. Zur Laufzeit bestimmt die Reihenfolge der Parameter im Berichtsdatenbereich die Reihenfolge, in der Parameterabfragen im Bericht aufgeführt werden, und damit die Reihenfolge, in der Benutzer die einzelnen aufeinander folgenden Parameterwerte auswählen.  
   
- Informationen zum Erstellen von kaskadierenden Parametern mit mehreren Werten und einschließlich der Funktion "Alle auswählen" finden Sie unter [Informationen zu einem mehrwertigen, kaskadierenden Parameter vom Typ &lt;legacyBold&gt;Alle auswählen&lt;/legacyBold&gt;](http://go.microsoft.com/fwlink/?LinkId=184757).  
+ Informationen zum Erstellen von kaskadierenden Parametern mit mehreren Werten und einschließlich der Funktion "Alle auswählen" finden Sie unter [Informationen zu einem mehrwertigen, kaskadierenden Parameter vom Typ &lt;legacyBold&gt;Alle auswählen&lt;/legacyBold&gt;](https://go.microsoft.com/fwlink/?LinkId=184757).  
   
 ### <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>So erstellen Sie das Hauptdataset mit einer Abfrage, die mehrere abhängige Parameter enthält  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48078348"
   
     1.  Eine Liste mit Datenquellenfeldern. In einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung gibt beispielsweise die SELECT-Anweisung eine Liste mit den Namen aller Datenbankspalten aus einer bestimmten Tabelle oder Sicht an.  
   
-    2.  Einen Abfrageparameter für jeden kaskadierenden Parameter. Ein Abfrageparameter beschränkt die von der Datenquelle abgerufenen Daten, indem bestimmte Werte angegeben werden, die in die Abfrage eingebunden bzw. von dieser ausgeschlossen werden sollen. Typischerweise sind Abfrageparameter in einer Einschränkungsklausel in der Abfrage enthalten. In einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -SELECT-Anweisung sind Abfrageparameter beispielsweise in der WHERE-Klausel enthalten. Weitere Informationen finden Sie unter "Filtern von Zeilen mithilfe von WHERE und HAVING" in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dokumentation in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=120955).  
+    2.  Einen Abfrageparameter für jeden kaskadierenden Parameter. Ein Abfrageparameter beschränkt die von der Datenquelle abgerufenen Daten, indem bestimmte Werte angegeben werden, die in die Abfrage eingebunden bzw. von dieser ausgeschlossen werden sollen. Typischerweise sind Abfrageparameter in einer Einschränkungsklausel in der Abfrage enthalten. In einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -SELECT-Anweisung sind Abfrageparameter beispielsweise in der WHERE-Klausel enthalten. Weitere Informationen finden Sie unter "Filtern von Zeilen mithilfe von WHERE und HAVING" in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dokumentation in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=120955).  
   
 6.  Klicken Sie auf **Ausführen** (**!**). Nachdem Sie die Abfrageparameter eingebunden und anschließend die Abfrage ausgeführt haben, werden automatisch Berichtsparameter erstellt, die den Abfrageparametern entsprechen.  
   
@@ -155,9 +155,9 @@ ms.locfileid: "48078348"
 4.  Klicken Sie auf **Bericht anzeigen**. Die Anzeige des Berichts wird mit den ausgewählten Parametern aktualisiert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen, ändern oder Löschen von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Hinzufügen, Ändern oder Löschen von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-parameters-report-builder-and-report-designer.md)   
- [Tutorial: Add a Parameter to Your Report (Report Builder) (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Lernprogramme &#40;Berichts-Generator&#41;](../report-builder-tutorials.md)   
  [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

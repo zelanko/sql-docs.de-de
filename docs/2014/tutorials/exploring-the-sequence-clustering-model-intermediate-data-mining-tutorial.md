@@ -11,15 +11,15 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: fe57736160762f90f574f835673e55d19107fa15
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085476"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590184"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Prüfen des Sequenzclustermodells (Data Mining-Lernprogramm)
-  Nun, dass Sie erstellt haben die **Sequenzcluster mit Region** Modell durchsuchen können Sie es mit der [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequenzcluster-Viewer auf die **Miningmodell-Viewer** -Registerkarte des Data Mining-Designers. Die [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequenzcluster-Viewer enthält fünf Registerkarten: **Clusterdiagramm**, **Clusterprofile**, **Clustermerkmale**,  **ClusterDiscrimination**, und **Statusübergänge**. Weitere Informationen zum Verwenden des Viewers finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
+  Nun, dass Sie erstellt haben die **Sequenzcluster mit Region** Modell durchsuchen können Sie es mit der [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequenzcluster-Viewer auf die **Miningmodell-Viewer** -Registerkarte des Data Mining-Designers. Die [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequenzcluster-Viewer enthält fünf Registerkarten: **Clusterdiagramm**, **Clusterprofile**, **Cluster Merkmale**, **ClusterDiscrimination**, und **Statusübergänge**. Weitere Informationen zum Verwenden des Viewers finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
   
 -   [Registerkarte Clusterdiagramm](#bkmk_CDiagram)  
   
@@ -179,7 +179,7 @@ ms.locfileid: "49085476"
   
 1.  In der **Clusterunterscheidung** Registerkarte für **Cluster 1**Option `Pacific Cluster`.  
   
-     Standardmäßig wird die Auswahl für **Cluster 2** Änderungen an **Komplement von Pacific *** Cluster**.  
+     Standardmäßig wird die Auswahl für **Cluster 2** Änderungen an **Komplement von Pazifikcluster**.  
   
      Das oberste Attribut, das unterscheidet `Pacific Cluster` von allen anderen Fällen ist die Region. Region ist ein so starkes Attribut für das Clustering, dass es andere Attribute verdeckt. Um diesen Effekt zu vermeiden, sollten einige der kleineren Cluster miteinander vergleichen. Wenn Sie dies tun, wird die Liste der Attribute geändert und enthält möglicherweise mehr Übergänge zwischen Modellen.  
   

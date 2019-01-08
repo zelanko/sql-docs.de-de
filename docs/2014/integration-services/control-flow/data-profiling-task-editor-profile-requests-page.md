@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.profilerequests.f1
@@ -15,12 +14,12 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 712da8b3c08d5bb73913e0585b7d1f87f5ef7396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1541bc888c40916bf6ca613390685df9f816012
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189173"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815382"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor für den Datenprofilerstellungs-Task (Seite 'Profilanforderungen')
   Verwenden Sie die Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task** , um die Profile auszuwählen und zu konfigurieren, die Sie berechnen möchten. In einem Datenprofilerstellungs-Task können Sie mehrere Profile für mehrere Spalten oder Kombinationen von Spalten in mehreren Tabellen oder Sichten berechnen.  
@@ -49,15 +48,15 @@ ms.locfileid: "48189173"
 ### <a name="requests-pane-columns"></a>Spalten im Anforderungsbereich  
  Welche Spalten im Anforderungsbereich angezeigt werden, hängt von der **Sicht** ab, die Sie ausgewählt haben:  
   
--   Wenn Sie **Alle Anforderungen**auswählen, enthält der Anforderungsbereich zwei Spalten: **Profiltyp** und **Anforderungs-ID**.  
+-   Bei Auswahl des anzuzeigenden **alle Anforderungen**, der Anforderungsbereich zwei Spalten: **Profiltyp** und **Anforderungs-ID**.  
   
--   Wenn Sie die Sicht eines der fünf Spaltenprofile wählen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Spalte**und **Anforderungs-ID**.  
+-   Wenn Sie einen der fünf spaltenprofile anzeigen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Spalte**, und **Anforderungs-ID**.  
   
--   Wenn Sie die Sicht eines Kandidatenschlüsselprofils auswählen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Schlüsselspalten**und **Anforderungs-ID**.  
+-   Wenn Sie Sicht ein kandidatenschlüsselprofils wählen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **KeyColumns**, und **Anforderungs-ID**.  
   
--   Wenn Sie ein funktionales Abhängigkeitsprofil anzeigen, enthält der Anforderungsbereich fünf Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Bestimmende Spalten**, **Abhängige Spalte**und **Anforderungs-ID**.  
+-   Wenn Sie ein funktionales abhängigkeitsprofil anzeigen, hat der Anforderungsbereich fünf Spalten: **Profiltyp**, **Tabelle oder Sicht**, **bestimmende Spalten**, **abhängige Spalte**, und **Anforderungs-ID**.  
   
--   Wenn Sie ein Wertanschlussprofil anzeigen, enthält der Anforderungsbereich sechs Spalten: **Profiltyp**, **Untergeordnete Tabelle oder Sicht**, **Übergeordnete Tabelle oder Sicht**, **Untergeordnete Spalten**, **Übergeordnete Spalten**und **Anforderungs-ID**.  
+-   Wenn Sie ein Wertanschlussprofil anzeigen, ist der Anforderungsbereich sechs Spalten: **Profiltyp**, **untergeordnete Tabelle oder Sicht**, **übergeordnete Tabelle oder Sicht**, **untergeordnete Spalten**, **übergeordnete Spalten**, und **Anforderungs-ID**.  
   
  In den folgenden Abschnitten wird jede dieser Spalten beschrieben.  
   
@@ -65,13 +64,13 @@ ms.locfileid: "48189173"
  **Profiltyp**  
  Wählen Sie ein Datenprofil aus folgenden Optionen:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Anforderung für Kandidatenschlüsselprofil**|Berechnen Sie ein Kandidatenschlüsselprofil.<br /><br /> Dieses Profil meldet, ob eine Spalte oder eine Gruppe von Spalten ein Schlüssel oder ein ungefährer Schlüssel für die ausgewählte Tabelle ist. Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. doppelte Werte in einer potenziellen Schlüsselspalte.|  
 |**Anforderung für Verteilungsprofil für Spaltenlänge**|Berechnen Sie ein Verteilungsprofil für Spaltenlänge.<br /><br /> Das Verteilungsprofil für Spaltenlänge dokumentiert alle eindeutigen Längen von Zeichenfolgenwerten in der ausgewählten Spalte sowie den Prozentsatz der Zeilen in der Tabelle, die jede Länge darstellt. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. Werte, die nicht gültig sind. Beispiel: Sie erstellen ein Profil einer Spalte mit den Codes der US-amerikanischen Bundesstaaten, die zwei Zeichen lang sind, und entdecken Werte, die länger als zwei Zeichen sind.|  
 |**Anforderung für Profil für NULL-Verhältnis der Spalte**|Berechnen Sie ein Profil für NULL-Verhältnis der Spalte.<br /><br /> Das Profil für NULL-Verhältnis der Spalte dokumentiert den Prozentwert der NULL-Werte in der ausgewählten Spalte. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. ein unerwartet hohes Verhältnis an NULL-Werten in einer Spalte. Beispiel: Sie erstellen ein Profil der Spalte für die Postleitzahl und entdecken einen unerwartet hohen Prozentsatz an fehlenden Codes.|  
 |**Anforderung für Spaltenmusterprofil**|Berechnen Sie ein Spaltenmusterprofil.<br /><br /> Das Spaltenmusterprofil meldet einen Satz von regulären Ausdrücken, die den angegebenen Prozentsatz der Werte in einer Zeichenfolgenspalte abdecken. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. ungültige Zeichenfolgen. Dieses Profil kann außerdem reguläre Ausdrücke vorschlagen, die künftig zur Überprüfung neuer Werte verwendet werden können. Beispiel: Ein Musterprofil einer Spalte mit Postleitzahlen kann folgende reguläre Ausdrücke erstellen: \d{5}-\d{4}, \d{5} und \d{9}. Wenn Sie andere reguläre Ausdrücke erhalten, enthalten Ihre Daten wahrscheinlich ungültige oder falsch formatierte Werte.|  
-|**Anforderung für Spaltenstatistikprofil**|Wählen Sie diese Option, um anhand der Standardeinstellungen für alle anwendbaren Spalten in der ausgewählten Tabelle oder Sicht ein Spaltenstatistikprofil zu berechnen.<br /><br /> Das Spaltenstatistikprofil meldet Statistiken, wie Minimum, Maximum, Mittelwert und Standardabweichung für numerische Spalten und den Mindest- und Höchstwert für `datetime` Spalten. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. ungültige Datumsangaben. Beispiel: Sie erstellen ein Profil einer Spalte mit historischen Daten und entdecken einen Maximalwert, der in der Zukunft liegt.|  
+|**Anforderung für Spaltenstatistikprofil**|Wählen Sie diese Option, um anhand der Standardeinstellungen für alle anwendbaren Spalten in der ausgewählten Tabelle oder Sicht ein Spaltenstatistikprofil zu berechnen.<br /><br /> Das Spaltenstatistikprofil meldet Statistiken, wie minimale, maximale, durchschnittliche und standardmäßige Abweichung für numerische Spalten und den Mindest- und Höchstwert für `datetime`-Spalten. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. ungültige Datumsangaben. Beispiel: Sie erstellen ein Profil einer Spalte mit historischen Daten und entdecken einen Maximalwert, der in der Zukunft liegt.|  
 |**Anforderung für Verteilungsprofil für Spaltenwert**|Berechnen Sie ein Verteilungsprofil für Spaltenwert.<br /><br /> Das Verteilungsprofil für Spaltenwert dokumentiert alle eindeutigen Längen von Zeichenfolgenwerten in der ausgewählten Spalte sowie den Prozentsatz der Zeilen in der Tabelle, die jeder Wert darstellt. Dieses Profil kann auch Werte melden, die mehr als einen angegebenen Prozentwert in der Tabelle darstellen. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. eine falsche Anzahl eindeutiger Werte in einer Spalte. Beispiel: Sie erstellen ein Profil einer Spalte, die die US-amerikanischen Bundesstaaten enthält, und entdecken mehr als 50 eindeutige Werte.|  
 |**Anforderung für funktionales Abhängigkeitsprofil**|Berechnen Sie ein funktionales Abhängigkeitsprofil.<br /><br /> Das funktionale Abhängigkeitsprofil dokumentiert das Ausmaß, in dem die Werte in einer Spalte (der abhängigen Spalte) von den Werten in einer anderen Spalte oder einer Gruppe von Spalten (der determinanten Spalte) abhängen. Dieses Profil hilft Ihnen auch, Probleme mit den Daten zu identifizieren, z. B. ungültige Werte. Beispiel: Sie erstellen ein Profil der Abhängigkeit zwischen einer Spalte mit US-amerikanischen Postleitzahlen und einer Spalte mit US-amerikanischen Bundesstaaten. Die gleiche Postleitzahl sollte immer denselben Bundesstaat aufweisen, doch das Profil entdeckt Verstöße gegen dieses Abhängigkeitsverhältnis.|  
 |**Anforderung für Wertinklusionsprofil**|Berechnen Sie ein Wertinklusionsprofil.<br /><br /> Das Wertinklusionsprofil berechnet die Überschneidung in den Werten zwischen zwei Spalten oder Gruppen von Spalten. Dieses Profil kann auch ermitteln, ob eine Spalte oder eine Gruppe von Spalten geeignet ist, um als Fremdschlüssel zwischen den ausgewählten Tabellen zu fungieren. Dieses Profil hilft Ihnen auch, Probleme mit den Daten zu identifizieren, z. B. ungültige Werte. Beispiel: Sie erstellen ein Profil der Spalte ProductID einer Vertriebstabelle und stellen fest, dass die Spalte Werte enthält, die nicht in der Spalte ProductID der Produkttabelle enthalten sind.|  
@@ -131,24 +130,24 @@ ms.locfileid: "48189173"
   
  Diese Optionen hängen vom ausgewählten Profil ab. Informationen zu den Optionen für einzelne Profiltypen finden Sie in den folgenden Themen:  
   
--   [Optionen für Anforderung kandidatenschlüsselprofil &#40;Datenprofilerstellungs-Task&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Optionen für die Anforderung für Kandidatenschlüsselprofil &#40;Datenprofilerstellungs-Task&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für die Spalte Null-Verhältnis Anforderung &#40;Datenprofilerstellungs-Task&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Optionen für die Anforderung für Profil für NULL-Verhältnis der Spalte &#40;Datenprofilerstellungs-Task&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
 -   [Optionen für die Anforderung für Spaltenstatistikprofil &#40;Datenprofilerstellungs-Task&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Optionen Verteilungsprofil für Spaltenwert Profil Anforderung &#40;Datenprofilerstellungs-Task&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Optionen für Anforderung für Verteilungsprofil für Spaltenwert &#40;Datenprofilerstellungs-Task&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Spaltenoptionen Verteilungsprofil für Spaltenlänge Anforderung &#40;Datenprofilerstellungs-Task&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Optionen für Anforderung für Verteilungsprofil für Spaltenlänge &#40;Datenprofilerstellungs-Task&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für Anforderung für Spaltenmusterprofil &#40;Datenprofilerstellungs-Task&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Optionen für die Anforderung für Spaltenmusterprofil &#40;Datenprofilerstellungs-Task&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für Anforderung für funktionales Abhängigkeitsprofil &#40;Datenprofilerstellungs-Task&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Optionen für die Anforderung für funktionales Abhängigkeitsprofil &#40;Datenprofilerstellungs-Task&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Optionen für Anforderung für Wertinklusionsprofil Wert &#40;Datenprofilerstellungs-Task&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Optionen für Anforderung für Wertinklusionsprofil &#40;Datenprofilerstellungs-Task&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Der Datenprofilerstellungs-Task-Editor &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

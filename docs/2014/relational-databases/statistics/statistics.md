@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f69e594b1359e3d569c624243c15de2354468be1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ce37ee013e8424079e9d2e526ccdbeacfb5544b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063750"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367142"
 ---
 # <a name="statistics"></a>Statistik
   Der Abfrageoptimierer verwendet Statistiken zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen oder den Abfrageentwurf ändern, um optimale Ergebnisse zu erzielen. Dieses Thema enthält eine Erläuterung von Statistikkonzepten sowie Richtlinien zur effektiven Verwendung von Abfrageoptimierungsstatistiken.  
@@ -40,7 +40,7 @@ ms.locfileid: "48063750"
  Jedes Statistikobjekt wird für eine Liste mit mindestens einer Tabellenspalte erstellt und enthält ein Histogramm, das die Verteilung von Werten in der ersten Spalte anzeigt. Statistikobjekte, die sich auf mehrere Spalten beziehen, enthalten außerdem statistische Informationen über die spaltenübergreifende Korrelation von Werten. Diese Korrelationsstatistiken oder *Dichten*werden von der Anzahl unterschiedlicher Zeilen mit Spaltenwerten abgeleitet. Weitere Informationen zu Statistikobjekten finden Sie unter [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).  
   
  Gefilterte Statistiken  
- Gefilterte Statistiken können die Abfrageleistung für Abfragen verbessern, bei denen aus klar definierten Teilmengen von Daten ausgewählt wird. Gefilterte Statistiken verwenden ein Filterprädikat, um die Teilmenge von Daten auszuwählen, die in der Statistik enthalten ist. Sorgfältig entworfene gefilterte Statistiken können den Abfrageausführungsplan im Vergleich zu Tabellenstatistiken verbessern. Weitere Informationen zum Filterprädikat finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql). Weitere Informationen zum Zeitpunkt der Erstellung von gefilterten Statistiken finden Sie im Abschnitt [Zeitpunkt der Erstellung von Statistiken](#UpdateStatistics) in diesem Thema. Eine Fallstudie finden Sie im Blogbeitrag [Using Filtered Statistics with Partitioned Tables](http://go.microsoft.com/fwlink/?LinkId=178505)(Verwenden von gefilterten Statistiken mit partitionierten Tabellen) auf der SQLCAT-Website.  
+ Gefilterte Statistiken können die Abfrageleistung für Abfragen verbessern, bei denen aus klar definierten Teilmengen von Daten ausgewählt wird. Gefilterte Statistiken verwenden ein Filterprädikat, um die Teilmenge von Daten auszuwählen, die in der Statistik enthalten ist. Sorgfältig entworfene gefilterte Statistiken können den Abfrageausführungsplan im Vergleich zu Tabellenstatistiken verbessern. Weitere Informationen zum Filterprädikat finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql). Weitere Informationen zum Zeitpunkt der Erstellung von gefilterten Statistiken finden Sie im Abschnitt [Zeitpunkt der Erstellung von Statistiken](#UpdateStatistics) in diesem Thema. Eine Fallstudie finden Sie im Blogbeitrag [Using Filtered Statistics with Partitioned Tables](https://go.microsoft.com/fwlink/?LinkId=178505)(Verwenden von gefilterten Statistiken mit partitionierten Tabellen) auf der SQLCAT-Website.  
   
  Statistikoptionen  
  Anhand von drei Optionen können Sie festlegen, wann und wie Statistiken erstellt und aktualisiert werden. Diese Optionen werden nur auf Datenbankebene festgelegt.  
@@ -154,7 +154,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>Bei der Abfrageausführung wird aus einer Teilmenge von Daten ausgewählt  
  Wenn der Abfrageoptimierer Statistiken für einzelne Spalten und Indizes erstellt, berechnet er Statistiken für die Werte sämtlicher Zeilen. Wenn bei Abfragen aus einer Teilmenge von Zeilen ausgewählt wird und diese Teilmenge über eine eindeutige Datenverteilung verfügt, können Abfragepläne durch gefilterte Statistiken verbessert werden. Sie können gefilterte Statistiken erstellen, indem Sie die CREATE STATISTICS-Anweisung mit der WHERE-Klausel verwenden, um den Filterprädikatausdruck zu definieren.  
   
- Durch die Verwendung von [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]beispielsweise gehört jedes Produkt in der Production.Product-Tabelle zu einer von vier Kategorien in der Production.ProductCategory-Tabelle: Fahrräder, Bauteile, Bekleidung und Zubehör. Jede Kategorie verfügt über eine andere Datenverteilung für das Gewicht: Die Gewichte der Fahrräder reichen von 13,77 bis 30,0, die Gewichte der Bauteile reichen von 2,12 bis 1050,00 mit einigen NULL-Werten, die Gewichte der Bekleidung sind alle NULL, und die Gewichte des Zubehörs sind ebenfalls NULL.  
+ Verwenden Sie beispielsweise [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], jedes Produkt in der Production.Product-Tabelle gehört zu einer der vier Kategorien in der Production.ProductCategory-Tabelle: Fahrräder, Komponenten, Bekleidung und Zubehör. Jede Kategorie verfügt über eine andere Datenverteilung für das Gewicht: Die Gewichte der Fahrräder reichen von 13,77 bis 30,0, die Gewichte der Bauteile reichen von 2,12 bis 1050,00 mit einigen NULL-Werten, die Gewichte der Bekleidung sind alle NULL, und die Gewichte des Zubehörs sind ebenfalls NULL.  
   
  Bei den Fahrrädern liefern gefilterte Statistiken dem Abfrageoptimierer zu allen Fahrradgewichten genauere Statistikdaten und können die Abfrageplanqualität im Vergleich zu Tabellenstatistiken oder nicht vorhandenen Statistiken für die Weight-Spalte verbessern. Die Spalte mit dem Fahrradgewicht eignet sich besonders für gefilterte Statistiken, jedoch weniger für einen gefilterten Index, wenn nur relativ wenige Suchen nach Gewichtsangaben ausgeführt werden. Die Leistungsvorteile, die gefilterte Indizes bei der Suche bieten, können die zusätzlichen Kosten für Wartung und Speicher, die mit der Implementierung eines gefilterten Indexes in der Datenbank verbunden sind, jedoch nicht aufwiegen.  
   
@@ -177,7 +177,7 @@ GO
 ### <a name="query-identifies-missing-statistics"></a>Abfrage identifiziert fehlende Statistiken  
  Wenn der Abfrageoptimierer aufgrund eines Fehlers oder eines anderen Ereignisses keine Statistiken erstellen kann, erstellt er den Abfrageplan ohne Verwendung von Statistiken. Der Abfrageoptimierer kennzeichnet die Statistik als nicht vorhanden und versucht beim nächsten Ausführen der Abfrage, die Statistik erneut zu generieren.  
   
- Fehlende Statistiken werden als Warnungen angegeben (Tabellenname als rot formatierter Text), wenn der Ausführungsplan einer Abfrage mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]grafisch angezeigt wird. Das Fehlen von Statistiken wird zudem angezeigt, wenn die **Missing Column Statistics**-Ereignisklasse mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] überwacht wird. Weitere Informationen finden Sie unter [Fehler und Warnungen-Ereigniskategorie &amp;#40;Datenbank-Engine&amp;#41;](../event-classes/errors-and-warnings-event-category-database-engine.md).  
+ Fehlende Statistiken werden als Warnungen angegeben (Tabellenname als rot formatierter Text), wenn der Ausführungsplan einer Abfrage mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]grafisch angezeigt wird. Das Fehlen von Statistiken wird zudem angezeigt, wenn die **Missing Column Statistics**-Ereignisklasse mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] überwacht wird. Weitere Informationen finden Sie unter [Fehler und Warnungen-Ereigniskategorie &#40;Datenbank-Engine&#41;](../event-classes/errors-and-warnings-event-category-database-engine.md).  
   
  Wenn Statistiken fehlen, führen Sie die folgenden Schritte aus:  
   
@@ -187,7 +187,7 @@ GO
   
 -   Erstellen Sie die fehlende Statistik mithilfe der CREATE STATISTICS-Anweisung.  
   
- Wenn Statistiken zu eines schreibgeschützten Datenbank oder einer schreibgeschützten Momentaufnahme fehlen oder veraltet sind die [!INCLUDE[ssDE](../../../includes/ssde-md.md)] erstellt und verwaltet Sie temporäre Statistiken in `tempdb`. Wenn das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] temporäre Statistiken erstellt, wird dem Statistiknamen das _readonly_database_statistic-Suffix angefügt, um die temporären Statistiken von den dauerhaften Statistiken zu unterscheiden. Das _readonly_database_statistic-Suffix ist für von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]generierte Statistiken reserviert. Skripts für die temporären Statistiken können erstellt und auf einer Datenbank mit Lese-/Schreibzugriff reproduziert werden. Bei einer Skripterstellung ändert [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] das Suffix des Statistiknamens von _readonly_database_statistic zu _readonly_database_statistic_scripted.  
+ Fehlen Statistiken über eine schreibgeschützte Datenbank oder Momentaufnahme oder sind diese veraltet, erstellt [!INCLUDE[ssDE](../../../includes/ssde-md.md)] temporäre Statistiken in `tempdb` und behält diese bei. Wenn das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] temporäre Statistiken erstellt, wird dem Statistiknamen das _readonly_database_statistic-Suffix angefügt, um die temporären Statistiken von den dauerhaften Statistiken zu unterscheiden. Das _readonly_database_statistic-Suffix ist für von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]generierte Statistiken reserviert. Skripts für die temporären Statistiken können erstellt und auf einer Datenbank mit Lese-/Schreibzugriff reproduziert werden. Bei einer Skripterstellung ändert [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] das Suffix des Statistiknamens von _readonly_database_statistic zu _readonly_database_statistic_scripted.  
   
  Nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann temporäre Statistiken erstellen und aktualisieren. Sie können jedoch temporäre Statistiken löschen und Statistikeigenschaften mit den gleichen Tools überwachen, die Sie für dauerhafte Statistiken verwenden:  
   

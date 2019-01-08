@@ -21,12 +21,12 @@ ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d94d3127a5957b1684133019cf4991cba7adbff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e8e2af3150b6c0e8663c28a1342b68be57e043d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769431"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409799"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Bei Lücken in der LSN, die eine Unterbrechung der Protokollkette anzeigen, enth
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|Die URL der Sicherungsdatei.|  
-|backup_type|NVARCHAR(6)|"DB" für Datenbanksicherung; "LOG" für Protokollsicherung|  
+|backup_type|NVARCHAR(6)|"DB" für die Datenbank sichern "LOG" für protokollsicherung|  
 |expiration_date|DATETIME|Das Datum, zu dem die Löschung dieser Datei erwartet wird. Diese Einstellung basiert auf der Fähigkeit der Datenbank, zu einem bestimmten Zeitpunkt während der angegebenen Beibehaltungsdauer eine Wiederherstellung durchzuführen.|  
 |database_guid|UNIQUEIDENTIFIER|Der GUID-Wert für die angegebene Datenbank.  Mit einer GUID wird eine Datenbank eindeutig angegeben.|  
 |first_lsn|NUMERIC(25, 0)|Protokollfolgenummer des ersten oder ältesten Protokolldatensatzes im Sicherungssatz. Kann den Wert NULL haben.|  
@@ -69,13 +69,13 @@ Bei Lücken in der LSN, die eine Unterbrechung der Protokollkette anzeigen, enth
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert **wählen** Berechtigungen für diese Funktion.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel werden alle verfügbaren, von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] erstellten Sicherungen für die Datenbank "MyDB" aufgelistet.  
+ Das folgende Beispiel listet alle verfügbaren Sicherungen über gesichert [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die Datenbank "MyDB"  
   
 ```  
 SELECT *   

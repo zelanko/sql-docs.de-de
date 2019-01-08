@@ -4,18 +4,18 @@ description: Dieser Artikel enthält die Anmerkungen zu dieser Version und die u
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b22e52d68c1d2b10005e69e2e70c41e73c173dca
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 21e28b73019ac02c5269f1c7e1a76529f8181315
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269833"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306197"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Versionshinweise für SQL Server-2019-Vorschauversion unter Linux
 
@@ -33,7 +33,7 @@ Die folgenden Versionshinweise gelten für SQL Server-2019 Vorschau unter Linux 
 | Red Hat Enterprise Linux 7.3 oder 7.4 Workstation, Server und Desktop | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-ubuntu.md) | 
-| Docker-Engine 1.8 und höher unter Windows, Mac oder Linux | – | [Installationshandbuch](quickstart-install-connect-docker.md) | 
+| Docker-Engine 1.8 und höher unter Windows, Mac oder Linux | Nicht zutreffend | [Installationshandbuch](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
 > Weitere Informationen finden Sie in der [Systemanforderungen](sql-server-linux-setup.md#system) für SQL Server unter Linux. Die neuesten Supportrichtlinie für SQL Server 2017 finden Sie unter den [technischer Support-Richtlinie für Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
@@ -48,6 +48,7 @@ Die folgende Tabelle enthält die Versionsgeschichte für SQL Server-2019-Vorsch
 
 | Release               | Version       | Veröffentlichungsdatum |
 |-----------------------|---------------|--------------|
+| [CTP-VERSION 2.2](#CTP22)     | 15.0.1200.24  | 2018-12-11   |
 | [CTP-VERSION 2.1](#CTP21)     | 15.0.1100.94  | 2018-11-06   |
 | [CTP 2.0](#CTP20)     | 15.0.1000.34  | 2018-09-24   |
 
@@ -63,6 +64,26 @@ Wenn Sie vorhandene SQL Server-Pakete aktualisieren, führen Sie den entsprechen
 - [Installieren von SQL Server-2019 Vorschau Machine Learning-Dienste-R und Python-Unterstützung unter Linux](sql-server-linux-setup-machine-learning.md)
 - [SQL Server-Agent aktivieren](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CTP22"></a> CTP 2.2 (Dezember 2018)
+
+Die folgenden Abschnitte enthalten Paketspeicherorte und bekannte Probleme für die CTP-Version 2.2-Version. Weitere Informationen zu neuen Funktionen von SQL Server-2019 Linux finden Sie unter den [Neuigkeiten in SQL Server-2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+
+### <a name="package-details"></a>Paketdetails
+
+Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Debian-Pakete mit den Informationen in der folgenden Tabelle herunterladen:
+
+| Package | Paketversion | Downloads |
+|-----|-----|-----|
+| Red Hat-RPM-Paket | 15.0.1200.24-2 | [Engine-RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[Volltext-Suche-RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[Erweiterbarkeit RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Java-Erweiterbarkeit RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
+| SLES-RPM-Paket | 15.0.1200.24-2 | [MSSQL-Server-Engine-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[Volltext-Suche-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[Erweiterbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Java-Erweiterbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
+| Ubuntu 16.04 Debian-Paket | 15.0.1200.24-2 | [Engine-Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1200.24-2_amd64.deb)</br>[Hohe Verfügbarkeit Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1200.24-2_amd64.deb)</br>[Full-Text Search Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1200.24-2_amd64.deb)</br>[Erweiterbarkeit Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1200.24-2_amd64.deb)</br>[Debian-Paket für Java-Erweiterbarkeit](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1200.24-2_amd64.deb)|
+
+### <a name="known-issues"></a>Bekannte Probleme
+
+#### <a id="msdtc"></a> Microsoft Distributed Transaction Coordinator
+
+Derzeit erfordert MSDTC Transaktionen nicht authentifiziert. Z. B. Wenn Sie einen Verbindungsserver von SQL Server auf Windows, SQL Server unter Linux verwenden oder eine Windows-Client-Anwendung verwenden, um eine verteilte Transaktion für SQL Server unter Linux zu starten, wird MS DTC ist auf Windows Server und Client erforderlich, um die Option "nicht verwenden Authentifizierung erforderlich".
+
 ## <a id="CTP21"></a> CTP-Version 2.1 (November 2018)
 
 Die folgenden Abschnitte enthalten Paketspeicherorte und bekannte Probleme bei der CTP-Version 2.1 Version. Weitere Informationen zu neuen Funktionen von SQL Server-2019 Linux finden Sie unter den [Neuigkeiten in SQL Server-2019](../sql-server/what-s-new-in-sql-server-ver15.md).
@@ -71,7 +92,7 @@ Die folgenden Abschnitte enthalten Paketspeicherorte und bekannte Probleme bei d
 
 Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Debian-Pakete mit den Informationen in der folgenden Tabelle herunterladen:
 
-| Paket | Paketversion | Downloads |
+| Package | Paketversion | Downloads |
 |-----|-----|-----|
 | Red Hat-RPM-Paket | 15.0.1100.94-1 | [Engine-RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1100.94-1.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1100.94-1.x86_64.rpm)</br>[Volltext-Suche-RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1100.94-1.x86_64.rpm)</br>[Erweiterbarkeit RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1100.94-1.x86_64.rpm)</br>[Java-Erweiterbarkeit RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1100.94-1.x86_64.rpm)|
 | SLES-RPM-Paket | 15.0.1100.94-1 | [MSSQL-Server-Engine-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1100.94-1.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1100.94-1.x86_64.rpm)</br>[Volltext-Suche-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1100.94-1.x86_64.rpm)</br>[Erweiterbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1100.94-1.x86_64.rpm)</br>[Java-Erweiterbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1100.94-1.x86_64.rpm)|
@@ -79,7 +100,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 
 ### <a name="known-issues"></a>Bekannte Probleme
 
-#### <a id="msdtc"></a> Microsoft Distributed Transaction Coordinator
+#### <a name="microsoft-distributed-transaction-coordinator"></a>Microsoft Distributed Transaction Coordinator
 
 Derzeit erfordert MSDTC Transaktionen nicht authentifiziert. Z. B. Wenn Sie einen Verbindungsserver von SQL Server auf Windows, SQL Server unter Linux verwenden oder eine Windows-Client-Anwendung verwenden, um eine verteilte Transaktion für SQL Server unter Linux zu starten, wird MS DTC ist auf Windows Server und Client erforderlich, um die Option "nicht verwenden Authentifizierung erforderlich".
 
@@ -91,7 +112,7 @@ Die folgenden Abschnitte enthalten Paketspeicherorte und bekannte Probleme für 
 
 Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Debian-Pakete mit den Informationen in der folgenden Tabelle herunterladen:
 
-| Paket | Paketversion | Downloads |
+| Package | Paketversion | Downloads |
 |-----|-----|-----|
 | Red Hat-RPM-Paket | 15.0.1000.34-2 | [Engine-RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[Volltext-Suche-RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[Erweiterbarkeit RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Java-Erweiterbarkeit RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
 | SLES-RPM-Paket | 15.0.1000.34-2 | [MSSQL-Server-Engine-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[Volltext-Suche-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[Erweiterbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Java-Erweiterbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
@@ -99,7 +120,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 
 ### <a name="known-issues"></a>Bekannte Probleme
 
-#### <a id="msdtc"></a> Microsoft Distributed Transaction Coordinator
+#### <a name="microsoft-distributed-transaction-coordinator"></a>Microsoft Distributed Transaction Coordinator
 
 Derzeit erfordert MSDTC Transaktionen nicht authentifiziert. Z. B. Wenn Sie einen Verbindungsserver von SQL Server auf Windows, SQL Server unter Linux verwenden oder eine Windows-Client-Anwendung verwenden, um eine verteilte Transaktion für SQL Server unter Linux zu starten, wird MS DTC ist auf Windows Server und Client erforderlich, um die Option "nicht verwenden Authentifizierung erforderlich".
 

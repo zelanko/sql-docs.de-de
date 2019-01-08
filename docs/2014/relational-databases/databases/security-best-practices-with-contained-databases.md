@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
@@ -13,18 +12,18 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 649d92089f8e46a9618e7416ee959d153385f1c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89a988a5d664e460a3148cf910c0be31ba07a5dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193670"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816332"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Bewährte Methoden für die Sicherheit eigenständiger Datenbanken
-  Eigenständige Datenbanken bergen einige eindeutige Risiken. Diese müssen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Administratoren erkannt und gemindert werden. Die meisten Bedrohungen beziehen sich auf die `USER WITH PASSWORD` Authentifizierungsprozess, den die Authentifizierungsgrenze von der [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf Datenbankebene.  
+  Eigenständige Datenbanken bergen einige eindeutige Risiken. Diese müssen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Administratoren erkannt und gemindert werden. Die meisten Bedrohungen betreffen den `USER WITH PASSWORD`-Authentifizierungsprozess, durch den die Authentifizierungsgrenze von der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Ebene auf die Datenbankebene verschoben wird.  
   
 ## <a name="threats-related-to-users"></a>Bedrohungen in Bezug auf Benutzer  
- Benutzer in einer eigenständigen Datenbank mit der `ALTER ANY USER` Berechtigung, z. B. Mitglieder der der **Db_owner** und **Db_securityadmin** festen Datenbankrollen, können Sie den Zugriff auf die Datenbank ohne gewähren der Wissen und Erlaubnis Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrator. Wenn Benutzern der Zugriff auf eine eigenständige Datenbank gewährt wird, vergrößert dies die potenzielle Angriffsfläche der gesamten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz. Administratoren sollten diese Delegierung der Zugriffssteuerung verstehen und seien Sie vorsichtig, zum Gewähren von Benutzern in der eigenständigen Datenbank die `ALTER ANY USER` Berechtigung. Alle Datenbankbesitzer verfügen über die `ALTER ANY USER` Berechtigung. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren sollten die Benutzer in einer eigenständigen Datenbank in regelmäßigen Abständen überwachen.  
+ Benutzer in einer eigenständigen Datenbank mit der `ALTER ANY USER` Berechtigung, z. B. Mitglieder der der **Db_owner** und **Db_securityadmin** festen Datenbankrollen, können Sie den Zugriff auf die Datenbank ohne gewähren der Wissen und Erlaubnis Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrator. Wenn Benutzern der Zugriff auf eine eigenständige Datenbank gewährt wird, vergrößert dies die potenzielle Angriffsfläche der gesamten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz. Administratoren müssen diese Delegierung der Zugriffssteuerung verstehen, und sie sollten Benutzern die `ALTER ANY USER`-Berechtigung in der eigenständigen Datenbank nur mit großer Vorsicht gewähren. Alle Datenbankbesitzer verfügen über die `ALTER ANY USER`-Berechtigung. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren sollten die Benutzer in einer eigenständigen Datenbank in regelmäßigen Abständen überwachen.  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>Zugreifen auf andere Datenbanken mit dem guest-Konto  
  Datenbankbesitzer und Datenbankbenutzer mit der `ALTER ANY USER`-Berechtigung können Benutzer für die eigenständige Datenbank erstellen. Nach dem Herstellen einer Verbindung mit einer eigenständigen Datenbank in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann ein Benutzer der eigenständigen Datenbank auf andere Datenbanken in [!INCLUDE[ssDE](../../includes/ssde-md.md)]zugreifen, wenn für die anderen Datenbanken das **guest** -Konto aktiviert ist.  
@@ -46,7 +45,7 @@ CREATE USER Carlo WITH PASSWORD = '<same password>', SID = <SID from DB1>;
 GO  
 ```  
   
- Um eine datenbankübergreifende Abfrage auszuführen, müssen Sie festlegen, die `TRUSTWORTHY` Option für die aufrufende Datenbank. Wenn sich der oben definierte Benutzer (Carlo) beispielsweise in DB1 befindet und `SELECT * FROM db2.dbo.Table1;` ausgeführt werden soll, muss die `TRUSTWORTHY`-Einstellung für die Datenbank DB1 aktiviert sein. Führen Sie den folgenden Code hinzu, legen Sie die `TRUSTWORHTY` festlegen.  
+ Um eine datenbankübergreifende Abfrage auszuführen, müssen Sie die `TRUSTWORTHY`-Option für die aufrufende Datenbank festlegen. Wenn sich der oben definierte Benutzer (Carlo) beispielsweise in DB1 befindet und `SELECT * FROM db2.dbo.Table1;` ausgeführt werden soll, muss die `TRUSTWORTHY`-Einstellung für die Datenbank DB1 aktiviert sein. Führen Sie den folgenden Code aus, um die `TRUSTWORHTY`-Einstellung zu aktivieren.  
   
 ```  
 ALTER DATABASE DB1 SET TRUSTWORTHY ON;  

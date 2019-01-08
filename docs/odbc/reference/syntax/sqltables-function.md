@@ -20,16 +20,16 @@ ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0930f61ea43fb77e93b9b3ebcb9d20073f1950d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfe77cba535b78f387a786ddc56f65cf87172644
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708358"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212399"
 ---
 # <a name="sqltables-function"></a>SQLTables-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: Öffnen Sie die  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: Gruppe öffnen  
   
  **Zusammenfassung**  
  **SQLTables** gibt die Liste der Namen von Tabellen, -Katalogs oder Schemas und Tabellentypen, die in einer bestimmten Datenquelle gespeichert. Der Treiber gibt zurück, die Informationen als Resultset.  
@@ -156,7 +156,7 @@ SQLRETURN SQLTables(
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Name des Katalogs; NULL, wenn Sie mit der Datenquelle nicht anwendbar. Wenn Sie ein Treiber Kataloge für einige Tabellen unterstützt jedoch nicht für andere, z. B. wenn der Treiber die Daten aus verschiedenen DBMS abruft, eine leere Zeichenfolge zurückgegeben ("") für diese Tabellen, denen keine Kataloge.|  
 |NACH "TABLE_SCHEM" (ODBC 1.0)|2|Varchar|Schemanamen; NULL, wenn Sie mit der Datenquelle nicht anwendbar. Wenn Sie ein Treiber Schemas für einige Tabellen unterstützt jedoch nicht für andere, z. B. wenn der Treiber die Daten aus verschiedenen DBMS abruft, eine leere Zeichenfolge zurückgegeben ("") für diese Tabellen, die keine Schemas aufweisen.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar|Tabellenname.|  
-|TABLE_TYPE (ODBC 1.0)|4|Varchar|Tabellentypnamen; eine der folgenden: "TABLE", "VIEW", "SYSTEM-TABLE", "Globale temporäre", "Lokale temporäre", "ALIAS", "Synonyms" oder einen Datentypnamen datenquellenspezifischen.<br /><br /> Die Bedeutung der "ALIAS" und "SYNONYM" sind treiberspezifisch.|  
+|TABLE_TYPE (ODBC 1.0)|4|Varchar|Tabellentypnamen; eine der folgenden: "TABLE", "VIEW", "SYSTEM-TABLE", "Globale temporäre", "Lokale temporäre", "ALIAS", "Synonyms" oder einen Datentypnamen datenquellenspezifische.<br /><br /> Die Bedeutung der "ALIAS" und "SYNONYM" sind treiberspezifisch.|  
 |HINWEISE (ODBC 1.0)|5|Varchar|Eine Beschreibung der Tabelle.|  
   
 ## <a name="example"></a>Beispiel  

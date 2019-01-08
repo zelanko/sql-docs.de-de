@@ -21,12 +21,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8a2b5668ba75c2825ab62b2a86aafb84f1f1488
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a86a39aa3473495b5eed6bc2eff92376a5a68cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054735"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362782"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML-Schemaauflistungen (SQL Server)
   Im Thema beschriebene [Xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server bietet systemeigene Speicherung von XML-Daten mithilfe der `xml` -Datentyp. Sie können optional XSD-Schemas zuordnen, mit der eine Variable oder eine Spalte mit `xml` Typ über eine XML-schemaauflistung. Die XML-Schemaauflistung speichert die importierten XML-Schemas und wird dann für folgende Zwecke verwendet:  
@@ -48,7 +48,7 @@ ms.locfileid: "48054735"
  Die XML-Schemaauflistung können Sie auch verwenden, um XML-Variablen, -Parameter und -Spalten zu typisieren.  
   
 ##  <a name="ddl"></a> DDL zum Verwalten von Schemaauflistungen  
- Sie können XML-schemaauflistungen in der Datenbank zu erstellen, und ordnen sie Variablen und Spalten des `xml` Typ. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet die folgenden DDL-Anweisungen zum Verwalten von Schemaauflistungen:  
+ Sie können XML-Schemaauflistungen in der Datenbank erstellen und Variablen und Spalten des `xml`-Typs zuordnen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet die folgenden DDL-Anweisungen zum Verwalten von Schemaauflistungen:  
   
 -   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql) Importiert die Schemakomponenten in eine Datenbank.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48054735"
   
 -   [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) Löscht eine gesamte XML-Schemaauflistung und alle zugehörigen Komponenten.  
   
- Um eine XML-Schemaauflistung und die darin enthaltenen Schemas zu verwenden, müssen Sie zuerst mit der CREATE XML SCHEMA COLLECTION-Anweisung die Auflistung und die Schemas erstellen. Nachdem die schemaauflistung erstellt wurde, Sie können dann erstellen Variablen und Spalten des `xml` eingeben und diese die schemaauflistung zuordnen. Beachten Sie, dass nach dem Erstellen der Schemaauflistung verschiedene Schemakomponenten in den Metadaten gespeichert werden. Mit der Anweisung ALTER XML SCHEMA COLLECTION können Sie zu vorhandenen Schemas außerdem weitere Komponenten oder zu vorhandenen Auflistungen neue Schemas hinzufügen.  
+ Um eine XML-Schemaauflistung und die darin enthaltenen Schemas zu verwenden, müssen Sie zuerst mit der CREATE XML SCHEMA COLLECTION-Anweisung die Auflistung und die Schemas erstellen. Nach dem Erstellen der Schemaauflistung können Sie Variablen und Spalten vom Typ `xml` erstellen und diese der Schemaauflistung zuordnen. Beachten Sie, dass nach dem Erstellen der Schemaauflistung verschiedene Schemakomponenten in den Metadaten gespeichert werden. Mit der Anweisung ALTER XML SCHEMA COLLECTION können Sie zu vorhandenen Schemas außerdem weitere Komponenten oder zu vorhandenen Auflistungen neue Schemas hinzufügen.  
   
  Zum Löschen der Schemaauflistung verwenden Sie die DROP XML SCHEMA COLLECTION-Anweisung. Diese Anweisung löscht alle in der Auflistung enthaltenen Schemas und entfernt das Auflistungsobjekt. Beachten Sie, dass zum Löschen einer Schemaauflistung zuerst die unter [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) beschriebenen Bedingungen erfüllt sein müssen.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "48054735"
   
  Diese Möglichkeiten werden in den folgenden Beispielen veranschaulicht.  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Beispiel: Aufführen der XML-Namespaces in einer XML-Schemaauflistung  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Beispiel: Auflisten der XML-Schemanamespaces in einer XML-Schemaauflistung  
  Verwenden Sie die folgende Abfrage für die XML-Schemaauflistung "myCollection":  
   
 ```  
@@ -181,7 +181,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Beispiel: Aufführen des Inhalts einer XML-Schemaauflistung  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Beispiel: Auflisten der Inhalte einer XML-Schemaauflistung  
  Mit der folgenden Anweisung wird der Inhalt der XML-Schemaauflistung "myCollection" innerhalb des relationalen Schemas dbo aufgeführt.  
   
 ```  
@@ -190,12 +190,12 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  Einzelne XML-Schemas in der Auflistung abgerufen werden können, als `xml` -datentypinstanzen durch Angabe des Zielnamespaces als drittes Argument für **XML_SCHEMA_NAMESPACE()**. Dies wird im folgenden Beispiel gezeigt.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Beispiel: Ausgeben eines angegebenen Schemas für eine XML-Schemaauflistung  
- Mit der folgenden Anweisung wird das XML-Schema mit dem Zielnamespace http://www.microsoft.com/books aus der XML-Schemaauflistung „myCollection“ innerhalb des relationalen Schemas „dbo“ ausgegeben.  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Beispiel: Ausgeben eines angegebenen Schemas aus einer XML-Schemaauflistung  
+ Mit der folgenden Anweisung wird das XML-Schema mit dem Zielnamespace <https://www.microsoft.com/books> aus der XML-Schemaauflistung „myCollection“ innerhalb des relationalen Schemas „dbo“ ausgegeben.  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'http://www.microsoft.com/books')  
+N'https://www.microsoft.com/books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>Abfragen von XML-Schemas  
@@ -203,7 +203,7 @@ N'http://www.microsoft.com/books')
   
 -   Schreiben Sie Transact-SQL-Abfragen zu Katalogsichten für XML-Schemaauflistungen.  
   
--   Erstellen Sie eine Tabelle, die eine `xml`-Datentypspalte enthält, um die XML-Schemas zu speichern, und laden Sie diese auch in das XML-Typsystem. Sie können die XML-Spalte Abfragen, mit der `xml` -Datentypmethoden. Für diese Spalte können Sie auch einen XML-Index erstellen. Allerdings muss die Anwendung für diese Vorgehensweise die Konsistenz zwischen den in der XML-Spalte gespeicherten XML-Schemas und dem XML-Typsystem beibehalten. Wenn Sie z. B. den XML-Schemanamespace aus dem XML-Typsystem löschen, müssen Sie ihn auch aus der Tabelle löschen, damit die Konsistenz beibehalten wird.  
+-   Erstellen Sie eine Tabelle, die eine `xml`-Datentypspalte enthält, um die XML-Schemas zu speichern, und laden Sie diese auch in das XML-Typsystem. Sie können dann diese XML-Spalte abfragen, indem Sie `xml`-Datentypmethoden verwenden. Für diese Spalte können Sie auch einen XML-Index erstellen. Allerdings muss die Anwendung für diese Vorgehensweise die Konsistenz zwischen den in der XML-Spalte gespeicherten XML-Schemas und dem XML-Typsystem beibehalten. Wenn Sie z. B. den XML-Schemanamespace aus dem XML-Typsystem löschen, müssen Sie ihn auch aus der Tabelle löschen, damit die Konsistenz beibehalten wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen einer gespeicherten XML-Schemaauflistung](../xml/view-a-stored-xml-schema-collection.md)   

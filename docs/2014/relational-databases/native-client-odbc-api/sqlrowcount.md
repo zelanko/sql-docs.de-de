@@ -14,12 +14,12 @@ ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9858619250b5f71e973e4af8eb92868f094e2193
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ff2a744f68cf6152330179eb8dcab1f33911914
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165030"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354741"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
   Arrays für Parameterwerte für anweisungsausführungen gebunden, gibt `SQLRowCount` gibt SQL_ERROR zurück, wenn eine Zeile mit Parameterwerten eine fehlerbedingung bei der anweisungsausführung generiert. Kein Wert wird durch das *RowCountPtr* -Argument der Funktion zurückgegeben.  
@@ -31,7 +31,7 @@ ms.locfileid: "48165030"
  Wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT-, Update-, DELETE- oder MERGE-Anweisung mit einer OUTPUT-Klausel ausgeführt wird, gibt die Anzahl der Zeilen betroffen sind, bis alle Zeilen in der von der OUTPUT-Klausel erzeugte Resultset verarbeitet wurden SQLRowCount nicht zurück. Zu verarbeiten rufen diesen Zeilen können Sie SQLFetch oder SQLFetchScroll. SQLResultCols gibt-1 zurück, bis alle Ergebniszeilen verwendet wurden. Nach dem SQLFetch oder SQLFetchScroll SQL_NO_DATA zurückgegeben wird, muss die Anwendung SQLRowCount zum Ermitteln der Anzahl der vor dem Aufrufen von SQLMoreResults auf das nächste Ergebnis verschoben betroffenen Zeilen aufrufen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLRowCount-Funktion](http://go.microsoft.com/fwlink/?LinkId=59367)   
+ [SQLRowCount-Funktion](https://go.microsoft.com/fwlink/?LinkId=59367)   
  [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
   
   

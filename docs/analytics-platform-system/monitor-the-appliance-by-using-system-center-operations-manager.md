@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df3e932427665e7225c83043fb48e933cb503028
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909720"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417561"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Überwachung mit System Center Operationsmanager – Analytics Platform System
 Verwenden Sie System Center Operations Manager (SCOM), um das Analytics Platform System (APS)-Gerät zu überwachen.
@@ -39,9 +39,9 @@ Verwenden Sie System Center Operations Manager (SCOM), um das Analytics Platform
    
   
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>Zum Überwachen von SQLServer PDW mit SCOM  
-Klicken Sie nach dem Konfigurieren der SCOM-Management Packs, klicken Sie auf die Überwachung im Bereich von SCOM, und zeigen **SQL Server-Appliance** und dann **Microsoft SQL Server Parallel Data Warehouse**. Unter Microsoft SQL Server Parallel Data Warehouse, es gibt vier Möglichkeiten: Warnungen, Geräte, Gerät-Diagramm und Knoten.  
+Klicken Sie nach dem Konfigurieren der SCOM-Management Packs, klicken Sie auf die Überwachung im Bereich von SCOM, und zeigen **SQL Server-Appliance** und dann **Microsoft SQL Server Parallel Data Warehouse**. Unter Microsoft SQL Server Parallel Data Warehouse gibt es vier Möglichkeiten zur Auswahl: Warnungen, Geräte, Gerät-Diagramm und Knoten.  
   
-### <a name="alerts"></a>Warnungen  
+### <a name="alerts"></a>Benachrichtigungen  
 Warnungen sind, finden Sie auf die aktuelle Warnungen verwalten.  
   
 ![Warnungen](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  

@@ -11,17 +11,17 @@ ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: eac4792762f96ce689d7b334a3b9584032f494de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 119fa4121e6f18d9592b60b6fcb8504a1228d848
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148860"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353920"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Installieren der eigenständigen Version des Berichts-Generators (Berichts-Generator)
-  Sie können den Berichts-Generator über installieren die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature Packs der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=168472) oder an einem Speicherort wie für Öffentliche Ordner, der die Datei "reportbuilder3_x86.msi", das Windows Installer-Paket für den Berichts-Generator verfügt über, heruntergeladen wurde.  
+  Sie können den Berichts-Generator über installieren die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature Packs der [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=168472) oder an einem Speicherort wie für Öffentliche Ordner, der die Datei "reportbuilder3_x86.msi", das Windows Installer-Paket für den Berichts-Generator verfügt über, heruntergeladen wurde.  
   
- Sie können auch eine Befehlszeileninstallation des Berichts-Generators ausführen und Argumente angeben, um die Installation anzupassen. Neben den systeminternen MSI-Standardparametern können Sie die vom Berichts-Generator bereitgestellten benutzerdefinierten Parameter "RBINSTALLDIR" und "REPORTSERVERURL" verwenden. "RBINSTALLDIR" dient zum Angeben des Stamminstallationsordners für den Berichts-Generator. Mit "REPORTSERVERURL" wird der Standardberichtsserver angegeben, der vom Berichts-Generator zum Speichern von Berichten auf dem Server verwendet wird.  
+ Sie können auch eine Befehlszeileninstallation des Berichts-Generators ausführen und Argumente angeben, um die Installation anzupassen. Neben den systeminternen MSI-Standardparametern können Sie die benutzerdefinierten Parameter aus, denen Berichts-Generator bereitstellt: RBINSTALLDIR und REPORTSERVERURL. "RBINSTALLDIR" dient zum Angeben des Stamminstallationsordners für den Berichts-Generator. Mit "REPORTSERVERURL" wird der Standardberichtsserver angegeben, der vom Berichts-Generator zum Speichern von Berichten auf dem Server verwendet wird.  
   
  Wenn Sie eine vollständig automatische Installation ohne Eingriff über die Benutzeroberfläche durchführen möchten, geben Sie die Option **/quiet** an. Programmbedingt werden durch das Optionsflag "quiet" Installationsfehler unterdrückt. Deshalb wird bei Verwendung der Option „quiet“ die Angabe der Option **/l** empfohlen, die Protokollierung für diesen Fall angibt.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "48148860"
   
 ### <a name="to-install-report-builder-from-the-download-site"></a>So installieren Sie Berichts-Generator von der Downloadwebsite aus  
   
-1.  Wechseln Sie zu [Microsoft SQL Server 2012 Berichts-Generator](http://go.microsoft.com/fwlink/?LinkID=219138) und suchen Sie den Berichts-Generator-Abschnitt der Webseite.  
+1.  Wechseln Sie zu [Microsoft SQL Server 2012 Berichts-Generator](https://go.microsoft.com/fwlink/?LinkID=219138) und suchen Sie den Berichts-Generator-Abschnitt der Webseite.  
   
 2.  Klicken Sie auf **X86 Paket**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48148860"
   
 ### <a name="to-install-report-builder-from-the-command-line"></a>So installieren Sie Berichts-Generator mithilfe der Befehlszeile  
   
-1.  Wechseln Sie zu [Microsoft SQL Server 2012 Berichts-Generator](http://go.microsoft.com/fwlink/?LinkID=219138) und suchen Sie den Berichts-Generator-Abschnitt.  
+1.  Wechseln Sie zu [Microsoft SQL Server 2012 Berichts-Generator](https://go.microsoft.com/fwlink/?LinkID=219138) und suchen Sie den Berichts-Generator-Abschnitt.  
   
 2.  Klicken Sie auf **X86 Paket**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48148860"
   
      `msiexec/i ReportBuilder3_.msi /option [value] [/option [value]]`  
   
-     Bei den beiden folgenden Optionen handelt es sich um spezifische Optionen für die Installation des Berichts-Generators: "RBINSTALLDIR" und "REPORTSERVERURL". Diese Argumente müssen nicht unbedingt in der Befehlszeile angegeben werden. Der grundlegende Befehl lautet wie folgt:  
+     Die zwei bestimmte Optionen für die Installation von Berichts-Generator sind: RBINSTALLDIR und REPORTSERVERURL. Diese Argumente müssen nicht unbedingt in der Befehlszeile angegeben werden. Der grundlegende Befehl lautet wie folgt:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   

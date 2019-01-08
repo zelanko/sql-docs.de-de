@@ -18,12 +18,12 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 21119211d750b8443d0f463e5b6dd3e407bd248b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141970"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355012"
 ---
 # <a name="permissions-database-engine"></a>Berechtigungen (Datenbank-Engine)
   Jedes sicherungsfähige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Element hat zugeordnete Berechtigungen, die einem Prinzipal erteilt werden können. Dieses Thema enthält die folgenden Informationen:  
@@ -92,25 +92,25 @@ ms.locfileid: "48141970"
      Die REFERENCES-Berechtigung ist für ein Objekt erforderlich, um eine FUNCTION oder VIEW mit der `WITH SCHEMABINDING` -Klausel zu erstellen, die auf das betreffende Objekt verweist.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Diagramm der SQL Server-Berechtigungen  
- Navigieren Sie zu [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142), um ein Diagramm aller [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Berechtigungen im PDF-Format abzurufen.  
+ Navigieren Sie zu [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142), um ein Diagramm aller [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Berechtigungen im PDF-Format abzurufen.  
   
 ##  <a name="_securables"></a> Berechtigungen anwendbar für bestimmte sicherungsfähige Elemente  
  Die folgende Tabelle enthält eine Liste der wichtigsten Berechtigungsklassen und der sicherungsfähigen Elemente, für die sie erteilt werden können.  
   
-|Berechtigung|Gilt für|  
+|Berechtigung|Betrifft|  
 |----------------|----------------|  
 |SELECT|Synonyme<br /><br /> Tabellen und Spalten<br /><br /> Tabellenwertfunktionen, [!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR (Common Language Runtime) sowie Spalten<br /><br /> Sichten und Spalten|  
 |VIEW CHANGE TRACKING|Tabellen<br /><br /> Schemas|  
 |UPDATE|Synonyme<br /><br /> Tabellen und Spalten<br /><br /> Sichten und Spalten<br /><br /> Sequenzobjekte|  
-|REFERENCES|Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Tabellen und Spalten<br /><br /> Table-valued Function ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR), und Spalten<br /><br /> Typen<br /><br /> Sichten und Spalten<br /><br /> Sequenzobjekte|  
+|REFERENCES|Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Tabellen und Spalten<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR) sowie Spalten<br /><br /> Typen<br /><br /> Sichten und Spalten<br /><br /> Sequenzobjekte|  
 |INSERT|Synonyme<br /><br /> Tabellen und Spalten<br /><br /> Sichten und Spalten|  
-|Delete|Synonyme<br /><br /> Tabellen und Spalten<br /><br /> Sichten und Spalten|  
-|Führen Sie|Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Synonyme<br /><br /> CLR-Typen|  
+|DELETE|Synonyme<br /><br /> Tabellen und Spalten<br /><br /> Sichten und Spalten|  
+|Führen Sie|Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Synonyme<br /><br /> CLR-Typen|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen|  
-|VIEW DEFINITION|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Table-valued Function ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten<br /><br /> Sequenzobjekte|  
-|ALTER|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sequenzobjekte<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Tabellen<br /><br /> Table-valued Function ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten|  
-|TAKE OWNERSHIP|Verfügbarkeitsgruppen<br /><br /> Rollen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Serverrollen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Table-valued Function ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten<br /><br /> Sequenzobjekte|  
-|CONTROL|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Table-valued Function ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten<br /><br /> Sequenzobjekte|  
+|VIEW DEFINITION|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Ansichten<br /><br /> Sequenzobjekte|  
+|ALTER|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sequenzobjekte<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Ansichten|  
+|TAKE OWNERSHIP|Verfügbarkeitsgruppen<br /><br /> Rollen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Serverrollen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Ansichten<br /><br /> Sequenzobjekte|  
+|CONTROL|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Ansichten<br /><br /> Sequenzobjekte|  
 |IMPERSONATE|Anmeldungen und Benutzer|  
   
 > [!CAUTION]  
@@ -201,7 +201,7 @@ ms.locfileid: "48141970"
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
+|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|Führen Sie|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Hinweis: Gilt nur für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Verwenden Sie ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
@@ -239,7 +239,7 @@ ms.locfileid: "48141970"
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|Delete|  
+|OBJECT|DELETE|DL|SCHEMA|DELETE|  
 |OBJECT|Führen Sie|EX|SCHEMA|Führen Sie|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -269,7 +269,7 @@ ms.locfileid: "48141970"
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|Delete|DL|DATABASE|Delete|  
+|SCHEMA|DELETE|DL|DATABASE|DELETE|  
 |SCHEMA|Führen Sie|EX|DATABASE|Führen Sie|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  

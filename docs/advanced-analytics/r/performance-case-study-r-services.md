@@ -1,5 +1,5 @@
 ---
-title: Leistung für SQL Server R Services - Ergebnisse und Ressourcen | Microsoft-Dokumentation
+title: Leistung für SQL Server R Services - Ergebnisse und Ressourcen – SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 81176a5a63b0cd8319d985ef72889a5c972fac63
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3ee5a1d2c656ef420c410c75333546ab8fbf539c
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697498"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645469"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Leistung von R Services: Ergebnisse und Ressourcen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ Die zwei Fallstudien hatten unterschiedliche Ziele:
 
 Dieses Thema enthält die ausführlichen Ergebnisse der ersten Fallstudie. Die zweite Fallstudie beschreibt eine Zusammenfassung die gesamten Ergebnisse. Sind Sie am Ende dieses Themas enthält Links zu allen Skripts und Beispieldaten und Ressourcen, die von den ursprünglichen Autoren verwendet.
 
-## <a name="performance-case-study-airline-dataset"></a>Fallstudie zur Leistung: Fluglinien-Dataset
+## <a name="performance-case-study-airline-dataset"></a>Fallstudie zur Leistung: Fluglinien-dataset
 
 Diese Fallstudie vom SQL Server R Services-Entwicklungsteam getestet, die Auswirkungen der verschiedenen Optimierungen. Ein einzelnes RxLogit-Modell erstellt wurde, und Bewertung für das Fluglinien-Dataset durchgeführt. Optimierungen wurden während der Trainings- und Bewertungsschritte für Prozesse, die zum Bewerten der Auswirkungen auf die einzelnen angewendet.
 
@@ -62,7 +62,7 @@ Die folgenden Ergebnisse sind beispielsweise die Uhrzeiten von einer einzelnen T
 
 **Beispiel für Zeitangaben**
 
-```
+```text
 Running IntCol Test. Using airlineWithIntCol table.
 run 1 took 3.66 seconds
 run 2 took 3.44 seconds
@@ -90,7 +90,7 @@ In diesem Abschnitt werden vor und nach der Ergebnisse aller Tests vergleicht.
 
 Der erste Test verglichen, die Verwendung von Komprimierung und einer spaltenbasierten Tabelle zum Verringern der Größe der Daten.
 
-| Tabellenname            | Zeilen     | Reserviert.   | data       | index_size | Nicht verwendet  | % Gespeichert (reserviert) |
+| Tabellenname            | Zeilen     | Reserviert.   | Daten       | index_size | Nicht verwendet  | % Gespeichert (reserviert) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2.978.816 KB | 2.972.160 KB | 6.128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625.784 KB  | 623.744 KB  | 1.352 KB    | 688 KB  | 79%                 |
@@ -347,11 +347,11 @@ Für große Modelle trainieren oder große Batches zu bewerten, kann der Aufwand
 
 Im folgenden finden Links zu Informationen, Tools und Skripts, die bei der Entwicklung von Tests verwendet.
 
-+ Skripts und Links zu den Daten für Leistungstests: [Beispieldaten und Skripts für SQL Server-Optimierungen-Studie](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
++ Die Leistung Testen von Skripts und Links zu den Daten: [Beispieldaten und Skripts für SQL Server-Optimierungen-Studie](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
 
-+ Artikel beschreiben die Lösung fortsetzen übereinstimmende: [Optimierung Tipps und Tricks für die SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
++ Der Artikel beschreibt die Lösung fortsetzen übereinstimmende: [Optimierung Tipps und Tricks für die SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ Skripts, die in der SQL-Optimierung verwendet wird, für die Lösung fortsetzen übereinstimmende: [GitHub-Repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ Skripts, die in der SQL-Optimierung für übereinstimmende Resume-Lösung verwendet werden: [GitHub-repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
 
 ### <a name="learn-about-windows-server-management"></a>Erfahren Sie mehr über Windows Server-Verwaltung
 
@@ -365,7 +365,7 @@ Im folgenden finden Links zu Informationen, Tools und Skripts, die bei der Entwi
 
 ### <a name="learn-about-sql-server-optimizations"></a>Erfahren Sie mehr über SQL Server-Optimierungen
 
-+ [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases\indexes\reorganize-and-rebuild-indexes.md)
++ [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
 + [Einführung in Speicheroptimierte Tabellen](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
 
@@ -400,7 +400,7 @@ Im folgenden finden Links zu Informationen, Tools und Skripts, die bei der Entwi
 
 ## <a name="other-articles-in-this-series"></a>Anderen Artikeln dieser Serie
 
-[Leistung optimieren für R – Einführung](sql-server-r-services-performance-tuning.md)
+[Leistung optimieren, die für R – Einführung](sql-server-r-services-performance-tuning.md)
 
 [Leistungsoptimierung für R – SQL Server-Konfiguration](sql-server-configuration-r-services.md)
 

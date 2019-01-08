@@ -22,12 +22,12 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 28ce36cbd728787e69fcf00963aa024896d60750
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bd52ce353ff30a22aa1771c07359554e20f6e8e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116883"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541849"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt-Hilfsprogramm (SSRS)
   Dient zum Extrahieren, Wiederherstellen, Erstellen und Löschen des symmetrischen Schlüssels, der verwendet wird, um vertrauliche Berichtsserverdaten vor nicht autorisiertem Zugriff zu schützen. Dieses Hilfsprogramm wird auch verwendet, um Berichtsserverinstanzen in einer Bereitstellung für horizontales Skalieren zu verknüpfen. Eine *Berichtsserverbereitstellung für horizontales Skalieren* bezeichnet mehrere Berichtsserverinstanzen, die gemeinsam eine einzelne Berichtsserver-Datenbank nutzen.  
@@ -37,11 +37,11 @@ ms.locfileid: "48116883"
 ```  
   
       rskeymgmt {-?}  
-{–eextract}  
-{–aapply}  
+{-eextract}  
+{-aapply}  
 {-ddeleteall}  
-{–srecreatekey}  
-{–rremoveinstancekey}  
+{-srecreatekey}  
+{-rremoveinstancekey}  
 {-jjoinfarm}  
 {-iinstance}  
 {-ffile}  
@@ -65,7 +65,7 @@ ms.locfileid: "48116883"
  **-a**  
  Ersetzt einen vorhandenen symmetrischen Schlüssel durch eine Kopie, die Sie in einer kennwortgeschützten Sicherungsdatei bereitstellen. Alle Instanzen des symmetrischen Schlüssels werden aktualisiert.  
   
- Dieses Argument enthält keinen Wert. Sie müssen jedoch zusätzliche Argumente in der Befehlszeile angeben, um die Datei mit dem anzuwendenden Schlüssel auszuwählen. Den Argumenten, die Sie angeben können, gehören `-f` und`-p`.  
+ Dieses Argument enthält keinen Wert. Sie müssen jedoch zusätzliche Argumente in der Befehlszeile angeben, um die Datei mit dem anzuwendenden Schlüssel auszuwählen. Zu den Argumenten, die Sie angeben können, gehören `-f` und `-p`.  
   
  **-d**  
  Löscht alle Instanzen des symmetrischen Schlüssels und alle verschlüsselten Daten in einer Berichtsserver-Datenbank. Dieses Argument enthält keinen Wert.  
@@ -90,19 +90,19 @@ ms.locfileid: "48116883"
  (Erforderlich für `-f`) Gibt das Kennwort an, das zum Sichern oder Anwenden eines symmetrischen Schlüssels verwendet wird. Dieser Wert muss angegeben sein.  
   
  `-i`  
- Gibt eine lokale Berichtsserverinstanz an. Dieses Argument ist optional, wenn Sie den Berichtsserver auf dem standardmäßigen installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz (der Standardwert für `-i` ist MSSQLSERVER). Wenn Sie den Berichtsserver als benannte Instanz installiert `-i` ist erforderlich.  
+ Gibt eine lokale Berichtsserverinstanz an. Dieses Argument ist optional, wenn Sie den Berichtsserver auf der standardmäßigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert haben (der Standardwert für `-i` ist MSSQLSERVER). Wenn Sie den Berichtsserver als benannte Instanz installiert haben, ist `-i` erforderlich.  
   
  `-m`  
  Gibt den Namen des Remotecomputers an, der die Berichtsserverinstanz hostet, die Sie der Berichtsserverbereitstellung für horizontales Skalieren hinzufügen. Verwenden Sie den Namen, durch den der Computer im Netzwerk identifiziert wird.  
   
  `-n`  
- Gibt den Namen der Berichtsserverinstanz auf einem Remotecomputer an. Dieses Argument ist optional, wenn Sie den Berichtsserver auf dem standardmäßigen installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz (der Standardwert für `-n` ist MSSQLSERVER). Wenn Sie den Berichtsserver als benannte Instanz installiert `-n` ist erforderlich.  
+ Gibt den Namen der Berichtsserverinstanz auf einem Remotecomputer an. Dieses Argument ist optional, wenn Sie den Berichtsserver auf der standardmäßigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert haben (der Standardwert für `-n` ist MSSQLSERVER). Wenn Sie den Berichtsserver als benannte Instanz installiert haben, ist `-n` erforderlich.  
   
  `-u`  *Benutzerkonto*  
  Gibt das Administratorkonto auf dem Remotecomputer an, den Sie der Bereitstellung für horizontales Skalieren hinzufügen. Wird kein Konto angegeben, werden die Anmeldeinformationen des aktuellen Benutzers verwendet.  
   
  `-v`  *Das Kennwort*  
- (Erforderlich für `-u`) gibt das Kennwort eines Administratorkontos auf dem Remotecomputer, die Sie die Bereitstellung für horizontales Skalieren hinzufügen möchten.  
+ (Erforderlich für `-u`) Gibt das Kennwort eines Administratorkontos auf dem Remotecomputer an, den Sie der Bereitstellung für horizontales Skalieren hinzufügen möchten.  
   
  **-t**  *Ablaufverfolgung*  
  Schreibt Fehlermeldungen in das Ablaufverfolgungsprotokoll. Dieses Argument enthält keinen Wert. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
@@ -148,7 +148,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Eine Berichtsserverbereitstellung für horizontales Skalieren bezeichnet ein Bereitstellungsmodell, bei dem mehrere Berichtsserverinstanzen dieselbe Berichtsserver-Datenbank gemeinsam nutzen. Eine Berichtsserver-Datenbank kann von jeder Berichtsserverinstanz verwendet werden, die ihre symmetrischen Schlüssel in der Datenbank speichert. Wenn eine Berichtsserver-Datenbank beispielsweise Schlüsselinformationen für drei Berichtsserverinstanzen enthält, werden alle drei Instanzen als Mitglieder derselben Bereitstellung für horizontales Skalieren betrachtet.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Verknüpfen von Berichtsserverinstanzen auf demselben Computer  
- Sie können eine Bereitstellung für horizontales Skalieren von mehreren Berichtsserverinstanzen aus erstellen, die auf demselben Computer installiert sind. Legen Sie nicht die `-u` und `-v` Argumente, wenn Sie teilnehmen möchten Report Server-Instanzen, die lokal installiert sind. Die Argumente `-u` und `-v` werden nur verwendet, wenn Sie eine Instanz von einem Remotecomputer aus hinzufügen. Wenn Sie die Argumente festlegen, wird die folgende Fehlermeldung angezeigt: "Benutzeranmeldeinformationen können nicht für lokale Verbindungen verwendet werden."  
+ Sie können eine Bereitstellung für horizontales Skalieren von mehreren Berichtsserverinstanzen aus erstellen, die auf demselben Computer installiert sind. Legen Sie die Argumente `-u` und `-v` nicht fest, wenn Sie Berichtsserverinstanzen verknüpfen, die lokal installiert sind. Die Argumente `-u` und `-v` werden nur verwendet, wenn Sie eine Instanz von einem Remotecomputer aus hinzufügen. Wenn Sie die Argumente angeben, erhalten Sie folgenden Fehler: "Benutzeranmeldeinformationen können nicht für lokale Verbindungen verwendet werden."  
   
  Das folgende Beispiel veranschaulicht die Syntax für eine Bereitstellung für horizontales Skalieren mithilfe mehrerer lokaler Instanzen. In diesem Beispiel ist <`initializedinstance`> der Name einer Instanz, die bereits für die Verwendung der Berichtsserver-Datenbank initialisiert wurde, und <`newinstance`> der Name der Instanz, die der Bereitstellung hinzugefügt werden soll:  
   
@@ -159,7 +159,7 @@ rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>
 #### <a name="removing-encryption-keys-for-a-single-report-server-in-a-scale-out-deployment"></a>Entfernen von Verschlüsselungsschlüsseln für einzelne Berichtsserver in einer Bereitstellung für horizontales Skalieren  
  In diesem Beispiel wird gezeigt, wie die Verschlüsselungsschlüssel für einen einzelnen Berichtsserver in einer Berichtsserverbereitstellung für horizontales Skalieren entfernt werden können. Die Schlüssel werden aus der Berichtsserver-Datenbank entfernt. Sobald die Schlüssel für diese Berichtsserverinstanz entfernt wurden, kann die Berichtsserverinstanz nicht mehr auf die verschlüsselten Daten in der Datenbank zugreifen; die Instanz wurde somit faktisch aus der Bereitstellung für horizontales Skalieren entfernt.  
   
- Um eine Berichtsserverinstanz aus einer Bereitstellung für horizontales Skalieren zu entfernen, ist es erforderlich, eine Installations-ID anzugeben. Die Installations-ID ist ein GUID, der in der Datei RSReportserver.config der Berichtsserverinstanz gespeichert ist, für die Sie die Verschlüsselungsschlüssel entfernen möchten. Sie müssen den folgenden Befehl auf dem Computer ausführen, den Sie aus der Bereitstellung für horizontales Skalieren entfernen möchten. Wenn der Berichtsserver als benannte Instanz installiert ist, verwenden Sie die `-i` Argument, um die Instanz anzugeben. Weitere Informationen finden Sie unter [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
+ Um eine Berichtsserverinstanz aus einer Bereitstellung für horizontales Skalieren zu entfernen, ist es erforderlich, eine Installations-ID anzugeben. Die Installations-ID ist ein GUID, der in der Datei RSReportserver.config der Berichtsserverinstanz gespeichert ist, für die Sie die Verschlüsselungsschlüssel entfernen möchten. Sie müssen den folgenden Befehl auf dem Computer ausführen, den Sie aus der Bereitstellung für horizontales Skalieren entfernen möchten. Wenn der Berichtsserver als benannte Instanz installiert ist, verwenden Sie das Argument `-i`, um die Instanz anzugeben. Weitere Informationen finden Sie unter [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
 ```  
 rskeymgmt -r <installationID>  
@@ -178,7 +178,7 @@ rskeymgmt -r <installationID>
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [Eingabeaufforderung-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

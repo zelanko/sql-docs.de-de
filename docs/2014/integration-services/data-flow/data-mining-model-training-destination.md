@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingmodeltrainingdest.f1
@@ -18,12 +17,12 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdef0e0ed6de3bf527a5b87bc05a12e1bc6ace5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47c43a668ba9d418ea93b9367edb110980720d1c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068958"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781162"
 ---
 # <a name="data-mining-model-training-destination"></a>Ziel des Data Mining-Modelltrainings
   Das Ziel des Data Mining-Modelltrainings trainiert Data Mining-Modelle, indem die Daten, die vom Ziel empfangen werden, über Data Mining-Modellalgorithmen übergeben werden. Mehrere Data Mining-Modelle können von einem Ziel trainiert werden, falls die Modelle mit der gleichen Data Mining-Struktur erstellt wurden. Weitere Informationen finden Sie unter [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) und [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  
@@ -42,9 +41,9 @@ ms.locfileid: "48068958"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Trainings-Editor für Data Mining-Modelle** festlegen können:  
   
--   [Trainings-Editor für Data Mining-Modelle &#40;Registerkarte "Verbindung"&#41;](../data-mining-model-training-editor-connection-tab.md)  
+-   [Trainings-Editor für Data Mining-Modelle &#40;Registerkarte Verbindung&#41;](../data-mining-model-training-editor-connection-tab.md)  
   
--   [Trainings-Editor für Data Mining-Modelle &#40;Registerkarte "Spalten"&#41;](../data-mining-model-training-editor-columns-tab.md)  
+-   [Trainings-Editor für Data Mining-Modelle &#40;Registerkarte Spalten&#41;](../data-mining-model-training-editor-columns-tab.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
@@ -52,6 +51,6 @@ ms.locfileid: "48068958"
   
 -   [Benutzerdefinierte Eigenschaften des Ziels des Data Mining-Modelltrainings](data-mining-model-training-destination-custom-properties.md)  
   
- Informationen zum Festlegen von Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](set-the-properties-of-a-data-flow-component.md).  
+ Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](set-the-properties-of-a-data-flow-component.md).  
   
   

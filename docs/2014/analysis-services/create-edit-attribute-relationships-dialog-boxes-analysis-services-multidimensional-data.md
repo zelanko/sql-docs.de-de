@@ -13,12 +13,12 @@ ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f13c975be4fb8e993cb682da20c6bdf725f25ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 936862a702d7ca6f82dab5104c5354105443c3be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141590"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528743"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Dialogfelder Attributbeziehung erstellen und Attributbeziehung bearbeiten (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Attributbeziehung erstellen** können Sie neue Attributbeziehungen definieren, und mithilfe des Dialogfelds **Attributbeziehung bearbeiten** können Sie eine Attributbeziehung ändern. Weitere Informationen finden Sie unter [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "48141590"
   
 2.  Klicken Sie auf der Symbolleiste auf das Symbol Neue Attributbeziehung.  
   
-     – oder –  
+     -oder-  
   
      Klicken Sie im Attributbeziehungsdiagramm oder in der Liste **Attribute** mit rechten Maustaste auf ein Attribut, und klicken Sie dann auf **Neue Attributbeziehung**.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48141590"
   
 2.  Klicken Sie im Attributbeziehungsdiagramm oder in der Liste **Attributbeziehungen** mit rechten Maustaste auf eine Attributbeziehung, und klicken Sie dann auf **Attributbeziehung bearbeiten**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Gibt in der Gruppe **Quellattribut** den Namen des Attributs an, von dem die Beziehung ausgeht.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - StartService Method (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 708d96bab30b9828f41b1e29fef80173a6f711aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0a425bda3d32f19aca5be09dbb8ba4b7b6ac899
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098080"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357922"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService-Methode (SqlService-Klasse)
   Versucht, den Dienst zu starten.  
@@ -124,6 +122,6 @@ object
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Siehe auch  
- [Starten und Beenden von Diensten](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

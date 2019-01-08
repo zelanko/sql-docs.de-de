@@ -1,5 +1,5 @@
 ---
-title: R-Skript-Fehler in SQL Server-Machine Learning und R Services | Microsoft-Dokumentation
+title: R-Skripterstellung Fehler und Problembehandlung – SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 941a8bbc5e7326d87dcdba8c822fb2c3f2190900
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5e4ac26b10a8a9f7e17345e927ee89ea6c731fb1
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695438"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644889"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>R-Skript-Fehler in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Artikel werden mehrere Scriptin Gerrors, bei der R-Code in SQL Server ausgeführt wird. Die Liste ist nicht vollständig. Es gibt viele Pakete, und Fehler können zwischen verschiedenen Versionen desselben Pakets variieren. Es wird empfohlen, Posten Skriptfehler auf die [Machine Learning-Server-Forum](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR), Machine learning-Komponenten, die in R Services (Datenbankintern), Microsoft R Client und Microsoft R Server unterstützt.
 
-**Gilt für:** SQL Server 2016 R Services, SqlServer 2017 Machine Learning-Dienste
+**Gilt für:** SQL Server 2016 R Services, SQL Server 2017-Machine Learning-Dienste
 
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>Gültige Skript fehlschlägt, in T-SQL oder in gespeicherten Prozeduren
@@ -39,7 +39,7 @@ Wenn die R-Laufzeit funktioniert, aber das Skript gibt Fehler zurück, empfehlen
 Außerdem wird empfohlen, dass Sie etwas schreiben Sie das Skript aus, um Probleme mit Datentypen, die auftreten können, beim Verschieben von Daten zwischen R und die Datenbank-Engine zu beheben und überprüfen. Weitere Informationen finden Sie unter [R-Bibliotheken und-Datentypen](r/r-libraries-and-data-types.md).
 
 Des Sqlrutils-Pakets können Sie außerdem um Ihr R-Skript in einem Format zu bündeln, die mehr leicht verwendbaren als gespeicherte Prozedur ist. Weitere Informationen finden Sie in den folgenden Themen:
-* [Generieren Sie eine gespeicherte Prozedur für R-Code mit dem Sqlrutils-Paket](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+* [Sqlrutils-Pakets](r/ref-r-sqlrutils.md)
 * [Erstellen einer gespeicherten Prozedur mithilfe von sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## <a name="script-returns-inconsistent-results"></a>Skript gibt inkonsistente Ergebnisse zurück.
@@ -68,7 +68,7 @@ Ihre Anmeldeinformationen muss emulieren, um Ihre Windows-Anmeldeinformationen a
 
 2. Führen Sie das folgende Skript aus: Achten Sie darauf, um den Benutzergruppennamen, wenn Sie die Standardeinstellung geändert haben, und die Computer und die Instanz-Namen zu bearbeiten.
 
-    ```SQL
+    ```sql
     USE [master]
     GO
     
